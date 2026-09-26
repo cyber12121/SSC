@@ -6,103 +6,103 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The Nebular Hypothesis of solar system formation was first proposed by:\n सौरमंडल निर्माण की नीहारिका परिकल्पना सर्वप्रथम किसके द्वारा प्रस्तावित की गई थी?",
+      "question": "The Nebular Hypothesis of solar system formation was first proposed by:",
       "options": {
-        "a": "Fred Hoyle / फ्रेड हॉयल",
-        "b": "Immanuel Kant / इमैनुएल कांट",
-        "c": "Copernicus / इमैनुएल कांट",
-        "d": "Chamberlin and Moulton / चेम्बरलिन और मौल्टन"
+        "a": "Fred Hoyle",
+        "b": "Immanuel Kant",
+        "c": "Copernicus",
+        "d": "Chamberlin and Moulton"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nProposed in 1755, later modified by Laplace in 1796. Explains the solar system formed from a rotating cloud of gas and dust.\n\n📖 हिंदी स्पष्टीकरण:\n1755 में प्रस्तावित, बाद में 1796 में लाप्लास द्वारा संशोधित। यह गैस और धूल के घूमते हुए बादल से बने सौरमंडल की व्याख्या करता है।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is/are luminous celestial bodies?\n 1. Stars\n 2. Planets\n 3. Galaxies\n निम्नलिखित में से कौन-सा/से चमकदार खगोलीय पिंड है/हैं?\n 4. तारे\n 5. ग्रह\n 6. आकाशगंगाएँ",
+      "question": "Which of the following is/are luminous celestial bodies?\n 1. Stars\n 2. Planets\n 3. Galaxies",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 3 only / केवल 1 और 3",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 only",
+        "b": "1 and 3 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStars emit light, galaxies are clusters of luminous stars. Planets only reflect sunlight → non-luminous.\n\n📖 हिंदी स्पष्टीकरण:\nतारे प्रकाश उत्सर्जित करते हैं, आकाशगंगाएँ चमकदार तारों के समूह हैं। ग्रह केवल सूर्य के प्रकाश को परावर्तित करते हैं → अप्रकाशमान।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements about Venus:\n 1. It rotates clockwise.\n 2. Its rotation is slower than its revolution.\n 3. It is the brightest planet.\n शुक्र के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. यह दक्षिणावर्त घूमता है।\n 2. इसका घूर्णन इसके परिक्रमण से धीमा है।\n 3. यह सबसे चमकीला ग्रह है।",
+      "question": "Consider the following statements about Venus:\n 1. It rotates clockwise.\n 2. Its rotation is slower than its revolution.\n 3. It is the brightest planet.",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nVenus has retrograded (clockwise) rotation, one rotation takes 243 Earth days > revolution (225 days). Brightest due to thick clouds reflecting sunlight.\n\n📖 हिंदी स्पष्टीकरण:\nशुक्र का घूर्णन प्रतिगामी (दक्षिणावर्त) है, इसके एक घूर्णन में 243 पृथ्वी दिन लगते हैं। घूर्णन > परिक्रमण (225 दिन)। सूर्य के प्रकाश को परावर्तित करने वाले घने बादलों के कारण यह सबसे चमकीला है।"
     },
     {
       "q_num": 4,
-      "question": "Which one of the following planets has the largest number of moons?\n निम्नलिखित में से किस ग्रह के उपग्रहों की संख्या सबसे अधिक है?",
+      "question": "Which one of the following planets has the largest number of moons?",
       "options": {
-        "a": "Jupiter / बृहस्पति",
-        "b": "Saturn / शनि",
-        "c": "Uranus / अरुण",
-        "d": "Neptune / वरुण"
+        "a": "Jupiter",
+        "b": "Saturn",
+        "c": "Uranus",
+        "d": "Neptune"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSaturn has the highest no. Of moons (latest data), the highest in the solar system.\n\n📖 हिंदी स्पष्टीकरण:\nशनि के उपग्रहों की संख्या सबसे अधिक है (नवीनतम आंकड़ों के अनुसार), सौरमंडल में सबसे अधिक।"
     },
     {
       "q_num": 5,
-      "question": "Which planet has the longest revolution period?\n किस ग्रह की परिक्रमा अवधि सबसे लंबी है?",
+      "question": "Which planet has the longest revolution period?",
       "options": {
-        "a": "Jupiter / बृहस्पति",
-        "b": "Uranus अरुण",
-        "c": "Neptune / वरुण",
-        "d": "Pluto / प्लूटो"
+        "a": "Jupiter",
+        "b": "Uranus",
+        "c": "Neptune",
+        "d": "Pluto"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNeptune takes 165 Earth years to complete one revolution around the Sun. (Pluto is a dwarf planet, not a main planet).\n\n📖 हिंदी स्पष्टीकरण:\nवरुण को सूर्य की एक परिक्रमा पूरी करने में 165 पृथ्वी वर्ष लगते हैं। (प्लूटो एक बौना ग्रह है, मुख्य ग्रह नहीं)।"
     },
     {
       "q_num": 6,
-      "question": "Arrange the following correctly according to distance from the Sun:\n Mercury, Uranus, Earth, Neptune\n सूर्य से दूरी के अनुसार निम्नलिखित को सही ढंग से व्यवस्थित करें:\n बुध, अरुण, पृथ्वी, वरुण",
+      "question": "Arrange the following correctly according to distance from the Sun:\n Mercury, Uranus, Earth, Neptune",
       "options": {
-        "a": "Mercury – Earth – Uranus – Neptune / बुध – पृथ्वी – अरुण – वरुण",
-        "b": "Mercury – Neptune – Earth – Uranus / बुध – वरुण – पृथ्वी – अरुण",
-        "c": "Earth – Mercury – Uranus – Neptune / पृथ्वी – बुध – अरुण – वरुण",
-        "d": "Mercury – Uranus – Neptune – Earth / बुध – अरुण – वरुण – पृथ्वी"
+        "a": "Mercury – Earth – Uranus – Neptune",
+        "b": "Mercury – Neptune – Earth – Uranus",
+        "c": "Earth – Mercury – Uranus – Neptune",
+        "d": "Mercury – Uranus – Neptune – Earth"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOrder of planets: Mercury (1st) → Earth (3rd) → Uranus (7th) → Neptune (8th).\n\n📖 हिंदी स्पष्टीकरण:\nग्रहों का क्रम: बुध (पहला) पृथ्वी (तीसरा) अरुण (सातवाँ) वरुण (आठवाँ)।"
     },
     {
       "q_num": 7,
-      "question": "The Kuiper Belt is mainly associated with:\n कुइपर बेल्ट मुख्यतः निम्न से संबंधित है:",
+      "question": "The Kuiper Belt is mainly associated with:",
       "options": {
-        "a": "Origin of stars / तारों की उत्पत्ति",
-        "b": "Dwarf planets like Pluto / प्लूटो जैसे बौने ग्रह",
-        "c": "Asteroid distribution / क्षुद्रग्रह वितरण",
-        "d": "Formation of satellites / उपग्रहों का निर्माण"
+        "a": "Origin of stars",
+        "b": "Dwarf planets like Pluto",
+        "c": "Asteroid distribution",
+        "d": "Formation of satellites"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKuiper Belt beyond Neptune contains icy objects & dwarf planets (Pluto, Haumea, Makemake, Eris).\n\n📖 हिंदी स्पष्टीकरण:\nवरुण के आगे कुइपर बेल्ट में बर्फीले पिंड और बौने ग्रह (प्लूटो, हौमिया, मेकेमेक, एरिस) हैं।"
     },
     {
       "q_num": 8,
-      "question": "Which of the following statements is correct about the Moon?\n चंद्रमा के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements is correct about the Moon?",
       "options": {
-        "a": "It rotates and revolves at different speeds // यह अलग-अलग गति से घूमता है और परिक्रमा करता है।",
-        "b": "Its gravity is equal to Earth’s // इसका गुरुत्वाकर्षण पृथ्वी के गुरुत्वाकर्षण के बराबर है।",
-        "c": "One side always faces Earth due to synchronous rotation // समकालिक घूर्णन के कारण इसका एक पक्ष हमेशा पृथ्वी की ओर रहता है।",
-        "d": "Light from the Moon takes 8 minutes to reach Earth // चंद्रमा से प्रकाश को पृथ्वी तक पहुँचने में 8 मिनट लगते हैं।"
+        "a": "It rotates and revolves at different speeds /",
+        "b": "Its gravity is equal to Earth’s",
+        "c": "One side always faces Earth due to synchronous rotation /",
+        "d": "Light from the Moon takes 8 minutes to reach Earth /"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMoon’s rotation time = revolution time (27.3 days), so only one side is visible from Earth.\n\n📖 हिंदी स्पष्टीकरण:\nचंद्रमा का घूर्णन समय = परिक्रमण समय (27.3 दिन), इसलिए पृथ्वी से केवल एक पक्ष ही दिखाई देता है।"
     },
     {
       "q_num": 9,
-      "question": "Match the following pairs correctly:\n 1. Callisto – (A) Mars\n 2. Deimos– (B) Jupiter\n 3. Titan – (C) Saturn\n 4. Triton – (D) Neptune\n निम्नलिखित युग्मों का सही मिलान करें:\n 5. कैलिस्टो - (A) मंगल\n 6. डीमोस - (B) बृहस्पति\n 7. टाइटन - (C) शनि\n 8. ट्राइटन - (D) वरुण",
+      "question": "Match the following pairs correctly:\n 1. Callisto – (A) Mars\n 2. Deimos– (B) Jupiter\n 3. Titan – (C) Saturn\n 4. Triton – (D) Neptune",
       "options": {
         "a": "1-A, 2-B, 3-C, 4-D",
         "b": "1-B, 2-A, 3-C, 4-D",
@@ -114,67 +114,67 @@
     },
     {
       "q_num": 10,
-      "question": "Aditya-L1 mission of ISRO is related to:\n इसरो का आदित्य-L1 मिशन किससे संबंधित है?",
+      "question": "Aditya-L1 mission of ISRO is related to:",
       "options": {
-        "a": "Studying the Moon’s surface / चंद्रमा की सतह का अध्ययन",
-        "b": "Observing Mars atmosphere / मंगल ग्रह के वायुमंडल का अवलोकन",
-        "c": "Solar observatory at Lagrange Point / लैग्रेंज बिंदु पर सौर वेधशाला",
-        "d": "Exploration of asteroid belt / क्षुद्रग्रह बेल्ट की खोज"
+        "a": "Studying the Moon’s surface",
+        "b": "Observing Mars atmosphere",
+        "c": "Solar observatory at Lagrange Point",
+        "d": "Exploration of asteroid belt"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIndia’s first solar mission placed at L1 point to study solar atmosphere & radiation.\n\n📖 हिंदी स्पष्टीकरण:\nभारत का पहला सौर मिशन सौर वायुमंडल और विकिरण का अध्ययन करने के लिए L1 बिंदु पर स्थापित किया गया।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements about Jupiter:\n 1. Jupiter has the longest rotational period (i.e., it takes longer to spin once) among the planets.\n 2. The Great Red Spot is a persistent anticyclonic storm on Jupiter.\n 3. Ganymede, one of Jupiter’s moons, is the largest satellite in the Solar System.\n Which of the above statements is/are correct?\n बृहस्पति के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. ग्रहों में बृहस्पति की घूर्णन अवधि सबसे लंबी है (अर्थात, इसे एक बार घूमने में अधिक समय लगता है)।\n 2. ग्रेट रेड स्पॉट बृहस्पति पर एक लगातार आने वाला प्रतिचक्रवाती तूफान है।\n 3. बृहस्पति के चंद्रमाओं में से एक, गैनीमीड, सौरमंडल का सबसे बड़ा उपग्रह है।\n उपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Jupiter:\n 1. Jupiter has the longest rotational period (i.e., it takes longer to spin once) among the planets.\n 2. The Great Red Spot is a persistent anticyclonic storm on Jupiter.\n 3. Ganymede, one of Jupiter’s moons, is the largest satellite in the Solar System.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement 1 is false — Jupiter actually has the shortest rotation period (~9.9 hours). Statements 2 and 3 are true: the Great Red Spot is a long-lived storm, and Ganymede is the largest moon (larger than Mercury in diameter).\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है - बृहस्पति की वास्तव में सबसे छोटी घूर्णन अवधि (~9.9 घंटे) है। कथन 2 और 3 सही हैं: ग्रेट रेड स्पॉट एक लंबे समय तक चलने वाला तूफान है, और गैनीमीड सबसे बड़ा चंद्रमा है (व्यास में बुध से बड़ा)।"
     },
     {
       "q_num": 12,
-      "question": "Consider the following statements about Saturn and its rings/moons:\n 1. Saturn’s mean density is less than waters, so it would float in a large enough body of water.\n 2. Saturn’s rings were observed in the 17th century and Huygens (1655) provided a major early description.\n 3. Cassini discovered a prominent gap in Saturn’s rings in the 17th century (Cassini Division).\n Which of the above statements is/are correct?\n शनि और उसके वलयों/चंद्रमाओं के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. शनि का औसत घनत्व पानी से कम है, इसलिए यह पर्याप्त बड़े जल निकाय में तैर सकता है।\n 2. शनि के वलयों का अवलोकन 17वीं शताब्दी में किया गया था और ह्यूजेंस (1655) ने एक प्रमुख प्रारंभिक विवरण प्रदान किया था।\n 3. कैसिनी ने 17वीं शताब्दी में शनि के वलयों में एक प्रमुख अंतराल की खोज की थी (कैसिनी प्रभाग)।\n उपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Saturn and its rings/moons:\n 1. Saturn’s mean density is less than waters, so it would float in a large enough body of water.\n 2. Saturn’s rings were observed in the 17th century and Huygens (1655) provided a major early description.\n 3. Cassini discovered a prominent gap in Saturn’s rings in the 17th century (Cassini Division).\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll are true. Saturn’s low mean density (<1 g/cm³) is well known. Galileo first observed ringlike features; Huygens provided a coherent description (1655) and Cassini later described the major gap (1675).\n\n📖 हिंदी स्पष्टीकरण:\nसभी सत्य हैं। शनि का कम औसत घनत्व (<1 ग्राम/सेमी³) सर्वविदित है। गैलीलियो ने सबसे पहले वलयाकार आकृतियाँ देखीं; ह्यूजेंस ने एक सुसंगत विवरण प्रदान किया (1655) और कैसिनी ने बाद में प्रमुख अंतराल (1675) का वर्णन किया।"
     },
     {
       "q_num": 13,
-      "question": "Consider the following statements about Uranus:\n 1. Uranus appears greenish because methane in its atmosphere absorbs red light and reflects blue/green wavelengths.\n 2. Uranus has the warmest surface temperature among the planets.\n 3. William Herschel is credited with discovering Uranus in 1781.\n Which of the above statements is/are correct?\n अरुण के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. अरुण हरा दिखाई देता है क्योंकि इसके वायुमंडल में मीथेन लाल प्रकाश को अवशोषित करता है और नीले/हरे तरंगदैर्ध्य को परावर्तित करता है।\n 2. ग्रहों में अरुण की सतह का तापमान सबसे अधिक गर्म है।\n 3. विलियम हर्शेल को 1781 में अरुण की खोज का श्रेय दिया जाता है।\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about Uranus:\n 1. Uranus appears greenish because methane in its atmosphere absorbs red light and reflects blue/green wavelengths.\n 2. Uranus has the warmest surface temperature among the planets.\n 3. William Herschel is credited with discovering Uranus in 1781.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatements 1 and 3 are true — methane gives Uranus its blue-green hue and Herschel discovered it. Statement 2 is false — Uranus is not the warmest (it’s quite cold). The question checks spectral causes of color and discovery history.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 और 3 सत्य हैं - मीथेन अरुण को उसका नीला-हरा रंग देता है और हर्शेल ने इसकी खोज की थी। कथन 2 असत्य है - अरुण सबसे गर्म नहीं है (यह काफी ठंडा है)। प्रश्न रंग के वर्णक्रमीय कारणों और खोज के इतिहास की जाँच करता है।"
     },
     {
       "q_num": 14,
-      "question": "Consider the following statements about Neptune:\n 1. Neptune’s existence was predicted mathematically (perturbations in Uranus’s orbit) before observational confirmation.\n 2. Triton is Neptune’s largest moon and has a retrograde orbit.\n 3. Neptune is the innermost of the ice giant planets.\n Which of the above statements is/are correct?\n वरुण के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. वरुण के अस्तित्व की भविष्यवाणी गणितीय रूप से (अरुण की कक्षा में गड़बड़ी) अवलोकन पुष्टि से पहले की गई थी।\n 2. ट्राइटन वरुण का सबसे बड़ा उपग्रह है और इसकी कक्षा वक्री है।\n 3. वरुण बर्फीले विशाल ग्रहों में सबसे भीतरी है।\n उपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Neptune:\n 1. Neptune’s existence was predicted mathematically (perturbations in Uranus’s orbit) before observational confirmation.\n 2. Triton is Neptune’s largest moon and has a retrograde orbit.\n 3. Neptune is the innermost of the ice giant planets.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement 1 is true — Le Verrier and Adams predicted Neptune; Galle observed it (1846). Triton is Neptune’s largest moon and orbits retrograde (statement 2 true). Statement 3 is false — Neptune is the outermost of the major planets (not the innermost ice giant).\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सत्य है - ले वेरियर और एडम्स ने वरुण की भविष्यवाणी की थी; गैल ने इसका अवलोकन किया (1846) । ट्राइटन वरुण का सबसे बड़ा उपग्रह है और इसकी कक्षा वक्री है (कथन 2 सत्य) । कथन 3 असत्य है - वरुण प्रमुख ग्रहों में सबसे बाहरी है (सबसे भीतरी बर्फीले विशाल ग्रह नहीं) ।"
     },
     {
       "q_num": 15,
-      "question": "Assertion: In 2006 the International Astronomical Union (IAU) reclassified Pluto as a \"dwarf planet.\"\n अभिकथन: 2006 में अंतर्राष्ट्रीय खगोलीय संघ (IAU) ने प्लूटो को \"बौने ग्रह\" के रूप में पुनर्वर्गीकृत किया।\n Reason: This reclassification occurred because Pluto’s orbit lies within the main asteroid belt between Mars and Jupiter.\n कारण: यह पुनर्वर्गीकरण इसलिए हुआ क्योंकि प्लूटो की कक्षा मंगल और बृहस्पति के बीच मुख्य क्षुद्रग्रह बेल्ट के भीतर स्थित है।\n Choose the correct option: / सही विकल्प चुनें:\n a. Both A and R are true, and R is the correct explanation of A.\n b. Both A and R are true, but R is not the correct explanation of A.\n c. A is true but R is false.\n d. Both A and R are false.\n a. A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।\n b. A ​​और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।\n c. A सत्य है लेकिन R असत्य है।\n d. A और R दोनों असत्य हैं।",
+      "question": "Assertion: In 2006 the International Astronomical Union (IAU) reclassified Pluto as a \"dwarf planet.\"\n Reason: This reclassification occurred because Pluto’s orbit lies within the main asteroid belt between Mars and Jupiter.\nChoose the correct option:\n a. Both A and R are true, and R is the correct explanation of A.\n b. Both A and R are true, but R is not the correct explanation of A.\n c. A is true but R is false.\n d. Both A and R are false.",
       "options": {
         "a": "a",
         "b": "b",
@@ -186,55 +186,55 @@
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements about Pluto and the Kuiper Belt:\n 1. Pluto’s orbital period around the Sun is approximately 248 Earth years.\n 2. Pluto is a member of the Kuiper Belt population.\n 3. Charon is the largest of Pluto’s satellites.\n Which of the above statements is/are correct?\n प्लूटो और कुइपर बेल्ट के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. प्लूटो की सूर्य के चारों ओर परिक्रमा अवधि लगभग 248 पृथ्वी वर्ष है।\n 2. प्लूटो कुइपर बेल्ट की आबादी का सदस्य है।\n 3. चारोन प्लूटो के उपग्रहों में सबसे बड़ा है।\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about Pluto and the Kuiper Belt:\n 1. Pluto’s orbital period around the Sun is approximately 248 Earth years.\n 2. Pluto is a member of the Kuiper Belt population.\n 3. Charon is the largest of Pluto’s satellites.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 1 और 2",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three are true. Pluto’s orbit takes ~248 years, it resides in the Kuiper Belt beyond Neptune, and Charon is the largest of its known moons.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों सत्य हैं। प्लूटो की परिक्रमा लगभग 248 वर्ष लगती है, यह वरुण से आगे कुइपर बेल्ट में स्थित है, और चारोन इसके ज्ञात उपग्रहों में सबसे बड़ा है।"
     },
     {
       "q_num": 17,
-      "question": "Consider the following statements about luminous and non-luminous bodies:\n 1. Stars are luminous because they produce light via internal nuclear fusion.\n 2. Fireflies glow (bioluminescence) because they reflect sunlight using specialized scales.\n 3. Non-luminous objects like asteroids and comets shine in our sky by reflecting sunlight.\n Which of the above statements is/are correct?\n चमकीले और गैर-चमकीले पिंडों के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. तारे चमकदार होते हैं क्योंकि वे आंतरिक नाभिकीय संलयन द्वारा प्रकाश उत्पन्न करते हैं।\n 2. जुगनू चमकते हैं (जैवप्रकाशिकता) क्योंकि वे विशिष्ट पैमानों का उपयोग करके सूर्य के प्रकाश को परावर्तित करते हैं।\n 3. क्षुद्रग्रह और धूमकेतु जैसी गैर-चमकीली वस्तुएँ सूर्य के प्रकाश को परावर्तित करके हमारे आकाश में चमकती हैं।\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about luminous and non-luminous bodies:\n 1. Stars are luminous because they produce light via internal nuclear fusion.\n 2. Fireflies glow (bioluminescence) because they reflect sunlight using specialized scales.\n 3. Non-luminous objects like asteroids and comets shine in our sky by reflecting sunlight.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1 true — stellar light originates from fusion (e.g., H→He). Statement 2 is false — fireflies produce light chemically (luciferin–luciferase reaction), not by reflecting sunlight. Statement 3 is true — many small bodies are visible because they reflect sunlight (and comets also have sublimated gases).\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सत्य है - तारकीय प्रकाश संलयन (जैसे, H→He) से उत्पन्न होता है। कथन 2 असत्य है - जुगनू रासायनिक रूप से (लूसिफ़ेरिन-लूसिफ़ेरेज़ अभिक्रिया) प्रकाश उत्पन्न करते हैं, सूर्य के प्रकाश को परावर्तित करके नहीं। कथन 3 सत्य है - कई छोटे पिंड दिखाई देते हैं क्योंकि वे सूर्य के प्रकाश को परावर्तित करते हैं (और धूमकेतुओं में भी उर्ध्वपातित गैसें होती हैं)।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements about comets:\n 1. Comets are composed of rock, dust, ices and gases (a “dirty snowball” composition).\n 2. Halley’s Comet has an orbital period of roughly 76 years.\n 3. Comet tails always point toward the Sun when a comet is near perihelion.\n Which of the above statements is/are correct?\n धूमकेतुओं के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. धूमकेतु चट्टान, धूल, बर्फ और गैसों (एक \"गंदा बर्फीए गोला\" संरचना) से बने होते हैं।\n 2. हैली के धूमकेतु की परिक्रमा अवधि लगभग 76 वर्ष है।\n 3. जब कोई धूमकेतु उपसौर के निकट होता है, तो धूमकेतु की पूंछ हमेशा सूर्य की ओर होती है।\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about comets:\n 1. Comets are composed of rock, dust, ices and gases (a “dirty snowball” composition).\n 2. Halley’s Comet has an orbital period of roughly 76 years.\n 3. Comet tails always point toward the Sun when a comet is near perihelion.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements 1 and 2 are true. Statement 3 is false — comet tails (especially the ion tail) are pushed away from the Sun by the solar wind and radiation pressure; dust tails can trail along the orbit, so tails generally point away from the Sun, not toward it.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 और 2 सत्य हैं। कथन 3 असत्य है - धूमकेतु की पूंछ (विशेषकर आयन पूंछ) सौर वायु और विकिरण दाब द्वारा सूर्य से दूर धकेल दी जाती है; धूल की पूंछ कक्षा के साथ-साथ चल सकती है, इसलिए पूंछ आमतौर पर सूर्य से दूर होती है, उसकी ओर नहीं।"
     },
     {
       "q_num": 19,
-      "question": "Consider the following statements about asteroids and meteoroids:\n 1. All asteroids are located beyond Neptune in the Kuiper Belt.\n 2. A meteoroid becomes a meteor when it enters Earth’s atmosphere, and a meteorite if it reaches the ground.\n 3. The main asteroid belt is located between the orbits of Mars and Jupiter.\n Which of the above statements is/are correct?\n क्षुद्रग्रहों और उल्कापिंडों के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. सभी क्षुद्रग्रह वरुण के आगे कुइपर बेल्ट में स्थित हैं।\n 2. एक उल्कापिंड पृथ्वी के वायुमंडल में प्रवेश करने पर उल्का बन जाता है, और यदि वह धरती पर पहुँचता है तो उल्कापतित बन जाता है।\n 3. मुख्य क्षुद्रग्रह बेल्ट मंगल और बृहस्पति की कक्षाओं के बीच स्थित है।\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about asteroids and meteoroids:\n 1. All asteroids are located beyond Neptune in the Kuiper Belt.\n 2. A meteoroid becomes a meteor when it enters Earth’s atmosphere, and a meteorite if it reaches the ground.\n 3. The main asteroid belt is located between the orbits of Mars and Jupiter.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement 1 is false — many asteroids inhabit the main belt between Mars and Jupiter, though there are also populations in the Kuiper Belt and near-Earth objects. Statement 2 defines meteoroid→meteor→meteorite correctly. Statement 3 is correct.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है - मंगल और बृहस्पति के बीच मुख्य बेल्ट में कई क्षुद्रग्रह रहते हैं, हालाँकि कुइपर बेल्ट और पृथ्वी के निकट स्थित पिंडों में भी आबादी है। कथन 2 उल्कापिंडउल्काउल्कापतित को सही ढंग से परिभाषित करता है। कथन 3 सही है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion: Neptune has the shortest orbital period among the planets.\n Reason: Neptune is the closest planet to the Sun, so it completes its orbit fastest.\n Choose the correct option:\n a. Both A and R are true, and R correctly explains A.\n b. Both A and R are true, but R does not explain A.\n c. A is true but R is false.\n d. Both A and R are false.\n अभिकथन: सभी ग्रहों में वरुण की परिक्रमा अवधि सबसे कम है।\n कारण: वरुण सूर्य के सबसे निकट का ग्रह है, इसलिए यह अपनी परिक्रमा सबसे तेजी से पूरी करता है।\n सही विकल्प चुनें:A और R दोनों सत्य हैं, और R, A की सही व्याख्या करता है।A ​​और R दोनों सत्य हैं, लेकिन R, A की व्याख्या नहीं करता है।A सत्य है, लेकिन R असत्य है।A और R दोनों असत्य हैं।",
+      "question": "Assertion: Neptune has the shortest orbital period among the planets.\n Reason: Neptune is the closest planet to the Sun, so it completes its orbit fastest.\n Choose the correct option:\n a. Both A and R are true, and R correctly explains A.\n b. Both A and R are true, but R does not explain A.\n c. A is true but R is false.\n d. Both A and R are false.",
       "options": {
         "a": "a",
         "b": "b",
@@ -246,7 +246,7 @@
     },
     {
       "q_num": 21,
-      "question": "Match the following planets with their unique features:ē\n निम्नलिखित ग्रहों का उनकी विशिष्ट विशेषताओं के साथ मिलान करें:",
+      "question": "Match the following planets with their unique features:ē",
       "options": {
         "a": "A-3, B-2, C-1, D-4",
         "b": "A-2, B-3, C-4, D-1",
@@ -258,7 +258,7 @@
     },
     {
       "q_num": 22,
-      "question": "Which of the following statements regarding comets is correct?\n a. Their tails are always directed towards the Sun\n b. Their tails are always directed away from the Sun\n c. They do not have any tails\n d. Their tails are directed parallel to their orbits\n धूमकेतुओं के संबंध में निम्नलिखित में से कौन सा कथन सही है?उनकी पूँछ हमेशा सूर्य की ओर होती है।उनकी पूँछ हमेशा सूर्य से दूर होती है।उनकी कोई पूँछ नहीं होती।उनकी पूँछ उनकी कक्षाओं के समानांतर होती है।",
+      "question": "Which of the following statements regarding comets is correct?\n a. Their tails are always directed towards the Sun\n b. Their tails are always directed away from the Sun\n c. They do not have any tails\n d. Their tails are directed parallel to their orbits",
       "options": {
         "a": "a",
         "b": "b",
@@ -270,36 +270,36 @@
     },
     {
       "q_num": 23,
-      "question": "Consider the following statements about the Sun (energy and structure):\n 1. Approximately 99% of the Solar System’s mass is in the Sun.\n 2. The Sun’s composition is primarily hydrogen and helium with heavier elements in trace amounts.\n 3. Photons created in the core take a long, diffusive path (thousands to millions of years) to reach the photosphere before streaming to space.\n Which of the above statements is/are correct?\n सूर्य (ऊर्जा और संरचना) के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. सौरमंडल के द्रव्यमान का लगभग 99% सूर्य में निहित है।\n 2. सूर्य की संरचना मुख्यतः हाइड्रोजन और हीलियम से बनी है, जिसमें भारी तत्व अल्प मात्रा में उपस्थित हैं।\n 3. क्रोड में उत्पन्न फोटॉन अंतरिक्ष में प्रवाहित होने से पहले प्रकाशमंडल तक पहुँचने के लिए एक लंबा, विसरित पथ (हज़ारों से लाखों वर्ष) लेते हैं।\n उपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about the Sun (energy and structure):\n 1. Approximately 99% of the Solar System’s mass is in the Sun.\n 2. The Sun’s composition is primarily hydrogen and helium with heavier elements in trace amounts.\n 3. Photons created in the core take a long, diffusive path (thousands to millions of years) to reach the photosphere before streaming to space.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three are correct. The Sun holds the lion’s share of Solar System mass, is mainly H (~≈73%) and He (~≈25%), and radiative transport in the deep interior means that individual photons undergo many scatterings — diffusing outward over long timescales before escape.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों सही हैं। सूर्य सौरमंडल के द्रव्यमान का सबसे बड़ा हिस्सा रखता है, मुख्य रूप से H (~≈73%) और He (~≈25%) है, और गहरे आंतरिक भाग में विकिरणीय परिवहन का अर्थ है कि व्यक्तिगत फोटॉन कई प्रकीर्णनों से गुजरते हैं - बाहर निकलने से पहले लंबे समय के पैमाने पर बाहर की ओर विसरित होते हैं।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following statements about Jupiter (satellites and rings):\n 1. Jupiter has no ring system at all.\n 2. Galileo discovered the four large Galilean satellites (Io, Europa, Ganymede, Callisto).\n 3. Ganymede is the largest moon in the Solar System.\n Which of the above statements is/are correct?\n बृहस्पति (उपग्रह और वलय) के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. बृहस्पति का कोई वलय तंत्र नहीं है।\n 2. गैलीलियो ने चार बड़े गैलीलियन उपग्रहों (लो, यूरोपा, गैनीमेड, कैलिस्टो) की खोज की थी।\n 3. गैनीमेड सौरमंडल का सबसे बड़ा उपग्रह है।\n उपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Jupiter (satellites and rings):\n 1. Jupiter has no ring system at all.\n 2. Galileo discovered the four large Galilean satellites (Io, Europa, Ganymede, Callisto).\n 3. Ganymede is the largest moon in the Solar System.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement 1 is false — Jupiter does have a faint ring system (discovered later). Statements 2 and 3 are true — Galileo observed the four Galilean moons, and Ganymede is the largest moon.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है - बृहस्पति का एक धुंधला वलय तंत्र है (जिसे बाद में खोजा गया)। कथन 2 और 3 सही हैं - गैलीलियो ने चार गैलीलियन उपग्रहों का अवलोकन किया था, और गैनीमेड सबसे बड़ा उपग्रह है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following statement is correct?\n निम्नलिखित में से कौन सा कथन सही है",
+      "question": "Which of the following statement is correct?",
       "options": {
-        "a": "The density of Saturn is similar to that of Earth. / . शनि का घनत्व पृथ्वी के समान है।",
-        "b": "The Size of Earth and Venus are almost similar. / पृथ्वी और शुक्र का आकार लगभग समान है।",
-        "c": "The size of Jupiter and Mars is similar. / . बृहस्पति और मंगल का आकार समान है।",
-        "d": "Mars is the warmest planet. / मंगल सबसे गर्म ग्रह है।"
+        "a": "The density of Saturn is similar to that of Earth.",
+        "b": "The Size of Earth and Venus are almost similar.",
+        "c": "The size of Jupiter and Mars is similar.",
+        "d": "Mars is the warmest planet."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEarth and Venus are considered twin planets because their radius, mass and composition are close to each other. Venus is just slightly smaller than Earth.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी और शुक्र को जुड़वां ग्रह माना जाता है क्योंकि उनकी त्रिज्या, द्रव्यमान और संरचना एक-दूसरे के करीब हैं। शुक्र पृथ्वी से थोड़ा छोटा है।"

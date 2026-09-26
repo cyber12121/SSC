@@ -6,300 +6,300 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following is the largest river of South India, also called 'Dakshin Ganga'?\n निम्नलिखित में से कौन सी दक्षिण भारत की सबसे बड़ी नदी है, जिसे 'दक्षिण गंगा' भी कहा जाता है?",
+      "question": "Which of the following is the largest river of South India, also called 'Dakshin Ganga'?",
       "options": {
-        "a": "Krishna / कृष्णा",
-        "b": "Mahanadi / महानदी",
-        "c": "Godavari / गोदावरी",
-        "d": "Kaveri / कावेरी"
+        "a": "Krishna",
+        "b": "Mahanadi",
+        "c": "Godavari",
+        "d": "Kaveri"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Godavari River, with a length of 1465 km, is the longest river of South India. Its large size and significance have earned it the title of 'Dakshin Ganga' (Ganga of the South). It originates from the Trimbakeshwar Plateau in Nashik, Maharashtra.\n\n📖 हिंदी स्पष्टीकरण:\nगोदावरी नदी, जिसकी लंबाई 1465 किलोमीटर है, दक्षिण भारत की सबसे लंबी नदी है। अपने विशाल आकार और महत्व के कारण इसे 'दक्षिण गंगा' (दक्षिण की गंगा) की उपाधि दी गई है। यह महाराष्ट्र के नासिक में त्र्यंबकेश्वर पठार से निकलती है।"
     },
     {
       "q_num": 2,
-      "question": "The Narmada and Tapti rivers flow into which water body?\n नर्मदा और ताप्ती नदियाँ किस जल निकाय में गिरती हैं?",
+      "question": "The Narmada and Tapti rivers flow into which water body?",
       "options": {
-        "a": "Bay of Bengal / बंगाल की खाड़ी",
-        "b": "Arabian Sea / अरब सागर",
-        "c": "Indian Ocean / हिंद महासागर",
-        "d": "Gulf of Mannar / मन्नार की खाड़ी"
+        "a": "Bay of Bengal",
+        "b": "Arabian Sea",
+        "c": "Indian Ocean",
+        "d": "Gulf of Mannar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNarmada and Tapti are West flowing rivers of the Peninsula. They drain into the Arabian Sea, specifically into the Gulf of Khambhat. West flowing rivers generally form Estuaries.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा और ताप्ती प्रायद्वीप की पश्चिम की ओर बहने वाली नदियाँ हैं। ये अरब सागर में, विशेष रूप से खंभात की खाड़ी में प्रवाहित होती हैं। पश्चिम की ओर बहने वाली नदियाँ सामान्यतः मुहाने बनाती हैं।"
     },
     {
       "q_num": 3,
-      "question": "Which peninsular river crosses the Tropic of Cancer two times?\n कौन सी प्रायद्वीपीय नदी कर्क रेखा को दो बार काटती है?",
+      "question": "Which peninsular river crosses the Tropic of Cancer two times?",
       "options": {
-        "a": "Narmada / नर्मदा",
-        "b": "Mahanadi / महानदी",
-        "c": "Mahi / माही",
-        "d": "Tapti / ताप्ती"
+        "a": "Narmada",
+        "b": "Mahanadi",
+        "c": "Mahi",
+        "d": "Tapti"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Mahi River, which originates in the Vindhya mountains, is the peninsular river that crosses the Tropic of Cancer two times. It flows through Madhya Pradesh, Rajasthan, and Gujarat before emptying into the Gulf of Khambhat.\n\n📖 हिंदी स्पष्टीकरण:\nविंध्य पर्वत से निकलने वाली माही नदी एक प्रायद्वीपीय नदी है जो कर्क रेखा को दो बार पार करती है। यह मध्य प्रदेश, राजस्थान और गुजरात से होकर बहती हुई खंभात की खाड़ी में गिरती है।"
     },
     {
       "q_num": 4,
-      "question": "Which river of South India is a perennial river, meaning it flows throughout the year?\n दक्षिण भारत की कौन सी नदी बारहमासी नदी है, जिसका अर्थ है कि वह पूरे वर्ष बहती है?",
+      "question": "Which river of South India is a perennial river, meaning it flows throughout the year?",
       "options": {
-        "a": "Kaveri / कावेरी",
-        "b": "Krishna / कृष्णा",
-        "c": "Godavari / गोदावरी",
-        "d": "Mahanadi / महानदी"
+        "a": "Kaveri",
+        "b": "Krishna",
+        "c": "Godavari",
+        "d": "Mahanadi"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Kaveri River is the only river of South India that flows throughout the year; hence it is known as a perennial river. This is due to its catchment area receiving rainfall during both the Southwest and Northeast monsoon seasons.\n\n📖 हिंदी स्पष्टीकरण:\nकावेरी नदी दक्षिण भारत की एकमात्र ऐसी नदी है जो साल भर बहती है; इसलिए इसे बारहमासी नदी कहा जाता है। ऐसा इसलिए है क्योंकि इसके जलग्रहण क्षेत्र में दक्षिण-पश्चिम और उत्तर-पूर्वी दोनों मानसून ऋतुओं में वर्षा होती है।"
     },
     {
       "q_num": 5,
-      "question": "The city of Surat is located on the bank of which river?\n सूरत शहर किस नदी के तट पर स्थित है?",
+      "question": "The city of Surat is located on the bank of which river?",
       "options": {
-        "a": "Narmada / नर्मदा",
-        "b": "Tapti / ताप्ती",
-        "c": "Sabarmati / साबरमती",
-        "d": "Mandovi / मांडवी"
+        "a": "Narmada",
+        "b": "Tapti",
+        "c": "Sabarmati",
+        "d": "Mandovi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe city of Surat is located on the bank of the Tapti river. Tapti flows through a rift valley in Central India, originating from the Betul Plateau in Madhya Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nसूरत शहर ताप्ती नदी के तट पर स्थित है। ताप्ती नदी मध्य प्रदेश के बैतूल पठार से निकलकर मध्य भारत में एक भ्रंश घाटी से होकर बहती है।"
     },
     {
       "q_num": 6,
-      "question": "Which river is known as the 'Sorrow of Bengal' because of the devastating floods it causes?\n कौन सी नदी अपने कारण आने वाली विनाशकारी बाढ़ के कारण 'बंगाल का शोक' के रूप में जानी जाती है?",
+      "question": "Which river is known as the 'Sorrow of Bengal' because of the devastating floods it causes?",
       "options": {
-        "a": "Mahanadi / महानदी",
-        "b": "Damodar / दामोदर",
-        "c": "Subarnarekha / सुवर्णरेखा",
-        "d": "Brahmani / ब्राह्मणी"
+        "a": "Mahanadi",
+        "b": "Damodar",
+        "c": "Subarnarekha",
+        "d": "Brahmani"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Damodar River is known as the 'Sorrow of Bengal'. It originates in the Chota Nagpur Plateau and flows in a rift valley, historically causing massive floods in the plains of West Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nदामोदर नदी को 'बंगाल का शोक' कहा जाता है। यह छोटा नागपुर पठार से निकलती है और एक भ्रंश घाटी में बहती है, जिससे ऐतिहासिक रूप से पश्चिम बंगाल के मैदानी इलाकों में भारी बाढ़ आती रही है।"
     },
     {
       "q_num": 7,
-      "question": "The Hirakud Dam is built on which major East flowing peninsular river?\n हीराकुंड बाँध किस प्रमुख पूर्व की ओर बहने वाली प्रायद्वीपीय नदी पर बनाया गया है?",
+      "question": "The Hirakud Dam is built on which major East flowing peninsular river?",
       "options": {
-        "a": "Mahanadi / महानदी",
-        "b": "Godavari / गोदावरी",
-        "c": "Krishna / कृष्णा",
-        "d": "Kaveri / कावेरी"
+        "a": "Mahanadi",
+        "b": "Godavari",
+        "c": "Krishna",
+        "d": "Kaveri"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Hirakud Dam is built on the Mahanadi River. Mahanadi is a major East flowing river that originates from the Sihawa Hills in Chhattisgarh and flows mainly through Chhattisgarh and Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nहीराकुंड बाँध महानदी नदी पर बना है। महानदी पूर्व की ओर बहने वाली एक प्रमुख नदी है जो छत्तीसगढ़ के सिहावा पहाड़ियों से निकलती है और मुख्यतः छत्तीसगढ़ और ओडिशा से होकर बहती है।"
     },
     {
       "q_num": 8,
-      "question": "The river that flows through a rift valley between the Vindhya and Satpura ranges is:\n वह नदी जो विंध्य और सतपुड़ा श्रेणियों के बीच एक भ्रंश घाटी से होकर बहती है, वह है:",
+      "question": "The river that flows through a rift valley between the Vindhya and Satpura ranges is:",
       "options": {
-        "a": "Tapti / ताप्ती",
-        "b": "Krishna / कृष्णा",
-        "c": "Godavari / गोदावरी",
-        "d": "Narmada / नर्मदा"
+        "a": "Tapti",
+        "b": "Krishna",
+        "c": "Godavari",
+        "d": "Narmada"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Narmada River flows in a rift valley between the Vindhya and Satpura ranges. It is the longest Western River flowing into the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा नदी विंध्य और सतपुड़ा पर्वतमालाओं के बीच एक भ्रंश घाटी में बहती है। यह अरब सागर में गिरने वाली सबसे लंबी पश्चिमी नदी है।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following is the southernmost river of India ?\n निम्नलिखित में से कौन सी भारत की सबसे दक्षिणी नदी है?",
+      "question": "Which of the following is the southernmost river of India ?",
       "options": {
-        "a": "Kaveri / कावेरी",
-        "b": "Pennar / पेन्नार",
-        "c": "Vaigai / वैगई",
-        "d": "Periyar / पेरियार"
+        "a": "Kaveri",
+        "b": "Pennar",
+        "c": "Vaigai",
+        "d": "Periyar"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Vaigai is marked as the \"Southern-most River of India\". It flows in the Tamil Nadu region.\n\n📖 हिंदी स्पष्टीकरण:\nवैगई को \"भारत की सबसे दक्षिणी नदी\" के रूप में चिह्नित किया गया है। यह तमिलनाडु क्षेत्र में बहती है।"
     },
     {
       "q_num": 10,
-      "question": "Gandhinagar and Ahmedabad are located on the bank of which river?\n गांधीनगर और अहमदाबाद किस नदी के किनारे स्थित हैं?",
+      "question": "Gandhinagar and Ahmedabad are located on the bank of which river?",
       "options": {
-        "a": "Mahi / माही",
-        "b": "Sabarmati / साबरमती",
-        "c": "Luni / लूनी",
-        "d": "Narmada / नर्मदा"
+        "a": "Mahi",
+        "b": "Sabarmati",
+        "c": "Luni",
+        "d": "Narmada"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe cities of Gandhinagar and Ahmedabad are located on the bank of the Sabarmati River. The Sabarmati River originates in the Aravalli mountains of Rajasthan and flows through Rajasthan and Gujarat.\n\n📖 हिंदी स्पष्टीकरण:\nगांधीनगर और अहमदाबाद शहर साबरमती नदी के तट पर स्थित हैं। साबरमती नदी राजस्थान के अरावली पर्वतों से निकलती है और राजस्थान और गुजरात से होकर बहती है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements about Peninsular Rivers:\n प्रायद्वीपीय नदियों के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. East flowing rivers generally form deltas at their mouth. / पूर्व की ओर बहने वाली नदियाँ आम तौर पर अपने मुहाने पर डेल्टा बनाती हैं।\n 2. The West flowing rivers are generally shorter and flow in rift valleys. / पश्चिम की ओर बहने वाली नदियाँ आम तौर पर छोटी होती हैं और भ्रंश घाटियों में बहती हैं।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Peninsular Rivers:\n1. East flowing rivers generally form deltas at their mouth.\n2. The West flowing rivers are generally shorter and flow in rift valleys.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEast flowing rivers (like Mahanadi, Godavari, Krishna, Kaveri) flow into the Bay of Bengal, where they generally form Deltas. West flowing rivers (like Narmada and Tapti) are shorter and flow in rift valleys. They form Estuaries instead of deltas.\n\n📖 हिंदी स्पष्टीकरण:\nपूर्व की ओर बहने वाली नदियाँ (जैसे महानदी, गोदावरी, कृष्णा, कावेरी) बंगाल की खाड़ी में गिरती हैं, जहाँ वे आमतौर पर डेल्टा बनाती हैं। पश्चिम की ओर बहने वाली नदियाँ (जैसे नर्मदा और ताप्ती) छोटी होती हैं और भ्रंश घाटियों में बहती हैं। वे डेल्टा के बजाय मुहाना बनाती हैं।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following is NOT a tributary of the Godavari River?\n निम्नलिखित में से कौन सी गोदावरी नदी की सहायक नदी नहीं है?",
+      "question": "Which of the following is NOT a tributary of the Godavari River?",
       "options": {
-        "a": "Pranhita / प्राणहिता",
-        "b": "Indravati / इंद्रावती",
-        "c": "Tungabhadra / तुंगभद्रा",
-        "d": "Manjira / मंजीरा"
+        "a": "Pranhita",
+        "b": "Indravati",
+        "c": "Tungabhadra",
+        "d": "Manjira"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTungabhadra is a tributary of the Krishna River. Pranhita, Indravati, and Manjira are all listed as tributaries of the Godavari River. The Godavari River has the largest catchment area in Maharashtra.\n\n📖 हिंदी स्पष्टीकरण:\nतुंगभद्रा कृष्णा नदी की एक सहायक नदी है। प्राणहिता, इंद्रावती और मंजीरा, सभी गोदावरी नदी की सहायक नदियों के रूप में सूचीबद्ध हैं। गोदावरी नदी का जलग्रहण क्षेत्र महाराष्ट्र में सबसे बड़ा है।"
     },
     {
       "q_num": 13,
-      "question": "Assertion (A): The major number of flowing peninsular rivers flow in the East direction.\n Reason (R): The tilt of the Deccan Plateau is towards the East.\n अभिकथन (A): प्रायद्वीपीय नदियों की अधिकांश धाराएं पूर्व दिशा में बहती हैं।\n कारण (R): दक्कन के पठार का झुकाव पूर्व की ओर है।",
+      "question": "Assertion (A): The major number of flowing peninsular rivers flow in the East direction.\n Reason (R): The tilt of the Deccan Plateau is towards the East.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A का सही स्पष्टीकरण नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe major peninsular rivers like Godavari, Krishna, and Mahanadi, flow towards the East and drain into the Bay of Bengal. This flow is attributed to the tilt of the Deccan Plateau being towards the East (West to East), which determines the general gradient of the land.\n\n📖 हिंदी स्पष्टीकरण:\nगोदावरी, कृष्णा और महानदी जैसी प्रमुख प्रायद्वीपीय नदियाँ पूर्व की ओर बहती हैं और बंगाल की खाड़ी में गिरती हैं। इस प्रवाह का श्रेय दक्कन पठार के पूर्व (पश्चिम से पूर्व) की ओर झुकाव को दिया जाता है, जो भूमि के सामान्य ढाल को निर्धारित करता है।"
     },
     {
       "q_num": 14,
-      "question": "Consider the following pairs of rivers and its significance:\n नदियों के इन जोड़ों और उनके महत्व पर विचार करें:\n 1. Periyar: Lifeline of Kerala / पेरियारः केरल की जीवन रेखा\n 2. Mandovi: Lifeline of Goa / मांडवीः गोवा की जीवन रेखा\n 3. Mahanadi: Sorrow of Odisha / महानदीः ओडिशा का शोक\n Which of the pairs given above is/are correctly matched?\n ऊपर दिए गए जोड़ों में से कौन सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following pairs of rivers and its significance:\n1. Periyar: Lifeline of Kerala\n2. Mandovi: Lifeline of Goa\n3. Mahanadi: Sorrow of Odisha\n Which of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1, 2 and 3 / 1, 2 और 3",
-        "d": "None of the above / उपरोक्त में से कोई नहीं"
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1, 2 and 3",
+        "d": "None of the above"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAll three pairs are correctly matched as per the provided information. Periyar is known as the lifeline of Kerala. Mandovi is known as the lifeline of Goa. Mahanadi is known as the Sorrow of Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nदी गई जानकारी के अनुसार तीनों जोड़े सही सुमेलित हैं। पेरियार को केरल की जीवन रेखा कहा जाता है। मांडवी को गोवा की जीवन रेखा कहा जाता है। महानदी को ओडिशा का शोक कहा जाता है।"
     },
     {
       "q_num": 15,
-      "question": "The Rushikulya river is significant for which reason?\n ऋषिकुल्या नदी किस कारण से महत्वपूर्ण है?",
+      "question": "The Rushikulya river is significant for which reason?",
       "options": {
-        "a": "It is the longest river in Odisha. / यह ओडिशा की सबसे लंबी नदी है।",
-        "b": "Its delta is a nesting site for Olive Ridley Turtles in India. / इसका डेल्टा भारत में ओलिव रिडले कछुओं के लिए एक घोंसला बनाने का स्थल है।",
-        "c": "It is the northernmost river flowing into the Bay of Bengal. / यह बंगाल की खाड़ी में बहने वाली सबसे उत्तरी नदी है।",
-        "d": "It originates from the Chota Nagpur Plateau. / यह छोटा नागपुर पठार से निकलती है।"
+        "a": "It is the longest river in Odisha.",
+        "b": "Its delta is a nesting site for Olive Ridley Turtles in India.",
+        "c": "It is the northernmost river flowing into the Bay of Bengal.",
+        "d": "It originates from the Chota Nagpur Plateau."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Rushikulya river mouth in Odisha has Arribada beaches, which are a nesting site for Olive Ridley Turtles in India. The Gahirmatha Marine Sanctuary, another important nesting site, is near the delta formed by the Brahmani and Baitarani rivers.\n\n📖 हिंदी स्पष्टीकरण:\nओडिशा में श्रषिकुल्या नदी के मुहाने पर अरिबाड़ा समुद्र तट हैं, जो भारत में ओलिव रिडले कछुओं का घोंसला बनाने का स्थान है। गहिरमाथा समुद्री अभयारण्य, एक अन्य महत्वपूर्ण घोंसला बनाने का स्थान, ब्राह्मणी और बैतरणी नदियों द्वारा निर्मित डेल्टा के पास स्थित है।"
     },
     {
       "q_num": 16,
-      "question": "Which of the following is the correct decreasing order of the length of the peninsular rivers?\n निम्नलिखित में से प्रायद्वीपीय नदियों की लंबाई का सही घटता क्रम कौन सा है?",
+      "question": "Which of the following is the correct decreasing order of the length of the peninsular rivers?",
       "options": {
-        "a": "Krishna > Godavari > Mahanadi > Kaveri / कृष्णा > गोदावरी > महानदी > कावेरी",
-        "b": "Godavari > Krishna > Mahanadi > Kaveri / गोदावरी > कृष्णा > महानदी > कावेरी",
-        "c": "Godavari > Krishna > Kaveri > Mahanadi / गोदावरी > कृष्णा > कावेरी > महानदी",
-        "d": "Krishna > Mahanadi > Godavari > Kaveri / कृष्णा > महानदी > गोदावरी > कावेरी"
+        "a": "Krishna > Godavari > Mahanadi > Kaveri",
+        "b": "Godavari > Krishna > Mahanadi > Kaveri",
+        "c": "Godavari > Krishna > Kaveri > Mahanadi",
+        "d": "Krishna > Mahanadi > Godavari > Kaveri"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe lengths of the rivers are: Godavari (1465 km), Krishna (1400 km), Mahanadi (900 km), and Kaveri (800 km). Therefore, the correct decreasing order is Godavari > Krishna > Mahanadi > Kaveri.\n\n📖 हिंदी स्पष्टीकरण:\nनदियों की लंबाई इस प्रकार है: गोदावरी (1465 किमी), कृष्णा (1400 किमी), महानदी (900 किमी), और कावेरी (800 किमी)। इसलिए, सही घटता क्रम गोदावरी > कृष्णा > महानदी > कावेरी है।"
     },
     {
       "q_num": 17,
-      "question": "The tributaries of the Kaveri River include:\n कावेरी नदी की सहायक नदियों में शामिल हैं:\n 1. Hemvati / हेमवती\n 2. Kabini / काबिनी\n 3. Tungabhadra / तुंगभद्रा\n 4. Bhavani / भवानी\n Select the correct code: / सही कूट का चयन करें:",
+      "question": "The tributaries of the Kaveri River include:\n1. Hemvati\n2. Kabini\n3. Tungabhadra\n4. Bhavani\nSelect the correct code:",
       "options": {
-        "a": "1, 2, and 3 only / केवल 1, 2, और 3",
-        "b": "1, 3, and 4 only / केवल 1, 3, और 4",
-        "c": "1, 2, and 4 only / केवल 1, 2, और 4",
-        "d": "2, 3, and 4 only / केवल 2, 3, और 4"
+        "a": "1, 2, and 3 only",
+        "b": "1, 3, and 4 only",
+        "c": "1, 2, and 4 only",
+        "d": "2, 3, and 4 only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe tributaries of the Kaveri River are listed as Hemvati, Kabini, Bhavani, and Shimsha. Tungabhadra is a tributary of the Krishna River.\n\n📖 हिंदी स्पष्टीकरण:\nकावेरी नदी की सहायक नदियाँ हेमवती, काबिनी, भवानी और शिम्शा हैं। तुंगभद्रा कृष्णा नदी की एक सहायक नदी है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following river/tributary pairs:\n निम्नलिखित नदी/सहायक नदी के जोड़ों पर विचार करें:\n 1. Narmada: Banjar / नर्मदाः बंजर\n 2. Tapti: Purna / ताप्तीः पूर्णा\n 3. Krishna: Bhima / कृष्णाः भीमा\n Which of the pairs given above is/are correctly matched?\n ऊपर दिए गए जोड़ों में से कौन सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following river/tributary pairs:\n1. Narmada: Banjar\n2. Tapti: Purna\n3. Krishna: Bhima\n Which of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "3 only / केवल 3",
-        "c": "1, 2, and 3 / 1, 2, और 3",
-        "d": "1 and 3 only / केवल 1 और 3"
+        "a": "1 and 2 only",
+        "b": "3 only",
+        "c": "1, 2, and 3",
+        "d": "1 and 3 only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAll the pairs are correctly matched as per the provided list of tributaries: Narmada's tributaries include Banjar. Tapti's tributaries include Purna. Krishna's tributaries include Bhima.\n\n📖 हिंदी स्पष्टीकरण:\nसहायक नदियों की दी गई सूची के अनुसार सभी जोड़े सही ढंग से सुमेलित हैं: नर्मदा की सहायक नदियों में बंजर शामिल है। ताप्ती की सहायक नदियों में पूर्णा शामिल है। कृष्णा की सहायक नदियों में भीमा शामिल है।"
     },
     {
       "q_num": 19,
-      "question": "Which city is located on the confluence of the South Koel and Sankha rivers, which together form the Brahmani River?\n दक्षिण कोयल और शंख नदियों के संगम पर कौन सा शहर स्थित है, जो मिलकर ब्राह्मणी नदी बनाती हैं?",
+      "question": "Which city is located on the confluence of the South Koel and Sankha rivers, which together form the Brahmani River?",
       "options": {
-        "a": "Panaji / पणजी",
-        "b": "Rourkela / राउरकेला",
-        "c": "Jabalpur / जबलपुर",
-        "d": "Ranchi / राँची"
+        "a": "Panaji",
+        "b": "Rourkela",
+        "c": "Jabalpur",
+        "d": "Ranchi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n5. The South Koel River and the Shankha River meet near the city of Rourkela in the state of Odisha.\n6. The confluence of these two rivers forms the Brahmani River, which flows eastward to join the Baitarani River and drain into the Bay of Bengal.\nTherefore, Rourkela is the city located at the confluence of the South Koel and Shankha rivers.\n\n📖 हिंदी स्पष्टीकरण:\n7. दक्षिण कोयल नदी और शंख नदी का संगम ओडिशा राज्य के राउरकेला शहर के पास होता है।\n8. इन दोनों नदियों के संगम से ब्राह्मणी नदी का निर्माण होता है, जो पूर्व दिशा में बहते हुए बैतरणी नदी के साथ मिलकर बंगाल की खाड़ी में गिरती है।\nइसलिए, राउरकेला वह शहर है जो दक्षिण कोयल और शंख नदियों के संगम पर स्थित है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The Krishna River is called the 'Ganga of South'.\n Reason (R): The flow of the Kaveri River is like Ganga, and its tributaries resemble Ganga.\n अभिकथन (A): कृष्णा नदी को 'दक्षिण की गंगा' कहा जाता है।\n कारण (R): कावेरी नदी का बहाव गंगा के समान है, और इसकी सहायक नदियाँ गंगा से मिलती जुलती हैं।",
+      "question": "Assertion (A): The Krishna River is called the 'Ganga of South'.\n Reason (R): The flow of the Kaveri River is like Ganga, and its tributaries resemble Ganga.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A का सही स्पष्टीकरण नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAssertion (A): \"The Krishna River is called the 'Ganga of South'\" — This is false.\nReason (R): \"The flow of the Kaveri River is like Ganga, and its tributaries resemble Ganga\" — This is true and explains why Kaveri is called the \"Ganga of the South.”\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन (A): \"कृष्णा नदी को 'दक्षिण की गंगा' कहा जाता है\" - यह असत्य है।\nकारण (R): \"कावेरी नदी का प्रवाह गंगा के समान है, और इसकी सहायक नदियाँ गंगा से मिलती-जुलती हैं\" - यह सत्य है और यही कारण है कि कावेरी को \"दक्षिण की गंगा\" कहा जाता है।"
     },
     {
       "q_num": 21,
-      "question": "Which of the following is an Endorheic River that flows into inland basins and ends in the Rann of Katchh without reaching the sea?\n निम्नलिखित में से कौन सी एक अंतःस्थलीय नदी है जो अंतर्देशीय घाटियों में बहती है और समुद्र तक पहुँचे बिना कच्छ के रण में समाप्त हो जाती है?",
+      "question": "Which of the following is an Endorheic River that flows into inland basins and ends in the Rann of Katchh without reaching the sea?",
       "options": {
-        "a": "Sabarmati / साबरमती",
-        "b": "Mahi / माही",
-        "c": "Luni / लूनी",
-        "d": "Tapti / ताप्ती"
+        "a": "Sabarmati",
+        "b": "Mahi",
+        "c": "Luni",
+        "d": "Tapti"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Luni River is an Endorheic River, meaning its water never reaches the sea. It ends in the Rann of Katchh. It is the only large river in the Indian Desert, and it is also known as the Lavanavari or Lavanavati river as it contains saline water.\n\n📖 हिंदी स्पष्टीकरण:\nलूनी नदी एक अंतर्देशीय नदी है, जिसका अर्थ है कि इसका पानी कभी समुद्र तक नहीं पहुँचता। यह कच्छ के रण में समाप्त होती है। यह भारतीय रेगिस्तान की एकमात्र बड़ी नदी है, और खारे पानी के कारण इसे लवणवारी या लवणवती नदी भी कहा जाता है।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements about the West flowing rivers Narmada and Tapti:\n पश्चिम की ओर बहने वाली नदियाँ नर्मदा और ताप्ती के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. Both Narmada and Tapti flow into the Gulf of Khambhat. / नर्मदा और ताप्ती दोनों खंभात की खाड़ी में गिरती हैं।\n 2. Jabalpur is located on the bank of the Narmada River. / जबलपुर शहर नर्मदा नदी के किनारे स्थित है।\n 3. Tapti's origin from Multai in Betul district of Madhya Pradesh. / ताप्ती का उद्गम मध्य प्रदेश के बैतूल जिले के मुलताई से हुआ है।\n How many of the statements given above are correct?\n ऊपर दिए गए कथनों में से कितने सही हैं?",
+      "question": "Consider the following statements about the West flowing rivers Narmada and Tapti:\n1. Both Narmada and Tapti flow into the Gulf of Khambhat.\n2. Jabalpur is located on the bank of the Narmada River.\n3. Tapti's origin from Multai in Betul district of Madhya Pradesh.\n How many of the statements given above are correct?",
       "options": {
-        "a": "Only one / केवल एक",
-        "b": "Only two / केवल दो",
-        "c": "All three / सभी तीन",
-        "d": "None / कोई नहीं"
+        "a": "Only one",
+        "b": "Only two",
+        "c": "All three",
+        "d": "None"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAll three statements about the Narmada and Tapti rivers are correct —\nBoth flow into the Gulf of Khambhat,\nJabalpur lies on the Narmada River, and\nTapti originates from Multai in Betul district (Madhya Pradesh).\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा और ताप्ती नदियों के बारे में तीनों कथन सही हैं -\nदोनों खंभात की खाड़ी में गिरती हैं,\nजबलपुर नर्मदा नदी के तट पर स्थित है, और\nताप्ती नदी मध्य प्रदेश के बैतूल जिले के मुलताई से निकलती है।"
     },
     {
       "q_num": 23,
-      "question": "Which one of the following is a peninsular river that is an independent flowing river of Andhra Pradesh and is also known as Pinakini?\n निम्नलिखित में से कौन सी एक प्रायद्वीपीय नदी है जो आंध्र प्रदेश की एक स्वतंत्र बहने वाली नदी है और पिनाकिनी के नाम से भी जानी जाती है?",
+      "question": "Which one of the following is a peninsular river that is an independent flowing river of Andhra Pradesh and is also known as Pinakini?",
       "options": {
-        "a": "Godavari / गोदावरी",
-        "b": "Krishna / कृष्णा",
-        "c": "Pennar / पेन्नार",
-        "d": "Vamsadhara / वंशधारा"
+        "a": "Godavari",
+        "b": "Krishna",
+        "c": "Pennar",
+        "d": "Vamsadhara"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Pennar river is also known as Pinakini. It is an independent flowing river of Andhra Pradesh. It originates from the Nandi Hills in Chikkaballapura, Karnataka.\n\n📖 हिंदी स्पष्टीकरण:\nपेन्नार नदी, जिसे पिनाकिनी के नाम से भी जाना जाता है, आंध्र प्रदेश की एक स्वतंत्र नदी है। इसका उद्गम कर्नाटक के चिक्कबल्लापुर में नंदी पहाड़ियों से होता है।"
     },
     {
       "q_num": 24,
-      "question": "The longest river among the West flowing rivers of the Peninsular India is:\n प्रायद्वीपीय भारत की पश्चिम की ओर बहने वाली नदियों में सबसे लंबी नदी कौन सी है?",
+      "question": "The longest river among the West flowing rivers of the Peninsular India is:",
       "options": {
-        "a": "Mahi / माही",
-        "b": "Tapti / ताप्ती",
-        "c": "Sabarmati / साबरमती",
-        "d": "Narmada / नर्मदा"
+        "a": "Mahi",
+        "b": "Tapti",
+        "c": "Sabarmati",
+        "d": "Narmada"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Narmada River has a length of 1312 km. It is explicitly stated as the Longest Western River flowing into the Arabian Sea. The Tapti River is 724 km long.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा नदी की लंबाई 1312 किलोमीटर है। इसे अरब सागर में गिरने वाली सबसे लंबी पश्चिमी नदी बताया गया है। ताप्ती नदी 724 किलोमीटर लंबी है।"
     },
     {
       "q_num": 25,
-      "question": "Which East flowing river originates from the Chota Nagpur Plateau and has gold particles seen in its riverbed?\n कौन सी पूर्व की ओर बहने वाली नदी छोटा नागपुर पठार से निकलती है और जिसके तल में सोने के कण देखे जाते हैं?",
+      "question": "Which East flowing river originates from the Chota Nagpur Plateau and has gold particles seen in its riverbed?",
       "options": {
-        "a": "Damodar / दामोदर",
-        "b": "Mahanadi / महानदी",
-        "c": "Subarnarekha / सुवर्णरेखा",
-        "d": "Brahmani / ब्राह्मणी"
+        "a": "Damodar",
+        "b": "Mahanadi",
+        "c": "Subarnarekha",
+        "d": "Brahmani"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Subarnarekha River originates from the Chota Nagpur Plateau (Ranchi Plateau). Its name literally translates to 'golden streak' because gold particles are seen in the river.\n\n📖 हिंदी स्पष्टीकरण:\nसुवर्णरेखा नदी छोटा नागपुर पठार (रांची पठार) से निकलती है। इसका नाम शाब्दिक रूप से 'सुनहरी रेखा' है क्योंकि नदी में सोने के कण दिखाई देते हैं।"

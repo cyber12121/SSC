@@ -6,300 +6,300 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Condensation is the process of:\n संघनन वह प्रक्रिया है जिसमें:",
+      "question": "Condensation is the process of:",
       "options": {
-        "a": "Water changes into vapor / पानी वाष्प में बदलता है।",
-        "b": "Vapor changes into water / वाष्प जल में बदलती है।",
-        "c": "Ice changes into vapor / बर्फ वाष्प में बदलती है।",
-        "d": "None of these / इनमें से कोई नहीं।"
+        "a": "Water changes into vapor",
+        "b": "Vapor changes into water",
+        "c": "Ice changes into vapor",
+        "d": "None of these"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCondensation occurs when water vapor cools and turns into liquid water.\n\n📖 हिंदी स्पष्टीकरण:\nजब जलवाष्प ठंडी होकर तरल जल में बदल जाती है, तब संघनन होता है।"
     },
     {
       "q_num": 2,
-      "question": "The instrument used to measure humidity is called:\n आद्रता को मापने के लिए उपयोग किया जाने वाला यंत्र कहलाता है:",
+      "question": "The instrument used to measure humidity is called:",
       "options": {
-        "a": "Thermometer / थर्मामीटर",
-        "b": "Hygrometer / हाइग्रोमीटर",
-        "c": "Barometer / बैरोमीटर",
-        "d": "Anemometer / एनीमोमीटर"
+        "a": "Thermometer",
+        "b": "Hygrometer",
+        "c": "Barometer",
+        "d": "Anemometer"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA hygrometer measures the amount of water vapor present in the air.\n1. Thermometer - A thermometer is a device used to measure temperature or 'temperature gradient'.\n2. Barometer - A barometer or barometer is an instrument used to measure atmospheric pressure.\n3. Anemometer - An anemometer measures wind speed and pressure.\n\n📖 हिंदी स्पष्टीकरण:\nहाइग्रोमीटर वायु में उपस्थित जलवाष्प की मात्रा को मापता है।\n4. थर्मामीटर - तापमापी या थर्मामीटर वह युक्ति है जो ताप या 'ताप की प्रवणता' को मापने के काम आती है।\n5. बैरोमीटर - बैरोमीटर या वायुदाबमापी एक यंत्र होता है जिसके द्वारा वायुमण्डल के दबाव को मापा जाता है।\n6. एनीमोमीटर - एनीमोमीटर हवा की गति और दबाव मापता है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following is not a form of precipitation?\n निम्नलिखित में से कौन वर्षण का रूप नहीं है?",
+      "question": "Which of the following is not a form of precipitation?",
       "options": {
-        "a": "Rain / वर्षा",
-        "b": "Snow / हिमपात",
-        "c": "Dew / ओस",
-        "d": "Hail / ओलावृष्टि"
+        "a": "Rain",
+        "b": "Snow",
+        "c": "Dew",
+        "d": "Hail"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDew forms by condensation on surfaces, not by precipitation from clouds.\n\n📖 हिंदी स्पष्टीकरण:\nओस सतह पर संघनन से बनती है, बादलों से गिरने वाला वर्षण नहीं है।"
     },
     {
       "q_num": 4,
-      "question": "Clouds are formed due to:\n बादल बनने का कारण है:",
+      "question": "Clouds are formed due to:",
       "options": {
-        "a": "Evaporation / वाष्पीकरण",
-        "b": "Condensation / संघनन",
-        "c": "Sublimation / ऊर्ध्वपातन",
-        "d": "None of these / इनमें से कोई नहीं"
+        "a": "Evaporation",
+        "b": "Condensation",
+        "c": "Sublimation",
+        "d": "None of these"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhen water vapor rises and cools, it condenses into tiny water droplets or ice crystals. These water droplets form clouds.\n\n📖 हिंदी स्पष्टीकरण:\nजब जल वाष्प ऊपर उठकर ठंडी हो जाती है, तो वह छोटे-छोटे जलकणों या बर्फ के कणों में संघनित हो जाती है। इन जलकणों का समूह ही बादल बनाता है।"
     },
     {
       "q_num": 5,
-      "question": "The process of water vapor turning directly into ice is called:\n जलवाष्प का सीधे बर्फ में बदलना कहलाता है:",
+      "question": "The process of water vapor turning directly into ice is called:",
       "options": {
-        "a": "Sublimation / ऊर्ध्वपातन",
-        "b": "Deposition / निक्षेपण",
-        "c": "Condensation / संघनन",
-        "d": "Evaporation / वाष्पीकरण"
+        "a": "Sublimation",
+        "b": "Deposition",
+        "c": "Condensation",
+        "d": "Evaporation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhen water vapor changes directly to a solid (ice) without going from a liquid state, the process is called deposition.\nThis is the opposite process of sublimation.\n\n📖 हिंदी स्पष्टीकरण:\nजब जलवाष्प बिना द्रव अवस्था में गए सीधे ठोस (बर्फ) में बदल जाती है, तो इस प्रक्रिया को निक्षेपण कहा जाता है।\nयह ऊर्ध्वपातन की विपरीत प्रक्रिया होती है।"
     },
     {
       "q_num": 6,
-      "question": "Which type of cloud is known for producing thunderstorms?\n किस तरह के बादल गरज के साथ बारिश पैदा करने के लिए जाने जाते हैं?",
+      "question": "Which type of cloud is known for producing thunderstorms?",
       "options": {
-        "a": "Cirrus / सिरस",
-        "b": "Stratus / स्ट्रेटस",
-        "c": "Cumulonimbus / क्यूम्युलोनिंबस",
-        "d": "Altostratus / ऑल्टोस्ट्रेटस"
+        "a": "Cirrus",
+        "b": "Stratus",
+        "c": "Cumulonimbus",
+        "d": "Altostratus"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCumulonimbus clouds are dense, vertical clouds that extend to very high altitudes. They cause thunder, lightning, and heavy rainfall. They are often called thunderclouds.\n\n📖 हिंदी स्पष्टीकरण:\nक्यूम्युलोनिंबस बादल बहुत ऊँचाई तक फैलने वाले घने, ऊर्ध्वाधर बादल होते हैं। ये गरज, बिजली, और भारी वर्षा का कारण बनते हैं। इन्हें अक्सर गरज वाले बादल भी कहा जाता है।"
     },
     {
       "q_num": 7,
-      "question": "Fog is essentially a:\n कोहरा मूल रूप से होता है:",
+      "question": "Fog is essentially a:",
       "options": {
-        "a": "Low-lying cloud / नीचाई पर बना बादल",
-        "b": "Precipitation / वर्षण",
-        "c": "Frost / पाला",
-        "d": "Dew / ओस"
+        "a": "Low-lying cloud",
+        "b": "Precipitation",
+        "c": "Frost",
+        "d": "Dew"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nFog is actually a cloud that forms near the ground. It forms when water vapor in the air cools and condenses into tiny water droplets. Therefore, fog is essentially a low-lying cloud.\n\n📖 हिंदी स्पष्टीकरण:\nकोहरा वास्तव में धरातल के पास बनने वाला बादल होता है। यह तब बनता है जब वायु में मौजूद जलवाष्प ठंडी होकर छोटे-छोटे जलकणों में संघनित हो जाती है। इसलिए कोहरा मूल रूप से नीचाई पर बना बादल है।"
     },
     {
       "q_num": 8,
-      "question": "Dew point is the temperature at which:\n ओसांक वह तापमान है जिस पर:",
+      "question": "Dew point is the temperature at which:",
       "options": {
-        "a": "Air becomes saturated / वायु संतृप्त हो जाती है।",
-        "b": "Water starts boiling / पानी उबलने लगता है।",
-        "c": "Ice melts / बर्फ पिघलने लगती है।",
-        "d": "None of these / इनमें से कोई नहीं"
+        "a": "Air becomes saturated",
+        "b": "Water starts boiling",
+        "c": "Ice melts",
+        "d": "None of these"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe dew point is the point when the relative humidity is 100% and condensation begins. The dew point is the temperature at which water vapor in the air begins to condense because the air becomes saturated—that is, it can hold no more moisture.\nDew begins to form at this temperature.\n\n📖 हिंदी स्पष्टीकरण:\nओसांक वह बिंदु है जब सापेक्षिक आर्द्रता 100% होती है और संघनन आरंभ होता है। अर्थात ओसांक वह तापमान है जिस पर वायु में मौजूद जलवाष्प संघनित होने लगती है क्योंकि वायु संतृप्त हो जाती है — यानी वह और अधिक नमी नहीं धारण कर सकती।\nइस तापमान पर ओस बनने लगती है।"
     },
     {
       "q_num": 9,
-      "question": "Relative humidity is expressed as:\n सापेक्षिक आर्द्रता को व्यक्त किया जाता है:",
+      "question": "Relative humidity is expressed as:",
       "options": {
-        "a": "Fraction / भिन्न के रूप में",
-        "b": "Ratio / अनुपात के रूप में",
-        "c": "Percentage / प्रतिशत के रूप में",
-        "d": "None of these / इनमें से कोई नहीं"
+        "a": "Fraction",
+        "b": "Ratio",
+        "c": "Percentage",
+        "d": "None of these"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nRelative humidity is the ratio of the actual amount of water vapor present in the air to the maximum amount of water vapor the air can hold at the same temperature. It is usually expressed as a percentage (%).\n\n📖 हिंदी स्पष्टीकरण:\nसापेक्षिक आर्द्रता वायु में उपस्थित वास्तविक जलवाष्प की मात्रा और उसी तापमान पर वायु द्वारा धारण की जा सकने वाली अधिकतम जलवाष्प की मात्रा का अनुपात है।\nइसे सामान्यतः प्रतिशत (%) में व्यक्त किया जाता है।"
     },
     {
       "q_num": 10,
-      "question": "The main source of atmospheric moisture is:\n वायुमंडलीय नमी का मुख्य स्रोत है:",
+      "question": "The main source of atmospheric moisture is:",
       "options": {
-        "a": "Rivers / नदियाँ",
-        "b": "Oceans / महासागर",
-        "c": "Lakes / झीलें",
-        "d": "Rain / वर्षा"
+        "a": "Rivers",
+        "b": "Oceans",
+        "c": "Lakes",
+        "d": "Rain"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe main source of atmospheric moisture is evaporation from the oceans. The oceans cover about 71% of the Earth's surface and contribute the largest amount of water vapor to the atmosphere.\n? MODERATE LEVEL (Q11–Q20)\n\n📖 हिंदी स्पष्टीकरण:\nवायुमंडलीय नमी का मुख्य स्रोत महासागरों से वाष्पीकरण है। महासागर पृथ्वी की सतह का लगभग 71% भाग घेरते हैं और सबसे अधिक मात्रा में जलवाष्प वायुमंडल में भेजते हैं।"
     },
     {
       "q_num": 11,
-      "question": "Assertion (A): Clouds form when air rises and cools.\n कथन (A): बादल तब बनते हैं जब हवा ऊपर उठती है और ठंडी होती है।\n Reason (R): Rising air expands and cools due to decrease in pressure.\n कारण (R): ऊपर उठती हवा दाब में कमी के कारण फैलती और ठंडी होती है।",
+      "question": "Assertion (A): Clouds form when air rises and cools.\n Reason (R): Rising air expands and cools due to decrease in pressure.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सही हैं, और R, A का सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation./ A और R दोनों सही हैं, लेकिन R सही एक्सप्लेनेशन नहीं है।",
-        "c": "A is true but R is false./ A सही है लेकिन R गलत है।",
-        "d": "A is false but R is true./ A गलत है लेकिन R सही है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is not the correct explanation./ A",
+        "c": "A is true but R is false./ A",
+        "d": "A is false but R is true./ A"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRising air expands in low pressure, causing cooling and condensation to form clouds.\n\n📖 हिंदी स्पष्टीकरण:\nऊपर उठती वायु कम दाब में फैलती है और ठंडी होकर संघनित होती है, जिससे बादल बनते हैं।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following best describes advection fog?\n निम्नलिखित में से कौन-सा 'संवहन कोहरा' का सबसे अच्छा वर्णन करता है?",
+      "question": "Which of the following best describes advection fog?",
       "options": {
-        "a": "Advection fog is formed by the rapid radiational cooling of air near the ground at night. / रात्रि में भूमि के पास की वायु के तीव्र विकिरणीय शीतलन से संवहन कोहरा बनता है।",
-        "b": "When warm and moist air flows over a cold surface and cools to its dew point, it forms advection fog. / जब गर्म एवं नम वायु ठंडी सतह के ऊपर बहती है और अपने ओसांक तक ठंडी होकर संवहन कोहरा बनाती है।",
-        "c": "When cold air flows over a warm and moist surface and absorbs water vapor, it forms advection fog. / जब ठंडी वायु गर्म एवं नम सतह के ऊपर बहती है और जलवाष्प को अवशोषित करके संवहन कोहरा वनाती है।",
-        "d": "Advection fog forms when cold air settles down into valleys on clear nights. / स्पष्ट रातों में ठंडी वायु का घाटियों में नीचे बैठ जाने से संवहन कोहरा बनता है।"
+        "a": "Advection fog is formed by the rapid radiational cooling of air near the ground at night.",
+        "b": "When warm and moist air flows over a cold surface and cools to its dew point, it forms advection fog.",
+        "c": "When cold air flows over a warm and moist surface and absorbs water vapor, it forms advection fog.",
+        "d": "Advection fog forms when cold air settles down into valleys on clear nights."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAdvection fog forms when—\n1. Warm, moist air flows horizontally over a cold surface.\n2. This air cools and reaches its dew point.\n3. As a result, water vapor in the air condenses and forms fog.\nThis fog is commonly found in coastal areas, such as San Francisco or the coasts of northern Europe.\n\n📖 हिंदी स्पष्टीकरण:\nसंवहन कोहरा तब बनता है जब —\n4. गर्म और नम वायु किसी ठंडी सतह के ऊपर क्षैतिज रूप से बहती है।\n5. यह वायु ठंडी होकर अपने ओसांक तापमान तक पहुँच जाती है।\n6. परिणामस्वरूप, वायु में उपस्थित जलवाष्प संघनित होकर कोहरा बन जाती है।\nयह कोहरा समुद्र तटीय क्षेत्रों में आमतौर पर पाया जाता है, जैसे सैन फ्रांसिस्को या उत्तरी यूरोप के समुद्री तटों पर।"
     },
     {
       "q_num": 13,
-      "question": "Which type of rainfall occurs due to heating of land surface?\n भूमि की सतह के गर्म होने के कारण किस प्रकार की वर्षा होती है?",
+      "question": "Which type of rainfall occurs due to heating of land surface?",
       "options": {
-        "a": "Cyclonic rainfall / चक्रवाती वर्षा",
-        "b": "Orographic rainfall / पर्वतीय वर्षा",
-        "c": "Convectional rainfall / संवहनीय वर्षा",
-        "d": "Frontal rainfall / वाताग्री वर्षा"
+        "a": "Cyclonic rainfall",
+        "b": "Orographic rainfall",
+        "c": "Convectional rainfall",
+        "d": "Frontal rainfall"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSun heats land, warm air rises, cools, and causes convectional rainfall.\n\n📖 हिंदी स्पष्टीकरण:\nसूर्य भूमि को गर्म करता है, जिससे वायु ऊपर उठकर ठंडी होती है और संवहनीय वर्षा कराती है।"
     },
     {
       "q_num": 14,
-      "question": "Which of the following is measured by a psychrometer?\n साइक्रोमीटर द्वारा क्या मापा जाता है?",
+      "question": "Which of the following is measured by a psychrometer?",
       "options": {
-        "a": "Wind speed / पवन की गति",
-        "b": "Air pressure / वायु दाब",
-        "c": "Humidity / आर्द्रता",
-        "d": "Temperature difference / तापांतर"
+        "a": "Wind speed",
+        "b": "Air pressure",
+        "c": "Humidity",
+        "d": "Temperature difference"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA psychrometer is an instrument consisting of two thermometers—\n1. a dry-bulb thermometer\n2. a wet-bulb thermometer\nThe difference in their temperatures determines the relative humidity (or humidity) present in the air.\n\n📖 हिंदी स्पष्टीकरण:\nसाइक्रोमीटर एक ऐसा यंत्र है जिसमें दो थर्मामीटर होते हैं —\n3. शुष्क बल्ब तापमापी\n4. आर्द्र बल्ब तापमापी\nदोनों के तापमानों के अंतर से वायु में मौजूद आर्द्रता या सापेक्षिक आर्द्रता का निर्धारण किया जाता है।"
     },
     {
       "q_num": 15,
-      "question": "Assertion (A): Dew is more likely to form on clear nights.\n Reason (R): Cloudy nights prevent radiation loss from the ground.\n कथन (A): साफ़ रातों में ओस बनने की संभावना ज़्यादा होती है।\n कारण (R): बादल वाली रातें ज़मीन से विकिरण की हानि को रोकती हैं।",
+      "question": "Assertion (A): Dew is more likely to form on clear nights.\n Reason (R): Cloudy nights prevent radiation loss from the ground.",
       "options": {
-        "a": "Both A and R true, R explains A / A और R दोनों सत्य हैं, R, A की व्याख्या करता है।",
-        "b": "Both A and R true, R doesn’t explain A / A और R दोनों सत्य हैं, R, A की व्याख्या नहीं करता",
-        "c": "A true, R false / A सत्य है, R असत्य है।",
-        "d": "A false, R true / A असत्य है, R सत्य है।"
+        "a": "Both A and R true, R explains A",
+        "b": "Both A and R true, R doesn’t explain A",
+        "c": "A true, R false",
+        "d": "A false, R true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAssertion (A) is correct because on clear nights, more heat radiates from the ground, cooling the surface and causing dew to form.\nReason (R) is also correct because clouds reflect the radiation back, preventing the ground from cooling too much and reducing the likelihood of dew formation.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (A) सही है क्योंकि साफ़ रातों में ज़मीन से गर्मी का विकिरण अधिक मात्रा में बाहर निकलता है, जिससे सतह ठंडी हो जाती है और ओस बनती है।\nकारण (R) भी सही है क्योंकि बादल विकिरण को वापस परावर्तित कर देते हैं, जिससे ज़मीन ज़्यादा ठंडी नहीं होती और ओस बनने की संभावना घट जाती है।"
     },
     {
       "q_num": 16,
-      "question": "Cirrus clouds are mainly composed of:\n सिरस बादल मुख्यतः किससे बने होते हैं?",
+      "question": "Cirrus clouds are mainly composed of:",
       "options": {
-        "a": "Water droplets / जल की बूंदों से",
-        "b": "Ice crystals / बर्फ के कणों से",
-        "c": "Dust particles / धूलकणों से",
-        "d": "Water vapor / जलवाष्प से"
+        "a": "Water droplets",
+        "b": "Ice crystals",
+        "c": "Dust particles",
+        "d": "Water vapor"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCirrus clouds form at very high altitudes (about 6 to 13 km), where temperatures are extremely low. As a result, they are composed of tiny ice crystals, not water droplets. They appear thin, filamentous, and white and often indicate good weather.\n\n📖 हिंदी स्पष्टीकरण:\nसिरस बादल बहुत ऊँचाई पर (लगभग 6 से 13 किमी) बनते हैं, जहाँ तापमान अत्यंत कम होता है।\nइस कारण ये जल की बूंदों से नहीं, बल्कि सूक्ष्म बर्फ के कणों से बने होते हैं। ये पतले, रेशेदार और सफ़ेद रंग के दिखाई देते हैं तथा अक्सर अच्छे मौसम का संकेत देते हैं।"
     },
     {
       "q_num": 17,
-      "question": "Which factor affects the rate of condensation?\n संघनन की दर को कौन-सा कारक प्रभावित करता है?",
+      "question": "Which factor affects the rate of condensation?",
       "options": {
-        "a": "Air temperature / वायु का तापमान",
-        "b": "Presence of dust particles / धूलकणों की उपस्थिति",
-        "c": "Both a and b / दोनों",
-        "d": "None of these / इनमें से कोई नहीं"
+        "a": "Air temperature",
+        "b": "Presence of dust particles",
+        "c": "Both a and b",
+        "d": "None of these"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe rate of condensation depends on two main factors—\n1. Air temperature:\nWhen the air cools and reaches its dew point, water vapor condenses rapidly into water droplets.\n2. Presence of dust particles:\nFine particles such as dust, smoke, or pollen act as condensation centers on which water vapor can condense to form water droplets.\nTherefore, both factors—air temperature and the presence of dust particles—affect the rate of condensation.\n\n📖 हिंदी स्पष्टीकरण:\nसंघनन की दर दो मुख्य कारकों पर निर्भर करती है —\n3. वायु का तापमान:\nजब वायु ठंडी होती है और अपने ओसांक तक पहुँच जाती है, तो जलवाष्प तेजी से संघनित होकर जलकणों में बदल जाती है।\n4. धूलकणों की उपस्थिति:\nधूल, धुआँ या परागकण जैसे सूक्ष्म कण संघनन केंद्र का काम करते हैं, जिन पर जलवाष्प संघनित होकर जलकण बना सकती है।\nइसलिए दोनों कारक — वायु का तापमान और धूलकणों की उपस्थिति — संघनन की दर को प्रभावित करते हैं।"
     },
     {
       "q_num": 18,
-      "question": "Fog is most likely to occur when:\n कोहरा होने की सबसे ज़्यादा संभावना तब होती है जब:",
+      "question": "Fog is most likely to occur when:",
       "options": {
-        "a": "The air temperature drops to or below the dew point. / वायु का तापमान ओसांक तक या उससे नीचे गिर जाता है।",
-        "b": "The air temperature rises well above the dew point. / वायु का तापमान ओसांक से बहुत अधिक बढ़ जाता है।",
-        "c": "The wind speed is fast and turbulent. / हवा की गति तेज और अशांत होती है।",
-        "d": "The sunlight is intense and the temperature is high. / सूर्य का प्रकाश तीव्र होता है और तापमान अधिक होता है।"
+        "a": "The air temperature drops to or below the dew point.",
+        "b": "The air temperature rises well above the dew point.",
+        "c": "The wind speed is fast and turbulent.",
+        "d": "The sunlight is intense and the temperature is high."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWhen the air temperature drops to its dew point, the water vapor in it condenses into tiny water droplets.\nThese water droplets become suspended in the air and form fog.\nTherefore, fog formation is most likely on cool, calm, and clear nights.\n\n📖 हिंदी स्पष्टीकरण:\nजब वायु का तापमान उसके ओसांक तक गिरता है, तो उसमें मौजूद जलवाष्प संघनित होकर छोटे जलकणों में बदल जाती है।\nये जलकण वायु में निलंबित होकर कोहरा बनाते हैं।\nइसलिए कोहरा बनने की संभावना ठंडी, शांत, और साफ़ रातों में सबसे अधिक होती है।"
     },
     {
       "q_num": 19,
-      "question": "Precipitation caused by mountains is called:\n पर्वतों के कारण होने वाली वर्षा को क्या कहते हैं?",
+      "question": "Precipitation caused by mountains is called:",
       "options": {
-        "a": "Orographic rainfall / पर्वतीय वर्षा",
-        "b": "Frontal rainfall / वाताग्री वर्षा",
-        "c": "Cyclonic rainfall / चक्रवाती वर्षा",
-        "d": "Convectional rainfall / संवहन वर्षा"
+        "a": "Orographic rainfall",
+        "b": "Frontal rainfall",
+        "c": "Cyclonic rainfall",
+        "d": "Convectional rainfall"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMoist air forced to rise over mountains cools and condenses to cause rainfall.\n\n📖 हिंदी स्पष्टीकरण:\nनमी वाली वायु पर्वत से टकराकर ऊपर उठती है, ठंडी होती है और वर्षा कराती है।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following clouds appears as layers covering the sky?\n कौन-से बादल परतों के रूप में आकाश को ढक लेते हैं?",
+      "question": "Which of the following clouds appears as layers covering the sky?",
       "options": {
-        "a": "Stratus / स्ट्रेटस",
-        "b": "Cirrus / सिरस",
-        "c": "Cumulus / क्यूम्युलस",
-        "d": "Nimbus / निम्बस"
+        "a": "Stratus",
+        "b": "Cirrus",
+        "c": "Cumulus",
+        "d": "Nimbus"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStratus clouds are low, gray, sheet-like clouds covering large portions of the sky.\n? ADVANCED LEVEL (Q21–Q25)\n\n📖 हिंदी स्पष्टीकरण:\nस्ट्रेटस बादल नीचले, भूरे, चादर जैसे होते हैं जो पूरे आकाश को ढक लेते हैं।"
     },
     {
       "q_num": 21,
-      "question": "Which condition will most likely increase relative humidity?\n कौन-सी स्थिति सापेक्षिक आर्द्रता को सबसे अधिक बढ़ाएगी?",
+      "question": "Which condition will most likely increase relative humidity?",
       "options": {
-        "a": "Increase in temperature / तापमान में वृद्धि",
-        "b": "Decrease in temperature / तापमान में कमी",
-        "c": "Increase in wind speed / पवन गति में वृद्धि",
-        "d": "Decrease in water vapor / जलवाष्प में कमी"
+        "a": "Increase in temperature",
+        "b": "Decrease in temperature",
+        "c": "Increase in wind speed",
+        "d": "Decrease in water vapor"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCooler air holds less moisture; thus, relative humidity rises as temperature drops.\n\n📖 हिंदी स्पष्टीकरण:\nठंडी वायु में नमी की क्षमता घटती है, जिससे तापमान कम होने पर सापेक्षिक आर्द्रता बढ़ती है।"
     },
     {
       "q_num": 22,
-      "question": "Assertion (A): Precipitation occurs when air becomes saturated.\n Reason (R): Saturation increases evaporation rate.\n कथन (A): बारिश तब होती है जब वायु संतृप्त हो जाती है।\n कारण (R): संतृप्त होने से वाष्पीकरण की दर बढ़ जाती है।",
+      "question": "Assertion (A): Precipitation occurs when air becomes saturated.\n Reason (R): Saturation increases evaporation rate.",
       "options": {
-        "a": "Both A and R true, R explains A / A और R दोनों सत्य हैं, R, A की व्याख्या करता है।",
-        "b": "Both A and R true, R doesn’t explain A / A और R दोनों सत्य हैं, R, A की व्याख्या नहीं करता",
-        "c": "A true, R false / A सत्य है, R असत्य है।",
-        "d": "A false, R true / A असत्य है, R सत्य है।"
+        "a": "Both A and R true, R explains A",
+        "b": "Both A and R true, R doesn’t explain A",
+        "c": "A true, R false",
+        "d": "A false, R true"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement (A) is correct because rain occurs when the air becomes saturated—that is, the amount of water vapor in the air reaches its maximum—and the excess water vapor condenses into water droplets or ice crystals.\nReason (R) is incorrect because the rate of evaporation decreases when it becomes saturated, not increases.\nWhen the air is already full of moisture, no more evaporation can occur.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (A) सही है क्योंकि वर्षा तब होती है जब वायु संतृप्त हो जाती है — यानी वायु में जलवाष्प की मात्रा उसकी अधिकतम सीमा तक पहुँच जाती है और अतिरिक्त जलवाष्प संघनित होकर जलकणों या बर्फ के कणों में बदल जाती है।\nकारण (R) गलत है क्योंकि संतृप्त होने पर वाष्पीकरण की दर घट जाती है, बढ़ती नहीं है।\nजब वायु पहले से ही नमी से भरी होती है, तो उसमें और वाष्पीकरण नहीं हो पाता।"
     },
     {
       "q_num": 23,
-      "question": "When warm air meets cold air, which type of rainfall occurs?\n जब गर्म वायु ठंडी वायु से मिलती है, तब कौन-सी वर्षा होती है?",
+      "question": "When warm air meets cold air, which type of rainfall occurs?",
       "options": {
-        "a": "Frontal rainfall / वाताग्री वर्षा",
-        "b": "Cyclonic rainfall / चक्रवाती वर्षा",
-        "c": "Convectional rainfall / संवहन वर्षा",
-        "d": "Orographic rainfall / पर्वतीय वर्षा"
+        "a": "Frontal rainfall",
+        "b": "Cyclonic rainfall",
+        "c": "Convectional rainfall",
+        "d": "Orographic rainfall"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWhen warm air meets cold air, a front forms between the two air masses. Being lighter, warm air rises, cools, condenses, and causes rain. This type of rainfall is called frontal rainfall.\nThis rainfall occurs primarily in mid-latitude regions, where cold and warm air masses frequently collide.\n.\n\n📖 हिंदी स्पष्टीकरण:\nजब गर्म वायु किसी ठंडी वायु से मिलती है, तो दोनों वायु-द्रव्यों के बीच एक वाताग्र बनता है। गर्म वायु हल्की होने के कारण ऊपर उठती है, ठंडी होती है और संघनित होकर वर्षा का कारण बनती है। इस प्रकार की वर्षा को वाताग्री वर्षा कहा जाता है।\nयह वर्षा मुख्य रूप से मध्यम अक्षांशीय क्षेत्रों में पाई जाती है, जहाँ ठंडी और गर्म वायु-द्रव्य अक्सर एक-दूसरे से टकराते हैं।"
     },
     {
       "q_num": 24,
-      "question": "In which layer of atmosphere do most clouds form?\n अधिकांश बादल वायुमंडल की किस परत में बनते हैं?",
+      "question": "In which layer of atmosphere do most clouds form?",
       "options": {
-        "a": "Stratosphere / समतापमंडल",
-        "b": "Troposphere / क्षोभमंडल",
-        "c": "Mesosphere / मध्य मण्डल",
-        "d": "Thermosphere / तापमंडल"
+        "a": "Stratosphere",
+        "b": "Troposphere",
+        "c": "Mesosphere",
+        "d": "Thermosphere"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAlmost all-weather phenomena, including clouds and rain, occur in the troposphere.\n\n📖 हिंदी स्पष्टीकरण:\nसभी मौसमीय घटनाएँ जैसे बादल और वर्षा क्षोभमंडल में घटित होती हैं।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following best describes the process of precipitation?\n निम्नलिखित में से कौन-सा वर्षण की प्रक्रिया को सबसे अच्छी तरह बताता है?",
+      "question": "Which of the following best describes the process of precipitation?",
       "options": {
-        "a": "Condensation of vapor directly to surface / वाष्प का सीधे सतह पर संघनन",
-        "b": "Falling of condensed water from clouds / संघनित जल का बादलों से गिरना",
-        "c": "Formation of fog / कोहरे का बनना",
-        "d": "Evaporation of water / जल का वाष्पीकरण"
+        "a": "Condensation of vapor directly to surface",
+        "b": "Falling of condensed water from clouds",
+        "c": "Formation of fog",
+        "d": "Evaporation of water"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPrecipitation is the process by which condensed water or ice particles in the atmosphere coalesce to form larger particles that fall from clouds to the earth under the influence of gravity.\nThis can occur as rain, snow, hail, or drizzle.\n\n📖 हिंदी स्पष्टीकरण:\nवर्षण वह प्रक्रिया है जिसमें वायुमंडल में मौजूद संघनित जलकण या बर्फ के कण आपस में मिलकर बड़े-बड़े कण बनाते हैं और गुरुत्वाकर्षण के प्रभाव से बादलों से पृथ्वी पर गिरते हैं।\nयह वर्षा, हिमपात, ओले या फुहार के रूप में हो सकती है।"

@@ -78,7 +78,83 @@ function renderTableBlock(tableLines: string[], keyPrefix: string | number) {
   );
 }
 
-function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences = false) {
+function isAnalogyLine(line: string): boolean {
+  if (!line || line.length > 250) return false;
+  // Does it contain double colons (:: or : :)
+  if (/::|:\s*:/.test(line)) {
+    if (/https?:\/\//i.test(line)) return false;
+    return true;
+  }
+  // Alternating single colons: e.g. "A : B : C : D" (analogy written with single colons)
+  if (/^[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+$/.test(line)) {
+    return true;
+  }
+  // Word pair analogy: e.g. "Bear : Boar" or "Tiger : Felidae"
+  if (/^[A-Za-z0-9\-']+\s*:\s*[A-Za-z0-9\-']+$/.test(line)) {
+    if (!/\b(is|are|was|were|the|and|in|on|at|to|for|with)\b/i.test(line)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function renderAnalogyBlock(line: string, key: string) {
+  let pairs: string[] = [];
+  if (/::|:\s*:/.test(line)) {
+    pairs = line.split(/\s*(?:::|:\s*:)\s*/);
+  } else {
+    const allParts = line.split(/\s*:\s*/);
+    if (allParts.length === 4) {
+      pairs = [`${allParts[0]} : ${allParts[1]}`, `${allParts[2]} : ${allParts[3]}`];
+    } else {
+      pairs = [line];
+    }
+  }
+
+  return (
+    <div
+      key={key}
+      className="my-2.5 p-2.5 sm:px-4 sm:py-3 bg-gradient-to-r from-slate-50 via-indigo-50/25 to-slate-50 border border-slate-200/90 rounded-xl inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 text-slate-800 font-semibold tracking-wide text-xs sm:text-sm md:text-[15px] shadow-2xs select-text"
+    >
+      {pairs.map((pair, pIdx) => {
+        const terms = pair.split(/\s*:\s*/);
+        return (
+          <React.Fragment key={pIdx}>
+            {pIdx > 0 && (
+              <span className="font-black text-indigo-600 bg-white border border-indigo-200/80 rounded px-1.5 py-0.5 shadow-2xs text-xs sm:text-sm tracking-wider select-none shrink-0">
+                ::
+              </span>
+            )}
+            <div className="inline-flex items-center gap-1.5 shrink-0">
+              {terms.map((term, tIdx) => {
+                const cleanTerm = term.trim();
+                const isMissing = cleanTerm === '?' || cleanTerm.includes('?');
+                return (
+                  <React.Fragment key={tIdx}>
+                    {tIdx > 0 && (
+                      <span className="font-bold text-slate-400 select-none px-0.5">:</span>
+                    )}
+                    <span
+                      className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md font-mono text-center tracking-normal ${
+                        isMissing
+                          ? 'bg-amber-100 text-amber-900 font-bold border border-amber-300 ring-2 ring-amber-200/60 shadow-2xs'
+                          : 'bg-white text-slate-800 font-medium border border-slate-200/90 shadow-2xs'
+                      }`}
+                    >
+                      {formatInlineMarkdown(cleanTerm)}
+                    </span>
+                  </React.Fragment>
+                );
+              })}
+            </div>
+          </React.Fragment>
+        );
+      })}
+    </div>
+  );
+}
+
+function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences = false, subject?: string) {
   // When breakOnSentences is true, replace ". " with ".\n" so each sentence
   // starts on its own line (used in solution view).
   let processedText = breakOnSentences
@@ -90,11 +166,15 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     .replace(/([^\n])\s*([⇒∴])/g, '$1\n$2')
     .replace(/([^\n])\s*\b(Formula\s*:)/gi, '$1\n$2');
 
-  // Enforce line breaks for Para Jumble segments (P:, Q:, R:, S:, S1:, S6:, Given:)
-  processedText = processedText
-    .replace(/([^\n])\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)/g, '$1\n$2')
-    .replace(/([^\n])\s*(S[1-6]\s*:)/g, '$1\n$2')
-    .replace(/([^\n])\s*(Given\s*:)/gi, '$1\n$2');
+  // Enforce line breaks only for standalone Para Jumble markers (P:, Q:, R:, S:, S1:, S6:, Given:)
+  // Strictly require preceding punctuation or newline, NEVER breaking inside words or before analogies/equations
+  const isReasoningOrMath = subject && /reason|intelligence|quant|math|arithmetic/i.test(subject);
+  if (!isReasoningOrMath) {
+    processedText = processedText
+      .replace(/(?<=[.!?]|\n|^)\s*(S[1-6]\s*:)/g, '\n$1')
+      .replace(/(?<=[.!?]|\n|^)\s*(Given\s*:)/gi, '\n$1')
+      .replace(/(?<=[.!?]|\n|^)\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)(?!\s*[:=])/g, '\n$1');
+  }
 
   const lines = processedText.split('\n');
   const elements: React.ReactNode[] = [];
@@ -166,6 +246,12 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
       return;
     }
 
+    // Analogy / Proportion line (e.g. "AFTER : ZJWKT :: MODEL : LSGKN :: LIGHT : ?" or "25 : 37 :: 64 : ?")
+    if (isAnalogyLine(line)) {
+      elements.push(renderAnalogyBlock(line, `analogy-${tokenIdx}-${i}`));
+      return;
+    }
+
     // Bullet points (·, •, -, *)
     const bulletMatch = line.match(/^([·•\-\*])\s*(.*)/);
     if (bulletMatch) {
@@ -201,20 +287,25 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     }
 
     // Para Jumbles (Given:, P:, Q:, R:, S:, S1:, S6:, (P), [P])
-    const pjMatch = line.match(/^(?:(Given:)|([PQRS]\s*:|\([PQRS]\)|\[[PQRS]\]|S[1-6]\s*:))\s*(.*)/i);
+    const isPjCandidate = !isReasoningOrMath && !isAnalogyLine(line);
+    const pjMatch = isPjCandidate
+      ? line.match(/^(?:(Given:)|([PQRS]\s*:|\([PQRS]\)|\[[PQRS]\]|S[1-6]\s*:))\s*(.*)/i)
+      : null;
     if (pjMatch) {
       const label = pjMatch[1] || pjMatch[2] || '';
       const rest = pjMatch[3] || '';
-      elements.push(
-        <div
-          key={`pj-${tokenIdx}-${i}`}
-          className="my-1.5 pl-3 border-l-2 border-indigo-400 bg-slate-50/70 rounded-r-md py-1 text-slate-800 leading-relaxed font-normal flex items-baseline gap-2"
-        >
-          <span className="font-bold text-indigo-700 font-mono shrink-0">{label}</span>
-          <span className="flex-1">{formatInlineMarkdown(rest)}</span>
-        </div>
-      );
-      return;
+      if (rest.length > 5 || /given/i.test(label)) {
+        elements.push(
+          <div
+            key={`pj-${tokenIdx}-${i}`}
+            className="my-1.5 pl-3 border-l-2 border-indigo-400 bg-slate-50/70 rounded-r-md py-1 text-slate-800 leading-relaxed font-normal flex items-baseline gap-2"
+          >
+            <span className="font-bold text-indigo-700 font-mono shrink-0">{label}</span>
+            <span className="flex-1">{formatInlineMarkdown(rest)}</span>
+          </div>
+        );
+        return;
+      }
     }
 
     // Statements and Conclusions
@@ -279,7 +370,7 @@ function getCachedKatexHtml(latex: string, displayMode: boolean): string {
   }
 }
 
-function renderTokenList(tokens: MathToken[], breakOnSentences = false) {
+function renderTokenList(tokens: MathToken[], breakOnSentences = false, subject?: string) {
   return tokens.map((token, idx) => {
     if (token.type === 'math') {
       const html = getCachedKatexHtml(token.value, Boolean(token.display));
@@ -307,7 +398,7 @@ function renderTokenList(tokens: MathToken[], breakOnSentences = false) {
 
     return (
       <React.Fragment key={idx}>
-        {renderTextWithTables(token.value, idx, breakOnSentences)}
+        {renderTextWithTables(token.value, idx, breakOnSentences, subject)}
       </React.Fragment>
     );
   });
@@ -347,17 +438,17 @@ export const FormattedText: React.FC<FormattedTextProps> = React.memo(({
       return (
         <>
           <div className="font-bold text-slate-900 mb-2 leading-relaxed">
-            {renderTokenList(instTokens, breakOnSentences)}
+            {renderTokenList(instTokens, breakOnSentences, subject)}
           </div>
           <div className="text-slate-800 leading-relaxed font-normal">
-            {renderTokenList(contentTokens, breakOnSentences)}
+            {renderTokenList(contentTokens, breakOnSentences, subject)}
           </div>
         </>
       );
     }
 
-    return renderTokenList(tokens, breakOnSentences);
-  }, [localized, parsedQuestion, tokens, breakOnSentences]);
+    return renderTokenList(tokens, breakOnSentences, subject);
+  }, [localized, parsedQuestion, tokens, breakOnSentences, subject]);
 
   if (!localized) return null;
 

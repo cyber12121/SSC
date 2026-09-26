@@ -6,7 +6,7 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "In which year was the Simon Commission officially formed? / साइमन कमीशन का आधिकारिक गठन किस वर्ष किया गया था?",
+      "question": "In which year was the Simon Commission officially formed?",
       "options": {
         "a": "1925",
         "b": "1927",
@@ -18,199 +18,199 @@
     },
     {
       "q_num": 2,
-      "question": "Who was the chairman of the statutory commission commonly known as the Simon Commission? / वैधानिक आयोग, जिसे आमतौर पर साइमन कमीशन के रूप में जाना जाता है, के अध्यक्ष कौन थे?",
+      "question": "Who was the chairman of the statutory commission commonly known as the Simon Commission?",
       "options": {
-        "a": "Stanley Baldwin / स्टेनली बाल्डविन",
-        "b": "John Simon / जॉन साइमन",
-        "c": "Clement Attlee / क्लेमेंट एटली",
-        "d": "Lord Irwin / लॉर्ड इरविन"
+        "a": "Stanley Baldwin",
+        "b": "John Simon",
+        "c": "Clement Attlee",
+        "d": "Lord Irwin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSir John Simon was the chairman of the seven-member all-white commission sent to India. Because it had no Indian members, it was boycotted by major Indian political parties\n\n📖 हिंदी स्पष्टीकरण:\nसर जॉन साइमन भारत भेजे गए सात सदस्यीय सर्व-श्वेत आयोग के अध्यक्ष थे। चूंकि इसमें कोई भारतीय सदस्य नहीं था, इसलिए प्रमुख भारतीय राजनीतिक दलों द्वारा इसका बहिष्कार किया गया था।"
     },
     {
       "q_num": 3,
-      "question": "Who coined the famous slogan \"Simon Go Back\"? / प्रसिद्ध नारा \"साइमन गो बैक\" (साइमन वापस जाओ) किसने गढ़ा था?",
+      "question": "Who coined the famous slogan \"Simon Go Back\"?",
       "options": {
-        "a": "Lala Lajpat Rai / लाला लाजपत राय",
-        "b": "Bhagat Singh / भगत सिंह",
-        "c": "Yusuf Meherally / यूसुफ मेहरअली",
-        "d": "Mahatma Gandhi / महात्मा गांधी"
+        "a": "Lala Lajpat Rai",
+        "b": "Bhagat Singh",
+        "c": "Yusuf Meherally",
+        "d": "Mahatma Gandhi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAlthough the slogan was popularized during the protests led by Lala Lajpat Rai, it was originally coined by Yusuf Meherally, a socialist leader\n\n📖 हिंदी स्पष्टीकरण:\nहालांकि यह नारा लाला लाजपत राय के नेतृत्व में हुए विरोध प्रदर्शनों के दौरान लोकप्रिय हुआ था, लेकिन इसे मूल रूप से समाजवादी नेता यूसुफ मेहरअली ने गढ़ा था।"
     },
     {
       "q_num": 4,
-      "question": "In which Indian city did the Simon Commission first arrive in 1928? / 1928 में साइमन कमीशन सबसे पहले भारत के किस शहर में पहुँचा था?",
+      "question": "In which Indian city did the Simon Commission first arrive in 1928?",
       "options": {
-        "a": "Madras / मद्रास",
-        "b": "Calcutta / कलकत्ता",
-        "c": "Bombay / बॉम्बे",
-        "d": "Lahore / लाहौर"
+        "a": "Madras",
+        "b": "Calcutta",
+        "c": "Bombay",
+        "d": "Lahore"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Simon Commission arrived in Bombay on February 3, 1928, and was greeted with black flags and \"Simon Go Back\" slogans across the city\n\n📖 हिंदी स्पष्टीकरण:\nसाइमन कमीशन 3 फरवरी, 1928 को बॉम्बे पहुँचा था, और पूरे शहर में काले झंडों और \"साइमन गो बैक\" के नारों के साथ उसका स्वागत किया गया था।"
     },
     {
       "q_num": 5,
-      "question": "Which Indian leader died as a result of a lathi charge while protesting against the Simon Commission?\n साइमन कमीशन का विरोध करते समय लाठीचार्ज के कारण किस भारतीय नेता की मृत्यु हो गई थी?",
+      "question": "Which Indian leader died as a result of a lathi charge while protesting against the Simon Commission?",
       "options": {
-        "a": "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "b": "Lala Lajpat Rai / लाला लाजपत राय",
-        "c": "Bipin Chandra Pal / बिपिन चंद्र पाल",
-        "d": "Chittaranjan Das / चित्तरंजन दास"
+        "a": "Bal Gangadhar Tilak",
+        "b": "Lala Lajpat Rai",
+        "c": "Bipin Chandra Pal",
+        "d": "Chittaranjan Das"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLala Lajpat Rai was leading a protest in Lahore in 1928 when he was severely injured during a lathi charge ordered by British officer Scott. He succumbed to his injuries a few weeks later\n\n📖 हिंदी स्पष्टीकरण:\nलाला लाजपत राय 1928 में लाहौर में एक विरोध प्रदर्शन का नेतृत्व कर रहे थे, जब ब्रिटिश अधिकारी स्कॉट द्वारा आदेशित लाठीचार्ज के दौरान वे गंभीर रूप से घायल हो गए थे। कुछ हफ्तों बाद उनकी चोटों के कारण मृत्यु हो गई।"
     },
     {
       "q_num": 6,
-      "question": "Who was the British Prime Minister at the time of the Simon Commission's appointment? साइमन कमीशन की नियुक्ति के समय ब्रिटिश प्रधानमंत्री कौन थे?",
+      "question": "Who was the British Prime Minister at the time of the Simon Commission's appointment?",
       "options": {
-        "a": "Ramsay MacDonald / रामसे मैकडोनाल्ड",
-        "b": "Winston Churchill / विंस्टन चर्चिल",
-        "c": "Stanley Baldwin / स्टेनली बाल्डविन",
-        "d": "Clement Attlee / क्लेमेंट एटली"
+        "a": "Ramsay MacDonald",
+        "b": "Winston Churchill",
+        "c": "Stanley Baldwin",
+        "d": "Clement Attlee"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStanley Baldwin was the Prime Minister of Britain when the decision to send the Simon Commission to India was made in 1927\n\n📖 हिंदी स्पष्टीकरण:\nस्टेनली बाल्डविन ब्रिटेन के प्रधानमंत्री थे जब 1927 में साइमन कमीशन को भारत भेजने का निर्णय लिया गया था।"
     },
     {
       "q_num": 7,
-      "question": "At which session did the Indian National Congress decide to boycott the Simon Commission? / भारतीय राष्ट्रीय कांग्रेस ने किस अधिवेशन में साइमन कमीशन के बहिष्कार का निर्णय लिया था?",
+      "question": "At which session did the Indian National Congress decide to boycott the Simon Commission?",
       "options": {
-        "a": "Lahore Session (1929) / लाहौर अधिवेशन (1929)",
-        "b": "Madras Session (1927) / मद्रास अधिवेशन (1927)",
-        "c": "Calcutta Session (1928) / कलकत्ता अधिवेशन (1928)",
-        "d": "Karachi Session (1931) / कराची अधिवेशन (1931)"
+        "a": "Lahore Session (1929)",
+        "b": "Madras Session (1927)",
+        "c": "Calcutta Session (1928)",
+        "d": "Karachi Session (1931)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 1927 Madras session, presided over by Dr. M.A. Ansari, passed a resolution to boycott the commission \"at every stage and in every form.\"\n\n📖 हिंदी स्पष्टीकरण:\nडॉ. एम.ए. अंसारी की अध्यक्षता में 1927 के मद्रास अधिवेशन में आयोग का \"हर स्तर पर और हर रूप में\" बहिष्कार करने का प्रस्ताव पारित किया गया था।"
     },
     {
       "q_num": 8,
-      "question": "Which political party or group supported the Simon Commission? / किस राजनीतिक दल या समूह ने साइमन कमीशन का समर्थन किया था?",
+      "question": "Which political party or group supported the Simon Commission?",
       "options": {
-        "a": "Indian National Congress / भारतीय राष्ट्रीय कांग्रेस",
-        "b": "Muslim League (Jinnah Faction) / मुस्लिम लीग (जिन्ना गुट)",
-        "c": "Hindu Mahasabha / हिंदू महासभा",
-        "d": "B.R. Ambedkar and certain factions of the Justice Party / बी.आर. अंबेडकर और जस्टिस पार्टी के कुछ गुट"
+        "a": "Indian National Congress",
+        "b": "Muslim League (Jinnah Faction)",
+        "c": "Hindu Mahasabha",
+        "d": "B.R. Ambedkar and certain factions of the Justice Party"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nWhile the Congress and most of the Muslim League boycotted it, B.R. Ambedkar and groups like the Justice Party in Madras chose to cooperate with the commission to present their demands\n\n📖 हिंदी स्पष्टीकरण:\nकांग्रेस और अधिकांश मुस्लिम लीग ने इसका बहिष्कार किया, जबकि बी.आर. अंबेडकर और मद्रास में जस्टिस पार्टी जैसे समूहों ने अपनी मांगों को प्रस्तुत करने के लिए आयोग के साथ सहयोग करना चुना।"
     },
     {
       "q_num": 9,
-      "question": "Who challenged Indians to draft a constitution that would be acceptable to all parties? किसने भारतीयों को एक ऐसा संविधान तैयार करने की चुनौती दी जो सभी दलों को स्वीकार्य हो?",
+      "question": "Who challenged Indians to draft a constitution that would be acceptable to all parties?",
       "options": {
-        "a": "Lord Irwin / लॉर्ड इरविन",
-        "b": "Lord Birkenhead / लॉर्ड बिरकेनहेड",
-        "c": "John Simon / जॉन साइमन",
-        "d": "Clement Attlee / क्लेमेंट एटली"
+        "a": "Lord Irwin",
+        "b": "Lord Birkenhead",
+        "c": "John Simon",
+        "d": "Clement Attlee"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLord Birkenhead, the then Secretary of State for India, challenged Indian leaders to produce a constitution to justify their demand for self-rule\n\n📖 हिंदी स्पष्टीकरण:\nतत्कालीन भारत सचिव लॉर्ड बिरकेनहेड ने भारतीय नेताओं को स्वशासन की अपनी मांग को सही ठहराने के लिए एक संविधान तैयार करने की चुनौती दी थी।"
     },
     {
       "q_num": 10,
-      "question": "The Nehru Report was submitted in 1928 as a response to which event? / नेहरू रिपोर्ट 1928 में किस घटना की प्रतिक्रिया के रूप में प्रस्तुत की गई थी?",
+      "question": "The Nehru Report was submitted in 1928 as a response to which event?",
       "options": {
-        "a": "Rowlatt Act / रॉलेट एक्ट",
-        "b": "Jallianwala Bagh Massacre / जलियावाला बाग हत्याकांड",
-        "c": "Simon Commission / साइमन कमीशन",
-        "d": "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन"
+        "a": "Rowlatt Act",
+        "b": "Jallianwala Bagh Massacre",
+        "c": "Simon Commission",
+        "d": "Civil Disobedience Movement"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFollowing Lord Birkenhead's challenge and the boycott of the Simon Commission, an all-party committee headed by Motilal Nehru drafted the Nehru Report\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड बिरकेनहेड की चुनौती और साइमन कमीशन के बहिष्कार के बाद, मोतीलाल नेहरू की अध्यक्षता में एक सर्वदलीय समिति ने नेहरू रिपोर्ट तैयार की थी।"
     },
     {
       "q_num": 11,
-      "question": "What was the primary reason for the Indian boycott of the Simon Commission? / साइमन कमीशन के भारतीय बहिष्कार का मुख्य कारण क्या था?",
+      "question": "What was the primary reason for the Indian boycott of the Simon Commission?",
       "options": {
-        "a": "It recommended the division of India / इसने भारत के विभाजन की सिफारिश की थी।",
-        "b": "It did not have any Indian members / इसमें कोई भी भारतीय सदस्य नहीं था।",
-        "c": "It suggested increasing salt taxes / इसने नमक कर बढ़ाने का सुझाव दिया था।",
-        "d": "It was headed by a member of the Labour Party / इसका नेतृत्व लेबर पार्टी के एक सदस्य ने किया था।"
+        "a": "It recommended the division of India",
+        "b": "It did not have any Indian members",
+        "c": "It suggested increasing salt taxes",
+        "d": "It was headed by a member of the Labour Party"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe commission was composed entirely of British members (the \"White Commission\"), which was seen as an insult to Indians' right to determine their own constitutional future\n\n📖 हिंदी स्पष्टीकरण:\nआयोग पूरी तरह से ब्रिटिश सदस्यों (\"श्वेत आयोग\") से बना था, जिसे भारतीयों के अपने संवैधानिक भविष्य को निर्धारित करने के अधिकार के अपमान के रूप में देखा गया था।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following was NOT a recommendation of the Simon Commission? निम्नलिखित में से कौन सी साइमन कमीशन की सिफारिश नहीं थी?",
+      "question": "Which of the following was NOT a recommendation of the Simon Commission?",
       "options": {
-        "a": "Abolition of Diarchy / द्वैध शासन की समाप्ति",
-        "b": "Establishment of a Federal Government / संघीय सरकार की स्थापना",
-        "c": "Immediate grant of Dominion Status / डोमिनियन स्टेटस की तत्काल मंजूरी",
-        "d": "Extension of voting rights / मतदान के अधिकारों का विस्तार"
+        "a": "Abolition of Diarchy",
+        "b": "Establishment of a Federal Government",
+        "c": "Immediate grant of Dominion Status",
+        "d": "Extension of voting rights"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe commission recommended the abolition of diarchy and a federal structure but did not support the immediate grant of Dominion Status, which was a major point of contention\n\n📖 हिंदी स्पष्टीकरण:\nआयोग ने द्वैध शासन को समाप्त करने और एक संघीय ढांचे की सिफारिश की, लेकिन डोमिनियन स्टेटस को तत्काल देने का समर्थन नहीं किया, जो विवाद का एक मुख्य बिंदु था।"
     },
     {
       "q_num": 13,
-      "question": "Who was the President of the All-Parties Conference that drafted the Nehru Report? नेहरू रिपोर्ट तैयार करने वाले सर्वदलीय सम्मेलन के अध्यक्ष कौन थे?",
+      "question": "Who was the President of the All-Parties Conference that drafted the Nehru Report?",
       "options": {
-        "a": "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "b": "Motilal Nehru / मोतीलाल नेहरू",
-        "c": "Subhash Chandra Bose / सुभाष चंद्र बोस",
-        "d": "Mahatma Gandhi / महात्मा गांधी"
+        "a": "Jawaharlal Nehru",
+        "b": "Motilal Nehru",
+        "c": "Subhash Chandra Bose",
+        "d": "Mahatma Gandhi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Nehru Report was prepared by a committee chaired by Motilal Nehru to outline a proposed constitutional framework for India\n\n📖 हिंदी स्पष्टीकरण:\nनेहरू रिपोर्ट मोतीलाल नेहरू की अध्यक्षता वाली एक समिति द्वारा भारत के लिए एक प्रस्तावित संवैधानिक ढांचे की रूपरेखा तैयार करने के लिए तैयार की गई थी।"
     },
     {
       "q_num": 14,
-      "question": "In 1928, Bhagat Singh and his associates killed which British officer to avenge the death of Lala Lajpat Rai?\n 1928 में, भगत सिंह और उनके सहयोगियों ने लाला लाजपत राय की मृत्यु का बदला लेने के लिए किस ब्रिटिश अधिकारी की हत्या की थी?",
+      "question": "In 1928, Bhagat Singh and his associates killed which British officer to avenge the death of Lala Lajpat Rai?",
       "options": {
-        "a": "Scott / स्कॉट",
-        "b": "Saunders / सांडर्स",
-        "c": "Curzon Wyllie / कर्जन वायली",
-        "d": "Dyer / डायर"
+        "a": "Scott",
+        "b": "Saunders",
+        "c": "Curzon Wyllie",
+        "d": "Dyer"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBhagat Singh, Rajguru, and Sukhdev aimed to kill Scott (who ordered the lathi charge) but mistakenly killed John P. Saunders, an Assistant Superintendent of Police\n\n📖 हिंदी स्पष्टीकरण:\nभगत सिंह, राजगुरु और सुखदेव का लक्ष्य स्कॉट (जिसने लाठीचार्ज का आदेश दिया था) को मारना था, लेकिन उन्होंने गलती से सहायक पुलिस अधीक्षक जॉन पी. सांडर्स की हत्या कर दी।"
     },
     {
       "q_num": 15,
-      "question": "Which revolutionary organization was formed/reorganized in Feroz Shah Kotla, Delhi, in 1928?\n 1928 में दिल्ली के फिरोज शाह कोटला में किस क्रांतिकारी संगठन का गठन/पुनर्गठन किया गया था?",
+      "question": "Which revolutionary organization was formed/reorganized in Feroz Shah Kotla, Delhi, in 1928?",
       "options": {
-        "a": "Anushilan Samiti / अनुशीलन समिति",
-        "b": "Hindustan Republican Association (HRA) / हिंदुस्तान रिपब्लिकन एसोसिएशन (HRA)",
-        "c": "Hindustan Socialist Republican Association (HSRA) / हिंदुस्तान सोशलिस्ट रिपब्लिकन एसोसिएशन (HSRA)",
-        "d": "Ghadar Party / गदर पार्टी"
+        "a": "Anushilan Samiti",
+        "b": "Hindustan Republican Association (HRA)",
+        "c": "Hindustan Socialist Republican Association (HSRA)",
+        "d": "Ghadar Party"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe HRA was reorganized as the HSRA in 1928 under the leadership of Chandra Shekhar Azad, Bhagat Singh, and others, adding 'Socialist' to its name\n\n📖 हिंदी स्पष्टीकरण:\nचंद्रशेखर आजाद, भगत सिंह और अन्य के नेतृत्व में 1928 में HRA को HSRA के रूप में पुनर्गठित किया गया था, जिसमें इसके नाम में 'सोशलिस्ट' जोड़ा गया था।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the Simon Commission: / साइमन कमीशन के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. It was a 7-member statutory commission. / यह 7 सदस्यीय वैधानिक आयोग था।\n 2. It was appointed to review the Government of India Act 1919. / इसे भारत सरकार अधिनियम 1919 की समीक्षा के लिए नियुक्त किया गया था।\n 3. The Indian National Congress supported its formation. / भारतीय राष्ट्रीय कांग्रेस ने इसके गठन का समर्थन किया।\n Which of the statements above is/are correct? / उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Simon Commission:",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe commission had 7 members and was appointed for the 1919 Act review, but the Congress vehemently boycotted it because it had no Indian members\n\n📖 हिंदी स्पष्टीकरण:\nआयोग में 7 सदस्य थे और इसे 1919 के अधिनियम की समीक्षा के लिए नियुक्त किया गया था, लेकिन कांग्रेस ने इसका कड़ा बहिष्कार किया क्योंकि इसमें कोई भारतीय सदस्य नहीं था।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): The Simon Commission was boycotted by the majority of Indian political leaders.\n कथन (A): साइमन कमीशन का अधिकांश भारतीय राजनीतिक नेताओं द्वारा बहिष्कार किया गया था।\n Reason (R): It consisted only of British members and no Indian was included.\n कारण (R): इसमें केवल ब्रिटिश सदस्य शामिल थे और किसी भी भारतीय को शामिल नहीं किया गया था।",
+      "question": "Assertion (A): The Simon Commission was boycotted by the majority of Indian political leaders.\n Reason (R): It consisted only of British members and no Indian was included.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe lack of Indian representation was the specific reason for the nationwide boycott led by the Congress and other parties\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय प्रतिनिधित्व की कमी कांग्रेस और अन्य दलों के नेतृत्व में देशव्यापी बहिष्कार का विशिष्ट कारण थी।"
     },
     {
       "q_num": 18,
-      "question": "Match the following leaders with their respective roles/actions:\n निम्नलिखित नेताओं को उनकी संबंधित भूमिकाओं/कार्यों के साथ सुमेलित करें:\n List I: // List II: सूची I: सूची II:\n 1. M.A. Ansari / एम.ए. अंसारी 1. Nehru Report / नेहरु रिपोर्ट\n 2. Motilal Nehru / नोतीलाल नेहरु 2. HSRA / HSRA\n 3. Bhagat Singh / भगत सिंह 3. Simon Go Back Protests / साइमन बापस जाओ विरोध\n 4. Lala Lajpat Rai / लाला लाजपत राय 4. Madras Session 1927 / मद्रास अधिवेशन 1927",
+      "question": "HSRA\n 3. Bhagat Singh",
       "options": {
         "a": "A-4, B-1, C-2, D-3",
         "b": "A-1, B-4, C-3, D-2",
@@ -222,84 +222,84 @@
     },
     {
       "q_num": 19,
-      "question": "Why did Bhagat Singh and Batukeshwar Dutt throw bombs in the Central Legislative Assembly in 1929? / 1929 में भगत सिंह और बटुकेश्वर दत्त ने केंद्रीय विधान सभा में बम क्यों फेंके थे?",
+      "question": "Why did Bhagat Singh and Batukeshwar Dutt throw bombs in the Central Legislative Assembly in 1929?",
       "options": {
-        "a": "To kill the Viceroy / वायसराय को मारने के लिए",
-        "b": "To protest against the Public Safety Bill and Trade Dispute Bill / सार्वजनिक सुरक्षा विधेयक और व्यापार विवाद अधिनियम का विरोध करने के लिए",
-        "c": "To avenge the Jallianwala Bagh massacre / जलियावाला बाग हत्याकांड का बदला लेने के लिए",
-        "d": "To destroy the assembly building / विधानसभा भवन को नष्ट करने के लिए"
+        "a": "To kill the Viceroy",
+        "b": "To protest against the Public Safety Bill and Trade Dispute Bill",
+        "c": "To avenge the Jallianwala Bagh massacre",
+        "d": "To destroy the assembly building"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe bombs were thrown to protest against repressive laws like the Public Safety Bill. As Bhagat Singh said, the intent was \"to make the deaf hear,\" not to kill anyone\n\n📖 हिंदी स्पष्टीकरण:\nसार्वजनिक सुरक्षा विधेयक जैसे दमनकारी कानूनों के विरोध में बम फेंके गए थे। जैसा कि भगत सिंह ने कहा था, इरादा \"बहरों को सुनाना\" था, किसी को मारना नहीं।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The Simon Commission report recommended the abolition of the system of Diarchy.\n कथन (A): साइमन कमीशन की रिपोर्ट ने द्वैध शासन की प्रणाली को समाप्त करने की सिफारिश की।\n Reason (R): It suggested that the federal system of government should be introduced in India. कारण (R): इसने सुझाव दिया कि भारत में संघीय सरकार की प्रणाली शुरू की जानी चाहिए।",
+      "question": "Assertion (A): The Simon Commission report recommended the abolition of the system of Diarchy.\nReason (R): It suggested that the federal system of government should be introduced in India.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth recommendations were part of the report, but the suggestion of a federal system was not the direct reason for abolishing diarchy; rather, diarchy was found to be ineffective\n\n📖 हिंदी स्पष्टीकरण:\nदोनों सिफारिशें रिपोर्ट का हिस्सा थीं, लेकिन संघीय प्रणाली का सुझाव द्वैध शासन को समाप्त करने का प्रत्यक्ष कारण नहीं था; बल्कि, द्वैध शासन को अप्रभावी पाया गया था।"
     },
     {
       "q_num": 21,
-      "question": "Who was the leader of the 'Red Shirt' movement (Khudai Khidmatgar) that became active during the anti-Simon and CDM phase? 'लाल कुर्ती' आंदोलन (खुदाई खिदमतगार) के नेता कौन थे जो साइमन-विरोधी और CDM चरण के दौरान सक्रिय हुए?",
+      "question": "Who was the leader of the 'Red Shirt' movement (Khudai Khidmatgar) that became active during the anti-Simon and CDM phase? '",
       "options": {
-        "a": "Maulana Abul Kalam Azad / मौलाना अबुल कलाम आजाद",
-        "b": "Khan Abdul Ghaffar Khan / खान अब्दुल गफ्फार खान",
-        "c": "Mohammad Ali Jinnah / मोहम्मद अली जिन्ना",
-        "d": "Shaukat Ali / शौकत अली"
+        "a": "Maulana Abul Kalam Azad",
+        "b": "Khan Abdul Ghaffar Khan",
+        "c": "Mohammad Ali Jinnah",
+        "d": "Shaukat Ali"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAlso known as 'Frontier Gandhi,' he founded the Khudai Khidmatgar in the Northwest Frontier Province and supported the Congress movements\n\n📖 हिंदी स्पष्टीकरण:\nखान अब्दुल गफ्फार खान को 'सीमांत गांधी' के रूप में भी जाना जाता है, उन्होंने उत्तर-पश्चिम सीमा प्रांत में खुदाई खिदमतगार की स्थापना की और कांग्रेस के आंदोलनों का समर्थन किया।"
     },
     {
       "q_num": 22,
-      "question": "Which session of the Congress passed the 'Purna Swaraj' (Complete Independence) resolution in 1929? / कांग्रेस के किस अधिवेशन ने 1929 में 'पूर्ण स्वराज' (पूर्ण स्वतंत्रता) का प्रस्ताव पारित किया था?",
+      "question": "Which session of the Congress passed the 'Purna Swaraj' (Complete Independence) resolution in 1929?",
       "options": {
-        "a": "Karachi Session / कराची अधिवेशन",
-        "b": "Lahore Session / लाहौर अधिवेशन",
-        "c": "Calcutta Session / कलकत्ता अधिवेशन",
-        "d": "Belgaum Session / बेलगाम अधिवेशन"
+        "a": "Karachi Session",
+        "b": "Lahore Session",
+        "c": "Calcutta Session",
+        "d": "Belgaum Session"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPresided over by Jawaharlal Nehru, the Lahore session declared 'Purna Swaraj' as the goal and decided to launch the Civil Disobedience Movement\n\n📖 हिंदी स्पष्टीकरण:\nजवाहरलाल नेहरू की अध्यक्षता में, लाहौर अधिवेशन ने 'पूर्ण स्वराज' को लक्ष्य घोषित किया और सविनय अवज्ञा आंदोलन शुरू करने का निर्णय लिया।"
     },
     {
       "q_num": 23,
-      "question": "In response to the Nehru Report, who presented the \"14 Points\" demand? / नेहरू रिपोर्ट के जवाब में, किसने \"14 सूत्रीय\" मांगों को प्रस्तुत किया था?",
+      "question": "In response to the Nehru Report, who presented the \"14 Points\" demand?",
       "options": {
-        "a": "Madan Mohan Malaviya / मदन मोहन मालवीय",
-        "b": "M.A. Jinnah / एम.ए. जिन्ना",
-        "c": "Aga Khan / आगा खान",
-        "d": "Liaquat Ali Khan / लियाकत अली खान"
+        "a": "Madan Mohan Malaviya",
+        "b": "M.A. Jinnah",
+        "c": "Aga Khan",
+        "d": "Liaquat Ali Khan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJinnah rejected the Nehru Report and presented his 14 points in 1929, which outlined the minimum demands of the Muslim League\n\n📖 हिंदी स्पष्टीकरण:\nजिन्ना ने नेहरू रिपोर्ट को खारिज कर दिया और 1929 में अपने 14 अंक प्रस्तुत किए, जिसमें मुस्लिम लीग की न्यूनतम मांगों को रेखांकित किया गया था।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): The Civil Disobedience Movement was launched after the failure of the Simon Commission to satisfy Indian aspirations.\n कथन (A): भारतीय आकांक्षाओं को पूरा करने में साइमन कमीशन की विफलता के बाद सविनय अवज्ञा आंदोलन शुरू किया गया था।\n Reason (R): Lord Irwin's declaration of 1929 failed to give a clear timeline for Dominion Status.\n कारण (R): लॉर्ड इरविन की 1929 की घोषणा डोमिनियन स्टेटस के लिए स्पष्ट समयरेखा देने में विफल रही।",
+      "question": "Assertion (A): The Civil Disobedience Movement was launched after the failure of the Simon Commission to satisfy Indian aspirations.\n Reason (R): Lord Irwin's declaration of 1929 failed to give a clear timeline for Dominion Status.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe lack of clarity on Dominion Status and the exclusionary nature of the Simon Commission led the Congress to abandon constitutional methods and launch mass struggle\n\n📖 हिंदी स्पष्टीकरण:\nडोमिनियन स्टेटस पर स्पष्टता की कमी और साइमन कमीशन की बहिष्कारी प्रकृति ने कांग्रेस को संवैधानिक तरीकों को छोड़ने और जन संघर्ष शुरू करने के लिए प्रेरित किया।"
     },
     {
       "q_num": 25,
-      "question": "Which female leader led the raid on the Dharsana Salt Works during the Civil Disobedience Movement? / सविनय अवज्ञा आंदोलन के दौरान धरसाना साल्ट वर्क्स पर छापे का नेतृत्व किस महिला नेता ने किया था?",
+      "question": "Which female leader led the raid on the Dharsana Salt Works during the Civil Disobedience Movement?",
       "options": {
-        "a": "Annie Besant / एनी बेसेंट",
-        "b": "Sarojini Naidu / सरोजिनी नायडू",
-        "c": "Kamala Nehru / कमला नेहरू",
-        "d": "Aruna Asaf Ali / अरुणा आसफ अली"
+        "a": "Annie Besant",
+        "b": "Sarojini Naidu",
+        "c": "Kamala Nehru",
+        "d": "Aruna Asaf Ali"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFollowing Gandhi's arrest, Sarojini Naidu, along with Imam Sahib and Manilal Gandhi, led the non-violent protest at Dharsana\n\n📖 हिंदी स्पष्टीकरण:\nगांधी की गिरफ्तारी के बाद, सरोजिनी नायडू ने इमाम साहब और मणिलाल गांधी के साथ धरसाना में अहिंसक विरोध का नेतृत्व किया।"

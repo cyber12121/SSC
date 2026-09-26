@@ -6,163 +6,163 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which Buddhist text is the primary source that mentions the list of the sixteen Mahajanapadas?\n सोलह महाजनपदों की सूची का उल्लेख करने वाला प्राथमिक बौद्ध ग्रंथ कौन सा है?",
+      "question": "Which Buddhist text is the primary source that mentions the list of the sixteen Mahajanapadas?",
       "options": {
-        "a": "Digha Nikaya / दीघ निकाय",
-        "b": "Anguttara Nikaya / अंगुत्तरा निकाय",
-        "c": "Sutta Pitaka / सुत्त पिटक",
-        "d": "Vinaya Pitaka / विनय पिटक"
+        "a": "Digha Nikaya",
+        "b": "Anguttara Nikaya",
+        "c": "Sutta Pitaka",
+        "d": "Vinaya Pitaka"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Buddhist text Anguttara Nikaya explicitly enumerates the list of the total sixteen Mahajanapadas, the great kingdoms that flourished in ancient India around the 6th century B.C. The Digha Nikaya mentions only twelve of them, making the Anguttara Nikaya the comprehensive source. Jaina texts like the Bhagavathi Sutra also mention the sixteen Mahajanapadas\n\n📖 हिंदी स्पष्टीकरण:\nसोलह महाजनपदों, जो ईसा पूर्व छठी शताब्दी के आसपास प्राचीन भारत में फले-फूले, की सूची का स्पष्ट रूप से उल्लेख बौद्ध ग्रंथ अंगुत्तर निकाय में किया गया है। दीघ निकाय में केवल बारह का उल्लेख है, इसलिए अंगुत्तर निकाय व्यापक स्रोत है। भगवती सूत्र जैसे जैन ग्रंथों में भी सोलह महाजनपदों का उल्लेख है।"
     },
     {
       "q_num": 2,
-      "question": "The city of Pataliputra, which was made the capital of Magadha by Udayin, is situated at the confluence of which two rivers?\n पाटलिपुत्र शहर, जिसे उदायिन ने मगध की राजधानी बनाया था, किन दो नदियों के संगम पर स्थित है?",
+      "question": "The city of Pataliputra, which was made the capital of Magadha by Udayin, is situated at the confluence of which two rivers?",
       "options": {
-        "a": "Ganga and Yamuna / गंगा और यमुना",
-        "b": "Ganga and Son / गंगा और सोन",
-        "c": "Gandak and Son / गंडक और सोन",
-        "d": "Ganga and Kosi / गंगा और कोसी"
+        "a": "Ganga and Yamuna",
+        "b": "Ganga and Son",
+        "c": "Gandak and Son",
+        "d": "Ganga and Kosi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPataliputra (modern-day Patna) was strategically located at the confluence of the Ganga and Son rivers, providing it with natural defenses (a jala-durga or water-fort) and access to river trade routes. King Udayin of the Haryanka dynasty is credited with shifting the capital from Rajagriha to Pataliputra. This advantageous position was a key factor in the rise of the Magadhan Empire\n\n📖 हिंदी स्पष्टीकरण:\nपाटलिपुत्र (आधुनिक पटना) रणनीतिक रूप से गंगा और सोन नदियों के संगम पर स्थित था, जिससे इसे प्राकृतिक सुरक्षा (जल-दुर्ग) और नदी व्यापार मार्गों तक पहुंच मिलती थी। हर्यंक वंश के राजा उदायिन को राजधानी को राजगृह से पाटलिपुत्र स्थानांतरित करने का श्रेय दिया जाता है। यह लाभप्रद स्थिति मगध साम्राज्य के उदय का एक प्रमुख कारक थी।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following Mahajanapadas was the only one situated south of the Vindhya Range, on the bank of the Godavari River?\n निम्नलिखित में से कौन सा महाजनपद एकमात्र महाजनपद था जो विंध्य पर्वत श्रृंखला के दक्षिण में, गोदावरी नदी के तट पर स्थित था?",
+      "question": "Which of the following Mahajanapadas was the only one situated south of the Vindhya Range, on the bank of the Godavari River?",
       "options": {
-        "a": "Avanti / अवंति",
-        "b": "Vatsa / वत्स",
-        "c": "Assaka (Asmaka) / अस्सक (अश्मक)",
-        "d": "Matsya / मत्स्य"
+        "a": "Avanti",
+        "b": "Vatsa",
+        "c": "Assaka (Asmaka)",
+        "d": "Matsya"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Mahajanapada of Assaka (also known as Asmaka) was the only one of the sixteen Mahajanapadas located entirely in the South of India, on the banks of the Godavari River. Its capital was Pratisthan or Potana. All the other Mahajanapadas were located in the Indo-Gangetic plains or North-Western India\n\n📖 हिंदी स्पष्टीकरण:\nअस्सक (जिसे अश्मक भी कहा जाता है) महाजनपद सोलह महाजनपदों में से एकमात्र ऐसा था जो पूरी तरह से दक्षिण भारत में, गोदावरी नदी के तट पर स्थित था। इसकी राजधानी प्रतिष्ठान या पोतना थी। अन्य सभी महाजनपद सिंधु-गंगा के मैदानों या उत्तर-पश्चिमी भारत में स्थित थे।"
     },
     {
       "q_num": 4,
-      "question": "What title was adopted by Bimbisara, the founder of the Haryanka Dynasty in Magadha, to signify his strong and large standing army?\n मगध में हर्यंक वंश के संस्थापक बिम्बिसार ने अपनी मजबूत और बड़ी स्थायी सेना को दर्शाने के लिए कौन सी उपाधि धारण की थी?",
+      "question": "What title was adopted by Bimbisara, the founder of the Haryanka Dynasty in Magadha, to signify his strong and large standing army?",
       "options": {
-        "a": "Ekarat / एकराट",
-        "b": "Sarva-Kshatrantaka / सर्व-क्षत्रान्तक",
-        "c": "Seniya / सेनीय",
-        "d": "Ugrasena / उग्रसेन"
+        "a": "Ekarat",
+        "b": "Sarva-Kshatrantaka",
+        "c": "Seniya",
+        "d": "Ugrasena"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBimbisara was the first Magadhan king to have a large and permanent standing army, a significant military innovation for the time. For this reason, he was given the title Seniya, which literally means 'having an army'. The title Ekarat (sole sovereign) was later adopted by Mahapadmananda\n\n📖 हिंदी स्पष्टीकरण:\nबिम्बिसार मगध का पहला राजा था जिसके पास एक बड़ी और स्थायी सेना थी, जो उस समय के लिए एक महत्वपूर्ण सैन्य नवाचार था। इसी कारण से, उन्हें 'सेनीय' की उपाधि दी गई, जिसका शाब्दिक अर्थ है 'सेना वाला'। 'एकराट' (एकमात्र संप्रभु) की उपाधि बाद में महापद्मनंद ने धारण की थी।"
     },
     {
       "q_num": 5,
-      "question": "Which Nanda ruler was the reigning king of Magadha when Alexander the Great invaded North-Western India in 326 BC?\n 326 ईसा पूर्व में जब सिकंदर महान ने उत्तर-पश्चिमी भारत पर आक्रमण किया था, तब मगध का शासक नंद राजा कौन था?",
+      "question": "Which Nanda ruler was the reigning king of Magadha when Alexander the Great invaded North-Western India in 326 BC?",
       "options": {
-        "a": "Mahapadmananda / महापद्मनंद",
-        "b": "Ugrasena Nanda / उग्रसेन नंद",
-        "c": "Dhanananda / धनानंद",
-        "d": "Panduka Nanda / पांडुक नंद"
+        "a": "Mahapadmananda",
+        "b": "Ugrasena Nanda",
+        "c": "Dhanananda",
+        "d": "Panduka Nanda"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDhanananda was the last king of the Nanda Dynasty and was ruling Magadha when Alexander's forces invaded. Although Alexander defeated many kingdoms, his army ultimately refused to advance further eastward towards the powerful Magadhan Empire ruled by Dhanananda. This refusal led to Alexander's eventual retreat\n\n📖 हिंदी स्पष्टीकरण:\nधनानंद नंद वंश का अंतिम राजा था और जब सिकंदर की सेना ने आक्रमण किया तब वह मगध पर शासन कर रहा था। हालाँकि सिकंदर ने कई राज्यों को हराया, लेकिन उसकी सेना ने धनानंद द्वारा शासित शक्तिशाली मगध साम्राज्य की ओर आगे बढ़ने से मना कर दिया। इस इनकार के कारण अंततः सिकंदर को पीछे हटना पड़ा।"
     },
     {
       "q_num": 6,
-      "question": "The capital of the Kuru Mahajanapada was located at which of the following cities, mentioned in Mahabhatat ?\n कुरु महाजनपद की राजधानी निम्नलिखित में से किस शहर में स्थित थी, जिसका उल्लेख महाभारत में है?",
+      "question": "The capital of the Kuru Mahajanapada was located at which of the following cities, mentioned in Mahabhatat ?",
       "options": {
-        "a": "Taxila / तक्षशिला",
-        "b": "Kampilya / काम्पिल्य",
-        "c": "Indraprastha / इंद्रप्रस्थ",
-        "d": "Ahichchatra / अहिच्छत्र"
+        "a": "Taxila",
+        "b": "Kampilya",
+        "c": "Indraprastha",
+        "d": "Ahichchatra"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKuru Mahajanapada was centered around modern-day Meerut and South-East Haryana. Its capital was Indraprastha, a city prominently featured in the epic Mahabharata. The other city associated with Kuru was Hastinapura. Kampilya and Ahichchatra were the capitals of the Panchala Mahajanapada\n\n📖 हिंदी स्पष्टीकरण:\nकुरु महाजनपद आधुनिक मेरठ और दक्षिण-पूर्वी हरियाणा के आसपास केंद्रित था। इसकी राजधानी इंद्रप्रस्थ थी, जो महाकाव्य महाभारत में प्रमुखता से चित्रित है। कुरु से जुड़ा दूसरा शहर हस्तिनापुर था। काम्पिल्य और अहिच्छत्र पंचाल महाजनपद की राजधानियाँ थीं।"
     },
     {
       "q_num": 7,
-      "question": "The king of Anga, who was defeated by Bimbisara and whose kingdom was then annexed to Magadha, had his capital at which of the following places?\n अंग के राजा, जिसे बिम्बिसार ने हराया था और जिसका राज्य बाद में मगध में मिला लिया गया था, उसकी राजधानी निम्नलिखित में से किस स्थान पर थी?",
+      "question": "The king of Anga, who was defeated by Bimbisara and whose kingdom was then annexed to Magadha, had his capital at which of the following places?",
       "options": {
-        "a": "Rajagriha / राजगृह",
-        "b": "Vaishali / वैशाली",
-        "c": "Varanasi / वाराणसी",
-        "d": "Champa / चम्पा"
+        "a": "Rajagriha",
+        "b": "Vaishali",
+        "c": "Varanasi",
+        "d": "Champa"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Mahajanapada of Anga had its capital at Champa, located near modern-day Munger and Bhagalpur in Bihar. Bimbisara of Magadha led a military campaign against Anga, defeated its king, and annexed the territory. The acquisition of Anga was significant as it gave Magadha control over the rich river trade\n\n📖 हिंदी स्पष्टीकरण:\nअंग महाजनपद की राजधानी चम्पा थी, जो आधुनिक मुंगेर और भागलपुर (बिहार) के पास स्थित थी। मगध के बिम्बिसार ने अंग के विरुद्ध एक सैन्य अभियान चलाया, उसके राजा को हराया और उस क्षेत्र पर कब्ज़ा कर लिया। अंग का अधिग्रहण महत्वपूर्ण था क्योंकि इसने मगध को समृद्ध नदी व्यापार पर नियंत्रण प्रदान किया।"
     },
     {
       "q_num": 8,
-      "question": "The 'Northern Black Polished Ware' (NBPW) pottery is characteristic of which major historical period in ancient India?\n 'उत्तरी काले पॉलिशदार मृद्भांड' (NBPW) मिट्टी के बर्तन प्राचीन भारत के किस प्रमुख ऐतिहासिक काल की विशेषता है?",
+      "question": "The 'Northern Black Polished Ware' (NBPW) pottery is characteristic of which major historical period in ancient India?",
       "options": {
-        "a": "Harappan Civilization / हड़प्पा सभ्यता",
-        "b": "Early Vedic Period / प्रारंभिक वैदिक काल",
-        "c": "Mahajanapada and Magadha Period / महाजनपद और मगध काल",
-        "d": "Gupta Empire / गुप्त साम्राज्य"
+        "a": "Harappan Civilization",
+        "b": "Early Vedic Period",
+        "c": "Mahajanapada and Magadha Period",
+        "d": "Gupta Empire"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNorthern Black Polished Ware (NBPW) is a distinct type of glossy, fine pottery associated with the period of the Mahajanapadas and the rise of the Magadha Empire (c. 700–200 BCE). Its widespread use is an archaeological marker of the Second Urbanisation in the Indian subcontinent. It often featured a high-quality, lustrous black surface\n\n📖 हिंदी स्पष्टीकरण:\nउत्तरी काले पॉलिशदार मृद्भांड (NBPW) एक विशिष्ट प्रकार के चमकदार, महीन मिट्टी के बर्तन हैं जो महाजनपदों के काल और मगध साम्राज्य के उदय (लगभग 700-200 ईसा पूर्व) से जुड़े हैं। इसका व्यापक उपयोग भारतीय उपमहाद्वीप में द्वितीय नगरीकरण का एक पुरातात्विक सूचक है। इसमें अक्सर एक उच्च गुणवत्ता वाली, चमकदार काली सतह होती थी।"
     },
     {
       "q_num": 9,
-      "question": "Which Mahajanapada had its capital at Varanasi (Varuna + Assi rivers), and its modern location corresponds to Gonda and Bharai districts?\n किस महाजनपद की राजधानी वाराणसी (वरुणा + अस्सी नदियाँ) थी, और इसका आधुनिक स्थान गोंडा और भरई जिलों से मेल खाता है?",
+      "question": "Which Mahajanapada had its capital at Varanasi (Varuna + Assi rivers), and its modern location corresponds to Gonda and Bharai districts?",
       "options": {
-        "a": "Kasi / काशी",
-        "b": "Kosala / कोसल",
-        "c": "Vatsa / वत्स",
-        "d": "Surasena / शूरसेन"
+        "a": "Kasi",
+        "b": "Kosala",
+        "c": "Vatsa",
+        "d": "Surasena"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKasi Mahajanapada had its capital at Varanasi, deriving its name from the rivers Varuna and Assi. Its modern location covers the region of Gonda and Bharai in Uttar Pradesh. Kasi was initially a powerful kingdom, but was later annexed by its neighboring and emerging power, Kosala\n\n📖 हिंदी स्पष्टीकरण:\nकाशी महाजनपद की राजधानी वाराणसी थी, जिसका नाम वरुणा और अस्सी नदियों से लिया गया था। इसका आधुनिक स्थान उत्तर प्रदेश में गोंडा और भरई के क्षेत्र को कवर करता है। काशी शुरू में एक शक्तिशाली राज्य था, लेकिन बाद में अपने पड़ोसी और उभरते हुए शक्ति, कोसल द्वारा इसे मिला लिया गया।"
     },
     {
       "q_num": 10,
-      "question": "The system of multiple decision-makers or a Gana/Sangha (Republic) was characteristic of which group of Mahajanapadas?\n एकाधिक निर्णय लेने वालों की प्रणाली या गण/संघ (गणतंत्र) महाजनपदों के किस समूह की विशेषता थी?",
+      "question": "The system of multiple decision-makers or a Gana/Sangha (Republic) was characteristic of which group of Mahajanapadas?",
       "options": {
-        "a": "Magadha and Kosala / मगध और कोसल",
-        "b": "Avanti and Kuru / अवंति और कुरु",
-        "c": "Vajji and Malla / वज्जि और मल्ल",
-        "d": "Anga and Vatsa / अंग और वत्स"
+        "a": "Magadha and Kosala",
+        "b": "Avanti and Kuru",
+        "c": "Vajji and Malla",
+        "d": "Anga and Vatsa"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMahajanapadas were either Monarchial (single decision-makers, like Magadha) or Republican (multiple decision-makers, Gana/Sangha). Vajji (a confederacy of 8 clans including Lichchavi) and Malla were the prominent republican states. These republics were often in conflict with the neighboring powerful monarchial states\n\n📖 हिंदी स्पष्टीकरण:\nमहाजनपद या तो राजतंत्रात्मक (मगध जैसे एकल निर्णय लेने वाले) या गणतांत्रिक (एकाधिक निर्णय लेने वाले, गण/संघ) थे। वज्जि (लिच्छवी सहित 8 कुलों का एक संघ) और मल्ल प्रमुख गणतांत्रिक राज्य थे। ये गणराज्य अक्सर पड़ोसी शक्तिशाली राजतंत्रात्मक राज्यों के साथ संघर्ष में रहते थे।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the rise of Magadha:\n मगध के उदय के संबंध में निम्नलिखित कथनों पर विचार करें:\n Assertion (A): Magadha became the most powerful Mahajanapada largely due to its control over essential mineral resources.\n अभिकथन (A): मगध आवश्यक खनिज संसाधनों पर अपने नियंत्रण के कारण बड़े पैमाने पर सबसे शक्तिशाली महाजनपद बन गया।\n Reason (R): Iron was widely available in the region of modern Jharkhand, and its local name was Krishna Ayas or Shyam Ayas.\n कारण (R): आधुनिक झारखंड के क्षेत्र में लौह व्यापक रूप से उपलब्ध था, और इसका स्थानीय नाम कृष्ण अयस या श्याम अयस था।",
+      "question": "Consider the following statements regarding the rise of Magadha:\n Assertion (A): Magadha became the most powerful Mahajanapada largely due to its control over essential mineral resources.\n Reason (R): Iron was widely available in the region of modern Jharkhand, and its local name was Krishna Ayas or Shyam Ayas.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe availability of iron ore in the adjacent Jharkhand region (then a part of Magadha's reach) was a primary reason for Magadha's military and agricultural superiority, as it allowed for better tools and weapons. Iron ore was indeed referred to in ancient texts as Krishna Ayas or Shyam Ayas (black metal). Thus, the reason correctly explains the assertion of Magadha's power based on resources\n\n📖 हिंदी स्पष्टीकरण:\nआस-पास के झारखंड क्षेत्र (तब मगध की पहुंच का एक हिस्सा) में लौह अयस्क की उपलब्धता मगध की सैन्य और कृषि श्रेष्ठता का प्राथमिक कारण थी, क्योंकि इसने बेहतर औजारों और हथियारों को संभव बनाया। लौह अयस्क को वास्तव में प्राचीन ग्रंथों में कृष्ण अयस या श्याम अयस (काला धातु) कहा गया था। इस प्रकार, कारण, संसाधनों के आधार पर मगध की शक्ति के अभिकथन की सही व्याख्या करता है।"
     },
     {
       "q_num": 12,
-      "question": "Consider the following statements regarding King Bimbisara of Magadha: मगध के राजा बिम्बिसार के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. He strengthened his position not only through military campaigns like the conquest of Anga but also through strategic marriage alliances. / उसने न केवल अंग के विजय जैसे सैन्य अभियानों के माध्यम से, बल्कि रणनीतिक वैवाहिक गठबंधनों के द्वारा भी अपनी स्थिति को सुदृढ़ किया।\n 2. He sent his royal physician, Jivaka, to Ujjain to treat King Pradyota, who was suffering from jaundice. / उसने अपने राजवैद्य जीवक को उज्जैन भेजा ताकि वे पीलिया से पीड़ित राजा प्रद्योत का उपचार कर सकें।\n Which of the statements given above is/are correct?\n उपरोक्त दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding King Bimbisara of Magadha:\n1. He strengthened his position not only through military campaigns like the conquest of Anga but also through strategic marriage alliances.\n2. He sent his royal physician, Jivaka, to Ujjain to treat King Pradyota, who was suffering from jaundice.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBimbisara was a master diplomat; he married the sister of the King of Kosala, a princess of the Lichchavi clan, and a princess of the Madra clan, thereby securing alliances with three powerful kingdoms. Additionally, he maintained friendly relations with his contemporary Avanti by sending his physician Jivaka to treat King Pradyota\n\n📖 हिंदी स्पष्टीकरण:\nबिम्बिसार एक कुशल कूटनीतिज्ञ थे; उन्होंने कोसल के राजा की बहन, लिच्छवी कुल की राजकुमारी और मद्र कुल की एक राजकुमारी से विवाह किया, जिससे तीन शक्तिशाली राज्यों के साथ गठबंधन सुरक्षित हुआ। इसके अतिरिक्त, उन्होंने अपने समकालीन अवंति के साथ अपने चिकित्सक जीवक को राजा प्रद्योत का इलाज करने के लिए भेजकर मैत्रीपूर्ण संबंध बनाए रखे।"
     },
     {
       "q_num": 13,
-      "question": "With reference to the taxation system during the Mahajanapada period, consider the following statements:\n महाजनपद काल के दौरान कराधान प्रणाली के संदर्भ में, निम्नलिखित कथनों पर विचार करें:\n 1. Peasants were generally required to pay a tax equal to one-sixth (1/6th) of their total produce. / किसानों से सामान्यतः उनकी कुल उपज का एक-छठा (1/6) कर के रूप में लिया जाता था।\n 2. The tax known as 'Bali' was a compulsory revenue collected from all sections of the society by the officers called 'Shaulkika'. / ‘बलि’ नामक कर समाज के सभी वर्गों से ‘शौल्किक’ कहलाने वाले अधिकारियों द्वारा अनिवार्य रूप से वसूला जाता था।\n Which of the statements given above is/are correct?\n उपरोक्त दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "With reference to the taxation system during the Mahajanapada period, consider the following statements:\n1. Peasants were generally required to pay a tax equal to one-sixth (1/6th) of their total produce.\n2. The tax known as 'Bali' was a compulsory revenue collected from all sections of the society by the officers called 'Shaulkika'.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe rate of land tax, or bhaga, was fixed at 1/6th of the produce, which was the primary source of revenue for the state. However, Bali was originally a voluntary offering given to the king, not a compulsory tax. The Shaulkika (or Shulkadhyaksha) was an officer responsible for collecting the Toll Tax or Shulka, not the general Bali or land tax\n\n📖 हिंदी स्पष्टीकरण:\nभू-राजस्व, या भाग, की दर उपज के 1/6वें भाग पर निर्धारित की गई थी, जो राज्य के लिए राजस्व का प्राथमिक स्रोत था। हालाँकि, बलि मूल रूप से राजा को दिया जाने वाला एक स्वैच्छिक भेंट था, न कि अनिवार्य कर। शौल्किक (या शुल्काध्यक्ष) वह अधिकारी था जो टोल टैक्स या शुल्क एकत्र करने के लिए जिम्मेदार था, न कि सामान्य बलि या भू-राजस्व के लिए।"
     },
     {
       "q_num": 14,
-      "question": "Match the Mahajanapadas with their respective Capitals. Select the correct combination from the options below:\n महाजनपदों को उनकी संबंधित राजधानियों से सुमेलित करें। नीचे दिए गए विकल्पों में से सही संयोजन का चयन करें:\n 1. Vatsa / वत्स\n 2. Anga / अंग\n 3. Avanti / अवंति\n 4. Chedi / चेदि\n Capitals:\n 5. Champa / चम्पा,\n 6. Kaushambi / कौशाम्बी,\n 7. Sothivati / सोथिवती,\n 8. Ujjain / उज्जैन",
+      "question": "Match the Mahajanapadas with their respective Capitals. Select the correct combination from the options below:\n1. Vatsa\n2. Anga\n3. Avanti\n4. Chedi\n Capitals:\n5. Champa\n6. Kaushambi\n7. Sothivati\n8. Ujjain",
       "options": {
         "a": "1-B, 2-A, 3-D, 4-C",
         "b": "1-A, 2-B, 3-C, 4-D",
@@ -174,132 +174,132 @@
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements about Ajatshatru, the Magadhan ruler:\n मगध के शासक अजातशत्रु के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. He is credited with patronising the First Buddhist Council, which was held at Rajagriha shortly after the death of the Buddha. / उन्हें बुद्ध के महापरिनिर्वाण के तुरंत बाद राजगृह में आयोजित प्रथम बौद्ध संगीति का संरक्षण देने का श्रेय दिया जाता है।\n 2. He successfully conquered the Vajji confederacy, particularly Vaishali, by using two new military engines: Rathamusala and Mahasilakantaka. / उन्होंने रथमुसल और महासिलाकंटक नामक दो नए युद्ध यंत्रों का उपयोग करके वज्जि संघ, विशेषकर वैशाली, को सफलतापूर्वक जीत लिया।\n Which of the statements given above is/are correct?\n उपरोक्त दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Ajatshatru, the Magadhan ruler:\n1. He is credited with patronising the First Buddhist Council, which was held at Rajagriha shortly after the death of the Buddha.\n2. He successfully conquered the Vajji confederacy, particularly Vaishali, by using two new military engines: Rathamusala and Mahasilakantaka.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAjatshatru, son of Bimbisara, was a key figure in the spread of Buddhism and sponsored the First Buddhist Council. He waged a long and successful war against the Vajji Mahajanapada and captured its capital, Vaishali, using advanced war engines (catapults) like Rathamusala (a chariot with a swinging mace) and Mahasilakantaka (a large stone-throwing machine)\n\n📖 हिंदी स्पष्टीकरण:\nबिम्बिसार के पुत्र अजातशत्रु बौद्ध धर्म के प्रसार में एक प्रमुख व्यक्ति थे और उन्होंने प्रथम बौद्ध संगीति को प्रायोजित किया था। उन्होंने वज्जि महाजनपद के खिलाफ एक लंबा और सफल युद्ध लड़ा और उन्नत युद्ध इंजनों (गुलेल) जैसे रथमुसला (झूलते हुए गदा वाला रथ) और महासिलाकंटक (एक बड़ी पत्थर फेंकने वाली मशीन) का उपयोग करके इसकी राजधानी वैशाली पर कब्जा कर लिया।"
     },
     {
       "q_num": 16,
-      "question": "The ancient Sanskrit text Ashtadhyayi, which mentions forty Janapadas, was written by which scholar?\n प्राचीन संस्कृत ग्रंथ अष्टाध्यायी, जिसमें चालीस जनपदों का उल्लेख है, किस विद्वान द्वारा लिखा गया था?",
+      "question": "The ancient Sanskrit text Ashtadhyayi, which mentions forty Janapadas, was written by which scholar?",
       "options": {
-        "a": "Kalidasa / कालिदास",
-        "b": "Chanakya / चाणक्य",
-        "c": "Panini / पाणिनि",
-        "d": "Patanjali / पतंजलि"
+        "a": "Kalidasa",
+        "b": "Chanakya",
+        "c": "Panini",
+        "d": "Patanjali"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAshtadhyayi, a text on Sanskrit grammar, was authored by Panini between the 6th and 4th centuries BC. It is considered the oldest known work on the subject. The text is important historically as it mentions the existence of approximately forty regional states or Janapadas, thereby providing a literary source for the period preceding the Mahajanapadas\n\n📖 हिंदी स्पष्टीकरण:\nअष्टाध्यायी, संस्कृत व्याकरण पर आधारित एक ग्रंथ, पाणिनि द्वारा छठी ईसा पूर्व और चौथी शताब्दी के बीच लिखा गया था। इसे इस विषय पर ज्ञात सबसे पुराना कार्य माना जाता है। यह ग्रंथ ऐतिहासिक रूप से महत्वपूर्ण है क्योंकि इसमें लगभग चालीस क्षेत्रीय राज्यों या जनपदों के अस्तित्व का उल्लेख है, जिससे महाजनपद काल से पहले की अवधि के लिए एक साहित्यिक स्रोत मिलता है।"
     },
     {
       "q_num": 17,
-      "question": "During the Mahajanapada period, what was the title generally given to the headman of a village who was responsible for collecting revenue and maintaining order?\n महाजनपद काल के दौरान, गाँव के मुखिया को आमतौर पर क्या उपाधि दी जाती थी जो राजस्व एकत्र करने और व्यवस्था बनाए रखने के लिए जिम्मेदार था?",
+      "question": "During the Mahajanapada period, what was the title generally given to the headman of a village who was responsible for collecting revenue and maintaining order?",
       "options": {
-        "a": "Brahamani / ब्राह्मणी",
-        "b": "Bhojaka / भोजक",
-        "c": "Senapati / सेनापति",
-        "d": "Mahamatra / महामात्र"
+        "a": "Brahamani",
+        "b": "Bhojaka",
+        "c": "Senapati",
+        "d": "Mahamatra"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe headman of the village during the Mahajanapada period was referred to as the Bhojaka or Gramabhojaka. He was a powerful figure, often hereditary, who collected the taxes from the peasants on behalf of the king and served as a local magistrate. The Gramani was an earlier Vedic term for the village head\n\n📖 हिंदी स्पष्टीकरण:\nमहाजनपद काल के दौरान गाँव के मुखिया को भोजक या ग्रामभोजक कहा जाता था। वह एक शक्तिशाली व्यक्ति था, जिसका पद अक्सर वंशानुगत होता था, जो राजा की ओर से किसानों से कर एकत्र करता था और स्थानीय मजिस्ट्रेट के रूप में कार्य करता था। ग्रामणी ग्राम प्रमुख के लिए एक पहले का वैदिक शब्द था।"
     },
     {
       "q_num": 18,
-      "question": "Which Nanda ruler was the first Magadhan king to adopt the title Ekrat, signifying his absolute authority and the eradication of other Kshatriya dynasties?\n कौन सा नंद शासक एकराट की उपाधि धारण करने वाला पहला मगध राजा था, जो उसके पूर्ण अधिकार और अन्य क्षत्रिय राजवंशों के उन्मूलन को दर्शाता है?",
+      "question": "Which Nanda ruler was the first Magadhan king to adopt the title Ekrat, signifying his absolute authority and the eradication of other Kshatriya dynasties?",
       "options": {
-        "a": "Dhanananda / धनानंद",
-        "b": "Shishunaga / शिशुनाग",
-        "c": "Mahapadmananda / महापद्मनंद",
-        "d": "Kalashoka / कालाशोक"
+        "a": "Dhanananda",
+        "b": "Shishunaga",
+        "c": "Mahapadmananda",
+        "d": "Kalashoka"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMahapadmananda, the founder of the Nanda Dynasty, was a king of immense power and military might who is credited with overthrowing many contemporary dynasties. The title Ekrat literally means 'Sole Sovereign' or 'One King', which he adopted to proclaim his status as the undisputed ruler of the entire region, having rooted out other Kshatriya rulers\n\n📖 हिंदी स्पष्टीकरण:\nनंद वंश के संस्थापक महापद्मनंद, अपार शक्ति और सैन्य बल के राजा थे जिन्हें कई समकालीन राजवंशों को उखाड़ फेंकने का श्रेय दिया जाता है। एकराट उपाधि का शाब्दिक अर्थ 'एकमात्र संप्रभु' या 'एक राजा' है, जिसे उन्होंने अन्य क्षत्रिय शासकों का उन्मूलन करके पूरे क्षेत्र के निर्विवाद शासक के रूप में अपनी स्थिति घोषित करने के लिए अपनाया था।"
     },
     {
       "q_num": 19,
-      "question": "Consider the following statements regarding Alexander’s invasion and Magadha:\n सिकंदर के आक्रमण और मगध के संबंध में निम्नलिखित कथनों पर विचार करें:\n Assertion (A): Alexander the Great's army refused to advance further eastward after the Battle of Hydaspes, eventually leading to his retreat.\n अभिकथन (A): सिकंदर महान की सेना ने हाइडेस्पेस के युद्ध के बाद और पूर्व की ओर आगे बढ़ने से इनकार कर दिया, जिससे अंततः उसे पीछे हटना पड़ा।\n Reason (R): The Greek soldiers were exhausted and feared the massive army of the powerful Magadhan ruler, Dhanananda, which possessed a large number of war elephants.\n कारण (R): यूनानी सैनिक थक चुके थे और शक्तिशाली मगध शासक धनानंद की विशाल सेना से डरते थे, जिसके पास बड़ी संख्या में युद्ध हाथी थे।",
+      "question": "Consider the following statements regarding Alexander’s invasion and Magadha:\n Assertion (A): Alexander the Great's army refused to advance further eastward after the Battle of Hydaspes, eventually leading to his retreat.\n Reason (R): The Greek soldiers were exhausted and feared the massive army of the powerful Magadhan ruler, Dhanananda, which possessed a large number of war elephants.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe assertion is true; Alexander's troops, worn out by years of campaigning and recent fierce battles like Hydaspes (against Porus), refused to cross the Beas river. The reason is the correct explanation; they had heard terrifying accounts of the formidable strength of the Nanda army under Dhanananda, which was said to have 200,000 infantry, 20,000 cavalry, and thousands of war elephants\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन सत्य है; सिकंदर के सैनिक, वर्षों के अभियान और हाइडेस्पेस (पोरस के खिलाफ) जैसे हाल के भयंकर युद्धों से थक चुके थे, उन्होंने ब्यास नदी को पार करने से इनकार कर दिया। कारण सही स्पष्टीकरण है; उन्होंने धनानंद के नेतृत्व में नंद सेना की दुर्जेय शक्ति के बारे में भयानक किस्से सुने थे, जिसमें 200,000 पैदल सेना, 20,000 घुड़सवार और हजारों युद्ध हाथी थे।"
     },
     {
       "q_num": 20,
-      "question": "With reference to the economic life during the Mahajanapada period, which of the following statements is/are correct?\n महाजनपद काल के दौरान आर्थिक जीवन के संदर्भ में, निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 1. The organizations of artisans and merchants were known as Shrenis or Guilds. / शिल्पकारों और व्यापारियों के संगठन श्रेणियाँ या गिल्ड कहलाते थे।\n 2. The earliest form of currency widely used in this period were gold coins known as Nishka. / इस काल में व्यापक रूप से प्रयुक्त मुद्रा का सबसे प्रारंभिक रूप निश्क नामक स्वर्ण सिक्के थे।\n 3. The use of iron ploughshares contributed to the agricultural surplus, enabling the Second Urbanisation. / लोहे के हल-फालों के उपयोग से कृषि अधिशेष में वृद्धि हुई, जिससे द्वितीय नगरीकरण संभव हो सका।",
+      "question": "With reference to the economic life during the Mahajanapada period, which of the following statements is/are correct?\n1. The organizations of artisans and merchants were known as Shrenis or Guilds.\n2. The earliest form of currency widely used in this period were gold coins known as Nishka.\n3. The use of iron ploughshares contributed to the agricultural surplus, enabling the Second Urbanisation.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 3 only / केवल 1 और 3",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 only",
+        "b": "1 and 3 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement 1 is correct; guilds (Shrenis) were vital organizations for merchants and artisans, regulating trade and crafts. Statement 3 is correct; the efficiency of iron ploughshares in the fertile Gangetic plain led to massive agricultural surplus, supporting the growth of towns (Second Urbanisation). Statement 2 is incorrect; while Nishka was a valuable commodity, the primary and earliest form of coinage for trade were the Punch-Marked Silver Coins (Puranas/Karshapanas)\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है; गिल्ड (श्रेणियाँ) व्यापारियों और कारीगरों के लिए महत्वपूर्ण संगठन थे, जो व्यापार और शिल्पों को विनियमित करते थे। कथन 3 सही है; उपजाऊ गंगा के मैदान में लोहे के हल के फालों की दक्षता ने बड़े पैमाने पर कृषि अधिशेष को जन्म दिया, जिससे कस्बों का विकास हुआ (द्वितीय नगरीकरण)। कथन 2 गलत है; जबकि निष्क एक मूल्यवान वस्तु थी, व्यापार के लिए सिक्कों का प्राथमिक और शुरुआती रूप पंच-चिह्नित चांदी के सिक्के (पुराण/कर्षपण) थे।"
     },
     {
       "q_num": 21,
-      "question": "Which of the following is regarded as the major political accomplishment of King Shishunaga of Magadha?\n निम्नलिखित में से किसे मगध के राजा शिशुनाग की प्रमुख राजनीतिक उपलब्धि माना जाता है?",
+      "question": "Which of the following is regarded as the major political accomplishment of King Shishunaga of Magadha?",
       "options": {
-        "a": "Subjugation of Kalinga / कलिंग पर विजय",
-        "b": "Construction of the fortifications at Pataliputra / पाटलिपुत्र में किलेबंदी का निर्माण",
-        "c": "Convening the First Buddhist Council / प्रथम बौद्ध परिषद का आयोजन",
-        "d": "Defeat of Avanti (Malwa) and its incorporation into Magadha / अवंती (मालवा) की पराजय और उसका मगध में विलय"
+        "a": "Subjugation of Kalinga",
+        "b": "Construction of the fortifications at Pataliputra",
+        "c": "Convening the First Buddhist Council",
+        "d": "Defeat of Avanti (Malwa) and its incorporation into Magadha"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nKing Shishunaga's most significant achievement was the military conquest and absorption of the kingdom of Avanti (Ujjain) into the Magadhan empire. This victory ended the century-long rivalry between the two major powers of that time and secured the western frontier of Magadha\n\n📖 हिंदी स्पष्टीकरण:\nराजा शिशुनाग की सबसे महत्वपूर्ण उपलब्धि अवंती (उज्जैन) राज्य पर सैन्य विजय और उसे मगध साम्राज्य में मिलाना था। इस जीत ने उस समय की दो प्रमुख शक्तियों के बीच सदियों पुरानी प्रतिद्वंद्विता को समाप्त कर दिया और मगध की पश्चिमी सीमा को सुरक्षित कर दिया।"
     },
     {
       "q_num": 22,
-      "question": "As part of his diplomatic strategy of marriage alliances, King Bimbisara of Magadha entered into a matrimonial alliance with the royal family of Kosala. The bride was the sister of which Kosalan ruler?\n अपनी कूटनीतिक रणनीति के तहत, मगध के राजा बिम्बिसार ने कोसल के शाही परिवार के साथ वैवाहिक संबंध स्थापित किया। दुल्हन किस कोसल शासक की बहन थी?",
+      "question": "As part of his diplomatic strategy of marriage alliances, King Bimbisara of Magadha entered into a matrimonial alliance with the royal family of Kosala. The bride was the sister of which Kosalan ruler?",
       "options": {
-        "a": "Prasenjit / प्रसेनजीत",
-        "b": "Ajatashatru / अजातशत्रु",
-        "c": "Udayin / उदयिन",
-        "d": "Ashoka / अशोक"
+        "a": "Prasenjit",
+        "b": "Ajatashatru",
+        "c": "Udayin",
+        "d": "Ashoka"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKing Bimbisara married Kosaladevi, the sister of King Prasenjit of Kosala. This marriage alliance provided Magadha with the territory of Kashi as a dowry and significantly strengthened Bimbisara's political position\n\n📖 हिंदी स्पष्टीकरण:\nराजा बिम्बिसार ने कोसल के राजा प्रसेनजीत की बहन कोसलदेवी से विवाह किया था। इस वैवाहिक गठबंधन ने मगध को दहेज के रूप में काशी का क्षेत्र प्रदान किया और बिम्बिसार की राजनीतिक स्थिति को महत्वपूर्ण रूप से मजबूत किया।"
     },
     {
       "q_num": 23,
-      "question": "Who were the Voharikas in the judicial structure of the Magadha period?\n मगध काल की न्यायिक संरचना में वोहारिक कौन थे?",
+      "question": "Who were the Voharikas in the judicial structure of the Magadha period?",
       "options": {
-        "a": "Lawyer-Judges / वकील-न्यायाधीश",
-        "b": "Military generals / सैन्य सेनापति",
-        "c": "Judges in village assemblies / ग्राम सभाओं के न्यायाधीश",
-        "d": "Local tax collectors / स्थानीय कर संग्रहकर्ता"
+        "a": "Lawyer-Judges",
+        "b": "Military generals",
+        "c": "Judges in village assemblies",
+        "d": "Local tax collectors"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn the judicial system of the Magadha period, particularly mentioned in the Mauryan administration (which succeeded the early Magadhan period), 'Voharikas' (or 'Vyavaharika') were high-ranking judicial officials who performed the duties of judges\n\n📖 हिंदी स्पष्टीकरण:\nमगध काल की न्यायिक संरचना में, विशेष रूप से मौर्य प्रशासन (जो प्रारंभिक मगध काल के बाद आया) में, 'वोहारिक' (या 'व्यवहारिका') उच्च श्रेणी के न्यायिक अधिकारी थे जो न्यायाधीशों के कर्तव्यों का पालन करते थे।"
     },
     {
       "q_num": 24,
-      "question": "Tax, known as bhaga, was levied on which of the following during Mahajanapada period of Ancient India?\n प्राचीन भारत के महाजनपद काल के दौरान निम्नलिखित में से किस पर भाग नामक कर लगाया जाता था?",
+      "question": "Tax, known as bhaga, was levied on which of the following during Mahajanapada period of Ancient India?",
       "options": {
-        "a": "Tax on cattle breeders / पशुपालकों पर कर",
-        "b": "Tax on artisans / कारीगरों पर कर",
-        "c": "Tax on cultivators / कृषकों पर कर",
-        "d": "Tax on merchants / व्यापारियों पर कर"
+        "a": "Tax on cattle breeders",
+        "b": "Tax on artisans",
+        "c": "Tax on cultivators",
+        "d": "Tax on merchants"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDuring the Mahajanapada period, bhaga was the primary and most important tax, typically amounting to one-sixth (1/6th) of the produce, which the cultivators (farmers) had to pay to the state\n\n📖 हिंदी स्पष्टीकरण:\nमहाजनपद काल के दौरान, भाग प्राथमिक और सबसे महत्वपूर्ण कर था, जो आम तौर पर उपज का छठा हिस्सा (1/6) होता था, जिसे कृषकों (किसानों) को राज्य को भुगतान करना पड़ता था।"
     },
     {
       "q_num": 25,
-      "question": "Consider the following statements about the emergence of urban centres in India from circa 6th Century BCE:\n 1. All of them developed away from the capitals of mahajanapadas.\n 2. Major towns were located along routes of communication.\n 3. Many were bustling centres of commercial, cultural and political activity.\n How many of the above statements is/are correct?\n भारत में लगभग छठी शताब्दी ईसा पूर्व से शहरी केंद्रों के उद्भव के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n 4. उन सभी का विकास महाजनपदों की राजधानियों से दूर हुआ।\n 5. प्रमुख नगर आवागमन मार्गों पर स्थित थे।\n 6. इनमें से अनेक वाणिज्यिक, सांस्कृतिक और राजनीतिक गतिविधियों के बड़े केंद्र थे।\n उपर्युक्त में से कितना/कितने कथन सही है/हैं?",
+      "question": "Consider the following statements about the emergence of urban centres in India from circa 6th Century BCE:\n 1. All of them developed away from the capitals of mahajanapadas.\n 2. Major towns were located along routes of communication.\n 3. Many were bustling centres of commercial, cultural and political activity.\n How many of the above statements is/are correct?",
       "options": {
-        "a": "one / एक",
-        "b": "two / दो",
-        "c": "three / तीन",
-        "d": "None / कोई नहीं"
+        "a": "one",
+        "b": "two",
+        "c": "three",
+        "d": "None"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement 1 is incorrect because many urban centers, such as Pataliputra and Rajagriha, were themselves the capitals of Mahajanapadas. Statement 2 is correct as towns developed along major trade routes like the Uttarapatha. Statement 3 is also correct, as the new urban centers were hubs for all types of major activities (trade, religion, and administration). Thus, two statements (2 and 3) are correct\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है क्योंकि पाटलिपुत्र और राजगृह जैसे कई शहरी केंद्र स्वयं महाजनपदों की राजधानियाँ थे। कथन 2 सही है क्योंकि नगरों का विकास उत्तरापथ जैसे प्रमुख व्यापार मार्गों पर हुआ था। कथन 3 भी सही है, क्योंकि नए शहरी केंद्र सभी प्रकार की प्रमुख गतिविधियों (व्यापार, धर्म और प्रशासन) के केंद्र थे। इस प्रकार, दो कथन (2 और 3) सही हैं।"

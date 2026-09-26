@@ -276,7 +276,7 @@
         "d": "18.5%"
       },
       "answer": "a",
-      "solution": "Let cost price be $C$.\nLoss $L = C - 390$, Profit $P = 444 - C$.\nGiven $P = \\frac{1}{5} L$:\n$444 - C = \\frac{1}{5}(C - 390) \\implies 2220 - 5C = C - 390 \\implies 6C = 2610 \\implies C = 435$.\nIf he sells at 522:\nProfit = $522 - 435 = 87$ Rs.\nProfit percentage = $\\frac{87}{435} \\times 100\\% = 20\\%$. "
+      "solution": "Let cost price be $C$.\nLoss $L = C - 390$, Profit $P = 444 - C$.\nGiven $P = \\frac{1}{5} L$:\n$444 - C = \\frac{1}{5}(C - 390) \\implies 2220 - 5C = C - 390 \\implies 6C = 2610 \\implies C = 435$.\nIf he sells at 522:\nProfit = $522 - 435 = 87$ Rs.\nProfit percentage = $\\frac{87}{435} \\times 100\\% = 20\\%$."
     },
     {
       "q_num": 174,

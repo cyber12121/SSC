@@ -6,91 +6,91 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following forest types is most extensive in India?\n भारत में निम्नलिखित में से कौन-सा वन प्रकार सबसे व्यापक है?",
+      "question": "Which of the following forest types is most extensive in India?",
       "options": {
-        "a": "Tropical Evergreen Forest / उष्णकटिबंधीय सदाबहार वन",
-        "b": "Tropical Deciduous Forest / उष्णकटिबंधीय पर्णपाती वन",
-        "c": "Montane Forest / पर्वतीय वन",
-        "d": "Mangrove Forest / मैंग्रोव वन"
+        "a": "Tropical Evergreen Forest",
+        "b": "Tropical Deciduous Forest",
+        "c": "Montane Forest",
+        "d": "Mangrove Forest"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTropical deciduous forests cover the largest area in India, mainly in Madhya Pradesh, Chhattisgarh, and Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nउष्णकटिबंधीय पर्णपाती वन भारत के सबसे बड़े क्षेत्र में पाए जाते हैं, विशेषकर मध्य प्रदेश, छत्तीसगढ़ और ओडिशा में।"
     },
     {
       "q_num": 2,
-      "question": "Consider the following statements about Black Soil:\n काली मिट्टी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is rich in iron and lime. / यह लौह और चूने से समृद्ध होती है।\n (b) It retains moisture for a long time. / यह लंबे समय तक नमी बनाए रखती है।\n (c) It is suitable for rice cultivation. / यह धान की खेती के लिए उपयुक्त है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about Black Soil:\n(a) It is rich in iron and lime.\n(b) It retains moisture for a long time.\n(c) It is suitable for rice cultivation.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBlack soil (Regur) is rich in iron and lime and retains moisture; however, it is ideal for cotton, not rice.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी लौह और चूने से समृद्ध होती है तथा नमी बनाए रखती है, परंतु यह धान नहीं बल्कि कपास के लिए उपयुक्त है।"
     },
     {
       "q_num": 3,
-      "question": "The ‘Manganese Ore’ in India is mainly used for—\n भारत में ‘मैंगनीज़ अयस्क’ का मुख्य उपयोग किसके लिए किया जाता है?",
+      "question": "The ‘Manganese Ore’ in India is mainly used for—",
       "options": {
-        "a": "Fertilizer production / उर्वरक उत्पादन",
-        "b": "Iron and steel industry / लौह एवं इस्पात उद्योग",
-        "c": "Cement industry / सीमेंट उद्योग",
-        "d": "Power generation / विद्युत उत्पादन"
+        "a": "Fertilizer production",
+        "b": "Iron and steel industry",
+        "c": "Cement industry",
+        "d": "Power generation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nManganese is an essential component in steel production, used in alloying and removing impurities.\n\n📖 हिंदी स्पष्टीकरण:\nमैंगनीज़ इस्पात निर्माण में मिश्र धातु बनाने और अशुद्धियाँ हटाने के लिए आवश्यक तत्व है।"
     },
     {
       "q_num": 4,
-      "question": "The National Waterway-1 connects which two cities?\n राष्ट्रीय जलमार्ग-1 किन दो शहरों को जोड़ता है?",
+      "question": "The National Waterway-1 connects which two cities?",
       "options": {
-        "a": "Prayagraj – Haldia / प्रयागराज – हल्दिया",
-        "b": "Delhi – Kolkata / दिल्ली – कोलकाता",
-        "c": "Mumbai – Kochi / मुंबई – कोच्चि",
-        "d": "Guwahati – Dhubri / गुवाहाटी – धुबरी"
+        "a": "Prayagraj – Haldia",
+        "b": "Delhi – Kolkata",
+        "c": "Mumbai – Kochi",
+        "d": "Guwahati – Dhubri"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNW-1 runs along the Ganga River from Prayagraj to Haldia, spanning about 1620 km.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय जलमार्ग-1 गंगा नदी के साथ प्रयागराज से हल्दिया तक लगभग 1620 किमी लंबा है।"
     },
     {
       "q_num": 5,
-      "question": "Which of the following crops is classified as a “Zaid crop”?\n निम्नलिखित में से कौन-सी फसल “जायद फसल” के रूप में वर्गीकृत है?",
+      "question": "Which of the following crops is classified as a “Zaid crop”?",
       "options": {
-        "a": "Paddy / धान",
-        "b": "Maize / मक्का",
-        "c": "Watermelon / तरबूज",
-        "d": "Wheat / गेहूं"
+        "a": "Paddy",
+        "b": "Maize",
+        "c": "Watermelon",
+        "d": "Wheat"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nZaid crops are grown between Rabi and Kharif seasons, such as watermelon, muskmelon, and cucumber.\n\n📖 हिंदी स्पष्टीकरण:\nजायद फसलें रबी और खरीफ के बीच उगाई जाती हैं, जैसे तरबूज, खरबूजा और खीरा।"
     },
     {
       "q_num": 6,
-      "question": "Which state has the largest area under mangrove cover in India?\n भारत में किस राज्य में मैंग्रोव आवरण का क्षेत्रफल सबसे अधिक है?",
+      "question": "Which state has the largest area under mangrove cover in India?",
       "options": {
-        "a": "Gujarat / गुजरात",
-        "b": "West Bengal / पश्चिम बंगाल",
-        "c": "Andhra Pradesh / आंध्र प्रदेश",
-        "d": "Odisha / ओडिशा"
+        "a": "Gujarat",
+        "b": "West Bengal",
+        "c": "Andhra Pradesh",
+        "d": "Odisha"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Sundarbans of West Bengal have the largest mangrove forests in India.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिम बंगाल के सुंदरबन क्षेत्र में भारत के सबसे बड़े मैंग्रोव वन पाए जाते हैं।"
     },
     {
       "q_num": 7,
-      "question": "Which of the following minerals is a non-metallic mineral?\n निम्नलिखित में से कौन-सा खनिज अधातु खनिज है?",
+      "question": "Which of the following minerals is a non-metallic mineral?",
       "options": {
-        "a": "Mica / अभ्रक",
-        "b": "Iron ore / लौह अयस्क",
-        "c": "Manganese / मैंगनीज़",
-        "d": "Copper / तांबा"
+        "a": "Mica",
+        "b": "Iron ore",
+        "c": "Manganese",
+        "d": "Copper"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMica is a non-metallic mineral used in electrical and electronic industries for insulation.\n\n📖 हिंदी स्पष्टीकरण:\nअभ्रक एक अधातु खनिज है जिसका उपयोग विद्युत एवं इलेक्ट्रॉनिक उद्योगों में इन्सुलेशन के लिए होता है।"
     },
     {
       "q_num": 8,
-      "question": "Consider the following statements regarding Red Soil:\n लाल मिट्टी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is rich in nitrogen. / यह नाइट्रोजन से समृद्ध है।\n (b) It is formed by weathering of crystalline rocks. / यह स्फटिकीय चट्टानों के अपक्षय से बनती है।\n (c) Its color is due to iron oxide. / इसका लाल रंग लौह ऑक्साइड के कारण होता है।\n Which statements are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Red Soil:\n(a) It is rich in nitrogen.\n(b) It is formed by weathering of crystalline rocks.\n(c) Its color is due to iron oxide.\n Which statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -102,151 +102,151 @@
     },
     {
       "q_num": 9,
-      "question": "Which of the following grasslands is located in Africa?\n निम्नलिखित में से कौन-सा घास का मैदान अफ्रीका में स्थित है?",
+      "question": "Which of the following grasslands is located in Africa?",
       "options": {
-        "a": "Pampas / पम्पास",
-        "b": "Prairie / प्रेरी",
-        "c": "Savanna / सवाना",
-        "d": "Steppe / स्तेपी"
+        "a": "Pampas",
+        "b": "Prairie",
+        "c": "Savanna",
+        "d": "Steppe"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Savanna grasslands are found in Africa and are characterized by tall grasses and scattered trees.\n\n📖 हिंदी स्पष्टीकरण:\nसवाना घास के मैदान अफ्रीका में पाए जाते हैं, जहाँ ऊँची घास और छिटपुट वृक्ष होते हैं।"
     },
     {
       "q_num": 10,
-      "question": "Which of the following is a Rabi crop?\n निम्नलिखित में से कौन-सी रबी फसल है?",
+      "question": "Which of the following is a Rabi crop?",
       "options": {
-        "a": "Cotton / कपास",
-        "b": "Rice / धान",
-        "c": "Wheat / गेहूं",
-        "d": "Maize / मक्का"
+        "a": "Cotton",
+        "b": "Rice",
+        "c": "Wheat",
+        "d": "Maize"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWheat is a major Rabi crop, sown in winter and harvested in summer.\n\n📖 हिंदी स्पष्टीकरण:\nगेहूं एक प्रमुख रबी फसल है, जिसे सर्दियों में बोया और गर्मियों में काटा जाता है।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following minerals is known as ‘fool’s gold’?\n निम्नलिखित में से कौन-सा खनिज ‘फूल्स गोल्ड’ के नाम से जाना जाता है?",
+      "question": "Which of the following minerals is known as ‘fool’s gold’?",
       "options": {
-        "a": "Magnetite / मैग्नेटाइट",
-        "b": "Bauxite / बॉक्साइट",
-        "c": "Pyrite / पाइराइट",
-        "d": "Hematite / हेमेटाइट"
+        "a": "Magnetite",
+        "b": "Bauxite",
+        "c": "Pyrite",
+        "d": "Hematite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPyrite has a metallic luster and pale brass-yellow color, resembling gold.\n\n📖 हिंदी स्पष्टीकरण:\nपाइराइट का रंग सुनहरा पीत और चमकदार होता है, जिससे यह सोने जैसा दिखता है।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following is India’s first inland waterway container terminal?\n निम्नलिखित में से कौन-सा भारत का पहला अंतर्देशीय जलमार्ग कंटेनर टर्मिनल है?",
+      "question": "Which of the following is India’s first inland waterway container terminal?",
       "options": {
-        "a": "Patna / पटना",
-        "b": "Haldia / हल्दिया",
-        "c": "Varanasi / वाराणसी",
-        "d": "Sahibganj / साहिबगंज"
+        "a": "Patna",
+        "b": "Haldia",
+        "c": "Varanasi",
+        "d": "Sahibganj"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVaranasi was inaugurated as India’s first inland waterway terminal under Jal Marg Vikas Project.\n\n📖 हिंदी स्पष्टीकरण:\nवाराणसी को जल मार्ग विकास परियोजना के तहत भारत का पहला अंतर्देशीय कंटेनर टर्मिनल बनाया गया।"
     },
     {
       "q_num": 13,
-      "question": "In which type of soil is laterite found?\n लेटेराइट किस प्रकार की मिट्टी में पाया जाता है?",
+      "question": "In which type of soil is laterite found?",
       "options": {
-        "a": "Humid and hot tropical areas / आर्द्र एवं गर्म उष्णकटिबंधीय क्षेत्र",
-        "b": "Cold and arid areas / शीत एवं शुष्क क्षेत्र",
-        "c": "River valleys / नदी घाटियाँ",
-        "d": "Coastal plains / तटीय मैदान"
+        "a": "Humid and hot tropical areas",
+        "b": "Cold and arid areas",
+        "c": "River valleys",
+        "d": "Coastal plains"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLaterite soil forms in areas with high rainfall and temperature, due to leaching.\n\n📖 हिंदी स्पष्टीकरण:\nलेटेराइट मिट्टी उच्च वर्षा और तापमान वाले क्षेत्रों में लीचिंग की प्रक्रिया से बनती है।"
     },
     {
       "q_num": 14,
-      "question": "The NH-44 is the longest National Highway in India connecting—\n NH-44 भारत का सबसे लंबा राष्ट्रीय राजमार्ग है जो किन्हें जोड़ता है?",
+      "question": "The NH-44 is the longest National Highway in India connecting—\nNH-44",
       "options": {
-        "a": "Srinagar – Kanyakumari / श्रीनगर – कन्याकुमारी",
-        "b": "Delhi – Mumbai / दिल्ली – मुंबई",
-        "c": "Kolkata – Chennai / कोलकाता – चेन्नई",
-        "d": "Amritsar – Ahmedabad / अमृतसर – अहमदाबाद"
+        "a": "Srinagar – Kanyakumari",
+        "b": "Delhi – Mumbai",
+        "c": "Kolkata – Chennai",
+        "d": "Amritsar – Ahmedabad"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNH-44 connects Srinagar to Kanyakumari, covering about 3745 km.\nNH-44\n\n📖 हिंदी स्पष्टीकरण:\nश्रीनगर से कन्याकुमारी तक लगभग 3745 किमी लंबा है।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following is a fibre crop?\n निम्नलिखित में से कौन-सी फाइबर फसल है?",
+      "question": "Which of the following is a fibre crop?",
       "options": {
-        "a": "Sugarcane / गन्ना",
-        "b": "Jute / जूट",
-        "c": "Groundnut / मूंगफली",
-        "d": "Mustard / सरसों"
+        "a": "Sugarcane",
+        "b": "Jute",
+        "c": "Groundnut",
+        "d": "Mustard"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJute is a fibre crop mainly grown in West Bengal, Bihar, and Assam.\n\n📖 हिंदी स्पष्टीकरण:\nजूट एक रेशेदार फसल है जो मुख्यतः पश्चिम बंगाल, बिहार और असम में उगाई जाती है।"
     },
     {
       "q_num": 16,
-      "question": "Which Indian port is known as the “Queen of the Arabian Sea”?\n कौन-सा भारतीय बंदरगाह “अरब सागर की रानी” के नाम से प्रसिद्ध है?",
+      "question": "Which Indian port is known as the “Queen of the Arabian Sea”?",
       "options": {
-        "a": "Mangalore / मंगलौर",
-        "b": "Kandla / कांडला",
-        "c": "Mumbai / मुंबई",
-        "d": "Cochin / कोचीन"
+        "a": "Mangalore",
+        "b": "Kandla",
+        "c": "Mumbai",
+        "d": "Cochin"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nCochin Port in Kerala is called the Queen of the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nकेरल का कोचीन बंदरगाह “अरब सागर की रानी” कहलाता है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is an example of a coniferous forest?\n निम्नलिखित में से कौन-सा शंकुधारी वन का उदाहरण है?",
+      "question": "Which of the following is an example of a coniferous forest?",
       "options": {
-        "a": "Prairie / प्रेरी",
-        "b": "Savanna / सवाना",
-        "c": "Pampas / पम्पास",
-        "d": "Taiga / टैगा"
+        "a": "Prairie",
+        "b": "Savanna",
+        "c": "Pampas",
+        "d": "Taiga"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTaiga forests are coniferous, found in cold regions like Russia and Canada.\n\n📖 हिंदी स्पष्टीकरण:\nटैगा वन शंकुधारी होते हैं और रूस व कनाडा जैसे ठंडे क्षेत्रों में पाए जाते हैं।"
     },
     {
       "q_num": 18,
-      "question": "Which river valley is famous for bauxite deposits in India?\n भारत में किस नदी घाटी में बॉक्साइट के भंडार प्रसिद्ध हैं?",
+      "question": "Which river valley is famous for bauxite deposits in India?",
       "options": {
-        "a": "Mahanadi Valley / महानदी घाटी",
-        "b": "Godavari Valley / गोदावरी घाटी",
-        "c": "Damodar Valley / दामोदर घाटी",
-        "d": "Narmada Valley / नर्मदा घाटी"
+        "a": "Mahanadi Valley",
+        "b": "Godavari Valley",
+        "c": "Damodar Valley",
+        "d": "Narmada Valley"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBauxite deposits are mainly found in the Mahanadi valley region of Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nबॉक्साइट के प्रमुख भंडार ओडिशा के महानदी घाटी क्षेत्र में पाए जाते हैं।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following is not a transport mode?\n निम्नलिखित में से कौन-सा परिवहन का माध्यम नहीं है?",
+      "question": "Which of the following is not a transport mode?",
       "options": {
-        "a": "Pipeline / पाइपलाइन",
-        "b": "Waterway / जलमार्ग",
-        "c": "Ropeway / रोपवे",
-        "d": "Aeration / वातन"
+        "a": "Pipeline",
+        "b": "Waterway",
+        "c": "Ropeway",
+        "d": "Aeration"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAeration refers to oxygen supply and not related to transport.\n\n📖 हिंदी स्पष्टीकरण:\nवातन का अर्थ ऑक्सीजन आपूर्ति से है, यह परिवहन से संबंधित नहीं है।"
     },
     {
       "q_num": 20,
-      "question": "The largest producer of coal in India is—\n भारत में कोयले का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "question": "The largest producer of coal in India is—",
       "options": {
-        "a": "Jharkhand / झारखंड",
-        "b": "Odisha / ओडिशा",
-        "c": "Chhattisgarh / छत्तीसगढ़",
-        "d": "Madhya Pradesh / मध्य प्रदेश"
+        "a": "Jharkhand",
+        "b": "Odisha",
+        "c": "Chhattisgarh",
+        "d": "Madhya Pradesh"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nJharkhand produces the maximum coal, followed by Chhattisgarh and Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nझारखंड भारत का सबसे बड़ा कोयला उत्पादक राज्य है, इसके बाद छत्तीसगढ़ और ओडिशा आते हैं।"
     },
     {
       "q_num": 21,
-      "question": "Consider the following statements about Laterite soil:\n लेटेराइट मिट्टी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is poor in nitrogen and phosphate.\n (b) It supports tea and coffee cultivation.\n (c) It is mainly found in Kerala and Karnataka.\n Which are correct?",
+      "question": "Consider the following statements about Laterite soil:\n (a) It is poor in nitrogen and phosphate.\n (b) It supports tea and coffee cultivation.\n (c) It is mainly found in Kerala and Karnataka.\n Which are correct?",
       "options": {
         "a": "a and b",
         "b": "a and c",
@@ -258,19 +258,19 @@
     },
     {
       "q_num": 22,
-      "question": "Which of the following crops requires alluvial soil?\n निम्नलिखित में से कौन-सी फसल दोमट मिट्टी की मांग करती है?",
+      "question": "Which of the following crops requires alluvial soil?",
       "options": {
-        "a": "Cotton / कपास",
-        "b": "Rice / धान",
-        "c": "Tea / चाय",
-        "d": "Coffee / कॉफी"
+        "a": "Cotton",
+        "b": "Rice",
+        "c": "Tea",
+        "d": "Coffee"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRice grows best in fertile alluvial soil found in Indo-Gangetic plains.\n\n📖 हिंदी स्पष्टीकरण:\nधान सबसे अधिक उपजाऊ दोमट मिट्टी में उगता है, जो इंडो-गंगेटिक मैदानों में पाई जाती है।"
     },
     {
       "q_num": 23,
-      "question": "Which forest type acts as a natural carbon sink?\n कौन-सा वन प्रकार प्राकृतिक कार्बन सिंक के रूप में कार्य करता है?",
+      "question": "Which forest type acts as a natural carbon sink?",
       "options": {
         "a": "Tropical evergreen forest",
         "b": "Thorn forest",
@@ -282,211 +282,211 @@
     },
     {
       "q_num": 24,
-      "question": "Which mineral is obtained from bauxite ore?\n बॉक्साइट अयस्क से कौन-सा खनिज प्राप्त होता है?",
+      "question": "Which mineral is obtained from bauxite ore?",
       "options": {
-        "a": "Aluminium / एल्यूमिनियम",
-        "b": "Iron / लोहा",
-        "c": "Copper / तांबा",
-        "d": "Lead / सीसा"
+        "a": "Aluminium",
+        "b": "Iron",
+        "c": "Copper",
+        "d": "Lead"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBauxite is the primary ore of aluminium.\n\n📖 हिंदी स्पष्टीकरण:\nबॉक्साइट एल्यूमिनियम का प्रमुख अयस्क है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following railways has the highest altitude station in India?\n निम्नलिखित में से किस रेलवे में भारत का सबसे ऊँचा स्टेशन है?",
+      "question": "Which of the following railways has the highest altitude station in India?",
       "options": {
-        "a": "Kalka-Shimla Railway / कालका-शिमला रेलवे",
-        "b": "Nilgiri Mountain Railway / नीलगिरि पर्वतीय रेलवे",
-        "c": "Kangra Valley Railway / कांगड़ा घाटी रेलवे",
-        "d": "Darjeeling Himalayan Railway / दार्जिलिंग हिमालयन रेलवे"
+        "a": "Kalka-Shimla Railway",
+        "b": "Nilgiri Mountain Railway",
+        "c": "Kangra Valley Railway",
+        "d": "Darjeeling Himalayan Railway"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGhum station on the Darjeeling Himalayan Railway is India’s highest railway station (2,258 m).\n\n📖 हिंदी स्पष्टीकरण:\n(दार्जिलिंग हिमालयन रेलवे का घूम स्टेशन भारत का सबसे ऊँचा रेलवे स्टेशन है।)"
     },
     {
       "q_num": 26,
-      "question": "Which of the following transport projects is part of the Bharatmala scheme?\n निम्नलिखित में से कौन-सी परिवहन परियोजना भारतमाला योजना का हिस्सा है?",
+      "question": "Which of the following transport projects is part of the Bharatmala scheme?",
       "options": {
-        "a": "Development of national highways / राष्ट्रीय राजमार्गों का विकास",
-        "b": "Expansion of railway corridors / रेल गलियारों का विस्तार",
-        "c": "Construction of inland waterways / अंतर्देशीय जलमार्गों का निर्माण",
-        "d": "Modernization of airports / हवाई अड्डों का आधुनिकीकरण"
+        "a": "Development of national highways",
+        "b": "Expansion of railway corridors",
+        "c": "Construction of inland waterways",
+        "d": "Modernization of airports"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBharatmala focuses on the development of national highway corridors for seamless road connectivity.\n\n📖 हिंदी स्पष्टीकरण:\nभारतमाला योजना का उद्देश्य राष्ट्रीय राजमार्ग गलियारों का विकास और सड़क संपर्क को सुगम बनाना है।"
     },
     {
       "q_num": 27,
-      "question": "Which soil is called ‘self-ploughing soil’?\n कौन-सी मिट्टी को ‘स्वयं जोतने वाली मिट्टी’ कहा जाता है?",
+      "question": "Which soil is called ‘self-ploughing soil’?",
       "options": {
-        "a": "Alluvial soil / जलोढ़ मिट्टी",
-        "b": "Black soil / काली मिट्टी",
-        "c": "Laterite soil / लेटेराइट मिट्टी",
-        "d": "Red soil / लाल मिट्टी"
+        "a": "Alluvial soil",
+        "b": "Black soil",
+        "c": "Laterite soil",
+        "d": "Red soil"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBlack soil cracks in summer and becomes soft when wet, hence called self-ploughing soil.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी गर्मियों में फट जाती है और गीली होने पर नरम हो जाती है, इसलिए इसे स्वयं जोतने वाली मिट्टी कहा जाता है।"
     },
     {
       "q_num": 28,
-      "question": "The largest producer of iron ore in India is—\n भारत में लौह अयस्क का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "question": "The largest producer of iron ore in India is—",
       "options": {
-        "a": "Odisha / ओडिशा",
-        "b": "Jharkhand / झारखंड",
-        "c": "Chhattisgarh / छत्तीसगढ़",
-        "d": "Karnataka / कर्नाटक"
+        "a": "Odisha",
+        "b": "Jharkhand",
+        "c": "Chhattisgarh",
+        "d": "Karnataka"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOdisha produces the maximum iron ore in India, mainly from Keonjhar and Sundargarh districts.\n\n📖 हिंदी स्पष्टीकरण:\nओडिशा भारत में सर्वाधिक लौह अयस्क का उत्पादन करता है, विशेषकर क्योंझर और सुंदरगढ़ जिलों में।"
     },
     {
       "q_num": 29,
-      "question": "Which of the following is not a major port of India?\n निम्नलिखित में से कौन-सा भारत का प्रमुख बंदरगाह नहीं है?",
+      "question": "Which of the following is not a major port of India?",
       "options": {
-        "a": "Paradip / पारादीप",
-        "b": "Marmagao / मार्मागोआ",
-        "c": "Haldia / हल्दिया",
-        "d": "Porbandar / पोरबंदर"
+        "a": "Paradip",
+        "b": "Marmagao",
+        "c": "Haldia",
+        "d": "Porbandar"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPorbandar is a minor port, not included among India’s 13 major ports.\n\n📖 हिंदी स्पष्टीकरण:\nपोरबंदर एक लघु बंदरगाह है, इसे भारत के 13 प्रमुख बंदरगाहों में शामिल नहीं किया गया है।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित युग्मों में से कौन-सा सही सुमेलित है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Sal - Tropical Evergreen Forest / साल – उष्णकटिबंधीय सदाबहार वन",
-        "b": "Teak - Tropical Deciduous Forest / सागौन – उष्णकटिबंधीय पर्णपाती वन",
-        "c": "Silver Fir - Thorn Forest / सिल्वर फ़र – कांटेदार वन",
-        "d": "Sundari - Montane Forest / सुंदरि – पर्वतीय वन"
+        "a": "Sal - Tropical Evergreen Forest",
+        "b": "Teak - Tropical Deciduous Forest",
+        "c": "Silver Fir - Thorn Forest",
+        "d": "Sundari - Montane Forest"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTeak is a characteristic tree of tropical deciduous forests.\n\n📖 हिंदी स्पष्टीकरण:\nसागौन उष्णकटिबंधीय पर्णपाती वनों की प्रमुख प्रजाति है।"
     },
     {
       "q_num": 31,
-      "question": "Which of the following crops is grown mainly in black soil?\n निम्नलिखित में से कौन-सी फसल मुख्यतः काली मिट्टी में उगाई जाती है?",
+      "question": "Which of the following crops is grown mainly in black soil?",
       "options": {
-        "a": "Rice / धान",
-        "b": "Cotton / कपास",
-        "c": "Tea / चाय",
-        "d": "Jute / जूट"
+        "a": "Rice",
+        "b": "Cotton",
+        "c": "Tea",
+        "d": "Jute"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCotton thrives in black soil due to its moisture retention and clayey texture.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी की नमी बनाए रखने की क्षमता कपास की खेती के लिए आदर्श बनाती है।"
     },
     {
       "q_num": 32,
-      "question": "Which type of forest is found on the windward slopes of the Western Ghats?\n पश्चिमी घाट की पवनाभिमुख ढलानों पर किस प्रकार का वन पाया जाता है?",
+      "question": "Which type of forest is found on the windward slopes of the Western Ghats?",
       "options": {
-        "a": "Tropical evergreen forest / उष्णकटिबंधीय सदाबहार वन",
-        "b": "Thorn forest / कांटेदार वन",
-        "c": "Alpine forest / अल्पाइन वन",
-        "d": "Deciduous forest / पर्णपाती वन"
+        "a": "Tropical evergreen forest",
+        "b": "Thorn forest",
+        "c": "Alpine forest",
+        "d": "Deciduous forest"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHigh rainfall on the windward side of Western Ghats supports evergreen forests.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिमी घाट की पवनाभिमुख दिशा में अधिक वर्षा के कारण सदाबहार वन विकसित होते हैं।"
     },
     {
       "q_num": 33,
-      "question": "Which crop is also known as “Golden Fibre”?\n कौन-सी फसल को “गोल्डन फाइबर” कहा जाता है?",
+      "question": "Which crop is also known as “Golden Fibre”?",
       "options": {
-        "a": "Flax / सन",
-        "b": "Cotton / कपास",
-        "c": "Jute / जूट",
-        "d": "Silk / रेशम"
+        "a": "Flax",
+        "b": "Cotton",
+        "c": "Jute",
+        "d": "Silk"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nJute is called Golden Fibre due to its colour and commercial value.\n\n📖 हिंदी स्पष्टीकरण:\nजूट को उसके सुनहरे रंग और वाणिज्यिक महत्व के कारण “गोल्डन फाइबर” कहा जाता है।"
     },
     {
       "q_num": 34,
-      "question": "Which mineral is used in the manufacture of cement?\n सीमेंट निर्माण में कौन-सा खनिज उपयोग होता है?",
+      "question": "Which mineral is used in the manufacture of cement?",
       "options": {
-        "a": "Lead / सीसा",
-        "b": "Copper / तांबा",
-        "c": "Zinc / जस्ता",
-        "d": "Limestone / चूना पत्थर"
+        "a": "Lead",
+        "b": "Copper",
+        "c": "Zinc",
+        "d": "Limestone"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nLimestone is a key raw material used in cement production.\n\n📖 हिंदी स्पष्टीकरण:\nसीमेंट निर्माण में चूना पत्थर मुख्य कच्चा माल होता है।"
     },
     {
       "q_num": 35,
-      "question": "The “Konkan Railway” runs between which two stations?\n “कोकण रेलवे” किन दो स्टेशनों के बीच चलता है?",
+      "question": "The “Konkan Railway” runs between which two stations?",
       "options": {
-        "a": "Mangalore – Mumbai / मंगलौर – मुंबई",
-        "b": "Chennai – Kolkata / चेन्नई – कोलकाता",
-        "c": "Delhi – Goa / दिल्ली – गोवा",
-        "d": "Kanyakumari – Coimbatore / कन्याकुमारी – कोयंबटूर"
+        "a": "Mangalore – Mumbai",
+        "b": "Chennai – Kolkata",
+        "c": "Delhi – Goa",
+        "d": "Kanyakumari – Coimbatore"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKonkan Railway connects Roha (Maharashtra) and Thokur (Mangalore, Karnataka) along the western coast.\n\n📖 हिंदी स्पष्टीकरण:\nकोकण रेलवे महाराष्ट्र के रोहा से मंगलौर, कर्नाटक के ठोकूर तक पश्चिमी तट के साथ चलता है।"
     },
     {
       "q_num": 36,
-      "question": "Which type of soil is most fertile?\n कौन-सी मिट्टी सर्वाधिक उपजाऊ होती है?",
+      "question": "Which type of soil is most fertile?",
       "options": {
-        "a": "Alluvial soil / जलोढ़ मिट्टी",
-        "b": "Black soil / काली मिट्टी",
-        "c": "Red soil / लाल मिट्टी",
-        "d": "Laterite soil / लेटेराइट मिट्टी"
+        "a": "Alluvial soil",
+        "b": "Black soil",
+        "c": "Red soil",
+        "d": "Laterite soil"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAlluvial soil is rich in nutrients and found in northern plains.\n\n📖 हिंदी स्पष्टीकरण:\nजलोढ़ मिट्टी पोषक तत्वों से भरपूर होती है और उत्तरी मैदानों में पाई जाती है।"
     },
     {
       "q_num": 37,
-      "question": "Which of the following regions is famous for tropical thorn forests?\n निम्नलिखित में से कौन-सा क्षेत्र उष्णकटिबंधीय कांटेदार वनों के लिए प्रसिद्ध है?",
+      "question": "Which of the following regions is famous for tropical thorn forests?",
       "options": {
-        "a": "Sikkim / सिक्किम",
-        "b": "Western Ghats / पश्चिमी घाट",
-        "c": "Assam / असम",
-        "d": "Western Rajasthan / पश्चिमी राजस्थान"
+        "a": "Sikkim",
+        "b": "Western Ghats",
+        "c": "Assam",
+        "d": "Western Rajasthan"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nWestern Rajasthan’s arid climate supports thorny and scrub vegetation.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिमी राजस्थान की शुष्क जलवायु कांटेदार वनों के विकास के लिए उपयुक्त है।"
     },
     {
       "q_num": 38,
-      "question": "Which crop is known as a cash crop?\n कौन-सी फसल नकदी फसल कहलाती है?",
+      "question": "Which crop is known as a cash crop?",
       "options": {
-        "a": "Wheat / गेहूं",
-        "b": "Rice / धान",
-        "c": "Cotton / कपास",
-        "d": "Barley / जौ"
+        "a": "Wheat",
+        "b": "Rice",
+        "c": "Cotton",
+        "d": "Barley"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCotton is a cash crop as it is grown mainly for sale and industry use.\n\n📖 हिंदी स्पष्टीकरण:\nकपास एक नकदी फसल है क्योंकि इसे मुख्यतः बिक्री और औद्योगिक उपयोग के लिए उगाया जाता है।"
     },
     {
       "q_num": 39,
-      "question": "Which is the deepest landlocked and freshwater lake in the world?\n विश्व की सबसे गहरी स्थल-आवेष्ठित मीठे पानी की झील कौन-सी है?",
+      "question": "Which is the deepest landlocked and freshwater lake in the world?",
       "options": {
-        "a": "Lake Baikal / बैकाल झील",
-        "b": "Lake Superior / सुपीरियर झील",
-        "c": "Lake Victoria / विक्टोरिया झील",
-        "d": "Lake Tanganyika / टैंगानयिका झील"
+        "a": "Lake Baikal",
+        "b": "Lake Superior",
+        "c": "Lake Victoria",
+        "d": "Lake Tanganyika"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLake Baikal in Russia is the world’s deepest freshwater lake.\n\n📖 हिंदी स्पष्टीकरण:\nरूस की बैकाल झील विश्व की सबसे गहरी मीठे पानी की झील है।"
     },
     {
       "q_num": 40,
-      "question": "Which of the following minerals is used in making aluminium?\n निम्नलिखित में से कौन-सा खनिज एल्यूमिनियम बनाने में उपयोग होता है?",
+      "question": "Which of the following minerals is used in making aluminium?",
       "options": {
-        "a": "Hematite / हेमेटाइट",
-        "b": "Mica / अभ्रक",
-        "c": "Bauxite / बॉक्साइट",
-        "d": "Gypsum / जिप्सम"
+        "a": "Hematite",
+        "b": "Mica",
+        "c": "Bauxite",
+        "d": "Gypsum"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBauxite is the main ore of aluminium.\n\n📖 हिंदी स्पष्टीकरण:\nएल्यूमिनियम का प्रमुख अयस्क बॉक्साइट है।"
     },
     {
       "q_num": 41,
-      "question": "Which National Highway connects Delhi to Kolkata?\n कौन-सा राष्ट्रीय राजमार्ग दिल्ली को कोलकाता से जोड़ता है?",
+      "question": "Which National Highway connects Delhi to Kolkata?",
       "options": {
         "a": "NH-27",
         "b": "NH-44",
@@ -498,408 +498,408 @@
     },
     {
       "q_num": 42,
-      "question": "Which type of grassland is found in North America?\n उत्तरी अमेरिका में किस प्रकार का घास का मैदान पाया जाता है?",
+      "question": "Which type of grassland is found in North America?",
       "options": {
-        "a": "Pampas / पम्पास",
-        "b": "Prairie / प्रेरी",
-        "c": "Steppe / स्तेपी",
-        "d": "Savanna / सवाना"
+        "a": "Pampas",
+        "b": "Prairie",
+        "c": "Steppe",
+        "d": "Savanna"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe prairies are temperate grasslands found in North America.\n\n📖 हिंदी स्पष्टीकरण:\nप्रेरी उत्तरी अमेरिका में पाए जाने वाले समशीतोष्ण घास के मैदान हैं।"
     },
     {
       "q_num": 43,
-      "question": "Which of the following is a Kharif crop?\n निम्नलिखित में से कौन-सी खरीफ फसल है?",
+      "question": "Which of the following is a Kharif crop?",
       "options": {
-        "a": "Wheat / गेहूं",
-        "b": "Gram / चना",
-        "c": "Rice / धान",
-        "d": "Mustard / सरसों"
+        "a": "Wheat",
+        "b": "Gram",
+        "c": "Rice",
+        "d": "Mustard"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nRice is a Kharif crop grown in monsoon season.\n\n📖 हिंदी स्पष्टीकरण:\nधान एक खरीफ फसल है जिसे मानसून के मौसम में उगाया जाता है।"
     },
     {
       "q_num": 44,
-      "question": "Which is the largest public sector company in coal mining in India?\n भारत में कोयला खनन की सबसे बड़ी सार्वजनिक क्षेत्र की कंपनी कौन-सी है?",
+      "question": "Which is the largest public sector company in coal mining in India?",
       "options": {
-        "a": "Coal India Limited / कोल इंडिया लिमिटेड",
-        "b": "ONGC / ओएनजीसी",
-        "c": "NALCO / नाल्को",
-        "d": "NMDC / एनएमडीसी"
+        "a": "Coal India Limited",
+        "b": "ONGC",
+        "c": "NALCO",
+        "d": "NMDC"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCoal India Limited is the world’s largest coal mining company.\n\n📖 हिंदी स्पष्टीकरण:\nकोल इंडिया लिमिटेड विश्व की सबसे बड़ी कोयला खनन कंपनी है।"
     },
     {
       "q_num": 45,
-      "question": "Which of the following is a perennial crop?\n निम्नलिखित में से कौन-सी बहुवर्षीय फसल है?",
+      "question": "Which of the following is a perennial crop?",
       "options": {
-        "a": "Sugarcane / गन्ना",
-        "b": "Maize / मक्का",
-        "c": "Wheat / गेहूं",
-        "d": "Mustard / सरसों"
+        "a": "Sugarcane",
+        "b": "Maize",
+        "c": "Wheat",
+        "d": "Mustard"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSugarcane is a semi-perennial crop harvested for several years from the same rootstock (ratoon crop).\n\n📖 हिंदी स्पष्टीकरण:\nगन्ना एक अर्ध-बहुवर्षीय फसल है, जिसे एक ही जड़ से कई बार काटा जा सकता है।"
     },
     {
       "q_num": 46,
-      "question": "Which soil is ideal for tea cultivation?\n चाय की खेती के लिए कौन-सी मिट्टी उपयुक्त है?",
+      "question": "Which soil is ideal for tea cultivation?",
       "options": {
-        "a": "Desert soil / मरु मिट्टी",
-        "b": "Alluvial soil / जलोढ़ मिट्टी",
-        "c": "Black soil / काली मिट्टी",
-        "d": "Laterite soil / लेटेराइट मिट्टी"
+        "a": "Desert soil",
+        "b": "Alluvial soil",
+        "c": "Black soil",
+        "d": "Laterite soil"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTea grows best in acidic, well-drained laterite soil.\n\n📖 हिंदी स्पष्टीकरण:\nचाय अम्लीय और जल निकासी वाली लेटेराइट मिट्टी में सबसे अच्छी उगती है।"
     },
     {
       "q_num": 47,
-      "question": "Which of the following minerals is obtained from veins in sedimentary rocks?\n निम्नलिखित में से कौन-सा खनिज अवसादी चट्टानों की दरारों से प्राप्त होता है?",
+      "question": "Which of the following minerals is obtained from veins in sedimentary rocks?",
       "options": {
-        "a": "Copper / तांबा",
-        "b": "Coal / कोयला",
-        "c": "Iron / लोहा",
-        "d": "Gypsum / जिप्सम"
+        "a": "Copper",
+        "b": "Coal",
+        "c": "Iron",
+        "d": "Gypsum"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGypsum occurs in sedimentary formations and is used in cement and fertilizer.\n\n📖 हिंदी स्पष्टीकरण:\nजिप्सम अवसादी चट्टानों में पाया जाता है और इसका उपयोग सीमेंट व उर्वरक उद्योगों में होता है।"
     },
     {
       "q_num": 48,
-      "question": "The main objective of Pradhan Mantri Gram Sadak Yojana (PMGSY) is—\n प्रधानमंत्री ग्राम सड़क योजना (PMGSY) का मुख्य उद्देश्य क्या है?",
+      "question": "The main objective of Pradhan Mantri Gram Sadak Yojana (PMGSY) is—",
       "options": {
-        "a": "Rural road connectivity / ग्रामीण सड़क संपर्क",
-        "b": "Highway construction / राजमार्ग निर्माण",
-        "c": "Urban housing / शहरी आवास",
-        "d": "Port development / बंदरगाह विकास"
+        "a": "Rural road connectivity",
+        "b": "Highway construction",
+        "c": "Urban housing",
+        "d": "Port development"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPMGSY aims to provide all-weather road connectivity to rural areas.\n\n📖 हिंदी स्पष्टीकरण:\nपीएमजीएसवाई का उद्देश्य ग्रामीण क्षेत्रों में सभी मौसमों में सड़क संपर्क सुनिश्चित करना है।"
     },
     {
       "q_num": 49,
-      "question": "Which of the following regions has black cotton soil?\n निम्नलिखित में से किस क्षेत्र में काली कपास मिट्टी पाई जाती है?",
+      "question": "Which of the following regions has black cotton soil?",
       "options": {
-        "a": "Deccan Plateau / दक्कन का पठार",
-        "b": "Indo-Gangetic Plain / इंडो-गंगेटिक मैदान",
-        "c": "Thar Desert / थार मरुस्थल",
-        "d": "Eastern Ghats / पूर्वी घाट"
+        "a": "Deccan Plateau",
+        "b": "Indo-Gangetic Plain",
+        "c": "Thar Desert",
+        "d": "Eastern Ghats"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBlack cotton soil is widespread in the Deccan Plateau region.\n\n📖 हिंदी स्पष्टीकरण:\nकाली कपास मिट्टी दक्कन के पठारी क्षेत्र में पाई जाती है।"
     },
     {
       "q_num": 50,
-      "question": "Which of the following ports is a natural harbour?\n निम्नलिखित में से कौन-सा बंदरगाह प्राकृतिक है?",
+      "question": "Which of the following ports is a natural harbour?",
       "options": {
-        "a": "Tuticorin / तूतिकोरिन",
-        "b": "Kandla / कांडला",
-        "c": "Mumbai / मुंबई",
-        "d": "Ennore / एन्नोर"
+        "a": "Tuticorin",
+        "b": "Kandla",
+        "c": "Mumbai",
+        "d": "Ennore"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMumbai Port is a natural harbour, sheltered by surrounding landforms.\n\n📖 हिंदी स्पष्टीकरण:\nमुंबई बंदरगाह एक प्राकृतिक हार्बर है जो स्थलाकृतियों से संरक्षित है।"
     },
     {
       "q_num": 51,
-      "question": "Which of the following forests are known as “monsoon forests”?\n निम्नलिखित में से कौन-से वन “मानसून वन” कहलाते हैं?",
+      "question": "Which of the following forests are known as “monsoon forests”?",
       "options": {
-        "a": "Tropical evergreen forest / उष्णकटिबंधीय सदाबहार वन",
-        "b": "Tropical deciduous forest / उष्णकटिबंधीय पर्णपाती वन",
-        "c": "Alpine forest / अल्पाइन वन",
-        "d": "Coniferous forest / शंकुधारी वन"
+        "a": "Tropical evergreen forest",
+        "b": "Tropical deciduous forest",
+        "c": "Alpine forest",
+        "d": "Coniferous forest"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTropical deciduous forests shed leaves during dry season and are called monsoon forests.\n\n📖 हिंदी स्पष्टीकरण:\nउष्णकटिबंधीय पर्णपाती वन शुष्क ऋतु में पत्ते गिराते हैं, इसलिए इन्हें मानसून वन कहा जाता है।"
     },
     {
       "q_num": 52,
-      "question": "Which of the following minerals is formed from evaporation in arid regions?\n निम्नलिखित में से कौन-सा खनिज शुष्क क्षेत्रों में वाष्पीकरण से बनता है?",
+      "question": "Which of the following minerals is formed from evaporation in arid regions?",
       "options": {
-        "a": "Manganese / मैंगनीज़",
-        "b": "Gypsum / जिप्सम",
-        "c": "Iron / लोहा",
-        "d": "Bauxite / बॉक्साइट"
+        "a": "Manganese",
+        "b": "Gypsum",
+        "c": "Iron",
+        "d": "Bauxite"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGypsum forms through evaporation of saline water in arid climates.\n\n📖 हिंदी स्पष्टीकरण:\nजिप्सम शुष्क क्षेत्रों में खारे जल के वाष्पीकरण से बनता है।"
     },
     {
       "q_num": 53,
-      "question": "The “Golden Quadrilateral” project connects—\n “स्वर्ण चतुर्भुज” परियोजना किन शहरों को जोड़ती है?",
+      "question": "The “Golden Quadrilateral” project connects—",
       "options": {
-        "a": "Delhi, Mumbai, Chennai, Kolkata / दिल्ली, मुंबई, चेन्नई, कोलकाता",
-        "b": "Delhi, Ahmedabad, Hyderabad, Kochi / दिल्ली, अहमदाबाद, हैदराबाद, कोच्चि",
-        "c": "Bhopal, Lucknow, Jaipur, Patna / भोपाल, लखनऊ, जयपुर, पटना",
-        "d": "Delhi, Chennai, Pune, Surat / दिल्ली, चेन्नई, पुणे, सूरत"
+        "a": "Delhi, Mumbai, Chennai, Kolkata",
+        "b": "Delhi, Ahmedabad, Hyderabad, Kochi",
+        "c": "Bhopal, Lucknow, Jaipur, Patna",
+        "d": "Delhi, Chennai, Pune, Surat"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Golden Quadrilateral connects India’s four major metros — Delhi, Mumbai, Chennai, and Kolkata.\n\n📖 हिंदी स्पष्टीकरण:\nस्वर्ण चतुर्भुज परियोजना भारत के चार प्रमुख महानगरों — दिल्ली, मुंबई, चेन्नई और कोलकाता — को जोड़ती है।"
     },
     {
       "q_num": 54,
-      "question": "Which of the following states is the largest producer of coffee in India?\n भारत में कॉफी का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "question": "Which of the following states is the largest producer of coffee in India?",
       "options": {
-        "a": "Karnataka / कर्नाटक",
-        "b": "Kerala / केरल",
-        "c": "Tamil Nadu / तमिलनाडु",
-        "d": "Assam / असम"
+        "a": "Karnataka",
+        "b": "Kerala",
+        "c": "Tamil Nadu",
+        "d": "Assam"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKarnataka contributes over 60% of India’s total coffee production.\n\n📖 हिंदी स्पष्टीकरण:\nकर्नाटक भारत के कुल कॉफी उत्पादन का लगभग 60% योगदान देता है।"
     },
     {
       "q_num": 55,
-      "question": "Which soil is rich in potash but poor in nitrogen?\n कौन-सी मिट्टी पोटाश में समृद्ध परंतु नाइट्रोजन में गरीब होती है?",
+      "question": "Which soil is rich in potash but poor in nitrogen?",
       "options": {
-        "a": "Alluvial soil / जलोढ़ मिट्टी",
-        "b": "Red soil / लाल मिट्टी",
-        "c": "Laterite soil / लेटेराइट मिट्टी",
-        "d": "Black soil / काली मिट्टी"
+        "a": "Alluvial soil",
+        "b": "Red soil",
+        "c": "Laterite soil",
+        "d": "Black soil"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRed soil contains potassium and iron but lacks nitrogen and humus.\n\n📖 हिंदी स्पष्टीकरण:\nलाल मिट्टी में पोटाश और लौह तत्व होते हैं, परंतु नाइट्रोजन और ह्यूमस की कमी होती है।"
     },
     {
       "q_num": 56,
-      "question": "Which of the following grasslands is found in South America?\n निम्नलिखित में से कौन-सा घास का मैदान दक्षिण अमेरिका में पाया जाता है?",
+      "question": "Which of the following grasslands is found in South America?",
       "options": {
-        "a": "Pampas / पम्पास",
-        "b": "Prairie / प्रेरी",
-        "c": "Steppe / स्तेपी",
-        "d": "Downs / डाउन"
+        "a": "Pampas",
+        "b": "Prairie",
+        "c": "Steppe",
+        "d": "Downs"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPampas are temperate grasslands of Argentina and Uruguay.\n\n📖 हिंदी स्पष्टीकरण:\nपम्पास अर्जेंटीना और उरुग्वे के समशीतोष्ण घास के मैदान हैं।"
     },
     {
       "q_num": 57,
-      "question": "Which is the largest producer of copper in India?\n भारत में तांबे का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "question": "Which is the largest producer of copper in India?",
       "options": {
-        "a": "Madhya Pradesh / मध्य प्रदेश",
-        "b": "Rajasthan / राजस्थान",
-        "c": "Jharkhand / झारखंड",
-        "d": "Chhattisgarh / छत्तीसगढ़"
+        "a": "Madhya Pradesh",
+        "b": "Rajasthan",
+        "c": "Jharkhand",
+        "d": "Chhattisgarh"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRajasthan is the leading copper producer, mainly from Khetri mines.\n\n📖 हिंदी स्पष्टीकरण:\nराजस्थान तांबे का प्रमुख उत्पादक है, मुख्यतः खेतड़ी खदानों से।"
     },
     {
       "q_num": 58,
-      "question": "Which of the following is a non-ferrous mineral?\n निम्नलिखित में से कौन-सा अधात्विक (Non-ferrous) खनिज है?",
+      "question": "Which of the following is a non-ferrous mineral?",
       "options": {
-        "a": "Copper / तांबा",
-        "b": "Iron / लोहा",
-        "c": "Manganese / मैंगनीज़",
-        "d": "Nickel / निकल"
+        "a": "Copper",
+        "b": "Iron",
+        "c": "Manganese",
+        "d": "Nickel"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCopper does not contain iron and hence is a non-ferrous metal.\n\n📖 हिंदी स्पष्टीकरण:\nतांबे में लोहा नहीं होता, इसलिए यह अधात्विक खनिज है।"
     },
     {
       "q_num": 59,
-      "question": "Which of the following crops is known as “poor man’s meat”?\n कौन-सी फसल “गरीब का मांस” कहलाती है?",
+      "question": "Which of the following crops is known as “poor man’s meat”?",
       "options": {
-        "a": "Barley / जौ",
-        "b": "Maize / मक्का",
-        "c": "Pulses / दालें",
-        "d": "Groundnut / मूंगफली"
+        "a": "Barley",
+        "b": "Maize",
+        "c": "Pulses",
+        "d": "Groundnut"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPulses are rich in protein and are often referred to as poor man’s meat.\n\n📖 हिंदी स्पष्टीकरण:\nदालें प्रोटीन से भरपूर होती हैं, इसलिए इन्हें गरीब का मांस कहा जाता है।"
     },
     {
       "q_num": 60,
-      "question": "Which of the following is the main source of India’s lignite coal?\n भारत में लिग्नाइट कोयले का प्रमुख स्रोत कौन-सा है?",
+      "question": "Which of the following is the main source of India’s lignite coal?",
       "options": {
-        "a": "Neyveli / नेवेली",
-        "b": "Raniganj / रानीगंज",
-        "c": "Jharia / झरिया",
-        "d": "Bokaro / बोकारो"
+        "a": "Neyveli",
+        "b": "Raniganj",
+        "c": "Jharia",
+        "d": "Bokaro"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNeyveli in Tamil Nadu is India’s main lignite-producing area, while Jharia and Raniganj are rich in bituminous coal.\n\n📖 हिंदी स्पष्टीकरण:\nतमिलनाडु का नेवेली क्षेत्र भारत में लिग्नाइट कोयले का प्रमुख स्रोत है, जबकि झरिया व रानीगंज में बिटुमिनस कोयला पाया जाता है।"
     },
     {
       "q_num": 61,
-      "question": "Which of the following is a plantation crop?\n निम्नलिखित में से कौन-सी बागान फसल है?",
+      "question": "Which of the following is a plantation crop?",
       "options": {
-        "a": "Rice / धान",
-        "b": "Wheat / गेहूं",
-        "c": "Maize / मक्का",
-        "d": "Tea / चाय"
+        "a": "Rice",
+        "b": "Wheat",
+        "c": "Maize",
+        "d": "Tea"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTea is a plantation crop mainly grown in hilly regions.\n\n📖 हिंदी स्पष्टीकरण:\nचाय एक बागान फसल है जो पहाड़ी क्षेत्रों में उगाई जाती है।"
     },
     {
       "q_num": 62,
-      "question": "Which river valley hosts the Rourkela Steel Plant?\n किस नदी घाटी में राउरकेला इस्पात संयंत्र स्थित है?",
+      "question": "Which river valley hosts the Rourkela Steel Plant?",
       "options": {
-        "a": "Mahanadi / महानदी",
-        "b": "Damodar / दामोदर",
-        "c": "Godavari / गोदावरी",
-        "d": "Brahmani / ब्राह्मणी"
+        "a": "Mahanadi",
+        "b": "Damodar",
+        "c": "Godavari",
+        "d": "Brahmani"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nRourkela Steel Plant lies on the banks of Brahmani River in Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nराउरकेला इस्पात संयंत्र ओडिशा की ब्राह्मणी नदी के किनारे स्थित है।"
     },
     {
       "q_num": 63,
-      "question": "Which of the following is the busiest airport in India by passenger traffic?\n यात्री संख्या के आधार पर भारत का सबसे व्यस्त हवाई अड्डा कौन-सा है?",
+      "question": "Which of the following is the busiest airport in India by passenger traffic?",
       "options": {
-        "a": "Indira Gandhi International, Delhi / इंदिरा गांधी अंतर्राष्ट्रीय, दिल्ली",
-        "b": "Chhatrapati Shivaji, Mumbai / छत्रपति शिवाजी, मुंबई",
-        "c": "Kempegowda, Bengaluru / केम्पेगौड़ा, बेंगलुरु",
-        "d": "Chennai International / चेन्नई अंतर्राष्ट्रीय"
+        "a": "Indira Gandhi International, Delhi",
+        "b": "Chhatrapati Shivaji, Mumbai",
+        "c": "Kempegowda, Bengaluru",
+        "d": "Chennai International"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDelhi’s Indira Gandhi International Airport handles the highest passenger traffic in India.\n\n📖 हिंदी स्पष्टीकरण:\nदिल्ली का इंदिरा गांधी अंतर्राष्ट्रीय हवाई अड्डा देश का सबसे व्यस्त हवाई अड्डा है।"
     },
     {
       "q_num": 64,
-      "question": "Which type of vegetation grows in areas of less than 25 cm rainfall?\n 25 सेमी से कम वर्षा वाले क्षेत्रों में किस प्रकार की वनस्पति पाई जाती है?",
+      "question": "Which type of vegetation grows in areas of less than 25 cm rainfall?",
       "options": {
-        "a": "Desert vegetation / मरुस्थलीय वनस्पति",
-        "b": "Evergreen forest / सदाबहार वन",
-        "c": "Montane forest / पर्वतीय वन",
-        "d": "Deciduous forest / पर्णपाती वन"
+        "a": "Desert vegetation",
+        "b": "Evergreen forest",
+        "c": "Montane forest",
+        "d": "Deciduous forest"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDesert vegetation with thorny bushes grows where rainfall is below 25 cm.\n\n📖 हिंदी स्पष्टीकरण:\nजहाँ वर्षा 25 सेमी से कम होती है वहाँ कांटेदार मरुस्थलीय वनस्पति पाई जाती है।"
     },
     {
       "q_num": 65,
-      "question": "Which of the following ports handles the maximum cargo traffic in India?\n भारत में कौन-सा बंदरगाह अधिकतम कार्गो यातायात संभालता है?",
+      "question": "Which of the following ports handles the maximum cargo traffic in India?",
       "options": {
-        "a": "Paradip / पारादीप",
-        "b": "Mumbai / मुंबई",
-        "c": "Kandla / कांडला",
-        "d": "Chennai / चेन्नई"
+        "a": "Paradip",
+        "b": "Mumbai",
+        "c": "Kandla",
+        "d": "Chennai"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKandla (Deendayal Port) in Gujarat handles the largest cargo volume.\n\n📖 हिंदी स्पष्टीकरण:\nगुजरात का कांडला (दीनदयाल) बंदरगाह भारत में सर्वाधिक माल यातायात संभालता है।"
     },
     {
       "q_num": 66,
-      "question": "Which of the following crops improves soil fertility through nitrogen fixation?\n कौन-सी फसल नाइट्रोजन स्थिरीकरण द्वारा मिट्टी की उर्वरता बढ़ाती है?",
+      "question": "Which of the following crops improves soil fertility through nitrogen fixation?",
       "options": {
-        "a": "Rice / धान",
-        "b": "Pulses / दालें",
-        "c": "Maize / मक्का",
-        "d": "Wheat / गेहूं"
+        "a": "Rice",
+        "b": "Pulses",
+        "c": "Maize",
+        "d": "Wheat"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPulses fix atmospheric nitrogen through Rhizobium bacteria in root nodules.\n\n📖 हिंदी स्पष्टीकरण:\nदालें राइजोबियम जीवाणुओं की मदद से वायुमंडलीय नाइट्रोजन को स्थिर करती हैं।"
     },
     {
       "q_num": 67,
-      "question": "Which of the following minerals is essential for cement production?\n सीमेंट निर्माण के लिए कौन-सा खनिज आवश्यक है?",
+      "question": "Which of the following minerals is essential for cement production?",
       "options": {
-        "a": "Lead / सीसा",
-        "b": "Mica / अभ्रक",
-        "c": "Copper / तांबा",
-        "d": "Gypsum / जिप्सम"
+        "a": "Lead",
+        "b": "Mica",
+        "c": "Copper",
+        "d": "Gypsum"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGypsum is used to control the setting time of cement.\n\n📖 हिंदी स्पष्टीकरण:\nसीमेंट के जमने के समय को नियंत्रित करने के लिए जिप्सम का उपयोग किया जाता है।"
     },
     {
       "q_num": 68,
-      "question": "Which of the following mountain passes connects Leh to Manali?\n निम्नलिखित में से कौन-सा दर्रा लेह को मनाली से जोड़ता है?",
+      "question": "Which of the following mountain passes connects Leh to Manali?",
       "options": {
-        "a": "Rohtang Pass / रोहतांग दर्रा",
-        "b": "Nathu La / नाथुला",
-        "c": "Shipki La / शिपकी ला",
-        "d": "Zoji La / ज़ोजिला"
+        "a": "Rohtang Pass",
+        "b": "Nathu La",
+        "c": "Shipki La",
+        "d": "Zoji La"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRohtang Pass connects Kullu Valley with Lahaul–Spiti and Leh.\n\n📖 हिंदी स्पष्टीकरण:\nरोहतांग दर्रा कुल्लू घाटी को लाहौल-स्पीति और लेह से जोड़ता है।"
     },
     {
       "q_num": 69,
-      "question": "Which of the following forests is commercially most exploited in India?\n भारत में कौन-सा वन प्रकार व्यावसायिक रूप से सर्वाधिक उपयोग में लाया जाता है?",
+      "question": "Which of the following forests is commercially most exploited in India?",
       "options": {
-        "a": "Montane forest / पर्वतीय वन",
-        "b": "Evergreen forest / सदाबहार वन",
-        "c": "Mangrove forest / मैंग्रोव वन",
-        "d": "Tropical deciduous forest / उष्णकटिबंधीय पर्णपाती वन"
+        "a": "Montane forest",
+        "b": "Evergreen forest",
+        "c": "Mangrove forest",
+        "d": "Tropical deciduous forest"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTropical deciduous forests provide valuable timber such as teak and sal.\n\n📖 हिंदी स्पष्टीकरण:\nउष्णकटिबंधीय पर्णपाती वन सागौन और साल जैसे बहुमूल्य लकड़ी के लिए प्रसिद्ध हैं।"
     },
     {
       "q_num": 70,
-      "question": "The largest producer of mica in India is—\n भारत में अभ्रक का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "question": "The largest producer of mica in India is—",
       "options": {
-        "a": "Rajasthan / राजस्थान",
-        "b": "Jharkhand / झारखंड",
-        "c": "Odisha / ओडिशा",
-        "d": "Madhya Pradesh / मध्य प्रदेश"
+        "a": "Rajasthan",
+        "b": "Jharkhand",
+        "c": "Odisha",
+        "d": "Madhya Pradesh"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJharkhand, particularly Koderma and Giridih, is India’s top mica-producing region.\n\n📖 हिंदी स्पष्टीकरण:\nझारखंड का कोडरमा और गिरिडीह क्षेत्र भारत का प्रमुख अभ्रक उत्पादक क्षेत्र है।"
     },
     {
       "q_num": 71,
-      "question": "Which mode of transport is most suitable for heavy and bulky goods?\n भारी और विशाल वस्तुओं के लिए कौन-सा परिवहन माध्यम सबसे उपयुक्त है?",
+      "question": "Which mode of transport is most suitable for heavy and bulky goods?",
       "options": {
-        "a": "Waterways / जलमार्ग",
-        "b": "Airways / वायु परिवहन",
-        "c": "Roadways / सड़क परिवहन",
-        "d": "Railways / रेल परिवहन"
+        "a": "Waterways",
+        "b": "Airways",
+        "c": "Roadways",
+        "d": "Railways"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWaterways are economical and ideal for transporting bulky goods.\n\n📖 हिंदी स्पष्टीकरण:\nजलमार्ग भारी वस्तुओं के परिवहन के लिए सस्ता और उपयुक्त माध्यम है।"
     },
     {
       "q_num": 72,
-      "question": "Which of the following soils is known for poor drainage and high clay content?\n कौन-सी मिट्टी में जल निकासी कमजोर और चिकनी मिट्टी की मात्रा अधिक होती है?",
+      "question": "Which of the following soils is known for poor drainage and high clay content?",
       "options": {
-        "a": "Alluvial soil / जलोढ़ मिट्टी",
-        "b": "Red soil / लाल मिट्टी",
-        "c": "Black soil / काली मिट्टी",
-        "d": "Desert soil / मरु मिट्टी"
+        "a": "Alluvial soil",
+        "b": "Red soil",
+        "c": "Black soil",
+        "d": "Desert soil"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBlack soil is clayey, retains moisture, and has poor drainage.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी चिकनी होती है, नमी रोकती है और जल निकासी कमजोर होती है।"
     },
     {
       "q_num": 73,
-      "question": "Which transport corridor is being developed under Sagarmala Project?\n सागरमाला परियोजना के तहत कौन-सा परिवहन गलियारा विकसित किया जा रहा है?",
+      "question": "Which transport corridor is being developed under Sagarmala Project?",
       "options": {
-        "a": "Coastal shipping and port-led development / तटीय नौवहन व बंदरगाह आधारित विकास",
-        "b": "Inland waterways / अंतर्देशीय जलमार्ग",
-        "c": "Air freight / हवाई माल परिवहन",
-        "d": "Border trade / सीमावर्ती व्यापार"
+        "a": "Coastal shipping and port-led development",
+        "b": "Inland waterways",
+        "c": "Air freight",
+        "d": "Border trade"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSagarmala focuses on coastal shipping and port-led industrialization.\n\n📖 हिंदी स्पष्टीकरण:\nसागरमाला योजना तटीय नौवहन और बंदरगाह आधारित औद्योगिकीकरण पर केंद्रित है।"
     },
     {
       "q_num": 74,
-      "question": "Which type of vegetation is found in the Himalayan region?\n हिमालयी क्षेत्र में किस प्रकार की वनस्पति पाई जाती है?",
+      "question": "Which type of vegetation is found in the Himalayan region?",
       "options": {
-        "a": "Alpine forest / अल्पाइन वन",
-        "b": "Tropical evergreen forest / उष्णकटिबंधीय सदाबहार वन",
-        "c": "Thorn forest / कांटेदार वन",
-        "d": "Mangrove forest / मैंग्रोव वन"
+        "a": "Alpine forest",
+        "b": "Tropical evergreen forest",
+        "c": "Thorn forest",
+        "d": "Mangrove forest"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAlpine forests are found in the higher altitudes of the Himalayas.\n\n📖 हिंदी स्पष्टीकरण:\nहिमालय के ऊँचे भागों में अल्पाइन वन पाए जाते हैं।"
     },
     {
       "q_num": 75,
-      "question": "Which of the following minerals is extracted from monazite sand?\n निम्नलिखित में से कौन-सा खनिज मोनाजाइट बालू से निकाला जाता है?",
+      "question": "Which of the following minerals is extracted from monazite sand?",
       "options": {
-        "a": "Iron / लोहा",
-        "b": "Thorium / थोरियम",
-        "c": "Manganese / मैंगनीज़",
-        "d": "Copper / तांबा"
+        "a": "Iron",
+        "b": "Thorium",
+        "c": "Manganese",
+        "d": "Copper"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMonazite sand found on Kerala coasts is rich in thorium used for nuclear energy.\n\n📖 हिंदी स्पष्टीकरण:\nकेरल तट की मोनाजाइट बालू में थोरियम पाया जाता है जिसका उपयोग परमाणु ऊर्जा में होता है।"

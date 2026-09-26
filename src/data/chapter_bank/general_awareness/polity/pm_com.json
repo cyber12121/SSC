@@ -6,67 +6,67 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which Article of the Indian Constitution states that there shall be a Council of Ministers with the Prime Minister as the head to aid and advise the President?\n भारतीय संविधान का कौन सा अनुच्छेद कहता है कि राष्ट्रपति को सहायता और सलाह देने के लिए प्रधानमंत्री के नेतृत्व में एक मंत्रिपरिषद होगी?",
+      "question": "Which Article of the Indian Constitution states that there shall be a Council of Ministers with the Prime Minister as the head to aid and advise the President?",
       "options": {
-        "a": "Article 78 / अनुच्छेद 78",
-        "b": "Article 75 / अनुच्छेद 75",
-        "c": "Article 74 / अनुच्छेद 74",
-        "d": "Article 72 / अनुच्छेद 72"
+        "a": "Article 78",
+        "b": "Article 75",
+        "c": "Article 74",
+        "d": "Article 72"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 74 (1) is the foundational provision that establishes the Council of Ministers (CoMs) headed by the Prime Minister (PM) to aid and advise the President in the exercise of their functions. This advice is binding on the President after the 42nd Constitutional Amendment Act, though the 44th Amendment Act later allowed the President to ask the CoMs to reconsider the advice once. This mechanism defines the nature of the Parliamentary system in India.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 74 (1) वह मौलिक प्रावधान है जो राष्ट्रपति को उनके कार्यों के प्रयोग में सहायता और सलाह देने के लिए प्रधानमंत्री (PM) के नेतृत्व में एक मंत्रिपरिषद की स्थापना करता है। 42वें संवैधानिक संशोधन अधिनियम के बाद यह सलाह राष्ट्रपति पर बाध्यकारी हो गई, हालाँकि 44वें संशोधन अधिनियम ने बाद में राष्ट्रपति को मंत्रिपरिषद से एक बार सलाह पर पुनर्विचार करने के लिए कहने की अनुमति दी। यह तंत्र भारत में संसदीय प्रणाली की प्रकृति को परिभाषित करता है।"
     },
     {
       "q_num": 2,
-      "question": "Who among the following is considered the 'de facto' or 'Real Head' of the Government of India?\n निम्नलिखित में से किसे भारत सरकार का 'वास्तविक प्रमुख' या 'वास्तविक मुखिया (डी फैक्टो)' माना जाता है?",
+      "question": "Who among the following is considered the 'de facto' or 'Real Head' of the Government of India?",
       "options": {
-        "a": "The President / राष्ट्रपति",
-        "b": "The Vice-President / उपराष्ट्रपति",
-        "c": "The Prime Minister / प्रधानमंत्री",
-        "d": "The Chief Justice of India / भारत के मुख्य न्यायाधीश"
+        "a": "The President",
+        "b": "The Vice-President",
+        "c": "The Prime Minister",
+        "d": "The Chief Justice of India"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn India's parliamentary system, the President is the 'de jure' or Nominal Head of the country, while the Prime Minister is the 'de facto' or Real Head, and also the Head of the Government. The President acts on the advice of the Council of Ministers, led by the PM, thereby vesting real executive power in the Prime Minister and the CoMs. This distinction is a key feature of the Westminster model of governance adopted by India.\n\n📖 हिंदी स्पष्टीकरण:\nभारत की संसदीय प्रणाली में, राष्ट्रपति देश का 'नाममात्र प्रमुख' या 'नामधारी मुखिया (डी ज्यूरे)' होता है, जबकि प्रधानमंत्री 'वास्तविक प्रमुख' या 'वास्तविक मुखिया (डी फैक्टो)' होता है, और साथ ही सरकार का प्रमुख भी होता है। राष्ट्रपति प्रधानमंत्री के नेतृत्व वाली मंत्रिपरिषद की सलाह पर कार्य करते हैं, जिससे वास्तविक कार्यकारी शक्ति प्रधानमंत्री और मंत्रिपरिषद में निहित होती है। यह अंतर भारत द्वारा अपनाए गए शासन के वेस्टमिंस्टर मॉडल की एक प्रमुख विशेषता है।"
     },
     {
       "q_num": 3,
-      "question": "The Prime Minister of India is the ex-officio Chairman of which of the following bodies?\n भारत के प्रधानमंत्री निम्नलिखित में से किस निकाय के पदेन अध्यक्ष होते हैं?",
+      "question": "The Prime Minister of India is the ex-officio Chairman of which of the following bodies?",
       "options": {
-        "a": "Inter-State Council / अंतर्राज्यीय परिषद",
-        "b": "National Disaster Management Authority / राष्ट्रीय आपदा प्रबंधन प्राधिकरण",
-        "c": "NITI AAYOG / नीति आयोग",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "Inter-State Council",
+        "b": "National Disaster Management Authority",
+        "c": "NITI AAYOG",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Prime Minister holds the position of ex-officio Chairman for several key national bodies, reflecting the importance of the office in policy formulation and national coordination. These include the NITI AAYOG (which replaced the Planning Commission), the Inter-State Council, and the National Disaster Management Authority (NDMA). The PM's role as chairman ensures high-level political direction and coordination across central and state governments\n\n📖 हिंदी स्पष्टीकरण:\nप्रधानमंत्री कई प्रमुख राष्ट्रीय निकायों के पदेन अध्यक्ष का पद संभालते हैं, जो नीति निर्माण और राष्ट्रीय समन्वय में इस कार्यालय के महत्व को दर्शाता है। इनमें नीति आयोग (जिसने योजना आयोग का स्थान लिया), अंतर्राज्यीय परिषद, और राष्ट्रीय आपदा प्रबंधन प्राधिकरण (NDMA) शामिल हैं। अध्यक्ष के रूप में प्रधानमंत्री की भूमिका केंद्र और राज्य सरकारों के बीच उच्च-स्तरीय राजनीतिक दिशा और समन्वय सुनिश्चित करती है।"
     },
     {
       "q_num": 4,
-      "question": "The first Indian Prime Minister to resign from office was:\n पद से इस्तीफा देने वाले पहले भारतीय प्रधानमंत्री कौन थे?",
+      "question": "The first Indian Prime Minister to resign from office was:",
       "options": {
-        "a": "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "b": "Lal Bahadur Shastri / लाल बहादुर शास्त्री",
-        "c": "Morarji Desai / मोरारजी देसाई",
-        "d": "V. P. Singh / वी. पी. सिंह"
+        "a": "Jawaharlal Nehru",
+        "b": "Lal Bahadur Shastri",
+        "c": "Morarji Desai",
+        "d": "V. P. Singh"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMorarji Desai holds the distinction of being the first Prime Minister of India to voluntarily resign from office. He served as Prime Minister from 1977 to 1979, heading a Janata Party government. His resignation was due to internal conflicts and a loss of confidence within the ruling coalition, leading to the collapse of his government.\n\n📖 हिंदी स्पष्टीकरण:\nमोरारजी देसाई के पास भारत के पहले ऐसे प्रधानमंत्री होने का गौरव है जिन्होंने स्वेच्छा से अपने पद से इस्तीफा दिया था। उन्होंने 1977 से 1979 तक जनता पार्टी सरकार के प्रमुख के रूप में प्रधानमंत्री के रूप में कार्य किया। उनका इस्तीफा सत्तारूढ़ गठबंधन के भीतर आंतरिक संघर्षों और विश्वास खोने के कारण हुआ, जिससे उनकी सरकार गिर गई।"
     },
     {
       "q_num": 5,
-      "question": "According to Article 76 of the Constitution, a person appointed as the Attorney General for India must be qualified to be a judge of which court?\n संविधान के अनुच्छेद 76 के अनुसार, भारत के लिए महान्यायवादी के रूप में नियुक्त होने वाले व्यक्ति में किस न्यायालय के न्यायाधीश के रूप में नियुक्त होने की योग्यता होनी चाहिए?",
+      "question": "According to Article 76 of the Constitution, a person appointed as the Attorney General for India must be qualified to be a judge of which court?",
       "options": {
-        "a": "High Court / उच्च न्यायालय",
-        "b": "Supreme Court / उच्चतम न्यायालय",
-        "c": "Any District Court / कोई जिला न्यायालय",
-        "d": "Both High Court and Supreme Court / उच्च न्यायालय और उच्चतम न्यायालय दोनों"
+        "a": "High Court",
+        "b": "Supreme Court",
+        "c": "Any District Court",
+        "d": "Both High Court and Supreme Court"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 76 specifies that the President shall appoint a person who is qualified to be appointed as a Judge of the Supreme Court to be the Attorney General for India. This qualification ensures that the Attorney General, who is the highest law officer of the country and the Central Government's primary lawyer, possesses the highest level of legal expertise and constitutional knowledge.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 76 निर्दिष्ट करता है कि राष्ट्रपति ऐसे व्यक्ति को भारत के लिए महान्यायवादी नियुक्त करेंगे जो उच्चतम न्यायालय के न्यायाधीश के रूप में नियुक्त होने के लिए योग्य हो। यह योग्यता सुनिश्चित करती है कि महान्यायवादी, जो देश का सर्वोच्च कानून अधिकारी और केंद्र सरकार का प्राथमिक वकील है, उच्चतम स्तर की कानूनी विशेषज्ञता और संवैधानिक ज्ञान रखता हो।"
     },
     {
       "q_num": 6,
-      "question": "What is the maximum limit of the Council of Ministers in the Union Territories of NCT of Delhi and as a percentage of the total strength of its Legislative Assemblies?\n राष्ट्रीय राजधानी क्षेत्र दिल्ली केंद्र शासित प्रदेश में मंत्रिपरिषद की अधिकतम सीमा विधानसभा की कुल शक्ति का कितना प्रतिशत हो सकता है?",
+      "question": "What is the maximum limit of the Council of Ministers in the Union Territories of NCT of Delhi and as a percentage of the total strength of its Legislative Assemblies?",
       "options": {
         "a": "15%",
         "b": "10%",
@@ -78,228 +78,228 @@
     },
     {
       "q_num": 7,
-      "question": "What is the consequence if the Prime Minister of India resigns from their office?\n यदि भारत के प्रधानमंत्री अपने पद से इस्तीफा दे देते हैं तो इसका क्या परिणाम होता है?",
+      "question": "What is the consequence if the Prime Minister of India resigns from their office?",
       "options": {
-        "a": "Only the Prime Minister's post becomes vacant. / केवल प्रधानमंत्री का पद रिक्त होता है।",
-        "b": "The entire Council of Ministers (COMs) is dissolved. / संपूर्ण मंत्रिपरिषद भंग हो जाती है।",
-        "c": "The Rajya Sabha is automatically dissolved. / राज्यसभा स्वतः भंग हो जाती है।",
-        "d": "The President becomes the Head of the Government. / राष्ट्रपति सरकार के प्रमुख बन जाते हैं।"
+        "a": "Only the Prime Minister's post becomes vacant.",
+        "b": "The entire Council of Ministers (COMs) is dissolved.",
+        "c": "The Rajya Sabha is automatically dissolved.",
+        "d": "The President becomes the Head of the Government."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe resignation of the Prime Minister automatically leads to the collapse and dissolution of the entire Council of Ministers because the PM is the linchpin and head of the Council. The PM's resignation is considered a move that brings down the entire government, enforcing the principle of collective responsibility, which states that the CoMs works as a team under the leadership of the Prime Minister.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधानमंत्री के इस्तीफा देने से पूरी मंत्रिपरिषद स्वतः ही भंग हो जाती है क्योंकि प्रधानमंत्री मंत्रिपरिषद के केंद्र बिंदु और प्रमुख होते हैं। प्रधानमंत्री का इस्तीफा पूरी सरकार के पतन का कारण माना जाता है, जिससे सामूहिक जिम्मेदारी का सिद्धांत लागू होता है, जो कहता है कि मंत्रिपरिषद प्रधानमंत्री के नेतृत्व में एक टीम के रूप में कार्य करती है।"
     },
     {
       "q_num": 8,
-      "question": "The normal full term of the Prime Minister of India is five years, which coincides with the normal life of:\n भारत के प्रधानमंत्री का सामान्य पूर्ण कार्यकाल पाँच वर्ष होता है, जो किसके सामान्य जीवन के साथ मेल खाता है?",
+      "question": "The normal full term of the Prime Minister of India is five years, which coincides with the normal life of:",
       "options": {
-        "a": "Rajya Sabha / राज्यसभा",
-        "b": "The President's Office / राष्ट्रपति का कार्यालय",
-        "c": "Lok Sabha / लोकसभा",
-        "d": "The Supreme Court / उच्चतम न्यायालय"
+        "a": "Rajya Sabha",
+        "b": "The President's Office",
+        "c": "Lok Sabha",
+        "d": "The Supreme Court"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Prime Minister's normal term is stated to be five years, which is aligned with the standard life of the Lok Sabha, the lower house of the Parliament. However, the term is not fixed, as the PM holds office during the pleasure of the President, and must resign if they lose the confidence of the Lok Sabha, which makes the tenure dependent on the majority support in the Lok Sabha.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधानमंत्री का सामान्य कार्यकाल पाँच वर्ष बताया गया है, जो संसद के निचले सदन, लोकसभा के मानक जीवनकाल के साथ संरेखित होता है। हालाँकि, कार्यकाल निश्चित नहीं है, क्योंकि प्रधानमंत्री राष्ट्रपति के प्रसादपर्यंत पद धारण करते हैं, और यदि वे लोकसभा का विश्वास खो देते हैं तो उन्हें इस्तीफा देना पड़ता है, जो कार्यकाल को लोकसभा में बहुमत के समर्थन पर निर्भर करता है।"
     },
     {
       "q_num": 9,
-      "question": "Who administers the oaths of office and secrecy to the Prime Minister of India?\n भारत के प्रधानमंत्री को पद और गोपनीयता की शपथ कौन दिलाता है?",
+      "question": "Who administers the oaths of office and secrecy to the Prime Minister of India?",
       "options": {
-        "a": "The Speaker of the Lok Sabha / लोकसभा अध्यक्ष",
-        "b": "The Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "c": "The President / राष्ट्रपति",
-        "d": "The Vice-President / उपराष्ट्रपति"
+        "a": "The Speaker of the Lok Sabha",
+        "b": "The Chief Justice of India",
+        "c": "The President",
+        "d": "The Vice-President"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAs per the constitutional provisions, the President is the appointing authority for the Prime Minister and the person who administers the oaths of office and secrecy to them. The President appoints the leader of the majority party in the Lok Sabha as the Prime Minister, and the swearing-in ceremony marks the formal commencement of their tenure in office.\n\n📖 हिंदी स्पष्टीकरण:\nसंवैधानिक प्रावधानों के अनुसार, राष्ट्रपति प्रधानमंत्री की नियुक्ति प्राधिकारी होते हैं और वही उन्हें पद और गोपनीयता की शपथ दिलाते हैं। राष्ट्रपति लोकसभा में बहुमत दल के नेता को प्रधानमंत्री के रूप में नियुक्त करते हैं, और शपथ ग्रहण समारोह उनके कार्यकाल की औपचारिक शुरुआत का प्रतीक होता है।"
     },
     {
       "q_num": 10,
-      "question": "The longest-serving Prime Minister of India, who died in office in 1964, was:\n भारत के सबसे लंबे समय तक सेवा करने वाले प्रधानमंत्री, जिनकी 1964 में कार्यालय में मृत्यु हो गई थी, थे:",
+      "question": "The longest-serving Prime Minister of India, who died in office in 1964, was:",
       "options": {
-        "a": "Indira Gandhi / इंदिरा गांधी",
-        "b": "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "c": "Manmohan Singh / मनमोहन सिंह",
-        "d": "Atal Bihari Vajpayee / अटल बिहारी वाजपेयी"
+        "a": "Indira Gandhi",
+        "b": "Jawaharlal Nehru",
+        "c": "Manmohan Singh",
+        "d": "Atal Bihari Vajpayee"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJawaharlal Nehru served as the first and longest-serving Prime Minister of India, with a tenure spanning over 16 years and 286 days. He held office from 1947 until his death in 1964, a period crucial for the nation-building process and the laying of the foundation for India's foreign and domestic policies. His passing led to Gulzarilal Nanda becoming the acting PM for a brief period.\n\n📖 हिंदी स्पष्टीकरण:\nजवाहरलाल नेहरू ने भारत के पहले और सबसे लंबे समय तक सेवा करने वाले प्रधानमंत्री के रूप में कार्य किया, जिनका कार्यकाल 16 वर्ष और 286 दिनों से अधिक था। उन्होंने 1947 से लेकर 1964 में अपनी मृत्यु तक पद संभाला, यह अवधि राष्ट्र निर्माण प्रक्रिया और भारत की विदेश और घरेलू नीतियों की नींव रखने के लिए महत्वपूर्ण थी। उनके निधन से गुलजारिलाल नंदा थोड़े समय के लिए कार्यवाहक प्रधानमंत्री बने थे।"
     },
     {
       "q_num": 11,
-      "question": "Statement I: The term of the Prime Minister is not fixed, and they hold office during the pleasure of the President.\n Statement II: This 'pleasure of the President' means that the President can dismiss the PM at any time, even if the PM has the confidence of the Lok Sabha.\n कथन I: प्रधानमंत्री का कार्यकाल निश्चित नहीं होता है, और वे राष्ट्रपति के प्रसादपर्यंत पद धारण करते हैं।\n कथन II: इस 'राष्ट्रपति के प्रसादपर्यंत' का अर्थ है कि राष्ट्रपति प्रधानमंत्री को किसी भी समय बर्खास्त कर सकते हैं, भले ही प्रधानमंत्री को लोकसभा का विश्वास प्राप्त हो।",
+      "question": "Statement I: The term of the Prime Minister is not fixed, and they hold office during the pleasure of the President.\n Statement II: This 'pleasure of the President' means that the President can dismiss the PM at any time, even if the PM has the confidence of the Lok Sabha.",
       "options": {
-        "a": "Statement I is correct, but Statement II is incorrect. / कथन I सही है, लेकिन कथन II गलत है।",
-        "b": "Statement I is incorrect, but Statement II is correct. / कथन I गलत है, लेकिन कथन II सही है।",
-        "c": "Both Statements I and II are correct. / दोनों कथन I और II सही हैं।",
-        "d": "Both Statements I and II are incorrect. / दोनों कथन I और II गलत हैं।"
+        "a": "Statement I is correct, but Statement II is incorrect.",
+        "b": "Statement I is incorrect, but Statement II is correct.",
+        "c": "Both Statements I and II are correct.",
+        "d": "Both Statements I and II are incorrect."
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 12,
-      "question": "Which of the following statements about the Council of Ministers (COMs) is/are correct?\n निम्नलिखित में से कौन सा/से कथन मंत्रिपरिषद के बारे में सही है/हैं?\n 1. Ministers are collectively responsible to the President. / मंत्री सामूहिक रूप से राष्ट्रपति के प्रति ज़िम्मेदार होते हैं।\n 2. Ministers are individually responsible to the President. / मंत्री व्यक्तिगत रूप से राष्ट्रपति के प्रति ज़िम्मेदार होते हैं।\n 3. The salaries and allowances of the Ministers are decided by the Parliament. / मंत्रियों के वेतन और भत्ते संसद तय करती है।\n 4. The classification of different ministers (like Cabinet, Minister of State, Deputy Minister) is mentioned in the Constitution. / अलग-अलग मंत्रियों (जैसे कैबिनेट, राज्य मंत्री, उप मंत्री) का वर्गीकरण संविधान में बताया गया है।",
+      "question": "Which of the following statements about the Council of Ministers (COMs) is/are correct?\n1. Ministers are collectively responsible to the President.\n2. Ministers are individually responsible to the President.\n3. The salaries and allowances of the Ministers are decided by the Parliament.\n4. The classification of different ministers (like Cabinet, Minister of State, Deputy Minister) is mentioned in the Constitution.",
       "options": {
-        "a": "1 and 4 only / केवल 1 और 4",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1, 2, and 3 only / केवल 1, 2, और 3",
-        "d": "2, 3, and 4 only / केवल 2, 3, और 4"
+        "a": "1 and 4 only",
+        "b": "2 and 3 only",
+        "c": "1, 2, and 3 only",
+        "d": "2, 3, and 4 only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement 2 is correct as Ministers hold office during the pleasure of the President, making them individually responsible to him. Statement 3 is correct as the Parliament determines the salaries and allowances of the Ministers and the PM. Statement 1 is incorrect because the CoMs is collectively responsible to the Lok Sabha, not the President. Statement 4 is incorrect as the Constitution does not mention the classification of ministers; this is an extra-constitutional convention.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 2 सही है क्योंकि मंत्री राष्ट्रपति के प्रसादपर्यंत पद धारण करते हैं, जिससे वे व्यक्तिगत रूप से उनके प्रति जिम्मेदार होते हैं। कथन 3 सही है क्योंकि संसद मंत्रियों और प्रधानमंत्री के वेतन और भत्ते तय करती है। कथन 1 गलत है क्योंकि मंत्रिपरिषद सामूहिक रूप से लोकसभा के प्रति जिम्मेदार होती है, न कि राष्ट्रपति के प्रति। कथन 4 गलत है क्योंकि संविधान में मंत्रियों के वर्गीकरण का उल्लेख नहीं है; यह एक गैर-संवैधानिक परंपरा है।"
     },
     {
       "q_num": 13,
-      "question": "Assertion (A): The President of India can ask the Council of Ministers to reconsider the advice tendered by them.\n Reason (R): This power was granted to the President through the 44th Constitutional Amendment Act.\n कथन (A): भारत के राष्ट्रपति मंत्रिपरिषद द्वारा दी गई सलाह पर पुनर्विचार करने के लिए कह सकते हैं।\n कारण (R): यह शक्ति राष्ट्रपति को 44वें संवैधानिक संशोधन अधिनियम के माध्यम से प्रदान की गई थी।",
+      "question": "Assertion (A): The President of India can ask the Council of Ministers to reconsider the advice tendered by them.\n Reason (R): This power was granted to the President through the 44th Constitutional Amendment Act.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBoth the assertion and the reason are factually correct, and the reason correctly explains the assertion. The original provision made the advice binding. The 44th Constitutional Amendment Act (1978) introduced the provison that the President may require the CoMs to reconsider such advice, either generally or otherwise. However, the President shall act in accordance with the advice tendered after such reconsideration, making the reconsidered advice ultimately binding.\n\n📖 हिंदी स्पष्टीकरण:\nकथन और कारण दोनों तथ्यात्मक रूप से सही हैं, और कारण कथन की सही व्याख्या करता है। मूल प्रावधान ने सलाह को बाध्यकारी बना दिया था। 44वें संवैधानिक संशोधन अधिनियम (1978) ने यह परंतुक जोड़ा कि राष्ट्रपति मंत्रिपरिषद से सामान्य रूप से या अन्यथा सलाह पर पुनर्विचार करने के लिए कह सकते हैं। हालाँकि, राष्ट्रपति ऐसे पुनर्विचार के बाद दी गई सलाह के अनुसार कार्य करेंगे, जिससे पुनर्विचारित सलाह अंततः बाध्यकारी हो जाती है।"
     },
     {
       "q_num": 14,
-      "question": "Consider the different categories of Ministers in the Council of Ministers. Which category, while not specified in the Constitution, holds the important portfolios and participates in the Cabinet meeting?\n मंत्रिपरिषद में मंत्रियों की विभिन्न श्रेणियों पर विचार करें। कौन सी श्रेणी, जिसका संविधान में उल्लेख नहीं है, महत्वपूर्ण विभाग रखती है और कैबिनेट बैठक में भाग लेती है?",
+      "question": "Consider the different categories of Ministers in the Council of Ministers. Which category, while not specified in the Constitution, holds the important portfolios and participates in the Cabinet meeting?",
       "options": {
-        "a": "Minister of State / राज्य मंत्री",
-        "b": "Deputy Minister / उप मंत्री",
-        "c": "Cabinet Minister / कैबिनेट मंत्री",
-        "d": "Minister of State (Independent Charge) / राज्य मंत्री (स्वतंत्र प्रभार)"
+        "a": "Minister of State",
+        "b": "Deputy Minister",
+        "c": "Cabinet Minister",
+        "d": "Minister of State (Independent Charge)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCabinet Ministers are the highest tier of ministers in the CoMs who hold important portfolios like Defence, Home, and Finance. Although the Constitution does not formally specify the hierarchy, they alone participate in and form the core decision-making body known as the Cabinet. Ministers of State do not generally participate in Cabinet meetings, which makes the Cabinet Minister category distinct.\n\n📖 हिंदी स्पष्टीकरण:\nकैबिनेट मंत्री मंत्रिपरिषद में मंत्रियों का सर्वोच्च स्तर है जो रक्षा, गृह और वित्त जैसे महत्वपूर्ण विभाग रखते हैं। हालाँकि संविधान औपचारिक रूप से पदानुक्रम को निर्दिष्ट नहीं करता है, वे अकेले कैबिनेट नामक मुख्य निर्णय लेने वाले निकाय में भाग लेते हैं और उसका गठन करते हैं। राज्य मंत्री आम तौर पर कैबिनेट बैठकों में भाग नहीं लेते हैं, जो कैबिनेट मंत्री श्रेणी को अलग बनाता है।"
     },
     {
       "q_num": 15,
-      "question": "A Minister who for any period of six consecutive months is not a member of either House of the Parliament shall:\n कोई मंत्री जो लगातार छह महीने की अवधि तक संसद के किसी भी सदन का सदस्य नहीं है, वह: ‘",
+      "question": "A Minister who for any period of six consecutive months is not a member of either House of the Parliament shall:",
       "options": {
-        "a": "Be automatically transferred to the Cabinet Committee on Parliamentary Affairs. / संसदीय मामलों की कैबिनेट समिति में स्वतः ही स्थानांतरित हो जाएगा।",
-        "b": "Cease to be a Minister at the expiration of that period. / उस अवधि की समाप्ति पर मंत्री पद पर नहीं रहेगा।",
-        "c": "Continue as Minister but without the right to vote in the Parliament. / मंत्री के रूप में बना रहेगा लेकिन संसद में वोट देने का अधिकार नहीं होगा।",
-        "d": "Be re-appointed by the President after consultation with the Prime Minister. / प्रधानमंत्री के परामर्श से राष्ट्रपति द्वारा फिर से नियुक्त किया जाएगा।"
+        "a": "Be automatically transferred to the Cabinet Committee on Parliamentary Affairs.",
+        "b": "Cease to be a Minister at the expiration of that period.",
+        "c": "Continue as Minister but without the right to vote in the Parliament.",
+        "d": "Be re-appointed by the President after consultation with the Prime Minister."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA strict constitutional requirement is that a person must be a member of either the Lok Sabha or the Rajya Sabha to continue as a Minister. If a non-member is appointed, they have a grace period of six consecutive months to secure a seat through election or nomination. Failure to do so automatically results in them ceasing to be a Minister, enforcing accountability to the Parliament.\n\n📖 हिंदी स्पष्टीकरण:\nएक कठोर संवैधानिक आवश्यकता यह है कि किसी व्यक्ति को मंत्री के रूप में बने रहने के लिए लोकसभा या राज्यसभा में से किसी एक का सदस्य होना चाहिए। यदि किसी गैर-सदस्य को नियुक्त किया जाता है, तो उनके पास चुनाव या नामांकन के माध्यम से सीट सुरक्षित करने के लिए लगातार छह महीने की मोहलत होती है। ऐसा करने में विफल रहने पर वह स्वचालित रूप से मंत्री पद पर नहीं रहेगा, जिससे संसद के प्रति जवाबदेही लागू होती है।"
     },
     {
       "q_num": 16,
-      "question": "Regarding the Attorney General of India (AG), consider the following statements:\n भारत के महान्यायवादी (AG) के संबंध में, निम्नलिखित कथनों पर विचार करें:\n 1. The AG is the highest law officer of the country and acts as the lawyer for the Central Government. / महान्यायवादी देश के सर्वोच्च विधि अधिकारी होते हैं और केंद्र सरकार के वकील के रूप में कार्य करते हैं।\n 2. The AG shall hold office during the pleasure of the President and shall receive a fixed salary determined by the Parliament. / महान्यायवादी राष्ट्रपति की इच्छा पर पद धारण करते हैं और संसद द्वारा निर्धारित निश्चित वेतन प्राप्त करते हैं।\n 3. The AG has the right of audience in all courts in the territory of India. / महान्यायवादी को भारत के क्षेत्र में सभी न्यायालयों में उपस्थित होने का अधिकार है।\n Select the correct statements:\n सही कथनों का चयन करें:",
+      "question": "Regarding the Attorney General of India (AG), consider the following statements:\n1. The AG is the highest law officer of the country and acts as the lawyer for the Central Government.\n2. The AG shall hold office during the pleasure of the President and shall receive a fixed salary determined by the Parliament.\n3. The AG has the right of audience in all courts in the territory of India.\n Select the correct statements:",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "1 and 3 only / केवल 1 और 3",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 and 2 only",
+        "b": "1 and 3 only",
+        "c": "2 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements 1 and 3 are correct, affirming the AG's role as the chief legal advisor and their privilege to be heard in any court in India. Statement 2 is incorrect because while the AG holds office during the pleasure of the President, the remuneration (salary/allowances) is not fixed by the Parliament but is determined by the President, making it an exception to the rule for other high constitutional posts.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 और 3 सही हैं, जो मुख्य कानूनी सलाहकार के रूप में महान्यायवादी की भूमिका और भारत के क्षेत्र में किसी भी न्यायालय में सुने जाने के उनके विशेषाधिकार की पुष्टि करते हैं। कथन 2 गलत है क्योंकि महान्यायवादी राष्ट्रपति के प्रसादपर्यंत पद धारण करते हैं, लेकिन पारिश्रमिक (वेतन/भत्ते) संसद द्वारा तय नहीं किया जाता है, बल्कि राष्ट्रपति द्वारा निर्धारित किया जाता है, जिससे यह अन्य उच्च संवैधानिक पदों के नियम का अपवाद बन जाता है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is NOT a duty of the Prime Minister under Article 78 of the Indian Constitution?\n निम्नलिखित में से कौन सा भारतीय संविधान के अनुच्छेद 78 के तहत प्रधानमंत्री का कर्तव्य नहीं है?",
+      "question": "Which of the following is NOT a duty of the Prime Minister under Article 78 of the Indian Constitution?",
       "options": {
-        "a": "To communicate to the President all decisions of the CoMs relating to the administration of the affairs of the Union. / राष्ट्रपति को संघ के मामलों के प्रशासन से संबंधित मंत्रिपरिषद के सभी निर्णयों की सूचना देना।",
-        "b": "To furnish information related to administration and legislation proposals as the President may call for. / प्रशासन और विधायी प्रस्तावों से संबंधित ऐसी जानकारी प्रस्तुत करना जो राष्ट्रपति मांगें।",
-        "c": "Presiding over joint sessions of Parliament. / संसद की संयुक्त बैठक की अध्यक्षता करना |",
-        "d": "To submit for the consideration of the CoMs any matter on which a decision has been taken by a minister but not by the Council. / मंत्रिपरिषद के विचार के लिए किसी भी मामले को प्रस्तुत करना जिस पर किसी मंत्री ने निर्णय लिया है लेकिन मंत्रिपरिषद ने नहीं।"
+        "a": "To communicate to the President all decisions of the CoMs relating to the administration of the affairs of the Union.",
+        "b": "To furnish information related to administration and legislation proposals as the President may call for.",
+        "c": "Presiding over joint sessions of Parliament.",
+        "d": "To submit for the consideration of the CoMs any matter on which a decision has been taken by a minister but not by the Council."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe joint session of Parliament is presided over by the Speaker of the Lok Sabha, not the Prime Minister\n\n📖 हिंदी स्पष्टीकरण:\nसंसद की संयुक्त बैठक की अध्यक्षता लोकसभा अध्यक्ष (Speaker) करते हैं, न कि प्रधानमंत्री।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements regarding the relationship between the President and the Prime Minister:\n राष्ट्रपति और प्रधानमंत्री के बीच संबंध के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. The President is the nominal executive, and the PM is the real executive. / राष्ट्रपति नाममात्र के कार्यकारी होते हैं, और प्रधानमंत्री वास्तविक कार्यकारी होते हैं।\n 2. The Prime Minister's primary role is to act as a linkage between the Council of Ministers and the President. / प्रधानमंत्री की मुख्य भूमिका मंत्री परिषद और राष्ट्रपति के बीच सेतु का कार्य करना है।\n 3. If the Prime Minister loses the confidence of the Lok Sabha, the Council of Ministers must resign, or the President may dismiss the Prime Minister./ यदि प्रधानमंत्री लोकसभा का विश्वास खो देते हैं, तो मंत्रिपरिषद को त्यागपत्र देना पड़ता है या राष्ट्रपति प्रधानमंत्री को पद से हटा सकते हैं।\n Which of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the relationship between the President and the Prime Minister:\n1. The President is the nominal executive, and the PM is the real executive.\n2. The Prime Minister's primary role is to act as a linkage between the Council of Ministers and the President.\n3. If the Prime Minister loses the confidence of the Lok Sabha, the Council of Ministers must resign, or the President may dismiss the Prime Minister./\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStatement 1 is correct because the President is the constitutional (nominal) head, while the Prime Minister is the real executive authority.\nStatement 2 is correct as the Prime Minister acts as the chief link between the President and the Council of Ministers.\nStatement 3 is correct because in a parliamentary system, if the Prime Minister loses the confidence of the Lok Sabha, the Council of Ministers must resign, and the President can dismiss the Prime Minister.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है क्योंकि राष्ट्रपति संवैधानिक (नाममात्र) प्रमुख होते हैं और प्रधानमंत्री वास्तविक कार्यकारी शक्ति रखते हैं।\nकथन 2 सही है क्योंकि प्रधानमंत्री, राष्ट्रपति और मंत्रिपरिषद के बीच मुख्य सेतु का कार्य करते हैं।\nकथन 3 सही है क्योंकि संसदीय प्रणाली में यदि प्रधानमंत्री लोकसभा का विश्वास खो देते हैं, तो मंत्रिपरिषद को त्यागपत्र देना पड़ता है और राष्ट्रपति प्रधानमंत्री को पद से हटा सकते हैं।"
     },
     {
       "q_num": 19,
-      "question": "Assertion (A): It was stated that 'Collective responsibility can be achieved only through the instrumentality of the Prime Minister.'\n Reason (R): The Prime Minister is the head of the Council of Ministers, and his resignation brings about the collapse of the CoMs, thereby enforcing collective responsibility.\n कथन (A): यह कहा गया था कि 'सामूहिक जिम्मेदारी केवल प्रधानमंत्री के माध्यम से ही प्राप्त की जा सकती है।'\n कारण (R): प्रधानमंत्री मंत्रिपरिषद के प्रमुख होते हैं, और उनका इस्तीफा मंत्रिपरिषद के पतन का कारण बनता है, जिससे सामूहिक जिम्मेदारी लागू होती है।",
+      "question": "Assertion (A): It was stated that 'Collective responsibility can be achieved only through the instrumentality of the Prime Minister.'\n Reason (R): The Prime Minister is the head of the Council of Ministers, and his resignation brings about the collapse of the CoMs, thereby enforcing collective responsibility.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe assertion is a famous quote by Dr. B.R. Ambedkar, and the reason provides the constitutional mechanism that validates this statement. The PM is the central figure who links all ministers and makes the CoMs a cohesive unit. His resignation dissolves the entire body, which is the ultimate enforcement of the principle that they collectively stand or fall together, thus making the PM the instrument of collective responsibility.\n\n📖 हिंदी स्पष्टीकरण:\nयह कथन डॉ. बी.आर. अंबेडकर का एक प्रसिद्ध उद्धरण है, और कारण इस कथन को मान्य करने वाला संवैधानिक तंत्र प्रदान करता है। प्रधानमंत्री केंद्रीय व्यक्ति होते हैं जो सभी मंत्रियों को जोड़ते हैं और मंत्रिपरिषद को एक एकजुट इकाई बनाते हैं। उनका इस्तीफा पूरे निकाय को भंग कर देता है, जो इस सिद्धांत का अंतिम प्रवर्तन है कि वे सामूहिक रूप से एक साथ खड़े होते हैं या गिरते हैं, इस प्रकार प्रधानमंत्री को सामूहिक जिम्मेदारी का माध्यम बनाते हैं।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following is an accurate distinction between a Cabinet Minister and a Minister of State (MoS)?\n निम्नलिखित में से कौन सा कैबिनेट मंत्री और राज्य मंत्री के बीच एक सटीक अंतर है?",
+      "question": "Which of the following is an accurate distinction between a Cabinet Minister and a Minister of State (MoS)?",
       "options": {
-        "a": "Cabinet Ministers are constitutional, while Ministers of State are extra-constitutional. / कैबिनेट मंत्री संवैधानिक होते हैं, जबकि राज्य मंत्री गैर-संवैधानिक होते हैं।",
-        "b": "Only Cabinet Ministers have important portfolios like Defence, Home, and Finance. / केवल कैबिनेट मंत्रियों के पास ही रक्षा, गृह और वित्त जैसे महत्वपूर्ण विभाग होते हैं।",
-        "c": "Cabinet Ministers are individually responsible to the President, while Ministers of State are collectively responsible to the Lok Sabha. / कैबिनेट मंत्री व्यक्तिगत रूप से राष्ट्रपति के प्रति जिम्मेदार होते हैं, जबकि राज्य मंत्री सामूहिक रूप से लोकसभा के प्रति जिम्मेदार होते हैं।",
-        "d": "Cabinet Ministers are members of Parliament, while Ministers of State are not. / कैबिनेट मंत्री संसद के सदस्य होते हैं, जबकि राज्य मंत्री नहीं होते हैं।"
+        "a": "Cabinet Ministers are constitutional, while Ministers of State are extra-constitutional.",
+        "b": "Only Cabinet Ministers have important portfolios like Defence, Home, and Finance.",
+        "c": "Cabinet Ministers are individually responsible to the President, while Ministers of State are collectively responsible to the Lok Sabha.",
+        "d": "Cabinet Ministers are members of Parliament, while Ministers of State are not."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe distinction between Cabinet Minister and Minister of State is based on convention and portfolio importance, not constitutional status or parliamentary membership, as all are ministers under the Constitution. Cabinet Ministers hold the key portfolios and are part of the Cabinet, the inner ring of the Council of Ministers, while Ministers of State usually look after smaller, less important ministries or departments, and do not attend Cabinet meetings unless specifically invited.\n\n📖 हिंदी स्पष्टीकरण:\nकैबिनेट मंत्री और राज्य मंत्री के बीच अंतर परंपरा और विभाग (पोर्टफोलियो) की महत्वता पर आधारित होता है, न कि संवैधानिक दर्जे या संसदीय सदस्यता पर, क्योंकि संविधान के अनुसार सभी मंत्री ही होते हैं। कैबिनेट मंत्री प्रमुख विभागों को संभालते हैं और कैबिनेट के सदस्य होते हैं, जो मंत्रिपरिषद का आंतरिक समूह है, जबकि राज्य मंत्री आमतौर पर छोटे या कम महत्वपूर्ण मंत्रालयों/विभागों को देखते हैं और उन्हें विशेष रूप से आमंत्रित किए बिना कैबिनेट बैठकों में भाग नहीं दिया जाता।"
     },
     {
       "q_num": 21,
-      "question": "Which of the following Prime Ministers of India were members of the Rajya Sabha at the time of their appointment?\n भारत के निम्नलिखित प्रधानमंत्रियों में से कौन अपनी नियुक्ति के समय राज्यसभा के सदस्य थे?",
+      "question": "Which of the following Prime Ministers of India were members of the Rajya Sabha at the time of their appointment?",
       "options": {
-        "a": "Indira Gandhi / इंदिरा गांधी",
-        "b": "H.D. Deve Gowda / एच.डी. देवेगौड़ा",
-        "c": "Dr. Manmohan Singh / डॉ. मनमोहन सिंह",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "Indira Gandhi",
+        "b": "H.D. Deve Gowda",
+        "c": "Dr. Manmohan Singh",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Prime Minister can be a member of either the Lok Sabha or the Rajya Sabha. Historically, three individuals have served as Prime Minister while being members of the Rajya Sabha: Indira Gandhi (1966), H.D. Deve Gowda (1996), and Dr. Manmohan Singh (2004). This demonstrates that membership in the lower house (Lok Sabha) is not a constitutional prerequisite for the PM's office, though it is the convention as the PM is the leader of the majority in the Lok Sabha.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधानमंत्री लोकसभा या राज्यसभा में से किसी भी सदन के सदस्य हो सकते हैं। ऐतिहासिक रूप से, तीन व्यक्तियों ने राज्यसभा के सदस्य रहते हुए प्रधानमंत्री के रूप में कार्य किया है: इंदिरा गांधी (1966), एच.डी. देवेगौड़ा (1996), और डॉ. मनमोहन सिंह (2004)। यह दर्शाता है कि निचले सदन (लोकसभा) की सदस्यता प्रधानमंत्री कार्यालय के लिए संवैधानिक रूप से आवश्यक शर्त नहीं है, हालांकि यह परंपरा है क्योंकि प्रधानमंत्री लोकसभा में बहुमत दल के नेता होते हैं।"
     },
     {
       "q_num": 22,
-      "question": "Select the function(s) which relate to the PM's role as the Leader of the House/Government, and not just the head of the CoMs:\n ऐसे कार्यों का चयन करें जो सदन/सरकार के नेता के रूप में प्रधानमंत्री की भूमिका से संबंधित हों, न कि केवल मंत्रिपरिषद के प्रमुख के रूप में:\n 1. He/she recommends the dissolution of the Lok Sabha to the President at any time. / वह किसी भी समय राष्ट्रपति से लोकसभा भंग करने की सिफारिश करता है।\n 2. He/she presides over the meeting of the Council of Ministers and influences its decisions. / वह मंत्रिपरिषद की बैठक की अध्यक्षता करता है और उसके फैसलों पर असर डालता है।\n 3. He/she announces government policies on the floor of the House. / वह सदन में सरकारी नीतियों की घोषणा करता है।",
+      "question": "Select the function(s) which relate to the PM's role as the Leader of the House/Government, and not just the head of the CoMs:\n1. He/she recommends the dissolution of the Lok Sabha to the President at any time.\n2. He/she presides over the meeting of the Council of Ministers and influences its decisions.\n3. He/she announces government policies on the floor of the House.",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement 2 is incorrect as presiding over the CoMs is the PM's role as the Head of the CoMs, not specifically the Leader of the House. Statements 1 and 3 are correct. Recommending the dissolution of the Lok Sabha is a powerful function related to government stability and the life of the House, and announcing government policies on the floor of the House is a key duty as the chief spokesperson and Leader of the House\n\n📖 हिंदी स्पष्टीकरण:\nकथन 2 गलत है क्योंकि मंत्रिपरिषद की अध्यक्षता करना प्रधानमंत्री की मंत्रिपरिषद के प्रमुख के रूप में भूमिका है, न कि विशेष रूप से सदन के नेता के रूप में। कथन 1 और 3 सही हैं। लोकसभा को भंग करने की सिफारिश करना सरकार की स्थिरता और सदन के जीवन से संबंधित एक शक्तिशाली कार्य है, और सदन के पटल पर सरकारी नीतियों की घोषणा करना मुख्य प्रवक्ता और सदन के नेता के रूप में एक प्रमुख कर्तव्य है।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following correctly describes the appointing authority and the required judicial qualification for the Attorney General of India and the Advocate General of a State?\n निम्नलिखित में से कौन सा भारत के महान्यायवादी और एक राज्य के महाधिवक्ता के लिए नियुक्ति प्राधिकारी और आवश्यक न्यायिक योग्यता का सही वर्णन करता है?",
+      "question": "Which of the following correctly describes the appointing authority and the required judicial qualification for the Attorney General of India and the Advocate General of a State?",
       "options": {
-        "a": "AG: Appointed by President; Qualified to be a High Court Judge / महान्यायवादी : राष्ट्रपति द्वारा नियुक्त; उच्च न्यायालय के न्यायाधीश बनने के योग्य",
-        "b": "Advocate General: Appointed by Governor; Qualified to be a High Court Judge / महाधिवक्ता: राज्यपाल द्वारा नियुक्त; उच्च न्यायालय के न्यायाधीश बनने के योग्य",
-        "c": "AG: Appointed by the Parliament; Qualified to be a Supreme Court Judge / महान्यायवादी : संसद द्वारा नियुक्त; उच्चतम न्यायालय के न्यायाधीश बनने के योग्य",
-        "d": "Advocate General: Appointed by President; Qualified to be a District Court Judge / महाधिवक्ता: राष्ट्रपति द्वारा नियुक्त; जिला न्यायालय के न्यायाधीश बनने के योग्य"
+        "a": "AG: Appointed by President; Qualified to be a High Court Judge",
+        "b": "Advocate General: Appointed by Governor; Qualified to be a High Court Judge",
+        "c": "AG: Appointed by the Parliament; Qualified to be a Supreme Court Judge",
+        "d": "Advocate General: Appointed by President; Qualified to be a District Court Judge"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Advocate General of a State (Article 165) is appointed by the Governor and must be qualified to be a Judge of a High Court, reflecting their role as the highest law officer of the state government. Conversely, the Attorney General for India (Article 76) is appointed by the President and must be qualified to be a Judge of the Supreme Court, befitting their national-level status. This clear distinction is based on the level of the court they must be qualified for.\n\n📖 हिंदी स्पष्टीकरण:\nराज्य का महाधिवक्ता (अनुच्छेद 165) राज्यपाल द्वारा नियुक्त किया जाता है और उसे उच्च न्यायालय का न्यायाधीश बनने के लिए योग्य होना चाहिए, जो राज्य सरकार के सर्वोच्च कानून अधिकारी के रूप में उनकी भूमिका को दर्शाता है। इसके विपरीत, भारत के महान्यायवादी (अनुच्छेद 76) राष्ट्रपति द्वारा नियुक्त किए जाते हैं और उन्हें उच्चतम न्यायालय के न्यायाधीश बनने के लिए योग्य होना चाहिए, जो उनके राष्ट्रीय स्तर के दर्जे के अनुरूप है। यह स्पष्ट अंतर उस न्यायालय के स्तर पर आधारित है जिसके लिए उन्हें योग्य होना चाहिए।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following is/are the correct power(s) of the Prime Minister in relation to his Council of Ministers?\n निम्नलिखित में से कौन सी प्रधानमंत्री की अपनी मंत्रिपरिषद के संबंध में सही शक्ति/शक्तियाँ है/हैं?\n 1. He/she guides, directs, controls, and coordinates the activities of all the ministers. / वह सभी मंत्रियों की गतिविधियों का मार्गदर्शन, निर्देशन, नियंत्रण और समन्वय करता/करती है।\n 2. He/she can recommend persons who can be appointed as ministers by the President. / वह उन व्यक्तियों की सिफारिश कर सकता/सकती है जिन्हें राष्ट्रपति मंत्री नियुक्त कर सकते हैं।\n 3. He/she can ask a minister to resign or advise the President to dismiss him/her in case of a difference of opinion. / वह मतभेद की स्थिति में किसी मंत्री से इस्तीफ़ा मांग सकता/सकती है या राष्ट्रपति को उसे पद से हटाने की सलाह दे सकता/सकती है।",
+      "question": "Which of the following is/are the correct power(s) of the Prime Minister in relation to his Council of Ministers?\n1. He/she guides, directs, controls, and coordinates the activities of all the ministers.\n2. He/she can recommend persons who can be appointed as ministers by the President.\n3. He/she can ask a minister to resign or advise the President to dismiss him/her in case of a difference of opinion.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements correctly describe the PM's comprehensive powers over the Council of Ministers, which flow from his position as the head of the CoMs and the government. He is the leader of the team, responsible for coordination and discipline (1), selecting the team members (2), and enforcing decisions or removing dissenting members (3). These powers collectively reinforce the PM's dominant and central position in the executive branch.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन मंत्रिपरिषद पर प्रधानमंत्री की व्यापक शक्तियों का सही वर्णन करते हैं, जो मंत्रिपरिषद और सरकार के प्रमुख के रूप में उनके पद से उत्पन्न होती हैं। वह टीम के नेता हैं, समन्वय और अनुशासन के लिए जिम्मेदार हैं (1), टीम के सदस्यों का चयन करते हैं (2), और मतभेद होने पर निर्णय लागू करने या असंतुष्ट सदस्यों को हटाने (3) के लिए जिम्मेदार हैं। ये शक्तियाँ सामूहिक रूप से कार्यपालिका शाखा में प्रधानमंत्री की प्रमुख और केंद्रीय स्थिति को मजबूत करती हैं।"
     },
     {
       "q_num": 25,
-      "question": "Which Article of the Constitution mandates that the executive actions of the Government of India shall be expressed to be taken in the name of the President?\n संविधान का कौन सा अनुच्छेद यह अनिवार्य करता है कि भारत सरकार की कार्यकारी कार्रवाइयाँ राष्ट्रपति के नाम पर की जाएंगी?",
+      "question": "Which Article of the Constitution mandates that the executive actions of the Government of India shall be expressed to be taken in the name of the President?",
       "options": {
-        "a": "Article 74 / अनुच्छेद 74",
-        "b": "Article 75 / अनुच्छेद 75",
-        "c": "Article 77 / अनुच्छेद 77",
-        "d": "Article 78 / अनुच्छेद 78"
+        "a": "Article 74",
+        "b": "Article 75",
+        "c": "Article 77",
+        "d": "Article 78"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 77 deals with the 'Conduct of Business of the Government of India.' Clause (1) specifically states that all executive actions of the GOI shall be expressed to be taken in the name of the President. This article reinforces the President's position as the formal, or nominal, executive head, even though the Prime Minister and the CoMs are the ones who make the actual decisions.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 77 'भारत सरकार के कार्य संचालन' से संबंधित है। खंड (1) विशेष रूप से कहता है कि भारत सरकार की सभी कार्यकारी कार्रवाइयाँ राष्ट्रपति के नाम पर की जाएंगी। यह अनुच्छेद राष्ट्रपति की स्थिति को औपचारिक, या नाममात्र, कार्यकारी प्रमुख के रूप में मजबूत करता है, भले ही प्रधानमंत्री और मंत्रिपरिषद ही वास्तविक निर्णय लेने वाले होते हैं।"

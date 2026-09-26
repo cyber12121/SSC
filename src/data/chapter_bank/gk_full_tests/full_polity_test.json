@@ -6,9 +6,9 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding Fundamental Rights:\nमौलिक अधिकारों के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) They can be enforced against both the State and private individuals.\n (a) इन्हें राज्य व निजी व्यक्तियों दोनों के विरुद्ध लागू किया जा सकता है।\n(b) Article 32 is itself a Fundamental Right.\n (b) अनुच्छेद 32 स्वयं एक मौलिक अधिकार है।\n(c) All Fundamental Rights are available to both citizens and non-citizens.\n (c) सभी मौलिक अधिकार नागरिकों व गैर-नागरिकों दोनों को प्राप्त हैं।\nWhich of the above statements are correct? / उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Fundamental Rights:\n(a) They can be enforced against both the State and private individuals.\n(b) Article 32 is itself a Fundamental Right.\n(c) All Fundamental Rights are available to both citizens and non-citizens.\nWhich of the above statements are correct?",
       "options": {
-        "a": "Only b / केवल b",
+        "a": "Only b",
         "b": "a and b",
         "c": "b and c",
         "d": "a and c"
@@ -18,19 +18,19 @@
     },
     {
       "q_num": 2,
-      "question": "Which Schedule of the Constitution deals with Anti-defection law?\nसंविधान की किस अनुसूची में दलबदल विरोधी कानून का प्रावधान है?",
+      "question": "Which Schedule of the Constitution deals with Anti-defection law?",
       "options": {
-        "a": "Fifth Schedule / पांचवीं अनुसूची",
-        "b": "Seventh Schedule / सातवीं अनुसूची",
-        "c": "Tenth Schedule / दसवीं अनुसूची",
-        "d": "Ninth Schedule / नौवीं अनुसूची"
+        "a": "Fifth Schedule",
+        "b": "Seventh Schedule",
+        "c": "Tenth Schedule",
+        "d": "Ninth Schedule"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Tenth Schedule, added by the 52nd Constitutional Amendment (1985), contains provisions against defection.\n\n📖 हिंदी स्पष्टीकरण:\nदसवीं अनुसूची, जिसे 52वें संशोधन द्वारा जोड़ा गया, दलबदल विरोधी प्रावधानों को निर्दिष्ट करती है।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements regarding the Vice-President of India:\nभारत के उपराष्ट्रपति के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) He is the ex-officio Chairman of the Rajya Sabha.\n (a) वह राज्यसभा के पदेन सभापति होते हैं।\n(b) He must be a member of either House of Parliament at the time of election.\n (b) चुनाव के समय उनका संसद के किसी सदन का सदस्य होना अनिवार्य है।\n(c) His removal requires an absolute majority of the Lok Sabha.\n (c) उनके हटाने के लिए लोकसभा में पूर्ण बहुमत आवश्यक होता है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Vice-President of India:\n(a) He is the ex-officio Chairman of the Rajya Sabha.\n(b) He must be a member of either House of Parliament at the time of election.\n(c) His removal requires an absolute majority of the Lok Sabha.\nWhich statements are correct?",
       "options": {
         "a": "a only",
         "b": "a and c",
@@ -42,19 +42,19 @@
     },
     {
       "q_num": 4,
-      "question": "The minimum age to become a member of the Rajya Sabha is:\nराज्यसभा का सदस्य बनने की न्यूनतम आयु कितनी है?",
+      "question": "The minimum age to become a member of the Rajya Sabha is:",
       "options": {
-        "a": "25 years / 25 वर्ष",
-        "b": "30 years / 30 वर्ष",
-        "c": "35 years / 35 वर्ष",
-        "d": "21 years / 21 वर्ष"
+        "a": "25 years",
+        "b": "30 years",
+        "c": "35 years",
+        "d": "21 years"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAs per Article 84, a Rajya Sabha member must be at least 30 years old.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 84 के अनुसार राज्यसभा सदस्य की न्यूनतम आयु 30 वर्ष है।"
     },
     {
       "q_num": 5,
-      "question": "Consider the following statements regarding Money Bills:\nमनी बिल के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) Only the Lok Sabha can introduce a Money Bill.\n (a) मनी बिल केवल लोकसभा में प्रस्तुत किया जा सकता है।\n(b) Rajya Sabha can reject a Money Bill.\n (b) राज्यसभा मनी बिल को अस्वीकार कर सकती है।\n(c) Speaker’s decision on Money Bill classification is final.\n (c) मनी बिल के वर्गीकरण पर स्पीकर का निर्णय अंतिम होता है।\nWhich of the statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Money Bills:\n(a) Only the Lok Sabha can introduce a Money Bill.\n(b) Rajya Sabha can reject a Money Bill.\n(c) Speaker’s decision on Money Bill classification is final.\nWhich of the statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -66,7 +66,7 @@
     },
     {
       "q_num": 6,
-      "question": "Which Article deals with the impeachment of the President?\nराष्ट्रपति के महाभियोग से संबंधित अनुच्छेद कौन-सा है?",
+      "question": "Which Article deals with the impeachment of the President?",
       "options": {
         "a": "Article 61",
         "b": "Article 356",
@@ -78,7 +78,7 @@
     },
     {
       "q_num": 7,
-      "question": "Consider the following statements regarding the Attorney General of India:\nभारत के महाधिवक्ता के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) He is part of the Union Executive.\n (a) वे संघ कार्यपालिका का हिस्सा होते हैं।\n(b) He must have the qualifications to be a Supreme Court judge.\n (b) उनके पास सुप्रीम कोर्ट के न्यायाधीश बनने की योग्यता होनी चाहिए।\n(c) He is a full-time government employee.\n (c) वे पूर्णकालिक सरकारी कर्मचारी होते हैं।\nWhich are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the Attorney General of India:\n(a) He is part of the Union Executive.\n(b) He must have the qualifications to be a Supreme Court judge.\n(c) He is a full-time government employee.\nWhich are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -90,7 +90,7 @@
     },
     {
       "q_num": 8,
-      "question": "Under which Article can the President declare a National Emergency?\nराष्ट्रपति किस अनुच्छेद के तहत राष्ट्रीय आपात घोषित कर सकते हैं?",
+      "question": "Under which Article can the President declare a National Emergency?",
       "options": {
         "a": "Article 350",
         "b": "Article 352",
@@ -102,19 +102,19 @@
     },
     {
       "q_num": 9,
-      "question": "Which of the following is NOT a feature of the Parliamentary system of India?\nनिम्नलिखित में से कौन-सा भारत की संसदीय प्रणाली की विशेषता नहीं है?",
+      "question": "Which of the following is NOT a feature of the Parliamentary system of India?",
       "options": {
-        "a": "Collective responsibility / सामूहिक उत्तरदायित्व",
-        "b": "Nominal executive / औपचारिक कार्यपालिका",
-        "c": "Fixed tenure of the executive / कार्यपालिका का निश्चित कार्यकाल",
-        "d": "Real executive is the Council of Ministers / वास्तविक कार्यपालिका मंत्रिपरिषद"
+        "a": "Collective responsibility",
+        "b": "Nominal executive",
+        "c": "Fixed tenure of the executive",
+        "d": "Real executive is the Council of Ministers"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nExecutive tenure in parliamentary systems depends on majority support, not fixed term.\n\n📖 हिंदी स्पष्टीकरण:\nसंसदीय प्रणाली में कार्यपालिका का कार्यकाल निश्चित नहीं होता; बहुमत पर निर्भर होता है।"
     },
     {
       "q_num": 10,
-      "question": "Consider the following regarding the Election Commission of India:\n भारत के चुनाव आयोग के संबंध में निम्नलिखित पर विचार करें:\n (a) It is a constitutional body. / यह एक संवैधानिक निकाय है।\n (b) Chief Election Commissioner has a tenure of 6 years or up to age 65. / सीईसी का कार्यकाल 6 वर्ष या 65 वर्ष आयु तक होता है।\n (c) Removal of CEC is similar to removal of a Supreme Court Judge. / सीईसी को हटाने की प्रक्रिया सुप्रीम कोर्ट के न्यायाधीश जैसी होती है।\n Which are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following regarding the Election Commission of India:\n(a) It is a constitutional body.\n(b) Chief Election Commissioner has a tenure of 6 years or up to age 65.\n(c) Removal of CEC is similar to removal of a Supreme Court Judge.\nWhich are correct?",
       "options": {
         "a": "a and b",
         "b": "a and c",
@@ -126,7 +126,7 @@
     },
     {
       "q_num": 11,
-      "question": "Which Amendment lowered the voting age from 21 to 18?\nकिस संशोधन ने मतदान आयु 21 से घटाकर 18 वर्ष की?",
+      "question": "Which Amendment lowered the voting age from 21 to 18?",
       "options": {
         "a": "44th Amendment",
         "b": "42nd Amendment",
@@ -138,7 +138,7 @@
     },
     {
       "q_num": 12,
-      "question": "Which Article provides for the Parliamentary Privileges?\nसंसदीय विशेषाधिकार किस अनुच्छेद में दिए गए हैं?",
+      "question": "Which Article provides for the Parliamentary Privileges?",
       "options": {
         "a": "Article 105",
         "b": "Article 110",
@@ -150,7 +150,7 @@
     },
     {
       "q_num": 13,
-      "question": "Consider the following regarding the Governor’s powers:\nराज्यपाल की शक्तियों के संबंध में निम्नलिखित पर विचार करें:\n(a) He can reserve a bill for the consideration of the President.\n (a) वह किसी विधेयक को राष्ट्रपति के विचारार्थ आरक्षित कर सकता है।\n(b) He can dismiss the Chief Minister at his discretion.\n (b) वह अपने विवेक से मुख्यमंत्री को हटा सकता है।\n(c) He is the constitutional head of the state.\n (c) वह राज्य का संवैधानिक मुखिया होता है।\nWhich are correct? / कौन-से सही हैं?",
+      "question": "Consider the following regarding the Governor’s powers:\n(a) He can reserve a bill for the consideration of the President.\n(b) He can dismiss the Chief Minister at his discretion.\n(c) He is the constitutional head of the state.\nWhich are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -162,7 +162,7 @@
     },
     {
       "q_num": 14,
-      "question": "The office of CAG is mentioned in which Article?\nसीएजी का कार्यालय किस अनुच्छेद में वर्णित है?",
+      "question": "The office of CAG is mentioned in which Article?",
       "options": {
         "a": "Article 148",
         "b": "Article 280",
@@ -174,7 +174,7 @@
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements regarding the Union Public Service Commission (UPSC):\n संघ लोक सेवा आयोग (UPSC) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a statutory body.\n (a) यह एक वैधानिक निकाय है।\n (b) Its members are appointed by the President.\n (b) इसके सदस्य राष्ट्रपति द्वारा नियुक्त किए जाते हैं।\n (c) The removal of its members is similar to that of High Court judges.\n (c) इसके सदस्यों को हटाने की प्रक्रिया उच्च न्यायालय के न्यायाधीशों जैसी है।\n Which are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the Union Public Service Commission (UPSC):\n (a) It is a statutory body.\n (b) Its members are appointed by the President.\n (c) The removal of its members is similar to that of High Court judges.\nWhich are correct?",
       "options": {
         "a": "b only",
         "b": "b and c",
@@ -186,7 +186,7 @@
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding Fundamental Duties:\nमौलिक कर्तव्यों के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) They were added by the 42nd Constitutional Amendment.\n (a) इन्हें 42वें संविधान संशोधन द्वारा जोड़ा गया था।\n(b) They are non-justiciable in nature.\n (b) इनका स्वरूप अजस्टiciable (न्यायालय में प्रवर्तनीय नहीं) है।\n(c) The Parliament may impose penalties for violation of these duties.\n (c) संसद इन कर्तव्यों के उल्लंघन पर दंड निर्धारित कर सकती है।\nWhich of the above statements are correct? / उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Fundamental Duties:\n(a) They were added by the 42nd Constitutional Amendment.\n(b) They are non-justiciable in nature.\n(c) The Parliament may impose penalties for violation of these duties.\nWhich of the above statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -198,19 +198,19 @@
     },
     {
       "q_num": 17,
-      "question": "The concept of Judicial Review in India is borrowed from which country?\nभारत में न्यायिक पुनरावलोकन की अवधारणा किस देश से ली गई है?",
+      "question": "The concept of Judicial Review in India is borrowed from which country?",
       "options": {
-        "a": "USA / अमेरिका",
-        "b": "UK / ब्रिटेन",
-        "c": "Canada / कनाडा",
-        "d": "Ireland / आयरलैंड"
+        "a": "USA",
+        "b": "UK",
+        "c": "Canada",
+        "d": "Ireland"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nJudicial Review is inspired from the U.S. Constitution and its landmark Marbury vs. Madison ruling.\n\n📖 हिंदी स्पष्टीकरण:\nन्यायिक पुनरावलोकन की अवधारणा अमेरिका से ली गई है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements regarding the Pardoning Powers of the President:\nराष्ट्रपति की क्षमादान शक्ति के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) He can grant pardon in cases of court-martial.\n (a) वह सैन्य अदालतों के मामलों में क्षमादान दे सकते हैं।\n(b) He can pardon a death sentence.\n (b) वह मृत्युदंड को भी माफ कर सकते हैं।\n(c) His pardoning power is subject to judicial review.\n (c) उनकी क्षमादान शक्ति न्यायिक पुनरावलोकन के अधीन होती है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Pardoning Powers of the President:\n(a) He can grant pardon in cases of court-martial.\n(b) He can pardon a death sentence.\n(c) His pardoning power is subject to judicial review.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -222,7 +222,7 @@
     },
     {
       "q_num": 19,
-      "question": "Which Article deals with the Writ Jurisdiction of the Supreme Court?\nसुप्रीम कोर्ट की रिट अधिकारिता किस अनुच्छेद में दी गई है?",
+      "question": "Which Article deals with the Writ Jurisdiction of the Supreme Court?",
       "options": {
         "a": "Article 32",
         "b": "Article 226",
@@ -234,7 +234,7 @@
     },
     {
       "q_num": 20,
-      "question": "Consider the following statements about the Finance Commission:\nवित्त आयोग के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It is a constitutional body under Article 280.\n (a) यह अनुच्छेद 280 के अंतर्गत एक संवैधानिक निकाय है।\n(b) Its recommendations are binding on the government.\n (b) इसकी सिफारिशें सरकार पर बाध्यकारी होती हैं।\n(c) It is constituted every five years or earlier.\n (c) इसे हर पाँच वर्ष में या उससे पहले गठित किया जाता है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Finance Commission:\n(a) It is a constitutional body under Article 280.\n(b) Its recommendations are binding on the government.\n(c) It is constituted every five years or earlier.\nWhich statements are correct?",
       "options": {
         "a": "a and c",
         "b": "a and b",
@@ -246,7 +246,7 @@
     },
     {
       "q_num": 21,
-      "question": "The provision for Tribunals was inserted in the Constitution by which Amendment?\nसंविधान में अधिकरणों के प्रावधान को किस संशोधन द्वारा जोड़ा गया था?",
+      "question": "The provision for Tribunals was inserted in the Constitution by which Amendment?",
       "options": {
         "a": "42nd Amendment",
         "b": "44th Amendment",
@@ -258,7 +258,7 @@
     },
     {
       "q_num": 22,
-      "question": "Consider the following regarding the Directive Principles of State Policy (DPSPs):\nराज्य के नीति निदेशक तत्वों (DPSP) के संबंध में निम्नलिखित पर विचार करें:\n(a) They are fundamental in governance.\n (a) शासन में ये अत्यंत महत्वपूर्ण माने जाते हैं।\n(b) They are enforceable by the courts.\n (b) ये न्यायालय द्वारा प्रवर्तनीय होते हैं।\n(c) They promote social and economic democracy.\n (c) ये सामाजिक और आर्थिक लोकतंत्र को बढ़ावा देते हैं।\nWhich are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following regarding the Directive Principles of State Policy (DPSPs):\n(a) They are fundamental in governance.\n(b) They are enforceable by the courts.\n(c) They promote social and economic democracy.\nWhich are correct?",
       "options": {
         "a": "a and c",
         "b": "a and b",
@@ -270,7 +270,7 @@
     },
     {
       "q_num": 23,
-      "question": "In which case did the Supreme Court propound the “Basic Structure Doctrine”?\nकिस मामले में सुप्रीम कोर्ट ने “मूल संरचना सिद्धांत” प्रतिपादित किया था?",
+      "question": "In which case did the Supreme Court propound the “Basic Structure Doctrine”?",
       "options": {
         "a": "Golaknath Case",
         "b": "Kesavananda Bharati Case",
@@ -282,19 +282,19 @@
     },
     {
       "q_num": 24,
-      "question": "Which of the following is NOT a writ issued by Indian courts?\nनिम्नलिखित में से कौन-सी रिट भारतीय न्यायालयों द्वारा जारी नहीं की जाती?",
+      "question": "Which of the following is NOT a writ issued by Indian courts?",
       "options": {
-        "a": "Mandamus / मेंडेमस",
-        "b": "Certiorari / सर्टियोरारी",
-        "c": "Injunction / इंजंक्शन",
-        "d": "Quo Warranto / को-वारंटो"
+        "a": "Mandamus",
+        "b": "Certiorari",
+        "c": "Injunction",
+        "d": "Quo Warranto"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nInjunction is a civil remedy, not a constitutional writ.\n\n📖 हिंदी स्पष्टीकरण:\nइंजंक्शन एक सिविल उपाय है, रिट नहीं।"
     },
     {
       "q_num": 25,
-      "question": "Consider the following statements about the Speaker of Lok Sabha:\nलोकसभा अध्यक्ष के बारे में निम्नलिखित कथनों पर विचार करें:\n(a) He continues in office even after Lok Sabha is dissolved.\n (a) लोकसभा भंग होने के बाद भी वे पद पर बने रहते हैं।\n(b) His decision on anti-defection is subject to judicial review.\n (b) दलबदल पर उनका निर्णय न्यायिक समीक्षा के अधीन होता है।\n(c) He must resign if he wishes to vote in the House.\n (c) यदि उन्हें सदन में मतदान करना हो, तो उन्हें पद से इस्तीफा देना पड़ता है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Speaker of Lok Sabha:\n(a) He continues in office even after Lok Sabha is dissolved.\n(b) His decision on anti-defection is subject to judicial review.\n(c) He must resign if he wishes to vote in the House.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -306,7 +306,7 @@
     },
     {
       "q_num": 26,
-      "question": "Which Article deals with the formation of new states and alteration of areas?\nनए राज्यों के गठन व क्षेत्रों में परिवर्तन किस अनुच्छेद में उल्लेखित है?",
+      "question": "Which Article deals with the formation of new states and alteration of areas?",
       "options": {
         "a": "Article 2",
         "b": "Article 3",
@@ -318,7 +318,7 @@
     },
     {
       "q_num": 27,
-      "question": "Consider the following statements regarding Ordinance-making power of the President:\nराष्ट्रपति की अध्यादेश जारी करने की शक्ति के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) Ordinance can be issued only when Parliament is not in session.\n (a) अध्यादेश केवल तब जारी किया जा सकता है जब संसद सत्र में न हो।\n(b) It has the same force as an Act of Parliament.\n (b) इसकी शक्ति संसद के अधिनियम के समान होती है।\n(c) It must be approved by both Houses within six weeks of reassembly.\n (c) संसद के पुनःएकत्र होने के छह सप्ताह के भीतर इसे दोनों सदनों से मंजूरी मिलनी चाहिए।\nWhich are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Ordinance-making power of the President:\n(a) Ordinance can be issued only when Parliament is not in session.\n(b) It has the same force as an Act of Parliament.\n(c) It must be approved by both Houses within six weeks of reassembly.\nWhich are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -330,7 +330,7 @@
     },
     {
       "q_num": 28,
-      "question": "The concept of a Nominal and Real Executive in India is borrowed from which country?\nभारत में औपचारिक और वास्तविक कार्यपालिका की अवधारणा किस देश से ली गई है?",
+      "question": "The concept of a Nominal and Real Executive in India is borrowed from which country?",
       "options": {
         "a": "Ireland",
         "b": "USA",
@@ -342,19 +342,19 @@
     },
     {
       "q_num": 29,
-      "question": "Which of the following is NOT a Fundamental Right?\nनिम्नलिखित में से कौन-सा मौलिक अधिकार नहीं है?",
+      "question": "Which of the following is NOT a Fundamental Right?",
       "options": {
-        "a": "Right to Equality / समानता का अधिकार",
-        "b": "Right to Property / संपत्ति का अधिकार",
-        "c": "Right to Freedom / स्वतंत्रता का अधिकार",
-        "d": "Right against Exploitation / शोषण के विरुद्ध अधिकार"
+        "a": "Right to Equality",
+        "b": "Right to Property",
+        "c": "Right to Freedom",
+        "d": "Right against Exploitation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRight to Property was removed from FRs by the 44th Amendment and made a legal right.\n\n📖 हिंदी स्पष्टीकरण:\n44वें संशोधन द्वारा संपत्ति का अधिकार मौलिक अधिकार से हटाकर वैधानिक अधिकार बनाया गया।"
     },
     {
       "q_num": 30,
-      "question": "Consider the following statements regarding the Comptroller and Auditor General (CAG):\nनियंत्रक एवं महालेखापरीक्षक (CAG) के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) He audits the accounts of both Union and State Governments.\n (a) वह केंद्र और राज्य सरकारों दोनों के लेखों का लेखा परीक्षण करता है।\n(b) His removal is like that of a Supreme Court Judge.\n (b) उनका हटाना सुप्रीम कोर्ट के न्यायाधीश जैसा है।\n(c) He is eligible for further office after retirement.\n (c) सेवानिवृत्ति के बाद वे किसी अन्य सरकारी पद के लिए योग्य होते हैं।\nWhich are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Comptroller and Auditor General (CAG):\n(a) He audits the accounts of both Union and State Governments.\n(b) His removal is like that of a Supreme Court Judge.\n(c) He is eligible for further office after retirement.\nWhich are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -366,7 +366,7 @@
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements regarding Constitutional Amendments:\nसंवैधानिक संशोधनों के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) Some Constitutional Amendments require ratification by at least half of the State Legislatures.\n (a) कुछ संवैधानिक संशोधनों के लिए कम से कम आधे राज्यों की विधानसभाओं की पुष्टि आवश्यक होती है।\n(b) Amendments under Article 368 cannot be challenged in courts.\n (b) अनुच्छेद 368 के अंतर्गत संशोधन न्यायालयों में चुनौती नहीं दिए जा सकते।\n(c) Parliament cannot amend the Basic Structure of the Constitution.\n (c) संसद संविधान की मूल संरचना में संशोधन नहीं कर सकती।\nWhich of the above statements are correct? / उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Constitutional Amendments:\n(a) Some Constitutional Amendments require ratification by at least half of the State Legislatures.\n(b) Amendments under Article 368 cannot be challenged in courts.\n(c) Parliament cannot amend the Basic Structure of the Constitution.\nWhich of the above statements are correct?",
       "options": {
         "a": "a and c",
         "b": "a only",
@@ -378,19 +378,19 @@
     },
     {
       "q_num": 32,
-      "question": "The maximum gap between two sessions of Parliament must not exceed:\nसंसद के दो सत्रों के बीच अधिकतम अंतराल कितना हो सकता है?",
+      "question": "The maximum gap between two sessions of Parliament must not exceed:",
       "options": {
-        "a": "3 months / 3 महीने",
-        "b": "6 months / 6 महीने",
-        "c": "9 months / 9 महीने",
-        "d": "1 year / 1 वर्ष"
+        "a": "3 months",
+        "b": "6 months",
+        "c": "9 months",
+        "d": "1 year"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Constitution mandates that the gap between two sessions cannot exceed six months.\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान के अनुसार दो सत्रों के बीच 6 महीने से अधिक का अंतर नहीं हो सकता।"
     },
     {
       "q_num": 33,
-      "question": "Consider the following statements regarding the National Emergency (Article 352):\nराष्ट्रीय आपात (अनुच्छेद 352) के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It can be proclaimed on the grounds of war, external aggression, or armed rebellion.\n (a) इसे युद्ध, बाह्य आक्रमण या सशस्त्र विद्रोह के आधार पर लगाया जा सकता है।\n(b) It requires written recommendation of the Cabinet.\n (b) इसके लिए मंत्रिमंडल की लिखित सिफारिश आवश्यक है।\n(c) Lok Sabha can revoke the proclamation by a simple majority.\n (c) लोकसभा साधारण बहुमत से इसे रद्द कर सकती है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the National Emergency (Article 352):\n(a) It can be proclaimed on the grounds of war, external aggression, or armed rebellion.\n(b) It requires written recommendation of the Cabinet.\n(c) Lok Sabha can revoke the proclamation by a simple majority.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -402,19 +402,19 @@
     },
     {
       "q_num": 34,
-      "question": "Who decides on the question of disqualification of MPs under Tenth Schedule?\nदसवीं अनुसूची के अंतर्गत सांसदों की अयोग्यता का निर्णय कौन करता है?",
+      "question": "Who decides on the question of disqualification of MPs under Tenth Schedule?",
       "options": {
-        "a": "President / राष्ट्रपति",
-        "b": "Supreme Court / सुप्रीम कोर्ट",
-        "c": "Speaker / स्पीकर",
-        "d": "Election Commission / चुनाव आयोग"
+        "a": "President",
+        "b": "Supreme Court",
+        "c": "Speaker",
+        "d": "Election Commission"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUnder Anti-defection law, the Speaker decides disqualification; decision subject to judicial review.\n\n📖 हिंदी स्पष्टीकरण:\nदलबदल कानून में अयोग्यता पर निर्णय स्पीकर करता है; निर्णय न्यायिक समीक्षा योग्य है।"
     },
     {
       "q_num": 35,
-      "question": "Consider the following about quasi-judicial bodies:\nअर्ध-न्यायिक निकायों के संबंध में निम्नलिखित पर विचार करें:\n(a) They follow principles of natural justice.\n (a) ये प्राकृतिक न्याय के सिद्धांतों का पालन करते हैं।\n(b) Their decisions are always final and cannot be appealed.\n (b) इनके निर्णय हमेशा अंतिम होते हैं और अपील नहीं की जा सकती।\n(c) They discharge functions similar to courts.\n (c) इनके कार्य न्यायालयों जैसे होते हैं।\nWhich are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following about quasi-judicial bodies:\n(a) They follow principles of natural justice.\n(b) Their decisions are always final and cannot be appealed.\n(c) They discharge functions similar to courts.\nWhich are correct?",
       "options": {
         "a": "a and c",
         "b": "a only",
@@ -426,7 +426,7 @@
     },
     {
       "q_num": 36,
-      "question": "Which Article deals with the ordinance-making power of the Governor?\nराज्यपाल की अध्यादेश जारी करने की शक्ति किस अनुच्छेद में दी गई है?",
+      "question": "Which Article deals with the ordinance-making power of the Governor?",
       "options": {
         "a": "Article 123",
         "b": "Article 212",
@@ -438,7 +438,7 @@
     },
     {
       "q_num": 37,
-      "question": "Consider the following statements about the Basic Structure Doctrine:\nमूल संरचना सिद्धांत के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It limits Parliament’s amending power.\n (a) यह संसद की संशोधन शक्ति को सीमित करता है।\n(b) It was affirmed again in the Minerva Mills Case.\n (b) इसे मिनर्वा मिल्स मामले में पुनः पुष्टि मिली।\n(c) It includes supremacy of Parliament as a basic feature.\n (c) संसद की सर्वोच्चता को इसमें मूल विशेषता माना गया है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Basic Structure Doctrine:\n(a) It limits Parliament’s amending power.\n(b) It was affirmed again in the Minerva Mills Case.\n(c) It includes supremacy of Parliament as a basic feature.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -450,7 +450,7 @@
     },
     {
       "q_num": 38,
-      "question": "In which Article is the post of Chief Minister mentioned?\nमुख्यमंत्री के पद का उल्लेख किस अनुच्छेद में है?",
+      "question": "In which Article is the post of Chief Minister mentioned?",
       "options": {
         "a": "Article 153",
         "b": "Article 154",
@@ -462,19 +462,19 @@
     },
     {
       "q_num": 39,
-      "question": "The minimum number of judges required for a Constitutional Bench of the Supreme Court is:\nसुप्रीम कोर्ट की संवैधानिक पीठ के लिए न्यूनतम न्यायाधीशों की संख्या कितनी होती है?",
+      "question": "The minimum number of judges required for a Constitutional Bench of the Supreme Court is:",
       "options": {
-        "a": "Three / तीन",
-        "b": "Seven / सात",
-        "c": "Five / पाँच",
-        "d": "Nine / नौ"
+        "a": "Three",
+        "b": "Seven",
+        "c": "Five",
+        "d": "Nine"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAny case involving substantial constitutional interpretation requires a minimum 5-judge bench.\n\n📖 हिंदी स्पष्टीकरण:\nसंवैधानिक व्याख्या वाले मामलों में न्यूनतम 5 न्यायाधीशों की पीठ होती है।"
     },
     {
       "q_num": 40,
-      "question": "Consider the following regarding the Public Accounts Committee (PAC):\nलोक लेखा समिति (PAC) के संबंध में निम्नलिखित पर विचार करें:\n(a) It examines the audited accounts of the government.\n (a) यह सरकार के लेखापरीक्षित खातों की जांच करती है।\n(b) Its chairman is always from the ruling party.\n (b) इसका अध्यक्ष हमेशा सत्तारूढ़ दल से होता है।\n(c) CAG acts as a guide, friend and philosopher to the committee.\n (c) सीएजी समिति के मार्गदर्शक के रूप में कार्य करता है।\nWhich are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following regarding the Public Accounts Committee (PAC):\n(a) It examines the audited accounts of the government.\n(b) Its chairman is always from the ruling party.\n(c) CAG acts as a guide, friend and philosopher to the committee.\nWhich are correct?",
       "options": {
         "a": "a and c",
         "b": "a only",
@@ -486,7 +486,7 @@
     },
     {
       "q_num": 41,
-      "question": "Which of the following is NOT an All-India Service?\nनिम्नलिखित में से कौन-सी अखिल भारतीय सेवा नहीं है?",
+      "question": "Which of the following is NOT an All-India Service?",
       "options": {
         "a": "IAS",
         "b": "IPS",
@@ -498,7 +498,7 @@
     },
     {
       "q_num": 42,
-      "question": "Consider the following statements regarding the election of the President of India:\nभारत के राष्ट्रपति के चुनाव के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) Value of MP's vote is uniform.\n (a) सांसद के मत का मूल्य समान होता है।\n(b) Value of MLA's vote varies from state to state.\n (b) विधायक के मत का मूल्य राज्य के अनुसार बदलता है।\n(c) Nominated members cannot vote in the election.\n (c) मनोनीत सदस्य चुनाव में मतदान नहीं कर सकते।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the election of the President of India:\n(a) Value of MP's vote is uniform.\n(b) Value of MLA's vote varies from state to state.\n(c) Nominated members cannot vote in the election.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -510,7 +510,7 @@
     },
     {
       "q_num": 43,
-      "question": "Which Article deals with the original jurisdiction of the Supreme Court?\nसुप्रीम कोर्ट की मूल अधिकारिता किस अनुच्छेद में दी गई है?",
+      "question": "Which Article deals with the original jurisdiction of the Supreme Court?",
       "options": {
         "a": "Article 131",
         "b": "Article 132",
@@ -522,7 +522,7 @@
     },
     {
       "q_num": 44,
-      "question": "Consider the following statements regarding the Union Council of Ministers:\nकेंद्रीय मंत्रिपरिषद के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It is collectively responsible to the Lok Sabha.\n (a) यह लोकसभा के प्रति सामूहिक रूप से उत्तरदायी होती है।\n(b) Ministers must be MPs at the time of their appointment.\n (b) मंत्रियों का नियुक्ति के समय सांसद होना अनिवार्य है।\n(c) A minister who is not an MP must get elected within six months.\n (c) जो मंत्री सांसद नहीं है, उसे छह महीने के भीतर निर्वाचित होना होता है।\nWhich statements are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the Union Council of Ministers:\n(a) It is collectively responsible to the Lok Sabha.\n(b) Ministers must be MPs at the time of their appointment.\n(c) A minister who is not an MP must get elected within six months.\nWhich statements are correct?",
       "options": {
         "a": "a and c",
         "b": "a and b",
@@ -534,7 +534,7 @@
     },
     {
       "q_num": 45,
-      "question": "The Inter-State Council is constituted under which Article?\nअंतर-राज्य परिषद किस अनुच्छेद के तहत गठित की जाती है?",
+      "question": "The Inter-State Council is constituted under which Article?",
       "options": {
         "a": "Article 262",
         "b": "Article 263",
@@ -546,7 +546,7 @@
     },
     {
       "q_num": 46,
-      "question": "Consider the following statements regarding the Preamble:\nउद्घोषिका (Preamble) के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It is a part of the Constitution.\n (a) यह संविधान का हिस्सा है।\n(b) It can be amended under Article 368.\n (b) इसे अनुच्छेद 368 के तहत संशोधित किया जा सकता है।\n(c) It is enforceable in courts.\n (c) यह न्यायालयों में प्रवर्तनीय है।\nWhich of the above statements are correct? / उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Preamble:\n(a) It is a part of the Constitution.\n(b) It can be amended under Article 368.\n(c) It is enforceable in courts.\nWhich of the above statements are correct?",
       "options": {
         "a": "a and b",
         "b": "a and c",
@@ -558,7 +558,7 @@
     },
     {
       "q_num": 47,
-      "question": "Which Constitutional Amendment introduced the Anti-defection law?\nकिस संविधान संशोधन ने दलबदल विरोधी कानून को जोड़ा?",
+      "question": "Which Constitutional Amendment introduced the Anti-defection law?",
       "options": {
         "a": "44th Amendment",
         "b": "52nd Amendment",
@@ -570,7 +570,7 @@
     },
     {
       "q_num": 48,
-      "question": "Consider the following statements about the Union List:\nसंघ सूची के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It contains subjects of national importance.\n (a) इसमें राष्ट्रीय महत्व के विषय शामिल होते हैं।\n(b) Parliament has exclusive power to legislate on these subjects.\n (b) इन विषयों पर विधि बनाने का पूर्ण अधिकार संसद का होता है।\n(c) States can legislate on Union List subjects with President’s permission.\n (c) राष्ट्रपति की अनुमति से राज्य संघ सूची पर विधि बना सकते हैं।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Union List:\n(a) It contains subjects of national importance.\n(b) Parliament has exclusive power to legislate on these subjects.\n(c) States can legislate on Union List subjects with President’s permission.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -582,7 +582,7 @@
     },
     {
       "q_num": 49,
-      "question": "Under which Article can the Supreme Court issue writs for purposes other than Fundamental Rights?\nसुप्रीम कोर्ट मौलिक अधिकारों के अतिरिक्त अन्य कारणों के लिए किस अनुच्छेद के तहत रिट जारी कर सकता है?",
+      "question": "Under which Article can the Supreme Court issue writs for purposes other than Fundamental Rights?",
       "options": {
         "a": "Article 32",
         "b": "Article 136",
@@ -594,7 +594,7 @@
     },
     {
       "q_num": 50,
-      "question": "Consider the following statements regarding the Supreme Court:\nसुप्रीम कोर्ट के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It is a court of record.\n (a) यह अभिलेखीय न्यायालय है।\n(b) It has original, appellate, and advisory jurisdiction.\n (b) इसके पास मूल, अपीलीय व परामर्शी अधिकारिता होती है।\n(c) Its decisions are binding on all courts except High Courts.\n (c) इसके निर्णय उच्च न्यायालयों को छोड़कर सभी न्यायालयों पर बाध्यकारी होते हैं।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Supreme Court:\n(a) It is a court of record.\n(b) It has original, appellate, and advisory jurisdiction.\n(c) Its decisions are binding on all courts except High Courts.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -606,7 +606,7 @@
     },
     {
       "q_num": 51,
-      "question": "Which Constitutional Amendment made Right to Education a Fundamental Right?\nकिस संविधान संशोधन ने शिक्षा के अधिकार को मौलिक अधिकार बनाया?",
+      "question": "Which Constitutional Amendment made Right to Education a Fundamental Right?",
       "options": {
         "a": "73rd Amendment",
         "b": "86th Amendment",
@@ -618,7 +618,7 @@
     },
     {
       "q_num": 52,
-      "question": "Consider the following statements regarding the Rajya Sabha:\nराज्यसभा के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It is a permanent house.\n (a) यह एक स्थायी सदन है।\n(b) One-third of its members retire every second year.\n (b) इसके एक-तिहाई सदस्य हर दो वर्ष में सेवानिवृत्त होते हैं।\n(c) The Vice-President is its ex-officio Chairman.\n (c) उपराष्ट्रपति इसके पदेन सभापति होते हैं।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Rajya Sabha:\n(a) It is a permanent house.\n(b) One-third of its members retire every second year.\n(c) The Vice-President is its ex-officio Chairman.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "a and c",
@@ -630,19 +630,19 @@
     },
     {
       "q_num": 53,
-      "question": "Appointment of the Chief Election Commissioner (CEC) is made by:\nमुख्य चुनाव आयुक्त (CEC) की नियुक्ति कौन करता है?",
+      "question": "Appointment of the Chief Election Commissioner (CEC) is made by:",
       "options": {
-        "a": "Prime Minister / प्रधानमंत्री",
-        "b": "President / राष्ट्रपति",
-        "c": "Parliament / संसद",
-        "d": "Supreme Court / सुप्रीम कोर्ट"
+        "a": "Prime Minister",
+        "b": "President",
+        "c": "Parliament",
+        "d": "Supreme Court"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCEC is appointed by the President under Article 324.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 324 के अनुसार CEC की नियुक्ति राष्ट्रपति करते हैं।"
     },
     {
       "q_num": 54,
-      "question": "Consider the following statements about Pardoning Powers of Governor:\nराज्यपाल की क्षमादान शक्ति के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) He cannot pardon a death sentence.\n (a) वे मृत्युदंड को माफ नहीं कर सकते।\n(b) He can suspend, remit, or commute sentences under state laws.\n (b) वे राज्य कानूनों के अंतर्गत दंड को स्थगित, लघु या परिवर्तित कर सकते हैं।\n(c) His pardoning power is wider than the President.\n (c) उनकी क्षमादान शक्ति राष्ट्रपति से अधिक व्यापक है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about Pardoning Powers of Governor:\n(a) He cannot pardon a death sentence.\n(b) He can suspend, remit, or commute sentences under state laws.\n(c) His pardoning power is wider than the President.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b only",
@@ -654,7 +654,7 @@
     },
     {
       "q_num": 55,
-      "question": "Which Article deals with the establishment of High Courts?\nउच्च न्यायालयों की स्थापना किस अनुच्छेद में दी गई है?",
+      "question": "Which Article deals with the establishment of High Courts?",
       "options": {
         "a": "Article 214",
         "b": "Article 224",
@@ -666,7 +666,7 @@
     },
     {
       "q_num": 56,
-      "question": "Consider the following about the Constitutional position of the Governor:\nराज्यपाल की संवैधानिक स्थिति के संबंध में निम्नलिखित पर विचार करें:\n(a) He is an agent of the Centre.\n (a) वे केंद्र के एजेंट होते हैं।\n(b) He is a nominal head of the State.\n (b) वे राज्य के औपचारिक प्रमुख होते हैं।\n(c) He must act on the aid and advice of the Council of Ministers.\n (c) उन्हें मंत्रिपरिषद की सलाह पर कार्य करना अनिवार्य है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following about the Constitutional position of the Governor:\n(a) He is an agent of the Centre.\n(b) He is a nominal head of the State.\n(c) He must act on the aid and advice of the Council of Ministers.\nWhich statements are correct?",
       "options": {
         "a": "b and c",
         "b": "a and b",
@@ -678,19 +678,19 @@
     },
     {
       "q_num": 57,
-      "question": "Which body recommends the distribution of taxes between Union and States?\nकेंद्र और राज्यों के बीच कर-वितरण की सिफारिश कौन करता है?",
+      "question": "Which body recommends the distribution of taxes between Union and States?",
       "options": {
-        "a": "Planning Commission / योजना आयोग",
-        "b": "NITI Aayog / नीति आयोग",
-        "c": "Finance Commission / वित्त आयोग",
-        "d": "GST Council / जीएसटी परिषद"
+        "a": "Planning Commission",
+        "b": "NITI Aayog",
+        "c": "Finance Commission",
+        "d": "GST Council"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFinance Commission recommends tax distribution and grants-in-aid under Article 280.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 280 के तहत वित्त आयोग कर-वितरण की सिफारिश करता है।"
     },
     {
       "q_num": 58,
-      "question": "Consider the following statements about the Lok Sabha:\nलोकसभा के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It is also known as the House of the People.\n (a) इसे जनता का सदन कहा जाता है।\n(b) Its members are elected by proportional representation.\n (b) इसके सदस्य आनुपातिक प्रतिनिधित्व से चुने जाते हैं।\n(c) Money Bills can be introduced only in this House.\n (c) मनी बिल केवल इसी सदन में प्रस्तुत किए जा सकते हैं।\nWhich statements are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements about the Lok Sabha:\n(a) It is also known as the House of the People.\n(b) Its members are elected by proportional representation.\n(c) Money Bills can be introduced only in this House.\nWhich statements are correct?",
       "options": {
         "a": "a and c",
         "b": "a only",
@@ -702,19 +702,19 @@
     },
     {
       "q_num": 59,
-      "question": "Who appoints the judges of the Supreme Court?\nसुप्रीम कोर्ट के न्यायाधीशों की नियुक्ति कौन करता है?",
+      "question": "Who appoints the judges of the Supreme Court?",
       "options": {
-        "a": "Prime Minister / प्रधानमंत्री",
-        "b": "President / राष्ट्रपति",
-        "c": "Chief Justice alone / केवल मुख्य न्यायाधीश",
-        "d": "Parliament / संसद"
+        "a": "Prime Minister",
+        "b": "President",
+        "c": "Chief Justice alone",
+        "d": "Parliament"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSupreme Court judges are appointed by the President, generally following Collegium recommendation.\n\n📖 हिंदी स्पष्टीकरण:\nसुप्रीम कोर्ट न्यायाधीशों की नियुक्ति राष्ट्रपति करते हैं, प्रायः कॉलेजियम की सिफारिश के आधार पर।"
     },
     {
       "q_num": 60,
-      "question": "Consider the following statements regarding the 73rd Constitutional Amendment:\n73वें संविधान संशोधन के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It granted constitutional status to Panchayati Raj Institutions.\n (a) इसने पंचायती राज संस्थाओं को संवैधानिक दर्जा प्रदान किया।\n(b) It added the Eleventh Schedule to the Constitution.\n (b) इसने संविधान में ग्यारहवीं अनुसूची जोड़ी।\n(c) It mandates reservation for women in Panchayats.\n (c) यह पंचायतों में महिलाओं के लिए आरक्षण अनिवार्य करता है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 73rd Constitutional Amendment:\n(a) It granted constitutional status to Panchayati Raj Institutions.\n(b) It added the Eleventh Schedule to the Constitution.\n(c) It mandates reservation for women in Panchayats.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -726,7 +726,7 @@
     },
     {
       "q_num": 61,
-      "question": "Consider the following statements regarding the National Commission for Scheduled Castes (NCSC):\nअनुसूचित जाति आयोग (NCSC) के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It was created by the 89th Constitutional Amendment Act.\n (a) इसे 89वें संविधान संशोधन अधिनियम द्वारा बनाया गया था।\n(b) It investigates all matters relating to safeguards of SCs.\n (b) यह अनुसूचित जातियों से संबंधित सभी संरक्षण उपायों की जांच करता है।\n(c) Its chairperson has the rank of a Union Cabinet Minister.\n (c) इसके अध्यक्ष का दर्जा केंद्रीय मंत्रिमंडल मंत्री के समान होता है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the National Commission for Scheduled Castes (NCSC):\n(a) It was created by the 89th Constitutional Amendment Act.\n(b) It investigates all matters relating to safeguards of SCs.\n(c) Its chairperson has the rank of a Union Cabinet Minister.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -738,7 +738,7 @@
     },
     {
       "q_num": 62,
-      "question": "Which Article deals with the definition of ‘Money Bill’?\n‘मनी बिल’ की परिभाषा किस अनुच्छेद में दी गई है?",
+      "question": "Which Article deals with the definition of ‘Money Bill’?",
       "options": {
         "a": "Article 110",
         "b": "Article 111",
@@ -750,7 +750,7 @@
     },
     {
       "q_num": 63,
-      "question": "Consider the following about the National Human Rights Commission (NHRC):\nराष्ट्रीय मानवाधिकार आयोग (NHRC) के संबंध में निम्नलिखित पर विचार करें:\n(a) It is a constitutional body.\n (a) यह एक संवैधानिक निकाय है।\n(b) It is headed by a former Chief Justice of India.\n (b) इसका अध्यक्ष पूर्व मुख्य न्यायाधीश होता है।\n(c) It can inquire into violation of human rights by public servants.\n (c) यह लोक सेवकों द्वारा मानवाधिकार उल्लंघन की जांच कर सकता है।\nWhich are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following about the National Human Rights Commission (NHRC):\n(a) It is a constitutional body.\n(b) It is headed by a former Chief Justice of India.\n(c) It can inquire into violation of human rights by public servants.\nWhich are correct?",
       "options": {
         "a": "b and c",
         "b": "a and b",
@@ -762,19 +762,19 @@
     },
     {
       "q_num": 64,
-      "question": "Which Schedule contains provisions for administration of tribal areas in the Northeast?\nउत्तर-पूर्व में जनजातीय क्षेत्रों के प्रशासन के प्रावधान किस अनुसूची में हैं?",
+      "question": "Which Schedule contains provisions for administration of tribal areas in the Northeast?",
       "options": {
-        "a": "Fifth Schedule / पाँचवीं अनुसूची",
-        "b": "Sixth Schedule / छठी अनुसूची",
-        "c": "Seventh Schedule / सातवीं अनुसूची",
-        "d": "Ninth Schedule / नौवीं अनुसूची"
+        "a": "Fifth Schedule",
+        "b": "Sixth Schedule",
+        "c": "Seventh Schedule",
+        "d": "Ninth Schedule"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSixth Schedule provides for autonomous tribal districts in the Northeast.\n\n📖 हिंदी स्पष्टीकरण:\nछठी अनुसूची उत्तर-पूर्व के स्वायत्त जनजातीय क्षेत्रों के लिए है।"
     },
     {
       "q_num": 65,
-      "question": "Consider the following statements regarding Fundamental Rights:\nमौलिक अधिकारों के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) Article 20 and 21 cannot be suspended even during National Emergency.\n (a) अनुच्छेद 20 और 21 राष्ट्रीय आपात के दौरान भी निलंबित नहीं किए जा सकते।\n(b) Article 19 is suspended automatically during National Emergency on grounds of war or aggression.\n (b) युद्ध या बाहरी आक्रमण आधारित राष्ट्रीय आपात में अनुच्छेद 19 स्वतः निलंबित हो जाता है।\n(c) Article 32 can be suspended only by Constitutional Amendment.\n (c) अनुच्छेद 32 केवल संविधान संशोधन द्वारा निलंबित किया जा सकता है।\nWhich statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Fundamental Rights:\n(a) Article 20 and 21 cannot be suspended even during National Emergency.\n(b) Article 19 is suspended automatically during National Emergency on grounds of war or aggression.\n(c) Article 32 can be suspended only by Constitutional Amendment.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -786,19 +786,19 @@
     },
     {
       "q_num": 66,
-      "question": "Which of the following is NOT a feature of the Indian Federation?\nनिम्नलिखित में से कौन-सा भारतीय संघीय व्यवस्था की विशेषता नहीं है?",
+      "question": "Which of the following is NOT a feature of the Indian Federation?",
       "options": {
-        "a": "Rigid Constitution / कठोर संविधान",
-        "b": "Dual Polity / द्वैध शासन",
-        "c": "Equal powers to Centre and States / केंद्र और राज्यों को समान शक्तियाँ",
-        "d": "Independent Judiciary / स्वतंत्र न्यायपालिका"
+        "a": "Rigid Constitution",
+        "b": "Dual Polity",
+        "c": "Equal powers to Centre and States",
+        "d": "Independent Judiciary"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCentre has more powers in Indian federalism; power distribution is not equal.\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संघीय व्यवस्था में केंद्र को अधिक अधिकार हैं; शक्तियाँ समान नहीं।"
     },
     {
       "q_num": 67,
-      "question": "Consider the following statements regarding the Public Interest Litigation (PIL):\nलोक हित याचिका (PIL) के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It allows any person to approach courts for public welfare.\n (a) यह किसी भी व्यक्ति को लोक-हित के मामलों में न्यायालय जाने की अनुमति देता है।\n(b) It was introduced by the Supreme Court in the 1980s.\n (b) इसे 1980 के दशक में सुप्रीम कोर्ट द्वारा विकसित किया गया।\n(c) It is explicitly defined in the Constitution.\n (c) इसका स्पष्ट उल्लेख संविधान में किया गया है।\nWhich statements are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the Public Interest Litigation (PIL):\n(a) It allows any person to approach courts for public welfare.\n(b) It was introduced by the Supreme Court in the 1980s.\n(c) It is explicitly defined in the Constitution.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -810,19 +810,19 @@
     },
     {
       "q_num": 68,
-      "question": "Which body recommends Minimum Support Prices (MSP) in India?\nभारत में न्यूनतम समर्थन मूल्य (MSP) की सिफारिश कौन करता है?",
+      "question": "Which body recommends Minimum Support Prices (MSP) in India?",
       "options": {
-        "a": "NITI Aayog / नीति आयोग",
+        "a": "NITI Aayog",
         "b": "Commission for Agricultural Costs and Prices (CACP)",
-        "c": "Ministry of Agriculture / कृषि मंत्रालय",
-        "d": "Finance Commission / वित्त आयोग"
+        "c": "Ministry of Agriculture",
+        "d": "Finance Commission"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCACP recommends MSP; government announces the final price.\n\n📖 हिंदी स्पष्टीकरण:\nMSP की सिफारिश CACP करता है; अंतिम मूल्य सरकार घोषित करती है।"
     },
     {
       "q_num": 69,
-      "question": "Consider the following statements regarding the Speaker of Lok Sabha:\n लोकसभा अध्यक्ष के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) He presides over joint sittings of Parliament.\n (a) वे संसद के संयुक्त सत्रों की अध्यक्षता करते हैं।\n (b) He is the final interpreter of parliamentary rules.\n (b) वे संसदीय नियमों के अंतिम व्याख्याता होते हैं।\n (c) He is removed by a simple majority of members present and voting.\n (c) उन्हें उपस्थित और मतदान करने वाले सदस्यों के साधारण बहुमत से हटाया जा सकता है।\n Which statements are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the Speaker of Lok Sabha:\n (a) He presides over joint sittings of Parliament.\n (b) He is the final interpreter of parliamentary rules.\n (c) He is removed by a simple majority of members present and voting.\nWhich statements are correct?",
       "options": {
         "a": "b and c",
         "b": "a and b",
@@ -834,7 +834,7 @@
     },
     {
       "q_num": 70,
-      "question": "The ‘Right to Constitutional Remedies’ is given under which Article?\n‘संवैधानिक उपचार का अधिकार’ किस अनुच्छेद में दिया गया है?",
+      "question": "The ‘Right to Constitutional Remedies’ is given under which Article?",
       "options": {
         "a": "Article 19",
         "b": "Article 21",
@@ -846,7 +846,7 @@
     },
     {
       "q_num": 71,
-      "question": "Consider the following statements regarding the 74th Constitutional Amendment:\n74वें संविधान संशोधन के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) It granted constitutional status to Urban Local Bodies.\n (a) इसने शहरी स्थानीय निकायों को संवैधानिक दर्जा प्रदान किया।\n(b) It introduced the Twelfth Schedule.\n (b) इसने बारहवीं अनुसूची जोड़ी।\n(c) It made District Planning Committees mandatory.\n (c) इसने जिला योजना समितियों को अनिवार्य किया।\nWhich statements are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the 74th Constitutional Amendment:\n(a) It granted constitutional status to Urban Local Bodies.\n(b) It introduced the Twelfth Schedule.\n(c) It made District Planning Committees mandatory.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",
@@ -858,19 +858,19 @@
     },
     {
       "q_num": 72,
-      "question": "Who administers the oath of office to the Governor?\nराज्यपाल को पद की शपथ कौन दिलाता है?",
+      "question": "Who administers the oath of office to the Governor?",
       "options": {
-        "a": "Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "b": "President / राष्ट्रपति",
-        "c": "Chief Justice of the High Court / उच्च न्यायालय के मुख्य न्यायाधीश",
-        "d": "Speaker of the Legislative Assembly / विधानसभा अध्यक्ष"
+        "a": "Chief Justice of India",
+        "b": "President",
+        "c": "Chief Justice of the High Court",
+        "d": "Speaker of the Legislative Assembly"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Governor is administered oath by the Chief Justice of the State High Court.\n\n📖 हिंदी स्पष्टीकरण:\nराज्यपाल को शपथ उच्च न्यायालय के मुख्य न्यायाधीश दिलाते हैं।"
     },
     {
       "q_num": 73,
-      "question": "Consider the following regarding the Election Commission of India:\nभारत के चुनाव आयोग के संबंध में निम्नलिखित पर विचार करें:\n(a) It conducts elections to Parliament, State Legislatures, and local bodies.\n (a) यह संसद, राज्य विधानसभाओं और स्थानीय निकायों के चुनाव कराता है।\n(b) It consists of the CEC and other Election Commissioners.\n (b) यह मुख्य चुनाव आयुक्त और अन्य आयुक्तों से मिलकर बनता है।\n(c) It is an independent constitutional body.\n (c) यह एक स्वतंत्र संवैधानिक निकाय है।\nWhich of the statements are correct? / कौन-से कथन सही हैं?",
+      "question": "Consider the following regarding the Election Commission of India:\n(a) It conducts elections to Parliament, State Legislatures, and local bodies.\n(b) It consists of the CEC and other Election Commissioners.\n(c) It is an independent constitutional body.\nWhich of the statements are correct?",
       "options": {
         "a": "b and c",
         "b": "a and b",
@@ -882,7 +882,7 @@
     },
     {
       "q_num": 74,
-      "question": "Which Article provides for the establishment of the Finance Commission?\nवित्त आयोग की स्थापना किस अनुच्छेद में की गई है?",
+      "question": "Which Article provides for the establishment of the Finance Commission?",
       "options": {
         "a": "Article 275",
         "b": "Article 280",
@@ -894,7 +894,7 @@
     },
     {
       "q_num": 75,
-      "question": "Consider the following statements regarding the High Courts:\nउच्च न्यायालयों के संबंध में निम्नलिखित कथनों पर विचार करें:\n(a) They can issue writs for both Fundamental Rights and other legal rights.\n (a) वे मौलिक अधिकारों तथा अन्य कानूनी अधिकारों दोनों के लिए रिट जारी कर सकते हैं।\n(b) They have supervisory jurisdiction over subordinate courts.\n (b) इनकी अधीनस्थ न्यायालयों पर पर्यवेक्षी अधिकारिता होती है।\n(c) Their jurisdiction is uniform throughout India.\n (c) इनकी अधिकारिता पूरे भारत में समान होती है।\nWhich statements are correct? / कौन-से सही हैं?",
+      "question": "Consider the following statements regarding the High Courts:\n(a) They can issue writs for both Fundamental Rights and other legal rights.\n(b) They have supervisory jurisdiction over subordinate courts.\n(c) Their jurisdiction is uniform throughout India.\nWhich statements are correct?",
       "options": {
         "a": "a and b",
         "b": "b and c",

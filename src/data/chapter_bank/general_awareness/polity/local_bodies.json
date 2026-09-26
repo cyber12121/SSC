@@ -6,55 +6,55 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The 3-tier Panchayati Raj System was recommended by which committee?\n 3-स्तरीय पंचायती राज प्रणाली की सिफारिश किस समिति ने की थी?",
+      "question": "The 3-tier Panchayati Raj System was recommended by which committee?",
       "options": {
-        "a": "L.M. Singhvi Committee / एल.एम. सिंघवी समिति",
-        "b": "Ashok Mehta Committee / अशोक मेहता समिति",
-        "c": "Balwant Rai Mehta Committee / बलवंत राय मेहता समिति",
-        "d": "G.V.K. Rao Committee / जी.वी.के. राव समिति"
+        "a": "L.M. Singhvi Committee",
+        "b": "Ashok Mehta Committee",
+        "c": "Balwant Rai Mehta Committee",
+        "d": "G.V.K. Rao Committee"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Balwant Rai Mehta Committee, 1957, recommended the establishment of the 3-tier Panchayati Raj System for democratic decentralization, which includes Panchayats at the Village, Intermediate, and District levels\n\n📖 हिंदी स्पष्टीकरण:\nबलवंत राय मेहता समिति, 1957, ने लोकतांत्रिक विकेंद्रीकरण के लिए 3-स्तरीय पंचायती राज प्रणाली की स्थापना की सिफारिश की थी, जिसमें ग्राम, मध्यवर्ती और जिला स्तर पर पंचायतें शामिल हैं।"
     },
     {
       "q_num": 2,
-      "question": "Panchayati Raj was first established in which state of India?\n पंचायती राज सर्वप्रथम भारत के किस राज्य में स्थापित किया गया था?",
+      "question": "Panchayati Raj was first established in which state of India?",
       "options": {
-        "a": "Andhra Pradesh / आंध्र प्रदेश",
-        "b": "Rajasthan / राजस्थान",
-        "c": "Gujarat / गुजरात",
-        "d": "Maharashtra / महाराष्ट्र"
+        "a": "Andhra Pradesh",
+        "b": "Rajasthan",
+        "c": "Gujarat",
+        "d": "Maharashtra"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRajasthan was the first state to establish Panchayati Raj at Nagaur on October 2, 1959. This marked the formal launch of the system in India following the recommendations of the Balwant Rai Mehta Committee\n\n📖 हिंदी स्पष्टीकरण:\nबलवंत राय मेहता समिति की सिफारिशों के बाद भारत में इस प्रणाली के औपचारिक शुभारंभ को चिह्नित करते हुए, राजस्थान 2 अक्टूबर 1959 को नागौर में पंचायती राज स्थापित करने वाला पहला राज्य था।"
     },
     {
       "q_num": 3,
-      "question": "Which Constitutional Amendment Act introduced the Panchayati Raj system in India?\n किस संवैधानिक संशोधन अधिनियम ने भारत में पंचायती राज प्रणाली की शुरुआत की?",
+      "question": "Which Constitutional Amendment Act introduced the Panchayati Raj system in India?",
       "options": {
-        "a": "74th Amendment Act, 1992 / 74वां संशोधन अधिनियम, 1992",
-        "b": "61st Amendment Act, 1989 / 61वां संशोधन अधिनियम, 1989",
-        "c": "73rd Amendment Act, 1992 / 73वां संशोधन अधिनियम, 1992",
-        "d": "42nd Amendment Act, 1976 / 42वां संशोधन अधिनियम, 1976"
+        "a": "74th Amendment Act, 1992",
+        "b": "61st Amendment Act, 1989",
+        "c": "73rd Amendment Act, 1992",
+        "d": "42nd Amendment Act, 1976"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe 73rd Amendment Act, 1992, gave constitutional status to Panchayati Raj Institutions and inserted a new Part IX and the Eleventh Schedule into the Constitution / 73\n\n📖 हिंदी स्पष्टीकरण:\nवां संशोधन अधिनियम, 1992, ने पंचायती राज संस्थाओं को संवैधानिक दर्जा दिया और संविधान में एक नया भाग IX और ग्यारहवीं अनुसूची जोड़ी।"
     },
     {
       "q_num": 4,
-      "question": "The provisions related to Panchayats are contained in which Part of the Indian Constitution?\n पंचायतों से संबंधित प्रावधान भारतीय संविधान के किस भाग में निहित हैं?",
+      "question": "The provisions related to Panchayats are contained in which Part of the Indian Constitution?",
       "options": {
-        "a": "Part IXA / भाग IXA",
-        "b": "Part X / भाग X",
-        "c": "Part IX / भाग IX",
-        "d": "Part VIII / भाग VIII"
+        "a": "Part IXA",
+        "b": "Part X",
+        "c": "Part IX",
+        "d": "Part VIII"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPart IX of the Constitution, titled 'The Panchayats', was inserted by the 73rd Amendment Act, 1992, and covers Articles 243 to 243-O, dealing with the structure and functions of Panchayats\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान का भाग IX, जिसका शीर्षक 'पंचायतें' है, 73वें संशोधन अधिनियम, 1992 द्वारा जोड़ा गया था, और यह पंचायतों की संरचना और कार्यों से संबंधित अनुच्छेद 243 से 243-O तक को शामिल करता है।"
     },
     {
       "q_num": 5,
-      "question": "The Panchayats are empowered to perform how many functional subjects as listed in the relevant Schedule?\n पंचायतों को संबंधित अनुसूची में सूचीबद्ध कितने कार्यात्मक विषयों को निष्पादित करने का अधिकार है?",
+      "question": "The Panchayats are empowered to perform how many functional subjects as listed in the relevant Schedule?",
       "options": {
         "a": "18",
         "b": "12",
@@ -66,115 +66,115 @@
     },
     {
       "q_num": 6,
-      "question": "What is the minimum age required to be a member of a Panchayat?\n पंचायत का सदस्य बनने के लिए आवश्यक न्यूनतम आयु क्या है?",
+      "question": "What is the minimum age required to be a member of a Panchayat?",
       "options": {
-        "a": "25 years / 25 वर्ष",
-        "b": "30 years / 30 वर्ष",
-        "c": "21 years / 21 वर्ष",
-        "d": "18 years / 18 वर्ष"
+        "a": "25 years",
+        "b": "30 years",
+        "c": "21 years",
+        "d": "18 years"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAccording to Article 243-F, no person shall be disqualified from being a member of a Panchayat on the ground that he is less than twenty-five years of age, provided he has attained the age of twenty-one years\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243-F के अनुसार, किसी भी व्यक्ति को इस आधार पर पंचायत का सदस्य बनने से अयोग्य नहीं ठहराया जाएगा कि वह पच्चीस वर्ष से कम आयु का है, बशर्ते कि वह इक्कीस वर्ष की आयु प्राप्त कर चुका हो।"
     },
     {
       "q_num": 7,
-      "question": "Who is responsible for conducting elections to the Panchayats?\n पंचायतों के चुनाव कराने के लिए कौन जिम्मेदार है?",
+      "question": "Who is responsible for conducting elections to the Panchayats?",
       "options": {
-        "a": "Election Commission of India / भारत निर्वाचन आयोग",
-        "b": "Governor of the State / राज्य का राज्यपाल",
-        "c": "State Election Commission / राज्य निर्वाचन आयोग",
-        "d": "High Court of the State / राज्य का उच्च न्यायालय"
+        "a": "Election Commission of India",
+        "b": "Governor of the State",
+        "c": "State Election Commission",
+        "d": "High Court of the State"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 243-K states that the superintendence, direction, and control of the preparation of electoral rolls and the conduct of all elections to the Panchayats shall be vested in a State Election Commission\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243-K में कहा गया है कि मतदाता सूची की तैयारी और पंचायतों के सभी चुनावों के संचालन का अधीक्षण, निर्देशन और नियंत्रण राज्य निर्वाचन आयोग में निहित होगा।"
     },
     {
       "q_num": 8,
-      "question": "The financial position of the Panchayats is reviewed by a Finance Commission constituted by the:\n पंचायतों की वित्तीय स्थिति की समीक्षा एक वित्त आयोग द्वारा की जाती है, जिसका गठन किसके द्वारा किया जाता है?",
+      "question": "The financial position of the Panchayats is reviewed by a Finance Commission constituted by the:",
       "options": {
-        "a": "President of India / भारत के राष्ट्रपति",
-        "b": "Prime Minister / प्रधानमंत्री",
-        "c": "Chief Minister of the State / राज्य के मुख्यमंत्री",
-        "d": "Governor of the State / राज्य के राज्यपाल"
+        "a": "President of India",
+        "b": "Prime Minister",
+        "c": "Chief Minister of the State",
+        "d": "Governor of the State"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nArticle 243-I mandates that the Governor of a State shall, at the expiration of every fifth year, constitute a Finance Commission to review the financial position of the Panchayats\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243-I में अनिवार्य है कि राज्य का राज्यपाल, हर पांचवें वर्ष की समाप्ति पर, पंचायतों की वित्तीय स्थिति की समीक्षा के लिए एक वित्त आयोग का गठन करेगा।"
     },
     {
       "q_num": 9,
-      "question": "For how long does a Panchayat continue from the date appointed for its first meeting, unless dissolved sooner?\n अपनी पहली बैठक के लिए नियुक्त तिथि से पंचायत, जब तक कि वह जल्द ही भंग न हो जाए, कितने समय तक बनी रहती है?",
+      "question": "For how long does a Panchayat continue from the date appointed for its first meeting, unless dissolved sooner?",
       "options": {
-        "a": "4 years / 4 वर्ष",
-        "b": "5 years / 5 वर्ष",
-        "c": "6 years / 6 वर्ष",
-        "d": "3 years / 3 वर्ष"
+        "a": "4 years",
+        "b": "5 years",
+        "c": "6 years",
+        "d": "3 years"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 243-E stipulates that every Panchayat, unless sooner dissolved, shall continue for five years from the date appointed for its first meeting and no longer. This term is fixed and uniform across the country\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243-E में प्रावधान है कि प्रत्येक पंचायत, जब तक कि वह जल्द ही भंग न हो जाए, अपनी पहली बैठक के लिए नियुक्त तिथि से पाँच वर्ष तक बनी रहेगी और उससे अधिक नहीं। यह अवधि पूरे देश में निश्चित और समान है।"
     },
     {
       "q_num": 10,
-      "question": "The first Municipal Corporation in India was set up in which city?\n भारत में पहला नगर निगम किस शहर में स्थापित किया गया था?",
+      "question": "The first Municipal Corporation in India was set up in which city?",
       "options": {
-        "a": "Kolkata / कोलकाता",
-        "b": "Bombay / बंबई",
-        "c": "Delhi / दिल्ली",
-        "d": "Madras / मद्रास"
+        "a": "Kolkata",
+        "b": "Bombay",
+        "c": "Delhi",
+        "d": "Madras"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe first Municipal Corporation in India was set up in Madras in 1687-88. This institution predates the constitutional recognition of Urban Local Government\n\n📖 हिंदी स्पष्टीकरण:\nभारत में पहला नगर निगम मद्रास में 1687-88 में स्थापित किया गया था। यह संस्था शहरी स्थानीय सरकार की संवैधानिक मान्यता से पहले की है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the 'Gram Sabha':\n 'ग्राम सभा' के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Gram Sabha means a body consisting of all the members of the Panchayat at the village level. / ग्राम सभा का अर्थ है ग्राम स्तर पर पंचायत के सभी सदस्यों से मिलकर बना एक निकाय।\n 2. The powers and functions of a Gram Sabha are determined by the State Legislature. / ग्राम सभा की शक्तियाँ और कार्य राज्य विधानमंडल द्वारा निर्धारित किए जाते हैं।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Gram Sabha':\n1. Gram Sabha means a body consisting of all the members of the Panchayat at the village level.\n2. The powers and functions of a Gram Sabha are determined by the State Legislature.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement 1 is incorrect: Gram Sabha consists of persons registered in the electoral rolls relating to a village comprised within the area of a Panchayat at the village level, not just the Panchayat members. Statement 2 is correct, as per Article 243-A, the power and functions are determined by the State Legislature\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है: ग्राम सभा में ग्राम स्तर पर पंचायत के क्षेत्र में शामिल गाँव से संबंधित मतदाता सूची में पंजीकृत व्यक्ति शामिल होते हैं, न कि केवल पंचायत सदस्य। कथन 2 सही है, अनुच्छेद 243-A के अनुसार, शक्तियाँ और कार्य राज्य विधानमंडल द्वारा निर्धारित किए जाते हैं।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following statements about the Chairperson of a Panchayat is/are correct?\n पंचायत के अध्यक्ष के बारे में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 1. The Chairperson of a Panchayat at the village level is elected in the manner provided by the State Legislature. / ग्राम स्तर पर पंचायत के अध्यक्ष का चुनाव राज्य विधानमंडल द्वारा प्रदान किए गए तरीके से किया जाता है।\n 2. The Chairperson of a Panchayat at the district level is elected through direct elections. / जिला स्तर पर पंचायत के अध्यक्ष का चुनाव प्रत्यक्ष चुनाव के माध्यम से किया जाता है।",
+      "question": "Which of the following statements about the Chairperson of a Panchayat is/are correct?\n1. The Chairperson of a Panchayat at the village level is elected in the manner provided by the State Legislature.\n2. The Chairperson of a Panchayat at the district level is elected through direct elections.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1 is correct: The manner of election of the Chairperson at the village level is determined by the State Legislature (Article 243-C). Statement 2 is incorrect: The Chairperson at the district level is generally elected through indirect elections, while the village level chairperson's method is determined by state law\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है: ग्राम स्तर पर अध्यक्ष के चुनाव का तरीका राज्य विधानमंडल द्वारा निर्धारित किया जाता है (अनुच्छेद 243-C)। कथन 2 गलत है: जिला स्तर पर अध्यक्ष का चुनाव आम तौर पर अप्रत्यक्ष चुनावों के माध्यम से किया जाता है, जबकि ग्राम स्तर के अध्यक्ष की विधि राज्य कानून द्वारा निर्धारित की जाती है।"
     },
     {
       "q_num": 13,
-      "question": "Assertion (A): Panchayats at the intermediate level may not be constituted in a State.\n कथन (A): एक राज्य में मध्यवर्ती स्तर पर पंचायतों का गठन नहीं किया जा सकता है।\n Reason (R): The Intermediate level Panchayat is not constituted in the state having population less than 20 lakhs.\n कारण (R): 20 लाख से कम की आबादी वाले राज्य में मध्यवर्ती स्तर की पंचायत का गठन नहीं किया जाता है।",
+      "question": "Assertion (A): Panchayats at the intermediate level may not be constituted in a State.\n Reason (R): The Intermediate level Panchayat is not constituted in the state having population less than 20 lakhs.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe assertion is true; Article 243-B allows for the non-constitution of Panchayats at the intermediate level. The reason is also true and is the correct explanation for the assertion, as this level is optional for states with a population of less than or equal to 20 lakhs\n\n📖 हिंदी स्पष्टीकरण:\nकथन सत्य है; अनुच्छेद 243-B मध्यवर्ती स्तर पर पंचायतों के गैर-गठन की अनुमति देता है। कारण भी सत्य है और दावा के लिए सही व्याख्या है, क्योंकि यह स्तर 20 लाख या उससे कम आबादी वाले राज्यों के लिए वैकल्पिक है।"
     },
     {
       "q_num": 14,
-      "question": "What is the minimum reservation mandated for women in the total number of seats to be filled by direct election in every Panchayat?\n प्रत्येक पंचायत में प्रत्यक्ष चुनाव द्वारा भरी जाने वाली सीटों की कुल संख्या में महिलाओं के लिए अनिवार्य न्यूनतम आरक्षण कितना है?",
+      "question": "What is the minimum reservation mandated for women in the total number of seats to be filled by direct election in every Panchayat?",
       "options": {
-        "a": "Not less than one-fourth / एक-चौथाई से कम नहीं",
-        "b": "Not less than one-third / एक-तिहाई से कम नहीं",
-        "c": "Not less than one-fifth / एक-पांचवें से कम नहीं",
-        "d": "Not less than one-half / एक-आधा से कम नहीं"
+        "a": "Not less than one-fourth",
+        "b": "Not less than one-third",
+        "c": "Not less than one-fifth",
+        "d": "Not less than one-half"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 243-D mandates that not less than one-third of the total number of seats (including those reserved for SC and ST women) shall be reserved for women in every Panchayat. This provision ensures significant women's participation in local governance\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243-D में अनिवार्य है कि कुल सीटों की संख्या (एससी और एसटी महिलाओं के लिए आरक्षित सीटों सहित) का कम से कम एक-तिहाई प्रत्येक पंचायत में महिलाओं के लिए आरक्षित होगा। यह प्रावधान स्थानीय शासन में महिलाओं की महत्वपूर्ण भागीदारी सुनिश्चित करता है।"
     },
     {
       "q_num": 15,
-      "question": "The G.V.K. Rao Committee was constituted in which year?\n जी.वी.के. राव समिति का गठन किस वर्ष किया गया था?",
+      "question": "The G.V.K. Rao Committee was constituted in which year?",
       "options": {
         "a": "1957",
         "b": "1977",
@@ -186,115 +186,115 @@
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements:\n 1. Panchayats at the intermediate level exist in all States.\n 2. To be eligible to be a Member of a Panchayat at the intermediate level, a person should attain the age of thirty years.\n 3. The Chief Minister of a State constitutes a commission to review the financial position of Panchayats.\n Which of the statements given above are not correct?\n निम्नलिखित कथनों पर विचार कीजिए:\n 4. मध्यवर्ती स्तर पर पंचायतें सभी राज्यों में विद्यमान हैं।\n 5. मध्यवर्ती स्तर पर किसी पंचायत में सदस्य होने हेतु पात्र होने के लिए किसी व्यक्ति को तीस वर्ष की आयु प्राप्त होनी चाहिए।\n 6. किसी राज्य का मुख्यमंत्री मध्यवर्ती स्तरों पर पंचायतों की वित्तीय दशा के पुनरीक्षण के लिए एक आयोग का गठन करता है।\n उपर्युक्त में कौन-कौन से कथन सही नहीं हैं?",
+      "question": "Consider the following statements:\n 1. Panchayats at the intermediate level exist in all States.\n 2. To be eligible to be a Member of a Panchayat at the intermediate level, a person should attain the age of thirty years.\n 3. The Chief Minister of a State constitutes a commission to review the financial position of Panchayats.\n Which of the statements given above are not correct?",
       "options": {
-        "a": "I and II only / केवल I और II",
-        "b": "II and III only / केवल II और III",
-        "c": "I and III only / केवल I और III",
-        "d": "I, II and III / I, II और III"
+        "a": "I and II only",
+        "b": "II and III only",
+        "c": "I and III only",
+        "d": "I, II and III"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are incorrect. I. Intermediate Panchayats are not constituted in a State having a population not exceeding 20 lakhs. II. The minimum age for contesting a Panchayat election is 21 years. III. The Governor of a State constitutes the State Finance Commission (SFC), not the Chief Minister.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन गलत हैं। I. मध्यवर्ती पंचायतें उस राज्य में गठित नहीं की जाती हैं जिसकी जनसंख्या 20 लाख से अधिक नहीं है । II. पंचायत चुनाव लड़ने के लिए न्यूनतम आयु 21 वर्ष है। III. पंचायतों के लिए राज्य वित्त आयोग (SFC) का गठन राज्य के राज्यपाल द्वारा किया जाता है, मुख्यमंत्री द्वारा नहीं।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements regarding the Panchayat system is/are correct?\n 1. The Constitution of India envisages a three-tier system of Panchayat.\n 2. Intermediate Panchayat stands between the village and district Panchayats in the State where the population is above 20 lakhs.\n 3. All the seats in a Panchayat shall be filled by direct election from territorial constituencies in the Panchayat area.\n Select the correct answer using the code given below.\n पंचायत व्यवस्था के संबंध में निम्नलिखित कथनों में से कौन-सा/कौन-से सही है/हैं?\n 4. भारत का संविधान पंचायतों की त्रि-स्तरीय प्रणाली की परिकल्पना करता है।\n 5. मध्यवर्ती पंचायत उस राज्य में ग्राम और जिला पंचायतों के बीच स्थित है जहाँ जनसंख्या 20 लाख से अधिक है।\n 6. एक पंचायत की सभी सीटें पंचायत क्षेत्र में प्रादेशिक निर्वाचन क्षेत्रों से प्रत्यक्ष चुनाव द्वारा भरी जाएंगी।\n कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Which of the following statements regarding the Panchayat system is/are correct?\n 1. The Constitution of India envisages a three-tier system of Panchayat.\n 2. Intermediate Panchayat stands between the village and district Panchayats in the State where the population is above 20 lakhs.\n 3. All the seats in a Panchayat shall be filled by direct election from territorial constituencies in the Panchayat area.\n Select the correct answer using the code given below.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are correct.\n7. The three-tier system (village, intermediate, district) is mandatory, except for states with less than 20 lakh population.\n8. The intermediate level is optional for states with a population of less than 20 lakhs, meaning it is mandatory where the population is above 20 lakhs.\n9. Article 243C mandates that all members of a Panchayat shall be chosen by direct election from territorial constituencies.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन सही हैं।\n10. त्रिस्तरीय प्रणाली (ग्राम, मध्यवर्ती, जिला) अनिवार्य है, सिवाय उन राज्यों के जिनकी जनसंख्या 20 लाख से कम है ।\n11. 20 लाख से कम जनसंख्या वाले राज्यों के लिए मध्यवर्ती स्तर वैकल्पिक है, जिसका अर्थ है कि 20 लाख से अधिक जनसंख्या वाले राज्यों में यह अनिवार्य है ।\n12. अनुच्छेद 243C यह अनिवार्य करता है कि पंचायत के सभी सदस्य प्रादेशिक निर्वाचन क्षेत्रों से प्रत्यक्ष चुनाव द्वारा चुने जाएंगे ।"
     },
     {
       "q_num": 18,
-      "question": "What happens if a municipality in India is dissolved before completing its full term?\n यदि भारत में कोई नगरपालिका अपना कार्यकाल पूरा होने से पहले ही भंग कर दी जाए तो क्या होगा?",
+      "question": "What happens if a municipality in India is dissolved before completing its full term?",
       "options": {
-        "a": "The previous municipal council is reinstated. / पिछली नगर परिषद को पुनः बहाल कर दिया गया है।",
-        "b": "The central government takes over governance. / केन्द्र सरकार शासन का कार्यभार अपने हाथ में ले लेती है।",
-        "c": "The municipality ceases to exist./ नगरपालिका का अस्तित्व समाप्त हो गया।",
-        "d": "A new election must be held within 6 months. / नये चुनाव 6 महीने के भीतर होने चाहिए।"
+        "a": "The previous municipal council is reinstated.",
+        "b": "The central government takes over governance.",
+        "c": "The municipality ceases to exist.",
+        "d": "A new election must be held within 6 months."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\n5. Fixed Term: Every Municipality has a fixed term of five years from the date of its first meeting.\n6. Premature Dissolution: If a Municipality is dissolved (superseded) before the expiry of its five-year term, an election to constitute a new Municipality must be completed before the expiration of a period of six months from the date of its dissolution.\n7. Remainder Period: The newly constituted Municipality shall continue only for the remainder of the period for which the dissolved Municipality would have continued.\n8. Exception: If the remaining period for which the dissolved Municipality would have continued is less than six months, no election is required.\n\n📖 हिंदी स्पष्टीकरण:\n9. निश्चित अवधि: प्रत्येक नगरपालिका का कार्यकाल उसकी पहली बैठक की तिथि से पाँच वर्ष का होता है।\n10. समयपूर्व विघटन: यदि कोई नगरपालिका अपने पाँच वर्ष के कार्यकाल की समाप्ति से पहले भंग (अधिकृत) हो जाती है, तो नई नगरपालिका के गठन के लिए चुनाव उसके विघटन की तिथि से छह महीने की अवधि समाप्त होने से पहले पूरा किया जाना चाहिए।\n11. शेष अवधि: नवगठित नगरपालिका केवल उस शेष अवधि के लिए बनी रहेगी जिसके लिए विघटित नगरपालिका बनी रहती।\n12. अपवाद: यदि विघटित नगरपालिका के बने रहने की शेष अवधि छह महीने से कम है, तो चुनाव की आवश्यकता नहीं है।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements is/are correct?\n 1. The elections to the Panchayat are conducted by the State Election Commission.\n 2. The State Election Commissioner is appointed by the Chief Election Commissioner of India.\n 3. The State Legislatures have the power to make laws on all matters relating to Panchayat elections.\n Select the correct answer using the code given below:\n निम्नलिखित कथनों में से कौन-सा/कौन-से सही है/हैं?\n 4. पंचायत के निर्वाचन राज्य निर्वाचन आयोग द्वारा संचालित किए जाते हैं।\n 5. राज्य निर्वाचन आयुक्त की नियुक्ति भारत के मुख्य निर्वाचन आयुक्त द्वारा की जाती है।\n 6. राज्य विधान मंडलों को पंचायत के निर्वाचन से संबंधित सभी विषयों पर विधि बनाने की शक्ति होती है।\n कूट का प्रयोग करते हुए सही उत्तर का चयन कीजिए:",
+      "question": "Which of the following statements is/are correct?\n 1. The elections to the Panchayat are conducted by the State Election Commission.\n 2. The State Election Commissioner is appointed by the Chief Election Commissioner of India.\n 3. The State Legislatures have the power to make laws on all matters relating to Panchayat elections.\n Select the correct answer using the code given below:",
       "options": {
-        "a": "2 only / केवल 2",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "1, 2 and 3 / 1, 2 और 3",
-        "d": "1 and 3 only / केवल 1 और 3"
+        "a": "2 only",
+        "b": "1 and 2 only",
+        "c": "1, 2 and 3",
+        "d": "1 and 3 only"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStatements 1 and 3 are correct.\n7. Correct. Article 243K mandates the State Election Commission (SEC) to conduct Panchayat elections.\n8. Incorrect. The State Election Commissioner (SEC) is appointed by the Governor of the concerned State, not the Chief Election Commissioner of India.\n9. Correct. The State Legislature is empowered to make provisions with respect to all matters relating to the elections to the Panchayats.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 और 3 सही हैं।\n10. सही। अनुच्छेद 243K राज्य निर्वाचन आयोग (SEC) को पंचायत चुनाव आयोजित करने का आदेश देता है ।\n11. गलत। राज्य निर्वाचन आयुक्त की नियुक्ति संबंधित राज्य के राज्यपाल द्वारा की जाती है, न कि भारत के मुख्य चुनाव आयुक्त द्वारा ।\n12. सही। राज्य विधानमंडल को पंचायतों के चुनाव से संबंधित सभी मामलों पर प्रावधान करने का अधिकार है ।"
     },
     {
       "q_num": 20,
-      "question": "Which one of the following statements about Panchayati Raj Institutions in India is not correct?\n भारत में पंचायती राज संस्थाओं के बारे में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+      "question": "Which one of the following statements about Panchayati Raj Institutions in India is not correct?",
       "options": {
-        "a": "Not less than one-third of the total number of the offices of Chairpersons in the Panchayats at each level are reserved for women. / प्रत्येक स्तर पर पंचायतों में अध्यक्षों के पदों की कुल संख्या के कम-से-कम एक-तिहाई पद स्त्रियों के लिए आरक्षित हैं।",
-        "b": "Reservation for Scheduled Castes and Scheduled Tribes are provided for at all the three levels of local bodies. / स्थानीय निकायों के सभी तीनों स्तरों में अनुसूचित जातियों और अनुसूचित जनजातियों के लिए आरक्षण का प्रावधान है।",
-        "c": "States can provide for reservations for the Other Backward Classes (OBCs), if needed. / यदि आवश्यक हो, तो राज्य अन्य पिछड़ा वर्गों (OBCs) के लिए आरक्षणों का प्रावधान कर सकते हैं।",
-        "d": "State Election Commissioner is appointed by the President of India on the advice of the Governor to conduct Panchayat elections. / पंचायत निर्वाचन करवाने के लिए, भारत के राष्ट्रपति द्वारा राज्यपाल के परामर्श से राज्य निर्वाचन आयुक्त नियुक्त किया जाता है।"
+        "a": "Not less than one-third of the total number of the offices of Chairpersons in the Panchayats at each level are reserved for women.",
+        "b": "Reservation for Scheduled Castes and Scheduled Tribes are provided for at all the three levels of local bodies.",
+        "c": "States can provide for reservations for the Other Backward Classes (OBCs), if needed.",
+        "d": "State Election Commissioner is appointed by the President of India on the advice of the Governor to conduct Panchayat elections."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStatement (d) is incorrect. The State Election Commissioner is appointed by the Governor of the State, not the President of India. The other three statements are correct provisions under the 73rd Amendment Act.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (d) सही नहीं है। राज्य निर्वाचन आयुक्त की नियुक्ति राज्य के राज्यपाल द्वारा की जाती है, न कि भारत के राष्ट्रपति द्वारा । अन्य तीन कथन 73वें संशोधन अधिनियम के तहत सही प्रावधान हैं ।"
     },
     {
       "q_num": 21,
-      "question": "Gram Sabha means a body consisting of persons registered:\n ग्राम सभा का आशय किसमें पंजीकृत व्यक्तियों से बना निकाय है?",
+      "question": "Gram Sabha means a body consisting of persons registered:",
       "options": {
-        "a": "in the electoral rolls relating to a village comprised within the area of Panchayat at the village level. / ग्राम स्तर पर पंचायत क्षेत्र में शामिल किसी ग्राम से संबंधित निर्वाचक नामावली में पंजीकृत।",
-        "b": "in the electoral rolls of wards within the area of Panchayat. / पंचायत क्षेत्र में स्थित वार्डों की निर्वाचक नामावली में पंजीकृत।",
-        "c": "in the electoral rolls of civic bodies within the area of Panchayat. / पंचायत क्षेत्र में स्थित नगर निकायों की निर्वाचक नामावली में पंजीकृत।",
-        "d": "in the electoral rolls of several villages within a local body. / किसी स्थानीय निकाय के अंतर्गत कई ग्रामों की निर्वाचक नामावली में पंजीकृत।"
+        "a": "in the electoral rolls relating to a village comprised within the area of Panchayat at the village level.",
+        "b": "in the electoral rolls of wards within the area of Panchayat.",
+        "c": "in the electoral rolls of civic bodies within the area of Panchayat.",
+        "d": "in the electoral rolls of several villages within a local body."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nArticle 243A defines the Gram Sabha as a body consisting of persons registered in the electoral rolls relating to a village comprised within the area of a Panchayat at the village level.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 243A ग्राम सभा को ग्राम स्तर पर पंचायत क्षेत्र में शामिल किसी ग्राम से संबंधित निर्वाचक नामावली में पंजीकृत व्यक्तियों से बने एक निकाय के रूप में परिभाषित करता है।"
     },
     {
       "q_num": 22,
-      "question": "Which one of the following statements relating to the duration of Panchayat is not correct?\n निम्नलिखित में से कौन सा कथन पंचायत की अवधि से संबंधित नहीं है?",
+      "question": "Which one of the following statements relating to the duration of Panchayat is not correct?",
       "options": {
-        "a": "Every Panchayat shall continue for six years from the date of its first meeting. / प्रत्येक पंचायत अपनी पहली बैठक की तारीख से छह साल तक बनी रहेगी।",
-        "b": "A Panchayat can be dissolved before the expiry of its term in accordance with the procedure prescribed by State Law. / राज्य कानून द्वारा निर्धारित प्रक्रिया के अनुसार एक पंचायत को अपनी अवधि की समाप्ति से पहले भंग किया जा सकता है।",
-        "c": "Election to Panchayat must take place within six months of its dissolution. / पंचायत का चुनाव इसके भंग होने के छह महीने के भीतर होना चाहिए।",
-        "d": "A Panchayat reconstituted after premature dissolution shall continue only for a remainder of the period. / समय से पहले भंग होने के बाद पुनर्गठित पंचायत केवल शेष अवधि के लिए बनी रहेगी।"
+        "a": "Every Panchayat shall continue for six years from the date of its first meeting.",
+        "b": "A Panchayat can be dissolved before the expiry of its term in accordance with the procedure prescribed by State Law.",
+        "c": "Election to Panchayat must take place within six months of its dissolution.",
+        "d": "A Panchayat reconstituted after premature dissolution shall continue only for a remainder of the period."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement (a) is incorrect. Every Panchayat shall continue for five years from the date appointed for its first meeting, not six years. All other statements are correct.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) सही नहीं है। प्रत्येक पंचायत अपनी पहली बैठक के लिए नियत तारीख से पाँच वर्ष तक बनी रहेगी, न कि छह वर्ष । अन्य सभी कथन सही हैं।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following statements are correct about the Constitution of India?\n 1. Powers of the Municipalities are given in Part IX A of the Constitution.\n 2. Emergency provisions are given in Part XVIII of the Constitution.\n 3. Provisions related to the amendment of the Constitution are given in Part XX of the Constitution.\n Select the answer using the code given below:\n भारत के संविधान के संबंध में निम्नलिखित कथनों में से कौन-से सही हैं?\n 4. नगरपालिकाओं की शक्तियाँ संविधान के भाग IX A में दी गईं हैं।\n 5. आपात उपबंध संविधान के भाग XVIII में दिए गए हैं।\n 6. संविधान के संशोधन से संबंधित उपबंध संविधान के भाग XX में दिए गए हैं।\n कूट का प्रयोग कर उत्तर चुनिए:",
+      "question": "Which of the following statements are correct about the Constitution of India?\n 1. Powers of the Municipalities are given in Part IX A of the Constitution.\n 2. Emergency provisions are given in Part XVIII of the Constitution.\n 3. Provisions related to the amendment of the Constitution are given in Part XX of the Constitution.\n Select the answer using the code given below:",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are correct.\n11. Part IXA deals with Municipalities.\n12. Part XVIII (Article 352 to 360) deals with Emergency Provisions.\n13. Part XX (Article 368) deals with the Amendment of the Constitution.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन सही हैं।\n14. भाग IXA नगर पालिकाओं से संबंधित है।\n15. भाग XVIII (अनुच्छेद 352 से 360) आपातकालीन प्रावधानों से संबंधित है।\n16. भाग XX (अनुच्छेद 368) संविधान के संशोधन से संबंधित है।"
     },
     {
       "q_num": 24,
-      "question": "Besides resolving disputes, what power do the Nyaya Panchayats have in India?\n विवादों को सुलझाने के अलावा भारत में न्याय पंचायतों के पास क्या शक्तियाँ हैं?",
+      "question": "Besides resolving disputes, what power do the Nyaya Panchayats have in India?",
       "options": {
-        "a": "Levying taxes for village development / ग्राम विकास के लिए कर लगाना",
-        "b": "Managing village agriculture / ग्रामीण कृषि का प्रबंध करना",
-        "c": "Imposing fines on offenders / अपराधियों पर जुर्माना लगाना",
-        "d": "Issuing binding contracts / बाध्यकारी अनुबंध जारी करना"
+        "a": "Levying taxes for village development",
+        "b": "Managing village agriculture",
+        "c": "Imposing fines on offenders",
+        "d": "Issuing binding contracts"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n5. Levying taxes: This is the responsibility of the Gram Panchayat, not the Nyaya Panchayat.\n6. Managing village agriculture: This falls under the purview of the Gram Panchayat or relevant government departments, not the judicial Nyaya Panchayat.\n7. Issuing binding contracts: The power to issue legally binding contracts is held by formal legal and administrative bodies, not by the Nyaya Panchayat"
     },
     {
       "q_num": 25,
-      "question": "The Twelfth Schedule of the Indian Constitution, added by the 74th Amendment Act, contains how many functional items within the purview of the Municipalities?\n भारतीय संविधान की बारहवीं अनुसूची, जिसे 74वें संशोधन अधिनियम द्वारा जोड़ा गया, में नगर पालिकाओं के दायरे में कितने कार्यात्मक मद शामिल हैं?",
+      "question": "The Twelfth Schedule of the Indian Constitution, added by the 74th Amendment Act, contains how many functional items within the purview of the Municipalities?",
       "options": {
         "a": "18",
         "b": "11",

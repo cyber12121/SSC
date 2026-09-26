@@ -6,7 +6,7 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The Census of 1881 which was undertaken on 17th February, 1881 by____. GD 29/02/2024 (Evening) 1881 की जनगणना 17 फरवरी, 1881 को ___ द्वारा की गई थी।",
+      "question": "The Census of 1881 which was undertaken on 17th February, 1881 by____. GD 29/02/2024 (Evening) 1881",
       "options": {
         "a": "H. Beverley",
         "b": "WC Plowden",
@@ -18,7 +18,7 @@
     },
     {
       "q_num": 2,
-      "question": "Population census in India is conducted with in a span of _____ . SSC GD 01/03/2024 (Evening) भारत में जनसंख्या जनगणना _____ की अवधि में आयोजित की जाती है।",
+      "question": "Population census in India is conducted with in a span of _____ . SSC GD 01/03/2024 (Evening)",
       "options": {
         "a": "10 Years",
         "b": "15 Years",
@@ -30,7 +30,7 @@
     },
     {
       "q_num": 3,
-      "question": "The first census of Independent India was conducted in 1951, which was the ____ census in its continuous series. SSC GD 05/03/2024 (Afternoon) स्वतंत्र भारत की पहली जनगणना 1951 में की गई थी, जो इसकी सतत श्रृंखला में ____ जनगणना थी",
+      "question": "The first census of Independent India was conducted in 1951, which was the ____ census in its continuous series. SSC GD 05/03/2024 (Afternoon)",
       "options": {
         "a": "Seventh",
         "b": "Fifth",
@@ -42,7 +42,7 @@
     },
     {
       "q_num": 4,
-      "question": "According to Census of India 2011, in rural India, which state has the maximum female workforce participation rate? SSC CGL 09/09/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, ग्रामीण भारत में, किस राज्य में महिला कार्यबल भागीदारी दर अधिकतम है?",
+      "question": "According to Census of India 2011, in rural India, which state has the maximum female workforce participation rate? SSC CGL 09/09/2024 (Afternoon)",
       "options": {
         "a": "Himachal Pradesh",
         "b": "Uttar Pradesh",
@@ -54,7 +54,7 @@
     },
     {
       "q_num": 5,
-      "question": "As per the Census of India 2011, the increase in literacy rates for males and females,respectively, as compared to 2001 Census was: SSC CGL 23/09/2024 (Evening) भारत की जनगणना 2011 के अनुसार, 2001 की जनगणना की तुलना में पुरुषों और महिलाओं की साक्षरता दर में क्रमशः वृद्धि हुई:",
+      "question": "As per the Census of India 2011, the increase in literacy rates for males and females,respectively, as compared to 2001 Census was: SSC CGL 23/09/2024 (Evening)",
       "options": {
         "a": "4.88% and 10.79%",
         "b": "6.88% and 11.79%",
@@ -66,19 +66,19 @@
     },
     {
       "q_num": 6,
-      "question": "The Accelerated Female Literacy Programme was initiated in districts where the female literacy rate, based on the 2001 census, was _______. SSC CGL 10/09/2024 (Evening)त्वरित महिला साक्षरता कार्यक्रम उन जिलों में शुरू किया गया जहां 2001 की जनगणना के आधार पर महिला साक्षरता दर _______ थी।",
+      "question": "The Accelerated Female Literacy Programme was initiated in districts where the female literacy rate, based on the 2001 census, was _______. SSC CGL 10/09/2024 (Evening)",
       "options": {
-        "a": "below 30% / 30% से नीचे",
-        "b": "below 50% / 50% से नीचे",
-        "c": "below 35% / 35% से नीचे",
-        "d": "below 45% / 45% से नीचे"
+        "a": "below 30%",
+        "b": "below 50%",
+        "c": "below 35%",
+        "d": "below 45%"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 7,
-      "question": "According to Census of India 2011, what is the gap between male and female literacy rate in India? SSC CGL 12/069/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, भारत में पुरुष और महिला साक्षरता दर के बीच अंतर क्या है?",
+      "question": "According to Census of India 2011, what is the gap between male and female literacy rate in India? SSC CGL 12/069/2024 (Afternoon)",
       "options": {
         "a": "21.59%",
         "b": "16.68%",
@@ -90,31 +90,31 @@
     },
     {
       "q_num": 8,
-      "question": "According to the Census of India 2011, which group of Union Territories recorded the highest sex ratio? SSC CGL 13/09/2024 (Morning) भारत की जनगणना 2011 के अनुसार, केंद्र शासित प्रदेशों के किस समूह में सबसे अधिक लिंगानुपात दर्ज किया गया?",
+      "question": "According to the Census of India 2011, which group of Union Territories recorded the highest sex ratio? SSC CGL 13/09/2024 (Morning)",
       "options": {
-        "a": "Chandigarh, Puducherry, Delhi / चंडीगढ़, पुडुचेरी, दिल्ली",
-        "b": "Puducherry, Delhi, Andaman and Nicobar Islands / पुडुचेरी, दिल्ली, अंडमान और निकोबार द्वीप समूह",
-        "c": "Chandigarh, Puducherry, Lakshadweep / चंडीगढ़, पुडुचेरी, लक्षद्वीप",
-        "d": "Puducherry, Lakshadweep, Andaman and Nicobar Islands / पुडुचेरी, लक्षद्वीप, अंडमान और निकोबार द्वीप समूह"
+        "a": "Chandigarh, Puducherry, Delhi",
+        "b": "Puducherry, Delhi, Andaman and Nicobar Islands",
+        "c": "Chandigarh, Puducherry, Lakshadweep",
+        "d": "Puducherry, Lakshadweep, Andaman and Nicobar Islands"
       },
       "answer": "d",
       "solution": ""
     },
     {
       "q_num": 9,
-      "question": "As per the definition of Census of India, a ‘marginal worker’ is a person who works for: SSC CGL 09/09/2024 (Evening) भारत की जनगणना की परिभाषा के अनुसार, 'सीमांत श्रमिक' वह व्यक्ति है जो निम्नलिखित के लिए काम करता है:",
+      "question": "As per the definition of Census of India, a ‘marginal worker’ is a person who works for: SSC CGL 09/09/2024 (Evening)",
       "options": {
-        "a": "less than 183 days (or six months) in a year / एक वर्ष में 183 दिन (या छह महीने) से कम",
-        "b": "83 days in a year / एक वर्ष में 83 दिन",
-        "c": "eight months in a year / एक वर्ष में आठ महीने",
-        "d": "more than 183 days (or six months) in a year / एक वर्ष में 183 दिन (या छह महीने) से अधिक"
+        "a": "less than 183 days (or six months) in a year",
+        "b": "83 days in a year",
+        "c": "eight months in a year",
+        "d": "more than 183 days (or six months) in a year"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 10,
-      "question": "What was India's annual exponential growth rate as per the 2011 Census? SSC CGL 24/09/2024 (Evening)2011 की जनगणना के अनुसार भारत की वार्षिक घातीय वृद्धि दर क्या थी?",
+      "question": "What was India's annual exponential growth rate as per the 2011 Census? SSC CGL 24/09/2024 (Evening)2011",
       "options": {
         "a": "1.64%",
         "b": "3.54%",
@@ -126,7 +126,7 @@
     },
     {
       "q_num": 11,
-      "question": "According to Census 2011, which district displays the highest population? SSC CGL 18/09/2024 (Evening)जनगणना 2011 के अनुसार, किस जिले की जनसंख्या सबसे अधिक है?",
+      "question": "According to Census 2011, which district displays the highest population? SSC CGL 18/09/2024 (Evening)",
       "options": {
         "a": "Kollam",
         "b": "Ajmer",
@@ -138,7 +138,7 @@
     },
     {
       "q_num": 12,
-      "question": "According to the Census of India 2011, which group of Union Territories has the highest density of population? SSC CGL 24/09/2024 (Morning) भारत की जनगणना 2011 के अनुसार, केंद्र शासित प्रदेशों के किस समूह में जनसंख्या का घनत्व सबसे अधिक है?",
+      "question": "According to the Census of India 2011, which group of Union Territories has the highest density of population? SSC CGL 24/09/2024 (Morning)",
       "options": {
         "a": "Delhi, Chandigarh and Daman and Diu",
         "b": "Lakshadweep, Daman and Diu and Puducherry",
@@ -150,7 +150,7 @@
     },
     {
       "q_num": 13,
-      "question": "According to Census of India 2011, which Union Territory has the highest slum population? SSC CGL 17/09/2024 (Morning) भारत की जनगणना 2011 के अनुसार, किस केंद्र शासित प्रदेश में सबसे अधिक झुग्गी आबादी है?",
+      "question": "According to Census of India 2011, which Union Territory has the highest slum population? SSC CGL 17/09/2024 (Morning)",
       "options": {
         "a": "Delhi",
         "b": "Chandigarh",
@@ -162,19 +162,19 @@
     },
     {
       "q_num": 14,
-      "question": "According to the Census of India 2001, which of the following is the main reason that Indian men migrate? SSC CGL 24/09/2024 (Afternoon) भारत की जनगणना 2001 के अनुसार, निम्नलिखित में से कौन सा भारतीय पुरुषों के प्रवास का मुख्य कारण है?",
+      "question": "According to the Census of India 2001, which of the following is the main reason that Indian men migrate? SSC CGL 24/09/2024 (Afternoon)",
       "options": {
-        "a": "Education / शिक्षा",
-        "b": "Marriage / विवाह",
-        "c": "Work and employment / काम और रोजगार",
-        "d": "Business / व्यवसाय"
+        "a": "Education",
+        "b": "Marriage",
+        "c": "Work and employment",
+        "d": "Business"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 15,
-      "question": "What is the percentage of the disabled population in India according to the 2011 census? SSC STENO 11/12/2024 (Afternoon) 2011 की जनगणना के अनुसार भारत में विकलांग जनसंख्या का प्रतिशत कितना है?",
+      "question": "What is the percentage of the disabled population in India according to the 2011 census? SSC STENO 11/12/2024 (Afternoon) 2011",
       "options": {
         "a": "2.97%",
         "b": "1.33%",
@@ -186,7 +186,7 @@
     },
     {
       "q_num": 16,
-      "question": "According to the Census 2011, which group of seven sister states has the highest literacy rate? SSC STENO 10/12/2024 (Afternoon) जनगणना 2011 के अनुसार, सात बहन राज्यों के किस समूह में साक्षरता दर सबसे अधिक है?",
+      "question": "According to the Census 2011, which group of seven sister states has the highest literacy rate? SSC STENO 10/12/2024 (Afternoon)",
       "options": {
         "a": "Manipur and Nagaland",
         "b": "Mizoram and Meghalaya",
@@ -198,7 +198,7 @@
     },
     {
       "q_num": 17,
-      "question": "According to Census of India 2011, in which of the following states was the Scheduled Caste (SC) population NOT recorded? SSC STENO 10/12/2024 (Evening) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में अनुसूचित जाति (एससी) की जनसंख्या दर्ज नहीं की गई?",
+      "question": "According to Census of India 2011, in which of the following states was the Scheduled Caste (SC) population NOT recorded? SSC STENO 10/12/2024 (Evening)",
       "options": {
         "a": "Punjab",
         "b": "Manipur",
@@ -210,7 +210,7 @@
     },
     {
       "q_num": 18,
-      "question": "According to the census of India 2011, among the following which state has the highest sex ratio? SSC STENO 10/12/2024 (Morning) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य का लिंगानुपात सबसे अधिक है?",
+      "question": "According to the census of India 2011, among the following which state has the highest sex ratio? SSC STENO 10/12/2024 (Morning)",
       "options": {
         "a": "Andhra Pradesh",
         "b": "Bihar",
@@ -222,7 +222,7 @@
     },
     {
       "q_num": 19,
-      "question": "According to the Census of India 2011, among the seven sister states, which state has the highest literacy rate? SSC STENO 11/12/2024 (Evening) भारत की जनगणना 2011 के अनुसार, सात बहन राज्यों में से किस राज्य की साक्षरता दर सबसे अधिक है?",
+      "question": "According to the Census of India 2011, among the seven sister states, which state has the highest literacy rate? SSC STENO 11/12/2024 (Evening)",
       "options": {
         "a": "Manipur",
         "b": "Mizoram",
@@ -234,7 +234,7 @@
     },
     {
       "q_num": 20,
-      "question": "According to the Census of India 2011, which state has the highest number of Hindu population? SSC STENO 10/12/2024 (Evening) भारत की जनगणना 2011 के अनुसार, किस राज्य में हिंदू आबादी सबसे अधिक है?",
+      "question": "According to the Census of India 2011, which state has the highest number of Hindu population? SSC STENO 10/12/2024 (Evening)",
       "options": {
         "a": "Kerala",
         "b": "Maharashtra",
@@ -246,7 +246,7 @@
     },
     {
       "q_num": 21,
-      "question": "According to the Census of India 2011, which state has the highest number of slum population? SSC STENO 10/12/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, किस राज्य में झुग्गी-झोपड़ियों की आबादी सबसे अधिक है?",
+      "question": "According to the Census of India 2011, which state has the highest number of slum population? SSC STENO 10/12/2024 (Afternoon)",
       "options": {
         "a": "Maharashtra",
         "b": "Andhra Pradesh",
@@ -258,7 +258,7 @@
     },
     {
       "q_num": 22,
-      "question": "According to the Census of India 2011, which group of states is correct about the lowest density of population? SSC STENO 11/12/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, राज्यों का कौन सा समूह जनसंख्या के न्यूनतम घनत्व के बारे में सही है",
+      "question": "According to the Census of India 2011, which group of states is correct about the lowest density of population? SSC STENO 11/12/2024 (Afternoon)",
       "options": {
         "a": "Mizoram, Manipur",
         "b": "Arunachal Pradesh, Mizoram",
@@ -270,7 +270,7 @@
     },
     {
       "q_num": 23,
-      "question": "According to the Census of India 2011, which state has the largest number of Muslim population? SSC STENO 11/12/2024 (Evening) भारत की जनगणना 2011 के अनुसार, किस राज्य में मुस्लिम आबादी सबसे अधिक है?",
+      "question": "According to the Census of India 2011, which state has the largest number of Muslim population? SSC STENO 11/12/2024 (Evening)",
       "options": {
         "a": "Maharashtra",
         "b": "Manipur",
@@ -282,7 +282,7 @@
     },
     {
       "q_num": 24,
-      "question": "According to the Census 2011, which of the following states has the highest literacy rate? SSC STENO 11/12/2024 (Morning) जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य की साक्षरता दर सबसे अधिक है?",
+      "question": "According to the Census 2011, which of the following states has the highest literacy rate? SSC STENO 11/12/2024 (Morning)",
       "options": {
         "a": "Karnataka",
         "b": "Kerala",
@@ -294,7 +294,7 @@
     },
     {
       "q_num": 25,
-      "question": "Census is conducted in how many phases? SSC CHSL MAINS (18/11/2024)जनगणना कितने चरणों में आयोजित की जाती है",
+      "question": "Census is conducted in how many phases? SSC CHSL MAINS (18/11/2024)",
       "options": {
         "a": "One",
         "b": "Three",
@@ -306,7 +306,7 @@
     },
     {
       "q_num": 26,
-      "question": "Which of the following Union territories has the lowest population as per census 2011? Phase XII 20/06/2024 (Afternoon) 2011 की जनगणना के अनुसार निम्नलिखित में से किस केंद्र शासित प्रदेश की जनसंख्या सबसे कम है?",
+      "question": "Which of the following Union territories has the lowest population as per census 2011? Phase XII 20/06/2024 (Afternoon) 2011",
       "options": {
         "a": "Daman and Diu",
         "b": "Andaman and Nicobar",
@@ -318,7 +318,7 @@
     },
     {
       "q_num": 27,
-      "question": "What is the percentage share of population working in agricultural sector as per census of India 2011? Phase XII 24/06/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार कृषि क्षेत्र में कार्यरत जनसंख्या का प्रतिशत हिस्सा कितना है?",
+      "question": "What is the percentage share of population working in agricultural sector as per census of India 2011? Phase XII 24/06/2024 (Afternoon)",
       "options": {
         "a": ". 0.567",
         "b": "0.546",
@@ -330,7 +330,7 @@
     },
     {
       "q_num": 28,
-      "question": "What is the growth rate of population of India as per census 2011? Phase XII 25/06/2024 (Afternoon)2011 की जनगणना के अनुसार भारत की जनसंख्या की वृद्धि दर क्या है?",
+      "question": "What is the growth rate of population of India as per census 2011? Phase XII 25/06/2024 (Afternoon)2011",
       "options": {
         "a": "0.2164",
         "b": "0.2154",
@@ -342,7 +342,7 @@
     },
     {
       "q_num": 29,
-      "question": "Which of the following union territories has the least literacy rate according to the Census of India 2011? Phase XII 26/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार निम्नलिखित में से किस केंद्र शासित प्रदेश की साक्षरता दर सबसे कम है",
+      "question": "Which of the following union territories has the least literacy rate according to the Census of India 2011? Phase XII 26/06/2024 (Evening)",
       "options": {
         "a": "Assam",
         "b": "Manipur",
@@ -354,7 +354,7 @@
     },
     {
       "q_num": 30,
-      "question": "According to Census of India 1901, what was the total population of India? SSC JE 05/06/2024 (Morning)भारत की जनगणना 1901 के अनुसार भारत की कुल जनसंख्या कितनी थी",
+      "question": "According to Census of India 1901, what was the total population of India? SSC JE 05/06/2024 (Morning)",
       "options": {
         "a": "238.40 million",
         "b": "360.23 million",
@@ -366,7 +366,7 @@
     },
     {
       "q_num": 31,
-      "question": "Match the following states with their percentage urban population in India, as per Census 2011. SSC JE 05/06/2024 (Afternoon) Kerala a) 10.04% Madhya Pradesh b) 47.72% Tamil Nadu c) 27.63% Himachal Pradesh d) 48.45% जनगणना 2011 के अनुसार, भारत में निम्नलिखित राज्यों को उनकी शहरी जनसंख्या के प्रतिशत से सुमेलित करें। केरल a) 10.04% मध्य प्रदेश b) 47.72% तमिलनाडु c) 27.63% हिमाचल प्रदेश d) 48.45%",
+      "question": "Match the following states with their percentage urban population in India, as per Census 2011. SSC JE 05/06/2024 (Afternoon) Kerala a) 10.04% Madhya Pradesh b) 47.72% Tamil Nadu c) 27.63% Himachal Pradesh d) 48.45%",
       "options": {
         "a": "i) d, ii) c, iii) b, iv) a",
         "b": "i) a, ii) d, iii) c, iv) b",
@@ -378,7 +378,7 @@
     },
     {
       "q_num": 32,
-      "question": "Which of the following sentences is/are correct? According to the Census of India 2011, the total population of India is 141 crores. Between 1911 and 1921, there was a negative rate of growth of India’s population. Between 1901 and 1951, the average annual growth of India’s population did not exceed 1.33%. SSC JE 05/06/2024 (Afternoon) निम्नलिखित में से कौन सा वाक्य सही है/हैं? भारत की जनगणना 2011 के अनुसार, भारत की कुल जनसंख्या 141 करोड़ है। 1911 और 1921 के बीच, भारत की जनसंख्या की वृद्धि दर नकारात्मक थी। 1901 और 1951 के बीच, भारत की जनसंख्या की औसत वार्षिक वृद्धि 1.33% से अधिक नहीं थी।",
+      "question": "Which of the following sentences is/are correct? According to the Census of India 2011, the total population of India is 141 crores. Between 1911 and 1921, there was a negative rate of growth of India’s population. Between 1901 and 1951, the average annual growth of India’s population did not exceed 1.33%. SSC JE 05/06/2024 (Afternoon)",
       "options": {
         "a": "Only i and ii",
         "b": "Only i and iii",
@@ -390,19 +390,19 @@
     },
     {
       "q_num": 33,
-      "question": "The office of the Registrar General and Census Commissioner works under which Ministry of Government of India? SSC JE 05/06/2024 (Afternoon) + CHSL 2024महापंजीयक एवं जनगणना आयुक्त का कार्यालय भारत सरकार के किस मंत्रालय के अधीन काम करता है",
+      "question": "The office of the Registrar General and Census Commissioner works under which Ministry of Government of India? SSC JE 05/06/2024 (Afternoon) + CHSL 2024",
       "options": {
-        "a": "Ministry of Finance / वित्त मंत्रालय",
-        "b": "Ministry of Personnel, Public Grievances and Pensions / कार्मिक, लोक शिकायत और पेंशन मंत्रालय",
-        "c": "Ministry of Home Affairs / गृह मंत्रालय",
-        "d": "Ministry of Social Justice and Empowerment / सामाजिक न्याय और अधिकारिता मंत्रालय"
+        "a": "Ministry of Finance",
+        "b": "Ministry of Personnel, Public Grievances and Pensions",
+        "c": "Ministry of Home Affairs",
+        "d": "Ministry of Social Justice and Empowerment"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 34,
-      "question": "According to Census of India 2011, which state recorded negative population growth rate? SSC JE 05/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार, किस राज्य में नकारात्मक जनसंख्या वृद्धि दर दर्ज की गई?",
+      "question": "According to Census of India 2011, which state recorded negative population growth rate? SSC JE 05/06/2024 (Evening)",
       "options": {
         "a": "Manipur",
         "b": "Nagaland",
@@ -414,7 +414,7 @@
     },
     {
       "q_num": 35,
-      "question": "According to Census 2011 of India, which of the following groups of union territories has the highest urban population? SSC JE 05/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से केंद्र शासित प्रदेशों के किस समूह में सबसे अधिक शहरी आबादी है?",
+      "question": "According to Census 2011 of India, which of the following groups of union territories has the highest urban population? SSC JE 05/06/2024 (Evening)",
       "options": {
         "a": "Chandigarh and Lakshadweep",
         "b": "Daman & Diu and Lakshadweep",
@@ -426,7 +426,7 @@
     },
     {
       "q_num": 36,
-      "question": "What was the child sex-ratio as per Census 2011 of India? SSC JE 06/06/2024 (Morning)भारत की जनगणना 2011 के अनुसार बाल लिंग अनुपात क्या था?",
+      "question": "What was the child sex-ratio as per Census 2011 of India? SSC JE 06/06/2024 (Morning)",
       "options": {
         "a": "1000",
         "b": "890",
@@ -438,7 +438,7 @@
     },
     {
       "q_num": 37,
-      "question": "According to Census of India 2011, which state recorded the highest literacy rate in India? SSC JE 06/06/2024 (Morning) भारत की जनगणना 2011 के अनुसार, भारत में किस राज्य में साक्षरता दर सबसे अधिक दर्ज की गई?",
+      "question": "According to Census of India 2011, which state recorded the highest literacy rate in India? SSC JE 06/06/2024 (Morning)",
       "options": {
         "a": "Kerala",
         "b": "Goa",
@@ -450,7 +450,7 @@
     },
     {
       "q_num": 38,
-      "question": "According to Census of India 2011, which of the following states recorded a population density of more than 1100 persons per km²? SSC JE 06/06/2024 (Afternoon)भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में जनसंख्या घनत्व 1100 व्यक्ति प्रति वर्ग किमी से अधिक दर्ज किया गया?",
+      "question": "According to Census of India 2011, which of the following states recorded a population density of more than 1100 persons per km²? SSC JE 06/06/2024 (Afternoon)",
       "options": {
         "a": "Rajasthan",
         "b": "Punjab",
@@ -462,7 +462,7 @@
     },
     {
       "q_num": 39,
-      "question": "According to Census of India 2011, in which Union Territory was the highest population growth rate recorded? SSC JE 06/06/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, किस केंद्र शासित प्रदेश में जनसंख्या वृद्धि दर सबसे अधिक दर्ज की गई?",
+      "question": "According to Census of India 2011, in which Union Territory was the highest population growth rate recorded? SSC JE 06/06/2024 (Afternoon)",
       "options": {
         "a": "Dadra and Nagar Haveli",
         "b": "Daman and Diu",
@@ -474,7 +474,7 @@
     },
     {
       "q_num": 40,
-      "question": "Which of the following sentences is/are true? SSC JE 06/06/2024 (Evening) After independence, about two-thirds of India’s population is now (2011 Census) literate. In India, between 2001 and 2011, male literacy rose faster than female literacy. Female literacy rose by about 10.4 per cent between 2001 and 2011 in India. निम्नलिखित में से कौन सा वाक्य सत्य है/हैं? SSC JE 06/06/2024 (शाम) स्वतंत्रता के बाद, भारत की लगभग दो-तिहाई आबादी अब (2011 की जनगणना) साक्षर है। भारत में, 2001 और 2011 के बीच, पुरुष साक्षरता महिला साक्षरता की तुलना में तेज़ी से बढ़ी। भारत में 2001 और 2011 के बीच महिला साक्षरता में लगभग 10.4 प्रतिशत की वृद्धि हुई।",
+      "question": "Which of the following sentences is/are true? SSC JE 06/06/2024 (Evening) After independence, about two-thirds of India’s population is now (2011 Census) literate. In India, between 2001 and 2011, male literacy rose faster than female literacy. Female literacy rose by about 10.4 per cent between 2001 and 2011 in India.",
       "options": {
         "a": "Only i and ii",
         "b": "Only ii",
@@ -486,7 +486,7 @@
     },
     {
       "q_num": 41,
-      "question": "As per newest notification of December 2023, the decennial Census of India to be delayed till at least ____________ . SSC JE 06/06/2024 (Evening) दिसंबर 2023 की नवीनतम अधिसूचना के अनुसार, भारत की दशकीय जनगणना कम से कम ____________ तक विलंबित होगी।",
+      "question": "As per newest notification of December 2023, the decennial Census of India to be delayed till at least ____________ . SSC JE 06/06/2024 (Evening)",
       "options": {
         "a": "March 2024",
         "b": "January 2024",
@@ -498,7 +498,7 @@
     },
     {
       "q_num": 42,
-      "question": "According to Census of India 2011, what is the population growth rate in the Hindu community? SSC JE 06/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार, हिंदू समुदाय में जनसंख्या वृद्धि दर क्या है",
+      "question": "According to Census of India 2011, what is the population growth rate in the Hindu community? SSC JE 06/06/2024 (Evening)",
       "options": {
         "a": "8.3%",
         "b": "24.9%",
@@ -510,7 +510,7 @@
     },
     {
       "q_num": 43,
-      "question": "According to Census of India 2011, which state recorded the second highest literacy rate in India? SSC JE 06/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार, भारत में दूसरी सबसे अधिक साक्षरता दर किस राज्य में दर्ज की गई?",
+      "question": "According to Census of India 2011, which state recorded the second highest literacy rate in India? SSC JE 06/06/2024 (Evening)",
       "options": {
         "a": "Nagaland",
         "b": "Goa",
@@ -522,7 +522,7 @@
     },
     {
       "q_num": 44,
-      "question": "According to Census of India 2011, what is the percentage of Hindu population in India? SSC JE 07/06/2024 (Morning) भारत की जनगणना 2011 के अनुसार भारत में हिंदू जनसंख्या का प्रतिशत कितना है?",
+      "question": "According to Census of India 2011, what is the percentage of Hindu population in India? SSC JE 07/06/2024 (Morning)",
       "options": {
         "a": "79.8%",
         "b": "84.1%",
@@ -534,7 +534,7 @@
     },
     {
       "q_num": 45,
-      "question": "According to Census of India 2011, India’s population accounts for _______ of the world’s population. SSC JE 07/06/2024 (Morning) भारत की जनगणना 2011 के अनुसार, भारत की जनसंख्या विश्व की जनसंख्या का _______ है।",
+      "question": "According to Census of India 2011, India’s population accounts for _______ of the world’s population. SSC JE 07/06/2024 (Morning)",
       "options": {
         "a": "15.5%",
         "b": "17.5%",
@@ -546,7 +546,7 @@
     },
     {
       "q_num": 46,
-      "question": "According to the census of India 2011, which of the following states has the highest density of population per square kilometre? SSC JE 07/06/2024 (Afternoon)भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में प्रति वर्ग किलोमीटर जनसंख्या घनत्व सबसे अधिक है?",
+      "question": "According to the census of India 2011, which of the following states has the highest density of population per square kilometre? SSC JE 07/06/2024 (Afternoon)",
       "options": {
         "a": "Uttar Pradesh",
         "b": "Maharashtra",
@@ -558,7 +558,7 @@
     },
     {
       "q_num": 47,
-      "question": "According to the Census 2011 of India, arrange the following metropolitan cities on the basis of population in ascending order? JE 07/06/2024 (Afternoon) Delhi Mumbai Kolkata भारत की जनगणना 2011 के अनुसार, निम्नलिखित महानगरीय शहरों को जनसंख्या के आधार पर बढ़ते क्रम में व्यवस्थित करें? दिल्ली मुंबई कोलकाता",
+      "question": "According to the Census 2011 of India, arrange the following metropolitan cities on the basis of population in ascending order? JE 07/06/2024 (Afternoon) Delhi Mumbai Kolkata",
       "options": {
         "a": "B, C, A",
         "b": "C, A, B",
@@ -570,19 +570,19 @@
     },
     {
       "q_num": 48,
-      "question": "The concept of 'Standard Urban Area (SUA)' was introduced in which census of India? SSC JE 07/06/2024 (Afternoon) 'मानक शहरी क्षेत्र (SUA)' की अवधारणा भारत की किस जनगणना में पेश की गई थी?",
+      "question": "The concept of 'Standard Urban Area (SUA)' was introduced in which census of India? SSC JE 07/06/2024 (Afternoon) '",
       "options": {
-        "a": "Census 1971 / जनगणना 1971",
-        "b": "Census 1961 / जनगणना 1961",
-        "c": "Census 1951 / जनगणना 1951",
-        "d": "Census 1981 / जनगणना 1981"
+        "a": "Census 1971",
+        "b": "Census 1961",
+        "c": "Census 1951",
+        "d": "Census 1981"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 49,
-      "question": "According to Census of India 2011, which is the second most populated state? SSC JE 07/06/2024 (Evening)भारत की जनगणना 2011 के अनुसार दूसरा सबसे अधिक आबादी वाला राज्य कौन सा है?",
+      "question": "According to Census of India 2011, which is the second most populated state? SSC JE 07/06/2024 (Evening)",
       "options": {
         "a": "Bihar",
         "b": "Tamil Nadu",
@@ -594,7 +594,7 @@
     },
     {
       "q_num": 50,
-      "question": "According to Census of India 2011, which state/union territory has the second highest sex ratio? SSC JE 07/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार, किस राज्य/केंद्र शासित प्रदेश में दूसरा सबसे अधिक लिंगानुपात है?",
+      "question": "According to Census of India 2011, which state/union territory has the second highest sex ratio? SSC JE 07/06/2024 (Evening)",
       "options": {
         "a": "Chandigarh",
         "b": "Tamil Nadu",
@@ -606,7 +606,7 @@
     },
     {
       "q_num": 51,
-      "question": "Rank the following states in descending order of their percentage share of the population in the country's population, as per Census 2011. Bihar, West Bengal, Rajasthan, Madhya Pradesh (SSC JE 07/06/2024 (Evening)) जनगणना 2011 के अनुसार, देश की जनसंख्या में उनकी प्रतिशत हिस्सेदारी के अवरोही क्रम में निम्नलिखित राज्यों को रैंक करें। बिहार, पश्चिम बंगाल, राजस्थान, मध्य प्रदेश",
+      "question": "Rank the following states in descending order of their percentage share of the population in the country's population, as per Census 2011. Bihar, West Bengal, Rajasthan, Madhya Pradesh (SSC JE 07/06/2024 (Evening))",
       "options": {
         "a": "Rajasthan-Madhya Pradesh-Bihar-West Bengal",
         "b": "Madhya Pradesh-Bihar-Rajasthan-West Bengal",
@@ -618,7 +618,7 @@
     },
     {
       "q_num": 52,
-      "question": "Which of the following states has the lowest literacy rate as per Census of India 2011? SSC CPO 27/06/2024 (Morning) भारत की जनगणना 2011 के अनुसार निम्नलिखित में से किस राज्य की साक्षरता दर सबसे कम है?",
+      "question": "Which of the following states has the lowest literacy rate as per Census of India 2011? SSC CPO 27/06/2024 (Morning)",
       "options": {
         "a": "Bihar",
         "b": "Odisha",
@@ -630,7 +630,7 @@
     },
     {
       "q_num": 53,
-      "question": "What is the national female workforce participation rate as per the Census of India 2011? SSC CPO 27/06/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार राष्ट्रीय महिला कार्यबल भागीदारी दर क्या है?",
+      "question": "What is the national female workforce participation rate as per the Census of India 2011? SSC CPO 27/06/2024 (Afternoon)",
       "options": {
         "a": "30.02%",
         "b": "53.26%",
@@ -642,7 +642,7 @@
     },
     {
       "q_num": 54,
-      "question": "According to the Census of India 2011, ‘Other Religions and Persuasions’ formed what percentage of the country’s population? SSC CPO 27/06/2024 (Evening)भारत की जनगणना 2011 के अनुसार, 'अन्य धर्म और मत' देश की जनसंख्या का कितना प्रतिशत हैं?",
+      "question": "According to the Census of India 2011, ‘Other Religions and Persuasions’ formed what percentage of the country’s population? SSC CPO 27/06/2024 (Evening)",
       "options": {
         "a": ". 1.7",
         "b": "0.7",
@@ -654,19 +654,19 @@
     },
     {
       "q_num": 55,
-      "question": "According to Census 2011, which of the following languages is spoken by the least population in India? SSC CPO 28/06/2024 (Morning) जनगणना 2011 के अनुसार, निम्नलिखित में से कौन सी भाषा भारत में सबसे कम आबादी द्वारा बोली जाती है",
+      "question": "According to Census 2011, which of the following languages is spoken by the least population in India? SSC CPO 28/06/2024 (Morning)",
       "options": {
-        "a": "Sanskrit / संस्कृत",
-        "b": "Konkani / कोंकणी",
-        "c": "Dogri / डोगरी",
-        "d": "Assamese / असमिया"
+        "a": "Sanskrit",
+        "b": "Konkani",
+        "c": "Dogri",
+        "d": "Assamese"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 56,
-      "question": "What is the national male workforce participation rate as per the Census of India 2011? SSC CPO 28/06/2024 (Evening) भारत की जनगणना 2011 के अनुसार राष्ट्रीय पुरुष कार्यबल भागीदारी दर क्या है?",
+      "question": "What is the national male workforce participation rate as per the Census of India 2011? SSC CPO 28/06/2024 (Evening)",
       "options": {
         "a": "51.26%",
         "b": "53.26%",
@@ -678,7 +678,7 @@
     },
     {
       "q_num": 57,
-      "question": "What is the literacy rate in India as per the Census of 2011? SSC CPO 29/06/2024 (Afternoon)2011 की जनगणना के अनुसार भारत में साक्षरता दर क्या है?",
+      "question": "What is the literacy rate in India as per the Census of 2011? SSC CPO 29/06/2024 (Afternoon)2011",
       "options": {
         "a": "65.46%",
         "b": "82.14%",
@@ -690,7 +690,7 @@
     },
     {
       "q_num": 58,
-      "question": "Which of the following states has the lowest literacy rate as per Census of India 2011? SSC CPO 27/06/2024 (Morning) भारत की जनगणना 2011 के अनुसार निम्नलिखित में से किस राज्य की साक्षरता दर सबसे कम है?",
+      "question": "Which of the following states has the lowest literacy rate as per Census of India 2011? SSC CPO 27/06/2024 (Morning)",
       "options": {
         "a": "Odisha",
         "b": "Tamil Nadu",
@@ -702,7 +702,7 @@
     },
     {
       "q_num": 59,
-      "question": "As per Census 2011, what is the percentage of rural population in India? SSC CPO 29/06/2024 (Evening)2011 की जनगणना के अनुसार भारत में ग्रामीण जनसंख्या का प्रतिशत कितना है?",
+      "question": "As per Census 2011, what is the percentage of rural population in India? SSC CPO 29/06/2024 (Evening)2011",
       "options": {
         "a": "68.8%",
         "b": "59.3%",
@@ -714,7 +714,7 @@
     },
     {
       "q_num": 60,
-      "question": "As per Census 2011, which of the following states recorded negative growth in child sex ratio? SSC MTS 18/10/2024 (Morning) जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में बाल लिंगानुपात में नकारात्मक वृद्धि दर्ज की गई?",
+      "question": "As per Census 2011, which of the following states recorded negative growth in child sex ratio? SSC MTS 18/10/2024 (Morning)",
       "options": {
         "a": "Haryana",
         "b": "Himachal Pradesh",
@@ -726,7 +726,7 @@
     },
     {
       "q_num": 61,
-      "question": "As per Census of India 2011, which of the following states has the highest percentage of urban population in India? SSC MTS 14/10/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में भारत की शहरी जनसंख्या का प्रतिशत सबसे अधिक है",
+      "question": "As per Census of India 2011, which of the following states has the highest percentage of urban population in India? SSC MTS 14/10/2024 (Afternoon)",
       "options": {
         "a": "Mizoram",
         "b": "Gujarat",
@@ -738,7 +738,7 @@
     },
     {
       "q_num": 62,
-      "question": "In which of the following years was the Census Act enacted and extended to the whole of India? SSC MTS 08/10/2024 (Morning) निम्नलिखित में से किस वर्ष जनगणना अधिनियम लागू किया गया तथा उसे सम्पूर्ण भारत में लागू किया गया?",
+      "question": "In which of the following years was the Census Act enacted and extended to the whole of India? SSC MTS 08/10/2024 (Morning)",
       "options": {
         "a": "1949",
         "b": "1948",
@@ -750,7 +750,7 @@
     },
     {
       "q_num": 63,
-      "question": "As per Census 2011, which of the following union territories has the highest percentage of rural population? SSC MTS 21/10/2024 (Afternoon) जनगणना 2011 के अनुसार, निम्नलिखित में से किस केंद्र शासित प्रदेश में ग्रामीण जनसंख्या का प्रतिशत सबसे अधिक है?",
+      "question": "As per Census 2011, which of the following union territories has the highest percentage of rural population? SSC MTS 21/10/2024 (Afternoon)",
       "options": {
         "a": "Puducherry",
         "b": "Daman and Diu",
@@ -762,7 +762,7 @@
     },
     {
       "q_num": 64,
-      "question": "According Census 2011 of India, which of the following union territories has the second highest literacy rate? SSC MTS 30/10/2024 (Afternoon) भारत की 2011 की जनगणना के अनुसार, निम्नलिखित में से किस केंद्र शासित प्रदेश की साक्षरता दर दूसरी सबसे अधिक है",
+      "question": "According Census 2011 of India, which of the following union territories has the second highest literacy rate? SSC MTS 30/10/2024 (Afternoon)",
       "options": {
         "a": "Lakshadweep",
         "b": "Daman and Diu",
@@ -774,7 +774,7 @@
     },
     {
       "q_num": 65,
-      "question": "Rank the following states in ascending order, based on their population density, as per Census 2011. Tripura, Meghalaya, Manipur, Nagaland {SSC MTS 28/10/2024 (Evening)}जनगणना 2011 के अनुसार, निम्नलिखित राज्यों को उनकी जनसंख्या घनत्व के आधार पर आरोही क्रम में व्यवस्थित करें। त्रिपुरा, मेघालय, मणिपुर, नागालैंड",
+      "question": "Rank the following states in ascending order, based on their population density, as per Census 2011. Tripura, Meghalaya, Manipur, Nagaland {SSC MTS 28/10/2024 (Evening)}",
       "options": {
         "a": "Nagaland-Tripura-Manipur-Meghalaya",
         "b": "Nagaland-Manipur-Meghalaya-Tripura",
@@ -786,7 +786,7 @@
     },
     {
       "q_num": 66,
-      "question": "According to the Census of India 2001, how much percentage of the immigrant population was from Sri Lanka? SSC MTS 16/10/2024 (Evening) भारत की जनगणना 2001 के अनुसार, आप्रवासी जनसंख्या का कितना प्रतिशत श्रीलंका से था?",
+      "question": "According to the Census of India 2001, how much percentage of the immigrant population was from Sri Lanka? SSC MTS 16/10/2024 (Evening)",
       "options": {
         "a": "7.1%",
         "b": "2.9%",
@@ -798,7 +798,7 @@
     },
     {
       "q_num": 67,
-      "question": "As per Census of India 2011, which of the following states has the highest child sex ratio (in the age group of 0-6 years)? SSC MTS 29/10/2024 (Morning) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में बाल लिंग अनुपात (0-6 वर्ष आयु वर्ग में) सबसे अधिक है?",
+      "question": "As per Census of India 2011, which of the following states has the highest child sex ratio (in the age group of 0-6 years)? SSC MTS 29/10/2024 (Morning)",
       "options": {
         "a": "Chhattisgarh",
         "b": "Rajasthan",
@@ -810,7 +810,7 @@
     },
     {
       "q_num": 68,
-      "question": "Which Census decade recorded the highest population growth rate (in terms of percentage) in India? SSC MTS 17/10/2024 (Evening) किस जनगणना दशक में भारत में सबसे अधिक जनसंख्या वृद्धि दर (प्रतिशत के संदर्भ में) दर्ज की गई?",
+      "question": "Which Census decade recorded the highest population growth rate (in terms of percentage) in India? SSC MTS 17/10/2024 (Evening)",
       "options": {
         "a": "1961-1971",
         "b": "1971-1981",
@@ -822,7 +822,7 @@
     },
     {
       "q_num": 69,
-      "question": "As per the Census 1951, the female literacy rate in India was: SSC MTS 04/11/2024 (Afternoon)1951 की जनगणना के अनुसार भारत में महिला साक्षरता दर थी:",
+      "question": "As per the Census 1951, the female literacy rate in India was: SSC MTS 04/11/2024 (Afternoon)1951",
       "options": {
         "a": "15.35%",
         "b": "8.86%",
@@ -834,7 +834,7 @@
     },
     {
       "q_num": 70,
-      "question": "According to Census 2011 of India, what was the percentage of Christian communities of the total population in India? SSC MTS 09/10/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, भारत में कुल जनसंख्या में ईसाई समुदायों का प्रतिशत कितना था?",
+      "question": "According to Census 2011 of India, what was the percentage of Christian communities of the total population in India? SSC MTS 09/10/2024 (Afternoon)",
       "options": {
         "a": "1.7%",
         "b": "0.7%",
@@ -846,7 +846,7 @@
     },
     {
       "q_num": 71,
-      "question": "According to the Census of India 2011, what was the population growth rate in Kerala? SSC MTS 22/10/2024 (Morning) भारत की जनगणना 2011 के अनुसार, केरल में जनसंख्या वृद्धि दर क्या थी?",
+      "question": "According to the Census of India 2011, what was the population growth rate in Kerala? SSC MTS 22/10/2024 (Morning)",
       "options": {
         "a": "12.65%",
         "b": "15.01%",
@@ -858,7 +858,7 @@
     },
     {
       "q_num": 72,
-      "question": "In which year was the first Socio Economic and Caste Census (SECC) conducted in India? SSC MTS 12/11/2024 (Evening) भारत में पहली सामाजिक आर्थिक और जाति जनगणना (SECC) किस वर्ष आयोजित की गई थी?",
+      "question": "In which year was the first Socio Economic and Caste Census (SECC) conducted in India? SSC MTS 12/11/2024 (Evening)",
       "options": {
         "a": "2001",
         "b": "2011",
@@ -870,7 +870,7 @@
     },
     {
       "q_num": 73,
-      "question": "According to Census 2011 of India, which Indian state has the highest urban population percentage? SSC MTS 04/11/2024 (Morning) भारत की जनगणना 2011 के अनुसार, किस भारतीय राज्य में शहरी जनसंख्या का प्रतिशत सबसे अधिक है",
+      "question": "According to Census 2011 of India, which Indian state has the highest urban population percentage? SSC MTS 04/11/2024 (Morning)",
       "options": {
         "a": "Goa",
         "b": "Maharashtra",
@@ -882,7 +882,7 @@
     },
     {
       "q_num": 74,
-      "question": "According to the census of India 2011, which of the following states is least urbanised? SSC MTS 05/11/2024 (Evening) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से कौन सा राज्य सबसे कम शहरीकृत है?",
+      "question": "According to the census of India 2011, which of the following states is least urbanised? SSC MTS 05/11/2024 (Evening)",
       "options": {
         "a": "Chhattisgarh",
         "b": "Himachal Pradesh",
@@ -894,7 +894,7 @@
     },
     {
       "q_num": 75,
-      "question": "According to the standard definition of Census of India, the marginal worker is a person who works for less than _______ days in a year. SSC MTS 21/10/2024 (Morning) भारत की जनगणना की मानक परिभाषा के अनुसार, सीमांत श्रमिक वह व्यक्ति है जो एक वर्ष में _______ दिनों से कम काम करता है।",
+      "question": "According to the standard definition of Census of India, the marginal worker is a person who works for less than _______ days in a year. SSC MTS 21/10/2024 (Morning)",
       "options": {
         "a": "183",
         "b": "180",
@@ -906,7 +906,7 @@
     },
     {
       "q_num": 76,
-      "question": "According to the Census 2011, what was the annual population growth rate of India (in percentage)? SSC MTS 22/10/2024 (Morning) जनगणना 2011 के अनुसार भारत की वार्षिक जनसंख्या वृद्धि दर (प्रतिशत में) क्या थी?",
+      "question": "According to the Census 2011, what was the annual population growth rate of India (in percentage)? SSC MTS 22/10/2024 (Morning)",
       "options": {
         "a": "1.97%",
         "b": "1.64%",
@@ -918,7 +918,7 @@
     },
     {
       "q_num": 77,
-      "question": "According to the census of India 2011, which of the following states has the highest percentage of rural population? SSC MTS 21/10/2024 (Evening) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में ग्रामीण जनसंख्या का प्रतिशत सबसे अधिक है?",
+      "question": "According to the census of India 2011, which of the following states has the highest percentage of rural population? SSC MTS 21/10/2024 (Evening)",
       "options": {
         "a": "West Bengal",
         "b": "Uttar Pradesh",
@@ -930,7 +930,7 @@
     },
     {
       "q_num": 78,
-      "question": "As per the 2001 Census, what is the specific age, for a person to be called literate? SSC MTS 14/10/2024 (Morning) 2001 की जनगणना के अनुसार किसी व्यक्ति को साक्षर कहलाने के लिए विशिष्ट आयु क्या है?",
+      "question": "As per the 2001 Census, what is the specific age, for a person to be called literate? SSC MTS 14/10/2024 (Morning) 2001",
       "options": {
         "a": "6 years",
         "b": "7 years",
@@ -942,7 +942,7 @@
     },
     {
       "q_num": 79,
-      "question": "According to the census of India 2011, which union territory from the following has the highest sex ratio? SSC MTS 14/11/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस केंद्र शासित प्रदेश में लिंगानुपात सबसे अधिक है?",
+      "question": "According to the census of India 2011, which union territory from the following has the highest sex ratio? SSC MTS 14/11/2024 (Afternoon)",
       "options": {
         "a": "Puducherry",
         "b": "Lakshadweep",
@@ -954,7 +954,7 @@
     },
     {
       "q_num": 80,
-      "question": "Which of the following statements is/are correct according to the Census of India-2011? SSC MTS 16/10/2024 (Morning) A person aged seven years or above, who can both read and write with understanding in any language, is treated as literate. A person who can only read but cannot write is not literate. भारत की जनगणना-2011 के अनुसार निम्नलिखित में से कौन सा कथन सही है/हैं? सात वर्ष या उससे अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता है, उसे साक्षर माना जाता है। जो व्यक्ति केवल पढ़ सकता है लेकिन लिख नहीं सकता, वह साक्षर नहीं है।",
+      "question": "Which of the following statements is/are correct according to the Census of India-2011? SSC MTS 16/10/2024 (Morning) A person aged seven years or above, who can both read and write with understanding in any language, is treated as literate. A person who can only read but cannot write is not literate.",
       "options": {
         "a": "Only (a) is correct",
         "b": "Only (b) is correct",
@@ -966,7 +966,7 @@
     },
     {
       "q_num": 81,
-      "question": "What is the female literacy rate in India, as per the 2011 census? SSC MTS 11/11/2024 (Afternoon)2011 की जनगणना के अनुसार भारत में महिला साक्षरता दर क्या है?",
+      "question": "What is the female literacy rate in India, as per the 2011 census? SSC MTS 11/11/2024 (Afternoon)2011",
       "options": {
         "a": "64.66%",
         "b": "65.64%",
@@ -978,7 +978,7 @@
     },
     {
       "q_num": 82,
-      "question": "As per Census 2011, which of the following states has the highest percentage of Buddhist population in India? SSC MTS 15/10/2024 (Morning) + CHSL 2024 2011 की जनगणना के अनुसार, भारत में निम्नलिखित में से किस राज्य में बौद्ध जनसंख्या का प्रतिशत सबसे अधिक है?",
+      "question": "As per Census 2011, which of the following states has the highest percentage of Buddhist population in India? SSC MTS 15/10/2024 (Morning) + CHSL 2024 2011",
       "options": {
         "a": "Sikkim",
         "b": "Himachal Pradesh",
@@ -990,7 +990,7 @@
     },
     {
       "q_num": 83,
-      "question": "According to Census of India 2011, in which of the following Union Territories was the sex ratio recorded at 1037 females per 1000 males? SSC MTS 29/10/2024 (Evening) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस केंद्र शासित प्रदेश में लिंगानुपात प्रति 1000 पुरुषों पर 1037 महिलाएं दर्ज किया गया था?",
+      "question": "According to Census of India 2011, in which of the following Union Territories was the sex ratio recorded at 1037 females per 1000 males? SSC MTS 29/10/2024 (Evening)",
       "options": {
         "a": "Chandigarh",
         "b": "Puducherry",
@@ -1002,7 +1002,7 @@
     },
     {
       "q_num": 84,
-      "question": "According to the Census of India-2011, what is the share of workforce engaged in the agriculture sector? SSC MTS 22/10/2024 (Morning) भारत की जनगणना-2011 के अनुसार, कृषि क्षेत्र में लगे कार्यबल का हिस्सा कितना है?",
+      "question": "According to the Census of India-2011, what is the share of workforce engaged in the agriculture sector? SSC MTS 22/10/2024 (Morning)",
       "options": {
         "a": "48.9%",
         "b": "65.3%",
@@ -1014,7 +1014,7 @@
     },
     {
       "q_num": 85,
-      "question": "As per Census of India 2011, which of the following states has the highest percentage of Hindu population in India? SSC MTS 08/10/2024 (Morning) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य में भारत में हिंदू आबादी का प्रतिशत सबसे अधिक है",
+      "question": "As per Census of India 2011, which of the following states has the highest percentage of Hindu population in India? SSC MTS 08/10/2024 (Morning)",
       "options": {
         "a": "Madhya Pradesh",
         "b": "Uttar Pradesh",
@@ -1026,19 +1026,19 @@
     },
     {
       "q_num": 86,
-      "question": "Who is literate according to the Census of India? SSC MTS 28/10/2024 (Evening)भारत की जनगणना के अनुसार कौन साक्षर है?",
+      "question": "Who is literate according to the Census of India? SSC MTS 28/10/2024 (Evening)",
       "options": {
-        "a": "A person above 5 years of age, who can read and write with understanding in any language. / 5 वर्ष से अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो।",
-        "b": "A person above 14 years of age, who can read and write with understanding in any language. / 14 वर्ष से अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो।",
-        "c": "A person above 18 years of age, who can read and write with understanding in any language. / 18 वर्ष से अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो।",
-        "d": "A person above 7 years of age, who can read and write with understanding in any language. / 7 वर्ष से अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो।"
+        "a": "A person above 5 years of age, who can read and write with understanding in any language.",
+        "b": "A person above 14 years of age, who can read and write with understanding in any language.",
+        "c": "A person above 18 years of age, who can read and write with understanding in any language.",
+        "d": "A person above 7 years of age, who can read and write with understanding in any language."
       },
       "answer": "d",
       "solution": ""
     },
     {
       "q_num": 87,
-      "question": "Name the Union territory with the lowest density of population as per Census of India 2011. SSC MTS 14/11/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार सबसे कम जनसंख्या घनत्व वाला केंद्र शासित प्रदेश का नाम बताइए",
+      "question": "Name the Union territory with the lowest density of population as per Census of India 2011. SSC MTS 14/11/2024 (Afternoon)",
       "options": {
         "a": "Andaman and Nicobar Islands",
         "b": "Lakshdweep",
@@ -1050,7 +1050,7 @@
     },
     {
       "q_num": 88,
-      "question": "Which of the following Census decades in India recorded the highest crude death rate? SSC MTS 05/11/2024 (Afternoon) भारत में निम्नलिखित में से किस जनगणना दशक में सबसे अधिक अशोधित मृत्यु दर दर्ज की गई?",
+      "question": "Which of the following Census decades in India recorded the highest crude death rate? SSC MTS 05/11/2024 (Afternoon)",
       "options": {
         "a": "1931-1941",
         "b": "1941-1951",
@@ -1062,7 +1062,7 @@
     },
     {
       "q_num": 89,
-      "question": "Which of the following Census recorded negative population growth in India? SSC MTS 12/11/2024 (Morning)निम्नलिखित में से किस जनगणना में भारत में नकारात्मक जनसंख्या वृद्धि दर्ज की गई?",
+      "question": "Which of the following Census recorded negative population growth in India? SSC MTS 12/11/2024 (Morning)",
       "options": {
         "a": "1971",
         "b": "1991",
@@ -1074,7 +1074,7 @@
     },
     {
       "q_num": 90,
-      "question": "The 2011 census was the ____________ official survey conducted in India. SSC MTS 23/10/2024 (Afternoon)2011 की जनगणना भारत में किया गया ____________ आधिकारिक सर्वेक्षण था।",
+      "question": "The 2011 census was the ____________ official survey conducted in India. SSC MTS 23/10/2024 (Afternoon)2011",
       "options": {
         "a": "14th",
         "b": "15th",
@@ -1086,7 +1086,7 @@
     },
     {
       "q_num": 91,
-      "question": "According to Census 2011 of India, which metropolitan city has the highest population? SSC MTS 28/10/2024 (Morning) भारत की जनगणना 2011 के अनुसार, किस महानगरीय शहर की जनसंख्या सबसे अधिक है?",
+      "question": "According to Census 2011 of India, which metropolitan city has the highest population? SSC MTS 28/10/2024 (Morning)",
       "options": {
         "a": "Mumbai",
         "b": "Chennai",
@@ -1098,7 +1098,7 @@
     },
     {
       "q_num": 92,
-      "question": "Which state in India has the largest scheduled tribe population as per the 2011 Census? SSC MTS 04/11/2024 (Evening) 2011 की जनगणना के अनुसार भारत के किस राज्य में अनुसूचित जनजाति की जनसंख्या सबसे अधिक है?",
+      "question": "Which state in India has the largest scheduled tribe population as per the 2011 Census? SSC MTS 04/11/2024 (Evening) 2011",
       "options": {
         "a": "Odisha",
         "b": "Jharkhand",
@@ -1110,7 +1110,7 @@
     },
     {
       "q_num": 93,
-      "question": "As per the 2011 census, which of the following union territories had the lowest population? SSC MTS 30/10/2024 (Morning) 2011 की जनगणना के अनुसार, निम्नलिखित में से किस केंद्र शासित प्रदेश की जनसंख्या सबसे कम थी?",
+      "question": "As per the 2011 census, which of the following union territories had the lowest population? SSC MTS 30/10/2024 (Morning) 2011",
       "options": {
         "a": "Chandigarh",
         "b": "Puducherry",
@@ -1122,7 +1122,7 @@
     },
     {
       "q_num": 94,
-      "question": "Which of the following states has the lowest child sex ratio according to Census of India, 2001? SSC MTS 18/10/2024 (Morning) भारत की जनगणना 2001 के अनुसार निम्नलिखित में से किस राज्य का बाल लिंग अनुपात सबसे कम है?",
+      "question": "Which of the following states has the lowest child sex ratio according to Census of India, 2001? SSC MTS 18/10/2024 (Morning)",
       "options": {
         "a": "Kerala",
         "b": "Uttarakhand",
@@ -1134,7 +1134,7 @@
     },
     {
       "q_num": 95,
-      "question": "Who was the Registrar General and Census Commissioner of India for the 2011 Indian Census? SSC MTS 07/10/2024 (Morning) 2011 की भारतीय जनगणना के लिए भारत के रजिस्ट्रार जनरल और जनगणना आयुक्त कौन थे?",
+      "question": "Who was the Registrar General and Census Commissioner of India for the 2011 Indian Census? SSC MTS 07/10/2024 (Morning) 2011",
       "options": {
         "a": "Devender Kumar Sikri",
         "b": "Dr. C Chandramouli",
@@ -1146,7 +1146,7 @@
     },
     {
       "q_num": 96,
-      "question": "According to Census of India 2011, which pair of states recorded the highest population density (persons/km ) in India? SSC MTS 13/11/2024(Morning) भारत की जनगणना 2011 के अनुसार, भारत में किस राज्य के जोड़े में सबसे अधिक जनसंख्या घनत्व (व्यक्ति/किमी ) दर्ज किया गया?",
+      "question": "According to Census of India 2011, which pair of states recorded the highest population density (persons/km ) in India? SSC MTS 13/11/2024(Morning)",
       "options": {
         "a": "West Bengal and Uttar Pradesh",
         "b": "Bihar and West Bengal",
@@ -1158,7 +1158,7 @@
     },
     {
       "q_num": 97,
-      "question": "According to the Census of India 2011, which states of India have population density more than 1000 persons per sq. km? SSC MTS 09/10/2024 (Evening) भारत की जनगणना 2011 के अनुसार, भारत के किन राज्यों का जनसंख्या घनत्व 1000 व्यक्ति प्रति वर्ग किमी से अधिक है?",
+      "question": "According to the Census of India 2011, which states of India have population density more than 1000 persons per sq. km? SSC MTS 09/10/2024 (Evening)",
       "options": {
         "a": "Kerala and Tamil Nadu",
         "b": "Uttar Pradesh and Haryana",
@@ -1170,7 +1170,7 @@
     },
     {
       "q_num": 98,
-      "question": "As per Census 2011, what is the average female literacy rate in India? SSC MTS 14/11/2024 (Evening)2011 की जनगणना के अनुसार भारत में औसत महिला साक्षरता दर क्या है?",
+      "question": "As per Census 2011, what is the average female literacy rate in India? SSC MTS 14/11/2024 (Evening)2011",
       "options": {
         "a": "82.45%",
         "b": "65.46%",
@@ -1182,7 +1182,7 @@
     },
     {
       "q_num": 99,
-      "question": "According to the Census of India 2011, what is the population density of India? SSC MTS 23/10/2024 (Morning)भारत की जनगणना 2011 के अनुसार भारत का जनसंख्या घनत्व कितना है?",
+      "question": "According to the Census of India 2011, what is the population density of India? SSC MTS 23/10/2024 (Morning)",
       "options": {
         "a": "388/km2",
         "b": "375/km2",
@@ -1194,19 +1194,19 @@
     },
     {
       "q_num": 100,
-      "question": "According to the Census of India 2011, what was the total population of India? SSC MTS 29/10/2024 (Morning)भारत की जनगणना 2011 के अनुसार भारत की कुल जनसंख्या कितनी थी?",
+      "question": "According to the Census of India 2011, what was the total population of India? SSC MTS 29/10/2024 (Morning)",
       "options": {
-        "a": "1.41 billion. / 1.41 बिलियन",
-        "b": "1.21 billion / 1.21 बिलियन",
-        "c": "98.6 billion / 98.6 बिलियन",
-        "d": "1.11 billion / 1.11 बिलियन"
+        "a": "1.41 billion.",
+        "b": "1.21 billion",
+        "c": "98.6 billion",
+        "d": "1.11 billion"
       },
       "answer": "b",
       "solution": ""
     },
     {
       "q_num": 101,
-      "question": "In the 1991 Census, which state was the highest in rank in terms of literacy rate and held higher than the national average of literacy rate? SSC MTS 30/09/2024 (Afternoon)1991 की जनगणना में साक्षरता दर के मामले में कौन सा राज्य सर्वोच्च स्थान पर था तथा साक्षरता दर के राष्ट्रीय औसत से भी अधिक था?",
+      "question": "In the 1991 Census, which state was the highest in rank in terms of literacy rate and held higher than the national average of literacy rate? SSC MTS 30/09/2024 (Afternoon)1991",
       "options": {
         "a": "West Bengal",
         "b": "Tamil Nadu",
@@ -1218,7 +1218,7 @@
     },
     {
       "q_num": 102,
-      "question": "According to Census 2011, what is the sex ratio of India? SSC MTS 07/10/2024 (Morning)जनगणना 2011 के अनुसार भारत का लिंगानुपात क्या है?",
+      "question": "According to Census 2011, what is the sex ratio of India? SSC MTS 07/10/2024 (Morning)",
       "options": {
         "a": "998",
         "b": "950",
@@ -1230,7 +1230,7 @@
     },
     {
       "q_num": 103,
-      "question": "According to Census of India 2011, which is the largest religious community in India? SSC MTS 29/10/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, भारत में सबसे बड़ा धार्मिक समुदाय कौन सा है?",
+      "question": "According to Census of India 2011, which is the largest religious community in India? SSC MTS 29/10/2024 (Afternoon)",
       "options": {
         "a": "Sikhs",
         "b": "Muslims",
@@ -1242,7 +1242,7 @@
     },
     {
       "q_num": 104,
-      "question": "According to Census 2011, which union territory recorded the highest female literacy rate in India? SSC CHSL 11/07/2024 (Evening) जनगणना 2011 के अनुसार, भारत में किस केंद्र शासित प्रदेश में महिला साक्षरता दर सबसे अधिक दर्ज की गई?",
+      "question": "According to Census 2011, which union territory recorded the highest female literacy rate in India? SSC CHSL 11/07/2024 (Evening)",
       "options": {
         "a": "Lakshadweep",
         "b": "Chandigarh",
@@ -1254,7 +1254,7 @@
     },
     {
       "q_num": 105,
-      "question": "According to the Census of India 2011, most people had out-migrated from _____ to other states in India. SSC CHSL 01/07/2024 (Morning) भारत की जनगणना 2011 के अनुसार, अधिकतर लोग _____ से भारत के अन्य राज्यों में पलायन कर गए थे।",
+      "question": "According to the Census of India 2011, most people had out-migrated from _____ to other states in India. SSC CHSL 01/07/2024 (Morning)",
       "options": {
         "a": "Uttar Pradesh and Bihar",
         "b": "Rajasthan and Gujarat",
@@ -1266,7 +1266,7 @@
     },
     {
       "q_num": 106,
-      "question": "After independence, the Census Act was enacted in India in the year __________. SSC CHSL 01/07/2024 (Evening) स्वतंत्रता के बाद, भारत में जनगणना अधिनियम वर्ष __________ में लागू किया गया था।",
+      "question": "After independence, the Census Act was enacted in India in the year __________. SSC CHSL 01/07/2024 (Evening)",
       "options": {
         "a": "1948",
         "b": "1962",
@@ -1278,7 +1278,7 @@
     },
     {
       "q_num": 107,
-      "question": "According to the Census of India-2011, which state has the largest gap between male and female literacy rates? SSC CHSL 02/07/2024 (Morning) भारत की जनगणना-2011 के अनुसार, किस राज्य में पुरुष और महिला साक्षरता दर के बीच सबसे बड़ा अंतर है?",
+      "question": "According to the Census of India-2011, which state has the largest gap between male and female literacy rates? SSC CHSL 02/07/2024 (Morning)",
       "options": {
         "a": "Karnataka",
         "b": "Andhra Pradesh",
@@ -1290,7 +1290,7 @@
     },
     {
       "q_num": 108,
-      "question": "According to Census of India 2011, how many districts are there in India? SSC CHSL 02/07/2024 (Afternoon)भारत की जनगणना 2011 के अनुसार भारत में कितने जिले हैं?",
+      "question": "According to Census of India 2011, how many districts are there in India? SSC CHSL 02/07/2024 (Afternoon)",
       "options": {
         "a": "630",
         "b": "640",
@@ -1302,7 +1302,7 @@
     },
     {
       "q_num": 109,
-      "question": "According the Census of India 2011, which group of states has the least urban population? SSC CHSL 02/07/2024 (Evening) भारत की जनगणना 2011 के अनुसार, राज्यों के किस समूह में सबसे कम शहरी आबादी है?",
+      "question": "According the Census of India 2011, which group of states has the least urban population? SSC CHSL 02/07/2024 (Evening)",
       "options": {
         "a": "Himachal Pradesh and Bihar",
         "b": "Uttar Pradesh and Bihar",
@@ -1314,7 +1314,7 @@
     },
     {
       "q_num": 110,
-      "question": "Which of the following districts of India has the highest literacy rate as per Census 2011? SSC CHSL 02/07/2024 (Evening) 2011 की जनगणना के अनुसार भारत के निम्नलिखित में से किस जिले की साक्षरता दर सबसे अधिक है?",
+      "question": "Which of the following districts of India has the highest literacy rate as per Census 2011? SSC CHSL 02/07/2024 (Evening) 2011",
       "options": {
         "a": "Idukki",
         "b": "Champhai",
@@ -1326,19 +1326,19 @@
     },
     {
       "q_num": 111,
-      "question": "According to the Census of India, who are considered to be literates? SSC CHSL 03/07/2024 (Morning)भारत की जनगणना के अनुसार किसे साक्षर माना जाता है?",
+      "question": "According to the Census of India, who are considered to be literates? SSC CHSL 03/07/2024 (Morning)",
       "options": {
-        "a": "Person aged five and above, who can both read and write with understanding in any language पाँच वर्ष या उससे अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो",
-        "b": "Person aged fifteen and above, who can both read and write with understanding in any language / पंद्रह वर्ष या उससे अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो",
-        "c": "Person aged eighteen and above, who can both read and write with understanding in any language / अठारह वर्ष या उससे अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो",
-        "d": "Person aged seven and above, who can both read and write with understanding in any language / सात वर्ष या उससे अधिक आयु का व्यक्ति, जो किसी भी भाषा को समझकर पढ़ और लिख सकता हो"
+        "a": "Person aged five and above, who can both read and write with understanding in any language",
+        "b": "Person aged fifteen and above, who can both read and write with understanding in any language",
+        "c": "Person aged eighteen and above, who can both read and write with understanding in any language",
+        "d": "Person aged seven and above, who can both read and write with understanding in any language"
       },
       "answer": "d",
       "solution": ""
     },
     {
       "q_num": 112,
-      "question": "How many censuses had been completed in India as of year 2011? SSC CHSL 03/07/2024 (Morning)वर्ष 2011 तक भारत में कितनी जनगणनाएँ पूरी हो चुकी थीं?",
+      "question": "How many censuses had been completed in India as of year 2011? SSC CHSL 03/07/2024 (Morning)",
       "options": {
         "a": "12",
         "b": "15",
@@ -1350,7 +1350,7 @@
     },
     {
       "q_num": 113,
-      "question": "According to Census of India 2011, what was the sex ratio recorded in the Union Territory of Puducherry? SSC CHSL 03/07/2024 (Morning) भारत की जनगणना 2011 के अनुसार, केंद्र शासित प्रदेश पुडुचेरी में लिंग अनुपात क्या दर्ज किया गया था?",
+      "question": "According to Census of India 2011, what was the sex ratio recorded in the Union Territory of Puducherry? SSC CHSL 03/07/2024 (Morning)",
       "options": {
         "a": "1095 females /1000 males",
         "b": "1037 females/1000 males",
@@ -1362,7 +1362,7 @@
     },
     {
       "q_num": 114,
-      "question": "As per the Census-2011, the population growth during the decade remained ________. SSC CHSL 03/07/2024 (Afternoon) जनगणना-2011 के अनुसार, दशक के दौरान जनसंख्या वृद्धि ________ रही।",
+      "question": "As per the Census-2011, the population growth during the decade remained ________. SSC CHSL 03/07/2024 (Afternoon)",
       "options": {
         "a": "18.30%",
         "b": "15.30%",
@@ -1374,7 +1374,7 @@
     },
     {
       "q_num": 115,
-      "question": "According to the Census of India 2011, which of the following states is the most urbanized? SSC CHSL 03/07/2024 (Evening) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से कौन सा राज्य सबसे अधिक शहरीकृत है?",
+      "question": "According to the Census of India 2011, which of the following states is the most urbanized? SSC CHSL 03/07/2024 (Evening)",
       "options": {
         "a": "Himachal Pradesh",
         "b": "Goa",
@@ -1386,7 +1386,7 @@
     },
     {
       "q_num": 116,
-      "question": "On the basis of highest population growth rate (Census, 2011), select the option that arranges the following states in descending order. A)Bihar B)Arunachal Pradesh C)Meghalaya { SSC CHSL 04/07/2 (Evening)} उच्चतम जनसंख्या वृद्धि दर (जनगणना, 2011) के आधार पर, उस विकल्प का चयन करें जो निम्नलिखित राज्यों को अवरोही क्रम में व्यवस्थित करता है। A)बिहार B)अरुणाचल प्रदेशC)मेघालय",
+      "question": "On the basis of highest population growth rate (Census, 2011), select the option that arranges the following states in descending order. A)Bihar B)Arunachal Pradesh C)Meghalaya { SSC CHSL 04/07/2 (Evening)}",
       "options": {
         "a": "A, B, C",
         "b": "B, C, A",
@@ -1398,7 +1398,7 @@
     },
     {
       "q_num": 117,
-      "question": "As per the Census of India-2011, the density of population per km² was ________ persons. SSC CHSL 05/07/2024 (Afternoon) भारत की जनगणना-2011 के अनुसार, प्रति वर्ग किमी जनसंख्या का घनत्व ________ व्यक्ति था",
+      "question": "As per the Census of India-2011, the density of population per km² was ________ persons. SSC CHSL 05/07/2024 (Afternoon)",
       "options": {
         "a": "382",
         "b": "345",
@@ -1410,7 +1410,7 @@
     },
     {
       "q_num": 118,
-      "question": "According to the census of India 2011, which state has the lowest population growth rate? SSC CHSL 08/07/2024 (Morning) भारत की जनगणना 2011 के अनुसार, किस राज्य की जनसंख्या वृद्धि दर सबसे कम है?",
+      "question": "According to the census of India 2011, which state has the lowest population growth rate? SSC CHSL 08/07/2024 (Morning)",
       "options": {
         "a": "Jharkhand",
         "b": "Nagaland",
@@ -1422,7 +1422,7 @@
     },
     {
       "q_num": 119,
-      "question": "As per Census of India 2011, in which of the following states was the total population less than 10 lakh? SSC CHSL 08/07/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार, निम्नलिखित में से किस राज्य की कुल जनसंख्या 10 लाख से कम थी?",
+      "question": "As per Census of India 2011, in which of the following states was the total population less than 10 lakh? SSC CHSL 08/07/2024 (Afternoon)",
       "options": {
         "a": "Telangana",
         "b": "Sikkim",
@@ -1434,7 +1434,7 @@
     },
     {
       "q_num": 120,
-      "question": "What was the Child Sex Ratio in the country as per the Census of India 2011? SSC CHSL 08/07/2024 (Afternoon)भारत की जनगणना 2011 के अनुसार देश में बाल लिंग अनुपात क्या था?",
+      "question": "What was the Child Sex Ratio in the country as per the Census of India 2011? SSC CHSL 08/07/2024 (Afternoon)",
       "options": {
         "a": "981",
         "b": "911",
@@ -1446,7 +1446,7 @@
     },
     {
       "q_num": 121,
-      "question": "As per the Census-2011, the total absolute increase in population during the decade is ________. SSC CHSL 08/07/2024 (Evening) जनगणना-2011 के अनुसार, दशक के दौरान जनसंख्या में कुल निरपेक्ष वृद्धि ________ है।",
+      "question": "As per the Census-2011, the total absolute increase in population during the decade is ________. SSC CHSL 08/07/2024 (Evening)",
       "options": {
         "a": "17.21 crore",
         "b": "15.23 crore",
@@ -1458,7 +1458,7 @@
     },
     {
       "q_num": 122,
-      "question": "In which year was the 15ᵗʰ National Census Survey of India conducted? SSC CHSL 09/07/2024 (Morning)15वीं भारतीय राष्ट्रीय जनगणना सर्वेक्षण किस वर्ष आयोजित किया गया था?",
+      "question": "In which year was the 15ᵗʰ National Census Survey of India conducted? SSC CHSL 09/07/2024 (Morning)15",
       "options": {
         "a": "2001",
         "b": "2021",
@@ -1470,7 +1470,7 @@
     },
     {
       "q_num": 123,
-      "question": "According to Census 2011, India’s population accounts _________ of the world’s population. SSC CHSL 09/07/2024 (Evening) जनगणना 2011 के अनुसार, भारत की जनसंख्या विश्व की जनसंख्या का _________ है।",
+      "question": "According to Census 2011, India’s population accounts _________ of the world’s population. SSC CHSL 09/07/2024 (Evening)",
       "options": {
         "a": "10%",
         "b": "15%",
@@ -1482,7 +1482,7 @@
     },
     {
       "q_num": 124,
-      "question": "The catchphrase of which census is ‘Our census, our future’? SSC CHSL 10/07/2024 (Morning)किस जनगणना का नारा है ‘हमारी जनगणना, हमारा भविष्य’?",
+      "question": "The catchphrase of which census is ‘Our census, our future’? SSC CHSL 10/07/2024 (Morning)",
       "options": {
         "a": "2011",
         "b": "2001",
@@ -1494,7 +1494,7 @@
     },
     {
       "q_num": 125,
-      "question": "As per census 2011, which of the following states have the highest female literacy rate? SSC GD 20/02/2024 (Morning) 2011 की जनगणना के अनुसार, निम्नलिखित में से किस राज्य में महिला साक्षरता दर सबसे अधिक है?",
+      "question": "As per census 2011, which of the following states have the highest female literacy rate? SSC GD 20/02/2024 (Morning) 2011",
       "options": {
         "a": "Tripura",
         "b": "Kerala",
@@ -1506,7 +1506,7 @@
     },
     {
       "q_num": 126,
-      "question": "Which of the following states / Union Territories have the highest male literacy rate according to census of India 2011? SSC GD 20/02/2024 (Afternoon) भारत की जनगणना 2011 के अनुसार निम्नलिखित में से किस राज्य/केंद्र शासित प्रदेश में पुरुष साक्षरता दर सबसे अधिक है?",
+      "question": "Which of the following states",
       "options": {
         "a": "Tripura",
         "b": "Kerala",
@@ -1518,7 +1518,7 @@
     },
     {
       "q_num": 127,
-      "question": "Which religion has the majority population in India? SSC GD 20/02/2024 (Evening) भारत में किस धर्म की आबादी बहुसंख्यक है?",
+      "question": "Which religion has the majority population in India? SSC GD 20/02/2024 (Evening)",
       "options": {
         "a": "Jainism",
         "b": "Islam",
@@ -1530,7 +1530,7 @@
     },
     {
       "q_num": 128,
-      "question": "Which of the following is the least populous state of India as per census 2011 census ? SSC GD 20/02/2024 (Evening) 2011 की जनगणना के अनुसार निम्नलिखित में से कौन सा भारत का सबसे कम आबादी वाला राज्य है?",
+      "question": "Which of the following is the least populous state of India as per census 2011 census ? SSC GD 20/02/2024 (Evening) 2011",
       "options": {
         "a": "Goa",
         "b": "Meghalaya",
@@ -1542,7 +1542,7 @@
     },
     {
       "q_num": 129,
-      "question": "Which of the following states have the lowest female literacy rates as per 2011 census? SSC GD 21/02/2024 (Morning) 2011 की जनगणना के अनुसार निम्नलिखित में से किस राज्य में महिला साक्षरता दर सबसे कम है?",
+      "question": "Which of the following states have the lowest female literacy rates as per 2011 census? SSC GD 21/02/2024 (Morning) 2011",
       "options": {
         "a": "Jharkhand",
         "b": "Uttar Pradesh",
@@ -1554,7 +1554,7 @@
     },
     {
       "q_num": 130,
-      "question": "According to the 2011 census of India, which of the following states / UT’s is most literate? SSC GD 21/02/2024 (Afternoon) भारत की 2011 की जनगणना के अनुसार, निम्नलिखित में से कौन सा राज्य/केंद्र शासित प्रदेश सबसे अधिक साक्षर है",
+      "question": "According to the 2011 census of India, which of the following states",
       "options": {
         "a": "Chandigarh",
         "b": "Tamil Nadu",
@@ -1566,7 +1566,7 @@
     },
     {
       "q_num": 131,
-      "question": "Before _____ India was in the first stage of demographic transition. SSC GD 21/02/2024 (Afternoon) _____ से पहले भारत जनसांख्यिकीय संक्रमण के प्रथम चरण में था।",
+      "question": "Before _____ India was in the first stage of demographic transition. SSC GD 21/02/2024 (Afternoon) _____",
       "options": {
         "a": "1990",
         "b": "1921",
@@ -1578,7 +1578,7 @@
     },
     {
       "q_num": 132,
-      "question": "Given among the options, _____ is a state / UT with highest literacy rate (Census 2011). SSC GD 21/02/2024 (Evening) दिए गए विकल्पों में से, _____ उच्चतम साक्षरता दर वाला राज्य/केंद्र शासित प्रदेश है (जनगणना 2011)",
+      "question": "Given among the options, _____ is a state",
       "options": {
         "a": "Rajasthan",
         "b": "Bihar",
@@ -1590,7 +1590,7 @@
     },
     {
       "q_num": 133,
-      "question": "As per census 2011, India’s population was 121.1 Crore with _____ female population. SSC GD 23/02/2024 (Morning) 2011 की जनगणना के अनुसार, भारत की जनसंख्या 121.1 करोड़ थी जिसमें _____ महिला जनसंख्या थी।",
+      "question": "As per census 2011, India’s population was 121.1 Crore with _____ female population. SSC GD 23/02/2024 (Morning) 2011",
       "options": {
         "a": "42.5 %",
         "b": "44.5 %",
@@ -1602,7 +1602,7 @@
     },
     {
       "q_num": 134,
-      "question": "What is the total literacy rate according to the 2001 census of India? SSC GD 23/02/2024 (Evening) 2001 की जनगणना के अनुसार भारत की कुल साक्षरता दर क्या है?",
+      "question": "What is the total literacy rate according to the 2001 census of India? SSC GD 23/02/2024 (Evening) 2001",
       "options": {
         "a": "70.83 %",
         "b": "68.83 %",
@@ -1614,7 +1614,7 @@
     },
     {
       "q_num": 135,
-      "question": "According to the 2011 Census of India, the proportion of ____ population has declined by 0.2 PP (percentage point). SSC GD 24/02/2024 (Morning) भारत की 2011 की जनगणना के अनुसार, ____ जनसंख्या के अनुपात में 0.2 पीपी (प्रतिशत बिंदु) की गिरावट आई है।",
+      "question": "According to the 2011 Census of India, the proportion of ____ population has declined by 0.2 PP (percentage point). SSC GD 24/02/2024 (Morning)",
       "options": {
         "a": "Hindu",
         "b": "Sikh",
@@ -1626,7 +1626,7 @@
     },
     {
       "q_num": 136,
-      "question": "According to th 2011 Census of India, at all India level, the adult (15+) years literacy rate is _____. SSC GD 27/02/2024 (Morning) भारत की 2011 की जनगणना के अनुसार, अखिल भारतीय स्तर पर वयस्क (15+) वर्ष की साक्षरता दर _____ है।",
+      "question": "According to th 2011 Census of India, at all India level, the adult (15+) years literacy rate is _____. SSC GD 27/02/2024 (Morning)",
       "options": {
         "a": "63.3%",
         "b": "73.3%",
@@ -1638,7 +1638,7 @@
     },
     {
       "q_num": 137,
-      "question": "What is the total literacy rate of Bihar according to the Census 2011? SSC GD 27/02/2024 (Morning) 2011 की जनगणना के अनुसार बिहार की कुल साक्षरता दर कितनी है?",
+      "question": "What is the total literacy rate of Bihar according to the Census 2011? SSC GD 27/02/2024 (Morning) 2011",
       "options": {
         "a": "61.8%",
         "b": "65.8%",
@@ -1650,7 +1650,7 @@
     },
     {
       "q_num": 138,
-      "question": "The _____ literacy rates exclude Assam where the Census could not be conducted? SSC GD 30/03/2024 (Morning) _____ साक्षरता दर में असम शामिल नहीं है जहां जनगणना नहीं की जा सकी?",
+      "question": "The _____ literacy rates exclude Assam where the Census could not be conducted? SSC GD 30/03/2024 (Morning) _____",
       "options": {
         "a": "1971",
         "b": "1981",
@@ -1662,43 +1662,43 @@
     },
     {
       "q_num": 139,
-      "question": "In India, the Census Operations are conducted in two phases. What are these two phases? SSC GD 07/03/2024 (Afternoon) भारत में जनगणना कार्य दो चरणों में किया जाता है। ये दो चरण क्या हैं?",
+      "question": "In India, the Census Operations are conducted in two phases. What are these two phases? SSC GD 07/03/2024 (Afternoon)",
       "options": {
-        "a": "Preliminary and Final Enumeration / प्रारंभिक और अंतिम गणना",
-        "b": "Urban Census and Rural Census / शहरी जनगणना और ग्रामीण जनगणना",
-        "c": "Houselisting and Housing Census, Population Enumeration / हाउसलिस्टिंग और आवास जनगणना, जनसंख्या गणना",
-        "d": "Household Survey and Agricultural Census / घरेलू सर्वेक्षण और कृषि जनगणना"
+        "a": "Preliminary and Final Enumeration",
+        "b": "Urban Census and Rural Census",
+        "c": "Houselisting and Housing Census, Population Enumeration",
+        "d": "Household Survey and Agricultural Census"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 140,
-      "question": "The literacy rate is defined by the percentage of the population of a given age group that can ______. SSC GD 07/03/2024 (Morning) साक्षरता दर को किसी निश्चित आयु वर्ग की जनसंख्या के प्रतिशत के आधार पर परिभाषित किया जाता है जो ______ हो सकती है।",
+      "question": "The literacy rate is defined by the percentage of the population of a given age group that can ______. SSC GD 07/03/2024 (Morning)",
       "options": {
-        "a": "Write Only / केवल लिखें",
-        "b": "Read Only / केवल पढ़ें",
-        "c": "Read & Write / पढ़ें और लिखें",
-        "d": "Speak / बोलें"
+        "a": "Write Only",
+        "b": "Read Only",
+        "c": "Read & Write",
+        "d": "Speak"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 141,
-      "question": "How many questions were asked in the 2011 Census of India ? SSC GD 07/03/2024 (Morning) भारत की 2011 की जनगणना में कितने प्रश्न पूछे गए थे?",
+      "question": "How many questions were asked in the 2011 Census of India ? SSC GD 07/03/2024 (Morning)",
       "options": {
-        "a": "29 Questions / 29 प्रश्न",
-        "b": "25 Questions / 25 प्रश्न",
-        "c": "33 Questions / 33 प्रश्न",
-        "d": "21 Questions / 21 प्रश्न"
+        "a": "29 Questions",
+        "b": "25 Questions",
+        "c": "33 Questions",
+        "d": "21 Questions"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 142,
-      "question": "According to the 2011 Census of India, which of the following states has a literacy rate of 91.3%? SSC GD 06/03/2024 (Morning) भारत की 2011 की जनगणना के अनुसार, निम्नलिखित में से किस राज्य की साक्षरता दर 91.3% है?",
+      "question": "According to the 2011 Census of India, which of the following states has a literacy rate of 91.3%? SSC GD 06/03/2024 (Morning)",
       "options": {
         "a": "Kerala",
         "b": "Manipur",
@@ -1710,7 +1710,7 @@
     },
     {
       "q_num": 143,
-      "question": "According to the Census of India 2011, ‘Other Religions and Persuasions (ORP)’ comprise how much of the population? SSC CGL 17/09/2024 (Evening) भारत की जनगणना 2011 के अनुसार, ‘अन्य धर्म और धारणाएँ (ओआरपी)’ जनसंख्या का कितना हिस्सा हैं?",
+      "question": "According to the Census of India 2011, ‘Other Religions and Persuasions (ORP)’ comprise how much of the population? SSC CGL 17/09/2024 (Evening)",
       "options": {
         "a": "9.9 million",
         "b": "3.9 million",
@@ -1722,7 +1722,7 @@
     },
     {
       "q_num": 144,
-      "question": "Generally, the sex ratios have been calculated as the proportion of females to _____ males. SSC GD 05/03/2024 (Morning) सामान्यतः लिंग अनुपात की गणना महिलाओं और पुरुषों के अनुपात के रूप में की जाती है।",
+      "question": "Generally, the sex ratios have been calculated as the proportion of females to _____ males. SSC GD 05/03/2024 (Morning)",
       "options": {
         "a": "100",
         "b": "500",
@@ -1734,7 +1734,7 @@
     },
     {
       "q_num": 145,
-      "question": "According to Census of India 2011, female adolescents in the age group of 10- 19 years had a share of: SSC CGL 25/09/2024 ( Morning) भारत की जनगणना 2011 के अनुसार, 10-19 वर्ष आयु वर्ग की किशोरियों की हिस्सेदारी थी:",
+      "question": "According to Census of India 2011, female adolescents in the age group of 10- 19 years had a share of: SSC CGL 25/09/2024 ( Morning)",
       "options": {
         "a": "31.3%",
         "b": "47.3%",
@@ -1746,7 +1746,7 @@
     },
     {
       "q_num": 146,
-      "question": "In India, the dependency ratio of children is a measure of the number of dependent aged______. SSC GD 01/03/2024 (Morning) भारत में, बच्चों का निर्भरता अनुपात आश्रित आयु वर्ग की संख्या का माप है।",
+      "question": "In India, the dependency ratio of children is a measure of the number of dependent aged______. SSC GD 01/03/2024 (Morning)",
       "options": {
         "a": "0 to 16",
         "b": "0 to 18",
@@ -1758,7 +1758,7 @@
     },
     {
       "q_num": 147,
-      "question": "According to the Census of India 2011, the percentage of adolescent population (10-19 years) from the total population is how much? SSC CGL 12/09/2024 (Evening) भारत की जनगणना 2011 के अनुसार, कुल जनसंख्या में किशोर जनसंख्या (10-19 वर्ष) का प्रतिशत कितना है?",
+      "question": "According to the Census of India 2011, the percentage of adolescent population (10-19 years) from the total population is how much? SSC CGL 12/09/2024 (Evening)",
       "options": {
         "a": "19.9%",
         "b": "22.9%",
@@ -1770,7 +1770,7 @@
     },
     {
       "q_num": 148,
-      "question": "What is the total percentage of the Christian population according to the 2011 Census of India ? SSC GD 29/02/2024 (Evening) भारत की 2011 की जनगणना के अनुसार ईसाई जनसंख्या का कुल प्रतिशत कितना है?",
+      "question": "What is the total percentage of the Christian population according to the 2011 Census of India ? SSC GD 29/02/2024 (Evening)",
       "options": {
         "a": "0.3%",
         "b": "2.3 %",
@@ -1782,7 +1782,7 @@
     },
     {
       "q_num": 149,
-      "question": "According to the 2011 Census of India, which of the following North-Eastern states have the highest literacy rate ? SSC GD 29/02/2024 (Morning) भारत की 2011 की जनगणना के अनुसार, निम्नलिखित में से किस पूर्वोत्तर राज्य की साक्षरता दर सबसे अधिक है?",
+      "question": "According to the 2011 Census of India, which of the following North-Eastern states have the highest literacy rate ? SSC GD 29/02/2024 (Morning)",
       "options": {
         "a": "Assam",
         "b": "Mizoram",
@@ -1794,7 +1794,7 @@
     },
     {
       "q_num": 150,
-      "question": "What is the total literacy rate according to the 1951 census of India? SSC GD 28/02/2024 (Afternoon) 1951 की जनगणना के अनुसार भारत की कुल साक्षरता दर कितनी है?",
+      "question": "What is the total literacy rate according to the 1951 census of India? SSC GD 28/02/2024 (Afternoon) 1951",
       "options": {
         "a": "18.1%",
         "b": "16.1%",
@@ -1806,7 +1806,7 @@
     },
     {
       "q_num": 151,
-      "question": "Which of the following was the 14th Census of India? SSC GD 28/02/2024 (Morning) निम्नलिखित में से कौन सी भारत की 14वीं जनगणना थी?",
+      "question": "Which of the following was the 14th Census of India? SSC GD 28/02/2024 (Morning)",
       "options": {
         "a": "2011",
         "b": "2001",

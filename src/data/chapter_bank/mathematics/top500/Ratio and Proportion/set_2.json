@@ -35,7 +35,7 @@
         "d": "None \nof these"
       },
       "answer": "c",
-      "solution": "Here, 7 : 10 : 13 is the ratio of the remainders — \nnot of ₹15,525. So deduct first, then divide. \nTotal deduction = 22 + 35 + 48 = ₹105    ∴  15,525 \n− 105 = ₹15,420 \n \n Step 1   Calculating side by side. \nSum of the terms = 7 + 10 + 13 = 30 units = \n₹15,420    ∴  1 unit = ₹514 \nIncome\nExp\nSavings\nA\n10n\n9n\nn\nB\n6n\n5n\nn\nA_income = 2·B_exp → k=2n → savings A:B = n:n = \n1:1 \nLCM (5, 6) = 30    →    make B = 30 in both ratios\nA : B  =  6 : 5\n× 6\n36 : 30\nB : C  =  6 : 5\n× 5\n30 : 25\n∴  A : B : C  =  36 : 30 : 25\nGiven total  =  ₹15,525\n₹15,420 \n₹105 \n7 : 10 : 13 is divided into this \ndeducted\n22 + 35 + 48 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n \n Step 2 (Optional)   Cross-verifying the final values. \nOriginal shares :  3,620 + 5,175 + 6,730 = ₹15,525 \n✓  (equals the given sum)",
+      "solution": "Here, 7 : 10 : 13 is the ratio of the remainders — \nnot of ₹15,525. So deduct first, then divide. \nTotal deduction = 22 + 35 + 48 = ₹105    ∴  15,525 \n− 105 = ₹15,420 \n \n Step 1   Calculating side by side. \nSum of the terms = 7 + 10 + 13 = 30 units = \n₹15,420    ∴  1 unit = ₹514 \nIncome\nExp\nSavings\nA\n10n\n9n\nn\nB\n6n\n5n\nn\nA_income = 2·B_exp → k=2n → savings A:B = n:n = \n1:1 \nLCM (5, 6) = 30    →    make B = 30 in both ratios\nA : B  =  6 : 5\n× 6\n36 : 30\nB : C  =  6 : 5\n× 5\n30 : 25\n∴  A : B : C  =  36 : 30 : 25\nGiven total  =  ₹15,525\n₹15,420 \n₹105 \n7 : 10 : 13 is divided into this \ndeducted\n22 + 35 + 48 \n\ns\nSSC CGL 2026\n \n Step 2 (Optional)   Cross-verifying the final values. \nOriginal shares :  3,620 + 5,175 + 6,730 = ₹15,525 \n✓  (equals the given sum)",
       "q_num": 3
     },
     {
@@ -191,7 +191,7 @@
         "d": "48"
       },
       "answer": "c",
-      "solution": "Never rebuild the sum — add up the CHANGES \nand divide by the count. \nAVERAGE \nLEVEL - 1 \n275 in 50 overs\n30 overs \nneed 20 overs \n119/20 = 5.95 per over \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 1   Total change. \n4(+5) + 4(−3) = 20 − 12 = +8 \n Step 2   Spread it over the 8 numbers. \n8 / 8 = +1   ∴  new average = 45 + 1 = 46",
+      "solution": "Never rebuild the sum — add up the CHANGES \nand divide by the count. \nAVERAGE \nLEVEL - 1 \n275 in 50 overs\n30 overs \nneed 20 overs \n119/20 = 5.95 per over \n\ns\nSSC CGL 2026\n Step 1   Total change. \n4(+5) + 4(−3) = 20 − 12 = +8 \n Step 2   Spread it over the 8 numbers. \n8 / 8 = +1   ∴  new average = 45 + 1 = 46",
       "q_num": 16
     }
   ]

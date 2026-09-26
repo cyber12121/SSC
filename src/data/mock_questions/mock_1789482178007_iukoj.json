@@ -46,7 +46,7 @@
     "correctOption": "C",
     "userTime": "00:25",
     "avgTime": "00:17",
-    "questionText": "Choose the correct analogy.\nACE : FHJ :: OQ\nS : ?",
+    "questionText": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
     "options": {
       "a": "PRT",
       "b": "RTU",
@@ -66,7 +66,7 @@
       "subtopic": "Letter Analogy",
       "conceptTested": "Positional alphabet shift pattern (forward/backward displacement)"
     },
-    "question": "Choose the correct analogy.\nACE : FHJ :: OQ\nS : ?",
+    "question": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
     "answer": "c"
   },
   {
@@ -1422,7 +1422,7 @@
       "C": "",
       "D": ""
     },
-    "solution": "Solution\nShortcut Trick\nConvert Profit % to fraction: 14 2/7% = 1/7.\n\nHere, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit.\n\nSelling Price (SP) = CP + Profit = 7 + 1 = 8 units.\nRequired fraction (CP/SP) = 7/8.\n∴ The correct answer is 7/8.\n\nAlternate Method\nGiven: Profit percentage = 14 2/7% = (100/7)%.\nFormula Used: Selling Price (SP) = Cost Price (CP) + Profit; Profit % = (Profit ÷ CP) × 100\n⇒ Profit fraction = (100/7) ÷ 100 = 1/7\n⇒ This implies that for every 7 units of Cost Price, the Profit earned is 1 unit.\n⇒ Let Cost Price (CP) = 7x\n⇒ Profit = 1x\n⇒ Selling Price (SP) = CP + Profit = 7x + 1x = 8x\n⇒ Fraction of CP to SP = CP ÷ SP = 7x ÷ 8x\n⇒ Fraction = 7/8\n∴ The correct answer is 7/8.\n\nAdditional Information\nPercentage to Fraction Conversion\n\nCommon percentages like 14 2/7% = 1/7, 12 1/2% = 1/8, and 11 1/9% = 1/9 are essential for solving Profit and Loss questions quickly.\n\nCP and SP Relationship\n\nIf Profit % is expressed as a fraction a/b, then the ratio of C\nP : SP is always b : (b + a). For a Loss % of a/b, the ratio of C\nP : SP is b : (b - a).\n\nMarked Price and Discount\n\nSelling Price can also be calculated using Marked Price (MP): SP = MP × (1 - Discount%/100).",
+    "solution": "Solution\nShortcut Trick\nConvert Profit % to fraction: 14 2/7% = 1/7.\n\nHere, Denominator (7) represents the Cost Price (CP) and Numerator (1) represents the Profit.\n\nSelling Price (SP) = CP + Profit = 7 + 1 = 8 units.\nRequired fraction (CP/SP) = 7/8.\n∴ The correct answer is 7/8.\n\nAlternate Method\nGiven: Profit percentage = 14 2/7% = (100/7)%.\nFormula Used: Selling Price (SP) = Cost Price (CP) + Profit; Profit % = (Profit ÷ CP) × 100\n⇒ Profit fraction = (100/7) ÷ 100 = 1/7\n⇒ This implies that for every 7 units of Cost Price, the Profit earned is 1 unit.\n⇒ Let Cost Price (CP) = 7x\n⇒ Profit = 1x\n⇒ Selling Price (SP) = CP + Profit = 7x + 1x = 8x\n⇒ Fraction of CP to SP = CP ÷ SP = 7x ÷ 8x\n⇒ Fraction = 7/8\n∴ The correct answer is 7/8.\n\nAdditional Information\nPercentage to Fraction Conversion\n\nCommon percentages like 14 2/7% = 1/7, 12 1/2% = 1/8, and 11 1/9% = 1/9 are essential for solving Profit and Loss questions quickly.\n\nCP and SP Relationship\n\nIf Profit % is expressed as a fraction a/b, then the ratio of CP : SP is always b : (b + a). For a Loss % of a/b, the ratio of CP : SP is b : (b - a).\n\nMarked Price and Discount\n\nSelling Price can also be calculated using Marked Price (MP): SP = MP × (1 - Discount%/100).",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit & Loss - Basic Percentage to Fraction",
     "conceptTested": "Relation between Cost Price and Selling Price using profit percentage fraction.",
@@ -1562,7 +1562,7 @@
       "C": "1,150",
       "D": "1,125"
     },
-    "solution": "Solution\nShortcut Trick\nUse the direct relation: C\nP : MP = (100 - Discount%) : (100 + Profit%)\nC\nP : MP = (100 - 20) : (100 + 12) = 80 : 112 = 5 : 7\nGiven Cost Price (CP) = 5 units = ₹750\n1 unit = 750 ÷ 5 = 150\nMarked Price (MP) = 7 units = 7 × 150 = 1050\n∴ The correct answer is ₹1050.\n\nAlternate Method\nGiven:\nCost Price (CP) of the article = ₹750\nProfit percentage = 12%\nDiscount percentage allowed on Marked Price (MP) = 20%\nFormula Used: Selling Price (SP) = CP × (100 + Profit%)/100 = MP × (100 - Discount%)/100\n⇒ First, calculate the Selling Price (SP) using profit on C\nP:\n⇒ SP = 750 × (100 + 12) / 100 = 750 × 1.12 = ₹840\n⇒ Now, use the discount on MP to find the Marked Price:\n⇒ SP = MP × (100 - 20) / 100\n⇒ 840 = MP × 0.8\n⇒ MP = 840 ÷ 0.8 = 1050\n∴ The correct answer is ₹1050.\n\nAdditional Information\nRelationship between CP and MP\n\nThe direct ratio for questions involving both profit and discount is: CP / MP = (100 - Discount%) / (100 + Profit%).\n\nMark-up Percentage\n\nMark-up % is the percentage by which Marked Price is kept higher than the Cost Price: [(MP - CP) / CP] × 100.\n\nEffective Discount\n\nFor successive discounts of a% and b%, the single equivalent discount is (a + b - ab/100)%.",
+    "solution": "Solution\nShortcut Trick\nUse the direct relation: CP : MP = (100 - Discount%) : (100 + Profit%)\nCP : MP = (100 - 20) : (100 + 12) = 80 : 112 = 5 : 7\nGiven Cost Price (CP) = 5 units = ₹750\n1 unit = 750 ÷ 5 = 150\nMarked Price (MP) = 7 units = 7 × 150 = 1050\n∴ The correct answer is ₹1050.\n\nAlternate Method\nGiven:\nCost Price (CP) of the article = ₹750\nProfit percentage = 12%\nDiscount percentage allowed on Marked Price (MP) = 20%\nFormula Used: Selling Price (SP) = CP × (100 + Profit%)/100 = MP × (100 - Discount%)/100\n⇒ First, calculate the Selling Price (SP) using profit on CP :\n⇒ SP = 750 × (100 + 12) / 100 = 750 × 1.12 = ₹840\n⇒ Now, use the discount on MP to find the Marked Price:\n⇒ SP = MP × (100 - 20) / 100\n⇒ 840 = MP × 0.8\n⇒ MP = 840 ÷ 0.8 = 1050\n∴ The correct answer is ₹1050.\n\nAdditional Information\nRelationship between CP and MP\n\nThe direct ratio for questions involving both profit and discount is: CP / MP = (100 - Discount%) / (100 + Profit%).\n\nMark-up Percentage\n\nMark-up % is the percentage by which Marked Price is kept higher than the Cost Price: [(MP - CP) / CP] × 100.\n\nEffective Discount\n\nFor successive discounts of a% and b%, the single equivalent discount is (a + b - ab/100)%.",
     "topic": "Profit, Loss & Discount",
     "subtopic": "Profit, Loss & Discount - Marked Price and Discount",
     "conceptTested": "Direct ratio between Cost Price and Marked Price involving discount and profit percentages: CP / MP = (100 - Discount%) / (100 + Profit%).",

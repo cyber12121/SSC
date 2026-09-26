@@ -29,13 +29,26 @@ export function cleanQuestionText(text: string = ''): string {
   // Decode literal escaped quotes from scrapers (e.g. \"A\" -> "A")
   s = s.replace(/\\"/g, '"');
 
+  // Strip residual redundant options block appended at the end of question statements
+  s = s.replace(/\n\s*Options:\s*\n\s*A:[\s\S]+$/i, '');
+
+  // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "num $ num", "$ stands for")
+  s = s.replace(/(['"`])\$(['"`])/g, '$1___DOLLAR_SYM___$2');
+  s = s.replace(/(\b\d+)\s*\$\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
+  s = s.replace(/\$\s+(stands\s+for)/gi, '___DOLLAR_SYM___ $1');
+  s = s.replace(/(stands\s+for\s+['"`]?)\$/gi, '$1___DOLLAR_SYM___');
+  s = s.replace(/([@%#*^]\s*\d+\s*)\$(\s*\d+)/g, '$1___DOLLAR_SYM___$2');
+
   // Normalize multiple backslashes on math delimiters: e.g. \\( -> \(, \\) -> \)
   s = s.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
   s = s.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
 
-  // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
-  s = s.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
+  // Normalize spaces inside dollar delimiters: only if not containing natural language words
+  s = s.replace(/\$([^\$\n]+?)\$/g, (m, inner) => {
     const trimmed = inner.trim();
+    if (/\b(?:stands|then|find|which|option|select)\b/i.test(trimmed)) {
+      return m;
+    }
     return trimmed ? `$${trimmed}$` : '$$';
   });
 
@@ -80,12 +93,24 @@ export function cleanQuestionText(text: string = ''): string {
     .replace(/\b(m)\^3\b(?!\w)/g, 'm³')
     .replace(/\b(m)\s*([23])\b(?!\d)/g, (_, u, p) => `${u}${p === '2' ? '²' : '³'}`);
 
+  // 5c. Repair broken words accidentally split across newlines before colons
+  // (e.g. "AFTE\nR :" -> "AFTER :", "OQ\nS :" -> "OQS :", "BODMA\nS :" -> "BODMAS :", "C\nP :" -> "CP :")
+  s = s.replace(/([A-Za-z]{2,})\s*\n+\s*([A-Za-z])\s*:/g, '$1$2 :');
 
-  s = s.replace(/([^\n])\s*(S[1-6]\s*:)/g, '$1\n$2');
-  s = s.replace(/([^\n])\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)/g, '$1\n$2');
+  // Para Jumble line breaks (strictly require preceding punctuation, newline or start of string, NEVER breaking inside words or before analogies/equations)
+  s = s.replace(/(?<=[.!?]|\n|^)\s*(S[1-6]\s*:)/g, '\n$1');
+  s = s.replace(/(?<=[.!?]|\n|^)\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)(?!\s*[:=])/g, '\n$1');
 
   // Statements & Conclusions in Reasoning questions
   s = s.replace(/([^\n])\s*(Statement\s+[I|V|X|\d]+:?|Conclusion\s+[I|V|X|\d]+:?)/gi, '$1\n$2');
+
+  // 6. Reasoning Analogy & Proportion normalizations:
+  // - Convert spaced double colons (e.g. " : : " or ": :") into clean " :: "
+  s = s.replace(/\s*:\s*:\s*/g, ' :: ');
+  // - Clean redundant spacing around analogy/ratio single colons while avoiding URLs or time (e.g. "12:00", "http://")
+  s = s.replace(/(?<=[A-Za-z0-9?])\s+:\s+(?=[A-Za-z0-9?])/g, ' : ');
+  // - Ensure directive ending with a period/question mark followed immediately by an analogy is placed on a fresh line
+  s = s.replace(/([.?!])\s+(?=(?:[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*::|[A-Za-z0-9]+\s*:\s*[A-Za-z0-9]+\s*:\s*[A-Za-z0-9]+\s*:))/g, '$1\n\n');
 
   // 7. If question ends with ? followed by an equation or number without newline
   s = s.replace(/\?([ \t]*)(?=[0-9A-Za-z\+\-\*\/÷×=]+\s*[\+\-\*\/÷×=]\s*[0-9A-Za-z])/g, '?\n');
@@ -107,14 +132,15 @@ export function cleanQuestionText(text: string = ''): string {
     s = s.replace(`___MATH_BLOCK_${idx}___`, () => math);
   });
 
+  // Restore protected literal dollar signs
+  s = s.replace(/___DOLLAR_SYM___/g, '$');
+
   return s;
 }
 
 /**
  * Extracts language-specific text from bilingual strings ("English / Hindi")
- * STRICT RULE: A slash '/' is ONLY treated as a bilingual delimiter if at least
- * one side contains Devanagari script characters ([\u0900-\u097F]).
- * Mathematical fractions or divisions (e.g. 16 / 25, km / h) are never split!
+ * When language is English (default), ensures all Hindi text is completely purged.
  */
 export function getLanguageText(
   rawText: string = '',
@@ -123,48 +149,55 @@ export function getLanguageText(
   if (!rawText) return '';
   const cleaned = cleanQuestionText(rawText);
 
-  // Helper to safely split on bilingual delimiter only if Devanagari is present
-  const splitBilingual = (str: string): { english: string; hindi: string } | null => {
-    if (!/\s+\/\s+/.test(str)) return null;
-    const parts = str.split(/\s+\/\s+/);
-    if (parts.length < 2) return null;
-
-    // Strict Rule: At least one part MUST contain Devanagari Hindi characters
-    const hasDevanagari = parts.some(p => DEVANAGARI_REGEX.test(p));
-    if (!hasDevanagari) {
-      return null; // Pure math division / unit / fraction, do not split!
+  // If language is English (or default), strip all Devanagari Hindi text
+  if (language === 'English' || !language) {
+    let eng = cleaned.replace(/📖\s*हिंदी\s*स्पष्टीकरण\s*:[\s\S]*/i, '').trim();
+    if (!DEVANAGARI_REGEX.test(eng)) {
+      return eng;
     }
 
-    // Determine English vs Hindi part
-    if (DEVANAGARI_REGEX.test(parts[1]) && !DEVANAGARI_REGEX.test(parts[0])) {
-      return { english: parts[0].trim(), hindi: parts[1].trim() };
+    const lines = eng.split('\n');
+    const cleanedLines: string[] = [];
+    for (const line of lines) {
+      const l = line.trim();
+      const m = l.match(DEVANAGARI_REGEX);
+      if (!m || m.index === undefined) {
+        cleanedLines.push(line);
+      } else {
+        const engPart = l.substring(0, m.index).trim().replace(/\s*\/$/, '');
+        if (/[A-Za-z]{2,}/.test(engPart)) {
+          cleanedLines.push(engPart);
+        }
+      }
     }
-    if (DEVANAGARI_REGEX.test(parts[0]) && !DEVANAGARI_REGEX.test(parts[1])) {
-      return { english: parts[1].trim(), hindi: parts[0].trim() };
-    }
-
-    return { english: parts[0].trim(), hindi: parts[1].trim() };
-  };
-
-  // Check line-by-line bilingual delimiters
-  const lines = cleaned.split('\n');
-  const hasLineDelimiters = lines.some(l => splitBilingual(l) !== null);
-
-  if (hasLineDelimiters) {
-    return lines
-      .map(line => {
-        const bi = splitBilingual(line);
-        if (!bi) return line;
-        return bi.english || line;
-      })
-      .join('\n')
-      .trim();
+    const res = cleanedLines.join('\n').trim();
+    return res || eng;
   }
 
-  // Check whole-string delimiter
-  const wholeBi = splitBilingual(cleaned);
-  if (wholeBi) {
-    return wholeBi.english;
+  // If language is Hindi:
+  if (language === 'Hindi') {
+    const hindiSectionMatch = cleaned.match(/📖\s*हिंदी\s*स्पष्टीकरण\s*:([\s\S]*)/i);
+    if (hindiSectionMatch && hindiSectionMatch[1].trim()) {
+      return hindiSectionMatch[1].trim();
+    }
+    const lines = cleaned.split('\n');
+    const hindiLines: string[] = [];
+    for (const line of lines) {
+      if (line.includes(' / ')) {
+        const parts = line.split(' / ');
+        const hPart = parts.find(p => DEVANAGARI_REGEX.test(p));
+        if (hPart) hindiLines.push(hPart.trim());
+        else hindiLines.push(line);
+      } else {
+        const m = line.match(DEVANAGARI_REGEX);
+        if (m && m.index !== undefined) {
+          hindiLines.push(line.substring(m.index).trim());
+        } else {
+          hindiLines.push(line);
+        }
+      }
+    }
+    return hindiLines.join('\n').trim();
   }
 
   return cleaned;
@@ -193,10 +226,21 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   text = text.replace(/\\+\$([^$]+?)\$/g, '$$$1$$');
   text = text.replace(/\$([^$]+?)\\+\$/g, '$$$1$$');
 
-  // Normalize spaces inside dollar delimiters: e.g. "$ foo $" -> "$foo$", "$(125)... $" -> "$(125)...$"
-  text = text.replace(/\$\s+([^$\n]+?)\s+\$/g, '$$$1$$');
-  text = text.replace(/\$\s+([^$\n]+?)\$/g, '$$$1$$');
-  text = text.replace(/\$([^$\n]+?)\s+\$/g, '$$$1$$');
+  // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "num $ num", "$ stands for")
+  text = text.replace(/(['"`])\$(['"`])/g, '$1___DOLLAR_SYM___$2');
+  text = text.replace(/(\b\d+)\s*\$\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
+  text = text.replace(/\$\s+(stands\s+for)/gi, '___DOLLAR_SYM___ $1');
+  text = text.replace(/(stands\s+for\s+['"`]?)\$/gi, '$1___DOLLAR_SYM___');
+  text = text.replace(/([@%#*^]\s*\d+\s*)\$(\s*\d+)/g, '$1___DOLLAR_SYM___$2');
+
+  // Normalize spaces inside dollar delimiters: only if valid math expression
+  text = text.replace(/\$([^\$\n]+?)\$/g, (m, inner) => {
+    const trimmed = inner.trim();
+    if (/\b(?:stands|then|find|which|option|select|value)\b/i.test(trimmed)) {
+      return m;
+    }
+    return trimmed ? `$${trimmed}$` : '$$';
+  });
 
   // Step 3: Combined pattern for:
   // - $$ display math $$
@@ -213,6 +257,10 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
     let display = false;
 
     // Guard against arbitrary dollar signs used in substitution reasoning (e.g. "23 $ 45 = 26 and 34 $ 96")
+    if (mathStr.includes('___DOLLAR_SYM___')) {
+      continue;
+    }
+
     if (mathStr.startsWith('$') && !mathStr.startsWith('$$')) {
       const inner = mathStr.slice(1, -1);
       // If it contains natural language words like " and " or " then " without \text, it's not a single LaTeX math token
@@ -222,7 +270,7 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
     }
 
     if (match.index > lastIndex) {
-      tokens.push({ type: 'text', value: text.substring(lastIndex, match.index) });
+      tokens.push({ type: 'text', value: text.substring(lastIndex, match.index).replace(/___DOLLAR_SYM___/g, '$') });
     }
 
     if (mathStr.startsWith('$$') && mathStr.endsWith('$$')) {
@@ -237,7 +285,7 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   }
 
   if (lastIndex < text.length) {
-    tokens.push({ type: 'text', value: text.substring(lastIndex) });
+    tokens.push({ type: 'text', value: text.substring(lastIndex).replace(/___DOLLAR_SYM___/g, '$') });
   }
 
   return tokens;
@@ -248,7 +296,7 @@ export function isMathSubject(subject?: string): boolean {
   return /quant|math|arithmetic|numerical|algebra|geometry/i.test(subject);
 }
 
-const DIRECTIVE_PREFIX = /^(?:Select|Identify|In\s+the|Given\s+below|Choose|Find|Four|Which|Arrange|Read|Direction|Directions|Study|Recognize|Determine|Point|Refer|Fill|Look|Complete|Replace|Spot|State|उस|निम्नलिखित|दिए|दी\s+गई)/i;
+const DIRECTIVE_PREFIX = /^(?:Select|Identify|In\s+the|Given\s+below|Choose|Find|Four|Which|Arrange|Read|Direction|Directions|Study|Recognize|Determine|Point|Refer|Fill|Look|Complete|Replace|Spot|State|Letter\s+Analogy|Word\s+Analogy|Number\s+Analogy|उस|निम्नलिखित|दिए|दी\s+गई)/i;
 
 /**
  * Splits instructional directive from the main question text.
@@ -263,21 +311,7 @@ export function splitInstructionAndQuestion(
 
   const trimmed = text.trim();
 
-  // Case 1: Directive ending with colon ':'
-  const colonIdx = trimmed.indexOf(':');
-  if (colonIdx > 10 && colonIdx < 300) {
-    const candidateInst = trimmed.substring(0, colonIdx + 1).trim();
-    const candidateContent = trimmed.substring(colonIdx + 1).trim();
-    const isDirective = DIRECTIVE_PREFIX.test(candidateInst);
-    const hasAnalogyOps = /::|[<>=]/.test(candidateInst.slice(0, -1));
-    const wordCount = candidateInst.split(/\s+/).length;
-
-    if (candidateContent && !hasAnalogyOps && (isDirective || (wordCount >= 4 && /[a-zA-Z\u0900-\u097F]{3,}/.test(candidateInst)))) {
-      return { instruction: candidateInst, content: candidateContent };
-    }
-  }
-
-  // Case 2: Directive ending with period or newline
+  // Case 1: Multi-line text where the first line is a directive
   const lines = trimmed.split('\n');
   if (lines.length > 1 && DIRECTIVE_PREFIX.test(lines[0].trim())) {
     const inst = lines[0].trim();
@@ -285,6 +319,30 @@ export function splitInstructionAndQuestion(
     if (content) {
       return { instruction: inst, content };
     }
+  }
+
+  // Case 2: Directive ending with colon ':' on the first line (e.g. "Letter Analogy: GFEH : MLKN :: ONMP : ?" or "Directions:")
+  // Strict rule: The colon MUST be on the first line, and candidateInst must NOT look like an analogy term (e.g. "AFTER :")
+  const firstLine = lines[0].trim();
+  const colonIdx = firstLine.indexOf(':');
+  if (colonIdx > 8 && colonIdx < 120) {
+    const candidateInst = firstLine.substring(0, colonIdx + 1).trim();
+    const remainingFirstLine = firstLine.substring(colonIdx + 1).trim();
+    const candidateContent = [remainingFirstLine, ...lines.slice(1)].filter(Boolean).join('\n').trim();
+    const isDirective = DIRECTIVE_PREFIX.test(candidateInst);
+    const hasAnalogyOps = /::|[<>=]/.test(candidateInst);
+    const isAnalogyTerm = /^[A-Z0-9,\s\-']{1,10}\s*:?$/.test(candidateInst) || candidateInst.split(/\s+/).length < 2;
+
+    if (candidateContent && isDirective && !hasAnalogyOps && !isAnalogyTerm) {
+      return { instruction: candidateInst, content: candidateContent };
+    }
+  }
+
+  // Case 3: Single line where directive ends with a period/question mark followed by an analogy or question content
+  // e.g. "Select the option... related to 1st number. 25 : 37 :: 64 : ?"
+  const periodMatch = trimmed.match(/^([A-Z\u0900-\u097F][^.!?\n]*[.?!])\s+((?:[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*::|[\d\s,]+:\s*[\d\s,]+|.+:\s*.+))/);
+  if (periodMatch && DIRECTIVE_PREFIX.test(periodMatch[1])) {
+    return { instruction: periodMatch[1].trim(), content: periodMatch[2].trim() };
   }
 
   return { instruction: null, content: trimmed };

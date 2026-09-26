@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding the Revolt of 1857: \n 1857 के विद्रोह के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The revolt started from Meerut on May 10, 1857. / विद्रोह 10 मई, 1857 को मेरठ से शुरू हुआ था। \n (b) Lord Dalhousie was the Governor-General of India during the revolt. / विद्रोह के दौरान लॉर्ड डलहौजी भारत के गवर्नर-जनरल थे। \n (c) The revolt was completely ignored by the sepoys in the Bombay and Madras presidencies. / बॉम्बे और मद्रास प्रेसीडेंसी के सिपाहियों ने विद्रोह को पूरी तरह से नजरअंदाज कर दिया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Revolt of 1857: \n(a) The revolt started from Meerut on May 10, 1857.\n(b) Lord Dalhousie was the Governor-General of India during the revolt.\n(c) The revolt was completely ignored by the sepoys in the Bombay and Madras presidencies.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLord Canning was the Governor-General during the revolt, not Dalhousie. While the revolt was intense in Northern India, the Madras and Bombay armies largely remained loyal to the British.\n\n📖 हिंदी स्पष्टीकरण:\nविद्रोह के दौरान लॉर्ड कैनिंग गवर्नर-जनरल थे, डलहौजी नहीं। जबकि उत्तर भारत में विद्रोह तीव्र था, मद्रास और बॉम्बे की सेनाएं काफी हद तक अंग्रेजों के प्रति वफादार रहीं।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following statements about the Indian National Congress (INC) is correct? \n भारतीय राष्ट्रीय कांग्रेस (INC) के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Indian National Congress (INC) is correct?",
       "options": {
-        "a": "The first session was held in Calcutta in 1885. / प्रथम अधिवेशन 1885 में कलकत्ता में आयोजित किया गया था।",
-        "b": "W.C. Bonnerjee was the first President of the INC. / व्योमेश चंद्र बनर्जी INC के पहले अध्यक्ष थे।",
-        "c": "Lord Curzon was the Viceroy during the formation of INC. / INC के गठन के दौरान लॉर्ड कर्जन वायसराय थे।",
-        "d": "Kadambini Ganguly was the first woman President of INC. / कादंबिनी गांगुली INC की पहली महिला अध्यक्ष थीं।"
+        "a": "The first session was held in Calcutta in 1885.",
+        "b": "W.C. Bonnerjee was the first President of the INC.",
+        "c": "Lord Curzon was the Viceroy during the formation of INC. / INC",
+        "d": "Kadambini Ganguly was the first woman President of INC."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe first session was held in Bombay (1885) under W.C. Bonnerjee. Lord Dufferin was the Viceroy at that time.\n\n📖 हिंदी स्पष्टीकरण:\nपहला अधिवेशन बंबई (1885) में व्योमेश चंद्र बनर्जी की अध्यक्षता में हुआ था। उस समय लॉर्ड डफरिन वायसराय थे।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements regarding the Partition of Bengal (1905): \n बंगाल के विभाजन (1905) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was officially implemented on October 16, 1905. / इसे आधिकारिक तौर पर 16 अक्टूबर, 1905 को लागू किया गया था। \n (b) The official reason given by the British was administrative convenience. / अंग्रेजों द्वारा दिया गया आधिकारिक कारण प्रशासनिक सुविधा थी। \n (c) Rabindranath Tagore suggested celebrating the day of partition as 'Raksha Bandhan Day'. / रवींद्रनाथ टैगोर ने विभाजन के दिन को 'रक्षा बंधन दिवस' के रूप में मनाने का सुझाव दिया।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Partition of Bengal (1905): \n(a) It was officially implemented on October 16, 1905.\n(b) The official reason given by the British was administrative convenience.\n(c) Rabindranath Tagore suggested celebrating the day of partition as 'Raksha Bandhan Day'.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The partition was a move to curb nationalism, though administrative ease was the stated reason.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। राष्ट्रवाद को अंकुश लगाने के लिए विभाजन किया गया था, हालांकि प्रशासनिक सुगमता को इसका कारण बताया गया था।"
     },
     {
       "q_num": 4,
-      "question": "In which year did Mahatma Gandhi return to India from South Africa? \n महात्मा गांधी दक्षिण अफ्रीका से भारत किस वर्ष लौटे थे?",
+      "question": "In which year did Mahatma Gandhi return to India from South Africa?",
       "options": {
         "a": "1914",
         "b": "1915",
@@ -54,151 +54,151 @@
     },
     {
       "q_num": 5,
-      "question": "Consider the following statements regarding the Simon Commission: \n साइमन कमीशन के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was appointed in 1927 to review the working of the Government of India Act 1919. / इसे 1919 के भारत सरकार अधिनियम के कामकाज की समीक्षा के लिए 1927 में नियुक्त किया गया था। \n (b) All its members were British, with no Indian representation. / इसके सभी सदस्य ब्रिटिश थे, इसमें कोई भारतीय प्रतिनिधित्व नहीं था। \n (c) The Congress supported the commission but the Muslim League boycotted it. / कांग्रेस ने आयोग का समर्थन किया लेकिन मुस्लिम लीग ने इसका बहिष्कार किया।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Simon Commission: \n(a) It was appointed in 1927 to review the working of the Government of India Act 1919.\n(b) All its members were British, with no Indian representation.\n(c) The Congress supported the commission but the Muslim League boycotted it.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a and c / a और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth the Congress and the major faction of the Muslim League boycotted the Simon Commission because it lacked Indian members.\n\n📖 हिंदी स्पष्टीकरण:\nकांग्रेस और मुस्लिम लीग के प्रमुख गुट दोनों ने साइमन कमीशन का बहिष्कार किया क्योंकि इसमें भारतीय सदस्यों की कमी थी।"
     },
     {
       "q_num": 6,
-      "question": "Which movement was launched after the failure of the Simon Commission and the rejection of the Nehru Report? \n साइमन कमीशन की विफलता और नेहरू रिपोर्ट की अस्वीकृति के बाद कौन सा आंदोलन शुरू किया गया था?",
+      "question": "Which movement was launched after the failure of the Simon Commission and the rejection of the Nehru Report?",
       "options": {
-        "a": "Non-Cooperation Movement / असहयोग आंदोलन",
-        "b": "Khilafat Movement / खिलाफत आंदोलन",
-        "c": "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन",
-        "d": "Quit India Movement / भारत छोड़ो आंदोलन"
+        "a": "Non-Cooperation Movement",
+        "b": "Khilafat Movement",
+        "c": "Civil Disobedience Movement",
+        "d": "Quit India Movement"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe failure of the British to grant 'Dominion Status' led to the declaration of Purna Swaraj and the launch of the Civil Disobedience Movement in 1930.\n\n📖 हिंदी स्पष्टीकरण:\nब्रिटिश सरकार द्वारा 'डोमीनियन स्टेटस' न दिए जाने के कारण पूर्ण स्वराज की घोषणा हुई और 1930 में सविनय अवज्ञा आंदोलन शुरू हुआ।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following matches of the 1857 Revolt leaders and their regions: \n 1857 के विद्रोह के नेताओं और उनके क्षेत्रों के निम्नलिखित मिलानों पर विचार करें: \n (a) Begum Hazrat Mahal : Lucknow / बेगम हजरत महल : लखनऊ \n (b) Khan Bahadur : Bareilly / खान बहादुर : बरेली \n (c) Kunwar Singh : Bihar / कुंवर सिंह : बिहार\n Which of the pairs given above are correctly matched? \n ऊपर दिए गए युग्मों में से कौन-से सही सुमेलित हैं?",
+      "question": "Consider the following matches of the 1857 Revolt leaders and their regions: \n(a) Begum Hazrat Mahal : Lucknow\n(b) Khan Bahadur : Bareilly\n(c) Kunwar Singh : Bihar\n Which of the pairs given above are correctly matched?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll matches are correct. Begum Hazrat Mahal led in Lucknow, Khan Bahadur in Bareilly, and Kunwar Singh in Jagdispur (Bihar).\n\n📖 हिंदी स्पष्टीकरण:\nसभी मिलान सही हैं। बेगम हजरत महल ने लखनऊ में, खान बहादुर ने बरेली में और कुंवर सिंह ने जगदीशपुर (बिहार) में नेतृत्व किया।"
     },
     {
       "q_num": 8,
-      "question": "The 'Safety Valve' theory is associated with the foundation of which organization? \n 'सेफ्टी वॉल्व' सिद्धांत किस संगठन की स्थापना से जुड़ा है?",
+      "question": "The 'Safety Valve' theory is associated with the foundation of which organization?",
       "options": {
-        "a": "Ghadar Party / गदर पार्टी",
-        "b": "Indian National Congress / भारतीय राष्ट्रीय कांग्रेस",
-        "c": "Muslim League / मुस्लिम लीग",
-        "d": "Home Rule League / होम रूल लीग"
+        "a": "Ghadar Party",
+        "b": "Indian National Congress",
+        "c": "Muslim League",
+        "d": "Home Rule League"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLala Lajpat Rai and other extremist leaders used this theory to suggest INC was created by the British to provide a safe outlet for Indian discontent.\n\n📖 हिंदी स्पष्टीकरण:\nलाला लाजपत राय और अन्य चरमपंथी नेताओं ने इस सिद्धांत का उपयोग यह सुझाव देने के लिए किया कि INC का गठन अंग्रेजों द्वारा भारतीय असंतोष के लिए एक सुरक्षित मार्ग प्रदान करने के लिए किया गया था।"
     },
     {
       "q_num": 9,
-      "question": "Consider the following statements regarding the Dandi March: \n दांडी मार्च के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It began from Sabarmati Ashram on March 12, 1930. / यह 12 मार्च, 1930 को साबरमती आश्रम से शुरू हुआ था। \n (b) It covered a distance of approximately 240 miles. / इसने लगभग 240 मील की दूरी तय की। \n (c) Gandhi broke the salt law at Dandi on April 6, 1930. / गांधीजी ने 6 अप्रैल, 1930 को दांडी में नमक कानून तोड़ा।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Dandi March: \n(a) It began from Sabarmati Ashram on March 12, 1930.\n(b) It covered a distance of approximately 240 miles.\n(c) Gandhi broke the salt law at Dandi on April 6, 1930.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are factual. The Dandi March marked the beginning of the Civil Disobedience Movement.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन तथ्यात्मक हैं। दांडी मार्च ने सविनय अवज्ञा आंदोलन की शुरुआत को चिह्नित किया।"
     },
     {
       "q_num": 10,
-      "question": "Who was the first Muslim President of the Indian National Congress? \n भारतीय राष्ट्रीय कांग्रेस के पहले मुस्लिम अध्यक्ष कौन थे?",
+      "question": "Who was the first Muslim President of the Indian National Congress?",
       "options": {
-        "a": "Abul Kalam Azad / अबुल कलाम आज़ाद",
-        "b": "Badruddin Tyabji / बदरुद्दीन तैयबजी",
-        "c": "Mohammad Ali Jinnah / मोहम्मद अली जिन्ना",
-        "d": "Sir Syed Ahmad Khan / सर सैयद अहमद खान"
+        "a": "Abul Kalam Azad",
+        "b": "Badruddin Tyabji",
+        "c": "Mohammad Ali Jinnah",
+        "d": "Sir Syed Ahmad Khan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBadruddin Tyabji presided over the third session of INC in Madras (1887).\n\n📖 हिंदी स्पष्टीकरण:\nबदरुद्दीन तैयबजी ने मद्रास (1887) में INC के तीसरे अधिवेशन की अध्यक्षता की थी।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the Gandhi-Irwin Pact (1931): \n गांधी-इरविन समझौते (1931) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The Congress agreed to join the Second Round Table Conference. / कांग्रेस दूसरे गोलमेज सम्मेलन में शामिल होने के लिए सहमत हुई। \n (b) The British agreed to release all political prisoners immediately. / अंग्रेज सभी राजनीतिक कैदियों को तुरंत रिहा करने पर सहमत हुए। \n (c) The Government allowed the manufacture of salt for personal consumption in coastal villages. / सरकार ने तटीय गांवों में व्यक्तिगत उपभोग के लिए नमक बनाने की अनुमति दी।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Gandhi-Irwin Pact (1931): \n(a) The Congress agreed to join the Second Round Table Conference.\n(b) The British agreed to release all political prisoners immediately.\n(c) The Government allowed the manufacture of salt for personal consumption in coastal villages.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "a and c only / केवल a और c",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "a and c only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement (b) is tricky: the British agreed to release only those prisoners who were NOT charged with violence. Prisoners like Bhagat Singh were not released.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (b) थोड़ा पेचीदा है: अंग्रेज केवल उन कैदियों को रिहा करने पर सहमत हुए जिन पर हिंसा का आरोप नहीं था। भगत सिंह जैसे कैदियों को रिहा नहीं किया गया।"
     },
     {
       "q_num": 12,
-      "question": "What was the 'immediate cause' for the Revolt of 1857? \n 1857 के विद्रोह का 'तत्कालिक कारण' क्या था?",
+      "question": "What was the 'immediate cause' for the Revolt of 1857?",
       "options": {
-        "a": "The Doctrine of Lapse / व्यपगत का सिद्धांत",
-        "b": "Heavy taxation on peasants / किसानों पर भारी कर",
-        "c": "Introduction of Greased Cartridges / चर्बी वाले कारतूसों की शुरुआत",
-        "d": "Activities of Christian Missionaries / ईसाई मिशनरियों की गतिविधियाँ"
+        "a": "The Doctrine of Lapse",
+        "b": "Heavy taxation on peasants",
+        "c": "Introduction of Greased Cartridges",
+        "d": "Activities of Christian Missionaries"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe rumor that Enfield rifle cartridges were greased with cow and pig fat offended both Hindu and Muslim sepoys.\n\n📖 हिंदी स्पष्टीकरण:\nयह अफवाह कि एनफील्ड राइफल के कारतूसों में गाय और सूअर की चर्बी लगी थी, ने हिंदू और मुस्लिम दोनों सिपाहियों को नाराज कर दिया।"
     },
     {
       "q_num": 13,
-      "question": "Consider the following statements about the Swadeshi Movement: \n स्वदेशी आंदोलन के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was a direct consequence of the Partition of Bengal. / यह बंगाल के विभाजन का प्रत्यक्ष परिणाम था। \n (b) Boycott of foreign goods was a major part of this movement. / विदेशी वस्तुओं का बहिष्कार इस आंदोलन का एक प्रमुख हिस्सा था। \n (c) It remained strictly limited to the province of Bengal. / यह सख्ती से बंगाल प्रांत तक ही सीमित रहा।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the Swadeshi Movement: \n(a) It was a direct consequence of the Partition of Bengal.\n(b) Boycott of foreign goods was a major part of this movement.\n(c) It remained strictly limited to the province of Bengal.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe movement spread beyond Bengal to other parts of India, led by leaders like Tilak, Lala Lajpat Rai, and Ajit Singh.\n\n📖 हिंदी स्पष्टीकरण:\nतिलक, लाला लाजपत राय और अजीत सिंह जैसे नेताओं के नेतृत्व में यह आंदोलन बंगाल से बाहर भारत के अन्य हिस्सों में भी फैला।"
     },
     {
       "q_num": 14,
-      "question": "In which INC session was the resolution for 'Purna Swaraj' (Complete Independence) passed? \n किस INC अधिवेशन में 'पूर्ण स्वराज' (पूर्ण स्वतंत्रता) का प्रस्ताव पारित किया गया था?",
+      "question": "In which INC session was the resolution for 'Purna Swaraj' (Complete Independence) passed?",
       "options": {
-        "a": "Calcutta Session 1928 / कलकत्ता अधिवेशन 1928",
-        "b": "Lahore Session 1929 / लाहौर अधिवेशन 1929",
-        "c": "Karachi Session 1931 / कराची अधिवेशन 1931",
-        "d": "Lucknow Session 1936 / लखनऊ अधिवेशन 1936"
+        "a": "Calcutta Session 1928",
+        "b": "Lahore Session 1929",
+        "c": "Karachi Session 1931",
+        "d": "Lucknow Session 1936"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nUnder the presidency of Jawaharlal Nehru, the Lahore session (1929) declared Purna Swaraj as the goal.\n\n📖 हिंदी स्पष्टीकरण:\nजवाहरलाल नेहरू की अध्यक्षता में, लाहौर अधिवेशन (1929) ने पूर्ण स्वराज को लक्ष्य घोषित किया।"
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements regarding the Simon Commission protest: \n साइमन कमीशन के विरोध के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Lala Lajpat Rai died due to injuries sustained during a lathi charge in Lahore. / लाहौर में लाठीचार्ज के दौरान लगी चोटों के कारण लाला लाजपत राय की मृत्यु हो गई। \n (b) The slogan 'Simon Go Back' was coined by Yusuf Meherally. / 'साइमन गो बैक' का नारा यूसुफ मेहरली ने दिया था। \n (c) The commission visited India only once in 1938. / आयोग ने 1938 में केवल एक बार भारत का दौरा किया।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Simon Commission protest: \n(a) Lala Lajpat Rai died due to injuries sustained during a lathi charge in Lahore.\n(b) The slogan 'Simon Go Back' was coined by Yusuf Meherally. / '\n(c) The commission visited India only once in 1938.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement (c) is incorrect because the commission visited India in 1928.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (c) गलत है क्योंकि आयोग ने 1928 में भारत का दौरा किया था।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the 1857 Revolt at Delhi:\n दिल्ली में 1857 के विद्रोह के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Bahadur Shah Zafar was proclaimed as the Emperor of India. / बहादुर शाह जफर को भारत का सम्राट घोषित किया गया था। \n (b) The real command of the army was in the hands of General Bakht Khan. / सेना की वास्तविक कमान जनरल बख्त खान के हाथों में थी। \n (c) The revolt in Delhi was suppressed by John Nicholson. / दिल्ली में विद्रोह को जॉन निकोलसन ने दबाया था।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 1857 Revolt at Delhi:\n(a) Bahadur Shah Zafar was proclaimed as the Emperor of India.\n(b) The real command of the army was in the hands of General Bakht Khan.\n(c) The revolt in Delhi was suppressed by John Nicholson.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Bahadur Shah was the symbolic head, while Bakht Khan was the actual leader. Nicholson was the officer who recaptured Delhi.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। बहादुर शाह प्रतीकात्मक प्रमुख थे, जबकि बख्त खान वास्तविक नेता थे। निकोलसन वह अधिकारी था जिसने दिल्ली पर पुनः अधिकार किया था।"
     },
     {
       "q_num": 17,
-      "question": "Arrange the following events in chronological order: \n निम्नलिखित घटनाओं को कालानुक्रमिक क्रम में व्यवस्थित करें: \n (a) Surat Split / सूरत विभाजन \n (b) Partition of Bengal / बंगाल का विभाजन \n (c) Formation of Muslim League / मुस्लिम लीग का गठन \n (d) Foundation of INC / INC की स्थापना\n Choose the correct code: / सही कूट चुनें:",
+      "question": "Arrange the following events in chronological order: \n(a) Surat Split\n(b) Partition of Bengal\n(c) Formation of Muslim League\n(d) Foundation of INC / INC\nChoose the correct code:",
       "options": {
         "a": "d - b - c - a",
         "b": "d - c - b - a",
@@ -210,43 +210,43 @@
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements about the Civil Disobedience Movement (CDM): \n सविनय अवज्ञा आंदोलन (CDM) के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) The movement saw massive participation of women. / आंदोलन में महिलाओं की बड़े पैमाने पर भागीदारी देखी गई। \n (b) In the North-West Frontier Province, the movement was led by Khan Abdul Ghaffar Khan. / उत्तर-पश्चिम सीमा प्रांत में, आंदोलन का नेतृत्व खान अब्दुल गफ्फार खान ने किया था। \n (c) The movement was officially suspended after the Gandhi-Irwin Pact. / गांधी-इरविन समझौते के बाद आंदोलन को आधिकारिक तौर पर स्थगित कर दिया गया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the Civil Disobedience Movement (CDM): \n(a) The movement saw massive participation of women.\n(b) In the North-West Frontier Province, the movement was led by Khan Abdul Ghaffar Khan.\n(c) The movement was officially suspended after the Gandhi-Irwin Pact.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "a, b and c / a, b और c",
-        "d": "b and c only / केवल b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "a, b and c",
+        "d": "b and c only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAll statements are correct. Ghaffar Khan's group, the 'Red Shirts', played a vital role in the NWFP.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। खान अब्दुल गफ्फार खान के समूह 'लाल कुर्ती' ने NWFP में महत्वपूर्ण भूमिका निभाई थी।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following British officers was NOT associated with the suppression of the 1857 Revolt? \n निम्नलिखित में से कौन सा ब्रिटिश अधिकारी 1857 के विद्रोह के दमन से नहीं जुड़ा था?",
+      "question": "Which of the following British officers was NOT associated with the suppression of the 1857 Revolt?",
       "options": {
-        "a": "Sir Colin Campbell / सर कॉलिन कैंपबेल",
-        "b": "Henry Havelock / हेनरी हैवलॉक",
-        "c": "Lord Cornwallis / लॉर्ड कॉर्नवालिस",
-        "d": "Sir Hugh Rose / सर ह्यू रोज़"
+        "a": "Sir Colin Campbell",
+        "b": "Henry Havelock",
+        "c": "Lord Cornwallis",
+        "d": "Sir Hugh Rose"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLord Cornwallis was associated with the Permanent Settlement (1793) and the Third Anglo-Mysore War, much before 1857.\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड कॉर्नवालिस 1857 से बहुत पहले स्थायी बंदोबस्त (1793) और तीसरे आंग्ल-मैसूर युद्ध से जुड़े थे।"
     },
     {
       "q_num": 20,
-      "question": "Consider the following statements regarding the Moderates of the INC: \n INC के नरमपंथियों (Moderates) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) They believed in the policy of 'Prayers, Petitions, and Protests'. / वे 'प्रार्थना, याचिका और विरोध' की नीति में विश्वास करते थे। \n (b) They wanted to overthrow the British rule completely by 1890. / वे 1890 तक ब्रिटिश शासन को पूरी तरह से उखाड़ फेंकना चाहते थे। \n (c) Dadabhai Naoroji and Pherozeshah Mehta were prominent moderate leaders. / दादाभाई नौरोजी और फिरोजशाह मेहता प्रमुख नरमपंथी नेता थे।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Moderates of the INC: \nINC\n(a) They believed in the policy of 'Prayers, Petitions, and Protests'.\n(b) They wanted to overthrow the British rule completely by 1890.\n(c) Dadabhai Naoroji and Pherozeshah Mehta were prominent moderate leaders.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a only / केवल a"
+        "a": "a and c",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nModerates did not want to overthrow British rule immediately; they sought constitutional reforms and more Indian representation.\n\n📖 हिंदी स्पष्टीकरण:\nनरमपंथी ब्रिटिश शासन को तुरंत उखाड़ फेंकना नहीं चाहते थे; वे संवैधानिक सुधार और अधिक भारतीय प्रतिनिधित्व चाहते थे।"
     },
     {
       "q_num": 21,
-      "question": "Match List-I (Congress Session) with List-II (President): \n सूची-I (कांग्रेस अधिवेशन) को सूची-II (अध्यक्ष) के साथ सुमेलित करें:\n | List-I (Session) | List-II (President) | \n | :--- | :--- | \n | (A) 1924 Belgaum / बेलगाम | (i) Sarojini Naidu | \n | (B) 1925 Kanpur / कानपुर | (ii) Mahatma Gandhi | \n | (C) 1917 Calcutta / कलकत्ता | (iii) Annie Besant | \n | (D) 1938 Haripura / हरिपुरा | (iv) S.C. Bose |\n Choose the correct option: / सही विकल्प चुनें:",
+      "question": "Match List-I (Congress Session) with List-II (President): \n | List-I (Session) | List-II (President) | \n | :--- | :--- | \n| (A) 1924 Belgaum\n| (B) 1925 Kanpur\n| (C) 1917 Calcutta\n| (D) 1938 Haripura\nChoose the correct option:",
       "options": {
         "a": "A-ii, B-i, C-iii, D-iv",
         "b": "A-ii, B-iii, C-i, D-iv",
@@ -258,307 +258,307 @@
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements regarding the Champaran Satyagraha (1917): \n चंपारण सत्याग्रह (1917) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was Gandhi's first Satyagraha in India. / यह भारत में गांधीजी का पहला सत्याग्रह था। \n (b) It was against the 'Tinkathia' system imposed by indigo planters. / यह नील बागान मालिकों द्वारा थोपी गई 'तिनकठिया' प्रणाली के खिलाफ था। \n (c) Raj Kumar Shukla had invited Gandhi to Champaran. / राज कुमार शुक्ल ने गांधीजी को चंपारण आमंत्रित किया था। \n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Champaran Satyagraha (1917): \n(a) It was Gandhi's first Satyagraha in India.\n(b) It was against the 'Tinkathia' system imposed by indigo planters.\n(c) Raj Kumar Shukla had invited Gandhi to Champaran.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Tinkathia system required farmers to grow indigo on 3/20th of their land.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। तिनकठिया प्रणाली के तहत किसानों को अपनी 3/20 भूमि पर नील की खेती करनी पड़ती थी।"
     },
     {
       "q_num": 23,
-      "question": "The 'Delhi Proposals' of 1927 were related to which of the following? \n 1927 के 'दिल्ली प्रस्ताव' निम्नलिखित में से किससे संबंधित थे?",
+      "question": "The 'Delhi Proposals' of 1927 were related to which of the following?",
       "options": {
-        "a": "Demands of the Congress for Purna Swaraj / पूर्ण स्वराज के लिए कांग्रेस की मांगें",
-        "b": "Muslim League's demands for joint electorates with reservations / आरक्षण के साथ संयुक्त निर्वाचक मंडल के लिए मुस्लिम लीग की मांगें",
-        "c": "British plan to divide Punjab / पंजाब को विभाजित करने की ब्रिटिश योजना",
-        "d": "Gandhi's 11-point demand to Lord Irwin / लॉर्ड इरविन को गांधीजी की 11-सूत्रीय मांग"
+        "a": "Demands of the Congress for Purna Swaraj",
+        "b": "Muslim League's demands for joint electorates with reservations",
+        "c": "British plan to divide Punjab",
+        "d": "Gandhi's 11-point demand to Lord Irwin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn 1927, Muslim leaders met at Delhi and agreed to give up separate electorates if certain demands (like 1/3 representation in Central Legislature) were met.\n\n📖 हिंदी स्पष्टीकरण:\n1927 में, मुस्लिम नेता दिल्ली में मिले और यदि कुछ मांगें (जैसे केंद्रीय विधानमंडल में 1/3 प्रतिनिधित्व) मान ली जातीं, तो वे अलग निर्वाचक मंडल छोड़ने पर सहमत हुए।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following statements about the Kheda Satyagraha (1918): \n खेड़ा सत्याग्रह (1918) के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) The peasants demanded remission of taxes due to crop failure. / किसानों ने फसल खराब होने के कारण करों में छूट की मांग की। \n (b) Sardar Vallabhbhai Patel played a key role in this movement. / इस आंदोलन में सरदार वल्लभभाई पटेल ने प्रमुख भूमिका निभाई थी। \n (c) It was Gandhi's first Hunger Strike in India. / यह भारत में गांधीजी की पहली भूख हड़ताल थी।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the Kheda Satyagraha (1918): \n(a) The peasants demanded remission of taxes due to crop failure.\n(b) Sardar Vallabhbhai Patel played a key role in this movement.\n(c) It was Gandhi's first Hunger Strike in India.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nGandhi's first hunger strike was during the Ahmedabad Mill Strike (1918), not Kheda.\n\n📖 हिंदी स्पष्टीकरण:\nगांधीजी की पहली भूख हड़ताल अहमदाबाद मिल हड़ताल (1918) के दौरान हुई थी, खेड़ा में नहीं।"
     },
     {
       "q_num": 25,
-      "question": "Which movement is also known as the 'August Kranti'? \n किस आंदोलन को 'अगस्त क्रांति' के नाम से भी जाना जाता है?",
+      "question": "Which movement is also known as the 'August Kranti'?",
       "options": {
-        "a": "Non-Cooperation Movement / असहयोग आंदोलन",
-        "b": "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन",
-        "c": "Quit India Movement / भारत छोड़ो आंदोलन",
-        "d": "Swadeshi Movement / स्वदेशी आंदोलन"
+        "a": "Non-Cooperation Movement",
+        "b": "Civil Disobedience Movement",
+        "c": "Quit India Movement",
+        "d": "Swadeshi Movement"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Quit India Movement, launched on August 8, 1942, is popularly known as August Kranti.\n\n📖 हिंदी स्पष्टीकरण:\n8 अगस्त, 1942 को शुरू हुए भारत छोड़ो आंदोलन को लोकप्रिय रूप से अगस्त क्रांति के नाम से जाना जाता है।"
     },
     {
       "q_num": 26,
-      "question": "Consider the following statements regarding the Nehru Report (1928): \n नेहरू रिपोर्ट (1928) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was drafted by Jawaharlal Nehru. / इसे जवाहरलाल नेहरू ने तैयार किया था। \n (b) It demanded 'Dominion Status' for India. / इसने भारत के लिए 'डोमीनियन स्टेटस' की मांग की थी। \n (c) It rejected the idea of separate electorates. / इसने पृथक निर्वाचक मंडल के विचार को खारिज कर दिया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Nehru Report (1928): \n(a) It was drafted by Jawaharlal Nehru.\n(b) It demanded 'Dominion Status' for India.\n(c) It rejected the idea of separate electorates.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "b only / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "b only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Nehru Report was drafted by Motilal Nehru, not Jawaharlal Nehru.\n\n📖 हिंदी स्पष्टीकरण:\nनेहरू रिपोर्ट मोतीलाल नेहरू द्वारा तैयार की गई थी, जवाहरलाल नेहरू द्वारा नहीं।"
     },
     {
       "q_num": 27,
-      "question": "Who was the Viceroy of India when the Civil Disobedience Movement was started? \n सविनय अवज्ञा आंदोलन शुरू होने के समय भारत का वायसराय कौन था?",
+      "question": "Who was the Viceroy of India when the Civil Disobedience Movement was started?",
       "options": {
-        "a": "Lord Reading / लॉर्ड रीडिंग",
-        "b": "Lord Irwin / लॉर्ड इरविन",
-        "c": "Lord Willingdon / लॉर्ड विलिंगडन",
-        "d": "Lord Linlithgow / लॉर्ड लिनलिथगो"
+        "a": "Lord Reading",
+        "b": "Lord Irwin",
+        "c": "Lord Willingdon",
+        "d": "Lord Linlithgow"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLord Irwin was the Viceroy during the Dandi March and the start of the CDM.\n\n📖 हिंदी स्पष्टीकरण:\nदांडी मार्च और CDM की शुरुआत के दौरान लॉर्ड इरविन वायसराय थे।"
     },
     {
       "q_num": 28,
-      "question": "Consider the following statements about the Swaraj Party: \n स्वराज पार्टी के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was formed in 1923 by C.R. Das and Motilal Nehru. / इसका गठन 1923 में सी.आर. दास और मोतीलाल नेहरू ने किया था। \n (b) They wanted to boycott the legislative councils. / वे विधान परिषदों का बहिष्कार करना चाहते थे। \n (c) Vithalbhai Patel was elected as the Speaker of the Central Legislative Assembly in 1925. / विट्ठलभाई पटेल 1925 में केंद्रीय विधान सभा के अध्यक्ष चुने गए थे।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Swaraj Party: \n(a) It was formed in 1923 by C.R. Das and Motilal Nehru.\n(b) They wanted to boycott the legislative councils.\n(c) Vithalbhai Patel was elected as the Speaker of the Central Legislative Assembly in 1925.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSwarajists wanted to \"enter the councils\" to wreck them from within, not boycott them.\n\n📖 हिंदी स्पष्टीकरण:\nस्वराजवादी परिषदों का बहिष्कार नहीं करना चाहते थे, बल्कि उनके भीतर प्रवेश करके उन्हें नष्ट करना चाहते थे।"
     },
     {
       "q_num": 29,
-      "question": "Which of the following journals/newspapers was NOT started by Mahatma Gandhi? \n निम्नलिखित में से कौन सी पत्रिका/समाचार पत्र महात्मा गांधी द्वारा शुरू नहीं किया गया था?",
+      "question": "Which of the following journals/newspapers was NOT started by Mahatma Gandhi?",
       "options": {
-        "a": "Indian Opinion / इंडियन ओपिनियन",
-        "b": "Young India / यंग इंडिया",
-        "c": "Harijan / हरिजन",
-        "d": "New India / न्यू इंडिया"
+        "a": "Indian Opinion",
+        "b": "Young India",
+        "c": "Harijan",
+        "d": "New India"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\n'New India' and 'Commonweal' were started by Annie Besant.\n\n📖 हिंदी स्पष्टीकरण:\n'न्यू इंडिया' और 'कॉमनवील' की शुरुआत एनी बेसेंट ने की थी।"
     },
     {
       "q_num": 30,
-      "question": "Consider the following statements regarding the 1857 Revolt in Central India: \n मध्य भारत में 1857 के विद्रोह के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Rani Laxmibai captured Gwalior with the help of Tatya Tope. / रानी लक्ष्मीबाई ने तात्या टोपे की मदद से ग्वालियर पर कब्जा किया था। \n (b) Sir Hugh Rose described Rani Laxmibai as \"the best and bravest military leader of the rebels\". / सर ह्यू रोज़ ने रानी लक्ष्मीबाई को \"विद्रोहियों की सबसे अच्छी और बहादुर सैन्य नेता\" बताया था।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 1857 Revolt in Central India: \n(a) Rani Laxmibai captured Gwalior with the help of Tatya Tope.\n(b) Sir Hugh Rose described Rani Laxmibai as \"the best and bravest military leader of the rebels\".\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "Both a and b / a और b दोनों",
-        "d": "Neither a nor b / न तो a और न ही b"
+        "a": "a only",
+        "b": "b only",
+        "c": "Both a and b / a",
+        "d": "Neither a nor b"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBoth statements are correct. Rani Laxmibai died fighting at Gwalior on June 18, 1858.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। रानी लक्ष्मीबाई 18 जून, 1858 को ग्वालियर में लड़ते हुए शहीद हुई थीं।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements regarding the 'Lothian Committee': \n 'लोथियन समिति' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was related to the expansion of the communal electorate in India. / यह भारत में सांप्रदायिक निर्वाचन मंडल के विस्तार से संबंधित थी। \n (b) It was formed in the aftermath of the Second Round Table Conference. / इसका गठन दूसरे गोलमेज सम्मेलन के बाद किया गया था।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Lothian Committee': \n(a) It was related to the expansion of the communal electorate in India.\n(b) It was formed in the aftermath of the Second Round Table Conference.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "Both a and b / a और b दोनों",
-        "d": "Neither a nor b / न तो a और न ही b"
+        "a": "a only",
+        "b": "b only",
+        "c": "Both a and b / a",
+        "d": "Neither a nor b"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Lothian Committee (Franchise Committee) provided the basis for the Communal Award by recommending the extension of separate electorates.\n\n📖 हिंदी स्पष्टीकरण:\nलोथियन समिति (मताधिकार समिति) ने पृथक निर्वाचक मंडल के विस्तार की सिफारिश करके सांप्रदायिक अधिनिर्णय (Communal Award) का आधार तैयार किया था।"
     },
     {
       "q_num": 32,
-      "question": "During the 1857 Revolt, which among the following was the main reason for the 'failure' of the revolt? \n 1857 के विद्रोह के दौरान, निम्नलिखित में से विद्रोह की 'विफलता' का मुख्य कारण क्या था?",
+      "question": "During the 1857 Revolt, which among the following was the main reason for the 'failure' of the revolt?",
       "options": {
-        "a": "Lack of a unified ideology and political perspective. / एकीकृत विचारधारा और राजनीतिक दृष्टिकोण की कमी।",
-        "b": "The British had superior naval power. / अंग्रेजों के पास श्रेष्ठ नौसैनिक शक्ति थी।",
-        "c": "Participation of the entire Indian population. / पूरी भारतीय जनसंख्या की भागीदारी।",
-        "d": "Support of all Indian princely states to the rebels. / विद्रोहियों को सभी भारतीय रियासतों का समर्थन।"
+        "a": "Lack of a unified ideology and political perspective.",
+        "b": "The British had superior naval power.",
+        "c": "Participation of the entire Indian population.",
+        "d": "Support of all Indian princely states to the rebels."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe rebels had no forward-looking program or a coherent strategy to replace the British system.\n\n📖 हिंदी स्पष्टीकरण:\nविद्रोहियों के पास ब्रिटिश व्यवस्था को बदलने के लिए कोई भविष्योन्मुखी कार्यक्रम या सुसंगत रणनीति नहीं थी।"
     },
     {
       "q_num": 33,
-      "question": "Consider the following statements regarding the 'Surat Split' (1907): \n 'सूरत विभाजन' (1907) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Rash Behari Ghosh presided over the Surat session. / रास बिहारी घोष ने सूरत अधिवेशन की अध्यक्षता की थी। \n (b) The main reason for the split was the conflict between moderates and extremists over methods of struggle. / विभाजन का मुख्य कारण संघर्ष के तरीकों को लेकर उदारवादियों और उग्रवादियों के बीच उत्पन्न हुआ मतभेद था। \n (c) Extremists wanted Lala Lajpat Rai or Tilak to be the President. / चरमपंथी चाहते थे कि लाला लाजपत राय या तिलक अध्यक्ष बनें।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Surat Split' (1907): \n(a) Rash Behari Ghosh presided over the Surat session.\n(b) The main reason for the split was the conflict between moderates and extremists over methods of struggle.\n(c) Extremists wanted Lala Lajpat Rai or Tilak to be the President.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The conflict over the presidency and the scope of the Swadeshi movement led to the split.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। अध्यक्षता को लेकर संघर्ष और स्वदेशी आंदोलन के दायरे ने विभाजन को जन्म दिया।"
     },
     {
       "q_num": 34,
-      "question": "Who among the following was the first British President of the Indian National Congress? \n भारतीय राष्ट्रीय कांग्रेस के पहले ब्रिटिश अध्यक्ष निम्नलिखित में से कौन थे?",
+      "question": "Who among the following was the first British President of the Indian National Congress?",
       "options": {
-        "a": "A.O. Hume / ए.ओ. ह्यूम",
-        "b": "George Yule / जॉर्ज यूल",
-        "c": "William Wedderburn / विलियम वेडरबर्न",
-        "d": "Alfred Webb / अल्फ्रेड वेब"
+        "a": "A.O. Hume",
+        "b": "George Yule",
+        "c": "William Wedderburn",
+        "d": "Alfred Webb"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGeorge Yule presided over the Allahabad session of INC in 1888.\n\n📖 हिंदी स्पष्टीकरण:\nजॉर्ज यूल ने 1888 में INC के इलाहाबाद अधिवेशन की अध्यक्षता की थी।"
     },
     {
       "q_num": 35,
-      "question": "Consider the following statements regarding the Ahmedabad Mill Strike (1918): \n अहमदाबाद मिल हड़ताल (1918) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The dispute was over the discontinuation of the 'Plague Bonus'. / विवाद 'प्लेग बोनस' की समाप्ति को लेकर था। \n (b) Anusuya Sarabhai supported the mill owners against Gandhi. / अनुसूया साराभाई ने गांधीजी के खिलाफ मिल मालिकों का समर्थन किया। \n (c) Workers demanded a 35% increase in wages. / श्रमिकों ने वेतन में 35% वृद्धि की मांग की।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Ahmedabad Mill Strike (1918): \n(a) The dispute was over the discontinuation of the 'Plague Bonus'.\n(b) Anusuya Sarabhai supported the mill owners against Gandhi.\n(c) Workers demanded a 35% increase in wages.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "b and c / b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and c",
+        "b": "b and c",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAnusuya Sarabhai actually supported Gandhi and the workers during the strike.\n\n📖 हिंदी स्पष्टीकरण:\nअनुसूया साराभाई ने वास्तव में हड़ताल के दौरान गांधीजी और श्रमिकों का समर्थन किया था।"
     },
     {
       "q_num": 36,
-      "question": "Which of the following events occurred first? \n निम्नलिखित में से कौन सी घटना सबसे पहले हुई?",
+      "question": "Which of the following events occurred first?",
       "options": {
-        "a": "Chittagong Armoury Raid / चटगांव शस्त्रागार छापा",
-        "b": "Execution of Bhagat Singh / भगत सिंह को फांसी",
-        "c": "Appointment of Simon Commission / साइमन कमीशन की नियुक्ति",
-        "d": "First Round Table Conference / प्रथम गोलमेज सम्मेलन"
+        "a": "Chittagong Armoury Raid",
+        "b": "Execution of Bhagat Singh",
+        "c": "Appointment of Simon Commission",
+        "d": "First Round Table Conference"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSimon Commission appointed (Nov 1927), Chittagong Raid (1930), 1st RTC (1930), Bhagat Singh execution (1931).\n\n📖 हिंदी स्पष्टीकरण:\nसाइमन कमीशन की नियुक्ति (नवंबर 1927), चटगांव छापा (1930), प्रथम RTC (1930), भगत सिंह को फांसी (1931)।"
     },
     {
       "q_num": 37,
-      "question": "Consider the following statements about the 'Red Shirts' (Khudai Khidmatgars): \n 'लाल कुर्ती' (खुदाई खिदमतगार) के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) They were a non-violent group active in the North-West Frontier Province. / वे उत्तर-पश्चिम सीमा प्रांत में सक्रिय एक अहिंसक समूह थे। \n (b) They were led by Khan Abdul Ghaffar Khan, also known as 'Frontier Gandhi'. / उनका नेतृत्व खान अब्दुल गफ्फार खान ने किया था, जिन्हें 'सीमांत गांधी' भी कहा जाता है। \n (c) They participated enthusiastically in the Civil Disobedience Movement. / उन्होंने सविनय अवज्ञा आंदोलन में उत्साहपूर्वक भाग लिया। \n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Red Shirts' (Khudai Khidmatgars): \n(a) They were a non-violent group active in the North-West Frontier Province.\n(b) They were led by Khan Abdul Ghaffar Khan, also known as 'Frontier Gandhi'.\n(c) They participated enthusiastically in the Civil Disobedience Movement.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. They played a massive role in mobilizing the Pathans during the CDM.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। उन्होंने CDM के दौरान पठानों को संगठित करने में बड़ी भूमिका निभाई थी।"
     },
     {
       "q_num": 38,
-      "question": "Who was the leader of the 1857 Revolt in Faizabad? \n फैजाबाद में 1857 के विद्रोह के नेता कौन थे?",
+      "question": "Who was the leader of the 1857 Revolt in Faizabad?",
       "options": {
-        "a": "Maulvi Ahmadullah Shah / मौलवी अहमदुल्ला शाह",
-        "b": "Liyaqat Ali / लियाकत अली",
-        "c": "Azimullah Khan / अजीमुल्ला खान",
-        "d": "Birjis Qadr / बिरजिस कद्र"
+        "a": "Maulvi Ahmadullah Shah",
+        "b": "Liyaqat Ali",
+        "c": "Azimullah Khan",
+        "d": "Birjis Qadr"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMaulvi Ahmadullah Shah fought a stiff battle against the British in Faizabad.\n\n📖 हिंदी स्पष्टीकरण:\nमौलवी अहमदुल्ला शाह ने फैजाबाद में अंग्रेजों के खिलाफ कड़ा संघर्ष किया था।"
     },
     {
       "q_num": 39,
-      "question": "Consider the following statements regarding the Rowlatt Act (1919): \n रौलट एक्ट (1919) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It allowed detention of political prisoners without trial for two years. / इसने राजनीतिक कैदियों को बिना किसी मुकदमे के दो साल तक हिरासत में रखने की अनुमति दी। \n (b) Gandhi organized a 'Satyagraha Sabha' to protest against this act. / गांधीजी ने इस अधिनियम के विरोध में 'सत्याग्रह सभा' का आयोजन किया। \n (c) It was officially called the Anarchical and Revolutionary Crimes Act. / इसे आधिकारिक तौर पर 'अनार्किकल एंड रिवोल्यूशनरी क्राइम्स एक्ट' कहा जाता था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Rowlatt Act (1919): \n(a) It allowed detention of political prisoners without trial for two years.\n(b) Gandhi organized a 'Satyagraha Sabha' to protest against this act.\n(c) It was officially called the Anarchical and Revolutionary Crimes Act.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The act led to widespread protests, culminating in the Jallianwala Bagh massacre.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। इस अधिनियम के कारण व्यापक विरोध हुआ, जिसका समापन जलियांवाला बाग हत्याकांड में हुआ।"
     },
     {
       "q_num": 40,
-      "question": "The 'Deepavali Declaration' of 1929 was made by which Viceroy? \n 1929 की 'दीपावली घोषणा' किस वायसराय द्वारा की गई थी?",
+      "question": "The 'Deepavali Declaration' of 1929 was made by which Viceroy?",
       "options": {
-        "a": "Lord Reading / लॉर्ड रीडिंग",
-        "b": "Lord Irwin / लॉर्ड इरविन",
-        "c": "Lord Linlithgow / लॉर्ड लिनलिथगो",
-        "d": "Lord Wavell / लॉर्ड वेवेल"
+        "a": "Lord Reading",
+        "b": "Lord Irwin",
+        "c": "Lord Linlithgow",
+        "d": "Lord Wavell"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLord Irwin declared in 1929 that the natural goal of India's constitutional progress was 'Dominion Status'.\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड इरविन ने 1929 में घोषणा की कि भारत की संवैधानिक प्रगति का स्वाभाविक लक्ष्य 'डोमीनियन स्टेटस' है।"
     },
     {
       "q_num": 41,
-      "question": "Consider the following statements regarding the 1858 Act (Queen's Proclamation): \n 1858 के अधिनियम (रानी की उद्घोषणा) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It ended the rule of the East India Company. / इसने ईस्ट इंडिया कंपनी के शासन को समाप्त कर दिया। \n (b) The office of Secretary of State for India was created. / भारत के लिए राज्य सचिव (सेक्रेटरी ऑफ स्टेट) का पद बनाया गया। \n (c) The Governor-General was given the title of Viceroy. / गवर्नर-जनरल को वायसराय की उपाधि दी गई।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 1858 Act (Queen's Proclamation): \n(a) It ended the rule of the East India Company.\n(b) The office of Secretary of State for India was created.\n(c) The Governor-General was given the title of Viceroy.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Act for the Better Government of India transferred power from the Company to the British Crown.\n\n📖 हिंदी स्पष्टीकरण:\nभारत सरकार के बेहतर अधिनियम ने कंपनी से ब्रिटिश क्राउन को सत्ता हस्तांतरित कर दी।"
     },
     {
       "q_num": 42,
-      "question": "Which Congress President said, \"I am a socialist and a republican\"? \n किस कांग्रेस अध्यक्ष ने कहा था, \"मैं एक समाजवादी और गणतंत्रवादी हूँ\"?",
+      "question": "Which Congress President said, \"I am a socialist and a republican\"?",
       "options": {
-        "a": "Subhas Chandra Bose / सुभाष चंद्र बोस",
-        "b": "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "c": "M.N. Roy / एम.एन. रॉय",
-        "d": "Jayaprakash Narayan / जयप्रकाश नारायण"
+        "a": "Subhas Chandra Bose",
+        "b": "Jawaharlal Nehru",
+        "c": "M.N. Roy",
+        "d": "Jayaprakash Narayan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJawaharlal Nehru made this statement in his presidential address at the Lucknow Session in 1936.\n\n📖 हिंदी स्पष्टीकरण:\nजवाहरलाल नेहरू ने 1936 में लखनऊ अधिवेशन में अपने अध्यक्षीय भाषण में यह बयान दिया था।"
     },
     {
       "q_num": 43,
-      "question": "Consider the following statements about the 'Cunningham Circular': \n 'कनिंघम सर्कुलर' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was issued in Assam during the Civil Disobedience Movement. / यह सविनय अवज्ञा आंदोलन के दौरान असम में जारी किया गया था। \n (b) It forbade students from participating in political activities. / इसने छात्रों को राजनीतिक गतिविधियों में भाग लेने से मना किया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the 'Cunningham Circular': \n(a) It was issued in Assam during the Civil Disobedience Movement.\n(b) It forbade students from participating in political activities.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "Both a and b / a और b दोनों",
-        "d": "Neither a nor b / न तो a और न ही b"
+        "a": "a only",
+        "b": "b only",
+        "c": "Both a and b / a",
+        "d": "Neither a nor b"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStudents in Assam launched a powerful agitation against this circular, which restricted their freedom to join the movement.\n\n📖 हिंदी स्पष्टीकरण:\nअसम में छात्रों ने इस सर्कुलर के खिलाफ एक शक्तिशाली आंदोलन शुरू किया, जिसने आंदोलन में शामिल होने की उनकी स्वतंत्रता को प्रतिबंधित कर दिया था।"
     },
     {
       "q_num": 44,
-      "question": "Who was the President of the Indian National Congress during the 1905 Partition of Bengal? \n 1905 के बंगाल विभाजन के दौरान भारतीय राष्ट्रीय कांग्रेस के अध्यक्ष कौन थे?",
+      "question": "Who was the President of the Indian National Congress during the 1905 Partition of Bengal?",
       "options": {
-        "a": "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "b": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "c": "Pherozeshah Mehta / फिरोजशाह मेहता",
-        "d": "Dinshaw Wacha / दिनशा वाचा"
+        "a": "Gopal Krishna Gokhale",
+        "b": "Dadabhai Naoroji",
+        "c": "Pherozeshah Mehta",
+        "d": "Dinshaw Wacha"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nG.K. Gokhale presided over the Banaras session of INC in 1905.\n\n📖 हिंदी स्पष्टीकरण:\nजी.के. गोखले ने 1905 में INC के बनारस अधिवेशन की अध्यक्षता की थी।"
     },
     {
       "q_num": 45,
-      "question": "Consider the following pairs: \n निम्नलिखित युग्मों पर विचार करें: \n (a) Khan Abdul Ghaffar Khan : Peshawar / खान अब्दुल गफ्फार खान : पेशावर \n (b) C. Rajagopalachari : Vedaranyam / सी. राजगोपालाचारी : वेदारण्यम \n (c) Sarojini Naidu : Dharsana / सरोजिनी नायडू : धरसाना\n Which of the pairs given above are correctly matched? \n ऊपर दिए गए युग्मों में से कौन-से सही सुमेलित हैं?",
+      "question": "Consider the following pairs: \n(a) Khan Abdul Ghaffar Khan : Peshawar\n(b) C. Rajagopalachari : Vedaranyam\n(c) Sarojini Naidu : Dharsana\n Which of the pairs given above are correctly matched?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll are correct leaders of Salt Satyagraha in their respective regions. C. Rajagopalachari led the march from Trichinopoly to Vedaranyam.\n\n📖 हिंदी स्पष्टीकरण:\nसभी अपने-अपने क्षेत्रों में नमक सत्याग्रह के सही नेता हैं। सी. राजगोपालाचारी ने त्रिचिनोपोली से वेदारण्यम तक मार्च का नेतृत्व किया।"
     },
     {
       "q_num": 46,
-      "question": "Consider the following statements about the 'Simon Commission': \n 'साइमन कमीशन' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) The commission was sent to India two years before the scheduled time. / आयोग को निर्धारित समय से दो साल पहले भारत भेजा गया था। \n (b) Clement Attlee, the future Prime Minister of Britain, was one of its members. / ब्रिटेन के भावी प्रधानमंत्री क्लेमेंट एटली इसके सदस्यों में से एक थे। \n (c) The commission's report suggested the abolition of Dyarchy in provinces. / आयोग की रिपोर्ट में प्रांतों में द्वैध शासन को समाप्त करने का सुझाव दिया गया था।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Simon Commission': \n(a) The commission was sent to India two years before the scheduled time.\n(b) Clement Attlee, the future Prime Minister of Britain, was one of its members.\n(c) The commission's report suggested the abolition of Dyarchy in provinces.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The commission was appointed in 1927 (instead of 1929) and recommended replacing Dyarchy with provincial autonomy.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। आयोग की नियुक्ति 1927 में (1929 के बजाय) की गई थी और इसने द्वैध शासन को प्रांतीय स्वायत्तता से बदलने की सिफारिश की थी।"
     },
     {
       "q_num": 47,
-      "question": "Match the following centers of the 1857 revolt with the British officers who suppressed them: \n 1857 के विद्रोह के निम्नलिखित केंद्रों को उन ब्रिटिश अधिकारियों के साथ सुमेलित करें जिन्होंने उन्हें दबाया था: \n | List-I (Center) | List-II (British Officer) | \n | :--- | :--- | \n | (A) Jhansi / झांसी | (i) Colin Campbell | \n | (B) Kanpur / कानपुर | (ii) Hugh Rose | \n | (C) Delhi / दिल्ली | (iii) William Taylor | \n | (D) Arrah (Bihar) / आरा | (iv) John Nicholson |\n Choose the correct code: / सही कूट चुनें:",
+      "question": "Match the following centers of the 1857 revolt with the British officers who suppressed them: \n | List-I (Center) | List-II (British Officer) | \n | :--- | :--- | \n| (A) Jhansi\n| (B) Kanpur\n| (C) Delhi\n| (D) Arrah (Bihar)\nChoose the correct code:",
       "options": {
         "a": "A-ii, B-i, C-iv, D-iii",
         "b": "A-ii, B-iv, C-i, D-iii",
@@ -570,91 +570,91 @@
     },
     {
       "q_num": 48,
-      "question": "Consider the following statements regarding the 'Purna Swaraj' resolution (1929): \n 'पूर्ण स्वराज' प्रस्ताव (1929) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was passed on the banks of the river Ravi. / यह रावी नदी के तट पर पारित किया गया था। \n (b) January 26, 1930, was fixed as the first Independence Day. / 26 जनवरी, 1930 को प्रथम स्वतंत्रता दिवस के रूप में निश्चित किया गया था। \n (c) The resolution also decided to boycott the First Round Table Conference. / प्रस्ताव में प्रथम गोलमेज सम्मेलन का बहिष्कार करने का भी निर्णय लिया गया।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Purna Swaraj' resolution (1929): \n(a) It was passed on the banks of the river Ravi.\n(b) January 26, 1930, was fixed as the first Independence Day. / 26\n(c) The resolution also decided to boycott the First Round Table Conference.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Congress session in Lahore set the stage for the Civil Disobedience Movement.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। लाहौर में कांग्रेस अधिवेशन ने सविनय अवज्ञा आंदोलन का मार्ग प्रशस्त किया।"
     },
     {
       "q_num": 49,
-      "question": "Who among the following called the Revolt of 1857 as the \"First War of Indian Independence\"? \n निम्नलिखित में से किसने 1857 के विद्रोह को \"भारतीय स्वतंत्रता का प्रथम युद्ध\" कहा था?",
+      "question": "Who among the following called the Revolt of 1857 as the \"First War of Indian Independence\"?",
       "options": {
-        "a": "V.D. Savarkar / वी.डी. सावरकर",
-        "b": "S.N. Sen / एस.एन. सेन",
-        "c": "R.C. Majumdar / आर.सी. मजूमदार",
-        "d": "Benjamin Disraeli / बेंजामिन डिसरायली"
+        "a": "V.D. Savarkar",
+        "b": "S.N. Sen",
+        "c": "R.C. Majumdar",
+        "d": "Benjamin Disraeli"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nV.D. Savarkar popularized this term in his book published in 1909.\n\n📖 हिंदी स्पष्टीकरण:\nवी.डी. सावरकर ने 1909 में प्रकाशित अपनी पुस्तक में इस शब्द को लोकप्रिय बनाया था।"
     },
     {
       "q_num": 50,
-      "question": "Consider the following statements regarding the 'Two-Nation Theory' and Muslim League: \n 'द्वि-राष्ट्र सिद्धांत' और मुस्लिम लीग के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The idea of a separate homeland for Muslims was first proposed by Mohammad Iqbal. / मुसलमानों के लिए एक अलग मातृभूमि का विचार सबसे पहले मोहम्मद इकबाल ने प्रस्तावित किया था। \n (b) The term 'Pakistan' was coined by Choudhry Rahmat Ali. / 'पाकिस्तान' शब्द चौधरी रहमत अली ने गढ़ा था। \n (c) The Lahore Resolution (1940) formally demanded a separate state. / लाहौर प्रस्ताव (1940) में औपचारिक रूप से एक अलग राज्य की मांग की गई थी।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Two-Nation Theory' and Muslim League: \n(a) The idea of a separate homeland for Muslims was first proposed by Mohammad Iqbal.\n(b) The term 'Pakistan' was coined by Choudhry Rahmat Ali. / '\n(c) The Lahore Resolution (1940) formally demanded a separate state.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nIqbal spoke of a North-West Muslim state in 1930; Rahmat Ali coined the name in 1933; and Jinnah led the 1940 resolution.\n\n📖 हिंदी स्पष्टीकरण:\nइकबाल ने 1930 में उत्तर-पश्चिम मुस्लिम राज्य की बात की थी; रहमत अली ने 1933 में यह नाम गढ़ा; और जिन्ना ने 1940 के प्रस्ताव का नेतृत्व किया।"
     },
     {
       "q_num": 51,
-      "question": "Which of the following was the reason for the withdrawal of the Non-Cooperation Movement in 1922? \n 1922 में असहयोग आंदोलन को वापस लेने का कारण निम्नलिखित में से क्या था?",
+      "question": "Which of the following was the reason for the withdrawal of the Non-Cooperation Movement in 1922?",
       "options": {
-        "a": "Chauri Chaura incident / चौरी-चौरा की घटना",
-        "b": "Jallianwala Bagh massacre / जलियांवाला बाग हत्याकांड",
-        "c": "Arrest of Mahatma Gandhi / महात्मा गांधी की गिरफ्तारी",
-        "d": "Signing of Gandhi-Irwin Pact / गांधी-इरविन समझौते पर हस्ताक्षर"
+        "a": "Chauri Chaura incident",
+        "b": "Jallianwala Bagh massacre",
+        "c": "Arrest of Mahatma Gandhi",
+        "d": "Signing of Gandhi-Irwin Pact"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nViolent clash in Chauri Chaura (UP) led Gandhi to call off the movement as it was turning violent.\n\n📖 हिंदी स्पष्टीकरण:\nचौरी-चौरा (यूपी) में हिंसक झड़प के कारण गांधीजी ने आंदोलन को वापस ले लिया क्योंकि यह हिंसक हो रहा था।"
     },
     {
       "q_num": 52,
-      "question": "Consider the following statements regarding the 'Surat Split' and its consequences: \n 'सूरत विभाजन' और उसके परिणामों के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The British followed the policy of \"Divide and Rule\" by favoring the Moderates. / अंग्रेजों ने नरमपंथियों का पक्ष लेकर \"फूट डालो और राज करो\" की नीति अपनाई। \n (b) Following the split, Tilak was sent to Mandalay jail for 6 years. / विभाजन के बाद तिलक को 6 साल के लिए मांडले जेल भेज दिया गया था। \n (c) The INC became weak and ineffective for almost a decade after the split. / विभाजन के बाद लगभग एक दशक तक INC कमजोर और अप्रभावी हो गई थी।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Surat Split' and its consequences: \n(a) The British followed the policy of \"Divide and Rule\" by favoring the Moderates.\n(b) Following the split, Tilak was sent to Mandalay jail for 6 years.\n(c) The INC became weak and ineffective for almost a decade after the split.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe split severely weakened the national movement until the Lucknow Pact of 1916.\n\n📖 हिंदी स्पष्टीकरण:\n1916 के लखनऊ समझौते तक इस विभाजन ने राष्ट्रीय आंदोलन को गंभीर रूप से कमजोर कर दिया था।"
     },
     {
       "q_num": 53,
-      "question": "Who was known as the \"Ambassador of Hindu-Muslim Unity\" in the early phase of his career? \n अपने करियर के शुरुआती चरण में किसे \"हिंदू-मुस्लिम एकता का राजदूत\" कहा जाता था?",
+      "question": "Who was known as the \"Ambassador of Hindu-Muslim Unity\" in the early phase of his career?",
       "options": {
-        "a": "Mohammad Ali Jinnah / मोहम्मद अली जिन्ना",
-        "b": "Shaukat Ali / शौकत अली",
-        "c": "Sir Syed Ahmad Khan / सर सैयद अहमद खान",
-        "d": "Maulana Abul Kalam Azad / मौलाना अबुल कलाम आज़ाद"
+        "a": "Mohammad Ali Jinnah",
+        "b": "Shaukat Ali",
+        "c": "Sir Syed Ahmad Khan",
+        "d": "Maulana Abul Kalam Azad"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSarojini Naidu gave this title to Jinnah due to his efforts during the Lucknow Pact\n\n📖 हिंदी स्पष्टीकरण:\nसरोजिनी नायडू ने लखनऊ समझौते के दौरान जिन्ना के प्रयासों के कारण उन्हें यह उपाधि दी थी।"
     },
     {
       "q_num": 54,
-      "question": "Consider the following statements regarding the 'Salt Satyagraha': \n 'नमक सत्याग्रह' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Salt was chosen because it was a product used by every Indian, regardless of caste or religion. / नमक इसलिए चुना गया क्योंकि यह एक ऐसा उत्पाद था जिसका उपयोग हर भारतीय करता था, चाहे वह किसी भी जाति या धर्म का हो। \n (b) The British had a monopoly on the production and sale of salt. / नमक के उत्पादन और बिक्री पर अंग्रेजों का एकाधिकार था। \n (c) The tax on salt accounted for more than 50% of British India's revenue. / नमक पर लगने वाला कर ब्रिटिश भारत के राजस्व का 50% से अधिक था।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Salt Satyagraha': \n(a) Salt was chosen because it was a product used by every Indian, regardless of caste or religion.\n(b) The British had a monopoly on the production and sale of salt.\n(c) The tax on salt accounted for more than 50% of British India's revenue.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement (c) is incorrect. While salt tax was burdensome for the poor, it was not 50% of the total revenue (it was approx. 8-10%).\n\n📖 हिंदी स्पष्टीकरण:\nकथन (c) गलत है। हालांकि नमक कर गरीबों के लिए बोझिल था, लेकिन यह कुल राजस्व का 50% नहीं था (यह लगभग 8-10% था)।"
     },
     {
       "q_num": 55,
-      "question": "Arrange the following Satyagrahas of Gandhi in chronological order: \n गांधीजी के निम्नलिखित सत्याग्रहों को कालानुक्रमिक क्रम में व्यवस्थित करें: \n (a) Kheda Satyagraha / खेड़ा सत्याग्रह \n (b) Champaran Satyagraha / चंपारण सत्याग्रह \n (c) Ahmedabad Mill Strike / अहमदाबाद मिल हड़ताल\n Choose the correct code: / सही कूट चुनें:",
+      "question": "Arrange the following Satyagrahas of Gandhi in chronological order: \n(a) Kheda Satyagraha\n(b) Champaran Satyagraha\n(c) Ahmedabad Mill Strike\nChoose the correct code:",
       "options": {
         "a": "b - c - a",
         "b": "b - a - c",
@@ -666,103 +666,103 @@
     },
     {
       "q_num": 56,
-      "question": "Consider the following statements about the '1857 Revolt' in Awadh: \n अवध में '1857 के विद्रोह' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) Awadh was annexed by the British in 1856 on grounds of misgovernance. / 1856 में कुशासन के आधार पर अंग्रेजों ने अवध पर अधिकार कर लिया था। \n (b) Large numbers of sepoys in the Bengal Army were recruited from Awadh. / बंगाल सेना में बड़ी संख्या में सिपाही अवध से भर्ती किए गए थे। \n (c) The Taluqdars of Awadh supported the British during the revolt. / अवध के ताल्लुकदारों ने विद्रोह के दौरान अंग्रेजों का समर्थन किया।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the '1857 Revolt' in Awadh: \n(a) Awadh was annexed by the British in 1856 on grounds of misgovernance. / 1856\n(b) Large numbers of sepoys in the Bengal Army were recruited from Awadh.\n(c) The Taluqdars of Awadh supported the British during the revolt.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTaluqdars were dispossessed of their lands after the annexation and thus mostly supported the rebels, not the British.\n\n📖 हिंदी स्पष्टीकरण:\nविलेय के बाद ताल्लुकदारों को उनकी भूमि से बेदखल कर दिया गया था, इसलिए उन्होंने ज्यादातर विद्रोहियों का समर्थन किया, अंग्रेजों का नहीं।"
     },
     {
       "q_num": 57,
-      "question": "The 'Karachi Session' of 1931 is famous for which of the following? \n 1931 का 'कराची अधिवेशन' निम्नलिखित में से किसके लिए प्रसिद्ध है?",
+      "question": "The 'Karachi Session' of 1931 is famous for which of the following?",
       "options": {
-        "a": "Adoption of resolution on Fundamental Rights. / मौलिक अधिकारों पर प्रस्ताव को अपनाना।",
-        "b": "Resolution on National Economic Program. / राष्ट्रीय आर्थिक कार्यक्रम पर प्रस्ताव।",
-        "c": "Endorsement of the Gandhi-Irwin Pact. / गांधी-इरविन समझौते का समर्थन।",
-        "d": "All of the above. / उपरोक्त सभी।"
+        "a": "Adoption of resolution on Fundamental Rights.",
+        "b": "Resolution on National Economic Program.",
+        "c": "Endorsement of the Gandhi-Irwin Pact.",
+        "d": "All of the above."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPresided over by Vallabhbhai Patel, this session defined what 'Swaraj' would mean for the masses.\n\n📖 हिंदी स्पष्टीकरण:\nवल्लभभाई पटेल की अध्यक्षता में, इस अधिवेशन ने परिभाषित किया कि जनता के लिए 'स्वराज' का क्या अर्थ होगा।"
     },
     {
       "q_num": 58,
-      "question": "Consider the following statements about 'Annie Besant': \n 'एनी बेसेंट' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) She was the first woman President of the INC. / वह INC की पहली महिला अध्यक्ष थीं। \n (b) She founded the Home Rule League in 1916. / उन्होंने 1916 में होम रूल लीग की स्थापना की। \n (c) She was the founder of the Theosophical Society. / वह थियोसोफिकल सोसाइटी की संस्थापक थीं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Annie Besant': \n(a) She was the first woman President of the INC.\n(b) She founded the Home Rule League in 1916.\n(c) She was the founder of the Theosophical Society.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nShe was the first woman President (1917). The Theosophical Society was founded by Blavatsky and Olcott; Besant joined it later and became its president.\n\n📖 हिंदी स्पष्टीकरण:\nवह पहली महिला अध्यक्ष (1917) थीं। थियोसोफिकल सोसाइटी की स्थापना ब्लावत्स्की और ऑलकोट ने की थी; बेसेंट बाद में इसमें शामिल हुईं और इसकी अध्यक्ष बनीं।"
     },
     {
       "q_num": 59,
-      "question": "The 'Vande Mataram' slogan became popular during which movement? \n 'वंदे मातरम' का नारा किस आंदोलन के दौरान लोकप्रिय हुआ?",
+      "question": "The 'Vande Mataram' slogan became popular during which movement?",
       "options": {
-        "a": "Revolt of 1857 / 1857 का विद्रोह",
-        "b": "Swadeshi Movement / स्वदेशी आंदोलन",
-        "c": "Non-Cooperation Movement / असहयोग आंदोलन",
-        "d": "Quit India Movement / भारत छोड़ो आंदोलन"
+        "a": "Revolt of 1857 / 1857",
+        "b": "Swadeshi Movement",
+        "c": "Non-Cooperation Movement",
+        "d": "Quit India Movement"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt became the anthem of the anti-partition agitation (Swadeshi Movement) in 1905.\n\n📖 हिंदी स्पष्टीकरण:\nयह 1905 में विभाजन विरोधी आंदोलन (स्वदेशी आंदोलन) का गान बन गया।"
     },
     {
       "q_num": 60,
-      "question": "Consider the following statements regarding the 'Round Table Conferences': \n 'गोलमेज सम्मेलनों' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Dr. B.R. Ambedkar attended all three conferences. / डॉ. बी.आर. अंबेडकर ने तीनों सम्मेलनों में भाग लिया। \n (b) The Congress attended only the second conference. / कांग्रेस ने केवल दूसरे सम्मेलन में भाग लिया। \n (c) The conferences were held in London. / सम्मेलन लंदन में आयोजित किए गए थे।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Round Table Conferences': \n(a) Dr. B.R. Ambedkar attended all three conferences.\n(b) The Congress attended only the second conference.\n(c) The conferences were held in London.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Gandhi represented Congress in the 2nd RTC after the Gandhi-Irwin Pact.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। गांधी-इरविन समझौते के बाद गांधीजी ने दूसरे RTC में कांग्रेस का प्रतिनिधित्व किया।"
     },
     {
       "q_num": 61,
-      "question": "Consider the following statements regarding the 'Peshawar Incident' (1930): \n 'पेशावर कांड' (1930) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The soldiers of the Garhwal Rifles refused to fire on the unarmed crowd. / गढ़वाल राइफल्स के सैनिकों ने निहत्थी भीड़ पर गोली चलाने से इनकार कर दिया था। \n (b) Chandra Singh Garhwali was the leader of these soldiers. / इन सैनिकों के नेता चंद्र सिंह गढ़वाली थे। \n (c) This incident occurred during the Non-Cooperation Movement. / यह घटना असहयोग आंदोलन के दौरान हुई थी।\n Which of the above statements is/are correct? / उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Peshawar Incident' (1930): \n(a) The soldiers of the Garhwal Rifles refused to fire on the unarmed crowd.\n(b) Chandra Singh Garhwali was the leader of these soldiers.\n(c) This incident occurred during the Non-Cooperation Movement.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThis incident occurred during the Civil Disobedience Movement (CDM) in April 1930, not during the Non-Cooperation Movement.\n\n📖 हिंदी स्पष्टीकरण:\nयह घटना अप्रैल 1930 में सविनय अवज्ञा आंदोलन (CDM) के दौरान हुई थी, असहयोग आंदोलन के दौरान नहीं।"
     },
     {
       "q_num": 62,
-      "question": "Who was the President of the Indian National Congress at the time of India's independence? \n भारत की स्वतंत्रता के समय भारतीय राष्ट्रीय कांग्रेस के अध्यक्ष कौन थे?",
+      "question": "Who was the President of the Indian National Congress at the time of India's independence?",
       "options": {
-        "a": "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "b": "J.B. Kripalani / जे.बी. कृपलानी",
-        "c": "Maulana Abul Kalam Azad / मौलाना अबुल कलाम आज़ाद",
-        "d": "Sardar Patel / सरदार पटेल"
+        "a": "Jawaharlal Nehru",
+        "b": "J.B. Kripalani",
+        "c": "Maulana Abul Kalam Azad",
+        "d": "Sardar Patel"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJ.B. Kripalani was the President during the transition of power in 1947.\n\n📖 हिंदी स्पष्टीकरण:\nजे.बी. कृपलानी 1947 में सत्ता हस्तांतरण के दौरान अध्यक्ष थे।"
     },
     {
       "q_num": 63,
-      "question": "Consider the following statements regarding the 'Swaraj Party': \n 'स्वराज पार्टी' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) They were known as 'Pro-changers' within the Congress. / उन्हें कांग्रेस के भीतर 'परिवर्तनवादी' (Pro-changers) के रूप में जाना जाता था। \n (b) They were against entering the legislative councils. / वे विधान परिषदों में प्रवेश करने के खिलाफ थे। \n (c) The party merged back with Congress for the 1930 elections. / 1930 के चुनावों के लिए पार्टी का वापस कांग्रेस में विलय हो गया।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Swaraj Party': \n(a) They were known as 'Pro-changers' within the Congress.\n(b) They were against entering the legislative councils.\n(c) The party merged back with Congress for the 1930 elections. / 1930\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a and c / a और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSwarajists were 'Pro-changers' who wanted to enter councils to disrupt British administration. They boycotted the 1930 elections as part of the CDM.\n\n📖 हिंदी स्पष्टीकरण:\nस्वराजवादी 'परिवर्तनवादी' थे जो ब्रिटिश प्रशासन को बाधित करने के लिए परिषदों में प्रवेश करना चाहते थे। उन्होंने CDM के हिस्से के रूप में 1930 के चुनावों का बहिष्कार किया था।"
     },
     {
       "q_num": 64,
-      "question": "Match the following Books/Journals with their Authors: \n निम्नलिखित पुस्तकों/पत्रिकाओं को उनके लेखकों के साथ सुमेलित करें:\n | List-I (Book/Journal) | List-II (Author) | \n | :--- | :--- | \n | (A) The Indian War of Independence / द इंडियन वॉर ऑफ इंडिपेंडेंस | (i) Mahatma Gandhi | \n | (B) Hind Swaraj / हिंद स्वराज | (ii) V.D. Savarkar | \n | (C) Why I am an Atheist / मैं नास्तिक क्यों हूँ | (iii) Maulana Azad | \n | (D) India Wins Freedom / इंडिया विन्स फ्रीडम | (iv) Bhagat Singh |\n Choose the correct code: / सही कूट चुनें:",
+      "question": "Match the following Books/Journals with their Authors: \n | List-I (Book/Journal) | List-II (Author) | \n | :--- | :--- | \n| (A) The Indian War of Independence\n| (B) Hind Swaraj\n| (C) Why I am an Atheist\n| (D) India Wins Freedom\nChoose the correct code:",
       "options": {
         "a": "A-ii, B-i, C-iv, D-iii",
         "b": "A-ii, B-iv, C-i, D-iii",
@@ -774,132 +774,132 @@
     },
     {
       "q_num": 65,
-      "question": "Consider the following statements regarding the 'Communal Award' (1932): \n 'सांप्रदायिक अधिनिर्णय' (1932) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was announced by the British PM Ramsay MacDonald. / इसकी घोषणा ब्रिटिश प्रधानमंत्री रैमसे मैकडोनाल्ड ने की थी। \n (b) It extended separate electorates to the 'Depressed Classes'. / इसने 'दलित वर्गों' के लिए अलग निर्वाचक मंडल का विस्तार किया। \n (c) Gandhi supported the award in the Second Round Table Conference. / गांधीजी ने दूसरे गोलमेज सम्मेलन में इस अधिनिर्णय का समर्थन किया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Communal Award' (1932): \n(a) It was announced by the British PM Ramsay MacDonald.\n(b) It extended separate electorates to the 'Depressed Classes'.\n(c) Gandhi supported the award in the Second Round Table Conference.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a and c / a और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGandhi strongly opposed the Communal Award as he believed it would divide the Hindu society. He went on a fast unto death in Yerwada Jail.\n\n📖 हिंदी स्पष्टीकरण:\nगांधीजी ने सांप्रदायिक अधिनिर्णय का कड़ा विरोध किया क्योंकि उनका मानना था कि यह हिंदू समाज को विभाजित कर देगा। वे यरवदा जेल में आमरण अनशन पर बैठ गए थे।"
     },
     {
       "q_num": 66,
-      "question": "The 1857 Revolt did not spread to which of the following regions? \n 1857 का विद्रोह निम्नलिखित में से किस क्षेत्र में नहीं फैला था?",
+      "question": "The 1857 Revolt did not spread to which of the following regions?",
       "options": {
-        "a": "Punjab / पंजाब",
-        "b": "South India / दक्षिण भारत",
-        "c": "Rajasthan / राजस्थान",
-        "d": "Central India / मध्य भारत"
+        "a": "Punjab",
+        "b": "South India",
+        "c": "Rajasthan",
+        "d": "Central India"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile there were isolated incidents, South India remained largely unaffected by the 1857 revolt.\n\n📖 हिंदी स्पष्टीकरण:\nयद्यपि कुछ छिटपुट घटनाएं हुई थीं, लेकिन दक्षिण भारत 1857 के विद्रोह से काफी हद तक अप्रभावित रहा।"
     },
     {
       "q_num": 67,
-      "question": "Consider the following statements regarding the 'Lucknow Pact' (1916): \n 'लखनऊ समझौते' (1916) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It brought together the Moderates and Extremists. / इसने नरमपंथियों और चरमपंथियों को एक साथ लाया। \n (b) It was a joint agreement between the INC and the Muslim League. / यह INC और मुस्लिम लीग के बीच एक संयुक्त समझौता था। \n (c) The Congress accepted the demand for separate electorates for Muslims. / कांग्रेस ने मुसलमानों के लिए अलग निर्वाचक मंडल की मांग स्वीकार कर ली।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Lucknow Pact' (1916): \n(a) It brought together the Moderates and Extremists.\n(b) It was a joint agreement between the INC and the Muslim League.\n(c) The Congress accepted the demand for separate electorates for Muslims.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Lucknow Pact was a milestone in unity but is also criticized for accepting the communal principle of separate electorates.\n\n📖 हिंदी स्पष्टीकरण:\nलखनऊ समझौता एकता में एक मील का पत्थर था लेकिन अलग निर्वाचक मंडल के सांप्रदायिक सिद्धांत को स्वीकार करने के लिए इसकी आलोचना भी की जाती है।"
     },
     {
       "q_num": 68,
-      "question": "Who was the leader of the 'Akaal Movement' associated with the Simon Commission protest? \n साइमन कमीशन के विरोध से जुड़े 'अकाल आंदोलन' के नेता कौन थे?",
+      "question": "Who was the leader of the 'Akaal Movement' associated with the Simon Commission protest?",
       "options": {
-        "a": "Master Tara Singh / मास्टर तारा सिंह",
-        "b": "Baba Gurdit Singh / बाबा गुरदित सिंह",
-        "c": "Kartar Singh Sarabha / करतार सिंह सराभा",
-        "d": "Bhagat Singh / भगत सिंह"
+        "a": "Master Tara Singh",
+        "b": "Baba Gurdit Singh",
+        "c": "Kartar Singh Sarabha",
+        "d": "Bhagat Singh"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMaster Tara Singh was a prominent leader in Punjab who mobilized the Sikh community against the Simon Commission.\n\n📖 हिंदी स्पष्टीकरण:\nमास्टर तारा सिंह पंजाब के एक प्रमुख नेता थे जिन्होंने साइमन कमीशन के खिलाफ सिख समुदाय को लामबंद किया था।"
     },
     {
       "q_num": 69,
-      "question": "Consider the following statements about the 'Partition of Bengal' annulment: \n 'बंगाल विभाजन' के निरस्तीकरण के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) The partition was annulled in 1911 by Lord Hardinge. / लॉर्ड हार्डिंग द्वारा 1911 में विभाजन को रद्द कर दिया गया था। \n (b) The capital of India was shifted from Calcutta to Delhi in the same year. / इसी वर्ष भारत की राजधानी कलकत्ता से दिल्ली स्थानांतरित की गई थी। \n (c) Bihar and Orissa were separated from Bengal in 1911. / 1911 में बिहार और उड़ीसा को बंगाल से अलग कर दिया गया था।\n Which of the above statements are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Partition of Bengal' annulment: \n(a) The partition was annulled in 1911 by Lord Hardinge.\n(b) The capital of India was shifted from Calcutta to Delhi in the same year.\n(c) Bihar and Orissa were separated from Bengal in 1911. / 1911\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe annulment was announced during the Delhi Durbar of King George V.\n\n📖 हिंदी स्पष्टीकरण:\nविभाजन को रद्द करने की घोषणा किंग जॉर्ज पंचम के दिल्ली दरबार के दौरान की गई थी।"
     },
     {
       "q_num": 70,
-      "question": "In the context of the 1857 Revolt, what did the term 'Zafarnama' refer to? \n 1857 के विद्रोह के संदर्भ में, 'जफरनामा' शब्द का तात्पर्य क्या था?",
+      "question": "In the context of the 1857 Revolt, what did the term 'Zafarnama' refer to?",
       "options": {
-        "a": "The military manual of the rebels. / विद्रोहियों का सैन्य मैनुअल।",
-        "b": "The proclamation issued by Bahadur Shah Zafar. / बहादुर शाह जफर द्वारा जारी उद्घोषणा।",
-        "c": "The diary of a British officer. / एक ब्रिटिश अधिकारी की डायरी।",
-        "d": "A collection of poems by Ghalib. / गालिब की कविताओं का संग्रह।"
+        "a": "The military manual of the rebels.",
+        "b": "The proclamation issued by Bahadur Shah Zafar.",
+        "c": "The diary of a British officer.",
+        "d": "A collection of poems by Ghalib."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nProclamations or 'Zafarnamas' were issued to appeal to all sections of society to unite against the British.\n\n📖 हिंदी स्पष्टीकरण:\nसमाज के सभी वर्गों से अंग्रेजों के खिलाफ एकजुट होने की अपील करने के लिए उद्घोषणाएं या 'जफरनामा' जारी किए गए थे।"
     },
     {
       "q_num": 71,
-      "question": "Consider the following statements regarding the 'Poona Pact' (1932): \n 'पूना समझौते' (1932) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was signed between Mahatma Gandhi and B.R. Ambedkar. / इस पर महात्मा गांधी और बी.आर. अंबेडकर के बीच हस्ताक्षर किए गए थे। \n (b) It abandoned the idea of separate electorates for the depressed classes. / इसने दलित वर्गों के लिए अलग निर्वाचक मंडल के विचार को त्याग दिया। \n (c) The number of reserved seats for depressed classes was decreased. / दलित वर्गों के लिए आरक्षित सीटों की संख्या कम कर दी गई थी।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Poona Pact' (1932): \n(a) It was signed between Mahatma Gandhi and B.R. Ambedkar.\n(b) It abandoned the idea of separate electorates for the depressed classes.\n(c) The number of reserved seats for depressed classes was decreased.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement (c) is incorrect. The number of reserved seats in provincial legislatures was increased from 71 to 147.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (c) गलत है। प्रांतीय विधानसभाओं में आरक्षित सीटों की संख्या 71 से बढ़ाकर 147 कर दी गई थी।"
     },
     {
       "q_num": 72,
-      "question": "Which of the following movements started with the 'Dandi March'? \n निम्नलिखित में से कौन सा आंदोलन 'दांडी मार्च' के साथ शुरू हुआ था?",
+      "question": "Which of the following movements started with the 'Dandi March'?",
       "options": {
-        "a": "Home Rule Movement / होम रूल आंदोलन",
-        "b": "Non-Cooperation Movement / असहयोग आंदोलन",
-        "c": "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन",
-        "d": "Quit India Movement / भारत छोड़ो आंदोलन"
+        "a": "Home Rule Movement",
+        "b": "Non-Cooperation Movement",
+        "c": "Civil Disobedience Movement",
+        "d": "Quit India Movement"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe violation of salt law at Dandi on April 6, 1930, marked the beginning of the CDM.\n\n📖 हिंदी स्पष्टीकरण:\n6 अप्रैल, 1930 को दांडी में नमक कानून के उल्लंघन ने CDM की शुरुआत को चिह्नित किया।"
     },
     {
       "q_num": 73,
-      "question": "Consider the following statements regarding the '1857 Revolt' and the role of the Press: \n '1857 के विद्रोह' और प्रेस की भूमिका के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The 'Gagging Act' of 1857 was passed to restrict the freedom of the press. / प्रेस की स्वतंत्रता को प्रतिबंधित करने के लिए 1857 का 'गैगिंग एक्ट' पारित किया गया था। \n (b) Lord Canning was the Viceroy who introduced this act. / लॉर्ड कैनिंग वह वायसराय थे जिन्होंने इस अधिनियम को पेश किया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the '1857 Revolt' and the role of the Press: \n(a) The 'Gagging Act' of 1857 was passed to restrict the freedom of the press.\n(b) Lord Canning was the Viceroy who introduced this act.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "Both a and b / a और b दोनों",
-        "d": "Neither a nor b / न तो a और न ही b"
+        "a": "a only",
+        "b": "b only",
+        "c": "Both a and b / a",
+        "d": "Neither a nor b"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Licensing Act of 1857 (Gagging Act) required a license for operating any press, aimed at stopping the spread of rebel ideas.\n\n📖 हिंदी स्पष्टीकरण:\n1857 के लाइसेंसिंग एक्ट (गैगिंग एक्ट) के तहत किसी भी प्रेस को चलाने के लिए लाइसेंस की आवश्यकता होती थी, जिसका उद्देश्य विद्रोही विचारों के प्रसार को रोकना था।"
     },
     {
       "q_num": 74,
-      "question": "Who presided over the 1906 Calcutta session where 'Swaraj' was first mentioned as a goal? \n 1906 के कलकत्ता अधिवेशन की अध्यक्षता किसने की थी जहाँ पहली बार 'स्वराज' का उल्लेख एक लक्ष्य के रूप में किया गया था?",
+      "question": "Who presided over the 1906 Calcutta session where 'Swaraj' was first mentioned as a goal?",
       "options": {
-        "a": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "b": "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "c": "G.K. Gokhale / जी.के. गोखले",
-        "d": "Bipin Chandra Pal / बिपिन चंद्र पाल"
+        "a": "Dadabhai Naoroji",
+        "b": "Bal Gangadhar Tilak",
+        "c": "G.K. Gokhale",
+        "d": "Bipin Chandra Pal"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDadabhai Naoroji mentioned 'Swaraj' as the ultimate goal of the Congress to prevent a split between Moderates and Extremists.\n\n📖 हिंदी स्पष्टीकरण:\nनरमपंथियों और चरमपंथियों के बीच विभाजन को रोकने के लिए दादाभाई नौरोजी ने 'स्वराज' को कांग्रेस के अंतिम लक्ष्य के रूप में उल्लेख किया था।"
     },
     {
       "q_num": 75,
-      "question": "Consider the following statements regarding the 'Simon Commission Report': \n 'साइमन कमीशन रिपोर्ट' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It recommended the continuation of communal electorates. / इसने सांप्रदायिक निर्वाचन मंडल को जारी रखने की सिफारिश की। \n (b) It recommended the establishment of a federation of British India and Princely States. / इसने ब्रिटिश भारत और रियासतों के एक संघ (Federation) की स्थापना की सिफारिश की। \n (c) It rejected the idea of Universal Adult Franchise. / इसने सार्वभौमिक वयस्क मताधिकार के विचार को खारिज कर दिया।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Simon Commission Report': \n(a) It recommended the continuation of communal electorates.\n(b) It recommended the establishment of a federation of British India and Princely States.\n(c) It rejected the idea of Universal Adult Franchise.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe report was published in 1930 and formed the basis for the Government of India Act 1935.\n\n📖 हिंदी स्पष्टीकरण:\nरिपोर्ट 1930 में प्रकाशित हुई थी और इसने भारत सरकार अधिनियम 1935 का आधार बनाया था।"

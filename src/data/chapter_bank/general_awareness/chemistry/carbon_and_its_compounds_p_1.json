@@ -6,7 +6,7 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "What is the number of carbon atoms present in a Buckminsterfullerene molecule? / बकमिनस्टरफुलरिन अणु में मौजूद कार्बन परमाणुओं की संख्या कितनी है?",
+      "question": "What is the number of carbon atoms present in a Buckminsterfullerene molecule?",
       "options": {
         "a": "20",
         "b": "40",
@@ -18,31 +18,31 @@
     },
     {
       "q_num": 2,
-      "question": "Coke is the almost pure form of which of the following? / कोक निम्नलिखित में से किसका लगभग शुद्ध रूप है?",
+      "question": "Coke is the almost pure form of which of the following?",
       "options": {
-        "a": "Phosphorus / फॉस्फोरस",
-        "b": "Nitrogen / नाइट्रोजन",
-        "c": "Carbon / कार्बन",
-        "d": "Sulphur / सल्फर"
+        "a": "Phosphorus",
+        "b": "Nitrogen",
+        "c": "Carbon",
+        "d": "Sulphur"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCoke is a tough, porous, and black substance. It is an almost pure form of carbon, containing about 98% carbon\n\n📖 हिंदी स्पष्टीकरण:\nकोक एक कठोर, छिद्रपूर्ण और काला पदार्थ है। यह कार्बन का लगभग शुद्ध रूप है, जिसमें लगभग 98% कार्बन होता है।"
     },
     {
       "q_num": 3,
-      "question": "Which unique property of carbon allows it to form long chains by bonding with other carbon atoms? / कार्बन का वह अद्वितीय गुण कौन सा है जो इसे अन्य कार्बन परमाणुओं के साथ जुड़कर लंबी श्रृंखलाएं बनाने की अनुमति देता है?",
+      "question": "Which unique property of carbon allows it to form long chains by bonding with other carbon atoms?",
       "options": {
-        "a": "Catenation / श्रृंखलन",
-        "b": "Allotropy / अपररूपता",
-        "c": "Ionization / आयनीकरण",
-        "d": "Hydrogenation / हाइड्रोजनीकरण"
+        "a": "Catenation",
+        "b": "Allotropy",
+        "c": "Ionization",
+        "d": "Hydrogenation"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCatenation is the unique ability of carbon atoms to form bonds with other carbon atoms, resulting in long chains or rings\n\n📖 हिंदी स्पष्टीकरण:\nश्रृंखलन कार्बन परमाणुओं की वह अद्वितीय क्षमता है जिससे वे अन्य कार्बन परमाणुओं के साथ बंध बनाकर लंबी श्रृंखलाएं या वलय बनाते हैं।"
     },
     {
       "q_num": 4,
-      "question": "What is the valency of a carbon atom in most of its organic compounds? / अधिकांश कार्बनिक यौगिकों में कार्बन परमाणु की संयोजकता क्या होती है?",
+      "question": "What is the valency of a carbon atom in most of its organic compounds?",
       "options": {
         "a": "2",
         "b": "3",
@@ -54,43 +54,43 @@
     },
     {
       "q_num": 5,
-      "question": "Which of the following is a saturated hydrocarbon? / निम्नलिखित में से कौन सा एक संतृप्त हाइड्रोकार्बन है?",
+      "question": "Which of the following is a saturated hydrocarbon?",
       "options": {
-        "a": "Ethyne / एथाइन",
-        "b": "Ethene / एथीन",
-        "c": "Methane / मीथेन",
-        "d": "Benzene / बेंजीन"
+        "a": "Ethyne",
+        "b": "Ethene",
+        "c": "Methane",
+        "d": "Benzene"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSaturated hydrocarbons (alkanes) contain only single bonds between carbon atoms. Methane (CH4) is the simplest alkane\n\n📖 हिंदी स्पष्टीकरण:\nसंतृप्त हाइड्रोकार्बन (एल्केन) में कार्बन परमाणुओं के बीच केवल एकल बंध होते हैं। मीथेन (CH4) सबसे सरल एल्केन है।"
     },
     {
       "q_num": 6,
-      "question": "Hydrocarbons are organic compounds primarily composed of which two elements? / हाइड्रोकार्बन मुख्य रूप से किन दो तत्वों से बने कार्बनिक यौगिक होते हैं?",
+      "question": "Hydrocarbons are organic compounds primarily composed of which two elements?",
       "options": {
-        "a": "Carbon and Oxygen / कार्बन और ऑक्सीजन",
-        "b": "Carbon and Hydrogen / कार्बन और हाइड्रोजन",
-        "c": "Hydrogen and Nitrogen / हाइड्रोजन और नाइट्रोजन",
-        "d": "Carbon and Sulphur / कार्बन और सल्फर"
+        "a": "Carbon and Oxygen",
+        "b": "Carbon and Hydrogen",
+        "c": "Hydrogen and Nitrogen",
+        "d": "Carbon and Sulphur"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHydrocarbons, as the name suggests, are organic compounds made up entirely of hydrogen and carbon atoms\n\n📖 हिंदी स्पष्टीकरण:\nहाइड्रोकार्बन, जैसा कि नाम से पता चलता है, पूरी तरह से हाइड्रोजन और कार्बन परमाणुओं से बने कार्बनिक यौगिक होते हैं।"
     },
     {
       "q_num": 7,
-      "question": "Which type of chemical bond is predominantly found in organic carbon compounds? / कार्बनिक कार्बन यौगिकों में मुख्य रूप से किस प्रकार का रासायनिक बंध पाया जाता है?",
+      "question": "Which type of chemical bond is predominantly found in organic carbon compounds?",
       "options": {
-        "a": "Ionic bond / आयनिक बंध",
-        "b": "Metallic bond / धात्विक बंध",
-        "c": "Covalent bond / सहसंयोजक बंध",
-        "d": "Coordinate bond / उप-सहसंयोजक बंध"
+        "a": "Ionic bond",
+        "b": "Metallic bond",
+        "c": "Covalent bond",
+        "d": "Coordinate bond"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCarbon shares its four valence electrons with other atoms to complete its octet, leading to the formation of covalent bonds\n\n📖 हिंदी स्पष्टीकरण:\nकार्बन अपने अष्टक को पूरा करने के लिए अपने चार संयोजी इलेक्ट्रॉनों को अन्य परमाणुओं के साथ साझा करता है, जिससे सहसंयोजक बंध बनते हैं।"
     },
     {
       "q_num": 8,
-      "question": "What is the general formula for the alkane homologous series? / एल्केन समजात श्रेणी का सामान्य सूत्र क्या है?",
+      "question": "What is the general formula for the alkane homologous series?",
       "options": {
         "a": "CnH2n",
         "b": "CnH2n-2",
@@ -102,31 +102,31 @@
     },
     {
       "q_num": 9,
-      "question": "Which of the following is an allotrope of carbon used as a lubricant and in pencil leads? / कार्बन का वह कौन सा अपररूप है जिसका उपयोग स्नेहक और पेंसिल लीड में किया जाता है?",
+      "question": "Which of the following is an allotrope of carbon used as a lubricant and in pencil leads?",
       "options": {
-        "a": "Diamond / हीरा",
-        "b": "Graphite / ग्रेफाइट",
-        "c": "Fullerene / फुलरीन",
-        "d": "Coal / कोयला"
+        "a": "Diamond",
+        "b": "Graphite",
+        "c": "Fullerene",
+        "d": "Coal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGraphite is a soft, slippery allotrope of carbon due to its layered structure, making it ideal for lubrication and pencils\n\n📖 हिंदी स्पष्टीकरण:\nग्रेफाइट अपनी परतदार संरचना के कारण कार्बन का एक नरम, फिसलन वाला अपररूप है, जो इसे स्नेहक और पेंसिल के लिए आदर्श बनाता है।"
     },
     {
       "q_num": 10,
-      "question": "Esters are typically formed by the reaction between which two classes of compounds? / एस्टर आमतौर पर किन दो वर्गों के यौगिकों के बीच अभिक्रिया द्वारा बनते हैं?",
+      "question": "Esters are typically formed by the reaction between which two classes of compounds?",
       "options": {
-        "a": "Alcohol and Aldehyde / अल्कोहल और एल्डिहाइड",
-        "b": "Alcohol and Carboxylic Acid / अल्कोहल और कार्बोक्सिलिक अम्ल",
-        "c": "Ketone and Acid / कीटोन और अम्ल",
-        "d": "Alkane and Base / एल्केन और क्षार"
+        "a": "Alcohol and Aldehyde",
+        "b": "Alcohol and Carboxylic Acid",
+        "c": "Ketone and Acid",
+        "d": "Alkane and Base"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEsters are formed when an alcohol reacts with a carboxylic acid in the presence of an acid catalyst, a process called esterification\n\n📖 हिंदी स्पष्टीकरण:\nएस्टर तब बनते हैं जब एक अल्कोहल अम्लीय उत्प्रेरक की उपस्थिति में कार्बोक्सिलिक अम्ल के साथ अभिक्रिया करता है, जिसे एस्टरीकरण कहते हैं।"
     },
     {
       "q_num": 11,
-      "question": "What is the functional group present in Alcohols? / अल्कोहल में कौन सा कार्यात्मक समूह मौजूद होता है?",
+      "question": "What is the functional group present in Alcohols?",
       "options": {
         "a": "-CHO",
         "b": "-COOH",
@@ -138,43 +138,43 @@
     },
     {
       "q_num": 12,
-      "question": "Which four-carbon straight-chain alkane is commonly used as a fuel in lighters and as an aerosol propellant? / चार कार्बन वाली सीधी श्रृंखला वाले उस एल्केन का नाम क्या है जिसका उपयोग आमतौर पर लाइटर में ईंधन और एरोसोल प्रणोदक के रूप में किया जाता है?",
+      "question": "Which four-carbon straight-chain alkane is commonly used as a fuel in lighters and as an aerosol propellant?",
       "options": {
-        "a": "Propane / प्रोपेन",
-        "b": "Ethane / एथेन",
-        "c": "Butane / ब्यूटेन",
-        "d": "Pentane / पेंटेन"
+        "a": "Propane",
+        "b": "Ethane",
+        "c": "Butane",
+        "d": "Pentane"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nButane (C4H10) is a highly flammable gas at room temperature and is commonly used as a fuel in portable stoves and lighters. / C4H10"
     },
     {
       "q_num": 13,
-      "question": "In the IUPAC nomenclature, what does a \"suffix\" or \"prefix\" usually indicate about the molecule? / IUPAC नामकरण में, \"प्रत्यय\" या \"उपसर्ग\" आमतौर पर अणु के बारे में क्या संकेत देते हैं?",
+      "question": "In the IUPAC nomenclature, what does a \"suffix\" or \"prefix\" usually indicate about the molecule?",
       "options": {
-        "a": "Melting point / गलनांक",
-        "b": "Functional group / कार्यात्मक समूह",
-        "c": "Atomic mass / परमाणु द्रव्यमान",
-        "d": "Density / घनत्व"
+        "a": "Melting point",
+        "b": "Functional group",
+        "c": "Atomic mass",
+        "d": "Density"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn IUPAC names, prefixes (like chloro-) or suffixes (like -ol, -oic acid) identify the specific functional group present in the molecule. / IUPAC\n\n📖 हिंदी स्पष्टीकरण:\nनामों में, उपसर्ग (जैसे क्लोरो-) या प्रत्यय (जैसे -ओल, -ओइक अम्ल) अणु में मौजूद विशिष्ट कार्यात्मक समूह की पहचान करते हैं।"
     },
     {
       "q_num": 14,
-      "question": "Which process involves the reaction of fats or oils with a strong alkali to produce soap? / वसा या तेल की प्रबल क्षार के साथ अभिक्रिया करके साबुन बनाने की प्रक्रिया क्या कहलाती है?",
+      "question": "Which process involves the reaction of fats or oils with a strong alkali to produce soap?",
       "options": {
-        "a": "Fermentation / किण्वन",
-        "b": "Hydrogenation / हाइड्रोजनीकरण",
-        "c": "Saponification / साबुनीकरण",
-        "d": "Esterification / एस्टरीकरण"
+        "a": "Fermentation",
+        "b": "Hydrogenation",
+        "c": "Saponification",
+        "d": "Esterification"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSaponification is the alkaline hydrolysis of esters (fats/oils) to produce glycerol and the salt of a fatty acid (soap)\n\n📖 हिंदी स्पष्टीकरण:\nसाबुनीकरण एस्टर (वसा/तेल) का क्षारीय जलअपघटन है जिससे ग्लिसरॉल और वसा अम्ल का लवण (साबुन) प्राप्त होता है।"
     },
     {
       "q_num": 15,
-      "question": "What is the hybridization of carbon atoms in an acetylene (C2H2) molecule? / एसिटिलीन (C2H2) अणु में कार्बन परमाणुओं का संकरण क्या होता है?",
+      "question": "What is the hybridization of carbon atoms in an acetylene (C2H2) molecule?",
       "options": {
         "a": "sp3",
         "b": "sp2",
@@ -186,69 +186,69 @@
     },
     {
       "q_num": 16,
-      "question": "Cyclohexane belongs to which specific class of organic compounds? / साइक्लोहेक्सेन कार्बनिक यौगिकों के किस विशिष्ट वर्ग से संबंधित है?",
+      "question": "Cyclohexane belongs to which specific class of organic compounds?",
       "options": {
-        "a": "Aromatic / एरोमैटिक",
-        "b": "Alicyclic / ऐलिसाइक्लिक",
-        "c": "Open chain / खुली श्रृंखला",
-        "d": "Heterocyclic / विषमचक्रीय"
+        "a": "Aromatic",
+        "b": "Alicyclic",
+        "c": "Open chain",
+        "d": "Heterocyclic"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAlicyclic compounds are aliphatic compounds that are also cyclic; cyclohexane consists of six carbons in a saturated ring\n\n📖 हिंदी स्पष्टीकरण:\nऐलिसाइक्लिक यौगिक वे एलिफैटिक यौगिक हैं जो चक्रीय भी होते हैं; साइक्लोहेक्सेन में एक संतृप्त वलय में छह कार्बन होते हैं।"
     },
     {
       "q_num": 17,
-      "question": "Consider the following statements regarding Benzene (C6H6):\n1. It is a six-membered cyclic compound. / यह एक छह सदस्यीय चक्रीय यौगिक है।\n2. It contains alternate single and double bonds. / इसमें एकांतर एकल और द्विबंध होते हैं।\n Which of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Benzene (C6H6):\n1. It is a six-membered cyclic compound.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBenzene is a cyclic aromatic hydrocarbon (C6H6) with a hexagonal ring featuring alternate double bonds (delocalized electrons)\n\n📖 हिंदी स्पष्टीकरण:\nबेंजीन एक चक्रीय सुगंधित हाइड्रोकार्बन (C6H6) है जिसमें षटकोणीय वलय होता है और इसमें एकांतर द्विबंध (विस्थानीकृत इलेक्ट्रॉन) होते हैं।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Carbon forms a large number of compounds. / अभिकथन (A): कार्बन बड़ी संख्या में यौगिक बनाता है।\nReason (R): Carbon exhibits tetravalency and the property of catenation. / कारण (R): कार्बन चतुष्संयोजकता और श्रृंखलन का गुण प्रदर्शित करता है।",
+      "question": "Assertion (A): Carbon forms a large number of compounds.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCarbon's ability to form four bonds (tetravalency) and link to itself (catenation) allows for millions of diverse organic structures\n\n📖 हिंदी स्पष्टीकरण:\nकार्बन की चार बंध बनाने की क्षमता (चतुष्संयोजकता) और स्वयं से जुड़ने (श्रृंखलन) के गुण के कारण लाखों विविध कार्बनिक संरचनाएं संभव हैं।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements about Graphene is NOT correct? / ग्राफीन के बारे में निम्नलिखित में से कौन सा कथन सही नहीं है?",
+      "question": "Which of the following statements about Graphene is NOT correct?",
       "options": {
-        "a": "It is the thinnest material known / यह ज्ञात सबसे पतला पदार्थ है।",
-        "b": "It is highly conducting / यह अत्यधिक चालक है।",
-        "c": "It is a wide band-gap semiconductor / यह एक विस्तृत बैंड-गैप अर्धचालक है।",
-        "d": "It is almost transparent / यह लगभग पारदर्शी है।"
+        "a": "It is the thinnest material known",
+        "b": "It is highly conducting",
+        "c": "It is a wide band-gap semiconductor",
+        "d": "It is almost transparent"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGraphene is actually a zero band-gap semiconductor or a semimetal, which contributes to its exceptional electrical conductivity\n\n📖 हिंदी स्पष्टीकरण:\nग्राफीन वास्तव में एक शून्य बैंड-गैप अर्धचालक या उपधातु है, जो इसकी असाधारण विद्युत चालकता में योगदान देता है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Saturated hydrocarbons are generally less reactive than unsaturated hydrocarbons. / अभिकथन (A): संतृप्त हाइड्रोकार्बन आमतौर पर असंतृप्त हाइड्रोकार्बन की तुलना में कम अभिक्रियाशील होते हैं।\nReason (R): Saturated hydrocarbons contain only single C-C bonds which are very stable. / कारण (R): संतृप्त हाइड्रोकार्बन में केवल एकल C-C बंध होते हैं जो बहुत स्थिर होते हैं।",
+      "question": "Assertion (A): Saturated hydrocarbons are generally less reactive than unsaturated hydrocarbons.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAlkanes are relatively inert because they lack reactive double or triple bonds, containing only strong, stable single sigma bonds\n\n📖 हिंदी स्पष्टीकरण:\nएल्केन अपेक्षाकृत निष्क्रिय होते हैं क्योंकि उनमें अभिक्रियाशील द्वि या त्रिबंधों की कमी होती है और केवल मजबूत, स्थिर एकल सिग्मा बंध होते हैं।"
     },
     {
       "q_num": 21,
-      "question": "Which catalyst is known as the \"Rosenmund Catalyst,\" used for reducing acid chlorides to aldehydes? / एसिड क्लोराइड को एल्डिहाइड में बदलने के लिए उपयोग किए जाने वाले किस उत्प्रेरक को \"रोसेनमुंड उत्प्रेरक\" के रूप में जाना जाता है?",
+      "question": "Which catalyst is known as the \"Rosenmund Catalyst,\" used for reducing acid chlorides to aldehydes?",
       "options": {
-        "a": "Ni in H2 / H2 में Ni",
+        "a": "Ni in H2",
         "b": "Pd/BaSO4",
         "c": "FeCl3",
         "d": "Zn-Hg/HCl"
@@ -258,48 +258,48 @@
     },
     {
       "q_num": 22,
-      "question": "Statement I: Ethanol reacts with sodium metal to produce hydrogen gas. / कथन I: एथेनॉल सोडियम धातु के साथ अभिक्रिया करके हाइड्रोजन गैस बनाता है।\nStatement II: This reaction is used to test the presence of the -OH group. / कथन II: इस अभिक्रिया का उपयोग -OH समूह की उपस्थिति का परीक्षण करने के लिए किया जाता है।",
+      "question": "Statement I: Ethanol reacts with sodium metal to produce hydrogen gas.",
       "options": {
-        "a": "Statement I is correct but II is incorrect / कथन I सही है लेकिन II गलत है।",
-        "b": "Statement II is correct but I is incorrect / कथन I सही है लेकिन I गलत है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Neither statement is correct / कोई भी कथन सही नहीं है।"
+        "a": "Statement I is correct but II is incorrect",
+        "b": "Statement II is correct but I is incorrect",
+        "c": "Both statements are correct",
+        "d": "Neither statement is correct"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEthanol reacts with sodium to form sodium ethoxide and liberate hydrogen gas; the effervescence of H2 confirms the hydroxyl group\n\n📖 हिंदी स्पष्टीकरण:\nएथेनॉल सोडियम के साथ अभिक्रिया करके सोडियम एथॉक्साइड बनाता है और हाइड्रोजन गैस मुक्त करता है; H2 के बुलबुले हाइड्रोक्सिल समूह की पुष्टि करते हैं।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following represents an \"Alicyclic\" compound? / निम्नलिखित में से कौन एक \"ऐलिसाइक्लिक\" यौगिक का प्रतिनिधित्व करता है?",
+      "question": "Which of the following represents an \"Alicyclic\" compound?",
       "options": {
-        "a": "Benzene / बेंजीन",
-        "b": "Cyclopropane / साइक्लोप्रोपेन",
-        "c": "Acetic Acid / एसिटिक अम्ल",
-        "d": "Isobutane / आइसोब्यूटेन"
+        "a": "Benzene",
+        "b": "Cyclopropane",
+        "c": "Acetic Acid",
+        "d": "Isobutane"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCyclopropane (C3H6) is a cyclic alkane, making it an alicyclic compound (aliphatic and cyclic), unlike benzene which is aromatic\n\n📖 हिंदी स्पष्टीकरण:\nसाइक्लोप्रोपेन (C3H6) एक चक्रीय एल्केन है, जो इसे एक ऐलिसाइक्लिक यौगिक (एलिफैटिक और चक्रीय) बनाता है, बेंजीन के विपरीत जो कि एरोमैटिक है।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): Diamond is a poor conductor of electricity. / अभिकथन (A): हीरा विद्युत का कुचालक होता है।\nReason (R): All the valence electrons of each carbon atom in diamond are involved in strong covalent bonds, leaving no free electrons. / कारण (R): हीरे में प्रत्येक कार्बन परमाणु के सभी संयोजी इलेक्ट्रॉन मजबूत सहसंयोजक बंधों में शामिल होते हैं, जिससे कोई मुक्त इलेक्ट्रॉन नहीं बचता।",
+      "question": "Assertion (A): Diamond is a poor conductor of electricity.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn diamond, each carbon is sp3 hybridized and bonded to four others; the lack of free electrons or ions prevents electricity conduction\n\n📖 हिंदी स्पष्टीकरण:\nहीरे में, प्रत्येक कार्बन sp3 संकरित होता है और चार अन्य से जुड़ा होता है; मुक्त इलेक्ट्रॉनों या आयनों की कमी विद्युत चालन को रोकती है।"
     },
     {
       "q_num": 25,
-      "question": "In the formation of a Micelle by soap in water, where does the hydrophobic \"tail\" point? / पानी में साबुन द्वारा मिसेल के निर्माण में, हाइड्रोफोबिक \"पूँछ\" किस ओर होती है?",
+      "question": "In the formation of a Micelle by soap in water, where does the hydrophobic \"tail\" point?",
       "options": {
-        "a": "Towards the water / पानी की ओर",
-        "b": "Towards the center of the micelle (oil droplet) / मिसेल के केंद्र (तेल की बूंद) की ओर",
-        "c": "Towards the surface of the container / बर्तन की सतह की ओर",
-        "d": "Randomly in all directions / सभी दिशाओं में बेतरतीब ढंग से"
+        "a": "Towards the water",
+        "b": "Towards the center of the micelle (oil droplet)",
+        "c": "Towards the surface of the container",
+        "d": "Randomly in all directions"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA soap molecule has two parts: a hydrophilic (water-loving) head and a hydrophobic (water-fearing) tail. When in water, the molecules arrange themselves into a spherical shape called a micelle. The hydrophobic tails, which repel water, point inwards towards the center (clinging to oil or dirt), while the hydrophilic heads point outwards towards the water\n\n📖 हिंदी स्पष्टीकरण:\nसाबुन के अणु के दो भाग होते हैं: एक हाइड्रोफिलिक (जलरागी) सिर और एक हाइड्रोफोबिक (जलविरागी) पूँछ। जब इन्हें पानी में डाला जाता है, तो अणु एक गोलाकार आकृति बना लेते हैं जिसे मिसेल कहा जाता है। हाइड्रोफोबिक पूँछ, जो पानी से दूर भागती है, केंद्र की ओर (तेल या गंदगी से चिपकते हुए) होती है, जबकि हाइड्रोफिलिक सिर बाहर पानी की ओर होता है।"

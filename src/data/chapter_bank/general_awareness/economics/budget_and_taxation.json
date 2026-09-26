@@ -6,55 +6,55 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "According to the Indian Constitution, the Annual Financial Statement is mentioned under which Article?\nभारतीय संविधान के अनुसार, वार्षिक वित्तीय विवरण का उल्लेख किस अनुच्छेद के तहत किया गया है?",
+      "question": "According to the Indian Constitution, the Annual Financial Statement is mentioned under which Article?",
       "options": {
-        "a": "Article 110 / अनुच्छेद 110",
-        "b": "Article 112 / अनुच्छेद 112",
-        "c": "Article 280 / अनुच्छेद 280",
-        "d": "Article 360 / अनुच्छेद 360"
+        "a": "Article 110",
+        "b": "Article 112",
+        "c": "Article 280",
+        "d": "Article 360"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 112 of the Indian Constitution requires the government to present an estimate of receipts and expenditure for every financial year. It is popularly known as the Union Budget.\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान के अनुच्छेद 112 में सरकार को हर वित्तीय वर्ष के लिए प्राप्तियों और व्यय का अनुमान प्रस्तुत करने की आवश्यकता होती है। इसे लोकप्रिय रूप से केंद्रीय बजट के रूप में जाना जाता है।"
     },
     {
       "q_num": 2,
-      "question": "Who was the first person to present the first Budget of independent India?\nस्वतंत्र भारत का पहला बजट पेश करने वाले पहले व्यक्ति कौन थे?",
+      "question": "Who was the first person to present the first Budget of independent India?",
       "options": {
-        "a": "John Mathai / जॉन मथाई",
-        "b": "C.D. Deshmukh / सी.डी. देशमुख",
-        "c": "RK Shanmukham Chetty / आरके शनमुखम चेट्टी",
-        "d": "Morarji Desai / मोरारजी देसाई"
+        "a": "John Mathai",
+        "b": "C.D. Deshmukh",
+        "c": "RK Shanmukham Chetty",
+        "d": "Morarji Desai"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nRK Shanmukham Chetty presented the first budget of independent India on November 26, 1947. He served as the first Finance Minister of India.\n\n📖 हिंदी स्पष्टीकरण:\nआरके शनमुखम चेट्टी ने 26 नवंबर, 1947 को स्वतंत्र भारत का पहला बजट पेश किया था। उन्होंने भारत के पहले वित्त मंत्री के रूप में कार्य किया।"
     },
     {
       "q_num": 3,
-      "question": "Which department under the Ministry of Finance is responsible for preparing the Union Budget?\nवित्त मंत्रालय के तहत कौन सा विभाग केंद्रीय बजट तैयार करने के लिए जिम्मेदार है?",
+      "question": "Which department under the Ministry of Finance is responsible for preparing the Union Budget?",
       "options": {
-        "a": "Department of Revenue / राजस्व विभाग",
-        "b": "Department of Expenditure / व्यय विभाग",
-        "c": "Department of Economic Affairs / आर्थिक मामलों का विभाग",
-        "d": "Department of Financial Services / वित्तीय सेवा विभाग"
+        "a": "Department of Revenue",
+        "b": "Department of Expenditure",
+        "c": "Department of Economic Affairs",
+        "d": "Department of Financial Services"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Budget Division of the Department of Economic Affairs (DEA) is the nodal body responsible for preparing the budget. It works under the guidance of the finance minister.\n\n📖 हिंदी स्पष्टीकरण:\nआर्थिक मामलों के विभाग (DEA) का बजट प्रभाग बजट तैयार करने के लिए जिम्मेदार नोडल निकाय है। यह वित्त मंत्री के मार्गदर्शन में कार्य करता है।"
     },
     {
       "q_num": 4,
-      "question": "Who holds the record for presenting the Union Budget the maximum number of times?\nकेंद्रीय बजट को सर्वाधिक बार पेश करने का रिकॉर्ड किसके नाम है?",
+      "question": "Who holds the record for presenting the Union Budget the maximum number of times?",
       "options": {
-        "a": "P. Chidambaram / पी. चिदंबरम",
-        "b": "Pranab Mukherjee / प्रणब मुखर्जी",
-        "c": "Nirmala Sitharaman / निर्मला सीतारमण",
-        "d": "Morarji Desai / मोरारजी देसाई"
+        "a": "P. Chidambaram",
+        "b": "Pranab Mukherjee",
+        "c": "Nirmala Sitharaman",
+        "d": "Morarji Desai"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMorarji Desai presented the budget 10 times, which is the highest by any finance minister. This includes 6 times in a row.\n\n📖 हिंदी स्पष्टीकरण:\nमोरारजी देसाई ने 10 बार बजट पेश किया, जो किसी भी वित्त मंत्री द्वारा सबसे अधिक है। इसमें लगातार 6 बार बजट पेश करना शामिल है।"
     },
     {
       "q_num": 5,
-      "question": "In which year was the Railway Budget merged with the General Budget?\nरेल बजट का सामान्य बजट में विलय किस वर्ष किया गया था?",
+      "question": "In which year was the Railway Budget merged with the General Budget?",
       "options": {
         "a": "2014",
         "b": "2016",
@@ -66,187 +66,187 @@
     },
     {
       "q_num": 6,
-      "question": "Which of the following is a Direct Tax in India?\nनिम्नलिखित में से कौन सा भारत में एक प्रत्यक्ष कर है?",
+      "question": "Which of the following is a Direct Tax in India?",
       "options": {
-        "a": "GST / जीएसटी",
-        "b": "Excise Duty / उत्पाद शुल्क",
-        "c": "Income Tax / आयकर",
-        "d": "Custom Duty / सीमा शुल्क"
+        "a": "GST",
+        "b": "Excise Duty",
+        "c": "Income Tax",
+        "d": "Custom Duty"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDirect taxes are paid directly to the government by the individual or organization. Income tax and corporate tax are primary examples.\n\n📖 हिंदी स्पष्टीकरण:\nप्रत्यक्ष कर व्यक्ति या संगठन द्वारा सीधे सरकार को भुगतान किए जाते हैं। आयकर और कॉर्पोरेट कर इसके प्रमुख उदाहरण हैं।"
     },
     {
       "q_num": 7,
-      "question": "The 'Laffer Curve' shows the relationship between which two variables?\n'लाफर वक्र' किन दो चरों के बीच संबंध दर्शाता है?",
+      "question": "The 'Laffer Curve' shows the relationship between which two variables?",
       "options": {
-        "a": "Inflation and Unemployment / मुद्रास्फीति और बेरोजगारी",
-        "b": "Tax rates and Government Revenue / कर की दरें और सरकारी राजस्व",
-        "c": "Income and Demand / आय और मांग",
-        "d": "Supply and price / आपूर्ति और मूल्य"
+        "a": "Inflation and Unemployment",
+        "b": "Tax rates and Government Revenue",
+        "c": "Income and Demand",
+        "d": "Supply and price"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt is a bell-shaped curve showing that tax revenue increases with tax rates up to a point, after which higher rates discourage work and reduce revenue.\n\n📖 हिंदी स्पष्टीकरण:\nयह एक घंटे के आकार का वक्र है जो दर्शाता है कि कर राजस्व एक बिंदु तक कर की दरों के साथ बढ़ता है, जिसके बाद उच्च दरें काम को हतोत्साहित करती हैं और राजस्व को कम करती हैं।"
     },
     {
       "q_num": 8,
-      "question": "What is the GST Council's constitutional article?\nजीएसटी परिषद का संवैधानिक अनुच्छेद क्या है?",
+      "question": "What is the GST Council's constitutional article?",
       "options": {
-        "a": "Article 246A / अनुच्छेद 246A",
-        "b": "Article 279A / अनुच्छेद 279A",
-        "c": "Article 269A / अनुच्छेद 269A",
-        "d": "Article 324 / अनुच्छेद 324"
+        "a": "Article 246A",
+        "b": "Article 279A",
+        "c": "Article 269A",
+        "d": "Article 324"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe GST Council is a constitutional body for making recommendations to the Union and State Government on issues related to GST. It was introduced via the 101st Amendment.\n\n📖 हिंदी स्पष्टीकरण:\nजीएसटी परिषद जीएसटी से संबंधित मुद्दों पर केंद्र और राज्य सरकार को सिफारिशें देने के लिए एक संवैधानिक निकाय है। इसे 101वें संशोधन के माध्यम से पेश किया गया था।"
     },
     {
       "q_num": 9,
-      "question": "Which state was the first to ratify the GST Bill in India?\nभारत में जीएसटी बिल की पुष्टि करने वाला पहला राज्य कौन सा था?",
+      "question": "Which state was the first to ratify the GST Bill in India?",
       "options": {
-        "a": "Maharashtra / महाराष्ट्र",
-        "b": "Assam / असम",
-        "c": "Bihar / बिहार",
-        "d": "Gujarat / गुजरात"
+        "a": "Maharashtra",
+        "b": "Assam",
+        "c": "Bihar",
+        "d": "Gujarat"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAssam became the first state in India to ratify the Goods and Services Tax (GST) Bill. GST became operational in India from 1st July 2017.\n\n📖 हिंदी स्पष्टीकरण:\nअसम माल और सेवा कर (GST) विधेयक की पुष्टि करने वाला भारत का पहला राज्य बना। भारत में 1 जुलाई 2017 से जीएसटी लागू हुआ।"
     },
     {
       "q_num": 10,
-      "question": "What is 'Cess' in the context of Indian taxation?\nभारतीय कराधान के संदर्भ में 'सेस' (उपकर) क्या है?",
+      "question": "What is 'Cess' in the context of Indian taxation?",
       "options": {
-        "a": "A tax on luxury goods / विलासिता की वस्तुओं पर कर",
-        "b": "A tax for a specific purpose / एक विशिष्ट उद्देश्य के लिए कर",
-        "c": "A discount on tax / कर पर छूट",
-        "d": "A tax shared with states / राज्यों के साथ साझा किया गया कर"
+        "a": "A tax on luxury goods",
+        "b": "A tax for a specific purpose",
+        "c": "A discount on tax",
+        "d": "A tax shared with states"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCess is a form of tax levied over and above the base tax for a specific purpose like education or health. It is not shared with state governments.\n\n📖 हिंदी स्पष्टीकरण:\nउपकर शिक्षा या स्वास्थ्य जैसे विशिष्ट उद्देश्य के लिए मूल कर के ऊपर लगाया जाने वाला कर है। इसे राज्य सरकारों के साथ साझा नहीं किया जाता है।"
     },
     {
       "q_num": 11,
-      "question": "Revenue deficit occurs when:\nराजस्व घाटा तब होता है जब:",
+      "question": "Revenue deficit occurs when:",
       "options": {
-        "a": "Total Expenditure > Total Receipts / कुल व्यय > कुल प्राप्तियां",
-        "b": "Revenue Expenditure > Revenue Receipts / राजस्व व्यय > राजस्व प्राप्तियां",
-        "c": "Capital Expenditure > Capital Receipts / पूंजीगत व्यय > पूंजीगत प्राप्तियां",
-        "d": "Fiscal Deficit > Interest Payments / राजकोषीय घाटा > ब्याज भुगतान"
+        "a": "Total Expenditure > Total Receipts",
+        "b": "Revenue Expenditure > Revenue Receipts",
+        "c": "Capital Expenditure > Capital Receipts",
+        "d": "Fiscal Deficit > Interest Payments"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt indicates that the government's regular income is insufficient to cover its day-to-day running expenses like salaries and pensions.\n\n📖 हिंदी स्पष्टीकरण:\nयह इंगित करता है कि सरकार की नियमित आय उसके वेतन और पेंशन जैसे दैनिक खर्चों को पूरा करने के लिए अपर्याप्त है।"
     },
     {
       "q_num": 12,
-      "question": "Fiscal Deficit is defined as:\nराजकोषीय घाटे को इस प्रकार परिभाषित किया गया है:",
+      "question": "Fiscal Deficit is defined as:",
       "options": {
-        "a": "Total Expenditure - Total Receipts / कुल व्यय - कुल प्राप्तियां",
-        "b": "Total Expenditure - (Revenue Receipts + Non-debt Capital Receipts) / कुल व्यय - (राजस्व प्राप्तियां + गैर-ऋण पूंजीगत प्राप्तियां)",
-        "c": "Revenue Expenditure - Revenue Receipts / राजस्व व्यय - राजस्व प्राप्तियां",
-        "d": "Capital Expenditure - Capital Receipts / पूंजीगत व्यय - पूंजीगत प्राप्तियां"
+        "a": "Total Expenditure - Total Receipts",
+        "b": "Total Expenditure - (Revenue Receipts + Non-debt Capital Receipts)",
+        "c": "Revenue Expenditure - Revenue Receipts",
+        "d": "Capital Expenditure - Capital Receipts"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt is the most accurate measure of government borrowing. It shows the total gap that needs to be financed through loans.\n\n📖 हिंदी स्पष्टीकरण:\nयह सरकारी उधार का सबसे सटीक माप है। यह उस कुल अंतर को दर्शाता है जिसे ऋण के माध्यम से वित्तपोषित करने की आवश्यकता है।"
     },
     {
       "q_num": 13,
-      "question": "Primary Deficit is calculated by subtracting what from Fiscal Deficit?\nराजकोषीय घाटे में से क्या घटाकर प्राथमिक घाटे की गणना की जाती है?",
+      "question": "Primary Deficit is calculated by subtracting what from Fiscal Deficit?",
       "options": {
-        "a": "Subsidies / सब्सिडी",
-        "b": "Pensions / पेंशन",
-        "c": "Interest Payments / ब्याज भुगतान",
-        "d": "Defense Expenditure / रक्षा व्यय"
+        "a": "Subsidies",
+        "b": "Pensions",
+        "c": "Interest Payments",
+        "d": "Defense Expenditure"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPrimary Deficit = Fiscal Deficit - Interest Payments. It shows the borrowing requirements of the government excluding interest on old loans.\n\n📖 हिंदी स्पष्टीकरण:\nप्राथमिक घाटा = राजकोषीय घाटा - ब्याज भुगतान। यह पुराने ऋणों पर ब्याज को छोड़कर सरकार की उधार आवश्यकताओं को दर्शाता है।"
     },
     {
       "q_num": 14,
-      "question": "Which of the following is an example of Capital Receipt for the government?\nनिम्नलिखित में से कौन सा सरकार के लिए पूंजीगत प्राप्ति का उदाहरण है?",
+      "question": "Which of the following is an example of Capital Receipt for the government?",
       "options": {
-        "a": "Tax collected / एकत्रित कर",
-        "b": "Dividends from PSUs / पीएसयू से लाभांश",
-        "c": "Disinvestment (selling shares of PSUs) / विनिवेश (पीएसयू के शेयर बेचना)",
-        "d": "Fees and Fines / शुल्क और जुर्माना"
+        "a": "Tax collected",
+        "b": "Dividends from PSUs",
+        "c": "Disinvestment (selling shares of PSUs)",
+        "d": "Fees and Fines"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCapital receipts either create a liability or reduce an asset. Disinvestment reduces the government's assets.\n\n📖 हिंदी स्पष्टीकरण:\nपूंजीगत प्राप्तियां या तो देनदारी पैदा करती हैं या संपत्ति को कम करती हैं। विनिवेश सरकार की संपत्ति को कम करता है।"
     },
     {
       "q_num": 15,
-      "question": "Under which function does the government attempt to smooth out fluctuations in the economy?\nकिस कार्य के तहत सरकार अर्थव्यवस्था में उतार-चढ़ाव को कम करने का प्रयास करती है?",
+      "question": "Under which function does the government attempt to smooth out fluctuations in the economy?",
       "options": {
-        "a": "Allocation function / आवंटन कार्य",
-        "b": "Redistribution function / पुनर्वितरण कार्य",
-        "c": "Stabilisation function / स्थिरीकरण कार्य",
-        "d": "Operational function / परिचालन कार्य"
+        "a": "Allocation function",
+        "b": "Redistribution function",
+        "c": "Stabilisation function",
+        "d": "Operational function"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe stabilisation function aims to maintain price stability and high employment levels, avoiding sharp booms or recessions.\n\n📖 हिंदी स्पष्टीकरण:\nस्थिरीकरण कार्य का उद्देश्य मूल्य स्थिरता और उच्च रोजगार स्तर बनाए रखना है, जिससे तीव्र उछाल या मंदी से बचा जा सके।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding Direct and Indirect Taxes:\nप्रत्यक्ष और अप्रत्यक्ष करों के संबंध में निम्नलिखित कथनों पर विचार करें:\n1. Direct taxes are progressive in nature. / प्रत्यक्ष कर प्रकृति में प्रगतिशील होते हैं।\n2. Indirect taxes can be passed on to someone else. / अप्रत्यक्ष करों का बोझ किसी और पर डाला जा सकता है।\nWhich of the above is/are correct? / उपरोक्त में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Direct and Indirect Taxes:\n1. Direct taxes are progressive in nature.\n2. Indirect taxes can be passed on to someone else.\nWhich of the above is/are correct?",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDirect taxes (like Income Tax) increase with income, making them progressive. Indirect taxes (like GST) can be shifted from the seller to the buyer.\n\n📖 हिंदी स्पष्टीकरण:\nप्रत्यक्ष कर (जैसे आयकर) आय के साथ बढ़ते हैं, जिससे वे प्रगतिशील बनते हैं। अप्रत्यक्ष कर (जैसे जीएसटी) विक्रेता से खरीदार पर स्थानांतरित किए जा सकते हैं।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): The Laffer Curve suggests that beyond a certain point, increasing tax rates will decrease tax revenue.\nअभिकथन (A): लाफर वक्र सुझाव देता है कि एक निश्चित बिंदु के बाद, कर की दरों में वृद्धि से कर राजस्व में कमी आएगी।\nReason (R): Very high tax rates discourage people from working and encourage tax evasion.\nकारण (R): बहुत अधिक कर दरें लोगों को काम करने से हतोत्साहित करती हैं और कर चोरी को बढ़ावा देती हैं।",
+      "question": "Assertion (A): The Laffer Curve suggests that beyond a certain point, increasing tax rates will decrease tax revenue.\nReason (R): Very high tax rates discourage people from working and encourage tax evasion.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHigh tax rates reduce the incentive to earn more, leading to lower economic activity and thus lower total tax collection.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च कर दरें अधिक कमाने के प्रोत्साहन को कम करती हैं, जिससे आर्थिक गतिविधि कम हो जाती है और इस प्रकार कुल कर संग्रह कम हो जाता है।"
     },
     {
       "q_num": 18,
-      "question": "Which committee recommended the separation of the Railway Budget from the General Budget in 1921?\n1921 में किस समिति ने सामान्य बजट से रेल बजट को अलग करने की सिफारिश की थी?",
+      "question": "Which committee recommended the separation of the Railway Budget from the General Budget in 1921?",
       "options": {
-        "a": "Bibek Debroy Committee / बिबेक देबरॉय समिति",
-        "b": "Acworth Committee / एकवर्थ समिति",
-        "c": "Kelkar Committee / केलकर समिति",
-        "d": "Urjit Patel Committee / उर्जित पटेल समिति"
+        "a": "Bibek Debroy Committee",
+        "b": "Acworth Committee",
+        "c": "Kelkar Committee",
+        "d": "Urjit Patel Committee"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn 1921, the Acworth Committee recommended a separate Railway Budget, which was implemented in 1924.\n\n📖 हिंदी स्पष्टीकरण:\n1921 में, एकवर्थ समिति ने एक अलग रेल बजट की सिफारिश की थी, जिसे 1924 में लागू किया गया था।"
     },
     {
       "q_num": 19,
-      "question": "Assertion (A): Disinvestment is considered a Capital Receipt.\nअभिकथन (A): विनिवेश को पूंजीगत प्राप्ति माना जाता है।\nReason (R): Disinvestment leads to a reduction in the assets of the government.\nकारण (R): विनिवेश से सरकार की संपत्ति में कमी आती है।",
+      "question": "Assertion (A): Disinvestment is considered a Capital Receipt.\nReason (R): Disinvestment leads to a reduction in the assets of the government.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAny receipt that reduces an asset (like selling PSU shares) is classified as a Capital Receipt under the budget.\n\n📖 हिंदी स्पष्टीकरण:\nकोई भी प्राप्ति जो संपत्ति को कम करती है (जैसे पीएसयू शेयर बेचना) बजट के तहत पूंजीगत प्राप्ति के रूप में वर्गीकृत की जाती है।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following statements about 'Effective Revenue Deficit' is correct?\n'प्रभावी राजस्व घाटा' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about 'Effective Revenue Deficit' is correct?",
       "options": {
-        "a": "It is Fiscal Deficit minus Interest payments / यह राजकोषीय घाटा ऋण ब्याज भुगतान है।",
-        "b": "It is Revenue Deficit minus grants for creation of capital assets / यह राजस्व घाटा ऋण पूंजीगत संपत्ति के निर्माण के लिए अनुदान है।",
-        "c": "It is the same as Budgetary Deficit / यह बजटीय घाटे के समान है।",
-        "d": "It was introduced in the 1950s / इसे 1950 के दशक में पेश किया गया था।"
+        "a": "It is Fiscal Deficit minus Interest payments",
+        "b": "It is Revenue Deficit minus grants for creation of capital assets",
+        "c": "It is the same as Budgetary Deficit",
+        "d": "It was introduced in the 1950s"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEffective Revenue Deficit excludes those grants which, though part of revenue expenditure, result in asset creation.\n\n📖 हिंदी स्पष्टीकरण:\nप्रभावी राजस्व घाटा उन अनुदानों को बाहर करता है, जो राजस्व व्यय का हिस्सा होने के बावजूद, संपत्ति निर्माण का परिणाम होते हैं।"
     },
     {
       "q_num": 21,
-      "question": "Match the following:\nनिम्नलिखित को मिलाएं:\nList I (Deficit Type) - List II (Formula)\nसूची I (घाटे का प्रकार) - सूची II (सूत्र)\n1. Fiscal Deficit - (A) Revenue Exp. - Revenue Receipt / राजकोषीय घाटा - (A) राजस्व व्यय - राजस्व प्राप्ति\n2. Revenue Deficit - (B) Fiscal Deficit - Interest Payments / राजस्व घाटा - (B) राजकोषीय घाटा - ब्याज भुगतान\n3. Primary Deficit - (C) Total Exp. - (RR + Non-debt Cap. Receipt) / प्राथमिक घाटा - (C) कुल व्यय - (RR + गैर-ऋण पूंजी प्राप्ति)",
+      "question": "Match the following:\nList I (Deficit Type) - List II (Formula)\n1. Fiscal Deficit - (A) Revenue Exp. - Revenue Receipt\n2. Revenue Deficit - (B) Fiscal Deficit - Interest Payments\n3. Primary Deficit - (C) Total Exp. - (RR + Non-debt Cap. Receipt)",
       "options": {
         "a": "1-C, 2-A, 3-B",
         "b": "1-A, 2-B, 3-C",
@@ -258,48 +258,48 @@
     },
     {
       "q_num": 22,
-      "question": "Pigouvian Tax is levied to:\nपिगुवियन कर लगाया जाता है:",
+      "question": "Pigouvian Tax is levied to:",
       "options": {
-        "a": "Increase luxury consumption / विलासिता की खपत बढ़ाने के लिए",
-        "b": "Lower negative externalities (like pollution) / नकारात्मक बाहरीताओं (जैसे प्रदूषण) को कम करने के लिए",
-        "c": "Support poor families / गरीब परिवारों की सहायता के लिए",
-        "d": "Tax corporate profits / कॉर्पोरेट मुनाफे पर कर लगाने के लिए"
+        "a": "Increase luxury consumption",
+        "b": "Lower negative externalities (like pollution)",
+        "c": "Support poor families",
+        "d": "Tax corporate profits"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt is a tax on any market activity that generates negative externalities (costs not included in the market price), such as a carbon tax.\n\n📖 हिंदी स्पष्टीकरण:\nयह किसी भी बाजार गतिविधि पर लगने वाला कर है जो नकारात्मक बाहरी प्रभाव पैदा करता है, जैसे कि कार्बन कर।"
     },
     {
       "q_num": 23,
-      "question": "Which Act mandates the Government of India to present the 'Medium Term Fiscal Policy Statement' along with the Budget?\nकौन सा अधिनियम भारत सरकार को बजट के साथ 'मध्यम अवधि की राजकोषीय नीति विवरण' प्रस्तुत करने का आदेश देता है?",
+      "question": "Which Act mandates the Government of India to present the 'Medium Term Fiscal Policy Statement' along with the Budget?",
       "options": {
-        "a": "GST Act 2017 / जीएसटी अधिनियम 2017",
-        "b": "Finance Act / वित्त अधिनियम",
-        "c": "FRBM Act 2003 / एफआरबीएम अधिनियम 2003",
-        "d": "RBI Act 1934 / आरबीआई अधिनियम 1934"
+        "a": "GST Act 2017",
+        "b": "Finance Act",
+        "c": "FRBM Act 2003",
+        "d": "RBI Act 1934"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Fiscal Responsibility and Budget Management (FRBM) Act aims to ensure fiscal discipline and requires the government to present three policy statements.\n\n📖 हिंदी स्पष्टीकरण:\nराजकोषीय उत्तरदायित्व और बजट प्रबंधन (FRBM) अधिनियम का उद्देश्य राजकोषीय अनुशासन सुनिश्चित करना है और सरकार को तीन नीति विवरण प्रस्तुत करने की आवश्यकता होती है।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): Indirect taxes are often called 'Regressive Taxes'.\nअभिकथन (A): अप्रत्यक्ष करों को अक्सर 'प्रतिगामी कर' कहा जाता है।\nReason (R): They are charged at the same rate regardless of the income of the buyer, impacting the poor more.\nकारण (R): खरीदार की आय की परवाह किए बिना उनसे समान दर पर शुल्क लिया जाता है, जिससे गरीबों पर अधिक प्रभाव पड़ता है।",
+      "question": "Assertion (A): Indirect taxes are often called 'Regressive Taxes'.\nReason (R): They are charged at the same rate regardless of the income of the buyer, impacting the poor more.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSince a rich and a poor person pay the same tax on a product (like salt or oil), the tax takes a larger percentage of the poor person's income.\n\n📖 हिंदी स्पष्टीकरण:\nचूंकि एक अमीर और एक गरीब व्यक्ति उत्पाद पर समान कर देते हैं, इसलिए कर गरीब व्यक्ति की आय का एक बड़ा प्रतिशत हिस्सा ले लेता है।"
     },
     {
       "q_num": 25,
-      "question": "Who was the first female Finance Minister of India (held additional charge)?\nभारत की पहली महिला वित्त मंत्री कौन थीं (अतिरिक्त प्रभार संभाला था)?",
+      "question": "Who was the first female Finance Minister of India (held additional charge)?",
       "options": {
-        "a": "Nirmala Sitharaman / निर्मला सीतारमण",
-        "b": "Indira Gandhi / इंदिरा गांधी",
-        "c": "Sarojini Naidu / सरोजिनी नायडू",
-        "d": "Sushma Swaraj / सुषमा स्वराज"
+        "a": "Nirmala Sitharaman",
+        "b": "Indira Gandhi",
+        "c": "Sarojini Naidu",
+        "d": "Sushma Swaraj"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIndira Gandhi was the first woman to hold the finance portfolio as an additional charge while serving as Prime Minister in 1969-70.\n\n📖 हिंदी स्पष्टीकरण:\nइंदिरा गांधी 1969-70 में प्रधान मंत्री के रूप में कार्य करते हुए अतिरिक्त प्रभार के रूप में वित्त मंत्रालय संभालने वाली पहली महिला थीं।"

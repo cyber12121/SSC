@@ -6,55 +6,55 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Sound is a form of: / ध्वनि किसका एक रूप है?",
+      "question": "Sound is a form of:",
       "options": {
-        "a": "Energy / ऊर्जा",
-        "b": "Force / बल",
-        "c": "Power / शक्ति",
-        "d": "Pressure / दाब"
+        "a": "Energy",
+        "b": "Force",
+        "c": "Power",
+        "d": "Pressure"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSound is a form of energy that is produced by vibrating objects. It travels through a medium to reach our ears\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि ऊर्जा का एक रूप है जो कंपन करने वाली वस्तुओं द्वारा उत्पन्न होती है। यह हमारे कानों तक पहुँचने के लिए किसी माध्यम से यात्रा करती है।"
     },
     {
       "q_num": 2,
-      "question": "Sound waves are categorized as: / ध्वनि तरंगों को किस रूप में वर्गीकृत किया गया है?",
+      "question": "Sound waves are categorized as:",
       "options": {
-        "a": "Non-mechanical waves / गैर-यांत्रिक तरंगें",
-        "b": "Mechanical waves / यांत्रिक तरंगें",
-        "c": "Electromagnetic waves / विद्युत चुंबकीय तरंगें",
-        "d": "Transverse waves only / केवल अनुप्रस्थ तरंगें"
+        "a": "Non-mechanical waves",
+        "b": "Mechanical waves",
+        "c": "Electromagnetic waves",
+        "d": "Transverse waves only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSound waves require a material medium (solid, liquid, or gas) for their propagation, which makes them mechanical waves. Unlike light, they cannot travel in a vacuum\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि तरंगों को संचरण के लिए एक भौतिक माध्यम (ठोस, तरल या गैस) की आवश्यकता होती है, जो उन्हें यांत्रिक तरंगें बनाता है। प्रकाश के विपरीत, वे निर्वात में यात्रा नहीं कर सकती हैं।"
     },
     {
       "q_num": 3,
-      "question": "In which of the following media does sound travel the fastest? / निम्नलिखित में से किस माध्यम में ध्वनि सबसे तेजी से यात्रा करती है?",
+      "question": "In which of the following media does sound travel the fastest?",
       "options": {
-        "a": "Air / हवा",
-        "b": "Water / पानी",
-        "c": "Steel / स्टील",
-        "d": "Vacuum / निर्वात"
+        "a": "Air",
+        "b": "Water",
+        "c": "Steel",
+        "d": "Vacuum"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe speed of sound is maximum in solids and minimum in gases. Among the options, steel is a solid, where particles are closely packed, allowing faster energy transfer\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि की गति ठोस पदार्थों में अधिकतम और गैसों में न्यूनतम होती है। विकल्पों में से, स्टील एक ठोस है, जहाँ कणों का घनत्व अधिक होता है, जिससे ऊर्जा का तेजी से स्थानांतरण होता है।"
     },
     {
       "q_num": 4,
-      "question": "The SI unit of frequency is: / आवृत्ति का SI मात्रक क्या है?",
+      "question": "The SI unit of frequency is:",
       "options": {
-        "a": "Decibel (dB) / डेसीबल (dB)",
-        "b": "Hertz (Hz) / हर्ट्ज़ (Hz)",
-        "c": "Meter (m) / मीटर (m)",
-        "d": "Second (s) / सेकंड (s)"
+        "a": "Decibel (dB)",
+        "b": "Hertz (Hz)",
+        "c": "Meter (m)",
+        "d": "Second (s)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFrequency is the number of oscillations per unit time, and its SI unit is Hertz (Hz), named after Heinrich Hertz. One Hz is equal to one oscillation per second\n\n📖 हिंदी स्पष्टीकरण:\nआवृत्ति प्रति इकाई समय में होने वाले दोलनों की संख्या है, और इसका SI मात्रक हर्ट्ज़ (Hz) है। एक हर्ट्ज़ प्रति सेकंड एक दोलन के बराबर होता है।"
     },
     {
       "q_num": 5,
-      "question": "The audible range of sound for a normal human ear is: / एक सामान्य मानव कान के लिए ध्वनि की श्रव्य सीमा क्या है?",
+      "question": "The audible range of sound for a normal human ear is:",
       "options": {
         "a": "10 Hz – 10,000 Hz",
         "b": "20 Hz – 20,000 Hz",
@@ -66,67 +66,67 @@
     },
     {
       "q_num": 6,
-      "question": "Loudness of sound depends on its: / ध्वनि की प्रबलता किस पर निर्भर करती है?",
+      "question": "Loudness of sound depends on its:",
       "options": {
-        "a": "Frequency / आवृत्ति",
-        "b": "Wavelength / तरंगदैर्घ्य",
-        "c": "Amplitude / आयाम",
-        "d": "Speed / गति"
+        "a": "Frequency",
+        "b": "Wavelength",
+        "c": "Amplitude",
+        "d": "Speed"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLoudness is proportional to the square of the amplitude of vibration. A larger amplitude produces a louder sound, while a smaller amplitude produces a soft sound\n\n📖 हिंदी स्पष्टीकरण:\nप्रबलता कंपन के आयाम के वर्ग के समानुपाती होती है। एक बड़ा आयाम तेज ध्वनि उत्पन्न करता है, जबकि एक छोटा आयाम धीमी ध्वनि उत्पन्न करता है।"
     },
     {
       "q_num": 7,
-      "question": "The pitch of a sound is determined by its: / ध्वनि का तारत्व किसके द्वारा निर्धारित होता है?",
+      "question": "The pitch of a sound is determined by its:",
       "options": {
-        "a": "Amplitude / आयाम",
-        "b": "Velocity / वेग",
-        "c": "Frequency / आवृत्ति",
-        "d": "Loudness / प्रबलता"
+        "a": "Amplitude",
+        "b": "Velocity",
+        "c": "Frequency",
+        "d": "Loudness"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPitch is the brain's interpretation of the frequency of sound. High-frequency sound has a high pitch (shrill), while low-frequency sound has a low pitch (grave)\n\n📖 हिंदी स्पष्टीकरण:\nतारत्व ध्वनि की आवृत्ति की मस्तिष्क द्वारा की जाने वाली व्याख्या है। उच्च आवृत्ति वाली ध्वनि का तारत्व उच्च होता है, जबकि निम्न आवृत्ति वाली ध्वनि का तारत्व कम होता है।"
     },
     {
       "q_num": 8,
-      "question": "The sensation of sound persists in the human brain for about: / मानव मस्तिष्क में ध्वनि की संवेदना लगभग कितने समय तक बनी रहती है?",
+      "question": "The sensation of sound persists in the human brain for about:",
       "options": {
-        "a": "1 second / 1 सेकंड",
-        "b": "0.5 second / 0.5 सेकंड",
-        "c": "0.1 second / 0.1 सेकंड",
-        "d": "0.01 second / 0.01 सेकंड"
+        "a": "1 second",
+        "b": "0.5 second",
+        "c": "0.1 second",
+        "d": "0.01 second"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThis persistence of hearing allows us to hear a distinct echo only if the reflected sound reaches us after at least 0.1 seconds\n\n📖 हिंदी स्पष्टीकरण:\nश्रवण की यह निरंतरता हमें एक स्पष्ट गूँज सुनने की अनुमति तभी देती है जब परावर्तित ध्वनि कम से कम 0.1 सेकंड के बाद हम तक पहुँचती है।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following is used by bats to navigate and find food? / चमगादड़ रास्ता और भोजन खोजने के लिए निम्नलिखित में से किसका उपयोग करते हैं?",
+      "question": "Which of the following is used by bats to navigate and find food?",
       "options": {
-        "a": "Infrasonic waves / अपश्रव्य तरंगें",
-        "b": "Ultrasonic waves / पराश्रव्य तरंगें",
-        "c": "Light waves / प्रकाश तरंगें",
-        "d": "Radio waves / रेडियो तरंगें"
+        "a": "Infrasonic waves",
+        "b": "Ultrasonic waves",
+        "c": "Light waves",
+        "d": "Radio waves"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBats emit high-frequency ultrasonic squeaks that reflect off obstacles or prey, helping them navigate in the dark through echolocation\n\n📖 हिंदी स्पष्टीकरण:\nचमगादड़ उच्च आवृत्ति वाली पराश्रव्य चीखें निकालते हैं जो बाधाओं या शिकार से टकराकर वापस आती हैं, जिससे उन्हें प्रतिध्वनि निर्धारण के माध्यम से अंधेरे में रास्ता खोजने में मदद मिलती है।"
     },
     {
       "q_num": 10,
-      "question": "Sound travels in air in the form of: / हवा में ध्वनि किस रूप में यात्रा करती है?",
+      "question": "Sound travels in air in the form of:",
       "options": {
-        "a": "Transverse waves / अनुप्रस्थ तरंगें",
-        "b": "Longitudinal waves / अनुदैर्घ्य तरंगें",
-        "c": "Electromagnetic waves / विद्युत चुंबकीय तरंगें",
-        "d": "Stationary waves / स्थिर तरंगें"
+        "a": "Transverse waves",
+        "b": "Longitudinal waves",
+        "c": "Electromagnetic waves",
+        "d": "Stationary waves"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn air, sound travels as longitudinal waves where particles of the medium vibrate back and forth parallel to the direction of wave propagation\n\n📖 हिंदी स्पष्टीकरण:\nहवा में, ध्वनि अनुदैर्घ्य तरंगों के रूप में यात्रा करती है जहाँ माध्यम के कण तरंग संचरण की दिशा के समानांतर आगे और पीछे कंपन करते हैं।"
     },
     {
       "q_num": 11,
-      "question": "What is the approximate speed of sound in air at 25°C? / 25°C पर हवा में ध्वनि की अनुमानित गति क्या है?",
+      "question": "What is the approximate speed of sound in air at 25°C?",
       "options": {
         "a": "330 m/s",
         "b": "346 m/s",
@@ -138,7 +138,7 @@
     },
     {
       "q_num": 12,
-      "question": "To hear a distinct echo, the minimum distance of the obstacle from the source of sound should be (at 22°C): / स्पष्ट प्रतिध्वनि सुनने के लिए, ध्वनि के स्रोत से बाधा की न्यूनतम दूरी (22°C पर) कितनी होनी चाहिए?",
+      "question": "To hear a distinct echo, the minimum distance of the obstacle from the source of sound should be (at 22°C):",
       "options": {
         "a": "10.2 m",
         "b": "17.2 m",
@@ -150,156 +150,156 @@
     },
     {
       "q_num": 13,
-      "question": "SONAR is a device used to measure the distance and direction of underwater objects. Its full form is: / सोनार एक उपकरण है जिसका उपयोग पानी के नीचे की वस्तुओं की दूरी और दिशा मापने के लिए किया जाता है। इसका पूर्ण रूप क्या है?",
+      "question": "SONAR is a device used to measure the distance and direction of underwater objects. Its full form is:",
       "options": {
-        "a": "Sound Navigation and Ranging / ध्वनि नौसंचालन और सीमा निर्धारण",
-        "b": "Solar Navigation and Ranging / सौर नौसंचालन और सीमा निर्धारण",
-        "c": "Sound Nuclear Analysis and Research / ध्वनि परमाणु विश्लेषण और अनुसंधान",
-        "d": "Sound Navigation and Rectification / ध्वनि नौसंचालन और सुधार"
+        "a": "Sound Navigation and Ranging",
+        "b": "Solar Navigation and Ranging",
+        "c": "Sound Nuclear Analysis and Research",
+        "d": "Sound Navigation and Rectification"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSONAR uses ultrasonic waves to detect objects under the sea. It works on the principle of reflection of sound (echo)\n\n📖 हिंदी स्पष्टीकरण:\nसोनार समुद्र के नीचे वस्तुओं का पता लगाने के लिए पराश्रव्य तरंगों का उपयोग करता है। यह ध्वनि के परावर्तन (प्रतिध्वनि) के सिद्धांत पर काम करता है।"
     },
     {
       "q_num": 14,
-      "question": "The repeated reflection of sound that results in the persistence of sound in a large hall is called: / ध्वनि का बार-बार परावर्तन जिसके परिणामस्वरूप एक बड़े हॉल में ध्वनि बनी रहती है, क्या कहलाता है?",
+      "question": "The repeated reflection of sound that results in the persistence of sound in a large hall is called:",
       "options": {
-        "a": "Reflection / परावर्तन",
-        "b": "Reverberation / अनुरणन",
-        "c": "Refraction / अपवर्तन",
-        "d": "Diffraction / विवर्तन"
+        "a": "Reflection",
+        "b": "Reverberation",
+        "c": "Refraction",
+        "d": "Diffraction"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nReverberation is the persistence of sound after the source has stopped due to multiple reflections. Excessive reverberation is reduced using sound-absorbent materials\n\n📖 हिंदी स्पष्टीकरण:\nअनुरणन कई परावर्तनों के कारण स्रोत के रुकने के बाद भी ध्वनि का बना रहना है। ध्वनि-अवशोषक सामग्री का उपयोग करके अत्यधिक अनुरणन को कम किया जाता है।"
     },
     {
       "q_num": 15,
-      "question": "If a body travels at a speed greater than the speed of sound, its speed is said to be: / यदि कोई पिंड ध्वनि की गति से अधिक गति से यात्रा करता है, तो उसकी गति को क्या कहा जाता है?",
+      "question": "If a body travels at a speed greater than the speed of sound, its speed is said to be:",
       "options": {
-        "a": "Subsonic / सबसोनिक",
-        "b": "Ultrasonic / अल्ट्रासोनिक",
-        "c": "Supersonic / सुपरसोनिक",
-        "d": "Infrasonic / इन्फ्रासोनिक"
+        "a": "Subsonic",
+        "b": "Ultrasonic",
+        "c": "Supersonic",
+        "d": "Infrasonic"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nObjects traveling faster than sound are called supersonic. When the speed exceeds Mach 5, it is termed Hypersonic\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि से तेज गति से चलने वाली वस्तुओं को सुपरसोनिक कहा जाता है। जब गति मैक 5 से अधिक हो जाती है, तो इसे हाइपरसोनिक कहा जाता है।"
     },
     {
       "q_num": 16,
-      "question": "Identify the correct statement regarding the characteristics of sound waves: / ध्वनि तरंगों की विशेषताओं के संबंध में सही कथन की पहचान करें:",
+      "question": "Identify the correct statement regarding the characteristics of sound waves:",
       "options": {
-        "a": "High-pitched sounds have a lower frequency. / उच्च तारत्व वाली ध्वनियों की आवृत्ति कम होती है।",
-        "b": "Loudness is measured in Hertz. / प्रबलता को हर्ट्ज़ में मापा जाता है।",
-        "c": "Quality (Timber) allows us to distinguish between two sounds of same pitch and loudness. / गुणवत्ता (टिम्बर) हमें समान तारत्व और प्रबलता की दो ध्वनियों के बीच अंतर करने की अनुमति देती है।",
-        "d": "Speed of sound is independent of the medium. / ध्वनि की गति माध्यम से स्वतंत्र होती है।"
+        "a": "High-pitched sounds have a lower frequency.",
+        "b": "Loudness is measured in Hertz.",
+        "c": "Quality (Timber) allows us to distinguish between two sounds of same pitch and loudness.",
+        "d": "Speed of sound is independent of the medium."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTimber is the characteristic that enables us to distinguish one sound from another having the same pitch and loudness, like a flute and a violin\n\n📖 हिंदी स्पष्टीकरण:\nटिम्बर वह विशेषता है जो हमें एक ही तारत्व और प्रबलता वाली दो अलग-अलग ध्वनियों (जैसे बांसुरी और वायलिन) के बीच अंतर करने में सक्षम बनाती है।"
     },
     {
       "q_num": 17,
-      "question": "Statement I: Sound travels faster on a hot day than on a cold day. / कथन I: गर्म दिन में ध्वनि ठंडे दिन की तुलना में अधिक तेज़ी से यात्रा करती है।\nStatement II: The speed of sound in a medium depends on its temperature. / कथन II: किसी माध्यम में ध्वनि की गति उसके तापमान पर निर्भर करती है।",
+      "question": "Statement I: Sound travels faster on a hot day than on a cold day.",
       "options": {
-        "a": "Statement I is correct, but II is incorrect. / कथन I सही है, लेकिन कथन II गलत है।",
-        "b": "Statement II is correct, but I is incorrect. / कथन II सही है, लेकिन कथन I गलत है।",
-        "c": "Both statements are correct and II explains I. / दोनों कथन सही हैं और II, I की व्याख्या करता है।",
-        "d": "Both statements are correct but II does not explain I. / दोनों कथन सही हैं, लेकिन II, I की व्याख्या नहीं करता है।"
+        "a": "Statement I is correct, but II is incorrect.",
+        "b": "Statement II is correct, but I is incorrect.",
+        "c": "Both statements are correct and II explains I.",
+        "d": "Both statements are correct but II does not explain I."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe speed of sound is directly proportional to the square root of the absolute temperature. Therefore, sound travels faster when the temperature is high\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि की गति पूर्ण तापमान के वर्गमूल के सीधे समानुपाती होती है। इसलिए, तापमान अधिक होने पर ध्वनि तेजी से यात्रा करती है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Astronauts on the moon cannot talk to each other directly. / दावा (A): चंद्रमा पर अंतरिक्ष यात्री एक-दूसरे से सीधे बात नहीं कर सकते।\nReason (R): There is no atmosphere (medium) on the moon for sound to propagate. / कारण (R): चंद्रमा पर ध्वनि के संचरण के लिए कोई वायुमंडल (माध्यम) नहीं है।",
+      "question": "Assertion (A): Astronauts on the moon cannot talk to each other directly.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSound is a mechanical wave and requires a medium to travel. Since the moon lacks an atmosphere, sound cannot propagate there\n\n📖 हिंदी स्पष्टीकरण:\nध्वनि एक यांत्रिक तरंग है और इसे यात्रा करने के लिए माध्यम की आवश्यकता होती है। चूँकि चंद्रमा पर वायुमंडल नहीं है, इसलिए वहां ध्वनि का संचरण नहीं हो सकता।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements is/are true? / निम्नलिखित में से कौन सा/से कथन सत्य है/हैं?\n1. Infrasonic sounds have frequencies below 20 Hz. / अपश्रव्य तरंगों की आवृत्ति 20 हर्ट्ज़ से कम होती है।\n2. Rhinoceroses communicate using infrasound. / गैंडे अपश्रव्य ध्वनि का उपयोग करके संवाद करते हैं।",
+      "question": "Which of the following statements is/are true?",
       "options": {
-        "a": "Only I / केवल I",
-        "b": "Only II / केवल II",
-        "c": "Both I and II / I और II दोनों",
-        "d": "Neither I nor II / न तो I और न ही II"
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSounds below 20 Hz are infrasonic. Many animals like rhinos, whales, and elephants communicate using these low-frequency sounds. / 20\n\n📖 हिंदी स्पष्टीकरण:\nहर्ट्ज़ से कम की ध्वनियाँ अपश्रव्य होती हैं। गैंडे, व्हेल और हाथी जैसे कई जानवर इन कम आवृत्ति वाली ध्वनियों का उपयोग करके संवाद करते हैं।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The speed of sound in aluminum is higher than in glass. / दावा (A): एल्युमीनियम में ध्वनि की गति कांच की तुलना में अधिक होती है।\nReason (R): Sound speed generally increases from gas to liquid to solid. / कारण (R): ध्वनि की गति आम तौर पर गैस से तरल और फिर ठोस की ओर बढ़ती है।",
+      "question": "Assertion (A): The speed of sound in aluminum is higher than in glass.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile both are true (Al: 6420 m/s, Glass: ~3980 m/s), the general trend of \"gas → liquid → solid\" doesn't specifically explain why aluminum is faster than glass (both are solids)\n\n📖 हिंदी स्पष्टीकरण:\nजबकि दोनों सत्य हैं, \"गैस → तरल → ठोस\" की सामान्य प्रवृत्ति विशेष रूप से यह नहीं बताती है कि एल्युमीनियम कांच की तुलना में तेज क्यों है (दोनों ठोस हैं)।"
     },
     {
       "q_num": 21,
-      "question": "Regarding 'Mach Number', which statement is incorrect? / 'मैक नंबर' के संबंध में कौन सा कथन गलत है?",
+      "question": "Regarding 'Mach Number', which statement is incorrect?",
       "options": {
-        "a": "It is the ratio of the speed of an object to the speed of sound. / यह वस्तु की गति और ध्वनि की गति का अनुपात है।",
-        "b": "If Mach number > 1, the body is supersonic. / यदि मैक संख्या > 1 है, तो पिंड सुपरसोनिक है।",
-        "c": "Mach number is used to measure the intensity of an earthquake. / मैक संख्या का उपयोग भूकंप की तीव्रता मापने के लिए किया जाता है।",
-        "d": "If Mach number > 5, it is called hypersonic. / यदि मैक संख्या > 5 है, तो इसे हाइपरसोनिक कहा जाता है।"
+        "a": "It is the ratio of the speed of an object to the speed of sound.",
+        "b": "If Mach number > 1, the body is supersonic.",
+        "c": "Mach number is used to measure the intensity of an earthquake.",
+        "d": "If Mach number > 5, it is called hypersonic."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMach number is related to speed in aerodynamics. Earthquake intensity is measured using the Richter scale or Mercalli scale\n\n📖 हिंदी स्पष्टीकरण:\nमैक संख्या वायुगतिकी में गति से संबंधित है। भूकंप की तीव्रता रिक्टर स्केल या मरकली स्केल का उपयोग करके मापी जाती है।"
     },
     {
       "q_num": 22,
-      "question": "In a longitudinal wave, the region of high density and high pressure is called: / एक अनुदैर्घ्य तरंग में, उच्च घनत्व और उच्च दाब के क्षेत्र को क्या कहा जाता है?",
+      "question": "In a longitudinal wave, the region of high density and high pressure is called:",
       "options": {
-        "a": "Rarefaction / विरलन",
-        "b": "Compression / संपीडन",
-        "c": "Crest / श्रृंग",
-        "d": "Trough / गर्त"
+        "a": "Rarefaction",
+        "b": "Compression",
+        "c": "Crest",
+        "d": "Trough"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCompressions are regions where particles are crowded together (high pressure), and rarefactions are regions where particles are spread apart (low pressure)\n\n📖 हिंदी स्पष्टीकरण:\nसंपीडन वे क्षेत्र हैं जहाँ कण एक साथ भीड़भाड़ (उच्च दाब) में होते हैं, और विरलन वे क्षेत्र हैं जहाँ कण एक-दूसरे से दूर (निम्न दाब) फैले होते हैं।"
     },
     {
       "q_num": 23,
-      "question": "Which application uses the reflection of sound? / ध्वनि के परावर्तन का उपयोग कौन सा अनुप्रयोग करता है?",
+      "question": "Which application uses the reflection of sound?",
       "options": {
-        "a": "Stethoscope / स्टेथोस्कोप",
-        "b": "Megaphones / मेगाफोन",
-        "c": "Ultrasonic cleaning / अल्ट्रासोनिक सफाई",
-        "d": "Both a and b / a और b दोनों"
+        "a": "Stethoscope",
+        "b": "Megaphones",
+        "c": "Ultrasonic cleaning",
+        "d": "Both a and b"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStethoscopes work on multiple reflections of sound. Megaphones and horns are designed to send sound in a particular direction through reflection\n\n📖 हिंदी स्पष्टीकरण:\nस्टेथोस्कोप ध्वनि के कई परावर्तनों पर काम करते हैं। मेगाफोन और हॉर्न परावर्तन के माध्यम से ध्वनि को एक विशेष दिशा में भेजने के लिए डिज़ाइन किए गए हैं।"
     },
     {
       "q_num": 24,
-      "question": "Statement I: Light travels much faster than sound. / कथन I: प्रकाश ध्वनि की तुलना में बहुत तेज गति से यात्रा करता है।\nStatement II: We see lightning before hearing the thunder. / कथन II: हम गर्जना सुनने से पहले बिजली की चमक देखते हैं।",
+      "question": "Statement I: Light travels much faster than sound.",
       "options": {
-        "a": "Statement I is correct, II is incorrect. / कथन I सही है, II गलत है।",
-        "b": "Statement II is correct, I is incorrect. / कथन II सही है, I गलत है।",
-        "c": "Both are correct and I explains II. / दोनों सही हैं और I, II की व्याख्या करता है।",
-        "d": "Both are correct but I does not explain II. / दोनों सही हैं लेकिन I, II की व्याख्या नहीं करता है।"
+        "a": "Statement I is correct, II is incorrect.",
+        "b": "Statement II is correct, I is incorrect.",
+        "c": "Both are correct and I explains II.",
+        "d": "Both are correct but I does not explain II."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLight speed is 3 × 10⁸ m/s while sound is ~344 m/s. This massive difference causes us to see the flash almost instantly while the sound takes time to reach us\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश की गति 3 × 10⁸ m/s है जबकि ध्वनि की ~344 m/s है। यह भारी अंतर हमें चमक को तुरंत देखने में मदद करता है जबकि ध्वनि को हम तक पहुँचने में समय लगता है।"
     },
     {
       "q_num": 25,
-      "question": "Ultrasound is used for which of the following medical purposes? / पराश्रव्य ध्वनि (अल्ट्रासाउंड) का उपयोग निम्नलिखित में से किस चिकित्सा उद्देश्य के लिए किया जाता है?",
+      "question": "Ultrasound is used for which of the following medical purposes?",
       "options": {
-        "a": "To break kidney stones into fine grains. / गुर्दे की पथरी को बारीक दानों में तोड़ने के लिए।",
-        "b": "To monitor the growth of a fetus. / भ्रूण के विकास की निगरानी के लिए।",
-        "c": "Echocardiography. / इकोकार्डियोग्राफी के लिए।",
-        "d": "All of the above. / उपरोक्त सभी।"
+        "a": "To break kidney stones into fine grains.",
+        "b": "To monitor the growth of a fetus.",
+        "c": "Echocardiography.",
+        "d": "All of the above."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nUltrasound has high penetrating power and is used in various medical imaging and therapeutic techniques like breaking stones and monitoring internal organs\n\n📖 हिंदी स्पष्टीकरण:\nपराश्रव्य ध्वनि में उच्च मर्मज्ञ शक्ति होती है और इसका उपयोग विभिन्न चिकित्सा इमेजिंग और चिकित्सीय तकनीकों जैसे पथरी तोड़ने और आंतरिक अंगों की निगरानी में किया जाता हैं।"

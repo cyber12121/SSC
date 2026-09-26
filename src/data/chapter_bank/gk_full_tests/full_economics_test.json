@@ -6,900 +6,900 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding the 'Law of Demand': \n मांग के नियम (Law of Demand) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It states that there is a direct relationship between price and quantity demanded. / यह बताता है कि कीमत और मांग की मात्रा के बीच सीधा संबंध है। \n (b) It assumes that 'Ceteris Paribus' (other things remaining constant). / यह 'सेटेरिस पैरिबस' (अन्य बातें समान रहने पर) की अवधारणा पर आधारित है। \n (c) Giffen goods are an exception to this law. / गिफन वस्तुएं इस नियम का अपवाद हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Law of Demand': \n(a) It states that there is a direct relationship between price and quantity demanded.\n(b) It assumes that 'Ceteris Paribus' (other things remaining constant).\n(c) Giffen goods are an exception to this law.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Law of Demand states an inverse relationship between price and demand. Giffen goods show a positive price effect, making them an exception.\n\n📖 हिंदी स्पष्टीकरण:\nमांग का नियम कीमत और मांग के बीच विपरीत संबंध बताता है। गिफन वस्तुओं में धनात्मक मूल्य प्रभाव दिखता है, जो उन्हें अपवाद बनाता है।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is correct regarding 'Stagflation'? \n 'स्टैगफ्लेशन' (Stagflation) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding 'Stagflation'?",
       "options": {
-        "a": "High inflation with low unemployment. / कम बेरोजगारी के साथ उच्च मुद्रास्फीति।",
-        "b": "Low inflation with high economic growth. / उच्च आर्थिक विकास के साथ कम मुद्रास्फीति।",
-        "c": "High inflation combined with stagnant economic growth and high unemployment. / स्थिर आर्थिक विकास और उच्च बेरोजगारी के साथ उच्च मुद्रास्फीति।",
-        "d": "Continuous decrease in the general price level. / सामान्य मूल्य स्तर में निरंतर गिरावट।"
+        "a": "High inflation with low unemployment.",
+        "b": "Low inflation with high economic growth.",
+        "c": "High inflation combined with stagnant economic growth and high unemployment.",
+        "d": "Continuous decrease in the general price level."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStagflation is a rare economic condition where high inflation occurs simultaneously with stagnant growth and high unemployment.\n\n📖 हिंदी स्पष्टीकरण:\nस्टैगफ्लेशन एक दुर्लभ आर्थिक स्थिति है जहाँ उच्च मुद्रास्फीति, स्थिर विकास और उच्च बेरोजगारी एक साथ होती है।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements about the 'Repo Rate': \n 'रेपो रेट' (Repo Rate) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is the rate at which RBI lends money to commercial banks for short terms against government securities. / यह वह दर है जिस पर RBI वाणिज्यिक बैंकों को सरकारी प्रतिभूतियों के बदले अल्पकालिक ऋण देता है। \n (b) An increase in Repo Rate helps in controlling inflation. / रेपो रेट में वृद्धि मुद्रास्फीति को नियंत्रित करने में मदद करती है। \n (c) It is a part of the qualitative tools of monetary policy. / यह मौद्रिक नीति के गुणात्मक उपकरणों का हिस्सा है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the 'Repo Rate': \n(a) It is the rate at which RBI lends money to commercial banks for short terms against government securities.\n(b) An increase in Repo Rate helps in controlling inflation.\n(c) It is a part of the qualitative tools of monetary policy.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a only / केवल a",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a only",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRepo rate is a quantitative (not qualitative) tool of monetary policy used by RBI to control liquidity.\n\n📖 हिंदी स्पष्टीकरण:\nरेपो रेट मौद्रिक नीति का एक मात्रात्मक (गुणात्मक नहीं) उपकरण है जिसका उपयोग RBI तरलता को नियंत्रित करने के लिए करता है।"
     },
     {
       "q_num": 4,
-      "question": "The 'Lorenz Curve' is used to measure which of the following? \n 'लोरेंज वक्र' (Lorenz Curve) का उपयोग निम्नलिखित में से किसे मापने के लिए किया जाता है?",
+      "question": "The 'Lorenz Curve' is used to measure which of the following?",
       "options": {
-        "a": "Inflation rate / मुद्रास्फीति की दर",
-        "b": "Unemployment level / बेरोजगारी का स्तर",
-        "c": "Income inequality / आय की असमानता",
-        "d": "Poverty line / गरीबी रेखा"
+        "a": "Inflation rate",
+        "b": "Unemployment level",
+        "c": "Income inequality",
+        "d": "Poverty line"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Lorenz Curve is a graphical representation of the distribution of income or wealth within a population.\n\n📖 हिंदी स्पष्टीकरण:\nलोरेंज वक्र जनसंख्या के भीतर आय या धन के वितरण का एक ग्राफिकल प्रतिनिधित्व है।"
     },
     {
       "q_num": 5,
-      "question": "Consider the following statements regarding 'Fiscal Deficit': \n 'राजकोषीय घाटे' (Fiscal Deficit) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is the difference between the government's total expenditure and its total receipts including borrowings. / यह सरकार के कुल व्यय और उधार सहित उसकी कुल प्राप्तियों के बीच का अंतर है। \n (b) It indicates the total borrowing requirements of the government. / यह सरकार की कुल उधार आवश्यकताओं को इंगित करता है। \n (c) A high fiscal deficit always leads to high economic growth. / उच्च राजकोषीय घाटा हमेशा उच्च आर्थिक विकास की ओर ले जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Fiscal Deficit': \n(a) It is the difference between the government's total expenditure and its total receipts including borrowings.\n(b) It indicates the total borrowing requirements of the government.\n(c) A high fiscal deficit always leads to high economic growth.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "a and b / a और b",
-        "d": "b and c / b और c"
+        "a": "a only",
+        "b": "b only",
+        "c": "a and b",
+        "d": "b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFiscal deficit excludes borrowings from total receipts. While it can fund growth, a very high deficit may lead to inflation and debt traps.\n\n📖 हिंदी स्पष्टीकरण:\nराजकोषीय घाटे में कुल प्राप्तियों से उधार को बाहर रखा जाता है। हालाँकि यह विकास को वित्तपोषित कर सकता है, लेकिन बहुत अधिक घाटा मुद्रास्फीति और ऋण जाल का कारण बन सकता है।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following is an example of a 'Capital Receipt' in the Union Budget?\n केंद्रीय बजट में निम्नलिखित में से कौन-सा 'पूंजीगत प्राप्ति' (Capital Receipt) का उदाहरण है?",
+      "question": "Which of the following is an example of a 'Capital Receipt' in the Union Budget?",
       "options": {
-        "a": "Interest received on loans given to states / राज्यों को दिए गए ऋण पर प्राप्त ब्याज",
-        "b": "Dividends and profits from PSUs / PSUs से लाभांश और लाभ",
-        "c": "Recovery of loans / ऋणों की वसूली",
-        "d": "GST collections / GST संग्रह"
+        "a": "Interest received on loans given to states",
+        "b": "Dividends and profits from PSUs / PSUs",
+        "c": "Recovery of loans",
+        "d": "GST collections"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCapital receipts either create a liability or reduce an asset. Recovery of loans reduces the financial assets of the government.\n\n📖 हिंदी स्पष्टीकरण:\nपूंजीगत प्राप्तियां या तो देनदारी पैदा करती हैं या संपत्ति को कम करती हैं। ऋणों की वसूली सरकार की वित्तीय संपत्ति को कम करती है।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following statements about 'Monetary Policy Committee' (MPC): \n 'मौद्रिक नीति समिति' (MPC) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is a 6-member committee headed by the Finance Minister. / यह 6 सदस्यीय समिति है जिसकी अध्यक्षता वित्त मंत्री करते हैं। \n (b) It decides the benchmark interest rates (Repo Rate) in India. / यह भारत में बेंचमार्क ब्याज दरों (रेपो रेट) का निर्धारण करती है। \n (c) The RBI Governor has a casting vote in case of a tie. / बराबरी की स्थिति में RBI गवर्नर के पास निर्णायक वोट होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Monetary Policy Committee' (MPC): \n(a) It is a 6-member committee headed by the Finance Minister.\n(b) It decides the benchmark interest rates (Repo Rate) in India.\n(c) The RBI Governor has a casting vote in case of a tie.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "c only / केवल c",
-        "d": "a and c / a और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "c only",
+        "d": "a and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe MPC is headed by the RBI Governor, not the Finance Minister. It has 3 members from RBI and 3 nominated by the Govt.\n\n📖 हिंदी स्पष्टीकरण:\nMPC की अध्यक्षता RBI गवर्नर करते हैं, वित्त मंत्री नहीं। इसमें RBI के 3 सदस्य और सरकार द्वारा नामित 3 सदस्य होते हैं।"
     },
     {
       "q_num": 8,
-      "question": "Which type of unemployment is common in the agricultural sector of India? \n भारत के कृषि क्षेत्र में किस प्रकार की बेरोजगारी आम है?",
+      "question": "Which type of unemployment is common in the agricultural sector of India?",
       "options": {
-        "a": "Structural Unemployment / संरचनात्मक बेरोजगारी",
-        "b": "Frictional Unemployment / प्रतिरोधात्मक बेरोजगारी",
-        "c": "Disguised Unemployment / प्रच्छन्न बेरोजगारी",
-        "d": "Cyclical Unemployment / चक्रीय बेरोजगारी"
+        "a": "Structural Unemployment",
+        "b": "Frictional Unemployment",
+        "c": "Disguised Unemployment",
+        "d": "Cyclical Unemployment"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDisguised unemployment occurs when more people are working than necessary, and their marginal productivity is zero.\n\n📖 हिंदी स्पष्टीकरण:\nप्रच्छन्न बेरोजगारी तब होती है जब आवश्यकता से अधिक लोग काम कर रहे होते हैं, और उनकी सीमांत उत्पादकता शून्य होती है।"
     },
     {
       "q_num": 9,
-      "question": "Consider the following statements regarding 'Direct Taxes': \n 'प्रत्यक्ष कर' (Direct Taxes) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The burden of the tax cannot be shifted to others. / कर का बोझ दूसरों पर नहीं डाला जा सकता। \n (b) Corporate tax is an example of an indirect tax. / कॉर्पोरेट टैक्स अप्रत्यक्ष कर का एक उदाहरण है। \n (c) They are progressive in nature. / ये प्रकृति में प्रगतिशील होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Direct Taxes': \n(a) The burden of the tax cannot be shifted to others.\n(b) Corporate tax is an example of an indirect tax.\n(c) They are progressive in nature.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and c",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCorporate tax is a direct tax. Direct taxes are progressive, meaning the tax rate increases as the income increases.\n\n📖 हिंदी स्पष्टीकरण:\nकॉर्पोरेट टैक्स एक प्रत्यक्ष कर है। प्रत्यक्ष कर प्रगतिशील होते हैं, जिसका अर्थ है कि आय बढ़ने के साथ कर की दर बढ़ती है।"
     },
     {
       "q_num": 10,
-      "question": "In the context of Banking, what does 'SLR' stand for? \n बैंकिंग के संदर्भ में, 'SLR' का पूर्ण रूप क्या है?",
+      "question": "In the context of Banking, what does 'SLR' stand for?",
       "options": {
-        "a": "Standard Liquid Ratio / स्टैंडर्ड लिक्विड रेशियो",
-        "b": "Statutory Liquidity Ratio / स्टेट्यूटरी लिक्विडिटी रेशियो",
-        "c": "Secondary Leverage Rate / सेकेंडरी लेवरेज रेट",
-        "d": "State Level Rate / स्टेट लेवल रेट"
+        "a": "Standard Liquid Ratio",
+        "b": "Statutory Liquidity Ratio",
+        "c": "Secondary Leverage Rate",
+        "d": "State Level Rate"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSLR is the minimum percentage of deposits that a commercial bank has to maintain in the form of liquid cash, gold or other securities.\n\n📖 हिंदी स्पष्टीकरण:\nSLR जमा का वह न्यूनतम प्रतिशत है जिसे एक वाणिज्यिक बैंक को तरल नकदी, सोने या अन्य प्रतिभूतियों के रूप में बनाए रखना होता है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding 'GNP' (Gross National Product): \n 'GNP' (सकल राष्ट्रीय उत्पाद) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It includes the value of goods and services produced by citizens of a country, regardless of location. / इसमें किसी देश के नागरिकों द्वारा उत्पादित वस्तुओं और सेवाओं का मूल्य शामिल है, चाहे स्थान कुछ भी हो। \n (b) It excludes the income earned by foreigners within the country. / इसमें देश के भीतर विदेशियों द्वारा अर्जित आय को बाहर रखा जाता है। \n (c) GNP = GDP + Net Factor Income from Abroad (NFIA). / GNP = GDP + विदेशों से प्राप्त शुद्ध कारक आय (NFIA)।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'GNP' (Gross National Product): \n'GNP' (\n(a) It includes the value of goods and services produced by citizens of a country, regardless of location.\n(b) It excludes the income earned by foreigners within the country.\n(c) GNP = GDP + Net Factor Income from Abroad (NFIA). / GNP = GDP +\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a only",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGNP measures the total output of a country's residents. It is calculated by adding NFIA to GDP.\n\n📖 हिंदी स्पष्टीकरण:\nGNP किसी देश के निवासियों के कुल उत्पादन को मापता है। इसकी गणना GDP में NFIA जोड़कर की जाती है।"
     },
     {
       "q_num": 12,
-      "question": "The 'Phillips Curve' shows the relationship between: \n 'फिलिप्स वक्र' (Phillips Curve) किसके बीच संबंध दर्शाता है?",
+      "question": "The 'Phillips Curve' shows the relationship between:",
       "options": {
-        "a": "Inflation and Unemployment / मुद्रास्फीति और बेरोजगारी",
-        "b": "Tax rates and Tax revenue / कर की दरें और कर राजस्व",
-        "c": "Inequality and Per capita income / असमानता और प्रति व्यक्ति आय",
-        "d": "Demand and Supply / मांग और आपूर्ति"
+        "a": "Inflation and Unemployment",
+        "b": "Tax rates and Tax revenue",
+        "c": "Inequality and Per capita income",
+        "d": "Demand and Supply"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Phillips Curve suggests an inverse relationship between the rate of unemployment and the rate of inflation in an economy.\n\n📖 हिंदी स्पष्टीकरण:\nफिलिप्स वक्र एक अर्थव्यवस्था में बेरोजगारी की दर और मुद्रास्फीति की दर के बीच विपरीत संबंध का सुझाव देता है।"
     },
     {
       "q_num": 13,
-      "question": "Consider the following statements about 'Invisible Balance' in Balance of Payments (BoP): \n भुगतान संतुलन (BoP) में 'अदृश्य संतुलन' (Invisible Balance) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It refers to the trade in services. / यह सेवाओं के व्यापार को संदर्भित करता है। \n (b) It includes transfer payments like remittances. / इसमें प्रेषण (Remittances) जैसे हस्तांतरण भुगतान शामिल हैं। \n (c) It is a part of the Capital Account. / यह पूंजी खाते का हिस्सा है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Invisible Balance' in Balance of Payments (BoP): \n(a) It refers to the trade in services.\n(b) It includes transfer payments like remittances.\n(c) It is a part of the Capital Account.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nInvisible balance is a part of the Current Account, not the Capital Account. It includes services, income, and transfers.\n\n📖 हिंदी स्पष्टीकरण:\nअदृश्य संतुलन चालू खाते (Current Account) का हिस्सा है, पूंजी खाते का नहीं। इसमें सेवाएं, आय और हस्तांतरण शामिल हैं।"
     },
     {
       "q_num": 14,
-      "question": "Which of the following is correct about 'Open Market Operations' (OMO)? \n 'ओपन मार्केट ऑपरेशंस' (OMO) के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct about 'Open Market Operations' (OMO)?",
       "options": {
-        "a": "Buying and selling of foreign currency by RBI. / RBI द्वारा विदेशी मुद्रा की खरीद और बिक्री।",
-        "b": "Buying and selling of government securities by RBI in the open market. / खुले बाजार में RBI द्वारा सरकारी प्रतिभूतियों की खरीद और बिक्री।",
-        "c": "Issuance of new currency notes by the government. / सरकार द्वारा नए करेंसी नोट जारी करना।",
-        "d": "Fixing of GST rates by the GST Council. / GST परिषद द्वारा GST दरों का निर्धारण।"
+        "a": "Buying and selling of foreign currency by RBI. / RBI",
+        "b": "Buying and selling of government securities by RBI in the open market.",
+        "c": "Issuance of new currency notes by the government.",
+        "d": "Fixing of GST rates by the GST Council. / GST"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nOMO is used by RBI to regulate the liquidity in the economy by buying or selling government securities.\n\n📖 हिंदी स्पष्टीकरण:\nOMO का उपयोग RBI द्वारा सरकारी प्रतिभूतियों को खरीदकर या बेचकर अर्थव्यवस्था में तरलता को नियंत्रित करने के लिए किया जाता है।"
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements regarding the 'Planning Commission' of India: \n भारत के 'योजना आयोग' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It was a constitutional body. / यह एक संवैधानिक निकाय था। \n (b) It was replaced by NITI Aayog on 1st January 2015. / इसे 1 जनवरी 2015 को नीति आयोग द्वारा प्रतिस्थापित किया गया था। \n (c) The Prime Minister was the ex-officio Chairman of the Planning Commission. / प्रधानमंत्री योजना आयोग के पदेन अध्यक्ष होते थे।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Planning Commission' of India: \n(a) It was a constitutional body.\n(b) It was replaced by NITI Aayog on 1st January 2015.\n(c) The Prime Minister was the ex-officio Chairman of the Planning Commission.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Planning Commission was a non-constitutional and non-statutory body (Executive body).\n\n📖 हिंदी स्पष्टीकरण:\nयोजना आयोग एक गैर-संवैधानिक और गैर-सांविधिक निकाय (कार्यकारी निकाय) था।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding 'Inflation Tax': \n 'मुद्रास्फीति कर' (Inflation Tax) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a legal tax levied by the government on luxury goods. / यह विलासिता की वस्तुओं पर सरकार द्वारा लगाया गया एक कानूनी कर है। \n (b) It is the economic loss suffered by holders of cash due to inflation. / यह मुद्रास्फीति के कारण नकद धारकों द्वारा सहा गया आर्थिक नुकसान है। \n (c) It results in the redistribution of wealth from creditors to debtors. / इसके परिणामस्वरूप धन का पुनर्वितरण लेनदारों (Creditors) से देनदारों (Debtors) की ओर होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Inflation Tax': \n(a) It is a legal tax levied by the government on luxury goods.\n(b) It is the economic loss suffered by holders of cash due to inflation.\n(c) It results in the redistribution of wealth from creditors to debtors.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nInflation tax is not a legal tax but a penalty for holding cash during inflation as its purchasing power declines. Debtors gain because they repay loans with \"cheaper\" money.\n\n📖 हिंदी स्पष्टीकरण:\nमुद्रास्फीति कर कोई कानूनी कर नहीं है, बल्कि मुद्रास्फीति के दौरान नकद रखने पर होने वाला नुकसान है क्योंकि क्रय शक्ति घट जाती है। देनदारों को लाभ होता है क्योंकि वे \"सस्ते\" पैसे से ऋण चुकाते हैं।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is correct regarding 'Monopolistic Competition'? \n 'एकाधिकारात्मक प्रतियोगिता' (Monopolistic Competition) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding 'Monopolistic Competition'?",
       "options": {
-        "a": "Large number of buyers and sellers with homogeneous products. / समरूप उत्पादों के साथ बड़ी संख्या में खरीदार और विक्रेता।",
-        "b": "Single seller with no close substitutes. / बिना किसी करीबी विकल्प वाला एकल विक्रेता।",
-        "c": "Many sellers offering differentiated products. / विभेदित (Differentiated) उत्पाद बेचने वाले कई विक्रेता।",
-        "d": "A few large firms dominating the market. / बाजार पर हावी होने वाली कुछ बड़ी फर्में।"
+        "a": "Large number of buyers and sellers with homogeneous products.",
+        "b": "Single seller with no close substitutes.",
+        "c": "Many sellers offering differentiated products.",
+        "d": "A few large firms dominating the market."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMonopolistic competition involves many sellers selling products that are similar but not identical (e.g., different brands of soap).\n\n📖 हिंदी स्पष्टीकरण:\nएकाधिकारात्मक प्रतियोगिता में कई विक्रेता ऐसे उत्पाद बेचते हैं जो समान होते हैं लेकिन एक जैसे नहीं (जैसे साबुन के विभिन्न ब्रांड)।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements about 'Consumer Price Index' (CPI): \n 'उपभोक्ता मूल्य सूचकांक' (CPI) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It measures the change in prices of goods and services at the retail level. / यह खुदरा स्तर पर वस्तुओं और सेवाओं की कीमतों में बदलाव को मापता है। \n (b) It is released by the Office of Economic Adviser (OEA). / यह आर्थिक सलाहकार कार्यालय (OEA) द्वारा जारी किया जाता है। \n (c) It includes the prices of services, unlike WPI. / WPI के विपरीत, इसमें सेवाओं की कीमतें शामिल होती हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Consumer Price Index' (CPI): \n(a) It measures the change in prices of goods and services at the retail level.\n(b) It is released by the Office of Economic Adviser (OEA).\n(c) It includes the prices of services, unlike WPI. / WPI\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only a / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only a"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCPI is released by the National Statistical Office (NSO). It includes both goods and services, whereas WPI (Wholesale Price Index) only includes goods.\n\n📖 हिंदी स्पष्टीकरण:\nCPI राष्ट्रीय सांख्यिकी कार्यालय (NSO) द्वारा जारी किया जाता है। इसमें वस्तुओं और सेवाओं दोनों को शामिल किया जाता है, जबकि WPI में केवल वस्तुएं शामिल होती हैं।"
     },
     {
       "q_num": 19,
-      "question": "Which curve represents the relationship between 'Tax Rates' and 'Total Tax Revenue'? \n कौन सा वक्र 'कर की दरों' और 'कुल कर राजस्व' के बीच संबंध को दर्शाता है?",
+      "question": "Which curve represents the relationship between 'Tax Rates' and 'Total Tax Revenue'?",
       "options": {
-        "a": "Engel Curve / एंजेल वक्र",
-        "b": "Laffer Curve / लैफर वक्र",
-        "c": "Kuznets Curve / कुजनेट वक्र",
-        "d": "Lorenz Curve / लोरेंज वक्र"
+        "a": "Engel Curve",
+        "b": "Laffer Curve",
+        "c": "Kuznets Curve",
+        "d": "Lorenz Curve"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Laffer Curve shows that there is an optimal tax rate that maximizes total tax revenue.\n\n📖 हिंदी स्पष्टीकरण:\nलैफर वक्र दर्शाता है कि एक इष्टतम कर दर होती है जो कुल कर राजस्व को अधिकतम करती है।"
     },
     {
       "q_num": 20,
-      "question": "Consider the following statements regarding 'Base Year': \n 'आधार वर्ष' (Base Year) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a normal year without any major fluctuations in prices. / यह कीमतों में किसी बड़े उतार-चढ़ाव के बिना एक सामान्य वर्ष होता है। \n (b) The current base year for GDP calculation in India is 2011-12. / भारत में GDP गणना के लिए वर्तमान आधार वर्ष 2011-12 है। \n (c) The index value of the base year is always taken as 100. / आधार वर्ष का सूचकांक मान हमेशा 100 लिया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Base Year': \n(a) It is a normal year without any major fluctuations in prices.\n(b) The current base year for GDP calculation in India is 2011-12.\n(c) The index value of the base year is always taken as 100.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. A base year is used as a benchmark for measuring real economic growth.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। वास्तविक आर्थिक विकास को मापने के लिए आधार वर्ष का उपयोग बेंचमार्क के रूप में किया जाता है।"
     },
     {
       "q_num": 21,
-      "question": "'Gresham’s Law' in economics relates to which of the following? \n अर्थशास्त्र में 'ग्रेशम का नियम' (Gresham’s Law) निम्नलिखित में से किससे संबंधित है?",
+      "question": "'Gresham’s Law' in economics relates to which of the following?",
       "options": {
-        "a": "Supply and Demand / आपूर्ति और मांग",
-        "b": "Circulation of currency / मुद्रा का संचलन",
-        "c": "Consumption patterns / उपभोग पैटर्न",
-        "d": "International trade / अंतर्राष्ट्रीय व्यापार"
+        "a": "Supply and Demand",
+        "b": "Circulation of currency",
+        "c": "Consumption patterns",
+        "d": "International trade"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGresham’s Law states that \"Bad money drives out good money\" from circulation when both are legal tender.\n\n📖 हिंदी स्पष्टीकरण:\nग्रेशम का नियम कहता है कि जब दोनों कानूनी मुद्रा हों, तो \"बुरी मुद्रा अच्छी मुद्रा को\" संचलन से बाहर कर देती है।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements about 'NITI Aayog': \n 'नीति आयोग' (NITI Aayog) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It follows a 'Top-Down' approach to planning. / यह योजना के लिए 'टॉप-डाउन' दृष्टिकोण का पालन करता है। \n (b) It is a policy think tank of the Government of India. / यह भारत सरकार का एक नीतिगत थिंक टैंक है। \n (c) The Governing Council includes Chief Ministers of all states. / शासी परिषद में सभी राज्यों के मुख्यमंत्री शामिल होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'NITI Aayog': \n(a) It follows a 'Top-Down' approach to planning.\n(b) It is a policy think tank of the Government of India.\n(c) The Governing Council includes Chief Ministers of all states.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNITI Aayog follows a 'Bottom-Up' approach, unlike the Planning Commission which followed a 'Top-Down' approach.\n\n📖 हिंदी स्पष्टीकरण:\nनीति आयोग 'बॉटम-अप' दृष्टिकोण का पालन करता है, योजना आयोग के विपरीत जो 'टॉप-डाउन' दृष्टिकोण अपनाता था।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following goods have a 'Positive Income Elasticity of Demand'? \n निम्नलिखित में से किन वस्तुओं में 'मांग की सकारात्मक आय लोच' (Positive Income Elasticity) होती है?",
+      "question": "Which of the following goods have a 'Positive Income Elasticity of Demand'?",
       "options": {
-        "a": "Inferior goods / घटिया वस्तुएं",
-        "b": "Normal goods / सामान्य वस्तुएं",
-        "c": "Giffen goods / गिफन वस्तुएं",
-        "d": "Essential goods / आवश्यक वस्तुएं"
+        "a": "Inferior goods",
+        "b": "Normal goods",
+        "c": "Giffen goods",
+        "d": "Essential goods"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFor normal goods, as income increases, the demand also increases, resulting in positive income elasticity.\n\n📖 हिंदी स्पष्टीकरण:\nसामान्य वस्तुओं के लिए, जैसे-जैसे आय बढ़ती है, मांग भी बढ़ती है, जिसके परिणामस्वरूप सकारात्मक आय लोच होती है।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following statements regarding 'Devaluation of Currency': \n 'मुद्रा के अवमूल्यन' (Devaluation) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a deliberate reduction in the value of a country's currency relative to foreign currencies. / यह विदेशी मुद्राओं की तुलना में देश की मुद्रा के मूल्य में जानबूझकर की गई कमी है। \n (b) It makes imports cheaper and exports costlier. / यह आयात को सस्ता और निर्यात को महंगा बनाता है। \n (c) It is usually done to improve the balance of trade. / यह आमतौर पर व्यापार संतुलन सुधारने के लिए किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Devaluation of Currency': \n(a) It is a deliberate reduction in the value of a country's currency relative to foreign currencies.\n(b) It makes imports cheaper and exports costlier.\n(c) It is usually done to improve the balance of trade.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "Only a / केवल a",
-        "c": "a and b / a और b",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and c",
+        "b": "Only a",
+        "c": "a and b",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDevaluation makes exports cheaper (more competitive) and imports costlier, which helps in reducing the trade deficit.\n\n📖 हिंदी स्पष्टीकरण:\nअवमूल्यन निर्यात को सस्ता (अधिक प्रतिस्पर्धी) और आयात को महंगा बनाता है, जिससे व्यापार घाटे को कम करने में मदद मिलती है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following constitutes 'Narrow Money' (M1)? \n निम्नलिखित में से कौन 'संकीर्ण मुद्रा' (Narrow Money - M1) का हिस्सा है?",
+      "question": "Which of the following constitutes 'Narrow Money' (M1)?",
       "options": {
-        "a": "Currency with Public + Demand Deposits / जनता के पास मुद्रा + मांग जमा",
-        "b": "Currency with Public + Time Deposits / जनता के पास मुद्रा + समय जमा",
-        "c": "M3 + Post office savings / M3 + डाकघर बचत",
-        "d": "Only Time Deposits / केवल समय जमा"
+        "a": "Currency with Public + Demand Deposits",
+        "b": "Currency with Public + Time Deposits",
+        "c": "M3 + Post office savings",
+        "d": "Only Time Deposits"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nM1 = Currency with Public + Demand Deposits (CASA) + Other deposits with RBI. It is the most liquid form of money.\nM1\n\n📖 हिंदी स्पष्टीकरण:\nजनता के पास मुद्रा + मांग जमा (CASA) + RBI के पास अन्य जमा। यह मुद्रा का सबसे तरल रूप है।"
     },
     {
       "q_num": 26,
-      "question": "Consider the following statements regarding 'Invisible Hand' theory: \n 'इनविजिबल हैंड' (Invisible Hand) सिद्धांत के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It was proposed by Adam Smith. / यह एडम स्मिथ द्वारा प्रस्तावित किया गया था। \n (b) It suggests that individuals' self-interest leads to social benefits in a free market. / यह सुझाव देता है कि मुक्त बाजार में व्यक्तियों का स्वार्थ सामाजिक लाभ की ओर ले जाता है। \n (c) It advocates for heavy government intervention in markets. / यह बाजारों में भारी सरकारी हस्तक्षेप की वकालत करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Invisible Hand' theory: \n(a) It was proposed by Adam Smith.\n(b) It suggests that individuals' self-interest leads to social benefits in a free market.\n(c) It advocates for heavy government intervention in markets.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b and c / b और c",
-        "c": "a and b / a और b",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a only",
+        "b": "b and c",
+        "c": "a and b",
+        "d": "All of the above"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAdam Smith’s 'Invisible Hand' advocates for a Laissez-faire economy with minimal government intervention.\n\n📖 हिंदी स्पष्टीकरण:\nएडम स्मिथ का 'इनविजिबल हैंड' न्यूनतम सरकारी हस्तक्षेप वाली अहस्तक्षेप (Laissez-faire) अर्थव्यवस्था की वकालत करता है।"
     },
     {
       "q_num": 27,
-      "question": "The 'Kuznets Curve' describes the relationship between: \n 'कुजनेट वक्र' (Kuznets Curve) किसके बीच संबंध का वर्णन करता है?",
+      "question": "The 'Kuznets Curve' describes the relationship between:",
       "options": {
-        "a": "Economic growth and environmental degradation. / आर्थिक विकास और पर्यावरणीय गिरावट।",
-        "b": "Economic growth and income inequality. / आर्थिक विकास और आय की असमानता।",
-        "c": "Unemployment and inflation. / बेरोजगारी और मुद्रास्फीति।",
-        "d": "Population growth and food supply. / जनसंख्या वृद्धि और खाद्य आपूर्ति।"
+        "a": "Economic growth and environmental degradation.",
+        "b": "Economic growth and income inequality.",
+        "c": "Unemployment and inflation.",
+        "d": "Population growth and food supply."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Kuznets curve suggests that as an economy develops, market forces first increase and then decrease economic inequality.\n\n📖 हिंदी स्पष्टीकरण:\nकुजनेट वक्र सुझाव देता है कि जैसे-जैसे अर्थव्यवस्था विकसित होती है, बाजार की ताकतें पहले आर्थिक असमानता को बढ़ाती हैं और फिर घटाती हैं।"
     },
     {
       "q_num": 28,
-      "question": "Consider the following statements about 'Microeconomics': \n 'व्यष्टि अर्थशास्त्र' (Microeconomics) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It deals with the behavior of individual economic units like households and firms. / यह घरों और फर्मों जैसी व्यक्तिगत आर्थिक इकाइयों के व्यवहार से संबंधित है। \n (b) It is also known as 'Price Theory'. / इसे 'कीमत सिद्धांत' (Price Theory) के रूप में भी जाना जाता है। \n (c) Determination of national income is a subject matter of microeconomics. / राष्ट्रीय आय का निर्धारण व्यष्टि अर्थशास्त्र की विषय-वस्तु है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Microeconomics': \n(a) It deals with the behavior of individual economic units like households and firms.\n(b) It is also known as 'Price Theory'.\n(c) Determination of national income is a subject matter of microeconomics.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "Only a / केवल a",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "Only a",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNational income determination is a part of Macroeconomics, not Microeconomics.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय आय का निर्धारण समष्टि अर्थशास्त्र (Macroeconomics) का हिस्सा है, व्यष्टि अर्थशास्त्र का नहीं।"
     },
     {
       "q_num": 29,
-      "question": "In a 'Liquidity Trap' situation, what happens to the demand for money? \n 'तरलता जाल' (Liquidity Trap) की स्थिति में, मुद्रा की मांग पर क्या प्रभाव पड़ता है?",
+      "question": "In a 'Liquidity Trap' situation, what happens to the demand for money?",
       "options": {
-        "a": "Demand for money becomes zero. / मुद्रा की मांग शून्य हो जाती है।",
-        "b": "Demand for money becomes perfectly inelastic. / मुद्रा की मांग पूरी तरह से बेलोचदार हो जाती है।",
-        "c": "Demand for money becomes perfectly elastic. / मुद्रा की मांग पूरी तरह से लोचदार हो जाती है।",
-        "d": "People start investing in the stock market. / लोग शेयर बाजार में निवेश करना शुरू कर देते हैं।"
+        "a": "Demand for money becomes zero.",
+        "b": "Demand for money becomes perfectly inelastic.",
+        "c": "Demand for money becomes perfectly elastic.",
+        "d": "People start investing in the stock market."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn a liquidity trap, interest rates are very low and people prefer to hold cash rather than investing, making money demand perfectly elastic.\n\n📖 हिंदी स्पष्टीकरण:\nतरलता जाल में, ब्याज दरें बहुत कम होती हैं और लोग निवेश करने के बजाय नकदी रखना पसंद करते हैं, जिससे मुद्रा की मांग पूरी तरह से लोचदार हो जाती है।"
     },
     {
       "q_num": 30,
-      "question": "Consider the following statements regarding 'Fixed Exchange Rate': \n 'निश्चित विनिमय दर' (Fixed Exchange Rate) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The value of the currency is determined by market forces of demand and supply. / मुद्रा का मूल्य मांग और आपूर्ति की बाजार शक्तियों द्वारा निर्धारित किया जाता है। \n (b) The value is pegged to another currency or gold by the government. / सरकार द्वारा मूल्य को दूसरी मुद्रा या सोने से जोड़ा (Pegged) जाता है। \n (c) It requires the central bank to maintain large foreign exchange reserves. / इसके लिए केंद्रीय बैंक को बड़े विदेशी मुद्रा भंडार बनाए रखने की आवश्यकता होती है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Fixed Exchange Rate': \n(a) The value of the currency is determined by market forces of demand and supply.\n(b) The value is pegged to another currency or gold by the government.\n(c) It requires the central bank to maintain large foreign exchange reserves.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only b / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only b"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMarket forces determine values in a 'Floating Exchange Rate' system. In a fixed system, the government/central bank intervenes.\n\n📖 हिंदी स्पष्टीकरण:\n'फ्लोटिंग विनिमय दर' प्रणाली में बाजार की शक्तियां मूल्य निर्धारित करती हैं। निश्चित प्रणाली में, सरकार/केंद्रीय बैंक हस्तक्षेप करते हैं।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements regarding 'Fiscal Policy' in India: \n भारत में 'राजकोषीय नीति' (Fiscal Policy) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is formulated by the Reserve Bank of India. / यह भारतीय रिजर्व बैंक द्वारा तैयार की जाती है। \n (b) Its main tools are taxation and public expenditure. / इसके मुख्य उपकरण कराधान और सार्वजनिक व्यय हैं। \n (c) It aims to achieve economic stability and growth. / इसका उद्देश्य आर्थिक स्थिरता और विकास प्राप्त करना है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Fiscal Policy' in India: \n(a) It is formulated by the Reserve Bank of India.\n(b) Its main tools are taxation and public expenditure.\n(c) It aims to achieve economic stability and growth.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFiscal policy is formulated by the Ministry of Finance (Government), not the RBI. RBI formulates the Monetary Policy.\n\n📖 हिंदी स्पष्टीकरण:\nराजकोषीय नीति वित्त मंत्रालय (सरकार) द्वारा तैयार की जाती है, न कि RBI द्वारा। RBI मौद्रिक नीति तैयार करता है।"
     },
     {
       "q_num": 32,
-      "question": "Which of the following is correct about 'Masala Bonds'? \n 'मसाला बॉण्ड' (Masala Bonds) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct about 'Masala Bonds'?",
       "options": {
-        "a": "They are rupee-denominated bonds issued in overseas markets. / ये विदेशी बाजारों में जारी किए गए रुपये के मूल्यवर्ग वाले बॉण्ड हैं।",
-        "b": "They are dollar-denominated bonds issued in India. / ये भारत में जारी किए गए डॉलर के मूल्यवर्ग वाले बॉण्ड हैं।",
-        "c": "They are used exclusively for the spice trade. / इनका उपयोग विशेष रूप से मसालों के व्यापार के लिए किया जाता है।",
-        "d": "They are issued by the RBI only. / ये केवल RBI द्वारा जारी किए जाते हैं।"
+        "a": "They are rupee-denominated bonds issued in overseas markets.",
+        "b": "They are dollar-denominated bonds issued in India.",
+        "c": "They are used exclusively for the spice trade.",
+        "d": "They are issued by the RBI only."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMasala Bonds are bonds issued outside India by Indian entities, denominated in Indian Rupees rather than local currency.\n\n📖 हिंदी स्पष्टीकरण:\nमसाला बॉण्ड भारतीय संस्थाओं द्वारा भारत के बाहर जारी किए गए बॉण्ड हैं, जो स्थानीय मुद्रा के बजाय भारतीय रुपये में होते हैं।"
     },
     {
       "q_num": 33,
-      "question": "Consider the following statements about the 'World Bank' and 'IMF': \n 'विश्व बैंक' (World Bank) और 'IMF' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) IMF provides loans to meet Balance of Payment (BoP) crises. / IMF भुगतान संतुलन (BoP) संकट को दूर करने के लिए ऋण प्रदान करता है। \n (b) World Bank provides long-term loans for developmental projects. / विश्व बैंक विकासात्मक परियोजनाओं के लिए दीर्घकालिक ऋण प्रदान करता है। \n (c) Both organizations are headquartered in Geneva. / दोनों संगठनों का मुख्यालय जिनेवा में है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the 'World Bank' and 'IMF': \n(a) IMF provides loans to meet Balance of Payment (BoP) crises. / IMF\n(b) World Bank provides long-term loans for developmental projects.\n(c) Both organizations are headquartered in Geneva.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only a / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only a"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBoth the World Bank and IMF are headquartered in Washington D.C., USA, not Geneva.\n\n📖 हिंदी स्पष्टीकरण:\nविश्व बैंक और IMF दोनों का मुख्यालय वाशिंगटन डी.सी., अमेरिका में है, जिनेवा में नहीं।"
     },
     {
       "q_num": 34,
-      "question": "The 'Engel's Law' states the relationship between: \n 'एंजेल का नियम' (Engel's Law) किसके बीच संबंध बताता है?",
+      "question": "The 'Engel's Law' states the relationship between:",
       "options": {
-        "a": "Income level and expenditure on food / आय का स्तर और भोजन पर व्यय",
-        "b": "Tax rates and revenue / कर की दरें और राजस्व",
-        "c": "Price and demand / कीमत और मांग",
-        "d": "Inflation and unemployment / मुद्रास्फीति और बेरोजगारी"
+        "a": "Income level and expenditure on food",
+        "b": "Tax rates and revenue",
+        "c": "Price and demand",
+        "d": "Inflation and unemployment"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nEngel's Law states that as income rises, the proportion of income spent on food falls, even if actual expenditure on food rises.\n\n📖 हिंदी स्पष्टीकरण:\nएंजेल का नियम कहता है कि जैसे-जैसे आय बढ़ती है, भोजन पर खर्च की जाने वाली आय का अनुपात गिरता जाता है, भले ही भोजन पर वास्तविक खर्च बढ़ जाए।"
     },
     {
       "q_num": 35,
-      "question": "Consider the following statements regarding 'Primary Deficit': \n 'प्राथमिक घाटे' (Primary Deficit) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is calculated by subtracting interest payments from Fiscal Deficit. / इसकी गणना राजकोषीय घाटे में से ब्याज भुगतान घटाकर की जाती है। \n (b) Zero primary deficit means the government has to borrow only to pay back interest. / शून्य प्राथमिक घाटे का अर्थ है कि सरकार को केवल ब्याज चुकाने के लिए उधार लेना पड़ता है। \n (c) It includes the entire borrowing requirement of the government. / इसमें सरकार की पूरी उधार आवश्यकता शामिल होती है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Primary Deficit': \n(a) It is calculated by subtracting interest payments from Fiscal Deficit.\n(b) Zero primary deficit means the government has to borrow only to pay back interest.\n(c) It includes the entire borrowing requirement of the government.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "Only b / केवल b"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "Only b"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPrimary Deficit = Fiscal Deficit - Interest Payments. It shows the borrowing requirement excluding interest on previous loans.\n\n📖 हिंदी स्पष्टीकरण:\nप्राथमिक घाटा = राजकोषीय घाटा - ब्याज भुगतान। यह पिछले ऋणों पर ब्याज को छोड़कर उधार की आवश्यकता को दर्शाता है।"
     },
     {
       "q_num": 36,
-      "question": "Which of the following is an example of an 'Automatic Stabilizer' in an economy? \n निम्नलिखित में से कौन अर्थव्यवस्था में 'स्वचालित स्थिरक' (Automatic Stabilizer) का उदाहरण है?",
+      "question": "Which of the following is an example of an 'Automatic Stabilizer' in an economy?",
       "options": {
-        "a": "Open Market Operations / ओपन मार्केट ऑपरेशंस",
-        "b": "Progressive Income Tax / प्रगतिशील आयकर",
-        "c": "Foreign Direct Investment / प्रत्यक्ष विदेशी निवेश",
-        "d": "Repo Rate / रेपो रेट"
+        "a": "Open Market Operations",
+        "b": "Progressive Income Tax",
+        "c": "Foreign Direct Investment",
+        "d": "Repo Rate"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAutomatic stabilizers are features of fiscal policy (like progressive taxes and welfare benefits) that offset fluctuations in economic activity without direct govt intervention.\n\n📖 हिंदी स्पष्टीकरण:\nस्वचालित स्थिरक राजकोषीय नीति की विशेषताएं हैं (जैसे प्रगतिशील कर और कल्याणकारी लाभ) जो सीधे सरकारी हस्तक्षेप के बिना आर्थिक गतिविधि में उतार-चढ़ाव को संतुलित करती हैं।"
     },
     {
       "q_num": 37,
-      "question": "Consider the following statements about 'Capital Adequacy Ratio' (CAR): \n 'पूंजी पर्याप्तता अनुपात' (CAR) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is the ratio of a bank's capital to its risk-weighted assets. / यह बैंक की पूंजी का उसकी जोखिम-भारित संपत्ति (Risk-weighted assets) से अनुपात है। \n (b) It is decided by the Basel Committee on Banking Supervision. / यह बैंकिंग पर्यवेक्षण पर बेसल समिति द्वारा तय किया जाता है। \n (c) A higher CAR makes a bank more vulnerable to financial shocks. / उच्च CAR बैंक को वित्तीय झटकों के प्रति अधिक संवेदनशील बनाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Capital Adequacy Ratio' (CAR): \n(a) It is the ratio of a bank's capital to its risk-weighted assets.\n(b) It is decided by the Basel Committee on Banking Supervision.\n(c) A higher CAR makes a bank more vulnerable to financial shocks.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nA higher CAR actually makes a bank more stable and less vulnerable to shocks as it acts as a cushion.\n\n📖 हिंदी स्पष्टीकरण:\nएक उच्च CAR वास्तव में बैंक को अधिक स्थिर बनाता है और झटकों के प्रति कम संवेदनशील बनाता है क्योंकि यह सुरक्षा कवच के रूप में कार्य करता है।"
     },
     {
       "q_num": 38,
-      "question": "'Blue Chip' companies refer to: \n 'ब्लू चिप' (Blue Chip) कंपनियां किन्हें संदर्भित करती हैं?",
+      "question": "'Blue Chip' companies refer to:",
       "options": {
-        "a": "Companies dealing in blue-colored products. / नीले रंग के उत्पाद बेचने वाली कंपनियां।",
-        "b": "Newly started tech startups. / नई शुरू हुई टेक स्टार्टअप कंपनियां।",
-        "c": "Well-established, financially sound, and large-cap companies. / अच्छी तरह से स्थापित, वित्तीय रूप से सुदृढ़ और लार्ज-कैप कंपनियां।",
-        "d": "Companies that are in loss. / वे कंपनियां जो घाटे में हैं।"
+        "a": "Companies dealing in blue-colored products.",
+        "b": "Newly started tech startups.",
+        "c": "Well-established, financially sound, and large-cap companies.",
+        "d": "Companies that are in loss."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBlue chip companies are large, reputable, and financially stable companies that have a history of reliable earnings.\n\n📖 हिंदी स्पष्टीकरण:\nब्लू चिप कंपनियां बड़ी, प्रतिष्ठित और वित्तीय रूप से स्थिर कंपनियां होती हैं जिनका विश्वसनीय कमाई का इतिहास होता है।"
     },
     {
       "q_num": 39,
-      "question": "Consider the following statements regarding 'Goods and Services Tax' (GST): \n 'वस्तु एवं सेवा कर' (GST) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a destination-based consumption tax. / यह एक गंतव्य-आधारित (Destination-based) उपभोग कर है। \n (b) Alcohol for human consumption is kept outside the purview of GST. / मानव उपभोग के लिए शराब को GST के दायरे से बाहर रखा गया है। \n (c) The GST Council is chaired by the Governor of RBI. / GST परिषद की अध्यक्षता RBI के गवर्नर करते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Goods and Services Tax' (GST): \n(a) It is a destination-based consumption tax.\n(b) Alcohol for human consumption is kept outside the purview of GST.\n(c) The GST Council is chaired by the Governor of RBI. / GST\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe GST Council is chaired by the Union Finance Minister, not the RBI Governor.\n\n📖 हिंदी स्पष्टीकरण:\nGST परिषद की अध्यक्षता केंद्रीय वित्त मंत्री करते हैं, न कि RBI गवर्नर।"
     },
     {
       "q_num": 40,
-      "question": "In which type of economy do both the public and private sectors coexist? \n किस प्रकार की अर्थव्यवस्था में सार्वजनिक और निजी क्षेत्र दोनों सह-अस्तित्व में होते हैं?",
+      "question": "In which type of economy do both the public and private sectors coexist?",
       "options": {
-        "a": "Capitalist Economy / पूंजीवादी अर्थव्यवस्था",
-        "b": "Socialist Economy / समाजवादी अर्थव्यवस्था",
-        "c": "Mixed Economy / मिश्रित अर्थव्यवस्था",
-        "d": "Command Economy / कमांड अर्थव्यवस्था"
+        "a": "Capitalist Economy",
+        "b": "Socialist Economy",
+        "c": "Mixed Economy",
+        "d": "Command Economy"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA mixed economy, like India's, features characteristics of both capitalism and socialism.\n\n📖 हिंदी स्पष्टीकरण:\nएक मिश्रित अर्थव्यवस्था, जैसे भारत की, में पूंजीवाद और समाजवाद दोनों की विशेषताएं होती हैं।"
     },
     {
       "q_num": 41,
-      "question": "Consider the following statements about 'Special Drawing Rights' (SDR): \n 'विशेष आहरण अधिकार' (SDR) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is a currency issued by the World Bank. / यह विश्व बैंक द्वारा जारी की गई एक मुद्रा है। \n (b) It is also known as 'Paper Gold'. / इसे 'पेपर गोल्ड' के नाम से भी जाना जाता है। \n (c) Its value is based on a basket of five major currencies. / इसका मूल्य पांच प्रमुख मुद्राओं की टोकरी पर आधारित है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Special Drawing Rights' (SDR): \n(a) It is a currency issued by the World Bank.\n(b) It is also known as 'Paper Gold'.\n(c) Its value is based on a basket of five major currencies.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only b / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only b"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSDR is an international reserve asset created by the IMF, not the World Bank. It is not a currency but a claim to currency.\n\n📖 हिंदी स्पष्टीकरण:\nSDR आईएमएफ (IMF) द्वारा निर्मित एक अंतरराष्ट्रीय आरक्षित संपत्ति है, विश्व बैंक द्वारा नहीं। यह मुद्रा नहीं है बल्कि मुद्रा का दावा है।"
     },
     {
       "q_num": 42,
-      "question": "Which of the following is correct regarding 'Gini Coefficient'? \n 'गिनी गुणांक' (Gini Coefficient) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding 'Gini Coefficient'?",
       "options": {
-        "a": "A value of 0 represents perfect inequality. / 0 का मान पूर्ण असमानता को दर्शाता है।",
-        "b": "A value of 1 represents perfect equality. / 1 का मान पूर्ण समानता को दर्शाता है।",
-        "c": "It is derived from the Lorenz Curve. / यह लोरेंज वक्र से प्राप्त किया जाता है।",
-        "d": "It measures the rate of inflation. / यह मुद्रास्फीति की दर को मापता है।"
+        "a": "A value of 0 represents perfect inequality. / 0",
+        "b": "A value of 1 represents perfect equality. / 1",
+        "c": "It is derived from the Lorenz Curve.",
+        "d": "It measures the rate of inflation."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn Gini Coefficient, 0 represents perfect equality and 1 represents perfect inequality. It is the ratio of areas on the Lorenz Curve diagram.\n\n📖 हिंदी स्पष्टीकरण:\nगिनी गुणांक में, 0 पूर्ण समानता को दर्शाता है और 1 पूर्ण असमानता को। यह लोरेंज वक्र आरेख पर क्षेत्रों का अनुपात है।"
     },
     {
       "q_num": 43,
-      "question": "Consider the following statements regarding 'Non-Performing Assets' (NPA): \n 'गैर-निष्पादित संपत्ति' (NPA) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) A loan is classified as NPA when the principal or interest payment remains overdue for more than 90 days. / एक ऋण को NPA के रूप में वर्गीकृत किया जाता है जब मूलधन या ब्याज का भुगतान 90 दिनों से अधिक समय तक बकाया रहता है। \n (b) 'Sub-standard assets' are those which have remained NPA for less than or equal to 12 months. / 'सब-स्टैंडर्ड एसेट्स' वे हैं जो 12 महीने या उससे कम समय तक NPA रहे हैं। \n (c) High NPA improves the lending capacity of banks. / उच्च NPA बैंकों की ऋण देने की क्षमता में सुधार करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Non-Performing Assets' (NPA): \n(a) A loan is classified as NPA when the principal or interest payment remains overdue for more than 90 days.\n(b) 'Sub-standard assets' are those which have remained NPA for less than or equal to 12 months. / '\n(c) High NPA improves the lending capacity of banks.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only a / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only a"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHigh NPA reduces the liquidity and lending capacity of banks as their capital gets blocked.\n\n📖 हिंदी स्पष्टीकरण:\nउच्च NPA बैंकों की तरलता और ऋण देने की क्षमता को कम करता है क्योंकि उनकी पूंजी अवरुद्ध हो जाती है।"
     },
     {
       "q_num": 44,
-      "question": "The 'Paradox of Thrift' was popularized by which economist? \n 'बचत का विरोधाभास' (Paradox of Thrift) किस अर्थशास्त्री द्वारा लोकप्रिय बनाया गया था?",
+      "question": "The 'Paradox of Thrift' was popularized by which economist?",
       "options": {
-        "a": "Adam Smith / एडम स्मिथ",
-        "b": "J.M. Keynes / जे.एम. कीन्स",
-        "c": "David Ricardo / डेविड रिकार्डो",
-        "d": "Milton Friedman / मिल्टन फ्रीडमैन"
+        "a": "Adam Smith",
+        "b": "J.M. Keynes",
+        "c": "David Ricardo",
+        "d": "Milton Friedman"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKeynes argued that if everyone tries to save more during a recession, aggregate demand falls, which leads to lower total savings in the economy.\n\n📖 हिंदी स्पष्टीकरण:\nकीन्स ने तर्क दिया कि यदि मंदी के दौरान हर कोई अधिक बचत करने की कोशिश करता है, तो कुल मांग गिर जाती है, जिससे अर्थव्यवस्था में कुल बचत कम हो जाती है।"
     },
     {
       "q_num": 45,
-      "question": "Consider the following statements about 'Micro, Small and Medium Enterprises' (MSME) in India: \n भारत में 'सूक्ष्म, लघु और मध्यम उद्यम' (MSME) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Their classification is based on investment in plant & machinery and annual turnover. / उनका वर्गीकरण संयंत्र और मशीनरी में निवेश और वार्षिक टर्नओवर पर आधारित है। \n (b) For a 'Micro' enterprise, investment should not exceed ₹1 crore and turnover should not exceed ₹5 crore. / 'सूक्ष्म' उद्यम के लिए, निवेश ₹1 करोड़ से अधिक और टर्नओवर ₹5 करोड़ से अधिक नहीं होना चाहिए। \n (c) MSMEs are often called the backbone of the Indian economy. / MSME को अक्सर भारतीय अर्थव्यवस्था की रीढ़ कहा जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Micro, Small and Medium Enterprises' (MSME) in India: \n(a) Their classification is based on investment in plant & machinery and annual turnover.\n(b) For a 'Micro' enterprise, investment should not exceed ₹1 crore and turnover should not exceed ₹5 crore. / '\n(c) MSMEs are often called the backbone of the Indian economy. / MSME\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct according to the revised MSME definition effective from July 2020.\n\n📖 हिंदी स्पष्टीकरण:\nजुलाई 2020 से प्रभावी संशोधित MSME परिभाषा के अनुसार सभी कथन सही हैं।"
     },
     {
       "q_num": 46,
-      "question": "Consider the following statements regarding 'Bull' and 'Bear' in the Stock Market: \n शेयर बाजार में 'बुल' (Bull) और 'बेयर' (Bear) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) A 'Bull' is an investor who expects the prices of securities to rise. / 'बुल' वह निवेशक है जो प्रतिभूतियों की कीमतों में वृद्धि की उम्मीद करता है। \n (b) A 'Bear' is an investor who expects the prices of securities to fall. / 'बेयर' वह निवेशक है जो प्रतिभूतियों की कीमतों में गिरावट की उम्मीद करता है। \n (c) 'Bulls' are generally pessimistic about the economy. / 'बुल' आमतौर पर अर्थव्यवस्था के बारे में निराशावादी होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Bull' and 'Bear' in the Stock Market: \n(a) A 'Bull' is an investor who expects the prices of securities to rise. / '\n(b) A 'Bear' is an investor who expects the prices of securities to fall. / '\n(c) 'Bulls' are generally pessimistic about the economy. / '\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only b / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only b"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBulls are optimistic (expecting growth), while Bears are pessimistic (expecting decline).\n\n📖 हिंदी स्पष्टीकरण:\nबुल आशावादी होते हैं (विकास की उम्मीद करते हैं), जबकि बेयर निराशावादी होते हैं (गिरावट की उम्मीद करते हैं)।"
     },
     {
       "q_num": 47,
-      "question": "Which of the following is correct regarding 'Hot Money'? \n 'हॉट मनी' (Hot Money) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding 'Hot Money'?",
       "options": {
-        "a": "Money that is physically hot due to printing. / वह धन जो छपाई के कारण भौतिक रूप से गर्म है।",
-        "b": "Capital that moves frequently and quickly between financial markets for higher interest rates. / वह पूंजी जो उच्च ब्याज दरों के लिए वित्तीय बाजारों के बीच बार-बार और जल्दी स्थानांतरित होती है।",
-        "c": "Money earned through illegal sources. / अवैध स्रोतों से कमाया गया धन।",
-        "d": "Money issued by the government during an emergency. / आपातकाल के दौरान सरकार द्वारा जारी किया गया धन।"
+        "a": "Money that is physically hot due to printing.",
+        "b": "Capital that moves frequently and quickly between financial markets for higher interest rates.",
+        "c": "Money earned through illegal sources.",
+        "d": "Money issued by the government during an emergency."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHot money refers to short-term capital that flows into a country to take advantage of favorable interest rates or exchange rates but leaves quickly at the first sign of trouble.\n\n📖 हिंदी स्पष्टीकरण:\nहॉट मनी का तात्पर्य अल्पकालिक पूंजी से है जो अनुकूल ब्याज दरों या विनिमय दरों का लाभ उठाने के लिए किसी देश में आती है लेकिन परेशानी का संकेत मिलते ही जल्दी निकल जाती है।"
     },
     {
       "q_num": 48,
-      "question": "Consider the following statements about 'Frictional Unemployment': \n 'प्रतिरोधात्मक बेरोजगारी' (Frictional Unemployment) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It occurs when people are between jobs or are looking for their first job. / यह तब होता है जब लोग एक नौकरी से दूसरी नौकरी के बीच होते हैं या अपनी पहली नौकरी की तलाश में होते हैं। \n (b) It is a permanent type of unemployment. / यह एक स्थायी प्रकार की बेरोजगारी है। \n (c) It is also known as search unemployment. / इसे 'सर्च अनइम्प्लॉयमेंट' के नाम से भी जाना जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Frictional Unemployment': \n(a) It occurs when people are between jobs or are looking for their first job.\n(b) It is a permanent type of unemployment.\n(c) It is also known as search unemployment.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only a / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only a"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFrictional unemployment is temporary and exists even in a healthy economy as people transition between roles.\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिरोधात्मक बेरोजगारी अस्थायी होती है और एक स्वस्थ अर्थव्यवस्था में भी मौजूद रहती है क्योंकि लोग भूमिकाओं के बीच संक्रमण करते हैं।"
     },
     {
       "q_num": 49,
-      "question": "The 'J-Curve' effect describes the impact of which of the following? \n 'J-वक्र' (J-Curve) प्रभाव निम्नलिखित में से किसके प्रभाव का वर्णन करता है?",
+      "question": "The 'J-Curve' effect describes the impact of which of the following?",
       "options": {
-        "a": "Impact of tax cuts on revenue. / राजस्व पर कर कटौती का प्रभाव।",
-        "b": "Impact of currency devaluation on trade balance. / व्यापार संतुलन पर मुद्रा अवमूल्यन का प्रभाव।",
-        "c": "Relationship between inflation and growth. / मुद्रास्फीति और विकास के बीच संबंध।",
-        "d": "Population growth over time. / समय के साथ जनसंख्या वृद्धि।"
+        "a": "Impact of tax cuts on revenue.",
+        "b": "Impact of currency devaluation on trade balance.",
+        "c": "Relationship between inflation and growth.",
+        "d": "Population growth over time."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe J-Curve shows that after currency devaluation, a country's trade deficit initially worsens before improving in the long run.\n\n📖 हिंदी स्पष्टीकरण:\nJ-वक्र दर्शाता है कि मुद्रा अवमूल्यन के बाद, किसी देश का व्यापार घाटा लंबे समय में सुधरने से पहले शुरू में और खराब हो जाता है।"
     },
     {
       "q_num": 50,
-      "question": "Consider the following statements regarding 'Veblen Goods': \n 'वेबलेन वस्तुओं' (Veblen Goods) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Their demand increases as the price increases. / कीमत बढ़ने पर इनकी मांग बढ़ती है। \n (b) They are generally luxury goods that serve as status symbols. / ये आम तौर पर विलासिता की वस्तुएं हैं जो स्टेटस सिंबल के रूप में काम करती हैं। \n (c) They follow the standard Law of Demand. / ये मांग के मानक नियम का पालन करते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Veblen Goods': \n(a) Their demand increases as the price increases.\n(b) They are generally luxury goods that serve as status symbols.\n(c) They follow the standard Law of Demand.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only b / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only b"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nVeblen goods violate the Law of Demand because their high price makes them more desirable as a status symbol (e.g., luxury cars).\n\n📖 हिंदी स्पष्टीकरण:\nवेबलेन वस्तुएं मांग के नियम का उल्लंघन करती हैं क्योंकि उनकी उच्च कीमत उन्हें स्टेटस सिंबल (जैसे लक्जरी कार) के रूप में अधिक वांछनीय बनाती है।"
     },
     {
       "q_num": 51,
-      "question": "Which of the following is NOT a component of the 'Capital Account' of BoP? \n निम्नलिखित में से कौन भुगतान संतुलन (BoP) के 'पूंजी खाते' (Capital Account) का घटक नहीं है?",
+      "question": "Which of the following is NOT a component of the 'Capital Account' of BoP?",
       "options": {
-        "a": "Foreign Direct Investment (FDI) / प्रत्यक्ष विदेशी निवेश",
-        "b": "External Commercial Borrowings (ECB) / बाहरी वाणिज्यिक उधार",
-        "c": "Remittances from abroad / विदेश से प्रेषित धन (Remittances)",
-        "d": "Portfolio Investment / पोर्टफोलियो निवेश"
+        "a": "Foreign Direct Investment (FDI)",
+        "b": "External Commercial Borrowings (ECB)",
+        "c": "Remittances from abroad",
+        "d": "Portfolio Investment"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nRemittances are part of the 'Current Account' (under Unilateral Transfers), not the Capital Account.\n\n📖 हिंदी स्पष्टीकरण:\nप्रेषण (Remittances) 'चालू खाते' (एकपक्षीय हस्तांतरण के तहत) का हिस्सा हैं, पूंजी खाते का नहीं।"
     },
     {
       "q_num": 52,
-      "question": "Consider the following statements about 'Core Inflation': \n 'कोर मुद्रास्फीति' (Core Inflation) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It measures inflation excluding food and fuel components. / यह भोजन और ईंधन घटकों को छोड़कर मुद्रास्फीति को मापता है। \n (b) It is more volatile than Headline Inflation. / यह हेडलाइन मुद्रास्फीति की तुलना में अधिक अस्थिर है। \n (c) It reflects the long-term trend in the price level. / यह मूल्य स्तर में दीर्घकालिक प्रवृत्ति को दर्शाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Core Inflation': \n(a) It measures inflation excluding food and fuel components.\n(b) It is more volatile than Headline Inflation.\n(c) It reflects the long-term trend in the price level.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCore inflation is LESS volatile because it excludes items like food and energy which have frequent price fluctuations.\n\n📖 हिंदी स्पष्टीकरण:\nकोर मुद्रास्फीति कम अस्थिर होती है क्योंकि इसमें भोजन और ऊर्जा जैसी वस्तुएं शामिल नहीं होतीं जिनकी कीमतों में बार-बार उतार-चढ़ाव होता है।"
     },
     {
       "q_num": 53,
-      "question": "What is 'Disinvestment'? \n 'विनिवेश' (Disinvestment) क्या है?",
+      "question": "What is 'Disinvestment'?",
       "options": {
-        "a": "Increase in government investment in PSUs. / PSUs में सरकारी निवेश में वृद्धि।",
-        "b": "Selling of government-held shares in public sector enterprises. / सार्वजनिक क्षेत्र के उद्यमों में सरकार के पास मौजूद शेयरों की बिक्री।",
-        "c": "Closing down of all private companies. / सभी निजी कंपनियों को बंद करना।",
-        "d": "Borrowing money from the World Bank. / विश्व बैंक से पैसा उधार लेना।"
+        "a": "Increase in government investment in PSUs. / PSUs",
+        "b": "Selling of government-held shares in public sector enterprises.",
+        "c": "Closing down of all private companies.",
+        "d": "Borrowing money from the World Bank."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDisinvestment involves the government selling its stake in PSUs to private entities or the public to raise funds.\n\n📖 हिंदी स्पष्टीकरण:\nविनिवेश में सरकार द्वारा धन जुटाने के लिए PSUs में अपनी हिस्सेदारी निजी संस्थाओं या जनता को बेचना शामिल है।"
     },
     {
       "q_num": 54,
-      "question": "Consider the following statements regarding 'Normal Goods': \n 'सामान्य वस्तुओं' (Normal Goods) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) There is a positive relationship between income and demand for these goods. / इन वस्तुओं की आय और मांग के बीच सकारात्मक संबंध होता है। \n (b) Income elasticity of demand for normal goods is always negative. / सामान्य वस्तुओं के लिए मांग की आय लोच हमेशा नकारात्मक होती है। \n (c) As a person becomes richer, they buy more of these goods. / जैसे-जैसे व्यक्ति अमीर होता है, वह इन वस्तुओं को अधिक खरीदता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Normal Goods': \n(a) There is a positive relationship between income and demand for these goods.\n(b) Income elasticity of demand for normal goods is always negative.\n(c) As a person becomes richer, they buy more of these goods.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "Only a / केवल a"
+        "a": "a and b",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "Only a"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIncome elasticity for normal goods is positive (Greater than 0). For inferior goods, it is negative.\n\n📖 हिंदी स्पष्टीकरण:\nसामान्य वस्तुओं के लिए आय लोच सकारात्मक (0 से अधिक) होती है। घटिया वस्तुओं के लिए यह नकारात्मक होती है।"
     },
     {
       "q_num": 55,
-      "question": "In the context of the Indian Economy, 'Term Loans' in banking usually refer to loans with a tenure of: \n भारतीय अर्थव्यवस्था के संदर्भ में, बैंकिंग में 'सावधि ऋण' (Term Loans) आमतौर पर कितनी अवधि के ऋणों को संदर्भित करते हैं?",
+      "question": "In the context of the Indian Economy, 'Term Loans' in banking usually refer to loans with a tenure of:",
       "options": {
-        "a": "Less than 1 year / 1 वर्ष से कम",
-        "b": "More than 1 year / 1 वर्ष से अधिक",
-        "c": "Exactly 100 days / ठीक 100 दिन",
-        "d": "Only for overnight purposes / केवल ओवरनाइट उद्देश्यों के लिए"
+        "a": "Less than 1 year / 1",
+        "b": "More than 1 year / 1",
+        "c": "Exactly 100 days",
+        "d": "Only for overnight purposes"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTerm loans are provided for a specific period (usually more than a year) and are repaid in scheduled installments.\n\n📖 हिंदी स्पष्टीकरण:\nसावधि ऋण एक विशिष्ट अवधि (आमतौर पर एक वर्ष से अधिक) के लिए प्रदान किए जाते हैं और निर्धारित किश्तों में चुकाए जाते हैं।"
     },
     {
       "q_num": 56,
-      "question": "Consider the following statements about the 'Laffer Curve': \n 'लैफर वक्र' (Laffer Curve) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It shows that 100% tax rate results in zero tax revenue. / यह दर्शाता है कि 100% कर दर का परिणाम शून्य कर राजस्व होता है। \n (b) It suggests that cutting tax rates can sometimes increase total tax revenue. / यह सुझाव देता है कि कर दरों में कटौती करने से कभी-कभी कुल कर राजस्व बढ़ सकता है। \n (c) It is a bell-shaped curve. / यह एक घंटी के आकार का (Bell-shaped) वक्र है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the 'Laffer Curve': \n(a) It shows that 100% tax rate results in zero tax revenue.\n(b) It suggests that cutting tax rates can sometimes increase total tax revenue.\n(c) It is a bell-shaped curve.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAt 0% and 100% tax rates, revenue is zero. In between, there is an optimal rate. Cutting very high rates encourages more economic activity, thus increasing revenue.\n\n📖 हिंदी स्पष्टीकरण:\n0% और 100% कर दरों पर राजस्व शून्य होता है। इनके बीच एक इष्टतम दर होती है। बहुत उच्च दरों में कटौती आर्थिक गतिविधि को प्रोत्साहित करती है, जिससे राजस्व बढ़ता है।"
     },
     {
       "q_num": 57,
-      "question": "Which of the following is correct regarding 'Fiat Money'? \n 'फिएट मनी' (Fiat Money) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding 'Fiat Money'?",
       "options": {
-        "a": "It is backed by physical gold reserves. / इसे भौतिक स्वर्ण भंडार का समर्थन प्राप्त है।",
-        "b": "It has no intrinsic value and is backed by government order. / इसका कोई आंतरिक मूल्य नहीं है और इसे सरकारी आदेश का समर्थन प्राप्त है।",
-        "c": "It can only be used in the automobile industry. / इसका उपयोग केवल ऑटोमोबाइल उद्योग में किया जा सकता है।",
-        "d": "It is a type of commodity money. / यह एक प्रकार की वस्तु मुद्रा (Commodity money) है।"
+        "a": "It is backed by physical gold reserves.",
+        "b": "It has no intrinsic value and is backed by government order.",
+        "c": "It can only be used in the automobile industry.",
+        "d": "It is a type of commodity money."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nModern currency notes and coins are fiat money; they have value because the government declares them as legal tender, not because of the paper's worth.\n\n📖 हिंदी स्पष्टीकरण:\nआधुनिक मुद्रा नोट और सिक्के फिएट मनी हैं; उनका मूल्य इसलिए है क्योंकि सरकार उन्हें कानूनी निविदा घोषित करती है, न कि कागज की कीमत के कारण।"
     },
     {
       "q_num": 58,
-      "question": "Consider the following statements regarding 'Expansionary Monetary Policy': \n 'विस्तारवादी मौद्रिक नीति' (Expansionary Monetary Policy) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is used to combat recession. / इसका उपयोग मंदी से निपटने के लिए किया जाता है। \n (b) It involves increasing interest rates and CRR. / इसमें ब्याज दरों और CRR को बढ़ाना शामिल है। \n (c) It aims to increase the money supply in the economy. / इसका उद्देश्य अर्थव्यवस्था में मुद्रा आपूर्ति को बढ़ाना है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Expansionary Monetary Policy': \n(a) It is used to combat recession.\n(b) It involves increasing interest rates and CRR.\n(c) It aims to increase the money supply in the economy.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only c / केवल c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nExpansionary policy involves decreasing interest rates (like Repo rate) and CRR to make borrowing cheaper and increase liquidity.\n\n📖 हिंदी स्पष्टीकरण:\nविस्तारवादी नीति में उधार को सस्ता करने और तरलता बढ़ाने के लिए ब्याज दरों (जैसे रेपो रेट) और CRR को कम करना शामिल है।"
     },
     {
       "q_num": 59,
-      "question": "The 'Twin Deficit' problem in an economy refers to: \n किसी अर्थव्यवस्था में 'ट्विन डेफिसिट' (Twin Deficit) समस्या किसे संदर्भित करती है?",
+      "question": "The 'Twin Deficit' problem in an economy refers to:",
       "options": {
-        "a": "High Inflation and High Unemployment / उच्च मुद्रास्फीति और उच्च बेरोजगारी",
-        "b": "Fiscal Deficit and Current Account Deficit / राजकोषीय घाटा और चालू खाता घाटा",
-        "c": "Revenue Deficit and Primary Deficit / राजस्व घाटा और प्राथमिक घाटा",
-        "d": "Budget Deficit and Trade Deficit / बजट घाटा और व्यापार घाटा"
+        "a": "High Inflation and High Unemployment",
+        "b": "Fiscal Deficit and Current Account Deficit",
+        "c": "Revenue Deficit and Primary Deficit",
+        "d": "Budget Deficit and Trade Deficit"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTwin deficit occurs when a country has both a high Fiscal Deficit (government overspending) and a high Current Account Deficit (imports exceeding exports).\n\n📖 हिंदी स्पष्टीकरण:\nट्विन डेफिसिट तब होता है जब किसी देश में उच्च राजकोषीय घाटा और उच्च चालू खाता घाटा दोनों होते हैं।"
     },
     {
       "q_num": 60,
-      "question": "Consider the following statements about 'GST Council': \n 'GST परिषद' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is a constitutional body under Article 279A. / यह अनुच्छेद 279A के तहत एक संवैधानिक निकाय है। \n (b) Every decision of the council is taken by a majority of not less than three-fourths of the weighted votes. / परिषद का प्रत्येक निर्णय भारित मतों (Weighted votes) के कम से कम तीन-चौथाई बहुमत से लिया जाता है। \n (c) The Union Government has one-third weightage of the total votes cast. / डाले गए कुल मतों में केंद्र सरकार का भार एक-तिहाई होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'GST Council': \n'GST\n(a) It is a constitutional body under Article 279A.\n(b) Every decision of the council is taken by a majority of not less than three-fourths of the weighted votes.\n(c) The Union Government has one-third weightage of the total votes cast.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct regarding the voting structure and constitutional status of the GST Council.\n\n📖 हिंदी स्पष्टीकरण:\nGST परिषद की मतदान संरचना और संवैधानिक स्थिति के संबंध में सभी कथन सही हैं।"
     },
     {
       "q_num": 61,
-      "question": "Consider the following statements regarding 'Narasimham Committee' reports: \n 'नरसिम्हन समिति' (Narasimham Committee) की रिपोर्टों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) These committees are related to Banking Sector Reforms. / ये समितियाँ बैंकिंग क्षेत्र के सुधारों से संबंधित हैं। \n (b) The committee recommended the reduction of SLR and CRR. / समिति ने SLR और CRR को कम करने की सिफारिश की थी।\n (c) It suggested the establishment of a 4-tier banking structure. / इसने 4-स्तरीय बैंकिंग संरचना की स्थापना का सुझाव दिया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Narasimham Committee' reports: \n(a) These committees are related to Banking Sector Reforms.\n(b) The committee recommended the reduction of SLR and CRR.\n(c) It suggested the establishment of a 4-tier banking structure.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Narasimham Committee (1991 & 1998) laid the foundation for modern banking reforms in India, including reducing reserve ratios and structural changes.\n\n📖 हिंदी स्पष्टीकरण:\nनरसिम्हन समिति (1991 और 1998) ने भारत में आधुनिक बैंकिंग सुधारों की नींव रखी, जिसमें आरक्षित अनुपात को कम करना और संरचनात्मक परिवर्तन शामिल थे।"
     },
     {
       "q_num": 62,
-      "question": "Which of the following is correct regarding 'Dematerialization' (Demat)? \n 'डीमैटरियलाइजेशन' (Demat) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding 'Dematerialization' (Demat)?",
       "options": {
-        "a": "Process of converting physical shares into electronic form. / भौतिक शेयरों को इलेक्ट्रॉनिक रूप में बदलने की प्रक्रिया।",
-        "b": "Process of printing new currency notes. / नए करेंसी नोट छापने की प्रक्रिया।",
-        "c": "Selling of gold to the central bank. / केंद्रीय बैंक को सोना बेचना।",
-        "d": "Reducing the number of banks in a country. / किसी देश में बैंकों की संख्या कम करना।"
+        "a": "Process of converting physical shares into electronic form.",
+        "b": "Process of printing new currency notes.",
+        "c": "Selling of gold to the central bank.",
+        "d": "Reducing the number of banks in a country."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDematerialization is the process by which physical certificates of an investor are taken back by the company/registrar and destroyed, and an equivalent number of securities are credited in electronic form.\n\n📖 हिंदी स्पष्टीकरण:\nडीमैटरियलाइजेशन वह प्रक्रिया है जिसके द्वारा निवेशक के भौतिक प्रमाणपत्रों को वापस ले लिया जाता है और इलेक्ट्रॉनिक रूप में प्रतिभूतियां जमा की जाती हैं।"
     },
     {
       "q_num": 63,
-      "question": "Consider the following statements about 'Mahalanobis Model': \n 'महालनोबिस मॉडल' (Mahalanobis Model) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It was the basis of the First Five Year Plan. / यह प्रथम पंचवर्षीय योजना का आधार था। \n (b) It emphasized the development of heavy and basic industries. / इसने भारी और बुनियादी उद्योगों के विकास पर जोर दिया। \n (c) It aimed at rapid industrialization of the Indian economy. / इसका उद्देश्य भारतीय अर्थव्यवस्था का तीव्र औद्योगीकरण था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Mahalanobis Model': \n(a) It was the basis of the First Five Year Plan.\n(b) It emphasized the development of heavy and basic industries.\n(c) It aimed at rapid industrialization of the Indian economy.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only b / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only b"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Mahalanobis Model was the basis of the Second Five Year Plan (1956-61). The First Plan was based on the Harrod-Domar Model.\n\n📖 हिंदी स्पष्टीकरण:\nमहालनोबिस मॉडल दूसरी पंचवर्षीय योजना (1956-61) का आधार था। पहली योजना हैरोड-डोमर मॉडल पर आधारित थी।"
     },
     {
       "q_num": 64,
-      "question": "The 'Base Effect' in inflation refers to:\n मुद्रास्फीति में 'बेस इफेक्ट' (Base Effect) किसे संदर्भित करता है?",
+      "question": "The 'Base Effect' in inflation refers to:",
       "options": {
-        "a": "Impact of price levels of the previous year on the current inflation rate. / वर्तमान मुद्रास्फीति दर पर पिछले वर्ष के मूल्य स्तरों का प्रभाव।",
-        "b": "Increase in prices due to high demand. / उच्च मांग के कारण कीमतों में वृद्धि।",
-        "c": "Increase in prices due to high cost of production. / उत्पादन की उच्च लागत के कारण कीमतों में वृद्धि।",
-        "d": "Impact of global oil prices on the economy. / अर्थव्यवस्था पर वैश्विक तेल कीमतों का प्रभाव।"
+        "a": "Impact of price levels of the previous year on the current inflation rate.",
+        "b": "Increase in prices due to high demand.",
+        "c": "Increase in prices due to high cost of production.",
+        "d": "Impact of global oil prices on the economy."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBase effect refers to the impact of the price levels of the corresponding period of the previous year on the inflation rate calculation.\n\n📖 हिंदी स्पष्टीकरण:\nबेस इफेक्ट पिछले वर्ष की इसी अवधि के मूल्य स्तरों का मुद्रास्फीति दर की गणना पर पड़ने वाले प्रभाव को संदर्भित करता है।"
     },
     {
       "q_num": 65,
-      "question": "Consider the following statements regarding 'SEBI' (Securities and Exchange Board of India): \n 'सेबी' (SEBI) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It was established in 1988 and given statutory powers in 1992. / इसकी स्थापना 1988 में हुई थी और 1992 में इसे वैधानिक शक्तियां दी गई थीं। \n (b) It regulates the commodity market along with the stock market. / यह शेयर बाजार के साथ-साथ कमोडिटी बाजार को भी नियंत्रित करता है। \n (c) It protects the interests of investors in securities. / यह प्रतिभूतियों में निवेशकों के हितों की रक्षा करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'SEBI' (Securities and Exchange Board of India): \n(a) It was established in 1988 and given statutory powers in 1992.\n(b) It regulates the commodity market along with the stock market.\n(c) It protects the interests of investors in securities.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "Only c / केवल c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "Only c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nSEBI is the regulatory body for securities and commodity markets in India under the jurisdiction of the Ministry of Finance.\n\n📖 हिंदी स्पष्टीकरण:\nसेबी वित्त मंत्रालय के अधिकार क्षेत्र में भारत में प्रतिभूति और कमोडिटी बाजारों के लिए नियामक संस्था है।"
     },
     {
       "q_num": 66,
-      "question": "'Closed Economy' is an economy in which: \n 'बंद अर्थव्यवस्था' (Closed Economy) वह अर्थव्यवस्था है जिसमें:",
+      "question": "'Closed Economy' is an economy in which:",
       "options": {
-        "a": "Only exports take place. / केवल निर्यात होता है।",
-        "b": "Money supply is fully controlled. / मुद्रा आपूर्ति पूरी तरह से नियंत्रित होती है।",
-        "c": "Deficit financing takes place. / घाटे की वित्त व्यवस्था होती है।",
-        "d": "Neither exports nor imports take place. / न तो निर्यात होता है और न ही आयात।"
+        "a": "Only exports take place.",
+        "b": "Money supply is fully controlled.",
+        "c": "Deficit financing takes place.",
+        "d": "Neither exports nor imports take place."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA closed economy does not trade with the outside world and is self-sufficient.\n\n📖 हिंदी स्पष्टीकरण:\nएक बंद अर्थव्यवस्था बाहरी दुनिया के साथ व्यापार नहीं करती है और आत्मनिर्भर होती है।"
     },
     {
       "q_num": 67,
-      "question": "Consider the following statements about 'Call Money Market': \n 'कॉल मनी मार्केट' (Call Money Market) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It deals with the inter-bank lending and borrowing for a very short period. / यह बहुत कम अवधि के लिए अंतर-बैंक उधार और लेनदेन से संबंधित है। \n (b) 'Call Money' refers to funds borrowed for 1 day. / 'कॉल मनी' 1 दिन के लिए उधार लिए गए धन को संदर्भित करता है। \n (c) 'Notice Money' refers to funds borrowed for 2 to 14 days. / 'नोटिस मनी' 2 से 14 दिनों के लिए उधार लिए गए धन को संदर्भित करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Call Money Market': \n(a) It deals with the inter-bank lending and borrowing for a very short period.\n(b) 'Call Money' refers to funds borrowed for 1 day. / '\n(c) 'Notice Money' refers to funds borrowed for 2 to 14 days. / '\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nCall money market is a part of the money market where scheduled commercial banks borrow/lend to manage their temporary liquidity mismatches.\n\n📖 हिंदी स्पष्टीकरण:\nकॉल मनी मार्केट मुद्रा बाजार का एक हिस्सा है जहां अनुसूचित वाणिज्यिक बैंक अपनी अस्थायी तरलता विसंगतियों को प्रबंधित करने के लिए उधार लेते/देते हैं।"
     },
     {
       "q_num": 68,
-      "question": "Which of the following is correct regarding the 'Standard of Living' in a country? \n किसी देश में 'जीवन स्तर' (Standard of Living) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct regarding the 'Standard of Living' in a country?",
       "options": {
-        "a": "It is best measured by Gross National Product (GNP). / इसे सकल राष्ट्रीय उत्पाद (GNP) द्वारा सबसे अच्छा मापा जाता है।",
-        "b": "It is best measured by Per Capita Real Income. / इसे प्रति व्यक्ति वास्तविक आय द्वारा सबसे अच्छा मापा जाता है।",
-        "c": "It depends only on the population of the country. / यह केवल देश की जनसंख्या पर निर्भर करता है।",
-        "d": "It is measured by the total gold reserves. / इसे कुल स्वर्ण भंडार द्वारा मापा जाता है।"
+        "a": "It is best measured by Gross National Product (GNP).",
+        "b": "It is best measured by Per Capita Real Income.",
+        "c": "It depends only on the population of the country.",
+        "d": "It is measured by the total gold reserves."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPer capita real income (income adjusted for inflation per person) is considered the most reliable indicator of the average standard of living.\n\n📖 हिंदी स्पष्टीकरण:\nप्रति व्यक्ति वास्तविक आय (प्रति व्यक्ति मुद्रास्फीति के लिए समायोजित आय) को औसत जीवन स्तर का सबसे विश्वसनीय संकेतक माना जाता है।"
     },
     {
       "q_num": 69,
-      "question": "Consider the following statements regarding 'Insurance Regulatory and Development Authority of India' (IRDAI): \n 'भारतीय बीमा विनियामक और विकास प्राधिकरण' (IRDAI) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a statutory body under the IRDA Act, 1999. / यह IRDA अधिनियम, 1999 के तहत एक वैधानिक निकाय है। \n (b) It is headquartered in Mumbai. / इसका मुख्यालय मुंबई में है। \n (c) It regulates both life and general insurance industries. / यह जीवन और सामान्य बीमा दोनों उद्योगों को नियंत्रित करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Insurance Regulatory and Development Authority of India' (IRDAI): \n(a) It is a statutory body under the IRDA Act, 1999.\n(b) It is headquartered in Mumbai.\n(c) It regulates both life and general insurance industries.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "Only a / केवल a",
-        "c": "a and b / a और b",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and c",
+        "b": "Only a",
+        "c": "a and b",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIRDAI is headquartered in Hyderabad, not Mumbai. It was moved from Delhi to Hyderabad in 2001.\nIRDAI\n\n📖 हिंदी स्पष्टीकरण:\nका मुख्यालय हैदराबाद में है, मुंबई में नहीं। इसे 2001 में दिल्ली से हैदराबाद स्थानांतरित किया गया था।"
     },
     {
       "q_num": 70,
-      "question": "The 'Global Gender Gap Report' is released by which of the following? \n 'ग्लोबल जेंडर गैप रिपोर्ट' (Global Gender Gap Report) निम्नलिखित में से किसके द्वारा जारी की जाती है?",
+      "question": "The 'Global Gender Gap Report' is released by which of the following?",
       "options": {
-        "a": "World Bank / विश्व बैंक",
-        "b": "International Labour Organization (ILO) / अंतर्राष्ट्रीय श्रम संगठन",
-        "c": "World Economic Forum (WEF) / विश्व आर्थिक मंच",
-        "d": "UNDP / यूएनडीपी"
+        "a": "World Bank",
+        "b": "International Labour Organization (ILO)",
+        "c": "World Economic Forum (WEF)",
+        "d": "UNDP"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe WEF releases this annual report measuring gender parity across four key dimensions: Economy, Education, Health, and Politics.\n\n📖 हिंदी स्पष्टीकरण:\nWEF यह वार्षिक रिपोर्ट जारी करता है जो चार प्रमुख आयामों: अर्थव्यवस्था, शिक्षा, स्वास्थ्य और राजनीति में लैंगिक समानता को मापती है।"
     },
     {
       "q_num": 71,
-      "question": "Consider the following statements regarding 'Engel's Law': \n 'एंजेल के नियम' (Engel's Law) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) As income increases, the absolute expenditure on food decreases. / जैसे-जैसे आय बढ़ती है, भोजन पर पूर्ण व्यय (absolute expenditure) कम हो जाता है। \n (b) As income increases, the percentage of income spent on food decreases. / जैसे-जैसे आय बढ़ती है, भोजन पर खर्च की जाने वाली आय का प्रतिशत कम हो जाता है। \n (c) It helps in determining the poverty line in many countries. / यह कई देशों में गरीबी रेखा निर्धारित करने में मदद करता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Engel's Law': \n(a) As income increases, the absolute expenditure on food decreases.\n(b) As income increases, the percentage of income spent on food decreases.\n(c) It helps in determining the poverty line in many countries.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only b / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only b"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAbsolute expenditure on food usually increases as people buy better quality food, but its share (percentage) in the total budget decreases.\n\n📖 हिंदी स्पष्टीकरण:\nभोजन पर पूर्ण व्यय आमतौर पर बढ़ता है क्योंकि लोग बेहतर गुणवत्ता वाला भोजन खरीदते हैं, लेकिन कुल बजट में इसकी हिस्सेदारी (प्रतिशत) कम हो जाती है।"
     },
     {
       "q_num": 72,
-      "question": "Which of the following is the main objective of 'PM Gati Shakti' National Master Plan? \n निम्नलिखित में से कौन 'पीएम गति शक्ति' राष्ट्रीय मास्टर प्लान का मुख्य उद्देश्य है?",
+      "question": "Which of the following is the main objective of 'PM Gati Shakti' National Master Plan?",
       "options": {
-        "a": "Promotion of digital payments. / डिजिटल भुगतान को बढ़ावा देना।",
-        "b": "Integrated planning and coordinated implementation of infrastructure connectivity projects. / बुनियादी ढांचा कनेक्टिविटी परियोजनाओं की एकीकृत योजना और समन्वित कार्यान्वयन।",
-        "c": "Free health insurance to all citizens. / सभी नागरिकों को मुफ्त स्वास्थ्य बीमा।",
-        "d": "Doubling farmers' income by 2025. / 2025 तक किसानों की आय दोगुनी करना।"
+        "a": "Promotion of digital payments.",
+        "b": "Integrated planning and coordinated implementation of infrastructure connectivity projects.",
+        "c": "Free health insurance to all citizens.",
+        "d": "Doubling farmers' income by 2025. / 2025"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPM Gati Shakti is a transformative approach for economic growth and sustainable development, driven by 7 engines (Roads, Railways, Airports, etc.).\n\n📖 हिंदी स्पष्टीकरण:\nपीएम गति शक्ति आर्थिक विकास और सतत विकास के लिए एक परिवर्तनकारी दृष्टिकोण है, जो 7 इंजनों (सड़क, रेलवे, हवाई अड्डे, आदि) द्वारा संचालित है।"
     },
     {
       "q_num": 73,
-      "question": "Consider the following statements regarding 'Balance of Trade' (BoT): \n 'व्यापार संतुलन' (BoT) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is the difference between the value of a country's visible exports and visible imports. / यह किसी देश के दृश्य निर्यात और दृश्य आयात के मूल्य के बीच का अंतर है।\n (b) It includes the trade in services. / इसमें सेवाओं का व्यापार शामिल है। \n (c) If exports exceed imports, it is called a Trade Surplus. / यदि निर्यात आयात से अधिक हो, तो इसे व्यापार अधिशेष कहा जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-sa/se कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Balance of Trade' (BoT): \n(a) It is the difference between the value of a country's visible exports and visible imports.\n(b) It includes the trade in services.\n(c) If exports exceed imports, it is called a Trade Surplus.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "Only a / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "Only a"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBalance of Trade only considers visible items (goods). Services are included in the 'Balance of Invisibles' under the Current Account.\n\n📖 हिंदी स्पष्टीकरण:\nव्यापार संतुलन केवल दृश्य वस्तुओं (माल) पर विचार करता है। सेवाओं को चालू खाते के तहत 'अदृश्य संतुलन' में शामिल किया जाता है।"
     },
     {
       "q_num": 74,
-      "question": "Which of the following is correct about 'Command Economy'? \n 'कमांड इकोनॉमी' (Command Economy) के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following is correct about 'Command Economy'?",
       "options": {
-        "a": "Prices are determined by the market forces of demand and supply. / कीमतें मांग और आपूर्ति की बाजार शक्तियों द्वारा निर्धारित की जाती हैं।",
-        "b": "The government makes all major decisions regarding production and distribution. / सरकार उत्पादन और वितरण के संबंध में सभी प्रमुख निर्णय लेती है।",
-        "c": "Private ownership of property is highly encouraged. / संपत्ति के निजी स्वामित्व को अत्यधिक प्रोत्साहित किया जाता है।",
-        "d": "It is another name for a Capitalist economy. / यह पूंजीवादी अर्थव्यवस्था का दूसरा नाम है।"
+        "a": "Prices are determined by the market forces of demand and supply.",
+        "b": "The government makes all major decisions regarding production and distribution.",
+        "c": "Private ownership of property is highly encouraged.",
+        "d": "It is another name for a Capitalist economy."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn a command economy (like in a communist state), the central government determines what goods are produced and how they are distributed.\n\n📖 हिंदी स्पष्टीकरण:\nकमांड इकोनॉमी में (जैसे कि एक कम्युनिस्ट राज्य में), केंद्र सरकार यह निर्धारित करती है कि किन वस्तुओं का उत्पादन किया जाता है और उन्हें कैसे वितरित किया जाता है।"
     },
     {
       "q_num": 75,
-      "question": "Consider the following statements regarding 'Mahila Samman Savings Certificate' (MSSC): \n 'महिला सम्मान बचत प्रमाणपत्र' (MSSC) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It was announced in the Union Budget 2023-24. / इसकी घोषणा केंद्रीय बजट 2023-24 में की गई थी। \n (b) It offers a fixed interest rate for a period of 2 years. / यह 2 वर्ष की अवधि के लिए एक निश्चित ब्याज दर प्रदान करता है। \n (c) The maximum deposit limit is ₹2 lakh. / अधिकतम जमा सीमा ₹2 लाख है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Mahila Samman Savings Certificate' (MSSC): \n(a) It was announced in the Union Budget 2023-24.\n(b) It offers a fixed interest rate for a period of 2 years.\n(c) The maximum deposit limit is ₹2 lakh.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "Only c / केवल c",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "Only c",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMSSC is a one-time small savings scheme for women and girls with a fixed interest rate of 7.5% per annum.\nMSSC\n\n📖 हिंदी स्पष्टीकरण:\nमहिलाओं और लड़कियों के लिए 7.5% प्रति वर्ष की निश्चित ब्याज दर वाली एकमुश्त लघु बचत योजना है।"

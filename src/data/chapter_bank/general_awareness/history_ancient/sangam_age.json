@@ -6,127 +6,127 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "What was the primary time period of the Sangam Age in South Indian history?\nदक्षिण भारतीय इतिहास में संगम युग की प्राथमिक समयावधि क्या थी?",
+      "question": "What was the primary time period of the Sangam Age in South Indian history?",
       "options": {
-        "a": "6th Century BC - 1st Century AD / छठी शताब्दी ईसा पूर्व - पहली शताब्दी ईस्वी",
-        "b": "3rd Century BC - 3rd Century AD / तीसरी शताब्दी ईसा पूर्व - तीसरी शताब्दी ईस्वी",
-        "c": "1st Century AD - 6th Century AD / पहली शताब्दी ईस्वी - छठी शताब्दी ईस्वी",
-        "d": "1000 BC - 500 BC / 1000 ईसा पूर्व - 500 ईसा पूर्व"
+        "a": "6th Century BC - 1st Century AD",
+        "b": "3rd Century BC - 3rd Century AD",
+        "c": "1st Century AD - 6th Century AD",
+        "d": "1000 BC - 500 BC"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Sangam period is traditionally dated between the 3rd century BC and the 3rd century AD. It marks the earliest period of South Indian history characterized by the compilation of Tamil literature. This era saw the rise of the Chera, Chola, and Pandya dynasties\n\n📖 हिंदी स्पष्टीकरण:\nसंगम काल पारंपरिक रूप से तीसरी शताब्दी ईसा पूर्व और तीसरी शताब्दी ईस्वी के बीच का माना जाता है। यह दक्षिण भारतीय इतिहास के उस सबसे प्रारंभिक काल को दर्शाता है जिसकी पहचान तमिल साहित्य के संकलन से होती है। इस युग में चेर, चोल और पांड्य राजवंशों का उत्कर्ष हुआ।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following symbols was the royal emblem of the Chola dynasty during the Sangam period?\nसंगम काल के दौरान निम्नलिखित में से कौन सा प्रतीक चोल राजवंश का राजकीय प्रतीक था?",
+      "question": "Which of the following symbols was the royal emblem of the Chola dynasty during the Sangam period?",
       "options": {
-        "a": "Bow and arrow / धनुष और बाण",
-        "b": "Fish / मछली",
-        "c": "Tiger / बाघ",
-        "d": "Elephant / हाथी"
+        "a": "Bow and arrow",
+        "b": "Fish",
+        "c": "Tiger",
+        "d": "Elephant"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe early Chola dynasty used the 'Tiger' as their royal emblem to signify power and strength. Their territory, known as Cholamandalam, was located between the Pennar and Vellar rivers. The emblem appeared on their flags and coins during this period\n\n📖 हिंदी स्पष्टीकरण:\nप्रारंभिक चोल राजवंश ने शक्ति और सामर्थ्य के प्रतीक के रूप में 'बाघ' को अपने राजकीय प्रतीक के रूप में इस्तेमाल किया। उनका क्षेत्र, जिसे चोलमंडलम कहा जाता था, पेन्नार और वेल्लार नदियों के बीच स्थित था। यह प्रतीक इस अवधि के दौरान उनके झंडों और सिक्कों पर दिखाई देता था।"
     },
     {
       "q_num": 3,
-      "question": "The 'Pattini cult', related to the worship of Kannagi as the Goddess of Chastity, was established by which Chera ruler?\nकन्नगी को पवित्रता की देवी के रूप में पूजने से संबंधित 'पत्तनी पंथ' की स्थापना किस चेर शासक ने की थी?",
+      "question": "The 'Pattini cult', related to the worship of Kannagi as the Goddess of Chastity, was established by which Chera ruler?",
       "options": {
-        "a": "Elara / एलारा",
-        "b": "Senguttuvan / शेंगट्टुवन",
-        "c": "Karikala / करिकाल",
-        "d": "Uthiyan Cheralathan / उथियान चेरलथन"
+        "a": "Elara",
+        "b": "Senguttuvan",
+        "c": "Karikala",
+        "d": "Uthiyan Cheralathan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSenguttuvan, also known as the 'Red Chera', was the greatest ruler of the Chera dynasty. He introduced the Pattini cult and built a temple dedicated to Kannagi, the heroine of the epic Silappadikaram. This established him as a significant cultural figure in South Indian history\n\n📖 हिंदी स्पष्टीकरण:\nशेंगट्टुवन, जिसे 'लाल चेर' के नाम से भी जाना जाता है, चेर राजवंश का सबसे महान शासक था। उसने पत्तनी पंथ की शुरुआत की और महाकाव्य 'शिल्पादिकारम' की नायिका कन्नगी को समर्पित एक मंदिर बनवाया। इसने उन्हें दक्षिण भारतीय इतिहास में एक महत्वपूर्ण सांस्कृतिक व्यक्तित्व के रूप में स्थापित किया।"
     },
     {
       "q_num": 4,
-      "question": "According to Sangam geography, which 'Thinai' (land type) was specifically associated with agriculture?\nसंगम भूगोल के अनुसार, कौन सा 'तिनई' (भूमि प्रकार) विशेष रूप से कृषि से जुड़ा था?",
+      "question": "According to Sangam geography, which 'Thinai' (land type) was specifically associated with agriculture?",
       "options": {
-        "a": "Kurinci / कुरिंजी",
-        "b": "Mullai / मुल्लई",
-        "c": "Marutam / मरुदम",
-        "d": "Neytal / नेयतल"
+        "a": "Kurinci",
+        "b": "Mullai",
+        "c": "Marutam",
+        "d": "Neytal"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMarutam referred to the fertile riverine plains ideal for agricultural activities. The people of this region were primarily involved in farming, especially paddy cultivation. This was one of the five geographical divisions (Thinais) mentioned in Sangam literature\n\n📖 हिंदी स्पष्टीकरण:\nमरुदम उपजाऊ नदी के मैदानी क्षेत्रों को संदर्भित करता था जो कृषि गतिविधियों के लिए आदर्श थे। इस क्षेत्र के लोग मुख्य रूप से खेती, विशेष रूप से धान की खेती में शामिल थे। यह संगम साहित्य में वर्णित पांच भौगोलिक विभाजनों (तिनई) में से एक था।"
     },
     {
       "q_num": 5,
-      "question": "The port city of Puhar (also known as Kaveripattinam) served as the alternative capital for which dynasty?\nपुहार बंदरगाह शहर (जिसे कावेरीपट्टनम के रूप में भी जाना जाता है) किस राजवंश की वैकल्पिक राजधानी के रूप में कार्य करता था?",
+      "question": "The port city of Puhar (also known as Kaveripattinam) served as the alternative capital for which dynasty?",
       "options": {
-        "a": "Pandyas / पांड्य",
-        "b": "Cheras / चेर",
-        "c": "Cholas / चोल",
-        "d": "Pallavas / पल्लव"
+        "a": "Pandyas",
+        "b": "Cheras",
+        "c": "Cholas",
+        "d": "Pallavas"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPuhar or Kaveripattinam was a major port city and the alternative capital of the early Cholas. It was a flourishing center for maritime trade, especially for cotton and exotic goods. The city was strategically located at the mouth of the Kaveri River\n\n📖 हिंदी स्पष्टीकरण:\nपुहार या कावेरीपट्टनम एक प्रमुख बंदरगाह शहर और प्रारंभिक चोलों की वैकल्पिक राजधानी थी। यह समुद्री व्यापार, विशेष रूप से कपास और विदेशी वस्तुओं के लिए एक समृद्ध केंद्र था। यह शहर रणनीतिक रूप से कावेरी नदी के मुहाने पर स्थित था।"
     },
     {
       "q_num": 6,
-      "question": "Which specific social class in the Sangam society represented the 'rich landlords'?\nसंगम समाज में कौन सा विशिष्ट सामाजिक वर्ग 'धनी जमींदारों' का प्रतिनिधित्व करता था?",
+      "question": "Which specific social class in the Sangam society represented the 'rich landlords'?",
       "options": {
-        "a": "Arasar / अरसर",
-        "b": "Vellalar / वेल्लार",
-        "c": "Vaishiyar / वैश्यार",
-        "d": "Kadaisiyar / कदैसियर"
+        "a": "Arasar",
+        "b": "Vellalar",
+        "c": "Vaishiyar",
+        "d": "Kadaisiyar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn Sangam society, the Vellalar were the wealthy land-owning class who held significant economic power. The society was divided into classes like Arasar (rulers), Vaishiyar (traders), and Kadaisiyar (lower class/laborers). The Vellalars played a crucial role in supporting the local administration and agriculture\n\n📖 हिंदी स्पष्टीकरण:\nसंगम समाज में, वेल्लार धनी भूमि-स्वामी वर्ग थे जिनके पास महत्वपूर्ण आर्थिक शक्ति थी। समाज अरसर (शासक), वैश्यार (व्यापारी) और कदैसियर (निम्न वर्ग/श्रमिक) जैसे वर्गों में विभाजित था। स्थानीय प्रशासन और कृषि को समर्थन देने में वेल्लारों ने महत्वपूर्ण भूमिका निभाई।"
     },
     {
       "q_num": 7,
-      "question": "The Battle of Venni, fought along the Kaveri River, was a significant victory for which ruler?\nकावेरी नदी के तट पर लड़ी गई वेन्नी की लड़ाई किस शासक के लिए एक महत्वपूर्ण जीत थी?",
+      "question": "The Battle of Venni, fought along the Kaveri River, was a significant victory for which ruler?",
       "options": {
-        "a": "Senguttuvan / शेंगट्टुवन",
-        "b": "Karikala Chola / करिकाल चोल",
-        "c": "Nedunjeliyan / नेदुनजेलियन",
-        "d": "Elara / एलारा"
+        "a": "Senguttuvan",
+        "b": "Karikala Chola",
+        "c": "Nedunjeliyan",
+        "d": "Elara"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKarikala Chola defeated the combined forces of the Cheras, Pandyas, and eleven minor chieftains at the Battle of Venni. This victory established Chola supremacy over the other contemporary powers of the time. Karikala is also credited with the construction of the Kallanai dam\n\n📖 हिंदी स्पष्टीकरण:\nकरिकाल चोल ने वेन्नी के युद्ध में चेर, पांड्य और ग्यारह छोटे सरदारों की संयुक्त सेनाओं को हराया था। इस जीत ने उस समय की अन्य समकालीन शक्तियों पर चोलों का वर्चस्व स्थापित कर दिया। करिकाल को कल्लानाई बांध के निर्माण का श्रेय भी दिया जाता है।"
     },
     {
       "q_num": 8,
-      "question": "Who among the following was a famous ruler of the Pandya dynasty of South India?\nनिम्नलिखित में से कौन दक्षिण भारत के पांड्य राजवंश का एक प्रसिद्ध शासक था?",
+      "question": "Who among the following was a famous ruler of the Pandya dynasty of South India?",
       "options": {
-        "a": "Nedunjeliyan II / नेदुंजेलियन द्वितीय",
-        "b": "Karikala / करिकाल",
-        "c": "Ashoka / अशोक",
-        "d": "Nizam Shah / निजाम शाह"
+        "a": "Nedunjeliyan II",
+        "b": "Karikala",
+        "c": "Ashoka",
+        "d": "Nizam Shah"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNedunjeliyan II was a well-known ruler of the Pandya dynasty, frequently mentioned in Sangam literature\n\n📖 हिंदी स्पष्टीकरण:\nनेदुंजेलियन द्वितीय पांड्य वंश का एक प्रसिद्ध शासक था, जिसका उल्लेख संगम साहित्य में अक्सर मिलता है।"
     },
     {
       "q_num": 9,
-      "question": "The early Pandyas were specifically famous for trading which of the following items with the Roman Empire?\nप्रारंभिक पांड्य रोमन साम्राज्य के साथ निम्नलिखित में से किस वस्तु के व्यापार के लिए विशेष रूप से प्रसिद्ध थे?",
+      "question": "The early Pandyas were specifically famous for trading which of the following items with the Roman Empire?",
       "options": {
-        "a": "Spices / मसाले",
-        "b": "Pearls / मोती",
-        "c": "Silk / रेशम",
-        "d": "Iron tools / लोहे के औजार"
+        "a": "Spices",
+        "b": "Pearls",
+        "c": "Silk",
+        "d": "Iron tools"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Pandyas were renowned for their high-quality pearls collected from the Gulf of Mannar. They maintained strong trade links with the Roman Empire, and their port, Korkai, was a major center for pearl fishery. Roman historians have frequently mentioned the wealth of the Pandya kingdom\n\n📖 हिंदी स्पष्टीकरण:\nपांड्य मन्नार की खाड़ी से एकत्र किए गए अपने उच्च गुणवत्ता वाले मोतियों के लिए प्रसिद्ध थे। उन्होंने रोमन साम्राज्य के साथ मजबूत व्यापारिक संबंध बनाए रखे और उनका बंदरगाह, कोरकई, मोती मछली पालन का एक प्रमुख केंद्र था। रोमन इतिहासकारों ने पांड्य साम्राज्य की संपत्ति का अक्सर उल्लेख किया है।"
     },
     {
       "q_num": 10,
-      "question": "During the Megalithic age in South India, which type of pottery was most commonly used?\nदक्षिण भारत में महापाषाण युग (Megalithic age) के दौरान किस प्रकार के मिट्टी के बर्तनों का सबसे अधिक उपयोग किया जाता था?",
+      "question": "During the Megalithic age in South India, which type of pottery was most commonly used?",
       "options": {
-        "a": "Painted Grey Ware / चित्रित धूसर मृदभांड",
-        "b": "Northern Black Polished Ware / उत्तरी काले पॉलिश वाले मृदभांड",
-        "c": "Black and Red Ware / काले और लाल मृदभांड",
-        "d": "Ochre Coloured Pottery / गेरुए रंग के मृदभांड"
+        "a": "Painted Grey Ware",
+        "b": "Northern Black Polished Ware",
+        "c": "Black and Red Ware",
+        "d": "Ochre Coloured Pottery"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Megalithic culture in South India is characterized by the use of Black and Red ware pottery found around grave sites. This period (approx. 1500-600 BC) preceded the Sangam Age and saw the use of iron. Huge stone structures like Dolmens and Menhirs were also common during this time\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण भारत में महापाषाण संस्कृति की विशेषता कब्रों के पास पाए जाने वाले काले और लाल रंग के मिट्टी के बर्तन हैं। यह काल (लगभग 1500-600 ईसा पूर्व) संगम युग से पहले का था और इसमें लोहे का उपयोग देखा गया था। इस दौरान डोलमेन और मेनहिर जैसी विशाल पत्थर की संरचनाएं भी आम थीं।"
     },
     {
       "q_num": 11,
-      "question": "Match the following 'Thinais' with their respective occupations:\nनिम्नलिखित 'तिनई' को उनके संबंधित व्यवसायों के साथ सुमेलित करें:\n1. Kurinci / कुरिंजी — A. Animal Husbandry / पशुपालन\n2. Mullai / मुल्लई — B. Hunting/Gathering / शिकार/संग्रह\n3. Neytal / नेयतल — C. Cattle lifting/Plundering / मवेशी चोरी/लूटपाट\n4. Palai / पलै— D. Fishing/Salt collection / मछली पकड़ना/नमक इकट्ठा करना",
+      "question": "Match the following 'Thinais' with their respective occupations:\n1. Kurinci\n2. Mullai\n3. Neytal\n4. Palai",
       "options": {
         "a": "1-B, 2-A, 3-D, 4-C",
         "b": "1-A, 2-B, 3-C, 4-D",
@@ -138,139 +138,139 @@
     },
     {
       "q_num": 12,
-      "question": "Assertion (A): The Sangam assemblies were patronized exclusively by the Pandya kings.\nअभिकथन (A): संगम सभाओं को विशेष रूप से पांड्य राजाओं द्वारा संरक्षण दिया गया था।\nReason (R): These assemblies were held to compile literature that primarily praised the military achievements of the Kalabhra dynasty.\nकारण (R): ये सभाएं उस साहित्य को संकलित करने के लिए आयोजित की गई थीं जो मुख्य रूप से कलाभ्र राजवंश की सैन्य उपलब्धियों की प्रशंसा करता था।",
+      "question": "Assertion (A): The Sangam assemblies were patronized exclusively by the Pandya kings.\nReason (R): These assemblies were held to compile literature that primarily praised the military achievements of the Kalabhra dynasty.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWhile it is true that all three Sangams (assemblies) were patronized by the Pandyas in Madurai, the literature compiled (Akam and Puram) focused on the Cheras, Cholas, and Pandyas, not the Kalabhras. The Kalabhras actually occupied the Tamil country after the Sangam period (300-600 AD)\n\n📖 हिंदी स्पष्टीकरण:\nहालांकि यह सच है कि तीनों संगमों (सभाओं) को मदुरै में पांड्यों द्वारा संरक्षण दिया गया था, लेकिन संकलित साहित्य (अकम और पुरम) चेर, चोल और पांड्यों पर केंद्रित था, न कि कलाभ्रों पर। कलाभ्रों ने वास्तव में संगम काल के बाद (300-600 ईस्वी) तमिल देश पर कब्जा कर लिया था।"
     },
     {
       "q_num": 13,
-      "question": "Consider the following statements regarding the Chera dynasty:\nचेर राजवंश के संबंध में निम्नलिखित कथनों पर विचार करें:\n1. Their capital was located at Vanchi or Karur. / उनकी राजधानी वंची या करूर में स्थित थी।\n2. They had a significant trade connection with the Romans, evidenced by the Augustus Temple. / रोमनों के साथ उनका महत्वपूर्ण व्यापारिक संबंध था, जिसका प्रमाण ऑगस्टस मंदिर है।\n3. Their royal emblem was the Fish. / उनका राजकीय प्रतीक मछली थी।\nWhich of the statements given above are correct?\nऊपर दिए गए कथनों में से कौन सा सही है?",
+      "question": "Consider the following statements regarding the Chera dynasty:\n1. Their capital was located at Vanchi or Karur.\n2. They had a significant trade connection with the Romans, evidenced by the Augustus Temple.\n3. Their royal emblem was the Fish.\nWhich of the statements given above are correct?",
       "options": {
-        "a": "I and III only / केवल I और III",
-        "b": "I and II only / केवल I और II",
-        "c": "II and III only / केवल II और III",
-        "d": "I, II, and III / I, II और III"
+        "a": "I and III only",
+        "b": "I and II only",
+        "c": "II and III only",
+        "d": "I, II, and III"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements I and II are correct as the Cheras ruled parts of Kerala and Tamil Nadu with Vanchi as their capital and had Roman trade links. However, statement III is incorrect because the Chera emblem was the 'Bow and Arrow', whereas the 'Fish' was the emblem of the Pandyas\n\n📖 हिंदी स्पष्टीकरण:\nकथन I और II सही हैं क्योंकि चेरों ने केरल और तमिलनाडु के कुछ हिस्सों पर वंची को अपनी राजधानी बनाकर शासन किया और उनके रोमन व्यापारिक संबंध थे। हालांकि, कथन III गलत है क्योंकि चेर का प्रतीक 'धनुष और बाण' था, जबकि 'मछली' पांड्यों का प्रतीक था।"
     },
     {
       "q_num": 14,
-      "question": "Assertion (A): The Silappadikaram is considered one of the greatest epics of the Sangam Age.\nअभिकथन (A): सिलप्पदिकारम को संगम युग के सबसे महान महाकाव्यों में से एक माना जाता है।\nReason (R): It provides detailed information about the love story of Kovalan, Kannagi, and the dancer Madhavi.\nकारण (R): यह कोवलन, कन्नगी और नर्तकी माधवी की प्रेम कहानी के बारे में विस्तृत जानकारी प्रदान करता है।",
+      "question": "Assertion (A): The Silappadikaram is considered one of the greatest epics of the Sangam Age.\nReason (R): It provides detailed information about the love story of Kovalan, Kannagi, and the dancer Madhavi.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSilappadikaram is a cornerstone of Tamil literature precisely because it narrates the tragic story of Kovalan and Kannagi. This epic reflects the social values, judicial system, and cultural practices of the early Tamil dynasties. It remains a vital source for understanding the lifestyle of that era\n\n📖 हिंदी स्पष्टीकरण:\nसिलप्पदिकारम तमिल साहित्य का एक आधार स्तंभ है क्योंकि यह कोवलन और कन्नगी की दुखद कहानी बयां करता है। यह महाकाव्य प्रारंभिक तमिल राजवंशों के सामाजिक मूल्यों, न्यायिक प्रणाली और सांस्कृतिक प्रथाओं को दर्शाता है। यह उस युग की जीवनशैली को समझने के लिए एक महत्वपूर्ण स्रोत बना हुआ है।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following statements is INCORRECT regarding the Chola dynasty of the Sangam period?\nसंगम काल के चोल राजवंश के संबंध में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements is INCORRECT regarding the Chola dynasty of the Sangam period?",
       "options": {
-        "a": "They maintained an efficient navy. / उन्होंने एक कुशल नौसेना बनाए रखी।",
-        "b": "Their earliest known ruler was Elara. / उनके सबसे पहले ज्ञात शासक एलारा थे।",
-        "c": "Their primary trade item was silk from the Roman Empire. / उनकी प्राथमिक व्यापारिक वस्तु रोमन साम्राज्य का रेशम थी।",
-        "d": "Uraiyur was famous for its cotton trade under the Cholas. / उरैयूर चोलों के अधीन कपास के व्यापार के लिए प्रसिद्ध था।"
+        "a": "They maintained an efficient navy.",
+        "b": "Their earliest known ruler was Elara.",
+        "c": "Their primary trade item was silk from the Roman Empire.",
+        "d": "Uraiyur was famous for its cotton trade under the Cholas."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWhile the Cholas traded with many regions, they were specifically famous for exporting fine cotton cloth from Uraiyur, not for importing silk as a primary trade identity. They were known for their naval power and rulers like Karikala, who consolidated their influence over the Kaveri delta\n\n📖 हिंदी स्पष्टीकरण:\nहालांकि चोलों ने कई क्षेत्रों के साथ व्यापार किया, लेकिन वे विशेष रूप से उरैयूर से महीन सूती कपड़े के निर्यात के लिए प्रसिद्ध थे, न कि रेशम के आयात के लिए। वे अपनी नौसैनिक शक्ति और करिकाल जैसे शासकों के लिए जाने जाते थे, जिन्होंने कावेरी डेल्टा पर अपना प्रभाव मजबूत किया था।"
     },
     {
       "q_num": 16,
-      "question": "During the early literary phase of Tamil history, what does the word ‘Sangam’ signify?\nतमिल इतिहास के प्रारंभिक साहित्यिक काल में, 'संगम' शब्द का क्या अर्थ है?",
+      "question": "During the early literary phase of Tamil history, what does the word ‘Sangam’ signify?",
       "options": {
-        "a": "a ceremonial celebration organised by rulers / शासकों द्वारा आयोजित एक औपचारिक उत्सव",
-        "b": "a strategic council of warriors / योद्धाओं की एक रणनीतिक परिषद",
-        "c": "an association of merchants involved in trade / व्यापार में संलग्न व्यापारियों का एक संघ",
-        "d": "a congregation or collective assembly of Tamil scholars and poets / तमिल विद्वानों और कवियों की सभा या सामूहिक सम्मेलन"
+        "a": "a ceremonial celebration organised by rulers",
+        "b": "a strategic council of warriors",
+        "c": "an association of merchants involved in trade",
+        "d": "a congregation or collective assembly of Tamil scholars and poets"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nIn early Tamil history, ‘Sangam’ literally means an assembly or association. It refers to the assemblies of Tamil poets and scholars where literary works were composed, compiled, and reviewed. These Sangams laid the foundation of Sangam literature, which is a primary source for understanding the social, economic, and political life of ancient South India\n\n📖 हिंदी स्पष्टीकरण:\nप्रारंभिक तमिल इतिहास में, 'संगम' का शाब्दिक अर्थ सभा या संघ होता है। यह तमिल कवियों और विद्वानों की उन सभाओं को संदर्भित करता है जहाँ साहित्यिक कृतियों की रचना, संकलन और समीक्षा की जाती थी। इन संगमों ने संगम साहित्य की नींव रखी, जो प्राचीन दक्षिण भारत के सामाजिक, आर्थिक और राजनीतिक जीवन को समझने का एक प्राथमिक स्रोत है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following was the port-city of the Pandyan Kingdom?\nनिम्नलिखित में से कौन सा पांड्य साम्राज्य का बंदरगाह शहर था?",
+      "question": "Which of the following was the port-city of the Pandyan Kingdom?",
       "options": {
-        "a": "Dindigul / डिंडीगुल",
-        "b": "Korkai / कोरकाई",
-        "c": "Tenkasi / तेनकासी",
-        "d": "Virudhunagar / विरुधुनगर"
+        "a": "Dindigul",
+        "b": "Korkai",
+        "c": "Tenkasi",
+        "d": "Virudhunagar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt was famous for pearl fisheries, which were a major source of wealth for the Pandyas. Sangam literature and foreign accounts (like Periplus of the Erythraean Sea) mention Korkai as an important maritime trade centre\n\n📖 हिंदी स्पष्टीकरण:\nयह मोती पालन के लिए प्रसिद्ध था, जो पांड्यों के लिए धन का एक प्रमुख स्रोत था। संगम साहित्य और विदेशी वृत्तांतों (जैसे पेरिप्लस ऑफ द एरिथ्रियन सी) में कोरकाई को एक महत्वपूर्ण समुद्री व्यापार केंद्र के रूप में उल्लेख किया गया है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): The Chera king Senguttuvan, also known as Red Chera, introduced the Pattini cult.\nकथन (A): चेर राजा सेंगट्टुवन, जिसे लाल चेर के नाम से भी जाना जाता है, ने 'पत्तिनी संप्रदाय' (Pattini cult) की शुरुआत की थी।\nReason (R): He was a contemporary of the Roman Emperor Augustus and built a temple for him at Musiri.\nकारण (R): वह रोमन सम्राट ऑगस्टस के समकालीन थे और उन्होंने मुसिरी में उनके लिए एक मंदिर बनवाया था।",
+      "question": "Assertion (A): The Chera king Senguttuvan, also known as Red Chera, introduced the Pattini cult.\nReason (R): He was a contemporary of the Roman Emperor Augustus and built a temple for him at Musiri.",
       "options": {
-        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). /(A) और (R) दोनों सत्य हैं और (R) (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R) (A) की सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true but (R) is false. / (A) सत्य है लेकिन (R) असत्य है।",
-        "d": "(A) is false but (R) is true. / (A) असत्य है लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). /(A)",
+        "b": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+        "c": "(A) is true but (R) is false.",
+        "d": "(A) is false but (R) is true."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n(A) is true as Senguttuvan is known as the Red Chera and worshipped Kannagi (Pattini cult). (R) is false because while a temple for Augustus was built by the Romans at Musiri, the text does not state Senguttuvan built it himself. (A)\n\n📖 हिंदी स्पष्टीकरण:\nसत्य है क्योंकि सेंगट्टुवन को लाल चेर के रूप में जाना जाता है और उन्होंने कन्नगी (पत्तिनी संप्रदाय) की पूजा की थी । (R) गलत है क्योंकि हालांकि मुसिरी में रोमनों द्वारा ऑगस्टस का मंदिर बनाया गया था, पाठ यह नहीं बताता है कि सेंगट्टुवन ने इसे स्वयं बनाया था।"
     },
     {
       "q_num": 19,
-      "question": "Statement I: The five 'Thinais' or geographical divisions were ruled by chiefs known as Muvendar.\nकथन I: पांच 'तिनई’ (Thinais) या भौगोलिक विभाजनों पर 'मुवेंदर' नामक प्रमुखों द्वारा शासन किया जाता था।\nStatement II: The 'Palai Thinai' was associated with cattle lifting and plundering activities.\nकथन II: 'पलै तिनई’ (Palai Thinai) मवेशियों की चोरी और लूटपाट की गतिविधियों से जुड़ा था।",
+      "question": "Statement I: The five 'Thinais' or geographical divisions were ruled by chiefs known as Muvendar.\nStatement II: The 'Palai Thinai' was associated with cattle lifting and plundering activities.",
       "options": {
-        "a": "Only Statement I is correct. / केवल कथन 1 सही है।",
-        "b": "Only Statement II is correct. / केवल कथन II सही है।",
-        "c": "Both Statement I and II are correct. / कथन I और II दोनों सही हैं।",
-        "d": "Neither Statement I nor II is correct. / न तो कथन I और न ही कथन II सही है।"
+        "a": "Only Statement I is correct.",
+        "b": "Only Statement II is correct.",
+        "c": "Both Statement I and II are correct.",
+        "d": "Neither Statement I nor II is correct."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBoth statements are correct. Each Thinai had a chief called Muvendar , and Palai was indeed the region of cattle lifters and plundering\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। प्रत्येक थिनई (Thinai) में मुवेंदर नामक एक प्रमुख होता था , और पलै वास्तव में मवेशी चोरों और लूटपाट का क्षेत्र था ।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The Sangam age in South India is characterized as the Iron Age/Megalithic Age rather than the Bronze Age.\nकथन (A): दक्षिण भारत में संगम युग को कांस्य युग के बजाय लौह युग/महापाषाण काल (Megalithic Age) के रूप में जाना जाता है।\nReason (R): Megalithic structures like Dolmens and Menhirs were found around graves during this period (1500-600 BC).\nकारण (R): इस अवधि (1500-600 ईसा पूर्व) के दौरान कब्रों के चारों ओर डोलमेन और मेनहिर जैसी महापाषाण संरचनाएं पाई गई थीं।",
+      "question": "Assertion (A): The Sangam age in South India is characterized as the Iron Age/Megalithic Age rather than the Bronze Age.\nReason (R): Megalithic structures like Dolmens and Menhirs were found around graves during this period (1500-600 BC).",
       "options": {
-        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं और (R) (A) की सही व्याख्या है।",
-        "b": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R) (A) की सही व्याख्या नहीं है।",
-        "c": "(A) is true but (R) is false. / (A) सत्य है लेकिन (R) असत्य है।",
-        "d": "(A) is false but (R) is true. / (A) असत्य है लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+        "c": "(A) is true but (R) is false.",
+        "d": "(A) is false but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBoth are true. The lack of a Bronze Age and the presence of Iron/Megalithic culture is a defining start for South Indian history. The presence of specific burial structures like Dolmens and Menhirs defines the Megalithic character of that age\n\n📖 हिंदी स्पष्टीकरण:\nदोनों सत्य हैं। कांस्य युग का अभाव और लौह/महापाषाण संस्कृति की उपस्थिति दक्षिण भारतीय इतिहास की एक परिभाषित शुरुआत है । डोलमेन और मेनहिर जैसी विशिष्ट दफन संरचनाओं की उपस्थिति उस युग के महापाषाण चरित्र को परिभाषित करती है ।"
     },
     {
       "q_num": 21,
-      "question": "Consider the following statements about Madurai, the capital city of the Pandya kingdom:\n1. It has been described in Maduraikkanchi as a large grand city, enclosed by walls on three sides and the Vaigai river on the fourth side.\n2. The Arthashastra mentions it as a centre of fine cotton textiles.\n3. Other literary sources describe it as a major craft centre.\nपांड्य साम्राज्य की राजधानी मदुरै के संबंध में, निम्नलिखित कथनों पर विचार कीजिए:\n4. इसे मदुरैकांचि में एक बड़े भव्य नगर के रूप में वर्णित किया गया है, जो तीनों ओर दीवारों से घिरा है और चौथी ओर वैगई नदी है।\n5. अर्थशास्त्र में इसका उल्लेख उत्तम सूती वस्त्रों के केन्द्र के रूप में किया गया है।\n6. अन्य साहित्यिक स्रोतों में इसे एक प्रमुख शिल्प केन्द्र के रूप में वर्णित किया गया है।\nWhich of the statements given above is/are correct?\nउपर्युक्त कथनों में से कौन-सा/कौन-से सही है/हैं?",
+      "question": "Consider the following statements about Madurai, the capital city of the Pandya kingdom:\n1. It has been described in Maduraikkanchi as a large grand city, enclosed by walls on three sides and the Vaigai river on the fourth side.\n2. The Arthashastra mentions it as a centre of fine cotton textiles.\n3. Other literary sources describe it as a major craft centre.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are historically accurate regarding Madurai. It was a major commercial and cultural hub of the Pandyas, noted for its textiles in the Arthashastra and its urban layout in Sangam literature\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन मदुरै के संबंध में ऐतिहासिक रूप से सटीक हैं। यह पांड्यों का एक प्रमुख व्यावसायिक और सांस्कृतिक केंद्र था, जिसे अर्थशास्त्र में इसके वस्त्रों के लिए और संगम साहित्य में इसके शहरी विन्यास के लिए जाना जाता था।"
     },
     {
       "q_num": 22,
-      "question": "Which one of the following explains the practice of ‘Vattakirutal’ as mentioned in Sangam poems?\nनिम्नलिखित में से कौन-सा एक, संगम कविताओं में यथावर्णित 'वटकिरुतल' की प्रथा को स्पष्ट करता है?",
+      "question": "Which one of the following explains the practice of ‘Vattakirutal’ as mentioned in Sangam poems?",
       "options": {
-        "a": "Kings employing women bodyguards / राजाओं द्वारा महिला अंगरक्षिकाओं को नियुक्त करना",
-        "b": "Learned persons assembling in royal courts to discuss religious and philosophical matters / राजदरबारों में विद्वानों का, धर्म और दर्शन से जुड़े विषयों पर विचार-विमर्श करने हेतु, एकत्र होना",
-        "c": "Young girls keeping watch over agricultural fields and driving away birds and animals / किशोरियों द्वारा कृषि-क्षेत्रों की निगरानी करना और चिड़ियों तथा पशुओं को भगाना",
-        "d": "A king defeated in a battle committing ritual suicide by starving himself to death / युद्ध में पराजित राजा का आमरण अनशन कर आनुष्ठानिक मृत्युवरण करना"
+        "a": "Kings employing women bodyguards",
+        "b": "Learned persons assembling in royal courts to discuss religious and philosophical matters",
+        "c": "Young girls keeping watch over agricultural fields and driving away birds and animals",
+        "d": "A king defeated in a battle committing ritual suicide by starving himself to death"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\n'Vattakirutal' was a Tamil ritual of fasting to death practiced by defeated kings to reclaim honor after losing a battle. '\n\n📖 हिंदी स्पष्टीकरण:\nवटकिरुतल' पराजित राजाओं द्वारा युद्ध हारने के बाद सम्मान पुनः प्राप्त करने के लिए मृत्यु तक उपवास करने की एक तमिल प्रथा थी।"
     },
     {
       "q_num": 23,
-      "question": "Arrange the following in correct chronological order:\nनिम्नलिखित को सही कालानुक्रम में व्यवस्थित कीजिए:\n1. Charak Samhita / चरक संहिता\n2. Bharat’s Natyashastra / भरत का नाट्यशास्त्र\n3. Sangam Literature / संगम साहित्य\n4. Ashtadhyayi / अष्टाध्यायी\nSelect the correct answer using the code given below:\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Arrange the following in correct chronological order:\n1. Charak Samhita\n2. Bharat’s Natyashastra\n3. Sangam Literature\n4. Ashtadhyayi\nSelect the correct answer using the code given below:",
       "options": {
         "a": "1 – 3 – 4 – 2",
         "b": "2 – 4 – 1 – 3",
@@ -282,24 +282,24 @@
     },
     {
       "q_num": 24,
-      "question": "With reference to ancient South India, Korkai, Poompuhar and Muchiri were well known as:\nप्राचीन दक्षिण भारत के संदर्भ में, कोरकई, पूमपुहार और मुचीरि किस रूप में सुविख्यात थे?",
+      "question": "With reference to ancient South India, Korkai, Poompuhar and Muchiri were well known as:",
       "options": {
-        "a": "capital cities / राजधानी नगर",
-        "b": "ports / पत्तन",
-        "c": "centres of iron-and-steel making / लोह और इस्पात निर्माण के केन्द्र",
-        "d": "shrines of Jain Tirthankaras / जैन तीर्थंकरों के चैत्य"
+        "a": "capital cities",
+        "b": "ports",
+        "c": "centres of iron-and-steel making",
+        "d": "shrines of Jain Tirthankaras"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThese were major ancient port cities that played a crucial role in the maritime trade between South India and the Roman Empire.\n\n📖 हिंदी स्पष्टीकरण:\nये प्रमुख प्राचीन बंदरगाह शहर थे जिन्होंने दक्षिण भारत और रोमन साम्राज्य के बीच समुद्री व्यापार में महत्वपूर्ण भूमिका निभाई थी।"
     },
     {
       "q_num": 25,
-      "question": "Read the below statements marked as Assertion (A) and Reason (R):\nAssertion (A): The murals in Tirumalaipuram and Sittanavasal caves are important surviving examples of Pandya art.\nReason (R): These murals are mainly found on the outer walls of temples and depict mythological war scenes.\nनीचे दिए गए कथनों को अभिकथन (A) और कारण (R) के रूप में पढ़ें:\nअभिकथन (A): तिरुमलैपुरम और सित्तनवासल गुफाओं के भित्ति चित्र पांड्य कला के महत्वपूर्ण जीवित उदाहरण हैं।\nकारण (R): ये भित्ति चित्र मुख्य रूप से मंदिरों की बाहरी दीवारों पर पाए जाते हैं और पौराणिक युद्ध दृश्यों को दर्शाते हैं।",
+      "question": "Read the below statements marked as Assertion (A) and Reason (R):\nAssertion (A): The murals in Tirumalaipuram and Sittanavasal caves are important surviving examples of Pandya art.\nReason (R): These murals are mainly found on the outer walls of temples and depict mythological war scenes.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सही हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A / A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false / A सही है, लेकिन R गलत है।",
-        "d": "Both A and R are false / A और R दोनों गलत हैं।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is not the correct explanation of A",
+        "c": "A is true, but R is false",
+        "d": "Both A and R are false"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWhile (A) is correct as these caves represent Pandya painting styles, (R) is incorrect because cave murals are located inside the caves (ceilings/pillars) and typically depict themes like lotus ponds and dancers, not just mythological war scenes on outer walls\n\n📖 हिंदी स्पष्टीकरण:\nजबकि (A) सही है क्योंकि ये गुफाएं पांड्य चित्रकला शैलियों का प्रतिनिधित्व करती हैं, (R) गलत है क्योंकि गुफाओं के भित्ति चित्र गुफाओं के भीतर (छत/खंभों) स्थित हैं और आमतौर पर कमल के तालाबों और नर्तकियों जैसे विषयों को चित्रित करते हैं, न कि केवल बाहरी दीवारों पर पौराणिक युद्ध दृश्यों को।"

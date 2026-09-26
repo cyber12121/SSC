@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who was the first person to provide an unofficial estimation of the poverty line in India?\n भारत में गरीबी रेखा का अनौपचारिक अनुमान देने वाले पहले व्यक्ति कौन थे?",
+      "question": "Who was the first person to provide an unofficial estimation of the poverty line in India?",
       "options": {
-        "a": "Subhash Chandra Bose / सुभाष चंद्र बोस",
-        "b": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "c": "J.L. Nehru / जे.एल. नेहरू",
-        "d": "V.K.R.V. Rao / वी.के.आर.वी. राव"
+        "a": "Subhash Chandra Bose",
+        "b": "Dadabhai Naoroji",
+        "c": "J.L. Nehru",
+        "d": "V.K.R.V. Rao"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDadabhai Naoroji gave the earliest estimation of the poverty line through his book \"Poverty and Un-British Rule in India.\" He estimated it between Rs 16 to Rs 35 per capita per year\n\n📖 हिंदी स्पष्टीकरण:\nदादाभाई नौरोजी ने अपनी पुस्तक \"पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया\" के माध्यम से निर्धनता रेखा का जल्द से जल्द अनुमान दिया था। उन्होंने प्रति व्यक्ति प्रति वर्ष 16 रुपये से 35 रुपये के बीच अनुमान लगाया था।"
     },
     {
       "q_num": 2,
-      "question": "Which type of poverty refers to the severe deprivation of basic human needs like food, clothing, and shelter?\n किस प्रकार की निर्धनता का तात्पर्य भोजन, कपड़े और आश्रय जैसी बुनियादी मानवीय आवश्यकताओं के गंभीर अभाव से है?",
+      "question": "Which type of poverty refers to the severe deprivation of basic human needs like food, clothing, and shelter?",
       "options": {
-        "a": "Relative Poverty / सापेक्ष निर्धनता",
-        "b": "Subjective Poverty / व्यक्तिपरक निर्धनता",
-        "c": "Absolute Poverty / पूर्ण निर्धनता",
-        "d": "Urban Poverty / शहरी निर्धनता"
+        "a": "Relative Poverty",
+        "b": "Subjective Poverty",
+        "c": "Absolute Poverty",
+        "d": "Urban Poverty"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAbsolute poverty is defined as the severe deprivation of basic human needs, including food, safe drinking water, sanitation facilities, health, shelter, and education\n\n📖 हिंदी स्पष्टीकरण:\nपूर्ण निर्धनता को भोजन, सुरक्षित पेयजल, स्वच्छता सुविधाओं, स्वास्थ्य, आश्रय और शिक्षा सहित बुनियादी मानवीय आवश्यकताओं के गंभीर अभाव के रूप में परिभाषित किया गया है।"
     },
     {
       "q_num": 3,
-      "question": "The Alagh Committee (1979) based the poverty line on which of the following criteria?\n अलघ समिति (1979) ने निर्धनता रेखा को निम्नलिखित में से किस मानदंड पर आधारित किया था?",
+      "question": "The Alagh Committee (1979) based the poverty line on which of the following criteria?",
       "options": {
-        "a": "Income / आय",
-        "b": "Assets / संपत्ति",
-        "c": "Nutrition (Calories) / पोषण (कैलोरी)",
-        "d": "Education / शिक्षा"
+        "a": "Income",
+        "b": "Assets",
+        "c": "Nutrition (Calories)",
+        "d": "Education"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Alagh Committee suggested a nutrition-based poverty line, recommending 2400 calories for rural areas and 2100 calories for urban areas\n\n📖 हिंदी स्पष्टीकरण:\nअलघ समिति ने पोषण आधारित निर्धनता रेखा का सुझाव दिया, जिसमें ग्रामीण क्षेत्रों के लिए 2400 कैलोरी और शहरी क्षेत्रों के लिए 2100 कैलोरी की सिफारिश की गई थी।"
     },
     {
       "q_num": 4,
-      "question": "According to the Tendulkar Committee (2011-12), what was the poverty line for rural areas per capita per month?\n तेंदुलकर समिति (2011-12) के अनुसार, ग्रामीण क्षेत्रों के लिए प्रति व्यक्ति प्रति माह निर्धनता रेखा क्या थी?",
+      "question": "According to the Tendulkar Committee (2011-12), what was the poverty line for rural areas per capita per month?",
       "options": {
         "a": "₹1000",
         "b": "₹816",
@@ -54,58 +54,58 @@
     },
     {
       "q_num": 5,
-      "question": "Which state has the lowest percentage of people below the poverty line (BPL) as per the data?\n आंकड़ों के अनुसार किस राज्य में गरीबी रेखा से नीचे (BPL) लोगों का प्रतिशत सबसे कम है?",
+      "question": "Which state has the lowest percentage of people below the poverty line (BPL) as per the data?",
       "options": {
-        "a": "Chhattisgarh / छत्तीसगढ़",
-        "b": "Kerala / केरल",
-        "c": "Bihar / बिहार",
-        "d": "Rajasthan / राजस्थान"
+        "a": "Chhattisgarh",
+        "b": "Kerala",
+        "c": "Bihar",
+        "d": "Rajasthan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAccording to the data provided, Kerala has the lowest BPL percentage\n\n📖 हिंदी स्पष्टीकरण:\nदिए गए डेटा के अनुसार, केरल में BPL का प्रतिशत सबसे कम है।"
     },
     {
       "q_num": 6,
-      "question": "Who was the chairman of the National Planning Committee formed in 1938?\n 1938 में गठित राष्ट्रीय योजना समिति के अध्यक्ष कौन थे?",
+      "question": "Who was the chairman of the National Planning Committee formed in 1938?",
       "options": {
-        "a": "Subhash Chandra Bose / सुभाष चंद्र बोस",
-        "b": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "c": "J.L. Nehru / जे.एल. नेहरू",
-        "d": "Mahatma Gandhi / महात्मा गांधी"
+        "a": "Subhash Chandra Bose",
+        "b": "Dadabhai Naoroji",
+        "c": "J.L. Nehru",
+        "d": "Mahatma Gandhi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe National Planning Committee was set up in 1938 by Subhash Chandra Bose, but its first chairman was Jawaharlal Nehru\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय योजना समिति की स्थापना 1938 में सुभाष चंद्र बोस द्वारा की गई थी, लेकिन इसके पहले अध्यक्ष जवाहरलाल नेहरू थे।"
     },
     {
       "q_num": 7,
-      "question": "What is the Gini Coefficient used to measure?\n गिनी गुणांक का उपयोग क्या मापने के लिए किया जाता है?",
+      "question": "What is the Gini Coefficient used to measure?",
       "options": {
-        "a": "Inflation / मुद्रास्फीति",
-        "b": "Unemployment / बेरोजगारी",
-        "c": "Income Inequality / आय की असमानता",
-        "d": "Poverty Ratio / निर्धनता अनुपात"
+        "a": "Inflation",
+        "b": "Unemployment",
+        "c": "Income Inequality",
+        "d": "Poverty Ratio"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Gini Coefficient or Gini Ratio is a measure of statistical dispersion intended to represent the income or wealth inequality within a nation\n\n📖 हिंदी स्पष्टीकरण:\nगिनी गुणांक या गिनी अनुपात सांख्यिकीय फैलाव का एक माप है जिसका उद्देश्य किसी राष्ट्र के भीतर आय या धन की असमानता का प्रतिनिधित्व करना है।"
     },
     {
       "q_num": 8,
-      "question": "As per the Rangarajan Committee (2014), what is the poverty line for urban areas?\n रंगराजन समिति (2014) के अनुसार, शहरी क्षेत्रों के लिए निर्धनता रेखा क्या है?",
+      "question": "As per the Rangarajan Committee (2014), what is the poverty line for urban areas?",
       "options": {
-        "a": "₹816/month / 816 रुपये प्रति माह",
-        "b": "₹1000/month / 1000 रुपये प्रति माह",
-        "c": "₹1407/month / 1407 रुपये प्रति माह",
-        "d": "₹972/month / 972 रुपये प्रति माह"
+        "a": "₹816/month",
+        "b": "₹1000/month",
+        "c": "₹1407/month",
+        "d": "₹972/month"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Rangarajan Committee estimated the poverty line as ₹972 per capita per month for rural areas and ₹1407 for urban areas\n\n📖 हिंदी स्पष्टीकरण:\nरंगराजन समिति ने ग्रामीण क्षेत्रों के लिए ₹972 प्रति व्यक्ति प्रति माह और शहरी क्षेत्रों के लिए ₹1407 निर्धनता रेखा का अनुमान लगाया था।"
     },
     {
       "q_num": 9,
-      "question": "Which organization calculates the National Multidimensional Poverty Index (MPI) in India?\n भारत में राष्ट्रीय बहुआयामी निर्धनता सूचकांक (MPI) की गणना कौन सी संस्था करती है?",
+      "question": "Which organization calculates the National Multidimensional Poverty Index (MPI) in India?",
       "options": {
         "a": "UNDP",
-        "b": "NITI Aayog / नीति आयोग",
+        "b": "NITI Aayog",
         "c": "NSSO",
         "d": "MoSPI"
       },
@@ -114,35 +114,35 @@
     },
     {
       "q_num": 10,
-      "question": "Relative poverty is defined as household income being lower than:\n सापेक्ष निर्धनता को घरेलू आय के किस स्तर से कम होने के रूप में परिभाषित किया गया है?",
+      "question": "Relative poverty is defined as household income being lower than:",
       "options": {
-        "a": "Survival level / उत्तरजीविता स्तर",
-        "b": "Median income / माध्यिका आय",
-        "c": "World Bank limit / विश्व बैंक सीमा",
-        "d": "Previous year's income / पिछले वर्ष की आय"
+        "a": "Survival level",
+        "b": "Median income",
+        "c": "World Bank limit",
+        "d": "Previous year's income"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRelative poverty occurs when a household's income is lower than the median income in a particular country or region\n\n📖 हिंदी स्पष्टीकरण:\nसापेक्ष निर्धनता तब होती है जब किसी घर की आय किसी विशेष देश या क्षेत्र की माध्यिका आय से कम होती है।"
     },
     {
       "q_num": 11,
-      "question": "Which committee made the first systematic assessment of poverty in India using NSSO data?\n किस समिति ने NSSO डेटा का उपयोग करके भारत में निर्धनता का पहला व्यवस्थित मूल्यांकन किया?",
+      "question": "Which committee made the first systematic assessment of poverty in India using NSSO data?",
       "options": {
-        "a": "Alagh Committee / अलघ समिति",
-        "b": "Dandekar and Rath Committee / दांडेकर और रथ समिति",
-        "c": "Lakdawala Committee / लकड़वाला समिति",
-        "d": "Tendulkar Committee / तेंदुलकर समिति"
+        "a": "Alagh Committee",
+        "b": "Dandekar and Rath Committee",
+        "c": "Lakdawala Committee",
+        "d": "Tendulkar Committee"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Dandekar and Rath Committee (1971) made the first systematic assessment of poverty using data from the National Sample Survey Office (NSSO)\n\n📖 हिंदी स्पष्टीकरण:\nदांडेकर और रथ समिति (1971) ने राष्ट्रीय नमूना सर्वेक्षण कार्यालय (NSSO) के आंकड़ों का उपयोग करके गरीबी का पहला व्यवस्थित मूल्यांकन किया।"
     },
     {
       "q_num": 12,
-      "question": "The concept of \"Hot Money\" is associated with which of the following? \"हॉट मनी\" की अवधारणा निम्नलिखित में से किससे जुड़ी है?",
+      "question": "The concept of \"Hot Money\" is associated with which of the following? \"",
       "options": {
         "a": "FDI",
         "b": "FPI/FII",
-        "c": "NRI Deposits / एनआरआई जमा",
+        "c": "NRI Deposits",
         "d": "SDR"
       },
       "answer": "b",
@@ -150,7 +150,7 @@
     },
     {
       "q_num": 13,
-      "question": "How many indicators are used by NITI Aayog for the National Multidimensional Poverty Index?\n नीति आयोग द्वारा राष्ट्रीय बहुआयामी निर्धनता सूचकांक के लिए कितने संकेतकों का उपयोग किया जाता है?",
+      "question": "How many indicators are used by NITI Aayog for the National Multidimensional Poverty Index?",
       "options": {
         "a": "10",
         "b": "12",
@@ -162,55 +162,55 @@
     },
     {
       "q_num": 14,
-      "question": "The \"Head Count Ratio\" in the context of poverty refers to:\n निर्धनता के संदर्भ में \"हेड काउंट रेशियो\" (शीर्ष गणना अनुपात) का तात्पर्य है:",
+      "question": "The \"Head Count Ratio\" in the context of poverty refers to:",
       "options": {
-        "a": "Total number of earning members / कमाने वाले सदस्यों की कुल संख्या",
-        "b": "Proportion of population below the poverty line / गरीबी रेखा से नीचे की जनसंख्या का अनुपात",
-        "c": "Ratio of rural to urban poor / ग्रामीण से शहरी गरीबों का अनुपात",
-        "d": "Percentage of people escaping poverty / गरीबी से बाहर निकलने वाले लोगों का प्रतिशत"
+        "a": "Total number of earning members",
+        "b": "Proportion of population below the poverty line",
+        "c": "Ratio of rural to urban poor",
+        "d": "Percentage of people escaping poverty"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHead Count Ratio is the proportion of the population that lives below the poverty line (BPL)\n\n📖 हिंदी स्पष्टीकरण:\nशीर्ष गणना अनुपात जनसंख्या का वह अनुपात है जो गरीबी रेखा (BPL) से नीचे रहता है।"
     },
     {
       "q_num": 15,
-      "question": "Which committee recommended that \"Health and Education\" should also be included under basic needs for poverty estimation?\n किस समिति ने सिफारिश की थी कि निर्धनता अनुमान के लिए \"स्वास्थ्य और शिक्षा\" को भी बुनियादी जरूरतों के तहत शामिल किया जाना चाहिए?",
+      "question": "Which committee recommended that \"Health and Education\" should also be included under basic needs for poverty estimation?",
       "options": {
-        "a": "Rangarajan Committee / रंगराजन समिति",
-        "b": "Alagh Committee / अलघ समिति",
-        "c": "Tendulkar Committee / तेंदुलकर समिति",
-        "d": "Lakdawala Committee / लकड़ावाला समिति"
+        "a": "Rangarajan Committee",
+        "b": "Alagh Committee",
+        "c": "Tendulkar Committee",
+        "d": "Lakdawala Committee"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Tendulkar Committee (2009) shifted away from calorie-based models and suggested that health and education expenditures should be included in basic needs\n\n📖 हिंदी स्पष्टीकरण:\nतेंदुलकर समिति (2009) कैलोरी आधारित मॉडल से हट गई और सुझाव दिया कि स्वास्थ्य और शिक्षा व्यय को बुनियादी जरूरतों में शामिल किया जाना चाहिए।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the Lorenz Curve:\n लोरेंज़ वक्र के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. It represents the inequality in the distribution of income or wealth. / यह आय या संपत्ति के वितरण में असमानता को दर्शाता है।\n 2. The closer the curve is to the \"Line of Equality,\" the more the inequality. / वक्र \"समानता की रेखा\" के जितना करीब होगा, असमानता उतनी ही अधिक होगी।\n Which of the above is/are correct? / उपरोक्त में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the Lorenz Curve:\n1. It represents the inequality in the distribution of income or wealth.\n2. The closer the curve is to the \"Line of Equality,\" the more the inequality.\nWhich of the above is/are correct?",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1 is correct as it shows wealth/income distribution. Statement 2 is incorrect because the closer the curve is to the line of equality, the less the inequality\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है क्योंकि यह धन/आय वितरण को दर्शाता है। कथन 2 गलत है क्योंकि वक्र समानता की रेखा के जितना करीब होगा, असमानता उतनी ही कम होगी।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): Bihar has the highest Multidimensional Poverty Index (MDPI) in India.\n अभिकथन (A): भारत में बिहार का बहुआयामी निर्धनता सूचकांक (MDPI) सबसे अधिक है।\n Reason (R): Uttar Pradesh is the state where the maximum number of people have escaped poverty recently.\n कारण (R): उत्तर प्रदेश वह राज्य है जहाँ हाल ही में अधिकतम संख्या में लोग गरीबी से बाहर निकले हैं।",
+      "question": "Assertion (A): Bihar has the highest Multidimensional Poverty Index (MDPI) in India.\n Reason (R): Uttar Pradesh is the state where the maximum number of people have escaped poverty recently.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true. / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth facts are correct according to the document, but the fact that people escaped poverty in UP does not explain why Bihar has the highest MDPI\n\n📖 हिंदी स्पष्टीकरण:\nदस्तावेज़ के अनुसार दोनों तथ्य सही हैं, लेकिन उत्तर प्रदेश में लोगों के गरीबी से बाहर निकलने का तथ्य यह स्पष्ट नहीं करता है कि बिहार में MDPI सबसे अधिक क्यों है।"
     },
     {
       "q_num": 18,
-      "question": "What is the average monthly income per agricultural household in India, according to the 77 round National Statistical Office (NSO) survey, calculated using the paid-out expenses approach?\n राष्ट्रीय सांख्यिकी कार्यालय (एनएसओ) के 77वें दौर के सर्वेक्षण के अनुसार, भुगतान किए गए व्यय पद्धति का उपयोग करके गणना की गई भारत में प्रति कृषि परिवार की औसत मासिक आय क्या है?",
+      "question": "What is the average monthly income per agricultural household in India, according to the 77 round National Statistical Office (NSO) survey, calculated using the paid-out expenses approach?",
       "options": {
         "a": "₹8,000",
         "b": "₹6,426",
@@ -222,31 +222,31 @@
     },
     {
       "q_num": 19,
-      "question": "Which of the following are the three dimensions of the Multidimensional Poverty Index (MPI)?\n बहुआयामी निर्धनता सूचकांक (MPI) के तीन आयाम निम्नलिखित में से कौन से हैं?",
+      "question": "Which of the following are the three dimensions of the Multidimensional Poverty Index (MPI)?",
       "options": {
-        "a": "Health, Education, Assets / स्वास्थ्य, शिक्षा, संपत्ति",
-        "b": "Health, Education, Standard of Living / स्वास्थ्य, शिक्षा, जीवन स्तर",
-        "c": "Nutrition, Schooling, Housing / पोषण, स्कूली शिक्षा, आवास",
-        "d": "Income, Consumption, Expenditure / आय, उपभोग, व्यय"
+        "a": "Health, Education, Assets",
+        "b": "Health, Education, Standard of Living",
+        "c": "Nutrition, Schooling, Housing",
+        "d": "Income, Consumption, Expenditure"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe MPI measures poverty across three dimensions: Health, Education, and Standard of Living, which are further divided into indicators. / MPI\n\n📖 हिंदी स्पष्टीकरण:\nतीन आयामों में गरीबी को मापता है: स्वास्थ्य, शिक्षा और जीवन स्तर, जिन्हें आगे संकेतकों में विभाजित किया गया है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Exporters will benefit in case of currency depreciation.\n अभिकथन (A): मुद्रा के मूल्यह्रास की स्थिति में निर्यातकों को लाभ होगा।\n Reason (R): Depreciation refers to the decrease in the value of domestic currency due to market forces.\n कारण (R): मूल्यह्रास से तात्पर्य बाजार शक्तियों के कारण घरेलू मुद्रा के मूल्य में कमी से है।",
+      "question": "Assertion (A): Exporters will benefit in case of currency depreciation.\n Reason (R): Depreciation refers to the decrease in the value of domestic currency due to market forces.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true. / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWhen domestic currency depreciates, exports become cheaper for foreign buyers, thus benefiting exporters. Depreciation is driven by market forces\n\n📖 हिंदी स्पष्टीकरण:\nजब घरेलू मुद्रा का मूल्यह्रास होता है, तो विदेशी खरीदारों के लिए निर्यात सस्ता हो जाता है, जिससे निर्यातकों को लाभ होता है। मूल्यह्रास बाजार की शक्तियों द्वारा संचालित होता है।"
     },
     {
       "q_num": 21,
-      "question": "Match the following curves with their correct definitions:\n निम्नलिखित वक्रों को उनकी सही परिभाषाओं के साथ सुमेलित करें:\n 1. Phillips Curve - A. Tax rates and tax revenue / 1. फिलिप्स वक्र – A. कर दरें और कर राजस्व\n 2. Laffer Curve - B. Inflation and Employment / 2. लाफर वक्र – B. मुद्रास्फीति और रोजगार\n 3. Lorenz Curve - C. Income/Wealth Inequality / 3. लोरेन्ज वक्र – C. आय/संपत्ति असमानता",
+      "question": "Match the following curves with their correct definitions:\n1. Phillips Curve - A. Tax rates and tax revenue\n2. Laffer Curve - B. Inflation and Employment\n3. Lorenz Curve - C. Income/Wealth Inequality",
       "options": {
         "a": "1-A, 2-B, 3-C",
         "b": "1-B, 2-A, 3-C",
@@ -258,31 +258,31 @@
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements about the Rangarajan Committee (2014):\n रंगराजन समिति (2014) के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. It talked about the \"Modified Mixed Reference Period.\" / इसमें \"संशोधित मिश्रित संदर्भ अवधि\" के बारे में बताया गया था।\n 2. It created categories for protein and fat requirements along with calories. / इसने कैलोरी के साथ-साथ प्रोटीन और वसा की आवश्यकताओं के लिए श्रेणियाँ बनाई थीं।\n Which of the above statements is/are correct? / उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the Rangarajan Committee (2014):\n1. It talked about the \"Modified Mixed Reference Period.\"\n2. It created categories for protein and fat requirements along with calories.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Rangarajan Committee expanded the nutrition requirement to include protein and fat and used the Modified Mixed Reference Period (MMRP) for consumption data\n\n📖 हिंदी स्पष्टीकरण:\nरंगराजन समिति ने पोषण की आवश्यकता को प्रोटीन और वसा को शामिल करने के लिए विस्तारित किया और उपभोग डेटा के लिए संशोधित मिश्रित संदर्भ अवधि (MMRP) का उपयोग किया।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): In a two-sector economy, there is no leakage and no injection.\n अभिकथन (A): दो-क्षेत्रीय अर्थव्यवस्था में, कोई रिसाव और कोई इंजेक्शन नहीं होता है।\n Reason (R): Leakages are funds that exit the circular flow, such as savings and taxes.\n कारण (R): रिसाव वे धनराशियाँ हैं जो चक्रीय प्रवाह से बाहर निकल जाती हैं, जैसे बचत और कर।",
+      "question": "Assertion (A): In a two-sector economy, there is no leakage and no injection.\n Reason (R): Leakages are funds that exit the circular flow, such as savings and taxes.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true. / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA is false but R is true. / A\n\n📖 हिंदी स्पष्टीकरण:\nगलत है लेकिन R सत्य है।"
     },
     {
       "q_num": 24,
-      "question": "According to the data provided, what was the percentage of people below the poverty line in India in 2011-12?\n दिए गए आंकड़ों के अनुसार, 2011-12 में भारत में गरीबी रेखा से नीचे के लोगों का प्रतिशत कितना था?",
+      "question": "According to the data provided, what was the percentage of people below the poverty line in India in 2011-12?",
       "options": {
         "a": "37.2%",
         "b": "21.9%",
@@ -294,12 +294,12 @@
     },
     {
       "q_num": 25,
-      "question": "Which of the following is considered \"Paper Gold\"?\n निम्नलिखित में से किसे \"पेपर गोल्ड\" माना जाता है?",
+      "question": "Which of the following is considered \"Paper Gold\"?",
       "options": {
-        "a": "Foreign Currency Assets / विदेशी मुद्रा संपत्ति",
-        "b": "Gold Reserves / स्वर्ण भंडार",
-        "c": "Special Drawing Rights (SDR) / विशेष आहरण अधिकार (SDR)",
-        "d": "Reserve Tranche Position / रिजर्व ट्रेंच स्थिति"
+        "a": "Foreign Currency Assets",
+        "b": "Gold Reserves",
+        "c": "Special Drawing Rights (SDR)",
+        "d": "Reserve Tranche Position"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSpecial Drawing Rights (SDRs) are international reserve assets created by the IMF and are commonly referred to as \"Paper Gold.\"\n\n📖 हिंदी स्पष्टीकरण:\nविशेष आहरण अधिकार (SDR) IMF द्वारा बनाए गए अंतर्राष्ट्रीय आरक्षित संपत्ति हैं और इन्हें आमतौर पर \"पेपर गोल्ड\" कहा जाता है।"

@@ -6,151 +6,151 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "India's first river valley project, the Damodar Valley Project (DVP), was based on the model of which river valley project of the USA?\n भारत की पहली नदी घाटी परियोजना, दामोदर घाटी परियोजना (DVP), संयुक्त राज्य अमेरिका की किस नदी घाटी परियोजना के मॉडल पर आधारित थी?",
+      "question": "India's first river valley project, the Damodar Valley Project (DVP), was based on the model of which river valley project of the USA?",
       "options": {
-        "a": "Columbia River Valley Project / कोलंबिया नदी घाटी परियोजना",
-        "b": "Tennessee River Valley Project / टेनेसी नदी घाटी परियोजना",
-        "c": "Colorado River Valley Project / कोलोराडो नदी घाटी परियोजना",
-        "d": "Missouri River Valley Project / मिसौरी नदी घाटी परियोजना"
+        "a": "Columbia River Valley Project",
+        "b": "Tennessee River Valley Project",
+        "c": "Colorado River Valley Project",
+        "d": "Missouri River Valley Project"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Damodar Valley Project, which was established in 1948, holds the distinction of being India's first river valley project. Its blueprint and organizational structure were inspired by the highly successful Tennessee River Valley (TRV) project in the USA, aiming for comprehensive development like flood control and power generation.\n\n📖 हिंदी स्पष्टीकरण:\nदामोदर घाटी परियोजना, जिसकी स्थापना 1948 में हुई थी, भारत की पहली नदी घाटी परियोजना होने का गौरव रखती है। इसकी रूपरेखा और संगठनात्मक संरचना USA में अत्यधिक सफल टेनेसी नदी घाटी (TRV) परियोजना से प्रेरित थी, जिसका उद्देश्य बाढ़ नियंत्रण और बिजली उत्पादन जैसे व्यापक विकास करना था।"
     },
     {
       "q_num": 2,
-      "question": "On which river is the Bhakra Nangal Project, a joint venture of Punjab, Haryana, and Rajasthan, built?\n पंजाब, हरियाणा और राजस्थान की एक संयुक्त परियोजना, भाखड़ा नांगल परियोजना किस नदी पर बनाई गई है?",
+      "question": "On which river is the Bhakra Nangal Project, a joint venture of Punjab, Haryana, and Rajasthan, built?",
       "options": {
-        "a": "Chenab / चिनाब",
-        "b": "Ravi / रावी",
-        "c": "Sutlej / सतलुज",
-        "d": "Beas / ब्यास"
+        "a": "Chenab",
+        "b": "Ravi",
+        "c": "Sutlej",
+        "d": "Beas"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Bhakra Nangal Project, a massive multi-purpose river valley development scheme, is built on the Sutlej River in the state of Himachal Pradesh. It was constructed during India's First Five Year Plan and is one of the most important dams in India.\n\n📖 हिंदी स्पष्टीकरण:\nभाखड़ा नांगल परियोजना, एक विशाल बहुउद्देशीय नदी घाटी विकास परियोजना है, जिसे हिमाचल प्रदेश राज्य में सतलुज नदी पर बनाया गया है। इसका निर्माण भारत की पहली पंचवर्षीय योजना के दौरान किया गया था और यह भारत के सबसे महत्वपूर्ण बांधों में से एक है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following dams is known as the 'Highest Gravity Dam' of India?\n निम्नलिखित में से किस बांध को भारत का 'सबसे ऊँचा गुरुत्वीय बांध' के रूप में जाना जाता है?",
+      "question": "Which of the following dams is known as the 'Highest Gravity Dam' of India?",
       "options": {
-        "a": "Hirakud Dam / हीराकुंड बांध",
-        "b": "Tehri Dam / टिहरी बांध",
-        "c": "Bhakra Dam / भाखड़ा बांध",
-        "d": "Sardar Sarovar Dam / सरदार सरोवर बांध"
+        "a": "Hirakud Dam",
+        "b": "Tehri Dam",
+        "c": "Bhakra Dam",
+        "d": "Sardar Sarovar Dam"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBhakra Dam is built across the Sutlej River in Himachal Pradesh.\nIt is a concrete gravity dam, meaning it resists the water pressure using its own weight.\nHeight: about 226 meters (741 feet) — making it the highest gravity dam in India.\nIt forms the Gobind Sagar Reservoir and serves irrigation, hydroelectric, and flood control purposes.\n\n📖 हिंदी स्पष्टीकरण:\nभाखड़ा बाँध सतलज नदी पर, हिमाचल प्रदेश में बनाया गया है।\nयह एक कंक्रीट (Concrete) गुरुत्वीय बाँध (Gravity Dam) है, अर्थात् यह अपने स्वयं के भार से जल का दबाव सहता है।\nइसकी ऊँचाई लगभग 226 मीटर (741 फीट) है, जिससे यह भारत का सबसे ऊँचा गुरुत्वीय बाँध कहलाता है।\nइससे बना गोविंद सागर जलाशय सिंचाई, जलविद्युत उत्पादन और बाढ़ नियंत्रण के लिए उपयोग होता है।"
     },
     {
       "q_num": 4,
-      "question": "The Hirakud Dam, built on the Mahanadi River, is famous for which unique feature?\n महानदी नदी पर बना हीराकुंड बांध किस अनूठी विशेषता के लिए प्रसिद्ध है?",
+      "question": "The Hirakud Dam, built on the Mahanadi River, is famous for which unique feature?",
       "options": {
-        "a": "Highest Dam of India / भारत का सबसे ऊँचा बांध",
-        "b": "Largest Dam of India in terms of area / क्षेत्रफल की दृष्टि से भारत का सबसे बड़ा बांध",
-        "c": "Longest dam of the World / विश्व का सबसे लंबा बांध",
-        "d": "Highest Railway Bridge / सबसे ऊँचा रेलवे पुल"
+        "a": "Highest Dam of India",
+        "b": "Largest Dam of India in terms of area",
+        "c": "Longest dam of the World",
+        "d": "Highest Railway Bridge"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nHirakud Dam, located in Odisha, is one of the longest dams in the world, with a total length of 25.8 km (including dikes). This dam is built on the Mahanadi River and plays a crucial role in irrigation and flood control in the region.\n\n📖 हिंदी स्पष्टीकरण:\nओडिशा में स्थित हीराकुंड बांध, 25.8 किमी (डाइक सहित) की कुल लंबाई के साथ, दुनिया के सबसे लंबे बांधों में से एक है। यह बांध महानदी नदी पर बना है और इस क्षेत्र में सिंचाई और बाढ़ नियंत्रण में महत्वपूर्ण भूमिका निभाता है।"
     },
     {
       "q_num": 5,
-      "question": "Which of the following lakes in India is a 'Crater Lake' formed due to a meteorite impact?\n भारत की निम्नलिखित में से कौन सी झील उल्कापिंड के टकराने से बनी 'क्रेटर झील (ज्वालामुखीय झील)' है?",
+      "question": "Which of the following lakes in India is a 'Crater Lake' formed due to a meteorite impact?",
       "options": {
-        "a": "Wular Lake / वुलर झील",
-        "b": "Chilika Lake / चिल्का झील",
-        "c": "Lonar Lake / लोनार झील",
-        "d": "Loktak Lake / लोकटक झील"
+        "a": "Wular Lake",
+        "b": "Chilika Lake",
+        "c": "Lonar Lake",
+        "d": "Loktak Lake"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLonar Lake, located in the Buldhana district of Maharashtra, was formed by a meteorite impacting the Earth approximately 52,000 years ago during the Pleistocene epoch. It is a crater lake and has both alkaline and saline properties. It is protected as the Lonar Sarovar Sanctuary.\nOther options:\n5. Wular Lake – In Jammu and Kashmir, a tectonic lake.\n6. Chilka Lake – In Odisha, a lagoon lake.\n7. Loktak Lake – In Manipur, a freshwater lake, famous for its phumdis (floating islands).\n\n📖 हिंदी स्पष्टीकरण:\nमहाराष्ट्र के बुलढाणा जिले में स्थित लोनार झील, प्लेइस्टोसिन युग के दौरान लगभग 52,000 वर्ष पहले एक उल्कापिंड के पृथ्वी से टकराने से बनी थी। यह एक क्रेटर झील है और क्षारीय तथा लवणीय दोनों गुण रखती है। इसे लोनार सरोवर अभयारण्य के रूप में संरक्षित किया गया है।\nअन्य विकल्प:\n8. वुलर झील – जम्मू-कश्मीर में, विवर्तनिक झील।\n9. चिल्का झील – ओडिशा में, लैगून झील।\n10. लोकटक झील – मणिपुर में, मीठे पानी की झील, फुमदी (तैरते द्वीप) के लिए प्रसिद्ध।"
     },
     {
       "q_num": 6,
-      "question": "Which lake is known as the 'Largest Freshwater Lake' in India?\n भारत में किस झील को 'सबसे बड़ी मीठे पानी की झील' के रूप में जाना जाता है?",
+      "question": "Which lake is known as the 'Largest Freshwater Lake' in India?",
       "options": {
-        "a": "Vembanad Lake / वेम्बनाड झील",
-        "b": "Kolleru Lake / कोलेरू झील",
-        "c": "Chilika Lake / चिल्का झील",
-        "d": "Wular Lake / वुलर झील"
+        "a": "Vembanad Lake",
+        "b": "Kolleru Lake",
+        "c": "Chilika Lake",
+        "d": "Wular Lake"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nWular Lake, situated in the union territory of Jammu and Kashmir, is the largest freshwater lake in India. It is also significant because its formation is attributed to tectonic activity, where the earth's crust movements caused a depression.\n5. Vembanad Lake (Kerala): India's largest lake (by total area), but it contains both saltwater and freshwater.\n6. Koleru Lake (Andhra Pradesh): A coastal freshwater lake, between the Godavari and Krishna rivers.\n7. Chilka Lake (Odisha): India's largest saltwater lagoon.\n\n📖 हिंदी स्पष्टीकरण:\nजम्मू और कश्मीर केंद्र शासित प्रदेश में स्थित वुलर झील, भारत की सबसे बड़ी मीठे पानी की झील है। यह इसलिए भी महत्वपूर्ण है क्योंकि इसका निर्माण विवर्तनिक गतिविधि से हुआ माना जाता है, जहाँ पृथ्वी की पपड़ी की हलचल के कारण एक गर्त बन गया था।\n8. वेम्बनाड झील (केरल): भारत की सबसे बड़ी झील (कुल क्षेत्रफल में), पर यह खारे और मीठे दोनों पानी की है।\n9. कोलेरू झील (आंध्र प्रदेश): तटीय मीठे पानी की झील, गोदावरी और कृष्णा नदियों के बीच।\n10. चिल्का झील (ओडिशा): भारत की सबसे बड़ी खारे पानी की झील (लैगून) है।"
     },
     {
       "q_num": 7,
-      "question": "What is the approximate height of the Tehri Dam, the highest dam in India?\n भारत के सबसे ऊंचे बांध, टिहरी बांध की अनुमानित ऊंचाई कितनी है?",
+      "question": "What is the approximate height of the Tehri Dam, the highest dam in India?",
       "options": {
-        "a": "155 meters / 155 मीटर",
-        "b": "205 meters / 205 मीटर",
-        "c": "261 meters / 261 मीटर",
-        "d": "359 meters / 359 मीटर"
+        "a": "155 meters",
+        "b": "205 meters",
+        "c": "261 meters",
+        "d": "359 meters"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Tehri Dam, constructed on the Bhagirathi River in Uttarakhand, stands at an impressive height of 261 meters, making it the highest dam in India. It is a multi-purpose rock and earth-fill embankment dam and has been the subject of environmental movements.\n\n📖 हिंदी स्पष्टीकरण:\nटिहरी बाँध, जो उत्तराखंड में भागीरथी नदी पर निर्मित है, 261 मीटर की प्रभावशाली ऊँचाई पर स्थित है, जिससे यह भारत का सबसे ऊँचा बाँध बनता है। यह एक बहुउद्देशीय चट्टान और मिट्टी से बना तटबंध बाँध है और पर्यावरणीय आंदोलनों का विषय रहा है।"
     },
     {
       "q_num": 8,
-      "question": "The 'Largest inland Saltwater Lake' of India in terms of salinity is:\n लवणता की दृष्टि से भारत की 'सबसे बड़ी अंतर्देशीय खारे पानी की झील' कौन सी है?",
+      "question": "The 'Largest inland Saltwater Lake' of India in terms of salinity is:",
       "options": {
-        "a": "Chilika Lake / चिल्का झील",
-        "b": "Pulicat Lake / पुलीकट झील",
-        "c": "Sambhar Lake / सांभर झील",
-        "d": "Pangong Lake / पैंगोंग झील"
+        "a": "Chilika Lake",
+        "b": "Pulicat Lake",
+        "c": "Sambhar Lake",
+        "d": "Pangong Lake"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSambhar Lake is located in Rajasthan, near Jaipur.\nIt is India's largest inland (\nIt has very high salinity and is the main source of salt production in India.\nThe lake is fed by small seasonal rivers like Mendha, Rupangarh, Khari, Khandela, and Medtha\n\n📖 हिंदी स्पष्टीकरण:\nअंतर्देशीय) saltwater lake - meaning it is situated away from the coast.\n5. सांभर झील राजस्थान में जयपुर के निकट स्थित है।\n6. यह भारत की सबसे बड़ी अंतर्देशीय (Inland) खारे पानी की झील है, अर्थात् यह समुद्र तट से दूर स्थित है।\n7. इसकी लवणता (salinity) बहुत अधिक है और यह भारत में नमक उत्पादन का प्रमुख स्रोत है।\n8. इसमें कई छोटी नदियाँ मिलती हैं — मेंढा, रूपनगढ़, खारी, खंडेला और मेडथा।"
     },
     {
       "q_num": 9,
-      "question": "Which multi-purpose river valley project was mentioned as the \"Temple of Modern India\" by Jawahar Lal Nehru?\n जवाहर लाल नेहरू द्वारा किस बहुउद्देशीय नदी घाटी परियोजना को \"आधुनिक भारत का मंदिर\" कहा गया था?",
+      "question": "Which multi-purpose river valley project was mentioned as the \"Temple of Modern India\" by Jawahar Lal Nehru?",
       "options": {
-        "a": "Bhakra Nangal Project / भाखड़ा नांगल परियोजना",
-        "b": "Damodar Valley Project / दामोदर घाटी परियोजना",
-        "c": "Hirakud Dam Project / हीराकुंड बांध परियोजना",
-        "d": "Tehri Dam Project / टिहरी बांध परियोजना"
+        "a": "Bhakra Nangal Project",
+        "b": "Damodar Valley Project",
+        "c": "Hirakud Dam Project",
+        "d": "Tehri Dam Project"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Bhakra Nangal Project was famously called the \"Temple of Modern India\" by the first Prime Minister, Jawaharlal Nehru. This phrase was intended to highlight the dam's role in the nation's progress through irrigation, power generation, and overall development. The project is located on the Sutlej River and is a joint venture of Punjab, Haryana, and Rajasthan.\nIt consists of two main dams:\n5. Bhakra Dam (the main dam in Himachal Pradesh)\n6. Nangal Dam (the downstream control dam)\n\n📖 हिंदी स्पष्टीकरण:\nपहले प्रधानमंत्री, जवाहर लाल नेहरू द्वारा भाखड़ा नांगल परियोजना को प्रसिद्ध रूप से \"आधुनिक भारत का मंदिर\" कहा गया था। इस वाक्यांश का उद्देश्य सिंचाई, बिजली उत्पादन और समग्र विकास के माध्यम से राष्ट्र की प्रगति में बांध की भूमिका को उजागर करना था। यह परियोजना सतलुज नदी पर स्थित है और पंजाब, हरियाणा व राजस्थान की संयुक्त परियोजना है।\nइसके अंतर्गत दो मुख्य बाँध हैं —\n7. भाखड़ा बाँध (मुख्य बाँध – हिमाचल प्रदेश में)\n8. नांगल बाँध (नीचे की ओर नियंत्रक बाँध)"
     },
     {
       "q_num": 10,
-      "question": "The famous Jog/Gersoppa/Mahatma Gandhi Waterfall is located on which river?\n प्रसिद्ध जोग/गरसोप्पा/महात्मा गांधी जलप्रपात किस नदी पर स्थित है?",
+      "question": "The famous Jog/Gersoppa/Mahatma Gandhi Waterfall is located on which river?",
       "options": {
-        "a": "Kaveri River / कावेरी नदी",
-        "b": "Krishna River / कृष्णा नदी",
-        "c": "Sharavati River / शरावती नदी",
-        "d": "Godavari River / गोदावरी नदी"
+        "a": "Kaveri River",
+        "b": "Krishna River",
+        "c": "Sharavati River",
+        "d": "Godavari River"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Jog Falls, also known as Gersoppa Falls or Mahatma Gandhi Falls, is created by the Sharavati River in the state of Karnataka. It is one of the highest plunge waterfalls in India and is a major tourist attraction, also being the site of a major power plant.\n\n📖 हिंदी स्पष्टीकरण:\nजोग जलप्रपात, जिसे गरसोप्पा जलप्रपात या महात्मा गांधी जलप्रपात के नाम से भी जाना जाता है, कर्नाटक राज्य में शरावती नदी द्वारा बनाया गया है। यह भारत के सबसे ऊंचे प्लंज जलप्रपातों में से एक है और एक प्रमुख पर्यटन स्थल है, यह एक प्रमुख बिजली संयंत्र का स्थल भी है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements about Multipurpose River Projects:\n बहुउद्देशीय नदी परियोजनाओं के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. Assertion (A): The construction of large dams often leads to the displacement of a large number of tribals and peasants. / अभिकथन (A): बड़े बांधों के निर्माण से अक्सर बड़ी संख्या में आदिवासियों और किसानों का विस्थापन होता है।\n 2. Reason (R): Multipurpose projects are primarily implemented for hydropower generation, flood control, irrigation, and tourism. / कारण (R): बहुउद्देशीय परियोजनाएँ मुख्य रूप से पनबिजली उत्पादन, बाढ़ नियंत्रण, सिंचाई और पर्यटन के लिए लागू की जाती हैं।",
+      "question": "Consider the following statements about Multipurpose River Projects:\n1. Assertion (A): The construction of large dams often leads to the displacement of a large number of tribals and peasants.\n2. Reason (R): Multipurpose projects are primarily implemented for hydropower generation, flood control, irrigation, and tourism.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth statements are individually correct facts about multipurpose projects. Assertion (A) describes a negative consequence (drawback) of dam construction, while Reason (R) describes the primary positive purposes of these projects. The purposes (R) do not explain the displacement (A); the displacement is a result of the construction process itself.\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन बहुउद्देशीय परियोजनाओं के बारे में व्यक्तिगत रूप से सही तथ्य हैं। अभिकथन (A) बांध निर्माण के नकारात्मक परिणाम (नुकसान) का वर्णन करता है, जबकि कारण (R) इन परियोजनाओं के प्राथमिक सकारात्मक उद्देश्यों का वर्णन करता है। उद्देश्य (R) विस्थापन (A) की व्याख्या नहीं करते हैं; विस्थापन निर्माण प्रक्रिया का ही परिणाम है।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following dams/projects are situated on the Chenab River in Jammu and Kashmir? निम्नलिखित में से कौन से बांध/परियोजनाएँ जम्मू और कश्मीर में चिनाब नदी पर स्थित हैं?\n 1. Dulhasti Hydroelectric Project / दुलहस्ती जलविद्युत परियोजना\n 2. Salal Hydroelectric Power Station / सलाल जलविद्युत स्टेशन\n 3. Kishan Ganga Hydroelectric Project / किशन गंगा जलविद्युत परियोजना\n 4. Baglihar Hydroelectric Power Project / बगलिहार जलविद्युत परियोजना",
+      "question": "Which of the following dams/projects are situated on the Chenab River in Jammu and Kashmir?\n1. Dulhasti Hydroelectric Project\n2. Salal Hydroelectric Power Station\n3. Kishan Ganga Hydroelectric Project\n4. Baglihar Hydroelectric Power Project",
       "options": {
-        "a": "1, 2, and 3 only / केवल 1, 2, और 3",
-        "b": "2, 3, and 4 only / केवल 2, 3, और 4",
-        "c": "1, 2, and 4 only / केवल 1, 2, और 4",
-        "d": "All 1, 2, 3, and 4 / सभी 1, 2, 3, और 4"
+        "a": "1, 2, and 3 only",
+        "b": "2, 3, and 4 only",
+        "c": "1, 2, and 4 only",
+        "d": "All 1, 2, 3, and 4"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDulhasti, Salal, and Baglihar are all major hydroelectric projects constructed on the Chenab River, primarily in the Jammu and Kashmir region. The Kishan Ganga project, however, is built on the Jhelum River, which is a different tributary of the Indus River system.\n\n📖 हिंदी स्पष्टीकरण:\nदुलहस्ती, सलाल और बगलिहार सभी चिनाब नदी पर निर्मित प्रमुख जलविद्युत परियोजनाएँ हैं, जो मुख्य रूप से जम्मू और कश्मीर क्षेत्र में हैं। हालाँकि, किशन गंगा परियोजना किशनगंगा नदी पर बनाई गई है, जो झेलम नदी की एक सहायक नदी है।"
     },
     {
       "q_num": 13,
-      "question": "Match the following Lakes with their respective States:\n निम्नलिखित झीलों को उनके संबंधित राज्यों से सुमेलित करें: |\n List-I (Lake) / सूची-I (झील) | List-II (State) / सूची-II (राज्य) |\n | A. Loktak Lake / लोकटक झील | 1. Maharashtra / महाराष्ट्र |\n | B. Umiam Lake / उमियम झील | 2. Odisha / ओडिशा |\n | C. Chilika Lake / चिल्का झील | 3. Manipur / मणिपुर |\n | D. Lonar Lake / लोनार झील | 4. Meghalaya / मेघालय |",
+      "question": "Match the following Lakes with their respective States:\nList-I (Lake)\n| A. Loktak Lake\n| B. Umiam Lake\n| C. Chilika Lake\n| D. Lonar Lake",
       "options": {
         "a": "A-3, B-4, C-2, D-1",
         "b": "A-4, B-3, C-1, D-2",
@@ -162,31 +162,31 @@
     },
     {
       "q_num": 14,
-      "question": "Consider the phenomenon of Hydroelectric Power generation:\n पनबिजली उत्पादन की घटना पर विचार करें:\n 1. Assertion (A): Water stored in a dam's reservoir gains Potential Energy (P.E).\n अभिकथन (A): बांध के जलाशय में संचित जल स्थितिज ऊर्जा (P.E) प्राप्त करता है।\n 2. Reason (R): Potential Energy is the energy stored in an object due to its position relative to a zero position, which is converted to Kinetic Energy (K.E) as the water flows down to turn the turbines.\n कारण (R): स्थितिज ऊर्जा वह ऊर्जा है जो किसी वस्तु में उसकी शून्य स्थिति के सापेक्ष उसकी स्थिति के कारण संग्रहित होती है, जो टर्बाइनों को घुमाने के लिए पानी के नीचे बहने पर गतिज ऊर्जा (K.E) में परिवर्तित हो जाती है।",
+      "question": "Consider the phenomenon of Hydroelectric Power generation:\n 1. Assertion (A): Water stored in a dam's reservoir gains Potential Energy (P.E).\n 2. Reason (R): Potential Energy is the energy stored in an object due to its position relative to a zero position, which is converted to Kinetic Energy (K.E) as the water flows down to turn the turbines.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe storage of water at a height in a dam's reservoir provides it with high Potential Energy. The conversion of this P.E into K.E as the water falls/flows, and subsequently into electrical energy, is the fundamental principle of hydroelectric power generation. The reason correctly explains the concept behind the assertion.\n\n📖 हिंदी स्पष्टीकरण:\nबांध के जलाशय में ऊँचाई पर जल का भंडारण उसे उच्च संभावित ऊर्जा प्रदान करता है। जल के गिरने/बहने पर इस स्थितिज ऊर्जा का गतिज ऊर्जा में, और बाद में विद्युत ऊर्जा में रूपांतरण, जलविद्युत ऊर्जा उत्पादन का मूल सिद्धांत है। कारण कथन के पीछे की अवधारणा को सही रूप से स्पष्ट करता है।"
     },
     {
       "q_num": 15,
-      "question": "Which environmental activist was closely associated with the 'Anti-Tehri Movement' against the construction of the Tehri Dam?\n कौन सा पर्यावरण कार्यकर्ता टिहरी बांध के निर्माण के खिलाफ 'एंटी-टिहरी आंदोलन' से करीब से जुड़ा था?",
+      "question": "Which environmental activist was closely associated with the 'Anti-Tehri Movement' against the construction of the Tehri Dam?",
       "options": {
-        "a": "Baba Amte / बाबा आमटे",
-        "b": "Medha Patkar / मेधा पाटकर",
-        "c": "Sunderlal Bahuguna / सुंदरलाल बहुगुणा",
-        "d": "Anil Agarwal / अनिल अग्रवाल"
+        "a": "Baba Amte",
+        "b": "Medha Patkar",
+        "c": "Sunderlal Bahuguna",
+        "d": "Anil Agarwal"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSunderlal Bahuguna, a prominent environmentalist and Gandhian activist, was the face of the 'Anti-Tehri Movement' and the Chipko Movement. He undertook long fasts to protest the construction of the large Tehri Dam on the Bhagirathi River, citing concerns about environment and seismic vulnerability.\n\n📖 हिंदी स्पष्टीकरण:\nसुंदरलाल बहुगुणा, एक प्रमुख पर्यावरणविद् और गांधीवादी कार्यकर्ता, 'एंटी-टिहरी आंदोलन' और चिपको आंदोलन का चेहरा थे। उन्होंने पर्यावरणीय चिंताओं और भूकंपीय संवेदनशीलता का हवाला देते हुए भागीरथी नदी पर बड़े टिहरी बांध के निर्माण के विरोध में लंबे समय तक अनशन किए।"
     },
     {
       "q_num": 16,
-      "question": "Match the following Dams with the Rivers on which they are built (Gujarat and Madhya Pradesh):\n निम्नलिखित बांधों को उन नदियों से सुमेलित करें जिन पर वे बनाए गए हैं (गुजरात और मध्य प्रदेश):\n | List-I (Dam) / सूची-I (बांध) | List-II (River) / सूची-II (नदी) |\n | A. Sardar Sarovar Dam / सरदार सरोवर बांध | 1. Chambal / चम्बल |\n | B. Ukai Dam / उकाई बांध | 2. Narmada / नर्मदा |\n | C. Gandhi Sagar Dam / गांधी सागर बांध | 3. Tapi / तापी |\n | D. Tawa Dam / तवा बांध | 4. Tawa (Tributary of Narmada) / तवा (नर्मदा की सहायक नदी) |",
+      "question": "Match the following Dams with the Rivers on which they are built (Gujarat and Madhya Pradesh):\n| List-I (Dam)\n| A. Sardar Sarovar Dam\n| B. Ukai Dam\n| C. Gandhi Sagar Dam\n| D. Tawa Dam",
       "options": {
         "a": "A-2, B-3, C-1, D-4",
         "b": "A-3, B-2, C-4, D-1",
@@ -198,31 +198,31 @@
     },
     {
       "q_num": 17,
-      "question": "Which of the following is the 'Longest Lake' in India?\n निम्नलिखित में से कौन सी भारत की 'सबसे लंबी झील' है?",
+      "question": "Which of the following is the 'Longest Lake' in India?",
       "options": {
-        "a": "Sasthamkotta Lake / सस्थामकोट्टा झील",
-        "b": "Ashtamudi Lake / अष्टमुडी झील",
-        "c": "Vembanad Lake / वेम्बनाड झील",
-        "d": "Wular Lake / वुलर झील"
+        "a": "Sasthamkotta Lake",
+        "b": "Ashtamudi Lake",
+        "c": "Vembanad Lake",
+        "d": "Wular Lake"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n5. Vembanad Lake is located in the state of Kerala.\n6. It is the longest lake in India.\n7. It is approximately 96 kilometers long.\n8. It is also the largest lake in Kerala and one of the largest lakes in India.\n9. This lake is a lagoon consisting of both saltwater and freshwater.\n10. The famous Nehru Trophy Boat Race is held on the lake's shores.\nOther options:\n11. Sasthamkotta Lake – Kerala's largest freshwater lake.\n12. Ashtamudi Lake – A beautiful lagoon lake in Kerala.\n13. Wular Lake – Located in Jammu and Kashmir, India's largest freshwater lake.\n\n📖 हिंदी स्पष्टीकरण:\n14. वेम्बनाड झील केरल राज्य में स्थित है।\n15. यह भारत की सबसे लंबी झील है।\n16. इसकी लंबाई लगभग 96 किलोमीटर है।\n17. यह केरल की सबसे बड़ी झील भी है और भारत की सबसे बड़ी झीलों में से एक है।\n18. यह झील खारे और मीठे दोनों प्रकार के पानी से बनी एक लैगून है।\n19. झील के किनारे प्रसिद्ध नेहरू ट्रॉफी बोट रेस आयोजित होती है।\nअन्य विकल्प:\n20. सस्थामकोट्टा झील – केरल की सबसे बड़ी मीठे पानी की झील।\n21. अष्टमुडी झील – केरल की एक सुंदर लैगून झील।\n22. वुलर झील – जम्मू और कश्मीर में स्थित, भारत की सबसे बड़ी मीठे पानी की झील।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements regarding the Chenab Rail Bridge:\n चिनाब रेल पुल के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. It is the highest railway bridge in the world. / यह विश्व का सबसे ऊँचा रेलवे पुल है।\n 2. It is constructed on the Chenab River near the Salal Hydroelectric Project. / इसका निर्माण सलाल जलविद्युत परियोजना के पास चिनाब नदी पर किया गया है।\n 3. Its height is 359 meters (1,178 ft) high. / इसकी ऊँचाई 359 मीटर (1,178 फीट) है।",
+      "question": "Consider the following statements regarding the Chenab Rail Bridge:\n1. It is the highest railway bridge in the world.\n2. It is constructed on the Chenab River near the Salal Hydroelectric Project.\n3. Its height is 359 meters (1,178 ft) high.",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "All 1, 2, and 3 / सभी 1, 2, और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "All 1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\n8. Chenab Rail Bridge – Built over the Chenab River in Jammu and Kashmir.\n9. This bridge is the world's highest railway bridge.\n10. It is approximately 359 metres (1,178 ft) high – taller than the Eiffel Tower.\n11. This bridge is located near the Salal Hydroelectric Project.\n12. Construction work was carried out by the Indian Railways.\n13. This bridge is part of the Udhampur–Srinagar–Baramulla Rail Link Project (USBRL).\n\n📖 हिंदी स्पष्टीकरण:\n14. चिनाब रेल पुल — जम्मू और कश्मीर में चिनाब नदी पर बना हुआ है।\n15. यह पुल विश्व का सबसे ऊँचा रेलवे पुल है।\n16. इसकी ऊँचाई लगभग 359 मीटर (1,178 फीट) है — जो एफिल टॉवर से भी ऊँचा है।\n17. यह पुल सलाल जलविद्युत परियोजना के पास स्थित है।\n18. निर्माण कार्य भारतीय रेलवे द्वारा किया गया है।\n19. यह पुल उधमपुर–श्रीनगर–बारामूला रेल लिंक परियोजना (USBRL) का हिस्सा है।"
     },
     {
       "q_num": 19,
-      "question": "Match the following Waterfalls with the States they are located in:\n निम्नलिखित जलप्रपातों को उन राज्यों से सुमेलित करें जिनमें वे स्थित हैं:\n | List-I (Waterfall) / सूची-I (जलप्रपात) | List-II (State) / सूची-II (राज्य) |\n | A. Hundru Falls / हुंडरू जलप्रपात | 1. Karnataka / कर्नाटक |\n | B. Athirappilly Falls / अथिरप्पिल्ली जलप्रपात | 2. Jharkhand / झारखण्ड |\n | C. Kunchikal Falls / कुंचिकल जलप्रपात | 3. Meghalaya / मेघालय |\n | D. Nohkalikai Falls / नोहाकलिकाई जलप्रपात | 4. Kerala / केरल |",
+      "question": "Match the following Waterfalls with the States they are located in:\n| List-I (Waterfall)\n| A. Hundru Falls\n| B. Athirappilly Falls\n| C. Kunchikal Falls\n| D. Nohkalikai Falls",
       "options": {
         "a": "A-2, B-4, C-1, D-3",
         "b": "A-4, B-2, C-3, D-1",
@@ -234,72 +234,72 @@
     },
     {
       "q_num": 20,
-      "question": "Which of the following dams in Maharashtra is the largest in the state and is built on the Koyna River?\n निम्नलिखित में से कौन सा बांध महाराष्ट्र राज्य में सबसे बड़ा है और कोयना नदी पर बनाया गया है?",
+      "question": "Which of the following dams in Maharashtra is the largest in the state and is built on the Koyna River?",
       "options": {
-        "a": "Jayakwadi Dam / जायकवाड़ी बांध",
-        "b": "Ujjaini Dam / उजानी बांध",
-        "c": "Dhom Dam / धोम बांध",
-        "d": "Koyna Dam / कोयना बांध"
+        "a": "Jayakwadi Dam",
+        "b": "Ujjaini Dam",
+        "c": "Dhom Dam",
+        "d": "Koyna Dam"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Koyna Dam is the largest dam in Maharashtra in terms of reservoir capacity and is famously built on the Koyna River, a tributary of the Krishna River. It plays a vital role in power generation through the Koyna Hydroelectric Project, the largest completed hydroelectric power project in India. The Koyna River is called the lifeline of Maharashtra.\n\n📖 हिंदी स्पष्टीकरण:\nकोयना बांध जलाशय क्षमता के मामले में महाराष्ट्र का सबसे बड़ा बांध है और यह प्रसिद्ध रूप से कोयना नदी पर बनाया गया है, जो कृष्णा नदी की सहायक नदी है। यह कोयना जलविद्युत परियोजना के माध्यम से बिजली उत्पादन में एक महत्वपूर्ण भूमिका निभाता है, जो भारत में सबसे बड़ी पूर्ण जलविद्युत शक्ति परियोजना है। कोयना नदी को महाराष्ट्र की जीवनरेखा कहा जाता है।"
     },
     {
       "q_num": 21,
-      "question": "Consider the following statements regarding the largest lakes of India:\n भारत की सबसे बड़ी झीलों के संबंध में निम्नलिखित कथनों पर विचार करें:\n Statement 1: Wular Lake (J&K) is the largest freshwater lake in India, and it is formed as a result of tectonic activity.\n कथन 1: वुलर झील (J&K) भारत की सबसे बड़ी मीठे पानी की झील है, और इसका निर्माण विवर्तनिक गतिविधि के परिणामस्वरूप हुआ है।\n Statement 2: Chilika Lake (Odisha) is the largest brackish water lake/lagoon, and it has the largest area among all brackish and saltwater lakes.\n कथन 2: चिल्का झील (ओडिशा) सबसे बड़ी खारे पानी की झील/लैगून है, और इसका क्षेत्रफल सभी खारे और लवणीय झीलों में सबसे बड़ा है।\n Statement 3: Sambhar Lake (Rajasthan) is the largest saltwater lake with higher salinity than Chilika, but its area is less than that of Chilika.\n कथन 3: सांभर झील (राजस्थान) सबसे बड़ी लवणीय जल की झील है जिसका खारापन चिल्का से अधिक है, लेकिन इसका क्षेत्रफल चिल्का से कम है।",
+      "question": "Consider the following statements regarding the largest lakes of India:\n Statement 1: Wular Lake (J&K) is the largest freshwater lake in India, and it is formed as a result of tectonic activity.\n Statement 2: Chilika Lake (Odisha) is the largest brackish water lake/lagoon, and it has the largest area among all brackish and saltwater lakes.\n Statement 3: Sambhar Lake (Rajasthan) is the largest saltwater lake with higher salinity than Chilika, but its area is less than that of Chilika.",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "All 1, 2, and 3 / सभी 1, 2, और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "All 1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are factually correct. Wular is confirmed as the largest freshwater and tectonic lake. Chilika is the largest brackish water lake by area. Sambhar is the largest saltwater lake (inland) but, despite its higher salinity, it is smaller in area than Chilika.\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन तथ्यात्मक रूप से सही हैं। वुलर को सबसे बड़ी मीठे पानी की और विवर्तनिक झील के रूप में पुष्टि की गई है। चिल्का क्षेत्रफल के हिसाब से सबसे बड़ी खारे पानी की झील है। सांभर सबसे बड़ी लवणीय जल झील (अंतर्देशीय) है, लेकिन अपने उच्च खारेपन के बावजूद, इसका क्षेत्रफल चिल्का से कम है।"
     },
     {
       "q_num": 22,
-      "question": "Which of the following pairs of Dam/Project and River is NOT correctly matched?\n निम्नलिखित में से कौन सा बांध/परियोजना और नदी का जोड़ा सही सुमेलित नहीं है?",
+      "question": "Which of the following pairs of Dam/Project and River is NOT correctly matched?",
       "options": {
-        "a": "Krishnaraja Sagar Dam - Kaveri River / कृष्णराज सागर बांध - कावेरी नदी",
-        "b": "Almatti Dam - Krishna River / अल्माटी बांध - कृष्णा नदी",
-        "c": "Jog/Mahatma Gandhi Dam - Sharavati River / जोग/महात्मा गांधी बांध - शरावती नदी",
-        "d": "Baira Siul Dam - Beas River / बैरा स्यूल बांध - ब्यास नदी"
+        "a": "Krishnaraja Sagar Dam - Kaveri River",
+        "b": "Almatti Dam - Krishna River",
+        "c": "Jog/Mahatma Gandhi Dam - Sharavati River",
+        "d": "Baira Siul Dam - Beas River"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Krishnaraja Sagar, Almatti, and Jog Dam pairs are correctly matched with their respective rivers (Kaveri, Krishna, and Sharavati). However, the Baira Siul Dam, located in the Chamba district, is built on the Ravi River, not the Beas River.\n\n📖 हिंदी स्पष्टीकरण:\nकृष्णराज सागर, अल्माटी और जोग बांध के जोड़े अपनी संबंधित नदियों (कावेरी, कृष्णा और शरावती) के साथ सही ढंग से सुमेलित हैं। हालाँकि, चंबा जिले में स्थित बैरा स्यूल बांध, रावी नदी पर बनाया गया है, न कि ब्यास नदी पर।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following is the 'Largest Artificial Lake of India' in terms of water spread/capacity?\n जल फैलाव क्षेत्र और भंडारण क्षमता की दृष्टि से निम्नलिखित में से कौन सी 'भारत की सबसे बड़ी कृत्रिम झील' है?",
+      "question": "Which of the following is the 'Largest Artificial Lake of India' in terms of water spread/capacity?",
       "options": {
-        "a": "a) Gobind Sagar Lake – Bhakra Nangal Dam (Himachal Pradesh) / गोविंद सागर झील – भाखड़ा नांगल बांध (हिमाचल प्रदेश)",
-        "b": "b) Govind Ballabh Pant Sagar – Rihand Dam (Uttar Pradesh) / गोविंद वल्लभ पंत सागर – रिहंद बांध (उत्तर प्रदेश)",
-        "c": "c) Nagarjuna Sagar Reservoir – Krishna River (Telangana) / नागार्जुन सागर जलाशय – कृष्णा नदी (तेलंगाना)",
-        "d": "d) Hirakud Reservoir – Mahanadi River (Odisha) / हीराकुंड जलाशय – महानदी (ओडिशा)"
+        "a": "a) Gobind Sagar Lake – Bhakra Nangal Dam (Himachal Pradesh)",
+        "b": "b) Govind Ballabh Pant Sagar – Rihand Dam (Uttar Pradesh)",
+        "c": "c) Nagarjuna Sagar Reservoir – Krishna River (Telangana)",
+        "d": "d) Hirakud Reservoir – Mahanadi River (Odisha)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGovind Vallabh Pant Sagar is formed by the Rihand Dam on the Rihand River in Sonbhadra district, Uttar Pradesh. It is described as India's largest artificial lake. Its watershed covers approximately 466 km² and storage capacity is approximately 8.6 billion cubic meters.\n\n📖 हिंदी स्पष्टीकरण:\nगोविंद वल्लभ पंत सागर उत्तर प्रदेश के सोनभद्र जिले में रिहंद नदी पर रिहंद बांध द्वारा बनाया गया है। इसे भारत की सबसे बड़ी कृत्रिम झील बताया गया है। इसका जल फैलाव क्षेत्र लगभग 466 km² और संग्रहण क्षमता लगभग 8.6 बिलियन घन मीटर है।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following pairs of dams and its unique feature:\n बांध और उसकी अनूठी विशेषता के निम्नलिखित जोड़ों पर विचार करें:\n 1. Tehri Dam: Highest Dam of India (261 m). / टिहरी बांध: भारत का सबसे ऊँचा बांध (261 मी.)।\n 2. Bhakra Dam: Highest Gravity Dam. / भाखड़ा बांध: सबसे ऊँचा गुरुत्वाकर्षण बांध।\n 3. Hirakud Dam: Oldest Dam of India. / हीराकुंड बांध: भारत का सबसे पुराना बांध|\n Which of the pairs given above is/are correctly matched?\n ऊपर दिए गए जोड़ों में से कौन सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following pairs of dams and its unique feature:\n1. Tehri Dam: Highest Dam of India (261 m).\n2. Bhakra Dam: Highest Gravity Dam.\n3. Hirakud Dam: Oldest Dam of India.\n Which of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTehri Dam is the highest dam, and Bhakra is the highest gravity dam. However, Hirakud Dam is famous for being the longest dam in the world/India (25.8 km). The oldest dam in India is the Kallanai (Grand Anicut) on the Kaveri River,\nbuilt by Chola King Karikalan in the 2nd century CE (still functional). Thus, statement 3 is factually incorrect as its main feature is length.\n\n📖 हिंदी स्पष्टीकरण:\nटिहरी बांध सबसे ऊंचा बांध है, और भाखड़ा सबसे ऊंचा गुरुत्वाकर्षण बांध है। हालाँकि, हीराकुंड बांध दुनिया/भारत का सबसे लंबा बांध (25.8 किमी) होने के लिए प्रसिद्ध है। भारत का सबसे पुराना बांध है कल्लनई (Grand Anicut), जो कावेरी नदी पर चोल राजा करिकलन ने दूसरी शताब्दी ईस्वी में बनवाया था। इस प्रकार, कथन 3 तथ्यात्मक रूप से गलत है क्योंकि इसकी मुख्य विशेषता लंबाई है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following waterfalls in India is called the 'Niagara Falls of India'?\n भारत में निम्नलिखित में से किस जलप्रपात को 'भारत का नियाग्रा जलप्रपात' कहा जाता है?",
+      "question": "Which of the following waterfalls in India is called the 'Niagara Falls of India'?",
       "options": {
-        "a": "Duduma waterfalls / डुडुमा जलप्रपात",
-        "b": "Chitrakoot waterfall / चित्रकूट जलप्रपात",
-        "c": "Gokak waterfalls / गोकक जलप्रपात",
-        "d": "Shivsamudram waterfall / शिवसमुद्रम जलप्रपात"
+        "a": "Duduma waterfalls",
+        "b": "Chitrakoot waterfall",
+        "c": "Gokak waterfalls",
+        "d": "Shivsamudram waterfall"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Chitrakoot Waterfall, located in the Bastar district of Chhattisgarh on the Indravati River, is commonly known as the 'Niagara Falls of India'. This name is given due to its horseshoe shape and its breadth, especially during the monsoon season, which makes it appear similar to the famous North American waterfall Niagara.\n\n📖 हिंदी स्पष्टीकरण:\nइंद्रावती नदी पर छत्तीसगढ़ के बस्तर जिले में स्थित चित्रकूट जलप्रपात को आमतौर पर 'भारत का नियाग्रा जलप्रपात' कहा जाता है। यह नाम इसे इसके घोड़े की नाल जैसे आकार और इसकी चौड़ाई के कारण दिया गया है, खासकर मानसून के मौसम के दौरान, जो इसे प्रसिद्ध उत्तरी अमेरिकी जलप्रपात नियाग्रा के समान दिखाता है।"

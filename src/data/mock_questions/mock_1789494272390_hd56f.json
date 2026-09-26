@@ -11,7 +11,7 @@
     "correctOption": "B",
     "userTime": "01:49",
     "avgTime": "00:55",
-    "questionText": "In the following question, select the odd number pair from the given alternatives.\nOptions:\nA: 64 - 576\nB: 17 - 343\nC: 27 - 196\nD: 32 - 36",
+    "questionText": "In the following question, select the odd number pair from the given alternatives.",
     "options": {
       "a": "64 - 576",
       "b": "17 - 343",
@@ -31,7 +31,7 @@
       "subtopic": "Number Classification",
       "conceptTested": "Product of digits squared compared to the paired number"
     },
-    "question": "In the following question, select the odd number pair from the given alternatives.\nOptions:\nA: 64 - 576\nB: 17 - 343\nC: 27 - 196\nD: 32 - 36",
+    "question": "In the following question, select the odd number pair from the given alternatives.",
     "answer": "b"
   },
   {
@@ -46,7 +46,7 @@
     "correctOption": "A",
     "userTime": "01:25",
     "avgTime": "01:04",
-    "questionText": "If the letters given below are arranged from left to right in the alphabetical order, then which letter will be at 11th position from the right?\nMUBYIJRLDOPCZQNHK\nOptions:\nA: K\nB: L\nC: J\nD: M",
+    "questionText": "If the letters given below are arranged from left to right in the alphabetical order, then which letter will be at 11th position from the right?\nMUBYIJRLDOPCZQNHK",
     "options": {
       "a": "K",
       "b": "L",
@@ -66,7 +66,7 @@
       "subtopic": "Word Rearrangement & Alphabetical Sorting",
       "conceptTested": "Alphabetical sorting of a given set of letters and determining position from a specified end"
     },
-    "question": "If the letters given below are arranged from left to right in the alphabetical order, then which letter will be at 11th position from the right?\nMUBYIJRLDOPCZQNHK\nOptions:\nA: K\nB: L\nC: J\nD: M",
+    "question": "If the letters given below are arranged from left to right in the alphabetical order, then which letter will be at 11th position from the right?\nMUBYIJRLDOPCZQNHK",
     "answer": "a"
   },
   {
@@ -81,7 +81,7 @@
     "correctOption": "A",
     "userTime": "01:16",
     "avgTime": "00:48",
-    "questionText": "If in the number sequence 8 3 2 1 6 2 4 3 7 1 7 2 all the odd numbers are increased by two and all the even numbers are decreased by two, then the new number sequence is arranged in ascending order, which will be the fifth number from the left?\nOptions:\nA: 3\nB: 2\nC: 4\nD: 5",
+    "questionText": "If in the number sequence 8 3 2 1 6 2 4 3 7 1 7 2 all the odd numbers are increased by two and all the even numbers are decreased by two, then the new number sequence is arranged in ascending order, which will be the fifth number from the left?",
     "options": {
       "a": "3",
       "b": "2",
@@ -101,7 +101,7 @@
       "subtopic": "Vowel-Consonant / Number Operations",
       "conceptTested": "Arithmetic operations applied to digits based on parity followed by sorting"
     },
-    "question": "If in the number sequence 8 3 2 1 6 2 4 3 7 1 7 2 all the odd numbers are increased by two and all the even numbers are decreased by two, then the new number sequence is arranged in ascending order, which will be the fifth number from the left?\nOptions:\nA: 3\nB: 2\nC: 4\nD: 5",
+    "question": "If in the number sequence 8 3 2 1 6 2 4 3 7 1 7 2 all the odd numbers are increased by two and all the even numbers are decreased by two, then the new number sequence is arranged in ascending order, which will be the fifth number from the left?",
     "answer": "a"
   },
   {
@@ -116,7 +116,7 @@
     "correctOption": "C",
     "userTime": "00:59",
     "avgTime": "00:46",
-    "questionText": "If 'A' denotes 'addition', 'B' denotes 'multiplication', 'C' denotes 'subtraction', and 'D' denotes 'division', then what will be the value of the following expression?\n72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)\nOptions:\nA: 1\nB: 3\nC: 2\nD: 4",
+    "questionText": "If 'A' denotes 'addition', 'B' denotes 'multiplication', 'C' denotes 'subtraction', and 'D' denotes 'division', then what will be the value of the following expression?\n72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)",
     "options": {
       "a": "1",
       "b": "3",
@@ -136,7 +136,7 @@
       "subtopic": "Interchange of Signs & Balancing Equations",
       "conceptTested": "Evaluation of algebraic expressions using BODMAS after substituting operational symbols"
     },
-    "question": "If 'A' denotes 'addition', 'B' denotes 'multiplication', 'C' denotes 'subtraction', and 'D' denotes 'division', then what will be the value of the following expression?\n72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)\nOptions:\nA: 1\nB: 3\nC: 2\nD: 4",
+    "question": "If 'A' denotes 'addition', 'B' denotes 'multiplication', 'C' denotes 'subtraction', and 'D' denotes 'division', then what will be the value of the following expression?\n72 D 6 B 12 A 24 C 18 C (20 B 5 A 48)",
     "answer": "c"
   },
   {
@@ -722,7 +722,7 @@
       "C": "55°",
       "D": "65°"
     },
-    "solution": "Solution\n\nShortcut Trick\nThe line joining the external point to the centre bisects the angle between the two tangents.\n\n⇒ ∠OTQ = ∠PTQ ÷ 2 = 50° ÷ 2 = 25°\n\nIn right-angled ΔOQT, the radius OQ is perpendicular to the tangent TQ at point Q (∠OQT = 90°).\n\n⇒ ∠TOQ = 90° - ∠OTQ = 90° - 25° = 65°\n∴ The correct answer is 65°.\n\nAlternate Method\nGiven:\n⇒ Tangents TP and TQ are drawn from an external point T.\n⇒ ∠PTQ = 50°\n\nConcept Used:\n\n⇒ The radius is perpendicular to the tangent at the point of contact.\n⇒ The sum of the angles of a quadrilateral is 360°.\n\n50°\n?\nO\nT\nP\nQ\n\nCalculations:\nIn quadrilateral OPT\nQ:\n\n⇒ ∠OPT = 90° and ∠OQT = 90°\n⇒ ∠OPT + ∠OQT + ∠PTQ + ∠POQ = 360°\n⇒ 90° + 90° + 50° + ∠POQ = 360°\n⇒ 230° + ∠POQ = 360°\n⇒ ∠POQ = 360° - 230° = 130°\nSince the line OT joining the external point to the centre bisects ∠PO\nQ:\n⇒ ∠TOQ = ∠POQ ÷ 2\n⇒ ∠TOQ = 130° ÷ 2 = 65°\n∴ The correct answer is 65°.\n\nAdditional Information\nProperties of Tangents from an External Point\n\nThe lengths of the two tangents drawn from an external point to a circle are exactly equal to each other (TP = TQ).\n\nAngle Subtended at the Centre\n\nThe two tangents subtend equal angles at the centre of the circle, meaning the line connecting the external point to the centre acts as an angle bisector (∠POT = ∠QOT).\n\nCyclic Quadrilateral Formation\n\nThe quadrilateral formed by the two tangents and the two radii to the points of contact has opposite angles that sum to 180°, specifically ∠PTQ + ∠POQ = 180°.",
+    "solution": "Solution\n\nShortcut Trick\nThe line joining the external point to the centre bisects the angle between the two tangents.\n\n⇒ ∠OTQ = ∠PTQ ÷ 2 = 50° ÷ 2 = 25°\n\nIn right-angled ΔOQT, the radius OQ is perpendicular to the tangent TQ at point Q (∠OQT = 90°).\n\n⇒ ∠TOQ = 90° - ∠OTQ = 90° - 25° = 65°\n∴ The correct answer is 65°.\n\nAlternate Method\nGiven:\n⇒ Tangents TP and TQ are drawn from an external point T.\n⇒ ∠PTQ = 50°\n\nConcept Used:\n\n⇒ The radius is perpendicular to the tangent at the point of contact.\n⇒ The sum of the angles of a quadrilateral is 360°.\n\n50°\n?\nO\nT\nP\nQ\n\nCalculations:\nIn quadrilateral OPTQ :\n\n⇒ ∠OPT = 90° and ∠OQT = 90°\n⇒ ∠OPT + ∠OQT + ∠PTQ + ∠POQ = 360°\n⇒ 90° + 90° + 50° + ∠POQ = 360°\n⇒ 230° + ∠POQ = 360°\n⇒ ∠POQ = 360° - 230° = 130°\nSince the line OT joining the external point to the centre bisects ∠POQ :\n⇒ ∠TOQ = ∠POQ ÷ 2\n⇒ ∠TOQ = 130° ÷ 2 = 65°\n∴ The correct answer is 65°.\n\nAdditional Information\nProperties of Tangents from an External Point\n\nThe lengths of the two tangents drawn from an external point to a circle are exactly equal to each other (TP = TQ).\n\nAngle Subtended at the Centre\n\nThe two tangents subtend equal angles at the centre of the circle, meaning the line connecting the external point to the centre acts as an angle bisector (∠POT = ∠QOT).\n\nCyclic Quadrilateral Formation\n\nThe quadrilateral formed by the two tangents and the two radii to the points of contact has opposite angles that sum to 180°, specifically ∠PTQ + ∠POQ = 180°.",
     "topic": "Geometry",
     "subtopic": "Circles - Tangents & Secants",
     "conceptTested": "The angle between two tangents drawn from an external point and the angle subtended by the line segment joining the points of contact at the centre are supplementary, and the line from the external point to the centre bisects both angles.",

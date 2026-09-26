@@ -6,7 +6,7 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "In which year did Mahatma Gandhi return to India from South Africa? / महात्मा गांधी दक्षिण अफ्रीका से भारत किस वर्ष लौटे थे?",
+      "question": "In which year did Mahatma Gandhi return to India from South Africa?",
       "options": {
         "a": "1912 / 1912",
         "b": "1915 / 1915",
@@ -18,187 +18,187 @@
     },
     {
       "q_num": 2,
-      "question": "Who was considered the political guru of Mahatma Gandhi? / महात्मा गांधी का राजनीतिक गुरु किसे माना जाता था?",
+      "question": "Who was considered the political guru of Mahatma Gandhi?",
       "options": {
-        "a": "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "b": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "c": "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "d": "Madan Mohan Malaviya / मदन मोहन मालवीय"
+        "a": "Bal Gangadhar Tilak",
+        "b": "Dadabhai Naoroji",
+        "c": "Gopal Krishna Gokhale",
+        "d": "Madan Mohan Malaviya"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGopal Krishna Gokhale was the political mentor of Gandhi. He advised Gandhi to travel around India to understand the ground reality before joining active politics\n\n📖 हिंदी स्पष्टीकरण:\nगोपाल कृष्ण गोखले गांधी के राजनीतिक गुरु थे। उन्होंने गांधी को सक्रिय राजनीति में शामिल होने से पहले जमीनी वास्तविकताओं को समझने के लिए पूरे भारत की यात्रा करने की सलाह दी।"
     },
     {
       "q_num": 3,
-      "question": "Which was the first Satyagraha movement led by Gandhi in India? भारत में गांधी के नेतृत्व में किया गया पहला सत्याग्रह आंदोलन कौन सा था?",
+      "question": "Which was the first Satyagraha movement led by Gandhi in India?",
       "options": {
-        "a": "Kheda Satyagraha / खेड़ा सत्याग्रह",
-        "b": "Ahmedabad Mill Strike / अहमदाबाद मिल हड़ताल",
-        "c": "Champaran Satyagraha / चंपारण सत्याग्रह",
-        "d": "Rowlatt Satyagraha / रौलट सत्याग्रह"
+        "a": "Kheda Satyagraha",
+        "b": "Ahmedabad Mill Strike",
+        "c": "Champaran Satyagraha",
+        "d": "Rowlatt Satyagraha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Champaran Satyagraha of 1917 was Gandhi's first Satyagraha in India. It was launched to support farmers in Bihar who were forced to grow indigo under the Tinkathiya system. / 1917\n\n📖 हिंदी स्पष्टीकरण:\nका चंपारण सत्याग्रह भारत में गांधी का पहला सत्याग्रह था। यह बिहार के उन किसानों के समर्थन में शुरू किया गया था जिन्हें तिनकठिया प्रणाली के तहत नील की खेती करने के लिए मजबूर किया जाता था।"
     },
     {
       "q_num": 4,
-      "question": "Where did Mahatma Gandhi make his first major public appearance in India in 1916? / 1916 में महात्मा गांधी ने भारत में पहली बार सार्वजनिक रूप से कहाँ दर्शन दिए थे?",
+      "question": "Where did Mahatma Gandhi make his first major public appearance in India in 1916?",
       "options": {
-        "a": "Sabarmati Ashram / साबरमती आश्रम",
-        "b": "Banaras Hindu University / बनारस हिंदू विश्वविद्यालय",
-        "c": "Bombay Congress Session / बॉम्बे कांग्रेस अधिवेशन",
-        "d": "Champaran / चंपारण"
+        "a": "Sabarmati Ashram",
+        "b": "Banaras Hindu University",
+        "c": "Bombay Congress Session",
+        "d": "Champaran"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGandhi's first public appearance was at the inauguration of Banaras Hindu University (BHU) in 1916. The university was founded by Madan Mohan Malaviya\n\n📖 हिंदी स्पष्टीकरण:\nगांधी की पहली सार्वजनिक उपस्थिति 1916 में बनारस हिंदू विश्वविद्यालय (बीएचयू) के उद्घाटन के अवसर पर हुई थी। इस विश्वविद्यालय की स्थापना मदन मोहन मालवीय ने की थी।"
     },
     {
       "q_num": 5,
-      "question": "At which Congress session was Mahatma Gandhi elected as the President? / महात्मा गांधी को किस कांग्रेस अधिवेशन में अध्यक्ष चुना गया था?",
+      "question": "At which Congress session was Mahatma Gandhi elected as the President?",
       "options": {
-        "a": "Calcutta 1920 / कलकत्ता 1920",
-        "b": "Belgaum 1924 / बेलगाम 1924",
-        "c": "Lahore 1929 / लाहौर 1929",
-        "d": "Haripura 1938 / हरिपुरा 1938"
+        "a": "Calcutta 1920",
+        "b": "Belgaum 1924",
+        "c": "Lahore 1929",
+        "d": "Haripura 1938"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Belgaum session of 1924 was the only Indian National Congress session presided over by Mahatma Gandhi. During this session, the Swaraj Party was accepted within the Congress fold. / 1924\n\n📖 हिंदी स्पष्टीकरण:\nका बेलगाम अधिवेशन भारतीय राष्ट्रीय कांग्रेस का एकमात्र अधिवेशन था जिसकी अध्यक्षता महात्मा गांधी ने की थी। इस अधिवेशन में स्वराज पार्टी को कांग्रेस के अंतर्गत स्वीकार किया गया।"
     },
     {
       "q_num": 6,
-      "question": "What was the Tinkathiya system related to? / तिनकठिया प्रणाली किससे संबंधित थी?",
+      "question": "What was the Tinkathiya system related to?",
       "options": {
-        "a": "Cotton cultivation / कपास की खेती",
-        "b": "Rice cultivation / चावल की खेती",
-        "c": "Indigo cultivation / नील की खेती",
-        "d": "Tea plantation / चाय के बागान"
+        "a": "Cotton cultivation",
+        "b": "Rice cultivation",
+        "c": "Indigo cultivation",
+        "d": "Tea plantation"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUnder this system in Champaran, farmers were legally forced to cultivate indigo on 3/20th part of their land. This system was eventually abolished by the Champaran Agrarian Act\n\n📖 हिंदी स्पष्टीकरण:\nचंपारण में इस व्यवस्था के तहत किसानों को अपनी भूमि के 3/20 भाग पर नील की खेती करने के लिए कानूनी रूप से बाध्य किया जाता था। अंततः इस व्यवस्था को चंपारण कृषक अधिनियम द्वारा समाप्त कर दिया गया।"
     },
     {
       "q_num": 7,
-      "question": "Who was the founder of the Natal Indian Congress in South Africa? / दक्षिण अफ्रीका में नटाल भारतीय कांग्रेस के संस्थापक कौन थे?",
+      "question": "Who was the founder of the Natal Indian Congress in South Africa?",
       "options": {
-        "a": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "b": "Mahatma Gandhi / महात्मा गांधी",
-        "c": "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "d": "Shaukat Ali / शौकत अली"
+        "a": "Dadabhai Naoroji",
+        "b": "Mahatma Gandhi",
+        "c": "Gopal Krishna Gokhale",
+        "d": "Shaukat Ali"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGandhi set up the Natal Indian Congress in 1894 to fight racial discrimination against Indians and South Africans. He also started the newspaper 'Indian Opinion' there in 1903\n\n📖 हिंदी स्पष्टीकरण:\nगांधी ने 1894 में भारतीयों और दक्षिण अफ्रीकियों के खिलाफ नस्लीय भेदभाव के विरुद्ध संघर्ष करने के लिए नटाल इंडियन कांग्रेस की स्थापना की। उन्होंने वहाँ 1903 में ‘इंडियन ओपिनियन’ नामक समाचारपत्र भी शुरू किया।"
     },
     {
       "q_num": 8,
-      "question": "The Chauri Chaura incident led to the withdrawal of which movement? / चौरी-चौरा की घटना के कारण किस आंदोलन को वापस ले लिया गया था?",
+      "question": "The Chauri Chaura incident led to the withdrawal of which movement?",
       "options": {
-        "a": "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन",
-        "b": "Quit India Movement / भारत छोड़ो आंदोलन",
-        "c": "Non-Cooperation Movement / असहयोग आंदोलन",
-        "d": "Home Rule Movement / होम रूल आंदोलन"
+        "a": "Civil Disobedience Movement",
+        "b": "Quit India Movement",
+        "c": "Non-Cooperation Movement",
+        "d": "Home Rule Movement"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFollowing the death of 22 policemen in a fire at a police station in Chauri Chaura on Feb 4, 1922, Gandhi suspended the movement. He believed the movement had turned violent and was no longer peaceful. / 4\n\n📖 हिंदी स्पष्टीकरण:\nफ़रवरी 1922 को चौरी-चौरा में एक पुलिस थाने में आग लगने से 22 पुलिसकर्मियों की मृत्यु के बाद गांधी ने आंदोलन को स्थगित कर दिया। उनका मानना था कि आंदोलन हिंसक हो गया है और अब शांतिपूर्ण नहीं रहा।"
     },
     {
       "q_num": 9,
-      "question": "Which British Act allowed for the imprisonment of activists without trial for two years? / किस ब्रिटिश अधिनियम ने कार्यकर्ताओं को बिना किसी मुकदमे के दो साल तक जेल में रखने की अनुमति दी थी?",
+      "question": "Which British Act allowed for the imprisonment of activists without trial for two years?",
       "options": {
-        "a": "Government of India Act 1919 / भारत सरकार अधिनियम 1919",
-        "b": "Rowlatt Act / रौलट एक्ट",
-        "c": "Defence of India Act / भारत रक्षा अधिनियम",
-        "d": "Pitt’s India Act / पिट्स इंडिया एक्ट"
+        "a": "Government of India Act 1919",
+        "b": "Rowlatt Act",
+        "c": "Defence of India Act",
+        "d": "Pitt’s India Act"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSuggested by Sydney Rowlatt, this act allowed the British to imprison political activists for up to 2 years without trial. Gandhi called it the \"Black Act\" and launched a Satyagraha against it\n\n📖 हिंदी स्पष्टीकरण:\nसिडनी रॉलेट के सुझाव पर बने इस अधिनियम ने ब्रिटिश सरकार को राजनीतिक कार्यकर्ताओं को बिना मुकदमे के दो वर्ष तक कारावास में रखने की अनुमति दी। गांधी ने इसे “काला क़ानून” कहा और इसके विरुद्ध सत्याग्रह शुरू किया।"
     },
     {
       "q_num": 10,
-      "question": "Who was the secretary of the Swaraj Party formed in 1923? / 1923 में गठित स्वराज पार्टी के सचिव कौन थे?",
+      "question": "Who was the secretary of the Swaraj Party formed in 1923?",
       "options": {
-        "a": "C.R. Das / सी.आर. दास",
-        "b": "Motilal Nehru / मोतीलाल नेहरू",
-        "c": "Vallabhbhai Patel / वल्लभभाई पटेल",
-        "d": "Rajendra Prasad / राजेंद्र प्रसाद"
+        "a": "C.R. Das",
+        "b": "Motilal Nehru",
+        "c": "Vallabhbhai Patel",
+        "d": "Rajendra Prasad"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Swaraj Party was formed by C.R. Das (as President) and Motilal Nehru (as Secretary). They were known as \"Pro-changers\" because they wanted to enter the legislative councils\n\n📖 हिंदी स्पष्टीकरण:\nस्वराज पार्टी का गठन सी.आर. दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव) ने किया था। उन्हें “परिवर्तनवादी” कहा जाता था क्योंकि वे विधान परिषदों में प्रवेश करना चाहते थे।"
     },
     {
       "q_num": 11,
-      "question": "Mahatma Gandhi’s first hunger strike in India was during which movement? / भारत में महात्मा गांधी की पहली भूख हड़ताल किस आंदोलन के दौरान हुई थी?",
+      "question": "Mahatma Gandhi’s first hunger strike in India was during which movement?",
       "options": {
-        "a": "Champaran Satyagraha / चंपारण सत्याग्रह",
-        "b": "Kheda Satyagraha / खेड़ा सत्याग्रह",
-        "c": "Ahmedabad Mill Strike / अहमदाबाद मिल हड़ताल",
-        "d": "Rowlatt Satyagraha / रौलट सत्याग्रह"
+        "a": "Champaran Satyagraha",
+        "b": "Kheda Satyagraha",
+        "c": "Ahmedabad Mill Strike",
+        "d": "Rowlatt Satyagraha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn 1918, Gandhi used a hunger strike for the first time to support Ahmedabad mill workers. They were demanding a wage hike after the owners stopped paying Plague Bonuses. / 1918\n\n📖 हिंदी स्पष्टीकरण:\nमें गांधी ने अहमदाबाद के मिल मजदूरों के समर्थन में पहली बार भूख हड़ताल का प्रयोग किया। वे वेतन वृद्धि की माँग कर रहे थे क्योंकि मिल मालिकों ने प्लेग बोनस देना बंद कर दिया था।"
     },
     {
       "q_num": 12,
-      "question": "Who was responsible for the Jallianwala Bagh massacre in 1919? / 1919 के जलियांवाला बाग हत्याकांड के लिए कौन जिम्मेदार था?",
+      "question": "Who was responsible for the Jallianwala Bagh massacre in 1919?",
       "options": {
-        "a": "Lord Chelmsford / लॉर्ड चेम्सफोर्ड",
-        "b": "Reginald Dyer / रेजिनाल्ड डायर",
-        "c": "Michael O'Dwyer / माइकल ओ'डायर",
-        "d": "Sydney Rowlatt / सिडनी रौलट"
+        "a": "Lord Chelmsford",
+        "b": "Reginald Dyer",
+        "c": "Michael O'Dwyer",
+        "d": "Sydney Rowlatt"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGeneral Reginald Dyer ordered troops to fire on a peaceful mass gathering at Jallianwala Bagh on April 13, 1919. The crowd had gathered to celebrate Baisakhi and protest the arrest of leaders Kitchlew and Satyapal. / 13\n\n📖 हिंदी स्पष्टीकरण:\nअप्रैल 1919 को जनरल रेजिनाल्ड डायर ने जलियांवाला बाग में एक शांतिपूर्ण जनसभा पर सैनिकों को गोली चलाने का आदेश दिया। भीड़ बैसाखी मनाने और नेताओं किचलू तथा सत्यपाल की गिरफ्तारी के विरोध में एकत्र हुई थी।"
     },
     {
       "q_num": 13,
-      "question": "In which session did the Congress approve the Non-Cooperation Movement? / कांग्रेस ने किस अधिवेशन में असहयोग आंदोलन को मंजूरी दी थी?",
+      "question": "In which session did the Congress approve the Non-Cooperation Movement?",
       "options": {
-        "a": "Nagpur Session 1920 / नागपुर अधिवेशन 1920",
-        "b": "Calcutta Special Session 1920 / कलकत्ता विशेष अधिवेशन 1920",
-        "c": "Belgaum Session 1924 / बेलगाम अधिवेशन 1924",
-        "d": "Ahmedabad Session 1921 / अहमदाबाद अधिवेशन 1921"
+        "a": "Nagpur Session 1920",
+        "b": "Calcutta Special Session 1920",
+        "c": "Belgaum Session 1924",
+        "d": "Ahmedabad Session 1921"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Non-Cooperation program was approved in a special session in Calcutta in 1920. It was later ratified and organizational changes were made in the Nagpur Session of the same year\n\n📖 हिंदी स्पष्टीकरण:\nअसहयोग कार्यक्रम को 1920 में कलकत्ता के विशेष अधिवेशन में स्वीकृति दी गई। बाद में उसी वर्ष नागपुर अधिवेशन में इसकी पुष्टि की गई और संगठनात्मक परिवर्तन किए गए।"
     },
     {
       "q_num": 14,
-      "question": "The \"No-Changers\" group in Congress included which of the following leaders? / कांग्रेस में \"अपरिवर्तनवादी\" समूह में निम्नलिखित में से कौन से नेता शामिल थे?",
+      "question": "The \"No-Changers\" group in Congress included which of the following leaders?",
       "options": {
-        "a": "Motilal Nehru / मोतीलाल नेहरू",
-        "b": "C.R. Das / सी.आर. दास",
-        "c": "Rajendra Prasad / राजेंद्र प्रसाद",
-        "d": "Ajmal Khan / अजमल खान"
+        "a": "Motilal Nehru",
+        "b": "C.R. Das",
+        "c": "Rajendra Prasad",
+        "d": "Ajmal Khan"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n\"No-changers\" like Rajendra Prasad and Vallabhbhai Patel opposed council entry. They preferred focusing on constructive work like building schools and ashrams\n\n📖 हिंदी स्पष्टीकरण:\nराजेंद्र प्रसाद और वल्लभभाई पटेल जैसे “अपरिवर्तनवादी” विधान परिषदों में प्रवेश के विरोधी थे। वे विद्यालयों और आश्रमों के निर्माण जैसे रचनात्मक कार्यों पर ध्यान देना चाहते थे।"
     },
     {
       "q_num": 15,
-      "question": "Who was the leader of the Eka Movement in Uttar Pradesh (1921)? / उत्तर प्रदेश में एका आंदोलन (1921) के नेता कौन थे?",
+      "question": "Who was the leader of the Eka Movement in Uttar Pradesh (1921)?",
       "options": {
-        "a": "Baba Ramchandra / बाबा रामचंद्र",
-        "b": "Madari Pasi / मदारी पासी",
-        "c": "Shaukat Ali / शौकत अली",
-        "d": "Vallabhbhai Patel / वल्लभभाई पटेल"
+        "a": "Baba Ramchandra",
+        "b": "Madari Pasi",
+        "c": "Shaukat Ali",
+        "d": "Vallabhbhai Patel"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Eka Movement (Unity Movement) started in 1921 in Northern districts of UP. It was led by Madari Pasi and other low-caste leaders to protest against high rents\n\n📖 हिंदी स्पष्टीकरण:\nएका आंदोलन (एकता आंदोलन) 1921 में उत्तर प्रदेश के उत्तरी जिलों में शुरू हुआ। इसका नेतृत्व मदारी पासी और अन्य निम्न जाति के नेताओं ने किया, जो ऊँचे लगान के विरोध में था।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the Rowlatt Act:\n रौलट एक्ट के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. It was originally known as the Anarchical and Revolutionary Crimes Act. / इसे मूल रूप से अराजक और क्रांतिकारी अपराध अधिनियम के रूप में जाना जाता था।\n 2. Mahatma Gandhi organized the Rowlatt Satyagraha and called the act a \"Black Act.\" / महात्मा गांधी ने रौलट सत्याग्रह का आयोजन किया और इस अधिनियम को \"काला कानून\" कहा।\n 3. Madan Mohan Malaviya resigned from the Council in protest against this act. / मदन मोहन मालवीय ने इस अधिनियम के विरोध में परिषद से इस्तीफा दे दिया।",
+      "question": "Consider the following statements regarding the Rowlatt Act:\n1. It was originally known as the Anarchical and Revolutionary Crimes Act.\n2. Mahatma Gandhi organized the Rowlatt Satyagraha and called the act a \"Black Act.\"\n3. Madan Mohan Malaviya resigned from the Council in protest against this act.",
       "options": {
-        "a": "Only 1 and 2 / केवल 1 और 2",
-        "b": "Only 2 and 3 / केवल 2 और 3",
-        "c": "Only 1 and 3 / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2 और 3"
+        "a": "Only 1 and 2",
+        "b": "Only 2 and 3",
+        "c": "Only 1 and 3",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The act allowed indefinite detention. Gandhi called it the Black Act, and leaders like Malaviya, Jinnah, and Mazhar-ul-Haq resigned in protest\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। इस अधिनियम ने अनिश्चितकालीन हिरासत की अनुमति दी। गांधी ने इसे काला क़ानून कहा, और मालवीय, जिन्ना तथा मज़हर-उल-हक़ जैसे नेताओं ने विरोध में इस्तीफा दे दिया।"
     },
     {
       "q_num": 17,
-      "question": "Match the following movements with their primary characteristics:\n A. Champaran Satyagraha — 1. First Non-Cooperation Movement\n B. Kheda Satyagraha — 2. First Hunger Strike\n C. Ahmedabad Mill Strike — 3. First Civil Disobedience Movement\n निम्नलिखित आंदोलनों को उनकी प्राथमिक विशेषताओं के साथ सुमेलित करें:\n A. चंपारण सत्याग्रह — 1. प्रथम असहयोग आंदोलन\n B. खेड़ा सत्याग्रह — 2. प्रथम भूख हड़ताल\n C. अहमदाबाद मिल हड़ताल — 3. प्रथम सविनय अवज्ञा आंदोलन",
+      "question": "Match the following movements with their primary characteristics:\n A. Champaran Satyagraha — 1. First Non-Cooperation Movement\n B. Kheda Satyagraha — 2. First Hunger Strike\n C. Ahmedabad Mill Strike — 3. First Civil Disobedience Movement",
       "options": {
         "a": "A-3, B-1, C-2",
         "b": "A-1, B-2, C-3",
@@ -210,96 +210,96 @@
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Mahatma Gandhi withdrew the Non-Cooperation Movement in 1922.\n अभिकथन (A): महात्मा गांधी ने 1922 में असहयोग आंदोलन वापस ले लिया।\n Reason (R): A violent incident took place at Chauri Chaura where a police station was set on fire.\n कारण (R): चौरी-चौरा में एक हिंसक घटना हुई जहाँ एक पुलिस स्टेशन में आग लगा दी गई थी।",
+      "question": "Assertion (A): Mahatma Gandhi withdrew the Non-Cooperation Movement in 1922.\n Reason (R): A violent incident took place at Chauri Chaura where a police station was set on fire.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nGandhi officially suspended the NCM because the Chauri Chaura incident on Feb 4, 1922, violated the principle of non-violence. He felt the country was not yet ready for a mass struggle. / 4\n\n📖 हिंदी स्पष्टीकरण:\nफ़रवरी 1922 को चौरी-चौरा की घटना ने अहिंसा के सिद्धांत का उल्लंघन किया, इसलिए गांधी ने आधिकारिक रूप से असहयोग आंदोलन को स्थगित कर दिया। उनका मानना था कि देश अभी जनआंदोलन के लिए तैयार नहीं था।"
     },
     {
       "q_num": 19,
-      "question": "Who among the following returned the \"Knighthood\" title after the Jallianwala Bagh massacre? / जलियांवाला बाग हत्याकांड के बाद निम्नलिखित में से किसने \"नाइटहुड\" की उपाधि वापस कर दी थी?",
+      "question": "Who among the following returned the \"Knighthood\" title after the Jallianwala Bagh massacre?",
       "options": {
-        "a": "Mahatma Gandhi / महात्मा गांधी",
-        "b": "Rabindranath Tagore / रवींद्रनाथ टैगोर",
-        "c": "Motilal Nehru / मोतीलाल नेहरू",
-        "d": "C.R. Das / सी.आर. दास"
+        "a": "Mahatma Gandhi",
+        "b": "Rabindranath Tagore",
+        "c": "Motilal Nehru",
+        "d": "C.R. Das"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRabindranath Tagore returned his Knighthood in protest against the massacre. Gandhi returned his \"Kaisar-i-Hind\" medal which he had received for his work during the Boer Wars\n\n📖 हिंदी स्पष्टीकरण:\nरवींद्रनाथ टैगोर ने नरसंहार के विरोध में अपनी नाइटहुड की उपाधि लौटा दी। गांधी ने बोअर युद्धों के दौरान किए गए कार्य के लिए प्राप्त अपनी “कैसर-ए-हिंद” पदक को वापस कर दिया।"
     },
     {
       "q_num": 20,
-      "question": "The Dyarchy system in provinces was introduced by which of the following? प्रांतों में द्वैध शासन प्रणाली किसके द्वारा शुरू की गई थी?",
+      "question": "The Dyarchy system in provinces was introduced by which of the following?",
       "options": {
-        "a": "Rowlatt Act 1919 / रौलट एक्ट 1919",
-        "b": "Government of India Act 1919 / भारत सरकार अधिनियम 1919",
-        "c": "Morley-Minto Reforms 1909 / मॉर्ले-मिंटो सुधार 1909",
-        "d": "Indian Council Act 1892 / भारतीय परिषद अधिनियम 1892"
+        "a": "Rowlatt Act 1919",
+        "b": "Government of India Act 1919",
+        "c": "Morley-Minto Reforms 1909",
+        "d": "Indian Council Act 1892"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKnown as the Montagu-Chelmsford Reforms, it introduced Dyarchy at the provincial level. Subjects were divided into 'Reserved' (handled by the Governor) and 'Transferred' (handled by Ministers)\n\n📖 हिंदी स्पष्टीकरण:\nमोंटेग्यू-चेम्सफोर्ड सुधारों के नाम से जाने जाने वाले इस सुधार ने प्रांतीय स्तर पर द्वैध शासन की शुरुआत की। विषयों को ‘आरक्षित’ (राज्यपाल द्वारा संचालित) और ‘हस्तांतरित’ (मंत्रियों द्वारा संचालित) में विभाजित किया गया।"
     },
     {
       "q_num": 21,
-      "question": "Who coined the slogan \"Inquilab Zindabad\"? / \"इंकलाब जिंदाबाद\" का नारा किसने गढ़ा था?",
+      "question": "Who coined the slogan \"Inquilab Zindabad\"?",
       "options": {
-        "a": "Bhagat Singh / भगत सिंह",
-        "b": "Maulana Hasrat Mohani / मौलाना हसरत मोहानी",
-        "c": "Subhash Chandra Bose / सुभाष चंद्र बोस",
-        "d": "Abul Kalam Azad / अबुल कलम आजाद"
+        "a": "Bhagat Singh",
+        "b": "Maulana Hasrat Mohani",
+        "c": "Subhash Chandra Bose",
+        "d": "Abul Kalam Azad"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe slogan was coined by Maulana Hasrat Mohani during the Khilafat Movement. It was later popularized and became a household term through Bhagat Singh\n\n📖 हिंदी स्पष्टीकरण:\nयह नारा खिलाफ़त आंदोलन के दौरान मौलाना हसरत मोहानी ने दिया था। बाद में भगत सिंह के माध्यम से यह लोकप्रिय हुआ और घर-घर में प्रचलित हो गया।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following about the Khilafat Movement:\n / खिलाफत आंदोलन के बारे में निम्नलिखित पर विचार करें:\n 1. It was led by the Ali Brothers (Shaukat Ali and Maulana Mohammad Ali). / इसका नेतृत्व अली बंधुओं (शौकत अली और मौलाना मोहम्मद अली) ने किया था।\n 2. Gandhi was elected as the President of the All India Khilafat Conference in 1919. / 1919 में गांधी को अखिल भारतीय खिलाफत सम्मेलन का अध्यक्ष चुना गया था।",
+      "question": "Consider the following about the Khilafat Movement:",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Khilafat Committee was formed by the Ali Brothers. Gandhi was the first president of the conference held in Delhi in Nov 1919\n\n📖 हिंदी स्पष्टीकरण:\nखिलाफ़त समिति का गठन अली बंधुओं द्वारा किया गया था। नवंबर 1919 में दिल्ली में आयोजित सम्मेलन के पहले अध्यक्ष गांधी थे।"
     },
     {
       "q_num": 23,
-      "question": "Udham Singh killed Michael O'Dwyer in London. Why was Michael O'Dwyer targeted? उधम सिंह ने लंदन में माइकल ओ'डायर की हत्या कर दी। माइकल ओ'डायर को निशाना क्यों बनाया गया था?",
+      "question": "Udham Singh killed Michael O'Dwyer in London. Why was Michael O'Dwyer targeted?",
       "options": {
-        "a": "He was the officer who fired at Jallianwala Bagh / वह वह अधिकारी था जिसने जलियांवाला बाग में गोलियां चलाई थीं।",
-        "b": "He was the Viceroy of India in 1919 / वह 1919 में भारत का वायसराय था।",
-        "c": "He supported Reginald Dyer's actions at Jallianwala Bagh / उसने जलियांवाला बाग में रेजिनाल्ड डायर की कार्रवाई का समर्थन किया था।",
-        "d": "He was the head of the Hunter Commission / वह हंटर कमीशन का प्रमुख था।"
+        "a": "He was the officer who fired at Jallianwala Bagh",
+        "b": "He was the Viceroy of India in 1919",
+        "c": "He supported Reginald Dyer's actions at Jallianwala Bagh",
+        "d": "He was the head of the Hunter Commission"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUdham Singh killed Michael O'Dwyer, who was the Lieutenant Governor of Punjab and had supported Reginald Dyer's massacre. Singh used the name Ram Mohammed Singh Azad during the trial\n\n📖 हिंदी स्पष्टीकरण:\nउधम सिंह ने माइकल ओ’डायर की हत्या की, जो पंजाब का लेफ्टिनेंट गवर्नर था और रेजिनाल्ड डायर के नरसंहार का समर्थक था। मुकदमे के दौरान सिंह ने राम मोहम्मद सिंह आज़ाद नाम का प्रयोग किया।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following schools/universities were established during the Non-Cooperation Movement? / असहयोग आंदोलन के दौरान निम्नलिखित में से कौन से स्कूल/विश्वविद्यालय स्थापित किए गए थे?\n 1. Kashi Vidhyapeeth / काशी विद्यापीठ\n 2. Jamia Millia / जामिया मिलिया\n 3. Bihar Vidhyapeeth / बिहार विद्यापीठ",
+      "question": "Which of the following schools/universities were established during the Non-Cooperation Movement?",
       "options": {
-        "a": "Only 1 and 2 / केवल 1 और 2",
-        "b": "Only 2 and 3 / केवल 2 और 3",
-        "c": "Only 1 and 3 / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2 और 3"
+        "a": "Only 1 and 2",
+        "b": "Only 2 and 3",
+        "c": "Only 1 and 3",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAs part of boycotting British education, national-level institutions like Jamia Millia, Kashi Vidhyapeeth, and Bihar Vidhyapeeth were established\n\n📖 हिंदी स्पष्टीकरण:\nब्रिटिश शिक्षा के बहिष्कार के तहत जामिया मिलिया, काशी विद्यापीठ और बिहार विद्यापीठ जैसे राष्ट्रीय स्तर के संस्थानों की स्थापना की गई।"
     },
     {
       "q_num": 25,
-      "question": "Assertion (A): The Swaraj Party was divided into Responsivists and Non-Responsivists.\n अभिकथन (A): स्वराज पार्टी को उत्तरदायी और अनुत्तरदायी वर्गों में विभाजित किया गया।\n Reason (R): This division happened after the death of C.R. Das in 1925.\n कारण (R): यह विभाजन 1925 में सी.आर. दास की मृत्यु के बाद हुआ था।",
+      "question": "Assertion (A): The Swaraj Party was divided into Responsivists and Non-Responsivists.\n Reason (R): This division happened after the death of C.R. Das in 1925.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAfter C.R. Das's death in 1925, the party weakened and split. Responsivists wanted to cooperate with the government to protect Hindu interests, while Non-responsivists did not. / 1925\n\n📖 हिंदी स्पष्टीकरण:\nमें सी.आर. दास की मृत्यु के बाद पार्टी कमजोर हो गई और विभाजित हो गई। उत्तरदायी वर्ग हिंदू हितों की रक्षा के लिए सरकार से सहयोग करना चाहता था, जबकि अनुत्तरदायी वर्ग ऐसा नहीं चाहता था।"

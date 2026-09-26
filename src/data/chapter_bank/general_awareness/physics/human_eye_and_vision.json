@@ -6,247 +6,247 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which part of the human eye is responsible for the refraction of light? / मानव नेत्र का कौन सा भाग प्रकाश के अपवर्तन के लिए जिम्मेदार है?",
+      "question": "Which part of the human eye is responsible for the refraction of light?",
       "options": {
-        "a": "Retina / रेटिना",
-        "b": "Cornea / कॉर्निया",
-        "c": "Iris / परितारिका",
-        "d": "Pupil / पुतली"
+        "a": "Retina",
+        "b": "Cornea",
+        "c": "Iris",
+        "d": "Pupil"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe cornea is the outermost transparent layer of the eye that causes the maximum refraction of light entering the eye. It is also the part used during eye donation\n\n📖 हिंदी स्पष्टीकरण:\nकॉर्निया आंख की सबसे बाहरी पारदर्शी परत है जो आंख में प्रवेश करने वाले प्रकाश का अधिकतम अपवर्तन करती है। यह नेत्रदान के दौरान उपयोग किया जाने वाला भाग भी है।"
     },
     {
       "q_num": 2,
-      "question": "The amount of light entering the eye is controlled by: / आँख में प्रवेश करने वाले प्रकाश की मात्रा किसके द्वारा नियंत्रित होती है?",
+      "question": "The amount of light entering the eye is controlled by:",
       "options": {
-        "a": "Ciliary muscles / पक्ष्माभी मांसपेशियां",
-        "b": "Retina / रेटिना",
-        "c": "Pupil / पुतली",
-        "d": "Optic nerve / दृष्टि तंत्रिका"
+        "a": "Ciliary muscles",
+        "b": "Retina",
+        "c": "Pupil",
+        "d": "Optic nerve"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe pupil acts as a variable aperture that regulates the amount of light entering the eye by changing its size. Its size is further controlled by the iris\n\n📖 हिंदी स्पष्टीकरण:\nपुतली एक परिवर्तनीय छिद्र के रूप में कार्य करती है जो अपने आकार को बदलकर आंख में प्रवेश करने वाले प्रकाश की मात्रा को नियंत्रित करती है। इसके आकार को परितारिका (आइरिस) द्वारा नियंत्रित किया जाता है।"
     },
     {
       "q_num": 3,
-      "question": "What is the least distance of distinct vision for a normal human eye? / सामान्य मानव नेत्र के लिए स्पष्ट दृष्टि की न्यूनतम दूरी क्या है?",
+      "question": "What is the least distance of distinct vision for a normal human eye?",
       "options": {
-        "a": "2.5 cm / 2.5 सेमी",
-        "b": "25 m / 25 मीटर",
-        "c": "25 cm / 25 सेमी",
-        "d": "Infinite / अनंत"
+        "a": "2.5 cm",
+        "b": "25 m",
+        "c": "25 cm",
+        "d": "Infinite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe least distance of distinct vision is the minimum distance at which an object can be seen clearly without strain. For a healthy adult eye, it is approximately 25 cm\n\n📖 हिंदी स्पष्टीकरण:\nस्पष्ट दृष्टि की न्यूनतम दूरी वह न्यूनतम दूरी है जिस पर किसी वस्तु को बिना किसी तनाव के स्पष्ट रूप से देखा जा सकता है। एक स्वस्थ वयस्क आंख के लिए यह लगभग 25 सेमी है।"
     },
     {
       "q_num": 4,
-      "question": "Which cells in the retina are responsible for sensing the intensity of light? / रेटिना में कौन सी कोशिकाएं प्रकाश की तीव्रता को महसूस करने के लिए जिम्मेदार होती हैं?",
+      "question": "Which cells in the retina are responsible for sensing the intensity of light?",
       "options": {
-        "a": "Cone cells / शंकु कोशिकाएं",
-        "b": "Rod cells / शलाका (रॉड) कोशिकाएं",
-        "c": "Ciliary cells / पक्ष्माभी कोशिकाएं",
-        "d": "Neurons / न्यूरॉन्स"
+        "a": "Cone cells",
+        "b": "Rod cells",
+        "c": "Ciliary cells",
+        "d": "Neurons"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRod cells are photoreceptor cells in the retina that function in low light and are sensitive to light intensity. Cone cells, on the other hand, are responsible for color vision\n\n📖 हिंदी स्पष्टीकरण:\nरॉड कोशिकाएं रेटिना में प्रकाश संवेदी कोशिकाएं हैं जो कम रोशनी में काम करती हैं और प्रकाश की तीव्रता के प्रति संवेदनशील होती हैं। दूसरी ओर, शंकु कोशिकाएं रंग दृष्टि के लिए जिम्मेदार होती हैं।"
     },
     {
       "q_num": 5,
-      "question": "The phenomenon responsible for the twinkling of stars is: / तारों के टिमटिमाने के लिए जिम्मेदार घटना है:",
+      "question": "The phenomenon responsible for the twinkling of stars is:",
       "options": {
-        "a": "Atmospheric reflection / वायुमंडलीय परावर्तन",
-        "b": "Atmospheric refraction / वायुमंडलीय अपवर्तन",
-        "c": "Dispersion / विक्षेपण",
-        "d": "Scattering / प्रकीर्णन"
+        "a": "Atmospheric reflection",
+        "b": "Atmospheric refraction",
+        "c": "Dispersion",
+        "d": "Scattering"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStars twinkle due to the continuous change in the refractive index of different layers of the atmosphere, which causes the apparent position of the star to fluctuate\n\n📖 हिंदी स्पष्टीकरण:\nवायुमंडल की विभिन्न परतों के अपवर्तनांक में निरंतर परिवर्तन के कारण तारे टिमटिमाते हैं, जिससे तारे की आभासी स्थिति बदलती रहती है।"
     },
     {
       "q_num": 6,
-      "question": "Which lens is used to correct Myopia (Near-sightedness)? / मायोपिया (निकट-दृष्टि दोष) को दूर करने के लिए किस लेंस का उपयोग किया जाता है?",
+      "question": "Which lens is used to correct Myopia (Near-sightedness)?",
       "options": {
-        "a": "Convex lens / उत्तल लेंस",
-        "b": "Cylindrical lens / बेलनाकार लेंस",
-        "c": "Concave lens / अवतल लेंस",
-        "d": "Bifocal lens / द्विफोकसी लेंस"
+        "a": "Convex lens",
+        "b": "Cylindrical lens",
+        "c": "Concave lens",
+        "d": "Bifocal lens"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn Myopia, the image is formed in front of the retina. A concave lens (diverging lens) is used to shift the image back onto the retina\n\n📖 हिंदी स्पष्टीकरण:\nमायोपिया में प्रतिबिम्ब रेटिना के सामने बनता है। प्रतिबिम्ब को वापस रेटिना पर स्थानांतरित करने के लिए अवतल लेंस (अपसारी लेंस) का उपयोग किया जाता है।"
     },
     {
       "q_num": 7,
-      "question": "The human eye forms the image of an object at its: / मानव नेत्र किसी वस्तु का प्रतिबिम्ब कहाँ बनाता है?",
+      "question": "The human eye forms the image of an object at its:",
       "options": {
-        "a": "Cornea / कॉर्निया",
-        "b": "Iris / परितारिका",
-        "c": "Pupil / पुतली",
-        "d": "Retina / रेटिना"
+        "a": "Cornea",
+        "b": "Iris",
+        "c": "Pupil",
+        "d": "Retina"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe retina acts as a screen where the lens focuses light rays to form a real and inverted image. Optical energy is then converted into electrical energy here\n\n📖 हिंदी स्पष्टीकरण:\nरेटिना एक स्क्रीन के रूप में कार्य करता है जहाँ लेंस प्रकाश किरणों को वास्तविक और उल्टा प्रतिबिम्ब बनाने के लिए केंद्रित करता है। यहाँ प्रकाशीय ऊर्जा को विद्युत ऊर्जा में बदला जाता है।"
     },
     {
       "q_num": 8,
-      "question": "Why do danger signs appear red in color? / खतरे के संकेत लाल रंग के क्यों दिखाई देते हैं?",
+      "question": "Why do danger signs appear red in color?",
       "options": {
-        "a": "Red light is most scattered / लाल प्रकाश सबसे अधिक प्रकीर्णित होता है।",
-        "b": "Red light has minimum wavelength / लाल प्रकाश की तरंगदैर्घ्य न्यूनतम होती है।",
-        "c": "Red light has maximum wavelength and is least scattered / लाल प्रकाश की तरंगदैर्घ्य अधिकतम होती है और यह सबसे कम प्रकीर्णित होता है।",
-        "d": "Red light is easy on eyes / लाल प्रकाश आँखों के लिए आरामदायक है।"
+        "a": "Red light is most scattered",
+        "b": "Red light has minimum wavelength",
+        "c": "Red light has maximum wavelength and is least scattered",
+        "d": "Red light is easy on eyes"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDue to its long wavelength, red light is scattered the least by air molecules, allowing it to be visible from long distances even in fog or smoke\n\n📖 हिंदी स्पष्टीकरण:\nअपनी लंबी तरंगदैर्घ्य के कारण, लाल प्रकाश हवा के अणुओं द्वारा सबसे कम प्रकीर्णित होता है, जिससे यह कोहरे या धुएं में भी लंबी दूरी से दिखाई देता है।"
     },
     {
       "q_num": 9,
-      "question": "Which instrument is used to measure intraocular pressure (eye pressure)? / आंखों के दबाव (इंट्राओकुलर प्रेशर) को मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+      "question": "Which instrument is used to measure intraocular pressure (eye pressure)?",
       "options": {
-        "a": "Barometer / बैरोमीटर",
-        "b": "Tonometer / टोनोमीटर",
-        "c": "Ophthalmoscope / ऑप्थाल्मोस्कोप",
-        "d": "Photometer / फोटोमीटर"
+        "a": "Barometer",
+        "b": "Tonometer",
+        "c": "Ophthalmoscope",
+        "d": "Photometer"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA tonometer is a diagnostic tool used by eye care professionals to measure the pressure inside the eye, which is crucial for detecting conditions like Glaucoma\n\n📖 हिंदी स्पष्टीकरण:\nटोनोमीटर एक नैदानिक उपकरण है जिसका उपयोग नेत्र विशेषज्ञों द्वारा आंखों के अंदर के दबाव को मापने के लिए किया जाता है, जो ग्लूकोमा जैसी स्थितियों का पता लगाने के लिए महत्वपूर्ण है।"
     },
     {
       "q_num": 10,
-      "question": "The sky appears blue due to which phenomenon? / आकाश किस घटना के कारण नीला दिखाई देता है?",
+      "question": "The sky appears blue due to which phenomenon?",
       "options": {
-        "a": "Refraction / अपवर्तन",
-        "b": "Reflection / परावर्तन",
-        "c": "Scattering of light / प्रकाश का प्रकीर्णन",
-        "d": "Total internal reflection / पूर्ण आंतरिक परावर्तन"
+        "a": "Refraction",
+        "b": "Reflection",
+        "c": "Scattering of light",
+        "d": "Total internal reflection"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nShort-wavelength blue light is scattered more than other colors by the molecules in the atmosphere, making the sky appear blue to an observer on Earth\n\n📖 हिंदी स्पष्टीकरण:\nछोटी तरंगदैर्घ्य वाला नीला प्रकाश वायुमंडल में अणुओं द्वारा अन्य रंगों की तुलना में अधिक प्रकीर्णित होता है, जिससे पृथ्वी पर एक पर्यवेक्षक को आकाश नीला दिखाई देता है।"
     },
     {
       "q_num": 11,
-      "question": "In Hypermetropia, where is the image of a nearby object formed? / दूर-दृष्टि दोष (हाइपरमेट्रोपिया) में पास की वस्तु का प्रतिबिम्ब कहाँ बनता है?",
+      "question": "In Hypermetropia, where is the image of a nearby object formed?",
       "options": {
-        "a": "In front of the retina / रेटिना के सामने",
-        "b": "Behind the retina / रेटिना के पीछे",
-        "c": "On the blind spot / ब्लाइंड स्पॉट पर",
-        "d": "On the cornea / कॉर्निया पर"
+        "a": "In front of the retina",
+        "b": "Behind the retina",
+        "c": "On the blind spot",
+        "d": "On the cornea"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn Hypermetropia (far-sightedness), light rays from nearby objects focus behind the retina because the eyeball is too short or the lens power is insufficient\n\n📖 हिंदी स्पष्टीकरण:\nहाइपरमेट्रोपिया (दूर-दृष्टि दोष) में, पास की वस्तुओं से आने वाली प्रकाश किरणें रेटिना के पीछे केंद्रित होती हैं क्योंकि नेत्रगोलक छोटा होता है या लेंस की शक्ति अपर्याप्त होती है।"
     },
     {
       "q_num": 12,
-      "question": "Which part of the eye provides nourishment to the cornea and maintains eye pressure? / आंख का कौन सा भाग कॉर्निया को पोषण प्रदान करता है और आंखों के दबाव को बनाए रखता है?",
+      "question": "Which part of the eye provides nourishment to the cornea and maintains eye pressure?",
       "options": {
-        "a": "Vitreous humour / काचाभ द्रव",
-        "b": "Aqueous humour / जलीय द्रव",
-        "c": "Iris / परितारिका",
-        "d": "Sclera / श्वेतपटल (स्क्लेरा)"
+        "a": "Vitreous humour",
+        "b": "Aqueous humour",
+        "c": "Iris",
+        "d": "Sclera"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAqueous humour is a watery fluid in the anterior chamber that nourishes the lens and cornea while maintaining the intraocular pressure of the eye\n\n📖 हिंदी स्पष्टीकरण:\nएक्वस ह्यूमर अग्र कक्ष में एक जलीय द्रव है जो लेंस और कॉर्निया को पोषण देता है और आंख के इंट्राओकुलर दबाव को बनाए रखता है।"
     },
     {
       "q_num": 13,
-      "question": "Presbyopia is a defect of vision caused by: / प्रेसबायोपिया (जरा-दूरदृष्टिता) दृष्टि का एक दोष है जो किसके कारण होता है?",
+      "question": "Presbyopia is a defect of vision caused by:",
       "options": {
-        "a": "Shortening of the eyeball / नेत्रगोलक का छोटा होना।",
-        "b": "Increase in the curvature of the cornea / कॉर्निया की वक्रता में वृद्धि होना।",
-        "c": "Gradual weakening of ciliary muscles and hardening of the lens / पक्ष्माभी मांसपेशियों का धीरे-धीरे कमजोर होना और लेंस का सख्त होना।",
-        "d": "Bacterial infection / जीवाणु संक्रमण होना।"
+        "a": "Shortening of the eyeball",
+        "b": "Increase in the curvature of the cornea",
+        "c": "Gradual weakening of ciliary muscles and hardening of the lens",
+        "d": "Bacterial infection"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTypically occurring in people over 50, Presbyopia happens as the eye lens loses flexibility and ciliary muscles weaken, making it hard to focus on nearby objects\n\n📖 हिंदी स्पष्टीकरण:\nआमतौर पर 50 वर्ष से अधिक उम्र के लोगों में होने वाला प्रेसबायोपिया तब होता है जब आंख का लेंस लचीलापन खो देता है और मांसपेशियां कमजोर हो जाती हैं, जिससे पास की वस्तुओं पर ध्यान केंद्रित करना कठिन हो जाता है।"
     },
     {
       "q_num": 14,
-      "question": "The splitting of white light into its seven constituent colors by a prism is called: / प्रिज्म द्वारा श्वेत प्रकाश को उसके सात घटक रंगों में विभाजित करने की क्रिया कहलाती है:",
+      "question": "The splitting of white light into its seven constituent colors by a prism is called:",
       "options": {
-        "a": "Refraction / अपवर्तन",
-        "b": "Dispersion / विक्षेपण",
-        "c": "Total internal reflection / पूर्ण आंतरिक परावर्तन",
-        "d": "Interference / व्यतिकरण"
+        "a": "Refraction",
+        "b": "Dispersion",
+        "c": "Total internal reflection",
+        "d": "Interference"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDispersion occurs because different colors of light travel at different speeds in a medium like glass, causing them to bend at different angles\n\n📖 हिंदी स्पष्टीकरण:\nविक्षेपण इसलिए होता है क्योंकि प्रकाश के अलग-अलग रंग कांच जैसे माध्यम में अलग-अलग गति से चलते हैं, जिससे वे अलग-अलग कोणों पर झुकते हैं।"
     },
     {
       "q_num": 15,
-      "question": "Color blindness is a hereditary condition usually caused by the absence of: / वर्णांधता एक आनुवंशिक स्थिति है जो आमतौर पर किसकी अनुपस्थिति के कारण होती है?",
+      "question": "Color blindness is a hereditary condition usually caused by the absence of:",
       "options": {
-        "a": "Rod cells / शलाका कोशिकाएं",
-        "b": "Vitamin A / विटामिन A",
-        "c": "Cone cells / शंकु कोशिकाएं",
-        "d": "Optic nerves / दृष्टि तंत्रिकाएं"
+        "a": "Rod cells",
+        "b": "Vitamin A",
+        "c": "Cone cells",
+        "d": "Optic nerves"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nColor blindness is hereditary and occurs when certain types of cone cells, which detect specific colors, are missing or malfunctioning in the retina\n\n📖 हिंदी स्पष्टीकरण:\nवर्णांधता आनुवंशिक होती है और तब होती है जब कुछ प्रकार की शंकु कोशिकाएं, जो विशिष्ट रंगों का पता लगाती हैं, रेटिना में अनुपस्थित या खराब होती हैं।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): The sun appears reddish during sunrise and sunset. / कथन (A): सूर्योदय और सूर्यास्त के समय सूर्य लाल दिखाई देता है।\n Reason (R): Red light has the shortest wavelength and is scattered the most. / कारण (R): लाल प्रकाश की तरंगदैर्घ्य सबसे कम होती है और यह सबसे अधिक प्रकीर्णित होता है।",
+      "question": "Assertion (A): The sun appears reddish during sunrise and sunset.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nRed light actually has the maximum wavelength and is scattered the least, which allows it to reach our eyes after traveling a long distance through the atmosphere\n\n📖 हिंदी स्पष्टीकरण:\nलाल प्रकाश की तरंगदैर्घ्य वास्तव में अधिकतम होती है और यह सबसे कम प्रकीर्णित होता है, जिससे यह वायुमंडल के माध्यम से लंबी दूरी तय करने के बाद हमारी आंखों तक पहुंच पाता है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements about 'Cataract' is correct? / 'मोतियाबिंद' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about 'Cataract' is correct?",
       "options": {
-        "a": "It is caused by increased eye pressure / यह आंखों के बढ़ते दबाव के कारण होता है।",
-        "b": "The lens becomes cloudy due to protein breakdown / प्रोटीन के टूटने के कारण लेंस धुंधला हो जाता है।",
-        "c": "It can be corrected using a concave lens / इसे अवतल लेंस का उपयोग करके ठीक किया जा सकता है।",
-        "d": "It is a bacterial infection of the conjunctiva / यह कंजंक्टिवा (आंख आना) का एक जीवाणु संक्रमण है।"
+        "a": "It is caused by increased eye pressure",
+        "b": "The lens becomes cloudy due to protein breakdown",
+        "c": "It can be corrected using a concave lens",
+        "d": "It is a bacterial infection of the conjunctiva"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCataract involves the clouding of the eye's natural lens as proteins clump together, leading to blurry vision. It is typically treated by surgical replacement of the lens\n\n📖 हिंदी स्पष्टीकरण:\nमोतियाबिंद में आंख का प्राकृतिक लेंस धुंधला हो जाता है क्योंकि प्रोटीन एक साथ जमा हो जाते हैं, जिससे दृष्टि धुंधली हो जाती है। इसका इलाज आमतौर पर लेंस के शल्य चिकित्सा द्वारा प्रतिस्थापन द्वारा किया जाता है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements about 'Total Internal Reflection' (TIR): / 'पूर्ण आंतरिक परावर्तन' (TIR) के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. Light must travel from a denser to a rarer medium. / प्रकाश को सघन से विरल माध्यम में जाना चाहिए।\n 2. The angle of incidence must be less than the critical angle. / आपतन कोण क्रांतिक कोण से कम होना चाहिए।\n Which statement(s) is/are correct? / कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Total Internal Reflection' (TIR):",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nFor TIR to occur, light must travel from a denser to a rarer medium, and the angle of incidence must be GREATER than the critical angle. / TIR\n\n📖 हिंदी स्पष्टीकरण:\nहोने के लिए, प्रकाश को सघन से विरल माध्यम में जाना चाहिए, और आपतन कोण क्रांतिक कोण से अधिक होना चाहिए।"
     },
     {
       "q_num": 19,
-      "question": "Statement I: The sun is visible to us about 2 minutes before actual sunrise. / कथन I: वास्तविक सूर्योदय से लगभग 2 मिनट पहले हमें सूर्य दिखाई देने लगता है।\n Statement II: This is due to the phenomenon of atmospheric refraction. / कथन II: यह वायुमंडलीय अपवर्तन की घटना के कारण होता है।",
+      "question": "Statement I: The sun is visible to us about 2 minutes before actual sunrise.",
       "options": {
-        "a": "Only Statement I is correct / केवल कथन I सही है।",
-        "b": "Only Statement II is correct / केवल कथन II सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Neither statement is correct / कोई भी कथन सही नहीं है।"
+        "a": "Only Statement I is correct",
+        "b": "Only Statement II is correct",
+        "c": "Both statements are correct",
+        "d": "Neither statement is correct"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDue to atmospheric refraction, light from the sun is bent as it enters the Earth's atmosphere, making the sun appear above the horizon even when it is slightly below it\n\n📖 हिंदी स्पष्टीकरण:\nवायुमंडलीय अपवर्तन के कारण, पृथ्वी के वायुमंडल में प्रवेश करते समय सूर्य का प्रकाश मुड़ जाता है, जिससे सूर्य क्षितिज के नीचे होने पर भी ऊपर दिखाई देता है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): A rainbow is always formed in the direction opposite to that of the Sun. / कथन (A): इंद्रधनुष हमेशा सूर्य के विपरीत दिशा में बनता है।\n Reason (R): Rainbow formation involves dispersion, refraction, and internal reflection within water droplets. / कारण (R): इंद्रधनुष के निर्माण में पानी की बूंदों के भीतर विक्षेपण, अपवर्तन और आंतरिक परावर्तन शामिल होता है।",
+      "question": "Assertion (A): A rainbow is always formed in the direction opposite to that of the Sun.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRainbows are formed when sunlight is refracted, dispersed, and reflected inside raindrops, which act as tiny prisms. The observer must have the sun behind them to see it\n\n📖 हिंदी स्पष्टीकरण:\nइंद्रधनुष तब बनता है जब सूरज की रोशनी बारिश की बूंदों के अंदर अपवर्तित, विक्षेपित और परावर्तित होती है। इसे देखने के लिए पर्यवेक्षक के पीछे सूर्य का होना आवश्यक है।"
     },
     {
       "q_num": 21,
-      "question": "Match the Following: / निम्नलिखित का मिलान करें:\n Defect (दोष) - Correction (निवारण)\n 1. Myopia - A. Convex Lens / 1. निकटदृष्टि दोष - A. उत्तल लेंस\n 2. Hypermetropia - B. Bifocal Lens /2. दूर-दृष्टि दोष - B. द्विफोकसी लेंस\n 3. Presbyopia - C. Concave Lens / 3. जरा-दूरदृष्टिता - C. अवतल लेंस",
+      "question": "Match the Following:",
       "options": {
         "a": "1-C, 2-A, 3-B",
         "b": "1-A, 2-C, 3-B",
@@ -258,48 +258,48 @@
     },
     {
       "q_num": 22,
-      "question": "Glaucoma is a condition caused by: / ग्लूकोमा (काला मोतिया) एक ऐसी स्थिति है जो किसके कारण होती है?",
+      "question": "Glaucoma is a condition caused by:",
       "options": {
-        "a": "Blurring of the lens / लेंस का धुंधला होना।",
-        "b": "Increase in intraocular pressure damaging the optic nerve / इंट्राओकुलर दबाव में वृद्धि होना जिससे ऑप्टिक तंत्रिका को नुकसान पहुंचता है।",
-        "c": "Vitamin A deficiency / विटामिन A की कमी होना।",
-        "d": "Elongation of the eyeball / नेत्रगोलक का लंबा होना।"
+        "a": "Blurring of the lens",
+        "b": "Increase in intraocular pressure damaging the optic nerve",
+        "c": "Vitamin A deficiency",
+        "d": "Elongation of the eyeball"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGlaucoma is often hereditary and results from high fluid pressure in the eye, which can damage the optic nerve and lead to permanent vision loss if not managed\n\n📖 हिंदी स्पष्टीकरण:\nग्लूकोमा अक्सर आानुवंशिक होता है और आंख में उच्च द्रव दबाव के कारण होता है, जो ऑप्टिक तंत्रिका को नुकसान पहुंचा सकता है और समय पर इलाज न होने पर स्थायी दृष्टि हानि का कारण बन सकता है।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following has the highest frequency and shortest wavelength in the electromagnetic spectrum? / विद्युत चुम्बकीय स्पेक्ट्रम में निम्नलिखित में से किसकी आवृत्ति सबसे अधिक और तरंगदैर्घ्य सबसे कम है?",
+      "question": "Which of the following has the highest frequency and shortest wavelength in the electromagnetic spectrum?",
       "options": {
-        "a": "Radio waves / रेडियो तरंगें",
-        "b": "Visible light / दृश्य प्रकाश",
-        "c": "Gamma rays / गामा किरणें",
-        "d": "Infrared rays / अवरक्त किरणें"
+        "a": "Radio waves",
+        "b": "Visible light",
+        "c": "Gamma rays",
+        "d": "Infrared rays"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn the electromagnetic spectrum, Gamma rays sit at the end with the highest energy and frequency, and the shortest wavelength. Radio waves are at the opposite end\n\n📖 हिंदी स्पष्टीकरण:\nविद्युत चुम्बकीय स्पेक्ट्रम में, गामा किरणें उच्चतम ऊर्जा और आवृत्ति तथा सबसे छोटी तरंगदैर्घ्य के साथ अंत में स्थित होती हैं। रेडियो तरंगें इसके विपरीत छोर पर होती हैं।"
     },
     {
       "q_num": 24,
-      "question": "Statement I: Optical fibers work on the principle of Total Internal Reflection. / कथन I: ऑप्टिकल फाइबर पूर्ण आंतरिक परावर्तन के सिद्धांत पर काम करते हैं।\n Statement II: They are used in telecommunications and medical endoscopes. / कथन II: इनका उपयोग दूरसंचार और चिकित्सा एंडोस्कोप में किया जाता है।",
+      "question": "Statement I: Optical fibers work on the principle of Total Internal Reflection.",
       "options": {
-        "a": "Only Statement I is correct / केवल कथन I सही है।",
-        "b": "Only Statement II is correct / केवल कथन II सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Neither statement is correct / कोई भी कथन सही नहीं है।"
+        "a": "Only Statement I is correct",
+        "b": "Only Statement II is correct",
+        "c": "Both statements are correct",
+        "d": "Neither statement is correct"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nOptical fibers transmit data as light pulses using TIR, allowing for minimal loss of signal over long distances. They are vital in modern communication and medicine\n\n📖 हिंदी स्पष्टीकरण:\nऑप्टिकल फाइबर पूर्ण आंतरिक परावर्तन का उपयोग करके प्रकाश स्पंदों के रूप में डेटा संचारित करते हैं, जिससे लंबी दूरी पर सिग्नल का न्यूनतम नुकसान होता है। वे आधुनिक संचार और चिकित्सा में महत्वपूर्ण हैं।"
     },
     {
       "q_num": 25,
-      "question": "Tyndall effect is the scattering of light by: / टिंडल प्रभाव किसके द्वारा प्रकाश का प्रकीर्णन है?",
+      "question": "Tyndall effect is the scattering of light by:",
       "options": {
-        "a": "Transparent solutions / पारदर्शी विलयन",
-        "b": "Colloidal particles / कोलाइडल कण",
-        "c": "Vacuum / निर्वात",
-        "d": "Solid mirrors / ठोस दर्पण"
+        "a": "Transparent solutions",
+        "b": "Colloidal particles",
+        "c": "Vacuum",
+        "d": "Solid mirrors"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Tyndall effect occurs when light is scattered by particles in a colloid or a very fine suspension, making the path of the light beam visible\n\n📖 हिंदी स्पष्टीकरण:\nटिंडल प्रभाव तब होता है जब प्रकाश किसी कोलाइड या बहुत सूक्ष्म निलंबन के कणों द्वारा प्रकीर्णित होता है, जिससे प्रकाश पुंज का मार्ग दिखाई देने लगता है।"

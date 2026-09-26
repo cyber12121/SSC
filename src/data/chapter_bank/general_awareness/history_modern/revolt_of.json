@@ -6,211 +6,211 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who was the Governor-General of India during the Revolt of 1857?\n1857 के विद्रोह के दौरान भारत का गवर्नर-जनरल कौन था?",
+      "question": "Who was the Governor-General of India during the Revolt of 1857?",
       "options": {
-        "a": "Lord Dalhousie / लॉर्ड डलहौजी",
-        "b": "Lord Canning / लॉर्ड कैनिंग",
-        "c": "Lord William Bentinck / लॉर्ड विलियम बेंटिक",
-        "d": "Lord Ellenborough / लॉर्ड एलेनबरो"
+        "a": "Lord Dalhousie",
+        "b": "Lord Canning",
+        "c": "Lord William Bentinck",
+        "d": "Lord Ellenborough"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLord Canning was the Governor-General of India from 1856 to 1862. He became the first Viceroy of India after the Government of India Act 1858 was passed following the revolt.\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड कैनिंग 1856 से 1862 तक भारत के गवर्नर-जनरल थे। विद्रोह के बाद भारत सरकार अधिनियम 1858 पारित होने पर वे भारत के पहले वायसराय बने।"
     },
     {
       "q_num": 2,
-      "question": "At which place did the 1857 Revolt start on 10th May?\n10 मई को 1857 का विद्रोह किस स्थान से शुरू हुआ था?",
+      "question": "At which place did the 1857 Revolt start on 10th May?",
       "options": {
-        "a": "Barrackpore / बैरकपुर",
-        "b": "Meerut / मेरठ",
-        "c": "Delhi / दिल्ली",
-        "d": "Lucknow / लखनऊ"
+        "a": "Barrackpore",
+        "b": "Meerut",
+        "c": "Delhi",
+        "d": "Lucknow"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile Mangal Pandey revolted in Barrackpore in March, the formal and large-scale mutiny began in Meerut on May 10, 1857, when sepoys broke into open rebellion.\n\n📖 हिंदी स्पष्टीकरण:\nहालांकि मंगल पांडे ने मार्च में बैरकपुर में विद्रोह किया था, लेकिन औपचारिक और बड़े पैमाने पर विद्रोह 10 मई, 1857 को मेरठ में शुरू हुआ था।"
     },
     {
       "q_num": 3,
-      "question": "Who led the revolt in Kanpur?\nकानपुर में विद्रोह का नेतृत्व किसने किया?",
+      "question": "Who led the revolt in Kanpur?",
       "options": {
-        "a": "Rani Lakshmibai / रानी लक्ष्मीबाई",
-        "b": "Nana Saheb / नाना साहिब",
-        "c": "Begum Hazrat Mahal / बेगम हजरत महल",
-        "d": "Kunwar Singh / कुंवर सिंह"
+        "a": "Rani Lakshmibai",
+        "b": "Nana Saheb",
+        "c": "Begum Hazrat Mahal",
+        "d": "Kunwar Singh"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNana Saheb, the adopted son of Peshwa Baji Rao II, led the revolt in Kanpur with the help of his loyal commander Tantia Tope.\n\n📖 हिंदी स्पष्टीकरण:\nपेशवा बाजीराव द्वितीय के दत्तक पुत्र नाना साहिब ने अपने वफादार कमांडर तांत्या टोपे की मदद से कानपुर में विद्रोह का नेतृत्व किया था।"
     },
     {
       "q_num": 4,
-      "question": "What was the \"immediate cause\" of the 1857 Revolt?\n1857 के विद्रोह का \"तत्कालिक कारण\" क्या था?",
+      "question": "What was the \"immediate cause\" of the 1857 Revolt?",
       "options": {
-        "a": "Doctrine of Lapse / व्यपगत का सिद्धांत (हड़प नीति)",
-        "b": "Spread of Christianity / ईसाई धर्म का प्रसार",
-        "c": "The Greased Cartridges Issue / चर्बी वाले कारतूसों का मुद्दा",
-        "d": "General Service Enlistment Act / सामान्य सेवा भर्ती अधिनियम"
+        "a": "Doctrine of Lapse",
+        "b": "Spread of Christianity",
+        "c": "The Greased Cartridges Issue",
+        "d": "General Service Enlistment Act"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe introduction of the Enfield rifle, whose cartridges were rumored to be greased with cow and pig fat, offended the religious sentiments of both Hindu and Muslim sepoys.\n\n📖 हिंदी स्पष्टीकरण:\nएनफील्ड राइफल की शुरुआत, जिसके कारतूसों में गाय और सुअर की चर्बी होने की अफवाह थी, ने हिंदू और मुस्लिम दोनों सैनिकों की धार्मिक भावनाओं को आहत किया।"
     },
     {
       "q_num": 5,
-      "question": "Mangal Pandey belonged to which infantry regiment?\nमंगल पांडे किस इन्फैंट्री रेजिमेंट से संबंधित थे?",
+      "question": "Mangal Pandey belonged to which infantry regiment?",
       "options": {
-        "a": "34th Native Infantry / 34वीं नेटिव इन्फैंट्री",
-        "b": "19th Native Infantry / 19वीं नेटिव इन्फैंट्री",
-        "c": "7th Awadh Regiment / 7वीं अवध रेजिमेंट",
-        "d": "20th Native Infantry / 20वीं नेटिव इन्फैंट्री"
+        "a": "34th Native Infantry",
+        "b": "19th Native Infantry",
+        "c": "7th Awadh Regiment",
+        "d": "20th Native Infantry"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMangal Pandey was a sepoy in the 34th Bengal Native Infantry (BNI) stationed at Barrackpore. He attacked British officers on March 29, 1857.\n\n📖 हिंदी स्पष्टीकरण:\nमंगल पांडे बैरकपुर में तैनात 34वीं बंगाल नेटिव इन्फैंट्री (BNI) के सिपाही थे। उन्होंने 29 मार्च, 1857 को ब्रिटिश अधिकारियों पर हमला किया था।"
     },
     {
       "q_num": 6,
-      "question": "Who was the last Mughal Emperor proclaimed as the leader of the revolt?\nविद्रोह के नेता के रूप में घोषित अंतिम मुगल सम्राट कौन था?",
+      "question": "Who was the last Mughal Emperor proclaimed as the leader of the revolt?",
       "options": {
-        "a": "Shah Alam II / शाह आलम द्वितीय",
-        "b": "Bahadur Shah Zafar / बहादुर शाह जफर",
-        "c": "Akbar Shah II / अकबर शाह द्वितीय",
-        "d": "Farrukhsiyar / फर्रुखसियर"
+        "a": "Shah Alam II",
+        "b": "Bahadur Shah Zafar",
+        "c": "Akbar Shah II",
+        "d": "Farrukhsiyar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe rebellious sepoys marched to Delhi and proclaimed the aged Bahadur Shah Zafar as the Emperor of Hindustan and the symbolic leader of the revolt.\n\n📖 हिंदी स्पष्टीकरण:\nविद्रोही सैनिक दिल्ली कूच कर गए और वृद्ध बहादुर शाह जफर को हिंदुस्तान का सम्राट और विद्रोह का प्रतीकात्मक नेता घोषित कर दिया।"
     },
     {
       "q_num": 7,
-      "question": "Rani Lakshmibai died fighting the British in which battle?\nरानी लक्ष्मीबाई अंग्रेजों से लड़ते हुए किस युद्ध में वीरगति को प्राप्त हुईं?",
+      "question": "Rani Lakshmibai died fighting the British in which battle?",
       "options": {
-        "a": "Battle of Jhansi / झांसी का युद्ध",
-        "b": "Battle of Gwalior / ग्वालियर का युद्ध",
-        "c": "Battle of Kalpi / कालपी का युद्ध",
-        "d": "Battle of Kanpur / कानपुर का युद्ध"
+        "a": "Battle of Jhansi",
+        "b": "Battle of Gwalior",
+        "c": "Battle of Kalpi",
+        "d": "Battle of Kanpur"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAfter losing Jhansi, she captured Gwalior with Tantia Tope. She died fighting the British forces led by Sir Hugh Rose near Gwalior in June 1858.\n\n📖 हिंदी स्पष्टीकरण:\nझांसी हारने के बाद उन्होंने तांत्या टोपे के साथ ग्वालियर पर कब्जा कर लिया। जून 1858 में ग्वालियर के पास सर ह्यू रोज़ के नेतृत्व वाली ब्रिटिश सेना से लड़ते हुए उनकी मृत्यु हो गई।"
     },
     {
       "q_num": 8,
-      "question": "Who was the leader of the 1857 Revolt in Bihar?\nबिहार में 1857 के विद्रोह के नेता कौन थे?",
+      "question": "Who was the leader of the 1857 Revolt in Bihar?",
       "options": {
-        "a": "Amar Singh / अमर सिंह",
-        "b": "Kunwar Singh / कुंवर सिंह",
-        "c": "Pir Ali / पीर अली",
-        "d": "Nana Saheb / नाना साहिब"
+        "a": "Amar Singh",
+        "b": "Kunwar Singh",
+        "c": "Pir Ali",
+        "d": "Nana Saheb"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKunwar Singh, the 80-year-old local zamindar of Jagdishpur (Arrah), led the rebellion in Bihar and was a brilliant military strategist.\n\n📖 हिंदी स्पष्टीकरण:\nजगदीशपुर (आरा) के 80 वर्षीय स्थानीय जमींदार कुंवर सिंह ने बिहार में विद्रोह का नेतृत्व किया और वे एक कुशल सैन्य रणनीतिकार थे।"
     },
     {
       "q_num": 9,
-      "question": "Which symbol was used during the 1857 Revolt for propaganda?\n1857 के विद्रोह के दौरान प्रचार के लिए किस प्रतीक का उपयोग किया गया था?",
+      "question": "Which symbol was used during the 1857 Revolt for propaganda?",
       "options": {
-        "a": "Lotus and Chapatis / कमल और चपाती",
-        "b": "Sword and Shield / तलवार और ढाल",
-        "c": "Rose and Bread / गुलाब और रोटी",
-        "d": "Eagle and Flag / चील और झंडा"
+        "a": "Lotus and Chapatis",
+        "b": "Sword and Shield",
+        "c": "Rose and Bread",
+        "d": "Eagle and Flag"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIt is believed that 'Lotus' and 'Chapatis' (bread) were secretly circulated as symbols to coordinate and spread the message of the uprising.\n\n📖 हिंदी स्पष्टीकरण:\nऐसा माना जाता है कि विद्रोह के संदेश को समन्वित करने और फैलाने के लिए 'कमल' और 'चपाती' को गुप्त रूप से प्रतीकों के रूप में वितरित किया गया था।"
     },
     {
       "q_num": 10,
-      "question": "Who was the British officer who suppressed the revolt in Delhi?\nदिल्ली में विद्रोह को दबाने वाला ब्रिटिश अधिकारी कौन था?",
+      "question": "Who was the British officer who suppressed the revolt in Delhi?",
       "options": {
-        "a": "Colin Campbell / कोलिन कैंपबेल",
-        "b": "John Nicholson / जॉन निकोलसन",
-        "c": "Henry Lawrence / हेनरी लॉरेंस",
-        "d": "Hugh Rose / ह्यू रोज़"
+        "a": "Colin Campbell",
+        "b": "John Nicholson",
+        "c": "Henry Lawrence",
+        "d": "Hugh Rose"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJohn Nicholson led the British forces to recapture Delhi in September 1857, though he was mortally wounded during the final assault.\n\n📖 हिंदी स्पष्टीकरण:\nजॉन निकोलसन ने सितंबर 1857 में दिल्ली पर पुनः कब्जा करने के लिए ब्रिटिश सेना का नेतृत्व किया, हालांकि अंतिम हमले के दौरान वे घातक रूप से घायल हो गए थे।"
     },
     {
       "q_num": 11,
-      "question": "The \"Doctrine of Lapse\" which caused resentment among Indian rulers was introduced by:\n\"व्यपगत का सिद्धांत\" (हड़प नीति) जिसने भारतीय शासकों में असंतोष पैदा किया, किसके द्वारा शुरू किया गया था?",
+      "question": "The \"Doctrine of Lapse\" which caused resentment among Indian rulers was introduced by:",
       "options": {
-        "a": "Lord Canning / लॉर्ड कैनिंग",
-        "b": "Lord Wellesley / लॉर्ड वेलेज़ली",
-        "c": "Lord Dalhousie / लॉर्ड डलहौजी",
-        "d": "Lord Curzon / लॉर्ड कर्जन"
+        "a": "Lord Canning",
+        "b": "Lord Wellesley",
+        "c": "Lord Dalhousie",
+        "d": "Lord Curzon"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLord Dalhousie used this policy to annex states like Satara, Jhansi, and Nagpur if the ruler died without a natural male heir, fueling the 1857 revolt.\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड डलहौजी ने इस नीति का उपयोग सतारा, झांसी और नागपुर जैसे राज्यों को हड़पने के लिए किया यदि शासक की मृत्यु बिना किसी प्राकृतिक पुरुष उत्तराधिकारी के हो जाती थी।"
     },
     {
       "q_num": 12,
-      "question": "Who was the commander of the forces of Nana Saheb and was later betrayed and executed?\nनाना साहिब की सेना का कमांडर कौन था जिसे बाद में धोखा दिया गया और फांसी दे दी गई?",
+      "question": "Who was the commander of the forces of Nana Saheb and was later betrayed and executed?",
       "options": {
-        "a": "Azimullah Khan / अजीमुल्ला खान",
-        "b": "Khan Bahadur Khan / खान बहादुर खान",
-        "c": "Tantia Tope / तांत्या टोपे",
-        "d": "Bakht Khan / बखत खान"
+        "a": "Azimullah Khan",
+        "b": "Khan Bahadur Khan",
+        "c": "Tantia Tope",
+        "d": "Bakht Khan"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTantia Tope was a key strategist in Kanpur and Gwalior. He was captured in 1859 after being betrayed by his friend Man Singh and was executed by the British.\n\n📖 हिंदी स्पष्टीकरण:\nतांत्या टोपे कानपुर और ग्वालियर में प्रमुख रणनीतिकार थे। अपने मित्र मान सिंह द्वारा विश्वासघात किए जाने के बाद 1859 में उन्हें पकड़ लिया गया और अंग्रेजों द्वारा फांसी दे दी गई।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following regions remained largely unaffected by the Revolt of 1857?\nनिम्नलिखित में से कौन सा क्षेत्र 1857 के विद्रोह से काफी हद तक अप्रभावित रहा?",
+      "question": "Which of the following regions remained largely unaffected by the Revolt of 1857?",
       "options": {
-        "a": "Awadh / अवध",
-        "b": "Rohilkhand / रोहिलखंड",
-        "c": "South India / दक्षिण भारत",
-        "d": "Bundelkhand / बुंदेलखंड"
+        "a": "Awadh",
+        "b": "Rohilkhand",
+        "c": "South India",
+        "d": "Bundelkhand"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe revolt was primarily concentrated in Northern and Central India. Southern India, Punjab, and Bengal remained mostly quiet or supportive of the British.\n\n📖 हिंदी स्पष्टीकरण:\nविद्रोह मुख्य रूप से उत्तरी और मध्य भारत में केंद्रित था। दक्षिण भारत, पंजाब और बंगाल ज्यादातर शांत रहे या अंग्रेजों के समर्थक रहे।"
     },
     {
       "q_num": 14,
-      "question": "The Administrative change brought by the Revolt of 1857 was:\n1857 के विद्रोह द्वारा लाया गया प्रशासनिक परिवर्तन क्या था?",
+      "question": "The Administrative change brought by the Revolt of 1857 was:",
       "options": {
-        "a": "Power transferred from Crown to East India Company / सत्ता क्राउन से ईस्ट इंडिया कंपनी को हस्तांतरित हुई",
-        "b": "Power transferred from East India Company to the British Crown / सत्ता ईस्ट इंडिया कंपनी से ब्रिटिश क्राउन को हस्तांतरित हुई",
-        "c": "End of British rule in India / भारत में ब्रिटिश शासन का अंत",
-        "d": "Creation of a new Indian Parliament / नई भारतीय संसद का निर्माण"
+        "a": "Power transferred from Crown to East India Company",
+        "b": "Power transferred from East India Company to the British Crown",
+        "c": "End of British rule in India",
+        "d": "Creation of a new Indian Parliament"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Government of India Act 1858 abolished the Company's rule and placed India under the direct governance of the British Queen (Crown).\n\n📖 हिंदी स्पष्टीकरण:\nभारत सरकार अधिनियम 1858 ने कंपनी के शासन को समाप्त कर दिया और भारत को ब्रिटिश महारानी (क्राउन) के प्रत्यक्ष शासन के अधीन कर दिया।"
     },
     {
       "q_num": 15,
-      "question": "Who called the 1857 Revolt as the \"First War of Indian Independence\"?\nकिसने 1857 के विद्रोह को \"भारतीय स्वतंत्रता का पहला युद्ध\" कहा था?",
+      "question": "Who called the 1857 Revolt as the \"First War of Indian Independence\"?",
       "options": {
-        "a": "V.D. Savarkar / वी.डी. सावरकर",
-        "b": "S.N. Sen / एस.एन. सेन",
-        "c": "R.C. Majumdar / आर.सी. मजूमदार",
-        "d": "Benjamin Disraeli / बेंजामिन डिज़रायली"
+        "a": "V.D. Savarkar",
+        "b": "S.N. Sen",
+        "c": "R.C. Majumdar",
+        "d": "Benjamin Disraeli"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nVinayak Damodar Savarkar described the uprising as a planned war of independence in his book 'The Indian War of Independence of 1857'.\n\n📖 हिंदी स्पष्टीकरण:\nविनायक दामोदर सावरकर ने अपनी पुस्तक 'द इंडियन वॉर ऑफ इंडिपेंडेंस ऑफ 1857' में इस विद्रोह को स्वतंत्रता के एक सुनियोजित युद्ध के रूप में वर्णित किया था।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the causes of failure of the 1857 Revolt:\n1857 के विद्रोह की विफलता के कारणों के संबंध में निम्नलिखित कथनों पर विचार करें:\n1. Lack of a unified ideology and political perspective. / एकीकृत विचारधारा और राजनीतिक परिप्रेक्ष्य की कमी।\n2. Many Indian rulers like Scindias and Holkars supported the British. / सिंधिया और होल्कर जैसे कई भारतीय शासकों ने अंग्रेजों का समर्थन किया।\n3. The rebels had superior weapons compared to the British. / विद्रोहियों के पास अंग्रेजों की तुलना में बेहतर हथियार थे।\nWhich of the above is/are correct? / उपरोक्त में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the causes of failure of the 1857 Revolt:\n1. Lack of a unified ideology and political perspective.\n2. Many Indian rulers like Scindias and Holkars supported the British.\n3. The rebels had superior weapons compared to the British.\nWhich of the above is/are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe rebels lacked modern weapons and communication tools compared to the British. The support of Indian princes to the British was a major blow to the revolt.\n\n📖 हिंदी स्पष्टीकरण:\nविद्रोहियों के पास अंग्रेजों की तुलना में आधुनिक हथियारों और संचार साधनों की कमी थी। भारतीय राजकुमारों का अंग्रेजों को समर्थन विद्रोह के लिए एक बड़ा झटका था।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): The British were able to suppress the revolt of 1857 within a year.\nReason (R): The revolt lacked coordination and a centralized leadership.\nकथन (A): अंग्रेज एक वर्ष के भीतर 1857 के विद्रोह को दबाने में सक्षम थे।\nकारण (R): विद्रोह में समन्वय और एक केंद्रीकृत नेतृत्व की कमी थी।",
+      "question": "Assertion (A): The British were able to suppress the revolt of 1857 within a year.\nReason (R): The revolt lacked coordination and a centralized leadership.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe localized nature and lack of a common plan allowed the British to tackle the centers of rebellion one by one and suppress them efficiently.\n\n📖 हिंदी स्पष्टीकरण:\nस्थानीय प्रकृति और एक सामान्य योजना की कमी ने अंग्रेजों को विद्रोह के केंद्रों से एक-एक करके निपटने और उन्हें कुशलतापूर्वक दबाने की अनुमति दी।"
     },
     {
       "q_num": 18,
-      "question": "Match List I (Leaders) with List II (Centers of Revolt):\nसूची I (नेता) को सूची II (विद्रोह के केंद्र) के साथ सुमेलित करें:\n1. Begum Hazrat Mahal - A. Bareilly\n2. Khan Bahadur Khan - B. Lucknow\n3. Maulvi Ahmadullah - C. Faizabad\n4. Azimullah Khan - D. Kanpur\nChoose the correct code: / सही कोड चुनें:",
+      "question": "Match List I (Leaders) with List II (Centers of Revolt):\n1. Begum Hazrat Mahal - A. Bareilly\n2. Khan Bahadur Khan - B. Lucknow\n3. Maulvi Ahmadullah - C. Faizabad\n4. Azimullah Khan - D. Kanpur\nChoose the correct code:",
       "options": {
         "a": "I-B, II-A, III-C, IV-D",
         "b": "I-A, II-B, III-D, IV-C",
@@ -222,84 +222,84 @@
     },
     {
       "q_num": 19,
-      "question": "Statement I: The revolt of 1857 was purely a sepoy mutiny according to Sir John Lawrence.\nStatement II: Modern educated Indians participated enthusiastically in the revolt.\nकथन I: सर जॉन लॉरेंस के अनुसार 1857 का विद्रोह विशुद्ध रूप से एक सैनिक विद्रोह था।\nकथन II: आधुनिक शिक्षित भारतीयों ने विद्रोह में उत्साहपूर्वक भाग लिया।",
+      "question": "Statement I: The revolt of 1857 was purely a sepoy mutiny according to Sir John Lawrence.\nStatement II: Modern educated Indians participated enthusiastically in the revolt.",
       "options": {
-        "a": "Only Statement I is correct / केवल कथन I सही है",
-        "b": "Only Statement II is correct / केवल कथन II सही है",
-        "c": "Both are correct / दोनों सही हैं",
-        "d": "Neither is correct / कोई भी सही नहीं है"
+        "a": "Only Statement I is correct",
+        "b": "Only Statement II is correct",
+        "c": "Both are correct",
+        "d": "Neither is correct"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nModern educated Indians generally remained aloof or supported the British, believing that British rule would modernize India.\n\n📖 हिंदी स्पष्टीकरण:\nआधुनिक शिक्षित भारतीय आमतौर पर अलग रहे या अंग्रेजों का समर्थन किया, क्योंकि उनका मानना था कि ब्रिटिश शासन भारत का आधुनिकीकरण करेगा।"
     },
     {
       "q_num": 20,
-      "question": "Which commission was appointed to reorganize the Indian Army after the 1857 revolt?\n1857 के विद्रोह के बाद भारतीय सेना के पुनर्गठन के लिए किस आयोग की नियुक्ति की गई थी?",
+      "question": "Which commission was appointed to reorganize the Indian Army after the 1857 revolt?",
       "options": {
-        "a": "Hunter Commission / हंटर आयोग",
-        "b": "Peel Commission / पील आयोग",
-        "c": "Simon Commission / साइमन आयोग",
-        "d": "Kothari Commission / कोठारी आयोग"
+        "a": "Hunter Commission",
+        "b": "Peel Commission",
+        "c": "Simon Commission",
+        "d": "Kothari Commission"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Peel Commission was established to redesign the army. It recommended increasing the ratio of European soldiers to Indian soldiers to prevent future mutinies.\n\n📖 हिंदी स्पष्टीकरण:\nसेना के पुनर्गठन के लिए पील आयोग की स्थापना की गई थी। इसने भविष्य के विद्रोहों को रोकने के लिए भारतीय सैनिकों के मुकाबले यूरोपीय सैनिकों के अनुपात को बढ़ाने की सिफारिश की।"
     },
     {
       "q_num": 21,
-      "question": "Assertion (A): The Revolt of 1857 is often described as the first major challenge to British authority in India.\nReason (R): It was the first time that various sections of society like sepoys, peasants, and zamindars united against a common enemy.\nकथन (A): 1857 के विद्रोह को अक्सर भारत में ब्रिटिश सत्ता के लिए पहली बड़ी चुनौती के रूप में वर्णित किया जाता है।\nकारण (R): यह पहली बार था जब समाज के विभिन्न वर्ग जैसे सिपाही, किसान और जमींदार एक साझा दुश्मन के खिलाफ एकजुट हुए थे।",
+      "question": "Assertion (A): The Revolt of 1857 is often described as the first major challenge to British authority in India.\nReason (R): It was the first time that various sections of society like sepoys, peasants, and zamindars united against a common enemy.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe broad participation of different classes across North India made it a formidable challenge compared to previous localized tribal or peasant uprisings.\n\n📖 हिंदी स्पष्टीकरण:\nउत्तर भारत के विभिन्न वर्गों की व्यापक भागीदारी ने इसे पिछले स्थानीय आदिवासी या किसान विद्रोहों की तुलना में एक बड़ी चुनौती बना दिया।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following regarding the 'Viceroy' position after 1857:\n1857 के बाद 'वायसराय' पद के संबंध में निम्नलिखित पर विचार करें:\n1. The Governor-General was given the title of Viceroy. / गवर्नर-जनरल को वायसराय की उपाधि दी गई थी।\n2. The Viceroy was the direct representative of the British Crown. / वायसराय ब्रिटिश क्राउन का प्रत्यक्ष प्रतिनिधि था।\n3. Lord Dalhousie was the first Viceroy. / लॉर्ड डलहौजी पहले वायसराय थे।\nWhich of the statements are correct? / कौन से कथन सही हैं?",
+      "question": "Consider the following regarding the 'Viceroy' position after 1857:\n1. The Governor-General was given the title of Viceroy.\n2. The Viceroy was the direct representative of the British Crown.\n3. Lord Dalhousie was the first Viceroy.\nWhich of the statements are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLord Canning was the first Viceroy, not Dalhousie. The office of Viceroy represented the Queen's authority over India.\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड कैनिंग पहले वायसराय थे, डलहौजी नहीं। वायसराय का पद भारत पर महारानी के अधिकार का प्रतिनिधित्व करता था।"
     },
     {
       "q_num": 23,
-      "question": "Which British General described Rani Lakshmibai as \"the only man among the rebels\"?\nकिस ब्रिटिश जनरल ने रानी लक्ष्मीबाई को \"विद्रोहियों में एकमात्र मर्द\" बताया था?",
+      "question": "Which British General described Rani Lakshmibai as \"the only man among the rebels\"?",
       "options": {
-        "a": "Sir Colin Campbell / सर कोलिन कैंपबेल",
-        "b": "Sir Hugh Rose / सर ह्यू रोज़",
-        "c": "Major William Taylor / मेजर विलियम टेलर",
-        "d": "General Havelock / जनरल हैवलॉक"
+        "a": "Sir Colin Campbell",
+        "b": "Sir Hugh Rose",
+        "c": "Major William Taylor",
+        "d": "General Havelock"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSir Hugh Rose, who led the British forces against Jhansi, was deeply impressed by the bravery and military skill shown by the Queen on the battlefield.\n\n📖 हिंदी स्पष्टीकरण:\nझांसी के खिलाफ ब्रिटिश सेना का नेतृत्व करने वाले सर ह्यू रोज़, युद्ध के मैदान में रानी द्वारा दिखाए गए साहस और सैन्य कौशल से गहराई से प्रभावित थे।"
     },
     {
       "q_num": 24,
-      "question": "What was the main reason for the 'Sepoy' discontent before the 1857 revolt?\n1857 के विद्रोह से पहले 'सिपाही' असंतोष का मुख्य कारण क्या था?\n1. Low pay and lack of promotions. / कम वेतन और पदोन्नति की कमी।\n2. The General Service Enlistment Act of 1856. / 1856 का सामान्य सेवा भर्ती अधिनियम।\n3. Use of religious symbols like turbans was prohibited. / पगड़ी जैसे धार्मिक प्रतीकों के उपयोग पर रोक लगा दी गई थी।\nSelect the correct options: / सही विकल्प चुनें:",
+      "question": "What was the main reason for the 'Sepoy' discontent before the 1857 revolt?\n1. Low pay and lack of promotions.\n2. The General Service Enlistment Act of 1856.\n3. Use of religious symbols like turbans was prohibited.\nSelect the correct options:",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nSepoys faced racial discrimination, poor financial conditions, and policies like overseas travel (forbidden by religion) which caused widespread anger.\n\n📖 हिंदी स्पष्टीकरण:\nसिपाहियों को नस्लीय भेदभाव, खराब वित्तीय स्थिति और समुद्र पार यात्रा (धर्म वर्जित) जैसी नीतियों का सामना करना पड़ा जिससे व्यापक गुस्सा पैदा हुआ।"
     },
     {
       "q_num": 25,
-      "question": "Assertion (A): The 1857 revolt failed to achieve its objective of overthrowing British rule.\nReason (R): The movement was unorganized and lacked support from several influential Indian sections.\nकथन (A): 1857 का विद्रोह ब्रिटिश शासन को उखाड़ फेंकने के अपने उद्देश्य को प्राप्त करने में विफल रहा।\nकारण (R): आंदोलन असंगठित था और कई प्रभावशाली भारतीय वर्गों के समर्थन की कमी थी।",
+      "question": "Assertion (A): The 1857 revolt failed to achieve its objective of overthrowing British rule.\nReason (R): The movement was unorganized and lacked support from several influential Indian sections.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe revolt could not sustain a unified, all-India leadership and many influential groups and rulers did not support it fully. This lack of coordination and support contributed significantly to its failure.\n\n📖 हिंदी स्पष्टीकरण:\nविद्रोह एक अखिल भारतीय, एकीकृत नेतृत्व को बनाए नहीं रख सका और कई प्रभावशाली वर्ग/शासक इसका पूर्ण समर्थन नहीं कर पाए। समन्वय व समर्थन की कमी इसके विफल होने के प्रमुख कारणों में थी।"

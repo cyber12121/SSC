@@ -6,151 +6,151 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "What is the S.I. unit of electric current?\n विद्युत धारा का S.I. मात्रक क्या है?",
+      "question": "What is the S.I. unit of electric current?",
       "options": {
-        "a": "Volt / वोल्ट",
-        "b": "Ohm / ओम",
-        "c": "Ampere / एम्पियर",
-        "d": "Coulomb / कूलम्ब"
+        "a": "Volt",
+        "b": "Ohm",
+        "c": "Ampere",
+        "d": "Coulomb"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe S.I. unit of electric current is Ampere (A), named after André-Marie Ampère. It measures the flow of electric charge per unit time\n\n📖 हिंदी स्पष्टीकरण:\nविद्युत धारा का S.I. मात्रक एम्पियर (A) है, जिसका नाम आंद्रे-मैरी एम्पियर के नाम पर रखा गया है। यह प्रति इकाई समय में विद्युत आवेश के प्रवाह को मापता है।"
     },
     {
       "q_num": 2,
-      "question": "Which device is used to measure electric current in a circuit?\n सर्किट में विद्युत धारा मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+      "question": "Which device is used to measure electric current in a circuit?",
       "options": {
-        "a": "Voltmeter / वोल्टमीटर",
-        "b": "Ammeter / एमीटर",
-        "c": "Galvanometer / गैल्वेनोमीटर",
-        "d": "Rheostat / रियोस्टेट"
+        "a": "Voltmeter",
+        "b": "Ammeter",
+        "c": "Galvanometer",
+        "d": "Rheostat"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAn ammeter is an instrument used to measure the electric current in amperes. It is always connected in series in a circuit\n\n📖 हिंदी स्पष्टीकरण:\nएमीटर एक ऐसा उपकरण है जिसका उपयोग एम्पियर में विद्युत धारा को मापने के लिए किया जाता है। इसे हमेशा सर्किट में श्रेणीक्रम में जोड़ा जाता है।"
     },
     {
       "q_num": 3,
-      "question": "What is the S.I. unit of electric charge?\n विद्युत आवेश का S.I. मात्रक क्या है?",
+      "question": "What is the S.I. unit of electric charge?",
       "options": {
-        "a": "Joule / जूल",
-        "b": "Watt / वाट",
-        "c": "Coulomb / कूलम्ब",
-        "d": "Volt / वोल्ट"
+        "a": "Joule",
+        "b": "Watt",
+        "c": "Coulomb",
+        "d": "Volt"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe S.I. unit of electric charge is the Coulomb (C). One coulomb is equivalent to the charge of approximately 6 * 1018 electrons\n\n📖 हिंदी स्पष्टीकरण:\nविद्युत आवेश का S.I. मात्रक कूलम्ब (C) है। एक कूलम्ब लगभग 6 * 1018 इलेक्ट्रॉनों के आवेश के बराबर होता है।"
     },
     {
       "q_num": 4,
-      "question": "The property of a material to resist the flow of electric current is called:\n विद्युत धारा के प्रवाह को रोकने वाले पदार्थ के गुण को क्या कहा जाता है?",
+      "question": "The property of a material to resist the flow of electric current is called:",
       "options": {
-        "a": "Conductance / चालकता",
-        "b": "Resistance / प्रतिरोध",
-        "c": "Inductance / प्रेरकत्व",
-        "d": "Capacitance / धारिता"
+        "a": "Conductance",
+        "b": "Resistance",
+        "c": "Inductance",
+        "d": "Capacitance"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nResistance is the property of a conductor to oppose the flow of charges through it. Its S.I. unit is Ohm (Ω)\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिरोध किसी चालक का वह गुण है जो उसमें से आवेशों के प्रवाह का विरोध करता है। इसका S.I. मात्रक ओम (Ω) है।"
     },
     {
       "q_num": 5,
-      "question": "Which of the following is the best conductor of electricity?\n निम्नलिखित में से कौन विद्युत का सबसे अच्छा चालक है?",
+      "question": "Which of the following is the best conductor of electricity?",
       "options": {
-        "a": "Copper / तांबा",
-        "b": "Aluminium / एल्युमीनियम",
-        "c": "Silver / चांदी",
-        "d": "Iron / लोहा"
+        "a": "Copper",
+        "b": "Aluminium",
+        "c": "Silver",
+        "d": "Iron"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSilver has the lowest resistivity (1.60 × 10-8 Ω m) making it the most efficient conductor of electricity among all metals\n\n📖 हिंदी स्पष्टीकरण:\nचांदी की प्रतिरोधकता सबसे कम (1.60 × 10-8 Ω m) होती है, जो इसे सभी धातुओं में विद्युत का सबसे कुशल चालक बनाती है।"
     },
     {
       "q_num": 6,
-      "question": "What is the S.I. unit of Potential Difference?\n विभवांतर का S.I. मात्रक क्या है?",
+      "question": "What is the S.I. unit of Potential Difference?",
       "options": {
-        "a": "Ampere / एम्पियर",
-        "b": "Ohm / ओम",
-        "c": "Volt / वोल्ट",
-        "d": "Watt / वाट"
+        "a": "Ampere",
+        "b": "Ohm",
+        "c": "Volt",
+        "d": "Watt"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe S.I. unit of potential difference is Volt (V). It is defined as the work done in moving a unit positive charge from one point to another\n\n📖 हिंदी स्पष्टीकरण:\nविभवांतर का S.I. मात्रक वोल्ट (V) है। इसे एक इकाई धनात्मक आवेश को एक बिंदु से दूसरे बिंदु तक ले जाने में किए गए कार्य के रूप में परिभाषित किया गया है।"
     },
     {
       "q_num": 7,
-      "question": "Ohm's Law states the relationship between:\n ओम का नियम किसके बीच संबंध बताता है?",
+      "question": "Ohm's Law states the relationship between:",
       "options": {
-        "a": "Charge and Time / आवेश और समय",
-        "b": "Work and Power / कार्य और शक्ति",
-        "c": "Voltage and Current / वोल्टेज और धारा",
-        "d": "Resistance and Temperature / प्रतिरोध और तापमान"
+        "a": "Charge and Time",
+        "b": "Work and Power",
+        "c": "Voltage and Current",
+        "d": "Resistance and Temperature"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nOhm's Law states that current (I) is directly proportional to voltage (V), provided physical conditions remain constant (V=IR)\n\n📖 हिंदी स्पष्टीकरण:\nओम का नियम कहता है कि धारा (I) वोल्टेज (V) के सीधे आनुपातिक होती है, बशर्ते भौतिक स्थितियां स्थिर रहें (V=IR)।"
     },
     {
       "q_num": 8,
-      "question": "The material used for making the filament of an electric bulb is:\n बिजली के बल्ब का फिलामेंट बनाने के लिए किस सामग्री का उपयोग किया जाता है?",
+      "question": "The material used for making the filament of an electric bulb is:",
       "options": {
-        "a": "Nichrome / निक्रोम",
-        "b": "Copper / तांबा",
-        "c": "Tungsten / टंगस्टन",
-        "d": "Lead / सीसा"
+        "a": "Nichrome",
+        "b": "Copper",
+        "c": "Tungsten",
+        "d": "Lead"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTungsten is used because it has a very high melting point, allowing it to glow white-hot without melting\n\n📖 हिंदी स्पष्टीकरण:\nटंगस्टन का उपयोग इसलिए किया जाता है क्योंकि इसका गलनांक बहुत अधिक होता है, जिससे यह बिना पिघले सफेद-गर्म होकर चमक सकता है।"
     },
     {
       "q_num": 9,
-      "question": "Which wire in a domestic circuit is usually green in color?\n घरेलू सर्किट में कौन सा तार आमतौर पर हरे रंग का होता है?",
+      "question": "Which wire in a domestic circuit is usually green in color?",
       "options": {
-        "a": "Live wire / लाइव तार",
-        "b": "Neutral wire / न्यूट्रल तार",
-        "c": "Earth wire / अर्थ तार",
-        "d": "Phase wire / फेज तार"
+        "a": "Live wire",
+        "b": "Neutral wire",
+        "c": "Earth wire",
+        "d": "Phase wire"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Earth or Ground wire is color-coded green or yellow for safety, providing a path for leakage current to the ground\n\n📖 हिंदी स्पष्टीकरण:\nसुरक्षा के लिए अर्थ या ग्राउंड वायर को हरे या पीले रंग से कोडित किया जाता है, जो लीकेज करंट (क्षरण धारा) को जमीन तक जाने का रास्ता प्रदान करता है।"
     },
     {
       "q_num": 10,
-      "question": "What is the commercial unit of electrical energy?\n विद्युत ऊर्जा का व्यावसायिक मात्रक क्या है?",
+      "question": "What is the commercial unit of electrical energy?",
       "options": {
-        "a": "Joule / जूल",
-        "b": "Watt-second / वाट-सेकंड",
-        "c": "Kilowatt-hour (kWh) / किलोवाट-घंटा",
-        "d": "Ampere-hour / एम्पियर-घंटा"
+        "a": "Joule",
+        "b": "Watt-second",
+        "c": "Kilowatt-hour (kWh)",
+        "d": "Ampere-hour"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe commercial unit is kWh, also known as \"1 unit.\" 1 kWh = 3.6 * 106 Joules\n\n📖 हिंदी स्पष्टीकरण:\nव्यावसायिक इकाई kWh है, जिसे \"1 यूनिट\" भी कहा जाता है। 1 kWh = 3.6 * 106 जूल होता है।"
     },
     {
       "q_num": 11,
-      "question": "If the length of a wire is doubled, what happens to its resistance?\n यदि किसी तार की लंबाई दोगुनी कर दी जाए, तो उसके प्रतिरोध पर क्या प्रभाव पड़ेगा?",
+      "question": "If the length of a wire is doubled, what happens to its resistance?",
       "options": {
-        "a": "Becomes half / आधा हो जाता है।",
-        "b": "Becomes double / दोगुना हो जाता है।",
-        "c": "Becomes four times / चार गुना हो जाता है।",
-        "d": "Remains same / समान रहता है।"
+        "a": "Becomes half",
+        "b": "Becomes double",
+        "c": "Becomes four times",
+        "d": "Remains same"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nResistance (R) is directly proportional to the length (L) of the conductor. Doubling the length doubles the resistance\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिरोध (R) चालक की लंबाई (L) के सीधे आनुपातिक होता है। लंबाई दोगुनी करने से प्रतिरोध दोगुना हो जाता है।"
     },
     {
       "q_num": 12,
-      "question": "In a parallel circuit, which of the following remains the same across all resistors?\n एक समांतर सर्किट में, निम्नलिखित में से क्या सभी प्रतिरोधों में समान रहता है?",
+      "question": "In a parallel circuit, which of the following remains the same across all resistors?",
       "options": {
-        "a": "Current / धारा",
-        "b": "Potential Difference / विभवांतर",
-        "c": "Power / शक्ति",
-        "d": "Resistance / प्रतिरोध"
+        "a": "Current",
+        "b": "Potential Difference",
+        "c": "Power",
+        "d": "Resistance"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn a parallel connection, the potential difference across each resistor is the same and equal to the applied voltage\n\n📖 हिंदी स्पष्टीकरण:\nसमांतर क्रम में, प्रत्येक प्रतिरोधक के सिरों पर विभवांतर समान रहता है और यह स्रोत से लगाए गए कुल वोल्टेज के बराबर होता है।"
     },
     {
       "q_num": 13,
-      "question": "Calculate the total resistance when two resistors of 20 Ω and 4 Ω are connected in series. जब 20 Ω और 4 Ω के दो प्रतिरोधों को श्रेणीक्रम में जोड़ा जाता है, तो कुल प्रतिरोध की गणना करें।",
+      "question": "Calculate the total resistance when two resistors of 20 Ω and 4 Ω are connected in series.",
       "options": {
         "a": "16 Ω",
         "b": "24 Ω",
@@ -162,91 +162,91 @@
     },
     {
       "q_num": 14,
-      "question": "The heating effect of electric current is also known as:\n विद्युत धारा के तापीय प्रभाव को किस रूप में भी जाना जाता है?",
+      "question": "The heating effect of electric current is also known as:",
       "options": {
-        "a": "Ohm’s heating / ओम का तापन",
-        "b": "Joule’s heating / जूल का तापन",
-        "c": "Coulomb’s heating / कूलम्ब का तापन",
-        "d": "Ampere’s heating / एम्पियर का तापन"
+        "a": "Ohm’s heating",
+        "b": "Joule’s heating",
+        "c": "Coulomb’s heating",
+        "d": "Ampere’s heating"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDiscovered by James P. Joule, the heat produced (H) is given by H = I2Rt\n\n📖 हिंदी स्पष्टीकरण:\nजेम्स पी. जूल द्वारा खोजा गया, उत्पन्न ऊष्मा (H) का सूत्र H = I2Rt है।"
     },
     {
       "q_num": 15,
-      "question": "A fuse wire should have:\n एक फ्यूज तार में होना चाहिए:",
+      "question": "A fuse wire should have:",
       "options": {
-        "a": "High resistance and high melting point / उच्च प्रतिरोध और उच्च गलनांक",
-        "b": "Low resistance and high melting point / कम प्रतिरोध और उच्च गलनांक",
-        "c": "Low melting point / कम गलनांक",
-        "d": "High melting point / उच्च गलनांक"
+        "a": "High resistance and high melting point",
+        "b": "Low resistance and high melting point",
+        "c": "Low melting point",
+        "d": "High melting point"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA fuse must have a low melting point so it melts and breaks the circuit when excessive current flows, protecting appliances\n\n📖 हिंदी स्पष्टीकरण:\nएक फ्यूज का गलनांक कम होना चाहिए ताकि अत्यधिक धारा प्रवाहित होने पर यह पिघल जाए और सर्किट को तोड़ दे, जिससे उपकरणों की सुरक्षा हो सके।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): Alloys are commonly used in electrical heating devices like toasters.\n अभिकथन (A): मिश्र धातुओं का उपयोग आमतौर पर टोस्टर जैसे विद्युत ताप उपकरणों में किया जाता है।\n Reason (R): Alloys have higher resistivity than their constituent metals and do not oxidize easily at high temperatures.\n कारण (R): मिश्र धातुओं की प्रतिरोधकता उनके घटक धातुओं की तुलना में अधिक होती है और वे उच्च तापमान पर आसानी से ऑक्सीकृत नहीं होते हैं।",
+      "question": "Assertion (A): Alloys are commonly used in electrical heating devices like toasters.\n Reason (R): Alloys have higher resistivity than their constituent metals and do not oxidize easily at high temperatures.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAlloys like Nichrome have high resistivity and can withstand high temperatures without burning, making them ideal for heating\n\n📖 हिंदी स्पष्टीकरण:\nनाइक्रोम जैसी मिश्र धातुओं में उच्च प्रतिरोधकता होती है और वे बिना जले उच्च तापमान का सामना कर सकती हैं, जो उन्हें तापन के लिए आदर्श बनाती हैं।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements about Kirchoff's Current Law is correct?\n किरचॉफ के धारा नियम के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about Kirchoff's Current Law is correct?",
       "options": {
-        "a": "Sum of voltages in a loop is zero / एक लूप में वोल्टेज का योग शून्य होता है।",
-        "b": "Total current entering a node equals total current leaving it / एक नोड में प्रवेश करने वाली कुल धारा बाहर निकलने वाली कुल धारा के बराबर होती है।",
-        "c": "Current is inversely proportional to resistance / धारा प्रतिरोध के व्युत्क्रमानुपाती होती है।",
-        "d": "Heat produced is I2Rt / उत्पन्न ऊष्मा I2Rt है।"
+        "a": "Sum of voltages in a loop is zero",
+        "b": "Total current entering a node equals total current leaving it",
+        "c": "Current is inversely proportional to resistance",
+        "d": "Heat produced is I2Rt"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKirchoff's First Law (Law of Current) states that the sum of currents entering a junction equals the sum of currents leaving it\n\n📖 हिंदी स्पष्टीकरण:\nकिरचॉफ का पहला नियम (धारा का नियम) कहता है कि एक जंक्शन में प्रवेश करने वाली धाराओं का योग उससे बाहर निकलने वाली धाराओं के योग के बराबर होता है।"
     },
     {
       "q_num": 18,
-      "question": "A device used to measure an unknown resistance accurately by balancing a bridge circuit is:\n ब्रिज सर्किट को संतुलित करके अज्ञात प्रतिरोध को सटीक रूप से मापने के लिए उपयोग किया जाने वाला उपकरण है:",
+      "question": "A device used to measure an unknown resistance accurately by balancing a bridge circuit is:",
       "options": {
-        "a": "Ammeter / एमीटर",
-        "b": "Voltmeter / वोल्टमीटर",
-        "c": "Wheatstone Bridge / व्हीटस्टोन सेतु",
-        "d": "Galvanometer / गैल्वेनोमीटर"
+        "a": "Ammeter",
+        "b": "Voltmeter",
+        "c": "Wheatstone Bridge",
+        "d": "Galvanometer"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Wheatstone Bridge uses four resistors in a bridge balance (P/R = Q/S) to find the value of an unknown resistor\n\n📖 हिंदी स्पष्टीकरण:\nसेतु"
     },
     {
       "q_num": 19,
-      "question": "Calculate the electrical energy (in units) consumed by a 1200 W toaster in 30 minutes.\n 30 मिनट में 1200 W के टोस्टर द्वारा खपत विद्युत ऊर्जा (यूनिट में) की गणना करें।",
+      "question": "Calculate the electrical energy (in units) consumed by a 1200 W toaster in 30 minutes.",
       "options": {
-        "a": "36 units / 36 यूनिट",
-        "b": "0.6 units / 0.6 यूनिट",
-        "c": "1.2 units / 1.2 यूनिट",
-        "d": "6 units / 6 यूनिट"
+        "a": "36 units",
+        "b": "0.6 units",
+        "c": "1.2 units",
+        "d": "6 units"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEnergy = Power * Time = 1200/1000 kW * 30/60 h = 1.2 * 0.5 = 0.6 kWh (units)\n\n📖 हिंदी स्पष्टीकरण:\nऊर्जा = शक्ति * समय = 1200/1000 kW * 30/60 h = 1.2 * 0.5 = 0.6 kWh (यूनिट)।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The resistivity of a substance is a constant value for a given material at a constant temperature.\n अभिकथन (A): एक निश्चित तापमान पर किसी दिए गए पदार्थ के लिए प्रतिरोधकता एक स्थिर मान है।\n Reason (R): Resistivity depends on the length and area of cross-section of the material.\n कारण (R): प्रतिरोधकता पदार्थ की लंबाई और अनुप्रस्थ काट के क्षेत्रफल पर निर्भर करती है।",
+      "question": "Assertion (A): The resistivity of a substance is a constant value for a given material at a constant temperature.\n Reason (R): Resistivity depends on the length and area of cross-section of the material.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nResistivity is a characteristic property of a material and does not change with dimensions like length or area, unlike resistance\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिरोधकता पदार्थ का एक विशिष्ट गुण है और प्रतिरोध के विपरीत, लंबाई या क्षेत्रफल जैसे आयामों के साथ नहीं बदलती है।"
     },
     {
       "q_num": 21,
-      "question": "What is the frequency of the A.C. power supply in India?\n भारत में A.C. बिजली आपूर्ति की आवृत्ति क्या है?",
+      "question": "What is the frequency of the A.C. power supply in India?",
       "options": {
         "a": "60 Hz",
         "b": "50 Hz",
@@ -258,43 +258,43 @@
     },
     {
       "q_num": 22,
-      "question": "In a series circuit, if one bulb blows out, what happens to the other bulbs?\n श्रेणीक्रम सर्किट में, यदि एक बल्ब खराब हो जाता है, तो अन्य बल्बों का क्या होता है?",
+      "question": "In a series circuit, if one bulb blows out, what happens to the other bulbs?",
       "options": {
-        "a": "They glow brighter / वे अधिक चमकते हैं।",
-        "b": "They continue to glow as before / वे पहले की तरह जलते रहते हैं।",
-        "c": "They all go out / वे सभी बुझ जाते हैं।",
-        "d": "They glow with less brightness / वे कम चमक के साथ जलते हैं।"
+        "a": "They glow brighter",
+        "b": "They continue to glow as before",
+        "c": "They all go out",
+        "d": "They glow with less brightness"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn a series circuit, there is only one path for current. If the circuit is broken at any point, the current stops flowing everywhere\n\n📖 हिंदी स्पष्टीकरण:\nश्रेणीक्रम सर्किट में, धारा के लिए केवल एक ही रास्ता होता है। यदि सर्किट किसी भी बिंदु पर टूट जाता है, तो धारा का प्रवाह हर जगह रुक जाता है।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following formulas represents Electric Power?\n निम्नलिखित में से कौन सा सूत्र विद्युत शक्ति का प्रतिनिधित्व करता है?",
+      "question": "Which of the following formulas represents Electric Power?",
       "options": {
         "a": "P = VI",
         "b": "P = I2R",
         "c": "P = V2/R",
-        "d": "All of these / ये सभी"
+        "d": "All of these"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPower is the rate of doing work. Using Ohm's Law (V=IR), power can be expressed in all three given forms\n\n📖 हिंदी स्पष्टीकरण:\nशक्ति कार्य करने की दर है। ओम के नियम (V=IR) का उपयोग करते हुए, शक्ति को दिए गए तीनों रूपों में व्यक्त किया जा सकता है।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): A conductor allows electricity to pass through it easily.\n अभिकथन (A): एक चालक अपने में से बिजली को आसानी से प्रवाहित होने देता है।\n Reason (R): Conductors have a large number of free electrons.\n कारण (R): चालकों में बड़ी संख्या में मुक्त इलेक्ट्रॉन होते हैं।",
+      "question": "Assertion (A): A conductor allows electricity to pass through it easily.\n Reason (R): Conductors have a large number of free electrons.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMetals are good conductors because they contain free electrons that can move easily, carrying electric charge\n\n📖 हिंदी स्पष्टीकरण:\nधातुएं अच्छी चालक होती हैं क्योंकि उनमें मुक्त इलेक्ट्रॉन होते हैं जो आसानी से घूम सकते हैं और विद्युत आवेश ले जा सकते हैं।"
     },
     {
       "q_num": 25,
-      "question": "What is the value of charge on a single electron?\n एक इलेक्ट्रॉन पर आवेश का मान क्या होता है?",
+      "question": "What is the value of charge on a single electron?",
       "options": {
         "a": "1.6 * 10-19 C",
         "b": "6 * 1018 C",

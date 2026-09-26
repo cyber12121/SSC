@@ -6,139 +6,139 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding the Indus Valley Civilization (IVC): \n सिंधु घाटी सभ्यता (IVC) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The Harappans were the first to produce cotton in the world. / हड़प्पावासी दुनिया में कपास का उत्पादन करने वाले पहले व्यक्ति थे। \n (b) Iron was extensively used for making agricultural tools in Harappa. / हड़प्पा में कृषि उपकरण बनाने के लिए लोहे का बड़े पैमाने पर उपयोग किया जाता था। \n (c) Evidence of a dockyard has been found in Lothal. / लोथल में गोदीवाड़ा (dockyard) के साक्ष्य मिले हैं।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Indus Valley Civilization (IVC): \n(a) The Harappans were the first to produce cotton in the world.\n(b) Iron was extensively used for making agricultural tools in Harappa.\n(c) Evidence of a dockyard has been found in Lothal.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nHarappans produced cotton (called 'Sindon' by Greeks), but they were not aware of Iron; Iron was introduced in the Later Vedic period. Lothal was a prominent port city.\n\n📖 हिंदी स्पष्टीकरण:\nहड़प्पावासियों ने कपास का उत्पादन किया (यूनानियों द्वारा 'सिंडन' कहा गया), लेकिन वे लोहे से परिचित नहीं थे; लोहे की शुरुआत उत्तर वैदिक काल में हुई थी। लोथल एक प्रमुख बंदरगाह शहर था।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following statements about the Battle of Hydaspes is correct? \n हाइडेस्पस के युद्ध के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Battle of Hydaspes is correct?",
       "options": {
-        "a": "It was fought between Alexander and Chandragupta Maurya. / यह सिकंदर और चंद्रगुप्त मौर्य के बीच लड़ा गया था।",
-        "b": "It took place on the banks of the Ravi River. / यह रावी नदी के तट पर हुआ था।",
-        "c": "King Porus was defeated but his kingdom was restored by Alexander. / राजा पोरस की हार हुई लेकिन सिकंदर ने उनका राज्य वापस कर दिया।",
-        "d": "It led to the immediate end of the Nanda Dynasty. / इसके कारण नंद वंश का तत्काल अंत हो गया।"
+        "a": "It was fought between Alexander and Chandragupta Maurya.",
+        "b": "It took place on the banks of the Ravi River.",
+        "c": "King Porus was defeated but his kingdom was restored by Alexander.",
+        "d": "It led to the immediate end of the Nanda Dynasty."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Battle of Hydaspes (326 BC) was fought between Alexander and Porus on the banks of the Jhelum (Hydaspes). Impressed by Porus's bravery, Alexander returned his kingdom.\n\n📖 हिंदी स्पष्टीकरण:\nहाइडेस्पस का युद्ध (326 ईसा पूर्व) झेलम (हाइडेस्पस) के तट पर सिकंदर और पोरस के बीच लड़ा गया था। पोरस की बहादुरी से प्रभावित होकर सिकंदर ने उसका राज्य वापस कर दिया।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements regarding Ashoka’s Dhamma: \n अशोक के धम्म के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was a new religion founded to replace Buddhism. / यह बौद्ध धर्म को प्रतिस्थापित करने के लिए स्थापित किया गया एक नया धर्म था। \n (b) It emphasized tolerance, non-violence, and respect for elders. / इसमें सहिष्णुता, अहिंसा और बड़ों के प्रति सम्मान पर जोर दिया गया था। \n (c) Ashoka appointed 'Dhamma Mahamattas' to spread its principles. / अशोक ने इसके सिद्धांतों को फैलाने के लिए 'धम्म महामत्त' नियुक्त किए।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Ashoka’s Dhamma: \n(a) It was a new religion founded to replace Buddhism.\n(b) It emphasized tolerance, non-violence, and respect for elders.\n(c) Ashoka appointed 'Dhamma Mahamattas' to spread its principles.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "b only / केवल b"
+        "a": "a only",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "b only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAshoka’s Dhamma was not a new religion but a code of conduct and social ethics. He appointed officials called Dhamma Mahamattas to propagate these values.\n\n📖 हिंदी स्पष्टीकरण:\nअशोक का धम्म कोई नया धर्म नहीं था बल्कि एक आचार संहिता और सामाजिक नैतिकता थी। उन्होंने इन मूल्यों के प्रचार के लिए धम्म महामत्त नामक अधिकारियों की नियुक्ति की।"
     },
     {
       "q_num": 4,
-      "question": "The 'Allahabad Pillar Inscription' (Prayag Prashasti) provides information about the reign of: \n 'इलाहाबाद स्तंभ शिलालेख' (प्रयाग प्रशस्ति) किसके शासनकाल के बारे में जानकारी प्रदान करता है?",
+      "question": "The 'Allahabad Pillar Inscription' (Prayag Prashasti) provides information about the reign of:",
       "options": {
-        "a": "Chandragupta I / चंद्रगुप्त प्रथम",
-        "b": "Samudragupta / समुद्रगुप्त",
-        "c": "Skandagupta / स्कंदगुप्त",
-        "d": "Harshavardhana / हर्षवर्धन"
+        "a": "Chandragupta I",
+        "b": "Samudragupta",
+        "c": "Skandagupta",
+        "d": "Harshavardhana"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nComposed by Harisena, the Prayag Prashasti describes the conquests and personality of Samudragupta, often called the 'Napoleon of India'.\n\n📖 हिंदी स्पष्टीकरण:\nहरिषेण द्वारा रचित प्रयाग प्रशस्ति समुद्रगुप्त की विजयों और व्यक्तित्व का वर्णन करती है, जिन्हें अक्सर 'भारत का नेपोलियन' कहा जाता है।"
     },
     {
       "q_num": 5,
-      "question": "Consider the following pairs of Delhi Sultanate officials and their departments: \n दिल्ली सल्तनत के अधिकारियों और उनके विभागों के निम्नलिखित युग्मों पर विचार करें: \n (a) Diwan-i-Arz : Military Department / सैन्य विभाग \n (b) Diwan-i-Kohi : Agriculture Department / कृषि विभाग \n (c) Diwan-i-Khairat : Department of Slave / दास विभाग\n Which of the pairs given above is/are correctly matched?\n ऊपर दिए गए युग्मों में से कौन-सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following pairs of Delhi Sultanate officials and their departments: \n(a) Diwan-i-Arz : Military Department\n(b) Diwan-i-Kohi : Agriculture Department\n(c) Diwan-i-Khairat : Department of Slave\n Which of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDiwan-i-Arz was created by Balban, Diwan-i-Kohi by MBT. Diwan-i-Khairat was the department of charity (not slaves) created by Firoz Shah Tughlaq.\n\n📖 हिंदी स्पष्टीकरण:\nदीवान-ए-अर्ज़ बलबन द्वारा, दीवान-ए-कोही MBT द्वारा बनाया गया था। दीवान-ए-खैरात फिरोज शाह तुगलक द्वारा बनाया गया दान विभाग (दासों का नहीं) था।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following statements about the 'Iqtadari System' is incorrect? \n 'इक्तादारी व्यवस्था' के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about the 'Iqtadari System' is incorrect?",
       "options": {
-        "a": "It was introduced in India by Iltutmish. / इसे इल्तुतमिश द्वारा भारत में पेश किया गया था।",
-        "b": "It was a hereditary land ownership system. / यह एक वंशानुगत भूमि स्वामित्व प्रणाली थी।",
-        "c": "The Iqtadars were responsible for maintaining law and order. / इक्तादार कानून व्यवस्था बनाए रखने के लिए जिम्मेदार थे।",
-        "d": "They used their revenue to maintain a military contingent. / वे अपने राजस्व का उपयोग सैन्य टुकड़ी बनाए रखने के लिए करते थे।"
+        "a": "It was introduced in India by Iltutmish.",
+        "b": "It was a hereditary land ownership system.",
+        "c": "The Iqtadars were responsible for maintaining law and order.",
+        "d": "They used their revenue to maintain a military contingent."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nInitially, Iqtadari was not hereditary; it was a grant of revenue from a territory in lieu of salary. It became hereditary later during Firoz Shah Tughlaq's reign.\n\n📖 हिंदी स्पष्टीकरण:\nप्रारंभ में, इक्तादारी वंशानुगत नहीं थी; यह वेतन के बदले किसी क्षेत्र से राजस्व का अनुदान था। फिरोज शाह तुगलक के शासनकाल के दौरान यह वंशानुगत हो गई।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following statements regarding the Battle of Talikota (1565): \n तालीकोटा के युद्ध (1565) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It led to the downfall of the Vijayanagara Empire. / इसके कारण विजयनगर साम्राज्य का पतन हुआ। \n (b) It was fought between Vijayanagara and the combined forces of Deccan Sultanates. / यह विजयनगर और दक्कन सल्तनतों की संयुक्त सेनाओं के बीच लड़ा गया था। \n (c) Krishnadevaraya led the Vijayanagara army in this battle. / कृष्णदेवराय ने इस युद्ध में विजयनगर सेना का नेतृत्व किया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Battle of Talikota (1565): \n(a) It led to the downfall of the Vijayanagara Empire.\n(b) It was fought between Vijayanagara and the combined forces of Deccan Sultanates.\n(c) Krishnadevaraya led the Vijayanagara army in this battle.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe battle was fought in 1565. Rama Raya led the army, not Krishnadevaraya (who died in 1529). The Deccan alliance (except Berar) defeated Vijayanagara.\n\n📖 हिंदी स्पष्टीकरण:\nयह युद्ध 1565 में लड़ा गया था। राम राय ने सेना का नेतृत्व किया था, न कि कृष्णदेवराय ने (जिनकी मृत्यु 1529 में हुई थी)। दक्कन गठबंधन (बरार को छोड़कर) ने विजयनगर को हराया था।"
     },
     {
       "q_num": 8,
-      "question": "Which Mughal Emperor prohibited the use of Tobacco? \n किस मुगल सम्राट ने तंबाकू के सेवन पर प्रतिबंध लगा दिया था?",
+      "question": "Which Mughal Emperor prohibited the use of Tobacco?",
       "options": {
-        "a": "Akbar / अकबर",
-        "b": "Jahangir / जहाँगीर",
-        "c": "Shah Jahan / शाहजहाँ",
-        "d": "Aurangzeb / औरंगजेब"
+        "a": "Akbar",
+        "b": "Jahangir",
+        "c": "Shah Jahan",
+        "d": "Aurangzeb"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTobacco was introduced by the Portuguese during Akbar's reign, but his son Jahangir prohibited its use in 1617 due to its harmful effects.\n\n📖 हिंदी स्पष्टीकरण:\nअकबर के शासनकाल के दौरान पुर्तगालियों द्वारा तंबाकू लाया गया था, लेकिन उसके बेटे जहाँगीर ने 1617 में इसके हानिकारक प्रभावों के कारण इसके उपयोग पर प्रतिबंध लगा दिया था।"
     },
     {
       "q_num": 9,
-      "question": "Consider the following statements about the Subsidiary Alliance system: \n सहायक संधि (Subsidiary Alliance) प्रणाली के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was framed by Lord Dalhousie. / इसे लॉर्ड डलहौजी द्वारा तैयार किया गया था। \n (b) The ruler had to maintain a British force within their territory. / शासक को अपने क्षेत्र के भीतर एक ब्रिटिश सेना रखनी पड़ती थी। \n (c) Hyderabad was the first state to accept this alliance. / हैदराबाद इस संधि को स्वीकार करने वाला पहला राज्य था।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about the Subsidiary Alliance system: \n(a) It was framed by Lord Dalhousie.\n(b) The ruler had to maintain a British force within their territory.\n(c) Hyderabad was the first state to accept this alliance.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "c only / केवल c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Subsidiary Alliance was framed by Lord Wellesley (not Dalhousie). Hyderabad (1798) was indeed the first to sign it.\n\n📖 हिंदी स्पष्टीकरण:\nसहायक संधि लॉर्ड वेलेज़ली (डलहौजी नहीं) द्वारा तैयार की गई थी। हैदराबाद (1798) वास्तव में इस पर हस्ताक्षर करने वाला पहला राज्य था।"
     },
     {
       "q_num": 10,
-      "question": "With reference to the Permanent Settlement of 1793, consider the following statements: \n 1793 के स्थायी बंदोबस्त के संदर्भ में, निम्नलिखित कथनों पर विचार करें: \n (a) It was introduced by Lord Cornwallis in Bengal and Bihar. / इसे लॉर्ड कॉर्नवालिस द्वारा बंगाल और बिहार में पेश किया गया था। \n (b) The Zamindars were made the owners of the land. / जमींदारों को भूमि का मालिक बना दिया गया। \n (c) The share of the government was fixed at 1/3rd of the total produce. / सरकार का हिस्सा कुल उपज का 1/3 तय किया गया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "With reference to the Permanent Settlement of 1793, consider the following statements: \n(a) It was introduced by Lord Cornwallis in Bengal and Bihar.\n(b) The Zamindars were made the owners of the land.\n(c) The share of the government was fixed at 1/3rd of the total produce.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe government's share was fixed at 10/11th of the rent collected by Zamindars, not 1/3rd of the produce. It gave ownership rights to Zamindars as long as they paid the fixed revenue.\n\n📖 हिंदी स्पष्टीकरण:\nसरकार का हिस्सा जमींदारों द्वारा वसूले गए किराए का 10/11 तय किया गया था, न कि उपज का 1/3। इसने जमींदारों को तब तक स्वामित्व अधिकार दिए जब तक वे निश्चित राजस्व का भुगतान करते रहे।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following statements is correct regarding the Morley-Minto Reforms of 1909? \n 1909 के मॉर्ले-मिंटो सुधारों के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements is correct regarding the Morley-Minto Reforms of 1909?",
       "options": {
-        "a": "It introduced a bicameral legislature at the center. / इसने केंद्र में द्विसदनीय विधायिका की शुरुआत की।",
-        "b": "It provided for separate electorates for Muslims. / इसने मुसलमानों के लिए अलग निर्वाचन क्षेत्र का प्रावधान किया।",
-        "c": "It granted the right to vote to all women. / इसने सभी महिलाओं को वोट देने का अधिकार दिया।",
-        "d": "It was based on the recommendations of the Simon Commission. / यह साइमन कमीशन की सिफारिशों पर आधारित था।"
+        "a": "It introduced a bicameral legislature at the center.",
+        "b": "It provided for separate electorates for Muslims.",
+        "c": "It granted the right to vote to all women.",
+        "d": "It was based on the recommendations of the Simon Commission."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 1909 Act introduced communal representation by providing separate electorates for Muslims, earning Lord Minto the title 'Father of Communal Electorate'.\n\n📖 हिंदी स्पष्टीकरण:\n1909 के अधिनियम ने मुसलमानों के लिए अलग निर्वाचन क्षेत्र प्रदान करके सांप्रदायिक प्रतिनिधित्व की शुरुआत की, जिससे लॉर्ड मिंटो को 'सांप्रदायिक निर्वाचन क्षेत्र के जनक' की उपाधि मिली।"
     },
     {
       "q_num": 12,
-      "question": "Consider the following events of the Indian National Movement: \n भारतीय राष्ट्रीय आंदोलन की निम्नलिखित घटनाओं पर विचार करें: \n (a) Rowlatt Satyagraha / रॉलेट सत्याग्रह \n (b) Jallianwala Bagh Massacre / जलियांवाला बाग हत्याकांड \n (c) Khilafat Movement / खिलाफत आंदोलन \n (d) Non-Cooperation Movement / असहयोग आंदोलन\n What is the correct chronological order of these events? \n इन घटनाओं का सही कालानुक्रमिक क्रम क्या है?",
+      "question": "Consider the following events of the Indian National Movement: \n(a) Rowlatt Satyagraha\n(b) Jallianwala Bagh Massacre\n(c) Khilafat Movement\n(d) Non-Cooperation Movement\n What is the correct chronological order of these events?",
       "options": {
         "a": "a - b - c - d",
         "b": "b - a - c - d",
@@ -150,379 +150,379 @@
     },
     {
       "q_num": 13,
-      "question": "Which of the following statements about the Gandhi-Irwin Pact (1931) is incorrect? \n गांधी-इरविन समझौते (1931) के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about the Gandhi-Irwin Pact (1931) is incorrect?",
       "options": {
-        "a": "Congress agreed to suspend the Civil Disobedience Movement. / कांग्रेस सविनय अवज्ञा आंदोलन को स्थगित करने पर सहमत हुई।",
-        "b": "The British agreed to release all political prisoners including those involved in violence. / ब्रिटिश हिंसा में शामिल लोगों सहित सभी राजनीतिक बंदियों को रिहा करने पर सहमत हुए।",
-        "c": "Gandhiji agreed to participate in the Second Round Table Conference. / गांधीजी द्वितीय गोलमेज सम्मेलन में भाग लेने के लिए सहमत हुए।",
-        "d": "It allowed the manufacture of salt for personal consumption in coastal villages. / इसने तटीय गांवों में व्यक्तिगत उपभोग के लिए नमक बनाने की अनुमति दी।"
+        "a": "Congress agreed to suspend the Civil Disobedience Movement.",
+        "b": "The British agreed to release all political prisoners including those involved in violence.",
+        "c": "Gandhiji agreed to participate in the Second Round Table Conference.",
+        "d": "It allowed the manufacture of salt for personal consumption in coastal villages."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe British agreed to release only those political prisoners who were NOT convicted of violence. This was a major point of contention regarding Bhagat Singh's execution.\n\n📖 हिंदी स्पष्टीकरण:\nअंग्रेज केवल उन्हीं राजनीतिक बंदियों को रिहा करने पर सहमत हुए जो हिंसा के दोषी नहीं थे। भगत सिंह की फांसी के संबंध में यह विवाद का एक प्रमुख बिंदु था।"
     },
     {
       "q_num": 14,
-      "question": "Consider the following statements regarding the revolt of 1857: \n 1857 के विद्रोह के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Begum Hazrat Mahal led the revolt in Lucknow. / बेगम हजरत महल ने लखनऊ में विद्रोह का नेतृत्व किया। \n (b) Lord Canning was the Governor-General during the revolt. / विद्रोह के दौरान लॉर्ड कैनिंग गवर्नर-जनरल थे। \n (c) The revolt was supported by the educated middle class of India. / इस विद्रोह को भारत के शिक्षित मध्यम वर्ग का समर्थन प्राप्त था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the revolt of 1857: \n(a) Begum Hazrat Mahal led the revolt in Lucknow.\n(b) Lord Canning was the Governor-General during the revolt.\n(c) The revolt was supported by the educated middle class of India.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe educated middle class and many Indian rulers remained neutral or supported the British. They viewed the revolt as backward-looking.\n\n📖 हिंदी स्पष्टीकरण:\nशिक्षित मध्यम वर्ग और कई भारतीय शासक तटस्थ रहे या अंग्रेजों का समर्थन किया। उन्होंने विद्रोह को पिछड़ी सोच वाला माना।"
     },
     {
       "q_num": 15,
-      "question": "Who was the President of the Haripura Session (1938) of the Indian National Congress? \n भारतीय राष्ट्रीय कांग्रेस के हरिपुरा अधिवेशन (1938) के अध्यक्ष कौन थे?",
+      "question": "Who was the President of the Haripura Session (1938) of the Indian National Congress?",
       "options": {
-        "a": "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "b": "Subhas Chandra Bose / सुभाष चंद्र बोस",
-        "c": "Pattabhi Sitaramayya / पट्टाभि सीतारमैया",
-        "d": "J.B. Kripalani / जे.बी. कृपलानी"
+        "a": "Jawaharlal Nehru",
+        "b": "Subhas Chandra Bose",
+        "c": "Pattabhi Sitaramayya",
+        "d": "J.B. Kripalani"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSubhas Chandra Bose was elected President at the Haripura session in 1938. He also won at Tripuri (1939) but resigned due to differences with Gandhi.\n\n📖 हिंदी स्पष्टीकरण:\nसुभाष चंद्र बोस 1938 में हरिपुरा अधिवेशन में अध्यक्ष चुने गए थे। उन्होंने त्रिपुरी (1939) में भी जीत हासिल की लेकिन गांधी के साथ मतभेदों के कारण इस्तीफा दे दिया।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the Vedic Society: \n वैदिक समाज के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) In the Early Vedic period, kingship was not hereditary. / ऋग्वैदिक काल में राजपद वंशानुगत नहीं था। \n (b) 'Saba' and 'Samiti' were the popular assemblies that exercised control over the king. / 'सभा' और 'समिति' लोकप्रिय परिषदें थीं जो राजा पर नियंत्रण रखती थीं। \n (c) Women were not allowed to attend the 'Saba' or 'Vidatha'. / महिलाओं को 'सभा' या 'विदथ' में भाग लेने की अनुमति नहीं थी।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Vedic Society: \n(a) In the Early Vedic period, kingship was not hereditary.\n(b) 'Saba' and 'Samiti' were the popular assemblies that exercised control over the king. / '\n(c) Women were not allowed to attend the 'Saba' or 'Vidatha'.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn the Early Vedic period, women participated in 'Saba' and 'Vidatha'. Their status declined in the Later Vedic period when they were restricted from attending these assemblies.\n\n📖 हिंदी स्पष्टीकरण:\nऋग्वैदिक काल में महिलाएँ 'सभा' और 'विदथ' में भाग लेती थीं। उत्तर वैदिक काल में उनकी स्थिति में गिरावट आई जब उन्हें इन सभाओं में भाग लेने से रोक दिया गया।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements about the 'Din-i-Ilahi' is incorrect? 'दीन-ए-इलाही' के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about the 'Din-i-Ilahi' is incorrect? '",
       "options": {
-        "a": "It was introduced by Akbar in 1582. / इसे 1582 में अकबर द्वारा शुरू किया गया था।",
-        "b": "It was a synthesis of multiple religions like Islam, Hinduism, and Jainism. / यह इस्लाम, हिंदू धर्म और जैन धर्म जैसे कई धर्मों का संश्लेषण था।",
-        "c": "It had its own priesthood and a holy book. / इसका अपना पुरोहित वर्ग और एक पवित्र पुस्तक थी।",
-        "d": "Birbal was the only Hindu to accept it. / बीरबल इसे स्वीकार करने वाले एकमात्र हिंदू थे।"
+        "a": "It was introduced by Akbar in 1582.",
+        "b": "It was a synthesis of multiple religions like Islam, Hinduism, and Jainism.",
+        "c": "It had its own priesthood and a holy book.",
+        "d": "Birbal was the only Hindu to accept it."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDin-i-Ilahi did not have a priesthood or a holy book. It was more of an ethical code of conduct for the nobility rather than a formal religion.\n\n📖 हिंदी स्पष्टीकरण:\nदीन-ए-इलाही में कोई पुरोहित वर्ग या पवित्र पुस्तक नहीं थी। यह एक औपचारिक धर्म के बजाय रईसों के लिए एक नैतिक आचार संहिता अधिक थी।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following pairs of travelers and the rulers during whose reign they visited India: \n यात्रियों और उन शासकों के निम्नलिखित युग्मों पर विचार करें जिनके शासनकाल में उन्होंने भारत का दौरा किया: \n (a) Megasthenes : Chandragupta Maurya / मेगास्थनीज : चंद्रगुप्त मौर्य \n (b) Fa-Hien : Chandragupta II / फाह्यान : चंद्रगुप्त द्वितीय \n (c) Hiuen Tsang : Harshavardhana / ह्वेनसांग : हर्षवर्धन\n Which of the pairs given above are correctly matched?\n ऊपर दिए गए युग्मों में से कौन-से सही सुमेलित हैं?",
+      "question": "Consider the following pairs of travelers and the rulers during whose reign they visited India: \n(a) Megasthenes : Chandragupta Maurya\n(b) Fa-Hien : Chandragupta II\n(c) Hiuen Tsang : Harshavardhana\n Which of the pairs given above are correctly matched?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll pairs are correctly matched. Megasthenes was a Greek ambassador, while Fa-Hien and Hiuen Tsang were Chinese Buddhist pilgrims.\n\n📖 हिंदी स्पष्टीकरण:\nसभी युग्म सही सुमेलित हैं। मेगास्थनीज एक यूनानी राजदूत थे, जबकि फाह्यान और ह्वेनसांग चीनी बौद्ध तीर्थयात्री थे।"
     },
     {
       "q_num": 19,
-      "question": "With reference to the 'Iltutmish', consider the following statements: \n 'इल्तुतमिश' के संदर्भ में निम्नलिखित कथनों पर विचार करें: \n (a) He introduced the silver coin 'Tanka' and copper coin 'Jital'. / उसने चांदी का सिक्का 'टका' और तांबे का सिक्का 'जीतल' पेश किया। \n (b) He completed the construction of the Qutub Minar. / उसने कुतुब मीनार का निर्माण पूरा करवाया। \n (c) He organized a group of 40 loyal slaves known as 'Turkan-i-Chahalgani'. / उसने 40 वफादार गुलामों का एक समूह संगठित किया जिसे 'तुर्कान-ए-चिहलगानी' कहा जाता था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "With reference to the 'Iltutmish', consider the following statements: \n(a) He introduced the silver coin 'Tanka' and copper coin 'Jital'.\n(b) He completed the construction of the Qutub Minar.\n(c) He organized a group of 40 loyal slaves known as 'Turkan-i-Chahalgani'.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "a and c / a और c"
+        "a": "a only",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "a and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIltutmish is considered the real founder of the Delhi Sultanate. He consolidated the empire through administrative and monetary reforms.\n\n📖 हिंदी स्पष्टीकरण:\nइल्तुतमिश को दिल्ली सल्तनत का वास्तविक संस्थापक माना जाता है। उसने प्रशासनिक और मौद्रिक सुधारों के माध्यम से साम्राज्य को मजबूत किया।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following statements about the 'Government of India Act 1935' is correct? \n 'भारत सरकार अधिनियम 1935' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about the 'Government of India Act 1935' is correct?",
       "options": {
-        "a": "It introduced Diarchy at the provincial level. / इसने प्रांतीय स्तर पर द्वैध शासन की शुरुआत की।",
-        "b": "It abolished Diarchy at the center. / इसने केंद्र में द्वैध शासन को समाप्त कर दिया।",
-        "c": "It provided for the establishment of a Federal Court. / इसमें एक संघीय न्यायालय (Federal Court) की स्थापना का प्रावधान था।",
-        "d": "It separated Burma from India in 1947. / इसने 1947 में बर्मा को भारत से अलग कर दिया।"
+        "a": "It introduced Diarchy at the provincial level.",
+        "b": "It abolished Diarchy at the center.",
+        "c": "It provided for the establishment of a Federal Court.",
+        "d": "It separated Burma from India in 1947."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe 1935 Act abolished provincial diarchy and introduced provincial autonomy. It introduced diarchy at the Center and established the Federal Court (1937) and RBI. Burma was separated in 1937.\n1935\n\n📖 हिंदी स्पष्टीकरण:\nके अधिनियम ने प्रांतीय द्वैध शासन को समाप्त कर दिया और प्रांतीय स्वायत्तता की शुरुआत की। इसने केंद्र में द्वैध शासन की शुरुआत की और संघीय न्यायालय (1937) और RBI की स्थापना की। बर्मा 1937 में अलग हुआ था।"
     },
     {
       "q_num": 21,
-      "question": "Consider the following statements regarding the 'Cabinet Mission' (1946): \n 'कैबिनेट मिशन' (1946) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It recommended a weak center with powers limited to Foreign Affairs, Defense, and Communications. / इसने विदेश मामलों, रक्षा और संचार तक सीमित शक्तियों वाले एक कमजोर केंद्र की सिफारिश की। \n (b) It rejected the demand for a full-fledged Pakistan. / इसने पूर्ण विकसित पाकिस्तान की मांग को खारिज कर दिया। \n (c) It suggested the formation of a Constituent Assembly. / इसने संविधान सभा के गठन का सुझाव दिया।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Cabinet Mission' (1946): \n(a) It recommended a weak center with powers limited to Foreign Affairs, Defense, and Communications.\n(b) It rejected the demand for a full-fledged Pakistan.\n(c) It suggested the formation of a Constituent Assembly.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "c only / केवल c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "c only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Cabinet Mission (Pethick-Lawrence, Stafford Cripps, A.V. Alexander) aimed to keep India united while giving autonomy to provinces grouped into three sections.\n\n📖 हिंदी स्पष्टीकरण:\nकैबिनेट मिशन (पेथिक-लॉरेंस, स्टैफोर्ड क्रिप्स, ए.वी. अलेक्जेंडर) का उद्देश्य भारत को एकजुट रखना था, जबकि तीन वर्गों में समूहों में विभाजित प्रांतों को स्वायत्तता देना था।"
     },
     {
       "q_num": 22,
-      "question": "In the context of Modern History, what was the 'Comagata Maru'? \n आधुनिक इतिहास के संदर्भ में 'कोमागाटा मारू' क्या था?",
+      "question": "In the context of Modern History, what was the 'Comagata Maru'?",
       "options": {
-        "a": "A revolutionary group in Bengal / बंगाल में एक क्रांतिकारी समूह",
-        "b": "A Japanese steamship carrying Indian immigrants to Canada / भारतीय प्रवासियों को कनाडा ले जाने वाला एक जापानी स्टीमशिप",
-        "c": "A secret society formed in London / लंदन में गठित एक गुप्त समाज",
-        "d": "A newspaper started by Lala Hardayal / लाला हरदयाल द्वारा शुरू किया गया एक समाचार पत्र"
+        "a": "A revolutionary group in Bengal",
+        "b": "A Japanese steamship carrying Indian immigrants to Canada",
+        "c": "A secret society formed in London",
+        "d": "A newspaper started by Lala Hardayal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKomagata Maru was a Japanese ship chartered by Gurdit Singh in 1914 to transport 376 Indians to Canada. They were forced to return, leading to a clash at Budge Budge (Kolkata).\n\n📖 हिंदी स्पष्टीकरण:\nकोमागाटा मारू एक जापानी जहाज था जिसे 1914 में गुरदित सिंह द्वारा 376 भारतीयों को कनाडा ले जाने के लिए किराए पर लिया गया था। उन्हें वापस लौटने के लिए मजबूर किया गया, जिससे बज बज (कोलकाता) में झड़प हुई।"
     },
     {
       "q_num": 23,
-      "question": "Consider the following statements about the 'Bhakti Movement': \n 'भक्ति आंदोलन' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) Alvars were the devotees of Lord Shiva. / अलवार भगवान शिव के भक्त थे। \n (b) Nayanars were the devotees of Lord Vishnu. / नयनार भगवान विष्णु के भक्त थे। \n (c) It emphasized personal devotion to God over ritualism. / इसने कर्मकांड के बजाय भगवान के प्रति व्यक्तिगत भक्ति पर जोर दिया।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Bhakti Movement': \n(a) Alvars were the devotees of Lord Shiva.\n(b) Nayanars were the devotees of Lord Vishnu.\n(c) It emphasized personal devotion to God over ritualism.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "c only / केवल c",
-        "c": "a and c / a और c",
-        "d": "b and c / b और c"
+        "a": "a and b",
+        "b": "c only",
+        "c": "a and c",
+        "d": "b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAlvars were Vishnu devotees and Nayanars were Shiva devotees. They originated in South India (Tamil Nadu) around the 7th-9th century.\n\n📖 हिंदी स्पष्टीकरण:\nअलवार विष्णु भक्त थे और नयनार शिव भक्त थे। उनकी उत्पत्ति 7वीं-9वीं शताब्दी के आसपास दक्षिण भारत (तमिलनाडु) में हुई थी।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following was the immediate cause for the launch of the Swadeshi Movement? \n स्वदेशी आंदोलन शुरू होने का तात्कालिक कारण निम्नलिखित में से कौन सा था?",
+      "question": "Which of the following was the immediate cause for the launch of the Swadeshi Movement?",
       "options": {
-        "a": "The partition of Bengal by Lord Curzon. / लॉर्ड कर्जन द्वारा बंगाल का विभाजन।",
-        "b": "The arrest of Lokmanya Tilak. / लोकमान्य तिलक की गिरफ्तारी।",
-        "c": "The Rowlatt Act. / रॉलेट एक्ट।",
-        "d": "The execution of Chapekar brothers. / चापेकर भाइयों की फांसी।"
+        "a": "The partition of Bengal by Lord Curzon.",
+        "b": "The arrest of Lokmanya Tilak.",
+        "c": "The Rowlatt Act.",
+        "d": "The execution of Chapekar brothers."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Swadeshi Movement was a direct reaction to the partition of Bengal (1905), which Curzon claimed was for administrative convenience but was actually to curb Indian nationalism.\n\n📖 हिंदी स्पष्टीकरण:\nस्वदेशी आंदोलन बंगाल के विभाजन (1905) की प्रत्यक्ष प्रतिक्रिया थी, जिसे कर्जन ने प्रशासनिक सुविधा के लिए बताया था लेकिन वास्तव में यह भारतीय राष्ट्रवाद को रोकने के लिए था।"
     },
     {
       "q_num": 25,
-      "question": "Consider the following statements about the 'Ryotwari System': \n 'रैयतवाड़ी व्यवस्था' के बारे में निम्नलिखित में से कौन सा कथन सही है? \n (a) It was introduced by Thomas Munro and Alexander Reed. / इसे थॉमस मुनरो और अलेक्जेंडर रीड द्वारा शुरू किया गया था। \n (b) It was primarily implemented in the Madras and Bombay Presidencies. / यह मुख्य रूप से मद्रास और बॉम्बे प्रेसीडेंसी में लागू किया गया था। \n (c) The ownership of land was given to the village community as a whole. / भूमि का स्वामित्व संपूर्ण ग्राम समुदाय को दिया गया था।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Ryotwari System': \n(a) It was introduced by Thomas Munro and Alexander Reed.\n(b) It was primarily implemented in the Madras and Bombay Presidencies.\n(c) The ownership of land was given to the village community as a whole.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a only / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn Ryotwari, the ownership was given directly to the individual cultivators (Ryots). The Mahalwari system gave ownership to the village community.\n\n📖 हिंदी स्पष्टीकरण:\nरैयतवाड़ी में, स्वामित्व सीधे व्यक्तिगत खेती करने वालों (रैयतों) को दिया गया था। महलवाड़ी व्यवस्था में ग्राम समुदाय को स्वामित्व दिया गया था।"
     },
     {
       "q_num": 26,
-      "question": "The 'Sadaqat Ashram' in Patna was established by which national leader? \n पटना में 'सदाकत आश्रम' की स्थापना किस राष्ट्रीय नेता ने की थी?",
+      "question": "The 'Sadaqat Ashram' in Patna was established by which national leader?",
       "options": {
-        "a": "Dr. Rajendra Prasad / डॉ. राजेंद्र प्रसाद",
-        "b": "Mazharul Haque / मजहरुल हक",
-        "c": "Maulana Abul Kalam Azad / मौलाना अबुल कलाम आज़ाद",
-        "d": "Mahatma Gandhi / महात्मा गांधी"
+        "a": "Dr. Rajendra Prasad",
+        "b": "Mazharul Haque",
+        "c": "Maulana Abul Kalam Azad",
+        "d": "Mahatma Gandhi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMazharul Haque established the Sadaqat Ashram in 1921 during the Non-Cooperation Movement. It later became the residence of Dr. Rajendra Prasad after his retirement.\n\n📖 हिंदी स्पष्टीकरण:\nमजहरुल हक ने 1921 में असहयोग आंदोलन के दौरान सदाकत आश्रम की स्थापना की थी। यह बाद में अपनी सेवानिवृत्ति के बाद डॉ. राजेंद्र प्रसाद का निवास स्थान बना।"
     },
     {
       "q_num": 27,
-      "question": "Consider the following statements regarding the 'Third Buddhist Council': \n 'तृतीय बौद्ध संगीति' (Third Buddhist Council) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was held at Pataliputra during the reign of Ashoka. / यह अशोक के शासनकाल में पाटलिपुत्र में आयोजित की गई थी। \n (b) It was presided over by Moggaliputta Tissa. / इसकी अध्यक्षता मोगलिपुत्त तिस्स ने की थी। \n (c) The 'Abhidhamma Pitaka' was compiled during this council. / इस संगीति के दौरान 'अभिधम्म पिटक' का संकलन किया गया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Third Buddhist Council': \n(a) It was held at Pataliputra during the reign of Ashoka.\n(b) It was presided over by Moggaliputta Tissa.\n(c) The 'Abhidhamma Pitaka' was compiled during this council.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "a and c / a और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "a and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe 3rd Council (approx. 250 BC) focused on purging the Sangha of corruption and led to the compilation of the 3rd basket of Buddhist scriptures, the Abhidhamma Pitaka.\n\n📖 हिंदी स्पष्टीकरण:\nतीसरी संगीति (लगभग 250 ईसा पूर्व) संघ को भ्रष्टाचार से मुक्त करने पर केंद्रित थी और इसके परिणामस्वरूप बौद्ध धर्मग्रंथों की तीसरी टोकरी, अभिधम्म पिटक का संकलन हुआ।"
     },
     {
       "q_num": 28,
-      "question": "The 'Silver Tanka' was replaced by 'Token Currency' (Copper/Brass coins) by which Sultan? \n किस सुल्तान द्वारा 'चांदी के टका' के स्थान पर 'सांकेतिक मुद्रा' (तांबे/पीतल के सिक्के) को पेश किया गया था?",
+      "question": "The 'Silver Tanka' was replaced by 'Token Currency' (Copper/Brass coins) by which Sultan?",
       "options": {
-        "a": "Alauddin Khalji / अलाउद्दीन खलजी",
-        "b": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "c": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक",
-        "d": "Balban / बलबन"
+        "a": "Alauddin Khalji",
+        "b": "Muhammad bin Tughlaq",
+        "c": "Ghiyasuddin Tughlaq",
+        "d": "Balban"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMuhammad bin Tughlaq introduced token currency in 1329-30. However, the experiment failed as he could not prevent illegal private minting of coins.\n\n📖 हिंदी स्पष्टीकरण:\nमुहम्मद बिन तुगलक ने 1329-30 में सांकेतिक मुद्रा पेश की। हालाँकि, यह प्रयोग विफल रहा क्योंकि वह सिक्कों की अवैध निजी ढलाई को नहीं रोक सका।"
     },
     {
       "q_num": 29,
-      "question": "Consider the following statements about the 'Hindustan Socialist Republican Association' (HSRA): \n 'हिंदुस्तान सोशलिस्ट रिपब्लिकन एसोसिएशन' (HSRA) के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was founded in 1928 at Feroz Shah Kotla, Delhi. / इसकी स्थापना 1928 में फिरोज शाह कोटला, दिल्ली में हुई थी। \n (b) Chandrashekhar Azad and Bhagat Singh were its prominent leaders. / चंद्रशेखर आज़ाद और भगत सिंह इसके प्रमुख नेता थे। \n (c) Its objective was to establish a federal republic based on socialist principles. / इसका उद्देश्य समाजवादी सिद्धांतों पर आधारित एक संघीय गणराज्य की स्थापना करना था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Hindustan Socialist Republican Association' (HSRA): \n(a) It was founded in 1928 at Feroz Shah Kotla, Delhi.\n(b) Chandrashekhar Azad and Bhagat Singh were its prominent leaders.\n(c) Its objective was to establish a federal republic based on socialist principles.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nHRA (founded in 1924) was renamed HSRA in 1928 under the leadership of Azad and Bhagat Singh, incorporating 'Socialist' into its name and ideology.\nHRA (1924\n\n📖 हिंदी स्पष्टीकरण:\nमें स्थापित) का नाम 1928 में आज़ाद और भगत सिंह के नेतृत्व में बदलकर HSRA कर दिया गया, जिसके नाम और विचारधारा में 'समाजवादी' शब्द जोड़ा गया।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following was the main reason for the 'Akali Movement' in the 1920s? \n 1920 के दशक में 'अकाली आंदोलन' का मुख्य कारण निम्नलिखित में से क्या था?",
+      "question": "Which of the following was the main reason for the 'Akali Movement' in the 1920s?",
       "options": {
-        "a": "To demand a separate state for Sikhs. / सिखों के लिए एक अलग राज्य की मांग करना।",
-        "b": "To liberate Gurudwaras from the control of corrupt Mahants. / गुरुद्वारों को भ्रष्ट महंतों के नियंत्रण से मुक्त करना।",
-        "c": "To support the British during World War I. / प्रथम विश्व युद्ध के दौरान अंग्रेजों का समर्थन करना।",
-        "d": "To oppose the Simon Commission. / साइमन कमीशन का विरोध करना।"
+        "a": "To demand a separate state for Sikhs.",
+        "b": "To liberate Gurudwaras from the control of corrupt Mahants.",
+        "c": "To support the British during World War I.",
+        "d": "To oppose the Simon Commission."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Akali Movement (1920-25) was a non-violent struggle to reform the management of Gurdwaras. It led to the passing of the Sikh Gurdwaras Act, 1925.\n\n📖 हिंदी स्पष्टीकरण:\nअकाली आंदोलन (1920-25) गुरुद्वारों के प्रबंधन में सुधार के लिए एक अहिंसक संघर्ष था। इसके कारण सिख गुरुद्वारा अधिनियम, 1925 पारित किया गया।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements regarding the 'Mansabdari System': \n 'मनसबदारी प्रणाली' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was introduced by Akbar to organize the nobility and the army. / इसे अकबर ने रईसों और सेना को संगठित करने के लिए शुरू किया था। \n (b) 'Zat' indicated the number of cavalrymen a Mansabdar had to maintain. / 'ज़ात' उन घुड़सवारों की संख्या को दर्शाता था जिन्हें एक मनसबदार को बनाए रखना होता था। \n (c) 'Sawar' determined the personal status and salary of the Mansabdar. / 'सवार' मनसबदार की व्यक्तिगत स्थिति और वेतन निर्धारित करता था।\n Which of the above statements is/are incorrect? \n उपरोक्त में से कौन-सा/से कथन गलत है/हैं?",
+      "question": "Consider the following statements regarding the 'Mansabdari System': \n(a) It was introduced by Akbar to organize the nobility and the army.\n(b) 'Zat' indicated the number of cavalrymen a Mansabdar had to maintain. / '\n(c) 'Sawar' determined the personal status and salary of the Mansabdar. / '\n Which of the above statements is/are incorrect?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "None of the above / उपरोक्त में से कोई नहीं"
+        "a": "a only",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "None of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe definitions are interchanged. 'Zat' fixed the personal status and salary, while 'Sawar' indicated the number of cavalrymen (rank) to be maintained.\n\n📖 हिंदी स्पष्टीकरण:\nपरिभाषाएँ आपस में बदल दी गई हैं। 'ज़ात' ने व्यक्तिगत स्थिति और वेतन तय किया, जबकि 'सवार' ने बनाए रखे जाने वाले घुड़सवारों (रैंक) की संख्या का संकेत दिया।"
     },
     {
       "q_num": 32,
-      "question": "Which of the following statements about the 'Chola Administration' is correct? \n 'चोल प्रशासन' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about the 'Chola Administration' is correct?",
       "options": {
-        "a": "It was highly centralized with no local autonomy. / यह बिना किसी स्थानीय स्वायत्तता के अत्यधिक केंद्रीकृत था।",
-        "b": "The 'Ur' was a common assembly of the tax-paying residents. / 'उर' कर भुगतान करने वाले निवासियों की एक सामान्य सभा थी।",
-        "c": "The 'Sabha' or 'Mahasabha' consisted of all adult males of the village. / 'सभा' या 'महासभा' में गांव के सभी वयस्क पुरुष शामिल थे।",
-        "d": "Land revenue was collected in cash only. / भू-राजस्व केवल नकद में ही वसूला जाता था।"
+        "a": "It was highly centralized with no local autonomy.",
+        "b": "The 'Ur' was a common assembly of the tax-paying residents. / '",
+        "c": "The 'Sabha' or 'Mahasabha' consisted of all adult males of the village. / '",
+        "d": "Land revenue was collected in cash only."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nChola administration is famous for its village autonomy. 'Ur' was a general assembly, while 'Sabha' was an assembly of learned Brahmins (Agraharas). Revenue was collected in cash or kind.\n\n📖 हिंदी स्पष्टीकरण:\nचोल प्रशासन अपनी ग्राम स्वायत्तता के लिए प्रसिद्ध है। 'उर' एक सामान्य सभा थी, जबकि 'सभा' विद्वान ब्राह्मणों (अग्रहारों) की सभा थी। राजस्व नकद या वस्तु के रूप में एकत्र किया जाता था।"
     },
     {
       "q_num": 33,
-      "question": "Consider the following pairs of Maratha taxes: \n मराठा करों के निम्नलिखित युग्मों पर विचार करें: \n (a) Chauth : 1/4th of the land revenue paid to avoid Maratha raids. / चौथ : मराठा छापों से बचने के लिए भुगतान किया गया भू-राजस्व का 1/4 हिस्सा। \n (b) Sardeshmukhi : An additional 10% tax claimed as the hereditary overlord. / सरदेशमुखी : वंशानुगत अधिपति के रूप में दावा किया गया अतिरिक्त 10% कर।\n Which of the pairs given above is/are correctly matched? / ऊपर दिए गए युग्मों में से कौन-सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following pairs of Maratha taxes: \n(a) Chauth : 1/4th of the land revenue paid to avoid Maratha raids.\n(b) Sardeshmukhi : An additional 10% tax claimed as the hereditary overlord.\nWhich of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "Both a and b / a और b दोनों",
-        "d": "Neither a nor b / न तो a और न ही b"
+        "a": "a only",
+        "b": "b only",
+        "c": "Both a and b / a",
+        "d": "Neither a nor b"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBoth were key revenue sources for Shivaji. Chauth was protection money from non-Maratha lands, while Sardeshmukhi was a levy on the basis of being the head of the Deshmukhs.\n\n📖 हिंदी स्पष्टीकरण:\nशिवाजी के लिए दोनों ही राजस्व के प्रमुख स्रोत थे। चौथ गैर-मराठा भूमि से सुरक्षा राशि थी, जबकि सरदेशमुखी देशमुखों का प्रमुख होने के आधार पर एक लेवी थी।"
     },
     {
       "q_num": 34,
-      "question": "The 'Young Bengal Movement' was started by: \n 'यंग बंगाल मूवमेंट' किसके द्वारा शुरू किया गया था?",
+      "question": "The 'Young Bengal Movement' was started by:",
       "options": {
-        "a": "Henry Vivian Derozio / हेनरी विवियन डेरोजियो",
-        "b": "David Hare / डेविड हेयर",
-        "c": "Ishwar Chandra Vidyasagar / ईश्वर चंद्र विद्यासागर",
-        "d": "Raja Ram Mohan Roy / राजा राम मोहन राय"
+        "a": "Henry Vivian Derozio",
+        "b": "David Hare",
+        "c": "Ishwar Chandra Vidyasagar",
+        "d": "Raja Ram Mohan Roy"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDerozio, a teacher at Hindu College, inspired his students to think freely and question authority. His followers were known as Derozians.\n\n📖 हिंदी स्पष्टीकरण:\nहिंदू कॉलेज के शिक्षक डेरोजियो ने अपने छात्रों को स्वतंत्र रूप से सोचने और अधिकार पर सवाल उठाने के लिए प्रेरित किया। उनके अनुयायियों को 'डेरोज़ियन' के रूप में जाना जाता था।"
     },
     {
       "q_num": 35,
-      "question": "Consider the following statements regarding the 'Santhal Rebellion' (1855-56): \n 'संथाल विद्रोह' (1855-56) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was led by Sidhu and Kanhu. / इसका नेतृत्व सिद्धू और कान्हू ने किया था। \n (b) It occurred in the Rajmahal hills region (Damin-i-Koh). / यह राजमहल पहाड़ियों के क्षेत्र (दामिन-ए-कोह) में हुआ था। (c) It was primarily directed against the British policies and the 'Dikus' (outsiders). / यह मुख्य रूप से ब्रिटिश नीतियों और 'दिकु' (बाहरी लोगों) के खिलाफ था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Santhal Rebellion' (1855-56): \n(a) It was led by Sidhu and Kanhu.\n(b) It occurred in the Rajmahal hills region (Damin-i-Koh).\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Santhal rebellion was a major tribal uprising against the oppression of Zamindars, moneylenders (Dikus), and the British.\n\n📖 हिंदी स्पष्टीकरण:\nसंथाल विद्रोह जमींदारों, साहूकारों (दिकु) और अंग्रेजों के उत्पीड़न के खिलाफ एक प्रमुख आदिवासी विद्रोह था।"
     },
     {
       "q_num": 36,
-      "question": "Which of the following statements about the 'Inland Emigration Act of 1859' is correct? \n '1859 के इनलैंड एमिग्रेशन एक्ट' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about the 'Inland Emigration Act of 1859' is correct?",
       "options": {
-        "a": "It allowed plantation workers to return home whenever they wanted. / इसने वृक्षारोपण श्रमिकों को जब चाहें घर लौटने की अनुमति दी।",
-        "b": "It prohibited plantation workers from leaving the tea gardens without permission. / इसने वृक्षारोपण श्रमिकों को बिना अनुमति के चाय बागानों को छोड़ने से रोक दिया।",
-        "c": "It was passed to improve the living conditions of labourers. / इसे मजदूरों के रहने की स्थिति में सुधार के लिए पारित किया गया था।",
-        "d": "It gave workers the right to form unions. / इसने श्रमिकों को यूनियन बनाने का अधिकार दिया।"
+        "a": "It allowed plantation workers to return home whenever they wanted.",
+        "b": "It prohibited plantation workers from leaving the tea gardens without permission.",
+        "c": "It was passed to improve the living conditions of labourers.",
+        "d": "It gave workers the right to form unions."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThis act essentially turned tea plantation workers into bonded laborers, as permission to leave was rarely granted. This was a major grievance during the Non-Cooperation Movement.\n\n📖 हिंदी स्पष्टीकरण:\nइस अधिनियम ने अनिवार्य रूप से चाय बागान श्रमिकों को बंधुआ मजदूरों में बदल दिया, क्योंकि छोड़ने की अनुमति बहुत कम दी जाती थी। असहयोग आंदोलन के दौरान यह एक बड़ी शिकायत थी।"
     },
     {
       "q_num": 37,
-      "question": "Consider the following statements about the 'Cabinet Mission' (1946): \n 'कैबिनेट मिशन' (1946) के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It proposed a three-tier structure of the administration. / इसने प्रशासन की त्रि-स्तरीय संरचना का प्रस्ताव दिया। \n (b) It rejected the demand for a separate Pakistan. / इसने अलग पाकिस्तान की मांग को खारिज कर दिया। \n (c) It was headed by Lord Pethick-Lawrence. / इसकी अध्यक्षता लॉर्ड पेथिक-लॉरेंस ने की थी।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Cabinet Mission' (1946): \n(a) It proposed a three-tier structure of the administration.\n(b) It rejected the demand for a separate Pakistan.\n(c) It was headed by Lord Pethick-Lawrence.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "c only / केवल c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "c only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Cabinet Mission arrived in March 1946. It aimed at formulating a plan for the transfer of power and creating a Constituent Assembly while maintaining the unity of India.\n\n📖 हिंदी स्पष्टीकरण:\nकैबिनेट मिशन मार्च 1946 में आया था। इसका उद्देश्य सत्ता के हस्तांतरण के लिए एक योजना तैयार करना और भारत की एकता को बनाए रखते हुए एक संविधान सभा बनाना था।"
     },
     {
       "q_num": 38,
-      "question": "In the context of Ancient India, 'Agrahara' refers to: \n प्राचीन भारत के संदर्भ में, 'अग्रहार' का तात्पर्य है:",
+      "question": "In the context of Ancient India, 'Agrahara' refers to:",
       "options": {
-        "a": "A military rank / एक सैन्य पद",
-        "b": "Land granted to Brahmanas / ब्राह्मणों को दी गई भूमि",
-        "c": "A type of tax on trade / व्यापार पर एक प्रकार का कर",
-        "d": "A religious text / एक धार्मिक ग्रंथ"
+        "a": "A military rank",
+        "b": "Land granted to Brahmanas",
+        "c": "A type of tax on trade",
+        "d": "A religious text"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAgrahara was land (often tax-free) granted to Brahmanas for their maintenance, usually by kings or wealthy patrons.\n\n📖 हिंदी स्पष्टीकरण:\nअग्रहार ब्राह्मणों को उनके रखरखाव के लिए (अक्सर कर-मुक्त) दी जाने वाली भूमि थी, जो आमतौर पर राजाओं या धनी संरक्षकों द्वारा दी जाती थी।"
     },
     {
       "q_num": 39,
-      "question": "Consider the following pairs of Mughal officers and their duties: \n मुगल अधिकारियों और उनके कर्तव्यों के निम्नलिखित युग्मों पर विचार करें: \n (a) Mir Bakshi : Head of the Military Department / सैन्य विभाग का प्रमुख \n (b) Mir Saman : In charge of the Imperial Household / शाही घराने का प्रभारी \n (c) Muhtasib : Enforcer of public morals / सार्वजनिक नैतिकता का प्रवर्तक\n Which of the above are correctly matched?\n उपरोक्त में से कौन-से सही सुमेलित हैं?",
+      "question": "Consider the following pairs of Mughal officers and their duties: \n(a) Mir Bakshi : Head of the Military Department\n(b) Mir Saman : In charge of the Imperial Household\n(c) Muhtasib : Enforcer of public morals\n Which of the above are correctly matched?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll positions were vital for Mughal administration. Mir Bakshi supervised the Mansabdari system and military recruitment.\n\n📖 हिंदी स्पष्टीकरण:\nमुगल प्रशासन के लिए सभी पद महत्वपूर्ण थे। मीर बख्शी ने मनसबदारी प्रणाली और सैन्य भर्ती की देखरेख की।"
     },
     {
       "q_num": 40,
-      "question": "Which of the following events happened first? \n निम्नलिखित में से कौन सी घटना सबसे पहले हुई?",
+      "question": "Which of the following events happened first?",
       "options": {
-        "a": "Arrival of Simon Commission / साइमन कमीशन का आगमन",
-        "b": "Nehru Report / नेहरू रिपोर्ट",
-        "c": "Bardoli Satyagraha / बारदोली सत्याग्रह",
-        "d": "Kakori Train Action / काकोरी ट्रेन एक्शन"
+        "a": "Arrival of Simon Commission",
+        "b": "Nehru Report",
+        "c": "Bardoli Satyagraha",
+        "d": "Kakori Train Action"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nKakori Train Action (Aug 1925), Simon Commission arrival (Feb 1928), Nehru Report (Aug 1928), Bardoli Satyagraha (1928 - led by Sardar Patel).\n\n📖 हिंदी स्पष्टीकरण:\nकाकोरी ट्रेन एक्शन (अगस्त 1925), साइमन कमीशन का आगमन (फरवरी 1928), नेहरू रिपोर्ट (अगस्त 1928), बारदोली सत्याग्रह (1928 - सरदार पटेल के नेतृत्व में)।"
     },
     {
       "q_num": 41,
-      "question": "Consider the following statements about 'Jainism': \n 'जैन धर्म' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) Vardhamana Mahavira was the 24th Tirthankara. / वर्धमान महावीर 24वें तीर्थंकर थे। \n (b) Jainism recognized the existence of God but placed him lower than Jina. / जैन धर्म ने ईश्वर के अस्तित्व को स्वीकार किया लेकिन उसे जिन से नीचे रखा। \n (c) It strictly prohibited agricultural practices to avoid harming insects. / इसने कीड़ों को नुकसान पहुँचाने से बचने के लिए कृषि कार्यों को कड़ाई से प्रतिबंधित किया।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about 'Jainism': \n(a) Vardhamana Mahavira was the 24th Tirthankara.\n(b) Jainism recognized the existence of God but placed him lower than Jina.\n(c) It strictly prohibited agricultural practices to avoid harming insects.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nJainism’s extreme focus on Ahimsa led to the prohibition of farming for its monks and followers, as ploughing might kill living organisms in the soil.\n\n📖 हिंदी स्पष्टीकरण:\nअहिंसा पर जैन धर्म के अत्यधिक ध्यान के कारण इसके भिक्षुओं और अनुयायियों के लिए खेती करना प्रतिबंधित हो गया, क्योंकि हल चलाने से मिट्टी में रहने वाले जीव मर सकते थे।"
     },
     {
       "q_num": 42,
-      "question": "Who among the following was the founder of the 'Servants of India Society'? \n निम्नलिखित में से कौन 'सर्वेंट्स ऑफ इंडिया सोसाइटी' के संस्थापक थे?",
+      "question": "Who among the following was the founder of the 'Servants of India Society'?",
       "options": {
-        "a": "M.G. Ranade / एम.जी. रानाडे",
-        "b": "G.K. Gokhale / जी.के. गोखले",
-        "c": "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "d": "Jyotiba Phule / ज्योतिबा फुले"
+        "a": "M.G. Ranade",
+        "b": "G.K. Gokhale",
+        "c": "Bal Gangadhar Tilak",
+        "d": "Jyotiba Phule"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGopal Krishna Gokhale founded it in 1905 to train Indians for social service and to promote national interests through peaceful means.\n\n📖 हिंदी स्पष्टीकरण:\nगोपाल कृष्ण गोखले ने 1905 में भारतीयों को समाज सेवा के लिए प्रशिक्षित करने और शांतिपूर्ण माध्यमों से राष्ट्रीय हितों को बढ़ावा देने के लिए इसकी स्थापना की थी।"
     },
     {
       "q_num": 43,
-      "question": "Consider the following statements regarding the 'Quit India Movement' (1942): \n 'भारत छोड़ो आंदोलन' (1942) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Gandhiji gave the slogan 'Do or Die'. / गांधीजी ने 'करो या मरो' का नारा दिया। \n (b) The movement was supported by the Muslim League and Hindu Mahasabha. / आंदोलन को मुस्लिम लीग और हिंदू महासभा का समर्थन प्राप्त था। \n (c) Parallel governments were formed in places like Balia and Tamluk. / बलिया और तामलुक जैसी जगहों पर समानांतर सरकारें बनाई गईं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Quit India Movement' (1942): \n(a) Gandhiji gave the slogan 'Do or Die'.\n(b) The movement was supported by the Muslim League and Hindu Mahasabha.\n(c) Parallel governments were formed in places like Balia and Tamluk.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Muslim League, Hindu Mahasabha, and Communist Party did not support the Quit India Movement.\n\n📖 हिंदी स्पष्टीकरण:\nमुस्लिम लीग, हिंदू महासभा और कम्युनिस्ट पार्टी ने भारत छोड़ो आंदोलन का समर्थन नहीं किया।"
     },
     {
       "q_num": 44,
-      "question": "The 'Wavell Plan' was presented in the year: \n 'वेवेल योजना' किस वर्ष प्रस्तुत की गई थी?",
+      "question": "The 'Wavell Plan' was presented in the year:",
       "options": {
         "a": "1942",
         "b": "1944",
@@ -534,223 +534,223 @@
     },
     {
       "q_num": 45,
-      "question": "Which of the following statements about the 'Ghadar Party' is incorrect? \n 'गदर पार्टी' के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about the 'Ghadar Party' is incorrect?",
       "options": {
-        "a": "It was founded in San Francisco in 1913. / इसकी स्थापना 1913 में सैन फ्रांसिस्को में हुई थी।",
-        "b": "Lala Hardayal was one of its primary founders. / लाला हरदयाल इसके प्राथमिक संस्थापकों में से एक थे।",
-        "c": "It was strictly a pacifist movement. / यह सख्ती से एक शांतिवादी आंदोलन था।",
-        "d": "Its objective was to overthrow British rule in India through an armed revolt. / इसका उद्देश्य सशस्त्र विद्रोह के माध्यम से भारत में ब्रिटिश शासन को उखाड़ फेंकना था।"
+        "a": "It was founded in San Francisco in 1913.",
+        "b": "Lala Hardayal was one of its primary founders.",
+        "c": "It was strictly a pacifist movement.",
+        "d": "Its objective was to overthrow British rule in India through an armed revolt."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Ghadar Party was a revolutionary militant organization, not a pacifist one. It aimed to incite a rebellion among Indian soldiers in the British army.\n\n📖 हिंदी स्पष्टीकरण:\nगदर पार्टी एक क्रांतिकारी उग्रवादी संगठन था, न कि शांतिवादी। इसका उद्देश्य ब्रिटिश सेना में भारतीय सैनिकों के बीच विद्रोह भड़काना था।"
     },
     {
       "q_num": 46,
-      "question": "Consider the following statements regarding the 'Ilbert Bill' controversy: \n 'इल्बर्ट बिल' विवाद के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was introduced during the viceroyalty of Lord Ripon. / यह लॉर्ड रिपन के वायसराय काल के दौरान पेश किया गया था। \n (b) It aimed to allow Indian magistrates to try Europeans in criminal cases. / इसका उद्देश्य भारतीय मजिस्ट्रेटों को आपराधिक मामलों में यूरोपीय लोगों पर मुकदमा चलाने की अनुमति देना था। \n (c) The bill was supported by the European community in India. / इस बिल का भारत में यूरोपीय समुदाय ने समर्थन किया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Ilbert Bill' controversy: \n(a) It was introduced during the viceroyalty of Lord Ripon.\n(b) It aimed to allow Indian magistrates to try Europeans in criminal cases.\n(c) The bill was supported by the European community in India.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe European community fiercely opposed the bill, viewing it as a challenge to their racial superiority. This led to the withdrawal of the original bill.\n\n📖 हिंदी स्पष्टीकरण:\nयूरोपीय समुदाय ने इस बिल का कड़ा विरोध किया, क्योंकि वे इसे अपनी नस्लीय श्रेष्ठता के लिए एक चुनौती मानते थे। इसके कारण मूल बिल वापस ले लिया गया था।"
     },
     {
       "q_num": 47,
-      "question": "Which of the following pairs of 'Mahajanapadas' and their capitals is incorrectly matched? \n 'महाजनपदों' और उनकी राजधानियों का निम्नलिखित में से कौन सा युग्म गलत सुमेलित है?",
+      "question": "Which of the following pairs of 'Mahajanapadas' and their capitals is incorrectly matched?",
       "options": {
-        "a": "Magadha : Rajgir / मगध : राजगीर",
-        "b": "Vatsa : Kausambi / वत्स : कौशाम्बी",
-        "c": "Kosala : Shravasti / कोसल : श्रावस्ती",
-        "d": "Matsya : Mathura / मत्स्य : मथुरा"
+        "a": "Magadha : Rajgir",
+        "b": "Vatsa : Kausambi",
+        "c": "Kosala : Shravasti",
+        "d": "Matsya : Mathura"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe capital of Matsya Mahajanapada was Viratanagara. Mathura was the capital of the Surasena Mahajanapada.\n\n📖 हिंदी स्पष्टीकरण:\nमत्स्य महाजनपद की राजधानी विराटनगर थी। मथुरा शूरसेन महाजनपद की राजधानी थी।"
     },
     {
       "q_num": 48,
-      "question": "Consider the following statements about the 'Prarthana Samaj': \n 'प्रार्थना समाज' के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was founded by Atmaram Pandurang in Bombay. / इसकी स्थापना आत्माराम पांडुरंग ने बॉम्बे में की थी। \n (b) It was heavily influenced by the Brahmo Samaj. / यह ब्रह्म समाज से बहुत प्रभावित था। \n (c) It rejected the Vedas and Upanishads completely. / इसने वेदों और उपनिषदों को पूरी तरह से खारिज कर दिया।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Prarthana Samaj': \n(a) It was founded by Atmaram Pandurang in Bombay.\n(b) It was heavily influenced by the Brahmo Samaj.\n(c) It rejected the Vedas and Upanishads completely.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a only / केवल a"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPrarthana Samaj (1867) sought to reform Hindu religious practice based on monotheism and drew inspiration from ancient texts like the Bhagavad Gita and Upanishads.\n\n📖 हिंदी स्पष्टीकरण:\nप्रार्थना समाज (1867) ने एकेश्वरवाद के आधार पर हिंदू धार्मिक प्रथाओं में सुधार करने की कोशिश की और भगवद गीता और उपनिषदों जैसे प्राचीन ग्रंथों से प्रेरणा ली।"
     },
     {
       "q_num": 49,
-      "question": "With reference to 'Sher Shah Suri', consider the following statements: \n 'शेर शाह सूरी' के संदर्भ में निम्नलिखित कथनों पर विचार करें: \n (a) He introduced the silver 'Rupia' which remained a standard coin for centuries. / उसने चांदी का 'रुपया' पेश किया जो सदियों तक मानक सिक्का बना रहा। \n (b) He built the 'Grand Trunk Road' from Sonargaon to Attock. / उसने सोनारगांव से अटक तक 'ग्रैंड ट्रंक रोड' बनवाई। \n (c) He defeated Humayun in the Battles of Chausa and Kannauj. / उसने चौसा और कन्नौज के युद्धों में हुमायूँ को हराया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "With reference to 'Sher Shah Suri', consider the following statements: \n(a) He introduced the silver 'Rupia' which remained a standard coin for centuries.\n(b) He built the 'Grand Trunk Road' from Sonargaon to Attock.\n(c) He defeated Humayun in the Battles of Chausa and Kannauj.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "c only / केवल c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "c only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSher Shah was a brilliant administrator. His currency and road infrastructure provided the foundation for later Mughal and British administrative systems.\n\n📖 हिंदी स्पष्टीकरण:\nशेर शाह एक शानदार प्रशासक था। उसकी मुद्रा और सड़क के बुनियादी ढांचे ने बाद के मुगल और ब्रिटिश प्रशासनिक प्रणालियों के लिए आधार प्रदान किया।"
     },
     {
       "q_num": 50,
-      "question": "The 'Woods Despatch' of 1854 is related to which of the following? \n 1854 का 'वुड्स डिस्पैच' निम्नलिखित में से किससे संबंधित है?",
+      "question": "The 'Woods Despatch' of 1854 is related to which of the following?",
       "options": {
-        "a": "Military Reforms / सैन्य सुधार",
-        "b": "Educational Reforms / शैक्षिक सुधार",
-        "c": "Judicial Reforms / न्यायिक सुधार",
-        "d": "Land Revenue Reforms / भू-राजस्व सुधार"
+        "a": "Military Reforms",
+        "b": "Educational Reforms",
+        "c": "Judicial Reforms",
+        "d": "Land Revenue Reforms"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKnown as the 'Magna Carta of English Education in India', it recommended a structured system of education from primary school to university level.\n\n📖 हिंदी स्पष्टीकरण:\nइसे 'भारत में अंग्रेजी शिक्षा का मैग्ना कार्टा' कहा जाता है, इसने प्राथमिक विद्यालय से विश्वविद्यालय स्तर तक शिक्षा की एक संरचित प्रणाली की सिफारिश की थी।"
     },
     {
       "q_num": 51,
-      "question": "Consider the following statements regarding 'Buddhism': \n 'बौद्ध धर्म' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The 'Sutta Pitaka' contains the philosophical interpretations of the Buddha's teachings. / 'सुत्त पिटक' में बुद्ध की शिक्षाओं की दार्शनिक व्याख्याएँ हैं। \n (b) The 'Vinaya Pitaka' contains the rules for monks and nuns. / 'विनय पिटक' में भिक्षुओं और नन के लिए नियम हैं। \n (c) The first Buddhist Council was held at Rajgriha immediately after Buddha's death. / बुद्ध की मृत्यु के तुरंत बाद राजगृह में प्रथम बौद्ध संगीति आयोजित की गई थी।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding 'Buddhism': \n(a) The 'Sutta Pitaka' contains the philosophical interpretations of the Buddha's teachings. / '\n(b) The 'Vinaya Pitaka' contains the rules for monks and nuns. / '\n(c) The first Buddhist Council was held at Rajgriha immediately after Buddha's death.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n'Abhidhamma Pitaka' contains philosophical interpretations. 'Sutta Pitaka' contains the actual sermons and teachings of the Buddha.\n\n📖 हिंदी स्पष्टीकरण:\n'अभिधम्म पिटक' में दार्शनिक व्याख्याएँ हैं। 'सुत्त पिटक' में बुद्ध के वास्तविक उपदेश और शिक्षाएं शामिल हैं।"
     },
     {
       "q_num": 52,
-      "question": "Which of the following events occurred during the reign of Lord Lytton? \n लॉर्ड लिटन के शासनकाल में निम्नलिखित में से कौन सी घटना घटी?",
+      "question": "Which of the following events occurred during the reign of Lord Lytton?",
       "options": {
-        "a": "Vernacular Press Act / वर्नाकुलर प्रेस एक्ट",
-        "b": "Arms Act / आर्म्स एक्ट",
-        "c": "The Second Anglo-Afghan War / द्वितीय आंग्ल-अफ़गान युद्ध",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "Vernacular Press Act",
+        "b": "Arms Act",
+        "c": "The Second Anglo-Afghan War",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nLytton's viceroyalty (1876-1880) was marked by reactionary policies that angered Indians, including the restrictive Press Act and Arms Act.\n\n📖 हिंदी स्पष्टीकरण:\nलिटन का वायसराय काल (1876-1880) प्रतिक्रियावादी नीतियों द्वारा चिह्नित था जिसने भारतीयों को क्रोधित कर दिया, जिसमें प्रतिबंधात्मक प्रेस अधिनियम और शस्त्र अधिनियम शामिल थे।"
     },
     {
       "q_num": 53,
-      "question": "Consider the following pairs of 'Social Reforms' and their 'Proponents': \n 'सामाजिक सुधारों' और उनके 'प्रवर्तकों' के निम्नलिखित युग्मों पर विचार करें: \n (a) Satyshodhak Samaj : Jyotiba Phule / सत्यशोधक समाज : ज्योतिबा फुले \n (b) Self-Respect Movement : E.V. Ramaswamy Naicker / आत्म-सम्मान आंदोलन : ई.वी. रामास्वामी नायकर \n (c) Deva Samaj : Shiv Narayan Agnihotri / देव समाज : शिव नारायण अग्निहोत्री\n Which of the above are correctly matched? \n उपरोक्त में से कौन-से सही सुमेलित हैं?",
+      "question": "Consider the following pairs of 'Social Reforms' and their 'Proponents': \n(a) Satyshodhak Samaj : Jyotiba Phule\n(b) Self-Respect Movement : E.V. Ramaswamy Naicker\n(c) Deva Samaj : Shiv Narayan Agnihotri\n Which of the above are correctly matched?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll these movements targeted social inequality and sought to reform traditional hierarchies within Indian society.\n\n📖 हिंदी स्पष्टीकरण:\nइन सभी आंदोलनों ने सामाजिक असमानता को लक्षित किया और भारतीय समाज के भीतर पारंपरिक पदानुक्रमों में सुधार करने की मांग की।"
     },
     {
       "q_num": 54,
-      "question": "Which battle established the British supremacy in India? \n किस युद्ध ने भारत में ब्रिटिश सर्वोच्चता स्थापित की?",
+      "question": "Which battle established the British supremacy in India?",
       "options": {
-        "a": "Battle of Plassey (1757) / प्लासी का युद्ध (1757)",
-        "b": "Battle of Buxar (1764) / बक्सर का युद्ध (1764)",
-        "c": "Battle of Wandiwash (1760) / वांडीवाश का युद्ध (1760)",
-        "d": "Third Battle of Panipat (1761) / पानीपत का तीसरा युद्ध (1761)"
+        "a": "Battle of Plassey (1757)",
+        "b": "Battle of Buxar (1764)",
+        "c": "Battle of Wandiwash (1760)",
+        "d": "Third Battle of Panipat (1761)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile Plassey gave them a foothold, the Battle of Buxar (where they defeated the combined forces of Mir Qasim, Shuja-ud-Daulah, and Shah Alam II) made them the de facto masters of Bengal, Bihar, and Odisha.\n\n📖 हिंदी स्पष्टीकरण:\nजबकि प्लासी ने उन्हें पैर जमाने की जगह दी, बक्सर के युद्ध (जहाँ उन्होंने मीर कासिम, शुजा-उद-दौला और शाह आलम द्वितीय की संयुक्त सेनाओं को हराया) ने उन्हें बंगाल, बिहार और ओडिशा का वास्तविक स्वामी बना दिया।"
     },
     {
       "q_num": 55,
-      "question": "Consider the following statements regarding 'Akbar's Administration': \n 'अकबर के प्रशासन' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The 'Dahsala System' was a system of land revenue assessment based on 10 years' average. / 'दहसाला प्रणाली' 10 वर्षों के औसत पर आधारित भू-राजस्व मूल्यांकन की एक प्रणाली थी। \n (b) Raja Todar Mal was the finance minister responsible for these reforms. / राजा टोडरमल इन सुधारों के लिए जिम्मेदार वित्त मंत्री थे। \n (c) The state took 1/2 of the average produce as revenue. / राज्य ने औसत उपज का 1/2 हिस्सा राजस्व के रूप में लिया।\n Which of the above statements is/are correct? /\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding 'Akbar's Administration': \n(a) The 'Dahsala System' was a system of land revenue assessment based on 10 years' average. / '\n(b) Raja Todar Mal was the finance minister responsible for these reforms.\n(c) The state took 1/2 of the average produce as revenue.\n Which of the above statements is/are correct? /",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "b only / केवल b"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "b only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nUnder the Dahsala/Zabti system, the state's share was usually 1/3rd of the average produce, not 1/2.\n\n📖 हिंदी स्पष्टीकरण:\nदहसाला/ज़ब्ती प्रणाली के तहत, राज्य का हिस्सा आमतौर पर औसत उपज का 1/3 था, न कि 1/2।"
     },
     {
       "q_num": 56,
-      "question": "Who among the following was the founder of the 'Vikramshila University'? \n निम्नलिखित में से कौन 'विक्रमशिला विश्वविद्यालय' के संस्थापक थे?",
+      "question": "Who among the following was the founder of the 'Vikramshila University'?",
       "options": {
-        "a": "Dharmapala / धर्मपाल",
-        "b": "Devapala / देवपाल",
-        "c": "Gopala / गोपाल",
-        "d": "Mahipala / महिपाल"
+        "a": "Dharmapala",
+        "b": "Devapala",
+        "c": "Gopala",
+        "d": "Mahipala"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDharmapala, the Pala king, founded Vikramshila in response to a supposed decline in the quality of scholarship at Nalanda.\n\n📖 हिंदी स्पष्टीकरण:\nपाल राजा धर्मपाल ने नालंदा में छात्रवृत्ति की गुणवत्ता में कथित गिरावट के जवाब में विक्रमशिला की स्थापना की थी।"
     },
     {
       "q_num": 57,
-      "question": "Consider the following statements about the 'Lucknow Pact' (1916): \n 'लखनऊ समझौते' (1916) के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) It was a joint agreement between the Indian National Congress and the Muslim League. / यह भारतीय राष्ट्रीय कांग्रेस और मुस्लिम लीग के बीच एक संयुक्त समझौता था। \n (b) The Congress accepted the demand for separate electorates for Muslims. / कांग्रेस ने मुसलमानों के लिए अलग निर्वाचन क्षेत्र की मांग स्वीकार कर ली। \n (c) Bal Gangadhar Tilak and Annie Besant played key roles in this reconciliation. / बाल गंगाधर तिलक और एनी बेसेंट ने इस सुलह में प्रमुख भूमिका निभाई।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Lucknow Pact' (1916): \n(a) It was a joint agreement between the Indian National Congress and the Muslim League.\n(b) The Congress accepted the demand for separate electorates for Muslims.\n(c) Bal Gangadhar Tilak and Annie Besant played key roles in this reconciliation.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Lucknow Pact brought Moderates and Extremists together within the Congress and also bridged the gap between the Congress and the Muslim League temporarily.\n\n📖 हिंदी स्पष्टीकरण:\nलखनऊ समझौते ने कांग्रेस के भीतर नरमपंथियों और चरमपंथियों को एक साथ लाया और कांग्रेस और मुस्लिम लीग के बीच की खाई को अस्थायी रूप से पाट दिया।"
     },
     {
       "q_num": 58,
-      "question": "The 'Drain of Wealth' theory was first propounded by: \n 'धन की निकासी' (Drain of Wealth) सिद्धांत पहली बार किसके द्वारा प्रतिपादित किया गया था?",
+      "question": "The 'Drain of Wealth' theory was first propounded by:",
       "options": {
-        "a": "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "b": "R.C. Dutt / आर.सी. दत्त",
-        "c": "M.G. Ranade / एम.जी. रानाडे",
-        "d": "G.K. Gokhale / जी.के. गोखले"
+        "a": "Dadabhai Naoroji",
+        "b": "R.C. Dutt",
+        "c": "M.G. Ranade",
+        "d": "G.K. Gokhale"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn his book \"Poverty and Un-British Rule in India\", Naoroji explained how British policies were siphoning off India's wealth to England.\n\n📖 हिंदी स्पष्टीकरण:\nअपनी पुस्तक \"पवर्टी एंड अन-ब्रिटिश रूल इन इंडिया\" में, नौरोजी ने समझाया कि कैसे ब्रिटिश नीतियां भारत की संपत्ति को इंग्लैंड की ओर ले जा रही थीं।"
     },
     {
       "q_num": 59,
-      "question": "Consider the following statements regarding 'Jain Councils': \n 'जैन संगीतियों' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The First Jain Council was held at Pataliputra. / प्रथम जैन संगीति पाटलिपुत्र में आयोजित की गई थी। \n (b) The Second Jain Council was held at Vallabhi. / द्वितीय जैन संगीति वल्लभी में आयोजित की गई थी। \n (c) The compilation of 12 'Angas' took place in the first council. / प्रथम संगीति में 12 'अंगों' का संकलन हुआ था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding 'Jain Councils': \n(a) The First Jain Council was held at Pataliputra.\n(b) The Second Jain Council was held at Vallabhi.\n(c) The compilation of 12 'Angas' took place in the first council.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "a and c / a और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "a and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe first council was presided over by Sthulabhadra (300 BC). The final compilation of Jain scriptures occurred at the second council (512 AD) in Vallabhi, Gujarat.\n\n📖 हिंदी स्पष्टीकरण:\nप्रथम संगीति की अध्यक्षता स्थूलभद्र (300 ईसा पूर्व) ने की थी। जैन धर्मग्रंथों का अंतिम संकलन वल्लभी, गुजरात में दूसरी संगीति (512 ईस्वी) में हुआ था।"
     },
     {
       "q_num": 60,
-      "question": "Which Indian leader was popularly known as 'Deshbandhu'? \n किस भारतीय नेता को 'देशबंधु' के नाम से जाना जाता था?",
+      "question": "Which Indian leader was popularly known as 'Deshbandhu'?",
       "options": {
-        "a": "C.R. Das / सी.आर. दास",
-        "b": "C.F. Andrews / सी.एफ. एंड्रयूज",
-        "c": "Lala Lajpat Rai / लाला लाजपत राय",
-        "d": "Bipin Chandra Pal / बिपिन चंद्र पाल"
+        "a": "C.R. Das",
+        "b": "C.F. Andrews",
+        "c": "Lala Lajpat Rai",
+        "d": "Bipin Chandra Pal"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nChittaranjan Das (C.R. Das) was a leading figure in the Non-Cooperation movement and the founder of the Swaraj Party. C.F. Andrews was known as 'Deenbandhu'.\n\n📖 हिंदी स्पष्टीकरण:\nचित्तरंजन दास (सी.आर. दास) असहयोग आंदोलन के एक प्रमुख नेता और स्वराज पार्टी के संस्थापक थे। सी.एफ. एंड्रयूज को 'दीनबंधु' के नाम से जाना जाता था।"
     },
     {
       "q_num": 61,
-      "question": "Consider the following statements regarding the 'Ashtapradhan' of Shivaji: \n शिवाजी के 'अष्टप्रधान' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) The 'Peshwa' was responsible for the general administration. / 'पेशवा' सामान्य प्रशासन के लिए जिम्मेदार था। \n (b) 'Amatya' looked after the accounts and finance. / 'अमात्य' खातों और वित्त की देखरेख करता था। \n (c) All members of the Ashtapradhan were required to lead military campaigns. / अष्टप्रधान के सभी सदस्यों के लिए सैन्य अभियानों का नेतृत्व करना अनिवार्य था।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Ashtapradhan' of Shivaji: \n(a) The 'Peshwa' was responsible for the general administration. / '\n(b) 'Amatya' looked after the accounts and finance. / '\n(c) All members of the Ashtapradhan were required to lead military campaigns.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAll members except the 'Panditrao' (High Priest) and 'Nyayadhish' (Chief Justice) were expected to serve in the military and lead campaigns.\n\n📖 हिंदी स्पष्टीकरण:\n'पंडितराव' (मुख्य पुजारी) और 'न्यायाधीश' (मुख्य न्यायाधीश) को छोड़कर सभी सदस्यों से सेना में सेवा करने और अभियानों का नेतृत्व करने की अपेक्षा की जाती थी।"
     },
     {
       "q_num": 62,
-      "question": "Which of the following statements about the 'Pallava Architecture' is correct? \n 'पल्लव वास्तुकला' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about the 'Pallava Architecture' is correct?",
       "options": {
-        "a": "The Shore Temple at Mahabalipuram was built by Narasimhavarman II. / महाबलीपुरम का तट मंदिर (Shore Temple) नरसिंहवर्मन द्वितीय द्वारा बनाया गया था।",
-        "b": "The 'Ratha' temples are examples of structural temples. / 'रथ' मंदिर संरचनात्मक मंदिरों के उदाहरण हैं।",
-        "c": "They introduced the 'Vesara' style of architecture in South India. / उन्होंने दक्षिण भारत में वास्तुकला की 'वेसर' शैली की शुरुआत की।",
-        "d": "Their temples were primarily built of bricks and wood. / उनके मंदिर मुख्य रूप से ईंटों और लकड़ी से बने थे।"
+        "a": "The Shore Temple at Mahabalipuram was built by Narasimhavarman II.",
+        "b": "The 'Ratha' temples are examples of structural temples. / '",
+        "c": "They introduced the 'Vesara' style of architecture in South India.",
+        "d": "Their temples were primarily built of bricks and wood."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Shore Temple is a structural temple built by Narasimhavarman II (Rajasimha). The 'Rathas' are monolithic (cut from a single rock), not structural. Pallavas pioneered the 'Dravidian' style.\n\n📖 हिंदी स्पष्टीकरण:\nतट मंदिर एक संरचनात्मक मंदिर है जिसे नरसिंहवर्मन द्वितीय (राजसिंह) द्वारा बनाया गया था। 'रथ' एकाश्म (एक ही चट्टान से कटे हुए) हैं, न कि संरचनात्मक। पल्लवों ने 'द्रविड़' शैली की शुरुआत की थी।"
     },
     {
       "q_num": 63,
-      "question": "Consider the following events regarding the 'Maratha-British' relations: \n 'मराठा-ब्रिटिश' संबंधों के संबंध में निम्नलिखित घटनाओं पर विचार करें: \n (a) Treaty of Salbai / सालबाई की संधि \n (b) Treaty of Bassein / बसईन की संधि \n (c) Treaty of Purandar / पुरंदर की संधि\n What is the correct chronological order of these treaties? \n इन संधियों का सही कालानुक्रमिक क्रम क्या है?",
+      "question": "Consider the following events regarding the 'Maratha-British' relations: \n(a) Treaty of Salbai\n(b) Treaty of Bassein\n(c) Treaty of Purandar\n What is the correct chronological order of these treaties?",
       "options": {
         "a": "c - a - b",
         "b": "a - c - b",
@@ -762,144 +762,144 @@
     },
     {
       "q_num": 64,
-      "question": "With reference to the 'Sangam Age', consider the following statements: \n 'संगम युग' के संदर्भ में, निम्नलिखित कथनों पर विचार करें: \n (a) The Sangam literature was composed in the Sanskrit language. / संगम साहित्य की रचना संस्कृत भाषा में की गई थी। \n (b) The 'Cheras', 'Cholas', and 'Pandyas' were the three major dynasties of this period. / 'चेर', 'चोल' और 'पांड्य' इस काल के तीन प्रमुख राजवंश थे। \n (c) The first Sangam was held at Madurai under the chairmanship of Agastya. / पहला संगम अगस्त्य की अध्यक्षता में मदुरै में आयोजित किया गया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "With reference to the 'Sangam Age', consider the following statements: \n(a) The Sangam literature was composed in the Sanskrit language.\n(b) The 'Cheras', 'Cholas', and 'Pandyas' were the three major dynasties of this period. / '\n(c) The first Sangam was held at Madurai under the chairmanship of Agastya.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSangam literature was composed in Tamil (not Sanskrit). It provides a rich account of the social and political life of South India during that era.\n\n📖 हिंदी स्पष्टीकरण:\nसंगम साहित्य की रचना तमिल (संस्कृत नहीं) में की गई थी। यह उस युग के दौरान दक्षिण भारत के सामाजिक और राजनीतिक जीवन का समृद्ध विवरण प्रदान करता है।"
     },
     {
       "q_num": 65,
-      "question": "Which of the following statements about 'Raja Ram Mohan Roy' is incorrect? \n 'राजा राम मोहन राय' के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about 'Raja Ram Mohan Roy' is incorrect?",
       "options": {
-        "a": "He founded the 'Atmiya Sabha' in 1814. / उन्होंने 1814 में 'आत्मीय सभा' की स्थापना की।",
-        "b": "He published the Persian journal 'Mirat-ul-Akbar'. / उन्होंने फारसी पत्रिका 'मिरात-उल-अखबार' का प्रकाशन किया।",
-        "c": "He supported the introduction of English education in India. / उन्होंने भारत में अंग्रेजी शिक्षा की शुरुआत का समर्थन किया।",
-        "d": "He was against the abolition of the Sati system. / वे सती प्रथा के उन्मूलन के खिलाफ थे।"
+        "a": "He founded the 'Atmiya Sabha' in 1814.",
+        "b": "He published the Persian journal 'Mirat-ul-Akbar'.",
+        "c": "He supported the introduction of English education in India.",
+        "d": "He was against the abolition of the Sati system."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nRaja Ram Mohan Roy was the primary campaigner against Sati, which led to its legal abolition by Lord William Bentinck in 1829.\n\n📖 हिंदी स्पष्टीकरण:\nराजा राम मोहन राय सती प्रथा के खिलाफ प्राथमिक अभियानकर्ता थे, जिसके परिणामस्वरूप 1829 में लॉर्ड विलियम बेंटिक द्वारा इसका कानूनी उन्मूलन किया गया।"
     },
     {
       "q_num": 66,
-      "question": "Consider the following pairs of 'Ancient Ports' and their locations: \n 'प्राचीन बंदरगाहों' और उनके स्थानों के निम्नलिखित युग्मों पर विचार करें: \n (a) Muziris : Kerala Coast / मुज़िरिस : केरल तट \n (b) Tamralipti : Bengal Coast / ताम्रलिप्ति : बंगाल तट \n (c) Arikamedu : Coromandel Coast / अरिकामेडु : कोरोमंडल तट\n Which of the above pairs are correctly matched? \n उपरोक्त में से कौन-से युग्म सही सुमेलित हैं?",
+      "question": "Consider the following pairs of 'Ancient Ports' and their locations: \n(a) Muziris : Kerala Coast\n(b) Tamralipti : Bengal Coast\n(c) Arikamedu : Coromandel Coast\n Which of the above pairs are correctly matched?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThese were vital trade centers. Arikamedu was famous for its trade with the Roman Empire, and Tamralipti was the main port for trade with Southeast Asia.\n\n📖 हिंदी स्पष्टीकरण:\nये महत्वपूर्ण व्यापारिक केंद्र थे। अरिकामेडु रोमन साम्राज्य के साथ अपने व्यापार के लिए प्रसिद्ध था, और ताम्रलिप्ति दक्षिण-पूर्व एशिया के साथ व्यापार का मुख्य बंदरगाह था।"
     },
     {
       "q_num": 67,
-      "question": "The 'August Offer' (1940) was proposed by which Viceroy? \n 'अगस्त प्रस्ताव' (1940) किस वायसराय द्वारा प्रस्तावित किया गया था?",
+      "question": "The 'August Offer' (1940) was proposed by which Viceroy?",
       "options": {
-        "a": "Lord Linlithgow / लॉर्ड लिनलिथगो",
-        "b": "Lord Wavell / लॉर्ड वेवेल",
-        "c": "Lord Willingdon / लॉर्ड विलिंगडन",
-        "d": "Lord Irwin / लॉर्ड इरविन"
+        "a": "Lord Linlithgow",
+        "b": "Lord Wavell",
+        "c": "Lord Willingdon",
+        "d": "Lord Irwin"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nTo seek Indian cooperation in World War II, Linlithgow promised 'Dominion Status' and the expansion of the Viceroy's Executive Council.\n\n📖 हिंदी स्पष्टीकरण:\nद्वितीय विश्व युद्ध में भारतीय सहयोग प्राप्त करने के लिए, लिनलिथगो ने 'डोमिनियन स्टेटस' और वायसराय की कार्यकारी परिषद के विस्तार का वादा किया था।"
     },
     {
       "q_num": 68,
-      "question": "Consider the following statements regarding the 'Indian National Army' (INA): \n 'भारतीय राष्ट्रीय सेना' (INA) के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) It was first conceived by Mohan Singh. / इसकी कल्पना सबसे पहले मोहन सिंह ने की थी। \n (b) Subhas Chandra Bose took over its leadership in Singapore. / सुभाष चंद्र बोस ने सिंगापुर में इसका नेतृत्व संभाला। \n (c) The 'Rani Jhansi Regiment' was a women's unit within the INA. / 'रानी झाँसी रेजिमेंट' INA के भीतर एक महिला इकाई थी।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Indian National Army' (INA): \n(a) It was first conceived by Mohan Singh.\n(b) Subhas Chandra Bose took over its leadership in Singapore.\n(c) The 'Rani Jhansi Regiment' was a women's unit within the INA. / '\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "None of the above / उपरोक्त में से कोई नहीं"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "None of the above"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nINA was formed with the help of Japanese forces. Its trials at the Red Fort in 1945 sparked massive nationalistic fervour across India.\n\n📖 हिंदी स्पष्टीकरण:\nINA का गठन जापानी सेना की मदद से किया गया था। 1945 में लाल किले में इसके मुकदमों ने पूरे भारत में भारी राष्ट्रवादी जोश पैदा कर दिया था।"
     },
     {
       "q_num": 69,
-      "question": "Which of the following statements about the 'Surat Split' (1907) is correct? \n 'सूरत विभाजन' (1907) के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about the 'Surat Split' (1907) is correct?",
       "options": {
-        "a": "It occurred due to differences between Moderates and Extremists over the Swadeshi Movement. / यह स्वदेशी आंदोलन को लेकर नरमपंथियों और चरमपंथियों के बीच मतभेदों के कारण हुआ था।",
-        "b": "Ras Bihari Ghosh presided over the Surat session. / रास बिहारी घोष ने सूरत अधिवेशन की अध्यक्षता की थी।",
-        "c": "The Extremists wanted the movement to be confined to Bengal only. / चरमपंथी चाहते थे कि आंदोलन केवल बंगाल तक ही सीमित रहे।",
-        "d": "Both 1 and 2 / 1 और 2 दोनों"
+        "a": "It occurred due to differences between Moderates and Extremists over the Swadeshi Movement.",
+        "b": "Ras Bihari Ghosh presided over the Surat session.",
+        "c": "The Extremists wanted the movement to be confined to Bengal only.",
+        "d": "Both 1 and 2 / 1"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nExtremists (Lal-Bal-Pal) wanted to expand Swadeshi pan-India, while Moderates wanted to limit it to Bengal. This ideological clash led to the split.\n\n📖 हिंदी स्पष्टीकरण:\nचरमपंथी (लाल-बाल-पाल) स्वदेशी को अखिल भारतीय स्तर पर विस्तारित करना चाहते थे, जबकि नरमपंथी इसे बंगाल तक सीमित रखना चाहते थे। इसी वैचारिक टकराव के कारण विभाजन हुआ।"
     },
     {
       "q_num": 70,
-      "question": "Consider the following statements about the 'Delhi Sultanate' architecture: \n 'दिल्ली सल्तनत' वास्तुकला के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) The 'Alai Darwaza' was built by Alauddin Khalji using red sandstone. / 'अलाई दरवाजा' अलाउद्दीन खलजी द्वारा लाल बलुआ पत्थर का उपयोग करके बनाया गया था। \n (b) The 'True Arch' was introduced in India by the Turks. / भारत में 'शुद्ध मेहराब' (True Arch) की शुरुआत तुर्कों द्वारा की गई थी। \n (c) Tughlaq architecture is characterized by sloping walls (Batter). / तुगलक वास्तुकला की विशेषता ढलवां दीवारें (बैटर) हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the 'Delhi Sultanate' architecture: \n(a) The 'Alai Darwaza' was built by Alauddin Khalji using red sandstone. / '\n(b) The 'True Arch' was introduced in India by the Turks.\n(c) Tughlaq architecture is characterized by sloping walls (Batter).\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nSultanate architecture blended Indian and Islamic styles (Indo-Islamic). The use of arch, dome, and mortar were significant contributions.\n\n📖 हिंदी स्पष्टीकरण:\nसल्तनत वास्तुकला ने भारतीय और इस्लामी शैलियों (इंडो-इस्लामिक) का मिश्रण किया। मेहराब, गुंबद और गारे (mortar) का उपयोग महत्वपूर्ण योगदान था।"
     },
     {
       "q_num": 71,
-      "question": "Who was the first Indian woman to become the President of the Indian National Congress? \n भारतीय राष्ट्रीय कांग्रेस की अध्यक्ष बनने वाली पहली भारतीय महिला कौन थीं?",
+      "question": "Who was the first Indian woman to become the President of the Indian National Congress?",
       "options": {
-        "a": "Annie Besant / एनी बेसेंट",
-        "b": "Sarojini Naidu / सरोजिनी नायडू",
-        "c": "Nellie Sengupta / नेली सेनगुप्ता",
-        "d": "Vijaya Lakshmi Pandit / विजया लक्ष्मी पंडित"
+        "a": "Annie Besant",
+        "b": "Sarojini Naidu",
+        "c": "Nellie Sengupta",
+        "d": "Vijaya Lakshmi Pandit"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSarojini Naidu presided over the Kanpur session in 1925. Annie Besant was the first woman (1917), but she was not Indian.\n\n📖 हिंदी स्पष्टीकरण:\nसरोजिनी नायडू ने 1925 में कानपुर अधिवेशन की अध्यक्षता की थी। एनी बेसेंट पहली महिला (1917) थीं, लेकिन वे भारतीय नहीं थीं।"
     },
     {
       "q_num": 72,
-      "question": "Consider the following statements regarding the 'Gupta Empire':\n 'गुप्त साम्राज्य' के संबंध में निम्नलिखित कथनों पर विचार करें: \n (a) Fa-Hien visited India during the reign of Chandragupta II. / फाह्यान ने चंद्रगुप्त द्वितीय के शासनकाल में भारत का दौरा किया। \n (b) Gold coins issued by Guptas were known as 'Dinars'. / गुप्तों द्वारा जारी सोने के सिक्कों को 'दीनार' कहा जाता था। \n (c) The practice of 'Sati' is mentioned for the first time in the Eran inscription. / 'सती' प्रथा का उल्लेख पहली बार एरण शिलालेख में मिलता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the 'Gupta Empire':\n(a) Fa-Hien visited India during the reign of Chandragupta II.\n(b) Gold coins issued by Guptas were known as 'Dinars'.\n(c) The practice of 'Sati' is mentioned for the first time in the Eran inscription. / '\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Gupta period is often called the 'Golden Age' of India. The Eran inscription (510 AD) provides the first epigraphical evidence of Sati.\n\n📖 हिंदी स्पष्टीकरण:\nगुप्त काल को अक्सर भारत का 'स्वर्ण युग' कहा जाता है। एरण शिलालेख (510 ईस्वी) सती प्रथा का पहला अभिलेखीय साक्ष्य प्रदान करता है।"
     },
     {
       "q_num": 73,
-      "question": "Which of the following was NOT a member of the 'Swaraj Party'? \n निम्नलिखित में से कौन 'स्वराज पार्टी' का सदस्य नहीं था?",
+      "question": "Which of the following was NOT a member of the 'Swaraj Party'?",
       "options": {
-        "a": "Motilal Nehru / मोतीलाल नेहरू",
-        "b": "C.R. Das / सी.आर. दास",
-        "c": "Sardar Vallabhbhai Patel / सरदार वल्लभभाई पटेल",
-        "d": "Vithalbhai Patel / विट्ठलभाई पटेल"
+        "a": "Motilal Nehru",
+        "b": "C.R. Das",
+        "c": "Sardar Vallabhbhai Patel",
+        "d": "Vithalbhai Patel"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSardar Patel was a 'No-changer' who believed in constructive work and opposed entering the legislative councils. Swarajists (Pro-changers) wanted to enter councils to \"wreck the government from within.\"\n\n📖 हिंदी स्पष्टीकरण:\nसरदार पटेल एक 'परिवर्तन-विरोधी' (No-changer) थे जो रचनात्मक कार्य में विश्वास करते थे और विधायी परिषदों में प्रवेश का विरोध करते थे। स्वराजवादी (परिवर्तनवादी) \"भीतर से सरकार को नष्ट करने\" के लिए परिषदों में प्रवेश करना चाहते थे।"
     },
     {
       "q_num": 74,
-      "question": "Consider the following statements about 'Mahatma Gandhi's' early movements: \n 'महात्मा गांधी' के प्रारंभिक आंदोलनों के बारे में निम्नलिखित कथनों पर विचार करें: \n (a) Champaran Satyagraha (1917) was his first civil disobedience in India. / चंपारण सत्याग्रह (1917) भारत में उनका पहला सविनय अवज्ञा आंदोलन था। \n (b) Ahmedabad Mill Strike (1918) was his first hunger strike. / अहमदाबाद मिल हड़ताल (1918) उनकी पहली भूख हड़ताल थी। \n (c) Kheda Satyagraha (1918) was his first non-cooperation movement. / खेड़ा सत्याग्रह (1918) उनका पहला असहयोग आंदोलन था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about 'Mahatma Gandhi's' early movements: \n(a) Champaran Satyagraha (1917) was his first civil disobedience in India.\n(b) Ahmedabad Mill Strike (1918) was his first hunger strike.\n(c) Kheda Satyagraha (1918) was his first non-cooperation movement.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a, b and c / a, b और c",
-        "d": "c only / केवल c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a, b and c",
+        "d": "c only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThese three local movements established Gandhi as a leader before he took up national issues like the Rowlatt Act and Khilafat.\n\n📖 हिंदी स्पष्टीकरण:\nइन तीन स्थानीय आंदोलनों ने गांधी को राष्ट्रीय मुद्दों जैसे रॉलेट एक्ट और खिलाफत को उठाने से पहले एक नेता के रूप में स्थापित किया।"
     },
     {
       "q_num": 75,
-      "question": "The 'Ghadar Party' had its headquarters at: \n 'गदर पार्टी' का मुख्यालय कहाँ था?",
+      "question": "The 'Ghadar Party' had its headquarters at:",
       "options": {
-        "a": "Berlin / बर्लिन",
-        "b": "San Francisco / सैन फ्रांसिस्को",
-        "c": "Tokyo / टोक्यो",
-        "d": "London / लंदन"
+        "a": "Berlin",
+        "b": "San Francisco",
+        "c": "Tokyo",
+        "d": "London"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe headquarters was named 'Yugantar Ashram' and was located in San Francisco, USA.\n\n📖 हिंदी स्पष्टीकरण:\nमुख्यालय का नाम 'युगांतर आश्रम' था और यह सैन फ्रांसिस्को, अमेरिका में स्थित था।"

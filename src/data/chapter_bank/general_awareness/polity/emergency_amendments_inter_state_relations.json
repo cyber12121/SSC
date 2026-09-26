@@ -6,235 +6,235 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The Constitutional provision for 'National Emergency' is contained in which Article of the Indian Constitution?\n ‘राष्ट्रीय आपातकाल' के लिए संवैधानिक प्रावधान भारतीय संविधान के किस अनुच्छेद में निहित है?",
+      "question": "The Constitutional provision for 'National Emergency' is contained in which Article of the Indian Constitution?",
       "options": {
-        "a": "Article 356 / अनुच्छेद 356",
-        "b": "Article 352 / अनुच्छेद 352",
-        "c": "Article 360 / अनुच्छेद 360",
-        "d": "Article 365 / अनुच्छेद 365"
+        "a": "Article 356",
+        "b": "Article 352",
+        "c": "Article 360",
+        "d": "Article 365"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 352 of the Indian Constitution empowers the President to proclaim a National Emergency on the grounds of war, external aggression, or armed rebellion. This is distinct from President's Rule (Art 356) and Financial Emergency (Art 360)\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान का अनुच्छेद 352 राष्ट्रपति को युद्ध, बाहरी आक्रमण, या सशस्त्र विद्रोह के आधार पर राष्ट्रीय आपातकाल की घोषणा करने का अधिकार देता है। यह राष्ट्रपति शासन (अनुच्छेद 356) और वित्तीय आपातकाल (अनुच्छेद 360) से अलग है।"
     },
     {
       "q_num": 2,
-      "question": "Which term replaced 'Internal Disturbances' as a ground for National Emergency by the 44th Constitutional Amendment Act?\n 44वें संवैधानिक संशोधन अधिनियम द्वारा राष्ट्रीय आपातकाल के आधार के रूप में 'आंतरिक अशांति' को किस शब्द से प्रतिस्थापित किया गया था?",
+      "question": "Which term replaced 'Internal Disturbances' as a ground for National Emergency by the 44th Constitutional Amendment Act?",
       "options": {
-        "a": "Threat to Sovereignty / संप्रभुता के लिए खतरा",
-        "b": "Constitutional Breakdown / संवैधानिक विफलता",
-        "c": "Armed Rebellion / सशस्त्र विद्रोह",
-        "d": "Financial Instability / वित्तीय अस्थिरता"
+        "a": "Threat to Sovereignty",
+        "b": "Constitutional Breakdown",
+        "c": "Armed Rebellion",
+        "d": "Financial Instability"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe 44th Constitutional Amendment Act of 1978 replaced the ambiguous term 'Internal Disturbances' with the more specific term 'Armed Rebellion' to prevent the misuse of the National Emergency provision. / 44\n\n📖 हिंदी स्पष्टीकरण:\nवें संवैधानिक संशोधन अधिनियम, 1978 ने राष्ट्रीय आपातकाल के प्रावधान के दुरुपयोग को रोकने के लिए अस्पष्ट शब्द 'आंतरिक अशांति' को अधिक विशिष्ट शब्द 'सशस्त्र विद्रोह' से प्रतिस्थापित किया।"
     },
     {
       "q_num": 3,
-      "question": "The proclamation of a National Emergency must be approved by both Houses of Parliament within what time frame?\n राष्ट्रीय आपातकाल की उद्घोषणा को संसद के दोनों सदनों द्वारा कितनी समयावधि के भीतर अनुमोदित किया जाना चाहिए?",
+      "question": "The proclamation of a National Emergency must be approved by both Houses of Parliament within what time frame?",
       "options": {
-        "a": "6 months / 6 महीने",
-        "b": "2 months / 2 महीने",
-        "c": "1 month / 1 महीना",
-        "d": "1 year / 1 वर्ष"
+        "a": "6 months",
+        "b": "2 months",
+        "c": "1 month",
+        "d": "1 year"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA proclamation of National Emergency, once issued, must be approved by a Special Majority in both Houses of Parliament within one month of its issue. If approved, it initially continues for six months\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय आपातकाल की उद्घोषणा, एक बार जारी होने पर, जारी होने की तारीख से एक महीने के भीतर संसद के दोनों सदनों द्वारा विशेष बहुमत से अनुमोदित होनी चाहिए। यदि अनुमोदित हो जाती है, तो यह शुरू में छह महीने तक जारी रहती है।"
     },
     {
       "q_num": 4,
-      "question": "Which state in India has undergone the maximum number of times of President's Rule imposition?\n भारत के किस राज्य में अधिकतम बार राष्ट्रपति शासन लगाया गया है?",
+      "question": "Which state in India has undergone the maximum number of times of President's Rule imposition?",
       "options": {
-        "a": "Uttar Pradesh / उत्तर प्रदेश",
-        "b": "Punjab / पंजाब",
-        "c": "Bihar / बिहार",
-        "d": "Manipur / मणिपुर"
+        "a": "Uttar Pradesh",
+        "b": "Punjab",
+        "c": "Bihar",
+        "d": "Manipur"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAccording to constitutional data, the state of Manipur has undergone the maximum number of times of President's Rule. The provision for President's Rule is outlined in Article 356 of the Constitution\n\n📖 हिंदी स्पष्टीकरण:\nसंवैधानिक आंकड़ों के अनुसार, मणिपुर राज्य में अधिकतम बार राष्ट्रपति शासन लगाया गया है। राष्ट्रपति शासन का प्रावधान संविधान के अनुच्छेद 356 में उल्लिखित है।"
     },
     {
       "q_num": 5,
-      "question": "As per Article 368 of the Constitution of India, the Parliament may amend any provision of the Constitution by way of:\n 1. Addition\n 2. Variation\n 3. Repeal\n Select the answer using the code given below:\n भारतीय संविधान के अनुच्छेद 368 के अनुसार, संसद संविधान के किसी भी प्रावधान में निम्नलिखित तरीकों से संशोधन कर सकती है:\n 4. जोड़\n 5. परिवर्तन\n 6. निरस्तीकरण\n नीचे दिए गए कूट का प्रयोग कर उत्तर चुनिए:",
+      "question": "As per Article 368 of the Constitution of India, the Parliament may amend any provision of the Constitution by way of:\n 1. Addition\n 2. Variation\n 3. Repeal\n Select the answer using the code given below:",
       "options": {
-        "a": "1 and 2 Only / केवल 1 और 2",
-        "b": "2 and 3 Only / केवल 2 और 3",
-        "c": "1 and 3 Only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 Only",
+        "b": "2 and 3 Only",
+        "c": "1 and 3 Only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAddition: Parliament can insert new articles or clauses, like adding Fundamental Duties or making provisions for new social rights.\n11. Variation: Existing articles can be altered, modified, or their scope changed, as seen with GST provisions.\n12. Repeal: Provisions can be removed, such as the abolition of privy purses for former rulers\n\n📖 हिंदी स्पष्टीकरण:\n13. जोड़: संसद नए अनुच्छेद या खंड जोड़ सकती है, जैसे मौलिक कर्तव्यों को जोड़ना या नए सामाजिक अधिकारों के लिए प्रावधान करना।\n14. परिवर्तन: मौजूदा अनुच्छेदों को बदला, संशोधित किया जा सकता है या उनका दायरा बदला जा सकता है, जैसा कि जीएसटी प्रावधानों के मामले में देखा गया है।\n15. निरस्तीकरण : प्रावधानों को हटाया जा सकता है, जैसे पूर्व शासकों के लिए प्रिवी पर्स का उन्मूलन।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following principles was added by the 42nd Constitutional Amendment in the Indian Constitution?\n भारतीय संविधान में 42वें संविधान संशोधन द्वारा निम्नलिखित में से कौन सा सिद्धांत जोड़ा गया था?",
+      "question": "Which of the following principles was added by the 42nd Constitutional Amendment in the Indian Constitution?",
       "options": {
-        "a": "The State shall provide free and compulsory education / राज्य निःशुल्क एवं अनिवार्य शिक्षा प्रदान करेगा",
-        "b": "To organise agriculture and animal husbandry on modern and scientific lines / कृषि और पशुपालन को आधुनिक और वैज्ञानिक तरीके से व्यवस्थित करना।",
-        "c": "To protect and improve the environment and to safeguard forests and wildlife / पर्यावरण की रक्षा और सुधार करना तथा वनों और वन्यजीवों की सुरक्षा करना।",
-        "d": "Reservation of SC's and ST's in services / सेवाओं में अनुसूचित जाति और अनुसूचित जनजाति का आरक्षण।"
+        "a": "The State shall provide free and compulsory education",
+        "b": "To organise agriculture and animal husbandry on modern and scientific lines",
+        "c": "To protect and improve the environment and to safeguard forests and wildlife",
+        "d": "Reservation of SC's and ST's in services"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n5. The State shall provide free and compulsory education: This principle was added by the 86th Constitutional Amendment Act in 2002.\n6. To organise agriculture and animal husbandry on modern and scientific lines: This is part of the original Constitution under Article 48 and was not added by the 42nd Amendment.\n7. Reservation of SC's and ST's in services: Provisions for reservation were part of the original Constitution in various articles and were not introduced by the 42nd Amendment.\n\n📖 हिंदी स्पष्टीकरण:\n8. राज्य निःशुल्क और अनिवार्य शिक्षा प्रदान करेगा: यह सिद्धांत 86वें संविधान संशोधन अधिनियम, 2002 द्वारा जोड़ा गया था।\n9. कृषि और पशुपालन को आधुनिक और वैज्ञानिक तरीके से व्यवस्थित करना: यह अनुच्छेद 48 के अंतर्गत मूल संविधान का हिस्सा है और इसे 42वें संशोधन द्वारा नहीं जोड़ा गया था।\n10. ​​सेवाओं में अनुसूचित जातियों और अनुसूचित जनजातियों के लिए आरक्षण: आरक्षण के प्रावधान मूल संविधान के विभिन्न अनुच्छेदों में शामिल थे और इन्हें 42वें संशोधन द्वारा शामिल नहीं किया गया था।"
     },
     {
       "q_num": 7,
-      "question": "Which Article of the Indian Constitution empowers the President to proclaim a Financial Emergency?\n भारतीय संविधान का कौन सा अनुच्छेद राष्ट्रपति को वित्तीय आपातकाल की घोषणा करने का अधिकार देता है?",
+      "question": "Which Article of the Indian Constitution empowers the President to proclaim a Financial Emergency?",
       "options": {
-        "a": "Article 352 / अनुच्छेद 352",
-        "b": "Article 356 / अनुच्छेद 356",
-        "c": "Article 360 / अनुच्छेद 360",
-        "d": "Article 368 / अनुच्छेद 368"
+        "a": "Article 352",
+        "b": "Article 356",
+        "c": "Article 360",
+        "d": "Article 368"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 360 empowers the President of India to proclaim a Financial Emergency if he is satisfied that the financial stability or credit of India or any of its part is threatened. No Financial Emergency has been imposed till now\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 360 भारत के राष्ट्रपति को वित्तीय आपातकाल की घोषणा करने का अधिकार देता है यदि वह संतुष्ट हैं कि भारत या उसके किसी भाग की वित्तीय स्थिरता या साख खतरे में है। अब तक कोई वित्तीय आपातकाल लागू नहीं किया गया है।"
     },
     {
       "q_num": 8,
-      "question": "The 101st Constitutional Amendment Act is related to which of the following?\n 101वां संवैधानिक संशोधन अधिनियम निम्नलिखित में से किससे संबंधित है?",
+      "question": "The 101st Constitutional Amendment Act is related to which of the following?",
       "options": {
-        "a": "National Commission for Backward Classes (NCBC) / राष्ट्रीय पिछड़ा वर्ग आयोग (NCBC)",
-        "b": "Goods and Services Tax (GST) / वस्तु एवं सेवा कर (GST)",
-        "c": "Economically Weaker Section (EWS) reservation / आर्थिक रूप से कमजोर वर्ग (EWS) आरक्षण",
-        "d": "India-Bangladesh land boundary agreement / भारत-बांग्लादेश भूमि सीमा समझौता"
+        "a": "National Commission for Backward Classes (NCBC)",
+        "b": "Goods and Services Tax (GST)",
+        "c": "Economically Weaker Section (EWS) reservation",
+        "d": "India-Bangladesh land boundary agreement"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 101st Constitutional Amendment Act introduced the Goods and Services Tax (GST) in India, which is a unified indirect tax that replaced multiple cascading taxes levied by the central and state governments. / 101\n\n📖 हिंदी स्पष्टीकरण:\nवां संवैधानिक संशोधन अधिनियम ने भारत में वस्तु एवं सेवा कर (GST) की शुरुआत की, जो एक एकीकृत अप्रत्यक्ष कर है जिसने केंद्र और राज्य सरकारों द्वारा लगाए गए कई प्रपाती करों को प्रतिस्थापित कर दिया।"
     },
     {
       "q_num": 9,
-      "question": "The concept of the 'Suspension of Fundamental Rights during National Emergency' was taken from the Constitution of which country?\n 'राष्ट्रीय आपातकाल के दौरान मौलिक अधिकारों के निलंबन' की अवधारणा किस देश के संविधान से ली गई थी?",
+      "question": "The concept of the 'Suspension of Fundamental Rights during National Emergency' was taken from the Constitution of which country?",
       "options": {
-        "a": "Government of India Act, 1935 / भारत शासन अधिनियम, 1935",
-        "b": "Weimar Constitution of Germany / जर्मनी का वाइमर संविधान",
-        "c": "Constitution of USA / यूएसए का संविधान",
-        "d": "Constitution of South Africa / दक्षिण अफ्रीका का संविधान"
+        "a": "Government of India Act, 1935",
+        "b": "Weimar Constitution of Germany",
+        "c": "Constitution of USA",
+        "d": "Constitution of South Africa"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe provision for the suspension of Fundamental Rights, except Article 20 and 21, during a National Emergency has been adapted from the Weimar Constitution of Germany\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय आपातकाल के दौरान मौलिक अधिकारों, (अनुच्छेद 20 और 21 को छोड़कर) के निलंबन का प्रावधान जर्मनी के वाइमर संविधान से लिया गया है।"
     },
     {
       "q_num": 10,
-      "question": "Which two Fundamental Rights can never be suspended during a National Emergency?\n राष्ट्रीय आपातकाल के दौरान कौन से दो मौलिक अधिकार कभी भी निलंबित नहीं किए जा सकते हैं?",
+      "question": "Which two Fundamental Rights can never be suspended during a National Emergency?",
       "options": {
-        "a": "Article 19 and Article 20 / अनुच्छेद 19 और अनुच्छेद 20",
-        "b": "Article 20 and Article 21 / अनुच्छेद 20 और अनुच्छेद 21",
-        "c": "Article 19 and Article 21 / अनुच्छेद 19 और अनुच्छेद 21",
-        "d": "Article 14 and Article 22 / अनुच्छेद 14 और अनुच्छेद 22"
+        "a": "Article 19 and Article 20",
+        "b": "Article 20 and Article 21",
+        "c": "Article 19 and Article 21",
+        "d": "Article 14 and Article 22"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAccording to the constitutional provisions, the rights under Article 20 (Protection in respect of conviction for offences) and Article 21 (Protection of life and personal liberty) remain in force and can never be suspended during a National Emergency\n\n📖 हिंदी स्पष्टीकरण:\nसंवैधानिक प्रावधानों के अनुसार, अनुच्छेद 20 (अपराधों के लिए दोषसिद्धि के संबंध में संरक्षण) और अनुच्छेद 21 (जीवन और व्यक्तिगत स्वतंत्रता का संरक्षण) के तहत अधिकार लागू रहते हैं और राष्ट्रीय आपातकाल के दौरान उन्हें कभी भी निलंबित नहीं किया जा सकता है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the suspension of Fundamental Rights during a National Emergency:\n 1. Article 19 is suspended automatically only when the National Emergency is imposed on the ground of 'War or External Aggression'.\n 2. Rights under Article 19 are suspended even when the emergency is proclaimed on the grounds of 'Armed Rebellion'.\n Which of the statements given above is/are correct?\n राष्ट्रीय आपातकाल के दौरान मौलिक अधिकारों के निलंबन के संबंध में निम्नलिखित कथनों पर विचार करें:\n 3. अनुच्छेद 19 केवल तभी स्वचालित रूप से निलंबित होता है जब राष्ट्रीय आपातकाल 'युद्ध या बाहरी आक्रमण' के आधार पर लगाया जाता है।\n 4. 'सशस्त्र विद्रोह' के आधार पर आपातकाल घोषित होने पर भी अनुच्छेद 19 के तहत अधिकार निलंबित हो जाते हैं।\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the suspension of Fundamental Rights during a National Emergency:\n 1. Article 19 is suspended automatically only when the National Emergency is imposed on the ground of 'War or External Aggression'.\n 2. Rights under Article 19 are suspended even when the emergency is proclaimed on the grounds of 'Armed Rebellion'.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nArticle 19 is automatically suspended only in cases of National Emergency declared on the grounds of 'War or External Aggression' (Art 358). If the emergency is imposed on the grounds of 'Armed Rebellion', the rights under Article 19 cannot be suspended\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 19 केवल 'युद्ध या बाहरी आक्रमण' के आधार पर घोषित राष्ट्रीय आपातकाल के मामलों में ही स्वचालित रूप से निलंबित होता है (अनुच्छेद 358)। यदि आपातकाल 'सशस्त्र विद्रोह' के आधार पर लगाया जाता है, तो अनुच्छेद 19 के तहत अधिकारों को निलंबित नहीं किया जा सकता है ।"
     },
     {
       "q_num": 12,
-      "question": "Which one of the following is not mentioned as a form of Emergency in the Constitution of India?\n निम्नलिखित में से किसका उल्लेख भारत के संविधान में आपातकाल के रूप में नहीं किया गया है?",
+      "question": "Which one of the following is not mentioned as a form of Emergency in the Constitution of India?",
       "options": {
-        "a": "National Emergency / राष्ट्रीय आपातकाल",
-        "b": "State Emergency in terms of Proclamation of President’s Rule in a State / किसी राज्य में राष्ट्रपति शासन की घोषणा के संदर्भ में राज्य आपातकाल",
-        "c": "Financial Emergency / वित्तीय आपातकाल",
-        "d": "Health Emergency / स्वास्थ्य आपातकाल"
+        "a": "National Emergency",
+        "b": "State Emergency in terms of Proclamation of President’s Rule in a State",
+        "c": "Financial Emergency",
+        "d": "Health Emergency"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\n5. National Emergency (Article 352): For war, external aggression, or armed rebellion.\n6. State Emergency / President's Rule (Article 356): When constitutional machinery fails in a state.\n7. Financial Emergency (Article 360): If financial stability is threatened\n\n📖 हिंदी स्पष्टीकरण:\n8. राष्ट्रीय आपातकाल (अनुच्छेद 352): युद्ध, बाह्य आक्रमण या सशस्त्र विद्रोह के लिए।\n9. राज्य आपातकाल/राष्ट्रपति शासन (अनुच्छेद 356): जब किसी राज्य में संवैधानिक व्यवस्था विफल हो जाती है।\n10. वित्तीय आपातकाल (अनुच्छेद 360): यदि वित्तीय स्थिरता को खतरा हो।"
     },
     {
       "q_num": 13,
-      "question": "Which one of the following statements about a Bill for Amendment of the Constitution of India is not correct?\n भारत के संविधान में संशोधन के लिए विधेयक के बारे में निम्नलिखित में से कौन सा कथन सही नहीं है?",
+      "question": "Which one of the following statements about a Bill for Amendment of the Constitution of India is not correct?",
       "options": {
-        "a": "It is governed by Article 368(2) of the Constitution of India. / यह भारत के संविधान के अनुच्छेद 368(2) द्वारा शासित है।",
-        "b": "Joint sitting can be resorted to for passing a Bill amending the Constitution of India. / भारत के संविधान में संशोधन करने वाले विधेयक को पारित करने के लिए संयुक्त बैठक का सहारा लिया जा सकता है।",
-        "c": "The State Legislatures cannot initiate any Bill or proposal for amendment of the Constitution of India / राज्य विधानमंडल भारत के संविधान में संशोधन के लिए कोई विधेयक या प्रस्ताव पेश नहीं कर सकते।",
-        "d": "The prior sanction of the President of India is not required for introducing any Bill in the Parliament for amendment of the Constitution of India. / भारत के संविधान में संशोधन के लिए संसद में कोई विधेयक प्रस्तुत करने के लिए भारत के राष्ट्रपति की पूर्व स्वीकृति की आवश्यकता नहीं है।"
+        "a": "It is governed by Article 368(2) of the Constitution of India.",
+        "b": "Joint sitting can be resorted to for passing a Bill amending the Constitution of India.",
+        "c": "The State Legislatures cannot initiate any Bill or proposal for amendment of the Constitution of India",
+        "d": "The prior sanction of the President of India is not required for introducing any Bill in the Parliament for amendment of the Constitution of India."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n5. Article 368(2) outlines the procedure for most constitutional amendments, requiring a Bill to be passed by a special majority in each House of Parliament separately.\n6. The State Legislatures cannot initiate a Bill or proposal for amendment of the Constitution of India; this power lies exclusively with the Parliament.\n\n📖 हिंदी स्पष्टीकरण:\n7. अनुच्छेद 368(2) अधिकांश संवैधानिक संशोधनों की प्रक्रिया को रेखांकित करता है, जिसके अनुसार किसी विधेयक को संसद के प्रत्येक सदन में अलग-अलग विशेष बहुमत से पारित किया जाना आवश्यक है।\n8. राज्य विधानमंडल भारत के संविधान में संशोधन के लिए कोई विधेयक या प्रस्ताव प्रस्तुत नहीं कर सकते; यह शक्ति केवल संसद के पास है।"
     },
     {
       "q_num": 14,
-      "question": "Which of the following statements about a State under the President’s rule is/are correct?\n 1. The budget of a State under the President’s rule is approved by the Governor of the State.\n 2. The procedure to pass the budget of a State under the President’s rule is same as that of the budget of the Union Government.\n Select the correct answer using the code given below.\n राष्ट्रपति शासन के अधीन किसी राज्य के बारे में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 3. राष्ट्रपति शासन के अधीन किसी राज्य का बजट राज्य के राज्यपाल द्वारा अनुमोदित किया जाता है।\n 4. राष्ट्रपति शासन के अधीन किसी राज्य के बजट को पारित करने की प्रक्रिया केंद्र सरकार के बजट के समान ही होती है।\n नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए।",
+      "question": "Which of the following statements about a State under the President’s rule is/are correct?\n 1. The budget of a State under the President’s rule is approved by the Governor of the State.\n 2. The procedure to pass the budget of a State under the President’s rule is same as that of the budget of the Union Government.\n Select the correct answer using the code given below.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe statement that \"The budget of a State under the President’s rule is approved by the Governor of the State\" is incorrect. While the Governor administers the state on behalf of the President, the budget approval authority lies with the Parliament. The President only authorizes expenditure from the State's Consolidated Fund pending parliamentary sanction when the Lok Sabha is not in session.\n\n📖 हिंदी स्पष्टीकरण:\nयह कथन कि \"राष्ट्रपति शासन के अधीन किसी राज्य का बजट उस राज्य के राज्यपाल द्वारा अनुमोदित किया जाता है\" गलत है। हालाँकि राज्यपाल राष्ट्रपति की ओर से राज्य का प्रशासन संचालित करते हैं, लेकिन बजट अनुमोदन का अधिकार संसद के पास होता है। राष्ट्रपति राज्य की संचित निधि से व्यय को केवल तभी अधिकृत करते हैं जब संसदीय अनुमोदन लंबित हो, जब लोकसभा का सत्र न चल रहा हो।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following statements are correct regarding the Supreme Court judgement on validity of 103rd Constitutional Amendment Act?\n 1. The Supreme Court of India's Constitutional Bench for this case consisted of 5 judges.\n 2. The Constitutional Bench upholds the 10% of EWS reservation with 3-2 majority\n 3. As per the Supreme Court judgement, the 103rd Constitutional Amendment is valid although it is violating the Basic Structure of the Indian Constitution.\n 103वें संविधान संशोधन अधिनियम की वैधता पर सर्वोच्च न्यायालय के निर्णय के संबंध में निम्नलिखित में से कौन से कथन सही हैं?\n 4. इस मामले में भारत के सर्वोच्च न्यायालय की संवैधानिक पीठ में 5 न्यायाधीश थे।\n 5. संवैधानिक पीठ ने 3-2 बहुमत से आर्थिक रूप से पिछड़े वर्गों के लिए 10% आरक्षण को बरकरार रखा।\n 6. सर्वोच्च न्यायालय के निर्णय के अनुसार, 103वाँ संविधान संशोधन वैध है, हालाँकि यह भारतीय संविधान के मूल ढांचे का उल्लंघन करता है।",
+      "question": "Which of the following statements are correct regarding the Supreme Court judgement on validity of 103rd Constitutional Amendment Act?\n 1. The Supreme Court of India's Constitutional Bench for this case consisted of 5 judges.\n 2. The Constitutional Bench upholds the 10% of EWS reservation with 3-2 majority\n 3. As per the Supreme Court judgement, the 103rd Constitutional Amendment is valid although it is violating the Basic Structure of the Indian Constitution.",
       "options": {
-        "a": "A, B and C / A, B और C",
-        "b": "A and C only / A और C",
-        "c": "B and C only / B और C",
-        "d": "A and B only / A और B"
+        "a": "A, B and C",
+        "b": "A and C only",
+        "c": "B and C only",
+        "d": "A and B only"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe statement C is incorrect. The core of the majority's reasoning was that the amendment was valid because it did not violate the basic structure of the Constitution. The majority judges found that reservation based solely on economic criteria does not damage the basic structure. The minority opinion, however, argued that excluding the SC/ST/OBC categories from the EWS quota and breaching the 50% reservation limit did violate the basic structure\n\n📖 हिंदी स्पष्टीकरण:\nकथन C गलत है। बहुमत के तर्क का मूल यह था कि संशोधन वैध था क्योंकि यह संविधान के मूल ढांचे का उल्लंघन नहीं करता था। बहुमत वाले न्यायाधीशों ने पाया कि केवल आर्थिक मानदंडों के आधार पर आरक्षण मूल ढांचे को नुकसान नहीं पहुँचाता। हालाँकि, अल्पमत की राय में तर्क दिया गया कि अनुसूचित जाति/अनुसूचित जनजाति/अन्य पिछड़ा वर्ग को आर्थिक रूप से पिछड़े वर्ग (ईडब्ल्यूएस) कोटे से बाहर रखना और 50% आरक्षण सीमा का उल्लंघन करना मूल ढांचे का उल्लंघन है।"
     },
     {
       "q_num": 16,
-      "question": "Which of the following subjects requires only a Simple Majority of Parliament for amendment, falling outside the ambit of Article 368?\n निम्नलिखित में से किस विषय के संशोधन के लिए केवल संसद के साधारण बहुमत की आवश्यकता होती है, जो अनुच्छेद 368 के दायरे से बाहर आता है?",
+      "question": "Which of the following subjects requires only a Simple Majority of Parliament for amendment, falling outside the ambit of Article 368?",
       "options": {
-        "a": "Election of the President and its manner. / राष्ट्रपति का निर्वाचन और उसका तरीका।",
-        "b": "Abolition or creation of legislative councils in states. / राज्यों में विधायी परिषदों का उन्मूलन या निर्माण।",
-        "c": "The Directive Principles of State Policy (DPSP). / राज्य के नीति निदेशक तत्व (DPSP)।",
-        "d": "Representation of states in the Parliament. / संसद में राज्यों का प्रतिनिधित्व।"
+        "a": "Election of the President and its manner.",
+        "b": "Abolition or creation of legislative councils in states.",
+        "c": "The Directive Principles of State Policy (DPSP).",
+        "d": "Representation of states in the Parliament."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe abolition or creation of Legislative Councils in states is one of the administrative matters that Parliament can amend by a Simple Majority, and this procedure is not considered an amendment under Article 368\n\n📖 हिंदी स्पष्टीकरण:\nराज्यों में विधान परिषदों का उन्मूलन या निर्माण उन प्रशासनिक मामलों में से एक है जिसे संसद साधारण बहुमत से संशोधित कर सकती है, और इस प्रक्रिया को अनुच्छेद 368 के तहत संशोधन नहीं माना जाता है।"
     },
     {
       "q_num": 17,
-      "question": "How can the Lok Sabha revoke a proclamation of National Emergency?\n लोक सभा राष्ट्रीय आपातकाल की उद्घोषणा को कैसे रद्द कर सकती है?",
+      "question": "How can the Lok Sabha revoke a proclamation of National Emergency?",
       "options": {
-        "a": "By passing a resolution with a Special Majority of the total membership. / कुल सदस्यों के विशेष बहुमत से प्रस्ताव पारित करके।",
-        "b": "By a Simple Majority of the total membership of the House. / सदन के कुल सदस्यों के साधारण बहुमत से।",
-        "c": "By passing a resolution through Simple Majority. / साधारण बहुमत से प्रस्ताव पारित करके।",
-        "d": "Revocation power rests only with the President, with no need for Parliamentary approval. / रद्द करने की शक्ति केवल राष्ट्रपति के पास है, जिसके लिए संसदीय मंज़ूरी की कोई आवश्यकता नहीं है।"
+        "a": "By passing a resolution with a Special Majority of the total membership.",
+        "b": "By a Simple Majority of the total membership of the House.",
+        "c": "By passing a resolution through Simple Majority.",
+        "d": "Revocation power rests only with the President, with no need for Parliamentary approval."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe 44th Constitutional Amendment Act empowered the Lok Sabha to revoke a National Emergency by passing a resolution with a Simple Majority of members present and voting. The President must revoke the proclamation if the Lok Sabha passes such a resolution. / 44\n\n📖 हिंदी स्पष्टीकरण:\nवें संवैधानिक संशोधन अधिनियम ने लोक सभा को उपस्थित और मतदान करने वाले सदस्यों के साधारण बहुमत से एक प्रस्ताव पारित करके राष्ट्रीय आपातकाल को रद्द करने का अधिकार दिया। यदि लोक सभा ऐसा प्रस्ताव पारित करती है तो राष्ट्रपति को उद्घोषणा रद्द करनी होगी।"
     },
     {
       "q_num": 18,
-      "question": "Who automatically serves as the Chairman of the Committee on Private Members Bill?\n निजी सदस्यों के विधेयक पर समिति के अध्यक्ष के रूप में स्वतः कौन कार्य करता है?",
+      "question": "Who automatically serves as the Chairman of the Committee on Private Members Bill?",
       "options": {
-        "a": "The Speaker of the Lok Sabha. / लोकसभा अध्यक्ष",
-        "b": "The Deputy Speaker of the Lok Sabha. / लोकसभा के उपाध्यक्ष।",
-        "c": "The Deputy Chairman of the Rajya Sabha. / राज्यसभा के उपसभापति।",
-        "d": "The Minister of Parliamentary Affairs. / संसदीय मामलों के मंत्री।"
+        "a": "The Speaker of the Lok Sabha.",
+        "b": "The Deputy Speaker of the Lok Sabha.",
+        "c": "The Deputy Chairman of the Rajya Sabha.",
+        "d": "The Minister of Parliamentary Affairs."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Deputy Speaker of the Lok Sabha is the ex-officio Chairman of the Committee on Private Members Bill. The rule is that the Deputy Speaker automatically becomes the Chairman of any committee of which he/she is appointed as a member\n\n📖 हिंदी स्पष्टीकरण:\nलोक सभा के उपाध्यक्ष निजी सदस्यों के विधेयक पर समिति के पदेन अध्यक्ष होते हैं। नियम यह है कि उपाध्यक्ष स्वचालित रूप से उस समिति के अध्यक्ष बन जाते हैं जिसके वे सदस्य के रूप में नियुक्त होते हैं।"
     },
     {
       "q_num": 19,
-      "question": "Consider the following statements regarding the approval of a Financial Emergency (Article 360):\n वित्तीय आपातकाल (अनुच्छेद 360) के अनुमोदन के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. It must be approved by the Parliament with a Simple Majority. / इसे संसद द्वारा साधारण बहुमत से अनुमोदित किया जाना चाहिए।\n 2. The period for approval is 1 month from the date of its issue. / इसके जारी होने की तारीख से अनुमोदन की अवधि 1 माह है।\n Which of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the approval of a Financial Emergency (Article 360):\n1. It must be approved by the Parliament with a Simple Majority.\n2. The period for approval is 1 month from the date of its issue.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "I only / केवल I",
-        "b": "II only / केवल II",
-        "c": "Both I and II / I और II दोनों",
-        "d": "Neither I nor II / न तो I और न ही II"
+        "a": "I only",
+        "b": "II only",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement I is correct: Financial Emergency (Art 360) is approved by a Simple Majority. Statement II is incorrect: the period for approval is 2 months (same as President's Rule), not 1 month (which is for National Emergency)\n\n📖 हिंदी स्पष्टीकरण:\nकथन I सही है: वित्तीय आपातकाल (अनुच्छेद 360) को साधारण बहुमत से अनुमोदित किया जाता है। कथन II गलत है: अनुमोदन की अवधि 2 माह है (राष्ट्रपति शासन के समान), न कि 1 माह (जो राष्ट्रीय आपातकाल के लिए है)।"
     },
     {
       "q_num": 20,
-      "question": "The Constitution Review Commission chaired by______recommended some initiatives to be taken by the government for successful implementation of Fundamental Duties.\n ______की अध्यक्षता में संविधान समीक्षा आयोग ने मौलिक कर्तव्यों के सफल कार्यान्वयन के लिए सरकार द्वारा की जाने वाली कुछ पहलों की सिफारिश की।",
+      "question": "The Constitution Review Commission chaired by______recommended some initiatives to be taken by the government for successful implementation of Fundamental Duties.",
       "options": {
         "a": "PK Joshi",
         "b": "MN Venkatachaliah",
@@ -246,60 +246,60 @@
     },
     {
       "q_num": 21,
-      "question": "With reference to India, consider the following:\n 1. The Inter-State Council\n 2. The National Security Council\n 3. Zonal Councils\n How many of the above were established as per the provisions of the Constitution of India?\n भारत के संदर्भ में, निम्नलिखित पर विचार कीजिए:\n 4. अंतर-राज्यीय परिषद\n 5. राष्ट्रीय सुरक्षा परिषद\n 6. क्षेत्रीय परिषदें\n उपर्युक्त में से कितनी परिषदें भारत के संविधान के प्रावधानों के अनुसार स्थापित की गई थीं?",
+      "question": "With reference to India, consider the following:\n 1. The Inter-State Council\n 2. The National Security Council\n 3. Zonal Councils\n How many of the above were established as per the provisions of the Constitution of India?",
       "options": {
-        "a": "Only one / केवल एक",
-        "b": "Only two / केवल दो",
-        "c": "All the three / तीनों",
-        "d": "None / कोई नहीं"
+        "a": "Only one",
+        "b": "Only two",
+        "c": "All the three",
+        "d": "None"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOnly the Inter-State Council is constitutional.\n11. The National Security Council: This is an executive body, established in 1998 by a resolution (an executive decision) of the Union Cabinet. It is not mentioned in the Constitution.\n12. Zonal Councils: These are statutory bodies, established under the States Reorganisation Act of 1956, which is an Act passed by the Parliament, not a direct provision of the Constitution itself.\n\n📖 हिंदी स्पष्टीकरण:\n13. केवल अंतरराज्यीय परिषद ही संवैधानिक है।\n14. राष्ट्रीय सुरक्षा परिषद: यह एक कार्यकारी निकाय है, जिसकी स्थापना 1998 में केंद्रीय मंत्रिमंडल के एक प्रस्ताव (कार्यकारी निर्णय) द्वारा की गई थी। संविधान में इसका उल्लेख नहीं है।\n15. क्षेत्रीय परिषदें: ये वैधानिक निकाय हैं, जिनकी स्थापना राज्य पुनर्गठन अधिनियम, 1956 के तहत की गई थी। यह संसद द्वारा पारित एक अधिनियम है, न कि संविधान का प्रत्यक्ष प्रावधान।"
     },
     {
       "q_num": 22,
-      "question": "Which of the following Constitution Amendment Acts introduced GST (Goods and Services Tax) in the course of inter-state trade or commerce?\n निम्नलिखित में से किस संविधान संशोधन अधिनियम ने अंतर-राज्यीय व्यापार या वाणिज्य के दौरान जीएसटी (वस्तु और सेवा कर) की शुरुआत की?",
+      "question": "Which of the following Constitution Amendment Acts introduced GST (Goods and Services Tax) in the course of inter-state trade or commerce?",
       "options": {
-        "a": "Constitution (101st Amendment) Act / संविधान (101वां संशोधन) अधिनियम",
-        "b": "Constitution (102nd Amendment) Act / संविधान (102वां संशोधन) अधिनियम",
-        "c": "Constitution (104th Amendment) Act / संविधान (104वां संशोधन) अधिनियम",
-        "d": "Constitution (106th Amendment) Act / संविधान (106वां संशोधन) अधिनियम"
+        "a": "Constitution (101st Amendment) Act",
+        "b": "Constitution (102nd Amendment) Act",
+        "c": "Constitution (104th Amendment) Act",
+        "d": "Constitution (106th Amendment) Act"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Goods and Services Tax (GST) was introduced in India by the Constitution (One Hundred and First Amendment) Act, 2016.\nThis Amendment Act conferred simultaneous power upon Parliament and the State Legislatures to make laws governing GST.\nSpecifically, for the supply of goods or services (or both) that takes place in the course of inter-State trade or commerce, the Act gives exclusive power to Parliament to make laws with respect to GST. This inter-state tax is known as the Integrated Goods and Services Tax (IGST).\nThe key articles inserted by this amendment are Article 246A (power to impose GST) and Article 269A (levy and collection of GSTS in the course of inter-State trade or commerce).\n\n📖 हिंदी स्पष्टीकरण:\nभारत में वस्तु एवं सेवा कर (जीएसटी) संविधान (101वां संशोधन) अधिनियम, 2016 द्वारा लागू किया गया था।\nइस संशोधन अधिनियम ने संसद और राज्य विधानसभाओं को जीएसटी से संबंधित कानून बनाने की एक साथ शक्ति प्रदान की।\nविशेष रूप से, अंतर-राज्यीय व्यापार या वाणिज्य के दौरान होने वाली वस्तुओं या सेवाओं (या दोनों) की आपूर्ति के लिए, इस अधिनियम ने संसद को जीएसटी के संबंध में कानून बनाने की विशेष शक्ति प्रदान की। इस अंतर-राज्यीय कर को एकीकृत वस्तु एवं सेवा कर (आईजीएसटी) के रूप में जाना जाता है।\nइस संशोधन द्वारा जोड़े गए प्रमुख अनुच्छेद अनुच्छेद 246A (जीएसटी लगाने की शक्ति) और अनुच्छेद 269A (अंतर-राज्यीय व्यापार या वाणिज्य के दौरान जीएसटी का आरोपण और संग्रहण) हैं।"
     },
     {
       "q_num": 23,
-      "question": "The Constitution (Seventy-third Amendment) Act provides for\n संविधान (तिहत्तरवां संशोधन) अधिनियम में प्रावधान है-",
+      "question": "The Constitution (Seventy-third Amendment) Act provides for",
       "options": {
-        "a": "an elaborate system of establishing municipal self-government / नगरपालिका स्वशासन स्थापित करने की एक विस्तृत प्रणाली",
-        "b": "an elaborate system of establishing panchayats as units of self-government / पंचायतों को स्वशासन की इकाइयों के रूप में स्थापित करने की एक विस्तृत प्रणाली",
-        "c": "establishing a Commission for Linguistic Minorities / भाषाई अल्पसंख्यकों के लिए एक आयोग की स्थापना",
-        "d": "the creation of the Jharkhand State / झारखंड राज्य का निर्माण"
+        "a": "an elaborate system of establishing municipal self-government",
+        "b": "an elaborate system of establishing panchayats as units of self-government",
+        "c": "establishing a Commission for Linguistic Minorities",
+        "d": "the creation of the Jharkhand State"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Constitution (Seventy-third Amendment) Act, 1992, is a landmark amendment in India that is historically and constitutionally associated with the establishment of Panchayati Raj Institutions (PRIs).\nIt gave constitutional status to the Panchayats (rural local self-government) .\nIt inserted a new Part IX (The Panchayats) and the Eleventh Schedule (listing 29 functional items) into the Constitution of India.\nThe Act mandates a three-tier system of Panchayats (Village, Intermediate, and District levels) and provides for their regular elections, reservations for Scheduled Castes, Scheduled Tribes, and women, and the constitution of a State Election Commission and a State Finance Commission.\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान (तिहत्तरवाँ संशोधन) अधिनियम, 1992, भारत में एक ऐतिहासिक संशोधन है जो ऐतिहासिक और संवैधानिक रूप से पंचायती राज संस्थाओं (पीआरआई) की स्थापना से जुड़ा है।\nइसने पंचायतों (ग्रामीण स्थानीय स्वशासन) को संवैधानिक दर्जा दिया।\nइसने भारत के संविधान में एक नया भाग IX (पंचायतें) और ग्यारहवीं अनुसूची (29 कार्यात्मक विषयों की सूची) जोड़ी।\nयह अधिनियम पंचायतों (ग्राम, मध्यवर्ती और जिला स्तर) की त्रि-स्तरीय प्रणाली को अनिवार्य बनाता है और उनके नियमित चुनाव, अनुसूचित जातियों, अनुसूचित जनजातियों और महिलाओं के लिए आरक्षण, और एक राज्य चुनाव आयोग और एक राज्य वित्त आयोग के गठन का प्रावधान करता है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following statements about National Emergency is/are correct?\n 1. A Proclamation of Emergency may be made by the President only when the security of India or any part thereof is threatened by war or external aggression or armed rebellion.\n 2. The Government of India acquires power to give directions to a State on any matter.\n 3. The Proclamation of Emergency does not suspend the State legislature.\n 4. The Proclamation of Emergency can continue for a maximum period of six months at a time only if approved by resolutions of both the Houses of Parliament.\n Select the correct answer using the code given below:\n राष्ट्रीय आपातकाल के बारे में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 5. राष्ट्रपति द्वारा आपातकाल की घोषणा तभी की जा सकती है जब भारत या उसके किसी भाग की सुरक्षा युद्ध, बाह्य आक्रमण या सशस्त्र विद्रोह से खतरे में हो।\n 6. भारत सरकार को किसी भी मामले में राज्य को निर्देश देने की शक्ति प्राप्त है।\n 7. आपातकाल की घोषणा राज्य विधानमंडल को निलंबित नहीं करती है।\n 8. आपातकाल की घोषणा एक बार में अधिकतम छह महीने की अवधि के लिए तभी जारी रह सकती है जब संसद के दोनों सदनों के प्रस्तावों द्वारा इसे अनुमोदित किया जाए।\n नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Which of the following statements about National Emergency is/are correct?\n 1. A Proclamation of Emergency may be made by the President only when the security of India or any part thereof is threatened by war or external aggression or armed rebellion.\n 2. The Government of India acquires power to give directions to a State on any matter.\n 3. The Proclamation of Emergency does not suspend the State legislature.\n 4. The Proclamation of Emergency can continue for a maximum period of six months at a time only if approved by resolutions of both the Houses of Parliament.\n Select the correct answer using the code given below:",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "1, 2 and 3 only / केवल 1, 2 और 3",
-        "d": "1, 2, 3 and 4 / 1, 2, 3 और 4"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "1, 2 and 3 only",
+        "d": "1, 2, 3 and 4"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll four statements regarding the national emergency are correct because, according to Article 352, the President can declare an emergency only in case of war, external aggression, or armed rebellion; upon the declaration of an emergency, the central government acquires the power under Article 353(a) to give directions to the states on any subject, including those in the State List; a national emergency neither suspends nor dissolves the state legislature, therefore the assemblies continue to function; and according to the 44th Constitutional Amendment, the emergency can be extended for a maximum period of six months at a time after the initial approval, and this requires approval by both Houses of Parliament every six months.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय आपातकाल से संबंधित चारों कथन सही हैं क्योंकि अनुच्छेद 352 के अनुसार राष्ट्रपति युद्ध, बाह्य आक्रमण या सशस्त्र विद्रोह के खतरे पर ही आपातकाल घोषित कर सकते हैं; आपातकाल घोषित होने पर अनुच्छेद 353(a) के तहत केंद्र सरकार को राज्य सूची सहित किसी भी विषय पर राज्यों को निर्देश देने की शक्ति मिल जाती है; राष्ट्रीय आपातकाल राज्य विधानमंडल को न तो निलंबित करता है और न ही भंग, इसलिए विधानसभाएँ कार्य करती रहती हैं; तथा 44वें संविधान संशोधन के अनुसार आपातकाल पहली मंजूरी के बाद अधिकतम छह-छह महीने की अवधि के लिए ही आगे जारी रह सकता है और इसके लिए प्रत्येक छह महीने पर संसद के दोनों सदनों द्वारा अनुमोदन अनिवार्य है।"
     },
     {
       "q_num": 25,
-      "question": "What is the primary function of the Inter-State Council?\n अंतर-राज्यीय परिषद का प्राथमिक कार्य क्या है?",
+      "question": "What is the primary function of the Inter-State Council?",
       "options": {
-        "a": "Resolve disputes between states / राज्यों के बीच विवादों का समाधान",
-        "b": "Control inter-state trade / अंतर-राज्यीय व्यापार को नियंत्रित करना",
-        "c": "Allocate central funds / केंद्रीय निधि आवंटित करना",
-        "d": "Elect the President / राष्ट्रपति का चुनाव करना"
+        "a": "Resolve disputes between states",
+        "b": "Control inter-state trade",
+        "c": "Allocate central funds",
+        "d": "Elect the President"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nControl inter-state trade: This is primarily governed by Articles 301 to 307 of the Constitution and regulated by Parliament and the states, not the ISC.\nAllocate central funds: This is the primary function of the Finance Commission (a constitutional body under Article 280).\nElect the President: This is done by an Electoral College consisting of elected members of both Houses of Parliament and the elected members of the Legislative Assemblies of the States (Article 54).\n\n📖 हिंदी स्पष्टीकरण:\nअंतर-राज्यीय व्यापार को नियंत्रित करना: यह मुख्य रूप से संविधान के अनुच्छेद 301 से 307 द्वारा शासित होता है और संसद तथा राज्यों द्वारा विनियमित होता है, न कि अंतर्राष्ट्रीय व्यापार आयोग द्वारा।\nकेंद्रीय निधियों का आवंटन: यह वित्त आयोग (अनुच्छेद 280 के तहत एक संवैधानिक निकाय) का प्राथमिक कार्य है।\nराष्ट्रपति का चुनाव: यह संसद के दोनों सदनों के निर्वाचित सदस्यों और राज्यों की विधानसभाओं के निर्वाचित सदस्यों (अनुच्छेद 54) से मिलकर बने एक निर्वाचक मंडल द्वारा किया जाता है।"

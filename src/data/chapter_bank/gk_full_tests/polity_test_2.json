@@ -6,451 +6,451 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which Article of the Constitution prescribes the term of the President of India?\n राष्ट्रपति के कार्यकाल का प्रावधान संविधान का कौन-सा अनुच्छेद करता है?",
+      "question": "Which Article of the Constitution prescribes the term of the President of India?",
       "options": {
-        "a": "Article 52 / अनुच्छेद 52",
-        "b": "Article 54 / अनुच्छेद 54",
-        "c": "Article 56 / अनुच्छेद 56",
-        "d": "Article 61 / अनुच्छेद 61"
+        "a": "Article 52",
+        "b": "Article 54",
+        "c": "Article 56",
+        "d": "Article 61"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 56 specifies the term of the President as five years. The President holds office for five years unless removed earlier.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 56 राष्ट्रपति के पांच वर्ष के कार्यकाल का प्रावधान करता है। राष्ट्रपति का कार्यकाल सामान्यत: पांच वर्ष का होता है।"
     },
     {
       "q_num": 2,
-      "question": "Who presides over the Rajya Sabha?\n राज्यसभा की अध्यक्षता कौन करता है?",
+      "question": "Who presides over the Rajya Sabha?",
       "options": {
-        "a": "President / राष्ट्रपति",
-        "b": "Prime Minister / प्रधानमंत्री",
-        "c": "Vice-President / उपराष्ट्रपति",
-        "d": "Deputy Chairman / उपाध्यक्ष"
+        "a": "President",
+        "b": "Prime Minister",
+        "c": "Vice-President",
+        "d": "Deputy Chairman"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Vice-President of India is the ex-officio Chairperson (Chairman) of the Rajya Sabha.\n\n📖 हिंदी स्पष्टीकरण:\nभारत के उपराष्ट्रपति पदेन राज्यसभा के सभापति होते हैं।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements about the election of the President of India:\n भारत के राष्ट्रपति के चुनाव के संबंध में निम्न कथनों पर विचार करें:\n (a) Elected MPs and elected MLAs vote. / केवल निर्वाचित सांसद और निर्वाचित विधायक मतदान करते हैं।\n (b) Value of MLA’s vote differs by state. / विधायक के वोट का मूल्य राज्यों के अनुसार भिन्न होता है।\n (c) Value of MP’s vote equals total value of MLA votes divided by number of MPs. / सांसद के वोट का मूल्य MLA वोट के कुल मूल्य को सांसदों की संख्या से विभाजित करके मिलता है।\n Which are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the election of the President of India:\n(a) Elected MPs and elected MLAs vote.\n(b) Value of MLA’s vote differs by state.\n(c) Value of MP’s vote equals total value of MLA votes divided by number of MPs.\n Which are correct?",
       "options": {
-        "a": "(a) and (b) / (a) एवं (b)",
-        "b": "(b) and (c) / (b) एवं (c)",
-        "c": "(a) and (c) / (a) एवं (c)",
-        "d": "(a), (b) and (c) / (a), (b) एवं (c)"
+        "a": "(a) and (b)",
+        "b": "(b) and (c)",
+        "c": "(a) and (c)",
+        "d": "(a), (b) and (c)"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are correct. Only elected MPs and elected MLAs vote. The value of an MLA’s vote differs by state (based on population and the prescribed formula). The value of an MP’s vote is uniform and is calculated as: (Total value of votes of all elected MLAs) ÷ (Total number of elected MPs)..\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन सही हैं। केवल निर्वाचित सांसद और निर्वाचित विधायक मतदान करते हैं। विधायक के वोट का मूल्य राज्यों के अनुसार जनसंख्या व निर्धारित सूत्र के आधार पर भिन्न होता है। सांसद के वोट का मूल्य समान होता है और उसे इस प्रकार निकाला जाता है: (सभी निर्वाचित विधायकों के कुल वोट-मूल्य) ÷ (निर्वाचित सांसदों की कुल संख्या)।"
     },
     {
       "q_num": 4,
-      "question": "The Vice-President of India is elected by:\n उपराष्ट्रपति का चुनाव किसके द्वारा होता है?",
+      "question": "The Vice-President of India is elected by:",
       "options": {
-        "a": "Electoral College of both Houses of Parliament / दोनों सदनों के सांसदों का इलेक्टोरल कॉलेज",
-        "b": "Lok Sabha members only / केवल लोकसभा सदस्य",
-        "c": "Elected MPs and elected MLAs / निर्वाचित सांसद और निर्वाचित विधायक",
-        "d": "Members of Legislative Assemblies only / केवल विधानसभाओं के सदस्य"
+        "a": "Electoral College of both Houses of Parliament",
+        "b": "Lok Sabha members only",
+        "c": "Elected MPs and elected MLAs",
+        "d": "Members of Legislative Assemblies only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nUnder Article 66, the Vice-President is elected by an electoral college consisting of members of both Houses of Parliament. MLAs do not vote.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 66 के अंतर्गत उपराष्ट्रपति का चुनाव दोनों सदनों के सांसदों के इलेक्टोरल कॉलेज द्वारा होता है; विधायकों का इसमें मतदान नहीं होता।"
     },
     {
       "q_num": 5,
-      "question": "Which body is primarily responsible for advising the President in exercise of his functions?\n राष्ट्रपति को अपने कृत्यों के निर्वहन में किस निकाय की सलाह लेना अनिवार्य है?",
+      "question": "Which body is primarily responsible for advising the President in exercise of his functions?",
       "options": {
-        "a": "Supreme Court / सर्वोच्च न्यायालय",
-        "b": "Council of Ministers headed by the PM / प्रधानमंत्री की अध्यक्षता वाली मंत्री परिषद्",
-        "c": "Cabinet Secretary / कैबिनेट सचिव",
-        "d": "Attorney General / महा-न्यायवादी"
+        "a": "Supreme Court",
+        "b": "Council of Ministers headed by the PM",
+        "c": "Cabinet Secretary",
+        "d": "Attorney General"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBy constitutional convention and Article 74, the President acts on the aid and advice of the Council of Ministers headed by the Prime Minister.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 74 एवं संवैधानिक परंपरा के अनुसार राष्ट्रपति को मंत्रिपरिषद् (PM के नेतृत्व में) की सलाह पर कार्य करना होता है।"
     },
     {
       "q_num": 6,
-      "question": "A Minister who is not a Member of Parliament must get elected to either House within how many months from appointment?\n जो मंत्री संसद का सदस्य न हो, उसे नियुक्ति के कितने महीनों के भीतर संसद सदस्य बनना आवश्यक है?",
+      "question": "A Minister who is not a Member of Parliament must get elected to either House within how many months from appointment?",
       "options": {
-        "a": "1 month / 1 माह",
-        "b": "3 months / 3 माह",
-        "c": "6 months / 6 माह",
-        "d": "12 months / 12 माह"
+        "a": "1 month",
+        "b": "3 months",
+        "c": "6 months",
+        "d": "12 months"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nConstitution provides that a non-MP minister must become a member of either House within six months of appointment.\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान के अनुसार सांसद न होने पर मंत्री को नियुक्ति के छह महीनों के भीतर संसद के किसी भी सदन का सदस्य बनना आवश्यक है।"
     },
     {
       "q_num": 7,
-      "question": "Which Article provides for the office of the President of India?\n भारत में राष्ट्रपति के पद का प्रावधान किस अनुच्छेद में है?",
+      "question": "Which Article provides for the office of the President of India?",
       "options": {
-        "a": "Article 52 / अनुच्छेद 52",
-        "b": "Article 53 / अनुच्छेद 53",
-        "c": "Article 54 / अनुच्छेद 54",
-        "d": "Article 55 / अनुच्छेद 55"
+        "a": "Article 52",
+        "b": "Article 53",
+        "c": "Article 54",
+        "d": "Article 55"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nArticle 52 specifically provides for the office of the President. Other articles (53–61) deal with powers, election, term, etc.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 52 में राष्ट्रपति के पद का प्रावधान है; अनुच्छेद 53–61 में उनके अधिकार और चुनाव के नियम हैं।"
     },
     {
       "q_num": 8,
-      "question": "How long may the Rajya Sabha be prorogued by the President without meeting?\n राष्ट्रपति द्वारा राज्यसभा को बिना बुलाए अधिकतम कितने समय तक रोका (प्रोरोग) जा सकता है?",
+      "question": "How long may the Rajya Sabha be prorogued by the President without meeting?",
       "options": {
-        "a": "No fixed maximum; but Parliament must meet within 6 months / कोई निश्चित अधिकतम नहीं; पर संसद 6 महीने के भीतर मिलनी चाहिए",
-        "b": "3 months / 3 माह",
-        "c": "5 months / 5 माह",
-        "d": "1 year / 1 वर्ष"
+        "a": "No fixed maximum; but Parliament must meet within 6 months",
+        "b": "3 months",
+        "c": "5 months",
+        "d": "1 year"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThere is no specific constitutional maximum for prorogation of a House, but Article 85 requires Parliament to meet at least once every six months.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 85 के अनुसार संसद छह माह से अधिक न रुके; प्रोरोगेशन का कोई स्वतंत्र अधिकतम समय नहीं दिया गया है।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following is TRUE about Money Bills?\n मनी बिल के संबंध में निम्न में से कौन-सा कथन सत्य है?",
+      "question": "Which of the following is TRUE about Money Bills?",
       "options": {
-        "a": "They can be introduced only in Lok Sabha. / इन्हें केवल लोकसभा में पेश किया जा सकता है।",
-        "b": "Rajya Sabha can amend Money Bills without restriction. / राज्यसभा मनी बिल में बिना सीमा संशोधन कर सकती है।",
-        "c": "Speaker’s certificate is not required to classify a Bill as Money Bill. / मनी बिल प्रमाणित करने के लिए स्पीकर का प्रमाण पत्र आवश्यक नहीं।",
-        "d": "Money Bills do not need President’s prior approval before introduction. / मनी बिल पेश करने से पहले राष्ट्रपति की अनुमति आवश्यक नहीं है।"
+        "a": "They can be introduced only in Lok Sabha.",
+        "b": "Rajya Sabha can amend Money Bills without restriction.",
+        "c": "Speaker’s certificate is not required to classify a Bill as Money Bill.",
+        "d": "Money Bills do not need President’s prior approval before introduction."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMoney Bills must be introduced only in Lok Sabha; Rajya Sabha can only recommend changes within 14 days; Speaker certifies Money Bill.\n\n📖 हिंदी स्पष्टीकरण:\nमनी बिल केवल लोकसभा में ही पेश होते हैं; राज्यसभा केवल 14 दिनों में सुझाव दे सकती है; स्पीकर मनी बिल का प्रमाणपत्र देते हैं।"
     },
     {
       "q_num": 10,
-      "question": "Who has the power to dissolve the Lok Sabha?\n लोकसभा को भंग करने का अधिकार किसके पास है?",
+      "question": "Who has the power to dissolve the Lok Sabha?",
       "options": {
-        "a": "President acting on aid & advice of Council of Ministers / मंत्रिपरिषद की सलाह पर राष्ट्रपति",
-        "b": "Prime Minister alone / केवल प्रधानमंत्री",
-        "c": "Speaker of Lok Sabha / लोकसभा का स्पीकर",
-        "d": "Supreme Court / सर्वोच्च न्यायालय"
+        "a": "President acting on aid & advice of Council of Ministers",
+        "b": "Prime Minister alone",
+        "c": "Speaker of Lok Sabha",
+        "d": "Supreme Court"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe President dissolves the Lok Sabha, but in practice does so on the aid and advice of the Council of Ministers led by the PM.\n\n📖 हिंदी स्पष्टीकरण:\nलोकसभा का भंग राष्ट्रपति द्वारा किया जाता है, परन्तु यह आम तौर पर मंत्रिमंडल की सलाह पर होता है।"
     },
     {
       "q_num": 11,
-      "question": "Which Article states that the Council of Ministers shall be collectively responsible to the Lok Sabha?\n किस अनुच्छेद में उल्लेख है कि मंत्रिपरिषद संयुक्त रूप से लोकसभा के प्रति उत्तरदायी होगी?",
+      "question": "Which Article states that the Council of Ministers shall be collectively responsible to the Lok Sabha?",
       "options": {
-        "a": "Article 74 / अनुच्छेद 74",
-        "b": "Article 75(3) / अनुच्छेद 75(3)",
-        "c": "Article 77 / अनुच्छेद 77",
-        "d": "Article 78 / अनुच्छेद 78"
+        "a": "Article 74",
+        "b": "Article 75(3)",
+        "c": "Article 77",
+        "d": "Article 78"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 75(3) provides that the Council of Ministers shall be collectively responsible to the House of the People (Lok Sabha).\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 75(3) के अनुसार मंत्रिपरिषद लोकसभा के प्रति सामूहिक रूप से उत्तरदायी है।"
     },
     {
       "q_num": 12,
-      "question": "A Joint Sitting of Parliament can be called to resolve a deadlock on:\n संसद के संयुक्त सत्र को किस प्रकार के विधेयक पर मृतबिन्दु समाधान हेतु बुलाया जा सकता है?",
+      "question": "A Joint Sitting of Parliament can be called to resolve a deadlock on:",
       "options": {
-        "a": "Money Bill / मनी बिल",
-        "b": "Financial Bill (I) / वित्तीय बिल (I)",
-        "c": "Ordinary Bill that is passed by one House and rejected by other / साधारण विधेयक (दोनों सदन भिन्न)",
-        "d": "Constitutional Amendment Bill / संविधान संशोधन विधेयक"
+        "a": "Money Bill",
+        "b": "Financial Bill (I)",
+        "c": "Ordinary Bill that is passed by one House and rejected by other",
+        "d": "Constitutional Amendment Bill"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nJoint sittings are for ordinary bills where the two Houses disagree; Money Bills and Constitution Amendment Bills are excluded.\n\n📖 हिंदी स्पष्टीकरण:\nसंयुक्त सत्र साधारण विधेयकों के लिए बुलाया जाता है यदि दोनों सदनों के बीच मतभेद हों; मनी बिल व संविधान संशोधन इसके बाहर हैं।"
     },
     {
       "q_num": 13,
-      "question": "Who certifies whether a bill is a Money Bill?\n किसे यह प्रमाणित करने का अधिकार है कि कोई विधेयक मनी बिल है या नहीं?",
+      "question": "Who certifies whether a bill is a Money Bill?",
       "options": {
-        "a": "President / राष्ट्रपति",
-        "b": "Speaker of Lok Sabha / लोकसभा के स्पीकर",
-        "c": "Finance Minister / वित्त मंत्री",
-        "d": "Election Commission / चुनाव आयोग"
+        "a": "President",
+        "b": "Speaker of Lok Sabha",
+        "c": "Finance Minister",
+        "d": "Election Commission"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Speaker of Lok Sabha has the exclusive authority to certify a bill as a Money Bill. This certification is final.\n\n📖 हिंदी स्पष्टीकरण:\nमनी बिल होने की प्रमाण-पत्र स्पीकर देते हैं और उनका निर्णय अंतिम रहता है।"
     },
     {
       "q_num": 14,
-      "question": "Consider the following about the President’s ordinance-making power:\n राष्ट्रपति के अध्यादेश जारी करने के अधिकार के बारे में विचार करें:\n (a) Ordinances can be promulgated only when Parliament is not in session. / अध्यादेश केवल संसद न होने पर ही जारी किया जा सकता है।\n (b) Ordinance has same force as an Act of Parliament. / अध्यादेश का बल संसद के अधिनियम के समान होता है।\n (c) Ordinance can amend the Constitution. / अध्यादेश संविधान में संशोधन कर सकता है।\n Which are correct?\n कौन-से सही हैं?",
+      "question": "Consider the following about the President’s ordinance-making power:\n(a) Ordinances can be promulgated only when Parliament is not in session.\n(b) Ordinance has same force as an Act of Parliament.\n(c) Ordinance can amend the Constitution.\n Which are correct?",
       "options": {
-        "a": "(a) and (b) / (a) एवं (b)",
-        "b": "(b) and (c) / (b) एवं (c)",
-        "c": "(a) and (c) / (a) एवं (c)",
-        "d": "(a), (b), and (c) / (a), (b) एवं (c)"
+        "a": "(a) and (b)",
+        "b": "(b) and (c)",
+        "c": "(a) and (c)",
+        "d": "(a), (b), and (c)"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOrdinances are issued only when Parliament is not in session and have the force of law, but cannot be used to amend the Constitution.\n\n📖 हिंदी स्पष्टीकरण:\nअध्यादेश संसद सत्र ना होने पर ही जारी होता है और वह कानून का समान प्रभाव रखता है; लेकिन संविधान संशोधन की शक्ति इसमें नहीं है।"
     },
     {
       "q_num": 15,
-      "question": "Who appoints the Attorney General of India?\n भारत के अटॉर्नी-जनरल की नियुक्ति कौन करता है?",
+      "question": "Who appoints the Attorney General of India?",
       "options": {
-        "a": "President on advice of the cabinet / कैबिनेट की सलाह पर राष्ट्रपति",
-        "b": "Chief Justice of India / मुख्य न्यायाधीश",
-        "c": "Law Minister / कानून मंत्री",
-        "d": "Parliament / संसद"
+        "a": "President on advice of the cabinet",
+        "b": "Chief Justice of India",
+        "c": "Law Minister",
+        "d": "Parliament"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Attorney General is appointed by the President and is the central government's chief legal advisor; appointment follows PM/Cabinet advice.\n\n📖 हिंदी स्पष्टीकरण:\nअटॉर्नी-जनरल की नियुक्ति राष्ट्रपति द्वारा की जाती है, पर यह प्रधानमंत्री/कबिनेट की सलाह पर होती है।"
     },
     {
       "q_num": 16,
-      "question": "Which House of Parliament is permanent and cannot be dissolved?\n संसद का कौन-सा सदन स्थायी है और जिसे भंग नहीं किया जा सकता?",
+      "question": "Which House of Parliament is permanent and cannot be dissolved?",
       "options": {
-        "a": "Lok Sabha / लोकसभा",
-        "b": "Rajya Sabha / राज्यसभा",
-        "c": "Both / दोनों",
-        "d": "Neither / कोई नहीं"
+        "a": "Lok Sabha",
+        "b": "Rajya Sabha",
+        "c": "Both",
+        "d": "Neither"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRajya Sabha is a permanent body; it is a continuing chamber with one-third members retiring every two years. Lok Sabha can be dissolved.\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा एक स्थायी सदन है जिसमें हर दो वर्षों में एक-तिहाई सदस्य सेवानिवृत्त होते हैं; लोकसभा को भंग किया जा सकता है।"
     },
     {
       "q_num": 17,
-      "question": "Consider the following statements about removal of the President:\n राष्ट्रपति की हत्या/अपराध के लिये हटाने (इम्पीचमेंट) से संबंधित कथनों पर विचार करें:\n (a) Only a resolution is needed in one House. / केवल एक सदन में प्रस्ताव पर्याप्त है।\n (b) Grounds are violation of Constitution. / आधार संविधान के उल्लंघन हैं।\n (c) A special majority of both Houses is required. / दोनों सदनों में विशेष बहुमत आवश्यक है।\n Which are correct?\n कौन-से सही हैं?",
+      "question": "Consider the following statements about removal of the President:\n(a) Only a resolution is needed in one House.\n(b) Grounds are violation of Constitution.\n(c) A special majority of both Houses is required.\n Which are correct?",
       "options": {
-        "a": "(b) and (c) / (b) और (c)",
-        "b": "(a) and (b) / (a) और (b)",
-        "c": "(a) and (c) / (a) और (c)",
-        "d": "(a), (b) and (c) / (a), (b) और (c)"
+        "a": "(b) and (c)",
+        "b": "(a) and (b)",
+        "c": "(a) and (c)",
+        "d": "(a), (b) and (c)"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nImpeachment is for violation of Constitution; it requires initiation and passage by both Houses with special majority; statement (a) is wrong because both Houses must act.\n\n📖 हिंदी स्पष्टीकरण:\nमहाभियोग केवल संविधान उल्लंघन के लिए है; दोनों सदनों में विशेष बहुमत से पारित होना चाहिए; (a) गलत है।"
     },
     {
       "q_num": 18,
-      "question": "Who is the real head of the executive in practice in India?\n व्यवहार में भारत की कार्यपालिका का वास्तविक प्रमुख कौन है?",
+      "question": "Who is the real head of the executive in practice in India?",
       "options": {
-        "a": "President (Nominal Head) / राष्ट्रपति (नाममात्र)",
-        "b": "Prime Minister / प्रधानमंत्री",
-        "c": "Chief Justice / मुख्य न्यायाधीश",
-        "d": "Vice-President / उपराष्ट्रपति"
+        "a": "President (Nominal Head)",
+        "b": "Prime Minister",
+        "c": "Chief Justice",
+        "d": "Vice-President"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThough President is the nominal head, real executive authority in practice lies with the Prime Minister and the Council of Ministers.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति नाममात्र प्रमुख हैं; वास्तविक कार्यकारी शक्ति प्रधानमंत्री व मंत्रिपरिषद के पास होती है।"
     },
     {
       "q_num": 19,
-      "question": "Which article deals with the election of the Vice-President?\n उपराष्ट्रपति के चुनाव का प्रावधान किस अनुच्छेद में है?",
+      "question": "Which article deals with the election of the Vice-President?",
       "options": {
-        "a": "Article 63 / अनुच्छेद 63",
-        "b": "Article 64 / अनुच्छेद 64",
-        "c": "Article 65 / अनुच्छेद 65",
-        "d": "Article 66 / अनुच्छेद 66"
+        "a": "Article 63",
+        "b": "Article 64",
+        "c": "Article 65",
+        "d": "Article 66"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nArticle 66 provides for the election of the Vice-President by members of both Houses of Parliament.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 66 में उपराष्ट्रपति के चुनाव का प्रावधान है; चुनाव दोनों सदनों के सांसद करते हैं।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following is NOT a function of the Speaker of the Lok Sabha?\n निम्न में से कौन-सा लोकसभा के स्पीकर का कार्य नहीं है?",
+      "question": "Which of the following is NOT a function of the Speaker of the Lok Sabha?",
       "options": {
-        "a": "Presiding over joint sittings of Parliament / संसद के संयुक्त सत्र की अध्यक्षता",
-        "b": "Certifying a Money Bill / मनी बिल का प्रमाणन",
-        "c": "Deciding disqualification under Tenth Schedule / दसवीं अनुसूची के तहत अयोग्यता का निर्णय",
-        "d": "Appointing the Prime Minister / प्रधानमंत्री की नियुक्ति"
+        "a": "Presiding over joint sittings of Parliament",
+        "b": "Certifying a Money Bill",
+        "c": "Deciding disqualification under Tenth Schedule",
+        "d": "Appointing the Prime Minister"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe President appoints the Prime Minister; Speaker does preside over joint sittings, certifies Money Bills, and decides disqualification matters.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधानमंत्री की नियुक्ति राष्ट्रपति करते हैं; स्पीकर संयुक्त सत्र की अध्यक्षता करते हैं व मनी बिल प्रमाणित करते हैं और दसवीं अनुसूची के तहत निर्णय लेते हैं।"
     },
     {
       "q_num": 21,
-      "question": "What is the minimum quorum for a sitting of the Lok Sabha?\n लोकसभा की बैठक के लिए न्यूनतम कोरम क्या है?",
+      "question": "What is the minimum quorum for a sitting of the Lok Sabha?",
       "options": {
-        "a": "One-third of total members / कुल सदस्यों का एक-तिहाई",
-        "b": "One-tenth of total members / कुल सदस्यों का एक-दशमांश",
-        "c": "One-fifth of total members / कुल सदस्यों का एक-पाँचवाँ",
-        "d": "Half of total members / कुल सदस्यों का आधा"
+        "a": "One-third of total members",
+        "b": "One-tenth of total members",
+        "c": "One-fifth of total members",
+        "d": "Half of total members"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 100 states that the quorum of either House is one-tenth of the total number of members of that House.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 100 के अनुसार किसी भी सदन के लिए कोरम कुल सदस्यों का एक-दशमांश होता है।"
     },
     {
       "q_num": 22,
-      "question": "Which Schedule of the Constitution allocates seats to states in the Rajya Sabha?\n संविधान की कौन-सी अनुसूची राज्यसभा में राज्यों को सीटें आवंटित करती है?",
+      "question": "Which Schedule of the Constitution allocates seats to states in the Rajya Sabha?",
       "options": {
-        "a": "First Schedule / प्रथम अनुसूची",
-        "b": "Fourth Schedule / चतुर्थ अनुसूची",
-        "c": "Sixth Schedule / Sixth अनुसूची",
-        "d": "Seventh Schedule / सप्तम अनुसूची"
+        "a": "First Schedule",
+        "b": "Fourth Schedule",
+        "c": "Sixth Schedule",
+        "d": "Seventh Schedule"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Fourth Schedule provides allocation of seats in Rajya Sabha to the States and Union Territories.\n\n📖 हिंदी स्पष्टीकरण:\nचतुर्थ अनुसूची में राज्यसभा में राज्यों तथा केन्द्र शासित प्रदेशों की सीटों का आवंटन दिया गया है।"
     },
     {
       "q_num": 23,
-      "question": "A Financial Bill (I) requires which precondition before introduction in Parliament?\n वित्तीय बिल (I) संसद में पेश करने से पहले किस पूर्व-शर्त की आवश्यकता होती है?",
+      "question": "A Financial Bill (I) requires which precondition before introduction in Parliament?",
       "options": {
-        "a": "Speaker’s certification / स्पीकर का प्रमाणन",
-        "b": "President’s recommendation / राष्ट्रपति की अनुशंसा",
-        "c": "Rajya Sabha approval / राज्यसभा की स्वीकृति",
-        "d": "PM’s written consent / प्रधानमंत्री की लिखित सहमति"
+        "a": "Speaker’s certification",
+        "b": "President’s recommendation",
+        "c": "Rajya Sabha approval",
+        "d": "PM’s written consent"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFinancial Bills (Part I) affecting taxation and government receipts require prior recommendation of the President before introduction.\n\n📖 हिंदी स्पष्टीकरण:\nकर संबंधी वित्तीय बिल (I) संसद में पेश होने से पहले राष्ट्रपति की अनुशंसा आवश्यक होती है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following may the President do in the case of a Bill passed by Parliament?\n संसद द्वारा पारित विधेयक के संबंध में राष्ट्रपति कौन-सा कार्य कर सकते हैं?",
+      "question": "Which of the following may the President do in the case of a Bill passed by Parliament?",
       "options": {
-        "a": "Return the Bill for reconsideration (except Money Bills) / पुनर्विचार हेतु विधेयक लौटा दें (मनी बिल के तब्त पर नहीं)",
-        "b": "Give assent / सहमति दें",
-        "c": "Withhold assent / सहमति न दें",
-        "d": "All of the above / उपर्युक्त सभी"
+        "a": "Return the Bill for reconsideration (except Money Bills)",
+        "b": "Give assent",
+        "c": "Withhold assent",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPresident can assent, withhold assent, or (except for Money Bills) return a bill to Parliament for reconsideration.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति सहमति दे सकते हैं, अस्वीकार कर सकते हैं, या (मनी बिल को छोड़कर) पुनर्विचार के लिए विधेयक लौटा सकते हैं।"
     },
     {
       "q_num": 25,
-      "question": "Which Article establishes the office of the Council of Ministers with the Prime Minister at the head?\n किस अनुच्छेद के अंतर्गत प्रधानमंत्री के नेतृत्व में मंत्रिपरिषद का प्रावधान है?",
+      "question": "Which Article establishes the office of the Council of Ministers with the Prime Minister at the head?",
       "options": {
-        "a": "Article 73 / अनुच्छेद 73",
-        "b": "Article 74 / अनुच्छेद 74",
-        "c": "Article 75 / अनुच्छेद 75",
-        "d": "Article 76 / अनुच्छेद 76"
+        "a": "Article 73",
+        "b": "Article 74",
+        "c": "Article 75",
+        "d": "Article 76"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 74 provides for Council of Ministers with the Prime Minister as its head to aid and advise the President.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 74 में मंत्रीपरिषद का प्रावधान है, जिसका नेतृत्व प्रधानमंत्री करते हैं और जो राष्ट्रपति की सहायता व सलाह देती है।"
     },
     {
       "q_num": 26,
-      "question": "Which House is competent to initiate a Money Bill?\n किस सदन को मनी बिल शुरू करने का अधिकार है?",
+      "question": "Which House is competent to initiate a Money Bill?",
       "options": {
-        "a": "Rajya Sabha / राज्यसभा",
-        "b": "Lok Sabha / लोकसभा",
-        "c": "Either House / कोई भी सदन",
-        "d": "President / राष्ट्रपति"
+        "a": "Rajya Sabha",
+        "b": "Lok Sabha",
+        "c": "Either House",
+        "d": "President"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nOnly the Lok Sabha can initiate a Money Bill; Rajya Sabha may only recommend amendments which Lok Sabha may accept or reject.\n\n📖 हिंदी स्पष्टीकरण:\nकेवल लोकसभा ही मनी बिल शुरू कर सकती है; राज्यसभा को केवल संशोधन सुझाने का अधिकार है।"
     },
     {
       "q_num": 27,
-      "question": "Who has the authority to decide questions of disqualification of members under the Tenth Schedule?\n दसवीं अनुसूची के अन्तर्गत सदस्य की अयोग्यता के प्रश्न का निर्णय करने का अधिकारी कौन है?",
+      "question": "Who has the authority to decide questions of disqualification of members under the Tenth Schedule?",
       "options": {
-        "a": "President / राष्ट्रपति",
-        "b": "Speaker / स्पीकर (or Chairman for Rajya Sabha)",
-        "c": "Supreme Court / सर्वोच्च न्यायालय",
-        "d": "Election Commission / चुनाव आयोग"
+        "a": "President",
+        "b": "Speaker",
+        "c": "Supreme Court",
+        "d": "Election Commission"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Speaker of Lok Sabha decides disqualification questions for Lok Sabha members; for Rajya Sabha, the Chairman (Vice-President) decides.\n\n📖 हिंदी स्पष्टीकरण:\nलोकसभा के लिए स्पीकर और राज्यसभा के लिए अध्यक्ष (उपराष्ट्रपति) दसवीं अनुसूची के तहत अयोग्यता के प्रश्नों का निर्णय करते हैं।"
     },
     {
       "q_num": 28,
-      "question": "The President may declare National Emergency under which Article?\n राष्ट्रपति किस अनुच्छेद के अंतर्गत राष्ट्रीय आपातकाल घोषित कर सकते हैं?",
+      "question": "The President may declare National Emergency under which Article?",
       "options": {
-        "a": "Article 352 / अनुच्छेद 352",
-        "b": "Article 356 / अनुच्छेद 356",
-        "c": "Article 360 / अनुच्छेद 360",
-        "d": "Article 370 / अनुच्छेद 370"
+        "a": "Article 352",
+        "b": "Article 356",
+        "c": "Article 360",
+        "d": "Article 370"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nArticle 352 empowers the President to proclaim National Emergency on grounds of war, external aggression or armed rebellion.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 352 के अंतर्गत युद्ध, विदेशी आक्रमण या सशस्त्र विद्रोह के आधार पर राष्ट्रपति राष्ट्रीय आपातकाल घोषित कर सकते हैं।"
     },
     {
       "q_num": 29,
-      "question": "Which of the following statements about Rajya Sabha is/are correct?\n निम्नलिखित में से कौन-सा/कौन-से कथन राज्यसभा के बारे में सही हैं?\n (a) It represents the States and UTs. / यह राज्यों व केन्द्रशासित प्रदेशों का प्रतिनिधित्व करती है।\n (b) Its members are elected by MLAs and nominated by the President. / इसके सदस्य विधायकों द्वारा निर्वाचित व राष्ट्रपति द्वारा नामित होते हैं।\n (c) It can initiate Money Bill. / यह मनी बिल शुरू कर सकती है।\n Choose:",
+      "question": "Which of the following statements about Rajya Sabha is/are correct?\n(a) It represents the States and UTs.\n(b) Its members are elected by MLAs and nominated by the President.\n(c) It can initiate Money Bill.\n Choose:",
       "options": {
-        "a": "(a) and (b) / (a) एवं (b)",
-        "b": "(b) and (c) / (b) एवं (c)",
-        "c": "(a) and (c) / (a) एवं (c)",
-        "d": "All of the above / उपर्युक्त सभी"
+        "a": "(a) and (b)",
+        "b": "(b) and (c)",
+        "c": "(a) and (c)",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRajya Sabha represents states; members elected by MLAs and 12 nominated by President; it cannot initiate Money Bills.\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा का प्रतिनिधित्व राज्यों का है; उसके सदस्य विधायकों द्वारा चुने जाते हैं व राष्ट्रपति द्वारा 12 नामित किए जाते हैं; मनी बिल वह शुरू नहीं कर सकती।"
     },
     {
       "q_num": 30,
-      "question": "What majority is required to pass a Constitutional Amendment Bill in Parliament (unless specified otherwise)?\n संसद में सामान्यतः संविधान संशोधन विधेयक पारित करने हेतु किस प्रकार का बहुमत आवश्यक होता है?",
+      "question": "What majority is required to pass a Constitutional Amendment Bill in Parliament (unless specified otherwise)?",
       "options": {
-        "a": "Simple majority / साधारण बहुमत",
-        "b": "Absolute majority / पूर्ण बहुमत",
-        "c": "Special majority of two-thirds of members present and voting & majority of total membership / उपस्थित और मतदान कराने वालों का 2/3 विशेष बहुमत तथा कुल सदस्य संख्या का बहुमत",
-        "d": "Unanimous consent / सर्वसम्मति"
+        "a": "Simple majority",
+        "b": "Absolute majority",
+        "c": "Special majority of two-thirds of members present and voting & majority of total membership",
+        "d": "Unanimous consent"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nConstitutional amendments generally require special majority: two-thirds of members present and voting and a majority of total membership; some amendments also need ratification by states.\n\n📖 हिंदी स्पष्टीकरण:\nसामान्यतः संविधान संशोधन के लिए उपस्थित और मतदान करने वालों के 2/3 का विशेष बहुमत व कुल सदस्य संख्या का बहुमत आवश्यक होता है; कुछ मामलों में राज्यों की स्वीकृति भी चाहिए।"
     },
     {
       "q_num": 31,
-      "question": "Which of the following is true about the Prime Minister’s appointment?\n प्रधानमंत्री की नियुक्ति के संबंध में कौन-सा कथन सही है?",
+      "question": "Which of the following is true about the Prime Minister’s appointment?",
       "options": {
-        "a": "Prime Minister is directly elected by people. / प्रधानमंत्री सीधे जनता द्वारा चुने जाते हैं।",
-        "b": "President appoints the leader of the majority party or coalition in Lok Sabha as PM. / राष्ट्रपति लोकसभा में बहुमत पार्टी/गठबंधन के नेता को PM नियुक्त करते हैं।",
-        "c": "PM must be a member of Rajya Sabha. / PM को राज्यसभा का सदस्य होना अनिवार्य है।",
-        "d": "PM is appointed by the Speaker. / PM की नियुक्ति स्पीकर करते हैं।"
+        "a": "Prime Minister is directly elected by people.",
+        "b": "President appoints the leader of the majority party or coalition in Lok Sabha as PM.",
+        "c": "PM must be a member of Rajya Sabha.",
+        "d": "PM is appointed by the Speaker."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPresident appoints as PM the leader who has majority support in Lok Sabha; if no majority, President chooses someone who is most likely to command a majority.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति प्रधानमंत्री के रूप में उस नेता को नियुक्त करते हैं जिसके पास लोकसभा में बहुमत समर्थन हो; हंग पारा में वे ऐसे व्यक्ति का चयन करते हैं जो बहुमत जुटा सके।"
     },
     {
       "q_num": 32,
-      "question": "Who can remove the Vice-President from office?\n उपराष्ट्रपति को कार्यालय से कौन हटा सकता है?",
+      "question": "Who can remove the Vice-President from office?",
       "options": {
-        "a": "Impeachment by Lok Sabha / लोकसभा द्वारा महाभियोग",
-        "b": "A resolution of Rajya Sabha agreed by Lok Sabha / राज्यसभा के प्रस्ताव जिसे लोकसभा द्वारा अनुमोदित किया जाए",
-        "c": "A Supreme Court order / सर्वोच्च न्यायालय का आदेश",
-        "d": "President’s fiat / राष्ट्रपति का आदेश"
+        "a": "Impeachment by Lok Sabha",
+        "b": "A resolution of Rajya Sabha agreed by Lok Sabha",
+        "c": "A Supreme Court order",
+        "d": "President’s fiat"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Vice-President may be removed by a resolution of the Rajya Sabha which is agreed to by the Lok Sabha — a specified process under the Constitution.\n\n📖 हिंदी स्पष्टीकरण:\nउपराष्ट्रपति को राज्यसभा के उस प्रस्ताव द्वारा हटाया जा सकता है जिसे लोकसभा द्वारा भी अनुमोदित किया गया हो।"
     },
     {
       "q_num": 33,
-      "question": "Consider the following about the President’s role in law-making:\n कानून बनाना में राष्ट्रपति की भूमिका के संबंध में विचार करें:\n (a) Every bill passed by Parliament becomes law only after President’s assent. / संसद द्वारा पारित सभी बिल राष्ट्रपति की सहमति से ही कानून बनते हैं।\n (b) President can return a bill (other than Money Bill) for reconsideration. / राष्ट्रपति किसी भी बिल को (मनी बिल के अलावा) पुनर्विचार के लिए लौटा सकता है।\n (c) President can refuse assent forever and the bill will never become law. / राष्ट्रपति स्थायी रूप से सहमति अस्वीकार कर सकते हैं और विधेयक कभी कानून नहीं बनेगा।\n Which are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following about the President’s role in law-making:\n(a) Every bill passed by Parliament becomes law only after President’s assent.\n(b) President can return a bill (other than Money Bill) for reconsideration.\n(c) President can refuse assent forever and the bill will never become law.\n Which are correct?",
       "options": {
-        "a": "(a) and (b) / (a) एवं (b)",
-        "b": "(b) and (c) / (b) एवं (c)",
-        "c": "(a) and (c) / (a) एवं (c)",
-        "d": "All of the above / उपर्युक्त सभी"
+        "a": "(a) and (b)",
+        "b": "(b) and (c)",
+        "c": "(a) and (c)",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPresident’s assent is necessary; he may return a non-Money Bill once. However, if Parliament passes again, President must assent — so refusal forever is not absolute.\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति की सहमति आवश्यक होती है; वे मनी बिल को छोड़कर किसी बिल को एक बार लौटा सकते हैं; यदि संसद पुनः पास कर दे तो राष्ट्रपति को सहमति देनी होगी।"
     },
     {
       "q_num": 34,
-      "question": "The Comptroller and Auditor General (CAG) of India is appointed by the President under which Article?\n भारत के CAG की नियुक्ति राष्ट्रपति द्वारा किस अनुच्छेद के तहत होती है?",
+      "question": "The Comptroller and Auditor General (CAG) of India is appointed by the President under which Article?",
       "options": {
-        "a": "Article 148 / अनुच्छेद 148",
-        "b": "Article 150 / अनुच्छेद 150",
-        "c": "Article 151 / अनुच्छेद 151",
-        "d": "Article 152 / अनुच्छेद 152"
+        "a": "Article 148",
+        "b": "Article 150",
+        "c": "Article 151",
+        "d": "Article 152"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nArticle 148 establishes the office of CAG and provides for appointment by the President. CAG audits government accounts.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 148 के अंतर्गत CAG के पद का प्रावधान है और उनकी नियुक्ति राष्ट्रपति द्वारा होती है; CAG सरकारी खातों का लेखा परीक्षण करते हैं।"
     },
     {
       "q_num": 35,
-      "question": "Which of the following statements about a no-confidence motion is correct?\n नो-कन्फिडेंस प्रस्ताव के बारे में कौन-सा कथन सही है?",
+      "question": "Which of the following statements about a no-confidence motion is correct?",
       "options": {
-        "a": "It is moved in Rajya Sabha. / इसे राज्यसभा में पेश किया जाता है।",
-        "b": "If passed, the Council of Ministers must resign. / पारित होने पर मंत्रिपरिषद को इस्तीफा देना होगा।",
-        "c": "It can be moved against an individual Minister only. / यह केवल किसी एक मंत्री के विरुद्ध पेश किया जा सकता है।",
-        "d": "President decides the result of the motion. / प्रस्ताव का परिणाम राष्ट्रपति तय करते हैं।"
+        "a": "It is moved in Rajya Sabha.",
+        "b": "If passed, the Council of Ministers must resign.",
+        "c": "It can be moved against an individual Minister only.",
+        "d": "President decides the result of the motion."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNo-confidence motion is moved in Lok Sabha; if passed, the Council of Ministers including PM must resign.\n\n📖 हिंदी स्पष्टीकरण:\nनॅो-कन्फिडेंस प्रस्ताव लोकसभा में रखा जाता है; यदि पारित हो जाता है तो मंत्रिपरिषद को इस्तीफा देना होगा।"
     },
     {
       "q_num": 36,
-      "question": "Which body recommends President’s impeachment procedure and time limits in the Constitution?\n संविधान में राष्ट्रपति के महाभियोग की प्रक्रिया और समय-सीमाओं की सिफारिश किसने की थी?",
+      "question": "Which body recommends President’s impeachment procedure and time limits in the Constitution?",
       "options": {
-        "a": "Constituent Assembly / संविधान सभा",
-        "b": "Drafting Committee / मसौदा समिति",
-        "c": "Law Commission / विधि आयोग",
-        "d": "Supreme Court / सर्वोच्च न्यायालय"
+        "a": "Constituent Assembly",
+        "b": "Drafting Committee",
+        "c": "Law Commission",
+        "d": "Supreme Court"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Constituent Assembly framed the provisions regarding impeachment (Articles 61 etc.) as part of the Constitution.\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान सभा ने राष्ट्रपति के महाभियोग से सम्बन्धित प्रावधान (जैसे अनुच्छेद 61) संविधान में शामिल किये।"
     },
     {
       "q_num": 37,
-      "question": "The Prime Minister’s responsibility to the Parliament is mainly based on which principle?\n प्रधानमंत्री की संसद के प्रति जिम्मेदारी मुख्य रूप से किस सिद्धांत पर आधारित है?",
+      "question": "The Prime Minister’s responsibility to the Parliament is mainly based on which principle?",
       "options": {
-        "a": "Federalism / संघवाद",
-        "b": "Collective responsibility / सामूहिक उत्तरदायित्व",
-        "c": "Judicial review / न्यायिक समीक्षा",
-        "d": "Separation of powers / शक्तियों का पृथक्करण"
+        "a": "Federalism",
+        "b": "Collective responsibility",
+        "c": "Judicial review",
+        "d": "Separation of powers"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe PM leads the Council of Ministers which is collectively responsible to Lok Sabha — the core of parliamentary government.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधानमंत्री मंत्रिपरिषद के नेतृत्वकर्ता हैं और मंत्रिपरिषद लोकसभा के प्रति सामूहिक रूप से उत्तरदायी होती है।"
     },
     {
       "q_num": 38,
-      "question": "How many members can the President nominate to the Rajya Sabha?\n राष्ट्रपति कितने सदस्यों को राज्यसभा में नामित कर सकते हैं?",
+      "question": "How many members can the President nominate to the Rajya Sabha?",
       "options": {
         "a": "10 / 10",
         "b": "12 / 12",
@@ -462,84 +462,84 @@
     },
     {
       "q_num": 39,
-      "question": "Which of the following is a discretionary power of the President?\n निम्न में से कौन-सा राष्ट्रपति का विवेकाधिकार है?",
+      "question": "Which of the following is a discretionary power of the President?",
       "options": {
-        "a": "Giving assent to every bill passed by Parliament / संसद द्वारा पारित हर विधेयक पर स्वीकृति देना",
-        "b": "Appointing the Prime Minister in a hung Parliament / हंग संसद में प्रधानमंत्री नियुक्त करना",
-        "c": "Appointing Governor of a State on PM advice / PM की सलाह पर राज्यपाल की नियुक्ति",
-        "d": "Acting on aid and advice of the Council of Ministers / मंत्रिपरिषद की सलाह पर कार्य करना"
+        "a": "Giving assent to every bill passed by Parliament",
+        "b": "Appointing the Prime Minister in a hung Parliament",
+        "c": "Appointing Governor of a State on PM advice / PM",
+        "d": "Acting on aid and advice of the Council of Ministers"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn a hung Parliament, President exercises discretion in appointing a PM likely to command majority; other functions are largely on ministers’ advice.\n\n📖 हिंदी स्पष्टीकरण:\nहंग संसद की स्थिति में राष्ट्रपति प्रधानमंत्री नियुक्त करने में विवेक का प्रयोग करते हैं; अन्य मामलों में वे आमतौर पर मंत्रिपरिषद की सलाह पर कार्य करते हैं।"
     },
     {
       "q_num": 40,
-      "question": "What majority is required in Lok Sabha to pass an ordinary bill?\n साधारण विधेयक पारित करने हेतु लोकसभा में किस प्रकार का बहुमत आवश्यक है?",
+      "question": "What majority is required in Lok Sabha to pass an ordinary bill?",
       "options": {
-        "a": "Simple majority of members present and voting / उपस्थित व मतदान करने वालों की साधारण बहुमत",
-        "b": "Two-thirds majority of total membership / कुल सदस्यों का 2/3 बहुमत",
-        "c": "Special majority of two-thirds of members present and voting / उपस्थित सदस्यों के 2/3 विशेष बहुमत",
-        "d": "Unanimous consent / सर्वसम्मति"
+        "a": "Simple majority of members present and voting",
+        "b": "Two-thirds majority of total membership",
+        "c": "Special majority of two-thirds of members present and voting",
+        "d": "Unanimous consent"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAn ordinary bill requires a simple majority of members present and voting to pass in a House.\n\n📖 हिंदी स्पष्टीकरण:\nसाधारण विधेयक पारित करने के लिए उपस्थित और मतदान करने वाले सदस्यों की साधारण बहुमत पर्याप्त है।"
     },
     {
       "q_num": 41,
-      "question": "Which official presides over Lok Sabha in the absence of the Speaker?\n स्पीकर की अनुपस्थिति में लोकसभा की अध्यक्षता कौन करता है?",
+      "question": "Which official presides over Lok Sabha in the absence of the Speaker?",
       "options": {
-        "a": "Deputy Speaker / उप-स्पीकर",
-        "b": "Prime Minister / प्रधानमंत्री",
-        "c": "President / राष्ट्रपति",
-        "d": "Leader of Opposition / विपक्ष के नेता"
+        "a": "Deputy Speaker",
+        "b": "Prime Minister",
+        "c": "President",
+        "d": "Leader of Opposition"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Deputy Speaker presides over the Lok Sabha when the Speaker is absent. If both are absent, a member appointed by the Speaker or in absence by the House presides.\n\n📖 हिंदी स्पष्टीकरण:\nस्पीकर अनुपस्थित होने पर उप-स्पीकर लोकसभा की अध्यक्षता करते हैं; दोनों अनुपस्थित हों तो स्पीकर द्वारा नामित सदस्य या सदन उपस्थिति संभालेगा।"
     },
     {
       "q_num": 42,
-      "question": "Consider the following about the removal of a Judge of the Supreme Court: (trick to test understanding of separation) — (note: not in direct topic but relevant to Parliament’s powers)\n सुप्रीम कोर्ट के न्यायाधीश को हटाने के बारे में विचार करें:\n (a) Removal is through impeachment by Parliament. / हटाने की प्रक्रिया संसद द्वारा महाभियोग है।\n (b) A simple majority in both Houses is enough. / दोनों सदनों में सरल बहुमत पर्याप्त है।\n (c) Trial takes place in Parliament and President orders removal after motion passes. / जांच संसद में होती है और प्रस्ताव पास होने पर राष्ट्रपति हटाने का आदेश देते हैं।\n Which are correct?\n कौन-से सही हैं?",
+      "question": "Consider the following about the removal of a Judge of the Supreme Court: (trick to test understanding of separation) — (note: not in direct topic but relevant to Parliament’s powers)\n(a) Removal is through impeachment by Parliament.\n(b) A simple majority in both Houses is enough.\n(c) Trial takes place in Parliament and President orders removal after motion passes.\n Which are correct?",
       "options": {
-        "a": "(a) and (c) / (a) और (c)",
-        "b": "(b) and (c) / (b) और (c)",
-        "c": "(a) only / केवल (a)",
-        "d": "All of the above / उपर्युक्त सभी"
+        "a": "(a) and (c)",
+        "b": "(b) and (c)",
+        "c": "(a) only",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nJudges of SC/HC are removed by impeachment (parliamentary process) — trial in Parliament and President acts on outcome; special majority (not simple) is required, so (b) is wrong.\n\n📖 हिंदी स्पष्टीकरण:\nसुप्रीम कोर्ट के जज महाभियोग प्रक्रिया द्वारा हटाये जा सकते हैं; परीक्षण संसद में होता है और पास होने पर राष्ट्रपति हटाने का आदेश देते हैं; सरल बहुमत पर्याप्त नहीं है।"
     },
     {
       "q_num": 43,
-      "question": "Which of the following is TRUE about the President’s power to pardon?\n राष्ट्रपति के क्षमादान अधिकार के बारे में कौन-सा कथन सत्य है?",
+      "question": "Which of the following is TRUE about the President’s power to pardon?",
       "options": {
-        "a": "President can pardon death sentence only on PM’s advice. / राष्ट्रपति केवल पीएम की सलाह पर मृत्युदंड माफ कर सकते हैं।",
-        "b": "President’s power to pardon is absolute and non-justiciable. / राष्ट्रपति का क्षमादान अधिकार पूर्ण और अदालती जांच से बाहर है।",
-        "c": "President can grant pardon, reprieve, respite or remit sentences. / राष्ट्रपति दंड माफ, रियायत या शेषांश माफ कर सकते हैं।",
-        "d": "President cannot commute a death sentence to life imprisonment. / राष्ट्रपति मौत की सजा को उम्र कैद में नहीं बदल सकते।"
+        "a": "President can pardon death sentence only on PM’s advice.",
+        "b": "President’s power to pardon is absolute and non-justiciable.",
+        "c": "President can grant pardon, reprieve, respite or remit sentences.",
+        "d": "President cannot commute a death sentence to life imprisonment."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 72 empowers the President to grant pardons, reprieves, respites or remissions; exercise is generally on aid and advice of Council of Ministers but is justiciable in limited circumstances.\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 72 के अंतर्गत राष्ट्रपति दंड माफ, रियायत या शेषांश माफ कर सकते हैं; यह सलाह पर होता है और कुछ स्थितियों में अदालत द्वारा जांच भी की जा सकती है।"
     },
     {
       "q_num": 44,
-      "question": "The Budget (Annual Financial Statement) is presented to Parliament by the:\n बजट (वार्षिक वित्तीय विवरण) संसद को किसके द्वारा प्रस्तुत किया जाता है?",
+      "question": "The Budget (Annual Financial Statement) is presented to Parliament by the:",
       "options": {
-        "a": "President / राष्ट्रपति",
-        "b": "Finance Minister / वित्त मंत्री",
-        "c": "Prime Minister / प्रधानमंत्री",
-        "d": "Speaker / स्पीकर"
+        "a": "President",
+        "b": "Finance Minister",
+        "c": "Prime Minister",
+        "d": "Speaker"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Finance Minister presents the Union Budget to the Parliament annually; it is a responsibility of the executive through the FM.\n\n📖 हिंदी स्पष्टीकरण:\nवार्षिक बजट वित्त मंत्री द्वारा संसद में प्रस्तुत किया जाता है; यह कार्यपालिका की जिम्मेदारी के माध्यम से होता है।"
     },
     {
       "q_num": 45,
-      "question": "Within how many days must the Rajya Sabha return recommendations on a Money Bill to the Lok Sabha?\n राज्यसभा को मनी बिल पर अपने सिफारिशें लोकसभा को कितने दिनों के भीतर लौटानी होती हैं?",
+      "question": "Within how many days must the Rajya Sabha return recommendations on a Money Bill to the Lok Sabha?",
       "options": {
-        "a": "7 days / 7 दिन",
-        "b": "10 days / 10 दिन",
-        "c": "14 days / 14 दिन",
-        "d": "21 days / 21 दिन"
+        "a": "7 days",
+        "b": "10 days",
+        "c": "14 days",
+        "d": "21 days"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Rajya Sabha must return any recommendations on a Money Bill within 14 days; Lok Sabha may accept or reject those recommendations.\n\n📖 हिंदी स्पष्टीकरण:\nमनी बिल पर राज्यसभा की सिफारिशें 14 दिनों के भीतर लोकसभा को वापस करनी होती हैं; लोकसभा उन्हें स्वीकार या अस्वीकार कर सकती है।"

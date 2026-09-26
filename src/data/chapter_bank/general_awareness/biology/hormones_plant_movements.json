@@ -6,223 +6,223 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following hormones is responsible for the ripening of fruits? फलों को पकाने के लिए निम्नलिखित में से कौन सा हार्मोन उत्तरदायी है?",
+      "question": "Which of the following hormones is responsible for the ripening of fruits?",
       "options": {
-        "a": "Auxin / ऑक्सिन",
-        "b": "Gibberellin / जिबरेलिन",
-        "c": "Ethylene / एथिलीन",
-        "d": "Cytokinin / साइटोकिनिन"
+        "a": "Auxin",
+        "b": "Gibberellin",
+        "c": "Ethylene",
+        "d": "Cytokinin"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEthylene is a gaseous plant hormone that promotes fruit ripening. It is also involved in the falling of leaves and flowers\n\n📖 हिंदी स्पष्टीकरण:\nएथिलीन एक गैसीय पादप हार्मोन है जो फलों को पकने में बढ़ावा देता है। यह पत्तियों और फूलों के गिरने में भी शामिल है।"
     },
     {
       "q_num": 2,
-      "question": "Which plant hormone is known as the \"Stress Hormone\" because it inhibits growth? किस पादप हार्मोन को \"तनाव हार्मोन\" के रूप में जाना जाता है क्योंकि यह विकास को रोकता है?",
+      "question": "Which plant hormone is known as the \"Stress Hormone\" because it inhibits growth?",
       "options": {
-        "a": "Auxin / ऑक्सिन",
-        "b": "Abscisic Acid / एब्सिसिक अम्ल",
-        "c": "Cytokinin / साइटोकिनिन",
-        "d": "Gibberellin / जिबरेलिन"
+        "a": "Auxin",
+        "b": "Abscisic Acid",
+        "c": "Cytokinin",
+        "d": "Gibberellin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAbscisic Acid (ABA) acts as a growth inhibitor and helps plants tolerate stressful conditions. It also promotes the closing of stomata\n\n📖 हिंदी स्पष्टीकरण:\nएब्सिसिक अम्ल (ABA) विकास अवरोधक के रूप में कार्य करता है और पौधों को तनावपूर्ण परिस्थितियों को सहन करने में मदद करता है। यह रंध्रों को बंद करने को भी बढ़ावा देता है।"
     },
     {
       "q_num": 3,
-      "question": "The movement of plant parts towards the force of gravity is called: गुरुत्वाकर्षण बल की ओर पौधे के अंगों की गति कहलाती है:",
+      "question": "The movement of plant parts towards the force of gravity is called:",
       "options": {
-        "a": "Negative Geotropism / ऋणात्मक भू-अनुवर्तन",
-        "b": "Positive Geotropism / धनात्मक भू-अनुवर्तन",
-        "c": "Phototropism / प्रकाश-अनुवर्तन",
-        "d": "Hydrotropism / जल-अनुवर्तन"
+        "a": "Negative Geotropism",
+        "b": "Positive Geotropism",
+        "c": "Phototropism",
+        "d": "Hydrotropism"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPositive geotropism is seen in roots as they grow downward into the soil in the direction of gravity. This ensures water and mineral absorption\n\n📖 हिंदी स्पष्टीकरण:\nजड़ों में धनात्मक भू-अनुवर्तन देखा जाता है क्योंकि वे गुरुत्वाकर्षण की दिशा में नीचे की ओर मिट्टी में बढ़ती हैं। यह पानी और खनिज अवशोषण सुनिश्चित करता है।"
     },
     {
       "q_num": 4,
-      "question": "Which hormone is primarily responsible for cell division in plants? पौधों में कोशिका विभाजन के लिए मुख्य रूप से कौन सा हार्मोन उत्तरदायी है?",
+      "question": "Which hormone is primarily responsible for cell division in plants?",
       "options": {
-        "a": "Ethylene / एथिलीन",
-        "b": "Auxin / ऑक्सिन",
-        "c": "Cytokinin / साइटोकिनिन",
-        "d": "Abscisic Acid / एब्सिसिक अम्ल"
+        "a": "Ethylene",
+        "b": "Auxin",
+        "c": "Cytokinin",
+        "d": "Abscisic Acid"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCytokinins are a class of plant growth substances that promote cell division, or cytokinesis, in plant roots and shoots\n\n📖 हिंदी स्पष्टीकरण:\nसाइटोकिनिन पादप वृद्धि पदार्थों का एक वर्ग है जो पौधों की जड़ों और शाखाओं में कोशिका विभाजन या साइटोकिनेसिस को बढ़ावा देते हैं।"
     },
     {
       "q_num": 5,
-      "question": "The bending of a plant stem towards light is known as: पौधे के तने का प्रकाश की ओर झुकना क्या कहलाता है?",
+      "question": "The bending of a plant stem towards light is known as:",
       "options": {
-        "a": "Chemotropism / रसायन-अनुवर्तन",
-        "b": "Hydrotropism / जल-अनुवर्तन",
-        "c": "Phototropism / प्रकाश-अनुवर्तन",
-        "d": "Thigmonasty / स्पर्शानुकुंचन"
+        "a": "Chemotropism",
+        "b": "Hydrotropism",
+        "c": "Phototropism",
+        "d": "Thigmonasty"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPhototropism is the growth of an organism in response to a light stimulus; most commonly found in plant shoots bending toward a light source\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश-अनुवर्तन प्रकाश उत्तेजना के जवाब में एक जीव की वृद्धि है, जो आमतौर पर प्रकाश स्रोत की ओर झुकने वाले पौधों के अंकुरों में पाया जाता है।"
     },
     {
       "q_num": 6,
-      "question": "Which hormone was the first to be discovered? सबसे पहले किस हार्मोन की खोज की गई थी?",
+      "question": "Which hormone was the first to be discovered?",
       "options": {
-        "a": "Insulin / इंसुलिन",
-        "b": "Secretin / सेक्रेटिन",
-        "c": "Thyroxine / थायरोक्सिन",
-        "d": "Auxin / ऑक्सिन"
+        "a": "Insulin",
+        "b": "Secretin",
+        "c": "Thyroxine",
+        "d": "Auxin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSecretin was the first hormone discovered by E. H. Starling in 1902. It is produced in the duodenum to regulate digestive juices\n\n📖 हिंदी स्पष्टीकरण:\nसेक्रेटिन 1902 में ई. एच. स्टार्लिंग द्वारा खोजा गया पहला हार्मोन था। यह पाचन रसों को विनियमित करने के लिए ग्रहणी में उत्पन्न होता है।"
     },
     {
       "q_num": 7,
-      "question": "Which gland is known as the \"Master Gland\" of the human body? मानव शरीर की किस ग्रंथि को \"मास्टर ग्रंथि\" के रूप में जाना जाता है?",
+      "question": "Which gland is known as the \"Master Gland\" of the human body?",
       "options": {
-        "a": "Thyroid Gland / थायराइड ग्रंथि",
-        "b": "Adrenal Gland / अधिवृक्क ग्रंथि",
-        "c": "Pituitary Gland / पीयूष ग्रंथि",
-        "d": "Pancreas / अग्न्याशय"
+        "a": "Thyroid Gland",
+        "b": "Adrenal Gland",
+        "c": "Pituitary Gland",
+        "d": "Pancreas"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe pituitary gland is called the master gland because it controls the functions of many other endocrine glands. It is located at the base of the brain\n\n📖 हिंदी स्पष्टीकरण:\nपीयूष ग्रंथि को मास्टर ग्रंथि कहा जाता है क्योंकि यह कई अन्य अंतःस्रावी ग्रंथियों के कार्यों को नियंत्रित करती है। यह मस्तिष्क के आधार पर स्थित होती है।"
     },
     {
       "q_num": 8,
-      "question": "Iodine is essential for the synthesis of which hormone? आयोडीन किस हार्मोन के संश्लेषण के लिए आवश्यक है?",
+      "question": "Iodine is essential for the synthesis of which hormone?",
       "options": {
-        "a": "Insulin / इंसुलिन",
-        "b": "Adrenaline / एड्रिनलीन",
-        "c": "Thyroxine / थायरोक्सिन",
-        "d": "Oxytocin / ऑक्सीटोसिन"
+        "a": "Insulin",
+        "b": "Adrenaline",
+        "c": "Thyroxine",
+        "d": "Oxytocin"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe thyroid gland requires iodine to produce thyroxine. Its deficiency leads to the enlargement of the thyroid gland, known as Goitre\n\n📖 हिंदी स्पष्टीकरण:\nथायराइड ग्रंथि को थायरोक्सिन बनाने के लिए आयोडीन की आवश्यकता होती है। इसकी कमी से थायराइड ग्रंथि बढ़ जाती है, जिसे घेंघा कहा जाता है।"
     },
     {
       "q_num": 9,
-      "question": "Which hormone is released by the Adrenal gland in response to stress? तनाव की प्रतिक्रिया में अधिवृक्क ग्रंथि द्वारा कौन सा हार्मोन जारी किया जाता है?",
+      "question": "Which hormone is released by the Adrenal gland in response to stress?",
       "options": {
-        "a": "Melatonin / मेलाटोनिन",
-        "b": "Adrenaline / एड्रिनलीन",
-        "c": "Prolactin / प्रोलैक्टिन",
-        "d": "Estrogen / एस्ट्रोजन"
+        "a": "Melatonin",
+        "b": "Adrenaline",
+        "c": "Prolactin",
+        "d": "Estrogen"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAdrenaline is known as the \"Flight-or-Fight\" hormone. It increases heart rate and blood pressure to prepare the body for emergency situations\n\n📖 हिंदी स्पष्टीकरण:\nएड्रिनलीन को \"उड़ो या लड़ो\" हार्मोन के रूप में जाना जाता है। यह आपातकालीन स्थितियों के लिए शरीर को तैयार करने के लिए हृदय गति और रक्तचाप को बढ़ाता है।"
     },
     {
       "q_num": 10,
-      "question": "The movement of pollen tubes towards the ovule is an example of: पराग नलिकाओं का बीजांड की ओर बढ़ना किसका उदाहरण है?",
+      "question": "The movement of pollen tubes towards the ovule is an example of:",
       "options": {
-        "a": "Phototropism / प्रकाश-अनुवर्तन",
-        "b": "Hydrotropism / जल-अनुवर्तन",
-        "c": "Chemotropism / रसायन-अनुवर्तन",
-        "d": "Geotropism / भू-अनुवर्तन"
+        "a": "Phototropism",
+        "b": "Hydrotropism",
+        "c": "Chemotropism",
+        "d": "Geotropism"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nChemotropism is movement in response to a chemical stimulus. The pollen tube grows toward the ovule due to chemical signals\n\n📖 हिंदी स्पष्टीकरण:\nरसायन-अनुवर्तन रासायनिक उत्तेजना के जवाब में होने वाली गति है। रासायनिक संकेतों के कारण पराग नली बीजांड की ओर बढ़ती है।"
     },
     {
       "q_num": 11,
-      "question": "Which plant hormone plays a major role in seed germination and flowering? बीज के अंकुरण और पुष्पन में कौन सा पादप हार्मोन प्रमुख भूमिका निभाता है?",
+      "question": "Which plant hormone plays a major role in seed germination and flowering?",
       "options": {
-        "a": "Abscisic Acid / एब्सिसिक अम्ल",
-        "b": "Gibberellin / जिबरेलिन",
-        "c": "Ethylene / एथिलीन",
-        "d": "Auxin / ऑक्सिन"
+        "a": "Abscisic Acid",
+        "b": "Gibberellin",
+        "c": "Ethylene",
+        "d": "Auxin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGibberellins are vital for breaking seed dormancy and promoting germination. They also stimulate stem elongation and flowering in certain plants\n\n📖 हिंदी स्पष्टीकरण:\nबीज की सुशुप्तावस्था को तोड़ने और अंकुरण को बढ़ावा देने के लिए जिबरेलिन महत्वपूर्ण हैं। वे कुछ पौधों में तने के विस्तार और पुष्पन को भी उत्तेजित करते हैं।"
     },
     {
       "q_num": 12,
-      "question": "The hormone Melatonin, which regulates the circadian rhythm (sleep-wake cycle), is secreted by: मेलाटोनिन हार्मोन, जो सर्कैडियन रिदम (नींद-जागने के चक्र) को नियंत्रित करता है, किसके द्वारा स्रावित होता है?",
+      "question": "The hormone Melatonin, which regulates the circadian rhythm (sleep-wake cycle), is secreted by:",
       "options": {
-        "a": "Pituitary Gland / पीयूष ग्रंथि",
-        "b": "Pineal Gland / पीनियल ग्रंथि",
-        "c": "Thymus / थायमस",
-        "d": "Thyroid / थायराइड"
+        "a": "Pituitary Gland",
+        "b": "Pineal Gland",
+        "c": "Thymus",
+        "d": "Thyroid"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe pineal gland, located in the brain, secretes melatonin in response to darkness to help regulate the body's sleep patterns\n\n📖 हिंदी स्पष्टीकरण:\nमस्तिष्क में स्थित पीनियल ग्रंथि, शरीर की नींद के पैटर्न को विनियमित करने में मदद करने के लिए अंधेरे के जवाब में मेलाटोनिन स्रावित करती है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following is considered a \"Mixed Gland\" (Heterocrine Gland)? निम्नलिखित में से किसे \"मिश्रित ग्रंथि\" (हेटरोक्राइन ग्रंथि) माना जाता है?",
+      "question": "Which of the following is considered a \"Mixed Gland\" (Heterocrine Gland)?",
       "options": {
-        "a": "Liver / यकृत",
-        "b": "Pancreas / अग्न्याशय",
-        "c": "Pituitary / पीयूष",
-        "d": "Adrenal / अधिवृक्क"
+        "a": "Liver",
+        "b": "Pancreas",
+        "c": "Pituitary",
+        "d": "Adrenal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe pancreas is a heterocrine gland because it acts as an exocrine gland (secreting digestive enzymes) and an endocrine gland (secreting insulin and glucagon)\n\n📖 हिंदी स्पष्टीकरण:\nअग्न्याशय एक मिश्रित ग्रंथि है क्योंकि यह एक बहिःस्रावी ग्रंथि (पाचन एंजाइमों का स्राव) और एक अंतःस्रावी ग्रंथि (इंसुलिन और ग्लूकागन का स्राव) के रूप में कार्य करता है।"
     },
     {
       "q_num": 14,
-      "question": "Deficiency of Antidiuretic Hormone (ADH) / Vasopressin leads to which condition? एंटीडाययुरेटिक हार्मोन (ADH) / वैसोप्रेसिन की कमी से कौन सी स्थिति उत्पन्न होती है?",
+      "question": "Deficiency of Antidiuretic Hormone (ADH)",
       "options": {
-        "a": "Diabetes Mellitus / मधुमेह (मेलिटस)",
-        "b": "Diabetes Insipidus / मधुमेह (इंसिपिडस)",
-        "c": "Goitre / घेंघा",
-        "d": "Addison's Disease / एडिसन रोग"
+        "a": "Diabetes Mellitus",
+        "b": "Diabetes Insipidus",
+        "c": "Goitre",
+        "d": "Addison's Disease"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nADH regulates water reabsorption in kidneys. Its deficiency prevents the body from retaining water, causing excessive urination known as Diabetes Insipidus. / ADH\n\n📖 हिंदी स्पष्टीकरण:\nगुर्दे में पानी के पुनरावशोषण को नियंत्रित करता है। इसकी कमी शरीर को पानी बनाए रखने से रोकती है, जिससे अत्यधिक पेशाब आता है जिसे डायबिटीज इंसिपिडस कहा जाता है।"
     },
     {
       "q_num": 15,
-      "question": "The \"Islets of Langerhans\" are found in which organ? \"लैंगरहैंस के द्वीप\" किस अंग में पाए जाते हैं?",
+      "question": "The \"Islets of Langerhans\" are found in which organ? \"",
       "options": {
-        "a": "Kidney / वृक्क",
-        "b": "Liver / यकृत",
-        "c": "Pancreas / अग्न्याशय",
-        "d": "Brain / मस्तिष्क"
+        "a": "Kidney",
+        "b": "Liver",
+        "c": "Pancreas",
+        "d": "Brain"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIslets of Langerhans are clusters of endocrine cells in the pancreas. They contain Alpha cells (secreting glucagon) and Beta cells (secreting insulin)\n\n📖 हिंदी स्पष्टीकरण:\nलैंगरहैंस के द्वीप अग्न्याशय में अंतःस्रावी कोशिकाओं के समूह हैं। इनमें अल्फा कोशिकाएं (ग्लूकागन स्रावित करने वाली) और बीटा कोशिकाएं (इंसुलिन स्रावित करने वाली) होती हैं।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): Auxin causes the plant to bend towards light. अभिकथन (A): ऑक्सिन पौधे को प्रकाश की ओर झुकने का कारण बनता है।\n Reason (R): Auxin moves to the dark side of the stem, causing cells to grow faster there. कारण (R): ऑक्सिन तने के अंधेरे हिस्से की ओर चला जाता है, जिससे वहां कोशिकाएं तेजी से बढ़ती हैं।",
+      "question": "Assertion (A): Auxin causes the plant to bend towards light.\nReason (R): Auxin moves to the dark side of the stem, causing cells to grow faster there.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A. A",
+        "b": "Both A and R are true, but R is not the correct explanation of A. A",
+        "c": "A is true, but R is false. A",
+        "d": "A is false, but R is true. A"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWhen light comes from one side, auxin concentrates on the shaded side. This uneven growth makes the plant bend toward the light source\n\n📖 हिंदी स्पष्टीकरण:\nजब प्रकाश एक तरफ से आता है, तो ऑक्सिन छायादार हिस्से पर केंद्रित हो जाता है। यह असमान वृद्धि पौधे को प्रकाश स्रोत की ओर झुका देती है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements regarding the Pancreas is CORRECT? अग्न्याशय के संबंध में निम्नलिखित में से कौन सा कथन सही है?\n 1. It is the second largest gland in the body. / यह शरीर की दूसरी सबसे बड़ी ग्रंथि है।\n 2. Insulin converts Glycogen to Glucose. / इंसुलिन ग्लाइकोजन को ग्लूकोज में परिवर्तित करता है। \n 3. Glucagon is produced by Beta cells. / ग्लूकागन बीटा कोशिकाओं द्वारा निर्मित होता है।",
+      "question": "Which of the following statements regarding the Pancreas is CORRECT?\n1. It is the second largest gland in the body.\n2. Insulin converts Glycogen to Glucose.\n3. Glucagon is produced by Beta cells.",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "1 and 2 / 1 और 2",
-        "c": "2 and 3 / 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "Only 1",
+        "b": "1 and 2",
+        "c": "2 and 3",
+        "d": "1, 2 and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1 is correct. However, Insulin converts Glucose to Glycogen (not vice versa), and Glucagon is produced by Alpha cells\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है। हालांकि, इंसुलिन ग्लूकोज को ग्लाइकोजन में परिवर्तित करता है, और ग्लूकागन अल्फा कोशिकाओं द्वारा निर्मित होता है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Roots show negative phototropism. अभिकथन (A): जड़ें ऋणात्मक प्रकाश-अनुवर्तन प्रदर्शित करती हैं।\n Reason (R): Roots grow away from the light source towards the soil. कारण (R): जड़ें प्रकाश स्रोत से दूर मिट्टी की ओर बढ़ती हैं।",
+      "question": "Assertion (A): Roots show negative phototropism.\nReason (R): Roots grow away from the light source towards the soil.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A. A",
+        "b": "Both A and R are true, but R is not the correct explanation of A. A",
+        "c": "A is true, but R is false. A",
+        "d": "A is false, but R is true. A"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRoots generally grow away from light to anchor the plant and seek water. This movement away from light is called negative phototropism\n\n📖 हिंदी स्पष्टीकरण:\nजड़ें आम तौर पर पौधे को स्थिर करने और पानी की तलाश के लिए प्रकाश से दूर बढ़ती हैं। प्रकाश से दूर जाने वाली इस गति को ऋणात्मक प्रकाश-अनुवर्तन कहा जाता है।"
     },
     {
       "q_num": 19,
-      "question": "Match the following glands with their functions: निम्नलिखित ग्रंथियों को उनके कार्यों के साथ सुमेलित करें:\n 1. Thymus - A. Regulates Calcium levels / थाइमस – A. कैल्शियम के स्तर को नियंत्रित करना।\n 2. Parathyroid - B. Training WBCs / पैराथायरायड - WBC को प्रशिक्षित करना।\n 3. Hypothalamus - C. Master of Master gland / हाइपोथैलेमस- मास्टर ग्रंथि का मास्टर",
+      "question": "Match the following glands with their functions:\n1. Thymus - A. Regulates Calcium levels\n2. Parathyroid - B. Training WBCs\n3. Hypothalamus - C. Master of Master gland",
       "options": {
         "a": "1-B, 2-A, 3-C",
         "b": "1-A, 2-B, 3-C",
@@ -234,72 +234,72 @@
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Nastic movements are non-growth-related movements.\n अभिकथन (A): अणुकुंची गतियाँ वृद्धि से संबंधित नहीं होती हैं।\n Reason (R): The direction of nastic movement is determined by the direction of the stimulus. कारण (R): अणुकुंची गति की दिशा उत्तेजना की दिशा से निर्धारित होती है।",
+      "question": "Assertion (A): Nastic movements are non-growth-related movements.\nReason (R): The direction of nastic movement is determined by the direction of the stimulus.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A. A",
+        "b": "Both A and R are true, but R is not the correct explanation of A. A",
+        "c": "A is true, but R is false. A",
+        "d": "A is false, but R is true. A"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNastic movements are indeed non-growth related, but they are non-directional (the stimulus direction does not matter)\n\n📖 हिंदी स्पष्टीकरण:\nअणुकुंची गतियाँ वास्तव में वृद्धि से संबंधित नहीं होती हैं, लेकिन वे गैर-दिशामक होती हैं (उत्तेजना की दिशा मायने नहीं रखती है)।"
     },
     {
       "q_num": 21,
-      "question": "Which hormone is known as the \"Birth Hormone\" or \"Milk Ejection Hormone\"? किस हार्मोन को \"जन्म हार्मोन\" या \"दूध निकालने वाला हार्मोन\" कहा जाता है?",
+      "question": "Which hormone is known as the \"Birth Hormone\" or \"Milk Ejection Hormone\"?",
       "options": {
-        "a": "Prolactin / प्रोलैक्टिन",
-        "b": "Oxytocin / ऑक्सीटोसिन",
-        "c": "Progesterone / प्रोजेस्टेरोन",
-        "d": "Estrogen / एस्ट्रोजन"
+        "a": "Prolactin",
+        "b": "Oxytocin",
+        "c": "Progesterone",
+        "d": "Estrogen"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nOxytocin stimulates uterine contractions during labor and helps in the ejection (secretion) of milk. Prolactin is for milk formation\n\n📖 हिंदी स्पष्टीकरण:\nऑक्सीटोसिन प्रसव के दौरान गर्भाशय के संकुचन को उत्तेजित करता है और दूध निकालने (स्राव) में मदद करता है। प्रोलैक्टिन दूध बनने के लिए है।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements about Exocrine glands: बहिःस्रावी ग्रंथियों के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. They release hormones directly into the blood. / वे सीधे रक्त में हार्मोन छोड़ते हैं।\n 2. They have ducts to release their secretions. / उनके स्राव को छोड़ने के लिए नलिकाएं होती हैं।\n 3. Examples include sweat and salivary glands. / उदाहरणों में पसीना और लार ग्रंथियां शामिल हैं।",
+      "question": "Consider the following statements about Exocrine glands:\n1. They release hormones directly into the blood.\n2. They have ducts to release their secretions.\n3. Examples include sweat and salivary glands.",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "All are correct / सभी सत्य"
+        "a": "1 and 2",
+        "b": "2 and 3",
+        "c": "1 and 3",
+        "d": "All are correct"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nExocrine glands use ducts to release substances like enzymes or sweat. Endocrine glands are ductless and release hormones into the blood\n\n📖 हिंदी स्पष्टीकरण:\nबहिःस्रावी ग्रंथियां एंजाइम या पसीने जैसे पदार्थों को छोड़ने के लिए नलिकाओं का उपयोग करती हैं। अंतःस्रावी ग्रंथियां नलिकाविहीन होती हैं और रक्त में हार्मोन छोड़ती हैं।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): Excessive growth of body parts (Gigantism) is caused by the Pituitary gland.\n अभिकथन (A): शरीर के अंगों की अत्यधिक वृद्धि (विशालकायता) पीयूष ग्रंथि के कारण होती है।\n Reason (R): Over-secretion of Growth Hormone (GH) leads to Gigantism and Acromegaly.\n कारण (R): वृद्धि हार्मोन (GH) के अधिक स्राव से विशालकायता और एक्रोमेगाली होती है।",
+      "question": "Assertion (A): Excessive growth of body parts (Gigantism) is caused by the Pituitary gland.\n Reason (R): Over-secretion of Growth Hormone (GH) leads to Gigantism and Acromegaly.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A. A",
+        "b": "Both A and R are true, but R is not the correct explanation of A. A",
+        "c": "A is true, but R is false. A",
+        "d": "A is false, but R is true. A"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Pituitary gland releases GH. An excess of this hormone during childhood causes Gigantism, and in adults, it causes Acromegaly\n\n📖 हिंदी स्पष्टीकरण:\nपीयूष ग्रंथि GH छोड़ती है। बचपन में इस हार्मोन की अधिकता से विशालकायता होती है, और वयस्कों में यह एक्रोमेगाली का कारण बनती है।"
     },
     {
       "q_num": 24,
-      "question": "Which hormone is released by the heart to regulate blood pressure? रक्तचाप को नियंत्रित करने के लिए हृदय द्वारा कौन सा हार्मोन छोड़ा जाता है?",
+      "question": "Which hormone is released by the heart to regulate blood pressure?",
       "options": {
-        "a": "ADH / ए-डी-एच",
-        "b": "ANF / ए-एन-एफ",
-        "c": "Cortisol / कोर्टिसोल",
-        "d": "Thyroxine / थायरोक्सिन"
+        "a": "ADH",
+        "b": "ANF",
+        "c": "Cortisol",
+        "d": "Thyroxine"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Atrial wall of the heart secretes Atrial Natriuretic Factor (ANF), a peptide hormone that helps regulate and lower blood pressure\n\n📖 हिंदी स्पष्टीकरण:\nहृदय की अलिंद दीवार एट्रियल नैट्रियूरेटिक फैक्टर (ANF) स्रावित करती है, जो एक पेप्टाइड हार्मोन है जो रक्तचाप को नियंत्रित करने और कम करने में मदद करता है।"
     },
     {
       "q_num": 25,
-      "question": "Closing of the Venus Flytrap's leaves when an insect lands on them is an example of: जब कोई कीट वीनस फ्लाईट्रैप की पत्तियों पर बैठता है तो उनका बंद होना किसका उदाहरण है?",
+      "question": "Closing of the Venus Flytrap's leaves when an insect lands on them is an example of:",
       "options": {
-        "a": "Photonastic movement / प्रकाशानुकुंचन गति",
-        "b": "Thigmonastic movement / स्पर्शानुकुंचन गति",
-        "c": "Positive Geotropism / धनात्मक भू-अनुवर्तन",
-        "d": "Chemotropism / रसायन-अनुवर्तन"
+        "a": "Photonastic movement",
+        "b": "Thigmonastic movement",
+        "c": "Positive Geotropism",
+        "d": "Chemotropism"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThigmonastic movement is a non-directional response to touch. When the fly touches the leaf hairs, the trap closes rapidly\n\n📖 हिंदी स्पष्टीकरण:\nस्पर्शानुकुंचन गति स्पर्श के प्रति एक गैर-दिशामक प्रतिक्रिया है। जब मक्खी पत्ती के रोमों को छूती है, तो जाल तेजी से बंद हो जाता है।"

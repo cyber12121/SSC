@@ -6,139 +6,139 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who is considered the 'Real Founder' (Propounder) of the Jain religion? जैन धर्म के 'वास्तविक संस्थापक' (प्रवर्तक) के रूप में किसे माना जाता है?",
+      "question": "Who is considered the 'Real Founder' (Propounder) of the Jain religion?",
       "options": {
-        "a": "Rishabh Dev / ऋषभ देव",
-        "b": "Parshavnath / पार्श्वनाथ",
-        "c": "Vardhaman Mahavir / वर्धमान महावीर",
-        "d": "Aristanemi / अरिष्टनेमि"
+        "a": "Rishabh Dev",
+        "b": "Parshavnath",
+        "c": "Vardhaman Mahavir",
+        "d": "Aristanemi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAlthough Rishabh Dev was the first Tirthankar and founder of Jainism, Vardhaman Mahavir (the 24th Tirthankar) is considered the real founder and propounder due to his role in popularizing and organizing the religion. He systematized the philosophy and teachings that became the core tenets of Jainism.\n\n📖 हिंदी स्पष्टीकरण:\nयद्यपि ऋषभ देव प्रथम तीर्थंकर और जैन धर्म के संस्थापक थे, लेकिन वर्धमान महावीर (24वें तीर्थंकर) को धर्म को लोकप्रिय बनाने और व्यवस्थित करने में उनकी भूमिका के कारण वास्तविक संस्थापक और प्रवर्तक माना जाता है। उन्होंने दर्शन और शिक्षाओं को व्यवस्थित किया जो जैन धर्म के मूल सिद्धांत बन गए।"
     },
     {
       "q_num": 2,
-      "question": "Gautam Buddha belonged to which clan? गौतम बुद्ध किस कुल से संबंधित थे?",
+      "question": "Gautam Buddha belonged to which clan?",
       "options": {
-        "a": "Koliya Clan / कोलिय कुल",
-        "b": "Lichchhavi Clan / लिच्छवी कुल",
-        "c": "Janathrika Clan / जनत्रिका कुल",
-        "d": "Shakya Clan / शाक्य कुल"
+        "a": "Koliya Clan",
+        "b": "Lichchhavi Clan",
+        "c": "Janathrika Clan",
+        "d": "Shakya Clan"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGautam Buddha's father, Suddhodhana, was the chief of the Shakya clan, which is why Buddha is also known as Shakyamuni (Sage of the Shakyas). He was born in Lumbini, Nepal, into this clan.\n\n📖 हिंदी स्पष्टीकरण:\nगौतम बुद्ध के पिता, शुद्धोधन, शाक्य कुल के मुखिया थे, यही कारण है कि बुद्ध को शाक्यमुनि (शाक्यों के ऋषि) के रूप में भी जाना जाता है। उनका जन्म नेपाल के लुंबिनी में इसी कुल में हुआ था।"
     },
     {
       "q_num": 3,
-      "question": "Where did Vardhaman Mahavir attain Enlightenment (Kaivalya)?\n वर्धमान महावीर को ज्ञान (कैवल्य) की प्राप्ति कहाँ हुई थी?",
+      "question": "Where did Vardhaman Mahavir attain Enlightenment (Kaivalya)?",
       "options": {
-        "a": "Kundagrama / कुण्डग्राम",
-        "b": "Pavapuri / पावापुरी",
-        "c": "Pava / पावा",
-        "d": "Jambhikagrama / जृंभिकग्राम"
+        "a": "Kundagrama",
+        "b": "Pavapuri",
+        "c": "Pava",
+        "d": "Jambhikagrama"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMahavir attained 'Kaivalya' (perfect knowledge) at the age of 42 under a Sal tree at Jambhikagrama, near the Rijupalika river. Kaivalya signifies liberation and the end of the cycle of rebirth in Jainism.\n\n📖 हिंदी स्पष्टीकरण:\nमहावीर को 42 वर्ष की आयु में जृंभिकग्राम में साल वृक्ष के नीचे, ऋजुपालिका नदी के पास 'कैवल्य' (पूर्ण ज्ञान) की प्राप्ति हुई। कैवल्य जैन धर्म में मुक्ति और पुनर्जन्म के चक्र के अंत को दर्शाता है।"
     },
     {
       "q_num": 4,
-      "question": "The Buddhist concept of 'Dhamma' in the Triratnas refers to:\n त्रिरत्नों में बौद्ध अवधारणा 'धम्म' किसे संदर्भित करती है?",
+      "question": "The Buddhist concept of 'Dhamma' in the Triratnas refers to:",
       "options": {
-        "a": "Buddha / बुद्ध",
-        "b": "Religion or Teachings / धर्म या शिक्षाएँ",
-        "c": "Community of Monks / भिक्षुओं का समुदाय",
-        "d": "The Eightfold path / अष्टांगिक मार्ग"
+        "a": "Buddha",
+        "b": "Religion or Teachings",
+        "c": "Community of Monks",
+        "d": "The Eightfold path"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Triratnas (Three Jewels) of Buddhism are Buddha (The Enlightened One), Dhamma (the teachings, or religion), and Sangha (the monastic community). These three form the refuge for Buddhists.\n\n📖 हिंदी स्पष्टीकरण:\nबौद्ध धर्म के त्रिरत्न (तीन रत्न) बुद्ध (ज्ञान प्राप्त व्यक्ति), धम्म (शिक्षाएँ, या धर्म), और संघ (भिक्षुओं का समुदाय) हैं। ये तीनों बौद्धों के लिए शरण का निर्माण करते हैं।"
     },
     {
       "q_num": 5,
-      "question": "The First Buddhist Council was held at which place?\n प्रथम बौद्ध संगीति किस स्थान पर आयोजित की गई थी?",
+      "question": "The First Buddhist Council was held at which place?",
       "options": {
-        "a": "Vaishali / वैशाली",
-        "b": "Rajgriha / राजगृह",
-        "c": "Patliputra / पाटलिपुत्र",
-        "d": "Kashmir / कश्मीर"
+        "a": "Vaishali",
+        "b": "Rajgriha",
+        "c": "Patliputra",
+        "d": "Kashmir"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe First Buddhist Council was held at Rajgriha (or Rajagriha) around 483 BC immediately after the death of the Buddha. It was patronized by King Ajatshatru and presided over by Mahakashyapa.\n\n📖 हिंदी स्पष्टीकरण:\nप्रथम बौद्ध संगीति का आयोजन बुद्ध के निधन के तुरंत बाद लगभग 483 ईसा पूर्व में राजगृह में हुआ था। इसे राजा अजातशत्रु द्वारा संरक्षण दिया गया था और इसकी अध्यक्षता महाकाश्यप ने की थी।"
     },
     {
       "q_num": 6,
-      "question": "Which one of the following is NOT a Jain vow (Anuvrata)?\n निम्नलिखित में से कौन सा एक जैन व्रत (अणुव्रत) नहीं है?",
+      "question": "Which one of the following is NOT a Jain vow (Anuvrata)?",
       "options": {
-        "a": "Ahimsa / अहिंसा",
-        "b": "Asteya / अस्तेय",
-        "c": "Dharma / धर्म",
-        "d": "Aparigraha / अपरिग्रह"
+        "a": "Ahimsa",
+        "b": "Asteya",
+        "c": "Dharma",
+        "d": "Aparigraha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe five main vows (Anuvratas) of Jainism are Ahimsa (non-violence), Satya (truth), Asteya (non-stealing), Brahmacharya (celibacy/monogamy), and Aparigraha (non-possession). Dharma is a broader term, not one of the five specific vows.\n\n📖 हिंदी स्पष्टीकरण:\nजैन धर्म के पाँच मुख्य व्रत (अणुव्रत) अहिंसा, सत्य, अस्तेय (चोरी न करना), ब्रह्मचर्य (एकविवाह), और अपरिग्रह हैं। धर्म एक व्यापक शब्द है, न कि पाँच विशिष्ट व्रतों में से एक।"
     },
     {
       "q_num": 7,
-      "question": "What does the Buddhist symbol 'Wheel' represent?\n बौद्ध प्रतीक 'चक्र' किसे दर्शाता है?",
+      "question": "What does the Buddhist symbol 'Wheel' represent?",
       "options": {
-        "a": "Birth (Janma) / जन्म",
-        "b": "Renunciation (Mahabhinishkramana) / गृह त्याग (महाभिनिष्क्रमण)",
-        "c": "First Sermon (Dharmachakrapravartana) / प्रथम उपदेश (धर्मचक्रपरिवर्तन)",
-        "d": "Death (Mahaparinirvana) / मृत्यु (महापरिनिर्वाण)"
+        "a": "Birth (Janma)",
+        "b": "Renunciation (Mahabhinishkramana)",
+        "c": "First Sermon (Dharmachakrapravartana)",
+        "d": "Death (Mahaparinirvana)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Wheel, or Dharmachakrapravartana (Turning the Wheel of Law), symbolizes the Buddha's First Sermon given at Sarnath. The eight spokes of the wheel represent the Eightfold Path.\n\n📖 हिंदी स्पष्टीकरण:\nचक्र, या धर्मचक्रप्रवर्तन (धर्म के चक्र का प्रवर्तन), सारनाथ में दिए गए बुद्ध के प्रथम उपदेश का प्रतीक है। चक्र की आठ तीलियाँ अष्टांगिक मार्ग का प्रतिनिधित्व करती हैं।"
     },
     {
       "q_num": 8,
-      "question": "The Jain practice of 'Sallekhana' is associated with:\n जैनों की 'सल्लेखना' प्रथा किससे संबंधित है?",
+      "question": "The Jain practice of 'Sallekhana' is associated with:",
       "options": {
-        "a": "Strict meditation / कठोर ध्यान",
-        "b": "Death by fasting / उपवास द्वारा मृत्यु",
-        "c": "Giving up material possessions / भौतिक संपत्ति का त्याग",
-        "d": "Right Knowledge / सम्यक ज्ञान"
+        "a": "Strict meditation",
+        "b": "Death by fasting",
+        "c": "Giving up material possessions",
+        "d": "Right Knowledge"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSallekhana (or Santhara) is a Jain practice where a person voluntarily fasts to death. Chandragupta Maurya is said to have observed Sallekhana at Shravanabelagola in Karnataka during a famine in Magadh.\n\n📖 हिंदी स्पष्टीकरण:\nसल्लेखना (या संथारा) जैनों की एक प्रथा है जहाँ एक व्यक्ति स्वेच्छा से उपवास करके मृत्यु को प्राप्त करता है। कहा जाता है कि चंद्रगुप्त मौर्य ने मगध में अकाल के दौरान कर्नाटक के श्रवणबेलगोला में सल्लेखना किया था।"
     },
     {
       "q_num": 9,
-      "question": "Who among the following has written the biography of Buddha, Buddhacharita ? निम्नलिखित में से किसने बुद्ध की जीवनी, बुद्धचरित लिखी है?",
+      "question": "Who among the following has written the biography of Buddha, Buddhacharita ?",
       "options": {
-        "a": "Ashvaghosha / अश्वघोषा",
-        "b": "Nagarjuna / नागार्जुन",
-        "c": "Vasumitra / वसुमित्र",
-        "d": "Charaka / चरक"
+        "a": "Ashvaghosha",
+        "b": "Nagarjuna",
+        "c": "Vasumitra",
+        "d": "Charaka"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOther writers and books: Nagarjuna Mulamadhyamakakarika. Vasumitra Mahavibhasa. Charaka- Samhita\n\n📖 हिंदी स्पष्टीकरण:\nअन्य लेखक और पुस्तकें: नागार्जुन मूलमध्यमककारिका। वसुमित्र महाविभासा। चरक-संहिता."
     },
     {
       "q_num": 10,
-      "question": "Who was the first Bhikkhuni (female monk) in the history of Buddhism?\n बौद्ध धर्म के इतिहास में प्रथम भिक्षुणी (महिला भिक्षु) कौन थी?",
+      "question": "Who was the first Bhikkhuni (female monk) in the history of Buddhism?",
       "options": {
-        "a": "Yashodhara / यशोधरा",
-        "b": "Mahamaya / महामाया",
-        "c": "Amrapali / आम्रपाली",
-        "d": "Mahaprajapati Goutami / महाप्रजापति गौतमी"
+        "a": "Yashodhara",
+        "b": "Mahamaya",
+        "c": "Amrapali",
+        "d": "Mahaprajapati Goutami"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMahaprajapati Goutami was Gautam Buddha's stepmother (and maternal aunt). After Buddha's mother, Mahamaya, passed away, Goutami raised him and later became the first woman to be ordained as a Bhikkhuni (female monk).\n\n📖 हिंदी स्पष्टीकरण:\nमहाप्रजापति गौतमी गौतम बुद्ध की सौतेली माँ (और मौसी) थीं। बुद्ध की माता महामाया के निधन के बाद, गौतमी ने उनका पालन-पोषण किया और बाद में भिक्षुणी (महिला भिक्षु) के रूप में दीक्षा लेने वाली पहली महिला बनीं।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the division among Jains:\n जैनों के बीच विभाजन के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. The division into Digambara and Shvetambara occurred after the Second Jain Council. / दिगंबर और श्वेतांबर में विभाजन द्वितीय जैन संगीति के बाद हुआ।\n 2. The Digambaras were led by Bhadrabahu, who went to South India during the Magadh famine. / दिगंबरों का नेतृत्व भद्रबाहु ने किया था, जो मगध के अकाल के दौरान दक्षिण भारत गए थे।\n 3. The Shvetambaras were led by Sthulbhadra and wore white clothes. / श्वेतांबरों का नेतृत्व स्थूलभद्र ने किया और उन्होंने श्वेत वस्त्र धारण किए।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the division among Jains:\n1. The division into Digambara and Shvetambara occurred after the Second Jain Council.\n2. The Digambaras were led by Bhadrabahu, who went to South India during the Magadh famine.\n3. The Shvetambaras were led by Sthulbhadra and wore white clothes.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe major division occurred following the famine in Magadh, when the group led by Bhadrabahu (Digambaras) went south, and the group led by Sthulbhadra (Shvetambaras) stayed. The division formalized around the time of the First Jain Council (298 BC), not the second.\n\n📖 हिंदी स्पष्टीकरण:\nप्रमुख विभाजन मगध में अकाल के बाद हुआ, जब भद्रबाहु के नेतृत्व वाला समूह (दिगंबर) दक्षिण चला गया, और स्थूलभद्र के नेतृत्व वाला समूह (श्वेतांबर) वहीं रुका रहा। विभाजन प्रथम जैन संगीति (298 ईसा पूर्व) के समय औपचारिक रूप दिया गया, न कि दूसरी संगीति के बाद।"
     },
     {
       "q_num": 12,
-      "question": "Match the following Buddhist Councils with their respective Patrons:\n निम्नलिखित बौद्ध संगीतियों को उनके संबंधित संरक्षकों से सुमेलित करें:\n Council (संगीति):\n P. 1st Buddhist Council / प्रथम बौद्ध संगीति\n Q. 2nd Buddhist Council / द्वितीय बौद्ध संगीति\n R. 3rd Buddhist Council / तृतीय बौद्ध संगीति\n S. 4th Buddhist Council / चतुर्थ बौद्ध संगीति\n Patron (संरक्षक):\n 1. Ashoka / अशोक\n 2. Ajatshatru / अजातशत्रु\n 3. Kalashoka / कालाशोक\n 4. Kanishka / कनिष्क\n Select the correct match from the options below (P-Q-R-S):\n नीचे दिए गए विकल्पों में से सही मिलान का चयन करें (P-Q-R-S):",
+      "question": "Match the following Buddhist Councils with their respective Patrons:\nCouncil (\nP. 1st Buddhist Council\nQ. 2nd Buddhist Council\nR. 3rd Buddhist Council\nS. 4th Buddhist Council\nPatron (\n1. Ashoka\n2. Ajatshatru\n3. Kalashoka\n4. Kanishka\n Select the correct match from the options below (P-Q-R-S):",
       "options": {
         "a": "2-3-1-4",
         "b": "3-2-4-1",
@@ -150,43 +150,43 @@
     },
     {
       "q_num": 13,
-      "question": "Assertion (A): Both Jainism and Buddhism are considered 'heterodox' in the context of Indian Philosophy.\n तर्क (A): भारतीय दर्शन के संदर्भ में जैन धर्म और बौद्ध धर्म दोनों को 'नास्तिक' (Heterodox) माना जाता है।\n Reason (R): Both the religions rejected the authority of the Vedas, unlike the orthodox Hindu traditions.\n कारण (R): दोनों धर्मों ने रूढ़िवादी हिंदू परंपराओं के विपरीत, वेदों के अधिकार को अस्वीकार कर दिया।",
+      "question": "Assertion (A): Both Jainism and Buddhism are considered 'heterodox' in the context of Indian Philosophy.\n Reason (R): Both the religions rejected the authority of the Vedas, unlike the orthodox Hindu traditions.",
       "options": {
-        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं और (R), (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn Indian philosophy, heterodox (Nastika) schools are those that do not accept the authority of the Vedas, while orthodox (Astika) schools do. Since both Jainism and Buddhism rejected the ritualistic Brahminical domination and the Vedas' authority, they are correctly classified as heterodox\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय दर्शन में, नास्तिक वे मत हैं जो वेदों के अधिकार को स्वीकार नहीं करते हैं, जबकि आस्तिक मत ऐसा करते हैं। चूंकि जैन धर्म और बौद्ध धर्म दोनों ने कर्मकांडीय ब्राह्मणवादी प्रभुत्व और वेदों के अधिकार को अस्वीकार कर दिया, इसलिए उन्हें सही ढंग से नास्तिक के रूप में वर्गीकृत किया गया है।"
     },
     {
       "q_num": 14,
-      "question": "The Buddhist Mudra known as 'Bhumisparsha Mudra' represents which event in the life of Buddha?\n 'भूमिस्पर्श मुद्रा' के नाम से जानी जाने वाली बौद्ध मुद्रा, बुद्ध के जीवन की किस घटना का प्रतिनिधित्व करती है?",
+      "question": "The Buddhist Mudra known as 'Bhumisparsha Mudra' represents which event in the life of Buddha?",
       "options": {
-        "a": "Protection and overcoming fear / सुरक्षा और भय पर काबू पाना",
-        "b": "The first sermon or teachings / प्रथम उपदेश या शिक्षाएँ",
-        "c": "Enlightenment / ज्ञान प्राप्ति",
-        "d": "Meditation and inner peace / ध्यान और आंतरिक शांति"
+        "a": "Protection and overcoming fear",
+        "b": "The first sermon or teachings",
+        "c": "Enlightenment",
+        "d": "Meditation and inner peace"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBhumisparsha Mudra, or 'Touching the Earth' gesture, represents the moment of Buddha's Enlightenment (Nirvana) at Bodh Gaya, when he called upon the Earth to witness his realization. The other mudras symbolize other aspects like Abhaya (fearlessness) and Dhyana (meditation).\n\n📖 हिंदी स्पष्टीकरण:\nभूमिस्पर्श मुद्रा, या 'पृथ्वी को छूने' का इशारा, बोधगया में बुद्ध के ज्ञान (निर्वाण) प्राप्ति के क्षण का प्रतिनिधित्व करता है, जब उन्होंने अपनी अनुभूति का गवाह बनने के लिए पृथ्वी को आह्वान किया था। अन्य मुद्राएँ अन्य पहलुओं जैसे अभय (निर्भीकता) और ध्यान का प्रतीक हैं।"
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements about early Jainism and Buddhism:\n प्रारंभिक जैन धर्म और बौद्ध धर्म के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. Both religions generally did not attach importance to the existing Varna system. / दोनों धर्मों ने आम तौर पर मौजूदा वर्ण व्यवस्था को महत्व नहीं दिया।\n 2. Both Mahavir and Buddha belonged to the Kshatriya varna. / महावीर और बुद्ध दोनों क्षत्रिय वर्ण से संबंधित थे।\n 3. Jainism believed in a divine figure, whereas Buddhism did not. / जैन धर्म एक दिव्य सत्ता में विश्वास करता था, जबकि बौद्ध धर्म ऐसा नहीं करता था।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about early Jainism and Buddhism:\n1. Both religions generally did not attach importance to the existing Varna system.\n2. Both Mahavir and Buddha belonged to the Kshatriya varna.\n3. Jainism believed in a divine figure, whereas Buddhism did not.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1: Both religions generally did not give importance to the existing caste system. This statement is correct.\n8. Early Jainism and Buddhism did not give special importance to the caste system. Both emphasized equality and the universal availability of liberation (moksha).\nStatement 2: Both Mahavira and Buddha belonged to the Kshatriya caste. This statement is correct.\n9. Mahavira was born into the Kshatriya clan of Vaishali, and Buddha was born into the Shakya Kshatriya clan.\nStatement 3: Jainism believed in a divine being, while Buddhism did not. This statement is incorrect.\n10. Jainism did not believe in a creator God or a divine being. It is based on the purification of the soul and the principle of karma. Buddhism is also non-theistic and focuses on Nirvana.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1: दोनों धर्मों ने आम तौर पर मौजूदा वर्ण व्यवस्था को महत्व नहीं दिया। यह कथन सही है।\n11. प्रारंभिक जैन धर्म और बौद्ध धर्म ने वर्ण-व्यवस्था को विशेष महत्व नहीं दिया। दोनों ने समानता और मोक्ष की सार्वभौमिक उपलब्धता पर बल दिया।\nकथन 2: महावीर और बुद्ध दोनों क्षत्रिय वर्ण से संबंधित थे। यह कथन सही है।\n12. महावीर का जन्म वैशाली के क्षत्रिय गण में हुआ था और बुद्ध का जन्म शाक्य क्षत्रिय कुल में हुआ था।\nकथन 3: जैन धर्म एक दिव्य सत्ता में विश्वास करता था, जबकि बौद्ध धर्म ऐसा नहीं करता था। यह कथन गलत है।\n13. जैन धर्म किसी सृष्टिकर्ता ईश्वर या दिव्य सत्ता में विश्वास नहीं करता था। यह आत्मा की शुद्धि और कर्म सिद्धांत पर आधारित है। बौद्ध धर्म भी ईश्वर-निरपेक्ष है और निर्वाण पर केंद्रित है।"
     },
     {
       "q_num": 16,
-      "question": "Which one of the following statements about the Buddhist Goddess Hariti is correct?\n 1. She was converted by the Buddha from a blood-thirsty yakshi to a benevolent maternal figure.\n 2. She is the feminine personification of wisdom.\n 3. She protects people from eight great fears.\n 4. She is a warrior goddess associated with the dawn.\n बौद्ध देवी हरिति के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which one of the following statements about the Buddhist Goddess Hariti is correct?\n 1. She was converted by the Buddha from a blood-thirsty yakshi to a benevolent maternal figure.\n 2. She is the feminine personification of wisdom.\n 3. She protects people from eight great fears.\n 4. She is a warrior goddess associated with the dawn.",
       "options": {
         "a": "उन्हें बुद्ध द्वारा रक्तपिपासु यक्षी से एक करुणामयी मातृस्वरूप देवी में परिवर्तित किया गया।",
         "b": "वह प्रज्ञा (ज्ञान) की स्त्री रूपात्मक प्रतीक है।",
@@ -198,108 +198,108 @@
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements is correct?\n 1. Gautama Buddha belonged to a small gana known as the Sakya gana and was a Kshatriya.\n 2. Gautama Buddha passed away at Kusinara.\n निम्नलिखित में से कौन सा कथन सही है?\n 3. गौतम बुद्ध शाक्य गण नामक एक छोटे गण से संबंधित थे और क्षत्रिय थे।\n 4. गौतम बुद्ध का निधन कुशीनार में हुआ था।",
+      "question": "Which of the following statements is correct?\n 1. Gautama Buddha belonged to a small gana known as the Sakya gana and was a Kshatriya.\n 2. Gautama Buddha passed away at Kusinara.",
       "options": {
-        "a": "Only I / केवल I",
-        "b": "Neither I nor II / न तो I और न ही II",
-        "c": "Only II / केवल II",
-        "d": "Both I and II / I और II दोनों"
+        "a": "Only I",
+        "b": "Neither I nor II",
+        "c": "Only II",
+        "d": "Both I and II"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nImportant places related to the life of Buddha are- Birth (Lumbini); Enlightenment (Bodh Gaya at Bihar); His first Sermon also known as Dharma-Chakra-Pravartana (Sarnath); His death or Mahaparinirvana in Kushinagara (Pali: Kusinārā), Uttar Pradesh\n\n📖 हिंदी स्पष्टीकरण:\nबुद्ध के जीवन से संबंधित महत्वपूर्ण स्थान हैं- जन्म (लुंबिनी); ज्ञानोदय (बिहार में बोधगया); उनके पहले उपदेश को धर्म-चक्र-प्रवर्तन (सारनाथ) के नाम से भी जाना जाता है; उनकी मृत्यु या महापरिनिर्वाण कुशीनगर (पाली: कुशीनारा), उत्तर प्रदेश में हुआ।"
     },
     {
       "q_num": 18,
-      "question": "Who among the following were referred to as the 'Theris' in ancient India?\n प्राचीन भारत में निम्नलिखित में से किन्हें 'थेरी' के रूप में जाना जाता था?",
+      "question": "Who among the following were referred to as the 'Theris' in ancient India?",
       "options": {
-        "a": "Respected women / श्रद्धेय महिलाएँ",
-        "b": "Elder nuns in Buddhism / बौद्ध धर्म में वरिष्ठ साध्वी",
-        "c": "Women denied the Bhikkhuni status / भिक्षुणी पद से वंचित महिलाएँ",
-        "d": "Women expelled from the Buddhist Sangha / बौद्ध संघ से निष्कासित महिलाएँ"
+        "a": "Respected women",
+        "b": "Elder nuns in Buddhism",
+        "c": "Women denied the Bhikkhuni status",
+        "d": "Women expelled from the Buddhist Sangha"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn Buddhism, 'Theri' (Sanskrit: Sthavira) literally means 'elder'. It is a title given to the senior or elder nuns (Bhikkhunis) who had attained a high level of spiritual realization. The collection of poems written by them is known as Therigatha.\n\n📖 हिंदी स्पष्टीकरण:\nबौद्ध धर्म में, 'थेरी' (संस्कृत: स्थविरा) का शाब्दिक अर्थ 'वरिष्ठ' होता है । यह एक उपाधि है जो उन वरिष्ठ साध्वियों (भिक्खुनी) को दी जाती थी जिन्होंने उच्च स्तर की आध्यात्मिक अनुभूति प्राप्त कर ली थी । उनके द्वारा लिखी गई कविताओं का संग्रह थेरीगाथा के नाम से जाना जाता है ।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements about sculptures at Sanchi is/are correct?\n 1. In some sculptures there is representation of Shalabhanjika.\n 2. The figure of Shalabhanjika is represented by a woman surrounded by lotuses and elephants.\n 3. The Shalabhanjika motif was not directly inspired by Buddhist ideas.\n साँची स्थित मूर्तिशिल्पों के बारे में निम्नलिखित में से कौन-सा/से कथन सही है/हैं?\n 4. कुछ मूर्तिशिल्पों में शालभंजिका का प्रतिरूपण है।\n 5. शालभंजिका की आकृति कमल-पुष्पों और हाथियों से घिरी एक स्त्री द्वारा प्रतिरूपित की गई है।\n 6. शालभंजिका का रूपांकन बौद्ध विचारों से प्रत्यक्षतः प्रेरित नहीं था।\n Select the correct answer using the code given below:\n नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Which of the following statements about sculptures at Sanchi is/are correct?\n 1. In some sculptures there is representation of Shalabhanjika.\n 2. The figure of Shalabhanjika is represented by a woman surrounded by lotuses and elephants.\n 3. The Shalabhanjika motif was not directly inspired by Buddhist ideas.\n Select the correct answer using the code given below:",
       "options": {
-        "a": "1, 2 and 3 / 1, 2 और 3",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "2 only / केवल 2",
-        "d": "1 and 3 only / केवल 1 और 3"
+        "a": "1, 2 and 3",
+        "b": "2 and 3 only",
+        "c": "2 only",
+        "d": "1 and 3 only"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStatement 1: This statement is correct.\n11. Reason: Figures of Shalabhanjika are prominently carved on the toranas (gateways) of the Great Stupa at Sanchi. Shalabhanjika is a female figure often depicted holding or touching the branch of a tree (such as a Sal or Ashoka tree), symbolizing fertility and auspiciousness.\nStatement 2: This statement is incorrect.\n12. Reason: The female figure standing on lotus blossoms and being anointed with water by elephants on either side is that of Gajalakshmi, not Shalabhanjika. Shalabhanjika is identified by her association with a tree branch or her stance beneath a tree.\nStatement 3: This statement is correct.\n13. Reason: The Shalabhanjika motif was originally derived from pre-Buddhist folk traditions (specifically the traditions of Yakshi or nature worship). It symbolizes fertility, auspiciousness, and vitality. Buddhist art adopted it as a decorative and auspicious element, not as a direct representation of any core Buddhist philosophical principle.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1: यह कथन सही है।\n14. कारण: साँची के महा स्तूप के तोरणों (प्रवेशद्वारों) पर शालभंजिका की आकृतियाँ बहुत प्रमुखता से उत्कीर्ण हैं। शालभंजिका वह स्त्री आकृति होती है जो अक्सर किसी पेड़ (जैसे शाल या अशोक) की शाखा को पकड़ती हुई या उसे छूती हुई दिखाई जाती है, जो प्रजनन क्षमता और शुभता का प्रतीक है।\nकथन 2: यह कथन गलत है।\n15. कारण: कमल-पुष्पों पर खड़ी और दोनों ओर से हाथियों द्वारा जल से अभिषेक की जाने वाली स्त्री की आकृति गजलक्ष्मी की होती है, न कि शालभंजिका की। शालभंजिका की पहचान उसके पेड़ की शाखा को पकड़ने या पेड़ के नीचे खड़े होने से होती है।\nकथन 3: यह कथन सही है।\n16. कारण: शालभंजिका का रूपांकन मूल रूप से बौद्ध धर्म से पहले की लोक परंपराओं (विशेष रूप से यक्षी या प्रकृति पूजा की परंपराओं) से लिया गया था। यह प्रजनन क्षमता, शुभता (मांगलिकता) और जीवन शक्ति का प्रतीक है। बौद्ध कला ने इसे सजावटी और शुभ तत्व के रूप में अपनाया, न कि किसी मुख्य बौद्ध दार्शनिक सिद्धांत के सीधे प्रतिनिधित्व के रूप में।"
     },
     {
       "q_num": 20,
-      "question": "Which one of the following statements with regard to the historical importance of Kushinagar, is correct?\n कुशीनगर के ऐतिहासिक महत्व के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which one of the following statements with regard to the historical importance of Kushinagar, is correct?",
       "options": {
-        "a": "Siddhartha Gautama's 'great departure' took place here and he became an ascetic, a Sramana. / सिद्धार्थ गौतम ने इसी स्थान से 'महाप्रस्थान' किया था और वे तपस्वी, श्रमण बन गए।",
-        "b": "Siddhartha Gautama obtained his enlightenment here and he became Buddha. / सिद्धार्थ गौतम को इसी स्थान पर ज्ञान की प्राप्ति हुई थी और वे बुद्ध बन गए।",
-        "c": "Buddha gave his first sermon known as Dharmachakra-parivartana sutra. / बुद्ध ने इसी जगह पर पहला उपदेश दिया था जिसे धर्मचक्र-परिवर्तन सूत्र के रूप में जाना जाता है।",
-        "d": "Buddha passed away here, which is known as Mahaparinirvana. / बुद्ध ने यहाँ देह-त्याग किया था जिसे महापरिनिर्वाण के रूप में जाना जाता है।"
+        "a": "Siddhartha Gautama's 'great departure' took place here and he became an ascetic, a Sramana.",
+        "b": "Siddhartha Gautama obtained his enlightenment here and he became Buddha.",
+        "c": "Buddha gave his first sermon known as Dharmachakra-parivartana sutra.",
+        "d": "Buddha passed away here, which is known as Mahaparinirvana."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nKushinagar (or Kushinara) is one of the four most sacred Buddhist pilgrimage sites. It is the place where Gautam Buddha attained Mahaparinirvana (passing away or final release) in 483 BCE.\n5. (a) 'Great Departure' (Mahabhinishkramana) took place in Kapilavastu.\n6. (b) Enlightenment (Nirvana/Sambodhi) was attained in Bodh Gaya.\n7. (c) First sermon (Dharmachakra-parivartana) was given in Sarnath.\n8. (a) '\n9. (b)\n10. (c)\n\n📖 हिंदी स्पष्टीकरण:\nकुशीनगर (या कुशीनारा) चार सबसे पवित्र बौद्ध तीर्थ स्थलों में से एक है । यह वह स्थान है जहाँ गौतम बुद्ध ने 483 ईसा पूर्व में महापरिनिर्वाण (देह-त्याग या अंतिम मुक्ति) प्राप्त किया था ।\nमहाप्रस्थान' (महाभिनिष्क्रमण) कपिलवस्तु में हुआ था।\nज्ञानोदय (निर्वाण/सम्बोधि) बोधगया में प्राप्त हुआ था।\nपहला उपदेश (धर्मचक्र-परिवर्तन) सारनाथ में दिया गया था ।"
     },
     {
       "q_num": 21,
-      "question": "Early Buddhist sculptors did not show Buddha in human form. Through which of the following symbols was Buddha's presence shown by the early sculptors?\n प्रारंभिक बौद्ध मूर्तिकारों ने बुद्ध को मानव रूप में नहीं दर्शाया। निम्नलिखित में से किन प्रतीकों के माध्यम से प्रारंभिक मूर्तिकारों ने बुद्ध की उपस्थिति को दर्शाया था?",
+      "question": "Early Buddhist sculptors did not show Buddha in human form. Through which of the following symbols was Buddha's presence shown by the early sculptors?",
       "options": {
-        "a": "Empty Seat and Stupa only / केवल रिक्त आसन और स्तूप",
-        "b": "Wheel and Tree only / केवल चक्र और वृक्ष",
-        "c": "Wheel, Tree and Stupa only / केवल चक्र, वृक्ष और स्तूप",
-        "d": "Empty Seat, Wheel, Tree and Stupa / रिक्त आसन, चक्र, वृक्ष और स्तूप"
+        "a": "Empty Seat and Stupa only",
+        "b": "Wheel and Tree only",
+        "c": "Wheel, Tree and Stupa only",
+        "d": "Empty Seat, Wheel, Tree and Stupa"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe aniconic phase of early Buddhist art (2nd century BCE to 1st century CE) avoided depicting the Buddha in human form. Instead, significant events of his life and his presence were represented by symbols:\n5. Empty Seat: Symbolizes the Meditation and Enlightenment (Nirvana).\n6. Wheel (Dharma Chakra): Symbolizes the First Sermon.\n7. Bodhi Tree: Symbolizes the Enlightenment.\n8. Stupa: Symbolizes the Mahaparinirvana (passing away).\n9. Lotus and Bull/Elephant: Symbolize the Birth.\n\n📖 हिंदी स्पष्टीकरण:\nप्रारंभिक बौद्ध कला का अनाकृतिक चरण (द्वितीय शताब्दी ईसा पूर्व से प्रथम शताब्दी ईस्वी) बुद्ध को मानव रूप में चित्रित करने से बचता था। इसके स्थान पर उनके जीवन की महत्वपूर्ण घटनाओं और उनकी उपस्थिति को प्रतीकों के माध्यम से दर्शाया गया:\n10. रिक्त आसन: ध्यान और ज्ञानोदय (निर्वाण) का प्रतीक है ।\n11. चक्र (धर्म चक्र): प्रथम उपदेश का प्रतीक है ।\n12. बोधि वृक्ष: ज्ञानोदय का प्रतीक है ।\n13. स्तूप: महापरिनिर्वाण (देह-त्याग) का प्रतीक है ।\n14. कमल और बैल/हाथी: जन्म का प्रतीक हैं ।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements with reference to Jainism:\n 1. Vardhamana Mahavira attained Kaivalyajnana outside the town of Jrimbhikagrama, on the banks of river Rijupalika and in the field of a householder named Samaga.\n 2. The state when the Karma particles actually begin to flow towards the Jiva to bind it is known as Asrava.\n जैन धर्म के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n 3. वर्धमान महावीर ने जृम्भिकाग्राम नगर के बाहर, ऋजुपालिका नदी के तट पर तथा सामग नामक एक गृहस्थ के खेत में कैवल्यज्ञान प्राप्त किया।\n 4. जिस अवस्था में कर्म कण वास्तव में जीव से बंधने के लिए उसकी ओर प्रवाहित होने लगते हैं, उसे आस्रव कहा जाता है।\n Which of the statements given above is/are correct?\n उपर्युक्त कथनों में से कौन-सा/कौन-से सही है/हैं?",
+      "question": "Consider the following statements with reference to Jainism:\n 1. Vardhamana Mahavira attained Kaivalyajnana outside the town of Jrimbhikagrama, on the banks of river Rijupalika and in the field of a householder named Samaga.\n 2. The state when the Karma particles actually begin to flow towards the Jiva to bind it is known as Asrava.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1, न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n9. Statement 1 is correct. According to Jain tradition, after 12 years of penance, Vardhamana Mahavira attained Kaivalyajnana (perfect knowledge) on the tenth day of the bright half of Vaisakha, under a Sal tree, outside Jrimbhikagrama, on the bank of the river Rijupalika.\n10. Statement 2 is correct. In Jain philosophy, Asrava (inflow) is the process by which karma particles are attracted towards the Jiva (soul) and begin to bind it. This is caused by the activity of the mind, speech, and body.\n\n📖 हिंदी स्पष्टीकरण:\n11. कथन 1 सही है। जैन परंपरा के अनुसार, 12 वर्षों की तपस्या के बाद, वर्धमान महावीर ने वैशाख के शुक्ल पक्ष के दसवें दिन, जृम्भिकाग्राम के बाहर, ऋजुपालिका नदी के तट पर, एक शाल वृक्ष के नीचे कैवल्यज्ञान (पूर्ण ज्ञान) प्राप्त किया था ।\n12. कथन 2 सही है। जैन दर्शन में, आस्रव (प्रवाह) वह प्रक्रिया है जिसके द्वारा कर्म कण जीव (आत्मा) की ओर आकर्षित होते हैं और उसे बांधना शुरू कर देते हैं । यह मन, वाणी और शरीर की गतिविधि के कारण होता है ।"
     },
     {
       "q_num": 23,
-      "question": "In Jainism, which one of the following does not form part of tri-ratna?\n जैन धर्म में, निम्नलिखित में से कौन सा त्रि-रत्न का भाग नहीं है?",
+      "question": "In Jainism, which one of the following does not form part of tri-ratna?",
       "options": {
-        "a": "Samyak panch-mahavrata / सम्यक् पंच-महाव्रत",
-        "b": "Samyak jnana / सम्यक् ज्ञान",
-        "c": "Samyak charitra / सम्यक् चरित्र",
-        "d": "Samyak darshana / सम्यक् दर्शन"
+        "a": "Samyak panch-mahavrata",
+        "b": "Samyak jnana",
+        "c": "Samyak charitra",
+        "d": "Samyak darshana"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Tri-ratna (Three Jewels) of Jainism, which are essential for attaining liberation, are:\n5. Samyak Darshana (Right Faith/Perception).\n6. Samyak Jnana (Right Knowledge).\n7. Samyak Charitra (Right Conduct).\nThe Panch-Mahavrata (Five Great Vows) are the components of Samyak Charitra (Right Conduct), which are taken by the monks, but the vows themselves are not considered one of the three primary jewels.\n\n📖 हिंदी स्पष्टीकरण:\nजैन धर्म के त्रि-रत्न (तीन रत्न), जो मोक्ष प्राप्त करने के लिए आवश्यक हैं, वे हैं:\n8. सम्यक् दर्शन (सही आस्था/प्रत्यक्षीकरण) ।\n9. सम्यक् ज्ञान (सही ज्ञान) ।\n10. सम्यक् चरित्र (सही आचरण) ।\nपंच-महाव्रत (पाँच महाव्रत) सम्यक् चरित्र (सम्यक् आचरण) के घटक हैं, जिन्हें भिक्षुओं द्वारा लिया जाता है, लेकिन स्वयं व्रत तीन प्राथमिक रत्नों में से एक नहीं माने जाते हैं ।"
     },
     {
       "q_num": 24,
-      "question": "“Souls are not only the property of animal and plant life, but also of rocks, running water and many other natural objects not looked on as living by other religious sects.”\n \"आत्मा केवल जंतु और पादप जीवन की संपदा नहीं है, बल्कि शिलाओं, प्रवाहित जलधाराओं और अन्य अनेक प्राकृतिक वस्तुओं की भी है, जिन्हें अन्य धार्मिक संप्रदाय जीवित नहीं मानते।\"\n The above statement reflects one of the core beliefs of which one of the following religious sects of ancient India?\n उपर्युक्त कथन प्राचीन भारत के निम्नलिखित में से किस एक धार्मिक संप्रदाय के एक मूलभूत विश्वास को प्रतिबिंबित करता है?",
+      "question": "“Souls are not only the property of animal and plant life, but also of rocks, running water and many other natural objects not looked on as living by other religious sects.”\n The above statement reflects one of the core beliefs of which one of the following religious sects of ancient India?",
       "options": {
-        "a": "Buddhism / बौद्ध परंपरा",
-        "b": "Jainism / जैन परंपरा",
-        "c": "Shaivism / शैव परंपरा",
-        "d": "Vaishnavism / वैष्णव परंपरा"
+        "a": "Buddhism",
+        "b": "Jainism",
+        "c": "Shaivism",
+        "d": "Vaishnavism"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe core principle of Jainism is Ahimsa (non-violence). This is based on the belief that everything in the universe, including plants, animals, water, fire, rocks, and the earth, possesses a soul (Jiva). Therefore, non-injury extends to all these forms of life, reflecting a profound respect for all existence.\n\n📖 हिंदी स्पष्टीकरण:\nजैन धर्म का मूल सिद्धांत अहिंसा (अहिंसा) है । यह इस विश्वास पर आधारित है कि ब्रह्मांड की हर चीज़, जिसमें पौधे, जानवर, पानी, अग्नि, चट्टानें और पृथ्वी शामिल हैं, में आत्मा (जीव) होती है । इसलिए, अहिंसा इन सभी प्रकार के जीवन तक फैली हुई है, जो सभी अस्तित्व के लिए गहन सम्मान को दर्शाती है ।"
     },
     {
       "q_num": 25,
-      "question": "Which one of the following statements about the Ajivikas is not correct?\n आजीविकों के बारे में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+      "question": "Which one of the following statements about the Ajivikas is not correct?",
       "options": {
-        "a": "They did not practise discrimination on the basis of caste or class. / उन्होंने जाति या वर्ग के आधार पर भेदभावपूर्ण व्यवहार नहीं किया।",
-        "b": "They had a corporate organisation and canonical texts. / उनके पास निगमित संगठन और धर्म-वैधानिक ग्रंथ थे।",
-        "c": "They practised severe asceticism, often eating very little food. / वे प्रायः बहुत कम भोजन करके, कठोर तपस्या करते थे।",
-        "d": "They formed an alliance with Jainas against Buddhists. / उन्होंने बौद्धों के विरुद्ध जैनियों के साथ संगठन बनाया।"
+        "a": "They did not practise discrimination on the basis of caste or class.",
+        "b": "They had a corporate organisation and canonical texts.",
+        "c": "They practised severe asceticism, often eating very little food.",
+        "d": "They formed an alliance with Jainas against Buddhists."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\n5. The Ajivika sect was based on fatalism (belief in destiny), and they did not discriminate on the basis of caste or class, therefore the first statement is correct.\n6. They had an organized (corporate) structure and their own religious texts/traditions (although their texts are not available today), so the second statement is also correct.\n7. The Ajivikas believed in rigorous asceticism and often consumed very little food, so the third statement is also correct.\n8. However, there is no concrete historical evidence of any organized alliance between the Ajivikas and the Jains against the Buddhists, therefore the fourth statement is incorrect.\n\n📖 हिंदी स्पष्टीकरण:\n9. आजीविक संप्रदाय नियतिवाद (नियति में विश्वास) पर आधारित था और उन्होंने जाति या वर्ग के आधार पर भेदभाव नहीं किया, इसलिए पहला कथन सही है।\n10. उनका संगठित (कॉरपोरेट) ढाँचा था और उनके अपने धर्म-वैधानिक ग्रंथ/परंपराएँ थीं (हालाँकि उनके ग्रंथ आज उपलब्ध नहीं हैं), अतः दूसरा कथन सही है।\n11. आजीविक कठोर तपस्या में विश्वास करते थे और अक्सर अत्यंत अल्प भोजन करते थे, इसलिए तीसरा कथन भी सही है।\n12. लेकिन आजीविकों द्वारा बौद्धों के विरुद्ध जैनियों के साथ किसी संगठित गठबंधन का कोई ठोस ऐतिहासिक प्रमाण नहीं मिलता, इसलिए चौथा कथन सही नहीं है।"

@@ -6,151 +6,151 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who was the founder of the Gupta Dynasty?\n गुप्त राजवंश का संस्थापक कौन था?",
+      "question": "Who was the founder of the Gupta Dynasty?",
       "options": {
-        "a": "Chandragupta I / चंद्रगुप्त प्रथम",
-        "b": "Sri Gupta / श्री गुप्त",
-        "c": "Samudragupta / समुद्रगुप्त",
-        "d": "Ghatotkacha / घटोत्कच"
+        "a": "Chandragupta I",
+        "b": "Sri Gupta",
+        "c": "Samudragupta",
+        "d": "Ghatotkacha"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSri Gupta founded the Gupta Empire around 240-280 AD. He was succeeded by his son Ghatotkacha before the empire rose to prominence under Chandragupta I\n\n📖 हिंदी स्पष्टीकरण:\nश्री गुप्त ने लगभग 240-280 ईस्वी में गुप्त साम्राज्य की स्थापना की थी। उनके बाद उनके पुत्र घटोत्कच उत्तराधिकारी बने, जिसके बाद चंद्रगुप्त प्रथम के नेतृत्व में साम्राज्य का विस्तार हुआ।"
     },
     {
       "q_num": 2,
-      "question": "What is ‘Udranga’ under the Gupta administration?\n गुप्त प्रशासन के अंतर्गत ‘उद्रंगा’ क्या था?",
+      "question": "What is ‘Udranga’ under the Gupta administration?",
       "options": {
-        "a": "Name of a king / एक राजा का नाम",
-        "b": "Title of a king / एक राजा की उपाधि",
-        "c": "A tax / एक कर",
-        "d": "A type of army / एक प्रकार की सेना"
+        "a": "Name of a king",
+        "b": "Title of a king",
+        "c": "A tax",
+        "d": "A type of army"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIt is generally understood as a land-related or agricultural tax, mentioned in Gupta inscriptions. The Guptas had a well-organized revenue system with various taxes such as Bhaga, Bhoga, Kara, and Udranga\n\n📖 हिंदी स्पष्टीकरण:\nइसे सामान्यतः भूमि या कृषि संबंधी कर के रूप में समझा जाता है, जिसका उल्लेख गुप्त शिलालेखों में मिलता है। गुप्तों के पास भागा, भोग, करा और उद्रंगा जैसे विभिन्न करों के साथ एक सुव्यवस्थित राजस्व प्रणाली थी।"
     },
     {
       "q_num": 3,
-      "question": "Who wrote the book 'Pancha Siddhantika' during the Gupta period?\n गुप्त काल में 'पंच सिद्धांतिका' नामक पुस्तक किसने लिखी थी?",
+      "question": "Who wrote the book 'Pancha Siddhantika' during the Gupta period?",
       "options": {
-        "a": "Amarasimha / अमरसिम्हा",
-        "b": "Kshapanaka / क्षपणक",
-        "c": "Varahamihira / वराहमिहिर",
-        "d": "Vararuchi / वररुचि"
+        "a": "Amarasimha",
+        "b": "Kshapanaka",
+        "c": "Varahamihira",
+        "d": "Vararuchi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPancha Siddhantika is a famous astronomical treatise written by Varahamihira, one of the greatest scholars of the Gupta period. The work compiles and analyzes five astronomical schools (Siddhantas), reflecting advanced scientific knowledge in ancient India\n\n📖 हिंदी स्पष्टीकरण:\nपंच सिद्धांतिका गुप्त काल के महानतम विद्वानों में से एक वराहमिहिर द्वारा रचित एक प्रसिद्ध खगोलीय ग्रंथ है। यह कृति पाँच खगोलीय संप्रदायों (सिद्धांतों) का संकलन और विश्लेषण करती है, जो प्राचीन भारत में उन्नत वैज्ञानिक ज्ञान को दर्शाती है।"
     },
     {
       "q_num": 4,
-      "question": "Which military division had become rare in warfare during the Gupta period despite being part of the army in texts?\n गुप्त काल के दौरान कौन सी सैन्य टुकड़ी युद्ध में दुर्लभ हो गई थी, जबकि ग्रंथों में उसका उल्लेख सेना के हिस्से के रूप में मिलता है?",
+      "question": "Which military division had become rare in warfare during the Gupta period despite being part of the army in texts?",
       "options": {
-        "a": "Cavalry / घुड़सवार सेना",
-        "b": "Elephant / हाथी",
-        "c": "Chariot / रथ",
-        "d": "Infantry / पैदल सेना"
+        "a": "Cavalry",
+        "b": "Elephant",
+        "c": "Chariot",
+        "d": "Infantry"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nClassical Indian texts continued to mention the fourfold army (Chaturanga):\n5. Infantry (Padati)\n6. Cavalry (Ashva)\n7. Elephants (Gaja)\n8. Chariots (Ratha)\n\n📖 हिंदी स्पष्टीकरण:\nशास्त्रीय भारतीय ग्रंथों में चतुरंग सेना का उल्लेख लगातार मिलता रहा है:\n9. पैदल सेना (पदाति)\n10. घुड़सवार सेना (अश्व)\n11. हाथी (गज)\n12. रथ"
     },
     {
       "q_num": 5,
-      "question": "Which Chinese traveler visited India during the reign of Chandragupta II?\n चंद्रगुप्त द्वितीय के शासनकाल के दौरान कौन सा चीनी यात्री भारत आया था?",
+      "question": "Which Chinese traveler visited India during the reign of Chandragupta II?",
       "options": {
-        "a": "Xuanzang / ह्वेनसांग",
-        "b": "Fa-Hien / फाह्यान",
-        "c": "I-tsing / इत्सिंग",
-        "d": "Al-Biruni / अल-बरूनी"
+        "a": "Xuanzang",
+        "b": "Fa-Hien",
+        "c": "I-tsing",
+        "d": "Al-Biruni"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFa-Hien was the first Chinese traveler to visit India (399-414 AD) specifically to collect Buddhist texts during the reign of Chandragupta Vikramaditya\n\n📖 हिंदी स्पष्टीकरण:\nफाह्यान चंद्रगुप्त विक्रमादित्य के शासनकाल के दौरान बौद्ध ग्रंथों को एकत्र करने के लिए भारत (399-414 ईस्वी) आने वाला पहला चीनी यात्री था।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following statements about succession in the Gupta dynasty is true?\n गुप्त वंश में उत्तराधिकार के संबंध में निम्नलिखित में से कौन सा कथन सत्य है?",
+      "question": "Which of the following statements about succession in the Gupta dynasty is true?",
       "options": {
-        "a": "Only the eldest son could become king / केवल सबसे बड़ा पुत्र ही राजा बन सकता था।",
-        "b": "The eldest son was always crowned Yuvraj at priority / सबसे बड़े बेटे युवराज को ही प्राथमिकता दी जाती थी।",
-        "c": "The ruler always declared himself divine to get the throne / शासक हमेशा सिंहासन पाने के लिए खुद को दैवीय घोषित करता था।",
-        "d": "Sons had to prove their eligibility before an assembly / पुत्रों को सभा के समक्ष अपनी पात्रता साबित करनी पड़ती थी।"
+        "a": "Only the eldest son could become king",
+        "b": "The eldest son was always crowned Yuvraj at priority",
+        "c": "The ruler always declared himself divine to get the throne",
+        "d": "Sons had to prove their eligibility before an assembly"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Gupta system of succession was not strictly based on primogeniture (eldest-son rule). Inscriptions and historical evidence suggest that royal sons had to establish their capability and acceptance, often before an assembly of nobles and ministers\n\n📖 हिंदी स्पष्टीकरण:\nगुप्त काल में उत्तराधिकार प्रणाली पूर्णतया ज्येष्ठाधिकार (बड़े पुत्र का शासन) पर आधारित नहीं थी। शिलालेखों और ऐतिहासिक साक्ष्यों से पता चलता है कि शाही पुत्रों को अक्सर सामंतों और मंत्रियों की सभा के समक्ष अपनी योग्यता और स्वीकार्यता साबित करनी पड़ती थी।"
     },
     {
       "q_num": 7,
-      "question": "Which Gupta king is credited with defeating the Hunas (Huns)?\n किस गुप्त राजा को हूणों को पराजित करने का श्रेय दिया जाता है?",
+      "question": "Which Gupta king is credited with defeating the Hunas (Huns)?",
       "options": {
-        "a": "Skandagupta / स्कंदगुप्त",
-        "b": "Chandragupta I / चंद्रगुप्त प्रथम",
-        "c": "Budhagupta / बुधगुप्त",
-        "d": "Purugupta / पुरुगुप्त"
+        "a": "Skandagupta",
+        "b": "Chandragupta I",
+        "c": "Budhagupta",
+        "d": "Purugupta"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSkandagupta successfully resisted the invasion of the Hunas, a fierce tribe from Central Asia. This feat is mentioned in the Bhitari Pillar Inscription\n\n📖 हिंदी स्पष्टीकरण:\nस्कंदगुप्त ने मध्य एशिया की एक क्रूर जनजाति हूणों के आक्रमण का सफलतापूर्वक प्रतिरोध किया था। इस उपलब्धि का उल्लेख भीतरी स्तंभ शिलालेख में मिलता है।"
     },
     {
       "q_num": 8,
-      "question": "The Iron Pillar located at Mehrauli, Delhi is associated with which ruler?\n दिल्ली के महरौली में स्थित लौह स्तंभ किस शासक से संबंधित है?",
+      "question": "The Iron Pillar located at Mehrauli, Delhi is associated with which ruler?",
       "options": {
-        "a": "Samudragupta / समुद्रगुप्त",
-        "b": "Chandragupta II / चंद्रगुप्त द्वितीय",
-        "c": "Skandagupta / स्कंदगुप्त",
-        "d": "Ashoka / अशोक"
+        "a": "Samudragupta",
+        "b": "Chandragupta II",
+        "c": "Skandagupta",
+        "d": "Ashoka"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Mehrauli Iron Pillar inscription mentions a king named 'Chandra', generally identified as Chandragupta II. It is famous for its rust-resistant composition\n\n📖 हिंदी स्पष्टीकरण:\nमहरौली लौह स्तंभ शिलालेख में 'चंद्र' नामक राजा का उल्लेख है, जिसकी पहचान आमतौर पर चंद्रगुप्त द्वितीय के रूप में की जाती है। यह अपने जंग-रोधी गुणों के लिए प्रसिद्ध है।"
     },
     {
       "q_num": 9,
-      "question": "Who among the following was a famous physician during the Gupta period?\n गुप्त काल के दौरान निम्नलिखित में से कौन एक प्रसिद्ध चिकित्सक था?",
+      "question": "Who among the following was a famous physician during the Gupta period?",
       "options": {
-        "a": "Amarsimha / अमरसिंह",
-        "b": "Varahamihira / वराहमिहिर",
-        "c": "Dhanvantri / धन्वंतरि",
-        "d": "Kalidasa / कालिदास"
+        "a": "Amarsimha",
+        "b": "Varahamihira",
+        "c": "Dhanvantri",
+        "d": "Kalidasa"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDhanvantri was one of the 'Navratnas' in the court of Chandragupta II and was a renowned expert in Ayurveda and medicine\n\n📖 हिंदी स्पष्टीकरण:\nधन्वंतरि चंद्रगुप्त द्वितीय के दरबार के 'नवरत्नों' में से एक थे और आयुर्वेद एवं चिकित्सा के प्रसिद्ध विशेषज्ञ थे।"
     },
     {
       "q_num": 10,
-      "question": "The first inscriptional evidence of the practice of 'Sati' is found in:\n 'सती' प्रथा का पहला अभिलेखीय साक्ष्य कहाँ मिलता है?",
+      "question": "The first inscriptional evidence of the practice of 'Sati' is found in:",
       "options": {
-        "a": "Prayag Prasasti / प्रयाग प्रशस्ति",
-        "b": "Mehrauli Pillar / महरौली स्तंभ",
-        "c": "Eran Pillar Inscription / एरण स्तंभ शिलालेख",
-        "d": "Bhitari Pillar / भीतरी स्तंभ"
+        "a": "Prayag Prasasti",
+        "b": "Mehrauli Pillar",
+        "c": "Eran Pillar Inscription",
+        "d": "Bhitari Pillar"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDating back to 510 AD during the reign of Bhanugupta, the Eran inscription in Madhya Pradesh provides the first historical evidence of Sati\n\n📖 हिंदी स्पष्टीकरण:\nभानुगुप्त के शासनकाल के दौरान 510 ईस्वी का मध्य प्रदेश में एरण शिलालेख सती प्रथा का पहला ऐतिहासिक साक्ष्य प्रदान करता है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the Gupta administration:\n 1. The administration was highly centralized unlike the Mauryan empire.\n 2. 'Bhuktis' were provinces headed by an officer called 'Uparika'.\n Select the correct statement(s):\n गुप्त प्रशासन के संबंध में निम्नलिखित कथनों पर विचार करें:\n 3. मौर्य साम्राज्य के विपरीत प्रशासन अत्यधिक केंद्रीकृत था।\n 4. 'भुक्ति' प्रांत थे जिनका प्रमुख 'उपरिक' नामक अधिकारी होता था।\n सही कथन का चयन करें:",
+      "question": "Consider the following statements regarding the Gupta administration:\n 1. The administration was highly centralized unlike the Mauryan empire.\n 2. 'Bhuktis' were provinces headed by an officer called 'Uparika'.\n Select the correct statement(s):",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGupta administration was actually decentralized compared to the Mauryas. The empire was divided into Bhuktis (provinces) governed by Uparikas, which were further divided into Vishayas\n\n📖 हिंदी स्पष्टीकरण:\nमौर्यों की तुलना में गुप्त प्रशासन वास्तव में विकेंद्रीकृत था। साम्राज्य को उपरिकों द्वारा शासित भुक्तियों (प्रांतों) में विभाजित किया गया था, जिन्हें आगे विषयों में विभाजित किया गया था।"
     },
     {
       "q_num": 12,
-      "question": "Assertion (A): The Gupta period is known as the 'Golden Age' of Indian history.\n Reason (R): There was immense development in the fields of art, literature, science, and technology during this era.\n अभिकथन (A): गुप्त काल को भारतीय इतिहास का 'स्वर्ण युग' कहा जाता है।\n कारण (R): इस युग के दौरान कला, साहित्य, विज्ञान और प्रौद्योगिकी के क्षेत्रों में अत्यधिक विकास हुआ था।",
+      "question": "Assertion (A): The Gupta period is known as the 'Golden Age' of Indian history.\n Reason (R): There was immense development in the fields of art, literature, science, and technology during this era.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true. / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe era saw geniuses like Kalidasa and Aryabhata, the construction of temples like Deogarh, and political stability, justifying the title 'Golden Age'\n\n📖 हिंदी स्पष्टीकरण:\nइस युग में कालिदास और आर्यभट्ट जैसे विद्वान हुए, देवगढ़ जैसे मंदिरों का निर्माण हुआ और राजनीतिक स्थिरता रही, जो 'स्वर्ण युग' के नाम को सही ठहराती है।"
     },
     {
       "q_num": 13,
-      "question": "Match the following Gupta taxes with their descriptions:\n 1. Bhaga - i. Tax on water\n 2. Vishti - ii. 1/6th of produce paid by cultivators\n 3. Udakabhaga - iii. Forced labour\n गुप्त कालीन करों का उनके विवरण से मिलान करें:\n 4. भाग - i. जल पर कर\n 5. विष्टि - ii. किसानों द्वारा भुगतान किया गया उपज का 1/6 हिस्सा\n 6. उदकभाग - iii. जबरन श्रम",
+      "question": "Match the following Gupta taxes with their descriptions:\n 1. Bhaga - i. Tax on water\n 2. Vishti - ii. 1/6th of produce paid by cultivators\n 3. Udakabhaga - iii. Forced labour",
       "options": {
         "a": "1-ii, 2-iii, 3-i",
         "b": "1-i, 2-ii, 3-iii",
@@ -162,36 +162,36 @@
     },
     {
       "q_num": 14,
-      "question": "Which of the following statements about the Vakataka Dynasty is INCORRECT?\n वाकाटक राजवंश के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about the Vakataka Dynasty is INCORRECT?",
       "options": {
-        "a": "They were contemporaries of the Guptas. / वे गुप्तों के समकालीन थे।",
-        "b": "Vindhyashakti was the founder of this dynasty. / विंध्यशक्ति इस राजवंश के संस्थापक थे।",
-        "c": "They completely opposed Buddhism and only followed Brahmanism. / उन्होंने बौद्ध धर्म का पूरी तरह से विरोध किया और केवल ब्राह्मणवाद का पालन किया।",
-        "d": "Chandragupta II married his daughter Prabhavati Gupta into the Vakataka family. / चंद्रगुप्त द्वितीय ने अपनी पुत्री प्रभावती गुप्त का विवाह वाकाटक परिवार में किया था।"
+        "a": "They were contemporaries of the Guptas.",
+        "b": "Vindhyashakti was the founder of this dynasty.",
+        "c": "They completely opposed Buddhism and only followed Brahmanism.",
+        "d": "Chandragupta II married his daughter Prabhavati Gupta into the Vakataka family."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAlthough they followed Brahmanism, they also patronized Buddhism. For instance, caves at Ajanta were built under the patronage of Vakataka king Harishena\n\n📖 हिंदी स्पष्टीकरण:\nहालाँकि वे ब्राह्मणवाद के अनुयायी थे, लेकिन उन्होंने बौद्ध धर्म को भी संरक्षण दिया। उदाहरण के लिए, अजंता की गुफाएँ वाकाटक राजा हरिषेण के संरक्षण में बनाई गई थीं।"
     },
     {
       "q_num": 15,
-      "question": "Assertion (A): Samudragupta is depicted playing the Veena on some of his gold coins.\n Reason (R): He was a great patron of music and was given the title 'Kaviraja'.\n अभिकथन (A): समुद्रगुप्त को उनके कुछ सोने के सिक्कों पर वीणा बजाते हुए दिखाया गया है।\n कारण (R): वह संगीत के महान संरक्षक थे और उन्हें 'कविराज' की उपाधि दी गई थी।",
+      "question": "Assertion (A): Samudragupta is depicted playing the Veena on some of his gold coins.\n Reason (R): He was a great patron of music and was given the title 'Kaviraja'.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true. / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSamudragupta's 'Lyrist' type coins show his love for music. His titles like Kaviraja (King of Poets) reflect his intellectual and artistic interests\n\n📖 हिंदी स्पष्टीकरण:\nसमुद्रगुप्त के 'वीणा वादक' प्रकार के सिक्के उनके संगीत प्रेम को दर्शाते हैं। उनकी 'कविराज' जैसी उपाधियाँ उनके बौद्धिक और कलात्मक हितों को प्रतिबिंबित करती हैं।"
     },
     {
       "q_num": 16,
-      "question": "Which of the following pairs are correctly matched?\n Prayag Prashasti by Harishena: 4th century CE / हरिषेण द्वारा प्रयाग प्रशस्ति: 4वीं शताब्दी ईस्वीChinese traveller Fa Xian’s Account: 6th century CE / चीनी यात्री फाहियान का विवरण: 6वीं शताब्दी ईस्वीMudrarakshasa of Vishakhadatta: 5th century CE / विशाखदत्त का मुद्राराक्षस: 5वीं शताब्दी ईस्वीHarshacharita of Banabhatta: 6th century CE / बाणभट्ट का हर्षचरित: 6वीं शताब्दी ईस्वीAihole Prashasti of Ravikirti: 7th century CE / रविकीर्ति की ऐहोल प्रशस्ति: 7वीं शताब्दी ईस्वीKavirajamarga of Amoghavarsha: 8th century CE / अमोघवर्ष का कविराजमार्ग: 8वीं शताब्दी ईस्वीSelect the correct answer using the code given below / नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Which of the following pairs are correctly matched?\n Prayag Prashasti by Harishena: 4th century CE",
       "options": {
-        "a": "1, 2 and 3 only / केवल 1, 2 और 3",
-        "b": "2, 3 and 4 only / केवल 2, 3 और 4",
-        "c": "4, 5 and 6 only / केवल 4, 5 और 6",
-        "d": "1, 3 and 5 only / केवल 1, 3 और 5"
+        "a": "1, 2 and 3 only",
+        "b": "2, 3 and 4 only",
+        "c": "4, 5 and 6 only",
+        "d": "1, 3 and 5 only"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPrayag Prashasti (4th century) and Mudrarakshasa (5th century) belong to the Gupta era. Aihole Prashasti was composed in 634 CE (7th century). Fa Xian visited in the 5th century (not 6th), Harshacharita is from the 7th century, and Kavirajamarga is from the 9th century."
@@ -200,10 +200,10 @@
       "q_num": 17,
       "question": "Which among the following was NOT a member of the Adhishthana Adhikarana of Kotivarsha in the Gupta period?",
       "options": {
-        "a": "Sarthavaha / सार्थवाह",
-        "b": "Mahattara / महत्तर",
-        "c": "Prathama-kayastha / प्रथम-कायस्थ",
-        "d": "Prathama-kulika / प्रथम-कुलिक"
+        "a": "Sarthavaha",
+        "b": "Mahattara",
+        "c": "Prathama-kayastha",
+        "d": "Prathama-kulika"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe district administration (Adhishthana Adhikarana) usually included the Nagarasreshthi, Sarthavaha, Prathama-kulika, and Prathama-kayastha. Mahattara referred to village elders."
@@ -212,10 +212,10 @@
       "q_num": 18,
       "question": "Who among the following kings is described in an inscription as the Supreme Being, the cause of the prosperity of the good and the destruction of the bad?",
       "options": {
-        "a": "Gautamiputra Shatakarni / गौतमीपुत्र शातकर्णी",
-        "b": "Kanishka / कनिष्क",
-        "c": "Samudragupta / समुद्रगुप्त",
-        "d": "Harshavardhana / हर्षवर्धन"
+        "a": "Gautamiputra Shatakarni",
+        "b": "Kanishka",
+        "c": "Samudragupta",
+        "d": "Harshavardhana"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Allahabad Pillar Inscription (Prayag Prashasti) describes Samudragupta in divine terms, comparing him to gods and as a protector of the righteous."
@@ -224,17 +224,17 @@
       "q_num": 19,
       "question": "Which one of the following was composed by Harishena?",
       "options": {
-        "a": "Nashik Inscription of Gautami Balashri / गौतमी बलश्री का नासिक अभिलेख",
-        "b": "Prayaga Prashasti of Samudragupta / समुद्रगुप्त की प्रयाग प्रशस्ति",
-        "c": "Deopara Prashasti of Vijayasena / विजयसेन की देवपाड़ा प्रशस्ति",
-        "d": "Hathigumpha Inscription of Kharavela / खारवेल का हाथीगुम्फा अभिलेख"
+        "a": "Nashik Inscription of Gautami Balashri",
+        "b": "Prayaga Prashasti of Samudragupta",
+        "c": "Deopara Prashasti of Vijayasena",
+        "d": "Hathigumpha Inscription of Kharavela"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHarishena was the court poet of Samudragupta who composed the famous Prayaga Prashasti (Allahabad Pillar Inscription) in Sanskrit."
     },
     {
       "q_num": 20,
-      "question": "Arrange the following in chronological order, beginning from the earliest:\n 1. Shudraka / शूद्रक2. Varahamihira / वराहमिहिर3. Panini / पाणिनि4 Patanjali the Grammarian / व्याकरणाचार्य पतंजलि",
+      "question": "Arrange the following in chronological order, beginning from the earliest:\n 1. Shudraka",
       "options": {
         "a": "4-1-2-3",
         "b": "3-4-1-2",
@@ -246,31 +246,31 @@
     },
     {
       "q_num": 21,
-      "question": "Which of the following statements is/are correct in the context of the religious development during the Gupta Empire?I. Nalanda University was founded by Kumargupta I of the Gupta dynasty in the 5th century CE. / नालंदा विश्वविद्यालय की स्थापना 5वीं शताब्दी ईस्वी में गुप्त वंश के कुमारगुप्त प्रथम द्वारा की गई थी।II. Narasimhagupta Baladitya was influenced by Mahayana Buddhism. / नरसिंहगुप्त बालादित्य महायान बौद्ध धर्म से प्रभावित थे।",
+      "question": "Which of the following statements is/are correct in the context of the religious development during the Gupta Empire?I. Nalanda University was founded by Kumargupta I of the Gupta dynasty in the 5th century CE.",
       "options": {
-        "a": "Only I / केवल I",
-        "b": "Only II / केवल II",
-        "c": "Both I and II / I और II दोनों",
-        "d": "Neither I nor II / न तो I और न ही II"
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKumargupta I founded Nalanda in the 5th century, and later Gupta kings like Narasimhagupta Baladitya were known patrons of Buddhism."
     },
     {
       "q_num": 22,
-      "question": "Which Gupta ruler was the first to issue silver coins, and after which event were they introduced?चांदी के सिक्के जारी करने वाला पहला गुप्त शासक कौन था और उन्हें किस घटना के बाद पेश किया गया था?",
+      "question": "Which Gupta ruler was the first to issue silver coins, and after which event were they introduced?",
       "options": {
-        "a": "Samudragupta; after the conquest of South India / समुद्रगुप्त; दक्षिण भारत की विजय के बाद",
-        "b": "Chandragupta II; after victory over the Sakas / चंद्रगुप्त द्वितीय; शकों पर विजय के बाद",
-        "c": "Kumaragupta I; after performing Ashwamedha / कुमारगुप्त प्रथम; अश्वमेध करने के बाद",
-        "d": "Skandagupta; after defeating the Hunas / स्कंदगुप्त; हूणों को हराने के बाद"
+        "a": "Samudragupta; after the conquest of South India",
+        "b": "Chandragupta II; after victory over the Sakas",
+        "c": "Kumaragupta I; after performing Ashwamedha",
+        "d": "Skandagupta; after defeating the Hunas"
       },
       "answer": "b",
       "solution": ""
     },
     {
       "q_num": 23,
-      "question": "Match the following 'Navratnas' of Chandragupta II with their respective fields:1. Vararuchi / वररुचि — i. Architecture (वास्तुकला)2. Sanku / शंकु — ii. Astrology (ज्योतिष)3. Kahapanaka / क्षपणक — iii. Grammar (व्याकरण)",
+      "question": "Match the following 'Navratnas' of Chandragupta II with their respective fields:1. Vararuchi",
       "options": {
         "a": "1-iii, 2-i, 3-ii",
         "b": "1-ii, 2-iii, 3-i",
@@ -282,12 +282,12 @@
     },
     {
       "q_num": 24,
-      "question": "Consider the following statements regarding Gupta art and architecture:\n 1. The Bhitargaon Temple in Kanpur is one of the oldest surviving brick temples dedicated to Lord Krishna.\n 2. The Dashavatara Temple at Deogarh is a significant example of Gupta stone architecture.\n Select the correct statement(s):गुप्त कला और वास्तुकला के संबंध में निम्नलिखित कथनों पर विचार करें:कानपुर का भीतरगाँव मंदिर भगवान कृष्ण को समर्पित सबसे पुराने जीवित ईंट मंदिरों में से एक है।देवगढ़ का दशावतार मंदिर गुप्तकालीन पाषाण वास्तुकला का एक महत्वपूर्ण उदाहरण है।सही कथन का चयन करें:",
+      "question": "Consider the following statements regarding Gupta art and architecture:\n 1. The Bhitargaon Temple in Kanpur is one of the oldest surviving brick temples dedicated to Lord Krishna.\n 2. The Dashavatara Temple at Deogarh is a significant example of Gupta stone architecture.\nSelect the correct statement(s):",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": ""

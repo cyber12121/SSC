@@ -6,247 +6,247 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who was the founder of the Tughlaq dynasty?\n तुगलक राजवंश का संस्थापक कौन था?",
+      "question": "Who was the founder of the Tughlaq dynasty?",
       "options": {
-        "a": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "b": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक",
-        "c": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "d": "Nasiruddin Mahmud / नासिरुद्दीन महमूद"
+        "a": "Muhammad bin Tughlaq",
+        "b": "Ghiyasuddin Tughlaq",
+        "c": "Firoz Shah Tughlaq",
+        "d": "Nasiruddin Mahmud"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGhiyasuddin Tughlaq founded the dynasty in 1320 after defeating Khusrau Khan. He built the city of Tughlaqabad and was the first Sultan to start irrigation works\n\n📖 हिंदी स्पष्टीकरण:\nगयासुद्दीन तुगलक ने 1320 में खुसरो खान को हराकर इस वंश की स्थापना की थी। उसने तुगलकाबाद शहर का निर्माण कराया और सिंचाई कार्य शुरू करने वाला वह पहला सुल्तान था।"
     },
     {
       "q_num": 2,
-      "question": "Which Sultan shifted his capital from Delhi to Daulatabad (Devagiri)?\n किस सुल्तान ने अपनी राजधानी दिल्ली से दौलताबाद (देवगिरी) स्थानांतरित की थी?",
+      "question": "Which Sultan shifted his capital from Delhi to Daulatabad (Devagiri)?",
       "options": {
-        "a": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक",
-        "b": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "c": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "d": "Sikandar Lodhi / सिकंदर लोदी"
+        "a": "Ghiyasuddin Tughlaq",
+        "b": "Firoz Shah Tughlaq",
+        "c": "Muhammad bin Tughlaq",
+        "d": "Sikandar Lodhi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMuhammad bin Tughlaq shifted the capital in 1327 to have a central location to control South India. However, the project failed due to administrative difficulties and lack of water at the new site\n\n📖 हिंदी स्पष्टीकरण:\nमुहम्मद बिन तुगलक ने दक्षिण भारत को नियंत्रित करने के लिए 1327 में राजधानी स्थानांतरित की थी। हालांकि, प्रशासनिक कठिनाइयों और नए स्थान पर पानी की कमी के कारण यह योजना विफल रही।"
     },
     {
       "q_num": 3,
-      "question": "Who was the founder of the Sayyid dynasty?\n सैयद राजवंश का संस्थापक कौन था?",
+      "question": "Who was the founder of the Sayyid dynasty?",
       "options": {
-        "a": "Mubarak Shah / मुबारक शाह",
-        "b": "Muhammad Shah / मुहम्मद शाह",
-        "c": "Khizr Khan / खिज्र खान",
-        "d": "Alam Shah / आलम शाह"
+        "a": "Mubarak Shah",
+        "b": "Muhammad Shah",
+        "c": "Khizr Khan",
+        "d": "Alam Shah"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKhizr Khan founded the dynasty in 1414 after the invasion of Timur. He ruled as a deputy of Timur's son Shah Rukh and never took the title of Sultan\n\n📖 हिंदी स्पष्टीकरण:\nखिज्र खान ने तैमूर के आक्रमण के बाद 1414 में सैयद वंश की स्थापना की थी। उसने तैमूर के पुत्र शाहरुख के प्रतिनिधि के रूप में शासन किया और कभी सुल्तान की उपाधि धारण नहीं की।"
     },
     {
       "q_num": 4,
-      "question": "Who among the following founded the city of Agra in 1504?\n निम्नलिखित में से किसने 1504 में आगरा शहर की स्थापना की थी?",
+      "question": "Who among the following founded the city of Agra in 1504?",
       "options": {
-        "a": "Bahlul Lodhi / बहलोल लोदी",
-        "b": "Ibrahim Lodhi / इब्राहिम लोदी",
-        "c": "Sikandar Lodhi / सिकंदर लोदी",
-        "d": "Khizr Khan / खिज्र खान"
+        "a": "Bahlul Lodhi",
+        "b": "Ibrahim Lodhi",
+        "c": "Sikandar Lodhi",
+        "d": "Khizr Khan"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSikandar Lodhi founded Agra to maintain better control over the rebellious chiefs of Rajputana. He later made it his capital in 1506\n\n📖 हिंदी स्पष्टीकरण:\nसिकंदर लोदी ने राजपूताना के विद्रोही सरदारों पर बेहतर नियंत्रण रखने के लिए आगरा की स्थापना की थी। बाद में 1506 में उसने इसे अपनी राजधानी बनाया।"
     },
     {
       "q_num": 5,
-      "question": "Which Lodi Sultan was defeated by Babur in the First Battle of Panipat (1526)?\n पानीपत की पहली लड़ाई (1526) में बाबर ने किस लोदी सुल्तान को हराया था?",
+      "question": "Which Lodi Sultan was defeated by Babur in the First Battle of Panipat (1526)?",
       "options": {
-        "a": "Sikandar Lodhi / सिकंदर लोदी",
-        "b": "Bahlul Lodhi / बहलोल लोदी",
-        "c": "Ibrahim Lodhi / इब्राहिम लोदी",
-        "d": "Daulat Khan Lodhi / दौलत खान लोदी"
+        "a": "Sikandar Lodhi",
+        "b": "Bahlul Lodhi",
+        "c": "Ibrahim Lodhi",
+        "d": "Daulat Khan Lodhi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIbrahim Lodhi was the last Sultan of Delhi who died on the battlefield of Panipat. This victory marked the end of the Delhi Sultanate and the beginning of the Mughal Empire\n\n📖 हिंदी स्पष्टीकरण:\nइब्राहिम लोदी दिल्ली का अंतिम सुल्तान था जो पानीपत के युद्ध के मैदान में मारा गया था। इस जीत ने दिल्ली सल्तनत के अंत और मुगल साम्राज्य की शुरुआत को चिह्नित किया।"
     },
     {
       "q_num": 6,
-      "question": "Who introduced the token currency of copper coins for the first time in India?\n भारत में पहली बार तांबे के सिक्कों की सांकेतिक मुद्रा किसने शुरू की थी?",
+      "question": "Who introduced the token currency of copper coins for the first time in India?",
       "options": {
-        "a": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "b": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "c": "Bahlul Lodhi / बहलोल लोदी",
-        "d": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक"
+        "a": "Firoz Shah Tughlaq",
+        "b": "Muhammad bin Tughlaq",
+        "c": "Bahlul Lodhi",
+        "d": "Ghiyasuddin Tughlaq"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHe introduced copper tokens in 1329-30 inspired by the Chinese system. It failed because people started minting fake coins at home, leading to economic chaos\n\n📖 हिंदी स्पष्टीकरण:\nमुहम्मद बिन तुगलक ने चीनी प्रणाली से प्रेरित होकर 1329-30 में तांबे के सांकेतिक सिक्के जारी किए। यह विफल रहा क्योंकि लोगों ने घरों में नकली सिक्के बनाना शुरू कर दिया, जिससे आर्थिक अराजकता फैल गई।"
     },
     {
       "q_num": 7,
-      "question": "Which Sultan established a separate department for slaves known as 'Diwan-i-Bandagan'?\n किस सुल्तान ने दासों के लिए 'दीवान-ए-बंदगान' नामक एक अलग विभाग स्थापित किया था?",
+      "question": "Which Sultan established a separate department for slaves known as 'Diwan-i-Bandagan'?",
       "options": {
-        "a": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "b": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक",
-        "c": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "d": "Sikandar Lodhi / सिकंदर लोदी"
+        "a": "Muhammad bin Tughlaq",
+        "b": "Ghiyasuddin Tughlaq",
+        "c": "Firoz Shah Tughlaq",
+        "d": "Sikandar Lodhi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFiroz Shah Tughlaq was fond of slaves and maintained about 1,80,000 of them. He created this department to manage their welfare and training\n\n📖 हिंदी स्पष्टीकरण:\nफिरोज शाह तुगलक दासों का शौकीन था और उसके पास लगभग 1,80,000 दास थे। उसने उनके कल्याण और प्रशिक्षण के प्रबंधन के लिए इस विभाग का निर्माण किया था।"
     },
     {
       "q_num": 8,
-      "question": "The famous traveler Ibn Battuta visited India during the reign of which Sultan?\n प्रसिद्ध यात्री इब्न बतूता किस सुल्तान के शासनकाल में भारत आया था?",
+      "question": "The famous traveler Ibn Battuta visited India during the reign of which Sultan?",
       "options": {
-        "a": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक",
-        "b": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "c": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "d": "Ibrahim Lodhi / इब्राहिम लोदी"
+        "a": "Ghiyasuddin Tughlaq",
+        "b": "Muhammad bin Tughlaq",
+        "c": "Firoz Shah Tughlaq",
+        "d": "Ibrahim Lodhi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIbn Battuta, a Moroccan traveler, arrived in 1333 and was appointed as the Qazi of Delhi. He wrote about the Sultan's reign in his famous book 'Rihla'\n\n📖 हिंदी स्पष्टीकरण:\nमोरक्को का यात्री इब्न बतूता 1333 में आया था और उसे दिल्ली का काजी नियुक्त किया गया था। उसने अपनी प्रसिद्ध पुस्तक 'रिहला' में सुल्तान के शासनकाल के बारे में लिखा है।"
     },
     {
       "q_num": 9,
-      "question": "Who was the first Sultan of Delhi to impose 'Jizya' on Brahmins?\n ब्राह्मणों पर 'जजिया' लगाने वाला दिल्ली का पहला सुल्तान कौन था?",
+      "question": "Who was the first Sultan of Delhi to impose 'Jizya' on Brahmins?",
       "options": {
-        "a": "Alauddin Khalji / अलाउद्दीन खिलजी",
-        "b": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "c": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "d": "Sikandar Lodhi / सिकंदर लोदी"
+        "a": "Alauddin Khalji",
+        "b": "Muhammad bin Tughlaq",
+        "c": "Firoz Shah Tughlaq",
+        "d": "Sikandar Lodhi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUnlike previous Sultans, Firoz Shah Tughlaq followed a strict religious policy. He was the first to extend the Jizya tax to the Brahmin community\n\n📖 हिंदी स्पष्टीकरण:\nपिछले सुल्तानों के विपरीत, फिरोज शाह तुगलक ने सख्त धार्मिक नीति का पालन किया। वह ब्राह्मण समुदाय पर जजिया कर लगाने वाला पहला सुल्तान था।"
     },
     {
       "q_num": 10,
-      "question": "Which dynasty of the Delhi Sultanate was the first Afghan dynasty?\n दिल्ली सल्तनत का कौन सा वंश पहला अफगान वंश था?",
+      "question": "Which dynasty of the Delhi Sultanate was the first Afghan dynasty?",
       "options": {
-        "a": "Tughlaq Dynasty / तुगलक वंश",
-        "b": "Sayyid Dynasty / सैयद वंश",
-        "c": "Lodhi Dynasty / लोदी वंश",
-        "d": "Khalji Dynasty / खिलजी वंश"
+        "a": "Tughlaq Dynasty",
+        "b": "Sayyid Dynasty",
+        "c": "Lodhi Dynasty",
+        "d": "Khalji Dynasty"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Lodhis were of Afghan origin, while the previous dynasties were mostly of Turkic origin. Bahlul Lodhi established this first Afghan rule in 1451\n\n📖 हिंदी स्पष्टीकरण:\nलोदी अफगान मूल के थे, जबकि पिछले राजवंश ज्यादातर तुर्क मूल के थे। बहलोल लोदी ने 1451 में इस पहले अफगान शासन की स्थापना की थी।"
     },
     {
       "q_num": 11,
-      "question": "Which Sultan created the agricultural department 'Diwan-i-Amir-Kohi'?\n किस सुल्तान ने कृषि विभाग 'दीवान-ए-अमीर-कोही' बनाया था?",
+      "question": "Which Sultan created the agricultural department 'Diwan-i-Amir-Kohi'?",
       "options": {
-        "a": "Firoz Shah Tughlaq / फिरोज शाह तुगलक",
-        "b": "Muhammad bin Tughlaq / मुहम्मद बिन तुगलक",
-        "c": "Ghiyasuddin Tughlaq / गयासुद्दीन तुगलक",
-        "d": "Bahlul Lodhi / बहलोल लोदी"
+        "a": "Firoz Shah Tughlaq",
+        "b": "Muhammad bin Tughlaq",
+        "c": "Ghiyasuddin Tughlaq",
+        "d": "Bahlul Lodhi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThis department was created to bring more land under cultivation by providing loans (Sondhar) to farmers. However, corruption and poor soil selection led to its failure\n\n📖 हिंदी स्पष्टीकरण:\nयह विभाग किसानों को ऋण (सोंधर) प्रदान करके अधिक भूमि को खेती के अधीन लाने के लिए बनाया गया था। हालांकि, भ्रष्टाचार और खराब मिट्टी के चयन के कारण यह विफल रहा।"
     },
     {
       "q_num": 12,
-      "question": "Who used the pen-name 'Gulrukhi' to write Persian verses?\n फारसी कविताएँ लिखने के लिए 'गुलरुखी' उपनाम का उपयोग कौन करता था?",
+      "question": "Who used the pen-name 'Gulrukhi' to write Persian verses?",
       "options": {
-        "a": "Ibrahim Lodhi / इब्राहिम लोदी",
-        "b": "Sikandar Lodhi / सिकंदर लोदी",
-        "c": "Khizr Khan / खिज्र खान",
-        "d": "Firoz Shah Tughlaq / फिरोज शाह तुगलक"
+        "a": "Ibrahim Lodhi",
+        "b": "Sikandar Lodhi",
+        "c": "Khizr Khan",
+        "d": "Firoz Shah Tughlaq"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSikandar Lodhi was a learned man and a poet. He wrote several Persian poems under the pen-name 'Gulrukhi'\n\n📖 हिंदी स्पष्टीकरण:\nसिकंदर लोदी एक विद्वान व्यक्ति और कवि था। उसने 'गुलरुखी' उपनाम से कई फारसी कविताएँ लिखी थीं।"
     },
     {
       "q_num": 13,
-      "question": "The invasion of Timur (1398 AD) took place during the reign of which Tughlaq Sultan?\n तैमूर का आक्रमण (1398 ईस्वी) किस तुगलक सुल्तान के शासनकाल में हुआ था?",
+      "question": "The invasion of Timur (1398 AD) took place during the reign of which Tughlaq Sultan?",
       "options": {
-        "a": "Ghiyasuddin Tughlaq II / गयासुद्दीन तुगलक द्वितीय",
-        "b": "Abu Bakr Shah / अबू बक्र शाह",
-        "c": "Nasiruddin Mahmud Shah / नासिरुद्दीन महमूद शाह",
-        "d": "Firoz Shah Tughlaq / फिरोज शाह तुगलक"
+        "a": "Ghiyasuddin Tughlaq II",
+        "b": "Abu Bakr Shah",
+        "c": "Nasiruddin Mahmud Shah",
+        "d": "Firoz Shah Tughlaq"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTimur's invasion in 1398 caused massive destruction in Delhi and weakened the Tughlaq dynasty. Nasiruddin Mahmud was the last ruler of the Tughlaq dynasty. / 1398\n\n📖 हिंदी स्पष्टीकरण:\nमें तैमूर के आक्रमण ने दिल्ली में भारी तबाही मचाई और तुगलक वंश को कमजोर कर दिया। नासिरुद्दीन महमूद तुगलक वंश का अंतिम शासक था।"
     },
     {
       "q_num": 14,
-      "question": "Which Sultan introduced 'Gaz-i-Sikandari' for measuring land?\n भूमि मापने के लिए 'गज-ए-सिकंदरी' की शुरुआत किस सुल्तान ने की थी?",
+      "question": "Which Sultan introduced 'Gaz-i-Sikandari' for measuring land?",
       "options": {
-        "a": "Sikandar Lodhi / सिकंदर लोदी",
-        "b": "Bahlul Lodhi / बहलोल लोदी",
-        "c": "Alauddin Khalji / अलाउद्दीन खिलजी",
-        "d": "Sher Shah Suri / शेर शाह सूरी"
+        "a": "Sikandar Lodhi",
+        "b": "Bahlul Lodhi",
+        "c": "Alauddin Khalji",
+        "d": "Sher Shah Suri"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSikandar Lodhi introduced a standardized unit of measurement called Gaz-i-Sikandari of 32 digits. This system continued to be used even during the Mughal period\n\n📖 हिंदी स्पष्टीकरण:\nसिकंदर लोदी ने 32 अंकों की 'गज-ए-सिकंदरी' नामक माप की एक मानकीकृत इकाई शुरू की। यह प्रणाली मुगल काल के दौरान भी उपयोग की जाती रही।"
     },
     {
       "q_num": 15,
-      "question": "The 'Rayat-i-Ala' title was assumed by which ruler instead of 'Sultan'?\n 'सुल्तान' के बजाय 'रैयत-ए-आला' की उपाधि किस शासक ने धारण की थी?",
+      "question": "The 'Rayat-i-Ala' title was assumed by which ruler instead of 'Sultan'?",
       "options": {
-        "a": "Bahlul Lodhi / बहलोल लोदी",
-        "b": "Khizr Khan / खिज्र खान",
-        "c": "Mubarak Shah / मुबारक शाह",
-        "d": "Muhammad Shah / मुहम्मद शाह"
+        "a": "Bahlul Lodhi",
+        "b": "Khizr Khan",
+        "c": "Mubarak Shah",
+        "d": "Muhammad Shah"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKhizr Khan, the founder of the Sayyid dynasty, refrained from taking the title of Sultan to show loyalty to the Timurids. He contented himself with the title Rayat-i-Ala\n\n📖 हिंदी स्पष्टीकरण:\nसैयद वंश के संस्थापक खिज्र खान ने तैमूरियों के प्रति वफादारी दिखाने के लिए सुल्तान की उपाधि लेने से परहेज किया। उसने खुद को रैयत-ए-आला की उपाधि से संतुष्ट रखा।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): Muhammad bin Tughlaq's project of shifting the capital was a failure.\n अभिकथन (A): मुहम्मद बिन तुगलक की राजधानी स्थानांतरित करने की योजना एक विफलता थी।\n Reason (R): The move was hurried and he ordered the entire population of Delhi to move to Daulatabad.\n कारण (R): यह कदम जल्दबाजी में उठाया गया था और उसने दिल्ली की पूरी आबादी को दौलताबाद जाने का आदेश दिया था।",
+      "question": "Assertion (A): Muhammad bin Tughlaq's project of shifting the capital was a failure.\n Reason (R): The move was hurried and he ordered the entire population of Delhi to move to Daulatabad.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe failure was due to the logistical nightmare of moving an entire city's population over 1500 km. Many people died on the way, and the Sultan eventually realized the northern borders were unprotected\n\n📖 हिंदी स्पष्टीकरण:\nविफलता 1500 किमी से अधिक की दूरी पर पूरे शहर की आबादी को ले जाने की तार्किक कठिनाई के कारण थी। रास्ते में कई लोगों की मौत हो गई, और सुल्तान को अंततः एहसास हुआ कि उत्तरी सीमाएं असुरक्षित थीं।"
     },
     {
       "q_num": 17,
-      "question": "Consider the following statements about Firoz Shah Tughlaq:\n फिरोज शाह तुगलक के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. He established a department for poor and orphans called 'Diwan-i-Khairat'. / उसने 'दीवान-ए-खैरात' नामक गरीबों और अनाथों के लिए एक विभाग स्थापित किया।\n 2. He repaired the Qutub Minar after it was damaged by lightning. / बिजली गिरने से क्षतिग्रस्त होने के बाद उसने कुतुब मीनार की मरम्मत कराई थी।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Firoz Shah Tughlaq:\n1. He established a department for poor and orphans called 'Diwan-i-Khairat'.\n2. He repaired the Qutub Minar after it was damaged by lightning.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFiroz Shah Tughlaq was known for his public works. Diwan-i-Khairat helped poor Muslims with marriages and health, and he added the final stories to the Qutub Minar\n\n📖 हिंदी स्पष्टीकरण:\nफिरोज शाह तुगलक अपने सार्वजनिक कार्यों के लिए जाना जाता था। दीवान-ए-खैरात ने गरीब मुसलमानों को विवाह और स्वास्थ्य में मदद की, और उसने कुतुब मीनार में अंतिम मंजिलें जोड़ीं।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Bahlul Lodhi sat on the carpet with his nobles instead of a high throne.\n अभिकथन (A): बहलोल लोदी एक ऊंचे सिंहासन के बजाय अपने सरदारों के साथ कालीन पर बैठता था।\n Reason (R): He wanted to maintain the Afghan theory of kingship which considered the Sultan as 'First among equals'.\n कारण (R): वह राजत्व के अफगान सिद्धांत को बनाए रखना चाहता था जो सुल्तान को 'समानों में प्रथम' मानता था।",
+      "question": "Assertion (A): Bahlul Lodhi sat on the carpet with his nobles instead of a high throne.\n Reason (R): He wanted to maintain the Afghan theory of kingship which considered the Sultan as 'First among equals'.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nUnlike the Turks who believed in absolute monarchy, Afghan rulers like Bahlul Lodhi treated their tribal chiefs as peers to ensure their support\n\n📖 हिंदी स्पष्टीकरण:\nतुर्कों के विपरीत, जो पूर्ण राजतंत्र में विश्वास करते थे, बहलोल लोदी जैसे अफगान शासकों ने समर्थन सुनिश्चित करने के लिए अपने आदिवासी सरदारों के साथ बराबरी का व्यवहार किया।"
     },
     {
       "q_num": 19,
-      "question": "Statement I: The Sayyid dynasty claimed to be descendants of the Prophet Muhammad.\n कथन I: सैयद राजवंश ने पैगंबर मुहम्मद के वंशज होने का दावा किया।\n Statement II: They were the shortest-ruling dynasty of the Delhi Sultanate.\n कथन II: ये दिल्ली सल्तनत के सबसे कम समय तक शासन करने वाले राजवंश थे।",
+      "question": "Statement I: The Sayyid dynasty claimed to be descendants of the Prophet Muhammad.\n Statement II: They were the shortest-ruling dynasty of the Delhi Sultanate.",
       "options": {
-        "a": "Statement I is correct, Statement II is incorrect. / कथन I सही है, कथन II गलत है।",
-        "b": "Statement I is incorrect, Statement II is correct. / कथन I गलत है, कथन II सही है।",
-        "c": "Both statements are correct. / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect. / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, Statement II is incorrect.",
+        "b": "Statement I is incorrect, Statement II is correct.",
+        "c": "Both statements are correct.",
+        "d": "Both statements are incorrect."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWhile the Sayyids claimed descent from the Prophet, the shortest-ruling dynasty was actually the Khalji dynasty (30 years). The Sayyids ruled for about 37 years\n\n📖 हिंदी स्पष्टीकरण:\nसैयदों ने पैगंबर के वंशज होने का दावा किया था, जबकि सबसे कम समय तक शासन करने वाला वंश वास्तव में खिलजी वंश (30 वर्ष) था। सैयदों ने लगभग 37 वर्षों तक शासन किया।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The Tughlaq architecture is characterized by sloping walls known as 'batter'.\n अभिकथन (A): तुगलक वास्तुकला की विशेषता ढलुआ दीवारें हैं जिन्हें 'बैटर' कहा जाता है।\n Reason (R): This feature was introduced to provide more strength to the massive structures built during this period.\n कारण (R): यह विशेषता इस अवधि के दौरान निर्मित विशाल संरचनाओं को अधिक मजबूती प्रदान करने के लिए शुरू की गई थी।",
+      "question": "Assertion (A): The Tughlaq architecture is characterized by sloping walls known as 'batter'.\n Reason (R): This feature was introduced to provide more strength to the massive structures built during this period.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe 'Batter' or sloping wall is a unique feature of Tughlaq style (especially in Ghiyasuddin’s tomb). It combined strength with a stern, simple appearance. / '\n\n📖 हिंदी स्पष्टीकरण:\nबैटर' या ढलुआ दीवार तुगलक शैली की एक अनूठी विशेषता है (विशेष रूप से गयासुद्दीन के मकबरे में)। इसने मजबूती के साथ एक सरल और गंभीर रूप का संयोजन किया।"
     },
     {
       "q_num": 21,
-      "question": "Arrange the following events of Muhammad bin Tughlaq's reign in chronological order:\n मुहम्मद बिन तुगलक के शासनकाल की निम्नलिखित घटनाओं को कालानुक्रमिक क्रम में व्यवस्थित करें:\n 1. Transfer of Capital / राजधानी का स्थानांतरण\n 2. Taxation in Doab / दोआब में कराधान\n 3. Introduction of Token Currency / सांकेतिक मुद्रा की शुरुआत\n 4. Qarachil Expedition / कराचिल अभियान",
+      "question": "Arrange the following events of Muhammad bin Tughlaq's reign in chronological order:\n1. Transfer of Capital\n2. Taxation in Doab\n3. Introduction of Token Currency\n4. Qarachil Expedition",
       "options": {
         "a": "2-1-3-4",
         "b": "1-2-3-4",
@@ -258,31 +258,31 @@
     },
     {
       "q_num": 22,
-      "question": "Statement I: Ibrahim Lodhi fought the Battle of Khatoli against Rana Sanga.\n कथन I: इब्राहिम लोदी ने राणा सांगा के खिलाफ खतौली की लड़ाई लड़ी थी।\n Statement II: Ibrahim Lodhi won this battle and expanded his empire towards Mewar.\n कथन II: इब्राहिम लोदी ने यह लड़ाई जीती और मेवाड़ की ओर अपने साम्राज्य का विस्तार किया।",
+      "question": "Statement I: Ibrahim Lodhi fought the Battle of Khatoli against Rana Sanga.\n Statement II: Ibrahim Lodhi won this battle and expanded his empire towards Mewar.",
       "options": {
-        "a": "Statement I is correct, Statement II is incorrect. / कथन I सही है, कथन II गलत है।",
-        "b": "Statement I is incorrect, Statement II is correct. / कथन I गलत है, कथन II सही है।",
-        "c": "Both statements are correct. / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect. / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, Statement II is incorrect.",
+        "b": "Statement I is incorrect, Statement II is correct.",
+        "c": "Both statements are correct.",
+        "d": "Both statements are incorrect."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIbrahim Lodhi fought Rana Sanga in 1518 at Khatoli, but he was defeated by the Rajput king. Rana Sanga even lost an arm in this battle but emerged victorious\n\n📖 हिंदी स्पष्टीकरण:\nइब्राहिम लोदी ने 1518 में खतौली में राणा सांगा से लड़ाई लड़ी थी, लेकिन वह राजपूत राजा से हार गया था। राणा सांगा ने इस लड़ाई में एक हाथ भी खो दिया था लेकिन विजयी रहे थे।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): Firoz Shah Tughlaq is often called the 'Akbar of the Sultanate'.\n अभिकथन (A): फिरोज शाह तुगलक को अक्सर 'सल्तनत का अकबर' कहा जाता है।\n Reason (R): He focused on public welfare projects, canals, and abolished many cruel punishments.\n कारण (R): उसने लोक कल्याणकारी परियोजनाओं, नहरों पर ध्यान केंद्रित किया और कई क्रूर दंडों को समाप्त कर दिया।",
+      "question": "Assertion (A): Firoz Shah Tughlaq is often called the 'Akbar of the Sultanate'.\n Reason (R): He focused on public welfare projects, canals, and abolished many cruel punishments.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHistorians like Henry Elliot and Elphinstone called him so because of his interest in the prosperity of his subjects and infrastructure development\n\n📖 हिंदी स्पष्टीकरण:\nहेनरी इलियट और एल्फिंस्टन जैसे इतिहासकारों ने उन्हें अपनी प्रजा की समृद्धि और बुनियादी ढांचे के विकास में रुचि के कारण ऐसा कहा था।"
     },
     {
       "q_num": 24,
-      "question": "Match the following dynasties with their ruling periods:\n निम्नलिखित राजवंशों को उनके शासन काल से सुमेलित करें:\n 1. Tughlaq Dynasty / तुगलक वंश - A. 1451-1526\n 2. Sayyid Dynasty / सैयद वंश - B. 1320-1414\n 3. Lodhi Dynasty / लोदी वंश - C. 1414-1451",
+      "question": "Match the following dynasties with their ruling periods:\n1. Tughlaq Dynasty\n2. Sayyid Dynasty\n3. Lodhi Dynasty",
       "options": {
         "a": "1-B, 2-C, 3-A",
         "b": "1-A, 2-B, 3-C",
@@ -294,12 +294,12 @@
     },
     {
       "q_num": 25,
-      "question": "Assertion (A): The power of the Delhi Sultanate declined rapidly after the invasion of Timur.\n अभिकथन (A): तैमूर के आक्रमण के बाद दिल्ली सल्तनत की शक्ति तेजी से कम हो गई।\n Reason (R): Timur looted Delhi's wealth and the Tughlaq Sultan Nasiruddin Mahmud was a weak ruler.\n कारण (R): तैमूर ने दिल्ली की संपत्ति को लूटा और तुगलक सुल्तान नासिरुद्दीन महमूद एक कमजोर शासक था।",
+      "question": "Assertion (A): The power of the Delhi Sultanate declined rapidly after the invasion of Timur.\n Reason (R): Timur looted Delhi's wealth and the Tughlaq Sultan Nasiruddin Mahmud was a weak ruler.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe 1398 invasion shattered the central authority, allowing provincial governors to become independent, which eventually led to the rise of regional kingdoms. / 1398\n\n📖 हिंदी स्पष्टीकरण:\nके आक्रमण ने केंद्रीय सत्ता को नष्ट कर दिया, जिससे प्रांतीय गवर्नरों को स्वतंत्र होने का मौका मिला, जिसके परिणामस्वरूप क्षेत्रीय राज्यों का उदय हुआ।"

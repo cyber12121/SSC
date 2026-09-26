@@ -6,19 +6,19 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who is known as the \"Father of Inheritance\"? / \"अनुवांशिकता के जनक\" के रूप में किसे जाना जाता है?",
+      "question": "Who is known as the \"Father of Inheritance\"?",
       "options": {
-        "a": "Charles Darwin / चार्ल्स डार्विन",
-        "b": "Gregor Johann Mendel / ग्रेगर जोहान मेंडल",
-        "c": "James Watson / जेम्स वॉटसन",
-        "d": "Robert Hooke / रॉबर्ट हुक"
+        "a": "Charles Darwin",
+        "b": "Gregor Johann Mendel",
+        "c": "James Watson",
+        "d": "Robert Hooke"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGregor Mendel conducted experiments on pea plants (Pisum sativum) to discover the fundamental laws of inheritance. He is credited with laying the foundation for the science of genetics\n\n📖 हिंदी स्पष्टीकरण:\nग्रेगर मेंडल ने अनुवांशिकता के बुनियादी नियमों की खोज के लिए मटर के पौधों (पिसम सैटिवम) पर प्रयोग किए। उन्हें आनुवंशिकी विज्ञान की नींव रखने का श्रेय दिया जाता है।"
     },
     {
       "q_num": 2,
-      "question": "What is the total number of bones in an adult human being? / एक वयस्क मनुष्य में हड्डियों की कुल संख्या कितनी होती है?",
+      "question": "What is the total number of bones in an adult human being?",
       "options": {
         "a": "300",
         "b": "206",
@@ -30,67 +30,67 @@
     },
     {
       "q_num": 3,
-      "question": "Which of the following is the unit of heredity? / निम्नलिखित में से कौन अनुवांशिकता की इकाई है?",
+      "question": "Which of the following is the unit of heredity?",
       "options": {
-        "a": "Cell / कोशिका",
-        "b": "DNA / डीएनए",
-        "c": "Gene / जीन",
-        "d": "Chromosome / गुणसूत्र"
+        "a": "Cell",
+        "b": "DNA",
+        "c": "Gene",
+        "d": "Chromosome"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA gene is a segment of DNA that acts as the basic physical and functional unit of heredity. It carries information from parents to offspring\n\n📖 हिंदी स्पष्टीकरण:\nजीन डीएनए का एक खंड है जो अनुवांशिकता की बुनियादी भौतिक और कार्यात्मक इकाई के रूप में कार्य करता है। यह माता-पिता से संतानों तक जानकारी ले जाता है।"
     },
     {
       "q_num": 4,
-      "question": "The \"Thigh Bone\" in the human body is scientifically known as: / मानव शरीर में \"जांघ की हड्डी\" को वैज्ञानिक रूप से किस नाम से जाना जाता है?",
+      "question": "The \"Thigh Bone\" in the human body is scientifically known as:",
       "options": {
-        "a": "Tibia / टिबिया",
-        "b": "Fibula / फाइबुला",
-        "c": "Humerus / ह्यूमरस",
-        "d": "Femur / फीमर"
+        "a": "Tibia",
+        "b": "Fibula",
+        "c": "Humerus",
+        "d": "Femur"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe femur is the longest and strongest bone in the human body, located in the upper leg. It supports the weight of the body during movement\n\n📖 हिंदी स्पष्टीकरण:\nफीमर मानव शरीर की सबसे लंबी और सबसे मजबूत हड्डी है, जो ऊपरी पैर में स्थित होती है। यह गति के दौरान शरीर के वजन का समर्थन करती है।"
     },
     {
       "q_num": 5,
-      "question": "How many pairs of ribs are there in the human rib cage? / मानव पसलियों के पिंजरे में पसलियों के कितने जोड़े होते हैं?",
+      "question": "How many pairs of ribs are there in the human rib cage?",
       "options": {
-        "a": "10 pairs / 10 जोड़े",
-        "b": "12 pairs / 12 जोड़े",
-        "c": "24 pairs / 24 जोड़े",
-        "d": "14 pairs / 14 जोड़े"
+        "a": "10 pairs",
+        "b": "12 pairs",
+        "c": "24 pairs",
+        "d": "14 pairs"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe human rib cage consists of 12 pairs of ribs (total 24) plus the sternum. They protect vital organs like the heart and lungs\n\n📖 हिंदी स्पष्टीकरण:\nमानव पसलियों के पिंजरे में 12 जोड़ी पसलियाँ (कुल 24) और उरोस्थि होती हैं। वे हृदय और फेफड़ों जैसे महत्वपूर्ण अंगों की रक्षा करती हैं।"
     },
     {
       "q_num": 6,
-      "question": "Which plant was chosen by Mendel for his experiments? / मेंडल ने अपने प्रयोगों के लिए किस पौधे को चुना था?",
+      "question": "Which plant was chosen by Mendel for his experiments?",
       "options": {
-        "a": "Rose / गुलाब",
-        "b": "Sunflower / सूरजमुखी",
-        "c": "Pea plant / मटर का पौधा",
-        "d": "Wheat / गेहूं"
+        "a": "Rose",
+        "b": "Sunflower",
+        "c": "Pea plant",
+        "d": "Wheat"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMendel chose the garden pea (Pisum sativum) because it was easy to grow, had a short life cycle, and possessed easily observable contrasting traits\n\n📖 हिंदी स्पष्टीकरण:\nमेंडल ने बगीचे के मटर (पिसम सैटिवम) को इसलिए चुना क्योंकि इसे उगाना आसान था, इसका जीवन चक्र छोटा था, और इसमें आसानी से देखे जाने वाले विपरीत लक्षण थे।"
     },
     {
       "q_num": 7,
-      "question": "The bone that connects the skull to the spine and supports the head is called: / वह हड्डी जो खोपड़ी को रीढ़ से जोड़ती है और सिर को सहारा देती है, क्या कहलाती है?",
+      "question": "The bone that connects the skull to the spine and supports the head is called:",
       "options": {
-        "a": "Sacrum / त्रिक",
-        "b": "Lumbar / लम्बर",
-        "c": "Atlas / एटलस",
-        "d": "Coccyx / कोक्सीक्स"
+        "a": "Sacrum",
+        "b": "Lumbar",
+        "c": "Atlas",
+        "d": "Coccyx"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe atlas is the first cervical vertebra (C1) of the spine. It is specifically designed to support the skull and allow head movement\n\n📖 हिंदी स्पष्टीकरण:\nएटलस रीढ़ की पहली ग्रीवा कशेरुका (C1) है। इसे विशेष रूप से खोपड़ी को सहारा देने और सिर की गति की अनुमति देने के लिए डिज़ाइन किया गया है।"
     },
     {
       "q_num": 8,
-      "question": "What is the phenotypic ratio of a Monohybrid cross in the F2 generation? / F2 पीढ़ी में एक मोनोहाइब्रिड क्रॉस का फेनोटाइपिक अनुपात क्या है?",
+      "question": "What is the phenotypic ratio of a Monohybrid cross in the F2 generation?",
       "options": {
         "a": "1:2:1",
         "b": "9:3:3:1",
@@ -102,19 +102,19 @@
     },
     {
       "q_num": 9,
-      "question": "Which of the following is a \"fixed\" or immovable joint? / निम्नलिखित में से कौन सा एक \"अचल\" या अचल जोड़ है?",
+      "question": "Which of the following is a \"fixed\" or immovable joint?",
       "options": {
-        "a": "Synovial Joint / श्लेष जोड़",
-        "b": "Cartilaginous Joint / उपास्थियुक्त जोड़",
-        "c": "Fibrous Joint / रेशेदार जोड़",
-        "d": "Ball and Socket Joint / बॉल और सॉकेट जोड़"
+        "a": "Synovial Joint",
+        "b": "Cartilaginous Joint",
+        "c": "Fibrous Joint",
+        "d": "Ball and Socket Joint"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFibrous joints are fixed joints where bones are connected by collagenous fibrous connective tissue, allowing no movement, like in the skull\n\n📖 हिंदी स्पष्टीकरण:\nरेशेदार जोड़ अचल जोड़ होते हैं जहाँ हड्डियाँ कोलेजनयुक्त रेशेदार संयोजी ऊतक द्वारा जुड़ी होती हैं, जिससे कोई गति नहीं होती है, जैसे खोपड़ी में।"
     },
     {
       "q_num": 10,
-      "question": "How many bones are present in the human ear (in total, both ears)? / मानव कान में (दोनों कानों में मिलाकर) कितनी हड्डियाँ मौजूद होती हैं?",
+      "question": "How many bones are present in the human ear (in total, both ears)?",
       "options": {
         "a": "3",
         "b": "6",
@@ -126,7 +126,7 @@
     },
     {
       "q_num": 11,
-      "question": "The total number of bones in the Axial Skeleton is: / अक्षीय कंकाल में हड्डियों की कुल संख्या कितनी है?",
+      "question": "The total number of bones in the Axial Skeleton is:",
       "options": {
         "a": "126",
         "b": "80",
@@ -138,115 +138,115 @@
     },
     {
       "q_num": 12,
-      "question": "What are \"Alleles\"? / \"एलील\" क्या हैं?",
+      "question": "What are \"Alleles\"?",
       "options": {
-        "a": "Types of proteins / प्रोटीन के प्रकार",
-        "b": "Alternate forms of a gene / एक जीन के वैकल्पिक रूप",
-        "c": "Segments of RNA / आरएनए के खंड",
-        "d": "Parts of a bone / हड्डी के हिस्से"
+        "a": "Types of proteins",
+        "b": "Alternate forms of a gene",
+        "c": "Segments of RNA",
+        "d": "Parts of a bone"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAlleles are different versions of the same gene located at the same position on a chromosome. They determine specific expressions of a trait\n\n📖 हिंदी स्पष्टीकरण:\nएलील एक ही जीन के विभिन्न संस्करण हैं जो गुणसूत्र पर एक ही स्थान पर स्थित होते हैं। वे किसी लक्षण की विशिष्ट अभिव्यक्ति निर्धारित करते हैं।"
     },
     {
       "q_num": 13,
-      "question": "In the context of the skeletal system, the \"Patella\" is commonly known as: / कंकाल तंत्र के संदर्भ में, \"पटेला\" को आमतौर पर किस नाम से जाना जाता है?",
+      "question": "In the context of the skeletal system, the \"Patella\" is commonly known as:",
       "options": {
-        "a": "Collarbone / हंसली",
-        "b": "Shoulder blade / कंधे की हड्डी",
-        "c": "Knee cap / घुटने की टोपी",
-        "d": "Shin bone / पिंडली की हड्डी"
+        "a": "Collarbone",
+        "b": "Shoulder blade",
+        "c": "Knee cap",
+        "d": "Shin bone"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe patella is a thick, circular-triangular bone which articulates with the femur and covers and protects the anterior surface of the knee joint\n\n📖 हिंदी स्पष्टीकरण:\nपटेला एक मोटी, गोलाकार-त्रिकोणीय हड्डी है जो फीमर के साथ जुड़ती है और घुटने के जोड़ की अगली सतह को ढकती और सुरक्षित करती है।"
     },
     {
       "q_num": 14,
-      "question": "Mendel's Law of Segregation states that: / मेंडल का पृथक्करण का नियम क्या बताता है?",
+      "question": "Mendel's Law of Segregation states that:",
       "options": {
-        "a": "Traits are mixed in offspring / संतानों में लक्षण मिश्रित होते हैं।",
-        "b": "Alleles separate during gamete formation / युग्मक निर्माण के दौरान एलील अलग हो जाते हैं।",
-        "c": "Dominant traits always hide recessive ones / प्रभावी लक्षण हमेशा अप्रभावी लक्षणों को छुपाते हैं।",
-        "d": "Genes are inherited in groups / जीन समूहों में विरासत में मिलते हैं।"
+        "a": "Traits are mixed in offspring",
+        "b": "Alleles separate during gamete formation",
+        "c": "Dominant traits always hide recessive ones",
+        "d": "Genes are inherited in groups"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAccording to this law, the pairs of gene variants (alleles) are separated during the formation of gametes, so each gamete carries only one allele\n\n📖 हिंदी स्पष्टीकरण:\nइस नियम के अनुसार, युग्मकों के निर्माण के दौरान जीन वेरिएंट (एलील) के जोड़े अलग हो जाते हैं, जिससे प्रत्येक युग्मक में केवल एक एलील होता है।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following is NOT a part of the Appendicular Skeleton? / निम्नलिखित में से कौन सा उपांगी कंकाल का हिस्सा नहीं है?",
+      "question": "Which of the following is NOT a part of the Appendicular Skeleton?",
       "options": {
-        "a": "Clavicle / हंसली",
-        "b": "Pelvis / पेल्विस",
-        "c": "Vertebral Column / कशेरुक स्तंभ",
-        "d": "Radius / रेडियस"
+        "a": "Clavicle",
+        "b": "Pelvis",
+        "c": "Vertebral Column",
+        "d": "Radius"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe vertebral column is part of the Axial skeleton, while limbs and girdles (like clavicle and pelvis) form the appendicular skeleton\n\n📖 हिंदी स्पष्टीकरण:\nकशेरुक स्तंभ अक्षीय कंकाल का हिस्सा है, जबकि अंग और गर्डल (जैसे हंसली और पेल्विस) उपांगी कंकाल बनाते हैं।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): The phenotypic ratio of a Dihybrid cross in F2 generation is 9:3:3:1. / \n अभिकथन (A): F2 पीढ़ी में डिहाइब्रिड क्रॉस का फेनोटाइपिक अनुपात 9:3:3:1 है।\n Reason (R): This ratio occurs because of the Law of Independent Assortment. / कारण (R): यह अनुपात स्वतंत्र अपव्यूहन के नियम के कारण होता है।",
+      "question": "Assertion (A): The phenotypic ratio of a Dihybrid cross in F2 generation is 9:3:3:1.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe 9:3:3:1 ratio represents the combination of two independent traits sorting separately into gametes, as explained by Mendel's 3rd law. / 9:3:3:1\n\n📖 हिंदी स्पष्टीकरण:\nअनुपात दो स्वतंत्र लक्षणों के संयोजन को दर्शाता है जो युग्मकों में अलग-अलग क्रमबद्ध होते हैं, जैसा कि मेंडल के तीसरे नियम द्वारा समझाया गया है।"
     },
     {
       "q_num": 17,
-      "question": "Which statement is CORRECT regarding Homologous organs? / समजात अंगों के संबंध में कौन सा कथन सही है?",
+      "question": "Which statement is CORRECT regarding Homologous organs?",
       "options": {
-        "a": "Different structure, same function / अलग संरचना, समान कार्य",
-        "b": "Same structure, different function / समान संरचना, अलग कार्य",
-        "c": "Different structure, different function / अलग संरचना, अलग कार्य",
-        "d": "Inherited from different ancestors / विभिन्न पूर्वजों से विरासत में मिला"
+        "a": "Different structure, same function",
+        "b": "Same structure, different function",
+        "c": "Different structure, different function",
+        "d": "Inherited from different ancestors"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHomologous organs have the same anatomical structure because they are inherited from a common ancestor, but they perform different functions in different species\n\n📖 हिंदी स्पष्टीकरण:\nसमजात अंगों की शारीरिक संरचना समान होती है क्योंकि वे एक सामान्य पूर्वज से विरासत में मिलते हैं, लेकिन वे विभिन्न प्रजातियों में अलग-अलग कार्य करते हैं।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements about Human Spine: / मानव रीढ़ के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. Adults have 26 bones in the spinal cord. / वयस्कों की रीढ़ की हड्डी में 26 हड्डियाँ होती हैं।\n 2. The Cervical region has 7 vertebrae. / ग्रीवा क्षेत्र में 7 कशेरुकाएं होती हैं।\n Which of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Human Spine:",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAdult spines consist of 26 bones (7 cervical, 12 thoracic, 5 lumbar, 1 sacrum, 1 coccyx). Some bones found in children fuse as they age\n\n📖 हिंदी स्पष्टीकरण:\nवयस्क रीढ़ में 26 हड्डियाँ होती हैं (7 ग्रीवा, 12 वक्ष, 5 लम्बर, 1 त्रिक, 1 कोक्सीक्स)। बच्चों में पाई जाने वाली कुछ हड्डियाँ उम्र बढ़ने के साथ जुड़ जाती हैं।"
     },
     {
       "q_num": 19,
-      "question": "Statement I: Acquired traits are passed down from parents to offspring through DNA. / कथन I: अर्जित लक्षण माता-पिता से संतानों में डीएनए के माध्यम से पारित होते हैं।\n Statement II: Inherited traits develop during an organism's lifetime due to environment. / कथन II: विरासत में मिले लक्षण पर्यावरण के कारण जीव के जीवनकाल के दौरान विकसित होते हैं।",
+      "question": "Statement I: Acquired traits are passed down from parents to offspring through DNA.",
       "options": {
-        "a": "Statement I is correct, Statement II is incorrect / कथन I सही है, कथन II गलत है।",
-        "b": "Statement I is incorrect, Statement II is correct / कथन I गलत है, कथन II सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, Statement II is incorrect",
+        "b": "Statement I is incorrect, Statement II is correct",
+        "c": "Both statements are correct",
+        "d": "Both statements are incorrect"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nInherited traits are passed through DNA, while acquired traits (like riding a bike) develop during a lifetime and are not genetic\n\n📖 हिंदी स्पष्टीकरण:\nविरासत में मिले लक्षण डीएनए के माध्यम से पारित होते हैं, जबकि अर्जित लक्षण (जैसे बाइक चलाना) जीवनकाल के दौरान विकसित होते हैं और आनुवंशिक नहीं होते हैं।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The Synovial joint is a freely movable joint. / अभिकथन (A): श्लेष जोड़ एक स्वतंत्र रूप से चलने योग्य जोड़ है।\n Reason (R): It allows for a wide range of motion in the body. / कारण (R): यह शरीर में गति की एक विस्तृत श्रृंखला की अनुमति देता है।",
+      "question": "Assertion (A): The Synovial joint is a freely movable joint.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSynovial joints are characterized by the presence of a fluid-filled cavity, which enables them to move freely and provides mobility\n\n📖 हिंदी स्पष्टीकरण:\nश्लेष जोड़ों की विशेषता तरल से भरी गुहा की उपस्थिति है, जो उन्हें स्वतंत्र रूप से स्थानांतरित करने में सक्षम बनाती है और गतिशीलता प्रदान करती है।"
     },
     {
       "q_num": 21,
-      "question": "Match the following bones with their location: / निम्नलिखित हड्डियों का उनके स्थान से मिलान करें:\n 1. Carpals - A. Arm / 1. मणिबंधिकाएं (कार्पल्स) - A. हाथ\n 2. Tarsals - B. Hand / 2. प्रपदिकाएं (टार्सल्स) - B. कलाई \n 3. Humerus - C. Foot / 3. प्रगंडिका (ह्यूमरस) - C. पैर",
+      "question": "Match the following bones with their location:",
       "options": {
         "a": "1-B, 2-C, 3-A",
         "b": "1-A, 2-B, 3-C",
@@ -258,43 +258,43 @@
     },
     {
       "q_num": 22,
-      "question": "Statement I: Variation is necessary for the survivability of a species. / \n कथन I: किसी प्रजाति की उत्तरजीविता के लिए विविधता आवश्यक है।\n Statement II: Variation is seen more in asexual reproduction than sexual reproduction. / \n कथन II: लैंगिक प्रजनन की तुलना में अलैंगिक प्रजनन में भिन्नता अधिक देखी जाती है।",
+      "question": "Statement I: Variation is necessary for the survivability of a species.",
       "options": {
-        "a": "Statement I is correct, Statement II is incorrect / कथन I सही है, कथन II गलत है।",
-        "b": "Statement I is incorrect, Statement II is correct / कथन I गलत है, कथन II सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, Statement II is incorrect",
+        "b": "Statement I is incorrect, Statement II is correct",
+        "c": "Both statements are correct",
+        "d": "Both statements are incorrect"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nVariation helps species adapt to changing environments. It is actually higher in sexual reproduction due to genetic recombination\n\n📖 हिंदी स्पष्टीकरण:\nविविधता प्रजातियों को बदलते वातावरण के अनुकूल होने में मदद करती है। आनुवंशिक पुनर्संयोजन के कारण यह वास्तव में लैंगिक प्रजनन में अधिक होती है।"
     },
     {
       "q_num": 23,
-      "question": "Which bone is commonly referred to as the \"Collarbone\"? / किस हड्डी को आमतौर पर \"हंसली\" (कॉलरबोन) कहा जाता है?",
+      "question": "Which bone is commonly referred to as the \"Collarbone\"?",
       "options": {
-        "a": "Scapula / स्कैपुला",
-        "b": "Sternum / स्टर्नम",
-        "c": "Clavicle / क्लेविकल",
-        "d": "Hyoid / हायोइड"
+        "a": "Scapula",
+        "b": "Sternum",
+        "c": "Clavicle",
+        "d": "Hyoid"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe clavicle is a long bone that serves as a strut between the shoulder blade and the sternum. It is the only horizontal long bone\n\n📖 हिंदी स्पष्टीकरण:\nक्लेविकल एक लंबी हड्डी है जो कंधे के ब्लेड और स्टर्नम के बीच एक आधार के रूप में कार्य करती है। यह एकमात्र क्षैतिज लंबी हड्डी है।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): Analogous organs perform similar functions but have different structures. / अभिकथन (A): समरूप अंग समान कार्य करते हैं लेकिन उनकी संरचनाएँ भिन्न होती हैं।\n Reason (R): They are not inherited from a common ancestor. / कारण (R): वे एक सामान्य पूर्वज से विरासत में नहीं मिले हैं।",
+      "question": "Assertion (A): Analogous organs perform similar functions but have different structures.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAnalogous structures evolved independently in different species to serve the same purpose, such as wings in birds and insects\n\n📖 हिंदी स्पष्टीकरण:\nपक्षियों और कीटों के पंखों की तरह, एक ही उद्देश्य को पूरा करने के लिए विभिन्न प्रजातियों में स्वतंत्र रूप से समवृत्ति संरचनाएं विकसित हुईं।"
     },
     {
       "q_num": 25,
-      "question": "The total number of phalanges in one human hand is: / एक मानव हाथ में उँगलियों की हड्डियों (फैलेंजेस) की कुल संख्या कितनी होती है?",
+      "question": "The total number of phalanges in one human hand is:",
       "options": {
         "a": "10",
         "b": "12",

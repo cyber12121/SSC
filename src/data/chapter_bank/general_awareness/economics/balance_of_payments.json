@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Balance of Payment (BoP) is a record of a nation's: भुगतान संतुलन (BoP) किसी राष्ट्र के किसका रिकॉर्ड है?",
+      "question": "Balance of Payment (BoP) is a record of a nation's:",
       "options": {
-        "a": "Total population / कुल जनसंख्या",
-        "b": "Financial transactions (import and export) / वित्तीय लेनदेन (आयात और निर्यात)",
-        "c": "Total agricultural production / कुल कृषि उत्पादन",
-        "d": "Internal tax collection / आंतरिक कर संग्रह"
+        "a": "Total population",
+        "b": "Financial transactions (import and export)",
+        "c": "Total agricultural production",
+        "d": "Internal tax collection"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBalance of Payment is a systematic record of all financial transactions, including imports and exports, between a country and the rest of the world\n\n📖 हिंदी स्पष्टीकरण:\nभुगतान संतुलन एक देश और शेष विश्व के बीच आयात और निर्यात सहित सभी वित्तीय लेनदेन का एक व्यवस्थित रिकॉर्ड है।"
     },
     {
       "q_num": 2,
-      "question": "Where is the headquarters of the International Monetary Fund (IMF) located? अंतर्राष्ट्रीय मुद्रा कोष (IMF) का मुख्यालय कहाँ स्थित है?",
+      "question": "Where is the headquarters of the International Monetary Fund (IMF) located?",
       "options": {
-        "a": "Geneva / जिनेवा",
-        "b": "New York / न्यूयॉर्क",
-        "c": "Washington D.C. / वाशिंगटन डी.सी.",
-        "d": "London / लंदन"
+        "a": "Geneva",
+        "b": "New York",
+        "c": "Washington D.C.",
+        "d": "London"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe IMF and the World Bank are known as twin organizations, and both have their headquarters in Washington D.C. / IMF\n\n📖 हिंदी स्पष्टीकरण:\nऔर विश्व बैंक को जुड़वां संगठनों के रूप में जाना जाता है, और दोनों का मुख्यालय वाशिंगटन डी.सी. में स्थित है।"
     },
     {
       "q_num": 3,
-      "question": "Which organization is known as the \"Twin Organization\" of the IMF? किस संगठन को IMF के \"जुड़वां संगठन\" के रूप में जाना जाता है?",
+      "question": "Which organization is known as the \"Twin Organization\" of the IMF?",
       "options": {
-        "a": "WTO / विश्व व्यापार संगठन",
-        "b": "World Bank / विश्व बैंक",
-        "c": "UNESCO / यूनेस्को",
-        "d": "UNICEF / यूनिसेफ"
+        "a": "WTO",
+        "b": "World Bank",
+        "c": "UNESCO",
+        "d": "UNICEF"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth the IMF and the World Bank emerged from the Bretton Woods Conference in 1944, earning them the nickname \"Bretton Woods twins.\" / IMF\n\n📖 हिंदी स्पष्टीकरण:\nऔर विश्व बैंक दोनों 1944 में ब्रेटन वुड्स सम्मेलन से उभरे, जिससे उन्हें \"ब्रेटन वुड्स जुड़वां\" का नाम मिला।"
     },
     {
       "q_num": 4,
-      "question": "In which year did India face a major Balance of Payment crisis? भारत ने किस वर्ष बड़े भुगतान संतुलन संकट का सामना किया था?",
+      "question": "In which year did India face a major Balance of Payment crisis?",
       "options": {
         "a": "1971",
         "b": "1980",
@@ -54,252 +54,252 @@
     },
     {
       "q_num": 5,
-      "question": "What is the full form of FDI in the context of capital accounts? पूंजीगत खातों के संदर्भ में FDI का पूर्ण रूप क्या है?",
+      "question": "What is the full form of FDI in the context of capital accounts?",
       "options": {
-        "a": "Fixed Deposit Investment / सावधि जमा निवेश",
-        "b": "Foreign Direct Investment / प्रत्यक्ष विदेशी निवेश",
-        "c": "Financial Derivative Income / वित्तीय व्युत्पन्न आय",
-        "d": "Foreign Debt Index / विदेशी ऋण सूचकांक"
+        "a": "Fixed Deposit Investment",
+        "b": "Foreign Direct Investment",
+        "c": "Financial Derivative Income",
+        "d": "Foreign Debt Index"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFDI refers to long-term investments made by a foreign entity into a domestic company, such as Walmart acquiring stakes in Flipkart. / FDI\n\n📖 हिंदी स्पष्टीकरण:\nएक विदेशी संस्था द्वारा घरेलू कंपनी में किए गए दीर्घकालिक निवेश को संदर्भित करता है, जैसे कि वॉलमार्ट द्वारा फ्लिपकार्ट में हिस्सेदारी हासिल करना।"
     },
     {
       "q_num": 6,
-      "question": "Which term is used for the \"Official Depreciation\" of a currency? मुद्रा के \"आधिकारिक अवमूल्यन\" के लिए किस शब्द का प्रयोग किया जाता है?",
+      "question": "Which term is used for the \"Official Depreciation\" of a currency?",
       "options": {
-        "a": "Revaluation / पुनर्मूल्यांकन",
-        "b": "Devaluation / अवमूल्यन",
-        "c": "Inflation / मुद्रास्फीति",
-        "d": "Appreciation / मूल्यवृद्धि"
+        "a": "Revaluation",
+        "b": "Devaluation",
+        "c": "Inflation",
+        "d": "Appreciation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDevaluation is the intentional downward adjustment of a country's official currency value relative to another currency\n\n📖 हिंदी स्पष्टीकरण:\nअवमूल्यन किसी अन्य मुद्रा के सापेक्ष देश के आधिकारिक मुद्रा मूल्य का जानबूझकर किया गया नीचे की ओर समायोजन है।"
     },
     {
       "q_num": 7,
-      "question": "Which of the following is considered \"Paper Gold\"? निम्नलिखित में से किसे \"पेपर गोल्ड\" माना जाता है?",
+      "question": "Which of the following is considered \"Paper Gold\"?",
       "options": {
-        "a": "Yuan / युआन",
-        "b": "Gold Coins / सोने के सिक्के",
-        "c": "Special Drawing Rights (SDR) / विशेष आहरण अधिकार (SDR)",
-        "d": "US Dollar / अमेरिकी डॉलर"
+        "a": "Yuan",
+        "b": "Gold Coins",
+        "c": "Special Drawing Rights (SDR)",
+        "d": "US Dollar"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSpecial Drawing Rights (SDR) are supplementary foreign exchange reserve assets defined and maintained by the IMF, often called paper gold\n\n📖 हिंदी स्पष्टीकरण:\nविशेष आहरण अधिकार (SDR) IMF द्वारा परिभाषित और बनाए रखी गई पूरक विदेशी मुद्रा आरक्षित संपत्ति है, जिसे अक्सर पेपर गोल्ड कहा जाता।"
     },
     {
       "q_num": 8,
-      "question": "Foreign Portfolio Investment (FPI) is also known as: विदेशी पोर्टफोलियो निवेश (FPI) को इस नाम से भी जाना जाता है:",
+      "question": "Foreign Portfolio Investment (FPI) is also known as:",
       "options": {
-        "a": "Cold Money / कोल्ड मनी",
-        "b": "Hot Money / हॉट मनी",
-        "c": "Hard Currency / हार्ड करेंसी",
-        "d": "Safe Money / सेफ मनी"
+        "a": "Cold Money",
+        "b": "Hot Money",
+        "c": "Hard Currency",
+        "d": "Safe Money"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFPI involves short-term investments that can quickly move in or out of an economy, which is why it is called \"Hot Money.\" / FPI\n\n📖 हिंदी स्पष्टीकरण:\nमें अल्पकालिक निवेश शामिल होता है जो किसी अर्थव्यवस्था के अंदर या बाहर तेजी से जा सकता है, यही कारण है कि इसे \"हॉट मनी\" कहा जाता है।"
     },
     {
       "q_num": 9,
-      "question": "Which country is currently the top receiver of remittances globally? वर्तमान में विश्व स्तर पर प्रेषण प्राप्त करने वाला शीर्ष देश कौन सा है?",
+      "question": "Which country is currently the top receiver of remittances globally?",
       "options": {
-        "a": "Mexico / मैक्सिको",
-        "b": "China / चीन",
-        "c": "India / भारत",
-        "d": "Egypt / मिस्र"
+        "a": "Mexico",
+        "b": "China",
+        "c": "India",
+        "d": "Egypt"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAccording to recent data, India is the top receiver of remittances in the world, followed by Mexico\n\n📖 हिंदी स्पष्टीकरण:\nहाल के आंकड़ों के अनुसार, भारत दुनिया में प्रेषण का शीर्ष प्राप्तकर्ता है, उसके बाद मैक्सिको का स्थान है।"
     },
     {
       "q_num": 10,
-      "question": "The Foreign Exchange Regulation Act (FERA) of 1973 was replaced by: 1973 के विदेशी मुद्रा विनियमन अधिनियम (FERA) को किसके द्वारा प्रतिस्थापित किया गया था?",
+      "question": "The Foreign Exchange Regulation Act (FERA) of 1973 was replaced by: 1973",
       "options": {
-        "a": "FEMA, 1999 / फेमा, 1999",
-        "b": "RBI Act, 1935 / आरबीआई अधिनियम, 1935",
-        "c": "SEBI Act, 1992 / सेबी अधिनियम, 1992",
-        "d": "GST Act, 2017 / जीएसटी अधिनियम, 2017"
+        "a": "FEMA, 1999",
+        "b": "RBI Act, 1935",
+        "c": "SEBI Act, 1992",
+        "d": "GST Act, 2017"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nFERA was replaced by the Foreign Exchange Management Act (FEMA) in 1999 to facilitate external trade and payments\n\n📖 हिंदी स्पष्टीकरण:\nविदेशी व्यापार और भुगतान को सुविधाजनक बनाने के लिए 1999 में FERA को विदेशी मुद्रा प्रबंधन अधिनियम (FEMA) द्वारा बदल दिया गया था।"
     },
     {
       "q_num": 11,
-      "question": "Current Account Deficit (CAD) + Fiscal Deficit is together known as: चालू खाता घाटा (CAD) + राजकोषीय घाटा को संयुक्त रूप से क्या कहा जाता है?",
+      "question": "Current Account Deficit (CAD) + Fiscal Deficit is together known as:",
       "options": {
-        "a": "Double Debt / दोहरा ऋण",
-        "b": "Twin Deficit / जुड़वां घाटा",
-        "c": "Budget Deficit / बजट घाटा",
-        "d": "Revenue Deficit / राजस्व घाटा"
+        "a": "Double Debt",
+        "b": "Twin Deficit",
+        "c": "Budget Deficit",
+        "d": "Revenue Deficit"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhen a country has both a high current account deficit and a high fiscal deficit, it is referred to as a \"Twin Deficit.\"\n\n📖 हिंदी स्पष्टीकरण:\nजब किसी देश में चालू खाता घाटा और राजकोषीय घाटा दोनों अधिक होते हैं, तो इसे \"जुड़वां घाटा\" कहा जाता है।"
     },
     {
       "q_num": 12,
-      "question": "What does a \"NOSTRO\" account signify? \"नोस्ट्रो (NOSTRO)\" खाता क्या दर्शाता है?",
+      "question": "What does a \"NOSTRO\" account signify? \"",
       "options": {
-        "a": "Your money in our bank / हमारा पैसा आपके बैंक में",
-        "b": "Our money in your bank / आपका पैसा हमारे बैंक में",
-        "c": "Bank's money in RBI / आरबीआई में बैंक का पैसा",
-        "d": "Government's money in IMF / आईएमएफ में सरकार का पैसा"
+        "a": "Your money in our bank",
+        "b": "Our money in your bank",
+        "c": "Bank's money in RBI",
+        "d": "Government's money in IMF"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA Nostro account refers to an account that a domestic bank holds in a foreign bank in the currency of that foreign country\n\n📖 हिंदी स्पष्टीकरण:\nनोस्ट्रो खाता उस खाते को संदर्भित करता है जो एक घरेलू बैंक विदेशी देश की मुद्रा में विदेशी बैंक में रखता है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following currencies is NOT part of the SDR basket? निम्नलिखित में से कौन सी मुद्रा SDR बास्केट का हिस्सा नहीं है?",
+      "question": "Which of the following currencies is NOT part of the SDR basket?",
       "options": {
-        "a": "Japanese Yen / जापानी येन",
-        "b": "Chinese Yuan / चीनी युआन",
-        "c": "Indian Rupee / भारतीय रुपया",
-        "d": "British Pound / ब्रिटिश पाउंड"
+        "a": "Japanese Yen",
+        "b": "Chinese Yuan",
+        "c": "Indian Rupee",
+        "d": "British Pound"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe SDR basket includes the US Dollar, Euro, Japanese Yen, Chinese Yuan, and British Pound, but not the Indian Rupee. / SDR\n\n📖 हिंदी स्पष्टीकरण:\nबास्केट में अमेरिकी डॉलर, यूरो, जापानी येन, चीनी युआन और ब्रिटिश पाउंड शामिल हैं, लेकिन भारतीय रुपया नहीं।"
     },
     {
       "q_num": 14,
-      "question": "In the Balance of Payment, \"Visible items\" primarily include: भुगतान संतुलन में, \"दृश्य वस्तुओं\" में मुख्य रूप से शामिल हैं:",
+      "question": "In the Balance of Payment, \"Visible items\" primarily include:",
       "options": {
-        "a": "Banking services / बैंकिंग सेवाएं",
-        "b": "Export and import of Goods / वस्तुओं का निर्यात और आयात",
-        "c": "Shipping services / शिपिंग सेवाएं",
-        "d": "Software exports / सॉफ्टवेयर निर्यात"
+        "a": "Banking services",
+        "b": "Export and import of Goods",
+        "c": "Shipping services",
+        "d": "Software exports"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nVisible items in the current account are tangible goods that can be seen and touched during trade\n\n📖 हिंदी स्पष्टीकरण:\nचालू खाते में दृश्य वस्तुएं वे मूर्त सामान हैं जिन्हें व्यापार के दौरान देखा और छुआ जा सकता है।"
     },
     {
       "q_num": 15,
-      "question": "Who is currently the top borrower from the IMF? वर्तमान में IMF से शीर्ष ऋण लेने वाला देश कौन सा है?",
+      "question": "Who is currently the top borrower from the IMF?",
       "options": {
-        "a": "Pakistan / पाकिस्तान",
-        "b": "Ukraine / यूक्रेन",
-        "c": "Argentina / अर्जेंटीना",
-        "d": "Egypt / मिस्र"
+        "a": "Pakistan",
+        "b": "Ukraine",
+        "c": "Argentina",
+        "d": "Egypt"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArgentina is the largest borrower from the International Monetary Fund, followed by Egypt and Ukraine\n\n📖 हिंदी स्पष्टीकरण:\nअर्जेंटीना अंतर्राष्ट्रीय मुद्रा कोष से सबसे बड़ा कर्जदार है, उसके बाद मिस्र और यूक्रेन का स्थान है।"
     },
     {
       "q_num": 16,
-      "question": "Statement I: Exporters benefit from the depreciation of the domestic currency.\n Statement II: Depreciation makes domestic goods cheaper for foreign buyers.\n कथन I: निर्यातकों को घरेलू मुद्रा के मूल्यह्रास से लाभ होता है।\n कथन II: मूल्यह्रास घरेलू सामानों को विदेशी खरीदारों के लिए सस्ता बनाता है।",
+      "question": "Statement I: Exporters benefit from the depreciation of the domestic currency.\n Statement II: Depreciation makes domestic goods cheaper for foreign buyers.",
       "options": {
-        "a": "Only I is correct / केवल I सही है।",
-        "b": "Only II is correct / केवल II सही है।",
-        "c": "Both I and II are correct / I और II दोनों सही हैं।",
-        "d": "Neither I nor II is correct / न तो I और न ही II सही है।"
+        "a": "Only I is correct",
+        "b": "Only II is correct",
+        "c": "Both I and II are correct",
+        "d": "Neither I nor II is correct"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWhen a currency depreciates, domestic products become cheaper in the international market, leading to higher demand and benefits for exporters\n\n📖 हिंदी स्पष्टीकरण:\nजब मुद्रा का मूल्यह्रास होता है, तो अंतरराष्ट्रीय बाजार में घरेलू उत्पाद सस्ते हो जाते हैं, जिससे निर्यातकों की मांग और लाभ बढ़ जाता है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is NOT a component of India’s FOREX reserves? निम्नलिखित में से कौन सा भारत के विदेशी मुद्रा भंडार का घटक नहीं है?",
+      "question": "Which of the following is NOT a component of India’s FOREX reserves?",
       "options": {
-        "a": "Gold reserves / स्वर्ण भंडार",
-        "b": "Foreign currency assets / विदेशी मुद्रा संपत्ति",
-        "c": "Special Drawing Rights (SDR) / विशेष आहरण अधिकार (SDR)",
-        "d": "Domestic Corporate Bonds / घरेलू कॉर्पोरेट बॉन्ड"
+        "a": "Gold reserves",
+        "b": "Foreign currency assets",
+        "c": "Special Drawing Rights (SDR)",
+        "d": "Domestic Corporate Bonds"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nIndia's FOREX reserves consist of Foreign Currency Assets, Gold, SDRs, and the Reserve Tranche Position in the IMF\n\n📖 हिंदी स्पष्टीकरण:\nभारत के विदेशी मुद्रा भंडार में विदेशी मुद्रा संपत्ति, सोना, SDR और IMF में रिजर्व ट्रेंच स्थिति शामिल है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): The 1991 economic reforms in India were triggered by a BoP crisis.\n अभिकथन (A): भारत में 1991 के आर्थिक सुधार BoP संकट के कारण शुरू हुए थे।\n Reason (R): India had enough FOREX reserves to cover only a few days of imports.\n कारण (R): भारत के पास केवल कुछ दिनों के आयात को कवर करने के लिए पर्याप्त विदेशी मुद्रा भंडार था।",
+      "question": "Assertion (A): The 1991 economic reforms in India were triggered by a BoP crisis.\n Reason (R): India had enough FOREX reserves to cover only a few days of imports.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe 1991 crisis occurred because India's foreign exchange reserves were depleted, forcing the government to adopt Liberalization, Privatization, and Globalization (LPG). / 1991\n\n📖 हिंदी स्पष्टीकरण:\nका संकट इसलिए हुआ क्योंकि भारत का विदेशी मुद्रा भंडार समाप्त हो गया था, जिससे सरकार को उदारीकरण, निजीकरण और वैश्वीकरण (LPG) अपनाने के लिए मजबूर होना पड़ा।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following is included in the 'Invisible Items' of the Current Account? चालू खाते की 'अदृश्य वस्तुओं' में निम्नलिखित में से क्या शामिल है?",
+      "question": "Which of the following is included in the 'Invisible Items' of the Current Account?",
       "options": {
-        "a": "Remittances / प्रेषण",
-        "b": "Import of Machinery / मशीनरी का आयात",
-        "c": "Export of Textiles / वस्त्रों का निर्यात",
-        "d": "Purchase of Land / भूमि की खरीद"
+        "a": "Remittances",
+        "b": "Import of Machinery",
+        "c": "Export of Textiles",
+        "d": "Purchase of Land"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nInvisible items include intangible services, transfer payments like remittances, and income from investments\n\n📖 हिंदी स्पष्टीकरण:\nअदृश्य वस्तुओं में अमूर्त सेवाएं, प्रेषण जैसे हस्तांतरण भुगतान और निवेश से आय शामिल है।"
     },
     {
       "q_num": 20,
-      "question": "What is the \"Reserve Tranche Position\" in the context of the IMF? IMF के संदर्भ में \"रिजर्व ट्रेंच स्थिति\" क्या है?",
+      "question": "What is the \"Reserve Tranche Position\" in the context of the IMF? IMF",
       "options": {
-        "a": "Total gold held by a country / किसी देश के पास कुल सोना",
-        "b": "A portion of the quota that can be accessed without fees / कोटा का एक हिस्सा जिसे बिना शुल्क के प्राप्त किया जा सकता है।",
-        "c": "The amount of debt a country owes / किसी देश पर कर्ज की राशि",
-        "d": "The value of paper gold / पेपर गोल्ड का मूल्य"
+        "a": "Total gold held by a country",
+        "b": "A portion of the quota that can be accessed without fees",
+        "c": "The amount of debt a country owes",
+        "d": "The value of paper gold"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt is the required quota maintained within the IMF that a member country can use for its own purposes without a service fee\n\n📖 हिंदी स्पष्टीकरण:\nयह IMF के भीतर बनाए रखा गया आवश्यक कोटा है जिसे एक सदस्य देश बिना सेवा शुल्क के अपने उद्देश्यों के लिए उपयोग कर सकता है।"
     },
     {
       "q_num": 21,
-      "question": "Statement I: FDI is a short-term investment.\n कथन I: FDI एक अल्पकालिक निवेश है।\n Statement II: FPI is also called \"Hot Money.\"\n कथन II: FPI को \"हॉट मनी\" भी कहा जाता है।",
+      "question": "Statement I: FDI is a short-term investment.\n Statement II: FPI is also called \"Hot Money.\"",
       "options": {
-        "a": "Only I is correct / केवल I सही है।",
-        "b": "Only II is correct / केवल II सही है।",
-        "c": "Both I and II are correct / I और II दोनों सही हैं।",
-        "d": "Neither I nor II is correct / न तो I और न ही II सही है।"
+        "a": "Only I is correct",
+        "b": "Only II is correct",
+        "c": "Both I and II are correct",
+        "d": "Neither I nor II is correct"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFDI is a long-term investment (like Walmart-Flipkart), while FPI is a short-term investment, which is why FPI is called \"Hot Money.\" / FDI\n\n📖 हिंदी स्पष्टीकरण:\nएक दीर्घकालिक निवेश है, जबकि FPI एक अल्पकालिक निवेश है, यही कारण है कि FPI को \"हॉट मनी\" कहा जाता है।"
     },
     {
       "q_num": 22,
-      "question": "In the Capital Account, what does \"Borrowing and Lending\" represent? पूंजीगत खाते में, \"उधार लेना और देना\" क्या दर्शाता है?",
+      "question": "In the Capital Account, what does \"Borrowing and Lending\" represent?",
       "options": {
-        "a": "Purchase of daily goods / दैनिक वस्तुओं की खरीद",
-        "b": "Export of services / सेवाओं का निर्यात",
-        "c": "Financial capital transfers / वित्तीय पूंजी हस्तांतरण",
-        "d": "Payment of salaries / वेतन का भुगतान"
+        "a": "Purchase of daily goods",
+        "b": "Export of services",
+        "c": "Financial capital transfers",
+        "d": "Payment of salaries"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Capital Account includes transactions like borrowing, lending, and sale/purchase of assets that change a country's stock of assets and liabilities\n\n📖 हिंदी स्पष्टीकरण:\nपूंजी खाते में उधार, ऋण और संपत्ति की बिक्री/खरीद जैसे लेनदेन शामिल होते हैं जो देश की संपत्ति और देनदारियों के स्टॉक को बदलते हैं।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): Devaluation of currency is more beneficial if prices of exports rise proportionately.\n अभिकथन (A): मुद्रा का अवमूल्यन अधिक लाभदायक होता है यदि निर्यात की कीमतें आनुपातिक रूप से बढ़ती हैं।\n Reason (R): It helps in reducing the trade deficit by making exports more competitive.\n कारण (R): यह निर्यात को अधिक प्रतिस्पर्धी बनाकर व्यापार घाटे को कम करने में मदद करता है।",
+      "question": "Assertion (A): Devaluation of currency is more beneficial if prices of exports rise proportionately.\n Reason (R): It helps in reducing the trade deficit by making exports more competitive.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDevaluation makes exports cheaper and imports costlier, which helps in improving the trade balance and BoP\n\n📖 हिंदी स्पष्टीकरण:\nअवमूल्यन निर्यात को सस्ता और आयात को महंगा बनाता है, जिससे व्यापार संतुलन और BoP को सुधारने में मदद मिलती है।"
     },
     {
       "q_num": 24,
-      "question": "A fixed currency rate is often referred to as a: एक निश्चित मुद्रा दर को अक्सर क्या कहा जाता है?",
+      "question": "A fixed currency rate is often referred to as a:",
       "options": {
-        "a": "Floating rate / फ्लोटिंग दर",
-        "b": "Pegged currency rate / पेग्ड मुद्रा दर",
-        "c": "Market rate / बाजार दर",
-        "d": "Real rate / वास्तविक दर"
+        "a": "Floating rate",
+        "b": "Pegged currency rate",
+        "c": "Market rate",
+        "d": "Real rate"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA fixed exchange rate regime, where the currency's value is tied to another major currency or gold, is called a pegged rate\n\n📖 हिंदी स्पष्टीकरण:\nएक निश्चित विनिमय दर प्रणाली, जहां मुद्रा का मूल्य दूसरी प्रमुख मुद्रा या सोने से जुड़ा होता है, पेग्ड दर कहलाती है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following was the main objective of the Bretton Woods Conference (1944)? निम्नलिखित में से कौन सा ब्रेटन वुड्स सम्मेलन (1944) का मुख्य उद्देश्य था?",
+      "question": "Which of the following was the main objective of the Bretton Woods Conference (1944)?",
       "options": {
-        "a": "To end World War II / द्वितीय विश्व युद्ध को समाप्त करने के लिए",
-        "b": "To establish a new international monetary system / एक नई अंतर्राष्ट्रीय मौद्रिक प्रणाली स्थापित करने के लिए",
-        "c": "To promote space exploration / अंतरिक्ष अन्वेषण को बढ़ावा देने के लिए",
-        "d": "To ban nuclear weapons / परमाणु हथियारों पर प्रतिबंध लगाने के लिए"
+        "a": "To end World War II",
+        "b": "To establish a new international monetary system",
+        "c": "To promote space exploration",
+        "d": "To ban nuclear weapons"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe conference aimed to rebuild the international economic system after the Great Depression and World War II, leading to the creation of the IMF and World Bank\n\n📖 हिंदी स्पष्टीकरण:\nसम्मेलन का उद्देश्य महामंदी और द्वितीय विश्व युद्ध के बाद अंतरराष्ट्रीय आर्थिक प्रणाली का पुनर्निर्माण करना था, जिससे IMF और विश्व बैंक का निर्माण हुआ।"

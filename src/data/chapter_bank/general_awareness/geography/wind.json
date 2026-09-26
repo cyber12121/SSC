@@ -6,300 +6,300 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The movement of air from a high-pressure area to a low-pressure area is called:\n उच्च दाब क्षेत्र से निम्न दाब क्षेत्र की ओर वायु के संचलन को क्या कहा जाता है?",
+      "question": "The movement of air from a high-pressure area to a low-pressure area is called:",
       "options": {
-        "a": "Cloud / बादल",
-        "b": "Wind / पवन",
-        "c": "Humidity / आर्द्रता",
-        "d": "Temperature / तापमान"
+        "a": "Cloud",
+        "b": "Wind",
+        "c": "Humidity",
+        "d": "Temperature"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWind is simply the horizontal movement of air caused by pressure differences between two regions.\n\n📖 हिंदी स्पष्टीकरण:\nजब वायुमंडल में किसी स्थान पर उच्च दाब और किसी दूसरे स्थान पर निम्न दाब होता है, तो वायु संतुलन बनाने के लिए उच्च दाब क्षेत्र से निम्न दाब क्षेत्र की ओर बहने लगती है।\nइसी वायु के संचलन को पवन कहा जाता है।"
     },
     {
       "q_num": 2,
-      "question": "The main force responsible for the blowing of wind is:\n वायु के बहने के लिए मुख्य रूप से कौन-सा बल जिम्मेदार है?",
+      "question": "The main force responsible for the blowing of wind is:",
       "options": {
-        "a": "Coriolis Force / कोरिओलिस बल",
-        "b": "Frictional Force / घर्षण बल",
-        "c": "Pressure Gradient Force / दाब प्रवणता बल",
-        "d": "Centrifugal Force / अपकेंद्रीय बल"
+        "a": "Coriolis Force",
+        "b": "Frictional Force",
+        "c": "Pressure Gradient Force",
+        "d": "Centrifugal Force"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe primary cause of wind flow is the pressure gradient force. When there is a difference in air pressure between two locations in the atmosphere, air moves from the high-pressure area to the low-pressure area. This pressure difference is called the pressure gradient force.\nThe pressure gradient force is the primary cause of wind movement, while other forces (such as the Coriolis force or friction) affect the direction and speed of the wind.\n\n📖 हिंदी स्पष्टीकरण:\nवायु के बहने का मुख्य कारण दाब प्रवणता बल होता है। जब वायुमंडल में दो स्थानों के बीच वायुदाब में अंतर होता है, तो वायु उच्च दाब क्षेत्र से निम्न दाब क्षेत्र की ओर चलने लगती है। यही दाब में अंतर दाब प्रवणता बल कहलाता है।\nदाब प्रवणता बल ही पवन की गति का प्रारंभिक कारण होता है, जबकि अन्य बल (जैसे कोरिओलिस बल या घर्षण बल) वायु की दिशा और गति को प्रभावित करते हैं।"
     },
     {
       "q_num": 3,
-      "question": "The wind blowing parallel to the isobars is called:\n जो पवन समदाब रेखाओं के समानांतर बहती है उसे क्या कहा जाता है?",
+      "question": "The wind blowing parallel to the isobars is called:",
       "options": {
-        "a": "Trade wind / व्यापारिक पवन",
-        "b": "Geostrophic wind / भू-स्थितिक पवन",
-        "c": "Jet stream / जेट धारा",
-        "d": "Monsoon wind / मानसून पवनें"
+        "a": "Trade wind",
+        "b": "Geostrophic wind",
+        "c": "Jet stream",
+        "d": "Monsoon wind"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhen Coriolis force and pressure gradient force balance, winds flow parallel to isobars — called geostrophic wind.\n\n📖 हिंदी स्पष्टीकरण:\nजब कोरिओलिस बल और दाब प्रवणता बल संतुलित होते हैं, तो पवन समदाब रेखाओं के समानांतर बहती है।"
     },
     {
       "q_num": 4,
-      "question": "Coriolis force deflects winds to the ______ in Northern Hemisphere and to the ______ in Southern Hemisphere.\n कोरिओलिस बल पवनों को उत्तरी गोलार्ध में ______ और दक्षिणी गोलार्ध में ______ की ओर मोड़ देता है।",
+      "question": "Coriolis force deflects winds to the ______ in Northern Hemisphere and to the ______ in Southern Hemisphere.",
       "options": {
-        "a": "Right, Left / दाईं, बाईं",
-        "b": "Left, Right / बाईं, दाईं",
-        "c": "East, West / पूर्व, पश्चिम",
-        "d": "West, East / पश्चिम, पूर्व"
+        "a": "Right, Left",
+        "b": "Left, Right",
+        "c": "East, West",
+        "d": "West, East"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDue to Earth’s rotation, winds deflect rightward in north and leftward in south — known as Coriolis effect.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी के घूर्णन के कारण, हवाएँ उत्तरी गोलार्ध में दाईं ओर और दक्षिणी गोलार्ध में बाईं ओर मुड़ जाती हैं — इसे कोरिओलिस प्रभाव कहा जाता है।"
     },
     {
       "q_num": 5,
-      "question": "Which winds blow from subtropical high-pressure belts to equatorial low-pressure belts?\n कौन-सी पवनें उपोष्ण उच्च दाब क्षेत्र से भूमध्य निम्न दाब क्षेत्र की ओर बहती हैं?",
+      "question": "Which winds blow from subtropical high-pressure belts to equatorial low-pressure belts?",
       "options": {
-        "a": "Westerlies / पश्चिमी पवनें",
-        "b": "Trade Winds / व्यापारिक पवनें",
-        "c": "Polar Winds / ध्रुवीय पवनें",
-        "d": "Jet Streams / जेट धाराएँ"
+        "a": "Westerlies",
+        "b": "Trade Winds",
+        "c": "Polar Winds",
+        "d": "Jet Streams"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTrade winds blow steadily from subtropical high to equatorial low-pressure regions.\n1. In the Northern Hemisphere: from northeast to southwest.\n2. In the Southern Hemisphere: from southeast to northwest.\nThese winds are the main permanent winds blowing continuously in the same direction on both sides of the Earth.\n\n📖 हिंदी स्पष्टीकरण:\nव्यापारिक पवनें वे स्थायी पवनें हैं जो उपोष्ण उच्च दाब क्षेत्र से भूमध्य निम्न दाब क्षेत्र की ओर बहती हैं।\n3. उत्तरी गोलार्ध में: उत्तर-पूर्व से दक्षिण-पश्चिम की ओर।\n4. दक्षिणी गोलार्ध में: दक्षिण-पूर्व से उत्तर-पश्चिम की ओर।\nये पवनें पृथ्वी के दोनों ओर समान दिशा में निरंतर बहने वाली प्रमुख स्थायी पवनें हैं।"
     },
     {
       "q_num": 6,
-      "question": "Which region is known as the “Doldrums”?\n कौन-सा क्षेत्र “डोलड्रम या शांतपेटी” के नाम से जाना जाता है?",
+      "question": "Which region is known as the “Doldrums”?",
       "options": {
-        "a": "Subtropical High / उपोष्ण उच्च दाब क्षेत्र",
-        "b": "Equatorial Low Pressure Belt / भूमध्य निम्न दाब क्षेत्र",
-        "c": "Polar Region / ध्रुवीय क्षेत्र",
-        "d": "Mid-latitude Zone / मध्य अक्षांशीय क्षेत्र"
+        "a": "Subtropical High",
+        "b": "Equatorial Low Pressure Belt",
+        "c": "Polar Region",
+        "d": "Mid-latitude Zone"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNear the equator, air rises creating calm, light winds — known as the Doldrums.\n\n📖 हिंदी स्पष्टीकरण:\nभूमध्य रेखा के पास वायु ऊपर उठती है जिससे शांत और हल्की पवनें बनती हैं जिन्हें डोलड्रम कहा जाता है।"
     },
     {
       "q_num": 7,
-      "question": "The area around 30° North and South latitudes with calm air and little rainfall is called:\n 30° उत्तर और दक्षिण अक्षांशों के आसपास शांत वायु और कम वर्षा वाला क्षेत्र क्या कहलाता है?",
+      "question": "The area around 30° North and South latitudes with calm air and little rainfall is called:",
       "options": {
-        "a": "Doldrums / डोलड्रम",
-        "b": "Horse Latitude / अश्व अक्षांश",
-        "c": "Westerlies / पश्चिमी पवनें",
-        "d": "ITCZ / अंतः उष्णकटिबंधीय अभिसरण क्षेत्र"
+        "a": "Doldrums",
+        "b": "Horse Latitude",
+        "c": "Westerlies",
+        "d": "ITCZ"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHorse latitudes are calm zones with high pressure around 30° N/S due to descending air.\n\n📖 हिंदी स्पष्टीकरण:\nअश्व अक्षांश लगभग 30° उत्तर और 30° दक्षिण अक्षांशों के आसपास पाए जाते हैं, जहाँ\n1. वायु शांत होती है,\n2. ऊर्ध्वाधर गति कम होती है, और\n3. वर्षा बहुत कम होती है।\nयह क्षेत्र उपोष्ण उच्च दाब पट्टियों से संबंधित होता है।"
     },
     {
       "q_num": 8,
-      "question": "In which region Coriolis force is zero?\n कोरिओलिस बल कहाँ शून्य होता है?",
+      "question": "In which region Coriolis force is zero?",
       "options": {
-        "a": "At Poles / ध्रुवों पर",
-        "b": "At Equator / भूमध्य रेखा पर",
-        "c": "At 45° Latitude / 45° अक्षांश पर",
-        "d": "Everywhere same / सर्वत्र समान"
+        "a": "At Poles",
+        "b": "At Equator",
+        "c": "At 45° Latitude",
+        "d": "Everywhere same"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCoriolis force is maximum at poles and zero at the equator because rotation has no lateral effect there.\n\n📖 हिंदी स्पष्टीकरण:\nकोरिओलिस बल ध्रुवों पर अधिकतम होता है और भूमध्य रेखा पर शून्य होता है क्योंकि वहां घूर्णन का कोई पार्श्व प्रभाव नहीं होता।"
     },
     {
       "q_num": 9,
-      "question": "Which wind system forms between 30° and 60° latitudes?\n 30° से 60° अक्षांशों के बीच कौन-सी पवन प्रणाली बनती है?",
+      "question": "Which wind system forms between 30° and 60° latitudes?",
       "options": {
-        "a": "Polar Easterlies / ध्रुवीय पूर्वी पवनें",
-        "b": "Westerlies / पश्चिमी पवनें",
-        "c": "Trade Winds / व्यापारिक पवनें",
-        "d": "Monsoon / मानसून"
+        "a": "Polar Easterlies",
+        "b": "Westerlies",
+        "c": "Trade Winds",
+        "d": "Monsoon"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWesterlies blow from subtropical high to subpolar low regions between 30°–60°.\n1. In the Northern Hemisphere, they blow from the southwest to the northeast (appearing to move from west to east).\n2. In the Southern Hemisphere, they blow from the northwest to the southeast (also from west to east).\nThese winds are the main permanent winds of the mid-latitude regions.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिमी पवनें 30°–60° अक्षांशों के बीच उपोष्णकटिबंधीय उच्च दबाव क्षेत्रों से उपध्रुवीय निम्न दबाव क्षेत्रों की ओर बहती हैं।\n3. उत्तरी गोलार्ध में ये दक्षिण-पश्चिम से उत्तर-पूर्व की ओर बहती हैं (जो पश्चिम से पूर्व की ओर गति करती प्रतीत होती हैं)।\n4. दक्षिणी गोलार्ध में ये उत्तर-पश्चिम से दक्षिण-पूर्व की ओर बहती हैं (यह भी पश्चिम से पूर्व की ओर होती हैं)।\nये हवाएँ मध्य अक्षांश क्षेत्रों की मुख्य स्थायी हवाएँ होती हैं।"
     },
     {
       "q_num": 10,
-      "question": "Which cell lies between 30° and 60° latitude in the three-cell model?\n तीन-कोशिका मॉडल में 30° और 60° अक्षांश के बीच कौन-सी कोशिका होती है?",
+      "question": "Which cell lies between 30° and 60° latitude in the three-cell model?",
       "options": {
-        "a": "Hadley Cell / हैडले कोशिका",
-        "b": "Ferrel Cell / फेरेल कोशिका",
-        "c": "Polar Cell / ध्रुवीय कोशिका",
-        "d": "Equatorial Cell / भूमध्य कोशिका"
+        "a": "Hadley Cell",
+        "b": "Ferrel Cell",
+        "c": "Polar Cell",
+        "d": "Equatorial Cell"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Ferrel cell operates between 30° and 60°, with westerlies as surface winds.\n1. Hadley Cell (0°-30° latitude): From the Equator to the subtropics.\n2. Ferrel Cell (30°-60° latitude): Between the subtropical high and the subpolar low.\n3. Polar Cell (60°-90° latitude): From the subpolar region to the poles.\n\n📖 हिंदी स्पष्टीकरण:\nफेरल कोशिका 30° से 60° अक्षांशों के बीच कार्य करता है, जिसमें सतही हवाएँ वेस्टरलीज़ होती हैं।\n1. हैडले कोशिका (0°–30° अक्षांश): भूमध्य रेखा से उपोष्ण कटिबंध तक।\n2. फेरेल कोशिका (30°–60° अक्षांश): उपोष्ण उच्च दबाव क्षेत्र और उपध्रुवीय निम्न दबाव क्षेत्र के बीच।\n3. ध्रुवीय कोशिका (60°–90° अक्षांश): उपध्रुवीय क्षेत्र से ध्रुवों तक।"
     },
     {
       "q_num": 11,
-      "question": "Assertion (A): Trade winds are deflected westward.\n Reason (R): Coriolis force acts on moving air due to Earth’s rotation.\n कथन (A): व्यापारिक पवनें पश्चिम की ओर मुड़ जाती हैं।\n कारण (R): पृथ्वी के घूर्णन के कारण चलती पवनों पर कोरिओलिस बल कार्य करता है।",
+      "question": "Assertion (A): Trade winds are deflected westward.\n Reason (R): Coriolis force acts on moving air due to Earth’s rotation.",
       "options": {
-        "a": "Both A and R are true, R is correct explanation / दोनों A और R सही हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, R not correct explanation / दोनों A और R सही हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A true, R false / A सही है, R गलत है।",
-        "d": "A false, R true / A गलत है, R सही है।"
+        "a": "Both A and R are true, R is correct explanation",
+        "b": "Both A and R are true, R not correct explanation",
+        "c": "A true, R false",
+        "d": "A false, R true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nTrade winds deflect westward due to Coriolis effect caused by Earth’s rotation.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी के घूर्णन से उत्पन्न कोरिओलिस बल व्यापारिक पवनों को पश्चिम की ओर मोड़ देता है।"
     },
     {
       "q_num": 12,
-      "question": "Statement I: ITCZ shifts northward during Indian summer.\n Statement II: It moves southward during winter.\n कथन I: ITCZ ​​भारतीय गर्मियों के दौरान उत्तर की ओर खिसक जाता है।\n कथन II: यह सर्दियों के दौरान दक्षिण की ओर खिसक जाता है।",
+      "question": "Statement I: ITCZ shifts northward during Indian summer.\n Statement II: It moves southward during winter.",
       "options": {
-        "a": "Both correct / दोनों सही",
-        "b": "Only I correct / केवल I सही",
-        "c": "Only II correct / केवल II सही",
-        "d": "Both incorrect / दोनों गलत"
+        "a": "Both correct",
+        "b": "Only I correct",
+        "c": "Only II correct",
+        "d": "Both incorrect"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe ITCZ (Intertropical Convergence Zone) is a low-pressure region near the equator, where the trade winds of the northern and southern hemispheres meet.\nITCZ migrates northward in summer (It moves towards India, due to which monsoon winds come towards India) and southward in winter following the solar movement.\nITCZ (\n\n📖 हिंदी स्पष्टीकरण:\nअंतरउष्णकटिबंधीय अभिसरण क्षेत्र) भूमध्य रेखा के पास स्थित एक निम्न दबाव वाला क्षेत्र है, जहाँ उत्तरी और दक्षिणी गोलार्ध की व्यापारिक पवनें मिलती हैं।\nगर्मियों में ITCZ उत्तर की ओर स्थानांतरित होता है (यह भारत की ओर बढ़ता है, जिससे मानसूनी हवाएँ भारत की ओर आती हैं) और सर्दियों में यह सूर्य की गति का अनुसरण करते हुए दक्षिण की ओर चला जाता है।"
     },
     {
       "q_num": 13,
-      "question": "Assertion (A): Coriolis force is maximum at the poles.\n Reason (R): The tangential velocity of rotation is minimum there.\n कथन (A): कोरिओलिस बल ध्रुवों पर अधिकतम होता है।\n कारण (R): वहां घूर्णन का स्पर्शरेखीय वेग न्यूनतम होता है।",
+      "question": "Assertion (A): Coriolis force is maximum at the poles.\n Reason (R): The tangential velocity of rotation is minimum there.",
       "options": {
-        "a": "Both A and R are true, R is correct explanation / दोनों A और R सही हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, R is not correct explanation / दोनों A और R सही हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A true, R false / A सही है, R गलत है।",
-        "d": "A false, R true / A गलत है, R सही है।"
+        "a": "Both A and R are true, R is correct explanation",
+        "b": "Both A and R are true, R is not correct explanation",
+        "c": "A true, R false",
+        "d": "A false, R true"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Coriolis force is actually maximum at the poles and zero at the equator.\nIt is true that the tangential velocity is minimum at the poles, but this is not the reason why the Coriolis force is maximum.\nThe main causes of the Coriolis force are the Earth's rotation and the angular effect of latitude.\nHence both A and R are correct, but R is not the correct reason for A..\n\n📖 हिंदी स्पष्टीकरण:\n1. कोरिओलिस बल वास्तव में धुर्वों पर अधिकतम होता है और भूमध्य रेखा पर शून्य होता है।\n2. स्पर्शरेखीय वेग ध्रुवों पर न्यूनतम होती है, यह सही है, लेकिन यह कोरिओलिस बल के अधिकतम होने का कारण नहीं है।\n3. कोरिओलिस बल का मुख्य कारण पृथ्वी के घूर्णन और अक्षांश का कोणीय प्रभाव है।\nइसलिए A और R दोनों सही हैं, लेकिन R, A का सही कारण नहीं है।"
     },
     {
       "q_num": 14,
-      "question": "Statement I: Horse latitudes are calm areas.\n Statement II: They are associated with descending air.\n कथन I: अश्व अक्षांश शांत क्षेत्र होते हैं।\n कथन II: ये अवरोही वायु से जुड़े होते हैं।",
+      "question": "Statement I: Horse latitudes are calm areas.\n Statement II: They are associated with descending air.",
       "options": {
-        "a": "Both correct / दोनों सही हैं।",
-        "b": "Only I correct / केवल I सही है।",
-        "c": "Only II correct / केवल II सही है।",
-        "d": "Both incorrect / दोनों गलत हैं।"
+        "a": "Both correct",
+        "b": "Only I correct",
+        "c": "Only II correct",
+        "d": "Both incorrect"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Horse latitudes are located approximately 30° north and 30° south of the Earth.\n1. The air in these areas is very calm, so they are called calm regions.\n2. Here, air flows from top to bottom, which is called descending air.\n3. Descending air is hot and dry, so rainfall is very low and the weather is dry.\n\n📖 हिंदी स्पष्टीकरण:\nअश्व अक्षांश पृथ्वी के लगभग 30° उत्तर और 30° दक्षिण पर स्थित होते हैं।\n4. इन क्षेत्रों में हवा बहुत शांत रहती है, इसलिए इन्हें शांत क्षेत्र कहा जाता है।\n5. यहाँ वायु ऊपर से नीचे की ओर बहती है, जिसे अवरोही वायु कहते हैं।\n6. अवरोही वायु गर्म और सूखी होती है, इसलिए वर्षा बहुत कम होती है और मौसम शुष्क रहता है।"
     },
     {
       "q_num": 15,
-      "question": "Assertion (A): Polar easterlies are cold winds.\n Reason (R): They originate from high-pressure areas near poles.\n कथन (A): धुव्रीय पूर्वी पवनें ठंडी पवनें होती हैं।\n कारण (R): ये ध्रुवों के पास उच्च दबाव वाले क्षेत्रों से उत्पन्न होती हैं।",
+      "question": "Assertion (A): Polar easterlies are cold winds.\n Reason (R): They originate from high-pressure areas near poles.",
       "options": {
-        "a": "Both A and R true, R correct explanation / दोनों A और R सही हैं, और R सही व्याख्या है।",
-        "b": "A true, R true, R not correct explanation / A सही है, R सही है, लेकिन R सही व्याख्या नहीं है।",
-        "c": "A false, R true / A गलत है, R सही है।",
-        "d": "Both false / दोनों गलत हैं।"
+        "a": "Both A and R true, R correct explanation",
+        "b": "A true, R true, R not correct explanation",
+        "c": "A false, R true",
+        "d": "Both false"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPolar easterlies are cold winds because they come from cold regions near the poles.\n1. They originate in high-pressure areas because the polar regions are cold and dense, creating high pressure.\n2. Wind always flows in the direction of high pressure → low pressure.\nTherefore, R is the correct and complete reason for A.\n\n📖 हिंदी स्पष्टीकरण:\nधुव्रीय पूर्वी पवनें ठंडी पवनें होती हैं, क्योंकि ये ध्रुवों के पास के ठंडे क्षेत्रों से आती हैं।\n3. ये उच्च दबाव वाले क्षेत्रों से उत्पन्न होती हैं, क्योंकि ध्रुवीय क्षेत्र ठंडे और घने होते हैं, जिससे उच्च दबाव बनता है।\n4. हवा हमेशा उच्च दबाव → निम्न दबाव की दिशा में बहती है।\nइसलिए R, A का सही और पूर्ण कारण है।"
     },
     {
       "q_num": 16,
-      "question": "Which of the following is a local wind of Europe?\n निम्नलिखित में से कौन यूरोप की स्थानीय पवन है?",
+      "question": "Which of the following is a local wind of Europe?",
       "options": {
-        "a": "Loo / लू",
-        "b": "Mistral / मिस्ट्रल",
-        "c": "Chinook / चिनूक",
-        "d": "Khamsin / खमसिन"
+        "a": "Loo",
+        "b": "Mistral",
+        "c": "Chinook",
+        "d": "Khamsin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMistral → A cold, dry wind that blows across Europe, especially the Rhone Valley in southern France. This wind originates from the north or northwest and blows toward the Mediterranean Sea.\nOther options:\nLoo → A warm, dry wind from India.\nChinook → A warm mountain wind from North America.\nKhamsin → A warm wind from Egypt and North Africa.\n\n📖 हिंदी स्पष्टीकरण:\nमिस्ट्रल → यूरोप, खासकर दक्षिणी फ्रांस की रोन घाटी में बहने वाली ठंडी, शुष्क पवन है। यह हवा उत्तर या उत्तर-पश्चिम से आती है और भूमध्य सागर की तरफ बहती है।\nअन्य विकल्प:\n1. लू → भारत की गर्म और शुष्क हवा।\n2. चिनूक → उत्तर अमेरिका की गर्म पर्वतीय हवा।\n3. खमसिन → मिस्र और उत्तर अफ़्रीका की गर्म हवा।"
     },
     {
       "q_num": 17,
-      "question": "Statement I: Warm local winds help in snow melting.\n Statement II: Chinook is known as “Snow eater.”\n कथन I: गर्म स्थानीय हवाएँ बर्फ पिघलाने में मदद करती हैं।\n कथन II: चिनूक को \"हिमनाशक\" के नाम से जाना जाता है।",
+      "question": "Statement I: Warm local winds help in snow melting.\n Statement II: Chinook is known as “Snow eater.”",
       "options": {
-        "a": "Both correct / दोनों सही हैं।",
-        "b": "Only I correct / केवल I सही है।",
-        "c": "Only II correct / केवल II सही है।",
-        "d": "Both incorrect / दोनों गलत हैं।"
+        "a": "Both correct",
+        "b": "Only I correct",
+        "c": "Only II correct",
+        "d": "Both incorrect"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWarm local winds: These winds blow downhill in mountainous regions and increase temperatures.\n1. Effect: Quickly melt snow and ice.\nChinook: A mountain wind in North America that warms as it descends the slopes of the Rocky Mountains.\n2. It is therefore called a \"freeze-breaker\" because it rapidly melts snow or ice.\n\n📖 हिंदी स्पष्टीकरण:\nगर्म स्थानीय हवाएँ: यह हवाएँ पर्वतीय क्षेत्रों में नीचे की तरफ बहती हैं और तापमान बढ़ाती हैं।\n3. इसका असर: बर्फ और हिम को जल्दी पिघलाती हैं।\nचिनूक : यह उत्तरी अमेरिका की पर्वतीय हवा है, जो रॉकी पर्वत के ढलानों से उतरते हुए गर्म हो जाती है।\n4. इसलिए यह “हिमनाशक” कहलाती है क्योंकि यह हिमपात या बर्फ को तेजी से पिघलाती है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Friction slows down wind near the surface.\n Reason (R): Surface irregularities resist wind motion.\n कथन (A): घर्षण सतह के पास हवा को धीमा कर देता है।\n कारण (R): सतह की अनियमितताएँ हवा की गति का विरोध करती हैं।",
+      "question": "Assertion (A): Friction slows down wind near the surface.\n Reason (R): Surface irregularities resist wind motion.",
       "options": {
-        "a": "A true, R true, R correct explanation / A सही है, R सही है, और R सही व्याख्या है।",
-        "b": "A true, R true, R not correct explanation / A सही है, R सही है, लेकिन R सही व्याख्या नहीं है।",
-        "c": "A false, R true / A गलत है, R सही है।",
-        "d": "Both false / दोनों गलत हैं।"
+        "a": "A true, R true, R correct explanation",
+        "b": "A true, R true, R not correct explanation",
+        "c": "A false, R true",
+        "d": "Both false"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAssertion (A): Friction slows down the wind speed near the surface.\n1. Wind does not flow straight near the surface because the ground and ground objects (such as trees, buildings, mountains) obstruct the wind's movement.\nReason (R): Irregularities in the surface resist the wind's motion.\n2. These irregularities create friction in the air flow.\n3. Friction reduces the wind speed and also changes its direction.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (A): घर्षण सतह के पास हवा की गति को धीमा कर देता है।\n4. सतह के पास हवा सीधे नहीं बहती क्योंकि जमीन और जमीन की वस्तुएँ (जैसे पेड़, भवन, पहाड़) हवा की गति को रोकती हैं।\nकारण (R): सतह की अनियमितताएँ हवा की गति का विरोध करती हैं।\n5. ये अनियमितताएँ हवा के प्रवाह में घर्षण उत्पन्न करती हैं।\n6. घर्षण के कारण हवा की गति कम हो जाती है और दिशा में भी बदलाव आता है।"
     },
     {
       "q_num": 19,
-      "question": "Statement I: Local winds occur due to temperature differences.\n Statement II: Loo is a hot local wind of India.\n कथन I: स्थानीय हवाएँ तापमान के अंतर के कारण उत्पन्न होती हैं।\n कथन II: लू भारत की एक गर्म स्थानीय हवा है।",
+      "question": "Statement I: Local winds occur due to temperature differences.\n Statement II: Loo is a hot local wind of India.",
       "options": {
-        "a": "Both correct / दोनों सही हैं।",
-        "b": "Only I correct / केवल I सही है।",
-        "c": "Only II correct / केवल II सही है।",
-        "d": "Both incorrect / दोनों गलत हैं।"
+        "a": "Both correct",
+        "b": "Only I correct",
+        "c": "Only II correct",
+        "d": "Both incorrect"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLocal winds arise from temperature and pressure differences; Loo blows hot over North India in summer.\n\n📖 हिंदी स्पष्टीकरण:\nस्थानीय पवनें तापमान के अंतर से बनती हैं; लू उत्तर भारत में गर्मी के मौसम में चलती है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): ITCZ is the zone of convergence.\n Reason (R): Trade winds from both hemispheres meet there.\n कथन (A): ITCZ अभिसरण का क्षेत्र है।\n कारण (R): दोनों गोलार्धों की व्यापारिक पवनें यहाँ मिलती हैं।",
+      "question": "Assertion (A): ITCZ is the zone of convergence.\n Reason (R): Trade winds from both hemispheres meet there.",
       "options": {
-        "a": "A true, R true, R correct explanation / A सही है, R सही है, और R सही व्याख्या है।",
-        "b": "A true, R true, R not correct explanation / A सही है, R सही है, लेकिन R सही व्याख्या नहीं है।",
-        "c": "A false, R true / A गलत है, R सही है।",
-        "d": "Both false / दोनों गलत हैं।"
+        "a": "A true, R true, R correct explanation",
+        "b": "A true, R true, R not correct explanation",
+        "c": "A false, R true",
+        "d": "Both false"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAssertion (A): The ITCZ ​​is a zone of convergence.\n1. Here, air rises upward, forming a center of convergence from different parts of the Earth.\nReason (R): The trade winds of both hemispheres meet here.\n2. The eastern trade winds of the Northern Hemisphere and the eastern trade winds of the Southern Hemisphere converge in the ITCZ ​​and rise upward.\nFor this reason, this region is always a center of convergence.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (A): ITCZ अभिसरण का क्षेत्र है।\n3. यहाँ हवा ऊपर की ओर उठती है और पृथ्वी के विभिन्न हिस्सों से आने वाली हवाओं का केंद्र बनता है।\nकारण (R): दोनों गोलार्धों की व्यापारिक पवनें यहाँ मिलती हैं।\n4. उत्तर गोलार्ध की पूर्वी व्यापारिक हवाएँ और दक्षिण गोलार्ध की पूर्वी व्यापारिक हवाएँ ITCZ में मिलकर ऊपर की ओर उठती हैं।\n5. इस कारण यह क्षेत्र हमेशा अभिसरण का केंद्र रहता है।"
     },
     {
       "q_num": 21,
-      "question": "Which cell circulates between the equator and 30° latitude?\n भूमध्य रेखा और 30° अक्षांश के बीच कौन-सी कोशिका बनती है?",
+      "question": "Which cell circulates between the equator and 30° latitude?",
       "options": {
-        "a": "Hadley Cell / हैडले कोशिका",
-        "b": "Ferrel Cell / फेरेल कोशिका",
-        "c": "Polar Cell / ध्रुवीय कोशिका",
-        "d": "Subtropical Cell / उपोष्ण कोशिका"
+        "a": "Hadley Cell",
+        "b": "Ferrel Cell",
+        "c": "Polar Cell",
+        "d": "Subtropical Cell"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHadley Cell:\n1. This forms between the equator and 30° latitude.\n2. In it, warm air rises above the equator, then descends at 30° latitude, and flows toward the equator again near the surface.\nOther options:\n3. Ferrel Cell: Between 30°–60° latitude.\n4. Polar Cell: Between 60°–90° latitude.\n5. Subtropical Cell: This is not a separate standard cell; the 30° portion of the Hadley Cell is sometimes called the subtropics.\nSo, the cell between the equator and 30° latitude is the Hadley Cell.\n\n📖 हिंदी स्पष्टीकरण:\nहैडले कोशिका:\n6. यह भूमध्य रेखा और 30° अक्षांश के बीच बनती है।\n7. इसमें गर्म हवा भूमध्य रेखा से ऊपर उठती है, फिर 30° अक्षांश पर नीचे आती है, और सतह के पास फिर से equator की ओर बहती है।\n8. अन्य विकल्प:\n9. फेरेल कोशिका: 30°–60° अक्षांश के बीच।\n10. ध्रुवीय कोशिका: 60°–90° अक्षांश के बीच।\n11. उपोष्ण कोशिका: यह कोई अलग मानक कोशिका नहीं है, हैडले कोशिका के 30° हिस्से को कभी-कभी उपोष्ण कहा जाता है।\nइसलिए भूमध्य रेखा और 30° अक्षांश के बीच की कोशिका है हैडले कोशिका।"
     },
     {
       "q_num": 22,
-      "question": "Which wind belt lies between 60° latitude and poles?\n 60° अक्षांश और ध्रुवों के बीच कौन-सी पवनों का क्षेत्र होता है?",
+      "question": "Which wind belt lies between 60° latitude and poles?",
       "options": {
-        "a": "Polar Easterlies / ध्रुवीय पूर्वी पवनें",
-        "b": "Westerlies / पश्चिमी पवनें",
-        "c": "Monsoon winds / मानसूनी पवनें",
-        "d": "Trade Winds / व्यापारिक पवनें"
+        "a": "Polar Easterlies",
+        "b": "Westerlies",
+        "c": "Monsoon winds",
+        "d": "Trade Winds"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPolar Easterlies:\n1. This wind region extends from 60° latitude to the poles.\n2. Cold and dry winds occur in the Northern and Southern Hemispheres.\n3. These winds blow from east to west.\nOther options:\n4. Westerlies: Between 30°–60° latitude.\n5. Monsoon winds: Special seasonal winds.\n6. Trade winds: Between 0°–30° latitude.\n\n📖 हिंदी स्पष्टीकरण:\nध्रुवीय पूर्वी पवनें:\n7. यह पवन क्षेत्र 60° अक्षांश से लेकर ध्रुवों तक फैला है।\n8. उत्तर और दक्षिण गोलार्ध में ठंडी और सूखी हवाएँ होती हैं।\n9. ये हवा पूर्व से पश्चिम की दिशा में बहती हैं।\nअन्य विकल्प:\n10. पश्चिमी पवनें: 30°–60° अक्षांश के बीच।\n11. मानसूनी पवनें: विशेष मौसमी हवाएँ।\n12. व्यापारिक पवनें: 0°–30° अक्षांश के बीच।"
     },
     {
       "q_num": 23,
-      "question": "The boundary between trade winds and westerlies is called:\n व्यापारिक पवनों और पश्चिमी पवनों के बीच की सीमा को क्या कहा जाता है?",
+      "question": "The boundary between trade winds and westerlies is called:",
       "options": {
-        "a": "ITCZ / अंतरउष्णकटिबंधीय अभिसरण क्षेत्र",
-        "b": "Subtropical High / उपोष्ण उच्च दाब क्षेत्र",
-        "c": "Subpolar Low / उपध्रुवीय निम्न दाब क्षेत्र",
-        "d": "Polar Front / ध्रुवीय वाताग्र"
+        "a": "ITCZ",
+        "b": "Subtropical High",
+        "c": "Subpolar Low",
+        "d": "Polar Front"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe boundary between trade winds and westerlies is known as the Subtropical High-Pressure Belt or simply Subtropical High.\nThe trade winds blow from the subtropical high-pressure belts (around 30° N and S) toward the equatorial low-pressure belt.\nThe westerlies also originate from the same subtropical high-pressure belt, but they blow toward the subpolar low-pressure belt (around 60° N and S).\nTherefore, the subtropical high acts as the dividing zone (boundary) between these two major planetary wind systems.\n\n📖 हिंदी स्पष्टीकरण:\nव्यापारिक पवनें उपोष्णकटिबंधीय उच्च दबाव पेटियों (लगभग 30° अक्षांश) से भूमध्यरेखीय निम्न दबाव क्षेत्र की ओर बहती हैं,\nजबकि पश्चिमी पवनें इन्हीं उपोष्ण उच्च दबाव पेटियों से उपध्रुवीय निम्न दबाव क्षेत्रों (लगभग 60° अक्षांश) की ओर बहती हैं ��।\nइस प्रकार, उपोष्ण उच्च दाब क्षेत्र इन दोनों पवन तंत्रों के बीच की मुख्य सीमा (Boundary) होती है"
     },
     {
       "q_num": 24,
-      "question": "Which wind system influences most of the world’s desert regions?\n विश्व के अधिकांश मरुस्थलों को कौन-सी पवन प्रणाली प्रभावित करती है?",
+      "question": "Which wind system influences most of the world’s desert regions?",
       "options": {
-        "a": "Trade Winds / व्यापारिक पवनें",
-        "b": "Polar Winds / ध्रुवीय पवनें",
-        "c": "Westerlies / पश्चिमी पवनें",
-        "d": "Monsoon Winds / मानसूनी पवनें"
+        "a": "Trade Winds",
+        "b": "Polar Winds",
+        "c": "Westerlies",
+        "d": "Monsoon Winds"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nTrade Winds:\n1. This wind system blows between 0°–30° latitude.\n2. These winds blow toward tropical high-pressure areas.\n3. In high-pressure areas, air is dry and hot.\n4. For this reason, trade winds affect most of the world's deserts (such as the Sahara, Thar, and Kalahari).\nOther Options:\n5. Polar Winds: Cold polar winds, not directly associated with deserts.\n6. Westerly Winds: 30°–60° latitude, mainly bringing moisture.\n7. Monsoon Winds: Seasonal winds, mainly affecting India and Southeast Asia.\n\n📖 हिंदी स्पष्टीकरण:\nव्यापारिक पवनें:\n8. यह पवन प्रणाली 0°–30° अक्षांश के बीच बहती है।\n9. ये हवा उष्णकटिबंधीय उच्च दाब क्षेत्रों की ओर बहती हैं।\n10. उच्च दबाव वाले क्षेत्रों में हवा शुष्क और गर्म होती है।\n11. इस कारण, व्यापारिक पवनें विश्व के अधिकांश मरुस्थलों (जैसे सहारा, थार, कालाहारी) को प्रभावित करती हैं।\nअन्य विकल्प:\n12. ध्रुवीय पवनें: ठंडी ध्रुवीय पवनें, मरुस्थलों से सीधे संबंधित नहीं।\n13. पश्चिमी पवनें: 30°–60° अक्षांश, मुख्यतः नमी लाती हैं।\n14. मानसूनी पवनें: मौसमी पवन, मुख्यतः भारत और दक्षिण-पूर्व एशिया को प्रभावित करती हैं।"
     },
     {
       "q_num": 25,
-      "question": "Jet streams are generally found near which boundary?\n जेट धाराएँ सामान्यतः किस सीमा के पास पाई जाती हैं?",
+      "question": "Jet streams are generally found near which boundary?",
       "options": {
-        "a": "Tropopause / क्षोभमंडल सीमा",
-        "b": "Mesopause / मध्यमंडल सीमा",
-        "c": "Thermopause / तापमंडल सीमा",
-        "d": "Stratopause / समतापमंडल सीमा"
+        "a": "Tropopause",
+        "b": "Mesopause",
+        "c": "Thermopause",
+        "d": "Stratopause"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nJet streams are narrow, fast air currents found near the tropopause, influencing weather and aviation.\n\n📖 हिंदी स्पष्टीकरण:\nजेट धाराएँ क्षोभमंडल की ऊपरी सीमा पर पाई जाने वाली तीव्र वायु धाराएँ हैं जो मौसम को प्रभावित करती हैं।"

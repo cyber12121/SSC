@@ -6,187 +6,187 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Petrology is the scientific study of which geological feature?\n पेट्रोलॉजी किस भूवैज्ञानिक विशेषता का वैज्ञानिक अध्ययन है?",
+      "question": "Petrology is the scientific study of which geological feature?",
       "options": {
-        "a": "Water Cycle / जल चक्र",
-        "b": "Atmosphere / वायुमंडल",
-        "c": "Rocks / चट्टानें",
-        "d": "Continents and Oceans / महाद्वीप और महासागर"
+        "a": "Water Cycle",
+        "b": "Atmosphere",
+        "c": "Rocks",
+        "d": "Continents and Oceans"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPetrology is the specialized branch of geology concerned with the study of rocks, including their composition, texture, structure, origin, and distribution.\n\n📖 हिंदी स्पष्टीकरण:\nयह भूविज्ञान की विशिष्ट शाखा है जो चट्टानों के अध्ययन से संबंधित है, जिसमें उनकी संरचना, बनावट, संरचना, उत्पत्ति और वितरण शामिल है।"
     },
     {
       "q_num": 2,
-      "question": "Which type of rock is formed by the cooling and solidification of magma or lava?\n मैग्मा या लावा के ठंडा होने और जमने से किस प्रकार की चट्टान का निर्माण होता है?",
+      "question": "Which type of rock is formed by the cooling and solidification of magma or lava?",
       "options": {
-        "a": "Sedimentary Rock / अवसादी चट्टान",
-        "b": "Metamorphic Rock / कायांतरित चट्टान",
-        "c": "Igneous Rock / आग्नेय चट्टान",
-        "d": "Organic Rock / कार्बनिक चट्टान"
+        "a": "Sedimentary Rock",
+        "b": "Metamorphic Rock",
+        "c": "Igneous Rock",
+        "d": "Organic Rock"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n• Igneous rocks are known as primary rocks because they are formed directly from the cooling and solidification of molten material (magma inside the earth or lava on the surface). These rocks are generally hard and devoid of fossils.\n5. Sedimentary rocks are a type of rock that forms from the accumulation and consolidation of sediments over time.\n6. Metamorphic rocks are rocks that form when existing rocks (igneous, sedimentary, or even other metamorphic rocks) are subjected to intense heat, pressure, or volume change, causing them to undergo physical and chemical changes. This process is also called Metamorphism.\n\n📖 हिंदी स्पष्टीकरण:\n7. आग्नेय चट्टानों को प्राथमिक चट्टानें कहा जाता है क्योंकि ये पिघले हुए पदार्थ (पृथ्वी के अंदर मैग्मा या सतह पर लावा) के ठंडा होने और जमने से सीधे बनती हैं। ये चट्टानें आमतौर पर कठोर होती हैं और जीवाश्मों से रहित होती हैं।\n8. अवसादी चट्टानें एक प्रकार की चट्टान होती हैं जो समय के साथ तलछट के संचय और संघनन से बनती हैं।\n9. कायांतरित चट्टानें वे चट्टानें होती हैं जो तब बनती हैं जब मौजूदा चट्टानें (आग्नेय,अवसादी, या अन्य कायांतरित चट्टानें) तीव्र ताप,दबाव, या आयतन परिवर्तन के अधीन होती हैं, जिससे उनमें भौतिक और रासायनिक परिवर्तन होते हैं। इस प्रक्रिया को कायांतरण भी कहा जाता है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following is an example of an Extrusive Igneous Rock? निम्नलिखित में से कौन बहिर्भेदी आग्नेय चट्टान का उदाहरण है?",
+      "question": "Which of the following is an example of an Extrusive Igneous Rock?",
       "options": {
-        "a": "Granite / ग्रेनाइट",
-        "b": "Gabbro / गैब्रो",
-        "c": "Pumice / प्यूमिस",
-        "d": "Diorite / डायोराइट"
+        "a": "Granite",
+        "b": "Gabbro",
+        "c": "Pumice",
+        "d": "Diorite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nExtrusive igneous rocks, like Pumice and Basalt, solidify quickly outside the Earth's crust after a volcanic eruption, leading to a fine-grained or glassy texture. Gabbro & Granite, on the other hand, is an intrusive igneous rock.\n\n📖 हिंदी स्पष्टीकरण:\nबहिर्भेदी आग्नेय चट्टानें, जैसे प्यूमिस और बेसाल्ट, ज्वालामुखी विस्फोट के बाद पृथ्वी की पपड़ी के बाहर तेज़ी से जम जाती हैं, जिससे महीन दानेदार या कांच जैसी बनावट बनती है। ग्रेनाइट एक अंतर्भेदी आग्नेय चट्टान है।"
     },
     {
       "q_num": 4,
-      "question": "The largest body of intrusive magmatic material found inside the Earth's crust is called a: पृथ्वी की पपड़ी के अंदर पाए जाने वाले अंतर्भेदी मैग्मा पदार्थ के सबसे बड़े पिंड को क्या कहा जाता है?",
+      "question": "The largest body of intrusive magmatic material found inside the Earth's crust is called a:",
       "options": {
-        "a": "Crater / क्रेटर",
-        "b": "Vent / छिद्र",
-        "c": "Batholith / बैथोलिथ",
-        "d": "Laccolith / लैकोलिथ"
+        "a": "Crater",
+        "b": "Vent",
+        "c": "Batholith",
+        "d": "Laccolith"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Batholith is a type of Plutonic body, which is a massive body of igneous rock that solidified deep within the Earth's crust. It often serves as the deep-seated magma chamber base for volcanic activity above.\n• Dykes are vertical or steeply inclined sheets of magma that cut across the layers of surrounding rock.\n• Sills are horizontal sheets of magma that intrude between layers of\npre-existing rock.\n\n📖 हिंदी स्पष्टीकरण:\nबाथोलिथ एक प्रकार का प्लूटोनिक चट्टान है, जो आग्नेय चट्टानों का एक विशाल पिंड है जो पृथ्वी की भूपर्पटी के भीतर गहराई में जम गया है। यह अक्सर ऊपर ज्वालामुखी गतिविधि के लिए गहरे स्थित मैग्मा कक्ष के आधार के रूप में कार्य करता है।\n• डाइक मैग्मा की ऊर्ध्वाधर या तीव्र ढलान वाली परतें होती हैं जो आसपास की चट्टानों की परतों को काटती हैं।\n• सिल मैग्मा की क्षैतिज चादरें होती हैं जो पहले से मौजूद चट्टानों की परतों के बीच में उपस्थित होती हैं।"
     },
     {
       "q_num": 5,
-      "question": "Which type of rock typically exists in layers or strata and is the most common repository for fossils? कौन सी चट्टानें आमतौर पर परतों या स्तरों में मौजूद होती हैं और जीवाश्मों के लिए सबसे आम भंडार हैं?",
+      "question": "Which type of rock typically exists in layers or strata and is the most common repository for fossils?",
       "options": {
-        "a": "Igneous Rock / आग्नेय चट्टान",
-        "b": "Sedimentary Rock / अवसादी चट्टान",
-        "c": "Metamorphic Rock / कायांतरित चट्टान",
-        "d": "Plutonic Rock / प्लूटोनिक चट्टान"
+        "a": "Igneous Rock",
+        "b": "Sedimentary Rock",
+        "c": "Metamorphic Rock",
+        "d": "Plutonic Rock"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSedimentary rocks are formed from the deposition and cementation of sediments in layers, allowing for the preservation of plant and animal remains (fossils) within those layers. The layering structure is a key defining feature.\n\n📖 हिंदी स्पष्टीकरण:\nअवसादी चट्टानें परतों में अवसादों के जमाव और सिमेंटेशन से बनती हैं, जिससे उन परतों के भीतर पौधों और जानवरों के अवशेषों (जीवाश्मों) का संरक्षण होता है। परतदार संरचना एक प्रमुख परिभाषित विशेषता है।"
     },
     {
       "q_num": 6,
-      "question": "The process of compaction and cementation that converts loose sediments into solid rock, taking place within sedimentary rocks, is known as: संपीड़न और सिमेंटेशन की प्रक्रिया जो ढीले अवसादों को ठोस चट्टान में परिवर्तित करती है, और जो अवसादी चट्टानों के भीतर होती है, किस रूप में जानी जाती है?",
+      "question": "The process of compaction and cementation that converts loose sediments into solid rock, taking place within sedimentary rocks, is known as:",
       "options": {
-        "a": "Melting / पिघलना",
-        "b": "Weathering / अपक्षय",
-        "c": "Lithification / लिथीफिकेशन",
-        "d": "Reorganisation / पुनर्गठन"
+        "a": "Melting",
+        "b": "Weathering",
+        "c": "Lithification",
+        "d": "Reorganisation"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLithification is the comprehensive term used to describe the set of processes, including compaction and cementation, that lead to the hardening of sediments into coherent sedimentary rock. This process is essential for the formation of rocks like Shale and Sandstone.\n\n📖 हिंदी स्पष्टीकरण:\nलिथीफिकेशन वह व्यापक शब्द है जिसका उपयोग उन प्रक्रियाओं के समूह का वर्णन करने के लिए किया जाता है, जिसमें संपीड़न और सिमेंटेशन शामिल है, जो अवसादों को सुसंगत अवसादी चट्टान में कठोर बनाने की ओर ले जाता है। यह प्रक्रिया शैल और बलुआ पत्थर जैसी चट्टानों के निर्माण के लिए आवश्यक है।"
     },
     {
       "q_num": 7,
-      "question": "Which type of igneous rock is the primary constituent of the relatively dense Oceanic Crust?\n कौन सी आग्नेय चट्टान महासागरीय परत का प्राथमिक घटक है, जो तुलनात्मक रूप से सघन होती है?",
+      "question": "Which type of igneous rock is the primary constituent of the relatively dense Oceanic Crust?",
       "options": {
-        "a": "Granite / ग्रेनाइट",
-        "b": "Basalt / बेसाल्ट",
-        "c": "Pumice / प्यूमिस",
-        "d": "Quartzite / क्वार्टजाइट"
+        "a": "Granite",
+        "b": "Basalt",
+        "c": "Pumice",
+        "d": "Quartzite"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe oceanic crust is predominantly composed of Basalt, a fine-grained, dark, extrusive igneous rock. In contrast, the less dense continental crust is mainly made up of Granite\n\n📖 हिंदी स्पष्टीकरण:\nमहासागरीय परत मुख्य रूप से बेसाल्ट से बनी होती है, जो एक महीन दानेदार, गहरे रंग की, बहिर्भेदी आग्नेय चट्टान है। इसके विपरीत, कम सघन महाद्वीपीय परत मुख्य रूप से ग्रेनाइट से बनी है।"
     },
     {
       "q_num": 8,
-      "question": "The intrusive igneous landform that solidifies almost perpendicular to the ground, cutting across the bedding planes, is called a:\n वह अंतर्वेधी आग्नेय भू-आकृति जो धरातल के लगभग लंबवत होकर, संस्तर तलों को काटते हुए ठोस हो जाती है, कहलाती है:",
+      "question": "The intrusive igneous landform that solidifies almost perpendicular to the ground, cutting across the bedding planes, is called a:",
       "options": {
-        "a": "Sill / सिल",
-        "b": "Phacolith / फैकोलिथ",
-        "c": "Dike / डाइक",
-        "d": "Laccolith / लैकोलिथ"
+        "a": "Sill",
+        "b": "Phacolith",
+        "c": "Dike",
+        "d": "Laccolith"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Dike is a vertical or discordant body of intrusive igneous rock that cuts across the older rock layers. This is in contrast to a Sill, which is a horizontal or concordant body that flows between the layers.\n\n📖 हिंदी स्पष्टीकरण:\nडाइक, आग्नेय चट्टानों का एक ऊर्ध्वाधर या असंगत पिंड होता है जो पुरानी चट्टानों की परतों को काटता है। यह सिल के विपरीत है, जो परतों के बीच बहने वाला एक क्षैतिज या सुसंगत पिंड होता है।"
     },
     {
       "q_num": 9,
-      "question": "Which volcano is famously known as the 'Lighthouse of the Mediterranean' due to its nearly continuous eruptions?\n अपने लगभग निरंतर विस्फोटों के कारण किस ज्वालामुखी को 'भूमध्य सागर का प्रकाश स्तंभ' के नाम से जाना जाता है?",
+      "question": "Which volcano is famously known as the 'Lighthouse of the Mediterranean' due to its nearly continuous eruptions?",
       "options": {
-        "a": "Ojos del Salado / ओजोस डेल सालाडो",
-        "b": "Mt. Vesuvius / माउंट वेसुवियस",
-        "c": "Mt. Stromboli / माउंट स्ट्रॉम्बोली",
-        "d": "Krakatoa / क्राकाटोआ"
+        "a": "Ojos del Salado",
+        "b": "Mt. Vesuvius",
+        "c": "Mt. Stromboli",
+        "d": "Krakatoa"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMt. Stromboli, an active volcano in Italy, has been in an almost constant state of mild eruption for over 2,000 years, providing a regular glow visible at night. This consistent activity earned it the title 'Lighthouse of the Mediterranean'.\nHighest volcano: Ojas del Salado (it is located between Chile and Argentina in Andes mountain range).\n\n📖 हिंदी स्पष्टीकरण:\nइटली का एक सक्रिय ज्वालामुखी, माउंट स्ट्रॉम्बोली, पिछले 2,000 वर्षों से लगभग निरंतर हल्के विस्फोट की स्थिति में है, जिससे रात में नियमित रूप से चमक दिखाई देती है। इसी निरंतर सक्रियता के कारण इसे 'भूमध्य सागर का प्रकाश स्तंभ' की उपाधि मिली है।\n5. सबसे ऊँचा ज्वालामुखी: ओजस डेल सलाडो (यह चिली और अर्जेंटीना के बीच एंडीज़ पर्वत श्रृंखला में स्थित है)।"
     },
     {
       "q_num": 10,
-      "question": "Slate is a metamorphic rock that is formed primarily from which original fine-grained sedimentary rock under heat and pressure?\n स्लेट एक कायांतरित चट्टान है जो ताप और दबाव में मुख्य रूप से किस मूल महीन दानेदार अवसादी चट्टान से बनती है?",
+      "question": "Slate is a metamorphic rock that is formed primarily from which original fine-grained sedimentary rock under heat and pressure?",
       "options": {
-        "a": "Limestone / चूना पत्थर",
-        "b": "Sandstone / बलुआ पत्थर",
-        "c": "Granite / ग्रेनाइट",
-        "d": "Shale / शैल"
+        "a": "Limestone",
+        "b": "Sandstone",
+        "c": "Granite",
+        "d": "Shale"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe metamorphosis of Shale, a mechanically formed sedimentary rock, results in the formation of Slate. This transformation occurs due to directed pressure and mild heat, which reorganizes the fine-grained clay minerals into a dense, foliated structure.\nExamples of Metamorphic Rock and their source rock :-\nGranite-> Gneiss\nShale -> Slate, Schist\nSandstone -> Quartzite\nLimestone -> Marble\n\n📖 हिंदी स्पष्टीकरण:\nयांत्रिक रूप से निर्मित अवसादी चट्टान, शेल, के कायापलट के परिणामस्वरूप स्लेट का निर्माण होता है। यह परिवर्तन निर्देशित दबाव और हल्की ऊष्मा के कारण होता है, जो सूक्ष्म कणों वाले मृदा खनिजों को एक सघन, पर्णित संरचना में पुनर्गठित करता है।\nकायांतरित शैल और उनके स्रोत शैल के उदाहरण:\n5. ग्रेनाइट-> नीस\n6. शेल-> स्लेट, शिस्ट\n7. बलुआ पत्थर-> क्वार्टजाइट\n8. चूना पत्थर-> संगमरमर"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding Igneous rocks' cooling rate:\n आग्नेय चट्टानों की शीतलन दर के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Intrusive igneous rocks (e.g., Granite) cool slowly inside the crust, resulting in large, visible crystals. अंतर्भेदी आग्नेय चट्टानें (उदा. ग्रेनाइट) भूपर्पटी के अंदर धीरे-धीरे ठंडी होती हैं, जिसके परिणामस्वरूप बड़े, दृश्यमान क्रिस्टल बनते हैं।\n 2. Extrusive igneous rocks (e.g., Basalt) cool rapidly on the surface, forming fine-grained structures or a glassy texture. बहिर्भेदी आग्नेय चट्टानें (उदा. बेसाल्ट) सतह पर तेज़ी से ठंडी होती हैं, जिससे महीन दानेदार संरचनाएं या कांच जैसी बनावट बनती है।\n Which of the statements given above is/are correct? ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Igneous rocks' cooling rate:\n1. Intrusive igneous rocks (e.g., Granite) cool slowly inside the crust, resulting in large, visible crystals.\n2. Extrusive igneous rocks (e.g., Basalt) cool rapidly on the surface, forming fine-grained structures or a glassy texture.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe cooling rate dictates the crystal size: slow cooling (intrusive) allows for large crystals (phaneritic texture), and rapid cooling (extrusive) results in small or microscopic crystals (aphanitic or glassy texture). Both statements accurately describe the consequence of the cooling environment on crystal formation in igneous rocks.\n\n📖 हिंदी स्पष्टीकरण:\nशीतलन दर क्रिस्टल के आकार को निर्धारित करती है: धीमी शीतलन (अंतर्भेदी) बड़े क्रिस्टल (फ़ेनेरिटिक बनावट) के लिए अनुमति देती है, और तेज़ शीतलन (बहिर्भेदी) छोटे या सूक्ष्म क्रिस्टल (एफेनिटिक या कांच जैसी बनावट) में परिणत होती है। दोनों कथन आग्नेय चट्टानों में क्रिस्टल निर्माण पर शीतलन वातावरण के परिणाम का सटीक वर्णन करते हैं।"
     },
     {
       "q_num": 12,
-      "question": "Assertion (A): Sedimentary rocks contain fossils of plants and animals.\n अभिकथन (A): अवसादी चट्टानों में पौधों और जानवरों के जीवाश्म पाए जाते हैं।\n Reason (R): Sedimentary rocks are formed from the deposition of sediments under normal pressure and temperature, preventing the destruction of organic remains.\n कारण (R): अवसादी चट्टानों का निर्माण सामान्य दबाव और तापमान के तहत अवसादों के जमाव से होता है, जिससे कार्बनिक अवशेषों का विनाश रोका जा सकता है।",
+      "question": "Assertion (A): Sedimentary rocks contain fossils of plants and animals.\n Reason (R): Sedimentary rocks are formed from the deposition of sediments under normal pressure and temperature, preventing the destruction of organic remains.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) की सही व्याख्या है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) की सही व्याख्या नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe presence of fossils in sedimentary rocks (A) is directly linked to their formation environment (R). Since they form at the Earth's surface at low temperatures and pressures, the remains of organisms are not melted or recrystallized, allowing for preservation as fossils.\n\n📖 हिंदी स्पष्टीकरण:\nअवसादी चट्टानों में जीवाश्मों की उपस्थिति (A) सीधे उनके निर्माण वातावरण (R) से जुड़ी हुई है। चूंकि वे पृथ्वी की सतह पर कम तापमान और दबाव पर बनते हैं, इसलिए जीवों के अवशेष पिघलते या पुन: क्रिस्टलीकृत नहीं होते हैं, जिससे जीवाश्मों के रूप में संरक्षण की अनुमति मिलती है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following statements about a 'Sill' are correct?\n 'सिल' के बारे में निम्नलिखित में से कौन सा कथन सही है?\n 1. It is an Intrusive Igneous Rock landform. यह एक अंतर्भेदी आग्नेय चट्टान भू-आकृति है।\n 2. It is a horizontal, concordant body formed by magma solidifying parallel to the existing rock layers. यह एक क्षैतिज, संगत पिंड है जो मौजूदा चट्टान परतों के समानांतर मैग्मा के जमने से बनता है।\n 3. It is a major vertical feeder channel for a volcano. यह एक ज्वालामुखी के लिए एक प्रमुख ऊर्ध्वाधर फीडर चैनल है।",
+      "question": "Which of the following statements about a 'Sill' are correct?\n1. It is an Intrusive Igneous Rock landform.\n2. It is a horizontal, concordant body formed by magma solidifying parallel to the existing rock layers.\n3. It is a major vertical feeder channel for a volcano.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "1 and 2 only / केवल 1 और 2",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "1 and 2 only",
+        "d": "1, 2, and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Sill is defined as an Intrusive (Plutonic) rock body (Statement 1) that is horizontal and concordant, meaning it flows and solidifies parallel to the layering of the surrounding rock (Statement 2). Statement 3 describes a Dike or Volcanic Pipe.\n\n📖 हिंदी स्पष्टीकरण:\nएक सिल को एक अंतर्भेदी (प्लूटोनिक) चट्टान पिंड (कथन 1) के रूप में परिभाषित किया गया है जो क्षैतिज और संगत है, जिसका अर्थ है कि यह आसपास की चट्टान की परतों के समानांतर बहता और जमता है (कथन 2)। कथन 3 एक डाइक या ज्वालामुखी पाइप का वर्णन करता है।"
     },
     {
       "q_num": 14,
-      "question": "Assertion (A): The world's highest volcano, Ojos del Salado, is located in the Andes Mountains on the border of Chile and Argentina.\n अभिकथन (A): विश्व का सबसे ऊँचा ज्वालामुखी, ओजोस डेल सालाडो, चिली और अर्जेंटीना की सीमा पर एंडीज पर्वत में स्थित है।\n Reason (R): Ojos del Salado is an example of a Shield volcano, characterized by low viscosity, highly fluid basaltic lava.\n कारण (R): ओजोस डेल सालाडो शील्ड ज्वालामुखी का एक उदाहरण है, जिसकी विशेषता कम चिपचिपापन वाला, अत्यधिक तरल बेसाल्टिक लावा है।",
+      "question": "Assertion (A): The world's highest volcano, Ojos del Salado, is located in the Andes Mountains on the border of Chile and Argentina.\n Reason (R): Ojos del Salado is an example of a Shield volcano, characterized by low viscosity, highly fluid basaltic lava.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) की सही व्याख्या है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) की सही व्याख्या नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement (A) is correct, identifying the highest volcano and its location. However, (R) is false because Ojos del Salado is a Composite or Stratovolcano, built up by multiple layers of viscous lava, ash, and pumice, not a Shield volcano.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (A) सही है, जो सबसे ऊँचे ज्वालामुखी और उसके स्थान की पहचान करता है। हालाँकि, (R) गलत है क्योंकि ओजोस डेल सालाडो एक मिश्रित या स्ट्रैटोवोलकेनो है, जो चिपचिपे लावा, राख और प्यूमिस की कई परतों द्वारा निर्मित है, न कि एक शील्ड ज्वालामुखी।"
     },
     {
       "q_num": 15,
-      "question": "The formation of Metamorphic rocks due to crushing, shearing, and reorganisation of original minerals, without any significant chemical changes, is classified as:\n बिना किसी महत्वपूर्ण रासायनिक परिवर्तन के, मूल खनिजों के कुचलने, अपरूपण और पुनर्गठन के कारण कायांतरित चट्टानों के निर्माण को किस रूप में वर्गीकृत किया जाता है?",
+      "question": "The formation of Metamorphic rocks due to crushing, shearing, and reorganisation of original minerals, without any significant chemical changes, is classified as:",
       "options": {
-        "a": "Thermal Metamorphism / तापीय कायांतरण",
-        "b": "Contact Metamorphism / संपर्क कायांतरण",
-        "c": "Dynamic Metamorphism / गतिक कायांतरण",
-        "d": "Regional Metamorphism / क्षेत्रीय कायांतरण"
+        "a": "Thermal Metamorphism",
+        "b": "Contact Metamorphism",
+        "c": "Dynamic Metamorphism",
+        "d": "Regional Metamorphism"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDynamic Metamorphism occurs primarily due to high directed pressure (mechanical stress), often associated with faulting or tectonic plate movement, causing mechanical disruption. Thermal or Contact Metamorphism involves high heat but little to no pressure.\n\n📖 हिंदी स्पष्टीकरण:\nगतिक कायांतरण मुख्य रूप से उच्च निर्देशित दबाव (यांत्रिक तनाव) के कारण होता है, जो अक्सर दोष या विवर्तनिक प्लेट की गति से जुड़ा होता है, जिससे यांत्रिक व्यवधान होता है। तापीय या संपर्क कायांतरण में उच्च ताप शामिल होता है लेकिन दबाव नगण्य होता है।"
     },
     {
       "q_num": 16,
-      "question": "Match the following rock transformation pairs with the resulting metamorphic rock: निम्नलिखित चट्टान परिवर्तन युग्मों को परिणामी कायांतरित चट्टान से मिलाएँ:\n | Original Rock / मूल चट्टान | Resulting Metamorphic Rock / परिणामी कायांतरित चट्टान |\n 1. Limestone / चूना पत्थर | 1. Quartzite / क्वार्टजाइट\n 2. Sandstone / बलुआ पत्थर | 2. Marble / संगमरमर\n 3. Granite / ग्रेनाइट | 3. Gneiss / नीस",
+      "question": "Match the following rock transformation pairs with the resulting metamorphic rock:\n| Original Rock\n1. Limestone\n2. Sandstone\n3. Granite",
       "options": {
         "a": "I-1, II-2, III-3",
         "b": "I-2, II-1, III-3",
@@ -198,108 +198,108 @@
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements correctly describes a Caldera volcano?\n निम्नलिखित में से कौन सा कथन काल्डेरा ज्वालामुखी का सही वर्णन करता है?",
+      "question": "Which of the following statements correctly describes a Caldera volcano?",
       "options": {
-        "a": "It is characterized by low viscosity, basaltic lava, and gentle slopes, like a warrior's shield. / यह कम सान्द्रता वाले बेसाल्टिक लावा और कोमल ढलानों से युक्त होता है, जो एक योद्धा की ढाल जैसा दिखाई देता है।",
-        "b": "It is formed by repeated eruptions of viscous lava and tephra, creating a steep, classic cone shape. / यह चिपचिपे लावा और टेफ्रा के बार-बार विस्फोट से बनता है, जिससे एक खड़ी, क्लासिक शंकु आकृति बनती है।",
-        "c": "It is the most explosive type of volcano, which often collapses back into its emptied magma chamber, forming a massive basin or depression. / यह सबसे अधिक विस्फोटक प्रकार का ज्वालामुखी है, जो अक्सर अपने खाली हुए मैग्मा कक्ष में ढह जाता है, जिससे एक विशाल बेसिन या अवसाद बनता है।",
-        "d": "It involves the outpouring of highly fluid lava from fissure openings, leading to extensive lava plains like the Deccan Traps. / इसमें दरार के छिद्रों से अत्यधिक तरल लावा का निकलना शामिल है, जिससे दक्कन ट्रैप जैसे व्यापक लावा मैदान बनते हैं।"
+        "a": "It is characterized by low viscosity, basaltic lava, and gentle slopes, like a warrior's shield.",
+        "b": "It is formed by repeated eruptions of viscous lava and tephra, creating a steep, classic cone shape.",
+        "c": "It is the most explosive type of volcano, which often collapses back into its emptied magma chamber, forming a massive basin or depression.",
+        "d": "It involves the outpouring of highly fluid lava from fissure openings, leading to extensive lava plains like the Deccan Traps."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCalderas are formed by extremely violent eruptions of viscous, gas-rich magma that empty the underlying magma chamber. This removal of support causes the cone to collapse, leaving behind a massive, bowl-shaped crater larger than 1 km in diameter.\n\n📖 हिंदी स्पष्टीकरण:\nकैल्डेरा का निर्माण अत्यंत हिंसक विस्फोटों से होता है, जिनमें सान्द्र, गैस-समृद्ध मैग्मा नीचे स्थित मैग्मा कक्ष को खाली कर देता है। इस सहारे के हटने से शंकु ढह जाता है और पीछे एक विशाल, कटोरे के आकार का क्रेटर रह जाता है, जिसका व्यास 1 किलोमीटर से अधिक होता है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following pairs of sedimentary rock formation types and their examples: अवसादी चट्टान निर्माण प्रकार और उनके उदाहरणों के निम्नलिखित युग्मों पर विचार करें:\n 1. Mechanically Formed: Sandstone / यांत्रिक रूप से निर्मित: बलुआ पत्थर\n 2. Chemically Formed: Halite / रासायनिक रूप से निर्मित: हैलाइट (चट्टानी नमक)\n 3. Organically Formed: Shale / कार्बनिक रूप से निर्मित: चूना पत्थर\n Which of the pairs given above is/are correctly matched?\n ऊपर दिए गए युग्मों में से कौन सा/से सही ढंग से सुमेलित है/हैं?",
+      "question": "Consider the following pairs of sedimentary rock formation types and their examples:\n1. Mechanically Formed: Sandstone\n2. Chemically Formed: Halite\n3. Organically Formed: Shale\n Which of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 2 only / केवल 1 और 2",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 2 only",
+        "d": "1, 2, and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSandstone is mechanically formed from rock fragments (1). Halite (Rock Salt) is chemically formed by evaporation of mineral-rich water (2) Both are correct, while Shale is mechanically formed.\n\n📖 हिंदी स्पष्टीकरण:\nबलुआ पत्थर यांत्रिक रूप से चट्टान के टुकड़ों से बनता है (1)। हैलाइट (सेंधा नमक) रासायनिक रूप से खनिज युक्त पानी के वाष्पीकरण से बनता है (2) दोनों सही हैं, जबकि शेल यांत्रिक रूप से बनता है।"
     },
     {
       "q_num": 19,
-      "question": "Assertion (A): Any class of rock (Igneous, Sedimentary, or Metamorphic) can be transformed directly into a Metamorphic rock.\n Reason (R): Transformation to a Metamorphic rock requires changes in Pressure, Volume, and Temperature (PVT) conditions that cause recrystallization and reorganization of minerals.\n अभिकथन (A): चट्टान का कोई भी वर्ग (आग्नेय, अवसादी या कायांतरित) सीधे कायांतरित चट्टान में परिवर्तित हो सकता है।\n कारण (R): कायांतरित चट्टान में परिवर्तन के लिए दाब, आयतन और तापमान (PVT) स्थितियों में परिवर्तन की आवश्यकता होती है जो खनिजों के पुन: क्रिस्टलीकरण और पुनर्गठन का कारण बनते हैं।",
+      "question": "Assertion (A): Any class of rock (Igneous, Sedimentary, or Metamorphic) can be transformed directly into a Metamorphic rock.\n Reason (R): Transformation to a Metamorphic rock requires changes in Pressure, Volume, and Temperature (PVT) conditions that cause recrystallization and reorganization of minerals.",
       "options": {
-        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, और (R), (A) की सही व्याख्या है।",
-        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं, लेकिन (R), (A) की सही व्याख्या नहीं है।",
-        "c": "(A) is true, but (R) is false. / (A) सत्य है, लेकिन (R) असत्य है।",
-        "d": "(A) is false, but (R) is true. / (A) असत्य है, लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "c": "(A) is true, but (R) is false.",
+        "d": "(A) is false, but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Rock Cycle dictates that any pre-existing rock type (igneous, sedimentary, or even an older metamorphic rock) can undergo metamorphism (A). This transformation occurs only when the rock is subjected to significant changes in PVT conditions (R), which drive the internal mineralogical and structural changes.\n\n📖 हिंदी स्पष्टीकरण:\nशैल चक्र यह निर्धारित करता है कि कोई भी पूर्व-मौजूद शैल प्रकार (आग्नेय, अवसादी, या यहाँ तक कि पुरानी कायांतरित चट्टान) रूपांतरण (A) से गुजर सकती है।\nयह परिवर्तन केवल तब होता है जब शैल पर PVT परिस्थितियों (R) में महत्वपूर्ण परिवर्तन लागू होते हैं, जो आंतरिक खनिजीय और संरचनात्मक परिवर्तनों को उत्प्रेरित करते हैं।"
     },
     {
       "q_num": 20,
-      "question": "Which feature is characteristic of Metamorphic rocks that have undergone intense regional metamorphism, such as the transformation of Granite to Gneiss? क्षेत्रीय कायांतरण से गुज़रने वाली कायांतरित चट्टानों की कौन सी विशेषता है, जैसे ग्रेनाइट का नीस में परिवर्तन?",
+      "question": "Which feature is characteristic of Metamorphic rocks that have undergone intense regional metamorphism, such as the transformation of Granite to Gneiss?",
       "options": {
-        "a": "Presence of layers or strata (bedding planes). / परतों या स्तरों (संस्तरण तलों) की उपस्थिति।",
-        "b": "Low density and high porosity due to rapid cooling. / तेज़ शीतलन के कारण कम सघनता और उच्च सरंध्रता।",
-        "c": "Alternating light and dark mineral bands, known as Banding. / वैकल्पिक हल्के और गहरे खनिज बैंड, जिन्हें शिलाविन्यास (बैंडिंग) कहा जाता है।",
-        "d": "Abundance of intact fossils and original air bubbles. / अखंड जीवाश्मों और मूल वायु बुलबुलों की प्रचुरता"
+        "a": "Presence of layers or strata (bedding planes).",
+        "b": "Low density and high porosity due to rapid cooling.",
+        "c": "Alternating light and dark mineral bands, known as Banding.",
+        "d": "Abundance of intact fossils and original air bubbles."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBanding is a prominent textural feature in high-grade metamorphic rocks like Gneiss, where mineral segregation under high pressure and temperature creates distinct light-colored (felsic) and dark-colored (mafic) bands. This is a result of foliation, a key metamorphic structure.\n\n📖 हिंदी स्पष्टीकरण:\nशिलाविन्यास नीस जैसी उच्च श्रेणी की कायांतरित चट्टानों में एक प्रमुख बनावट विशेषता है, जहाँ उच्च दबाव और तापमान के तहत खनिज पृथक्करण विशिष्ट हल्के रंग के (फेल्सिक) और गहरे रंग के (मैफ़िक) बैंड बनाता है। यह फोलिएशन का परिणाम है, जो एक प्रमुख कायांतरित संरचना है।"
     },
     {
       "q_num": 21,
-      "question": "Which one of the following pairs of igneous rock type and example is INCORRECTLY matched?\n निम्नलिखित आग्नेय चट्टान प्रकार और उदाहरणों के युग्मों में से कौन सा गलत सुमेलित है?",
+      "question": "Which one of the following pairs of igneous rock type and example is INCORRECTLY matched?",
       "options": {
-        "a": "Extrusive Igneous Rock: Rhyolite / बहिर्भेदी आग्नेय चट्टान: रायोलाइट",
-        "b": "Intrusive Igneous Rock: Diabase / अंतर्भेदी आग्नेय चट्टान: डायबेस",
-        "c": "Extrusive Igneous Rock: Dacite / बहिर्भेदी आग्नेय चट्टान: डेसाइट",
-        "d": "Intrusive Igneous Rock: Pumice / अंतर्भेदी आग्नेय चट्टान: प्यूमिस"
+        "a": "Extrusive Igneous Rock: Rhyolite",
+        "b": "Intrusive Igneous Rock: Diabase",
+        "c": "Extrusive Igneous Rock: Dacite",
+        "d": "Intrusive Igneous Rock: Pumice"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPumice is correctly classified as an Extrusive (Volcanic) Igneous Rock formed from highly vesicular lava, and is known for its extreme lightness and fine-grained texture due to rapid cooling. Listing it as Intrusive (Plutonic) is incorrect.\n\n📖 हिंदी स्पष्टीकरण:\nप्यूमिस को एक बहिर्भेदी (ज्वालामुखी) आग्नेय चट्टान के रूप में सही ढंग से वर्गीकृत किया गया है जो अत्यधिक पुटिकादार लावा से बनता है, और तेज़ शीतलन के कारण इसकी अत्यधिक हल्केपन और महीन-दानेदार बनावट के लिए जाना जाता है। इसे अंतर्भेदी (प्लूटोनिक) के रूप में सूचीबद्ध करना गलत है।"
     },
     {
       "q_num": 22,
-      "question": "In the context of volcanic intrusive features, a 'Phacolith' is best described as a magma body that solidifies:\n ज्वालामुखी अंतर्भेदी विशेषताओं के संदर्भ में, 'फैकोलिथ' को सबसे अच्छे ढंग से एक मैग्मा पिंड के रूप में वर्णित किया जाता है जो ठोस हो जाता है:",
+      "question": "In the context of volcanic intrusive features, a 'Phacolith' is best described as a magma body that solidifies:",
       "options": {
-        "a": "Discordantly, cutting steeply across horizontal rock layers. / असंगत रूप से, क्षैतिज चट्टान परतों को तेजी से काटते हुए।",
-        "b": "As a large, irregular, dome-shaped mass that warps the overlying strata upward. / एक बड़े, अनियमित, गुंबद के आकार के द्रव्यमान के रूप में जो ऊपर की परतों को ऊपर की ओर विकृत करता है।",
-        "c": "Concordantly, occupying the crests (anticlines) and troughs (synclines) of folded rock layers. / संगत रूप से, मुड़ी हुई चट्टान परतों के शिखरों (अभिनति) और गर्तों (अवनति) में स्थित होती हैं।",
-        "d": "Horizontally, spreading between rock layers to form a sheet-like structure over a vast area. / क्षैतिज रूप से, चट्टान की परतों के बीच फैलकर एक विशाल क्षेत्र पर एक चादर जैसी संरचना बनाता है।"
+        "a": "Discordantly, cutting steeply across horizontal rock layers.",
+        "b": "As a large, irregular, dome-shaped mass that warps the overlying strata upward.",
+        "c": "Concordantly, occupying the crests (anticlines) and troughs (synclines) of folded rock layers.",
+        "d": "Horizontally, spreading between rock layers to form a sheet-like structure over a vast area."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Phacolith is a horizontal intrusive body found specifically in the axis of folded rock layers. Unlike a Laccolith (which deforms the overlying rock into a dome), a Phacolith simply occupies the existing curvature of the folds (anticline/syncline).\n\n📖 हिंदी स्पष्टीकरण:\nफैकोलिथ एक क्षैतिज अंत:क्षेपी निकाय है जो विशेष रूप से मुड़ी हुई शैल परतों की धुरी में पाया जाता है। लैकोलिथ (जो ऊपरी चट्टान को गुंबदाकार रूप में विकृत करता है) के विपरीत, फैकोलिथ केवल वलनों (अभिनति/अवनति) की मौजूदा वक्रता में स्थित होता है।"
     },
     {
       "q_num": 23,
-      "question": "Which one of the following statements is a characteristic of Flood Basalt Provinces, such as the Deccan Traps, based on their eruptive style?\n उत्सर्जक शैली के आधार पर दक्कन ट्रैप जैसे बाढ़ बेसाल्ट प्रांतों की निम्नलिखित में से कौन सी विशेषता है?",
+      "question": "Which one of the following statements is a characteristic of Flood Basalt Provinces, such as the Deccan Traps, based on their eruptive style?",
       "options": {
-        "a": "They are formed from highly viscous lava, leading to steep-sided, composite cones. / ये अत्यधिक चिपचिपे लावा से बनते हैं, जिससे खड़ी किनारे वाली, मिश्रित शंकु बनते हैं।",
-        "b": "They involve the eruption of highly fluid (low viscosity) lava that flows out of long fissure openings, creating vast, flat plains. / इनमें अत्यधिक तरल (कम चिपचिपापन) लावा का विस्फोट शामिल होता है जो लंबी दरार वाले छिद्रों से बाहर निकलता है, जिससे विशाल, सपाट मैदान बनते हैं।",
-        "c": "They are examples of extremely explosive caldera-forming eruptions that result in the collapse of the volcano. / ये अत्यंत विस्फोटक कैल्डेरा-निर्माणकारी विस्फोटों के उदाहरण हैं, जिनके परिणामस्वरूप ज्वालामुखी का पतन होता है।",
-        "d": "They are typically found at subduction zones, forming massive mountain ranges like the Andes. / ये आमतौर पर सबडक्शन क्षेत्रों में पाए जाते हैं, जो एंडीज जैसे विशाल पर्वत श्रृंखलाओं का निर्माण करते हैं।"
+        "a": "They are formed from highly viscous lava, leading to steep-sided, composite cones.",
+        "b": "They involve the eruption of highly fluid (low viscosity) lava that flows out of long fissure openings, creating vast, flat plains.",
+        "c": "They are examples of extremely explosive caldera-forming eruptions that result in the collapse of the volcano.",
+        "d": "They are typically found at subduction zones, forming massive mountain ranges like the Andes."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFlood Basalt eruptions, also known as Plateau Basalts (like the Deccan Traps), are characterized by the outpouring of highly fluid, low-viscosity basaltic lava from fissures rather than a central vent. This lava spreads out over large areas, forming extensive lava plains.\n\n📖 हिंदी स्पष्टीकरण:\nबाढ़ बेसाल्ट विस्फोट, जिन्हें पठारी बेसाल्ट (जैसे डेक्कन ट्रैप्स) भी कहा जाता है, का लक्षण अत्यंत तरल, कम सान्द्रता वाले बेसाल्टिक लावा का दरारों से बहना होता है, न कि केंद्रीय छिद्र से। यह लावा बड़े क्षेत्रों में फैलकर विशाल लावा मैदान बनाता है।"
     },
     {
       "q_num": 24,
-      "question": "Which type of metamorphism primarily results in rock changes due to an increase in temperature near a magmatic intrusion, with pressure remaining relatively low?\n किस प्रकार के कायांतरण के परिणामस्वरूप मुख्य रूप से एक मैग्मा अंतर्वेधन के पास तापमान में वृद्धि के कारण चट्टान में परिवर्तन होता है, जबकि दबाव अपेक्षाकृत कम रहता है?",
+      "question": "Which type of metamorphism primarily results in rock changes due to an increase in temperature near a magmatic intrusion, with pressure remaining relatively low?",
       "options": {
-        "a": "Regional Metamorphism / क्षेत्रीय कायांतरण",
-        "b": "Dynamic Metamorphism / गतिक कायांतरण",
-        "c": "Hydrothermal Metamorphism / जलतापीय कायांतरण",
-        "d": "Contact (Thermal) Metamorphism / संपर्क (तापीय) कायांतरण"
+        "a": "Regional Metamorphism",
+        "b": "Dynamic Metamorphism",
+        "c": "Hydrothermal Metamorphism",
+        "d": "Contact (Thermal) Metamorphism"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nContact Metamorphism, also called Thermal Metamorphism, occurs when hot magma or lava intrudes into cooler surrounding rock (the country rock). The heat from the intrusion \"bakes\" the country rock, causing recrystallization and mineral changes in a limited area around the intrusion.\n\n📖 हिंदी स्पष्टीकरण:\nसंपर्क कायांतरण, जिसे तापीय कायांतरण भी कहा जाता है, तब होता है जब गर्म मैग्मा या लावा ठंडी आसपास की चट्टान (कंट्री रॉक) में घुस जाता है। अंतर्वेधन से निकलने वाली ऊष्मा कंट्री रॉक को \"पकाती\" है, जिससे अंतर्वेधन के आसपास के सीमित क्षेत्र में पुन: क्रिस्टलीकरण और खनिज परिवर्तन होते हैं।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following mechanically formed sedimentary rocks is the source rock for Quartzite, a non-foliated metamorphic rock?\n निम्नलिखित में से कौन सी यांत्रिक रूप से निर्मित अवसादी चट्टान क्वार्टजाइट, जो एक गैर-पर्णित रूपांतरित चट्टान है, का स्रोत चट्टान है?",
+      "question": "Which of the following mechanically formed sedimentary rocks is the source rock for Quartzite, a non-foliated metamorphic rock?",
       "options": {
-        "a": "Conglomerate / कांग्लोमेरेट",
-        "b": "Shale / शैल",
-        "c": "Sandstone / बलुआ पत्थर",
-        "d": "Limestone / चूना पत्थर"
+        "a": "Conglomerate",
+        "b": "Shale",
+        "c": "Sandstone",
+        "d": "Limestone"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSandstone is a mechanically formed sedimentary rock predominantly composed of quartz grains. Under high pressure and temperature during metamorphism, the quartz grains fuse together, forming the hard, non-foliated metamorphic rock known as Quartzite.\n\n📖 हिंदी स्पष्टीकरण:\nबलुआ पत्थर एक यांत्रिक रूप से निर्मित अवसादी चट्टान है जो मुख्य रूप से क्वार्ट्ज कणों से बनी होती है। कायांतरण के दौरान उच्च दबाव और तापमान के तहत, क्वार्ट्ज के दाने एक साथ मिल जाते हैं, जिससे क्वार्टजाइट नामक कठोर, गैर-पत्रित कायांतरित चट्टान बनती है।"

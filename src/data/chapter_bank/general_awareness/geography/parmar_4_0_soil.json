@@ -6,31 +6,31 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The study of soil is known as:\n मृदा के अध्ययन को किस नाम से जाना जाता है?",
+      "question": "The study of soil is known as:",
       "options": {
-        "a": "Entomology / एंटोंमोलॉजी",
-        "b": "Pedology / पेडोलॉजी",
-        "c": "Paleontology / पैलेन्टोलॉजी",
-        "d": "Geology / जियोलॉजी"
+        "a": "Entomology",
+        "b": "Pedology",
+        "c": "Paleontology",
+        "d": "Geology"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPedology (soil science) is a scientific discipline devoted to the study of soil, including its origin, nature, distribution, and classification. It focuses on soil as a natural entity and its roles in the environment.\n● Geology (geology) – the study of the Earth\n● Paleontology (paleontology) – the study of the history of life on Earth through fossils.\n● Entomology (insect science) – the study of insects\n\n📖 हिंदी स्पष्टीकरण:\nपेडोलॉजी (मृदा विज्ञान) एक वैज्ञानिक अनुशासन है जो मिट्टी के अध्ययन के लिए समर्पित है, जिसमें इसकी उत्पत्ति, प्रकृति, वितरण और वर्गीकरण शामिल हैं। यह मिट्टी को एक प्राकृतिक इकाई के रूप में और पर्यावरण में इसकी भूमिकाओं पर केंद्रित करता है।\n● जियोलॉजी (भूविज्ञान) - पृथ्वी का अध्ययन\n● जीवाश्म विज्ञान (पेलियोन्टोलॉजी) - जीवाश्मों के माध्यम से पृथ्वी पर जीवन के इतिहास का अध्ययन।\n● एंटोंमोलॉजी (कीट विज्ञान) - कीटों का अध्ययन"
     },
     {
       "q_num": 2,
-      "question": "Which layer of the soil horizon is also known as Topsoil and is rich in minerals and humus?\n मृदा संस्तर की कौन-सी परत को ऊपरी मृदा के रूप में भी जाना जाता है और जो खनिजों और ह्यूमस से भरपूर होती है?",
+      "question": "Which layer of the soil horizon is also known as Topsoil and is rich in minerals and humus?",
       "options": {
-        "a": "O - Organic Layer / O - कार्बनिक परत",
-        "b": "A - Topsoil / A - ऊपरी मृदा",
-        "c": "B - Subsoil / B - उपमृदा",
-        "d": "C - Parent Rock / C - मूल शैल"
+        "a": "O - Organic Layer",
+        "b": "A - Topsoil",
+        "c": "B - Subsoil",
+        "d": "C - Parent Rock"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe A-Horizon is the layer known as Topsoil, or the zone of leaching, where minerals and humus (organic matter) are concentrated, making it vital for plant growth. The O-layer is the uppermost organic layer above it.\n\n📖 हिंदी स्पष्टीकरण:\nA-संस्तर वह परत है जिसे ऊपरी मृदा या निक्षालन के क्षेत्र के रूप में जाना जाता है, जहाँ खनिज और ह्यूमस (कार्बनिक पदार्थ) केंद्रित होते हैं, जिससे यह पौधों के विकास के लिए महत्वपूर्ण हो जाती है। O-परत इसके ऊपर की सबसे ऊपरी कार्बनिक परत है।"
     },
     {
       "q_num": 3,
-      "question": "What percentage of India's area is covered by Alluvial Soil ?\n भारत के कितने प्रतिशत क्षेत्र में जलोढ़ मृदा पाई जाती है?",
+      "question": "What percentage of India's area is covered by Alluvial Soil ?",
       "options": {
         "a": "15%",
         "b": "18%",
@@ -42,264 +42,264 @@
     },
     {
       "q_num": 4,
-      "question": "Black Soil is also known by which name, making it ideal for cotton cultivation?\n कपास की खेती के लिए आदर्श, काली मृदा को अन्य किस नाम से जाना जाता है?",
+      "question": "Black Soil is also known by which name, making it ideal for cotton cultivation?",
       "options": {
-        "a": "Khadar / खादर",
-        "b": "Bhangar / भांगर",
-        "c": "Regur / रेगुर",
-        "d": "Arid / शुष्क"
+        "a": "Khadar",
+        "b": "Bhangar",
+        "c": "Regur",
+        "d": "Arid"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBlack soil, due to its high clay content, capacity to hold moisture, and rich nutrient profile, is also known as 'Regur'. These properties make it especially suitable and ideal for the cultivation of cotton.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मृदा, अपनी उच्च चिकनी मिट्टी सामग्री, नमी धारण करने की क्षमता और समृद्ध पोषक प्रोफाइल के कारण, 'रेगुर' के नाम से भी जानी जाती है। ये गुण इसे कपास की खेती के लिए विशेष रूप से उपयुक्त और आदर्श बनाते हैं।"
     },
     {
       "q_num": 5,
-      "question": "Which primary nutrient, along with Nitrogen (N) and Phosphorus (P), is generally found deficient in Indian soils?\n कौन-सा प्राथमिक पोषक तत्व, नाइट्रोजन (N) और फास्फोरस (P) के साथ, सामान्यतः भारतीय मिट्टियों में कमी के रूप में पाया जाता है?",
+      "question": "Which primary nutrient, along with Nitrogen (N) and Phosphorus (P), is generally found deficient in Indian soils?",
       "options": {
-        "a": "Potassium (K) / पोटैशियम (K)",
-        "b": "Sulfur (S) / सल्फर (S)",
-        "c": "Calcium (Ca) / कैल्शियम (Ca)",
-        "d": "Magnesium (Mg) / मैग्नीशियम (Mg)"
+        "a": "Potassium (K)",
+        "b": "Sulfur (S)",
+        "c": "Calcium (Ca)",
+        "d": "Magnesium (Mg)"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe three primary macronutrients essential for plant growth are Nitrogen (N), Phosphorus (P), and Potassium (K) — collectively called NPK.\nIndian soils are commonly deficient in Nitrogen and Phosphorus, and in many regions, Potassium (K) is also found to be deficient.\nThese deficiencies reduce soil fertility and crop yield, hence NPK fertilizers are widely used in agriculture.\n\n📖 हिंदी स्पष्टीकरण:\nपौधों की वृद्धि के लिए आवश्यक तीन प्रमुख (Primary) पोषक तत्व हैं — नाइट्रोजन (N), फास्फोरस (P) और पोटैशियम (K), जिन्हें सामूहिक रूप से NPK कहा जाता है।\nभारतीय मिट्टियाँ सामान्यतः नाइट्रोजन और फास्फोरस की कमी से ग्रस्त होती हैं, और कई क्षेत्रों में पोटैशियम (K) की कमी भी पाई जाती है।\nइन पोषक तत्वों की कमी मिट्टी की उर्वरता और फसल की पैदावार को घटा देती है, इसलिए NPK उर्वरक कृषि में व्यापक रूप से उपयोग किए जाते हैं।"
     },
     {
       "q_num": 6,
-      "question": "The practice of planting rows of trees on one side of an area to prevent wind erosion is called:\n वायु अपरदन को रोकने के लिए किसी क्षेत्र के एक तरफ पेड़ों की कतारें लगाने की प्रथा को क्या कहा जाता है?",
+      "question": "The practice of planting rows of trees on one side of an area to prevent wind erosion is called:",
       "options": {
-        "a": "Mulching / पलवार",
-        "b": "Contour Bunding / समोच्च मेड़ब",
-        "c": "Terrace Farming / सीढ़ीदार खेती",
-        "d": "Shelter Belts / आश्रय पट्टी"
+        "a": "Mulching",
+        "b": "Contour Bunding",
+        "c": "Terrace Farming",
+        "d": "Shelter Belts"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nShelter Belts involve planting rows of trees to create a physical barrier against wind, thereby protecting the soil from wind erosion. This method is highly effective in arid and semi-arid regions to maintain soil stability.\n\n📖 हिंदी स्पष्टीकरण:\nआश्रय पट्टी (शेल्टर बेल्ट) में हवा के खिलाफ एक भौतिक अवरोध पैदा करने के लिए पेड़ों की कतारें लगाना शामिल है, जिससे मृदा को वायु अपरदन से बचाया जा सके। यह विधि शुष्क और अर्ध-शुष्क क्षेत्रों में मृदा स्थिरता बनाए रखने में अत्यधिक प्रभावी है।"
     },
     {
       "q_num": 7,
-      "question": "Which type of farming involves growing a single crop on a large area with the use of modern inputs like HYV seeds and chemical fertilisers?\n किस प्रकार की खेती में बड़े क्षेत्र पर एक ही फसल उगाई जाती है, जिसमें HYV बीज और रासायनिक उर्वरकों जैसे आधुनिक इनपुट का उपयोग किया जाता है?",
+      "question": "Which type of farming involves growing a single crop on a large area with the use of modern inputs like HYV seeds and chemical fertilisers?",
       "options": {
-        "a": "Primitive Subsistence Farming / आदिम निर्वाह खेती",
-        "b": "Intensive Subsistence Farming / गहन निर्वाह खेती",
-        "c": "Commercial Farming / वाणिज्यिक खेती",
-        "d": "Mixed Farming / मिश्रित खेती"
+        "a": "Primitive Subsistence Farming",
+        "b": "Intensive Subsistence Farming",
+        "c": "Commercial Farming",
+        "d": "Mixed Farming"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCommercial farming is practiced over large areas, where a single crop (mono-cropping system) is grown to generate profits by selling it in the market. High-yielding seeds, chemical fertilizers, pesticides, and modern machinery are used in this type of farming.\nExamples include large-scale cultivation of wheat, cotton, sugarcane, and rice.\n\n📖 हिंदी स्पष्टीकरण:\nवाणिज्यिक खेती बड़े क्षेत्र में की जाती है, जहाँ एक ही फसल (एकल फसल प्रणाली) उगाई जाती है ताकि उसे बाज़ार में बेचकर लाभ प्राप्त किया जा सके। इस प्रकार की खेती में उच्च उपज देने वाले बीज, रासायनिक उर्वरक, कीटनाशक और आधुनिक मशीनों का उपयोग किया जाता है।\nइसके उदाहरण हैं — गेहूँ, कपास, गन्ना, धान आदि की बड़े पैमाने पर की जाने वाली खेती।"
     },
     {
       "q_num": 8,
-      "question": "The short cropping season for crops like Watermelon, Muskmelon, and Cucumber is known as:\n तरबूज, खरबूज और खीरे जैसी फसलों के लिए अल्पकालिक फसल अवधि को क्या कहा जाता है?",
+      "question": "The short cropping season for crops like Watermelon, Muskmelon, and Cucumber is known as:",
       "options": {
-        "a": "Kharif / खरीफ",
-        "b": "Rabi / रबी",
-        "c": "Zaid / ज़ायद",
-        "d": "Monsoon / मानसून"
+        "a": "Kharif",
+        "b": "Rabi",
+        "c": "Zaid",
+        "d": "Monsoon"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nZaid is the short cropping season that falls between the Rabi and Kharif seasons, typically from May to June. Crops grown during this time include watermelons, muskmelons, and fodder crops.\n\n📖 हिंदी स्पष्टीकरण:\nज़ायद वह अल्पकालिक छोटा फसल मौसम है जो रबी और खरीफ मौसमों के बीच आता है, आमतौर पर मई से जून तक। इस दौरान उगाई जाने वाली फसलों में तरबूज, खरबूजा और चारा फसलें शामिल हैं।"
     },
     {
       "q_num": 9,
-      "question": "The process of rearing of silk is called:\n रेशम के कीड़ों के पालन की प्रक्रिया को क्या कहा जाता है?",
+      "question": "The process of rearing of silk is called:",
       "options": {
-        "a": "Aquaculture / एक्वाकल्चर",
-        "b": "Sericulture / सेरीकल्चर",
-        "c": "Pisciculture / पिसीकल्चर",
-        "d": "Apiculture / एपिकल्चर"
+        "a": "Aquaculture",
+        "b": "Sericulture",
+        "c": "Pisciculture",
+        "d": "Apiculture"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSericulture is the practice specifically dedicated to the rearing of silkworms for the production of raw silk. India is a major producer of silk, with different varieties found across the country.\n● Aquaculture - fish farming\n● Pisciculture - fish farming or fish culture\n● Apiculture - beekeeping\n\n📖 हिंदी स्पष्टीकरण:\nसेरीकल्चर विशेष रूप से कच्चे रेशम के उत्पादन के लिए रेशम के कीड़ों के पालन की प्रथा है। भारत रेशम का एक प्रमुख उत्पादक है, जिसकी विभिन्न किस्में पूरे देश में पाई जाती हैं।\n● एक्वाकल्चर - मत्स्य पालन\n● पिसीकल्चर - मछली पालन या मत्स्य पालन\n● एपिकल्चर - मधुमक्खी पालन"
     },
     {
       "q_num": 10,
-      "question": "Who is known as the 'Father of the Yellow Revolution' in India?\n भारत में 'पीली क्रांति के जनक' के रूप में किसे जाना जाता है?",
+      "question": "Who is known as the 'Father of the Yellow Revolution' in India?",
       "options": {
-        "a": "Norman Borlaug / नॉर्मन बोरलॉग",
-        "b": "Verghese Kurien / वर्गीस कुरियन",
-        "c": "Harilal Chaudhuri / हरिलाल चौधरी",
-        "d": "Sam Pitroda / सैम पित्रोदा"
+        "a": "Norman Borlaug",
+        "b": "Verghese Kurien",
+        "c": "Harilal Chaudhuri",
+        "d": "Sam Pitroda"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nSam Pitroda is credited as the father of the Yellow Revolution, which focused on increasing oilseed production in India to achieve self-sufficiency in edible oils.\n1. Dr. Norman Borlaug was an American agronomist known as the 'Father of the Green Revolution'.\n2. Verghese Kurien was the father of the 'White Revolution' in India, which played a key role in making India the world's largest milk producer.\n3. Dr. Hiralal Chaudhary and Dr. Arun Krishnan are considered the fathers of the Blue Revolution in India.\n\n📖 हिंदी स्पष्टीकरण:\n4. सैम पित्रोदा को पीली क्रांति के जनक के रूप में श्रेय दिया जाता है, जिसका मुख्य ध्यान खाद्य तेलों में आत्मनिर्भरता प्राप्त करने के लिए भारत में तिलहन के उत्पादन को बढ़ाना था।\n5. डॉ. नॉर्मन बोरलॉग एक अमेरिकी कृषिविज्ञानी थे जिन्हें 'हरित क्रांति के जनक' के रूप में जाना जाता है।\n6. वर्गीस कुरियन भारत में 'श्वेत क्रांति' के जनक थे, जिन्होंने भारत को दुनिया का सबसे बड़ा दूध उत्पादक देश बनाने में महत्वपूर्ण भूमिका निभाई।\n7. भारत में नीली क्रांति के जनक डॉ. हीरालाल चौधरी और डॉ. अरुण कृष्णन को माना जाता है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements about Alluvial Soil:\n जलोढ़ मृदा के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. It is the most widely spread (40%) and most fertile type of soil in India. यह भारत में सबसे व्यापक रूप से फैली हुई (40%) और सबसे उपजाऊ प्रकार की मृदा है।\n 2. It is rich in potash and poor in phosphorus. यह पोटाश में समृद्ध और फास्फोरस की कमी होती है।\n 3. Its older type, known as 'Khadar', is less fertile. इसके पुराने प्रकार, जिसे 'खादर' कहा जाता है, में उर्वरता कम होती है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about Alluvial Soil:\n2. It is rich in potash and poor in phosphorus.\n3. Its older type, known as 'Khadar', is less fertile.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatements 1 and 2 are correct as Alluvial soil is the most fertile and covers 40% of the area, being rich in potash and poor in phosphorus. Statement 3 is incorrect because the older alluvial soil is called Bhangar (less fertile), while the newer, more fertile type is called Khadar\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 और 2 सही हैं क्योंकि जलोढ़ मृदा सबसे उपजाऊ है और 40% क्षेत्र को कवर करती है, जो पोटाश में समृद्ध और फास्फोरस में कम होती है। कथन 3 गलत है क्योंकि पुरानी जलोढ़ मृदा को भांगर (कम उपजाऊ) कहा जाता है, जबकि नई, अधिक उपजाऊ प्रकार को खादर कहा जाता है।"
     },
     {
       "q_num": 12,
-      "question": "Assertion (A): Laterite soil is a result of an intense leaching process.\n अभिकथन (A): लैटेराइट मृदा गहन निक्षालन प्रक्रिया का परिणाम है।\n Reason (R): In laterite soil, important minerals such as silica wash away with the water in regions of high temperature and heavy rainfall.\n कारण (R): लैटेराइट मृदा में, उच्च तापमान और भारी वर्षा वाले क्षेत्रों में सिलिका जैसे महत्वपूर्ण खनिज पानी के साथ बह जाते हैं।",
+      "question": "Assertion (A): Laterite soil is a result of an intense leaching process.\n Reason (R): In laterite soil, important minerals such as silica wash away with the water in regions of high temperature and heavy rainfall.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBoth the Assertion and the Reason are correct, and R correctly explains A. The intense leaching process, where important soluble minerals like silica are washed away by heavy water flow, is the very mechanism that leads to the formation of Laterite soil.\n\n📖 हिंदी स्पष्टीकरण:\nकथन और कारण दोनों सही हैं, और कारण कथन की सही व्याख्या करता है। तीव्र अपक्षालन की प्रक्रिया, जिसमें भारी जल प्रवाह द्वारा सिलिका जैसे घुलनशील खनिज बह जाते हैं, वही प्रक्रिया है जो लैटेराइट मिट्टी के निर्माण का कारण बनती है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following statements is INCORRECT regarding the factors affecting soil formation?\n मृदा निर्माण को प्रभावित करने वाले कारकों के संबंध में निम्नलिखित में से कौन-सा कथन गलत है?",
+      "question": "Which of the following statements is INCORRECT regarding the factors affecting soil formation?",
       "options": {
-        "a": "Parent material determines the soil's colour, texture, and chemical properties. / जनक सामग्री मृदा के रंग, बनावट और रासायनिक गुणों को निर्धारित करती है।",
-        "b": "Climate, specifically temperature and rainfall, affects the rate of weathering and humus formation. / जलवायु, विशेष रूप से तापमान और वर्षा, अपक्षय की दर और ह्यूमस निर्माण को प्रभावित करती है।",
-        "c": "Relief (land surface) primarily determines the thickness of the soil. / उच्चावच मुख्य रूप से मृदा की मोटाई निर्धारित करता है।",
-        "d": "Time determines the thickness of the soil layer. / समय मृदा परत की मोटाई निर्धारित करता है।"
+        "a": "Parent material determines the soil's colour, texture, and chemical properties.",
+        "b": "Climate, specifically temperature and rainfall, affects the rate of weathering and humus formation.",
+        "c": "Relief (land surface) primarily determines the thickness of the soil.",
+        "d": "Time determines the thickness of the soil layer."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nOption C is incorrect because time determines the thickness of the soil layer, while relief (the slope of the land) primarily determines soil accumulation. The other statements correctly describe their respective factors.\n\n📖 हिंदी स्पष्टीकरण:\nविकल्प c गलत है, क्योकि समय मृदा परत की मोटाई निर्धारित करता है जबकि उच्चावच (भूमि का ढलान) मुख्य रूप से मृदा के संचय को निर्धारित करता है। अन्य कथन अपने संबंधित कारकों का सही वर्णन करते हैं।"
     },
     {
       "q_num": 14,
-      "question": "Which pair of soil type and its treatment is correctly matched?\n मृदा के प्रकार और उसके उपचार का कौन-सा जोड़ा सही सुमेलित है?",
+      "question": "Which pair of soil type and its treatment is correctly matched?",
       "options": {
-        "a": "Saline Soil: Lime / लवणीय मृदा: चूना",
-        "b": "Acidic Soil : Gypsum / अम्लीय मृदा : जिप्सम",
-        "c": "Saline Soil : Gypsum / लवणीय मृदा : जिप्सम",
-        "d": "Black Soil: Lime / काली मृदा: चूना"
+        "a": "Saline Soil: Lime",
+        "b": "Acidic Soil : Gypsum",
+        "c": "Saline Soil : Gypsum",
+        "d": "Black Soil: Lime"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSaline soil, which has a high concentration of salts, is typically treated with Gypsum to improve its structure and reduce salinity. Conversely, Acidic soil is treated with Lime to neutralise its acidity.\n\n📖 हिंदी स्पष्टीकरण:\nलवणीय मृदा, जिसमें लवणों की उच्च सांद्रता होती है, को आमतौर पर इसकी संरचना में सुधार करने और लवणता को कम करने के लिए जिप्सम से उपचारित किया जाता है। इसके विपरीत, अम्लीय मृदा को इसकी अम्लता को बेअसर करने के लिए चूने से उपचारित किया जाता है।"
     },
     {
       "q_num": 15,
-      "question": "Consider the following soil types based on the US Taxonomy (Soil Orders):\n यूएस मृदा वर्गीकरण प्रणाली के आधार पर निम्नलिखित मृदा प्रकारों पर विचार करें:\n 1. Entisol: Alluvial soil (Young) / एंटिसोल: जलोढ़ मिट्टी (युवावस्था)\n 2. Vertisol: Black soil (Clay-rich, swelling/shrinking) / वर्टिसोल: काली मिट्टी (मृत्तिका-समृद्ध, फूलने/सिकुड़ने वाली)\n 3. Histosol: Permanently frozen soil / हिस्टोसोल: स्थायी रूप से जमी हुई मिट्टी\n Which of the above pairs is/are correctly matched?\n उपरोक्त जोड़ों में से कौन-सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following soil types based on the US Taxonomy (Soil Orders):\n1. Entisol: Alluvial soil (Young)\n2. Vertisol: Black soil (Clay-rich, swelling/shrinking)\n3. Histosol: Permanently frozen soil\n Which of the above pairs is/are correctly matched?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nEntisol (Young/Alluvial) and Vertisol (Black/Clay-rich) are correctly matched. Histosol is the name for Organic Soil (Peaty/Marshy), while permanently frozen soils are classified as Gelisols.\n\n📖 हिंदी स्पष्टीकरण:\nएंटिसोल (युवा/जलोढ़) और वर्टिसोल (काली/चिकनी मिट्टी से समृद्ध) सही सुमेलित हैं। हिस्टोसोल कार्बनिक मृदा (पीटमय/दलदली) का नाम है, जबकि स्थायी रूप से जमी हुई मृदा को गेलिसोल के रूप में वर्गीकृत किया गया है।"
     },
     {
       "q_num": 16,
-      "question": "which layer of the soil horizon is primarily a zone of deposition for minerals and metal salts?\n मृदा संस्तर की कौन सी परत मुख्य रूप से खनिजों और धातु लवणों के निक्षेपण का क्षेत्र है?",
+      "question": "which layer of the soil horizon is primarily a zone of deposition for minerals and metal salts?",
       "options": {
-        "a": "O - Organic Layer / O - कार्बनिक परत",
-        "b": "A - Topsoil / A - ऊपरी मृदा",
-        "c": "B - Subsoil / B - उपमृदा",
-        "d": "C - Parent Rock / C - मूल शैल"
+        "a": "O - Organic Layer",
+        "b": "A - Topsoil",
+        "c": "B - Subsoil",
+        "d": "C - Parent Rock"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe B-Horizon is also known as the Subsoil. It is the zone below the A-Horizon where deposited minerals and metal salts, leached down from the topsoil, accumulate. This accumulation makes it denser and less fertile than the A-horizon.\n\n📖 हिंदी स्पष्टीकरण:\nB-संस्तर को उपमृदा के रूप में भी जाना जाता है। यह A-संस्तर के नीचे का क्षेत्र है जहाँ ऊपरी मृदा से निक्षालित खनिज और धातु लवण जमा होते हैं। यह संचय इसे A-संस्तर की तुलना में सघन और कम उपजाऊ बनाता है।"
     },
     {
       "q_num": 17,
-      "question": "Which major soil type in India covers 15% of the total area and is mainly found in the Deccan Trap region, including Maharashtra and Gujarat?\n भारत में कौन सा प्रमुख मृदा प्रकार कुल क्षेत्रफल का 15% कवर करता है और मुख्य रूप से महाराष्ट्र और गुजरात सहित दक्कन ट्रेप (Deccan Trap) क्षेत्र में पाया जाता है?",
+      "question": "Which major soil type in India covers 15% of the total area and is mainly found in the Deccan Trap region, including Maharashtra and Gujarat?",
       "options": {
-        "a": "Red Soil / लाल मृदा",
-        "b": "Black Soil / काली मृदा",
-        "c": "Laterite Soil / लेटेराइट मृदा",
-        "d": "Montane Soil / पर्वतीय मृदा"
+        "a": "Red Soil",
+        "b": "Black Soil",
+        "c": "Laterite Soil",
+        "d": "Montane Soil"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBlack Soil, covering 15% of the area, is concentrated in the Deccan Trap (Basalt region) spread over Maharashtra, Gujarat, and parts of Madhya Pradesh. Its origin from lava makes it suitable for cotton.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मृदा, 15% क्षेत्र को कवर करती है, महाराष्ट्र, गुजरात और मध्य प्रदेश के कुछ हिस्सों में फैले दक्कन ट्रेप (बेसाल्ट क्षेत्र) में केंद्रित है। लावा से इसकी उत्पत्ति इसे कपास के लिए उपयुक्त बनाती है।"
     },
     {
       "q_num": 18,
-      "question": "Which factor of soil formation is explicitly stated to determine the soil's permeability?\n मृदा निर्माण का वह कौन-सा कारक है जो मृदा की पारगम्यता को स्पष्ट रूप से निर्धारित करता है?",
+      "question": "Which factor of soil formation is explicitly stated to determine the soil's permeability?",
       "options": {
-        "a": "Time / समय",
-        "b": "Climate / जलवायु",
-        "c": "Parent material / जनक सामग्री",
-        "d": "Relief / उच्चावच"
+        "a": "Time",
+        "b": "Climate",
+        "c": "Parent material",
+        "d": "Relief"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Parent material (parent rock/bedrock) is the unweathered or partly weathered rock that directly influences the soil's colour, texture, chemical properties, mineral content, and, critically, its permeability.\n\n📖 हिंदी स्पष्टीकरण:\nजनक सामग्री (जनक शैल/आधार शैल) वह अपरदित या आंशिक रूप से अपरदित शैल है जो सीधे मृदा के रंग, बनावट, रासायनिक गुणों, खनिज सामग्री और, महत्वपूर्ण रूप से, इसकी पारगम्यता को प्रभावित करती है।"
     },
     {
       "q_num": 19,
-      "question": "The Headquarters of the Indian Council of Agricultural Research (ICAR), which categorized Indian soil into 8 categories, is located in:\n भारतीय कृषि अनुसंधान परिषद (ICAR), जिसने भारतीय मृदा को 8 श्रेणियों में वर्गीकृत किया है, का मुख्यालय कहाँ स्थित है?",
+      "question": "The Headquarters of the Indian Council of Agricultural Research (ICAR), which categorized Indian soil into 8 categories, is located in:",
       "options": {
-        "a": "Patna / पटना",
-        "b": "Bengaluru / बेंगलुरु",
-        "c": "New Delhi / नई दिल्ली",
-        "d": "Mumbai / मुंबई"
+        "a": "Patna",
+        "b": "Bengaluru",
+        "c": "New Delhi",
+        "d": "Mumbai"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nthe Indian Council of Agricultural Research (ICAR), which divided Indian soils into 8 major categories, has its Headquarters (HQ) in New Delhi.\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय कृषि अनुसंधान परिषद (ICAR), जिसने भारतीय मृदाओं को 8 प्रमुख श्रेणियों में विभाजित किया है, का मुख्यालय (HQ) नई दिल्ली में स्थित है।"
     },
     {
       "q_num": 20,
-      "question": "Red soil appears red due to the diffusion of iron in which type of rocks?\n लाल मृदा किस प्रकार की चट्टानों में आयरन के प्रसार के कारण लाल दिखाई देती है?",
+      "question": "Red soil appears red due to the diffusion of iron in which type of rocks?",
       "options": {
-        "a": "Sedimentary Rocks / अवसादी चट्टानें",
-        "b": "Igneous and Metamorphic Rocks / आग्नेय और कायांतरित चट्टानें",
-        "c": "Volcanic Rocks / ज्वालामुखी चट्टानें",
-        "d": "Deccan Trap Rocks / दक्कन जाल चट्टानें"
+        "a": "Sedimentary Rocks",
+        "b": "Igneous and Metamorphic Rocks",
+        "c": "Volcanic Rocks",
+        "d": "Deccan Trap Rocks"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRed soil develops on crystalline igneous and metamorphic rocks. Its characteristic red colour is due to the diffusion of iron in the rocks. When hydrated, this soil can appear yellowish.\n\n📖 हिंदी स्पष्टीकरण:\nलाल मृदा क्रिस्टलीय आग्नेय और कायांतरित चट्टानों पर विकसित होती है। इसका विशिष्ट लाल रंग चट्टानों में आयरन के प्रसार के कारण होता है। जब यह जलयोजित होती है, तो यह मृदा पीली दिखाई दे सकती है।"
     },
     {
       "q_num": 21,
-      "question": "In which regions are montane soils generally rich in humus content?\n किस क्षेत्रों में पर्वतीय मिट्टियाँ सामान्यतः ह्यूमस की अधिक मात्रा रखती हैं?",
+      "question": "In which regions are montane soils generally rich in humus content?",
       "options": {
-        "a": "Lower, drier hill slopes / निचली, शुष्क पहाड़ी ढलानें",
-        "b": "Upper, forested, and cool regions / ऊपरी, वनाच्छादित और शीत क्षेत्रों",
-        "c": "Plateau regions / पठारी क्षेत्र",
-        "d": "River valley regions / नदी घाटी क्षेत्र"
+        "a": "Lower, drier hill slopes",
+        "b": "Upper, forested, and cool regions",
+        "c": "Plateau regions",
+        "d": "River valley regions"
       },
       "answer": "b",
       "solution": ""
     },
     {
       "q_num": 22,
-      "question": "Which of the following is the best description of the characteristic of Black Soil's self-aeration?\n निम्नलिखित में से कौन सा काली मृदा के स्व-जुताई की विशेषता का सबसे अच्छा वर्णन करता है?",
+      "question": "Which of the following is the best description of the characteristic of Black Soil's self-aeration?",
       "options": {
-        "a": "Its rich iron content causes it to aerate naturally. / इसकी समृद्ध लोहे की सामग्री के कारण यह स्वाभाविक रूप से वातित होती है।",
-        "b": "It has small cracks when wet, allowing air to pass. / गीला होने पर इसमें छोटी दरारें होती हैं, जिससे हवा गुजर सकती है।",
-        "c": "It swells when wet and develops deep, wide cracks when dry, enabling self-aeration. / गीला होने पर यह फूल जाती है और सूखने पर गहरी, चौड़ी दरारें विकसित करती है, जिससे स्व-जुताई संभव होती है।",
-        "d": "It is constantly loosened by the action of micro-organisms. / यह सूक्ष्म जीवों की क्रिया से लगातार शिथिल होती रहती है।"
+        "a": "Its rich iron content causes it to aerate naturally.",
+        "b": "It has small cracks when wet, allowing air to pass.",
+        "c": "It swells when wet and develops deep, wide cracks when dry, enabling self-aeration.",
+        "d": "It is constantly loosened by the action of micro-organisms."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBlack soil, due to its high clay content, becomes sticky when wet (swelling) and develops deep, wide cracks when dry (shrinking). These cracks facilitate air circulation, giving it the property of 'self-aeration'.\n\n📖 हिंदी स्पष्टीकरण:\nकाली मिट्टी, अपनी उच्च मृत्तिका मात्रा के कारण, गीली होने पर चिपचिपी हो जाती है (फूलती है) और सूखने पर गहरी, चौड़ी दरारें विकसित करती है (सिकुड़ती है)। ये दरारें वायु संचार को सुगम बनाती हैं, जिससे इसे 'स्व-जुताई' की विशेषता प्राप्त होती है।"
     },
     {
       "q_num": 23,
-      "question": "The older Alluvial Soil (Bhangar) is distinguished from the newer Alluvial Soil (Khadar) primarily because Bhangar contains:\n पुरानी जलोढ़ मृदा (भांगर) नई जलोढ़ मृदा (खादर) से मुख्य रूप से इसलिए अलग है क्योंकि भांगर में होता हैं:",
+      "question": "The older Alluvial Soil (Bhangar) is distinguished from the newer Alluvial Soil (Khadar) primarily because Bhangar contains:",
       "options": {
-        "a": "High percentage of fine silt / महीन गाद का उच्च प्रतिशत",
-        "b": "Low calcareous concentration (Kankar) / कम कैल्केरियस सांद्रता (कंकर)",
-        "c": "High calcareous concentration (Kankar) / उच्च कैल्केरियस सांद्रता (कंकर)",
-        "d": "found far away from the river bed / नदी तल से दूरी"
+        "a": "High percentage of fine silt",
+        "b": "Low calcareous concentration (Kankar)",
+        "c": "High calcareous concentration (Kankar)",
+        "d": "found far away from the river bed"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe older Alluvial Soil (Bhangar) is characterized by the presence of a high concentration of calcareous nodules known as 'Kankar', making it less fertile. Khadar is finer and more clayey, making it the most fertile.\n\n📖 हिंदी स्पष्टीकरण:\nपुरानी जलोढ़ मिट्टी (भांगर) की विशेषता इसकी उच्च कैल्केरियस गांठों की उपस्थिति होती है, जिन्हें 'कंकर' कहा जाता है, जिससे यह कम उपजाऊ होती है। खादर अधिक महीन और मृत्तिका युक्त होती है, जिससे यह सबसे अधिक उपजाऊ होती है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following methods are used to prevent soil erosion by water in sloping regions?\n ढलान वाले क्षेत्रों में जल द्वारा मृदा अपरदन को रोकने के लिए निम्नलिखित में से कौन सी विधियाँ उपयोग की जाती हैं?\n 1. Contour Ploughing / समोच्च जुताई\n 2. Strip Farming / पट्टीदार खेती\n 3. Shelter Belts / आश्रय पट्टी",
+      "question": "Which of the following methods are used to prevent soil erosion by water in sloping regions?\n1. Contour Ploughing\n2. Strip Farming\n3. Shelter Belts",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nContour Ploughing involves building barriers/ploughing along contours to intercept water flow. Strip Farming (growing crops in strips) also breaks the force of water. Shelter Belts primarily prevent wind erosion.\n\n📖 हिंदी स्पष्टीकरण:\nसमोच्च जुताई में जल प्रवाह को रोकने के लिए समोच्च रेखाओं के साथ अवरोध बनाना या जुताई करना शामिल होता है। पट्टीदार खेती (फसलों को पट्टियों में उगाना) भी जल के वेग को कम करती है। आश्रय पट्टियाँ मुख्यतः पवन अपरदन को रोकती हैं।"
     },
     {
       "q_num": 25,
-      "question": "Which type of soil is generally infertile, used for making bricks and house construction, and is also found in the hilly areas of Odisha and Kerala?\n किस प्रकार की मृदा आमतौर पर अनउपजाऊ होती है, जिसका उपयोग ईंटें और घर बनाने के लिए किया जाता है, और यह ओडिशा और केरल के पहाड़ी क्षेत्रों में भी पाई जाती है?",
+      "question": "Which type of soil is generally infertile, used for making bricks and house construction, and is also found in the hilly areas of Odisha and Kerala?",
       "options": {
-        "a": "Red Soil / लाल मृदा",
-        "b": "Black Soil / काली मृदा",
-        "c": "Laterite Soil / लेटेराइट मृदा",
-        "d": "Arid Soil / शुष्क मृदा"
+        "a": "Red Soil",
+        "b": "Black Soil",
+        "c": "Laterite Soil",
+        "d": "Arid Soil"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLaterite soil is the result of intense leaching, making it generally infertile. However, due to its soft nature when wet and hard nature when dry, it is commonly used for making bricks for house construction. It is found in regions like Odisha, Kerala, and the Western Ghats.\n\n📖 हिंदी स्पष्टीकरण:\nलेटेराइट मृदा गहन निक्षालन का परिणाम है, जो इसे आमतौर पर अनुर्वर या अनउपजाऊ बनाती है। हालाँकि, गीला होने पर इसकी नरम प्रकृति और सूखने पर कठोर प्रकृति के कारण, इसका उपयोग आमतौर पर घर बनाने के लिए ईंटें बनाने में किया जाता है। यह ओडिशा, केरल और पश्चिमी घाट जैसे क्षेत्रों में पाई जाती है।"

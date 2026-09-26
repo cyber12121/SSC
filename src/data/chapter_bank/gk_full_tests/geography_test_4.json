@@ -6,679 +6,679 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following rivers does not originate from the Himalayas?\n निम्नलिखित में से कौन-सी नदी हिमालय से उत्पन्न नहीं होती है?",
+      "question": "Which of the following rivers does not originate from the Himalayas?",
       "options": {
-        "a": "Ganga / गंगा",
-        "b": "Yamuna / यमुना",
-        "c": "Godavari / गोदावरी",
-        "d": "Indus / सिंधु"
+        "a": "Ganga",
+        "b": "Yamuna",
+        "c": "Godavari",
+        "d": "Indus"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGodavari originates from the Western Ghats near Nashik, not from the Himalayas.\n\n📖 हिंदी स्पष्टीकरण:\nगोदावरी नदी की उत्पत्ति नासिक के पास पश्चिमी घाट से होती है, हिमालय से नहीं।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following plains is formed by the deposition of rivers originating from the Himalayas?\n निम्नलिखित में से कौन-सा मैदान हिमालय से उत्पन्न नदियों के निक्षेप से बना है?",
+      "question": "Which of the following plains is formed by the deposition of rivers originating from the Himalayas?",
       "options": {
-        "a": "Indo-Gangetic Plain / इंडो-गंगा मैदान",
-        "b": "Malwa Plateau / मालवा पठार",
-        "c": "Deccan Plain / दक्कन मैदान",
-        "d": "Kathiawar Plain / काठियावाड़ मैदान"
+        "a": "Indo-Gangetic Plain",
+        "b": "Malwa Plateau",
+        "c": "Deccan Plain",
+        "d": "Kathiawar Plain"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Indo-Gangetic Plain was formed by alluvial deposits from the Indus, Ganga, and Brahmaputra rivers.\n\n📖 हिंदी स्पष्टीकरण:\nइंडो-गंगा मैदान का निर्माण सिंधु, गंगा और ब्रह्मपुत्र नदियों द्वारा लाए गए जलोढ़ निक्षेपों से हुआ है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following dams is built across the Krishna River?\n निम्नलिखित में से कौन-सा बाँध कृष्णा नदी पर बना है?",
+      "question": "Which of the following dams is built across the Krishna River?",
       "options": {
-        "a": "Nagarjuna Sagar Dam / नागार्जुन सागर बाँध",
-        "b": "Hirakud Dam / हीराकुंड बाँध",
-        "c": "Bhakra Nangal Dam / भाखड़ा नांगल बाँध",
-        "d": "Sardar Sarovar Dam / सरदार सरोवर बाँध"
+        "a": "Nagarjuna Sagar Dam",
+        "b": "Hirakud Dam",
+        "c": "Bhakra Nangal Dam",
+        "d": "Sardar Sarovar Dam"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNagarjuna Sagar Dam, one of the largest masonry dams, is on the Krishna River in Telangana.\n\n📖 हिंदी स्पष्टीकरण:\nनागार्जुन सागर बाँध कृष्णा नदी पर तेलंगाना में बना एक विशाल पत्थर का बाँध है।"
     },
     {
       "q_num": 4,
-      "question": "The Ganga River is formed by the confluence of which two rivers?\n गंगा नदी किन दो नदियों के संगम से बनती है?",
+      "question": "The Ganga River is formed by the confluence of which two rivers?",
       "options": {
-        "a": "Mandakini and Pindar / मंदाकिनी और पिंदर",
-        "b": "Yamuna and Tons / यमुना और टोंस",
-        "c": "Alaknanda and Bhagirathi / अलकनंदा और भागीरथी",
-        "d": "Dhauliganga and Kali / धौलीगंगा और काली"
+        "a": "Mandakini and Pindar",
+        "b": "Yamuna and Tons",
+        "c": "Alaknanda and Bhagirathi",
+        "d": "Dhauliganga and Kali"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAt Devprayag, the Bhagirathi and Alaknanda merge to form the Ganga.\n\n📖 हिंदी स्पष्टीकरण:\nदेवप्रयाग में भागीरथी और अलकनंदा के संगम से गंगा का निर्माण होता है।"
     },
     {
       "q_num": 5,
-      "question": "Consider the following statements regarding the Brahmaputra River:\n ब्रह्मपुत्र नदी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is known as Tsangpo in Tibet. / इसे तिब्बत में त्सांगपो के नाम से जाना जाता है।\n (b) It joins the Ganga River in Bangladesh. / यह बांग्लादेश में गंगा नदी से मिलती है।\n (c) It forms the world’s largest river island, Majuli. / यह विश्व के सबसे बड़े नदी द्वीप माजुली का निर्माण करती है।",
+      "question": "Consider the following statements regarding the Brahmaputra River:\n(a) It is known as Tsangpo in Tibet.\n(b) It joins the Ganga River in Bangladesh.\n(c) It forms the world’s largest river island, Majuli.",
       "options": {
-        "a": "b and c only / केवल b और c",
-        "b": "a and c only / केवल a और c",
-        "c": "a and b only / केवल a और b",
-        "d": "a, b, and c / a, b और c"
+        "a": "b and c only",
+        "b": "a and c only",
+        "c": "a and b only",
+        "d": "a, b, and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nBrahmaputra is Tsangpo in Tibet and forms Majuli Island; it meets the Ganga only after entering Bangladesh as Jamuna, not before.\n\n📖 हिंदी स्पष्टीकरण:\nब्रह्मपुत्र को तिब्बत में सियांग या त्सांगपो कहा जाता है और यह माजुली द्वीप बनाती है; गंगा से यह बांग्लादेश में जाकर मिलती है।"
     },
     {
       "q_num": 6,
-      "question": "Consider the following statements about the Indus River System:\n सिंधु नदी तंत्र के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Its source is near Lake Mansarovar in Tibet./ इसका उद्गम तिब्बत में मानसरोवर झील के निकट होता है।\n (b) It flows mainly through India./ यह मुख्यतः भारत से होकर बहती है।\n (c) It drains into the Arabian Sea./ यह अरब सागर में गिरती है।",
+      "question": "Consider the following statements about the Indus River System:\n(a) Its source is near Lake Mansarovar in Tibet.\n(b) It flows mainly through India.\n(c) It drains into the Arabian Sea.",
       "options": {
-        "a": "Only (a) and (b) / केवल (a) और (b)",
-        "b": "Only (a) and (c) / केवल (a) और (c)",
-        "c": "Only (b) and (c) / केवल (b) और (c)",
-        "d": "All (a), (b), and (c) / सभी (a), (b), और (c)"
+        "a": "Only (a) and (b)",
+        "b": "Only (a) and (c)",
+        "c": "Only (b) and (c)",
+        "d": "All (a), (b), and (c)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIndus rises near Mansarovar Lake in Tibet, flows mainly through Pakistan, and empties into the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nसिंधु नदी की उत्पत्ति तिब्बत के मानसरोवर झील के पास होती है, यह मुख्यतः पाकिस्तान से होकर अरब सागर में गिरती है।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following statements about the Ghaghara River:\n घाघरा नदी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It originates in the Himalayas of Nepal./ यह नेपाल की हिमालय से उत्पन्न होती है।\n (b) It is a left-bank tributary of the Ganga./ यह गंगा की बाईं किनारे की सहायक नदी है।\n (c) It flows through the Indo-Gangetic Plain./ यह इंडो-गंगा मैदान से होकर बहती है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Ghaghara River:\n(a) It originates in the Himalayas of Nepal.\n(b) It is a left-bank tributary of the Ganga.\n(c) It flows through the Indo-Gangetic Plain.\n Which of the above statements are correct?",
       "options": {
-        "a": "Only (a) and (b) / केवल (a) और (b)",
-        "b": "Only (b) and (c) / केवल (b) और (c)",
-        "c": "Only (a) and (c) / केवल (a) और (c)",
-        "d": "All (a), (b), and (c) / सभी (a), (b) और (c)"
+        "a": "Only (a) and (b)",
+        "b": "Only (b) and (c)",
+        "c": "Only (a) and (c)",
+        "d": "All (a), (b), and (c)"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are correct.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं।"
     },
     {
       "q_num": 8,
-      "question": "Which of the following is the largest artificial lake in India?\n भारत की सबसे बड़ी कृत्रिम झील कौन-सी है?",
+      "question": "Which of the following is the largest artificial lake in India?",
       "options": {
-        "a": "Pulicat Lake / पुलिकट झील",
-        "b": "Chilika Lake / चिलिका झील",
-        "c": "Vembanad Lake / वेम्बनाड झील",
-        "d": "Govind Ballabh Pant Sagar / गोविंद बल्लभ पंत सागर"
+        "a": "Pulicat Lake",
+        "b": "Chilika Lake",
+        "c": "Vembanad Lake",
+        "d": "Govind Ballabh Pant Sagar"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGovind Ballabh Pant Sagar, formed by Rihand Dam, is India’s largest man-made lake.\n\n📖 हिंदी स्पष्टीकरण:\nरिहंद बाँध द्वारा निर्मित गोविंद बल्लभ पंत सागर भारत की सबसे बड़ी कृत्रिम झील है।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following lakes is a volcanic crater lake?\n निम्नलिखित में से कौन-सी झील ज्वालामुखी क्रेटर झील है?",
+      "question": "Which of the following lakes is a volcanic crater lake?",
       "options": {
-        "a": "Wular Lake / वुलर झील",
-        "b": "Lonar Lake / लोणार झील",
-        "c": "Chilika Lake / चिल्का झील",
-        "d": "Pushkar Lake / पुष्कर झील"
+        "a": "Wular Lake",
+        "b": "Lonar Lake",
+        "c": "Chilika Lake",
+        "d": "Pushkar Lake"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLonar Lake in Maharashtra was formed due to a meteor impact on basalt rock, creating a crater lake.\n\n📖 हिंदी स्पष्टीकरण:\nमहाराष्ट्र की लोणार झील बेसाल्ट चट्टानों पर उल्का पिंड के टकराने से बनी एक क्रेटर झील है।"
     },
     {
       "q_num": 10,
-      "question": "Which of the following dams is constructed across the Damodar River?\n निम्नलिखित में से कौन-सा बाँध दामोदर नदी पर बनाया गया है?",
+      "question": "Which of the following dams is constructed across the Damodar River?",
       "options": {
-        "a": "Maithan Dam / मैथान बाँध",
-        "b": "Koyna Dam / कोयना बाँध",
-        "c": "Mettur Dam / मेट्टूर बाँध",
-        "d": "Ukai Dam / उकाई बाँध"
+        "a": "Maithan Dam",
+        "b": "Koyna Dam",
+        "c": "Mettur Dam",
+        "d": "Ukai Dam"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Maithan Dam is constructed on the Damodar River in Jharkhand. It is one of the major dams of the Damodar Valley Corporation (DVC) project along with Panchet and Maithon dams. The Damodar is an important tributary of the Ganges.\n\n📖 हिंदी स्पष्टीकरण:\nमैथान बाँध झारखंड में दामोदर नदी पर बनाया गया है। यह दामोदर घाटी निगम (DVC) परियोजना के प्रमुख बाँधों में से एक है।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following tributaries joins the Ganga from the south?\n निम्नलिखित में से कौन-सी सहायक नदी गंगा में दक्षिण से मिलती है?",
+      "question": "Which of the following tributaries joins the Ganga from the south?",
       "options": {
-        "a": "Yamuna / यमुना",
-        "b": "Ghaghara / घाघरा",
-        "c": "Gandak / गंडक",
-        "d": "Kosi / कोसी"
+        "a": "Yamuna",
+        "b": "Ghaghara",
+        "c": "Gandak",
+        "d": "Kosi"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nYamuna meets the Ganga at Prayagraj from the southern side.\n\n📖 हिंदी स्पष्टीकरण:\nयमुना नदी दक्षिण से प्रयागराज में गंगा से मिलती है।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following statements is true about the Western Ghats?\n पश्चिमी घाट के बारे में निम्नलिखित में से कौन-सा कथन सत्य है?",
+      "question": "Which of the following statements is true about the Western Ghats?",
       "options": {
-        "a": "They receive more rainfall than the Eastern Ghats. / इन्हें पूर्वी घाटों की तुलना में अधिक वर्षा प्राप्त होती है।",
-        "b": "They are older than the Himalayas. / ये हिमालय से अधिक प्राचीन हैं।",
-        "c": "They run parallel to the eastern coast. / ये भारत के पूर्वी तट के समानांतर चलती हैं।",
-        "d": "They are formed by volcanic activity. / इनका निर्माण ज्वालामुखीय क्रिया से हुआ है।"
+        "a": "They receive more rainfall than the Eastern Ghats.",
+        "b": "They are older than the Himalayas.",
+        "c": "They run parallel to the eastern coast.",
+        "d": "They are formed by volcanic activity."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWestern Ghats receive heavy rainfall due to southwest monsoon winds striking the windward side.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण-पश्चिम मानसून की हवाओं के कारण पश्चिमी घाट के पवनाभिमुख भाग में अधिक वर्षा होती है।"
     },
     {
       "q_num": 13,
-      "question": "The Brahmaputra River is known by which name in Tibet?\n तिब्बत में ब्रह्मपुत्र नदी को किस नाम से जाना जाता है?",
+      "question": "The Brahmaputra River is known by which name in Tibet?",
       "options": {
-        "a": "Manas / मानस",
-        "b": "Tsangpo / सांगपो",
-        "c": "Dihang / दिहांग",
-        "d": "Lohit / लोहित"
+        "a": "Manas",
+        "b": "Tsangpo",
+        "c": "Dihang",
+        "d": "Lohit"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn Tibet, the Brahmaputra is called Tsangpo, meaning “the purifier.”\n\n📖 हिंदी स्पष्टीकरण:\nतिब्बत में ब्रह्मपुत्र को “सांगपो” कहा जाता है, जिसका अर्थ है “पवित्र करने वाली।”"
     },
     {
       "q_num": 14,
-      "question": "The Hirakud Dam is constructed on which river?\n हीराकुंड बाँध किस नदी पर बनाया गया है?",
+      "question": "The Hirakud Dam is constructed on which river?",
       "options": {
-        "a": "Kaveri / कावेरी",
-        "b": "Godavari / गोदावरी",
-        "c": "Krishna / कृष्णा",
-        "d": "Mahanadi / महानदी"
+        "a": "Kaveri",
+        "b": "Godavari",
+        "c": "Krishna",
+        "d": "Mahanadi"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nHirakud Dam is built on Mahanadi River in Odisha and is one of the longest earthen dams in the world.\n\n📖 हिंदी स्पष्टीकरण:\nहीराकुंड बाँध ओडिशा की महानदी पर बना है और यह विश्व के सबसे लंबे मिट्टी के बाँधों में से एक है।"
     },
     {
       "q_num": 15,
-      "question": "Which lake is known for being the only floating national park in the world?\n कौन-सी झील विश्व का एकमात्र तैरता हुआ राष्ट्रीय उद्यान होने के लिए प्रसिद्ध है?",
+      "question": "Which lake is known for being the only floating national park in the world?",
       "options": {
-        "a": "Sambhar Lake / सांभर झील",
-        "b": "Loktak Lake / लोकतक झील",
-        "c": "Chilika Lake / चिलिका झील",
-        "d": "Wular Lake / वुलर झील"
+        "a": "Sambhar Lake",
+        "b": "Loktak Lake",
+        "c": "Chilika Lake",
+        "d": "Wular Lake"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLoktak Lake in Manipur hosts Keibul Lamjao National Park, the world’s only floating park.\n\n📖 हिंदी स्पष्टीकरण:\nमणिपुर की लोकतक झील में केइबुल लामजाओ राष्ट्रीय उद्यान स्थित है, जो विश्व का एकमात्र तैरता उद्यान है।"
     },
     {
       "q_num": 16,
-      "question": "Which of the following statements regarding the Yamuna River is correct?\n यमुना नदी के संबंध में निम्नलिखित में से कौन-सा कथन सही है?\n (a) It originates from Yamunotri Glacier. / इसका उद्गम यमुनोत्री हिमनद से होता है।\n (b) It is the largest tributary of the Ganga. / यह गंगा की सबसे बड़ी उपनदी है।\n (c) Its water is used in the Indira Gandhi Canal. / इसके जल का उपयोग इंदिरा गांधी नहर में किया जाता है।",
+      "question": "Which of the following statements regarding the Yamuna River is correct?\n(a) It originates from Yamunotri Glacier.\n(b) It is the largest tributary of the Ganga.\n(c) Its water is used in the Indira Gandhi Canal.",
       "options": {
-        "a": "Only (b) and (c) / केवल (b) और (c)",
-        "b": "Only (a) and (b) / केवल (a) और (b)",
-        "c": "Only (a) and (c) / केवल (a) और (c)",
-        "d": "All (a), (b), and (c) / सभी (a), (b) और (c)"
+        "a": "Only (b) and (c)",
+        "b": "Only (a) and (b)",
+        "c": "Only (a) and (c)",
+        "d": "All (a), (b), and (c)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nYamuna rises from the Yamunotri Glacier and is the main tributary of the Ganga; it doesn’t feed the Indira Gandhi Canal.\n\n📖 हिंदी स्पष्टीकरण:\nयमुना यमुनोत्री हिमनद से निकलती है और गंगा की सबसे बड़ी सहायक है; इसकी जलधारा इंदिरा गांधी नहर में प्रयुक्त नहीं होती।"
     },
     {
       "q_num": 17,
-      "question": "The Sabarmati River originates from which hill range?\n साबरमती नदी की उत्पत्ति किस पर्वतमाला से होती है?",
+      "question": "The Sabarmati River originates from which hill range?",
       "options": {
-        "a": "Western Ghats / पश्चिमी घाट",
-        "b": "Satpura Hills / सतपुड़ा पर्वतमाला",
-        "c": "Vindhya Range / विंध्याचल श्रृंखला",
-        "d": "Aravalli Hills / अरावली पर्वतमाला"
+        "a": "Western Ghats",
+        "b": "Satpura Hills",
+        "c": "Vindhya Range",
+        "d": "Aravalli Hills"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nSabarmati originates from the Aravalli Hills in Rajasthan near Udaipur.\n\n📖 हिंदी स्पष्टीकरण:\nसाबरमती नदी राजस्थान के उदयपुर के पास अरावली पर्वतमाला से निकलती है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements about monsoon in India:\n भारत में मानसून के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) The southwest monsoon covers the whole country by mid-July. / दक्षिण-पश्चिम मानसून मध्य जुलाई तक पूरे देश को आच्छादित कर लेता है।\n (b) The retreating monsoon begins in October. / प्रतिगामी मानसून अक्टूबर में प्रारंभ होता है।\n (c) Tamil Nadu receives most rainfall from the southwest monsoon. / तमिलनाडु को अधिकतर वर्षा दक्षिण-पश्चिम मानसून से प्राप्त होती है।\n Which are correct? / कौन से सही हैं?",
+      "question": "Consider the following statements about monsoon in India:\n(a) The southwest monsoon covers the whole country by mid-July.\n(b) The retreating monsoon begins in October.\n(c) Tamil Nadu receives most rainfall from the southwest monsoon.\nWhich are correct?",
       "options": {
-        "a": "b and c only / केवल b और c",
-        "b": "a and b only / केवल a और b",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b, and c / a, b और c"
+        "a": "b and c only",
+        "b": "a and b only",
+        "c": "a and c only",
+        "d": "a, b, and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe southwest monsoon covers India by July, while withdrawal starts from northwest in October. Tamil Nadu mainly receives rain from northeast monsoon.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण-पश्चिम मानसून जुलाई तक पूरे भारत को ढक लेता है, और अक्टूबर में उत्तर-पश्चिम से वापसी शुरू होती है। तमिलनाडु को वर्षा उत्तर-पूर्व मानसून से मिलती है।"
     },
     {
       "q_num": 19,
-      "question": "The Sutlej River enters India from which mountain pass?\n सतलज नदी भारत में किस दर्रे से प्रवेश करती है?",
+      "question": "The Sutlej River enters India from which mountain pass?",
       "options": {
-        "a": "Shipki La / शिपकी ला",
-        "b": "Rohtang Pass / रोहतांग दर्रा",
-        "c": "Nathu La / नाथू ला",
-        "d": "Zoji La / ज़ोजी ला"
+        "a": "Shipki La",
+        "b": "Rohtang Pass",
+        "c": "Nathu La",
+        "d": "Zoji La"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Sutlej enters India through Shipki La pass in Himachal Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nसतलज नदी हिमाचल प्रदेश में शिपकी ला दर्रे से भारत में प्रवेश करती है।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following waterfalls is the highest waterfall in India?\n निम्नलिखित में से कौन-सा भारत का सबसे ऊँचा जलप्रपात है?",
+      "question": "Which of the following waterfalls is the highest waterfall in India?",
       "options": {
-        "a": "Kunchikal Falls / कुंचिकल जलप्रपात",
-        "b": "Nohsngithiang Falls / नोह्सन्गिथियांग जलप्रपात",
-        "c": "Jog Falls / जोग जलप्रपात",
-        "d": "Dudhsagar Falls / दूधसागर जलप्रपात"
+        "a": "Kunchikal Falls",
+        "b": "Nohsngithiang Falls",
+        "c": "Jog Falls",
+        "d": "Dudhsagar Falls"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKunchikal Falls in Karnataka has a height of 455 meters, making it the highest waterfall in India. It is formed by the Varahi River in the Western Ghats near Shimoga district. Nohsngithiang Falls (India's second highest at 340 meters) is located in Meghalaya.\n\n📖 हिंदी स्पष्टीकरण:\nकुंचिकल जलप्रपात कर्नाटक में 455 मीटर ऊँचाई के साथ भारत का सबसे ऊँचा जलप्रपात है। यह वरही नदी द्वारा पश्चिमी घाट में बनाया गया है।"
     },
     {
       "q_num": 21,
-      "question": "Which of the following is the left-bank tributary of the Indus River?\n निम्नलिखित में से कौन-सी सिंधु नदी की बाएँ किनारे की सहायक है?",
+      "question": "Which of the following is the left-bank tributary of the Indus River?",
       "options": {
-        "a": "Chenab / चिनाब",
-        "b": "Jhelum / झेलम",
-        "c": "Ravi / रावी",
-        "d": "Shyok / श्योक"
+        "a": "Chenab",
+        "b": "Jhelum",
+        "c": "Ravi",
+        "d": "Shyok"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Shyok joins the Indus from the left bank in Ladakh region.\n\n📖 हिंदी स्पष्टीकरण:\nश्योक नदी लद्दाख क्षेत्र में सिंधु में बाएँ किनारे से मिलती है।"
     },
     {
       "q_num": 22,
-      "question": "Which island group is known for its coral origin?\n कौन-सा द्वीप समूह मूँगे की उत्पत्ति के लिए प्रसिद्ध है?",
+      "question": "Which island group is known for its coral origin?",
       "options": {
-        "a": "Lakshadweep Islands / लक्षद्वीप द्वीप",
-        "b": "Andaman Islands / अंडमान द्वीप",
-        "c": "Nicobar Islands / निकोबार द्वीप",
-        "d": "Minicoy Islands / मिनिकॉय द्वीप"
+        "a": "Lakshadweep Islands",
+        "b": "Andaman Islands",
+        "c": "Nicobar Islands",
+        "d": "Minicoy Islands"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLakshadweep Islands are coral atolls formed by the accumulation of coral polyps.\n\n📖 हिंदी स्पष्टीकरण:\nलक्षद्वीप द्वीप मूँगे के पॉलीप्स के संचयन से बने प्रवाल द्वीप (एटोल) हैं।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following rivers flows through the Dandakaranya region?\n निम्नलिखित में से कौन-सी नदी दंडकारण्य क्षेत्र से होकर बहती है?",
+      "question": "Which of the following rivers flows through the Dandakaranya region?",
       "options": {
-        "a": "Wardha / वर्धा",
-        "b": "Godavari / गोदावरी",
-        "c": "Indravati / इंद्रावती",
-        "d": "Mahanadi / महानदी"
+        "a": "Wardha",
+        "b": "Godavari",
+        "c": "Indravati",
+        "d": "Mahanadi"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIndravati River, a tributary of Godavari, flows through the Dandakaranya plateau region.\n\n📖 हिंदी स्पष्टीकरण:\nइंद्रावती नदी, जो गोदावरी की सहायक है, दंडकारण्य पठार क्षेत्र से होकर बहती है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following waterfalls is formed by the Sharavathi River?\n निम्नलिखित में से कौन-सा जलप्रपात शरावती नदी द्वारा बनाया गया है?",
+      "question": "Which of the following waterfalls is formed by the Sharavathi River?",
       "options": {
-        "a": "Chitrakote Falls / चित्रकोट जलप्रपात",
-        "b": "Dhuandhar Falls / धुआंधार जलप्रपात",
-        "c": "Hundru Falls / हुन्द्रू जलप्रपात",
-        "d": "Jog Falls / जोग जलप्रपात"
+        "a": "Chitrakote Falls",
+        "b": "Dhuandhar Falls",
+        "c": "Hundru Falls",
+        "d": "Jog Falls"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nJog Falls in Karnataka is formed by the Sharavathi River and is one of India’s highest waterfalls.\n\n📖 हिंदी स्पष्टीकरण:\nकर्नाटक का जोग जलप्रपात शरावती नदी द्वारा निर्मित है और यह भारत के सबसे ऊँचे जलप्रपातों में से एक है।"
     },
     {
       "q_num": 25,
-      "question": "The Ganga River flows eastward because—\n गंगा नदी पूर्व दिशा में बहती है क्योंकि—",
+      "question": "The Ganga River flows eastward because—",
       "options": {
-        "a": "The Himalayas block northward flow / हिमालय उत्तर दिशा में प्रवाह को रोकते हैं",
-        "b": "The land slope is towards east / भूमि की ढाल पूर्व की ओर है",
-        "c": "Prevailing winds blow eastward / प्रचलित हवाएँ पूर्व की ओर चलती हैं",
-        "d": "Tectonic uplift in west / पश्चिम में भूगर्भीय उत्थान हुआ"
+        "a": "The Himalayas block northward flow",
+        "b": "The land slope is towards east",
+        "c": "Prevailing winds blow eastward",
+        "d": "Tectonic uplift in west"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe natural slope of the plains directs the Ganga eastward to the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nमैदानी भाग की प्राकृतिक ढाल पूर्व की ओर है, जिससे गंगा बंगाल की खाड़ी की ओर बहती है।"
     },
     {
       "q_num": 26,
-      "question": "Bhakra Nangal Dam is constructed jointly on which rivers?\n भाखड़ा नांगल बाँध किन नदियों पर संयुक्त रूप से बनाया गया है?",
+      "question": "Bhakra Nangal Dam is constructed jointly on which rivers?",
       "options": {
-        "a": "Sutlej and Beas / सतलज और ब्यास",
-        "b": "Ganga and Yamuna / गंगा और यमुना",
-        "c": "Godavari and Krishna / गोदावरी और कृष्णा",
-        "d": "Chambal and Betwa / चंबल और बेतवा"
+        "a": "Sutlej and Beas",
+        "b": "Ganga and Yamuna",
+        "c": "Godavari and Krishna",
+        "d": "Chambal and Betwa"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Bhakra Dam is on Sutlej, while the Nangal Dam downstream regulates flow with Beas contribution.\n\n📖 हिंदी स्पष्टीकरण:\nभाखड़ा बाँध सतलज पर बना है और नांगल बाँध ब्यास के जल से प्रवाह को नियंत्रित करता है।"
     },
     {
       "q_num": 27,
-      "question": "Which Himalayan river forms the deep gorge near Namcha Barwa?\n नमचा बरवा के पास गहरी घाटी कौन-सी हिमालयी नदी बनाती है?",
+      "question": "Which Himalayan river forms the deep gorge near Namcha Barwa?",
       "options": {
-        "a": "Manas / मानस",
-        "b": "Teesta / तीस्ता",
-        "c": "Subansiri / सुबसिरी",
-        "d": "Brahmaputra / ब्रह्मपुत्र"
+        "a": "Manas",
+        "b": "Teesta",
+        "c": "Subansiri",
+        "d": "Brahmaputra"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Brahmaputra carves a deep gorge while turning south near Namcha Barwa.\n\n📖 हिंदी स्पष्टीकरण:\nनमचा बरवा के पास ब्रह्मपुत्र दक्षिण मुड़ते हुए गहरी घाटी बनाती है।"
     },
     {
       "q_num": 28,
-      "question": "The Dhuandhar Falls is characterized by which of the following geological features?\n धुआंधार जलप्रपात को निम्नलिखित में से किस भूगर्भीय विशेषता द्वारा चिह्नित किया जाता है?",
+      "question": "The Dhuandhar Falls is characterized by which of the following geological features?",
       "options": {
-        "a": "Basaltic rock formations / बेसाल्ट चट्टान निर्माण",
-        "b": "Granite gorge / ग्रेनाइट घाटी",
-        "c": "Marble rocks / संगमरमर शिलाएँ",
-        "d": "Limestone cliffs / चूना पत्थर की चट्टानें"
+        "a": "Basaltic rock formations",
+        "b": "Granite gorge",
+        "c": "Marble rocks",
+        "d": "Limestone cliffs"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Dhuandhar Falls, formed by the Narmada River at Bhedaghat near Jabalpur, is famous for its spectacular marble rocks. The river cuts through white marble formations, creating a beautiful gorge known as Marble Rocks. The falls drop about 30 meters and is a popular tourist destination.\n\n📖 हिंदी स्पष्टीकरण:\nधुआंधार जलप्रपात जबलपुर के निकट भेड़ाघाट पर संगमरमर शिलाओं के लिए प्रसिद्ध है। नर्मदा नदी सफेद संगमरमर से होकर बहती है, जिससे संगमरमर चट्टानें (Marble Rocks) नामक सुंदर घाटी बनती है।"
     },
     {
       "q_num": 29,
-      "question": "The Kaveri River forms a delta along which coast?\n कावेरी नदी का डेल्टा किस तट पर बनता है?",
+      "question": "The Kaveri River forms a delta along which coast?",
       "options": {
-        "a": "Malabar Coast / मालाबार तट",
-        "b": "Konkan Coast / कोंकण तट",
-        "c": "Coromandel Coast / कोरमंडल तट",
-        "d": "Gujarat Coast / गुजरात तट"
+        "a": "Malabar Coast",
+        "b": "Konkan Coast",
+        "c": "Coromandel Coast",
+        "d": "Gujarat Coast"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKaveri forms a fertile delta on the Coromandel Coast before entering the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nकावेरी बंगाल की खाड़ी में गिरने से पहले कोरमंडल तट पर उपजाऊ डेल्टा बनाती है।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following statements is true about the Ganga’s tributaries in Bihar?\n बिहार में गंगा की सहायक नदियों के बारे में निम्नलिखित में से कौन-सा कथन सही है?\n (a) Gandak and Kosi originate in Nepal. / गंडक और कोसी का उद्गम नेपाल में होता है।\n (b) They cause recurrent floods. / ये बार-बार बाढ़ लाती हैं।\n (c) They join the Ganga from the south. / ये गंगा में दक्षिण दिशा से मिलती हैं।",
+      "question": "Which of the following statements is true about the Ganga’s tributaries in Bihar?\n(a) Gandak and Kosi originate in Nepal.\n(b) They cause recurrent floods.\n(c) They join the Ganga from the south.",
       "options": {
-        "a": "Only (a) and (b) / केवल (a) और (b)",
-        "b": "Only (b) and (c) / केवल (b) और (c)",
-        "c": "Only (a) and (c) / केवल (a) और (c)",
-        "d": "All (a), (b), and (c) / सभी (a), (b), और (c)"
+        "a": "Only (a) and (b)",
+        "b": "Only (b) and (c)",
+        "c": "Only (a) and (c)",
+        "d": "All (a), (b), and (c)"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nGandak and Kosi rise in Nepal and often cause floods in Bihar; both join Ganga from the north.\n\n📖 हिंदी स्पष्टीकरण:\nगंडक और कोसी नेपाल में उत्पन्न होती हैं और बिहार में बार-बार बाढ़ लाती हैं; ये उत्तर से गंगा में मिलती हैं।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements about the Ganga River:\n गंगा नदी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It originates from Gangotri Glacier. / इसका उद्गम गंगोत्री हिमनद से होता है।\n (b) Its main tributary Yamuna meets it at Prayagraj. / इसकी प्रमुख उपनदी यमुना प्रयागराज में इससे मिलती है।\n (c) It flows into the Bay of Bengal. / यह बंगाल की खाड़ी में गिरती है।\n Which statements are correct? / कौन से कथन सही हैं?",
+      "question": "Consider the following statements about the Ganga River:\n(a) It originates from Gangotri Glacier.\n(b) Its main tributary Yamuna meets it at Prayagraj.\n(c) It flows into the Bay of Bengal.\nWhich statements are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct — Ganga originates from Gangotri Glacier, joined by Yamuna at Prayagraj, and empties into the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं — गंगा गंगोत्री हिमनद से निकलती है, प्रयागराज में यमुना से मिलती है और बंगाल की खाड़ी में गिरती है।"
     },
     {
       "q_num": 32,
-      "question": "Which is the deepest lake in India?\n भारत की सबसे गहरी झील कौन-सी है?",
+      "question": "Which is the deepest lake in India?",
       "options": {
-        "a": "Manasbal Lake / मानसबल झील",
-        "b": "Wular Lake / वुलर झील",
-        "c": "Dal Lake / डल झील",
-        "d": "Tsomgo Lake / त्सोमगो झील"
+        "a": "Manasbal Lake",
+        "b": "Wular Lake",
+        "c": "Dal Lake",
+        "d": "Tsomgo Lake"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nManasbal Lake in Jammu & Kashmir is considered the deepest freshwater lake in India.\n\n📖 हिंदी स्पष्टीकरण:\nजम्मू-कश्मीर की मानसबल झील भारत की सबसे गहरी मीठे पानी की झील मानी जाती है।"
     },
     {
       "q_num": 33,
-      "question": "The river ‘Teesta’ is a tributary of which major river?\n तीस्ता नदी किस प्रमुख नदी की सहायक है?",
+      "question": "The river ‘Teesta’ is a tributary of which major river?",
       "options": {
-        "a": "Ganga / गंगा",
-        "b": "Brahmaputra / ब्रह्मपुत्र",
-        "c": "Mahananda / महानंदा",
-        "d": "Torsa / तोरसा"
+        "a": "Ganga",
+        "b": "Brahmaputra",
+        "c": "Mahananda",
+        "d": "Torsa"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nTeesta flows from Sikkim to join the Brahmaputra in Bangladesh.\n\n📖 हिंदी स्पष्टीकरण:\nतीस्ता सिक्किम से बहकर बांग्लादेश में ब्रह्मपुत्र में मिलती है।"
     },
     {
       "q_num": 34,
-      "question": "Which of the following is a tributary of the Krishna River?\n निम्नलिखित में से कौन-सी कृष्णा नदी की सहायक है?",
+      "question": "Which of the following is a tributary of the Krishna River?",
       "options": {
-        "a": "Mahanadi / महानदी",
-        "b": "Godavari / गोदावरी",
-        "c": "Bhima / भीमा",
-        "d": "Subarnarekha / सुवर्णरेखा"
+        "a": "Mahanadi",
+        "b": "Godavari",
+        "c": "Bhima",
+        "d": "Subarnarekha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBhima River is a major right-bank tributary of the Krishna River.\n\n📖 हिंदी स्पष्टीकरण:\nभीमा नदी कृष्णा की दाएँ किनारे की प्रमुख सहायक नदी है।"
     },
     {
       "q_num": 35,
-      "question": "Which of the following is a saltwater lake?\n निम्नलिखित में से कौन-सी झील खारे पानी की है?",
+      "question": "Which of the following is a saltwater lake?",
       "options": {
-        "a": "Sambhar Lake / सांभर झील",
-        "b": "Wular Lake / वुलर झील",
-        "c": "Loktak Lake / लोकतक झील",
-        "d": "Dal Lake / डल झील"
+        "a": "Sambhar Lake",
+        "b": "Wular Lake",
+        "c": "Loktak Lake",
+        "d": "Dal Lake"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSambhar Lake in Rajasthan is India’s largest inland saltwater lake.\n\n📖 हिंदी स्पष्टीकरण:\nराजस्थान की सांभर झील भारत की सबसे बड़ी अंतर्देशीय खारे पानी की झील है।"
     },
     {
       "q_num": 36,
-      "question": "Which of the following rivers is east-flowing?\n निम्नलिखित में से कौन-सी नदी पूर्ववाहिनी है?",
+      "question": "Which of the following rivers is east-flowing?",
       "options": {
-        "a": "Godavari / गोदावरी",
-        "b": "Narmada / नर्मदा",
-        "c": "Tapi / ताप्ती",
-        "d": "Mahi / माही"
+        "a": "Godavari",
+        "b": "Narmada",
+        "c": "Tapi",
+        "d": "Mahi"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nGodavari flows eastward into the Bay of Bengal; Narmada, Tapi, and Mahi flow westward.\n\n📖 हिंदी स्पष्टीकरण:\nगोदावरी नदी पूर्व की ओर बहकर बंगाल की खाड़ी में गिरती है, जबकि नर्मदा, ताप्ती और माही पश्चिम की ओर बहती हैं।"
     },
     {
       "q_num": 37,
-      "question": "Which of the following statements about the Indus Waters Treaty is correct?\n सिंधु जल संधि के बारे में निम्नलिखित में से कौन-सा कथन सही है?\n (a) It was signed in 1960. / यह 1960 में हस्ताक्षरित की गई थी।\n (b) It divides six rivers between India and Pakistan. / यह भारत और पाकिस्तान के बीच छह नदियों का विभाजन करती है।\n (c) India got full rights over eastern rivers. / भारत को पूर्वी नदियों पर पूर्ण अधिकार मिला।",
+      "question": "Which of the following statements about the Indus Waters Treaty is correct?\n(a) It was signed in 1960.\n(b) It divides six rivers between India and Pakistan.\n(c) India got full rights over eastern rivers.",
       "options": {
-        "a": "Only (a) and (b) / केवल (a) और (b)",
-        "b": "Only (a) and (c) / केवल (a) और (c)",
-        "c": "Only (b) and (c) / केवल (b) और (c)",
-        "d": "All (a), (b), and (c) / सभी (a), (b), और (c)"
+        "a": "Only (a) and (b)",
+        "b": "Only (a) and (c)",
+        "c": "Only (b) and (c)",
+        "d": "All (a), (b), and (c)"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe 1960 treaty gave India rights over eastern rivers (Ravi, Beas, Sutlej) and Pakistan over western ones.\n\n📖 हिंदी स्पष्टीकरण:\n1960 की संधि में भारत को पूर्वी नदियों (रावी, ब्यास, सतलज) और पाकिस्तान को पश्चिमी नदियों का अधिकार दिया गया।"
     },
     {
       "q_num": 38,
-      "question": "Which dam is built across the Krishna River?\n कृष्णा नदी पर कौन-सा बाँध बनाया गया है?",
+      "question": "Which dam is built across the Krishna River?",
       "options": {
-        "a": "Hirakud / हीराकुंड",
-        "b": "Bhakra Nangal / भाखड़ा नांगल",
-        "c": "Nagarjuna Sagar / नागार्जुन सागर",
-        "d": "Sardar Sarovar / सरदार सरोवर"
+        "a": "Hirakud",
+        "b": "Bhakra Nangal",
+        "c": "Nagarjuna Sagar",
+        "d": "Sardar Sarovar"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNagarjuna Sagar Dam is located on Krishna River between Telangana and Andhra Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nनागार्जुन सागर बाँध कृष्णा नदी पर तेलंगाना और आंध्र प्रदेश की सीमा पर स्थित है।"
     },
     {
       "q_num": 39,
-      "question": "Which of the following waterfalls is also known as ‘Niagara of India’?\n निम्नलिखित में से कौन-सा जलप्रपात ‘भारत का नियाग्रा’ कहलाता है?",
+      "question": "Which of the following waterfalls is also known as ‘Niagara of India’?",
       "options": {
-        "a": "Chitrakote Falls / चित्रकोट जलप्रपात",
-        "b": "Jog Falls / जोग जलप्रपात",
-        "c": "Hundru Falls / हुंद्रू जलप्रपात",
-        "d": "Dhuandhar Falls / धुआंधार जलप्रपात"
+        "a": "Chitrakote Falls",
+        "b": "Jog Falls",
+        "c": "Hundru Falls",
+        "d": "Dhuandhar Falls"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nChitrakote Falls on the Indravati River in Chhattisgarh is often called the Niagara of India.\n\n📖 हिंदी स्पष्टीकरण:\nछत्तीसगढ़ में इंद्रावती नदी पर स्थित चित्रकोट जलप्रपात को ‘भारत का नियाग्रा’ कहा जाता है।"
     },
     {
       "q_num": 40,
-      "question": "Consider the following statements about the Tapi River:\n तापी नदी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It flows into the Bay of Bengal. / यह बंगाल की खाड़ी में गिरती है।\n (b) It originates in Madhya Pradesh. / इसका उद्गम मध्य प्रदेश में होता है।\n (c) It flows parallel to the Narmada. / यह नर्मदा के समानांतर बहती है।",
+      "question": "Consider the following statements about the Tapi River:\n(a) It flows into the Bay of Bengal.\n(b) It originates in Madhya Pradesh.\n(c) It flows parallel to the Narmada.",
       "options": {
-        "a": "Only (a) and (b) / केवल (a) और (b)",
-        "b": "Only (a) and (c) / केवल (a) और (c)",
-        "c": "Only (b) and (c) / केवल (b) और (c)",
-        "d": "All (a), (b), and (c) / सभी (a), (b), और (c)"
+        "a": "Only (a) and (b)",
+        "b": "Only (a) and (c)",
+        "c": "Only (b) and (c)",
+        "d": "All (a), (b), and (c)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTapi originates in Madhya Pradesh and flows westward parallel to Narmada into the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nतापी मध्य प्रदेश में उत्पन्न होकर नर्मदा के समानांतर पश्चिम की ओर अरब सागर में गिरती है।"
     },
     {
       "q_num": 41,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Dhauliganga – Siachen Glacier / धौलीगंगा – सियाचिन हिमनद",
-        "b": "Bhagirathi – Pindari Glacier / भागीरथी – पिंदारी हिमनद",
-        "c": "Mandakini – Zemu Glacier / मंदाकिनी – ज़ेमू हिमनद",
-        "d": "Alaknanda – Satopanth Glacier / अलकनंदा – सतोपंथ हिमनद"
+        "a": "Dhauliganga – Siachen Glacier",
+        "b": "Bhagirathi – Pindari Glacier",
+        "c": "Mandakini – Zemu Glacier",
+        "d": "Alaknanda – Satopanth Glacier"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Alaknanda River rises from Satopanth Glacier near Badrinath.\n\n📖 हिंदी स्पष्टीकरण:\nअलकनंदा नदी की उत्पत्ति बद्रीनाथ के पास सतोपंथ हिमनद से होती है।"
     },
     {
       "q_num": 42,
-      "question": "Gobind Sagar is a reservoir formed by which dam?\n गोविंद सागर जलाशय किस बाँध द्वारा निर्मित है?",
+      "question": "Gobind Sagar is a reservoir formed by which dam?",
       "options": {
-        "a": "Rihand Dam / रिहंद बाँध",
-        "b": "Hirakud Dam / हीराकुंड बाँध",
-        "c": "Tehri Dam / टिहरी बाँध",
-        "d": "Bhakra Dam / भाखड़ा बाँध"
+        "a": "Rihand Dam",
+        "b": "Hirakud Dam",
+        "c": "Tehri Dam",
+        "d": "Bhakra Dam"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nGobind Sagar Reservoir was created by the Bhakra Dam on the Sutlej River.\n\n📖 हिंदी स्पष्टीकरण:\nगोविंद सागर जलाशय सतलज नदी पर बने भाखड़ा बाँध द्वारा निर्मित है।"
     },
     {
       "q_num": 43,
-      "question": "Which river is called “Sorrow of Bihar”?\n कौन-सी नदी “बिहार का शोक” कहलाती है?",
+      "question": "Which river is called “Sorrow of Bihar”?",
       "options": {
-        "a": "Gandak / गंडक",
-        "b": "Kosi / कोसी",
-        "c": "Son / सोन",
-        "d": "Ghaghara / घाघरा"
+        "a": "Gandak",
+        "b": "Kosi",
+        "c": "Son",
+        "d": "Ghaghara"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDue to frequent floods and course changes, the Kosi is known as the “Sorrow of Bihar.”\n\n📖 हिंदी स्पष्टीकरण:\nलगातार बाढ़ और मार्ग परिवर्तन के कारण कोसी को “बिहार का शोक” कहा जाता है।"
     },
     {
       "q_num": 44,
-      "question": "The monsoon winds are seasonal reversal of—\n मानसूनी हवाएँ किनकी मौसमी परिवर्तनशीलता हैं—",
+      "question": "The monsoon winds are seasonal reversal of—",
       "options": {
-        "a": "Temperature and Humidity / तापमान और आर्द्रता",
-        "b": "Pressure and Wind / दाब और पवन",
-        "c": "Rainfall and Pressure / वर्षा और दाब",
-        "d": "Humidity and Temperature / आर्द्रता और तापमान"
+        "a": "Temperature and Humidity",
+        "b": "Pressure and Wind",
+        "c": "Rainfall and Pressure",
+        "d": "Humidity and Temperature"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMonsoon represents seasonal reversal in pressure and wind direction between land and sea.\n\n📖 हिंदी स्पष्टीकरण:\nमानसून भूमि और समुद्र के बीच दाब एवं पवन दिशा के मौसमी परिवर्तन का प्रतीक है।"
     },
     {
       "q_num": 45,
-      "question": "The Pennar River flows through which of the following states?\n पेनार नदी निम्नलिखित में से किन राज्यों से होकर बहती है?",
+      "question": "The Pennar River flows through which of the following states?",
       "options": {
-        "a": "Maharashtra and Gujarat / महाराष्ट्र और गुजरात",
-        "b": "Tamil Nadu and Kerala / तमिलनाडु और केरल",
-        "c": "Karnataka and Andhra Pradesh / कर्नाटक और आंध्र प्रदेश",
-        "d": "Odisha and West Bengal / ओडिशा और पश्चिम बंगाल"
+        "a": "Maharashtra and Gujarat",
+        "b": "Tamil Nadu and Kerala",
+        "c": "Karnataka and Andhra Pradesh",
+        "d": "Odisha and West Bengal"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPennar rises in Karnataka and flows east through Andhra Pradesh to the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nपेनार नदी कर्नाटक में उत्पन्न होकर आंध्र प्रदेश से पूर्व की ओर बंगाल की खाड़ी में गिरती है।"
     },
     {
       "q_num": 46,
-      "question": "Which of the following is an impact crater lake formed by meteorite collision?\n निम्नलिखित में से कौन-सी झील उल्का पिंड के टकराने से बनी एक प्रभाव गड्ढा झील है?",
+      "question": "Which of the following is an impact crater lake formed by meteorite collision?",
       "options": {
-        "a": "Vembanad Lake / वेम्बनाड झील",
-        "b": "Wular Lake / वुलर झील",
-        "c": "Lonar Lake / लोणार झील",
-        "d": "Sambhar Lake / सांभर झील"
+        "a": "Vembanad Lake",
+        "b": "Wular Lake",
+        "c": "Lonar Lake",
+        "d": "Sambhar Lake"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLonar Lake in Maharashtra is a unique impact crater lake formed by meteorite impact approximately 50,000-576,000 years ago.\n\n📖 हिंदी स्पष्टीकरण:\nलोणार झील महाराष्ट्र में एक अद्वितीय प्रभाव गड्ढा झील है, जो उल्का पिंड के टकराने से बनी है।"
     },
     {
       "q_num": 47,
-      "question": "Which of the following is India’s largest brackish lake?\n भारत की सबसे बड़ी मीठे खारे की झील कौन-सी है?",
+      "question": "Which of the following is India’s largest brackish lake?",
       "options": {
-        "a": "Vembanad Lake / वेम्बनाड झील",
-        "b": "Kolleru Lake / कोल्लेरू झील",
-        "c": "Pulicat Lake / पुलिकट झील",
-        "d": "Chilika Lake / चिलिका झील"
+        "a": "Vembanad Lake",
+        "b": "Kolleru Lake",
+        "c": "Pulicat Lake",
+        "d": "Chilika Lake"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nChilika Lake in Odisha is the largest brackish water lake in India. Located at the mouth of the Daya River, it covers an area of about 1,100 square kilometers.\n\n📖 हिंदी स्पष्टीकरण:\nचिलिका झील ओडिशा में भारत की सबसे बड़ी खारे पानी की झील है। दया नदी के मुहाने पर स्थित, यह लगभग 1,100 वर्ग किलोमीटर का क्षेत्र कवर करती है।"
     },
     {
       "q_num": 48,
-      "question": "Which meteorological department monitors India’s monsoon forecast?\n भारत के मानसून पूर्वानुमान की निगरानी कौन-सा मौसम विभाग करता है?",
+      "question": "Which meteorological department monitors India’s monsoon forecast?",
       "options": {
-        "a": "India Meteorological Department (IMD) / भारतीय मौसम विभाग",
-        "b": "National Remote Sensing Centre / राष्ट्रीय दूरसंवेदी केन्द्र",
-        "c": "Central Water Commission / केन्द्रीय जल आयोग",
-        "d": "National Weather Bureau / राष्ट्रीय मौसम कार्यालय"
+        "a": "India Meteorological Department (IMD)",
+        "b": "National Remote Sensing Centre",
+        "c": "Central Water Commission",
+        "d": "National Weather Bureau"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe India Meteorological Department (IMD) issues official monsoon forecasts and rainfall analysis.\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय मौसम विभाग (IMD) भारत के मानसून के पूर्वानुमान और वर्षा विश्लेषण जारी करता है।"
     },
     {
       "q_num": 49,
-      "question": "Which of the following rivers forms the boundary between Maharashtra and Karnataka?\n निम्नलिखित में से कौन-सी नदी महाराष्ट्र और कर्नाटक की सीमा बनाती है?",
+      "question": "Which of the following rivers forms the boundary between Maharashtra and Karnataka?",
       "options": {
-        "a": "Bhima / भीमा",
-        "b": "Krishna / कृष्णा",
-        "c": "Tungabhadra / तुंगभद्रा",
-        "d": "Wardha / वर्धा"
+        "a": "Bhima",
+        "b": "Krishna",
+        "c": "Tungabhadra",
+        "d": "Wardha"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Krishna River forms part of the boundary between Maharashtra and Karnataka states.\n\n📖 हिंदी स्पष्टीकरण:\nकृष्णा नदी महाराष्ट्र और कर्नाटक के बीच सीमा का हिस्सा बनाती है।"
     },
     {
       "q_num": 50,
-      "question": "Which one of the following rivers forms a boundary between India and Nepal?\n निम्नलिखित में से कौन-सी नदी भारत और नेपाल के बीच सीमा बनाती है?",
+      "question": "Which one of the following rivers forms a boundary between India and Nepal?",
       "options": {
-        "a": "Kali / काली",
-        "b": "Gandak / गंडक",
-        "c": "Kosi / कोसी",
-        "d": "Ghaghara / घाघरा"
+        "a": "Kali",
+        "b": "Gandak",
+        "c": "Kosi",
+        "d": "Ghaghara"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Kali or Sharda River marks the boundary between India and Nepal in the Kumaon region.\n\n📖 हिंदी स्पष्टीकरण:\nकाली या शारदा नदी कुमाऊँ क्षेत्र में भारत – नेपाल सीमा बनाती है।"
     },
     {
       "q_num": 51,
-      "question": "Which of the following statements about the Retreating Monsoon is correct?\n प्रतिगामी मानसून के संबंध में कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Retreating Monsoon is correct?",
       "options": {
-        "a": "It blows from sea to land / यह समुद्र से भूमि की ओर चलती है",
-        "b": "It brings rain to northwest India / यह उत्तर-पश्चिम भारत में वर्षा लाता है",
-        "c": "It is caused by Western Disturbances / यह पश्चिमी विक्षोभ से होता है",
-        "d": "It occurs from October to December / यह अक्टूबर से दिसंबर तक होता है"
+        "a": "It blows from sea to land",
+        "b": "It brings rain to northwest India",
+        "c": "It is caused by Western Disturbances",
+        "d": "It occurs from October to December"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe retreating monsoon season occurs between October and December when winds reverse direction.\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिगामी मानसून अक्टूबर से दिसंबर के बीच होता है, जब हवाओं की दिशा बदल जाती है।"
     },
     {
       "q_num": 52,
-      "question": "Which river is known as “the lifeline of Madhya Pradesh and Gujarat”?\n कौन-सी नदी “मध्य प्रदेश और गुजरात की जीवनरेखा” कहलाती है?",
+      "question": "Which river is known as “the lifeline of Madhya Pradesh and Gujarat”?",
       "options": {
-        "a": "Tapi / तापी",
-        "b": "Narmada / नर्मदा",
-        "c": "Mahi / माही",
-        "d": "Chambal / चंबल"
+        "a": "Tapi",
+        "b": "Narmada",
+        "c": "Mahi",
+        "d": "Chambal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNarmada provides irrigation and power to both Madhya Pradesh and Gujarat, earning the title “lifeline.”\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा नदी सिंचाई और ऊर्जा का मुख्य स्रोत है, इसलिए इसे “जीवनरेखा” कहा जाता है।"
     },
     {
       "q_num": 53,
-      "question": "Tehri Dam is located in which state?\n टिहरी बाँध किस राज्य में स्थित है?",
+      "question": "Tehri Dam is located in which state?",
       "options": {
-        "a": "Jharkhand / झारखंड",
-        "b": "Himachal Pradesh / हिमाचल प्रदेश",
-        "c": "Sikkim / सिक्किम",
-        "d": "Uttarakhand / उत्तराखंड"
+        "a": "Jharkhand",
+        "b": "Himachal Pradesh",
+        "c": "Sikkim",
+        "d": "Uttarakhand"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTehri Dam, built on the Bhagirathi River, is in Uttarakhand.\n\n📖 हिंदी स्पष्टीकरण:\nटिहरी बाँध, जो भागीरथी नदी पर बना है, उत्तराखंड में स्थित है।"
     },
     {
       "q_num": 54,
-      "question": "Which one of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "question": "Which one of the following pairs is correctly matched?",
       "options": {
-        "a": "Kaveri – Hogenakkal Falls / कावेरी – होगेनक्कल जलप्रपात",
-        "b": "Godavari – Jog Falls / गोदावरी – जोग जलप्रपात",
-        "c": "Mahanadi – Dudhsagar Falls / महानदी – दूधसागर जलप्रपात",
-        "d": "Krishna – Hundru Falls / कृष्णा – हुंद्रू जलप्रपात"
+        "a": "Kaveri – Hogenakkal Falls",
+        "b": "Godavari – Jog Falls",
+        "c": "Mahanadi – Dudhsagar Falls",
+        "d": "Krishna – Hundru Falls"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHogenakkal Falls is located on the Kaveri River in Tamil Nadu.\n\n📖 हिंदी स्पष्टीकरण:\nहोगेनक्कल जलप्रपात तमिलनाडु में कावेरी नदी पर स्थित है।"
     },
     {
       "q_num": 55,
-      "question": "Western Disturbances bring rain to which part of India in winter?\n पश्चिमी विक्षोभ सर्दियों में भारत के किस भाग में वर्षा लाते हैं?",
+      "question": "Western Disturbances bring rain to which part of India in winter?",
       "options": {
-        "a": "Southern India / दक्षिण भारत",
-        "b": "Northeastern India / उत्तर-पूर्वी भारत",
-        "c": "Northwestern India / उत्तर-पश्चिमी भारत",
-        "d": "Central India / मध्य भारत"
+        "a": "Southern India",
+        "b": "Northeastern India",
+        "c": "Northwestern India",
+        "d": "Central India"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWestern Disturbances cause winter rain in Punjab, Haryana and western Himalayas.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिमी विक्षोभ पंजाब, हरियाणा और पश्चिमी हिमालय में शीतकालीन वर्षा लाते हैं।"
     },
     {
       "q_num": 56,
-      "question": "The Dhuandhar Falls is located on which river?\n धुआंधार जलप्रपात किस नदी पर स्थित है?",
+      "question": "The Dhuandhar Falls is located on which river?",
       "options": {
-        "a": "Tapi / तापी",
-        "b": "Godavari / गोदावरी",
-        "c": "Mahi / माही",
-        "d": "Narmada / नर्मदा"
+        "a": "Tapi",
+        "b": "Godavari",
+        "c": "Mahi",
+        "d": "Narmada"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nDhuandhar Falls is formed by the Narmada River near Jabalpur, Madhya Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nधुआंधार जलप्रपात मध्य प्रदेश के जबलपुर के पास नर्मदा नदी पर स्थित है।"
     },
     {
       "q_num": 57,
-      "question": "Which of the following years recorded a major El Niño event affecting Indian rainfall?\n किस वर्ष में महत्वपूर्ण एल नीनो घटना से भारतीय वर्षा प्रभावित हुई?",
+      "question": "Which of the following years recorded a major El Niño event affecting Indian rainfall?",
       "options": {
         "a": "2015",
         "b": "2018",
@@ -690,216 +690,216 @@
     },
     {
       "q_num": 58,
-      "question": "The Godavari River empties into which of the following?\n गोदावरी नदी निम्नलिखित में से किसमें गिरती है?",
+      "question": "The Godavari River empties into which of the following?",
       "options": {
-        "a": "Arabian Sea / अरब सागर",
-        "b": "Bay of Bengal / बंगाल की खाड़ी",
-        "c": "Indian Ocean / हिंद महासागर",
-        "d": "Chilika Lake / चिलिका झील"
+        "a": "Arabian Sea",
+        "b": "Bay of Bengal",
+        "c": "Indian Ocean",
+        "d": "Chilika Lake"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Godavari forms a large delta before entering the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nगोदावरी बंगाल की खाड़ी में गिरने से पहले विशाल डेल्टा बनाती है।"
     },
     {
       "q_num": 59,
-      "question": "The Krishna River originates from which place?\n कृष्णा नदी की उत्पत्ति कहाँ से होती है?",
+      "question": "The Krishna River originates from which place?",
       "options": {
-        "a": "Amarkantak / अमरकंटक",
-        "b": "Mahabaleshwar / महाबलेश्वर",
-        "c": "Nasik / नासिक",
-        "d": "Chikmagalur / चिकमगलूर"
+        "a": "Amarkantak",
+        "b": "Mahabaleshwar",
+        "c": "Nasik",
+        "d": "Chikmagalur"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Krishna River rises from Mahabaleshwar in the Western Ghats of Maharashtra.\n\n📖 हिंदी स्पष्टीकरण:\nकृष्णा नदी की उत्पत्ति महाराष्ट्र के पश्चिमी घाट स्थित महाबलेश्वर से होती है।"
     },
     {
       "q_num": 60,
-      "question": "Which of the following regions gets rainfall from both Southwest and Northeast Monsoon?\n कौन-सा क्षेत्र दक्षिण-पश्चिम और उत्तर-पूर्व दोनों मानसून से वर्षा प्राप्त करता है?",
+      "question": "Which of the following regions gets rainfall from both Southwest and Northeast Monsoon?",
       "options": {
-        "a": "Rajasthan / राजस्थान",
-        "b": "Western Ghats / पश्चिमी घाट",
-        "c": "Coromandel Coast / कोरोमंडल तट",
-        "d": "Punjab / पंजाब"
+        "a": "Rajasthan",
+        "b": "Western Ghats",
+        "c": "Coromandel Coast",
+        "d": "Punjab"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Coromandel Coast of Tamil Nadu receives rain from both monsoon branches.\n\n📖 हिंदी स्पष्टीकरण:\nतमिल नाडु का कोरोमंडल तट दोनों मानसूनी शाखाओं से वर्षा प्राप्त करता है।"
     },
     {
       "q_num": 61,
-      "question": "Which of the following is India’s largest freshwater lake?\n भारत की सबसे बड़ी मीठे पानी की झील कौन-सी है?",
+      "question": "Which of the following is India’s largest freshwater lake?",
       "options": {
-        "a": "Loktak Lake / लोकतक झील",
-        "b": "Dal Lake / डल झील",
-        "c": "Chilika Lake / चिलिका झील",
-        "d": "Wular Lake / वुलर झील"
+        "a": "Loktak Lake",
+        "b": "Dal Lake",
+        "c": "Chilika Lake",
+        "d": "Wular Lake"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nWular Lake in Jammu & Kashmir is the largest freshwater lake in India.\n\n📖 हिंदी स्पष्टीकरण:\nजम्मू-कश्मीर की वुलर झील भारत की सबसे बड़ी मीठे पानी की झील है।"
     },
     {
       "q_num": 62,
-      "question": "Which of the following regions receives scanty rainfall from the monsoon?\n मानसून से कौन-सा क्षेत्र बहुत कम वर्षा प्राप्त करता है?",
+      "question": "Which of the following regions receives scanty rainfall from the monsoon?",
       "options": {
-        "a": "Konkan Coast / कोंकण तट",
-        "b": "Leh–Ladakh / लेह-लद्दाख",
-        "c": "Assam Valley / असम घाटी",
-        "d": "Kerala Plains / केरल मैदान"
+        "a": "Konkan Coast",
+        "b": "Leh–Ladakh",
+        "c": "Assam Valley",
+        "d": "Kerala Plains"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLeh–Ladakh lies in the rain-shadow zone of the Himalayas and receives very little rain.\n\n📖 हिंदी स्पष्टीकरण:\nलेह-लद्दाख हिमालय की वर्षा छाया क्षेत्र में है, जहाँ बहुत कम वर्षा होती है।"
     },
     {
       "q_num": 63,
-      "question": "Which of the following is the longest west-flowing river of Peninsular India?\n प्रायद्वीपीय भारत की सबसे लंबी पश्चिममुखी नदी कौन-सी है?",
+      "question": "Which of the following is the longest west-flowing river of Peninsular India?",
       "options": {
-        "a": "Narmada / नर्मदा",
-        "b": "Tapi / तापी",
-        "c": "Mahi / माही",
-        "d": "Sabarmati / साबरमती"
+        "a": "Narmada",
+        "b": "Tapi",
+        "c": "Mahi",
+        "d": "Sabarmati"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Narmada is the longest west-flowing river, forming the Narmada valley.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा भारत की सबसे लंबी पश्चिममुखी नदी है, जो नर्मदा घाटी बनाती है।"
     },
     {
       "q_num": 64,
-      "question": "Which month marks the onset of the Southwest Monsoon over Kerala?\n दक्षिण-पश्चिम मानसून केरल में किस महीने में प्रवेश करता है?",
+      "question": "Which month marks the onset of the Southwest Monsoon over Kerala?",
       "options": {
-        "a": "June / जून",
-        "b": "May / मई",
-        "c": "July / जुलाई",
-        "d": "August / अगस्त"
+        "a": "June",
+        "b": "May",
+        "c": "July",
+        "d": "August"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe monsoon usually sets over Kerala around 1st June, marking its onset in India.\n\n📖 हिंदी स्पष्टीकरण:\nमानसून आमतौर पर 1 जून के आस-पास केरल में प्रवेश करता है, जो भारत में इसकी शुरुआत मानी जाती है।"
     },
     {
       "q_num": 65,
-      "question": "Which of the following statements about the Narmada River is correct?\n नर्मदा नदी के संबंध में निम्नलिखित में से कौन-सा कथन सही है?\n (a) It flows through a rift valley. / यह भ्रंशन घाटी से होकर बहती है।\n (b) It drains into the Arabian Sea. / यह अरब सागर में गिरती है।\n (c) It forms the Dhuandhar Falls. / यह धुआंधार जलप्रपात का निर्माण करती है।",
+      "question": "Which of the following statements about the Narmada River is correct?\n(a) It flows through a rift valley.\n(b) It drains into the Arabian Sea.\n(c) It forms the Dhuandhar Falls.",
       "options": {
-        "a": "Only (a) and (b) / केवल (a) और (b)",
-        "b": "Only (b) and (c) / केवल (b) और (c)",
-        "c": "All (a), (b), and (c) / सभी (a), (b) और (c)",
-        "d": "Only (a) / केवल (a)"
+        "a": "Only (a) and (b)",
+        "b": "Only (b) and (c)",
+        "c": "All (a), (b), and (c)",
+        "d": "Only (a)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNarmada flows west through a rift valley, forming Dhuandhar Falls and draining into the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा पश्चिम दिशा में भ्रंश घाटी से बहती है, धुआंधार जलप्रपात बनाती है और अरब सागर में गिरती है।"
     },
     {
       "q_num": 66,
-      "question": "Consider the following statements about El Niño:\n एल नीनो से संबंधित निम्नलिखित कथनों पर विचार कीजिए:\n (a) It is a periodic warming of Pacific Ocean waters. / यह प्रशांत महासागर के जल का आवधिक ऊष्मीकरण है।\n (b)It is beneficial for agriculture in India. / यह भारत की कृषि के लिए लाभदायक है।\n (c) It reduces monsoon rainfall in India. / यह भारत में मानसूनी वर्षा को कम कर देता है।\n Which of the above are correct?\n उपरोक्त में से कौन-से सही हैं?",
+      "question": "Consider the following statements about El Niño:\n(a) It is a periodic warming of Pacific Ocean waters.\n(b)It is beneficial for agriculture in India.\n(c) It reduces monsoon rainfall in India.\n Which of the above are correct?",
       "options": {
-        "a": "(a) and (b) / (a) और (b)",
-        "b": "(b) and (c) / (b) और (c)",
-        "c": "(a) and (c) / (a) और (c)",
-        "d": "(a), (b) and (c) / (a), (b) और (c)"
+        "a": "(a) and (b)",
+        "b": "(b) and (c)",
+        "c": "(a) and (c)",
+        "d": "(a), (b) and (c)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEl Niño warms Pacific waters and weakens Indian monsoon winds, causing reduced rainfall.\n\n📖 हिंदी स्पष्टीकरण:\nएल नीनो प्रशांत महासागर को गरम करता है और भारत में मानसून कमज़ोर हो जाता है।"
     },
     {
       "q_num": 67,
-      "question": "Which of the following rivers forms the Sardar Sarovar Reservoir?\n निम्नलिखित में से कौन-सी नदी सरदार सरोवर जलाशय बनाती है?",
+      "question": "Which of the following rivers forms the Sardar Sarovar Reservoir?",
       "options": {
-        "a": "Tapi / तापी",
-        "b": "Narmada / नर्मदा",
-        "c": "Godavari / गोदावरी",
-        "d": "Mahanadi / महानदी"
+        "a": "Tapi",
+        "b": "Narmada",
+        "c": "Godavari",
+        "d": "Mahanadi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Sardar Sarovar Dam is constructed on the Narmada River in Gujarat.\n\n📖 हिंदी स्पष्टीकरण:\nसरदार सरोवर बाँध गुजरात में नर्मदा नदी पर निर्मित है।"
     },
     {
       "q_num": 68,
-      "question": "El Niño phenomenon is associated with which ocean?\n एल नीनो प्रभाव किस महासागर से संबंधित है?",
+      "question": "El Niño phenomenon is associated with which ocean?",
       "options": {
-        "a": "Pacific Ocean / प्रशांत महासागर",
-        "b": "Atlantic Ocean / अटलांटिक महासागर",
-        "c": "Indian Ocean / हिन्द महासागर",
-        "d": "Arctic Ocean / आर्कटिक महासागर"
+        "a": "Pacific Ocean",
+        "b": "Atlantic Ocean",
+        "c": "Indian Ocean",
+        "d": "Arctic Ocean"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nEl Niño originates in the central and eastern Pacific Ocean and affects global monsoon patterns.\n\n📖 हिंदी स्पष्टीकरण:\nएल नीनो प्रभाव प्रशांत महासागर के केन्द्रीय भाग में उत्पन्न होता है और विश्व भर के मानसूनी पैटर्न को प्रभावित करता है।"
     },
     {
       "q_num": 69,
-      "question": "The Northeast Monsoon brings rain mainly to which region of India?\n उत्तर-पूर्व मानसून मुख्यतः भारत के किस क्षेत्र में वर्षा लाता है?",
+      "question": "The Northeast Monsoon brings rain mainly to which region of India?",
       "options": {
-        "a": "Himalayan states / हिमालयी राज्य",
-        "b": "Rajasthan and Punjab / राजस्थान और पंजाब",
-        "c": "Western Ghats / पश्चिमी घाट",
-        "d": "Tamil Nadu and Southeast coast / तमिल नाडु और दक्षिण-पूर्व तट"
+        "a": "Himalayan states",
+        "b": "Rajasthan and Punjab",
+        "c": "Western Ghats",
+        "d": "Tamil Nadu and Southeast coast"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe northeast monsoon brings rain to Tamil Nadu and southeastern coast between October and December.\n\n📖 हिंदी स्पष्टीकरण:\nउत्तर-पूर्व मानसून अक्टूबर से दिसंबर तक तमिल नाडु और दक्षिण-पूर्व तट पर वर्षा लाता है।"
     },
     {
       "q_num": 70,
-      "question": "The Krishna River is also known as which of the following names?\n कृष्णा नदी को निम्नलिखित में से किस नाम से भी जाना जाता है?",
+      "question": "The Krishna River is also known as which of the following names?",
       "options": {
-        "a": "Leitha / लेइथा",
-        "b": "Dakshina Vaidarbhi / दक्षिण वैदर्भी",
-        "c": "Ponni / पोन्नी",
-        "d": "Dakshina Ganga / दक्षिण गंगा"
+        "a": "Leitha",
+        "b": "Dakshina Vaidarbhi",
+        "c": "Ponni",
+        "d": "Dakshina Ganga"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Krishna River is also known as Dakshina Ganga. It is the second-longest river in southern India after the Godavari.\n\n📖 हिंदी स्पष्टीकरण:\nकृष्णा नदी को दक्षिण गंगा के नाम से भी जाना जाता है। यह गोदावरी के बाद दक्षिण भारत की दूसरी सबसे लंबी नदी है।"
     },
     {
       "q_num": 71,
-      "question": "Consider the following statements regarding Southwest Monsoon:\n दक्षिण-पश्चिम मानसून से संबंधित निम्नलिखित कथनों पर विचार कीजिए:\n (a) It arrives in India by early June. / यह भारत में जून की शुरुआत तक पहुँचती है।\n (b) It withdraws from northwestern India by September. / यह सितंबर तक उत्तर-पश्चिम भारत से लौट जाती है।\n (c) It causes rainfall only in southern India. / यह केवल दक्षिण भारत में वर्षा कराती है।\n Which of the above are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Southwest Monsoon:\n(a) It arrives in India by early June.\n(b) It withdraws from northwestern India by September.\n(c) It causes rainfall only in southern India.\n Which of the above are correct?",
       "options": {
-        "a": "(a) and (c) / (a) और (c)",
-        "b": "(b) and (c) / (b) और (c)",
-        "c": "(a) and (b) / (a) और (b)",
-        "d": "(a), (b) and (c) / (a), (b) और (c)"
+        "a": "(a) and (c)",
+        "b": "(b) and (c)",
+        "c": "(a) and (b)",
+        "d": "(a), (b) and (c)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe southwest monsoon reaches India in June and starts retreating by September; it covers most of the country, not just the south.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण-पश्चिम मानसून जून में भारत में प्रवेश करता है और सितंबर तक वापस होने लगता है; यह केवल दक्षिण नहीं बल्कि पूरे देश को प्रभावित करता है।"
     },
     {
       "q_num": 72,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Bhavanisagar Dam – Mahanadi / भवानीसागर बाँध – महानदी",
-        "b": "Rihand Dam – Son River / रिहंद बाँध – सोन नदी",
-        "c": "Tehri Dam – Alaknanda / टिहरी बाँध – अलकनंदा",
-        "d": "Hirakud Dam – Krishna River / हीराकुंड बाँध – कृष्णा नदी"
+        "a": "Bhavanisagar Dam – Mahanadi",
+        "b": "Rihand Dam – Son River",
+        "c": "Tehri Dam – Alaknanda",
+        "d": "Hirakud Dam – Krishna River"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRihand Dam is built on the Rihand, a tributary of the Son River in Uttar Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nरिहंद बाँध उत्तर प्रदेश में सोन नदी की सहायक रिहंद नदी पर बना है।"
     },
     {
       "q_num": 73,
-      "question": "Which one of the following causes monsoon in India?\n भारत में मानसून का मुख्य कारण क्या है?",
+      "question": "Which one of the following causes monsoon in India?",
       "options": {
-        "a": "Coriolis Effect / कोरिओलिस प्रभाव",
-        "b": "Differential heating of land and sea / भूमि और समुद्र के असमान ताप",
-        "c": "Jet Streams / जेट धाराएँ",
-        "d": "El Niño / एल नीनो"
+        "a": "Coriolis Effect",
+        "b": "Differential heating of land and sea",
+        "c": "Jet Streams",
+        "d": "El Niño"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMonsoon winds arise due to unequal heating of land and sea causing seasonal pressure differences.\n\n📖 हिंदी स्पष्टीकरण:\nभूमि और समुद्र के असमान ताप से दबाव अंतर उत्पन्न होता है जो मानसूनी हवाओं का मुख्य कारण है।"
     },
     {
       "q_num": 74,
-      "question": "Which of the following rivers flows eastward?\n निम्नलिखित में से कौन-सी नदी पूर्व की ओर बहती है?",
+      "question": "Which of the following rivers flows eastward?",
       "options": {
-        "a": "Mandovi / मांडोवी",
-        "b": "Narmada / नर्मदा",
-        "c": "Tapi / तापी",
-        "d": "Mahanadi / महानदी"
+        "a": "Mandovi",
+        "b": "Narmada",
+        "c": "Tapi",
+        "d": "Mahanadi"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMahanadi flows eastward into the Bay of Bengal, while Narmada and Tapi flow westward.\n\n📖 हिंदी स्पष्टीकरण:\nमहानदी पूर्व की ओर बंगाल की खाड़ी में गिरती है, जबकि नर्मदा व तापी पश्चिम की ओर बहती हैं।"
     },
     {
       "q_num": 75,
-      "question": "Which of the following brings most of the annual rainfall to India?\n भारत में वार्षिक वर्षा का अधिकांश भाग किससे प्राप्त होता है?",
+      "question": "Which of the following brings most of the annual rainfall to India?",
       "options": {
-        "a": "Southwest Monsoon / दक्षिण-पश्चिम मानसून",
-        "b": "Northeast Monsoon / उत्तर-पूर्व मानसून",
-        "c": "Western Disturbances / पश्चिमी विक्षोभ",
-        "d": "Local Thunderstorms / स्थानीय आंधी वर्षाएँ"
+        "a": "Southwest Monsoon",
+        "b": "Northeast Monsoon",
+        "c": "Western Disturbances",
+        "d": "Local Thunderstorms"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAbout 75% of India’s rainfall occurs during the southwest monsoon (June–September).\n\n📖 हिंदी स्पष्टीकरण:\nभारत की लगभग 75% वर्षा जून से सितंबर के दक्षिण-पश्चिम मानसून दौरान होती है।"

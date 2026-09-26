@@ -6,31 +6,31 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who founded the Brahmo Samaj in 1828? / 1828 में ब्रह्म समाज की स्थापना किसने की थी?",
+      "question": "Who founded the Brahmo Samaj in 1828?",
       "options": {
-        "a": "Swami Dayanand Saraswati / स्वामी दयानंद सरस्वती",
-        "b": "Raja Ram Mohan Roy / राजा राम मोहन राय",
-        "c": "Ishwar Chandra Vidyasagar / ईश्वर चंद्र विद्यासागर",
-        "d": "Swami Vivekananda / स्वामी विवेकानंद"
+        "a": "Swami Dayanand Saraswati",
+        "b": "Raja Ram Mohan Roy",
+        "c": "Ishwar Chandra Vidyasagar",
+        "d": "Swami Vivekananda"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRaja Ram Mohan Roy established the Brahmo Sabha in 1828, which later became the Brahmo Samaj. He is known as the 'Father of Indian Renaissance' for his efforts against social evils like Sati\n\n📖 हिंदी स्पष्टीकरण:\nराजा राम मोहन राय ने 1828 में ब्रह्म सभा की स्थापना की, जो बाद में ब्रह्म समाज बना। सती प्रथा जैसी सामाजिक बुराइयों के खिलाफ उनके प्रयासों के लिए उन्हें 'भारतीय पुनर्जागरण का पिता' कहा जाता है।"
     },
     {
       "q_num": 2,
-      "question": "Which reformist movement gave the slogan \"Back to Vedas\"? / किस सुधारवादी आंदोलन ने \"वेदों की ओर लौटो\" का नारा दिया था?",
+      "question": "Which reformist movement gave the slogan \"Back to Vedas\"?",
       "options": {
-        "a": "Brahmo Samaj / ब्रह्म समाज",
-        "b": "Arya Samaj / आर्य समाज",
-        "c": "Prarthana Samaj / प्रार्थना समाज",
-        "d": "Ramakrishna Mission / रामकृष्ण मिशन"
+        "a": "Brahmo Samaj",
+        "b": "Arya Samaj",
+        "c": "Prarthana Samaj",
+        "d": "Ramakrishna Mission"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSwami Dayanand Saraswati founded the Arya Samaj in 1875 and gave the slogan \"Back to Vedas\" to revive Vedic knowledge. He believed Vedas were infallible and the source of all truth\n\n📖 हिंदी स्पष्टीकरण:\nस्वामी दयानंद सरस्वती ने 1875 में आर्य समाज की स्थापना की और वैदिक ज्ञान को पुनर्जीवित करने के लिए \"वेदों की ओर लौटो\" का नारा दिया। उनका मानना ​​था कि वेद अचूक और सत्य के स्रोत हैं।"
     },
     {
       "q_num": 3,
-      "question": "Sati System was officially abolished in India in which year? / भारत में आधिकारिक तौर पर सती प्रथा को किस वर्ष समाप्त किया गया था?",
+      "question": "Sati System was officially abolished in India in which year?",
       "options": {
         "a": "1829",
         "b": "1856",
@@ -42,175 +42,175 @@
     },
     {
       "q_num": 4,
-      "question": "Who established the Ramakrishna Mission in 1897? / 1897 में रामकृष्ण मिशन की स्थापना किसने की थी?",
+      "question": "Who established the Ramakrishna Mission in 1897?",
       "options": {
-        "a": "Ramakrishna Paramhansa / रामकृष्ण परमहंस",
-        "b": "Swami Vivekananda / स्वामी विवेकानंद",
-        "c": "Debendranath Tagore / देवेंद्रनाथ टैगोर",
-        "d": "Keshab Chandra Sen / केशव चंद्र सेन"
+        "a": "Ramakrishna Paramhansa",
+        "b": "Swami Vivekananda",
+        "c": "Debendranath Tagore",
+        "d": "Keshab Chandra Sen"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSwami Vivekananda founded the Ramakrishna Mission in 1897 at Belur, West Bengal, to propagate the teachings of his guru, Ramakrishna Paramhansa. The mission focuses on social service and spiritual growth\n\n📖 हिंदी स्पष्टीकरण:\nस्वामी विवेकानंद ने 1897 में पश्चिम बंगाल के बेलूर में अपने गुरु रामकृष्ण परमहंस की शिक्षाओं के प्रचार के लिए रामकृष्ण मिशन की स्थापना की। यह मिशन समाज सेवा और आध्यात्मिक विकास पर ध्यान केंद्रित करता है।"
     },
     {
       "q_num": 5,
-      "question": "Who was the founder of Satyasodhak Samaj? / सत्यशोधक समाज के संस्थापक कौन थे?",
+      "question": "Who was the founder of Satyasodhak Samaj?",
       "options": {
-        "a": "B.R. Ambedkar / बी.आर. अंबेडकर",
-        "b": "Jyotiba Phule / ज्योतिबा फुले",
-        "c": "E.V. Ramaswamy Naicker / ई.वी. रामास्वामी नायकर",
-        "d": "Narayan Guru / नारायण गुरु"
+        "a": "B.R. Ambedkar",
+        "b": "Jyotiba Phule",
+        "c": "E.V. Ramaswamy Naicker",
+        "d": "Narayan Guru"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJyotiba Phule founded the Satyasodhak Samaj in Maharashtra in 1873 to fight against caste discrimination. He worked for the upliftment of the lower castes and women's education\n\n📖 हिंदी स्पष्टीकरण:\nज्योतिबा फुले ने जातिगत भेदभाव के खिलाफ लड़ने के लिए 1873 में महाराष्ट्र में सत्यशोधक समाज की स्थापना की। उन्होंने निचली जातियों के उत्थान और महिला शिक्षा के लिए काम किया।"
     },
     {
       "q_num": 6,
-      "question": "The 'Widow Remarriage Act' of 1856 was passed due to the efforts of: / 1856 का 'विधवा पुनर्विवाह अधिनियम' किसके प्रयासों से पारित हुआ था?",
+      "question": "The 'Widow Remarriage Act' of 1856 was passed due to the efforts of:",
       "options": {
-        "a": "Raja Ram Mohan Roy / राजा राम मोहन राय",
-        "b": "Ishwar Chandra Vidyasagar / ईश्वर चंद्र विद्यासागर",
-        "c": "M.G. Ranade / एम.जी. रानाडे",
-        "d": "D.K. Karve / डी.के. कर्वे"
+        "a": "Raja Ram Mohan Roy",
+        "b": "Ishwar Chandra Vidyasagar",
+        "c": "M.G. Ranade",
+        "d": "D.K. Karve"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIshwar Chandra Vidyasagar, the Principal of Sanskrit College, strongly advocated for widow remarriage. His efforts led Lord Dalhousie to draft the act, which was passed under Lord Canning in 1856\n\n📖 हिंदी स्पष्टीकरण:\nसंस्कृत कॉलेज के प्रधानाचार्य ईश्वर चंद्र विद्यासागर ने विधवा पुनर्विवाह की जोरदार वकालत की। उनके प्रयासों से लॉर्ड डलहौजी ने अधिनियम का मसौदा तैयार किया, जिसे 1856 में लॉर्ड कैनिंग के तहत पारित किया गया।"
     },
     {
       "q_num": 7,
-      "question": "What was the original name of Swami Dayanand Saraswati? / स्वामी दयानंद सरस्वती का मूल नाम क्या था?",
+      "question": "What was the original name of Swami Dayanand Saraswati?",
       "options": {
-        "a": "Narendranath Dutta / नरेंद्रनाथ दत्त",
-        "b": "Gadodhar Chattopadhyay / गदाधर चट्टोपाध्याय",
-        "c": "Mool Shankar / मूल शंकर",
-        "d": "Siddhartha / सिद्धार्थ"
+        "a": "Narendranath Dutta",
+        "b": "Gadodhar Chattopadhyay",
+        "c": "Mool Shankar",
+        "d": "Siddhartha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSwami Dayanand Saraswati, the founder of Arya Samaj, was born as Mool Shankar in Gujarat. He later became a wandering ascetic before founding the reform movement\n\n📖 हिंदी स्पष्टीकरण:\nआर्य समाज के संस्थापक स्वामी दयानंद सरस्वती का जन्म गुजरात में मूल शंकर के रूप में हुआ था। सुधार आंदोलन की स्थापना करने से पहले वे एक परिव्राजक संन्यासी बन गए थे।"
     },
     {
       "q_num": 8,
-      "question": "Who is known as 'Lokahitwadi'? / 'लोकहितवादी' के रूप में किसे जाना जाता है?",
+      "question": "Who is known as 'Lokahitwadi'?",
       "options": {
-        "a": "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "b": "Gopal Hari Deshmukh / गोपाल हरि देशमुख",
-        "c": "Balshastri Jambhekar / बालशास्त्री जांभेकर",
-        "d": "Atmaram Pandurang / आत्माराम पांडुरंग"
+        "a": "Gopal Krishna Gokhale",
+        "b": "Gopal Hari Deshmukh",
+        "c": "Balshastri Jambhekar",
+        "d": "Atmaram Pandurang"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGopal Hari Deshmukh was a social reformer from Maharashtra who wrote under the pen name 'Lokahitwadi'. He advocated for rationalism and social equality through his writings in the weekly 'Prabhakar'\n\n📖 हिंदी स्पष्टीकरण:\nगोपाल हरि देशमुख महाराष्ट्र के एक समाज सुधारक थे जो 'लोकहितवादी' उपनाम से लिखते थे। उन्होंने साप्ताहिक 'प्रभाकर' में अपने लेखों के माध्यम से तर्कवाद और सामाजिक समानता की वकालत की।"
     },
     {
       "q_num": 9,
-      "question": "Aligarh Movement was started by: / अलीगढ़ आंदोलन किसके द्वारा शुरू किया गया था?",
+      "question": "Aligarh Movement was started by:",
       "options": {
-        "a": "Mohammad Ali Jinnah / मोहम्मद अली जिन्ना",
-        "b": "Sir Syed Ahmed Khan / सर सैयद अहमद खान",
-        "c": "Hazi Shariatullah / हाजी शरीयतुल्लाह",
-        "d": "Mirza Ghulam Ahmad / मिर्जा गुलाम अहमद"
+        "a": "Mohammad Ali Jinnah",
+        "b": "Sir Syed Ahmed Khan",
+        "c": "Hazi Shariatullah",
+        "d": "Mirza Ghulam Ahmad"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSir Syed Ahmed Khan started the Aligarh Movement in 1875 to promote modern western education among Muslims. He established the Mohammaden Anglo-Oriental College, which later became Aligarh Muslim University\n\n📖 हिंदी स्पष्टीकरण:\nसर सैयद अहमद खान ने मुसलमानों के बीच आधुनिक पश्चिमी शिक्षा को बढ़ावा देने के लिए 1875 में अलीगढ़ आंदोलन शुरू किया। उन्होंने मोहम्मडन एंग्लो-ओरिएंटल कॉलेज की स्थापना की, जो बाद में अलीगढ़ मुस्लिम विश्वविद्यालय बना।"
     },
     {
       "q_num": 10,
-      "question": "Who was the founder of the 'Servants of India Society'? / 'सर्वेंट्स ऑफ इंडिया सोसाइटी' के संस्थापक कौन थे?",
+      "question": "Who was the founder of the 'Servants of India Society'?",
       "options": {
-        "a": "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "b": "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "c": "Lala Lajpat Rai / लाला लाजपत राय",
-        "d": "Dadabhai Naoroji / दादाभाई नौरोजी"
+        "a": "Bal Gangadhar Tilak",
+        "b": "Gopal Krishna Gokhale",
+        "c": "Lala Lajpat Rai",
+        "d": "Dadabhai Naoroji"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGopal Krishna Gokhale, the political guru of Mahatma Gandhi, founded the Servants of India Society in 1905. Its aim was to train Indians to devote their lives to the cause of the country\n\n📖 हिंदी स्पष्टीकरण:\nमहात्मा गांधी के राजनीतिक गुरु गोपाल कृष्ण गोखले ने 1905 में सर्वेंट्स ऑफ इंडिया सोसाइटी की स्थापना की। इसका उद्देश्य भारतीयों को देश के लिए अपना जीवन समर्पित करने के लिए प्रशिक्षित करना था।"
     },
     {
       "q_num": 11,
-      "question": "The 'Sarda Act' of 1930 was related to which social issue?\n 1930 का 'शारदा अधिनियम' किस सामाजिक मुद्दे से संबंधित था?",
+      "question": "The 'Sarda Act' of 1930 was related to which social issue?",
       "options": {
-        "a": "Sati Abolition / सती उन्मूलन",
-        "b": "Child Marriage / बाल विवाह",
-        "c": "Widow Remarriage / विधवा पुनर्विवाह",
-        "d": "Women Education / महिला शिक्षा"
+        "a": "Sati Abolition",
+        "b": "Child Marriage",
+        "c": "Widow Remarriage",
+        "d": "Women Education"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Sarda Act fixed the minimum age of marriage for girls at 14 and boys at 18. It was named after its sponsor, Harbilas Sarda, and was a landmark in the fight against child marriage\n\n📖 हिंदी स्पष्टीकरण:\nशारदा अधिनियम ने लड़कियों के लिए विवाह की न्यूनतम आयु 14 वर्ष और लड़कों के लिए 18 वर्ष निर्धारित की। इसका नाम इसके प्रायोजक हरबिलास शारदा के नाम पर रखा गया था और यह बाल विवाह के खिलाफ लड़ाई में एक मील का पत्थर था।"
     },
     {
       "q_num": 12,
-      "question": "Who founded the 'Bharat Stree Mahamandal' in 1910? / 1910 में 'भारत स्त्री महामंडल' की स्थापना किसने की थी?",
+      "question": "Who founded the 'Bharat Stree Mahamandal' in 1910?",
       "options": {
-        "a": "Ramabai Ranade / रमाबाई रानाडे",
-        "b": "Sarla Devi Chaudharani / सरला देवी चौधरानी",
-        "c": "Pandita Ramabai / पंडिता रामाबाई",
-        "d": "Annie Besant / एनी बेसेंट"
+        "a": "Ramabai Ranade",
+        "b": "Sarla Devi Chaudharani",
+        "c": "Pandita Ramabai",
+        "d": "Annie Besant"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSarla Devi Chaudharani founded the Bharat Stree Mahamandal in Allahabad in 1910. It was the first major Indian women's organization set up by a woman to promote women's interests\n\n📖 हिंदी स्पष्टीकरण:\nसरला देवी चौधरानी ने 1910 में इलाहाबाद में भारत स्त्री महामंडल की स्थापना की। महिलाओं के हितों को बढ़ावा देने के लिए किसी महिला द्वारा स्थापित यह पहला बड़ा भारतीय महिला संगठन था।"
     },
     {
       "q_num": 13,
-      "question": "'Wood's Despatch' of 1854 is famously known as: / 1854 के 'वुड्स डिस्पैच' को प्रसिद्ध रूप से किस नाम से जाना जाता है?",
+      "question": "'Wood's Despatch' of 1854 is famously known as:",
       "options": {
-        "a": "Magna Carta of Indian Education / भारतीय शिक्षा का मैग्ना कार्टा",
-        "b": "Downward Filtration Theory / अधोमुखी निस्पंदन सिद्धांत",
-        "c": "Minute on Indian Education / भारतीय शिक्षा पर मिनट",
-        "d": "Vernacular Press Act / वर्नाक्युलर प्रेस अधिनियम"
+        "a": "Magna Carta of Indian Education",
+        "b": "Downward Filtration Theory",
+        "c": "Minute on Indian Education",
+        "d": "Vernacular Press Act"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCharles Wood's Despatch of 1854 is called the Magna Carta of Indian Education as it laid the foundation for the modern education system. It emphasized primary education in vernaculars and higher education in English. / 1854\n\n📖 हिंदी स्पष्टीकरण:\nके चार्ल्स वुड के डिस्पैच को भारतीय शिक्षा का मैग्ना कार्टा कहा जाता है क्योंकि इसने आधुनिक शिक्षा प्रणाली की नींव रखी थी। इसने स्थानीय भाषाओं में प्राथमिक शिक्षा और अंग्रेजी में उच्च शिक्षा पर जोर दिया।"
     },
     {
       "q_num": 14,
-      "question": "The 'Self-Respect Movement' was started in South India by: / दक्षिण भारत में 'आत्म-सम्मान आंदोलन' किसके द्वारा शुरू किया गया था?",
+      "question": "The 'Self-Respect Movement' was started in South India by:",
       "options": {
-        "a": "T.K. Madhavan / टी.के. माधवन",
-        "b": "E.V. Ramaswamy Naicker / ई.वी. रामास्वामी नायकर",
-        "c": "C.N. Mudaliar / सी.एन. मुदालियर",
-        "d": "Sri Narayana Guru / श्री नारायण गुरु"
+        "a": "T.K. Madhavan",
+        "b": "E.V. Ramaswamy Naicker",
+        "c": "C.N. Mudaliar",
+        "d": "Sri Narayana Guru"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nE.V. Ramaswamy Naicker, popularly known as Periyar, started the Self-Respect Movement in 1925 in Tamil Nadu. The movement aimed at achieving a society where backward castes have equal human rights\n\n📖 हिंदी स्पष्टीकरण:\nई.वी. रामास्वामी नायकर, जिन्हें पेरियार के नाम से जाना जाता है, ने 1925 में तमिलनाडु में आत्म-सम्मान आंदोलन शुरू किया। आंदोलन का उद्देश्य एक ऐसा समाज बनाना था जहाँ पिछड़ी जातियों को समान मानवाधिकार प्राप्त हों।"
     },
     {
       "q_num": 15,
-      "question": "Who authored the books 'Gulamgiri' and 'Sarvajanik Satyadharma'? / 'गुलामगिरी' और 'सार्वजनिक सत्यधर्म' पुस्तकों के लेखक कौन थे?",
+      "question": "Who authored the books 'Gulamgiri' and 'Sarvajanik Satyadharma'?",
       "options": {
-        "a": "B.R. Ambedkar / बी.आर. अंबेडकर",
-        "b": "Jyotiba Phule / ज्योतिबा फुले",
-        "c": "Savitribai Phule / सावित्रीबाई फुले",
-        "d": "M.G. Ranade / एम.जी. रानाडे"
+        "a": "B.R. Ambedkar",
+        "b": "Jyotiba Phule",
+        "c": "Savitribai Phule",
+        "d": "M.G. Ranade"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJyotiba Phule wrote 'Gulamgiri' in 1873, dedicating it to the American movement to free slaves. 'Sarvajanik Satyadharma' was his last work, published posthumously, outlining his philosophy of social equality\n\n📖 हिंदी स्पष्टीकरण:\nज्योतिबा फुले ने 1873 में 'गुलामगिरी' लिखी, जिसे उन्होंने गुलामों को मुक्त करने के अमेरिकी आंदोलन को समर्पित किया। 'सार्वजनिक सत्यधर्म' उनका अंतिम कार्य था, जो उनकी मृत्यु के बाद प्रकाशित हुआ।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding Raja Ram Mohan Roy:\n 1. He established Atmiya Sabha in 1814.\n 2. He translated Vedas and Upanishads into Bengali.\n Which of the statements given above is/are correct?\n राजा राम मोहन राय के संबंध में निम्नलिखित कथनों पर विचार करें:\n 3. उन्होंने 1814 में आत्मीय सभा की स्थापना की।\n 4. उन्होंने वेदों और उपनिषदों का बंगाली में अनुवाद किया।\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Raja Ram Mohan Roy:\n 1. He established Atmiya Sabha in 1814.\n 2. He translated Vedas and Upanishads into Bengali.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "Only I / केवल I",
-        "b": "Only II / केवल II",
-        "c": "Both I and II / I और II दोनों",
-        "d": "Neither I nor II / न तो I और न ही II"
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nRaja Ram Mohan Roy founded Atmiya Sabha as a forerunner to Brahmo Samaj and translated sacred Hindu texts into Bengali to prove that they support monotheism\n\n📖 हिंदी स्पष्टीकरण:\nराजा राम मोहन राय ने ब्रह्म समाज के अग्रदूत के रूप में आत्मीय सभा की स्थापना की और पवित्र हिंदू ग्रंथों का बंगाली में अनुवाद किया ताकि यह साबित हो सके कि वे एकेश्वरवाद का समर्थन करते हैं।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): Swami Dayanand Saraswati rejected the authority of Puranas.\n अभिकथन (A): स्वामी दयानंद सरस्वती ने पुराणों के अधिकार को खारिज कर दिया।\n Reason (R): He believed that only Vedas are infallible and the source of true knowledge.\n कारण (R): उनका मानना ​​था कि केवल वेद ही अचूक और सच्चे ज्ञान के स्रोत हैं।",
+      "question": "Assertion (A): Swami Dayanand Saraswati rejected the authority of Puranas.\n Reason (R): He believed that only Vedas are infallible and the source of true knowledge.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDayanand Saraswati advocated for \"Back to Vedas\" because he found Puranas to be full of myths and responsible for social evils like idol worship\n\n📖 हिंदी स्पष्टीकरण:\nदयानंद सरस्वती ने \"वेदों की ओर लौटो\" की वकालत की क्योंकि उन्होंने पुराणों को मिथकों से भरा और मूर्ति पूजा जैसी सामाजिक बुराइयों के लिए जिम्मेदार पाया।"
     },
     {
       "q_num": 18,
-      "question": "Match List I with List II and select the correct answer:\n सूची I को सूची II से सुमेलित करें:\n List I (Movement/Org): सूची I (आंदोलन/संगठन):\n 1. Prarthana Samaj, प्रार्थना समाज\n 2. Arya Samaj, आर्य समाज\n 3. Deoband Movement, देवबंद आंदोलन\n 4. Satyashodhak Samaj / सत्यशोधक समाज\n List II (Founder): सूची II (संस्थापक):\n 5. Dayanand Saraswati, दयानंद सरस्वती\n 6. Atmaram Pandurang, आत्माराम पांडुरंग\n 7. Jyotiba Phule, ज्योतिबा फुले\n 8. Nanotovi and Gangohi, ननौतवी और गंगोही",
+      "question": "Match List I with List II and select the correct answer:\nList I (Movement/Org):\n1. Prarthana Samaj,\n2. Arya Samaj,\n3. Deoband Movement,\n4. Satyashodhak Samaj\nList II (Founder):\n5. Dayanand Saraswati,\n6. Atmaram Pandurang,\n7. Jyotiba Phule,\n8. Nanotovi and Gangohi,",
       "options": {
         "a": "A-2, B-1, C-4, D-3",
         "b": "A-1, B-2, C-3, D-4",
@@ -222,84 +222,84 @@
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements is NOT correct about the Theosophical Society? /\n थियोसोफिकल सोसाइटी के बारे में निम्नलिखित में से कौन सा कथन सही नहीं है?",
+      "question": "Which of the following statements is NOT correct about the Theosophical Society? /",
       "options": {
-        "a": "It was founded in New York in 1875. / इसकी स्थापना 1875 में न्यूयॉर्क में हुई थी।",
-        "b": "Its headquarters were shifted to Adyar (Madras) in 1882. / इसका मुख्यालय 1882 में अड्यार (मद्रास) स्थानांतरित कर दिया गया था।",
-        "c": "Annie Besant was one of its founding members. / एनी बेसेंट इसके संस्थापक सदस्यों में से एक थीं।",
-        "d": "It was influenced by Hindu beliefs like Karma and Reincarnation. / यह कर्म और पुनर्जन्म जैसे हिंदू विश्वासों से प्रभावित था।"
+        "a": "It was founded in New York in 1875.",
+        "b": "Its headquarters were shifted to Adyar (Madras) in 1882.",
+        "c": "Annie Besant was one of its founding members.",
+        "d": "It was influenced by Hindu beliefs like Karma and Reincarnation."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe society was founded by H.P. Blavatsky and M.S. Olcott. Annie Besant joined the society later and became its President in 1907\n\n📖 हिंदी स्पष्टीकरण:\nसोसाइटी की स्थापना एच.पी. ब्लावत्स्की और एम.एस. ओल्कोट ने की थी। एनी बेसेंट बाद में सोसाइटी में शामिल हुईं और 1907 में इसकी अध्यक्ष बनीं।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): The Young Bengal Movement failed to have a long-term impact on society.\n अभिकथन (A): यंग बंगाल आंदोलन समाज पर दीर्घकालिक प्रभाव डालने में विफल रहा।\n Reason (R): Its radicalism was too advanced for the then existing social conditions.\n कारण (R): इसकी कट्टरपंथिता तत्कालीन सामाजिक परिस्थितियों के लिए बहुत आगे थी।",
+      "question": "Assertion (A): The Young Bengal Movement failed to have a long-term impact on society.\n Reason (R): Its radicalism was too advanced for the then existing social conditions.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHenry Vivian Derozio's followers were very radical in their thoughts (Young Bengal), which alienated them from the mainstream conservative society of that time\n\n📖 हिंदी स्पष्टीकरण:\nहेनरी विवियन डेरोजियो के अनुयायी अपने विचारों (यंग बंगाल) में बहुत कट्टरपंथी थे, जिसने उन्हें उस समय के मुख्यधारा के रूढ़िवादी समाज से अलग कर दिया था।"
     },
     {
       "q_num": 21,
-      "question": "Who led the 'Vaikom Satyagraha' in 1924? / 1924 में ‘वायकोम सत्याग्रह' का नेतृत्व किसने किया था?",
+      "question": "Who led the 'Vaikom Satyagraha' in 1924?",
       "options": {
-        "a": "B.R. Ambedkar / बी.आर. अंबेडकर",
-        "b": "K.P. Keshav / के.पी. केशव",
-        "c": "Sri Narayana Guru / श्री नारायण गुरु",
-        "d": "T.K. Madhavan / टी.के. माधवन"
+        "a": "B.R. Ambedkar",
+        "b": "K.P. Keshav",
+        "c": "Sri Narayana Guru",
+        "d": "T.K. Madhavan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nVaikom Satyagraha was a movement in Travancore (Kerala) against untouchability and for the right of lower castes to use the roads near the Vaikom Temple. It was led by K.P. Keshav Menon\n\n📖 हिंदी स्पष्टीकरण:\nवायकोम सत्याग्रह अस्पृश्यता के खिलाफ और निचली जातियों के वायकोम मंदिर के पास की सड़कों का उपयोग करने के अधिकार के लिए त्रावणकोर (केरल) में एक आंदोलन था। इसका नेतृत्व के.पी. केशव मेनन ने किया था।"
     },
     {
       "q_num": 22,
-      "question": "Which of the following is correct regarding 'Bahishkrit Hitakarini Sabha'? / 'बहिष्कृत हितकारिणी सभा' ​​के संबंध में निम्नलिखित में से कौन सा सही है?",
+      "question": "Which of the following is correct regarding 'Bahishkrit Hitakarini Sabha'?",
       "options": {
-        "a": "Founded by Jyotiba Phule in 1873. / 1873 में ज्योतिबा फुले द्वारा स्थापित।",
-        "b": "Founded by B.R. Ambedkar in 1924. / 1924 में बी.आर. अंबेडकर द्वारा स्थापित।",
-        "c": "Founded by M.G. Ranade in 1861. / 1861 में एम.जी. रानाडे द्वारा स्थापित।",
-        "d": "Founded by Narayan Guru in 1903. / 1903 में नारायण गुरु द्वारा स्थापित।"
+        "a": "Founded by Jyotiba Phule in 1873.",
+        "b": "Founded by B.R. Ambedkar in 1924.",
+        "c": "Founded by M.G. Ranade in 1861.",
+        "d": "Founded by Narayan Guru in 1903."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDr. B.R. Ambedkar founded this organization in Bombay to promote education and socio-economic improvement of the Dalits (then called depressed classes)\n\n📖 हिंदी स्पष्टीकरण:\nडॉ. बी.आर. अंबेडकर ने दलितों (तब दबे हुए वर्ग कहलाते थे) की शिक्षा और सामाजिक-आर्थिक सुधार को बढ़ावा देने के लिए बॉम्बे में इस संगठन की स्थापना की थी।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): The Dharma Sabha was founded to support social reforms like Sati abolition.\n Reason (R): Radhakant Deb was a revivalist who opposed Raja Ram Mohan Roy's ideas.\n अभिकथन (A): धर्म सभा की स्थापना सती उन्मूलन जैसे सामाजिक सुधारों के समर्थन के लिए की गई थी।\n कारण (R): राधाकांत देब एक पुनरुत्थानवादी थे जिन्होंने राजा राम मोहन राय के विचारों का विरोध किया था।",
+      "question": "Assertion (A): The Dharma Sabha was founded to support social reforms like Sati abolition.\n Reason (R): Radhakant Deb was a revivalist who opposed Raja Ram Mohan Roy's ideas.",
       "options": {
-        "a": "Both A and R are true and R is correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "A is false but R is true. / A असत्य है लेकिन R सत्य है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "Both A and R are false. / A और R दोनों असत्य हैं।"
+        "a": "Both A and R are true and R is correct explanation of A.",
+        "b": "A is false but R is true.",
+        "c": "A is true but R is false.",
+        "d": "Both A and R are false."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDharma Sabha was actually founded by Radhakant Deb in 1830 to oppose the abolition of Sati and to protect orthodox Hindu customs against the reforms of Raja Ram Mohan Roy\n\n📖 हिंदी स्पष्टीकरण:\nधर्म सभा की स्थापना वास्तव में राधाकांत देब ने 1830 में सती प्रथा के उन्मूलन का विरोध करने और राजा राम मोहन राय के सुधारों के खिलाफ रूढ़िवादी हिंदू रीति-रिवाजों की रक्षा के लिए की थी।"
     },
     {
       "q_num": 24,
-      "question": "Which movement was started in 1820s in Chhattisgarh by Guru Ghasidas? / गुरु घासीदास द्वारा 1820 के दशक में छत्तीसगढ़ में कौन सा आंदोलन शुरू किया गया था?",
+      "question": "Which movement was started in 1820s in Chhattisgarh by Guru Ghasidas?",
       "options": {
-        "a": "Satnami Movement / सतनामी आंदोलन",
-        "b": "Self-Respect Movement / आत्म-सम्मान आंदोलन",
-        "c": "Justice Movement / न्याय आंदोलन",
-        "d": "Singh Sabha Movement / सिंह सभा आंदोलन"
+        "a": "Satnami Movement",
+        "b": "Self-Respect Movement",
+        "c": "Justice Movement",
+        "d": "Singh Sabha Movement"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nGuru Ghasidas started the Satnami Movement to improve the social status of leatherworkers (Chamars) in Chhattisgarh, advocating for social equality and the worship of 'Satnam' (one true name)\n\n📖 हिंदी स्पष्टीकरण:\nगुरु घासीदास ने छत्तीसगढ़ में चर्मकारों की सामाजिक स्थिति में सुधार के लिए सतनामी आंदोलन शुरू किया, जिसमें सामाजिक समानता और 'सतनाम' की पूजा की वकालत की गई थी।"
     },
     {
       "q_num": 25,
-      "question": "Statement I: Pandita Ramabai established the Arya Mahila Samaj.\n कथन I: पंडिता रमाबाई ने आर्य महिला समाज की स्थापना की।\n Statement II: D.K. Karve established the first university for Indian women in 1916. कथन II: डी.के. कर्वे ने 1916 में भारतीय महिलाओं के लिए पहले विश्वविद्यालय की स्थापना की।\n Which of the above statements is/are correct? उपरोक्त कथनों में से कौन सा/से कथन सही है/हैं?",
+      "question": "Statement I: Pandita Ramabai established the Arya Mahila Samaj.\nStatement II: D.K. Karve established the first university for Indian women in 1916.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "Only I / केवल I",
-        "b": "Only II / केवल II",
-        "c": "Both I and II / I और II दोनों",
-        "d": "Neither I nor II / न तो I और न ही II"
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPandita Ramabai founded Arya Mahila Samaj to promote women's education. Dr. Dhondo Keshav Karve founded the SNDT Women's University in 1916, which was the first of its kind in India\n\n📖 हिंदी स्पष्टीकरण:\nपंडिता रमाबाई ने महिला शिक्षा को बढ़ावा देने के लिए आर्य महिला समाज की स्थापना की। डॉ. धोंडो केशव कर्वे ने 1916 में SNDT महिला विश्वविद्यालय की स्थापना की, जो भारत में अपनी तरह का पहला विश्वविद्यालय था।"

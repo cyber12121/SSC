@@ -6,211 +6,211 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who was the founder of the Mughal Empire in India?\nभारत में मुगल साम्राज्य का संस्थापक कौन था?",
+      "question": "Who was the founder of the Mughal Empire in India?",
       "options": {
-        "a": "Akbar / अकबर",
-        "b": "Humayun / हुमायूँ",
-        "c": "Babur / बाबर",
-        "d": "Shah Jahan / शाहजहाँ"
+        "a": "Akbar",
+        "b": "Humayun",
+        "c": "Babur",
+        "d": "Shah Jahan"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBabur founded the Mughal Empire in 1526 after defeating Ibrahim Lodi in the First Battle of Panipat. He was a descendant of Timur and Genghis Khan.\n\n📖 हिंदी स्पष्टीकरण:\nबाबर ने 1526 में पानीपत के पहले युद्ध में इब्राहिम लोदी को हराकर मुगल साम्राज्य की स्थापना की थी। वह तैमूर और चंगेज खान का वंशज था।"
     },
     {
       "q_num": 2,
-      "question": "Which Mughal Emperor built the Moti Masjid in the Red Fort of Delhi?\nदिल्ली के लाल किले में मोती मस्जिद का निर्माण किस मुगल सम्राट ने करवाया था?",
+      "question": "Which Mughal Emperor built the Moti Masjid in the Red Fort of Delhi?",
       "options": {
-        "a": "Akbar / अकबर",
-        "b": "Aurangzeb / औरंगजेब",
-        "c": "Shah Jahan / शाहजहाँ",
-        "d": "Bahadur Shah Zafar / बहादुर शाह जफर"
+        "a": "Akbar",
+        "b": "Aurangzeb",
+        "c": "Shah Jahan",
+        "d": "Bahadur Shah Zafar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile Shah Jahan built the Red Fort, the Moti Masjid (Pearl Mosque) inside it was built by Aurangzeb for his personal use. It is made of white marble.\n\n📖 हिंदी स्पष्टीकरण:\nजहाँ शाहजहाँ ने लाल किले का निर्माण कराया था, वहीं इसके अंदर मोती मस्जिद का निर्माण औरंगजेब ने अपने व्यक्तिगत उपयोग के लिए करवाया था। यह सफेद संगमरमर से बनी है।"
     },
     {
       "q_num": 3,
-      "question": "The Battle of Khanwa (1527) was fought between Babur and which Rajput ruler?\nखानवा का युद्ध (1527) बाबर और किस राजपूत शासक के बीच लड़ा गया था?",
+      "question": "The Battle of Khanwa (1527) was fought between Babur and which Rajput ruler?",
       "options": {
-        "a": "Maharana Pratap / महाराणा प्रताप",
-        "b": "Rana Sanga / राणा सांगा",
-        "c": "Raja Man Singh / राजा मान सिंह",
-        "d": "Hemu / हेमू"
+        "a": "Maharana Pratap",
+        "b": "Rana Sanga",
+        "c": "Raja Man Singh",
+        "d": "Hemu"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Battle of Khanwa was fought in 1527 where Babur defeated Rana Sanga of Mewar. This victory consolidated Babur's rule in Northern India.\n\n📖 हिंदी स्पष्टीकरण:\nखानवा का युद्ध 1527 में लड़ा गया था जहाँ बाबर ने मेवाड़ के राणा सांगा को हराया था। इस जीत ने उत्तर भारत में बाबर के शासन को मजबूत किया।"
     },
     {
       "q_num": 4,
-      "question": "Which Mughal ruler is known as 'Zinda Pir' (Living Saint)?\nकिस मुगल शासक को 'जिंदा पीर' के नाम से जाना जाता है?",
+      "question": "Which Mughal ruler is known as 'Zinda Pir' (Living Saint)?",
       "options": {
-        "a": "Babur / बाबर",
-        "b": "Akbar / अकबर",
-        "c": "Aurangzeb / औरंगजेब",
-        "d": "Jahangir / जहाँगीर"
+        "a": "Babur",
+        "b": "Akbar",
+        "c": "Aurangzeb",
+        "d": "Jahangir"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAurangzeb was called 'Zinda Pir' due to his simple lifestyle and strict adherence to Islamic laws.\n\n📖 हिंदी स्पष्टीकरण:\nऔरंगजेब को उसकी सादा जीवनशैली और इस्लामी कानूनों के सख्त पालन के कारण 'जिंदा पीर' कहा जाता था।"
     },
     {
       "q_num": 5,
-      "question": "Humayun-nama was written by whom?\nहुमायूँनामा किसके द्वारा लिखा गया था?",
+      "question": "Humayun-nama was written by whom?",
       "options": {
-        "a": "Humayun / हुमायूँ",
-        "b": "Akbar / अकबर",
-        "c": "Gulbadan Begum / गुलबदन बेगम",
-        "d": "Abul Fazl / अबुल फजल"
+        "a": "Humayun",
+        "b": "Akbar",
+        "c": "Gulbadan Begum",
+        "d": "Abul Fazl"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGulbadan Begum was the sister of Humayun. She wrote the biography of her brother at the request of her nephew, Emperor Akbar.\n\n📖 हिंदी स्पष्टीकरण:\nगुलबदन बेगम हुमायूँ की बहन थी। उन्होंने अपने भतीजे, सम्राट अकबर के अनुरोध पर अपने भाई की जीवनी लिखी थी।"
     },
     {
       "q_num": 6,
-      "question": "Which Mughal Emperor abolished the Jizya tax for the first time?\nकिस मुगल सम्राट ने पहली बार जजिया कर को समाप्त किया था?",
+      "question": "Which Mughal Emperor abolished the Jizya tax for the first time?",
       "options": {
-        "a": "Babur / बाबर",
-        "b": "Akbar / अकबर",
-        "c": "Jahangir / जहाँगीर",
-        "d": "Aurangzeb / औरंगजेब"
+        "a": "Babur",
+        "b": "Akbar",
+        "c": "Jahangir",
+        "d": "Aurangzeb"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAkbar abolished Jizya, a tax on non-Muslim subjects, in 1564 to promote religious harmony. However, it was later re-introduced by Aurangzeb in 1679.\n\n📖 हिंदी स्पष्टीकरण:\nअकबर ने धार्मिक सद्भाव को बढ़ावा देने के लिए 1564 में गैर-मुस्लिम प्रजा पर लगने वाले जजिया कर को समाप्त कर दिया था। हालाँकि, बाद में 1679 में औरंगजेब द्वारा इसे फिर से लागू किया गया था।"
     },
     {
       "q_num": 7,
-      "question": "The famous 'Peacock Throne' was commissioned by which Mughal Emperor?\nप्रसिद्ध 'मयूर सिंहासन' (तख्त-ए-ताऊस) का निर्माण किस मुगल सम्राट ने करवाया था?",
+      "question": "The famous 'Peacock Throne' was commissioned by which Mughal Emperor?",
       "options": {
-        "a": "Akbar / अकबर",
-        "b": "Jahangir / जहाँगीर",
-        "c": "Shah Jahan / शाहजहाँ",
-        "d": "Aurangzeb / औरंगजेब"
+        "a": "Akbar",
+        "b": "Jahangir",
+        "c": "Shah Jahan",
+        "d": "Aurangzeb"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nShah Jahan commissioned the Peacock Throne, which was later looted by Nadir Shah in 1739. It was kept in the Diwan-i-Khas of the Red Fort.\n\n📖 हिंदी स्पष्टीकरण:\nशाहजहाँ ने मयूर सिंहासन का निर्माण करवाया था, जिसे बाद में 1739 में नादिर शाह ने लूट लिया था। इसे लाल किले के दीवान-ए-खास में रखा गया था।"
     },
     {
       "q_num": 8,
-      "question": "Who was the last powerful Mughal Emperor?\nअंतिम शक्तिशाली मुगल सम्राट कौन था?",
+      "question": "Who was the last powerful Mughal Emperor?",
       "options": {
-        "a": "Bahadur Shah Zafar / बहादुर शाह जफर",
-        "b": "Aurangzeb / औरंगजेब",
-        "c": "Muhammad Shah / मुहम्मद शाह",
-        "d": "Farrukhsiyar / फर्रुखसियर"
+        "a": "Bahadur Shah Zafar",
+        "b": "Aurangzeb",
+        "c": "Muhammad Shah",
+        "d": "Farrukhsiyar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAurangzeb is considered the last of the \"Great Mughals.\" After his death in 1707, the empire began to decline rapidly under the Later Mughals.\n\n📖 हिंदी स्पष्टीकरण:\nऔरंगजेब को \"महान मुगलों\" में अंतिम माना जाता है। 1707 में उसकी मृत्यु के बाद, उत्तरवर्ती मुगलों के शासन में साम्राज्य का तेजी से पतन होने लगा।"
     },
     {
       "q_num": 9,
-      "question": "Buland Darwaza at Fatehpur Sikri was built to commemorate the victory of which state?\nफतेहपुर सीकरी में बुलंद दरवाजा किस राज्य की विजय की स्मृति में बनाया गया था?",
+      "question": "Buland Darwaza at Fatehpur Sikri was built to commemorate the victory of which state?",
       "options": {
-        "a": "Bengal / बंगाल",
-        "b": "Gujarat / गुजरात",
-        "c": "Mewar / मेवाड़",
-        "d": "Deccan / दक्कन"
+        "a": "Bengal",
+        "b": "Gujarat",
+        "c": "Mewar",
+        "d": "Deccan"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAkbar built the Buland Darwaza in 1601 to commemorate his victory over Gujarat. It is the highest gateway in the world.\n\n📖 हिंदी स्पष्टीकरण:\nअकबर ने 1601 में गुजरात पर अपनी विजय की स्मृति में बुलंद दरवाजा बनवाया था। यह दुनिया का सबसे ऊँचा प्रवेश द्वार है।"
     },
     {
       "q_num": 10,
-      "question": "Who was the Mughal Emperor when the East India Company was established?\nईस्ट इंडिया कंपनी की स्थापना के समय मुगल सम्राट कौन था?",
+      "question": "Who was the Mughal Emperor when the East India Company was established?",
       "options": {
-        "a": "Jahangir / जहाँगीर",
-        "b": "Akbar / अकबर",
-        "c": "Shah Jahan / शाहजहाँ",
-        "d": "Aurangzeb / औरंगजेब"
+        "a": "Jahangir",
+        "b": "Akbar",
+        "c": "Shah Jahan",
+        "d": "Aurangzeb"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe English East India Company was established in 1600 during the reign of Akbar. However, British envoys visited the court of Jahangir later.\n\n📖 हिंदी स्पष्टीकरण:\nअंग्रेजी ईस्ट इंडिया कंपनी की स्थापना 1600 में अकबर के शासनकाल के दौरान हुई थी। हालाँकि, ब्रिटिश दूतों ने बाद में जहाँगीर के दरबार का दौरा किया था।"
     },
     {
       "q_num": 11,
-      "question": "The Mansabdari system was introduced by Akbar. What does the term 'Zat' signify in this system?\nमनसबदारी प्रणाली अकबर द्वारा शुरू की गई थी। इस प्रणाली में 'जात' शब्द का क्या अर्थ है?",
+      "question": "The Mansabdari system was introduced by Akbar. What does the term 'Zat' signify in this system?",
       "options": {
-        "a": "Number of cavalrymen / घुड़सवारों की संख्या",
-        "b": "Personal status and salary / व्यक्तिगत स्थिति और वेतन",
-        "c": "Type of land / भूमि का प्रकार",
-        "d": "Military rank only / केवल सैन्य पद"
+        "a": "Number of cavalrymen",
+        "b": "Personal status and salary",
+        "c": "Type of land",
+        "d": "Military rank only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn the Mansabdari system, 'Zat' determined the personal rank and salary of the officer, while 'Sawar' indicated the number of cavalrymen he had to maintain.\n\n📖 हिंदी स्पष्टीकरण:\nमनसबदारी प्रणाली में, 'जात' अधिकारी के व्यक्तिगत पद और वेतन को निर्धारित करता था, जबकि 'सवार' उस घुड़सवारों की संख्या को दर्शाता था जिसे उसे बनाए रखना होता था।"
     },
     {
       "q_num": 12,
-      "question": "Which Later Mughal ruler was known as 'Shah-i-Bekhabar'?\nकिस उत्तरवर्ती मुगल शासक को 'शाह-ए-बेखबर' के नाम से जाना जाता था?",
+      "question": "Which Later Mughal ruler was known as 'Shah-i-Bekhabar'?",
       "options": {
-        "a": "Jahandar Shah / जहांदार शाह",
-        "b": "Bahadur Shah I / बहादुर शाह प्रथम",
-        "c": "Farrukhsiyar / फर्रुखसियर",
-        "d": "Muhammad Shah / मुहम्मद शाह"
+        "a": "Jahandar Shah",
+        "b": "Bahadur Shah I",
+        "c": "Farrukhsiyar",
+        "d": "Muhammad Shah"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBahadur Shah I was called 'Shah-i-Bekhabar' (the Heedless King) by Khafi Khan because of his lack of attention to state administration. He was the son of Aurangzeb.\n\n📖 हिंदी स्पष्टीकरण:\nखफी खान द्वारा बहादुर शाह प्रथम को राज्य प्रशासन पर ध्यान न देने के कारण 'शाह-ए-बेखबर' कहा गया था। वह औरंगजेब का पुत्र था।"
     },
     {
       "q_num": 13,
-      "question": "The Mughal administration's head of the military department was known as:\nमुगल प्रशासन के सैन्य विभाग के प्रमुख को किस नाम से जाना जाता था?",
+      "question": "The Mughal administration's head of the military department was known as:",
       "options": {
-        "a": "Mir Bakshi / मीर बख्शी",
-        "b": "Diwan / दीवान",
-        "c": "Khan-i-Saman / खान-ए-सामां",
-        "d": "Qazi-ul-Quzat / काजी-उल-कुजात"
+        "a": "Mir Bakshi",
+        "b": "Diwan",
+        "c": "Khan-i-Saman",
+        "d": "Qazi-ul-Quzat"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Mir Bakshi was responsible for the military department, intelligence, and the recommendation of mansabdars to the emperor.\n\n📖 हिंदी स्पष्टीकरण:\nमीर बख्शी सैन्य विभाग, खुफिया जानकारी और सम्राट को मनसबदारों की सिफारिश करने के लिए जिम्मेदार था।"
     },
     {
       "q_num": 14,
-      "question": "Battle of Karnal (1739) was fought between Nadir Shah and which Mughal Emperor?\nकरनाल का युद्ध (1739) नादिर शाह और किस मुगल सम्राट के बीच लड़ा गया था?",
+      "question": "Battle of Karnal (1739) was fought between Nadir Shah and which Mughal Emperor?",
       "options": {
-        "a": "Ahmad Shah / अहमद शाह",
-        "b": "Muhammad Shah 'Rangeela' / मुहम्मद शाह 'रंगीला'",
-        "c": "Shah Alam II / शाह आलम द्वितीय",
-        "d": "Alamgir II / आलमगीर द्वितीय"
+        "a": "Ahmad Shah",
+        "b": "Muhammad Shah 'Rangeela'",
+        "c": "Shah Alam II",
+        "d": "Alamgir II"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNadir Shah defeated Muhammad Shah at Karnal in 1739. This led to the massacre of Delhi and the looting of the Peacock Throne and Kohinoor diamond.\n\n📖 हिंदी स्पष्टीकरण:\nनादिर शाह ने 1739 में करनाल में मुहम्मद शाह को हराया था। इसके परिणामस्वरूप दिल्ली में कत्लेआम हुआ और मयूर सिंहासन और कोहिनूर हीरा लूट लिया गया।"
     },
     {
       "q_num": 15,
-      "question": "Who was the architect of the Taj Mahal?\nताजमहल का वास्तुकार कौन था?",
+      "question": "Who was the architect of the Taj Mahal?",
       "options": {
-        "a": "Ustad Ahmad Lahori / उस्ताद अहमद लाहौरी",
-        "b": "Mirak Mirza Ghiyas / मिराक मिर्जा गियास",
-        "c": "Bebadal Khan / बेबादल खान",
-        "d": "Amanat Khan Shirazi / अमानत खान शिराजी"
+        "a": "Ustad Ahmad Lahori",
+        "b": "Mirak Mirza Ghiyas",
+        "c": "Bebadal Khan",
+        "d": "Amanat Khan Shirazi"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nUstad Ahmad Lahori is credited as the chief architect of the Taj Mahal, representing the pinnacle of Mughal architecture. It was built between 1632 and 1653.\n\n📖 हिंदी स्पष्टीकरण:\nउस्ताद अहमद लाहौरी को ताजमहल के मुख्य वास्तुकार के रूप में श्रेय दिया जाता है, जो मुगल वास्तुकला के शिखर का प्रतिनिधित्व करता है। इसका निर्माण 1632 और 1653 के बीच हुआ था।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): The Mughal Mansabdari system was not hereditary in nature.\nअभिकथन (A): मुगल मनसबदारी प्रणाली प्रकृति में वंशानुगत नहीं थी।\nReason (R): Upon the death of a Mansabdar, his property was confiscated by the state under the Law of Escheat.\nकारण (R): एक मनसबदार की मृत्यु पर, उसकी संपत्ति को 'एस्चीट के नियम' (संपत्ति ज़ब्ती का कानून) के तहत राज्य द्वारा जब्त कर लिया जाता था।",
+      "question": "Assertion (A): The Mughal Mansabdari system was not hereditary in nature.\nReason (R): Upon the death of a Mansabdar, his property was confiscated by the state under the Law of Escheat.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMansabdars did not have hereditary rights over their rank or Jagir. The Law of Escheat ensured that the wealth accumulated by officials returned to the emperor after their death to prevent a landed aristocracy.\n\n📖 हिंदी स्पष्टीकरण:\nमनसबदारों के पास अपने पद या जागीर पर वंशानुगत अधिकार नहीं थे। संपत्ति ज़ब्ती के नियम ने यह सुनिश्चित किया कि अधिकारियों द्वारा जमा की गई संपत्ति उनकी मृत्यु के बाद सम्राट के पास वापस आ जाए ताकि एक शक्तिशाली सामंती वर्ग न बन सके।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements regarding the Mughal Land Revenue system is/are INCORRECT?\nमुगल भू-राजस्व प्रणाली के संबंध में निम्नलिखित में से कौन सा/से कथन गलत है/हैं?\n1. 'Polaj' was land that was never left fallow. / 'पोलाज' वह भूमि थी जिसे कभी खाली नहीं छोड़ा जाता था।\n2. 'Chachar' was land that remained uncultivated for five or more years. / 'चाचर' वह भूमि थी जो पाँच या अधिक वर्षों तक बिना खेती के रहती थी।",
+      "question": "Which of the following statements regarding the Mughal Land Revenue system is/are INCORRECT?\n1. 'Polaj' was land that was never left fallow.\n2. 'Chachar' was land that remained uncultivated for five or more years.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPolaj was the best quality land cultivated annually. However, Chachar was land left fallow for 3 to 4 years to regain fertility; land left for 5 years or more was called 'Banjar'.\n\n📖 हिंदी स्पष्टीकरण:\nपोलाज सबसे अच्छी गुणवत्ता वाली भूमि थी जिस पर प्रतिवर्ष खेती होती थी। हालाँकि, चाचर वह भूमि थी जिसे उर्वरता वापस पाने के लिए 3 से 4 वर्षों के लिए खाली छोड़ दिया जाता था; 5 या अधिक वर्षों के लिए छोड़ी गई भूमि को 'बंजर' कहा जाता था।"
     },
     {
       "q_num": 18,
-      "question": "Match the following administrative terms with their correct definitions:\nनिम्नलिखित प्रशासनिक शब्दों को उनकी सही परिभाषाओं के साथ सुमेलित करें:\n1. Amalguzar / अमालगुज़ार\n2. Bitikchi / बिटिकची\n3. Muqaddam / मुक़द्दम\n4. Patwari / पटवारी\nA. Village Headman / गाँव का प्रमुख\nB. Revenue Collector at Sarkar level / सरकार स्तर पर राजस्व संग्रहकर्ता\nC. Village Accountant / गाँव का लेखाकार\nD. Clerk/Record Keeper / लिपिक/रिकॉर्ड रखवाला",
+      "question": "Match the following administrative terms with their correct definitions:\n1. Amalguzar\n2. Bitikchi\n3. Muqaddam\n4. Patwari\nA. Village Headman\nB. Revenue Collector at Sarkar level\nC. Village Accountant\nD. Clerk/Record Keeper",
       "options": {
         "a": "1-B, 2-D, 3-A, 4-C",
         "b": "1-A, 2-C, 3-D, 4-B",
@@ -222,84 +222,84 @@
     },
     {
       "q_num": 19,
-      "question": "Consider the following statements about Mughal Architecture:\nमुगल वास्तुकला के बारे में निम्नलिखित कथनों पर विचार करें:\n1. Jahangir's reign saw a shift from red sandstone to white marble with extensive use of 'Pietra Dura'.\n1. जहाँगीर के शासनकाल में लाल बलुआ पत्थर से सफेद संगमरमर की ओर बदलाव देखा गया जिसमें 'पिएत्रा ड्यूरा' का व्यापक उपयोग हुआ।\n2. The 'Moti Masjid' inside the Agra Fort was built by Aurangzeb.\n2. आगरा किले के अंदर 'मोती मस्जिद' औरंगजेब द्वारा बनवाई गई थी।",
+      "question": "Consider the following statements about Mughal Architecture:\n1. Jahangir's reign saw a shift from red sandstone to white marble with extensive use of 'Pietra Dura'.\n2. The 'Moti Masjid' inside the Agra Fort was built by Aurangzeb.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1 is correct (Example: Tomb of Itmad-ud-Daula). Statement 2 is incorrect because Moti Masjid in Agra Fort was built by Shah Jahan; the Moti Masjid in Delhi's Red Fort was built by Aurangzeb.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है (उदाहरण: इतमाद-उद-दौला का मकबरा)। कथन 2 गलत है क्योंकि आगरा किले की मोती मस्जिद शाहजहाँ ने बनवाई थी; दिल्ली के लाल किले की मोती मस्जिद औरंगजेब ने बनवाई थी।"
     },
     {
       "q_num": 20,
-      "question": "In the context of Aurangzeb's Deccan Policy, which of the following sequences of annexation is correct?\nऔरंगजेब की दक्कन नीति के संदर्भ में, विलय का निम्नलिखित में से कौन सा क्रम सही है?",
+      "question": "In the context of Aurangzeb's Deccan Policy, which of the following sequences of annexation is correct?",
       "options": {
-        "a": "Bijapur (1686), Golconda (1687) / बीजापुर (1686), गोलकुंडा (1687)",
-        "b": "Golconda (1686), Bijapur (1687) / गोलकुंडा (1686), बीजापुर (1687)",
-        "c": "Bijapur (1681), Ahmadnagar (1686) / बीजापुर (1681), अहमदनगर (1686)",
-        "d": "Ahmadnagar (1680), Golconda (1688) / अहमदनगर (1680), गोलकुंडा (1688)"
+        "a": "Bijapur (1686), Golconda (1687)",
+        "b": "Golconda (1686), Bijapur (1687)",
+        "c": "Bijapur (1681), Ahmadnagar (1686)",
+        "d": "Ahmadnagar (1680), Golconda (1688)"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAurangzeb spent the latter half of his reign in the Deccan. He finally annexed the Adil Shahi kingdom of Bijapur in 1686 and the Qutb Shahi kingdom of Golconda in 1687.\n\n📖 हिंदी स्पष्टीकरण:\nऔरंगजेब ने अपने शासनकाल का उत्तरार्ध दक्कन में बिताया। उन्होंने अंततः 1686 में बीजापुर के आदिल शाही साम्राज्य और 1687 में गोलकुंडा के कुतुब शाही साम्राज्य का विलय किया।"
     },
     {
       "q_num": 21,
-      "question": "The 'Du-aspa Sih-aspa' system, a modification in the Mansabdari system, was introduced by:\nमनसबदारी प्रणाली में एक संशोधन 'दु-अस्पा सिह-अस्पा' प्रणाली किसके द्वारा शुरू की गई थी?",
+      "question": "The 'Du-aspa Sih-aspa' system, a modification in the Mansabdari system, was introduced by:",
       "options": {
-        "a": "Akbar / अकबर",
-        "b": "Jahangir / जहाँगीर",
-        "c": "Shah Jahan / शाहजहाँ",
-        "d": "Aurangzeb / औरंगजेब"
+        "a": "Akbar",
+        "b": "Jahangir",
+        "c": "Shah Jahan",
+        "d": "Aurangzeb"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThis system allowed Jahangir to increase the number of sawars (cavalry) of a Mansabdar without increasing his 'Zat' rank. 'Du-aspa' meant 2 horses per sawar, and 'Sih-aspa' meant 3 horses.\n\n📖 हिंदी स्पष्टीकरण:\nइस प्रणाली ने जहाँगीर को मनसबदार के 'जात' रैंक को बढ़ाए बिना उसके सवारों (घुड़सवारों) की संख्या बढ़ाने की अनुमति दी। 'दु-अस्पा' का अर्थ प्रति सवार 2 घोड़े और 'सिह-अस्पा' का अर्थ 3 घोड़े थे।"
     },
     {
       "q_num": 22,
-      "question": "Which of the following pair of authors and books is INCORRECTLY matched?\nलेखकों और पुस्तकों का निम्नलिखित में से कौन सा युग्म गलत सुमेलित है?",
+      "question": "Which of the following pair of authors and books is INCORRECTLY matched?",
       "options": {
-        "a": "Mutamad Khan - Iqbalnama-i-Jahangiri / मुतमद खान - इक़बालनामा-ए-जहाँगीरी",
-        "b": "Abdul Hamid Lahori - Padshahnama / अब्दुल हमीद लाहौरी - बादशाहनामा",
-        "c": "Khafi Khan - Muntakhab-ul-Lubab / ख़ाफी खान - मुन्तख़ब-उल-लुबाब",
-        "d": "Inayat Khan - Humayun-nama / इनायत खान - हुमायूँ-नामा"
+        "a": "Mutamad Khan - Iqbalnama-i-Jahangiri",
+        "b": "Abdul Hamid Lahori - Padshahnama",
+        "c": "Khafi Khan - Muntakhab-ul-Lubab",
+        "d": "Inayat Khan - Humayun-nama"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nHumayun-nama was written by Gulbadan Begum (Humayun's sister). Inayat Khan wrote 'Shahjahan-nama'. Other pairs are correct contemporary sources for Jahangir, Shah Jahan, and Aurangzeb.\n\n📖 हिंदी स्पष्टीकरण:\nहुमायूँ-नामा गुलबदन बेगम (हुमायूँ की बहन) द्वारा लिखा गया था। इनायत खान ने 'शाहजहाँ-नामा' लिखा था। अन्य जोड़े जहाँगीर, शाहजहाँ और औरंगजेब के सही समकालीन स्रोत हैं।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): The Jagirdari Crisis is considered a major reason for the fall of the Mughal Empire.\nअभिकथन (A): जागीरदारी संकट को मुगल साम्राज्य के पतन का एक प्रमुख कारण माना जाता है।\nReason (R): There was a shortage of good 'Paibaqi' (land waiting to be assigned) while the number of Mansabdars increased rapidly.\nकारण (R): अच्छी 'पायबाकी' (आवंटित होने वाली भूमि) की कमी थी जबकि मनसबदारों की संख्या तेजी से बढ़ी।",
+      "question": "Assertion (A): The Jagirdari Crisis is considered a major reason for the fall of the Mughal Empire.\nReason (R): There was a shortage of good 'Paibaqi' (land waiting to be assigned) while the number of Mansabdars increased rapidly.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDuring Aurangzeb's later years, the disproportionate increase in Mansabdars compared to available land (Be-jagiri) led to competition and corruption, weakening the empire's central authority.\n\n📖 हिंदी स्पष्टीकरण:\nऔरंगजेब के अंतिम वर्षों के दौरान, उपलब्ध भूमि (बे-जागीरी) की तुलना में मनसबदारों में अत्यधिक वृद्धि से प्रतिस्पर्धा और भ्रष्टाचार बढ़ गया, जिसने साम्राज्य के केंद्रीय अधिकार को कमजोर कर दिया।"
     },
     {
       "q_num": 24,
-      "question": "Which Mughal ruler granted the 'Farman' to the East India Company in 1717, known as the 'Magna Carta' of the Company?\nकिस मुगल शासक ने 1717 में ईस्ट इंडिया कंपनी को 'फरमान' दिया था, जिसे कंपनी का 'मैग्ना कार्टा' कहा जाता है?",
+      "question": "Which Mughal ruler granted the 'Farman' to the East India Company in 1717, known as the 'Magna Carta' of the Company?",
       "options": {
-        "a": "Bahadur Shah I / बहादुर शाह प्रथम",
-        "b": "Farrukhsiyar / फर्रुखसियर",
-        "c": "Muhammad Shah / मुहम्मद शाह",
-        "d": "Jahandar Shah / जहाँदार शाह"
+        "a": "Bahadur Shah I",
+        "b": "Farrukhsiyar",
+        "c": "Muhammad Shah",
+        "d": "Jahandar Shah"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFarrukhsiyar issued a Farman in 1717 granting the British significant trade concessions in Bengal, Bombay, and Madras, including the right to trade duty-free in exchange for an annual payment.\n\n📖 हिंदी स्पष्टीकरण:\nफर्रुखसियर ने 1717 में एक फरमान जारी किया जिसमें अंग्रेजों को बंगाल, बॉम्बे और मद्रास में महत्वपूर्ण व्यापार रियायतें दी गईं, जिसमें वार्षिक भुगतान के बदले शुल्क मुक्त व्यापार का अधिकार शामिल था।"
     },
     {
       "q_num": 25,
-      "question": "Statement 1: The 'Dastur-ul-Amal' were administrative manuals used during the Mughal period.\nकथन 1: 'दस्तूर-उल-अमल' मुगल काल के दौरान उपयोग किए जाने वाले प्रशासनिक मार्गदर्शक थे।\nStatement 2: The 'Madad-i-Maash' grants were hereditary land grants given to religious and learned people.\nकथन 2: 'मदद-ए-माश' अनुदान धार्मिक और विद्वान लोगों को दिए जाने वाले वंशानुगत भूमि अनुदान थे।",
+      "question": "Statement 1: The 'Dastur-ul-Amal' were administrative manuals used during the Mughal period.\nStatement 2: The 'Madad-i-Maash' grants were hereditary land grants given to religious and learned people.",
       "options": {
-        "a": "Only Statement 1 is true / केवल कथन 1 सत्य है।",
-        "b": "Only Statement 2 is true / केवल कथन 2 सत्य है।",
-        "c": "Both statements are true / दोनों कथन सत्य हैं।",
-        "d": "Both statements are false / दोनों कथन गलत हैं।"
+        "a": "Only Statement 1 is true",
+        "b": "Only Statement 2 is true",
+        "c": "Both statements are true",
+        "d": "Both statements are false"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDastur-ul-Amal provided detailed rules for administration. Madad-i-Maash (also called Suyurghal) were tax-free land grants for life or hereditarily given to scholars and saints.\n\n📖 हिंदी स्पष्टीकरण:\nदस्तूर-उल-अमल ने प्रशासन के लिए विस्तृत नियम प्रदान किए। मदद-ए-माश (जिसे सुयूरगल भी कहा जाता है) विद्वानों और संतों को जीवन भर के लिए या वंशानुगत रूप से दिए गए कर-मुक्त भूमि अनुदान थे।"

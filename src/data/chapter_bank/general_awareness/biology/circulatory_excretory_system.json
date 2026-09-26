@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following is known as the basic functional unit of the human kidney? / निम्नलिखित में से किसे मानव वृक्क (किडनी) की बुनियादी कार्यात्मक इकाई के रूप में जाना जाता है?",
+      "question": "Which of the following is known as the basic functional unit of the human kidney?",
       "options": {
-        "a": "Neuron / न्यूरॉन",
-        "b": "Nephron / वृक्कक",
-        "c": "Alveoli / वायु कोष्ठिका",
-        "d": "Artery / धमनी"
+        "a": "Neuron",
+        "b": "Nephron",
+        "c": "Alveoli",
+        "d": "Artery"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEach kidney is made up of millions of filtering units called nephrons. They remove waste materials from the blood and return needed substances to it\n\n📖 हिंदी स्पष्टीकरण:\nप्रत्येक वृक्क लाखों फ़िल्टरिंग इकाइयों से बना होता है जिन्हें नेफ्रॉन कहा जाता है। ये रक्त से अपशिष्ट पदार्थों को निकालते हैं और आवश्यक पदार्थों को उसमें वापस लौटाते हैं।"
     },
     {
       "q_num": 2,
-      "question": "What is the normal lifespan of Red Blood Cells (Erythrocytes) in the human body? / मानव शरीर में लाल रक्त कोशिकाओं (एरिथ्रोसाइट्स) का सामान्य जीवनकाल कितना होता है?",
+      "question": "What is the normal lifespan of Red Blood Cells (Erythrocytes) in the human body?",
       "options": {
-        "a": "10 days / 10 दिन",
-        "b": "60 days / 60 दिन",
-        "c": "120 days / 120 दिन",
-        "d": "150 days / 150 दिन"
+        "a": "10 days",
+        "b": "60 days",
+        "c": "120 days",
+        "d": "150 days"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nErythrocytes are formed in the bone marrow and have a lifespan of approximately 120 days. Their main function is to transport oxygen and some carbon dioxide\n\n📖 हिंदी स्पष्टीकरण:\nएरिथ्रोसाइट्स का निर्माण अस्थि मज्जा में होता है और इनका जीवनकाल लगभग 120 दिनों का होता है। इनका मुख्य कार्य ऑक्सीजन और कुछ कार्बन डाइऑक्साइड का परिवहन करना है।"
     },
     {
       "q_num": 3,
-      "question": "Which instrument is used to measure blood pressure? / रक्तचाप मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+      "question": "Which instrument is used to measure blood pressure?",
       "options": {
-        "a": "ECG / ईसीजी",
-        "b": "Pacemaker / पेसमेकर",
-        "c": "Sphygmomanometer / स्फिग्मोमैनोमीटर",
-        "d": "Stethoscope / स्टेथोस्कोप"
+        "a": "ECG",
+        "b": "Pacemaker",
+        "c": "Sphygmomanometer",
+        "d": "Stethoscope"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA sphygmomanometer is a medical device specifically used to measure the blood pressure of a person. It typically records both systolic and diastolic pressure\n\n📖 हिंदी स्पष्टीकरण:\nस्फिग्मोमैनोमीटर एक चिकित्सा उपकरण है जिसका उपयोग विशेष रूप से किसी व्यक्ति के रक्तचाप को मापने के लिए किया जाता है। यह आमतौर पर सिस्टोलिक और डायस्टोलिक दोनों दबावों को रिकॉर्ड करता है।"
     },
     {
       "q_num": 4,
-      "question": "Which blood group is known as the \"Universal Donor\"? / किस रक्त समूह को \"सर्वदाता\" के रूप में जाना जाता है?",
+      "question": "Which blood group is known as the \"Universal Donor\"?",
       "options": {
         "a": "AB+",
         "b": "O-",
@@ -54,67 +54,67 @@
     },
     {
       "q_num": 5,
-      "question": "The \"Lub-Dub\" sound of the heart is produced due to the closing of: / हृदय की \"लब-डब\" ध्वनि किसके बंद होने के कारण उत्पन्न होती है?",
+      "question": "The \"Lub-Dub\" sound of the heart is produced due to the closing of:",
       "options": {
-        "a": "Arteries and Veins / धमनियों और शिराओं",
-        "b": "Heart Valves / हृदय के वाल्व",
-        "c": "Lungs / फेफड़ों",
-        "d": "Nephrons / नेफ्रॉन"
+        "a": "Arteries and Veins",
+        "b": "Heart Valves",
+        "c": "Lungs",
+        "d": "Nephrons"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n\"Lub\" is caused by the closing of mitral and tricuspid valves, while \"Dub\" is caused by the closing of aortic and pulmonary valves. This rhythmic closing ensures one-way blood flow. /"
     },
     {
       "q_num": 6,
-      "question": "Which component makes up about 95% of human urine? / मानव मूत्र का लगभग 95% भाग किस घटक से बना होता है?",
+      "question": "Which component makes up about 95% of human urine?",
       "options": {
-        "a": "Urea / यूरिया",
-        "b": "Ammonia / अमोनिया",
-        "c": "Water / जल",
-        "d": "Urochrome / यूरोक्रोम"
+        "a": "Urea",
+        "b": "Ammonia",
+        "c": "Water",
+        "d": "Urochrome"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nHuman urine is primarily composed of water, which accounts for about 95% of its total volume. Other components include urea (2%) and various salts\n\n📖 हिंदी स्पष्टीकरण:\nमानव मूत्र मुख्य रूप से पानी से बना होता है, जो इसकी कुल मात्रा का लगभग 95% होता है। अन्य घटकों में यूरिया (2%) और विभिन्न लवण शामिल हैं।"
     },
     {
       "q_num": 7,
-      "question": "Which is the largest artery in the human body? / मानव शरीर की सबसे बड़ी धमनी कौन सी है?",
+      "question": "Which is the largest artery in the human body?",
       "options": {
-        "a": "Vena Cava / महाशिरा",
-        "b": "Pulmonary Artery / फुफ्फुसीय धमनी",
-        "c": "Aorta / महाधमनी",
-        "d": "Coronary Artery / कोरोनरी धमनी"
+        "a": "Vena Cava",
+        "b": "Pulmonary Artery",
+        "c": "Aorta",
+        "d": "Coronary Artery"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe aorta is the largest artery in the body, carrying oxygenated blood from the left ventricle to all body parts. In contrast, the vena cava is the largest vein\n\n📖 हिंदी स्पष्टीकरण:\nएओर्टा (महाधमनी) शरीर की सबसे बड़ी धमनी है, जो बाएं निलय से शरीर के सभी हिस्सों में ऑक्सीजन युक्त रक्त ले जाती है। इसके विपरीत, महाशिरा सबसे बड़ी शिरा है।"
     },
     {
       "q_num": 8,
-      "question": "The yellow color of human urine is due to the presence of: / मानव मूत्र का पीला रंग किसकी उपस्थिति के कारण होता है?",
+      "question": "The yellow color of human urine is due to the presence of:",
       "options": {
-        "a": "Bile / पित्त",
-        "b": "Urea / यूरिया",
-        "c": "Urochrome / यूरोक्रोम",
-        "d": "Ammonia / अमोनिया"
+        "a": "Bile",
+        "b": "Urea",
+        "c": "Urochrome",
+        "d": "Ammonia"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe yellow color of urine comes from urochrome (also called urobilin), a waste product resulting from the breakdown of hemoglobin\n\n📖 हिंदी स्पष्टीकरण:\nमूत्र का पीला रंग यूरोक्रोम (जिसे यूरोबिलिन भी कहा जाता है) से आता है, जो हीमोग्लोबिन के टूटने से उत्पन्न होने वाला एक अपशिष्ट उत्पाद है।"
     },
     {
       "q_num": 9,
-      "question": "Who discovered the ABO blood groups? / ABO रक्त समूहों की खोज किसने की थी?",
+      "question": "Who discovered the ABO blood groups?",
       "options": {
-        "a": "Friedrich Wohler / फ्रेडरिक वोहलर",
-        "b": "Karl Landsteiner / कार्ल लैंडस्टीनर",
-        "c": "Y.M. Bhende / वाई.एम. भेंडे",
-        "d": "Robert Hooke / रॉबर्ट हुक"
+        "a": "Friedrich Wohler",
+        "b": "Karl Landsteiner",
+        "c": "Y.M. Bhende",
+        "d": "Robert Hooke"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe discovery of human blood groups was made by Karl Landsteiner. Later, the rare Bombay blood group was discovered by Y.M. Bhende in 1952\n\n📖 हिंदी स्पष्टीकरण:\nमानव रक्त समूहों की खोज कार्ल लैंडस्टीनर द्वारा की गई थी। बाद में, दुर्लभ बॉम्बे रक्त समूह की खोज 1952 में वाई.एम. भेंडे द्वारा की गई थी।"
     },
     {
       "q_num": 10,
-      "question": "What is the average weight of a human kidney? / एक मानव वृक्क (किडनी) का औसत वजन कितना होता है?",
+      "question": "What is the average weight of a human kidney?",
       "options": {
         "a": "50-100 g",
         "b": "120-170 g",
@@ -126,103 +126,103 @@
     },
     {
       "q_num": 11,
-      "question": "Which blood vessel carries oxygenated blood from the lungs to the heart? / कौन सी रक्त वाहिका फेफड़ों से हृदय तक ऑक्सीजन युक्त रक्त ले जाती है?",
+      "question": "Which blood vessel carries oxygenated blood from the lungs to the heart?",
       "options": {
-        "a": "Pulmonary Artery / फुफ्फुसीय धमनी",
-        "b": "Pulmonary Vein / फुफ्फुसीय शिरा",
-        "c": "Aorta / महाधमनी",
-        "d": "Vena Cava / महाशिरा"
+        "a": "Pulmonary Artery",
+        "b": "Pulmonary Vein",
+        "c": "Aorta",
+        "d": "Vena Cava"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAs an exception to general veins, the pulmonary vein carries oxygen-rich blood from the lungs to the left atrium. The pulmonary artery, conversely, carries deoxygenated blood\n\n📖 हिंदी स्पष्टीकरण:\nसामान्य शिराओं के अपवाद के रूप में, फुफ्फुसीय शिरा फेफड़ों से बाएं आलिंद तक ऑक्सीजन युक्त रक्त ले जाती है। इसके विपरीत, फुफ्फुसीय धमनी विऑक्सीकृत रक्त ले जाती है।"
     },
     {
       "q_num": 12,
-      "question": "The term \"Systole\" in a cardiac cycle refers to: / कार्डियक चक्र में \"सिस्टोल\" शब्द का अर्थ है:",
+      "question": "The term \"Systole\" in a cardiac cycle refers to:",
       "options": {
-        "a": "Relaxation of heart chambers / हृदय कक्षों का शिथिल होना",
-        "b": "Filling of blood in the heart / हृदय में रक्त का भरना",
-        "c": "Contraction of the heart to pump blood / रक्त पंप करने के लिए हृदय का संकुचन",
-        "d": "Measurement of pulse rate / नाड़ी दर का मापन"
+        "a": "Relaxation of heart chambers",
+        "b": "Filling of blood in the heart",
+        "c": "Contraction of the heart to pump blood",
+        "d": "Measurement of pulse rate"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSystole is the phase where the heart contracts and pumps blood out, typically at a pressure of 120 mm Hg. Diastole is the relaxation phase\n\n📖 हिंदी स्पष्टीकरण:\nसिस्टोल वह चरण है जहाँ हृदय सिकुड़ता है और रक्त को बाहर पंप करता है, आमतौर पर 120 मिमी एचजी के दबाव पर। डायस्टोल विश्राम का चरण है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following is responsible for initiating the heart's electrical signals? / हृदय के विद्युत संकेतों को शुरू करने के लिए निम्नलिखित में से कौन जिम्मेदार है?",
+      "question": "Which of the following is responsible for initiating the heart's electrical signals?",
       "options": {
-        "a": "AV Node / एवी नोड",
-        "b": "Sinoatrial (SA) Node / सिनोआट्रियल (एसए) नोड",
-        "c": "Purkinje fibers / पुरकिंजे फाइबर",
-        "d": "Bundle of His / बंडल ऑफ हिज"
+        "a": "AV Node",
+        "b": "Sinoatrial (SA) Node",
+        "c": "Purkinje fibers",
+        "d": "Bundle of His"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe SA node acts as the heart's natural pacemaker, generating electrical signals that cause the upper chambers to contract. Artificial pacemakers are used if this function fails\n\n📖 हिंदी स्पष्टीकरण:\nएसए नोड हृदय के प्राकृतिक पेसमेकर के रूप में कार्य करता है, जो विद्युत संकेत उत्पन्न करता है जिससे ऊपरी कक्ष सिकुड़ते हैं। यदि यह कार्य विफल हो जाता है तो कृत्रिम पेसमेकर का उपयोग किया जाता है।"
     },
     {
       "q_num": 14,
-      "question": "What is the primary function of Platelets (Thrombocytes)? / प्लेटलेट्स (थ्रोम्बोसाइट्स) का प्राथमिक कार्य क्या है?",
+      "question": "What is the primary function of Platelets (Thrombocytes)?",
       "options": {
-        "a": "Transport of Oxygen / ऑक्सीजन का परिवहन",
-        "b": "Immune response / प्रतिरक्षा प्रतिक्रिया",
-        "c": "Blood coagulation (Clotting) / रक्त का थक्का जमना",
-        "d": "Maintenance of pH / pH का रखरखाव"
+        "a": "Transport of Oxygen",
+        "b": "Immune response",
+        "c": "Blood coagulation (Clotting)",
+        "d": "Maintenance of pH"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPlatelets are non-nucleated, oval-shaped elements formed in the bone marrow that play a crucial role in preventing blood loss through coagulation\n\n📖 हिंदी स्पष्टीकरण:\nप्लेटलेट्स अस्थि मज्जा में बनने वाले केंद्रक-रहित, अंडाकार तत्व हैं जो जमावट के माध्यम से रक्त की हानि को रोकने में महत्वपूर्ण भूमिका निभाते हैं।"
     },
     {
       "q_num": 15,
-      "question": "Kidney stones are primarily composed of which chemical compound? / गुर्दे की पथरी मुख्य रूप से किस रासायनिक यौगिक से बनी होती है?",
+      "question": "Kidney stones are primarily composed of which chemical compound?",
       "options": {
-        "a": "Sodium Chloride / सोडियम क्लोराइड",
-        "b": "Calcium Oxalate / कैल्शियम ऑक्सालेट",
-        "c": "Magnesium Sulphate / मैग्नीशियम सल्फेट",
-        "d": "Potassium Citrate / पोटेशियम साइट्रेट"
+        "a": "Sodium Chloride",
+        "b": "Calcium Oxalate",
+        "c": "Magnesium Sulphate",
+        "d": "Potassium Citrate"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKidney stones are hard deposits of minerals and acid salts, most commonly made of calcium oxalate, that stick together in concentrated urine\n\n📖 हिंदी स्पष्टीकरण:\nगुर्दे की पथरी खनिजों और अम्लीय लवणों का कठोर जमाव है, जो आमतौर पर कैल्शियम ऑक्सालेट से बनी होती है, जो केंद्रित मूत्र में एक साथ चिपक जाते हैं।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): The right kidney is positioned slightly lower than the left kidney.\nकथन (A): दायाँ गुर्दा बाएँ गुर्दे से थोड़ा नीचे स्थित होता है।\nReason (R): This asymmetry is due to the presence of the liver on the right side of the abdominal cavity.\nकारण (R): यह विषमता उदर गुहा के दाईं ओर यकृत की उपस्थिति के कारण होती है।",
+      "question": "Assertion (A): The right kidney is positioned slightly lower than the left kidney.\nReason (R): This asymmetry is due to the presence of the liver on the right side of the abdominal cavity.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A./ A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A./ A",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn the human body, the right kidney is located lower than the left because the liver occupies a large space above it. Both are located on the dorsal side of the body\n\n📖 हिंदी स्पष्टीकरण:\nमानव शरीर में, दाहिना वृक्क बाएं की तुलना में नीचे स्थित होता है क्योंकि यकृत इसके ऊपर एक बड़ा स्थान घेरता है। दोनों शरीर के पृष्ठीय भाग में स्थित होते हैं।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements regarding Plasma is CORRECT?\nप्लाज्मा के संबंध में निम्नलिखित में से कौन सा कथन सही है?\n1. It contains about 90-92% water. / इसमें लगभग 90-92% पानी होता है।\n2. It is a pale yellow (straw-colored), viscous fluid. / यह भूसे के रंग का, गाढ़ा तरल पदार्थ है।\n3. It makes up the formed elements of blood. / यह रक्त के निर्मित तत्वों का हिस्सा है।",
+      "question": "Which of the following statements regarding Plasma is CORRECT?\n1. It contains about 90-92% water.\n2. It is a pale yellow (straw-colored), viscous fluid.\n3. It makes up the formed elements of blood.",
       "options": {
-        "a": "I and II only / केवल I और II",
-        "b": "II and III only / केवल II और III",
-        "c": "I and III only / केवल I और III",
-        "d": "All of the above / ऊपर के सभी"
+        "a": "I and II only",
+        "b": "II and III only",
+        "c": "I and III only",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPlasma is the liquid part of blood containing 90-92% water and 6-8% proteins. Formed elements (RBCs, WBCs, Platelets) are suspended in plasma but are not plasma themselves\n\n📖 हिंदी स्पष्टीकरण:\nप्लाज्मा रक्त का तरल भाग है जिसमें 90-92% पानी और 6-8% प्रोटीन होता है। रक्त कोशिकाएं प्लाज्मा में निलंबित होती हैं लेकिन वे स्वयं प्लाज्मा नहीं हैं।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Blood group AB+ is known as the Universal Acceptor.\nकथन (A): रक्त समूह AB+ को सार्वभौमिक स्वीकर्ता के रूप में जाना जाता है।\nReason (R): It lacks both Anti-A and Anti-B antibodies in its plasma.\nकारण (R): इसके प्लाज्मा में एंटी-ए और एंटी-बी दोनों एंटीबॉडी की कमी है।",
+      "question": "Assertion (A): Blood group AB+ is known as the Universal Acceptor.\nReason (R): It lacks both Anti-A and Anti-B antibodies in its plasma.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAB+ blood contains both A and B antigens on RBCs but has no antibodies in the plasma. This allows it to receive blood from any group without a reaction. / AB+\n\n📖 हिंदी स्पष्टीकरण:\nरक्त में RBC पर A और B दोनों एंटीजन होते हैं लेकिन प्लाज्मा में कोई एंटीबॉडी नहीं होती है। यह इसे बिना किसी प्रतिक्रिया के किसी भी समूह से रक्त प्राप्त करने की अनुमति देता है।"
     },
     {
       "q_num": 19,
-      "question": "Match the following Leukocytes with their functions:\nनिम्नलिखित ल्यूकोसाइट्स को उनके कार्यों से मिलाएँ:\n1. Monocytes - A. Release Heparin and Histamine / 1. मोनोसाइट्स - A. हेपरिन और हिस्टामाइन का स्राव करते हैं।\n2. Basophils - B. Secrete Antibodies / 2. बेसोफिल - B. एंटीबॉडी स्रावित करते हैं।\n3. Lymphocytes - C. Phagocytic (Engulf germs) / 3. लिम्फोसाइट्स - C. फैगोसाइटिक (कीटाणुओं को निगलने वाले)",
+      "question": "Match the following Leukocytes with their functions:\n1. Monocytes - A. Release Heparin and Histamine\n2. Basophils - B. Secrete Antibodies\n3. Lymphocytes - C. Phagocytic (Engulf germs)",
       "options": {
         "a": "1-C, 2-B, 3-A",
         "b": "1-C, 2-A, 3-B",
@@ -234,72 +234,72 @@
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Dialysis is often called an \"Artificial Kidney\".\nकथन (A): डायलिसिस को अक्सर \"कृत्रिम गुर्दा\" कहा जाता है।\nReason (R): It removes waste and excess fluid from the blood when kidneys fail.\nकारण (R): गुर्दे खराब होने पर यह रक्त से अपशिष्ट और अतिरिक्त तरल पदार्थ को निकालता है।",
+      "question": "Assertion (A): Dialysis is often called an \"Artificial Kidney\".\nReason (R): It removes waste and excess fluid from the blood when kidneys fail.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDialysis mimics the kidney's filtration process using a machine to filter blood through a dialyzer. It is essential for patients with renal failure\n\n📖 हिंदी स्पष्टीकरण:\nडायलिसिस एक मशीन का उपयोग करके रक्त को फ़िल्टर करने के लिए वृक्क की निस्पंदन प्रक्रिया की नकल करता है। यह वृक्क की विफलता वाले रोगियों के लिए आवश्यक है।"
     },
     {
       "q_num": 21,
-      "question": "Which statement about \"Double Circulation\" is FALSE?\n\"दोहरे परिसंचरण\" के बारे में कौन सा कथन असत्य है?",
+      "question": "Which statement about \"Double Circulation\" is FALSE?",
       "options": {
-        "a": "Blood passes through the heart twice in one complete cycle. / एक पूर्ण चक्र में रक्त दो बार हृदय से होकर गुजरता है।",
-        "b": "Pulmonary circulation involves blood travel between heart and lungs. / फुफ्फुसीय परिसंचरण में हृदय और फेफड़ों के बीच रक्त का प्रवाह शामिल होता है।",
-        "c": "Deoxygenated blood from the left ventricle goes to the lungs. / बाएं निलय से ऑक्सीजन रहित रक्त फेफड़ों में जाता है।",
-        "d": "Systemic circulation involves blood travel between heart and body parts. / दैहिक परिसंचरण में हृदय और शरीर के अंगों के बीच रक्त का प्रवाह शामिल होता है।"
+        "a": "Blood passes through the heart twice in one complete cycle.",
+        "b": "Pulmonary circulation involves blood travel between heart and lungs.",
+        "c": "Deoxygenated blood from the left ventricle goes to the lungs.",
+        "d": "Systemic circulation involves blood travel between heart and body parts."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nActually, the right ventricle pumps deoxygenated blood to the lungs. The left ventricle pumps oxygenated blood to the rest of the body. /"
     },
     {
       "q_num": 22,
-      "question": "Statement I: Lymph is a clear yellowish fluid that lacks white blood cells.\nकथन 1: लसीका एक स्पष्ट पीले रंग का तरल पदार्थ है जिसमें श्वेत रक्त कोशिकाएं नहीं होती हैं।\nStatement II: Lymph drains excess tissue fluid back into the blood.\nकथन II: लसीका अतिरिक्त ऊतक द्रव को वापस रक्त में प्रवाहित करता है।",
+      "question": "Statement I: Lymph is a clear yellowish fluid that lacks white blood cells.\nStatement II: Lymph drains excess tissue fluid back into the blood.",
       "options": {
-        "a": "Statement I is correct, Statement II is incorrect. / कथन I सही है, कथन II गलत है।",
-        "b": "Statement I is incorrect, Statement II is correct. / कथन 1 गलत है, कथन 2 सही है।",
-        "c": "Both statements are correct. / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect. / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, Statement II is incorrect.",
+        "b": "Statement I is incorrect, Statement II is correct.",
+        "c": "Both statements are correct.",
+        "d": "Both statements are incorrect."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement I is wrong because lymph contains white blood cells. Statement II is correct as a primary function is draining excess fluid from extracellular spaces\n\n📖 हिंदी स्पष्टीकरण:\nकथन I गलत है क्योंकि लसीका में श्वेत रक्त कोशिकाएं होती हैं। कथन II सही है क्योंकि इसका प्राथमिक कार्य बाह्य कोशिकीय स्थानों से अतिरिक्त तरल पदार्थ को निकालना है।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): The walls of the left ventricle are much thicker than the right ventricle.\nकथन (A): बाएँ निलय की दीवारें दाएँ निलय की दीवारों से कहीं अधिक मोटी होती हैं।\nReason (R): The left ventricle must pump blood to the entire body at high pressure.\nकारण (R): बाएं निलय को उच्च दाब पर पूरे शरीर में रक्त पंप करना होता है।",
+      "question": "Assertion (A): The walls of the left ventricle are much thicker than the right ventricle.\nReason (R): The left ventricle must pump blood to the entire body at high pressure.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe left ventricle has very thick walls because it pumps oxygenated blood through the aorta to the whole body. The right ventricle only pumps to the lungs nearby\n\n📖 हिंदी स्पष्टीकरण:\nबाएं निलय की दीवारें बहुत मोटी होती हैं क्योंकि यह महाधमनी के माध्यम से पूरे शरीर में ऑक्सीजनित रक्त पंप करता है। दायां निलय केवल पास स्थित फेफड़ों तक ही रक्त पंप करता है।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following about Urea:\nयूरिया के बारे में निम्नलिखित बातों पर विचार करें:\nI. It is a nitrogenous waste. / यह नाइट्रोजनयुक्त अपशिष्ट पदार्थ है।\nII. It is synthesized by the kidney from ammonia. / इसका संश्लेषण वृक्क द्वारा अमोनिया से किया जाता है।\nIII. Its chemical formula is NH2CONH2. य इसका रासायनिक सूत्र NH2CONH2 है।",
+      "question": "Consider the following about Urea:\nI. It is a nitrogenous waste.\nII. It is synthesized by the kidney from ammonia.\nIII. Its chemical formula is NH2CONH2.",
       "options": {
-        "a": "I and II only / केवल I और II",
-        "b": "II and III only / केवल II और III",
-        "c": "I and III only / केवल I और III",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "I and II only",
+        "b": "II and III only",
+        "c": "I and III only",
+        "d": "All of the above"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n5. I: Urea is a nitrogenous waste. True.\n6. It is produced from ammonia to safely excrete nitrogen.\n7. II: It is synthesized by the kidney from ammonia. False.\n8. Urea is synthesized in the liver (via the urea cycle), not in the kidney. The kidney excretes urea but does not synthesize it.\n9. III: Its chemical formula is NH₂CONH₂. True.\n10. That’s the correct formula for urea.\nSo only I and III are correct.\n11. I\n13. II\n15. III\n\n📖 हिंदी स्पष्टीकरण:\nयूरिया एक नाइट्रोजनयुक्त अपशिष्ट है। सत्य।\n12. नाइट्रोजन को सुरक्षित रूप से उत्सर्जित करने के लिए इसे अमोनिया से बनाया जाता है।\nयह किडनी द्वारा अमोनिया से बनाया जाता है। गलत।\n14. यूरिया लिवर में (यूरिया साइकिल के ज़रिए) बनता है, किडनी में नहीं। किडनी यूरिया को बाहर निकालती है लेकिन इसे सिंथेसाइज़ नहीं करती।\nइसका केमिकल फ़ॉर्मूला NH₂CONH₂ है। सही।\n16. यह यूरिया का सही फ़ॉर्मूला है।\nतो सिर्फ़ I और III सही हैं।"
     },
     {
       "q_num": 25,
-      "question": "Assertion (A): A person with blood group A can safely receive blood from group B.\nकथन (A): रक्त समूह A वाला व्यक्ति रक्त समूह B से सुरक्षित रूप से रक्त ग्रहण कर सकता है।\nReason (R): Group A blood contains Anti-B antibodies in the plasma.\nकारण (R): समूह A के रक्त के प्लाज्मा में एंटी-B एंटीबॉडी (प्रतिरक्षी) होती हैं।",
+      "question": "Assertion (A): A person with blood group A can safely receive blood from group B.\nReason (R): Group A blood contains Anti-B antibodies in the plasma.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA person with Group A has Anti-B antibodies, so receiving Group B blood would cause dangerous coagulation. Group A can only receive from A or O\n\n📖 हिंदी स्पष्टीकरण:\nरक्त समूह A वाले व्यक्ति में एंटी-B एंटीबॉडी (प्रतिरक्षी) होती हैं, इसलिए समूह B का रक्त प्राप्त करने से खतरनाक जमाव हो सकता है। समूह A केवल A या O समूह से ही रक्त प्राप्त कर सकता है।"

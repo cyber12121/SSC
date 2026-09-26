@@ -6,900 +6,900 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following lines divides the Earth into the Northern and Southern Hemispheres?\n निम्नलिखित में से कौन-सी रेखा पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करती है?",
+      "question": "Which of the following lines divides the Earth into the Northern and Southern Hemispheres?",
       "options": {
-        "a": "Equator / भूमध्य रेखा",
-        "b": "Tropic of Cancer / कर्क रेखा",
-        "c": "Tropic of Capricorn / मकर रेखा",
-        "d": "Prime Meridian / प्रधान लाभांश"
+        "a": "Equator",
+        "b": "Tropic of Cancer",
+        "c": "Tropic of Capricorn",
+        "d": "Prime Meridian"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Equator is an imaginary line at 0° latitude dividing the Earth into Northern and Southern Hemispheres.\n\n📖 हिंदी स्पष्टीकरण:\nभूमध्य रेखा 0° अक्षांश पर एक काल्पनिक रेखा है, जो पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करती है।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is the smallest ocean?\n निम्नलिखित में से सबसे छोटा महासागर कौन-सा है?",
+      "question": "Which of the following is the smallest ocean?",
       "options": {
-        "a": "Atlantic Ocean / अटलांटिक महासागर",
-        "b": "Indian Ocean / हिंद महासागर",
-        "c": "Southern Ocean / दक्षिणी महासागर",
-        "d": "Arctic Ocean / आर्कटिक महासागर"
+        "a": "Atlantic Ocean",
+        "b": "Indian Ocean",
+        "c": "Southern Ocean",
+        "d": "Arctic Ocean"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Arctic Ocean, surrounding the North Pole, is the smallest and shallowest.\n\n📖 हिंदी स्पष्टीकरण:\nआर्कटिक महासागर, जो उत्तरी ध्रुव के चारों ओर है, सबसे छोटा और उथला है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following statements about volcanoes is correct?\n ज्वालामुखियों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about volcanoes is correct?",
       "options": {
-        "a": "They are formed mainly at convergent and divergent boundaries / वे मुख्यतः अभिसारी और अपसारी सीमाओं पर बनते हैं।",
-        "b": "They are absent along plate margins / वे प्लेट सीमाओं पर नहीं पाए जाते।",
-        "c": "All volcanoes are extinct. / सभी ज्वालामुखी मृत हैं।",
-        "d": "They occur only on land / वे केवल भूमि पर होते हैं।"
+        "a": "They are formed mainly at convergent and divergent boundaries",
+        "b": "They are absent along plate margins",
+        "c": "All volcanoes are extinct.",
+        "d": "They occur only on land"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nVolcanoes form mostly at convergent and divergent plate boundaries where magma reaches the surface.\n\n📖 हिंदी स्पष्टीकरण:\nज्वालामुखी मुख्यतः अभिसारी और अपसारी सीमाओं पर बनते हैं, जहाँ मैग्मा सतह पर पहुँचता है।"
     },
     {
       "q_num": 4,
-      "question": "Which ocean is named after a country?\n कौन-सा महासागर एक देश के नाम पर रखा गया है?",
+      "question": "Which ocean is named after a country?",
       "options": {
-        "a": "Atlantic Ocean / अटलांटिक महासागर",
-        "b": "Pacific Ocean / प्रशांत महासागर",
-        "c": "Indian Ocean / हिंद महासागर",
-        "d": "Arctic Ocean / आर्कटिक महासागर"
+        "a": "Atlantic Ocean",
+        "b": "Pacific Ocean",
+        "c": "Indian Ocean",
+        "d": "Arctic Ocean"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Indian Ocean is named after India.\n\n📖 हिंदी स्पष्टीकरण:\nहिंद महासागर का नाम भारत के नाम पर रखा गया है।"
     },
     {
       "q_num": 5,
-      "question": "Which of the following statements about the Earth's core is correct?\n पृथ्वी के कोर के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Earth's core is correct?",
       "options": {
-        "a": "The outer core is solid and the inner core is liquid. / बाहरी कोर ठोस और आंतरिक कोर द्रव है।",
-        "b": "The outer core is liquid and the inner core is solid. / बाहरी कोर द्रव और आंतरिक कोर ठोस है।",
-        "c": "Both cores are solid. / दोनों कोर ठोस हैं।",
-        "d": "Both cores are liquid. / दोनों कोर द्रव हैं।"
+        "a": "The outer core is solid and the inner core is liquid.",
+        "b": "The outer core is liquid and the inner core is solid.",
+        "c": "Both cores are solid.",
+        "d": "Both cores are liquid."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe outer core is molten iron and nickel, while the inner core is solid due to immense pressure.\n\n📖 हिंदी स्पष्टीकरण:\nबाहरी कोर लोहा-निकल का द्रव रूप है, जबकि अत्यधिक दाब के कारण आंतरिक कोर ठोस होता है।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following statements about igneous rocks is correct?\n आग्नेय चट्टानों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about igneous rocks is correct?",
       "options": {
-        "a": "They form from the cooling of magma or lava. / ये मैग्मा या लावा के ठंडा होने से बनती हैं।",
-        "b": "They are formed by sediment deposition. / ये तलछट के जमाव से बनती हैं।",
-        "c": "They are formed only under water. / ये केवल पानी के नीचे बनती हैं।",
-        "d": "They contain fossils. / इनमें जीवाश्म पाए जाते हैं।"
+        "a": "They form from the cooling of magma or lava.",
+        "b": "They are formed by sediment deposition.",
+        "c": "They are formed only under water.",
+        "d": "They contain fossils."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIgneous rocks originate from the solidification of magma or lava.\n\n📖 हिंदी स्पष्टीकरण:\nआग्नेय चट्टानें मैग्मा या लावा के ठोस होने से बनती हैं।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following statements about sedimentary rocks:\n आवसादी चट्टानों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They form by compaction and cementation of sediments.\n ये तलछट के संघनन और सीमेंटेशन से बनती हैं।\n (b) They are layered in structure.\n इनकी संरचना परतदार होती है।\n (c) They are crystalline in texture.\n इनकी बनावट क्रिस्टलीय होती है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about sedimentary rocks:\n (a) They form by compaction and cementation of sediments.\n (b) They are layered in structure.\n (c) They are crystalline in texture.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 3 / 1 और 3",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 2 / 1 और 2",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 2 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSedimentary rocks are formed by compression and are usually layered, not crystalline.\n\n📖 हिंदी स्पष्टीकरण:\nआवसादी चट्टानें तलछट के दाब से बनती हैं और परतदार होती हैं, क्रिस्टलीय नहीं।"
     },
     {
       "q_num": 8,
-      "question": "Which of the following is a metamorphic rock?\n निम्नलिखित में से कौन-सी कायांतरित चट्टान है?",
+      "question": "Which of the following is a metamorphic rock?",
       "options": {
-        "a": "Slate / स्लेट",
-        "b": "Basalt / बेसाल्ट",
-        "c": "Limestone / चूना पत्थर",
-        "d": "Sandstone / बलुआ पत्थर"
+        "a": "Slate",
+        "b": "Basalt",
+        "c": "Limestone",
+        "d": "Sandstone"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSlate forms from shale under heat and pressure.\n\n📖 हिंदी स्पष्टीकरण:\nस्लेट शेल के ऊष्मा और दाब से कायांतरण से बनता है।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following statements about plate tectonics is correct?\n प्लेट विवर्तनिकी के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about plate tectonics is correct?",
       "options": {
-        "a": "The Earth's crust is divided into several large and small plates. / पृथ्वी की पर्पटी कई बड़ी और छोटी प्लेटों में विभाजित है।",
-        "b": "These plates float over the rigid mantle. / ये प्लेटें कठोर मेंटल पर तैरती हैं।",
-        "c": "Plates move due to convection currents in the mantle. / मेंटल में संवहन धाराओं के कारण प्लेटें चलती हैं।",
-        "d": "All of the above. / उपरोक्त सभी।"
+        "a": "The Earth's crust is divided into several large and small plates.",
+        "b": "These plates float over the rigid mantle.",
+        "c": "Plates move due to convection currents in the mantle.",
+        "d": "All of the above."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTectonic plates move due to mantle convection, forming the basic concept of plate tectonics.\n\n📖 हिंदी स्पष्टीकरण:\nमेंटल में संवहन धाराओं के कारण प्लेटों की गति होती है, यही प्लेट विवर्तनिकी का मूल सिद्धांत है।"
     },
     {
       "q_num": 10,
-      "question": "Which of the following statements about longitude is correct?\n देशांतर के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about longitude is correct?",
       "options": {
-        "a": "Longitude lines are parallel to each other. / देशांतर रेखाएँ एक-दूसरे के समानांतर होती हैं।",
-        "b": "Longitude ranges from 0° to 90° only. / देशांतर केवल 0° से 90° तक होता है।",
-        "c": "Longitude measures east–west distance from the Prime Meridian. / देशांतर प्रधान लाभांश से पूर्व–पश्चिम दूरी मापता है।",
-        "d": "Longitude has no impact on time zones. / देशांतर का समय क्षेत्रों पर कोई प्रभाव नहीं है।"
+        "a": "Longitude lines are parallel to each other.",
+        "b": "Longitude ranges from 0° to 90° only.",
+        "c": "Longitude measures east–west distance from the Prime Meridian.",
+        "d": "Longitude has no impact on time zones."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLongitude measures angular distance east or west of the Prime Meridian.\n\n📖 हिंदी स्पष्टीकरण:\nदेशांतर प्रधान लाभांश से पूर्व या पश्चिम की कोणीय दूरी मापता है।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following continents has the highest average elevation?\n निम्नलिखित महाद्वीपों में से किसकी औसत ऊँचाई सबसे अधिक है?",
+      "question": "Which of the following continents has the highest average elevation?",
       "options": {
-        "a": "Antarctica / अंटार्कटिका",
-        "b": "Asia / एशिया",
-        "c": "South America / दक्षिण अमेरिका",
-        "d": "Africa / अफ्रीका"
+        "a": "Antarctica",
+        "b": "Asia",
+        "c": "South America",
+        "d": "Africa"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAntarctica’s thick ice sheet gives it the highest mean elevation among continents.\n\n📖 हिंदी स्पष्टीकरण:\nअंटार्कटिका की मोटी हिम-चादर इसे सबसे ऊँचा महाद्वीप बनाती है।"
     },
     {
       "q_num": 12,
-      "question": "Which type of volcano erupts most frequently but mildly?\n किस प्रकार का ज्वालामुखी सबसे अधिक बार परंतु हल्के रूप में विस्फोट करता है?",
+      "question": "Which type of volcano erupts most frequently but mildly?",
       "options": {
-        "a": "Dome volcano / गुंबदाकार ज्वालामुखी",
-        "b": "Composite volcano / मिश्रित ज्वालामुखी",
-        "c": "Shield volcano / शील्ड ज्वालामुखी",
-        "d": "Cinder cone volcano / सिंडर कोन ज्वालामुखी"
+        "a": "Dome volcano",
+        "b": "Composite volcano",
+        "c": "Shield volcano",
+        "d": "Cinder cone volcano"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nShield volcanoes have gentle eruptions with low-viscosity lava.\n\n📖 हिंदी स्पष्टीकरण:\nशील्ड ज्वालामुखियों में कम गाढ़े लावा से हल्के विस्फोट होते हैं।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following statements about volcanic activity is correct?\n ज्वालामुखीय गतिविधि के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about volcanic activity is correct?",
       "options": {
-        "a": "Volcanoes are formed only on land. / ज्वालामुखी केवल भूमि पर बनते हैं।",
-        "b": "Many volcanoes are found under oceans. / अनेक ज्वालामुखी महासागरों के नीचे पाए जाते हैं।",
-        "c": "Volcanoes form due to water erosion. / ज्वालामुखी जल अपक्षय से बनते हैं।",
-        "d": "All volcanoes are extinct. / सभी ज्वालामुखी मृत हैं।"
+        "a": "Volcanoes are formed only on land.",
+        "b": "Many volcanoes are found under oceans.",
+        "c": "Volcanoes form due to water erosion.",
+        "d": "All volcanoes are extinct."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSubmarine volcanoes are common, forming islands like Hawaii.\n\n📖 हिंदी स्पष्टीकरण:\nसमुद्र के नीचे अनेक ज्वालामुखी सक्रिय हैं, जैसे हवाई द्वीप।"
     },
     {
       "q_num": 14,
-      "question": "Which line marks the southernmost point where the Sun can be directly overhead?\n कौन-सी रेखा वह दक्षिणी बिंदु चिह्नित करती है जहाँ सूर्य सीधे सिर के ऊपर होता है?",
+      "question": "Which line marks the southernmost point where the Sun can be directly overhead?",
       "options": {
-        "a": "Antarctic Circle / अंटार्कटिक वृत्त",
-        "b": "Tropic of Cancer / कर्क रेखा",
-        "c": "Equator / भूमध्य रेखा",
-        "d": "Tropic of Capricorn / मकर रेखा"
+        "a": "Antarctic Circle",
+        "b": "Tropic of Cancer",
+        "c": "Equator",
+        "d": "Tropic of Capricorn"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Tropic of Capricorn (23.5° S) is the southernmost latitude where the Sun can be overhead.\n\n📖 हिंदी स्पष्टीकरण:\nमकर रेखा (23.5° दक्षिण) वह दक्षिणी अक्षांश है जहाँ सूर्य सीधे ऊपर होता है।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following statements about the Kuiper Belt is correct?\n कुईपर बेल्ट के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Kuiper Belt is correct?",
       "options": {
-        "a": "It lies beyond Neptune’s orbit. / यह नेप्च्यून की कक्षा के परे स्थित है।",
-        "b": "It is the main source of asteroids. / यह एस्ट्रॉयड का मुख्य स्रोत है।",
-        "c": "It contains mostly gaseous planets. / यह मुख्य रूप से गैसीय ग्रहों से बना है।",
-        "d": "It is located between Mars and Jupiter. / यह मंगल और बृहस्पति के बीच स्थित है।"
+        "a": "It lies beyond Neptune’s orbit.",
+        "b": "It is the main source of asteroids.",
+        "c": "It contains mostly gaseous planets.",
+        "d": "It is located between Mars and Jupiter."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Kuiper Belt is a region beyond Neptune containing icy bodies and dwarf planets.\n\n📖 हिंदी स्पष्टीकरण:\nकुईपर बेल्ट नेप्च्यून के परे एक क्षेत्र है, जिसमें बर्फीले पिंड और बौने ग्रह होते हैं।"
     },
     {
       "q_num": 16,
-      "question": "The Mid-Atlantic Ridge is associated with which process?\n मध्य अटलांटिक पर्वत श्रृंखला किस प्रक्रिया से जुड़ी है?",
+      "question": "The Mid-Atlantic Ridge is associated with which process?",
       "options": {
-        "a": "Subduction / अवगमन",
-        "b": "Sea-floor spreading / समुद्री तल प्रसार",
-        "c": "Folding / मोड़ बनना",
-        "d": "Faulting / भ्रंशन"
+        "a": "Subduction",
+        "b": "Sea-floor spreading",
+        "c": "Folding",
+        "d": "Faulting"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe ridge marks a divergent boundary where new oceanic crust forms.\n\n📖 हिंदी स्पष्टीकरण:\nयह एक अपसारी सीमा है जहाँ नई महासागरीय पर्पटी बनती है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is the largest planet in the Solar System?\n सौर मंडल में निम्नलिखित में से सबसे बड़ा ग्रह कौन सा है?",
+      "question": "Which of the following is the largest planet in the Solar System?",
       "options": {
-        "a": "Jupiter / बृहस्पति",
-        "b": "Saturn / शनि",
-        "c": "Uranus / यूरेनस",
-        "d": "Neptune / नेप्च्यून"
+        "a": "Jupiter",
+        "b": "Saturn",
+        "c": "Uranus",
+        "d": "Neptune"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nJupiter is the largest planet in the Solar System, with a diameter of about 142,984 km.\n\n📖 हिंदी स्पष्टीकरण:\nबृहस्पति सौर मंडल का सबसे बड़ा ग्रह है, जिसकी व्यास लगभग 1,42,984 किमी है।"
     },
     {
       "q_num": 18,
-      "question": "The Pacific Ring of Fire is associated with which phenomenon?\n प्रशांत महासागर की “रिंग ऑफ फायर” किस घटना से संबंधित है?",
+      "question": "The Pacific Ring of Fire is associated with which phenomenon?",
       "options": {
-        "a": "Trade winds / व्यापारिक पवनें",
-        "b": "Ocean currents / महासागरीय धाराएँ",
-        "c": "Glacial movement / हिमनद गति",
-        "d": "Volcanic eruptions and earthquakes / ज्वालामुखी विस्फोट और भूकंप"
+        "a": "Trade winds",
+        "b": "Ocean currents",
+        "c": "Glacial movement",
+        "d": "Volcanic eruptions and earthquakes"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Ring of Fire is a tectonically active belt of volcanoes and quakes.\n\n📖 हिंदी स्पष्टीकरण:\nरिंग ऑफ फायर ज्वालामुखी और भूकंप की अत्यधिक सक्रिय क्षेत्रीय पट्टी है।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following continents has the longest coastline?\n निम्नलिखित में से किस महाद्वीप की तटरेखा सबसे लंबी है?",
+      "question": "Which of the following continents has the longest coastline?",
       "options": {
-        "a": "Asia / एशिया",
-        "b": "Africa / अफ्रीका",
-        "c": "North America / उत्तर अमेरिका",
-        "d": "Europe / यूरोप"
+        "a": "Asia",
+        "b": "Africa",
+        "c": "North America",
+        "d": "Europe"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAsia’s indented coastline is the longest among all continents.\n\n📖 हिंदी स्पष्टीकरण:\nएशिया की गहराई लिए तटरेखा सबसे लंबी है।"
     },
     {
       "q_num": 20,
-      "question": "Which line marks the northernmost point where the Sun can be directly overhead?\n कौन-सी रेखा वह उत्तरी बिंदु चिह्नित करती है जहाँ सूर्य सीधे सिर के ऊपर होता है?",
+      "question": "Which line marks the northernmost point where the Sun can be directly overhead?",
       "options": {
-        "a": "Tropic of Cancer / कर्क रेखा",
-        "b": "Tropic of Capricorn / मकर रेखा",
-        "c": "Equator / भूमध्य रेखा",
-        "d": "Arctic Circle / उत्तरी ध्रुवीय वृत्त"
+        "a": "Tropic of Cancer",
+        "b": "Tropic of Capricorn",
+        "c": "Equator",
+        "d": "Arctic Circle"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Tropic of Cancer (23.5° N) is the northernmost latitude where the Sun can be directly overhead.\n\n📖 हिंदी स्पष्टीकरण:\nकर्क रेखा (23.5° उत्तर) वह उत्तरी अक्षांश है जहाँ सूर्य सीधे ऊपर दिखाई देता है।"
     },
     {
       "q_num": 21,
-      "question": "Consider the following statements about Earth's crust:\n पृथ्वी की भू-पर्पटी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is composed mainly of iron and nickel. / यह मुख्य रूप से लोहा और निकल से बनी होती है।\n (b) It is the outermost layer of the Earth. / यह पृथ्वी की सबसे बाहरी परत है।\n (c) Oceanic crust is denser than continental crust. / महासागरीय पर्पटी महाद्वीपीय पर्पटी से अधिक घनी होती है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about Earth's crust:\n(a) It is composed mainly of iron and nickel.\n(b) It is the outermost layer of the Earth.\n(c) Oceanic crust is denser than continental crust.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe crust is the outermost layer, with oceanic crust denser than continental crust; iron and nickel dominate the core, not crust.\n\n📖 हिंदी स्पष्टीकरण:\nभू-पर्पटी पृथ्वी की सबसे बाहरी परत है; महासागरीय पर्पटी महाद्वीपीय से अधिक घनी होती है, जबकि लोहा और निकल कोर में पाए जाते हैं।"
     },
     {
       "q_num": 22,
-      "question": "Which continent has the highest number of active volcanoes?\n किस महाद्वीप में सक्रिय ज्वालामुखियों की संख्या सबसे अधिक है?",
+      "question": "Which continent has the highest number of active volcanoes?",
       "options": {
-        "a": "Asia / एशिया",
-        "b": "North America / उत्तर अमेरिका",
-        "c": "Antarctica / अंटार्कटिका",
-        "d": "South America / दक्षिण अमेरिका"
+        "a": "Asia",
+        "b": "North America",
+        "c": "Antarctica",
+        "d": "South America"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIndonesia alone has around 55 active volcanoes, and Japan has about 40 active volcanoes as of 2025. This makes Asia the leading continent in terms of active volcanic activity.Indonesia\n\n📖 हिंदी स्पष्टीकरण:\nमें लगभग 55 सक्रिय ज्वालामुखी हैं, और जापान में लगभग 40 सक्रिय ज्वालामुखी हैं, जो 2025 तक की स्थिति है। इससे एशिया महाद्वीप सक्रिय ज्वालामुखी गतिविधि के मामले में अग्रणी है।"
     },
     {
       "q_num": 23,
-      "question": "Which ocean is the deepest?\n कौन-सा महासागर सबसे गहरा है?",
+      "question": "Which ocean is the deepest?",
       "options": {
-        "a": "Pacific Ocean / प्रशांत महासागर",
-        "b": "Atlantic Ocean / अटलांटिक महासागर",
-        "c": "Indian Ocean / हिंद महासागर",
-        "d": "Arctic Ocean / आर्कटिक महासागर"
+        "a": "Pacific Ocean",
+        "b": "Atlantic Ocean",
+        "c": "Indian Ocean",
+        "d": "Arctic Ocean"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Mariana Trench in the Pacific is the deepest point on Earth.\n\n📖 हिंदी स्पष्टीकरण:\nप्रशांत महासागर में स्थित मारियाना गर्त पृथ्वी का सबसे गहरा बिंदु है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following statements about longitude is correct?\n देशांतर के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about longitude is correct?",
       "options": {
-        "a": "Longitude lines converge at the poles. / देशांतर रेखाएँ ध्रुवों पर मिलती हैं।",
-        "b": "Longitude lines are parallel like latitude lines. / देशांतर रेखाएँ अक्षांश की तरह समानांतर होती हैं।",
-        "c": "Longitude does not affect local time. / देशांतर स्थानीय समय को प्रभावित नहीं करता।",
-        "d": "The maximum longitude is 90°. / अधिकतम देशांतर 90° है।"
+        "a": "Longitude lines converge at the poles.",
+        "b": "Longitude lines are parallel like latitude lines.",
+        "c": "Longitude does not affect local time.",
+        "d": "The maximum longitude is 90°."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLongitude lines converge at the poles, unlike latitude lines which are parallel.\n\n📖 हिंदी स्पष्टीकरण:\nदेशांतर रेखाएँ ध्रुवों पर मिलती हैं, जबकि अक्षांश रेखाएँ समानांतर होती हैं।"
     },
     {
       "q_num": 25,
-      "question": "The Himalayan mountain range is an example of which type of plate boundary?\n हिमालय पर्वत श्रृंखला किस प्रकार की प्लेट सीमा का उदाहरण है?",
+      "question": "The Himalayan mountain range is an example of which type of plate boundary?",
       "options": {
-        "a": "Divergent boundary / अपसारी सीमा",
-        "b": "Convergent boundary / अभिसारी सीमा",
-        "c": "Transform boundary / रूपांतरण सीमा",
-        "d": "Passive boundary / निष्क्रिय सीमा"
+        "a": "Divergent boundary",
+        "b": "Convergent boundary",
+        "c": "Transform boundary",
+        "d": "Passive boundary"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Himalayas formed by the collision of the Indian and Eurasian plates at a convergent boundary.\n\n📖 हिंदी स्पष्टीकरण:\nहिमालय का निर्माण भारतीय और यूरेशियन प्लेटों के अभिसरण से हुआ।"
     },
     {
       "q_num": 26,
-      "question": "Which of the following statements about mid-ocean ridges is correct?\n मध्य महासागरीय पर्वत श्रृंखलाओं के संबंध में कौन-सा कथन सही है?",
+      "question": "Which of the following statements about mid-ocean ridges is correct?",
       "options": {
-        "a": "They are formed at transform boundaries. / ये रूपांतरण सीमाओं पर बनती हैं।",
-        "b": "They are regions of plate collision. / ये प्लेट टकराव के क्षेत्र हैं।",
-        "c": "They are associated with subduction zones. / ये अवगमन क्षेत्रों से जुड़ी हैं।",
-        "d": "They are formed at divergent plate boundaries. / ये अपसारी प्लेट सीमाओं पर बनती हैं।"
+        "a": "They are formed at transform boundaries.",
+        "b": "They are regions of plate collision.",
+        "c": "They are associated with subduction zones.",
+        "d": "They are formed at divergent plate boundaries."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMid-ocean ridges form at divergent boundaries where new crust is created.\n\n📖 हिंदी स्पष्टीकरण:\nमध्य महासागरीय पर्वत अपसारी सीमाओं पर बनते हैं जहाँ नई पर्पटी बनती है।"
     },
     {
       "q_num": 27,
-      "question": "Which of the following statements about the Moon is correct?\n चंद्रमा के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Moon is correct?",
       "options": {
-        "a": "It has no atmosphere. / इसका कोई वायुमंडल नहीं है।",
-        "b": "Its gravity is the same as Earth’s. / इसका गुरुत्वाकर्षण पृथ्वी के समान है।",
-        "c": "It produces its own light. / यह अपनी रोशनी खुद उत्पन्न करता है।",
-        "d": "It completes one rotation in 12 hours. / यह 12 घंटे में एक घूर्णन पूरा करता है।"
+        "a": "It has no atmosphere.",
+        "b": "Its gravity is the same as Earth’s.",
+        "c": "It produces its own light.",
+        "d": "It completes one rotation in 12 hours."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Moon has a negligible atmosphere, so it cannot support weather.\n\n📖 हिंदी स्पष्टीकरण:\nचंद्रमा का वायुमंडल नगण्य है, इसलिए यह मौसम का समर्थन नहीं कर सकता।"
     },
     {
       "q_num": 28,
-      "question": "Which of the following is a cold ocean current?\n निम्नलिखित में से कौन-सी ठंडी महासागरीय धारा है?",
+      "question": "Which of the following is a cold ocean current?",
       "options": {
-        "a": "Kuroshio Current / कुरोशियो धारा",
-        "b": "Brazil Current / ब्राज़ील धारा",
-        "c": "Canary Current / कैनेरी धारा",
-        "d": "North Equatorial Current / उत्तर भूमध्यीय धारा"
+        "a": "Kuroshio Current",
+        "b": "Brazil Current",
+        "c": "Canary Current",
+        "d": "North Equatorial Current"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Canary Current, off northwest Africa, is cold.\n\n📖 हिंदी स्पष्टीकरण:\nकैनेरी धारा उत्तर-पश्चिम अफ्रीका के तट के पास बहने वाली ठंडी धारा है।"
     },
     {
       "q_num": 29,
-      "question": "Which of the following statements about the Equator is correct?\n भूमध्य रेखा के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Equator is correct?",
       "options": {
-        "a": "It passes through South America, Africa, and Asia. / यह दक्षिण अमेरिका, अफ्रीका और एशिया से गुजरती है।",
-        "b": "It is the longest line of latitude. / यह अक्षांश की सबसे लंबी रेखा है।",
-        "c": "All locations on it have equal day and night all year. / इसके सभी स्थानों पर पूरे वर्ष दिन और रात बराबर होते हैं।",
-        "d": "All of the above. / उपरोक्त सभी।"
+        "a": "It passes through South America, Africa, and Asia.",
+        "b": "It is the longest line of latitude.",
+        "c": "All locations on it have equal day and night all year.",
+        "d": "All of the above."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Equator passes through multiple continents, is the longest latitude line, and has equal day and night year-round.\n\n📖 हिंदी स्पष्टीकरण:\nभूमध्य रेखा कई महाद्वीपों से गुजरती है, सबसे लंबी अक्षांश रेखा है और पूरे वर्ष दिन और रात बराबर होती है।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following planets is known as the Red Planet?\n निम्नलिखित में से कौन-सा ग्रह ‘लाल ग्रह’ के नाम से जाना जाता है?",
+      "question": "Which of the following planets is known as the Red Planet?",
       "options": {
-        "a": "Venus / शुक्र",
-        "b": "Jupiter / बृहस्पति",
-        "c": "Mars / मंगल",
-        "d": "Saturn / शनि"
+        "a": "Venus",
+        "b": "Jupiter",
+        "c": "Mars",
+        "d": "Saturn"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMars is called the Red Planet due to the iron oxide on its surface giving it a reddish appearance.\n\n📖 हिंदी स्पष्टीकरण:\nमंगल को लाल ग्रह इसलिए कहा जाता है क्योंकि इसकी सतह पर लौह ऑक्साइड होने के कारण यह लाल रंग का दिखाई देता है।"
     },
     {
       "q_num": 31,
-      "question": "The Mohorovičić discontinuity separates which two layers of the Earth?\n मोहोरोविसिक असंततता पृथ्वी की किन दो परतों को अलग करती है?",
+      "question": "The Mohorovičić discontinuity separates which two layers of the Earth?",
       "options": {
-        "a": "Crust and Mantle / भू-पर्पटी और मेंटल",
-        "b": "Mantle and Core / मेंटल और कोर",
-        "c": "Inner and Outer Core / आंतरिक और बाहरी कोर",
-        "d": "Lithosphere and Asthenosphere / लिथोस्फीयर और एस्थेनोस्फीयर"
+        "a": "Crust and Mantle",
+        "b": "Mantle and Core",
+        "c": "Inner and Outer Core",
+        "d": "Lithosphere and Asthenosphere"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Moho discontinuity separates the crust from the mantle.\n\n📖 हिंदी स्पष्टीकरण:\nमोहो असंततता भू-पर्पटी और मेंटल के बीच की सीमा है।"
     },
     {
       "q_num": 32,
-      "question": "Which planet has a retrograde rotation?\n कौन-सा ग्रह उल्टे घूर्णन करता है?",
+      "question": "Which planet has a retrograde rotation?",
       "options": {
-        "a": "Mars / मंगल",
-        "b": "Venus / शुक्र",
-        "c": "Earth / पृथ्वी",
-        "d": "Mercury / बुध"
+        "a": "Mars",
+        "b": "Venus",
+        "c": "Earth",
+        "d": "Mercury"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nVenus rotates in the opposite direction to most planets, called retrograde rotation.\n\n📖 हिंदी स्पष्टीकरण:\nशुक्र अधिकांश ग्रहों के विपरीत दिशा में घूमता है, जिसे उल्टा घूर्णन कहा जाता है।"
     },
     {
       "q_num": 33,
-      "question": "Which of the following statements about Pluto is correct?\n प्लूटो के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about Pluto is correct?",
       "options": {
-        "a": "It has no moons. / इसके कोई चंद्रमा नहीं हैं।",
-        "b": "It is the ninth planet in the Solar System. / यह सौर मंडल का नौवां ग्रह है।",
-        "c": "It has a solid surface covered with liquid oceans. / इसकी सतह तरल महासागरों से ढकी हुई है।",
-        "d": "It is considered a dwarf planet. / इसे बौना ग्रह माना जाता है।"
+        "a": "It has no moons.",
+        "b": "It is the ninth planet in the Solar System.",
+        "c": "It has a solid surface covered with liquid oceans.",
+        "d": "It is considered a dwarf planet."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPluto is classified as a dwarf planet by the IAU.\n\n📖 हिंदी स्पष्टीकरण:\nप्लूटो को IAU द्वारा बौना ग्रह के रूप में वर्गीकृत किया गया है।"
     },
     {
       "q_num": 34,
-      "question": "Which of the following statements about continents is correct?\n महाद्वीपों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about continents is correct?",
       "options": {
-        "a": "Asia is the largest continent. / एशिया सबसे बड़ा महाद्वीप है।",
-        "b": "Australia is the smallest continent. / ऑस्ट्रेलिया सबसे छोटा महाद्वीप है।",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "None / कोई नहीं"
+        "a": "Asia is the largest continent.",
+        "b": "Australia is the smallest continent.",
+        "c": "Both 1 and 2 / 1",
+        "d": "None"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAsia is the largest and Australia the smallest continent.\n\n📖 हिंदी स्पष्टीकरण:\nएशिया सबसे बड़ा और ऑस्ट्रेलिया सबसे छोटा महाद्वीप है।"
     },
     {
       "q_num": 35,
-      "question": "Consider the following statements about Saturn’s rings:\n शनि के छल्लों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are made of ice and rock particles. / वे बर्फ और चट्टानी कणों से बने हैं।\n (b) They were discovered by Galileo Galilei. / इनकी खोज गैलीलियो गैलीली ने की थी।\n (c) They are permanent and unchanging. / वे स्थायी और अपरिवर्तनीय हैं।\n Which statements are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about Saturn’s rings:\n(a) They are made of ice and rock particles.\n(b) They were discovered by Galileo Galilei.\n(c) They are permanent and unchanging.\n Which statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "2 only / केवल 1",
-        "d": "1 and 3 / 1 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "2 only",
+        "d": "1 and 3 / 1"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSaturn’s rings are made of ice and rock; Galileo first observed them, but they are not permanent and change over time.\n\n📖 हिंदी स्पष्टीकरण:\nशनि के छल्ले बर्फ और चट्टानी कणों से बने हैं; गैलीलियो ने इन्हें पहली बार देखा था, लेकिन ये स्थायी नहीं हैं।"
     },
     {
       "q_num": 36,
-      "question": "Which of the following statements about the Antarctic Circle is correct?\n अंटार्कटिक वृत्त के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Antarctic Circle is correct?",
       "options": {
-        "a": "It lies at approximately 66.5° S latitude. / यह लगभग 66.5° दक्षिण अक्षांश पर स्थित है।",
-        "b": "Inside this circle, the Sun never rises in summer. / इस वृत्त के भीतर, गर्मियों में सूर्य कभी नहीं उगता।",
-        "c": "It passes through Africa. / यह अफ्रीका से गुजरता है।",
-        "d": "It coincides with the Tropic of Capricorn. / यह मकर रेखा के साथ मेल खाता है।"
+        "a": "It lies at approximately 66.5° S latitude.",
+        "b": "Inside this circle, the Sun never rises in summer.",
+        "c": "It passes through Africa.",
+        "d": "It coincides with the Tropic of Capricorn."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Antarctic Circle is at 66.5° S; during polar night, the Sun remains below the horizon.\n\n📖 हिंदी स्पष्टीकरण:\nअंटार्कटिक वृत्त 66.5° दक्षिण पर स्थित है; ध्रुवीय रात में सूर्य क्षितिज से नीचे रहता है।"
     },
     {
       "q_num": 37,
-      "question": "Which scale measures the magnitude of earthquakes?\n भूकंपों की तीव्रता मापने के लिए कौन-सा पैमाना उपयोग किया जाता है?",
+      "question": "Which scale measures the magnitude of earthquakes?",
       "options": {
-        "a": "Beaufort scale / ब्यूफोर्ट पैमाना",
-        "b": "Richter scale / रिक्टर पैमाना",
-        "c": "Mercalli scale / मर्कैली पैमाना",
-        "d": "Celsius scale / सेल्सियस पैमाना"
+        "a": "Beaufort scale",
+        "b": "Richter scale",
+        "c": "Mercalli scale",
+        "d": "Celsius scale"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Richter scale measures the energy released by an earthquake.\n\n📖 हिंदी स्पष्टीकरण:\nरिक्टर पैमाना भूकंप द्वारा छोड़ी गई ऊर्जा को मापता है।"
     },
     {
       "q_num": 38,
-      "question": "Which of the following statements about the Earth’s hemispheres is correct?\n पृथ्वी के गोलार्धों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Earth’s hemispheres is correct?",
       "options": {
-        "a": "The Tropic of Cancer divides the Earth into Eastern and Western Hemispheres. / कर्क रेखा पृथ्वी को पूर्वी और पश्चिमी गोलार्ध में विभाजित करती है।",
-        "b": "The Prime Meridian divides the Earth into Northern and Southern Hemispheres. / प्रधान लाभांश पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करता है।",
-        "c": "The Equator divides the Earth into Northern and Southern Hemispheres. / भूमध्य रेखा पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करती है।",
-        "d": "Longitude divides the Earth into Northern and Southern Hemispheres. / देशांतर पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करता है।"
+        "a": "The Tropic of Cancer divides the Earth into Eastern and Western Hemispheres.",
+        "b": "The Prime Meridian divides the Earth into Northern and Southern Hemispheres.",
+        "c": "The Equator divides the Earth into Northern and Southern Hemispheres.",
+        "d": "Longitude divides the Earth into Northern and Southern Hemispheres."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Equator divides the Earth into Northern and Southern Hemispheres.\n\n📖 हिंदी स्पष्टीकरण:\nभूमध्य रेखा पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करती है।"
     },
     {
       "q_num": 39,
-      "question": "Which ocean has the highest salinity on average?\n औसतन किस महासागर का लवणता स्तर सबसे अधिक है?",
+      "question": "Which ocean has the highest salinity on average?",
       "options": {
-        "a": "Arctic Ocean / आर्कटिक महासागर",
-        "b": "Indian Ocean / हिंद महासागर",
-        "c": "Pacific Ocean / प्रशांत महासागर",
-        "d": "Atlantic Ocean / अटलांटिक महासागर"
+        "a": "Arctic Ocean",
+        "b": "Indian Ocean",
+        "c": "Pacific Ocean",
+        "d": "Atlantic Ocean"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Atlantic has high salinity due to strong evaporation and limited inflow.\n\n📖 हिंदी स्पष्टीकरण:\nअटलांटिक महासागर में उच्च वाष्पीकरण और सीमित मीठे जल के कारण लवणता अधिक है।"
     },
     {
       "q_num": 40,
-      "question": "Which of the following statements about the rock cycle is correct?\n शैल चक्र के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the rock cycle is correct?",
       "options": {
-        "a": "It describes transformation among all three rock types. / यह तीनों शैल प्रकारों के परिवर्तन को दर्शाता है।",
-        "b": "It involves only igneous and sedimentary rocks. / यह केवल आग्नेय और आवसादी शैलों से संबंधित है।",
-        "c": "It is a one-way process. / यह एक दिशा में होने वाली प्रक्रिया है।",
-        "d": "Rocks do not change type. / शैलों का प्रकार नहीं बदलता।"
+        "a": "It describes transformation among all three rock types.",
+        "b": "It involves only igneous and sedimentary rocks.",
+        "c": "It is a one-way process.",
+        "d": "Rocks do not change type."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe rock cycle explains how igneous, sedimentary, and metamorphic rocks transform into each other.\n\n📖 हिंदी स्पष्टीकरण:\nशैल चक्र आग्नेय, आवसादी और कायांतरित शैलों के परस्पर परिवर्तन को दर्शाता है।"
     },
     {
       "q_num": 41,
-      "question": "Which of the following is the largest ocean on Earth?\n निम्नलिखित में से पृथ्वी का सबसे बड़ा महासागर कौन-सा है?",
+      "question": "Which of the following is the largest ocean on Earth?",
       "options": {
-        "a": "Atlantic Ocean / अटलांटिक महासागर",
-        "b": "Indian Ocean / हिंद महासागर",
-        "c": "Arctic Ocean / आर्कटिक महासागर",
-        "d": "Pacific Ocean / प्रशांत महासागर"
+        "a": "Atlantic Ocean",
+        "b": "Indian Ocean",
+        "c": "Arctic Ocean",
+        "d": "Pacific Ocean"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Pacific Ocean covers about one-third of Earth’s surface area.\n\n📖 हिंदी स्पष्टीकरण:\nप्रशांत महासागर पृथ्वी की सतह का लगभग एक-तिहाई भाग घेरता है।"
     },
     {
       "q_num": 42,
-      "question": "Which of the following ocean currents is warm?\n निम्नलिखित में से कौन-सी महासागरीय धारा गर्म है?",
+      "question": "Which of the following ocean currents is warm?",
       "options": {
-        "a": "Labrador Current / लैब्राडोर धारा",
-        "b": "Gulf Stream / गल्फ स्ट्रीम",
-        "c": "Oyashio Current / ओयाशियो धारा",
-        "d": "Peru Current / पेरू धारा"
+        "a": "Labrador Current",
+        "b": "Gulf Stream",
+        "c": "Oyashio Current",
+        "d": "Peru Current"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Gulf Stream carries warm water from the Gulf of Mexico toward Europe.\n\n📖 हिंदी स्पष्टीकरण:\nगल्फ स्ट्रीम मैक्सिको की खाड़ी से यूरोप की ओर गर्म जल प्रवाहित करती है।"
     },
     {
       "q_num": 43,
-      "question": "Which rock is metamorphic in nature?\n कौन-सी चट्टान कायांतरित प्रकृति की है?",
+      "question": "Which rock is metamorphic in nature?",
       "options": {
-        "a": "Granite / ग्रेनाइट",
-        "b": "Basalt / बेसाल्ट",
-        "c": "Marble / संगमरमर",
-        "d": "Shale / शेल"
+        "a": "Granite",
+        "b": "Basalt",
+        "c": "Marble",
+        "d": "Shale"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMarble forms when limestone undergoes metamorphism under heat and pressure.\n\n📖 हिंदी स्पष्टीकरण:\nसंगमरमर चूना पत्थर के ऊष्मा और दाब में कायांतरण से बनता है।"
     },
     {
       "q_num": 44,
-      "question": "Which of the following statements about isostasy is correct?\n आइसोस्टेसी के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about isostasy is correct?",
       "options": {
-        "a": "It explains the gravitational balance of Earth's crust. / यह पृथ्वी की पर्पटी के गुरुत्वीय संतुलन को समझाता है।",
-        "b": "It is related to ocean currents. / यह महासागरीय धाराओं से संबंधित है।",
-        "c": "It explains Earth’s rotation. / यह पृथ्वी के घूर्णन को समझाता है।",
-        "d": "It deals with plate boundaries. / यह प्लेट सीमाओं से संबंधित है।"
+        "a": "It explains the gravitational balance of Earth's crust.",
+        "b": "It is related to ocean currents.",
+        "c": "It explains Earth’s rotation.",
+        "d": "It deals with plate boundaries."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIsostasy explains how Earth's crust maintains gravitational equilibrium over the denser mantle.\n\n📖 हिंदी स्पष्टीकरण:\nआइसोस्टेसी बताता है कि पृथ्वी की पर्पटी घने मेंटल पर गुरुत्वीय संतुलन कैसे बनाए रखती है।"
     },
     {
       "q_num": 45,
-      "question": "Which of the following statements about latitude is correct?\n अक्षांश के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about latitude is correct?",
       "options": {
-        "a": "Latitude lines are vertical lines running from pole to pole. / अक्षांश रेखाएँ लंबवत होती हैं और ध्रुव से ध्रुव तक जाती हैं।",
-        "b": "Latitude lines measure distance north or south of the Equator. / अक्षांश रेखाएँ भूमध्य रेखा से उत्तर या दक्षिण की दूरी मापती हैं।",
-        "c": "Latitude ranges from 0° to 180°. / अक्षांश 0° से 180° तक होता है।",
-        "d": "Latitude affects time zones directly. / अक्षांश सीधे समय क्षेत्रों को प्रभावित करता है।"
+        "a": "Latitude lines are vertical lines running from pole to pole.",
+        "b": "Latitude lines measure distance north or south of the Equator.",
+        "c": "Latitude ranges from 0° to 180°.",
+        "d": "Latitude affects time zones directly."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLatitude lines are horizontal and measure north–south distance from the Equator.\n\n📖 हिंदी स्पष्टीकरण:\nअक्षांश रेखाएँ क्षैतिज होती हैं और भूमध्य रेखा से उत्तर-दक्षिण दूरी मापती हैं।"
     },
     {
       "q_num": 46,
-      "question": "Which of the following planets has the most moons?\n निम्नलिखित में से किस ग्रह के सबसे अधिक चंद्रमा हैं?",
+      "question": "Which of the following planets has the most moons?",
       "options": {
-        "a": "Saturn / शनि",
-        "b": "Jupiter / बृहस्पति",
-        "c": "Uranus / यूरेनस",
-        "d": "Neptune / नेप्च्यून"
+        "a": "Saturn",
+        "b": "Jupiter",
+        "c": "Uranus",
+        "d": "Neptune"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSaturn currently has the highest known number of moons, over 275.\n\n📖 हिंदी स्पष्टीकरण:\nशनि के वर्तमान में ज्ञात सबसे अधिक चंद्रमा हैं, 275 से अधिक।"
     },
     {
       "q_num": 47,
-      "question": "Which ocean current keeps the western coast of Europe warm?\n कौन-सी महासागरीय धारा यूरोप के पश्चिमी तट को गर्म रखती है?",
+      "question": "Which ocean current keeps the western coast of Europe warm?",
       "options": {
-        "a": "Canary Current / कैनेरी धारा",
-        "b": "Labrador Current / लैब्राडोर धारा",
-        "c": "Gulf Stream / गल्फ स्ट्रीम",
-        "d": "Oyashio Current / ओयाशियो धारा"
+        "a": "Canary Current",
+        "b": "Labrador Current",
+        "c": "Gulf Stream",
+        "d": "Oyashio Current"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe warm Gulf Stream moderates Europe’s western climate.\n\n📖 हिंदी स्पष्टीकरण:\nगल्फ स्ट्रीम यूरोप के पश्चिमी भाग को गर्म बनाए रखती है।"
     },
     {
       "q_num": 48,
-      "question": "Which of the following statements about sedimentary rocks is correct?\n आवसादी चट्टानों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about sedimentary rocks is correct?",
       "options": {
-        "a": "They form by solidification of magma. / ये मैग्मा के ठोस होने से बनती हैं।",
-        "b": "They often contain fossils. / इनमें अक्सर जीवाश्म पाए जाते हैं।",
-        "c": "They are formed deep inside the Earth. / ये पृथ्वी के गहराई में बनती हैं।",
-        "d": "They are crystalline in nature. / इनकी संरचना क्रिस्टलीय होती है।"
+        "a": "They form by solidification of magma.",
+        "b": "They often contain fossils.",
+        "c": "They are formed deep inside the Earth.",
+        "d": "They are crystalline in nature."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSedimentary rocks form from deposition and compression of sediments; fossils are common.\n\n📖 हिंदी स्पष्टीकरण:\nआवसादी चट्टानें तलछट के जमाव और दाब से बनती हैं; इनमें जीवाश्म सामान्यतः पाए जाते हैं।"
     },
     {
       "q_num": 49,
-      "question": "Which of the following ocean currents is cold?\n निम्नलिखित में से कौन-सी महासागरीय धारा ठंडी है?",
+      "question": "Which of the following ocean currents is cold?",
       "options": {
-        "a": "Gulf Stream / गल्फ स्ट्रीम",
-        "b": "Peru (Humboldt) Current / पेरू (हंबोल्ट) धारा",
-        "c": "Kuroshio Current / कुरोशियो धारा",
-        "d": "North Atlantic Drift / उत्तर अटलांटिक प्रवाह"
+        "a": "Gulf Stream",
+        "b": "Peru (Humboldt) Current",
+        "c": "Kuroshio Current",
+        "d": "North Atlantic Drift"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Peru Current flows northward along South America’s west coast carrying cold water.\n\n📖 हिंदी स्पष्टीकरण:\nपेरू धारा दक्षिण अमेरिका के पश्चिमी तट के साथ ठंडा जल उत्तर की ओर ले जाती है।"
     },
     {
       "q_num": 50,
-      "question": "Which of the following continents is known as the ‘White Continent’?\n कौन-सा महाद्वीप 'श्वेत महाद्वीप' के नाम से जाना जाता है?",
+      "question": "Which of the following continents is known as the ‘White Continent’?",
       "options": {
-        "a": "Antarctica / अंटार्कटिका",
-        "b": "Europe / यूरोप",
-        "c": "Asia / एशिया",
-        "d": "North America / उत्तर अमेरिका"
+        "a": "Antarctica",
+        "b": "Europe",
+        "c": "Asia",
+        "d": "North America"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAntarctica is called the White Continent due to its ice cover.\n\n📖 हिंदी स्पष्टीकरण:\nअंटार्कटिका अपनी बर्फीली सतह के कारण ‘श्वेत महाद्वीप’ कहलाता है।"
     },
     {
       "q_num": 51,
-      "question": "Which of the following statements about the Tropic of Capricorn is correct?\n मकर रेखा के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Tropic of Capricorn is correct?",
       "options": {
-        "a": "It passes through South America, Africa, and Australia. / यह दक्षिण अमेरिका, अफ्रीका और ऑस्ट्रेलिया से गुजरती है।",
-        "b": "It is at 23.5° N latitude. / यह 23.5° उत्तर अक्षांश पर स्थित है।",
-        "c": "It marks the northernmost point of the Sun’s overhead path. / यह सूर्य के ऊपर जाने का उत्तरीतम बिंदु है।",
-        "d": "It passes through India. / यह भारत से गुजरती है।"
+        "a": "It passes through South America, Africa, and Australia.",
+        "b": "It is at 23.5° N latitude.",
+        "c": "It marks the northernmost point of the Sun’s overhead path.",
+        "d": "It passes through India."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Tropic of Capricorn (23.5° S) passes through South America, Africa, and Australia.\n\n📖 हिंदी स्पष्टीकरण:\nमकर रेखा (23.5° दक्षिण) दक्षिण अमेरिका, अफ्रीका और ऑस्ट्रेलिया से गुजरती है।"
     },
     {
       "q_num": 52,
-      "question": "Consider the following statements about the Sun:\n सूर्य के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is a G-type main-sequence star. / यह एक G-प्रकार का मुख्य अनुक्रम तारा है।\n (b) Its energy is produced by nuclear fusion of hydrogen into helium. / इसकी ऊर्जा हाइड्रोजन से हीलियम में नाभिकीय संलयन द्वारा उत्पन्न होती है।\n (c) It is the largest star in the Milky Way. / यह आकाशगंगा का सबसे बड़ा तारा है।\n Which statements are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Sun:\n(a) It is a G-type main-sequence star.\n(b) Its energy is produced by nuclear fusion of hydrogen into helium.\n(c) It is the largest star in the Milky Way.\n Which statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Sun is a G-type main-sequence star, producing energy through hydrogen fusion, but not the largest star in the Milky Way.\n\n📖 हिंदी स्पष्टीकरण:\nसूर्य G-प्रकार का मुख्य अनुक्रम तारा है और हाइड्रोजन संलयन द्वारा ऊर्जा उत्पन्न करता है, लेकिन यह आकाशगंगा का सबसे बड़ा तारा नहीं है।"
     },
     {
       "q_num": 53,
-      "question": "Which of the following statements about seismic waves is correct?\n भूकंपीय तरंगों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about seismic waves is correct?",
       "options": {
-        "a": "P-waves cannot travel through liquids. / P-तरंगें द्रवों से नहीं गुजर सकतीं।",
-        "b": "S-waves can travel through both solids and liquids. / S-तरंगें ठोस और द्रव दोनों से गुजर सकती हैं।",
-        "c": "P-waves are faster than S-waves. / P-तरंगें S-तरंगों से तेज़ होती हैं।",
-        "d": "Surface waves travel faster than P-waves. / सतही तरंगें P-तरंगों से तेज़ होती हैं।"
+        "a": "P-waves cannot travel through liquids.",
+        "b": "S-waves can travel through both solids and liquids.",
+        "c": "P-waves are faster than S-waves.",
+        "d": "Surface waves travel faster than P-waves."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nP-waves (primary waves) are the fastest seismic waves and travel through both solids and liquids.\n\n📖 हिंदी स्पष्टीकरण:\nP-तरंगें सबसे तेज़ होती हैं और ठोस तथा द्रव दोनों माध्यमों से गुजर सकती हैं।"
     },
     {
       "q_num": 54,
-      "question": "Which planet has the fastest rotation period in the Solar System?\n सौर मंडल में किस ग्रह का घूर्णन अवधि सबसे तेज़ है?",
+      "question": "Which planet has the fastest rotation period in the Solar System?",
       "options": {
-        "a": "Earth / पृथ्वी",
-        "b": "Jupiter / बृहस्पति",
-        "c": "Mercury / बुध",
-        "d": "Saturn / शनि"
+        "a": "Earth",
+        "b": "Jupiter",
+        "c": "Mercury",
+        "d": "Saturn"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJupiter completes one rotation in about 10 hours, making it the fastest rotating planet.\n\n📖 हिंदी स्पष्टीकरण:\nबृहस्पति लगभग 10 घंटे में एक बार घूर्णन करता है, जिससे यह सबसे तेज़ घूमने वाला ग्रह है।"
     },
     {
       "q_num": 55,
-      "question": "Which ocean separates Africa from Australia?\n कौन-सा महासागर अफ्रीका को ऑस्ट्रेलिया से अलग करता है?",
+      "question": "Which ocean separates Africa from Australia?",
       "options": {
-        "a": "Indian Ocean / हिंद महासागर",
-        "b": "Atlantic Ocean / अटलांटिक महासागर",
-        "c": "Pacific Ocean / प्रशांत महासागर",
-        "d": "Arctic Ocean / आर्कटिक महासागर"
+        "a": "Indian Ocean",
+        "b": "Atlantic Ocean",
+        "c": "Pacific Ocean",
+        "d": "Arctic Ocean"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Indian Ocean lies between Africa and Australia.\n\n📖 हिंदी स्पष्टीकरण:\nहिंद महासागर अफ्रीका और ऑस्ट्रेलिया के बीच स्थित है।"
     },
     {
       "q_num": 56,
-      "question": "Which of the following statements about the lithosphere is correct?\n लिथोस्फीयर के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the lithosphere is correct?",
       "options": {
-        "a": "It is completely molten. / यह पूरी तरह द्रवित होता है।",
-        "b": "It includes both crust and uppermost mantle. / इसमें भू-पर्पटी और मेंटल का ऊपरी भाग शामिल है।",
-        "c": "It lies below the asthenosphere. / यह एस्थेनोस्फीयर के नीचे स्थित है।",
-        "d": "It does not include the crust. / इसमें भू-पर्पटी शामिल नहीं है।"
+        "a": "It is completely molten.",
+        "b": "It includes both crust and uppermost mantle.",
+        "c": "It lies below the asthenosphere.",
+        "d": "It does not include the crust."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe lithosphere consists of the crust and the rigid upper mantle forming tectonic plates.\n\n📖 हिंदी स्पष्टीकरण:\nलिथोस्फीयर भू-पर्पटी और मेंटल के कठोर ऊपरी भाग से बना होता है, जो प्लेटों का निर्माण करता है।"
     },
     {
       "q_num": 57,
-      "question": "Consider the following statements about the Arctic Circle:\n आर्कटिक वृत्त के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It lies at the Equator. / यह भूमध्य रेखा पर स्थित है।\n (b) Inside this circle, the Sun remains above the horizon for 24 hours in summer. / इस वृत्त के भीतर, गर्मियों में सूर्य 24 घंटे क्षितिज के ऊपर रहता है।\n (c) It lies at approximately 66.5° N latitude. / यह लगभग 66.5° उत्तर अक्षांश पर स्थित है।\n Which statements are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Arctic Circle:\n(a) It lies at the Equator.\n(b) Inside this circle, the Sun remains above the horizon for 24 hours in summer.\n(c) It lies at approximately 66.5° N latitude.\n Which statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "1 and 3 / 1 और 3",
-        "c": "2 and 3 / 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "1 and 3 / 1",
+        "c": "2 and 3 / 2",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Arctic Circle is at 66.5° N, where summer sun stays above the horizon for 24 hours.\n\n📖 हिंदी स्पष्टीकरण:\nआर्कटिक वृत्त 66.5° उत्तर पर स्थित है, जहाँ गर्मियों में सूर्य 24 घंटे ऊपर रहता है।"
     },
     {
       "q_num": 58,
-      "question": "Which of the following statements about comets is correct?\n धूमकेतुओं के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about comets is correct?",
       "options": {
-        "a": "They are primarily composed of rock and metal. / वे मुख्य रूप से चट्टान और धातु से बने होते हैं।",
-        "b": "They have highly elliptical orbits around the Sun. / इनकी सूर्य के चारों ओर अत्यधिक दीर्घवृत्ताकार कक्षाएँ होती हैं।",
-        "c": "They remain visible even without approaching the Sun. / सूर्य के निकट आए बिना ये दृश्य रहते हैं।",
-        "d": "They are larger than planets. / वे ग्रहों से बड़े होते हैं।"
+        "a": "They are primarily composed of rock and metal.",
+        "b": "They have highly elliptical orbits around the Sun.",
+        "c": "They remain visible even without approaching the Sun.",
+        "d": "They are larger than planets."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nComets have highly elliptical orbits and develop tails when approaching the Sun.\n\n📖 हिंदी स्पष्टीकरण:\nधूमकेतुओं की कक्षाएँ अत्यधिक दीर्घवृत्ताकार होती हैं और सूर्य के पास आने पर उनकी पूंछ बनती है।"
     },
     {
       "q_num": 59,
-      "question": "Which of the following statements about Mercury is correct?\n बुध ग्रह के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about Mercury is correct?",
       "options": {
-        "a": "It has a thick atmosphere rich in oxygen. / इसकी मोटी ऑक्सीजन युक्त वायुमंडलीय है।",
-        "b": "It is the closest planet to the Sun. / यह सूर्य के सबसे निकट ग्रह है।",
-        "c": "It has rings like Saturn. / इसके छल्ले शनि की तरह हैं।",
-        "d": "It rotates slower than Venus. / यह शुक्र से धीमी गति से घूमता है।"
+        "a": "It has a thick atmosphere rich in oxygen.",
+        "b": "It is the closest planet to the Sun.",
+        "c": "It has rings like Saturn.",
+        "d": "It rotates slower than Venus."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMercury is the closest planet to the Sun and has a very thin atmosphere.\n\n📖 हिंदी स्पष्टीकरण:\nबुध सूर्य के सबसे निकट ग्रह है और इसका वायुमंडल बहुत पतला है।"
     },
     {
       "q_num": 60,
-      "question": "Which of the following continents lies entirely in the Southern Hemisphere?\n निम्नलिखित में से कौन-सा महाद्वीप पूर्णतः दक्षिणी गोलार्ध में स्थित है?",
+      "question": "Which of the following continents lies entirely in the Southern Hemisphere?",
       "options": {
-        "a": "Africa / अफ्रीका",
-        "b": "South America / दक्षिण अमेरिका",
-        "c": "Australia / ऑस्ट्रेलिया",
-        "d": "Asia / एशिया"
+        "a": "Africa",
+        "b": "South America",
+        "c": "Australia",
+        "d": "Asia"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAustralia lies completely south of the equator.\n\n📖 हिंदी स्पष्टीकरण:\nऑस्ट्रेलिया पूरी तरह भूमध्य रेखा के दक्षिण में स्थित है।"
     },
     {
       "q_num": 61,
-      "question": "Consider the following statements about the Prime Meridian:\n प्रधान लाभांश के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It passes through Greenwich, England. / यह ग्रीनविच, इंग्लैंड से गुजरती है।\n (b) It is at 0° longitude. / यह 0° देशांतर पर स्थित है।\n (c) It divides the Earth into the Eastern and Western Hemispheres. / यह पृथ्वी को पूर्वी और पश्चिमी गोलार्ध में विभाजित करती है।\n Which statements are correct?\n कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Prime Meridian:\n(a) It passes through Greenwich, England.\n(b) It is at 0° longitude.\n(c) It divides the Earth into the Eastern and Western Hemispheres.\n Which statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Prime Meridian passes through Greenwich at 0° longitude and divides the Earth into Eastern and Western Hemispheres.\n\n📖 हिंदी स्पष्टीकरण:\nप्रधान लाभांश ग्रीनविच से 0° देशांतर पर गुजरती है और पृथ्वी को पूर्वी और पश्चिमी गोलार्ध में विभाजित करती है।"
     },
     {
       "q_num": 62,
-      "question": "Which of the following statements about the Tropic of Cancer is correct?\n कर्क रेखा के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Tropic of Cancer is correct?",
       "options": {
-        "a": "It passes through India. / यह भारत से गुजरती है।",
-        "b": "It marks the southernmost point of the Sun’s overhead path. / यह सूर्य के ऊपर जाने का दक्षिणतम बिंदु है।",
-        "c": "It lies at 23.5° S latitude. / यह 23.5° दक्षिण अक्षांश पर स्थित है।",
-        "d": "It passes through the North Pole. / यह उत्तरी ध्रुव से गुजरती है।"
+        "a": "It passes through India.",
+        "b": "It marks the southernmost point of the Sun’s overhead path.",
+        "c": "It lies at 23.5° S latitude.",
+        "d": "It passes through the North Pole."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Tropic of Cancer (23.5° N) passes through India.\n\n📖 हिंदी स्पष्टीकरण:\nकर्क रेखा (23.5° उत्तर) भारत से गुजरती है।"
     },
     {
       "q_num": 63,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित युग्मों में से कौन-सा सही मेल है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Granite – Extrusive igneous / ग्रेनाइट – बहिर्गामी आग्नेय",
-        "b": "Basalt – Intrusive igneous / बेसाल्ट – अंतर्गामी आग्नेय",
-        "c": "Sandstone – Sedimentary / बलुआ पत्थर – आवसादी",
-        "d": "Slate – Igneous / स्लेट – आग्नेय"
+        "a": "Granite – Extrusive igneous",
+        "b": "Basalt – Intrusive igneous",
+        "c": "Sandstone – Sedimentary",
+        "d": "Slate – Igneous"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSandstone is formed by the compaction of sand particles—thus sedimentary.\n\n📖 हिंदी स्पष्टीकरण:\nबलुआ पत्थर रेत कणों के संघनन से बनता है, इसलिए यह आवसादी है।"
     },
     {
       "q_num": 64,
-      "question": "Which of the following is an example of an igneous rock?\n निम्नलिखित में से कौन-सा एक आग्नेय शिला का उदाहरण है?",
+      "question": "Which of the following is an example of an igneous rock?",
       "options": {
-        "a": "Marble / संगमरमर",
-        "b": "Limestone / चूना पत्थर",
-        "c": "Slate / स्लेट",
-        "d": "Basalt / बेसाल्ट"
+        "a": "Marble",
+        "b": "Limestone",
+        "c": "Slate",
+        "d": "Basalt"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nBasalt forms from cooling lava; it’s a primary igneous rock.\n\n📖 हिंदी स्पष्टीकरण:\nबेसाल्ट लावा के ठंडा होने से बनती है और यह प्रमुख आग्नेय शिला है।"
     },
     {
       "q_num": 65,
-      "question": "Which of the following statements about time zones is correct?\n समय क्षेत्रों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about time zones is correct?",
       "options": {
-        "a": "Each time zone generally spans 15° of longitude. / प्रत्येक समय क्षेत्र आमतौर पर 15° देशांतर तक फैला होता है।",
-        "b": "All countries strictly follow exact 15° divisions. / सभी देश सख्ती से 15° विभाजन का पालन करते हैं।",
-        "c": "Time zones are based on latitude. / समय क्षेत्र अक्षांश पर आधारित होते हैं।",
-        "d": "The Prime Meridian is not related to time zones. / प्रधान लाभांश समय क्षेत्रों से संबंधित नहीं है।"
+        "a": "Each time zone generally spans 15° of longitude.",
+        "b": "All countries strictly follow exact 15° divisions.",
+        "c": "Time zones are based on latitude.",
+        "d": "The Prime Meridian is not related to time zones."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nTime zones are approximately 15° apart in longitude, though actual borders may vary.\n\n📖 हिंदी स्पष्टीकरण:\nसमय क्षेत्र लगभग 15° देशांतर पर स्थित होते हैं, हालांकि वास्तविक सीमाएँ भिन्न हो सकती हैं।"
     },
     {
       "q_num": 66,
-      "question": "Which of the following statements about continental drift is correct?\n महाद्वीपीय विस्थापन के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about continental drift is correct?",
       "options": {
-        "a": "Continents were once joined in Pangaea. / महाद्वीप पहले पैंजिया नामक स्थलखंड में जुड़े थे।",
-        "b": "Continents have been fixed since formation. / महाद्वीप निर्माण के बाद स्थिर रहे हैं।",
-        "c": "The theory was proposed by Alfred Wegener. / यह सिद्धांत ऐल्फ्रेड वेगेनर ने दिया।",
-        "d": "Both 1 and 3 / 1 और 3 दोनों"
+        "a": "Continents were once joined in Pangaea.",
+        "b": "Continents have been fixed since formation.",
+        "c": "The theory was proposed by Alfred Wegener.",
+        "d": "Both 1 and 3 / 1"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nWegener proposed that continents drifted apart from Pangaea.\n\n📖 हिंदी स्पष्टीकरण:\nवेगेनर ने प्रस्तावित किया कि सभी महाद्वीप पैंजिया से अलग हुए।"
     },
     {
       "q_num": 67,
-      "question": "Consider the following plate boundaries:\n निम्नलिखित प्लेट सीमाओं पर विचार करें:",
+      "question": "Consider the following plate boundaries:",
       "options": {
-        "a": "Divergent – Plates move toward each other / डायवर्जेंट – प्लेटें एक-दूसरे की ओर बढ़ती हैं",
-        "b": "Convergent – Plates move away from each other / कनवर्जेंट – प्लेटें दूर जाती हैं",
-        "c": "Transform – Plates slide past each other / ट्रांसफॉर्म – प्लेटें एक-दूसरे के समानांतर खिसकती हैं",
-        "d": "None of the above / उपरोक्त में से कोई नहीं"
+        "a": "Divergent – Plates move toward each other",
+        "b": "Convergent – Plates move away from each other",
+        "c": "Transform – Plates slide past each other",
+        "d": "None of the above"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAt transform boundaries, plates slide horizontally past one another.\n\n📖 हिंदी स्पष्टीकरण:\nट्रांसफॉर्म सीमा पर प्लेटें एक-दूसरे के समानांतर खिसकती हैं।"
     },
     {
       "q_num": 68,
-      "question": "Which of the following statements about the International Date Line (IDL) is correct?\n अंतर्राष्ट्रीय तारीख रेखा (IDL) के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the International Date Line (IDL) is correct?",
       "options": {
-        "a": "It lies at 0° longitude. / यह 0° देशांतर पर स्थित है।",
-        "b": "Crossing it eastward loses a day, westward gains a day. / इसे पूर्व की ओर पार करने पर एक दिन घटता है, पश्चिम की ओर पार करने पर एक दिन बढ़ता है।",
-        "c": "It passes through Greenwich, England. / यह ग्रीनविच, इंग्लैंड से गुजरती है।",
-        "d": "It divides the Earth into Northern and Southern Hemispheres. / यह पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में विभाजित करती है।"
+        "a": "It lies at 0° longitude.",
+        "b": "Crossing it eastward loses a day, westward gains a day.",
+        "c": "It passes through Greenwich, England.",
+        "d": "It divides the Earth into Northern and Southern Hemispheres."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe International Date Line roughly follows the 180° longitude; eastward crossing subtracts a day, westward crossing adds a day.\n\n📖 हिंदी स्पष्टीकरण:\nअंतर्राष्ट्रीय तारीख रेखा लगभग 180° देशांतर पर स्थित है; इसे पूर्व की ओर पार करने पर एक दिन घटता है, पश्चिम की ओर पार करने पर जोड़ता है।"
     },
     {
       "q_num": 69,
-      "question": "Which of the following statements about earthquakes is correct?\n भूकंपों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about earthquakes is correct?",
       "options": {
-        "a": "They do not release energy. / वे ऊर्जा नहीं छोड़ते।",
-        "b": "They are caused by volcanic activity only. / वे केवल ज्वालामुखीय गतिविधि से होते हैं।",
-        "c": "They cannot occur in oceanic regions. / वे महासागरीय क्षेत्रों में नहीं होते।",
-        "d": "They occur mainly along plate boundaries. / वे मुख्यतः प्लेट सीमाओं पर होते हैं।"
+        "a": "They do not release energy.",
+        "b": "They are caused by volcanic activity only.",
+        "c": "They cannot occur in oceanic regions.",
+        "d": "They occur mainly along plate boundaries."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMost earthquakes occur along plate boundaries due to the movement and collision of plates.\n\n📖 हिंदी स्पष्टीकरण:\nअधिकांश भूकंप प्लेट सीमाओं के साथ प्लेटों की गति और टकराव से होते हैं।"
     },
     {
       "q_num": 70,
-      "question": "Consider the following statements regarding the asteroid belt:\n एस्ट्रॉयड बेल्ट के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It lies between Mars and Jupiter. / यह मंगल और बृहस्पति के बीच स्थित है।\n (b) It contains millions of small rocky bodies. / इसमें लाखों छोटे चट्टानी पिंड होते हैं।\n (c) It is the origin of most comets in the Solar System. / यह सौर मंडल में अधिकांश धूमकेतुओं का स्रोत है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the asteroid belt:\n(a) It lies between Mars and Jupiter.\n(b) It contains millions of small rocky bodies.\n(c) It is the origin of most comets in the Solar System.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "1 and 3 / 1 और 3",
-        "c": "2 and 3 / 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "1 and 3 / 1",
+        "c": "2 and 3 / 2",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe asteroid belt lies between Mars and Jupiter and contains millions of rocky bodies, but it is not the main source of comets.\n\n📖 हिंदी स्पष्टीकरण:\nएस्ट्रॉयड बेल्ट मंगल और बृहस्पति के बीच स्थित है और इसमें लाखों चट्टानी पिंड होते हैं, लेकिन यह अधिकांश धूमकेतुओं का मुख्य स्रोत नहीं है।"
     },
     {
       "q_num": 71,
-      "question": "Which type of boundary forms mid-ocean ridges?\n किस प्रकार की प्लेट सीमा पर मध्य महासागरीय पर्वत श्रृंखला बनती है?",
+      "question": "Which type of boundary forms mid-ocean ridges?",
       "options": {
-        "a": "Transform / रूपांतरण",
-        "b": "Convergent / अभिसारी",
-        "c": "Divergent / अपसारी",
-        "d": "Passive / निष्क्रिय"
+        "a": "Transform",
+        "b": "Convergent",
+        "c": "Divergent",
+        "d": "Passive"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDivergent boundaries form ridges where new oceanic crust is created.\n\n📖 हिंदी स्पष्टीकरण:\nअपसारी सीमाओं पर नई महासागरीय पर्पटी के निर्माण से पर्वत श्रृंखलाएँ बनती हैं।"
     },
     {
       "q_num": 72,
-      "question": "Which of the following is the correct sequence of Earth's internal layers from the surface to the centre?\n पृथ्वी की आंतरिक परतों का सतह से केंद्र तक सही क्रम कौन-सा है?",
+      "question": "Which of the following is the correct sequence of Earth's internal layers from the surface to the centre?",
       "options": {
-        "a": "Crust → Mantle → Core / भू-पर्पटी → मेंटल → कोर",
-        "b": "Mantle → Core → Crust / मेंटल → कोर → भू-पर्पटी",
-        "c": "Core → Mantle → Crust / कोर → मेंटल → भू-पर्पटी",
-        "d": "Crust → Core → Mantle / भू-पर्पटी → कोर → मेंटल"
+        "a": "Crust → Mantle → Core",
+        "b": "Mantle → Core → Crust",
+        "c": "Core → Mantle → Crust",
+        "d": "Crust → Core → Mantle"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Earth’s structure consists of crust, mantle, and core in order from the surface to the center.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी की संरचना सतह से केंद्र की ओर क्रमशः भू-पर्पटी, मेंटल और कोर से बनी है।"
     },
     {
       "q_num": 73,
-      "question": "Which of the following statements about Neptune is correct?\n नेप्च्यून के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about Neptune is correct?",
       "options": {
-        "a": "It is the coldest planet in the Solar System. / यह सौर मंडल का सबसे ठंडा ग्रह है।",
-        "b": "It has a strong magnetic field and fast winds. / इसका मजबूत चुंबकीय क्षेत्र और तेज हवाएँ हैं।",
-        "c": "It is visible to the naked eye from Earth. / यह पृथ्वी से नग्न नेत्रों से दिखाई देता है।",
-        "d": "It is closer to the Sun than Uranus. / यह यूरेनस से सूर्य के अधिक निकट है।"
+        "a": "It is the coldest planet in the Solar System.",
+        "b": "It has a strong magnetic field and fast winds.",
+        "c": "It is visible to the naked eye from Earth.",
+        "d": "It is closer to the Sun than Uranus."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNeptune has a strong magnetic field and experiences the fastest winds in the Solar System.\n\n📖 हिंदी स्पष्टीकरण:\nनेप्च्यून का मजबूत चुंबकीय क्षेत्र है और इसमें सौर मंडल की सबसे तेज़ हवाएँ चलती हैं।"
     },
     {
       "q_num": 74,
-      "question": "Which planet is called the Earth’s twin due to similar size and mass?\n किस ग्रह को आकार और द्रव्यमान में पृथ्वी का जुड़वां कहा जाता है?",
+      "question": "Which planet is called the Earth’s twin due to similar size and mass?",
       "options": {
-        "a": "Mercury / बुध",
-        "b": "Venus / शुक्र",
-        "c": "Mars / मंगल",
-        "d": "Saturn / शनि"
+        "a": "Mercury",
+        "b": "Venus",
+        "c": "Mars",
+        "d": "Saturn"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nVenus is similar to Earth in size and mass, earning the nickname “Earth’s twin.”\n\n📖 हिंदी स्पष्टीकरण:\nशुक्र आकार और द्रव्यमान में पृथ्वी के समान है, इसलिए इसे “पृथ्वी का जुड़वां” कहा जाता है।"
     },
     {
       "q_num": 75,
-      "question": "Which of the following layers is responsible for the movement of tectonic plates?\n निम्नलिखित में से कौन-सी परत प्लेटों की गति के लिए जिम्मेदार है?",
+      "question": "Which of the following layers is responsible for the movement of tectonic plates?",
       "options": {
-        "a": "Crust / भू-पर्पटी",
-        "b": "Lithosphere / लिथोस्फीयर",
-        "c": "Core / कोर",
-        "d": "Asthenosphere / एस्थेनोस्फीयर"
+        "a": "Crust",
+        "b": "Lithosphere",
+        "c": "Core",
+        "d": "Asthenosphere"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe asthenosphere, a semi-molten layer beneath the lithosphere, allows plate movement.\n\n📖 हिंदी स्पष्टीकरण:\nलिथोस्फीयर के नीचे स्थित अर्ध-द्रवित एस्थेनोस्फीयर परत प्लेटों की गति की अनुमति देती है।"

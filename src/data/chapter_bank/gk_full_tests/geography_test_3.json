@@ -6,103 +6,103 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding the Shiwalik Range:\n शिवालिक श्रेणी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is the outermost range of the Himalayas.\n यह हिमालय की सबसे बाहरी श्रेणी है।\n (b) It is mainly composed of unconsolidated sediments.\n यह मुख्यतः असंलग्न अवसादों से बनी है।\n (c) Its average height is between 900 to 1100 metres.\n इसकी औसत ऊँचाई 900 से 1100 मीटर के बीच होती है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding the Shiwalik Range:\n (a) It is the outermost range of the Himalayas.\n (b) It is mainly composed of unconsolidated sediments.\n (c) Its average height is between 900 to 1100 metres.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "1 and 3 / 1 और 3",
-        "c": "2 and 3 / 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "1 and 3 / 1",
+        "c": "2 and 3 / 2",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Shiwaliks are the youngest and outermost ranges of the Himalayas, formed by unconsolidated sediments with average height 900–1100 m.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। शिवालिक हिमालय की सबसे बाहरी और नवीनतम श्रेणी है, जो असंलग्न अवसादों से बनी है और इसकी ऊँचाई लगभग 900–1100 मीटर है।"
     },
     {
       "q_num": 2,
-      "question": "Which Indian state has the longest international boundary?\n भारत का कौन-सा राज्य सबसे लंबी अंतर्राष्ट्रीय सीमा साझा करता है?",
+      "question": "Which Indian state has the longest international boundary?",
       "options": {
-        "a": "West Bengal / पश्चिम बंगाल",
-        "b": "Rajasthan / राजस्थान",
-        "c": "Uttar Pradesh / उत्तर प्रदेश",
-        "d": "Sikkim / सिक्किम"
+        "a": "West Bengal",
+        "b": "Rajasthan",
+        "c": "Uttar Pradesh",
+        "d": "Sikkim"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWest Bengal shares about 2,217 km of international border with Bangladesh, Bhutan and Nepal — the longest among Indian states.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिम बंगाल लगभग 2217 किमी अंतर्राष्ट्रीय सीमा बांग्लादेश, भूटान और नेपाल से साझा करता है, जो भारत के राज्यों में सबसे लंबी है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following states is not a part of the Northern Plains of India?\n निम्नलिखित में से कौन-सा राज्य भारत के उत्तरी मैदानों का भाग नहीं है?",
+      "question": "Which of the following states is not a part of the Northern Plains of India?",
       "options": {
-        "a": "Haryana / हरियाणा",
-        "b": "Bihar / बिहार",
-        "c": "Jharkhand / झारखंड",
-        "d": "Punjab / पंजाब"
+        "a": "Haryana",
+        "b": "Bihar",
+        "c": "Jharkhand",
+        "d": "Punjab"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nJharkhand mainly lies in the Chotanagpur Plateau region, which forms part of the Peninsular Plateau, not the Northern Plains.\n\n📖 हिंदी स्पष्टीकरण:\nझारखंड मुख्य रूप से छोटानागपुर पठार क्षेत्र में स्थित है, जो प्रायद्वीपीय पठार का भाग है, न कि उत्तरी मैदानों का।"
     },
     {
       "q_num": 4,
-      "question": "Consider the following statements regarding the Purvanchal Hills:\n पूर्वांचल पर्वत के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are located in the eastern part of India.\n (b) They are composed mainly of sedimentary rocks.\n (c) Patkai Bum, Naga Hills and Mizo Hills are part of it.\n Which of the statements given above are correct?",
+      "question": "Consider the following statements regarding the Purvanchal Hills:\n (a) They are located in the eastern part of India.\n (b) They are composed mainly of sedimentary rocks.\n (c) Patkai Bum, Naga Hills and Mizo Hills are part of it.\n Which of the statements given above are correct?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Purvanchal hills form the eastern extension of the Himalayas consisting mainly of sedimentary rocks like Patkai Bum, Naga and Mizo Hills.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। पूर्वांचल पर्वत हिमालय का पूर्वी विस्तार है, जो मुख्यतः अवसादी चट्टानों से बने हैं जैसे पतकाई बुम, नागा और मिजो पहाड़ियाँ।"
     },
     {
       "q_num": 5,
-      "question": "The Western Ghats are highest in which region?\n पश्चिमी घाट किस क्षेत्र में सबसे ऊँचे हैं?",
+      "question": "The Western Ghats are highest in which region?",
       "options": {
-        "a": "Nilgiri Hills / नीलगिरी पहाड़ियाँ",
-        "b": "Anaimalai Hills / अनैमलाई पहाड़ियाँ",
-        "c": "Cardamom Hills / इलायची पहाड़ियाँ",
-        "d": "Doddabetta Peak region / डोड्डाबेट्टा क्षेत्र"
+        "a": "Nilgiri Hills",
+        "b": "Anaimalai Hills",
+        "c": "Cardamom Hills",
+        "d": "Doddabetta Peak region"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Anaimalai Hills contain Anamudi Peak (2,695 m), the highest point of the Western Ghats, located in Kerala.\n\n📖 हिंदी स्पष्टीकरण:\nअनैमलाई पहाड़ियों में अनामुड़ी शिखर (2695 मी) स्थित है, जो पश्चिमी घाट का सबसे ऊँचा बिंदु है।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित युग्मों में से कौन-सा सही सुमेलित है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Indo-Bangladesh Boundary – 1971 Treaty of Peace, Friendship and Cooperation / भारत-बांग्लादेश सीमा – 1971 की शांति, मैत्री और सहयोग संधि",
-        "b": "Indo-China Boundary – McMahon Line (1914) / भारत-चीन सीमा – मैकमहन रेखा (1914)",
-        "c": "Indo-Pakistan Boundary – Radcliffe Line (1935) / भारत-पाकिस्तान सीमा – रैडक्लिफ रेखा (1935)",
-        "d": "Indo-Nepal Boundary – Simla Agreement (1950) / भारत-नेपाल सीमा – शिमला समझौता (1950)"
+        "a": "Indo-Bangladesh Boundary – 1971 Treaty of Peace, Friendship and Cooperation",
+        "b": "Indo-China Boundary – McMahon Line (1914)",
+        "c": "Indo-Pakistan Boundary – Radcliffe Line (1935)",
+        "d": "Indo-Nepal Boundary – Simla Agreement (1950)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Indo-China boundary is demarcated by the McMahon Line (1914 Simla Agreement). Other options are mismatched.\n\n📖 हिंदी स्पष्टीकरण:\nभारत-चीन सीमा 1914 के शिमला समझौते द्वारा निर्धारित मैकमहन रेखा से परिभाषित है। अन्य विकल्प गलत हैं।"
     },
     {
       "q_num": 7,
-      "question": "Which of the following plateaus is not a part of the Peninsular Plateau?\n निम्नलिखित में से कौन-सा पठार दक्षिणी पठार का भाग नहीं है?",
+      "question": "Which of the following plateaus is not a part of the Peninsular Plateau?",
       "options": {
-        "a": "Chotanagpur Plateau / छोटानागपुर पठार",
-        "b": "Malwa Plateau / मालवा पठार",
-        "c": "Meghalaya Plateau / मेघालय पठार",
-        "d": "Deccan Plateau / दक्कन पठार"
+        "a": "Chotanagpur Plateau",
+        "b": "Malwa Plateau",
+        "c": "Meghalaya Plateau",
+        "d": "Deccan Plateau"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Meghalaya Plateau lies to the northeast, separated by the Garo-Rajmahal Gap, and is not part of the main Peninsular Plateau.\n\n📖 हिंदी स्पष्टीकरण:\nमेघालय पठार पूर्वोत्तर में गरो-राजमहल अंतराल से अलग है और मुख्य दक्षिणी पठार का भाग नहीं है।"
     },
     {
       "q_num": 8,
-      "question": "The Deccan Plateau is bordered by which mountain ranges?\n दक्कन पठार की सीमाएँ किन पर्वत श्रेणियों से घिरी हैं?",
+      "question": "The Deccan Plateau is bordered by which mountain ranges?",
       "options": {
-        "a": "Aravalli and Satpura / अरावली और सतपुड़ा",
-        "b": "Western and Eastern Ghats / पश्चिमी और पूर्वी घाट",
-        "c": "Vindhya and Aravalli / विंध्य और अरावली",
-        "d": "Satpura and Himalaya / सतपुड़ा और हिमालय"
+        "a": "Aravalli and Satpura",
+        "b": "Western and Eastern Ghats",
+        "c": "Vindhya and Aravalli",
+        "d": "Satpura and Himalaya"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Deccan Plateau is flanked by the Western Ghats on the west and the Eastern Ghats on the east.\n\n📖 हिंदी स्पष्टीकरण:\nदक्कन पठार पश्चिम में पश्चिमी घाट और पूर्व में पूर्वी घाट से घिरा हुआ है।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following statements is true about the Deccan Trap?\n निम्नलिखित में से कौन-सा कथन दक्कन ट्रैप के बारे में सही है?",
+      "question": "Which of the following statements is true about the Deccan Trap?",
       "options": {
         "a": "It was formed by volcanic eruptions during the Cretaceous period.",
         "b": "It is composed of basaltic lava flows.",
@@ -114,67 +114,67 @@
     },
     {
       "q_num": 10,
-      "question": "Which of the following passes connects Sikkim with Tibet?\n निम्नलिखित में से कौन-सा दर्रा सिक्किम को तिब्बत से जोड़ता है?",
+      "question": "Which of the following passes connects Sikkim with Tibet?",
       "options": {
-        "a": "Nathu La Pass / नाथू ला दर्रा",
-        "b": "Shipki La Pass / शिपकी ला दर्रा",
-        "c": "Lipulekh Pass / लिपुलेख दर्रा",
-        "d": "Rohtang Pass / रोहतांग दर्रा"
+        "a": "Nathu La Pass",
+        "b": "Shipki La Pass",
+        "c": "Lipulekh Pass",
+        "d": "Rohtang Pass"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNathu La Pass (4,310 m) connects Sikkim with Tibet and serves as a key Indo-China border trade route.\n\n📖 हिंदी स्पष्टीकरण:\nनाथू ला दर्रा (4310 मी) सिक्किम को तिब्बत से जोड़ता है और भारत-चीन व्यापार मार्ग का महत्वपूर्ण भाग है।"
     },
     {
       "q_num": 11,
-      "question": "Which state of India touches the maximum number of other states?\n भारत का कौन-सा राज्य सबसे अधिक राज्यों को छूता है?",
+      "question": "Which state of India touches the maximum number of other states?",
       "options": {
-        "a": "Madhya Pradesh / मध्य प्रदेश",
-        "b": "Chhattisgarh / छत्तीसगढ़",
-        "c": "Uttar Pradesh / उत्तर प्रदेश",
-        "d": "Maharashtra / महाराष्ट्र"
+        "a": "Madhya Pradesh",
+        "b": "Chhattisgarh",
+        "c": "Uttar Pradesh",
+        "d": "Maharashtra"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUttar Pradesh.shares borders with 9 states - Uttarakhand, Himachal Pradesh, Haryana, Delhi, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, Bihar\n\n📖 हिंदी स्पष्टीकरण:\nउत्तर प्रदेश कुल 9 राज्यों से अपनी सीमा साझा करता है — उत्तराखंड, हिमाचल प्रदेश, हरियाणा, दिल्ली, राजस्थान, मध्य प्रदेश, छत्तीसगढ़, झारखंड, बिहार"
     },
     {
       "q_num": 12,
-      "question": "Consider the following statements about the Coastal Plains of India:\n भारत के तटीय मैदानों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They lie between the Western and Eastern Ghats and the sea.\n ये पश्चिमी और पूर्वी घाट तथा समुद्र के बीच स्थित हैं।\n (b) The Western Coastal Plain is narrower than the Eastern Coastal Plain.\n पश्चिमी तटीय मैदान पूर्वी तटीय मैदान की तुलना में संकीर्ण है।\n (c) The Eastern Coastal Plain is formed mainly by the deltas of rivers like Mahanadi and Godavari.\n पूर्वी तटीय मैदान मुख्य रूप से महानदी और गोदावरी जैसी नदियों के डेल्टा से बना है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Coastal Plains of India:\n (a) They lie between the Western and Eastern Ghats and the sea.\n (b) The Western Coastal Plain is narrower than the Eastern Coastal Plain.\n (c) The Eastern Coastal Plain is formed mainly by the deltas of rivers like Mahanadi and Godavari.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll the statements are correct; the coastal plains stretch between the Ghats and seas, with distinct western and eastern characteristics.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं; तटीय मैदान घाटों और समुद्रों के बीच फैले हैं, जिनकी पश्चिमी और पूर्वी प्रकृति भिन्न है।"
     },
     {
       "q_num": 13,
-      "question": "The Great Himalayan Range is mainly composed of which type of rocks?\n महान हिमालय मुख्यतः किस प्रकार की चट्टानों से बना है?",
+      "question": "The Great Himalayan Range is mainly composed of which type of rocks?",
       "options": {
-        "a": "Sedimentary / अवसादी",
-        "b": "Metamorphic / रूपांतरित",
-        "c": "Igneous / आग्नेय",
-        "d": "Alluvial / जलोढ़"
+        "a": "Sedimentary",
+        "b": "Metamorphic",
+        "c": "Igneous",
+        "d": "Alluvial"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Great Himalayas (main Himadri) are composed primarily of metamorphic rocks like gneiss and schist formed under intense pressure.\n\n📖 हिंदी स्पष्टीकरण:\nमहान हिमालय मुख्यतः गनीस और शिस्ट जैसी रूपांतरित चट्टानों से बना है, जो उच्च दाब के अंतर्गत निर्मित हुई हैं।"
     },
     {
       "q_num": 14,
-      "question": "Which Indian state does not share boundaries with any foreign country?\n भारत का कौन-सा राज्य किसी भी विदेशी देश से सीमा साझा नहीं करता?",
+      "question": "Which Indian state does not share boundaries with any foreign country?",
       "options": {
-        "a": "Madhya Pradesh / मध्य प्रदेश",
-        "b": "Assam / असम",
-        "c": "Bihar / बिहार",
-        "d": "West Bengal / पश्चिम बंगाल"
+        "a": "Madhya Pradesh",
+        "b": "Assam",
+        "c": "Bihar",
+        "d": "West Bengal"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMadhya Pradesh is a landlocked state in central India and shares no international boundary.\n\n📖 हिंदी स्पष्टीकरण:\nमध्य प्रदेश एक स्थलीय राज्य है जो भारत के मध्य भाग में स्थित है और किसी भी विदेशी देश से सीमा साझा नहीं करता।"
     },
     {
       "q_num": 15,
-      "question": "Arrange the following Himalayan ranges from south to north:\n निम्नलिखित हिमालयी श्रेणियों को दक्षिण से उत्तर की ओर क्रम में लगाएँ:",
+      "question": "Arrange the following Himalayan ranges from south to north:",
       "options": {
         "a": "Lesser Himalayas, Shiwaliks, Great Himalayas",
         "b": "Shiwaliks, Lesser Himalayas, Great Himalayas",
@@ -186,259 +186,259 @@
     },
     {
       "q_num": 16,
-      "question": "The Western Coastal Plain between Goa and Daman is known as:\n गोवा और दमन के बीच का पश्चिमी तटीय मैदान किस नाम से ज्ञात है?",
+      "question": "The Western Coastal Plain between Goa and Daman is known as:",
       "options": {
-        "a": "Konkan Coast / कोंकण तट",
-        "b": "Malabar Coast / मालाबार तट",
-        "c": "Coromandel Coast / कोरोमंडल तट",
-        "d": "Kannada Coast / कन्नड़ तट"
+        "a": "Konkan Coast",
+        "b": "Malabar Coast",
+        "c": "Coromandel Coast",
+        "d": "Kannada Coast"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Konkan Coast lies between Daman and Goa forming the northern part of the Western Coastal Plains.\n\n📖 हिंदी स्पष्टीकरण:\nकोंकण तट दमन से गोवा तक फैला है और पश्चिमी तटीय मैदानों का उत्तरी भाग है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following regions is called the ‘Sindh–Sagar Doab’?\n निम्नलिखित में से किस क्षेत्र को ‘सिंध–सागर दोआब’ कहा जाता है?",
+      "question": "Which of the following regions is called the ‘Sindh–Sagar Doab’?",
       "options": {
-        "a": "Area between Ganga and Yamuna rivers / गंगा और यमुना नदियों के बीच का क्षेत्र",
-        "b": "Area between Narmada and Tapti / नर्मदा और तापी के बीच का क्षेत्र",
-        "c": "Area between Godavari and Krishna / गोदावरी और कृष्णा के बीच का क्षेत्र",
-        "d": "Area between Indus and Jhelum / सिंधु और झेलम के बीच का क्षेत्र"
+        "a": "Area between Ganga and Yamuna rivers",
+        "b": "Area between Narmada and Tapti",
+        "c": "Area between Godavari and Krishna",
+        "d": "Area between Indus and Jhelum"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe area between the Indus and Jhelum rivers is called the Sindh–Sagar Doab.\n\n📖 हिंदी स्पष्टीकरण:\nसिंधु और झेलम नदियों के बीच का क्षेत्र सिंध–सागर दोआब कहलाता है।"
     },
     {
       "q_num": 18,
-      "question": "Which Indian state shares boundaries with both Bangladesh and Myanmar?\n भारत का कौन-सा राज्य बांग्लादेश और म्यांमार दोनों से सीमा साझा करता है?",
+      "question": "Which Indian state shares boundaries with both Bangladesh and Myanmar?",
       "options": {
-        "a": "Assam / असम",
-        "b": "Mizoram / मिजोरम",
-        "c": "Tripura / त्रिपुरा",
-        "d": "Manipur / मणिपुर"
+        "a": "Assam",
+        "b": "Mizoram",
+        "c": "Tripura",
+        "d": "Manipur"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMizoram shares its international boundary with Bangladesh to the west and Myanmar to the east and south.\n\n📖 हिंदी स्पष्टीकरण:\nमिजोरम की अंतर्राष्ट्रीय सीमा पश्चिम में बांग्लादेश और पूर्व तथा दक्षिण में म्यांमार से लगती है।"
     },
     {
       "q_num": 19,
-      "question": "Which river marks the boundary between India and Pakistan in Punjab region?\n कौन-सी नदी पंजाब क्षेत्र में भारत और पाकिस्तान की सीमा निर्धारित करती है?",
+      "question": "Which river marks the boundary between India and Pakistan in Punjab region?",
       "options": {
-        "a": "Ravi / रावी",
-        "b": "Beas / ब्यास",
-        "c": "Sutlej / सतलुज",
-        "d": "Jhelum / झेलम"
+        "a": "Ravi",
+        "b": "Beas",
+        "c": "Sutlej",
+        "d": "Jhelum"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Ravi River flows along the India-Pakistan border in Punjab before entering Pakistan.\n\n📖 हिंदी स्पष्टीकरण:\nरावी नदी पंजाब में भारत-पाकिस्तान सीमा के समानांतर बहती है और फिर पाकिस्तान में प्रवेश करती है।"
     },
     {
       "q_num": 20,
-      "question": "The Purvanchal Hills are located in which part of India?\n पूर्वांचल पर्वत भारत के किस भाग में स्थित हैं?",
+      "question": "The Purvanchal Hills are located in which part of India?",
       "options": {
-        "a": "Western India / पश्चिमी भारत",
-        "b": "Northern India / उत्तरी भारत",
-        "c": "North-Eastern India / उत्तर-पूर्वी भारत",
-        "d": "Southern India / दक्षिणी भारत"
+        "a": "Western India",
+        "b": "Northern India",
+        "c": "North-Eastern India",
+        "d": "Southern India"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Purvanchal Hills form the eastern extension of the Himalayas in North-East India.\n\n📖 हिंदी स्पष्टीकरण:\nपूर्वांचल पर्वत उत्तर-पूर्व भारत में हिमालय का पूर्वी विस्तार हैं।"
     },
     {
       "q_num": 21,
-      "question": "Which of the following statements about the Indo-Nepal border is correct?\n भारत-नेपाल सीमा के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Indo-Nepal border is correct?",
       "options": {
-        "a": "It is a demarcated boundary marked by fencing.\n यह एक सीमांकित सीमा है जिस पर बाड़ लगाई गई है।",
-        "b": "It is an open border allowing free movement of people.\n यह एक खुली सीमा है जो लोगों की स्वतंत्र आवाजाही की अनुमति देती है।",
-        "c": "It was drawn under the Treaty of Shimla, 1950.\n यह 1950 की शिमला संधि के तहत खींची गई थी।",
-        "d": "It runs entirely along the Terai region.\n यह पूरी तरह से तराई क्षेत्र के साथ-साथ चलती है।"
+        "a": "It is a demarcated boundary marked by fencing.",
+        "b": "It is an open border allowing free movement of people.",
+        "c": "It was drawn under the Treaty of Shimla, 1950.",
+        "d": "It runs entirely along the Terai region."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Indo-Nepal boundary is an open border allowing unrestricted movement for citizens of both countries.\n\n📖 हिंदी स्पष्टीकरण:\nभारत-नेपाल सीमा एक खुली सीमा है जहाँ दोनों देशों के नागरिकों का आवागमन बिना किसी प्रतिबंध के होता है।"
     },
     {
       "q_num": 22,
-      "question": "Which of the following statements about the Central Highlands is correct?\n मध्य उच्चभूमियों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Central Highlands is correct?",
       "options": {
-        "a": "They are located to the south of the Narmada river. वे नर्मदा नदी के दक्षिण में स्थित हैं।",
-        "b": "They extend between the Aravalli and Chotanagpur Plateau. वे अरावली और छोटानागपुर पठार के बीच फैले हैं।",
-        "c": "They include the Malwa Plateau and Bundelkhand region. इनमें मालवा पठार और बुंदेलखंड क्षेत्र शामिल हैं।",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "They are located to the south of the Narmada river.",
+        "b": "They extend between the Aravalli and Chotanagpur Plateau.",
+        "c": "They include the Malwa Plateau and Bundelkhand region.",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Central Highlands stretch between Aravalli and Chotanagpur and comprise Malwa and Bundelkhand plateaus.\n\n📖 हिंदी स्पष्टीकरण:\nमध्य उच्चभूमियाँ अरावली और छोटानागपुर के बीच फैली हैं और मालवा व बुंदेलखंड पठारों को शामिल करती हैं।"
     },
     {
       "q_num": 23,
-      "question": "Which part of India is known as the “Roof of the World”?\n भारत का कौन-सा भाग ‘विश्व की छत’ के नाम से जाना जाता है?",
+      "question": "Which part of India is known as the “Roof of the World”?",
       "options": {
-        "a": "Ladakh Plateau / लद्दाख पठार",
-        "b": "Deccan Plateau / दक्कन पठार",
-        "c": "Meghalaya Plateau / मेघालय पठार",
-        "d": "Malwa Plateau / मालवा पठार"
+        "a": "Ladakh Plateau",
+        "b": "Deccan Plateau",
+        "c": "Meghalaya Plateau",
+        "d": "Malwa Plateau"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Ladakh Plateau is called the “Roof of the World” due to its great height and location near the Tibetan Plateau.\n\n📖 हिंदी स्पष्टीकरण:\nलद्दाख पठार को उसकी अधिक ऊँचाई और तिब्बती पठार के समीप स्थिति के कारण “विश्व की छत” कहा जाता है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following rivers forms a gorge between the Satpura and Vindhya ranges?\n निम्नलिखित में से कौन-सी नदी सतपुड़ा और विंध्य पर्वत श्रृंखलाओं के बीच एक गर्त बनाती है?",
+      "question": "Which of the following rivers forms a gorge between the Satpura and Vindhya ranges?",
       "options": {
-        "a": "Tapi / तापी",
-        "b": "Chambal / चंबल",
-        "c": "Narmada / नर्मदा",
-        "d": "Betwa / बेतवा"
+        "a": "Tapi",
+        "b": "Chambal",
+        "c": "Narmada",
+        "d": "Betwa"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Narmada River flows westward through a rift valley between the Satpura and Vindhya ranges.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा नदी सतपुड़ा और विंध्य पर्वत श्रृंखलाओं के बीच गर्त में पश्चिम की ओर बहती है।"
     },
     {
       "q_num": 25,
-      "question": "Which among the following regions forms the oldest landmass of India?\n निम्नलिखित में से कौन-सा क्षेत्र भारत का सबसे प्राचीन भूभाग है?",
+      "question": "Which among the following regions forms the oldest landmass of India?",
       "options": {
-        "a": "Himalayan Region / हिमालय क्षेत्र",
-        "b": "Northern Plains / उत्तरी मैदान",
-        "c": "Peninsular Plateau / दक्षिणी पठार",
-        "d": "Coastal Plains / तटीय मैदान"
+        "a": "Himalayan Region",
+        "b": "Northern Plains",
+        "c": "Peninsular Plateau",
+        "d": "Coastal Plains"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Peninsular Plateau is the oldest landmass of India, formed during the Precambrian era.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिणी पठार भारत का सबसे प्राचीन भूभाग है, जिसका निर्माण प्राकैंब्रियन युग में हुआ था।"
     },
     {
       "q_num": 26,
-      "question": "Consider the following statements regarding the Trans-Himalayas:\n हिमालय के पार हिमालय (ट्रांस-हिमालय) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It lies north of the Great Himalayas.\n (b) It includes Karakoram, Ladakh and Zanskar ranges.\n (c) It has very little vegetation.\n Which of the statements given above are correct?",
+      "question": "Consider the following statements regarding the Trans-Himalayas:\n (a) It lies north of the Great Himalayas.\n (b) It includes Karakoram, Ladakh and Zanskar ranges.\n (c) It has very little vegetation.\n Which of the statements given above are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "1 and 3 only / केवल 1 और 3",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "1 and 3 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct; the Trans-Himalayas lie north of the Great Himalayas and include Karakoram, Ladakh and Zanskar ranges.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं; ट्रांस-हिमालय महान हिमालय के उत्तर में स्थित है और इसमें काराकोरम, लद्दाख तथा जांस्कर श्रेणियाँ शामिल हैं।"
     },
     {
       "q_num": 27,
-      "question": "Which part of India is called the ‘Water Divide’ of the country?\n भारत के किस भाग को देश का ‘जल विभाजक’ कहा जाता है?",
+      "question": "Which part of India is called the ‘Water Divide’ of the country?",
       "options": {
-        "a": "Aravalli Hills / अरावली पर्वत",
-        "b": "Western Ghats / पश्चिमी घाट",
-        "c": "Vindhya Range / विंध्य पर्वत श्रृंखला",
-        "d": "Amarkantak Plateau / अमरकंटक पठार"
+        "a": "Aravalli Hills",
+        "b": "Western Ghats",
+        "c": "Vindhya Range",
+        "d": "Amarkantak Plateau"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Western Ghats act as the main water divide of India.\nThe Amarkantak Plateau acts as a watershed, giving rise to the Narmada and Son rivers flowing in opposite directions.\n\n📖 हिंदी स्पष्टीकरण:\nपश्चिमी घाट भारत का प्रमुख जल-विभाजक (Water Divide) है।\nअमरकंटक पठार जल विभाजक का कार्य करता है जहाँ से नर्मदा और सोन नदियाँ विपरीत दिशाओं में बहती हैं।"
     },
     {
       "q_num": 28,
-      "question": "Which of the following passes is located in Arunachal Pradesh?\n निम्नलिखित में से कौन-सा दर्रा अरुणाचल प्रदेश में स्थित है?",
+      "question": "Which of the following passes is located in Arunachal Pradesh?",
       "options": {
-        "a": "Rohtang Pass / रोहतांग दर्रा",
-        "b": "Bomdila Pass / बोंडिला दर्रा",
-        "c": "Nathu La Pass / नाथू ला दर्रा",
-        "d": "Shipki La Pass / शिपकी ला दर्रा"
+        "a": "Rohtang Pass",
+        "b": "Bomdila Pass",
+        "c": "Nathu La Pass",
+        "d": "Shipki La Pass"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Bomdila Pass connects Arunachal Pradesh with Tibet and lies in the eastern Himalayas.\n\n📖 हिंदी स्पष्टीकरण:\nबोंडिला दर्रा अरुणाचल प्रदेश को तिब्बत से जोड़ता है और यह पूर्वी हिमालय में स्थित है।"
     },
     {
       "q_num": 29,
-      "question": "Which among the following regions has the maximum concentration of minerals?\n निम्नलिखित में से किस क्षेत्र में खनिजों का अधिकतम संकेन्द्रण है?",
+      "question": "Which among the following regions has the maximum concentration of minerals?",
       "options": {
-        "a": "Chotanagpur Plateau / छोटानागपुर पठार",
-        "b": "Malwa Plateau / मालवा पठार",
-        "c": "Deccan Plateau / दक्कन पठार",
-        "d": "Meghalaya Plateau / मेघालय पठार"
+        "a": "Chotanagpur Plateau",
+        "b": "Malwa Plateau",
+        "c": "Deccan Plateau",
+        "d": "Meghalaya Plateau"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Chotanagpur Plateau is rich in minerals like coal, iron, mica, and bauxite, making it India’s mineral heartland.\n\n📖 हिंदी स्पष्टीकरण:\nछोटानागपुर पठार कोयला, लोहा, अभ्रक और बॉक्साइट जैसे खनिजों से समृद्ध है, इसलिए इसे भारत का खनिज केंद्र कहा जाता है।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Konkan Coast – Kerala / कोंकण तट – केरल",
-        "b": "Malabar Coast – Karnataka / मालाबार तट – कर्नाटक",
-        "c": "Coromandel Coast – Tamil Nadu / कोरोमंडल तट – तमिलनाडु",
-        "d": "Northern Circars – Gujarat / नॉर्दर्न सर्कार्स – गुजरात"
+        "a": "Konkan Coast – Kerala",
+        "b": "Malabar Coast – Karnataka",
+        "c": "Coromandel Coast – Tamil Nadu",
+        "d": "Northern Circars – Gujarat"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Coromandel Coast lies along Tamil Nadu and southern Andhra Pradesh on the eastern seaboard.\n\n📖 हिंदी स्पष्टीकरण:\nकोरोमंडल तट तमिलनाडु और दक्षिण आंध्र प्रदेश के पूर्वी तट पर स्थित है।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements about the Western Coastal Plain:\n पश्चिमी तटीय मैदान के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is divided into Konkan, Kannad and Malabar coasts.\n यह कोंकण, कन्नड़ और मालाबार तटों में विभाजित है।\n (b) It has several lagoons and estuaries.\n इसमें अनेक झीलें और मुहाने हैं।\n (c) It is broader than the Eastern Coastal Plain.\n यह पूर्वी तटीय मैदान की तुलना में अधिक चौड़ा है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Western Coastal Plain:\n (a) It is divided into Konkan, Kannad and Malabar coasts.\n (b) It has several lagoons and estuaries.\n (c) It is broader than the Eastern Coastal Plain.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOnly (a) and (b) are correct; the Western Coastal Plain is narrow compared to the Eastern one.\n\n📖 हिंदी स्पष्टीकरण:\nकेवल (a) और (b) सही हैं; पश्चिमी तटीय मैदान पूर्वी की तुलना में संकीर्ण है।"
     },
     {
       "q_num": 32,
-      "question": "Which of the following statements is true about the Indo-China boundary?\n भारत-चीन सीमा के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements is true about the Indo-China boundary?",
       "options": {
-        "a": "It is completely demarcated and accepted by both sides.\n यह पूरी तरह से सीमांकित है और दोनों पक्षों द्वारा स्वीकार की गई है।",
-        "b": "The boundary dispute mainly concerns the Aksai Chin and Arunachal Pradesh.\n सीमा विवाद मुख्य रूप से अक्साई चिन और अरुणाचल प्रदेश से संबंधित है।",
-        "c": "The boundary is known as the Radcliffe Line.\n यह सीमा रेडक्लिफ रेखा के नाम से जानी जाती है।",
-        "d": "It was drawn in 1947.\n यह 1947 में खींची गई थी।"
+        "a": "It is completely demarcated and accepted by both sides.",
+        "b": "The boundary dispute mainly concerns the Aksai Chin and Arunachal Pradesh.",
+        "c": "The boundary is known as the Radcliffe Line.",
+        "d": "It was drawn in 1947."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Indo-China boundary dispute mainly involves Aksai Chin (Ladakh) and Arunachal Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nभारत-चीन सीमा विवाद मुख्यतः अक्साई चिन (लद्दाख) और अरुणाचल प्रदेश क्षेत्रों से संबंधित है।"
     },
     {
       "q_num": 33,
-      "question": "The Shillong Plateau is a part of which geological feature?\n शिलांग पठार किस भौगोलिक संरचना का भाग है?",
+      "question": "The Shillong Plateau is a part of which geological feature?",
       "options": {
-        "a": "Himalayan System / हिमालय प्रणाली",
-        "b": "Peninsular Block / प्रायद्वीपीय खंड",
-        "c": "Indo-Gangetic Plain / इंडो-गंगा मैदान",
-        "d": "Coastal Plain / तटीय मैदान"
+        "a": "Himalayan System",
+        "b": "Peninsular Block",
+        "c": "Indo-Gangetic Plain",
+        "d": "Coastal Plain"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Shillong Plateau is an extension of the Peninsular Block separated by the Garo-Rajmahal Gap.\n\n📖 हिंदी स्पष्टीकरण:\nशिलांग पठार प्रायद्वीपीय खंड का विस्तार है, जो गरो-राजमहल अंतराल द्वारा अलग हुआ है।"
     },
     {
       "q_num": 34,
-      "question": "Which state of India has the longest coastline?\n भारत का कौन-सा राज्य सबसे लंबा समुद्र तट रखता है?",
+      "question": "Which state of India has the longest coastline?",
       "options": {
-        "a": "Kerala / केरल",
-        "b": "Maharashtra / महाराष्ट्र",
-        "c": "Gujarat / गुजरात",
-        "d": "Tamil Nadu / तमिलनाडु"
+        "a": "Kerala",
+        "b": "Maharashtra",
+        "c": "Gujarat",
+        "d": "Tamil Nadu"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGujarat has India’s longest coastline of about 1,600 km along the Arabian Sea.\n\n📖 हिंदी स्पष्टीकरण:\nगुजरात का समुद्र तट लगभग 1600 किमी लंबा है, जो भारत में सबसे लंबा है।"
     },
     {
       "q_num": 35,
-      "question": "Which range separates the Indus and Ganga river systems?\n कौन-सी पर्वत श्रृंखला सिंधु और गंगा नदी प्रणालियों को अलग करती है?",
+      "question": "Which range separates the Indus and Ganga river systems?",
       "options": {
-        "a": "Aravalli Range / अरावली पर्वत",
-        "b": "Vindhya Range / विंध्य पर्वत",
-        "c": "Shiwalik Range / शिवालिक पर्वत",
-        "d": "Himadri Range / हिमाद्रि पर्वत"
+        "a": "Aravalli Range",
+        "b": "Vindhya Range",
+        "c": "Shiwalik Range",
+        "d": "Himadri Range"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Aravalli Range separates the Ganga river system of the north from the Deccan river system of the south.\n\n📖 हिंदी स्पष्टीकरण:\nअरावली पर्वत श्रृंखला उत्तर की गंगा नदी प्रणाली को दक्षिण की दक्कन नदी प्रणाली से अलग करती है।"
     },
     {
       "q_num": 36,
-      "question": "Which part of India is most prone to earthquakes?\n भारत का कौन-सा भाग भूकंपों के प्रति सबसे अधिक संवेदनशील है?",
+      "question": "Which part of India is most prone to earthquakes?",
       "options": {
-        "a": "Indo-Gangetic Plain / इंडो-गंगा मैदान",
-        "b": "Deccan Plateau / दक्कन पठार",
-        "c": "Himalayan Region / हिमालय क्षेत्र",
-        "d": "Western Coastal Plains / पश्चिमी तटीय मैदान"
+        "a": "Indo-Gangetic Plain",
+        "b": "Deccan Plateau",
+        "c": "Himalayan Region",
+        "d": "Western Coastal Plains"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Himalayan region is the most earthquake-prone due to active tectonic movements along the plate boundaries.\n\n📖 हिंदी स्पष्टीकरण:\nहिमालय क्षेत्र प्लेट सीमाओं के सक्रिय टेक्टोनिक गतियों के कारण भूकंप के प्रति सबसे अधिक संवेदनशील है।"
     },
     {
       "q_num": 37,
-      "question": "Which of the following statements about the Indian mainland is correct?\n भारतीय मुख्यभूमि के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Indian mainland is correct?",
       "options": {
         "a": "Its latitudinal extent is greater than its longitudinal extent.",
         "b": "It extends from 8°4'N to 37°6'N latitudes.",
@@ -450,276 +450,276 @@
     },
     {
       "q_num": 38,
-      "question": "Which of the following rivers does not flow into the Bay of Bengal?\n निम्नलिखित में से कौन-सी नदी बंगाल की खाड़ी में नहीं गिरती?",
+      "question": "Which of the following rivers does not flow into the Bay of Bengal?",
       "options": {
-        "a": "Mahanadi / महानदी",
-        "b": "Godavari / गोदावरी",
-        "c": "Krishna / कृष्णा",
-        "d": "Narmada / नर्मदा"
+        "a": "Mahanadi",
+        "b": "Godavari",
+        "c": "Krishna",
+        "d": "Narmada"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Narmada flows westward and drains into the Arabian Sea, while the others flow into the Bay of Bengal.\n\n📖 हिंदी स्पष्टीकरण:\nनर्मदा पश्चिम की ओर बहती है और अरब सागर में गिरती है, जबकि अन्य नदियाँ बंगाल की खाड़ी में गिरती हैं।"
     },
     {
       "q_num": 39,
-      "question": "Which plateau lies between the Aravalli and Vindhya ranges?\n अरावली और विंध्य पर्वतमालाओं के बीच कौन-सा पठार स्थित है?",
+      "question": "Which plateau lies between the Aravalli and Vindhya ranges?",
       "options": {
-        "a": "Malwa Plateau / मालवा पठार",
-        "b": "Deccan Plateau / दक्कन पठार",
-        "c": "Bundelkhand Plateau / बुंदेलखंड पठार",
-        "d": "Chotanagpur Plateau / छोटानागपुर पठार"
+        "a": "Malwa Plateau",
+        "b": "Deccan Plateau",
+        "c": "Bundelkhand Plateau",
+        "d": "Chotanagpur Plateau"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Malwa Plateau lies between Aravalli and Vindhya ranges in Madhya Pradesh.\n\n📖 हिंदी स्पष्टीकरण:\nमालवा पठार मध्य प्रदेश में अरावली और विंध्य पर्वतमालाओं के बीच स्थित है।"
     },
     {
       "q_num": 40,
-      "question": "Which of the following statements about the Peninsular Rivers is correct?\n दक्षिणी नदियों के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Peninsular Rivers is correct?",
       "options": {
-        "a": "They are mostly perennial.\n ये अधिकांशतः स्थायी (बारहमासी) होती हैं।",
-        "b": "They flow through rift valleys and have meandering courses.\n ये रिफ्ट घाटियों से होकर बहती हैं और इनका मार्ग घुमावदार (टेढ़ा-मेढ़ा) होता है।",
-        "c": "They are mostly seasonal and flow eastward into the Bay of Bengal.\n ये प्रायः मौसमी होती हैं और पूर्व की ओर बंगाल की खाड़ी में गिरती हैं।",
-        "d": "They form large deltas rarely.\n ये बहुत कम बड़े डेल्टा बनाती हैं।"
+        "a": "They are mostly perennial.",
+        "b": "They flow through rift valleys and have meandering courses.",
+        "c": "They are mostly seasonal and flow eastward into the Bay of Bengal.",
+        "d": "They form large deltas rarely."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMost peninsular rivers are seasonal, rain-fed, and flow eastward into the Bay of Bengal forming deltas.\n\n📖 हिंदी स्पष्टीकरण:\nअधिकांश प्रायद्वीपीय नदियाँ वर्षा-आश्रित मौसमी नदियाँ हैं जो पूर्व की ओर बंगाल की खाड़ी में गिरती हैं और डेल्टा बनाती हैं।"
     },
     {
       "q_num": 41,
-      "question": "The Northern Plains of India are formed mainly by which type of deposits?\n भारत के उत्तरी मैदान मुख्यतः किस प्रकार के निक्षेपों से बने हैं?",
+      "question": "The Northern Plains of India are formed mainly by which type of deposits?",
       "options": {
-        "a": "Igneous rocks / आग्नेय शैलें",
-        "b": "Alluvial deposits / जलोढ़ निक्षेप",
-        "c": "Sedimentary rocks / अवसादी शैलें",
-        "d": "Aeolian deposits / पवनजन्य निक्षेप"
+        "a": "Igneous rocks",
+        "b": "Alluvial deposits",
+        "c": "Sedimentary rocks",
+        "d": "Aeolian deposits"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Northern Plains are formed by alluvial deposits brought by the Ganga, Indus and Brahmaputra river systems.\n\n📖 हिंदी स्पष्टीकरण:\nउत्तरी मैदान गंगा, सिंधु और ब्रह्मपुत्र नदी प्रणालियों द्वारा लाए गए जलोढ़ निक्षेपों से बने हैं।"
     },
     {
       "q_num": 42,
-      "question": "Which of the following is the southernmost tip of the Indian mainland?\n भारतीय मुख्यभूमि का सबसे दक्षिणी सिरा कौन-सा है?",
+      "question": "Which of the following is the southernmost tip of the Indian mainland?",
       "options": {
-        "a": "Indira Point / इंदिरा पॉइंट",
-        "b": "Kanyakumari / कन्याकुमारी",
-        "c": "Cape Comorin / केप कोमोरिन",
-        "d": "Point Calimere / पॉइंट कलीमेयर"
+        "a": "Indira Point",
+        "b": "Kanyakumari",
+        "c": "Cape Comorin",
+        "d": "Point Calimere"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKanyakumari marks the southern end of the Indian mainland; Indira Point lies on Great Nicobar Island.\n\n📖 हिंदी स्पष्टीकरण:\nकन्याकुमारी भारतीय मुख्यभूमि का दक्षिणी सिरा है; इंदिरा पॉइंट ग्रेट निकोबार द्वीप पर स्थित है।"
     },
     {
       "q_num": 43,
-      "question": "Which plateau is known as the “Storehouse of Minerals”?\n कौन-सा पठार “खनिजों का भंडार” कहलाता है?",
+      "question": "Which plateau is known as the “Storehouse of Minerals”?",
       "options": {
-        "a": "Deccan Plateau / दक्कन पठार",
-        "b": "Malwa Plateau / मालवा पठार",
-        "c": "Chotanagpur Plateau / छोटानागपुर पठार",
-        "d": "Meghalaya Plateau / मेघालय पठार"
+        "a": "Deccan Plateau",
+        "b": "Malwa Plateau",
+        "c": "Chotanagpur Plateau",
+        "d": "Meghalaya Plateau"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Chotanagpur Plateau contains rich deposits of coal, iron ore, mica and bauxite, hence called India’s “Storehouse of Minerals.”\n\n📖 हिंदी स्पष्टीकरण:\nछोटानागपुर पठार कोयला, लोहा, अभ्रक और बॉक्साइट जैसे खनिजों से समृद्ध है, इसलिए इसे “खनिजों का भंडार” कहा जाता है।"
     },
     {
       "q_num": 44,
-      "question": "Which of the following statements about the Aravalli Range is correct?\n अरावली पर्वत श्रृंखला के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about the Aravalli Range is correct?",
       "options": {
-        "a": "It is the oldest fold mountain range in India.\n यह भारत की सबसे प्राचीन भ्रंश (फोल्ड) पर्वत श्रृंखला है।",
-        "b": "It runs from Gujarat to Delhi in a southwest–northeast direction.\n यह गुजरात से दिल्ली तक दक्षिण-पश्चिम से उत्तर-पूर्व दिशा में फैली हुई है।",
-        "c": "It separates the semi-arid region from the Thar Desert.\n यह अर्ध-शुष्क क्षेत्र को थार मरुस्थल से अलग करती है।",
-        "d": "All of the above./ उपरोक्त सभी।"
+        "a": "It is the oldest fold mountain range in India.",
+        "b": "It runs from Gujarat to Delhi in a southwest–northeast direction.",
+        "c": "It separates the semi-arid region from the Thar Desert.",
+        "d": "All of the above."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct; the Aravallis are among the oldest fold mountains extending from Gujarat to Delhi.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं; अरावली भारत की सबसे प्राचीन पर्वत श्रृंखलाओं में से एक है जो गुजरात से दिल्ली तक फैली है।"
     },
     {
       "q_num": 45,
-      "question": "Which range forms the northern boundary of the Peninsular Plateau?\n कौन-सी श्रृंखला दक्षिणी पठार की उत्तरी सीमा बनाती है?",
+      "question": "Which range forms the northern boundary of the Peninsular Plateau?",
       "options": {
-        "a": "Satpura Range / सतपुड़ा पर्वतमाला",
-        "b": "Vindhya Range / विंध्य पर्वतमाला",
-        "c": "Aravalli Range / अरावली पर्वतमाला",
-        "d": "Western Ghats / पश्चिमी घाट"
+        "a": "Satpura Range",
+        "b": "Vindhya Range",
+        "c": "Aravalli Range",
+        "d": "Western Ghats"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Vindhya Range acts as the northern boundary separating the Peninsular Plateau from the northern plains.\n\n📖 हिंदी स्पष्टीकरण:\nविंध्य पर्वतमाला दक्षिणी पठार और उत्तरी मैदानों के बीच विभाजन रेखा बनाती है।"
     },
     {
       "q_num": 46,
-      "question": "Which Indian state shares its boundary with three countries—China, Bhutan and Nepal?\n भारत का कौन-सा राज्य चीन, भूटान और नेपाल तीनों से सीमा साझा करता है?",
+      "question": "Which Indian state shares its boundary with three countries—China, Bhutan and Nepal?",
       "options": {
-        "a": "Sikkim / सिक्किम",
-        "b": "Arunachal Pradesh / अरुणाचल प्रदेश",
-        "c": "Assam / असम",
-        "d": "West Bengal / पश्चिम बंगाल"
+        "a": "Sikkim",
+        "b": "Arunachal Pradesh",
+        "c": "Assam",
+        "d": "West Bengal"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSikkim shares its borders with China (Tibet), Bhutan and Nepal.\n\n📖 हिंदी स्पष्टीकरण:\nसिक्किम की सीमाएँ चीन (तिब्बत), भूटान और नेपाल से मिलती हैं।"
     },
     {
       "q_num": 47,
-      "question": "The Himalayas were formed due to which geological process?\n हिमालय का निर्माण किस भूवैज्ञानिक प्रक्रिया के कारण हुआ था?",
+      "question": "The Himalayas were formed due to which geological process?",
       "options": {
-        "a": "Folding of sediments / अवसादों का मोड़ना",
-        "b": "Faulting of rocks / चट्टानों का भ्रंश",
-        "c": "Volcanic eruption / ज्वालामुखी विस्फोट",
-        "d": "Glacial deposition / हिमनद निक्षेपण"
+        "a": "Folding of sediments",
+        "b": "Faulting of rocks",
+        "c": "Volcanic eruption",
+        "d": "Glacial deposition"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Himalayas formed by the folding of sediments due to the collision of the Indian and Eurasian plates.\n\n📖 हिंदी स्पष्टीकरण:\nहिमालय का निर्माण भारतीय और यूरेशियाई प्लेटों के टकराने से अवसादों के मोड़ने द्वारा हुआ था।"
     },
     {
       "q_num": 48,
-      "question": "Which among the following ranges is also known as the “Himadri”?\n निम्नलिखित में से कौन-सी श्रेणी “हिमाद्रि” के नाम से जानी जाती है?",
+      "question": "Which among the following ranges is also known as the “Himadri”?",
       "options": {
-        "a": "Great Himalaya / महान हिमालय",
-        "b": "Lesser Himalaya / मध्य हिमालय",
-        "c": "Shiwalik Range / शिवालिक श्रेणी",
-        "d": "Trans-Himalaya / पार-हिमालय"
+        "a": "Great Himalaya",
+        "b": "Lesser Himalaya",
+        "c": "Shiwalik Range",
+        "d": "Trans-Himalaya"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Great Himalaya, the innermost and highest range, is called Himadri.\n\n📖 हिंदी स्पष्टीकरण:\nमहान हिमालय, जो सबसे भीतरी और ऊँची श्रेणी है, “हिमाद्रि” कहलाती है।"
     },
     {
       "q_num": 49,
-      "question": "Which plateau lies between the Aravalli and Vindhya ranges?\n अरावली और विंध्य पर्वत श्रृंखलाओं के बीच कौन-सा पठार स्थित है?",
+      "question": "Which plateau lies between the Aravalli and Vindhya ranges?",
       "options": {
-        "a": "Bundelkhand Plateau / बुंदेलखंड पठार",
-        "b": "Malwa Plateau / मालवा पठार",
-        "c": "Baghelkhand Plateau / बघेलखंड पठार",
-        "d": "Chotanagpur Plateau / छोटानागपुर पठार"
+        "a": "Bundelkhand Plateau",
+        "b": "Malwa Plateau",
+        "c": "Baghelkhand Plateau",
+        "d": "Chotanagpur Plateau"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Malwa Plateau lies between the Aravalli and Vindhya ranges, drained by the Chambal River.\n\n📖 हिंदी स्पष्टीकरण:\nमालवा पठार अरावली और विंध्य पर्वतमालाओं के बीच स्थित है तथा चंबल नदी से निकासी पाता है।"
     },
     {
       "q_num": 50,
-      "question": "Consider the following statements about the Peninsular Plateau:\n प्रायद्वीपीय पठार के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is one of the oldest landmasses of the world.\n यह विश्व की सबसे प्राचीन भू-आकृतियों में से एक है।\n (b) It is composed mainly of igneous and metamorphic rocks.\n यह मुख्य रूप से आग्नेय और रूपांतरित शैलों से बना है।\n (c) It has an average elevation of 500–800 m.\n इसकी औसत ऊँचाई 500–800 मीटर है।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements about the Peninsular Plateau:\n (a) It is one of the oldest landmasses of the world.\n (b) It is composed mainly of igneous and metamorphic rocks.\n (c) It has an average elevation of 500–800 m.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are true; the Peninsular Plateau is ancient, hard, and composed of crystalline rocks.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं; प्रायद्वीपीय पठार प्राचीन, कठोर और स्फटिकीय शैलों से निर्मित है।"
     },
     {
       "q_num": 51,
-      "question": "Which Indian state touches both the Arabian Sea and the Western Ghats?\n भारत का कौन-सा राज्य अरब सागर और पश्चिमी घाट दोनों को स्पर्श करता है?",
+      "question": "Which Indian state touches both the Arabian Sea and the Western Ghats?",
       "options": {
-        "a": "Gujarat / गुजरात",
-        "b": "Kerala / केरल",
-        "c": "Karnataka / कर्नाटक",
-        "d": "Maharashtra / महाराष्ट्र"
+        "a": "Gujarat",
+        "b": "Kerala",
+        "c": "Karnataka",
+        "d": "Maharashtra"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKarnataka extends from the Arabian Sea coast to the Western Ghats.\n\n📖 हिंदी स्पष्टीकरण:\nकर्नाटक राज्य अरब सागर के तट से लेकर पश्चिमी घाट तक फैला है।"
     },
     {
       "q_num": 52,
-      "question": "Which of the following mountain passes lies in Jammu & Kashmir?\n निम्नलिखित में से कौन-सा दर्रा जम्मू और कश्मीर में स्थित है?",
+      "question": "Which of the following mountain passes lies in Jammu & Kashmir?",
       "options": {
-        "a": "Zoji La Pass / जो़जी ला दर्रा",
-        "b": "Rohtang Pass / रोहतांग दर्रा",
-        "c": "Bara-Lacha La / बारा-लाचा ला",
-        "d": "Nathu La / नाथू ला"
+        "a": "Zoji La Pass",
+        "b": "Rohtang Pass",
+        "c": "Bara-Lacha La",
+        "d": "Nathu La"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nZoji La connects Srinagar with Leh and lies in Jammu & Kashmir.\n\n📖 हिंदी स्पष्टीकरण:\nजो़जी ला दर्रा श्रीनगर को लेह से जोड़ता है और जम्मू कश्मीर में स्थित है।"
     },
     {
       "q_num": 53,
-      "question": "Which river forms the Dhuandhar Falls near Jabalpur?\n जबलपुर के पास धुआंधार जलप्रपात किस नदी पर बनता है?",
+      "question": "Which river forms the Dhuandhar Falls near Jabalpur?",
       "options": {
-        "a": "Godavari / गोदावरी",
-        "b": "Narmada / नर्मदा",
-        "c": "Tapi / तापी",
-        "d": "Mahanadi / महानदी"
+        "a": "Godavari",
+        "b": "Narmada",
+        "c": "Tapi",
+        "d": "Mahanadi"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Dhuandhar Falls are located on the Narmada River at Bhedaghat near Jabalpur.\n\n📖 हिंदी स्पष्टीकरण:\nधुआंधार जलप्रपात नर्मदा नदी पर जबलपुर के भेड़ाघाट में स्थित है।"
     },
     {
       "q_num": 54,
-      "question": "Which of the following plains lies between the Ganga and the Yamuna?\n निम्नलिखित में से कौन-सा मैदान गंगा और यमुना के बीच स्थित है?",
+      "question": "Which of the following plains lies between the Ganga and the Yamuna?",
       "options": {
-        "a": "Doab Plain / दोआब मैदान",
-        "b": "Tarai Region / तराई क्षेत्र",
-        "c": "Delta Region / डेल्टा क्षेत्र",
-        "d": "Punjab Plain / पंजाब मैदान"
+        "a": "Doab Plain",
+        "b": "Tarai Region",
+        "c": "Delta Region",
+        "d": "Punjab Plain"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Ganga–Yamuna Doab Plain lies between the two rivers and is highly fertile.\n\n📖 हिंदी स्पष्टीकरण:\nगंगा-यमुना दोआब मैदान दोनों नदियों के बीच स्थित है और अत्यंत उपजाऊ है।"
     },
     {
       "q_num": 55,
-      "question": "Which of the following river valleys does NOT form part of the Northern Plains?\n निम्नलिखित में से कौन-सी नदी घाटी उत्तरी मैदानों का भाग नहीं है?",
+      "question": "Which of the following river valleys does NOT form part of the Northern Plains?",
       "options": {
-        "a": "Ganga / गंगा",
-        "b": "Indus / सिंधु",
-        "c": "Godavari / गोदावरी",
-        "d": "Brahmaputra / ब्रह्मपुत्र"
+        "a": "Ganga",
+        "b": "Indus",
+        "c": "Godavari",
+        "d": "Brahmaputra"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Godavari flows through the Peninsular Plateau, not the alluvial plains of the north.\n\n📖 हिंदी स्पष्टीकरण:\nगोदावरी नदी प्रायद्वीपीय पठार से होकर बहती है, न कि उत्तरी जलोढ़ मैदानों से।"
     },
     {
       "q_num": 56,
-      "question": "Which of the following is the highest peak of the Indian Himalayas located entirely within India?\n भारत के हिमालय की वह कौन-सी सबसे ऊँची चोटी है जो पूरी तरह भारत में स्थित है?",
+      "question": "Which of the following is the highest peak of the Indian Himalayas located entirely within India?",
       "options": {
-        "a": "Nanda Devi / नंदा देवी",
-        "b": "Kanchenjunga / कंचनजंघा",
-        "c": "Kamet / कामेत",
-        "d": "Trisul / त्रिशूल"
+        "a": "Nanda Devi",
+        "b": "Kanchenjunga",
+        "c": "Kamet",
+        "d": "Trisul"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNanda Devi (7,816 m) in Uttarakhand is the highest peak lying entirely within India.\n\n📖 हिंदी स्पष्टीकरण:\nनंदा देवी (7816 मी) उत्तराखंड में स्थित भारत की सबसे ऊँची चोटी है जो पूर्णतः देश के भीतर है।"
     },
     {
       "q_num": 57,
-      "question": "Which Indian state is the easternmost state of India?\n भारत का सबसे पूर्वी राज्य कौन-सा है?",
+      "question": "Which Indian state is the easternmost state of India?",
       "options": {
-        "a": "Assam / असम",
-        "b": "Arunachal Pradesh / अरुणाचल प्रदेश",
-        "c": "Manipur / मणिपुर",
-        "d": "Mizoram / मिजोरम"
+        "a": "Assam",
+        "b": "Arunachal Pradesh",
+        "c": "Manipur",
+        "d": "Mizoram"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArunachal Pradesh is India’s easternmost state where the Sun first rises.\n\n📖 हिंदी स्पष्टीकरण:\nअरुणाचल प्रदेश भारत का सबसे पूर्वी राज्य है जहाँ सूर्य सबसे पहले उदित होता है।"
     },
     {
       "q_num": 58,
-      "question": "The Lakshadweep Islands are formed from which of the following?\n लक्षद्वीप द्वीप निम्नलिखित में से किससे बने हैं?",
+      "question": "The Lakshadweep Islands are formed from which of the following?",
       "options": {
-        "a": "Coral deposits / मूँगे के निक्षेप",
-        "b": "Volcanic rocks / ज्वालामुखीय शैलें",
-        "c": "Sedimentary formations / अवसादी संरचनाएँ",
-        "d": "Granite bedrocks / ग्रेनाइट शिलाएँ"
+        "a": "Coral deposits",
+        "b": "Volcanic rocks",
+        "c": "Sedimentary formations",
+        "d": "Granite bedrocks"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLakshadweep Islands are coral atolls formed by the accumulation of coral reefs.\n\n📖 हिंदी स्पष्टीकरण:\nलक्षद्वीप द्वीप मूँगे की प्रवाल भित्तियों के संचय से बने प्रवाल द्वीप (एटोल) हैं।"
     },
     {
       "q_num": 59,
-      "question": "Which of the following is the southernmost part of the Indian mainland?\n निम्नलिखित में से कौन भारत की मुख्य भूमि का सबसे दक्षिणी भाग है?",
+      "question": "Which of the following is the southernmost part of the Indian mainland?",
       "options": {
-        "a": "Indira Point / इंदिरा पॉइंट",
-        "b": "Kanyakumari / कन्याकुमारी",
-        "c": "Rameswaram / रामेश्वरम",
-        "d": "Kovalam / कोवलम"
+        "a": "Indira Point",
+        "b": "Kanyakumari",
+        "c": "Rameswaram",
+        "d": "Kovalam"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKanyakumari marks the southernmost tip of the Indian mainland.\n\n📖 हिंदी स्पष्टीकरण:\nकन्याकुमारी भारत की मुख्य भूमि का सबसे दक्षिणी छोर है।"
     },
     {
       "q_num": 60,
-      "question": "Which part of India is known as the ‘Seven Sisters’?\n भारत के किस भाग को ‘सात बहनें’ कहा जाता है?",
+      "question": "Which part of India is known as the ‘Seven Sisters’?",
       "options": {
-        "a": "Northern States / उत्तरी राज्य",
-        "b": "Western States / पश्चिमी राज्य",
-        "c": "North-Eastern States / उत्तर-पूर्वी राज्य",
-        "d": "Southern States / दक्षिणी राज्य"
+        "a": "Northern States",
+        "b": "Western States",
+        "c": "North-Eastern States",
+        "d": "Southern States"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe seven North-Eastern states—Assam, Arunachal Pradesh, Meghalaya, Manipur, Mizoram, Nagaland, and Tripura—are called the Seven Sisters.\n\n📖 हिंदी स्पष्टीकरण:\nभारत के सात उत्तर-पूर्वी राज्य — असम, अरुणाचल प्रदेश, मेघालय, मणिपुर, मिजोरम, नागालैंड और त्रिपुरा — ‘सात बहनें’ कहलाते हैं।"

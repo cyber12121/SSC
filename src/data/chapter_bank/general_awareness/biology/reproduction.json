@@ -6,300 +6,300 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Binary fission is a common method of asexual reproduction in which organism? द्वि-विखंडन किस जीव में अलैंगिक प्रजनन की एक सामान्य विधि है?",
+      "question": "Binary fission is a common method of asexual reproduction in which organism?",
       "options": {
-        "a": "Amoeba / अमीबा",
-        "b": "Hydra / हाइड्रा",
-        "c": "Bread Mould / ब्रेड मोल्ड",
-        "d": "Fern / फर्न"
+        "a": "Amoeba",
+        "b": "Hydra",
+        "c": "Bread Mould",
+        "d": "Fern"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn binary fission, a single parent cell divides into two equal individual cells. It is commonly observed in unicellular organisms like Amoeba and Leishmania\n\n📖 हिंदी स्पष्टीकरण:\nद्वि-विखंडन में, एक एकल जनक कोशिका दो समान व्यक्तिगत कोशिकाओं में विभाजित होती है। यह आमतौर पर अमीबा और लीशमानिया जैसे एककोशिकीय जीवों में देखा जाता है।"
     },
     {
       "q_num": 2,
-      "question": "Which part of the flower is considered the male reproductive organ? फूल के किस भाग को नर जनन अंग माना जाता है?",
+      "question": "Which part of the flower is considered the male reproductive organ?",
       "options": {
-        "a": "Pistil / स्त्रीकेसर",
-        "b": "Stamen / पुंकेसर",
-        "c": "Petal / पंखुड़ी",
-        "d": "Sepal / बाह्यदल"
+        "a": "Pistil",
+        "b": "Stamen",
+        "c": "Petal",
+        "d": "Sepal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe stamen is the male reproductive part of a flower, consisting of the anther and filament. It produces pollen grains which contain male gametes\n\n📖 हिंदी स्पष्टीकरण:\nपुंकेसर फूल का नर जनन भाग है, जिसमें परागकोष और तंतु होते हैं। यह परागकण उत्पन्न करता है जिनमें नर युग्मक होते हैं।"
     },
     {
       "q_num": 3,
-      "question": "Fragmentation is a mode of asexual reproduction seen in: खंडन अलैंगिक प्रजनन की एक विधि है जो किसमें देखी जाती है?",
+      "question": "Fragmentation is a mode of asexual reproduction seen in:",
       "options": {
-        "a": "Yeast / यीस्ट",
-        "b": "Spirogyra / स्पाइरोगाइरा",
-        "c": "Plasmodium / प्लाज्मोडियम",
-        "d": "Human / मानव"
+        "a": "Yeast",
+        "b": "Spirogyra",
+        "c": "Plasmodium",
+        "d": "Human"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn fragmentation, the body of a multicellular organism breaks into smaller pieces, each growing into a new individual. Spirogyra (an algae) reproduces this way\n\n📖 हिंदी स्पष्टीकरण:\nखंडन में, एक बहुकोशिकीय जीव का शरीर छोटे टुकड़ों में टूट जाता है, जिनमें से प्रत्येक एक नए जीव में विकसित होता है। स्पाइरोगाइरा (एक शैवाल) इसी तरह प्रजनन करता है।"
     },
     {
       "q_num": 4,
-      "question": "Human males typically begin producing sperm at what age? मानव पुरुषों में आमतौर पर किस उम्र में शुक्राणु का उत्पादन शुरू होता है?",
+      "question": "Human males typically begin producing sperm at what age?",
       "options": {
-        "a": "5-7 years / 5-7 वर्ष",
-        "b": "10-12 years / 10-12 वर्ष",
-        "c": "18-20 years / 18-20 वर्ष",
-        "d": "25-30 years / 25-30 वर्ष"
+        "a": "5-7 years",
+        "b": "10-12 years",
+        "c": "18-20 years",
+        "d": "25-30 years"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSperm production in human males usually starts during puberty, typically around 10 to 12 years of age. This marks the onset of sexual maturity\n\n📖 हिंदी स्पष्टीकरण:\nमानव पुरुषों में शुक्राणु का उत्पादन आमतौर पर यौवन के दौरान शुरू होता है, जो सामान्यतः 10 से 12 वर्ष की आयु के आसपास होता है। यह यौन परिपक्वता की शुरुआत का प्रतीक है।"
     },
     {
       "q_num": 5,
-      "question": "Which of the following is an example of a 'False Fruit'? निम्नलिखित में से कौन सा 'असत्य फल' का उदाहरण है?",
+      "question": "Which of the following is an example of a 'False Fruit'?",
       "options": {
-        "a": "Mango / आम",
-        "b": "Grapes / अंगूर",
-        "c": "Apple / सेब",
-        "d": "Papaya / पपीता"
+        "a": "Mango",
+        "b": "Grapes",
+        "c": "Apple",
+        "d": "Papaya"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA false fruit develops from parts of the flower other than the ovary, such as the thalamus. Examples include apple, strawberry, and cashew\n\n📖 हिंदी स्पष्टीकरण:\nएक असत्य फल अंडाशय के अलावा फूल के अन्य भागों, जैसे पुष्पासन (थैलेमस) से विकसित होता है। उदाहरणों में सेब, स्ट्रॉबेरी और काजू शामिल हैं।"
     },
     {
       "q_num": 6,
-      "question": "Budding is the primary mode of reproduction in which of these? मुकुलन इनमें से किसमें प्रजनन का प्राथमिक तरीका है?",
+      "question": "Budding is the primary mode of reproduction in which of these?",
       "options": {
-        "a": "Planaria / प्लेनेरिया",
-        "b": "Hydra / हाइड्रा",
-        "c": "Rhizopus / राइजोपस",
-        "d": "Bacteria / बैक्टीरिया"
+        "a": "Planaria",
+        "b": "Hydra",
+        "c": "Rhizopus",
+        "d": "Bacteria"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn budding, a small outgrowth or 'bud' forms on the parent body, matures, and eventually detaches to become a new individual. This is seen in Hydra and Yeast\n\n📖 हिंदी स्पष्टीकरण:\nमुकुलन में, जनक शरीर पर एक छोटा उभार या 'कलिका' बनती है, परिपक्व होती है, और अंततः एक नया जीव बनने के लिए अलग हो जाती है। यह हाइड्रा और यीस्ट में देखा जाता है।"
     },
     {
       "q_num": 7,
-      "question": "The process of fusion of male and female gametes is called: नर और मादा युग्मकों के संलयन की प्रक्रिया क्या कहलाती है?",
+      "question": "The process of fusion of male and female gametes is called:",
       "options": {
-        "a": "Pollination / परागण",
-        "b": "Fertilisation / निषेचन",
-        "c": "Ovulation / अंडोत्सर्ग",
-        "d": "Implantation / आरोपण"
+        "a": "Pollination",
+        "b": "Fertilisation",
+        "c": "Ovulation",
+        "d": "Implantation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFertilisation is the fusion of a sperm (male gamete) and an egg (female gamete) to form a zygote. This is the central event in sexual reproduction\n\n📖 हिंदी स्पष्टीकरण:\nनिषेचन एक युग्मज बनाने के लिए शुक्राणु (नर युग्मक) और अंडे (मादा युग्मक) का संलयन है। यह यौन प्रजनन की मुख्य घटना है।"
     },
     {
       "q_num": 8,
-      "question": "Cervical cancer is primarily caused by which virus? गर्भाशय ग्रीवा का कैंसर मुख्य रूप से किस वायरस के कारण होता है?",
+      "question": "Cervical cancer is primarily caused by which virus?",
       "options": {
-        "a": "HIV / एचआईवी",
-        "b": "HPV (Human Papilloma Virus) / एचपीवी",
-        "c": "Hepatitis B / हेपेटाइटिस बी",
-        "d": "Influenza / इन्फ्लुएंजा"
+        "a": "HIV",
+        "b": "HPV (Human Papilloma Virus)",
+        "c": "Hepatitis B",
+        "d": "Influenza"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMost cases of cervical cancer are caused by the Human Papilloma Virus (HPV). It is a common viral infection of the reproductive tract\n\n📖 हिंदी स्पष्टीकरण:\nगर्भाशय ग्रीवा के कैंसर के अधिकांश मामले ह्यूमन पैपिलोमा वायरस (HPV) के कारण होते हैं। यह जनन पथ का एक सामान्य वायरल संक्रमण है।"
     },
     {
       "q_num": 9,
-      "question": "Which organism reproduces through multiple fission? कौन सा जीव बहु-विखंडन के माध्यम से प्रजनन करता है?",
+      "question": "Which organism reproduces through multiple fission?",
       "options": {
-        "a": "Amoeba / अमीबा",
-        "b": "Plasmodium / प्लाज्मोडियम",
-        "c": "Yeast / यीस्ट",
-        "d": "Bread mould / ब्रेड मोल्ड"
+        "a": "Amoeba",
+        "b": "Plasmodium",
+        "c": "Yeast",
+        "d": "Bread mould"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMultiple fission is a process where a single cell divides into many daughter cells simultaneously. The malarial parasite, Plasmodium, uses this method\n\n📖 हिंदी स्पष्टीकरण:\nबहु-विखंडन एक ऐसी प्रक्रिया है जहाँ एक एकल कोशिका एक साथ कई संतति कोशिकाओं में विभाजित होती है। मलेरिया परजीवी, प्लाज्मोडियम, इस विधि का उपयोग करता है।"
     },
     {
       "q_num": 10,
-      "question": "The female reproductive part of a flower is known as the: फूल के मादा जनन भाग को क्या कहा जाता है?",
+      "question": "The female reproductive part of a flower is known as the:",
       "options": {
-        "a": "Stamen / पुंकेसर",
-        "b": "Anther / परागकोष",
-        "c": "Pistil (Carpel) / स्त्रीकेसर (कार्पेल)",
-        "d": "Filament / तंतु"
+        "a": "Stamen",
+        "b": "Anther",
+        "c": "Pistil (Carpel)",
+        "d": "Filament"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe pistil or carpel is the female reproductive organ of a flower, consisting of the stigma, style, and ovary\n\n📖 हिंदी स्पष्टीकरण:\nस्त्रीकेसर या कार्पेल फूल का मादा जनन अंग है, जिसमें वर्तिकाग्र, वर्तिका और अंडाशय होते हैं।"
     },
     {
       "q_num": 11,
-      "question": "External fertilisation is commonly observed in which of the following? बाह्य निषेचन आमतौर पर निम्नलिखित में से किसमें देखा जाता है?",
+      "question": "External fertilisation is commonly observed in which of the following?",
       "options": {
-        "a": "Humans / मनुष्य",
-        "b": "Cows / गाय",
-        "c": "Frogs / मेंढक",
-        "d": "Hen / मुर्गी"
+        "a": "Humans",
+        "b": "Cows",
+        "c": "Frogs",
+        "d": "Hen"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn external fertilisation, the fusion of gametes occurs outside the female's body, usually in water. Examples include frogs, fish, and crabs\n\n📖 हिंदी स्पष्टीकरण:\nबाह्य निषेचन में, युग्मकों का संलयन मादा के शरीर के बाहर होता है, आमतौर पर पानी में। उदाहरणों में मेंढक, मछली और केकड़े शामिल हैं।"
     },
     {
       "q_num": 12,
-      "question": "What is the main purpose of the thickening of the uterine wall in humans? मनुष्यों में गर्भाशय की दीवार के मोटा होने का मुख्य उद्देश्य क्या है?",
+      "question": "What is the main purpose of the thickening of the uterine wall in humans?",
       "options": {
-        "a": "To produce eggs / अंडे पैदा करना",
-        "b": "To prepare for potential implantation / संभावित आरोपण के लिए तैयार करना",
-        "c": "To release hormones / हार्मोन जारी करना",
-        "d": "To prevent infection / संक्रमण रोकना"
+        "a": "To produce eggs",
+        "b": "To prepare for potential implantation",
+        "c": "To release hormones",
+        "d": "To prevent infection"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe uterine lining thickens every month to prepare for a fertilized egg. If pregnancy doesn't occur, this lining is shed during menstruation\n\n📖 हिंदी स्पष्टीकरण:\nनिषेचित अंडे की तैयारी के लिए हर महीने गर्भाशय की परत मोटी हो जाती है। यदि गर्भावस्था नहीं होती है, तो यह परत मासिक धर्म के दौरान निकल जाती है।"
     },
     {
       "q_num": 13,
-      "question": "In which method of artificial vegetative propagation are two different plants joined together? कृत्रिम कायिक प्रवर्धन की किस विधि में दो अलग-अलग पौधों को एक साथ जोड़ा जाता है?",
+      "question": "In which method of artificial vegetative propagation are two different plants joined together?",
       "options": {
-        "a": "Cutting / कलम लगाना",
-        "b": "Layering / लेयरिंग",
-        "c": "Grafting / ग्राफ्टिंग",
-        "d": "Tissue culture / ऊतक संवर्धन"
+        "a": "Cutting",
+        "b": "Layering",
+        "c": "Grafting",
+        "d": "Tissue culture"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGrafting involves joining a part of one plant (scion) onto the root system of another (stock) so they grow as one. It is used to combine desired traits\n\n📖 हिंदी स्पष्टीकरण:\nग्राफ्टिंग में एक पौधे (सायन) के हिस्से को दूसरे (स्टॉक) के जड़ तंत्र पर जोड़ना शामिल है ताकि वे एक के रूप में विकसित हों। इसका उपयोग वांछित गुणों को जोड़ने के लिए किया जाता है।"
     },
     {
       "q_num": 14,
-      "question": "Parthenogenesis is a type of reproduction where: अनिषेकजनन एक प्रकार का प्रजनन है जहाँ:",
+      "question": "Parthenogenesis is a type of reproduction where:",
       "options": {
-        "a": "Pollen grains fertilize the egg / परागकण अंडे को निषेचित करते हैं।",
-        "b": "An organism develops from an unfertilised egg / एक जीव बिना निषेचित अंडे से विकसित होता है।",
-        "c": "Two parents are involved / दो जनक शामिल होते हैं।",
-        "d": "Reproduction occurs through spores / प्रजनन बीजाणुओं के माध्यम से होता है।"
+        "a": "Pollen grains fertilize the egg",
+        "b": "An organism develops from an unfertilised egg",
+        "c": "Two parents are involved",
+        "d": "Reproduction occurs through spores"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nParthenogenesis is a form of asexual reproduction where an embryo develops without fertilisation. It occurs in some insects and reptiles\n\n📖 हिंदी स्पष्टीकरण:\nअनिषेकजनन अलैंगिक प्रजनन का एक रूप है जहाँ भ्रूण निषेचन के बिना विकसित होता है। यह कुछ कीड़ों और सरीसृपों में होता है।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following is an example of a Drupe fruit? निम्नलिखित में से कौन सा ड्रूप फल का उदाहरण है?",
+      "question": "Which of the following is an example of a Drupe fruit?",
       "options": {
-        "a": "Grapes / अंगूर",
-        "b": "Coconut / नारियल",
-        "c": "Orange / संतरा",
-        "d": "Watermelon / तरबूज"
+        "a": "Grapes",
+        "b": "Coconut",
+        "c": "Orange",
+        "d": "Watermelon"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA drupe is a fruit with an outer fleshy part surrounding a hard shell (pit/stone) with a seed inside. Coconut and Mango are common examples\n\n📖 हिंदी स्पष्टीकरण:\nड्रूप एक ऐसा फल है जिसके बाहरी मांसल भाग के अंदर एक कठोर खोल (गुठली) होती है जिसमें बीज होता है। नारियल और आम इसके सामान्य उदाहरण हैं।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): In Vitro Fertilisation (IVF) involves fertilisation outside the body.\n अभिकथन (A): इन विट्रो फर्टिलाइजेशन (IVF) में शरीर के बाहर निषेचन शामिल है।\n Reason (R): The embryo is later transferred to the mother’s uterus.\n कारण (R): भ्रूण को बाद में माँ के गर्भाशय में स्थानांतरित कर दिया जाता है।",
+      "question": "Assertion (A): In Vitro Fertilisation (IVF) involves fertilisation outside the body.\n Reason (R): The embryo is later transferred to the mother’s uterus.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation / A और R दोनों सही हैं, और R सही स्पष्टीकरण है।",
-        "b": "Both A and R are true, but R is not the correct explanation / A और R दोनों सही हैं, लेकिन R सही स्पष्टीकरण नहीं है।",
-        "c": "A is true, but R is false / A सही है, लेकिन R गलत है।",
-        "d": "A is false, but R is true / A गलत है, लेकिन R सही है।"
+        "a": "Both A and R are true, and R is the correct explanation",
+        "b": "Both A and R are true, but R is not the correct explanation",
+        "c": "A is true, but R is false",
+        "d": "A is false, but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIVF is a laboratory procedure where the egg and sperm are combined in a lab dish. The resulting embryo is then implanted in the uterus to continue growth. / IVF\n\n📖 हिंदी स्पष्टीकरण:\nएक प्रयोगशाला प्रक्रिया है जहाँ अंडे और शुक्राणु को लैब डिश में मिलाया जाता है। परिणामी भ्रूण को फिर विकास जारी रखने के लिए गर्भाशय में प्रत्यारोपित किया जाता है।"
     },
     {
       "q_num": 17,
-      "question": "Consider the following statements about Asexual Reproduction:\n अलैंगिक प्रजनन के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. It involves a single parent. इसमें एकल जनक शामिल होता है।\n 2. It creates genetic variation in offspring. यह संतानों में आनुवंशिक भिन्नता पैदा करता है।\n Which of the statements is/are correct?\n उपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about Asexual Reproduction:\n1. It involves a single parent.\n2. It creates genetic variation in offspring.\n Which of the statements is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAsexual reproduction involves only one parent and produces offspring that are genetically identical to the parent. Genetic variation occurs in sexual reproduction\n\n📖 हिंदी स्पष्टीकरण:\nअलैंगिक प्रजनन में केवल एक जनक शामिल होता है और ऐसी संतानें पैदा होती हैं जो आनुवंशिक रूप से जनक के समान होती हैं। आनुवंशिक भिन्नता यौन प्रजनन में होती है।"
     },
     {
       "q_num": 18,
-      "question": "Which of the following is NOT a method of vegetative propagation? निम्नलिखित में से कौन सा कायिक प्रवर्धन की विधि नहीं है?",
+      "question": "Which of the following is NOT a method of vegetative propagation?",
       "options": {
-        "a": "Layering / लेयरिंग",
-        "b": "Spore formation / बीजाणु निर्माण",
-        "c": "Grafting / ग्राफ्टिंग",
-        "d": "Cutting / कलम लगाना"
+        "a": "Layering",
+        "b": "Spore formation",
+        "c": "Grafting",
+        "d": "Cutting"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSpore formation is a type of asexual reproduction (common in fungi), but it is not considered vegetative propagation which uses plant parts like stems or roots\n\n📖 हिंदी स्पष्टीकरण:\nबीजाणु निर्माण अलैंगिक प्रजनन का एक प्रकार है, लेकिन इसे कायिक प्रवर्धन नहीं माना जाता है, जिसमें तने या जड़ों जैसे पौधों के अंगों का उपयोग किया जाता है।"
     },
     {
       "q_num": 19,
-      "question": "Assertion (A): Self-pollination occurs within the same flower or between flowers of the same plant.\n अभिकथन (A): स्व-परागण एक ही फूल के भीतर या एक ही पौधे के फूलों के बीच होता है।\n Reason (R): Cross-pollination involves the transfer of pollen to a different plant of a different species.\n कारण (R): पर-परागण में पराग का दूसरी प्रजाति के अलग पौधे में स्थानांतरण शामिल है।",
+      "question": "Assertion (A): Self-pollination occurs within the same flower or between flowers of the same plant.\n Reason (R): Cross-pollination involves the transfer of pollen to a different plant of a different species.",
       "options": {
-        "a": "Both A and R are true / A और R दोनों सही हैं।",
-        "b": "A is true, but R is false / A सही है, लेकिन R गलत है।",
-        "c": "A is false, but R is true / A गलत है, लेकिन R सही है।",
-        "d": "Both A and R are false / A और R दोनों गलत हैं।"
+        "a": "Both A and R are true",
+        "b": "A is true, but R is false",
+        "c": "A is false, but R is true",
+        "d": "Both A and R are false"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile Assertion A is correct, Reason R is false because cross-pollination occurs between different plants of the same species, not different species\n\n📖 हिंदी स्पष्टीकरण:\nजबकि अभिकथन A सही है, कारण R गलत है क्योंकि पर-परागण एक ही प्रजाति के विभिन्न पौधों के बीच होता है, न कि विभिन्न प्रजातियों के बीच।"
     },
     {
       "q_num": 20,
-      "question": "Consider the following pairs: निम्नलिखित युग्मों पर विचार करें:\n 1. Regeneration - Planaria / पुनरुद्धभवन - प्लेनेरिया\n 2. Spore Formation – Rhizopus / बीजाणु निर्माण - राइजोपस\n 3. Budding - Amoeba / मुकुलन - अमीबा\n Which of the above pairs is/are correctly matched? उपरोक्त में से कौन सा/से युग्म सही सुमेलित है/हैं?",
+      "question": "Consider the following pairs:\n1. Regeneration - Planaria\n2. Spore Formation – Rhizopus\n3. Budding - Amoeba\nWhich of the above pairs is/are correctly matched?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "1 and 2",
+        "b": "2 and 3",
+        "c": "1 and 3",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPlanaria shows high regeneration, and Rhizopus reproduces via spores. Amoeba reproduces through fission, not budding (budding is for Hydra/Yeast)\n\n📖 हिंदी स्पष्टीकरण:\nप्लेनेरिया उच्च पुनरुद्धभवन दिखाता है, और राइजोपस बीजाणुओं के माध्यम से प्रजनन करता है। अमीबा विखंडन के माध्यम से प्रजनन करता है, मुकुलन के माध्यम से नहीं।"
     },
     {
       "q_num": 21,
-      "question": "Statement 1: Parthenocarpic fruits are developed without fertilisation.\n कथन 1: अनिषेकफलित फल बिना निषेचन के विकसित होते हैं।\n Statement 2: Parthenocarpic fruits are usually seedless.\n कथन 2: अनिषेकफलित फल आमतौर पर बीजरहित होते हैं।",
+      "question": "Statement 1: Parthenocarpic fruits are developed without fertilisation.\n Statement 2: Parthenocarpic fruits are usually seedless.",
       "options": {
-        "a": "Only Statement 1 is correct / केवल कथन 1 सही है।",
-        "b": "Only Statement 2 is correct / केवल कथन 2 सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+        "a": "Only Statement 1 is correct",
+        "b": "Only Statement 2 is correct",
+        "c": "Both statements are correct",
+        "d": "Both statements are incorrect"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nParthenocarpy is the production of fruit without fertilization of ovules, which naturally results in seedless fruits like bananas\n\n📖 हिंदी स्पष्टीकरण:\nअनिषेकफलन बीजांडों के निषेचन के बिना फल का उत्पादन है, जिसके परिणामस्वरूप स्वाभाविक रूप से केले जैसे बीजरहित फल प्राप्त होते हैं।"
     },
     {
       "q_num": 22,
-      "question": "Which of the following statements about the placenta is correct? प्लेसेंटा के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about the placenta is correct?",
       "options": {
-        "a": "It provides oxygen and nutrients to the fetus / यह भ्रूण को ऑक्सीजन और पोषक तत्व प्रदान करता है।",
-        "b": "It is only present in males / यह केवल पुरुषों में मौजूद होता है।",
-        "c": "It is a part of the male reproductive system / यह पुरुष जनन प्रणाली का एक हिस्सा है।",
-        "d": "It produces sperm / यह शुक्राणु का उत्पादन करता है।"
+        "a": "It provides oxygen and nutrients to the fetus",
+        "b": "It is only present in males",
+        "c": "It is a part of the male reproductive system",
+        "d": "It produces sperm"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe placenta is a temporary organ that connects the developing fetus to the uterine wall, allowing nutrient uptake and waste elimination\n\n📖 हिंदी स्पष्टीकरण:\nप्लेसेंटा एक अस्थायी अंग है जो विकासशील भ्रूण को गर्भाशय की दीवार से जोड़ता है, जिससे पोषक तत्वों का सेवन और अपशिष्ट का निष्कासन संभव होता है।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): Fragmentation is seen in simple multicellular organisms.\n अभिकथन (A): सरल बहुकोशिकीय जीवों में खंडन देखा जाता है।\n Reason (R): Each fragment can develop into a new complete organism.\n कारण (R): प्रत्येक खंड एक नए पूर्ण जीव में विकसित हो सकता है।",
+      "question": "Assertion (A): Fragmentation is seen in simple multicellular organisms.\n Reason (R): Each fragment can develop into a new complete organism.",
       "options": {
-        "a": "A and R are true, R is the correct explanation / A और R सही हैं, R सही स्पष्टीकरण है।",
-        "b": "A and R are true, R is not the correct explanation / A और R सही हैं, R सही स्पष्टीकरण नहीं है।",
-        "c": "A is true, R is false / A सही है, R गलत है।",
-        "d": "A is false, R is true / A गलत है, R सही है।"
+        "a": "A and R are true, R is the correct explanation",
+        "b": "A and R are true, R is not the correct explanation",
+        "c": "A is true, R is false",
+        "d": "A is false, R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSimple organisms like Spirogyra can break into pieces, and each piece has the capacity to grow into a new individual\n\n📖 हिंदी स्पष्टीकरण:\nस्पाइरोगाइरा जैसे सरल जीव टुकड़ों में टूट सकते हैं, और प्रत्येक टुकड़े में एक नए जीव में विकसित होने की क्षमता होती है।"
     },
     {
       "q_num": 24,
-      "question": "In the human female reproductive system, where does fertilisation usually occur? मानव मादा जनन प्रणाली में, निषेचन आमतौर पर कहाँ होता है?",
+      "question": "In the human female reproductive system, where does fertilisation usually occur?",
       "options": {
-        "a": "Ovary / अंडाशय",
-        "b": "Uterus / गर्भाशय",
-        "c": "Fallopian tube (Oviduct) / फैलोपियन ट्यूब (डिंबवाहिनी)",
-        "d": "Cervix / गर्भाशय ग्रीवा"
+        "a": "Ovary",
+        "b": "Uterus",
+        "c": "Fallopian tube (Oviduct)",
+        "d": "Cervix"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFertilisation in humans typically occurs in the Fallopian tube when the sperm meets the egg. The zygote then travels to the uterus\n\n📖 हिंदी स्पष्टीकरण:\nमनुष्यों में निषेचन आमतौर पर फैलोपियन ट्यूब में होता है जब शुक्राणु अंडे से मिलता है। इसके बाद युग्मज गर्भाशय की ओर जाता है।"
     },
     {
       "q_num": 25,
-      "question": "Which of these is an example of a plant that can be grown through tissue culture? इनमें से कौन सा उस पौधे का उदाहरण है जिसे ऊतक संवर्धन के माध्यम से उगाया जा सकता है?",
+      "question": "Which of these is an example of a plant that can be grown through tissue culture?",
       "options": {
-        "a": "Orchids / ऑर्किड",
-        "b": "Wheat / गेहूं",
-        "c": "Rice / चावल",
-        "d": "Corn / मक्का"
+        "a": "Orchids",
+        "b": "Wheat",
+        "c": "Rice",
+        "d": "Corn"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nTissue culture is a technique used to grow plants from cells or tissues in a lab. It is widely used for ornamental plants like Orchids and Dahlias\n\n📖 हिंदी स्पष्टीकरण:\nऊतक संवर्धन एक लैब में कोशिकाओं या ऊतकों से पौधों को उगाने की तकनीक है। इसका व्यापक रूप से ऑर्किड जैसे सजावटी पौधों के लिए उपयोग किया जाता है।"

@@ -131,7 +131,7 @@
         "d": "2,750"
       },
       "answer": "c",
-      "solution": "Step 1   Divide the two amounts. \n17,820 / 11,880 = 3/2 = (1 + r)²   over the 2-year \ngap \nLEVEL - 2 \nGrow 10000 (x 1.1)\nP = 10000\nx 1.1\n11000\nx 1.1\n12100\nx 1.1\n13310\nx 1.1\n14641 = A\nCI = 4641 -> 4 half-yrs = 2 years \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   So the 4-year factor is its square. \n(1 + r)⁴ = 9/4   ⇒  P = 11,880 × 4/9 = ₹5,280 \n Step 3   Half of it. \n5,280 / 2 = ₹2,640",
+      "solution": "Step 1   Divide the two amounts. \n17,820 / 11,880 = 3/2 = (1 + r)²   over the 2-year \ngap \nLEVEL - 2 \nGrow 10000 (x 1.1)\nP = 10000\nx 1.1\n11000\nx 1.1\n12100\nx 1.1\n13310\nx 1.1\n14641 = A\nCI = 4641 -> 4 half-yrs = 2 years \n\ns\nSSC CGL 2026\n Step 2   So the 4-year factor is its square. \n(1 + r)⁴ = 9/4   ⇒  P = 11,880 × 4/9 = ₹5,280 \n Step 3   Half of it. \n5,280 / 2 = ₹2,640",
       "q_num": 11
     },
     {
@@ -287,7 +287,7 @@
         "d": "₹1,272"
       },
       "answer": "d",
-      "solution": "Step 1   Scheme A, 2 years at 10%. \nCI = 21% of P = 1,050   ⇒  P = ₹5,000 \n Step 2   Scheme B on the same ₹5,000 at 12%, \nrow 2 : 1. \n12% of 5,000 = 600,  of 600 = 72   ⇒  2(600) + 72 \n= ₹1,272 \n \nCI on 10000 at 8%\nP = 10000 \nx 1.08\n10800 \nx 1.08\n11664 = A \nCI = 1664 \nScheme B at 12%\nP = 5000 \nx 1.12\n5600 \nx 1.12\n6272 = A \nCI(B) = 6272 - 5000 = 1272 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026",
+      "solution": "Step 1   Scheme A, 2 years at 10%. \nCI = 21% of P = 1,050   ⇒  P = ₹5,000 \n Step 2   Scheme B on the same ₹5,000 at 12%, \nrow 2 : 1. \n12% of 5,000 = 600,  of 600 = 72   ⇒  2(600) + 72 \n= ₹1,272 \n \nCI on 10000 at 8%\nP = 10000 \nx 1.08\n10800 \nx 1.08\n11664 = A \nCI = 1664 \nScheme B at 12%\nP = 5000 \nx 1.12\n5600 \nx 1.12\n6272 = A \nCI(B) = 6272 - 5000 = 1272 \n\ns\nSSC CGL 2026",
       "q_num": 24
     },
     {

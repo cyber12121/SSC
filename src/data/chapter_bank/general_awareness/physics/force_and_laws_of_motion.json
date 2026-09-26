@@ -6,79 +6,79 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "What is the SI unit of Force? / बल का SI मात्रक क्या है?",
+      "question": "What is the SI unit of Force?",
       "options": {
-        "a": "Joule / जूल",
-        "b": "Newton / न्यूटन",
-        "c": "Watt / वाट",
-        "d": "Pascal / पास्कल"
+        "a": "Joule",
+        "b": "Newton",
+        "c": "Watt",
+        "d": "Pascal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe SI unit of force is the Newton (N), named after Isaac Newton. It is defined as 1 kg.m/s²\n\n📖 हिंदी स्पष्टीकरण:\nबल का SI मात्रक न्यूटन (N) है, जिसका नाम आइजैक न्यूटन के नाम पर रखा गया है। इसे 1 kg.m/s² के रूप में परिभाषित किया गया है।"
     },
     {
       "q_num": 2,
-      "question": "Which law of motion is also known as the Law of Inertia? / गति के किस नियम को जड़त्व के नियम के रूप में भी जाना जाता है?",
+      "question": "Which law of motion is also known as the Law of Inertia?",
       "options": {
-        "a": "Newton's First Law / न्यूटन का प्रथम नियम",
-        "b": "Newton's Second Law / न्यूटन का द्वितीय नियम",
-        "c": "Newton's Third Law / न्यूटन का तृतीय नियम",
-        "d": "Law of Conservation of Momentum / संवेग संरक्षण का नियम"
+        "a": "Newton's First Law",
+        "b": "Newton's Second Law",
+        "c": "Newton's Third Law",
+        "d": "Law of Conservation of Momentum"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNewton's First Law states that an object will remain at rest or in uniform motion unless acted upon by an external force. This property is called inertia\n\n📖 हिंदी स्पष्टीकरण:\nन्यूटन का प्रथम नियम कहता है कि कोई वस्तु तब तक अपनी विराम अवस्था या गति की अवस्था में रहती है जब तक उस पर कोई बाहरी बल न लगाया जाए। इस गुण को जड़त्व कहते हैं।"
     },
     {
       "q_num": 3,
-      "question": "Force is a _______ quantity. / बल एक _______ राशि है।",
+      "question": "Force is a _______ quantity.",
       "options": {
-        "a": "Scalar / अदिश",
-        "b": "Vector / सदिश",
-        "c": "Dimensionless / विमाहीन",
-        "d": "None of these / इनमें से कोई नहीं"
+        "a": "Scalar",
+        "b": "Vector",
+        "c": "Dimensionless",
+        "d": "None of these"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nForce is a vector quantity because it has both magnitude and direction. It is represented by an arrow\n\n📖 हिंदी स्पष्टीकरण:\nबल एक सदिश राशि है क्योंकि इसमें परिमाण और दिशा दोनों होते हैं। इसे एक तीर द्वारा दर्शाया जाता है।"
     },
     {
       "q_num": 4,
-      "question": "The tendency of an object to resist change in its state of rest or motion is called: / किसी वस्तु की अपनी विराम अवस्था या गति की अवस्था में परिवर्तन का विरोध करने की प्रवृत्ति कहलाती है:",
+      "question": "The tendency of an object to resist change in its state of rest or motion is called:",
       "options": {
-        "a": "Momentum / संवेग",
-        "b": "Force / बल",
-        "c": "Inertia / जड़त्व",
-        "d": "Acceleration / त्वरण"
+        "a": "Momentum",
+        "b": "Force",
+        "c": "Inertia",
+        "d": "Acceleration"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nInertia is the inherent property of a body by virtue of which it resists any change in its state of rest or motion. It depends on mass\n\n📖 हिंदी स्पष्टीकरण:\nजड़त्व किसी वस्तु का वह स्वाभाविक गुण है जिसके कारण वह अपनी विराम या गति की अवस्था में किसी भी परिवर्तन का विरोध करती है। यह द्रव्यमान पर निर्भर करता है।"
     },
     {
       "q_num": 5,
-      "question": "When the net force acting on a body is zero, the forces are said to be: / जब किसी वस्तु पर लगने वाला शुद्ध बल शून्य होता है, तो बलों को कहा जाता है:",
+      "question": "When the net force acting on a body is zero, the forces are said to be:",
       "options": {
-        "a": "Unbalanced / असंतुलित",
-        "b": "Balanced / संतुलित",
-        "c": "Frictional / घर्षण",
-        "d": "Gravitational / गुरुत्वाकर्षण"
+        "a": "Unbalanced",
+        "b": "Balanced",
+        "c": "Frictional",
+        "d": "Gravitational"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBalanced forces are equal in magnitude and opposite in direction, resulting in a net force (Fnet) of zero. They do not change the state of motion\n\n📖 हिंदी स्पष्टीकरण:\nसंतुलित बल परिमाण में समान और दिशा में विपरीत होते हैं, जिससे शुद्ध बल (Fnet) शून्य हो जाता है। वे गति की अवस्था में परिवर्तन नहीं करते हैं।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following is an example of a non-contact force? / निम्नलिखित में से कौन सा गैर-संपर्क बल का उदाहरण है?",
+      "question": "Which of the following is an example of a non-contact force?",
       "options": {
-        "a": "Frictional force / घर्षण बल",
-        "b": "Muscular force / पेशीय बल",
-        "c": "Magnetic force / चुंबकीय बल",
-        "d": "Spring force / स्प्रिंग बल"
+        "a": "Frictional force",
+        "b": "Muscular force",
+        "c": "Magnetic force",
+        "d": "Spring force"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNon-contact forces act from a distance without physical contact. Examples include magnetic, electrostatic, and gravitational forces\n\n📖 हिंदी स्पष्टीकरण:\nगैर-संपर्क बल बिना किसी भौतिक संपर्क के दूर से कार्य करते हैं। उदाहरणों में चुंबकीय, स्थिरवैद्युत और गुरुत्वाकर्षण बल शामिल हैं।"
     },
     {
       "q_num": 7,
-      "question": "What is the formula for Momentum? / संवेग का सूत्र क्या है?",
+      "question": "What is the formula for Momentum?",
       "options": {
         "a": "p = m + v",
         "b": "p = m / v",
@@ -90,43 +90,43 @@
     },
     {
       "q_num": 8,
-      "question": "A push or pull on an object is called: / किसी वस्तु पर लगने वाले धक्के या खिंचाव को क्या कहते हैं?",
+      "question": "A push or pull on an object is called:",
       "options": {
-        "a": "Pressure / दाब",
-        "b": "Force / बल",
-        "c": "Friction / घर्षण",
-        "d": "Inertia / जड़त्व"
+        "a": "Pressure",
+        "b": "Force",
+        "c": "Friction",
+        "d": "Inertia"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA force is a push or pull upon an object resulting from the object's interaction with another object\n\n📖 हिंदी स्पष्टीकरण:\nबल किसी वस्तु पर लगने वाला वह धक्का या खिंचाव है जो दूसरी वस्तु के साथ परस्पर क्रिया के परिणामस्वरूप उत्पन्न होता है।"
     },
     {
       "q_num": 9,
-      "question": "If a body is at rest on the floor, the net force acting on it is: / यदि कोई वस्तु फर्श पर स्थिर है, तो उस पर लगने वाला शुद्ध बल है:",
+      "question": "If a body is at rest on the floor, the net force acting on it is:",
       "options": {
-        "a": "Positive / धनात्मक",
-        "b": "Negative / ऋणात्मक",
-        "c": "Zero / शून्य",
-        "d": "Infinite / अनंत"
+        "a": "Positive",
+        "b": "Negative",
+        "c": "Zero",
+        "d": "Infinite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFor a body to remain at rest, the forces acting on it must be balanced, meaning the net force (Fnet) must be zero\n\n📖 हिंदी स्पष्टीकरण:\nकिसी वस्तु के स्थिर रहने के लिए, उस पर लगने वाले बल संतुलित होने चाहिए, जिसका अर्थ है कि शुद्ध बल (Fnet) शून्य होना चाहिए।"
     },
     {
       "q_num": 10,
-      "question": "Newton's second law gives the relationship between: / न्यूटन का दूसरा नियम किसके बीच संबंध बताता है?",
+      "question": "Newton's second law gives the relationship between:",
       "options": {
-        "a": "Force and Velocity / बल और वेग",
-        "b": "Force and Acceleration / बल और त्वरण",
-        "c": "Momentum and Velocity / संवेग और वेग",
-        "d": "Mass and Inertia / द्रव्यमान और जड़त्व"
+        "a": "Force and Velocity",
+        "b": "Force and Acceleration",
+        "c": "Momentum and Velocity",
+        "d": "Mass and Inertia"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNewton's Second Law states that F = m × a, establishing a direct relationship between the applied force and the acceleration produced\n\n📖 हिंदी स्पष्टीकरण:\nन्यूटन का दूसरा नियम बताता है कि F = m × a, जो लगाए गए बल और उत्पन्न त्वरण के बीच सीधा संबंध स्थापित करता है।"
     },
     {
       "q_num": 11,
-      "question": "A constant force of 10 N acts on an object of mass 5 kg for 2 seconds. What is the acceleration produced? / 5 किलोग्राम द्रव्यमान की वस्तु पर 10 N का स्थिर बल 2 सेकंड के लिए कार्य करता है। उत्पन्न त्वरण क्या है?",
+      "question": "A constant force of 10 N acts on an object of mass 5 kg for 2 seconds. What is the acceleration produced?",
       "options": {
         "a": "1 m/s²",
         "b": "2 m/s²",
@@ -138,168 +138,168 @@
     },
     {
       "q_num": 12,
-      "question": "When a person jumps out of a boat, the boat moves backwards. This is an example of: / जब कोई व्यक्ति नाव से बाहर कूदता है, तो नाव पीछे की ओर चलती है। यह किसका उदाहरण है?",
+      "question": "When a person jumps out of a boat, the boat moves backwards. This is an example of:",
       "options": {
-        "a": "Newton's First Law / न्यूटन का प्रथम नियम",
-        "b": "Inertia of rest / विराम का जड़त्व",
-        "c": "Newton's Third Law / न्यूटन का तृतीय नियम",
-        "d": "Conservation of Energy / ऊर्जा का संरक्षण"
+        "a": "Newton's First Law",
+        "b": "Inertia of rest",
+        "c": "Newton's Third Law",
+        "d": "Conservation of Energy"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAccording to Newton's Third Law, for every action, there is an equal and opposite reaction. Jumping forward exerts a backward force on the boat\n\n📖 हिंदी स्पष्टीकरण:\nन्यूटन के तीसरे नियम के अनुसार, प्रत्येक क्रिया की समान और विपरीत प्रतिक्रिया होती है। आगे कूदने से नाव पर पीछे की ओर बल लगता है।"
     },
     {
       "q_num": 13,
-      "question": "The inertia of an object is directly proportional to its: / किसी वस्तु का जड़त्व किसके सीधे अनुपातिक होता है?",
+      "question": "The inertia of an object is directly proportional to its:",
       "options": {
-        "a": "Velocity / वेग",
-        "b": "Acceleration / त्वरण",
-        "c": "Mass / द्रव्यमान",
-        "d": "Volume / आयतन"
+        "a": "Velocity",
+        "b": "Acceleration",
+        "c": "Mass",
+        "d": "Volume"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMass is a measure of inertia. A heavier object has more inertia and is harder to move or stop compared to a lighter one\n\n📖 हिंदी स्पष्टीकरण:\nद्रव्यमान जड़त्व की माप है। एक भारी वस्तु में अधिक जड़त्व होता है और उसे हल्की वस्तु की तुलना में हिलाना या रोकना कठिन होता है।"
     },
     {
       "q_num": 14,
-      "question": "Frictional force always acts in a direction _______ to the motion of the object. / घर्षण बल हमेशा वस्तु की गति की _______ दिशा में कार्य करता है।",
+      "question": "Frictional force always acts in a direction _______ to the motion of the object.",
       "options": {
-        "a": "Parallel / समानांतर",
-        "b": "Opposite / विपरीत",
-        "c": "Perpendicular / लंबवत",
-        "d": "Same / समान"
+        "a": "Parallel",
+        "b": "Opposite",
+        "c": "Perpendicular",
+        "d": "Same"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFriction is a contact force that opposes the relative motion between two surfaces. It always acts opposite to the direction of movement\n\n📖 हिंदी स्पष्टीकरण:\nघर्षण एक संपर्क बल है जो दो सतहों के बीच सापेक्ष गति का विरोध करता है। यह हमेशा गति की दिशा के विपरीत कार्य करता है।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following has the highest inertia? / निम्नलिखित में से किसका जड़त्व सबसे अधिक है?",
+      "question": "Which of the following has the highest inertia?",
       "options": {
-        "a": "A rubber ball / रबर की गेंद",
-        "b": "A stone of the same size / समान आकार का पत्थर",
-        "c": "A cricket ball / क्रिकेट की गेंद",
-        "d": "A football / फुटबॉल"
+        "a": "A rubber ball",
+        "b": "A stone of the same size",
+        "c": "A cricket ball",
+        "d": "A football"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSince inertia depends on mass, a stone has more mass than a rubber ball or football of the same size, thus it has the highest inertia\n\n📖 हिंदी स्पष्टीकरण:\nचूंकि जड़त्व द्रव्यमान पर निर्भर करता है, इसलिए समान आकार के रबर की गेंद या फुटबॉल की तुलना में पत्थर का द्रव्यमान अधिक होता है, इसलिए इसका जड़त्व सबसे अधिक होता है।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): A person sitting in a moving bus falls forward when the bus stops suddenly.\nReason (R): The upper part of the body continues to be in motion due to inertia of motion.\nअभिकथन (A): चलती बस में बैठा व्यक्ति बस के अचानक रुकने पर आगे की ओर झुक जाता है।\nकारण (R): शरीर का ऊपरी हिस्सा गति के जड़त्व के कारण गति में बना रहता है।",
+      "question": "Assertion (A): A person sitting in a moving bus falls forward when the bus stops suddenly.\nReason (R): The upper part of the body continues to be in motion due to inertia of motion.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWhen the bus stops, the lower body comes to rest with the bus, but the upper body tries to maintain its state of motion due to inertia\n\n📖 हिंदी स्पष्टीकरण:\nजब बस रुकती है, तो शरीर का निचला हिस्सा बस के साथ विराम में आ जाता है, लेकिन ऊपरी हिस्सा जड़त्व के कारण अपनी गति की अवस्था को बनाए रखने की कोशिश करता है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following forces are examples of contact forces? / निम्नलिखित में से कौन से बल संपर्क बलों के उदाहरण हैं?\n1. Frictional force / घर्षण बल\n2. Gravitational force / गुरुत्वाकर्षण बल\n3. Spring force / कमानी बल\n4. Magnetic force / चुंबकीय बल",
+      "question": "Which of the following forces are examples of contact forces?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "1 and 3 / 1 और 3",
-        "c": "2 and 4 / 2 और 4",
-        "d": "1, 2, and 3 / 1, 2 और 3"
+        "a": "1 and 2",
+        "b": "1 and 3",
+        "c": "2 and 4",
+        "d": "1, 2, and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nContact forces like friction and spring force require physical contact between objects, unlike gravity and magnetism which act from a distance\n\n📖 हिंदी स्पष्टीकरण:\nघर्षण और कमानी बल जैसे संपर्क बलों को वस्तुओं के बीच भौतिक संपर्क की आवश्यकता होती है, गुरुत्वाकर्षण और चुंबकत्व के विपरीत जो दूर से कार्य करते हैं।"
     },
     {
       "q_num": 18,
-      "question": "Newton's Second Law can be mathematically written as: / न्यूटन के दूसरे नियम को गणितीय रूप से लिखा जा सकता है:",
+      "question": "Newton's Second Law can be mathematically written as:",
       "options": {
         "a": "F = Δ p / t",
         "b": "F = m(v-u) / t",
         "c": "F = ma",
-        "d": "All of the above / उपरोक्त सभी"
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three represent the second law: the rate of change of momentum is proportional to applied force, where F = Δp/t = m(v-u)/t = ma\n\n📖 हिंदी स्पष्टीकरण:\nतीनों दूसरे नियम का प्रतिनिधित्व करते हैं: संवेग परिवर्तन की दर लगाए गए बल के समानुपाती होती है, जहाँ F = Δp/t = m(v-u)/t = ma है।"
     },
     {
       "q_num": 19,
-      "question": "Assertion (A): Conservation of momentum is applicable only when no external unbalanced force acts.\nReason (R): Momentum of a system is always conserved regardless of external forces.\nअभिकथन (A): संवेग का संरक्षण केवल तभी लागू होता है जब कोई बाहरी असंतुलित बल कार्य नहीं करता है।\nकारण (R): बाहरी बलों की परवाह किए बिना किसी निकाय का संवेग हमेशा संरक्षित रहता है।",
+      "question": "Assertion (A): Conservation of momentum is applicable only when no external unbalanced force acts.\nReason (R): Momentum of a system is always conserved regardless of external forces.",
       "options": {
-        "a": "Both A and R are true. / A और R दोनों सत्य हैं।",
-        "b": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
-        "c": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।",
-        "d": "Both A and R are false. / A और R दोनों ही असत्य हैं।"
+        "a": "Both A and R are true.",
+        "b": "A is true, but R is false.",
+        "c": "A is false, but R is true.",
+        "d": "Both A and R are false."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe total momentum remains constant only in an isolated system where the net external force is zero. External forces change the momentum\n\n📖 हिंदी स्पष्टीकरण:\nकुल संवेग केवल एक अलग निकाय में स्थिर रहता है जहाँ शुद्ध बाहरी बल शून्य होता है। बाहरी बल संवेग को बदल देते हैं।"
     },
     {
       "q_num": 20,
-      "question": "A gun recoils after firing a bullet. This recoil velocity is less than the bullet's velocity because: / गोली चलाने के बाद बंदूक पीछे हटती है। यह प्रतिक्षेप वेग गोली के वेग से कम होता है क्योंकि:",
+      "question": "A gun recoils after firing a bullet. This recoil velocity is less than the bullet's velocity because:",
       "options": {
-        "a": "The gun has more mass than the bullet / बंदूक का द्रव्यमान गोली से अधिक होता है।",
-        "b": "The force on the gun is less / बंदूक पर लगने वाला बल कम होता है।",
-        "c": "The bullet has more inertia / गोली का जड़त्व अधिक होता है।",
-        "d": "None of these / इनमें से कोई नहीं"
+        "a": "The gun has more mass than the bullet",
+        "b": "The force on the gun is less",
+        "c": "The bullet has more inertia",
+        "d": "None of these"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBy conservation of momentum (m₁v₁ = m₂v₂), the larger mass of the gun results in a much smaller recoil velocity compared to the tiny bullet\n\n📖 हिंदी स्पष्टीकरण:\nसंवेग संरक्षण (m₁v₁ = m₂v₂) के अनुसार, बंदूक का द्रव्यमान अधिक होने के कारण छोटी गोली की तुलना में उसका प्रतिक्षेप वेग बहुत कम होता है।"
     },
     {
       "q_num": 21,
-      "question": "Statement I: Work done by a conservative force depends on the path taken.\nStatement II: Gravitational force is a conservative force.\nकथन I: संरक्षी बल द्वारा किया गया कार्य तय किए गए पथ पर निर्भर करता है।\nकथन II: गुरुत्वाकर्षण बल एक संरक्षी बल है।",
+      "question": "Statement I: Work done by a conservative force depends on the path taken.\nStatement II: Gravitational force is a conservative force.",
       "options": {
-        "a": "Statement I is correct, II is incorrect. / कथन I सही है, कथन II गलत है।",
-        "b": "Statement I is incorrect, II is correct. / कथन 1 गलत है, कथन 2 सही है।",
-        "c": "Both are correct. / दोनों सही हैं।",
-        "d": "Both are incorrect. / दोनों ग़लत हैं।"
+        "a": "Statement I is correct, II is incorrect.",
+        "b": "Statement I is incorrect, II is correct.",
+        "c": "Both are correct.",
+        "d": "Both are incorrect."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWork done by conservative forces (like gravity) depends only on initial and final positions, not the path. Frictional force is non-conservative\n\n📖 हिंदी स्पष्टीकरण:\nसंरक्षी बलों (जैसे गुरुत्वाकर्षण) द्वारा किया गया कार्य केवल प्रारंभिक और अंतिम स्थितियों पर निर्भर करता है, पथ पर नहीं। घर्षण बल असंरक्षी है।"
     },
     {
       "q_num": 22,
-      "question": "Rolling friction is ______ than sliding friction. / लोटनिक घर्षण, सर्पी घर्षण की तुलना में ______ होता है।",
+      "question": "Rolling friction is ______ than sliding friction.",
       "options": {
-        "a": "Greater / अधिक",
-        "b": "Smaller / कम",
-        "c": "Equal / बराबर",
-        "d": "Double / दोगुना"
+        "a": "Greater",
+        "b": "Smaller",
+        "c": "Equal",
+        "d": "Double"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRolling friction is much less than sliding friction, which is why wheels and ball bearings are used to reduce resistance in machines\n\n📖 हिंदी स्पष्टीकरण:\nलोटनिक घर्षण सर्पी घर्षण से बहुत कम होता है, यही कारण है कि मशीनों में प्रतिरोध कम करने के लिए पहियों और बॉल बेयरिंग का उपयोग किया जाता है।"
     },
     {
       "q_num": 23,
-      "question": "If the velocity of an object is doubled, its momentum will become: / यदि किसी वस्तु का वेग दोगुना कर दिया जाए, तो उसका संवेग हो जाएगा:",
+      "question": "If the velocity of an object is doubled, its momentum will become:",
       "options": {
-        "a": "Half / आधा",
-        "b": "Double / दोगुना",
-        "c": "Four times / चार गुना",
-        "d": "Remain same / समान रहेगा"
+        "a": "Half",
+        "b": "Double",
+        "c": "Four times",
+        "d": "Remain same"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSince p = mv, momentum is directly proportional to velocity. Doubling the velocity (2v) results in double momentum (2mv)\n\n📖 हिंदी स्पष्टीकरण:\nचूँकि p = mv, संवेग वेग के सीधे अनुपातिक होता है। वेग को दोगुना (2v) करने से संवेग दोगुना (2mv) हो जाता है।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): A rocket works on the principle of conservation of momentum.\nReason (R): The exhaust gases pushed downwards create an upward reaction force.\nअभिकथन (A): रॉकेट संवेग संरक्षण के सिद्धांत पर कार्य करता है।\nकारण (R): नीचे की ओर धकेली गई निकास गैसें ऊपर की ओर एक प्रतिक्रिया बल पैदा करती हैं।",
+      "question": "Assertion (A): A rocket works on the principle of conservation of momentum.\nReason (R): The exhaust gases pushed downwards create an upward reaction force.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation. / A और R दोनों सत्य हैं, लेकिन R सही व्याख्या नहीं है।",
-        "c": "A is true, R is false. / A सत्य है, R असत्य है।",
-        "d": "A is false, R is true. / A असत्य है, R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation.",
+        "c": "A is true, R is false.",
+        "d": "A is false, R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRocket propulsion is an application of both Newton's 3rd Law (action-reaction) and the conservation of momentum as the gas is expelled\n\n📖 हिंदी स्पष्टीकरण:\nरॉकेट प्रणोदन गैस के बाहर निकलने पर न्यूटन के तीसरे नियम (क्रिया-प्रतिक्रिया) और संवेग संरक्षण दोनों का एक अनुप्रयोग है।"
     },
     {
       "q_num": 25,
-      "question": "Which quantity is represented by the rate of change of momentum? / संवेग परिवर्तन की दर किस राशि को दर्शाती है?",
+      "question": "Which quantity is represented by the rate of change of momentum?",
       "options": {
-        "a": "Work / कार्य",
-        "b": "Power / शक्ति",
-        "c": "Force / बल",
-        "d": "Impulse / आवेग"
+        "a": "Work",
+        "b": "Power",
+        "c": "Force",
+        "d": "Impulse"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAccording to Newton's Second Law, the rate of change of momentum of an object is equal to the net external force applied to it\n\n📖 हिंदी स्पष्टीकरण:\nन्यूटन के दूसरे नियम के अनुसार, किसी वस्तु के संवेग परिवर्तन की दर उस पर लगाए गए शुद्ध बाहरी बल के बराबर होती है।"

@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who developed the concept of GDP in 1934? / 1934 में GDP की अवधारणा किसने विकसित की थी?",
+      "question": "Who developed the concept of GDP in 1934?",
       "options": {
-        "a": "Irvin Fisher / इरविन फिशर",
-        "b": "Simon Kuznets / साइमन कुज़नेट्स",
-        "c": "Adam Smith / एडम स्मिथ",
-        "d": "J.M. Keynes / जे.एम. कीन्स"
+        "a": "Irvin Fisher",
+        "b": "Simon Kuznets",
+        "c": "Adam Smith",
+        "d": "J.M. Keynes"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGDP was developed by American Economist Simon Kuznets in 1934. It measures the total value of final goods and services produced within a country.\n\n📖 हिंदी स्पष्टीकरण:\nGDP को 1934 में अमेरिकी अर्थशास्त्री साइमन कुज़नेट्स द्वारा विकसित किया गया था। यह एक देश के भीतर उत्पादित सभी अंतिम वस्तुओं और सेवाओं के कुल मूल्य को मापता है।"
     },
     {
       "q_num": 2,
-      "question": "What is the financial year in India for calculating National Income? / भारत में राष्ट्रीय आय की गणना के लिए वित्तीय वर्ष क्या है?",
+      "question": "What is the financial year in India for calculating National Income?",
       "options": {
-        "a": "1 January to 31 December / 1 जनवरी से 31 दिसंबर",
-        "b": "1 July to 30 June / 1 जुलाई से 30 जून",
-        "c": "1 April to 31 March / 1 अप्रैल से 31 मार्च",
-        "d": "1 March to 28 February / 1 मार्च से 28 फरवरी"
+        "a": "1 January to 31 December",
+        "b": "1 July to 30 June",
+        "c": "1 April to 31 March",
+        "d": "1 March to 28 February"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn India, the financial year for economic accounting starts from 1st April and ends on 31st March of the following year.\n\n📖 हिंदी स्पष्टीकरण:\nभारत में, आर्थिक लेखांकन के लिए वित्तीय वर्ष 1 अप्रैल से शुरू होता है और अगले वर्ष के 31 मार्च को समाप्त होता है।"
     },
     {
       "q_num": 3,
-      "question": "Which organization is responsible for calculating GDP in India? / भारत में GDP की गणना के लिए कौन सा संगठन जिम्मेदार है?",
+      "question": "Which organization is responsible for calculating GDP in India?",
       "options": {
-        "a": "RBI / आरबीआई",
-        "b": "NITI Aayog / नीति आयोग",
-        "c": "Central Statistical Office (CSO) / केंद्रीय सांख्यिकी कार्यालय (CSO)",
-        "d": "Ministry of Finance / वित्त मंत्रालय"
+        "a": "RBI",
+        "b": "NITI Aayog",
+        "c": "Central Statistical Office (CSO)",
+        "d": "Ministry of Finance"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGDP in India is calculated by the Central Statistical Office (CSO) which operates under the Ministry of Statistics and Programme Implementation (MoSPI).\n\n📖 हिंदी स्पष्टीकरण:\nभारत में GDP की गणना केंद्रीय सांख्यिकी कार्यालय (CSO) द्वारा की जाती है जो सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) के तहत काम करता है।"
     },
     {
       "q_num": 4,
-      "question": "What is the base year currently used for GDP calculation in India? / भारत में वर्तमान में GDP गणना के लिए आधार वर्ष क्या उपयोग किया जाता है?",
+      "question": "What is the base year currently used for GDP calculation in India?",
       "options": {
         "a": "2004-05",
         "b": "2011-12",
@@ -54,43 +54,43 @@
     },
     {
       "q_num": 5,
-      "question": "Which of the following is considered a factor of production? / निम्नलिखित में से किसे उत्पादन का कारक माना जाता है?",
+      "question": "Which of the following is considered a factor of production?",
       "options": {
-        "a": "Land / भूमि",
-        "b": "Labour / श्रम",
-        "c": "Capital / पूंजी",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "Land",
+        "b": "Labour",
+        "c": "Capital",
+        "d": "All of the above"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe four factors of production are Land, Labour, Capital, and Entrepreneurs, which earn Rent, Wages, Interest, and Profit respectively.\n\n📖 हिंदी स्पष्टीकरण:\nउत्पादन के चार कारक भूमि, श्रम, पूंजी और उद्यमी हैं, जो क्रमशः किराया, मजदूरी, ब्याज और लाभ कमाते हैं।"
     },
     {
       "q_num": 6,
-      "question": "What is deducted from Gross Domestic Product (GDP) to get Net Domestic Product (NDP)? / शुद्ध घरेलू उत्पाद (NDP) प्राप्त करने के लिए सकल घरेलू उत्पाद (GDP) में से क्या घटाया जाता है?",
+      "question": "What is deducted from Gross Domestic Product (GDP) to get Net Domestic Product (NDP)?",
       "options": {
-        "a": "Indirect Taxes / अप्रत्यक्ष कर",
-        "b": "Subsidies / सब्सिडी",
-        "c": "Depreciation / मूल्यह्रास",
-        "d": "Net Factor Income from Abroad / विदेशों से शुद्ध कारक आय"
+        "a": "Indirect Taxes",
+        "b": "Subsidies",
+        "c": "Depreciation",
+        "d": "Net Factor Income from Abroad"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNDP is calculated by subtracting the value of depreciation (wear and tear of assets over time) from GDP.\n\n📖 हिंदी स्पष्टीकरण:\nGDP में से मूल्यह्रास (समय के साथ संपत्तियों में होने वाली घिसावट) के मूल्य को घटाकर NDP की गणना की जाती है।"
     },
     {
       "q_num": 7,
-      "question": "Which method is also known as the Value-Added Method? / किस पद्धति को मूल्य वर्धित पद्धति के रूप में भी जाना जाता है?",
+      "question": "Which method is also known as the Value-Added Method?",
       "options": {
-        "a": "Income Method / आय पद्धति",
-        "b": "Expenditure Method / व्यय पद्धति",
-        "c": "Product Method / उत्पाद पद्धति",
-        "d": "Consumption Method / उपभोग पद्धति"
+        "a": "Income Method",
+        "b": "Expenditure Method",
+        "c": "Product Method",
+        "d": "Consumption Method"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Product Method is also known as the Value-Added Method, where GDP is calculated as the difference between Output and Input.\n\n📖 हिंदी स्पष्टीकरण:\nउत्पाद पद्धति को मूल्य वर्धित पद्धति के रूप में भी जाना जाता है, जहाँ GDP की गणना आउटपुट और इनपुट के अंतर के रूप में की जाती है।"
     },
     {
       "q_num": 8,
-      "question": "What is the position of India in the world in terms of GDP (PPP)? / GDP (PPP) के मामले में दुनिया में भारत का स्थान क्या है?",
+      "question": "What is the position of India in the world in terms of GDP (PPP)?",
       "options": {
         "a": "1st",
         "b": "2nd",
@@ -102,79 +102,79 @@
     },
     {
       "q_num": 9,
-      "question": "Consumption of tea at home is an example of which type of good? / घर पर चाय का सेवन किस प्रकार की वस्तु का उदाहरण है?",
+      "question": "Consumption of tea at home is an example of which type of good?",
       "options": {
-        "a": "Intermediate Good / मध्यवर्ती वस्तु",
-        "b": "Final Good / अंतिम वस्तु",
-        "c": "Capital Good / पूंजीगत वस्तु",
-        "d": "Inventory Good / इन्वेंटरी वस्तु"
+        "a": "Intermediate Good",
+        "b": "Final Good",
+        "c": "Capital Good",
+        "d": "Inventory Good"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGoods used by the end consumer for personal consumption without any further economic process are final goods.\n\n📖 हिंदी स्पष्टीकरण:\nअंतिम उपभोक्ता द्वारा व्यक्तिगत उपभोग के लिए बिना किसी आर्थिक प्रक्रिया के उपयोग की जाने वाली वस्तुएं अंतिम वस्तुएं होती हैं।"
     },
     {
       "q_num": 10,
-      "question": "What is the formula for Per Capita Income? / प्रति व्यक्ति आय का सूत्र क्या है?",
+      "question": "What is the formula for Per Capita Income?",
       "options": {
-        "a": "National Income × Population / राष्ट्रीय आय × जनसंख्या",
-        "b": "National Income / Population / राष्ट्रीय आय / जनसंख्या",
-        "c": "GDP / Workforce / GDP / कार्यबल",
-        "d": "Total Wealth / Population / कुल संपत्ति / जनसंख्या"
+        "a": "National Income × Population",
+        "b": "National Income",
+        "c": "GDP",
+        "d": "Total Wealth"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPer Capita Income is calculated by dividing the total National Income of a country by its total population.\n\n📖 हिंदी स्पष्टीकरण:\nप्रति व्यक्ति आय की गणना किसी देश की कुल राष्ट्रीय आय को उसकी कुल जनसंख्या से विभाजित करके की जाती है।"
     },
     {
       "q_num": 11,
-      "question": "What does the term 'Money Illusion' refer to in economics? / अर्थशास्त्र में 'मनी इल्यूजन' (मुद्रा भ्रम) शब्द का क्या अर्थ है?",
+      "question": "What does the term 'Money Illusion' refer to in economics?",
       "options": {
-        "a": "High value of currency / मुद्रा का उच्च मूल्य",
-        "b": "Nominal GDP being more than Real GDP due to inflation / मुद्रास्फीति के कारण नाममात्र GDP का वास्तविक GDP से अधिक होना",
-        "c": "Decrease in production / उत्पादन में कमी",
-        "d": "Fluctuation in stock market / शेयर बाजार में उतार-चढ़ाव"
+        "a": "High value of currency",
+        "b": "Nominal GDP being more than Real GDP due to inflation",
+        "c": "Decrease in production",
+        "d": "Fluctuation in stock market"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIrvin Fisher mentioned 'Money Illusion' as the tendency to view income in nominal terms rather than real terms (adjusted for inflation).\n\n📖 हिंदी स्पष्टीकरण:\nइरविन फिशर ने 'मनी इल्यूजन' का उल्लेख आय को वास्तविक शब्दों (मुद्रास्फीति के लिए समायोजित) के बजाय नाममात्र के शब्दों में देखने की प्रवृत्ति के रूप में किया था।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following is NOT included in the calculation of GDP? / निम्नलिखित में से क्या GDP की गणना में शामिल नहीं है?",
+      "question": "Which of the following is NOT included in the calculation of GDP?",
       "options": {
-        "a": "Construction of a new house / नए घर का निर्माण",
-        "b": "Sale of second-hand goods / पुरानी वस्तुओं की बिक्री",
-        "c": "Services of a doctor / डॉक्टर की सेवाएं",
-        "d": "Government expenditure on infrastructure / बुनियादी ढांचे पर सरकारी खर्च"
+        "a": "Construction of a new house",
+        "b": "Sale of second-hand goods",
+        "c": "Services of a doctor",
+        "d": "Government expenditure on infrastructure"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn GDP, second-hand goods are never counted because they were already counted in the year they were originally produced.\n\n📖 हिंदी स्पष्टीकरण:\nGDP में पुरानी वस्तुओं को कभी नहीं गिना जाता क्योंकि उनकी गणना मूल उत्पादन के वर्ष में पहले ही की जा चुकी होती है।"
     },
     {
       "q_num": 13,
-      "question": "What is 'Net Factor Income from Abroad' (NFIA)? / 'विदेशों से शुद्ध कारक आय' (NFIA) क्या है?",
+      "question": "What is 'Net Factor Income from Abroad' (NFIA)?",
       "options": {
-        "a": "Difference between Exports and Imports / निर्यात और आयात के बीच का अंतर",
-        "b": "Income earned by nationals abroad minus income earned by foreigners in the country / विदेशों में नागरिकों द्वारा अर्जित आय और देश में विदेशियों द्वारा अर्जित आय का अंतर",
-        "c": "Total Foreign Investment / कुल विदेशी निवेश",
-        "d": "Taxes on foreign goods / विदेशी वस्तुओं पर कर"
+        "a": "Difference between Exports and Imports",
+        "b": "Income earned by nationals abroad minus income earned by foreigners in the country",
+        "c": "Total Foreign Investment",
+        "d": "Taxes on foreign goods"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNFIA is the difference between factor income received from abroad and factor income paid to abroad, used to convert GDP to GNP.\nNFIA\n\n📖 हिंदी स्पष्टीकरण:\nविदेशों से प्राप्त कारक आय और विदेशों को भुगतान की गई कारक आय के बीच का अंतर है, जिसका उपयोग GDP को GNP में बदलने के लिए किया जाता है।"
     },
     {
       "q_num": 14,
-      "question": "How is Factor Cost (FC) calculated from Market Price (MP)? / बाजार मूल्य (MP) से कारक लागत (FC) की गणना कैसे की जाती है?",
+      "question": "How is Factor Cost (FC) calculated from Market Price (MP)?",
       "options": {
-        "a": "MP + Indirect Taxes - Subsidy / MP + अप्रत्यक्ष कर – सब्सिडी",
-        "b": "MP - Indirect Taxes + Subsidy / MP - अप्रत्यक्ष कर + सब्सिडी",
-        "c": "MP + Net Indirect Taxes / MP + शुद्ध अप्रत्यक्ष कर",
-        "d": "MP - Depreciation / MP - मूल्यह्रास"
+        "a": "MP + Indirect Taxes - Subsidy",
+        "b": "MP - Indirect Taxes + Subsidy",
+        "c": "MP + Net Indirect Taxes",
+        "d": "MP - Depreciation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFactor Cost is the cost of production inputs excluding indirect taxes and including government subsidies (FC = MP - Indirect Tax + Subsidy).\n\n📖 हिंदी स्पष्टीकरण:\nकारक लागत उत्पादन इनपुट की लागत है जिसमें अप्रत्यक्ष कर शामिल नहीं होते और सरकारी सब्सिडी शामिल होती है। (FC = MP - अप्रत्यक्ष कर + सब्सिडी)"
     },
     {
       "q_num": 15,
-      "question": "Which aggregate is also specifically known as 'National Income'? / किस समुच्चय को विशेष रूप से 'राष्ट्रीय आय' के रूप में जाना जाता है?",
+      "question": "Which aggregate is also specifically known as 'National Income'?",
       "options": {
         "a": "GDPMP",
         "b": "GNPFC",
@@ -186,120 +186,120 @@
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): GDP does not include the value of intermediate goods. / अभिकथन (A): GDP में मध्यवर्ती वस्तुओं का मूल्य शामिल नहीं होता है।\nReason (R): Including intermediate goods would lead to the error of double counting. / कारण (R): मध्यवर्ती वस्तुओं को शामिल करने से दोहरी गणना की त्रुटि होगी।",
+      "question": "Assertion (A): GDP does not include the value of intermediate goods.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIntermediate goods are used as inputs for final products; adding them separately along with final goods causes double counting.\n\n📖 हिंदी स्पष्टीकरण:\nमध्यवर्ती वस्तुओं का उपयोग अंतिम उत्पादों के लिए इनपुट के रूप में किया जाता है; उन्हें अंतिम वस्तुओं के साथ अलग से जोड़ने से दोहरी गणना होती है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following are components of the Expenditure Method to calculate GDP? / GDP की गणना के लिए व्यय पद्धति के घटक निम्नलिखित में से कौन से हैं?\n1. Consumption (C) / उपभोग (C)\n2. Investment (I) / निवेश (I)\n3. Net Exports (X-M) / शुद्ध निर्यात (X-M)\n4. Operating Surplus / परिचालन अधिशेष",
+      "question": "Which of the following are components of the Expenditure Method to calculate GDP?",
       "options": {
-        "a": "I, II and IV / I, II और IV",
-        "b": "I, II and III / I, II और III",
-        "c": "II, III and IV / II, III और IV",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "I, II and IV",
+        "b": "I, II and III",
+        "c": "II, III and IV",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Expenditure Method formula is GDP = C + G + I + (X-M), while Operating Surplus is part of the Income Method.\n\n📖 हिंदी स्पष्टीकरण:\nव्यय पद्धति का सूत्र GDP = C + G + I + (X-M) है, जबकि परिचालन अधिशेष आय पद्धति का हिस्सा है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements regarding Real GDP: / वास्तविक GDP के संबंध में निम्नलिखित कथनों पर विचार करें:\n1. It is calculated at current market prices. / इसकी गणना वर्तमान बाजार मूल्यों पर की जाती है।\n2. It is adjusted for inflation. / इसे मुद्रास्फीति के लिए समायोजित किया जाता है।\nWhich of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Real GDP:",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nReal GDP is calculated at constant (base year) prices and is inflation-adjusted, whereas Nominal GDP uses current prices.\n\n📖 हिंदी स्पष्टीकरण:\nवास्तविक GDP की गणना स्थिर (आधार वर्ष) कीमतों पर की जाती है और यह मुद्रास्फीति-समायोजित होती है, जबकि नॉमिनल GDP वर्तमान कीमतों का उपयोग करती है।"
     },
     {
       "q_num": 19,
-      "question": "What is 'Green GDP'? / 'हरित GDP' क्या है?",
+      "question": "What is 'Green GDP'?",
       "options": {
-        "a": "GDP of agricultural sector / कृषि क्षेत्र की GDP",
-        "b": "GDP adjusted for environmental damage / पर्यावरणीय क्षति के लिए समायोजित GDP",
-        "c": "GDP from renewable energy only / केवल अक्षय ऊर्जा से GDP",
-        "d": "GDP of forest-rich countries / वन-समृद्ध देशों की GDP"
+        "a": "GDP of agricultural sector",
+        "b": "GDP adjusted for environmental damage",
+        "c": "GDP from renewable energy only",
+        "d": "GDP of forest-rich countries"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGreen GDP is an index of economic growth which factors in the environmental consequences (damage) of that growth.\n\n📖 हिंदी स्पष्टीकरण:\nग्रीन GDP आर्थिक विकास का एक सूचकांक है जो उस विकास के पर्यावरणीय परिणामों (क्षति) को ध्यान में रखता है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Households provide factors of production to firms. / अभिकथन (A): परिवार फर्मों को उत्पादन के कारक प्रदान करते हैं।\nReason (R): Firms pay money to households in the form of wages, rent, and profit. / कारण (R): फर्में परिवारों को मजदूरी, किराए और लाभ के रूप में धन का भुगतान करती हैं।",
+      "question": "Assertion (A): Households provide factors of production to firms.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThis describes the Circular Flow of Income where households own resources and firms pay for their use.\n\n📖 हिंदी स्पष्टीकरण:\nयह आय के चक्रीय प्रवाह का वर्णन करता है जहाँ परिवारों के पास संसाधन होते हैं और फर्में उनके उपयोग के लिए भुगतान करती हैं।"
     },
     {
       "q_num": 21,
-      "question": "'Unplanned Accumulation' of inventory occurs due to: / इन्वेंटरी का 'अनियोजित संचय' किसके कारण होता है?",
+      "question": "'Unplanned Accumulation' of inventory occurs due to:",
       "options": {
-        "a": "Intentional increase for future sales / भविष्य की बिक्री के लिए जानबूझकर वृद्धि",
-        "b": "Sudden surge in demand / मांग में अचानक उछाल",
-        "c": "unexpected fall in sales / बिक्री में अप्रत्याशित गिरावट",
-        "d": "Mismanagement of theft / चोरी का कुप्रबंधन"
+        "a": "Intentional increase for future sales",
+        "b": "Sudden surge in demand",
+        "c": "unexpected fall in sales",
+        "d": "Mismanagement of theft"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUnplanned accumulation is an unexpected increase in the stock of goods due to a fall in sales or demand.\n\n📖 हिंदी स्पष्टीकरण:\nअनियोजित संचय बिक्री या मांग में गिरावट के कारण वस्तुओं के स्टॉक में होने वाली अप्रत्याशित वृद्धि है।"
     },
     {
       "q_num": 22,
-      "question": "Personal Disposable Income is equal to: / व्यक्तिगत प्रयोज्य आय (Personal Disposable Income) किसके बराबर है?",
+      "question": "Personal Disposable Income is equal to:",
       "options": {
-        "a": "Personal Income + Taxes / व्यक्तिगत आय + कर",
-        "b": "Personal Income - Direct Taxes / व्यक्तिगत आय - प्रत्यक्ष कर",
-        "c": "National Income - Subsidies / राष्ट्रीय आय – सब्सिडी",
-        "d": "GDP - Depreciation / GDP - मूल्यह्रास"
+        "a": "Personal Income + Taxes",
+        "b": "Personal Income - Direct Taxes",
+        "c": "National Income - Subsidies",
+        "d": "GDP - Depreciation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPersonal Disposable Income is the income finally left with individuals for expenditure after deducting direct taxes.\n\n📖 हिंदी स्पष्टीकरण:\nव्यक्तिगत प्रयोज्य आय वह आय है जो प्रत्यक्ष करों की कटौती के बाद व्यक्तियों के पास व्यय के लिए अंततः बचती है।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following is a 'Flow' variable? / निम्नलिखित में से कौन सा एक 'प्रवाह' चर है?",
+      "question": "Which of the following is a 'Flow' variable?",
       "options": {
-        "a": "Wealth / धन",
-        "b": "Capital / पूंजी",
-        "c": "Income / आय",
-        "d": "Loan / ऋण"
+        "a": "Wealth",
+        "b": "Capital",
+        "c": "Income",
+        "d": "Loan"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFlow variables are measured over a period of time (e.g., income, expenditure), while stock variables are measured at a point in time.\n\n📖 हिंदी स्पष्टीकरण:\nप्रवाह चर एक समयावधि (जैसे आय, व्यय) में मापे जाते हैं, जबकि स्टॉक चर एक विशिष्ट समय बिंदु पर मापे जाते हैं।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): Real GDP is considered a better indicator of economic growth than Nominal GDP. / अभिकथन (A): वास्तविक GDP को नाममात्र GDP की तुलना में आर्थिक विकास का बेहतर संकेतक माना जाता है।\nReason (R): Real GDP reflects changes in the actual volume of goods and services produced. / कारण (R): वास्तविक GDP उत्पादित वस्तुओं और सेवाओं की वास्तविक मात्रा में परिवर्तन को दर्शाता है।",
+      "question": "Assertion (A): Real GDP is considered a better indicator of economic growth than Nominal GDP.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nReal GDP removes the effect of price changes (inflation), thus showing the true increase in production.\n\n📖 हिंदी स्पष्टीकरण:\nवास्तविक GDP मूल्य परिवर्तनों (मुद्रास्फीति) के प्रभाव को हटा देता है, जिससे उत्पादन में वास्तविक वृद्धि का पता चलता है।"
     },
     {
       "q_num": 25,
-      "question": "What does the GDP Deflator measure? / GDP अपस्फीति क्या मापता है?",
+      "question": "What does the GDP Deflator measure?",
       "options": {
-        "a": "Rate of unemployment / बेरोजगारी की दर",
-        "b": "Average change in prices for all goods and services produced in an economy / किसी अर्थव्यवस्था में उत्पादित सभी वस्तुओं और सेवाओं की कीमतों में औसत परिवर्तन",
-        "c": "Foreign exchange reserves / विदेशी मुद्रा भंडार",
-        "d": "Population growth / जनसंख्या वृद्धि"
+        "a": "Rate of unemployment",
+        "b": "Average change in prices for all goods and services produced in an economy",
+        "c": "Foreign exchange reserves",
+        "d": "Population growth"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGDP Deflator is the ratio of Nominal GDP to Real GDP multiplied by 100, used to measure inflation.\n\n📖 हिंदी स्पष्टीकरण:\nGDP अपस्फीति नाममात्र GDP और वास्तविक GDP का अनुपात है जिसे 100 से गुणा किया जाता है, इसका उपयोग मुद्रास्फीति मापने के लिए किया जाता है।"

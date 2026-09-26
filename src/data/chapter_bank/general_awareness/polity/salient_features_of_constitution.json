@@ -6,7 +6,7 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Originally, on 26th November 1949, how many Articles did the Constitution of India contain?\n मूल रूप से, 26 नवंबर 1949 को, भारत के संविधान में कितने अनुच्छेद शामिल थे?",
+      "question": "Originally, on 26th November 1949, how many Articles did the Constitution of India contain?",
       "options": {
         "a": "470",
         "b": "395",
@@ -18,235 +18,235 @@
     },
     {
       "q_num": 2,
-      "question": "Which country is given as an example of an 'Unwritten Constitution'?\n कौन-सा देश ‘अलिखित संविधान’ के उदाहरण के रूप में दिया जाता है?",
+      "question": "Which country is given as an example of an 'Unwritten Constitution'?",
       "options": {
-        "a": "India / भारत",
-        "b": "USA / संयुक्त राज्य अमेरिका",
-        "c": "UK / यूनाइटेड किंगडम",
-        "d": "Canada / कनाडा"
+        "a": "India",
+        "b": "USA",
+        "c": "UK",
+        "d": "Canada"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Written Constitution (Example: India) compare to Unwritten Constitution, where the latter is not structured and is easy to amend, citing the UK as an example.\n\n📖 हिंदी स्पष्टीकरण:\nलिखित संविधान (उदाहरण: भारत) की तुलना अलिखित संविधान से की जाती है, जहाँ अलिखित संविधान संरचित नहीं होता और संशोधित करना आसान होता है, जिसमें यूके को उदाहरण के रूप में उद्धृत किया जाता है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following is a feature of a 'Unitary' form of government according to the provided features?\n निम्नलिखित में से कौन सी विशेषता दी गई विशेषताओं के अनुसार 'एकात्मक' शासन प्रणाली की विशेषता है?",
+      "question": "Which of the following is a feature of a 'Unitary' form of government according to the provided features?",
       "options": {
-        "a": "Bicameralism / द्विसदनीयता",
-        "b": "Independence of Judiciary / न्यायपालिका की स्वतंत्रता",
-        "c": "Single Citizenship / एकल नागरिकता",
-        "d": "Supremacy of the Constitution / संविधान की सर्वोच्चता"
+        "a": "Bicameralism",
+        "b": "Independence of Judiciary",
+        "c": "Single Citizenship",
+        "d": "Supremacy of the Constitution"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSingle Citizenship, Integrated Judiciary, All India Services, and Emergency provisions are listed as Unitary Features. Bicameralism and Supremacy of the Constitution are Federal Features\n\n📖 हिंदी स्पष्टीकरण:\nएकल नागरिकता, एकीकृत न्यायपालिका, अखिल भारतीय सेवाएँ और आपातकालीन प्रावधान एकात्मक विशेषताओं के रूप में सूचीबद्ध हैं। द्विसदनीयता और संविधान की सर्वोच्चता संघीय विशेषताएँ हैं।"
     },
     {
       "q_num": 4,
-      "question": "The three tiers of government in India are Union/Centre, States, and what other body?\n भारत में सरकार के तीन स्तर संघ/केंद्र, राज्य और कौन सा अन्य निकाय हैं?",
+      "question": "The three tiers of government in India are Union/Centre, States, and what other body?",
       "options": {
-        "a": "Judiciary / न्यायपालिका",
-        "b": "Local Bodies / स्थानीय निकाय",
-        "c": "President / राष्ट्रपति",
-        "d": "Cabinet / मंत्रिमंडल"
+        "a": "Judiciary",
+        "b": "Local Bodies",
+        "c": "President",
+        "d": "Cabinet"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nunder Federalism, a \"Three tier of government exists in India\": Union/Centre, States, and Local Bodies (Panchayats and Municipalities)\n\n📖 हिंदी स्पष्टीकरण:\nसंघवाद के तहत, भारत में \"सरकार का तीन स्तर\" मौजूद है: संघ/केंद्र, राज्य, और स्थानीय निकाय (पंचायतें और नगर पालिकाएँ)।"
     },
     {
       "q_num": 5,
-      "question": "Which Schedule of the Indian Constitution contains the provisions relating to 'Panchayat'?\n भारतीय संविधान की कौन सी अनुसूची 'पंचायत' से संबंधित प्रावधानों को समाहित करती है?",
+      "question": "Which Schedule of the Indian Constitution contains the provisions relating to 'Panchayat'?",
       "options": {
-        "a": "Schedule 9 / अनुसूची 9",
-        "b": "Schedule 10 / अनुसूची 10",
-        "c": "Schedule 11 / अनुसूची 11",
-        "d": "Schedule 12 / अनुसूची 12"
+        "a": "Schedule 9",
+        "b": "Schedule 10",
+        "c": "Schedule 11",
+        "d": "Schedule 12"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSchedule 11 was added by the 73rd Constitutional Amendment Act, 1992, and relates to the provisions concerning Panchayats, dealing with 29 functional matters\n\n📖 हिंदी स्पष्टीकरण:\nअनुसूची 11 को 73वें संवैधानिक संशोधन अधिनियम, 1992 द्वारा जोड़ा गया था, और यह पंचायतों से संबंधित प्रावधानों से संबंधित है, जिसमें 29 कार्यात्मक विषय शामिल हैं।"
     },
     {
       "q_num": 6,
-      "question": "Who commented that the Indian federal system is 'Cooperative Federalism'?\n किसने टिप्पणी की कि भारतीय संघीय प्रणाली 'सहकारी संघवाद' है?",
+      "question": "Who commented that the Indian federal system is 'Cooperative Federalism'?",
       "options": {
-        "a": "K. C. Wheare / के. सी. व्हेयर",
-        "b": "Granville Austin / ग्रेनविल ऑस्टिन",
-        "c": "Morris Jones / मॉरिस जोन्स",
-        "d": "B. R. Ambedkar / बी. आर. अंबेडकर"
+        "a": "K. C. Wheare",
+        "b": "Granville Austin",
+        "c": "Morris Jones",
+        "d": "B. R. Ambedkar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe comments on Indian Federalism are listed as:\n5. Quasi-Federal (K. C. Wheare), Cooperative Federalism (Granville Austin), and Bargaining Federalism (Morris Jones). /\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संघवाद पर टिप्पणियों को सूचीबद्ध किया गया है:\n6. अर्ध-संघीय (के. सी. व्हेयर), सहकारी संघवाद (ग्रेनविल ऑस्टिन), और सौदेबाजी वाला संघवाद (मॉरिस जोन्स)।"
     },
     {
       "q_num": 7,
-      "question": "Which one of the following subjects belongs to the State List?\n निम्नलिखित में से कौन सा विषय राज्य सूची से संबंधित है?",
+      "question": "Which one of the following subjects belongs to the State List?",
       "options": {
-        "a": "Foreign affairs / विदेश मामले",
-        "b": "Education / शिक्षा",
-        "c": "Public order / लोक व्यवस्था",
-        "d": "Citizenship / नागरिकता"
+        "a": "Foreign affairs",
+        "b": "Education",
+        "c": "Public order",
+        "d": "Citizenship"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPublic order, local government, health, pilgrimage, liquor, agriculture, fisheries, betting, and gambling are listed as State List Subjects. Foreign affairs and Citizenship are Union List subjects, and Education is a Concurrent List subject\n\n📖 हिंदी स्पष्टीकरण:\nलोक व्यवस्था, स्थानीय सरकार, स्वास्थ्य, तीर्थयात्रा, शराब, कृषि, मत्स्य पालन, सट्टेबाजी और जुआ राज्य सूची के विषय हैं। विदेश मामले और नागरिकता संघ सूची के विषय हैं, और शिक्षा समवर्ती सूची का विषय है।"
     },
     {
       "q_num": 8,
-      "question": "The 52nd Constitutional Amendment Act of 1985 is related to which Schedule?\n 1985 का 52वाँ संवैधानिक संशोधन अधिनियम किस अनुसूची से संबंधित है?",
+      "question": "The 52nd Constitutional Amendment Act of 1985 is related to which Schedule?",
       "options": {
-        "a": "Schedule 8 / अनुसूची 8",
-        "b": "Schedule 9 / अनुसूची 9",
-        "c": "Schedule 10 / अनुसूची 10",
-        "d": "Schedule 11 / अनुसूची 11"
+        "a": "Schedule 8",
+        "b": "Schedule 9",
+        "c": "Schedule 10",
+        "d": "Schedule 11"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSchedule 10 contains provisions relating to disqualification of MPs and MLAs on the ground of defection, which was added by the 52nd Constitutional Amendment Act of 1985\n\n📖 हिंदी स्पष्टीकरण:\nअनुसूची 10 में दल-बदल के आधार पर सांसदों और विधायकों की अयोग्यता से संबंधित प्रावधान शामिल हैं, जिसे 1985 के 52वें संवैधानिक संशोधन अधिनियम द्वारा जोड़ा गया था।"
     },
     {
       "q_num": 9,
-      "question": "The Indian Constitution is considered the:\n भारतीय संविधान को माना जाता है:",
+      "question": "The Indian Constitution is considered the:",
       "options": {
-        "a": "Shortest written Constitution in the world / विश्व का सबसे छोटा लिखित संविधान",
-        "b": "Lengthiest written Constitution in the world / विश्व का सबसे लंबा लिखित संविधान",
-        "c": "Unwritten Constitution / अलिखित संविधान",
-        "d": "Constitution based on one primary source / एक प्राथमिक स्रोत पर आधारित संविधान"
+        "a": "Shortest written Constitution in the world",
+        "b": "Lengthiest written Constitution in the world",
+        "c": "Unwritten Constitution",
+        "d": "Constitution based on one primary source"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe \"Indian Constitution: Lengthiest written Constitution in the world\". It is a formally compiled and systematically structured document, which contributes to its length. / \"\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान: विश्व का सबसे लंबा लिखित संविधान\" है। यह एक औपचारिक रूप से संकलित और व्यवस्थित रूप से संरचित दस्तावेज़ है, जो इसकी लंबाई में योगदान देता है।"
     },
     {
       "q_num": 10,
-      "question": "What is the constitutional status of India regarding religion?\n धर्म के संबंध में भारत की संवैधानिक स्थिति क्या है?",
+      "question": "What is the constitutional status of India regarding religion?",
       "options": {
-        "a": "State promotes one religion (Theocratic) / राज्य एक धर्म को बढ़ावा देता है (धर्मतांत्रिक)",
-        "b": "Negative Secular State (like USA) / नकारात्मक धर्मनिरपेक्ष राज्य (जैसे USA)",
-        "c": "Positive Secular State / सकारात्मक धर्मनिरपेक्ष राज्य",
-        "d": "Non-secular state / गैर-धर्मनिरपेक्ष राज्य"
+        "a": "State promotes one religion (Theocratic)",
+        "b": "Negative Secular State (like USA)",
+        "c": "Positive Secular State",
+        "d": "Non-secular state"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIndia as a 'Positive Secular State'. This means the state is involved in religious matters to ensure equality and justice for all religions, unlike a negative secular state which maintains strict separation\n\n📖 हिंदी स्पष्टीकरण:\nभारत एक 'सकारात्मक धर्मनिरपेक्ष राज्य' है। इसका अर्थ है कि राज्य सभी धर्मों के लिए समानता और न्याय सुनिश्चित करने के लिए धार्मिक मामलों में शामिल होता है, जबकि नकारात्मक धर्मनिरपेक्ष राज्य सख्त अलगाव बनाए रखता है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the types of Constitution: संविधान के प्रकारों के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. A Written Constitution is formally constituted and is generally not easy to amend. / लिखित संविधान औपचारिक रूप से निर्मित होता है और आमतौर पर इसमें संशोधन करना आसान नहीं होता।\n 2. An unwritten constitution is not structured and is easy to amend, an example of which is India. / अलिखित संविधान संरचित नहीं होता और इसे संशोधित करना आसान होता है, जिसका उदाहरण भारत है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the types of Constitution:\n1. A Written Constitution is formally constituted and is generally not easy to amend.\n2. An unwritten constitution is not structured and is easy to amend, an example of which is India.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement 1 is correct: A Written Constitution is formally constituted and not easy to amend. Statement 2 is incorrect because the Unwritten Constitution is exemplified by the UK, while India has a Written Constitution\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 सही है: एक लिखित संविधान औपचारिक रूप से गठित होता है और इसे संशोधित करना आसान नहीं होता है। कथन 2 गलत है क्योंकि अलिखित संविधान का उदाहरण यूके है, जबकि भारत में एक लिखित संविधान है।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following features are Unitary in nature, giving a strong bias to the Centre?\n निम्नलिखित में से कौन सी विशेषताएँ प्रकृति में एकात्मक हैं, जो केंद्र को एक मजबूत पूर्वाग्रह प्रदान करती हैं?\n 1. Single Constitution / एकल संविधान\n 2. Integrated Judiciary / एकीकृत न्यायपालिका\n 3. Bicameralism / द्विसदनीयता\n 4. Appointment of Governors by Centre / केंद्र द्वारा राज्यपालों की नियुक्ति",
+      "question": "Which of the following features are Unitary in nature, giving a strong bias to the Centre?\n1. Single Constitution\n2. Integrated Judiciary\n3. Bicameralism\n4. Appointment of Governors by Centre",
       "options": {
-        "a": "1, 2, and 3 only / केवल 1, 2 और 3",
-        "b": "2, 3, and 4 only / केवल 2, 3 और 4",
-        "c": "1, 2, and 4 only / केवल 1, 2 और 4",
-        "d": "1, 3, and 4 only / केवल 1, 3 और 4"
+        "a": "1, 2, and 3 only",
+        "b": "2, 3, and 4 only",
+        "c": "1, 2, and 4 only",
+        "d": "1, 3, and 4 only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSingle Constitution, Integrated Judiciary, and Appointment of Governors by Centre are explicitly listed as Unitary Features. Bicameralism (existence of two houses/levels of legislature) is listed as a Federal Feature\n\n📖 हिंदी स्पष्टीकरण:\nएकल संविधान, एकीकृत न्यायपालिका, और केंद्र द्वारा राज्यपालों की नियुक्ति को स्पष्ट रूप से एकात्मक विशेषताओं के रूप में सूचीबद्ध किया गया है। द्विसदनीयता (विधानमंडल के दो सदन/स्तर का अस्तित्व) को एक संघीय विशेषता के रूप में सूचीबद्ध किया गया है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following subjects were transferred from the State List to the Concurrent List by the 42nd Amendment?\n 42वें संशोधन द्वारा निम्नलिखित में से कौन से विषय राज्य सूची से समवर्ती सूची में स्थानांतरित किए गए थे?\n 1. Education / शिक्षा\n 2. Forests / वन\n 3. Weights and Measures / वजन और माप\n 4. Administration of Justice / न्याय प्रशासन",
+      "question": "Which of the following subjects were transferred from the State List to the Concurrent List by the 42nd Amendment?\n1. Education\n2. Forests\n3. Weights and Measures\n4. Administration of Justice",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "1, 2, and 3 only / केवल 1, 2 और 3",
-        "c": "2, 3, and 4 only / केवल 2, 3 और 4",
-        "d": "1, 2, 3, and 4 / 1, 2, 3, और 4"
+        "a": "1 and 2 only",
+        "b": "1, 2, and 3 only",
+        "c": "2, 3, and 4 only",
+        "d": "1, 2, 3, and 4"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe 42nd Amendment Act transferred all these subjects—Education, Forests, Weights and Measures, and Administration of justice —from the State List to the Concurrent List to give the Union more power. / 42\n\n📖 हिंदी स्पष्टीकरण:\nवें संशोधन अधिनियम ने इन सभी विषयों—शिक्षा, वन, वजन और माप, और न्याय प्रशासन —को केंद्र को अधिक शक्ति देने के लिए राज्य सूची से समवर्ती सूची में स्थानांतरित कर दिया।"
     },
     {
       "q_num": 14,
-      "question": "Assertion (A): India is described as a 'Federation with a unitary bias' or 'Federation with a strong Centre'.\n Reason (R): The Constitution provides for the Appointment of Governors by the Centre and Emergency provisions.\n अभिकथन (A): भारत को 'एकात्मक पूर्वाग्रह वाला संघ' या 'मजबूत केंद्र वाला संघ' के रूप में वर्णित किया गया है।\n कारण (R): संविधान केंद्र द्वारा राज्यपालों की नियुक्ति और आपातकालीन प्रावधानों का प्रावधान करता है।",
+      "question": "Assertion (A): India is described as a 'Federation with a unitary bias' or 'Federation with a strong Centre'.\n Reason (R): The Constitution provides for the Appointment of Governors by the Centre and Emergency provisions.",
       "options": {
-        "a": "Both A and R are individually true, and R is the correct explanation of A. / A और R दोनों व्यक्तिगत रूप से सत्य हैं, और R, A का सही स्पष्टीकरण है।",
-        "b": "Both A and R are individually true, but R is not the correct explanation of A. / A और R दोनों व्यक्तिगत रूप से सत्य हैं, लेकिन R, A का सही स्पष्टीकरण नहीं है।",
-        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are individually true, and R is the correct explanation of A.",
+        "b": "Both A and R are individually true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\n5. Assertion (A) is correct because India is called a \"unitary federation\" or a \"federation with a strong centre\" because the Indian Constitution grants more powers to the centre than to the states.\n6. Reason (R) is also correct because:\nGovernors are appointed by the central government, which increases the centre's influence over the states.\nUnder emergency provisions, the central government can usurp many of the powers of the states, making the federal structure more centralized.\n\n📖 हिंदी स्पष्टीकरण:\n7. अभिकथन (A) सही है क्योंकि भारत को \"एकात्मक पूर्वाग्रह वाला संघ\" या \"मजबूत केंद्र वाला संघ\" इसलिए कहा जाता है कि भारतीय संविधान राज्यों की तुलना में केंद्र को अधिक शक्तियाँ प्रदान करता है।\n8. कारण (R) भी सही है क्योंकि:\n9. राज्यपालों की नियुक्ति केंद्र सरकार द्वारा की जाती है, जिससे राज्यों पर केंद्र का प्रभाव बढ़ता है।\n10. आपातकालीन प्रावधानों के तहत केंद्र सरकार राज्यों की कई शक्तियाँ अपने हाथ में ले सकती है, जिससे संघीय ढाँचा और अधिक केंद्रीकृत हो जाता है।"
     },
     {
       "q_num": 15,
-      "question": "Consider the provisions related to Scheduled Areas and Tribal Areas: अनुसूचित क्षेत्रों और जनजातीय क्षेत्रों से संबंधित प्रावधानों पर विचार करें:\n 1. Schedule 5 relates to the administration of scheduled areas and scheduled tribes in the states of Assam, Tripura, Meghalaya, and Mizoram. / अनुसूची 5 असम, त्रिपुरा, मेघालय और मिज़ोरम राज्यों में अनुसूचित क्षेत्रों और अनुसूचित जनजातियों के प्रशासन से संबंधित है।\n 2. Schedule 6 allows the tribal population in its covered states to set up their own District or Regional Autonomous Councils. / अनुसूची 6 अपने अंतर्गत आने वाले राज्यों में जनजातीय आबादी को अपनी ज़िला या क्षेत्रीय स्वायत्त परिषदें स्थापित करने की अनुमति देती है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the provisions related to Scheduled Areas and Tribal Areas:\n1. Schedule 5 relates to the administration of scheduled areas and scheduled tribes in the states of Assam, Tripura, Meghalaya, and Mizoram.\n2. Schedule 6 allows the tribal population in its covered states to set up their own District or Regional Autonomous Councils.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement 1 is incorrect: Schedule 6 (not Schedule 5) relates to the administration of tribal areas in Assam, Tripura, Meghalaya, and Mizoram (ATM-M). Statement 2 is correct, as Schedule 6 grants powers to set up autonomous councils in these four states\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है: अनुसूची 6 (अनुसूची 5 नहीं) असम, त्रिपुरा, मेघालय और मिजोरम (ATM-M) के जनजातीय क्षेत्रों के प्रशासन से संबंधित है। कथन 2 सही है, क्योंकि अनुसूची 6 इन चार राज्यों में स्वायत्त परिषदों की स्थापना की शक्तियाँ प्रदान करती है।"
     },
     {
       "q_num": 16,
-      "question": "Which of the following represents the correct additions to the Parts of the Constitution over time?\n निम्नलिखित में से कौन सा समय के साथ संविधान के भागों में सही जोड़ को दर्शाता है?",
+      "question": "Which of the following represents the correct additions to the Parts of the Constitution over time?",
       "options": {
-        "a": "IVA, IXA, IXB, and XIIIA / IVA, IXA, IXB, और XIIIA",
-        "b": "IVA, IXA, IXB, and XIVA / IVA, IXA, IXB, और XIVA",
-        "c": "IIA, IXA, IXB, and XIVA / IIA, IXA, IXB, और XIVA",
-        "d": "Part 7 was replaced by Part IVA / भाग 7 को भाग IVA द्वारा प्रतिस्थापित किया गया"
+        "a": "IVA, IXA, IXB, and XIIIA",
+        "b": "IVA, IXA, IXB, and XIVA",
+        "c": "IIA, IXA, IXB, and XIVA",
+        "d": "Part 7 was replaced by Part IVA"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Part 7 has been deleted and new Parts: IVA (Fundamental Duties), IXA (Municipalities), IXB (Cooperative Societies), and XIV A (Tribunals) have been added, increasing the total parts to 25. /\n\n📖 हिंदी स्पष्टीकरण:\nभाग 7 को हटा दिया गया है और नए भाग: IVA (मौलिक कर्तव्य), IXA (नगरपालिकाएं), IXB (सहकारी समितियां), और XIV A (न्यायाधिकरण) को जोड़ा गया है, जिससे कुल भाग 25 हो गए हैं।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following subjects can be legislated upon by both the Union and State governments under the Concurrent List?\n निम्नलिखित में से कौन से विषय समवर्ती सूची के अंतर्गत आते हैं जिन पर संघ और राज्य दोनों सरकारें कानून बना सकती हैं?\n 1. Marriage and divorce / विवाह और तलाक\n 2. Trade and labour disputes / व्यापार और श्रम विवाद\n 3. Banking / बैंकिंग\n 4. Electricity / बिजली",
+      "question": "Which of the following subjects can be legislated upon by both the Union and State governments under the Concurrent List?\n1. Marriage and divorce\n2. Trade and labour disputes\n3. Banking\n4. Electricity",
       "options": {
-        "a": "1, 2, and 3 only / केवल 1, 2 और 3",
-        "b": "1, 3, and 4 only / केवल 1, 3 और 4",
-        "c": "3 and 4 only / केवल 3 और 4",
-        "d": "1, 2, and 4 only / केवल 1, 2 और 4"
+        "a": "1, 2, and 3 only",
+        "b": "1, 3, and 4 only",
+        "c": "3 and 4 only",
+        "d": "1, 2, and 4 only"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMarriage and divorce, Trade and labour disputes, and Electricity are listed as Concurrent List Subjects. Banking is exclusively listed as a Union List Subject, where only the Union government can legislate\n\n📖 हिंदी स्पष्टीकरण:\nविवाह और तलाक, व्यापार और श्रम विवाद, और बिजली समवर्ती सूची के विषय हैं। बैंकिंग को विशेष रूप से संघ सूची विषय के रूप में सूचीबद्ध किया गया है, जहाँ केवल केंद्र सरकार कानून बना सकती है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following Constitutional Amendments related to the 8th Schedule:\n 8वीं अनुसूची से संबंधित निम्नलिखित संवैधानिक संशोधनों पर विचार करें:\n 1. 21st CA added Sindhi language. / 21वें संविधान संशोधन ने सिंधी भाषा जोड़ी।\n 2. 71st CA added Konkani, Manipuri, and Nepali languages. / 71वें संविधान संशोधन ने कोंकणी, मणिपुरी और नेपाली भाषाएँ जोड़ीं।\n 3. 92nd CA added Bodo, Dogri, Maithili, and Santhali languages. / 92वें संविधान संशोधन ने बोडो, डोगरी, मैथिली और संथाली भाषाएँ जोड़ीं।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following Constitutional Amendments related to the 8th Schedule:\n1. 21st CA added Sindhi language.\n2. 71st CA added Konkani, Manipuri, and Nepali languages.\n3. 92nd CA added Bodo, Dogri, Maithili, and Santhali languages.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll three statements are correct. 21st CA (1967) added Sindhi; 71st CA (1992) added Konkani, Manipuri, Nepali; and 92nd CA (2003) added Bodo, Dogri, Maithili, Santhali, increasing the total official languages to 22\n\n📖 हिंदी स्पष्टीकरण:\nतीनों कथन सही हैं। 21वां संविधान संशोधन (1967) ने सिंधी को जोड़ा; 71वां संविधान संशोधन (1992) ने कोंकणी, मणिपुरी, नेपाली को जोड़ा; और 92वां संसंशोधन विधान (2003) ने बोडो, डोगरी, मैथिली, संथाली को जोड़ा, जिससे कुल आधिकारिक भाषाएं 22 हो गईं।"
     },
     {
       "q_num": 19,
-      "question": "Which Constitutional Amendment changed the spelling of \"Oriya\" to \"Odia\" language in the 8th Schedule?\n किस संवैधानिक संशोधन ने 8वीं अनुसूची में \"उड़िया\" भाषा की वर्तनी को बदलकर \"ओडिया\" कर दिया?",
+      "question": "Which Constitutional Amendment changed the spelling of \"Oriya\" to \"Odia\" language in the 8th Schedule?",
       "options": {
-        "a": "92nd Constitutional Amendment / 92वाँ संवैधानिक संशोधन",
-        "b": "96th Constitutional Amendment / 96वाँ संवैधानिक संशोधन",
-        "c": "71st Constitutional Amendment / 71वाँ संवैधानिक संशोधन",
-        "d": "1st Constitutional Amendment / पहला संवैधानिक संशोधन"
+        "a": "92nd Constitutional Amendment",
+        "b": "96th Constitutional Amendment",
+        "c": "71st Constitutional Amendment",
+        "d": "1st Constitutional Amendment"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 96th Constitutional Amendment (CA), passed in 2011, changed the spelling of the language \"Oriya\" to \"Odia\" in the 8th Schedule. / 96\n\n📖 हिंदी स्पष्टीकरण:\nवें संवैधानिक संशोधन (CA), जो 2011 में पारित हुआ, ने 8वीं अनुसूची में भाषा \"उड़िया\" की वर्तनी को बदलकर \"ओडिया\" कर दिया।"
     },
     {
       "q_num": 20,
-      "question": "Which feature is common to both Federal and Unitary systems of government as implied by the Federal Features list?\n संघीय विशेषताओं की सूची के अनुसार कौन सी विशेषता संघीय और एकात्मक दोनों शासन प्रणालियों में समान है?",
+      "question": "Which feature is common to both Federal and Unitary systems of government as implied by the Federal Features list?",
       "options": {
-        "a": "Single Citizenship / एकल नागरिकता",
-        "b": "Dual Government / दोहरी सरकार",
-        "c": "Written Constitution / लिखित संविधान",
-        "d": "Integrated Judiciary / एकीकृत न्यायपालिका"
+        "a": "Single Citizenship",
+        "b": "Dual Government",
+        "c": "Written Constitution",
+        "d": "Integrated Judiciary"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Written Constitution is listed under 'Federal Features', which is a characteristic of a Federation (like India). However, a formal, systematically compiled constitution is also common to most modern unitary states, unlike the other three options which are specific to either Unitary (a, d) or Federal (b) systems\n\n📖 हिंदी स्पष्टीकरण:\nएक लिखित संविधान 'संघीय विशेषताओं' के तहत सूचीबद्ध है, जो एक संघ (जैसे भारत) की एक विशेषता है। हालांकि, एक औपचारिक, व्यवस्थित रूप से संकलित संविधान अधिकांश आधुनिक एकात्मक राज्यों के लिए भी आम है, अन्य तीन विकल्पों के विपरीत जो या तो एकात्मक (a, d) या संघीय (b) प्रणालियों के लिए विशिष्ट हैं।"
     },
     {
       "q_num": 21,
-      "question": "Match the Schedules with their key subject matter:\n अनुसूचियों को उनके मुख्य विषय वस्तु से मिलाएं:\n Schedules (अनुसूची)\n A. Schedule 2 / अनुसूची 2\n B. Schedule 4 / अनुसूची 4\n C. Schedule 9 / अनुसूची 9\n D. Schedule 10 / अनुसूची 10\n Subject Matter (विषय वस्तु)\n 1. Land reforms / भूमि सुधार\n 2. Emoluments and Allowances / परिलब्धियां और भत्ते\n 3. Allocation of seats in Rajya Sabha / राज्यसभा में सीटों का आवंटन\n 4. Disqualification on ground of defection / दल-बदल के आधार पर अयोग्यता",
+      "question": "Match the Schedules with their key subject matter:\nSchedules (\nA. Schedule 2\nB. Schedule 4\nC. Schedule 9\nD. Schedule 10\nSubject Matter (\n1. Land reforms\n2. Emoluments and Allowances\n3. Allocation of seats in Rajya Sabha\n4. Disqualification on ground of defection",
       "options": {
         "a": "A-2, B-3, C-4, D-1",
         "b": "A-2, B-3, C-1, D-4",
@@ -258,48 +258,48 @@
     },
     {
       "q_num": 22,
-      "question": "Which of the following is/are listed as a subject(s) in the Concurrent List in the Constitution?\n निम्नलिखित में से कौन सा/से संविधान की समवर्ती सूची में विषय/विषयों के रूप में सूचीबद्ध है/हैं?\n 1. Insolvency and bankruptcy / दिवाला और दिवालियापन\n 2. Insurance / बीमा\n 3. Liquor / शराब",
+      "question": "Which of the following is/are listed as a subject(s) in the Concurrent List in the Constitution?\n1. Insolvency and bankruptcy\n2. Insurance\n3. Liquor",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "1 and 3 only",
+        "d": "1, 2, and 3"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nInsolvency and bankruptcy is listed as a Concurrent List subject, allowing both Union and State to legislate. Insurance is listed under the Union List, and Liquor is listed under the State List\n\n📖 हिंदी स्पष्टीकरण:\nदिवाला और दिवालियापन को समवर्ती सूची विषय के रूप में सूचीबद्ध किया गया है, जो संघ और राज्य दोनों को कानून बनाने की अनुमति देता है। बीमा को संघ सूची के तहत सूचीबद्ध किया गया है, और शराब को राज्य सूची के तहत सूचीबद्ध किया गया है।"
     },
     {
       "q_num": 23,
-      "question": "Regarding law-making power on Residuary Subjects, which of the following is correct?\n अवशिष्ट विषयों पर कानून बनाने की शक्ति के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "question": "Regarding law-making power on Residuary Subjects, which of the following is correct?",
       "options": {
-        "a": "Only the State Legislatures have the power. / केवल राज्य विधानमंडलों के पास शक्ति है।",
-        "b": "Both Parliament and State Legislatures have concurrent power. / संसद और राज्य विधानमंडल दोनों के पास समवर्ती शक्तियाँ हैं।",
-        "c": "Parliament has the exclusive lawmaking power. / संसद के पास अनन्य कानून बनाने की शक्ति है।",
-        "d": "The power rests with the President of India. / शक्ति भारत के राष्ट्रपति के पास निहित है।"
+        "a": "Only the State Legislatures have the power.",
+        "b": "Both Parliament and State Legislatures have concurrent power.",
+        "c": "Parliament has the exclusive lawmaking power.",
+        "d": "The power rests with the President of India."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nResiduary Subjects are those not included in the Union, State, or Concurrent lists. The \"Parliament has lawmaking power\" on these subjects, which is a key feature strengthening the Centre\n\n📖 हिंदी स्पष्टीकरण:\nअवशिष्ट विषय वे हैं जो संघ, राज्य या समवर्ती सूचियों में शामिल नहीं हैं। \"संसद के पास कानून बनाने की शक्ति है\", जो केंद्र को मजबूत करने वाली एक प्रमुख विशेषता है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following constitutional features is not considered a 'Federal Feature' of the Indian Constitution?\n निम्नलिखित में से कौन सी संवैधानिक विशेषता भारतीय संविधान की 'संघीय विशेषता' नहीं मानी जाती है?",
+      "question": "Which of the following constitutional features is not considered a 'Federal Feature' of the Indian Constitution?",
       "options": {
-        "a": "Supremacy of the Constitution / संविधान की सर्वोच्चता",
-        "b": "Independence of Judiciary / न्यायपालिका की स्वतंत्रता",
-        "c": "Single Citizenship / एकल नागरिकता",
-        "d": "Dual Government / दोहरी सरकार"
+        "a": "Supremacy of the Constitution",
+        "b": "Independence of Judiciary",
+        "c": "Single Citizenship",
+        "d": "Dual Government"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSingle Citizenship is classified as a Unitary Feature, giving a strong bias to the Centre. Supremacy of the Constitution, Independence of Judiciary, and Dual Government are all listed as Federal Features\n\n📖 हिंदी स्पष्टीकरण:\nएकल नागरिकता को एक एकात्मक विशेषता के रूप में वर्गीकृत किया गया है, जो केंद्र को एक मजबूत पूर्वाग्रह प्रदान करती है। संविधान की सर्वोच्चता, न्यायपालिका की स्वतंत्रता, और दोहरी सरकार सभी संघीय विशेषताओं के रूप में सूचीबद्ध हैं।"
     },
     {
       "q_num": 25,
-      "question": "The Indian Constitution is described as a blend of 'Rigidity' and 'Flexibility'. Which of the following Constitutional Amendments best demonstrates this blend?\n भारतीय संविधान को 'कठोरता' और 'लचीलापन' के मिश्रण के रूप में वर्णित किया गया है। निम्नलिखित में से कौन सा संवैधानिक संशोधन इस मिश्रण को सबसे अच्छी तरह दर्शाता है?",
+      "question": "The Indian Constitution is described as a blend of 'Rigidity' and 'Flexibility'. Which of the following Constitutional Amendments best demonstrates this blend?",
       "options": {
-        "a": "1st Constitutional Amendment (Land Reforms) / पहला संवैधानिक संशोधन (भूमि सुधार)",
-        "b": "52nd Constitutional Amendment (Anti-defection) / 52वाँ संवैधानिक संशोधन (दल-बदल विरोधी)",
-        "c": "42nd Constitutional Amendment (Mini-Constitution) / 42वाँ संवैधानिक संशोधन (लघु-संविधान)",
-        "d": "73rd and 74th Constitutional Amendments (Local Bodies) / 73वाँ और 74वाँ संवैधानिक संशोधन (स्थानीय निकाय)"
+        "a": "1st Constitutional Amendment (Land Reforms)",
+        "b": "52nd Constitutional Amendment (Anti-defection)",
+        "c": "42nd Constitutional Amendment (Mini-Constitution)",
+        "d": "73rd and 74th Constitutional Amendments (Local Bodies)"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe 73rd and 74th Amendments which added the 11th and 12th Schedules, respectively, required the special majority of Parliament plus ratification by half of the state legislatures (a highly rigid procedure). However, the implementation of these new parts also demonstrates the flexibility in adapting the structure to local governance needs. / 73\n\n📖 हिंदी स्पष्टीकरण:\nवें और 74वें संशोधन जिन्होंने क्रमशः 11वीं और 12वीं अनुसूची को जोड़ा, के लिए संसद के विशेष बहुमत के साथ-साथ आधे राज्य विधानमंडलों के अनुसमर्थन की आवश्यकता थी (एक अत्यधिक कठोर प्रक्रिया) । हालाँकि, इन नए भागों का कार्यान्वयन स्थानीय शासन की जरूरतों के अनुकूल संरचना को ढालने में लचीलापन भी दर्शाता है।"

@@ -6,247 +6,247 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following is considered a macronutrient for the human body? / निम्नलिखित में से किसे मानव शरीर के लिए वृहत पोषक तत्व (मैक्रोन्यूट्रिएंट) माना जाता है?",
+      "question": "Which of the following is considered a macronutrient for the human body?",
       "options": {
-        "a": "Vitamins / विटामिन",
-        "b": "Minerals / खनिज",
-        "c": "Carbohydrates / कार्बोहाइड्रेट",
-        "d": "Iodine / आयोडीन"
+        "a": "Vitamins",
+        "b": "Minerals",
+        "c": "Carbohydrates",
+        "d": "Iodine"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMacronutrients are nutrients required by the body in large amounts to provide energy and maintain structure. They include carbohydrates, proteins, and fats\n\n📖 हिंदी स्पष्टीकरण:\nमैक्रोन्यूट्रिएंट वे पोषक तत्व हैं जिनकी शरीर को ऊर्जा प्रदान करने और संरचना बनाए रखने के लिए बड़ी मात्रा में आवश्यकता होती है। इनमें कार्बोहाइड्रेट, प्रोटीन और वसा शामिल हैं।"
     },
     {
       "q_num": 2,
-      "question": "Deficiency of which vitamin causes Night Blindness? / किस विटामिन की कमी से रतौंधी होती है?",
+      "question": "Deficiency of which vitamin causes Night Blindness?",
       "options": {
-        "a": "Vitamin B / विटामिन B",
-        "b": "Vitamin C / विटामिन C",
-        "c": "Vitamin D / विटामिन D",
-        "d": "Vitamin A / विटामिन A"
+        "a": "Vitamin B",
+        "b": "Vitamin C",
+        "c": "Vitamin D",
+        "d": "Vitamin A"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nVitamin A is essential for maintaining healthy vision, particularly in low light. Its deficiency leads to a condition called Nyctalopia or Night Blindness\n\n📖 हिंदी स्पष्टीकरण:\nविटामिन A स्वस्थ दृष्टि बनाए रखने के लिए आवश्यक है, विशेष रूप से कम रोशनी में। इसकी कमी से निक्टालोपिया या रतौंधी नामक स्थिति हो जाती है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following is the primary site of photosynthesis in a plant cell? / पादप कोशिका में प्रकाश संश्लेषण का प्राथमिक स्थल निम्नलिखित में से कौन सा है?",
+      "question": "Which of the following is the primary site of photosynthesis in a plant cell?",
       "options": {
-        "a": "Mitochondria / सूत्रकणिका",
-        "b": "Chloroplast / हरितलवक",
-        "c": "Ribosomes / राइबोसोम",
-        "d": "Golgi Body / गोल्गी निकाय"
+        "a": "Mitochondria",
+        "b": "Chloroplast",
+        "c": "Ribosomes",
+        "d": "Golgi Body"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nChloroplasts contain the green pigment chlorophyll which traps solar energy. They are specifically located within the mesophyll cells of leaves\n\n📖 हिंदी स्पष्टीकरण:\nहरितलवक में हरा वर्णक क्लोरोफिल होता है जो सौर ऊर्जा को अवशोषित करता है। वे विशेष रूप से पत्तियों की मेसोफिल कोशिकाओं के भीतर स्थित होते हैं।"
     },
     {
       "q_num": 4,
-      "question": "Scurvy is caused by the deficiency of which vitamin? / स्कर्वी रोग किस विटामिन की कमी के कारण होता है?",
+      "question": "Scurvy is caused by the deficiency of which vitamin?",
       "options": {
-        "a": "Vitamin K / विटामिन K",
-        "b": "Vitamin B12 / विटामिन B12",
-        "c": "Vitamin C / विटामिन C",
-        "d": "Vitamin D / विटामिन D"
+        "a": "Vitamin K",
+        "b": "Vitamin B12",
+        "c": "Vitamin C",
+        "d": "Vitamin D"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVitamin C (Ascorbic Acid) is necessary for collagen synthesis and wound healing. Its deficiency leads to bleeding gums and weakness, known as Scurvy\n\n📖 हिंदी स्पष्टीकरण:\nविटामिन C (एस्कॉर्बिक अम्ल ) कोलेजन संश्लेषण और घाव भरने के लिए आवश्यक है। इसकी कमी से मसूड़ों से खून आना और कमजोरी होती है, जिसे स्कर्वी कहा जाता है।"
     },
     {
       "q_num": 5,
-      "question": "Proteins are made up of smaller units known as: / प्रोटीन छोटी इकाइयों से बने होते हैं जिन्हें कहा जाता है:",
+      "question": "Proteins are made up of smaller units known as:",
       "options": {
-        "a": "Fatty Acids / वसीय अम्ल",
-        "b": "Amino Acids / अमीनो अम्ल",
-        "c": "Glucose / ग्लूकोज",
-        "d": "Nucleotides / न्यूक्लियोटाइड"
+        "a": "Fatty Acids",
+        "b": "Amino Acids",
+        "c": "Glucose",
+        "d": "Nucleotides"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAmino acids are the building blocks of proteins, linked together by peptide bonds. There are essential and non-essential amino acids\n\n📖 हिंदी स्पष्टीकरण:\nअमीनो अम्ल प्रोटीन की निर्माण इकाइयाँ हैं, जो पेप्टाइड बंध द्वारा एक साथ जुड़ी होती हैं। अमीनो अम्ल आवश्यक और गैर-आवश्यक दो प्रकार के होते हैं।"
     },
     {
       "q_num": 6,
-      "question": "Which mode of nutrition is seen in fungi that obtain nutrients from dead organic matter? / मृत कार्बनिक पदार्थों से पोषक तत्व प्राप्त करने वाले कवक में पोषण की कौन सी विधि देखी जाती है?",
+      "question": "Which mode of nutrition is seen in fungi that obtain nutrients from dead organic matter?",
       "options": {
-        "a": "Parasitic / परजीवी",
-        "b": "Holozoic / होलोजोइक",
-        "c": "Saprophytic / मृतोपजीवी",
-        "d": "Autotrophic / स्वपोषी"
+        "a": "Parasitic",
+        "b": "Holozoic",
+        "c": "Saprophytic",
+        "d": "Autotrophic"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSaprophytic nutrition involves organisms breaking down dead and decaying matter externally and then absorbing the nutrients\n\n📖 हिंदी स्पष्टीकरण:\nमृतोपजीवी पोषण में जीव मृत और सड़ने वाले पदार्थों को बाहरी रूप से तोड़ते हैं और फिर पोषक तत्वों को अवशोषित करते हैं।"
     },
     {
       "q_num": 7,
-      "question": "Which of the following is a water-soluble vitamin? / निम्नलिखित में से कौन सा जल में घुलनशील विटामिन है?",
+      "question": "Which of the following is a water-soluble vitamin?",
       "options": {
-        "a": "Vitamin A / विटामिन A",
-        "b": "Vitamin D / विटामिन D",
-        "c": "Vitamin B / विटामिन B",
-        "d": "Vitamin E / विटामिन E"
+        "a": "Vitamin A",
+        "b": "Vitamin D",
+        "c": "Vitamin B",
+        "d": "Vitamin E"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVitamins B and C are water-soluble and must be consumed regularly as they are not stored in the body. Vitamins A, D, E, and K are fat-soluble\n\n📖 हिंदी स्पष्टीकरण:\nविटामिन B और C जल में घुलनशील होते हैं और इन्हें नियमित रूप से सेवन किया जाना चाहिए क्योंकि ये शरीर में जमा नहीं होते हैं। विटामिन A, D, E और K वसा में घुलनशील हैं।"
     },
     {
       "q_num": 8,
-      "question": "Sunlight is converted into chemical energy during which process? / किस प्रक्रिया के दौरान सूर्य के प्रकाश को रासायनिक ऊर्जा में परिवर्तित किया जाता है?",
+      "question": "Sunlight is converted into chemical energy during which process?",
       "options": {
-        "a": "Respiration / श्वसन",
-        "b": "Transpiration / वाष्पोत्सर्जन",
-        "c": "Photosynthesis / प्रकाश संश्लेषण",
-        "d": "Digestion / पाचन"
+        "a": "Respiration",
+        "b": "Transpiration",
+        "c": "Photosynthesis",
+        "d": "Digestion"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDuring photosynthesis, plants use sunlight, CO2, and water to produce glucose (chemical energy) and oxygen\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश संश्लेषण के दौरान, पौधे ग्लूकोज (रासायनिक ऊर्जा) और ऑक्सीजन उत्पन्न करने के लिए सूर्य के प्रकाश, CO2 और पानी का उपयोग करते हैं।"
     },
     {
       "q_num": 9,
-      "question": "Which mineral is essential for the formation of strong bones and teeth? / मजबूत हड्डियों और दांतों के निर्माण के लिए कौन सा खनिज आवश्यक है?",
+      "question": "Which mineral is essential for the formation of strong bones and teeth?",
       "options": {
-        "a": "Iron / लोहा",
-        "b": "Calcium / कैल्शियम",
-        "c": "Sodium / सोडियम",
-        "d": "Iodine / आयोडीन"
+        "a": "Iron",
+        "b": "Calcium",
+        "c": "Sodium",
+        "d": "Iodine"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCalcium is the most abundant mineral in the body, primarily stored in bones and teeth to provide structural strength\n\n📖 हिंदी स्पष्टीकरण:\nकैल्शियम शरीर में सबसे प्रचुर मात्रा में पाया जाने वाला खनिज है, जो मुख्य रूप से संरचनात्मक मजबूती प्रदान करने के लिए हड्डियों और दांतों में जमा होता है।"
     },
     {
       "q_num": 10,
-      "question": "What is the chemical name of Vitamin D? / विटामिन D का रासायनिक नाम क्या है?",
+      "question": "What is the chemical name of Vitamin D?",
       "options": {
-        "a": "Retinol / रेटिनॉल",
-        "b": "Calciferol / कैल्सीफेरोल",
-        "c": "Tocopherol / टोकोफेरोल",
-        "d": "Thiamine / थायमिन"
+        "a": "Retinol",
+        "b": "Calciferol",
+        "c": "Tocopherol",
+        "d": "Thiamine"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCalciferol (Vitamin D) helps the body absorb calcium. Its deficiency leads to Rickets in children and Osteomalacia in adults\n\n📖 हिंदी स्पष्टीकरण:\nकैल्सीफेरोल (विटामिन D) शरीर को कैल्शियम अवशोषित करने में मदद करता है। इसकी कमी से बच्चों में रिकेट्स (सूखा रोग) और वयस्कों में ऑस्टियोमलेशिया होता है।"
     },
     {
       "q_num": 11,
-      "question": "Kwashiorkor is a disease caused by the severe deficiency of: / क्वाशियोरकोर एक बीमारी है जो किसकी गंभीर कमी के कारण होती है?",
+      "question": "Kwashiorkor is a disease caused by the severe deficiency of:",
       "options": {
-        "a": "Carbohydrates / कार्बोहाइड्रेट",
-        "b": "Fats / वसा",
-        "c": "Proteins / प्रोटीन",
-        "d": "Vitamin K / विटामिन K"
+        "a": "Carbohydrates",
+        "b": "Fats",
+        "c": "Proteins",
+        "d": "Vitamin K"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKwashiorkor is a form of malnutrition caused by insufficient protein intake, characterized by a swollen abdomen and stunted growth\n\n📖 हिंदी स्पष्टीकरण:\nक्वाशियोरकोर अपर्याप्त प्रोटीन सेवन के कारण होने वाला कुपोषण का एक रूप है, जिसमें पेट में सूजन और अवरुद्ध विकास होता है।"
     },
     {
       "q_num": 12,
-      "question": "The Light Dependent reaction of photosynthesis takes place in which part of the chloroplast? / प्रकाश संश्लेषण की प्रकाश-निर्भर अभिक्रिया हरितलवक के किस भाग में होती है?",
+      "question": "The Light Dependent reaction of photosynthesis takes place in which part of the chloroplast?",
       "options": {
-        "a": "Stroma / पीठिका",
-        "b": "Grana (Thylakoid) / ग्राना (थायलाकोइड)",
-        "c": "Outer membrane / बाहरी झिल्ली",
-        "d": "Cytoplasm / कोशिका द्रव्य"
+        "a": "Stroma",
+        "b": "Grana (Thylakoid)",
+        "c": "Outer membrane",
+        "d": "Cytoplasm"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe light reaction occurs in the thylakoid membranes (grana) where chlorophyll absorbs light to produce ATP and NADPH\n\n📖 हिंदी स्पष्टीकरण:\nप्रकाश अभिक्रिया थायलाकोइड झिल्ली (ग्राना) में होती है जहाँ क्लोरोफिल ATP और NADPH उत्पन्न करने के लिए प्रकाश को अवशोषित करता है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following is classified as a Polysaccharide? / निम्नलिखित में से किसे पॉलीसेकेराइड के रूप में वर्गीकृत किया गया है?",
+      "question": "Which of the following is classified as a Polysaccharide?",
       "options": {
-        "a": "Glucose / ग्लूकोज",
-        "b": "Fructose / फ्रुक्टोज",
-        "c": "Starch / स्टार्च",
-        "d": "Sucrose / सुक्रोज"
+        "a": "Glucose",
+        "b": "Fructose",
+        "c": "Starch",
+        "d": "Sucrose"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPolysaccharides are complex carbohydrates made of long chains of monosaccharide units. Starch and Glycogen are common examples\n\n📖 हिंदी स्पष्टीकरण:\nपॉलीसेकेराइड जटिल कार्बोहाइड्रेट होते हैं जो मोनोसेकेराइड इकाइयों की लंबी श्रृंखलाओं से बने होते हैं। स्टार्च और ग्लाइकोजन सामान्य उदाहरण हैं।"
     },
     {
       "q_num": 14,
-      "question": "In which type of nutrition does an organism consume solid or liquid food and break it down internally? / किस प्रकार के पोषण में जीव ठोस या तरल भोजन का सेवन करता है और उसे आंतरिक रूप से तोड़ता है?",
+      "question": "In which type of nutrition does an organism consume solid or liquid food and break it down internally?",
       "options": {
-        "a": "Saprophytic / मृतोपजीवी",
-        "b": "Holozoic / होलोजोइक",
-        "c": "Parasitic / परजीवी",
-        "d": "Autotrophic / स्वपोषी"
+        "a": "Saprophytic",
+        "b": "Holozoic",
+        "c": "Parasitic",
+        "d": "Autotrophic"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHolozoic nutrition involves ingestion, digestion, absorption, and assimilation of organic matter, as seen in humans and Amoeba\n\n📖 हिंदी स्पष्टीकरण:\nहोलोजोइक पोषण में कार्बनिक पदार्थों का अंतर्ग्रहण, पाचन, अवशोषण और आत्मसात शामिल है, जैसा कि मनुष्यों और अमीबा में देखा जाता है।"
     },
     {
       "q_num": 15,
-      "question": "The 'Calvin Cycle' or dark reaction of photosynthesis occurs in the: / प्रकाश संश्लेषण का 'केल्विन चक्र' या अंधकार अभिक्रिया कहाँ होता है?",
+      "question": "The 'Calvin Cycle' or dark reaction of photosynthesis occurs in the:",
       "options": {
-        "a": "Grana / ग्राना",
-        "b": "Stroma / पीठिका",
-        "c": "Ribosomes / राइबोसोम",
-        "d": "Mitochondria / सूत्रकणिका"
+        "a": "Grana",
+        "b": "Stroma",
+        "c": "Ribosomes",
+        "d": "Mitochondria"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Calvin Cycle occurs in the stroma (fluid part) of the chloroplast, where CO2 is fixed into glucose using energy from the light reaction\n\n📖 हिंदी स्पष्टीकरण:\nकेल्विन चक्र क्लोरोप्लास्ट के पीठिका (द्रव भाग) में होता है, जहाँ प्रकाश अभिक्रिया की ऊर्जा का उपयोग करके CO2 को ग्लूकोज में स्थिर किया जाता है।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding vitamins:\n विटामिन के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. Vitamin K is essential for blood clotting. / विटामिन K रक्त के थक्के जमने के लिए आवश्यक है।\n 2. Vitamin E is known as Tocopherol. / विटामिन E को टोकोफेरोल के रूप में जाना जाता है।\n Which of the statements given above is/are correct? \n उपरोक्त कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding vitamins:\n1. Vitamin K is essential for blood clotting.\n2. Vitamin E is known as Tocopherol.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVitamin K helps in the synthesis of proteins required for blood coagulation. Vitamin E acts as an antioxidant and is chemically called Tocopherol\n\n📖 हिंदी स्पष्टीकरण:\nविटामिन K रक्त के थक्के जमने के लिए आवश्यक प्रोटीन के संश्लेषण में मदद करता है। विटामिन E प्रतिऑक्सीकारक (एंटीऑक्सीडेंट के रूप में कार्य करता है और इसे रासायनिक रूप से टोकोफेरोल कहा जाता है।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): Plants are called autotrophs.\n अभिकथन (A): पौधों को स्वपोषी कहा जाता है।\n Reason (R): They can prepare their own food using inorganic substances like CO2 and water in the presence of sunlight.\n कारण (R): वे सूर्य के प्रकाश की उपस्थिति में CO2 और पानी जैसे अकार्बनिक पदार्थों का उपयोग करके अपना भोजन स्वयं तैयार कर सकते हैं।",
+      "question": "Assertion (A): Plants are called autotrophs.\n Reason (R): They can prepare their own food using inorganic substances like CO2 and water in the presence of sunlight.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAutotrophs are organisms that produce complex organic compounds from simple substances. Photosynthesis is the primary method for this in plants\n\n📖 हिंदी स्पष्टीकरण:\nस्वपोषी वे जीव हैं जो सरल पदार्थों से जटिल कार्बनिक यौगिकों का उत्पादन करते हैं। पौधों में इसके लिए प्रकाश संश्लेषण प्राथमिक विधि है।"
     },
     {
       "q_num": 18,
-      "question": "Which of the following is NOT a fat-soluble vitamin? / निम्नलिखित में से कौन सा वसा में घुलनशील विटामिन नहीं है?",
+      "question": "Which of the following is NOT a fat-soluble vitamin?",
       "options": {
-        "a": "Vitamin A / विटामिन A",
-        "b": "Vitamin D / विटामिन D",
-        "c": "Vitamin B1 / विटामिन B1",
-        "d": "Vitamin K / विटामिन K"
+        "a": "Vitamin A",
+        "b": "Vitamin D",
+        "c": "Vitamin B1",
+        "d": "Vitamin K"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVitamins A, D, E, and K are fat-soluble (stored in liver/fatty tissues). B-complex vitamins (like B1/Thiamine) and Vitamin C are water-soluble\n\n📖 हिंदी स्पष्टीकरण:\nविटामिन A, D, E और K वसा में घुलनशील होते हैं। B-कॉम्प्लेक्स विटामिन (जैसे B1/थायमिन) और विटामिन C जल में घुलनशील होते हैं।"
     },
     {
       "q_num": 19,
-      "question": "Marasmus is a deficiency disease characterized by: / मरास्मस एक कमी से होने वाली बीमारी है जिसकी विशेषता है:",
+      "question": "Marasmus is a deficiency disease characterized by:",
       "options": {
-        "a": "Swelling of the body / शरीर की सूजन",
-        "b": "Severe wasting of muscle and fat / मांसपेशियों और वसा का गंभीर क्षय",
-        "c": "Bleeding gums / मसूड़ों से खून आना",
-        "d": "Brittle bones / हड्डियों का कमजोर होना"
+        "a": "Swelling of the body",
+        "b": "Severe wasting of muscle and fat",
+        "c": "Bleeding gums",
+        "d": "Brittle bones"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nUnlike Kwashiorkor, Marasmus is caused by a deficiency of both proteins and total calories, leading to extreme thinness\n\n📖 हिंदी स्पष्टीकरण:\nक्वाशियोरकोर के विपरीत, मरास्मस प्रोटीन और कुल कैलोरी दोनों की कमी के कारण होता है, जिससे शरीर अत्यधिक दुबला हो जाता है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Night blindness is caused by deficiency of Vitamin A.\n अभिकथन (A): विटामिन A की कमी से रतौंधी होती है।\n Reason (R): Retinol is required for the synthesis of rhodopsin in the eyes.\n कारण (R): आँखों में रोडोप्सिन के संश्लेषण के लिए रेटिनॉल की आवश्यकता होती है।",
+      "question": "Assertion (A): Night blindness is caused by deficiency of Vitamin A.\n Reason (R): Retinol is required for the synthesis of rhodopsin in the eyes.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRetinol (Vitamin A) is a precursor for rhodopsin, the pigment in the retina that helps us see in low-light conditions\n\n📖 हिंदी स्पष्टीकरण:\nरेटिनॉल (विटामिन A) रोडोप्सिन के लिए एक अग्रदूत है, जो रेटिना में वर्णक है जो हमें कम रोशनी की स्थिति में देखने में मदद करता है।"
     },
     {
       "q_num": 21,
-      "question": "Match the following vitamins with their chemical names: / निम्नलिखित विटामिनों को उनके रासायनिक नामों के साथ सुमेलित करें:\n 1. Vitamin B1 - i. Calciferol / विटामिन B1 - i. कैल्सिफेरॉल\n 2. Vitamin C - ii. Thiamine / विटामिन C - ii. थायमिन\n 3. Vitamin D - iii. Ascorbic Acid / विटामिन D - iii. एस्कॉर्बिक अम्ल",
+      "question": "Match the following vitamins with their chemical names:",
       "options": {
         "a": "1-ii, 2-iii, 3-i",
         "b": "1-i, 2-ii, 3-iii",
@@ -258,48 +258,48 @@
     },
     {
       "q_num": 22,
-      "question": "Which of the following statements about photosynthesis is false? / प्रकाश संश्लेषण के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements about photosynthesis is false?",
       "options": {
-        "a": "CO2 is taken in through stomata. / रंध्रों के माध्यम से CO2 ली जाती है।",
-        "b": "Oxygen is released as a byproduct. / उपोत्पाद के रूप में ऑक्सीजन मुक्त होती है।",
-        "c": "Chlorophyll is found in the mitochondria. / क्लोरोफिल सूत्रकणिकामें पाया जाता है।",
-        "d": "Solar energy is converted to chemical energy. / सौर ऊर्जा को रासायनिक ऊर्जा में परिवर्तित किया जाता है।"
+        "a": "CO2 is taken in through stomata.",
+        "b": "Oxygen is released as a byproduct.",
+        "c": "Chlorophyll is found in the mitochondria.",
+        "d": "Solar energy is converted to chemical energy."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nChlorophyll is found in the chloroplasts, specifically within the thylakoid membranes, not in the mitochondria\n\n📖 हिंदी स्पष्टीकरण:\nक्लोरोफिल हरितलवक में पाया जाता है, विशेष रूप से थायलाकोइड झिल्ली के भीतर, न कि सूत्रकणिका में।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): Saturated fats are generally solid at room temperature.\n अभिकथन (A): संतृप्त वसा आमतौर पर कमरे के तापमान पर ठोस होती है।\n Reason (R): They contain one or more double bonds in their fatty acid chains.\n कारण (R): उनकी वसीय अम्ल श्रृंखलाओं में एक या अधिक दोहरे बंधन होते हैं।",
+      "question": "Assertion (A): Saturated fats are generally solid at room temperature.\n Reason (R): They contain one or more double bonds in their fatty acid chains.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is NOT the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSaturated fats have no double bonds, making them solid. Unsaturated fats contain double bonds and are usually liquid (oils)\n\n📖 हिंदी स्पष्टीकरण:\nसंतृप्त वसा में कोई दोहरा बंधन नहीं होता है, जिससे वे ठोस हो जाते हैं। असंतृप्त वसा में दोहरे बंधन होते हैं और वे आमतौर पर तरल (तेल) होते हैं।"
     },
     {
       "q_num": 24,
-      "question": "Monosaccharides are the simplest form of carbohydrates. Which of the following is an example? / मोनोसेकेराइड कार्बोहाइड्रेट का सबसे सरल रूप हैं। निम्नलिखित में से कौन सा एक उदाहरण है?",
+      "question": "Monosaccharides are the simplest form of carbohydrates. Which of the following is an example?",
       "options": {
-        "a": "Sucrose / सुक्रोज",
-        "b": "Lactose / लैक्टोज",
-        "c": "Glucose / ग्लूकोज",
-        "d": "Maltose / माल्टोज"
+        "a": "Sucrose",
+        "b": "Lactose",
+        "c": "Glucose",
+        "d": "Maltose"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGlucose, Fructose, and Galactose are monosaccharides. Sucrose and Lactose are disaccharides consisting of two sugar units\n\n📖 हिंदी स्पष्टीकरण:\nग्लूकोज, फ्रुक्टोज और गैलेक्टोज मोनोसेकेराइड हैं। सुक्रोज और लैक्टोज डिसाकेराइड हैं जिनमें दो शर्करा इकाइयां होती हैं।"
     },
     {
       "q_num": 25,
-      "question": "Which mineral deficiency is most commonly associated with Goitre? / घेंघा रोग (गॉइटर) आमतौर पर किस खनिज की कमी से जुड़ा होता है?",
+      "question": "Which mineral deficiency is most commonly associated with Goitre?",
       "options": {
-        "a": "Calcium / कैल्शियम",
-        "b": "Iron / लोहा",
-        "c": "Iodine / आयोडीन",
-        "d": "Potassium / पोटैशियम"
+        "a": "Calcium",
+        "b": "Iron",
+        "c": "Iodine",
+        "d": "Potassium"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIodine is required for the synthesis of thyroid hormones. Its deficiency causes the thyroid gland to enlarge, resulting in Goitre\n\n📖 हिंदी स्पष्टीकरण:\nथायराइड हार्मोन के संश्लेषण के लिए आयोडीन की आवश्यकता होती है। इसकी कमी से थायराइड ग्रंथि बढ़ जाती है, जिसके परिणामस्वरूप घेंघा रोग होता है।"

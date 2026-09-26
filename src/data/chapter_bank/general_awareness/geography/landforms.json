@@ -6,163 +6,163 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which landform is created by a glacier and is described as sea water entering into a glacial valley?\n कौन सी भू-आकृति हिमनद द्वारा निर्मित होती है तथा इसे हिमनद घाटी में प्रवेश करने वाले समुद्री जल के रूप में वर्णित किया जाता है?",
+      "question": "Which landform is created by a glacier and is described as sea water entering into a glacial valley?",
       "options": {
-        "a": "Moraine / हिमोढ़",
-        "b": "Atoll / प्रवालद्वीप",
-        "c": "Fjord / हिमनदीय खाड़ी",
-        "d": "Arête / तीक्ष्ण कटक"
+        "a": "Moraine",
+        "b": "Atoll",
+        "c": "Fjord",
+        "d": "Arête"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA glacial bay (fjord) is a U-shaped glacial valley drained by seawater, typically found on high-latitude, mountainous coasts.\nAn atoll is a ring-shaped coral reef or a chain of islands that surrounds a lagoon (a type of shallow lake). A fjord is a long, narrow arm of the sea that lies between high, steep cliffs and is formed when seawater fills deep valleys carved by glaciers.\n\n📖 हिंदी स्पष्टीकरण:\nएक हिमनदीय खाड़ी (फजॉर्ड) एक U-आकार की हिमनद घाटी होती है जो समुद्र के पानी से होती है, जो आमतौर पर उच्च-अक्षांश, पहाड़ी तटों पर पाई जाती है।\nएटोल एक वलय के आकार की प्रवाल भित्ति या द्वीपों की एक श्रृंखला होती है जो एक लैगून (एक प्रकार की छिछली झील) को घेरे रहती है। फियोर्ड समुद्र की एक लंबी, संकरी भुजा होती है जो ऊँची, खड़ी चट्टानों के बीच स्थित होती है और ग्लेशियरों द्वारा बनाई गई गहरी घाटियों में समुद्र के पानी से भर जाने के कारण बनती है।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is a depositional landform created by sea waves?\n निम्नलिखित में से कौन-सी समुद्री लहरों द्वारा निर्मित निक्षेपणात्मक भू-आकृति है?",
+      "question": "Which of the following is a depositional landform created by sea waves?",
       "options": {
-        "a": "Cliff / भृगु",
-        "b": "Cave / गुफा",
-        "c": "Arch / आर्च",
-        "d": "Spit / स्पिट"
+        "a": "Cliff",
+        "b": "Cave",
+        "c": "Arch",
+        "d": "Spit"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA spit or sandspit is a depositional strip or beach landform located along coasts or lakes. A rift is a steep, high, and nearly vertical rock wall of a hill or coast, often formed by the forces of weathering and erosion. A sea cave, also known as a coastal cave, is a type of cave formed primarily by the impact of ocean waves.\n\n📖 हिंदी स्पष्टीकरण:\nस्पिट या सैंडस्पिट तटों या झीलों के किनारे स्थित एकनिक्षेपण पट्टी या समुद्र तट की भू-आकृति है। भृगु किसी पहाड़ी या तट की एक खड़ी, ऊँची और लगभग लंबवत चट्टानी दीवार होती है, जो अक्सर अपक्षय और क्षरण की शक्तियों द्वारा निर्मित होती है। समुद्री गुफा को तटीय गुफा के रूप में भी जाना जाता है, यह एक प्रकार की गुफा है जो मुख्य रूप से समुद्र की लहरों के प्रभाव से बनती है।"
     },
     {
       "q_num": 3,
-      "question": "Karst topography is mainly found in regions where rocks are made of:\n कार्स्ट स्थलाकृति मुख्यतः उन क्षेत्रों में पाई जाती है जहां चट्टानें निम्नलिखित से बनी होती हैं:",
+      "question": "Karst topography is mainly found in regions where rocks are made of:",
       "options": {
-        "a": "Granite and Sandstone / ग्रेनाइट और बलुआ पत्थर",
-        "b": "Basalt and Marble / बेसाल्ट और संगमरमर",
-        "c": "Limestone and Dolomite / चूना पत्थर और डोलोमाइट",
-        "d": "Shale and Gneiss / शेल और नीस"
+        "a": "Granite and Sandstone",
+        "b": "Basalt and Marble",
+        "c": "Limestone and Dolomite",
+        "d": "Shale and Gneiss"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKarst Topography is mainly created by the solvent action of groundwater on rocks rich in calcium carbonate, such as Limestone and Dolomite.\n\n📖 हिंदी स्पष्टीकरण:\nकार्स्ट स्थलाकृति मुख्य रूप से कैल्शियम कार्बोनेट से समृद्ध चट्टानों, जैसे चूना पत्थर और डोलोमाइट, पर भूजल की विलायक क्रिया द्वारा निर्मित होती है।"
     },
     {
       "q_num": 4,
-      "question": "The erosional landform created by wind among the following is:\n निम्नलिखित में से वायु द्वारा निर्मित अपरदनात्मक भू-आकृति है:",
+      "question": "The erosional landform created by wind among the following is:",
       "options": {
-        "a": "Sand Dunes / बालुका स्तूप",
-        "b": "Barchan / बरखान",
-        "c": "Mushroom rock / मशरूम रॉक",
-        "d": "Seif / सेफ"
+        "a": "Sand Dunes",
+        "b": "Barchan",
+        "c": "Mushroom rock",
+        "d": "Seif"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMushroom rock, Pediplain, Playas, and Pedestal rocks are common erosional landforms created by wind (Aeolian processes). Sand Dunes, Barchan, and Seif are all depositional features. A barkhan is a crescent-shaped sand dune formed by winds blowing primarily from a single direction.\n\n📖 हिंदी स्पष्टीकरण:\nमशरूम चट्टान, पेडीप्लेन, प्लायास और पेडेस्टल चट्टानें हवा (वायुजनित प्रक्रियाओं) द्वारा निर्मित सामान्य अपरदनात्मक भू-आकृतियाँ हैं। बालुका स्तूप (रेत के टीले), बरखान और सेफ (लंबे, संकरे और अनुदैर्ध्य रेत के टीले) सभी निक्षेपण विशेषताएँ हैं। बरखान एक अर्धचंद्राकार रेत का टीला है जो मुख्य रूप से एक ही दिशा से चलने वाली हवा से बनता है।"
     },
     {
       "q_num": 5,
-      "question": "A naturally occurring opening or vent in the Earth's crust where lava or magma erupts is a:\n पृथ्वी की भूपर्पटी में एक प्राकृतिक छिद्र या वेंट जहाँ लावा या मैग्मा फूटता है, वह है:",
+      "question": "A naturally occurring opening or vent in the Earth's crust where lava or magma erupts is a:",
       "options": {
-        "a": "Geyser / उष्‍णोत्‍स",
-        "b": "Glacier / हिमनदी",
-        "c": "Plateau / पठार",
-        "d": "Volcano / ज्‍वालामुखी"
+        "a": "Geyser",
+        "b": "Glacier",
+        "c": "Plateau",
+        "d": "Volcano"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA Volcano is the opening or vent through which molten rock (lava), ash, and gases escape from the Earth's interior to the surface.\n\n📖 हिंदी स्पष्टीकरण:\nज्वालामुखी वह छिद्र या वेंट है जिसके माध्यम से पिघली हुई चट्टान (लावा), राख और गैसें पृथ्वी के आंतरिक भाग से सतह पर निकलती हैं।"
     },
     {
       "q_num": 6,
-      "question": "Which pair of landforms is formed primarily by Depositional processes in their respective landform categories?\n भू-आकृतियों का कौन सा युग्म मुख्यतः अपनी-अपनी भू-आकृतियों में निक्षेपण प्रक्रियाओं द्वारा निर्मित होता है?",
+      "question": "Which pair of landforms is formed primarily by Depositional processes in their respective landform categories?",
       "options": {
-        "a": "Delta (River) and Cirque (Glacier) / डेल्टा (नदी) और सर्क (हिमनद)",
-        "b": "Ox-bow Lake (River) and Moraine (Glacier) / ऑक्स-बो झील (नदी) और हिमोढ़ (हिमनद)",
-        "c": "Waterfall (River) and Arête (Glacier) / झरना (नदी) और एरेट (ग्लेशियर)",
-        "d": "Canyon (River) and Horn (Glacier) / घाटी (नदी) और हॉर्न (हिमनद)"
+        "a": "Delta (River) and Cirque (Glacier)",
+        "b": "Ox-bow Lake (River) and Moraine (Glacier)",
+        "c": "Waterfall (River) and Arête (Glacier)",
+        "d": "Canyon (River) and Horn (Glacier)"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nOx-bow lakes are formed by the depositional/erosional cut-off of a river meander. Moraines are depositional heaps of glacial debris. Cirques, Arêtes, Waterfalls, Canyon, and Horns are erosional.\n\n📖 हिंदी स्पष्टीकरण:\nऑक्स-बो झीलें नदी के विसर्प के निक्षेपण/अपरदनात्मक कटाव से बनती हैं। हिमोढ़ हिमनद मलबे के निक्षेपणात्मक ढेर होते हैं। सर्क, एरेट, झरने, घाटी और हॉर्न अपरदनात्मक होते हैं।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following pairs: निम्नलिखित युग्मों पर विचार करें:\n 1. V-shaped valley (V-आकार की घाटी) - Erosional feature of a River's Youthful stage (नदी की युवावस्था की अपरदनात्मक विशेषता)\n 2. Stalagmite (स्टैलेग्माइट) - Depositional feature created by Groundwater (भूजल द्वारा निर्मित निक्षेपणात्मक विशेषता)\n 3. Drumlin (ड्रमलिन) - Depositional feature created by Sea Waves (समुद्री तरंगों द्वारा निर्मित निक्षेपणात्मक विशेषता)\n Which of the pairs given above is/are correctly matched?\n उपर्युक्त युग्मों में से कौन-सा/से सही सुमेलित है/हैं?",
+      "question": "Consider the following pairs:\n1. V-shaped valley (V-\n2. Stalagmite (\n3. Drumlin (\n Which of the pairs given above is/are correctly matched?",
       "options": {
-        "a": "1 and 3 only / केवल 1 और 3",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 3 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPairs 1 and 2 are correct. Pair 3 is incorrect because Drumlins are depositional features created by Glaciers, not Sea Waves.\n\n📖 हिंदी स्पष्टीकरण:\nयुग्म 1 और 2 सही हैं । युग्म 3 गलत है क्योंकि ड्रमलिन हिमनदों द्वारा बनाई गई निक्षेपण विशेषताएं हैं, न कि समुद्री लहरों द्वारा ।"
     },
     {
       "q_num": 8,
-      "question": "Which landform is correctly associated with the process of formation and its agent?\n कौन सी भू-आकृति निर्माण प्रक्रिया और उसके कारक से सही रूप से संबद्ध है?",
+      "question": "Which landform is correctly associated with the process of formation and its agent?",
       "options": {
-        "a": "Canyon - Depositional - River / घाटी - निक्षेपण - नदी",
-        "b": "Alluvial Fan - Erosional - River / जलोढ़ पंख - अपरदन - नदी",
-        "c": "Barchan - Erosional - Wind / बरखान - अपरदन - पवन",
-        "d": "Plunge Pool - Erosional - River / अवसादन ताल - अपरदन - नदी"
+        "a": "Canyon - Depositional - River",
+        "b": "Alluvial Fan - Erosional - River",
+        "c": "Barchan - Erosional - Wind",
+        "d": "Plunge Pool - Erosional - River"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPlunge pools are correctly matched as an erosional feature created by rivers (found at the base of waterfalls). The Canyon is erosion, not depositional. Alluvial Fan is depositional, not erosional. Barchan is depositional, not erosional.\n\n📖 हिंदी स्पष्टीकरण:\nअवसादन ताल नदियों द्वारा निर्मित अपरदनकारी विशेषता (झरनों के तल पर पाए जाते हैं) के रूप में सही रूप से सुमेलित हैं। घाटी अपरदनकारी है, निक्षेपणकारी नहीं। जलोढ़ पंख निक्षेपणकारी है, अपरदनकारी नहीं। बरखान निक्षेपणकारी है, अपरदनकारी नहीं।"
     },
     {
       "q_num": 9,
-      "question": "Consider the following statements regarding River Landforms:\n नदी भू-आकृतियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n 1. The river Jhelum is the one of the rivers to meander in its youthful stage. / झेलम नदी अपनी युवावस्था में विसर्पित होने वाली नदियों में से एक है।\n 2. Meanders and Alluvial fans are depositional features of the river. / विसर्प और जलोढ़ पंख नदी की निक्षेपण विशेषताएँ हैं।\n 3. Ox-bow lakes separate from the main river channel. / गोखुर झीलें मुख्य नदी चैनल से अलग हो जाती हैं।\n Which of the statements given above is/are correct?\n उपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding River Landforms:\n1. The river Jhelum is the one of the rivers to meander in its youthful stage.\n2. Meanders and Alluvial fans are depositional features of the river.\n3. Ox-bow lakes separate from the main river channel.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "II and III only / केवल II और III",
-        "b": "I only / I केवल",
-        "c": "I, II and III / I, II और III",
-        "d": "I and II only / केवल I और II"
+        "a": "II and III only",
+        "b": "I only",
+        "c": "I, II and III",
+        "d": "I and II only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAll statements are correct. The Jhelum meanders near its source, unusually for a river in its youthful (mountain) stage. Meanders and Alluvial fans are indeed river depositional features. Ox-bow lakes are formed when the river cuts off a meander loop.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। झेलम अपने उद्गम के पास विसर्पित होती है, जो अपनी युवावस्था (पर्वतीय) अवस्था में एक नदी के लिए असामान्य है। विसर्प और जलोढ़ पंख वास्तव में नदी की निक्षेपण विशेषताएँ हैं। गोखुर झीलें तब बनती हैं जब नदी एक विसर्प लूप को काट देती है।"
     },
     {
       "q_num": 10,
-      "question": "Identify the correct sequence of features from the river's youthful stage to the old stage based on the dominance of the process:\n प्रक्रिया की प्रधानता के आधार पर नदी की युवावस्था से वृद्धावस्था तक की विशेषताओं का सही क्रम पहचानिए:",
+      "question": "Identify the correct sequence of features from the river's youthful stage to the old stage based on the dominance of the process:",
       "options": {
-        "a": "Delta - Meanders - Waterfall / डेल्टा - विसर्प - जलप्रपात",
-        "b": "Ox-bow Lake - Flood plain - Canyon / ऑक्स-बो झील - बाढ़ का मैदान - घाटी",
-        "c": "Canyon - Meanders - Delta / घाटी - विसर्प - डेल्टा",
-        "d": "Rapids - Ox-bow Lake - V-shaped valley / रैपिड्स - ऑक्सबो झील - V-आकार की घाटी"
+        "a": "Delta - Meanders - Waterfall",
+        "b": "Ox-bow Lake - Flood plain - Canyon",
+        "c": "Canyon - Meanders - Delta",
+        "d": "Rapids - Ox-bow Lake - V-shaped valley"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe sequence of river stages is:\n5. Youthful Stage (Erosion dominant): Canyon (or V-shaped valley, Rapids).\n6. Mature Stage (Erosion/Deposition balance): Meanders, Floodplain formation.\n7. Old Stage (Deposition dominant): Delta, Ox-bow Lakes.\n8. The correct progression is Canyon → Meanders → Delta.\n\n📖 हिंदी स्पष्टीकरण:\nनदी के चरणों का क्रम है:\n9. युवावस्था (अपरदन प्रधान): घाटी (या V-आकार की घाटी, रैपिड्स)।\n10. परिपक्व अवस्था (अपरदन/निक्षेपण संतुलन): विसर्प, बाढ़ के मैदान का निर्माण।\n11. पुरानी अवस्था (निक्षेपण प्रधान): डेल्टा, ऑक्सबो झीलें।\n12. सही क्रम है: घाटी → विसर्प → डेल्टा।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following features is not an erosional landform created by groundwater (Karst Topography)?\n निम्नलिखित में से कौन सी विशेषता भूजल (कार्स्ट स्थलाकृति) द्वारा निर्मित अपरदनात्मक भू-आकृति नहीं है?",
+      "question": "Which of the following features is not an erosional landform created by groundwater (Karst Topography)?",
       "options": {
-        "a": "Dolines / डोलाइन",
-        "b": "Lapies / लैपीज़",
-        "c": "Sink holes / सिंकहोल",
-        "d": "Stalactite / हिमलंब"
+        "a": "Dolines",
+        "b": "Lapies",
+        "c": "Sink holes",
+        "d": "Stalactite"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStalactites (hanging from the cave roof) and Stalagmites (rising from the cave floor) are depositional features formed by the precipitation of calcium carbonate from dripping water. Dolines, Lapies, and Sink holes are erosional forms created by dissolution.\n\n📖 हिंदी स्पष्टीकरण:\nस्टैलेक्टाइट्स/हिमलंब (गुफा की छत से लटकते हुए) और स्टैलेग्माइट्स (गुफा के तल से उठते हुए) टपकते पानी से कैल्शियम कार्बोनेट के अवक्षेपण से निर्मित निक्षेपणीय आकृतियाँ हैं। डोलाइन्स, लैपीज़ और सिंक होल, विघटन द्वारा निर्मित अपरदनात्मक आकृतियाँ हैं।"
     },
     {
       "q_num": 12,
-      "question": "Which of the geographical features mentioned below involves a narrow strip of water connecting two larger bodies of water?\n नीचे उल्लिखित भौगोलिक विशेषताओं में से किसमें दो बड़े जल निकायों को जोड़ने वाली पानी की एक संकरी पट्टी शामिल है?",
+      "question": "Which of the geographical features mentioned below involves a narrow strip of water connecting two larger bodies of water?",
       "options": {
-        "a": "Peninsula / प्रायद्वीप",
-        "b": "Isthmus / स्थलसंधि",
-        "c": "Strait / जलडमरूमध्य",
-        "d": "Archipelago / द्वीपसमूह"
+        "a": "Peninsula",
+        "b": "Isthmus",
+        "c": "Strait",
+        "d": "Archipelago"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Strait is a naturally formed narrow strip of water that connects two larger bodies of water. An Isthmus is a narrow strip of land connecting two large landmasses.\n\n📖 हिंदी स्पष्टीकरण:\nजलडमरूमध्य प्राकृतिक रूप से निर्मित पानी की एक संकरी पट्टी है जो दो बड़े जल निकायों को जोड़ती है। स्थलसंधि दो बड़े भूभागों को जोड़ने वाली भूमि की एक संकरी पट्टी है।"
     },
     {
       "q_num": 13,
-      "question": "Which landform is associated with the deposition of sand removed from a depression by wind (deflation)?\n कौन सी भू-आकृति वायु द्वारा अवनमन से हटाई गई रेत के निक्षेपण से संबंधित है?",
+      "question": "Which landform is associated with the deposition of sand removed from a depression by wind (deflation)?",
       "options": {
-        "a": "Oasis / मरूद्यान",
-        "b": "Aquifer / जलभृत",
-        "c": "Dunes / टिब्बा या टीला",
-        "d": "Pediplain / पदस्थली"
+        "a": "Oasis",
+        "b": "Aquifer",
+        "c": "Dunes",
+        "d": "Pediplain"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDeflation is the lifting and removal of loose material by wind, often creating a depression. The sand removed is then deposited elsewhere to form various types of Dunes. A Pediplain is an erosional plain created by wind.\n\n📖 हिंदी स्पष्टीकरण:\nअपस्फीति, हवा द्वारा ढीली सामग्री को ऊपर उठाने और हटाने की प्रक्रिया है, जिससे अक्सर एक गड्ढा बन जाता है। हटाई गई रेत फिर अन्यत्र जमा होकर विभिन्न प्रकार के टीलों का निर्माण करती है। पदस्थली/पेडीप्लेन, हवा द्वारा निर्मित एक अपरदनात्मक मैदान है।"
     },
     {
       "q_num": 14,
-      "question": "Match the following Landforms with their forming agent:\n निम्नलिखित भू-आकृतियों को उनके निर्माण कारकों के साथ सुमेलित करें:\n Landforms: भू-आकृतियाँ:\n 1. Horn / सींग\n 2. Delta / डेल्टा\n 3. Cliff / टीला\n Forming Agents: गठन एजेंट:\n 4. Sea Waves / समुद्री लहरें\n 5. Glacier / हिमनद\n 6. River / नदी\n Codes:",
+      "question": "Match the following Landforms with their forming agent:\nLandforms:\n1. Horn\n2. Delta\n3. Cliff\nForming Agents:\n4. Sea Waves\n5. Glacier\n6. River\n Codes:",
       "options": {
         "a": "I-1, II– 3, III – 2",
         "b": "I-2, II – 3, III – 1",
@@ -174,132 +174,132 @@
     },
     {
       "q_num": 15,
-      "question": "Wearing a way of landscape by different agents like water, wind and ice is called________.\n जल, वायु और बर्फ जैसे विभिन्न कारकों द्वारा भूदृश्य के क्षरण को _________ कहा जाता है।",
+      "question": "Wearing a way of landscape by different agents like water, wind and ice is called________.",
       "options": {
-        "a": "Weathering /अपक्षय",
-        "b": "Erosion / क्षरण",
-        "c": "Metamorphosis / कायापलट",
-        "d": "Sedimentation / अवसादन"
+        "a": "Weathering",
+        "b": "Erosion",
+        "c": "Metamorphosis",
+        "d": "Sedimentation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nErosion is the process where agents like water, wind, and ice wear away the land and transport the eroded material. The question specifically mentions the \"wearing away\" (destruction) by these transporting agents, which defines erosion. Weathering is just the breaking down of rock in situ (in place), without movement.\n\n📖 हिंदी स्पष्टीकरण:\nअपरदन (Erosion) वह प्रक्रिया है जिसमें जल, वायु और बर्फ जैसे कारक भूमि को घिसते हैं और अपरदित सामग्री को एक स्थान से दूसरे स्थान पर स्थानांतरित करते हैं। प्रश्न में विशेष रूप से इन कारकों द्वारा भूदृश्य के क्षरण (Wearing away) का उल्लेख है, जो अपरदन को परिभाषित करता है। अपक्षय (Weathering) केवल चट्टानों का अपने स्थान पर टूटना है, जिसमें किसी भी प्रकार का संचलन शामिल नहीं होता है।"
     },
     {
       "q_num": 16,
-      "question": "The depositional pattern of CaCO3 and other materials that extend upwards from the floor of a limestone cavern is known as:\n चूना पत्थर की गुफा के तल से ऊपर की ओर फैले CaCO3 और अन्य पदार्थों के निक्षेपण पैटर्न को इस रूप में जाना जाता है:",
+      "question": "The depositional pattern of CaCO3 and other materials that extend upwards from the floor of a limestone cavern is known as:",
       "options": {
-        "a": "Stalactite / स्टैलेक्टाइट",
-        "b": "Dripstone / ड्रिपस्टोन",
-        "c": "Stalagmite / स्टैलेग्माइट",
-        "d": "Hatectite / हेटेक्टाइट"
+        "a": "Stalactite",
+        "b": "Dripstone",
+        "c": "Stalagmite",
+        "d": "Hatectite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStalagmite is a depositional landform created inside limestone caves. It is formed when water drops containing dissolved calcium carbonate (CaCO₃) fall onto the cave floor. As the water evaporates, the residual CaCO₃ is deposited and gradually builds up a cone-shaped pillar extending upwards from the floor. A useful mnemonic: Stalagmites rise from the main floor.\n\n📖 हिंदी स्पष्टीकरण:\nस्टैलेग्माइट चूना पत्थर की गुफाओं के अंदर बनने वाली एक निक्षेपण भू-आकृति है। यह तब बनती है जब घुले हुए कैल्शियम कार्बोनेट (CaCO₃) युक्त पानी की बूँदें गुफा के तल पर गिरती हैं। जैसे ही पानी वाष्पित होता है, अवशिष्ट CaCO₃ जमा हो जाता है और धीरे-धीरे तल से ऊपर की ओर एक शंकु के आकार का स्तंभ बनाता है। याद रखने योग्य तथ्य: यह नीचे से ऊपर की ओर बढ़ता है, जबकि स्टैलेक्टाइट छत से नीचे लटकता है।"
     },
     {
       "q_num": 17,
-      "question": "A long, winding ridge of stratified sand and gravel is known as:\n स्तरीकृत रेत और बजरी की एक लंबी, घुमावदार रिज को क्या कहते हैं?",
+      "question": "A long, winding ridge of stratified sand and gravel is known as:",
       "options": {
-        "a": "Moraine / मोरैने",
-        "b": "esker / एस्कर",
-        "c": "Aquifer / एक्विफायर",
-        "d": "Erratic / अनियमित"
+        "a": "Moraine",
+        "b": "esker",
+        "c": "Aquifer",
+        "d": "Erratic"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAn esker is a long, winding ridge composed of stratified sand and gravel. It is an outwash deposit formed by sediments laid down by meltwater streams flowing beneath or within a stagnant or retreating glacial ice sheet. Moraines are typically unstratified deposits found along the edges of the glacier.\n\n📖 हिंदी स्पष्टीकरण:\nएस्कर स्तरीकृत रेत और बजरी से बनी एक लंबी, घुमावदार रिज होती है। यह एक अपक्षालित निक्षेप (outwash deposit) है जो पिघले हुए जल की धाराओं द्वारा जमा किए गए तलछट से बनता है जो स्थिर या पीछे हटती हिमनद बर्फ की चादर के नीचे या भीतर बहती हैं। मोरैने आमतौर पर हिमनद के किनारों पर पाए जाने वाले गैर-स्तरीकृत निक्षेप होते हैं।"
     },
     {
       "q_num": 18,
-      "question": "The steep rocky coast rising almost vertically above sea water is called ______.\n समुद्र के पानी से लगभग लंबवत ऊपर उठे हुए खड़ी चट्टानी तट को ______ कहा जाता है।",
+      "question": "The steep rocky coast rising almost vertically above sea water is called ______.",
       "options": {
-        "a": "sea caves / समुद्री गुफा",
-        "b": "sea arches / समुद्री आर्क",
-        "c": "sea cliff समुद्री भृगु",
-        "d": "ox-bow lake / ओक्स-वो झील"
+        "a": "sea caves",
+        "b": "sea arches",
+        "c": "sea cliff",
+        "d": "ox-bow lake"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA sea cliff is a steep, high rock face formed when the sea waves erode the base of the rock mass, creating a notch. Over time, the rock above the notch collapses due to gravity, forming a coast that rises almost vertically above the sea water.\n\n📖 हिंदी स्पष्टीकरण:\nसमुद्री भृगु (Sea Cliff) एक खड़ी, ऊँची चट्टानी दीवार होती है जो तब बनती है जब समुद्री लहरें चट्टान समूह के आधार को अपरदित करती हैं, जिससे एक खांचा बनता है। समय के साथ, खांचे के ऊपर की चट्टान गुरुत्वाकर्षण के कारण ढह जाती है, और इस प्रकार समुद्र के पानी से लगभग लंबवत ऊपर उठा हुआ एक तट बनता है।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following mass movements occurs when saturated soil and debris move down a slope during heavy rainfall?\n निम्नलिखित में से कौन सा सामूहिक संचलन तब होता है जब भारी वर्षा के दौरान संतृप्त मिट्टी और मलबा ढलान से नीचे बहता है?",
+      "question": "Which of the following mass movements occurs when saturated soil and debris move down a slope during heavy rainfall?",
       "options": {
-        "a": "Rockfall / चट्टान खिसकना",
-        "b": "Avalanche / हिमस्खलन",
-        "c": "Mud flow / पंक प्रवाह",
-        "d": "Soil creep / मृदा सर्पण"
+        "a": "Rockfall",
+        "b": "Avalanche",
+        "c": "Mud flow",
+        "d": "Soil creep"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA mud flow is a rapid form of mass movement where a large volume of saturated soil and debris becomes extremely fluid, often due to heavy rainfall or rapid snowmelt, and flows quickly down a slope. Rockfall is sudden free-fall, while Soil creep is extremely slow.\n\n📖 हिंदी स्पष्टीकरण:\nपंक प्रवाह (Mud flow) सामूहिक संचलन का एक तीव्र रूप है जहाँ संतृप्त मिट्टी और मलबा भारी वर्षा या तेजी से बर्फ पिघलने के कारण अत्यधिक तरल हो जाता है और ढलान से तेजी से नीचे बहता है। यह जल की अधिक मात्रा के कारण होता है। चट्टान खिसकना अचानक मुक्त रूप से गिरना है, जबकि मृदा सर्पण अत्यंत धीमी प्रक्रिया है।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following is an erosional landform created primarily by river action?\n निम्नलिखित में से कौन सा मुख्य रूप से नदी क्रिया द्वारा निर्मित अपरदनात्मक भू-आकृति है?",
+      "question": "Which of the following is an erosional landform created primarily by river action?",
       "options": {
-        "a": "Moraine / मोरैने",
-        "b": "Delta / डेल्टा",
-        "c": "Gorge / महाखड्ड",
-        "d": "Levee / तटबंध"
+        "a": "Moraine",
+        "b": "Delta",
+        "c": "Gorge",
+        "d": "Levee"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA Gorge is a steep-sided, narrow valley formed by the river's intensive downcutting (vertical erosion), typically in its upper course or youthful stage. Delta and Levee are depositional landforms, while Moraine is a glacial deposit.\n\n📖 हिंदी स्पष्टीकरण:\nगॉर्ज (महाखड्ड) एक संकरी, खड़ी-किनारों वाली घाटी है जो नदी की तीव्र अधोगामी कटाव (ऊर्ध्वाधर अपरदन) क्रिया द्वारा निर्मित होती है, जो आमतौर पर नदी के ऊपरी या युवा चरण में होती है। डेल्टा और तटबंध (Levee) निक्षेपात्मक भू-आकृतियाँ हैं, जबकि मोरैने हिमनद निक्षेप है।"
     },
     {
       "q_num": 21,
-      "question": "Fine-grained bed of ephemeral lake in a desert is also known as:\n रेगिस्तान में अल्पकालिक झील के बारीक कणों वाले तल को भी कहा जाता है",
+      "question": "Fine-grained bed of ephemeral lake in a desert is also known as:",
       "options": {
-        "a": "Playa / प्लाया",
-        "b": "Oasis / ओएसिस",
-        "c": "Drumlin / ड्रमलिन",
-        "d": "Natural levee / प्राकृतिक तटबंध"
+        "a": "Playa",
+        "b": "Oasis",
+        "c": "Drumlin",
+        "d": "Natural levee"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nA Playa is the term for the flat, dry, and typically fine-grained bed of a temporary (ephemeral) lake found in desert basins. When it holds water, it is called a playa lake; when dry, it is a salt-covered flat. Oasis is a fertile area, and Drumlins are glacial features.\n\n📖 हिंदी स्पष्टीकरण:\nप्लाया रेगिस्तानी घाटियों में पाई जाने वाली अस्थायी (अल्पकालिक) झील के समतल, सूखे और आमतौर पर महीन दाने वाले तल के लिए प्रयुक्त शब्द है। जब इसमें पानी होता है, तो इसे प्लाया झील कहा जाता है; जब यह सूख जाता है, तो यह नमक से ढका हुआ समतल क्षेत्र होता है। ओएसिस (Oasis) एक उपजाऊ क्षेत्र है, और ड्रमलिन (Drumlins) हिमनदीय भू-आकृति हैं।"
     },
     {
       "q_num": 22,
-      "question": "Which one of the following landforms is/are formed by wind erosion?\n निम्नलिखित में से कौन सी भू-आकृति हवा के अपरदन से बनती है?",
+      "question": "Which one of the following landforms is/are formed by wind erosion?",
       "options": {
-        "a": "Cirque/ सर्क",
-        "b": "Stack / स्टैक",
-        "c": "Zeugen / ज़्यूजेन",
-        "d": "Stack and Zeugen both / स्टैक और ज़्यूजेन दोनों"
+        "a": "Cirque",
+        "b": "Stack",
+        "c": "Zeugen",
+        "d": "Stack and Zeugen both"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nZeugen is a mushroom-shaped ridge formed in desert areas due to differential wind erosion (deflation and abrasion). Wind preferentially erodes the softer rock layers, leaving the harder layers standing. Cirque is a glacial feature, and Stack is a coastal erosional feature formed by sea waves.\n\n📖 हिंदी स्पष्टीकरण:\nज़्यूजेन एक छत्रक (mushroom) के आकार की भू-आकृति है जो मरुस्थलीय क्षेत्रों में विभेदक हवा के अपरदन (अपस्फीति और अपघर्षण) के कारण बनती है। हवा नरम चट्टान की परतों को प्राथमिकता से अपरदित करती है, जिससे कठोर परतें खड़ी रह जाती हैं। सर्क (Cirque) एक हिमनदीय विशेषता है, और स्टैक (Stack) समुद्री लहरों द्वारा निर्मित एक तटीय अपरदनात्मक विशेषता है।"
     },
     {
       "q_num": 23,
-      "question": "A flat or gently sloping surface left behind after river erosion, often with some resistant remnants, is known as:\n नदी के कटाव के बाद बची हुई समतल या धीमी ढलान वाली सतह, जिसमें अक्सर कुछ प्रतिरोधी अवशेष होते हैं, को निम्न रूप में जाना जाता है:",
+      "question": "A flat or gently sloping surface left behind after river erosion, often with some resistant remnants, is known as:",
       "options": {
-        "a": "Plateau / पठार",
-        "b": "Peneplain / पेनिप्लेन",
-        "c": "Floodplain बाढ़ का मैदान",
-        "d": "Monadnock /"
+        "a": "Plateau",
+        "b": "Peneplain",
+        "c": "Floodplain",
+        "d": "Monadnock"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA Peneplain (meaning \"almost a plain\") is the final, low-relief, gently sloping surface formed by long-term river erosion and denudation. It represents the ultimate stage of the erosion cycle. The occasional isolated hills that remain due to their resistance to erosion are called Monadnocks.\n\n📖 हिंदी स्पष्टीकरण:\nपेनीप्लेन (संप्राय मैदान) (जिसका अर्थ है \"लगभग मैदान\") वह अंतिम, निम्न-उच्चावच वाली, धीमी ढलान वाली सतह है जो दीर्घकालिक नदी अपरदन और अनाच्छादन के बाद बनती है। यह अपरदन चक्र की अंतिम अवस्था का प्रतिनिधित्व करती है। जो प्रतिरोधी चट्टानों के कारण इक्का-दुक्का पहाड़ियाँ बच जाती हैं, उन्हें मोनाडनॉक कहा जाता है।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following factors best explains the formation of ox-bow lakes along river courses?\n निम्नलिखित में से कौन सा कारक नदी के किनारे गोखुर झीलों के निर्माण को सबसे अच्छी तरह से समझाता है?",
+      "question": "Which of the following factors best explains the formation of ox-bow lakes along river courses?",
       "options": {
-        "a": "Lateral erosion on the outer banks and deposition on the inner banks / बाहरी तटों पर पार्श्व अपरदन और आंतरिक तटों पर निक्षेपण।",
-        "b": "Glacial retreat leaving depressions / हिमनदों के पीछे हटने से अवसाद उत्पन्न होते हैं।",
-        "c": "Sudden uplift of riverbeds by tectonic activity / विवर्तनिक गतिविधि द्वारा नदी तल का अचानक उत्थान।",
-        "d": "Tectonic uplift disrupting the flow / विवर्तनिक उत्थान प्रवाह को बाधित करता है।"
+        "a": "Lateral erosion on the outer banks and deposition on the inner banks",
+        "b": "Glacial retreat leaving depressions",
+        "c": "Sudden uplift of riverbeds by tectonic activity",
+        "d": "Tectonic uplift disrupting the flow"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOx-bow lakes are formed in the river's meandering (winding) stage, typically in the middle or lower course. The continuous process involves lateral erosion (cutting) on the concave (outer) bank and simultaneous deposition on the convex (inner) bank. Over time, the meander loop becomes extremely curved until the river cuts across the narrow neck of land, abandoning the old loop, which then becomes the ox-bow lake.\n\n📖 हिंदी स्पष्टीकरण:\nगोखुर झीलें नदी के विसर्पण (meandering) चरण में, आमतौर पर मध्य या निचले मार्ग में बनती हैं। इस सतत प्रक्रिया में अवतल (बाहरी) किनारे पर पार्श्व अपरदन (काटना) और उत्तल (आंतरिक) किनारे पर निक्षेपण एक साथ होता है। समय के साथ, विसर्प पाश (meander loop) अत्यधिक घुमावदार हो जाता है जब तक कि नदी भूमि की संकरी गर्दन को काट नहीं देती, पुरानी पाश को छोड़ देती है, जो बाद में गोखुर झील बन जाती है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following statements regarding river meanders is/are correct?\n 1. It is a U-shaped bend in a river.\n 2. An extremely tight meander is called a gooseneck; it is likely to become a cutoff, or oxbow lake, after a flood.\n 3. Tectonic uplift can cause a river to continue downcutting along its meandering course, producing incised or entrenched meanders.\n Select the correct answer using the code given below:\n नदी के विसर्पों के संबंध में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 4. यह नदी में एक U-आकार का मोड़ होता है।\n 5. एक अत्यंत सघन विसर्प को गूज़नेक कहा जाता है; बाढ़ के बाद इसके कटऑफ या ऑक्सबो झील बनने की संभावना होती है।\n 6. विवर्तनिक उत्थान के कारण नदी अपने विसर्पी मार्ग के साथ नीचे की ओर कटाव जारी रख सकती है, जिससे कटे हुए या जड़े हुए विसर्प बनते है\n नीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "question": "Which of the following statements regarding river meanders is/are correct?\n 1. It is a U-shaped bend in a river.\n 2. An extremely tight meander is called a gooseneck; it is likely to become a cutoff, or oxbow lake, after a flood.\n 3. Tectonic uplift can cause a river to continue downcutting along its meandering course, producing incised or entrenched meanders.\n Select the correct answer using the code given below:",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / केवल 1 और 2",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA meander is a U-shaped or S-shaped bend formed by river erosion and deposition. When it becomes very tight, it forms a gooseneck, which may later turn into an oxbow lake after a flood. In regions of tectonic uplift, rivers cut deeper into their old valleys, forming incised or entrenched meanders.\n\n📖 हिंदी स्पष्टीकरण:\nविसर्प नदी के कटाव और निक्षेपण से बना एक यू-आकार/ S-आकार का मोड़ होता है। जब यह बहुत संकरा हो जाता है, तो यह एक गूज़नेक (हंस गर्दन) बनाता है, जो बाद में बाढ़ के बाद एक ऑक्सबो झील में बदल सकता है। विवर्तनिक उत्थान वाले क्षेत्रों में, नदियाँ अपनी पुरानी घाटियों में और गहराई तक कट जाती हैं, जिससे कटे हुए या जड़े हुए विसर्प बनते हैं।"

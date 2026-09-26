@@ -65,6 +65,9 @@ export function cleanSolutionText(sol: string = ''): string {
   // 5. Purge diagram artifacts scraped from visual Testbook infographics
   s = purgeScrapedDiagramArtifacts(s);
 
+  // 5b. Purge scraper watermark spam (simplicrack, MRQ SERIES, SSC CGL 2026)
+  s = purgeScrapedWatermarks(s);
+
   // 6. Trim whitespace on each line
   const lines = s.split('\n').map(l => l.trim());
 
@@ -175,6 +178,19 @@ export function purgeScrapedDiagramArtifacts(text: string = ''): string {
   res = res.replace(diagramLinesPattern, '');
 
   return res;
+}
+
+/**
+ * Strips promotional scraper watermarks (simplicrack, MRQ SERIES, etc.)
+ */
+export function purgeScrapedWatermarks(text: string = ''): string {
+  if (!text) return '';
+  return text
+    .replace(/(?:^|\n)\s*simplicrack(?:\s+(?:Math|Maths))*\s*(?:\n\s*MRQ\s*SERIES\s*)?(?:\n\s*SSC\s*CGL\s*2026\s*)?/gi, '\n')
+    .replace(/(?:^|\n)\s*MRQ\s*SERIES\s*(?:\n\s*SSC\s*CGL\s*2026\s*)?/gi, '\n')
+    .replace(/\b(?:simplicrack(?:\s+(?:Math|Maths))*|MRQ\s*SERIES)\b/gi, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 export interface SolutionSection {

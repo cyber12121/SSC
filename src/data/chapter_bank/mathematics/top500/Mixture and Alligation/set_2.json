@@ -23,7 +23,7 @@
         "d": "84.5L"
       },
       "answer": "c",
-      "solution": "Step 1   The two parts total 4,096. \n2401 : 1695   ⇒  original oil = 2401/4096 of the \nwhole \n Step 2   Recognise the power. \n2401/4096 = (7/8)⁴ = (1 − 13/V)⁴   ⇒  1 − 13/V = 7/8 \nThree containers  (filled amount, milk : water)\n40 x 87.5% = 35 (3:2)\nmilk 21 \nwater 14 \n30 x 80% = 24 (5:1)\nmilk 20 \nwater 4\n20 x 90% = 18 (7:2)\nmilk 14 \nwater 4 \ntotal 77 L\nmilk 55 \nwater 22 \nmilk : water = 55 : 22 = 5 : 2 \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 3   Solve. \n13/V = 1/8   ∴  V = 104 L",
+      "solution": "Step 1   The two parts total 4,096. \n2401 : 1695   ⇒  original oil = 2401/4096 of the \nwhole \n Step 2   Recognise the power. \n2401/4096 = (7/8)⁴ = (1 − 13/V)⁴   ⇒  1 − 13/V = 7/8 \nThree containers  (filled amount, milk : water)\n40 x 87.5% = 35 (3:2)\nmilk 21 \nwater 14 \n30 x 80% = 24 (5:1)\nmilk 20 \nwater 4\n20 x 90% = 18 (7:2)\nmilk 14 \nwater 4 \ntotal 77 L\nmilk 55 \nwater 22 \nmilk : water = 55 : 22 = 5 : 2 \n\ns\nSSC CGL 2026\n Step 3   Solve. \n13/V = 1/8   ∴  V = 104 L",
       "q_num": 2
     },
     {
@@ -95,7 +95,7 @@
         "d": "2%"
       },
       "answer": "b",
-      "solution": "Step 1   Put the fraction into the SI formula. \nP × r × 25 / 100 = (5/8) P \nSIMPLE INTEREST \nLEVEL - 1 \none year:  P = 5 parts,  I = 1 part\nP (5) \nI (1) \nR = 1/5 x 100 = 20% \n\n \n \nsimplicrack\nsimplicrack Math\nsimplicrack Maths\nMRQ SERIES\n SSC CGL 2026\n Step 2   Cancel P and solve for r. \n25r / 100 = 5/8   ⇒  r = 20/8 = 2.5%",
+      "solution": "Step 1   Put the fraction into the SI formula. \nP × r × 25 / 100 = (5/8) P \nSIMPLE INTEREST \nLEVEL - 1 \none year:  P = 5 parts,  I = 1 part\nP (5) \nI (1) \nR = 1/5 x 100 = 20% \n\ns\nSSC CGL 2026\n Step 2   Cancel P and solve for r. \n25r / 100 = 5/8   ⇒  r = 20/8 = 2.5%",
       "q_num": 8
     }
   ]

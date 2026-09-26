@@ -263,7 +263,7 @@
         "correctOption": "C",
         "userTime": "00:25",
         "avgTime": "00:17",
-        "question": "Choose the correct analogy.\nACE : FHJ :: OQ\nS : ?",
+        "question": "Choose the correct analogy.\nACE : FHJ :: OQS : ?",
         "options": {
           "a": "PRT",
           "b": "RTU",
@@ -1131,7 +1131,7 @@
         "correctOption": "C",
         "userTime": "00:55",
         "avgTime": "00:39",
-        "question": "Select the option which is related to the fifth term in the same way as the second term is related to the first term and the fourth term is related to the third term.\n\nAFTE\nR : ZJWKT : : MODEL : LSGKN : : LIGHT : ?",
+        "question": "Select the option which is related to the fifth term in the same way as the second term is related to the first term and the fourth term is related to the third term.\n\nAFTER : ZJWKT : : MODEL : LSGKN : : LIGHT : ?",
         "options": {
           "a": "KNJMV",
           "b": "KMIMV",
@@ -2617,7 +2617,7 @@
           "d": "2 and 4"
         },
         "answer": "c",
-        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMA\nS:\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50 / 531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMA\nS:\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMA\nS:\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
+        "solution": "Option a:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 2 + 6 - (260 x 3) ÷ 4 = 50\n\nUsing BODMAS :\n\n292 + 6 - 780 ÷ 4 = 50\n298 - 195 = 50\n\n103 is not equal to 50\n\nSo, Option (a) is not the correct answer.\n\nOption b:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 2 - (260 x 4) ÷ 3 = 50\n\nUsing BODMAS :\n\n876 + 2 - 1040 ÷ 3 = 50\n\n878 - 346.67 = 50 / 531.33 is not equal to 50\n\nSo, Option (b) is not the correct answer.\n\nOption c:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 3 + 2 - (260 x 6) ÷ 4 = 50\n\nUsing BODMAS :\n\n438 + 2 - 1560 ÷ 4 = 50\n440 - 390 = 50\n\n50 is equal to 50\n\nSo, Option (c) is the correct answer.\n\nOption d:\n\n146 x 6 + 2 - (260 x 3) ÷ 4 = 50\n\nAfter interchanging the numbers:\n\n146 x 6 + 4 - (260 x 3) ÷ 2 = 50\n\nUsing BODMAS :\n\n876 + 4 - 780 ÷ 2 = 50\n880 - 390 = 50\n\n490 is not equal to 50\n\nSo, Option (d) is not the correct answer.",
         "topic": "Mathematical Operations",
         "subtopic": "Interchange of Signs & Numbers",
         "conceptTested": "Balancing mathematical equations by substituting numbers and applying BODMAS rule",

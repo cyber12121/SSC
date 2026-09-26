@@ -6,249 +6,249 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "A body mentioned in the Constitution of India under any Article is known as a:\n भारत के संविधान में किसी भी अनुच्छेद के तहत बताए गए निकाय को क्या कहा जाता है?",
+      "question": "A body mentioned in the Constitution of India under any Article is known as a:",
       "options": {
-        "a": "Statutory Body / सांविधिक निकाय",
-        "b": "Non-Statutory Body / गैर-सांविधिक निकाय",
-        "c": "Executive Body / कार्यकारी निकाय",
-        "d": "Constitutional Body / संवैधानिक निकाय"
+        "a": "Statutory Body",
+        "b": "Non-Statutory Body",
+        "c": "Executive Body",
+        "d": "Constitutional Body"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nA Constitutional Body is one whose existence and functions are explicitly mentioned in the Constitution under a specific Article, giving it a high degree of independence and authority. These bodies draw their power directly from the Constitution itself\n\n📖 हिंदी स्पष्टीकरण:\nएक संवैधानिक निकाय वह होता है जिसका अस्तित्व और कार्य स्पष्ट रूप से संविधान में एक विशिष्ट अनुच्छेद के तहत उल्लिखित होते हैं, जो उसे उच्च स्तर की स्वतंत्रता और अधिकार प्रदान करता है। ये निकाय अपनी शक्ति सीधे संविधान से प्राप्त करते हैं।"
     },
     {
       "q_num": 2,
-      "question": "Which Article of the Indian Constitution deals with the Election Commission of India (ECI)?\n भारतीय संविधान का कौन सा अनुच्छेद भारत निर्वाचन आयोग (ECI) से संबंधित है?",
+      "question": "Which Article of the Indian Constitution deals with the Election Commission of India (ECI)?",
       "options": {
-        "a": "Article 315 / अनुच्छेद 315",
-        "b": "Article 280 / अनुच्छेद 280",
-        "c": "Article 324 / अनुच्छेद 324",
-        "d": "Article 148 / अनुच्छेद 148"
+        "a": "Article 315",
+        "b": "Article 280",
+        "c": "Article 324",
+        "d": "Article 148"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 324 (Part XV) of the Constitution vests the power of superintendence, direction, and control of elections to Parliament, State Legislatures, and the offices of the President and Vice-President in the Election Commission\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान का अनुच्छेद 324 (भाग XV) संसद, राज्य विधानमंडलों, और राष्ट्रपति तथा उपराष्ट्रपति के कार्यालयों के चुनावों के अधीक्षण, निर्देशन और नियंत्रण की शक्ति निर्वाचन आयोग में निहित करता है।"
     },
     {
       "q_num": 3,
-      "question": "What is the term of office for the Chairman and members of the Union Public Service Commission (UPSC)?\n संघ लोक सेवा आयोग (UPSC) के अध्यक्ष और सदस्यों का कार्यकाल कितना होता है?",
+      "question": "What is the term of office for the Chairman and members of the Union Public Service Commission (UPSC)?",
       "options": {
-        "a": "5 years or until the age of 62 years / 5 वर्ष या 62 वर्ष की आयु तक",
-        "b": "6 years or until the age of 65 years / 6 वर्ष या 65 वर्ष की आयु तक",
-        "c": "5 years or until the age of 60 years / 5 वर्ष या 60 वर्ष की आयु तक",
-        "d": "At the pleasure of the President / राष्ट्रपति के प्रसादपर्यंत"
+        "a": "5 years or until the age of 62 years",
+        "b": "6 years or until the age of 65 years",
+        "c": "5 years or until the age of 60 years",
+        "d": "At the pleasure of the President"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe members of the UPSC hold office for a term of six years or until they attain the age of 65 years, whichever is earlier. This fixed term ensures the independence of the body. / UPSC\n\n📖 हिंदी स्पष्टीकरण:\nके सदस्य छह वर्ष की अवधि के लिए या 65 वर्ष की आयु प्राप्त करने तक, जो भी पहले हो, पद धारण करते हैं। यह निश्चित कार्यकाल निकाय की स्वतंत्रता सुनिश्चित करता है।"
     },
     {
       "q_num": 4,
-      "question": "The Comptroller and Auditor General of India (CAG) is mentioned in which Article of the Constitution?\n भारत के नियंत्रक और महालेखा परीक्षक (CAG) का उल्लेख संविधान के किस अनुच्छेद में किया गया है?",
+      "question": "The Comptroller and Auditor General of India (CAG) is mentioned in which Article of the Constitution?",
       "options": {
-        "a": "Article 76 / अनुच्छेद 76",
-        "b": "Article 165 / अनुच्छेद 165",
-        "c": "Article 148 / अनुच्छेद 148",
-        "d": "Article 338 / अनुच्छेद 338"
+        "a": "Article 76",
+        "b": "Article 165",
+        "c": "Article 148",
+        "d": "Article 338"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 148 provides for an independent office of the CAG, who is the head of the Indian Audit and Accounts Department and the guardian of the public purse\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 148 CAG के एक स्वतंत्र कार्यालय का प्रावधान करता है, जो भारतीय लेखापरीक्षा और लेखा विभाग का प्रमुख और सार्वजनिक धन का संरक्षक होता है।"
     },
     {
       "q_num": 5,
-      "question": "Who is the highest law officer in the country, appointed by the President?\n देश में सर्वोच्च कानून अधिकारी कौन होता है, जिसे राष्ट्रपति द्वारा नियुक्त किया जाता है?",
+      "question": "Who is the highest law officer in the country, appointed by the President?",
       "options": {
-        "a": "Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "b": "Advocate General / महाधिवक्ता",
-        "c": "Attorney General / महान्यायवादी",
-        "d": "Solicitor General / सॉलिसिटर जनरल"
+        "a": "Chief Justice of India",
+        "b": "Advocate General",
+        "c": "Attorney General",
+        "d": "Solicitor General"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Attorney General (AG) is the highest law officer, appointed under Article 76. He gives advice to the Government of India on legal matters referred to him by the President\n\n📖 हिंदी स्पष्टीकरण:\nमहान्यायवादी (AG) सर्वोच्च कानून अधिकारी है, जिसे अनुच्छेद 76 के तहत नियुक्त किया जाता है। वह राष्ट्रपति द्वारा सौंपे गए कानूनी मामलों पर भारत सरकार को सलाह देता है।"
     },
     {
       "q_num": 6,
-      "question": "The Finance Commission is constituted by the President every five years and consists of a chairman and how many other members?\n वित्त आयोग का गठन राष्ट्रपति द्वारा हर पाँच वर्ष में किया जाता है और इसमें एक अध्यक्ष तथा कितने अन्य सदस्य होते हैं?",
+      "question": "The Finance Commission is constituted by the President every five years and consists of a chairman and how many other members?",
       "options": {
-        "a": "2 members / 2 सदस्य",
-        "b": "4 members / 4 सदस्य",
-        "c": "5 members / 5 सदस्य",
-        "d": "6 members / 6 सदस्य"
+        "a": "2 members",
+        "b": "4 members",
+        "c": "5 members",
+        "d": "6 members"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Finance Commission, constituted under Article 280, is a quasi-judicial body composed of one Chairman and four other members. They are all appointed by the President\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 280 के तहत गठित वित्त आयोग एक अर्ध-न्यायिक निकाय है जिसमें एक अध्यक्ष और चार अन्य सदस्य होते हैं। इन सभी की नियुक्ति राष्ट्रपति द्वारा की जाती है।"
     },
     {
       "q_num": 7,
-      "question": "Which Constitutional Amendment Act decreased the voting age from 21 to 18 years for Lok Sabha and State Legislative Assembly elections?\n किस संवैधानिक संशोधन अधिनियम ने लोकसभा और राज्य विधानसभा चुनावों के लिए मतदान की आयु 21 से घटाकर 18 वर्ष कर दी?",
+      "question": "Which Constitutional Amendment Act decreased the voting age from 21 to 18 years for Lok Sabha and State Legislative Assembly elections?",
       "options": {
-        "a": "42nd Amendment Act, 1976 / 42वाँ संशोधन अधिनियम, 1976",
-        "b": "61st Amendment Act, 1988 / 61वाँ संशोधन अधिनियम, 1988",
-        "c": "73rd Amendment Act, 1992 / 73वाँ संशोधन अधिनियम, 1992",
-        "d": "86th Amendment Act, 2002 / 86वाँ संशोधन अधिनियम, 2002"
+        "a": "42nd Amendment Act, 1976",
+        "b": "61st Amendment Act, 1988",
+        "c": "73rd Amendment Act, 1992",
+        "d": "86th Amendment Act, 2002"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 61st Amendment Act of 1988 is a significant milestone in the history of the Election Commission, as it reduced the voting age to 18 years, thereby increasing the participation of youth in the democratic process. / 61\n\n📖 हिंदी स्पष्टीकरण:\nवाँ संशोधन अधिनियम 1988 निर्वाचन आयोग के इतिहास में एक महत्वपूर्ण मील का पत्थर है, क्योंकि इसने मतदान की आयु 18 वर्ष कर दी, जिससे लोकतांत्रिक प्रक्रिया में युवाओं की भागीदारी बढ़ी।"
     },
     {
       "q_num": 8,
-      "question": "What is the maximum age limit for the Chairman and members of a State Public Service Commission (SPSC)?\n राज्य लोक सेवा आयोग (SPSC) के अध्यक्ष और सदस्यों के लिए अधिकतम आयु सीमा क्या है?",
+      "question": "What is the maximum age limit for the Chairman and members of a State Public Service Commission (SPSC)?",
       "options": {
-        "a": "65 years / 65 वर्ष",
-        "b": "62 years / 62 वर्ष",
-        "c": "60 years / 60 वर्ष",
-        "d": "70 years / 70 वर्ष"
+        "a": "65 years",
+        "b": "62 years",
+        "c": "60 years",
+        "d": "70 years"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe members of the SPSC hold office for a term of six years or until they attain the age of 62 years, whichever is earlier. Note that this is different from the UPSC age limit (65 years). / SPSC\n\n📖 हिंदी स्पष्टीकरण:\nके सदस्य छह वर्ष की अवधि के लिए या 62 वर्ष की आयु प्राप्त करने तक, जो भी पहले हो, पद धारण करते हैं। ध्यान दें कि यह UPSC की आयु सीमा (65 वर्ष) से अलग है।"
     },
     {
       "q_num": 9,
-      "question": "Who serves as the ex-officio Chairperson of the Goods and Services Tax (GST) Council in India?\n भारत में वस्तु एवं सेवा कर (GST) परिषद के पदेन अध्यक्ष के रूप में कौन कार्य करता है?",
+      "question": "Who serves as the ex-officio Chairperson of the Goods and Services Tax (GST) Council in India?",
       "options": {
-        "a": "Prime Minister / प्रधानमंत्री",
-        "b": "Union Revenue Secretary / केंद्रीय राजस्व सचिव",
-        "c": "Union Finance Minister / केंद्रीय वित्त मंत्री",
-        "d": "Minister of State for Finance / वित्त राज्य मंत्री"
+        "a": "Prime Minister",
+        "b": "Union Revenue Secretary",
+        "c": "Union Finance Minister",
+        "d": "Minister of State for Finance"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe GST Council, inserted by Article 279-A (101st CAA, 2016), is a joint forum of the Centre and State, and its chairperson is the Union Finance Minister\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 279-A (101वां संवैधानिक संशोधन अधिनियम, 2016) द्वारा स्थापित जीएसटी परिषद, केंद्र और राज्य का एक संयुक्त मंच है, और इसके अध्यक्ष केंद्रीय वित्त मंत्री होते हैं।"
     },
     {
       "q_num": 10,
-      "question": "Which body was replaced by the National Institution for Transforming India (NITI AAYOG) in January 2015?\n जनवरी 2015 में राष्ट्रीय भारत परिवर्तन संस्थान (नीति आयोग) ने किस निकाय का स्थान लिया?",
+      "question": "Which body was replaced by the National Institution for Transforming India (NITI AAYOG) in January 2015?",
       "options": {
-        "a": "National Development Council / राष्ट्रीय विकास परिषद",
-        "b": "Finance Commission / वित्त आयोग",
-        "c": "Planning Commission / योजना आयोग",
-        "d": "National Human Rights Commission / राष्ट्रीय मानवाधिकार आयोग"
+        "a": "National Development Council",
+        "b": "Finance Commission",
+        "c": "Planning Commission",
+        "d": "National Human Rights Commission"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNITI AAYOG is an Executive Body created by an Executive Resolution to replace the decades-old Planning Commission, shifting from a centrally planned model to a more consultative approach\n\n📖 हिंदी स्पष्टीकरण:\nनीति आयोग एक कार्यकारी निकाय है, जिसे दशकों पुराने योजना आयोग को प्रतिस्थापित करने के लिए एक कार्यकारी संकल्प द्वारा स्थापित किया गया, जिससे केंद्रीय नियोजना मॉडल से अधिक परामर्शात्मक दृष्टिकोण की ओर बदलाव हुआ।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements regarding the Union Public Service Commission (UPSC) and the State Public Service Commission (SPSC):\n संघ लोक सेवा आयोग (UPSC) और राज्य लोक सेवा आयोग (SPSC) के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. The members of both UPSC and SPSC are appointed by the President of India. / UPSC और SPSC दोनों के सदस्यों की नियुक्ति भारत के राष्ट्रपति द्वारा की जाती है।\n 2. The members of both UPSC and SPSC can be removed only by the President of India. / UPSC और SPSC दोनों के सदस्यों को केवल भारत के राष्ट्रपति द्वारा ही हटाया जा सकता है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the Union Public Service Commission (UPSC) and the State Public Service Commission (SPSC):\n1. The members of both UPSC and SPSC are appointed by the President of India.\n2. The members of both UPSC and SPSC can be removed only by the President of India.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe members of UPSC are appointed by the President, but the members of SPSC are appointed by the Governor. However, the power to remove the chairman or any member of either UPSC or SPSC lies only with the President. / UPSC\n\n📖 हिंदी स्पष्टीकरण:\nके सदस्यों की नियुक्ति राष्ट्रपति द्वारा की जाती है, लेकिन SPSC के सदस्यों की नियुक्ति राज्यपाल द्वारा की जाती है। हालांकि, UPSC या SPSC दोनों में से किसी के भी अध्यक्ष या किसी सदस्य को हटाने की शक्ति केवल राष्ट्रपति के पास होती है।"
     },
     {
       "q_num": 12,
-      "question": "Assertion (A): The Comptroller and Auditor General (CAG) is known as the 'Guardian of Public Purse'.\n अभिकथन (A): नियंत्रक और महालेखा परीक्षक (CAG) को 'सार्वजनिक धन का संरक्षक' कहा जाता है।\n Reason (R): The CAG is responsible for compiling and maintaining the accounts of both the Central Government and the State Governments.\n कारण (R): CAG केंद्र सरकार और राज्य सरकारों दोनों के खातों के संकलन और रखरखाव के लिए जिम्मेदार है।",
+      "question": "Assertion (A): The Comptroller and Auditor General (CAG) is known as the 'Guardian of Public Purse'.\n Reason (R): The CAG is responsible for compiling and maintaining the accounts of both the Central Government and the State Governments.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
-        "d": "A is false, but R is true. / A असत्य है, लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe CAG is indeed the 'Guardian of Public Purse' (A is true). However, the CAG compiles and maintains the accounts of the State Governments only, not the Central Government (R is false). / CAG\n\n📖 हिंदी स्पष्टीकरण:\nवास्तव में 'सार्वजनिक धन का संरक्षक' है (A सत्य है)। हालाँकि, CAG केवल राज्य सरकारों के खातों का संकलन और रखरखाव करता है, न कि केंद्र सरकार का (R असत्य है)।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following constitutional bodies were separated by the 89th Constitutional Amendment Act, 2003?\n निम्नलिखित में से कौन से संवैधानिक निकाय 89वें संवैधानिक संशोधन अधिनियम, 2003 द्वारा अलग किए गए थे?",
+      "question": "Which of the following constitutional bodies were separated by the 89th Constitutional Amendment Act, 2003?",
       "options": {
-        "a": "National Commission for SC's and National Commission for BC's / राष्ट्रीय अनुसूचित जाति आयोग और राष्ट्रीय पिछड़ा वर्ग आयोग",
-        "b": "National Commission for SC's and National Commission for ST's / राष्ट्रीय अनुसूचित जाति आयोग और राष्ट्रीय अनुसूचित जनजाति आयोग",
-        "c": "UPSC and SPSC / UPSC और SPSC",
-        "d": "Finance Commission and GST Council / वित्त आयोग और GST परिषद"
+        "a": "National Commission for SC's and National Commission for BC's",
+        "b": "National Commission for SC's and National Commission for ST's",
+        "c": "UPSC and SPSC",
+        "d": "Finance Commission and GST Council"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 89th CAA, 2003, separated the combined National Commission for SCs and STs into two distinct bodies: the National Commission for SCs (Art 338) and the National Commission for STs (Art 338A). / 89\n\n📖 हिंदी स्पष्टीकरण:\nवें संवैधानिक संशोधन अधिनियम, 2003 ने संयुक्त राष्ट्रीय अनुसूचित जाति और जनजाति आयोग को दो अलग-अलग निकायों में विभाजित कर दिया: राष्ट्रीय अनुसूचित जाति आयोग (अनुच्छेद 338) और राष्ट्रीय अनुसूचित जनजाति आयोग (अनुच्छेद 338A)।"
     },
     {
       "q_num": 14,
-      "question": "Consider the following statements about the Election Commission of India (ECI):\n भारत निर्वाचन आयोग (ECI) के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. The ECI is not concerned with the election of Panchayats and Municipalities. / ECI का संबंध पंचायतों और नगरपालिकाओं के चुनाव से नहीं है।\n 2. The term of the Chief Election Commissioner (CEC) is 6 years or until the age of 65 years. / मुख्य चुनाव आयुक्त (CEC) का कार्यकाल 6 वर्ष या 65 वर्ष की आयु तक होता है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about the Election Commission of India (ECI):\n1. The ECI is not concerned with the election of Panchayats and Municipalities.\n2. The term of the Chief Election Commissioner (CEC) is 6 years or until the age of 65 years.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe ECI is responsible for elections to the Parliament and State Legislatures, but not Panchayats and Municipalities, which fall under the State Election Commission (Statement 1 is correct). The term for CEC and other Election Commissioners is 6 years or 65 years, whichever is earlier (Statement 2 is correct). / ECI\n\n📖 हिंदी स्पष्टीकरण:\nसंसद और राज्य विधानमंडलों के चुनावों के लिए जिम्मेदार है, लेकिन पंचायतों और नगरपालिकाओं के लिए नहीं, जो राज्य चुनाव आयोग के अंतर्गत आते हैं (कथन 1 सही है)। CEC और अन्य चुनाव आयुक्तों का कार्यकाल 6 वर्ष या 65 वर्ष, जो भी पहले हो, होता है (कथन 2 सही है)।"
     },
     {
       "q_num": 15,
-      "question": "Which of the following bodies was initially set up by an Executive Resolution but later conferred a Statutory Status in 2003?\n निम्नलिखित में से कौन सा निकाय शुरू में एक कार्यकारी संकल्प द्वारा स्थापित किया गया था लेकिन बाद में 2003 में इसे सांविधिक दर्जा प्रदान किया गया?",
+      "question": "Which of the following bodies was initially set up by an Executive Resolution but later conferred a Statutory Status in 2003?",
       "options": {
-        "a": "National Human Rights Commission (NHRC) / राष्ट्रीय मानवाधिकार आयोग (NHRC)",
-        "b": "Central Bureau of Investigation (CBI) / केंद्रीय जांच ब्यूरो (CBI)",
-        "c": "Central Vigilance Commission (CVC) / केंद्रीय सतर्कता आयोग (CVC)",
-        "d": "NITI AAYOG / नीति आयोग"
+        "a": "National Human Rights Commission (NHRC)",
+        "b": "Central Bureau of Investigation (CBI)",
+        "c": "Central Vigilance Commission (CVC)",
+        "d": "NITI AAYOG"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe CVC was set up in 1964 by an Executive Resolution based on the recommendations of the Santhanam Committee. It was later conferred Statutory Status in 2003 by an Act of Parliament\n\n📖 हिंदी स्पष्टीकरण:\nकेंद्रीय सतर्कता आयोग (CVC) की स्थापना 1964 में संथानम समिति की सिफारिशों के आधार पर एक कार्यकारी संकल्प द्वारा की गई थी। बाद में संसद के एक अधिनियम द्वारा 2003 में इसे सांविधिक दर्जा प्रदान किया गया।"
     },
     {
       "q_num": 16,
-      "question": "The National Commission for Backward Classes (NCBC) was conferred constitutional status by which amendment act?\n राष्ट्रीय पिछड़ा वर्ग आयोग (NCBC) को किस संशोधन अधिनियम द्वारा संवैधानिक दर्जा प्रदान किया गया था?",
+      "question": "The National Commission for Backward Classes (NCBC) was conferred constitutional status by which amendment act?",
       "options": {
-        "a": "89th Amendment Act, 2003 / 89वाँ संशोधन अधिनियम, 2003",
-        "b": "101st Amendment Act, 2016 / 101वाँ संशोधन अधिनियम, 2016",
-        "c": "102nd Amendment Act, 2018 / 102वाँ संशोधन अधिनियम, 2018",
-        "d": "7th Amendment Act, 1956 / 7वाँ संशोधन अधिनियम, 1956"
+        "a": "89th Amendment Act, 2003",
+        "b": "101st Amendment Act, 2016",
+        "c": "102nd Amendment Act, 2018",
+        "d": "7th Amendment Act, 1956"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe NCBC was initially a statutory body established in 1993. The 102nd Amendment Act of 2018 conferred constitutional status on it by inserting Article 338B in the Constitution\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रीय पिछड़ा वर्ग आयोग (NCBC) शुरू में 1993 में स्थापित एक सांविधिक निकाय था। 102वें संशोधन अधिनियम, 2018 ने संविधान में अनुच्छेद 338B जोड़कर इसे संवैधानिक दर्जा प्रदान किया।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements regarding the electoral rolls is/are correct?\n 1. There is one general electoral roll for every territorial constituency.\n 2. No person is ineligible for inclusion in the electoral roll on grounds of religion, race, caste, sex, or any of them.\n 3. A citizen of India, not less than 18 years of age, can cast his/her vote unless disqualified under a law of an appropriate legislature.\n Select the correct answer using the code given below:\n मतदाता सूची के संबंध में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 4. प्रत्येक प्रादेशिक निर्वाचन क्षेत्र के लिए एक सामान्य मतदाता सूची होती है।\n 5. कोई भी व्यक्ति धर्म, मूलवंश, जाति, लिंग या इनमें से किसी भी आधार पर मतदाता सूची में शामिल होने के लिए अपात्र नहीं है।\n 6. भारत का कोई भी नागरिक, जिसकी आयु कम से कम 18 वर्ष हो, अपना वोट डाल सकता है, जब तक कि उसे किसी उपयुक्त विधानमंडल के कानून के तहत अयोग्य घोषित न कर दिया जाए।\n नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Which of the following statements regarding the electoral rolls is/are correct?\n 1. There is one general electoral roll for every territorial constituency.\n 2. No person is ineligible for inclusion in the electoral roll on grounds of religion, race, caste, sex, or any of them.\n 3. A citizen of India, not less than 18 years of age, can cast his/her vote unless disqualified under a law of an appropriate legislature.\n Select the correct answer using the code given below:",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1, 2 and 3 / 1,2 और 3",
-        "c": "2 and 3 only / केवल 2 और 3",
-        "d": "1 and 2 only / केवल 1 और 2"
+        "a": "1 only",
+        "b": "1, 2 and 3",
+        "c": "2 and 3 only",
+        "d": "1 and 2 only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThere is one general electoral roll for every territorial constituency. No person is ineligible for inclusion in the electoral roll-on grounds of religion, race, caste, sex, or any of them. A citizen of India, not less than 18 years of age, can cast his/her vote unless disqualified under a law of an appropriate legislature."
     },
     {
       "q_num": 18,
-      "question": "Which of the following statements about the Inter-State Council is/are correct?\n 1. It can inquire into disputes between States.\n 2. It cannot investigate subjects involving the Union.\n Select the correct answer using the code given below.\n अंतर-राज्यीय परिषद के बारे में निम्नलिखित में से कौन सा/से कथन सही है/हैं?\n 3. यह राज्यों के बीच विवादों की जाँच कर सकती है।\n 4. यह संघ से संबंधित विषयों की जाँच नहीं कर सकती।\n नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए।",
+      "question": "Which of the following statements about the Inter-State Council is/are correct?\n 1. It can inquire into disputes between States.\n 2. It cannot investigate subjects involving the Union.\n Select the correct answer using the code given below.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Inter-State Council is empowered to \"investigate and discuss subjects in which some or all of the States, or the Union and one or more of the States, have a common interest\". Therefore, it can investigate subjects involving the Union."
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements about the National Commission for Women are correct ?\n 1. It is a statutory body.\n 2. It has the mandate to review the constitutional and legal safeguards for women.\n 3. It has the mandate to advise the Government on all policy matters affecting women.\n राष्ट्रीय महिला आयोग के बारे में निम्नलिखित में से कौन से कथन सही हैं?\n 4. यह एक वैधानिक निकाय है।\n 5. इसे महिलाओं के लिए संवैधानिक और कानूनी सुरक्षा उपायों की समीक्षा करने का अधिदेश प्राप्त है।\n 6. इसे महिलाओं को प्रभावित करने वाले सभी नीतिगत मामलों पर सरकार को सलाह देने का अधिदेश प्राप्त है।\n Select the answer using the code given below:",
+      "question": "Which of the following statements about the National Commission for Women are correct ?\n 1. It is a statutory body.\n 2. It has the mandate to review the constitutional and legal safeguards for women.\n 3. It has the mandate to advise the Government on all policy matters affecting women.\n Select the answer using the code given below:",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe National Commission for Women (NCW) is an important institution in India aimed at protecting and promoting women's rights."
     },
     {
       "q_num": 20,
-      "question": "Which of the following statements with regard to recommendations of the 15th Finance Commission of India are correct?\n 1. It has recommended grants of ₹4,800 crores from the year 2022–23 to the year 2025–26 for incentivizing States to enhance educational outcomes.\n 2. 45% of the net proceeds of Union taxes are to be shared with States.\n 3. ₹45,000 crores are to be kept as performance-based incentive for all States for carrying out agricultural reforms.\n 4. It reintroduced tax effort criteria to reward fiscal performance.\n भारत के 15वें वित्त आयोग की सिफ़ारिशों के संबंध में निम्नलिखित में से कौन से कथन सही हैं?\n 5. शिक्षण परिणामों में सुधार के लिए राज्यों को प्रोत्साहित करने हेतु 2022–23 से 2025–26 तक ₹4,800 करोड़ के अनुदान की सिफारिश की गई है।\n 6. केंद्र के शुद्ध कर राजस्व का 45% राज्यों के साथ साझा किया जाना है।\n 7. कृषि सुधारों को लागू करने के लिए सभी राज्यों हेतु प्रदर्शन-आधारित प्रोत्साहन के रूप में ₹45,000 करोड़ रखे जाने हैं।\n 8. वित्तीय प्रदर्शन को पुरस्कृत करने के लिए कर-प्रयास (टैक्स एफर्ट) मानदंड को पुनः लागू किया गया।\n Select the correct answer using the code given below.\n नीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें।",
+      "question": "Which of the following statements with regard to recommendations of the 15th Finance Commission of India are correct?\n 1. It has recommended grants of ₹4,800 crores from the year 2022–23 to the year 2025–26 for incentivizing States to enhance educational outcomes.\n 2. 45% of the net proceeds of Union taxes are to be shared with States.\n 3. ₹45,000 crores are to be kept as performance-based incentive for all States for carrying out agricultural reforms.\n 4. It reintroduced tax effort criteria to reward fiscal performance.\n Select the correct answer using the code given below.",
       "options": {
-        "a": "I, II and III / I, II और III",
-        "b": "I, II and IV / I, II और IV",
-        "c": "I, III and IV / I, III और IV",
-        "d": "II, III and IV / II, III और IV"
+        "a": "I, II and III",
+        "b": "I, II and IV",
+        "c": "I, III and IV",
+        "d": "II, III and IV"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe 15th FC recommended that the States' share in the Union taxes be 41% (a 1% reduction from the 14th FC's 42% to accommodate the newly formed Union Territories of J&K and Ladakh).\n\n📖 हिंदी स्पष्टीकरण:\n15वें वित्त आयोग ने सिफारिश की थी कि संघीय करों में राज्यों का हिस्सा 41% होना चाहिए (नवगठित केंद्र शासित प्रदेशों जम्मू-कश्मीर और लद्दाख को समायोजित करने के लिए 14वें वित्त आयोग के 42% से 1% की कटौती)।"
     },
     {
       "q_num": 21,
-      "question": "Consider the following statements about Central Vigilance Commission (CVC):\n 1. Central Vigilance Commissioner is appointed by the President of India.\n 2. The Committee to recommend the appointment of Central Vigilance Commissioner has the Minister of Home Affairs as one of the members.\n 3. In certain circumstances the Leader of the single largest group in opposition in Lok Sabha can be on the Committee to recommend the appointment of Central Vigilance Commissioner.\n How many of the above statements is/are correct?\n केंद्रीय सतर्कता आयोग (CVC) के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n 4. केंद्रीय सतर्कता आयुक्त की नियुक्ति भारत के राष्ट्रपति द्वारा की जाती है।\n 5. केंद्रीय सतर्कता आयुक्त की नियुक्ति की सिफारिश करने वाली समिति में गृह मंत्री एक सदस्य होते हैं।\n 6. कुछ परिस्थितियों में, लोकसभा में विपक्ष के सबसे बड़े समूह का नेता केंद्रीय सतर्कता आयुक्त की नियुक्ति की सिफारिश करने वाली समिति में शामिल हो सकता है।\n उपरोक्त कथनों में से कितने सही हैं?",
+      "question": "Consider the following statements about Central Vigilance Commission (CVC):\n 1. Central Vigilance Commissioner is appointed by the President of India.\n 2. The Committee to recommend the appointment of Central Vigilance Commissioner has the Minister of Home Affairs as one of the members.\n 3. In certain circumstances the Leader of the single largest group in opposition in Lok Sabha can be on the Committee to recommend the appointment of Central Vigilance Commissioner.\n How many of the above statements is/are correct?",
       "options": {
-        "a": "Nil / कोई भी नहीं",
+        "a": "Nil",
         "b": "1",
         "c": "2",
         "d": "3"
@@ -258,7 +258,7 @@
     },
     {
       "q_num": 22,
-      "question": "Match the following Finance Commissions (FC) with their respective Chairmen:\n निम्नलिखित वित्त आयोगों (FC) को उनके संबंधित अध्यक्षों से सुमेलित करें:\n | Finance Commission / वित्त आयोग | Chairman / अध्यक्ष |\n | I. 1st FC / 1वाँ वित्त आयोग | 1. Y. V. Reddy / वाई. वी. रेड्डी |\n | II. 14th FC / 14वाँ वित्त आयोग | 2. K. C. Neogy / के. सी. नियोगी |\n | III. 16th FC / 16वाँ वित्त आयोग | 3. N. K. Singh / एन. के. सिंह |\n | IV. 15th FC / 15वाँ वित्त आयोग | 4. Arvind Panagariya / अरविंद पनगढ़िया |\n Select the correct code:\n सही कूट का चयन करें:",
+      "question": "Match the following Finance Commissions (FC) with their respective Chairmen:\n| Finance Commission\n| I. 1st FC\n| II. 14th FC\n| III. 16th FC\n| IV. 15th FC\n Select the correct code:",
       "options": {
         "a": "I-2, II-1, III-4, IV-3",
         "b": "I-4, II-3, III-2, IV-1",
@@ -270,36 +270,36 @@
     },
     {
       "q_num": 23,
-      "question": "Consider the following statements about the powers and duties of the Comptroller and Auditor General of India:\n 1. He audits and reports on all expenditures from the Consolidated Fund of India.\n 2. He controls the issue and receipt of money from the Consolidated Fund of India.\n 3. He audits and reports on the expenditure of all bodies substantially financed from the Union or State revenues.\n Which of the statements given above are correct?\n भारत के नियंत्रक एवं महालेखा परीक्षक की शक्तियों और कर्तव्यों के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n 4. वह भारत की संचित निधि से सभी व्ययों का लेखा-परीक्षण करता है और उन पर रिपोर्ट प्रस्तुत करता है।\n 5. वह भारत की संचित निधि से धन के निर्गमन और प्राप्ति को नियंत्रित करता है।\n 6. वह संघ या राज्य के राजस्व से पर्याप्त रूप से वित्तपोषित सभी निकायों के व्यय का लेखा-परीक्षण करता है और उन पर रिपोर्ट प्रस्तुत करता है।\n ऊपर दिए गए कथनों में से कौन से सही हैं?",
+      "question": "Consider the following statements about the powers and duties of the Comptroller and Auditor General of India:\n 1. He audits and reports on all expenditures from the Consolidated Fund of India.\n 2. He controls the issue and receipt of money from the Consolidated Fund of India.\n 3. He audits and reports on the expenditure of all bodies substantially financed from the Union or State revenues.\n Which of the statements given above are correct?",
       "options": {
-        "a": "1 and 2 only / केवल 1 और 2",
-        "b": "2 and 3 only / केवल 2 और 3",
-        "c": "1 and 3 only / केवल 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe CAG in India acts as an Auditor General only, not a Comptroller (unlike the UK). The executive is responsible for the issue and receipt of money, and the CAG's audit function is post-facto (after the expenditure has been incurred).\n\n📖 हिंदी स्पष्टीकरण:\nनियंत्रक एवं महालेखा परीक्षक ("
     },
     {
       "q_num": 24,
-      "question": "Consider the following statements: निम्नलिखित कथनों पर विचार करें:\n 1. The Special Officer for Linguistic Minorities was conferred a Constitutional status by the 7th CAA, 1956, and a new Article 350B was inserted. / भाषाई अल्पसंख्यकों के लिए विशेष अधिकारी को 7वें संवैधानिक संशोधन अधिनियम, 1956 द्वारा संवैधानिक दर्जा प्रदान किया गया और एक नया अनुच्छेद 350B जोड़ा गया।\n 2. The Advocate General of the State can be removed by the Governor at any time, as his term is not fixed by the Constitution. / राज्य के महाधिवक्ता को राज्यपाल द्वारा किसी भी समय हटाया जा सकता है, क्योंकि उनका कार्यकाल संविधान द्वारा निश्चित नहीं है।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements:\n1. The Special Officer for Linguistic Minorities was conferred a Constitutional status by the 7th CAA, 1956, and a new Article 350B was inserted.\n2. The Advocate General of the State can be removed by the Governor at any time, as his term is not fixed by the Constitution.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBoth statements are correct. The 7th CAA, 1956, inserted Article 350B, giving constitutional status to the Special Officer for Linguistic Minorities (Statement 1). The Advocate General (Art 165) holds office during the pleasure of the Governor and can be removed by the Governor at any time (Statement 2)\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सही हैं। 7वें संवैधानिक संशोधन अधिनियम, 1956 ने अनुच्छेद 350B डाला, जिससे भाषाई अल्पसंख्यकों के लिए विशेष अधिकारी को संवैधानिक दर्जा मिला (कथन 1)। महाधिवक्ता (अनुच्छेद 165) राज्यपाल के प्रसादपर्यंत पद धारण करता है और राज्यपाल द्वारा किसी भी समय हटाया जा सकता है (कथन 2)।"
     },
     {
       "q_num": 25,
-      "question": "The National Human Rights Commission was established under the statute of:\n राष्ट्रीय मानवाधिकार आयोग की स्थापना निम्नलिखित क़ानून के तहत की गई थी:",
+      "question": "The National Human Rights Commission was established under the statute of:",
       "options": {
-        "a": "The Protection of Human Rights Act, 1993 / मानव अधिकार संरक्षण अधिनियम, 1993",
-        "b": "The Protection and Implementation of Human Rights Act, 1993 / मानव अधिकार संरक्षण एवं कार्यान्वयन अधिनियम, 1993",
-        "c": "The Human Rights Act, 1993 / मानवाधिकार अधिनियम, 1993",
-        "d": "The Human Rights Commission Act, 1993 / मानवाधिकार आयोग अधिनियम, 1993"
+        "a": "The Protection of Human Rights Act, 1993",
+        "b": "The Protection and Implementation of Human Rights Act, 1993",
+        "c": "The Human Rights Act, 1993",
+        "d": "The Human Rights Commission Act, 1993"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatutory Body: The NHRC isn't a constitutional body but a statutory one, meaning it derives its authority from a law passed by Parliament.\n5. Established Date: It was established on October 12, 1993, under this Act.\n6. Purpose: Its mandate includes inquiring into violations, recommending actions, and ensuring India's commitment to human rights protection\n7.\n8.\n9."

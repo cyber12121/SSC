@@ -6,283 +6,283 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who is known as the 'Father of Taxonomy'? / 'वर्गीकरण विज्ञान का जनक' किसे कहा जाता है?",
+      "question": "Who is known as the 'Father of Taxonomy'?",
       "options": {
-        "a": "Ernst Haeckel / अर्न्स्ट हेकल",
-        "b": "Robert Whittaker / रॉबर्ट व्हिटेकर",
-        "c": "Carl Linnaeus / कार्ल लिनिअस",
-        "d": "Carl Woese / कार्ल वोस"
+        "a": "Ernst Haeckel",
+        "b": "Robert Whittaker",
+        "c": "Carl Linnaeus",
+        "d": "Carl Woese"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCarl Linnaeus is called the Father of Taxonomy as he developed the system of naming organisms (Binomial Nomenclature) in 1735\n\n📖 हिंदी स्पष्टीकरण:\nकार्ल लिनिअस को वर्गीकरण विज्ञान का जनक कहा जाता है क्योंकि उन्होंने 1735 में जीवों के नामकरण की प्रणाली (द्विपद नामकरण) विकसित की थी।"
     },
     {
       "q_num": 2,
-      "question": "Which kingdom was proposed by Robert Whittaker in 1969? / 1969 में रॉबर्ट व्हिटेकर द्वारा किस जगत का प्रस्ताव दिया गया था?",
+      "question": "Which kingdom was proposed by Robert Whittaker in 1969?",
       "options": {
-        "a": "2 Kingdom Classification / 2 जगत वर्गीकरण",
-        "b": "3 Kingdom Classification / 3 जगत वर्गीकरण",
-        "c": "4 Kingdom Classification / 4 जगत वर्गीकरण",
-        "d": "5 Kingdom Classification / 5 जगत वर्गीकरण"
+        "a": "2 Kingdom Classification",
+        "b": "3 Kingdom Classification",
+        "c": "4 Kingdom Classification",
+        "d": "5 Kingdom Classification"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nRobert Whittaker proposed the five-kingdom classification including Monera, Protista, Fungi, Plantae, and Animalia\n\n📖 हिंदी स्पष्टीकरण:\nरॉबर्ट व्हिटेकर ने पांच-जगत वर्गीकरण का प्रस्ताव दिया जिसमें मोनेरा, प्रोटिस्टा, कवक, पादप और शामिल थे।"
     },
     {
       "q_num": 3,
-      "question": "Which group of plants is known as the 'Amphibians of the Plant Kingdom'? / पादप जगत के किस समूह को 'पादप जगत का उभयचर' कहा जाता है?",
+      "question": "Which group of plants is known as the 'Amphibians of the Plant Kingdom'?",
       "options": {
-        "a": "Thallophyta / थैलोफाइटा",
-        "b": "Bryophyta / ब्रायोफाइटा",
-        "c": "Pteridophyta / टेरिडोफाइटा",
-        "d": "Gymnosperms / जिम्नोस्पर्म"
+        "a": "Thallophyta",
+        "b": "Bryophyta",
+        "c": "Pteridophyta",
+        "d": "Gymnosperms"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBryophytes are called amphibians because they live on soil but need water for sexual reproduction\n\n📖 हिंदी स्पष्टीकरण:\nब्रायोफाइटा को उभयचर कहा जाता है क्योंकि वे मिट्टी पर रहते हैं लेकिन यौन प्रजनन के लिए उन्हें पानी की आवश्यकता होती है।"
     },
     {
       "q_num": 4,
-      "question": "In which group are the reproductive organs hidden and seeds are absent? / किस समूह में प्रजनन अंग छिपे होते हैं और बीज अनुपस्थित होते हैं?",
+      "question": "In which group are the reproductive organs hidden and seeds are absent?",
       "options": {
-        "a": "Phanerogams / पुष्पोद्भिद",
-        "b": "Cryptogams / अपुष्पोद्भिद",
-        "c": "Angiosperms / आवृतबीजी",
-        "d": "Gymnosperms / अनावृतबीजी"
+        "a": "Phanerogams",
+        "b": "Cryptogams",
+        "c": "Angiosperms",
+        "d": "Gymnosperms"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCryptogams are plants that do not produce seeds or flowers; they include Thallophyta, Bryophyta, and Pteridophyta\n\n📖 हिंदी स्पष्टीकरण:\nअपुष्पोद्भिद (क्रिप्टोगैम) वे पौधे हैं जो बीज या फूल पैदा नहीं करते हैं; इनमें थैलोफाइटा, ब्रायोफाइटा और टेरिडोफाइटा शामिल हैं।"
     },
     {
       "q_num": 5,
-      "question": "What is the cell wall of Fungi made of? / कवक की कोशिका भित्ति किसकी बनी होती है?",
+      "question": "What is the cell wall of Fungi made of?",
       "options": {
-        "a": "Cellulose / सेलूलोज़",
-        "b": "Chitin / काइटिन",
-        "c": "Peptidoglycan / पेप्टिडोग्लाइकन",
-        "d": "Lignin / लिग्निन"
+        "a": "Cellulose",
+        "b": "Chitin",
+        "c": "Peptidoglycan",
+        "d": "Lignin"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nUnlike plants that have cellulose, the cell walls of fungi are composed of a tough complex sugar called chitin\n\n📖 हिंदी स्पष्टीकरण:\nपौधों के विपरीत जिनमें सेलूलोज़ होता है, कवक की कोशिका भित्ति काइटिन नामक एक कठोर जटिल शर्करा से बनी होती है।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following is an example of Thallophyta? / निम्नलिखित में से कौन सा थैलोफाइटा का उदाहरण है?",
+      "question": "Which of the following is an example of Thallophyta?",
       "options": {
-        "a": "Funaria / फ्यूनेरिया",
-        "b": "Spirogyra / स्पाइरोगाइरा",
-        "c": "Fern / फर्न",
-        "d": "Marsilea / मार्सिलिया"
+        "a": "Funaria",
+        "b": "Spirogyra",
+        "c": "Fern",
+        "d": "Marsilea"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSpirogyra belongs to Thallophyta (Algae), where the body is not differentiated into roots, stems, or leaves\n\n📖 हिंदी स्पष्टीकरण:\nस्पाइरोगाइरा थैलोफाइटा (शैवाल) से संबंधित है, जहाँ शरीर जड़ों, तनों या पत्तियों में विभाजित नहीं होता है।"
     },
     {
       "q_num": 7,
-      "question": "Which group contains the first terrestrial plants to possess vascular tissues (Xylem and Phloem)? / किस समूह में संवहनी ऊतक (जाइलम और फ्लोएम) वाले पहले स्थलीय पौधे शामिल हैं?",
+      "question": "Which group contains the first terrestrial plants to possess vascular tissues (Xylem and Phloem)?",
       "options": {
-        "a": "Bryophyta / ब्रायोफाइटा",
-        "b": "Thallophyta / थैलोफाइटा",
-        "c": "Pteridophyta / टेरिडोफाइटा",
-        "d": "Angiosperms / एंजियोस्पर्म"
+        "a": "Bryophyta",
+        "b": "Thallophyta",
+        "c": "Pteridophyta",
+        "d": "Angiosperms"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPteridophytes are the first land plants to have specialized vascular tissues for the conduction of water and food\n\n📖 हिंदी स्पष्टीकरण:\nटेरिडोफाइट पानी और भोजन के संचालन के लिए विशिष्ट संवहनी ऊतक रखने वाले पहले भूमि पौधे हैं।"
     },
     {
       "q_num": 8,
-      "question": "The term 'Ecology' was coined by which scientist in 1866? / 'पारिस्थितिकी' शब्द 1866 में किस वैज्ञानिक द्वारा गढ़ा गया था?",
+      "question": "The term 'Ecology' was coined by which scientist in 1866?",
       "options": {
-        "a": "Carl Linnaeus / कार्ल लिनिअस",
-        "b": "Ernst Haeckel / अर्न्स्ट हेकल",
-        "c": "Charles Darwin / चार्ल्स डार्विन",
-        "d": "Robert Brown / रॉबर्ट ब्राउन"
+        "a": "Carl Linnaeus",
+        "b": "Ernst Haeckel",
+        "c": "Charles Darwin",
+        "d": "Robert Brown"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nErnst Haeckel coined the term \"Oekologie\" (Ecology) in 1866 to describe the relationship between organisms and their environment\n\n📖 हिंदी स्पष्टीकरण:\nअर्न्स्ट हेकल ने 1866 में जीवों और उनके पर्यावरण के बीच संबंधों का वर्णन करने के लिए \" पारिस्थितिकी/इकोलॉजी\" शब्द गढ़ा था।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following are called 'Naked Seeded' plants? / निम्नलिखित में से किसे 'नग्न बीज' वाले पौधे कहा जाता है?",
+      "question": "Which of the following are called 'Naked Seeded' plants?",
       "options": {
-        "a": "Angiosperms / आवृतबीजी",
-        "b": "Pteridophytes / टेरिडोफाइट",
-        "c": "Gymnosperms / अनावृतबीजी",
-        "d": "Bryophytes / ब्रायोफाइट"
+        "a": "Angiosperms",
+        "b": "Pteridophytes",
+        "c": "Gymnosperms",
+        "d": "Bryophytes"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn Gymnosperms, the seeds are not enclosed within a fruit; they remain exposed or \"naked.\"\n\n📖 हिंदी स्पष्टीकरण:\nअनावृतबीजी में, बीज फल के भीतर बंद नहीं होते हैं; वे खुले या \"नग्न\" रहते हैं।"
     },
     {
       "q_num": 10,
-      "question": "What is the correct sequence of taxonomic hierarchy from top to bottom? / ऊपर से नीचे तक वर्गीकरण पदानुक्रम का सही क्रम क्या है?",
+      "question": "What is the correct sequence of taxonomic hierarchy from top to bottom?",
       "options": {
-        "a": "Kingdom → Class → Phylum → Order / जगत वर्ग संघ गण",
-        "b": "Kingdom → Phylum → Class → Order / जगत संघ वर्ग गण",
-        "c": "Phylum → Kingdom → Class → Order / संघ जगत वर्ग गण",
-        "d": "Kingdom → Order → Class → Phylum / जगत गण वर्ग संघ"
+        "a": "Kingdom → Class → Phylum → Order",
+        "b": "Kingdom → Phylum → Class → Order",
+        "c": "Phylum → Kingdom → Class → Order",
+        "d": "Kingdom → Order → Class → Phylum"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe hierarchy follows the order: Kingdom, Phylum (for animals)/Division (for plants), Class, Order, Family, Genus, Species\n\n📖 हिंदी स्पष्टीकरण:\nपदानुक्रम इस क्रम का पालन करता है: जगत, संघ/प्रभाग, वर्ग, गण, कुल, वंश, प्रजाति।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following is a characteristic of Monera? / निम्नलिखित में से कौन सी मोनेरा की विशेषता है?",
+      "question": "Which of the following is a characteristic of Monera?",
       "options": {
-        "a": "Eukaryotic cell structure / यूकेरियोटिक कोशिका संरचना",
-        "b": "Presence of a well-defined nucleus / एक स्पष्ट केंद्रक की उपस्थिति",
-        "c": "Unicellular Prokaryotic organisms / एककोशिकीय प्रोकैरियोटिक जीव",
-        "d": "Multicellular body organization / बहुकोशिकीय शरीर संगठन"
+        "a": "Eukaryotic cell structure",
+        "b": "Presence of a well-defined nucleus",
+        "c": "Unicellular Prokaryotic organisms",
+        "d": "Multicellular body organization"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKingdom Monera consists of microscopic, unicellular organisms that lack a defined nucleus or membrane-bound organelles\n\n📖 हिंदी स्पष्टीकरण:\nजगत मोनेरा में सूक्ष्म, एककोशिकीय जीव होते हैं जिनमें एक निश्चित केंद्रक या झिल्ली-बद्ध अंगों की कमी होती है।"
     },
     {
       "q_num": 12,
-      "question": "Lichens are a symbiotic association between which two organisms? / लाइकेन किन दो जीवों के बीच एक सहजीवी संबंध हैं?",
+      "question": "Lichens are a symbiotic association between which two organisms?",
       "options": {
-        "a": "Bacteria and Fungi / बैक्टीरिया और कवक",
-        "b": "Algae and Fungi / शैवाल और कवक",
-        "c": "Algae and Moss / शैवाल और काई",
-        "d": "Fungi and Roots of higher plants / कवक और उच्च पौधों की जड़ें"
+        "a": "Bacteria and Fungi",
+        "b": "Algae and Fungi",
+        "c": "Algae and Moss",
+        "d": "Fungi and Roots of higher plants"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLichens represent a mutualistic relationship where algae provide food and fungi provide shelter and minerals\n\n📖 हिंदी स्पष्टीकरण:\nलाइकेन एक पारस्परिक संबंध का प्रतिनिधित्व करते हैं जहां शैवाल भोजन प्रदान करते हैं और कवक आश्रय और खनिज प्रदान करते हैं।"
     },
     {
       "q_num": 13,
-      "question": "In Pteridophytes, the leaves that bear spores are called: / टेरिडोफाइट में, बीजाणु धारण करने वाली पत्तियों को क्या कहा जाता है?",
+      "question": "In Pteridophytes, the leaves that bear spores are called:",
       "options": {
-        "a": "Sepals / बाह्यदल",
-        "b": "Petals / पंखुड़ियाँ",
-        "c": "Sporophylls / बीजाणुपर्ण",
-        "d": "Rhizoids / मूलाभास"
+        "a": "Sepals",
+        "b": "Petals",
+        "c": "Sporophylls",
+        "d": "Rhizoids"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPteridophytes like ferns produce specialized leaflets called sporophylls that carry the reproductive spores\n\n📖 हिंदी स्पष्टीकरण:\nफर्न जैसे टेरिडोफाइट बीजाणुपर्ण (स्पोरोफिल) नामक विशिष्ट पत्रक उत्पन्न करते हैं जो प्रजनन बीजाणुओं को ले जाते हैं।"
     },
     {
       "q_num": 14,
-      "question": "Which of the following is NOT a characteristic of Phanerogams? / निम्नलिखित में से कौन सी पुष्पोद्भिद (फेनेरोगैम) की विशेषता नहीं है?",
+      "question": "Which of the following is NOT a characteristic of Phanerogams?",
       "options": {
-        "a": "Presence of flowers / फूल उपस्थिति होते हैं।",
-        "b": "Seeds are absent / बीज अनुपस्थित होते हैं।",
-        "c": "Reproductive organs are exposed / प्रजनन अंग खुले होते हैं।",
-        "d": "Highly evolved plants / अत्यधिक विकसित पौधे होते हैं।"
+        "a": "Presence of flowers",
+        "b": "Seeds are absent",
+        "c": "Reproductive organs are exposed",
+        "d": "Highly evolved plants"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPhanerogams (Gymnosperms and Angiosperms) are highly evolved plants that produce seeds and have exposed reproductive parts\n\n📖 हिंदी स्पष्टीकरण:\nपुष्पोद्भिद (जिम्नोस्पर्म और एंजियोस्पर्म) अत्यधिक विकसित पौधे हैं जो बीज पैदा करते हैं और जिनमें खुले प्रजनन अंग होते हैं।"
     },
     {
       "q_num": 15,
-      "question": "Marsilea and Horse-tails belong to which group? / मर्सिलिया और हॉर्स-टेल किस समूह से संबंधित हैं?",
+      "question": "Marsilea and Horse-tails belong to which group?",
       "options": {
-        "a": "Bryophyta / ब्रायोफाइटा",
-        "b": "Thallophyta / थैलोफाइटा",
-        "c": "Pteridophyta / टेरिडोफाइटा",
-        "d": "Gymnosperms / अनावृतबीजी"
+        "a": "Bryophyta",
+        "b": "Thallophyta",
+        "c": "Pteridophyta",
+        "d": "Gymnosperms"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMarsilea, Ferns, and Equisetum (Horse-tails) are examples of Pteridophytes which have vascular tissues but no seeds\n\n📖 हिंदी स्पष्टीकरण:\nमर्सिलिया, फर्न और इक्विसेटम (हॉर्स-टेल) टेरिडोफाइटा के उदाहरण हैं जिनमें संवहनी ऊतक होते हैं लेकिन बीज नहीं होते।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): Bryophytes are called the amphibians of the plant kingdom. / \n अभिकथन (A): ब्रायोफाइट को पादप जगत का उभयचर कहा जाता है।\n Reason (R): They possess a well-developed vascular system for water conduction. / \n कारण (R): उनमें जल संचालन के लिए एक सुविकसित संवहनी प्रणाली होती है।",
+      "question": "Assertion (A): Bryophytes are called the amphibians of the plant kingdom.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
-        "d": "Both A and R are false. / A और R दोनों ही असत्य हैं।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "Both A and R are false."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBryophytes are amphibians because they need water for fertilization, but they lack vascular tissues (Xylem/Phloem)\n\n📖 हिंदी स्पष्टीकरण:\nब्रायोफाइट्स उभयचर हैं क्योंकि उन्हें निषेचन के लिए पानी की आवश्यकता होती है, लेकिन उनमें संवहनी ऊतकों की कमी होती है।"
     },
     {
       "q_num": 17,
-      "question": "Consider the following statements about Thallophyta: / थैलोफाइटा के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. They are predominantly aquatic. / ये मुख्य रूप से जलीय हैं। \n 2. Their body is differentiated into roots and stems. / उनका शरीर जड़ों और तनों में विभाजित होता है।\n Which of the above is/are correct? / उपरोक्त में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Thallophyta:",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 2 / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "Only 1",
+        "b": "Only 2",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThallophytes (Algae) are mostly aquatic, but their body is a thallus, meaning it is not differentiated into roots or stems\n\n📖 हिंदी स्पष्टीकरण:\nथैलोफाइटा (शैवाल) ज्यादातर जलीय होते हैं, लेकिन उनका शरीर एक थैलस होता है, जिसका अर्थ है कि यह जड़ों या तनों में विभाजित नहीं होता है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Angiosperms are called 'Covered Seeded' plants. / \n अभिकथन (A): आवृतबीजी को 'ढके हुए बीज' वाले पौधे कहा जाता है।\n Reason (R): Their seeds develop inside an organ which is modified to become a fruit. / \n कारण (R): उनके बीज एक अंग के अंदर विकसित होते हैं जो फल बनने के लिए संशोधित होता है।",
+      "question": "Assertion (A): Angiosperms are called 'Covered Seeded' plants.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सही हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. / A सही है, लेकिन R गलत है।",
-        "d": "A is false, but R is true. / A गलत है, लेकिन R सही है।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "A is false, but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAngiosperms produce seeds inside ovaries, which later mature into fruits, thus covering the seeds\n\n📖 हिंदी स्पष्टीकरण:\nआवृतबीजी अंडाशय के अंदर बीज पैदा करते हैं, जो बाद में फल के रूप में विकसित होते हैं, जिससे बीज ढक जाते हैं।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements is FALSE regarding Cryptogams? / अपुष्पोद्भिद के संबंध में निम्नलिखित में से कौन सा कथन गलत है?",
+      "question": "Which of the following statements is FALSE regarding Cryptogams?",
       "options": {
-        "a": "They do not produce seeds. / ये बीज उत्पन्न नहीं करते हैं।",
-        "b": "They include Thallophyta and Bryophyta. / इनमें थैलोफाइटा और ब्रायोफाइटा शामिल हैं।",
-        "c": "Their reproductive organs are clearly visible. / इनके प्रजनन अंग स्पष्ट रूप से दिखाई देते हैं।",
-        "d": "They are less evolved compared to Phanerogams. / ये पुष्पोद्भिद की तुलना में कम विकसित हैं।"
+        "a": "They do not produce seeds.",
+        "b": "They include Thallophyta and Bryophyta.",
+        "c": "Their reproductive organs are clearly visible.",
+        "d": "They are less evolved compared to Phanerogams."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe word \"Cryptogamae\" means \"hidden reproduction,\" implying their reproductive organs are inconspicuous. / \"\n\n📖 हिंदी स्पष्टीकरण:\nअपुष्पोद्भिद\" शब्द का अर्थ \"छिपा हुआ प्रजनन\" है, जिसका अर्थ है कि उनके प्रजनन अंग स्पष्ट नहीं होते हैं।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Pteridophytes are more evolved than Bryophytes. / \n अभिकथन (A): टेरिडोफाइटा ब्रायोफाइटा की तुलना में अधिक विकसित हैं।\n Reason (R): Pteridophytes possess vascular tissues, while Bryophytes do not. / \n कारण (R): टेरिडोफाइटा में संवहनी ऊतक होते हैं, जबकि ब्रायोफाइटा में नहीं।",
+      "question": "Assertion (A): Pteridophytes are more evolved than Bryophytes.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A. / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true, but R is false. / A सत्य है, लेकिन R असत्य है।",
-        "d": "Both A and R are false. / A और R दोनों ही असत्य हैं।"
+        "a": "Both A and R are true, and R is the correct explanation of A.",
+        "b": "Both A and R are true, but R is not the correct explanation of A.",
+        "c": "A is true, but R is false.",
+        "d": "Both A and R are false."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nEvolutionarily, Pteridophytes are more advanced because they developed vascular systems (Xylem/Phloem) for terrestrial survival\n\n📖 हिंदी स्पष्टीकरण:\nविकासवादी रूप से, टेरिडोफाइटा अधिक उन्नत हैं क्योंकि उन्होंने स्थलीय उत्तरजीविता के लिए संवहनी तंत्र विकसित किया है।"
     },
     {
       "q_num": 21,
-      "question": "Match the following pairs: / निम्नलिखित जोड़ों का मिलान करें:\n 1. Monera - Bacteria / मोनेरा - बैक्टीरिया\n 2. Fungi - Mushroom / कवक - मशरूम\n 3. Algae - Spirogyra / शैवाल - स्पाइरोगाइरा\n Which of these are correctly matched? / इनमें से कौन सा सही सुमेलित है?",
+      "question": "Match the following pairs:",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2, and 3 / 1,2 और 3"
+        "a": "1 and 2",
+        "b": "2 and 3",
+        "c": "1 and 3",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll pairs are correct: Monera includes bacteria, Fungi includes mushrooms, and Algae includes Spirogyra\n\n📖 हिंदी स्पष्टीकरण:\nसभी जोड़े सही हैं: मोनेरा में बैक्टीरिया, कवक में मशरूम और शैवाल में स्पाइरोगाइरा शामिल हैं।"
     },
     {
       "q_num": 22,
-      "question": "Statement I: Carl Woese gave the 3-domain classification in 1990. / \n कथन I: कार्ल वोस ने 1990 में 3-डोमेन वर्गीकरण दिया था।\n Statement II: He divided the Kingdom Monera into Archaea and Bacteria. / \n कथन II: उन्होंने मोनेरा जगत को आर्किया और बैक्टीरिया में विभाजित किया।",
+      "question": "Statement I: Carl Woese gave the 3-domain classification in 1990.",
       "options": {
-        "a": "Statement I is correct, II is incorrect. / कथन I सही है, कथन II गलत है।",
-        "b": "Statement II is correct, I is incorrect. / कथन II सही है, कथन I गलत है।",
-        "c": "Both statements are correct. / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect. / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, II is incorrect.",
+        "b": "Statement II is correct, I is incorrect.",
+        "c": "Both statements are correct.",
+        "d": "Both statements are incorrect."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCarl Woese's 3-domain system split Monera into two domains (Archaea and Bacteria) and placed all eukaryotes in Eukarya\n\n📖 हिंदी स्पष्टीकरण:\nकार्ल वोस की 3-डोमेन प्रणाली ने मोनेरा को दो डोमेन (आर्किया और बैक्टीरिया) में विभाजित किया और सभी यूकेरियोट को यूकेरिया में रखा।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): All plants are multicellular eukaryotes. / \n अभिकथन (A): सभी पौधे बहुकोशिकीय यूकेरियोट्स हैं।\n Reason (R): They have cell walls primarily composed of chitin. /\n कारण (R): उनकी कोशिका भित्ति मुख्य रूप से काइटिन से बनी होती है।",
+      "question": "Assertion (A): All plants are multicellular eukaryotes.",
       "options": {
-        "a": "Both A and R are true. / A और R दोनों सही हैं।",
-        "b": "A is true, but R is false. / A सही है, लेकिन R गलत है।",
-        "c": "A is false, but R is true. / A गलत है, लेकिन R सही है।",
-        "d": "Both A and R are false. / A और R दोनों गलत हैं।"
+        "a": "Both A and R are true.",
+        "b": "A is true, but R is false.",
+        "c": "A is false, but R is true.",
+        "d": "Both A and R are false."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhile plants are multicellular eukaryotes, their cell walls are made of cellulose, not chitin (chitin is for fungi)\n\n📖 हिंदी स्पष्टीकरण:\nजबकि पौधे बहुकोशिकीय यूकेरियोट्स हैं, उनकी कोशिका भित्ति सेलूलोज़ से बनी होती है, काइटिन से नहीं।"
     },
     {
       "q_num": 24,
-      "question": "Consider these groups: 1. Algae, 2. Mosses, 3. Ferns. What is their correct evolutionary order? \n इन समूहों पर विचार करें: \n 1. शैवाल, 2. मॉस, 3. फर्न।\n इनका सही विकासवादी क्रम क्या है?",
+      "question": "Consider these groups: 1. Algae, 2. Mosses, 3. Ferns. What is their correct evolutionary order?",
       "options": {
         "a": "1 → 2 → 3",
         "b": "3 → 2 → 1",
@@ -294,12 +294,12 @@
     },
     {
       "q_num": 25,
-      "question": "Statement I: Cycas and Pinus are examples of Gymnosperms. / \n कथन I: साइकस और पाइनस अनावृतबीजी के उदाहरण हैं।\n Statement II: They produce seeds enclosed within fruits. / \n कथन II: ये फलों के भीतर बंद बीज पैदा करते हैं।",
+      "question": "Statement I: Cycas and Pinus are examples of Gymnosperms.",
       "options": {
-        "a": "Only Statement I is correct. / केवल कथन I सही है।",
-        "b": "Only Statement II is correct. / केवल कथन II सही है।",
-        "c": "Both statements are correct. / दोनों कथन सही हैं।",
-        "d": "Neither statement is correct. / दोनों में से कोई भी कथन सही नहीं है।"
+        "a": "Only Statement I is correct.",
+        "b": "Only Statement II is correct.",
+        "c": "Both statements are correct.",
+        "d": "Neither statement is correct."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCycas and Pinus are Gymnosperms, which means their seeds are naked and not enclosed in fruits\n\n📖 हिंदी स्पष्टीकरण:\nसाइकस और पाइनस अनावृतबीजी हैं, जिसका अर्थ है कि उनके बीज नग्न होते हैं और फलों में बंद नहीं होते हैं।"

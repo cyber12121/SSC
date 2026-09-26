@@ -6,300 +6,300 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "The Executive power of the Union shall vest in the President of India, as per which Article of the Constitution?\n संविधान के किस अनुच्छेद के अनुसार संघ की कार्यकारी शक्ति भारत के राष्ट्रपति में निहित होगी?",
+      "question": "The Executive power of the Union shall vest in the President of India, as per which Article of the Constitution?",
       "options": {
-        "a": "Article 52 / अनुच्छेद 52",
-        "b": "Article 53 / अनुच्छेद 53",
-        "c": "Article 54 / अनुच्छेद 54",
-        "d": "Article 55 / अनुच्छेद 55"
+        "a": "Article 52",
+        "b": "Article 53",
+        "c": "Article 54",
+        "d": "Article 55"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 53 states that the executive power of the Union shall be vested in the President and shall be exercised by him either directly or through officer’s subordinate to him in accordance with the Constitution. Article 52 simply states that there shall be a President of India\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 53 में कहा गया है कि संघ की कार्यकारी शक्ति राष्ट्रपति में निहित होगी और वह इसका प्रयोग संविधान के अनुसार सीधे या अपने अधीनस्थ अधिकारियों के माध्यम से करेंगे। अनुच्छेद 52 केवल यह बताता है कि भारत का एक राष्ट्रपति होगा।"
     },
     {
       "q_num": 2,
-      "question": "What is the minimum age required for a person to be eligible for election as the President of India?\n भारत के राष्ट्रपति के रूप में चुनाव के लिए पात्र होने हेतु किसी व्यक्ति के लिए आवश्यक न्यूनतम आयु क्या है?",
+      "question": "What is the minimum age required for a person to be eligible for election as the President of India?",
       "options": {
-        "a": "25 years / 25 वर्ष",
-        "b": "30 years / 30 वर्ष",
-        "c": "35 years / 35 वर्ष",
-        "d": "40 years / 40 वर्ष"
+        "a": "25 years",
+        "b": "30 years",
+        "c": "35 years",
+        "d": "40 years"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAs per Article 58, a person must have completed 35 years of age to be qualified for election as President. This is a common requirement for high constitutional offices in India, including the Vice-President\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 58 के अनुसार, राष्ट्रपति के रूप में चुनाव के लिए पात्र होने हेतु किसी व्यक्ति को 35 वर्ष की आयु पूरी करनी होगी। यह भारत में उपराष्ट्रपति सहित उच्च संवैधानिक पदों के लिए एक सामान्य आवश्यकता है।"
     },
     {
       "q_num": 3,
-      "question": "To whom does the President of India address his resignation?\n भारत के राष्ट्रपति अपना इस्तीफा किसे सौंपते हैं?",
+      "question": "To whom does the President of India address his resignation?",
       "options": {
-        "a": "The Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "b": "The Prime Minister / प्रधान मंत्री",
-        "c": "The Vice President / उपराष्ट्रपति",
-        "d": "The Speaker of Lok Sabha / लोकसभा अध्यक्ष"
+        "a": "The Chief Justice of India",
+        "b": "The Prime Minister",
+        "c": "The Vice President",
+        "d": "The Speaker of Lok Sabha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 56(1)(a) provides that the President may, by writing under his hand addressed to the Vice-President, resign his office. Conversely, the Vice-President addresses his resignation to the President\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 56(1)(क) में प्रावधान है कि राष्ट्रपति उपराष्ट्रपति को संबोधित अपने हस्ताक्षर सहित लेख द्वारा अपना पद त्याग सकते हैं। इसके विपरीत, उपराष्ट्रपति अपना इस्तीफा राष्ट्रपति को सौंपते हैं।"
     },
     {
       "q_num": 4,
-      "question": "The President's oath of office is administered by which authority?\n राष्ट्रपति के पद की शपथ किस प्राधिकारी द्वारा दिलाई जाती है?",
+      "question": "The President's oath of office is administered by which authority?",
       "options": {
-        "a": "The Vice President / उपराष्ट्रपति",
-        "b": "The Prime Minister / प्रधान मंत्री",
-        "c": "The Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "d": "The Attorney General / महान्यायवादी"
+        "a": "The Vice President",
+        "b": "The Prime Minister",
+        "c": "The Chief Justice of India",
+        "d": "The Attorney General"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 60 of the Constitution states that the President's oath is administered by the Chief Justice of India. In his absence, the oath is administered by the senior-most Judge of the Supreme Court available\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान का अनुच्छेद 60 यह प्रावधान करता है कि राष्ट्रपति को भारत के मुख्य न्यायाधीश द्वारा शपथ दिलाई जाएगी। उनकी अनुपस्थिति में, सर्वोच्च न्यायालय के उपलब्ध सबसे वरिष्ठ न्यायाधीश द्वारा शपथ दिलाई जाती है।"
     },
     {
       "q_num": 5,
-      "question": "The process of impeachment for the removal of the President of India is taken from the constitution of which country?\n भारत के राष्ट्रपति को पद से हटाने के लिए महाभियोग की प्रक्रिया किस देश के संविधान से ली गई है?",
+      "question": "The process of impeachment for the removal of the President of India is taken from the constitution of which country?",
       "options": {
-        "a": "United Kingdom / यूनाइटेड किंगडम",
-        "b": "Canada / कनाडा",
-        "c": "United States of America / संयुक्त राज्य अमेरिका",
-        "d": "Ireland / आयरलैंड"
+        "a": "United Kingdom",
+        "b": "Canada",
+        "c": "United States of America",
+        "d": "Ireland"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe procedure for the impeachment of the President, as laid down in Article 61, is inspired by the constitutional provisions of the United States. India has adopted this procedure to ensure accountability in the highest office\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 61 में निर्धारित राष्ट्रपति पर महाभियोग चलाने की प्रक्रिया संयुक्त राज्य अमेरिका के संवैधानिक प्रावधानों से प्रेरित है। भारत ने सर्वोच्च पद पर जवाबदेही सुनिश्चित करने के लिए इस प्रक्रिया को अपनाया है।"
     },
     {
       "q_num": 6,
-      "question": "Which Article of the Constitution deals with the 'Pardoning power' of the President of India?\n संविधान का कौन सा अनुच्छेद भारत के राष्ट्रपति की 'क्षमादान शक्ति' से संबंधित है?",
+      "question": "Which Article of the Constitution deals with the 'Pardoning power' of the President of India?",
       "options": {
-        "a": "Article 70 / अनुच्छेद 70",
-        "b": "Article 71 / अनुच्छेद 71",
-        "c": "Article 72 / अनुच्छेद 72",
-        "d": "Article 73 / अनुच्छेद 73"
+        "a": "Article 70",
+        "b": "Article 71",
+        "c": "Article 72",
+        "d": "Article 73"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 72 empowers the President to grant pardons, reprieves, respites, or remissions of punishment or to suspend, remit, or commute the sentence of any person convicted of any offense. This power is distinct from the Governor's pardoning power (Article 161)\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 72 राष्ट्रपति को किसी अपराध के लिए दोषी ठहराए गए किसी भी व्यक्ति की सजा को क्षमा करने, प्रविलंबन, राहत, या परिहार देने या निलंबित करने, कम करने या लघुकरण करने का अधिकार देता है। यह शक्ति राज्यपाल की क्षमादान शक्ति (अनुच्छेद 161) से अलग है।"
     },
     {
       "q_num": 7,
-      "question": "The Vice President of India is the ex-officio Chairman of which House of Parliament?\n भारत के उपराष्ट्रपति संसद के किस सदन के पदेन अध्यक्ष होते हैं?",
+      "question": "The Vice President of India is the ex-officio Chairman of which House of Parliament?",
       "options": {
-        "a": "Lok Sabha / लोकसभा",
-        "b": "Rajya Sabha / राज्य सभा",
-        "c": "State Legislative Assembly / राज्य विधान सभा",
-        "d": "None of the above / उपरोक्त में से कोई नहीं"
+        "a": "Lok Sabha",
+        "b": "Rajya Sabha",
+        "c": "State Legislative Assembly",
+        "d": "None of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 64 of the Constitution states that the Vice President shall be ex-officio Chairman of the Council of States (Rajya Sabha). This role gives the Vice President a key legislative function in addition to the executive one\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान का अनुच्छेद 64 यह प्रावधान करता है कि उपराष्ट्रपति राज्य सभा (राज्य परिषद्) के पदेन सभापति होंगे। यह भूमिका उपराष्ट्रपति को कार्यकारी कार्य के अलावा एक महत्वपूर्ण विधायी कार्य प्रदान करती है।"
     },
     {
       "q_num": 8,
-      "question": "What is the maximum period for which the Vice President can act as an Acting President?\n उपराष्ट्रपति अधिकतम कितनी अवधि के लिए कार्यवाहक राष्ट्रपति के रूप में कार्य कर सकते हैं?",
+      "question": "What is the maximum period for which the Vice President can act as an Acting President?",
       "options": {
-        "a": "3 months / 3 माह",
-        "b": "6 months / 6 माह",
-        "c": "9 months / 9 माह",
-        "d": "1 year / 1 वर्ष"
+        "a": "3 months",
+        "b": "6 months",
+        "c": "9 months",
+        "d": "1 year"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 62 mandates that an election to fill a vacancy in the office of the President shall be held as soon as possible and in no case later than six months from the date of the occurrence of the vacancy. The Vice President acts as the President during this period\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 62 यह अनिवार्य करता है कि राष्ट्रपति के पद में रिक्ति को भरने के लिए चुनाव जल्द से जल्द और रिक्ति की तारीख से छह महीने के भीतर आयोजित किया जाएगा। इस अवधि के दौरान उपराष्ट्रपति कार्यवाहक राष्ट्रपति के रूप में कार्य करते हैं।"
     },
     {
       "q_num": 9,
-      "question": "The Vice President is elected by an electoral college consisting of which members?\n उपराष्ट्रपति का चुनाव किस सदन के सदस्यों से मिलकर बने एक निर्वाचक मंडल द्वारा किया जाता है?",
+      "question": "The Vice President is elected by an electoral college consisting of which members?",
       "options": {
-        "a": "Elected members of both Houses of Parliament / संसद के दोनों सदनों के निर्वाचित सदस्य",
-        "b": "All members of both Houses of Parliament / संसद के दोनों सदनों के सभी सदस्य",
-        "c": "All elected members of Parliament and State Legislative Assemblies / संसद और राज्य विधान सभाओं के सभी निर्वाचित सदस्य",
-        "d": "Elected members of Parliament and elected members of State Legislative Councils / संसद के निर्वाचित सदस्य और राज्य विधान परिषदों के निर्वाचित सदस्य"
+        "a": "Elected members of both Houses of Parliament",
+        "b": "All members of both Houses of Parliament",
+        "c": "All elected members of Parliament and State Legislative Assemblies",
+        "d": "Elected members of Parliament and elected members of State Legislative Councils"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Vice President is elected by an electoral college consisting of all members (elected and nominated) of both the Lok Sabha and the Rajya Sabha. State Legislative Assembly members do not participate in this election\n\n📖 हिंदी स्पष्टीकरण:\nउपराष्ट्रपति का चुनाव लोकसभा और राज्यसभा दोनों के सभी सदस्यों (निर्वाचित और मनोनीत) से मिलकर बने एक निर्वाचक मंडल द्वारा किया जाता है। राज्य विधान सभा के सदस्य इस चुनाव में भाग नहीं लेते हैं।"
     },
     {
       "q_num": 10,
-      "question": "All doubts and disputes arising out of or in connection with the election of the President and Vice President are dealt with by which body?\n राष्ट्रपति और उपराष्ट्रपति के चुनाव से उत्पन्न या उसके संबंध में सभी संदेह और विवादों का निपटारा किस निकाय द्वारा किया जाता है?",
+      "question": "All doubts and disputes arising out of or in connection with the election of the President and Vice President are dealt with by which body?",
       "options": {
-        "a": "The Parliament / संसद",
-        "b": "The Election Commission of India / भारत का चुनाव आयोग",
-        "c": "The Supreme Court / सर्वोच्च न्यायालय",
-        "d": "A special tribunal formed by the President / राष्ट्रपति द्वारा गठित एक विशेष न्यायाधिकरण"
+        "a": "The Parliament",
+        "b": "The Election Commission of India",
+        "c": "The Supreme Court",
+        "d": "A special tribunal formed by the President"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 71 of the Constitution states that all doubts and disputes arising out of or in connection with the election of a President or Vice President shall be inquired into and decided by the Supreme Court. Its decision shall be final\n\n📖 हिंदी स्पष्टीकरण:\nसंविधान का अनुच्छेद 71 यह प्रावधान करता है कि राष्ट्रपति या उपराष्ट्रपति के चुनाव से उत्पन्न या उससे संबंधित सभी संदेहों और विवादों की जांच और निर्णय सर्वोच्च न्यायालय द्वारा किया जाएगा। इसका निर्णय अंतिम होगा।"
     },
     {
       "q_num": 11,
-      "question": "Which of the following statements is INCORRECT regarding the Electoral College for the election of the President of India?\n भारत के राष्ट्रपति के चुनाव के लिए निर्वाचक मंडल के संबंध में निम्नलिखित में से कौन सा कथन असत्य है?",
+      "question": "Which of the following statements is INCORRECT regarding the Electoral College for the election of the President of India?",
       "options": {
-        "a": "It consists of elected members of both the Lok Sabha and Rajya Sabha. / इसमें लोकसभा और राज्यसभा दोनों के निर्वाचित सदस्य शामिल होते हैं।",
-        "b": "It includes the elected members of the Legislative Assemblies (MLAs) of all States. / इसमें सभी राज्यों की विधान सभाओं (विधायकों) के निर्वाचित सदस्य शामिल होते हैं।",
-        "c": "Nominated members of Parliament do not take part in the election. / संसद के मनोनीत सदस्य चुनाव में भाग नहीं लेते हैं।",
-        "d": "The elected members of the State Legislative Councils (MLCs) also participate in the election. / राज्य विधान परिषदों (एमएलसी) के निर्वाचित सदस्य भी चुनाव में भाग लेते हैं।"
+        "a": "It consists of elected members of both the Lok Sabha and Rajya Sabha.",
+        "b": "It includes the elected members of the Legislative Assemblies (MLAs) of all States.",
+        "c": "Nominated members of Parliament do not take part in the election.",
+        "d": "The elected members of the State Legislative Councils (MLCs) also participate in the election."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe Legislative Council members (MLCs) are explicitly excluded from the electoral college due to the principle of uniformity in election and parity between the States. The college only includes elected members of the Parliament and the Legislative Assemblies of the States and Union Territories (Delhi and Puducherry)\n\n📖 हिंदी स्पष्टीकरण:\nविधान परिषद के सदस्यों (एमएलसी) को चुनाव में एकरूपता और राज्यों के बीच समानता के सिद्धांत के कारण निर्वाचक मंडल से स्पष्ट रूप से बाहर रखा गया है। निर्वाचक मंडल में केवल संसद के निर्वाचित सदस्य और राज्यों तथा केंद्र शासित प्रदेशों (दिल्ली और पुडुचेरी) की विधान सभाओं के निर्वाचित सदस्य शामिल होते हैं।"
     },
     {
       "q_num": 12,
-      "question": "Assertion (A): The President of India is the nominal head (de jure head) of the State.\n Reason (R): The Prime Minister and the Council of Ministers are the real head (de facto head) of the Executive.\n अभिकथन (A): भारत का राष्ट्रपति राज्य का नाममात्र प्रमुख (विधिवत मुखिया) होता है।\n कारण (R): प्रधान मंत्री और मंत्रिपरिषद कार्यपालिका के वास्तविक प्रमुख (वास्तविक मुखिया) होते हैं।",
+      "question": "Assertion (A): The President of India is the nominal head (de jure head) of the State.\n Reason (R): The Prime Minister and the Council of Ministers are the real head (de facto head) of the Executive.",
       "options": {
-        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A). / (A) और (R) दोनों सत्य हैं और (R), (A) का सही स्पष्टीकरण है।",
-        "b": "Both (A) and (R) are true but (R) is not the correct explanation of (A). / (A) और (R) दोनों सत्य हैं लेकिन (R), (A) का सही स्पष्टीकरण नहीं है।",
-        "c": "(A) is true but (R) is false. / (A) सत्य है लेकिन (R) असत्य है।",
-        "d": "(A) is false but (R) is true. / (A) असत्य है लेकिन (R) सत्य है।"
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+        "b": "Both (A) and (R) are true but (R) is not the correct explanation of (A).",
+        "c": "(A) is true but (R) is false.",
+        "d": "(A) is false but (R) is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAssertion (A) is correct because the President of India is the constitutional or nominal head (de jure head) of the state.\nReason (R) is correct because the Prime Minister and the Council of Ministers exercise the real executive powers (de facto head) in India's parliamentary system.\n(R) explains why the President is only a nominal head - because real executive power lies with the Council of Ministers headed by the Prime Minister. /\n(R), (A)\n\n📖 हिंदी स्पष्टीकरण:\nअभिकथन (A) सही है क्योंकि भारत का राष्ट्रपति संवैधानिक या नाममात्र का प्रमुख (विधिवत मुखिया) होता है।\nकारण (R) सही है क्योंकि प्रधानमंत्री और मंत्रिपरिषद भारत की संसदीय व्यवस्था में वास्तविक कार्यकारी शक्तियों का प्रयोग करते हैं।\nका सही स्पष्टीकरण देता है क्योंकि राष्ट्रपति के पास नाममात्र की शक्तियाँ हैं और वास्तविक कार्यकारी शक्ति प्रधानमंत्री के नेतृत्व वाली मंत्रिपरिषद के पास होती है।"
     },
     {
       "q_num": 13,
-      "question": "Which of the following statements are true regarding the impeachment procedure of the President of India (Article 61)?\n भारत के राष्ट्रपति पर महाभियोग की प्रक्रिया (अनुच्छेद 61) के संबंध में निम्नलिखित में से कौन से कथन सत्य हैं?\n 1. The resolution for impeachment can be initiated in either House of Parliament. / महाभियोग का प्रस्ताव संसद के किसी भी सदन में शुरू किया जा सकता है।\n 2. The charge must be signed by not less than one-fourth (1/4th) of the total members of the House. / आरोप पर सदन के कुल सदस्यों के एक-चौथाई (1/4) से कम सदस्यों के हस्ताक्षर नहीं होने चाहिए।\n 3. The resolution must be passed by a special majority (2/3rd of the total membership) of that House. / प्रस्ताव को उस सदन की विशेष बहुमत (कुल सदस्यता का 2/3) से पारित किया जाना चाहिए।\n 4. Elected members of the State Legislative Assemblies participate in the impeachment process. / राज्य विधान सभाओं के निर्वाचित सदस्य महाभियोग की प्रक्रिया में भाग लेते हैं।",
+      "question": "Which of the following statements are true regarding the impeachment procedure of the President of India (Article 61)?\n1. The resolution for impeachment can be initiated in either House of Parliament.\n2. The charge must be signed by not less than one-fourth (1/4th) of the total members of the House.\n3. The resolution must be passed by a special majority (2/3rd of the total membership) of that House.\n4. Elected members of the State Legislative Assemblies participate in the impeachment process.",
       "options": {
-        "a": "1, 2, and 4 only / केवल 1, 2 और 4",
-        "b": "2, 3, and 4 only / केवल 2, 3 और 4",
-        "c": "1, 2, and 3 only / केवल 1, 2 और 3",
-        "d": "1, 3, and 4 only / केवल 1, 3 और 4"
+        "a": "1, 2, and 4 only",
+        "b": "2, 3, and 4 only",
+        "c": "1, 2, and 3 only",
+        "d": "1, 3, and 4 only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatements 1, 2, and 3 are correct steps of the impeachment process. Statement 4 is incorrect because the elected members of the State Legislative Assemblies, though they participate in the President's election, do not participate in his impeachment. The impeachment process only involves all Members of Parliament\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1, 2 और 3 महाभियोग प्रक्रिया के सही चरण हैं। कथन 4 असत्य है क्योंकि राज्य विधान सभाओं के निर्वाचित सदस्य, हालांकि वे राष्ट्रपति के चुनाव में भाग लेते हैं, उनके महाभियोग में भाग नहीं लेते हैं। महाभियोग की प्रक्रिया में केवल संसद के सभी सदस्य शामिल होते हैं।"
     },
     {
       "q_num": 14,
-      "question": "Consider the President's pardoning powers. Which of the following pairs is correctly matched?\n राष्ट्रपति की क्षमादान शक्तियों पर विचार करें। निम्नलिखित में से कौन सा युग्म सही सुमेलित है?",
+      "question": "Consider the President's pardoning powers. Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Commute: To reduce the time period of the punishment, while the nature of the verdict stays the same. / लघुकरण: सजा की अवधि कम करना, जबकि निर्णय की प्रकृति वही रहती है।",
-        "b": "Remission: To replace one penalty form with another less rigid one. / परिहार: एक प्रकार की सज़ा को दूसरी कम कठोर सज़ा से बदलना।",
-        "c": "Respite: To reduce the punishment officially granted because of some specific reason (e.g., pregnancy). / विराम: किसी विशेष कारण (जैसे गर्भावस्था) से आधिकारिक तौर पर दी गई सजा को कम करना।",
-        "d": "Reprieve: Completely removes punishment and conviction. / प्रविलंबन: यह दंड और दोषसिद्धि को पूर्णतः समाप्त कर देता है।"
+        "a": "Commute: To reduce the time period of the punishment, while the nature of the verdict stays the same.",
+        "b": "Remission: To replace one penalty form with another less rigid one.",
+        "c": "Respite: To reduce the punishment officially granted because of some specific reason (e.g., pregnancy).",
+        "d": "Reprieve: Completely removes punishment and conviction."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\n'Respite' is the power to reduce the punishment based on special facts like the physical disability of a convict or pregnancy of a woman offender. The definition for 'Commute' and 'Remission' is swapped in the options; 'Reprieve' is the power to stay a death sentence temporarily. / '\n\n📖 हिंदी स्पष्टीकरण:\nविराम' किसी दोषी की शारीरिक अक्षमता या महिला अपराधी की गर्भावस्था जैसे विशेष तथ्यों के आधार पर सजा को कम करने की शक्ति है। 'लघुकरण' और 'परिहार' की परिभाषाएँ विकल्पों में आपस में बदल दी गई हैं; 'प्रविलंबन' मृत्युदंड को अस्थायी रूप से स्थगित करने की शक्ति है।"
     },
     {
       "q_num": 15,
-      "question": "What is the major point of difference between the Pardoning Power of the President (Article 72) and the Governor (Article 161)?\n राष्ट्रपति (अनुच्छेद 72) और राज्यपाल (अनुच्छेद 161) की क्षमादान शक्ति के बीच मुख्य अंतर क्या है?",
+      "question": "What is the major point of difference between the Pardoning Power of the President (Article 72) and the Governor (Article 161)?",
       "options": {
-        "a": "The President can grant pardon only in case of death sentence, while the Governor can grant pardon for all sentences. / राष्ट्रपति केवल मृत्युदंड के मामले में क्षमादान दे सकते हैं, जबकि राज्यपाल सभी सजाओं के लिए क्षमादान दे सकते हैं।",
-        "b": "The President's power extends to all Union laws, while the Governor's power extends only to union laws. / राष्ट्रपति की शक्ति सभी संघ कानूनों तक विस्तारित है, जबकि राज्यपाल की शक्ति केवल संघ कानूनों तक विस्तारित है।",
-        "c": "The President can pardon a death sentence and punishments by Court Martial, while the Governor cannot. / राष्ट्रपति मृत्युदंड और कोर्ट मार्शल द्वारा दी गई सजा को क्षमा कर सकते हैं, जबकि राज्यपाल नहीं कर सकते हैं।",
-        "d": "The Governor can pardon punishments by Court Martial, while the President cannot. / राज्यपाल कोर्ट मार्शल द्वारा दी गई सजा को क्षमा कर सकते हैं, जबकि राष्ट्रपति नहीं कर सकते हैं।"
+        "a": "The President can grant pardon only in case of death sentence, while the Governor can grant pardon for all sentences.",
+        "b": "The President's power extends to all Union laws, while the Governor's power extends only to union laws.",
+        "c": "The President can pardon a death sentence and punishments by Court Martial, while the Governor cannot.",
+        "d": "The Governor can pardon punishments by Court Martial, while the President cannot."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe President's power under Article 72 is broader as it extends to all cases involving punishment or sentence by Court Martial and all cases where the sentence is a sentence of death. The Governor's power under Article 161 does not extend to these two specific cases\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 72 के तहत राष्ट्रपति की शक्ति व्यापक है क्योंकि यह कोर्ट मार्शल द्वारा दंड या सजा से जुड़े सभी मामलों और उन सभी मामलों तक विस्तारित होती है जहां सजा मृत्युदंड है। अनुच्छेद 161 के तहत राज्यपाल की शक्ति इन दो विशिष्ट मामलों तक विस्तारित नहीं होती है।"
     },
     {
       "q_num": 16,
-      "question": "The resolution for the removal of the Vice-President of India can be initiated in which house of Parliament?\n भारत के उपराष्ट्रपति को हटाने का प्रस्ताव संसद के किस सदन में लाया जा सकता है?",
+      "question": "The resolution for the removal of the Vice-President of India can be initiated in which house of Parliament?",
       "options": {
-        "a": "Only in Rajya Sabha / केवल राज्य सभा में",
-        "b": "Only in Lok Sabha / केवल लोकसभा में",
-        "c": "Simultaneously in both Houses / दोनों सदनों में एक साथ",
-        "d": "First in Lok Sabha and then in Rajya Sabha / पहले लोकसभा में और फिर राज्यसभा में"
+        "a": "Only in Rajya Sabha",
+        "b": "Only in Lok Sabha",
+        "c": "Simultaneously in both Houses",
+        "d": "First in Lok Sabha and then in Rajya Sabha"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAs the Vice President is the ex-officio Chairman of the Rajya Sabha, the resolution for his removal can be initiated only in the Rajya Sabha. It must be passed by an effective majority there and then agreed to by the Lok Sabha by a simple majority\n\n📖 हिंदी स्पष्टीकरण:\nचूंकि उपराष्ट्रपति राज्यसभा के पदेन सभापति होते हैं, इसलिए उन्हें हटाने का प्रस्ताव केवल राज्यसभा में ही शुरू किया जा सकता है। इसे वहां प्रभावी बहुमत से पारित किया जाना चाहिए और फिर लोकसभा द्वारा साधारण बहुमत से सहमति व्यक्त की जानी चाहिए।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is NOT a condition of the President's office as specified in Article 59?\n निम्नलिखित में से कौन सा अनुच्छेद 59 में निर्दिष्ट राष्ट्रपति के पद की शर्त नहीं है?",
+      "question": "Which of the following is NOT a condition of the President's office as specified in Article 59?",
       "options": {
-        "a": "He/She should not hold any other office of profit. / उन्हें कोई अन्य लाभ का पद धारण नहीं करना चाहिए।",
-        "b": "He/She shall not be a member of either House of Parliament or a State Legislature. / वह संसद के किसी भी सदन या राज्य विधानमंडल का सदस्य नहीं होंगे।",
-        "c": "His/Her emoluments and allowances shall not be diminished during his term of office. / उनके कार्यकाल के दौरान उनके वेतन और भत्तों को कम नहीं किया जाएगा।",
-        "d": "He/She must be re-elected immediately after the completion of his/her five-year term. / उन्हें अपने पांच साल के कार्यकाल के पूरा होने के तुरंत बाद फिर से चुना जाना चाहिए।"
+        "a": "He/She should not hold any other office of profit.",
+        "b": "He/She shall not be a member of either House of Parliament or a State Legislature.",
+        "c": "His/Her emoluments and allowances shall not be diminished during his term of office.",
+        "d": "He/She must be re-elected immediately after the completion of his/her five-year term."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nRe-election (Art 57) is a provision, not a mandatory condition (Art 59) of office, and the completion of the term (Art 56) is a cause for a new election, which must be completed before the expiration of the term. The other options are explicit conditions under Article 59\n\n📖 हिंदी स्पष्टीकरण:\nपुनर्निर्वाचन (अनुच्छेद 57) एक प्रावधान है, पद का अनिवार्य शर्त (अनुच्छेद 59) नहीं है, और कार्यकाल की समाप्ति (अनुच्छेद 56) नए चुनाव का कारण बनती है, जिसे कार्यकाल समाप्त होने से पहले पूरा किया जाना चाहिए। अन्य विकल्प अनुच्छेद 59 के अंतर्गत स्पष्ट शर्तें हैं।"
     },
     {
       "q_num": 18,
-      "question": "The resolution for the removal of the Vice-President in the Rajya Sabha is required to be passed by which majority?\n राज्य सभा में उपराष्ट्रपति को पद से हटाने का प्रस्ताव किस बहुमत से पारित होना आवश्यक है?",
+      "question": "The resolution for the removal of the Vice-President in the Rajya Sabha is required to be passed by which majority?",
       "options": {
-        "a": "Simple Majority / साधारण बहुमत",
-        "b": "Special Majority (2/3rd of the members presents and voting) / विशेष बहुमत (उपस्थित और मतदान करने वाले सदस्यों का 2/3)",
-        "c": "Effective Majority (Majority of all the then members of the House) / प्रभावी बहुमत (सदन के तत्कालीन सभी सदस्यों का बहुमत)",
-        "d": "Absolute Majority (More than 50% of the total membership of the House) / पूर्ण बहुमत (सदन की कुल सदस्यता का 50% से अधिक)"
+        "a": "Simple Majority",
+        "b": "Special Majority (2/3rd of the members presents and voting)",
+        "c": "Effective Majority (Majority of all the then members of the House)",
+        "d": "Absolute Majority (More than 50% of the total membership of the House)"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe resolution for the removal of the Vice-President in the Rajya Sabha is required to be passed by an Effective Majority (more than 50% of the total then strength of the House, i.e., excluding vacancies). This is a higher requirement than a simple majority and applies only in the initiating house (Rajya Sabha)\n\n📖 हिंदी स्पष्टीकरण:\nउपराष्ट्रपति को पद से हटाने के लिए राज्यसभा में प्रस्ताव प्रभावी बहुमत (सदन की तत्कालीन कुल संख्या का 50% से अधिक, अर्थात रिक्तियों को छोड़कर) से पारित होना आवश्यक है। यह साधारण बहुमत से अधिक की आवश्यकता है और यह केवल आरंभ करने वाले सदन (राज्यसभा) में लागू होती है।"
     },
     {
       "q_num": 19,
-      "question": "Which category of members participate in the election of the President but NOT in the election of the Vice President?\n कौन सी श्रेणी के सदस्य राष्ट्रपति के चुनाव में भाग लेते है लेकिन उपराष्ट्रपति के चुनाव में नहीं?",
+      "question": "Which category of members participate in the election of the President but NOT in the election of the Vice President?",
       "options": {
-        "a": "Elected members of Lok Sabha / लोकसभा के निर्वाचित सदस्य",
-        "b": "Nominated members of Rajya Sabha / राज्यसभा के मनोनीत सदस्य",
-        "c": "Elected members of State Legislative Assemblies / राज्य विधान सभाओं के निर्वाचित सदस्य",
-        "d": "All members of Parliament / संसद के सभी सदस्य"
+        "a": "Elected members of Lok Sabha",
+        "b": "Nominated members of Rajya Sabha",
+        "c": "Elected members of State Legislative Assemblies",
+        "d": "All members of Parliament"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Electoral College for the President includes elected members of the State Legislative Assemblies, which are excluded from the Vice-President's election. The Vice-President's Electoral College is simpler, consisting only of all (elected and nominated) Members of Parliament\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति के लिए निर्वाचक मंडल में राज्य विधान सभाओं के निर्वाचित सदस्य शामिल होते हैं, जिन्हें उपराष्ट्रपति के चुनाव से बाहर रखा जाता है। उपराष्ट्रपति का निर्वाचक मंडल सरल है, जिसमें केवल संसद के सभी (निर्वाचित और मनोनीत) सदस्य शामिल होते हैं।"
     },
     {
       "q_num": 20,
-      "question": "If the election of a person as President or Vice President is declared void by the Supreme Court, what is the status of the acts done by him in performance of his duties before the date of the decision?\n यदि सर्वोच्च न्यायालय द्वारा किसी व्यक्ति का राष्ट्रपति या उपराष्ट्रपति के रूप में चुनाव शून्य घोषित कर दिया जाता है, तो निर्णय की तारीख से पहले उनके द्वारा अपने कर्तव्यों के निर्वहन में किए गए कार्यों की स्थिति क्या होती है?",
+      "question": "If the election of a person as President or Vice President is declared void by the Supreme Court, what is the status of the acts done by him in performance of his duties before the date of the decision?",
       "options": {
-        "a": "They shall be considered invalid. / उन्हें अमान्य माना जाएगा।",
-        "b": "They shall be considered valid. / उन्हें वैध माना जाएगा।",
-        "c": "Their validity will depend on the Parliament's review. / उनकी वैधता संसद की समीक्षा पर निर्भर करेगी।",
-        "d": "They are automatically reversed. / वे स्वतः ही उलट दिए जाएंगे।"
+        "a": "They shall be considered invalid.",
+        "b": "They shall be considered valid.",
+        "c": "Their validity will depend on the Parliament's review.",
+        "d": "They are automatically reversed."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 71(2) ensures that if a person's election as President or Vice President is declared void by the Supreme Court, the acts done by him in the performance of the powers and duties of his office on or before the date of the decision shall not be invalidated. This provision ensures the continuity and stability of the Union Executive\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 71(2) सुनिश्चित करता है कि यदि सर्वोच्च न्यायालय द्वारा किसी व्यक्ति का राष्ट्रपति या उपराष्ट्रपति के रूप में चुनाव शून्य घोषित किया जाता है, तो निर्णय की तारीख को या उससे पहले उनके द्वारा अपने पद की शक्तियों और कर्तव्यों के निर्वहन में किए गए कार्य अमान्य नहीं होंगे। यह प्रावधान संघ कार्यपालिका की निरंतरता और स्थिरता सुनिश्चित करता है।"
     },
     {
       "q_num": 21,
-      "question": "Regarding the re-election of the President, which statement correctly differentiates the provision in India from that in the USA?\n राष्ट्रपति के पुनर्निर्वाचन के संबंध में, कौन सा कथन भारत के प्रावधान को अमेरिका के प्रावधान से सही ढंग से अलग करता है?",
+      "question": "Regarding the re-election of the President, which statement correctly differentiates the provision in India from that in the USA?",
       "options": {
-        "a": "The Indian President can be re-elected for a maximum of two terms, similar to the USA President. / भारतीय राष्ट्रपति को अधिकतम दो कार्यकालों के लिए फिर से चुना जा सकता है, जो अमेरिकी राष्ट्रपति के समान है।",
-        "b": "The Indian President can be re-elected any number of times, while the USA President can serve for a maximum of two terms. / भारतीय राष्ट्रपति को कितनी भी बार फिर से चुना जा सकता है, जबकि अमेरिकी राष्ट्रपति अधिकतम दो कार्यकालों तक ही सेवा कर सकते हैं।",
-        "c": "Only a naturalized citizen can become President in India, whereas in the USA, only a natural-born citizen can. / भारत में केवल एक देशीयकृत नागरिक ही राष्ट्रपति बन सकता है, जबकि अमेरिका में केवल एक प्राकृतिक रूप से जन्मा नागरिक ही बन सकता है।",
-        "d": "Re-election is not permitted for the President of India, while it is permitted in the USA. / भारत के राष्ट्रपति के लिए पुनर्निर्वाचन की अनुमति नहीं है, जबकि अमेरिका में इसकी अनुमति है।"
+        "a": "The Indian President can be re-elected for a maximum of two terms, similar to the USA President.",
+        "b": "The Indian President can be re-elected any number of times, while the USA President can serve for a maximum of two terms.",
+        "c": "Only a naturalized citizen can become President in India, whereas in the USA, only a natural-born citizen can.",
+        "d": "Re-election is not permitted for the President of India, while it is permitted in the USA."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 57 of the Indian Constitution states that a person who holds, or who has held, office as President shall be eligible for re-election to that office any number of times. This contrasts with the US system, where a person can remain President for a maximum of two terms\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान का अनुच्छेद 57 कहता है कि जो व्यक्ति राष्ट्रपति के रूप में पद धारण करता है, या पद धारण कर चुका है, वह उस पद पर पुनर्निर्वाचन के लिए कितनी भी बार पात्र होगा। यह अमेरिकी प्रणाली के विपरीत है, जहां एक व्यक्ति अधिकतम दो कार्यकालों तक राष्ट्रपति रह सकता है।"
     },
     {
       "q_num": 22,
-      "question": "Which group of members participates in the impeachment of the President but is NOT part of the Electoral College for his election?\n सदस्यों का कौन सा समूह राष्ट्रपति के महाभियोग में भाग लेता है लेकिन उनके चुनाव के लिए निर्वाचक मंडल का हिस्सा नहीं होता है?",
+      "question": "Which group of members participates in the impeachment of the President but is NOT part of the Electoral College for his election?",
       "options": {
-        "a": "Elected members of State Legislative Assemblies / राज्य विधान सभाओं के निर्वाचित सदस्य",
-        "b": "Elected members of Rajya Sabha / राज्यसभा के निर्वाचित सदस्य",
-        "c": "Nominated Members of Parliament / संसद के मनोनीत सदस्य",
-        "d": "Chief Justice of India / भारत के मुख्य न्यायाधीश"
+        "a": "Elected members of State Legislative Assemblies",
+        "b": "Elected members of Rajya Sabha",
+        "c": "Nominated Members of Parliament",
+        "d": "Chief Justice of India"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nNominated Members of Parliament (Rajya Sabha and Lok Sabha) are excluded from the President's election (Article 54) to maintain the secular and non-partisan nature of the process. However, they participate fully in the impeachment proceedings (Article 61), as this is a quasi-judicial process meant to judge the 'violation of the Constitution'\n\n📖 हिंदी स्पष्टीकरण:\nसंसद के मनोनीत सदस्यों (राज्यसभा और लोकसभा) को प्रक्रिया की धर्मनिरपेक्ष और गैर-पक्षपातपूर्ण प्रकृति बनाए रखने के लिए राष्ट्रपति के चुनाव (अनुच्छेद 54) से बाहर रखा गया है। हालांकि, वे महाभियोग की कार्यवाही (अनुच्छेद 61) में पूरी तरह से भाग लेते हैं, क्योंकि यह 'संविधान के उल्लंघन' का न्याय करने के लिए एक अर्ध-न्यायिक प्रक्रिया है।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following is the correct definition for 'Reprieve' as a pardoning power of the President?\n राष्ट्रपति की क्षमादान शक्ति के रूप में 'प्रविलंबन' के लिए निम्नलिखित में से कौन सी परिभाषा सही है?",
+      "question": "Which of the following is the correct definition for 'Reprieve' as a pardoning power of the President?",
       "options": {
-        "a": "Removing both the punishment and the judgment entirely. / पूरी तरह से सज़ा और निर्णय दोनों को हटाना।",
-        "b": "Replacing one penalty form with another less rigid one. / एक प्रकार की सज़ा को दूसरी कम कठोर सज़ा से बदलना।",
-        "c": "Decreasing the time duration of the punishment, but the nature of the verdict stays the same. / सज़ा की अवधि कम करना, लेकिन निर्णय की प्रकृति वही रहती है।",
-        "d": "A stay of the enactment of a death penalty for a temporary duration. / अस्थायी अवधि के लिए मृत्युदंड के अधिनियमन पर रोक लगाना।"
+        "a": "Removing both the punishment and the judgment entirely.",
+        "b": "Replacing one penalty form with another less rigid one.",
+        "c": "Decreasing the time duration of the punishment, but the nature of the verdict stays the same.",
+        "d": "A stay of the enactment of a death penalty for a temporary duration."
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nReprieve means a temporary suspension of a death sentence. This power is used to give the convict time to seek a pardon or commutation from the President. The other options refer to Pardon, Commute, and Remission, respectively\n\n📖 हिंदी स्पष्टीकरण:\nप्रविलंबन का अर्थ है मृत्युदंड का अस्थायी निलंबन। इस शक्ति का उपयोग दोषी को राष्ट्रपति से क्षमा या लघुकरण की मांग करने के लिए समय देने के लिए किया जाता है। अन्य विकल्प क्रमशः क्षमा, लघुकरण और परिहार को संदर्भित करते हैं।"
     },
     {
       "q_num": 24,
-      "question": "In the event of a vacancy in the office of the President, who among the following acts as the President until a new President is elected, in the given order of precedence?\n राष्ट्रपति के पद में रिक्ति की स्थिति में, निम्नलिखित में से कौन, वरीयता के दिए गए क्रम में, एक नए राष्ट्रपति के चुने जाने तक राष्ट्रपति के रूप में कार्य करता है?",
+      "question": "In the event of a vacancy in the office of the President, who among the following acts as the President until a new President is elected, in the given order of precedence?",
       "options": {
-        "a": "Vice President, then Prime Minister, then Chief Justice of India / उपराष्ट्रपति, फिर प्रधान मंत्री, फिर भारत के मुख्य न्यायाधीश",
-        "b": "Vice President, then Chief Justice of India, then Senior-most Judge of the Supreme Court / उपराष्ट्रपति, फिर भारत के मुख्य न्यायाधीश, फिर सर्वोच्च न्यायालय के सबसे वरिष्ठ न्यायाधीश",
-        "c": "Prime Minister, then Chief Justice of India, then Vice President / प्रधान मंत्री, फिर भारत के मुख्य न्यायाधीश, फिर उपराष्ट्रपति",
-        "d": "Chief Justice of India, then Vice President, then Senior-most Judge / भारत के मुख्य न्यायाधीश, फिर उपराष्ट्रपति, फिर सबसे वरिष्ठ न्यायाधीश"
+        "a": "Vice President, then Prime Minister, then Chief Justice of India",
+        "b": "Vice President, then Chief Justice of India, then Senior-most Judge of the Supreme Court",
+        "c": "Prime Minister, then Chief Justice of India, then Vice President",
+        "d": "Chief Justice of India, then Vice President, then Senior-most Judge"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArticle 65 provides that the Vice President shall act as the President during a vacancy. If the Vice President's office is also vacant, the Chief Justice of India (CJI) acts as President. If the CJI's office is also vacant, the senior-most Judge of the Supreme Court acts as President\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 65 यह प्रावधान करता है कि रिक्ति के दौरान उपराष्ट्रपति राष्ट्रपति के रूप में कार्य करेंगे। यदि उपराष्ट्रपति का पद भी रिक्त है, तो भारत के मुख्य न्यायाधीश (CJI) राष्ट्रपति के रूप में कार्य करते हैं। यदि CJI का पद भी रिक्त है, तो सर्वोच्च न्यायालय के सबसे वरिष्ठ न्यायाधीश राष्ट्रपति के रूप में कार्य करते हैं।"
     },
     {
       "q_num": 25,
-      "question": "What is the correct formula for calculating the 'Electoral Quota' for the election of the President?\n राष्ट्रपति के चुनाव के लिए 'चुनावी कोटा' की गणना करने का सही सूत्र क्या है?",
+      "question": "What is the correct formula for calculating the 'Electoral Quota' for the election of the President?",
       "options": {
-        "a": "Total number of valid votes polled / (Vacancies + 1) / (कुल वैध मतों की संख्या) / (रिक्तियां + 1)",
-        "b": "Total number of valid votes polled / (Vacancies + 1) + 1 / (कुल वैध मतों की संख्या) / (रिक्तियां + 1) + 1",
-        "c": "Total number of votes cast / Total number of candidates + 1 / (डाले गए कुल मतों की संख्या) / (कुल उम्मीदवारों की संख्या + 1)",
-        "d": "Total value of votes of all MLAs / Total number of elected MPs / (सभी विधायकों के मतों का कुल मूल्य) / (निर्वाचित सांसदों की कुल संख्या)"
+        "a": "Total number of valid votes polled",
+        "b": "Total number of valid votes polled",
+        "c": "Total number of votes cast",
+        "d": "Total value of votes of all MLAs"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Electoral Quota formula is used to ensure the winning candidate secures an absolute majority of votes (more than 50% of the total valid votes). The formula is: Electoral Quota = (Total number of valid votes polled / (Vacancies + 1)) + 1. The number of vacancies is always one for the President's post, but the general formula is stated this way\n\n📖 हिंदी स्पष्टीकरण:\nचुनावी कोटा सूत्र का उपयोग यह सुनिश्चित करने के लिए किया जाता है कि विजयी उम्मीदवार मतों का पूर्ण बहुमत (कुल वैध मतों का 50% से अधिक) सुरक्षित करे। सूत्र है: चुनावी कोटा = (कुल वैध मतों की संख्या / (रिक्तियां + 1)) + 1। राष्ट्रपति पद के लिए रिक्तियों की संख्या हमेशा एक होती है, लेकिन सामान्य सूत्र इसी तरह बताया गया है।"

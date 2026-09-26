@@ -6,859 +6,859 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which of the following is an example of an exogenic geomorphic process?\n निम्नलिखित में से कौन-सी बाह्य भू-आकृतिक प्रक्रिया का उदाहरण है?",
+      "question": "Which of the following is an example of an exogenic geomorphic process?",
       "options": {
-        "a": "Volcanic eruption / ज्वालामुखी विस्फोट",
-        "b": "Earthquake / भूकंप",
-        "c": "Weathering / अपक्षय",
-        "d": "Mountain building / पर्वत निर्माण"
+        "a": "Volcanic eruption",
+        "b": "Earthquake",
+        "c": "Weathering",
+        "d": "Mountain building"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nExogenic processes originate from external forces like weathering, erosion, and deposition acting on the Earth’s surface.\n\n📖 हिंदी स्पष्टीकरण:\nबाह्य प्रक्रियाएँ पृथ्वी की सतह पर कार्य करने वाली बाहरी शक्तियों जैसे अपक्षय, अपरदन और निक्षेपण से उत्पन्न होती हैं।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is a necessary condition for condensation?\n संघनन के लिए आवश्यक शर्त क्या है?",
+      "question": "Which of the following is a necessary condition for condensation?",
       "options": {
-        "a": "High temperature / उच्च तापमान",
-        "b": "Cooling of air / वायु का ठंडा होना",
-        "c": "Low humidity / कम आर्द्रता",
-        "d": "High pressure / उच्च दाब"
+        "a": "High temperature",
+        "b": "Cooling of air",
+        "c": "Low humidity",
+        "d": "High pressure"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCondensation begins when air cools to its dew point and becomes saturated.\n\n📖 हिंदी स्पष्टीकरण:\nसंघनन तब शुरू होता है जब वायु ओसांक तक ठंडी होकर संतृप्त हो जाती है।"
     },
     {
       "q_num": 3,
-      "question": "The depositional feature formed at the foot of a mountain by a stream is:\n पहाड़ की तलहटी में धारा द्वारा बना निक्षेपण स्थलरूप कौन-सा है?",
+      "question": "The depositional feature formed at the foot of a mountain by a stream is:",
       "options": {
-        "a": "Delta / डेल्टा",
-        "b": "Alluvial fan / निक्षेप पंखा",
-        "c": "Oxbow lake / घोड़े की नाल झील",
-        "d": "Meander / मीयंडर"
+        "a": "Delta",
+        "b": "Alluvial fan",
+        "c": "Oxbow lake",
+        "d": "Meander"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAn alluvial fan forms where a stream loses velocity and deposits sediments at foothills.\n\n📖 हिंदी स्पष्टीकरण:\nजब धारा की वेग घट जाती है और वह तलहटी में निक्षेप करती है, तब निक्षेप पंखा बनता है।"
     },
     {
       "q_num": 4,
-      "question": "Consider the following statements regarding Cumulonimbus clouds:\n क्यूम्यूलोनिम्बस बादलों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are vertically developed clouds.\n ये ऊर्ध्वाधर रूप से विकसित बादल हैं।\n (b) They produce lightning, thunder, and heavy rainfall.\n ये बिजली, गर्जन और भारी वर्षा उत्पन्न करते हैं।\n (c) They are uniform grey clouds covering the entire sky.\n ये आकाश को ढकने वाले समान धूसर बादल होते हैं।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Cumulonimbus clouds:\n (a) They are vertically developed clouds.\n (b) They produce lightning, thunder, and heavy rainfall.\n (c) They are uniform grey clouds covering the entire sky.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCumulonimbus clouds produce storms and lightning but are not uniform grey clouds.\n\n📖 हिंदी स्पष्टीकरण:\nक्यूम्यूलोनिम्बस बादल तूफ़ान और बिजली उत्पन्न करते हैं लेकिन समान धूसर बादल नहीं होते।"
     },
     {
       "q_num": 5,
-      "question": "Consider the following statements regarding mechanical weathering:\n यांत्रिक अपक्षय के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It occurs due to chemical alteration of rocks. / यह चट्टानों के रासायनिक परिवर्तन के कारण होता है।\n (b) It involves the disintegration of rocks without any chemical change. / इसमें बिना किसी रासायनिक परिवर्तन के चट्टानों का विखंडन होता है।\n (c) It mainly occurs in humid regions. / यह मुख्यतः आर्द्र क्षेत्रों में होता है।\n Which of the above statements is/are correct? / उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding mechanical weathering:\n(a) It occurs due to chemical alteration of rocks.\n(b) It involves the disintegration of rocks without any chemical change.\n(c) It mainly occurs in humid regions.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "a and c / a और c",
-        "d": "b and c / b और c"
+        "a": "a only",
+        "b": "b only",
+        "c": "a and c",
+        "d": "b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMechanical weathering breaks rocks physically without altering their chemical composition.\n\n📖 हिंदी स्पष्टीकरण:\nयांत्रिक अपक्षय में चट्टानों का भौतिक रूप से विखंडन होता है, जबकि उनकी रासायनिक संरचना अपरिवर्तित रहती है।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following statements is correct about sleet?\n स्लीट के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements is correct about sleet?",
       "options": {
-        "a": "It is frozen rain / यह जमी हुई वर्षा है",
-        "b": "It is snow mixed with dust / यह धूल मिली बर्फ है",
-        "c": "It is condensed fog / यह संघनित कोहरा है",
-        "d": "It is dew / यह ओस है"
+        "a": "It is frozen rain",
+        "b": "It is snow mixed with dust",
+        "c": "It is condensed fog",
+        "d": "It is dew"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSleet consists of raindrops that freeze before reaching the ground.\n\n📖 हिंदी स्पष्टीकरण:\nस्लीट में वे वर्षाबिंदु होते हैं जो भूमि पर पहुँचने से पहले जम जाते हैं।"
     },
     {
       "q_num": 7,
-      "question": "The horizontal movement of air parallel to the Earth’s surface is called—\n पृथ्वी की सतह के समानांतर वायु की क्षैतिज गति को क्या कहा जाता है?",
+      "question": "The horizontal movement of air parallel to the Earth’s surface is called—",
       "options": {
-        "a": "Storm / तूफ़ान",
-        "b": "Wind / पवन",
-        "c": "Cyclone / चक्रवात",
-        "d": "Breeze / समीर"
+        "a": "Storm",
+        "b": "Wind",
+        "c": "Cyclone",
+        "d": "Breeze"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWind is the horizontal motion of air from high to low pressure areas.\n\n📖 हिंदी स्पष्टीकरण:\nपवन उच्च दबाव क्षेत्र से निम्न दबाव क्षेत्र की ओर वायु की क्षैतिज गति है।"
     },
     {
       "q_num": 8,
-      "question": "Which of the following is a depositional landform of river?\n नदी का निक्षेपण स्थलरूप कौन-सा है?",
+      "question": "Which of the following is a depositional landform of river?",
       "options": {
-        "a": "Gorge / गर्ज",
-        "b": "Canyon / कैन्यन",
-        "c": "Delta / डेल्टा",
-        "d": "Waterfall / जलप्रपात"
+        "a": "Gorge",
+        "b": "Canyon",
+        "c": "Delta",
+        "d": "Waterfall"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 9,
-      "question": "Which landform is formed by wind erosion in deserts?\n मरुस्थलों में पवन अपरदन से कौन-सा स्थलरूप बनता है?",
+      "question": "Which landform is formed by wind erosion in deserts?",
       "options": {
-        "a": "Mushroom rock / मशरूम शैल",
-        "b": "Delta / डेल्टा",
-        "c": "Drumlin / ड्रमलिन",
-        "d": "Alluvial fan / निक्षेप पंखा"
+        "a": "Mushroom rock",
+        "b": "Delta",
+        "c": "Drumlin",
+        "d": "Alluvial fan"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMushroom rocks form due to wind abrasion stronger near the ground.\n\n📖 हिंदी स्पष्टीकरण:\nमशरूम शैल पवन के निचले स्तर पर अधिक घर्षण से बनते हैं।"
     },
     {
       "q_num": 10,
-      "question": "Which of the following processes is endogenic in nature?\n निम्नलिखित में से कौन-सी प्रक्रिया अंतर्जात प्रकृति की है?",
+      "question": "Which of the following processes is endogenic in nature?",
       "options": {
-        "a": "Denudation / अभिक्षरण",
-        "b": "Erosion / अपरदन",
-        "c": "Earthquake / भूकंप",
-        "d": "Weathering / अपक्षय"
+        "a": "Denudation",
+        "b": "Erosion",
+        "c": "Earthquake",
+        "d": "Weathering"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEndogenic processes originate from within the Earth, such as volcanic activity and earthquakes.\n\n📖 हिंदी स्पष्टीकरण:\nअंतर्जात प्रक्रियाएँ पृथ्वी के भीतर से उत्पन्न होती हैं, जैसे ज्वालामुखी गतिविधि और भूकंप।"
     },
     {
       "q_num": 11,
-      "question": "The process by which ice directly changes into vapour is—\n जिस प्रक्रिया में बर्फ सीधे वाष्प में परिवर्तित हो जाती है, उसे क्या कहते हैं?",
+      "question": "The process by which ice directly changes into vapour is—",
       "options": {
-        "a": "Condensation / संघनन",
-        "b": "Sublimation / उत्क्रमण",
-        "c": "Deposition / निक्षेपण",
-        "d": "Evaporation / वाष्पीकरण"
+        "a": "Condensation",
+        "b": "Sublimation",
+        "c": "Deposition",
+        "d": "Evaporation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSublimation is the direct change of solid ice into vapour without becoming liquid.\n\n📖 हिंदी स्पष्टीकरण:\nउत्क्रमण वह प्रक्रिया है जिसमें ठोस बर्फ तरल बने बिना सीधे वाष्प में बदल जाती है।"
     },
     {
       "q_num": 12,
-      "question": "Which atmospheric layer contains the ozone layer?\n वायुमंडल की कौन-सी परत ओज़ोन परत को समेटे हुए है?",
+      "question": "Which atmospheric layer contains the ozone layer?",
       "options": {
-        "a": "Troposphere / क्षोभमंडल",
-        "b": "Stratosphere / समतापमंडल",
-        "c": "Mesosphere / मध्यमंडल",
-        "d": "Thermosphere / तापमंडल"
+        "a": "Troposphere",
+        "b": "Stratosphere",
+        "c": "Mesosphere",
+        "d": "Thermosphere"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe ozone layer lies mainly within the stratosphere between 15 – 35 km altitude.\n\n📖 हिंदी स्पष्टीकरण:\nओज़ोन परत मुख्यतः समतापमंडल में 15 से 35 किमी ऊँचाई के बीच स्थित होती है।"
     },
     {
       "q_num": 13,
-      "question": "The process of wearing down of land surface by different agents is known as:\n विभिन्न कारकों द्वारा भूमि सतह को घिसने की प्रक्रिया को क्या कहा जाता है?",
+      "question": "The process of wearing down of land surface by different agents is known as:",
       "options": {
-        "a": "Erosion / अपरदन",
-        "b": "Deposition / निक्षेपण",
-        "c": "Diastrophism / भू-विकृति",
-        "d": "Volcanism / ज्वालामुखीयता"
+        "a": "Erosion",
+        "b": "Deposition",
+        "c": "Diastrophism",
+        "d": "Volcanism"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe wearing away of land surface by running water, wind, or glaciers is called erosion.\n\n📖 हिंदी स्पष्टीकरण:\nनदियों, हवा या हिमनदों द्वारा भूमि की सतह के घिसने की प्रक्रिया अपरदन कहलाती है।"
     },
     {
       "q_num": 14,
-      "question": "Drizzle refers to—\n फुहार से तात्पर्य है—",
+      "question": "Drizzle refers to—",
       "options": {
-        "a": "Heavy rainfall / तेज वर्षा",
-        "b": "Light rain with small droplets / सूक्ष्म बूंदों वाली हल्की वर्षा",
-        "c": "Rain mixed with snow / बर्फ मिली वर्षा",
-        "d": "Rain with hail / ओलों वाली वर्षा"
+        "a": "Heavy rainfall",
+        "b": "Light rain with small droplets",
+        "c": "Rain mixed with snow",
+        "d": "Rain with hail"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDrizzle consists of very small, uniform droplets producing light rain.\n\n📖 हिंदी स्पष्टीकरण:\nफुहार बहुत सूक्ष्म एवं समान बूंदों वाली हल्की वर्षा होती है।"
     },
     {
       "q_num": 15,
-      "question": "Which one of the following is an erosional coastal landform?\n निम्नलिखित में से कौन-सा तटीय अपरदनी स्थलरूप है?",
+      "question": "Which one of the following is an erosional coastal landform?",
       "options": {
-        "a": "Beach / समुद्र तट",
-        "b": "Spit / थूक",
-        "c": "Cliff / खड़ी चट्टान",
-        "d": "Lagoon / लैगून"
+        "a": "Beach",
+        "b": "Spit",
+        "c": "Cliff",
+        "d": "Lagoon"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCliffs are steep rock faces formed by marine wave erosion along coasts.\n\n📖 हिंदी स्पष्टीकरण:\nखड़ी चट्टानें समुद्री लहरों के अपरदन से बनती हैं।"
     },
     {
       "q_num": 16,
-      "question": "The instrument used to measure wind speed is—\n वायु की गति मापने के लिए किस यंत्र का उपयोग किया जाता है?",
+      "question": "The instrument used to measure wind speed is—",
       "options": {
-        "a": "Hygrometer / आर्द्रतामापी",
-        "b": "Anemometer / पवनवेगमापी",
-        "c": "Barometer / वायुदाबमापी",
-        "d": "Wind vane / पवनदर्शक"
+        "a": "Hygrometer",
+        "b": "Anemometer",
+        "c": "Barometer",
+        "d": "Wind vane"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAn anemometer measures wind velocity and direction in meteorology.\n\n📖 हिंदी स्पष्टीकरण:\nपवनवेगमापी वायु की गति और दिशा को मापने के लिए प्रयुक्त होता है।"
     },
     {
       "q_num": 17,
-      "question": "Which one of the following statements about the troposphere is correct?\n क्षोभमंडल के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which one of the following statements about the troposphere is correct?",
       "options": {
-        "a": "Temperature increases with height. / ऊँचाई के साथ तापमान बढ़ता है।",
-        "b": "Weather phenomena occur here. / मौसम संबंधी घटनाएँ यहाँ घटित होती हैं।",
-        "c": "It lies above the thermosphere. / यह तापमंडल के ऊपर स्थित है।",
-        "d": "It contains auroras. / इसमें ऑरोरा पाए जाते हैं।"
+        "a": "Temperature increases with height.",
+        "b": "Weather phenomena occur here.",
+        "c": "It lies above the thermosphere.",
+        "d": "It contains auroras."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAll weather events like rain, storms, and winds occur in the troposphere.\n\n📖 हिंदी स्पष्टीकरण:\nवर्षा, आँधी, बादल जैसी सभी मौसम घटनाएँ क्षोभमंडल में घटित होती हैं।"
     },
     {
       "q_num": 18,
-      "question": "Winds move from—\n वायु प्रवाहित होती है—",
+      "question": "Winds move from—",
       "options": {
-        "a": "High to low pressure / उच्च से निम्न दाब की ओर",
-        "b": "Low to high pressure / निम्न से उच्च दाब की ओर",
-        "c": "West to east always / सदैव पश्चिम से पूर्व की ओर",
-        "d": "Poles to equator only / केवल ध्रुवों से भूमध्य रेखा की ओर"
+        "a": "High to low pressure",
+        "b": "Low to high pressure",
+        "c": "West to east always",
+        "d": "Poles to equator only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nPressure gradient drives air from high pressure to low pressure regions.\n\n📖 हिंदी स्पष्टीकरण:\nदाब प्रवणता के कारण वायु उच्च दाब क्षेत्र से निम्न दाब क्षेत्र की ओर प्रवाहित होती है।"
     },
     {
       "q_num": 19,
-      "question": "Identify the depositional feature formed by glaciers:\n हिमनदों द्वारा निर्मित निक्षेपण स्थलरूप की पहचान करें:",
+      "question": "Identify the depositional feature formed by glaciers:",
       "options": {
-        "a": "Esker / एस्कर",
-        "b": "Cirque / सर्क",
-        "c": "Arete / एरिट",
-        "d": "Horn / हॉर्न"
+        "a": "Esker",
+        "b": "Cirque",
+        "c": "Arete",
+        "d": "Horn"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nEskers are long ridges of sand and gravel deposited by melt-water streams under glaciers.\n\n📖 हिंदी स्पष्टीकरण:\nएस्कर पिघलते हिमनदों के नीचे बहने वाली धाराओं द्वारा जमा रेत-कंकड़ की लंबी रिज होती हैं।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following statements about hailstones is correct?\n ओलों के बारे में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about hailstones is correct?",
       "options": {
-        "a": "They form in stratus clouds / ये स्तरीय बादलों में बनते हैं",
-        "b": "They form in cumulonimbus clouds / ये क्यूम्यूलोनिंबस बादलों में बनते हैं",
-        "c": "They form only at sea level / ये केवल समुद्र तल पर बनते हैं",
-        "d": "They are made of dust / ये धूल से बने होते हैं"
+        "a": "They form in stratus clouds",
+        "b": "They form in cumulonimbus clouds",
+        "c": "They form only at sea level",
+        "d": "They are made of dust"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHailstones form in cumulonimbus clouds where strong updrafts freeze water droplets.\n\n📖 हिंदी स्पष्टीकरण:\nओले क्यूम्यूलोनिंबस बादलों में बनते हैं जहाँ प्रबल ऊर्ध्व प्रवाह जलबिंदुओं को जमाता है।"
     },
     {
       "q_num": 21,
-      "question": "The upper boundary of the troposphere is known as:\n क्षोभमंडल की ऊपरी सीमा को क्या कहा जाता है?",
+      "question": "The upper boundary of the troposphere is known as:",
       "options": {
-        "a": "Tropopause / क्षोभ विराम",
-        "b": "Stratopause / समताप विराम",
-        "c": "Mesopause / मध्यमंडल विराम",
-        "d": "Ionosphere / आयनमंडल"
+        "a": "Tropopause",
+        "b": "Stratopause",
+        "c": "Mesopause",
+        "d": "Ionosphere"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe boundary separating the troposphere and stratosphere is called the tropopause.\n\n📖 हिंदी स्पष्टीकरण:\nक्षोभमंडल और समतापमंडल के बीच की सीमा को क्षोभ विराम कहा जाता है।"
     },
     {
       "q_num": 22,
-      "question": "The Coriolis force causes wind to deflect—\n कोरिओलिस बल वायु को किस दिशा में विचलित करता है?",
+      "question": "The Coriolis force causes wind to deflect—",
       "options": {
-        "a": "Left in Northern Hemisphere / उत्तरी गोलार्द्ध में बाईं ओर",
-        "b": "Right in Northern Hemisphere / उत्तरी गोलार्द्ध में दाईं ओर",
-        "c": "Northward / उत्तर की ओर",
-        "d": "Southward / दक्षिण की ओर"
+        "a": "Left in Northern Hemisphere",
+        "b": "Right in Northern Hemisphere",
+        "c": "Northward",
+        "d": "Southward"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDue to Earth’s rotation, Coriolis force deflects wind to the right in the Northern Hemisphere.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी के घूर्णन के कारण कोरिओलिस बल वायु को उत्तरी गोलार्द्ध में दाईं ओर मोड़ देता है।"
     },
     {
       "q_num": 23,
-      "question": "Inselbergs are typical features of which region?\n इन्सेलबर्ग किस क्षेत्र की विशिष्ट स्थलरूप हैं?",
+      "question": "Inselbergs are typical features of which region?",
       "options": {
-        "a": "Glacial / हिमनदी",
-        "b": "Arid / शुष्क",
-        "c": "Fluvial / नदीय",
-        "d": "Karst / कार्स्ट"
+        "a": "Glacial",
+        "b": "Arid",
+        "c": "Fluvial",
+        "d": "Karst"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nInselbergs are isolated residual hills found in arid and semi-arid regions.\n\n📖 हिंदी स्पष्टीकरण:\nइन्सेलबर्ग शुष्क एवं अर्ध-शुष्क क्षेत्रों में पाई जाने वाली एकाकी अवशिष्ट पहाड़ियाँ हैं।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following is not an agent of gradation?\n निम्नलिखित में से कौन-सा श्रेणीकरण का कारक नहीं है?",
+      "question": "Which of the following is not an agent of gradation?",
       "options": {
-        "a": "River / नदी",
-        "b": "Wind / पवन",
-        "c": "Volcano / ज्वालामुखी",
-        "d": "Glacier / हिमनद"
+        "a": "River",
+        "b": "Wind",
+        "c": "Volcano",
+        "d": "Glacier"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVolcano is an endogenic agent that builds landforms, not one that levels or grades the surface.\n\n📖 हिंदी स्पष्टीकरण:\nज्वालामुखी एक अंतर्जात कारक है जो स्थलरूपों का निर्माण करता है, न कि सतह को समतल करता है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following gases is a greenhouse gas?\n निम्नलिखित में से कौन-सी गैस एक ग्रीनहाउस गैस है?",
+      "question": "Which of the following gases is a greenhouse gas?",
       "options": {
-        "a": "Nitrogen / नाइट्रोजन",
-        "b": "Oxygen / ऑक्सीजन",
-        "c": "Methane / मीथेन",
-        "d": "Argon / आर्गन"
+        "a": "Nitrogen",
+        "b": "Oxygen",
+        "c": "Methane",
+        "d": "Argon"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMethane traps outgoing infrared radiation and contributes to the greenhouse effect.\n\n📖 हिंदी स्पष्टीकरण:\nमीथेन अवरक्त विकिरण को रोककर ग्रीनहाउस प्रभाव में योगदान देती है।"
     },
     {
       "q_num": 26,
-      "question": "Which atmospheric layer helps in radio communication?\n वायुमंडल की कौन-सी परत रेडियो संचार में सहायता करती है?",
+      "question": "Which atmospheric layer helps in radio communication?",
       "options": {
-        "a": "Troposphere / क्षोभमंडल",
-        "b": "Stratosphere / समतापमंडल",
-        "c": "Mesosphere / मध्यमंडल",
-        "d": "Ionosphere / आयनमंडल"
+        "a": "Troposphere",
+        "b": "Stratosphere",
+        "c": "Mesosphere",
+        "d": "Ionosphere"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nThe ionosphere reflects radio waves back to Earth, enabling long-distance communication.\n\n📖 हिंदी स्पष्टीकरण:\nआयनमंडल रेडियो तरंगों को वापस पृथ्वी की ओर परावर्तित करता है, जिससे दूरस्थ संचार संभव होता है।"
     },
     {
       "q_num": 27,
-      "question": "Consider the following statements regarding Stratus clouds:\n स्ट्रैटस बादलों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are low, grey, uniform clouds.\n ये निम्न, धूसर, समान बादल हैं।\n (b) They often produce drizzle or light rain.\n ये अक्सर बूंदाबांदी या हल्की वर्षा करते हैं।\n (c) They are high-altitude, wispy clouds.\n ये उच्च-ऊँचाई वाले रेशेदार बादल हैं।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Stratus clouds:\n (a) They are low, grey, uniform clouds.\n (b) They often produce drizzle or light rain.\n (c) They are high-altitude, wispy clouds.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStratus clouds are low-level, grey clouds that bring light rain or drizzle.\n\n📖 हिंदी स्पष्टीकरण:\nस्ट्रैटस बादल निम्न-स्तरीय धूसर बादल हैं जो हल्की वर्षा या बूंदाबांदी करते हैं।"
     },
     {
       "q_num": 28,
-      "question": "Which of the following landforms indicates the maturity stage of a river?\n नदी के परिपक्व चरण का संकेत देने वाला स्थलरूप कौन-सा है?",
+      "question": "Which of the following landforms indicates the maturity stage of a river?",
       "options": {
-        "a": "Gorge / गर्ज",
-        "b": "Meander / मीयंडर",
-        "c": "Delta / डेल्टा",
-        "d": "Waterfall / जलप्रपात"
+        "a": "Gorge",
+        "b": "Meander",
+        "c": "Delta",
+        "d": "Waterfall"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMeanders develop when vertical erosion decreases and lateral erosion dominates.\n\n📖 हिंदी स्पष्टीकरण:\nमीयंडर तब बनते हैं जब ऊर्ध्वाधर अपरदन घटता है और पार्श्व अपरदन बढ़ता है।"
     },
     {
       "q_num": 29,
-      "question": "The planetary wind blowing between 30° N and 60° N is known as—\n 30° उ. अ. से 60° उ. अ. के बीच बहने वाली ग्रह पवन कहलाती है—",
+      "question": "The planetary wind blowing between 30° N and 60° N is known as—",
       "options": {
-        "a": "Trade wind / व्यापारिक पवन",
-        "b": "Westerlies / पश्‍चिमी पवन",
-        "c": "Polar wind / ध्रुवीय पवन",
-        "d": "Easterlies / पूर्वी पवन"
+        "a": "Trade wind",
+        "b": "Westerlies",
+        "c": "Polar wind",
+        "d": "Easterlies"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWesterlies blow from subtropical high to sub-polar low between 30° and 60° latitudes.\n\n📖 हिंदी स्पष्टीकरण:\nपश्‍चिमी पवनें 30° से 60° अक्षांशों के बीच उपोष्ण उच्च दाब से उपध्रुवीय निम्न दाब की ओर बहती हैं।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following types of rainfall occurs due to heating of land surface?\n निम्नलिखित में से किस प्रकार की वर्षा भूमि की सतह के गर्म होने के कारण होती है?",
+      "question": "Which of the following types of rainfall occurs due to heating of land surface?",
       "options": {
-        "a": "Cyclonic rainfall / चक्रवाती वर्षा",
-        "b": "Convectional rainfall / संवहनात्मक वर्षा",
-        "c": "Orographic rainfall / पर्वतीय वर्षा",
-        "d": "Frontal rainfall / मोर्चीय वर्षा"
+        "a": "Cyclonic rainfall",
+        "b": "Convectional rainfall",
+        "c": "Orographic rainfall",
+        "d": "Frontal rainfall"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nConvectional rainfall results from the vertical ascent of warm moist air due to surface heating.\n\n📖 हिंदी स्पष्टीकरण:\nसंवहनात्मक वर्षा गर्म आर्द्र वायु के ऊर्ध्वगमन से होती है जो भूमि की ऊष्मा से प्रेरित होती है।"
     },
     {
       "q_num": 31,
-      "question": "Exogenic processes derive their energy from which of the following?\n बाह्य प्रक्रियाएँ अपनी ऊर्जा निम्नलिखित में से किससे प्राप्त करती हैं?",
+      "question": "Exogenic processes derive their energy from which of the following?",
       "options": {
-        "a": "Earth’s interior / पृथ्वी का आंतरिक भाग",
-        "b": "Sun / सूर्य",
-        "c": "Ocean tides / महासागरीय ज्वार",
-        "d": "Earth’s rotation / पृथ्वी का घूर्णन"
+        "a": "Earth’s interior",
+        "b": "Sun",
+        "c": "Ocean tides",
+        "d": "Earth’s rotation"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nExogenic processes are driven by solar energy, which powers weathering, erosion, and deposition.\n\n📖 हिंदी स्पष्टीकरण:\nबाह्य प्रक्रियाएँ सौर ऊर्जा द्वारा संचालित होती हैं जो अपक्षय, अपरदन और निक्षेपण का कारण बनती है।"
     },
     {
       "q_num": 32,
-      "question": "Which of the following is a local wind?\n निम्नलिखित में से कौन-सी स्थानीय पवन है?",
+      "question": "Which of the following is a local wind?",
       "options": {
-        "a": "Trade wind / व्यापारिक पवन",
-        "b": "Westerlies / पश्‍चिमी पवन",
-        "c": "Loo / लू",
-        "d": "Polar easterlies / ध्रुवीय पूर्वी पवन"
+        "a": "Trade wind",
+        "b": "Westerlies",
+        "c": "Loo",
+        "d": "Polar easterlies"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLoo’ is a hot, dry summer wind blowing over northwestern India.\n\n📖 हिंदी स्पष्टीकरण:\n‘लू’ उत्तर-पश्चिम भारत में गर्मियों में चलने वाली शुष्क गर्म स्थानीय पवन है।"
     },
     {
       "q_num": 33,
-      "question": "Which layer of the atmosphere shows temperature inversion with altitude?\n वायुमंडल की कौन-सी परत ऊँचाई के साथ तापमान वृद्धि दर्शाती है?",
+      "question": "Which layer of the atmosphere shows temperature inversion with altitude?",
       "options": {
-        "a": "Troposphere / क्षोभमंडल",
-        "b": "Stratosphere / समतापमंडल",
-        "c": "Mesosphere / मध्यमंडल",
-        "d": "Exosphere / बहिर्मंडल"
+        "a": "Troposphere",
+        "b": "Stratosphere",
+        "c": "Mesosphere",
+        "d": "Exosphere"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn the stratosphere, temperature increases with height due to ozone absorption of UV rays.\n\n📖 हिंदी स्पष्टीकरण:\nसमतापमंडल में ओज़ोन द्वारा पराबैंगनी किरणों के अवशोषण के कारण ऊँचाई के साथ तापमान बढ़ता है।"
     },
     {
       "q_num": 34,
-      "question": "The temperature at which air becomes saturated is called—\n वह तापमान जिस पर वायु संतृप्त हो जाती है, कहलाता है—",
+      "question": "The temperature at which air becomes saturated is called—",
       "options": {
-        "a": "Dew point / ओसांक",
-        "b": "Condensation level / संघनन स्तर",
-        "c": "Freezing point / हिमांक",
-        "d": "Lapse rate / ताप घट दर"
+        "a": "Dew point",
+        "b": "Condensation level",
+        "c": "Freezing point",
+        "d": "Lapse rate"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDew point is the temperature when air’s moisture content reaches saturation.\n\n📖 हिंदी स्पष्टीकरण:\nओसांक वह तापमान है जब वायु में उपस्थित नमी संतृप्ति तक पहुँच जाती है।"
     },
     {
       "q_num": 35,
-      "question": "Which of the following features is associated with groundwater deposition?\n निम्नलिखित में से कौन-सा स्थलरूप भूजल निक्षेपण से जुड़ा है?",
+      "question": "Which of the following features is associated with groundwater deposition?",
       "options": {
-        "a": "Delta / डेल्टा",
-        "b": "Stalactite / स्टैलैक्टाइट",
-        "c": "Cirque / सर्क",
-        "d": "Yardang / यार्डांग"
+        "a": "Delta",
+        "b": "Stalactite",
+        "c": "Cirque",
+        "d": "Yardang"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStalactites hang from cave roofs due to calcium carbonate deposition from dripping water.\n\n📖 हिंदी स्पष्टीकरण:\nस्टैलैक्टाइट गुफा की छत से लटकते हैं और टपकते जल में घुले कैल्शियम कार्बोनेट के निक्षेपण से बनते हैं।"
     },
     {
       "q_num": 36,
-      "question": "Which one of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "question": "Which one of the following pairs is correctly matched?",
       "options": {
-        "a": "Earthquake – Exogenic process / भूकंप – बाह्य प्रक्रिया",
-        "b": "Weathering – Endogenic process / अपक्षय – अंतर्जात प्रक्रिया",
-        "c": "Folding – Endogenic process / मोचन – अंतर्जात प्रक्रिया",
-        "d": "River erosion – Endogenic process / नदी अपरदन – अंतर्जात प्रक्रिया"
+        "a": "Earthquake – Exogenic process",
+        "b": "Weathering – Endogenic process",
+        "c": "Folding – Endogenic process",
+        "d": "River erosion – Endogenic process"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nFolding occurs due to forces within the Earth’s crust, hence it is endogenic.\n\n📖 हिंदी स्पष्टीकरण:\nमोचन पृथ्वी की पपड़ी के भीतर की शक्तियों से होता है, इसलिए यह अंतर्जात प्रक्रिया है।"
     },
     {
       "q_num": 37,
-      "question": "The Doldrums are characterized by—\n ‘डोलड्रम्स’ की विशेषता है—",
+      "question": "The Doldrums are characterized by—",
       "options": {
-        "a": "Calm and light variable winds / शांत और परिवर्तनीय मंद पवनें",
-        "b": "Strong trade winds / प्रबल व्यापारिक पवनें",
-        "c": "Constant storms / लगातार तूफ़ान",
-        "d": "Polar blizzards / ध्रुवीय बर्फ़ीले तूफ़ान"
+        "a": "Calm and light variable winds",
+        "b": "Strong trade winds",
+        "c": "Constant storms",
+        "d": "Polar blizzards"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe equatorial region (5° N–5° S) has calm air with weak, variable winds known as Doldrums.\n\n📖 हिंदी स्पष्टीकरण:\nभूमध्यरेखीय क्षेत्र (5° उ. अ.–5° द. अ.) में शांत एवं परिवर्तनीय मंद पवनें पाई जाती हैं जिन्हें डोलड्रम्स कहा जाता है।"
     },
     {
       "q_num": 38,
-      "question": "Monsoon winds are—\n मानसून पवनें हैं—",
+      "question": "Monsoon winds are—",
       "options": {
-        "a": "Periodic winds / आवधिक पवनें",
-        "b": "Permanent winds / स्थायी पवनें",
-        "c": "Local winds / स्थानीय पवनें",
-        "d": "Trade winds / व्यापारिक पवनें"
+        "a": "Periodic winds",
+        "b": "Permanent winds",
+        "c": "Local winds",
+        "d": "Trade winds"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMonsoons reverse direction seasonally, hence called periodic winds.\n\n📖 हिंदी स्पष्टीकरण:\nमानसून मौसमी रूप से दिशा बदलती हैं, इसलिए इन्हें आवधिक पवनें कहा जाता है।"
     },
     {
       "q_num": 39,
-      "question": "Which of the following is not a type of weathering?\n निम्नलिखित में से कौन-सा अपक्षय का प्रकार नहीं है?",
+      "question": "Which of the following is not a type of weathering?",
       "options": {
-        "a": "Physical / भौतिक",
-        "b": "Chemical / रासायनिक",
-        "c": "Biological / जैविक",
-        "d": "Structural / संरचनात्मक"
+        "a": "Physical",
+        "b": "Chemical",
+        "c": "Biological",
+        "d": "Structural"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nStructural weathering is not recognized; weathering types are physical, chemical, and biological.\n\n📖 हिंदी स्पष्टीकरण:\nसंरचनात्मक अपक्षय कोई स्वीकृत प्रकार नहीं है; प्रमुख प्रकार भौतिक, रासायनिक और जैविक हैं।"
     },
     {
       "q_num": 40,
-      "question": "A narrow ridge between two glacial valleys is called:\n दो हिमनदी घाटियों के बीच की संकरी रिज को क्या कहा जाता है?",
+      "question": "A narrow ridge between two glacial valleys is called:",
       "options": {
-        "a": "Arete / एरिट",
-        "b": "Cirque / सर्क",
-        "c": "Drumlin / ड्रमलिन",
-        "d": "Esker / एस्कर"
+        "a": "Arete",
+        "b": "Cirque",
+        "c": "Drumlin",
+        "d": "Esker"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAn Arete is a sharp ridge formed by erosion from two adjacent glaciers.\n\n📖 हिंदी स्पष्टीकरण:\nएरिट दो समीपवर्ती हिमनदों के अपरदन से बनने वाली धारदार रिज होती है।"
     },
     {
       "q_num": 41,
-      "question": "When warm moist air rises and cools, clouds form due to—\n जब गर्म आर्द्र वायु ऊपर उठकर ठंडी होती है, तो बादल बनते हैं क्योंकि—",
+      "question": "When warm moist air rises and cools, clouds form due to—",
       "options": {
-        "a": "Expansion and condensation / प्रसार और संघनन",
-        "b": "Compression and heating / संपीड़न और ऊष्मन",
-        "c": "Frictional heating / घर्षणीय ऊष्मा",
-        "d": "Solar radiation / सौर विकिरण"
+        "a": "Expansion and condensation",
+        "b": "Compression and heating",
+        "c": "Frictional heating",
+        "d": "Solar radiation"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 42,
-      "question": "Which of the following features indicates rejuvenation of a river?\n नदी के पुनर्जीवन का संकेत कौन-सा स्थलरूप देता है?",
+      "question": "Which of the following features indicates rejuvenation of a river?",
       "options": {
-        "a": "Knick point / निक पॉइंट",
-        "b": "Oxbow lake / घोड़े की नाल झील",
-        "c": "Delta / डेल्टा",
-        "d": "Meander / मीयंडर"
+        "a": "Knick point",
+        "b": "Oxbow lake",
+        "c": "Delta",
+        "d": "Meander"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nA knick point marks renewed downward erosion due to uplift or sea-level fall.\n\n📖 हिंदी स्पष्टीकरण:\nनिक पॉइंट नदी के तल के पुनः कटाव का संकेत देता है, जो भू-उत्थान या समुद्र-स्तर घटने से होता है।"
     },
     {
       "q_num": 43,
-      "question": "The hot, dry wind blowing down the eastern slopes of the Rockies is called—\n रॉकी पर्वतों की पूर्वी ढालों पर चलने वाली गर्म शुष्क पवन कहलाती है—",
+      "question": "The hot, dry wind blowing down the eastern slopes of the Rockies is called—",
       "options": {
-        "a": "Chinook / चिनूक",
-        "b": "Bora / बौरा",
-        "c": "Foehn / फ्योन",
-        "d": "Mistral / मिस्ट्राल"
+        "a": "Chinook",
+        "b": "Bora",
+        "c": "Foehn",
+        "d": "Mistral"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nChinook warms the leeward side of the Rockies by adiabatic heating.\n\n📖 हिंदी स्पष्टीकरण:\nचिनूक रॉकी पर्वत की पवनविपरीत ढाल को ऐडियाबैटिक ऊष्मन से गर्म करती है।"
     },
     {
       "q_num": 44,
-      "question": "Which landform results from the collapse of a cave roof in limestone areas?\n चूना पत्थर क्षेत्रों में गुफा की छत धंसने से कौन-सा स्थलरूप बनता है?",
+      "question": "Which landform results from the collapse of a cave roof in limestone areas?",
       "options": {
-        "a": "Sinkhole / सिंकहोल",
-        "b": "Drumlin / ड्रमलिन",
-        "c": "Esker / एस्कर",
-        "d": "Cirque / सर्क"
+        "a": "Sinkhole",
+        "b": "Drumlin",
+        "c": "Esker",
+        "d": "Cirque"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSinkholes are depressions formed due to dissolution and roof collapse in limestone.\n\n📖 हिंदी स्पष्टीकरण:\nसिंकहोल चूना पत्थर के घुलने और छत के धंसने से बने अवसाद हैं।"
     },
     {
       "q_num": 45,
-      "question": "Which of the following is not a form of precipitation?\n निम्नलिखित में से कौन-सा वर्षण का रूप नहीं है?",
+      "question": "Which of the following is not a form of precipitation?",
       "options": {
-        "a": "Rain / वर्षा",
-        "b": "Snow / हिमपात",
-        "c": "Dew / ओस",
-        "d": "Hail / ओलावृष्टि"
+        "a": "Rain",
+        "b": "Snow",
+        "c": "Dew",
+        "d": "Hail"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDew forms by condensation on surfaces, not by precipitation from clouds.\n\n📖 हिंदी स्पष्टीकरण:\nओस सतहों पर संघनन से बनती है, यह बादलों से वर्षण द्वारा नहीं बनती।"
     },
     {
       "q_num": 46,
-      "question": "Which of the following pairs is correctly matched?\n निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "question": "Which of the following pairs is correctly matched?",
       "options": {
-        "a": "Moraine – Wind deposition / मोरेन – पवन निक्षेपण",
-        "b": "Yardang – River erosion / यार्डांग – नदी अपरदन",
-        "c": "Mushroom rock – Wind erosion / मशरूम शैल – पवन अपरदन",
-        "d": "Drumlin – Karst region / ड्रमलिन – कार्स्ट क्षेत्र"
+        "a": "Moraine – Wind deposition",
+        "b": "Yardang – River erosion",
+        "c": "Mushroom rock – Wind erosion",
+        "d": "Drumlin – Karst region"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMushroom rocks are formed by wind abrasion near the ground.\n\n📖 हिंदी स्पष्टीकरण:\nमशरूम शैल पवन के घर्षण से भूमि के निकट बनती हैं।"
     },
     {
       "q_num": 47,
-      "question": "The coldest part of the atmosphere is:\n वायुमंडल का सबसे ठंडा भाग कौन-सा है?",
+      "question": "The coldest part of the atmosphere is:",
       "options": {
-        "a": "Tropopause / क्षोभ विराम",
-        "b": "Stratosphere / समतापमंडल",
-        "c": "Mesopause / मध्यमंडल विराम",
-        "d": "Thermosphere / तापमंडल"
+        "a": "Tropopause",
+        "b": "Stratosphere",
+        "c": "Mesopause",
+        "d": "Thermosphere"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe mesopause, top of the mesosphere, records the lowest temperatures in the atmosphere.\n\n📖 हिंदी स्पष्टीकरण:\nमध्यमंडल का शीर्ष भाग जिसे मध्यमंडल विराम कहते हैं, वायुमंडल का सबसे ठंडा क्षेत्र होता है।"
     },
     {
       "q_num": 48,
-      "question": "Which of the following agents is responsible for the formation of loess deposits?\n निम्नलिखित में से कौन-सा कारक लोस निक्षेपों के निर्माण के लिए उत्तरदायी है?",
+      "question": "Which of the following agents is responsible for the formation of loess deposits?",
       "options": {
-        "a": "Wind / पवन",
-        "b": "Glacier / हिमनद",
-        "c": "River / नदी",
-        "d": "Groundwater / भूजल"
+        "a": "Wind",
+        "b": "Glacier",
+        "c": "River",
+        "d": "Groundwater"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLoess is fine silt deposited by wind over large areas, mainly in semi-arid regions.\n\n📖 हिंदी स्पष्टीकरण:\nलोस महीन गाद होती है जो पवन द्वारा शुष्क क्षेत्रों में व्यापक रूप से निक्षेपित होती है।"
     },
     {
       "q_num": 49,
-      "question": "The normal lapse rate in the troposphere is approximately:\n क्षोभमंडल में सामान्य ऊष्मा घट दर लगभग कितनी होती है?",
+      "question": "The normal lapse rate in the troposphere is approximately:",
       "options": {
-        "a": "4°C per km / प्रति किमी 4°C",
-        "b": "6.5°C per km / प्रति किमी 6.5°C",
-        "c": "8°C per km / प्रति किमी 8°C",
-        "d": "10°C per km / प्रति किमी 10°C"
+        "a": "4°C per km",
+        "b": "6.5°C per km",
+        "c": "8°C per km",
+        "d": "10°C per km"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nOn average, temperature decreases by 6.5°C per km ascent in the troposphere.\n\n📖 हिंदी स्पष्टीकरण:\nक्षोभमंडल में ऊँचाई बढ़ने पर तापमान औसतन 6.5°C प्रति किमी घटता है।"
     },
     {
       "q_num": 50,
-      "question": "he aurora phenomenon occurs mainly in which layer?\n ऑरोरा घटना मुख्यतः वायुमंडल की किस परत में होती है?",
+      "question": "he aurora phenomenon occurs mainly in which layer?",
       "options": {
-        "a": "Troposphere / क्षोभमंडल",
-        "b": "Stratosphere / समतापमंडल",
-        "c": "Thermosphere / तापमंडल",
-        "d": "Exosphere / बहिर्मंडल"
+        "a": "Troposphere",
+        "b": "Stratosphere",
+        "c": "Thermosphere",
+        "d": "Exosphere"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAuroras form in the thermosphere where charged solar particles interact with gases.\n\n📖 हिंदी स्पष्टीकरण:\nऑरोरा तापमंडल में बनते हैं जहाँ सौर आवेशित कण वायुमंडलीय गैसों से टकराते हैं।"
     },
     {
       "q_num": 51,
-      "question": "Which of the following winds is cold and dry?\n निम्नलिखित में से कौन-सी पवन ठंडी और शुष्क होती है?",
+      "question": "Which of the following winds is cold and dry?",
       "options": {
-        "a": "Foehn / फ्योन",
-        "b": "Mistral / मिस्ट्राल",
-        "c": "Chinook / चिनूक",
-        "d": "Loo / लू"
+        "a": "Foehn",
+        "b": "Mistral",
+        "c": "Chinook",
+        "d": "Loo"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMistral is a cold, dry wind blowing from the Alps to the Mediterranean coast.\n\n📖 हिंदी स्पष्टीकरण:\nमिस्ट्राल आल्प्स से भूमध्य सागर की ओर बहने वाली ठंडी एवं शुष्क पवन है।"
     },
     {
       "q_num": 52,
-      "question": "Denudation refers to which of the following processes?\n अभिक्षरण निम्नलिखित में से किस प्रक्रिया को संदर्भित करता है?",
+      "question": "Denudation refers to which of the following processes?",
       "options": {
-        "a": "Wearing down of the Earth’s surface / पृथ्वी की सतह का क्षरण",
-        "b": "Building up of mountains / पर्वत निर्माण",
-        "c": "Volcanic activity / ज्वालामुखीय क्रिया",
-        "d": "Folding of crust / पपड़ी का मोचन"
+        "a": "Wearing down of the Earth’s surface",
+        "b": "Building up of mountains",
+        "c": "Volcanic activity",
+        "d": "Folding of crust"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDenudation is the overall lowering of the Earth’s surface by weathering, erosion, and mass wasting.\n\n📖 हिंदी स्पष्टीकरण:\nअभिक्षरण वह समग्र प्रक्रिया है जिसमें अपक्षय, अपरदन और भू-स्खलन द्वारा पृथ्वी की सतह नीचे जाती है।"
     },
     {
       "q_num": 53,
-      "question": "Which of the following layers protects life on Earth from harmful UV radiation?\n निम्नलिखित में से कौन-सी परत पृथ्वी पर जीवन को हानिकारक पराबैंगनी विकिरण से बचाती है?",
+      "question": "Which of the following layers protects life on Earth from harmful UV radiation?",
       "options": {
-        "a": "Troposphere / क्षोभमंडल",
-        "b": "Stratosphere / समतापमंडल",
-        "c": "Mesosphere / मध्यमंडल",
-        "d": "Ionosphere / आयनमंडल"
+        "a": "Troposphere",
+        "b": "Stratosphere",
+        "c": "Mesosphere",
+        "d": "Ionosphere"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe ozone layer in the stratosphere absorbs most of the Sun’s harmful ultraviolet rays.\n\n📖 हिंदी स्पष्टीकरण:\nसमतापमंडल की ओज़ोन परत सूर्य की हानिकारक पराबैंगनी किरणों को अवशोषित कर जीवन की रक्षा करती है।"
     },
     {
       "q_num": 54,
-      "question": "Which of the following is an example of fluvial landform?\n निम्नलिखित में से कौन-सा स्थलरूप नदी जनित है?",
+      "question": "Which of the following is an example of fluvial landform?",
       "options": {
-        "a": "Stalactite / स्टैलैक्टाइट",
-        "b": "Cirque / सर्क",
-        "c": "Meander / मीयंडर",
-        "d": "Yardang / यार्डांग"
+        "a": "Stalactite",
+        "b": "Cirque",
+        "c": "Meander",
+        "d": "Yardang"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMeanders are bends formed by lateral erosion and deposition of a river.\n\n📖 हिंदी स्पष्टीकरण:\nमीयंडर नदी के पार्श्व अपरदन और निक्षेपण से बनने वाले घुमावदार मोड़ हैं।"
     },
     {
       "q_num": 55,
-      "question": "The pressure belt located at 30° latitude in both hemispheres is—\n दोनों गोलार्द्धों में 30° अक्षांश पर स्थित दाब पट्टी है—",
+      "question": "The pressure belt located at 30° latitude in both hemispheres is—",
       "options": {
-        "a": "Equatorial low / भूमध्यरेखीय निम्न",
-        "b": "Subtropical high / उपोष्ण उच्च",
-        "c": "Subpolar low / उपध्रुवीय निम्न",
-        "d": "Polar high / ध्रुवीय उच्च"
+        "a": "Equatorial low",
+        "b": "Subtropical high",
+        "c": "Subpolar low",
+        "d": "Polar high"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDescending air at 30° latitude creates subtropical high-pressure belts.\n\n📖 हिंदी स्पष्टीकरण:\n30° अक्षांश पर उतरती हुई वायु उपोष्ण उच्च दाब पट्टियों का निर्माण करती है।"
     },
     {
       "q_num": 56,
-      "question": "Which of the following statements about chemical weathering is correct?\n रासायनिक अपक्षय के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+      "question": "Which of the following statements about chemical weathering is correct?",
       "options": {
-        "a": "It is most effective in arid regions. / यह शुष्क क्षेत्रों में सर्वाधिक प्रभावी होता है।",
-        "b": "It involves physical disintegration only. / इसमें केवल भौतिक विखंडन शामिल होता है।",
-        "c": "It alters the chemical composition of rocks. / यह चट्टानों की रासायनिक संरचना को बदलता है।",
-        "d": "It is caused by frost action. / यह पाले की क्रिया से होता है।"
+        "a": "It is most effective in arid regions.",
+        "b": "It involves physical disintegration only.",
+        "c": "It alters the chemical composition of rocks.",
+        "d": "It is caused by frost action."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nChemical weathering changes the mineral composition of rocks through oxidation, carbonation, and hydration.\n\n📖 हिंदी स्पष्टीकरण:\nरासायनिक अपक्षय ऑक्सीकरण, कार्बोनेशन और जलयोजन जैसी प्रक्रियाओं से चट्टानों की रासायनिक संरचना को बदल देता है।"
     },
     {
       "q_num": 57,
-      "question": "Match the following pairs correctly:\n निम्नलिखित युग्मों का सही सुमेलन करें –\n (a) Karst topography – Limestone / कार्स्ट स्थलाकृति – चूना पत्थर\n (b) Delta – River deposition / डेल्टा – नदी निक्षेपण\n (c) Loess – Glacier / लोस – हिमनद",
+      "question": "Match the following pairs correctly:\n(a) Karst topography – Limestone\n(b) Delta – River deposition\n(c) Loess – Glacier",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "a and c only / केवल a और c",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "a and c only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKarst forms in limestone, and deltas by river deposition; loess forms by wind, not glacier.\n\n📖 हिंदी स्पष्टीकरण:\nकार्स्ट चूना पत्थर में बनता है और डेल्टा नदी निक्षेपण से; लोस पवन द्वारा बनता है, हिमनद से नहीं।"
     },
     {
       "q_num": 58,
-      "question": "Fog is an example of—\n कोहरा किसका उदाहरण है?",
+      "question": "Fog is an example of—",
       "options": {
-        "a": "Sublimation / उत्क्रमण",
-        "b": "Condensation near surface / सतह के निकट संघनन",
-        "c": "Evaporation / वाष्पीकरण",
-        "d": "Precipitation / वर्षण"
+        "a": "Sublimation",
+        "b": "Condensation near surface",
+        "c": "Evaporation",
+        "d": "Precipitation"
       },
       "answer": "b",
       "solution": ""
     },
     {
       "q_num": 59,
-      "question": "Precipitation in the form of ice pellets is known as—\n बर्फीली गोलियों के रूप में होने वाली वर्षा को क्या कहा जाता है?",
+      "question": "Precipitation in the form of ice pellets is known as—",
       "options": {
-        "a": "Snowfall / हिमपात",
-        "b": "Sleet / स्लीट",
-        "c": "Hail / ओले",
-        "d": "Frost / पाला"
+        "a": "Snowfall",
+        "b": "Sleet",
+        "c": "Hail",
+        "d": "Frost"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHail consists of hard ice pellets formed in cumulonimbus clouds.\n\n📖 हिंदी स्पष्टीकरण:\nओले कठोर बर्फीली गोलियाँ होती हैं जो क्यूम्यूलोनिंबस बादलों में बनती हैं।"
     },
     {
       "q_num": 60,
-      "question": "Mass wasting occurs primarily due to:\n भू-स्खलन मुख्य रूप से किस कारण से होता है?",
+      "question": "Mass wasting occurs primarily due to:",
       "options": {
-        "a": "Gravity / गुरुत्वाकर्षण",
-        "b": "Rainfall / वर्षा",
-        "c": "Wind / पवन",
-        "d": "Volcanism / ज्वालामुखीयता"
+        "a": "Gravity",
+        "b": "Rainfall",
+        "c": "Wind",
+        "d": "Volcanism"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMass wasting is the downslope movement of rock debris under the influence of gravity.\n\n📖 हिंदी स्पष्टीकरण:\nभू-स्खलन चट्टानों के मलबे का गुरुत्वाकर्षण के प्रभाव से नीचे की ओर खिसकना है।"
     },
     {
       "q_num": 61,
-      "question": "Which of the following gases is responsible for acid rain?\n निम्नलिखित में से कौन-सी गैस अम्लीय वर्षा के लिए उत्तरदायी है?",
+      "question": "Which of the following gases is responsible for acid rain?",
       "options": {
-        "a": "Carbon dioxide / कार्बन डाइऑक्साइड",
-        "b": "Sulphur dioxide / सल्फर डाइऑक्साइड",
-        "c": "Methane / मीथेन",
-        "d": "Nitrogen / नाइट्रोजन"
+        "a": "Carbon dioxide",
+        "b": "Sulphur dioxide",
+        "c": "Methane",
+        "d": "Nitrogen"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSulphur dioxide reacts with water vapour to form sulphuric acid, causing acid rain.\n\n📖 हिंदी स्पष्टीकरण:\nसल्फर डाइऑक्साइड जलवाष्प से मिलकर सल्फ्यूरिक अम्ल बनाती है जो अम्लीय वर्षा का कारण बनता है।"
     },
     {
       "q_num": 62,
-      "question": "Which instrument is used to measure humidity?\n आर्द्रता मापने के लिए किस यंत्र का उपयोग किया जाता है?",
+      "question": "Which instrument is used to measure humidity?",
       "options": {
-        "a": "Barometer / वायुदाबमापी",
-        "b": "Hygrometer / आर्द्रतामापी",
-        "c": "Anemometer / पवनवेगमापी",
-        "d": "Thermometer / तापमापी"
+        "a": "Barometer",
+        "b": "Hygrometer",
+        "c": "Anemometer",
+        "d": "Thermometer"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nHygrometer measures the moisture content of air or relative humidity.\n\n📖 हिंदी स्पष्टीकरण:\nआर्द्रतामापी वायुमंडल में नमी या सापेक्ष आर्द्रता को मापता है।"
     },
     {
       "q_num": 63,
-      "question": "Which wind system is mainly responsible for rainfall in India during summer?\n गर्मी के मौसम में भारत में वर्षा के लिए मुख्य रूप से कौन-सी पवन प्रणाली उत्तरदायी है?",
+      "question": "Which wind system is mainly responsible for rainfall in India during summer?",
       "options": {
-        "a": "Northeast monsoon / उत्तर-पूर्व मानसून",
-        "b": "Southwest monsoon / दक्षिण-पश्चिम मानसून",
-        "c": "Westerlies / पश्‍चिमी पवनें",
-        "d": "Trade winds / व्यापारिक पवनें"
+        "a": "Northeast monsoon",
+        "b": "Southwest monsoon",
+        "c": "Westerlies",
+        "d": "Trade winds"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe southwest monsoon brings moisture-laden winds from the Indian Ocean causing summer rainfall.\n\n📖 हिंदी स्पष्टीकरण:\nदक्षिण-पश्चिम मानसून हिंद महासागर से नमी युक्त पवनें लाता है जिससे भारत में ग्रीष्मकालीन वर्षा होती है।"
     },
     {
       "q_num": 64,
-      "question": "Which landform is created due to wind deposition?\n कौन-सा स्थलरूप पवन निक्षेपण से बनता है?",
+      "question": "Which landform is created due to wind deposition?",
       "options": {
-        "a": "Inselberg / इन्सेलबर्ग",
-        "b": "Yardang / यार्डांग",
-        "c": "Sand dune / बालू का टीला",
-        "d": "Mushroom rock / मशरूम शैल"
+        "a": "Inselberg",
+        "b": "Yardang",
+        "c": "Sand dune",
+        "d": "Mushroom rock"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSand dunes are depositional features of wind in arid regions.\n\n📖 हिंदी स्पष्टीकरण:\nबालू के टीले शुष्क क्षेत्रों में पवन के निक्षेपण से बनते हैं।"
     },
     {
       "q_num": 65,
-      "question": "Which of the following is not an example of slow mass movement?\n निम्नलिखित में से कौन-सा धीमी भू-स्खलन का उदाहरण नहीं है?",
+      "question": "Which of the following is not an example of slow mass movement?",
       "options": {
-        "a": "Soil creep / मृदा रेंगन",
-        "b": "Solifluction / सोलिफ्लक्शन",
-        "c": "Landslide / भूस्खलन",
-        "d": "Rock creep / शैल रेंगन"
+        "a": "Soil creep",
+        "b": "Solifluction",
+        "c": "Landslide",
+        "d": "Rock creep"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLandslides occur rapidly, while creep and solifluction are slow forms of mass movement.\n\n📖 हिंदी स्पष्टीकरण:\nभूस्खलन तेज़ी से होता है जबकि रेंगन और सोलिफ्लक्शन धीमी भू-स्खलन प्रक्रियाएँ हैं।"
     },
     {
       "q_num": 66,
-      "question": "Consider the following statements regarding Cirrus clouds:\n सिरस बादलों के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They are high-level clouds made of ice crystals.\n ये उच्च स्तर के बर्फ़ के क्रिस्टल से बने बादल हैं।\n (b) They appear wispy or feather-like.\n ये पतले और रेशेदार दिखाई देते हैं।\n (c) They usually bring heavy rainfall.\n ये आमतौर पर भारी वर्षा लाते हैं।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Cirrus clouds:\n (a) They are high-level clouds made of ice crystals.\n (b) They appear wispy or feather-like.\n (c) They usually bring heavy rainfall.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCirrus clouds are high, wispy clouds that do not produce heavy rain.\n\n📖 हिंदी स्पष्टीकरण:\nसिरस बादल उच्च और रेशेदार होते हैं, जो भारी वर्षा नहीं करते।"
     },
     {
       "q_num": 67,
-      "question": "In which layer do meteors generally burn up upon entry?\n किस परत में उल्काएँ प्रवेश करते ही जलकर नष्ट हो जाती हैं?",
+      "question": "In which layer do meteors generally burn up upon entry?",
       "options": {
-        "a": "Stratosphere / समतापमंडल",
-        "b": "Mesosphere / मध्यमंडल",
-        "c": "Thermosphere / तापमंडल",
-        "d": "Exosphere / बहिर्मंडल"
+        "a": "Stratosphere",
+        "b": "Mesosphere",
+        "c": "Thermosphere",
+        "d": "Exosphere"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMost meteors burn in the mesosphere due to friction with air molecules.\n\n📖 हिंदी स्पष्टीकरण:\nअधिकांश उल्काएँ वायु अणुओं के घर्षण से मध्यमंडल में जलकर नष्ट हो जाती हैं।"
     },
     {
       "q_num": 68,
-      "question": "Dew forms when—\n ओस तब बनती है जब—",
+      "question": "Dew forms when—",
       "options": {
-        "a": "Air temperature rises above dew point / वायु का तापमान ओसांक से ऊपर बढ़ता है",
-        "b": "Air temperature falls below dew point / वायु का तापमान ओसांक से नीचे गिरता है",
-        "c": "Humidity becomes zero / आर्द्रता शून्य हो जाती है",
-        "d": "Winds blow strongly / तेज हवाएँ चलती हैं"
+        "a": "Air temperature rises above dew point",
+        "b": "Air temperature falls below dew point",
+        "c": "Humidity becomes zero",
+        "d": "Winds blow strongly"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhen air cools below the dew point, water vapour condenses on surfaces forming dew.\n\n📖 हिंदी स्पष्टीकरण:\nजब वायु ओसांक से नीचे ठंडी होती है, तो जलवाष्प सतहों पर संघनित होकर ओस बनाती है।"
     },
     {
       "q_num": 69,
-      "question": "The energy source for endogenic processes is:\n अंतर्जात प्रक्रियाओं का ऊर्जा स्रोत क्या है?",
+      "question": "The energy source for endogenic processes is:",
       "options": {
-        "a": "Sun / सूर्य",
-        "b": "Earth’s internal heat / पृथ्वी की आंतरिक ऊष्मा",
-        "c": "Moon’s gravity / चंद्रमा का गुरुत्वाकर्षण",
-        "d": "Ocean currents / महासागरीय धाराएँ"
+        "a": "Sun",
+        "b": "Earth’s internal heat",
+        "c": "Moon’s gravity",
+        "d": "Ocean currents"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEndogenic processes derive their energy from radioactive decay and heat within the Earth.\n\n📖 हिंदी स्पष्टीकरण:\nअंतर्जात प्रक्रियाएँ पृथ्वी के भीतर की ऊष्मा और रेडियोधर्मी अपघटन से अपनी ऊर्जा प्राप्त करती हैं।"
     },
     {
       "q_num": 70,
-      "question": "Which among the following is an erosional feature of glaciers?\n निम्नलिखित में से कौन-सा हिमनद का अपरदनी स्वरूप है?",
+      "question": "Which among the following is an erosional feature of glaciers?",
       "options": {
-        "a": "Moraine / मोरेन",
-        "b": "Drumlin / ड्रमलिन",
-        "c": "Cirque / सर्क",
-        "d": "Outwash plain / बहाव मैदान"
+        "a": "Moraine",
+        "b": "Drumlin",
+        "c": "Cirque",
+        "d": "Outwash plain"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nCirques are bowl-shaped depressions formed by glacial erosion at mountain heads.\n\n📖 हिंदी स्पष्टीकरण:\nसर्क पर्वत शिखरों पर हिमनदी अपरदन से बने कटोरा-आकृति अवसाद होते हैं।"
     },
     {
       "q_num": 71,
-      "question": "Consider the following statements regarding Nimbostratus clouds:\n निम्नलिखित कथनों पर विचार करें – निम्बोस्ट्रैटस बादलों के संबंध में:\n (a) They are thick, low-level clouds.\n ये मोटे और निम्न-स्तरीय बादल होते हैं।\n (b) They produce steady and continuous rainfall.\n ये निरंतर वर्षा करते हैं।\n (c) They are composed mainly of ice crystals and found above 6,000 m.\n ये मुख्यतः बर्फ़ के क्रिस्टल से बने होते हैं और 6,000 मीटर से ऊपर पाए जाते हैं।\n Which of the above statements are correct?\n उपरोक्त में से कौन-से कथन सही हैं?",
+      "question": "Consider the following statements regarding Nimbostratus clouds:\n (a) They are thick, low-level clouds.\n (b) They produce steady and continuous rainfall.\n (c) They are composed mainly of ice crystals and found above 6,000 m.\n Which of the above statements are correct?",
       "options": {
-        "a": "1 and 2 / 1 और 2",
-        "b": "2 and 3 / 2 और 3",
-        "c": "1 and 3 / 1 और 3",
-        "d": "1, 2 and 3 / 1, 2 और 3"
+        "a": "1 and 2 / 1",
+        "b": "2 and 3 / 2",
+        "c": "1 and 3 / 1",
+        "d": "1, 2 and 3 / 1, 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNimbostratus clouds are low, thick clouds causing continuous rainfall; the third statement is incorrect because they are not high-altitude ice clouds.\n\n📖 हिंदी स्पष्टीकरण:\nनिम्बोस्ट्रैटस बादल निम्न स्तर के मोटे बादल हैं जो लगातार वर्षा करते हैं; तीसरा कथन सही नहीं है क्योंकि ये उच्च-स्तरीय बर्फ़ बादल नहीं होते।"
     },
     {
       "q_num": 72,
-      "question": "The proportion of carbon dioxide in the atmosphere is about:\n वायुमंडल में कार्बन डाइऑक्साइड की मात्रा लगभग कितनी है?",
+      "question": "The proportion of carbon dioxide in the atmosphere is about:",
       "options": {
         "a": "0.03%",
         "b": "0.3%",
@@ -870,36 +870,36 @@
     },
     {
       "q_num": 73,
-      "question": "Which one of the following processes results in mountain building?\n निम्नलिखित में से कौन-सी प्रक्रिया पर्वत निर्माण में सहायक होती है?",
+      "question": "Which one of the following processes results in mountain building?",
       "options": {
-        "a": "Folding / मोचन",
-        "b": "Erosion / अपरदन",
-        "c": "Weathering / अपक्षय",
-        "d": "Deposition / निक्षेपण"
+        "a": "Folding",
+        "b": "Erosion",
+        "c": "Weathering",
+        "d": "Deposition"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nFolding caused by compressional forces inside the Earth leads to mountain formation.\n\n📖 हिंदी स्पष्टीकरण:\nपृथ्वी के भीतर संपीडन बलों के कारण होने वाला मोचन पर्वत निर्माण का कारण बनता है।"
     },
     {
       "q_num": 74,
-      "question": "The process of changing water vapour into water is called—\n जलवाष्प के जल में परिवर्तन की प्रक्रिया को क्या कहा जाता है?",
+      "question": "The process of changing water vapour into water is called—",
       "options": {
-        "a": "Evaporation / वाष्पीकरण",
-        "b": "Condensation / संघनन",
-        "c": "Sublimation / उत्क्रमण",
-        "d": "Transpiration / वाष्पोत्सर्जन"
+        "a": "Evaporation",
+        "b": "Condensation",
+        "c": "Sublimation",
+        "d": "Transpiration"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCondensation is the conversion of water vapour into liquid water when air cools below its dew point.\n\n📖 हिंदी स्पष्टीकरण:\nसंघनन वह प्रक्रिया है जिसमें वायु के ओसांक से नीचे ठंडा होने पर जलवाष्प द्रव जल में परिवर्तित हो जाती है।"
     },
     {
       "q_num": 75,
-      "question": "Which of the following landforms is formed by river erosion?\n निम्नलिखित में से कौन-सा स्थलरूप नदी अपरदन से बनता है?",
+      "question": "Which of the following landforms is formed by river erosion?",
       "options": {
-        "a": "Delta / डेल्टा",
-        "b": "V-shaped valley / V-आकार की घाटी",
-        "c": "Alluvial fan / निक्षेप पंखा",
-        "d": "Floodplain / बाढ़ मैदान"
+        "a": "Delta",
+        "b": "V-shaped valley",
+        "c": "Alluvial fan",
+        "d": "Floodplain"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nV-shaped valleys are carved by rivers through vertical erosion in youthful stages.\n\n📖 हिंदी स्पष्टीकरण:\nV-आकार की घाटियाँ नदियों द्वारा उनके आरंभिक चरण में ऊर्ध्वाधर अपरदन से निर्मित होती हैं।"

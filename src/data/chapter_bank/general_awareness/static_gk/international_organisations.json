@@ -6,7 +6,7 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which among the following countries is not a member of the North Atlantic Treaty Organization (NATO)? (CAPF 2022 Exam)निम्नलिखित में से कौन सा देश उत्तरी अटलांटिक संधि संगठन (NATO) का सदस्य नहीं है?",
+      "question": "Which among the following countries is not a member of the North Atlantic Treaty Organization (NATO)? (CAPF 2022 Exam)",
       "options": {
         "a": "Hungary",
         "b": "Poland",
@@ -30,7 +30,7 @@
     },
     {
       "q_num": 3,
-      "question": "Which of the following sets of nations are members of the BIMSTEC initiative? (CAPF 2022 Exam)निम्नलिखित में से कौन से राष्ट्र बिम्सटेक पहल के सदस्य हैं?",
+      "question": "Which of the following sets of nations are members of the BIMSTEC initiative? (CAPF 2022 Exam)",
       "options": {
         "a": "Bangladesh, Bhutan, Nepal, India and Sri Lanka",
         "b": "Bangladesh, Bhutan, Nepal, India, Sri Lanka, Thailand and Myanmar",
@@ -54,7 +54,7 @@
     },
     {
       "q_num": 5,
-      "question": "Which of the following are the objectives of SAARC? (CAPF 2023 Exam) निम्नलिखित में से सार्क (SAARC) के उद्देश्य क्या हैं? To promote the welfare of the peoples of South Asia and to improve the quality of life / दक्षिण एशिया के लोगों के कल्याण को बढ़ावा देना और जीवन की गुणवत्ता में सुधार करना To promote and strengthen collective self-reliance among the countries of South Asia / दक्षिण एशिया के देशों के बीच सामूहिक आत्मनिर्भरता को बढ़ावा देना और मजबूत करना To contribute to mutual trust, understanding and appreciation of one another’s problems / आपसी विश्वास, समझ और एक दूसरे की समस्याओं की सराहना में योगदान देना To work towards ending cross-border terrorism / सीमा पार आतंकवाद को समाप्त करने की दिशा में काम करनाSelect the correct answer using the code given below:",
+      "question": "Which of the following are the objectives of SAARC? (CAPF 2023 Exam)",
       "options": {
         "a": "1 and 2 only",
         "b": "1, 2 and 3 Only",
@@ -66,7 +66,7 @@
     },
     {
       "q_num": 6,
-      "question": "Which of the following statements are correct about the composition of the G 20? (CAPF 2024 Exam) जी-20 की संरचना के बारे में निम्नलिखित में से कौन से कथन सही हैं? All G7 countries are member of G 20 All BRICS countries are members of G 20 All ASEAN countries are members of G 20 All permanent members of Security Council are members of G20Select the answer using the code given below:",
+      "question": "Which of the following statements are correct about the composition of the G 20? (CAPF 2024 Exam)",
       "options": {
         "a": "1, 2 and 3",
         "b": "2 and 4 Only",
@@ -78,7 +78,7 @@
     },
     {
       "q_num": 7,
-      "question": "The Headquarters of Bay of Bengal Initiative for Multi-Sectoral Techincal and Economic Cooperation (BIMSTEC) is located in (CBI 2023 Exam)बहुक्षेत्रीय तकनीकी और आर्थिक सहयोग के लिए बंगाल की खाड़ी पहल (बिम्सटेक) का मुख्यालय कहाँ स्थित है?",
+      "question": "The Headquarters of Bay of Bengal Initiative for Multi-Sectoral Techincal and Economic Cooperation (BIMSTEC) is located in (CBI 2023 Exam)",
       "options": {
         "a": "Colombo",
         "b": "Bangkok",
@@ -90,7 +90,7 @@
     },
     {
       "q_num": 8,
-      "question": "Which one of the following countries is not a founding member of the New Development Bank (NDBI) ? (CBI 2023 Exam)निम्नलिखित में से कौन सा देश न्यू डेवलपमेंट बैंक (NDBI) का संस्थापक सदस्य नहीं है?",
+      "question": "Which one of the following countries is not a founding member of the New Development Bank (NDBI) ? (CBI 2023 Exam)",
       "options": {
         "a": "India",
         "b": "China",
@@ -102,7 +102,7 @@
     },
     {
       "q_num": 9,
-      "question": "Which one of the following international organizations considers its core responsibility as providing financial help to member countries which are experiencing balance of payments problems? (CBI 2023 Exam)निम्नलिखित में से कौन सा अंतर्राष्ट्रीय संगठन अपने मुख्य उत्तरदायित्व को उन सदस्य देशों को वित्तीय सहायता प्रदान करना मानता है जो भुगतान संतुलन की समस्याओं का सामना कर रहे हैं",
+      "question": "Which one of the following international organizations considers its core responsibility as providing financial help to member countries which are experiencing balance of payments problems? (CBI 2023 Exam)",
       "options": {
         "a": "IFC",
         "b": "IDA",
@@ -114,19 +114,19 @@
     },
     {
       "q_num": 10,
-      "question": "Which one of the following best describes BRICS? (CDS 2022 Exam)निम्नलिखित में से कौन सा ब्रिक्स का सबसे अच्छा वर्णन करता है?",
+      "question": "Which one of the following best describes BRICS? (CDS 2022 Exam)",
       "options": {
-        "a": "A group of five nuclear powers / पांच परमाणु शक्तियों का समूह",
-        "b": "A group of five industrialized nations / पांच औद्योगिक देशों का समूह",
-        "c": "A group of five major emerging economies / पांच प्रमुख उभरती अर्थव्यवस्थाओं का समूह",
-        "d": "A group of five potentially strong UN Security Council members from the Countries of the Global South / वैश्विक दक्षिण के देशों से पांच संभावित रूप से मजबूत संयुक्त राष्ट्र सुरक्षा परिषद सदस्यों का एक समूह"
+        "a": "A group of five nuclear powers",
+        "b": "A group of five industrialized nations",
+        "c": "A group of five major emerging economies",
+        "d": "A group of five potentially strong UN Security Council members from the Countries of the Global South"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 11,
-      "question": "Recently which of the following countries were placed in the “Grey List” of Financial Action Task Force? (CDS 2022 Exam)हाल ही में निम्नलिखित में से किन देशों को वित्तीय कार्रवाई कार्य बल की \"ग्रे सूची\" में रखा गया था?",
+      "question": "Recently which of the following countries were placed in the “Grey List” of Financial Action Task Force? (CDS 2022 Exam)",
       "options": {
         "a": "Bolivia and Mozambique",
         "b": "Colombia and Ecuador",
@@ -150,7 +150,7 @@
     },
     {
       "q_num": 13,
-      "question": "Which one of the following is not a permanent member of the UN Security Council? (CDS 2023 Exam)निम्नलिखित में से कौन संयुक्त राष्ट्र सुरक्षा परिषद का स्थायी सदस्य नहीं है?",
+      "question": "Which one of the following is not a permanent member of the UN Security Council? (CDS 2023 Exam)",
       "options": {
         "a": "France",
         "b": "China",
@@ -162,7 +162,7 @@
     },
     {
       "q_num": 14,
-      "question": "Which of the following UN organizations has been awarded with Nobel Prize twice? (CDS 2024 Exam)निम्नलिखित में से किस संयुक्त राष्ट्र संगठन को दो बार नोबेल पुरस्कार से सम्मानित किया गया है?",
+      "question": "Which of the following UN organizations has been awarded with Nobel Prize twice? (CDS 2024 Exam)",
       "options": {
         "a": "IPCC",
         "b": "IAEA",
@@ -186,7 +186,7 @@
     },
     {
       "q_num": 16,
-      "question": "Which one of the following UN organizations has not been awarded the Nobel Prize? (CDS 2024 Exam)निम्नलिखित में से किस संयुक्त राष्ट्र संगठन को नोबेल पुरस्कार नहीं दिया गया है",
+      "question": "Which one of the following UN organizations has not been awarded the Nobel Prize? (CDS 2024 Exam)",
       "options": {
         "a": "WFP",
         "b": "ILO",
@@ -198,12 +198,12 @@
     },
     {
       "q_num": 17,
-      "question": "Which one the following statements about BIMSTEC is not correct? (CISF AC 2021 Exam)बिम्सटेक (BIMSTEC) के बारे में निम्नलिखित में से कौन सा कथन सही नहीं है",
+      "question": "Which one the following statements about BIMSTEC is not correct? (CISF AC 2021 Exam)",
       "options": {
-        "a": "It is a regional organization comprising eight member states lying in the littoral and adjacent areas of the Bay of Bengal. / यह एक क्षेत्रीय संगठन है जिसमें बंगाल की खाड़ी के तटीय और समीपवर्ती क्षेत्रों के आठ सदस्य देश शामिल हैं।",
-        "b": "This sub-regional organization came into being in 1997 through the Bangkok Declaration / यह उप-क्षेत्रीय संगठन 1997 में बैंकॉक घोषणा के माध्यम से अस्तित्व में आया",
-        "c": "Nepal and Myanmar are members of BIMSTEC / नेपाल और म्यांमार बिम्सटेक के सदस्य हैं",
-        "d": "It is a platform of inter-regional co-operation between SAARC and ASEAN members / यह सार्क और आसियान सदस्यों के बीच अंतर-क्षेत्रीय सहयोग का एक मंच है"
+        "a": "It is a regional organization comprising eight member states lying in the littoral and adjacent areas of the Bay of Bengal.",
+        "b": "This sub-regional organization came into being in 1997 through the Bangkok Declaration",
+        "c": "Nepal and Myanmar are members of BIMSTEC",
+        "d": "It is a platform of inter-regional co-operation between SAARC and ASEAN members"
       },
       "answer": "a",
       "solution": ""
@@ -222,12 +222,12 @@
     },
     {
       "q_num": 19,
-      "question": "Which one among the following statements about the correct United Nations (UN) is not correct? (GEOSCIENTIST 2024 Exam)संयुक्त राष्ट्र (UN) के बारे में निम्नलिखित में से कौन सा कथन सही नहीं है?",
+      "question": "Which one among the following statements about the correct United Nations (UN) is not correct? (GEOSCIENTIST 2024 Exam)",
       "options": {
-        "a": "All the main bodies of the United Nations, such as the General Assembly, the Security Council, the Trusteeship Council, etc. were established with the founding of the UN in 1945. / संयुक्त राष्ट्र के सभी मुख्य निकाय, जैसे महासभा, सुरक्षा परिषद, ट्रस्टीशिप परिषद आदि की स्थापना 1945 में संयुक्त राष्ट्र की स्थापना के साथ ही हुई थी।",
-        "b": "The United Nations System comprises not only the main bodies, but also many funds, programmes and specialized agencies. / संयुक्त राष्ट्र प्रणाली में न केवल मुख्य निकाय शामिल हैं, बल्कि कई कोष, कार्यक्रम और विशिष्ट एजेंसियां ​​भी शामिल हैं।",
-        "c": "Specialized agencies of the UN System are funded by both voluntary and assessed contributions / संयुक्त राष्ट्र प्रणाली की विशेष एजेंसियों को स्वैच्छिक और मूल्यांकित दोनों प्रकार के योगदानों से वित्त पोषित किया जाता है",
-        "d": "The programmes and funds of the UN System are financed only through assessed contributions / संयुक्त राष्ट्र प्रणाली के कार्यक्रमों और निधियों का वित्तपोषण केवल निर्धारित योगदानों के माध्यम से किया जाता है"
+        "a": "All the main bodies of the United Nations, such as the General Assembly, the Security Council, the Trusteeship Council, etc. were established with the founding of the UN in 1945.",
+        "b": "The United Nations System comprises not only the main bodies, but also many funds, programmes and specialized agencies.",
+        "c": "Specialized agencies of the UN System are funded by both voluntary and assessed contributions",
+        "d": "The programmes and funds of the UN System are financed only through assessed contributions"
       },
       "answer": "d",
       "solution": ""
@@ -236,17 +236,17 @@
       "q_num": 20,
       "question": "Which one of the following institutions is not in the “World Bank Group”? (GEOSCIENTISTS 2024 Exam)",
       "options": {
-        "a": "International Centre for Settlement of Investment Disputes (ICSID) / निवेश विवाद निपटान हेतु अंतर्राष्ट्रीय केंद्र (आईसीएसआईडी)",
-        "b": "Multilateral Investment Guarantee Agency (MIGA) / बहुपक्षीय निवेश गारंटी एजेंसी (MIGA)",
-        "c": "Investment Policy Framework for Sustainable Development (IPFSD) / सतत विकास के लिए निवेश नीति ढांचा (आईपीएफएसडी)",
-        "d": "International Finance Corporation (IFC) / अंतर्राष्ट्रीय वित्त निगम (आईएफसी)"
+        "a": "International Centre for Settlement of Investment Disputes (ICSID)",
+        "b": "Multilateral Investment Guarantee Agency (MIGA)",
+        "c": "Investment Policy Framework for Sustainable Development (IPFSD)",
+        "d": "International Finance Corporation (IFC)"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 21,
-      "question": "Which of the following statements about the non-permanent members of the Security Council of the United Nations is/are correct? (NDA 2021 Exam) Their total number is now 10, but was originally only 6. They are elected for a term of two years only. Select the correct answer using the code given below: संयुक्त राष्ट्र की सुरक्षा परिषद के गैर-स्थायी सदस्यों के बारे में निम्नलिखित में से कौन सा कथन सही है/हैं? 1. उनकी कुल संख्या अब 10 है, लेकिन मूल रूप से केवल 6 थी। 2. केवल दो वर्ष की अवधि के लिए चुने जाते हैं।नीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "question": "Which of the following statements about the non-permanent members of the Security Council of the United Nations is/are correct? (NDA 2021 Exam) Their total number is now 10, but was originally only 6. They are elected for a term of two years only. Select the correct answer using the code given below:",
       "options": {
         "a": "1 Only",
         "b": "2 Only",
@@ -258,7 +258,7 @@
     },
     {
       "q_num": 22,
-      "question": "Which one of the following nations is not a permanent member of G7? (NDA 2021 Exam)निम्नलिखित में से कौन सा राष्ट्र G7 का स्थायी सदस्य नहीं है?",
+      "question": "Which one of the following nations is not a permanent member of G7? (NDA 2021 Exam)",
       "options": {
         "a": "India",
         "b": "Canada",
@@ -270,7 +270,7 @@
     },
     {
       "q_num": 23,
-      "question": "What percentage of jobs in India are at risk of automation, as per World Bank data, 2016? SSC CPO 05/10/2023 (Morning) विश्व बैंक के 2016 के आंकड़ों के अनुसार, भारत में कितने प्रतिशत नौकरियाँ स्वचालन के जोखिम में हैं?",
+      "question": "What percentage of jobs in India are at risk of automation, as per World Bank data, 2016? SSC CPO 05/10/2023 (Morning)",
       "options": {
         "a": "40%",
         "b": "77%",
@@ -282,7 +282,7 @@
     },
     {
       "q_num": 24,
-      "question": "Which of the following countries is NOT a member of SAARC (South Asian Association for Regional Cooperation)? SSC CHSL 03/08/2023 (4th shift) निम्नलिखित में से कौन सा देश SAARC (दक्षिण एशियाई क्षेत्रीय सहयोग संगठन) का सदस्य नहीं है?",
+      "question": "Which of the following countries is NOT a member of SAARC (South Asian Association for Regional Cooperation)? SSC CHSL 03/08/2023 (4th shift)",
       "options": {
         "a": "Pakistan",
         "b": "Myanmar",
@@ -294,7 +294,7 @@
     },
     {
       "q_num": 25,
-      "question": "Which of the following trade agreements aims to 'strengthen intra -SAARC economic cooperation to maximize the region's potential for trade and achieve development for their people'? SSC CGL 21/07/2023 (3rd shift) निम्नलिखित में से किस व्यापार समझौते का उद्देश्य 'क्षेत्र की व्यापार क्षमता को अधिकतम करने और अपने लोगों के लिए विकास प्राप्त करने के लिए अंतर-सार्क आर्थिक सहयोग को मजबूत करना' है?",
+      "question": "Which of the following trade agreements aims to 'strengthen intra -SAARC economic cooperation to maximize the region's potential for trade and achieve development for their people'? SSC CGL 21/07/2023 (3rd shift)",
       "options": {
         "a": "APTA",
         "b": "SAFTA",
@@ -306,7 +306,7 @@
     },
     {
       "q_num": 26,
-      "question": "How many countries are part of SAARC? SSC CHSL 17/08/2023 (2nd shift) सार्क में कितने देश शामिल हैं?",
+      "question": "How many countries are part of SAARC? SSC CHSL 17/08/2023 (2nd shift)",
       "options": {
         "a": "8",
         "b": "2",
@@ -318,19 +318,19 @@
     },
     {
       "q_num": 27,
-      "question": "‘I2U2' initiative is also referred as _________ . SSC MTS 08/05/2023 (Morning) I2U2' पहल को _________ भी कहा जाता है।",
+      "question": "‘I2U2' initiative is also referred as _________ . SSC MTS 08/05/2023 (Morning) I2U2'",
       "options": {
-        "a": "East European Quad / पूर्वी यूरोपीय क्वाड",
-        "b": "West European Quad / पश्चिमी यूरोपीय क्वाड",
-        "c": "West Asian Quad / पश्चिमी एशियाई क्वाड",
-        "d": "East Asian Quad / पूर्वी एशियाई क्वाड"
+        "a": "East European Quad",
+        "b": "West European Quad",
+        "c": "West Asian Quad",
+        "d": "East Asian Quad"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 28,
-      "question": "Which of the following is/are one of the United Nations Sustainable Development Goals? SSC CGL Tier II 07/03/2023 Zero Hunger Climate Action Life Below Water Quality Education निम्नलिखित में से कौन सा संयुक्त राष्ट्र सतत विकास लक्ष्यों में से एक है? शून्य भूख जलवायु कार्रवाई पानी के नीचे जीवन गुणवत्तापूर्ण शिक्षा",
+      "question": "Which of the following is/are one of the United Nations Sustainable Development Goals? SSC CGL Tier II 07/03/2023 Zero Hunger Climate Action Life Below Water Quality Education",
       "options": {
         "a": "A, B, C and D",
         "b": "A and B",
@@ -342,43 +342,43 @@
     },
     {
       "q_num": 29,
-      "question": "Which institution launched a list of 50 iconic Indian heritage textiles? SSC CHSL 17/03/2023 (4th Shift) किस संस्था ने 50 प्रतिष्ठित भारतीय विरासत वस्त्रों की सूची जारी की है?",
+      "question": "Which institution launched a list of 50 iconic Indian heritage textiles? SSC CHSL 17/03/2023 (4th Shift)",
       "options": {
-        "a": "Ministry of textile / कपड़ा मंत्रालय",
-        "b": "NITI Aayog / नीति आयोग",
-        "c": "Ministry of Culture / संस्कृति मंत्रालय",
-        "d": "UNESCO / यूनेस्को"
+        "a": "Ministry of textile",
+        "b": "NITI Aayog",
+        "c": "Ministry of Culture",
+        "d": "UNESCO"
       },
       "answer": "d",
       "solution": ""
     },
     {
       "q_num": 30,
-      "question": "______ was established in 1948 with 23 countries as a global trade organization to administer all multilateral trade agreements. SSC MTS 07/07/2022 (Afternoon) ______ की स्थापना 1948 में 23 देशों के साथ एक वैश्विक व्यापार संगठन के रूप में सभी बहुपक्षीय व्यापार समझौतों को प्रशासित करने के लिए की गई थी।",
+      "question": "______ was established in 1948 with 23 countries as a global trade organization to administer all multilateral trade agreements. SSC MTS 07/07/2022 (Afternoon) ______",
       "options": {
-        "a": "World Trade Organization / विश्व व्यापार संगठन",
-        "b": "International Reciprocal Trade Association / अंतर्राष्ट्रीय पारस्परिक व्यापार संघ",
-        "c": "General Agreement on Tariffs and Trade / टैरिफ और व्यापार पर सामान्य समझौता",
-        "d": "World Chamber of Commerce / विश्व वाणिज्य मंडल"
+        "a": "World Trade Organization",
+        "b": "International Reciprocal Trade Association",
+        "c": "General Agreement on Tariffs and Trade",
+        "d": "World Chamber of Commerce"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 31,
-      "question": "Which organisation was created in 1988 by the World Meteorological Organization (WMO) and the United Nations Environment Program (UNEP) to assess the science related to climate change? SSC CHSL 02/06/2022 (Evening) विश्व मौसम विज्ञान संगठन (WMO) और संयुक्त राष्ट्र पर्यावरण कार्यक्रम (UNEP) द्वारा 1988 में जलवायु परिवर्तन से संबंधित विज्ञान का आकलन करने के लिए कौन सा संगठन बनाया गया था?",
+      "question": "Which organisation was created in 1988 by the World Meteorological Organization (WMO) and the United Nations Environment Program (UNEP) to assess the science related to climate change? SSC CHSL 02/06/2022 (Evening)",
       "options": {
-        "a": "Intergovernmental Panel on Climate Change (IPCC) / जलवायु परिवर्तन पर अंतर-सरकारी पैनल (आईपीसीसी)",
-        "b": "International Climate Action Network (ICAN) / अंतर्राष्ट्रीय जलवायु कार्रवाई नेटवर्क (आईसीएएन)",
-        "c": "Global Climate Growth Institute (GCGI) / वैश्विक जलवायु विकास संस्थान (जीसीजीआई)",
-        "d": "Australian Youth Climate Coalition (AYCC) / ऑस्ट्रेलियाई युवा जलवायु गठबंधन (एवाईसीसी)"
+        "a": "Intergovernmental Panel on Climate Change (IPCC)",
+        "b": "International Climate Action Network (ICAN)",
+        "c": "Global Climate Growth Institute (GCGI)",
+        "d": "Australian Youth Climate Coalition (AYCC)"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 32,
-      "question": "GATT was established in 1948 with ______ countries as the global trade organization to administer all multilateral trade agreements by providing equal opportunities to all countries in the international market for trading purposes. SSC CPO 09/11/2022 (Morning) GATT की स्थापना 1948 में ______ देशों के साथ वैश्विक व्यापार संगठन के रूप में की गई थी, जिसका उद्देश्य व्यापारिक उद्देश्यों के लिए अंतर्राष्ट्रीय बाजार में सभी देशों को समान अवसर प्रदान करके सभी बहुपक्षीय व्यापार समझौतों को संचालित करना था।",
+      "question": "GATT was established in 1948 with ______ countries as the global trade organization to administer all multilateral trade agreements by providing equal opportunities to all countries in the international market for trading purposes. SSC CPO 09/11/2022 (Morning) GATT",
       "options": {
         "a": "29",
         "b": "23",
@@ -390,7 +390,7 @@
     },
     {
       "q_num": 33,
-      "question": "In which year did India become a signatory to the CITES (Convention on International Trade in Endangered Species on Wild Fauna and Flora)? SSC MTS 26/10/2021 (Morning) भारत किस वर्ष CITES (वन्य जीव और वनस्पति पर लुप्तप्राय प्रजातियों में अंतर्राष्ट्रीय व्यापार पर अभिसमय) पर हस्ताक्षरकर्ता बना?",
+      "question": "In which year did India become a signatory to the CITES (Convention on International Trade in Endangered Species on Wild Fauna and Flora)? SSC MTS 26/10/2021 (Morning)",
       "options": {
         "a": "1980",
         "b": "1983",
@@ -402,7 +402,7 @@
     },
     {
       "q_num": 34,
-      "question": "Where is the headquarters of the International Hockey Federation (FIH) located? SSC CGL 16/08/2021 (Afternoon) अंतर्राष्ट्रीय हॉकी महासंघ (FIH) का मुख्यालय कहाँ स्थित है?",
+      "question": "Where is the headquarters of the International Hockey Federation (FIH) located? SSC CGL 16/08/2021 (Afternoon)",
       "options": {
         "a": "Australia",
         "b": "Nepal",
@@ -414,7 +414,7 @@
     },
     {
       "q_num": 35,
-      "question": "Where is the headquarters of the Badminton World Federation located? SSC CGL 23/08/2021 (Morning) बैडमिंटन विश्व महासंघ का मुख्यालय कहां स्थित है?",
+      "question": "Where is the headquarters of the Badminton World Federation located? SSC CGL 23/08/2021 (Morning)",
       "options": {
         "a": "Malaysia",
         "b": "Japan",
@@ -426,7 +426,7 @@
     },
     {
       "q_num": 36,
-      "question": "India joined the United Nations after ratifying the UN Charter in ______. SSC CPO 25/11/2020 (Morning) भारत ______ में संयुक्त राष्ट्र चार्टर की पुष्टि करने के बाद संयुक्त राष्ट्र में शामिल हुआ।",
+      "question": "India joined the United Nations after ratifying the UN Charter in ______. SSC CPO 25/11/2020 (Morning)",
       "options": {
         "a": "May 1946",
         "b": "December 1945",
@@ -438,7 +438,7 @@
     },
     {
       "q_num": 37,
-      "question": "In which of the following countries is the headquarters of the International Table Tennis Federation situated? SSC CHSL 12/8/2021 (Afternoon) अंतर्राष्ट्रीय टेबल टेनिस महासंघ का मुख्यालय निम्नलिखित में से किस देश में स्थित है?",
+      "question": "In which of the following countries is the headquarters of the International Table Tennis Federation situated? SSC CHSL 12/8/2021 (Afternoon)",
       "options": {
         "a": "Japan",
         "b": "Thailand",
@@ -450,19 +450,19 @@
     },
     {
       "q_num": 38,
-      "question": "Which of the following organizations releases the Global Innovation Index? SSC CGL 23/08/2021 (Morning) निम्नलिखित में से कौन सा संगठन वैश्विक नवाचार सूचकांक जारी करता है",
+      "question": "Which of the following organizations releases the Global Innovation Index? SSC CGL 23/08/2021 (Morning)",
       "options": {
-        "a": "WEF / विश्व आर्थिक मंच",
-        "b": "INSEAD, Cornell University, WIPO / INSEAD, कॉर्नेल विश्वविद्यालय , विश्व बौद्धिक संपदा संगठन",
-        "c": "UNDP / संयुक्त राष्ट्र विकास कार्यक्रम",
-        "d": "WTO / विश्व व्यापार संगठन"
+        "a": "WEF",
+        "b": "INSEAD, Cornell University, WIPO",
+        "c": "UNDP",
+        "d": "WTO"
       },
       "answer": "b",
       "solution": ""
     },
     {
       "q_num": 39,
-      "question": "South Asian leaders signed the SAARC Charter at the first summit in ______ in the year 1985. (SSC CGL 13/04/2022 Evening Shift)दक्षिण एशियाई नेताओं ने वर्ष 1985 में ______ में प्रथम शिखर सम्मेलन में सार्क चार्टर पर हस्ताक्षर किए थे।",
+      "question": "South Asian leaders signed the SAARC Charter at the first summit in ______ in the year 1985. (SSC CGL 13/04/2022 Evening Shift)",
       "options": {
         "a": "Colombo",
         "b": "Delhi",
@@ -474,7 +474,7 @@
     },
     {
       "q_num": 40,
-      "question": "The World Food Programme (WTP) is the food assistance branch of the United Nations. Where is its headquartered? (SSC CGL 03/03/2020 Morning Shift)विश्व खाद्य कार्यक्रम (WTP) संयुक्त राष्ट्र की खाद्य सहायता शाखा है। इसका मुख्यालय कहाँ है?",
+      "question": "The World Food Programme (WTP) is the food assistance branch of the United Nations. Where is its headquartered? (SSC CGL 03/03/2020 Morning Shift)",
       "options": {
         "a": "Rome",
         "b": "Paris",
@@ -486,7 +486,7 @@
     },
     {
       "q_num": 41,
-      "question": "How many non-permanent members does the UN Security Council have? SSC MTS 07/08/2019 (Evening Shift)संयुक्त राष्ट्र सुरक्षा परिषद में कितने गैर-स्थायी सदस्य हैं",
+      "question": "How many non-permanent members does the UN Security Council have? SSC MTS 07/08/2019 (Evening Shift)",
       "options": {
         "a": "10",
         "b": "12",
@@ -498,19 +498,19 @@
     },
     {
       "q_num": 42,
-      "question": "Amnesty International is associated with which of the following? SSC MTS 16/08/2019 (Evening Shift)एमनेस्टी इंटरनेशनल निम्नलिखित में से किससे संबंधित है?",
+      "question": "Amnesty International is associated with which of the following? SSC MTS 16/08/2019 (Evening Shift)",
       "options": {
-        "a": "Human Rights / मानवाधिकार",
-        "b": "Cultural Heritage Protection / सांस्कृतिक विरासत संरक्षण",
-        "c": "Forest Conservation / वन संरक्षण",
-        "d": "Animal Rights / पशु अधिकार"
+        "a": "Human Rights",
+        "b": "Cultural Heritage Protection",
+        "c": "Forest Conservation",
+        "d": "Animal Rights"
       },
       "answer": "a",
       "solution": ""
     },
     {
       "q_num": 43,
-      "question": "Which country houses the headquarters of the intergovernmental organisation, “The International Bureau of Weights and Measures ? SSC CHSL 05/07/2019 (Morning Shift)अंतर-सरकारी संगठन, \"अंतर्राष्ट्रीय बाट एवं माप ब्यूरो\" का मुख्यालय किस देश में स्थित है?",
+      "question": "Which country houses the headquarters of the intergovernmental organisation, “The International Bureau of Weights and Measures ? SSC CHSL 05/07/2019 (Morning Shift)",
       "options": {
         "a": "Austria",
         "b": "Belgium",
@@ -522,7 +522,7 @@
     },
     {
       "q_num": 44,
-      "question": "In which year was the Foreign Investment Board established? SSC CPO 28/06/2024 (1st Shift)विदेशी निवेश बोर्ड की स्थापना किस वर्ष की गई थी?",
+      "question": "In which year was the Foreign Investment Board established? SSC CPO 28/06/2024 (1st Shift)",
       "options": {
         "a": "1965",
         "b": "1960",
@@ -534,43 +534,43 @@
     },
     {
       "q_num": 45,
-      "question": "Which international treaty was adopted in 1992 to combat global warming and prepare for its effects? SSC CGL Mains 20/01/2025ग्लोबल वार्मिंग से निपटने और इसके प्रभावों के लिए तैयारी करने हेतु 1992 में कौन सी अंतर्राष्ट्रीय संधि अपनाई गई थी?",
+      "question": "Which international treaty was adopted in 1992 to combat global warming and prepare for its effects? SSC CGL Mains 20/01/2025",
       "options": {
-        "a": "Vienna Convention for the Protection of the Ozone Layer / ओजोन परत के संरक्षण के लिए वियना कन्वेंशन",
-        "b": "Minamata Convention on Mercury / पारे पर मिनामाता कन्वेंशन",
-        "c": "Stockholm Convention on Persistent Organic Pollutants / स्थायी कार्बनिक प्रदूषकों पर स्टॉकहोम कन्वेंशन",
-        "d": "United Nations Framework Convention on Climate Change / जलवायु परिवर्तन पर संयुक्त राष्ट्र फ्रेमवर्क कन्वेंशन"
+        "a": "Vienna Convention for the Protection of the Ozone Layer",
+        "b": "Minamata Convention on Mercury",
+        "c": "Stockholm Convention on Persistent Organic Pollutants",
+        "d": "United Nations Framework Convention on Climate Change"
       },
       "answer": "d",
       "solution": ""
     },
     {
       "q_num": 46,
-      "question": "What is the primary goal of the International Comparison Programme (ICP), led by the United Nations Statistics Division (UNSD)? SSC CGL Mains 20/01/2025 संयुक्त राष्ट्र सांख्यिकी प्रभाग (यूएनएसडी) के नेतृत्व में अंतर्राष्ट्रीय तुलना कार्यक्रम (आईसीपी) का प्राथमिक लक्ष्य क्या है?",
+      "question": "What is the primary goal of the International Comparison Programme (ICP), led by the United Nations Statistics Division (UNSD)? SSC CGL Mains 20/01/2025",
       "options": {
-        "a": "To implement statistical offices globally / वैश्विक स्तर पर सांख्यिकीय कार्यालयों को लागू करना",
-        "b": "To calculate Purchasing Power Parities (PPPs) and price level indices / क्रय शक्ति समता (पीपीपी) और मूल्य स्तर सूचकांकों की गणना करना",
-        "c": "To collect data on international trade / अंतर्राष्ट्रीय व्यापार पर डेटा एकत्र करना",
-        "d": "To produce unemployment estimates globally Rights / वैश्विक स्तर पर बेरोजगारी का अनुमान लगाना अधिकार"
+        "a": "To implement statistical offices globally",
+        "b": "To calculate Purchasing Power Parities (PPPs) and price level indices",
+        "c": "To collect data on international trade",
+        "d": "To produce unemployment estimates globally Rights"
       },
       "answer": "b",
       "solution": ""
     },
     {
       "q_num": 47,
-      "question": "After realising the deadly effects of depleting the ozone layer, under which programme was the decision taken to ban the usage of CFC? SSC JE 05/06/2024 (Evening) ओजोन परत के क्षरण के घातक प्रभावों को समझते हुए किस कार्यक्रम के तहत सी.एफ.सी. के उपयोग पर प्रतिबंध लगाने का निर्णय लिया गया?",
+      "question": "After realising the deadly effects of depleting the ozone layer, under which programme was the decision taken to ban the usage of CFC? SSC JE 05/06/2024 (Evening)",
       "options": {
-        "a": "United Nations Development Programme / संयुक्त राष्ट्र विकास कार्यक्रम",
-        "b": "Natural State Environmental Programme / प्राकृतिक राज्य पर्यावरण कार्यक्रम",
-        "c": "United Nations Environment Programme / संयुक्त राष्ट्र पर्यावरण कार्यक्रम",
-        "d": "Federal Energy Management Programme / संघीय ऊर्जा प्रबंधन कार्यक्रम"
+        "a": "United Nations Development Programme",
+        "b": "Natural State Environmental Programme",
+        "c": "United Nations Environment Programme",
+        "d": "Federal Energy Management Programme"
       },
       "answer": "c",
       "solution": ""
     },
     {
       "q_num": 48,
-      "question": "Which of the following countries is NOT a member of SAARC? SSC GD 23/02/2024 (Evening Shift)निम्नलिखित में से कौन सा देश सार्क का सदस्य नहीं है?",
+      "question": "Which of the following countries is NOT a member of SAARC? SSC GD 23/02/2024 (Evening Shift)",
       "options": {
         "a": "China",
         "b": "Bhutan",
@@ -582,7 +582,7 @@
     },
     {
       "q_num": 49,
-      "question": "According to the global Multidimensional Poverty Index (MPI) 2021, India’s rank is ________ out of 109 countries. PHASE XII 20/06/2024 (Afternoon) वैश्विक बहुआयामी गरीबी सूचकांक (एमपीआई) 2021 के अनुसार, 109 देशों में भारत का स्थान ________ है।",
+      "question": "According to the global Multidimensional Poverty Index (MPI) 2021, India’s rank is ________ out of 109 countries. PHASE XII 20/06/2024 (Afternoon)",
       "options": {
         "a": "66",
         "b": "101",
@@ -594,7 +594,7 @@
     },
     {
       "q_num": 50,
-      "question": "According to the Human Development Index 2021, which neighbouring countries from the following ranked behind India? Phase XII 21/06/2024 (Afternoon) मानव विकास सूचकांक 2021 के अनुसार, निम्नलिखित में से कौन से पड़ोसी देश भारत से पीछे हैं?",
+      "question": "According to the Human Development Index 2021, which neighbouring countries from the following ranked behind India? Phase XII 21/06/2024 (Afternoon)",
       "options": {
         "a": "Afghanistan",
         "b": "Bangladesh",

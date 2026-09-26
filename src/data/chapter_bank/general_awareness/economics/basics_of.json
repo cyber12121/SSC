@@ -6,211 +6,211 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "What refers to the satisfaction or benefits a person gets from consuming a good or service? / किसी वस्तु या सेवा के उपभोग से व्यक्ति को मिलने वाली संतुष्टि या लाभ को क्या कहा जाता है?",
+      "question": "What refers to the satisfaction or benefits a person gets from consuming a good or service?",
       "options": {
-        "a": "Demand / मांग",
-        "b": "Supply / आपूर्ति",
-        "c": "Utility / उपयोगिता",
-        "d": "Elasticity / लोच"
+        "a": "Demand",
+        "b": "Supply",
+        "c": "Utility",
+        "d": "Elasticity"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUtility is the psychological satisfaction derived by a consumer from the consumption of a good. It is subjective and varies from person to person\n\n📖 हिंदी स्पष्टीकरण:\nउपयोगिता किसी वस्तु के उपभोग से उपभोक्ता को मिलने वाली मनोवैज्ञानिक संतुष्टि है। यह व्यक्तिपरक होती है और अलग-अलग व्यक्तियों के लिए भिन्न हो सकती है।"
     },
     {
       "q_num": 2,
-      "question": "Which type of utility can be measured in exact numbers or units? / किस प्रकार की उपयोगिता को सटीक संख्याओं या इकाइयों में मापा जा सकता है?",
+      "question": "Which type of utility can be measured in exact numbers or units?",
       "options": {
-        "a": "Ordinal utility / क्रमवाचक उपयोगिता",
-        "b": "Cardinal utility / गणनावाचक उपयोगिता",
-        "c": "Marginal utility / सीमांत उपयोगिता",
-        "d": "Total utility / कुल उपयोगिता"
+        "a": "Ordinal utility",
+        "b": "Cardinal utility",
+        "c": "Marginal utility",
+        "d": "Total utility"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCardinal utility theory assumes that satisfaction can be quantified in units called 'utils'. This concept was primarily developed by Alfred Marshall\n\n📖 हिंदी स्पष्टीकरण:\nगणनावाचक उपयोगिता सिद्धांत मानता है कि संतुष्टि को 'यूटिल्स' नामक इकाइयों में मापा जा सकता है। इस अवधारणा को मुख्य रूप से अल्फ्रेड मार्शल द्वारा विकसित किया गया था।"
     },
     {
       "q_num": 3,
-      "question": "The Law of Diminishing Marginal Utility states that as consumption increases, the marginal utility: / सीमांत उपयोगिता के ह्रास का नियम बताता है कि जैसे-जैसे उपभोग बढ़ता है, सीमांत उपयोगिता:",
+      "question": "The Law of Diminishing Marginal Utility states that as consumption increases, the marginal utility:",
       "options": {
-        "a": "Increases / बढ़ती है।",
-        "b": "Remains constant / स्थिर रहती है।",
-        "c": "Decreases / घटती है।",
-        "d": "Becomes infinite / अनंत हो जाती है।"
+        "a": "Increases",
+        "b": "Remains constant",
+        "c": "Decreases",
+        "d": "Becomes infinite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIt states that as more units of a good are consumed, the additional satisfaction derived from each extra unit falls. For example, the first 'Golgappa' gives more joy than the fifth one\n\n📖 हिंदी स्पष्टीकरण:\nयह बताता है कि जैसे-जैसे किसी वस्तु की अधिक इकाइयों का उपभोग किया जाता है, प्रत्येक अतिरिक्त इकाई से प्राप्त होने वाली संतुष्टि कम होती जाती है। उदाहरण के लिए, पहले 'गोलगप्पे' से पांचवें की तुलना में अधिक आनंद मिलता है।"
     },
     {
       "q_num": 4,
-      "question": "Which of the following is an example of a 'Free Good'? / निम्नलिखित में से कौन सा 'मुक्त वस्तु' का उदाहरण है?",
+      "question": "Which of the following is an example of a 'Free Good'?",
       "options": {
-        "a": "Shoes / जूते",
-        "b": "Sunlight / सूर्य का प्रकाश",
-        "c": "Wheat / गेहूँ",
-        "d": "Electricity / बिजली"
+        "a": "Shoes",
+        "b": "Sunlight",
+        "c": "Wheat",
+        "d": "Electricity"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFree goods are those which are available in abundance by nature and have no opportunity cost. They are not scarce, unlike economic goods\n\n📖 हिंदी स्पष्टीकरण:\nमुक्त वस्तुएँ वे हैं जो प्रकृति द्वारा प्रचुर मात्रा में उपलब्ध हैं और जिनकी कोई अवसर लागत नहीं होती है। आर्थिक वस्तुओं के विपरीत, ये दुर्लभ नहीं होती हैं।"
     },
     {
       "q_num": 5,
-      "question": "The Production Possibility Frontier (PPF) curve is generally ________ to the origin. / उत्पादन संभावना वक्र (PPF) आमतौर पर मूल बिंदु के प्रति ________ होता है।",
+      "question": "The Production Possibility Frontier (PPF) curve is generally ________ to the origin.",
       "options": {
-        "a": "Convex / उत्तल",
-        "b": "Concave / अवतल",
-        "c": "Vertical / लंबवत",
-        "d": "Horizontal / क्षैतिज"
+        "a": "Convex",
+        "b": "Concave",
+        "c": "Vertical",
+        "d": "Horizontal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe PPF is concave to the origin because of increasing marginal opportunity costs. To produce more of one good, increasing amounts of the other good must be sacrificed\n\n📖 हिंदी स्पष्टीकरण:\nबढ़ती सीमांत अवसर लागत के कारण PPF मूल बिंदु के प्रति अवतल होता है। एक वस्तु का अधिक उत्पादन करने के लिए, दूसरी वस्तु की बढ़ती मात्रा का त्याग करना पड़ता है।"
     },
     {
       "q_num": 6,
-      "question": "When the demand for one good increase because the price of another good rises, these goods are: / जब किसी वस्तु की मांग इसलिए बढ़ जाती है क्योंकि दूसरी वस्तु की कीमत बढ़ जाती है, तो ये वस्तुएं हैं:",
+      "question": "When the demand for one good increase because the price of another good rises, these goods are:",
       "options": {
-        "a": "Complimentary goods / पूरक वस्तुएं",
-        "b": "Substitute goods / स्थानापन्न वस्तुएं",
-        "c": "Inferior goods / घटिया वस्तुएं",
-        "d": "Giffen goods / गिफिन वस्तुएं"
+        "a": "Complimentary goods",
+        "b": "Substitute goods",
+        "c": "Inferior goods",
+        "d": "Giffen goods"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSubstitute goods can be used in place of each other, like tea and coffee. An increase in the price of tea makes coffee relatively cheaper, increasing its demand\n\n📖 हिंदी स्पष्टीकरण:\nस्थानापन्न वस्तुओं का उपयोग एक-दूसरे के स्थान पर किया जा सकता है, जैसे चाय और कॉफी। चाय की कीमत में वृद्धि कॉफी को तुलनात्मक रूप से सस्ता बना देती है, जिससे इसकी मांग बढ़ जाती है।"
     },
     {
       "q_num": 7,
-      "question": "What kind of market has only one seller and many buyers? / किस प्रकार के बाजार में केवल एक विक्रेता और कई खरीदार होते हैं?",
+      "question": "What kind of market has only one seller and many buyers?",
       "options": {
-        "a": "Perfect Competition / पूर्ण प्रतियोगिता",
-        "b": "Oligopoly / अल्पाधिकार",
-        "c": "Monopoly / एकाधिकार",
-        "d": "Monopolistic Competition / एकाधिकारात्मक प्रतियोगिता"
+        "a": "Perfect Competition",
+        "b": "Oligopoly",
+        "c": "Monopoly",
+        "d": "Monopolistic Competition"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn a monopoly, a single firm controls the entire market supply and there are no close substitutes. Indian Railways is a classic example\n\n📖 हिंदी स्पष्टीकरण:\nएकाधिकार में, एक ही फर्म पूरे बाजार की आपूर्ति को नियंत्रित करती है और इसका कोई निकटतम विकल्प नहीं होता है। भारतीय रेलवे इसका एक उत्कृष्ट उदाहरण है।"
     },
     {
       "q_num": 8,
-      "question": "A demand curve usually slopes: / एक मांग वक्र का ढाल आमतौर पर होता है:",
+      "question": "A demand curve usually slopes:",
       "options": {
-        "a": "Upward from left to right / बाएं से दाएं ऊपर की ओर",
-        "b": "Downward from left to right / बाएं से दाएं नीचे की ओर",
-        "c": "Vertical / लंबवत",
-        "d": "Horizontal / क्षैतिज"
+        "a": "Upward from left to right",
+        "b": "Downward from left to right",
+        "c": "Vertical",
+        "d": "Horizontal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt shows a negative or inverse relationship between price and quantity demanded. As price falls, demand increases, and vice versa\n\n📖 हिंदी स्पष्टीकरण:\nयह कीमत और मांगी गई मात्रा के बीच नकारात्मक या विपरीत संबंध को दर्शाता है। जैसे-जैसे कीमत गिरती है, मांग बढ़ती है, और इसके विपरीत।"
     },
     {
       "q_num": 9,
-      "question": "Which of the following is a 'Veblen Good'? / निम्नलिखित में से कौन 'वेबलेन वस्तु' है?",
+      "question": "Which of the following is a 'Veblen Good'?",
       "options": {
-        "a": "Wheat / गेहूँ",
-        "b": "Salt / नमक",
-        "c": "iPhone / आईफोन",
-        "d": "Coarse grain / मोटा अनाज"
+        "a": "Wheat",
+        "b": "Salt",
+        "c": "iPhone",
+        "d": "Coarse grain"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nVeblen goods are luxury items for which demand increases as the price increases, because of their status symbol value\n\n📖 हिंदी स्पष्टीकरण:\nवेबलेन वस्तुएं वे विलासिता की वस्तुएं हैं जिनकी मांग कीमत बढ़ने के साथ बढ़ती है, क्योंकि वे प्रतिष्ठा का प्रतीक (स्टेटस सिंबल) मानी जाती हैं।"
     },
     {
       "q_num": 10,
-      "question": "The point where the demand curve and supply curve intersect is known as: / वह बिंदु जहाँ मांग वक्र और आपूर्ति वक्र एक-दूसरे को काटते हैं, कहलाता है:",
+      "question": "The point where the demand curve and supply curve intersect is known as:",
       "options": {
-        "a": "Surplus / अधिशेष",
-        "b": "Shortage / कमी",
-        "c": "Equilibrium / संतुलन",
-        "d": "Elasticity / लोच"
+        "a": "Surplus",
+        "b": "Shortage",
+        "c": "Equilibrium",
+        "d": "Elasticity"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEquilibrium is the state where the quantity demanded equals the quantity supplied at a particular price. At this point, there is no tendency for price to change\n\n📖 हिंदी स्पष्टीकरण:\nसंतुलन वह स्थिति है जहाँ एक विशेष कीमत पर मांगी गई मात्रा आपूर्ति की गई मात्रा के बराबर होती है। इस बिंदु पर, कीमत में बदलाव की कोई प्रवृत्ति नहीं होती है।"
     },
     {
       "q_num": 11,
-      "question": "If the price elasticity of demand (ed) is equal to infinity, the demand is said to be: / यदि मांग की कीमत लोच (ed) अनंत के बराबर है, तो मांग को कहा जाता है:",
+      "question": "If the price elasticity of demand (ed) is equal to infinity, the demand is said to be:",
       "options": {
-        "a": "Perfectly Inelastic / पूर्णतः बेलोचदार",
-        "b": "Relatively Elastic / सापेक्षिक लोचदार",
-        "c": "Unitary Elastic / इकाई लोचदार",
-        "d": "Perfectly Elastic / पूर्णतः लोचदार"
+        "a": "Perfectly Inelastic",
+        "b": "Relatively Elastic",
+        "c": "Unitary Elastic",
+        "d": "Perfectly Elastic"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nIn perfectly elastic demand, a very small change in price leads to an infinite change in demand. The demand curve is a horizontal line\n\n📖 हिंदी स्पष्टीकरण:\nपूर्णतः लोचदार मांग में, कीमत में बहुत कम बदलाव मांग में अनंत बदलाव लाता है। मांग वक्र एक क्षैतिज रेखा होती है।"
     },
     {
       "q_num": 12,
-      "question": "What happens to the demand for an 'Inferior Good' when consumer income rises? / जब उपभोक्ता की आय बढ़ती है, तो 'घटिया वस्तु' की मांग का क्या होता है?",
+      "question": "What happens to the demand for an 'Inferior Good' when consumer income rises?",
       "options": {
-        "a": "Demand increases / मांग बढ़ती है।",
-        "b": "Demand decreases / मांग घटती है।",
-        "c": "Demand remains same / मांग समान रहती है।",
-        "d": "Demand becomes zero / मांग शून्य हो जाती है।"
+        "a": "Demand increases",
+        "b": "Demand decreases",
+        "c": "Demand remains same",
+        "d": "Demand becomes zero"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nInferior goods have a negative income effect. As people get richer, they shift from low-quality goods to superior alternatives\n\n📖 हिंदी स्पष्टीकरण:\nघटिया वस्तुओं पर आय का नकारात्मक प्रभाव पड़ता है। जैसे-जैसे लोग अमीर होते हैं, वे कम गुणवत्ता वाली वस्तुओं से बेहतर विकल्पों की ओर रुख करते हैं।"
     },
     {
       "q_num": 13,
-      "question": "In which market structure are products 'homogeneous' (identical)? / किस बाजार संरचना में उत्पाद 'समरूप' (एक जैसे) होते हैं?",
+      "question": "In which market structure are products 'homogeneous' (identical)?",
       "options": {
-        "a": "Monopolistic Competition / एकाधिकारात्मक प्रतियोगिता",
-        "b": "Monopoly / एकाधिकार",
-        "c": "Perfect Competition / पूर्ण प्रतियोगिता",
-        "d": "Oligopoly / अल्पाधिकार"
+        "a": "Monopolistic Competition",
+        "b": "Monopoly",
+        "c": "Perfect Competition",
+        "d": "Oligopoly"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn perfect competition, all firms sell identical products, so consumers have no reason to prefer one seller over another based on product features\n\n📖 हिंदी स्पष्टीकरण:\nपूर्ण प्रतियोगिता में, सभी फर्म समान उत्पाद बेचती हैं, इसलिए उपभोक्ताओं के पास उत्पाद की विशेषताओं के आधार पर एक विक्रेता को दूसरे पर वरीयता देने का कोई कारण नहीं होता है।"
     },
     {
       "q_num": 14,
-      "question": "Opportunity cost is defined as: / अवसर लागत को इस प्रकार परिभाषित किया गया है:",
+      "question": "Opportunity cost is defined as:",
       "options": {
-        "a": "The total cost of production / उत्पादन की कुल लागत",
-        "b": "The cost of the next best alternative forgone / त्यागे गए अगले सर्वोत्तम विकल्प की लागत",
-        "c": "The market price of a good / किसी वस्तु का बाजार मूल्य",
-        "d": "Fixed cost-plus variable cost / स्थिर लागत और परिवर्तनीय लागत का योग"
+        "a": "The total cost of production",
+        "b": "The cost of the next best alternative forgone",
+        "c": "The market price of a good",
+        "d": "Fixed cost-plus variable cost"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt represents the benefit one could have received but gave up to take another action. For example, if you spend time studying, the opportunity cost is the leisure time you lost\n\n📖 हिंदी स्पष्टीकरण:\nयह उस लाभ का प्रतिनिधित्व करता है जो प्राप्त किया जा सकता था लेकिन किसी अन्य कार्य को करने के लिए त्याग दिया गया। उदाहरण के लिए, यदि आप पढ़ाई में समय बिताते हैं, तो अवसर लागत वह अवकाश समय है जो आपने खो दिया।"
     },
     {
       "q_num": 15,
-      "question": "Price elasticity of demand is usually: / मांग की कीमत लोच आमतौर पर होती है:",
+      "question": "Price elasticity of demand is usually:",
       "options": {
-        "a": "Positive / सकारात्मक",
-        "b": "Negative / नकारात्मक",
-        "c": "Zero / शून्य",
-        "d": "One / एक"
+        "a": "Positive",
+        "b": "Negative",
+        "c": "Zero",
+        "d": "One"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt is usually negative due to the inverse relationship between price and demand. However, the absolute value (modulus) is often used for analysis\n\n📖 हिंदी स्पष्टीकरण:\nकीमत और मांग के बीच विपरीत संबंध के कारण यह आमतौर पर नकारात्मक होती है। हालांकि, विश्लेषण के लिए अक्सर इसके पूर्ण मान का उपयोग किया जाता है।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements about Giffen Goods: / गिफिन वस्तुओं के बारे में निम्नलिखित कथनों पर विचार करें:\n 1. They are a special type of inferior goods. / ये एक विशेष प्रकार की घटिया वस्तुएं हैं।\n 2. Their demand increases when their price falls. / इनकी कीमत गिरने पर इनकी मांग बढ़ जाती है।\n Which of the statements given above is/are correct? / ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements about Giffen Goods:",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "2 only / केवल 2",
-        "c": "Both 1 and 2 / 1 और 2 दोनों",
-        "d": "Neither 1 nor 2 / न तो 1 और न ही 2"
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nGiffen goods are inferior goods where demand increases as price rises, violating the law of demand. Therefore, statement 2 is incorrect\n\n📖 हिंदी स्पष्टीकरण:\nगिफिन वस्तुएं ऐसी घटिया वस्तुएं हैं जहां कीमत बढ़ने पर मांग बढ़ती है, जो मांग के नियम का उल्लंघन करती है। इसलिए, कथन 2 गलत है।"
     },
     {
       "q_num": 17,
-      "question": "Assertion (A): The supply curve is generally positive sloping. / अभिकथन (A): आपूर्ति वक्र आम तौर पर धनात्मक ढाल वाला होता है।\n Reason (R): Producers are willing to supply more at higher prices to earn more profit. / कारण (R): उत्पादक अधिक लाभ कमाने के लिए उच्च कीमतों पर अधिक आपूर्ति करने के इच्छुक होते हैं।",
+      "question": "Assertion (A): The supply curve is generally positive sloping.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHigher prices incentivize producers to increase production as the marginal profit per unit increases. This results in an upward-sloping supply curve\n\n📖 हिंदी स्पष्टीकरण:\nऊंची कीमतें उत्पादकों को उत्पादन बढ़ाने के लिए प्रोत्साहित करती हैं क्योंकि प्रति इकाई सीमांत लाभ बढ़ जाता है। इसके परिणामस्वरूप ऊपर की ओर झुका हुआ आपूर्ति वक्र प्राप्त होता है।"
     },
     {
       "q_num": 18,
-      "question": "Match the following: / निम्नलिखित का मिलान करें:\n List I (Market Type) सूची I (बाजार का प्रकार) - List II (Example) / सूची II (उदाहरण)\n 1. Monopoly / एकाधिकार - A. Telecom Sector / दूरसंचार क्षेत्र\n 2. Oligopoly / अल्पाधिकार - B. Indian Railways / भारतीय रेलवे\n 3. Monopolistic Comp. / एकाधिकारवादी प्रतियोगिता - C. Agricultural Products / कृषि उत्पाद\n 4. Perfect Competition / पूर्ण प्रतिस्पर्धा - D. Toothpaste / टूथपेस्ट",
+      "question": "Match the following:",
       "options": {
         "a": "1-B, 2-A, 3-D, 4-C",
         "b": "1-A, 2-B, 3-C, 4-D",
@@ -222,84 +222,84 @@
     },
     {
       "q_num": 19,
-      "question": "Which of the following factors causes a 'Shift' in the demand curve rather than movement along the curve? / निम्नलिखित में से कौन सा कारक मांग वक्र में 'स्थानांतरण' का कारण बनता है न कि वक्र के साथ संचलन का?",
+      "question": "Which of the following factors causes a 'Shift' in the demand curve rather than movement along the curve?",
       "options": {
-        "a": "Change in price of the product / उत्पाद की कीमत में परिवर्तन",
-        "b": "Change in consumer income / उपभोक्ता की आय में परिवर्तन",
-        "c": "Change in production cost / उत्पादन लागत में परिवर्तन",
-        "d": "Change in supply / आपूर्ति में परिवर्तन"
+        "a": "Change in price of the product",
+        "b": "Change in consumer income",
+        "c": "Change in production cost",
+        "d": "Change in supply"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMovement along the curve is only due to price changes of that product. Shifts occur due to external factors like income, tastes, or prices of related goods\n\n📖 हिंदी स्पष्टीकरण:\nवक्र के साथ संचलन केवल उस उत्पाद की कीमतों में बदलाव के कारण होता है। स्थानांतरण आय, पसंद या संबंधित वस्तुओं की कीमतों जैसे बाहरी कारकों के कारण होता है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Necessary goods have relatively inelastic demand. / अभिकथन (A): आवश्यक वस्तुओं की मांग सापेक्षिक रूप से बेलोचदार होती है।\n Reason (R): Consumers cannot easily reduce consumption of necessities even if price increases. / कारण (R): उपभोक्ता आवश्यक वस्तुओं के उपभोग को आसानी से कम नहीं कर सकते, भले ही कीमत बढ़ जाए।",
+      "question": "Assertion (A): Necessary goods have relatively inelastic demand.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNecessities like salt or medicine are essential for survival, so people continue to buy them despite price hikes, making their demand inelastic\n\n📖 हिंदी स्पष्टीकरण:\nनमक या दवा जैसी आवश्यकताएं जीवित रहने के लिए अनिवार्य हैं, इसलिए लोग कीमतों में वृद्धि के बावजूद उन्हें खरीदना जारी रखते हैं, जिससे उनकी मांग बेलोचदार हो जाती है।"
     },
     {
       "q_num": 21,
-      "question": "'Cross Price Elasticity' of complementary goods is always: / पूरक वस्तुओं की 'तिरछी कीमत लोच' हमेशा होती है:",
+      "question": "'Cross Price Elasticity' of complementary goods is always:",
       "options": {
-        "a": "Positive / सकारात्मक",
-        "b": "Negative / नकारात्मक",
-        "c": "Zero / शून्य",
-        "d": "Infinite / अनंत"
+        "a": "Positive",
+        "b": "Negative",
+        "c": "Zero",
+        "d": "Infinite"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFor complementary goods (like car and petrol), an increase in the price of one leads to a decrease in the demand for the other, resulting in a negative elasticity\n\n📖 हिंदी स्पष्टीकरण:\nपूरक वस्तुओं (जैसे कार और पेट्रोल) के लिए, एक की कीमत में वृद्धि से दूसरे की मांग में कमी आती है, जिसके परिणामस्वरूप लोच नकारात्मक होती है।"
     },
     {
       "q_num": 22,
-      "question": "A point 'Under' the Production Possibility Frontier (PPF) indicates: / उत्पादन संभावना सीमा (PPF) के 'नीचे' (अंदर) एक बिंदु क्या दर्शाता है?",
+      "question": "A point 'Under' the Production Possibility Frontier (PPF) indicates:",
       "options": {
-        "a": "Full utilization of resources / संसाधनों का पूर्ण उपयोग",
-        "b": "Not achievable point / प्राप्त न करने योग्य बिंदु",
-        "c": "Under-utilization of resources / संसाधनों का कम उपयोग",
-        "d": "Economic growth / आर्थिक विकास"
+        "a": "Full utilization of resources",
+        "b": "Not achievable point",
+        "c": "Under-utilization of resources",
+        "d": "Economic growth"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPoints on the curve show efficiency. Points inside the curve mean that the economy is not using its resources to the full potential or is being inefficient\n\n📖 हिंदी स्पष्टीकरण:\nवक्र पर स्थित बिंदु दक्षता दर्शाते हैं। वक्र के अंदर के बिंदुओं का मतलब है कि अर्थव्यवस्था अपने संसाधनों का पूरी क्षमता से उपयोग नहीं कर रही है या अक्षम है।"
     },
     {
       "q_num": 23,
-      "question": "Which concept is based on the ranking of preferences rather than exact measurement? / कौन सी अवधारणा सटीक माप के बजाय वरीयताओं की रैंकिंग पर आधारित है?",
+      "question": "Which concept is based on the ranking of preferences rather than exact measurement?",
       "options": {
-        "a": "Cardinal Utility / गणनावाचक उपयोगिता",
-        "b": "Ordinal Utility / क्रमवाचक उपयोगिता",
-        "c": "Total Utility / कुल उपयोगिता",
-        "d": "Marginal Utility / सीमांत उपयोगिता"
+        "a": "Cardinal Utility",
+        "b": "Ordinal Utility",
+        "c": "Total Utility",
+        "d": "Marginal Utility"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nOrdinal utility, often represented by indifference curves, suggests that consumers can rank combinations of goods based on preference but cannot quantify the difference\n\n📖 हिंदी स्पष्टीकरण:\nक्रमवाचक उपयोगिता, जिसे अक्सर तटस्थता वक्रों द्वारा दर्शाया जाता है, सुझाव देती है कि उपभोक्ता वरीयता के आधार पर वस्तुओं के संयोजनों को रैंक कर सकते हैं लेकिन अंतर को माप नहीं सकते।"
     },
     {
       "q_num": 24,
-      "question": "Assertion (A): In an oligopoly, there is high interdependence between firms. / अभिकथन (A): अल्पाधिकार में, फर्मों के बीच उच्च परस्पर निर्भरता होती है।\n Reason (R): Since there are few dominant sellers, the action of one firm significantly affects others. / कारण (R): चूंकि कुछ ही प्रमुख विक्रेता होते हैं, इसलिए एक फर्म का कार्य दूसरों को महत्वपूर्ण रूप से प्रभावित करता है।",
+      "question": "Assertion (A): In an oligopoly, there is high interdependence between firms.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn an oligopoly (like telecom), if one company reduces prices, others must react to retain their market share, showing clear interdependence\n\n📖 हिंदी स्पष्टीकरण:\nअल्पाधिकार (जैसे टेलीकॉम) में, यदि एक कंपनी कीमतें कम करती है, तो दूसरों को अपना बाजार हिस्सा बनाए रखने के लिए प्रतिक्रिया देनी होगी, जो स्पष्ट परस्पर निर्भरता दर्शाता है।"
     },
     {
       "q_num": 25,
-      "question": "Which of the following is NOT an assumption of the Law of Demand? / निम्नलिखित में से कौन मांग के नियम की धारणा नहीं है?",
+      "question": "Which of the following is NOT an assumption of the Law of Demand?",
       "options": {
-        "a": "Income remains constant / आय स्थिर रहती है।",
-        "b": "Tastes and preferences remain constant / रुचि और वरीयताएँ स्थिर रहती हैं।",
-        "c": "Price of the product remains constant / उत्पाद की कीमत स्थिर रहती है।",
-        "d": "Prices of related goods remain constant / संबंधित वस्तुओं की कीमतें स्थिर रहती हैं।"
+        "a": "Income remains constant",
+        "b": "Tastes and preferences remain constant",
+        "c": "Price of the product remains constant",
+        "d": "Prices of related goods remain constant"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Law of Demand explains how quantity demanded changes in response to a change in the product's price, assuming other things remain constant (Ceteris Paribus)\n\n📖 हिंदी स्पष्टीकरण:\nमांग का नियम बताता है कि उत्पाद की कीमत में बदलाव के परिणामस्वरूप मांगी गई मात्रा कैसे बदलती है, यह मानते हुए कि अन्य चीजें स्थिर रहती हैं।"

@@ -6,91 +6,91 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "What is the shortest distance between the initial and final position of an object called? / किसी वस्तु की प्रारंभिक और अंतिम स्थिति के बीच की न्यूनतम दूरी को क्या कहा जाता है?",
+      "question": "What is the shortest distance between the initial and final position of an object called?",
       "options": {
-        "a": "Distance / दूरी",
-        "b": "Displacement / विस्थापन",
-        "c": "Speed / चाल",
-        "d": "Motion / गति"
+        "a": "Distance",
+        "b": "Displacement",
+        "c": "Speed",
+        "d": "Motion"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDisplacement is a vector quantity representing the straight-line path between two points. It can be zero if the object returns to its start point\n\n📖 हिंदी स्पष्टीकरण:\nविस्थापन एक सदिश राशि है जो दो बिंदुओं के बीच सीधे पथ को दर्शाती है। यदि वस्तु अपने प्रारंभिक बिंदु पर वापस आती है, तो यह शून्य हो सकती है।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is a scalar quantity? / निम्नलिखित में से कौन सी एक अदिश राशि है?",
+      "question": "Which of the following is a scalar quantity?",
       "options": {
-        "a": "Velocity / वेग",
-        "b": "Displacement / विस्थापन",
-        "c": "Distance / दूरी",
-        "d": "Acceleration / त्वरण"
+        "a": "Velocity",
+        "b": "Displacement",
+        "c": "Distance",
+        "d": "Acceleration"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nScalar quantities only have numerical value (magnitude) and no direction. Distance only tells how much path is covered\n\n📖 हिंदी स्पष्टीकरण:\nअदिश राशियों में केवल संख्यात्मक मान (परिमाण) होता है और कोई दिशा नहीं होती है। दूरी केवल यह बताती है कि कितना रास्ता तय किया गया है।"
     },
     {
       "q_num": 3,
-      "question": "If an object covers equal distances in equal intervals of time, it is said to be in: / यदि कोई वस्तु समान समय अंतराल में समान दूरी तय करती है, तो उसे कहा जाता है:",
+      "question": "If an object covers equal distances in equal intervals of time, it is said to be in:",
       "options": {
-        "a": "Non-uniform motion / असमान गति",
-        "b": "Uniform motion / एकसमान गति",
-        "c": "Rest / विराम अवस्था",
-        "d": "Circular motion / वृत्तीय गति"
+        "a": "Non-uniform motion",
+        "b": "Uniform motion",
+        "c": "Rest",
+        "d": "Circular motion"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn uniform motion, the speed remains constant throughout the journey. The distance-time graph for this motion is a straight line\n\n📖 हिंदी स्पष्टीकरण:\nएकसमान गति में, पूरी यात्रा के दौरान गति स्थिर रहती है। इस गति के लिए दूरी-समय ग्राफ एक सीधी रेखा होती है।"
     },
     {
       "q_num": 4,
-      "question": "The S.I. unit of speed is: / चाल का S.I. मात्रक क्या है?",
+      "question": "The S.I. unit of speed is:",
       "options": {
-        "a": "km/h / किमी/घंटा",
-        "b": "m/s2 / मी/से²",
-        "c": "m/s / मी/से",
-        "d": "m.s / मी.से"
+        "a": "km/h",
+        "b": "m/s2",
+        "c": "m/s",
+        "d": "m.s"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nSpeed is defined as distance divided by time. According to the International System of Units (1960), its unit is meters per second\n\n📖 हिंदी स्पष्टीकरण:\nचाल को दूरी को समय से विभाजित करने के रूप में परिभाषित किया गया है। मात्रकों की अंतर्राष्ट्रीय प्रणाली (1960) के अनुसार, इसकी इकाई मीटर प्रति सेकंड है।"
     },
     {
       "q_num": 5,
-      "question": "What does the odometer of a vehicle measure? / किसी वाहन का ओडोमीटर क्या मापता है?",
+      "question": "What does the odometer of a vehicle measure?",
       "options": {
-        "a": "Speed / चाल",
-        "b": "Acceleration / त्वरण",
-        "c": "Distance / दूरी",
-        "d": "Velocity / वेग"
+        "a": "Speed",
+        "b": "Acceleration",
+        "c": "Distance",
+        "d": "Velocity"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAn odometer is a device used to record the total distance traveled by a vehicle. It is usually found on the dashboard\n\n📖 हिंदी स्पष्टीकरण:\nओडोमीटर एक उपकरण है जिसका उपयोग वाहन द्वारा तय की गई कुल दूरी को रिकॉर्ड करने के लिए किया जाता है। यह आमतौर पर डैशबोर्ड पर पाया जाता है।"
     },
     {
       "q_num": 6,
-      "question": "What is the formula for average speed? / औसत चाल का सूत्र क्या है?",
+      "question": "What is the formula for average speed?",
       "options": {
-        "a": "Total displacement / Total time (कुल विस्थापन / कुल समय)",
-        "b": "Total distance covered / Total time taken (कुल तय की गई दूरी / कुल लिया गया समय)",
-        "c": "Initial speed + Final speed (प्रारंभिक गति + अंतिम गति)",
-        "d": "Distance * Time (दूरी * समय)"
+        "a": "Total displacement",
+        "b": "Total distance covered",
+        "c": "Initial speed + Final speed (",
+        "d": "Distance * Time ("
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAverage speed accounts for the entire journey, especially when motion is non-uniform. It is the ratio of total path length to total time\n\n📖 हिंदी स्पष्टीकरण:\nऔसत चाल पूरी यात्रा का विवरण देती है, खासकर जब गति असमान हो। यह कुल पथ की लंबाई और कुल समय का अनुपात है।"
     },
     {
       "q_num": 7,
-      "question": "Change in velocity per unit time is called: / प्रति इकाई समय में वेग में परिवर्तन को क्या कहा जाता है?",
+      "question": "Change in velocity per unit time is called:",
       "options": {
-        "a": "Speed / चाल",
-        "b": "Displacement / विस्थापन",
-        "c": "Acceleration / त्वरण",
-        "d": "Distance / दूरी"
+        "a": "Speed",
+        "b": "Displacement",
+        "c": "Acceleration",
+        "d": "Distance"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAcceleration measures how quickly velocity changes. Its formula is (v-u)/t and its S.I. unit is m/s2\n\n📖 हिंदी स्पष्टीकरण:\nत्वरण मापता है कि वेग कितनी जल्दी बदलता है। इसका सूत्र (v-u)/t है और इसका S.I. मात्रक m/s2 है।"
     },
     {
       "q_num": 8,
-      "question": "What is the value of 1 km/hr in m/s? / m/s में 1 km/hr का मान क्या है?",
+      "question": "What is the value of 1 km/hr in m/s?",
       "options": {
         "a": "18/5 m/s",
         "b": "5/18 m/s",
@@ -102,31 +102,31 @@
     },
     {
       "q_num": 9,
-      "question": "When an object moves in a circular path with constant speed, its motion is: / जब कोई वस्तु स्थिर गति के साथ वृत्ताकार पथ में चलती है, तो उसकी गति होती है:",
+      "question": "When an object moves in a circular path with constant speed, its motion is:",
       "options": {
-        "a": "Linear motion / रेखीय गति",
-        "b": "Uniform circular motion / समान वृत्तीय गति",
-        "c": "Vibratory motion / कंपन गति",
-        "d": "Non-uniform motion / असमान गति"
+        "a": "Linear motion",
+        "b": "Uniform circular motion",
+        "c": "Vibratory motion",
+        "d": "Non-uniform motion"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEven if speed is constant, the direction changes at every point, making it an accelerated motion\n\n📖 हिंदी स्पष्टीकरण:\nभले ही गति स्थिर हो, दिशा हर बिंदु पर बदलती है, जिससे यह एक त्वरित गति बन जाती है।"
     },
     {
       "q_num": 10,
-      "question": "Negative acceleration is also known as: / ऋणात्मक त्वरण को इस नाम से भी जाना जाता है:",
+      "question": "Negative acceleration is also known as:",
       "options": {
-        "a": "Velocity / वेग",
-        "b": "Retardation/Deceleration / मंदन",
-        "c": "Speed / चाल",
-        "d": "Uniform motion / एकसमान गति"
+        "a": "Velocity",
+        "b": "Retardation/Deceleration",
+        "c": "Speed",
+        "d": "Uniform motion"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nWhen the final velocity is less than the initial velocity (slowing down), the acceleration value is negative\n\n📖 हिंदी स्पष्टीकरण:\nजब अंतिम वेग प्रारंभिक वेग से कम होता है (गति धीमी होना), तो त्वरण का मान ऋणात्मक होता है।"
     },
     {
       "q_num": 11,
-      "question": "An object travels 16 m in 4 sec and another 16 m in 2 sec. What is its average speed? / एक वस्तु 4 सेकंड में 16 मीटर और फिर 2 सेकंड में 16 मीटर की यात्रा करती है। इसकी औसत गति क्या है?",
+      "question": "An object travels 16 m in 4 sec and another 16 m in 2 sec. What is its average speed?",
       "options": {
         "a": "4 m/s",
         "b": "8 m/s",
@@ -138,7 +138,7 @@
     },
     {
       "q_num": 12,
-      "question": "If a train starting from rest attains a velocity of 72 km/h in 5 minutes, what is its acceleration? / यदि विराम से शुरू होने वाली एक ट्रेन 5 मिनट में 72 किमी/घंटा का वेग प्राप्त करती है, तो इसका त्वरण क्या है?",
+      "question": "If a train starting from rest attains a velocity of 72 km/h in 5 minutes, what is its acceleration?",
       "options": {
         "a": "1/15 m/s2",
         "b": "4 m/s2",
@@ -150,19 +150,19 @@
     },
     {
       "q_num": 13,
-      "question": "In a displacement-time graph, what does the slope represent? / विस्थापन-समय ग्राफ में, ढलान क्या दर्शाता है?",
+      "question": "In a displacement-time graph, what does the slope represent?",
       "options": {
-        "a": "Distance / दूरी",
-        "b": "Speed / चाल",
-        "c": "Velocity / वेग",
-        "d": "Acceleration / त्वरण"
+        "a": "Distance",
+        "b": "Speed",
+        "c": "Velocity",
+        "d": "Acceleration"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe slope of a displacement-time graph gives the rate of change of displacement, which is velocity\n\n📖 हिंदी स्पष्टीकरण:\nविस्थापन-समय ग्राफ का ढलान विस्थापन के परिवर्तन की दर देता है, जो वेग है।"
     },
     {
       "q_num": 14,
-      "question": "Usha swims in a 90 m long pool. She covers 180 m in one minute by going to the other end and back. Her average velocity is: / उषा 90 मीटर लंबे पूल में तैरती है। वह एक छोर से दूसरे छोर तक जाकर वापस आने में एक मिनट में 180 मीटर की दूरी तय करती है। उसका औसत वेग है:",
+      "question": "Usha swims in a 90 m long pool. She covers 180 m in one minute by going to the other end and back. Her average velocity is:",
       "options": {
         "a": "3 m/s",
         "b": "1.5 m/s",
@@ -174,7 +174,7 @@
     },
     {
       "q_num": 15,
-      "question": "Which equation of motion relates velocity, acceleration, and distance without using time? / गति का कौन सा समीकरण समय का उपयोग किए बिना वेग, त्वरण और दूरी को जोड़ता है?",
+      "question": "Which equation of motion relates velocity, acceleration, and distance without using time?",
       "options": {
         "a": "v = u + at",
         "b": "s = ut + 1/2 at²",
@@ -186,55 +186,55 @@
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): Displacement can be zero even if distance covered is not zero. / अभिकथन (A): तय की गई दूरी शून्य न होने पर भी विस्थापन शून्य हो सकता है।\nReason (R): Displacement is the shortest distance between initial and final positions. / कारण (R): विस्थापन प्रारंभिक और अंतिम स्थितियों के बीच की न्यूनतम दूरी है।",
+      "question": "Assertion (A): Displacement can be zero even if distance covered is not zero.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIf an object returns to its start point, displacement is zero, but the actual path (distance) is not\n\n📖 हिंदी स्पष्टीकरण:\nयदि कोई वस्तु अपने प्रारंभिक बिंदु पर लौटती है, तो विस्थापन शून्य होता है, लेकिन वास्तविक पथ (दूरी) शून्य नहीं होती है।"
     },
     {
       "q_num": 17,
-      "question": "Statement I: Speed with direction is called velocity. / कथन I: दिशा के साथ गति को वेग कहा जाता है।\nStatement II: Velocity is a scalar quantity. / कथन II: वेग एक अदिश राशि है।",
+      "question": "Statement I: Speed with direction is called velocity.",
       "options": {
-        "a": "Only Statement I is correct / केवल कथन I सही है।",
-        "b": "Only Statement II is correct / केवल कथन II सही है।",
-        "c": "Both are correct / दोनों सही हैं।",
-        "d": "None are correct / कोई भी सही नहीं है।"
+        "a": "Only Statement I is correct",
+        "b": "Only Statement II is correct",
+        "c": "Both are correct",
+        "d": "None are correct"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nVelocity includes both magnitude and direction, making it a vector quantity, not scalar\n\n📖 हिंदी स्पष्टीकरण:\nवेग में परिमाण और दिशा दोनों शामिल होते हैं, जिससे यह एक सदिश राशि बन जाती है, न कि अदिश।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): The motion of a car on a crowded city road is usually non-uniform. / अभिकथन (A): भीड़भाड़ वाली सड़क पर कार की गति आमतौर पर असमान होती है।\nReason (R): In non-uniform motion, an object covers unequal distances in equal intervals of time. / कारण (R): असमान गति में, एक वस्तु समान समय अंतराल में असमान दूरी तय करती है।",
+      "question": "Assertion (A): The motion of a car on a crowded city road is usually non-uniform.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nTraffic causes frequent changes in speed, leading to unequal distances covered in fixed time intervals\n\n📖 हिंदी स्पष्टीकरण:\nट्रैफिक के कारण गति में बार-बार बदलाव होता है, जिससे निश्चित समय अंतराल में असमान दूरी तय होती है।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following statements about distance-time graphs is correct? / दूरी-समय ग्राफ के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about distance-time graphs is correct?",
       "options": {
-        "a": "A horizontal line parallel to the time axis indicates the object is at rest. / समय अक्ष के समानांतर एक क्षैतिज रेखा यह दर्शाती है कि वस्तु स्थिर अवस्था में है।",
-        "b": "A curved line indicates uniform motion. / एक वक्र रेखा एकसमान गति को दर्शाती है।",
-        "c": "The area under the graph gives velocity. / ग्राफ के नीचे का क्षेत्रफल वेग दर्शाता है।",
-        "d": "The slope gives acceleration. / ढलान से त्वरण प्राप्त होता है।"
+        "a": "A horizontal line parallel to the time axis indicates the object is at rest.",
+        "b": "A curved line indicates uniform motion.",
+        "c": "The area under the graph gives velocity.",
+        "d": "The slope gives acceleration."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIf distance does not change as time passes, the line is horizontal, meaning the object is stationary\n\n📖 हिंदी स्पष्टीकरण:\nयदि समय बीतने के साथ दूरी नहीं बदलती है, तो रेखा क्षैतिज होती है, जिसका अर्थ है कि वस्तु स्थिर है।"
     },
     {
       "q_num": 20,
-      "question": "An athlete completes one round of a circular track of diameter 100 m in 20 s. What is the displacement after 10 s? / एक एथलीट 20 सेकंड में 100 मीटर व्यास वाले एक वृत्ताकार ट्रैक का एक चक्कर पूरा करता है। 10 सेकंड के बाद विस्थापन क्या होगा?",
+      "question": "An athlete completes one round of a circular track of diameter 100 m in 20 s. What is the displacement after 10 s?",
       "options": {
         "a": "0 m",
         "b": "100 m",
@@ -246,43 +246,43 @@
     },
     {
       "q_num": 21,
-      "question": "Statement I: For a body falling freely, the initial velocity 'u' is zero. / कथन I: स्वतंत्र रूप से गिरने वाली वस्तु के लिए, प्रारंभिक वेग 'u' शून्य होता है।\nStatement II: Acceleration due to gravity 'g' is always negative regardless of direction. / कथन II: गुरुत्वाकर्षण के कारण त्वरण 'g' हमेशा ऋणात्मक होता है, चाहे दिशा कुछ भी हो।",
+      "question": "Statement I: For a body falling freely, the initial velocity 'u' is zero.",
       "options": {
-        "a": "Only Statement I is true / केवल कथन I सत्य है।",
-        "b": "Only Statement II is true / केवल कथन II सत्य है।",
-        "c": "Both are true / दोनों सत्य हैं।",
-        "d": "Both are false / दोनों असत्य हैं।"
+        "a": "Only Statement I is true",
+        "b": "Only Statement II is true",
+        "c": "Both are true",
+        "d": "Both are false"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nIn a free fall from rest, u=0. However, The acceleration due to gravity g is taken as positive when the downward direction is chosen as positive, and negative when the upward direction is chosen as positive\n\n📖 हिंदी स्पष्टीकरण:\nविराम से मुक्त रूप से गिरने में, u=0 होता है। हालांकि, गुरुत्वाकर्षण की ओर गति करते समय 'g' को धनात्मक और इसके विरुद्ध ऋणात्मक लिया जाता है।"
     },
     {
       "q_num": 22,
-      "question": "Assertion (A): Uniform circular motion is an accelerated motion. / अभिकथन (A): समान वृत्तीय गति एक त्वरित गति है।\nReason (R): The direction of velocity changes at every point in a circular path. / कारण (R): वृत्ताकार पथ में हर बिंदु पर वेग की दिशा बदलती है।",
+      "question": "Assertion (A): Uniform circular motion is an accelerated motion.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAcceleration occurs when either magnitude or direction of velocity changes. In circular motion, direction changes constantly\n\n📖 हिंदी स्पष्टीकरण:\nत्वरण तब होता है जब वेग का परिमाण या दिशा बदलती है। वृत्तीय गति में दिशा लगातार बदलती रहती है।"
     },
     {
       "q_num": 23,
-      "question": "What does the area under a velocity-time graph represent? / वेग-समय ग्राफ के नीचे का क्षेत्र क्या दर्शाता है?",
+      "question": "What does the area under a velocity-time graph represent?",
       "options": {
-        "a": "Acceleration / त्वरण",
-        "b": "Force / बल",
-        "c": "Displacement / विस्थापन",
-        "d": "Speed / चाल"
+        "a": "Acceleration",
+        "b": "Force",
+        "c": "Displacement",
+        "d": "Speed"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe product of velocity and time (represented by the area) gives the change in position or displacement\n\n📖 हिंदी स्पष्टीकरण:\nवेग और समय का गुणनफल (क्षेत्रफल द्वारा दर्शाया गया) स्थिति या विस्थापन में परिवर्तन देता है।"
     },
     {
       "q_num": 24,
-      "question": "A car accelerates from 18 km/h to 36 km/h in 5 s. The distance covered is: / एक कार 5 सेकंड में 18 किमी/घंटा से 36 किमी/घंटा तक तेज होती है। तय की गई दूरी है:",
+      "question": "A car accelerates from 18 km/h to 36 km/h in 5 s. The distance covered is:",
       "options": {
         "a": "37.5 m",
         "b": "25 m",
@@ -294,12 +294,12 @@
     },
     {
       "q_num": 25,
-      "question": "Statement I: The S.I. unit of acceleration is m/s2. / कथन I: त्वरण का S.I. मात्रक m/s2 है।\nStatement II: Acceleration is a vector quantity. / कथन II: त्वरण एक सदिश राशि है।",
+      "question": "Statement I: The S.I. unit of acceleration is m/s2.",
       "options": {
-        "a": "Both I and II are correct / I और II दोनों सही हैं।",
-        "b": "Both I and II are incorrect / I और II दोनों ही गलत हैं।",
-        "c": "Only I is correct / केवल I सही हैं।",
-        "d": "Only II is correct / केवल II सही है।"
+        "a": "Both I and II are correct",
+        "b": "Both I and II are incorrect",
+        "c": "Only I is correct",
+        "d": "Only II is correct"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAcceleration has both magnitude and direction, and its unit is derived as velocity divided by time\n\n📖 हिंदी स्पष्टीकरण:\nत्वरण में परिमाण और दिशा दोनों होते हैं, और इसकी इकाई वेग को समय से विभाजित करके प्राप्त की जाती है।"

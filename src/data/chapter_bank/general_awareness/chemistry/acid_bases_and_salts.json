@@ -6,21 +6,21 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "A milkman adds a small amount of baking soda to milk. This makes the pH of the milk [CAPF 2021]\nएक दूधवाला दूध में थोड़ी मात्रा में बेकिंग सोडा मिलाता है। इससे दूध का pH हो जाता है:",
+      "question": "A milkman adds a small amount of baking soda to milk. This makes the pH of the milk [CAPF 2021]",
       "options": {
-        "a": "strongly alkaline / अत्यधिक क्षारीय",
-        "b": "weakly alkaline / कम क्षारीय",
-        "c": "strongly acidic / अत्यधिक अम्लीय",
-        "d": "weakly acidic / कम अम्लीय"
+        "a": "strongly alkaline",
+        "b": "weakly alkaline",
+        "c": "strongly acidic",
+        "d": "weakly acidic"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBaking soda is a basic compound that increases the pH of the milk, and make it less acidic. By adding it, milk man prevent the milk from spoilage.\n\n📖 हिंदी स्पष्टीकरण:\nबेकिंग सोडा एक क्षारीय यौगिक है जो दूध के pH को बढ़ाता है और उसे कम अम्लीय बनाता है। इसे मिलाकर दूधवाला दूध को खराब होने से बचाता है।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following makes bread soft and spongy when baking soda is added? [CAPF 2022]\nबेकिंग सोडा मिलाने पर निम्नलिखित में से क्या ब्रेड को नरम और स्पंजी बनाता है?",
+      "question": "Which of the following makes bread soft and spongy when baking soda is added? [CAPF 2022]",
       "options": {
-        "a": "Sodium salt of acid / अम्ल का सोडियम लवण",
+        "a": "Sodium salt of acid",
         "b": "NaHCO3",
         "c": "CO2",
         "d": "H2O"
@@ -30,43 +30,43 @@
     },
     {
       "q_num": 3,
-      "question": "Borax is prepared from [CAPF 2022]\nबोरेक्स (सुहागा) किससे तैयार किया जाता है?",
+      "question": "Borax is prepared from [CAPF 2022]",
       "options": {
-        "a": "calcium carbonate / कैल्शियम कार्बोनेट",
-        "b": "magnesium carbonate / मैग्नीशियम कार्बोनेट",
-        "c": "potassium carbonate / पोटेशियम कार्बोनेट",
-        "d": "sodium carbonate / सोडियम कार्बोनेट"
+        "a": "calcium carbonate",
+        "b": "magnesium carbonate",
+        "c": "potassium carbonate",
+        "d": "sodium carbonate"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nBoric acid (H3BO3) by reacting with sodium carbonate (Na2CO3) forms borax (Na₂B₄O₇.10H₂O), water (H2O) and carbon dioxide (CO2).\n\n📖 हिंदी स्पष्टीकरण:\nबोरिक एसिड (H3BO3) सोडियम कार्बोनेट (Na2CO3) के साथ प्रतिक्रिया करके बोरेक्स (Na₂B₄O₇.10H₂O), पानी (H2O) और कार्बन डाइऑक्साइड (CO2) बनाता है।"
     },
     {
       "q_num": 4,
-      "question": "The gas generated on reacting zinc with dilute sulphuric acid is: [CAPF 2023]\nजस्ते की तनु सल्फ्यूरिक अम्ल के साथ अभिक्रिया कराने पर कौन सी गैस उत्पन्न होती है?",
+      "question": "The gas generated on reacting zinc with dilute sulphuric acid is: [CAPF 2023]",
       "options": {
-        "a": "Argon / आर्गन",
-        "b": "Helium / हीलियम",
-        "c": "Hydrogen / हाइड्रोजन",
-        "d": "Nitrogen / नाइट्रोजन"
+        "a": "Argon",
+        "b": "Helium",
+        "c": "Hydrogen",
+        "d": "Nitrogen"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nEquation : Zn(s) + H₂SO₄(aq) → ZnSO₄(aq) + H₂(g)\n\n📖 हिंदी स्पष्टीकरण:\nसमीकरण : Zn(s) + H₂SO₄(aq) → ZnSO₄(aq) + H₂(g)"
     },
     {
       "q_num": 5,
-      "question": "An aqueous solution of a salt is known as brine. The salt is: [CAPF 2023]\nनमक के जलीय घोल को 'ब्राइन' कहा जाता है। वह नमक है:",
+      "question": "An aqueous solution of a salt is known as brine. The salt is: [CAPF 2023]",
       "options": {
-        "a": "Sodium chloride / सोडियम क्लोराइड",
-        "b": "Potassium chloride / पोटेशियम क्लोराइड",
-        "c": "Calcium chloride / कैल्शियम क्लोराइड",
-        "d": "Sodium nitrate / सोडियम नाइट्रेट"
+        "a": "Sodium chloride",
+        "b": "Potassium chloride",
+        "c": "Calcium chloride",
+        "d": "Sodium nitrate"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBrine is a saturated or highly concentrated solution of salt, typically sodium chloride (NaCl), in water. It is commonly used for preserving food, particularly meats and vegetables.\n\n📖 हिंदी स्पष्टीकरण:\nब्राइन पानी में नमक, विशेष रूप से सोडियम क्लोराइड (NaCl) का संतृप्त या अत्यधिक केंद्रित घोल है। इसका उपयोग आमतौर पर भोजन, विशेष रूप से मांस और सब्जियों के संरक्षण के लिए किया जाता है।"
     },
     {
       "q_num": 6,
-      "question": "Which among the following are the main ingredients for manufacturing of glass? [CAPF 2024]\nकांच के निर्माण के लिए मुख्य घटक कौन से हैं?",
+      "question": "Which among the following are the main ingredients for manufacturing of glass? [CAPF 2024]",
       "options": {
         "a": "Silica, sodium carbonate, borax, alumina and cullets",
         "b": "Iron oxide, lead, sodium bicarbonate, alumina and cullets",
@@ -78,31 +78,31 @@
     },
     {
       "q_num": 7,
-      "question": "Which one among the following is an example of olfactory indicator? [GEOSCIENTIST 2025]\nनिम्नलिखित में से कौन सा घ्राण (Olfactory) सूचक का उदाहरण है?",
+      "question": "Which one among the following is an example of olfactory indicator? [GEOSCIENTIST 2025]",
       "options": {
-        "a": "Litmus / लिटमस",
-        "b": "Methyl orange / मिथाइल ऑरेंज",
-        "c": "Phenolphthalein / फिनोलफथैलीन",
-        "d": "Onion / प्याज"
+        "a": "Litmus",
+        "b": "Methyl orange",
+        "c": "Phenolphthalein",
+        "d": "Onion"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nOlfactory indicators are substances that change their smell when mixed with an acid or base.\n\n📖 हिंदी स्पष्टीकरण:\nघ्राण सूचक वे पदार्थ होते हैं जिनकी गंध अम्ल या क्षार के साथ मिलने पर बदल जाती है।"
     },
     {
       "q_num": 8,
-      "question": "Which one of the following is used in soda-acid fire extinguishers? [CDS I 2021]\nसोडा-एसिड अग्निशामक यंत्रों में निम्नलिखित में से किसका उपयोग किया जाता है?",
+      "question": "Which one of the following is used in soda-acid fire extinguishers? [CDS I 2021]",
       "options": {
-        "a": "Sodium chloride / सोडियम क्लोराइड",
-        "b": "Sodium hydrogen carbonate / सोडियम हाइड्रोजन कार्बोनेट",
-        "c": "Calcium hydroxide / कैल्शियम हाइड्रोक्साइड",
-        "d": "Acetic acid / एसिटिक एसिड"
+        "a": "Sodium chloride",
+        "b": "Sodium hydrogen carbonate",
+        "c": "Calcium hydroxide",
+        "d": "Acetic acid"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBecause when Sodium hydrogen carbonate is reacted with an acid like sulphuric acid, it produces carbonate dioxide gas and carbon dioxide gas is a fire extinguisher.\n\n📖 हिंदी स्पष्टीकरण:\nक्योंकि जब सोडियम हाइड्रोजन कार्बोनेट सल्फ्यूरिक अम्ल के साथ क्रिया करता है, तो कार्बन डाइऑक्साइड गैस बनती है जो आग बुझाती है।"
     },
     {
       "q_num": 9,
-      "question": "Which one of the following sodium compounds is used for softening hard water? [CDS I 2021]\nकठोर जल को मृदु बनाने के लिए निम्नलिखित में से किस सोडियम यौगिक का उपयोग किया जाता है?",
+      "question": "Which one of the following sodium compounds is used for softening hard water? [CDS I 2021]",
       "options": {
         "a": "Na2 CO3",
         "b": "NaOH",
@@ -114,11 +114,11 @@
     },
     {
       "q_num": 10,
-      "question": "Which of the following statements about universal indicator is/ are true? [CDS II 2021]\nयूनिवर्सल सूचक के बारे में कौन सा कथन सत्य है?\n1. It is a mixture of several indicators.\n2. It shows different colours at different concentrations of hydrogen ions in solution.\n3. It helps to determine the strength of given acid and base in titration.",
+      "question": "Which of the following statements about universal indicator is/ are true? [CDS II 2021]\n1. It is a mixture of several indicators.\n2. It shows different colours at different concentrations of hydrogen ions in solution.\n3. It helps to determine the strength of given acid and base in titration.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 2 only / 1 और 2 दोनों",
-        "c": "2 and 3 only / 2 और 3 दोनों",
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
         "d": "1, 2 and 3"
       },
       "answer": "d",
@@ -126,59 +126,59 @@
     },
     {
       "q_num": 11,
-      "question": "Which one of the following acids is secreted by leaves of nettle that causes painful stings? [CDS II 2021]\nबिछुआ की पत्तियों द्वारा कौन सा अम्ल स्रावित होता है जो दर्दनाक डंक का कारण बनता है?",
+      "question": "Which one of the following acids is secreted by leaves of nettle that causes painful stings? [CDS II 2021]",
       "options": {
-        "a": "Methanoic acid / मेथेनोइक अम्ल",
-        "b": "Citric acid / साइट्रिक अम्ल",
-        "c": "Tartaric acid / टार्टरिक अम्ल",
-        "d": "Acetic acid / एसिटिक अम्ल"
+        "a": "Methanoic acid",
+        "b": "Citric acid",
+        "c": "Tartaric acid",
+        "d": "Acetic acid"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDocks leaves (contain natural antihistamine) may provide some relief from the painful sting of nettle leaves.\n\n📖 हिंदी स्पष्टीकरण:\nबिछुआ की पत्तियों के डंक में मेथेनोइक अम्ल होता है। डक (Docks) की पत्तियां इसके दर्द में राहत दे सकती हैं।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following statements is/are correct? [CDS II 2021]\nकौन सा कथन सही है?\n1. All the bases are alkali.\n2. All alkalis dissolve in water.\n3. Alkalis are soapy to touch, bitter in taste and corrosive in nature.",
+      "question": "Which of the following statements is/are correct? [CDS II 2021]\n1. All the bases are alkali.\n2. All alkalis dissolve in water.\n3. Alkalis are soapy to touch, bitter in taste and corrosive in nature.",
       "options": {
-        "a": "1 only / केवल 1",
-        "b": "1 and 3 only / 1 और 3 दोनों",
-        "c": "2 and 3 only / 2 और 3 दोनों",
-        "d": "3 only / केवल 3"
+        "a": "1 only",
+        "b": "1 and 3 only",
+        "c": "2 and 3 only",
+        "d": "3 only"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement 1 is incorrect because an alkali is a base that dissolves in water, but not all bases dissolve in water.\n\n📖 हिंदी स्पष्टीकरण:\nकथन 1 गलत है क्योंकि क्षार वह क्षारक है जो पानी में घुलता है, लेकिन सभी क्षारक पानी में नहीं घुलते।"
     },
     {
       "q_num": 13,
-      "question": "Which one of the following living organisms gives litmus? [CDS I 2022]\nनिम्नलिखित में से कौन सा जीव लिटमस देता है?",
+      "question": "Which one of the following living organisms gives litmus? [CDS I 2022]",
       "options": {
-        "a": "Protozoa / प्रोटोजोआ",
-        "b": "Virus / वायरस",
-        "c": "Lichen / लाइकेन",
-        "d": "Saccharomyces / सैकरोमाइसेस"
+        "a": "Protozoa",
+        "b": "Virus",
+        "c": "Lichen",
+        "d": "Saccharomyces"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nLichen belongs from division thallophyta of plant kingdom.\n\n📖 हिंदी स्पष्टीकरण:\nलाइकेन पादप जगत के थैलोफाइटा विभाग से संबंधित है।"
     },
     {
       "q_num": 14,
-      "question": "Milk of Magnesia is used when people suffer from indigestion of food. It is a [CDS II 2022]\nमिल्क ऑफ मैग्नीशिया का उपयोग अपच के दौरान किया जाता है। यह है:",
+      "question": "Milk of Magnesia is used when people suffer from indigestion of food. It is a [CDS II 2022]",
       "options": {
-        "a": "strong base / प्रबल क्षार",
-        "b": "mild base / हल्का क्षार",
-        "c": "strong acid / प्रबल अम्ल",
-        "d": "mild acid / हल्का अम्ल"
+        "a": "strong base",
+        "b": "mild base",
+        "c": "strong acid",
+        "d": "mild acid"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIt contains magnesium hydroxide which neutralizes stomach acid.\n\n📖 हिंदी स्पष्टीकरण:\nइसमें मैग्नीशियम हाइड्रोक्साइड होता है जो पेट के अम्ल को उदासीन करता है।"
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements: While diluting concentrated nitric acid solution [CDS I 2023]\nसांद्र नाइट्रिक अम्ल को तनु करते समय:\n1. The concentration of [H3 O+] ions/ volume increases.\n2. Water must be added slowly to concentrated acid.\n3. Acid must be added slowly to water.",
+      "question": "Consider the following statements: While diluting concentrated nitric acid solution [CDS I 2023]\n1. The concentration of [H3 O+] ions/ volume increases.\n2. Water must be added slowly to concentrated acid.\n3. Acid must be added slowly to water.",
       "options": {
         "a": "1, 2 and 3",
         "b": "1 and 2 only",
-        "c": "3 only / केवल 3",
+        "c": "3 only",
         "d": "2 and 3 only"
       },
       "answer": "c",
@@ -186,7 +186,7 @@
     },
     {
       "q_num": 16,
-      "question": "Which one of the following is the correct order of pH for the given substances? [CDS I 2023]\nपदार्थों के pH का सही क्रम क्या है?",
+      "question": "Which one of the following is the correct order of pH for the given substances? [CDS I 2023]",
       "options": {
         "a": "Coffee < Lemon juice < Milk of magnesia < Blood",
         "b": "Milk of magnesia < Blood < Coffee < Lemon juice",
@@ -198,7 +198,7 @@
     },
     {
       "q_num": 17,
-      "question": "Which one of the following statements regarding acids is not correct? [CDS II 2023]\nअम्लों के बारे में कौन सा कथन सही नहीं है?",
+      "question": "Which one of the following statements regarding acids is not correct? [CDS II 2023]",
       "options": {
         "a": "HCl is present in gastric juice",
         "b": "Acetic acid is constituent of vinegar",
@@ -222,9 +222,9 @@
     },
     {
       "q_num": 19,
-      "question": "Which one among the following is used in bleaching of paper? [CDS II 2024]\nकागज के विरंजन में किसका उपयोग किया जाता है?",
+      "question": "Which one among the following is used in bleaching of paper? [CDS II 2024]",
       "options": {
-        "a": "Chloride / क्लोराइड",
+        "a": "Chloride",
         "b": "Chlorobenzene",
         "c": "Ammonium chloride",
         "d": "Hydrochloric acid"
@@ -234,7 +234,7 @@
     },
     {
       "q_num": 20,
-      "question": "When electricity is passed through brine, it produces [CISF AC 2021]\nजब ब्राइन से बिजली गुजारी जाती है, तो क्या बनता है?",
+      "question": "When electricity is passed through brine, it produces [CISF AC 2021]",
       "options": {
         "a": "NaCl",
         "b": "NaOH",
@@ -246,7 +246,7 @@
     },
     {
       "q_num": 21,
-      "question": "Which compound is present in antacid tablets used to cure indigestion? [CISF AC 2022]\nअपच को ठीक करने वाली एंटासिड गोलियों में कौन सा यौगिक होता है?",
+      "question": "Which compound is present in antacid tablets used to cure indigestion? [CISF AC 2022]",
       "options": {
         "a": "Sodium hydroxide",
         "b": "Potassium hydroxide",
@@ -258,7 +258,7 @@
     },
     {
       "q_num": 22,
-      "question": "The chemical formula of washing soda is [CISF AC 2024]\nवाशिंग सोडा का रासायनिक सूत्र है:",
+      "question": "The chemical formula of washing soda is [CISF AC 2024]",
       "options": {
         "a": "NaHCO3",
         "b": "Na2 CO3",
@@ -270,7 +270,7 @@
     },
     {
       "q_num": 23,
-      "question": "Common salt (NaCl) is not used as a raw material for preparation of which compound? [NDA I 2021]\nNaCl किसके कच्चे माल के रूप में उपयोग नहीं होता?",
+      "question": "Common salt (NaCl) is not used as a raw material for preparation of which compound? [NDA I 2021]\nNaCl",
       "options": {
         "a": "Bleaching powder",
         "b": "Baking soda",
@@ -282,7 +282,7 @@
     },
     {
       "q_num": 24,
-      "question": "The pH value of Milk of Magnesia is approximately [NDA II 2021]\nमिल्क ऑफ मैग्नीशिया का pH लगभग है:",
+      "question": "The pH value of Milk of Magnesia is approximately [NDA II 2021]",
       "options": {
         "a": "0",
         "b": "7",
@@ -294,34 +294,34 @@
     },
     {
       "q_num": 25,
-      "question": "Which one of the following is the colour of hydrogen gas? [NDA I 2022]\nहाइड्रोजन गैस का रंग क्या है?",
+      "question": "Which one of the following is the colour of hydrogen gas? [NDA I 2022]",
       "options": {
-        "a": "Light yellow / हल्का पीला",
-        "b": "Orange / नारंगी",
-        "c": "Black / काला",
-        "d": "Colourless / रंगहीन"
+        "a": "Light yellow",
+        "b": "Orange",
+        "c": "Black",
+        "d": "Colourless"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nHydrogen is a colourless, odourless gas. It is used as fuel.\n\n📖 हिंदी स्पष्टीकरण:\nहाइड्रोजन रंगहीन और गंधहीन गैस है। इसका उपयोग ईंधन के रूप में होता है।"
     },
     {
       "q_num": 26,
-      "question": "Which one of the following salts does not possess water of crystallization? [NDA II 2023]\nकिस लवण में क्रिस्टलीकरण का जल नहीं होता?",
+      "question": "Which one of the following salts does not possess water of crystallization? [NDA II 2023]",
       "options": {
         "a": "Potassium permanganate",
-        "b": "Blue vitriol / नीला थोथा",
+        "b": "Blue vitriol",
         "c": "Washing soda",
-        "d": "Mohr's salt / मोहर लवण"
+        "d": "Mohr's salt"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nKMnO4 is an ionic compound and does not posses water of crystallization.\n\n📖 हिंदी स्पष्टीकरण:\nपोटेशियम परमैंगनेट में क्रिस्टलीकरण का जल नहीं होता। अन्य: नीला थोथा (5H2O), वाशिंग सोडा (10H2O), मोहर लवण (6H2O)."
     },
     {
       "q_num": 27,
-      "question": "Among the following, which is not the correct method for keeping the curd? [NDA I 2023]\nदही रखने का सही तरीका कौन सा नहीं है?",
+      "question": "Among the following, which is not the correct method for keeping the curd? [NDA I 2023]",
       "options": {
         "a": "stainless steel vessel",
-        "b": "copper vessel / तांबे का बर्तन",
+        "b": "copper vessel",
         "c": "plastic vessel",
         "d": "glass vessel"
       },
@@ -330,7 +330,7 @@
     },
     {
       "q_num": 28,
-      "question": "Toothpaste prevents tooth decay by: [NDA I 2023]\nटूथपेस्ट दांतों की सड़न को कैसे रोकता है?",
+      "question": "Toothpaste prevents tooth decay by: [NDA I 2023]",
       "options": {
         "a": "neutralizing excess acidity",
         "b": "means of emulsification",
@@ -342,11 +342,11 @@
     },
     {
       "q_num": 29,
-      "question": "Which one is responsible for the blue colour of Copper sulphate crystals? [NDA I 2023]\nकॉपर सल्फेट क्रिस्टल के नीले रंग के लिए कौन जिम्मेदार है?",
+      "question": "Which one is responsible for the blue colour of Copper sulphate crystals? [NDA I 2023]",
       "options": {
         "a": "Oxygen",
         "b": "Nitrogen",
-        "c": "Water / जल",
+        "c": "Water",
         "d": "Hydrogen"
       },
       "answer": "c",
@@ -354,7 +354,7 @@
     },
     {
       "q_num": 30,
-      "question": "Human body works in the pH range of: [NDA I 2024]\nमानव शरीर किस pH सीमा में कार्य करता है?",
+      "question": "Human body works in the pH range of: [NDA I 2024]",
       "options": {
         "a": "6.8 - 7.2",
         "b": "7.0 - 7.8",
@@ -366,7 +366,7 @@
     },
     {
       "q_num": 31,
-      "question": "Which one among the following is known as 'Milk of Magnesia'? [NDA I 2024]\nनिम्नलिखित में से किसे 'मिल्क ऑफ मैग्नीशिया' कहा जाता है?",
+      "question": "Which one among the following is known as 'Milk of Magnesia'? [NDA I 2024]",
       "options": {
         "a": "Magnesium bicarbonate",
         "b": "Magnesium carbonate",
@@ -378,7 +378,7 @@
     },
     {
       "q_num": 32,
-      "question": "Which among the following is the correct composition of Borax? [NDA I 2024]\nबोरेक्स का सही संगठन क्या है?",
+      "question": "Which among the following is the correct composition of Borax? [NDA I 2024]",
       "options": {
         "a": "Sodium, Boron, Magnesium, H",
         "b": "Sodium, Boron, Oxygen, H",
@@ -390,7 +390,7 @@
     },
     {
       "q_num": 33,
-      "question": "Match Compound with Use: [GEOSCIENTIST 2022]\nयौगिक को उसके उपयोग से मिलाएं:",
+      "question": "Match Compound with Use: [GEOSCIENTIST 2022]",
       "options": {
         "a": "A-2, B-3, C-1, D-4",
         "b": "A-4, B-1, C-3, D-2",
@@ -402,31 +402,31 @@
     },
     {
       "q_num": 34,
-      "question": "Which one of the following sources contains tartaric acid? [GEOSCIENTIST 2024]\nकिसमें टार्टरिक अम्ल होता है?",
+      "question": "Which one of the following sources contains tartaric acid? [GEOSCIENTIST 2024]",
       "options": {
-        "a": "Lemon juice / नींबू",
-        "b": "Orange juice / संतरा",
-        "c": "Tamarind paste / इमली",
-        "d": "Vinegar / सिरका"
+        "a": "Lemon juice",
+        "b": "Orange juice",
+        "c": "Tamarind paste",
+        "d": "Vinegar"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTamarind contains tartaric acid.\n\n📖 हिंदी स्पष्टीकरण:\nइमली में टार्टरिक अम्ल पाया जाता है।"
     },
     {
       "q_num": 35,
-      "question": "What is the colour of anhydrous CuSO4? [GEOSCIENTIST 2024]\nनिर्जल CuSO4 का रंग क्या है?",
+      "question": "What is the colour of anhydrous CuSO4? [GEOSCIENTIST 2024]",
       "options": {
-        "a": "White / सफेद",
-        "b": "Blue / नीला",
-        "c": "Green / हरा",
-        "d": "Yellow / पीला"
+        "a": "White",
+        "b": "Blue",
+        "c": "Green",
+        "d": "Yellow"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAnhydrous copper sulphate is white. It turns blue when hydrated.\n\n📖 हिंदी स्पष्टीकरण:\nनिर्जल कॉपर सल्फेट सफेद होता है। जल मिलने पर यह नीला हो जाता है।"
     },
     {
       "q_num": 36,
-      "question": "Which is the chemical formula of Hypobromous acid? [NDA I 2021]\nहाइपोब्रोमस अम्ल का रासायनिक सूत्र क्या है?",
+      "question": "Which is the chemical formula of Hypobromous acid? [NDA I 2021]",
       "options": {
         "a": "HBrO4",
         "b": "HBrO",
@@ -438,7 +438,7 @@
     },
     {
       "q_num": 37,
-      "question": "Which statement is NOT correct? [NDA I 2025]\nकौन सा कथन सही नहीं है?",
+      "question": "Which statement is NOT correct? [NDA I 2025]",
       "options": {
         "a": "pH scale measures H+ concentration",
         "b": "Higher H+, higher pH",

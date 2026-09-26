@@ -6,67 +6,67 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "According to Article 79 of the Indian Constitution, the Parliament consists of:\n भारतीय संविधान के अनुच्छेद 79 के अनुसार, संसद में कौन शामिल होते हैं?",
+      "question": "According to Article 79 of the Indian Constitution, the Parliament consists of:",
       "options": {
-        "a": "Lok Sabha, Rajya Sabha, and Prime Minister / लोकसभा, राज्यसभा और प्रधानमंत्री",
-        "b": "Lok Sabha, Rajya Sabha, and Vice-President / लोकसभा, राज्यसभा और उपराष्ट्रपति",
-        "c": "Lok Sabha, Rajya Sabha, and President / लोकसभा, राज्यसभा और राष्ट्रपति",
-        "d": "Lok Sabha and Rajya Sabha / लोकसभा और राज्यसभा"
+        "a": "Lok Sabha, Rajya Sabha, and Prime Minister",
+        "b": "Lok Sabha, Rajya Sabha, and Vice-President",
+        "c": "Lok Sabha, Rajya Sabha, and President",
+        "d": "Lok Sabha and Rajya Sabha"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 79 of the Constitution of India mandates that the Parliament for the Union shall consist of the President and two Houses, the Council of States (Rajya Sabha) and the House of the People (Lok Sabha). The President is an integral part of the Parliament, as no bill can become a law without his assent (Article 79 and 22)\n\n📖 हिंदी स्पष्टीकरण:\nभारतीय संविधान का अनुच्छेद 79 यह अनिवार्य करता है कि संघ के लिए एक संसद होगी, जिसमें राष्ट्रपति और दो सदन, राज्यों की परिषद (राज्यसभा) और जनता का सदन (लोकसभा) शामिल होंगे। राष्ट्रपति संसद का एक अभिन्न अंग हैं, क्योंकि उनकी सहमति के बिना कोई भी विधेयक कानून नहीं बन सकता (अनुच्छेद 79 और 22)"
     },
     {
       "q_num": 2,
-      "question": "What is the minimum age prescribed for a person to become a member of the Lok Sabha?\n लोकसभा का सदस्य बनने के लिए किसी व्यक्ति के लिए निर्धारित न्यूनतम आयु क्या है?",
+      "question": "What is the minimum age prescribed for a person to become a member of the Lok Sabha?",
       "options": {
-        "a": "30 years / 30 वर्ष",
-        "b": "25 years / 25 वर्ष",
-        "c": "35 years / 35 वर्ष",
-        "d": "21 years / 21 वर्ष"
+        "a": "30 years",
+        "b": "25 years",
+        "c": "35 years",
+        "d": "21 years"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAccording to Article 84, the minimum age required to become a member of the House of the People (Lok Sabha) is 25 years. This is lower than the minimum age required for a member of the Rajya Sabha, which is 30 years\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 84 के अनुसार, जनता के सदन (लोकसभा) का सदस्य बनने के लिए आवश्यक न्यूनतम आयु 25 वर्ष है। यह राज्यसभा के सदस्य के लिए आवश्यक न्यनतम आयु 30 वर्ष से कम है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following is also known as the 'Upper House' of the Indian Parliament?\n निम्नलिखित में से किसे भारतीय संसद का 'उच्च सदन' भी कहा जाता है?",
+      "question": "Which of the following is also known as the 'Upper House' of the Indian Parliament?",
       "options": {
-        "a": "Lok Sabha / लोकसभा",
-        "b": "Rajya Sabha / राज्यसभा",
-        "c": "Legislative Assembly / विधान सभा",
-        "d": "Parliament Secretariat / संसद सचिवालय"
+        "a": "Lok Sabha",
+        "b": "Rajya Sabha",
+        "c": "Legislative Assembly",
+        "d": "Parliament Secretariat"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Rajya Sabha is known as the Council of States or the Upper House (Second Chamber) and represents the States of the Union. Conversely, the Lok Sabha is known as the House of the People or the Lower House (First Chamber)\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा को राज्यों की परिषद या उच्च सदन (द्वितीय सदन) के रूप में जाना जाता है और यह संघ के राज्यों का प्रतिनिधित्व करता है। इसके विपरीत, लोकसभा को जनता का सदन या निम्न सदन (प्रथम सदन) के रूप में जाना जाता है।"
     },
     {
       "q_num": 4,
-      "question": "The concept of Parliamentary form of Government in India is borrowed from which country?\n भारत में संसदीय शासन प्रणाली की अवधारणा किस देश से ली गई है?",
+      "question": "The concept of Parliamentary form of Government in India is borrowed from which country?",
       "options": {
-        "a": "USA / संयुक्त राज्य अमेरिका",
-        "b": "Ireland / आयरलैंड",
-        "c": "UK (Britain) / यूनाइटेड किंगडम (ब्रिटेन)",
-        "d": "South Africa / दक्षिण अफ्रीका"
+        "a": "USA",
+        "b": "Ireland",
+        "c": "UK (Britain)",
+        "d": "South Africa"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIndia adopted the Parliamentary form of Government, also known as the Westminster Model, which is borrowed from the United Kingdom (Britain). This model emphasizes cooperation and coordination between the legislature and executive organs\n\n📖 हिंदी स्पष्टीकरण:\nभारत ने संसदीय शासन प्रणाली को अपनाया, जिसे वेस्टमिंस्टर मॉडल के नाम से भी जाना जाता है, जो यूनाइटेड किंगडम (ब्रिटेन) से लिया गया है। यह मॉडल विधायिका और कार्यपालिका अंगों के बीच सहयोग और समन्वय पर जोर देता है।"
     },
     {
       "q_num": 5,
-      "question": "How many members are nominated by the President to the Rajya Sabha from the fields of Literature, Science, Arts, and Social Service?\n साहित्य, विज्ञान, कला और समाज सेवा के क्षेत्रों से राष्ट्रपति द्वारा राज्यसभा में कितने सदस्य मनोनीत किए जाते हैं?",
+      "question": "How many members are nominated by the President to the Rajya Sabha from the fields of Literature, Science, Arts, and Social Service?",
       "options": {
-        "a": "10 members / 10 सदस्य",
-        "b": "14 members / 14 सदस्य",
-        "c": "12 members / 12 सदस्य",
-        "d": "2 members / 2 सदस्य"
+        "a": "10 members",
+        "b": "14 members",
+        "c": "12 members",
+        "d": "2 members"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 80 specifies that the Rajya Sabha shall consist of 12 members nominated by the President. These members are nominated from persons having special knowledge or practical experience in the fields of Literature, Science, Art, and Social Service\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 80 निर्दिष्ट करता है कि राज्यसभा में राष्ट्रपति द्वारा मनोनीत 12 सदस्य शामिल होंगे। ये सदस्य साहित्य, विज्ञान, कला और समाज सेवा के क्षेत्रों में विशेष ज्ञान या व्यावहारिक अनुभव रखने वाले व्यक्तियों में से मनोनीत किए जाते हैं।"
     },
     {
       "q_num": 6,
-      "question": "When were the Hindi names 'Lok Sabha' and 'Rajya Sabha' adopted for the two Houses of Parliament?\n संसद के दोनों सदनों के लिए हिंदी नाम 'लोकसभा' और 'राज्यसभा' कब अपनाए गए थे?",
+      "question": "When were the Hindi names 'Lok Sabha' and 'Rajya Sabha' adopted for the two Houses of Parliament?",
       "options": {
         "a": "1947",
         "b": "1950",
@@ -78,43 +78,43 @@
     },
     {
       "q_num": 7,
-      "question": "What is the maximum strength of the Lok Sabha as per the constitutional provisions?\n संवैधानिक प्रावधानों के अनुसार लोकसभा की अधिकतम शक्ति कितनी है?",
+      "question": "What is the maximum strength of the Lok Sabha as per the constitutional provisions?",
       "options": {
-        "a": "545 members / 545 सदस्य",
-        "b": "550 members / 550 सदस्य",
-        "c": "250 members / 250 सदस्य",
-        "d": "552 members / 552 सदस्य"
+        "a": "545 members",
+        "b": "550 members",
+        "c": "250 members",
+        "d": "552 members"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAs per the initial provisions and current scenario (excluding the nominated Anglo-Indian seats removed by the 104th CA), the maximum strength of the Lok Sabha is 550 members. This includes a maximum of 530 members from States and 20 members from Union Territories\n\n📖 हिंदी स्पष्टीकरण:\nप्रारंभिक प्रावधानों और वर्तमान परिदृश्य (104वें संवैधानिक संशोधन द्वारा हटाए गए मनोनीत आंग्ल-भारतीय सीटों को छोड़कर) के अनुसार, लोकसभा की अधिकतम शक्ति 550 सदस्य है। इसमें राज्यों से अधिकतम 530 सदस्य और केंद्र शासित प्रदेशों से 20 सदस्य शामिल हैं।"
     },
     {
       "q_num": 8,
-      "question": "The Delimitation Commission for the division of constituencies is constituted after every:\n निर्वाचन क्षेत्रों के परिसीमन के लिए परिसीमन आयोग का गठन प्रत्येक ____ के बाद किया जाता है:",
+      "question": "The Delimitation Commission for the division of constituencies is constituted after every:",
       "options": {
-        "a": "5 years / 5 वर्ष",
-        "b": "General Election / आम चुनाव",
-        "c": "Census / जनगणना",
-        "d": "Fiscal Year / वित्तीय वर्ष"
+        "a": "5 years",
+        "b": "General Election",
+        "c": "Census",
+        "d": "Fiscal Year"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 82 provides for the readjustment of representation after each Census. The Delimitation Commission is thus tasked with dividing constituencies on the basis of population after every ten-yearly Census to ensure parity in representation\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 82 प्रत्येक जनगणना के बाद प्रतिनिधित्व के पुनर्समायोजन का प्रावधान करता है। इस प्रकार परिसीमन आयोग को प्रतिनिधित्व में समानता सुनिश्चित करने के लिए प्रत्येक दस-वर्षीय जनगणना के बाद जनसंख्या के आधार पर निर्वाचन क्षेत्रों को विभाजित करने का कार्य सौंपा गया है।"
     },
     {
       "q_num": 9,
-      "question": "Which House of the Parliament is considered a 'Continuing Chamber' and is not subject to dissolution?\n संसद के किस सदन को 'निरंतर चैंबर' माना जाता है और वह विघटन के अधीन नहीं है?",
+      "question": "Which House of the Parliament is considered a 'Continuing Chamber' and is not subject to dissolution?",
       "options": {
-        "a": "Lok Sabha / लोकसभा",
-        "b": "Rajya Sabha / राज्यसभा",
-        "c": "Legislative Assembly / विधान सभा",
-        "d": "Legislative Council / विधान परिषद"
+        "a": "Lok Sabha",
+        "b": "Rajya Sabha",
+        "c": "Legislative Assembly",
+        "d": "Legislative Council"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Rajya Sabha is a permanent body and is called a 'Continuing Chamber' because it is not subject to dissolution, unlike the Lok Sabha which can be dissolved. Although it is a permanent body, 1/3rd of its members retires every two years\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा एक स्थायी निकाय है और इसे 'निरंतर चैंबर' कहा जाता है क्योंकि यह लोकसभा के विपरीत, विघटन के अधीन नहीं है, जिसे भंग किया जा सकता है। यद्यपि यह एक स्थायी निकाय है, इसके 1/3rd सदस्य हर दो साल में सेवानिवृत्त होते हैं।"
     },
     {
       "q_num": 10,
-      "question": "What is the time duration for the 'Question Hour' in the Parliament?\n संसद में 'प्रश्नकाल' की समय अवधि क्या है?",
+      "question": "What is the time duration for the 'Question Hour' in the Parliament?",
       "options": {
         "a": "10 AM - 11 AM",
         "b": "11 AM - 12 PM",
@@ -126,180 +126,180 @@
     },
     {
       "q_num": 11,
-      "question": "Which Constitutional Amendment Act froze the constituency boundaries till 2026?\n किस संवैधानिक संशोधन अधिनियम ने निर्वाचन क्षेत्र की सीमाओं को 2026 तक के लिए स्थिर कर दिया?",
+      "question": "Which Constitutional Amendment Act froze the constituency boundaries till 2026?",
       "options": {
-        "a": "42nd Amendment Act, 1976 / 42वाँ संशोधन अधिनियम, 1976",
-        "b": "84th Amendment Act, 2001 / 84वाँ संशोधन अधिनियम, 2001",
-        "c": "87th Amendment Act, 2003 / 87वाँ संशोधन अधिनियम, 2003",
-        "d": "104th Amendment Act, 2019 / 104वाँ संशोधन अधिनियम, 2019"
+        "a": "42nd Amendment Act, 1976",
+        "b": "84th Amendment Act, 2001",
+        "c": "87th Amendment Act, 2003",
+        "d": "104th Amendment Act, 2019"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe 84th Constitutional Amendment Act of 2001 extended the freeze on the readjustment of Lok Sabha and Assembly constituencies based on population until the year 2026. This was done to encourage states to implement population control measures without the fear of losing their representation in Parliament. / 84\n\n📖 हिंदी स्पष्टीकरण:\nवें संवैधानिक संशोधन अधिनियम, 2001 ने जनसंख्या के आधार पर लोकसभा और विधानसभा निर्वाचन क्षेत्रों के पुनर्समायोजन पर रोक को वर्ष 2026 तक बढ़ा दिया। यह राज्यों को संसद में अपना प्रतिनिधित्व खोने के डर के बिना जनसंख्या नियंत्रण उपायों को लागू करने के लिए प्रोत्साहित करने हेतु किया गया था।"
     },
     {
       "q_num": 12,
-      "question": "The carpet of the Lok Sabha Hall is Green, and the carpet of the Rajya Sabha Hall is Red. What does the Red Colour in Rajya Sabha represent?\n लोकसभा कक्ष का कालीन हरा है और राज्यसभा कक्ष का कालीन लाल है। राज्यसभा में लाल रंग क्या दर्शाता है?",
+      "question": "The carpet of the Lok Sabha Hall is Green, and the carpet of the Rajya Sabha Hall is Red. What does the Red Colour in Rajya Sabha represent?",
       "options": {
-        "a": "Prosperity and peace / समृद्धि और शांति",
-        "b": "Royalty and the sacrifice of freedom fighters / राजघराने और स्वतंत्रता सेनानियों का बलिदान",
-        "c": "India's agricultural land / भारत की कृषि भूमि",
-        "d": "The federal feature of the house / सदन की संघीय विशेषता"
+        "a": "Prosperity and peace",
+        "b": "Royalty and the sacrifice of freedom fighters",
+        "c": "India's agricultural land",
+        "d": "The federal feature of the house"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Red Colour of the Rajya Sabha carpet represents 'royalty,' signifying the Council of States, and also commemorates the bloodshed and sacrifice made by the freedom fighters during India's independence movement. In contrast, the Green Colour of the Lok Sabha carpet represents agriculture and the grass-root election of its members\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा के कालीन का लाल रंग 'राजघराने' का प्रतिनिधित्व करता है, जो राज्यों की परिषद का प्रतीक है, और यह भारत के स्वतंत्रता आंदोलन के दौरान स्वतंत्रता सेनानियों द्वारा किए गए बलिदान और बहाए गए रक्त का भी स्मरण कराता है। इसके विपरीत, लोकसभा के कालीन का हरा रंग कृषि और इसके सदस्यों के जमीनी स्तर से चुनाव का प्रतिनिधित्व करता है।"
     },
     {
       "q_num": 13,
-      "question": "Consider the following statements regarding the Lok Sabha (LS) and Rajya Sabha (RS):\n लोकसभा (LS) और राज्यसभा (RS) के संबंध में निम्नलिखित कथनों पर विचार करें:\n 1. The election of the members of the Rajya Sabha is done through Open Ballot. / राज्यसभा के सदस्यों का चुनाव खुले मतपत्र के माध्यम से किया जाता है।\n 2. The Speaker of the Lok Sabha does not vacate his office even after the dissolution of the Lok Sabha./लोकसभा के भंग होने के बाद भी लोकसभा अध्यक्ष अपना पद रिक्त नहीं करते।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the Lok Sabha (LS) and Rajya Sabha (RS):\n1. The election of the members of the Rajya Sabha is done through Open Ballot.\n2. The Speaker of the Lok Sabha does not vacate his office even after the dissolution of the Lok Sabha./\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "I only / केवल I",
-        "b": "II only / केवल II",
-        "c": "Both I and II / I और II दोनों",
-        "d": "Neither I nor II / न तो I और न ही II"
+        "a": "I only",
+        "b": "II only",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe election of Rajya Sabha members, conducted by the legislative assemblies of States and UTs using the Single Transferable Vote (STV), is done through an Open Ballot system, which is a departure from the secret ballot. Also, Article 94 ensures that the Speaker of the dissolved Lok Sabha shall not vacate their office until immediately before the first meeting of the new Lok Sabha\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा सदस्यों का चुनाव, जो राज्यों और केंद्र शासित प्रदेशों की विधानसभाओं द्वारा एकल संक्रमणीय मत (STV) का उपयोग करके किया जाता है, एक ओपन बैलेट (खुले मतपत्र) प्रणाली के माध्यम से किया जाता है, जो गुप्त मतदान से अलग है। साथ ही, अनुच्छेद 94 यह सुनिश्चित करता है कि भंग हुई लोकसभा का अध्यक्ष नई लोकसभा की पहली बैठक से ठीक पहले तक अपना पद रिक्त नहीं करेगा।"
     },
     {
       "q_num": 14,
-      "question": "Assertion (A): The President is an integral part of the Indian Parliament.\n अभिकथन (A): राष्ट्रपति भारतीय संसद का एक अभिन्न अंग हैं।\n Reason (R): No bill can become a law without the President's consent or assent.\n कारण (R): राष्ट्रपति की सहमति या स्वीकृति के बिना कोई भी विधेयक कानून नहीं बन सकता।",
+      "question": "Assertion (A): The President is an integral part of the Indian Parliament.\n Reason (R): No bill can become a law without the President's consent or assent.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A. / A और R दोनों सत्य हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is not the correct explanation of A. / A और R दोनों सत्य हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false. / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true. / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true and R is the correct explanation of A.",
+        "b": "Both A and R are true but R is not the correct explanation of A.",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBoth statements are true. Assertion (A) is correct as Article 79 includes the President as a component of the Parliament. Reason (R) correctly explains this integral nature, as the President's assent is the mandatory final step for any bill to transform into an Act (law)\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन सत्य हैं। अभिकथन (A) सही है क्योंकि अनुच्छेद 79 में राष्ट्रपति को संसद के एक घटक के रूप में शामिल किया गया है। कारण (R) इस अभिन्न प्रकृति की सही व्याख्या करता है, क्योंकि किसी भी विधेयक को अधिनियम (कानून) में बदलने के लिए राष्ट्रपति की सहमति अनिवार्य अंतिम चरण है।"
     },
     {
       "q_num": 15,
-      "question": "The system of election of members to the Rajya Sabha is borrowed from which country?\n राज्यसभा के सदस्यों के चुनाव की प्रणाली किस देश से उधार ली गई है?",
+      "question": "The system of election of members to the Rajya Sabha is borrowed from which country?",
       "options": {
-        "a": "Ireland / आयरलैंड",
-        "b": "UK (Britain) / यूनाइटेड किंगडम (ब्रिटेन)",
-        "c": "South Africa / दक्षिण अफ्रीका",
-        "d": "USA / संयुक्त राज्य अमेरिका"
+        "a": "Ireland",
+        "b": "UK (Britain)",
+        "c": "South Africa",
+        "d": "USA"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe method for the election of members to the Rajya Sabha (on the basis of proportional representation by means of the Single Transferable Vote) was borrowed from the Constitution of South Africa. However, the concept of nomination of members to the Rajya Sabha is taken from Ireland\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा के सदस्यों के चुनाव की पद्धति (एकल संक्रमणीय मत के माध्यम से आनुपातिक प्रतिनिधित्व के आधार पर) दक्षिण अफ्रीका के संविधान से उधार ली गई थी। हालाँकि, राज्यसभा में सदस्यों के नामांकन की अवधारणा आयरलैंड से ली गई है।"
     },
     {
       "q_num": 16,
-      "question": "Who among the following presides over a sitting of the Rajya Sabha when the Chairman and Deputy Chairman are both absent?\n निम्नलिखित में से कौन राज्यसभा की बैठक की अध्यक्षता करता है जब अध्यक्ष और उपाध्यक्ष दोनों अनुपस्थित होते हैं?",
+      "question": "Who among the following presides over a sitting of the Rajya Sabha when the Chairman and Deputy Chairman are both absent?",
       "options": {
-        "a": "The senior-most member of the House / सदन का सबसे वरिष्ठ सदस्य",
-        "b": "A member appointed by the President / राष्ट्रपति द्वारा नियुक्त एक सदस्य",
-        "c": "A member from the Panel of Vice-Chairpersons / उपसभापतियों के पैनल का एक सदस्य",
-        "d": "The Attorney General of India / भारत के महान्यायवादी"
+        "a": "The senior-most member of the House",
+        "b": "A member appointed by the President",
+        "c": "A member from the Panel of Vice-Chairpersons",
+        "d": "The Attorney General of India"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArticle 91 provides that when both the Chairman (Vice President) and the Deputy Chairman are absent, a member from the Panel of Vice-Chairpersons appointed by the Chairman of the Rajya Sabha shall preside\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 91 यह प्रावधान करता है कि जब सभापति (उपराष्ट्रपति) और उपसभापति दोनों अनुपस्थित होते हैं, तो राज्यसभा के सभापति द्वारा नियुक्त उपसभापतियों के पैनल का एक सदस्य अध्यक्षता करेगा।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following is true regarding the duration of the Lok Sabha?\n लोकसभा की अवधि के संबंध में निम्नलिखित में से कौन सा सत्य है?",
+      "question": "Which of the following is true regarding the duration of the Lok Sabha?",
       "options": {
-        "a": "It is a permanent House. / यह एक स्थायी सदन है।",
-        "b": "Its duration is 6 years. / इसकी अवधि 6 वर्ष है।",
-        "c": "Its duration is 5 years unless dissolved. / यदि भंग न हो तो इसकी अवधि 5 वर्ष है।",
-        "d": "Its members retire 1/3rd every 2 years. / इसके 1/3 सदस्य प्रत्येक 2 वर्ष में सेवानिवृत्त होते हैं।"
+        "a": "It is a permanent House.",
+        "b": "Its duration is 6 years.",
+        "c": "Its duration is 5 years unless dissolved.",
+        "d": "Its members retire 1/3rd every 2 years."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAs per Article 83, the duration of the Lok Sabha as a house is 5 years from the date of its first meeting, unless it is dissolved earlier by the President. This contrasts with the Rajya Sabha, which has no duration and is a continuing chamber\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 83 के अनुसार, लोकसभा की अवधि उसकी पहली बैठक की तारीख से 5 वर्ष है, बशर्ते कि राष्ट्रपति द्वारा इसे पहले भंग न कर दिया जाए। यह राज्यसभा के विपरीत है, जिसकी कोई अवधि नहीं है और यह एक निरंतर चैंबर है।"
     },
     {
       "q_num": 18,
-      "question": "Consider the types of questions asked during Question Hour:\n प्रश्नकाल के दौरान पूछे जाने वाले प्रश्नों के प्रकारों पर विचार करें:\n 1. Starred Questions: Require an oral answer and allow supplementary questions. / तारांकित प्रश्न: मौखिक उत्तर की आवश्यकता होती है और पूरक प्रश्नों की अनुमति होती है।\n 2. Unstarred Questions: Require a written answer and do not allow supplementary questions. / अतारांकित प्रश्न: लिखित उत्तर की आवश्यकता होती है और पूरक प्रश्नों की अनुमति नहीं होती है।\n 3. Short Notice Questions: Can be asked with a notice period of 10 days or more. / अल्प सूचना प्रश्न: 10 दिन या उससे अधिक की सूचना अवधि के साथ पूछे जा सकते हैं।\n Which of the statements given above is/are correct?\n ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+      "question": "Consider the types of questions asked during Question Hour:\n1. Starred Questions: Require an oral answer and allow supplementary questions.\n2. Unstarred Questions: Require a written answer and do not allow supplementary questions.\n3. Short Notice Questions: Can be asked with a notice period of 10 days or more.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "I and II only / केवल I और II",
-        "b": "II and III only / केवल II और III",
-        "c": "I and III only / केवल I और III",
-        "d": "I, II and III / I, II और III"
+        "a": "I and II only",
+        "b": "II and III only",
+        "c": "I and III only",
+        "d": "I, II and III"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatements I and II are correct, describing Starred (Oral) and Unstarred (Written) questions, respectively. However, Short Notice Questions require a notice period of less than ten days, not ten days or more, making statement III incorrect\n\n📖 हिंदी स्पष्टीकरण:\nकथन I और II सही हैं, जो क्रमशः तारांकित (मौखिक) और अतारांकित (लिखित) प्रश्नों का वर्णन करते हैं। हालाँकि, अल्प सूचना प्रश्नों के लिए दस दिन या उससे अधिक की नहीं, बल्कि दस दिन से कम की सूचना अवधि की आवश्यकता होती है, इसलिए कथन III गलत है।"
     },
     {
       "q_num": 19,
-      "question": "Who among the following has the right to speak in both Houses of Parliament but no right to vote?\n निम्नलिखित में से किसे संसद के दोनों सदनों में बोलने का अधिकार है लेकिन वोट देने का अधिकार नहीं है?",
+      "question": "Who among the following has the right to speak in both Houses of Parliament but no right to vote?",
       "options": {
-        "a": "Speaker of Lok Sabha / लोकसभा अध्यक्ष",
-        "b": "Vice President (Chairman of RS) / उपराष्ट्रपति (राज्यसभा के सभापति)",
-        "c": "Prime Minister / प्रधानमंत्री",
-        "d": "Attorney General of India / भारत के महान्यायवादी"
+        "a": "Speaker of Lok Sabha",
+        "b": "Vice President (Chairman of RS)",
+        "c": "Prime Minister",
+        "d": "Attorney General of India"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nArticle 88 grants the Attorney General (AG) of India the right to speak and take part in the proceedings of either House of Parliament or any joint sitting, but not to vote. The AG is not a member of either House\n\n📖 हिंदी स्पष्टीकरण:\nअनुच्छेद 88 भारत के महान्यायवादी (AG) को संसद के किसी भी सदन या किसी भी संयुक्त बैठक की कार्यवाही में बोलने और भाग लेने का अधिकार प्रदान करता है, लेकिन वोट देने का अधिकार नहीं देता है। AG किसी भी सदन का सदस्य नहीं होता है।"
     },
     {
       "q_num": 20,
-      "question": "Which of the following is the theme of the Lok Sabha Hall in the new Parliament building?\n नए संसद भवन में लोकसभा हॉल का विषय (थीम) निम्नलिखित में से क्या है?",
+      "question": "Which of the following is the theme of the Lok Sabha Hall in the new Parliament building?",
       "options": {
-        "a": "Lotus / कमल",
-        "b": "Peacock / मोर",
-        "c": "Banyan Tree / बरगद का पेड़",
-        "d": "Ashoka Chakra / अशोक चक्र"
+        "a": "Lotus",
+        "b": "Peacock",
+        "c": "Banyan Tree",
+        "d": "Ashoka Chakra"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe theme of the Lok Sabha Hall in the new Parliament building is based on the Peacock, which is India's National Bird. The Rajya Sabha Hall, on the other hand, is themed after the Lotus, India's National Flower\n\n📖 हिंदी स्पष्टीकरण:\nनए संसद भवन में लोकसभा हॉल का विषय मोर पर आधारित है, जो भारत का राष्ट्रीय पक्षी है। वहीं, राज्यसभा हॉल का विषय कमल पर आधारित है, जो भारत का राष्ट्रीय फूल है।"
     },
     {
       "q_num": 21,
-      "question": "'Adjournment Sine die' is declared by the Presiding Officer. What does this term literally mean?\n 'अनिश्चितकाल के लिए स्थगन' पीठासीन अधिकारी द्वारा घोषित किया जाता है। इस शब्द का शाब्दिक अर्थ क्या है?",
+      "question": "'Adjournment Sine die' is declared by the Presiding Officer. What does this term literally mean?",
       "options": {
-        "a": "Ending the session without the President's order. / राष्ट्रपति के आदेश के बिना सत्र को समाप्त करना।",
-        "b": "Ending a meeting without providing a date for the next sitting. / अगली बैठक के लिए कोई तारीख बताए बिना बैठक समाप्त करना।",
-        "c": "Suspending the sitting for a specific period of time. / एक विशिष्ट समय अवधि के लिए बैठक को निलंबित करना।",
-        "d": "Dissolving the House permanently. / सदन को स्थायी रूप से भंग करना।"
+        "a": "Ending the session without the President's order.",
+        "b": "Ending a meeting without providing a date for the next sitting.",
+        "c": "Suspending the sitting for a specific period of time.",
+        "d": "Dissolving the House permanently."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n'Adjournment Sine die' literally means 'adjournment without fixing a day for the next meeting'. It is declared by the Presiding Officer (Speaker in LS, Chairman in RS) to end a meeting, usually just before the President prorogues the session. / '\n\n📖 हिंदी स्पष्टीकरण:\nअनिश्चितकाल के लिए स्थगन' का शाब्दिक अर्थ है 'अगली बैठक के लिए कोई दिन तय किए बिना स्थगन'। यह पीठासीन अधिकारी (लोकसभा में अध्यक्ष, राज्यसभा में सभापति) द्वारा एक बैठक को समाप्त करने के लिए घोषित किया जाता है, आमतौर पर राष्ट्रपति द्वारा सत्र का सत्रावसान करने से ठीक पहले।"
     },
     {
       "q_num": 22,
-      "question": "In the context of the Lok Sabha, the convention is that the Deputy Speaker is generally from the opposition party. Who fixes the date for the election of the Speaker and the Deputy Speaker?\n लोकसभा के संदर्भ में, यह परंपरा है कि उपाध्यक्ष आमतौर पर विपक्षी दल से होते हैं। अध्यक्ष और उपाध्यक्ष के चुनाव की तारीख कौन तय करता है?",
+      "question": "In the context of the Lok Sabha, the convention is that the Deputy Speaker is generally from the opposition party. Who fixes the date for the election of the Speaker and the Deputy Speaker?",
       "options": {
-        "a": "Speaker for both posts / दोनों पदों के लिए अध्यक्ष",
-        "b": "President for both posts / दोनों पदों के लिए राष्ट्रपति",
-        "c": "President for Speaker, Speaker for Deputy Speaker / अध्यक्ष के लिए राष्ट्रपति, उपाध्यक्ष के लिए अध्यक्ष",
-        "d": "Vice President for Speaker, President for Deputy Speaker / अध्यक्ष के लिए उपराष्ट्रपति, उपाध्यक्ष के लिए राष्ट्रपति"
+        "a": "Speaker for both posts",
+        "b": "President for both posts",
+        "c": "President for Speaker, Speaker for Deputy Speaker",
+        "d": "Vice President for Speaker, President for Deputy Speaker"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAs per the constitutional provisions and parliamentary rules, the date for the election of the Speaker is fixed by the President. In contrast, the date for the election of the Deputy Speaker is fixed by the Speaker of the Lok Sabha\n\n📖 हिंदी स्पष्टीकरण:\nसंवैधानिक प्रावधानों और संसदीय नियमों के अनुसार, अध्यक्ष के चुनाव की तारीख राष्ट्रपति द्वारा तय की जाती है। इसके विपरीत, उपाध्यक्ष के चुनाव की तारीख लोकसभा अध्यक्ष द्वारा तय की जाती है।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following correctly describes the process for the removal of the Deputy Chairman of the Rajya Sabha and the Deputy Speaker of the Lok Sabha?\n निम्नलिखित में से कौन राज्यसभा के उपसभापति और लोकसभा के उपाध्यक्ष को हटाने की प्रक्रिया का सही वर्णन करता है?",
+      "question": "Which of the following correctly describes the process for the removal of the Deputy Chairman of the Rajya Sabha and the Deputy Speaker of the Lok Sabha?",
       "options": {
-        "a": "Both are removed by Simple Majority. / दोनों को साधारण बहुमत से हटाया जाता है।",
-        "b": "Both are removed by Effective Majority. / दोनों को प्रभावी बहुमत से हटाया जाता है।",
-        "c": "Deputy Chairman (RS) by Effective Majority; Deputy Speaker (LS) by Simple Majority. / उपसभापति (RS) प्रभावी बहुमत से; उपाध्यक्ष (LS) साधारण बहुमत से।",
-        "d": "Deputy Chairman (RS) by Simple Majority; Deputy Speaker (LS) by Effective Majority. / उपसभापति (RS) साधारण बहुमत से; उपाध्यक्ष (LS) प्रभावी बहुमत से।"
+        "a": "Both are removed by Simple Majority.",
+        "b": "Both are removed by Effective Majority.",
+        "c": "Deputy Chairman (RS) by Effective Majority; Deputy Speaker (LS) by Simple Majority.",
+        "d": "Deputy Chairman (RS) by Simple Majority; Deputy Speaker (LS) by Effective Majority."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth the Deputy Chairman of the Rajya Sabha (Art 90) and the Deputy Speaker of the Lok Sabha (Art 94) are removed by a resolution passed by a majority of all the then members of the House, which is known as an 'Effective Majority'. This is a higher standard than the Simple Majority used for routine business\n\n📖 हिंदी स्पष्टीकरण:\nराज्यसभा के उपसभापति (अनुच्छेद 90) और लोकसभा के उपाध्यक्ष (अनुच्छेद 94) दोनों को सदन के तत्कालीन सभी सदस्यों के बहुमत से पारित प्रस्ताव द्वारा हटाया जाता है, जिसे 'प्रभावी बहुमत' के रूप में जाना जाता है। यह नियमित कामकाज के लिए उपयोग किए जाने वाले साधारण बहुमत से एक उच्च मानक है।"
     },
     {
       "q_num": 24,
-      "question": "The representation of States in the Rajya Sabha is unequal, as exemplified by the varying number of seats allocated to different states. Which source country is credited with providing the concept of Nomination of members to the Rajya Sabha?\n राज्यसभा में राज्यों का प्रतिनिधित्व असमान है, जैसा कि विभिन्न राज्यों को आवंटित सीटों की संख्या में भिन्नता से स्पष्ट है। राज्यसभा के सदस्यों के नामांकन की अवधारणा प्रदान करने का श्रेय किस देश को दिया जाता है?",
+      "question": "The representation of States in the Rajya Sabha is unequal, as exemplified by the varying number of seats allocated to different states. Which source country is credited with providing the concept of Nomination of members to the Rajya Sabha?",
       "options": {
-        "a": "South Africa / दक्षिण अफ्रीका",
-        "b": "Ireland / आयरलैंड",
-        "c": "UK (Britain) / यूनाइटेड किंगडम (ब्रिटेन)",
-        "d": "Australia / ऑस्ट्रेलिया"
+        "a": "South Africa",
+        "b": "Ireland",
+        "c": "UK (Britain)",
+        "d": "Australia"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe method of nomination of 12 members by the President to the Rajya Sabha, based on their expertise in special fields, was borrowed from the Constitution of Ireland. This provision is designed to provide distinguished persons a place in the Parliament without undergoing the process of election\n\n📖 हिंदी स्पष्टीकरण:\nविशेष क्षेत्रों में अपनी विशेषज्ञता के आधार पर राष्ट्रपति द्वारा राज्यसभा में 12 सदस्यों को मनोनीत करने की पद्धति आयरलैंड के संविधान से उधार ली गई थी। यह प्रावधान प्रतिष्ठित व्यक्तियों को चुनाव की प्रक्रिया से गुजरे बिना संसद में जगह प्रदान करने के लिए बनाया गया है।"
     },
     {
       "q_num": 25,
-      "question": "Who appoints the Protem Speaker of the Lok Sabha, and what is the primary role of the Protem Speaker?\n लोकसभा के प्रोटेम स्पीकर की नियुक्ति कौन करता है, और प्रोटेम स्पीकर की प्राथमिक भूमिका क्या है?",
+      "question": "Who appoints the Protem Speaker of the Lok Sabha, and what is the primary role of the Protem Speaker?",
       "options": {
-        "a": "Appointed by: Speaker; Role: To decide the agenda of the day. / नियुक्तिकर्ता: अध्यक्ष; भूमिका: दिन का एजेंडा तय करना।",
-        "b": "Appointed by: President; Role: To provide oath to the newly appointed members. / नियुक्तिकर्ता: राष्ट्रपति; भूमिका: नव-नियुक्त सदस्यों को शपथ दिलाना।",
-        "c": "Appointed by: Vice President; Role: To preside over the House during the absence of the Speaker. / नियुक्तिकर्ता: उपराष्ट्रपति; भूमिका: अध्यक्ष की अनुपस्थिति के दौरान सदन की अध्यक्षता करना।",
-        "d": "Appointed by: Prime Minister; Role: To pass the Motion of Thanks. / नियुक्तिकर्ता: प्रधानमंत्री; भूमिका: धन्यवाद प्रस्ताव पारित करना।"
+        "a": "Appointed by: Speaker; Role: To decide the agenda of the day.",
+        "b": "Appointed by: President; Role: To provide oath to the newly appointed members.",
+        "c": "Appointed by: Vice President; Role: To preside over the House during the absence of the Speaker.",
+        "d": "Appointed by: Prime Minister; Role: To pass the Motion of Thanks."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe President appoints a senior-most member of the Lok Sabha as the Protem Speaker (Temporary Speaker) . The primary duty of the Protem Speaker is to administer the oath or affirmation to the newly elected members of the House\n\n📖 हिंदी स्पष्टीकरण:\nराष्ट्रपति लोकसभा के सबसे वरिष्ठ सदस्य को प्रोटेम स्पीकर (अस्थायी अध्यक्ष) के रूप में नियुक्त करते हैं। प्रोटेम स्पीकर का प्राथमिक कर्तव्य सदन के नव-निर्वाचित सदस्यों को शपथ दिलाना या प्रतिज्ञान कराना है।"

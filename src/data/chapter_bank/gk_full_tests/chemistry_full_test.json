@@ -6,900 +6,900 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding Isotopes:\n समस्थानिकों (Isotopes) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) They have the same atomic number but different mass numbers. / उनका परमाणु क्रमांक समान होता है लेकिन द्रव्यमान संख्या भिन्न होती है।\n (b) They have different chemical properties due to different neutron counts. / न्यूट्रॉन की संख्या भिन्न होने के कारण उनके रासायनिक गुण भिन्न होते हैं।\n (c) Radioactive isotopes are used in medical treatments like cancer therapy. / रेडियोधर्मी समस्थानिकों का उपयोग कैंसर जैसी चिकित्सा में किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding Isotopes:\n(a) They have the same atomic number but different mass numbers.\n(b) They have different chemical properties due to different neutron counts.\n(c) Radioactive isotopes are used in medical treatments like cancer therapy.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIsotopes have the same chemical properties because they have the same number of electrons. Statements (a) and (c) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nसमस्थानिकों के रासायनिक गुण समान होते हैं क्योंकि उनमें इलेक्ट्रॉनों की संख्या समान होती है। कथन (a) और (c) सही हैं।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is correct about 'Aqua Regia'?\n 'एक्वा रेजिया' (Aqua Regia) के बारे में निम्नलिखित में से कौन सा सही है?",
+      "question": "Which of the following is correct about 'Aqua Regia'?",
       "options": {
-        "a": "It is a mixture of conc. HCl and conc. HNO₃ in 1:3 ratio. / यह 1:3 के अनुपात में सांद्र HCl और सांद्र HNO₃ का मिश्रण है।",
-        "b": "It is a mixture of conc. HCl and conc. HNO₃ in 3:1 ratio. / यह 3:1 के अनुपात में सांद्र HCl और सांद्र HNO₃ का मिश्रण है।",
-        "c": "It can dissolve all metals except gold. / यह सोने को छोड़कर सभी धातुओं को घोल सकता है।",
-        "d": "It is used as a preservative for food. / इसका उपयोग खाद्य परिरक्षक के रूप में किया जाता है।"
+        "a": "It is a mixture of conc. HCl and conc. HNO₃ in 1:3 ratio.",
+        "b": "It is a mixture of conc. HCl and conc. HNO₃ in 3:1 ratio.",
+        "c": "It can dissolve all metals except gold.",
+        "d": "It is used as a preservative for food."
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAqua Regia is a highly corrosive mixture of concentrated Hydrochloric acid and Nitric acid in a 3:1 molar ratio, capable of dissolving noble metals like gold and platinum.\n\n📖 हिंदी स्पष्टीकरण:\nएक्वा रेजिया सांद्र हाइड्रोक्लोरिक एसिड और नाइट्रिक एसिड का 3:1 के अनुपात में एक अत्यधिक संक्षारक मिश्रण है, जो सोना और प्लेटिनम जैसी उत्कृष्ट धातुओं को घोलने में सक्षम है।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements about the Periodic Table:\n आवर्त सारणी के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Electronegativity generally increases from left to right across a period. / एक आवर्त में बाएं से दाएं जाने पर विद्युत ऋणात्मकता आम तौर पर बढ़ती है।\n (b) Atomic radius increases from top to bottom in a group. / एक समूह में ऊपर से नीचे जाने पर परमाणु त्रिज्या बढ़ती है।\n (c) Noble gases have the highest electron affinity in their respective periods. / उत्कृष्ट गैसों की अपने संबंधित आवर्त में इलेक्ट्रॉन बंधुता सबसे अधिक होती है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about the Periodic Table:\n(a) Electronegativity generally increases from left to right across a period.\n(b) Atomic radius increases from top to bottom in a group.\n(c) Noble gases have the highest electron affinity in their respective periods.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nNoble gases have zero or positive electron affinity because of their stable configuration. Statements (a) and (b) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nस्थिर विन्यास के कारण उत्कृष्ट गैसों की इलेक्ट्रॉन बंधुता शून्य या धनात्मक होती है। कथन (a) और (b) सही हैं।"
     },
     {
       "q_num": 4,
-      "question": "Which of the following statements about 'Hard Water' is correct?\n 'कठोर जल' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about 'Hard Water' is correct?",
       "options": {
-        "a": "Temporary hardness is due to Chlorides of Magnesium. / अस्थायी कठोरता मैग्नीशियम के क्लोराइड के कारण होती है।",
-        "b": "Permanent hardness can be removed by boiling. / स्थायी कठोरता को उबालकर दूर किया जा सकता है।",
-        "c": "Temporary hardness is caused by Bicarbonates of Calcium and Magnesium. / अस्थायी कठोरता कैल्शियम और मैग्नीशियम के बाइकार्बोनेट के कारण होती है।",
-        "d": "Hard water forms lather easily with soap. / कठोर जल साबुन के साथ आसानी से झाग बनाता है।"
+        "a": "Temporary hardness is due to Chlorides of Magnesium.",
+        "b": "Permanent hardness can be removed by boiling.",
+        "c": "Temporary hardness is caused by Bicarbonates of Calcium and Magnesium.",
+        "d": "Hard water forms lather easily with soap."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTemporary hardness is due to dissolved bicarbonates of Ca and Mg, which can be removed by boiling or Clark's method.\n\n📖 हिंदी स्पष्टीकरण:\nअस्थायी कठोरता Ca और Mg के घुले हुए बाइकार्बोनेट के कारण होती है, जिसे उबालकर या क्लार्क की विधि द्वारा दूर किया जा सकता है।"
     },
     {
       "q_num": 5,
-      "question": "Consider the following regarding 'Allotropes of Carbon':\n 'कार्बन के अपरूपों' के संबंध में निम्नलिखित पर विचार करें:\n (a) Diamond is a good conductor of electricity due to free electrons. / मुक्त इलेक्ट्रॉनों के कारण हीरा बिजली का अच्छा सुचालक है।\n (b) Graphite is used as a dry lubricant in machines. / ग्रेफाइट का उपयोग मशीनों में शुष्क स्नेहक के रूप में किया जाता है।\n (c) Fullerene C₆₀ has a soccer-ball like structure. / फुलेरीन C₆₀ की संरचना सॉकर-बॉल जैसी होती है।\n Which of the above statements are correct? \n उपरोक्त में से कौन से कथन सही हैं?",
+      "question": "Consider the following regarding 'Allotropes of Carbon':\n(a) Diamond is a good conductor of electricity due to free electrons.\n(b) Graphite is used as a dry lubricant in machines.\n(c) Fullerene C₆₀ has a soccer-ball like structure.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDiamond is an insulator because it has no free electrons; Graphite is a conductor. Statements (b) and (c) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nहीरा एक कुचालक है क्योंकि इसमें कोई मुक्त इलेक्ट्रॉन नहीं होता है; ग्रेफाइट एक सुचालक है। कथन (b) और (c) सही हैं।"
     },
     {
       "q_num": 6,
-      "question": "Which of the following is the correct order of the 'Discovery of Subatomic Particles'?\n निम्नलिखित में से 'उप-परमाणु कणों की खोज' का सही क्रम कौन सा है?",
+      "question": "Which of the following is the correct order of the 'Discovery of Subatomic Particles'?",
       "options": {
-        "a": "Electron > Proton > Neutron / इलेक्ट्रॉन > प्रोटॉन > न्यूट्रॉन",
-        "b": "Proton > Electron > Neutron / प्रोटॉन > इलेक्ट्रॉन > न्यूट्रॉन",
-        "c": "Neutron > Proton > Electron / न्यूट्रॉन > प्रोटॉन > इलेक्ट्रॉन",
-        "d": "Electron > Neutron > Proton / इलेक्ट्रॉन > न्यूट्रॉन > प्रोटॉन"
+        "a": "Electron > Proton > Neutron",
+        "b": "Proton > Electron > Neutron",
+        "c": "Neutron > Proton > Electron",
+        "d": "Electron > Neutron > Proton"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nElectrons were discovered first (1897), then Protons (1917-1920), and finally Neutrons (1932).\n\n📖 हिंदी स्पष्टीकरण:\nइलेक्ट्रॉनों की खोज सबसे पहले (1897), फिर प्रोटॉन (1917-1920), और अंत में न्यूट्रॉन (1932) की गई थी।"
     },
     {
       "q_num": 7,
-      "question": "Consider the following statements about 'Oxidation and Reduction':\n 'ऑक्सीकरण और अपचयन' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Oxidation involves the loss of electrons. / ऑक्सीकरण में इलेक्ट्रॉनों की हानि होती है।\n (b) Reduction involves the addition of Hydrogen. / अपचयन में हाइड्रोजन का जुड़ना शामिल है।\n (c) A reducing agent itself gets reduced in a reaction. / एक अपचायक कारक स्वयं एक प्रतिक्रिया में अपचयित हो जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Oxidation and Reduction':\n(a) Oxidation involves the loss of electrons.\n(b) Reduction involves the addition of Hydrogen.\n(c) A reducing agent itself gets reduced in a reaction.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nA reducing agent itself gets oxidized because it loses electrons to reduce another substance.\n\n📖 हिंदी स्पष्टीकरण:\nएक अपचायक कारक स्वयं ऑक्सीकृत हो जाता है क्योंकि यह दूसरे पदार्थ को अपचयित करने के लिए इलेक्ट्रॉनों का त्याग करता है।"
     },
     {
       "q_num": 8,
-      "question": "Which gas is primarily responsible for the 'Browning of Fruits' when cut?\n फलों को काटने पर उनके 'भूरा होने' के लिए मुख्य रूप से कौन सी गैस जिम्मेदार है?",
+      "question": "Which gas is primarily responsible for the 'Browning of Fruits' when cut?",
       "options": {
-        "a": "Nitrogen / नाइट्रोजन",
-        "b": "Oxygen / ऑक्सीजन",
-        "c": "Carbon Dioxide / कार्बन डाइऑक्साइड",
-        "d": "Hydrogen / हाइड्रोजन"
+        "a": "Nitrogen",
+        "b": "Oxygen",
+        "c": "Carbon Dioxide",
+        "d": "Hydrogen"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEnzymatic browning occurs when the enzyme polyphenol oxidase in fruit reacts with oxygen in the air.\n\n📖 हिंदी स्पष्टीकरण:\nएंजाइमी ब्राउनिंग तब होती है जब फल में मौजूद एंजाइम पॉलीफेनोल ऑक्सीडेज हवा में ऑक्सीजन के साथ प्रतिक्रिया करता है।"
     },
     {
       "q_num": 9,
-      "question": "Consider the following statements regarding 'Glass':\n 'कांच' (Glass) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Glass is a supercooled liquid. / कांच एक अतिशीतित द्रव है।\n (b) Pyrex glass is used for making laboratory equipment. / पाइरेक्स कांच का उपयोग प्रयोगशाला उपकरण बनाने के लिए किया जाता है।\n (c) Addition of Cobalt Oxide gives a yellow color to glass. / कोबाल्ट ऑक्साइड मिलाने से कांच को पीला रंग मिलता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Glass':\n(a) Glass is a supercooled liquid.\n(b) Pyrex glass is used for making laboratory equipment.\n(c) Addition of Cobalt Oxide gives a yellow color to glass.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCobalt oxide gives a deep blue color to glass, not yellow.\n\n📖 हिंदी स्पष्टीकरण:\nकोबाल्ट ऑक्साइड कांच को गहरा नीला रंग देता है, पीला नहीं।"
     },
     {
       "q_num": 10,
-      "question": "Which of the following is correct about 'Galvanization'?\n 'गैल्वेनाइजेशन' (Galvanization) के बारे में निम्नलिखित में से कौन सा सही है?",
+      "question": "Which of the following is correct about 'Galvanization'?",
       "options": {
-        "a": "Coating of Tin on Iron / लोहे पर टिन का लेप",
-        "b": "Coating of Zinc on Iron / लोहे पर जस्ते का लेप",
-        "c": "Coating of Copper on Aluminum / एल्युमीनियम पर तांबे का लेप",
-        "d": "Coating of Chromium on Iron / लोहे पर क्रोमियम का लेप"
+        "a": "Coating of Tin on Iron",
+        "b": "Coating of Zinc on Iron",
+        "c": "Coating of Copper on Aluminum",
+        "d": "Coating of Chromium on Iron"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nGalvanization is the process of applying a protective zinc coating to steel or iron to prevent rusting.\n\n📖 हिंदी स्पष्टीकरण:\nगैल्वेनाइजेशन जंग को रोकने के लिए स्टील या लोहे पर सुरक्षात्मक जस्ता लेप लगाने की प्रक्रिया है।"
     },
     {
       "q_num": 11,
-      "question": "Consider the following statements about 'Radioactivity':\n 'रेडियोधर्मिता' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Alpha particles have a positive charge. / अल्फा कणों पर धनात्मक आवेश होता है।\n (b) Gamma rays have the highest penetrating power. / गामा किरणों में सबसे अधिक भेदन क्षमता होती है।\n (c) Beta particles are identical to Helium nuclei. / बीटा कण हीलियम नाभिक के समान होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Radioactivity':\n(a) Alpha particles have a positive charge.\n(b) Gamma rays have the highest penetrating power.\n(c) Beta particles are identical to Helium nuclei.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAlpha particles are identical to Helium nuclei, whereas Beta particles are fast-moving electrons.\n\n📖 हिंदी स्पष्टीकरण:\nअल्फा कण हीलियम नाभिक के समान होते हैं, जबकि बीटा कण तीव्र गति से चलने वाले इलेक्ट्रॉन होते हैं।"
     },
     {
       "q_num": 12,
-      "question": "Which of the following is 'Dry Ice'?\n निम्नलिखित में से 'शुष्क बर्फ' (Dry Ice) कौन सी है?",
+      "question": "Which of the following is 'Dry Ice'?",
       "options": {
-        "a": "Solid Nitrogen / ठोस नाइट्रोजन",
-        "b": "Solid Carbon Dioxide / ठोस कार्बन डाइऑक्साइड",
-        "c": "Frozen Water / जमी हुई बर्फ",
-        "d": "Solid Sulfur Dioxide / ठोस सल्फर डाइऑक्साइड"
+        "a": "Solid Nitrogen",
+        "b": "Solid Carbon Dioxide",
+        "c": "Frozen Water",
+        "d": "Solid Sulfur Dioxide"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDry ice is the solid form of Carbon Dioxide, used primarily as a cooling agent.\n\n📖 हिंदी स्पष्टीकरण:\nशुष्क बर्फ कार्बन डाइऑक्साइड का ठोस रूप है, जिसका उपयोग मुख्य रूप से शीतलन एजेंट के रूप में किया जाता है।"
     },
     {
       "q_num": 13,
-      "question": "Consider the following regarding 'Acid Rain':\n 'अम्ल वर्षा' के संबंध में निम्नलिखित पर विचार करें:\n (a) It is mainly caused by oxides of Nitrogen and Sulfur. / यह मुख्य रूप से नाइट्रोजन और सल्फर के ऑक्साइड के कारण होता है।\n (b) It has a pH value generally above 7. / इसका pH मान आम तौर पर 7 से ऊपर होता है।\n (c) It can cause damage to monuments made of marble. / यह संगमरमर से बने स्मारकों को नुकसान पहुँचा सकता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Acid Rain':\n(a) It is mainly caused by oxides of Nitrogen and Sulfur.\n(b) It has a pH value generally above 7.\n(c) It can cause damage to monuments made of marble.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAcid rain has a pH value below 5.6. It reacts with calcium carbonate in marble (Taj Mahal) causing \"Stone Cancer\".\n\n📖 हिंदी स्पष्टीकरण:\nअम्ल वर्षा का pH मान 5.6 से कम होता है। यह संगमरमर (ताजमहल) में कैल्शियम कार्बोनेट के साथ प्रतिक्रिया करता है जिससे \"स्टोन कैंसर\" होता है।"
     },
     {
       "q_num": 14,
-      "question": "The gas used for 'Artificial Ripening' of green fruits is:\n हरे फलों को 'कृत्रिम रूप से पकाने' के लिए उपयोग की जाने वाली गैस है:",
+      "question": "The gas used for 'Artificial Ripening' of green fruits is:",
       "options": {
-        "a": "Ethane / एथेन",
-        "b": "Acetylene / एसिटिलीन",
-        "c": "Methane / मीथेन",
-        "d": "Carbon Monoxide / कार्बन मोनोऑक्साइड"
+        "a": "Ethane",
+        "b": "Acetylene",
+        "c": "Methane",
+        "d": "Carbon Monoxide"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAcetylene gas (produced from calcium carbide) is used for ripening, though Ethylene is the natural ripening hormone.\n\n📖 हिंदी स्पष्टीकरण:\nएसिटिलीन गैस (कैल्शियम कार्बाइड से उत्पादित) का उपयोग पकाने के लिए किया जाता है, हालाँकि एथिलीन प्राकृतिक पकने वाला हार्मोन है।"
     },
     {
       "q_num": 15,
-      "question": "Consider the following statements about 'Catalysts':\n 'उत्प्रेरक' (Catalysts) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) A catalyst increases the speed of a reaction by lowering activation energy. / एक उत्प्रेरक सक्रियण ऊर्जा को कम करके प्रतिक्रिया की गति को बढ़ाता है।\n (b) It is consumed completely during the chemical reaction. / यह रासायनिक प्रतिक्रिया के दौरान पूरी तरह से समाप्त हो जाता है।\n (c) Enzymes are biological catalysts. / एंजाइम जैविक उत्प्रेरक हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Catalysts':\n(a) A catalyst increases the speed of a reaction by lowering activation energy.\n(b) It is consumed completely during the chemical reaction.\n(c) Enzymes are biological catalysts.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA catalyst is not consumed in a reaction; it remains chemically unchanged at the end.\n\n📖 हिंदी स्पष्टीकरण:\nप्रतिक्रिया में उत्प्रेरक का उपभोग नहीं किया जाता है; यह अंत में रासायनिक रूप से अपरिवर्तित रहता है।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding Mendeleev's Periodic Table:\n मेंडेलीव की आवर्त सारणी के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Elements were arranged in the increasing order of their atomic numbers. / तत्वों को उनके परमाणु क्रमांक के बढ़ते क्रम में व्यवस्थित किया गया था।\n (b) He left gaps for elements like Gallium and Germanium which were not discovered at that time. / उन्होंने गैलियम और जर्मेनियम जैसे तत्वों के लिए खाली स्थान छोड़े जो उस समय खोजे नहीं गए थे।\n (c) He could not provide a fixed position for Hydrogen. / वह हाइड्रोजन के लिए एक निश्चित स्थान प्रदान नहीं कर सके।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding Mendeleev's Periodic Table:\n(a) Elements were arranged in the increasing order of their atomic numbers.\n(b) He left gaps for elements like Gallium and Germanium which were not discovered at that time.\n(c) He could not provide a fixed position for Hydrogen.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMendeleev arranged elements based on atomic mass, not atomic number (Moseley did that later). He correctly predicted elements like Eka-Aluminium (Gallium).\n\n📖 हिंदी स्पष्टीकरण:\nमेंडेलीव ने तत्वों को परमाणु द्रव्यमान के आधार पर व्यवस्थित किया था, न कि परमाणु क्रमांक के आधार पर (मोजले ने बाद में ऐसा किया)। उन्होंने एका-एल्यूमीनियम (गैलियम) जैसे तत्वों की सही भविष्यवाणी की थी।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements about 'Ionic Compounds' is correct?\n 'आयनिक यौगिकों' के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+      "question": "Which of the following statements about 'Ionic Compounds' is correct?",
       "options": {
-        "a": "They have low melting and boiling points. / उनके गलनांक और क्वथनांक कम होते हैं।",
-        "b": "They conduct electricity in the solid state. / वे ठोस अवस्था में विद्युत का चालन करते हैं।",
-        "c": "They are generally soluble in water but insoluble in petrol. / वे आम तौर पर पानी में घुलनशील होते हैं लेकिन पेट्रोल में अघुलनशील होते हैं।",
-        "d": "They are formed by the sharing of electrons. / वे इलेक्ट्रॉनों के साझाकरण से बनते हैं।"
+        "a": "They have low melting and boiling points.",
+        "b": "They conduct electricity in the solid state.",
+        "c": "They are generally soluble in water but insoluble in petrol.",
+        "d": "They are formed by the sharing of electrons."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIonic compounds have high melting points and conduct electricity only in molten or aqueous states. They are polar and dissolve in polar solvents like water.\n\n📖 हिंदी स्पष्टीकरण:\nआयनिक यौगिकों का गलनांक उच्च होता है और वे केवल गलित या जलीय अवस्था में ही विद्युत का चालन करते हैं। वे ध्रुवीय होते हैं और पानी जैसे ध्रुवीय विलायकों में घुल जाते हैं।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements regarding 'Boyle’s Law':\n 'बॉयल के नियम' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) At constant temperature, the volume of a gas is inversely proportional to its pressure. / स्थिर तापमान पर, गैस का आयतन उसके दबाव के व्युत्क्रमानुपाती होता है।\n (b) It explains why air bubbles expand as they rise from the bottom of a lake. / यह बताता है कि झील के तल से ऊपर उठने पर हवा के बुलबुले क्यों फैलते हैं।\n (c) This law is applicable only to ideal gases. / यह नियम केवल आदर्श गैसों पर लागू होता है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding 'Boyle’s Law':\n(a) At constant temperature, the volume of a gas is inversely proportional to its pressure.\n(b) It explains why air bubbles expand as they rise from the bottom of a lake.\n(c) This law is applicable only to ideal gases.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAccording to P ∝ 1/V as a bubble rises, pressure decreases and volume increases. While primarily for ideal gases, real gases follow it at low pressure.\nP ∝ 1/V\n\n📖 हिंदी स्पष्टीकरण:\nके अनुसार, जैसे-जैसे बुलबुला ऊपर उठता है, दबाव कम होता है और आयतन बढ़ता है। हालांकि यह मुख्य रूप से आदर्श गैसों के लिए है, वास्तविक गैसें कम दबाव पर इसका पालन करती हैं।"
     },
     {
       "q_num": 19,
-      "question": "Which of the following chemicals is used as 'Rat Poison'?\n चूहे मारने के जहर (Rat Poison) के रूप में निम्नलिखित में से किस रसायन का उपयोग किया जाता है?",
+      "question": "Which of the following chemicals is used as 'Rat Poison'?",
       "options": {
-        "a": "Zinc Phosphide / जिंक फास्फाइड",
-        "b": "Zinc Oxide / जिंक ऑक्साइड",
-        "c": "Calcium Carbonate / कैल्शियम कार्बोनेट",
-        "d": "Potassium Permanganate / पोटैशियम परमैंगनेट"
+        "a": "Zinc Phosphide",
+        "b": "Zinc Oxide",
+        "c": "Calcium Carbonate",
+        "d": "Potassium Permanganate"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nZinc Phosphide (Zn₃P₂) is a common rodenticide. When ingested, it reacts with stomach acid to release toxic phosphine gas.\n\n📖 हिंदी स्पष्टीकरण:\nजिंक फास्फाइड (Zn₃P₂) एक सामान्य कृंतकनाशी है। निगलने पर, यह पेट के एसिड के साथ प्रतिक्रिया करके जहरीली फास्फीन गैस छोड़ता है।"
     },
     {
       "q_num": 20,
-      "question": "Consider the following statements regarding 'Acids':\n 'अम्ल' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Mineral acids like HCl and H₂SO₄ are strong acids. / HCl और H₂SO₄ जैसे खनिज अम्ल प्रबल अम्ल होते हैं।\n (b) They turn red litmus paper blue. / वे लाल लिटमस पेपर को नीला कर देते हैं।\n (c) Organic acids like Citric acid are generally weak. / साइट्रिक एसिड जैसे कार्बनिक अम्ल आम तौर पर दुर्बल होते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Acids':\n(a) Mineral acids like HCl and H₂SO₄ are strong acids. / HCl\n(b) They turn red litmus paper blue.\n(c) Organic acids like Citric acid are generally weak.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAcids turn blue litmus red. Bases turn red litmus blue. Statements (a) and (c) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nअम्ल नीले लिटमस को लाल कर देते हैं। क्षार लाल लिटमस को नीला कर देते हैं। कथन (a) और (c) सही हैं।"
     },
     {
       "q_num": 21,
-      "question": "'Washing Soda' is the common name for which chemical compound?\n 'धावन सोडा' (Washing Soda) किस रासायनिक यौगिक का सामान्य नाम है?",
+      "question": "'Washing Soda' is the common name for which chemical compound?",
       "options": {
-        "a": "Sodium Carbonate / सोडियम कार्बोनेट",
-        "b": "Sodium Bicarbonate / सोडियम बाइकार्बोनेट",
-        "c": "Calcium Hydroxide / कैल्शियम हाइड्रोक्साइड",
-        "d": "Sodium Chloride / सोडियम क्लोराइड"
+        "a": "Sodium Carbonate",
+        "b": "Sodium Bicarbonate",
+        "c": "Calcium Hydroxide",
+        "d": "Sodium Chloride"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWashing soda is Sodium Carbonate (Na₂CO₂ ·10H₂O), whereas Baking soda is Sodium Bicarbonate (NaHCO₃).\n\n📖 हिंदी स्पष्टीकरण:\nधावन सोडा सोडियम कार्बोनेट (Na₂CO₂ ·10H₂O) है, जबकि बेकिंग सोडा सोडियम बाइकार्बोनेट (NaHCO₃) है।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements about 'Amalgam':\n 'अमलगम' (Amalgam) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is an alloy in which one of the metals is always Mercury. / यह एक मिश्र धातु है जिसमें एक धातु हमेशा पारा (Mercury) होती है।\n (b) Iron is used to store Mercury because it does not form an amalgam. / लोहे का उपयोग पारे को स्टोर करने के लिए किया जाता है क्योंकि यह अमलगम नहीं बनाता है।\n (c) Silver-Tin amalgams are used in dental fillings. / चांदी-टिन अमलगम का उपयोग दंत भराव (डेंटल फिलिंग) में किया जाता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन से कथन सही हैं?",
+      "question": "Consider the following statements about 'Amalgam':\n(a) It is an alloy in which one of the metals is always Mercury.\n(b) Iron is used to store Mercury because it does not form an amalgam.\n(c) Silver-Tin amalgams are used in dental fillings.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nMercury forms alloys with almost all metals except iron, platinum, tungsten, and tantalum. All statements are factually correct.\n\n📖 हिंदी स्पष्टीकरण:\nपारा लोहा, प्लैटिनम, टंगस्टन और टैंटलम को छोड़कर लगभग सभी धातुओं के साथ मिश्र धातु बनाता है। सभी कथन तथ्यात्मक रूप से सही हैं।"
     },
     {
       "q_num": 23,
-      "question": "Which of the following pairs is NOT correctly matched?\n निम्नलिखित में से कौन सा जोड़ा सही सुमेलित नहीं है?",
+      "question": "Which of the following pairs is NOT correctly matched?",
       "options": {
-        "a": "Vinegar : Acetic Acid / सिरका : एसिटिक एसिड",
-        "b": "Curd : Lactic Acid / दही : लैक्टिक एसिड",
-        "c": "Tamarind : Tartaric Acid / इमली : टार्टरिक एसिड",
-        "d": "Tomato : Citric Acid / टमाटर : साइट्रिक एसिड"
+        "a": "Vinegar : Acetic Acid",
+        "b": "Curd : Lactic Acid",
+        "c": "Tamarind : Tartaric Acid",
+        "d": "Tomato : Citric Acid"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nTomatoes primarily contain Oxalic Acid. Lemons and oranges contain Citric Acid.\n\n📖 हिंदी स्पष्टीकरण:\nटमाटर में मुख्य रूप से ऑक्सालिक एसिड होता है। नींबू और संतरे में साइट्रिक एसिड होता है।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following regarding 'Hydrogen Gas':\n 'हाइड्रोजन गैस' के संबंध में निम्नलिखित पर विचार करें:\n (a) It is the lightest element in the periodic table. / यह आवर्त सारणी का सबसे हल्का तत्व है।\n (b) It burns with a pop sound. / यह 'पॉप' ध्वनि के साथ जलता है।\n (c) It is used in the hydrogenation of vegetable oils. / इसका उपयोग वनस्पति तेलों के हाइड्रोजनीकरण में किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Hydrogen Gas':\n(a) It is the lightest element in the periodic table.\n(b) It burns with a pop sound.\n(c) It is used in the hydrogenation of vegetable oils.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "b and c / b और c",
-        "c": "a and b / a और b",
-        "d": "a, b and c / a, b और c"
+        "a": "a and c",
+        "b": "b and c",
+        "c": "a and b",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nHydrogen is the lightest, combustible with a pop sound, and used to convert oil into solid fat (Vanaspati Ghee) via hydrogenation.\n\n📖 हिंदी स्पष्टीकरण:\nहाइड्रोजन सबसे हल्का, पॉप ध्वनि के साथ दहनशील है, और हाइड्रोजनीकरण के माध्यम से तेल को ठोस वसा (वनस्पति घी) में बदलने के लिए उपयोग किया जाता है।"
     },
     {
       "q_num": 25,
-      "question": "Which acid is present in the 'Sting of an Ant'?\n 'चींटी के डंक' में कौन सा अम्ल मौजूद होता है?",
+      "question": "Which acid is present in the 'Sting of an Ant'?",
       "options": {
-        "a": "Formic Acid / फॉर्मिक एसिड",
-        "b": "Malic Acid / मैलिक एसिड",
-        "c": "Oxalic Acid / ऑक्सालिक एसिड",
-        "d": "Nitric Acid / नाइट्रिक एसिड"
+        "a": "Formic Acid",
+        "b": "Malic Acid",
+        "c": "Oxalic Acid",
+        "d": "Nitric Acid"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nAnt stings contain Formic acid (also known as Methanoic acid), which causes the burning sensation.\n\n📖 हिंदी स्पष्टीकरण:\nचींटी के डंक में फॉर्मिक एसिड (जिसे मेथेनोइक एसिड भी कहा जाता है) होता है, जिससे जलन महसूस होती है।"
     },
     {
       "q_num": 26,
-      "question": "Consider the following statements about 'Noble Gases':\n 'उत्कृष्ट गैसों' (Noble Gases) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They are monoatomic and chemically inert. / वे एकपरमाणुक और रासायनिक रूप से निष्क्रिय होती हैं।\n (b) Radon is the only noble gas not found in the atmosphere. / रेडॉन एकमात्र उत्कृष्ट गैस है जो वायुमंडल में नहीं पाई जाती है।\n (c) Argon is used in electric bulbs to prevent oxidation of the filament. / फिलामेंट के ऑक्सीकरण को रोकने के लिए बिजली के बल्बों में आर्गन का उपयोग किया जाता है।\n Which of the statements given above is/are correct? \n ऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about 'Noble Gases':\n(a) They are monoatomic and chemically inert.\n(b) Radon is the only noble gas not found in the atmosphere.\n(c) Argon is used in electric bulbs to prevent oxidation of the filament.\n Which of the statements given above is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nRadon is radioactive and produced from soil/rocks; it's rare in the air. Argon is used to prolong bulb life. All are correct.\n\n📖 हिंदी स्पष्टीकरण:\nरेडॉन रेडियोधर्मी है और मिट्टी/चट्टानों से उत्पन्न होता है; यह हवा में दुर्लभ है। आर्गन का उपयोग बल्ब के जीवन को बढ़ाने के लिए किया जाता है। सभी सही हैं।"
     },
     {
       "q_num": 27,
-      "question": "'Bleaching Powder' is produced by the action of chlorine on:\n 'ब्लीचिंग पाउडर' क्लोरीन की किस पर क्रिया द्वारा निर्मित होता है?",
+      "question": "'Bleaching Powder' is produced by the action of chlorine on:",
       "options": {
-        "a": "Slaked Lime / बुझा हुआ चूना",
-        "b": "Dry Lime / बिना बुझा चूना",
-        "c": "Limestone / चूना पत्थर",
-        "d": "Soda Ash / सोडा ऐश"
+        "a": "Slaked Lime",
+        "b": "Dry Lime",
+        "c": "Limestone",
+        "d": "Soda Ash"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBleaching powder (CaOCl₂) is produced by passing chlorine gas over dry slaked lime [Ca(OH)₂].\n\n📖 हिंदी स्पष्टीकरण:\nब्लीचिंग पाउडर (CaOCl₂) सूखे बुझे हुए चूने [Ca(OH)₂] पर क्लोरीन गैस प्रवाहित करके तैयार किया जाता है।"
     },
     {
       "q_num": 28,
-      "question": "Consider the following regarding 'Heavy Water':\n 'भारी जल' (Heavy Water) के संबंध में निम्नलिखित पर विचार करें:\n (a) It is used as a moderator in nuclear reactors. / इसका उपयोग परमाणु रिएक्टरों में मंदक (Moderator) के रूप में किया जाता है।\n (b) Its formula is D₂O. / इसका सूत्र D₂O है।\n (c) It has a lower freezing point than ordinary water. / इसका हिमांक साधारण पानी की तुलना में कम होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Heavy Water':\n(a) It is used as a moderator in nuclear reactors.\n(b) Its formula is D₂O.\n(c) It has a lower freezing point than ordinary water.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nHeavy water has a slightly higher freezing point (3.82°C) and boiling point (101.4°C) than normal water.\n\n📖 हिंदी स्पष्टीकरण:\nभारी जल का हिमांक (3.82°C) और क्वथनांक (101.4°C) सामान्य पानी की तुलना में थोड़ा अधिक होता है।"
     },
     {
       "q_num": 29,
-      "question": "Which of the following is the 'Purest form of Iron'?\n निम्नलिखित में से कौन सा 'लोहे का सबसे शुद्ध रूप' है?",
+      "question": "Which of the following is the 'Purest form of Iron'?",
       "options": {
-        "a": "Cast Iron / कच्चा लोहा",
-        "b": "Steel / इस्पात",
-        "c": "Wrought Iron / पिटवा लोहा",
-        "d": "Pig Iron / पिग आयरन"
+        "a": "Cast Iron",
+        "b": "Steel",
+        "c": "Wrought Iron",
+        "d": "Pig Iron"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWrought iron contains less than 0.1% carbon, making it the purest commercial form of iron.\n\n📖 हिंदी स्पष्टीकरण:\nपिटवा लोहे में 0.1% से कम कार्बन होता है, जो इसे लोहे का सबसे शुद्ध व्यावसायिक रूप बनाता है।"
     },
     {
       "q_num": 30,
-      "question": "Consider the following statements about 'Covalent Bonding':\n 'सहसंयोजक बंधन' (Covalent Bonding) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It involves the complete transfer of electrons. / इसमें इलेक्ट्रॉनों का पूर्ण स्थानांतरण शामिल है।\n (b) It usually occurs between two non-metals. / यह आमतौर पर दो अधातुओं के बीच होता है।\n (c) Water (H₂O) and Methane (CH₄) are examples of covalent compounds. / पानी (H₂O) और मीथेन (CH₄) सहसंयोजक यौगिकों के उदाहरण हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Covalent Bonding':\n(a) It involves the complete transfer of electrons.\n(b) It usually occurs between two non-metals.\n(c) Water (H₂O) and Methane (CH₄) are examples of covalent compounds.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCovalent bonds are formed by sharing electrons, not transfer (which is ionic). Statements (b) and (c) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nसहसंयोजक बंधन इलेक्ट्रॉनों को साझा करने से बनते हैं, स्थानांतरण से नहीं (जो कि आयनिक है)। कथन (b) और (c) सही हैं।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements regarding 'Metals':\n 'धातुओं' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Silver is the best conductor of electricity. / चांदी बिजली का सबसे अच्छा सुचालक है।\n (b) Mercury is the only metal that remains liquid at room temperature. / पारा एकमात्र ऐसी धातु है जो कमरे के तापमान पर तरल रहती है।\n (c) Sodium and Potassium are so soft that they can be cut with a knife. / सोडियम और पोटैशियम इतने नरम होते हैं कि उन्हें चाकू से काटा जा सकता है।\n Which of the above statements is/are correct? / उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Metals':\n(a) Silver is the best conductor of electricity.\n(b) Mercury is the only metal that remains liquid at room temperature.\n(c) Sodium and Potassium are so soft that they can be cut with a knife.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct characteristics of metals. Silver has the highest electrical conductivity, while alkali metals like Na and K are unusually soft.\n\n📖 हिंदी स्पष्टीकरण:\nधातुओं के संबंध में सभी कथन सही हैं। चांदी की विद्युत चालकता सबसे अधिक होती है, जबकि Na और K जैसी क्षार धातुएं असामान्य रूप से नरम होती हैं।"
     },
     {
       "q_num": 32,
-      "question": "Which of the following is the 'Ore of Aluminum'?\n निम्नलिखित में से कौन सा 'एल्युमीनियम का अयस्क' है?",
+      "question": "Which of the following is the 'Ore of Aluminum'?",
       "options": {
-        "a": "Hematite / हेमेटाइट",
-        "b": "Bauxite / बॉक्साइट",
-        "c": "Galena / गैलेना",
-        "d": "Cinnabar / सिनाबार"
+        "a": "Hematite",
+        "b": "Bauxite",
+        "c": "Galena",
+        "d": "Cinnabar"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBauxite (Al₂O₃ · 2H₂O) is the primary ore of aluminum. Hematite is for Iron, Galena for Lead, and Cinnabar for Mercury.\n\n📖 हिंदी स्पष्टीकरण:\nबॉक्साइट (Al₂O₃ · 2H₂O) एल्युमीनियम का प्राथमिक अयस्क है। हेमेटाइट लोहे के लिए, गैलेना सीसे के लिए और सिनाबार पारे के लिए है।"
     },
     {
       "q_num": 33,
-      "question": "Consider the following statements about 'Alloys':\n 'मिश्र धातुओं' (Alloys) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Brass is an alloy of Copper and Zinc. / पीतल तांबे और जस्ते की एक मिश्र धातु है।\n (b) Bronze consists of Copper and Tin. / कांसा तांबे और टिन से बना होता है।\n (c) Solder is an alloy of Lead and Tin used for welding electrical wires. / सोल्डर सीसा और टिन की एक मिश्र धातु है जिसका उपयोग बिजली के तारों को जोड़ने के लिए किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन से सही हैं?",
+      "question": "Consider the following statements about 'Alloys':\n(a) Brass is an alloy of Copper and Zinc.\n(b) Bronze consists of Copper and Tin.\n(c) Solder is an alloy of Lead and Tin used for welding electrical wires.\n Which of the statements given above are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll given pairs are correct. Solder has a low melting point, making it ideal for electrical connections.\n\n📖 हिंदी स्पष्टीकरण:\nदिए गए सभी जोड़े सही हैं। सोल्डर का गलनांक कम होता है, जो इसे विद्युत कनेक्शन के लिए आदर्श बनाता है।"
     },
     {
       "q_num": 34,
-      "question": "Which of the following non-metals is 'Lustrous' in appearance?\n निम्नलिखित में से कौन सी अधातु दिखने में 'चमकदार' (Lustrous) होती है?",
+      "question": "Which of the following non-metals is 'Lustrous' in appearance?",
       "options": {
-        "a": "Sulfur / सल्फर",
-        "b": "Phosphorus / फास्फोरस",
-        "c": "Iodine / आयोडीन",
-        "d": "Nitrogen / नाइट्रोजन"
+        "a": "Sulfur",
+        "b": "Phosphorus",
+        "c": "Iodine",
+        "d": "Nitrogen"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGenerally, non-metals are dull, but Iodine is an exception as it has a shiny, metallic-like luster.\n\n📖 हिंदी स्पष्टीकरण:\nआम तौर पर अधातुएं सुस्त (Dull) होती हैं, लेकिन आयोडीन एक अपवाद है क्योंकि इसमें धातु जैसी चमक होती है।"
     },
     {
       "q_num": 35,
-      "question": "Consider the following statements regarding 'Nitrogen Gas':\n 'नाइट्रोजन गैस' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It makes up about 78% of the Earth's atmosphere. / यह पृथ्वी के वायुमंडल का लगभग 78% हिस्सा बनाती है।\n (b) It is used in food packaging to prevent rancidity. / इसका उपयोग भोजन की पैकिंग में विकृति (Rancidity) को रोकने के लिए किया जाता है।\n (c) Liquid nitrogen is used as a refrigerant for preserving biological samples. / तरल नाइट्रोजन का उपयोग जैविक नमूनों को संरक्षित करने के लिए रेफ्रिजरेंट के रूप में किया जाता है।\n Which of the above statements is/are correct?\n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Nitrogen Gas':\n(a) It makes up about 78% of the Earth's atmosphere.\n(b) It is used in food packaging to prevent rancidity.\n(c) Liquid nitrogen is used as a refrigerant for preserving biological samples.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nNitrogen is chemically inert, which is why it replaces oxygen in chip packets to prevent oxidation (rancidity).\n\n📖 हिंदी स्पष्टीकरण:\nनाइट्रोजन रासायनिक रूप से निष्क्रिय है, यही कारण है कि यह ऑक्सीकरण (विकृति) को रोकने के लिए चिप्स के पैकेट में ऑक्सीजन की जगह लेती है।"
     },
     {
       "q_num": 36,
-      "question": "Which of the following is used in the 'Vulcanization of Rubber'?\n रबड़ के 'वल्कनीकरण' (Vulcanization) में निम्नलिखित में से किसका उपयोग किया जाता है?",
+      "question": "Which of the following is used in the 'Vulcanization of Rubber'?",
       "options": {
-        "a": "Phosphorus / फास्फोरस",
-        "b": "Sulfur / सल्फर",
-        "c": "Carbon / कार्बन",
-        "d": "Silicon / सिलिकॉन"
+        "a": "Phosphorus",
+        "b": "Sulfur",
+        "c": "Carbon",
+        "d": "Silicon"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nVulcanization is the process of heating natural rubber with sulfur to improve its elasticity and strength.\n\n📖 हिंदी स्पष्टीकरण:\nवल्कनीकरण प्राकृतिक रबड़ को सल्फर के साथ गर्म करने की प्रक्रिया है ताकि इसकी लोच और मजबूती में सुधार किया जा सके।"
     },
     {
       "q_num": 37,
-      "question": "Consider the following statements about 'Graphite':\n 'ग्रेफाइट' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is an allotrope of carbon with a hexagonal layered structure. / यह षट्कोणीय स्तरित संरचना वाला कार्बन का एक अपरूप है।\n (b) It is used as a moderator in nuclear reactors. / इसका उपयोग परमाणु रिएक्टरों में मंदक के रूप में किया जाता है।\n (c) It is the hardest known natural substance. / यह ज्ञात सबसे कठोर प्राकृतिक पदार्थ है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Graphite':\n(a) It is an allotrope of carbon with a hexagonal layered structure.\n(b) It is used as a moderator in nuclear reactors.\n(c) It is the hardest known natural substance.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nDiamond is the hardest natural substance, not graphite. Graphite is soft and slippery. Statements (a) and (b) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nहीरा सबसे कठोर प्राकृतिक पदार्थ है, ग्रेफाइट नहीं। ग्रेफाइट नरम और फिसलन भरा होता है। कथन (a) और (b) सही हैं।"
     },
     {
       "q_num": 38,
-      "question": "'Cinnabar' is an ore of which of the following metals?\n 'सिनाबार' निम्नलिखित में से किस धातु का अयस्क है?",
+      "question": "'Cinnabar' is an ore of which of the following metals?",
       "options": {
-        "a": "Lead / सीसा",
-        "b": "Mercury / पारा",
-        "c": "Copper / तांबा",
-        "d": "Magnesium / मैग्नीशियम"
+        "a": "Lead",
+        "b": "Mercury",
+        "c": "Copper",
+        "d": "Magnesium"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nCinnabar (HgS) is the most common ore of Mercury.\n\n📖 हिंदी स्पष्टीकरण:\nसिनाबार (HgS) पारे का सबसे सामान्य अयस्क है।"
     },
     {
       "q_num": 39,
-      "question": "Consider the following regarding 'Hydrogen Sulfide (H₂S)':\n 'हाइड्रोजन सल्फाइड (H₂S)' के संबंध में निम्नलिखित पर विचार करें:\n (a) It has a smell like rotten eggs. / इसमें सड़े हुए अंडों जैसी गंध आती है।\n (b) It is responsible for the tarnishing of silver articles. / यह चांदी की वस्तुओं के काला पड़ने (Tarnishing) के लिए जिम्मेदार है।\n (c) It is highly acidic in nature. / यह प्रकृति में अत्यधिक अम्लीय है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Hydrogen Sulfide (H₂S)':\n(a) It has a smell like rotten eggs.\n(b) It is responsible for the tarnishing of silver articles.\n(c) It is highly acidic in nature.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nH₂S is a weak acid, not highly acidic. It reacts with silver to form black Silver Sulfide (Ag₂S).\n\n📖 हिंदी स्पष्टीकरण:\nH₂S एक कमजोर अम्ल है, न कि अत्यधिक अम्लीय। यह चांदी के साथ प्रतिक्रिया करके काला सिल्वर सल्फाइड (Ag₂S) बनाता है।"
     },
     {
       "q_num": 40,
-      "question": "Which gas is known as the 'Laughing Gas'?\n किस गैस को 'लाफिंग गैस' के रूप में जाना जाता है?",
+      "question": "Which gas is known as the 'Laughing Gas'?",
       "options": {
-        "a": "Nitric Oxide / नाइट्रिक ऑक्साइड",
-        "b": "Nitrous Oxide / नाइट्रस ऑक्साइड",
-        "c": "Nitrogen Dioxide / नाइट्रोजन डाइऑक्साइड",
-        "d": "Nitrogen Pentoxide / नाइट्रोजन पेंटाऑक्साइड"
+        "a": "Nitric Oxide",
+        "b": "Nitrous Oxide",
+        "c": "Nitrogen Dioxide",
+        "d": "Nitrogen Pentoxide"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNitrous oxide (N₂O) is known as laughing gas and is used in dentistry and surgery for its anesthetic effects.\n\n📖 हिंदी स्पष्टीकरण:\nनाइट्रस ऑक्साइड (N₂O) को लाफिंग गैस के रूप में जाना जाता है और इसका उपयोग दंत चिकित्सा और सर्जरी में इसके संवेदनाहारी (Anesthetic) प्रभावों के लिए किया जाता है।"
     },
     {
       "q_num": 41,
-      "question": "Consider the following statements about 'LPG (Liquefied Petroleum Gas)':\n 'LPG (तरलीकृत पेट्रोलियम गैस)' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It primarily consists of Methane and Ethane. / इसमें मुख्य रूप से मीथेन और एथेन होते हैं।\n (b) Ethyl Mercaptan is added to it to detect leakages. / रिसाव का पता लगाने के लिए इसमें एथिल मर्केप्टन मिलाया जाता है।\n (c) It is stored under high pressure as a liquid. / इसे तरल के रूप में उच्च दबाव में संग्रहित किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'LPG (Liquefied Petroleum Gas)':\n'LPG (\n(a) It primarily consists of Methane and Ethane.\n(b) Ethyl Mercaptan is added to it to detect leakages.\n(c) It is stored under high pressure as a liquid.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLPG primarily consists of Butane and Propane. Ethyl Mercaptan provides the distinct smell for safety.\n\n📖 हिंदी स्पष्टीकरण:\nLPG में मुख्य रूप से ब्यूटेन और प्रोपेन होते हैं। सुरक्षा के लिए एथिल मर्केप्टन विशिष्ट गंध प्रदान करता है।"
     },
     {
       "q_num": 42,
-      "question": "Which metal is used for making the 'Filament of an Electric Bulb'?\n बिजली के बल्ब का 'फिलामेंट' बनाने के लिए किस धातु का उपयोग किया जाता है?",
+      "question": "Which metal is used for making the 'Filament of an Electric Bulb'?",
       "options": {
-        "a": "Copper / तांबा",
-        "b": "Aluminum / एल्युमीनियम",
-        "c": "Tungsten / टंगस्टन",
-        "d": "Iron / लोहा"
+        "a": "Copper",
+        "b": "Aluminum",
+        "c": "Tungsten",
+        "d": "Iron"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTungsten (W) is used because it has a very high melting point (approx 3422°C), preventing it from melting at high temperatures.\n\n📖 हिंदी स्पष्टीकरण:\nटंगस्टन (W) का उपयोग किया जाता है क्योंकि इसका गलनांक बहुत अधिक (लगभग 3422°C) होता है, जो इसे उच्च तापमान पर पिघलने से रोकता है।"
     },
     {
       "q_num": 43,
-      "question": "Consider the following regarding 'Bakelite':\n 'बेकेलाइट' के संबंध में निम्नलिखित पर विचार करें:\n (a) It is a thermosetting plastic. / यह एक थर्मोसेटिंग प्लास्टिक है।\n (b) It is a poor conductor of heat and electricity. / यह गर्मी और बिजली का कुचालक है।\n (c) It is used for making electrical switches and handles of utensils. / इसका उपयोग बिजली के स्विच और बर्तनों के हैंडल बनाने के लिए किया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Bakelite':\n(a) It is a thermosetting plastic.\n(b) It is a poor conductor of heat and electricity.\n(c) It is used for making electrical switches and handles of utensils.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "b and c / b और c",
-        "c": "a and b / a और b",
-        "d": "a, b and c / a, b और c"
+        "a": "a and c",
+        "b": "b and c",
+        "c": "a and b",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nBakelite is a pioneer thermosetting plastic that does not soften on heating. Its insulating properties make it ideal for electrical and kitchenware.\n\n📖 हिंदी स्पष्टीकरण:\nबेकेलाइट एक अग्रणी थर्मोसेटिंग प्लास्टिक है जो गर्म करने पर नरम नहीं होता है। इसके इन्सुलेटिंग गुण इसे इलेक्ट्रिकल और किचनवेयर के लिए आदर्श बनाते हैं।"
     },
     {
       "q_num": 44,
-      "question": "'Galvanization' is a method to protect iron from rusting by coating it with a thin layer of:\n 'गैल्वेनाइजेशन' लोहे को जंग से बचाने की एक विधि है, जिसमें उस पर किसकी पतली परत चढ़ाई जाती है?",
+      "question": "'Galvanization' is a method to protect iron from rusting by coating it with a thin layer of:",
       "options": {
-        "a": "Gallium / गैलियम",
-        "b": "Aluminum / एल्युमीनियम",
-        "c": "Zinc / जस्ता",
-        "d": "Silver / चांदी"
+        "a": "Gallium",
+        "b": "Aluminum",
+        "c": "Zinc",
+        "d": "Silver"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nA thin layer of Zinc protects iron because Zinc is more reactive and oxidizes first (sacrificial protection).\n\n📖 हिंदी स्पष्टीकरण:\nजस्ता की एक पतली परत लोहे की रक्षा करती है क्योंकि जस्ता अधिक क्रियाशील होता है और पहले ऑक्सीकृत होता है (बलिदान सुरक्षा)।"
     },
     {
       "q_num": 45,
-      "question": "Consider the following statements about 'Plaster of Paris (POP)':\n 'प्लास्टर ऑफ पेरिस (POP)' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is obtained by heating Gypsum at 373 K. / यह जिप्सम को 373 K पर गर्म करके प्राप्त किया जाता है।\n (b) Chemically, it is Calcium Sulfate Hemihydrate (CaSO₄ · ½H₂O). / रासायनिक रूप से, यह कैल्शियम सल्फेट हेमीहाइड्रेट (CaSO₄ · ½H₂O) है।\n (c) On mixing with water, it changes back to Gypsum and becomes hard. / पानी के साथ मिलाने पर, यह वापस जिप्सम में बदल जाता है और कठोर हो जाता है।\n Which of the above statements are correct? \n उपरोक्त में से कौन से कथन सही हैं?",
+      "question": "Consider the following statements about 'Plaster of Paris (POP)':\n(a) It is obtained by heating Gypsum at 373 K.\n(b) Chemically, it is Calcium Sulfate Hemihydrate (CaSO₄ · ½H₂O).\n(c) On mixing with water, it changes back to Gypsum and becomes hard.\n Which of the above statements are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Excessive heating above 373K leads to \"dead burnt plaster\" (CaSO₄) which loses the setting property.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। 373K से ऊपर अत्यधिक गर्म करने पर \"डेड बर्न्ट प्लास्टर\" (CaSO₄) बनता है जो जमने के गुण को खो देता है।"
     },
     {
       "q_num": 46,
-      "question": "Consider the following statements regarding 'Soaps and Detergents':\n 'साबुन और डिटर्जेंट' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Soaps are sodium or potassium salts of long-chain fatty acids. / साबुन लंबी श्रृंखला वाले वसा अम्लों के सोडियम या पोटैशियम लवण होते हैं।\n (b) Detergents can be used in hard water, whereas soaps cannot. / डिटर्जेंट का उपयोग कठोर जल में किया जा सकता है, जबकि साबुन का नहीं।\n (c) Soap molecules form micelles to trap dirt and grease. / साबुन के अणु गंदगी और ग्रीस को फंसाने के लिए 'मिसेल' (micelles) बनाते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Soaps and Detergents':\n(a) Soaps are sodium or potassium salts of long-chain fatty acids.\n(b) Detergents can be used in hard water, whereas soaps cannot.\n(c) Soap molecules form micelles to trap dirt and grease.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nSoaps react with Ca/Mg ions in hard water to form scum, making them ineffective. Detergents do not form scum. Micelle formation is the mechanism for cleaning in both.\n\n📖 हिंदी स्पष्टीकरण:\nसाबुन कठोर जल में Ca/Mg आयनों के साथ प्रतिक्रिया करके 'स्कम' बनाते हैं, जिससे वे अप्रभावी हो जाते हैं। डिटर्जेंट स्कम नहीं बनाते हैं। दोनों में सफाई के लिए मिसेल निर्माण की प्रक्रिया होती है।"
     },
     {
       "q_num": 47,
-      "question": "Which of the following is known as 'Wood Spirit' or 'Wood Alcohol'?\n निम्नलिखित में से किसे 'वुड स्पिरिट' या 'वुड अल्कोहल' के रूप में जाना जाता है?",
+      "question": "Which of the following is known as 'Wood Spirit' or 'Wood Alcohol'?",
       "options": {
-        "a": "Ethanol / इथेनॉल",
-        "b": "Methanol / मेथेनॉल",
-        "c": "Propanol / प्रोपेनॉल",
-        "d": "Glycerol / ग्लिसरॉल"
+        "a": "Ethanol",
+        "b": "Methanol",
+        "c": "Propanol",
+        "d": "Glycerol"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMethanol (CH₃OH) was originally produced by the destructive distillation of wood, hence the name Wood Spirit. It is highly toxic.\n\n📖 हिंदी स्पष्टीकरण:\nमेथेनॉल (CH₃OH) मूल रूप से लकड़ी के विनाशकारी आसवन द्वारा निर्मित किया गया था, इसलिए इसका नाम वुड स्पिरिट पड़ा। यह अत्यधिक विषैला होता है।"
     },
     {
       "q_num": 48,
-      "question": "Consider the following statements about 'Octane Number':\n 'ऑक्टेन संख्या' (Octane Number) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) It is a measure of the quality of Petrol (Gasoline). / यह पेट्रोल (गैसोलीन) की गुणवत्ता का माप है।\n (b) Higher octane number indicates better anti-knock properties. / उच्च ऑक्टेन संख्या बेहतर एंटी-नॉक गुणों को इंगित करती है।\n (c) Cetane number is used to measure the quality of Diesel. / सीटेन संख्या का उपयोग डीजल की गुणवत्ता मापने के लिए किया जाता है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन से सही हैं?",
+      "question": "Consider the following statements about 'Octane Number':\n(a) It is a measure of the quality of Petrol (Gasoline).\n(b) Higher octane number indicates better anti-knock properties.\n(c) Cetane number is used to measure the quality of Diesel.\n Which of the statements given above are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nOctane rating is for petrol engines to prevent premature ignition (knocking). Cetane rating is the equivalent for diesel fuel quality.\n\n📖 हिंदी स्पष्टीकरण:\nपेट्रोल इंजन में समय से पहले दहन (नॉकिंग) को रोकने के लिए ऑक्टेन रेटिंग का उपयोग किया जाता है। डीजल ईंधन की गुणवत्ता के लिए सीटेन रेटिंग का उपयोग होता है।"
     },
     {
       "q_num": 49,
-      "question": "Which of the following chemicals is used to make 'Non-stick Cookware'?\n 'नॉन-स्टिक कुकवेयर' बनाने के लिए निम्नलिखित में से किस रसायन का उपयोग किया जाता है?",
+      "question": "Which of the following chemicals is used to make 'Non-stick Cookware'?",
       "options": {
-        "a": "PVC / पीवीसी",
-        "b": "Polystyrene / पॉलीस्टाइरीन",
-        "c": "Teflon (PTFE) / टेफ्लॉन (PTFE)",
-        "d": "Bakelite / बेकेलाइट"
+        "a": "PVC",
+        "b": "Polystyrene",
+        "c": "Teflon (PTFE)",
+        "d": "Bakelite"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nTeflon or Polytetrafluoroethylene (PTFE) has high heat resistance and low friction, preventing food from sticking.\n\n📖 हिंदी स्पष्टीकरण:\nटेफ्लॉन या पॉलीटेट्राफ्लुओरोएथिलीन (PTFE) में उच्च ताप प्रतिरोध और कम घर्षण होता है, जो भोजन को चिपकने से रोकता है।"
     },
     {
       "q_num": 50,
-      "question": "Consider the following regarding 'Coal Varieties':\n 'कोयले की किस्मों' के संबंध में निम्नलिखित पर विचार करें:\n (a) Anthracite is the highest quality coal with the highest carbon content. / एन्थ्रेसाइट उच्चतम कार्बन सामग्री वाला उच्चतम गुणवत्ता वाला कोयला है।\n (b) Peat is the first stage of coal formation and has low heating capacity. / पीट कोयला निर्माण का पहला चरण है और इसकी तापीय क्षमता कम होती है।\n (c) Bituminous is the most common variety of coal used in industries. / बिटुमिनस उद्योगों में उपयोग की जाने वाली कोयले की सबसे सामान्य किस्म है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Coal Varieties':\n(a) Anthracite is the highest quality coal with the highest carbon content.\n(b) Peat is the first stage of coal formation and has low heating capacity.\n(c) Bituminous is the most common variety of coal used in industries.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAnthracite (>90% carbon) burns with little smoke. Lignite is known as brown coal. Bituminous is widely used for power generation.\n\n📖 हिंदी स्पष्टीकरण:\nएन्थ्रेसाइट (>90% कार्बन) कम धुएं के साथ जलता है। लिग्नाइट को भूरा कोयला कहा जाता है। बिजली उत्पादन के लिए बिटुमिनस का व्यापक रूप से उपयोग किया जाता है।"
     },
     {
       "q_num": 51,
-      "question": "What is the chemical name of 'Aspirin'?\n 'एस्पिरिन' (Aspirin) का रासायनिक नाम क्या है?",
+      "question": "What is the chemical name of 'Aspirin'?",
       "options": {
-        "a": "Methyl Salicylate / मिथाइल सैलिसिलेट",
-        "b": "Acetylsalicylic Acid / एसिटाइलसैलिसिलिक एसिड",
-        "c": "Sodium Salicylate / सोडियम सैलिसिलेट",
-        "d": "Ethyl Salicylate / एथिल सैलिसिलेट"
+        "a": "Methyl Salicylate",
+        "b": "Acetylsalicylic Acid",
+        "c": "Sodium Salicylate",
+        "d": "Ethyl Salicylate"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAspirin is an analgesic (painkiller) and antipyretic (fever reducer). Its chemical name is Acetylsalicylic acid.\n\n📖 हिंदी स्पष्टीकरण:\nएस्पिरिन एक एनाल्जेसिक (दर्द निवारक) और एंटीपायरेटिक (बुखार कम करने वाली दवा) है। इसका रासायनिक नाम एसिटाइलसैलिसिलिक एसिड है।"
     },
     {
       "q_num": 52,
-      "question": "Consider the following statements about 'Natural Gas':\n 'प्राकृतिक गैस' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Methane is the major component of natural gas. / मीथेन प्राकृतिक गैस का प्रमुख घटक है।\n (b) CNG (Compressed Natural Gas) is considered an eco-friendly fuel. / CNG (संपीड़ित प्राकृतिक गैस) को पर्यावरण के अनुकूल ईंधन माना जाता है।\n (c) It is found associated with petroleum deposits. / यह पेट्रोलियम निक्षेपों (deposits) के साथ पाया जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Natural Gas':\n(a) Methane is the major component of natural gas.\n(b) CNG (Compressed Natural Gas) is considered an eco-friendly fuel. / CNG (\n(c) It is found associated with petroleum deposits.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nNatural gas consists of about 85-95% Methane. It produces less pollution than petrol/diesel because it burns more completely.\n\n📖 हिंदी स्पष्टीकरण:\nप्राकृतिक गैस में लगभग 85-95% मीथेन होती है। यह पेट्रोल/डीजल की तुलना में कम प्रदूषण पैदा करती है क्योंकि इसका दहन अधिक पूर्ण होता है।"
     },
     {
       "q_num": 53,
-      "question": "Which of the following is used as an 'Antacid' to get relief from acidity?\n एसिडिटी से राहत पाने के लिए 'एंटासिड' (Antacid) के रूप में निम्नलिखित में से किसका उपयोग किया जाता है?",
+      "question": "Which of the following is used as an 'Antacid' to get relief from acidity?",
       "options": {
-        "a": "Sodium Hydroxide / सोडियम हाइड्रोक्साइड",
-        "b": "Magnesium Hydroxide / मैग्नीशियम हाइड्रोक्साइड",
-        "c": "Calcium Chloride / कैल्शियम क्लोराइड",
-        "d": "Potassium Nitrate / पोटैशियम नाइट्रेट"
+        "a": "Sodium Hydroxide",
+        "b": "Magnesium Hydroxide",
+        "c": "Calcium Chloride",
+        "d": "Potassium Nitrate"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMagnesium Hydroxide [Mg(OH)₂], also known as 'Milk of Magnesia', is a mild base used to neutralize excess stomach acid.\n\n📖 हिंदी स्पष्टीकरण:\nमैग्नीशियम हाइड्रोक्साइड [Mg(OH)₂], जिसे 'मिल्क ऑफ मैग्नीशिया' भी कहा जाता है, एक हल्का क्षार है जिसका उपयोग पेट के अतिरिक्त एसिड को बेअसर करने के लिए किया जाता है।"
     },
     {
       "q_num": 54,
-      "question": "Consider the following regarding 'Explosives':\n 'विस्फोटकों' के संबंध में निम्नलिखित पर विचार करें:\n (a) TNT stands for Trinitrotoluene. / TNT का अर्थ ट्राइनाइट्रोटोलुइन है।\n (b) RDX is also known as 'Cyclonite'. / RDX को 'साइक्लोनाइट' के रूप में भी जाना जाता है।\n (c) Alfred Nobel invented Dynamite using Nitroglycerin. / अल्फ्रेड नोबेल ने नाइट्रोग्लिसरीन का उपयोग करके डायनामाइट का आविष्कार किया था।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Explosives':\n(a) TNT stands for Trinitrotoluene. / TNT\n(b) RDX is also known as 'Cyclonite'. / RDX\n(c) Alfred Nobel invented Dynamite using Nitroglycerin.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and c / a और c",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and c",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. RDX (Research Department Explosive) is a powerful nitroamine explosive.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। RDX (रिसर्च डिपार्टमेंट एक्सप्लोसिव) एक शक्तिशाली नाइट्रोमाइन विस्फोटक है।"
     },
     {
       "q_num": 55,
-      "question": "The gas responsible for the 'Swell and Softness of Bread' is:\n ब्रेड के 'फूलने और कोमलता' के लिए जिम्मेदार गैस है:",
+      "question": "The gas responsible for the 'Swell and Softness of Bread' is:",
       "options": {
-        "a": "Oxygen / ऑक्सीजन",
-        "b": "Nitrogen / नाइट्रोजन",
-        "c": "Carbon Dioxide / कार्बन डाइऑक्साइड",
-        "d": "Carbon Monoxide / कार्बन मोनोऑक्साइड"
+        "a": "Oxygen",
+        "b": "Nitrogen",
+        "c": "Carbon Dioxide",
+        "d": "Carbon Monoxide"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDuring fermentation by yeast, CO₂ is released, which creates pockets in the dough, making the bread soft and spongy.\n\n📖 हिंदी स्पष्टीकरण:\nयीस्ट द्वारा किण्वन के दौरान CO₂ निकलती है, जो गूँथे हुए आटे में पॉकेट बनाती है, जिससे ब्रेड नरम और स्पंजी हो जाती है।"
     },
     {
       "q_num": 56,
-      "question": "Consider the following statements regarding 'Ozone Layer':\n 'ओजोन परत' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) It is found in the Stratosphere. / यह समताप मंडल (Stratosphere) में पाई जाती है\n (b) Chlorofluorocarbons (CFCs) are primarily responsible for its depletion. / इसके क्षरण के लिए मुख्य रूप से क्लोरोफ्लोरोकार्बन (CFCs) जिम्मेदार हैं।\n (c) It protects the earth from harmful Infrared radiations. / यह पृथ्वी को हानिकारक इन्फ्रारेड विकिरणों से बचाती है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Ozone Layer':\n(a) It is found in the Stratosphere.\n(b) Chlorofluorocarbons (CFCs) are primarily responsible for its depletion.\n(c) It protects the earth from harmful Infrared radiations.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nOzone protects the earth from Ultraviolet (UV) radiations, not Infrared. Statements (a) and (b) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nओजोन पृथ्वी को पराबैंगनी (UV) विकिरणों से बचाती है, इन्फ्रारेड से नहीं। कथन (a) और (b) सही हैं।"
     },
     {
       "q_num": 57,
-      "question": "Which of the following is used as 'Artificial Sweetener' for diabetic patients?\n मधुमेह के रोगियों के लिए 'कृत्रिम स्वीटनर' के रूप में निम्नलिखित में से किसका उपयोग किया जाता है?",
+      "question": "Which of the following is used as 'Artificial Sweetener' for diabetic patients?",
       "options": {
-        "a": "Sucrose / सुक्रोज",
-        "b": "Aspartame / एस्पार्टेम",
-        "c": "Fructose / फ्रुक्टोज",
-        "d": "Glucose / ग्लूकोज"
+        "a": "Sucrose",
+        "b": "Aspartame",
+        "c": "Fructose",
+        "d": "Glucose"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAspartame is an artificial non-saccharide sweetener used as a sugar substitute in foods and drinks.\n\n📖 हिंदी स्पष्टीकरण:\nएस्पार्टेम एक कृत्रिम गैर-सैकेराइड स्वीटनर है जिसका उपयोग खाद्य पदार्थों और पेय पदार्थों में चीनी के विकल्प के रूप में किया जाता है।"
     },
     {
       "q_num": 58,
-      "question": "Consider the following regarding 'Polymers':\n 'पॉलिमर' (Polymers) के संबंध में निम्नलिखित पर विचार करें:\n (a) Polyethene is used for making carry bags. / पॉलीथीन का उपयोग कैरी बैग बनाने के लिए किया जाता है।\n (b) Nylon is the first fully synthetic fiber. / नायलॉन पहला पूर्णतः संश्लेषित रेशा है।\n (c) Natural rubber is a polymer of Isoprene. / प्राकृतिक रबर आइसोप्रीन का एक बहुलक है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Polymers':\n(a) Polyethene is used for making carry bags.\n(b) Nylon is the first fully synthetic fiber.\n(c) Natural rubber is a polymer of Isoprene.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Nylon was first developed in 1935. Natural rubber is cis-1,4-polyisoprene.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। नायलॉन पहली बार 1935 में विकसित किया गया था। प्राकृतिक रबर सिस-1,4-पॉलीआइसोप्रीन है।"
     },
     {
       "q_num": 59,
-      "question": "'Tear Gas' used by police to disperse crowds is chemically:\n भीड़ को तितर-बितर करने के लिए पुलिस द्वारा इस्तेमाल की जाने वाली 'आंसू गैस' रासायनिक रूप से है:",
+      "question": "'Tear Gas' used by police to disperse crowds is chemically:",
       "options": {
-        "a": "Chloroacetophenone / क्लोरोएसेटोफेनोन",
-        "b": "Nitrous Oxide / नाइट्रस ऑक्साइड",
-        "c": "Carbon Tetrachloride / कार्बन टेट्राक्लोराइड",
-        "d": "Ethylene Glycol / एथिलीन ग्लाइकॉल"
+        "a": "Chloroacetophenone",
+        "b": "Nitrous Oxide",
+        "c": "Carbon Tetrachloride",
+        "d": "Ethylene Glycol"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nChloroacetophenone (CN gas) or CS gas are common types of lachrymatory agents used in riot control.\n\n📖 हिंदी स्पष्टीकरण:\nक्लोरोएसेटोफेनोन (CN गैस) या CS गैस दंगा नियंत्रण में उपयोग किए जाने वाले सामान्य प्रकार के अश्रुकारी एजेंट (lachrymatory agents) हैं।"
     },
     {
       "q_num": 60,
-      "question": "Consider the following statements about 'Hardness of Diamond and Softness of Graphite':\n 'हीरे की कठोरता और ग्रेफाइट की कोमलता' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) In diamond, each carbon atom is bonded to 4 others in a tetrahedral structure. / हीरे में, प्रत्येक कार्बन परमाणु एक चतुष्फलकीय संरचना में 4 अन्य से जुड़ा होता है।\n (b) In graphite, atoms are arranged in layers held by weak Van der Waals forces. / ग्रेफाइट में, परमाणु कमजोर वैन डेर वाल्स बलों द्वारा परतों में व्यवस्थित होते हैं।\n (c) Diamond has free electrons, making it harder than graphite. / हीरे में मुक्त इलेक्ट्रॉन होते हैं, जो इसे ग्रेफाइट से अधिक कठोर बनाते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Hardness of Diamond and Softness of Graphite':\n(a) In diamond, each carbon atom is bonded to 4 others in a tetrahedral structure.\n(b) In graphite, atoms are arranged in layers held by weak Van der Waals forces.\n(c) Diamond has free electrons, making it harder than graphite.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nDiamond does not have free electrons; its hardness is due to strong 3D covalent bonding. Graphite’s layers can slide over each other due to weak forces.\n\n📖 हिंदी स्पष्टीकरण:\nहीरे में मुक्त इलेक्ट्रॉन नहीं होते हैं; इसकी कठोरता मजबूत 3D सहसंयोजक बंधन के कारण होती है। कमजोर बलों के कारण ग्रेफाइट की परतें एक-दूसरे के ऊपर फिसल सकती हैं।"
     },
     {
       "q_num": 61,
-      "question": "Consider the following statements regarding 'Bohr’s Model of Atom':\n 'बोहर के परमाणु मॉडल' के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Electrons revolve around the nucleus in fixed circular orbits called shells. / इलेक्ट्रॉन निश्चित वृत्ताकार कक्षाओं में नाभिक के चारों ओर घूमते हैं जिन्हें 'शेल' कहा जाता है।\n (b) Energy is emitted or absorbed only when an electron jumps from one orbit to another. / ऊर्जा तभी उत्सर्जित या अवशोषित होती है जब एक इलेक्ट्रॉन एक कक्षा से दूसरी कक्षा में कूदता है।\n (c) This model could successfully explain the spectra of multi-electron atoms like Oxygen. / यह मॉडल ऑक्सीजन जैसे बहु-इलेक्ट्रॉन परमाणुओं के स्पेक्ट्रा को सफलतापूर्वक समझा सका।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Bohr’s Model of Atom':\n(a) Electrons revolve around the nucleus in fixed circular orbits called shells.\n(b) Energy is emitted or absorbed only when an electron jumps from one orbit to another.\n(c) This model could successfully explain the spectra of multi-electron atoms like Oxygen.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBohr's model was applicable only to hydrogen-like species (single electron). It failed to explain the spectra of atoms with more than one electron.\n\n📖 हिंदी स्पष्टीकरण:\nबोहर का मॉडल केवल हाइड्रोजन जैसी प्रजातियों (एकल इलेक्ट्रॉन) के लिए लागू था। यह एक से अधिक इलेक्ट्रॉन वाले परमाणुओं के स्पेक्ट्रा की व्याख्या करने में विफल रहा।"
     },
     {
       "q_num": 62,
-      "question": "Which of the following is the main component of 'Bio-gas' and 'CNG'?\n निम्नलिखित में से कौन सा 'बायो-गैस' और 'CNG' का मुख्य घटक है?",
+      "question": "Which of the following is the main component of 'Bio-gas' and 'CNG'?",
       "options": {
-        "a": "Propane / प्रोपेन",
-        "b": "Butane / ब्यूटेन",
-        "c": "Methane / मीथेन",
-        "d": "Ethane / एथेन"
+        "a": "Propane",
+        "b": "Butane",
+        "c": "Methane",
+        "d": "Ethane"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMethane (CH₄) is the primary component of both Bio-gas (produced by anaerobic decomposition) and CNG.\n\n📖 हिंदी स्पष्टीकरण:\nमीथेन (CH₄) बायो-गैस (अवायवीय अपघटन द्वारा निर्मित) और CNG दोनों का प्राथमिक घटक है।"
     },
     {
       "q_num": 63,
-      "question": "Consider the following statements about 'Radioactive Dating':\n 'रेडियोधर्मी डेटिंग' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Carbon-14 dating is used to determine the age of fossils and organic remains. / कार्बन-14 डेटिंग का उपयोग जीवाश्मों और कार्बनिक अवशेषों की आयु निर्धारित करने के लिए किया जाता है।\n (b) Uranium-Lead dating is used to estimate the age of rocks and the Earth. / यूरेनियम-लेड डेटिंग का उपयोग चट्टानों और पृथ्वी की आयु का अनुमान लगाने के लिए किया जाता है।\n (c) Carbon-14 has a half-life of about 5,730 years. / कार्बन-14 का आधा जीवन लगभग 5,730 वर्ष है।\n Which of the statements given above are correct? \n ऊपर दिए गए कथनों में से कौन से सही हैं?",
+      "question": "Consider the following statements about 'Radioactive Dating':\n(a) Carbon-14 dating is used to determine the age of fossils and organic remains.\n(b) Uranium-Lead dating is used to estimate the age of rocks and the Earth.\n(c) Carbon-14 has a half-life of about 5,730 years.\n Which of the statements given above are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nDifferent isotopes are used based on the expected age. C-14 is for recent organic material, while Uranium/Potassium isotopes are for geological time scales.\n\n📖 हिंदी स्पष्टीकरण:\nअपेक्षित आयु के आधार पर विभिन्न समस्थानिकों का उपयोग किया जाता है। C-14 हाल की कार्बनिक सामग्री के लिए है, जबकि यूरेनियम/पोटैशियम समस्थानिक भूगर्भीय समय मापन के लिए हैं।"
     },
     {
       "q_num": 64,
-      "question": "Which chemical is used in 'Cloud Seeding' to induce artificial rain?\n कृत्रिम वर्षा कराने के लिए 'क्लाउड सीडिंग' में किस रसायन का उपयोग किया जाता है?",
+      "question": "Which chemical is used in 'Cloud Seeding' to induce artificial rain?",
       "options": {
-        "a": "Silver Iodide / सिल्वर आयोडाइड",
-        "b": "Potassium Chlorate / पोटैशियम क्लोरेट",
-        "c": "Sodium Carbonate / सोडियम कार्बोनेट",
-        "d": "Magnesium Chloride / मैग्नीशियम क्लोराइड"
+        "a": "Silver Iodide",
+        "b": "Potassium Chlorate",
+        "c": "Sodium Carbonate",
+        "d": "Magnesium Chloride"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSilver Iodide (AgI) or Dry Ice (solid CO₂) is sprayed into clouds to act as ice nuclei for rain formation.\n\n📖 हिंदी स्पष्टीकरण:\nसिल्वर आयोडाइड (AgI) या शुष्क बर्फ (ठोस CO₂) को वर्षा निर्माण के लिए बर्फ के नाभिक के रूप में कार्य करने हेतु बादलों में छिड़का जाता है।"
     },
     {
       "q_num": 65,
-      "question": "Consider the following regarding 'Electrolysis of Water':\n 'जल के विद्युत अपघटन' के संबंध में निम्नलिखित पर विचार करें:\n (a) Hydrogen gas is collected at the Cathode. / हाइड्रोजन गैस कैथोड पर एकत्रित होती है।\n (b) Oxygen gas is collected at the Anode. / ऑक्सीजन गैस एनोड पर एकत्रित होती है।\n (c) The volume of Hydrogen collected is twice the volume of Oxygen. / एकत्रित हाइड्रोजन का आयतन ऑक्सीजन के आयतन का दोगुना होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Electrolysis of Water':\n(a) Hydrogen gas is collected at the Cathode.\n(b) Oxygen gas is collected at the Anode.\n(c) The volume of Hydrogen collected is twice the volume of Oxygen.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nWater (H₂O) breaks into 2 parts of H₂ and 1 part of O₂ by volume. Since H⁺ is positive, it moves to the negative electrode (Cathode).\n\n📖 हिंदी स्पष्टीकरण:\nजल (H₂O) आयतन के अनुसार H₂ के 2 भागों और O₂ के 1 भाग में टूटता है। चूंकि H⁺ धनात्मक है, यह ऋणात्मक इलेक्ट्रोड (कैथोड) की ओर बढ़ता है।"
     },
     {
       "q_num": 66,
-      "question": "'Yellow Phosphorus' is generally stored in which of the following?\n 'पीला फास्फोरस' आमतौर पर निम्नलिखित में से किसमें संग्रहित किया जाता है?",
+      "question": "'Yellow Phosphorus' is generally stored in which of the following?",
       "options": {
-        "a": "Kerosene / मिट्टी का तेल",
-        "b": "Alcohol / अल्कोहल",
-        "c": "Water / पानी",
-        "d": "Liquid Ammonia / तरल अमोनिया"
+        "a": "Kerosene",
+        "b": "Alcohol",
+        "c": "Water",
+        "d": "Liquid Ammonia"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWhite/Yellow phosphorus is highly reactive and catches fire spontaneously in air, but it does not react with water. Sodium is stored in kerosene.\n\n📖 हिंदी स्पष्टीकरण:\nसफेद/पीला फास्फोरस अत्यधिक क्रियाशील होता है और हवा में स्वतः आग पकड़ लेता है, लेकिन यह पानी के साथ प्रतिक्रिया नहीं करता है। सोडियम को मिट्टी के तेल में रखा जाता है।"
     },
     {
       "q_num": 67,
-      "question": "Consider the following statements about 'Hard and Soft Acids/Bases (HSAB)':\n 'कठोर और नरम अम्ल/क्षार (HSAB)' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) Hard acids prefer to bind with hard bases. / कठोर अम्ल कठोर क्षार के साथ जुड़ना पसंद करते हैं।\n (b) Li⁺ and Mg²⁺ are examples of hard acids. / Li⁺ और Mg²⁺ कठोर अम्ल के उदाहरण हैं।\n (c) Soft acids are generally large in size and have low charge density. / नरम अम्ल आम तौर पर आकार में बड़े होते हैं और उनका आवेश घनत्व कम होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Hard and Soft Acids/Bases (HSAB)':\n(a) Hard acids prefer to bind with hard bases.\n(b) Li⁺ and Mg²⁺ are examples of hard acids. / Li⁺\n(c) Soft acids are generally large in size and have low charge density.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "a and c / a और c",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "a and c",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nPearson's HSAB principle states that \"Hard likes Hard\" and \"Soft likes Soft\" for stable complex formation.\n\n📖 हिंदी स्पष्टीकरण:\nपियर्सन का HSAB सिद्धांत कहता है कि स्थिर संकुल (complex) निर्माण के लिए \"हार्ड को हार्ड\" और \"सॉफ्ट को सॉफ्ट\" पसंद होता है।"
     },
     {
       "q_num": 68,
-      "question": "Which of the following is used as a 'Food Preservative'?\n निम्नलिखित में से किसका उपयोग 'खाद्य परिरक्षक' के रूप में किया जाता है?",
+      "question": "Which of the following is used as a 'Food Preservative'?",
       "options": {
-        "a": "Sodium Benzoate / सोडियम बेंजोएट",
-        "b": "Sodium Thiosulfate / सोडियम थायोसल्फेट",
-        "c": "Magnesium Sulfate / मैग्नीशियम सल्फेट",
-        "d": "Copper Sulfate / कॉपर सल्फेट"
+        "a": "Sodium Benzoate",
+        "b": "Sodium Thiosulfate",
+        "c": "Magnesium Sulfate",
+        "d": "Copper Sulfate"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSodium benzoate inhibits the growth of bacteria, mold, and yeast in acidic foods like fruit juices and pickles.\n\n📖 हिंदी स्पष्टीकरण:\nसोडियम बेंजोएट फलों के रस और अचार जैसे अम्लीय खाद्य पदार्थों में बैक्टीरिया, मोल्ड और यीस्ट के विकास को रोकता है।"
     },
     {
       "q_num": 69,
-      "question": "Consider the following statements regarding 'Endothermic Reactions':\n 'ऊष्माशोषी अभिक्रियाओं' (Endothermic Reactions) के संबंध में निम्नलिखित कथनों पर विचार करें:\n (a) Heat is absorbed from the surroundings. / परिवेश से ऊष्मा अवशोषित की जाती है।\n (b) Photosynthesis is an example of an endothermic process. / प्रकाश संश्लेषण ऊष्माशोषी प्रक्रिया का एक उदाहरण है।\n (c) The temperature of the surroundings increases during the reaction. / अभिक्रिया के दौरान परिवेश का तापमान बढ़ जाता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding 'Endothermic Reactions':\n(a) Heat is absorbed from the surroundings.\n(b) Photosynthesis is an example of an endothermic process.\n(c) The temperature of the surroundings increases during the reaction.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b / a और b",
-        "c": "b and c / b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b",
+        "c": "b and c",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn endothermic reactions, heat is taken from the surroundings, causing the surrounding temperature to decrease.\n\n📖 हिंदी स्पष्टीकरण:\nऊष्माशोषी अभिक्रियाओं में, परिवेश से ऊष्मा ली जाती है, जिससे परिवेश का तापमान कम हो जाता है।"
     },
     {
       "q_num": 70,
-      "question": "Which element is present in 'Chlorophyll'?\n 'क्लोरोफिल' में कौन सा तत्व मौजूद होता है?",
+      "question": "Which element is present in 'Chlorophyll'?",
       "options": {
-        "a": "Iron / लोहा",
-        "b": "Magnesium / मैग्नीशियम",
-        "c": "Manganese / मैंगनीज",
-        "d": "Copper / तांबा"
+        "a": "Iron",
+        "b": "Magnesium",
+        "c": "Manganese",
+        "d": "Copper"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMagnesium is the central metal ion in the chlorophyll molecule, essential for photosynthesis. Hemoglobin contains Iron.\n\n📖 हिंदी स्पष्टीकरण:\nमैग्नीशियम क्लोरोफिल अणु में केंद्रीय धातु आयन है, जो प्रकाश संश्लेषण के लिए आवश्यक है। हीमोग्लोबिन में लोहा होता है।"
     },
     {
       "q_num": 71,
-      "question": "Consider the following statements about 'Colloids':\n 'कोलाइड' (Colloids) के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They show Tyndall effect. / वे टिंडल प्रभाव दिखाते हैं।\n (b) Milk is an example of an emulsion. / दूध इमल्शन (पायस) का एक उदाहरण है।\n (c) The particle size in a colloid is larger than in a true solution. / कोलाइड में कणों का आकार वास्तविक विलयन की तुलना में बड़ा होता है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Colloids':\n(a) They show Tyndall effect.\n(b) Milk is an example of an emulsion.\n(c) The particle size in a colloid is larger than in a true solution.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nColloids scatter light (Tyndall effect). Particle size ranges between 1nm to 1000nm. Milk is liquid-in-liquid colloid (emulsion).\n\n📖 हिंदी स्पष्टीकरण:\nकोलाइड प्रकाश को बिखेरते हैं (टिंडल प्रभाव)। कणों का आकार 1nm से 1000nm के बीच होता है। दूध तरल-में-तरल कोलाइड (इमल्शन) है।"
     },
     {
       "q_num": 72,
-      "question": "Which of the following is used in 'Matchsticks'?\n 'माचिस की तीलियों' में निम्नलिखित में से किसका उपयोग किया जाता है?",
+      "question": "Which of the following is used in 'Matchsticks'?",
       "options": {
-        "a": "White Phosphorus / सफेद फास्फोरस",
-        "b": "Red Phosphorus / लाल फास्फोरस",
-        "c": "Black Phosphorus / काला फास्फोरस",
-        "d": "Yellow Phosphorus / पीला फास्फोरस"
+        "a": "White Phosphorus",
+        "b": "Red Phosphorus",
+        "c": "Black Phosphorus",
+        "d": "Yellow Phosphorus"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nRed phosphorus is used on the striking surface of matchboxes because it is less volatile and safer than white phosphorus.\n\n📖 हिंदी स्पष्टीकरण:\nमाचिस की डिब्बों की रगड़ने वाली सतह पर लाल फास्फोरस का उपयोग किया जाता है क्योंकि यह सफेद फास्फोरस की तुलना में कम अस्थिर और सुरक्षित होता है।"
     },
     {
       "q_num": 73,
-      "question": "Consider the following regarding 'Vitamins':\n 'विटामिन' के संबंध में निम्नलिखित पर विचार करें:\n (a) Vitamin B and C are water-soluble. / विटामिन B और C पानी में घुलनशील हैं।\n (b) Vitamin A, D, E, and K are fat-soluble. / विटामिन A, D, E और K वसा में घुलनशील हैं।\n (c) Cobalt is a constituent of Vitamin B12. / कोबाल्ट विटामिन B12 का एक घटक है।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following regarding 'Vitamins':\n(a) Vitamin B and C are water-soluble.\n(b) Vitamin A, D, E, and K are fat-soluble.\n(c) Cobalt is a constituent of Vitamin B12.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Vitamin B12 is also known as Cyanocobalamin because of the presence of Cobalt.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। कोबाल्ट की उपस्थिति के कारण विटामिन B12 को सायनोकोबालमिन के रूप में भी जाना जाता है।"
     },
     {
       "q_num": 74,
-      "question": "Which of the following is the 'Lighest Metal' and 'Heaviest Metal' respectively?\n निम्नलिखित में से कौन क्रमशः 'सबसे हल्की धातु' और 'सबसे भारी धातु' है?",
+      "question": "Which of the following is the 'Lighest Metal' and 'Heaviest Metal' respectively?",
       "options": {
-        "a": "Lithium & Osmium / लिथियम और ओस्मियम",
-        "b": "Hydrogen & Uranium / हाइड्रोजन और यूरेनियम",
-        "c": "Lithium & Lead / लिथियम और सीसा",
-        "d": "Sodium & Osmium / सोडियम और ओस्मियम"
+        "a": "Lithium & Osmium",
+        "b": "Hydrogen & Uranium",
+        "c": "Lithium & Lead",
+        "d": "Sodium & Osmium"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nLithium is the lightest solid element/metal, while Osmium has the highest density (heaviest).\n\n📖 हिंदी स्पष्टीकरण:\nलिथियम सबसे हल्का ठोस तत्व/धातु है, जबकि ओस्मियम का घनत्व सबसे अधिक (सबसे भारी) है।"
     },
     {
       "q_num": 75,
-      "question": "Consider the following statements about 'Catalytic Converters' in cars:\n कारों में 'कैटेलिटिक कन्वर्टर्स' के बारे में निम्नलिखित कथनों पर विचार करें:\n (a) They reduce the emission of poisonous gases like CO and NOx. / वे CO और NOx जैसी जहरीली गैसों के उत्सर्जन को कम करते हैं।\n (b) Metals like Platinum, Palladium, and Rhodium are used as catalysts. / प्लैटिनम, पैलेडियम और रोडियम जैसी धातुओं का उपयोग उत्प्रेरक के रूप में किया जाता है।\n (c) They convert Nitrogen oxides into Nitrogen gas. / वे नाइट्रोजन ऑक्साइड को नाइट्रोजन गैस में बदल देते हैं।\n Which of the above statements is/are correct? \n उपरोक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about 'Catalytic Converters' in cars:\n(a) They reduce the emission of poisonous gases like CO and NOx.\n(b) Metals like Platinum, Palladium, and Rhodium are used as catalysts.\n(c) They convert Nitrogen oxides into Nitrogen gas.\n Which of the above statements is/are correct?",
       "options": {
-        "a": "a and b / a और b",
-        "b": "b and c / b और c",
-        "c": "a and c / a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b",
+        "b": "b and c",
+        "c": "a and c",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nCatalytic converters facilitate redox reactions to turn toxic pollutants into less harmful gases like CO₂, N₂, and water vapor.\n\n📖 हिंदी स्पष्टीकरण:\nकैटेलिटिक कन्वर्टर्स जहरीले प्रदूषकों को कम हानिकारक गैसों जैसे CO₂, N₂ और जल वाष्प में बदलने के लिए रेडॉक्स प्रतिक्रियाओं को सुगम बनाते हैं।"

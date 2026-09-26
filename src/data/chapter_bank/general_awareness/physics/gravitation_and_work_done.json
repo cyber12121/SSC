@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Who discovered the value of the Universal Gravitational Constant (G)? / सार्वभौमिक गुरुत्वाकर्षण नियतांक (G) के मान की खोज किसने की थी?",
+      "question": "Who discovered the value of the Universal Gravitational Constant (G)?",
       "options": {
-        "a": "Isaac Newton / आइजैक न्यूटन",
-        "b": "Henry Cavendish / हेनरी कैवेन्डिश",
-        "c": "Johannes Kepler / जोहान्स केपलर",
-        "d": "Blaise Pascal / ब्लेज़ पास्कल"
+        "a": "Isaac Newton",
+        "b": "Henry Cavendish",
+        "c": "Johannes Kepler",
+        "d": "Blaise Pascal"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe value of G as 6.67 * 10-11 Nm2 kg2 was discovered by Henry Cavendish in 1798. Newton gave the law, but Cavendish measured the constant. / G\n\n📖 हिंदी स्पष्टीकरण:\nका मान 6.67 × 10-11 Nm2 kg2 1798 में हेनरी कैवेन्डिश द्वारा खोजा गया था। न्यूटन ने नियम दिया था, लेकिन कैवेन्डिश ने नियतांक को मापा था।"
     },
     {
       "q_num": 2,
-      "question": "What is the S.I. unit of Work? / कार्य का S.I. मात्रक क्या है?",
+      "question": "What is the S.I. unit of Work?",
       "options": {
-        "a": "Newton / न्यूटन",
-        "b": "Watt / वाट",
-        "c": "Joule / जूल",
-        "d": "Pascal / पास्कल"
+        "a": "Newton",
+        "b": "Watt",
+        "c": "Joule",
+        "d": "Pascal"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe S.I. unit of work is Joule, named after James Prescott Joule. One Joule is equal to one Newton-meter (1 Nm)\n\n📖 हिंदी स्पष्टीकरण:\nकार्य का S.I. मात्रक जूल है, जिसका नाम जेम्स प्रेस्कॉट जूल के नाम पर रखा गया है। एक जूल एक न्यूटन-मीटर (1 Nm) के बराबर होता है।"
     },
     {
       "q_num": 3,
-      "question": "Which of the following is a scalar quantity? / निम्नलिखित में से कौन सी एक अदिश राशि है?",
+      "question": "Which of the following is a scalar quantity?",
       "options": {
-        "a": "Weight / भार",
-        "b": "Force / बल",
-        "c": "Mass / द्रव्यमान",
-        "d": "Thrust / प्रणोद"
+        "a": "Weight",
+        "b": "Force",
+        "c": "Mass",
+        "d": "Thrust"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nMass is a scalar quantity as it only has magnitude and no direction. Weight, Force, and Thrust are vector quantities\n\n📖 हिंदी स्पष्टीकरण:\nद्रव्यमान एक अदिश राशि है क्योंकि इसमें केवल परिमाण होता है और कोई दिशा नहीं होती। भार, बल और प्रणोद सदिश राशियाँ हैं।"
     },
     {
       "q_num": 4,
-      "question": "The value of acceleration due to gravity (g) on the surface of Earth is approximately: / पृथ्वी की सतह पर गुरुत्वाकर्षण के कारण त्वरण (g) का मान लगभग कितना है?",
+      "question": "The value of acceleration due to gravity (g) on the surface of Earth is approximately:",
       "options": {
         "a": "6.67 m/s2",
         "b": "9.8 m/s2",
@@ -54,19 +54,19 @@
     },
     {
       "q_num": 5,
-      "question": "According to Kepler’s First Law, planets move around the Sun in which type of orbits? / केपलर के प्रथम नियम के अनुसार, ग्रह सूर्य के चारों ओर किस प्रकार की कक्षाओं में गति करते हैं?",
+      "question": "According to Kepler’s First Law, planets move around the Sun in which type of orbits?",
       "options": {
-        "a": "Circular / वृत्ताकार",
-        "b": "Elliptical / दीर्घवृत्ताकार",
-        "c": "Parabolic / परवलयाकार",
-        "d": "Rectilinear / ऋजुरेखीय"
+        "a": "Circular",
+        "b": "Elliptical",
+        "c": "Parabolic",
+        "d": "Rectilinear"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKepler's First Law (Law of Orbits) states that all planets move in elliptical orbits with the Sun at one of the foci\n\n📖 हिंदी स्पष्टीकरण:\nकेपलर का पहला नियम (कक्षाओं का नियम) बताता है कि सभी ग्रह दीर्घवृत्ताकार कक्षाओं में चलते हैं और सूर्य उनके एक केंद्र पर होता है।"
     },
     {
       "q_num": 6,
-      "question": "One Horse Power (HP) is equal to how many Watts? / एक अश्व शक्ति (HP) कितने वाट के बराबर होता है?",
+      "question": "One Horse Power (HP) is equal to how many Watts?",
       "options": {
         "a": "1000 W",
         "b": "500 W",
@@ -78,67 +78,67 @@
     },
     {
       "q_num": 7,
-      "question": "What happens to the weight of an object at the center of the Earth? / पृथ्वी के केंद्र में किसी वस्तु के भार का क्या होता है?",
+      "question": "What happens to the weight of an object at the center of the Earth?",
       "options": {
-        "a": "It doubles / यह दोगुना हो जाता है।",
-        "b": "It remains constant / यह स्थिर रहता है।",
-        "c": "It becomes zero / यह शून्य हो जाता है।",
-        "d": "It increases slightly / यह थोड़ा बढ़ जाता है।"
+        "a": "It doubles",
+        "b": "It remains constant",
+        "c": "It becomes zero",
+        "d": "It increases slightly"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWhile mass remains constant, weight becomes zero at the center of the Earth because the effective gravity (g) there is zero\n\n📖 हिंदी स्पष्टीकरण:\nजब द्रव्यमान स्थिर रहता है, तो पृथ्वी के केंद्र में भार शून्य हो जाता है क्योंकि वहां प्रभावी गुरुत्वाकर्षण (g) शून्य होता है।"
     },
     {
       "q_num": 8,
-      "question": "The energy possessed by an object due to its motion is called: / किसी वस्तु की गति के कारण उसमें निहित ऊर्जा को क्या कहते हैं?",
+      "question": "The energy possessed by an object due to its motion is called:",
       "options": {
-        "a": "Potential Energy / स्थितिज ऊर्जा",
-        "b": "Chemical Energy / रासायनिक ऊर्जा",
-        "c": "Kinetic Energy / गतिज ऊर्जा",
-        "d": "Sound Energy / ध्वनि ऊर्जा"
+        "a": "Potential Energy",
+        "b": "Chemical Energy",
+        "c": "Kinetic Energy",
+        "d": "Sound Energy"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nKinetic energy arises due to an object's motion and is calculated as ½ mv2\n\n📖 हिंदी स्पष्टीकरण:\nगतिज ऊर्जा किसी वस्तु की गति के कारण उत्पन्न होती है और इसकी गणना ½ mv2 के रूप में की जाती है।"
     },
     {
       "q_num": 9,
-      "question": "Which device converts mechanical energy into electrical energy? / कौन सा उपकरण यांत्रिक ऊर्जा को विद्युत ऊर्जा में परिवर्तित करता है?",
+      "question": "Which device converts mechanical energy into electrical energy?",
       "options": {
-        "a": "Electric Motor / विद्युत मोटर",
-        "b": "Dynamo / डायनेमो",
-        "c": "Microphone / माइक्रोफोन",
-        "d": "Loudspeaker / लाउडस्पीकर"
+        "a": "Electric Motor",
+        "b": "Dynamo",
+        "c": "Microphone",
+        "d": "Loudspeaker"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth a Dynamo and a Generator convert mechanical energy into electrical energy. An electric motor does the opposite\n\n📖 हिंदी स्पष्टीकरण:\nडायनेमो और जनरेटर दोनों यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलते हैं। एक विद्युत मोटर इसके विपरीत कार्य करती है।"
     },
     {
       "q_num": 10,
-      "question": "Pressure is defined as: / दाब को किस रूप में परिभाषित किया गया है?",
+      "question": "Pressure is defined as:",
       "options": {
-        "a": "Force × Area / बल × क्षेत्रफल",
-        "b": "Mass / Volume / द्रव्यमान / आयतन",
-        "c": "Thrust / Area / प्रणोद / क्षेत्रफल",
-        "d": "Work / Time / कार्य / समय"
+        "a": "Force × Area",
+        "b": "Mass",
+        "c": "Thrust",
+        "d": "Work"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPressure is the thrust (perpendicular force) applied per unit area. Its S.I. unit is Pascal or N/m2\n\n📖 हिंदी स्पष्टीकरण:\nदाब प्रति इकाई क्षेत्रफल पर लगाया गया प्रणोद (लंबवत बल) है। इसका S.I. मात्रक पास्कल या N/m2 है।"
     },
     {
       "q_num": 11,
-      "question": "If the momentum of a body is doubled, its kinetic energy will become: / यदि किसी पिंड का संवेग दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा हो जाएगी:",
+      "question": "If the momentum of a body is doubled, its kinetic energy will become:",
       "options": {
-        "a": "2 times / 2 गुना",
-        "b": "4 times / 4 गुना",
-        "c": "Half / आधी",
-        "d": "Remains same / समान रहती है"
+        "a": "2 times",
+        "b": "4 times",
+        "c": "Half",
+        "d": "Remains same"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nKinetic energy is related to momentum (p) by K.E = p2 / 2m. If p is doubled, K.E becomes (2p)2/2m, which is 4 times the original\n\n📖 हिंदी स्पष्टीकरण:\nगतिज ऊर्जा संवेग (p) से K.E = p2 / 2m द्वारा संबंधित है। यदि p दोगुना हो जाता है, तो K.E, (2p)2/2m हो जाता है, जो मूल का 4 गुना है।"
     },
     {
       "q_num": 12,
-      "question": "The escape velocity from the Earth's surface is approximately: / पृथ्वी की सतह से पलायन वेग लगभग कितना है?",
+      "question": "The escape velocity from the Earth's surface is approximately:",
       "options": {
         "a": "9.8 km/s",
         "b": "11.2 km/s",
@@ -150,156 +150,156 @@
     },
     {
       "q_num": 13,
-      "question": "According to Pascal’s Law, pressure applied to an incompressible fluid is: / पास्कल के नियम के अनुसार, एक असंपीड्य तरल पर लगाया गया दाब:",
+      "question": "According to Pascal’s Law, pressure applied to an incompressible fluid is:",
       "options": {
-        "a": "Decreases with depth / गहराई के साथ घटता है।",
-        "b": "Transmitted equally in all directions / सभी दिशाओं में समान रूप से प्रसारित होता है।",
-        "c": "Only acts downwards / केवल नीचे की ओर कार्य करता है।",
-        "d": "Disappears over time / समय के साथ समाप्त हो जाता है।"
+        "a": "Decreases with depth",
+        "b": "Transmitted equally in all directions",
+        "c": "Only acts downwards",
+        "d": "Disappears over time"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPascal's Law states that a pressure change at any point in a confined incompressible fluid is transmitted throughout the fluid everywhere\n\n📖 हिंदी स्पष्टीकरण:\nपास्कल का नियम कहता है कि एक बंद असंपीड्य तरल में किसी भी बिंदु पर दाब परिवर्तन पूरे तरल में हर जगह प्रसारित होता है।"
     },
     {
       "q_num": 14,
-      "question": "An object is thrown vertically upwards. At its maximum height, its: / एक वस्तु को लंबवत ऊपर की ओर फेंका जाता है। अपनी अधिकतम ऊंचाई पर, इसकी:",
+      "question": "An object is thrown vertically upwards. At its maximum height, its:",
       "options": {
-        "a": "Kinetic energy is maximum / गतिज ऊर्जा अधिकतम होती है।",
-        "b": "Potential energy is zero / स्थितिज ऊर्जा शून्य होती है।",
-        "c": "Potential energy is maximum / स्थितिज ऊर्जा अधिकतम होती है।",
-        "d": "Velocity is 11.2 km/s / वेग 11.2 किमी/सेकंड होता है।"
+        "a": "Kinetic energy is maximum",
+        "b": "Potential energy is zero",
+        "c": "Potential energy is maximum",
+        "d": "Velocity is 11.2 km/s"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAt the highest point, velocity is zero, so K.E = 0. All energy is stored as maximum Potential Energy (mgh)\n\n📖 हिंदी स्पष्टीकरण:\nउच्चतम बिंदु पर, वेग शून्य होता है, इसलिए K.E = 0। सभी ऊर्जा अधिकतम स्थितिज ऊर्जा (mgh) के रूप में संचित होती है।"
     },
     {
       "q_num": 15,
-      "question": "Buoyant force acting on an object immersed in a liquid is equal to: / किसी तरल में डूबी हुई वस्तु पर कार्य करने वाला उत्प्लावन बल किसके बराबर होता है?",
+      "question": "Buoyant force acting on an object immersed in a liquid is equal to:",
       "options": {
-        "a": "Mass of the object / वस्तु का द्रव्यमान",
-        "b": "Weight of the liquid displaced / विस्थापित तरल का भार",
-        "c": "Density of the object / वस्तु का घनत्व",
-        "d": "Total volume of the liquid / तरल का कुल आयतन"
+        "a": "Mass of the object",
+        "b": "Weight of the liquid displaced",
+        "c": "Density of the object",
+        "d": "Total volume of the liquid"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAs Per Archimedes' Principle, the buoyant force is exactly equal to the weight of the fluid displaced by the object\n\n📖 हिंदी स्पष्टीकरण:\nआर्किमिडीज के सिद्धांत के अनुसार, उत्प्लावन बल वस्तु द्वारा विस्थापित तरल के भार के बिल्कुल बराबर होता है।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): The value of acceleration due to gravity (g) is greater at the poles than at the equator.\nReason (R): Gravity decreases with altitude and depth.\nकथन (A): गुरुत्वाकर्षण के कारण त्वरण (g) का मान भूमध्य रेखा की तुलना में ध्रुवों पर अधिक होता है।\nकारण (R): ऊंचाई और गहराई के साथ गुरुत्वाकर्षण घटता है।",
+      "question": "Assertion (A): The value of acceleration due to gravity (g) is greater at the poles than at the equator.\nReason (R): Gravity decreases with altitude and depth.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth facts are correct: g is higher at poles and decreases with height/depth. However, the polar increase is due to Earth's shape, not altitude\n\n📖 हिंदी स्पष्टीकरण:\nदोनों तथ्य सही हैं: ध्रुवों पर g अधिक होता है और ऊंचाई/गहराई के साथ घटता है। हालांकि, ध्रुवीय वृद्धि पृथ्वी के आकार के कारण है, न कि ऊंचाई के कारण।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements regarding Work is/are correct?\n1. Work is zero if the angle between force and displacement is 90° / यदि बल और विस्थापन के बीच का कोण 90° हो तो कार्य शून्य होता है।\n2. Work is negative if force and displacement are anti-parallel. / कार्य ऋणात्मक होता है यदि बल और विस्थापन प्रति-समानांतर हों।\n3. Work is a vector quantity. / कार्य एक सदिश राशि है।",
+      "question": "Which of the following statements regarding Work is/are correct?\n1. Work is zero if the angle between force and displacement is 90°",
       "options": {
-        "a": "I and II only / केवल I और II",
-        "b": "II and III only / केवल II और III",
-        "c": "I and III only / केवल I और III",
-        "d": "All of the above / उपरोक्त सभी"
+        "a": "I and II only",
+        "b": "II and III only",
+        "c": "I and III only",
+        "d": "All of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nWork is zero at 90° and negative at 180° (anti-parallel). Work is a scalar quantity, not vector\n\n📖 हिंदी स्पष्टीकरण:\nकार्य 90° पर शून्य और 180° (प्रति-समानांतर) पर ऋणात्मक होता है। कार्य एक अदिश राशि है, सदिश नहीं।"
     },
     {
       "q_num": 18,
-      "question": "Bernoulli's Principle is based on the conservation of: / बरनौली का सिद्धांत किसके संरक्षण पर आधारित है?",
+      "question": "Bernoulli's Principle is based on the conservation of:",
       "options": {
-        "a": "Mass / द्रव्यमान",
-        "b": "Momentum / संवेग",
-        "c": "Energy / ऊर्जा",
-        "d": "Charge / आवेश"
+        "a": "Mass",
+        "b": "Momentum",
+        "c": "Energy",
+        "d": "Charge"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nBernoulli's principle relates pressure, kinetic, and potential energy per unit volume, stating their sum remains constant in a flowing fluid\n\n📖 हिंदी स्पष्टीकरण:\nबरनौली का सिद्धांत प्रति इकाई आयतन में दाब, गतिज और स्थितिज ऊर्जा को जोड़ता है, यह बताते हुए कि बहते हुए तरल में उनका योग स्थिर रहता है।"
     },
     {
       "q_num": 19,
-      "question": "Which planet has the longest period of revolution around the Sun? / किस ग्रह की सूर्य के चारों ओर परिक्रमण अवधि सबसे लंबी है?",
+      "question": "Which planet has the longest period of revolution around the Sun?",
       "options": {
-        "a": "Mercury / बुध",
-        "b": "Neptune / वरुण",
-        "c": "Earth / पृथ्वी",
-        "d": "Saturn / शनि"
+        "a": "Mercury",
+        "b": "Neptune",
+        "c": "Earth",
+        "d": "Saturn"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNeptune is farthest from the Sun and takes 165 years for one revolution. Mercury, being the nearest, takes only 88 days\n\n📖 हिंदी स्पष्टीकरण:\nवरुण सूर्य से सबसे दूर है और एक चक्कर लगाने में 165 वर्ष लेता है। बुध, सबसे निकट होने के कारण, केवल 88 दिन लेता है।"
     },
     {
       "q_num": 20,
-      "question": "Consider the following conversion: Battery convert Chemical energy to Electrical energy.\nThis conversion follows which law?\nनिम्नलिखित रूपांतरण पर विचार करें: बैटरी - रासायनिक ऊर्जा से विद्युत ऊर्जा।\nयह रूपांतरण किस नियम का पालन करता है?",
+      "question": "Consider the following conversion: Battery convert Chemical energy to Electrical energy.\nThis conversion follows which law?",
       "options": {
-        "a": "Kepler's Second Law / केपलर का दूसरा नियम",
-        "b": "Law of Conservation of Energy / ऊर्जा संरक्षण का नियम",
-        "c": "Pascal's Law / पास्कल का नियम",
-        "d": "Bernoulli's Principle / बरनौली का सिद्धांत"
+        "a": "Kepler's Second Law",
+        "b": "Law of Conservation of Energy",
+        "c": "Pascal's Law",
+        "d": "Bernoulli's Principle"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nEnergy can neither be created nor destroyed, only converted from one form to another, such as chemical to electrical in a battery\n\n📖 हिंदी स्पष्टीकरण:\nऊर्जा को न तो उत्पन्न किया जा सकता है और न ही नष्ट किया जा सकता है, केवल एक रूप से दूसरे रूप में बदला जा सकता है, जैसे बैटरी में रासायनिक ऊर्जा से विद्युत ऊर्जा में परिवर्तन।"
     },
     {
       "q_num": 21,
-      "question": "A retarding force of 10 N acts on a body. The work done due to this force is −200 J. What will be the magnitude and direction of the displacement of the body under the action of this force?\nकिसी वस्तु पर 10 N का मंदक बल कार्य करता है। इस बल के कारण किया गया कार्य −200 J है। इस बल के प्रभाव में वस्तु के विस्थापन का परिमाण और दिशा क्या होगी?",
+      "question": "A retarding force of 10 N acts on a body. The work done due to this force is −200 J. What will be the magnitude and direction of the displacement of the body under the action of this force?",
       "options": {
-        "a": "20 m; in the same direction as the force / 20 मीटर; बल की दिशा में ही।",
-        "b": "2000 m; in the same direction as the force / 2000 मीटर; बल की दिशा में ही।",
-        "c": "20 m; opposite to the direction of the force / 20 मीटर; बल की दिशा के विपरीत।",
-        "d": "2000 m; opposite to the direction of the force / 2000 मीटर; बल की दिशा के विपरीत।"
+        "a": "20 m; in the same direction as the force",
+        "b": "2000 m; in the same direction as the force",
+        "c": "20 m; opposite to the direction of the force",
+        "d": "2000 m; opposite to the direction of the force"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nWork done: W = F × s × cosθ. Given Work = −200 J (negative). Negative work means force and displacement are in opposite directions. So, W = −F × s. Calculation: 200 = −10 × s, s = 20m\n\n📖 हिंदी स्पष्टीकरण:\nकिया गया कार्य: W = F × s × cosθ, दिया गया कार्य = −200 जूल (ऋणात्मक)। ऋणात्मक कार्य का अर्थ है कि बल और विस्थापन विपरीत दिशाओं में हैं। अतः, W = −F × s. गणना: 200 = −10 × s, s = 20 मीटर।"
     },
     {
       "q_num": 22,
-      "question": "Statement I: Gravity on the Moon is 1/6th of Earth's gravity.\nStatement II: Mass of an object changes when moved from Earth to Moon.\nकथन I: चंद्रमा पर गुरुत्वाकर्षण पृथ्वी के गुरुत्वाकर्षण का 1/6 भाग है।\nकथन II: पृथ्वी से चंद्रमा पर ले जाने पर किसी वस्तु का द्रव्यमान बदल जाता है।",
+      "question": "Statement I: Gravity on the Moon is 1/6th of Earth's gravity.\nStatement II: Mass of an object changes when moved from Earth to Moon.",
       "options": {
-        "a": "Both statements are correct / दोनों कथन सही हैं।",
-        "b": "Statement I is correct, Statement II is incorrect / कथन I सही है, कथन II गलत है।",
-        "c": "Statement I is incorrect, Statement II is correct / कथन I गलत है, कथन II सही है।",
-        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+        "a": "Both statements are correct",
+        "b": "Statement I is correct, Statement II is incorrect",
+        "c": "Statement I is incorrect, Statement II is correct",
+        "d": "Both statements are incorrect"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMoon's gravity is indeed 1/6th of Earth's. However, mass is constant and does not change from place to place\n\n📖 हिंदी स्पष्टीकरण:\nचंद्रमा का गुरुत्वाकर्षण वास्तव में पृथ्वी का 1/6 है। हालाँकि, द्रव्यमान स्थिर रहता है और एक स्थान से दूसरे स्थान पर नहीं बदलता है।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): In a closed path, the work done by a conservative force is zero.\nReason (R): Gravitational force is a non-contact and conservative force.\nकथन (A): एक बंद पथ में, एक संरक्षी बल द्वारा किया गया कार्य शून्य होता है।\nकारण (R): गुरुत्वाकर्षण बल एक गैर-संपर्क और संरक्षी बल है।",
+      "question": "Assertion (A): In a closed path, the work done by a conservative force is zero.\nReason (R): Gravitational force is a non-contact and conservative force.",
       "options": {
-        "a": "Both A and R are true and R is the correct explanation of A / A और R दोनों सही हैं और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true but R is NOT the correct explanation of A / A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सही है लेकिन R गलत है।",
-        "d": "A is false but R is true / A गलत है लेकिन R सही है।"
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth statements are independently true. While gravity is conservative, the reason doesn't explain \"why\" work in a closed path is zero\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन स्वतंत्र रूप से सत्य हैं। हालांकि गुरुत्वाकर्षण संरक्षी है, कारण यह नहीं बताता कि बंद पथ में कार्य शून्य \"क्यों\" है।"
     },
     {
       "q_num": 24,
-      "question": "What is the unit of Relative Density? / सापेक्ष घनत्व का मात्रक क्या है?",
+      "question": "What is the unit of Relative Density?",
       "options": {
         "a": "kg/m3",
         "b": "g/mL",
-        "c": "Newton / न्यूटन",
-        "d": "No unit / कोई मात्रक नहीं"
+        "c": "Newton",
+        "d": "No unit"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nRelative Density is the ratio of the density of a substance to the density of water. Since it is a ratio of identical units, it has no unit\n\n📖 हिंदी स्पष्टीकरण:\nसापेक्ष घनत्व किसी पदार्थ के घनत्व और पानी के घनत्व का अनुपात है। चूंकि यह समान इकाइयों का अनुपात है, इसलिए इसका कोई मात्रक नहीं होता है।"
     },
     {
       "q_num": 25,
-      "question": "According to Bernoulli's Effect, when fluid speed increases, the internal pressure: / बरनौली प्रभाव के अनुसार, जब तरल की गति बढ़ती है, तो आंतरिक दाब:",
+      "question": "According to Bernoulli's Effect, when fluid speed increases, the internal pressure:",
       "options": {
-        "a": "Increases / बढ़ता है।",
-        "b": "Decreases / घटता है।",
-        "c": "Remains constant / स्थिर रहता है।",
-        "d": "Becomes zero / शून्य हो जाता है।"
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains constant",
+        "d": "Becomes zero"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Bernoulli Effect states that an increase in fluid speed occurs simultaneously with a decrease in internal pressure\n\n📖 हिंदी स्पष्टीकरण:\nबरनौली प्रभाव बताता है कि तरल की गति में वृद्धि आंतरिक दाब में कमी के साथ-साथ होती है।"

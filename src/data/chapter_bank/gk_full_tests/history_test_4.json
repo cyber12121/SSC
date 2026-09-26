@@ -6,43 +6,43 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Consider the following statements regarding the reign of Aurangzeb: \nऔरंगजेब के शासनकाल के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He discontinued the practice of Jharokha Darshan considering it un-Islamic. / उसने झरोखा दर्शन की प्रथा को गैर-इस्लामिक मानते हुए बंद कर दिया। \n(b) He was a proficient player of the Veena despite banning music in the court. / दरबार में संगीत पर प्रतिबंध लगाने के बावजूद वह वीणा का एक कुशल वादक था। \n(c) He abolished the Jizya tax which was reimposed by Akbar. / उसने अकबर द्वारा पुनः लगाए गए जजिया कर को समाप्त कर दिया।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the reign of Aurangzeb: \n(a) He discontinued the practice of Jharokha Darshan considering it un-Islamic.\n(b) He was a proficient player of the Veena despite banning music in the court.\n(c) He abolished the Jizya tax which was reimposed by Akbar.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAurangzeb banned music in the royal court but was himself an accomplished Veena player. He discontinued Jharokha Darshan. However, statement (c) is incorrect because he re-imposed Jizya in 1679, which had been abolished by Akbar.\n\n📖 हिंदी स्पष्टीकरण:\nऔरंगजेब ने शाही दरबार में संगीत पर प्रतिबंध लगा दिया था, लेकिन वह स्वयं एक निपुण वीणा वादक था। उसने झरोखा दर्शन को बंद कर दिया। हालाँकि, कथन (c) गलत है क्योंकि उसने 1679 में जजिया को पुनः लागू किया था, जिसे अकबर ने समाप्त कर दिया था।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following Later Mughal emperors was known as 'Rangeela' due to his luxurious lifestyle? \nनिम्नलिखित में से किस उत्तरवर्ती मुगल बादशाह को उसकी विलासितापूर्ण जीवन शैली के कारण 'रंगीला' के नाम से जाना जाता था?",
+      "question": "Which of the following Later Mughal emperors was known as 'Rangeela' due to his luxurious lifestyle?",
       "options": {
-        "a": "Jahandar Shah / जहांदार शाह",
-        "b": "Muhammad Shah / मुहम्मद शाह",
-        "c": "Farrukhsiyar / फर्रुखसियर",
-        "d": "Shah Alam II / शाह आलम II"
+        "a": "Jahandar Shah",
+        "b": "Muhammad Shah",
+        "c": "Farrukhsiyar",
+        "d": "Shah Alam II"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMuhammad Shah (1719–1748) was known as 'Rangeela'. It was during his reign that Nadir Shah invaded India and took away the Peacock Throne and Kohinoor diamond.\n\n📖 हिंदी स्पष्टीकरण:\nमुहम्मद शाह (1719-1748) को 'रंगीला' के नाम से जाना जाता था। उसी के शासनकाल में नादिर शाह ने भारत पर आक्रमण किया और मयूर सिंहासन तथा कोहिनूर हीरा अपने साथ ले गया।"
     },
     {
       "q_num": 3,
-      "question": "Consider the following statements regarding the 'Ashtapradhan' of Shivaji: \nशिवाजी के 'अष्टप्रधान' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) The Amatya or Majumdar was responsible for foreign affairs. / अमात्य या मजूमदार विदेशी मामलों के लिए जिम्मेदार थे। \n(b) The office of the Peshwa became hereditary during Shivaji's time itself. / पेशवा का पद शिवाजी के समय में ही वंशानुगत हो गया था। \n(c) The Panditrao and Nyayadhish were exempted from leading armies in war. / पंडितराव और न्यायाधीश को युद्ध में सेना का नेतृत्व करने से छूट दी गई थी।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Ashtapradhan' of Shivaji: \n(a) The Amatya or Majumdar was responsible for foreign affairs.\n(b) The office of the Peshwa became hereditary during Shivaji's time itself.\n(c) The Panditrao and Nyayadhish were exempted from leading armies in war.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "c only / केवल c",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "None of the above / उपर्युक्त में से कोई नहीं"
+        "a": "c only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "None of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\n(a) is incorrect because Amatya checked accounts (Finance), while Sumant/Dabir handled foreign affairs.\n(b) is incorrect; the posts became hereditary later under the Peshwas, not under Shivaji.\n(c) is correct; Panditrao (Charities/Religious) and Nyayadhish (Justice) were not required to fight.\n\n📖 हिंदी स्पष्टीकरण:\n(a) गलत है क्योंकि अमात्य खातों (वित्त) की जाँच करते थे, जबकि सुमंत/दबीर विदेशी मामलों को संभालते थे।\n(b) गलत है; पद बाद में पेशवाओं के अधीन वंशानुगत हुए, शिवाजी के अधीन नहीं।\n(c) सही है; पंडितराव (दान/धार्मिक) और न्यायाधीश (न्याय) को युद्ध लड़ने की आवश्यकता नहीं थी।"
     },
     {
       "q_num": 4,
-      "question": "With reference to the Anglo-Maratha Wars, arrange the following treaties in chronological order: \nआंग्ल-मराठा युद्धों के संदर्भ में, निम्नलिखित संधियों को कालानुक्रमिक क्रम में व्यवस्थित करें: \n(a) Treaty of Salbai / सालबाई की संधि \n(b) Treaty of Bassein / बेसिन की संधि \n(c) Treaty of Surat / सूरत की संधि \n(d) Treaty of Rajghat / राजघाट की संधि\nSelect the correct answer using the code given below:\n नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "With reference to the Anglo-Maratha Wars, arrange the following treaties in chronological order: \n(a) Treaty of Salbai\n(b) Treaty of Bassein\n(c) Treaty of Surat\n(d) Treaty of Rajghat\nSelect the correct answer using the code given below:",
       "options": {
         "a": "c - a - b - d",
         "b": "a - c - b - d",
@@ -54,175 +54,175 @@
     },
     {
       "q_num": 5,
-      "question": "Who among the following Portuguese governors introduced the 'Blue Water Policy' in India? \nनिम्नलिखित में से किस पुर्तगाली गवर्नर ने भारत में 'ब्लू वॉटर पॉलिसी' (शांत जल की नीति) की शुरुआत की?",
+      "question": "Who among the following Portuguese governors introduced the 'Blue Water Policy' in India?",
       "options": {
-        "a": "Alfonso de Albuquerque / अल्फांसो डी अल्बुकर्क",
-        "b": "Francisco de Almeida / फ्रांसिस्को डी अल्मेडा",
-        "c": "Nino da Cunha / नीनो दा कुन्हा",
-        "d": "Vasco da Gama / वास्को डी गामा"
+        "a": "Alfonso de Albuquerque",
+        "b": "Francisco de Almeida",
+        "c": "Nino da Cunha",
+        "d": "Vasco da Gama"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFrancisco de Almeida (1505–09), the first Portuguese viceroy, introduced the 'Blue Water Policy' to make Portugal the master of the Indian Ocean rather than building fortresses on land.\n\n📖 हिंदी स्पष्टीकरण:\nफ्रांसिस्को डी अल्मेडा (1505-09), जो पहले पुर्तगाली वायसराय थे, ने भूमि पर किले बनाने के बजाय पुर्तगाल को हिंद महासागर का स्वामी बनाने के लिए 'ब्लू वॉटर पॉलिसी' की शुरुआत की।"
     },
     {
       "q_num": 6,
-      "question": "Consider the following statements regarding the advent of Europeans: \nयूरोपीय लोगों के आगमन के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) The Dutch established their first factory at Masulipatnam in 1605. / डचों ने 1605 में मसूलीपट्टनम में अपनी पहली फैक्ट्री स्थापित की। \n(b) The English defeated the Portuguese in the Battle of Swally (1612). / अंग्रेजों ने स्वाली के युद्ध (1612) में पुर्तगालियों को हराया। \n(c) Job Charnock founded the city of Calcutta by merging Sutanuti, Gobindapur, and Kalikata. / जॉब चार्नाक ने सुतानाती, गोविंदपुर और कालीकाता को मिलाकर कलकत्ता शहर की स्थापना की।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the advent of Europeans: \n(a) The Dutch established their first factory at Masulipatnam in 1605.\n(b) The English defeated the Portuguese in the Battle of Swally (1612).\n(c) Job Charnock founded the city of Calcutta by merging Sutanuti, Gobindapur, and Kalikata.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b only / केवल b",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "b only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Dutch first settled in Masulipatnam. Thomas Best defeated the Portuguese at Swally, impressing Jahangir. Job Charnock established the trading post that became Calcutta.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। डच सबसे पहले मसूलीपट्टनम में बसे थे। थॉमस बेस्ट ने स्वाली में पुर्तगालियों को हराया, जिससे जहाँगीर प्रभावित हुआ। जॉब चार्नाक ने उस व्यापारिक चौकी की स्थापना की जो बाद में कलकत्ता बनी।"
     },
     {
       "q_num": 7,
-      "question": "Which battle proved to be the decisive war between the English and the French in India, sealing the fate of the French? \nकौन सा युद्ध भारत में अंग्रेजों और फ्रांसीसियों के बीच निर्णायक युद्ध साबित हुआ, जिसने फ्रांसीसियों के भाग्य पर मुहर लगा दी?",
+      "question": "Which battle proved to be the decisive war between the English and the French in India, sealing the fate of the French?",
       "options": {
-        "a": "Battle of Plassey / प्लासी का युद्ध",
-        "b": "Battle of Wandiwash / वांडीवाश का युद्ध",
-        "c": "Battle of Buxar / बक्सर का युद्ध",
-        "d": "Battle of Bedara / बेदारा का युद्ध"
+        "a": "Battle of Plassey",
+        "b": "Battle of Wandiwash",
+        "c": "Battle of Buxar",
+        "d": "Battle of Bedara"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Battle of Wandiwash (1760), part of the Third Carnatic War, was the decisive battle where the English general Sir Eyre Coote defeated the French general Count de Lally.\n\n📖 हिंदी स्पष्टीकरण:\nवांडीवाश का युद्ध (1760), जो तृतीय कर्नाटक युद्ध का हिस्सा था, निर्णायक युद्ध था जहाँ अंग्रेज जनरल सर आयर कूट ने फ्रांसीसी जनरल काउंट डी लाली को हराया था।"
     },
     {
       "q_num": 8,
-      "question": "Consider the following statements regarding Raja Ram Mohan Roy: \nराजा राम मोहन राय के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He established the 'Atmiya Sabha' in 1814 to propagate monotheism. / उन्होंने एकेश्वरवाद का प्रचार करने के लिए 1814 में 'आत्मीय सभा' की स्थापना की। \n(b) He wrote 'Gift to Monotheists' (Tuhfat-ul-Muwahhidin) in Persian. / उन्होंने फारसी में 'एकेश्वरवादियों को उपहार' (तुहफत-उल-मुवाहिदीन) लिखी। \n(c) He founded the Brahmo Samaj strictly based on the teachings of the Vedas and Upanishads, rejecting all other religious texts. / उन्होंने अन्य सभी धार्मिक ग्रंथों को खारिज करते हुए, सख्ती से वेदों और उपनिषदों की शिक्षाओं के आधार पर ब्रह्म समाज की स्थापना की।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding Raja Ram Mohan Roy: \n(a) He established the 'Atmiya Sabha' in 1814 to propagate monotheism.\n(b) He wrote 'Gift to Monotheists' (Tuhfat-ul-Muwahhidin) in Persian.\n(c) He founded the Brahmo Samaj strictly based on the teachings of the Vedas and Upanishads, rejecting all other religious texts.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nRaja Ram Mohan Roy believed in the fundamental unity of all religions and did not reject other texts; for instance, he wrote 'The Precepts of Jesus'. Therefore, statement (c) is too extreme/incorrect in saying he rejected all other texts, though he focused on Vedas/Upanishads for Brahmo Samaj.\n\n📖 हिंदी स्पष्टीकरण:\nराजा राम मोहन राय सभी धर्मों की मौलिक एकता में विश्वास करते थे और उन्होंने अन्य ग्रंथों को खारिज नहीं किया; उदाहरण के लिए, उन्होंने 'द प्रिसेप्ट्स ऑफ जीसस' लिखी थी। इसलिए, कथन (c) यह कहने में बहुत अतिवादी/गलत है कि उन्होंने अन्य सभी ग्रंथों को खारिज कर दिया, हालाँकि उन्होंने ब्रह्म समाज के लिए वेदों/उपनिषदों पर ध्यान केंद्रित किया।"
     },
     {
       "q_num": 9,
-      "question": "Who among the following founded the 'Satyashodhak Samaj' (Truth Seekers' Society) in 1873? \nनिम्नलिखित में से किसने 1873 में 'सत्यशोधक समाज' (सत्य चाहने वालों का समाज) की स्थापना की?",
+      "question": "Who among the following founded the 'Satyashodhak Samaj' (Truth Seekers' Society) in 1873?",
       "options": {
-        "a": "Dr. B.R. Ambedkar / डॉ. बी.आर. अंबेडकर",
-        "b": "Jyotiba Phule / ज्योतिबा फुले",
-        "c": "E.V. Ramasamy Naicker / ई.वी. रामासामी नायकर",
-        "d": "Gopal Hari Deshmukh / गोपाल हरि देशमुख"
+        "a": "Dr. B.R. Ambedkar",
+        "b": "Jyotiba Phule",
+        "c": "E.V. Ramasamy Naicker",
+        "d": "Gopal Hari Deshmukh"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nJyotiba Phule founded the Satyashodhak Samaj in 1873 in Pune to fight for the rights of lower castes and women. He also wrote 'Gulamgiri'.\n\n📖 हिंदी स्पष्टीकरण:\nज्योतिबा फुले ने 1873 में पुणे में निचली जातियों और महिलाओं के अधिकारों के लिए लड़ने हेतु सत्यशोधक समाज की स्थापना की। उन्होंने 'गुलामगिरी' भी लिखी थी।"
     },
     {
       "q_num": 10,
-      "question": "Consider the following statements regarding the 'Young Bengal Movement': \n'यंग बंगाल आंदोलन' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was led by Henry Vivian Derozio, a teacher at Hindu College. / इसका नेतृत्व हिंदू कॉलेज के शिक्षक हेनरी विवियन डेरोजियो ने किया था। \n(b) The movement drew inspiration from the French Revolution. / इस आंदोलन ने फ्रांसीसी क्रांति से प्रेरणा ली थी। \n(c) It failed to have a long-term impact because of its radical nature and lack of support from the masses. / अपनी कट्टरपंथी प्रकृति और जनता के समर्थन की कमी के कारण इसका दीर्घकालिक प्रभाव नहीं हो सका।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Young Bengal Movement': \n(a) It was led by Henry Vivian Derozio, a teacher at Hindu College.\n(b) The movement drew inspiration from the French Revolution.\n(c) It failed to have a long-term impact because of its radical nature and lack of support from the masses.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Derozio and his followers (Derozians) were radical, inspired by the French Revolution's ideals of liberty and equality, but failed to connect with the larger society due to their extreme views against tradition.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। डेरोजियो और उनके अनुयायी (डेरोजियन) कट्टरपंथी थे, जो फ्रांसीसी क्रांति के स्वतंत्रता और समानता के आदर्शों से प्रेरित थे, लेकिन परंपरा के खिलाफ अपने चरम विचारों के कारण बड़े समाज से जुड़ने में विफल रहे।"
     },
     {
       "q_num": 11,
-      "question": "The 'Third Battle of Panipat' (1761) was fought between: \n'पानीपत का तृतीय युद्ध' (1761) किसके बीच लड़ा गया था?",
+      "question": "The 'Third Battle of Panipat' (1761) was fought between:",
       "options": {
-        "a": "Marathas and Ahmad Shah Abdali / मराठा और अहमद शाह अब्दाली",
-        "b": "Marathas and Nadir Shah / मराठा और नादिर शाह",
-        "c": "Ahmad Shah Abdali and Mughals / अहमद शाह अब्दाली और मुगल",
-        "d": "Marathas and British / मराठा और अंग्रेज"
+        "a": "Marathas and Ahmad Shah Abdali",
+        "b": "Marathas and Nadir Shah",
+        "c": "Ahmad Shah Abdali and Mughals",
+        "d": "Marathas and British"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe Third Battle of Panipat took place on 14 January 1761 between the Marathas (led by Sadashivrao Bhau) and the invading Afghan army of Ahmad Shah Abdali. The Marathas were defeated heavily.\n\n📖 हिंदी स्पष्टीकरण:\nपानीपत का तृतीय युद्ध 14 जनवरी 1761 को मराठों (सदाशिवराव भाऊ के नेतृत्व में) और अहमद शाह अब्दाली की हमलावर अफगान सेना के बीच हुआ था। इसमें मराठों की भारी पराजय हुई।"
     },
     {
       "q_num": 12,
-      "question": "Consider the following pairs regarding Socio-Religious Reform movements and their founders: \nसामाजिक-धार्मिक सुधार आंदोलनों और उनके संस्थापकों के संबंध में निम्नलिखित युग्मों पर विचार करें:\n(a) Prarthana Samaj : Atmaram Pandurang / प्रार्थना समाज : आत्माराम पांडुरंग\n(b) Ramakrishna Mission : Swami Vivekananda / रामकृष्ण मिशन : स्वामी विवेकानंद\n(c) Arya Samaj : Swami Dayanand Saraswati / आर्य समाज : स्वामी दयानंद सरस्वती\n(d) Theosophical Society : Annie Besant (Founder) / थियोसोफिकल सोसायटी : एनी बेसेंट (संस्थापक)\nHow many of the above pairs are correctly matched? \nउपर्युक्त में से कितने युग्म सही सुमेलित हैं?",
+      "question": "Consider the following pairs regarding Socio-Religious Reform movements and their founders: \n(a) Prarthana Samaj : Atmaram Pandurang\n(b) Ramakrishna Mission : Swami Vivekananda\n(c) Arya Samaj : Swami Dayanand Saraswati\n(d) Theosophical Society : Annie Besant (Founder)\nHow many of the above pairs are correctly matched?",
       "options": {
-        "a": "Only one / केवल एक",
-        "b": "Only two / केवल दो",
-        "c": "Only three / केवल तीन",
-        "d": "All four / सभी चार"
+        "a": "Only one",
+        "b": "Only two",
+        "c": "Only three",
+        "d": "All four"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPair 4 is incorrectly matched regarding the founder. The Theosophical Society was founded by Madame Blavatsky and Colonel Olcott in New York (1875). Annie Besant joined later and popularized it in India. The other three pairs are correct.\n\n📖 हिंदी स्पष्टीकरण:\nयुग्म 4 संस्थापक के संबंध में गलत सुमेलित है। थियोसोफिकल सोसायटी की स्थापना मैडम ब्लावात्स्की और कर्नल ऑलकोट ने न्यूयॉर्क (1875) में की थी। एनी बेसेंट बाद में शामिल हुईं और भारत में इसे लोकप्रिय बनाया। अन्य तीन युग्म सही हैं।"
     },
     {
       "q_num": 13,
-      "question": "In the context of the Maratha administration, what was 'Sardeshmukhi'? \nमराठा प्रशासन के संदर्भ में, 'सरदेशमुखी' क्या था?",
+      "question": "In the context of the Maratha administration, what was 'Sardeshmukhi'?",
       "options": {
-        "a": "A tax of 25% of the revenue or produce / राजस्व या उपज का 25% कर",
-        "b": "An additional levy of 10% on the revenue / राजस्व पर 10% का अतिरिक्त उपकर",
-        "c": "A military rank in the infantry / पैदल सेना में एक सैन्य रैंक",
-        "d": "A religious grant given to temples / मंदिरों को दिया जाने वाला धार्मिक अनुदान"
+        "a": "A tax of 25% of the revenue or produce",
+        "b": "An additional levy of 10% on the revenue",
+        "c": "A military rank in the infantry",
+        "d": "A religious grant given to temples"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n'Chauth' was 1/4th (25%) of the revenue, claimed for protection. 'Sardeshmukhi' was an additional 10% claim on the revenue, based on Shivaji's claim as the hereditary Sardeshmukh (Chief Headman) of the region.\n\n📖 हिंदी स्पष्टीकरण:\n'चौथ' राजस्व का 1/4 (25%) था, जो सुरक्षा के लिए लिया जाता था। 'सरदेशमुखी' राजस्व पर 10% का अतिरिक्त दावा था, जो क्षेत्र के वंशानुगत सरदेशमुख (प्रधान मुखिया) के रूप में शिवाजी के दावे पर आधारित था।"
     },
     {
       "q_num": 14,
-      "question": "Consider the following statements regarding the 'Sayyid Brothers' in Mughal history: \nमुगल इतिहास में 'सैय्यद बंधुओं' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) They are known as 'King Makers' for placing multiple emperors on the throne. / वे कई बादशाहों को गद्दी पर बैठाने के लिए 'किंग मेकर्स' (नृप निर्माता) के रूप में जाने जाते हैं। \n(b) They were killed during the reign of Muhammad Shah 'Rangeela'. / उनकी हत्या मुहम्मद शाह 'रंगीला' के शासनकाल के दौरान की गई थी। \n(c) They followed a policy of religious intolerance towards Rajputs and Marathas. / उन्होंने राजपूतों और मराठों के प्रति धार्मिक असहिष्णुता की नीति का पालन किया।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Sayyid Brothers' in Mughal history: \n(a) They are known as 'King Makers' for placing multiple emperors on the throne.\n(b) They were killed during the reign of Muhammad Shah 'Rangeela'.\n(c) They followed a policy of religious intolerance towards Rajputs and Marathas.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "a and c only / केवल a और c",
-        "d": "b and c only / केवल b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "a and c only",
+        "d": "b and c only"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements (a) and (b) are correct. Abdullah Khan and Hussain Ali Khan (Sayyid Brothers) raised rulers like Farrukhsiyar, Rafi-ud-Darjat, etc., to the throne. They were eliminated by Muhammad Shah. Statement (c) is incorrect as they adopted a policy of tolerance and conciliation towards Hindus to strengthen their position.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) और (b) सही हैं। अब्दुल्ला खान और हुसैन अली खान (सैय्यद बंधुओं) ने फर्रुखसियर, रफी-उद-दर्जत आदि शासकों को गद्दी पर बैठाया। मुहम्मद शाह ने उनका खात्मा किया। कथन (c) गलत है क्योंकि उन्होंने अपनी स्थिति मजबूत करने के लिए हिंदुओं के प्रति सहिष्णुता और मेल-मिलाप की नीति अपनाई थी।"
     },
     {
       "q_num": 15,
-      "question": "Who among the following was the first Indian to use the term 'Swaraj' and accept Hindi as the national language? \nनिम्नलिखित में से कौन 'स्वराज' शब्द का प्रयोग करने वाले और हिंदी को राष्ट्रभाषा के रूप में स्वीकार करने वाले पहले भारतीय थे?",
+      "question": "Who among the following was the first Indian to use the term 'Swaraj' and accept Hindi as the national language?",
       "options": {
-        "a": "Raja Ram Mohan Roy / राजा राम मोहन राय",
-        "b": "Swami Dayanand Saraswati / स्वामी दयानंद सरस्वती",
-        "c": "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "d": "Swami Vivekananda / स्वामी विवेकानंद"
+        "a": "Raja Ram Mohan Roy",
+        "b": "Swami Dayanand Saraswati",
+        "c": "Bal Gangadhar Tilak",
+        "d": "Swami Vivekananda"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSwami Dayanand Saraswati was the first to give the call for 'Swaraj' (India for Indians) in 1876, later picked up by Tilak. He also advocated for Hindi as a national language.\n\n📖 हिंदी स्पष्टीकरण:\nस्वामी दयानंद सरस्वती 1876 में 'स्वराज' (भारत भारतीयों के लिए) का आह्वान करने वाले पहले व्यक्ति थे, जिसे बाद में तिलक ने अपनाया। उन्होंने हिंदी को राष्ट्रभाषा बनाने की भी वकालत की।"
     },
     {
       "q_num": 16,
-      "question": "Consider the following statements regarding the rebellions during Aurangzeb's reign: \nऔरंगजेब के शासनकाल के दौरान हुए विद्रोहों के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) The Jat rebellion was led by Gokula and later by Rajaram. / जाट विद्रोह का नेतृत्व गोकुला और बाद में राजाराम ने किया था। \n(b) The Satnami rebellion occurred in the Narnaul region. / सतनामी विद्रोह नारनौल क्षेत्र में हुआ था। \n(c) The Sikh rebellion began after the execution of Guru Arjan Dev by Aurangzeb. / सिख विद्रोह औरंगजेब द्वारा गुरु अर्जन देव की हत्या के बाद शुरू हुआ।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the rebellions during Aurangzeb's reign: \n(a) The Jat rebellion was led by Gokula and later by Rajaram.\n(b) The Satnami rebellion occurred in the Narnaul region.\n(c) The Sikh rebellion began after the execution of Guru Arjan Dev by Aurangzeb.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements (a) and (b) are correct. Statement (c) is incorrect because Aurangzeb executed the 9th Guru, Guru Tegh Bahadur (1675), which sparked the major conflict. Guru Arjan Dev was executed by Jahangir.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) और (b) सही हैं। कथन (c) गलत है क्योंकि औरंगजेब ने 9वें गुरु, गुरु तेग बहादुर (1675) को मृत्युदंड दिया था, जिससे बड़ा संघर्ष भड़क उठा। गुरु अर्जन देव को जहाँगीर ने मृत्युदंड दिया था।"
     },
     {
       "q_num": 17,
-      "question": "Which European power was the last to arrive in India for trade but the first to establish a factory at Surat among the following options? \nनिम्नलिखित विकल्पों में से कौन सी यूरोपीय शक्ति व्यापार के लिए भारत में सबसे अंत में आई लेकिन जिसने सूरत में अपनी फैक्ट्री स्थापित की? (Note: Read carefully / ध्यान से पढ़ें)",
+      "question": "Which European power was the last to arrive in India for trade but the first to establish a factory at Surat among the following options?",
       "options": {
-        "a": "English / अंग्रेज",
-        "b": "French / फ्रांसीसी",
-        "c": "Dutch / डच",
-        "d": "Portuguese / पुर्तगाली"
+        "a": "English",
+        "b": "French",
+        "c": "Dutch",
+        "d": "Portuguese"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe French East India Company was formed in 1664 (reign of Louis XIV) and was the last major European power to enter India. They established their first factory at Surat in 1668.\n\n📖 हिंदी स्पष्टीकरण:\nफ्रांसीसी ईस्ट इंडिया कंपनी का गठन 1664 (लुई XIV के शासनकाल) में हुआ था और यह भारत में प्रवेश करने वाली अंतिम प्रमुख यूरोपीय शक्ति थी। उन्होंने 1668 में सूरत में अपनी पहली फैक्ट्री स्थापित की।"
     },
     {
       "q_num": 18,
-      "question": "Consider the following statements regarding Ishwar Chandra Vidyasagar: \nईश्वर चंद्र विद्यासागर के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He became the principal of Sanskrit College in 1850. / वह 1850 में संस्कृत कॉलेज के प्राचार्य बने। \n(b) He opened the Sanskrit College to non-Brahmins. / उन्होंने गैर-ब्राह्मणों के लिए संस्कृत कॉलेज खोला। \n(c) His efforts led to the passing of the Hindu Widow Remarriage Act, 1856. / उनके प्रयासों से हिंदू विधवा पुनर्विवाह अधिनियम, 1856 पारित हुआ।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Ishwar Chandra Vidyasagar: \n(a) He became the principal of Sanskrit College in 1850.\n(b) He opened the Sanskrit College to non-Brahmins.\n(c) His efforts led to the passing of the Hindu Widow Remarriage Act, 1856.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "c only / केवल c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Vidyasagar was a great scholar and reformer who challenged the monopoly of Brahmins over Sanskrit learning and was instrumental in legalizing widow remarriage (drafted by Dalhousie, passed by Canning).\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। विद्यासागर एक महान विद्वान और सुधारक थे जिन्होंने संस्कृत शिक्षा पर ब्राह्मणों के एकाधिकार को चुनौती दी और विधवा पुनर्विवाह को वैध बनाने में महत्वपूर्ण भूमिका निभाई (डलहौजी द्वारा मसौदा तैयार किया गया, कैनिंग द्वारा पारित किया गया)।"
     },
     {
       "q_num": 19,
-      "question": "Match the following 'Autonomous States' of the 18th Century with their founders: \n18वीं शताब्दी के निम्नलिखित 'स्वायत्त राज्यों' को उनके संस्थापकों के साथ सुमेलित करें: \n| State / राज्य | Founder / संस्थापक | \n| :--- | :--- | \n| A. Bengal / बंगाल | 1. Saadat Khan / सआदत खान | \n| B. Awadh / अवध | 2. Murshid Quli Khan / मुर्शिद कुली खान | \n| C. Hyderabad / हैदराबाद | 3. Chin Qilich Khan (Nizam-ul-Mulk) / चिन किलिच खान (निजाम-उल-मुल्क) | \n| D. Mysore / मैसूर | 4. Haider Ali / हैदर अली |\nSelect the correct option: सही विकल्प चुनें:",
+      "question": "Match the following 'Autonomous States' of the 18th Century with their founders: \n| State\n| :--- | :--- | \n| A. Bengal\n| B. Awadh\n| C. Hyderabad\n| D. Mysore\nSelect the correct option:",
       "options": {
         "a": "A-2, B-1, C-3, D-4",
         "b": "A-1, B-2, C-3, D-4",
@@ -234,91 +234,91 @@
     },
     {
       "q_num": 20,
-      "question": "Consider the following statements regarding the Maratha military administration: \nमराठा सैन्य प्रशासन के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) The cavalry was divided into 'Bargirs' and 'Silahdars'. / घुड़सवार सेना को 'बारगीर' और 'सिलेदार' में विभाजित किया गया था। \n(b) Bargirs were provided horses and weapons by the state. / बारगीरों को राज्य द्वारा घोड़े और हथियार उपलब्ध कराए जाते थे। \n(c) Silahdars brought their own horses and equipment. / सिलेदार अपने घोड़े और उपकरण स्वयं लाते थे।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Maratha military administration: \n(a) The cavalry was divided into 'Bargirs' and 'Silahdars'.\n(b) Bargirs were provided horses and weapons by the state.\n(c) Silahdars brought their own horses and equipment.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. In Shivaji's army, the Paga (Regular Army) consisted of Bargirs (state-equipped) and Silahdars (self-equipped mercenaries).\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। शिवाजी की सेना में, पागा (नियमित सेना) में बारगीर (राज्य द्वारा सुसज्जित) और सिलेदार (स्वयं-सुसज्जित भाड़े के सैनिक) शामिल थे।"
     },
     {
       "q_num": 21,
-      "question": "Which battle fought in 1759 dealt a crushing blow to the Dutch ambitions in India? \n1759 में लड़े गए किस युद्ध ने भारत में डच महत्वाकांक्षाओं को करारी चोट पहुँचाई?",
+      "question": "Which battle fought in 1759 dealt a crushing blow to the Dutch ambitions in India?",
       "options": {
-        "a": "Battle of Wandiwash / वांडीवाश का युद्ध",
-        "b": "Battle of Bedara / बेदारा का युद्ध",
-        "c": "Battle of Ambur / अंबर का युद्ध",
-        "d": "Battle of St. Thome / सेंट थोम का युद्ध"
+        "a": "Battle of Wandiwash",
+        "b": "Battle of Bedara",
+        "c": "Battle of Ambur",
+        "d": "Battle of St. Thome"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Battle of Bedara (or Chinsurah) in 1759 was fought between the British (under Robert Clive) and the Dutch. The Dutch were defeated, ending their bid for political power in India.\n\n📖 हिंदी स्पष्टीकरण:\n1759 में बेदारा (या चिनसुरा) का युद्ध अंग्रेजों (रॉबर्ट क्लाइव के अधीन) और डचों के बीच लड़ा गया था। डच पराजित हुए, जिससे भारत में राजनीतिक शक्ति के लिए उनका प्रयास समाप्त हो गया।"
     },
     {
       "q_num": 22,
-      "question": "Consider the following statements about the 'Aligarh Movement': \n‘अलीगढ़ आंदोलन' के बारे में निम्नलिखित कथनों पर विचार करें: \n(a) It aimed to promote modern education among Muslims without compromising Islamic values. / इसका उद्देश्य इस्लामी मूल्यों से समझौता किए बिना मुसलमानों के बीच आधुनिक शिक्षा को बढ़ावा देना था। \n(b) Sir Syed Ahmed Khan established the Mohammedan Anglo-Oriental College in 1875. / सर सैयद अहमद खान ने 1875 में ओरिएंटल कॉलेज की स्थापना की। \n(c) The movement strongly supported the formation of the Indian National Congress in 1885. / आंदोलन ने 1885 में भारतीय राष्ट्रीय कांग्रेस के गठन का कड़ा समर्थन किया।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about the 'Aligarh Movement': \n(a) It aimed to promote modern education among Muslims without compromising Islamic values.\n(b) Sir Syed Ahmed Khan established the Mohammedan Anglo-Oriental College in 1875.\n(c) The movement strongly supported the formation of the Indian National Congress in 1885.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b only / केवल b",
-        "c": "a and c only / केवल a और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b only",
+        "c": "a and c only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatements (a) and (b) are correct. Statement (c) is incorrect because Sir Syed Ahmed Khan opposed the formation of the Indian National Congress, fearing Hindu domination and advising Muslims to stay away from active politics.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) और (b) सही हैं। कथन (c) गलत है क्योंकि सर सैयद अहमद खान ने हिंदू वर्चस्व के डर से भारतीय राष्ट्रीय कांग्रेस के गठन का विरोध किया था और मुसलमानों को सक्रिय राजनीति से दूर रहने की सलाह दी थी।"
     },
     {
       "q_num": 23,
-      "question": "The Treaty of Purandar (1665) was signed between Shivaji and: \nपुरंदर की संधि (1665) शिवाजी और किसके बीच हस्ताक्षरित हुई थी?",
+      "question": "The Treaty of Purandar (1665) was signed between Shivaji and:",
       "options": {
-        "a": "Aurangzeb / औरंगजेब",
-        "b": "Shaista Khan / शाइस्ता खान",
-        "c": "Raja Jai Singh / राजा जय सिंह",
-        "d": "Afzal Khan / अफजल खान"
+        "a": "Aurangzeb",
+        "b": "Shaista Khan",
+        "c": "Raja Jai Singh",
+        "d": "Afzal Khan"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nThe Treaty of Purandar was signed on June 11, 1665, between Shivaji and Raja Jai Singh I (representing Aurangzeb). Shivaji had to surrender 23 forts to the Mughals.\n\n📖 हिंदी स्पष्टीकरण:\nपुरंदर की संधि 11 जून, 1665 को शिवाजी और राजा जय सिंह प्रथम (औरंगजेब का प्रतिनिधित्व करते हुए) के बीच हस्ताक्षरित हुई थी। शिवाजी को 23 किले मुगलों को सौंपने पड़े थे।"
     },
     {
       "q_num": 24,
-      "question": "Consider the following statements regarding the Carnatic Wars: \nकर्नाटक युद्धों के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) The First Carnatic War was an extension of the Austrian War of Succession. / प्रथम कर्नाटक युद्ध ऑस्ट्रियाई उत्तराधिकार युद्ध का विस्तार था। \n(b) The Treaty of Aix-la-Chapelle ended the Second Carnatic War. / एक्स-ला-चैपल की संधि ने द्वितीय कर्नाटक युद्ध को समाप्त किया। \n(c) The Third Carnatic War ended with the Treaty of Paris (1763). / तृतीय कर्नाटक युद्ध पेरिस की संधि (1763) के साथ समाप्त हुआ।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the Carnatic Wars: \n(a) The First Carnatic War was an extension of the Austrian War of Succession.\n(b) The Treaty of Aix-la-Chapelle ended the Second Carnatic War.\n(c) The Third Carnatic War ended with the Treaty of Paris (1763).\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and c only / केवल a और c",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and c only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatement (b) is incorrect. The Treaty of Aix-la-Chapelle ended the First Carnatic War. The Second Carnatic War ended with the Treaty of Pondicherry. Statements (a) and (c) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (b) गलत है। एक्स-ला-चैपल की संधि ने प्रथम कर्नाटक युद्ध को समाप्त किया था। द्वितीय कर्नाटक युद्ध पांडिचेरी की संधि के साथ समाप्त हुआ था। कथन (a) और (c) सही हैं।"
     },
     {
       "q_num": 25,
-      "question": "Who among the following Sikh Gurus established the 'Khalsa Panth' in 1699? \nनिम्नलिखित सिख गुरुओं में से किसने 1699 में 'खालसा पंथ' की स्थापना की?",
+      "question": "Who among the following Sikh Gurus established the 'Khalsa Panth' in 1699?",
       "options": {
-        "a": "Guru Tegh Bahadur / गुरु तेग बहादुर",
-        "b": "Guru Hargobind / गुरु हरगोबिंद",
-        "c": "Guru Gobind Singh / गुरु गोबिंद सिंह",
-        "d": "Guru Angad Dev / गुरु अंगद देव"
+        "a": "Guru Tegh Bahadur",
+        "b": "Guru Hargobind",
+        "c": "Guru Gobind Singh",
+        "d": "Guru Angad Dev"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nGuru Gobind Singh, the 10th Sikh Guru, established the Khalsa Panth (Brotherhood of the Pure) on Baisakhi day in 1699 at Anandpur Sahib.\n\n📖 हिंदी स्पष्टीकरण:\n10वें सिख गुरु, गुरु गोबिंद सिंह ने 1699 में बैसाखी के दिन आनंदपुर साहिब में खालसा पंथ (शुद्धों का भाईचारा) की स्थापना की।"
     },
     {
       "q_num": 26,
-      "question": "Consider the following statements regarding the 'Shuddhi Movement': \n'शुद्धि आंदोलन' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was initiated by the Brahmo Samaj. / इसकी शुरुआत ब्रह्म समाज द्वारा की गई थी। \n(b) Its objective was to reconvert those who had converted to Islam or Christianity back to Hinduism. / इसका उद्देश्य उन लोगों को वापस हिंदू धर्म में लाना था जिन्होंने इस्लाम या ईसाई धर्म अपना लिया था। \n(c) It became a cause of communal tension in the early 20th century. / यह 20वीं सदी की शुरुआत में सांप्रदायिक तनाव का एक कारण बन गया।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Shuddhi Movement': \n(a) It was initiated by the Brahmo Samaj.\n(b) Its objective was to reconvert those who had converted to Islam or Christianity back to Hinduism.\n(c) It became a cause of communal tension in the early 20th century.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "All of the above / उपर्युक्त सभी"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "All of the above"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Shuddhi Movement was initiated by the Arya Samaj (founded by Dayanand Saraswati), not the Brahmo Samaj. Hence statement (a) is incorrect. Statements (b) and (c) are correct.\n\n📖 हिंदी स्पष्टीकरण:\nशुद्धि आंदोलन की शुरुआत आर्य समाज (दयानंद सरस्वती द्वारा स्थापित) द्वारा की गई थी, न कि ब्रह्म समाज द्वारा। इसलिए कथन (a) गलत है। कथन (b) और (c) सही हैं।"
     },
     {
       "q_num": 27,
-      "question": "Arrange the following events in the correct chronological order: \nनिम्नलिखित घटनाओं को सही कालानुक्रमिक क्रम में व्यवस्थित करें: \n(a) Battle of Plassey / प्लासी का युद्ध \n(b) Invasion of Nadir Shah / नादिर शाह का आक्रमण \n(c) Third Battle of Panipat / पानीपत का तृतीय युद्ध \n(d) Battle of Buxar / बक्सर का युद्ध\nSelect the correct answer using the code given below: \nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Arrange the following events in the correct chronological order: \n(a) Battle of Plassey\n(b) Invasion of Nadir Shah\n(c) Third Battle of Panipat\n(d) Battle of Buxar\nSelect the correct answer using the code given below:",
       "options": {
         "a": "b - a - c - d",
         "b": "a - b - c - d",
@@ -330,55 +330,55 @@
     },
     {
       "q_num": 28,
-      "question": "With reference to the Advent of Europeans, what does the term 'Interlopers' refer to? \nयूरोपीय लोगों के आगमन के संदर्भ में, 'इंटरलोपर्स' (Interlopers) शब्द का क्या अर्थ है?",
+      "question": "With reference to the Advent of Europeans, what does the term 'Interlopers' refer to?",
       "options": {
-        "a": "Portuguese pirates in the Arabian Sea / अरब सागर में पुर्तगाली समुद्री डाकू",
-        "b": "Unauthorized British merchants trading in the East / पूर्व में व्यापार करने वाले अनधिकृत ब्रिटिश व्यापारी",
-        "c": "Agents of the French East India Company / फ्रांसीसी ईस्ट इंडिया कंपनी के एजेंट",
-        "d": "Officers of the Mughal customs department / मुगल सीमा शुल्क विभाग के अधिकारी"
+        "a": "Portuguese pirates in the Arabian Sea",
+        "b": "Unauthorized British merchants trading in the East",
+        "c": "Agents of the French East India Company",
+        "d": "Officers of the Mughal customs department"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\n'Interlopers' were the independent/unauthorized English merchants who traded in the East in defiance of the monopoly granted to the East India Company.\n\n📖 हिंदी स्पष्टीकरण:\n'इंटरलोपर्स' वे स्वतंत्र/अनधिकृत अंग्रेज व्यापारी थे जो ईस्ट इंडिया कंपनी को दिए गए एकाधिकार की अवहेलना करते हुए पूर्व में व्यापार करते थे।"
     },
     {
       "q_num": 29,
-      "question": "Consider the following statements regarding Peshwa Bajirao I: \nपेशवा बाजीराव प्रथम के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He popularized the idea of 'Hindu-Pad-Padshahi'. / उन्होंने 'हिंदू-पद-पादशाही' के विचार को लोकप्रिय बनाया। \n(b) He defeated the Nizam of Hyderabad at the Battle of Palkhed. / उन्होंने पालखेड़ के युद्ध में हैदराबाद के निजाम को हराया। \n(c) During his tenure, the Maratha capital was shifted from Satara to Poona. / उनके कार्यकाल के दौरान, मराठा राजधानी को सतारा से पुणे स्थानांतरित कर दिया गया था।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding Peshwa Bajirao I: \n(a) He popularized the idea of 'Hindu-Pad-Padshahi'.\n(b) He defeated the Nizam of Hyderabad at the Battle of Palkhed.\n(c) During his tenure, the Maratha capital was shifted from Satara to Poona.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Bajirao I (1720–1740) was the greatest Peshwa. He defeated Nizam-ul-Mulk at Palkhed (1728). He shifted the administrative seat to Poona (Pune).\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। बाजीराव प्रथम (1720-1740) सबसे महान पेशवा थे। उन्होंने पालखेड़ (1728) में निजाम-उल-मुल्क को हराया। उन्होंने प्रशासनिक सीट को पुणे स्थानांतरित कर दिया।"
     },
     {
       "q_num": 30,
-      "question": "Which of the following social reformers founded the 'Seva Sadan' in Bombay? \nनिम्नलिखित में से किस समाज सुधारक ने बंबई में 'सेवा सदन' की स्थापना की?",
+      "question": "Which of the following social reformers founded the 'Seva Sadan' in Bombay?",
       "options": {
-        "a": "Behramji M. Malabari / बहरामजी एम. मालाबारी",
-        "b": "Mahadev Govind Ranade / महादेव गोविंद रानाडे",
-        "c": "Pandita Ramabai / पंडिता रमाबाई",
-        "d": "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले"
+        "a": "Behramji M. Malabari",
+        "b": "Mahadev Govind Ranade",
+        "c": "Pandita Ramabai",
+        "d": "Gopal Krishna Gokhale"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBehramji M. Malabari, a Parsi reformer, founded the Seva Sadan in 1885 (later expanded in 1908) to take care of socially discarded and exploited women. (Note: Pandita Ramabai founded Sharada Sadan; Gokhale founded Servants of India Society).\n\n📖 हिंदी स्पष्टीकरण:\nएक पारसी सुधारक बहरामजी एम. मालाबारी ने 1885 में (बाद में 1908 में विस्तार किया गया) सामाजिक रूप से तिरस्कृत और शोषित महिलाओं की देखभाल के लिए सेवा सदन की स्थापना की। (नोट: पंडिता रमाबाई ने शारदा सदन की स्थापना की; गोखले ने सर्वेंट्स ऑफ इंडिया सोसाइटी की स्थापना की)।"
     },
     {
       "q_num": 31,
-      "question": "Consider the following statements regarding the contributions of the Portuguese in India: \nभारत में पुर्तगालियों के योगदान के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) They were the first to introduce the printing press in India at Goa. / वे गोवा में भारत में प्रिंटिंग प्रेस शुरू करने वाले पहले व्यक्ति थे। \n(b) They introduced the cultivation of tobacco and potato in India. / उन्होंने भारत में तंबाकू और आलू की खेती की शुरुआत की। \n(c) They were the first to introduce the Gothic style of architecture in India. / वे भारत में वास्तुकला की गोथिक शैली को शुरू करने वाले पहले व्यक्ति थे।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the contributions of the Portuguese in India: \n(a) They were the first to introduce the printing press in India at Goa.\n(b) They introduced the cultivation of tobacco and potato in India.\n(c) They were the first to introduce the Gothic style of architecture in India.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Portuguese introduced the printing press (1556), crops like tobacco, potato, tomato, chilly, corn, etc., and the Gothic style (often called Iberian style) in their churches.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। पुर्तगालियों ने प्रिंटिंग प्रेस (1556), तंबाकू, आलू, टमाटर, मिर्च, मक्का आदि जैसी फसलें और अपने चर्चों में गोथिक शैली (जिसे अक्सर इबेरियन शैली कहा जाता है) की शुरुआत की।"
     },
     {
       "q_num": 32,
-      "question": "Match the following centers of the Maratha Confederacy with their respective ruling families: मराठा परिसंघ के निम्नलिखित केंद्रों को उनके संबंधित शासक परिवारों के साथ सुमेलित करें: \n| Family / परिवार | Center / केंद्र | \n| :--- | :--- | \n| A. Gaekwad / गायकवाड़ | 1. Indore / इंदौर | \n| B. Bhonsle / भोंसले | 2. Baroda / बड़ौदा | \n| C. Holkar / होल्कर | 3. Nagpur / नागपुर | \n| D. Scindia / सिंधिया | 4. Gwalior / ग्वालियर |\nSelect the correct answer using the code given below: \nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question": "Match the following centers of the Maratha Confederacy with their respective ruling families:\n| Family\n| :--- | :--- | \n| A. Gaekwad\n| B. Bhonsle\n| C. Holkar\n| D. Scindia\nSelect the correct answer using the code given below:",
       "options": {
         "a": "A-2, B-3, C-1, D-4",
         "b": "A-1, B-2, C-3, D-4",
@@ -390,127 +390,127 @@
     },
     {
       "q_num": 33,
-      "question": "Which Governor-General of India was responsible for the abolition of the 'Peshwaship' after the Third Anglo-Maratha War? \nतृतीय आंग्ल-मराठा युद्ध के बाद 'पेशवा पद' को समाप्त करने के लिए भारत का कौन सा गवर्नर-जनरल जिम्मेदार था?",
+      "question": "Which Governor-General of India was responsible for the abolition of the 'Peshwaship' after the Third Anglo-Maratha War?",
       "options": {
-        "a": "Lord Wellesley / लॉर्ड वेलेस्ली",
-        "b": "Lord Hastings / लॉर्ड हेस्टिंग्स",
-        "c": "Lord Cornwallis / लॉर्ड कॉर्नवालिस",
-        "d": "Lord Dalhousie / लॉर्ड डलहौजी"
+        "a": "Lord Wellesley",
+        "b": "Lord Hastings",
+        "c": "Lord Cornwallis",
+        "d": "Lord Dalhousie"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nLord Hastings (1813–1823) was the Governor-General during the Third Anglo-Maratha War (1817–1818). He abolished the Peshwaship, pensioned off Bajirao II to Bithur, and annexed his territories.\n\n📖 हिंदी स्पष्टीकरण:\nलॉर्ड हेस्टिंग्स (1813-1823) तृतीय आंग्ल-मराठा युद्ध (1817-1818) के दौरान गवर्नर-जनरल थे। उन्होंने पेशवा पद को समाप्त कर दिया, बाजीराव द्वितीय को पेंशन देकर बिठूर भेज दिया और उनके क्षेत्रों को अपने अधिकार में ले लिया।"
     },
     {
       "q_num": 34,
-      "question": "Consider the following statements regarding the 'Tattvabodhini Sabha': \n'तत्त्वबोधिनी सभा' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was founded by Debendranath Tagore in 1839. / इसकी स्थापना 1839 में देवेंद्रनाथ टैगोर ने की थी। \n(b) It aimed to promote a systematic study of India's past with a rational outlook. / इसका उद्देश्य तर्कसंगत दृष्टिकोण के साथ भारत के अतीत के व्यवस्थित अध्ययन को बढ़ावा देना था। \n(c) It later merged with the Brahmo Samaj. / बाद में इसका विलय ब्रह्म समाज में हो गया।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Tattvabodhini Sabha': \n(a) It was founded by Debendranath Tagore in 1839.\n(b) It aimed to promote a systematic study of India's past with a rational outlook.\n(c) It later merged with the Brahmo Samaj.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Debendranath Tagore founded the Tattvabodhini Sabha to propagate Raja Ram Mohan Roy's ideas. It published a journal called 'Tattvabodhini Patrika' and eventually merged with the Brahmo Samaj in 1859.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। देवेंद्रनाथ टैगोर ने राजा राम मोहन राय के विचारों का प्रचार करने के लिए तत्त्वबोधिनी सभा की स्थापना की। इसने 'तत्त्वबोधिनी पत्रिका' नामक पत्रिका प्रकाशित की और अंततः 1859 में ब्रह्म समाज में विलय हो गया।"
     },
     {
       "q_num": 35,
-      "question": "The 'Battle of Karnal' (1739) resulted in the defeat of which Mughal Emperor? \n'करनाल का युद्ध' (1739) किस मुगल बादशाह की पराजय का कारण बना?",
+      "question": "The 'Battle of Karnal' (1739) resulted in the defeat of which Mughal Emperor?",
       "options": {
-        "a": "Ahmad Shah / अहमद शाह",
-        "b": "Muhammad Shah / मुहम्मद शाह",
-        "c": "Alamgir II / आलमगीर II",
-        "d": "Shah Alam II / शाह आलम II"
+        "a": "Ahmad Shah",
+        "b": "Muhammad Shah",
+        "c": "Alamgir II",
+        "d": "Shah Alam II"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Battle of Karnal was fought between the Persian invader Nadir Shah and the Mughal Emperor Muhammad Shah 'Rangeela'. The Mughals were defeated, leading to the sack of Delhi.\n\n📖 हिंदी स्पष्टीकरण:\nकरनाल का युद्ध फारसी आक्रमणकारी नादिर शाह और मुगल बादशाह मुहम्मद शाह 'रंगीला' के बीच लड़ा गया था। मुगलों की हार हुई, जिसके परिणामस्वरूप दिल्ली को लूटा गया।"
     },
     {
       "q_num": 36,
-      "question": "Consider the following statements regarding the 'Deoband Movement': \n'देवबंद आंदोलन' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was a revivalist movement organized by the orthodox section among the Muslim Ulema. / यह मुस्लिम उलेमाओं के रूढ़िवादी वर्ग द्वारा आयोजित एक पुनरुत्थानवादी आंदोलन था। \n(b) It aimed to propagate pure teachings of the Quran and Hadith. / इसका उद्देश्य कुरान और हदीस की शुद्ध शिक्षाओं का प्रचार करना था। \n(c) Unlike the Aligarh Movement, it welcomed the formation of the Indian National Congress. / अलीगढ़ आंदोलन के विपरीत, इसने भारतीय राष्ट्रीय कांग्रेस के गठन का स्वागत किया।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Deoband Movement': \n(a) It was a revivalist movement organized by the orthodox section among the Muslim Ulema.\n(b) It aimed to propagate pure teachings of the Quran and Hadith.\n(c) Unlike the Aligarh Movement, it welcomed the formation of the Indian National Congress.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Deoband school (founded in 1866 by Rashid Ahmed Gangohi and Muhammad Qasim Nanotavi) was revivalist and anti-British. They issued a fatwa against Syed Ahmed Khan’s organizations and supported the Congress.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। देवबंद स्कूल (1866 में रशीद अहमद गंगोही और मुहम्मद कासिम नानौतवी द्वारा स्थापित) पुनरुत्थानवादी और ब्रिटिश विरोधी था। उन्होंने सैयद अहमद खान के संगठनों के खिलाफ फतवा जारी किया और कांग्रेस का समर्थन किया।"
     },
     {
       "q_num": 37,
-      "question": "Which European nation established its first factory at Tranquebar (Tharangambadi) in Tamil Nadu? \nकिस यूरोपीय राष्ट्र ने तमिलनाडु के ट्रांकेबार (थारंगमबाड़ी) में अपनी पहली फैक्ट्री स्थापित की?",
+      "question": "Which European nation established its first factory at Tranquebar (Tharangambadi) in Tamil Nadu?",
       "options": {
-        "a": "Dutch / डच",
-        "b": "Danes (Denmark) / डेन्स (डेनमार्क)",
-        "c": "French / फ्रांसीसी",
-        "d": "English / अंग्रेज"
+        "a": "Dutch",
+        "b": "Danes (Denmark)",
+        "c": "French",
+        "d": "English"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Danish East India Company (Danes) established their trade settlement at Tranquebar in 1620. They were more focused on missionary activities than trade.\n\n📖 हिंदी स्पष्टीकरण:\nडेनिश ईस्ट इंडिया कंपनी (डेन्स) ने 1620 में ट्रांकेबार में अपनी व्यापारिक बस्ती स्थापित की। वे व्यापार से अधिक मिशनरी गतिविधियों पर केंद्रित थे।"
     },
     {
       "q_num": 38,
-      "question": "Consider the following statements regarding Shivaji's administration: \nशिवाजी के प्रशासन के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He abolished the Jagirdari system and paid officers in cash. / उन्होंने जागीरदारी प्रथा को समाप्त कर दिया और अधिकारियों को नकद वेतन दिया। \n(b) He introduced a measurement of land known as the 'Kathi' system. / उन्होंने भूमि माप की एक प्रणाली शुरू की जिसे 'काठी' प्रणाली के रूप में जाना जाता है। \n(c) He strictly forbade the collection of Chauth from neighboring territories. / उन्होंने पड़ोसी क्षेत्रों से चौथ की वसूली पर सख्ती से रोक लगा दी।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding Shivaji's administration: \n(a) He abolished the Jagirdari system and paid officers in cash.\n(b) He introduced a measurement of land known as the 'Kathi' system.\n(c) He strictly forbade the collection of Chauth from neighboring territories.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a and c only / केवल a और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a and c only"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement (c) is incorrect because collecting Chauth (1/4th revenue) from neighboring enemy territories (Mughal areas) was a key source of income for Shivaji. Statements (a) and (b) are correct; he preferred Ryotwari and cash payments.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (c) गलत है क्योंकि पड़ोसी दुश्मन क्षेत्रों (मुगल क्षेत्रों) से चौथ (राजस्व का 1/4) वसूलना शिवाजी के लिए आय का एक प्रमुख स्रोत था। कथन (a) और (b) सही हैं; उन्होंने रयतवाड़ी और नकद भुगतान को प्राथमिकता दी।"
     },
     {
       "q_num": 39,
-      "question": "Who among the following established the 'Asiatic Society of Bengal' in 1784? \nनिम्नलिखित में से किसने 1784 में 'एशियाटिक सोसाइटी ऑफ बंगाल' की स्थापना की?",
+      "question": "Who among the following established the 'Asiatic Society of Bengal' in 1784?",
       "options": {
-        "a": "Warren Hastings / वारेन हेस्टिंग्स",
-        "b": "Sir William Jones / सर विलियम जोन्स",
-        "c": "Charles Wilkins / चार्ल्स विल्किंस",
-        "d": "James Prinsep / जेम्स प्रिंसेप"
+        "a": "Warren Hastings",
+        "b": "Sir William Jones",
+        "c": "Charles Wilkins",
+        "d": "James Prinsep"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nSir William Jones, a judge of the Supreme Court at Calcutta, founded the Asiatic Society in 1784 to study Asian history, culture, and texts. Warren Hastings supported it as a patron.\n\n📖 हिंदी स्पष्टीकरण:\nकलकत्ता में सर्वोच्च न्यायालय के न्यायाधीश सर विलियम जोन्स ने एशियाई इतिहास, संस्कृति और ग्रंथों का अध्ययन करने के लिए 1784 में एशियाटिक सोसाइटी की स्थापना की। वारेन हेस्टिंग्स ने संरक्षक के रूप में इसका समर्थन किया।"
     },
     {
       "q_num": 40,
-      "question": "Consider the following statements about the 'Subsidiary Alliance' system: \n'सहायक संधि' प्रणाली के बारे में निम्नलिखित कथनों पर विचार करें: \n(a) It was introduced by Lord Wellesley. / इसे लॉर्ड वेलेस्ली द्वारा शुरू किया गया था। \n(b) The Nizam of Hyderabad was the first Indian ruler to accept this alliance. / हैदराबाद का निजाम इस संधि को स्वीकार करने वाला पहला भारतीय शासक था। \n(c) Under this, the Indian ruler had to disband his own army and maintain British troops. / इसके तहत, भारतीय शासक को अपनी सेना भंग करनी पड़ती थी और ब्रिटिश सैनिकों को रखना पड़ता था।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about the 'Subsidiary Alliance' system: \n(a) It was introduced by Lord Wellesley.\n(b) The Nizam of Hyderabad was the first Indian ruler to accept this alliance.\n(c) Under this, the Indian ruler had to disband his own army and maintain British troops.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and c only / केवल a और c",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and c only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Lord Wellesley introduced it (though Dupleix used it earlier). The Nizam accepted it in 1798. The ruler had to station British troops at his expense and let go of his own standing army.\n\n📖 हिंदी स्पष्टीकरण:\nभी कथन सही हैं। लॉर्ड वेलेस्ली ने इसे शुरू किया (हालाँकि डुप्ले ने इसे पहले इस्तेमाल किया था)। निजाम ने इसे 1798 में स्वीकार किया। शासक को अपने खर्च पर ब्रिटिश सैनिकों को तैनात करना पड़ता था और अपनी स्थायी सेना को छोड़ना पड़ता था।"
     },
     {
       "q_num": 41,
-      "question": "Which Mughal Emperor granted the 'Diwani Rights' of Bengal, Bihar, and Odisha to the East India Company? \nकिस मुगल बादशाह ने ईस्ट इंडिया कंपनी को बंगाल, बिहार और ओडिशा के 'दीवानी अधिकार' प्रदान किए?",
+      "question": "Which Mughal Emperor granted the 'Diwani Rights' of Bengal, Bihar, and Odisha to the East India Company?",
       "options": {
-        "a": "Shah Alam II / शाह आलम II",
-        "b": "Bahadur Shah I / बहादुर शाह I",
-        "c": "Farrukhsiyar / फर्रुखसियर",
-        "d": "Akbar II / अकबर II"
+        "a": "Shah Alam II",
+        "b": "Bahadur Shah I",
+        "c": "Farrukhsiyar",
+        "d": "Akbar II"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nFollowing the defeat in the Battle of Buxar (1764), Shah Alam II signed the Treaty of Allahabad (1765) with Robert Clive, granting the Diwani rights (right to collect revenue) to the Company.\n\n📖 हिंदी स्पष्टीकरण:\nबक्सर के युद्ध (1764) में हार के बाद, शाह आलम द्वितीय ने रॉबर्ट क्लाइव के साथ इलाहाबाद की संधि (1765) पर हस्ताक्षर किए, जिससे कंपनी को दीवानी अधिकार (राजस्व वसूलने का अधिकार) मिल गए।"
     },
     {
       "q_num": 42,
-      "question": "Consider the following statements regarding the 'Paramhansa Mandali': \n'परमहंस मंडली' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was founded in Bombay in 1849. / इसकी स्थापना 1849 में बंबई में हुई थी। \n(b) Its founders believed in one God and were primarily interested in breaking caste rules. / इसके संस्थापक एक ईश्वर में विश्वास करते थे और मुख्य रूप से जाति नियमों को तोड़ने में रुचि रखते थे। \n(c) Dadoba Pandurang was closely associated with it. / दादोबा पांडुरंग इससे निकटता से जुड़े थे।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Paramhansa Mandali': \n(a) It was founded in Bombay in 1849.\n(b) Its founders believed in one God and were primarily interested in breaking caste rules.\n(c) Dadoba Pandurang was closely associated with it.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Paramhansa Mandali was a secret socio-religious group in Bombay, founded by Dadoba Pandurang and others. They ate food cooked by lower castes to break caste taboos.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। परमहंस मंडली बंबई में एक गुप्त सामाजिक-धार्मिक समूह था, जिसकी स्थापना दादोबा पांडुरंग और अन्य लोगों ने की थी। वे जातिगत वर्जनाओं को तोड़ने के लिए निचली जातियों द्वारा पकाया गया भोजन खाते थे।"
     },
     {
       "q_num": 43,
-      "question": "The 'Golden Farman' which gave the British the right to trade in the ports of Golconda on payment of a fixed duty was issued in: \n'सुनहरा फरमान' (Golden Farman) जिसने अंग्रेजों को एक निश्चित शुल्क के भुगतान पर गोलकुंडा के बंदरगाहों में व्यापार करने का अधिकार दिया, कब जारी किया गया था?",
+      "question": "The 'Golden Farman' which gave the British the right to trade in the ports of Golconda on payment of a fixed duty was issued in:",
       "options": {
         "a": "1611",
         "b": "1632",
@@ -522,103 +522,103 @@
     },
     {
       "q_num": 44,
-      "question": "Which Maratha leader is often referred to as the 'Machiavelli of Maratha Politics'? \nकिस मराठा नेता को अक्सर 'मराठा राजनीति का मैकियावेली' कहा जाता है?",
+      "question": "Which Maratha leader is often referred to as the 'Machiavelli of Maratha Politics'?",
       "options": {
-        "a": "Mahadji Scindia / महादजी सिंधिया",
-        "b": "Nana Phadnavis / नाना फड़नवीस",
-        "c": "Ahilyabai Holkar / अहिल्याबाई होल्कर",
-        "d": "Raghunath Rao / रघुनाथ राव"
+        "a": "Mahadji Scindia",
+        "b": "Nana Phadnavis",
+        "c": "Ahilyabai Holkar",
+        "d": "Raghunath Rao"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nNana Phadnavis was an influential minister and statesman of the Maratha Empire during the Peshwa administration. He played a key role in holding the Maratha Confederacy together against the British, earning the title 'Machiavelli of Maratha Politics'.\n\n📖 हिंदी स्पष्टीकरण:\nनाना फड़नवीस पेशवा प्रशासन के दौरान मराठा साम्राज्य के एक प्रभावशाली मंत्री और राजनेता थे। उन्होंने अंग्रेजों के खिलाफ मराठा परिसंघ को एक साथ रखने में महत्वपूर्ण भूमिका निभाई, जिससे उन्हें 'मराठा राजनीति का मैकियावेली' की उपाधि मिली।"
     },
     {
       "q_num": 45,
-      "question": "Consider the following statements regarding the 'Veda Samaj': \n'वेद समाज' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was established in Madras in 1864 under the influence of Keshab Chandra Sen. / इसकी स्थापना 1864 में मद्रास में केशव चंद्र सेन के प्रभाव में की गई थी। \n(b) It is often referred to as the Brahmo Samaj of South India. / इसे अक्सर दक्षिण भारत का ब्रह्म समाज कहा जाता है। \n(c) It strictly adhered to the caste system and idol worship. / इसने जाति व्यवस्था और मूर्तिपूजा का सख्ती से पालन किया।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Veda Samaj': \n(a) It was established in Madras in 1864 under the influence of Keshab Chandra Sen.\n(b) It is often referred to as the Brahmo Samaj of South India.\n(c) It strictly adhered to the caste system and idol worship.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a and c only / केवल a और c",
-        "d": "None of the above / उपर्युक्त में से कोई नहीं"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a and c only",
+        "d": "None of the above"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement (c) is incorrect. The Veda Samaj (later renamed Brahmo Samaj of Southern India) condemned caste distinctions and idol worship. Statements (a) and (b) are correct. It was founded by K. Sridharalu Naidu.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (c) गलत है। वेद समाज (बाद में जिसका नाम बदलकर दक्षिण भारत का ब्रह्म समाज कर दिया गया) ने जाति भेद और मूर्तिपूजा की निंदा की। कथन (a) और (b) सही हैं। इसकी स्थापना के. श्रीधरालु नायडू ने की थी।"
     },
     {
       "q_num": 46,
-      "question": "Consider the following statements regarding Aurangzeb’s religious policies: \nऔरंगजेब की धार्मिक नीतियों के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He appointed 'Muhtasibs' to ensure that people led lives according to Sharia law. / उसने यह सुनिश्चित करने के लिए 'मुहतसिब' नियुक्त किए कि लोग शरीयत कानून के अनुसार जीवन व्यतीत करें। \n(b) He prohibited the use of the Kalma on coins. / उसने सिक्कों पर कलमा अंकित करने पर प्रतिबंध लगा दिया। \n(c) He celebrated the Persian festival of Nawroz with great pomp in the court. / उसने दरबार में फारसी त्योहार नवरोज को बड़े धूमधाम से मनाया।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding Aurangzeb’s religious policies: \n(a) He appointed 'Muhtasibs' to ensure that people led lives according to Sharia law.\n(b) He prohibited the use of the Kalma on coins.\n(c) He celebrated the Persian festival of Nawroz with great pomp in the court.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements (a) and (b) are correct. Statement (c) is incorrect because Aurangzeb abolished the celebration of Nawroz as it was considered a Zoroastrian practice and not in line with orthodox Islam.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) और (b) सही हैं। कथन (c) गलत है क्योंकि औरंगजेब ने नवरोज मनाने पर प्रतिबंध लगा दिया था क्योंकि इसे पारसी प्रथा माना जाता था और यह कट्टरपंथी इस्लाम के अनुरूप नहीं था।"
     },
     {
       "q_num": 47,
-      "question": "With reference to the Maratha administration, 'Mirasdars' were: \nमराठा प्रशासन के संदर्भ में, 'मिरासदार' (Mirasdars) कौन थे?",
+      "question": "With reference to the Maratha administration, 'Mirasdars' were:",
       "options": {
-        "a": "State officials who collected Chauth / चौथ वसूलने वाले राज्य के अधिकारी",
-        "b": "Hereditary village headmen / वंशानुगत ग्राम प्रधान",
-        "c": "Holders of hereditary land rights / वंशानुगत भूमि अधिकारों के धारक",
-        "d": "Military commanders of the cavalry / घुड़सवार सेना के सैन्य कमांडर"
+        "a": "State officials who collected Chauth",
+        "b": "Hereditary village headmen",
+        "c": "Holders of hereditary land rights",
+        "d": "Military commanders of the cavalry"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nIn the Maratha state, Mirasdars were the permanent residents of the village who held hereditary rights to their land. They could not be evicted as long as they paid the land revenue.\n\n📖 हिंदी स्पष्टीकरण:\nमराठा राज्य में, मिरासदार गाँव के स्थायी निवासी थे जिनके पास अपनी भूमि के वंशानुगत अधिकार थे। जब तक वे भू-राजस्व का भुगतान करते थे, उन्हें बेदखल नहीं किया जा सकता था।"
     },
     {
       "q_num": 48,
-      "question": "Consider the following statements regarding the 'Prarthana Samaj': \n'प्रार्थना समाज' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) It was founded in Bombay in 1867. / इसकी स्थापना 1867 में बंबई में हुई थी। \n(b) Mahadev Govind Ranade was its main guiding spirit. / महादेव गोविंद रानाडे इसके मुख्य मार्गदर्शक थे। \n(c) It focused on social reforms like inter-caste dining and widow remarriage. / इसने अंतर-जातीय भोजन और विधवा पुनर्विवाह जैसे सामाजिक सुधारों पर ध्यान केंद्रित किया।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Prarthana Samaj': \n(a) It was founded in Bombay in 1867.\n(b) Mahadev Govind Ranade was its main guiding spirit.\n(c) It focused on social reforms like inter-caste dining and widow remarriage.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. Prarthana Samaj was founded by Atmaram Pandurang but gained strength under M.G. Ranade. It worked for the removal of caste restrictions, education of women, and abolition of child marriage.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। प्रार्थना समाज की स्थापना आत्माराम पांडुरंग ने की थी, लेकिन एम.जी. रानाडे के अधीन इसे मजबूती मिली। इसने जातिगत प्रतिबंधों को हटाने, महिलाओं की शिक्षा और बाल विवाह के उन्मूलन के लिए काम किया।"
     },
     {
       "q_num": 49,
-      "question": "Which of the following European companies moved their headquarters from Pulicat to Negapatam in 1690? \nनिम्नलिखित में से किस यूरोपीय कंपनी ने 1690 में अपना मुख्यालय पुलीकट से नागापट्टनम स्थानांतरित कर दिया था?",
+      "question": "Which of the following European companies moved their headquarters from Pulicat to Negapatam in 1690?",
       "options": {
-        "a": "Portuguese / पुर्तगाली",
-        "b": "Dutch / डच",
-        "c": "English / अंग्रेज",
-        "d": "French / फ्रांसीसी"
+        "a": "Portuguese",
+        "b": "Dutch",
+        "c": "English",
+        "d": "French"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Dutch established their presence on the Coromandel Coast and shifted their main seat of government from Pulicat to Negapatam in 1690 to better control the spice trade.\n\n📖 हिंदी स्पष्टीकरण:\nडचों ने कोरोमंडल तट पर अपनी उपस्थिति स्थापित की और मसाला व्यापार को बेहतर ढंग से नियंत्रित करने के लिए 1690 में अपनी सरकार की मुख्य सीट पुलीकट से नागापट्टनम स्थानांतरित कर दी।"
     },
     {
       "q_num": 50,
-      "question": "Consider the following statements regarding the Mughal Emperor Farrukhsiyar: \nमुगल बादशाह फर्रुखसियर के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) He came to power with the help of the Zulfiqar Khan. / वह जुल्फिकार खान की मदद से सत्ता में आया। \n(b) He issued a Royal Farman in 1717 to the British East India Company. / उसने 1717 में ब्रिटिश ईस्ट इंडिया कंपनी को एक शाही फरमान जारी किया। \n(c) He was the first Mughal Emperor to be killed by his own nobles. / वह अपने ही रईसों (अमीरों) द्वारा मारा जाने वाला पहला मुगल बादशाह था।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements regarding the Mughal Emperor Farrukhsiyar: \n(a) He came to power with the help of the Zulfiqar Khan.\n(b) He issued a Royal Farman in 1717 to the British East India Company.\n(c) He was the first Mughal Emperor to be killed by his own nobles.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "b only / केवल b",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "b only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nStatement (a) is incorrect because Farrukhsiyar came to power with the help of the Sayyid Brothers (Zulfiqar Khan helped Jahandar Shah). Statements (b) and (c) are correct. He was executed by the Sayyid Brothers in 1719.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) गलत है क्योंकि फर्रुखसियर सैय्यद बंधुओं की मदद से सत्ता में आया था (जुल्फिकार खान ने जहांदार शाह की मदद की थी)। कथन (b) और (c) सही हैं। 1719 में सैय्यद बंधुओं द्वारा उसे मार दिया गया था।"
     },
     {
       "q_num": 51,
-      "question": "The 'Battle of Kolhapur' (1710) was a result of the internal conflict between: \n'कोल्हापुर का युद्ध' (1710) किसके बीच आंतरिक संघर्ष का परिणाम था?",
+      "question": "The 'Battle of Kolhapur' (1710) was a result of the internal conflict between:",
       "options": {
-        "a": "Shahu and Sambhaji II / शाहू और संभाजी द्वितीय",
-        "b": "Shahu and Tarabai / शाहू और ताराबाई",
-        "c": "Balaji Vishwanath and Mughals / बालाजी विश्वनाथ और मुगल",
-        "d": "Peshwa Bajirao and Nizam / पेशवा बाजीराव और निजाम"
+        "a": "Shahu and Sambhaji II",
+        "b": "Shahu and Tarabai",
+        "c": "Balaji Vishwanath and Mughals",
+        "d": "Peshwa Bajirao and Nizam"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAfter being released by the Mughals, Shahu fought the Battle of Khed (1707) and later conflicts against Tarabai (widow of Rajaram) to claim the Maratha throne. This led to the split of the Maratha kingdom into Satara (Shahu) and Kolhapur (Tarabai's line).\n\n📖 हिंदी स्पष्टीकरण:\nमुगलों द्वारा रिहा किए जाने के बाद, शाहू ने मराठा सिंहासन पर दावा करने के लिए ताराबाई (राजराम की विधवा) के खिलाफ खेड़ का युद्ध (1707) और बाद के संघर्ष लड़े। इसके कारण मराठा साम्राज्य का सतारा (शाहू) और कोल्हापुर (ताराबाई का वंश) में विभाजन हो गया।"
     },
     {
       "q_num": 52,
-      "question": "Match the following Reformers with the publications/works associated with them:\n निम्नलिखित सुधारकों को उनसे संबंधित प्रकाशनों/कार्यों के साथ सुमेलित करें: \n| Reformer / सुधारक | Work / कार्य | \n| :--- | :--- | \n| A. Raja Ram Mohan Roy | 1. Satyarth Prakash / सत्यार्थ प्रकाश | \n| B. Swami Dayanand Saraswati | 2. Sambad Kaumudi / संवाद कौमुदी | \n| C. Jyotiba Phule | 3. Gulamgiri / गुलामगिरी | \n| D. Vivekananda | 4. Prabuddha Bharata / प्रबुद्ध भारत |\nSelect the correct answer: सही उत्तर चुनें:",
+      "question": "Match the following Reformers with the publications/works associated with them:\n| Reformer\n| :--- | :--- | \n| A. Raja Ram Mohan Roy | 1. Satyarth Prakash\n| B. Swami Dayanand Saraswati | 2. Sambad Kaumudi\n| C. Jyotiba Phule | 3. Gulamgiri\n| D. Vivekananda | 4. Prabuddha Bharata\nSelect the correct answer:",
       "options": {
         "a": "A-2, B-1, C-3, D-4",
         "b": "A-1, B-2, C-3, D-4",
@@ -630,96 +630,96 @@
     },
     {
       "q_num": 53,
-      "question": "Consider the following statements regarding the 'Danes' (Danish) in India: \nभारत में 'डेन्स' (डेनमार्क के निवासी) के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) Their principal settlement in India was Serampore in Bengal. / भारत में उनकी प्रमुख बस्ती बंगाल में सीरामपुर थी। \n(b) They sold all their Indian settlements to the British in 1845. / उन्होंने 1845 में अपनी सभी भारतीय बस्तियाँ अंग्रेजों को बेच दीं। \n(c) They were major rivals of the English in the pepper trade of Malabar. / वे मालाबार के काली मिर्च व्यापार में अंग्रेजों के प्रमुख प्रतिद्वंद्वी थे।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Danes' (Danish) in India: \n(a) Their principal settlement in India was Serampore in Bengal.\n(b) They sold all their Indian settlements to the British in 1845.\n(c) They were major rivals of the English in the pepper trade of Malabar.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nStatements (a) and (b) are correct. Statement (c) is incorrect because the Danes were never strong enough to be \"major rivals\" in trade; they were primarily known for their missionary work at Serampore.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (a) और (b) सही हैं। कथन (c) गलत है क्योंकि डेन्स कभी भी व्यापार में \"प्रमुख प्रतिद्वंद्वी\" बनने के लिए पर्याप्त मजबूत नहीं थे; वे मुख्य रूप से सीरामपुर में अपने मिशनरी कार्य के लिए जाने जाते थे।"
     },
     {
       "q_num": 54,
-      "question": "Who was the Maratha king when Aurangzeb executed Sambhaji in 1689? \nजब 1689 में औरंगजेब ने संभाजी को मृत्युदंड दिया, तब मराठा राजा कौन बना?",
+      "question": "Who was the Maratha king when Aurangzeb executed Sambhaji in 1689?",
       "options": {
-        "a": "Shahu / शाहू",
-        "b": "Rajaram / राजाराम",
-        "c": "Shivaji II / शिवाजी द्वितीय",
-        "d": "Tarabai / ताराबाई"
+        "a": "Shahu",
+        "b": "Rajaram",
+        "c": "Shivaji II",
+        "d": "Tarabai"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAfter the execution of Sambhaji (Shivaji's eldest son), his step-brother Rajaram was crowned king as Shahu (Sambhaji's son) was captured by the Mughals.\n\n📖 हिंदी स्पष्टीकरण:\nसंभाजी (शिवाजी के बड़े बेटे) को मृत्युदंड दिए जाने के बाद, उनके सौतेले भाई राजाराम को राजा बनाया गया क्योंकि शाहू (संभाजी के बेटे) को मुगलों ने बंदी बना लिया था।"
     },
     {
       "q_num": 55,
-      "question": "Consider the following statements about the 'Rahnumai Mazdayasnan Sabha': \n'रहनुमाई मजदयस्नन सभा' के बारे में निम्नलिखित कथनों पर विचार करें: \n(a) It was a religious reform association for the Parsis. / यह पारसियों के लिए एक धार्मिक सुधार संघ था। \n(b) It was founded in 1851 by Naoroji Furdonji and Dadabhai Naoroji. / इसकी स्थापना 1851 में नौरोजी फरदोनजी और दादाभाई नौरोजी ने की थी। \n(c) Its objective was to restore the Zoroastrian religion to its pristine purity. / इसका उद्देश्य जरथुस्त्र धर्म को उसकी प्राचीन शुद्धता में बहाल करना था।\nWhich of the statements given above is/are correct? \nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question": "Consider the following statements about the 'Rahnumai Mazdayasnan Sabha': \n(a) It was a religious reform association for the Parsis.\n(b) It was founded in 1851 by Naoroji Furdonji and Dadabhai Naoroji.\n(c) Its objective was to restore the Zoroastrian religion to its pristine purity.\nWhich of the statements given above is/are correct?",
       "options": {
-        "a": "a only / केवल a",
-        "b": "a and b only / केवल a और b",
-        "c": "b and c only / केवल b और c",
-        "d": "a, b and c / a, b और c"
+        "a": "a only",
+        "b": "a and b only",
+        "c": "b and c only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Sabha worked for the modernization of Parsi social customs regarding education and women's status while purging the religion of superstitions.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। सभा ने अंधविश्वासों के धर्म को शुद्ध करते हुए शिक्षा और महिलाओं की स्थिति के संबंध में पारसी सामाजिक रीति-रिवाजों के आधुनिकीकरण के लिए काम किया।"
     },
     {
       "q_num": 56,
-      "question": "What was the 'Cartaze' system introduced by the Portuguese? \nपुर्तगालियों द्वारा शुरू की गई 'कार्टाज़' (Cartaze) प्रणाली क्या थी?",
+      "question": "What was the 'Cartaze' system introduced by the Portuguese?",
       "options": {
-        "a": "A land revenue system in Goa / गोवा में एक भू-राजस्व प्रणाली",
-        "b": "A naval trade license or pass / एक नौसैनिक व्यापार लाइसेंस या पास",
-        "c": "A method of converting locals to Christianity / स्थानीय लोगों को ईसाई धर्म में परिवर्तित करने की एक विधि",
-        "d": "A treaty signed with the Zamorin of Calicut / कालीकट के ज़मोरिन के साथ हस्ताक्षरित एक संधि"
+        "a": "A land revenue system in Goa",
+        "b": "A naval trade license or pass",
+        "c": "A method of converting locals to Christianity",
+        "d": "A treaty signed with the Zamorin of Calicut"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nThe Cartaze was a naval trade license issued by the Portuguese in the Indian Ocean. Any ship entering Portuguese-controlled waters had to pay for this pass or face confiscation.\n\n📖 हिंदी स्पष्टीकरण:\nकार्टाज़ हिंद महासागर में पुर्तगालियों द्वारा जारी किया गया एक नौसैनिक व्यापार लाइसेंस था। पुर्तगाली-नियंत्रित जलक्षेत्र में प्रवेश करने वाले किसी भी जहाज को इस पास के लिए भुगतान करना पड़ता था अन्यथा जब्ती का सामना करना पड़ता था।"
     },
     {
       "q_num": 57,
-      "question": "Which Mughal Emperor was also known as 'Shah-i-Bekhabar'? \nकिस मुगल बादशाह को 'शाह-ए-बेखबर' के नाम से भी जाना जाता था?",
+      "question": "Which Mughal Emperor was also known as 'Shah-i-Bekhabar'?",
       "options": {
-        "a": "Bahadur Shah I / बहादुर शाह I",
-        "b": "Jahandar Shah / जहांदार शाह",
-        "c": "Farrukhsiyar / फर्रुखसियर",
-        "d": "Muhammad Shah / मुहम्मद शाह"
+        "a": "Bahadur Shah I",
+        "b": "Jahandar Shah",
+        "c": "Farrukhsiyar",
+        "d": "Muhammad Shah"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nBahadur Shah I (1707–1712), also known as Muazzam, was called 'Shah-i-Bekhabar' (The Heedless King) by historian Khafi Khan due to his lack of attention to administrative affairs.\n\n📖 हिंदी स्पष्टीकरण:\nबहादुर शाह प्रथम (1707-1712), जिसे मुअज्जम के नाम से भी जाना जाता है, को इतिहासकार खफी खान ने प्रशासनिक मामलों पर ध्यान न देने के कारण 'शाह-ए-बेखबर' कहा था।"
     },
     {
       "q_num": 58,
-      "question": "Consider the following statements regarding the 'Theosophical Society' in India: \nभारत में 'थियोसोफिकल सोसायटी' के संबंध में निम्नलिखित कथनों पर विचार करें: \n(a) Its headquarters were established at Adyar near Madras in 1882. / इसका मुख्यालय 1882 में मद्रास के पास अडयार में स्थापित किया गया था। \n(b) It advocated the revival of ancient religions like Hinduism, Zoroastrianism, and Buddhism. / इसने हिंदू धर्म, जरथुस्त्र धर्म और बौद्ध धर्म जैसे प्राचीन धर्मों के पुनरुत्थान की वकालत की। \n(c) Annie Besant founded the Central Hindu College at Banaras under its influence. / एनी बेसेंट ने इसके प्रभाव में बनारस में सेंट्रल हिंदू कॉलेज की स्थापना की।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements regarding the 'Theosophical Society' in India: \n(a) Its headquarters were established at Adyar near Madras in 1882.\n(b) It advocated the revival of ancient religions like Hinduism, Zoroastrianism, and Buddhism.\n(c) Annie Besant founded the Central Hindu College at Banaras under its influence.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll statements are correct. The Society played a major role in instilling a sense of pride among Indians in their own culture and religion.\n\n📖 हिंदी स्पष्टीकरण:\nसभी कथन सही हैं। सोसायटी ने भारतीयों में अपनी संस्कृति और धर्म के प्रति गर्व की भावना पैदा करने में प्रमुख भूमिका निभाई।"
     },
     {
       "q_num": 59,
-      "question": "During the reign of which Peshwa did the Maratha Empire reach its maximum territorial extent?\nकिस पेशवा के शासनकाल के दौरान मराठा साम्राज्य अपनी अधिकतम क्षेत्रीय सीमा तक पहुँचा?",
+      "question": "During the reign of which Peshwa did the Maratha Empire reach its maximum territorial extent?",
       "options": {
-        "a": "Balaji Vishwanath / बालाजी विश्वनाथ",
-        "b": "Bajirao I / बाजीराव प्रथम",
-        "c": "Balaji Bajirao / बालाजी बाजीराव",
-        "d": "Madhavrao I / माधवराव प्रथम"
+        "a": "Balaji Vishwanath",
+        "b": "Bajirao I",
+        "c": "Balaji Bajirao",
+        "d": "Madhavrao I"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nUnder Balaji Bajirao (Nana Saheb), the Maratha power reached its peak, reaching as far as Attock in the North. However, this period also saw the defeat in the Third Battle of Panipat (1761).\n\n📖 हिंदी स्पष्टीकरण:\nबालाजी बाजीराव (नाना साहब) के अधीन मराठा शक्ति अपने चरम पर पहुँच गई, जो उत्तर में अटक तक फैल गई। हालाँकि, इसी अवधि में पानीपत के तृतीय युद्ध (1761) में पराजय भी हुई।"
     },
     {
       "q_num": 60,
-      "question": "Consider the following statements about the 'Dharma Sabha': \n'धर्म सभा' के बारे में निम्नलिखित कथनों पर विचार करें: \n(a) It was founded by Radhakant Deb in 1830. / इसकी स्थापना 1830 में राधाकांत देब ने की थी। \n(b) It was an orthodox society formed to oppose the reformative efforts of Raja Ram Mohan Roy. / यह राजा राम मोहन राय के सुधारात्मक प्रयासों का विरोध करने के लिए गठित एक रूढ़िवादी संस्था थी। \n(c) It supported the abolition of Sati. / इसने सती प्रथा के उन्मूलन का समर्थन किया।\nWhich of the above statements is/are correct? \nउपर्युक्त में से कौन-सा/से कथन सही है/हैं?",
+      "question": "Consider the following statements about the 'Dharma Sabha': \n(a) It was founded by Radhakant Deb in 1830.\n(b) It was an orthodox society formed to oppose the reformative efforts of Raja Ram Mohan Roy.\n(c) It supported the abolition of Sati.\nWhich of the above statements is/are correct?",
       "options": {
-        "a": "a and b only / केवल a और b",
-        "b": "b and c only / केवल b और c",
-        "c": "a only / केवल a",
-        "d": "a, b and c / a, b और c"
+        "a": "a and b only",
+        "b": "b and c only",
+        "c": "a only",
+        "d": "a, b and c"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nStatement (c) is incorrect. The Dharma Sabha was formed to defend orthodox Hinduism and it specifically petitioned against the abolition of Sati, arguing it was an interference in religious matters.\n\n📖 हिंदी स्पष्टीकरण:\nकथन (c) गलत है। धर्म सभा का गठन रूढ़िवादी हिंदू धर्म की रक्षा के लिए किया गया था और इसने विशेष रूप से सती प्रथा के उन्मूलन के खिलाफ याचिका दायर की थी, यह तर्क देते हुए कि यह धार्मिक मामलों में हस्तक्षेप है।"

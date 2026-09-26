@@ -6,300 +6,300 @@
   "questions": [
     {
       "q_num": 1,
-      "question": "Which phylum is also known as \"Sponges\"? किस संघ को \"स्पंज\" के नाम से भी जाना जाता है?",
+      "question": "Which phylum is also known as \"Sponges\"?",
       "options": {
-        "a": "Coelenterata / सीलेन्ट्रेटा",
-        "b": "Porifera / पोरिफेरा",
-        "c": "Annelida / एनेलिडा",
-        "d": "Mollusca / मोलस्का"
+        "a": "Coelenterata",
+        "b": "Porifera",
+        "c": "Annelida",
+        "d": "Mollusca"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPhylum Porifera includes animals with a perforated body (pores) and cellular level of organization. They are exclusively aquatic and mostly marine\n\n📖 हिंदी स्पष्टीकरण:\nसंघ पोरिफेरा में छिद्रित शरीर वाले जंतु शामिल हैं और इनमें कोशिकीय स्तर का संगठन होता है। ये विशेष रूप से जलीय और अधिकतर समुद्री होते हैं।"
     },
     {
       "q_num": 2,
-      "question": "Which of the following is the largest phylum of the Animal Kingdom? निम्नलिखित में से कौन सा प्राणी जगत का सबसे बड़ा संघ है?",
+      "question": "Which of the following is the largest phylum of the Animal Kingdom?",
       "options": {
-        "a": "Chordata / कॉर्डेटा",
-        "b": "Mollusca / मोलस्का",
-        "c": "Arthropoda / आर्थ्रोपोडा",
-        "d": "Echinodermata / एकाइनोडर्मेटा"
+        "a": "Chordata",
+        "b": "Mollusca",
+        "c": "Arthropoda",
+        "d": "Echinodermata"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArthropoda is the largest phylum, characterized by jointed legs and a chitinous exoskeleton. The class 'Insecta' is the largest class within this phylum\n\n📖 हिंदी स्पष्टीकरण:\nआर्थ्रोपोडा सबसे बड़ा संघ है, जिसकी विशेषता संधियुक्त पैर और काइटिन से बना बाह्यकंकाल है। इस संघ में 'कीट' सबसे बड़ा वर्ग है।"
     },
     {
       "q_num": 3,
-      "question": "The water canal system is a characteristic feature of which phylum? जल नाल तंत्र किस संघ की एक विशिष्ट विशेषता है?",
+      "question": "The water canal system is a characteristic feature of which phylum?",
       "options": {
-        "a": "Ctenophora / टीनोफोरा",
-        "b": "Porifera / पोरिफेरा",
-        "c": "Platyhelminthes / प्लैटीहेल्मिन्थीज",
-        "d": "Annelida / एनेलिडा"
+        "a": "Ctenophora",
+        "b": "Porifera",
+        "c": "Platyhelminthes",
+        "d": "Annelida"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPoriferans have pores called ostia through which water enters a central cavity called Spongocoel. This canal system helps in food gathering and respiratory exchange\n\n📖 हिंदी स्पष्टीकरण:\nपोरिफेरा के जंतुओं में ऑस्टिया नामक छिद्र होते हैं जिनसे पानी स्पंजोसील नामक केंद्रीय गुहा में प्रवेश करता है। यह नाल तंत्र भोजन एकत्र करने और श्वसन विनिमय में मदद करता है।"
     },
     {
       "q_num": 4,
-      "question": "Animals that lack a backbone are called: वे जंतु जिनमें रीढ़ की हड्डी नहीं होती, क्या कहलाते हैं?",
+      "question": "Animals that lack a backbone are called:",
       "options": {
-        "a": "Vertebrates / कशेरुकी",
-        "b": "Invertebrates / अकशेरुकी",
-        "c": "Chordates / रज्जुकी",
-        "d": "Mammals / स्तनधारी"
+        "a": "Vertebrates",
+        "b": "Invertebrates",
+        "c": "Chordates",
+        "d": "Mammals"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAnimals without a vertebral column or backbone are classified as invertebrates. Examples include Porifera, Annelida, and Arthropoda\n\n📖 हिंदी स्पष्टीकरण:\nबिना रीढ़ की हड्डी वाले जंतुओं को अकशेरुकी के रूप में वर्गीकृत किया जाता है। उदाहरणों में पोरिफेरा, एनेलिडा और आर्थ्रोपोडा शामिल हैं।"
     },
     {
       "q_num": 5,
-      "question": "Which of the following animals has radial symmetry? निम्नलिखित में से किस जंतु में अरीय सममिति पाई जाती है?",
+      "question": "Which of the following animals has radial symmetry?",
       "options": {
-        "a": "Earthworm / केंचुआ",
-        "b": "Fish / मछली",
-        "c": "Hydra / हाइड्रा",
-        "d": "Human / मनुष्य"
+        "a": "Earthworm",
+        "b": "Fish",
+        "c": "Hydra",
+        "d": "Human"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nHydra belongs to phylum Coelenterata (Cnidaria), which exhibits radial symmetry where the body can be divided into equal halves through any plane passing through the center\n\n📖 हिंदी स्पष्टीकरण:\nहाइड्रा संघ सीलेन्ट्रेटा (निडेरिया) से संबंधित है, जो अरीय सममिति प्रदर्शित करता है जहाँ शरीर को केंद्र से गुजरने वाले किसी भी तल के माध्यम से दो समान भागों में विभाजित किया जा सकता है।"
     },
     {
       "q_num": 6,
-      "question": "What is the level of organization in Phylum Porifera? संघ पोरिफेरा में संगठन का स्तर क्या है?",
+      "question": "What is the level of organization in Phylum Porifera?",
       "options": {
-        "a": "Tissue level / ऊतक स्तर",
-        "b": "Cellular level / कोशिकीय स्तर",
-        "c": "Organ level / अंग स्तर",
-        "d": "Organ system level / अंग तंत्र स्तर"
+        "a": "Tissue level",
+        "b": "Cellular level",
+        "c": "Organ level",
+        "d": "Organ system level"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nPoriferans are multicellular but the cells are loosely arranged and do not form tissues. This is known as cellular level organization\n\n📖 हिंदी स्पष्टीकरण:\nपोरिफेरा बहुकोशिकीय होते हैं लेकिन कोशिकाएं शिथिल रूप से व्यवस्थित होती हैं और ऊतकों का निर्माण नहीं करती हैं। इसे कोशिकीय स्तर का संगठन कहा जाता है।"
     },
     {
       "q_num": 7,
-      "question": "Flame cells are the excretory organs in: ज्वाला कोशिकाएं किसमें उत्सर्जन अंग होती हैं?",
+      "question": "Flame cells are the excretory organs in:",
       "options": {
-        "a": "Roundworms / गोलकृमि",
-        "b": "Flatworms / चपटे कृमि",
-        "c": "Earthworms / केंचुए",
-        "d": "Insects / कीट"
+        "a": "Roundworms",
+        "b": "Flatworms",
+        "c": "Earthworms",
+        "d": "Insects"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nFlatworms (Platyhelminthes) possess specialized cells called flame cells for excretion and osmoregulation. Examples include Planaria and Tapeworms\n\n📖 हिंदी स्पष्टीकरण:\nचपटे कृमि (प्लैटीहेल्मिन्थीज) में उत्सर्जन और परासरण नियमन के लिए विशिष्ट कोशिकाएं होती हैं जिन्हें ज्वाला कोशिकाएं कहा जाता है। उदाहरणों में प्लेनेरिया और फीताकृमि शामिल हैं।"
     },
     {
       "q_num": 8,
-      "question": "Which of the following is an example of Phylum Mollusca? निम्नलिखित में से कौन सा संघ मोलस्का का एक उदाहरण है?",
+      "question": "Which of the following is an example of Phylum Mollusca?",
       "options": {
-        "a": "Crab / केकड़ा",
-        "b": "Pila (Snail) / पाइला (घोंघा)",
-        "c": "Starfish / तारा मछली",
-        "d": "Ascaris / एस्केरिस"
+        "a": "Crab",
+        "b": "Pila (Snail)",
+        "c": "Starfish",
+        "d": "Ascaris"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nMollusca is the second largest phylum characterized by soft bodies often protected by a hard calcareous shell. Pila and Octopus are common examples\n\n📖 हिंदी स्पष्टीकरण:\nमोलस्का दूसरा सबसे बड़ा संघ है जिसकी विशेषता कोमल शरीर है जो अक्सर कठोर कैल्शियम युक्त खोल द्वारा संरक्षित होता है। पाइला और ऑक्टोपस इसके सामान्य उदाहरण हैं।"
     },
     {
       "q_num": 9,
-      "question": "Which phylum contains \"spiny-skinned\" organisms? किस संघ में \"कांटेदार त्वचा\" वाले जीव होते हैं?",
+      "question": "Which phylum contains \"spiny-skinned\" organisms?",
       "options": {
-        "a": "Echinodermata / एकाइनोडर्मेटा",
-        "b": "Arthropoda / आर्थ्रोपोडा",
-        "c": "Mollusca / मोलस्का",
-        "d": "Chordata / कॉर्डेटा"
+        "a": "Echinodermata",
+        "b": "Arthropoda",
+        "c": "Mollusca",
+        "d": "Chordata"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThe name Echinodermata means spiny skin. These are marine animals with a water vascular system and radial symmetry in adults\n\n📖 हिंदी स्पष्टीकरण:\nएकाइनोडर्मेटा नाम का अर्थ है कांटेदार त्वचा। ये समुद्री जंतु हैं जिनमें जल संवहनी तंत्र होता है और वयस्कों में अरीय सममिति पाई जाती है।"
     },
     {
       "q_num": 10,
-      "question": "Segmented body is a primary feature of which phylum? खंडित शरीर किस संघ की प्राथमिक विशेषता है?",
+      "question": "Segmented body is a primary feature of which phylum?",
       "options": {
-        "a": "Porifera / पोरिफेरा",
-        "b": "Annelida / एनेलिडा",
-        "c": "Cnidaria / निडेरिया",
-        "d": "Platyhelminthes / प्लैटीहेल्मिन्थीज"
+        "a": "Porifera",
+        "b": "Annelida",
+        "c": "Cnidaria",
+        "d": "Platyhelminthes"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAnnelida shows true segmentation or metamerism, where the body is divided into ring-like segments. Earthworms and leeches belong to this phylum\n\n📖 हिंदी स्पष्टीकरण:\nएनेलिडा वास्तविक विखंडन प्रदर्शित करता है, जहाँ शरीर छल्ले जैसे खंडों में विभाजित होता है। केंचुआ और जोंक इसी संघ से संबंधित हैं।"
     },
     {
       "q_num": 11,
-      "question": "Open circulatory system is found in which of the following phyla? खुला परिसंचरण तंत्र निम्नलिखित में से किस संघ में पाया जाता है?",
+      "question": "Open circulatory system is found in which of the following phyla?",
       "options": {
-        "a": "Annelida and Chordata / एनेलिडा और कॉर्डेटा",
-        "b": "Arthropoda and Mollusca / आर्थ्रोपोडा और मोलस्का",
-        "c": "Platyhelminthes and Nematoda / प्लैटीहेल्मिन्थीज और नेमाटोडा",
-        "d": "Echinodermata and Annelida / एकाइनोडर्मेटा और एनेलिडा"
+        "a": "Annelida and Chordata",
+        "b": "Arthropoda and Mollusca",
+        "c": "Platyhelminthes and Nematoda",
+        "d": "Echinodermata and Annelida"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nIn an open circulatory system, blood flows through body cavities instead of closed vessels. This is typical of Arthropoda and most Molluscans\n\n📖 हिंदी स्पष्टीकरण:\nखुले परिसंचरण तंत्र में, रक्त बंद वाहिकाओं के बजाय शरीर की गुहाओं के माध्यम से बहता है। यह आर्थ्रोपोडा और अधिकांश मोलस्का की विशेषता है।"
     },
     {
       "q_num": 12,
-      "question": "What is the main characteristic of \"Diploblastic\" animals? \"द्विकोरकी\" जंतुओं की मुख्य विशेषता क्या है?",
+      "question": "What is the main characteristic of \"Diploblastic\" animals? \"",
       "options": {
-        "a": "Presence of three germ layers / तीन जनन स्तरों की उपस्थिति",
-        "b": "Body cavity is absent / शरीर की गुहा अनुपस्थित होती है।",
-        "c": "Body is made of two germ layers (Ectoderm and Endoderm) / शरीर दो जनन स्तरों (एक्टोडर्म और एंडोडर्म) से बना होता है।",
-        "d": "True coelom is present / वास्तविक सीलोम मौजूद होता है।"
+        "a": "Presence of three germ layers",
+        "b": "Body cavity is absent",
+        "c": "Body is made of two germ layers (Ectoderm and Endoderm)",
+        "d": "True coelom is present"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDiploblastic animals like Porifera and Coelenterata have only two germinal layers, with a non-cellular mesoglea in between\n\n📖 हिंदी स्पष्टीकरण:\nपोरिफेरा और सीलेन्ट्रेटा जैसे द्विकोरकी जंतुओं में केवल दो जनन स्तर होते हैं, जिनके बीच में एक अकोशिकीय मेसोग्लिया होता है।"
     },
     {
       "q_num": 13,
-      "question": "Animals belonging to Phylum Aschelminthes (Nematoda) are characterized by: संघ एस्केल्मिन्थीज (नेमाटोडा) से संबंधित जंतुओं की विशेषता क्या है?",
+      "question": "Animals belonging to Phylum Aschelminthes (Nematoda) are characterized by:",
       "options": {
-        "a": "Acoelom / अगुहिक",
-        "b": "Pseudocoelom / कूटगुहिक",
-        "c": "True Coelom / वास्तविक गुहिक",
-        "d": "No body cavity / शरीर गुहा का अभाव"
+        "a": "Acoelom",
+        "b": "Pseudocoelom",
+        "c": "True Coelom",
+        "d": "No body cavity"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nAschelminthes have a false body cavity called a pseudocoelom, which is not lined by mesoderm. They are often worm-shaped and parasitic\n\n📖 हिंदी स्पष्टीकरण:\nएस्केल्मिन्थीज में एक कूट शरीर गुहा होती है जिसे कूटगुहिक कहा जाता है, जो मेसोडर्म द्वारा स्तरित नहीं होती है। ये अक्सर कृमि के आकार के और परजीवी होते हैं।"
     },
     {
       "q_num": 14,
-      "question": "Nephridia are the excretory structures found in: नेफ्रीडिया किसमें पाई जाने वाली उत्सर्जन संरचनाएं हैं?",
+      "question": "Nephridia are the excretory structures found in:",
       "options": {
-        "a": "Arthropods / आर्थ्रोपोडा",
-        "b": "Molluscs / मोलस्का",
-        "c": "Annelids / एनेलिडा",
-        "d": "Echinoderms / एकाइनोडर्म"
+        "a": "Arthropods",
+        "b": "Molluscs",
+        "c": "Annelids",
+        "d": "Echinoderms"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAnnelids like earthworms use nephridia for osmoregulation and excretion. They also possess a closed circulatory system and a true coelom\n\n📖 हिंदी स्पष्टीकरण:\nकेंचुआ जैसे एनेलिडा परासरण नियमन और उत्सर्जन के लिए नेफ्रीडिया का उपयोग करते हैं। उनमें बंद परिसंचरण तंत्र और वास्तविक गुहिक भी होता है।"
     },
     {
       "q_num": 15,
-      "question": "The exoskeleton of Arthropods is chemically composed of: आर्थ्रोपोडा का बाह्यकंकाल रासायनिक रूप से किससे बना होता है?",
+      "question": "The exoskeleton of Arthropods is chemically composed of:",
       "options": {
-        "a": "Calcium chloride / कैल्शियम क्लोराइड",
-        "b": "Chitin / काइटिन",
-        "c": "Silica / सिलिका",
-        "d": "Spongin fibers / स्पोंजिन फाइबर"
+        "a": "Calcium chloride",
+        "b": "Chitin",
+        "c": "Silica",
+        "d": "Spongin fibers"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nArthropods possess a hard outer covering called an exoskeleton made of chitin, which provides protection and support\n\n📖 हिंदी स्पष्टीकरण:\nआर्थ्रोपोडा में काइटिन से बना एक कठोर बाहरी आवरण होता है जिसे बाह्यकंकाल कहा जाता है, जो सुरक्षा और सहायता प्रदान करता है।"
     },
     {
       "q_num": 16,
-      "question": "Assertion (A): In Phylum Porifera, digestion is intracellular.\n Reason (R): Poriferans lack a digestive system (Alimentary canal).\n कथन (A): संघ पोरिफेरा में पाचन अंतःकोशिकीय होता है।\n कारण (R): पोरिफेरा में पाचन तंत्र (आहार नाल) का अभाव होता है।",
+      "question": "Assertion (A): In Phylum Porifera, digestion is intracellular.\n Reason (R): Poriferans lack a digestive system (Alimentary canal).",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nSince Porifera have a cellular level of organization, they lack organs and a digestive tract; hence digestion occurs within cells\n\n📖 हिंदी स्पष्टीकरण:\nचूँकि पोरिफेरा में कोशिकीय स्तर का संगठन होता है, उनमें अंगों और पाचन मार्ग का अभाव होता है; इसलिए पाचन कोशिकाओं के भीतर होता है।"
     },
     {
       "q_num": 17,
-      "question": "Which of the following statements about Phylum Chordata is correct? संघ कॉर्डेटा के बारे में निम्नलिखित में से कौन सा कथन सही है?\n 1. Presence of a notochord at some stage of life. / जीवन के किसी न किसी चरण में पृष्ठरज्जू की उपस्थिति।\n 2. Dorsal hollow nerve cord is present. / पृष्ठीय खोखली तंत्रिका रज्जु उपस्थित होती है।\n 3. Heart is ventral. / हृदय उदर की ओर स्थित होता है।",
+      "question": "Which of the following statements about Phylum Chordata is correct?\n1. Presence of a notochord at some stage of life.\n2. Dorsal hollow nerve cord is present.\n3. Heart is ventral.",
       "options": {
-        "a": "Only 1 / केवल 1",
-        "b": "Only 1 and 2 / केवल 1 और 2",
-        "c": "Only 2 and 3 / केवल 2 और 3",
-        "d": "1, 2, and 3 / 1, 2, और 3"
+        "a": "Only 1",
+        "b": "Only 1 and 2",
+        "c": "Only 2 and 3",
+        "d": "1, 2, and 3"
       },
       "answer": "d",
       "solution": "📖 English Explanation:\nAll chordates are characterized by a notochord, a dorsal nerve cord, pharyngeal gill slits, and a ventral heart\n\n📖 हिंदी स्पष्टीकरण:\nसभी कॉर्डेटा की विशेषता पृष्ठरज्जू, एक पृष्ठीय तंत्रिका रज्जु, ग्रसनी क्लोम दरारें और एक अधर हृदय है।"
     },
     {
       "q_num": 18,
-      "question": "Assertion (A): Ctenophores are commonly called \"Sea Walnuts\".\n Reason (R): They have eight external rows of ciliated comb plates.\n कथन (A): टीनोफोरा को आमतौर पर \"समुद्री अखरोट\" कहा जाता है।\n कारण (R): उनके पास पक्ष्माभी कंठिका पट्टिकाओं की आठ बाहरी पंक्तियाँ होती हैं।",
+      "question": "Assertion (A): Ctenophores are commonly called \"Sea Walnuts\".\n Reason (R): They have eight external rows of ciliated comb plates.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nCtenophores are known as sea walnuts or comb jellies due to their appearance and the presence of comb plates for locomotion\n\n📖 हिंदी स्पष्टीकरण:\nटीनोफोरा को उनकी बनावट और गमन के लिए कंठिका पट्टिकाओं की उपस्थिति के कारण समुद्री अखरोट या कॉम्ब जेली के रूप में जाना जाता है।"
     },
     {
       "q_num": 19,
-      "question": "Which statement is INCORRECT regarding Phylum Platyhelminthes? संघ प्लैटीहेल्मिन्थीज के संबंध में कौन सा कथन गलत है?",
+      "question": "Which statement is INCORRECT regarding Phylum Platyhelminthes?",
       "options": {
-        "a": "They are triploblastic. / वे त्रिकोरकी होते हैं।",
-        "b": "They are acoelomate. / वे अगुहिक होते हैं।",
-        "c": "They have a complete digestive system. / उनमें पूर्ण पाचन तंत्र होता है।",
-        "d": "They show bilateral symmetry. / वे द्विपार्श्व सममिति प्रदर्शित करते हैं।"
+        "a": "They are triploblastic.",
+        "b": "They are acoelomate.",
+        "c": "They have a complete digestive system.",
+        "d": "They show bilateral symmetry."
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nPlatyhelminthes have an incomplete digestive system with a single opening for both mouth and anus\n\n📖 हिंदी स्पष्टीकरण:\nप्लैटीहेल्मिन्थीज में एक अपूर्ण पाचन तंत्र होता है जिसमें मुख और गुदा दोनों के लिए एक ही द्वार होता है।"
     },
     {
       "q_num": 20,
-      "question": "Assertion (A): Echinoderms show radial symmetry as adults but bilateral symmetry in larval stages.\n Reason (R): They possess a water vascular system for locomotion.\n कथन (A): एकाइनोडर्म वयस्कों के रूप में अरीय सममिति दिखाते हैं लेकिन लार्वा अवस्था में द्विपार्श्व सममिति दिखाते हैं।\n कारण (R): उनके पास गमन के लिए जल संवहनी तंत्र होता है।",
+      "question": "Assertion (A): Echinoderms show radial symmetry as adults but bilateral symmetry in larval stages.\n Reason (R): They possess a water vascular system for locomotion.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "b",
       "solution": "📖 English Explanation:\nBoth statements are true biological facts about Echinoderms, but the presence of a water vascular system does not explain their symmetry\n\n📖 हिंदी स्पष्टीकरण:\nदोनों कथन एकाइनोडर्म के बारे में सही जैविक तथ्य हैं, लेकिन जल संवहनी तंत्र की उपस्थिति उनकी सममिति की व्याख्या नहीं करती है।"
     },
     {
       "q_num": 21,
-      "question": "Choose the correct set of examples for Phylum Coelenterata (Cnidaria): संघ सीलेन्ट्रेटा (निडेरिया) के लिए उदाहरणों का सही सेट चुनें:",
+      "question": "Choose the correct set of examples for Phylum Coelenterata (Cnidaria):",
       "options": {
-        "a": "Hydra, Jellyfish, Sea Anemone / हाइड्रा, जेलीफ़िश, सी एनीमोन",
-        "b": "Sponge, Sycon, Spongilla / स्पंज, साइकन, स्पोंजिला",
-        "c": "Planaria, Liver fluke, Tapeworm / प्लेनेरिया, लिवर फ्लूक, फीताकृमि",
-        "d": "Ascaris, Hookworm, Filarial worm / एस्केरिस, हुकवर्म, फाइलेरिया वर्म"
+        "a": "Hydra, Jellyfish, Sea Anemone",
+        "b": "Sponge, Sycon, Spongilla",
+        "c": "Planaria, Liver fluke, Tapeworm",
+        "d": "Ascaris, Hookworm, Filarial worm"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nThese are all cnidarians characterized by tissue-level organization and stinging cells called cnidoblasts\n\n📖 हिंदी स्पष्टीकरण:\nये सभी निडेरियन हैं जिनकी विशेषता ऊतक-स्तर का संगठन और निडोब्लास्ट नामक दंश कोशिकाएं हैं।"
     },
     {
       "q_num": 22,
-      "question": "Statement I: Malpighian tubules are excretory organs of insects (Arthropoda).\n Statement II: Earthworms (Annelida) use their moist skin for respiration.\n कथन I: मैल्पीघियन नलिकाएं कीटों (आर्थ्रोपोडा) के उत्सर्जन अंग हैं।\n कथन II: केंचुए (एनेलिडा) श्वसन के लिए अपनी नम त्वचा का उपयोग करते हैं।",
+      "question": "Statement I: Malpighian tubules are excretory organs of insects (Arthropoda).\n Statement II: Earthworms (Annelida) use their moist skin for respiration.",
       "options": {
-        "a": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
-        "b": "Statement I is incorrect, II is correct / कथन I गलत है, II सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, II is incorrect",
+        "b": "Statement I is incorrect, II is correct",
+        "c": "Both statements are correct",
+        "d": "Both statements are incorrect"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nArthropods like insects excrete through Malpighian tubules, while Annelids like earthworms lack specialized respiratory organs and breathe through their skin\n\n📖 हिंदी स्पष्टीकरण:\nकीट जैसे आर्थ्रोपोडा मैल्पीघियन नलिकाओं के माध्यम से उत्सर्जन करते हैं, जबकि केंचुआ जैसे एनेलिडा में विशिष्ट श्वसन अंगों का अभाव होता है और वे अपनी त्वचा के माध्यम से सांस लेते हैं।"
     },
     {
       "q_num": 23,
-      "question": "Assertion (A): Molluscs have a hard calcareous shell.\n Reason (R): It provides protection to their soft unsegmented body.\n कथन (A): मोलस्का में एक कठोर कैल्शियम युक्त खोल होता है।\n कारण (R): यह उनके कोमल अख़ंडित शरीर को सुरक्षा प्रदान करता है।",
+      "question": "Assertion (A): Molluscs have a hard calcareous shell.\n Reason (R): It provides protection to their soft unsegmented body.",
       "options": {
-        "a": "Both A and R are true, and R is the correct explanation of A / A और R दोनों सत्य हैं, और R, A की सही व्याख्या है।",
-        "b": "Both A and R are true, but R is NOT the correct explanation of A / A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।",
-        "c": "A is true but R is false / A सत्य है लेकिन R असत्य है।",
-        "d": "A is false but R is true / A असत्य है लेकिन R सत्य है।"
+        "a": "Both A and R are true, and R is the correct explanation of A",
+        "b": "Both A and R are true, but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
       },
       "answer": "a",
       "solution": "📖 English Explanation:\nMolluscs are soft-bodied animals and most species secrete a shell for defense against predators\n\n📖 हिंदी स्पष्टीकरण:\nमोलस्का कोमल शरीर वाले जंतु होते हैं और अधिकांश प्रजातियां शिकारियों से बचाव के लिए खोल का स्राव करती हैं।"
     },
     {
       "q_num": 24,
-      "question": "Which of the following is NOT a characteristic of Phylum Annelida? निम्नलिखित में से कौन सा संघ एनेलिडा की विशेषता नहीं है?",
+      "question": "Which of the following is NOT a characteristic of Phylum Annelida?",
       "options": {
-        "a": "Triploblastic / त्रिकोरकी",
-        "b": "Bilateral symmetry / द्विपार्श्व सममिति",
-        "c": "Pseudocoelom / कूटगुहिक",
-        "d": "Closed circulatory system / बंद परिसंचरण तंत्र"
+        "a": "Triploblastic",
+        "b": "Bilateral symmetry",
+        "c": "Pseudocoelom",
+        "d": "Closed circulatory system"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nAnnelids are true coelomates (Eucoelomates), meaning they have a body cavity completely lined by mesoderm\n\n📖 हिंदी स्पष्टीकरण:\nएनेलिडा वास्तविक गुहिक (प्रगुही) होते हैं, जिसका अर्थ है कि उनमें मध्यजनस्तर द्वारा पूरी तरह से स्तरित शरीर गुहा होती है।"
     },
     {
       "q_num": 25,
-      "question": "Statement I: Cuttle fish belongs to Phylum Mollusca.\n Statement II: Starfish belongs to Phylum Echinodermata.\n कथन I: कटल फिश संघ मोलस्का से संबंधित है।\n कथन II: स्टारफिश संघ एकाइनोडर्मेटा से संबंधित है।",
+      "question": "Statement I: Cuttle fish belongs to Phylum Mollusca.\n Statement II: Starfish belongs to Phylum Echinodermata.",
       "options": {
-        "a": "Statement I is correct, II is incorrect / कथन I सही है, II गलत है।",
-        "b": "Statement I is incorrect, II is correct / कथन I गलत है, II सही है।",
-        "c": "Both statements are correct / दोनों कथन सही हैं।",
-        "d": "Both statements are incorrect / दोनों कथन गलत हैं।"
+        "a": "Statement I is correct, II is incorrect",
+        "b": "Statement I is incorrect, II is correct",
+        "c": "Both statements are correct",
+        "d": "Both statements are incorrect"
       },
       "answer": "c",
       "solution": "📖 English Explanation:\nDespite having \"fish\" in their names, Cuttlefish is a mollusc and Starfish is an echinoderm; neither is a true fish (Pisces)\n\n📖 हिंदी स्पष्टीकरण:\nअपने नाम में \"मछली\" होने के बावजूद, कटलफिश एक मोलस्का है और स्टारफिश एक एकाइनोडर्म है; दोनों में से कोई भी वास्तविक मछली (मत्स्य) नहीं है।"
