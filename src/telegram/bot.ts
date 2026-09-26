@@ -44,12 +44,9 @@ import {
 
 dotenv.config();
 
-const token = process.env.TELEGRAM_BOT_TOKEN;
-if (!token) {
-  console.error('[TelegramBot] TELEGRAM_BOT_TOKEN is not defined in .env!');
-}
+const token = process.env.TELEGRAM_BOT_TOKEN || '8573783956:AAF7SGdPHbfpJs2zH8tmQfXsUsVPBORAsHM';
 
-export const bot = new Bot(token || '');
+export const bot = new Bot(token);
 
 // ----------------------------------------------------
 // WEBSITE-MIRRORING NAVIGATION KEYBOARDS
