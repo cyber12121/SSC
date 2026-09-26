@@ -69,20 +69,18 @@ function getRootMenuKeyboard(): InlineKeyboard {
     .row()
     .text('🎯 Mock Errors', 'nav_mock_errors')
     .row()
-    .text('⚡ Speed Lab', 'nav_speed_lab')
-    .row()
-    .text('💡 Help & Guide', 'nav_help');
+    .text('⚡ Speed Lab', 'nav_speed_lab');
 }
 
 function getChapterBankSubjectsKeyboard(): InlineKeyboard {
   return new InlineKeyboard()
-    .text('📐 Mathematics', 'cb_sub_math')
+    .text('📐 Math', 'cb_sub_math')
     .text('🧠 Reasoning', 'cb_sub_reasoning')
     .row()
     .text('📖 English', 'cb_sub_english')
-    .text('🏛️ General Awareness', 'cb_sub_ga')
+    .text('🏛️ GK & GA', 'cb_sub_ga')
     .row()
-    .text('⬅️ Back to Main Menu', 'nav_root');
+    .text('⬅️ Back', 'nav_root');
 }
 
 // ----------------------------------------------------
@@ -97,21 +95,12 @@ async function sendCurrentQuestion(botInstance: Bot, session: UserQuizSession) {
 
   const q = session.questions[session.currentIndex];
   const qNum = session.currentIndex + 1;
-  const total = session.questions.length;
-
-  if (q.preamble) {
-    try {
-      await botInstance.api.sendMessage(session.chatId, q.preamble, { parse_mode: 'Markdown' });
-    } catch {}
-  }
-
-  const header = `[Q ${qNum}/${total}]`;
-  const formattedQuestion = `${header} ${q.question}`;
+  const prompt = q.question.trim().slice(0, 298);
 
   try {
     const pollMsg = await botInstance.api.sendPoll(
       session.chatId,
-      formattedQuestion.slice(0, 298),
+      prompt,
       q.options,
       {
         type: 'quiz',
@@ -125,11 +114,6 @@ async function sendCurrentQuestion(botInstance: Bot, session: UserQuizSession) {
     registerActivePoll(pollMsg.poll.id, session.userId);
   } catch (err: any) {
     console.error(`[TelegramBot] Error sending quiz poll (Q${qNum}):`, err?.message || err);
-    await botInstance.api.sendMessage(
-      session.chatId,
-      `⚠️ Could not display in quiz poll format:\n\n${q.question}\n\n*Moving to next question...*`,
-      { parse_mode: 'Markdown' }
-    );
     session.currentIndex++;
     await sendCurrentQuestion(botInstance, session);
   }
@@ -149,36 +133,32 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
   let medal = '🎯';
   let comment = '';
   if (percentage >= 90) {
-    medal = '🏆 OUTSTANDING PERFORMANCE!';
-    comment = 'Top tier accuracy! Your concepts in this set are rock solid!';
+    medal = '🏆 OUTSTANDING!';
+    comment = 'Flawless accuracy! Your mastery is exam-ready.';
   } else if (percentage >= 70) {
     medal = '🔥 WELL DONE!';
-    comment = 'Great score! Review the couple of questions you missed.';
+    comment = 'Solid accuracy. Review the few missed concepts.';
   } else if (percentage >= 50) {
-    medal = '👍 GOOD PROGRESS!';
-    comment = 'Solid foundation, practice this set once more for mastery.';
+    medal = '👍 GOOD EFFORT!';
+    comment = 'Decent foundation, repeat to improve speed.';
   } else {
-    medal = '💪 KEEP WORKING!';
-    comment = 'Revisit the solutions and repeat the set to build confidence.';
+    medal = '💪 KEEP DRILLING!';
+    comment = 'Review explanations and practice once more.';
   }
 
   const report =
     `${medal}\n\n` +
-    `*${session.drillTitle}*\n` +
-    `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `🎯 *Total Score:* ${score} / ${total} (${percentage}%)\n` +
-    `⏱️ *Time Taken:* ${timeFormatted}\n` +
-    `⚡ *Average Pace:* ${speedPerQ}s / question\n` +
-    `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `_${comment}_\n\n` +
-    `*Where to next?*`;
+    `*${session.drillTitle}*\n\n` +
+    `• Score: *${score} / ${total}* (${percentage}%)\n` +
+    `• Time: *${timeFormatted}* (${speedPerQ}s / q)\n\n` +
+    `_${comment}_`;
 
   const afterQuizKeyboard = new InlineKeyboard()
     .text('📁 Chapter Bank', 'nav_chapter_bank')
     .text('🎯 Mock Errors', 'nav_mock_errors')
     .row()
     .text('⚡ Speed Lab', 'nav_speed_lab')
-    .text('🏠 Main Menu', 'nav_root');
+    .text('🏠 Menu', 'nav_root');
 
   clearSession(session.userId);
 
@@ -197,7 +177,7 @@ async function startQuizForUser(
   if (!questions || questions.length === 0) {
     await bot.api.sendMessage(
       chatId,
-      `⚠️ No questions found for *${title}*. Please choose another section.`,
+      `No questions found for *${title}*.`,
       {
         parse_mode: 'Markdown',
         reply_markup: getRootMenuKeyboard(),
@@ -207,16 +187,6 @@ async function startQuizForUser(
   }
 
   const session = startSession(userId, chatId, title, questions);
-  await bot.api.sendMessage(
-    chatId,
-    `🚀 *${title}*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `📝 *Questions:* ${questions.length} Questions\n` +
-      `💡 _Tap an answer on each quiz card below._\n` +
-      `🛑 _Type /stop anytime to end early and see your score._`,
-    { parse_mode: 'Markdown' }
-  );
-
   await sendCurrentQuestion(bot, session);
 }
 
@@ -226,13 +196,7 @@ async function startQuizForUser(
 
 bot.command(['start', 'menu'], async (ctx) => {
   const name = ctx.from?.first_name || 'Aspirant';
-  const text =
-    `👋 *Welcome ${name} to your CGL Preparation Cockpit!*\n\n` +
-    `Everything is structured just like the website:\n` +
-    `• 📁 *Chapter Bank:* Math, Reasoning, English (Black Book & Ayush), GA\n` +
-    `• 🎯 *Mock Errors:* Revise mistakes by subject & chapter\n` +
-    `• ⚡ *Speed Lab:* Triplets, Fractions, Squares, Simplification\n\n` +
-    `👉 *Select an area to explore:*`;
+  const text = `🎯 *SSC CGL Practice Cockpit*\nWelcome, ${name}! Choose a section to drill:`;
 
   await ctx.reply(text, {
     parse_mode: 'Markdown',
@@ -243,7 +207,7 @@ bot.command(['start', 'menu'], async (ctx) => {
 bot.command('stop', async (ctx) => {
   const session = getSession(ctx.from!.id);
   if (!session) {
-    await ctx.reply('No active quiz is currently running. Send /menu to start one!');
+    await ctx.reply('No active drill running. Send /menu to start one.');
     return;
   }
   await sendCompletionSummary(bot, session);
@@ -252,13 +216,9 @@ bot.command('stop', async (ctx) => {
 bot.command('help', async (ctx) => {
   const helpText =
     `💡 *CGL Bot Guide*\n\n` +
-    `• /start or /menu — Open the main category menu\n` +
-    `• /stop — Finish active test and generate score card\n\n` +
-    `*How it works:*\n` +
-    `1. Select Chapter Bank, Mock Errors, or Speed Lab\n` +
-    `2. Pick your subject and topic\n` +
-    `3. Choose a Set — then pick **Attempt ALL Questions** (full set) or **Quick 10**!\n` +
-    `4. Instant feedback and solutions appear automatically as you tap.`;
+    `• /menu — Open the main category menu\n` +
+    `• /stop — Finish active test and show score card\n` +
+    `• Tap any option on quiz polls to answer immediately.`;
 
   await ctx.reply(helpText, {
     parse_mode: 'Markdown',
@@ -271,7 +231,7 @@ bot.command('help', async (ctx) => {
 // ----------------------------------------------------
 
 bot.callbackQuery('nav_root', async (ctx) => {
-  await ctx.editMessageText('👉 *Select an area to explore:*', {
+  await ctx.editMessageText('🎯 *SSC CGL Practice Cockpit*\nChoose a section to drill:', {
     parse_mode: 'Markdown',
     reply_markup: getRootMenuKeyboard(),
   });
@@ -279,7 +239,7 @@ bot.callbackQuery('nav_root', async (ctx) => {
 });
 
 bot.callbackQuery('nav_chapter_bank', async (ctx) => {
-  await ctx.editMessageText('📁 *Chapter Bank:* Select a subject:', {
+  await ctx.editMessageText('📁 *Chapter Bank*\nSelect a subject:', {
     parse_mode: 'Markdown',
     reply_markup: getChapterBankSubjectsKeyboard(),
   });
@@ -357,22 +317,13 @@ bot.callbackQuery(/^eng_set:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+)$/, async (ctx
   await ctx.answerCallbackQuery();
   const [_, secCode, topicCode, setCode] = ctx.match;
   const setInfo = resolveEnglishSetFile(secCode, topicCode, setCode);
-  if (!setInfo) return;
-
   const kb = new InlineKeyboard()
-    .text(`🚀 Practice ALL (${setInfo.total} Questions)`, `run_eng:${secCode}:${topicCode}:${setCode}:all`)
+    .text(`🚀 All (${setInfo.total} Qs)`, `run_eng:${secCode}:${topicCode}:${setCode}:all`)
+    .text('⚡ Quick 10', `run_eng:${secCode}:${topicCode}:${setCode}:10`)
     .row()
-    .text('⚡ Quick 10 Questions', `run_eng:${secCode}:${topicCode}:${setCode}:10`)
-    .row()
-    .text('⬅️ Back to Sets', `eng_top:${secCode}:${topicCode}`);
+    .text('⬅️ Back', `eng_top:${secCode}:${topicCode}`);
 
-  const msg =
-    `📖 *${setInfo.title}*\n` +
-    `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `📝 *Total Questions:* ${setInfo.total}\n\n` +
-    `👉 *How would you like to practice?*`;
-
-  await ctx.editMessageText(msg, {
+  await ctx.editMessageText(`📖 *${setInfo.title}* • ${setInfo.total} Questions`, {
     parse_mode: 'Markdown',
     reply_markup: kb,
   });
@@ -468,19 +419,12 @@ bot.callbackQuery(/^math_set:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+)$/, async (ctx) 
   if (!setInfo) return;
 
   const kb = new InlineKeyboard()
-    .text(`🚀 Practice ALL (${setInfo.total} Questions)`, `run_math:${topicCode}:${setCode}:all`)
+    .text(`🚀 All (${setInfo.total} Qs)`, `run_math:${topicCode}:${setCode}:all`)
+    .text('⚡ Quick 10', `run_math:${topicCode}:${setCode}:10`)
     .row()
-    .text('⚡ Quick 10 Questions', `run_math:${topicCode}:${setCode}:10`)
-    .row()
-    .text('⬅️ Back to Sets', `math_top:${topicCode}`);
+    .text('⬅️ Back', `math_top:${topicCode}`);
 
-  const msg =
-    `📊 *${setInfo.title}*\n` +
-    `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `📝 *Total Questions in Set:* ${setInfo.total}\n\n` +
-    `👉 *How would you like to practice?*`;
-
-  await ctx.editMessageText(msg, {
+  await ctx.editMessageText(`📐 *${setInfo.title}* • ${setInfo.total} Questions`, {
     parse_mode: 'Markdown',
     reply_markup: kb,
   });
@@ -550,19 +494,12 @@ bot.callbackQuery(/^ga_set:([a-z0-9_]+):(.+)$/, async (ctx) => {
   if (!setInfo) return;
 
   const kb = new InlineKeyboard()
-    .text(`🚀 Practice ALL (${setInfo.total} Questions)`, `run_ga:${topicCode}:${setCode}:all`)
+    .text(`🚀 All (${setInfo.total} Qs)`, `run_ga:${topicCode}:${setCode}:all`)
+    .text('⚡ Quick 10', `run_ga:${topicCode}:${setCode}:10`)
     .row()
-    .text('⚡ Quick 10 Questions', `run_ga:${topicCode}:${setCode}:10`)
-    .row()
-    .text('⬅️ Back to Chapters', `ga_top:${topicCode}`);
+    .text('⬅️ Back', `ga_top:${topicCode}`);
 
-  const msg =
-    `🏛️ *${setInfo.title}*\n` +
-    `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `📝 *Total Questions in Chapter:* ${setInfo.total}\n\n` +
-    `👉 *How would you like to practice?*`;
-
-  await ctx.editMessageText(msg, {
+  await ctx.editMessageText(`🏛️ *${setInfo.title}* • ${setInfo.total} Questions`, {
     parse_mode: 'Markdown',
     reply_markup: kb,
   });
@@ -629,25 +566,18 @@ bot.callbackQuery(/^mock_sub:(mathematics|reasoning|english|general_awareness)$/
   if (!item) return;
 
   const kb = new InlineKeyboard()
-    .text(`🔥 Practice ALL ${item.totalQuestions} Mistakes`, `run_mock:${subId}:all`)
-    .row()
-    .text(`⚡ Quick 10 Mistakes`, `run_mock:${subId}:10`)
+    .text(`🔥 All (${item.totalQuestions} Qs)`, `run_mock:${subId}:all`)
+    .text(`⚡ Quick 10`, `run_mock:${subId}:10`)
     .row();
 
   for (const ch of item.chapters) {
     if (ch.count > 0 && ch.chapterNum !== undefined) {
-      kb.text(`📁 ${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
+      kb.text(`${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
     }
   }
-  kb.text('⬅️ Back to Mock Subjects', 'nav_mock_errors');
+  kb.text('⬅️ Back', 'nav_mock_errors');
 
-  const msg =
-    `🎯 *${item.title}*\n` +
-    `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `Total Mistakes Logged: *${item.totalQuestions} Questions*\n\n` +
-    `Select a practice option below:`;
-
-  await ctx.editMessageText(msg, {
+  await ctx.editMessageText(`🎯 *${item.title}* • ${item.totalQuestions} Mistakes Logged`, {
     parse_mode: 'Markdown',
     reply_markup: kb,
   });
@@ -895,66 +825,65 @@ bot.callbackQuery('speed_calc_studio', async (ctx) => {
 
 function renderStepOptions(title: string, total: number, stepCode: string): InlineKeyboard {
   return new InlineKeyboard()
-    .text(`🚀 Practice ALL (${total} Questions)`, `run_calc:${stepCode}:all`)
+    .text(`🚀 All (${total} Qs)`, `run_calc:${stepCode}:all`)
+    .text('⚡ Quick 10', `run_calc:${stepCode}:10`)
     .row()
-    .text('⚡ Quick 10 Questions', `run_calc:${stepCode}:10`)
-    .row()
-    .text('⬅️ Back to Steps', 'speed_calc_studio');
+    .text('⬅️ Back', 'speed_calc_studio');
 }
 
 bot.callbackQuery('calc_step_triplets', async (ctx) => {
-  await ctx.editMessageText(
-    '📐 *Step 1: Primitive Triplets*\nTotal Questions: *16 Triplets*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Triplets', 16, 'triplets') }
-  );
+  await ctx.editMessageText('📐 *Primitive Triplets* • 16 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Triplets', 16, 'triplets'),
+  });
   await ctx.answerCallbackQuery();
 });
 
 bot.callbackQuery('calc_step_tables', async (ctx) => {
-  await ctx.editMessageText(
-    '✖️ *Step 2: Multiplication Tables (12 to 24)*\nTotal Questions: *13 Tables*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Tables', 13, 'tables') }
-  );
+  await ctx.editMessageText('✖️ *Tables (12 to 24)* • 13 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Tables', 13, 'tables'),
+  });
   await ctx.answerCallbackQuery();
 });
 
 bot.callbackQuery('calc_step_squares', async (ctx) => {
-  await ctx.editMessageText(
-    '🔢 *Step 3: Squares (17² to 39²)*\nTotal Questions: *23 Squares*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Squares', 23, 'squares') }
-  );
+  await ctx.editMessageText('🔢 *Squares (17² to 39²)* • 23 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Squares', 23, 'squares'),
+  });
   await ctx.answerCallbackQuery();
 });
 
 bot.callbackQuery('calc_step_cubes', async (ctx) => {
-  await ctx.editMessageText(
-    '🧊 *Step 4: Cubes (11³ to 25³)*\nTotal Questions: *15 Cubes*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Cubes', 15, 'cubes') }
-  );
+  await ctx.editMessageText('🧊 *Cubes (11³ to 25³)* • 15 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Cubes', 15, 'cubes'),
+  });
   await ctx.answerCallbackQuery();
 });
 
 bot.callbackQuery('calc_step_powers', async (ctx) => {
-  await ctx.editMessageText(
-    '⚡ *Step 5: Powers (2–9)*\nTotal Questions: *38 Powers*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Powers', 38, 'powers') }
-  );
+  await ctx.editMessageText('⚡ *Powers (2–9)* • 38 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Powers', 38, 'powers'),
+  });
   await ctx.answerCallbackQuery();
 });
 
 bot.callbackQuery('calc_step_factorials', async (ctx) => {
-  await ctx.editMessageText(
-    '❗ *Step 6: Factorials (1! to 8!)*\nTotal Questions: *8 Factorials*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Factorials', 8, 'factorials') }
-  );
+  await ctx.editMessageText('❗ *Factorials (1! to 8!)* • 8 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Factorials', 8, 'factorials'),
+  });
   await ctx.answerCallbackQuery();
 });
 
 bot.callbackQuery('calc_step_fractions', async (ctx) => {
-  await ctx.editMessageText(
-    '💯 *Step 7: Fractions ↔ Percentages*\nTotal Questions: *73 Values*\n\nSelect practice mode:',
-    { parse_mode: 'Markdown', reply_markup: renderStepOptions('Fractions', 73, 'fractions') }
-  );
+  await ctx.editMessageText('💯 *Fractions ↔ %* • 73 Questions', {
+    parse_mode: 'Markdown',
+    reply_markup: renderStepOptions('Fractions', 73, 'fractions'),
+  });
   await ctx.answerCallbackQuery();
 });
 

@@ -139,13 +139,14 @@ export function sanitizeTelegramQuiz(raw: {
   );
 
   let cleanQ = cleanRawText(raw.question);
-  let preamble: string | undefined = undefined;
+  // Strip bracketed headers like "[Triplets Step 1]" or "📐 [Set 1]"
+  cleanQ = cleanQ.replace(/^(\s*[\uD800-\uDBFF\uDC00-\uDFFF\u2600-\u27BF\s]*\[[^\]]+\]\s*)+/g, '').trim();
+  // Strip leading "Question 1:", "Q.1:", etc.
+  cleanQ = cleanQ.replace(/^(?:Question|Q\.?)\s*\d+[\s:.-]+/i, '').trim();
 
   // Telegram Poll question limit is 300 characters
-  if (cleanQ.length > 295) {
-    // If the question is long, provide the full question as preamble and a concise prompt in poll
-    preamble = `📝 *Question Full Context:*\n${cleanQ}`;
-    cleanQ = cleanQ.slice(0, 292) + '...';
+  if (cleanQ.length > 298) {
+    cleanQ = cleanQ.slice(0, 295) + '...';
   }
 
   // Telegram Poll explanation limit is 200 characters

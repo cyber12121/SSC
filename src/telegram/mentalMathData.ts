@@ -42,7 +42,7 @@ export function generateChainAdditionDrill(nodeCount: 5 | 10 = 5, count = 10): T
     questions.push(
       sanitizeTelegramQuiz({
         id: `chain_add_${nodeCount}_${i + 1}`,
-        question: `➕ [Mental Addition (${nodeCount} Nodes)]\nSum mentally left-to-right:\n${nums.join(' + ')} = ?`,
+        question: `${nums.join(' + ')} = ?`,
         options: sortedOpts,
         correctOption: String(total),
         solution: `Total = ${total}.\nRunning sum: ${breakdown}\nTip: Hit nearest ten first, then leap tens.`,
@@ -96,7 +96,7 @@ export function generateSubtractionDrill(tier: '2digit' | '3digit' = '2digit', c
     questions.push(
       sanitizeTelegramQuiz({
         id: `sub_${tier}_${i + 1}`,
-        question: `➖ [Number Line Hop (${tier === '2digit' ? '2-Digit' : 'Century Crossing'})]\nSubtract without vertical borrowing:\n${a} − ${b} = ?`,
+        question: `${a} − ${b} = ?`,
         options: sortedOpts,
         correctOption: String(diff),
         solution: `Difference = ${diff}.\nHop: Jump ${b}➔${nearestTen} (+${hop1}), then ${nearestTen}➔${a} (+${hop2}). Sum hops: ${hop1}+${hop2} = ${diff}.`,
@@ -146,7 +146,7 @@ export function generateBase100Multiplication(count = 10): TelegramQuizQuestion[
     questions.push(
       sanitizeTelegramQuiz({
         id: `mult_base100_${idx + 1}`,
-        question: `✖️ [Base-100 Deviation Rule]\nMultiply mentally:\n${n1} × ${n2} = ?`,
+        question: `${n1} × ${n2} = ?`,
         options: sortedOpts,
         correctOption: String(prod),
         solution: `${n1} × ${n2} = ${prod}.\nDeviations (${d1}, ${d2}): Left = ${n1}+(${d2}) = ${leftPart}, Right = ${d1}×${d2} = ${rightPart} ➔ ${prod}.`,
@@ -193,7 +193,7 @@ export function generateSquareDiffMultiplication(count = 10): TelegramQuizQuesti
 
     return sanitizeTelegramQuiz({
       id: `mult_sqdiff_${idx + 1}`,
-      question: `✖️ [Midpoint a² − b² Shortcut]\nMultiply mentally:\n${a} × ${b} = ?`,
+      question: `${a} × ${b} = ?`,
       options: sortedOpts,
       correctOption: String(prod),
       solution: `${a} × ${b} = ${prod}.\nAnchor = ${item.anchor}, Diff = ${item.diff}.\nShortcut: ${item.anchor}² − ${item.diff}² = ${sq} − ${dSq} = ${prod}.`,
@@ -230,7 +230,7 @@ export function generateDecimalPercentageDrill(count = 8): TelegramQuizQuestion[
 
     return sanitizeTelegramQuiz({
       id: `div_pct_${idx + 1}`,
-      question: `➗ [10% Mental Ladder Estimation]\nEstimate percentage bracket for:\n${p.num} / ${p.den} ≈ ?`,
+      question: `Estimate percentage: ${p.num} / ${p.den} ≈ ?`,
       options,
       correctOption: p.bracket,
       solution: `Bracket: ${p.bracket}.\n${p.reason}.\nSince ${p.num} falls inside this range, bracket is ${p.bracket}.`,
@@ -274,7 +274,7 @@ export function generateRatioFaceOffDrill(count = 6): TelegramQuizQuestion[] {
   return pool.map((p, idx) => {
     return sanitizeTelegramQuiz({
       id: `ratio_comp_${idx + 1}`,
-      question: `⚖️ [DI Ratio Comparison Face-Off]\nWhich fraction is larger?\nA: ${p.r1}\nB: ${p.r2}`,
+      question: `Which fraction is larger?\nA: ${p.r1}  or  B: ${p.r2}`,
       options: ['Ratio A (' + p.r1 + ')', 'Ratio B (' + p.r2 + ')', 'Both are equal', 'Cannot determine'],
       correctOption: p.correct,
       solution: `${p.correct} is larger!\n${p.reason}`,

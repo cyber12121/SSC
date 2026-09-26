@@ -50,7 +50,7 @@ export function getTripletsStepDrill(mode: 'all' | '10' = 'all'): TelegramQuizQu
 
     return sanitizeTelegramQuiz({
       id: `calc_triplet_${idx}_${Date.now()}`,
-      question: `📐 [Triplets Step 1]\n${q.prompt} — ${q.subPrompt || 'Find the missing value'}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation || `Pythagorean Triplet: ${item.a}² + ${item.b}² = ${item.c}²`,
@@ -74,7 +74,7 @@ export function getTablesStepDrill(mode: 'all' | '10' = 'all'): TelegramQuizQues
 
     return sanitizeTelegramQuiz({
       id: `calc_table_${idx}_${Date.now()}`,
-      question: `✖️ [Tables Step 2]\nWhat is ${q.prompt}?`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -97,7 +97,7 @@ export function getSquaresStepDrill(mode: 'all' | '10' = 'all'): TelegramQuizQue
 
     return sanitizeTelegramQuiz({
       id: `calc_square_${idx}_${Date.now()}`,
-      question: `🔢 [Squares Step 3]\nCalculate: ${q.prompt}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -120,7 +120,7 @@ export function getCubesStepDrill(mode: 'all' | '10' = 'all'): TelegramQuizQuest
 
     return sanitizeTelegramQuiz({
       id: `calc_cube_${idx}_${Date.now()}`,
-      question: `🧊 [Cubes Step 4]\nCalculate: ${q.prompt}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -143,7 +143,7 @@ export function getPowersStepDrill(mode: 'all' | '10' = 'all'): TelegramQuizQues
 
     return sanitizeTelegramQuiz({
       id: `calc_power_${idx}_${Date.now()}`,
-      question: `⚡ [Powers Step 5]\nCalculate value of: ${q.prompt}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -166,7 +166,7 @@ export function getFactorialsStepDrill(mode: 'all' | '10' = 'all'): TelegramQuiz
 
     return sanitizeTelegramQuiz({
       id: `calc_factorial_${idx}_${Date.now()}`,
-      question: `❗ [Factorials Step 6]\nCalculate value of: ${item.n}!`,
+      question: `${item.n}! = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: `${item.n}! = ${item.breakdown} = ${item.val}`,
@@ -188,11 +188,11 @@ export function getFractionsStepDrill(mode: 'all' | '10' = 'all'): TelegramQuizQ
     let pool: string[] = [];
 
     if (toPercent) {
-      question = `💯 [Fractions Step 7]\nWhat is ${item.fraction} expressed as a percentage?`;
+      question = `${item.fraction} in percentage = ?`;
       correct = item.percentage;
       pool = FRACTIONS_DATA.map((f) => f.percentage).filter((p) => p !== correct);
     } else {
-      question = `💯 [Fractions Step 7]\nWhat fraction corresponds to ${item.percentage}?`;
+      question = `${item.percentage} in fraction = ?`;
       correct = item.fraction;
       pool = FRACTIONS_DATA.map((f) => f.fraction).filter((f) => f !== correct);
     }

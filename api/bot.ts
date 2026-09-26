@@ -653,11 +653,10 @@ function sanitizeTelegramQuiz(raw) {
     Math.min(letterToIndex(raw.correctOption), formattedOptions.length - 1)
   );
   let cleanQ = cleanRawText(raw.question);
-  let preamble = void 0;
-  if (cleanQ.length > 295) {
-    preamble = `\u{1F4DD} *Question Full Context:*
-${cleanQ}`;
-    cleanQ = cleanQ.slice(0, 292) + "...";
+  cleanQ = cleanQ.replace(/^(\s*[\uD800-\uDBFF\uDC00-\uDFFF\u2600-\u27BF\s]*\[[^\]]+\]\s*)+/g, "").trim();
+  cleanQ = cleanQ.replace(/^(?:Question|Q\.?)\s*\d+[\s:.-]+/i, "").trim();
+  if (cleanQ.length > 298) {
+    cleanQ = cleanQ.slice(0, 295) + "...";
   }
   let cleanSol = cleanSolutionText(raw.solution || "");
   let shortExpl = cleanRawText(cleanSol);
@@ -4427,8 +4426,7 @@ function getTripletsStepDrill(mode = "all") {
     const options = shuffle([String(ansNum), ...distractors]);
     return sanitizeTelegramQuiz({
       id: `calc_triplet_${idx}_${Date.now()}`,
-      question: `\u{1F4D0} [Triplets Step 1]
-${q.prompt} \u2014 ${q.subPrompt || "Find the missing value"}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation || `Pythagorean Triplet: ${item.a}\xB2 + ${item.b}\xB2 = ${item.c}\xB2`,
@@ -4448,8 +4446,7 @@ function getTablesStepDrill(mode = "all") {
     const options = shuffle([String(ansNum), ...distractors]);
     return sanitizeTelegramQuiz({
       id: `calc_table_${idx}_${Date.now()}`,
-      question: `\u2716\uFE0F [Tables Step 2]
-What is ${q.prompt}?`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -4469,8 +4466,7 @@ function getSquaresStepDrill(mode = "all") {
     const options = shuffle([String(ansNum), ...distractors]);
     return sanitizeTelegramQuiz({
       id: `calc_square_${idx}_${Date.now()}`,
-      question: `\u{1F522} [Squares Step 3]
-Calculate: ${q.prompt}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -4490,8 +4486,7 @@ function getCubesStepDrill(mode = "all") {
     const options = shuffle([String(ansNum), ...distractors]);
     return sanitizeTelegramQuiz({
       id: `calc_cube_${idx}_${Date.now()}`,
-      question: `\u{1F9CA} [Cubes Step 4]
-Calculate: ${q.prompt}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -4511,8 +4506,7 @@ function getPowersStepDrill(mode = "all") {
     const options = shuffle([String(ansNum), ...distractors]);
     return sanitizeTelegramQuiz({
       id: `calc_power_${idx}_${Date.now()}`,
-      question: `\u26A1 [Powers Step 5]
-Calculate value of: ${q.prompt}`,
+      question: `${q.prompt} = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: q.explanation,
@@ -4532,8 +4526,7 @@ function getFactorialsStepDrill(mode = "all") {
     const options = shuffle([String(ansNum), ...distractors]);
     return sanitizeTelegramQuiz({
       id: `calc_factorial_${idx}_${Date.now()}`,
-      question: `\u2757 [Factorials Step 6]
-Calculate value of: ${item.n}!`,
+      question: `${item.n}! = ?`,
       options,
       correctOption: options.indexOf(String(ansNum)),
       solution: `${item.n}! = ${item.breakdown} = ${item.val}`,
@@ -4552,13 +4545,11 @@ function getFractionsStepDrill(mode = "all") {
     let correct = "";
     let pool = [];
     if (toPercent) {
-      question = `\u{1F4AF} [Fractions Step 7]
-What is ${item.fraction} expressed as a percentage?`;
+      question = `${item.fraction} in percentage = ?`;
       correct = item.percentage;
       pool = FRACTIONS_DATA.map((f) => f.percentage).filter((p) => p !== correct);
     } else {
-      question = `\u{1F4AF} [Fractions Step 7]
-What fraction corresponds to ${item.percentage}?`;
+      question = `${item.percentage} in fraction = ?`;
       correct = item.fraction;
       pool = FRACTIONS_DATA.map((f) => f.fraction).filter((f) => f !== correct);
     }
@@ -4641,9 +4632,7 @@ function generateChainAdditionDrill(nodeCount = 5, count = 10) {
     questions.push(
       sanitizeTelegramQuiz({
         id: `chain_add_${nodeCount}_${i + 1}`,
-        question: `\u2795 [Mental Addition (${nodeCount} Nodes)]
-Sum mentally left-to-right:
-${nums.join(" + ")} = ?`,
+        question: `${nums.join(" + ")} = ?`,
         options: sortedOpts,
         correctOption: String(total),
         solution: `Total = ${total}.
@@ -4685,9 +4674,7 @@ function generateSubtractionDrill(tier = "2digit", count = 10) {
     questions.push(
       sanitizeTelegramQuiz({
         id: `sub_${tier}_${i + 1}`,
-        question: `\u2796 [Number Line Hop (${tier === "2digit" ? "2-Digit" : "Century Crossing"})]
-Subtract without vertical borrowing:
-${a} \u2212 ${b} = ?`,
+        question: `${a} \u2212 ${b} = ?`,
         options: sortedOpts,
         correctOption: String(diff),
         solution: `Difference = ${diff}.
@@ -4743,9 +4730,7 @@ function generateBase100Multiplication(count = 10) {
     questions.push(
       sanitizeTelegramQuiz({
         id: `mult_base100_${idx + 1}`,
-        question: `\u2716\uFE0F [Base-100 Deviation Rule]
-Multiply mentally:
-${n1} \xD7 ${n2} = ?`,
+        question: `${n1} \xD7 ${n2} = ?`,
         options: sortedOpts,
         correctOption: String(prod),
         solution: `${n1} \xD7 ${n2} = ${prod}.
@@ -4796,9 +4781,7 @@ function generateSquareDiffMultiplication(count = 10) {
     const sortedOpts = shuffle(Array.from(optSet).slice(0, 4)).map(String);
     return sanitizeTelegramQuiz({
       id: `mult_sqdiff_${idx + 1}`,
-      question: `\u2716\uFE0F [Midpoint a\xB2 \u2212 b\xB2 Shortcut]
-Multiply mentally:
-${a} \xD7 ${b} = ?`,
+      question: `${a} \xD7 ${b} = ?`,
       options: sortedOpts,
       correctOption: String(prod),
       solution: `${a} \xD7 ${b} = ${prod}.
@@ -4829,9 +4812,7 @@ function generateDecimalPercentageDrill(count = 8) {
     const options = shuffle([p.bracket, ...chosenOthers]);
     return sanitizeTelegramQuiz({
       id: `div_pct_${idx + 1}`,
-      question: `\u2797 [10% Mental Ladder Estimation]
-Estimate percentage bracket for:
-${p.num} / ${p.den} \u2248 ?`,
+      question: `Estimate percentage: ${p.num} / ${p.den} \u2248 ?`,
       options,
       correctOption: p.bracket,
       solution: `Bracket: ${p.bracket}.
@@ -4874,10 +4855,8 @@ function generateRatioFaceOffDrill(count = 6) {
   return pool.map((p, idx) => {
     return sanitizeTelegramQuiz({
       id: `ratio_comp_${idx + 1}`,
-      question: `\u2696\uFE0F [DI Ratio Comparison Face-Off]
-Which fraction is larger?
-A: ${p.r1}
-B: ${p.r2}`,
+      question: `Which fraction is larger?
+A: ${p.r1}  or  B: ${p.r2}`,
       options: ["Ratio A (" + p.r1 + ")", "Ratio B (" + p.r2 + ")", "Both are equal", "Cannot determine"],
       correctOption: p.correct,
       solution: `${p.correct} is larger!
@@ -5332,10 +5311,10 @@ bot.catch((err) => {
   console.error("[TelegramBot] Uncaught error during update handling:", err);
 });
 function getRootMenuKeyboard() {
-  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").row().text("\u{1F4A1} Help & Guide", "nav_help");
+  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab");
 }
 function getChapterBankSubjectsKeyboard() {
-  return new InlineKeyboard().text("\u{1F4D0} Mathematics", "cb_sub_math").text("\u{1F9E0} Reasoning", "cb_sub_reasoning").row().text("\u{1F4D6} English", "cb_sub_english").text("\u{1F3DB}\uFE0F General Awareness", "cb_sub_ga").row().text("\u2B05\uFE0F Back to Main Menu", "nav_root");
+  return new InlineKeyboard().text("\u{1F4D0} Math", "cb_sub_math").text("\u{1F9E0} Reasoning", "cb_sub_reasoning").row().text("\u{1F4D6} English", "cb_sub_english").text("\u{1F3DB}\uFE0F GK & GA", "cb_sub_ga").row().text("\u2B05\uFE0F Back", "nav_root");
 }
 async function sendCurrentQuestion(botInstance, session) {
   if (session.currentIndex >= session.questions.length) {
@@ -5344,19 +5323,11 @@ async function sendCurrentQuestion(botInstance, session) {
   }
   const q = session.questions[session.currentIndex];
   const qNum = session.currentIndex + 1;
-  const total = session.questions.length;
-  if (q.preamble) {
-    try {
-      await botInstance.api.sendMessage(session.chatId, q.preamble, { parse_mode: "Markdown" });
-    } catch {
-    }
-  }
-  const header = `[Q ${qNum}/${total}]`;
-  const formattedQuestion = `${header} ${q.question}`;
+  const prompt = q.question.trim().slice(0, 298);
   try {
     const pollMsg = await botInstance.api.sendPoll(
       session.chatId,
-      formattedQuestion.slice(0, 298),
+      prompt,
       q.options,
       {
         type: "quiz",
@@ -5369,15 +5340,6 @@ async function sendCurrentQuestion(botInstance, session) {
     registerActivePoll(pollMsg.poll.id, session.userId);
   } catch (err) {
     console.error(`[TelegramBot] Error sending quiz poll (Q${qNum}):`, err?.message || err);
-    await botInstance.api.sendMessage(
-      session.chatId,
-      `\u26A0\uFE0F Could not display in quiz poll format:
-
-${q.question}
-
-*Moving to next question...*`,
-      { parse_mode: "Markdown" }
-    );
     session.currentIndex++;
     await sendCurrentQuestion(botInstance, session);
   }
@@ -5394,30 +5356,27 @@ async function sendCompletionSummary(botInstance, session) {
   let medal = "\u{1F3AF}";
   let comment = "";
   if (percentage >= 90) {
-    medal = "\u{1F3C6} OUTSTANDING PERFORMANCE!";
-    comment = "Top tier accuracy! Your concepts in this set are rock solid!";
+    medal = "\u{1F3C6} OUTSTANDING!";
+    comment = "Flawless accuracy! Your mastery is exam-ready.";
   } else if (percentage >= 70) {
     medal = "\u{1F525} WELL DONE!";
-    comment = "Great score! Review the couple of questions you missed.";
+    comment = "Solid accuracy. Review the few missed concepts.";
   } else if (percentage >= 50) {
-    medal = "\u{1F44D} GOOD PROGRESS!";
-    comment = "Solid foundation, practice this set once more for mastery.";
+    medal = "\u{1F44D} GOOD EFFORT!";
+    comment = "Decent foundation, repeat to improve speed.";
   } else {
-    medal = "\u{1F4AA} KEEP WORKING!";
-    comment = "Revisit the solutions and repeat the set to build confidence.";
+    medal = "\u{1F4AA} KEEP DRILLING!";
+    comment = "Review explanations and practice once more.";
   }
   const report = `${medal}
 
 *${session.drillTitle}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-\u{1F3AF} *Total Score:* ${score} / ${total} (${percentage}%)
-\u23F1\uFE0F *Time Taken:* ${timeFormatted}
-\u26A1 *Average Pace:* ${speedPerQ}s / question
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-_${comment}_
 
-*Where to next?*`;
-  const afterQuizKeyboard = new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Main Menu", "nav_root");
+\u2022 Score: *${score} / ${total}* (${percentage}%)
+\u2022 Time: *${timeFormatted}* (${speedPerQ}s / q)
+
+_${comment}_`;
+  const afterQuizKeyboard = new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
   clearSession(session.userId);
   await botInstance.api.sendMessage(session.chatId, report, {
     parse_mode: "Markdown",
@@ -5428,7 +5387,7 @@ async function startQuizForUser(userId, chatId, title, questions) {
   if (!questions || questions.length === 0) {
     await bot.api.sendMessage(
       chatId,
-      `\u26A0\uFE0F No questions found for *${title}*. Please choose another section.`,
+      `No questions found for *${title}*.`,
       {
         parse_mode: "Markdown",
         reply_markup: getRootMenuKeyboard()
@@ -5437,27 +5396,12 @@ async function startQuizForUser(userId, chatId, title, questions) {
     return;
   }
   const session = startSession(userId, chatId, title, questions);
-  await bot.api.sendMessage(
-    chatId,
-    `\u{1F680} *${title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-\u{1F4DD} *Questions:* ${questions.length} Questions
-\u{1F4A1} _Tap an answer on each quiz card below._
-\u{1F6D1} _Type /stop anytime to end early and see your score._`,
-    { parse_mode: "Markdown" }
-  );
   await sendCurrentQuestion(bot, session);
 }
 bot.command(["start", "menu"], async (ctx) => {
   const name = ctx.from?.first_name || "Aspirant";
-  const text = `\u{1F44B} *Welcome ${name} to your CGL Preparation Cockpit!*
-
-Everything is structured just like the website:
-\u2022 \u{1F4C1} *Chapter Bank:* Math, Reasoning, English (Black Book & Ayush), GA
-\u2022 \u{1F3AF} *Mock Errors:* Revise mistakes by subject & chapter
-\u2022 \u26A1 *Speed Lab:* Triplets, Fractions, Squares, Simplification
-
-\u{1F449} *Select an area to explore:*`;
+  const text = `\u{1F3AF} *SSC CGL Practice Cockpit*
+Welcome, ${name}! Choose a section to drill:`;
   await ctx.reply(text, {
     parse_mode: "Markdown",
     reply_markup: getRootMenuKeyboard()
@@ -5466,7 +5410,7 @@ Everything is structured just like the website:
 bot.command("stop", async (ctx) => {
   const session = getSession(ctx.from.id);
   if (!session) {
-    await ctx.reply("No active quiz is currently running. Send /menu to start one!");
+    await ctx.reply("No active drill running. Send /menu to start one.");
     return;
   }
   await sendCompletionSummary(bot, session);
@@ -5474,28 +5418,23 @@ bot.command("stop", async (ctx) => {
 bot.command("help", async (ctx) => {
   const helpText = `\u{1F4A1} *CGL Bot Guide*
 
-\u2022 /start or /menu \u2014 Open the main category menu
-\u2022 /stop \u2014 Finish active test and generate score card
-
-*How it works:*
-1. Select Chapter Bank, Mock Errors, or Speed Lab
-2. Pick your subject and topic
-3. Choose a Set \u2014 then pick **Attempt ALL Questions** (full set) or **Quick 10**!
-4. Instant feedback and solutions appear automatically as you tap.`;
+\u2022 /menu \u2014 Open the main category menu
+\u2022 /stop \u2014 Finish active test and show score card
+\u2022 Tap any option on quiz polls to answer immediately.`;
   await ctx.reply(helpText, {
     parse_mode: "Markdown",
     reply_markup: getRootMenuKeyboard()
   });
 });
 bot.callbackQuery("nav_root", async (ctx) => {
-  await ctx.editMessageText("\u{1F449} *Select an area to explore:*", {
+  await ctx.editMessageText("\u{1F3AF} *SSC CGL Practice Cockpit*\nChoose a section to drill:", {
     parse_mode: "Markdown",
     reply_markup: getRootMenuKeyboard()
   });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("nav_chapter_bank", async (ctx) => {
-  await ctx.editMessageText("\u{1F4C1} *Chapter Bank:* Select a subject:", {
+  await ctx.editMessageText("\u{1F4C1} *Chapter Bank*\nSelect a subject:", {
     parse_mode: "Markdown",
     reply_markup: getChapterBankSubjectsKeyboard()
   });
@@ -5560,14 +5499,8 @@ bot.callbackQuery(/^eng_set:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+)$/, async (ctx
   await ctx.answerCallbackQuery();
   const [_, secCode, topicCode, setCode] = ctx.match;
   const setInfo = resolveEnglishSetFile(secCode, topicCode, setCode);
-  if (!setInfo) return;
-  const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${setInfo.total} Questions)`, `run_eng:${secCode}:${topicCode}:${setCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_eng:${secCode}:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back to Sets", `eng_top:${secCode}:${topicCode}`);
-  const msg = `\u{1F4D6} *${setInfo.title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-\u{1F4DD} *Total Questions:* ${setInfo.total}
-
-\u{1F449} *How would you like to practice?*`;
-  await ctx.editMessageText(msg, {
+  const kb = new InlineKeyboard().text(`\u{1F680} All (${setInfo.total} Qs)`, `run_eng:${secCode}:${topicCode}:${setCode}:all`).text("\u26A1 Quick 10", `run_eng:${secCode}:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back", `eng_top:${secCode}:${topicCode}`);
+  await ctx.editMessageText(`\u{1F4D6} *${setInfo.title}* \u2022 ${setInfo.total} Questions`, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
@@ -5646,13 +5579,8 @@ bot.callbackQuery(/^math_set:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+)$/, async (ctx) 
   const [_, topicCode, setCode] = ctx.match;
   const setInfo = resolveMathSetFile(topicCode, setCode);
   if (!setInfo) return;
-  const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${setInfo.total} Questions)`, `run_math:${topicCode}:${setCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_math:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back to Sets", `math_top:${topicCode}`);
-  const msg = `\u{1F4CA} *${setInfo.title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-\u{1F4DD} *Total Questions in Set:* ${setInfo.total}
-
-\u{1F449} *How would you like to practice?*`;
-  await ctx.editMessageText(msg, {
+  const kb = new InlineKeyboard().text(`\u{1F680} All (${setInfo.total} Qs)`, `run_math:${topicCode}:${setCode}:all`).text("\u26A1 Quick 10", `run_math:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back", `math_top:${topicCode}`);
+  await ctx.editMessageText(`\u{1F4D0} *${setInfo.title}* \u2022 ${setInfo.total} Questions`, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
@@ -5707,13 +5635,8 @@ bot.callbackQuery(/^ga_set:([a-z0-9_]+):(.+)$/, async (ctx) => {
   const [_, topicCode, setCode] = ctx.match;
   const setInfo = resolveGASetFile(topicCode, setCode);
   if (!setInfo) return;
-  const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${setInfo.total} Questions)`, `run_ga:${topicCode}:${setCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_ga:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back to Chapters", `ga_top:${topicCode}`);
-  const msg = `\u{1F3DB}\uFE0F *${setInfo.title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-\u{1F4DD} *Total Questions in Chapter:* ${setInfo.total}
-
-\u{1F449} *How would you like to practice?*`;
-  await ctx.editMessageText(msg, {
+  const kb = new InlineKeyboard().text(`\u{1F680} All (${setInfo.total} Qs)`, `run_ga:${topicCode}:${setCode}:all`).text("\u26A1 Quick 10", `run_ga:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back", `ga_top:${topicCode}`);
+  await ctx.editMessageText(`\u{1F3DB}\uFE0F *${setInfo.title}* \u2022 ${setInfo.total} Questions`, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
@@ -5757,19 +5680,14 @@ bot.callbackQuery(/^mock_sub:(mathematics|reasoning|english|general_awareness)$/
   const catalog = getMockErrorsCatalog();
   const item = catalog.find((c) => c.subjectId === subId);
   if (!item) return;
-  const kb = new InlineKeyboard().text(`\u{1F525} Practice ALL ${item.totalQuestions} Mistakes`, `run_mock:${subId}:all`).row().text(`\u26A1 Quick 10 Mistakes`, `run_mock:${subId}:10`).row();
+  const kb = new InlineKeyboard().text(`\u{1F525} All (${item.totalQuestions} Qs)`, `run_mock:${subId}:all`).text(`\u26A1 Quick 10`, `run_mock:${subId}:10`).row();
   for (const ch of item.chapters) {
     if (ch.count > 0 && ch.chapterNum !== void 0) {
-      kb.text(`\u{1F4C1} ${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
+      kb.text(`${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
     }
   }
-  kb.text("\u2B05\uFE0F Back to Mock Subjects", "nav_mock_errors");
-  const msg = `\u{1F3AF} *${item.title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-Total Mistakes Logged: *${item.totalQuestions} Questions*
-
-Select a practice option below:`;
-  await ctx.editMessageText(msg, {
+  kb.text("\u2B05\uFE0F Back", "nav_mock_errors");
+  await ctx.editMessageText(`\u{1F3AF} *${item.title}* \u2022 ${item.totalQuestions} Mistakes Logged`, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
@@ -5908,55 +5826,55 @@ bot.callbackQuery("speed_calc_studio", async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 function renderStepOptions(title, total, stepCode) {
-  return new InlineKeyboard().text(`\u{1F680} Practice ALL (${total} Questions)`, `run_calc:${stepCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_calc:${stepCode}:10`).row().text("\u2B05\uFE0F Back to Steps", "speed_calc_studio");
+  return new InlineKeyboard().text(`\u{1F680} All (${total} Qs)`, `run_calc:${stepCode}:all`).text("\u26A1 Quick 10", `run_calc:${stepCode}:10`).row().text("\u2B05\uFE0F Back", "speed_calc_studio");
 }
 bot.callbackQuery("calc_step_triplets", async (ctx) => {
-  await ctx.editMessageText(
-    "\u{1F4D0} *Step 1: Primitive Triplets*\nTotal Questions: *16 Triplets*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Triplets", 16, "triplets") }
-  );
+  await ctx.editMessageText("\u{1F4D0} *Primitive Triplets* \u2022 16 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Triplets", 16, "triplets")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("calc_step_tables", async (ctx) => {
-  await ctx.editMessageText(
-    "\u2716\uFE0F *Step 2: Multiplication Tables (12 to 24)*\nTotal Questions: *13 Tables*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Tables", 13, "tables") }
-  );
+  await ctx.editMessageText("\u2716\uFE0F *Tables (12 to 24)* \u2022 13 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Tables", 13, "tables")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("calc_step_squares", async (ctx) => {
-  await ctx.editMessageText(
-    "\u{1F522} *Step 3: Squares (17\xB2 to 39\xB2)*\nTotal Questions: *23 Squares*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Squares", 23, "squares") }
-  );
+  await ctx.editMessageText("\u{1F522} *Squares (17\xB2 to 39\xB2)* \u2022 23 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Squares", 23, "squares")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("calc_step_cubes", async (ctx) => {
-  await ctx.editMessageText(
-    "\u{1F9CA} *Step 4: Cubes (11\xB3 to 25\xB3)*\nTotal Questions: *15 Cubes*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Cubes", 15, "cubes") }
-  );
+  await ctx.editMessageText("\u{1F9CA} *Cubes (11\xB3 to 25\xB3)* \u2022 15 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Cubes", 15, "cubes")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("calc_step_powers", async (ctx) => {
-  await ctx.editMessageText(
-    "\u26A1 *Step 5: Powers (2\u20139)*\nTotal Questions: *38 Powers*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Powers", 38, "powers") }
-  );
+  await ctx.editMessageText("\u26A1 *Powers (2\u20139)* \u2022 38 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Powers", 38, "powers")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("calc_step_factorials", async (ctx) => {
-  await ctx.editMessageText(
-    "\u2757 *Step 6: Factorials (1! to 8!)*\nTotal Questions: *8 Factorials*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Factorials", 8, "factorials") }
-  );
+  await ctx.editMessageText("\u2757 *Factorials (1! to 8!)* \u2022 8 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Factorials", 8, "factorials")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("calc_step_fractions", async (ctx) => {
-  await ctx.editMessageText(
-    "\u{1F4AF} *Step 7: Fractions \u2194 Percentages*\nTotal Questions: *73 Values*\n\nSelect practice mode:",
-    { parse_mode: "Markdown", reply_markup: renderStepOptions("Fractions", 73, "fractions") }
-  );
+  await ctx.editMessageText("\u{1F4AF} *Fractions \u2194 %* \u2022 73 Questions", {
+    parse_mode: "Markdown",
+    reply_markup: renderStepOptions("Fractions", 73, "fractions")
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery(/^run_calc:([a-z0-9_]+):(all|10)$/, async (ctx) => {
