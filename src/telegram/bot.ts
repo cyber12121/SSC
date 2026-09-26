@@ -107,10 +107,11 @@ async function sendCurrentQuestion(botInstance: Bot, session: UserQuizSession) {
       q.options,
       {
         type: 'quiz',
+        correct_option_ids: [q.correctOptionIndex],
         correct_option_id: q.correctOptionIndex,
         explanation: q.explanation || undefined,
         is_anonymous: false,
-      }
+      } as any
     );
 
     registerActivePoll(pollMsg.poll.id, session.userId);
@@ -925,5 +926,8 @@ export async function launchBot() {
   });
 }
 
-// Start
-launchBot();
+// Start polling ONLY if run directly via CLI (not when imported in Vercel serverless)
+const isDirectRun = Boolean(process.argv[1]?.replace(/\\/g, '/').endsWith('src/telegram/bot.ts'));
+if (isDirectRun && !process.env.VERCEL) {
+  launchBot();
+}
