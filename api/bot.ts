@@ -612,12 +612,24 @@ function sanitizeTelegramQuiz(raw) {
   if (optArray.length < 2 || optArray.every((o) => !o)) {
     optArray = ["Option A", "Option B", "Option C", "Option D"];
   }
-  const formattedOptions = optArray.slice(0, 10).map((opt, idx) => {
+  const seenOptions = /* @__PURE__ */ new Set();
+  let formattedOptions = optArray.slice(0, 10).map((opt, idx) => {
     let t = opt.trim();
     if (t.length > 95) t = t.slice(0, 92) + "...";
     if (!t) t = `Choice ${String.fromCharCode(65 + idx)}`;
-    return t;
+    let uniqueT = t;
+    let count = 1;
+    while (seenOptions.has(uniqueT.toLowerCase())) {
+      uniqueT = `${t} (${count++})`;
+    }
+    seenOptions.add(uniqueT.toLowerCase());
+    return uniqueT;
   });
+  while (formattedOptions.length < 2) {
+    const fallbackOpt = `Choice ${String.fromCharCode(65 + formattedOptions.length)}`;
+    formattedOptions.push(fallbackOpt);
+    seenOptions.add(fallbackOpt.toLowerCase());
+  }
   const correctIndex = Math.max(
     0,
     Math.min(letterToIndex(raw.correctOption), formattedOptions.length - 1)
@@ -4587,29 +4599,18 @@ import path2 from "path";
 var ROOT_DIR2 = process.cwd();
 var CHAPTER_BANK_DIR2 = path2.join(ROOT_DIR2, "src", "data", "chapter_bank");
 var MOCK_ERRORS_DIR2 = path2.join(ROOT_DIR2, "src", "data", "mock_errors");
-var DRILLS_DIR2 = path2.join(ROOT_DIR2, "src", "data", "drills");
-var actionRegistry = /* @__PURE__ */ new Map();
-var nextActionId = 1;
-function registerAction(data) {
-  const id = `a_${nextActionId++}`;
-  actionRegistry.set(id, data);
-  return id;
-}
-function getAction(id) {
-  return actionRegistry.get(id);
-}
 function getEnglishCatalog() {
   const sections = [];
   const bbDir = path2.join(CHAPTER_BANK_DIR2, "english", "black_book");
   if (fs2.existsSync(bbDir)) {
     const bbTopics = [];
-    const topicMap = {
-      synonyms: "\u{1F524} Synonyms",
-      one_word_substitution: "\u{1F4DD} One Word Substitution",
-      phrasal_verbs: "\u{1F504} Phrasal Verbs"
-    };
-    for (const [folderName, label] of Object.entries(topicMap)) {
-      const folderPath = path2.join(bbDir, folderName);
+    const topicDefs = [
+      { folder: "synonyms", code: "syn", label: "\u{1F524} Synonyms" },
+      { folder: "one_word_substitution", code: "ows", label: "\u{1F4DD} One Word Substitution" },
+      { folder: "phrasal_verbs", code: "phr", label: "\u{1F504} Phrasal Verbs" }
+    ];
+    for (const t of topicDefs) {
+      const folderPath = path2.join(bbDir, t.folder);
       if (fs2.existsSync(folderPath)) {
         const files = fs2.readdirSync(folderPath).filter((f) => f.endsWith(".json")).sort((a, b) => {
           const numA = parseInt(a.replace(/[^0-9]/g, "") || "0", 10);
@@ -4622,9 +4623,11 @@ function getEnglishCatalog() {
             const filePath = path2.join(folderPath, file);
             const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
             const qs = content.questions || [];
+            const setNum = file.replace(/[^0-9]/g, "") || "1";
             sets.push({
-              id: `${folderName}_${file.replace(".json", "")}`,
-              title: content.chapter_title || file.replace(".json", "").replace("_", " ").toUpperCase(),
+              id: `${t.code}_${setNum}`,
+              code: setNum,
+              title: content.chapter_title || `Set ${setNum}`,
               filePath,
               totalQuestions: qs.length
             });
@@ -4632,14 +4635,16 @@ function getEnglishCatalog() {
           }
         }
         bbTopics.push({
-          id: folderName,
-          title: label,
+          id: t.folder,
+          code: t.code,
+          title: t.label,
           sets
         });
       }
     }
     sections.push({
       id: "black_book",
+      code: "bb",
       title: "\u{1F4DA} Black Book (Vocabulary)",
       topics: bbTopics
     });
@@ -4647,13 +4652,13 @@ function getEnglishCatalog() {
   const ayushDir = path2.join(CHAPTER_BANK_DIR2, "english", "ayush_vocab");
   if (fs2.existsSync(ayushDir)) {
     const ayushTopics = [];
-    const topicMap = {
-      idioms_and_phrases: "\u{1F4AC} Idioms & Phrases",
-      antonyms: "\u{1F521} Antonyms",
-      spellings: "\u270D\uFE0F Spellings"
-    };
-    for (const [folderName, label] of Object.entries(topicMap)) {
-      const folderPath = path2.join(ayushDir, folderName);
+    const topicDefs = [
+      { folder: "idioms_and_phrases", code: "idiom", label: "\u{1F4AC} Idioms & Phrases" },
+      { folder: "antonyms", code: "ant", label: "\u{1F521} Antonyms" },
+      { folder: "spellings", code: "spell", label: "\u270D\uFE0F Spellings" }
+    ];
+    for (const t of topicDefs) {
+      const folderPath = path2.join(ayushDir, t.folder);
       if (fs2.existsSync(folderPath)) {
         const files = fs2.readdirSync(folderPath).filter((f) => f.endsWith(".json")).sort((a, b) => {
           const numA = parseInt(a.replace(/[^0-9]/g, "") || "0", 10);
@@ -4666,9 +4671,11 @@ function getEnglishCatalog() {
             const filePath = path2.join(folderPath, file);
             const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
             const qs = content.questions || [];
+            const setNum = file.replace(/[^0-9]/g, "") || "1";
             sets.push({
-              id: `ayush_${folderName}_${file.replace(".json", "")}`,
-              title: content.chapter_title || file.replace(".json", "").replace("_", " ").toUpperCase(),
+              id: `${t.code}_${setNum}`,
+              code: setNum,
+              title: content.chapter_title || `Set ${setNum}`,
               filePath,
               totalQuestions: qs.length
             });
@@ -4676,14 +4683,16 @@ function getEnglishCatalog() {
           }
         }
         ayushTopics.push({
-          id: folderName,
-          title: label,
+          id: t.folder,
+          code: t.code,
+          title: t.label,
           sets
         });
       }
     }
     sections.push({
       id: "ayush_vocab",
+      code: "ayush",
       title: "\u{1F4D6} Ayush Vocab (Idioms & Antonyms)",
       topics: ayushTopics
     });
@@ -4705,94 +4714,11 @@ function getMathCatalog() {
           const filePath = path2.join(folderPath, file);
           const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
           const qs = content.questions || [];
+          const setNum = file.replace(/[^0-9]/g, "") || "1";
           sets.push({
-            id: `top500_${folder}_${file.replace(".json", "")}`,
-            title: `${folder} - ${file.replace(".json", "").replace("_", " ").toUpperCase()}`,
-            filePath,
-            totalQuestions: qs.length
-          });
-        } catch {
-        }
-      }
-      topics.push({
-        id: `math_${folder}`,
-        title: `\u{1F4CA} ${folder}`,
-        sets
-      });
-    }
-    sections.push({
-      id: "top500",
-      title: "\u{1F3C6} Top 500 Arithmetic & Advance",
-      topics
-    });
-  }
-  const pinnacleDir = path2.join(CHAPTER_BANK_DIR2, "mathematics", "pinnacle");
-  if (fs2.existsSync(pinnacleDir)) {
-    const topicFolders = fs2.readdirSync(pinnacleDir).filter((d) => fs2.statSync(path2.join(pinnacleDir, d)).isDirectory());
-    const topics = [];
-    for (const folder of topicFolders) {
-      const folderPath = path2.join(pinnacleDir, folder);
-      const files = fs2.readdirSync(folderPath).filter((f) => f.endsWith(".json"));
-      const sets = [];
-      for (const file of files) {
-        try {
-          const filePath = path2.join(folderPath, file);
-          const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
-          const qs = content.questions || [];
-          sets.push({
-            id: `pinnacle_${folder}_${file.replace(".json", "")}`,
-            title: `${folder.replace("_", " ").toUpperCase()} - ${file.replace(".json", "")}`,
-            filePath,
-            totalQuestions: qs.length
-          });
-        } catch {
-        }
-      }
-      topics.push({
-        id: `pinnacle_${folder}`,
-        title: `\u{1F3D4}\uFE0F ${folder.replace("_", " ").toUpperCase()}`,
-        sets
-      });
-    }
-    if (topics.length > 0) {
-      sections.push({
-        id: "pinnacle",
-        title: "\u{1F3D4}\uFE0F Pinnacle Mathematics",
-        topics
-      });
-    }
-  }
-  return sections;
-}
-function getGeneralAwarenessCatalog() {
-  const gaDir = path2.join(CHAPTER_BANK_DIR2, "general_awareness");
-  if (!fs2.existsSync(gaDir)) return [];
-  const topicDisplayNames = {
-    polity: "\u{1F3DB}\uFE0F Indian Polity & Constitution",
-    history_modern: "\u{1F4DC} Modern Indian History",
-    history_ancient: "\u{1F3F0} Ancient History",
-    history_medieval: "\u2694\uFE0F Medieval History",
-    geography: "\u{1F30D} Geography (Physical & Indian)",
-    biology: "\u{1F9EC} Biology & Life Sciences",
-    chemistry: "\u2697\uFE0F Chemistry",
-    physics: "\u269B\uFE0F Physics",
-    economics: "\u{1F4C8} Economics",
-    static_gk: "\u{1F3AD} Static GK & Culture"
-  };
-  const topics = [];
-  for (const [folder, title] of Object.entries(topicDisplayNames)) {
-    const folderPath = path2.join(gaDir, folder);
-    if (fs2.existsSync(folderPath)) {
-      const files = fs2.readdirSync(folderPath).filter((f) => f.endsWith(".json")).sort();
-      const sets = [];
-      for (const file of files) {
-        try {
-          const filePath = path2.join(folderPath, file);
-          const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
-          const qs = content.questions || [];
-          sets.push({
-            id: `ga_${folder}_${file.replace(".json", "")}`,
-            title: content.chapter_title || file.replace(".json", "").replace(/_/g, " "),
+            id: `t500_${folder}_${setNum}`,
+            code: setNum,
+            title: `${folder} - Set ${setNum}`,
             filePath,
             totalQuestions: qs.length
           });
@@ -4801,7 +4727,61 @@ function getGeneralAwarenessCatalog() {
       }
       topics.push({
         id: folder,
-        title,
+        code: folder.replace(/[^a-zA-Z0-9]/g, "").slice(0, 10).toLowerCase(),
+        title: `\u{1F4CA} ${folder}`,
+        sets
+      });
+    }
+    sections.push({
+      id: "top500",
+      code: "t500",
+      title: "\u{1F3C6} Top 500 Arithmetic & Advance",
+      topics
+    });
+  }
+  return sections;
+}
+function getGeneralAwarenessCatalog() {
+  const gaDir = path2.join(CHAPTER_BANK_DIR2, "general_awareness");
+  if (!fs2.existsSync(gaDir)) return [];
+  const topicDefs = [
+    { folder: "polity", code: "pol", title: "\u{1F3DB}\uFE0F Indian Polity & Constitution" },
+    { folder: "history_modern", code: "hmod", title: "\u{1F4DC} Modern Indian History" },
+    { folder: "history_ancient", code: "hanc", title: "\u{1F3F0} Ancient History" },
+    { folder: "history_medieval", code: "hmed", title: "\u2694\uFE0F Medieval History" },
+    { folder: "geography", code: "geo", title: "\u{1F30D} Geography" },
+    { folder: "biology", code: "bio", title: "\u{1F9EC} Biology & Life Sciences" },
+    { folder: "chemistry", code: "chem", title: "\u2697\uFE0F Chemistry" },
+    { folder: "physics", code: "phy", title: "\u269B\uFE0F Physics" },
+    { folder: "economics", code: "eco", title: "\u{1F4C8} Economics" },
+    { folder: "static_gk", code: "stat", title: "\u{1F3AD} Static GK & Culture" }
+  ];
+  const topics = [];
+  for (const t of topicDefs) {
+    const folderPath = path2.join(gaDir, t.folder);
+    if (fs2.existsSync(folderPath)) {
+      const files = fs2.readdirSync(folderPath).filter((f) => f.endsWith(".json")).sort();
+      const sets = [];
+      for (const file of files) {
+        try {
+          const filePath = path2.join(folderPath, file);
+          const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
+          const qs = content.questions || [];
+          const baseName = file.replace(".json", "");
+          sets.push({
+            id: `ga_${t.code}_${baseName.slice(0, 15)}`,
+            code: baseName,
+            title: content.chapter_title || baseName.replace(/_/g, " "),
+            filePath,
+            totalQuestions: qs.length
+          });
+        } catch {
+        }
+      }
+      topics.push({
+        id: t.folder,
+        code: t.code,
+        title: t.title,
         sets
       });
     }
@@ -4810,10 +4790,10 @@ function getGeneralAwarenessCatalog() {
 }
 function getMockErrorsCatalog() {
   const subjects = [
-    { id: "mathematics", title: "\u{1F4D0} Mathematics Mistakes" },
-    { id: "reasoning", title: "\u{1F9E0} Reasoning Mistakes" },
-    { id: "english", title: "\u{1F4D6} English Mistakes" },
-    { id: "general_awareness", title: "\u{1F3DB}\uFE0F General Awareness Mistakes" }
+    { id: "mathematics", code: "math", title: "\u{1F4D0} Mathematics Mistakes" },
+    { id: "reasoning", code: "reason", title: "\u{1F9E0} Reasoning Mistakes" },
+    { id: "english", code: "eng", title: "\u{1F4D6} English Mistakes" },
+    { id: "general_awareness", code: "ga", title: "\u{1F3DB}\uFE0F General Awareness Mistakes" }
   ];
   const result = [];
   for (const s of subjects) {
@@ -4839,12 +4819,39 @@ function getMockErrorsCatalog() {
     }
     result.push({
       subjectId: s.id,
+      code: s.code,
       title: s.title,
       totalQuestions,
       chapters
     });
   }
   return result;
+}
+function resolveEnglishSetFile(secCode, topicCode, setCode) {
+  const catalog = getEnglishCatalog();
+  const sec = catalog.find((s) => s.code === secCode);
+  const topic = sec?.topics.find((t) => t.code === topicCode);
+  const set = topic?.sets.find((s) => s.code === setCode);
+  if (!set) return null;
+  return { filePath: set.filePath, title: set.title, total: set.totalQuestions };
+}
+function resolveMathSetFile(topicCode, setCode) {
+  const catalog = getMathCatalog();
+  for (const sec of catalog) {
+    const topic = sec.topics.find((t) => t.code === topicCode || t.id.toLowerCase() === topicCode.toLowerCase());
+    if (topic) {
+      const set = topic.sets.find((s) => s.code === setCode);
+      if (set) return { filePath: set.filePath, title: set.title, total: set.totalQuestions };
+    }
+  }
+  return null;
+}
+function resolveGASetFile(topicCode, setCode) {
+  const catalog = getGeneralAwarenessCatalog();
+  const topic = catalog.find((t) => t.code === topicCode || t.id === topicCode);
+  const set = topic?.sets.find((s) => s.code === setCode);
+  if (!set) return null;
+  return { filePath: set.filePath, title: set.title, total: set.totalQuestions };
 }
 function loadQuestionsFromSet(filePath, mode = "all") {
   try {
@@ -4983,6 +4990,10 @@ function getSessionByPollId(pollId) {
   if (!userId) return void 0;
   return sessions.get(userId);
 }
+function saveSession(session) {
+  sessions.set(session.userId, session);
+  saveToDisk();
+}
 function clearSession(userId) {
   const session = sessions.get(userId);
   if (session?.activePollId) {
@@ -4996,8 +5007,11 @@ function clearSession(userId) {
 dotenv.config();
 var token = process.env.TELEGRAM_BOT_TOKEN || "8573783956:AAF7SGdPHbfpJs2zH8tmQfXsUsVPBORAsHM";
 var bot = new Bot(token);
+bot.catch((err) => {
+  console.error("[TelegramBot] Uncaught error during update handling:", err);
+});
 function getRootMenuKeyboard() {
-  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").row().text("\u{1F4A1} Help & Commands", "nav_help");
+  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").row().text("\u{1F4A1} Help & Guide", "nav_help");
 }
 function getChapterBankSubjectsKeyboard() {
   return new InlineKeyboard().text("\u{1F4D0} Mathematics", "cb_sub_math").text("\u{1F9E0} Reasoning", "cb_sub_reasoning").row().text("\u{1F4D6} English", "cb_sub_english").text("\u{1F3DB}\uFE0F General Awareness", "cb_sub_ga").row().text("\u2B05\uFE0F Back to Main Menu", "nav_root");
@@ -5060,7 +5074,7 @@ async function sendCompletionSummary(botInstance, session) {
   let comment = "";
   if (percentage >= 90) {
     medal = "\u{1F3C6} OUTSTANDING PERFORMANCE!";
-    comment = "Flawless accuracy! Your concepts in this set are rock solid!";
+    comment = "Top tier accuracy! Your concepts in this set are rock solid!";
   } else if (percentage >= 70) {
     medal = "\u{1F525} WELL DONE!";
     comment = "Great score! Review the couple of questions you missed.";
@@ -5089,9 +5103,9 @@ _${comment}_
     reply_markup: afterQuizKeyboard
   });
 }
-function startQuizForUser(userId, chatId, title, questions) {
+async function startQuizForUser(userId, chatId, title, questions) {
   if (!questions || questions.length === 0) {
-    bot.api.sendMessage(
+    await bot.api.sendMessage(
       chatId,
       `\u26A0\uFE0F No questions found for *${title}*. Please choose another section.`,
       {
@@ -5102,7 +5116,7 @@ function startQuizForUser(userId, chatId, title, questions) {
     return;
   }
   const session = startSession(userId, chatId, title, questions);
-  bot.api.sendMessage(
+  await bot.api.sendMessage(
     chatId,
     `\u{1F680} *${title}*
 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
@@ -5111,13 +5125,13 @@ function startQuizForUser(userId, chatId, title, questions) {
 \u{1F6D1} _Type /stop anytime to end early and see your score._`,
     { parse_mode: "Markdown" }
   );
-  sendCurrentQuestion(bot, session);
+  await sendCurrentQuestion(bot, session);
 }
 bot.command(["start", "menu"], async (ctx) => {
   const name = ctx.from?.first_name || "Aspirant";
   const text = `\u{1F44B} *Welcome ${name} to your CGL Preparation Cockpit!*
 
-Browse everything just like the website:
+Everything is structured just like the website:
 \u2022 \u{1F4C1} *Chapter Bank:* Math, Reasoning, English (Black Book & Ayush), GA
 \u2022 \u{1F3AF} *Mock Errors:* Revise mistakes by subject & chapter
 \u2022 \u26A1 *Speed Lab:* Triplets, Fractions, Squares, Simplification
@@ -5143,7 +5157,7 @@ bot.command("help", async (ctx) => {
 \u2022 /stop \u2014 Finish active test and generate score card
 
 *How it works:*
-1. Select Chapter Bank or Mock Errors
+1. Select Chapter Bank, Mock Errors, or Speed Lab
 2. Pick your subject and topic
 3. Choose a Set \u2014 then pick **Attempt ALL Questions** (full set) or **Quick 10**!
 4. Instant feedback and solutions appear automatically as you tap.`;
@@ -5170,8 +5184,7 @@ bot.callbackQuery("cb_sub_english", async (ctx) => {
   const sections = getEnglishCatalog();
   const kb = new InlineKeyboard();
   for (const sec of sections) {
-    const actId = registerAction({ type: "eng_sec", secId: sec.id });
-    kb.text(sec.title, actId).row();
+    kb.text(sec.title, `eng_sec:${sec.code}`).row();
   }
   kb.text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
   await ctx.editMessageText("\u{1F4D6} *English Chapter Bank:* Choose a book/source:", {
@@ -5180,12 +5193,78 @@ bot.callbackQuery("cb_sub_english", async (ctx) => {
   });
   await ctx.answerCallbackQuery();
 });
+bot.callbackQuery(/^eng_sec:(bb|ayush)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const secCode = ctx.match[1];
+  const sections = getEnglishCatalog();
+  const sec = sections.find((s) => s.code === secCode);
+  if (!sec) return;
+  const kb = new InlineKeyboard();
+  for (const topic of sec.topics) {
+    kb.text(`${topic.title} (${topic.sets.length} Sets)`, `eng_top:${secCode}:${topic.code}`).row();
+  }
+  kb.text("\u2B05\uFE0F Back to Books", "cb_sub_english");
+  await ctx.editMessageText(`\u{1F4D6} *${sec.title}:*
+Choose a vocabulary topic:`, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^eng_top:(bb|ayush):([a-z_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const secCode = ctx.match[1];
+  const topicCode = ctx.match[2];
+  const sections = getEnglishCatalog();
+  const sec = sections.find((s) => s.code === secCode);
+  const topic = sec?.topics.find((t) => t.code === topicCode);
+  if (!topic) return;
+  const kb = new InlineKeyboard();
+  for (let i = 0; i < topic.sets.length; i += 2) {
+    const s1 = topic.sets[i];
+    const s2 = topic.sets[i + 1];
+    kb.text(`${s1.title} (${s1.totalQuestions} Qs)`, `eng_set:${secCode}:${topicCode}:${s1.code}`);
+    if (s2) {
+      kb.text(`${s2.title} (${s2.totalQuestions} Qs)`, `eng_set:${secCode}:${topicCode}:${s2.code}`);
+    }
+    kb.row();
+  }
+  kb.text("\u2B05\uFE0F Back to Topics", `eng_sec:${secCode}`);
+  await ctx.editMessageText(`\u{1F524} *${topic.title}* (${topic.sets.length} Sets Available):
+Select a set to practice:`, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^eng_set:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, secCode, topicCode, setCode] = ctx.match;
+  const setInfo = resolveEnglishSetFile(secCode, topicCode, setCode);
+  if (!setInfo) return;
+  const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${setInfo.total} Questions)`, `run_eng:${secCode}:${topicCode}:${setCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_eng:${secCode}:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back to Sets", `eng_top:${secCode}:${topicCode}`);
+  const msg = `\u{1F4D6} *${setInfo.title}*
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+\u{1F4DD} *Total Questions:* ${setInfo.total}
+
+\u{1F449} *How would you like to practice?*`;
+  await ctx.editMessageText(msg, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^run_eng:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, secCode, topicCode, setCode, mode] = ctx.match;
+  const setInfo = resolveEnglishSetFile(secCode, topicCode, setCode);
+  if (!setInfo) return;
+  const qs = loadQuestionsFromSet(setInfo.filePath, mode);
+  const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
+});
 bot.callbackQuery("cb_sub_math", async (ctx) => {
   const mathSections = getMathCatalog();
   const kb = new InlineKeyboard();
   for (const sec of mathSections) {
-    const actId = registerAction({ type: "math_sec", secId: sec.id });
-    kb.text(sec.title, actId).row();
+    kb.text(sec.title, `math_sec:${sec.code}`).row();
   }
   kb.text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
   await ctx.editMessageText("\u{1F4D0} *Mathematics Chapter Bank:* Select module:", {
@@ -5194,17 +5273,87 @@ bot.callbackQuery("cb_sub_math", async (ctx) => {
   });
   await ctx.answerCallbackQuery();
 });
+bot.callbackQuery(/^math_sec:(t500|pinnacle)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const secCode = ctx.match[1];
+  const mathSections = getMathCatalog();
+  const sec = mathSections.find((s) => s.code === secCode);
+  if (!sec) return;
+  const kb = new InlineKeyboard();
+  for (let i = 0; i < sec.topics.length; i += 2) {
+    const t1 = sec.topics[i];
+    const t2 = sec.topics[i + 1];
+    kb.text(t1.title, `math_top:${t1.code}`);
+    if (t2) {
+      kb.text(t2.title, `math_top:${t2.code}`);
+    }
+    kb.row();
+  }
+  kb.text("\u2B05\uFE0F Back to Modules", "cb_sub_math");
+  await ctx.editMessageText(`\u{1F4D0} *${sec.title}:*
+Choose a chapter to drill:`, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^math_top:([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const topicCode = ctx.match[1];
+  const catalog = getMathCatalog();
+  let topicFound = null;
+  for (const sec of catalog) {
+    const t = sec.topics.find((x) => x.code === topicCode || x.id.toLowerCase() === topicCode.toLowerCase());
+    if (t) {
+      topicFound = t;
+      break;
+    }
+  }
+  if (!topicFound) return;
+  const kb = new InlineKeyboard();
+  for (const s of topicFound.sets) {
+    kb.text(`\u25B6\uFE0F ${s.title} (${s.totalQuestions} Qs)`, `math_set:${topicCode}:${s.code}`).row();
+  }
+  kb.text("\u2B05\uFE0F Back to Math Chapters", "cb_sub_math");
+  await ctx.editMessageText(`\u{1F4CA} *${topicFound.title}:*
+Select set to practice:`, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^math_set:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode] = ctx.match;
+  const setInfo = resolveMathSetFile(topicCode, setCode);
+  if (!setInfo) return;
+  const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${setInfo.total} Questions)`, `run_math:${topicCode}:${setCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_math:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back to Sets", `math_top:${topicCode}`);
+  const msg = `\u{1F4CA} *${setInfo.title}*
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+\u{1F4DD} *Total Questions in Set:* ${setInfo.total}
+
+\u{1F449} *How would you like to practice?*`;
+  await ctx.editMessageText(msg, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^run_math:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode, mode] = ctx.match;
+  const setInfo = resolveMathSetFile(topicCode, setCode);
+  if (!setInfo) return;
+  const qs = loadQuestionsFromSet(setInfo.filePath, mode);
+  const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
+});
 bot.callbackQuery("cb_sub_ga", async (ctx) => {
   const topics = getGeneralAwarenessCatalog();
   const kb = new InlineKeyboard();
   for (let i = 0; i < topics.length; i += 2) {
     const t1 = topics[i];
     const t2 = topics[i + 1];
-    const act1 = registerAction({ type: "ga_topic", topicId: t1.id });
-    kb.text(t1.title, act1);
+    kb.text(t1.title, `ga_top:${t1.code}`);
     if (t2) {
-      const act2 = registerAction({ type: "ga_topic", topicId: t2.id });
-      kb.text(t2.title, act2);
+      kb.text(t2.title, `ga_top:${t2.code}`);
     }
     kb.row();
   }
@@ -5215,23 +5364,61 @@ bot.callbackQuery("cb_sub_ga", async (ctx) => {
   });
   await ctx.answerCallbackQuery();
 });
+bot.callbackQuery(/^ga_top:([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const topicCode = ctx.match[1];
+  const topics = getGeneralAwarenessCatalog();
+  const topic = topics.find((t) => t.code === topicCode || t.id === topicCode);
+  if (!topic) return;
+  const kb = new InlineKeyboard();
+  for (const s of topic.sets) {
+    kb.text(`${s.title} (${s.totalQuestions} Qs)`, `ga_set:${topicCode}:${s.code}`).row();
+  }
+  kb.text("\u2B05\uFE0F Back to GA Subjects", "cb_sub_ga");
+  await ctx.editMessageText(`\u{1F3DB}\uFE0F *${topic.title}* (${topic.sets.length} Chapters):
+Choose a chapter to practice:`, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^ga_set:([a-z0-9_]+):(.+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode] = ctx.match;
+  const setInfo = resolveGASetFile(topicCode, setCode);
+  if (!setInfo) return;
+  const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${setInfo.total} Questions)`, `run_ga:${topicCode}:${setCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_ga:${topicCode}:${setCode}:10`).row().text("\u2B05\uFE0F Back to Chapters", `ga_top:${topicCode}`);
+  const msg = `\u{1F3DB}\uFE0F *${setInfo.title}*
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+\u{1F4DD} *Total Questions in Chapter:* ${setInfo.total}
+
+\u{1F449} *How would you like to practice?*`;
+  await ctx.editMessageText(msg, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^run_ga:([a-zA-Z0-9_\-]+):(.+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode, mode] = ctx.match;
+  const setInfo = resolveGASetFile(topicCode, setCode);
+  if (!setInfo) return;
+  const qs = loadQuestionsFromSet(setInfo.filePath, mode);
+  const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
+});
 bot.callbackQuery("cb_sub_reasoning", async (ctx) => {
-  const kb = new InlineKeyboard().text("\u{1F3AF} Reasoning Mock Mistakes (All Sets)", "start_mock_err_reasoning").row().text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
-  await ctx.editMessageText(
-    "\u{1F9E0} *Reasoning Bank:*\nSelect practice mode below:",
-    {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    }
-  );
+  const kb = new InlineKeyboard().text("\u{1F3AF} Practice ALL Reasoning Mock Mistakes", "run_mock:reasoning:all").row().text("\u26A1 Quick 10 Reasoning Mistakes", "run_mock:reasoning:10").row().text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
+  await ctx.editMessageText("\u{1F9E0} *Reasoning Bank:*\nSelect practice mode below:", {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
   await ctx.answerCallbackQuery();
 });
 bot.callbackQuery("nav_mock_errors", async (ctx) => {
   const catalog = getMockErrorsCatalog();
   const kb = new InlineKeyboard();
   for (const item of catalog) {
-    const actId = registerAction({ type: "mock_sub", subId: item.subjectId });
-    kb.text(`${item.title} (${item.totalQuestions} Qs)`, actId).row();
+    kb.text(`${item.title} (${item.totalQuestions} Qs)`, `mock_sub:${item.subjectId}`).row();
   }
   kb.text("\u2B05\uFE0F Back to Main Menu", "nav_root");
   await ctx.editMessageText(
@@ -5242,6 +5429,44 @@ bot.callbackQuery("nav_mock_errors", async (ctx) => {
     }
   );
   await ctx.answerCallbackQuery();
+});
+bot.callbackQuery(/^mock_sub:(mathematics|reasoning|english|general_awareness)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const subId = ctx.match[1];
+  const catalog = getMockErrorsCatalog();
+  const item = catalog.find((c) => c.subjectId === subId);
+  if (!item) return;
+  const kb = new InlineKeyboard().text(`\u{1F525} Practice ALL ${item.totalQuestions} Mistakes`, `run_mock:${subId}:all`).row().text(`\u26A1 Quick 10 Mistakes`, `run_mock:${subId}:10`).row();
+  for (const ch of item.chapters) {
+    if (ch.count > 0 && ch.chapterNum !== void 0) {
+      kb.text(`\u{1F4C1} ${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
+    }
+  }
+  kb.text("\u2B05\uFE0F Back to Mock Subjects", "nav_mock_errors");
+  const msg = `\u{1F3AF} *${item.title}*
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+Total Mistakes Logged: *${item.totalQuestions} Questions*
+
+Select a practice option below:`;
+  await ctx.editMessageText(msg, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, subId, mode] = ctx.match;
+  const qs = loadMockErrorsForSubject(subId, void 0, mode);
+  const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace("_", " ");
+  const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${modeLabel})`, qs);
+});
+bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, subId, chNum, mode] = ctx.match;
+  const qs = loadMockErrorsForSubject(subId, parseInt(chNum, 10), mode);
+  const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace("_", " ");
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs);
 });
 bot.callbackQuery("nav_speed_lab", async (ctx) => {
   const kb = new InlineKeyboard().text("\u{1F9EE} Calculation Studio (7 Steps)", "speed_calc_studio").row().text("\u{1F4D0} Simplification Drills", "speed_simp_menu").row().text("\u{1F3C6} Daily 25-Q Routine Workout", "speed_routine").row().text("\u26A1 Rapid 10-Q Speed Blitz", "speed_mixed").row().text("\u2B05\uFE0F Back to Main Menu", "nav_root");
@@ -5266,7 +5491,7 @@ bot.callbackQuery("speed_calc_studio", async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 function renderStepOptions(title, total, stepCode) {
-  return new InlineKeyboard().text(`\u{1F680} Practice ALL (${total} Questions)`, `run_calc_${stepCode}_all`).row().text("\u26A1 Quick 10 Questions", `run_calc_${stepCode}_10`).row().text("\u2B05\uFE0F Back to Steps", "speed_calc_studio");
+  return new InlineKeyboard().text(`\u{1F680} Practice ALL (${total} Questions)`, `run_calc:${stepCode}:all`).row().text("\u26A1 Quick 10 Questions", `run_calc:${stepCode}:10`).row().text("\u2B05\uFE0F Back to Steps", "speed_calc_studio");
 }
 bot.callbackQuery("calc_step_triplets", async (ctx) => {
   await ctx.editMessageText(
@@ -5317,11 +5542,9 @@ bot.callbackQuery("calc_step_fractions", async (ctx) => {
   );
   await ctx.answerCallbackQuery();
 });
-bot.callbackQuery(/^run_calc_(.+)_([a-z0-9]+)$/, async (ctx) => {
+bot.callbackQuery(/^run_calc:([a-z0-9_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const match = ctx.match;
-  const step = match[1];
-  const mode = match[2];
+  const [_, step, mode] = ctx.match;
   let qs = [];
   let title = "";
   if (step === "triplets") {
@@ -5346,22 +5569,22 @@ bot.callbackQuery(/^run_calc_(.+)_([a-z0-9]+)$/, async (ctx) => {
     qs = getFractionsStepDrill(mode);
     title = `\u{1F4AF} Step 7: Fractions \u2194 % (${mode === "all" ? "All 73" : "10 Qs"})`;
   }
-  startQuizForUser(ctx.from.id, ctx.chat.id, title, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, title, qs);
 });
 bot.callbackQuery("speed_simp_menu", async (ctx) => {
   const cat = getSimplificationCatalog();
   const kb = new InlineKeyboard();
   for (const c of cat) {
-    kb.text(c.title, `simp_cat_${c.difficulty.toLowerCase()}`).row();
+    kb.text(c.title, `simp_cat:${c.difficulty.toLowerCase()}`).row();
   }
   kb.text("\u2B05\uFE0F Back to Speed Lab", "nav_speed_lab");
-  await ctx.editMessageText(
-    "\u{1F4D0} *Simplification Drills*\nChoose difficulty level:",
-    { parse_mode: "Markdown", reply_markup: kb }
-  );
+  await ctx.editMessageText("\u{1F4D0} *Simplification Drills*\nChoose difficulty level:", {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
   await ctx.answerCallbackQuery();
 });
-bot.callbackQuery(/^simp_cat_([a-z]+)$/, async (ctx) => {
+bot.callbackQuery(/^simp_cat:([a-z]+)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
   const diffKey = ctx.match[1];
   const cat = getSimplificationCatalog();
@@ -5371,34 +5594,48 @@ bot.callbackQuery(/^simp_cat_([a-z]+)$/, async (ctx) => {
   for (let i = 0; i < chosen.sets.length; i += 2) {
     const s1 = chosen.sets[i];
     const s2 = chosen.sets[i + 1];
-    const act1 = registerAction({ type: "start_simp_set", setId: s1.id, title: s1.title });
-    kb.text(`${s1.title} (10 Qs)`, act1);
+    kb.text(`${s1.title} (10 Qs)`, `run_simp:${s1.id}`);
     if (s2) {
-      const act2 = registerAction({ type: "start_simp_set", setId: s2.id, title: s2.title });
-      kb.text(`${s2.title} (10 Qs)`, act2);
+      kb.text(`${s2.title} (10 Qs)`, `run_simp:${s2.id}`);
     }
     kb.row();
   }
   kb.text("\u2B05\uFE0F Back to Difficulties", "speed_simp_menu");
-  await ctx.editMessageText(
-    `\u{1F4D0} *${chosen.title}*
-Select a set to practice:`,
-    { parse_mode: "Markdown", reply_markup: kb }
+  await ctx.editMessageText(`\u{1F4D0} *${chosen.title}*
+Select a set to practice:`, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^run_simp:([a-zA-Z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const setId = ctx.match[1];
+  const allSets = getSimplificationCatalog().flatMap((c) => c.sets);
+  const target = allSets.find((s) => s.id === setId);
+  if (!target) return;
+  const questions = target.questions.map(
+    (q) => sanitizeTelegramQuiz({
+      id: q.id || `simp_${q.q_num}`,
+      question: `\u{1F4D0} [${target.title}]
+${q.question}`,
+      options: q.options,
+      correctOption: q.answer || q.correctOption,
+      solution: q.solution,
+      subject: "Simplification",
+      topic: target.title,
+      source: target.title
+    })
   );
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F4D0} ${target.title} (All ${questions.length} Qs)`, questions);
 });
 bot.callbackQuery("speed_routine", async (ctx) => {
   await ctx.answerCallbackQuery();
   const qs = getDailyRoutineWorkout();
-  startQuizForUser(ctx.from.id, ctx.chat.id, "\u{1F3C6} Daily 25-Question Routine Workout", qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, "\u{1F3C6} Daily 25-Question Routine Workout", qs);
 });
 bot.callbackQuery("speed_mixed", async (ctx) => {
   await ctx.answerCallbackQuery();
-  startQuizForUser(ctx.from.id, ctx.chat.id, "\u26A1 Mixed Speed Blitz", generateMixedSpeedDrill(10));
-});
-bot.callbackQuery("start_mock_err_reasoning", async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const qs = loadMockErrorsForSubject("reasoning", void 0, "all");
-  startQuizForUser(ctx.from.id, ctx.chat.id, "\u{1F9E0} Reasoning Mock Errors (Full Set)", qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, "\u26A1 Mixed Speed Blitz", generateMixedSpeedDrill(10));
 });
 bot.callbackQuery("nav_help", async (ctx) => {
   const helpText = `\u{1F4A1} *CGL Bot Navigation Guide*
@@ -5413,192 +5650,6 @@ bot.callbackQuery("nav_help", async (ctx) => {
   });
   await ctx.answerCallbackQuery();
 });
-bot.on("callback_query:data", async (ctx, next) => {
-  const data = ctx.callbackQuery.data;
-  const action = getAction(data);
-  if (!action) {
-    return next();
-  }
-  await ctx.answerCallbackQuery();
-  if (action.type === "eng_sec") {
-    const sections = getEnglishCatalog();
-    const sec = sections.find((s) => s.id === action.secId);
-    if (!sec) return;
-    const kb = new InlineKeyboard();
-    for (const topic of sec.topics) {
-      const actId = registerAction({ type: "eng_topic", secId: sec.id, topicId: topic.id });
-      kb.text(`${topic.title} (${topic.sets.length} Sets)`, actId).row();
-    }
-    kb.text("\u2B05\uFE0F Back to Books", "cb_sub_english");
-    await ctx.editMessageText(`\u{1F4D6} *${sec.title}:*
-Choose a vocabulary topic:`, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "eng_topic") {
-    const sections = getEnglishCatalog();
-    const sec = sections.find((s) => s.id === action.secId);
-    const topic = sec?.topics.find((t) => t.id === action.topicId);
-    if (!topic) return;
-    const kb = new InlineKeyboard();
-    for (let i = 0; i < topic.sets.length; i += 2) {
-      const s1 = topic.sets[i];
-      const s2 = topic.sets[i + 1];
-      const act1 = registerAction({ type: "view_set", filePath: s1.filePath, title: s1.title, total: s1.totalQuestions });
-      kb.text(`${s1.title} (${s1.totalQuestions} Qs)`, act1);
-      if (s2) {
-        const act2 = registerAction({ type: "view_set", filePath: s2.filePath, title: s2.title, total: s2.totalQuestions });
-        kb.text(`${s2.title} (${s2.totalQuestions} Qs)`, act2);
-      }
-      kb.row();
-    }
-    const backAct = registerAction({ type: "eng_sec", secId: action.secId });
-    kb.text("\u2B05\uFE0F Back to Topics", backAct);
-    await ctx.editMessageText(`\u{1F524} *${topic.title}* (${topic.sets.length} Sets Available):
-Select a set to practice:`, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "math_sec") {
-    const mathSections = getMathCatalog();
-    const sec = mathSections.find((s) => s.id === action.secId);
-    if (!sec) return;
-    const kb = new InlineKeyboard();
-    for (let i = 0; i < sec.topics.length; i += 2) {
-      const t1 = sec.topics[i];
-      const t2 = sec.topics[i + 1];
-      const act1 = registerAction({ type: "math_topic", secId: sec.id, topicId: t1.id });
-      kb.text(t1.title, act1);
-      if (t2) {
-        const act2 = registerAction({ type: "math_topic", secId: sec.id, topicId: t2.id });
-        kb.text(t2.title, act2);
-      }
-      kb.row();
-    }
-    kb.text("\u2B05\uFE0F Back to Math Modules", "cb_sub_math");
-    await ctx.editMessageText(`\u{1F4D0} *${sec.title}:*
-Choose a chapter to drill:`, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "math_topic") {
-    const mathSections = getMathCatalog();
-    const sec = mathSections.find((s) => s.id === action.secId);
-    const topic = sec?.topics.find((t) => t.id === action.topicId);
-    if (!topic) return;
-    const kb = new InlineKeyboard();
-    for (const s of topic.sets) {
-      const act = registerAction({ type: "view_set", filePath: s.filePath, title: s.title, total: s.totalQuestions });
-      kb.text(`\u25B6\uFE0F ${s.title} (${s.totalQuestions} Questions)`, act).row();
-    }
-    const backAct = registerAction({ type: "math_sec", secId: action.secId });
-    kb.text("\u2B05\uFE0F Back to Chapters", backAct);
-    await ctx.editMessageText(`\u{1F4CA} *${topic.title}:*
-Select set to practice:`, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "ga_topic") {
-    const gaTopics = getGeneralAwarenessCatalog();
-    const topic = gaTopics.find((t) => t.id === action.topicId);
-    if (!topic) return;
-    const kb = new InlineKeyboard();
-    for (const s of topic.sets) {
-      const act = registerAction({ type: "view_set", filePath: s.filePath, title: s.title, total: s.totalQuestions });
-      kb.text(`${s.title} (${s.totalQuestions} Qs)`, act).row();
-    }
-    kb.text("\u2B05\uFE0F Back to Subjects", "cb_sub_ga");
-    await ctx.editMessageText(`\u{1F3DB}\uFE0F *${topic.title}* (${topic.sets.length} Chapters):
-Choose a chapter to practice:`, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "view_set") {
-    const actAll = registerAction({ type: "start_set", filePath: action.filePath, title: action.title, mode: "all" });
-    const act10 = registerAction({ type: "start_set", filePath: action.filePath, title: action.title, mode: "10" });
-    const kb = new InlineKeyboard().text(`\u{1F680} Practice ALL (${action.total} Questions)`, actAll).row().text("\u26A1 Quick 10 Questions", act10).row().text("\u{1F4C1} Back to Chapter Bank", "nav_chapter_bank");
-    const msg = `\u{1F4D6} *${action.title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-\u{1F4DD} *Total Questions in Set:* ${action.total}
-
-\u{1F449} *How would you like to practice?*`;
-    await ctx.editMessageText(msg, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "start_set") {
-    const qs = loadQuestionsFromSet(action.filePath, action.mode);
-    const modeLabel = action.mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
-    startQuizForUser(ctx.from.id, ctx.chat.id, `${action.title} (${modeLabel})`, qs);
-    return;
-  }
-  if (action.type === "mock_sub") {
-    const catalog = getMockErrorsCatalog();
-    const item = catalog.find((c) => c.subjectId === action.subId);
-    if (!item) return;
-    const kb = new InlineKeyboard();
-    const actAllSubject = registerAction({ type: "start_mock", subId: item.subjectId, mode: "all" });
-    const act10Subject = registerAction({ type: "start_mock", subId: item.subjectId, mode: "10" });
-    kb.text(`\u{1F525} Practice ALL ${item.totalQuestions} Mistakes`, actAllSubject).row();
-    kb.text(`\u26A1 Quick 10 Mistakes`, act10Subject).row();
-    for (const ch of item.chapters) {
-      if (ch.count > 0) {
-        const actCh = registerAction({ type: "start_mock", subId: item.subjectId, chapterNum: ch.chapterNum, mode: "all" });
-        kb.text(`\u{1F4C1} ${ch.title} (${ch.count} Qs)`, actCh).row();
-      }
-    }
-    kb.text("\u2B05\uFE0F Back to Mock Subjects", "nav_mock_errors");
-    const msg = `\u{1F3AF} *${item.title}*
-\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
-Total Mistakes Logged: *${item.totalQuestions} Questions*
-
-Select a practice option below:`;
-    await ctx.editMessageText(msg, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-    return;
-  }
-  if (action.type === "start_mock") {
-    const qs = loadMockErrorsForSubject(action.subId, action.chapterNum, action.mode);
-    const subTitle = action.subId.charAt(0).toUpperCase() + action.subId.slice(1).replace("_", " ");
-    const modeLabel = action.mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
-    startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${modeLabel})`, qs);
-    return;
-  }
-  if (action.type === "start_simp_set") {
-    const allSets = getSimplificationCatalog().flatMap((c) => c.sets);
-    const target = allSets.find((s) => s.id === action.setId);
-    if (!target) return;
-    const questions = target.questions.map(
-      (q) => sanitizeTelegramQuiz({
-        id: q.id || `simp_${q.q_num}`,
-        question: `\u{1F4D0} [${target.title}]
-${q.question}`,
-        options: q.options,
-        correctOption: q.answer || q.correctOption,
-        solution: q.solution,
-        subject: "Simplification",
-        topic: target.title,
-        source: target.title
-      })
-    );
-    startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F4D0} ${target.title} (All ${questions.length} Qs)`, questions);
-    return;
-  }
-});
 bot.on("poll_answer", async (ctx) => {
   const answer = ctx.pollAnswer;
   const pollId = answer.poll_id;
@@ -5612,13 +5663,13 @@ bot.on("poll_answer", async (ctx) => {
   }
   session.answeredCount++;
   session.currentIndex++;
-  setTimeout(async () => {
-    try {
-      await sendCurrentQuestion(bot, session);
-    } catch (err) {
-      console.error("[TelegramBot] Error sending next question:", err);
-    }
-  }, 1200);
+  saveSession(session);
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 1e3));
+    await sendCurrentQuestion(bot, session);
+  } catch (err) {
+    console.error("[TelegramBot] Error sending next question:", err);
+  }
 });
 async function launchBot() {
   if (!token) {

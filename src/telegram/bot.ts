@@ -25,17 +25,16 @@ import {
   getMathCatalog,
   getGeneralAwarenessCatalog,
   getMockErrorsCatalog,
+  resolveEnglishSetFile,
+  resolveMathSetFile,
+  resolveGASetFile,
   loadQuestionsFromSet,
   loadMockErrorsForSubject,
-  registerAction,
-  getAction,
-  SetEntry,
-  TopicEntry,
-  SectionEntry,
 } from './catalog';
 import {
   startSession,
   getSession,
+  saveSession,
   clearSession,
   registerActivePoll,
   getSessionByPollId,
@@ -45,11 +44,14 @@ import {
 dotenv.config();
 
 const token = process.env.TELEGRAM_BOT_TOKEN || '8573783956:AAF7SGdPHbfpJs2zH8tmQfXsUsVPBORAsHM';
-
 export const bot = new Bot(token);
 
+bot.catch((err) => {
+  console.error('[TelegramBot] Uncaught error during update handling:', err);
+});
+
 // ----------------------------------------------------
-// WEBSITE-MIRRORING NAVIGATION KEYBOARDS
+// ROOT & HIGH-LEVEL KEYBOARDS
 // ----------------------------------------------------
 
 function getRootMenuKeyboard(): InlineKeyboard {
@@ -60,7 +62,7 @@ function getRootMenuKeyboard(): InlineKeyboard {
     .row()
     .text('⚡ Speed Lab', 'nav_speed_lab')
     .row()
-    .text('💡 Help & Commands', 'nav_help');
+    .text('💡 Help & Guide', 'nav_help');
 }
 
 function getChapterBankSubjectsKeyboard(): InlineKeyboard {
@@ -139,7 +141,7 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
   let comment = '';
   if (percentage >= 90) {
     medal = '🏆 OUTSTANDING PERFORMANCE!';
-    comment = 'Flawless accuracy! Your concepts in this set are rock solid!';
+    comment = 'Top tier accuracy! Your concepts in this set are rock solid!';
   } else if (percentage >= 70) {
     medal = '🔥 WELL DONE!';
     comment = 'Great score! Review the couple of questions you missed.';
@@ -177,14 +179,14 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
   });
 }
 
-function startQuizForUser(
+async function startQuizForUser(
   userId: number,
   chatId: number,
   title: string,
   questions: TelegramQuizQuestion[]
 ) {
   if (!questions || questions.length === 0) {
-    bot.api.sendMessage(
+    await bot.api.sendMessage(
       chatId,
       `⚠️ No questions found for *${title}*. Please choose another section.`,
       {
@@ -196,7 +198,7 @@ function startQuizForUser(
   }
 
   const session = startSession(userId, chatId, title, questions);
-  bot.api.sendMessage(
+  await bot.api.sendMessage(
     chatId,
     `🚀 *${title}*\n` +
       `━━━━━━━━━━━━━━━━━━━━━━\n` +
@@ -206,7 +208,7 @@ function startQuizForUser(
     { parse_mode: 'Markdown' }
   );
 
-  sendCurrentQuestion(bot, session);
+  await sendCurrentQuestion(bot, session);
 }
 
 // ----------------------------------------------------
@@ -217,7 +219,7 @@ bot.command(['start', 'menu'], async (ctx) => {
   const name = ctx.from?.first_name || 'Aspirant';
   const text =
     `👋 *Welcome ${name} to your CGL Preparation Cockpit!*\n\n` +
-    `Browse everything just like the website:\n` +
+    `Everything is structured just like the website:\n` +
     `• 📁 *Chapter Bank:* Math, Reasoning, English (Black Book & Ayush), GA\n` +
     `• 🎯 *Mock Errors:* Revise mistakes by subject & chapter\n` +
     `• ⚡ *Speed Lab:* Triplets, Fractions, Squares, Simplification\n\n` +
@@ -244,7 +246,7 @@ bot.command('help', async (ctx) => {
     `• /start or /menu — Open the main category menu\n` +
     `• /stop — Finish active test and generate score card\n\n` +
     `*How it works:*\n` +
-    `1. Select Chapter Bank or Mock Errors\n` +
+    `1. Select Chapter Bank, Mock Errors, or Speed Lab\n` +
     `2. Pick your subject and topic\n` +
     `3. Choose a Set — then pick **Attempt ALL Questions** (full set) or **Quick 10**!\n` +
     `4. Instant feedback and solutions appear automatically as you tap.`;
@@ -256,7 +258,7 @@ bot.command('help', async (ctx) => {
 });
 
 // ----------------------------------------------------
-// LEVEL 1: ROOT & CHAPTER BANK SUBJECTS
+// NAVIGATION: ROOT & SUBJECTS
 // ----------------------------------------------------
 
 bot.callbackQuery('nav_root', async (ctx) => {
@@ -276,7 +278,7 @@ bot.callbackQuery('nav_chapter_bank', async (ctx) => {
 });
 
 // ----------------------------------------------------
-// LEVEL 2: ENGLISH CHAPTER BANK (Black Book vs Ayush)
+// ENGLISH CHAPTER BANK (Black Book vs Ayush)
 // ----------------------------------------------------
 
 bot.callbackQuery('cb_sub_english', async (ctx) => {
@@ -284,8 +286,7 @@ bot.callbackQuery('cb_sub_english', async (ctx) => {
   const kb = new InlineKeyboard();
 
   for (const sec of sections) {
-    const actId = registerAction({ type: 'eng_sec', secId: sec.id });
-    kb.text(sec.title, actId).row();
+    kb.text(sec.title, `eng_sec:${sec.code}`).row();
   }
   kb.text('⬅️ Back to Subjects', 'nav_chapter_bank');
 
@@ -296,8 +297,91 @@ bot.callbackQuery('cb_sub_english', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
+bot.callbackQuery(/^eng_sec:(bb|ayush)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const secCode = ctx.match[1];
+  const sections = getEnglishCatalog();
+  const sec = sections.find((s) => s.code === secCode);
+  if (!sec) return;
+
+  const kb = new InlineKeyboard();
+  for (const topic of sec.topics) {
+    kb.text(`${topic.title} (${topic.sets.length} Sets)`, `eng_top:${secCode}:${topic.code}`).row();
+  }
+  kb.text('⬅️ Back to Books', 'cb_sub_english');
+
+  await ctx.editMessageText(`📖 *${sec.title}:*\nChoose a vocabulary topic:`, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^eng_top:(bb|ayush):([a-z_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const secCode = ctx.match[1];
+  const topicCode = ctx.match[2];
+  const sections = getEnglishCatalog();
+  const sec = sections.find((s) => s.code === secCode);
+  const topic = sec?.topics.find((t) => t.code === topicCode);
+  if (!topic) return;
+
+  const kb = new InlineKeyboard();
+  for (let i = 0; i < topic.sets.length; i += 2) {
+    const s1 = topic.sets[i];
+    const s2 = topic.sets[i + 1];
+
+    kb.text(`${s1.title} (${s1.totalQuestions} Qs)`, `eng_set:${secCode}:${topicCode}:${s1.code}`);
+    if (s2) {
+      kb.text(`${s2.title} (${s2.totalQuestions} Qs)`, `eng_set:${secCode}:${topicCode}:${s2.code}`);
+    }
+    kb.row();
+  }
+  kb.text('⬅️ Back to Topics', `eng_sec:${secCode}`);
+
+  await ctx.editMessageText(`🔤 *${topic.title}* (${topic.sets.length} Sets Available):\nSelect a set to practice:`, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^eng_set:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, secCode, topicCode, setCode] = ctx.match;
+  const setInfo = resolveEnglishSetFile(secCode, topicCode, setCode);
+  if (!setInfo) return;
+
+  const kb = new InlineKeyboard()
+    .text(`🚀 Practice ALL (${setInfo.total} Questions)`, `run_eng:${secCode}:${topicCode}:${setCode}:all`)
+    .row()
+    .text('⚡ Quick 10 Questions', `run_eng:${secCode}:${topicCode}:${setCode}:10`)
+    .row()
+    .text('⬅️ Back to Sets', `eng_top:${secCode}:${topicCode}`);
+
+  const msg =
+    `📖 *${setInfo.title}*\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━\n` +
+    `📝 *Total Questions:* ${setInfo.total}\n\n` +
+    `👉 *How would you like to practice?*`;
+
+  await ctx.editMessageText(msg, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^run_eng:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, secCode, topicCode, setCode, mode] = ctx.match;
+  const setInfo = resolveEnglishSetFile(secCode, topicCode, setCode);
+  if (!setInfo) return;
+
+  const qs = loadQuestionsFromSet(setInfo.filePath, mode as 'all' | '10');
+  const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs);
+});
+
 // ----------------------------------------------------
-// LEVEL 2: MATHEMATICS CHAPTER BANK
+// MATHEMATICS CHAPTER BANK (Top 500 & Pinnacle)
 // ----------------------------------------------------
 
 bot.callbackQuery('cb_sub_math', async (ctx) => {
@@ -305,8 +389,7 @@ bot.callbackQuery('cb_sub_math', async (ctx) => {
   const kb = new InlineKeyboard();
 
   for (const sec of mathSections) {
-    const actId = registerAction({ type: 'math_sec', secId: sec.id });
-    kb.text(sec.title, actId).row();
+    kb.text(sec.title, `math_sec:${sec.code}`).row();
   }
   kb.text('⬅️ Back to Subjects', 'nav_chapter_bank');
 
@@ -317,8 +400,96 @@ bot.callbackQuery('cb_sub_math', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
+bot.callbackQuery(/^math_sec:(t500|pinnacle)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const secCode = ctx.match[1];
+  const mathSections = getMathCatalog();
+  const sec = mathSections.find((s) => s.code === secCode);
+  if (!sec) return;
+
+  const kb = new InlineKeyboard();
+  for (let i = 0; i < sec.topics.length; i += 2) {
+    const t1 = sec.topics[i];
+    const t2 = sec.topics[i + 1];
+
+    kb.text(t1.title, `math_top:${t1.code}`);
+    if (t2) {
+      kb.text(t2.title, `math_top:${t2.code}`);
+    }
+    kb.row();
+  }
+  kb.text('⬅️ Back to Modules', 'cb_sub_math');
+
+  await ctx.editMessageText(`📐 *${sec.title}:*\nChoose a chapter to drill:`, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^math_top:([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const topicCode = ctx.match[1];
+  const catalog = getMathCatalog();
+  let topicFound: any = null;
+  for (const sec of catalog) {
+    const t = sec.topics.find((x) => x.code === topicCode || x.id.toLowerCase() === topicCode.toLowerCase());
+    if (t) {
+      topicFound = t;
+      break;
+    }
+  }
+  if (!topicFound) return;
+
+  const kb = new InlineKeyboard();
+  for (const s of topicFound.sets) {
+    kb.text(`▶️ ${s.title} (${s.totalQuestions} Qs)`, `math_set:${topicCode}:${s.code}`).row();
+  }
+  kb.text('⬅️ Back to Math Chapters', 'cb_sub_math');
+
+  await ctx.editMessageText(`📊 *${topicFound.title}:*\nSelect set to practice:`, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^math_set:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode] = ctx.match;
+  const setInfo = resolveMathSetFile(topicCode, setCode);
+  if (!setInfo) return;
+
+  const kb = new InlineKeyboard()
+    .text(`🚀 Practice ALL (${setInfo.total} Questions)`, `run_math:${topicCode}:${setCode}:all`)
+    .row()
+    .text('⚡ Quick 10 Questions', `run_math:${topicCode}:${setCode}:10`)
+    .row()
+    .text('⬅️ Back to Sets', `math_top:${topicCode}`);
+
+  const msg =
+    `📊 *${setInfo.title}*\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━\n` +
+    `📝 *Total Questions in Set:* ${setInfo.total}\n\n` +
+    `👉 *How would you like to practice?*`;
+
+  await ctx.editMessageText(msg, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^run_math:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode, mode] = ctx.match;
+  const setInfo = resolveMathSetFile(topicCode, setCode);
+  if (!setInfo) return;
+
+  const qs = loadQuestionsFromSet(setInfo.filePath, mode as 'all' | '10');
+  const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs);
+});
+
 // ----------------------------------------------------
-// LEVEL 2: GENERAL AWARENESS CHAPTER BANK
+// GENERAL AWARENESS CHAPTER BANK
 // ----------------------------------------------------
 
 bot.callbackQuery('cb_sub_ga', async (ctx) => {
@@ -329,12 +500,9 @@ bot.callbackQuery('cb_sub_ga', async (ctx) => {
     const t1 = topics[i];
     const t2 = topics[i + 1];
 
-    const act1 = registerAction({ type: 'ga_topic', topicId: t1.id });
-    kb.text(t1.title, act1);
-
+    kb.text(t1.title, `ga_top:${t1.code}`);
     if (t2) {
-      const act2 = registerAction({ type: 'ga_topic', topicId: t2.id });
-      kb.text(t2.title, act2);
+      kb.text(t2.title, `ga_top:${t2.code}`);
     }
     kb.row();
   }
@@ -347,28 +515,82 @@ bot.callbackQuery('cb_sub_ga', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
+bot.callbackQuery(/^ga_top:([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const topicCode = ctx.match[1];
+  const topics = getGeneralAwarenessCatalog();
+  const topic = topics.find((t) => t.code === topicCode || t.id === topicCode);
+  if (!topic) return;
+
+  const kb = new InlineKeyboard();
+  for (const s of topic.sets) {
+    kb.text(`${s.title} (${s.totalQuestions} Qs)`, `ga_set:${topicCode}:${s.code}`).row();
+  }
+  kb.text('⬅️ Back to GA Subjects', 'cb_sub_ga');
+
+  await ctx.editMessageText(`🏛️ *${topic.title}* (${topic.sets.length} Chapters):\nChoose a chapter to practice:`, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^ga_set:([a-z0-9_]+):(.+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode] = ctx.match;
+  const setInfo = resolveGASetFile(topicCode, setCode);
+  if (!setInfo) return;
+
+  const kb = new InlineKeyboard()
+    .text(`🚀 Practice ALL (${setInfo.total} Questions)`, `run_ga:${topicCode}:${setCode}:all`)
+    .row()
+    .text('⚡ Quick 10 Questions', `run_ga:${topicCode}:${setCode}:10`)
+    .row()
+    .text('⬅️ Back to Chapters', `ga_top:${topicCode}`);
+
+  const msg =
+    `🏛️ *${setInfo.title}*\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━\n` +
+    `📝 *Total Questions in Chapter:* ${setInfo.total}\n\n` +
+    `👉 *How would you like to practice?*`;
+
+  await ctx.editMessageText(msg, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^run_ga:([a-zA-Z0-9_\-]+):(.+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, topicCode, setCode, mode] = ctx.match;
+  const setInfo = resolveGASetFile(topicCode, setCode);
+  if (!setInfo) return;
+
+  const qs = loadQuestionsFromSet(setInfo.filePath, mode as 'all' | '10');
+  const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs);
+});
+
 // ----------------------------------------------------
-// LEVEL 2: REASONING CHAPTER BANK
+// REASONING
 // ----------------------------------------------------
 
 bot.callbackQuery('cb_sub_reasoning', async (ctx) => {
   const kb = new InlineKeyboard()
-    .text('🎯 Reasoning Mock Mistakes (All Sets)', 'start_mock_err_reasoning')
+    .text('🎯 Practice ALL Reasoning Mock Mistakes', 'run_mock:reasoning:all')
+    .row()
+    .text('⚡ Quick 10 Reasoning Mistakes', 'run_mock:reasoning:10')
     .row()
     .text('⬅️ Back to Subjects', 'nav_chapter_bank');
 
-  await ctx.editMessageText(
-    '🧠 *Reasoning Bank:*\nSelect practice mode below:',
-    {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    }
-  );
+  await ctx.editMessageText('🧠 *Reasoning Bank:*\nSelect practice mode below:', {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
   await ctx.answerCallbackQuery();
 });
 
 // ----------------------------------------------------
-// MOCK ERRORS ROOT & SUBJECTS
+// MOCK ERRORS (RCA)
 // ----------------------------------------------------
 
 bot.callbackQuery('nav_mock_errors', async (ctx) => {
@@ -376,8 +598,7 @@ bot.callbackQuery('nav_mock_errors', async (ctx) => {
   const kb = new InlineKeyboard();
 
   for (const item of catalog) {
-    const actId = registerAction({ type: 'mock_sub', subId: item.subjectId });
-    kb.text(`${item.title} (${item.totalQuestions} Qs)`, actId).row();
+    kb.text(`${item.title} (${item.totalQuestions} Qs)`, `mock_sub:${item.subjectId}`).row();
   }
   kb.text('⬅️ Back to Main Menu', 'nav_root');
 
@@ -391,8 +612,57 @@ bot.callbackQuery('nav_mock_errors', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
+bot.callbackQuery(/^mock_sub:(mathematics|reasoning|english|general_awareness)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const subId = ctx.match[1] as any;
+  const catalog = getMockErrorsCatalog();
+  const item = catalog.find((c) => c.subjectId === subId);
+  if (!item) return;
+
+  const kb = new InlineKeyboard()
+    .text(`🔥 Practice ALL ${item.totalQuestions} Mistakes`, `run_mock:${subId}:all`)
+    .row()
+    .text(`⚡ Quick 10 Mistakes`, `run_mock:${subId}:10`)
+    .row();
+
+  for (const ch of item.chapters) {
+    if (ch.count > 0 && ch.chapterNum !== undefined) {
+      kb.text(`📁 ${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
+    }
+  }
+  kb.text('⬅️ Back to Mock Subjects', 'nav_mock_errors');
+
+  const msg =
+    `🎯 *${item.title}*\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━\n` +
+    `Total Mistakes Logged: *${item.totalQuestions} Questions*\n\n` +
+    `Select a practice option below:`;
+
+  await ctx.editMessageText(msg, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, subId, mode] = ctx.match;
+  const qs = loadMockErrorsForSubject(subId as any, undefined, mode as 'all' | '10');
+  const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace('_', ' ');
+  const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Mistakes (${modeLabel})`, qs);
+});
+
+bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, subId, chNum, mode] = ctx.match;
+  const qs = loadMockErrorsForSubject(subId as any, parseInt(chNum, 10), mode as 'all' | '10');
+  const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace('_', ' ');
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs);
+});
+
 // ----------------------------------------------------
-// SPEED LAB NAVIGATION
+// SPEED LAB NAVIGATION & STEPS
 // ----------------------------------------------------
 
 bot.callbackQuery('nav_speed_lab', async (ctx) => {
@@ -421,7 +691,6 @@ bot.callbackQuery('nav_speed_lab', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
-// Calculation Studio 7 Steps
 bot.callbackQuery('speed_calc_studio', async (ctx) => {
   const kb = new InlineKeyboard()
     .text('Step 1: 📐 Triplets (16 Qs)', 'calc_step_triplets')
@@ -450,12 +719,11 @@ bot.callbackQuery('speed_calc_studio', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
-// Step Handlers (with All vs 10 choice)
 function renderStepOptions(title: string, total: number, stepCode: string): InlineKeyboard {
   return new InlineKeyboard()
-    .text(`🚀 Practice ALL (${total} Questions)`, `run_calc_${stepCode}_all`)
+    .text(`🚀 Practice ALL (${total} Questions)`, `run_calc:${stepCode}:all`)
     .row()
-    .text('⚡ Quick 10 Questions', `run_calc_${stepCode}_10`)
+    .text('⚡ Quick 10 Questions', `run_calc:${stepCode}:10`)
     .row()
     .text('⬅️ Back to Steps', 'speed_calc_studio');
 }
@@ -516,60 +784,56 @@ bot.callbackQuery('calc_step_fractions', async (ctx) => {
   await ctx.answerCallbackQuery();
 });
 
-// Run Calculation Step Drills
-bot.callbackQuery(/^run_calc_(.+)_([a-z0-9]+)$/, async (ctx) => {
+bot.callbackQuery(/^run_calc:([a-z0-9_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const match = ctx.match;
-  const step = match[1];
-  const mode = match[2] as 'all' | '10';
+  const [_, step, mode] = ctx.match;
 
   let qs: TelegramQuizQuestion[] = [];
   let title = '';
 
   if (step === 'triplets') {
-    qs = getTripletsStepDrill(mode);
+    qs = getTripletsStepDrill(mode as any);
     title = `📐 Step 1: Triplets (${mode === 'all' ? 'All 16' : '10 Qs'})`;
   } else if (step === 'tables') {
-    qs = getTablesStepDrill(mode);
+    qs = getTablesStepDrill(mode as any);
     title = `✖️ Step 2: Tables 12–24 (${mode === 'all' ? 'All 13' : '10 Qs'})`;
   } else if (step === 'squares') {
-    qs = getSquaresStepDrill(mode);
+    qs = getSquaresStepDrill(mode as any);
     title = `🔢 Step 3: Squares 17–39 (${mode === 'all' ? 'All 23' : '10 Qs'})`;
   } else if (step === 'cubes') {
-    qs = getCubesStepDrill(mode);
+    qs = getCubesStepDrill(mode as any);
     title = `🧊 Step 4: Cubes 11–25 (${mode === 'all' ? 'All 15' : '10 Qs'})`;
   } else if (step === 'powers') {
-    qs = getPowersStepDrill(mode);
+    qs = getPowersStepDrill(mode as any);
     title = `⚡ Step 5: Powers 2–9 (${mode === 'all' ? 'All 38' : '10 Qs'})`;
   } else if (step === 'factorials') {
-    qs = getFactorialsStepDrill(mode);
+    qs = getFactorialsStepDrill(mode as any);
     title = `❗ Step 6: Factorials 1–8 (${mode === 'all' ? 'All 8' : '10 Qs'})`;
   } else if (step === 'fractions') {
-    qs = getFractionsStepDrill(mode);
+    qs = getFractionsStepDrill(mode as any);
     title = `💯 Step 7: Fractions ↔ % (${mode === 'all' ? 'All 73' : '10 Qs'})`;
   }
 
-  startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs);
 });
 
-// Simplification Drills Catalog
 bot.callbackQuery('speed_simp_menu', async (ctx) => {
   const cat = getSimplificationCatalog();
   const kb = new InlineKeyboard();
 
   for (const c of cat) {
-    kb.text(c.title, `simp_cat_${c.difficulty.toLowerCase()}`).row();
+    kb.text(c.title, `simp_cat:${c.difficulty.toLowerCase()}`).row();
   }
   kb.text('⬅️ Back to Speed Lab', 'nav_speed_lab');
 
-  await ctx.editMessageText(
-    '📐 *Simplification Drills*\nChoose difficulty level:',
-    { parse_mode: 'Markdown', reply_markup: kb }
-  );
+  await ctx.editMessageText('📐 *Simplification Drills*\nChoose difficulty level:', {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
   await ctx.answerCallbackQuery();
 });
 
-bot.callbackQuery(/^simp_cat_([a-z]+)$/, async (ctx) => {
+bot.callbackQuery(/^simp_cat:([a-z]+)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
   const diffKey = ctx.match[1];
   const cat = getSimplificationCatalog();
@@ -581,38 +845,52 @@ bot.callbackQuery(/^simp_cat_([a-z]+)$/, async (ctx) => {
     const s1 = chosen.sets[i];
     const s2 = chosen.sets[i + 1];
 
-    const act1 = registerAction({ type: 'start_simp_set', setId: s1.id, title: s1.title });
-    kb.text(`${s1.title} (10 Qs)`, act1);
-
+    kb.text(`${s1.title} (10 Qs)`, `run_simp:${s1.id}`);
     if (s2) {
-      const act2 = registerAction({ type: 'start_simp_set', setId: s2.id, title: s2.title });
-      kb.text(`${s2.title} (10 Qs)`, act2);
+      kb.text(`${s2.title} (10 Qs)`, `run_simp:${s2.id}`);
     }
     kb.row();
   }
   kb.text('⬅️ Back to Difficulties', 'speed_simp_menu');
 
-  await ctx.editMessageText(
-    `📐 *${chosen.title}*\nSelect a set to practice:`,
-    { parse_mode: 'Markdown', reply_markup: kb }
+  await ctx.editMessageText(`📐 *${chosen.title}*\nSelect a set to practice:`, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+});
+
+bot.callbackQuery(/^run_simp:([a-zA-Z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const setId = ctx.match[1];
+  const allSets = getSimplificationCatalog().flatMap((c) => c.sets);
+  const target = allSets.find((s) => s.id === setId);
+  if (!target) return;
+
+  const questions = target.questions.map((q: any) =>
+    sanitizeTelegramQuiz({
+      id: q.id || `simp_${q.q_num}`,
+      question: `📐 [${target.title}]\n${q.question}`,
+      options: q.options,
+      correctOption: q.answer || q.correctOption,
+      solution: q.solution,
+      subject: 'Simplification',
+      topic: target.title,
+      source: target.title,
+    })
   );
+
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `📐 ${target.title} (All ${questions.length} Qs)`, questions);
 });
 
 bot.callbackQuery('speed_routine', async (ctx) => {
   await ctx.answerCallbackQuery();
   const qs = getDailyRoutineWorkout();
-  startQuizForUser(ctx.from.id, ctx.chat!.id, '🏆 Daily 25-Question Routine Workout', qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, '🏆 Daily 25-Question Routine Workout', qs);
 });
 
 bot.callbackQuery('speed_mixed', async (ctx) => {
   await ctx.answerCallbackQuery();
-  startQuizForUser(ctx.from.id, ctx.chat!.id, '⚡ Mixed Speed Blitz', generateMixedSpeedDrill(10));
-});
-
-bot.callbackQuery('start_mock_err_reasoning', async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const qs = loadMockErrorsForSubject('reasoning', undefined, 'all');
-  startQuizForUser(ctx.from.id, ctx.chat!.id, '🧠 Reasoning Mock Errors (Full Set)', qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, '⚡ Mixed Speed Blitz', generateMixedSpeedDrill(10));
 });
 
 bot.callbackQuery('nav_help', async (ctx) => {
@@ -628,248 +906,6 @@ bot.callbackQuery('nav_help', async (ctx) => {
     reply_markup: new InlineKeyboard().text('⬅️ Back to Main Menu', 'nav_root'),
   });
   await ctx.answerCallbackQuery();
-});
-
-// ----------------------------------------------------
-// DYNAMIC ACTION DISPATCHER (Short Action IDs bypass 64-byte limit)
-// ----------------------------------------------------
-
-bot.on('callback_query:data', async (ctx, next) => {
-  const data = ctx.callbackQuery.data;
-  const action = getAction(data);
-
-  if (!action) {
-    // If not a registered dynamic action, let other handlers process
-    return next();
-  }
-
-  await ctx.answerCallbackQuery();
-
-  // 1. English Section Clicked (Black Book or Ayush Vocab)
-  if (action.type === 'eng_sec') {
-    const sections = getEnglishCatalog();
-    const sec = sections.find((s) => s.id === action.secId);
-    if (!sec) return;
-
-    const kb = new InlineKeyboard();
-    for (const topic of sec.topics) {
-      const actId = registerAction({ type: 'eng_topic', secId: sec.id, topicId: topic.id });
-      kb.text(`${topic.title} (${topic.sets.length} Sets)`, actId).row();
-    }
-    kb.text('⬅️ Back to Books', 'cb_sub_english');
-
-    await ctx.editMessageText(`📖 *${sec.title}:*\nChoose a vocabulary topic:`, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 2. English Topic Clicked (e.g. Synonyms, One Word Substitution)
-  if (action.type === 'eng_topic') {
-    const sections = getEnglishCatalog();
-    const sec = sections.find((s) => s.id === action.secId);
-    const topic = sec?.topics.find((t) => t.id === action.topicId);
-    if (!topic) return;
-
-    const kb = new InlineKeyboard();
-    // 2 sets per row
-    for (let i = 0; i < topic.sets.length; i += 2) {
-      const s1 = topic.sets[i];
-      const s2 = topic.sets[i + 1];
-
-      const act1 = registerAction({ type: 'view_set', filePath: s1.filePath, title: s1.title, total: s1.totalQuestions });
-      kb.text(`${s1.title} (${s1.totalQuestions} Qs)`, act1);
-
-      if (s2) {
-        const act2 = registerAction({ type: 'view_set', filePath: s2.filePath, title: s2.title, total: s2.totalQuestions });
-        kb.text(`${s2.title} (${s2.totalQuestions} Qs)`, act2);
-      }
-      kb.row();
-    }
-
-    const backAct = registerAction({ type: 'eng_sec', secId: action.secId });
-    kb.text('⬅️ Back to Topics', backAct);
-
-    await ctx.editMessageText(`🔤 *${topic.title}* (${topic.sets.length} Sets Available):\nSelect a set to practice:`, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 3. Math Section Clicked (Top 500 or Pinnacle)
-  if (action.type === 'math_sec') {
-    const mathSections = getMathCatalog();
-    const sec = mathSections.find((s) => s.id === action.secId);
-    if (!sec) return;
-
-    const kb = new InlineKeyboard();
-    for (let i = 0; i < sec.topics.length; i += 2) {
-      const t1 = sec.topics[i];
-      const t2 = sec.topics[i + 1];
-
-      const act1 = registerAction({ type: 'math_topic', secId: sec.id, topicId: t1.id });
-      kb.text(t1.title, act1);
-
-      if (t2) {
-        const act2 = registerAction({ type: 'math_topic', secId: sec.id, topicId: t2.id });
-        kb.text(t2.title, act2);
-      }
-      kb.row();
-    }
-    kb.text('⬅️ Back to Math Modules', 'cb_sub_math');
-
-    await ctx.editMessageText(`📐 *${sec.title}:*\nChoose a chapter to drill:`, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 4. Math Topic Clicked (e.g. Percentage, Profit and Loss)
-  if (action.type === 'math_topic') {
-    const mathSections = getMathCatalog();
-    const sec = mathSections.find((s) => s.id === action.secId);
-    const topic = sec?.topics.find((t) => t.id === action.topicId);
-    if (!topic) return;
-
-    const kb = new InlineKeyboard();
-    for (const s of topic.sets) {
-      const act = registerAction({ type: 'view_set', filePath: s.filePath, title: s.title, total: s.totalQuestions });
-      kb.text(`▶️ ${s.title} (${s.totalQuestions} Questions)`, act).row();
-    }
-
-    const backAct = registerAction({ type: 'math_sec', secId: action.secId });
-    kb.text('⬅️ Back to Chapters', backAct);
-
-    await ctx.editMessageText(`📊 *${topic.title}:*\nSelect set to practice:`, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 5. GA Topic Clicked (e.g. Polity, History)
-  if (action.type === 'ga_topic') {
-    const gaTopics = getGeneralAwarenessCatalog();
-    const topic = gaTopics.find((t) => t.id === action.topicId);
-    if (!topic) return;
-
-    const kb = new InlineKeyboard();
-    for (const s of topic.sets) {
-      const act = registerAction({ type: 'view_set', filePath: s.filePath, title: s.title, total: s.totalQuestions });
-      kb.text(`${s.title} (${s.totalQuestions} Qs)`, act).row();
-    }
-    kb.text('⬅️ Back to Subjects', 'cb_sub_ga');
-
-    await ctx.editMessageText(`🏛️ *${topic.title}* (${topic.sets.length} Chapters):\nChoose a chapter to practice:`, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 6. View Set: Choose between "Practice All Questions" vs "Quick 10"
-  if (action.type === 'view_set') {
-    const actAll = registerAction({ type: 'start_set', filePath: action.filePath, title: action.title, mode: 'all' });
-    const act10 = registerAction({ type: 'start_set', filePath: action.filePath, title: action.title, mode: '10' });
-
-    const kb = new InlineKeyboard()
-      .text(`🚀 Practice ALL (${action.total} Questions)`, actAll)
-      .row()
-      .text('⚡ Quick 10 Questions', act10)
-      .row()
-      .text('📁 Back to Chapter Bank', 'nav_chapter_bank');
-
-    const msg =
-      `📖 *${action.title}*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `📝 *Total Questions in Set:* ${action.total}\n\n` +
-      `👉 *How would you like to practice?*`;
-
-    await ctx.editMessageText(msg, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 7. Start Set: Execute All or Quick 10!
-  if (action.type === 'start_set') {
-    const qs = loadQuestionsFromSet(action.filePath, action.mode);
-    const modeLabel = action.mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
-    startQuizForUser(ctx.from.id, ctx.chat!.id, `${action.title} (${modeLabel})`, qs);
-    return;
-  }
-
-  // 8. Mock Errors Subject Selected
-  if (action.type === 'mock_sub') {
-    const catalog = getMockErrorsCatalog();
-    const item = catalog.find((c) => c.subjectId === action.subId);
-    if (!item) return;
-
-    const kb = new InlineKeyboard();
-
-    // Option to practice all mistakes in subject
-    const actAllSubject = registerAction({ type: 'start_mock', subId: item.subjectId, mode: 'all' });
-    const act10Subject = registerAction({ type: 'start_mock', subId: item.subjectId, mode: '10' });
-
-    kb.text(`🔥 Practice ALL ${item.totalQuestions} Mistakes`, actAllSubject).row();
-    kb.text(`⚡ Quick 10 Mistakes`, act10Subject).row();
-
-    // List individual chapters if present
-    for (const ch of item.chapters) {
-      if (ch.count > 0) {
-        const actCh = registerAction({ type: 'start_mock', subId: item.subjectId, chapterNum: ch.chapterNum, mode: 'all' });
-        kb.text(`📁 ${ch.title} (${ch.count} Qs)`, actCh).row();
-      }
-    }
-
-    kb.text('⬅️ Back to Mock Subjects', 'nav_mock_errors');
-
-    const msg =
-      `🎯 *${item.title}*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `Total Mistakes Logged: *${item.totalQuestions} Questions*\n\n` +
-      `Select a practice option below:`;
-
-    await ctx.editMessageText(msg, {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    });
-    return;
-  }
-
-  // 9. Start Mock Drill
-  if (action.type === 'start_mock') {
-    const qs = loadMockErrorsForSubject(action.subId, action.chapterNum, action.mode);
-    const subTitle = action.subId.charAt(0).toUpperCase() + action.subId.slice(1).replace('_', ' ');
-    const modeLabel = action.mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
-    startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Mistakes (${modeLabel})`, qs);
-    return;
-  }
-
-  // 10. Start Simplification Set Drill
-  if (action.type === 'start_simp_set') {
-    const allSets = getSimplificationCatalog().flatMap((c) => c.sets);
-    const target = allSets.find((s) => s.id === action.setId);
-    if (!target) return;
-    const questions = target.questions.map((q: any) =>
-      sanitizeTelegramQuiz({
-        id: q.id || `simp_${q.q_num}`,
-        question: `📐 [${target.title}]\n${q.question}`,
-        options: q.options,
-        correctOption: q.answer || q.correctOption,
-        solution: q.solution,
-        subject: 'Simplification',
-        topic: target.title,
-        source: target.title,
-      })
-    );
-    startQuizForUser(ctx.from.id, ctx.chat!.id, `📐 ${target.title} (All ${questions.length} Qs)`, questions);
-    return;
-  }
 });
 
 // ----------------------------------------------------
@@ -891,20 +927,20 @@ bot.on('poll_answer', async (ctx) => {
     session.score++;
   }
   session.answeredCount++;
-
   session.currentIndex++;
+  saveSession(session);
 
-  setTimeout(async () => {
-    try {
-      await sendCurrentQuestion(bot, session);
-    } catch (err) {
-      console.error('[TelegramBot] Error sending next question:', err);
-    }
-  }, 1200);
+  // Await the 1-second pause on serverless so function remains alive and delivers the next poll
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await sendCurrentQuestion(bot, session);
+  } catch (err) {
+    console.error('[TelegramBot] Error sending next question:', err);
+  }
 });
 
 // ----------------------------------------------------
-// LAUNCH BOT
+// LOCAL CLI LAUNCHER & VERCEL HANDLER
 // ----------------------------------------------------
 
 export async function launchBot() {
@@ -923,7 +959,6 @@ export async function launchBot() {
   });
 }
 
-// Start polling ONLY if run directly via CLI (not when imported in Vercel serverless)
 const isDirectRun = Boolean(process.argv[1]?.replace(/\\/g, '/').endsWith('src/telegram/bot.ts'));
 if (isDirectRun && !process.env.VERCEL) {
   launchBot();
@@ -962,4 +997,3 @@ export default async function handler(req: any, res: any) {
 
   return res.status(405).json({ error: 'Method Not Allowed' });
 }
-

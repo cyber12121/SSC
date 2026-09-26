@@ -4,6 +4,7 @@ import { sanitizeTelegramQuiz, TelegramQuizQuestion, shuffle } from './quizData'
 
 export interface SetEntry {
   id: string;
+  code: string;
   title: string;
   filePath: string;
   totalQuestions: number;
@@ -11,41 +12,21 @@ export interface SetEntry {
 
 export interface TopicEntry {
   id: string;
+  code: string;
   title: string;
   sets: SetEntry[];
 }
 
 export interface SectionEntry {
   id: string;
+  code: string;
   title: string;
   topics: TopicEntry[];
-}
-
-export interface SubjectEntry {
-  id: string;
-  title: string;
-  sections?: SectionEntry[];
-  topics?: TopicEntry[];
 }
 
 const ROOT_DIR = process.cwd();
 const CHAPTER_BANK_DIR = path.join(ROOT_DIR, 'src', 'data', 'chapter_bank');
 const MOCK_ERRORS_DIR = path.join(ROOT_DIR, 'src', 'data', 'mock_errors');
-const DRILLS_DIR = path.join(ROOT_DIR, 'src', 'data', 'drills');
-
-// Central action registry to bypass Telegram's 64-byte callback_data limit
-const actionRegistry = new Map<string, any>();
-let nextActionId = 1;
-
-export function registerAction(data: any): string {
-  const id = `a_${nextActionId++}`;
-  actionRegistry.set(id, data);
-  return id;
-}
-
-export function getAction(id: string): any {
-  return actionRegistry.get(id);
-}
 
 // ----------------------------------------------------
 // 1. SCAN AND INDEX CHAPTER BANK
@@ -58,15 +39,14 @@ export function getEnglishCatalog(): SectionEntry[] {
   const bbDir = path.join(CHAPTER_BANK_DIR, 'english', 'black_book');
   if (fs.existsSync(bbDir)) {
     const bbTopics: TopicEntry[] = [];
+    const topicDefs = [
+      { folder: 'synonyms', code: 'syn', label: '🔤 Synonyms' },
+      { folder: 'one_word_substitution', code: 'ows', label: '📝 One Word Substitution' },
+      { folder: 'phrasal_verbs', code: 'phr', label: '🔄 Phrasal Verbs' },
+    ];
 
-    const topicMap: Record<string, string> = {
-      synonyms: '🔤 Synonyms',
-      one_word_substitution: '📝 One Word Substitution',
-      phrasal_verbs: '🔄 Phrasal Verbs',
-    };
-
-    for (const [folderName, label] of Object.entries(topicMap)) {
-      const folderPath = path.join(bbDir, folderName);
+    for (const t of topicDefs) {
+      const folderPath = path.join(bbDir, t.folder);
       if (fs.existsSync(folderPath)) {
         const files = fs
           .readdirSync(folderPath)
@@ -83,9 +63,11 @@ export function getEnglishCatalog(): SectionEntry[] {
             const filePath = path.join(folderPath, file);
             const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             const qs = content.questions || [];
+            const setNum = file.replace(/[^0-9]/g, '') || '1';
             sets.push({
-              id: `${folderName}_${file.replace('.json', '')}`,
-              title: content.chapter_title || file.replace('.json', '').replace('_', ' ').toUpperCase(),
+              id: `${t.code}_${setNum}`,
+              code: setNum,
+              title: content.chapter_title || `Set ${setNum}`,
               filePath,
               totalQuestions: qs.length,
             });
@@ -93,8 +75,9 @@ export function getEnglishCatalog(): SectionEntry[] {
         }
 
         bbTopics.push({
-          id: folderName,
-          title: label,
+          id: t.folder,
+          code: t.code,
+          title: t.label,
           sets,
         });
       }
@@ -102,6 +85,7 @@ export function getEnglishCatalog(): SectionEntry[] {
 
     sections.push({
       id: 'black_book',
+      code: 'bb',
       title: '📚 Black Book (Vocabulary)',
       topics: bbTopics,
     });
@@ -111,14 +95,14 @@ export function getEnglishCatalog(): SectionEntry[] {
   const ayushDir = path.join(CHAPTER_BANK_DIR, 'english', 'ayush_vocab');
   if (fs.existsSync(ayushDir)) {
     const ayushTopics: TopicEntry[] = [];
-    const topicMap: Record<string, string> = {
-      idioms_and_phrases: '💬 Idioms & Phrases',
-      antonyms: '🔡 Antonyms',
-      spellings: '✍️ Spellings',
-    };
+    const topicDefs = [
+      { folder: 'idioms_and_phrases', code: 'idiom', label: '💬 Idioms & Phrases' },
+      { folder: 'antonyms', code: 'ant', label: '🔡 Antonyms' },
+      { folder: 'spellings', code: 'spell', label: '✍️ Spellings' },
+    ];
 
-    for (const [folderName, label] of Object.entries(topicMap)) {
-      const folderPath = path.join(ayushDir, folderName);
+    for (const t of topicDefs) {
+      const folderPath = path.join(ayushDir, t.folder);
       if (fs.existsSync(folderPath)) {
         const files = fs
           .readdirSync(folderPath)
@@ -135,9 +119,11 @@ export function getEnglishCatalog(): SectionEntry[] {
             const filePath = path.join(folderPath, file);
             const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             const qs = content.questions || [];
+            const setNum = file.replace(/[^0-9]/g, '') || '1';
             sets.push({
-              id: `ayush_${folderName}_${file.replace('.json', '')}`,
-              title: content.chapter_title || file.replace('.json', '').replace('_', ' ').toUpperCase(),
+              id: `${t.code}_${setNum}`,
+              code: setNum,
+              title: content.chapter_title || `Set ${setNum}`,
               filePath,
               totalQuestions: qs.length,
             });
@@ -145,8 +131,9 @@ export function getEnglishCatalog(): SectionEntry[] {
         }
 
         ayushTopics.push({
-          id: folderName,
-          title: label,
+          id: t.folder,
+          code: t.code,
+          title: t.label,
           sets,
         });
       }
@@ -154,6 +141,7 @@ export function getEnglishCatalog(): SectionEntry[] {
 
     sections.push({
       id: 'ayush_vocab',
+      code: 'ayush',
       title: '📖 Ayush Vocab (Idioms & Antonyms)',
       topics: ayushTopics,
     });
@@ -186,9 +174,11 @@ export function getMathCatalog(): SectionEntry[] {
           const filePath = path.join(folderPath, file);
           const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           const qs = content.questions || [];
+          const setNum = file.replace(/[^0-9]/g, '') || '1';
           sets.push({
-            id: `top500_${folder}_${file.replace('.json', '')}`,
-            title: `${folder} - ${file.replace('.json', '').replace('_', ' ').toUpperCase()}`,
+            id: `t500_${folder}_${setNum}`,
+            code: setNum,
+            title: `${folder} - Set ${setNum}`,
             filePath,
             totalQuestions: qs.length,
           });
@@ -196,7 +186,8 @@ export function getMathCatalog(): SectionEntry[] {
       }
 
       topics.push({
-        id: `math_${folder}`,
+        id: folder,
+        code: folder.replace(/[^a-zA-Z0-9]/g, '').slice(0, 10).toLowerCase(),
         title: `📊 ${folder}`,
         sets,
       });
@@ -204,52 +195,10 @@ export function getMathCatalog(): SectionEntry[] {
 
     sections.push({
       id: 'top500',
+      code: 't500',
       title: '🏆 Top 500 Arithmetic & Advance',
       topics,
     });
-  }
-
-  // Pinnacle Math
-  const pinnacleDir = path.join(CHAPTER_BANK_DIR, 'mathematics', 'pinnacle');
-  if (fs.existsSync(pinnacleDir)) {
-    const topicFolders = fs
-      .readdirSync(pinnacleDir)
-      .filter((d) => fs.statSync(path.join(pinnacleDir, d)).isDirectory());
-
-    const topics: TopicEntry[] = [];
-    for (const folder of topicFolders) {
-      const folderPath = path.join(pinnacleDir, folder);
-      const files = fs.readdirSync(folderPath).filter((f) => f.endsWith('.json'));
-
-      const sets: SetEntry[] = [];
-      for (const file of files) {
-        try {
-          const filePath = path.join(folderPath, file);
-          const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-          const qs = content.questions || [];
-          sets.push({
-            id: `pinnacle_${folder}_${file.replace('.json', '')}`,
-            title: `${folder.replace('_', ' ').toUpperCase()} - ${file.replace('.json', '')}`,
-            filePath,
-            totalQuestions: qs.length,
-          });
-        } catch {}
-      }
-
-      topics.push({
-        id: `pinnacle_${folder}`,
-        title: `🏔️ ${folder.replace('_', ' ').toUpperCase()}`,
-        sets,
-      });
-    }
-
-    if (topics.length > 0) {
-      sections.push({
-        id: 'pinnacle',
-        title: '🏔️ Pinnacle Mathematics',
-        topics,
-      });
-    }
   }
 
   return sections;
@@ -259,23 +208,23 @@ export function getGeneralAwarenessCatalog(): TopicEntry[] {
   const gaDir = path.join(CHAPTER_BANK_DIR, 'general_awareness');
   if (!fs.existsSync(gaDir)) return [];
 
-  const topicDisplayNames: Record<string, string> = {
-    polity: '🏛️ Indian Polity & Constitution',
-    history_modern: '📜 Modern Indian History',
-    history_ancient: '🏰 Ancient History',
-    history_medieval: '⚔️ Medieval History',
-    geography: '🌍 Geography (Physical & Indian)',
-    biology: '🧬 Biology & Life Sciences',
-    chemistry: '⚗️ Chemistry',
-    physics: '⚛️ Physics',
-    economics: '📈 Economics',
-    static_gk: '🎭 Static GK & Culture',
-  };
+  const topicDefs = [
+    { folder: 'polity', code: 'pol', title: '🏛️ Indian Polity & Constitution' },
+    { folder: 'history_modern', code: 'hmod', title: '📜 Modern Indian History' },
+    { folder: 'history_ancient', code: 'hanc', title: '🏰 Ancient History' },
+    { folder: 'history_medieval', code: 'hmed', title: '⚔️ Medieval History' },
+    { folder: 'geography', code: 'geo', title: '🌍 Geography' },
+    { folder: 'biology', code: 'bio', title: '🧬 Biology & Life Sciences' },
+    { folder: 'chemistry', code: 'chem', title: '⚗️ Chemistry' },
+    { folder: 'physics', code: 'phy', title: '⚛️ Physics' },
+    { folder: 'economics', code: 'eco', title: '📈 Economics' },
+    { folder: 'static_gk', code: 'stat', title: '🎭 Static GK & Culture' },
+  ];
 
   const topics: TopicEntry[] = [];
 
-  for (const [folder, title] of Object.entries(topicDisplayNames)) {
-    const folderPath = path.join(gaDir, folder);
+  for (const t of topicDefs) {
+    const folderPath = path.join(gaDir, t.folder);
     if (fs.existsSync(folderPath)) {
       const files = fs
         .readdirSync(folderPath)
@@ -288,9 +237,11 @@ export function getGeneralAwarenessCatalog(): TopicEntry[] {
           const filePath = path.join(folderPath, file);
           const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           const qs = content.questions || [];
+          const baseName = file.replace('.json', '');
           sets.push({
-            id: `ga_${folder}_${file.replace('.json', '')}`,
-            title: content.chapter_title || file.replace('.json', '').replace(/_/g, ' '),
+            id: `ga_${t.code}_${baseName.slice(0, 15)}`,
+            code: baseName,
+            title: content.chapter_title || baseName.replace(/_/g, ' '),
             filePath,
             totalQuestions: qs.length,
           });
@@ -298,8 +249,9 @@ export function getGeneralAwarenessCatalog(): TopicEntry[] {
       }
 
       topics.push({
-        id: folder,
-        title,
+        id: t.folder,
+        code: t.code,
+        title: t.title,
         sets,
       });
     }
@@ -314,6 +266,7 @@ export function getGeneralAwarenessCatalog(): TopicEntry[] {
 
 export interface MockErrorSubjectEntry {
   subjectId: 'mathematics' | 'reasoning' | 'english' | 'general_awareness';
+  code: string;
   title: string;
   totalQuestions: number;
   chapters: {
@@ -326,12 +279,13 @@ export interface MockErrorSubjectEntry {
 export function getMockErrorsCatalog(): MockErrorSubjectEntry[] {
   const subjects: {
     id: 'mathematics' | 'reasoning' | 'english' | 'general_awareness';
+    code: string;
     title: string;
   }[] = [
-    { id: 'mathematics', title: '📐 Mathematics Mistakes' },
-    { id: 'reasoning', title: '🧠 Reasoning Mistakes' },
-    { id: 'english', title: '📖 English Mistakes' },
-    { id: 'general_awareness', title: '🏛️ General Awareness Mistakes' },
+    { id: 'mathematics', code: 'math', title: '📐 Mathematics Mistakes' },
+    { id: 'reasoning', code: 'reason', title: '🧠 Reasoning Mistakes' },
+    { id: 'english', code: 'eng', title: '📖 English Mistakes' },
+    { id: 'general_awareness', code: 'ga', title: '🏛️ General Awareness Mistakes' },
   ];
 
   const result: MockErrorSubjectEntry[] = [];
@@ -360,6 +314,7 @@ export function getMockErrorsCatalog(): MockErrorSubjectEntry[] {
 
     result.push({
       subjectId: s.id,
+      code: s.code,
       title: s.title,
       totalQuestions,
       chapters,
@@ -370,8 +325,37 @@ export function getMockErrorsCatalog(): MockErrorSubjectEntry[] {
 }
 
 // ----------------------------------------------------
-// 3. LOAD QUESTIONS FOR ANY SET
+// 3. STATELSS SET RESOLVERS & QUESTION LOADERS
 // ----------------------------------------------------
+
+export function resolveEnglishSetFile(secCode: string, topicCode: string, setCode: string): { filePath: string; title: string; total: number } | null {
+  const catalog = getEnglishCatalog();
+  const sec = catalog.find((s) => s.code === secCode);
+  const topic = sec?.topics.find((t) => t.code === topicCode);
+  const set = topic?.sets.find((s) => s.code === setCode);
+  if (!set) return null;
+  return { filePath: set.filePath, title: set.title, total: set.totalQuestions };
+}
+
+export function resolveMathSetFile(topicCode: string, setCode: string): { filePath: string; title: string; total: number } | null {
+  const catalog = getMathCatalog();
+  for (const sec of catalog) {
+    const topic = sec.topics.find((t) => t.code === topicCode || t.id.toLowerCase() === topicCode.toLowerCase());
+    if (topic) {
+      const set = topic.sets.find((s) => s.code === setCode);
+      if (set) return { filePath: set.filePath, title: set.title, total: set.totalQuestions };
+    }
+  }
+  return null;
+}
+
+export function resolveGASetFile(topicCode: string, setCode: string): { filePath: string; title: string; total: number } | null {
+  const catalog = getGeneralAwarenessCatalog();
+  const topic = catalog.find((t) => t.code === topicCode || t.id === topicCode);
+  const set = topic?.sets.find((s) => s.code === setCode);
+  if (!set) return null;
+  return { filePath: set.filePath, title: set.title, total: set.totalQuestions };
+}
 
 export function loadQuestionsFromSet(
   filePath: string,

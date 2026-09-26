@@ -91,13 +91,27 @@ export function sanitizeTelegramQuiz(raw: {
     optArray = ['Option A', 'Option B', 'Option C', 'Option D'];
   }
 
-  // Format options: cap at 98 characters per Telegram Poll limits
-  const formattedOptions = optArray.slice(0, 10).map((opt, idx) => {
+  // Format options: cap at 98 characters per Telegram Poll limits and ensure unique options
+  const seenOptions = new Set<string>();
+  let formattedOptions = optArray.slice(0, 10).map((opt, idx) => {
     let t = opt.trim();
     if (t.length > 95) t = t.slice(0, 92) + '...';
     if (!t) t = `Choice ${String.fromCharCode(65 + idx)}`;
-    return t;
+
+    let uniqueT = t;
+    let count = 1;
+    while (seenOptions.has(uniqueT.toLowerCase())) {
+      uniqueT = `${t} (${count++})`;
+    }
+    seenOptions.add(uniqueT.toLowerCase());
+    return uniqueT;
   });
+
+  while (formattedOptions.length < 2) {
+    const fallbackOpt = `Choice ${String.fromCharCode(65 + formattedOptions.length)}`;
+    formattedOptions.push(fallbackOpt);
+    seenOptions.add(fallbackOpt.toLowerCase());
+  }
 
   const correctIndex = Math.max(
     0,

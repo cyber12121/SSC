@@ -95,6 +95,11 @@ export function getSessionByPollId(pollId: string): UserQuizSession | undefined 
   return sessions.get(userId);
 }
 
+export function saveSession(session: UserQuizSession) {
+  sessions.set(session.userId, session);
+  saveToDisk();
+}
+
 export function clearSession(userId: number) {
   const session = sessions.get(userId);
   if (session?.activePollId) {
