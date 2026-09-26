@@ -1380,14 +1380,15 @@ export default function App() {
       totalTime: 0,
       completedAt: new Date().toISOString(),
       questionDetails: questions.map((q, idx) => {
-        const isCorrect = q.status === 'correct' || (q.userAnswer && q.userAnswer.toLowerCase() === q.answer?.toLowerCase());
-        const isWrong = q.status === 'wrong' || q.errorType === 'wrong' || (q.userAnswer && !isCorrect);
+        const rawUserAns = (q as any).userAnswer || (q as any).chosenOption;
+        const isCorrect = q.status === 'correct' || (rawUserAns && rawUserAns.toLowerCase() === q.answer?.toLowerCase());
+        const isWrong = q.status === 'wrong' || q.errorType === 'wrong' || (rawUserAns && !isCorrect);
         const isSlow = q.status === 'slow' || q.isSlow || q.errorType === 'speed_issue';
         return {
           q_num: idx + 1,
           timeSpent: typeof q.userTime === 'number' ? q.userTime : 0,
           isCorrect: Boolean(isCorrect && !isSlow),
-          selectedAnswer: q.userAnswer || (isWrong ? 'wrong' : ''),
+          selectedAnswer: rawUserAns || (isWrong ? 'wrong' : ''),
           question: q,
           marked: false,
           rca: q.rca
@@ -1776,9 +1777,7 @@ export default function App() {
     }
     const cfg = RCA_TAG_CONFIG[tag];
     const subCfg = subTag && subTag !== 'all' ? SILLY_SUB_TYPES[subTag] : undefined;
-    const tagLabel = tag === 'unclassified'
-      ? 'Unclassified'
-      : subCfg
+    const tagLabel = subCfg
       ? `[S] ${subCfg.label}`
       : `[${tag}] ${cfg.label}`;
     if (questions.length > 25) {

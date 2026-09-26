@@ -356,9 +356,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           selectedAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
           chosenOption: it?.selectedAnswer || (it as any)?.userAnswer || '',
           isCorrect: it?.isCorrect,
-          isSlow: it?.isSlow,
+          isSlow: it?.isSlow || (it as any)?.status === 'slow' || (it as any)?.errorType === 'speed_issue',
           status: (it as any)?.status || (it?.isSlow ? 'slow' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted'))),
-          errorType: it?.isSlow ? 'speed_issue' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted')),
+          errorType: (it?.isSlow || (it as any)?.status === 'slow') ? 'speed_issue' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted')),
           timeSpent: it?.timeSpent,
           userTime: it?.timeSpent,
           avgTime: q.avgTime ?? (it as any)?.avgTime,
@@ -388,9 +388,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             selectedAnswer: item.selectedAnswer || (item as any).userAnswer || '',
             chosenOption: item.selectedAnswer || (item as any).userAnswer || '',
             isCorrect: item.isCorrect,
-            isSlow: item.isSlow,
+            isSlow: item.isSlow || (item as any).status === 'slow' || (item as any).errorType === 'speed_issue',
             status: (item as any).status || (item.isSlow ? 'slow' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted'))),
-            errorType: item.isSlow ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
+            errorType: (item.isSlow || (item as any).status === 'slow') ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
             timeSpent: item.timeSpent,
             userTime: item.timeSpent,
             rca: updatedMap[idx] || item.rca || item.question?.rca || undefined
@@ -531,9 +531,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               selectedAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               chosenOption: item.selectedAnswer || (item as any)?.userAnswer || '',
               isCorrect: item.isCorrect,
-              isSlow: item.isSlow,
+              isSlow: item.isSlow || (item as any)?.status === 'slow' || (item as any)?.errorType === 'speed_issue',
               status: (item as any)?.status || (item.isSlow ? 'slow' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted'))),
-              errorType: item.isSlow ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
+              errorType: (item.isSlow || (item as any)?.status === 'slow') ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
               timeSpent: item.timeSpent,
               userTime: item.timeSpent
             };
@@ -563,10 +563,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           // Use ONLY the current attempt's answer — do NOT pull from existingQ.userAnswer etc.,
           // as that is stale data from a previous session and would overwrite an unattempted
           // question with a wrong cached answer, breaking the second-review palette.
-          const selectedAnswer = it.selectedAnswer || (it as any).userAnswer || '';
-          const derivedStatus = (it as any).status || (it.isCorrect ? 'correct' : (selectedAnswer ? 'wrong' : 'unattempted'));
-          const isSlow = (it as any).isSlow ?? (derivedStatus === 'slow');
-          const isCorrect = it.isCorrect ?? (derivedStatus === 'correct' || derivedStatus === 'slow');
+          const selectedAnswer = it.selectedAnswer || (it as any).userAnswer || q.chosenOption || q.userAnswer || '';
+          const actualStatus = getQuestionStatus(idx);
+          const isSlow = actualStatus === 'slow';
+          const isCorrect = actualStatus === 'correct' || isSlow;
           const timeSpent = typeof it.timeSpent === 'number' ? it.timeSpent : (typeof existingQ.timeSpent === 'number' ? existingQ.timeSpent : (existingQ.userTime || 0));
 
           return {
@@ -575,8 +575,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             userAnswer: selectedAnswer,
             selectedAnswer: selectedAnswer,
             chosenOption: selectedAnswer,
-            status: isSlow ? 'slow' : (isCorrect ? 'correct' : (selectedAnswer ? 'wrong' : 'unattempted')),
-            errorType: (it as any).errorType || (isSlow ? 'slow' : (isCorrect ? 'correct' : (selectedAnswer ? 'wrong' : 'unattempted'))),
+            status: actualStatus === 'slow' ? 'Correct (Slow)' : (isCorrect ? 'Correct' : (actualStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+            errorType: isSlow ? 'speed_issue' : (isCorrect ? 'correct' : (actualStatus === 'unattempted' ? 'unattempted' : 'wrong')),
             isCorrect,
             isSlow,
             timeSpent,
@@ -1075,17 +1075,24 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     }
     const q = (item.question || {}) as any;
 
-    // Prioritise explicit status tags (from saved mock_questions JSON or handleFinishReview)
-    const qStatus = String((item as any).status || (item as any).errorType || '').toLowerCase();
+    // Prioritise explicit status tags (from item, item.errorType, or underlying question object)
+    const qStatus = String((item as any).status || (item as any).errorType || q.status || q.errorType || '').toLowerCase();
 
-    // The user's chosen answer for THIS attempt — ONLY from QuestionProgress fields.
-    // Do NOT fall back to q.userAnswer / q.chosenOption: those are stale fields from the
-    // mock question JSON of a previous session and would incorrectly mark unattempted qs.
+    // The user's chosen answer for THIS attempt
     const rawUser = String(
       item.selectedAnswer ||
       (item as any).userAnswer ||
       ''
     ).trim().toLowerCase();
+
+    // Determine if question is explicitly tagged as slow or speed issue
+    const isExplicitSlow =
+      qStatus.includes('slow') ||
+      qStatus.includes('speed') ||
+      (item as any).isSlow === true ||
+      q.isSlow === true ||
+      (item as any).errorType === 'speed_issue' ||
+      q.errorType === 'speed_issue';
 
     // 1. Unattempted / Skipped (evaluated first so we never misclassify empty answers)
     if (
@@ -1098,18 +1105,24 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       rawUser === 'not attempted' ||
       (!rawUser && !qStatus)   // no answer + no explicit status → unattempted
     ) {
-      // Edge-case: if isCorrect is explicitly true (shouldn't happen but be safe), treat as correct
-      if (item.isCorrect === true) return 'correct';
+      // If isCorrect is explicitly true, return slow or correct
+      if (item.isCorrect === true) {
+        return isExplicitSlow ? 'slow' : 'correct';
+      }
       return 'unattempted';
     }
 
     // 2. Slow / Speed Issue (Correct, but took too long)
-    if (
-      qStatus.includes('slow') ||
-      qStatus.includes('speed') ||
-      (item as any).isSlow === true ||
-      q.isSlow === true
-    ) {
+    if (isExplicitSlow) {
+      return 'slow';
+    }
+
+    // 2.5 Dynamic time-based slow detection for quiz / mock attempts where isSlow flag wasn't pre-computed
+    const uTime = Number(item.timeSpent || (item as any).userTime || q.userTime || 0);
+    const aTime = Number((item as any).avgTime || q.avgTime || (item as any).avgTimeSeconds || q.avgTimeSeconds || 0);
+    const isDynamicSlow = (item.isCorrect === true || qStatus.includes('correct') || qStatus === 'right') &&
+      aTime > 0 && uTime > aTime * 1.5 && uTime >= 60;
+    if (isDynamicSlow) {
       return 'slow';
     }
 
@@ -1119,7 +1132,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (qStatus.includes('wrong') || qStatus.includes('incorrect')) return 'wrong';
 
     // 4. Use isCorrect field (most reliable for QuizContainer-generated QuizResult)
-    if (item.isCorrect === true) return 'correct';
+    if (item.isCorrect === true) {
+      return isExplicitSlow || isDynamicSlow ? 'slow' : 'correct';
+    }
     if (item.isCorrect === false) {
       // Only classify as wrong if a user answer was actually recorded
       if (rawUser && rawUser !== 'unattempted' && rawUser !== 'skipped') return 'wrong';
@@ -1726,23 +1741,27 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
               {/* Status Badge: Skipped / Correct / Incorrect / Slow */}
               {currentStatus === 'correct' && (
-                <span className="bg-[#2e7d32] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                  Correct
+                <span className="bg-[#2e7d32] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                  <Smile className="w-3.5 h-3.5" />
+                  <span>Correct</span>
                 </span>
               )}
               {currentStatus === 'slow' && (
-                <span className="bg-[#ef6c00] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <span className="bg-[#ef6c00] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                  <AlertTriangle className="w-3.5 h-3.5" />
                   <span>Slow (Correct)</span>
                 </span>
               )}
               {currentStatus === 'wrong' && (
-                <span className="bg-[#c62828] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                  Incorrect
+                <span className="bg-[#c62828] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                  <Frown className="w-3.5 h-3.5" />
+                  <span>Incorrect</span>
                 </span>
               )}
               {currentStatus === 'unattempted' && (
-                <span className="bg-[#757575] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                  Skipped
+                <span className="bg-[#757575] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                  <HelpCircle className="w-3.5 h-3.5" />
+                  <span>Skipped</span>
                 </span>
               )}
 
@@ -1893,6 +1912,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       ? normalizeAnswerKey(current.selectedAnswer)
                       : (current as any).userAnswer
                       ? normalizeAnswerKey((current as any).userAnswer)
+                      : (question as any)?.chosenOption
+                      ? normalizeAnswerKey((question as any).chosenOption)
+                      : (question as any)?.userAnswer
+                      ? normalizeAnswerKey((question as any).userAnswer)
+                      : ((currentStatus === 'correct' || currentStatus === 'slow') && correctKey)
+                      ? correctKey
                       : null;
                     const reattemptKey = reattemptAnswers[currentIdx] ? normalizeAnswerKey(reattemptAnswers[currentIdx]) : null;
 
@@ -2350,32 +2375,63 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
           </div>
 
-            {/* Legend / Status Row (Section & Overall) */}
-            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-2.5 text-xs shrink-0 flex-wrap gap-y-1.5">
-              <div className="flex items-center space-x-1" title={`Section: ${sectionCorrectCount} | Overall: ${correctCount}`}>
+            {/* Legend / Status Row (Section & Overall) - Interactive Filters */}
+            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-2 text-xs shrink-0 flex-wrap gap-y-1.5">
+              <button
+                type="button"
+                onClick={() => setSelectedFilter(prev => prev === 'correct' ? 'all' : 'correct')}
+                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
+                  selectedFilter === 'correct' ? 'bg-green-100 ring-1 ring-green-600 font-bold' : 'hover:bg-white/80'
+                }`}
+                title={`Filter Correct (Section: ${sectionCorrectCount} | Overall: ${correctCount})`}
+              >
                 <span className="w-5 h-5 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionCorrectCount}
                 </span>
                 <span className="text-gray-700 font-medium text-[11px]">Correct</span>
-              </div>
-              <div className="flex items-center space-x-1" title={`Section: ${sectionSlowCount} | Overall: ${slowCount}`}>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter(prev => prev === 'slow' ? 'all' : 'slow')}
+                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
+                  selectedFilter === 'slow' ? 'bg-amber-100 ring-1 ring-amber-600 font-bold' : 'hover:bg-white/80'
+                }`}
+                title={`Filter Slow (Section: ${sectionSlowCount} | Overall: ${slowCount})`}
+              >
                 <span className="w-5 h-5 rounded-full bg-[#ef6c00] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionSlowCount}
                 </span>
                 <span className="text-gray-700 font-medium text-[11px]">Slow</span>
-              </div>
-              <div className="flex items-center space-x-1" title={`Section: ${sectionUnattemptedCount} | Overall: ${unattemptedCount}`}>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter(prev => prev === 'unattempted' ? 'all' : 'unattempted')}
+                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
+                  selectedFilter === 'unattempted' ? 'bg-gray-200 ring-1 ring-gray-600 font-bold' : 'hover:bg-white/80'
+                }`}
+                title={`Filter Skipped (Section: ${sectionUnattemptedCount} | Overall: ${unattemptedCount})`}
+              >
                 <span className="w-5 h-5 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionUnattemptedCount}
                 </span>
                 <span className="text-gray-700 font-medium text-[11px]">Skipped</span>
-              </div>
-              <div className="flex items-center space-x-1" title={`Section: ${sectionWrongCount} | Overall: ${wrongCount}`}>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setSelectedFilter(prev => prev === 'incorrect' ? 'all' : 'incorrect')}
+                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
+                  selectedFilter === 'incorrect' ? 'bg-red-100 ring-1 ring-red-600 font-bold' : 'hover:bg-white/80'
+                }`}
+                title={`Filter Incorrect (Section: ${sectionWrongCount} | Overall: ${wrongCount})`}
+              >
                 <span className="w-5 h-5 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
                   {sectionWrongCount}
                 </span>
                 <span className="text-gray-700 font-medium text-[11px]">Incorrect</span>
-              </div>
+              </button>
             </div>
 
             {/* SPEED INDICATORS Section */}

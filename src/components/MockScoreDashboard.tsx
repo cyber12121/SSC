@@ -1672,7 +1672,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           isCorrect,
           selectedAnswer: isUnattempted ? '' : selected,
           status: isSlow ? 'slow' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
-          errorType: isSlow ? 'slow' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
+          errorType: isSlow ? 'speed_issue' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
           isSlow,
           avgTime: q.avgTime,
           avgTimeSeconds: typeof q.avgTime === 'number' ? q.avgTime : undefined,
