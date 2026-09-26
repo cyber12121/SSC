@@ -24,9 +24,22 @@ export interface SectionEntry {
   topics: TopicEntry[];
 }
 
-const ROOT_DIR = process.cwd();
-const CHAPTER_BANK_DIR = path.join(ROOT_DIR, 'src', 'data', 'chapter_bank');
-const MOCK_ERRORS_DIR = path.join(ROOT_DIR, 'src', 'data', 'mock_errors');
+function resolveDataDir(subPath: string): string {
+  const candidates = [
+    path.join(process.cwd(), 'src', 'data', subPath),
+    path.join(process.cwd(), 'data', subPath),
+    path.join(__dirname, 'src', 'data', subPath),
+    path.join(__dirname, '..', 'src', 'data', subPath),
+    path.join(__dirname, 'data', subPath),
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(c)) return c;
+  }
+  return candidates[0];
+}
+
+const CHAPTER_BANK_DIR = resolveDataDir('chapter_bank');
+const MOCK_ERRORS_DIR = resolveDataDir('mock_errors');
 
 // ----------------------------------------------------
 // 1. SCAN AND INDEX CHAPTER BANK

@@ -563,11 +563,23 @@ function purgeScrapedWatermarks(text = "") {
 }
 
 // src/telegram/quizData.ts
-var ROOT_DIR = process.cwd();
-var DRILLS_DIR = path.join(ROOT_DIR, "src", "data", "drills");
-var CHAPTER_BANK_DIR = path.join(ROOT_DIR, "src", "data", "chapter_bank");
-var MOCK_ERRORS_DIR = path.join(ROOT_DIR, "src", "data", "mock_errors");
-var MOCK_QUESTIONS_DIR = path.join(ROOT_DIR, "src", "data", "mock_questions");
+function resolveDataDir(subPath) {
+  const candidates = [
+    path.join(process.cwd(), "src", "data", subPath),
+    path.join(process.cwd(), "data", subPath),
+    path.join(__dirname, "src", "data", subPath),
+    path.join(__dirname, "..", "src", "data", subPath),
+    path.join(__dirname, "data", subPath)
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(c)) return c;
+  }
+  return candidates[0];
+}
+var DRILLS_DIR = resolveDataDir("drills");
+var CHAPTER_BANK_DIR = resolveDataDir("chapter_bank");
+var MOCK_ERRORS_DIR = resolveDataDir("mock_errors");
+var MOCK_QUESTIONS_DIR = resolveDataDir("mock_questions");
 function shuffle(array) {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -4596,9 +4608,21 @@ function getSimplificationCatalog() {
 // src/telegram/catalog.ts
 import fs2 from "fs";
 import path2 from "path";
-var ROOT_DIR2 = process.cwd();
-var CHAPTER_BANK_DIR2 = path2.join(ROOT_DIR2, "src", "data", "chapter_bank");
-var MOCK_ERRORS_DIR2 = path2.join(ROOT_DIR2, "src", "data", "mock_errors");
+function resolveDataDir2(subPath) {
+  const candidates = [
+    path2.join(process.cwd(), "src", "data", subPath),
+    path2.join(process.cwd(), "data", subPath),
+    path2.join(__dirname, "src", "data", subPath),
+    path2.join(__dirname, "..", "src", "data", subPath),
+    path2.join(__dirname, "data", subPath)
+  ];
+  for (const c of candidates) {
+    if (fs2.existsSync(c)) return c;
+  }
+  return candidates[0];
+}
+var CHAPTER_BANK_DIR2 = resolveDataDir2("chapter_bank");
+var MOCK_ERRORS_DIR2 = resolveDataDir2("mock_errors");
 function getEnglishCatalog() {
   const sections = [];
   const bbDir = path2.join(CHAPTER_BANK_DIR2, "english", "black_book");
@@ -5690,6 +5714,17 @@ var isDirectRun = Boolean(process.argv[1]?.replace(/\\/g, "/").endsWith("src/tel
 if (isDirectRun && !process.env.VERCEL) {
   launchBot();
 }
+var isInitialized = false;
+async function ensureInit() {
+  if (!isInitialized) {
+    try {
+      await bot.init();
+      isInitialized = true;
+    } catch (err) {
+      console.error("[TelegramBot] bot.init() error:", err);
+    }
+  }
+}
 async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
@@ -5698,17 +5733,27 @@ async function handler(req, res) {
     return res.status(200).end();
   }
   if (req.method === "GET") {
+    await ensureInit();
     return res.status(200).json({
       status: "online",
       message: "Telegram Webhook is live 24/7 on Vercel!",
-      bot: "@my_cgl_bot",
+      bot: bot.botInfo ? `@${bot.botInfo.username}` : "@my_cgl_bot",
+      initialized: isInitialized,
       timestamp: (/* @__PURE__ */ new Date()).toISOString()
     });
   }
   if (req.method === "POST") {
     try {
-      if (req.body) {
-        await bot.handleUpdate(req.body);
+      await ensureInit();
+      let body = req.body;
+      if (typeof body === "string") {
+        try {
+          body = JSON.parse(body);
+        } catch {
+        }
+      }
+      if (body) {
+        await bot.handleUpdate(body);
       }
       return res.status(200).json({ ok: true });
     } catch (err) {

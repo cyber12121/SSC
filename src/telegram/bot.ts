@@ -964,6 +964,18 @@ if (isDirectRun && !process.env.VERCEL) {
   launchBot();
 }
 
+let isInitialized = false;
+async function ensureInit() {
+  if (!isInitialized) {
+    try {
+      await bot.init();
+      isInitialized = true;
+    } catch (err) {
+      console.error('[TelegramBot] bot.init() error:', err);
+    }
+  }
+}
+
 // Vercel Serverless Function Handler
 export default async function handler(req: any, res: any) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -975,18 +987,27 @@ export default async function handler(req: any, res: any) {
   }
 
   if (req.method === 'GET') {
+    await ensureInit();
     return res.status(200).json({
       status: 'online',
       message: 'Telegram Webhook is live 24/7 on Vercel!',
-      bot: '@my_cgl_bot',
+      bot: bot.botInfo ? `@${bot.botInfo.username}` : '@my_cgl_bot',
+      initialized: isInitialized,
       timestamp: new Date().toISOString(),
     });
   }
 
   if (req.method === 'POST') {
     try {
-      if (req.body) {
-        await bot.handleUpdate(req.body);
+      await ensureInit();
+      let body = req.body;
+      if (typeof body === 'string') {
+        try {
+          body = JSON.parse(body);
+        } catch {}
+      }
+      if (body) {
+        await bot.handleUpdate(body);
       }
       return res.status(200).json({ ok: true });
     } catch (err: any) {

@@ -15,11 +15,24 @@ export interface TelegramQuizQuestion {
   source?: string;
 }
 
-const ROOT_DIR = process.cwd();
-const DRILLS_DIR = path.join(ROOT_DIR, 'src', 'data', 'drills');
-const CHAPTER_BANK_DIR = path.join(ROOT_DIR, 'src', 'data', 'chapter_bank');
-const MOCK_ERRORS_DIR = path.join(ROOT_DIR, 'src', 'data', 'mock_errors');
-const MOCK_QUESTIONS_DIR = path.join(ROOT_DIR, 'src', 'data', 'mock_questions');
+function resolveDataDir(subPath: string): string {
+  const candidates = [
+    path.join(process.cwd(), 'src', 'data', subPath),
+    path.join(process.cwd(), 'data', subPath),
+    path.join(__dirname, 'src', 'data', subPath),
+    path.join(__dirname, '..', 'src', 'data', subPath),
+    path.join(__dirname, 'data', subPath),
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(c)) return c;
+  }
+  return candidates[0];
+}
+
+const DRILLS_DIR = resolveDataDir('drills');
+const CHAPTER_BANK_DIR = resolveDataDir('chapter_bank');
+const MOCK_ERRORS_DIR = resolveDataDir('mock_errors');
+const MOCK_QUESTIONS_DIR = resolveDataDir('mock_questions');
 
 // In-memory cache for parsed questions by key to make subsequent loads instant (<1ms)
 const questionsCache = new Map<string, any[]>();
