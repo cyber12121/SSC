@@ -2083,177 +2083,202 @@ export default function App() {
     <div className={`font-sans text-slate-900 ${view === 'quiz' || view === 'review' ? 'h-screen overflow-hidden bg-white' : 'min-h-screen bg-slate-100'}`}>
       {/* Navigation */}
       {view !== 'quiz' && view !== 'review' && (
-        <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
-          <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex items-center space-x-3 cursor-pointer" onClick={resetToHome}>
-                <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-200">
-                  <GraduationCap className="text-white w-5 h-5" />
-                </div>
-                <span className="text-xl font-black tracking-tight text-slate-800">mock</span>
+        <nav className="bg-white/95 backdrop-blur-md border-b border-slate-200/90 sticky top-0 z-50 transition-colors">
+          <div className="max-w-[1520px] mx-auto px-3 sm:px-6">
+            <div className="flex items-center justify-between h-15">
+              
+              {/* Brand & Context Switcher */}
+              <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+                <button
+                  onClick={resetToHome}
+                  className="flex items-center gap-2.5 group cursor-pointer focus:outline-none"
+                  title="Go to Home"
+                >
+                  <div className="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center shadow-xs shadow-blue-200 group-hover:scale-105 transition-transform">
+                    <GraduationCap className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-lg font-black tracking-tight text-slate-800">mock</span>
+                </button>
+
+                <div className="h-4 w-px bg-slate-200" />
+
                 <a
                   href="https://cat-nu-ruby.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 px-2.5 py-1 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700 transition-all shadow-md shadow-purple-200 text-xs flex items-center"
-                  title="Open CAT practice"
+                  className="px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 hover:bg-purple-100 hover:text-purple-800 border border-purple-200/80 text-[11px] font-bold tracking-wide transition-all inline-flex items-center gap-1 shadow-2xs"
+                  title="Switch to CAT practice"
                 >
-                  CAT
+                  <span>CAT</span>
+                  <span className="text-[9px] opacity-60">↗</span>
                 </a>
               </div>
 
-              {/* Mobile Right Controls: Mode Toggle, Theme Switcher & Logout */}
-              <div className="flex items-center space-x-2 md:hidden">
-                <div className="flex bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-xs font-bold" title="Quiz mode">
+              {/* Desktop Nav Items */}
+              <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
+                {/* 1. Practice */}
+                <button
+                  onClick={resetToHome}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'home'
+                      ? 'bg-blue-50 text-blue-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5" />
+                  <span>Practice</span>
+                </button>
+
+                {/* 2. Drills */}
+                <button
+                  onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'drill'
+                      ? 'bg-blue-50 text-blue-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <Zap className="w-3.5 h-3.5" />
+                  <span>Drills</span>
+                </button>
+
+                {/* 3. SRS Memory */}
+                <button
+                  onClick={() => setView('srs')}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'srs'
+                      ? 'bg-indigo-50 text-indigo-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <RotateCw className="w-3.5 h-3.5 text-indigo-500" />
+                  <span>SRS</span>
+                  {srsDueCount > 0 && (
+                    <span className="px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-black animate-pulse shadow-2xs">
+                      {srsDueCount}
+                    </span>
+                  )}
+                </button>
+
+                {/* 4. Saved */}
+                <button
+                  onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'bookmarks'
+                      ? 'bg-blue-50 text-blue-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <BookmarkIcon className="w-3.5 h-3.5" />
+                  <span>Saved</span>
+                  {bookmarks.length > 0 && (
+                    <span className="text-[10px] text-slate-400 font-mono">({bookmarks.length})</span>
+                  )}
+                </button>
+
+                {/* 5. Analytics */}
+                <button
+                  onClick={() => setView('dashboard')}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'dashboard'
+                      ? 'bg-blue-50 text-blue-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <LayoutDashboard className="w-3.5 h-3.5" />
+                  <span>Analytics</span>
+                </button>
+
+                {/* 6. Mock Scores */}
+                <button
+                  onClick={() => setView('mockScores')}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'mockScores'
+                      ? 'bg-blue-50 text-blue-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <Trophy className="w-3.5 h-3.5" />
+                  <span>Scores</span>
+                </button>
+
+                {/* 7. Bot Mistakes */}
+                <button
+                  onClick={() => setShowTelegramMistakesModal(true)}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    showTelegramMistakesModal
+                      ? 'bg-indigo-600 text-white shadow-xs'
+                      : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 hover:text-indigo-800 border border-indigo-200/60 shadow-2xs'
+                  }`}
+                  title="Telegram Bot & Mock Mistake Notebook"
+                >
+                  <span className="text-xs">📱</span>
+                  <span>Bot Errors</span>
+                </button>
+              </div>
+
+              {/* Utility & Actions Right Cluster */}
+              <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                {/* Mode Switcher Segmented Control */}
+                <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200/90 text-xs font-semibold">
                   <button
                     onClick={() => setQuizModePersisted('practice')}
-                    className={`px-2 py-1 rounded-md transition-all text-[11px] flex items-center ${quizMode === 'practice'
-                        ? 'bg-white text-emerald-600 shadow-xs'
+                    className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer text-xs ${
+                      quizMode === 'practice'
+                        ? 'bg-white text-emerald-700 font-bold shadow-2xs'
                         : 'text-slate-500 hover:text-slate-800'
-                      }`}
+                    }`}
                   >
-                    Practice
+                    <BookOpen className="w-3 h-3 text-emerald-600" />
+                    <span>Practice</span>
                   </button>
                   <button
                     onClick={() => setQuizModePersisted('mock')}
-                    className={`px-2 py-1 rounded-md transition-all text-[11px] flex items-center ${quizMode === 'mock'
-                        ? 'bg-white text-red-600 shadow-xs'
+                    className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer text-xs ${
+                      quizMode === 'mock'
+                        ? 'bg-white text-rose-700 font-bold shadow-2xs'
                         : 'text-slate-500 hover:text-slate-800'
-                      }`}
+                    }`}
                   >
-                    Mock
+                    <Trophy className="w-3 h-3 text-rose-600" />
+                    <span>Mock</span>
                   </button>
                 </div>
 
+                <div className="h-4 w-px bg-slate-200 hidden sm:block" />
+
+                {/* Mobile Bot Mistakes trigger */}
                 <button
                   onClick={() => setShowTelegramMistakesModal(true)}
-                  className="p-1.5 rounded-lg bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200 transition-colors text-xs font-bold"
-                  title="Bot Mistakes"
+                  className="lg:hidden p-1.5 rounded-lg bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200/80 text-xs font-bold transition-colors"
+                  title="Bot Errors"
                 >
                   📱
                 </button>
 
+                {/* Theme Selector */}
                 <ThemeSelector isCompact />
 
+                {/* User / Login */}
                 {user ? (
                   <button
                     onClick={handleLogout}
-                    className="p-1.5 text-slate-500 hover:text-red-600 transition-colors cursor-pointer"
-                    title="Logout"
+                    className="p-1.5 text-slate-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
+                    title={`Logout (${user.email || 'User'})`}
                   >
                     <LogOut className="w-4 h-4" />
                   </button>
                 ) : (
                   <button
                     onClick={handleLogin}
-                    className="p-1.5 text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
-                    title="Login"
+                    className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-xs transition-colors flex items-center gap-1.5 shadow-2xs cursor-pointer"
                   >
-                    <LogIn className="w-4 h-4" />
+                    <LogIn className="w-3.5 h-3.5" />
+                    <span>Login</span>
                   </button>
                 )}
               </div>
 
-              <div className="hidden md:flex items-center space-x-4 lg:space-x-5">
-                <button
-                  onClick={resetToHome}
-                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'home' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-                >
-                  <BookOpen className="w-4 h-4 mr-1.5" />
-                  Practice
-                </button>
-                <button
-                  onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
-                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'drill' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-                >
-                  <Zap className="w-4 h-4 mr-1.5" />
-                  Speed Drill
-                </button>
-                <button
-                  onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
-                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'bookmarks' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-                >
-                  <BookmarkIcon className="w-4 h-4 mr-1.5" />
-                  Bookmarks
-                </button>
-                <button
-                  onClick={() => setView('srs')}
-                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer relative ${view === 'srs' ? 'text-indigo-600' : 'text-slate-500 hover:text-slate-800'}`}
-                >
-                  <RotateCw className="w-4 h-4 mr-1.5 text-indigo-500" />
-                  <span>SRS Memory</span>
-                  {srsDueCount > 0 && (
-                    <span className="ml-1.5 px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-black shadow-xs animate-pulse">
-                      {srsDueCount}
-                    </span>
-                  )}
-                </button>
-                <button
-                  onClick={() => setView('dashboard')}
-                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'dashboard' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-                >
-                  <LayoutDashboard className="w-4 h-4 mr-1.5" />
-                  Dashboard
-                </button>
-                <button
-                  onClick={() => setView('mockScores')}
-                  className={`flex items-center font-bold text-sm transition-colors cursor-pointer ${view === 'mockScores' ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
-                >
-                  <Trophy className="w-4 h-4 mr-1.5" />
-                  Mock Scores
-                </button>
-                <button
-                  onClick={() => setShowTelegramMistakesModal(true)}
-                  className="flex items-center font-bold text-sm px-2.5 py-1.5 rounded-xl bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition-colors border border-indigo-200 cursor-pointer shadow-xs"
-                  title="Open Telegram Bot & Mock Mistake Bank"
-                >
-                  <span className="mr-1.5 text-base">📱</span>
-                  <span>Bot Mistakes</span>
-                </button>
-                <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
-                  <button
-                    onClick={() => setQuizModePersisted('practice')}
-                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center cursor-pointer ${quizMode === 'practice'
-                        ? 'bg-white text-emerald-600 shadow-xs'
-                        : 'text-slate-500 hover:text-slate-800'
-                      }`}
-                  >
-                    <BookOpen className="w-3.5 h-3.5 mr-1" />
-                    Practice
-                  </button>
-                  <button
-                    onClick={() => setQuizModePersisted('mock')}
-                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center cursor-pointer ${quizMode === 'mock'
-                        ? 'bg-white text-red-600 shadow-xs'
-                        : 'text-slate-500 hover:text-slate-800'
-                      }`}
-                  >
-                    <Trophy className="w-3.5 h-3.5 mr-1" />
-                    Mock
-                  </button>
-                </div>
-
-                {/* Theme Selector (Light, Sage) */}
-                <ThemeSelector />
-
-                {user ? (
-                  <button
-                    onClick={handleLogout}
-                    className="p-2 text-slate-500 hover:text-red-600 transition-colors cursor-pointer"
-                    title="Logout"
-                  >
-                    <LogOut className="w-5 h-5" />
-                  </button>
-                ) : (
-                  <button
-                    onClick={handleLogin}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-200 flex items-center text-xs cursor-pointer"
-                  >
-                    <LogIn className="w-4 h-4 mr-1.5" />
-                    Login
-                  </button>
-                )}
-              </div>
             </div>
           </div>
         </nav>
