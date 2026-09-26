@@ -47,7 +47,7 @@ import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockEr
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
 import { SillyMistakesAggregateView } from './components/rca/SillyMistakesAggregateView';
 import { ThemeSelector } from './components/ThemeSelector';
-import { TelegramMistakesModal } from './components/TelegramMistakesModal';
+import { BotMistakesPage } from './components/BotMistakesPage';
 import { getInitialTheme, setAppliedTheme } from './utils/theme';
 import { getDailyThought } from './utils/dailyThoughts';
 
@@ -108,7 +108,7 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'srs'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'srs' | 'botErrors'>('home');
   const [srsCards, setSrsCards] = useState<SRSCard[]>(() => getStoredSRSCards());
   const [srsConfirmCards, setSrsConfirmCards] = useState<Array<Partial<SRSCard>>>([]);
   const [srsConfirmOpen, setSrsConfirmOpen] = useState(false);
@@ -246,7 +246,6 @@ export default function App() {
   const [rcaSelectedFilter, setRcaSelectedFilter] = useState<'all' | RCATagType | 'unclassified'>('all');
   const [rcaSearchQuery, setRcaSearchQuery] = useState<string>('');
   const [rcaVersion, setRcaVersion] = useState(0);
-  const [showTelegramMistakesModal, setShowTelegramMistakesModal] = useState(false);
 
   useEffect(() => {
     loadBundledMockRcaMap();
@@ -2204,11 +2203,11 @@ export default function App() {
 
                 {/* 7. Bot Mistakes */}
                 <button
-                  onClick={() => setShowTelegramMistakesModal(true)}
+                  onClick={() => setView('botErrors')}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                    showTelegramMistakesModal
-                      ? 'bg-indigo-600 text-white shadow-xs'
-                      : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 hover:text-indigo-800 border border-indigo-200/60 shadow-2xs'
+                    view === 'botErrors'
+                      ? 'bg-indigo-50 text-indigo-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
                   }`}
                   title="Telegram Bot & Mock Mistake Notebook"
                 >
@@ -2249,8 +2248,12 @@ export default function App() {
 
                 {/* Mobile Bot Mistakes trigger */}
                 <button
-                  onClick={() => setShowTelegramMistakesModal(true)}
-                  className="lg:hidden p-1.5 rounded-lg bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200/80 text-xs font-bold transition-colors"
+                  onClick={() => setView('botErrors')}
+                  className={`lg:hidden p-1.5 rounded-lg border text-xs font-bold transition-colors ${
+                    view === 'botErrors'
+                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
+                      : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border-indigo-200/80'
+                  }`}
                   title="Bot Errors"
                 >
                   📱
@@ -3969,6 +3972,26 @@ export default function App() {
                 </React.Suspense>
               </motion.div>
             )}
+            {view === 'botErrors' && (
+              <motion.div
+                key="botErrors"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+              >
+                <BotMistakesPage
+                  onBack={resetToHome}
+                  onDeleteQuestion={(qId, qText) => {
+                    setDeletedQuestionIds((prev) => {
+                      const updated = new Set(prev);
+                      if (qId) updated.add(qId);
+                      if (qText) updated.add(qText.trim().toLowerCase());
+                      return updated;
+                    });
+                  }}
+                />
+              </motion.div>
+            )}
           </AnimatePresence>
         )}
 
@@ -4012,19 +4035,6 @@ export default function App() {
           onCancel={() => {
             setSrsConfirmOpen(false);
             setSrsConfirmCards([]);
-          }}
-        />
-
-        <TelegramMistakesModal
-          isOpen={showTelegramMistakesModal}
-          onClose={() => setShowTelegramMistakesModal(false)}
-          onDeleteQuestion={(qId, qText) => {
-            setDeletedQuestionIds((prev) => {
-              const updated = new Set(prev);
-              if (qId) updated.add(qId);
-              if (qText) updated.add(qText.trim().toLowerCase());
-              return updated;
-            });
           }}
         />
       </main>
@@ -4090,6 +4100,15 @@ export default function App() {
           >
             <Trophy className="w-4 h-4 mb-0.5" />
             <span>Scores</span>
+          </button>
+          <button
+            onClick={() => setView('botErrors')}
+            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'botErrors' ? 'text-indigo-600 bg-indigo-50/60 font-black' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <span className="text-sm leading-none mb-0.5">📱</span>
+            <span>Errors</span>
           </button>
         </nav>
       )}
