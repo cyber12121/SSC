@@ -21,6 +21,15 @@ import {
   getSimplificationCatalog,
 } from './speedLabData';
 import {
+  generateChainAdditionDrill,
+  generateSubtractionDrill,
+  generateBase100Multiplication,
+  generateSquareDiffMultiplication,
+  generateDecimalPercentageDrill,
+  generateRatioFaceOffDrill,
+  generateMentalMathBlitz,
+} from './mentalMathData';
+import {
   getEnglishCatalog,
   getMathCatalog,
   getGeneralAwarenessCatalog,
@@ -667,6 +676,8 @@ bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
 
 bot.callbackQuery('nav_speed_lab', async (ctx) => {
   const kb = new InlineKeyboard()
+    .text('🧠 Mental Math Studio (Arun Sharma)', 'speed_mental_math')
+    .row()
     .text('🧮 Calculation Studio (7 Steps)', 'speed_calc_studio')
     .row()
     .text('📐 Simplification Drills', 'speed_simp_menu')
@@ -679,9 +690,10 @@ bot.callbackQuery('nav_speed_lab', async (ctx) => {
 
   await ctx.editMessageText(
     '⚡ *Speed Lab (Same as Website):*\n\n' +
-      '• *Calculation Studio:* Master all 7 building blocks\n' +
-      '• *Simplification Drills:* Easy, Moderate, & Hard sets\n' +
-      '• *Daily Workout:* 25 questions testing all 7 steps\n\n' +
+      '• 🧠 *Mental Math Studio:* Addition, Subtraction, Vedic Multiplication, DI Ratios\n' +
+      '• 🧮 *Calculation Studio:* Master all 7 building blocks\n' +
+      '• 📐 *Simplification Drills:* Easy, Moderate, & Hard sets\n' +
+      '• 🏆 *Daily Workout:* 25 questions testing all 7 steps\n\n' +
       '👉 *Choose your speed training mode:*',
     {
       parse_mode: 'Markdown',
@@ -689,6 +701,168 @@ bot.callbackQuery('nav_speed_lab', async (ctx) => {
     }
   );
   await ctx.answerCallbackQuery();
+});
+
+// ----------------------------------------------------
+// MENTAL MATH STUDIO (ARUN SHARMA SPEED LAB)
+// ----------------------------------------------------
+
+bot.callbackQuery('speed_mental_math', async (ctx) => {
+  const kb = new InlineKeyboard()
+    .text('➕ Chain Addition (5–10 Nodes)', 'mm_add_menu')
+    .row()
+    .text('➖ Subtraction (Number Line Hops)', 'mm_sub_menu')
+    .row()
+    .text('✖️ Multiplication (Base 100 & Vedic)', 'mm_mult_menu')
+    .row()
+    .text('➗ Division & DI Ratios (10% Ladder)', 'mm_div_menu')
+    .row()
+    .text('🎯 Full Mental Math Blitz (12 Qs)', 'run_mm:blitz:12')
+    .row()
+    .text('⬅️ Back to Speed Lab', 'nav_speed_lab');
+
+  await ctx.editMessageText(
+    '🧠 *Mental Math Studio (Arun Sharma Techniques)*\n━━━━━━━━━━━━━━━━━━━━━━\n' +
+      '• *Addition:* Left-to-right running sum in working memory\n' +
+      '• *Subtraction:* Forward hops on the number line (zero borrowing)\n' +
+      '• *Multiplication:* Base-100 deviations & a² − b² midpoint squares\n' +
+      '• *Division:* 10% & 1% mental brackets & DI ratio face-off\n\n' +
+      '👉 *Select a module to drill:*',
+    {
+      parse_mode: 'Markdown',
+      reply_markup: kb,
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+
+bot.callbackQuery('mm_add_menu', async (ctx) => {
+  const kb = new InlineKeyboard()
+    .text('⚡ Sprint 5-Nodes (10 Questions)', 'run_mm:add_5:10')
+    .row()
+    .text('🚀 Stamina 10-Nodes (10 Questions)', 'run_mm:add_10:10')
+    .row()
+    .text('⬅️ Back to Mental Math', 'speed_mental_math');
+
+  await ctx.editMessageText(
+    '➕ *Chain Addition (Running Mental Sum)*\n━━━━━━━━━━━━━━━━━━━━━━\n' +
+      'Add numbers left-to-right mentally without writing down intermediate steps.\n\n' +
+      'Select drill mode:',
+    {
+      parse_mode: 'Markdown',
+      reply_markup: kb,
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+
+bot.callbackQuery('mm_sub_menu', async (ctx) => {
+  const kb = new InlineKeyboard()
+    .text('⚡ 2-Digit Decade Hops (10 Questions)', 'run_mm:sub_2d:10')
+    .row()
+    .text('🚀 3-Digit Century Crossing (10 Questions)', 'run_mm:sub_3d:10')
+    .row()
+    .text('⬅️ Back to Mental Math', 'speed_mental_math');
+
+  await ctx.editMessageText(
+    '➖ *Subtraction (Number Line Forward Hops)*\n━━━━━━━━━━━━━━━━━━━━━━\n' +
+      'Never borrow vertically. Jump forward from the subtrahend to nearest ten, then leap to the minuend.\n\n' +
+      'Select drill mode:',
+    {
+      parse_mode: 'Markdown',
+      reply_markup: kb,
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+
+bot.callbackQuery('mm_mult_menu', async (ctx) => {
+  const kb = new InlineKeyboard()
+    .text('⚡ Base-100 Deviations (10 Qs)', 'run_mm:mult_base:10')
+    .row()
+    .text('⚡ Midpoint a² − b² Squares (10 Qs)', 'run_mm:mult_mid:10')
+    .row()
+    .text('🚀 Comprehensive Multiplication (15 Qs)', 'run_mm:mult_mix:15')
+    .row()
+    .text('⬅️ Back to Mental Math', 'speed_mental_math');
+
+  await ctx.editMessageText(
+    '✖️ *Multiplication Shortcuts (Vedic & Base-100)*\n━━━━━━━━━━━━━━━━━━━━━━\n' +
+      '• Base 100: (Num1 + d2 | d1 × d2)\n' +
+      '• Midpoint Squares: anchor² − diff²\n\n' +
+      'Select shortcut track:',
+    {
+      parse_mode: 'Markdown',
+      reply_markup: kb,
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+
+bot.callbackQuery('mm_div_menu', async (ctx) => {
+  const kb = new InlineKeyboard()
+    .text('⚡ Decimal % 10% Ladder (8 Qs)', 'run_mm:div_pct:8')
+    .row()
+    .text('⚖️ DI Ratio Face-Off (6 Qs)', 'run_mm:div_ratio:6')
+    .row()
+    .text('⬅️ Back to Mental Math', 'speed_mental_math');
+
+  await ctx.editMessageText(
+    '➗ *Division & DI Ratios (10% Ladder)*\n━━━━━━━━━━━━━━━━━━━━━━\n' +
+      '• Decimal %: Calculate 10% steps to bracket percentages quickly\n' +
+      '• Ratio Face-Off: Relative numerator vs denominator growth\n\n' +
+      'Select drill mode:',
+    {
+      parse_mode: 'Markdown',
+      reply_markup: kb,
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+
+bot.callbackQuery(/^run_mm:([a-z0-9_]+):([0-9]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, type, countStr] = ctx.match;
+  const count = parseInt(countStr, 10) || 10;
+
+  let qs: TelegramQuizQuestion[] = [];
+  let title = '';
+
+  if (type === 'add_5') {
+    qs = generateChainAdditionDrill(5, count);
+    title = `➕ Mental Math: Chain Addition 5-Nodes (${count} Qs)`;
+  } else if (type === 'add_10') {
+    qs = generateChainAdditionDrill(10, count);
+    title = `➕ Mental Math: Chain Addition 10-Nodes (${count} Qs)`;
+  } else if (type === 'sub_2d') {
+    qs = generateSubtractionDrill('2digit', count);
+    title = `➖ Mental Math: Subtraction 2-Digit Hops (${count} Qs)`;
+  } else if (type === 'sub_3d') {
+    qs = generateSubtractionDrill('3digit', count);
+    title = `➖ Mental Math: Century Crossing Subtraction (${count} Qs)`;
+  } else if (type === 'mult_base') {
+    qs = generateBase100Multiplication(count);
+    title = `✖️ Mental Math: Base-100 Deviations (${count} Qs)`;
+  } else if (type === 'mult_mid') {
+    qs = generateSquareDiffMultiplication(count);
+    title = `✖️ Mental Math: Midpoint a² − b² Squares (${count} Qs)`;
+  } else if (type === 'mult_mix') {
+    const base = generateBase100Multiplication(8);
+    const sq = generateSquareDiffMultiplication(7);
+    qs = [...base, ...sq];
+    title = `✖️ Mental Math: Mixed Multiplication (${qs.length} Qs)`;
+  } else if (type === 'div_pct') {
+    qs = generateDecimalPercentageDrill(count);
+    title = `➗ Mental Math: 10% Ladder Decimal % (${count} Qs)`;
+  } else if (type === 'div_ratio') {
+    qs = generateRatioFaceOffDrill(count);
+    title = `⚖️ Mental Math: DI Ratio Face-Off (${count} Qs)`;
+  } else if (type === 'blitz') {
+    qs = generateMentalMathBlitz(count);
+    title = `🎯 Mental Math: Arun Sharma Blitz (${count} Qs)`;
+  }
+
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs);
 });
 
 bot.callbackQuery('speed_calc_studio', async (ctx) => {

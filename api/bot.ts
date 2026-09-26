@@ -4611,6 +4611,291 @@ function getSimplificationCatalog() {
   ];
 }
 
+// src/telegram/mentalMathData.ts
+function generateChainAdditionDrill(nodeCount = 5, count = 10) {
+  const questions = [];
+  for (let i = 0; i < count; i++) {
+    const minVal = nodeCount === 5 ? 15 : 20;
+    const maxVal = nodeCount === 5 ? 75 : 85;
+    const nums = [];
+    for (let j = 0; j < nodeCount; j++) {
+      nums.push(Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal);
+    }
+    const total = nums.reduce((a, b) => a + b, 0);
+    let running = nums[0];
+    const steps = [`${nums[0]}`];
+    for (let k = 1; k < nums.length; k++) {
+      running += nums[k];
+      steps.push(`+${nums[k]}=${running}`);
+    }
+    const breakdown = steps.slice(1, 4).join(" \u2794 ") + (steps.length > 4 ? " \u2794 ..." : "");
+    const optionsSet = /* @__PURE__ */ new Set();
+    optionsSet.add(total);
+    optionsSet.add(total - 10);
+    optionsSet.add(total + 10);
+    optionsSet.add(total - 2);
+    optionsSet.add(total + 2);
+    optionsSet.add(total - 5);
+    optionsSet.add(total + 5);
+    const sortedOpts = shuffle(Array.from(optionsSet).slice(0, 4)).map(String);
+    questions.push(
+      sanitizeTelegramQuiz({
+        id: `chain_add_${nodeCount}_${i + 1}`,
+        question: `\u2795 [Mental Addition (${nodeCount} Nodes)]
+Sum mentally left-to-right:
+${nums.join(" + ")} = ?`,
+        options: sortedOpts,
+        correctOption: String(total),
+        solution: `Total = ${total}.
+Running sum: ${breakdown}
+Tip: Hit nearest ten first, then leap tens.`,
+        subject: "Mental Math",
+        topic: "Chain Addition",
+        source: "Arun Sharma Speed Lab"
+      })
+    );
+  }
+  return questions;
+}
+function generateSubtractionDrill(tier = "2digit", count = 10) {
+  const questions = [];
+  for (let i = 0; i < count; i++) {
+    let a;
+    let b;
+    if (tier === "2digit") {
+      a = Math.floor(Math.random() * 55) + 45;
+      b = Math.floor(Math.random() * 35) + 15;
+      if (b >= a) b = a - 18;
+    } else {
+      a = Math.floor(Math.random() * 500) + 300;
+      b = Math.floor(Math.random() * 250) + 75;
+      if (b >= a) b = a - 120;
+    }
+    const diff = a - b;
+    const nearestTen = Math.ceil(b / 10) * 10;
+    const hop1 = nearestTen - b;
+    const hop2 = a - nearestTen;
+    const optSet = /* @__PURE__ */ new Set();
+    optSet.add(diff);
+    optSet.add(diff - 10);
+    optSet.add(diff + 10);
+    optSet.add(diff - 2);
+    optSet.add(diff + 2);
+    const sortedOpts = shuffle(Array.from(optSet).slice(0, 4)).map(String);
+    questions.push(
+      sanitizeTelegramQuiz({
+        id: `sub_${tier}_${i + 1}`,
+        question: `\u2796 [Number Line Hop (${tier === "2digit" ? "2-Digit" : "Century Crossing"})]
+Subtract without vertical borrowing:
+${a} \u2212 ${b} = ?`,
+        options: sortedOpts,
+        correctOption: String(diff),
+        solution: `Difference = ${diff}.
+Hop: Jump ${b}\u2794${nearestTen} (+${hop1}), then ${nearestTen}\u2794${a} (+${hop2}). Sum hops: ${hop1}+${hop2} = ${diff}.`,
+        subject: "Mental Math",
+        topic: "Subtraction Hops",
+        source: "Arun Sharma Speed Lab"
+      })
+    );
+  }
+  return questions;
+}
+function generateBase100Multiplication(count = 10) {
+  const questions = [];
+  const belowPairs = [
+    [94, 96],
+    [92, 97],
+    [93, 95],
+    [89, 98],
+    [91, 94],
+    [95, 95],
+    [88, 97],
+    [93, 97],
+    [96, 98],
+    [87, 96]
+  ];
+  const abovePairs = [
+    [104, 107],
+    [103, 106],
+    [105, 108],
+    [102, 109],
+    [106, 107],
+    [103, 108],
+    [104, 105],
+    [107, 108],
+    [102, 112],
+    [105, 109]
+  ];
+  const pool = shuffle([...belowPairs, ...abovePairs]).slice(0, count);
+  pool.forEach(([n1, n2], idx) => {
+    const prod = n1 * n2;
+    const d1 = n1 - 100;
+    const d2 = n2 - 100;
+    const leftPart = n1 + d2;
+    const rightPart = d1 * d2;
+    const optSet = /* @__PURE__ */ new Set();
+    optSet.add(prod);
+    optSet.add(prod - 100);
+    optSet.add(prod + 100);
+    optSet.add(prod - 10);
+    optSet.add(prod + 10);
+    const sortedOpts = shuffle(Array.from(optSet).slice(0, 4)).map(String);
+    questions.push(
+      sanitizeTelegramQuiz({
+        id: `mult_base100_${idx + 1}`,
+        question: `\u2716\uFE0F [Base-100 Deviation Rule]
+Multiply mentally:
+${n1} \xD7 ${n2} = ?`,
+        options: sortedOpts,
+        correctOption: String(prod),
+        solution: `${n1} \xD7 ${n2} = ${prod}.
+Deviations (${d1}, ${d2}): Left = ${n1}+(${d2}) = ${leftPart}, Right = ${d1}\xD7${d2} = ${rightPart} \u2794 ${prod}.`,
+        subject: "Mental Math",
+        topic: "Base 100 Multiplication",
+        source: "Arun Sharma Speed Lab"
+      })
+    );
+  });
+  return questions;
+}
+function generateSquareDiffMultiplication(count = 10) {
+  const anchors = [
+    { anchor: 20, diff: 2 },
+    // 18 x 22
+    { anchor: 30, diff: 3 },
+    // 27 x 33
+    { anchor: 40, diff: 4 },
+    // 36 x 44
+    { anchor: 50, diff: 3 },
+    // 47 x 53
+    { anchor: 50, diff: 5 },
+    // 45 x 55
+    { anchor: 60, diff: 2 },
+    // 58 x 62
+    { anchor: 70, diff: 4 },
+    // 66 x 74
+    { anchor: 80, diff: 3 },
+    // 77 x 83
+    { anchor: 90, diff: 5 },
+    // 85 x 95
+    { anchor: 100, diff: 4 }
+    // 96 x 104
+  ];
+  const pool = shuffle(anchors).slice(0, count);
+  return pool.map((item, idx) => {
+    const a = item.anchor - item.diff;
+    const b = item.anchor + item.diff;
+    const prod = a * b;
+    const sq = item.anchor * item.anchor;
+    const dSq = item.diff * item.diff;
+    const optSet = /* @__PURE__ */ new Set();
+    optSet.add(prod);
+    optSet.add(prod - 10);
+    optSet.add(prod + 10);
+    optSet.add(sq);
+    const sortedOpts = shuffle(Array.from(optSet).slice(0, 4)).map(String);
+    return sanitizeTelegramQuiz({
+      id: `mult_sqdiff_${idx + 1}`,
+      question: `\u2716\uFE0F [Midpoint a\xB2 \u2212 b\xB2 Shortcut]
+Multiply mentally:
+${a} \xD7 ${b} = ?`,
+      options: sortedOpts,
+      correctOption: String(prod),
+      solution: `${a} \xD7 ${b} = ${prod}.
+Anchor = ${item.anchor}, Diff = ${item.diff}.
+Shortcut: ${item.anchor}\xB2 \u2212 ${item.diff}\xB2 = ${sq} \u2212 ${dSq} = ${prod}.`,
+      subject: "Mental Math",
+      topic: "Difference of Squares",
+      source: "Arun Sharma Speed Lab"
+    });
+  });
+}
+function generateDecimalPercentageDrill(count = 8) {
+  const problems = [
+    { num: 53, den: 81, bracket: "60%\u201370%", reason: "10% of 81 = 8.1 \u2794 60% = 48.6, 70% = 56.7" },
+    { num: 37, den: 48, bracket: "70%\u201380%", reason: "10% of 48 = 4.8 \u2794 70% = 33.6, 80% = 38.4" },
+    { num: 23, den: 72, bracket: "30%\u201340%", reason: "10% of 72 = 7.2 \u2794 30% = 21.6, 40% = 28.8" },
+    { num: 68, den: 92, bracket: "70%\u201380%", reason: "10% of 92 = 9.2 \u2794 70% = 64.4, 80% = 73.6" },
+    { num: 41, den: 85, bracket: "40%\u201350%", reason: "10% of 85 = 8.5 \u2794 40% = 34.0, 50% = 42.5" },
+    { num: 19, den: 36, bracket: "50%\u201360%", reason: "10% of 36 = 3.6 \u2794 50% = 18.0, 60% = 21.6" },
+    { num: 76, den: 88, bracket: "80%\u201390%", reason: "10% of 88 = 8.8 \u2794 80% = 70.4, 90% = 79.2" },
+    { num: 29, den: 64, bracket: "40%\u201350%", reason: "10% of 64 = 6.4 \u2794 40% = 25.6, 50% = 32.0" }
+  ];
+  const pool = shuffle(problems).slice(0, count);
+  return pool.map((p, idx) => {
+    const brackets = ["30%\u201340%", "40%\u201350%", "50%\u201360%", "60%\u201370%", "70%\u201380%", "80%\u201390%"];
+    const otherBrackets = brackets.filter((b) => b !== p.bracket);
+    const chosenOthers = shuffle(otherBrackets).slice(0, 3);
+    const options = shuffle([p.bracket, ...chosenOthers]);
+    return sanitizeTelegramQuiz({
+      id: `div_pct_${idx + 1}`,
+      question: `\u2797 [10% Mental Ladder Estimation]
+Estimate percentage bracket for:
+${p.num} / ${p.den} \u2248 ?`,
+      options,
+      correctOption: p.bracket,
+      solution: `Bracket: ${p.bracket}.
+${p.reason}.
+Since ${p.num} falls inside this range, bracket is ${p.bracket}.`,
+      subject: "Mental Math",
+      topic: "Decimal % Estimation",
+      source: "Arun Sharma Speed Lab"
+    });
+  });
+}
+function generateRatioFaceOffDrill(count = 6) {
+  const problems = [
+    {
+      r1: "173 / 212",
+      r2: "181 / 241",
+      correct: "Ratio A (173 / 212)",
+      reason: "Num grows by 4.6%, but Denom grows by 13.6%. Denominator grew much faster \u2794 Ratio A is larger!"
+    },
+    {
+      r1: "245 / 310",
+      r2: "290 / 330",
+      correct: "Ratio B (290 / 330)",
+      reason: "Num grows by 18.3%, while Denom grows by only 6.4%. Numerator grew faster \u2794 Ratio B is larger!"
+    },
+    {
+      r1: "315 / 420",
+      r2: "340 / 480",
+      correct: "Ratio A (315 / 420)",
+      reason: "315/420 = 75%. 340/480 = 70.8%. Ratio A is strictly larger!"
+    },
+    {
+      r1: "124 / 165",
+      r2: "148 / 185",
+      correct: "Ratio B (148 / 185)",
+      reason: "148/185 = 80%. 124/165 = 75.15%. Ratio B is larger!"
+    }
+  ];
+  const pool = shuffle(problems).slice(0, count);
+  return pool.map((p, idx) => {
+    return sanitizeTelegramQuiz({
+      id: `ratio_comp_${idx + 1}`,
+      question: `\u2696\uFE0F [DI Ratio Comparison Face-Off]
+Which fraction is larger?
+A: ${p.r1}
+B: ${p.r2}`,
+      options: ["Ratio A (" + p.r1 + ")", "Ratio B (" + p.r2 + ")", "Both are equal", "Cannot determine"],
+      correctOption: p.correct,
+      solution: `${p.correct} is larger!
+${p.reason}`,
+      subject: "Mental Math",
+      topic: "Ratio Comparison",
+      source: "Arun Sharma Speed Lab"
+    });
+  });
+}
+function generateMentalMathBlitz(count = 12) {
+  const addQs = generateChainAdditionDrill(5, 3);
+  const subQs = generateSubtractionDrill("2digit", 3);
+  const multQs = generateBase100Multiplication(3);
+  const divQs = generateDecimalPercentageDrill(3);
+  return shuffle([...addQs, ...subQs, ...multQs, ...divQs]).slice(0, count);
+}
+
 // src/telegram/catalog.ts
 import fs2 from "fs";
 import path2 from "path";
@@ -5505,15 +5790,111 @@ bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
   await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs);
 });
 bot.callbackQuery("nav_speed_lab", async (ctx) => {
-  const kb = new InlineKeyboard().text("\u{1F9EE} Calculation Studio (7 Steps)", "speed_calc_studio").row().text("\u{1F4D0} Simplification Drills", "speed_simp_menu").row().text("\u{1F3C6} Daily 25-Q Routine Workout", "speed_routine").row().text("\u26A1 Rapid 10-Q Speed Blitz", "speed_mixed").row().text("\u2B05\uFE0F Back to Main Menu", "nav_root");
+  const kb = new InlineKeyboard().text("\u{1F9E0} Mental Math Studio (Arun Sharma)", "speed_mental_math").row().text("\u{1F9EE} Calculation Studio (7 Steps)", "speed_calc_studio").row().text("\u{1F4D0} Simplification Drills", "speed_simp_menu").row().text("\u{1F3C6} Daily 25-Q Routine Workout", "speed_routine").row().text("\u26A1 Rapid 10-Q Speed Blitz", "speed_mixed").row().text("\u2B05\uFE0F Back to Main Menu", "nav_root");
   await ctx.editMessageText(
-    "\u26A1 *Speed Lab (Same as Website):*\n\n\u2022 *Calculation Studio:* Master all 7 building blocks\n\u2022 *Simplification Drills:* Easy, Moderate, & Hard sets\n\u2022 *Daily Workout:* 25 questions testing all 7 steps\n\n\u{1F449} *Choose your speed training mode:*",
+    "\u26A1 *Speed Lab (Same as Website):*\n\n\u2022 \u{1F9E0} *Mental Math Studio:* Addition, Subtraction, Vedic Multiplication, DI Ratios\n\u2022 \u{1F9EE} *Calculation Studio:* Master all 7 building blocks\n\u2022 \u{1F4D0} *Simplification Drills:* Easy, Moderate, & Hard sets\n\u2022 \u{1F3C6} *Daily Workout:* 25 questions testing all 7 steps\n\n\u{1F449} *Choose your speed training mode:*",
     {
       parse_mode: "Markdown",
       reply_markup: kb
     }
   );
   await ctx.answerCallbackQuery();
+});
+bot.callbackQuery("speed_mental_math", async (ctx) => {
+  const kb = new InlineKeyboard().text("\u2795 Chain Addition (5\u201310 Nodes)", "mm_add_menu").row().text("\u2796 Subtraction (Number Line Hops)", "mm_sub_menu").row().text("\u2716\uFE0F Multiplication (Base 100 & Vedic)", "mm_mult_menu").row().text("\u2797 Division & DI Ratios (10% Ladder)", "mm_div_menu").row().text("\u{1F3AF} Full Mental Math Blitz (12 Qs)", "run_mm:blitz:12").row().text("\u2B05\uFE0F Back to Speed Lab", "nav_speed_lab");
+  await ctx.editMessageText(
+    "\u{1F9E0} *Mental Math Studio (Arun Sharma Techniques)*\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 *Addition:* Left-to-right running sum in working memory\n\u2022 *Subtraction:* Forward hops on the number line (zero borrowing)\n\u2022 *Multiplication:* Base-100 deviations & a\xB2 \u2212 b\xB2 midpoint squares\n\u2022 *Division:* 10% & 1% mental brackets & DI ratio face-off\n\n\u{1F449} *Select a module to drill:*",
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+bot.callbackQuery("mm_add_menu", async (ctx) => {
+  const kb = new InlineKeyboard().text("\u26A1 Sprint 5-Nodes (10 Questions)", "run_mm:add_5:10").row().text("\u{1F680} Stamina 10-Nodes (10 Questions)", "run_mm:add_10:10").row().text("\u2B05\uFE0F Back to Mental Math", "speed_mental_math");
+  await ctx.editMessageText(
+    "\u2795 *Chain Addition (Running Mental Sum)*\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nAdd numbers left-to-right mentally without writing down intermediate steps.\n\nSelect drill mode:",
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+bot.callbackQuery("mm_sub_menu", async (ctx) => {
+  const kb = new InlineKeyboard().text("\u26A1 2-Digit Decade Hops (10 Questions)", "run_mm:sub_2d:10").row().text("\u{1F680} 3-Digit Century Crossing (10 Questions)", "run_mm:sub_3d:10").row().text("\u2B05\uFE0F Back to Mental Math", "speed_mental_math");
+  await ctx.editMessageText(
+    "\u2796 *Subtraction (Number Line Forward Hops)*\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nNever borrow vertically. Jump forward from the subtrahend to nearest ten, then leap to the minuend.\n\nSelect drill mode:",
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+bot.callbackQuery("mm_mult_menu", async (ctx) => {
+  const kb = new InlineKeyboard().text("\u26A1 Base-100 Deviations (10 Qs)", "run_mm:mult_base:10").row().text("\u26A1 Midpoint a\xB2 \u2212 b\xB2 Squares (10 Qs)", "run_mm:mult_mid:10").row().text("\u{1F680} Comprehensive Multiplication (15 Qs)", "run_mm:mult_mix:15").row().text("\u2B05\uFE0F Back to Mental Math", "speed_mental_math");
+  await ctx.editMessageText(
+    "\u2716\uFE0F *Multiplication Shortcuts (Vedic & Base-100)*\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 Base 100: (Num1 + d2 | d1 \xD7 d2)\n\u2022 Midpoint Squares: anchor\xB2 \u2212 diff\xB2\n\nSelect shortcut track:",
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+bot.callbackQuery("mm_div_menu", async (ctx) => {
+  const kb = new InlineKeyboard().text("\u26A1 Decimal % 10% Ladder (8 Qs)", "run_mm:div_pct:8").row().text("\u2696\uFE0F DI Ratio Face-Off (6 Qs)", "run_mm:div_ratio:6").row().text("\u2B05\uFE0F Back to Mental Math", "speed_mental_math");
+  await ctx.editMessageText(
+    "\u2797 *Division & DI Ratios (10% Ladder)*\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u2022 Decimal %: Calculate 10% steps to bracket percentages quickly\n\u2022 Ratio Face-Off: Relative numerator vs denominator growth\n\nSelect drill mode:",
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+  await ctx.answerCallbackQuery();
+});
+bot.callbackQuery(/^run_mm:([a-z0-9_]+):([0-9]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, type, countStr] = ctx.match;
+  const count = parseInt(countStr, 10) || 10;
+  let qs = [];
+  let title = "";
+  if (type === "add_5") {
+    qs = generateChainAdditionDrill(5, count);
+    title = `\u2795 Mental Math: Chain Addition 5-Nodes (${count} Qs)`;
+  } else if (type === "add_10") {
+    qs = generateChainAdditionDrill(10, count);
+    title = `\u2795 Mental Math: Chain Addition 10-Nodes (${count} Qs)`;
+  } else if (type === "sub_2d") {
+    qs = generateSubtractionDrill("2digit", count);
+    title = `\u2796 Mental Math: Subtraction 2-Digit Hops (${count} Qs)`;
+  } else if (type === "sub_3d") {
+    qs = generateSubtractionDrill("3digit", count);
+    title = `\u2796 Mental Math: Century Crossing Subtraction (${count} Qs)`;
+  } else if (type === "mult_base") {
+    qs = generateBase100Multiplication(count);
+    title = `\u2716\uFE0F Mental Math: Base-100 Deviations (${count} Qs)`;
+  } else if (type === "mult_mid") {
+    qs = generateSquareDiffMultiplication(count);
+    title = `\u2716\uFE0F Mental Math: Midpoint a\xB2 \u2212 b\xB2 Squares (${count} Qs)`;
+  } else if (type === "mult_mix") {
+    const base = generateBase100Multiplication(8);
+    const sq = generateSquareDiffMultiplication(7);
+    qs = [...base, ...sq];
+    title = `\u2716\uFE0F Mental Math: Mixed Multiplication (${qs.length} Qs)`;
+  } else if (type === "div_pct") {
+    qs = generateDecimalPercentageDrill(count);
+    title = `\u2797 Mental Math: 10% Ladder Decimal % (${count} Qs)`;
+  } else if (type === "div_ratio") {
+    qs = generateRatioFaceOffDrill(count);
+    title = `\u2696\uFE0F Mental Math: DI Ratio Face-Off (${count} Qs)`;
+  } else if (type === "blitz") {
+    qs = generateMentalMathBlitz(count);
+    title = `\u{1F3AF} Mental Math: Arun Sharma Blitz (${count} Qs)`;
+  }
+  await startQuizForUser(ctx.from.id, ctx.chat.id, title, qs);
 });
 bot.callbackQuery("speed_calc_studio", async (ctx) => {
   const kb = new InlineKeyboard().text("Step 1: \u{1F4D0} Triplets (16 Qs)", "calc_step_triplets").row().text("Step 2: \u2716\uFE0F Tables 12\u201324 (13 Qs)", "calc_step_tables").row().text("Step 3: \u{1F522} Squares 17\u201339 (23 Qs)", "calc_step_squares").row().text("Step 4: \u{1F9CA} Cubes 11\u201325 (15 Qs)", "calc_step_cubes").row().text("Step 5: \u26A1 Powers 2\u20139 (38 Qs)", "calc_step_powers").row().text("Step 6: \u2757 Factorials 1\u20138 (8 Qs)", "calc_step_factorials").row().text("Step 7: \u{1F4AF} Fractions % (73 Qs)", "calc_step_fractions").row().text("\u2B05\uFE0F Back to Speed Lab", "nav_speed_lab");
