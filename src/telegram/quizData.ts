@@ -159,7 +159,7 @@ export function sanitizeTelegramQuiz(raw: {
   return {
     id: raw.id,
     question: cleanQ,
-    preamble,
+    preamble: '',
     options: formattedOptions,
     correctOptionIndex: correctIndex,
     explanation: shortExpl,

@@ -445,12 +445,12 @@ export function loadMockErrorsForSubject(
     return chosen.map((q, idx) =>
       sanitizeTelegramQuiz({
         id: `mock_err_${subjectId}_${idx}_${Date.now()}`,
-        question: `🎯 [${subTitle} Mistake]\n${q.question || q.questionText}`,
+        question: (q.question || q.questionText || '').replace(/^\s*\[.*?\]\s*/g, '').trim(),
         options: q.options,
         correctOption: q.answer || q.correctOption || q.correct_answer,
         solution: q.solution,
         subject: subTitle,
-        topic: q.topic || q.conceptTested || 'Error Bank',
+        topic: q.subtopic || q.topic || q.conceptTested || 'Error Bank',
         source: q.testName || 'Mock Error Bank',
       })
     );

@@ -666,7 +666,7 @@ function sanitizeTelegramQuiz(raw) {
   return {
     id: raw.id,
     question: cleanQ,
-    preamble,
+    preamble: "",
     options: formattedOptions,
     correctOptionIndex: correctIndex,
     explanation: shortExpl,
@@ -5088,45 +5088,6 @@ function getGeneralAwarenessCatalog() {
   }
   return topics;
 }
-function getMockErrorsCatalog() {
-  const subjects = [
-    { id: "mathematics", code: "math", title: "\u{1F4D0} Mathematics Mistakes" },
-    { id: "reasoning", code: "reason", title: "\u{1F9E0} Reasoning Mistakes" },
-    { id: "english", code: "eng", title: "\u{1F4D6} English Mistakes" },
-    { id: "general_awareness", code: "ga", title: "\u{1F3DB}\uFE0F General Awareness Mistakes" }
-  ];
-  const result = [];
-  for (const s of subjects) {
-    const filePath = path2.join(MOCK_ERRORS_DIR2, `${s.id}.json`);
-    let totalQuestions = 0;
-    const chapters = [];
-    if (fs2.existsSync(filePath)) {
-      try {
-        const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
-        if (Array.isArray(content)) {
-          for (const item of content) {
-            const count = item.questions && item.questions.length || 0;
-            totalQuestions += count;
-            chapters.push({
-              title: item.chapter_title || item.title || "Error Group",
-              count,
-              chapterNum: item.chapter_num
-            });
-          }
-        }
-      } catch {
-      }
-    }
-    result.push({
-      subjectId: s.id,
-      code: s.code,
-      title: s.title,
-      totalQuestions,
-      chapters
-    });
-  }
-  return result;
-}
 function resolveEnglishSetFile(secCode, topicCode, setCode) {
   const catalog = getEnglishCatalog();
   const sec = catalog.find((s) => s.code === secCode);
@@ -5206,13 +5167,12 @@ function loadMockErrorsForSubject(subjectId, chapterNum, mode = "all") {
     return chosen.map(
       (q, idx) => sanitizeTelegramQuiz({
         id: `mock_err_${subjectId}_${idx}_${Date.now()}`,
-        question: `\u{1F3AF} [${subTitle} Mistake]
-${q.question || q.questionText}`,
+        question: (q.question || q.questionText || "").replace(/^\s*\[.*?\]\s*/g, "").trim(),
         options: q.options,
         correctOption: q.answer || q.correctOption || q.correct_answer,
         solution: q.solution,
         subject: subTitle,
-        topic: q.topic || q.conceptTested || "Error Bank",
+        topic: q.subtopic || q.topic || q.conceptTested || "Error Bank",
         source: q.testName || "Mock Error Bank"
       })
     );
@@ -5303,6 +5263,398 @@ function clearSession(userId) {
   saveToDisk();
 }
 
+// src/telegram/mistakeStore.ts
+import fs4 from "fs";
+import path4 from "path";
+import os2 from "os";
+var TMP_FILE2 = path4.join(os2.tmpdir(), "cgl_user_mistakes.json");
+var userMistakesMap = /* @__PURE__ */ new Map();
+function saveToDisk2() {
+  try {
+    const serialized = {};
+    for (const [userId, map] of userMistakesMap.entries()) {
+      serialized[String(userId)] = Array.from(map.values());
+    }
+    fs4.writeFileSync(TMP_FILE2, JSON.stringify(serialized), "utf8");
+  } catch (err) {
+    console.error("[MistakeStore] Error saving to disk:", err);
+  }
+}
+function loadFromDisk2() {
+  try {
+    if (fs4.existsSync(TMP_FILE2)) {
+      const parsed = JSON.parse(fs4.readFileSync(TMP_FILE2, "utf8"));
+      for (const [userIdStr, list] of Object.entries(parsed)) {
+        const userId = Number(userIdStr);
+        if (!userMistakesMap.has(userId)) {
+          userMistakesMap.set(userId, /* @__PURE__ */ new Map());
+        }
+        const userMap = userMistakesMap.get(userId);
+        if (Array.isArray(list)) {
+          for (const item of list) {
+            userMap.set(item.id, item);
+          }
+        }
+      }
+    }
+  } catch (err) {
+    console.error("[MistakeStore] Error loading from disk:", err);
+  }
+}
+loadFromDisk2();
+var mockErrorsCache = /* @__PURE__ */ new Map();
+function getMockErrorsDir() {
+  const candidates = [
+    path4.join(process.cwd(), "src", "data", "mock_errors"),
+    path4.join(process.cwd(), "data", "mock_errors"),
+    path4.join(path4.dirname(__dirname), "data", "mock_errors"),
+    path4.join(path4.dirname(__dirname), "src", "data", "mock_errors")
+  ];
+  for (const c of candidates) {
+    if (fs4.existsSync(c)) return c;
+  }
+  return candidates[0];
+}
+function loadCachedMockErrors(subject) {
+  if (mockErrorsCache.has(subject)) {
+    return mockErrorsCache.get(subject);
+  }
+  const results = [];
+  try {
+    const mockDir = getMockErrorsDir();
+    const filePath = path4.join(mockDir, `${subject}.json`);
+    if (fs4.existsSync(filePath)) {
+      const content = JSON.parse(fs4.readFileSync(filePath, "utf8"));
+      if (Array.isArray(content)) {
+        for (const item of content) {
+          if (Array.isArray(item.questions)) {
+            for (let idx = 0; idx < item.questions.length; idx++) {
+              const q = item.questions[idx];
+              const qText = (q.question || q.questionText || "").replace(/^\s*\[.*?\]\s*/g, "").trim();
+              if (!qText) continue;
+              const sanitized = sanitizeTelegramQuiz({
+                id: q.id || `mock_${subject}_${idx}`,
+                question: qText,
+                options: q.options,
+                correctOption: q.answer || q.correctOption || q.correct_answer,
+                solution: q.solution,
+                subject: subject === "english" ? "English" : subject === "mathematics" ? "Mathematics" : subject === "reasoning" ? "Reasoning" : "General Awareness",
+                topic: q.subtopic || q.topic || q.conceptTested || "Error Bank",
+                source: q.testName || "\u{1F4BB} Website Mock Error"
+              });
+              results.push(sanitized);
+            }
+          }
+        }
+      }
+    }
+  } catch (err) {
+    console.error(`[MistakeStore] Error loading mock errors for ${subject}:`, err);
+  }
+  mockErrorsCache.set(subject, results);
+  return results;
+}
+function classifySubjectAndTopic(q) {
+  const text = `${q.question} ${q.explanation || ""} ${q.subject || ""} ${q.topic || ""} ${q.source || ""}`.toLowerCase();
+  let subject = "general_awareness";
+  const subStr = (q.subject || "").toLowerCase();
+  if (subStr.includes("eng") || text.includes("synonym") || text.includes("antonym") || text.includes("idiom") || text.includes("one word") || text.includes("sentence") || text.includes("misspelt")) {
+    subject = "english";
+  } else if (subStr.includes("math") || subStr.includes("calc") || subStr.includes("quant") || text.includes("calculate") || text.includes("triplet") || text.includes("ratio") || text.includes("circumference") || text.includes("hypotenuse")) {
+    subject = "mathematics";
+  } else if (subStr.includes("reason") || text.includes("syllogism") || text.includes("analogy") || text.includes("blood relation") || text.includes("coding-decoding") || text.includes("letter series")) {
+    subject = "reasoning";
+  }
+  let topic = "General Practice";
+  let topicSlug = "gen";
+  if (subject === "english") {
+    if (text.includes("synonym") || text.includes("similar meaning")) {
+      topic = "Synonyms";
+      topicSlug = "syn";
+    } else if (text.includes("antonym") || text.includes("opposite")) {
+      topic = "Antonyms";
+      topicSlug = "ant";
+    } else if (text.includes("one word") || text.includes("ows") || text.includes("substituted")) {
+      topic = "One Word Substitution";
+      topicSlug = "ows";
+    } else if (text.includes("idiom") || text.includes("phrase")) {
+      topic = "Idioms & Phrases";
+      topicSlug = "idioms";
+    } else if (text.includes("spelling") || text.includes("misspelt") || text.includes("correctly spelt")) {
+      topic = "Spelling Errors";
+      topicSlug = "spell";
+    } else if (text.includes("spotting") || text.includes("grammatical error") || text.includes("error spotting")) {
+      topic = "Spotting Errors";
+      topicSlug = "error";
+    } else if (text.includes("improvement") || text.includes("filler") || text.includes("blank")) {
+      topic = "Sentence Improvement & Fillers";
+      topicSlug = "improve";
+    } else if (text.includes("voice") || text.includes("passive")) {
+      topic = "Active & Passive Voice";
+      topicSlug = "voice";
+    } else if (text.includes("narration") || text.includes("direct") || text.includes("indirect")) {
+      topic = "Direct & Indirect Speech";
+      topicSlug = "narration";
+    } else if (text.includes("jumble") || text.includes("pqrs") || text.includes("rearrangement")) {
+      topic = "Para Jumbles (PQRS)";
+      topicSlug = "pqrs";
+    } else if (text.includes("cloze") || text.includes("comprehension")) {
+      topic = "Cloze & Comprehension";
+      topicSlug = "cloze";
+    } else {
+      topic = "Vocabulary & Grammar";
+      topicSlug = "vocab";
+    }
+  } else if (subject === "general_awareness") {
+    if (text.includes("polity") || text.includes("article") || text.includes("constitution") || text.includes("amendment") || text.includes("parliament") || text.includes("president") || text.includes("fundamental") || text.includes("schedule") || text.includes("court")) {
+      topic = "Polity & Constitution";
+      topicSlug = "polity";
+    } else if (text.includes("history") || text.includes("sultanate") || text.includes("mughal") || text.includes("harappan") || text.includes("mauryan") || text.includes("british") || text.includes("gandhi") || text.includes("revolt") || text.includes("vedic") || text.includes("freedom movement")) {
+      topic = "History (Ancient, Med, Mod)";
+      topicSlug = "history";
+    } else if (text.includes("geography") || text.includes("river") || text.includes("mountain") || text.includes("climate") || text.includes("soil") || text.includes("ocean") || text.includes("ramsar") || text.includes("national park")) {
+      topic = "Geography & Environment";
+      topicSlug = "geo";
+    } else if (text.includes("econom") || text.includes("gdp") || text.includes("inflation") || text.includes("rbi") || text.includes("budget") || text.includes("fiscal") || text.includes("monetary")) {
+      topic = "Economics & Budget";
+      topicSlug = "eco";
+    } else if (text.includes("physics") || text.includes("chemistry") || text.includes("biology") || text.includes("cell") || text.includes("vitamin") || text.includes("disease") || text.includes("acid") || text.includes("energy")) {
+      topic = "General Science";
+      topicSlug = "science";
+    } else if (text.includes("dance") || text.includes("festival") || text.includes("temple") || text.includes("music") || text.includes("instrument") || text.includes("painting") || text.includes("heritage")) {
+      topic = "Art, Culture & Dance";
+      topicSlug = "culture";
+    } else if (text.includes("sport") || text.includes("trophy") || text.includes("cup") || text.includes("olympic") || text.includes("award")) {
+      topic = "Sports & Awards";
+      topicSlug = "sports";
+    } else {
+      topic = "Static GK & Current Affairs";
+      topicSlug = "static";
+    }
+  } else if (subject === "mathematics") {
+    if (text.includes("percent")) {
+      topic = "Percentage";
+      topicSlug = "percent";
+    } else if (text.includes("profit") || text.includes("loss") || text.includes("discount")) {
+      topic = "Profit, Loss & Discount";
+      topicSlug = "profit";
+    } else if (text.includes("ratio") || text.includes("proportion") || text.includes("mixture") || text.includes("alligation") || text.includes("coin")) {
+      topic = "Ratio, Proportion & Mixture";
+      topicSlug = "ratio";
+    } else if (text.includes("speed") || text.includes("distance") || text.includes("train") || text.includes("boat") || text.includes("stream")) {
+      topic = "Speed, Distance & Boats";
+      topicSlug = "tsd";
+    } else if (text.includes("work") || text.includes("pipe") || text.includes("cistern") || text.includes("efficiency")) {
+      topic = "Time & Work / Pipes";
+      topicSlug = "work";
+    } else if (text.includes("interest") || text.includes("ci") || text.includes("si") || text.includes("compound") || text.includes("simple interest")) {
+      topic = "Simple & Compound Interest";
+      topicSlug = "interest";
+    } else if (text.includes("geometry") || text.includes("triangle") || text.includes("circle") || text.includes("triplet") || text.includes("chord")) {
+      topic = "Geometry & Triplets";
+      topicSlug = "geom";
+    } else if (text.includes("mensuration") || text.includes("cylinder") || text.includes("sphere") || text.includes("cone") || text.includes("cuboid")) {
+      topic = "Mensuration 2D & 3D";
+      topicSlug = "mens";
+    } else if (text.includes("algebra") || text.includes("polynomial") || text.includes("quadratic")) {
+      topic = "Algebra";
+      topicSlug = "algebra";
+    } else if (text.includes("trigonometr") || text.includes("sin") || text.includes("cos") || text.includes("tan") || text.includes("height")) {
+      topic = "Trigonometry & Heights";
+      topicSlug = "trig";
+    } else if (text.includes("number system") || text.includes("divisib") || text.includes("remainder") || text.includes("unit digit") || text.includes("lcm") || text.includes("hcf")) {
+      topic = "Number System, LCM & HCF";
+      topicSlug = "number";
+    } else if (text.includes("table") || text.includes("square") || text.includes("cube") || text.includes("power") || text.includes("simplification")) {
+      topic = "Calculation Studio";
+      topicSlug = "calc";
+    } else {
+      topic = "General Arithmetic";
+      topicSlug = "arith";
+    }
+  } else if (subject === "reasoning") {
+    if (text.includes("coding") || text.includes("decoding") || text.includes("letter code")) {
+      topic = "Coding-Decoding";
+      topicSlug = "coding";
+    } else if (text.includes("syllogism") || text.includes("venn")) {
+      topic = "Syllogism & Venn";
+      topicSlug = "syllogism";
+    } else if (text.includes("blood relation")) {
+      topic = "Blood Relations";
+      topicSlug = "blood";
+    } else if (text.includes("series") || text.includes("pattern") || text.includes("missing number")) {
+      topic = "Series & Pattern";
+      topicSlug = "series";
+    } else if (text.includes("analogy") || text.includes("classification") || text.includes("odd one")) {
+      topic = "Analogy & Classification";
+      topicSlug = "analogy";
+    } else if (text.includes("direction")) {
+      topic = "Direction Sense";
+      topicSlug = "direction";
+    } else if (text.includes("mirror") || text.includes("water image") || text.includes("paper folding") || text.includes("embedded")) {
+      topic = "Non-Verbal Reasoning";
+      topicSlug = "nonverbal";
+    } else if (text.includes("dictionary") || text.includes("order") || text.includes("ranking") || text.includes("bodmas")) {
+      topic = "BODMAS & Ranking";
+      topicSlug = "bodmas";
+    } else {
+      topic = "General Intelligence";
+      topicSlug = "logic";
+    }
+  }
+  return { subject, topic, topicSlug };
+}
+function recordMistake(userId, q, source = "telegram_drill") {
+  loadFromDisk2();
+  if (!userMistakesMap.has(userId)) {
+    userMistakesMap.set(userId, /* @__PURE__ */ new Map());
+  }
+  const userMap = userMistakesMap.get(userId);
+  const { subject, topic, topicSlug } = classifySubjectAndTopic(q);
+  const qId = q.id || `mistake_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+  const existing = userMap.get(qId);
+  if (existing) {
+    existing.wrongCount += 1;
+    existing.timestamp = Date.now();
+    existing.mastered = false;
+  } else {
+    userMap.set(qId, {
+      id: qId,
+      userId,
+      question: q.question,
+      options: q.options,
+      correctOptionIndex: q.correctOptionIndex,
+      explanation: q.explanation || "",
+      subject,
+      topic,
+      topicSlug,
+      source,
+      timestamp: Date.now(),
+      wrongCount: 1,
+      mastered: false
+    });
+  }
+  saveToDisk2();
+}
+function markMistakeMastered(userId, qId) {
+  loadFromDisk2();
+  const userMap = userMistakesMap.get(userId);
+  if (userMap && userMap.has(qId)) {
+    const item = userMap.get(qId);
+    item.mastered = true;
+    saveToDisk2();
+  }
+}
+function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = void 0) {
+  loadFromDisk2();
+  const results = [];
+  const seenQIds = /* @__PURE__ */ new Set();
+  if (filter === "all" || filter === "telegram_drill") {
+    const userMap = userMistakesMap.get(userId);
+    if (userMap) {
+      for (const item of userMap.values()) {
+        if (item.mastered) continue;
+        if (filter !== "all" && item.source !== filter) continue;
+        if (subject && item.subject !== subject) continue;
+        if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) continue;
+        seenQIds.add(item.id);
+        results.push({
+          id: item.id,
+          question: item.question,
+          options: item.options,
+          correctOptionIndex: item.correctOptionIndex,
+          explanation: item.explanation,
+          subject: item.subject,
+          topic: item.topic,
+          source: "\u{1F4F1} Telegram Drill Mistake"
+        });
+      }
+    }
+  }
+  if (filter === "all" || filter === "website_mock") {
+    const subjectsToLoad = subject ? [subject] : ["english", "mathematics", "reasoning", "general_awareness"];
+    for (const sub of subjectsToLoad) {
+      const mockList = loadCachedMockErrors(sub);
+      for (const mq of mockList) {
+        if (seenQIds.has(mq.id)) continue;
+        const classified = classifySubjectAndTopic(mq);
+        if (topicSlug && topicSlug !== "_" && classified.topicSlug !== topicSlug) continue;
+        seenQIds.add(mq.id);
+        results.push(mq);
+      }
+    }
+  }
+  return results;
+}
+function getMistakeStats(userId, filter = "all") {
+  loadFromDisk2();
+  const subjects = [
+    { id: "english", shortCode: "eng", title: "\u{1F4D6} English" },
+    { id: "mathematics", shortCode: "math", title: "\u{1F4D0} Mathematics" },
+    { id: "reasoning", shortCode: "reas", title: "\u{1F9E0} Reasoning" },
+    { id: "general_awareness", shortCode: "ga", title: "\u{1F3DB}\uFE0F General Awareness" }
+  ];
+  return subjects.map((sub) => {
+    const topicMap = /* @__PURE__ */ new Map();
+    let total = 0;
+    const seenQIds = /* @__PURE__ */ new Set();
+    if (filter === "all" || filter === "telegram_drill") {
+      const userMap = userMistakesMap.get(userId);
+      if (userMap) {
+        for (const item of userMap.values()) {
+          if (item.mastered) continue;
+          if (filter !== "all" && item.source !== filter) continue;
+          if (item.subject === sub.id) {
+            seenQIds.add(item.id);
+            total++;
+            const existing = topicMap.get(item.topicSlug) || {
+              topic: item.topic,
+              slug: item.topicSlug,
+              count: 0
+            };
+            existing.count++;
+            topicMap.set(item.topicSlug, existing);
+          }
+        }
+      }
+    }
+    if (filter === "all" || filter === "website_mock") {
+      const mockList = loadCachedMockErrors(sub.id);
+      for (const mq of mockList) {
+        if (seenQIds.has(mq.id)) continue;
+        const classified = classifySubjectAndTopic(mq);
+        seenQIds.add(mq.id);
+        total++;
+        const existing = topicMap.get(classified.topicSlug) || {
+          topic: classified.topic,
+          slug: classified.topicSlug,
+          count: 0
+        };
+        existing.count++;
+        topicMap.set(classified.topicSlug, existing);
+      }
+    }
+    const topics = Array.from(topicMap.values()).sort((a, b) => b.count - a.count);
+    return {
+      subjectId: sub.id,
+      shortCode: sub.shortCode,
+      title: sub.title,
+      total,
+      topics
+    };
+  });
+}
+function getTotalMistakesSummary(userId) {
+  const allStats = getMistakeStats(userId, "all");
+  const tgStats = getMistakeStats(userId, "telegram_drill");
+  const webStats = getMistakeStats(userId, "website_mock");
+  return {
+    all: allStats.reduce((acc, s) => acc + s.total, 0),
+    telegram_drill: tgStats.reduce((acc, s) => acc + s.total, 0),
+    website_mock: webStats.reduce((acc, s) => acc + s.total, 0)
+  };
+}
+
 // src/telegram/bot.ts
 dotenv.config();
 var token = process.env.TELEGRAM_BOT_TOKEN || "8573783956:AAF7SGdPHbfpJs2zH8tmQfXsUsVPBORAsHM";
@@ -5311,7 +5663,7 @@ bot.catch((err) => {
   console.error("[TelegramBot] Uncaught error during update handling:", err);
 });
 function getRootMenuKeyboard() {
-  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab");
+  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mistake Bank", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab");
 }
 function getChapterBankSubjectsKeyboard() {
   return new InlineKeyboard().text("\u{1F4D0} Math", "cb_sub_math").text("\u{1F9E0} Reasoning", "cb_sub_reasoning").row().text("\u{1F4D6} English", "cb_sub_english").text("\u{1F3DB}\uFE0F GK & GA", "cb_sub_ga").row().text("\u2B05\uFE0F Back", "nav_root");
@@ -5376,7 +5728,7 @@ async function sendCompletionSummary(botInstance, session) {
 \u2022 Time: *${timeFormatted}* (${speedPerQ}s / q)
 
 _${comment}_`;
-  const afterQuizKeyboard = new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
+  const afterQuizKeyboard = new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mistake Bank", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
   clearSession(session.userId);
   await botInstance.api.sendMessage(session.chatId, report, {
     parse_mode: "Markdown",
@@ -5658,47 +6010,148 @@ bot.callbackQuery("cb_sub_reasoning", async (ctx) => {
   });
   await ctx.answerCallbackQuery();
 });
+var SHORT_TO_SUB = {
+  eng: "english",
+  math: "mathematics",
+  reas: "reasoning",
+  ga: "general_awareness"
+};
+var SUB_TO_SHORT = {
+  english: "eng",
+  mathematics: "math",
+  reasoning: "reas",
+  general_awareness: "ga"
+};
+var FLT_MAP = {
+  all: "all",
+  tg: "telegram_drill",
+  web: "website_mock"
+};
+var FLT_LABELS = {
+  all: "\u{1F310} All Mistakes",
+  tg: "\u{1F4F1} Telegram Drill Errors",
+  web: "\u{1F4BB} Website Mock Errors"
+};
 bot.callbackQuery("nav_mock_errors", async (ctx) => {
-  const catalog = getMockErrorsCatalog();
+  const summary = getTotalMistakesSummary(ctx.from.id);
+  const kb = new InlineKeyboard().text(`\u{1F310} All Combined (${summary.all})`, "mb_flt:all").row().text(`\u{1F4F1} Telegram Drills (${summary.telegram_drill})`, "mb_flt:tg").row().text(`\u{1F4BB} Website Mocks (${summary.website_mock})`, "mb_flt:web").row().text("\u2B05\uFE0F Back to Menu", "nav_root");
+  const text = `\u{1F3AF} *Mistake Bank (Option 3)*
+
+Every question you get wrong is automatically logged here topic-wise.
+
+*Mistakes Recorded:*
+\u2022 \u{1F310} *All Combined:* ${summary.all}
+\u2022 \u{1F4F1} *Telegram Drills:* ${summary.telegram_drill}
+\u2022 \u{1F4BB} *Website Mocks:* ${summary.website_mock}
+
+Select a source filter to drill:`;
+  await ctx.editMessageText(text, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+  await ctx.answerCallbackQuery();
+});
+bot.callbackQuery(/^mb_flt:(all|tg|web)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const fltCode = ctx.match[1];
+  const filter = FLT_MAP[fltCode] || "all";
+  const filterLabel = FLT_LABELS[fltCode];
+  const stats = getMistakeStats(ctx.from.id, filter);
   const kb = new InlineKeyboard();
-  for (const item of catalog) {
-    kb.text(`${item.title} (${item.totalQuestions} Qs)`, `mock_sub:${item.subjectId}`).row();
+  for (const s of stats) {
+    kb.text(`${s.title} (${s.total} Mistakes)`, `mb_sub:${fltCode}:${s.shortCode}`).row();
   }
-  kb.text("\u2B05\uFE0F Back to Main Menu", "nav_root");
+  kb.text("\u2B05\uFE0F Change Source Filter", "nav_mock_errors");
   await ctx.editMessageText(
-    "\u{1F3AF} *Mock Errors Bank:*\nReview all mistakes you made in full test series.\n\nSelect a subject:",
+    `\u{1F3AF} *Mistake Bank \u2022 ${filterLabel}*
+
+Select a subject to drill mistakes or browse chapter/topic breakdown:`,
     {
       parse_mode: "Markdown",
       reply_markup: kb
     }
   );
-  await ctx.answerCallbackQuery();
 });
-bot.callbackQuery(/^mock_sub:(mathematics|reasoning|english|general_awareness)$/, async (ctx) => {
+bot.callbackQuery(/^mb_sub:(all|tg|web):(eng|math|reas|ga)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const subId = ctx.match[1];
-  const catalog = getMockErrorsCatalog();
-  const item = catalog.find((c) => c.subjectId === subId);
-  if (!item) return;
-  const kb = new InlineKeyboard().text(`\u{1F525} All (${item.totalQuestions} Qs)`, `run_mock:${subId}:all`).text(`\u26A1 Quick 10`, `run_mock:${subId}:10`).row();
-  for (const ch of item.chapters) {
-    if (ch.count > 0 && ch.chapterNum !== void 0) {
-      kb.text(`${ch.title} (${ch.count} Qs)`, `run_mock_ch:${subId}:${ch.chapterNum}:all`).row();
+  const [_, fltCode, subCode] = ctx.match;
+  const filter = FLT_MAP[fltCode] || "all";
+  const filterLabel = FLT_LABELS[fltCode];
+  const subjectId = SHORT_TO_SUB[subCode];
+  const stats = getMistakeStats(ctx.from.id, filter);
+  const subStat = stats.find((s) => s.shortCode === subCode);
+  if (!subStat) return;
+  const kb = new InlineKeyboard();
+  if (subStat.total > 0) {
+    kb.text(`\u{1F525} Drill All (${subStat.total} Qs)`, `mb_run:${fltCode}:${subCode}:_:all`).text("\u26A1 Quick 10", `mb_run:${fltCode}:${subCode}:_:10`).row();
+  }
+  const activeTopics = subStat.topics.filter((t) => t.count > 0);
+  if (activeTopics.length > 0) {
+    for (const t of activeTopics) {
+      kb.text(`${t.topic} (${t.count})`, `mb_top:${fltCode}:${subCode}:${t.slug}`).row();
     }
   }
-  kb.text("\u2B05\uFE0F Back", "nav_mock_errors");
-  await ctx.editMessageText(`\u{1F3AF} *${item.title}* \u2022 ${item.totalQuestions} Mistakes Logged`, {
+  kb.text("\u2B05\uFE0F Back to Subjects", `mb_flt:${fltCode}`);
+  const text = `\u{1F3AF} *${subStat.title} Mistakes*
+Filter: *${filterLabel}* \u2022 Total: *${subStat.total}*
+
+` + (activeTopics.length > 0 ? `Drill the entire subject or choose a specific topic/chapter below:` : `No mistakes recorded yet in this section!`);
+  await ctx.editMessageText(text, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
 });
+bot.callbackQuery(/^mb_top:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, fltCode, subCode, slug] = ctx.match;
+  const filter = FLT_MAP[fltCode] || "all";
+  const filterLabel = FLT_LABELS[fltCode];
+  const stats = getMistakeStats(ctx.from.id, filter);
+  const subStat = stats.find((s) => s.shortCode === subCode);
+  const topicItem = subStat?.topics.find((t) => t.slug === slug);
+  const topicTitle = topicItem?.topic || "Topic Practice";
+  const count = topicItem?.count || 0;
+  const kb = new InlineKeyboard().text(`\u{1F525} Practice All (${count} Qs)`, `mb_run:${fltCode}:${subCode}:${slug}:all`).text("\u26A1 Quick 10", `mb_run:${fltCode}:${subCode}:${slug}:10`).row().text("\u2B05\uFE0F Back to Topics", `mb_sub:${fltCode}:${subCode}`);
+  await ctx.editMessageText(
+    `\u{1F4CC} *${topicTitle}*
+Source: *${filterLabel}* \u2022 *${count}* Mistakes logged
+
+Choose your drill mode:`,
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+});
+bot.callbackQuery(/^mb_run:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, fltCode, subCode, slug, mode] = ctx.match;
+  const filter = FLT_MAP[fltCode] || "all";
+  const subjectId = SHORT_TO_SUB[subCode];
+  let questions = getUserMistakes(ctx.from.id, filter, subjectId, slug === "_" ? void 0 : slug);
+  if (!questions || questions.length === 0) {
+    await ctx.reply("No active mistakes found for this selection! Keep practicing to master concepts.", {
+      reply_markup: getRootMenuKeyboard()
+    });
+    return;
+  }
+  if (mode === "10" && questions.length > 10) {
+    questions = shuffle(questions).slice(0, 10);
+  }
+  const subTitle = subjectId.charAt(0).toUpperCase() + subjectId.slice(1).replace("_", " ");
+  const modeLabel = mode === "all" ? `All ${questions.length} Questions` : "Quick 10";
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${modeLabel})`, questions);
+});
 bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
   const [_, subId, mode] = ctx.match;
-  const qs = loadMockErrorsForSubject(subId, void 0, mode);
+  const shortCode = SUB_TO_SHORT[subId] || "eng";
+  let questions = getUserMistakes(ctx.from.id, "all", subId);
+  if (mode === "10" && questions.length > 10) {
+    questions = shuffle(questions).slice(0, 10);
+  }
   const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace("_", " ");
-  const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`, questions);
 });
 bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
@@ -5976,8 +6429,8 @@ bot.callbackQuery("nav_help", async (ctx) => {
   const helpText = `\u{1F4A1} *CGL Bot Navigation Guide*
 
 1. *Chapter Bank* \u2014 All chapters in Math, English, GK & Reasoning.
-2. *Mock Errors* \u2014 Directly attempt questions you missed in mocks.
-3. *Full Set vs Quick 10* \u2014 Whenever you choose a set, you can practice **ALL questions** in that set or do a quick 10!
+2. *Mistake Bank* \u2014 Option 3 unified error notebook with source filters (Telegram Drills vs Website Mocks) & topic breakdown.
+3. *Full Set vs Quick 10* \u2014 Practice full sets or quick 10-question sessions.
 4. Type /stop anytime to finish early and see your score.`;
   await ctx.editMessageText(helpText, {
     parse_mode: "Markdown",
@@ -5995,6 +6448,11 @@ bot.on("poll_answer", async (ctx) => {
   const chosenOptionIndex = answer.option_ids[0];
   if (chosenOptionIndex === currentQ.correctOptionIndex) {
     session.score++;
+    if (currentQ.id) {
+      markMistakeMastered(session.userId, currentQ.id);
+    }
+  } else {
+    recordMistake(session.userId, currentQ, "telegram_drill");
   }
   session.answeredCount++;
   session.currentIndex++;
