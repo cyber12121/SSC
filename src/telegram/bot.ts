@@ -53,6 +53,7 @@ import {
 import {
   recordMistake,
   markMistakeMastered,
+  deleteMistake,
   getUserMistakes,
   getMistakeStats,
   getTotalMistakesSummary,
@@ -222,11 +223,25 @@ bot.command('stop', async (ctx) => {
   await sendCompletionSummary(bot, session);
 });
 
+bot.command('delete', async (ctx) => {
+  const session = getSession(ctx.from!.id);
+  if (session) {
+    const q = session.questions[session.currentIndex];
+    if (q) {
+      deleteMistake(ctx.from!.id, q.id, q.question);
+      await ctx.reply('🗑️ Current question removed from your Mistake Bank and synced with Firebase.');
+      return;
+    }
+  }
+  await ctx.reply('No active drill running. You can delete mistakes from the topic menu or directly from the web app.');
+});
+
 bot.command('help', async (ctx) => {
   const helpText =
     `💡 *CGL Bot Guide*\n\n` +
     `• /menu — Open the main category menu\n` +
     `• /stop — Finish active test and show score card\n` +
+    `• /delete — Remove current active mistake question from database\n` +
     `• Tap any option on quiz polls to answer immediately.`;
 
   await ctx.reply(helpText, {
@@ -688,8 +703,13 @@ bot.callbackQuery(/^mb_top:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async
   const kb = new InlineKeyboard()
     .text(`🔥 Practice All (${count} Qs)`, `mb_run:${fltCode}:${subCode}:${slug}:all`)
     .text('⚡ Quick 10', `mb_run:${fltCode}:${subCode}:${slug}:10`)
-    .row()
-    .text('⬅️ Back to Topics', `mb_sub:${fltCode}:${subCode}`);
+    .row();
+
+  if (count > 0) {
+    kb.text('🗑️ Clear Topic Mistakes', `mb_del:${fltCode}:${subCode}:${slug}`).row();
+  }
+
+  kb.text('⬅️ Back to Topics', `mb_sub:${fltCode}:${subCode}`);
 
   await ctx.editMessageText(
     `📌 *${topicTitle}*\n` +
@@ -698,6 +718,28 @@ bot.callbackQuery(/^mb_top:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async
     {
       parse_mode: 'Markdown',
       reply_markup: kb,
+    }
+  );
+});
+
+// Delete Topic Mistakes
+bot.callbackQuery(/^mb_del:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, fltCode, subCode, slug] = ctx.match;
+  const filter = FLT_MAP[fltCode] || 'all';
+  const subjectId = SHORT_TO_SUB[subCode];
+
+  const questions = getUserMistakes(ctx.from.id, filter, subjectId, slug === '_' ? undefined : slug);
+  for (const q of questions) {
+    deleteMistake(ctx.from.id, q.id, q.question);
+  }
+
+  await ctx.editMessageText(
+    `✅ *Cleared ${questions.length} Mistakes!*\n\n` +
+    `These questions have been removed from your mistake bank and synced across Firebase and the website.`,
+    {
+      parse_mode: 'Markdown',
+      reply_markup: new InlineKeyboard().text('⬅️ Back to Subjects', `mb_flt:${fltCode}`),
     }
   );
 });

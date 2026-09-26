@@ -5545,8 +5545,62 @@ function markMistakeMastered(userId, qId) {
     saveToDisk2();
   }
 }
+var DELETED_FILE = path4.join(os2.tmpdir(), "cgl_deleted_mistakes.json");
+var deletedQuestionsSet = /* @__PURE__ */ new Set();
+function saveDeletedToDisk() {
+  try {
+    fs4.writeFileSync(DELETED_FILE, JSON.stringify(Array.from(deletedQuestionsSet)), "utf8");
+  } catch (err) {
+    console.error("[MistakeStore] Error saving deleted questions to disk:", err);
+  }
+}
+function loadDeletedFromDisk() {
+  try {
+    if (fs4.existsSync(DELETED_FILE)) {
+      const list = JSON.parse(fs4.readFileSync(DELETED_FILE, "utf8"));
+      if (Array.isArray(list)) {
+        for (const id of list) {
+          if (id) deletedQuestionsSet.add(String(id).trim().toLowerCase());
+        }
+      }
+    }
+  } catch (err) {
+    console.error("[MistakeStore] Error loading deleted questions from disk:", err);
+  }
+}
+loadDeletedFromDisk();
+function isQuestionDeleted(id, text) {
+  loadDeletedFromDisk();
+  if (id && deletedQuestionsSet.has(id.trim().toLowerCase())) return true;
+  if (text) {
+    const clean = text.trim().toLowerCase();
+    if (deletedQuestionsSet.has(clean)) return true;
+  }
+  return false;
+}
+function deleteMistake(userId, qId, qText) {
+  loadFromDisk2();
+  loadDeletedFromDisk();
+  if (qId) deletedQuestionsSet.add(qId.trim().toLowerCase());
+  if (qText) deletedQuestionsSet.add(qText.trim().toLowerCase());
+  saveDeletedToDisk();
+  if (userId && userMistakesMap.has(userId)) {
+    userMistakesMap.get(userId).delete(qId);
+  } else {
+    for (const map of userMistakesMap.values()) {
+      map.delete(qId);
+      for (const [k, v] of map.entries()) {
+        if (v.question === qText || v.id === qId) {
+          map.delete(k);
+        }
+      }
+    }
+  }
+  saveToDisk2();
+}
 function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = void 0) {
   loadFromDisk2();
+  loadDeletedFromDisk();
   const results = [];
   const seenQIds = /* @__PURE__ */ new Set();
   if (filter === "all" || filter === "telegram_drill") {
@@ -5554,6 +5608,7 @@ function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = v
     if (userMap) {
       for (const item of userMap.values()) {
         if (item.mastered) continue;
+        if (isQuestionDeleted(item.id, item.question)) continue;
         if (filter !== "all" && item.source !== filter) continue;
         if (subject && item.subject !== subject) continue;
         if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) continue;
@@ -5577,6 +5632,7 @@ function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = v
       const mockList = loadCachedMockErrors(sub);
       for (const mq of mockList) {
         if (seenQIds.has(mq.id)) continue;
+        if (isQuestionDeleted(mq.id, mq.question)) continue;
         const classified = classifySubjectAndTopic(mq);
         if (topicSlug && topicSlug !== "_" && classified.topicSlug !== topicSlug) continue;
         seenQIds.add(mq.id);
@@ -5588,6 +5644,7 @@ function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = v
 }
 function getMistakeStats(userId, filter = "all") {
   loadFromDisk2();
+  loadDeletedFromDisk();
   const subjects = [
     { id: "english", shortCode: "eng", title: "\u{1F4D6} English" },
     { id: "mathematics", shortCode: "math", title: "\u{1F4D0} Mathematics" },
@@ -5603,6 +5660,7 @@ function getMistakeStats(userId, filter = "all") {
       if (userMap) {
         for (const item of userMap.values()) {
           if (item.mastered) continue;
+          if (isQuestionDeleted(item.id, item.question)) continue;
           if (filter !== "all" && item.source !== filter) continue;
           if (item.subject === sub.id) {
             seenQIds.add(item.id);
@@ -5622,6 +5680,7 @@ function getMistakeStats(userId, filter = "all") {
       const mockList = loadCachedMockErrors(sub.id);
       for (const mq of mockList) {
         if (seenQIds.has(mq.id)) continue;
+        if (isQuestionDeleted(mq.id, mq.question)) continue;
         const classified = classifySubjectAndTopic(mq);
         seenQIds.add(mq.id);
         total++;
@@ -5767,11 +5826,24 @@ bot.command("stop", async (ctx) => {
   }
   await sendCompletionSummary(bot, session);
 });
+bot.command("delete", async (ctx) => {
+  const session = getSession(ctx.from.id);
+  if (session) {
+    const q = session.questions[session.currentIndex];
+    if (q) {
+      deleteMistake(ctx.from.id, q.id, q.question);
+      await ctx.reply("\u{1F5D1}\uFE0F Current question removed from your Mistake Bank and synced with Firebase.");
+      return;
+    }
+  }
+  await ctx.reply("No active drill running. You can delete mistakes from the topic menu or directly from the web app.");
+});
 bot.command("help", async (ctx) => {
   const helpText = `\u{1F4A1} *CGL Bot Guide*
 
 \u2022 /menu \u2014 Open the main category menu
 \u2022 /stop \u2014 Finish active test and show score card
+\u2022 /delete \u2014 Remove current active mistake question from database
 \u2022 Tap any option on quiz polls to answer immediately.`;
   await ctx.reply(helpText, {
     parse_mode: "Markdown",
@@ -6111,7 +6183,11 @@ bot.callbackQuery(/^mb_top:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async
   const topicItem = subStat?.topics.find((t) => t.slug === slug);
   const topicTitle = topicItem?.topic || "Topic Practice";
   const count = topicItem?.count || 0;
-  const kb = new InlineKeyboard().text(`\u{1F525} Practice All (${count} Qs)`, `mb_run:${fltCode}:${subCode}:${slug}:all`).text("\u26A1 Quick 10", `mb_run:${fltCode}:${subCode}:${slug}:10`).row().text("\u2B05\uFE0F Back to Topics", `mb_sub:${fltCode}:${subCode}`);
+  const kb = new InlineKeyboard().text(`\u{1F525} Practice All (${count} Qs)`, `mb_run:${fltCode}:${subCode}:${slug}:all`).text("\u26A1 Quick 10", `mb_run:${fltCode}:${subCode}:${slug}:10`).row();
+  if (count > 0) {
+    kb.text("\u{1F5D1}\uFE0F Clear Topic Mistakes", `mb_del:${fltCode}:${subCode}:${slug}`).row();
+  }
+  kb.text("\u2B05\uFE0F Back to Topics", `mb_sub:${fltCode}:${subCode}`);
   await ctx.editMessageText(
     `\u{1F4CC} *${topicTitle}*
 Source: *${filterLabel}* \u2022 *${count}* Mistakes logged
@@ -6120,6 +6196,25 @@ Choose your drill mode:`,
     {
       parse_mode: "Markdown",
       reply_markup: kb
+    }
+  );
+});
+bot.callbackQuery(/^mb_del:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, fltCode, subCode, slug] = ctx.match;
+  const filter = FLT_MAP[fltCode] || "all";
+  const subjectId = SHORT_TO_SUB[subCode];
+  const questions = getUserMistakes(ctx.from.id, filter, subjectId, slug === "_" ? void 0 : slug);
+  for (const q of questions) {
+    deleteMistake(ctx.from.id, q.id, q.question);
+  }
+  await ctx.editMessageText(
+    `\u2705 *Cleared ${questions.length} Mistakes!*
+
+These questions have been removed from your mistake bank and synced across Firebase and the website.`,
+    {
+      parse_mode: "Markdown",
+      reply_markup: new InlineKeyboard().text("\u2B05\uFE0F Back to Subjects", `mb_flt:${fltCode}`)
     }
   );
 });

@@ -47,6 +47,7 @@ import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockEr
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
 import { SillyMistakesAggregateView } from './components/rca/SillyMistakesAggregateView';
 import { ThemeSelector } from './components/ThemeSelector';
+import { TelegramMistakesModal } from './components/TelegramMistakesModal';
 import { getInitialTheme, setAppliedTheme } from './utils/theme';
 import { getDailyThought } from './utils/dailyThoughts';
 
@@ -245,6 +246,7 @@ export default function App() {
   const [rcaSelectedFilter, setRcaSelectedFilter] = useState<'all' | RCATagType | 'unclassified'>('all');
   const [rcaSearchQuery, setRcaSearchQuery] = useState<string>('');
   const [rcaVersion, setRcaVersion] = useState(0);
+  const [showTelegramMistakesModal, setShowTelegramMistakesModal] = useState(false);
 
   useEffect(() => {
     loadBundledMockRcaMap();
@@ -479,6 +481,14 @@ export default function App() {
           try {
             localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(merged)));
           } catch { }
+
+          // Sync with Telegram bot mistake store
+          fetch('/api/mistakes', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'sync_deleted', ids: Array.from(merged) })
+          }).catch(() => {});
+
           return merged;
         });
       } catch (error) {
@@ -2115,6 +2125,14 @@ export default function App() {
                   </button>
                 </div>
 
+                <button
+                  onClick={() => setShowTelegramMistakesModal(true)}
+                  className="p-1.5 rounded-lg bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200 transition-colors text-xs font-bold"
+                  title="Bot Mistakes"
+                >
+                  📱
+                </button>
+
                 <ThemeSelector isCompact />
 
                 {user ? (
@@ -2183,6 +2201,14 @@ export default function App() {
                 >
                   <Trophy className="w-4 h-4 mr-1.5" />
                   Mock Scores
+                </button>
+                <button
+                  onClick={() => setShowTelegramMistakesModal(true)}
+                  className="flex items-center font-bold text-sm px-2.5 py-1.5 rounded-xl bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition-colors border border-indigo-200 cursor-pointer shadow-xs"
+                  title="Open Telegram Bot & Mock Mistake Bank"
+                >
+                  <span className="mr-1.5 text-base">📱</span>
+                  <span>Bot Mistakes</span>
                 </button>
                 <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold" title="Quiz mode">
                   <button
@@ -3961,6 +3987,19 @@ export default function App() {
           onCancel={() => {
             setSrsConfirmOpen(false);
             setSrsConfirmCards([]);
+          }}
+        />
+
+        <TelegramMistakesModal
+          isOpen={showTelegramMistakesModal}
+          onClose={() => setShowTelegramMistakesModal(false)}
+          onDeleteQuestion={(qId, qText) => {
+            setDeletedQuestionIds((prev) => {
+              const updated = new Set(prev);
+              if (qId) updated.add(qId);
+              if (qText) updated.add(qText.trim().toLowerCase());
+              return updated;
+            });
           }}
         />
       </main>

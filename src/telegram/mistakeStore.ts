@@ -436,6 +436,149 @@ export function markMistakeMastered(userId: number, qId: string) {
 }
 
 // ----------------------------------------------------
+// PERSISTENT DELETED QUESTIONS TRACKER (SYNCED WITH FIRESTORE)
+// ----------------------------------------------------
+
+const DELETED_FILE = path.join(os.tmpdir(), 'cgl_deleted_mistakes.json');
+const deletedQuestionsSet = new Set<string>();
+
+function saveDeletedToDisk() {
+  try {
+    fs.writeFileSync(DELETED_FILE, JSON.stringify(Array.from(deletedQuestionsSet)), 'utf8');
+  } catch (err) {
+    console.error('[MistakeStore] Error saving deleted questions to disk:', err);
+  }
+}
+
+function loadDeletedFromDisk() {
+  try {
+    if (fs.existsSync(DELETED_FILE)) {
+      const list = JSON.parse(fs.readFileSync(DELETED_FILE, 'utf8'));
+      if (Array.isArray(list)) {
+        for (const id of list) {
+          if (id) deletedQuestionsSet.add(String(id).trim().toLowerCase());
+        }
+      }
+    }
+  } catch (err) {
+    console.error('[MistakeStore] Error loading deleted questions from disk:', err);
+  }
+}
+
+loadDeletedFromDisk();
+
+export function isQuestionDeleted(id?: string, text?: string): boolean {
+  loadDeletedFromDisk();
+  if (id && deletedQuestionsSet.has(id.trim().toLowerCase())) return true;
+  if (text) {
+    const clean = text.trim().toLowerCase();
+    if (deletedQuestionsSet.has(clean)) return true;
+  }
+  return false;
+}
+
+export function deleteMistake(userId: number | undefined, qId: string, qText?: string) {
+  loadFromDisk();
+  loadDeletedFromDisk();
+
+  if (qId) deletedQuestionsSet.add(qId.trim().toLowerCase());
+  if (qText) deletedQuestionsSet.add(qText.trim().toLowerCase());
+  saveDeletedToDisk();
+
+  if (userId && userMistakesMap.has(userId)) {
+    userMistakesMap.get(userId)!.delete(qId);
+  } else {
+    for (const map of userMistakesMap.values()) {
+      map.delete(qId);
+      for (const [k, v] of map.entries()) {
+        if (v.question === qText || v.id === qId) {
+          map.delete(k);
+        }
+      }
+    }
+  }
+  saveToDisk();
+}
+
+export function syncDeletedQuestions(ids: string[]) {
+  loadDeletedFromDisk();
+  for (const id of ids) {
+    if (id) deletedQuestionsSet.add(String(id).trim().toLowerCase());
+  }
+  saveDeletedToDisk();
+}
+
+export function getDeletedQuestionIds(): string[] {
+  loadDeletedFromDisk();
+  return Array.from(deletedQuestionsSet);
+}
+
+export function getAllRecordedMistakes(
+  filter: MistakeFilter = 'all',
+  subject?: 'english' | 'mathematics' | 'reasoning' | 'general_awareness',
+  topicSlug?: string
+): RecordedMistake[] {
+  loadFromDisk();
+  loadDeletedFromDisk();
+
+  const results: RecordedMistake[] = [];
+  const seenIds = new Set<string>();
+
+  // 1. Dynamic Telegram mistakes
+  if (filter === 'all' || filter === 'telegram_drill') {
+    for (const map of userMistakesMap.values()) {
+      for (const item of map.values()) {
+        if (item.mastered) continue;
+        if (isQuestionDeleted(item.id, item.question)) continue;
+        if (subject && item.subject !== subject) continue;
+        if (topicSlug && topicSlug !== '_' && item.topicSlug !== topicSlug) continue;
+
+        if (!seenIds.has(item.id)) {
+          seenIds.add(item.id);
+          results.push(item);
+        }
+      }
+    }
+  }
+
+  // 2. Website Mock Mistakes
+  if (filter === 'all' || filter === 'website_mock') {
+    const subjectsToLoad: ('english' | 'mathematics' | 'reasoning' | 'general_awareness')[] = subject
+      ? [subject]
+      : ['english', 'mathematics', 'reasoning', 'general_awareness'];
+
+    for (const sub of subjectsToLoad) {
+      const mockList = loadCachedMockErrors(sub);
+      for (const mq of mockList) {
+        if (seenIds.has(mq.id)) continue;
+        if (isQuestionDeleted(mq.id, mq.question)) continue;
+        const classified = classifySubjectAndTopic(mq);
+        if (topicSlug && topicSlug !== '_' && classified.topicSlug !== topicSlug) continue;
+
+        seenIds.add(mq.id);
+        results.push({
+          id: mq.id,
+          userId: 0,
+          question: mq.question,
+          options: mq.options,
+          correctOptionIndex: mq.correctOptionIndex,
+          explanation: mq.explanation || '',
+          subject: classified.subject,
+          topic: classified.topic,
+          topicSlug: classified.topicSlug,
+          source: 'website_mock',
+          timestamp: Date.now(),
+          wrongCount: 1,
+          mastered: false,
+        });
+      }
+    }
+  }
+
+  return results;
+}
+
+// ----------------------------------------------------
 // QUERY & FILTER MISTAKES
 // ----------------------------------------------------
 
@@ -446,6 +589,7 @@ export function getUserMistakes(
   topicSlug: string | undefined = undefined
 ): TelegramQuizQuestion[] {
   loadFromDisk();
+  loadDeletedFromDisk();
 
   const results: TelegramQuizQuestion[] = [];
   const seenQIds = new Set<string>();
@@ -456,6 +600,7 @@ export function getUserMistakes(
     if (userMap) {
       for (const item of userMap.values()) {
         if (item.mastered) continue;
+        if (isQuestionDeleted(item.id, item.question)) continue;
         if (filter !== 'all' && item.source !== filter) continue;
         if (subject && item.subject !== subject) continue;
         if (topicSlug && topicSlug !== '_' && item.topicSlug !== topicSlug) continue;
@@ -485,6 +630,7 @@ export function getUserMistakes(
       const mockList = loadCachedMockErrors(sub);
       for (const mq of mockList) {
         if (seenQIds.has(mq.id)) continue;
+        if (isQuestionDeleted(mq.id, mq.question)) continue;
         const classified = classifySubjectAndTopic(mq);
         if (topicSlug && topicSlug !== '_' && classified.topicSlug !== topicSlug) continue;
 
@@ -520,6 +666,7 @@ export function getMistakeStats(
   filter: MistakeFilter = 'all'
 ): SubjectMistakeStats[] {
   loadFromDisk();
+  loadDeletedFromDisk();
 
   const subjects: {
     id: 'english' | 'mathematics' | 'reasoning' | 'general_awareness';
@@ -543,6 +690,7 @@ export function getMistakeStats(
       if (userMap) {
         for (const item of userMap.values()) {
           if (item.mastered) continue;
+          if (isQuestionDeleted(item.id, item.question)) continue;
           if (filter !== 'all' && item.source !== filter) continue;
           if (item.subject === sub.id) {
             seenQIds.add(item.id);
@@ -564,6 +712,7 @@ export function getMistakeStats(
       const mockList = loadCachedMockErrors(sub.id);
       for (const mq of mockList) {
         if (seenQIds.has(mq.id)) continue;
+        if (isQuestionDeleted(mq.id, mq.question)) continue;
         const classified = classifySubjectAndTopic(mq);
         seenQIds.add(mq.id);
         total++;
