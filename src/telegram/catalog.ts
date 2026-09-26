@@ -24,13 +24,20 @@ export interface SectionEntry {
   topics: TopicEntry[];
 }
 
+import { fileURLToPath } from 'url';
+
+let moduleDir = process.cwd();
+try {
+  moduleDir = path.dirname(fileURLToPath(import.meta.url));
+} catch {}
+
 function resolveDataDir(subPath: string): string {
   const candidates = [
     path.join(process.cwd(), 'src', 'data', subPath),
     path.join(process.cwd(), 'data', subPath),
-    path.join(__dirname, 'src', 'data', subPath),
-    path.join(__dirname, '..', 'src', 'data', subPath),
-    path.join(__dirname, 'data', subPath),
+    path.join(moduleDir, 'src', 'data', subPath),
+    path.join(moduleDir, '..', 'src', 'data', subPath),
+    path.join(moduleDir, 'data', subPath),
   ];
   for (const c of candidates) {
     if (fs.existsSync(c)) return c;

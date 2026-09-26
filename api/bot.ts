@@ -563,13 +563,19 @@ function purgeScrapedWatermarks(text = "") {
 }
 
 // src/telegram/quizData.ts
+import { fileURLToPath } from "url";
+var moduleDir = process.cwd();
+try {
+  moduleDir = path.dirname(fileURLToPath(import.meta.url));
+} catch {
+}
 function resolveDataDir(subPath) {
   const candidates = [
     path.join(process.cwd(), "src", "data", subPath),
     path.join(process.cwd(), "data", subPath),
-    path.join(__dirname, "src", "data", subPath),
-    path.join(__dirname, "..", "src", "data", subPath),
-    path.join(__dirname, "data", subPath)
+    path.join(moduleDir, "src", "data", subPath),
+    path.join(moduleDir, "..", "src", "data", subPath),
+    path.join(moduleDir, "data", subPath)
   ];
   for (const c of candidates) {
     if (fs.existsSync(c)) return c;
@@ -4608,13 +4614,19 @@ function getSimplificationCatalog() {
 // src/telegram/catalog.ts
 import fs2 from "fs";
 import path2 from "path";
+import { fileURLToPath as fileURLToPath2 } from "url";
+var moduleDir2 = process.cwd();
+try {
+  moduleDir2 = path2.dirname(fileURLToPath2(import.meta.url));
+} catch {
+}
 function resolveDataDir2(subPath) {
   const candidates = [
     path2.join(process.cwd(), "src", "data", subPath),
     path2.join(process.cwd(), "data", subPath),
-    path2.join(__dirname, "src", "data", subPath),
-    path2.join(__dirname, "..", "src", "data", subPath),
-    path2.join(__dirname, "data", subPath)
+    path2.join(moduleDir2, "src", "data", subPath),
+    path2.join(moduleDir2, "..", "src", "data", subPath),
+    path2.join(moduleDir2, "data", subPath)
   ];
   for (const c of candidates) {
     if (fs2.existsSync(c)) return c;
