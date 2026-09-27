@@ -62,7 +62,7 @@ import {
 
 dotenv.config();
 
-const token = process.env.TELEGRAM_BOT_TOKEN || '8573783956:AAF7SGdPHbfpJs2zH8tmQfXsUsVPBORAsHM';
+const token = process.env.TELEGRAM_BOT_TOKEN || '8855696196:AAFJmjYYmHcgnm_h8u1LjTD_Gvynz3R969o';
 export const bot = new Bot(token);
 
 bot.catch((err) => {

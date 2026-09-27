@@ -5723,7 +5723,7 @@ function getTotalMistakesSummary(userId) {
 
 // src/telegram/bot.ts
 dotenv.config();
-var token = process.env.TELEGRAM_BOT_TOKEN || "8573783956:AAF7SGdPHbfpJs2zH8tmQfXsUsVPBORAsHM";
+var token = process.env.TELEGRAM_BOT_TOKEN || "8855696196:AAFJmjYYmHcgnm_h8u1LjTD_Gvynz3R969o";
 var bot = new Bot(token);
 bot.catch((err) => {
   console.error("[TelegramBot] Uncaught error during update handling:", err);
