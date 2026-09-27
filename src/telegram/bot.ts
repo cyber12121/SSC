@@ -169,7 +169,15 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
     `• Time: *${timeFormatted}* (${speedPerQ}s / q)\n\n` +
     `_${comment}_`;
 
-  const afterQuizKeyboard = new InlineKeyboard()
+  const afterQuizKeyboard = new InlineKeyboard();
+
+  if (score < total) {
+    afterQuizKeyboard
+      .url('📖 View Solutions & AI Tutor on Web', 'https://ssc27.vercel.app/?view=botErrors')
+      .row();
+  }
+
+  afterQuizKeyboard
     .text('📁 Chapter Bank', 'nav_chapter_bank')
     .text('🎯 Mock Errors', 'nav_mock_errors')
     .row()
@@ -1315,6 +1323,19 @@ bot.on('poll_answer', async (ctx) => {
     }
   } else {
     recordMistake(session.userId, currentQ, 'telegram_quiz');
+    // Deep-link to Web solution & AI mentor
+    const webMistakeUrl = 'https://ssc27.vercel.app/?view=botErrors';
+    const explanationSnippet = currentQ.explanation ? currentQ.explanation.trim().slice(0, 160) : '';
+    bot.api.sendMessage(
+      session.chatId,
+      `❌ *Incorrect Answer*\n\n` +
+      (explanationSnippet ? `💡 _${explanationSnippet}${currentQ.explanation.length > 160 ? '...' : ''}_\n\n` : '') +
+      `_Saved to your Mistake Notebook 📕_`,
+      {
+        parse_mode: 'Markdown',
+        reply_markup: new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl),
+      }
+    ).catch(() => {});
   }
   session.answeredCount++;
   session.currentIndex++;

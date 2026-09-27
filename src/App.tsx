@@ -219,7 +219,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [deletedQuestionIds, setDeletedQuestionIds] = useState<Set<string>>(() => {
     try {
-      const cached = typeof localStorage !== 'undefined' ? localStorage.getItem('cgl_deleted_question_ids') : null;
+      const cached = safeStorage.getItem('cgl_deleted_question_ids');
       if (cached) return new Set(JSON.parse(cached));
     } catch { }
     return new Set();
@@ -229,7 +229,7 @@ export default function App() {
   // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA)
   const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca'>(() => {
     try {
-      const saved = localStorage.getItem('mockViewMode');
+      const saved = safeStorage.getItem('mockViewMode');
       return (saved === 'buckets' || saved === 'rca') ? saved : 'chapters';
     } catch {
       return 'chapters';
@@ -238,7 +238,7 @@ export default function App() {
 
   const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca') => {
     setMockViewMode(mode);
-    try { localStorage.setItem('mockViewMode', mode); } catch { }
+    try { safeStorage.setItem('mockViewMode', mode); } catch { }
   };
 
   const [modalSillySubFilter, setModalSillySubFilter] = useState<string>('all');
@@ -257,7 +257,7 @@ export default function App() {
   // Mock Error Test Scope Filter: 'all' (combined) | 'full' (full tests) | 'sectional' (sectional tests)
   const [mockTestTypeFilter, setMockTestTypeFilter] = useState<'all' | 'full' | 'sectional'>(() => {
     try {
-      const saved = localStorage.getItem('mockTestTypeFilter');
+      const saved = safeStorage.getItem('mockTestTypeFilter');
       return (saved === 'full' || saved === 'sectional') ? saved : 'all';
     } catch {
       return 'all';
@@ -266,7 +266,7 @@ export default function App() {
 
   const setMockTestTypeFilterPersisted = (filter: 'all' | 'full' | 'sectional') => {
     setMockTestTypeFilter(filter);
-    try { localStorage.setItem('mockTestTypeFilter', filter); } catch { }
+    try { safeStorage.setItem('mockTestTypeFilter', filter); } catch { }
   };
 
   const [activeMockChapterModal, setActiveMockChapterModal] = useState<MockChapterModalData | null>(null);
@@ -478,7 +478,7 @@ export default function App() {
             if (data.questionText) merged.add(data.questionText);
           });
           try {
-            localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(merged)));
+            safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(merged)));
           } catch { }
 
           // Sync with Telegram bot mistake store

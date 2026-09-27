@@ -1,7 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
-import { TelegramQuizQuestion, sanitizeTelegramQuiz, shuffle } from './quizData';
+export interface TelegramQuizQuestion {
+  id: string;
+  question: string;
+  preamble?: string;
+  options: string[];
+  correctOptionIndex: number;
+  explanation: string;
+  fullSolution?: string;
+  subject?: string;
+  topic?: string;
+  source?: string;
+}
 
 export type MistakeSource = 'telegram_quiz' | 'website_quiz';
 export type MistakeFilter = 'all' | 'telegram_quiz' | 'website_quiz';
@@ -330,7 +341,6 @@ export function getUserMistakes(
   const seenQIds = new Set<string>();
 
   const checkAndPush = (item: RecordedMistake) => {
-    if (item.mastered) return;
     if (isQuestionDeleted(item.id, item.question)) return;
     if (filter !== 'all' && item.source !== filter) return;
     if (subject && item.subject !== subject) return;
@@ -382,7 +392,6 @@ export function getAllRecordedMistakes(
 
   for (const map of userMistakesMap.values()) {
     for (const item of map.values()) {
-      if (item.mastered) continue;
       if (isQuestionDeleted(item.id, item.question)) continue;
       if (filter !== 'all' && item.source !== filter) continue;
       if (subject && item.subject !== subject) continue;
@@ -424,7 +433,6 @@ export function getMistakeStats(
     const seenQIds = new Set<string>();
 
     const processItem = (item: RecordedMistake) => {
-      if (item.mastered) return;
       if (isQuestionDeleted(item.id, item.question)) return;
       if (filter !== 'all' && item.source !== filter) return;
       if (item.subject !== sub.id) return;

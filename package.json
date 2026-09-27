@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx watch server.ts",
     "bundle:bot": "esbuild src/telegram/bot.ts --bundle --platform=node --format=esm --packages=external --outfile=api/bot.ts",
-    "prebuild": "npm run bundle:bot",
+    "bundle:mistakes": "esbuild src/telegram/mistakesApi.ts --bundle --platform=node --format=esm --packages=external --outfile=api/mistakes.ts",
+    "bundle:all": "npm run bundle:bot && npm run bundle:mistakes",
+    "prebuild": "npm run bundle:all",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",

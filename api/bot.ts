@@ -5553,7 +5553,6 @@ function getUserMistakes(userId, filter = "all", subject, topicSlug = "") {
   const results = [];
   const seenQIds = /* @__PURE__ */ new Set();
   const checkAndPush = (item) => {
-    if (item.mastered) return;
     if (isQuestionDeleted(item.id, item.question)) return;
     if (filter !== "all" && item.source !== filter) return;
     if (subject && item.subject !== subject) return;
@@ -5599,7 +5598,6 @@ function getMistakeStats(userId, filter = "all") {
     let total = 0;
     const seenQIds = /* @__PURE__ */ new Set();
     const processItem = (item) => {
-      if (item.mastered) return;
       if (isQuestionDeleted(item.id, item.question)) return;
       if (filter !== "all" && item.source !== filter) return;
       if (item.subject !== sub.id) return;
@@ -38929,7 +38927,11 @@ async function sendCompletionSummary(botInstance, session) {
 \u2022 Time: *${timeFormatted}* (${speedPerQ}s / q)
 
 _${comment}_`;
-  const afterQuizKeyboard = new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
+  const afterQuizKeyboard = new InlineKeyboard();
+  if (score < total) {
+    afterQuizKeyboard.url("\u{1F4D6} View Solutions & AI Tutor on Web", "https://ssc27.vercel.app/?view=botErrors").row();
+  }
+  afterQuizKeyboard.text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
   clearSession(session.userId);
   await botInstance.api.sendMessage(session.chatId, report, {
     parse_mode: "Markdown",
@@ -39761,6 +39763,21 @@ bot.on("poll_answer", async (ctx) => {
     }
   } else {
     recordMistake(session.userId, currentQ, "telegram_quiz");
+    const webMistakeUrl = "https://ssc27.vercel.app/?view=botErrors";
+    const explanationSnippet = currentQ.explanation ? currentQ.explanation.trim().slice(0, 160) : "";
+    bot.api.sendMessage(
+      session.chatId,
+      `\u274C *Incorrect Answer*
+
+` + (explanationSnippet ? `\u{1F4A1} _${explanationSnippet}${currentQ.explanation.length > 160 ? "..." : ""}_
+
+` : "") + `_Saved to your Mistake Notebook \u{1F4D5}_`,
+      {
+        parse_mode: "Markdown",
+        reply_markup: new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl)
+      }
+    ).catch(() => {
+    });
   }
   session.answeredCount++;
   session.currentIndex++;

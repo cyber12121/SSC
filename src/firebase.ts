@@ -1,11 +1,30 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, initializeAuth, browserLocalPersistence, browserSessionPersistence, inMemoryPersistence } from 'firebase/auth';
 import { getFirestore, collection, addDoc, getDocs, query, where, onSnapshot, doc, getDocFromServer } from 'firebase/firestore';
 import firebaseConfig from '../firebase-applet-config.json';
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
-export const auth = getAuth(app);
+
+let authInstance: any;
+try {
+  authInstance = initializeAuth(app, {
+    persistence: [browserLocalPersistence, browserSessionPersistence, inMemoryPersistence]
+  });
+} catch {
+  try {
+    authInstance = getAuth(app);
+  } catch {
+    try {
+      authInstance = initializeAuth(app, {
+        persistence: [inMemoryPersistence]
+      });
+    } catch {
+      authInstance = getAuth(app);
+    }
+  }
+}
+export const auth = authInstance;
 export const googleProvider = new GoogleAuthProvider();
 
 // Connection test
@@ -14,11 +33,8 @@ async function testConnection() {
     if (typeof window !== 'undefined') {
       await getDocFromServer(doc(db, 'test', 'connection'));
     }
-  } catch (error: any) {
+  } catch {
     // Gracefully handle offline or restricted storage contexts
-    if (error instanceof Error && error.message.includes('the client is offline')) {
-      console.warn("Firebase notice: The client is offline.");
-    }
   }
 }
 testConnection().catch(() => {});
