@@ -848,10 +848,10 @@ bot.callbackQuery('nav_quiz_mistakes', async (ctx) => {
       .text('⬅️ Back to Menu', 'nav_root');
 
     await ctx.editMessageText(
-      `📕 *My Quiz Mistakes*\n\n` +
+      `📕 *My Quiz Mistakes Notebook*\n\n` +
       `✨ *Zero pending mistakes!*\n\n` +
-      `Whenever you take a quiz on Telegram or the website and answer a question incorrectly, it will automatically appear here topic-wise.\n\n` +
-      `Once you answer it correctly during revision, it will automatically be marked as *Mastered*!`,
+      `All mistakes from *Chapter Bank* and *Mock Errors* automatically collect together in this notebook for unified revision.\n\n` +
+      `Start practicing from /menu, and any missed questions will appear here!`,
       {
         parse_mode: 'Markdown',
         reply_markup: emptyKb,
@@ -862,6 +862,16 @@ bot.callbackQuery('nav_quiz_mistakes', async (ctx) => {
   }
 
   const kb = new InlineKeyboard();
+  kb.text(`🔥 Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`)
+    .text('⚡ Quick 10', `qm_run_all:10`)
+    .row();
+
+  const allUserMistakes = getUserMistakes(ctx.from.id, 'all');
+  if (allUserMistakes.length > 0) {
+    const syncPayload = encodeBatchForSync(allUserMistakes);
+    kb.url('📖 View Full Solutions on Web', `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`).row();
+  }
+
   for (const s of stats) {
     if (s.total > 0) {
       kb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
@@ -871,14 +881,41 @@ bot.callbackQuery('nav_quiz_mistakes', async (ctx) => {
 
   const text =
     `📕 *My Quiz Mistakes Notebook*\n\n` +
-    `You have *${totalMistakes}* active mistakes from your quiz practice.\n` +
-    `Select a subject to drill your missed questions:`;
+    `You have *${totalMistakes}* combined mistakes from your *Chapter Bank* and *Mock Errors* practice.\n\n` +
+    `Drill all your mistakes or select a subject below:`;
 
   await ctx.editMessageText(text, {
     parse_mode: 'Markdown',
     reply_markup: kb,
   });
   await ctx.answerCallbackQuery();
+});
+
+// Drill All Mistakes across all subjects
+bot.callbackQuery(/^qm_run_all:(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const mode = ctx.match[1];
+  let questions = getUserMistakes(ctx.from.id, 'all');
+
+  if (!questions || questions.length === 0) {
+    await ctx.reply('No active mistakes found! Keep practicing to master concepts.', {
+      reply_markup: getRootMenuKeyboard(),
+    });
+    return;
+  }
+
+  if (mode === '10' && questions.length > 10) {
+    questions = shuffle(questions).slice(0, 10);
+  } else {
+    questions = shuffle(questions);
+  }
+
+  await startQuizForUser(
+    ctx.from.id,
+    ctx.chat!.id,
+    `📕 All Quiz Mistakes (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`,
+    questions
+  );
 });
 
 // Subject Chapter List for Quiz Mistakes

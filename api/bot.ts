@@ -5342,132 +5342,134 @@ function classifySubjectAndTopic(q) {
   } else if (subStr.includes("reason") || text.includes("syllogism") || text.includes("analogy") || text.includes("blood relation") || text.includes("coding-decoding")) {
     subject = "reasoning";
   }
-  let topic = "General Practice";
-  let topicSlug = "gen";
-  if (subject === "english") {
-    if (text.includes("synonym")) {
-      topic = "Synonyms";
-      topicSlug = "syn";
-    } else if (text.includes("antonym")) {
-      topic = "Antonyms";
-      topicSlug = "ant";
-    } else if (text.includes("one word") || text.includes("ows")) {
-      topic = "One Word Substitution";
-      topicSlug = "ows";
-    } else if (text.includes("idiom") || text.includes("phrase")) {
-      topic = "Idioms & Phrases";
-      topicSlug = "idiom";
-    } else if (text.includes("spelling") || text.includes("misspelt")) {
-      topic = "Spelling Errors";
-      topicSlug = "spell";
-    } else if (text.includes("spotting") || text.includes("grammatical error")) {
-      topic = "Spotting Errors";
-      topicSlug = "error";
-    } else if (text.includes("voice")) {
-      topic = "Active & Passive Voice";
-      topicSlug = "voice";
-    } else if (text.includes("narration") || text.includes("direct")) {
-      topic = "Direct & Indirect Speech";
-      topicSlug = "narration";
-    } else if (text.includes("pqrs") || text.includes("jumble")) {
-      topic = "Para Jumbles";
-      topicSlug = "pqrs";
-    } else if (text.includes("cloze") || text.includes("comprehension")) {
-      topic = "Cloze & Comprehension";
-      topicSlug = "cloze";
+  let topic = q.topic && !["error bank", "general practice", "quiz practice"].includes(q.topic.trim().toLowerCase()) ? q.topic.trim() : "General Practice";
+  let topicSlug = topic.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+  if (topic === "General Practice") {
+    if (subject === "english") {
+      if (text.includes("synonym")) {
+        topic = "Synonyms";
+        topicSlug = "syn";
+      } else if (text.includes("antonym")) {
+        topic = "Antonyms";
+        topicSlug = "ant";
+      } else if (text.includes("one word") || text.includes("ows")) {
+        topic = "One Word Substitution";
+        topicSlug = "ows";
+      } else if (text.includes("idiom") || text.includes("phrase")) {
+        topic = "Idioms & Phrases";
+        topicSlug = "idiom";
+      } else if (text.includes("spelling") || text.includes("misspelt")) {
+        topic = "Spelling Errors";
+        topicSlug = "spell";
+      } else if (text.includes("spotting") || text.includes("grammatical error")) {
+        topic = "Spotting Errors";
+        topicSlug = "error";
+      } else if (text.includes("voice")) {
+        topic = "Active & Passive Voice";
+        topicSlug = "voice";
+      } else if (text.includes("narration") || text.includes("direct")) {
+        topic = "Direct & Indirect Speech";
+        topicSlug = "narration";
+      } else if (text.includes("pqrs") || text.includes("jumble")) {
+        topic = "Para Jumbles";
+        topicSlug = "pqrs";
+      } else if (text.includes("cloze") || text.includes("comprehension")) {
+        topic = "Cloze & Comprehension";
+        topicSlug = "cloze";
+      } else {
+        topic = "Vocabulary & Grammar";
+        topicSlug = "vocab";
+      }
+    } else if (subject === "mathematics") {
+      if (text.includes("algebra")) {
+        topic = "Algebra";
+        topicSlug = "algebra";
+      } else if (text.includes("trig")) {
+        topic = "Trigonometry";
+        topicSlug = "trigo";
+      } else if (text.includes("geom") || text.includes("circle")) {
+        topic = "Geometry";
+        topicSlug = "geom";
+      } else if (text.includes("mensur")) {
+        topic = "Mensuration";
+        topicSlug = "mens";
+      } else if (text.includes("number") || text.includes("remainder")) {
+        topic = "Number System";
+        topicSlug = "num";
+      } else if (text.includes("profit") || text.includes("loss")) {
+        topic = "Profit & Loss";
+        topicSlug = "pnl";
+      } else if (text.includes("percent")) {
+        topic = "Percentages";
+        topicSlug = "pct";
+      } else if (text.includes("ratio")) {
+        topic = "Ratio & Proportion";
+        topicSlug = "ratio";
+      } else if (text.includes("interest")) {
+        topic = "SI & CI";
+        topicSlug = "si_ci";
+      } else if (text.includes("work") || text.includes("pipe")) {
+        topic = "Time & Work";
+        topicSlug = "work";
+      } else if (text.includes("speed") || text.includes("train")) {
+        topic = "Speed, Time & Distance";
+        topicSlug = "speed";
+      } else {
+        topic = "Arithmetic";
+        topicSlug = "arith";
+      }
+    } else if (subject === "reasoning") {
+      if (text.includes("syllogism")) {
+        topic = "Syllogism";
+        topicSlug = "syl";
+      } else if (text.includes("analogy")) {
+        topic = "Analogy";
+        topicSlug = "analogy";
+      } else if (text.includes("coding")) {
+        topic = "Coding & Decoding";
+        topicSlug = "coding";
+      } else if (text.includes("series")) {
+        topic = "Series";
+        topicSlug = "series";
+      } else if (text.includes("blood")) {
+        topic = "Blood Relations";
+        topicSlug = "blood";
+      } else if (text.includes("direction")) {
+        topic = "Direction Sense";
+        topicSlug = "direction";
+      } else if (text.includes("venn")) {
+        topic = "Venn Diagrams";
+        topicSlug = "venn";
+      } else {
+        topic = "General Reasoning";
+        topicSlug = "reason_gen";
+      }
     } else {
-      topic = "Vocabulary & Grammar";
-      topicSlug = "vocab";
-    }
-  } else if (subject === "mathematics") {
-    if (text.includes("algebra")) {
-      topic = "Algebra";
-      topicSlug = "algebra";
-    } else if (text.includes("trig")) {
-      topic = "Trigonometry";
-      topicSlug = "trigo";
-    } else if (text.includes("geom") || text.includes("circle")) {
-      topic = "Geometry";
-      topicSlug = "geom";
-    } else if (text.includes("mensur")) {
-      topic = "Mensuration";
-      topicSlug = "mens";
-    } else if (text.includes("number") || text.includes("remainder")) {
-      topic = "Number System";
-      topicSlug = "num";
-    } else if (text.includes("profit") || text.includes("loss")) {
-      topic = "Profit & Loss";
-      topicSlug = "pnl";
-    } else if (text.includes("percent")) {
-      topic = "Percentages";
-      topicSlug = "pct";
-    } else if (text.includes("ratio")) {
-      topic = "Ratio & Proportion";
-      topicSlug = "ratio";
-    } else if (text.includes("interest")) {
-      topic = "SI & CI";
-      topicSlug = "si_ci";
-    } else if (text.includes("work") || text.includes("pipe")) {
-      topic = "Time & Work";
-      topicSlug = "work";
-    } else if (text.includes("speed") || text.includes("train")) {
-      topic = "Speed, Time & Distance";
-      topicSlug = "speed";
-    } else {
-      topic = "Arithmetic";
-      topicSlug = "arith";
-    }
-  } else if (subject === "reasoning") {
-    if (text.includes("syllogism")) {
-      topic = "Syllogism";
-      topicSlug = "syl";
-    } else if (text.includes("analogy")) {
-      topic = "Analogy";
-      topicSlug = "analogy";
-    } else if (text.includes("coding")) {
-      topic = "Coding & Decoding";
-      topicSlug = "coding";
-    } else if (text.includes("series")) {
-      topic = "Series";
-      topicSlug = "series";
-    } else if (text.includes("blood")) {
-      topic = "Blood Relations";
-      topicSlug = "blood";
-    } else if (text.includes("direction")) {
-      topic = "Direction Sense";
-      topicSlug = "direction";
-    } else if (text.includes("venn")) {
-      topic = "Venn Diagrams";
-      topicSlug = "venn";
-    } else {
-      topic = "General Reasoning";
-      topicSlug = "reason_gen";
-    }
-  } else {
-    if (text.includes("polity") || text.includes("article") || text.includes("constitution")) {
-      topic = "Polity & Constitution";
-      topicSlug = "polity";
-    } else if (text.includes("history")) {
-      topic = "Indian History";
-      topicSlug = "history";
-    } else if (text.includes("geo") || text.includes("river")) {
-      topic = "Geography";
-      topicSlug = "geo";
-    } else if (text.includes("eco") || text.includes("budget")) {
-      topic = "Economics";
-      topicSlug = "eco";
-    } else if (text.includes("bio") || text.includes("disease")) {
-      topic = "Biology";
-      topicSlug = "bio";
-    } else if (text.includes("phys")) {
-      topic = "Physics";
-      topicSlug = "phys";
-    } else if (text.includes("chem")) {
-      topic = "Chemistry";
-      topicSlug = "chem";
-    } else {
-      topic = "General Awareness & Static GK";
-      topicSlug = "gk_static";
+      if (text.includes("polity") || text.includes("article") || text.includes("constitution")) {
+        topic = "Polity & Constitution";
+        topicSlug = "polity";
+      } else if (text.includes("history")) {
+        topic = "Indian History";
+        topicSlug = "history";
+      } else if (text.includes("geo") || text.includes("river")) {
+        topic = "Geography";
+        topicSlug = "geo";
+      } else if (text.includes("eco") || text.includes("budget")) {
+        topic = "Economics";
+        topicSlug = "eco";
+      } else if (text.includes("bio") || text.includes("disease")) {
+        topic = "Biology";
+        topicSlug = "bio";
+      } else if (text.includes("phys")) {
+        topic = "Physics";
+        topicSlug = "phys";
+      } else if (text.includes("chem")) {
+        topic = "Chemistry";
+        topicSlug = "chem";
+      } else {
+        topic = "General Awareness & Static GK";
+        topicSlug = "gk_static";
+      }
     }
   }
   return { subject, topic, topicSlug };
@@ -39427,13 +39429,13 @@ bot.callbackQuery("nav_quiz_mistakes", async (ctx) => {
   if (totalMistakes === 0) {
     const emptyKb = new InlineKeyboard().text("\u{1F4C1} Practice Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Practice Mock Errors", "nav_mock_errors").row().text("\u2B05\uFE0F Back to Menu", "nav_root");
     await ctx.editMessageText(
-      `\u{1F4D5} *My Quiz Mistakes*
+      `\u{1F4D5} *My Quiz Mistakes Notebook*
 
 \u2728 *Zero pending mistakes!*
 
-Whenever you take a quiz on Telegram or the website and answer a question incorrectly, it will automatically appear here topic-wise.
+All mistakes from *Chapter Bank* and *Mock Errors* automatically collect together in this notebook for unified revision.
 
-Once you answer it correctly during revision, it will automatically be marked as *Mastered*!`,
+Start practicing from /menu, and any missed questions will appear here!`,
       {
         parse_mode: "Markdown",
         reply_markup: emptyKb
@@ -39443,6 +39445,12 @@ Once you answer it correctly during revision, it will automatically be marked as
     return;
   }
   const kb = new InlineKeyboard();
+  kb.text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row();
+  const allUserMistakes = getUserMistakes(ctx.from.id, "all");
+  if (allUserMistakes.length > 0) {
+    const syncPayload = encodeBatchForSync(allUserMistakes);
+    kb.url("\u{1F4D6} View Full Solutions on Web", `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`).row();
+  }
   for (const s of stats) {
     if (s.total > 0) {
       kb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
@@ -39451,13 +39459,36 @@ Once you answer it correctly during revision, it will automatically be marked as
   kb.text("\u2B05\uFE0F Back to Menu", "nav_root");
   const text = `\u{1F4D5} *My Quiz Mistakes Notebook*
 
-You have *${totalMistakes}* active mistakes from your quiz practice.
-Select a subject to drill your missed questions:`;
+You have *${totalMistakes}* combined mistakes from your *Chapter Bank* and *Mock Errors* practice.
+
+Drill all your mistakes or select a subject below:`;
   await ctx.editMessageText(text, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
   await ctx.answerCallbackQuery();
+});
+bot.callbackQuery(/^qm_run_all:(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const mode = ctx.match[1];
+  let questions = getUserMistakes(ctx.from.id, "all");
+  if (!questions || questions.length === 0) {
+    await ctx.reply("No active mistakes found! Keep practicing to master concepts.", {
+      reply_markup: getRootMenuKeyboard()
+    });
+    return;
+  }
+  if (mode === "10" && questions.length > 10) {
+    questions = shuffle(questions).slice(0, 10);
+  } else {
+    questions = shuffle(questions);
+  }
+  await startQuizForUser(
+    ctx.from.id,
+    ctx.chat.id,
+    `\u{1F4D5} All Quiz Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`,
+    questions
+  );
 });
 bot.callbackQuery(/^qm_sub:(eng|math|reas|ga)$/, async (ctx) => {
   await ctx.answerCallbackQuery();

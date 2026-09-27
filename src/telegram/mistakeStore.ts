@@ -175,8 +175,13 @@ export function classifySubjectAndTopic(q: TelegramQuizQuestion): {
     subject = 'reasoning';
   }
 
-  let topic = 'General Practice';
-  let topicSlug = 'gen';
+  let topic = q.topic && !['error bank', 'general practice', 'quiz practice'].includes(q.topic.trim().toLowerCase())
+    ? q.topic.trim()
+    : 'General Practice';
+  let topicSlug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+
+  // If topic was generic, infer from text:
+  if (topic === 'General Practice') {
 
   if (subject === 'english') {
     if (text.includes('synonym')) { topic = 'Synonyms'; topicSlug = 'syn'; }
@@ -221,6 +226,7 @@ export function classifySubjectAndTopic(q: TelegramQuizQuestion): {
     else if (text.includes('phys')) { topic = 'Physics'; topicSlug = 'phys'; }
     else if (text.includes('chem')) { topic = 'Chemistry'; topicSlug = 'chem'; }
     else { topic = 'General Awareness & Static GK'; topicSlug = 'gk_static'; }
+  }
   }
 
   return { subject, topic, topicSlug };
