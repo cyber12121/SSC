@@ -24,6 +24,7 @@ import { SILLY_SUB_TYPES, getQuestionSillySubTypes, matchesSillySubFilter } from
 
 interface MockErrorsRcaCockpitProps {
   mode?: 'rca' | 'chapters';
+  quizMode?: 'practice' | 'mock';
   selectedSubject: string;
   clubbedChapters: MockChapterModalData[];
   filteredChapters: MockChapterModalData[];
@@ -61,6 +62,7 @@ interface MockErrorsRcaCockpitProps {
 
 export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
   mode = 'rca',
+  quizMode = 'practice',
   selectedSubject,
   clubbedChapters,
   filteredChapters,
@@ -105,6 +107,7 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
     totalSets: number;
     total: number;
     questions: Question[];
+    subType?: string;
     rect: { top: number; right: number; bottom: number; left: number };
   } | null>(null);
 
@@ -1451,11 +1454,16 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                   setOpenSetDropdown(null);
                                 } else {
                                   const rect = e.currentTarget.getBoundingClientRect();
+                                  const subType = rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? `S_${sillySubFilter}` : (rcaSelectedFilter !== 'all' ? rcaSelectedFilter : undefined);
+                                  const drillQuestions = rcaSelectedFilter === 'S' && sillySubFilter !== 'all'
+                                    ? (ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || []).filter(q => matchesSillySubFilter(q, sillySubFilter))
+                                    : ch.questions;
                                   setOpenSetDropdown({
                                     topic: ch.topic,
                                     totalSets,
                                     total: ch.total,
-                                    questions: ch.questions,
+                                    questions: drillQuestions,
+                                    subType,
                                     rect: { top: rect.top, right: rect.right, bottom: rect.bottom, left: rect.left }
                                   });
                                 }
@@ -1485,11 +1493,11 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                 }
                               }}
                               className="inline-flex items-center gap-1 h-6 px-2 text-[10px] font-bold text-white bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 rounded-md transition shadow-2xs cursor-pointer active:scale-95 whitespace-nowrap"
-                              title={`Practice questions for ${ch.topic}`}
+                              title={`Start ${quizMode === 'mock' ? 'mock test' : 'practice drill'} for ${ch.topic}`}
                             >
                               <Play className="w-2 h-2 fill-current" />
                               <span>
-                                Drill ({rcaSelectedFilter === 'S' && sillySubFilter !== 'all'
+                                {quizMode === 'mock' ? 'Mock' : 'Drill'} ({rcaSelectedFilter === 'S' && sillySubFilter !== 'all'
                                   ? (ch.rcaQuestions?.S || (ch.rcaQuestions as any)?.A || []).filter(q => matchesSillySubFilter(q, sillySubFilter)).length
                                   : ch.total
                                 })
@@ -1502,8 +1510,13 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
 
                     {/* Subtopic inline dropdown */}
                     {expandedSubtopicTopic === ch.topic && (() => {
+                      const sourceQuestions = (!isChaptersMode && rcaSelectedFilter !== 'all')
+                        ? (rcaSelectedFilter === 'unclassified'
+                            ? (ch.rcaQuestions?.unclassified || [])
+                            : (ch.rcaQuestions?.[rcaSelectedFilter] || []))
+                        : ch.questions;
                       // Consolidate fragmented AI subtopics into MAX 7-8 canonical subtopics
-                      const subtopics = getConsolidatedSubtopicsForQuestions(ch.topic, ch.questions, 7);
+                      const subtopics = getConsolidatedSubtopicsForQuestions(ch.topic, sourceQuestions, 7);
 
                       const colSpan = isChaptersMode ? 7 : 8;
                       const defaultFilter: ModalFilterType = isChaptersMode
@@ -1527,41 +1540,53 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                   No subtopic tags on these questions.
                                 </span>
                               ) : (
-                                subtopics.map(({ label, qs }) => (
-                                  <button
-                                    key={label}
-                                    type="button"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      // Build a filtered chapter data object with only this subtopic's questions
-                                      const filteredCh = {
-                                        ...ch,
-                                        topic: `${ch.topic} › ${label}`,
-                                        questions: qs,
-                                        total: qs.length,
-                                        wrong: qs.filter(q => q.errorType === 'wrong').length,
-                                        slow: qs.filter(q => q.errorType === 'speed_issue').length,
-                                        unattempted: qs.filter(q => q.errorType === 'unattempted').length,
-                                        wrongQuestions: qs.filter(q => q.errorType === 'wrong'),
-                                        slowQuestions: qs.filter(q => q.errorType === 'speed_issue'),
-                                        unattemptedQuestions: qs.filter(q => q.errorType === 'unattempted'),
-                                      };
-                                      setExpandedSubtopicTopic(null);
-                                      onOpenChapterModal(
-                                        filteredCh as any,
-                                        defaultFilter,
-                                        rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined
-                                      );
-                                    }}
-                                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-indigo-200 text-[11px] font-semibold text-indigo-800 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-colors shadow-xs cursor-pointer group/st"
-                                    title={`Open ${qs.length} questions under "${label}"`}
-                                  >
-                                    <span>{label}</span>
-                                    <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-indigo-100 text-indigo-700 group-hover/st:bg-white/30 group-hover/st:text-white">
-                                      {qs.length}
-                                    </span>
-                                  </button>
-                                ))
+                                subtopics.map(({ label, qs }) => {
+                                  const effectiveQs = (rcaSelectedFilter === 'S' && sillySubFilter !== 'all')
+                                    ? qs.filter(q => matchesSillySubFilter(q, sillySubFilter))
+                                    : qs;
+                                  const subtopicTotal = effectiveQs.length;
+                                  const subtopicSets = Math.ceil(subtopicTotal / 25);
+                                  const subtopicTopicName = `${ch.topic} › ${label}`;
+                                  const subType = (rcaSelectedFilter === 'S' && sillySubFilter !== 'all')
+                                    ? `S_${sillySubFilter}`
+                                    : (rcaSelectedFilter !== 'all' ? rcaSelectedFilter : undefined);
+
+                                  return (
+                                    <button
+                                      key={label}
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (subtopicSets > 1) {
+                                          const rect = e.currentTarget.getBoundingClientRect();
+                                          setOpenSetDropdown({
+                                            topic: subtopicTopicName,
+                                            totalSets: subtopicSets,
+                                            total: subtopicTotal,
+                                            questions: effectiveQs,
+                                            subType,
+                                            rect: { top: rect.top, right: rect.right, bottom: rect.bottom, left: rect.left }
+                                          });
+                                        } else {
+                                          onStartClubbedChapterQuiz(subtopicTopicName, effectiveQs, subType as any);
+                                        }
+                                      }}
+                                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-indigo-200 text-[11px] font-semibold text-indigo-800 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-colors shadow-xs cursor-pointer group/st active:scale-95"
+                                      title={`Start ${quizMode === 'mock' ? 'Mock Test' : 'Practice'} (${subtopicTotal} questions under "${label}")`}
+                                    >
+                                      <Play className="w-2.5 h-2.5 fill-current text-indigo-600 group-hover/st:text-white shrink-0" />
+                                      <span>{label}</span>
+                                      <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-indigo-100 text-indigo-700 group-hover/st:bg-white/30 group-hover/st:text-white">
+                                        {subtopicTotal}
+                                      </span>
+                                      {subtopicSets > 1 && (
+                                        <span className="text-[9px] font-bold text-indigo-500 group-hover/st:text-indigo-200">
+                                          ({subtopicSets} Sets)
+                                        </span>
+                                      )}
+                                    </button>
+                                  );
+                                })
                               )}
 
                               {/* View All button → open normal full-topic modal */}
@@ -1577,9 +1602,10 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                                   );
                                 }}
                                 className="inline-flex items-center gap-1 ml-auto h-6 px-2.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold transition-all shadow-2xs cursor-pointer shrink-0 active:scale-95"
+                                title="Review questions and classifications in detail"
                               >
-                                <Play className="w-2.5 h-2.5 fill-current" />
-                                <span>View All ({ch.total})</span>
+                                <BookOpen className="w-2.5 h-2.5" />
+                                <span>Review All ({ch.total})</span>
                               </button>
                             </div>
                           </td>
@@ -1698,9 +1724,9 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
-                        const { topic, questions } = openSetDropdown;
+                        const { topic, questions, subType } = openSetDropdown;
                         setOpenSetDropdown(null);
-                        onStartClubbedChapterQuiz(topic, questions, undefined, setNum);
+                        onStartClubbedChapterQuiz(topic, questions, subType as any, setNum);
                       }}
                       className="w-full px-3 py-1.5 text-left text-xs font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 flex items-center justify-between transition-colors cursor-pointer group"
                     >
@@ -1723,13 +1749,13 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
-                    const { topic, questions } = openSetDropdown;
+                    const { topic, questions, subType } = openSetDropdown;
                     setOpenSetDropdown(null);
-                    onStartClubbedChapterQuiz(topic, questions);
+                    onStartClubbedChapterQuiz(topic, questions, subType as any);
                   }}
                   className="w-full px-2.5 py-1.5 rounded-lg text-left text-[11px] font-bold text-indigo-700 hover:bg-indigo-100/70 flex items-center justify-between transition-colors cursor-pointer"
                 >
-                  <span>Practice All</span>
+                  <span>{quizMode === 'mock' ? 'Start Mock (All)' : 'Practice All'}</span>
                   <span className="text-[10px] font-semibold text-indigo-500">({openSetDropdown.total} Qs)</span>
                 </button>
               </div>

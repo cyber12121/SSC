@@ -48,6 +48,7 @@ interface MockChapterErrorsModalProps {
   modalActiveSet: number | 'all';
   setModalActiveSet: (set: number | 'all') => void;
   mockViewMode?: 'chapters' | 'buckets' | 'rca';
+  quizMode?: 'practice' | 'mock';
   initialSillySubFilter?: string;
   onClose: () => void;
   onStartPractice: (topic: string, questions: Question[], subType?: string, setNum?: number) => void;
@@ -68,6 +69,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
   modalActiveSet,
   setModalActiveSet,
   mockViewMode,
+  quizMode = 'practice',
   initialSillySubFilter,
   onClose,
   onStartPractice,
@@ -1209,12 +1211,30 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
               Showing {modalDisplayedQuestions.length} of {modalFilteredQuestions.length} questions
               {totalSetsInModal > 1 && typeof modalActiveSet === 'number' ? ` • Set ${currentSetNum}` : ''}
             </span>
-            <button
-              onClick={onClose}
-              className="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition-colors shadow-sm cursor-pointer"
-            >
-              Close
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onStartPractice(
+                    data.topic,
+                    modalDisplayedQuestions,
+                    modalErrorFilter !== 'all' ? modalErrorFilter : undefined,
+                    typeof modalActiveSet === 'number' ? modalActiveSet : undefined
+                  );
+                }}
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition-all shadow-xs flex items-center gap-1.5 cursor-pointer active:scale-95"
+              >
+                <Play className="w-3 h-3 fill-current" />
+                <span>Start {quizMode === 'mock' ? 'Mock Test' : 'Practice'} ({modalDisplayedQuestions.length} Qs)</span>
+              </button>
+              <button
+                onClick={onClose}
+                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl transition-colors cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

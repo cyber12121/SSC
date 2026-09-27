@@ -3429,6 +3429,7 @@ export default function App() {
                         /* Minimalist Mock Errors Cockpit (Stitch Design) - Supports Chapters and RCA */
                         <MockErrorsRcaCockpit
                           mode={mockViewMode}
+                          quizMode={quizMode}
                           selectedSubject={selectedSubject}
                           clubbedChapters={clubbedMockChapters}
                           filteredChapters={filteredRcaChapters}
@@ -4060,6 +4061,7 @@ export default function App() {
           modalActiveSet={modalActiveSet}
           setModalActiveSet={setModalActiveSet}
           mockViewMode={mockViewMode}
+          quizMode={quizMode}
           onClose={() => setActiveMockChapterModal(null)}
           onStartPractice={(topic, questions, subType, setNum) => {
             startClubbedChapterQuiz(topic, questions, subType, setNum);
