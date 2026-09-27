@@ -81,9 +81,7 @@ function getRootMenuKeyboard(): InlineKeyboard {
   return new InlineKeyboard()
     .text('📁 Chapter Bank', 'nav_chapter_bank')
     .row()
-    .text('🎯 Mock Errors (1,004 Qs)', 'nav_mock_errors')
-    .row()
-    .text('📕 My Quiz Mistakes', 'nav_quiz_mistakes')
+    .text('📕 Mistake Notebook (1,004+ Errors)', 'nav_mistakes')
     .row()
     .text('⚡ Speed Lab', 'nav_speed_lab');
 }
@@ -250,7 +248,7 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
 
   afterQuizKeyboard
     .text('📁 Chapter Bank', 'nav_chapter_bank')
-    .text('🎯 Mock Errors', 'nav_mock_errors')
+    .text('📕 Mistake Notebook', 'nav_mistakes')
     .row()
     .text('⚡ Speed Lab', 'nav_speed_lab')
     .text('🏠 Menu', 'nav_root');
@@ -719,56 +717,91 @@ const SUB_TO_SHORT: Record<string, string> = {
 };
 
 // ----------------------------------------------------
-// SECTION A: MOCK ERRORS (THE 1,004 FULL MOCK TEST QUESTIONS)
+// ----------------------------------------------------
+// UNIFIED MISTAKE NOTEBOOK (COMBINED MOCK ERRORS & QUIZ MISTAKES)
 // ----------------------------------------------------
 
-bot.callbackQuery('nav_mock_errors', async (ctx) => {
-  const subjects = getMockErrorSubjectsSummary();
-  const totalMockQs = subjects.reduce((sum, s) => sum + s.total, 0);
+bot.callbackQuery(['nav_mistakes', 'nav_mock_errors', 'nav_quiz_mistakes'], async (ctx) => {
+  await ctx.answerCallbackQuery().catch(() => {});
+  const userId = ctx.from?.id || 0;
+  const mockSubjects = getMockErrorSubjectsSummary();
+  const userStats = getMistakeStats(userId, 'all');
 
+  let totalQuestions = 0;
   const kb = new InlineKeyboard();
-  for (const s of subjects) {
-    kb.text(`${s.title} (${s.total} Qs)`, `me_sub:${s.shortCode}`).row();
+
+  for (const s of mockSubjects) {
+    const userSubStat = userStats.find((u) => u.shortCode === s.shortCode);
+    const userCount = userSubStat?.total || 0;
+    const combinedCount = s.total + userCount;
+    totalQuestions += combinedCount;
+
+    kb.text(`${s.title} (${combinedCount} Errors)`, `mb_sub:${s.shortCode}`).row();
   }
+
+  kb.url('🌐 Open Web Mistake Notebook', 'https://ssc27.vercel.app/?view=botErrors').row();
   kb.text('⬅️ Back to Menu', 'nav_root');
 
   const text =
-    `🎯 *SSC CGL Mock Test Errors*\n\n` +
-    `*${totalMockQs}* real questions from your full mock exams, organized by subject and chapter.\n\n` +
-    `Select a subject to drill:`;
+    `📕 *Mistake Notebook & Error Bank*\n\n` +
+    `*${totalQuestions.toLocaleString()}* questions from your full mock tests and live quiz practice, categorized chapter-wise for targeted revision.\n\n` +
+    `Select a subject to drill your mistakes:`;
 
   await ctx.editMessageText(text, {
     parse_mode: 'Markdown',
     reply_markup: kb,
   });
-  await ctx.answerCallbackQuery();
 });
 
-// Subject Chapter List for Mock Errors
-bot.callbackQuery(/^me_sub:(eng|math|reas|ga)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
+// Subject Chapter List for Unified Mistakes
+bot.callbackQuery(/^(?:mb_sub|me_sub|qm_sub):(eng|math|reas|ga)$/, async (ctx) => {
+  await ctx.answerCallbackQuery().catch(() => {});
   const subCode = ctx.match[1];
   const subjectId = SHORT_TO_SUB[subCode];
-  const subjects = getMockErrorSubjectsSummary();
-  const subInfo = subjects.find((s) => s.shortCode === subCode);
-  if (!subInfo) return;
+  const userId = ctx.from?.id || 0;
+
+  const mockSubjects = getMockErrorSubjectsSummary();
+  const subInfo = mockSubjects.find((s) => s.shortCode === subCode);
+  const userStats = getMistakeStats(userId, 'all');
+  const userSubStat = userStats.find((s) => s.shortCode === subCode);
+
+  const mockTotal = subInfo?.total || 0;
+  const userTotal = userSubStat?.total || 0;
+  const combinedTotal = mockTotal + userTotal;
+
+  // Merge chapters from Mock Errors and User Live Mistakes
+  const chapterMap = new Map<string, { name: string; count: number }>();
+  if (subInfo) {
+    for (const ch of subInfo.chapters) {
+      chapterMap.set(ch.slug, { name: ch.name, count: ch.count });
+    }
+  }
+  if (userSubStat) {
+    for (const t of userSubStat.topics) {
+      const existing = chapterMap.get(t.slug);
+      if (existing) {
+        existing.count += t.count;
+      } else {
+        chapterMap.set(t.slug, { name: t.topic, count: t.count });
+      }
+    }
+  }
 
   const kb = new InlineKeyboard();
-  // Quick drill buttons
-  kb.text(`🔥 Drill All (${subInfo.total} Qs)`, `me_run:${subCode}:_:all`)
-    .text('⚡ Quick 10', `me_run:${subCode}:_:10`)
+  kb.text(`🔥 Drill All (${combinedTotal} Errors)`, `mb_run:${subCode}:_:all`)
+    .text('⚡ Quick 10', `mb_run:${subCode}:_:10`)
     .row();
 
-  // Chapters list
-  for (const ch of subInfo.chapters) {
-    kb.text(`${ch.name} (${ch.count})`, `me_top:${subCode}:${ch.slug}`).row();
+  const sortedChapters = Array.from(chapterMap.entries()).sort((a, b) => b[1].count - a[1].count);
+  for (const [slug, data] of sortedChapters) {
+    kb.text(`${data.name} (${data.count})`, `mb_top:${subCode}:${slug}`).row();
   }
-  kb.text('⬅️ Back to Mock Errors', 'nav_mock_errors');
+  kb.text('⬅️ Back to Mistake Notebook', 'nav_mistakes');
 
   const text =
-    `🎯 *${subInfo.title} Mock Errors*\n` +
-    `Total: *${subInfo.total}* questions across ${subInfo.chapters.length} chapters.\n\n` +
-    `Choose a chapter to practice or start a full session:`;
+    `📕 *${subInfo?.title || 'Subject'} Mistakes*\n` +
+    `Total: *${combinedTotal}* error questions across ${sortedChapters.length} chapters.\n\n` +
+    `Choose a chapter or start a general drill:`;
 
   await ctx.editMessageText(text, {
     parse_mode: 'Markdown',
@@ -776,26 +809,31 @@ bot.callbackQuery(/^me_sub:(eng|math|reas|ga)$/, async (ctx) => {
   });
 });
 
-// Topic Drill Options for Mock Errors
-bot.callbackQuery(/^me_top:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
+// Topic Drill Options for Unified Mistakes
+bot.callbackQuery(/^(?:mb_top|me_top|qm_top):(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery().catch(() => {});
   const [_, subCode, slug] = ctx.match;
   const subjectId = SHORT_TO_SUB[subCode];
-  const subjects = getMockErrorSubjectsSummary();
-  const subInfo = subjects.find((s) => s.shortCode === subCode);
+  const userId = ctx.from?.id || 0;
+
+  const mockSubjects = getMockErrorSubjectsSummary();
+  const subInfo = mockSubjects.find((s) => s.shortCode === subCode);
   const chapter = subInfo?.chapters.find((c) => c.slug === slug);
-  const chTitle = chapter?.name || 'Mock Chapter';
-  const count = chapter?.count || 0;
+  const chTitle = chapter?.name || slug.replace(/_/g, ' ');
+
+  const mockQs = getMockErrorQuestions(subjectId, slug === '_' ? undefined : slug);
+  const userQs = getUserMistakes(userId, 'all', subjectId, slug === '_' ? undefined : slug);
+  const totalCount = mockQs.length + userQs.length;
 
   const kb = new InlineKeyboard()
-    .text(`🔥 Practice All (${count} Qs)`, `me_run:${subCode}:${slug}:all`)
-    .text('⚡ Quick 10', `me_run:${subCode}:${slug}:10`)
+    .text(`🔥 Practice All (${totalCount} Qs)`, `mb_run:${subCode}:${slug}:all`)
+    .text('⚡ Quick 10', `mb_run:${subCode}:${slug}:10`)
     .row()
-    .text('⬅️ Back to Chapters', `me_sub:${subCode}`);
+    .text('⬅️ Back to Chapters', `mb_sub:${subCode}`);
 
   await ctx.editMessageText(
     `📌 *${chTitle}*\n` +
-    `Source: *Full Mock Test Series* • *${count}* Questions\n\n` +
+    `Combined Mistakes: *${totalCount}* Questions (Mock Tests + Quiz Practice)\n\n` +
     `Choose drill length:`,
     {
       parse_mode: 'Markdown',
@@ -804,195 +842,54 @@ bot.callbackQuery(/^me_top:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
   );
 });
 
-// Execute Mock Error Drill
-bot.callbackQuery(/^me_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
+// Execute Unified Mistake Drill
+bot.callbackQuery(/^(?:mb_run|me_run|qm_run):(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
+  await ctx.answerCallbackQuery().catch(() => {});
   const [_, subCode, slug, mode] = ctx.match;
   const subjectId = SHORT_TO_SUB[subCode];
-  const questions = getMockErrorQuestions(subjectId, slug === '_' ? undefined : slug, mode as 'all' | '10');
+  const userId = ctx.from?.id || 0;
 
-  if (!questions || questions.length === 0) {
-    await ctx.reply('No questions found for this selection.', {
+  const mockQs = getMockErrorQuestions(subjectId, slug === '_' ? undefined : slug);
+  const userQs = getUserMistakes(userId, 'all', subjectId, slug === '_' ? undefined : slug);
+
+  // Combine and deduplicate
+  const combinedMap = new Map<string, TelegramQuizQuestion>();
+  for (const q of userQs) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  for (const q of mockQs) {
+    const key = q.id || q.question.trim().toLowerCase();
+    if (!combinedMap.has(key)) {
+      combinedMap.set(key, q);
+    }
+  }
+
+  const allQs = Array.from(combinedMap.values());
+  if (allQs.length === 0) {
+    await ctx.reply('No mistake questions found for this selection.', {
       reply_markup: getRootMenuKeyboard(),
     });
     return;
+  }
+
+  let finalQs = allQs;
+  if (mode === '10' && allQs.length > 10) {
+    finalQs = shuffle(allQs).slice(0, 10);
+  } else if (mode === 'all') {
+    finalQs = shuffle(allQs);
   }
 
   const subjects = getMockErrorSubjectsSummary();
   const subInfo = subjects.find((s) => s.shortCode === subCode);
   const chapter = subInfo?.chapters.find((c) => c.slug === slug);
-  const label = chapter ? chapter.name : subInfo?.title || 'Mock Errors';
+  const label = chapter ? chapter.name : subInfo?.title || 'Mistakes';
 
   await startQuizForUser(
-    ctx.from.id,
+    userId,
     ctx.chat!.id,
-    `🎯 ${label} (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`,
-    questions
-  );
-});
-
-// ----------------------------------------------------
-// SECTION B: MY QUIZ MISTAKES (LIVE WRONG ANSWERS FROM TELEGRAM & WEBSITE QUIZZES)
-// ----------------------------------------------------
-
-bot.callbackQuery('nav_quiz_mistakes', async (ctx) => {
-  const stats = getMistakeStats(ctx.from.id, 'all');
-  const totalMistakes = stats.reduce((sum, s) => sum + s.total, 0);
-
-  if (totalMistakes === 0) {
-    const emptyKb = new InlineKeyboard()
-      .text('📁 Practice Chapter Bank', 'nav_chapter_bank')
-      .row()
-      .text('🎯 Practice Mock Errors', 'nav_mock_errors')
-      .row()
-      .text('⬅️ Back to Menu', 'nav_root');
-
-    await ctx.editMessageText(
-      `📕 *My Quiz Mistakes*\n\n` +
-      `✨ *Zero pending mistakes!*\n\n` +
-      `Whenever you take a quiz on Telegram or the website and answer a question incorrectly, it will automatically appear here topic-wise.\n\n` +
-      `Once you answer it correctly during revision, it will automatically be marked as *Mastered*!`,
-      {
-        parse_mode: 'Markdown',
-        reply_markup: emptyKb,
-      }
-    );
-    await ctx.answerCallbackQuery();
-    return;
-  }
-
-  const kb = new InlineKeyboard();
-  for (const s of stats) {
-    if (s.total > 0) {
-      kb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
-    }
-  }
-  kb.text('⬅️ Back to Menu', 'nav_root');
-
-  const text =
-    `📕 *My Quiz Mistakes Notebook*\n\n` +
-    `You have *${totalMistakes}* active mistakes from your quiz practice.\n` +
-    `Select a subject to drill your missed questions:`;
-
-  await ctx.editMessageText(text, {
-    parse_mode: 'Markdown',
-    reply_markup: kb,
-  });
-  await ctx.answerCallbackQuery();
-});
-
-// Subject Chapter List for Quiz Mistakes
-bot.callbackQuery(/^qm_sub:(eng|math|reas|ga)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const subCode = ctx.match[1];
-  const subjectId = SHORT_TO_SUB[subCode];
-  const stats = getMistakeStats(ctx.from.id, 'all');
-  const subStat = stats.find((s) => s.shortCode === subCode);
-  if (!subStat || subStat.total === 0) {
-    await ctx.editMessageText(`✅ All ${subCode.toUpperCase()} mistakes have been mastered!`, {
-      reply_markup: new InlineKeyboard().text('⬅️ Back to Mistakes', 'nav_quiz_mistakes'),
-    });
-    return;
-  }
-
-  const kb = new InlineKeyboard();
-  kb.text(`🔥 Drill All (${subStat.total} Qs)`, `qm_run:${subCode}:_:all`)
-    .text('⚡ Quick 10', `qm_run:${subCode}:_:10`)
-    .row();
-
-  for (const t of subStat.topics) {
-    if (t.count > 0) {
-      kb.text(`${t.topic} (${t.count})`, `qm_top:${subCode}:${t.slug}`).row();
-    }
-  }
-  kb.text('⬅️ Back to Mistakes', 'nav_quiz_mistakes');
-
-  await ctx.editMessageText(
-    `📕 *${subStat.title} Mistakes*\n` +
-    `Total: *${subStat.total}* wrong questions to revise.\n\n` +
-    `Drill all or choose a specific topic:`,
-    {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    }
-  );
-});
-
-// Topic Drill Options for Quiz Mistakes
-bot.callbackQuery(/^qm_top:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const [_, subCode, slug] = ctx.match;
-  const subjectId = SHORT_TO_SUB[subCode];
-  const stats = getMistakeStats(ctx.from.id, 'all');
-  const subStat = stats.find((s) => s.shortCode === subCode);
-  const topicItem = subStat?.topics.find((t) => t.slug === slug);
-  const topicTitle = topicItem?.topic || 'Topic Practice';
-  const count = topicItem?.count || 0;
-
-  const kb = new InlineKeyboard()
-    .text(`🔥 Practice All (${count} Qs)`, `qm_run:${subCode}:${slug}:all`)
-    .text('⚡ Quick 10', `qm_run:${subCode}:${slug}:10`)
-    .row()
-    .text('🗑️ Clear Topic Mistakes', `qm_del:${subCode}:${slug}`)
-    .row()
-    .text('⬅️ Back to Topics', `qm_sub:${subCode}`);
-
-  await ctx.editMessageText(
-    `📌 *${topicTitle}*\n` +
-    `Mistakes logged: *${count}*\n\n` +
-    `Select drill mode:`,
-    {
-      parse_mode: 'Markdown',
-      reply_markup: kb,
-    }
-  );
-});
-
-// Clear Quiz Topic Mistakes
-bot.callbackQuery(/^qm_del:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const [_, subCode, slug] = ctx.match;
-  const subjectId = SHORT_TO_SUB[subCode];
-
-  const questions = getUserMistakes(ctx.from.id, 'all', subjectId, slug === '_' ? undefined : slug);
-  for (const q of questions) {
-    deleteMistake(ctx.from.id, q.id, q.question);
-  }
-
-  await ctx.editMessageText(
-    `✅ *Cleared ${questions.length} Mistakes!*\n\n` +
-    `These questions have been cleared from your live mistake notebook.`,
-    {
-      parse_mode: 'Markdown',
-      reply_markup: new InlineKeyboard().text('⬅️ Back to Mistakes', 'nav_quiz_mistakes'),
-    }
-  );
-});
-
-// Execute Quiz Mistake Drill
-bot.callbackQuery(/^qm_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const [_, subCode, slug, mode] = ctx.match;
-  const subjectId = SHORT_TO_SUB[subCode];
-  let questions = getUserMistakes(ctx.from.id, 'all', subjectId, slug === '_' ? undefined : slug);
-
-  if (!questions || questions.length === 0) {
-    await ctx.reply('No active mistakes found for this selection! Keep practicing to master concepts.', {
-      reply_markup: getRootMenuKeyboard(),
-    });
-    return;
-  }
-
-  if (mode === '10' && questions.length > 10) {
-    questions = shuffle(questions).slice(0, 10);
-  }
-
-  const subTitle = subjectId.charAt(0).toUpperCase() + subjectId.slice(1).replace('_', ' ');
-  await startQuizForUser(
-    ctx.from.id,
-    ctx.chat!.id,
-    `📕 ${subTitle} Quiz Mistakes (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`,
-    questions
+    `📕 ${label} (${mode === 'all' ? `All ${finalQs.length}` : 'Quick 10'})`,
+    finalQs
   );
 });
 
