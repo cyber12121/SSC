@@ -638,25 +638,25 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       </AnimatePresence>
 
       {/* TOP HEADER & QUICK ACTIONS */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
+      <div className="bg-white rounded-xl border border-slate-200/80 p-3 sm:p-4 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center gap-2.5">
           <button
             onClick={onBack}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back</span>
           </button>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              <h1 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
                 Mistake Notebook
               </h1>
-              <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-mono">
+              <span className="px-2 py-0.5 text-[11px] font-bold rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-mono">
                 {totalFilteredCount} {totalFilteredCount === 1 ? 'question' : 'questions'}
               </span>
             </div>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-[11px] text-slate-500 mt-0.5">
               Subject cards & topic-wise revision bank from @My_cgl_bot & Mock tests.
             </p>
           </div>
@@ -667,10 +667,10 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           {totalFilteredCount > 0 && (
             <button
               onClick={() => startPractice(searchFilteredMistakes)}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
               title="Practice all questions"
             >
-              <Play className="w-3.5 h-3.5 fill-current" />
+              <Play className="w-3 h-3 fill-current" />
               <span>Practice All ({totalFilteredCount})</span>
             </button>
           )}
@@ -678,7 +678,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             href="https://t.me/My_cgl_bot?start=sync"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
             title="Sync latest quiz mistakes from @My_cgl_bot"
           >
             <Smartphone className="w-3.5 h-3.5" />
@@ -687,7 +687,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           <button
             onClick={fetchMistakes}
             disabled={loading}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors border border-slate-200/80 cursor-pointer disabled:opacity-50"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors border border-slate-200/80 cursor-pointer disabled:opacity-50"
             title="Refresh notebook"
           >
             <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? 'animate-spin' : ''}`} />
@@ -698,15 +698,15 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
       {/* LEVEL 1: SUBJECT CARDS GRID */}
       <div>
-        <div className="flex items-center justify-between mb-3 px-1">
-          <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+        <div className="flex items-center justify-between mb-2.5 px-1">
+          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
             Select Subject:
           </span>
           <button
             onClick={() => setSelectedSubject('all')}
-            className={`text-xs px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
+            className={`text-[11px] px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
               selectedSubject === 'all'
-                ? 'bg-slate-900 text-white shadow-xs'
+                ? 'bg-slate-900 text-white shadow-2xs'
                 : 'text-slate-500 hover:text-slate-900 bg-slate-100 hover:bg-slate-200'
             }`}
           >
@@ -714,7 +714,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           </button>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
           {(['english', 'mathematics', 'reasoning', 'general_awareness'] as const).map((subKey) => {
             const conf = SUBJECT_CONFIG[subKey];
             const stats = subjectStats[subKey];
@@ -725,7 +725,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               <div
                 key={subKey}
                 onClick={() => setSelectedSubject(subKey)}
-                className={`rounded-2xl border p-4 sm:p-5 transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between min-h-[120px] sm:min-h-[135px] ${
+                className={`rounded-xl border p-3 sm:p-3.5 transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between min-h-[96px] sm:min-h-[104px] ${
                   isSelected
                     ? `${conf.activeBorder} ${conf.activeBg}`
                     : `bg-white hover:border-slate-300 border-slate-200/80 shadow-2xs hover:shadow-xs`
@@ -733,29 +733,29 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               >
                 {/* Active Indicator Pip */}
                 {isSelected && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-rose-500" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500 to-rose-500" />
                 )}
 
                 {/* Top Row: Icon & Subject Label */}
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl sm:text-2xl">{conf.icon}</span>
-                    <span className={`text-sm sm:text-base font-bold ${isSelected ? 'text-slate-900' : 'text-slate-700'}`}>
+                <div className="flex items-center justify-between gap-1.5">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base sm:text-lg">{conf.icon}</span>
+                    <span className={`text-xs sm:text-sm font-bold ${isSelected ? 'text-slate-900' : 'text-slate-700'}`}>
                       {conf.label}
                     </span>
                   </div>
                   {isSelected && (
-                    <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse" />
                   )}
                 </div>
 
-                {/* Bottom Row: Large Metric Count & Topic Sub-stat */}
-                <div className="mt-3 pt-3 border-t border-slate-100/80 flex items-end justify-between">
+                {/* Bottom Row: Metric Count & Topic Sub-stat */}
+                <div className="mt-2 pt-2 border-t border-slate-100/80 flex items-end justify-between">
                   <div>
-                    <div className="text-2xl sm:text-3xl font-black text-slate-900 leading-none">
+                    <div className="text-lg sm:text-xl font-black text-slate-900 leading-none">
                       {stats.total}
                     </div>
-                    <div className="text-[11px] font-semibold text-slate-500 mt-1">
+                    <div className="text-[10px] font-semibold text-slate-400 mt-1">
                       {hasMistakes
                         ? `${stats.topicMap.size} ${stats.topicMap.size === 1 ? 'Topic' : 'Topics'}`
                         : '0 Mistakes'}
@@ -769,7 +769,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                         const allSubQuestions = Array.from(stats.topicMap.values()).flat();
                         startPractice(allSubQuestions);
                       }}
-                      className="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer flex items-center gap-1 shadow-2xs"
+                      className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer flex items-center gap-1 shadow-2xs"
                       title={`Practice all ${stats.total} questions in ${conf.label}`}
                     >
                       <Play className="w-2.5 h-2.5 fill-current" />
@@ -784,21 +784,21 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       </div>
 
       {/* FILTER & SEARCH TOOLBAR */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 p-3 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+      <div className="bg-white rounded-xl border border-slate-200/80 p-2.5 shadow-2xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
         {/* Search */}
         <div className="relative flex-1">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search within questions, topics, or explanations..."
-            className="w-full bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 text-slate-800 placeholder-slate-400 text-xs sm:text-sm rounded-xl pl-9 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+            className="w-full bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 text-slate-800 placeholder-slate-400 text-xs rounded-lg pl-8 pr-7 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 p-1"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 p-0.5"
             >
               ✕
             </button>
@@ -806,12 +806,12 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         </div>
 
         {/* Source Toggle & Study Mode Switch */}
-        <div className="flex items-center gap-2 shrink-0 flex-wrap">
+        <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
           {/* Source Tabs */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+          <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
             <button
               onClick={() => setSourceFilter('all')}
-              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+              className={`px-2 py-1 rounded-md transition-all cursor-pointer ${
                 sourceFilter === 'all' ? 'bg-white text-slate-900 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -819,20 +819,20 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             </button>
             <button
               onClick={() => setSourceFilter('telegram')}
-              className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+              className={`px-2 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
                 sourceFilter === 'telegram' ? 'bg-white text-sky-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Smartphone className="w-3 h-3" />
+              <Smartphone className="w-2.5 h-2.5" />
               <span>Telegram</span>
             </button>
             <button
               onClick={() => setSourceFilter('website')}
-              className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
+              className={`px-2 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
                 sourceFilter === 'website' ? 'bg-white text-indigo-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Laptop className="w-3 h-3" />
+              <Laptop className="w-2.5 h-2.5" />
               <span>Website</span>
             </button>
           </div>
@@ -840,54 +840,54 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           {/* Self-Test Mode Switch */}
           <button
             onClick={() => setStudyMode((prev) => (prev === 'study' ? 'recall' : 'study'))}
-            className={`px-3 py-1.5 rounded-xl border text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+            className={`px-2.5 py-1 rounded-lg border text-[11px] font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               studyMode === 'recall'
                 ? 'bg-amber-50 text-amber-900 border-amber-300 shadow-2xs'
                 : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
             }`}
             title="Toggle between showing solutions or hiding answers for self-testing"
           >
-            {studyMode === 'recall' ? <EyeOff className="w-3.5 h-3.5 text-amber-600" /> : <Eye className="w-3.5 h-3.5 text-slate-500" />}
+            {studyMode === 'recall' ? <EyeOff className="w-3 h-3 text-amber-600" /> : <Eye className="w-3 h-3 text-slate-500" />}
             <span>{studyMode === 'recall' ? 'Self-Test Mode' : 'Study Mode'}</span>
           </button>
         </div>
       </div>
 
       {/* LEVEL 2: TOPIC-WISE CARDS (UNDER SELECTED SUBJECT) */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         {loading && mistakes.length === 0 ? (
-          <div className="bg-white rounded-2xl border border-slate-200/80 p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
-            <RefreshCw className="w-8 h-8 animate-spin text-indigo-600" />
-            <p className="text-sm font-semibold text-slate-600">Loading your mistake notebook...</p>
+          <div className="bg-white rounded-xl border border-slate-200/80 p-8 text-center flex flex-col items-center justify-center gap-2 shadow-2xs">
+            <RefreshCw className="w-6 h-6 animate-spin text-indigo-600" />
+            <p className="text-xs font-semibold text-slate-600">Loading your mistake notebook...</p>
           </div>
         ) : error ? (
-          <div className="bg-rose-50 border border-rose-200 rounded-2xl p-8 text-center flex flex-col items-center justify-center gap-2">
-            <AlertCircle className="w-8 h-8 text-rose-600" />
-            <p className="text-sm font-bold text-rose-800">{error}</p>
+          <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 text-center flex flex-col items-center justify-center gap-2">
+            <AlertCircle className="w-6 h-6 text-rose-600" />
+            <p className="text-xs font-bold text-rose-800">{error}</p>
             <button
               onClick={fetchMistakes}
-              className="mt-2 px-4 py-2 bg-rose-600 text-white rounded-xl text-xs font-bold hover:bg-rose-700 transition-colors shadow-2xs cursor-pointer"
+              className="mt-1 px-3 py-1.5 bg-rose-600 text-white rounded-lg text-xs font-bold hover:bg-rose-700 transition-colors shadow-2xs cursor-pointer"
             >
               Retry
             </button>
           </div>
         ) : totalFilteredCount === 0 ? (
-          <div className="bg-white rounded-2xl border border-slate-200/80 p-10 sm:p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
-            <div className="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-2xl">
+          <div className="bg-white rounded-xl border border-slate-200/80 p-8 text-center flex flex-col items-center justify-center gap-2 shadow-2xs">
+            <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-lg">
               🎯
             </div>
-            <h3 className="text-base sm:text-lg font-bold text-slate-800">No Mistakes Found</h3>
-            <p className="text-xs sm:text-sm text-slate-500 max-w-md leading-relaxed">
+            <h3 className="text-sm font-bold text-slate-800">No Mistakes Found</h3>
+            <p className="text-xs text-slate-500 max-w-md leading-relaxed">
               When you miss questions in @My_cgl_bot quizzes or website mocks, they will be organized into subject cards and chapter cards here.
             </p>
-            <div className="pt-2">
+            <div className="pt-1">
               <a
                 href="https://t.me/My_cgl_bot?start=sync"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
               >
-                <Smartphone className="w-4 h-4" />
+                <Smartphone className="w-3.5 h-3.5" />
                 <span>Sync with Telegram Bot (@My_cgl_bot)</span>
               </a>
             </div>
@@ -904,10 +904,10 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                 return (
                   <div
                     key={subKey}
-                    className="bg-white rounded-2xl border border-slate-200/80 p-10 text-center flex flex-col items-center justify-center gap-2 shadow-xs"
+                    className="bg-white rounded-xl border border-slate-200/80 p-8 text-center flex flex-col items-center justify-center gap-1.5 shadow-2xs"
                   >
-                    <span className="text-3xl">{conf.icon}</span>
-                    <h3 className="text-base font-bold text-slate-800">All Mastered in {conf.label}!</h3>
+                    <span className="text-2xl">{conf.icon}</span>
+                    <h3 className="text-sm font-bold text-slate-800">All Mastered in {conf.label}!</h3>
                     <p className="text-xs text-slate-500 max-w-md">
                       You have zero pending mistakes in {conf.label}. Keep drilling to retain mastery!
                     </p>
@@ -918,15 +918,15 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             }
 
             return (
-              <div key={subKey} className="space-y-4">
+              <div key={subKey} className="space-y-3">
                 {/* Subject Section Title Bar */}
-                <div className="flex items-center justify-between gap-3 px-1 border-b border-slate-200/80 pb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">{conf.icon}</span>
-                    <h2 className="text-base sm:text-lg font-black text-slate-900 tracking-tight">
+                <div className="flex items-center justify-between gap-2 px-1 border-b border-slate-200/80 pb-1.5">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">{conf.icon}</span>
+                    <h2 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight">
                       {conf.label} Topics
                     </h2>
-                    <span className="text-xs text-slate-500 font-medium">
+                    <span className="text-[11px] text-slate-400 font-medium">
                       ({stat.total} {stat.total === 1 ? 'question' : 'questions'} across {stat.topicMap.size} {stat.topicMap.size === 1 ? 'topic' : 'topics'})
                     </span>
                   </div>
@@ -936,15 +936,15 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                       const allSubQuestions = Array.from(stat.topicMap.values()).flat();
                       startPractice(allSubQuestions);
                     }}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
+                    className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
                   >
-                    <Play className="w-3 h-3 fill-current" />
+                    <Play className="w-2.5 h-2.5 fill-current" />
                     <span>Practice All {conf.label}</span>
                   </button>
                 </div>
 
                 {/* TOPIC-WISE CARDS GRID FOR THIS SUBJECT */}
-                <div className="space-y-3.5">
+                <div className="space-y-2.5">
                   {topicEntries.map(([topicName, topicQuestions]) => {
                     const cardKey = `${subKey}:${topicName}`;
                     const isOpen = openTopicCards[cardKey] ?? true;
@@ -953,47 +953,47 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     return (
                       <div
                         key={topicName}
-                        className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all hover:border-slate-300"
+                        className="bg-white rounded-xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all hover:border-slate-300"
                       >
                         {/* Topic Card Header */}
                         <div
                           onClick={() => toggleTopicCard(subKey, topicName)}
-                          className="p-4 sm:p-5 flex items-center justify-between gap-3 cursor-pointer bg-slate-50/50 hover:bg-slate-50 transition-colors"
+                          className="p-3 sm:p-3.5 flex items-center justify-between gap-2.5 cursor-pointer bg-slate-50/40 hover:bg-slate-50 transition-colors"
                         >
-                          <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-lg shadow-2xs shrink-0">
+                          <div className="flex items-center gap-2.5">
+                            <div className="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sm shadow-2xs shrink-0">
                               {topicIcon}
                             </div>
                             <div>
-                              <div className="flex items-center gap-2 flex-wrap">
-                                <h3 className="text-base font-bold text-slate-900 tracking-tight">
+                              <div className="flex items-center gap-1.5 flex-wrap">
+                                <h3 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight">
                                   {topicName}
                                 </h3>
-                                <span className={`px-2 py-0.5 text-[11px] font-bold rounded-lg border ${conf.bg} ${conf.text} ${conf.border}`}>
+                                <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded border ${conf.bg} ${conf.text} ${conf.border}`}>
                                   {conf.label}
                                 </span>
                               </div>
-                              <span className="text-xs text-slate-500">
+                              <span className="text-[11px] text-slate-400">
                                 {topicQuestions.length} {topicQuestions.length === 1 ? 'mistake recorded' : 'mistakes recorded'}
                               </span>
                             </div>
                           </div>
 
                           {/* Topic Actions */}
-                          <div className="flex items-center gap-2 shrink-0">
+                          <div className="flex items-center gap-1.5 shrink-0">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 startPractice(topicQuestions);
                               }}
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-bold transition-colors border border-emerald-200 cursor-pointer shadow-2xs"
+                              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] font-bold transition-colors border border-emerald-200 cursor-pointer shadow-2xs"
                               title={`Drill ${topicQuestions.length} questions in ${topicName}`}
                             >
-                              <Play className="w-3 h-3 fill-current" />
+                              <Play className="w-2.5 h-2.5 fill-current" />
                               <span>Practice</span>
                             </button>
-                            <div className="p-1 rounded-lg text-slate-400 hover:text-slate-600">
-                              {isOpen ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
+                            <div className="p-0.5 rounded text-slate-400 hover:text-slate-600">
+                              {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                             </div>
                           </div>
                         </div>
@@ -1005,7 +1005,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
-                              className="border-t border-slate-100 divide-y divide-slate-100 p-4 sm:p-5 space-y-4"
+                              className="border-t border-slate-100 divide-y divide-slate-100 p-3 sm:p-4 space-y-3"
                             >
                               {topicQuestions.map((m, idx) => (
                                 <QuestionItemCard
@@ -1220,36 +1220,36 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
   );
 
   return (
-    <div className="space-y-3.5 pt-2">
+    <div className="space-y-2.5 pt-1.5">
       {/* Top Meta Bar */}
-      <div className="flex items-center justify-between gap-2 flex-wrap">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-bold text-slate-400 font-mono">#{index}</span>
-          <span className={`px-2 py-0.5 text-xs font-bold rounded-lg border ${subConf.bg} ${subConf.text} ${subConf.border}`}>
+      <div className="flex items-center justify-between gap-1.5 flex-wrap">
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <span className="text-[11px] font-bold text-slate-400 font-mono">#{index}</span>
+          <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded border ${subConf.bg} ${subConf.text} ${subConf.border}`}>
             {subConf.label}
           </span>
-          <span className="px-2 py-0.5 text-xs font-medium rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
+          <span className="px-1.5 py-0.5 text-[10px] font-medium rounded bg-slate-100 text-slate-700 border border-slate-200">
             📌 {mistake.topic || 'Practice'}
           </span>
           <span
-            className={`px-2 py-0.5 text-[11px] font-semibold rounded-lg border flex items-center gap-1 ${
+            className={`px-1.5 py-0.5 text-[10px] font-semibold rounded border flex items-center gap-1 ${
               isTelegram ? 'bg-sky-50 text-sky-700 border-sky-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'
             }`}
           >
             {isTelegram ? (
               <>
-                <Smartphone className="w-3 h-3 text-sky-600" />
+                <Smartphone className="w-2.5 h-2.5 text-sky-600" />
                 <span>Telegram Bot</span>
               </>
             ) : (
               <>
-                <Laptop className="w-3 h-3 text-emerald-600" />
+                <Laptop className="w-2.5 h-2.5 text-emerald-600" />
                 <span>Website Mock</span>
               </>
             )}
           </span>
           {mistake.wrongCount > 1 && (
-            <span className="px-2 py-0.5 text-[11px] font-bold rounded-lg bg-rose-50 text-rose-700 border border-rose-200">
+            <span className="px-1.5 py-0.5 text-[10px] font-bold rounded bg-rose-50 text-rose-700 border border-rose-200">
               Missed {mistake.wrongCount}x
             </span>
           )}
@@ -1259,21 +1259,21 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
         <button
           onClick={onDelete}
           disabled={isDeleting}
-          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 text-xs font-semibold transition-colors disabled:opacity-50 cursor-pointer"
+          className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-slate-400 hover:text-rose-600 hover:bg-rose-50 text-[11px] font-semibold transition-colors disabled:opacity-50 cursor-pointer"
           title="Delete from mistake notebook"
         >
-          <Trash2 className="w-3.5 h-3.5" />
+          <Trash2 className="w-3 h-3" />
           <span>{isDeleting ? 'Deleting...' : 'Delete'}</span>
         </button>
       </div>
 
       {/* Question Prompt */}
-      <div className="text-sm sm:text-base font-semibold text-slate-900 leading-relaxed">
+      <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
         {mistake.question}
       </div>
 
       {/* Options */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
         {mistake.options.map((opt, optIdx) => {
           const isCorrect = optIdx === mistake.correctOptionIndex;
           const isChosen = selectedOption === optIdx;
@@ -1291,9 +1291,9 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
               <button
                 key={optIdx}
                 onClick={() => onSelectOption && onSelectOption(optIdx)}
-                className={`text-left p-3 rounded-xl border text-xs sm:text-sm transition-all flex items-start gap-2.5 cursor-pointer ${optStyle}`}
+                className={`text-left p-2 sm:p-2.5 rounded-lg border text-xs transition-all flex items-start gap-2 cursor-pointer ${optStyle}`}
               >
-                <span className="w-5 h-5 rounded-md flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 bg-white border border-slate-200">
+                <span className="w-4.5 h-4.5 rounded flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5 bg-white border border-slate-200">
                   {letters[optIdx]}
                 </span>
                 <span className="leading-snug">{opt}</span>
@@ -1304,18 +1304,18 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
           return (
             <div
               key={optIdx}
-              className={`flex items-start gap-2.5 p-3 rounded-xl text-xs sm:text-sm transition-all border ${
+              className={`flex items-start gap-2 p-2 sm:p-2.5 rounded-lg text-xs transition-all border ${
                 isCorrect
                   ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950 font-medium shadow-2xs'
                   : 'bg-slate-50/60 border-slate-200/70 text-slate-700'
               }`}
             >
               <span
-                className={`w-5 h-5 rounded-md flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 ${
+                className={`w-4.5 h-4.5 rounded flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5 ${
                   isCorrect ? 'bg-emerald-600 text-white shadow-2xs' : 'bg-slate-200 text-slate-600'
                 }`}
               >
-                {isCorrect ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : letters[optIdx]}
+                {isCorrect ? <Check className="w-3 h-3 stroke-[3]" /> : letters[optIdx]}
               </span>
               <span className="leading-snug">{opt}</span>
             </div>
@@ -1325,23 +1325,23 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
 
       {/* Explanation Panel */}
       {(coreExplanation || definitions.length > 0) && (
-        <div className="pt-1">
-          <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 overflow-hidden">
+        <div className="pt-0.5">
+          <div className="rounded-lg border border-slate-200/80 bg-slate-50/70 overflow-hidden">
             <button
               onClick={onToggleSolution}
-              className="w-full p-2.5 sm:px-3.5 sm:py-2.5 flex items-center justify-between text-xs font-bold text-slate-700 hover:text-slate-900 bg-slate-100/50 hover:bg-slate-100/80 transition-colors cursor-pointer"
+              className="w-full px-2.5 py-1.5 sm:px-3 sm:py-2 flex items-center justify-between text-[11px] font-bold text-slate-700 hover:text-slate-900 bg-slate-100/50 hover:bg-slate-100/80 transition-colors cursor-pointer"
             >
               <span className="flex items-center gap-1.5 text-indigo-700">
-                <Sparkles className="w-3.5 h-3.5" />
+                <Sparkles className="w-3 h-3" />
                 <span>Concept & Solution Breakdown</span>
               </span>
-              <span className="text-[11px] text-slate-400 font-normal">
+              <span className="text-[10px] text-slate-400 font-normal">
                 {isExpanded ? 'Hide' : 'Show Details'}
               </span>
             </button>
 
             {isExpanded && (
-              <div className="p-3.5 sm:p-4 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-200/60">
+              <div className="p-3 space-y-2 text-xs text-slate-700 leading-relaxed border-t border-slate-200/60">
                 {coreExplanation && (
                   <p className="whitespace-pre-wrap text-slate-800">
                     {coreExplanation}
@@ -1349,15 +1349,15 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
                 )}
 
                 {definitions.length > 0 && (
-                  <div className="space-y-1.5 pt-2 border-t border-slate-200/60">
-                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  <div className="space-y-1 pt-1.5 border-t border-slate-200/60">
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
                       Options Breakdown:
                     </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {definitions.map((def, dIdx) => (
                         <div
                           key={dIdx}
-                          className="bg-white p-2.5 rounded-lg border border-slate-200/80 shadow-2xs text-xs space-y-0.5"
+                          className="bg-white p-2 rounded-md border border-slate-200/80 shadow-2xs text-[11px] space-y-0.5"
                         >
                           <span className="font-bold text-indigo-900">{def.word}: </span>
                           <span className="text-slate-600">{def.meaning}</span>
