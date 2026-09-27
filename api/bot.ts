@@ -5285,13 +5285,16 @@ function loadFromDisk2() {
     if (fs4.existsSync(TMP_FILE2)) {
       const raw = fs4.readFileSync(TMP_FILE2, "utf8");
       const parsed = JSON.parse(raw);
-      for (const [userIdStr, list] of Object.entries(parsed)) {
-        const uid = Number(userIdStr);
-        const map = /* @__PURE__ */ new Map();
-        for (const item of list) {
-          map.set(item.id, item);
+      if (parsed && typeof parsed === "object") {
+        for (const [userIdStr, list] of Object.entries(parsed)) {
+          if (!Array.isArray(list)) continue;
+          const uid = Number(userIdStr);
+          const map = /* @__PURE__ */ new Map();
+          for (const item of list) {
+            map.set(item.id, item);
+          }
+          userMistakesMap.set(uid, map);
         }
-        userMistakesMap.set(uid, map);
       }
     }
   } catch (err) {
@@ -5484,7 +5487,7 @@ function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
     return;
   }
   const { subject, topic, topicSlug } = classifySubjectAndTopic(q);
-  const correctIdx = Math.max(0, q.options.indexOf(q.correctOption));
+  const correctIdx = typeof q.correctOptionIndex === "number" ? q.correctOptionIndex : 0;
   if (existing) {
     existing.wrongCount = (existing.wrongCount || 1) + 1;
     existing.mastered = false;
@@ -5496,7 +5499,7 @@ function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
       question: q.question,
       options: q.options,
       correctOptionIndex: correctIdx,
-      explanation: q.solution || q.explanation || "",
+      explanation: q.fullSolution || q.explanation || "",
       subject,
       topic,
       topicSlug,
@@ -5546,7 +5549,7 @@ function deleteMistake(userId, questionId, questionText) {
   }
   saveToDisk2();
 }
-function getUserMistakes(userId, filter = "all", subject, topicSlug) {
+function getUserMistakes(userId, filter = "all", subject, topicSlug = "") {
   const results = [];
   const seenQIds = /* @__PURE__ */ new Set();
   const checkAndPush = (item) => {
@@ -5557,12 +5560,11 @@ function getUserMistakes(userId, filter = "all", subject, topicSlug) {
     if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) return;
     if (seenQIds.has(item.id)) return;
     seenQIds.add(item.id);
-    const correctOpt = item.options[item.correctOptionIndex] || item.options[0] || "";
     results.push({
       id: item.id,
       question: item.question,
       options: item.options,
-      correctOption: correctOpt,
+      correctOptionIndex: item.correctOptionIndex,
       explanation: item.explanation,
       subject: item.subject,
       topic: item.topic,

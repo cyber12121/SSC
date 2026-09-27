@@ -1238,7 +1238,7 @@ export default function App() {
               question: item.question.question,
               options: item.question.options,
               correctOption: item.question.answer,
-              explanation: item.question.explanation || item.question.solution,
+              explanation: (item.question as any).explanation || item.question.solution || '',
               subject: item.question.subject || results.subject || 'general_awareness',
               topic: item.question.topic || results.chapter_title || 'Quiz Practice',
             }

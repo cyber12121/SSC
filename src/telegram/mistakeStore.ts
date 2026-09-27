@@ -49,13 +49,16 @@ function loadFromDisk() {
     if (fs.existsSync(TMP_FILE)) {
       const raw = fs.readFileSync(TMP_FILE, 'utf8');
       const parsed: Record<string, RecordedMistake[]> = JSON.parse(raw);
-      for (const [userIdStr, list] of Object.entries(parsed)) {
-        const uid = Number(userIdStr);
-        const map = new Map<string, RecordedMistake>();
-        for (const item of list) {
-          map.set(item.id, item);
+      if (parsed && typeof parsed === 'object') {
+        for (const [userIdStr, list] of Object.entries(parsed)) {
+          if (!Array.isArray(list)) continue;
+          const uid = Number(userIdStr);
+          const map = new Map<string, RecordedMistake>();
+          for (const item of list) {
+            map.set(item.id, item);
+          }
+          userMistakesMap.set(uid, map);
         }
-        userMistakesMap.set(uid, map);
       }
     }
   } catch (err) {
@@ -242,7 +245,7 @@ export function recordMistake(
 
   // Answer was incorrect
   const { subject, topic, topicSlug } = classifySubjectAndTopic(q);
-  const correctIdx = Math.max(0, q.options.indexOf(q.correctOption));
+  const correctIdx = typeof q.correctOptionIndex === 'number' ? q.correctOptionIndex : 0;
 
   if (existing) {
     existing.wrongCount = (existing.wrongCount || 1) + 1;
@@ -255,7 +258,7 @@ export function recordMistake(
       question: q.question,
       options: q.options,
       correctOptionIndex: correctIdx,
-      explanation: q.solution || q.explanation || '',
+      explanation: q.fullSolution || q.explanation || '',
       subject,
       topic,
       topicSlug,
@@ -321,7 +324,7 @@ export function getUserMistakes(
   userId: number,
   filter: MistakeFilter = 'all',
   subject?: 'english' | 'mathematics' | 'reasoning' | 'general_awareness',
-  topicSlug?: string
+  topicSlug: string = ''
 ): TelegramQuizQuestion[] {
   const results: TelegramQuizQuestion[] = [];
   const seenQIds = new Set<string>();
@@ -332,16 +335,16 @@ export function getUserMistakes(
     if (filter !== 'all' && item.source !== filter) return;
     if (subject && item.subject !== subject) return;
     if (topicSlug && topicSlug !== '_' && item.topicSlug !== topicSlug) return;
+
     if (seenQIds.has(item.id)) return;
 
     seenQIds.add(item.id);
-    const correctOpt = item.options[item.correctOptionIndex] || item.options[0] || '';
 
     results.push({
       id: item.id,
       question: item.question,
       options: item.options,
-      correctOption: correctOpt,
+      correctOptionIndex: item.correctOptionIndex,
       explanation: item.explanation,
       subject: item.subject,
       topic: item.topic,
