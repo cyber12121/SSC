@@ -108,7 +108,24 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'srs' | 'botErrors'>('home');
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'srs' | 'botErrors'>(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const search = window.location.search;
+        if (search) {
+          const params = new URLSearchParams(search);
+          const v = params.get('view');
+          if (v === 'botErrors' || params.has('syncQ') || params.has('syncBatch')) {
+            return 'botErrors';
+          }
+          if (v === 'mockScores' || v === 'drill' || v === 'srs' || v === 'dashboard' || v === 'bookmarks') {
+            return v as any;
+          }
+        }
+      } catch {}
+    }
+    return 'home';
+  });
   const [srsCards, setSrsCards] = useState<SRSCard[]>(() => getStoredSRSCards());
   const [srsConfirmCards, setSrsConfirmCards] = useState<Array<Partial<SRSCard>>>([]);
   const [srsConfirmOpen, setSrsConfirmOpen] = useState(false);
@@ -118,7 +135,22 @@ export default function App() {
   useEffect(() => {
     const updateSrs = () => setSrsCards(getStoredSRSCards());
     window.addEventListener(SRS_UPDATED_EVENT, updateSrs);
-    return () => window.removeEventListener(SRS_UPDATED_EVENT, updateSrs);
+
+    const handleUrlChange = () => {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const v = params.get('view');
+        if (v === 'botErrors' || params.has('syncQ') || params.has('syncBatch')) {
+          setView('botErrors');
+        }
+      } catch {}
+    };
+    window.addEventListener('popstate', handleUrlChange);
+
+    return () => {
+      window.removeEventListener(SRS_UPDATED_EVENT, updateSrs);
+      window.removeEventListener('popstate', handleUrlChange);
+    };
   }, []);
 
   const srsDueCount = useMemo(() => computeDeckStats(srsCards).dueToday, [srsCards]);

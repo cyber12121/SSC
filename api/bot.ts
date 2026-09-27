@@ -5223,7 +5223,8 @@ function startSession(userId, chatId, drillTitle, questions) {
     currentIndex: 0,
     score: 0,
     startTime: Date.now(),
-    answeredCount: 0
+    answeredCount: 0,
+    missedQuestions: []
   };
   sessions.set(userId, session);
   saveToDisk();
@@ -38892,6 +38893,30 @@ function cleanExplanationForTelegram(raw) {
   }
   return text.trim();
 }
+function encodeQuestionForSync(q) {
+  const min = {
+    id: q.id,
+    q: q.question,
+    opts: q.options,
+    ans: q.correctOptionIndex,
+    exp: q.fullSolution || q.explanation || "",
+    sub: q.subject || "general_awareness",
+    top: q.topic || "Telegram Quiz"
+  };
+  return Buffer.from(JSON.stringify(min), "utf8").toString("base64url");
+}
+function encodeBatchForSync(questions) {
+  const list = questions.slice(0, 30).map((q) => ({
+    id: q.id,
+    q: q.question,
+    opts: q.options,
+    ans: q.correctOptionIndex,
+    exp: q.fullSolution || q.explanation || "",
+    sub: q.subject || "general_awareness",
+    top: q.topic || "Telegram Quiz"
+  }));
+  return Buffer.from(JSON.stringify(list), "utf8").toString("base64url");
+}
 async function sendCurrentQuestion(botInstance, session) {
   if (session.currentIndex >= session.questions.length) {
     await sendCompletionSummary(botInstance, session);
@@ -38954,7 +38979,9 @@ async function sendCompletionSummary(botInstance, session) {
 _${comment}_`;
   const afterQuizKeyboard = new InlineKeyboard();
   if (score < total) {
-    afterQuizKeyboard.url("\u{1F4D6} View Solutions & AI Tutor on Web", "https://ssc27.vercel.app/?view=botErrors").row();
+    const missed = session.missedQuestions && session.missedQuestions.length > 0 ? session.missedQuestions : session.questions.slice(0, 25);
+    const syncParam = encodeBatchForSync(missed);
+    afterQuizKeyboard.url(`\u{1F4D6} View ${missed.length} Solutions & AI Tutor on Web`, `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncParam}`).row();
   }
   afterQuizKeyboard.text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
   clearSession(session.userId);
@@ -38978,7 +39005,53 @@ async function startQuizForUser(userId, chatId, title, questions) {
   const session = startSession(userId, chatId, title, questions);
   await sendCurrentQuestion(bot, session);
 }
+async function handleSyncCommand(ctx) {
+  const userId = ctx.from?.id;
+  if (!userId) return;
+  const mistakes = getUserMistakes(userId);
+  const session = getSession(userId);
+  const missedInSession = session?.missedQuestions || [];
+  const combinedMap = /* @__PURE__ */ new Map();
+  for (const q of mistakes) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  for (const q of missedInSession) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  const allMistakes = Array.from(combinedMap.values());
+  if (allMistakes.length === 0) {
+    await ctx.reply(
+      `\u{1F4F1} *Sync with Web Mistake Notebook*
+
+No mistakes recorded on Telegram yet! When you practice questions in any quiz from /menu, incorrect questions will automatically be ready to sync here.`,
+      {
+        parse_mode: "Markdown",
+        reply_markup: getRootMenuKeyboard()
+      }
+    );
+    return;
+  }
+  const syncPayload = encodeBatchForSync(allMistakes);
+  const syncUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`;
+  const keyboard = new InlineKeyboard().url(`\u{1F680} Open & Sync ${allMistakes.length} Mistakes on Web`, syncUrl).row().text("\u{1F3E0} Main Menu", "nav_root");
+  await ctx.reply(
+    `\u{1F4F1} *Telegram Mistake Sync Ready!*
+
+Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.
+
+Tap the button below to instantly import them into your **Web Notebook**, view full step-by-step solutions, and practice with the AI Tutor!`,
+    {
+      parse_mode: "Markdown",
+      reply_markup: keyboard
+    }
+  );
+}
 bot.command(["start", "menu"], async (ctx) => {
+  if (ctx.match && ctx.match.trim() === "sync") {
+    return handleSyncCommand(ctx);
+  }
   const name = ctx.from?.first_name || "Aspirant";
   const text = `\u{1F3AF} *SSC CGL Practice Cockpit*
 Welcome, ${name}! Choose a section to drill:`;
@@ -38987,6 +39060,7 @@ Welcome, ${name}! Choose a section to drill:`;
     reply_markup: getRootMenuKeyboard()
   });
 });
+bot.command("sync", handleSyncCommand);
 bot.command("stop", async (ctx) => {
   const session = getSession(ctx.from.id);
   if (!session) {
@@ -39788,7 +39862,12 @@ bot.on("poll_answer", async (ctx) => {
     }
   } else {
     recordMistake(session.userId, currentQ, "telegram_quiz");
-    const webMistakeUrl = "https://ssc27.vercel.app/?view=botErrors";
+    if (!session.missedQuestions) {
+      session.missedQuestions = [];
+    }
+    session.missedQuestions.push(currentQ);
+    const syncParam = encodeQuestionForSync(currentQ);
+    const webMistakeUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`;
     const correctOpt = currentQ.options && currentQ.options[currentQ.correctOptionIndex] ? currentQ.options[currentQ.correctOptionIndex].trim() : "";
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
     let feedbackMsg = `\u274C *Incorrect*
@@ -39898,5 +39977,7 @@ async function handler(req, res) {
 export {
   bot,
   handler as default,
+  encodeBatchForSync,
+  encodeQuestionForSync,
   launchBot
 };

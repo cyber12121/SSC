@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { db, auth } from '../firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { safeStorage } from '../utils/safeStorage';
 import {
   ArrowLeft,
   Trash2,
@@ -41,6 +42,28 @@ interface BotMistakesPageProps {
   onDeleteQuestion?: (questionId: string, questionText: string) => void;
 }
 
+const SYNCED_STORAGE_KEY = 'cgl_synced_telegram_mistakes';
+
+// Safe base64 / base64url UTF-8 decoder
+function decodeSyncPayload(str: string): any {
+  try {
+    let base64 = str.replace(/-/g, '+').replace(/_/g, '/');
+    while (base64.length % 4) {
+      base64 += '=';
+    }
+    const binary = atob(base64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    const decodedText = new TextDecoder().decode(bytes);
+    return JSON.parse(decodedText);
+  } catch (e) {
+    console.error('[BotMistakesPage] Failed to decode sync payload:', e);
+    return null;
+  }
+}
+
 const SUBJECT_COLORS: Record<string, { bg: string; text: string; border: string }> = {
   english: { bg: 'bg-sky-50', text: 'text-sky-700', border: 'border-sky-200' },
   mathematics: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200' },
@@ -69,42 +92,219 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
+  const showToast = (msg: string) => {
+    setToastMessage(msg);
+    setTimeout(() => setToastMessage(null), 4000);
+  };
+
   const fetchMistakes = async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/mistakes');
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-      const data = await res.json();
-      if (Array.isArray(data.mistakes)) {
-        setMistakes(data.mistakes);
+      let serverMistakes: RecordedMistake[] = [];
+      try {
+        const res = await fetch('/api/mistakes');
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data.mistakes)) {
+            serverMistakes = data.mistakes;
+          }
+        }
+      } catch (err: any) {
+        console.warn('[BotMistakesPage] Server mistakes endpoint not available, falling back to local synced mistakes:', err);
       }
+
+      // Load synced telegram mistakes from safeStorage
+      let localSynced: RecordedMistake[] = [];
+      try {
+        const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
+        if (raw) localSynced = JSON.parse(raw);
+      } catch {}
+
+      // Load from Firestore if user is logged in
+      let firestoreMistakes: RecordedMistake[] = [];
+      if (auth.currentUser) {
+        try {
+          const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
+          snap.forEach((d) => {
+            const data = d.data() as RecordedMistake;
+            if (data && data.question) {
+              firestoreMistakes.push({ ...data, id: data.id || d.id });
+            }
+          });
+        } catch {}
+      }
+
+      // Merge and deduplicate
+      const mergedMap = new Map<string, RecordedMistake>();
+      for (const m of serverMistakes) {
+        const key = m.id || m.question.trim().toLowerCase();
+        mergedMap.set(key, m);
+      }
+      for (const m of firestoreMistakes) {
+        const key = m.id || m.question.trim().toLowerCase();
+        mergedMap.set(key, m);
+      }
+      for (const m of localSynced) {
+        const key = m.id || m.question.trim().toLowerCase();
+        if (mergedMap.has(key)) {
+          const existing = mergedMap.get(key)!;
+          existing.wrongCount = Math.max(existing.wrongCount || 1, m.wrongCount || 1);
+        } else {
+          mergedMap.set(key, m);
+        }
+      }
+
+      // Read deleted questions to keep them filtered out
+      let deletedIds = new Set<string>();
+      try {
+        const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
+        if (delRaw) {
+          const arr = JSON.parse(delRaw);
+          if (Array.isArray(arr)) arr.forEach((id) => deletedIds.add(String(id).toLowerCase()));
+        }
+      } catch {}
+
+      const finalList = Array.from(mergedMap.values()).filter((item) => {
+        if (item.id && deletedIds.has(item.id.toLowerCase())) return false;
+        if (item.question && deletedIds.has(item.question.trim().toLowerCase())) return false;
+        return true;
+      });
+
+      finalList.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+      setMistakes(finalList);
     } catch (err: any) {
       console.error('[BotMistakesPage] Fetch error:', err);
-      setError('Unable to load mistakes from server. Check your connection or refresh.');
+      setError('Unable to load mistakes. Please check your connection.');
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
+    // Check URL parameters for direct sync from Telegram
+    if (typeof window !== 'undefined') {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const syncQParam = params.get('syncQ');
+        const syncBatchParam = params.get('syncBatch');
+
+        if (syncQParam || syncBatchParam) {
+          const importedQuestions: any[] = [];
+          if (syncQParam) {
+            const decoded = decodeSyncPayload(syncQParam);
+            if (decoded && decoded.q) importedQuestions.push(decoded);
+          }
+          if (syncBatchParam) {
+            const decoded = decodeSyncPayload(syncBatchParam);
+            if (Array.isArray(decoded)) {
+              importedQuestions.push(...decoded);
+            } else if (decoded && decoded.q) {
+              importedQuestions.push(decoded);
+            }
+          }
+
+          if (importedQuestions.length > 0) {
+            let existingSynced: RecordedMistake[] = [];
+            try {
+              const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
+              if (raw) existingSynced = JSON.parse(raw);
+            } catch {}
+
+            const existingMap = new Map<string, RecordedMistake>();
+            for (const item of existingSynced) {
+              const key = item.id || item.question.trim().toLowerCase();
+              existingMap.set(key, item);
+            }
+
+            let newlyAdded = 0;
+            for (const rawQ of importedQuestions) {
+              const qId = rawQ.id || `tg_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`;
+              const key = qId || rawQ.q?.trim().toLowerCase();
+
+              let opts: string[] = [];
+              if (Array.isArray(rawQ.opts)) {
+                opts = rawQ.opts.map(String);
+              } else if (rawQ.opts && typeof rawQ.opts === 'object') {
+                opts = Object.values(rawQ.opts).map(String);
+              }
+
+              if (existingMap.has(key)) {
+                const ex = existingMap.get(key)!;
+                ex.wrongCount = (ex.wrongCount || 1) + 1;
+                ex.timestamp = Date.now();
+              } else {
+                const newMistake: RecordedMistake = {
+                  id: qId,
+                  userId: 0,
+                  question: rawQ.q || '',
+                  options: opts,
+                  correctOptionIndex: typeof rawQ.ans === 'number' ? rawQ.ans : 0,
+                  explanation: rawQ.exp || '',
+                  subject: rawQ.sub || 'general_awareness',
+                  topic: rawQ.top || 'Telegram Practice',
+                  topicSlug: (rawQ.top || 'telegram').toLowerCase().replace(/\s+/g, '-'),
+                  source: 'telegram_quiz',
+                  timestamp: Date.now(),
+                  wrongCount: 1,
+                  mastered: false,
+                };
+                existingMap.set(key, newMistake);
+                newlyAdded++;
+              }
+            }
+
+            const updatedList = Array.from(existingMap.values());
+            safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(updatedList));
+
+            // Clean query parameters from URL bar
+            params.delete('syncQ');
+            params.delete('syncBatch');
+            const cleanQuery = params.toString() ? `?${params.toString()}` : window.location.pathname;
+            window.history.replaceState({}, document.title, cleanQuery);
+
+            showToast(`✨ Synced ${newlyAdded > 0 ? newlyAdded : importedQuestions.length} mistake(s) from Telegram!`);
+          }
+        }
+      } catch (e) {
+        console.error('[BotMistakesPage] URL sync parsing error:', e);
+      }
+    }
+
     fetchMistakes();
   }, []);
 
-  const showToast = (msg: string) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 3500);
-  };
-
   const handleDelete = async (m: RecordedMistake) => {
-    if (!window.confirm('Delete this question permanently from Firebase and the Telegram bot? It will not appear in future bot drills.')) {
+    if (!window.confirm('Delete this question permanently from your Mistake Notebook? It will not appear in future bot drills.')) {
       return;
     }
 
     setDeletingId(m.id);
     try {
-      // 1. Delete from Server & Telegram Bot Store
-      await fetch('/api/mistakes', {
+      // 1. Remove from local synced storage
+      try {
+        const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
+        if (raw) {
+          const list: RecordedMistake[] = JSON.parse(raw);
+          const filtered = list.filter((item) => item.id !== m.id && item.question.trim().toLowerCase() !== m.question.trim().toLowerCase());
+          safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(filtered));
+        }
+      } catch {}
+
+      // 2. Add to deleted questions set in safeStorage
+      try {
+        let deletedSet: string[] = [];
+        const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
+        if (delRaw) {
+          deletedSet = JSON.parse(delRaw);
+        }
+        if (m.id) deletedSet.push(m.id.toLowerCase());
+        if (m.question) deletedSet.push(m.question.trim().toLowerCase());
+        safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
+      } catch {}
+
+      // 3. Delete from Server & Telegram Bot Store (fire and forget)
+      fetch('/api/mistakes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -112,9 +312,9 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           questionId: m.id,
           questionText: m.question,
         }),
-      });
+      }).catch((err) => console.warn('[BotMistakesPage] /api/mistakes delete notice:', err));
 
-      // 2. Persist to Firebase Firestore deleted_questions (if authenticated)
+      // 4. Persist to Firebase Firestore deleted_questions (if authenticated)
       if (auth.currentUser) {
         try {
           await addDoc(collection(db, 'deleted_questions'), {
@@ -131,14 +331,14 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         }
       }
 
-      // 3. Update local state
+      // 5. Update local state
       setMistakes((prev) => prev.filter((item) => item.id !== m.id && item.question !== m.question));
 
       if (onDeleteQuestion) {
         onDeleteQuestion(m.id, m.question);
       }
 
-      showToast('Question deleted permanently across Firebase & Telegram Bot.');
+      showToast('Question deleted permanently.');
     } catch (err: any) {
       console.error('Delete error:', err);
       alert('Error deleting question: ' + (err?.message || err));
@@ -244,16 +444,26 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             </p>
           </div>
 
-          {/* Action & Refresh Button */}
-          <div className="flex items-center gap-2 self-start md:self-auto shrink-0">
+          {/* Action & Refresh Buttons */}
+          <div className="flex items-center gap-2 self-start md:self-auto shrink-0 flex-wrap">
+            <a
+              href="https://t.me/My_cgl_bot?start=sync"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs hover:shadow-sm cursor-pointer"
+              title="Sync latest quiz mistakes from @My_cgl_bot"
+            >
+              <Smartphone className="w-3.5 h-3.5" />
+              <span>Sync from Telegram</span>
+            </a>
             <button
               onClick={fetchMistakes}
               disabled={loading}
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors border border-slate-200/80 cursor-pointer disabled:opacity-50"
-              title="Sync latest mistakes from server"
+              title="Refresh mistake notebook"
             >
               <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? 'animate-spin' : ''}`} />
-              <span>{loading ? 'Syncing...' : 'Sync Mistakes'}</span>
+              <span>{loading ? 'Refreshing...' : 'Refresh'}</span>
             </button>
           </div>
         </div>
@@ -440,14 +650,25 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             </button>
           </div>
         ) : filteredMistakes.length === 0 ? (
-          <div className="bg-white rounded-2xl border border-slate-200/80 p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
+          <div className="bg-white rounded-2xl border border-slate-200/80 p-10 sm:p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
             <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-3xl">
               🎯
             </div>
             <h3 className="text-lg font-bold text-slate-800">No Mistakes Found!</h3>
             <p className="text-xs sm:text-sm text-slate-500 max-w-md leading-relaxed">
-              No mistakes recorded for this filter. When you practice questions in the Telegram bot or make mistakes in mock tests, they will automatically appear here!
+              When you practice quizzes on Telegram (@My_cgl_bot) or take mock tests on the website, any questions you miss will sync here with complete solutions and AI tutoring.
             </p>
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+              <a
+                href="https://t.me/My_cgl_bot?start=sync"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+              >
+                <Smartphone className="w-4 h-4" />
+                <span>Sync with Telegram Bot (@My_cgl_bot)</span>
+              </a>
+            </div>
           </div>
         ) : (
           <div className="space-y-4">
@@ -478,12 +699,12 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                       </span>
                       <span
                         className={`px-2.5 py-0.5 text-[11px] font-semibold rounded-lg border flex items-center gap-1 ${
-                          m.source === 'telegram_drill'
+                          m.source && m.source.startsWith('telegram')
                             ? 'bg-sky-50 text-sky-700 border-sky-200'
                             : 'bg-emerald-50 text-emerald-700 border-emerald-200'
                         }`}
                       >
-                        {m.source === 'telegram_drill' ? (
+                        {m.source && m.source.startsWith('telegram') ? (
                           <>
                             <Smartphone className="w-3 h-3 text-sky-600" />
                             <span>Telegram Bot</span>

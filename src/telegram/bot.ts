@@ -137,6 +137,36 @@ function cleanExplanationForTelegram(raw: string): string {
 }
 
 // ----------------------------------------------------
+// SYNC PAYLOAD ENCODING FOR WEB NOTEBOOK TRANSFER
+// ----------------------------------------------------
+
+export function encodeQuestionForSync(q: TelegramQuizQuestion): string {
+  const min = {
+    id: q.id,
+    q: q.question,
+    opts: q.options,
+    ans: q.correctOptionIndex,
+    exp: q.fullSolution || q.explanation || '',
+    sub: q.subject || 'general_awareness',
+    top: q.topic || 'Telegram Quiz',
+  };
+  return Buffer.from(JSON.stringify(min), 'utf8').toString('base64url');
+}
+
+export function encodeBatchForSync(questions: TelegramQuizQuestion[]): string {
+  const list = questions.slice(0, 30).map((q) => ({
+    id: q.id,
+    q: q.question,
+    opts: q.options,
+    ans: q.correctOptionIndex,
+    exp: q.fullSolution || q.explanation || '',
+    sub: q.subject || 'general_awareness',
+    top: q.topic || 'Telegram Quiz',
+  }));
+  return Buffer.from(JSON.stringify(list), 'utf8').toString('base64url');
+}
+
+// ----------------------------------------------------
 // QUIZ ENGINE DISPATCH
 // ----------------------------------------------------
 
@@ -209,8 +239,12 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
   const afterQuizKeyboard = new InlineKeyboard();
 
   if (score < total) {
+    const missed = (session.missedQuestions && session.missedQuestions.length > 0)
+      ? session.missedQuestions
+      : session.questions.slice(0, 25);
+    const syncParam = encodeBatchForSync(missed);
     afterQuizKeyboard
-      .url('📖 View Solutions & AI Tutor on Web', 'https://ssc27.vercel.app/?view=botErrors')
+      .url(`📖 View ${missed.length} Solutions & AI Tutor on Web`, `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncParam}`)
       .row();
   }
 
@@ -255,7 +289,61 @@ async function startQuizForUser(
 // COMMAND HANDLERS
 // ----------------------------------------------------
 
+async function handleSyncCommand(ctx: any) {
+  const userId = ctx.from?.id;
+  if (!userId) return;
+
+  const mistakes = getUserMistakes(userId);
+  const session = getSession(userId);
+  const missedInSession = session?.missedQuestions || [];
+
+  const combinedMap = new Map<string, TelegramQuizQuestion>();
+  for (const q of mistakes) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  for (const q of missedInSession) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+
+  const allMistakes = Array.from(combinedMap.values());
+
+  if (allMistakes.length === 0) {
+    await ctx.reply(
+      `📱 *Sync with Web Mistake Notebook*\n\n` +
+      `No mistakes recorded on Telegram yet! When you practice questions in any quiz from /menu, incorrect questions will automatically be ready to sync here.`,
+      {
+        parse_mode: 'Markdown',
+        reply_markup: getRootMenuKeyboard(),
+      }
+    );
+    return;
+  }
+
+  const syncPayload = encodeBatchForSync(allMistakes);
+  const syncUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`;
+
+  const keyboard = new InlineKeyboard()
+    .url(`🚀 Open & Sync ${allMistakes.length} Mistakes on Web`, syncUrl)
+    .row()
+    .text('🏠 Main Menu', 'nav_root');
+
+  await ctx.reply(
+    `📱 *Telegram Mistake Sync Ready!*\n\n` +
+    `Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.\n\n` +
+    `Tap the button below to instantly import them into your **Web Notebook**, view full step-by-step solutions, and practice with the AI Tutor!`,
+    {
+      parse_mode: 'Markdown',
+      reply_markup: keyboard,
+    }
+  );
+}
+
 bot.command(['start', 'menu'], async (ctx) => {
+  if (ctx.match && ctx.match.trim() === 'sync') {
+    return handleSyncCommand(ctx);
+  }
   const name = ctx.from?.first_name || 'Aspirant';
   const text = `🎯 *SSC CGL Practice Cockpit*\nWelcome, ${name}! Choose a section to drill:`;
 
@@ -264,6 +352,8 @@ bot.command(['start', 'menu'], async (ctx) => {
     reply_markup: getRootMenuKeyboard(),
   });
 });
+
+bot.command('sync', handleSyncCommand);
 
 bot.command('stop', async (ctx) => {
   const session = getSession(ctx.from!.id);
@@ -1360,8 +1450,14 @@ bot.on('poll_answer', async (ctx) => {
     }
   } else {
     recordMistake(session.userId, currentQ, 'telegram_quiz');
-    // Deep-link to Web solution & AI mentor
-    const webMistakeUrl = 'https://ssc27.vercel.app/?view=botErrors';
+    if (!session.missedQuestions) {
+      session.missedQuestions = [];
+    }
+    session.missedQuestions.push(currentQ);
+
+    // Deep-link to Web solution & AI mentor with instant question sync payload
+    const syncParam = encodeQuestionForSync(currentQ);
+    const webMistakeUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`;
     const correctOpt = (currentQ.options && currentQ.options[currentQ.correctOptionIndex]) ? currentQ.options[currentQ.correctOptionIndex].trim() : '';
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
 

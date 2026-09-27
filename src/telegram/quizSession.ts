@@ -10,6 +10,7 @@ export interface UserQuizSession {
   startTime: number;
   activePollId?: string;
   answeredCount: number;
+  missedQuestions?: TelegramQuizQuestion[];
 }
 
 // In-memory sessions mapped by userId
@@ -65,6 +66,7 @@ export function startSession(
     score: 0,
     startTime: Date.now(),
     answeredCount: 0,
+    missedQuestions: [],
   };
   sessions.set(userId, session);
   saveToDisk();
