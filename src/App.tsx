@@ -4172,8 +4172,8 @@ export default function App() {
         </nav>
       )}
 
-      {/* Floating Tommy AI Assistant - enabled in practice mode solutions and across all portal views; hidden only during timed mock exam */}
-      {(view !== 'quiz' || quizMode === 'practice') && (
+      {/* Floating Tommy AI Assistant - hidden while practicing or giving test (view === 'quiz') */}
+      {view !== 'quiz' && (
         <AiMentorChat
           mockReports={mockReportsList}
           mockErrorsData={mockData}
