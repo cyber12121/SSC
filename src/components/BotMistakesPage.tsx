@@ -82,41 +82,94 @@ function normalizeSubject(sub?: string): 'english' | 'mathematics' | 'reasoning'
   return 'general_awareness';
 }
 
+function getTopicIcon(topic: string): string {
+  const t = topic.toLowerCase();
+  if (t.includes('antonym')) return '🔠';
+  if (t.includes('synonym')) return '🔤';
+  if (t.includes('one word') || t.includes('ows')) return '📝';
+  if (t.includes('idiom') || t.includes('phrase')) return '💬';
+  if (t.includes('spell')) return '🔤';
+  if (t.includes('spot') || t.includes('error')) return '🔍';
+  if (t.includes('algebra')) return '📐';
+  if (t.includes('trigo')) return '📐';
+  if (t.includes('geom') || t.includes('circle')) return '⭕';
+  if (t.includes('mensur')) return '📦';
+  if (t.includes('percent')) return '📊';
+  if (t.includes('ratio')) return '⚖️';
+  if (t.includes('profit') || t.includes('loss')) return '🏷️';
+  if (t.includes('syllogism')) return '🧠';
+  if (t.includes('series')) return '🔢';
+  if (t.includes('polity') || t.includes('constitution')) return '🏛️';
+  if (t.includes('history')) return '📜';
+  if (t.includes('geo')) return '🌍';
+  if (t.includes('bio')) return '🧬';
+  if (t.includes('phys')) return '⚛️';
+  if (t.includes('chem')) return '🧪';
+  return '📌';
+}
+
 const SUBJECT_CONFIG: Record<
   'english' | 'mathematics' | 'reasoning' | 'general_awareness',
-  { label: string; icon: string; bg: string; text: string; border: string; pillActive: string }
+  {
+    label: string;
+    icon: string;
+    bg: string;
+    text: string;
+    border: string;
+    activeBorder: string;
+    activeBg: string;
+    badgeBg: string;
+    badgeText: string;
+    accentBtn: string;
+  }
 > = {
   english: {
     label: 'English',
     icon: '📖',
-    bg: 'bg-sky-50',
-    text: 'text-sky-700',
+    bg: 'bg-sky-50/60',
+    text: 'text-sky-900',
     border: 'border-sky-200',
-    pillActive: 'bg-sky-600 text-white border-sky-600 shadow-sm'
+    activeBorder: 'border-sky-500 ring-2 ring-sky-500/20 shadow-md',
+    activeBg: 'bg-gradient-to-br from-sky-50 via-white to-white',
+    badgeBg: 'bg-sky-100',
+    badgeText: 'text-sky-800',
+    accentBtn: 'bg-sky-600 hover:bg-sky-700 text-white',
   },
   mathematics: {
-    label: 'Math',
+    label: 'Mathematics',
     icon: '📐',
-    bg: 'bg-amber-50',
-    text: 'text-amber-700',
+    bg: 'bg-amber-50/60',
+    text: 'text-amber-900',
     border: 'border-amber-200',
-    pillActive: 'bg-amber-600 text-white border-amber-600 shadow-sm'
+    activeBorder: 'border-amber-500 ring-2 ring-amber-500/20 shadow-md',
+    activeBg: 'bg-gradient-to-br from-amber-50 via-white to-white',
+    badgeBg: 'bg-amber-100',
+    badgeText: 'text-amber-800',
+    accentBtn: 'bg-amber-600 hover:bg-amber-700 text-white',
   },
   reasoning: {
     label: 'Reasoning',
     icon: '🧠',
-    bg: 'bg-purple-50',
-    text: 'text-purple-700',
+    bg: 'bg-purple-50/60',
+    text: 'text-purple-900',
     border: 'border-purple-200',
-    pillActive: 'bg-purple-600 text-white border-purple-600 shadow-sm'
+    activeBorder: 'border-purple-500 ring-2 ring-purple-500/20 shadow-md',
+    activeBg: 'bg-gradient-to-br from-purple-50 via-white to-white',
+    badgeBg: 'bg-purple-100',
+    badgeText: 'text-purple-800',
+    accentBtn: 'bg-purple-600 hover:bg-purple-700 text-white',
   },
   general_awareness: {
     label: 'GK & GA',
     icon: '🏛️',
-    bg: 'bg-emerald-50',
-    text: 'text-emerald-700',
+    bg: 'bg-emerald-50/60',
+    text: 'text-emerald-900',
     border: 'border-emerald-200',
-    pillActive: 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+    activeBorder: 'border-emerald-500 ring-2 ring-emerald-500/20 shadow-md',
+    activeBg: 'bg-gradient-to-br from-emerald-50 via-white to-white',
+    badgeBg: 'bg-emerald-100',
+    badgeText: 'text-emerald-800',
+    accentBtn: 'bg-emerald-600 hover:bg-emerald-700 text-white',
   },
 };
 
@@ -136,7 +189,6 @@ function cleanAndFormatExplanation(raw: string): {
   const definitions: Array<{ word: string; meaning: string }> = [];
   const otherLines: string[] = [];
 
-  // Parse lines or bullet points
   const rawParts = text.split(/(?:\r?\n|(?=[-•]\s*["']?[A-Za-z]+["']?\s*means))/);
 
   for (let part of rawParts) {
@@ -169,18 +221,16 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Filters & View Controls
-  const [selectedSubject, setSelectedSubject] = useState<string>('all');
-  const [selectedTopic, setSelectedTopic] = useState<string>('all');
+  // Filter & Hierarchy States
+  const [selectedSubject, setSelectedSubject] = useState<'all' | 'english' | 'mathematics' | 'reasoning' | 'general_awareness'>('english');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'telegram' | 'website'>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'chapters' | 'all'>('chapters');
   const [studyMode, setStudyMode] = useState<'study' | 'recall'>('study');
 
-  // Accordion state for chapter cards: topic -> isOpen
-  const [openChapters, setOpenChapters] = useState<Record<string, boolean>>({});
+  // Open / Closed states for Topic Cards (key = "subject:topic")
+  const [openTopicCards, setOpenTopicCards] = useState<Record<string, boolean>>({});
 
-  // Individual card state
+  // Individual question states
   const [expandedSolutions, setExpandedSolutions] = useState<Record<string, boolean>>({});
   const [userSelectedOptions, setUserSelectedOptions] = useState<Record<string, number>>({});
   const [deletingId, setDeletingId] = useState<string | null>(null);
@@ -276,10 +326,29 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       finalList.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
       setMistakes(finalList);
 
-      // Default expand the first chapter
+      // Auto-select subject with mistakes
       if (finalList.length > 0) {
-        const firstTopic = finalList[0].topic || 'General';
-        setOpenChapters((prev) => ({ ...prev, [firstTopic]: true }));
+        const subjectsPriority: Array<'english' | 'mathematics' | 'reasoning' | 'general_awareness'> = [
+          'english',
+          'mathematics',
+          'reasoning',
+          'general_awareness',
+        ];
+        const foundWithMistakes = subjectsPriority.find(
+          (s) => finalList.some((m) => normalizeSubject(m.subject) === s)
+        );
+        if (foundWithMistakes) {
+          setSelectedSubject(foundWithMistakes);
+        }
+
+        // Expand all topic cards by default for smooth browsing
+        const initialOpens: Record<string, boolean> = {};
+        finalList.forEach((m) => {
+          const sub = normalizeSubject(m.subject);
+          const top = m.topic || 'General Practice';
+          initialOpens[`${sub}:${top}`] = true;
+        });
+        setOpenTopicCards(initialOpens);
       }
     } catch (err: any) {
       console.error('[BotMistakesPage] Fetch error:', err);
@@ -366,7 +435,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             const updatedList = Array.from(existingMap.values());
             safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(updatedList));
 
-            // Clean query parameters from URL bar
             params.delete('syncQ');
             params.delete('syncBatch');
             const cleanQuery = params.toString() ? `?${params.toString()}` : window.location.pathname;
@@ -390,7 +458,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
     setDeletingId(m.id);
     try {
-      // 1. Remove from local synced storage
       try {
         const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
         if (raw) {
@@ -400,7 +467,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         }
       } catch {}
 
-      // 2. Add to deleted questions set in safeStorage
       try {
         let deletedSet: string[] = [];
         const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
@@ -412,7 +478,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
       } catch {}
 
-      // 3. Delete from Server & Telegram Bot Store (background)
       fetch('/api/mistakes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -423,7 +488,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         }),
       }).catch((err) => console.warn('[BotMistakesPage] delete error:', err));
 
-      // 4. Persist to Firebase Firestore if logged in
       if (auth.currentUser) {
         try {
           await addDoc(collection(db, 'deleted_questions'), {
@@ -438,7 +502,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         } catch {}
       }
 
-      // 5. Update local state
       setMistakes((prev) => prev.filter((item) => item.id !== m.id && item.question !== m.question));
 
       if (onDeleteQuestion) {
@@ -454,21 +517,12 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     }
   };
 
-  // Filtered Mistakes List
-  const filteredMistakes = useMemo(() => {
+  // Filter by search and source
+  const searchFilteredMistakes = useMemo(() => {
     return mistakes.filter((m) => {
-      // Source filter
       if (sourceFilter === 'telegram' && !m.source.startsWith('telegram')) return false;
       if (sourceFilter === 'website' && !m.source.startsWith('website')) return false;
 
-      // Subject filter
-      const normSub = normalizeSubject(m.subject);
-      if (selectedSubject !== 'all' && normSub !== selectedSubject) return false;
-
-      // Topic filter
-      if (selectedTopic !== 'all' && m.topicSlug !== selectedTopic && m.topic !== selectedTopic) return false;
-
-      // Search
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const matchesQ = m.question.toLowerCase().includes(q);
@@ -478,53 +532,55 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       }
       return true;
     });
-  }, [mistakes, sourceFilter, selectedSubject, selectedTopic, searchQuery]);
+  }, [mistakes, sourceFilter, searchQuery]);
 
-  // Grouped by Chapter / Topic
-  const groupedByTopic = useMemo(() => {
-    const groups = new Map<string, { topic: string; subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness'; items: RecordedMistake[] }>();
-    for (const m of filteredMistakes) {
-      const topic = m.topic || 'General Practice';
-      const existing = groups.get(topic) || { topic, subject: normalizeSubject(m.subject), items: [] };
-      existing.items.push(m);
-      groups.set(topic, existing);
-    }
-    return Array.from(groups.values()).sort((a, b) => b.items.length - a.items.length);
-  }, [filteredMistakes]);
-
-  // Accurate Subject Counts
-  const subjectCounts = useMemo(() => {
-    const counts = {
-      all: mistakes.length,
-      english: 0,
-      mathematics: 0,
-      reasoning: 0,
-      general_awareness: 0,
+  // Subject Stats Calculation (Total Questions & Topic Count for each subject)
+  const subjectStats = useMemo(() => {
+    const map: Record<
+      'english' | 'mathematics' | 'reasoning' | 'general_awareness',
+      {
+        total: number;
+        topicMap: Map<string, RecordedMistake[]>;
+      }
+    > = {
+      english: { total: 0, topicMap: new Map() },
+      mathematics: { total: 0, topicMap: new Map() },
+      reasoning: { total: 0, topicMap: new Map() },
+      general_awareness: { total: 0, topicMap: new Map() },
     };
-    mistakes.forEach((m) => {
-      if (sourceFilter === 'telegram' && !m.source.startsWith('telegram')) return;
-      if (sourceFilter === 'website' && !m.source.startsWith('website')) return;
+
+    searchFilteredMistakes.forEach((m) => {
       const sub = normalizeSubject(m.subject);
-      counts[sub] = (counts[sub] || 0) + 1;
+      map[sub].total++;
+      const topicName = m.topic || 'General Practice';
+      if (!map[sub].topicMap.has(topicName)) {
+        map[sub].topicMap.set(topicName, []);
+      }
+      map[sub].topicMap.get(topicName)!.push(m);
     });
-    return counts;
-  }, [mistakes, sourceFilter]);
 
-  // Overall Stats
-  const stats = useMemo(() => {
-    const telegramCount = mistakes.filter((m) => m.source.startsWith('telegram')).length;
-    const websiteCount = mistakes.filter((m) => m.source.startsWith('website')).length;
-    return {
-      total: mistakes.length,
-      telegramCount,
-      websiteCount,
-    };
-  }, [mistakes]);
+    return map;
+  }, [searchFilteredMistakes]);
 
-  const toggleChapter = (topic: string) => {
-    setOpenChapters((prev) => ({
+  // Active Subject List to Display
+  const displayedSubjects = useMemo(() => {
+    const list: Array<'english' | 'mathematics' | 'reasoning' | 'general_awareness'> = [
+      'english',
+      'mathematics',
+      'reasoning',
+      'general_awareness',
+    ];
+    if (selectedSubject === 'all') return list;
+    return [selectedSubject];
+  }, [selectedSubject]);
+
+  const totalFilteredCount = searchFilteredMistakes.length;
+
+  const toggleTopicCard = (sub: string, topic: string) => {
+    const key = `${sub}:${topic}`;
+    setOpenTopicCards((prev) => ({
       ...prev,
-      [topic]: !prev[topic],
+      [key]: !prev[key],
     }));
   };
 
@@ -565,8 +621,8 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   };
 
   return (
-    <div className="max-w-5xl mx-auto space-y-5 pb-16 animate-in fade-in duration-200">
-      {/* Toast Notification */}
+    <div className="max-w-5xl mx-auto space-y-6 pb-20 animate-in fade-in duration-200">
+      {/* Toast Alert */}
       <AnimatePresence>
         {toastMessage && (
           <motion.div
@@ -581,116 +637,162 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         )}
       </AnimatePresence>
 
-      {/* COMPACT & MODERN TOP HEADER */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 shadow-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onBack}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back</span>
-            </button>
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                  Mistake Notebook
-                </h1>
-                <span className="px-2 py-0.5 text-xs font-bold rounded-full bg-rose-50 text-rose-700 border border-rose-200">
-                  {stats.total} {stats.total === 1 ? 'question' : 'questions'}
-                </span>
-              </div>
-              <p className="text-xs text-slate-500 mt-0.5">
-                Questions missed in Telegram (@My_cgl_bot) or mock tests, organized for targeted recall.
-              </p>
+      {/* TOP HEADER & QUICK ACTIONS */}
+      <div className="bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <button
+            onClick={onBack}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Back</span>
+          </button>
+          <div>
+            <div className="flex items-center gap-2">
+              <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                Mistake Notebook
+              </h1>
+              <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-mono">
+                {totalFilteredCount} {totalFilteredCount === 1 ? 'question' : 'questions'}
+              </span>
             </div>
-          </div>
-
-          {/* Action Toolbar */}
-          <div className="flex items-center gap-2 shrink-0 flex-wrap">
-            {filteredMistakes.length > 0 && (
-              <button
-                onClick={() => startPractice(filteredMistakes)}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
-                title="Practice these questions interactively"
-              >
-                <Play className="w-3.5 h-3.5 fill-current" />
-                <span>Practice ({filteredMistakes.length})</span>
-              </button>
-            )}
-            <a
-              href="https://t.me/My_cgl_bot?start=sync"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
-              title="Sync latest quiz mistakes from @My_cgl_bot"
-            >
-              <Smartphone className="w-3.5 h-3.5" />
-              <span>Sync from Telegram</span>
-            </a>
-            <button
-              onClick={fetchMistakes}
-              disabled={loading}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors border border-slate-200/80 cursor-pointer disabled:opacity-50"
-              title="Refresh notebook"
-            >
-              <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? 'animate-spin' : ''}`} />
-              <span className="hidden sm:inline">{loading ? 'Refreshing...' : 'Refresh'}</span>
-            </button>
+            <p className="text-xs text-slate-500 mt-0.5">
+              Subject cards & topic-wise revision bank from @My_cgl_bot & Mock tests.
+            </p>
           </div>
         </div>
 
-        {/* Clean Subject Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pt-4 mt-4 border-t border-slate-100 scrollbar-none">
+        {/* Action Buttons */}
+        <div className="flex items-center gap-2 shrink-0 flex-wrap">
+          {totalFilteredCount > 0 && (
+            <button
+              onClick={() => startPractice(searchFilteredMistakes)}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+              title="Practice all questions"
+            >
+              <Play className="w-3.5 h-3.5 fill-current" />
+              <span>Practice All ({totalFilteredCount})</span>
+            </button>
+          )}
+          <a
+            href="https://t.me/My_cgl_bot?start=sync"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+            title="Sync latest quiz mistakes from @My_cgl_bot"
+          >
+            <Smartphone className="w-3.5 h-3.5" />
+            <span>Sync Telegram</span>
+          </a>
           <button
-            onClick={() => { setSelectedSubject('all'); setSelectedTopic('all'); }}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer border ${
+            onClick={fetchMistakes}
+            disabled={loading}
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors border border-slate-200/80 cursor-pointer disabled:opacity-50"
+            title="Refresh notebook"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? 'animate-spin' : ''}`} />
+            <span className="hidden sm:inline">{loading ? 'Refreshing...' : 'Refresh'}</span>
+          </button>
+        </div>
+      </div>
+
+      {/* LEVEL 1: SUBJECT CARDS GRID */}
+      <div>
+        <div className="flex items-center justify-between mb-3 px-1">
+          <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+            Select Subject:
+          </span>
+          <button
+            onClick={() => setSelectedSubject('all')}
+            className={`text-xs px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
               selectedSubject === 'all'
-                ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
-                : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                ? 'bg-slate-900 text-white shadow-xs'
+                : 'text-slate-500 hover:text-slate-900 bg-slate-100 hover:bg-slate-200'
             }`}
           >
-            All Subjects ({subjectCounts.all})
+            Show All Subjects ({totalFilteredCount})
           </button>
-          {(['english', 'mathematics', 'reasoning', 'general_awareness'] as const).map((sub) => {
-            const conf = SUBJECT_CONFIG[sub];
-            const isSelected = selectedSubject === sub;
-            const count = subjectCounts[sub] || 0;
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {(['english', 'mathematics', 'reasoning', 'general_awareness'] as const).map((subKey) => {
+            const conf = SUBJECT_CONFIG[subKey];
+            const stats = subjectStats[subKey];
+            const isSelected = selectedSubject === subKey;
+            const hasMistakes = stats.total > 0;
 
             return (
-              <button
-                key={sub}
-                onClick={() => { setSelectedSubject(sub); setSelectedTopic('all'); }}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer border flex items-center gap-1.5 ${
+              <div
+                key={subKey}
+                onClick={() => setSelectedSubject(subKey)}
+                className={`rounded-2xl border p-4 sm:p-5 transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between min-h-[120px] sm:min-h-[135px] ${
                   isSelected
-                    ? conf.pillActive
-                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                    ? `${conf.activeBorder} ${conf.activeBg}`
+                    : `bg-white hover:border-slate-300 border-slate-200/80 shadow-2xs hover:shadow-xs`
                 }`}
               >
-                <span>{conf.icon}</span>
-                <span>{conf.label}</span>
-                <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                  isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
-                }`}>
-                  {count}
-                </span>
-              </button>
+                {/* Active Indicator Pip */}
+                {isSelected && (
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-rose-500" />
+                )}
+
+                {/* Top Row: Icon & Subject Label */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl sm:text-2xl">{conf.icon}</span>
+                    <span className={`text-sm sm:text-base font-bold ${isSelected ? 'text-slate-900' : 'text-slate-700'}`}>
+                      {conf.label}
+                    </span>
+                  </div>
+                  {isSelected && (
+                    <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
+                  )}
+                </div>
+
+                {/* Bottom Row: Large Metric Count & Topic Sub-stat */}
+                <div className="mt-3 pt-3 border-t border-slate-100/80 flex items-end justify-between">
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-black text-slate-900 leading-none">
+                      {stats.total}
+                    </div>
+                    <div className="text-[11px] font-semibold text-slate-500 mt-1">
+                      {hasMistakes
+                        ? `${stats.topicMap.size} ${stats.topicMap.size === 1 ? 'Topic' : 'Topics'}`
+                        : '0 Mistakes'}
+                    </div>
+                  </div>
+
+                  {hasMistakes && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const allSubQuestions = Array.from(stats.topicMap.values()).flat();
+                        startPractice(allSubQuestions);
+                      }}
+                      className="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer flex items-center gap-1 shadow-2xs"
+                      title={`Practice all ${stats.total} questions in ${conf.label}`}
+                    >
+                      <Play className="w-2.5 h-2.5 fill-current" />
+                      <span>Drill</span>
+                    </button>
+                  )}
+                </div>
+              </div>
             );
           })}
         </div>
       </div>
 
-      {/* FILTER & VIEW CONTROLS TOOLBAR */}
+      {/* FILTER & SEARCH TOOLBAR */}
       <div className="bg-white rounded-2xl border border-slate-200/80 p-3 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
-        {/* Search Input */}
+        {/* Search */}
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Filter by question, concept, or word..."
+            placeholder="Search within questions, topics, or explanations..."
             className="w-full bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 text-slate-800 placeholder-slate-400 text-xs sm:text-sm rounded-xl pl-9 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
           />
           {searchQuery && (
@@ -703,9 +805,9 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           )}
         </div>
 
-        {/* View Mode & Source Controls */}
-        <div className="flex items-center gap-2 flex-wrap shrink-0">
-          {/* Source Filter */}
+        {/* Source Toggle & Study Mode Switch */}
+        <div className="flex items-center gap-2 shrink-0 flex-wrap">
+          {/* Source Tabs */}
           <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
             <button
               onClick={() => setSourceFilter('all')}
@@ -722,7 +824,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               }`}
             >
               <Smartphone className="w-3 h-3" />
-              <span>Telegram ({stats.telegramCount})</span>
+              <span>Telegram</span>
             </button>
             <button
               onClick={() => setSourceFilter('website')}
@@ -731,219 +833,208 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               }`}
             >
               <Laptop className="w-3 h-3" />
-              <span>Website ({stats.websiteCount})</span>
+              <span>Website</span>
             </button>
           </div>
 
-          {/* View Mode Switcher: By Chapter vs Flat Stream */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
-            <button
-              onClick={() => setViewMode('chapters')}
-              className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                viewMode === 'chapters' ? 'bg-white text-indigo-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Organize by chapters & topics"
-            >
-              <Folder className="w-3 h-3" />
-              <span>Chapters</span>
-            </button>
-            <button
-              onClick={() => setViewMode('all')}
-              className={`px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                viewMode === 'all' ? 'bg-white text-slate-900 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Show all questions in a single list"
-            >
-              <Layers className="w-3 h-3" />
-              <span>Stream</span>
-            </button>
-          </div>
-
-          {/* Study Mode: Visible vs Recall Mode */}
+          {/* Self-Test Mode Switch */}
           <button
             onClick={() => setStudyMode((prev) => (prev === 'study' ? 'recall' : 'study'))}
-            className={`px-2.5 py-1.5 rounded-xl border text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+            className={`px-3 py-1.5 rounded-xl border text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               studyMode === 'recall'
-                ? 'bg-amber-50 text-amber-800 border-amber-300'
+                ? 'bg-amber-50 text-amber-900 border-amber-300 shadow-2xs'
                 : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
             }`}
-            title="Toggle between showing solutions or hiding answers for active self-testing"
+            title="Toggle between showing solutions or hiding answers for self-testing"
           >
-            {studyMode === 'recall' ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+            {studyMode === 'recall' ? <EyeOff className="w-3.5 h-3.5 text-amber-600" /> : <Eye className="w-3.5 h-3.5 text-slate-500" />}
             <span>{studyMode === 'recall' ? 'Self-Test Mode' : 'Study Mode'}</span>
           </button>
         </div>
       </div>
 
-      {/* MAIN CONTENT AREA */}
-      {loading && mistakes.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-slate-200/80 p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
-          <RefreshCw className="w-8 h-8 animate-spin text-indigo-600" />
-          <p className="text-sm font-semibold text-slate-600">Loading your mistake notebook...</p>
-        </div>
-      ) : error ? (
-        <div className="bg-rose-50 border border-rose-200 rounded-2xl p-8 text-center flex flex-col items-center justify-center gap-2">
-          <AlertCircle className="w-8 h-8 text-rose-600" />
-          <p className="text-sm font-bold text-rose-800">{error}</p>
-          <button
-            onClick={fetchMistakes}
-            className="mt-2 px-4 py-2 bg-rose-600 text-white rounded-xl text-xs font-bold hover:bg-rose-700 transition-colors shadow-2xs cursor-pointer"
-          >
-            Retry
-          </button>
-        </div>
-      ) : filteredMistakes.length === 0 ? (
-        /* Clean Empty State */
-        <div className="bg-white rounded-2xl border border-slate-200/80 p-10 sm:p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
-          <div className="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-2xl">
-            🎯
+      {/* LEVEL 2: TOPIC-WISE CARDS (UNDER SELECTED SUBJECT) */}
+      <div className="space-y-6">
+        {loading && mistakes.length === 0 ? (
+          <div className="bg-white rounded-2xl border border-slate-200/80 p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
+            <RefreshCw className="w-8 h-8 animate-spin text-indigo-600" />
+            <p className="text-sm font-semibold text-slate-600">Loading your mistake notebook...</p>
           </div>
-          <h3 className="text-base sm:text-lg font-bold text-slate-800">No Mistakes Found</h3>
-          <p className="text-xs sm:text-sm text-slate-500 max-w-md leading-relaxed">
-            When you miss questions in @My_cgl_bot quizzes or website mocks, they will be organized chapter-wise here for targeted revision.
-          </p>
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
-            <a
-              href="https://t.me/My_cgl_bot?start=sync"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
-            >
-              <Smartphone className="w-4 h-4" />
-              <span>Sync from Telegram Bot (@My_cgl_bot)</span>
-            </a>
-          </div>
-        </div>
-      ) : viewMode === 'chapters' ? (
-        /* CHAPTER / TOPIC GROUPED ACCORDION VIEW */
-        <div className="space-y-4">
-          <div className="flex items-center justify-between text-xs text-slate-500 px-1">
-            <span>
-              Organized into <strong>{groupedByTopic.length}</strong> chapter {groupedByTopic.length === 1 ? 'folder' : 'folders'} ({filteredMistakes.length} total questions)
-            </span>
+        ) : error ? (
+          <div className="bg-rose-50 border border-rose-200 rounded-2xl p-8 text-center flex flex-col items-center justify-center gap-2">
+            <AlertCircle className="w-8 h-8 text-rose-600" />
+            <p className="text-sm font-bold text-rose-800">{error}</p>
             <button
-              onClick={() => {
-                const allOpen = Object.values(openChapters).every(Boolean);
-                const nextState: Record<string, boolean> = {};
-                groupedByTopic.forEach((g) => {
-                  nextState[g.topic] = !allOpen;
-                });
-                setOpenChapters(nextState);
-              }}
-              className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold cursor-pointer"
+              onClick={fetchMistakes}
+              className="mt-2 px-4 py-2 bg-rose-600 text-white rounded-xl text-xs font-bold hover:bg-rose-700 transition-colors shadow-2xs cursor-pointer"
             >
-              {Object.values(openChapters).every(Boolean) ? 'Collapse All' : 'Expand All'}
+              Retry
             </button>
           </div>
+        ) : totalFilteredCount === 0 ? (
+          <div className="bg-white rounded-2xl border border-slate-200/80 p-10 sm:p-12 text-center flex flex-col items-center justify-center gap-3 shadow-xs">
+            <div className="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-2xl">
+              🎯
+            </div>
+            <h3 className="text-base sm:text-lg font-bold text-slate-800">No Mistakes Found</h3>
+            <p className="text-xs sm:text-sm text-slate-500 max-w-md leading-relaxed">
+              When you miss questions in @My_cgl_bot quizzes or website mocks, they will be organized into subject cards and chapter cards here.
+            </p>
+            <div className="pt-2">
+              <a
+                href="https://t.me/My_cgl_bot?start=sync"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+              >
+                <Smartphone className="w-4 h-4" />
+                <span>Sync with Telegram Bot (@My_cgl_bot)</span>
+              </a>
+            </div>
+          </div>
+        ) : (
+          /* Render Active Subject Sections */
+          displayedSubjects.map((subKey) => {
+            const conf = SUBJECT_CONFIG[subKey];
+            const stat = subjectStats[subKey];
+            const topicEntries = Array.from(stat.topicMap.entries());
 
-          {groupedByTopic.map((group) => {
-            const isOpen = openChapters[group.topic] ?? false;
-            const subConf = SUBJECT_CONFIG[group.subject] || SUBJECT_CONFIG.general_awareness;
+            if (topicEntries.length === 0) {
+              if (selectedSubject !== 'all') {
+                return (
+                  <div
+                    key={subKey}
+                    className="bg-white rounded-2xl border border-slate-200/80 p-10 text-center flex flex-col items-center justify-center gap-2 shadow-xs"
+                  >
+                    <span className="text-3xl">{conf.icon}</span>
+                    <h3 className="text-base font-bold text-slate-800">All Mastered in {conf.label}!</h3>
+                    <p className="text-xs text-slate-500 max-w-md">
+                      You have zero pending mistakes in {conf.label}. Keep drilling to retain mastery!
+                    </p>
+                  </div>
+                );
+              }
+              return null;
+            }
 
             return (
-              <div
-                key={group.topic}
-                className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all hover:border-slate-300"
-              >
-                {/* Chapter Folder Header */}
-                <div
-                  onClick={() => toggleChapter(group.topic)}
-                  className="p-4 sm:p-5 flex items-center justify-between gap-3 cursor-pointer bg-slate-50/50 hover:bg-slate-50 transition-colors"
-                >
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-indigo-600 shadow-2xs">
-                      {isOpen ? <FolderOpen className="w-4 h-4 text-indigo-600" /> : <Folder className="w-4 h-4 text-slate-500" />}
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h3 className="text-base font-bold text-slate-900 tracking-tight">
-                          {group.topic}
-                        </h3>
-                        <span className={`px-2 py-0.5 text-[11px] font-bold rounded-lg border ${subConf.bg} ${subConf.text} ${subConf.border}`}>
-                          {subConf.label}
-                        </span>
-                      </div>
-                      <span className="text-xs text-slate-500">
-                        {group.items.length} {group.items.length === 1 ? 'question recorded' : 'questions recorded'}
-                      </span>
-                    </div>
+              <div key={subKey} className="space-y-4">
+                {/* Subject Section Title Bar */}
+                <div className="flex items-center justify-between gap-3 px-1 border-b border-slate-200/80 pb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{conf.icon}</span>
+                    <h2 className="text-base sm:text-lg font-black text-slate-900 tracking-tight">
+                      {conf.label} Topics
+                    </h2>
+                    <span className="text-xs text-slate-500 font-medium">
+                      ({stat.total} {stat.total === 1 ? 'question' : 'questions'} across {stat.topicMap.size} {stat.topicMap.size === 1 ? 'topic' : 'topics'})
+                    </span>
                   </div>
 
-                  <div className="flex items-center gap-2 shrink-0">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        startPractice(group.items);
-                      }}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-bold transition-colors border border-emerald-200 cursor-pointer"
-                      title="Drill questions from this chapter"
-                    >
-                      <Play className="w-3 h-3 fill-current" />
-                      <span>Practice</span>
-                    </button>
-                    <div className="p-1 rounded-lg text-slate-400 hover:text-slate-600">
-                      {isOpen ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-                    </div>
-                  </div>
+                  <button
+                    onClick={() => {
+                      const allSubQuestions = Array.from(stat.topicMap.values()).flat();
+                      startPractice(allSubQuestions);
+                    }}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
+                  >
+                    <Play className="w-3 h-3 fill-current" />
+                    <span>Practice All {conf.label}</span>
+                  </button>
                 </div>
 
-                {/* Chapter Question Cards (Accordion Body) */}
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="border-t border-slate-100 divide-y divide-slate-100 p-4 sm:p-5 space-y-4"
-                    >
-                      {group.items.map((m, idx) => (
-                        <QuestionItemCard
-                          key={m.id || idx}
-                          index={idx + 1}
-                          mistake={m}
-                          studyMode={studyMode}
-                          onDelete={() => handleDelete(m)}
-                          isDeleting={deletingId === m.id}
-                          isExpanded={expandedSolutions[m.id] ?? true}
-                          onToggleSolution={() => toggleSolution(m.id)}
-                          selectedOption={userSelectedOptions[m.id]}
-                          onSelectOption={(opt) => {
-                            setUserSelectedOptions((prev) => ({ ...prev, [m.id]: opt }));
-                          }}
-                        />
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* TOPIC-WISE CARDS GRID FOR THIS SUBJECT */}
+                <div className="space-y-3.5">
+                  {topicEntries.map(([topicName, topicQuestions]) => {
+                    const cardKey = `${subKey}:${topicName}`;
+                    const isOpen = openTopicCards[cardKey] ?? true;
+                    const topicIcon = getTopicIcon(topicName);
+
+                    return (
+                      <div
+                        key={topicName}
+                        className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden transition-all hover:border-slate-300"
+                      >
+                        {/* Topic Card Header */}
+                        <div
+                          onClick={() => toggleTopicCard(subKey, topicName)}
+                          className="p-4 sm:p-5 flex items-center justify-between gap-3 cursor-pointer bg-slate-50/50 hover:bg-slate-50 transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-lg shadow-2xs shrink-0">
+                              {topicIcon}
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <h3 className="text-base font-bold text-slate-900 tracking-tight">
+                                  {topicName}
+                                </h3>
+                                <span className={`px-2 py-0.5 text-[11px] font-bold rounded-lg border ${conf.bg} ${conf.text} ${conf.border}`}>
+                                  {conf.label}
+                                </span>
+                              </div>
+                              <span className="text-xs text-slate-500">
+                                {topicQuestions.length} {topicQuestions.length === 1 ? 'mistake recorded' : 'mistakes recorded'}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Topic Actions */}
+                          <div className="flex items-center gap-2 shrink-0">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                startPractice(topicQuestions);
+                              }}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-bold transition-colors border border-emerald-200 cursor-pointer shadow-2xs"
+                              title={`Drill ${topicQuestions.length} questions in ${topicName}`}
+                            >
+                              <Play className="w-3 h-3 fill-current" />
+                              <span>Practice</span>
+                            </button>
+                            <div className="p-1 rounded-lg text-slate-400 hover:text-slate-600">
+                              {isOpen ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* LEVEL 3: QUESTION CARDS (INSIDE TOPIC CARD) */}
+                        <AnimatePresence>
+                          {isOpen && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              className="border-t border-slate-100 divide-y divide-slate-100 p-4 sm:p-5 space-y-4"
+                            >
+                              {topicQuestions.map((m, idx) => (
+                                <QuestionItemCard
+                                  key={m.id || idx}
+                                  index={idx + 1}
+                                  mistake={m}
+                                  studyMode={studyMode}
+                                  onDelete={() => handleDelete(m)}
+                                  isDeleting={deletingId === m.id}
+                                  isExpanded={expandedSolutions[m.id] ?? true}
+                                  onToggleSolution={() => toggleSolution(m.id)}
+                                  selectedOption={userSelectedOptions[m.id]}
+                                  onSelectOption={(opt) => {
+                                    setUserSelectedOptions((prev) => ({ ...prev, [m.id]: opt }));
+                                  }}
+                                />
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             );
-          })}
-        </div>
-      ) : (
-        /* FLAT STREAM VIEW */
-        <div className="space-y-4">
-          <div className="text-xs text-slate-500 px-1">
-            Showing <strong>{filteredMistakes.length}</strong> recorded mistakes
-          </div>
-          {filteredMistakes.map((m, idx) => (
-            <div key={m.id || idx} className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs">
-              <QuestionItemCard
-                index={idx + 1}
-                mistake={m}
-                studyMode={studyMode}
-                onDelete={() => handleDelete(m)}
-                isDeleting={deletingId === m.id}
-                isExpanded={expandedSolutions[m.id] ?? true}
-                onToggleSolution={() => toggleSolution(m.id)}
-                selectedOption={userSelectedOptions[m.id]}
-                onSelectOption={(opt) => {
-                  setUserSelectedOptions((prev) => ({ ...prev, [m.id]: opt }));
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+          })
+        )}
+      </div>
 
       {/* INTERACTIVE PRACTICE MODAL */}
       <AnimatePresence>
@@ -955,12 +1046,12 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               exit={{ opacity: 0, scale: 0.95 }}
               className="bg-white w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]"
             >
-              {/* Modal Header */}
+              {/* Header */}
               <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                    Mistake Recall Drill • Question {practiceIndex + 1} of {practiceQuestions.length}
+                    Recall Drill • Question {practiceIndex + 1} of {practiceQuestions.length}
                   </span>
                 </div>
                 <button
@@ -971,7 +1062,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                 </button>
               </div>
 
-              {/* Modal Body */}
+              {/* Body */}
               <div className="p-5 sm:p-6 overflow-y-auto space-y-4">
                 {!practiceFinished ? (
                   <>
@@ -1013,7 +1104,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                       })}
                     </div>
 
-                    {/* Feedback & Solution */}
+                    {/* Feedback */}
                     {practiceChosen !== null && (
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -1024,7 +1115,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                           {practiceChosen === practiceQuestions[practiceIndex].correctOptionIndex ? (
                             <span className="text-emerald-700 flex items-center gap-1">
                               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                              <span>Correct! Great recall.</span>
+                              <span>Correct! Great memory.</span>
                             </span>
                           ) : (
                             <span className="text-rose-700 flex items-center gap-1">
@@ -1042,7 +1133,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     )}
                   </>
                 ) : (
-                  /* Practice Finished Score Summary */
                   <div className="text-center py-6 space-y-3">
                     <div className="text-4xl">🏆</div>
                     <h3 className="text-xl font-bold text-slate-900">Drill Completed!</h3>
@@ -1073,7 +1163,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                 )}
               </div>
 
-              {/* Modal Footer */}
               {!practiceFinished && practiceChosen !== null && (
                 <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-end">
                   <button
@@ -1094,7 +1183,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 };
 
 // ----------------------------------------------------
-// CLEAN QUESTION ITEM CARD COMPONENT
+// QUESTION ITEM CARD COMPONENT
 // ----------------------------------------------------
 
 interface QuestionItemCardProps {
@@ -1183,13 +1272,12 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
         {mistake.question}
       </div>
 
-      {/* Clean Options Layout */}
+      {/* Options */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {mistake.options.map((opt, optIdx) => {
           const isCorrect = optIdx === mistake.correctOptionIndex;
           const isChosen = selectedOption === optIdx;
 
-          // In Recall Mode, show selection state
           if (studyMode === 'recall') {
             const hasChosen = selectedOption !== undefined;
             let optStyle = 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700';
@@ -1213,7 +1301,6 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
             );
           }
 
-          // Study Mode (Default): Highlight the correct option elegantly
           return (
             <div
               key={optIdx}
@@ -1236,7 +1323,7 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
         })}
       </div>
 
-      {/* ELEGANT & STRUCTURED EXPLANATION PANEL */}
+      {/* Explanation Panel */}
       {(coreExplanation || definitions.length > 0) && (
         <div className="pt-1">
           <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 overflow-hidden">
@@ -1255,14 +1342,12 @@ const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
 
             {isExpanded && (
               <div className="p-3.5 sm:p-4 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-200/60">
-                {/* Core Concept */}
                 {coreExplanation && (
                   <p className="whitespace-pre-wrap text-slate-800">
                     {coreExplanation}
                   </p>
                 )}
 
-                {/* Vocabulary / Option Breakdown Chips */}
                 {definitions.length > 0 && (
                   <div className="space-y-1.5 pt-2 border-t border-slate-200/60">
                     <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
