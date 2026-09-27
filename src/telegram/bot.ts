@@ -77,7 +77,7 @@ function getRootMenuKeyboard(): InlineKeyboard {
   return new InlineKeyboard()
     .text('📁 Chapter Bank', 'nav_chapter_bank')
     .row()
-    .text('🎯 Mistake Bank', 'nav_mock_errors')
+    .text('🎯 Mock Errors & Mistakes', 'nav_mock_errors')
     .row()
     .text('⚡ Speed Lab', 'nav_speed_lab');
 }
@@ -165,7 +165,7 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
 
   const afterQuizKeyboard = new InlineKeyboard()
     .text('📁 Chapter Bank', 'nav_chapter_bank')
-    .text('🎯 Mistake Bank', 'nav_mock_errors')
+    .text('🎯 Mock Errors', 'nav_mock_errors')
     .row()
     .text('⚡ Speed Lab', 'nav_speed_lab')
     .text('🏠 Menu', 'nav_root');
@@ -589,8 +589,32 @@ const FLT_LABELS: Record<string, string> = {
   web: '💻 Website Mock Errors',
 };
 
-// 1. Source Filter Selection Screen
+// 1. Subject Selection Screen (Directly like Chapter Bank)
 bot.callbackQuery('nav_mock_errors', async (ctx) => {
+  const stats = getMistakeStats(ctx.from.id, 'all');
+  const totalAll = stats.reduce((acc, s) => acc + s.total, 0);
+
+  const kb = new InlineKeyboard();
+  for (const s of stats) {
+    kb.text(`${s.title} (${s.total} Mistakes)`, `mb_sub:all:${s.shortCode}`).row();
+  }
+  kb.text('⚙️ Filter Source (All / Bot / Mock)', 'nav_mock_filter').row();
+  kb.text('⬅️ Back to Menu', 'nav_root');
+
+  const text =
+    `🎯 *Mock Errors & Mistake Bank*\n\n` +
+    `*${totalAll}* total errors logged and organized chapter-wise.\n` +
+    `Select a subject to drill mistakes or browse chapter breakdown:`;
+
+  await ctx.editMessageText(text, {
+    parse_mode: 'Markdown',
+    reply_markup: kb,
+  });
+  await ctx.answerCallbackQuery();
+});
+
+// Source Filter Picker
+bot.callbackQuery('nav_mock_filter', async (ctx) => {
   const summary = getTotalMistakesSummary(ctx.from.id);
 
   const kb = new InlineKeyboard()
@@ -600,16 +624,14 @@ bot.callbackQuery('nav_mock_errors', async (ctx) => {
     .row()
     .text(`💻 Website Mocks (${summary.website_mock})`, 'mb_flt:web')
     .row()
-    .text('⬅️ Back to Menu', 'nav_root');
+    .text('⬅️ Back to Mistakes', 'nav_mock_errors');
 
   const text =
-    `🎯 *Mistake Bank (Option 3)*\n\n` +
-    `Every question you get wrong is automatically logged here topic-wise.\n\n` +
-    `*Mistakes Recorded:*\n` +
+    `⚙️ *Filter Mistake Source*\n\n` +
     `• 🌐 *All Combined:* ${summary.all}\n` +
     `• 📱 *Telegram Drills:* ${summary.telegram_drill}\n` +
     `• 💻 *Website Mocks:* ${summary.website_mock}\n\n` +
-    `Select a source filter to drill:`;
+    `Choose which mistake questions to display:`;
 
   await ctx.editMessageText(text, {
     parse_mode: 'Markdown',
@@ -631,10 +653,10 @@ bot.callbackQuery(/^mb_flt:(all|tg|web)$/, async (ctx) => {
   for (const s of stats) {
     kb.text(`${s.title} (${s.total} Mistakes)`, `mb_sub:${fltCode}:${s.shortCode}`).row();
   }
-  kb.text('⬅️ Change Source Filter', 'nav_mock_errors');
+  kb.text('⬅️ Change Source Filter', 'nav_mock_filter');
 
   await ctx.editMessageText(
-    `🎯 *Mistake Bank • ${filterLabel}*\n\n` +
+    `🎯 *Mock Errors & Mistake Bank • ${filterLabel}*\n\n` +
     `Select a subject to drill mistakes or browse chapter/topic breakdown:`,
     {
       parse_mode: 'Markdown',
@@ -672,7 +694,7 @@ bot.callbackQuery(/^mb_sub:(all|tg|web):(eng|math|reas|ga)$/, async (ctx) => {
     }
   }
 
-  kb.text('⬅️ Back to Subjects', `mb_flt:${fltCode}`);
+  kb.text('⬅️ Back to Subjects', fltCode === 'all' ? 'nav_mock_errors' : `mb_flt:${fltCode}`);
 
   const text =
     `🎯 *${subStat.title} Mistakes*\n` +

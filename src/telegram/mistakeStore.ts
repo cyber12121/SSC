@@ -69,31 +69,22 @@ function loadFromDisk() {
 loadFromDisk();
 
 // ----------------------------------------------------
-// WEBSITE MOCK ERRORS CACHE (READ FROM DISK ONCE)
+// WEBSITE MOCK ERRORS CACHE (STATIC IN-MEMORY BUNDLED FOR VERCEL)
 // ----------------------------------------------------
 
+import englishMockRaw from '../data/mock_errors/english.json';
+import mathMockRaw from '../data/mock_errors/mathematics.json';
+import reasMockRaw from '../data/mock_errors/reasoning.json';
+import gaMockRaw from '../data/mock_errors/general_awareness.json';
+
+const MOCK_RAW_DATA: Record<string, any[]> = {
+  english: englishMockRaw as any[],
+  mathematics: mathMockRaw as any[],
+  reasoning: reasMockRaw as any[],
+  general_awareness: gaMockRaw as any[],
+};
+
 const mockErrorsCache = new Map<'english' | 'mathematics' | 'reasoning' | 'general_awareness', TelegramQuizQuestion[]>();
-
-import { fileURLToPath } from 'url';
-
-let moduleDir = process.cwd();
-try {
-  moduleDir = path.dirname(fileURLToPath(import.meta.url));
-} catch {}
-
-function getMockErrorsDir(): string {
-  const candidates = [
-    path.join(process.cwd(), 'src', 'data', 'mock_errors'),
-    path.join(process.cwd(), 'data', 'mock_errors'),
-    path.join(moduleDir, 'data', 'mock_errors'),
-    path.join(moduleDir, 'src', 'data', 'mock_errors'),
-    path.join(moduleDir, '..', 'src', 'data', 'mock_errors'),
-  ];
-  for (const c of candidates) {
-    if (fs.existsSync(c)) return c;
-  }
-  return candidates[0];
-}
 
 function loadCachedMockErrors(subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness'): TelegramQuizQuestion[] {
   if (mockErrorsCache.has(subject)) {
@@ -102,30 +93,26 @@ function loadCachedMockErrors(subject: 'english' | 'mathematics' | 'reasoning' |
 
   const results: TelegramQuizQuestion[] = [];
   try {
-    const mockDir = getMockErrorsDir();
-    const filePath = path.join(mockDir, `${subject}.json`);
-    if (fs.existsSync(filePath)) {
-      const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-      if (Array.isArray(content)) {
-        for (const item of content) {
-          if (Array.isArray(item.questions)) {
-            for (let idx = 0; idx < item.questions.length; idx++) {
-              const q = item.questions[idx];
-              const qText = (q.question || q.questionText || '').replace(/^\s*\[.*?\]\s*/g, '').trim();
-              if (!qText) continue;
+    const content = MOCK_RAW_DATA[subject] || [];
+    if (Array.isArray(content)) {
+      for (const item of content) {
+        if (Array.isArray(item.questions)) {
+          for (let idx = 0; idx < item.questions.length; idx++) {
+            const q = item.questions[idx];
+            const qText = (q.question || q.questionText || '').replace(/^\s*\[.*?\]\s*/g, '').trim();
+            if (!qText) continue;
 
-              const sanitized = sanitizeTelegramQuiz({
-                id: q.id || `mock_${subject}_${idx}`,
-                question: qText,
-                options: q.options,
-                correctOption: q.answer || q.correctOption || q.correct_answer,
-                solution: q.solution,
-                subject: subject === 'english' ? 'English' : subject === 'mathematics' ? 'Mathematics' : subject === 'reasoning' ? 'Reasoning' : 'General Awareness',
-                topic: q.subtopic || q.topic || q.conceptTested || 'Error Bank',
-                source: q.testName || '💻 Website Mock Error',
-              });
-              results.push(sanitized);
-            }
+            const sanitized = sanitizeTelegramQuiz({
+              id: q.id || `mock_${subject}_${idx}`,
+              question: qText,
+              options: q.options,
+              correctOption: q.answer || q.correctOption || q.correct_answer,
+              solution: q.solution,
+              subject: subject === 'english' ? 'English' : subject === 'mathematics' ? 'Mathematics' : subject === 'reasoning' ? 'Reasoning' : 'General Awareness',
+              topic: q.subtopic || q.topic || q.conceptTested || 'Error Bank',
+              source: q.testName || '💻 Website Mock Error',
+            });
+            results.push(sanitized);
           }
         }
       }
