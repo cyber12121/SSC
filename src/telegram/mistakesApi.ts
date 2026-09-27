@@ -46,8 +46,15 @@ export default async function handler(req: any, res: any) {
   // POST: Record a live quiz mistake, delete, or sync
   if (req.method === 'POST') {
     try {
-      const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-      const { action, questionId, questionText, userId, ids, questionData } = body || {};
+      let body = req.body;
+      if (typeof body === 'string') {
+        try {
+          body = JSON.parse(body);
+        } catch {
+          // already an object or raw
+        }
+      }
+      const { action, questionId, questionText, userId, ids, questionData } = (body && typeof body === 'object') ? body : {};
 
       // Record a new quiz mistake from website quiz
       if (action === 'record') {

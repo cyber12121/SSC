@@ -385,8 +385,14 @@ async function handler(req, res) {
   }
   if (req.method === "POST") {
     try {
-      const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-      const { action, questionId, questionText, userId, ids, questionData } = body || {};
+      let body = req.body;
+      if (typeof body === "string") {
+        try {
+          body = JSON.parse(body);
+        } catch {
+        }
+      }
+      const { action, questionId, questionText, userId, ids, questionData } = body && typeof body === "object" ? body : {};
       if (action === "record") {
         if (!questionData || !questionData.question) {
           return res.status(400).json({ error: "questionData is required" });
