@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch server.ts",
+    "bundle:bot": "esbuild src/telegram/bot.ts --bundle --platform=node --format=esm --packages=external --outfile=api/bot.ts",
+    "prebuild": "npm run bundle:bot",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
