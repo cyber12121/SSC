@@ -5267,6 +5267,375 @@ function clearSession(userId) {
 import fs4 from "fs";
 import path4 from "path";
 import os2 from "os";
+var TMP_FILE2 = path4.join(os2.tmpdir(), "cgl_quiz_mistakes.json");
+var userMistakesMap = /* @__PURE__ */ new Map();
+function saveToDisk2() {
+  try {
+    const serialized = {};
+    for (const [userId, map] of userMistakesMap.entries()) {
+      serialized[String(userId)] = Array.from(map.values());
+    }
+    fs4.writeFileSync(TMP_FILE2, JSON.stringify(serialized), "utf8");
+  } catch (err) {
+    console.error("[MistakeStore] Error saving quiz mistakes to disk:", err);
+  }
+}
+function loadFromDisk2() {
+  try {
+    if (fs4.existsSync(TMP_FILE2)) {
+      const raw = fs4.readFileSync(TMP_FILE2, "utf8");
+      const parsed = JSON.parse(raw);
+      for (const [userIdStr, list] of Object.entries(parsed)) {
+        const uid = Number(userIdStr);
+        const map = /* @__PURE__ */ new Map();
+        for (const item of list) {
+          map.set(item.id, item);
+        }
+        userMistakesMap.set(uid, map);
+      }
+    }
+  } catch (err) {
+    console.error("[MistakeStore] Error loading quiz mistakes from disk:", err);
+  }
+}
+loadFromDisk2();
+var DELETED_FILE = path4.join(os2.tmpdir(), "cgl_deleted_mistakes.json");
+var deletedQuestionsSet = /* @__PURE__ */ new Set();
+function loadDeletedFromDisk() {
+  try {
+    if (fs4.existsSync(DELETED_FILE)) {
+      const raw = fs4.readFileSync(DELETED_FILE, "utf8");
+      const arr = JSON.parse(raw);
+      if (Array.isArray(arr)) {
+        arr.forEach((id) => deletedQuestionsSet.add(String(id)));
+      }
+    }
+  } catch (err) {
+    console.error("[MistakeStore] Error loading deleted mistakes:", err);
+  }
+}
+function saveDeletedToDisk() {
+  try {
+    fs4.writeFileSync(DELETED_FILE, JSON.stringify(Array.from(deletedQuestionsSet)), "utf8");
+  } catch (err) {
+    console.error("[MistakeStore] Error saving deleted mistakes:", err);
+  }
+}
+loadDeletedFromDisk();
+function isQuestionDeleted(questionId, questionText) {
+  if (deletedQuestionsSet.has(questionId)) return true;
+  if (questionText && deletedQuestionsSet.has(questionText.trim().toLowerCase())) return true;
+  return false;
+}
+function classifySubjectAndTopic(q) {
+  const text = `${q.question} ${q.explanation || ""} ${q.subject || ""} ${q.topic || ""} ${q.source || ""}`.toLowerCase();
+  let subject = "general_awareness";
+  const subStr = (q.subject || "").toLowerCase();
+  if (subStr.includes("eng") || text.includes("synonym") || text.includes("antonym") || text.includes("idiom") || text.includes("one word") || text.includes("sentence") || text.includes("misspelt")) {
+    subject = "english";
+  } else if (subStr.includes("math") || subStr.includes("calc") || subStr.includes("quant") || text.includes("calculate") || text.includes("triplet") || text.includes("ratio") || text.includes("circumference")) {
+    subject = "mathematics";
+  } else if (subStr.includes("reason") || text.includes("syllogism") || text.includes("analogy") || text.includes("blood relation") || text.includes("coding-decoding")) {
+    subject = "reasoning";
+  }
+  let topic = "General Practice";
+  let topicSlug = "gen";
+  if (subject === "english") {
+    if (text.includes("synonym")) {
+      topic = "Synonyms";
+      topicSlug = "syn";
+    } else if (text.includes("antonym")) {
+      topic = "Antonyms";
+      topicSlug = "ant";
+    } else if (text.includes("one word") || text.includes("ows")) {
+      topic = "One Word Substitution";
+      topicSlug = "ows";
+    } else if (text.includes("idiom") || text.includes("phrase")) {
+      topic = "Idioms & Phrases";
+      topicSlug = "idiom";
+    } else if (text.includes("spelling") || text.includes("misspelt")) {
+      topic = "Spelling Errors";
+      topicSlug = "spell";
+    } else if (text.includes("spotting") || text.includes("grammatical error")) {
+      topic = "Spotting Errors";
+      topicSlug = "error";
+    } else if (text.includes("voice")) {
+      topic = "Active & Passive Voice";
+      topicSlug = "voice";
+    } else if (text.includes("narration") || text.includes("direct")) {
+      topic = "Direct & Indirect Speech";
+      topicSlug = "narration";
+    } else if (text.includes("pqrs") || text.includes("jumble")) {
+      topic = "Para Jumbles";
+      topicSlug = "pqrs";
+    } else if (text.includes("cloze") || text.includes("comprehension")) {
+      topic = "Cloze & Comprehension";
+      topicSlug = "cloze";
+    } else {
+      topic = "Vocabulary & Grammar";
+      topicSlug = "vocab";
+    }
+  } else if (subject === "mathematics") {
+    if (text.includes("algebra")) {
+      topic = "Algebra";
+      topicSlug = "algebra";
+    } else if (text.includes("trig")) {
+      topic = "Trigonometry";
+      topicSlug = "trigo";
+    } else if (text.includes("geom") || text.includes("circle")) {
+      topic = "Geometry";
+      topicSlug = "geom";
+    } else if (text.includes("mensur")) {
+      topic = "Mensuration";
+      topicSlug = "mens";
+    } else if (text.includes("number") || text.includes("remainder")) {
+      topic = "Number System";
+      topicSlug = "num";
+    } else if (text.includes("profit") || text.includes("loss")) {
+      topic = "Profit & Loss";
+      topicSlug = "pnl";
+    } else if (text.includes("percent")) {
+      topic = "Percentages";
+      topicSlug = "pct";
+    } else if (text.includes("ratio")) {
+      topic = "Ratio & Proportion";
+      topicSlug = "ratio";
+    } else if (text.includes("interest")) {
+      topic = "SI & CI";
+      topicSlug = "si_ci";
+    } else if (text.includes("work") || text.includes("pipe")) {
+      topic = "Time & Work";
+      topicSlug = "work";
+    } else if (text.includes("speed") || text.includes("train")) {
+      topic = "Speed, Time & Distance";
+      topicSlug = "speed";
+    } else {
+      topic = "Arithmetic";
+      topicSlug = "arith";
+    }
+  } else if (subject === "reasoning") {
+    if (text.includes("syllogism")) {
+      topic = "Syllogism";
+      topicSlug = "syl";
+    } else if (text.includes("analogy")) {
+      topic = "Analogy";
+      topicSlug = "analogy";
+    } else if (text.includes("coding")) {
+      topic = "Coding & Decoding";
+      topicSlug = "coding";
+    } else if (text.includes("series")) {
+      topic = "Series";
+      topicSlug = "series";
+    } else if (text.includes("blood")) {
+      topic = "Blood Relations";
+      topicSlug = "blood";
+    } else if (text.includes("direction")) {
+      topic = "Direction Sense";
+      topicSlug = "direction";
+    } else if (text.includes("venn")) {
+      topic = "Venn Diagrams";
+      topicSlug = "venn";
+    } else {
+      topic = "General Reasoning";
+      topicSlug = "reason_gen";
+    }
+  } else {
+    if (text.includes("polity") || text.includes("article") || text.includes("constitution")) {
+      topic = "Polity & Constitution";
+      topicSlug = "polity";
+    } else if (text.includes("history")) {
+      topic = "Indian History";
+      topicSlug = "history";
+    } else if (text.includes("geo") || text.includes("river")) {
+      topic = "Geography";
+      topicSlug = "geo";
+    } else if (text.includes("eco") || text.includes("budget")) {
+      topic = "Economics";
+      topicSlug = "eco";
+    } else if (text.includes("bio") || text.includes("disease")) {
+      topic = "Biology";
+      topicSlug = "bio";
+    } else if (text.includes("phys")) {
+      topic = "Physics";
+      topicSlug = "phys";
+    } else if (text.includes("chem")) {
+      topic = "Chemistry";
+      topicSlug = "chem";
+    } else {
+      topic = "General Awareness & Static GK";
+      topicSlug = "gk_static";
+    }
+  }
+  return { subject, topic, topicSlug };
+}
+function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
+  if (isQuestionDeleted(q.id, q.question)) return;
+  let userMap = userMistakesMap.get(userId);
+  if (!userMap) {
+    userMap = /* @__PURE__ */ new Map();
+    userMistakesMap.set(userId, userMap);
+  }
+  const existing = userMap.get(q.id);
+  if (isCorrect) {
+    if (existing) {
+      existing.mastered = true;
+      saveToDisk2();
+    }
+    return;
+  }
+  const { subject, topic, topicSlug } = classifySubjectAndTopic(q);
+  const correctIdx = Math.max(0, q.options.indexOf(q.correctOption));
+  if (existing) {
+    existing.wrongCount = (existing.wrongCount || 1) + 1;
+    existing.mastered = false;
+    existing.timestamp = Date.now();
+  } else {
+    const mistake = {
+      id: q.id,
+      userId,
+      question: q.question,
+      options: q.options,
+      correctOptionIndex: correctIdx,
+      explanation: q.solution || q.explanation || "",
+      subject,
+      topic,
+      topicSlug,
+      source,
+      timestamp: Date.now(),
+      wrongCount: 1,
+      mastered: false
+    };
+    userMap.set(q.id, mistake);
+  }
+  saveToDisk2();
+}
+function markMistakeMastered(userId, questionId, questionText) {
+  const userMap = userMistakesMap.get(userId);
+  if (!userMap) return;
+  if (userMap.has(questionId)) {
+    const m = userMap.get(questionId);
+    m.mastered = true;
+    saveToDisk2();
+    return;
+  }
+  if (questionText) {
+    const cleanText = questionText.trim().toLowerCase();
+    for (const m of userMap.values()) {
+      if (m.question.trim().toLowerCase() === cleanText) {
+        m.mastered = true;
+        saveToDisk2();
+        return;
+      }
+    }
+  }
+}
+function deleteMistake(userId, questionId, questionText) {
+  if (questionId) deletedQuestionsSet.add(questionId);
+  if (questionText) deletedQuestionsSet.add(questionText.trim().toLowerCase());
+  saveDeletedToDisk();
+  for (const map of userMistakesMap.values()) {
+    map.delete(questionId);
+    if (questionText) {
+      const clean = questionText.trim().toLowerCase();
+      for (const [key, val] of map.entries()) {
+        if (val.question.trim().toLowerCase() === clean) {
+          map.delete(key);
+        }
+      }
+    }
+  }
+  saveToDisk2();
+}
+function getUserMistakes(userId, filter = "all", subject, topicSlug) {
+  const results = [];
+  const seenQIds = /* @__PURE__ */ new Set();
+  const checkAndPush = (item) => {
+    if (item.mastered) return;
+    if (isQuestionDeleted(item.id, item.question)) return;
+    if (filter !== "all" && item.source !== filter) return;
+    if (subject && item.subject !== subject) return;
+    if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) return;
+    if (seenQIds.has(item.id)) return;
+    seenQIds.add(item.id);
+    const correctOpt = item.options[item.correctOptionIndex] || item.options[0] || "";
+    results.push({
+      id: item.id,
+      question: item.question,
+      options: item.options,
+      correctOption: correctOpt,
+      explanation: item.explanation,
+      subject: item.subject,
+      topic: item.topic,
+      source: item.source === "telegram_quiz" ? "\u{1F4F1} Telegram Quiz Mistake" : "\u{1F4BB} Website Quiz Mistake"
+    });
+  };
+  const userMap = userMistakesMap.get(userId);
+  if (userMap) {
+    for (const item of userMap.values()) {
+      checkAndPush(item);
+    }
+  }
+  if (userId !== 0) {
+    const guestMap = userMistakesMap.get(0);
+    if (guestMap) {
+      for (const item of guestMap.values()) {
+        checkAndPush(item);
+      }
+    }
+  }
+  return results;
+}
+function getMistakeStats(userId, filter = "all") {
+  const subjects = [
+    { id: "english", shortCode: "eng", title: "\u{1F4D6} English" },
+    { id: "mathematics", shortCode: "math", title: "\u{1F4D0} Mathematics" },
+    { id: "reasoning", shortCode: "reas", title: "\u{1F9E0} Reasoning" },
+    { id: "general_awareness", shortCode: "ga", title: "\u{1F3DB}\uFE0F General Awareness" }
+  ];
+  return subjects.map((sub) => {
+    const topicMap = /* @__PURE__ */ new Map();
+    let total = 0;
+    const seenQIds = /* @__PURE__ */ new Set();
+    const processItem = (item) => {
+      if (item.mastered) return;
+      if (isQuestionDeleted(item.id, item.question)) return;
+      if (filter !== "all" && item.source !== filter) return;
+      if (item.subject !== sub.id) return;
+      if (seenQIds.has(item.id)) return;
+      seenQIds.add(item.id);
+      total++;
+      const existing = topicMap.get(item.topicSlug) || {
+        topic: item.topic,
+        slug: item.topicSlug,
+        count: 0
+      };
+      existing.count++;
+      topicMap.set(item.topicSlug, existing);
+    };
+    const userMap = userMistakesMap.get(userId);
+    if (userMap) {
+      for (const item of userMap.values()) {
+        processItem(item);
+      }
+    }
+    if (userId !== 0) {
+      const guestMap = userMistakesMap.get(0);
+      if (guestMap) {
+        for (const item of guestMap.values()) {
+          processItem(item);
+        }
+      }
+    }
+    const topics = Array.from(topicMap.values()).sort((a, b) => b.count - a.count);
+    return {
+      subjectId: sub.id,
+      shortCode: sub.shortCode,
+      title: sub.title,
+      total,
+      topics
+    };
+  });
+}
 
 // src/data/mock_errors/english.json
 var english_default = [
@@ -38354,375 +38723,97 @@ Further Insights: \u2022 PRARAMBH 2026 is a nationwide outreach programme launch
   }
 ];
 
-// src/telegram/mistakeStore.ts
-var TMP_FILE2 = path4.join(os2.tmpdir(), "cgl_user_mistakes.json");
-var userMistakesMap = /* @__PURE__ */ new Map();
-function saveToDisk2() {
-  try {
-    const serialized = {};
-    for (const [userId, map] of userMistakesMap.entries()) {
-      serialized[String(userId)] = Array.from(map.values());
-    }
-    fs4.writeFileSync(TMP_FILE2, JSON.stringify(serialized), "utf8");
-  } catch (err) {
-    console.error("[MistakeStore] Error saving to disk:", err);
-  }
-}
-function loadFromDisk2() {
-  try {
-    if (fs4.existsSync(TMP_FILE2)) {
-      const parsed = JSON.parse(fs4.readFileSync(TMP_FILE2, "utf8"));
-      for (const [userIdStr, list] of Object.entries(parsed)) {
-        const userId = Number(userIdStr);
-        if (!userMistakesMap.has(userId)) {
-          userMistakesMap.set(userId, /* @__PURE__ */ new Map());
-        }
-        const userMap = userMistakesMap.get(userId);
-        if (Array.isArray(list)) {
-          for (const item of list) {
-            userMap.set(item.id, item);
-          }
-        }
-      }
-    }
-  } catch (err) {
-    console.error("[MistakeStore] Error loading from disk:", err);
-  }
-}
-loadFromDisk2();
-var MOCK_RAW_DATA = {
+// src/telegram/mockErrorBank.ts
+var MOCK_RAW_MAP = {
   english: english_default,
   mathematics: mathematics_default,
   reasoning: reasoning_default,
   general_awareness: general_awareness_default
 };
-var mockErrorsCache = /* @__PURE__ */ new Map();
-function loadCachedMockErrors(subject) {
-  if (mockErrorsCache.has(subject)) {
-    return mockErrorsCache.get(subject);
+var parsedMockQuestionsCache = /* @__PURE__ */ new Map();
+function getMockQuestionsForSubject(subject) {
+  if (parsedMockQuestionsCache.has(subject)) {
+    return parsedMockQuestionsCache.get(subject);
   }
   const results = [];
-  try {
-    const content = MOCK_RAW_DATA[subject] || [];
-    if (Array.isArray(content)) {
-      for (const item of content) {
-        if (Array.isArray(item.questions)) {
-          for (let idx = 0; idx < item.questions.length; idx++) {
-            const q = item.questions[idx];
-            const qText = (q.question || q.questionText || "").replace(/^\s*\[.*?\]\s*/g, "").trim();
-            if (!qText) continue;
-            const sanitized = sanitizeTelegramQuiz({
-              id: q.id || `mock_${subject}_${idx}`,
-              question: qText,
-              options: q.options,
-              correctOption: q.answer || q.correctOption || q.correct_answer,
-              solution: q.solution,
-              subject: subject === "english" ? "English" : subject === "mathematics" ? "Mathematics" : subject === "reasoning" ? "Reasoning" : "General Awareness",
-              topic: q.subtopic || q.topic || q.conceptTested || "Error Bank",
-              source: q.testName || "\u{1F4BB} Website Mock Error"
-            });
-            results.push(sanitized);
-          }
-        }
-      }
-    }
-  } catch (err) {
-    console.error(`[MistakeStore] Error loading mock errors for ${subject}:`, err);
-  }
-  mockErrorsCache.set(subject, results);
-  return results;
-}
-function classifySubjectAndTopic(q) {
-  const text = `${q.question} ${q.explanation || ""} ${q.subject || ""} ${q.topic || ""} ${q.source || ""}`.toLowerCase();
-  let subject = "general_awareness";
-  const subStr = (q.subject || "").toLowerCase();
-  if (subStr.includes("eng") || text.includes("synonym") || text.includes("antonym") || text.includes("idiom") || text.includes("one word") || text.includes("sentence") || text.includes("misspelt")) {
-    subject = "english";
-  } else if (subStr.includes("math") || subStr.includes("calc") || subStr.includes("quant") || text.includes("calculate") || text.includes("triplet") || text.includes("ratio") || text.includes("circumference") || text.includes("hypotenuse")) {
-    subject = "mathematics";
-  } else if (subStr.includes("reason") || text.includes("syllogism") || text.includes("analogy") || text.includes("blood relation") || text.includes("coding-decoding") || text.includes("letter series")) {
-    subject = "reasoning";
-  }
-  let topic = "General Practice";
-  let topicSlug = "gen";
-  if (subject === "english") {
-    if (text.includes("synonym") || text.includes("similar meaning")) {
-      topic = "Synonyms";
-      topicSlug = "syn";
-    } else if (text.includes("antonym") || text.includes("opposite")) {
-      topic = "Antonyms";
-      topicSlug = "ant";
-    } else if (text.includes("one word") || text.includes("ows") || text.includes("substituted")) {
-      topic = "One Word Substitution";
-      topicSlug = "ows";
-    } else if (text.includes("idiom") || text.includes("phrase")) {
-      topic = "Idioms & Phrases";
-      topicSlug = "idioms";
-    } else if (text.includes("spelling") || text.includes("misspelt") || text.includes("correctly spelt")) {
-      topic = "Spelling Errors";
-      topicSlug = "spell";
-    } else if (text.includes("spotting") || text.includes("grammatical error") || text.includes("error spotting")) {
-      topic = "Spotting Errors";
-      topicSlug = "error";
-    } else if (text.includes("improvement") || text.includes("filler") || text.includes("blank")) {
-      topic = "Sentence Improvement & Fillers";
-      topicSlug = "improve";
-    } else if (text.includes("voice") || text.includes("passive")) {
-      topic = "Active & Passive Voice";
-      topicSlug = "voice";
-    } else if (text.includes("narration") || text.includes("direct") || text.includes("indirect")) {
-      topic = "Direct & Indirect Speech";
-      topicSlug = "narration";
-    } else if (text.includes("jumble") || text.includes("pqrs") || text.includes("rearrangement")) {
-      topic = "Para Jumbles (PQRS)";
-      topicSlug = "pqrs";
-    } else if (text.includes("cloze") || text.includes("comprehension")) {
-      topic = "Cloze & Comprehension";
-      topicSlug = "cloze";
-    } else {
-      topic = "Vocabulary & Grammar";
-      topicSlug = "vocab";
-    }
-  } else if (subject === "general_awareness") {
-    if (text.includes("polity") || text.includes("article") || text.includes("constitution") || text.includes("amendment") || text.includes("parliament") || text.includes("president") || text.includes("fundamental") || text.includes("schedule") || text.includes("court")) {
-      topic = "Polity & Constitution";
-      topicSlug = "polity";
-    } else if (text.includes("history") || text.includes("sultanate") || text.includes("mughal") || text.includes("harappan") || text.includes("mauryan") || text.includes("british") || text.includes("gandhi") || text.includes("revolt") || text.includes("vedic") || text.includes("freedom movement")) {
-      topic = "History (Ancient, Med, Mod)";
-      topicSlug = "history";
-    } else if (text.includes("geography") || text.includes("river") || text.includes("mountain") || text.includes("climate") || text.includes("soil") || text.includes("ocean") || text.includes("ramsar") || text.includes("national park")) {
-      topic = "Geography & Environment";
-      topicSlug = "geo";
-    } else if (text.includes("econom") || text.includes("gdp") || text.includes("inflation") || text.includes("rbi") || text.includes("budget") || text.includes("fiscal") || text.includes("monetary")) {
-      topic = "Economics & Budget";
-      topicSlug = "eco";
-    } else if (text.includes("physics") || text.includes("chemistry") || text.includes("biology") || text.includes("cell") || text.includes("vitamin") || text.includes("disease") || text.includes("acid") || text.includes("energy")) {
-      topic = "General Science";
-      topicSlug = "science";
-    } else if (text.includes("dance") || text.includes("festival") || text.includes("temple") || text.includes("music") || text.includes("instrument") || text.includes("painting") || text.includes("heritage")) {
-      topic = "Art, Culture & Dance";
-      topicSlug = "culture";
-    } else if (text.includes("sport") || text.includes("trophy") || text.includes("cup") || text.includes("olympic") || text.includes("award")) {
-      topic = "Sports & Awards";
-      topicSlug = "sports";
-    } else {
-      topic = "Static GK & Current Affairs";
-      topicSlug = "static";
-    }
-  } else if (subject === "mathematics") {
-    if (text.includes("percent")) {
-      topic = "Percentage";
-      topicSlug = "percent";
-    } else if (text.includes("profit") || text.includes("loss") || text.includes("discount")) {
-      topic = "Profit, Loss & Discount";
-      topicSlug = "profit";
-    } else if (text.includes("ratio") || text.includes("proportion") || text.includes("mixture") || text.includes("alligation") || text.includes("coin")) {
-      topic = "Ratio, Proportion & Mixture";
-      topicSlug = "ratio";
-    } else if (text.includes("speed") || text.includes("distance") || text.includes("train") || text.includes("boat") || text.includes("stream")) {
-      topic = "Speed, Distance & Boats";
-      topicSlug = "tsd";
-    } else if (text.includes("work") || text.includes("pipe") || text.includes("cistern") || text.includes("efficiency")) {
-      topic = "Time & Work / Pipes";
-      topicSlug = "work";
-    } else if (text.includes("interest") || text.includes("ci") || text.includes("si") || text.includes("compound") || text.includes("simple interest")) {
-      topic = "Simple & Compound Interest";
-      topicSlug = "interest";
-    } else if (text.includes("geometry") || text.includes("triangle") || text.includes("circle") || text.includes("triplet") || text.includes("chord")) {
-      topic = "Geometry & Triplets";
-      topicSlug = "geom";
-    } else if (text.includes("mensuration") || text.includes("cylinder") || text.includes("sphere") || text.includes("cone") || text.includes("cuboid")) {
-      topic = "Mensuration 2D & 3D";
-      topicSlug = "mens";
-    } else if (text.includes("algebra") || text.includes("polynomial") || text.includes("quadratic")) {
-      topic = "Algebra";
-      topicSlug = "algebra";
-    } else if (text.includes("trigonometr") || text.includes("sin") || text.includes("cos") || text.includes("tan") || text.includes("height")) {
-      topic = "Trigonometry & Heights";
-      topicSlug = "trig";
-    } else if (text.includes("number system") || text.includes("divisib") || text.includes("remainder") || text.includes("unit digit") || text.includes("lcm") || text.includes("hcf")) {
-      topic = "Number System, LCM & HCF";
-      topicSlug = "number";
-    } else if (text.includes("table") || text.includes("square") || text.includes("cube") || text.includes("power") || text.includes("simplification")) {
-      topic = "Calculation Studio";
-      topicSlug = "calc";
-    } else {
-      topic = "General Arithmetic";
-      topicSlug = "arith";
-    }
-  } else if (subject === "reasoning") {
-    if (text.includes("coding") || text.includes("decoding") || text.includes("letter code")) {
-      topic = "Coding-Decoding";
-      topicSlug = "coding";
-    } else if (text.includes("syllogism") || text.includes("venn")) {
-      topic = "Syllogism & Venn";
-      topicSlug = "syllogism";
-    } else if (text.includes("blood relation")) {
-      topic = "Blood Relations";
-      topicSlug = "blood";
-    } else if (text.includes("series") || text.includes("pattern") || text.includes("missing number")) {
-      topic = "Series & Pattern";
-      topicSlug = "series";
-    } else if (text.includes("analogy") || text.includes("classification") || text.includes("odd one")) {
-      topic = "Analogy & Classification";
-      topicSlug = "analogy";
-    } else if (text.includes("direction")) {
-      topic = "Direction Sense";
-      topicSlug = "direction";
-    } else if (text.includes("mirror") || text.includes("water image") || text.includes("paper folding") || text.includes("embedded")) {
-      topic = "Non-Verbal Reasoning";
-      topicSlug = "nonverbal";
-    } else if (text.includes("dictionary") || text.includes("order") || text.includes("ranking") || text.includes("bodmas")) {
-      topic = "BODMAS & Ranking";
-      topicSlug = "bodmas";
-    } else {
-      topic = "General Intelligence";
-      topicSlug = "logic";
-    }
-  }
-  return { subject, topic, topicSlug };
-}
-function recordMistake(userId, q, source = "telegram_drill") {
-  loadFromDisk2();
-  if (!userMistakesMap.has(userId)) {
-    userMistakesMap.set(userId, /* @__PURE__ */ new Map());
-  }
-  const userMap = userMistakesMap.get(userId);
-  const { subject, topic, topicSlug } = classifySubjectAndTopic(q);
-  const qId = q.id || `mistake_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
-  const existing = userMap.get(qId);
-  if (existing) {
-    existing.wrongCount += 1;
-    existing.timestamp = Date.now();
-    existing.mastered = false;
-  } else {
-    userMap.set(qId, {
-      id: qId,
-      userId,
-      question: q.question,
-      options: q.options,
-      correctOptionIndex: q.correctOptionIndex,
-      explanation: q.explanation || "",
-      subject,
-      topic,
-      topicSlug,
-      source,
-      timestamp: Date.now(),
-      wrongCount: 1,
-      mastered: false
-    });
-  }
-  saveToDisk2();
-}
-function markMistakeMastered(userId, qId) {
-  loadFromDisk2();
-  const userMap = userMistakesMap.get(userId);
-  if (userMap && userMap.has(qId)) {
-    const item = userMap.get(qId);
-    item.mastered = true;
-    saveToDisk2();
-  }
-}
-var DELETED_FILE = path4.join(os2.tmpdir(), "cgl_deleted_mistakes.json");
-var deletedQuestionsSet = /* @__PURE__ */ new Set();
-function saveDeletedToDisk() {
-  try {
-    fs4.writeFileSync(DELETED_FILE, JSON.stringify(Array.from(deletedQuestionsSet)), "utf8");
-  } catch (err) {
-    console.error("[MistakeStore] Error saving deleted questions to disk:", err);
-  }
-}
-function loadDeletedFromDisk() {
-  try {
-    if (fs4.existsSync(DELETED_FILE)) {
-      const list = JSON.parse(fs4.readFileSync(DELETED_FILE, "utf8"));
-      if (Array.isArray(list)) {
-        for (const id of list) {
-          if (id) deletedQuestionsSet.add(String(id).trim().toLowerCase());
-        }
-      }
-    }
-  } catch (err) {
-    console.error("[MistakeStore] Error loading deleted questions from disk:", err);
-  }
-}
-loadDeletedFromDisk();
-function isQuestionDeleted(id, text) {
-  loadDeletedFromDisk();
-  if (id && deletedQuestionsSet.has(id.trim().toLowerCase())) return true;
-  if (text) {
-    const clean = text.trim().toLowerCase();
-    if (deletedQuestionsSet.has(clean)) return true;
-  }
-  return false;
-}
-function deleteMistake(userId, qId, qText) {
-  loadFromDisk2();
-  loadDeletedFromDisk();
-  if (qId) deletedQuestionsSet.add(qId.trim().toLowerCase());
-  if (qText) deletedQuestionsSet.add(qText.trim().toLowerCase());
-  saveDeletedToDisk();
-  if (userId && userMistakesMap.has(userId)) {
-    userMistakesMap.get(userId).delete(qId);
-  } else {
-    for (const map of userMistakesMap.values()) {
-      map.delete(qId);
-      for (const [k, v] of map.entries()) {
-        if (v.question === qText || v.id === qId) {
-          map.delete(k);
-        }
-      }
-    }
-  }
-  saveToDisk2();
-}
-function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = void 0) {
-  loadFromDisk2();
-  loadDeletedFromDisk();
-  const results = [];
-  const seenQIds = /* @__PURE__ */ new Set();
-  if (filter === "all" || filter === "telegram_drill") {
-    const userMap = userMistakesMap.get(userId);
-    if (userMap) {
-      for (const item of userMap.values()) {
-        if (item.mastered) continue;
-        if (isQuestionDeleted(item.id, item.question)) continue;
-        if (filter !== "all" && item.source !== filter) continue;
-        if (subject && item.subject !== subject) continue;
-        if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) continue;
-        seenQIds.add(item.id);
-        results.push({
-          id: item.id,
-          question: item.question,
-          options: item.options,
-          correctOptionIndex: item.correctOptionIndex,
-          explanation: item.explanation,
-          subject: item.subject,
-          topic: item.topic,
-          source: "\u{1F4F1} Telegram Drill Mistake"
+  const rawList = MOCK_RAW_MAP[subject] || [];
+  for (const chapter of rawList) {
+    if (Array.isArray(chapter.questions)) {
+      for (let idx = 0; idx < chapter.questions.length; idx++) {
+        const q = chapter.questions[idx];
+        const qText = (q.question || q.questionText || "").replace(/^\s*\[.*?\]\s*/g, "").trim();
+        if (!qText) continue;
+        const sanitized = sanitizeTelegramQuiz({
+          id: q.id || `mock_${subject}_${idx}`,
+          question: qText,
+          options: q.options,
+          correctOption: q.answer || q.correctOption || q.correct_answer,
+          solution: q.solution,
+          subject: subject === "english" ? "English" : subject === "mathematics" ? "Mathematics" : subject === "reasoning" ? "Reasoning" : "General Awareness",
+          topic: q.subtopic || q.topic || q.conceptTested || "Error Bank",
+          source: q.testName || "\u{1F4BB} Website Mock Error"
         });
+        results.push(sanitized);
       }
     }
   }
-  if (filter === "all" || filter === "website_mock") {
-    const subjectsToLoad = subject ? [subject] : ["english", "mathematics", "reasoning", "general_awareness"];
-    for (const sub of subjectsToLoad) {
-      const mockList = loadCachedMockErrors(sub);
-      for (const mq of mockList) {
-        if (seenQIds.has(mq.id)) continue;
-        if (isQuestionDeleted(mq.id, mq.question)) continue;
-        const classified = classifySubjectAndTopic(mq);
-        if (topicSlug && topicSlug !== "_" && classified.topicSlug !== topicSlug) continue;
-        seenQIds.add(mq.id);
-        results.push(mq);
-      }
-    }
-  }
+  parsedMockQuestionsCache.set(subject, results);
   return results;
 }
-function getMistakeStats(userId, filter = "all") {
-  loadFromDisk2();
-  loadDeletedFromDisk();
+function classifyMockTopic(q, subject) {
+  const text = `${q.question} ${q.explanation || ""} ${q.topic || ""}`.toLowerCase();
+  if (subject === "english") {
+    if (text.includes("synonym") || text.includes("similar meaning")) return { topic: "\u{1F524} Synonyms", slug: "syn" };
+    if (text.includes("antonym") || text.includes("opposite")) return { topic: "\u{1F520} Antonyms", slug: "ant" };
+    if (text.includes("one word") || text.includes("ows") || text.includes("substituted")) return { topic: "\u{1F4DD} One Word Substitution", slug: "ows" };
+    if (text.includes("idiom") || text.includes("phrase")) return { topic: "\u{1F4AC} Idioms & Phrases", slug: "idiom" };
+    if (text.includes("spelling") || text.includes("misspelt") || text.includes("correctly spelt")) return { topic: "\u{1F524} Spelling Errors", slug: "spell" };
+    if (text.includes("spotting") || text.includes("grammatical error") || text.includes("error spotting")) return { topic: "\u{1F50D} Spotting Errors", slug: "error" };
+    if (text.includes("improvement") || text.includes("filler") || text.includes("blank")) return { topic: "\u{1F4D1} Sentence Improvement", slug: "improve" };
+    if (text.includes("voice") || text.includes("passive")) return { topic: "\u{1F4E2} Active & Passive Voice", slug: "voice" };
+    if (text.includes("narration") || text.includes("direct") || text.includes("indirect")) return { topic: "\u{1F5E3}\uFE0F Direct & Indirect Speech", slug: "narration" };
+    if (text.includes("jumble") || text.includes("pqrs") || text.includes("rearrangement")) return { topic: "\u{1F9E9} Para Jumbles (PQRS)", slug: "pqrs" };
+    if (text.includes("cloze") || text.includes("comprehension")) return { topic: "\u{1F4D6} Cloze & Comprehension", slug: "cloze" };
+    return { topic: "\u{1F4DA} Vocabulary & Grammar", slug: "vocab" };
+  }
+  if (subject === "mathematics") {
+    if (text.includes("algebra") || text.includes("polynomial") || text.includes("quadratic")) return { topic: "\u{1F4D0} Algebra & Polynomials", slug: "algebra" };
+    if (text.includes("trigonometr") || text.includes("sin") || text.includes("cos") || text.includes("tan") || text.includes("height")) return { topic: "\u{1F4D0} Trigonometry", slug: "trigo" };
+    if (text.includes("geometry") || text.includes("circle") || text.includes("triangle") || text.includes("chord") || text.includes("tangent")) return { topic: "\u{1F4D0} Geometry & Circles", slug: "geom" };
+    if (text.includes("mensuration") || text.includes("cylinder") || text.includes("cone") || text.includes("sphere") || text.includes("volume") || text.includes("area")) return { topic: "\u{1F4E6} Mensuration (2D/3D)", slug: "mens" };
+    if (text.includes("number system") || text.includes("divisib") || text.includes("remainder") || text.includes("hcf") || text.includes("lcm")) return { topic: "\u{1F522} Number System & HCF/LCM", slug: "num" };
+    if (text.includes("profit") || text.includes("loss") || text.includes("discount") || text.includes("marked price")) return { topic: "\u{1F3F7}\uFE0F Profit, Loss & Discount", slug: "pnl" };
+    if (text.includes("percent") || text.includes("percentage")) return { topic: "\u{1F4CA} Percentages", slug: "pct" };
+    if (text.includes("ratio") || text.includes("proportion")) return { topic: "\u2696\uFE0F Ratio & Proportion", slug: "ratio" };
+    if (text.includes("simple interest") || text.includes("compound interest") || text.includes("ci") || text.includes("si")) return { topic: "\u{1F4B0} Simple & Compound Interest", slug: "si_ci" };
+    if (text.includes("time and work") || text.includes("pipe") || text.includes("cistern")) return { topic: "\u23F1\uFE0F Time, Work & Pipes", slug: "work" };
+    if (text.includes("speed") || text.includes("distance") || text.includes("train") || text.includes("boat") || text.includes("stream")) return { topic: "\u{1F686} Speed, Time & Distance", slug: "speed" };
+    if (text.includes("average") || text.includes("alligation") || text.includes("mixture")) return { topic: "\u{1F963} Average & Mixtures", slug: "avg" };
+    if (text.includes("data interpretation") || text.includes("bar graph") || text.includes("pie chart") || text.includes("table")) return { topic: "\u{1F4C8} Data Interpretation", slug: "di" };
+    return { topic: "\u{1F522} Arithmetic & Quantitative", slug: "arith" };
+  }
+  if (subject === "reasoning") {
+    if (text.includes("syllogism") || text.includes("conclusion")) return { topic: "\u{1F9E0} Syllogism", slug: "syl" };
+    if (text.includes("analogy") || text.includes("related")) return { topic: "\u{1F517} Analogy & Similarity", slug: "analogy" };
+    if (text.includes("coding") || text.includes("decoding")) return { topic: "\u{1F510} Coding & Decoding", slug: "coding" };
+    if (text.includes("series") || text.includes("missing term")) return { topic: "\u{1F522} Number & Letter Series", slug: "series" };
+    if (text.includes("blood relation") || text.includes("mother") || text.includes("father") || text.includes("sister")) return { topic: "\u{1F465} Blood Relations", slug: "blood" };
+    if (text.includes("direction") || text.includes("distance") || text.includes("north") || text.includes("south")) return { topic: "\u{1F9ED} Direction & Distance", slug: "direction" };
+    if (text.includes("venn") || text.includes("diagram")) return { topic: "\u2B55 Venn Diagrams", slug: "venn" };
+    if (text.includes("paper folding") || text.includes("cube") || text.includes("dice") || text.includes("mirror") || text.includes("embedded")) return { topic: "\u{1F3B2} Non-Verbal & Pattern", slug: "nonverbal" };
+    return { topic: "\u{1F9E0} General Reasoning", slug: "reason_gen" };
+  }
+  if (text.includes("polity") || text.includes("article") || text.includes("constitution") || text.includes("amendment") || text.includes("parliament")) return { topic: "\u{1F3DB}\uFE0F Polity & Constitution", slug: "polity" };
+  if (text.includes("history") || text.includes("mughal") || text.includes("delhi") || text.includes("british") || text.includes("battle") || text.includes("gandhi")) return { topic: "\u{1F4DC} Indian History", slug: "history" };
+  if (text.includes("geography") || text.includes("river") || text.includes("mountain") || text.includes("climate") || text.includes("soil") || text.includes("national park")) return { topic: "\u{1F30D} Geography & Environment", slug: "geo" };
+  if (text.includes("economy") || text.includes("economic") || text.includes("budget") || text.includes("gdp") || text.includes("inflation") || text.includes("rbi")) return { topic: "\u{1F4B9} Economics & Finance", slug: "eco" };
+  if (text.includes("biology") || text.includes("cell") || text.includes("disease") || text.includes("vitamin") || text.includes("hormone") || text.includes("plant")) return { topic: "\u{1F9EC} Biology & Life Sciences", slug: "bio" };
+  if (text.includes("physics") || text.includes("motion") || text.includes("optics") || text.includes("energy") || text.includes("gravity")) return { topic: "\u269B\uFE0F Physics", slug: "phys" };
+  if (text.includes("chemistry") || text.includes("acid") || text.includes("base") || text.includes("metal") || text.includes("compound") || text.includes("reaction")) return { topic: "\u{1F9EA} Chemistry", slug: "chem" };
+  if (text.includes("dance") || text.includes("music") || text.includes("festival") || text.includes("temple") || text.includes("folk")) return { topic: "\u{1F3AD} Art, Culture & Dances", slug: "art" };
+  return { topic: "\u{1F310} General Awareness & Static GK", slug: "gk_static" };
+}
+function getMockErrorSubjectsSummary() {
   const subjects = [
     { id: "english", shortCode: "eng", title: "\u{1F4D6} English" },
     { id: "mathematics", shortCode: "math", title: "\u{1F4D0} Mathematics" },
@@ -38730,66 +38821,37 @@ function getMistakeStats(userId, filter = "all") {
     { id: "general_awareness", shortCode: "ga", title: "\u{1F3DB}\uFE0F General Awareness" }
   ];
   return subjects.map((sub) => {
-    const topicMap = /* @__PURE__ */ new Map();
-    let total = 0;
-    const seenQIds = /* @__PURE__ */ new Set();
-    if (filter === "all" || filter === "telegram_drill") {
-      const userMap = userMistakesMap.get(userId);
-      if (userMap) {
-        for (const item of userMap.values()) {
-          if (item.mastered) continue;
-          if (isQuestionDeleted(item.id, item.question)) continue;
-          if (filter !== "all" && item.source !== filter) continue;
-          if (item.subject === sub.id) {
-            seenQIds.add(item.id);
-            total++;
-            const existing = topicMap.get(item.topicSlug) || {
-              topic: item.topic,
-              slug: item.topicSlug,
-              count: 0
-            };
-            existing.count++;
-            topicMap.set(item.topicSlug, existing);
-          }
-        }
-      }
+    const questions = getMockQuestionsForSubject(sub.id);
+    const chapterMap = /* @__PURE__ */ new Map();
+    for (const q of questions) {
+      const { topic, slug } = classifyMockTopic(q, sub.id);
+      const existing = chapterMap.get(slug) || { name: topic, slug, count: 0 };
+      existing.count++;
+      chapterMap.set(slug, existing);
     }
-    if (filter === "all" || filter === "website_mock") {
-      const mockList = loadCachedMockErrors(sub.id);
-      for (const mq of mockList) {
-        if (seenQIds.has(mq.id)) continue;
-        if (isQuestionDeleted(mq.id, mq.question)) continue;
-        const classified = classifySubjectAndTopic(mq);
-        seenQIds.add(mq.id);
-        total++;
-        const existing = topicMap.get(classified.topicSlug) || {
-          topic: classified.topic,
-          slug: classified.topicSlug,
-          count: 0
-        };
-        existing.count++;
-        topicMap.set(classified.topicSlug, existing);
-      }
-    }
-    const topics = Array.from(topicMap.values()).sort((a, b) => b.count - a.count);
+    const chapters = Array.from(chapterMap.values()).sort((a, b) => b.count - a.count);
     return {
-      subjectId: sub.id,
+      id: sub.id,
       shortCode: sub.shortCode,
       title: sub.title,
-      total,
-      topics
+      total: questions.length,
+      chapters
     };
   });
 }
-function getTotalMistakesSummary(userId) {
-  const allStats = getMistakeStats(userId, "all");
-  const tgStats = getMistakeStats(userId, "telegram_drill");
-  const webStats = getMistakeStats(userId, "website_mock");
-  return {
-    all: allStats.reduce((acc, s) => acc + s.total, 0),
-    telegram_drill: tgStats.reduce((acc, s) => acc + s.total, 0),
-    website_mock: webStats.reduce((acc, s) => acc + s.total, 0)
-  };
+function getMockErrorQuestions(subject, chapterSlug, mode = "all") {
+  const allQs = getMockQuestionsForSubject(subject);
+  let matched = allQs;
+  if (chapterSlug && chapterSlug !== "_") {
+    matched = allQs.filter((q) => {
+      const { slug } = classifyMockTopic(q, subject);
+      return slug === chapterSlug;
+    });
+  }
+  if (mode === "10" && matched.length > 10) {
+    return shuffle(matched).slice(0, 10);
+  }
+  return matched;
 }
 
 // src/telegram/bot.ts
@@ -38800,7 +38862,7 @@ bot.catch((err) => {
   console.error("[TelegramBot] Uncaught error during update handling:", err);
 });
 function getRootMenuKeyboard() {
-  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors & Mistakes", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab");
+  return new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Mock Errors (1,004 Qs)", "nav_mock_errors").row().text("\u{1F4D5} My Quiz Mistakes", "nav_quiz_mistakes").row().text("\u26A1 Speed Lab", "nav_speed_lab");
 }
 function getChapterBankSubjectsKeyboard() {
   return new InlineKeyboard().text("\u{1F4D0} Math", "cb_sub_math").text("\u{1F9E0} Reasoning", "cb_sub_reasoning").row().text("\u{1F4D6} English", "cb_sub_english").text("\u{1F3DB}\uFE0F GK & GA", "cb_sub_ga").row().text("\u2B05\uFE0F Back", "nav_root");
@@ -39172,152 +39234,203 @@ var SUB_TO_SHORT = {
   reasoning: "reas",
   general_awareness: "ga"
 };
-var FLT_MAP = {
-  all: "all",
-  tg: "telegram_drill",
-  web: "website_mock"
-};
-var FLT_LABELS = {
-  all: "\u{1F310} All Mistakes",
-  tg: "\u{1F4F1} Telegram Drill Errors",
-  web: "\u{1F4BB} Website Mock Errors"
-};
 bot.callbackQuery("nav_mock_errors", async (ctx) => {
-  const stats = getMistakeStats(ctx.from.id, "all");
-  const totalAll = stats.reduce((acc, s) => acc + s.total, 0);
+  const subjects = getMockErrorSubjectsSummary();
+  const totalMockQs = subjects.reduce((sum, s) => sum + s.total, 0);
   const kb = new InlineKeyboard();
-  for (const s of stats) {
-    kb.text(`${s.title} (${s.total} Mistakes)`, `mb_sub:all:${s.shortCode}`).row();
+  for (const s of subjects) {
+    kb.text(`${s.title} (${s.total} Qs)`, `me_sub:${s.shortCode}`).row();
   }
-  kb.text("\u2699\uFE0F Filter Source (All / Bot / Mock)", "nav_mock_filter").row();
   kb.text("\u2B05\uFE0F Back to Menu", "nav_root");
-  const text = `\u{1F3AF} *Mock Errors & Mistake Bank*
+  const text = `\u{1F3AF} *SSC CGL Mock Test Errors*
 
-*${totalAll}* total errors logged and organized chapter-wise.
-Select a subject to drill mistakes or browse chapter breakdown:`;
+*${totalMockQs}* real questions from your full mock exams, organized by subject and chapter.
+
+Select a subject to drill:`;
   await ctx.editMessageText(text, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
   await ctx.answerCallbackQuery();
 });
-bot.callbackQuery("nav_mock_filter", async (ctx) => {
-  const summary = getTotalMistakesSummary(ctx.from.id);
-  const kb = new InlineKeyboard().text(`\u{1F310} All Combined (${summary.all})`, "mb_flt:all").row().text(`\u{1F4F1} Telegram Drills (${summary.telegram_drill})`, "mb_flt:tg").row().text(`\u{1F4BB} Website Mocks (${summary.website_mock})`, "mb_flt:web").row().text("\u2B05\uFE0F Back to Mistakes", "nav_mock_errors");
-  const text = `\u2699\uFE0F *Filter Mistake Source*
-
-\u2022 \u{1F310} *All Combined:* ${summary.all}
-\u2022 \u{1F4F1} *Telegram Drills:* ${summary.telegram_drill}
-\u2022 \u{1F4BB} *Website Mocks:* ${summary.website_mock}
-
-Choose which mistake questions to display:`;
-  await ctx.editMessageText(text, {
-    parse_mode: "Markdown",
-    reply_markup: kb
-  });
+bot.callbackQuery(/^me_sub:(eng|math|reas|ga)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-});
-bot.callbackQuery(/^mb_flt:(all|tg|web)$/, async (ctx) => {
-  await ctx.answerCallbackQuery();
-  const fltCode = ctx.match[1];
-  const filter = FLT_MAP[fltCode] || "all";
-  const filterLabel = FLT_LABELS[fltCode];
-  const stats = getMistakeStats(ctx.from.id, filter);
+  const subCode = ctx.match[1];
+  const subjectId = SHORT_TO_SUB[subCode];
+  const subjects = getMockErrorSubjectsSummary();
+  const subInfo = subjects.find((s) => s.shortCode === subCode);
+  if (!subInfo) return;
   const kb = new InlineKeyboard();
-  for (const s of stats) {
-    kb.text(`${s.title} (${s.total} Mistakes)`, `mb_sub:${fltCode}:${s.shortCode}`).row();
+  kb.text(`\u{1F525} Drill All (${subInfo.total} Qs)`, `me_run:${subCode}:_:all`).text("\u26A1 Quick 10", `me_run:${subCode}:_:10`).row();
+  for (const ch of subInfo.chapters) {
+    kb.text(`${ch.name} (${ch.count})`, `me_top:${subCode}:${ch.slug}`).row();
   }
-  kb.text("\u2B05\uFE0F Change Source Filter", "nav_mock_filter");
-  await ctx.editMessageText(
-    `\u{1F3AF} *Mock Errors & Mistake Bank \u2022 ${filterLabel}*
+  kb.text("\u2B05\uFE0F Back to Mock Errors", "nav_mock_errors");
+  const text = `\u{1F3AF} *${subInfo.title} Mock Errors*
+Total: *${subInfo.total}* questions across ${subInfo.chapters.length} chapters.
 
-Select a subject to drill mistakes or browse chapter/topic breakdown:`,
+Choose a chapter to practice or start a full session:`;
+  await ctx.editMessageText(text, {
+    parse_mode: "Markdown",
+    reply_markup: kb
+  });
+});
+bot.callbackQuery(/^me_top:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, subCode, slug] = ctx.match;
+  const subjectId = SHORT_TO_SUB[subCode];
+  const subjects = getMockErrorSubjectsSummary();
+  const subInfo = subjects.find((s) => s.shortCode === subCode);
+  const chapter = subInfo?.chapters.find((c) => c.slug === slug);
+  const chTitle = chapter?.name || "Mock Chapter";
+  const count = chapter?.count || 0;
+  const kb = new InlineKeyboard().text(`\u{1F525} Practice All (${count} Qs)`, `me_run:${subCode}:${slug}:all`).text("\u26A1 Quick 10", `me_run:${subCode}:${slug}:10`).row().text("\u2B05\uFE0F Back to Chapters", `me_sub:${subCode}`);
+  await ctx.editMessageText(
+    `\u{1F4CC} *${chTitle}*
+Source: *Full Mock Test Series* \u2022 *${count}* Questions
+
+Choose drill length:`,
     {
       parse_mode: "Markdown",
       reply_markup: kb
     }
   );
 });
-bot.callbackQuery(/^mb_sub:(all|tg|web):(eng|math|reas|ga)$/, async (ctx) => {
+bot.callbackQuery(/^me_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const [_, fltCode, subCode] = ctx.match;
-  const filter = FLT_MAP[fltCode] || "all";
-  const filterLabel = FLT_LABELS[fltCode];
+  const [_, subCode, slug, mode] = ctx.match;
   const subjectId = SHORT_TO_SUB[subCode];
-  const stats = getMistakeStats(ctx.from.id, filter);
-  const subStat = stats.find((s) => s.shortCode === subCode);
-  if (!subStat) return;
-  const kb = new InlineKeyboard();
-  if (subStat.total > 0) {
-    kb.text(`\u{1F525} Drill All (${subStat.total} Qs)`, `mb_run:${fltCode}:${subCode}:_:all`).text("\u26A1 Quick 10", `mb_run:${fltCode}:${subCode}:_:10`).row();
+  const questions = getMockErrorQuestions(subjectId, slug === "_" ? void 0 : slug, mode);
+  if (!questions || questions.length === 0) {
+    await ctx.reply("No questions found for this selection.", {
+      reply_markup: getRootMenuKeyboard()
+    });
+    return;
   }
-  const activeTopics = subStat.topics.filter((t) => t.count > 0);
-  if (activeTopics.length > 0) {
-    for (const t of activeTopics) {
-      kb.text(`${t.topic} (${t.count})`, `mb_top:${fltCode}:${subCode}:${t.slug}`).row();
+  const subjects = getMockErrorSubjectsSummary();
+  const subInfo = subjects.find((s) => s.shortCode === subCode);
+  const chapter = subInfo?.chapters.find((c) => c.slug === slug);
+  const label = chapter ? chapter.name : subInfo?.title || "Mock Errors";
+  await startQuizForUser(
+    ctx.from.id,
+    ctx.chat.id,
+    `\u{1F3AF} ${label} (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`,
+    questions
+  );
+});
+bot.callbackQuery("nav_quiz_mistakes", async (ctx) => {
+  const stats = getMistakeStats(ctx.from.id, "all");
+  const totalMistakes = stats.reduce((sum, s) => sum + s.total, 0);
+  if (totalMistakes === 0) {
+    const emptyKb = new InlineKeyboard().text("\u{1F4C1} Practice Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Practice Mock Errors", "nav_mock_errors").row().text("\u2B05\uFE0F Back to Menu", "nav_root");
+    await ctx.editMessageText(
+      `\u{1F4D5} *My Quiz Mistakes*
+
+\u2728 *Zero pending mistakes!*
+
+Whenever you take a quiz on Telegram or the website and answer a question incorrectly, it will automatically appear here topic-wise.
+
+Once you answer it correctly during revision, it will automatically be marked as *Mastered*!`,
+      {
+        parse_mode: "Markdown",
+        reply_markup: emptyKb
+      }
+    );
+    await ctx.answerCallbackQuery();
+    return;
+  }
+  const kb = new InlineKeyboard();
+  for (const s of stats) {
+    if (s.total > 0) {
+      kb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
     }
   }
-  kb.text("\u2B05\uFE0F Back to Subjects", fltCode === "all" ? "nav_mock_errors" : `mb_flt:${fltCode}`);
-  const text = `\u{1F3AF} *${subStat.title} Mistakes*
-Filter: *${filterLabel}* \u2022 Total: *${subStat.total}*
+  kb.text("\u2B05\uFE0F Back to Menu", "nav_root");
+  const text = `\u{1F4D5} *My Quiz Mistakes Notebook*
 
-` + (activeTopics.length > 0 ? `Drill the entire subject or choose a specific topic/chapter below:` : `No mistakes recorded yet in this section!`);
+You have *${totalMistakes}* active mistakes from your quiz practice.
+Select a subject to drill your missed questions:`;
   await ctx.editMessageText(text, {
     parse_mode: "Markdown",
     reply_markup: kb
   });
-});
-bot.callbackQuery(/^mb_top:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const [_, fltCode, subCode, slug] = ctx.match;
-  const filter = FLT_MAP[fltCode] || "all";
-  const filterLabel = FLT_LABELS[fltCode];
-  const stats = getMistakeStats(ctx.from.id, filter);
+});
+bot.callbackQuery(/^qm_sub:(eng|math|reas|ga)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const subCode = ctx.match[1];
+  const subjectId = SHORT_TO_SUB[subCode];
+  const stats = getMistakeStats(ctx.from.id, "all");
+  const subStat = stats.find((s) => s.shortCode === subCode);
+  if (!subStat || subStat.total === 0) {
+    await ctx.editMessageText(`\u2705 All ${subCode.toUpperCase()} mistakes have been mastered!`, {
+      reply_markup: new InlineKeyboard().text("\u2B05\uFE0F Back to Mistakes", "nav_quiz_mistakes")
+    });
+    return;
+  }
+  const kb = new InlineKeyboard();
+  kb.text(`\u{1F525} Drill All (${subStat.total} Qs)`, `qm_run:${subCode}:_:all`).text("\u26A1 Quick 10", `qm_run:${subCode}:_:10`).row();
+  for (const t of subStat.topics) {
+    if (t.count > 0) {
+      kb.text(`${t.topic} (${t.count})`, `qm_top:${subCode}:${t.slug}`).row();
+    }
+  }
+  kb.text("\u2B05\uFE0F Back to Mistakes", "nav_quiz_mistakes");
+  await ctx.editMessageText(
+    `\u{1F4D5} *${subStat.title} Mistakes*
+Total: *${subStat.total}* wrong questions to revise.
+
+Drill all or choose a specific topic:`,
+    {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    }
+  );
+});
+bot.callbackQuery(/^qm_top:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+  await ctx.answerCallbackQuery();
+  const [_, subCode, slug] = ctx.match;
+  const subjectId = SHORT_TO_SUB[subCode];
+  const stats = getMistakeStats(ctx.from.id, "all");
   const subStat = stats.find((s) => s.shortCode === subCode);
   const topicItem = subStat?.topics.find((t) => t.slug === slug);
   const topicTitle = topicItem?.topic || "Topic Practice";
   const count = topicItem?.count || 0;
-  const kb = new InlineKeyboard().text(`\u{1F525} Practice All (${count} Qs)`, `mb_run:${fltCode}:${subCode}:${slug}:all`).text("\u26A1 Quick 10", `mb_run:${fltCode}:${subCode}:${slug}:10`).row();
-  if (count > 0) {
-    kb.text("\u{1F5D1}\uFE0F Clear Topic Mistakes", `mb_del:${fltCode}:${subCode}:${slug}`).row();
-  }
-  kb.text("\u2B05\uFE0F Back to Topics", `mb_sub:${fltCode}:${subCode}`);
+  const kb = new InlineKeyboard().text(`\u{1F525} Practice All (${count} Qs)`, `qm_run:${subCode}:${slug}:all`).text("\u26A1 Quick 10", `qm_run:${subCode}:${slug}:10`).row().text("\u{1F5D1}\uFE0F Clear Topic Mistakes", `qm_del:${subCode}:${slug}`).row().text("\u2B05\uFE0F Back to Topics", `qm_sub:${subCode}`);
   await ctx.editMessageText(
     `\u{1F4CC} *${topicTitle}*
-Source: *${filterLabel}* \u2022 *${count}* Mistakes logged
+Mistakes logged: *${count}*
 
-Choose your drill mode:`,
+Select drill mode:`,
     {
       parse_mode: "Markdown",
       reply_markup: kb
     }
   );
 });
-bot.callbackQuery(/^mb_del:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
+bot.callbackQuery(/^qm_del:(eng|math|reas|ga):([a-z0-9_]+)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const [_, fltCode, subCode, slug] = ctx.match;
-  const filter = FLT_MAP[fltCode] || "all";
+  const [_, subCode, slug] = ctx.match;
   const subjectId = SHORT_TO_SUB[subCode];
-  const questions = getUserMistakes(ctx.from.id, filter, subjectId, slug === "_" ? void 0 : slug);
+  const questions = getUserMistakes(ctx.from.id, "all", subjectId, slug === "_" ? void 0 : slug);
   for (const q of questions) {
     deleteMistake(ctx.from.id, q.id, q.question);
   }
   await ctx.editMessageText(
     `\u2705 *Cleared ${questions.length} Mistakes!*
 
-These questions have been removed from your mistake bank and synced across Firebase and the website.`,
+These questions have been cleared from your live mistake notebook.`,
     {
       parse_mode: "Markdown",
-      reply_markup: new InlineKeyboard().text("\u2B05\uFE0F Back to Subjects", `mb_flt:${fltCode}`)
+      reply_markup: new InlineKeyboard().text("\u2B05\uFE0F Back to Mistakes", "nav_quiz_mistakes")
     }
   );
 });
-bot.callbackQuery(/^mb_run:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
+bot.callbackQuery(/^qm_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
-  const [_, fltCode, subCode, slug, mode] = ctx.match;
-  const filter = FLT_MAP[fltCode] || "all";
+  const [_, subCode, slug, mode] = ctx.match;
   const subjectId = SHORT_TO_SUB[subCode];
-  let questions = getUserMistakes(ctx.from.id, filter, subjectId, slug === "_" ? void 0 : slug);
+  let questions = getUserMistakes(ctx.from.id, "all", subjectId, slug === "_" ? void 0 : slug);
   if (!questions || questions.length === 0) {
     await ctx.reply("No active mistakes found for this selection! Keep practicing to master concepts.", {
       reply_markup: getRootMenuKeyboard()
@@ -39328,8 +39441,12 @@ bot.callbackQuery(/^mb_run:(all|tg|web):(eng|math|reas|ga):([a-z0-9_]+):(all|10)
     questions = shuffle(questions).slice(0, 10);
   }
   const subTitle = subjectId.charAt(0).toUpperCase() + subjectId.slice(1).replace("_", " ");
-  const modeLabel = mode === "all" ? `All ${questions.length} Questions` : "Quick 10";
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${modeLabel})`, questions);
+  await startQuizForUser(
+    ctx.from.id,
+    ctx.chat.id,
+    `\u{1F4D5} ${subTitle} Quiz Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`,
+    questions
+  );
 });
 bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
@@ -39641,7 +39758,7 @@ bot.on("poll_answer", async (ctx) => {
       markMistakeMastered(session.userId, currentQ.id);
     }
   } else {
-    recordMistake(session.userId, currentQ, "telegram_drill");
+    recordMistake(session.userId, currentQ, "telegram_quiz");
   }
   session.answeredCount++;
   session.currentIndex++;

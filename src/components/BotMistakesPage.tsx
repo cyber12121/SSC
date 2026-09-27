@@ -30,7 +30,7 @@ export interface RecordedMistake {
   subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness';
   topic: string;
   topicSlug: string;
-  source: 'telegram_drill' | 'website_mock';
+  source: 'telegram_quiz' | 'website_quiz' | 'telegram_drill' | 'website_mock';
   timestamp: number;
   wrongCount: number;
   mastered: boolean;
@@ -62,7 +62,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [mistakes, setMistakes] = useState<RecordedMistake[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [sourceFilter, setSourceFilter] = useState<'all' | 'telegram_drill' | 'website_mock'>('all');
+  const [sourceFilter, setSourceFilter] = useState<'all' | 'telegram_quiz' | 'website_quiz'>('all');
   const [selectedSubject, setSelectedSubject] = useState<string>('all');
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -185,13 +185,13 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
   // Breakdown statistics
   const stats = useMemo(() => {
-    const telegramCount = mistakes.filter((m) => m.source === 'telegram_drill').length;
-    const mockCount = mistakes.filter((m) => m.source === 'website_mock').length;
+    const telegramCount = mistakes.filter((m) => m.source.startsWith('telegram')).length;
+    const websiteCount = mistakes.filter((m) => m.source.startsWith('website')).length;
     const totalWrongTimes = mistakes.reduce((sum, m) => sum + (m.wrongCount || 1), 0);
     return {
       total: mistakes.length,
       telegramCount,
-      mockCount,
+      websiteCount,
       totalWrongTimes,
     };
   }, [mistakes]);
@@ -215,7 +215,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
       {/* Hero & Header Section */}
       <div className="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 shadow-xs relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"></div>
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-indigo-600 to-purple-600"></div>
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1.5">
@@ -227,20 +227,20 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>Back</span>
               </button>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-[11px] font-bold tracking-wider uppercase shadow-2xs">
-                <Smartphone className="w-3 h-3 text-indigo-600" />
-                <span>2-Way Firebase Sync</span>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-[11px] font-bold tracking-wider uppercase shadow-2xs">
+                <Smartphone className="w-3 h-3 text-rose-600" />
+                <span>Live Quiz Notebook</span>
               </div>
               <span className="text-xs text-slate-400 font-mono hidden sm:inline-block">
-                @my_cgl_bot & Website Mocks
+                @My_cgl_bot & Website Practice
               </span>
             </div>
 
             <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-              <span>Mistake Bank & Error Notebook</span>
+              <span>My Quiz Mistakes Notebook</span>
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 max-w-2xl leading-relaxed">
-              Every missed question from Telegram Bot drills and Full Mock Tests is logged here. Delete any mastered question permanently from Firebase and future Telegram bot drills.
+              Questions you answer incorrectly during live quizzes on Telegram (@My_cgl_bot) or practice quizzes on the website are recorded here chapter-wise. Delete or master them once reviewed!
             </p>
           </div>
 
@@ -250,10 +250,10 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               onClick={fetchMistakes}
               disabled={loading}
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors border border-slate-200/80 cursor-pointer disabled:opacity-50"
-              title="Sync latest questions from server"
+              title="Sync latest mistakes from server"
             >
               <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? 'animate-spin' : ''}`} />
-              <span>{loading ? 'Syncing...' : 'Sync Questions'}</span>
+              <span>{loading ? 'Syncing...' : 'Sync Mistakes'}</span>
             </button>
           </div>
         </div>
@@ -274,9 +274,9 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           <div className="bg-indigo-50/60 p-3 rounded-xl border border-indigo-100">
             <div className="text-[11px] font-semibold text-indigo-600 uppercase tracking-wider flex items-center gap-1">
               <Laptop className="w-3 h-3" />
-              <span>Website Mocks</span>
+              <span>Website Quizzes</span>
             </div>
-            <div className="text-2xl font-black text-indigo-900 mt-0.5">{stats.mockCount}</div>
+            <div className="text-2xl font-black text-indigo-900 mt-0.5">{stats.websiteCount}</div>
           </div>
           <div className="bg-amber-50/60 p-3 rounded-xl border border-amber-100">
             <div className="text-[11px] font-semibold text-amber-700 uppercase tracking-wider">Total Wrong Attempts</div>
@@ -315,16 +315,16 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               onClick={() => { setSourceFilter('all'); setSelectedTopic('all'); }}
               className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
                 sourceFilter === 'all'
-                  ? 'bg-white text-indigo-700 font-bold shadow-2xs'
+                  ? 'bg-white text-rose-700 font-bold shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               🌐 All Sources ({stats.total})
             </button>
             <button
-              onClick={() => { setSourceFilter('telegram_drill'); setSelectedTopic('all'); }}
+              onClick={() => { setSourceFilter('telegram_quiz'); setSelectedTopic('all'); }}
               className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                sourceFilter === 'telegram_drill'
+                sourceFilter === 'telegram_quiz'
                   ? 'bg-white text-sky-700 font-bold shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
@@ -333,15 +333,15 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               <span>Telegram Bot ({stats.telegramCount})</span>
             </button>
             <button
-              onClick={() => { setSourceFilter('website_mock'); setSelectedTopic('all'); }}
+              onClick={() => { setSourceFilter('website_quiz'); setSelectedTopic('all'); }}
               className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 cursor-pointer ${
-                sourceFilter === 'website_mock'
+                sourceFilter === 'website_quiz'
                   ? 'bg-white text-indigo-700 font-bold shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <Laptop className="w-3 h-3" />
-              <span>Website Mocks ({stats.mockCount})</span>
+              <span>Website ({stats.websiteCount})</span>
             </button>
           </div>
         </div>

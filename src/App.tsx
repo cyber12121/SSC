@@ -1222,6 +1222,31 @@ export default function App() {
       });
     }
 
+    // Asynchronously record wrong answers to live mistakes notebook (/api/mistakes)
+    try {
+      const wrongList = (results.questionDetails || []).filter(d => !d.isCorrect && d.question && d.selectedAnswer);
+      for (const item of wrongList) {
+        if (!item.question) continue;
+        fetch('/api/mistakes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'record',
+            userId: user ? user.uid : undefined,
+            questionData: {
+              id: item.question.id || `web_quiz_${Date.now()}_${item.q_num}`,
+              question: item.question.question,
+              options: item.question.options,
+              correctOption: item.question.answer,
+              explanation: item.question.explanation || item.question.solution,
+              subject: item.question.subject || results.subject || 'general_awareness',
+              topic: item.question.topic || results.chapter_title || 'Quiz Practice',
+            }
+          })
+        }).catch(() => {});
+      }
+    } catch { }
+
     // Check for missed questions or speed traps (user time > existing avg + 5s) to offer SRS enrollment
     try {
       const candidates: SRSCard[] = [];
@@ -2201,18 +2226,18 @@ export default function App() {
                   <span>Scores</span>
                 </button>
 
-                {/* 7. Bot Mistakes */}
+                {/* 7. My Mistakes */}
                 <button
                   onClick={() => setView('botErrors')}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
                     view === 'botErrors'
-                      ? 'bg-indigo-50 text-indigo-700 shadow-2xs'
+                      ? 'bg-rose-50 text-rose-700 shadow-2xs'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
                   }`}
-                  title="Telegram Bot & Mock Mistake Notebook"
+                  title="Telegram & Website Quiz Mistakes Notebook"
                 >
-                  <span className="text-xs">📱</span>
-                  <span>Bot Errors</span>
+                  <span className="text-xs">📕</span>
+                  <span>My Mistakes</span>
                 </button>
               </div>
 
@@ -2246,17 +2271,17 @@ export default function App() {
 
                 <div className="h-4 w-px bg-slate-200 hidden sm:block" />
 
-                {/* Mobile Bot Mistakes trigger */}
+                {/* Mobile Mistakes trigger */}
                 <button
                   onClick={() => setView('botErrors')}
                   className={`lg:hidden p-1.5 rounded-lg border text-xs font-bold transition-colors ${
                     view === 'botErrors'
-                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
-                      : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border-indigo-200/80'
+                      ? 'bg-rose-600 text-white border-rose-600 shadow-2xs'
+                      : 'bg-rose-50 text-rose-700 hover:bg-rose-100 border-rose-200/80'
                   }`}
-                  title="Bot Errors"
+                  title="My Mistakes"
                 >
-                  📱
+                  📕
                 </button>
 
                 {/* Theme Selector */}
@@ -4104,11 +4129,11 @@ export default function App() {
           <button
             onClick={() => setView('botErrors')}
             className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
-              view === 'botErrors' ? 'text-indigo-600 bg-indigo-50/60 font-black' : 'text-slate-500 hover:text-slate-800'
+              view === 'botErrors' ? 'text-rose-600 bg-rose-50/60 font-black' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
-            <span className="text-sm leading-none mb-0.5">📱</span>
-            <span>Errors</span>
+            <span className="text-sm leading-none mb-0.5">📕</span>
+            <span>Mistakes</span>
           </button>
         </nav>
       )}
