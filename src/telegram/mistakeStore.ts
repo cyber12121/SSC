@@ -340,7 +340,7 @@ export function deleteMistake(userId: number | undefined, questionId: string, qu
 export function getUserMistakes(
   userId: number,
   filter: MistakeFilter = 'all',
-  subject?: 'english' | 'mathematics' | 'reasoning' | 'general_awareness',
+  subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness' | undefined = undefined,
   topicSlug: string = ''
 ): TelegramQuizQuestion[] {
   const results: TelegramQuizQuestion[] = [];

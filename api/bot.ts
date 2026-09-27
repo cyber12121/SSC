@@ -5552,7 +5552,7 @@ function deleteMistake(userId, questionId, questionText) {
   }
   saveToDisk2();
 }
-function getUserMistakes(userId, filter = "all", subject, topicSlug = "") {
+function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = "") {
   const results = [];
   const seenQIds = /* @__PURE__ */ new Set();
   const checkAndPush = (item) => {
