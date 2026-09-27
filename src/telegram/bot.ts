@@ -99,6 +99,43 @@ function getChapterBankSubjectsKeyboard(): InlineKeyboard {
     .text('⬅️ Back', 'nav_root');
 }
 
+// Cleans raw explanation strings for elegant Telegram card display
+function cleanExplanationForTelegram(raw: string): string {
+  if (!raw) return '';
+  let text = raw;
+
+  // 1. Remove metadata clutter like "📖 **Source:** ..." or "Source: ..."
+  text = text.replace(/📖?\s*\*{0,2}Source:\*{0,2}\s*[^\n\r]+/gi, '');
+  text = text.replace(/\[.*?Source.*?\]/gi, '');
+
+  // 2. Handle vocabulary patterns like "**Target Word:** Cavalier **Synonyms:** Dismissive, careless"
+  const targetWordMatch = text.match(/\*{0,2}Target Word:\*{0,2}\s*([^*]+?)(?=\*{0,2}(?:Synonyms|Antonyms|Meaning|$))/i);
+  const synonymsMatch = text.match(/\*{0,2}Synonyms?:\*{0,2}\s*([^*]+?)(?=\*{0,2}(?:Antonyms|Meaning|Source|$))/i);
+  const antonymsMatch = text.match(/\*{0,2}Antonyms?:\*{0,2}\s*([^*]+?)(?=\*{0,2}(?:Meaning|Source|$))/i);
+
+  if (targetWordMatch && (synonymsMatch || antonymsMatch)) {
+    const word = targetWordMatch[1].trim();
+    const syns = synonymsMatch ? synonymsMatch[1].trim() : '';
+    const ants = antonymsMatch ? antonymsMatch[1].trim() : '';
+    let result = `*${word}*`;
+    if (syns) result += ` ➔ *Syn:* ${syns}`;
+    if (ants) result += ` | *Ant:* ${ants}`;
+    return result;
+  }
+
+  // 3. Clean up common markdown artifacts and convert ** to Telegram single *
+  text = text.replace(/\*\*(.*?)\*\*/g, '*$1*');
+  text = text.replace(/\\n/g, ' ').replace(/\s+/g, ' ');
+  text = text.replace(/^\s*Solution\s*:?/i, '').trim();
+
+  // 4. Truncate gracefully to ~150 chars if too long
+  if (text.length > 150) {
+    text = text.slice(0, 147).trim() + '...';
+  }
+
+  return text.trim();
+}
+
 // ----------------------------------------------------
 // QUIZ ENGINE DISPATCH
 // ----------------------------------------------------
@@ -1325,12 +1362,23 @@ bot.on('poll_answer', async (ctx) => {
     recordMistake(session.userId, currentQ, 'telegram_quiz');
     // Deep-link to Web solution & AI mentor
     const webMistakeUrl = 'https://ssc27.vercel.app/?view=botErrors';
-    const explanationSnippet = currentQ.explanation ? currentQ.explanation.trim().slice(0, 160) : '';
+    const correctOpt = (currentQ.options && currentQ.options[currentQ.correctOptionIndex]) ? currentQ.options[currentQ.correctOptionIndex].trim() : '';
+    const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
+
+    let feedbackMsg = `❌ *Incorrect*\n\n`;
+    if (correctOpt) {
+      feedbackMsg += `✅ *Correct:* ${correctOpt}\n`;
+    }
+    if (cleanExpl) {
+      feedbackMsg += `💡 ${cleanExpl}\n\n`;
+    } else {
+      feedbackMsg += `\n`;
+    }
+    feedbackMsg += `📕 _Saved to Mistake Notebook_`;
+
     bot.api.sendMessage(
       session.chatId,
-      `❌ *Incorrect Answer*\n\n` +
-      (explanationSnippet ? `💡 _${explanationSnippet}${currentQ.explanation.length > 160 ? '...' : ''}_\n\n` : '') +
-      `_Saved to your Mistake Notebook 📕_`,
+      feedbackMsg,
       {
         parse_mode: 'Markdown',
         reply_markup: new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl),

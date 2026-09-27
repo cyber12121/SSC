@@ -38867,6 +38867,31 @@ function getRootMenuKeyboard() {
 function getChapterBankSubjectsKeyboard() {
   return new InlineKeyboard().text("\u{1F4D0} Math", "cb_sub_math").text("\u{1F9E0} Reasoning", "cb_sub_reasoning").row().text("\u{1F4D6} English", "cb_sub_english").text("\u{1F3DB}\uFE0F GK & GA", "cb_sub_ga").row().text("\u2B05\uFE0F Back", "nav_root");
 }
+function cleanExplanationForTelegram(raw) {
+  if (!raw) return "";
+  let text = raw;
+  text = text.replace(/📖?\s*\*{0,2}Source:\*{0,2}\s*[^\n\r]+/gi, "");
+  text = text.replace(/\[.*?Source.*?\]/gi, "");
+  const targetWordMatch = text.match(/\*{0,2}Target Word:\*{0,2}\s*([^*]+?)(?=\*{0,2}(?:Synonyms|Antonyms|Meaning|$))/i);
+  const synonymsMatch = text.match(/\*{0,2}Synonyms?:\*{0,2}\s*([^*]+?)(?=\*{0,2}(?:Antonyms|Meaning|Source|$))/i);
+  const antonymsMatch = text.match(/\*{0,2}Antonyms?:\*{0,2}\s*([^*]+?)(?=\*{0,2}(?:Meaning|Source|$))/i);
+  if (targetWordMatch && (synonymsMatch || antonymsMatch)) {
+    const word = targetWordMatch[1].trim();
+    const syns = synonymsMatch ? synonymsMatch[1].trim() : "";
+    const ants = antonymsMatch ? antonymsMatch[1].trim() : "";
+    let result = `*${word}*`;
+    if (syns) result += ` \u2794 *Syn:* ${syns}`;
+    if (ants) result += ` | *Ant:* ${ants}`;
+    return result;
+  }
+  text = text.replace(/\*\*(.*?)\*\*/g, "*$1*");
+  text = text.replace(/\\n/g, " ").replace(/\s+/g, " ");
+  text = text.replace(/^\s*Solution\s*:?/i, "").trim();
+  if (text.length > 150) {
+    text = text.slice(0, 147).trim() + "...";
+  }
+  return text.trim();
+}
 async function sendCurrentQuestion(botInstance, session) {
   if (session.currentIndex >= session.questions.length) {
     await sendCompletionSummary(botInstance, session);
@@ -39764,14 +39789,27 @@ bot.on("poll_answer", async (ctx) => {
   } else {
     recordMistake(session.userId, currentQ, "telegram_quiz");
     const webMistakeUrl = "https://ssc27.vercel.app/?view=botErrors";
-    const explanationSnippet = currentQ.explanation ? currentQ.explanation.trim().slice(0, 160) : "";
+    const correctOpt = currentQ.options && currentQ.options[currentQ.correctOptionIndex] ? currentQ.options[currentQ.correctOptionIndex].trim() : "";
+    const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
+    let feedbackMsg = `\u274C *Incorrect*
+
+`;
+    if (correctOpt) {
+      feedbackMsg += `\u2705 *Correct:* ${correctOpt}
+`;
+    }
+    if (cleanExpl) {
+      feedbackMsg += `\u{1F4A1} ${cleanExpl}
+
+`;
+    } else {
+      feedbackMsg += `
+`;
+    }
+    feedbackMsg += `\u{1F4D5} _Saved to Mistake Notebook_`;
     bot.api.sendMessage(
       session.chatId,
-      `\u274C *Incorrect Answer*
-
-` + (explanationSnippet ? `\u{1F4A1} _${explanationSnippet}${currentQ.explanation.length > 160 ? "..." : ""}_
-
-` : "") + `_Saved to your Mistake Notebook \u{1F4D5}_`,
+      feedbackMsg,
       {
         parse_mode: "Markdown",
         reply_markup: new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl)
