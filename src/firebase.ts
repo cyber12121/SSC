@@ -1,43 +1,12 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, initializeAuth, browserLocalPersistence, browserSessionPersistence, inMemoryPersistence } from 'firebase/auth';
-import { getFirestore, collection, addDoc, getDocs, query, where, onSnapshot, doc, getDocFromServer } from 'firebase/firestore';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { getFirestore, collection, addDoc, getDocs, query, where, onSnapshot, doc } from 'firebase/firestore';
 import firebaseConfig from '../firebase-applet-config.json';
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
-
-let authInstance: any;
-try {
-  authInstance = initializeAuth(app, {
-    persistence: [browserLocalPersistence, browserSessionPersistence, inMemoryPersistence]
-  });
-} catch {
-  try {
-    authInstance = getAuth(app);
-  } catch {
-    try {
-      authInstance = initializeAuth(app, {
-        persistence: [inMemoryPersistence]
-      });
-    } catch {
-      authInstance = getAuth(app);
-    }
-  }
-}
-export const auth = authInstance;
+export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
-
-// Connection test
-async function testConnection() {
-  try {
-    if (typeof window !== 'undefined') {
-      await getDocFromServer(doc(db, 'test', 'connection'));
-    }
-  } catch {
-    // Gracefully handle offline or restricted storage contexts
-  }
-}
-testConnection().catch(() => {});
 
 export enum OperationType {
   CREATE = 'create',
