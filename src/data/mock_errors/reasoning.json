@@ -1622,6 +1622,166 @@
           "conceptTested": "Identification of alternating or combined arithmetic operation patterns in number sequences.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_3e1e8a96d2",
+        "q_num": 53,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:50",
+        "avgTime": "00:39",
+        "question": "If '$\\div$' is replaced by '$\\$'; if '$\\times$' is replaced by '$\\&$'; '$-$' is replaced by '$@$'; and '$+$' replaced by '$\\#$', find the value of the following equation: $217 \\$ 7 \\& 4 \\# 5 @ 6$",
+        "options": {
+          "a": "123",
+          "b": "135",
+          "c": "131",
+          "d": "121"
+        },
+        "answer": "a",
+        "solution": "Given expression: $217 \\$ 7 \\& 4 \\# 5 @ 6$\\n\\nGiven Symbol Replacements:\\n'\\$' is replaced by '$\\div$'\n\n'\\&' is replaced by '$\\times$'\n\n'$@$' is replaced by '$-$' (subtraction)\n\n'\\# ' is replaced by '$+$' (addition)\n\nNew equation: $217 \\div 7 \\times 4 + 5 - 6$\n\n$= 31 \\times 4 + 5 - 6$\n\n$= 124 + 5 - 6$\n\n$= 129 - 6 = 123$",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Evaluating arithmetic expressions after symbol substitution following standard BODMAS order.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Evaluating arithmetic expressions after symbol substitution following standard BODMAS order.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_fd0ca46b1b",
+        "q_num": 54,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:11",
+        "avgTime": "00:43",
+        "question": "If $14 \\ (16) \\ 18$ and $33 \\ (64) \\ 25$, then what is the value of '$A$' in $25 \\ (49) \\ A$?",
+        "options": {
+          "a": "32",
+          "b": "18",
+          "c": "24",
+          "d": "32 or 18"
+        },
+        "answer": "d",
+        "solution": "The pattern followed here is: $14 \\ (16) \\ 18 \\rightarrow (18 - 14)^2 = (4)^2 = 16$\n\n$33 \\ (64) \\ 25 \\rightarrow (33 - 25)^2 = (8)^2 = 64$\n\nSimilarly, $25 \\ (49) \\ A \\rightarrow (25 - A)^2 = (7)^2$ or $(A - 25)^2 = (7)^2$\n\n$\\rightarrow 25 - 7$ or $25 + 7$\n\n$\\rightarrow 18$ or $32$",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Number & Set Analogy",
+        "conceptTested": "Identifying arithmetic patterns involving squares and differences between paired numbers.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number & Set Analogy",
+          "conceptTested": "Identifying arithmetic patterns involving squares and differences between paired numbers.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_0090dd95dc",
+        "q_num": 55,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:11",
+        "avgTime": "00:42",
+        "question": "Five persons $A$, $B$, $C$, $D$ and $E$ are sitting around a circular table facing towards the centre (not necessarily in the same order). $C$ is not an immediate neighbour of $D$ and $A$. $B$ is sitting second to the right of $E$. $A$ is sitting second to the left of $E$. Who is sitting on the immediate right of $C$?",
+        "options": {
+          "a": "B",
+          "b": "E",
+          "c": "A",
+          "d": "D"
+        },
+        "answer": "a",
+        "solution": "Given: Five persons $A$, $B$, $C$, $D$ and $E$ are sitting around a circular table facing towards the centre.\n1) $B$ is sitting second to the right of $E$.\n2) $A$ is sitting second to the left of $E$.\n3) $C$ is not an immediate neighbour of $D$ and $A$.\n\nThus, according to the final arrangement, $B$ is sitting on the immediate right of $C$.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Circular Seating Arrangement",
+        "conceptTested": "Deducing relative positions of individuals in a closed circular loop facing towards the center.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Circular Seating Arrangement",
+          "conceptTested": "Deducing relative positions of individuals in a closed circular loop facing towards the center.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_7fef823827",
+        "q_num": 56,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:41",
+        "avgTime": "00:24",
+        "question": "Based on the English alphabetical order, three of the following four letter-clusters are alike in a certain way and thus form a group. Which letter-cluster does not belong to that group? (Note: The odd man out is not based on the number of consonants/vowels or their position in the letter cluster)",
+        "options": {
+          "a": "VCJ",
+          "b": "EMS",
+          "c": "AHO",
+          "d": "HOV"
+        },
+        "answer": "b",
+        "solution": "The logic followed in the clusters is based on the alphabetical positions of the letters. Option B (EMS) does not follow the same pattern as the other three letter - clusters.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Letter Classification",
+        "conceptTested": "Positional alphabet letter distance and cluster pattern recognition",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Letter Classification",
+          "conceptTested": "Positional alphabet letter distance and cluster pattern recognition",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_1eaf368f45",
+        "q_num": 57,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:46",
+        "avgTime": "00:32",
+        "question": "When $9$ is added to twice a number, thus thrice the number obtained is equal to $75$. What is the number?",
+        "options": {
+          "a": "6",
+          "b": "8",
+          "c": "None of these",
+          "d": "10"
+        },
+        "answer": "b",
+        "solution": "Let the number be $x$. According to the question, $3(2x + 9) = 75 \\implies 6x + 27 = 75 \\implies 6x = 48 \\implies x = 8$.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Word Numbers",
+        "conceptTested": "Translating word statements into linear algebraic equations and solving for the unknown variable",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Word Numbers",
+          "conceptTested": "Translating word statements into linear algebraic equations and solving for the unknown variable",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -2315,6 +2475,38 @@
           "topic": "Mathematical Operations",
           "subtopic": "Interchange of Signs & Numbers",
           "conceptTested": "Balancing equations via BODMAS by interchanging mathematical operators.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_cd90fe776d",
+        "q_num": 23,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "02:36",
+        "avgTime": "01:05",
+        "question": "The speed of six bikes $B_1$, $B_2$, $B_3$, $B_4$, $B_5$ and $B_6$ has been compared. The speed of the $B_6$ exceeds just three bikes. No two bikes have the same speed. The speed of $B_4$ is more than that of $B_2$ but less than that of $B_6$. The speed of $B_3$ is not less than that of $B_5$. The speed $B_2$ is not the minimum. If the speed of $B_5$ is not less than that of $B_2$, then which of the following pair of bikes has more speed than that of $B_4$?",
+        "options": {
+          "a": "B_2, B_3",
+          "b": "B_5, B_3",
+          "c": "B_6, B_1",
+          "d": "B_1, B_5"
+        },
+        "answer": "b",
+        "solution": "The speed of six bikes $B_1$, $B_2$, $B_3$, $B_4$, $B_5$ and $B_6$ has been compared.\n\ni) The speed of the $B_6$ exceeds just three bikes.\n\nii) The speed of $B_4$ is more than that of $B_2$ but less than that of $B_6$.\n\niii) The speed $B_2$ is not minimum.\n\n_ > _ > $B_6$ > $B_4$ > $B_2$ > _\n\niv) The speed of $B_3$ is not less than that of $B_5$.\n\nv) If the speed of $B_5$ is not less than that of $B_2$, $B_5$ cannot be the lowest of all.\n\n$B_3$ > $B_5$ > $B_6$ > $B_4$ > $B_2$ > _\n\nWe are left with $B_1$ which will be at the lowest position.\n\n$B_3$ > $B_5$ > $B_6$ > $B_4$ > $B_2$ > $B_1$\n\nThus, $B_5, B_3$ is the pair of bikes which has more speed than that of $B_4$.",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of linear order and relative positions based on conditional inequalities of quantities or speeds.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of linear order and relative positions based on conditional inequalities of quantities or speeds.",
           "difficulty": "medium"
         }
       }
@@ -4256,6 +4448,70 @@
           "topic": "Alphabet Test",
           "subtopic": "Vowel Consonant Operations",
           "conceptTested": "Counting specific sequences of digits based on preceding and succeeding conditions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7668491bc2",
+        "q_num": 63,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:55",
+        "avgTime": "00:44",
+        "question": "Pointing to a woman, a girl said, \"She is the mother of niece of my sister's only maternal aunt who has no brother.\" How is the woman related to the girl?",
+        "options": {
+          "a": "Aunt",
+          "b": "Grandmother",
+          "c": "Sister",
+          "d": "Mother"
+        },
+        "answer": "d",
+        "solution": "Given: Pointing to a woman, a girl said, \"She is the mother of niece of my sister's only maternal aunt who has no brother.\"+- Thus, the woman is the mother of the girl.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Pointing / Indicating Form",
+        "conceptTested": "Decoding multi-generational family relationship chains presented in indirect puzzle statements.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Pointing / Indicating Form",
+          "conceptTested": "Decoding multi-generational family relationship chains presented in indirect puzzle statements.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f72a2678e0",
+        "q_num": 64,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:34",
+        "avgTime": "00:33",
+        "question": "Consider the given argument and decide which of the given assumptions is/are implicit in the argument.\n\nArgument: The campaign 'Swachh Bharat', to keep one's cities clean, started by the apartment association, didn't bring much of a response from its residents.\n\nAssumptions:\n1. The residents do not wish to keep their apartment clean.\n2. The association head failed in the campaign.",
+        "options": {
+          "a": "Only assumption 2 is implicit.",
+          "b": "Neither 1 nor 2 is implicit.",
+          "c": "Only assumption 1 is implicit.",
+          "d": "Both 1 and 2 are implicit."
+        },
+        "answer": "a",
+        "solution": "It is not true that all residents generally do not wish to keep their apartments clean, so assumption 1 is not implicit. The apartment association not getting much response indicates that the association head failed in the campaign, making assumption 2 implicit.",
+        "image": null,
+        "topic": "Statement & Assumption",
+        "subtopic": "Statement & Assumptions",
+        "conceptTested": "Logical deduction of underlying assumptions from given statements and arguments",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "subtopic": "Statement & Assumptions",
+          "conceptTested": "Logical deduction of underlying assumptions from given statements and arguments",
           "difficulty": "medium"
         }
       }

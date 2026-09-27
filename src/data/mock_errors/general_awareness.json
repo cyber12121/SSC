@@ -2993,6 +2993,166 @@
           "conceptTested": "Literary awards and critical non-fiction works examining Indian identity.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_7cab657b6d",
+        "q_num": 97,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:35",
+        "question": "With reference to the recent expansion of the scope of Government Approved Test Centres (GATC) under the Legal Metrology Rules, which of the following statements is correct?",
+        "options": {
+          "a": "The total number of categories of weights and measures verifiable through GATCs has been increased to 28.",
+          "b": "The State Governments have been stripped of their power to notify additional categories of weights and measures for verification.",
+          "c": "The verification fee for CNG, LPG, LNG, and Hydrogen dispensers has been fixed at ₹10,000 per nozzle.",
+          "d": "Under the new framework, only Petrol and Diesel dispensers have been added as the new verifiable categories."
+        },
+        "answer": "c",
+        "solution": "The Department of Consumer Affairs has amended the Legal Metrology (Government Approved Test Centre) Rules, 2013, to expand the verification infrastructure for fuel dispensers and other weights and measures. Under the amended Rules, the verification fee for CNG, LPG, LNG, and Hydrogen dispensers has been fixed at ₹10, 000 per nozzle. Hence, option C is correct.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "International Summits & Treaties",
+        "conceptTested": "Recent amendments to the Legal Metrology (Government Approved Test Centre) Rules regarding verification fees and categories for fuel dispensers.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "International Summits & Treaties",
+          "conceptTested": "Recent amendments to the Legal Metrology (Government Approved Test Centre) Rules regarding verification fees and categories for fuel dispensers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_bc54f8eb06",
+        "q_num": 98,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:26",
+        "avgTime": "00:43",
+        "question": "Which of the following is/are suitable to be considered a ‚ primary source ‘ for understanding concerns on nationalism in India under the British rule?\nI. Abanindranath Tagore\\'s painting Bharat Mata\nII. Bankim Chandra Chattopadhyay\\'s novel Anandamath\nIII. Mohandas Karamchand Gandhi\\'s Swaraj flag\nIV. Sarvapalli Gopal\\'s book Jawaharlal Nehru: A Biography",
+        "options": {
+          "a": "I and II only",
+          "b": "I, II and III only",
+          "c": "I, II and IV only",
+          "d": "II, III and IV only"
+        },
+        "answer": "b",
+        "solution": "Abanindranath Tagore\\'s painting Bharat Mata (1905), Bankim Chandra Chattopadhyay\\'s novel Anandamath (1882), and Mahatma Gandhi\\'s Swaraj flag (1921) are primary sources created during the nationalist movement. Sarvapalli Gopal\\'s book is a secondary historical biography. Thus, I, II and III only are correct.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Identification of primary historical sources for studying Indian nationalism under British rule.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Identification of primary historical sources for studying Indian nationalism under British rule.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_281293de37",
+        "q_num": 99,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:11",
+        "question": "Bangladesh’s first National MPI reveals stark child poverty. What percentage of children in Bangladesh live in multidimensional poverty?",
+        "options": {
+          "a": "21.44\\%",
+          "b": "28.9\\%",
+          "c": "35.5\\%",
+          "d": "18.7\\%"
+        },
+        "answer": "b",
+        "solution": "The Correct Answer is 28.9\\%.\n\nIn News\nBangladesh’s first National MPI reveals stark child poverty: UNICEF.\n\nKey Points\nBangladesh released its first National Multidimensional Poverty Index (MPI), supported by UNICEF and the European Union (EU).\n\n28.9\\% of children live in multidimensional poverty, compared to 21.44\\% of adults.\n\nChildren are 35\\% more likely to suffer multidimensional poverty than adults.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Reports, Indices & Rankings",
+        "conceptTested": "Recent socioeconomic indices and child poverty metrics reported by UNICEF and national bodies.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Reports, Indices & Rankings",
+          "conceptTested": "Recent socioeconomic indices and child poverty metrics reported by UNICEF and national bodies.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f857f7d2c0",
+        "q_num": 100,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:03",
+        "avgTime": "00:13",
+        "question": "Songkran is a Buddhist festival. This festival is celebrated for several days in the month of _______.",
+        "options": {
+          "a": "March",
+          "b": "June",
+          "c": "April",
+          "d": "May"
+        },
+        "answer": "c",
+        "solution": "The correct answer is April.\n\nKey Points\nThe Buddhist festival 'Songkran' is celebrated mainly in Arunachal Pradesh. This Buddhist festival is observed as a spring cleaning and is celebrated for several days during the middle of April.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "Religious Cultural Festivals",
+        "conceptTested": "Traditional Buddhist festivals celebrated in India and their timing/cultural significance.",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "Religious Cultural Festivals",
+          "conceptTested": "Traditional Buddhist festivals celebrated in India and their timing/cultural significance.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5f4cb6dd44",
+        "q_num": 101,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:02",
+        "avgTime": "00:17",
+        "question": "The Sammakka Saralamma Jatara of Telangana, also known as ___________, is a biennial tribal fair held in memory and honor of the mother and daughter duo i.e. Sammakka and Saralamma against the rulers of the Kakatiya dynasty.",
+        "options": {
+          "a": "Ambubachi Jatra",
+          "b": "Medaram Jatara",
+          "c": "Nuakhai Jatra",
+          "d": "None of these"
+        },
+        "answer": "b",
+        "solution": "The Sammakka Saralamma Jatara is also known as Medaram Jatara, held biennially in Telangana.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "Folk Tribal Festivals",
+        "conceptTested": "Cultural heritage and traditional festivals of India",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "Folk Tribal Festivals",
+          "conceptTested": "Cultural heritage and traditional festivals of India",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -7296,6 +7456,294 @@
           "topic": "National & International Current Affairs",
           "subtopic": "National & Global Events",
           "conceptTested": "Current affairs regarding green hydrogen initiatives and sustainable transport in airports.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d749dacda2",
+        "q_num": 139,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:09",
+        "avgTime": "00:20",
+        "question": "Which team did the Indian men's air rifle team defeat to win gold at the 16th Asian Shooting Championships?",
+        "options": {
+          "a": "China",
+          "b": "Russia",
+          "c": "South Korea",
+          "d": "Japan"
+        },
+        "answer": "a",
+        "solution": "The Indian men's air rifle team consisting of Arjun Babuta, Rudrankksh Patil, and Kiran Jadhav won the gold medal in the men's 10m Air Rifle at the Asian Shooting Championships in Shymkent, Kazakhstan, defeating the Chinese trio.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Important Days, Orgs & Static Facts",
+        "conceptTested": "Current affairs knowledge of international sports tournaments and medal tallies",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Important Days, Orgs & Static Facts",
+          "conceptTested": "Current affairs knowledge of international sports tournaments and medal tallies",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2a6fd7a5c7",
+        "q_num": 140,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:09",
+        "avgTime": "00:11",
+        "question": "In which state is the oldest oil field of India located?",
+        "options": {
+          "a": "Assam",
+          "b": "Punjab",
+          "c": "Maharashtra",
+          "d": "Gujarat"
+        },
+        "answer": "a",
+        "solution": "Digboi is known as the Oil City of Assam where the first oil well in Asia was drilled and the first refinery was started in 1901 by Assam Oil Company Ltd.",
+        "image": null,
+        "topic": "Static GK",
+        "subtopic": "Important Days, Orgs & Static Facts",
+        "conceptTested": "Familiarity with historical economic milestones and geographical landmarks of India",
+        "tags": {
+          "topic": "Static GK",
+          "subtopic": "Important Days, Orgs & Static Facts",
+          "conceptTested": "Familiarity with historical economic milestones and geographical landmarks of India",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_174847c29f",
+        "q_num": 141,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:14",
+        "question": "Banaras Hindu University was established in:",
+        "options": {
+          "a": "1916",
+          "b": "1945",
+          "c": "1894",
+          "d": "1901"
+        },
+        "answer": "a",
+        "solution": "Banaras Hindu University (BHU) was established in 1916. It was founded by the nationalist leader Pandit Madan Mohan Malviya with the cooperation of Dr. Annie Besant.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Establishment year and founders of Banaras Hindu University.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Establishment year and founders of Banaras Hindu University.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ad3b7abf64",
+        "q_num": 142,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:21",
+        "avgTime": "00:22",
+        "question": "Which of the following best defines free trade?",
+        "options": {
+          "a": "Imports are discouraged",
+          "b": "There are no restrictions on exports and imports",
+          "c": "There are no duties levied on export",
+          "d": "Imported goods are made duty free"
+        },
+        "answer": "b",
+        "solution": "Free trade is an economic policy where nations do not impose import tariffs, quotas, or other restrictions on exports and imports, permitting unrestricted exchange of goods and services.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "General Economics & Finance",
+        "conceptTested": "Definition and principles of free trade and international trade policies.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "General Economics & Finance",
+          "conceptTested": "Definition and principles of free trade and international trade policies.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8f7f5d6d6d",
+        "q_num": 143,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:21",
+        "question": "Which religion flourished the most during the Gupta period?",
+        "options": {
+          "a": "Buddhism",
+          "b": "Jainism",
+          "c": "Mythological Religion",
+          "d": "Religion of the Yawns"
+        },
+        "answer": "c",
+        "solution": "The Gupta Period is known for the evolution of Brahmanism into Puranic or Mythological Religion (Hinduism, centered around Vishnu, Shiva, and Shakti), which received immense royal patronage and flourished greatly.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Ancient History (Harappa to Gupta)",
+        "conceptTested": "Religious developments and prominent religious trends during the Gupta Period.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Ancient History (Harappa to Gupta)",
+          "conceptTested": "Religious developments and prominent religious trends during the Gupta Period.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_111dc24d25",
+        "q_num": 144,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:17",
+        "question": "Who has been appointed as the new Prime Minister of Ukraine? (July 2025)",
+        "options": {
+          "a": "Denys Shmyhal",
+          "b": "Volodymyr Zelenskyy",
+          "c": "Yuliia Svyrydenko",
+          "d": "Olena Zelenska"
+        },
+        "answer": "c",
+        "solution": "The Correct Answer is Yuliia Svyrydenko.\n\nIn News\nYuliia Svyrydenko Named Ukraine’s New Prime Minister.\n\nKey Points\nYuliia Svyrydenko, former Economy Minister, is now the Prime Minister of Ukraine. She replaces Denys Shmyhal, who becomes the new Defence Minister.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Appointments & Resignations",
+        "conceptTested": "Recent high-level international political appointments and government leadership changes.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Appointments & Resignations",
+          "conceptTested": "Recent high-level international political appointments and government leadership changes.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_18436daad4",
+        "q_num": 145,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:07",
+        "avgTime": "00:11",
+        "question": "What is the total outlay of the planned subsidy scheme for rare earth magnet production in India?",
+        "options": {
+          "a": "₹1,000 crore",
+          "b": "₹1,345 crore",
+          "c": "₹1,645 crore",
+          "d": "₹2,000 crore"
+        },
+        "answer": "b",
+        "solution": "The Correct Answer is ₹1, 345 crore.\n\nIn News\nGovt plans to roll out over Rs 1, 000 cr subsidy scheme to promote rare earth magnets production.\n\nKey Points\nThe Government of India is planning a ₹1, 345 crore subsidy scheme to promote domestic production of rare earth magnets. The scheme aims to offer end - to - end support for converting rare earth oxides into magnets.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Key financial outlays and industrial support programs announced by the Government of India.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Key financial outlays and industrial support programs announced by the Government of India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_472657cd44",
+        "q_num": 146,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:15",
+        "avgTime": "00:21",
+        "question": "According to the ADR report 2025, which Chief Minister has the highest number of criminal cases declared against him?",
+        "options": {
+          "a": "Revanth Reddy (Telangana)",
+          "b": "M.K. Stalin (Tamil Nadu)",
+          "c": "N. Chandrababu Naidu (Andhra Pradesh)",
+          "d": "Siddaramaiah (Karnataka)"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Revanth Reddy (Telangana).\n\nIn News\nA new analysis by the Association for Democratic Reforms (ADR) has revealed that 40\\% of India’s Chief Ministers face criminal cases, with Telangana CM Revanth Reddy topping the list at 89 cases.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Reports, Indices & Rankings",
+        "conceptTested": "Key factual findings from recent Association for Democratic Reforms (ADR) political reports.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Reports, Indices & Rankings",
+          "conceptTested": "Key factual findings from recent Association for Democratic Reforms (ADR) political reports.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_3d2d34d1f5",
+        "q_num": 147,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:28",
+        "avgTime": "00:33",
+        "question": "Which among the following statements is correct with reference to the Solar System?",
+        "options": {
+          "a": "Kuiper belt is not part of the solar system.",
+          "b": "Saturn has the highest number of satellites among all the planets.",
+          "c": "Saturn has the highest diurnal range of temperature among all the planets.",
+          "d": "Venus is the only planet in the solar system that has a retrograde rotation."
+        },
+        "answer": "b",
+        "solution": "Saturn has the highest number of satellites among all the planets, with 146 officially recognized moons, making statement B correct.",
+        "image": null,
+        "topic": "Physical Geography",
+        "subtopic": "Physical & World Geography",
+        "conceptTested": "Planetary characteristics and satellite counts in the Solar System",
+        "tags": {
+          "topic": "Physical Geography",
+          "subtopic": "Physical & World Geography",
+          "conceptTested": "Planetary characteristics and satellite counts in the Solar System",
           "difficulty": "medium"
         }
       }

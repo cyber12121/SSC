@@ -10654,6 +10654,528 @@ Therefore, grammatically and contextually, "holding" is the most appropriate cho
           conceptTested: "Contextual vocabulary collocation and grammatical fit in a passage",
           difficulty: "hard"
         }
+      },
+      {
+        id: "engl_d2f4f138d9",
+        q_num: 139,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:26",
+        avgTime: "00:32",
+        question: "Find the part of the sentence that contains an error: (1) The university\u2019s board of trustees expressed deep reservations regarding them approving the multi-million-dollar endowment / (2) without a rigorous, independent audit of the biotechnology firm\u2019s intellectual property, / (3) fearing that the proprietary gene-editing algorithms might be subject / (4) to pending patent litigation in federal court.",
+        options: {
+          a: "1",
+          b: "2",
+          c: "3",
+          d: "4"
+        },
+        answer: "a",
+        solution: `The correct answer is '1' i.e. 'them approving' contains an error.
+
+In the phrase "them approving", the use of the pronoun "them" as the subject of the verb "approving" is incorrect. Pronouns like "them" are objective pronouns and cannot function as the subject of a gerund (approving). The correct construction requires the possessive pronoun "their", as in "their approving".
+
+Correct sentence: The university\u2019s board of trustees expressed deep reservations regarding their approving the multi - million - dollar endowment...`,
+        image: null,
+        topic: "Spotting Errors",
+        subtopic: "Articles & Determiners",
+        conceptTested: "Possessive pronouns must be used before a gerund instead of objective pronouns.",
+        tags: {
+          topic: "Spotting Errors",
+          subtopic: "Articles & Determiners",
+          conceptTested: "Possessive pronouns must be used before a gerund instead of objective pronouns.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_f5076187fc",
+        q_num: 140,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "A",
+        userTime: "00:49",
+        avgTime: "00:38",
+        question: "Select the most appropriate option that rectifies the underlined group of words in the given sentence. What the board requested was that the treasurer stripped of his administrative clearance pending the final results of the forensic accounting investigation.",
+        options: {
+          a: "What the board requested was that the treasurer be",
+          b: "What the board requested was that the treasurer is",
+          c: "It was requested by the board that the treasurer be",
+          d: "What the board requested was the treasurer being"
+        },
+        answer: "a",
+        solution: `The correct answer is 'What the board requested was that the treasurer be'.
+
+The sentence is written in a formal tone and uses a subjunctive mood. The subjunctive form of the verb "to be" is "be, " which is used in the clause following "requested." This is the grammatically correct form for such sentences.
+
+Correct sentence: What the board requested was that the treasurer be stripped of his administrative clearance pending the final results of the forensic accounting investigation.`,
+        image: null,
+        topic: "Sentence Improvement",
+        subtopic: "Articles & Determiners",
+        conceptTested: "The subjunctive mood uses the base form of the verb after verbs of request or demand.",
+        tags: {
+          topic: "Sentence Improvement",
+          subtopic: "Articles & Determiners",
+          conceptTested: "The subjunctive mood uses the base form of the verb after verbs of request or demand.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_45b37c593b",
+        q_num: 141,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "B",
+        userTime: "00:16",
+        avgTime: "00:21",
+        question: "Select the most appropriate option to substitute the underlined part in the given sentence. If no substitution is needed, select 'No improvement'. I do not understand who is blame in this matter.",
+        options: {
+          a: "have to blame",
+          b: "is to be blamed",
+          c: "has to blame",
+          d: "No improvement"
+        },
+        answer: "b",
+        solution: 'The correct answer is "is to be blamed".\n\nIn the underlined part of the sentence, "is" is correctly used as the subject is singular, but the tone of the sentence is passive. The correct formation for future/obligation in the passive voice is is + to be + past participle of the verb.\n\nThus, the correct sentence after correction will be: I do not understand who is to be blamed in this matter.',
+        image: null,
+        topic: "Sentence Improvement",
+        subtopic: "Tenses & Conditionals",
+        conceptTested: "Passive infinitive structure: to be + past participle.",
+        tags: {
+          topic: "Sentence Improvement",
+          subtopic: "Tenses & Conditionals",
+          conceptTested: "Passive infinitive structure: to be + past participle.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_1d46e42d95",
+        q_num: 142,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "A",
+        userTime: "00:12",
+        avgTime: "00:16",
+        question: "Select the most appropriate SYNONYM of the given word. CONNIVANCE",
+        options: {
+          a: "Complicity",
+          b: "Cleverness",
+          c: "Cooperation",
+          d: "Apology"
+        },
+        answer: "a",
+        solution: 'The correct answer is Complicity.\n\nThe word "Connivance" means a willingness to secretly allow or be involved in wrongdoing, especially an immoral or illegal act.\n\n"Complicity" refers to the act of being involved with others in an illegal activity or wrongdoing.\n\nSince "Complicity" is a synonym of "Connivance, " it is the most appropriate answer.',
+        image: null,
+        topic: "Synonyms & Antonyms",
+        subtopic: "Synonyms",
+        conceptTested: "Vocabulary recall and matching synonyms of advanced English words.",
+        tags: {
+          topic: "Synonyms & Antonyms",
+          subtopic: "Synonyms",
+          conceptTested: "Vocabulary recall and matching synonyms of advanced English words.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_7459e41159",
+        q_num: 143,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:12",
+        avgTime: "00:17",
+        question: "Select the one-word substitution for: A person who frequently finds fault with others or complains about trivial matters.",
+        options: {
+          a: "Carpist",
+          b: "Carpous",
+          c: "Carper",
+          d: "Carpentry"
+        },
+        answer: "c",
+        solution: 'The correct answer is Carper.\n\nThe term "Carper" refers to a person who frequently finds fault with others or complains about trivial matters. This word is used to describe someone with a habit of nitpicking or being overly critical.',
+        image: null,
+        topic: "One Word Substitution",
+        subtopic: "Persons, Phobias & Manias",
+        conceptTested: "Identifying single-word terms for specific human behaviors and personality types.",
+        tags: {
+          topic: "One Word Substitution",
+          subtopic: "Persons, Phobias & Manias",
+          conceptTested: "Identifying single-word terms for specific human behaviors and personality types.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_609181d15a",
+        q_num: 144,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:09",
+        avgTime: "00:14",
+        question: "One word substitution for: Of, relating to, or affecting the skin.",
+        options: {
+          a: "Cuticle",
+          b: "Cutaneous",
+          c: "Cuticular",
+          d: "Cutaneal"
+        },
+        answer: "b",
+        solution: 'The correct answer is Cutaneous.\n\nKey Points: - The word "Cutaneous" refers to something that is of, relating to, or affecting the skin. - Cuticle: The outer layer of the skin, especially at the base of the fingernails or toenails. - Cuticular: Pertaining to the cuticle, especially in plants or insects. - Cutaneal: This is not a commonly used term in English, but it may sometimes be used as an alternative to cutaneous.',
+        image: null,
+        topic: "One Word Substitution",
+        subtopic: "General One Word Substitutes",
+        conceptTested: "Knowledge of vocabulary terms specifically denoting biological and medical contexts related to the skin.",
+        tags: {
+          topic: "One Word Substitution",
+          subtopic: "General One Word Substitutes",
+          conceptTested: "Knowledge of vocabulary terms specifically denoting biological and medical contexts related to the skin.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_277c274f79",
+        q_num: 145,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "00:13",
+        avgTime: "00:15",
+        question: "Select the most appropriate ANTONYM of the given word. COROLLARY",
+        options: {
+          a: "Consequence",
+          b: "Aftermath",
+          c: "Deduction",
+          d: "Antecedent"
+        },
+        answer: "d",
+        solution: 'The correct answer is Antecedent.\n\nKey Points: - The word "Corollary" refers to a natural consequence or result that directly follows from a previously proven statement or situation. - "Antecedent" refers to something that precedes or comes before something else, often serving as its cause or origin. - Since "Antecedent" is the opposite of "Corollary", which refers to a consequence or result, it is the most appropriate antonym.',
+        image: null,
+        topic: "Synonyms Antonyms",
+        subtopic: "Synonyms",
+        conceptTested: "Understanding of lexical opposites, where 'antecedent' acts as the antonym of 'corollary'.",
+        tags: {
+          topic: "Synonyms Antonyms",
+          subtopic: "Synonyms",
+          conceptTested: "Understanding of lexical opposites, where 'antecedent' acts as the antonym of 'corollary'.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_4454f52937",
+        q_num: 146,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "B",
+        userTime: "00:24",
+        avgTime: "00:24",
+        question: 'Select the option that expresses the given sentence in indirect speech. "Curse it!" he cried, "I have forgotten my keys in the office again."',
+        options: {
+          a: "He cried out with an oath that he forgot his keys in the office again.",
+          b: "He exclaimed with a curse that he had forgotten his keys in the office again.",
+          c: "He cursed and said that he had forgot his keys in the office again.",
+          d: "He cursed and said that he has forgotten his keys in the office again."
+        },
+        answer: "b",
+        solution: 'The correct answer is He exclaimed with a curse that he had forgotten his keys in the office again.\n\nKey Points: - Indirect speech is used to report what someone has said without quoting their exact words. - The original sentence contains an exclamation ("Curse it!") and a statement ("I have forgotten my keys in the office again"). - Exclamations are typically expressed as "exclaimed" or "cried", and the present perfect tense ("have forgotten") is changed to the past perfect ("had forgotten") to match the reporting verb in the past tense.',
+        image: null,
+        topic: "Direct Indirect Speech",
+        subtopic: "Assertive Sentences & Reporting Verbs",
+        conceptTested: "Rules of direct to indirect speech conversion involving exclamations and tense backshifting.",
+        tags: {
+          topic: "Direct Indirect Speech",
+          subtopic: "Assertive Sentences & Reporting Verbs",
+          conceptTested: "Rules of direct to indirect speech conversion involving exclamations and tense backshifting.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_1e43492a63",
+        q_num: 147,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "B",
+        userTime: "00:15",
+        avgTime: "00:25",
+        question: "Find the correctly spelt word.",
+        options: {
+          a: "measureable",
+          b: "manageable",
+          c: "marriagable",
+          d: "manoevrable"
+        },
+        answer: "b",
+        solution: "The correct answer is manageable.\n\nKey Points: - Manageable is the correctly spelt word meaning not too big or too difficult to deal with. - Measureable is incorrect; the correct spelling is measurable. - Marriagable is incorrect; the correct spelling is marriageable. - Manoevrable is incorrect; the correct spelling is maneuverable.",
+        image: null,
+        topic: "Spelling Errors",
+        subtopic: "Misspelt Words",
+        conceptTested: "Identification of correctly spelt words versus common misspellings.",
+        tags: {
+          topic: "Spelling Errors",
+          subtopic: "Misspelt Words",
+          conceptTested: "Identification of correctly spelt words versus common misspellings.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_e5305b565d",
+        q_num: 148,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:49",
+        avgTime: "00:28",
+        question: "Parts of the following sentence have been given as options. Select the option that contains an error. She enrolled in additional courses with a view to enhance her skill set and securing a better job opportunity in the future.",
+        options: {
+          a: "courses with a view to enhance",
+          b: "She enrolled in additional",
+          c: "her skill set and securing",
+          d: "a better job opportunity in the future"
+        },
+        answer: "a",
+        solution: `The erroneous part is 'courses with a view to enhance'.
+
+Key Points: - The error in the sentence is in the phrase "with a view to enhance". The correct phrase is "with a view to enhancing". - The phrase "with a view to" is used to express the purpose or intention behind an action and must be followed by a gerund (the "-ing" form of a verb). - Corrected sentence: "She enrolled in additional courses with a view to enhancing her skill set and securing a better job opportunity in the future."`,
+        image: null,
+        topic: "Spotting Errors",
+        subtopic: "Articles & Determiners",
+        conceptTested: "Grammatical usage of the phrase 'with a view to' followed strictly by a gerund (-ing form).",
+        tags: {
+          topic: "Spotting Errors",
+          subtopic: "Articles & Determiners",
+          conceptTested: "Grammatical usage of the phrase 'with a view to' followed strictly by a gerund (-ing form).",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_a069673e01",
+        q_num: 149,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "B",
+        userTime: "00:33",
+        avgTime: "00:35",
+        question: "Parts of a sentence are given below in jumbled order. Arrange the parts in the correct order to form a meaningful sentence.\n\nP. due to the lofty hilly terrain, curves and cliffs\nQ. the route to Badrinath\nR. is one of the most arduous ones\nS. amidst the most scenically beautiful place on the earth",
+        options: {
+          a: "QRPS",
+          b: "QSRP",
+          c: "PRSQ",
+          d: "PQRS"
+        },
+        answer: "b",
+        solution: "The correct answer is QSRP.\n\nPart Q sets the context by specifying the subject of the sentence ('the route to Badrinath').\n\nPart S adds context about the location ('amidst the most scenically beautiful place on the earth').\n\nPart R provides information about the nature of the route ('is one of the most arduous ones').\n\nPart P explains the reason for the arduous nature ('due to the lofty hilly terrain, curves, and cliffs').\n\nThus, the complete meaningful sentence reads: 'The route to Badrinath amidst the most scenically beautiful place on the earth is one of the most arduous ones due to the lofty hilly terrain, curves, and cliffs.'",
+        image: null,
+        topic: "Para Jumbles",
+        subtopic: "Para Jumbles & Rearrangement",
+        conceptTested: "Logical flow and structural coherence in sentence sequencing",
+        tags: {
+          topic: "Para Jumbles",
+          subtopic: "Para Jumbles & Rearrangement",
+          conceptTested: "Logical flow and structural coherence in sentence sequencing",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_d68656f974",
+        q_num: 150,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "B",
+        correctOption: "B",
+        userTime: "03:45",
+        avgTime: "00:45",
+        question: "Which of the following words is most nearly the ANTONYM of the word 'verisimilitude' as used in the first paragraph of the passage?",
+        options: {
+          a: "Authenticity",
+          b: "Artificiality",
+          c: "Credibility",
+          d: "Cadence"
+        },
+        answer: "b",
+        solution: "The correct answer is Option B (Artificiality).\n\nVerisimilitude means the appearance of being true or real, lifelike realism, or authenticity. The antonym of verisimilitude is artificiality, which means the quality of being fake, unnatural, or contrived.",
+        image: null,
+        topic: "Synonyms & Antonyms",
+        subtopic: "Antonyms",
+        conceptTested: "Vocabulary evaluation through contextual antonym identification",
+        tags: {
+          topic: "Synonyms & Antonyms",
+          subtopic: "Antonyms",
+          conceptTested: "Vocabulary evaluation through contextual antonym identification",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "engl_3a3a6320ef",
+        q_num: 151,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "00:59",
+        avgTime: "00:50",
+        question: "What can be reasonably inferred from the passage regarding the commercial mainstream Indian cinema of the mid-1950s?",
+        options: {
+          a: "It was characterized by melodramatic escapism and rigid theatricality rather than poetic realism and verisimilitude.",
+          b: "It actively encouraged polymathic directors to compose their own music and design promotional publicity material.",
+          c: "It had already gained widespread recognition at Western festivals like Berlin and Venice prior to the release of Pather Panchali.",
+          d: "It was primarily dedicated to dissecting the erosion of feudal hierarchies and the evolving role of women in modern India."
+        },
+        answer: "a",
+        solution: "The correct answer is Option A.\n\nThe passage states that Pather Panchali rejected the 'melodramatic escapism and rigid theatricality' that then dominated the commercial mainstream. Thus, mainstream Indian cinema of the mid - 1950s was characterized by these very traits rather than poetic realism.",
+        image: null,
+        topic: "Reading Comprehension",
+        subtopic: "Inference & Author Perspective",
+        conceptTested: "Ability to draw logical inferences from textual premises and background descriptions",
+        tags: {
+          topic: "Reading Comprehension",
+          subtopic: "Inference & Author Perspective",
+          conceptTested: "Ability to draw logical inferences from textual premises and background descriptions",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "engl_45bc0304f5",
+        q_num: 152,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "B",
+        userTime: "00:39",
+        avgTime: "00:22",
+        question: "According to the passage, how did Satyajit Ray maintain total creative autonomy as an auteur in his cinematic projects?",
+        options: {
+          a: "By relying strictly on artificial narrative contrivances and mainstream commercial studio funding.",
+          b: "By scripting his own narratives, designing storyboards, composing musical scores, and illustrating promotional material.",
+          c: "By refusing to direct any historical dramas or critiques of urban bourgeois morality throughout his career.",
+          d: "By collaborating exclusively with Italian neorealist writers to adapt classical Bengali literature for the screen."
+        },
+        answer: "b",
+        solution: "The correct answer is Option B.\n\nThe passage clearly mentions that Ray maintained total creative autonomy by writing his own scripts, preparing detailed storyboards, composing original music, and illustrating publicity material.",
+        image: null,
+        topic: "Reading Comprehension",
+        subtopic: "Fact & Detail Comprehension",
+        conceptTested: "Comprehension of explicit factual details presented in the passage",
+        tags: {
+          topic: "Reading Comprehension",
+          subtopic: "Fact & Detail Comprehension",
+          conceptTested: "Comprehension of explicit factual details presented in the passage",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_6bea832598",
+        q_num: 153,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "B",
+        userTime: "00:26",
+        avgTime: "00:13",
+        question: "Which of the following best describes the author's tone in the passage?",
+        options: {
+          a: "Severely critical and revisionist regarding Ray's departure from mainstream commercial cinema.",
+          b: "Analytically celebratory and reverential toward Ray's artistic autonomy, humanism, and monumental legacy.",
+          c: "Strictly biographical and indifferent, presenting a dry chronological timeline of Ray's filmography and awards.",
+          d: "Highly skeptical of the authenticity of Ray's portrayal of rural Indian poverty in the Apu Trilogy."
+        },
+        answer: "b",
+        solution: "The correct answer is Option B.\n\nThe author adopts an appreciative, scholarly, and celebratory tone while analyzing Ray's creative independence, thematic depth, contribution to Indian cinema, and global recognition, highlighting his artistic integrity and humanistic vision.",
+        image: null,
+        topic: "Reading Comprehension",
+        subtopic: "Tone, Theme & Main Idea",
+        conceptTested: "Analysis of authorial tone and intent in literary criticism",
+        tags: {
+          topic: "Reading Comprehension",
+          subtopic: "Tone, Theme & Main Idea",
+          conceptTested: "Analysis of authorial tone and intent in literary criticism",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_3e37ed12ae",
+        q_num: 154,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "B",
+        correctOption: "B",
+        userTime: "00:31",
+        avgTime: "00:19",
+        question: "Comprehension:(Que No. 21 - 25) Reading Comprehension Passage (420 Words)\n\nThe trajectory of Indian cinema underwent a profound ontological shift in 1955 with the release of Satyajit Ray\u2019s directorial debut, Pather Panchali. Rejecting the melodramatic escapism and rigid theatricality that then dominated the commercial mainstream, Ray embraced a poignant aesthetic of poetic realism deeply influenced by Italian neorealism and classical Bengali literature. Through the immortal Apu Trilogy-comprising Pather Panchali, Aparajito, and Apur Sansar-he articulated a universal humanism that transcended socio-geographical boundaries. His cinematic architecture was not reliant on artificial narrative contrivances; instead, it drew its breathtaking verisimilitude from the quiet indignities of poverty, the resilience of the human spirit, and the subtle, rhythmic cadence of everyday rural existence. Beyond his mastery of the lens, Ray was a quintessential Renaissance man whose polymathic genius extended far beyond directing. As a fiercely independent auteur, he frequently maintained total creative autonomy by scripting his own narratives, designing intricate storyboards, composing original musical scores, and illustrating promotional publicity material. His thematic canvas was remarkably expansive, seamlessly traversing historical tragedies like Shatranj Ke Khiladi, incisive critiques of urban bourgeois morality in Mahanagar and Charulata, and captivating children\u2019s literature featuring iconic detectives like Feluda. Across these disparate genres, Ray\u2019s directorial gaze remained anchored in a profound empathy for his characters, dissecting complex socio-political dynamics-such as the erosion of feudal hierarchies and the evolving role of women in modern India-without ever devolving into didactic moralizing. The global culmination of this illustrious career occurred in 1992 when the Academy of Motion Picture Arts and Sciences conferred upon him an Honorary Oscar for Lifetime Achievement. Bedridden and gravely ill in a Calcutta hospital, Ray received the statuette via a live satellite feed during the 64th Academy Awards ceremony, describing it as the 'best achievement' of his cinematic journey. This accolade was not merely a retrospective validation by the Western film establishment; it was a testament to his uncompromising artistic integrity. Prior to this coronation, he had already garnered the Golden Lion at Venice and the Golden Bear at Berlin, alongside France's highest civilian honor, the Legion of Honour, cementing his stature alongside titans like Kurosawa, Bergman, and Fellini. Ultimately, Satyajit Ray\u2019s monumental achievement lies in his ability to decolonize the cinematic apparatus, utilizing a quintessentially Western technological medium to articulate an authentically Indian vernacular. His oeuvre remains an enduring masterclass in visual storytelling, demonstrating that profound universality is most effectively achieved not through generic homogenization, but through an uncompromising, deeply compassionate immersion into the hyper-local specifics of human life.\n\nQuestion:\nWhat is the primary focus of the passage?",
+        options: {
+          a: "A technical analysis of Ray's camera equipment and lighting methodologies in comparison to Italian neorealist directors.",
+          b: "An exploration of Satyajit Ray\u2019s polymathic cinematic genius, thematic depth, and global recognition culminating in his Lifetime Achievement Oscar.",
+          c: "A critique of the Western Academy Awards for delaying the recognition of Eastern filmmakers until the very end of their careers.",
+          d: "A biographical comparison between Satyajit Ray's detective fiction and his historical dramas like Shatranj Ke Khiladi."
+        },
+        answer: "b",
+        solution: "The correct answer is Option B.\n\nKey Points: Option A is incorrect because although the passage mentions Ray's influence from Italian neorealism, it does not discuss his camera equipment, lighting techniques, or technical comparisons with other directors.\n\nOption B is correct because the passage primarily focuses on Satyajit Ray's revolutionary contribution to Indian cinema, his poetic realism, creative versatility, exploration of social themes, and international recognition, including his Honorary Oscar for Lifetime Achievement.\n\nOption C is incorrect because the passage does not criticize the Academy Awards or suggest bias against Eastern filmmakers. Instead, it presents Ray's Oscar as a significant recognition of his artistic legacy.\n\nOption D is incorrect because the passage mentions Ray's work in different genres, including detective fiction and historical dramas, only to demonstrate his creative range. It does not provide a comparison between these works.\n\nTherefore, the correct answer is Option B.",
+        image: null,
+        topic: "Reading Comprehension",
+        subtopic: "Tone, Theme & Main Idea",
+        conceptTested: "Ability to synthesize and identify the primary theme, author's intent, and central focus of a passage.",
+        tags: {
+          topic: "Reading Comprehension",
+          subtopic: "Tone, Theme & Main Idea",
+          conceptTested: "Ability to synthesize and identify the primary theme, author's intent, and central focus of a passage.",
+          difficulty: "hard"
+        }
       }
     ]
   }
@@ -15961,6 +16483,70 @@ var mathematics_default = [
           topic: "Time & Work",
           subtopic: "Alternate Days Work",
           conceptTested: "Total work equals the product of efficiency and time, allowing individual efficiencies to be derived from LCM of days.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_3b6b24c783",
+        q_num: 169,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "C",
+        correctOption: "C",
+        userTime: "00:53",
+        avgTime: "00:33",
+        question: "Two men A and B, each working alone by working $12$ hours per day, can complete a work in $20$ days. For execution of the work, it was decided that A and B would be working for $8$ and $6$ hours per day, respectively, on alternate days starting with A. If it takes $x$ days and $y$ hours to complete the work then $(x, y)$ is:",
+        options: {
+          a: "(33, 2)",
+          b: "(33, 4)",
+          c: "(34, 2)",
+          d: "(34, 4)"
+        },
+        answer: "c",
+        solution: "Total work = $12 \\times 20 = 240$ units (assuming 1 unit/hour). A works $8$ hours/day and B works $6$ hours/day. In a 2 - day cycle, work done = $8 + 6 = 14$ units. $240 = 17 \\times 14 + 2$. Thus, 17 cycles take $17 \\times 2 = 34$ days, and the remaining 2 units are completed by A in $\\frac{2}{8}$ of a day ($2$ hours). Hence, $(34, 2)$.",
+        image: null,
+        topic: "Time & Work",
+        subtopic: "Alternate Days Work",
+        conceptTested: "Calculating total time taken when workers perform tasks on alternate days with varying daily working hours.",
+        tags: {
+          topic: "Time & Work",
+          subtopic: "Alternate Days Work",
+          conceptTested: "Calculating total time taken when workers perform tasks on alternate days with varying daily working hours.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_1291c18395",
+        q_num: 170,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "C",
+        correctOption: "C",
+        userTime: "01:48",
+        avgTime: "00:32",
+        question: "Let $N$ be the least number which when divided by $15$, $25$, $35$, $40$ and $42$, the remainder in each case is $1$ and $N$ is divisible by $271$. What is the sum of digits of $N$?",
+        options: {
+          a: "17",
+          b: "14",
+          c: "13",
+          d: "18"
+        },
+        answer: "c",
+        solution: "The LCM of $15$, $25$, $35$, $40$, and $42$ is $4200$. The number is of the form $N = 4200k + 1$. For $N$ to be divisible by $271$, $4200k + 1 \\equiv 0 \\pmod{271} \\implies 135k + 1 \\equiv 0 \\pmod{271}$. Testing values for $k$, when $k = 2$, $135(2) + 1 = 271$, which is divisible by $271$. Thus, $N = 4200(2) + 1 = 8401$. The sum of the digits is $8 + 4 + 0 + 1 = 13$.",
+        image: null,
+        topic: "LCM & HCF",
+        subtopic: "LCM & HCF Applications",
+        conceptTested: "Finding a specific multiple of an LCM that leaves a fixed remainder and satisfies an additional divisibility condition.",
+        tags: {
+          topic: "LCM & HCF",
+          subtopic: "LCM & HCF Applications",
+          conceptTested: "Finding a specific multiple of an LCM that leaves a fixed remainder and satisfies an additional divisibility condition.",
           difficulty: "hard"
         }
       }
@@ -23369,6 +23955,326 @@ If set A represents failures, then the complement A' represents passers. Passing
           conceptTested: "Combined efficiency of multiple pairs working together is half the sum of their individual combined efficiencies.",
           difficulty: "medium"
         }
+      },
+      {
+        id: "math_379f68028c",
+        q_num: 235,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "A",
+        userTime: "00:22",
+        avgTime: "00:25",
+        question: "The inradius of a triangle is $7\\text{ cm}$ and its area is $343\\text{ cm}^2$. The perimeter of the triangle is:",
+        options: {
+          a: "$98\\text{ cm}$",
+          b: "$68\\text{ cm}$",
+          c: "$88\\text{ cm}$",
+          d: "$49\\text{ cm}$"
+        },
+        answer: "a",
+        solution: "Given:\nInradius of the triangle = $7\\text{ cm}$\nArea of the triangle = $343\\text{ cm}^2$\n\nFormula Used:\nArea of triangle = $\\frac{\\text{Inradius} \\times \\text{Perimeter}}{2}$\n\nCalculation:\nLet the perimeter of the triangle be $P$.\nUsing the formula: $343 = \\frac{7 \\times P}{2}$\n\n$343 = \\frac{7P}{2}$\n\nMultiplying both sides by 2: $686 = 7P$\nDividing both sides by 7: $P = \\frac{686}{7} = 98\\text{ cm}$.",
+        image: null,
+        topic: "Geometry",
+        subtopic: "Circles (Tangents, Chords & Secants)",
+        conceptTested: "Area of a triangle in terms of its inradius ($r$) and perimeter ($P$) is given by $\\text{Area} = \\frac{r \\times P}{2}$.",
+        tags: {
+          topic: "Geometry",
+          subtopic: "Circles (Tangents, Chords & Secants)",
+          conceptTested: "Area of a triangle in terms of its inradius ($r$) and perimeter ($P$) is given by $\\text{Area} = \\frac{r \\times P}{2}$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_70d5d10c2a",
+        q_num: 236,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "D",
+        userTime: "00:10",
+        avgTime: "00:41",
+        question: "Madhu bought $35\\text{ kg}$ of sugar for $\\text{Rs. } 1,470$. She sold it at a loss equal to the selling price of $5\\text{ kg}$ of it. What is the selling price (in $\\text{Rs.}$) of $8\\text{ kg}$ of sugar?",
+        options: {
+          a: "296",
+          b: "288",
+          c: "300",
+          d: "294"
+        },
+        answer: "d",
+        solution: "Shortcut Trick\nLet Selling Price (SP) of $1\\text{ kg}$ sugar be $1$ unit.\nTotal SP of $35\\text{ kg} = 35$ units | Loss = SP of $5\\text{ kg} = 5$ units.\nCost Price (CP) = SP + Loss = $35 + 5 = 40$ units.\nGiven $40$ units = $\\text{Rs. } 1,470 \\implies 1$ unit (SP of $1\\text{ kg}$) = $1,470 \\div 40 = \\text{Rs. } 36.75$.\n\nSP of $8\\text{ kg} = 8 \\times 36.75 = \\text{Rs. } 294$.",
+        image: null,
+        topic: "Profit, Loss & Discount",
+        subtopic: "Dishonest Dealer & False Weights",
+        conceptTested: "Relation between Cost Price and Selling Price when loss is expressed in terms of Selling Price: $\\text{CP} = \\text{SP} + \\text{Loss}$.",
+        tags: {
+          topic: "Profit, Loss & Discount",
+          subtopic: "Dishonest Dealer & False Weights",
+          conceptTested: "Relation between Cost Price and Selling Price when loss is expressed in terms of Selling Price: $\\text{CP} = \\text{SP} + \\text{Loss}$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_e74929d663",
+        q_num: 237,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:11",
+        avgTime: "00:33",
+        question: "A certain sum amounts to $\u20B916,956$ in $4$ years and to $\u20B919,116$ in $6\\frac{1}{2}$ years at a certain rate percent per annum, interest being simple in both cases. The rate of interest p.a. is:",
+        options: {
+          a: "$6.5\\%$",
+          b: "$7.8\\%$",
+          c: "$6.4\\%$",
+          d: "$7.5\\%$"
+        },
+        answer: "c",
+        solution: "Interest for $2.5$ years = $19,116 - 16,956 = \u20B92,160$\nInterest per year = $2,160 \\div 2.5 = \u20B9864$\nPrincipal = $16,956 - (864 \\times 4) = 16,956 - 3,456 = \u20B913,500$\nRate of interest = $(\\frac{864}{13,500}) \\times 100 = 6.4\\%$\n\u2234 The correct answer is $6.4\\%$.",
+        image: null,
+        topic: "Simple Interest",
+        subtopic: "Basic Simple Interest",
+        conceptTested: "Simple interest remains constant per period, allowing direct calculation of interest per annum from differences in amounts over time.",
+        tags: {
+          topic: "Simple Interest",
+          subtopic: "Basic Simple Interest",
+          conceptTested: "Simple interest remains constant per period, allowing direct calculation of interest per annum from differences in amounts over time.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_3bd5c3dcdc",
+        q_num: 238,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:30",
+        avgTime: "00:34",
+        question: "Study the given table and answer the question that follows. The table shows the amount earned (in $\\text{Rs. } '000$) by five different movies across all screens a movie was played.\n\nMovies | Amount collected per movie (in $\\text{Rs. } '000$)\nM1 | 450\nM\xB2 | 370\nM\xB3 | 510\nM\u2074 | 640\nM5 | 830\n\nAll the movies were displayed on $50$ screens each. What is the average amount earned per movie, per screen, all movies and all screens are taken together?",
+        options: {
+          a: "Rs. 14,200",
+          b: "Rs. 11,200",
+          c: "Rs. 12,600",
+          d: "Rs. 13,400"
+        },
+        answer: "b",
+        solution: "Given:\nTotal amount collected per movie in each screen = $(450 + 370 + 510 + 640 + 830) \\times 1000$\nTotal amount collected for all movies = $\\text{Rs. } 2,800,000$\n\nAs mentioned the movies are displayed on $50$ screens for each, total screens = $50 \\times 5 = 250$\n\n\u2234 The average amount earned per movie per screen = $\\frac{2,800,000}{250} = \\text{Rs. } 11,200$.",
+        image: null,
+        topic: "Data Interpretation",
+        subtopic: "Tables & Tabular Data",
+        conceptTested: "Average computation involving total grouped quantity divided by the total number of observational screens.",
+        tags: {
+          topic: "Data Interpretation",
+          subtopic: "Tables & Tabular Data",
+          conceptTested: "Average computation involving total grouped quantity divided by the total number of observational screens.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_72d6ee50e2",
+        q_num: 239,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "01:04",
+        avgTime: "00:28",
+        question: "If $\\tan A = \\sqrt{2} - 1$, then find the value of $\\sin A \\cos A + \\tan A$.",
+        options: {
+          a: "$\\frac{5 \\sqrt{2} + 4}{4}$",
+          b: "$\\frac{5 \\sqrt{2} - 4}{4}$",
+          c: "$\\frac{24 \\sqrt{2} + 15}{4}$",
+          d: "$\\frac{24 \\sqrt{2} - 15}{4}$"
+        },
+        answer: "b",
+        solution: "Given $\\tan A = \\sqrt{2} - 1$, we know that $\\frac{\\sin A}{\\cos A} = \\sqrt{2} - 1$. Let $\\sin A = x$ and $\\cos A = y$. Thus, $x = y(\\sqrt{2} - 1)$.\n\nUsing $\\sin^2 A + \\cos^2 A = 1$, we get $x^2 + y^2 = 1$.\n\nSubstituting $x$ in terms of $y$: $(y(\\sqrt{2} - 1))^2 + y^2 = 1 \\implies y^2(3 - 2\\sqrt{2}) + y^2 = 1 \\implies y^2(4 - 2\\sqrt{2}) = 1$.\n\nSolving for $y$, we get $y = \\frac{1}{\\sqrt{4 - 2\\sqrt{2}}}$.\n\nUsing standard trigonometric transformations and substituting values, we arrive at: $\\sin A \\cos A + \\tan A = \\frac{5\\sqrt{2} - 4}{4}$.",
+        image: null,
+        topic: "Trigonometry",
+        subtopic: "Trigonometric Ratios & Simplification",
+        conceptTested: "Relation between tangent, sine, and cosine ratios: $\\tan A = \\frac{\\sin A}{\\cos A}$ and $\\sin^2 A + \\cos^2 A = 1$.",
+        tags: {
+          topic: "Trigonometry",
+          subtopic: "Trigonometric Ratios & Simplification",
+          conceptTested: "Relation between tangent, sine, and cosine ratios: $\\tan A = \\frac{\\sin A}{\\cos A}$ and $\\sin^2 A + \\cos^2 A = 1$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_692420ed01",
+        q_num: 240,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:52",
+        avgTime: "00:25",
+        question: "If a number of pens and pencils are bought in the ratio of $5 : 3$, then Ashok has to pay Rs. 44. If the ratio is changed as $3 : 5$, then he has to pay Rs. 36. Find the ratio of the price of one pen to one pencil.",
+        options: {
+          a: "$5 : 3$",
+          b: "$7 : 3$",
+          c: "$8 : 5$",
+          d: "$7 : 4$"
+        },
+        answer: "b",
+        solution: "Let the cost of one pen be $x$ and the cost of one pencil be $y$.\n\nAccording to the problem: $5x + 3y = 44$ ---- (1)\n\n$3x + 5y = 36$ ---- (2)\n\nMultiply equation (1) by 5 and equation (2) by 3: $25x + 15y = 220$\n\n$9x + 15y = 108$\n\nSubtracting the second equation from the first: $16x = 112 \\implies x = 7$.\nSubstitute $x = 7$ in equation (1): $5(7) + 3y = 44 \\implies 35 + 3y = 44 \\implies 3y = 9 \\implies y = 3$.\n\nTherefore, the ratio of the price of one pen to one pencil is $x : y = 7 : 3$.",
+        image: null,
+        topic: "Ratio & Proportion",
+        subtopic: "Coins & Currency Problems",
+        conceptTested: "Solving simultaneous linear equations derived from proportional price-quantity relationships.",
+        tags: {
+          topic: "Ratio & Proportion",
+          subtopic: "Coins & Currency Problems",
+          conceptTested: "Solving simultaneous linear equations derived from proportional price-quantity relationships.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_cec21cbd19",
+        q_num: 241,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "D",
+        userTime: "00:40",
+        avgTime: "00:34",
+        question: "Simplify $9^{18} \\div 3^{14} \\text{ of } 27^3 \\times \\sqrt{6561}$.",
+        options: {
+          a: "$3^{16}$",
+          b: "$3^{18}$",
+          c: "$3^{15}$",
+          d: "$3^{17}$"
+        },
+        answer: "d",
+        solution: "Convert all terms to base $3$: $9 = 3^2$\n\n$27 = 3^3$\n\n$6561 = 3^8$\n\nGiven expression: $9^{18} \\div 3^{14} \\text{ of } 27^3 \\times \\sqrt{6561}$\n\n$= (3^2)^{18} \\div 3^{14} \\text{ of } (3^3)^3 \\times \\sqrt{3^8}$\n\n$= 3^{36} \\div 3^{14} \\text{ of } 3^9 \\times 3^4$\n\nUsing 'OF' (multiplication precedence over division): $= 3^{36} \\div 3^{(14 + 9)} \\times 3^4$\n\n$= 3^{36} \\div 3^{23} \\times 3^4$\n\n$= 3^{36 - 23} \\times 3^4$\n\n$= 3^{13} \\times 3^4 = 3^{13 + 4} = 3^{17}$.",
+        image: null,
+        topic: "Simplification",
+        subtopic: "Surds & Indices",
+        conceptTested: "Laws of exponents: $a^m \\div a^n = a^{m-n}$ and $(a^m)^n = a^{m \\times n}$.",
+        tags: {
+          topic: "Simplification",
+          subtopic: "Surds & Indices",
+          conceptTested: "Laws of exponents: $a^m \\div a^n = a^{m-n}$ and $(a^m)^n = a^{m \\times n}$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_fc604eb4a8",
+        q_num: 242,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:14",
+        avgTime: "00:20",
+        question: "The outer radius of a spherical shell is $9\\text{ cm}$ and the thickness of the shell is $1\\text{ cm}$. Find the volume of the metal used for the shell (in cubic cm). $\\left(\\text{Use } \\pi = \\frac{22}{7}\\right)$",
+        options: {
+          a: "$912\\frac{2}{3}$",
+          b: "$915\\frac{1}{3}$",
+          c: "$909\\frac{1}{3}$",
+          d: "$909\\frac{3}{5}$"
+        },
+        answer: "c",
+        solution: "Outer radius $R = 9\\text{ cm}$. Thickness $= 1\\text{ cm}$, so inner radius $r = 9 - 1 = 8\\text{ cm}$. Volume of metal = $\\frac{4}{3} \\pi (R^3 - r^3) = \\frac{4}{3} \\times \\frac{22}{7} \\times (9^3 - 8^3) = \\frac{88}{21} \\times (729 - 512) = \\frac{88 \\times 217}{21} = \\frac{19096}{21} = 909\\frac{1}{3}\\text{ cm}^3$.",
+        image: null,
+        topic: "Mensuration 3D",
+        subtopic: "Sphere & Hemisphere",
+        conceptTested: "Volume of a spherical shell = $\\frac{4}{3} \\pi (R^3 - r^3)$, where $R$ is outer radius and $r$ is inner radius.",
+        tags: {
+          topic: "Mensuration 3D",
+          subtopic: "Sphere & Hemisphere",
+          conceptTested: "Volume of a spherical shell = $\\frac{4}{3} \\pi (R^3 - r^3)$, where $R$ is outer radius and $r$ is inner radius.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_e086fbbf29",
+        q_num: 243,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:06",
+        avgTime: "00:17",
+        question: "How many kilograms of sugar costing Rs. $50$ per kg should be mixed with $30\\text{ kg}$ of sugar costing Rs. $45$ per kg so that the mixture is worth Rs. $48$ per kg?",
+        options: {
+          a: "50 kg",
+          b: "48 kg",
+          c: "45 kg",
+          d: "42 kg"
+        },
+        answer: "c",
+        solution: "Using alligation: Price of 1st type = $50$, Price of 2nd type = $45$, Mean price = $48$. Ratio of quantities = $(48 - 45) : (50 - 48) = 3 : 2$. Given that the quantity of the 2nd type is $30\\text{ kg}$ (corresponding to 2 units), so 1 unit = $15\\text{ kg}$. Thus, the quantity of the 1st type (3 units) = $3 \\times 15 = 45\\text{ kg}$.",
+        image: null,
+        topic: "Mixture & Alligation",
+        subtopic: "Two-Liquid Mixtures & Ratios",
+        conceptTested: "Alligation rule to find the ratio of quantities of two ingredients mixed to form a mixture of a given mean price.",
+        tags: {
+          topic: "Mixture & Alligation",
+          subtopic: "Two-Liquid Mixtures & Ratios",
+          conceptTested: "Alligation rule to find the ratio of quantities of two ingredients mixed to form a mixture of a given mean price.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_91d4eae72e",
+        q_num: 244,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "A",
+        userTime: "00:00",
+        avgTime: "00:20",
+        question: "Nine times the area of a circle is same as the three times the area of a square. What is the ratio of the diameter of the circle and diagonal of the square?",
+        options: {
+          a: "$\\sqrt{2} : \\sqrt{3\\pi}$",
+          b: "$2 : \\sqrt{3\\pi}$",
+          c: "$2 : 3\\pi$",
+          d: "$\\sqrt{5} : \\sqrt{7\\pi}$"
+        },
+        answer: "a",
+        solution: "Let radius of the circle be $r$ and side of the square be $a$. Area of circle = $\\pi r^2$, Area of square = $a^2$. Given $9\\pi r^2 = 3a^2 \\implies 3\\pi r^2 = a^2 \\implies \\frac{a}{r} = \\sqrt{3\\pi}$. Diameter of the circle = $2r$. Diagonal of the square = $a\\sqrt{2}$. Ratio of diameter to diagonal = $\\frac{2r}{a\\sqrt{2}} = \\frac{\\sqrt{2} r}{a} = \\frac{\\sqrt{2}}{\\sqrt{3\\pi}} = \\sqrt{2} : \\sqrt{3\\pi}$.",
+        image: null,
+        topic: "Geometry",
+        subtopic: "Circles (Tangents, Chords & Secants)",
+        conceptTested: "Ratio of areas of geometric figures expressed in terms of their linear dimensions (radius and side).",
+        tags: {
+          topic: "Geometry",
+          subtopic: "Circles (Tangents, Chords & Secants)",
+          conceptTested: "Ratio of areas of geometric figures expressed in terms of their linear dimensions (radius and side).",
+          difficulty: "medium"
+        }
       }
     ]
   },
@@ -26490,6 +27396,198 @@ When relating multiple variables, using ratios reduces calculations significantl
           conceptTested: "Time taken to meet on a circular track in the same direction is given by $\\frac{\\text{Length of Track}}{\\text{Relative Speed}}$.",
           difficulty: "medium"
         }
+      },
+      {
+        id: "math_bb29b4bce5",
+        q_num: 97,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "D",
+        userTime: "00:43",
+        avgTime: "00:31",
+        question: "$k$ is the greatest number which, when divides $2996$, $4752$ and $7825$, the remainder in each case is the same. The product of the digits of $k$ is:",
+        options: {
+          a: "120",
+          b: "84",
+          c: "72",
+          d: "108"
+        },
+        answer: "d",
+        solution: "The number $k$ is the HCF of the differences between the given numbers: $|7825 - 4752| = 3073$, $|7825 - 2996| = 4829$, and $|4752 - 2996| = 1756$. The HCF of $3073$, $4829$, and $1756$ is $439$. Thus, $k = 439$. The product of the digits of $k$ is $4 \\times 3 \\times 9 = 108$.",
+        image: null,
+        topic: "LCM & HCF",
+        subtopic: "LCM & HCF Applications",
+        conceptTested: "Finding the greatest number that leaves the same remainder when dividing multiple given numbers using HCF of pairwise differences.",
+        tags: {
+          topic: "LCM & HCF",
+          subtopic: "LCM & HCF Applications",
+          conceptTested: "Finding the greatest number that leaves the same remainder when dividing multiple given numbers using HCF of pairwise differences.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_9775a4f704",
+        q_num: 98,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "01:49",
+        avgTime: "00:47",
+        question: "A side of a square plot is $150\\text{ m}$. Inside the plot, $3.5\\text{ m}$ wide path is constructed all around the side, the area of the path is:",
+        options: {
+          a: "$2100\\text{ sq. m.}$",
+          b: "$2002\\text{ sq. m.}$",
+          c: "$2151\\text{ sq. m.}$",
+          d: "$2051\\text{ sq. m.}$"
+        },
+        answer: "d",
+        solution: "Shortcut Trick\nArea of path inside a square = $4 \\times \\text{width} \\times (\\text{side} - \\text{width})$\nGiven: side = $150\\text{ m}$, width = $3.5\\text{ m}$\nArea = $4 \\times 3.5 \\times (150 - 3.5)$\nArea = $14 \\times 146.5 = 2051\\text{ sq. m.}$\n\u2234 The correct answer is $2051\\text{ sq. m.}$.",
+        image: null,
+        topic: "Mensuration 2D",
+        subtopic: "Rectangle & Square (Paths & Fencing)",
+        conceptTested: "Area of a pathway constructed inside a square plot is given by $4 \\times w \\times (a - w)$ where $a$ is the side and $w$ is the width of the path.",
+        tags: {
+          topic: "Mensuration 2D",
+          subtopic: "Rectangle & Square (Paths & Fencing)",
+          conceptTested: "Area of a pathway constructed inside a square plot is given by $4 \\times w \\times (a - w)$ where $a$ is the side and $w$ is the width of the path.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_986023efb3",
+        q_num: 99,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "A",
+        userTime: "00:47",
+        avgTime: "00:29",
+        question: "The height of a right-circular cone was errantly increased by $200\\%$, while its radius was decreased by $50\\%$. The faulty volume obtained was what percent more or less than the original volume?",
+        options: {
+          a: "$25\\%$ decrease",
+          b: "$25\\%$ increase",
+          c: "$20\\%$ increase",
+          d: "$15\\%$ decrease"
+        },
+        answer: "a",
+        solution: "Let the height of the cone be $100$ units and the radius be $100$ units.\n\nOriginal Volume of the right - circular cone = $\\frac{1}{3} \\pi \\times 100^2 \\times 100 = 10^6 \\times \\frac{\\pi}{3}$ cubic units.\nHeight of the faulty cone = $100 + (200\\% \\text{ of } 100) = 300$ units.\nRadius of the faulty cone = $100 - (50\\% \\text{ of } 100) = 50$ units.\nFaulty Volume = $\\frac{1}{3} \\pi \\times 50^2 \\times 300 = 0.75 \\times 10^6 \\times \\frac{\\pi}{3}$ cubic units.\nDifference = $0.75 \\times 10^6 \\times \\frac{\\pi}{3} - 10^6 \\times \\frac{\\pi}{3} = -0.25 \\times 10^6 \\times \\frac{\\pi}{3}$.\nPercentage Change = $\\left( \\frac{-0.25 \\times 10^6 \\times \\frac{\\pi}{3}}{10^6 \\times \\frac{\\pi}{3}} \\right) \\times 100 = -25\\%$.\n\nThus, the faulty volume has decreased by $25\\%$.",
+        image: null,
+        topic: "Mensuration 3D",
+        subtopic: "Cone & Frustum",
+        conceptTested: "Percentage change in volume formula of a right-circular cone: $V = \\frac{1}{3} \\pi r^2 h$.",
+        tags: {
+          topic: "Mensuration 3D",
+          subtopic: "Cone & Frustum",
+          conceptTested: "Percentage change in volume formula of a right-circular cone: $V = \\frac{1}{3} \\pi r^2 h$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_699f38fdcd",
+        q_num: 100,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "C",
+        userTime: "00:41",
+        avgTime: "00:25",
+        question: "The tax on a commodity diminishes by $14\\%$ and its consumption increases by $10\\%$. Find the effect on revenue.",
+        options: {
+          a: "Decreases by $9.5\\%",
+          b: "Decreases by $6.5\\%",
+          c: "Decreases by $5.4\\%",
+          d: "Decreases by $7.4\\%"
+        },
+        answer: "c",
+        solution: "Let initial tax be $T$ and initial consumption be $C$. Initial Revenue = $C \\times T$.\n\nNew Tax = $T - 0.14T = 0.86T$.\nNew Consumption = $C + 0.10C = 1.10C$.\nNew Revenue = $0.86T \\times 1.10C = 0.946CT$.\nPercentage decrease in revenue = $\\frac{CT - 0.946CT}{CT} \\times 100 = (1 - 0.946) \\times 100 = 5.4\\%$.\nHence, the revenue decreases by $5.4\\%$.",
+        image: null,
+        topic: "Percentage",
+        subtopic: "Percentage Change & Comparison",
+        conceptTested: "Revenue is directly proportional to consumption and tax: $\\text{Revenue} = \\text{Consumption} \\times \\text{Tax}$.",
+        tags: {
+          topic: "Percentage",
+          subtopic: "Percentage Change & Comparison",
+          conceptTested: "Revenue is directly proportional to consumption and tax: $\\text{Revenue} = \\text{Consumption} \\times \\text{Tax}$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_9b1c799556",
+        q_num: 101,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "00:22",
+        avgTime: "00:13",
+        question: "A six-digit number is divisible by $33$. If $21$ is added to the number, then the new number which formed is also divisible by:",
+        options: {
+          a: "5",
+          b: "4",
+          c: "2",
+          d: "3"
+        },
+        answer: "d",
+        solution: "Let the six - digit number be $N$. Given that $N$ is divisible by $33$. Since $33 = 3 \\times 11$, $N$ is also divisible by $3$. The new number is $N + 21$. Since $N$ is divisible by $3$ and $21$ is also divisible by $3$ ($21 = 3 \\times 7$), their sum $(N + 21)$ must be divisible by $3$.",
+        image: null,
+        topic: "Number System",
+        subtopic: "Divisibility Rules & Remainders",
+        conceptTested: "If a number $a$ is divisible by $k$ and $b$ is divisible by $k$, then their sum $(a + b)$ is also divisible by $k$.",
+        tags: {
+          topic: "Number System",
+          subtopic: "Divisibility Rules & Remainders",
+          conceptTested: "If a number $a$ is divisible by $k$ and $b$ is divisible by $k$, then their sum $(a + b)$ is also divisible by $k$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_80272392d1",
+        q_num: 102,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "C",
+        userTime: "00:21",
+        avgTime: "00:18",
+        question: "A train $125\\text{ m}$ long is running at $50\\text{ km/hr}$. In what time will it pass a man, running at $5\\text{ km/hr}$ in the same direction in which the train is travelling?",
+        options: {
+          a: "12 sec",
+          b: "12.5 sec",
+          c: "10 sec",
+          d: "10.5 sec"
+        },
+        answer: "c",
+        solution: "Relative speed in the same direction = $50 - 5 = 45\\text{ km/hr}$. Converting to m/s: $45 \\times \\frac{5}{18} = 12.5\\text{ m/s}$. Time taken = $\\frac{\\text{Distance}}{\\text{Relative Speed}} = \\frac{125}{12.5} = 10\\text{ sec}$.",
+        image: null,
+        topic: "Trains",
+        subtopic: "Relative Speed",
+        conceptTested: "Relative speed in the same direction is the difference of speeds ($u - v$), and $\\text{Time} = \\frac{\\text{Distance}}{\\text{Relative Speed}}$.",
+        tags: {
+          topic: "Trains",
+          subtopic: "Relative Speed",
+          conceptTested: "Relative speed in the same direction is the difference of speeds ($u - v$), and $\\text{Time} = \\frac{\\text{Distance}}{\\text{Relative Speed}}$.",
+          difficulty: "medium"
+        }
       }
     ]
   }
@@ -28259,6 +29357,166 @@ Hence, "YQCPJ" is the correct answer.`,
           conceptTested: "Identification of alternating or combined arithmetic operation patterns in number sequences.",
           difficulty: "hard"
         }
+      },
+      {
+        id: "reas_3e1e8a96d2",
+        q_num: 53,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "00:50",
+        avgTime: "00:39",
+        question: "If '$\\div$' is replaced by '$\\$'; if '$\\times$' is replaced by '$\\&$'; '$-$' is replaced by '$@$'; and '$+$' replaced by '$\\#$', find the value of the following equation: $217 \\$ 7 \\& 4 \\# 5 @ 6$",
+        options: {
+          a: "123",
+          b: "135",
+          c: "131",
+          d: "121"
+        },
+        answer: "a",
+        solution: "Given expression: $217 \\$ 7 \\& 4 \\# 5 @ 6$\\n\\nGiven Symbol Replacements:\\n'\\$' is replaced by '$\\div$'\n\n'\\&' is replaced by '$\\times$'\n\n'$@$' is replaced by '$-$' (subtraction)\n\n'\\# ' is replaced by '$+$' (addition)\n\nNew equation: $217 \\div 7 \\times 4 + 5 - 6$\n\n$= 31 \\times 4 + 5 - 6$\n\n$= 124 + 5 - 6$\n\n$= 129 - 6 = 123$",
+        image: null,
+        topic: "Mathematical Operations",
+        subtopic: "Interchange of Signs & Numbers",
+        conceptTested: "Evaluating arithmetic expressions after symbol substitution following standard BODMAS order.",
+        tags: {
+          topic: "Mathematical Operations",
+          subtopic: "Interchange of Signs & Numbers",
+          conceptTested: "Evaluating arithmetic expressions after symbol substitution following standard BODMAS order.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_fd0ca46b1b",
+        q_num: 54,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "D",
+        correctOption: "D",
+        userTime: "01:11",
+        avgTime: "00:43",
+        question: "If $14 \\ (16) \\ 18$ and $33 \\ (64) \\ 25$, then what is the value of '$A$' in $25 \\ (49) \\ A$?",
+        options: {
+          a: "32",
+          b: "18",
+          c: "24",
+          d: "32 or 18"
+        },
+        answer: "d",
+        solution: "The pattern followed here is: $14 \\ (16) \\ 18 \\rightarrow (18 - 14)^2 = (4)^2 = 16$\n\n$33 \\ (64) \\ 25 \\rightarrow (33 - 25)^2 = (8)^2 = 64$\n\nSimilarly, $25 \\ (49) \\ A \\rightarrow (25 - A)^2 = (7)^2$ or $(A - 25)^2 = (7)^2$\n\n$\\rightarrow 25 - 7$ or $25 + 7$\n\n$\\rightarrow 18$ or $32$",
+        image: null,
+        topic: "Analogy",
+        subtopic: "Number & Set Analogy",
+        conceptTested: "Identifying arithmetic patterns involving squares and differences between paired numbers.",
+        tags: {
+          topic: "Analogy",
+          subtopic: "Number & Set Analogy",
+          conceptTested: "Identifying arithmetic patterns involving squares and differences between paired numbers.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_0090dd95dc",
+        q_num: 55,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "01:11",
+        avgTime: "00:42",
+        question: "Five persons $A$, $B$, $C$, $D$ and $E$ are sitting around a circular table facing towards the centre (not necessarily in the same order). $C$ is not an immediate neighbour of $D$ and $A$. $B$ is sitting second to the right of $E$. $A$ is sitting second to the left of $E$. Who is sitting on the immediate right of $C$?",
+        options: {
+          a: "B",
+          b: "E",
+          c: "A",
+          d: "D"
+        },
+        answer: "a",
+        solution: "Given: Five persons $A$, $B$, $C$, $D$ and $E$ are sitting around a circular table facing towards the centre.\n1) $B$ is sitting second to the right of $E$.\n2) $A$ is sitting second to the left of $E$.\n3) $C$ is not an immediate neighbour of $D$ and $A$.\n\nThus, according to the final arrangement, $B$ is sitting on the immediate right of $C$.",
+        image: null,
+        topic: "Seating Arrangement",
+        subtopic: "Circular Seating Arrangement",
+        conceptTested: "Deducing relative positions of individuals in a closed circular loop facing towards the center.",
+        tags: {
+          topic: "Seating Arrangement",
+          subtopic: "Circular Seating Arrangement",
+          conceptTested: "Deducing relative positions of individuals in a closed circular loop facing towards the center.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_7fef823827",
+        q_num: 56,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "B",
+        correctOption: "B",
+        userTime: "00:41",
+        avgTime: "00:24",
+        question: "Based on the English alphabetical order, three of the following four letter-clusters are alike in a certain way and thus form a group. Which letter-cluster does not belong to that group? (Note: The odd man out is not based on the number of consonants/vowels or their position in the letter cluster)",
+        options: {
+          a: "VCJ",
+          b: "EMS",
+          c: "AHO",
+          d: "HOV"
+        },
+        answer: "b",
+        solution: "The logic followed in the clusters is based on the alphabetical positions of the letters. Option B (EMS) does not follow the same pattern as the other three letter - clusters.",
+        image: null,
+        topic: "Classification / Odd One Out",
+        subtopic: "Letter Classification",
+        conceptTested: "Positional alphabet letter distance and cluster pattern recognition",
+        tags: {
+          topic: "Classification / Odd One Out",
+          subtopic: "Letter Classification",
+          conceptTested: "Positional alphabet letter distance and cluster pattern recognition",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_1eaf368f45",
+        q_num: 57,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Correct (Slow)",
+        chosenOption: "B",
+        correctOption: "B",
+        userTime: "00:46",
+        avgTime: "00:32",
+        question: "When $9$ is added to twice a number, thus thrice the number obtained is equal to $75$. What is the number?",
+        options: {
+          a: "6",
+          b: "8",
+          c: "None of these",
+          d: "10"
+        },
+        answer: "b",
+        solution: "Let the number be $x$. According to the question, $3(2x + 9) = 75 \\implies 6x + 27 = 75 \\implies 6x = 48 \\implies x = 8$.",
+        image: null,
+        topic: "Arithmetical Reasoning",
+        subtopic: "Word Numbers",
+        conceptTested: "Translating word statements into linear algebraic equations and solving for the unknown variable",
+        tags: {
+          topic: "Arithmetical Reasoning",
+          subtopic: "Word Numbers",
+          conceptTested: "Translating word statements into linear algebraic equations and solving for the unknown variable",
+          difficulty: "hard"
+        }
       }
     ]
   },
@@ -28983,6 +30241,38 @@ Hence, "21" is the correct answer.`,
           topic: "Mathematical Operations",
           subtopic: "Interchange of Signs & Numbers",
           conceptTested: "Balancing equations via BODMAS by interchanging mathematical operators.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "reas_cd90fe776d",
+        q_num: 23,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "02:36",
+        avgTime: "01:05",
+        question: "The speed of six bikes $B_1$, $B_2$, $B_3$, $B_4$, $B_5$ and $B_6$ has been compared. The speed of the $B_6$ exceeds just three bikes. No two bikes have the same speed. The speed of $B_4$ is more than that of $B_2$ but less than that of $B_6$. The speed of $B_3$ is not less than that of $B_5$. The speed $B_2$ is not the minimum. If the speed of $B_5$ is not less than that of $B_2$, then which of the following pair of bikes has more speed than that of $B_4$?",
+        options: {
+          a: "B_2, B_3",
+          b: "B_5, B_3",
+          c: "B_6, B_1",
+          d: "B_1, B_5"
+        },
+        answer: "b",
+        solution: "The speed of six bikes $B_1$, $B_2$, $B_3$, $B_4$, $B_5$ and $B_6$ has been compared.\n\ni) The speed of the $B_6$ exceeds just three bikes.\n\nii) The speed of $B_4$ is more than that of $B_2$ but less than that of $B_6$.\n\niii) The speed $B_2$ is not minimum.\n\n_ > _ > $B_6$ > $B_4$ > $B_2$ > _\n\niv) The speed of $B_3$ is not less than that of $B_5$.\n\nv) If the speed of $B_5$ is not less than that of $B_2$, $B_5$ cannot be the lowest of all.\n\n$B_3$ > $B_5$ > $B_6$ > $B_4$ > $B_2$ > _\n\nWe are left with $B_1$ which will be at the lowest position.\n\n$B_3$ > $B_5$ > $B_6$ > $B_4$ > $B_2$ > $B_1$\n\nThus, $B_5, B_3$ is the pair of bikes which has more speed than that of $B_4$.",
+        image: null,
+        topic: "Order & Ranking",
+        subtopic: "Linear Seating Arrangement",
+        conceptTested: "Deduction of linear order and relative positions based on conditional inequalities of quantities or speeds.",
+        tags: {
+          topic: "Order & Ranking",
+          subtopic: "Linear Seating Arrangement",
+          conceptTested: "Deduction of linear order and relative positions based on conditional inequalities of quantities or speeds.",
           difficulty: "medium"
         }
       }
@@ -31045,6 +32335,70 @@ Dhami is the sister-in-law of Shilpa.`,
           topic: "Alphabet Test",
           subtopic: "Vowel Consonant Operations",
           conceptTested: "Counting specific sequences of digits based on preceding and succeeding conditions.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "reas_7668491bc2",
+        q_num: 63,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "00:55",
+        avgTime: "00:44",
+        question: `Pointing to a woman, a girl said, "She is the mother of niece of my sister's only maternal aunt who has no brother." How is the woman related to the girl?`,
+        options: {
+          a: "Aunt",
+          b: "Grandmother",
+          c: "Sister",
+          d: "Mother"
+        },
+        answer: "d",
+        solution: `Given: Pointing to a woman, a girl said, "She is the mother of niece of my sister's only maternal aunt who has no brother."+- Thus, the woman is the mother of the girl.`,
+        image: null,
+        topic: "Blood Relations",
+        subtopic: "Pointing / Indicating Form",
+        conceptTested: "Decoding multi-generational family relationship chains presented in indirect puzzle statements.",
+        tags: {
+          topic: "Blood Relations",
+          subtopic: "Pointing / Indicating Form",
+          conceptTested: "Decoding multi-generational family relationship chains presented in indirect puzzle statements.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "reas_f72a2678e0",
+        q_num: 64,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:34",
+        avgTime: "00:33",
+        question: "Consider the given argument and decide which of the given assumptions is/are implicit in the argument.\n\nArgument: The campaign 'Swachh Bharat', to keep one's cities clean, started by the apartment association, didn't bring much of a response from its residents.\n\nAssumptions:\n1. The residents do not wish to keep their apartment clean.\n2. The association head failed in the campaign.",
+        options: {
+          a: "Only assumption 2 is implicit.",
+          b: "Neither 1 nor 2 is implicit.",
+          c: "Only assumption 1 is implicit.",
+          d: "Both 1 and 2 are implicit."
+        },
+        answer: "a",
+        solution: "It is not true that all residents generally do not wish to keep their apartments clean, so assumption 1 is not implicit. The apartment association not getting much response indicates that the association head failed in the campaign, making assumption 2 implicit.",
+        image: null,
+        topic: "Statement & Assumption",
+        subtopic: "Statement & Assumptions",
+        conceptTested: "Logical deduction of underlying assumptions from given statements and arguments",
+        tags: {
+          topic: "Statement & Assumption",
+          subtopic: "Statement & Assumptions",
+          conceptTested: "Logical deduction of underlying assumptions from given statements and arguments",
           difficulty: "medium"
         }
       }
@@ -34292,6 +35646,166 @@ Literary Style: The book is a masterpiece of travel writing and oral history, re
           topic: "Books & Authors",
           subtopic: "Awards Literary Works",
           conceptTested: "Literary awards and critical non-fiction works examining Indian identity.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_7cab657b6d",
+        q_num: 97,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:09",
+        avgTime: "00:35",
+        question: "With reference to the recent expansion of the scope of Government Approved Test Centres (GATC) under the Legal Metrology Rules, which of the following statements is correct?",
+        options: {
+          a: "The total number of categories of weights and measures verifiable through GATCs has been increased to 28.",
+          b: "The State Governments have been stripped of their power to notify additional categories of weights and measures for verification.",
+          c: "The verification fee for CNG, LPG, LNG, and Hydrogen dispensers has been fixed at \u20B910,000 per nozzle.",
+          d: "Under the new framework, only Petrol and Diesel dispensers have been added as the new verifiable categories."
+        },
+        answer: "c",
+        solution: "The Department of Consumer Affairs has amended the Legal Metrology (Government Approved Test Centre) Rules, 2013, to expand the verification infrastructure for fuel dispensers and other weights and measures. Under the amended Rules, the verification fee for CNG, LPG, LNG, and Hydrogen dispensers has been fixed at \u20B910, 000 per nozzle. Hence, option C is correct.",
+        image: null,
+        topic: "Government Schemes & Policies",
+        subtopic: "International Summits & Treaties",
+        conceptTested: "Recent amendments to the Legal Metrology (Government Approved Test Centre) Rules regarding verification fees and categories for fuel dispensers.",
+        tags: {
+          topic: "Government Schemes & Policies",
+          subtopic: "International Summits & Treaties",
+          conceptTested: "Recent amendments to the Legal Metrology (Government Approved Test Centre) Rules regarding verification fees and categories for fuel dispensers.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_bc54f8eb06",
+        q_num: 98,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:26",
+        avgTime: "00:43",
+        question: "Which of the following is/are suitable to be considered a \u201A primary source \u2018 for understanding concerns on nationalism in India under the British rule?\nI. Abanindranath Tagore\\'s painting Bharat Mata\nII. Bankim Chandra Chattopadhyay\\'s novel Anandamath\nIII. Mohandas Karamchand Gandhi\\'s Swaraj flag\nIV. Sarvapalli Gopal\\'s book Jawaharlal Nehru: A Biography",
+        options: {
+          a: "I and II only",
+          b: "I, II and III only",
+          c: "I, II and IV only",
+          d: "II, III and IV only"
+        },
+        answer: "b",
+        solution: "Abanindranath Tagore\\'s painting Bharat Mata (1905), Bankim Chandra Chattopadhyay\\'s novel Anandamath (1882), and Mahatma Gandhi\\'s Swaraj flag (1921) are primary sources created during the nationalist movement. Sarvapalli Gopal\\'s book is a secondary historical biography. Thus, I, II and III only are correct.",
+        image: null,
+        topic: "Modern History",
+        subtopic: "Modern History & Freedom Movement",
+        conceptTested: "Identification of primary historical sources for studying Indian nationalism under British rule.",
+        tags: {
+          topic: "Modern History",
+          subtopic: "Modern History & Freedom Movement",
+          conceptTested: "Identification of primary historical sources for studying Indian nationalism under British rule.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_281293de37",
+        q_num: 99,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:06",
+        avgTime: "00:11",
+        question: "Bangladesh\u2019s first National MPI reveals stark child poverty. What percentage of children in Bangladesh live in multidimensional poverty?",
+        options: {
+          a: "21.44\\%",
+          b: "28.9\\%",
+          c: "35.5\\%",
+          d: "18.7\\%"
+        },
+        answer: "b",
+        solution: "The Correct Answer is 28.9\\%.\n\nIn News\nBangladesh\u2019s first National MPI reveals stark child poverty: UNICEF.\n\nKey Points\nBangladesh released its first National Multidimensional Poverty Index (MPI), supported by UNICEF and the European Union (EU).\n\n28.9\\% of children live in multidimensional poverty, compared to 21.44\\% of adults.\n\nChildren are 35\\% more likely to suffer multidimensional poverty than adults.",
+        image: null,
+        topic: "National & International Current Affairs",
+        subtopic: "Reports, Indices & Rankings",
+        conceptTested: "Recent socioeconomic indices and child poverty metrics reported by UNICEF and national bodies.",
+        tags: {
+          topic: "National & International Current Affairs",
+          subtopic: "Reports, Indices & Rankings",
+          conceptTested: "Recent socioeconomic indices and child poverty metrics reported by UNICEF and national bodies.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_f857f7d2c0",
+        q_num: 100,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:03",
+        avgTime: "00:13",
+        question: "Songkran is a Buddhist festival. This festival is celebrated for several days in the month of _______.",
+        options: {
+          a: "March",
+          b: "June",
+          c: "April",
+          d: "May"
+        },
+        answer: "c",
+        solution: "The correct answer is April.\n\nKey Points\nThe Buddhist festival 'Songkran' is celebrated mainly in Arunachal Pradesh. This Buddhist festival is observed as a spring cleaning and is celebrated for several days during the middle of April.",
+        image: null,
+        topic: "Festivals & Fairs",
+        subtopic: "Religious Cultural Festivals",
+        conceptTested: "Traditional Buddhist festivals celebrated in India and their timing/cultural significance.",
+        tags: {
+          topic: "Festivals & Fairs",
+          subtopic: "Religious Cultural Festivals",
+          conceptTested: "Traditional Buddhist festivals celebrated in India and their timing/cultural significance.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_5f4cb6dd44",
+        q_num: 101,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:02",
+        avgTime: "00:17",
+        question: "The Sammakka Saralamma Jatara of Telangana, also known as ___________, is a biennial tribal fair held in memory and honor of the mother and daughter duo i.e. Sammakka and Saralamma against the rulers of the Kakatiya dynasty.",
+        options: {
+          a: "Ambubachi Jatra",
+          b: "Medaram Jatara",
+          c: "Nuakhai Jatra",
+          d: "None of these"
+        },
+        answer: "b",
+        solution: "The Sammakka Saralamma Jatara is also known as Medaram Jatara, held biennially in Telangana.",
+        image: null,
+        topic: "Festivals & Fairs",
+        subtopic: "Folk Tribal Festivals",
+        conceptTested: "Cultural heritage and traditional festivals of India",
+        tags: {
+          topic: "Festivals & Fairs",
+          subtopic: "Folk Tribal Festivals",
+          conceptTested: "Cultural heritage and traditional festivals of India",
           difficulty: "medium"
         }
       }
@@ -38719,6 +40233,294 @@ Further Insights: \u2022 PRARAMBH 2026 is a nationwide outreach programme launch
           topic: "National & International Current Affairs",
           subtopic: "National & Global Events",
           conceptTested: "Current affairs regarding green hydrogen initiatives and sustainable transport in airports.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_d749dacda2",
+        q_num: 139,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "A",
+        userTime: "00:09",
+        avgTime: "00:20",
+        question: "Which team did the Indian men's air rifle team defeat to win gold at the 16th Asian Shooting Championships?",
+        options: {
+          a: "China",
+          b: "Russia",
+          c: "South Korea",
+          d: "Japan"
+        },
+        answer: "a",
+        solution: "The Indian men's air rifle team consisting of Arjun Babuta, Rudrankksh Patil, and Kiran Jadhav won the gold medal in the men's 10m Air Rifle at the Asian Shooting Championships in Shymkent, Kazakhstan, defeating the Chinese trio.",
+        image: null,
+        topic: "Sports & Trophies",
+        subtopic: "Important Days, Orgs & Static Facts",
+        conceptTested: "Current affairs knowledge of international sports tournaments and medal tallies",
+        tags: {
+          topic: "Sports & Trophies",
+          subtopic: "Important Days, Orgs & Static Facts",
+          conceptTested: "Current affairs knowledge of international sports tournaments and medal tallies",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_2a6fd7a5c7",
+        q_num: 140,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "A",
+        userTime: "00:09",
+        avgTime: "00:11",
+        question: "In which state is the oldest oil field of India located?",
+        options: {
+          a: "Assam",
+          b: "Punjab",
+          c: "Maharashtra",
+          d: "Gujarat"
+        },
+        answer: "a",
+        solution: "Digboi is known as the Oil City of Assam where the first oil well in Asia was drilled and the first refinery was started in 1901 by Assam Oil Company Ltd.",
+        image: null,
+        topic: "Static GK",
+        subtopic: "Important Days, Orgs & Static Facts",
+        conceptTested: "Familiarity with historical economic milestones and geographical landmarks of India",
+        tags: {
+          topic: "Static GK",
+          subtopic: "Important Days, Orgs & Static Facts",
+          conceptTested: "Familiarity with historical economic milestones and geographical landmarks of India",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_174847c29f",
+        q_num: 141,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:07",
+        avgTime: "00:14",
+        question: "Banaras Hindu University was established in:",
+        options: {
+          a: "1916",
+          b: "1945",
+          c: "1894",
+          d: "1901"
+        },
+        answer: "a",
+        solution: "Banaras Hindu University (BHU) was established in 1916. It was founded by the nationalist leader Pandit Madan Mohan Malviya with the cooperation of Dr. Annie Besant.",
+        image: null,
+        topic: "Modern History",
+        subtopic: "Modern History & Freedom Movement",
+        conceptTested: "Establishment year and founders of Banaras Hindu University.",
+        tags: {
+          topic: "Modern History",
+          subtopic: "Modern History & Freedom Movement",
+          conceptTested: "Establishment year and founders of Banaras Hindu University.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_ad3b7abf64",
+        q_num: 142,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "B",
+        userTime: "00:21",
+        avgTime: "00:22",
+        question: "Which of the following best defines free trade?",
+        options: {
+          a: "Imports are discouraged",
+          b: "There are no restrictions on exports and imports",
+          c: "There are no duties levied on export",
+          d: "Imported goods are made duty free"
+        },
+        answer: "b",
+        solution: "Free trade is an economic policy where nations do not impose import tariffs, quotas, or other restrictions on exports and imports, permitting unrestricted exchange of goods and services.",
+        image: null,
+        topic: "Macroeconomics & National Income",
+        subtopic: "General Economics & Finance",
+        conceptTested: "Definition and principles of free trade and international trade policies.",
+        tags: {
+          topic: "Macroeconomics & National Income",
+          subtopic: "General Economics & Finance",
+          conceptTested: "Definition and principles of free trade and international trade policies.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_8f7f5d6d6d",
+        q_num: 143,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "C",
+        userTime: "00:06",
+        avgTime: "00:21",
+        question: "Which religion flourished the most during the Gupta period?",
+        options: {
+          a: "Buddhism",
+          b: "Jainism",
+          c: "Mythological Religion",
+          d: "Religion of the Yawns"
+        },
+        answer: "c",
+        solution: "The Gupta Period is known for the evolution of Brahmanism into Puranic or Mythological Religion (Hinduism, centered around Vishnu, Shiva, and Shakti), which received immense royal patronage and flourished greatly.",
+        image: null,
+        topic: "Ancient History",
+        subtopic: "Ancient History (Harappa to Gupta)",
+        conceptTested: "Religious developments and prominent religious trends during the Gupta Period.",
+        tags: {
+          topic: "Ancient History",
+          subtopic: "Ancient History (Harappa to Gupta)",
+          conceptTested: "Religious developments and prominent religious trends during the Gupta Period.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_111dc24d25",
+        q_num: 144,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "C",
+        userTime: "00:08",
+        avgTime: "00:17",
+        question: "Who has been appointed as the new Prime Minister of Ukraine? (July 2025)",
+        options: {
+          a: "Denys Shmyhal",
+          b: "Volodymyr Zelenskyy",
+          c: "Yuliia Svyrydenko",
+          d: "Olena Zelenska"
+        },
+        answer: "c",
+        solution: "The Correct Answer is Yuliia Svyrydenko.\n\nIn News\nYuliia Svyrydenko Named Ukraine\u2019s New Prime Minister.\n\nKey Points\nYuliia Svyrydenko, former Economy Minister, is now the Prime Minister of Ukraine. She replaces Denys Shmyhal, who becomes the new Defence Minister.",
+        image: null,
+        topic: "National & International Current Affairs",
+        subtopic: "Appointments & Resignations",
+        conceptTested: "Recent high-level international political appointments and government leadership changes.",
+        tags: {
+          topic: "National & International Current Affairs",
+          subtopic: "Appointments & Resignations",
+          conceptTested: "Recent high-level international political appointments and government leadership changes.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_18436daad4",
+        q_num: 145,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "B",
+        userTime: "00:07",
+        avgTime: "00:11",
+        question: "What is the total outlay of the planned subsidy scheme for rare earth magnet production in India?",
+        options: {
+          a: "\u20B91,000 crore",
+          b: "\u20B91,345 crore",
+          c: "\u20B91,645 crore",
+          d: "\u20B92,000 crore"
+        },
+        answer: "b",
+        solution: "The Correct Answer is \u20B91, 345 crore.\n\nIn News\nGovt plans to roll out over Rs 1, 000 cr subsidy scheme to promote rare earth magnets production.\n\nKey Points\nThe Government of India is planning a \u20B91, 345 crore subsidy scheme to promote domestic production of rare earth magnets. The scheme aims to offer end - to - end support for converting rare earth oxides into magnets.",
+        image: null,
+        topic: "Government Schemes & Policies",
+        subtopic: "Government Schemes & Policies",
+        conceptTested: "Key financial outlays and industrial support programs announced by the Government of India.",
+        tags: {
+          topic: "Government Schemes & Policies",
+          subtopic: "Government Schemes & Policies",
+          conceptTested: "Key financial outlays and industrial support programs announced by the Government of India.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_472657cd44",
+        q_num: 146,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "A",
+        userTime: "00:15",
+        avgTime: "00:21",
+        question: "According to the ADR report 2025, which Chief Minister has the highest number of criminal cases declared against him?",
+        options: {
+          a: "Revanth Reddy (Telangana)",
+          b: "M.K. Stalin (Tamil Nadu)",
+          c: "N. Chandrababu Naidu (Andhra Pradesh)",
+          d: "Siddaramaiah (Karnataka)"
+        },
+        answer: "a",
+        solution: "The correct answer is Revanth Reddy (Telangana).\n\nIn News\nA new analysis by the Association for Democratic Reforms (ADR) has revealed that 40\\% of India\u2019s Chief Ministers face criminal cases, with Telangana CM Revanth Reddy topping the list at 89 cases.",
+        image: null,
+        topic: "National & International Current Affairs",
+        subtopic: "Reports, Indices & Rankings",
+        conceptTested: "Key factual findings from recent Association for Democratic Reforms (ADR) political reports.",
+        tags: {
+          topic: "National & International Current Affairs",
+          subtopic: "Reports, Indices & Rankings",
+          conceptTested: "Key factual findings from recent Association for Democratic Reforms (ADR) political reports.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_3d2d34d1f5",
+        q_num: 147,
+        mockId: "mock_1790535030393_3im24",
+        testId: "mock_1790535030393_3im24",
+        testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
+        platform: "Testbook",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "B",
+        userTime: "00:28",
+        avgTime: "00:33",
+        question: "Which among the following statements is correct with reference to the Solar System?",
+        options: {
+          a: "Kuiper belt is not part of the solar system.",
+          b: "Saturn has the highest number of satellites among all the planets.",
+          c: "Saturn has the highest diurnal range of temperature among all the planets.",
+          d: "Venus is the only planet in the solar system that has a retrograde rotation."
+        },
+        answer: "b",
+        solution: "Saturn has the highest number of satellites among all the planets, with 146 officially recognized moons, making statement B correct.",
+        image: null,
+        topic: "Physical Geography",
+        subtopic: "Physical & World Geography",
+        conceptTested: "Planetary characteristics and satellite counts in the Solar System",
+        tags: {
+          topic: "Physical Geography",
+          subtopic: "Physical & World Geography",
+          conceptTested: "Planetary characteristics and satellite counts in the Solar System",
           difficulty: "medium"
         }
       }

@@ -5301,6 +5301,70 @@
           "conceptTested": "Total work equals the product of efficiency and time, allowing individual efficiencies to be derived from LCM of days.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_3b6b24c783",
+        "q_num": 169,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:53",
+        "avgTime": "00:33",
+        "question": "Two men A and B, each working alone by working $12$ hours per day, can complete a work in $20$ days. For execution of the work, it was decided that A and B would be working for $8$ and $6$ hours per day, respectively, on alternate days starting with A. If it takes $x$ days and $y$ hours to complete the work then $(x, y)$ is:",
+        "options": {
+          "a": "(33, 2)",
+          "b": "(33, 4)",
+          "c": "(34, 2)",
+          "d": "(34, 4)"
+        },
+        "answer": "c",
+        "solution": "Total work = $12 \\times 20 = 240$ units (assuming 1 unit/hour). A works $8$ hours/day and B works $6$ hours/day. In a 2 - day cycle, work done = $8 + 6 = 14$ units. $240 = 17 \\times 14 + 2$. Thus, 17 cycles take $17 \\times 2 = 34$ days, and the remaining 2 units are completed by A in $\\frac{2}{8}$ of a day ($2$ hours). Hence, $(34, 2)$.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Alternate Days Work",
+        "conceptTested": "Calculating total time taken when workers perform tasks on alternate days with varying daily working hours.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Alternate Days Work",
+          "conceptTested": "Calculating total time taken when workers perform tasks on alternate days with varying daily working hours.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_1291c18395",
+        "q_num": 170,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:48",
+        "avgTime": "00:32",
+        "question": "Let $N$ be the least number which when divided by $15$, $25$, $35$, $40$ and $42$, the remainder in each case is $1$ and $N$ is divisible by $271$. What is the sum of digits of $N$?",
+        "options": {
+          "a": "17",
+          "b": "14",
+          "c": "13",
+          "d": "18"
+        },
+        "answer": "c",
+        "solution": "The LCM of $15$, $25$, $35$, $40$, and $42$ is $4200$. The number is of the form $N = 4200k + 1$. For $N$ to be divisible by $271$, $4200k + 1 \\equiv 0 \\pmod{271} \\implies 135k + 1 \\equiv 0 \\pmod{271}$. Testing values for $k$, when $k = 2$, $135(2) + 1 = 271$, which is divisible by $271$. Thus, $N = 4200(2) + 1 = 8401$. The sum of the digits is $8 + 4 + 0 + 1 = 13$.",
+        "image": null,
+        "topic": "LCM & HCF",
+        "subtopic": "LCM & HCF Applications",
+        "conceptTested": "Finding a specific multiple of an LCM that leaves a fixed remainder and satisfies an additional divisibility condition.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "LCM & HCF Applications",
+          "conceptTested": "Finding a specific multiple of an LCM that leaves a fixed remainder and satisfies an additional divisibility condition.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -12665,6 +12729,326 @@
           "conceptTested": "Combined efficiency of multiple pairs working together is half the sum of their individual combined efficiencies.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_379f68028c",
+        "q_num": 235,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:22",
+        "avgTime": "00:25",
+        "question": "The inradius of a triangle is $7\\text{ cm}$ and its area is $343\\text{ cm}^2$. The perimeter of the triangle is:",
+        "options": {
+          "a": "$98\\text{ cm}$",
+          "b": "$68\\text{ cm}$",
+          "c": "$88\\text{ cm}$",
+          "d": "$49\\text{ cm}$"
+        },
+        "answer": "a",
+        "solution": "Given:\nInradius of the triangle = $7\\text{ cm}$\nArea of the triangle = $343\\text{ cm}^2$\n\nFormula Used:\nArea of triangle = $\\frac{\\text{Inradius} \\times \\text{Perimeter}}{2}$\n\nCalculation:\nLet the perimeter of the triangle be $P$.\nUsing the formula: $343 = \\frac{7 \\times P}{2}$\n\n$343 = \\frac{7P}{2}$\n\nMultiplying both sides by 2: $686 = 7P$\nDividing both sides by 7: $P = \\frac{686}{7} = 98\\text{ cm}$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Area of a triangle in terms of its inradius ($r$) and perimeter ($P$) is given by $\\text{Area} = \\frac{r \\times P}{2}$.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Area of a triangle in terms of its inradius ($r$) and perimeter ($P$) is given by $\\text{Area} = \\frac{r \\times P}{2}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_70d5d10c2a",
+        "q_num": 236,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:10",
+        "avgTime": "00:41",
+        "question": "Madhu bought $35\\text{ kg}$ of sugar for $\\text{Rs. } 1,470$. She sold it at a loss equal to the selling price of $5\\text{ kg}$ of it. What is the selling price (in $\\text{Rs.}$) of $8\\text{ kg}$ of sugar?",
+        "options": {
+          "a": "296",
+          "b": "288",
+          "c": "300",
+          "d": "294"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nLet Selling Price (SP) of $1\\text{ kg}$ sugar be $1$ unit.\nTotal SP of $35\\text{ kg} = 35$ units | Loss = SP of $5\\text{ kg} = 5$ units.\nCost Price (CP) = SP + Loss = $35 + 5 = 40$ units.\nGiven $40$ units = $\\text{Rs. } 1,470 \\implies 1$ unit (SP of $1\\text{ kg}$) = $1,470 \\div 40 = \\text{Rs. } 36.75$.\n\nSP of $8\\text{ kg} = 8 \\times 36.75 = \\text{Rs. } 294$.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Dishonest Dealer & False Weights",
+        "conceptTested": "Relation between Cost Price and Selling Price when loss is expressed in terms of Selling Price: $\\text{CP} = \\text{SP} + \\text{Loss}$.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Dishonest Dealer & False Weights",
+          "conceptTested": "Relation between Cost Price and Selling Price when loss is expressed in terms of Selling Price: $\\text{CP} = \\text{SP} + \\text{Loss}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e74929d663",
+        "q_num": 237,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:11",
+        "avgTime": "00:33",
+        "question": "A certain sum amounts to $₹16,956$ in $4$ years and to $₹19,116$ in $6\\frac{1}{2}$ years at a certain rate percent per annum, interest being simple in both cases. The rate of interest p.a. is:",
+        "options": {
+          "a": "$6.5\\%$",
+          "b": "$7.8\\%$",
+          "c": "$6.4\\%$",
+          "d": "$7.5\\%$"
+        },
+        "answer": "c",
+        "solution": "Interest for $2.5$ years = $19,116 - 16,956 = ₹2,160$\nInterest per year = $2,160 \\div 2.5 = ₹864$\nPrincipal = $16,956 - (864 \\times 4) = 16,956 - 3,456 = ₹13,500$\nRate of interest = $(\\frac{864}{13,500}) \\times 100 = 6.4\\%$\n∴ The correct answer is $6.4\\%$.",
+        "image": null,
+        "topic": "Simple Interest",
+        "subtopic": "Basic Simple Interest",
+        "conceptTested": "Simple interest remains constant per period, allowing direct calculation of interest per annum from differences in amounts over time.",
+        "tags": {
+          "topic": "Simple Interest",
+          "subtopic": "Basic Simple Interest",
+          "conceptTested": "Simple interest remains constant per period, allowing direct calculation of interest per annum from differences in amounts over time.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3bd5c3dcdc",
+        "q_num": 238,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:30",
+        "avgTime": "00:34",
+        "question": "Study the given table and answer the question that follows. The table shows the amount earned (in $\\text{Rs. } '000$) by five different movies across all screens a movie was played.\n\nMovies | Amount collected per movie (in $\\text{Rs. } '000$)\nM1 | 450\nM² | 370\nM³ | 510\nM⁴ | 640\nM5 | 830\n\nAll the movies were displayed on $50$ screens each. What is the average amount earned per movie, per screen, all movies and all screens are taken together?",
+        "options": {
+          "a": "Rs. 14,200",
+          "b": "Rs. 11,200",
+          "c": "Rs. 12,600",
+          "d": "Rs. 13,400"
+        },
+        "answer": "b",
+        "solution": "Given:\nTotal amount collected per movie in each screen = $(450 + 370 + 510 + 640 + 830) \\times 1000$\nTotal amount collected for all movies = $\\text{Rs. } 2,800,000$\n\nAs mentioned the movies are displayed on $50$ screens for each, total screens = $50 \\times 5 = 250$\n\n∴ The average amount earned per movie per screen = $\\frac{2,800,000}{250} = \\text{Rs. } 11,200$.",
+        "image": null,
+        "topic": "Data Interpretation",
+        "subtopic": "Tables & Tabular Data",
+        "conceptTested": "Average computation involving total grouped quantity divided by the total number of observational screens.",
+        "tags": {
+          "topic": "Data Interpretation",
+          "subtopic": "Tables & Tabular Data",
+          "conceptTested": "Average computation involving total grouped quantity divided by the total number of observational screens.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_72d6ee50e2",
+        "q_num": 239,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "01:04",
+        "avgTime": "00:28",
+        "question": "If $\\tan A = \\sqrt{2} - 1$, then find the value of $\\sin A \\cos A + \\tan A$.",
+        "options": {
+          "a": "$\\frac{5 \\sqrt{2} + 4}{4}$",
+          "b": "$\\frac{5 \\sqrt{2} - 4}{4}$",
+          "c": "$\\frac{24 \\sqrt{2} + 15}{4}$",
+          "d": "$\\frac{24 \\sqrt{2} - 15}{4}$"
+        },
+        "answer": "b",
+        "solution": "Given $\\tan A = \\sqrt{2} - 1$, we know that $\\frac{\\sin A}{\\cos A} = \\sqrt{2} - 1$. Let $\\sin A = x$ and $\\cos A = y$. Thus, $x = y(\\sqrt{2} - 1)$.\n\nUsing $\\sin^2 A + \\cos^2 A = 1$, we get $x^2 + y^2 = 1$.\n\nSubstituting $x$ in terms of $y$: $(y(\\sqrt{2} - 1))^2 + y^2 = 1 \\implies y^2(3 - 2\\sqrt{2}) + y^2 = 1 \\implies y^2(4 - 2\\sqrt{2}) = 1$.\n\nSolving for $y$, we get $y = \\frac{1}{\\sqrt{4 - 2\\sqrt{2}}}$.\n\nUsing standard trigonometric transformations and substituting values, we arrive at: $\\sin A \\cos A + \\tan A = \\frac{5\\sqrt{2} - 4}{4}$.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Relation between tangent, sine, and cosine ratios: $\\tan A = \\frac{\\sin A}{\\cos A}$ and $\\sin^2 A + \\cos^2 A = 1$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Relation between tangent, sine, and cosine ratios: $\\tan A = \\frac{\\sin A}{\\cos A}$ and $\\sin^2 A + \\cos^2 A = 1$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_692420ed01",
+        "q_num": 240,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:52",
+        "avgTime": "00:25",
+        "question": "If a number of pens and pencils are bought in the ratio of $5 : 3$, then Ashok has to pay Rs. 44. If the ratio is changed as $3 : 5$, then he has to pay Rs. 36. Find the ratio of the price of one pen to one pencil.",
+        "options": {
+          "a": "$5 : 3$",
+          "b": "$7 : 3$",
+          "c": "$8 : 5$",
+          "d": "$7 : 4$"
+        },
+        "answer": "b",
+        "solution": "Let the cost of one pen be $x$ and the cost of one pencil be $y$.\n\nAccording to the problem: $5x + 3y = 44$ ---- (1)\n\n$3x + 5y = 36$ ---- (2)\n\nMultiply equation (1) by 5 and equation (2) by 3: $25x + 15y = 220$\n\n$9x + 15y = 108$\n\nSubtracting the second equation from the first: $16x = 112 \\implies x = 7$.\nSubstitute $x = 7$ in equation (1): $5(7) + 3y = 44 \\implies 35 + 3y = 44 \\implies 3y = 9 \\implies y = 3$.\n\nTherefore, the ratio of the price of one pen to one pencil is $x : y = 7 : 3$.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Coins & Currency Problems",
+        "conceptTested": "Solving simultaneous linear equations derived from proportional price-quantity relationships.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Coins & Currency Problems",
+          "conceptTested": "Solving simultaneous linear equations derived from proportional price-quantity relationships.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cec21cbd19",
+        "q_num": 241,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:40",
+        "avgTime": "00:34",
+        "question": "Simplify $9^{18} \\div 3^{14} \\text{ of } 27^3 \\times \\sqrt{6561}$.",
+        "options": {
+          "a": "$3^{16}$",
+          "b": "$3^{18}$",
+          "c": "$3^{15}$",
+          "d": "$3^{17}$"
+        },
+        "answer": "d",
+        "solution": "Convert all terms to base $3$: $9 = 3^2$\n\n$27 = 3^3$\n\n$6561 = 3^8$\n\nGiven expression: $9^{18} \\div 3^{14} \\text{ of } 27^3 \\times \\sqrt{6561}$\n\n$= (3^2)^{18} \\div 3^{14} \\text{ of } (3^3)^3 \\times \\sqrt{3^8}$\n\n$= 3^{36} \\div 3^{14} \\text{ of } 3^9 \\times 3^4$\n\nUsing 'OF' (multiplication precedence over division): $= 3^{36} \\div 3^{(14 + 9)} \\times 3^4$\n\n$= 3^{36} \\div 3^{23} \\times 3^4$\n\n$= 3^{36 - 23} \\times 3^4$\n\n$= 3^{13} \\times 3^4 = 3^{13 + 4} = 3^{17}$.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "Surds & Indices",
+        "conceptTested": "Laws of exponents: $a^m \\div a^n = a^{m-n}$ and $(a^m)^n = a^{m \\times n}$.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Surds & Indices",
+          "conceptTested": "Laws of exponents: $a^m \\div a^n = a^{m-n}$ and $(a^m)^n = a^{m \\times n}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_fc604eb4a8",
+        "q_num": 242,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:14",
+        "avgTime": "00:20",
+        "question": "The outer radius of a spherical shell is $9\\text{ cm}$ and the thickness of the shell is $1\\text{ cm}$. Find the volume of the metal used for the shell (in cubic cm). $\\left(\\text{Use } \\pi = \\frac{22}{7}\\right)$",
+        "options": {
+          "a": "$912\\frac{2}{3}$",
+          "b": "$915\\frac{1}{3}$",
+          "c": "$909\\frac{1}{3}$",
+          "d": "$909\\frac{3}{5}$"
+        },
+        "answer": "c",
+        "solution": "Outer radius $R = 9\\text{ cm}$. Thickness $= 1\\text{ cm}$, so inner radius $r = 9 - 1 = 8\\text{ cm}$. Volume of metal = $\\frac{4}{3} \\pi (R^3 - r^3) = \\frac{4}{3} \\times \\frac{22}{7} \\times (9^3 - 8^3) = \\frac{88}{21} \\times (729 - 512) = \\frac{88 \\times 217}{21} = \\frac{19096}{21} = 909\\frac{1}{3}\\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Sphere & Hemisphere",
+        "conceptTested": "Volume of a spherical shell = $\\frac{4}{3} \\pi (R^3 - r^3)$, where $R$ is outer radius and $r$ is inner radius.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Sphere & Hemisphere",
+          "conceptTested": "Volume of a spherical shell = $\\frac{4}{3} \\pi (R^3 - r^3)$, where $R$ is outer radius and $r$ is inner radius.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e086fbbf29",
+        "q_num": 243,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:17",
+        "question": "How many kilograms of sugar costing Rs. $50$ per kg should be mixed with $30\\text{ kg}$ of sugar costing Rs. $45$ per kg so that the mixture is worth Rs. $48$ per kg?",
+        "options": {
+          "a": "50 kg",
+          "b": "48 kg",
+          "c": "45 kg",
+          "d": "42 kg"
+        },
+        "answer": "c",
+        "solution": "Using alligation: Price of 1st type = $50$, Price of 2nd type = $45$, Mean price = $48$. Ratio of quantities = $(48 - 45) : (50 - 48) = 3 : 2$. Given that the quantity of the 2nd type is $30\\text{ kg}$ (corresponding to 2 units), so 1 unit = $15\\text{ kg}$. Thus, the quantity of the 1st type (3 units) = $3 \\times 15 = 45\\text{ kg}$.",
+        "image": null,
+        "topic": "Mixture & Alligation",
+        "subtopic": "Two-Liquid Mixtures & Ratios",
+        "conceptTested": "Alligation rule to find the ratio of quantities of two ingredients mixed to form a mixture of a given mean price.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "subtopic": "Two-Liquid Mixtures & Ratios",
+          "conceptTested": "Alligation rule to find the ratio of quantities of two ingredients mixed to form a mixture of a given mean price.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_91d4eae72e",
+        "q_num": 244,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:00",
+        "avgTime": "00:20",
+        "question": "Nine times the area of a circle is same as the three times the area of a square. What is the ratio of the diameter of the circle and diagonal of the square?",
+        "options": {
+          "a": "$\\sqrt{2} : \\sqrt{3\\pi}$",
+          "b": "$2 : \\sqrt{3\\pi}$",
+          "c": "$2 : 3\\pi$",
+          "d": "$\\sqrt{5} : \\sqrt{7\\pi}$"
+        },
+        "answer": "a",
+        "solution": "Let radius of the circle be $r$ and side of the square be $a$. Area of circle = $\\pi r^2$, Area of square = $a^2$. Given $9\\pi r^2 = 3a^2 \\implies 3\\pi r^2 = a^2 \\implies \\frac{a}{r} = \\sqrt{3\\pi}$. Diameter of the circle = $2r$. Diagonal of the square = $a\\sqrt{2}$. Ratio of diameter to diagonal = $\\frac{2r}{a\\sqrt{2}} = \\frac{\\sqrt{2} r}{a} = \\frac{\\sqrt{2}}{\\sqrt{3\\pi}} = \\sqrt{2} : \\sqrt{3\\pi}$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Ratio of areas of geometric figures expressed in terms of their linear dimensions (radius and side).",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Ratio of areas of geometric figures expressed in terms of their linear dimensions (radius and side).",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -15697,6 +16081,198 @@
           "topic": "Time, Speed & Distance",
           "subtopic": "Races & Circular Tracks",
           "conceptTested": "Time taken to meet on a circular track in the same direction is given by $\\frac{\\text{Length of Track}}{\\text{Relative Speed}}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bb29b4bce5",
+        "q_num": 97,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:43",
+        "avgTime": "00:31",
+        "question": "$k$ is the greatest number which, when divides $2996$, $4752$ and $7825$, the remainder in each case is the same. The product of the digits of $k$ is:",
+        "options": {
+          "a": "120",
+          "b": "84",
+          "c": "72",
+          "d": "108"
+        },
+        "answer": "d",
+        "solution": "The number $k$ is the HCF of the differences between the given numbers: $|7825 - 4752| = 3073$, $|7825 - 2996| = 4829$, and $|4752 - 2996| = 1756$. The HCF of $3073$, $4829$, and $1756$ is $439$. Thus, $k = 439$. The product of the digits of $k$ is $4 \\times 3 \\times 9 = 108$.",
+        "image": null,
+        "topic": "LCM & HCF",
+        "subtopic": "LCM & HCF Applications",
+        "conceptTested": "Finding the greatest number that leaves the same remainder when dividing multiple given numbers using HCF of pairwise differences.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "LCM & HCF Applications",
+          "conceptTested": "Finding the greatest number that leaves the same remainder when dividing multiple given numbers using HCF of pairwise differences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9775a4f704",
+        "q_num": 98,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "01:49",
+        "avgTime": "00:47",
+        "question": "A side of a square plot is $150\\text{ m}$. Inside the plot, $3.5\\text{ m}$ wide path is constructed all around the side, the area of the path is:",
+        "options": {
+          "a": "$2100\\text{ sq. m.}$",
+          "b": "$2002\\text{ sq. m.}$",
+          "c": "$2151\\text{ sq. m.}$",
+          "d": "$2051\\text{ sq. m.}$"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nArea of path inside a square = $4 \\times \\text{width} \\times (\\text{side} - \\text{width})$\nGiven: side = $150\\text{ m}$, width = $3.5\\text{ m}$\nArea = $4 \\times 3.5 \\times (150 - 3.5)$\nArea = $14 \\times 146.5 = 2051\\text{ sq. m.}$\n∴ The correct answer is $2051\\text{ sq. m.}$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "Area of a pathway constructed inside a square plot is given by $4 \\times w \\times (a - w)$ where $a$ is the side and $w$ is the width of the path.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "Area of a pathway constructed inside a square plot is given by $4 \\times w \\times (a - w)$ where $a$ is the side and $w$ is the width of the path.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_986023efb3",
+        "q_num": 99,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:47",
+        "avgTime": "00:29",
+        "question": "The height of a right-circular cone was errantly increased by $200\\%$, while its radius was decreased by $50\\%$. The faulty volume obtained was what percent more or less than the original volume?",
+        "options": {
+          "a": "$25\\%$ decrease",
+          "b": "$25\\%$ increase",
+          "c": "$20\\%$ increase",
+          "d": "$15\\%$ decrease"
+        },
+        "answer": "a",
+        "solution": "Let the height of the cone be $100$ units and the radius be $100$ units.\n\nOriginal Volume of the right - circular cone = $\\frac{1}{3} \\pi \\times 100^2 \\times 100 = 10^6 \\times \\frac{\\pi}{3}$ cubic units.\nHeight of the faulty cone = $100 + (200\\% \\text{ of } 100) = 300$ units.\nRadius of the faulty cone = $100 - (50\\% \\text{ of } 100) = 50$ units.\nFaulty Volume = $\\frac{1}{3} \\pi \\times 50^2 \\times 300 = 0.75 \\times 10^6 \\times \\frac{\\pi}{3}$ cubic units.\nDifference = $0.75 \\times 10^6 \\times \\frac{\\pi}{3} - 10^6 \\times \\frac{\\pi}{3} = -0.25 \\times 10^6 \\times \\frac{\\pi}{3}$.\nPercentage Change = $\\left( \\frac{-0.25 \\times 10^6 \\times \\frac{\\pi}{3}}{10^6 \\times \\frac{\\pi}{3}} \\right) \\times 100 = -25\\%$.\n\nThus, the faulty volume has decreased by $25\\%$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cone & Frustum",
+        "conceptTested": "Percentage change in volume formula of a right-circular cone: $V = \\frac{1}{3} \\pi r^2 h$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cone & Frustum",
+          "conceptTested": "Percentage change in volume formula of a right-circular cone: $V = \\frac{1}{3} \\pi r^2 h$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_699f38fdcd",
+        "q_num": 100,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:41",
+        "avgTime": "00:25",
+        "question": "The tax on a commodity diminishes by $14\\%$ and its consumption increases by $10\\%$. Find the effect on revenue.",
+        "options": {
+          "a": "Decreases by $9.5\\%",
+          "b": "Decreases by $6.5\\%",
+          "c": "Decreases by $5.4\\%",
+          "d": "Decreases by $7.4\\%"
+        },
+        "answer": "c",
+        "solution": "Let initial tax be $T$ and initial consumption be $C$. Initial Revenue = $C \\times T$.\n\nNew Tax = $T - 0.14T = 0.86T$.\nNew Consumption = $C + 0.10C = 1.10C$.\nNew Revenue = $0.86T \\times 1.10C = 0.946CT$.\nPercentage decrease in revenue = $\\frac{CT - 0.946CT}{CT} \\times 100 = (1 - 0.946) \\times 100 = 5.4\\%$.\nHence, the revenue decreases by $5.4\\%$.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Percentage Change & Comparison",
+        "conceptTested": "Revenue is directly proportional to consumption and tax: $\\text{Revenue} = \\text{Consumption} \\times \\text{Tax}$.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Percentage Change & Comparison",
+          "conceptTested": "Revenue is directly proportional to consumption and tax: $\\text{Revenue} = \\text{Consumption} \\times \\text{Tax}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9b1c799556",
+        "q_num": 101,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:22",
+        "avgTime": "00:13",
+        "question": "A six-digit number is divisible by $33$. If $21$ is added to the number, then the new number which formed is also divisible by:",
+        "options": {
+          "a": "5",
+          "b": "4",
+          "c": "2",
+          "d": "3"
+        },
+        "answer": "d",
+        "solution": "Let the six - digit number be $N$. Given that $N$ is divisible by $33$. Since $33 = 3 \\times 11$, $N$ is also divisible by $3$. The new number is $N + 21$. Since $N$ is divisible by $3$ and $21$ is also divisible by $3$ ($21 = 3 \\times 7$), their sum $(N + 21)$ must be divisible by $3$.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "If a number $a$ is divisible by $k$ and $b$ is divisible by $k$, then their sum $(a + b)$ is also divisible by $k$.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "If a number $a$ is divisible by $k$ and $b$ is divisible by $k$, then their sum $(a + b)$ is also divisible by $k$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_80272392d1",
+        "q_num": 102,
+        "mockId": "mock_1790535030393_3im24",
+        "testId": "mock_1790535030393_3im24",
+        "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:21",
+        "avgTime": "00:18",
+        "question": "A train $125\\text{ m}$ long is running at $50\\text{ km/hr}$. In what time will it pass a man, running at $5\\text{ km/hr}$ in the same direction in which the train is travelling?",
+        "options": {
+          "a": "12 sec",
+          "b": "12.5 sec",
+          "c": "10 sec",
+          "d": "10.5 sec"
+        },
+        "answer": "c",
+        "solution": "Relative speed in the same direction = $50 - 5 = 45\\text{ km/hr}$. Converting to m/s: $45 \\times \\frac{5}{18} = 12.5\\text{ m/s}$. Time taken = $\\frac{\\text{Distance}}{\\text{Relative Speed}} = \\frac{125}{12.5} = 10\\text{ sec}$.",
+        "image": null,
+        "topic": "Trains",
+        "subtopic": "Relative Speed",
+        "conceptTested": "Relative speed in the same direction is the difference of speeds ($u - v$), and $\\text{Time} = \\frac{\\text{Distance}}{\\text{Relative Speed}}$.",
+        "tags": {
+          "topic": "Trains",
+          "subtopic": "Relative Speed",
+          "conceptTested": "Relative speed in the same direction is the difference of speeds ($u - v$), and $\\text{Time} = \\frac{\\text{Distance}}{\\text{Relative Speed}}$.",
           "difficulty": "medium"
         }
       }

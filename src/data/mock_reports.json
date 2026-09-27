@@ -1,5 +1,53 @@
 [
   {
+    "id": "mock_1790535030393_3im24",
+    "title": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
+    "platform": "Testbook",
+    "type": "full",
+    "date": "2026-09-27T18:50:30.317Z",
+    "totalQuestions": 100,
+    "maxMarks": 200,
+    "totalScore": 94,
+    "overallAccuracy": 65.9,
+    "totalCorrect": 54,
+    "totalWrong": 28,
+    "totalUnattempted": 18,
+    "sections": {
+      "reasoning": {
+        "total": 25,
+        "correct": 22,
+        "wrong": 2,
+        "unattempted": 1,
+        "score": 43,
+        "accuracy": 91.7
+      },
+      "generalAwareness": {
+        "total": 25,
+        "correct": 11,
+        "wrong": 9,
+        "unattempted": 5,
+        "score": 17.5,
+        "accuracy": 55
+      },
+      "mathematics": {
+        "total": 25,
+        "correct": 9,
+        "wrong": 6,
+        "unattempted": 10,
+        "score": 15,
+        "accuracy": 60
+      },
+      "english": {
+        "total": 25,
+        "correct": 12,
+        "wrong": 11,
+        "unattempted": 2,
+        "score": 18.5,
+        "accuracy": 52.2
+      }
+    }
+  },
+  {
     "id": "mock_1790434134119_nkdm2",
     "title": "SSC CGL Tier I: Full Test - 8",
     "platform": "Testbook",
