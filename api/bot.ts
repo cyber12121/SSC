@@ -5509,7 +5509,7 @@ function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
   }
   saveToDisk2();
 }
-function markMistakeMastered(userId, questionId, questionText) {
+function markMistakeMastered(userId, questionId, questionText = "") {
   const userMap = userMistakesMap.get(userId);
   if (!userMap) return;
   if (userMap.has(questionId)) {
@@ -39755,7 +39755,7 @@ bot.on("poll_answer", async (ctx) => {
   if (chosenOptionIndex === currentQ.correctOptionIndex) {
     session.score++;
     if (currentQ.id) {
-      markMistakeMastered(session.userId, currentQ.id);
+      markMistakeMastered(session.userId, currentQ.id, currentQ.question);
     }
   } else {
     recordMistake(session.userId, currentQ, "telegram_quiz");

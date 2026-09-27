@@ -1311,7 +1311,7 @@ bot.on('poll_answer', async (ctx) => {
   if (chosenOptionIndex === currentQ.correctOptionIndex) {
     session.score++;
     if (currentQ.id) {
-      markMistakeMastered(session.userId, currentQ.id);
+      markMistakeMastered(session.userId, currentQ.id, currentQ.question);
     }
   } else {
     recordMistake(session.userId, currentQ, 'telegram_quiz');

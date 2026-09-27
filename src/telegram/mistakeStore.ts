@@ -270,7 +270,7 @@ export function recordMistake(
   saveToDisk();
 }
 
-export function markMistakeMastered(userId: number, questionId: string, questionText?: string) {
+export function markMistakeMastered(userId: number, questionId: string, questionText: string = '') {
   const userMap = userMistakesMap.get(userId);
   if (!userMap) return;
 
