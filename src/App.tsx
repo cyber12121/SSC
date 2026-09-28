@@ -38,6 +38,7 @@ import { AiFocusedQuestion } from './types/aiScope';
 import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
 import { MockChapterErrorsModal, MockChapterModalData, ModalFilterType } from './components/modals/MockChapterErrorsModal';
 import { SetPickerModal } from './components/modals/SetPickerModal';
+import { CheatSheetModal } from './components/modals/CheatSheetModal';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
@@ -310,6 +311,7 @@ export default function App() {
     subject: string;
     questions: Question[];
   } | null>(null);
+  const [selectedCheatSheet, setSelectedCheatSheet] = useState<Chapter | null>(null);
 
   // Bundled full mock questions dynamically loaded for unified error aggregation
   const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
@@ -363,6 +365,7 @@ export default function App() {
         if (!mergedChaptersMap[key]) {
           mergedChaptersMap[key] = {
             ...chapter,
+            original_chapter_num: chapter.original_chapter_num || chapter.chapter_num,
             chapter_title: canonicalTitle,
             questions: []
           };
@@ -388,6 +391,7 @@ export default function App() {
       filteredData[subject] = Object.values(mergedChaptersMap).map((chapter, chIdx) => {
         return {
           ...chapter,
+          original_chapter_num: chapter.original_chapter_num || chapter.chapter_num,
           chapter_num: chIdx + 1,
           questions: chapter.questions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
         };
@@ -3866,7 +3870,20 @@ export default function App() {
                                   Start Set
                                   <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                 </div>
-                                <div className="flex items-center gap-1">
+                                  <div className="flex items-center gap-1.5">
+                                    {chapter.cheat_sheet && (
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSelectedCheatSheet(chapter);
+                                        }}
+                                        className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition-all cursor-pointer shadow-2xs"
+                                        title="Open Chapter Revision Cheat Sheet"
+                                      >
+                                        <BookOpen className="w-3 h-3" />
+                                        <span>Cheat Sheet</span>
+                                      </button>
+                                    )}
                                   <button
                                     onClick={(e) => {
                                       e.stopPropagation();
@@ -4099,6 +4116,17 @@ export default function App() {
           modalData={setPickerModal}
           onClose={() => setSetPickerModal(null)}
           onStartQuiz={startQuiz}
+        />
+
+        {/* Grammar Chapter Revision Cheat Sheet Modal */}
+        <CheatSheetModal
+          isOpen={!!selectedCheatSheet}
+          onClose={() => setSelectedCheatSheet(null)}
+          chapter={selectedCheatSheet}
+          onStartPractice={(ch) => {
+            setSelectedCheatSheet(null);
+            startQuiz(ch);
+          }}
         />
 
         {/* SRS Missed Questions Confirmation Modal */}
