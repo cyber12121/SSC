@@ -636,7 +636,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                 }`}
               >
                 <Flame className="w-3 h-3" />
-                <span>Practice All ({modalFilteredQuestions.length})</span>
+                <span>{quizMode === 'mock' ? 'Mock Test All' : 'Practice All'} ({modalFilteredQuestions.length})</span>
               </button>
 
               {/* 1-Click Drill Silly Mistakes [S] */}

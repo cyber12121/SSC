@@ -355,10 +355,48 @@ function getCachedKatexHtml(latex: string, displayMode: boolean): string {
 
   const sanitized = sanitizeLatexForKatex(latex);
   try {
-    const html = katex.renderToString(sanitized, {
+    let html = katex.renderToString(sanitized, {
       throwOnError: false,
       displayMode,
     });
+
+    // If KaTeX produced an error span, attempt intelligent recovery
+    if (html.includes('class="katex-error"') || html.includes('katex-error') || html.includes('color:#cc0000')) {
+      // 1. Clean dangling operators
+      const fallbackClean = sanitized
+        .replace(/\\times\s*$/, '')
+        .replace(/[+\-*/=]\s*$/, '')
+        .trim();
+      if (fallbackClean && fallbackClean !== sanitized) {
+        const retryHtml = katex.renderToString(fallbackClean, { throwOnError: false, displayMode });
+        if (!retryHtml.includes('katex-error') && !retryHtml.includes('color:#cc0000')) {
+          html = retryHtml;
+        }
+      }
+
+      // 2. Escape special characters inside \text or math (#, %, &, _) and auto-close delimiters
+      if (html.includes('katex-error') || html.includes('color:#cc0000')) {
+        let specialFixed = sanitized
+          .replace(/(?<!\\)#/g, '\\#')
+          .replace(/(?<!\\)%/g, '\\%')
+          .replace(/(?<!\\)&/g, '\\&')
+          .replace(/\\text\{([^}]*)\}/g, (_, inner) => {
+            return `\\text{${inner.replace(/(?<!\\)([#%&_])/g, '\\$1')}}`;
+          });
+        const lCount = (specialFixed.match(/\\left\b/g) || []).length;
+        const rCount = (specialFixed.match(/\\right\b/g) || []).length;
+        if (lCount > rCount) {
+          specialFixed += ' \\right.'.repeat(lCount - rCount);
+        }
+        if (specialFixed !== sanitized) {
+          const retrySpecial = katex.renderToString(specialFixed, { throwOnError: false, displayMode });
+          if (!retrySpecial.includes('katex-error') && !retrySpecial.includes('color:#cc0000')) {
+            html = retrySpecial;
+          }
+        }
+      }
+    }
+
     if (katexHtmlCache.size > 2000) {
       const firstKey = katexHtmlCache.keys().next().value;
       if (firstKey) katexHtmlCache.delete(firstKey);

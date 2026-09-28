@@ -1018,7 +1018,10 @@ HOW TO ANSWER:
 - STRICT ENGLISH LANGUAGE REQUIREMENT: You must communicate and answer strictly and exclusively in clear, professional, and motivating English at all times. Do NOT use Hindi words, Devanagari script, or Hinglish. Every explanation, breakdown, and greeting must be in standard English.
 - DO NOT append unsolicited practice drill cards, [DRILL: ...] tags, or drill recommendations. Keep answers focused strictly on clear explanation and exam mastery.
 - MATHEMATICAL & TEXT FORMATTING RULES:
-  * STRICT LATEX RULE: For ALL mathematical formulas, expressions, variables, units, equations, and algebra, ALWAYS enclose them in single dollar signs for inline math (e.g. $CSA = 2\pi rh$, $h = 2r$, $r = 14\text{ m}$, $784\pi\text{ m}^2$, $x^2 + y^2 = r^2$, $\left(\frac{x}{10}\right)^2\%$) or double dollar signs for display equations ($$\text{Area} = \frac{1}{2} \times b \times h$$).
+  * STRICT LATEX RULE: For ALL mathematical formulas, expressions, variables, units, equations, and algebra, ALWAYS enclose them in single dollar signs for inline math (e.g. $CSA = 2\pi rh$, $h = 2r$, $r = 14\text{ m}$, $784\pi\text{ m}^2$, $x^2 + y^2 = r^2$, $\left(\frac{x}{10}\right)^2\%$) or double dollar signs on a single line for display equations ($$\text{Area} = \frac{1}{2} \times b \times h$$).
+  * Standalone display equations should always be enclosed in $$...$$ on their own single line without linebreaks between $$ and the equation.
+  * When writing question numbers or references inside LaTeX formulas or \text{}, ALWAYS escape the hash symbol as \# (e.g. \text{(Tested in Question \#24)}, never raw # which breaks KaTeX).
+  * Always escape &, %, _, and # inside \text{} (e.g. \text{Profit \& Loss}, \text{50\%}, \text{Question \#18}).
   * NEVER write "textleft" or "textright" — always write standard LaTeX like $\left(\frac{x}{10}\right)^2\%$.
   * In LaTeX math, always escape percentage signs with a backslash (\%), e.g., $\left(\frac{x}{10}\right)^2\%$.
   * NEVER write raw LaTeX backslash commands (such as \pi, \times, \frac, \sqrt, \text, \left, \right) outside of $ or $$.
@@ -1231,7 +1234,12 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 
     const isStream = Boolean(req.body?.stream);
     let configuredModel = (process.env.GEMINI_MODEL || process.env.VITE_GEMINI_MODEL || '').trim().replace(/^["']|["']$/g, '');
-    const modelName = configuredModel || 'gemini-3.5-flash-lite';
+    const modelCandidates = Array.from(new Set([
+      configuredModel,
+      'gemini-3.5-flash-lite',
+      'gemini-flash-latest',
+      'gemini-3.8-flash'
+    ].filter(Boolean)));
 
     // ── 1. Streaming Mode (Server-Sent Events) ──
     if (isStream) {
@@ -1243,30 +1251,44 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
         res.flushHeaders();
       }
 
-      // Try @google/genai SDK streaming first
-      try {
-        const { GoogleGenAI } = await import('@google/genai');
-        const ai = new GoogleGenAI({ apiKey });
-        const streamResult = await ai.models.generateContentStream({
-          model: modelName,
-          contents,
-          config: {
-            systemInstruction: fullSystemInstruction,
-            temperature: 0.4,
-            maxOutputTokens: 2048
-          }
-        });
+      let lastErrorMsg = '';
+      let streamSuccess = false;
 
-        for await (const chunk of streamResult) {
-          const text = chunk.text || '';
-          if (text) {
-            res.write(`data: ${JSON.stringify({ text })}\n\n`);
+      for (const modelName of modelCandidates) {
+        // Try @google/genai SDK streaming first
+        try {
+          const { GoogleGenAI } = await import('@google/genai');
+          const ai = new GoogleGenAI({ apiKey });
+          const streamResult = await ai.models.generateContentStream({
+            model: modelName,
+            contents,
+            config: {
+              systemInstruction: fullSystemInstruction,
+              temperature: 0.4,
+              maxOutputTokens: 2048
+            }
+          });
+
+          let receivedAnyText = false;
+          for await (const chunk of streamResult) {
+            const text = chunk.text || '';
+            if (text) {
+              receivedAnyText = true;
+              res.write(`data: ${JSON.stringify({ text })}\n\n`);
+            }
           }
+
+          if (receivedAnyText) {
+            res.write('data: [DONE]\n\n');
+            streamSuccess = true;
+            return res.end();
+          }
+        } catch (sdkStreamErr: any) {
+          lastErrorMsg = sdkStreamErr?.message || '';
+          console.warn(`[Gemini SDK Stream fail with ${modelName}]:`, sdkStreamErr?.message);
         }
-        res.write('data: [DONE]\n\n');
-        return res.end();
-      } catch (sdkStreamErr: any) {
-        // Fallback to REST API streaming
+
+        // Fallback to REST API streaming for this model
         try {
           const streamUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelName)}:streamGenerateContent?alt=sse&key=${encodeURIComponent(apiKey)}`;
           const restRes = await fetch(streamUrl, {
@@ -1284,13 +1306,16 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
 
           if (!restRes.ok) {
             const errJson = await restRes.json().catch(() => ({}));
-            throw new Error(errJson?.error?.message || `Google API status ${restRes.status}`);
+            lastErrorMsg = errJson?.error?.message || `Google API status ${restRes.status}`;
+            console.warn(`[Gemini REST Stream fail with ${modelName}]:`, lastErrorMsg);
+            continue; // try next candidate model
           }
 
           if (restRes.body) {
             const reader = (restRes.body as any).getReader();
             const decoder = new TextDecoder();
             let buffer = '';
+            let receivedAnyText = false;
             while (true) {
               const { done, value } = await reader.read();
               if (done) break;
@@ -1305,54 +1330,37 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
                     const parsed = JSON.parse(dataStr);
                     const text = parsed?.candidates?.[0]?.content?.parts?.[0]?.text;
                     if (text) {
+                      receivedAnyText = true;
                       res.write(`data: ${JSON.stringify({ text })}\n\n`);
                     }
                   } catch {}
                 }
               }
             }
+            if (receivedAnyText) {
+              res.write('data: [DONE]\n\n');
+              streamSuccess = true;
+              return res.end();
+            }
           }
-          res.write('data: [DONE]\n\n');
-          return res.end();
         } catch (restStreamErr: any) {
-          console.error('[Gemini Stream Error]:', sdkStreamErr?.message || restStreamErr?.message);
-          res.write(`data: ${JSON.stringify({ error: sdkStreamErr?.message || restStreamErr?.message || 'Failed to stream response.' })}\n\n`);
-          res.write('data: [DONE]\n\n');
-          return res.end();
+          lastErrorMsg = restStreamErr?.message || '';
+          console.warn(`[Gemini REST Stream error with ${modelName}]:`, lastErrorMsg);
         }
+      }
+
+      if (!streamSuccess) {
+        res.write(`data: ${JSON.stringify({ error: lastErrorMsg || 'All AI models are temporarily busy. Please retry in a moment.' })}\n\n`);
+        res.write('data: [DONE]\n\n');
+        return res.end();
       }
     }
 
     // ── 2. Standard Non-Streaming Fallback ──
     let reply = '';
+    let lastNonStreamErr = '';
 
-    // First attempt: Direct REST API
-    try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelName)}:generateContent?key=${encodeURIComponent(apiKey)}`;
-      const geminiRes = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents,
-          systemInstruction: {
-            parts: [{ text: fullSystemInstruction }]
-          },
-          generationConfig: {
-            temperature: 0.4,
-            maxOutputTokens: 2048
-          }
-        })
-      });
-
-      if (!geminiRes.ok) {
-        const errJson = await geminiRes.json().catch(() => ({}));
-        throw new Error(errJson?.error?.message || `Google API status ${geminiRes.status}`);
-      }
-
-      const geminiData = await geminiRes.json();
-      reply = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
-    } catch (restErr: any) {
-      // Secondary fallback: @google/genai SDK
+    for (const modelName of modelCandidates) {
       try {
         const { GoogleGenAI } = await import('@google/genai');
         const ai = new GoogleGenAI({ apiKey });
@@ -1365,14 +1373,44 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
             maxOutputTokens: 2048
           }
         });
-        reply = response.text || '';
+        if (response.text) {
+          reply = response.text;
+          break;
+        }
       } catch (sdkErr: any) {
-        throw new Error(restErr?.message || sdkErr?.message || 'Failed to process chat with Gemini.');
+        lastNonStreamErr = sdkErr?.message || '';
+        try {
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelName)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+          const geminiRes = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents,
+              systemInstruction: {
+                parts: [{ text: fullSystemInstruction }]
+              },
+              generationConfig: {
+                temperature: 0.4,
+                maxOutputTokens: 2048
+              }
+            })
+          });
+          if (geminiRes.ok) {
+            const geminiData = await geminiRes.json();
+            const txt = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (txt) {
+              reply = txt;
+              break;
+            }
+          }
+        } catch {}
       }
     }
 
     if (!reply) {
-      reply = 'I apologize, but I could not generate a response at this moment.';
+      reply = lastNonStreamErr
+        ? `⚠️ ${lastNonStreamErr}`
+        : 'I apologize, but all AI models are temporarily busy. Please try asking again in a few seconds.';
     }
 
     return res.status(200).json({ reply });

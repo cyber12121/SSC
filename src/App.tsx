@@ -2195,7 +2195,6 @@ export default function App() {
       section: 'mockErrors',
       is_test: true
     };
-    setQuizMode('practice');
     startQuiz(virtualChapter);
   };
 
@@ -4260,7 +4259,6 @@ export default function App() {
                     const firstQ = questions[0];
                     const rawSub = firstQ?.subject || 'English';
                     const formattedSub = rawSub.charAt(0).toUpperCase() + rawSub.slice(1);
-                    setQuizMode('practice');
                     setCategory('chapter');
 
                     if (questions.length > 25) {
@@ -4390,15 +4388,14 @@ export default function App() {
         </nav>
       )}
 
-      {/* Floating Tommy AI Assistant - hidden while practicing or giving test (view === 'quiz') */}
-      {view !== 'quiz' && (
-        <AiMentorChat
-          mockReports={mockReportsList}
-          mockErrorsData={mockData}
-          activeReviewResult={view === 'review' ? reviewResult : null}
-          onStartWeakTopicDrill={startWeakTopicDrill}
-        />
-      )}
+      {/* Floating Tommy AI Assistant - always mounted so Ask Tommy works in Practice and Review modes */}
+      <AiMentorChat
+        mockReports={mockReportsList}
+        mockErrorsData={mockData}
+        activeReviewResult={view === 'review' ? reviewResult : null}
+        onStartWeakTopicDrill={startWeakTopicDrill}
+        hideFloatingTrigger={view === 'quiz' && quizMode === 'mock'}
+      />
     </div>
   );
 }

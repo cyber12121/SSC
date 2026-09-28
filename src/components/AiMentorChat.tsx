@@ -34,7 +34,7 @@ import {
   Loader2
 } from 'lucide-react';
 import katex from 'katex';
-import { sanitizeLatexForKatex } from '../utils/mathSanitizer';
+import { sanitizeLatexForKatex, wrapUnwrappedFractions } from '../utils/mathSanitizer';
 import { MockScoreReport } from '../types/mockScore';
 import { QuizResult } from '../types';
 import { buildMockAiSummary } from '../utils/mockAiContext';
@@ -65,6 +65,7 @@ interface AiMentorChatProps {
   onStartWeakTopicDrill?: (topic: string, subject?: string) => void;
   focusedScope?: AiFocusedScope | null;
   onClearScope?: () => void;
+  hideFloatingTrigger?: boolean;
 }
 
 // #6: Dynamic suggestions computed at runtime from real mock data or active focused scope
@@ -286,7 +287,8 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
     .replace(/\\f\s*rac\b/g, '\\frac')
     .replace(/[\x0c\u000c]+/g, ' ')
     .replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{')
-    .replace(/(?<!\\)%/g, '\\%');
+    .replace(/(?<!\\)%/g, '\\%')
+    .replace(/(?<!\\)#/g, '\\#');
 
   try {
     const html = katex.renderToString(sanitized, {
@@ -312,7 +314,28 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
         }
       }
 
-      // 2. If it failed due to unescaped text words inside math, wrap words in \text{}
+      // 2. Try escaping special characters inside \text or math (#, %, &, _) and auto-closing delimiters
+      let specialFixed = sanitized
+        .replace(/(?<!\\)#/g, '\\#')
+        .replace(/(?<!\\)%/g, '\\%')
+        .replace(/(?<!\\)&/g, '\\&')
+        .replace(/\\text\{([^}]*)\}/g, (_, inner) => {
+          return `\\text{${inner.replace(/(?<!\\)([#%&_])/g, '\\$1')}}`;
+        });
+      const lCount = (specialFixed.match(/\\left\b/g) || []).length;
+      const rCount = (specialFixed.match(/\\right\b/g) || []).length;
+      if (lCount > rCount) {
+        specialFixed += ' \\right.'.repeat(lCount - rCount);
+      }
+      if (specialFixed !== sanitized) {
+        const retrySpecialHtml = katex.renderToString(specialFixed, { throwOnError: false, displayMode });
+        if (!retrySpecialHtml.includes('katex-error') && !retrySpecialHtml.includes('color:#cc0000')) {
+          chatKatexCache.set(cacheKey, retrySpecialHtml);
+          return retrySpecialHtml;
+        }
+      }
+
+      // 3. If it failed due to unescaped text words inside math, wrap words in \text{}
       try {
         const textWrapped = sanitized.replace(/(?<!\\)\b([a-zA-Z]{3,})\b(?![^{]*\})/g, (match) => {
           if (/^(?:left|right|frac|sqrt|times|text|over|circ|cdot|quad|qquad|begin|end)$/i.test(match)) {
@@ -327,7 +350,7 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
         }
       } catch {}
 
-      // 3. Fallback to clean readable typography instead of ugly red error box
+      // 4. Fallback to clean readable typography instead of ugly red error box
       const cleanFallback = cleanLatexForClipboard(trimmed);
       return `<span class="inline-block px-1 font-serif font-medium text-slate-900">${cleanFallback}</span>`;
     }
@@ -346,10 +369,10 @@ function renderKatexMath(latex: string, displayMode: boolean): string {
 
 /**
  * Normalizes AI output text for robust KaTeX rendering:
- * 1. Converts \( ... \) to $ ... $ and \[ ... \] to $$ ... $$
+ * 1. Converts \( ... \) to $ ... $ and \[ ... \] to $$ ... $$ (collapsing multiline display blocks)
  * 2. Unescapes \$ and stray backslashes before punctuation (\. -> .)
  * 3. Auto-closes unclosed/truncated math delimiters ($ or $$)
- * 4. Wraps unwrapped math lines containing LaTeX commands in $...$
+ * 4. Wraps unwrapped math lines and equations containing LaTeX commands in $$...$$ or $...$
  */
 export function normalizeChatLatex(text: string): string {
   if (!text) return '';
@@ -371,9 +394,22 @@ export function normalizeChatLatex(text: string): string {
   s = s.replace(/\\f\s*rac\b/g, '\\frac');
   s = s.replace(/[\x0c\u000c]+/g, ' ');
 
+  // Wrap unwrapped fractions (including mixed fractions and percentages) safely using balanced brace parser
+  s = wrapUnwrappedFractions(s);
+
   // 1. Convert LaTeX standard display math \[ ... \] to $$ ... $$ and inline \( ... \) to $ ... $
-  s = s.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$$1$$$$');
+  // Collapse inner newlines into single spaces so $$...$$ remains unbroken across lines
+  s = s.replace(/\\\[([\s\S]*?)\\\]/g, (_, inner) => {
+    const cleanInner = inner.trim().replace(/\r?\n+/g, ' ');
+    return `\n\n$$${cleanInner}$$\n\n`;
+  });
   s = s.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
+
+  // Collapse existing multiline $$...$$ blocks so split('\n') never tears opening & closing $$ apart
+  s = s.replace(/\$\$([\s\S]*?)\$\$/g, (_, inner) => {
+    const cleanInner = inner.trim().replace(/\r?\n+/g, ' ');
+    return `\n\n$$${cleanInner}$$\n\n`;
+  });
 
   // 2. Convert escaped dollar signs \$...$ or \$...\$ or standalone \$ to standard $
   s = s.replace(/\\\$([^\$\n]+?)\\\$/g, '$$$1$$');
@@ -381,8 +417,8 @@ export function normalizeChatLatex(text: string): string {
   s = s.replace(/\$([^\$\n]+?)\\\$/g, '$$$1$$');
   s = s.replace(/\\\$/g, '$');
 
-  // 3. Clean stray markdown escapes on punctuation like \. or \- or \! or \)
-  s = s.replace(/\\([.!?,;:\-_~])/g, '$1');
+  // 3. Clean stray markdown escapes on punctuation like \. or \! or \) (do not strip \- or \_ which are math tokens)
+  s = s.replace(/\\([.!?,;:~])/g, '$1');
 
   // 4. Auto-balance unclosed single $ on individual lines (e.g. streaming cutoff or LLM unclosed dollar sign)
   const rawLines = s.split('\n');
@@ -412,8 +448,10 @@ export function normalizeChatLatex(text: string): string {
   // Extract display math $$...$$ first (including multiline)
   s = s.replace(/\$\$([\s\S]*?)\$\$/g, (_, inner) => {
     const idx = mathBlocks.length;
-    // Clean inner math: escape unescaped % so KaTeX doesn't comment out closing brackets
-    const cleanInner = inner.replace(/(?<!\\)%/g, '\\%');
+    // Clean inner math: escape unescaped % and # so KaTeX doesn't choke
+    const cleanInner = inner
+      .replace(/(?<!\\)%/g, '\\%')
+      .replace(/(?<!\\)#/g, '\\#');
     mathBlocks.push(`$$${cleanInner}$$`);
     return `${placeholderPrefix}${idx}@@`;
   });
@@ -421,7 +459,9 @@ export function normalizeChatLatex(text: string): string {
   // Extract inline math $...$
   s = s.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
     const idx = mathBlocks.length;
-    const cleanInner = inner.replace(/(?<!\\)%/g, '\\%');
+    const cleanInner = inner
+      .replace(/(?<!\\)%/g, '\\%')
+      .replace(/(?<!\\)#/g, '\\#');
     mathBlocks.push(`$${cleanInner}$`);
     return `${placeholderPrefix}${idx}@@`;
   });
@@ -434,16 +474,33 @@ export function normalizeChatLatex(text: string): string {
     // Remove dangling trailing backslash
     l = l.replace(/\\\s*$/, '');
 
+    // 6a. Check if this whole line is an unwrapped mathematical equation containing LaTeX commands and relations
+    // (e.g. "v_1/v_2 = \left(h_1/h_2\right)^3 = \left(r_1/r_2\right)^3 \quad \text{(Tested in Question #24)}")
+    const trimmedL = l.trim();
+    if (
+      !trimmedL.includes(placeholderPrefix) &&
+      /\\(?:left|right|frac|sqrt|quad|qquad|text\{)/.test(trimmedL) &&
+      /=|≈|≠|≤|≥|\\Rightarrow|=>/.test(trimmedL)
+    ) {
+      const plainWords = trimmedL
+        .replace(/\\text\{[^}]*\}/g, '')
+        .replace(/\\[a-zA-Z]+/g, '')
+        .match(/\b[a-zA-Z]{4,}\b/g) || [];
+      if (plainWords.length <= 4 && !trimmedL.startsWith('*') && !trimmedL.startsWith('-') && !trimmedL.startsWith('•')) {
+        return `$$${trimmedL}$$`;
+      }
+    }
+
     // Wrap unwrapped \left...\right expressions in $...$
     l = l.replace(/\\left([(\[{|])[\s\S]*?\\right([)\]}|])(?:\^\{?[0-9a-zA-Z]+\}?)?%?/g, (match) => {
-      const cleanMatch = match.replace(/(?<!\\)%/g, '\\%');
+      const cleanMatch = match.replace(/(?<!\\)%/g, '\\%').replace(/(?<!\\)#/g, '\\#');
       return `$${cleanMatch}$`;
     });
 
-    // Wrap unwrapped \frac{...}{...} in $...$
-    l = l.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, (_, a, b) => `$\\frac{${a}}{${b}}$`);
+    // Wrap unwrapped \frac with nested braces
+    l = l.replace(/\\frac\{((?:[^{}]|\{[^{}]*\})*)\}\{((?:[^{}]|\{[^{}]*\})*)\}/g, (_, a, b) => `$\\frac{${a}}{${b}}$`);
 
-    // In plain text, convert standalone arithmetic operators to clean Unicode symbols
+    // In plain text, convert standalone arithmetic & logical operators to clean Unicode symbols
     l = l.replace(/\\times\b/g, '×');
     l = l.replace(/\\div\b/g, '÷');
     l = l.replace(/\\pm\b/g, '±');
@@ -452,10 +509,19 @@ export function normalizeChatLatex(text: string): string {
     l = l.replace(/\\neq\b/g, '≠');
     l = l.replace(/\\le\b/g, '≤');
     l = l.replace(/\\ge\b/g, '≥');
+    l = l.replace(/\\quad|\\qquad/g, ' ');
+    l = l.replace(/\\Rightarrow\b|=>/g, '⇒');
+    l = l.replace(/\\rightarrow\b|->/g, '→');
+    l = l.replace(/\\Leftarrow\b|<=/g, '⇐');
+    l = l.replace(/\\leftrightarrow\b|<=>/g, '⇔');
+    l = l.replace(/\\therefore\b/g, '∴');
+    l = l.replace(/\\because\b/g, '∵');
+    l = l.replace(/\\degree\b/g, '°');
+    l = l.replace(/(\d+)\s*\^\s*\\?circ\b/g, '$1°');
 
     // Wrap unwrapped symbols and functions like \pi, \theta, \sqrt
-    l = l.replace(/\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|Delta|angle)\b/g, (_, sym) => `$\\${sym}$`);
-    l = l.replace(/\\sqrt\{([^{}]+)\}/g, (_, inner) => `$\\sqrt{${inner}}$`);
+    l = l.replace(/\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|phi|psi|rho|tau|delta|epsilon|eta|zeta|kappa|nu|xi|chi|iota|Delta|Sigma|Omega|angle|sim|cong|infty|propto)\b/g, (_, sym) => `$\\${sym}$`);
+    l = l.replace(/\\sqrt(?:\[([^\]]*)\])?\{((?:[^{}]|\{[^{}]*\})*)\}/g, (_, root, inner) => root ? `$\\sqrt[${root}]{${inner}}$` : `$\\sqrt{${inner}}$`);
     l = l.replace(/\b(\d+\^[0-9a-zA-Z]+\s*=\s*\d+)\b/g, (_, eq) => `$${eq}$`);
 
     return l;
@@ -478,11 +544,36 @@ function cleanLatexForClipboard(text: string): string {
   return text
     .replace(/\$\$/g, '')
     .replace(/\$([^\$]+)\$/g, '$1')
-    .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '$1/$2')
+    .replace(/\\left\s*([(\[{|])/g, '$1')
+    .replace(/\\right\s*([)\]}|])/g, '$1')
+    .replace(/\\left\b\.?/g, '')
+    .replace(/\\right\b\.?/g, '')
+    .replace(/\\text\{([^}]*)\}/g, '$1')
+    .replace(/\\quad|\\qquad/g, '  ')
+    .replace(/\\frac\{((?:[^{}]|\{[^{}]*\})*)\}\{((?:[^{}]|\{[^{}]*\})*)\}/g, '$1/$2')
     .replace(/\\times/g, '×')
     .replace(/\\div/g, '÷')
     .replace(/\\pm/g, '±')
-    .replace(/\\sqrt\{([^{}]+)\}/g, '√($1)');
+    .replace(/\\mp/g, '∓')
+    .replace(/\\approx/g, '≈')
+    .replace(/\\neq/g, '≠')
+    .replace(/\\le\b/g, '≤')
+    .replace(/\\ge\b/g, '≥')
+    .replace(/\\sqrt\{([^}]*)\}/g, '√($1)')
+    .replace(/\\pi\b/g, 'π')
+    .replace(/\\theta\b/g, 'θ')
+    .replace(/\\phi\b/g, 'φ')
+    .replace(/\\alpha\b/g, 'α')
+    .replace(/\\beta\b/g, 'β')
+    .replace(/\\gamma\b/g, 'γ')
+    .replace(/\\delta\b/g, 'δ')
+    .replace(/\\Delta\b/g, 'Δ')
+    .replace(/\\Sigma\b/g, 'Σ')
+    .replace(/\\infty\b/g, '∞')
+    .replace(/\\Rightarrow\b/g, '⇒')
+    .replace(/\\rightarrow\b/g, '→')
+    .replace(/\\circ\b/g, '°')
+    .replace(/\\([#%&_$])/g, '$1');
 }
 
 // Interactive Code / Solution Block with 1-click Copy
@@ -892,6 +983,29 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
       return;
     }
 
+    // Standalone Display Math Block $$...$$
+    const trimmedLine = line.trim();
+    if (trimmedLine.startsWith('$$') && trimmedLine.endsWith('$$') && trimmedLine.length > 4) {
+      const math = trimmedLine.slice(2, -2).trim();
+      const html = renderKatexMath(math, true);
+      if (html) {
+        elements.push(
+          <div
+            key={`math-${idx}`}
+            className="my-3 overflow-x-auto py-2 px-3 rounded-xl bg-slate-50/80 border border-slate-200/70 text-center font-serif text-slate-900 shadow-2xs"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        );
+      } else {
+        elements.push(
+          <div key={`math-${idx}`} className="my-2 p-2 bg-indigo-50/50 rounded font-mono text-xs text-indigo-800 text-center">
+            {math}
+          </div>
+        );
+      }
+      return;
+    }
+
     // Empty lines
     if (!line.trim()) {
       elements.push(<div key={idx} className="h-1.5" />);
@@ -958,7 +1072,8 @@ export function AiMentorChat({
   activeReviewResult,
   onStartWeakTopicDrill,
   focusedScope: propsFocusedScope,
-  onClearScope
+  onClearScope,
+  hideFloatingTrigger = false
 }: AiMentorChatProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(() => {
@@ -1268,7 +1383,20 @@ export function AiMentorChat({
   const handleSendMessage = async (textToSend?: string, specificQuestion?: any) => {
     const query = (textToSend || inputText).trim();
     const currentAttachment = selectedAttachment;
-    if ((!query && !currentAttachment) || isLoading) return;
+    if (!query && !currentAttachment) return;
+
+    if (isLoading) {
+      if (textToSend) {
+        // User clicked Ask Tommy on a question: abort current request and proceed with this question
+        if (abortControllerRef.current) {
+          abortControllerRef.current.abort();
+          abortControllerRef.current = null;
+        }
+        flushTypewriter();
+      } else {
+        return;
+      }
+    }
 
     const actualQuery = query || (currentAttachment
       ? (currentAttachment.mimeType === 'application/pdf'
@@ -1461,6 +1589,8 @@ export function AiMentorChat({
     } catch (err: any) {
       if (err?.name === 'AbortError') {
         // Generation was intentionally stopped by user
+        setIsStreaming(false);
+        setIsLoading(false);
         return;
       }
       flushTypewriter();
@@ -1469,6 +1599,8 @@ export function AiMentorChat({
         prev.map(m => (m.id === botMessageId ? { ...m, text: errorMessage } : m))
       );
     } finally {
+      setIsStreaming(false);
+      setIsLoading(false);
       abortControllerRef.current = null;
     }
   };
@@ -1608,9 +1740,9 @@ ${instructions}`;
           }, 150);
         }}
         animate={{
-          opacity: isOpen ? 0 : 1,
-          scale: isOpen ? 0.75 : 1,
-          pointerEvents: isOpen ? 'none' : 'auto'
+          opacity: (isOpen || hideFloatingTrigger) ? 0 : 1,
+          scale: (isOpen || hideFloatingTrigger) ? 0.75 : 1,
+          pointerEvents: (isOpen || hideFloatingTrigger) ? 'none' : 'auto'
         }}
         transition={{ duration: 0.18 }}
         className="fixed bottom-5 right-5 z-50 flex items-center gap-2 touch-none select-none"

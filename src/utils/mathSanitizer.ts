@@ -601,6 +601,33 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   // Match % not preceded by \
   s = s.replace(/(?<!\\)%/g, '\\%');
 
+  // 5a. KaTeX treats # as an illegal macro parameter character that throws parse error ("Expected 'EOF', got '#'")
+  // Replace unescaped # with \# (e.g. Question #24 -> Question \#24)
+  s = s.replace(/(?<!\\)#/g, '\\#');
+
+  // 5b. Inside \text{...}, KaTeX enforces strict TeX character escaping for #, &, _, %, $
+  s = s.replace(/\\text\{([^}]*)\}/g, (_, inner) => {
+    const cleanInner = inner
+      .replace(/(?<!\\)#/g, '\\#')
+      .replace(/(?<!\\)&/g, '\\&')
+      .replace(/(?<!\\)%/g, '\\%')
+      .replace(/(?<!\\)_/g, '\\_')
+      .replace(/(?<!\\)\$/g, '');
+    return `\\text{${cleanInner}}`;
+  });
+
+  // 5c. Outside \begin{aligned}/\begin{matrix}, standalone & causes KaTeX parse error
+  if (!s.includes('\\begin{aligned}') && !s.includes('\\begin{matrix}') && !s.includes('\\begin{cases}') && !s.includes('\\begin{array}')) {
+    s = s.replace(/(?<!\\)&/g, '\\&');
+  }
+
+  // 5d. Auto-close unbalanced \left delimiters to avoid syntax errors
+  const leftMatches = (s.match(/\\left\b/g) || []).length;
+  const rightMatches = (s.match(/\\right\b/g) || []).length;
+  if (leftMatches > rightMatches) {
+    s += ' \\right.'.repeat(leftMatches - rightMatches);
+  }
+
   // If there was an accidental double escaping or spacing like 2\% \pi
   // or a swallowed command like 2\%\pi -> 2\pi (when % was an artifact)
   s = s.replace(/(\d+)\s*\\%\s*\\(pi|theta|alpha|beta|gamma|sqrt|sin|cos|Delta|angle|sim|cong)/g, '$1\\$2');
