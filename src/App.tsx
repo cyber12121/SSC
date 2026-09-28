@@ -528,13 +528,6 @@ export default function App() {
             safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(merged)));
           } catch { }
 
-          // Sync with Telegram bot mistake store
-          fetch('/api/mistakes', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ action: 'sync_deleted', ids: Array.from(merged) })
-          }).catch(() => {});
-
           return merged;
         });
       } catch (error) {
@@ -2442,7 +2435,7 @@ export default function App() {
                       ? 'bg-rose-50 text-rose-700 shadow-2xs'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
                   }`}
-                  title="Telegram & Website Quiz Mistakes Notebook"
+                  title="Personal Mistake Notebook"
                 >
                   <span className="text-xs">📕</span>
                   <span>My Mistakes</span>

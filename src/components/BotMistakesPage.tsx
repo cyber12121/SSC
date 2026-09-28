@@ -282,17 +282,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     setError(null);
     try {
       let serverMistakes: RecordedMistake[] = [];
-      try {
-        const res = await fetch('/api/mistakes');
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data.mistakes)) {
-            serverMistakes = data.mistakes;
-          }
-        }
-      } catch (err: any) {
-        console.warn('[BotMistakesPage] Server mistakes endpoint not available, falling back to local storage:', err);
-      }
 
       // Load synced telegram mistakes from safeStorage
       let localSynced: RecordedMistake[] = [];
@@ -589,18 +578,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
       } catch {}
 
-      // 4. Delete on server API / Telegram store
-      fetch('/api/mistakes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          action: 'delete',
-          questionId: m.id,
-          questionText: m.question,
-        }),
-      }).catch((err) => console.warn('[BotMistakesPage] delete error:', err));
-
-      // 5. Delete from Firebase Firestore permanently
+      // 4. Delete from Firebase Firestore permanently
       if (auth.currentUser) {
         try {
           const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : '';
@@ -651,14 +629,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       // 3. Wipe mistake entries from cgl_rca_global_store
       safeStorage.removeItem('cgl_rca_global_store');
 
-      // 4. Clear on server / Telegram bot store
-      await fetch('/api/mistakes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'clear_all' }),
-      }).catch((err) => console.warn('Server clear error:', err));
-
-      // 5. Delete all user_mistakes documents in Firestore if authenticated
+      // 4. Delete all user_mistakes documents in Firestore if authenticated
       if (auth.currentUser) {
         try {
           const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
@@ -926,16 +897,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               <span>Practice All ({totalFilteredCount})</span>
             </button>
           )}
-          <a
-            href="https://t.me/My_cgl_bot?start=sync"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
-            title="Sync latest quiz mistakes from @My_cgl_bot"
-          >
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>Sync Telegram</span>
-          </a>
           <button
             onClick={fetchMistakes}
             disabled={loading}
@@ -1125,19 +1086,8 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             </div>
             <h3 className="text-sm font-bold text-slate-800">No Mistakes Found</h3>
             <p className="text-xs text-slate-500 max-w-md leading-relaxed">
-              When you miss questions in @My_cgl_bot quizzes or website mocks, they will be organized into subject cards and chapter cards here.
+              When you miss questions in Chapter Bank quizzes or Mock tests, they will be organized into subject and chapter cards here for targeted re-practice.
             </p>
-            <div className="pt-1">
-              <a
-                href="https://t.me/My_cgl_bot?start=sync"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
-              >
-                <Smartphone className="w-3.5 h-3.5" />
-                <span>Sync with Telegram Bot (@My_cgl_bot)</span>
-              </a>
-            </div>
           </div>
         ) : (
           /* Render Active Subject Sections */

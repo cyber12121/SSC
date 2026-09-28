@@ -13,7 +13,6 @@ import chatHandler from "./api/chat";
 import srsGenerateHandler from "./api/srs-generate";
 import subjectDataHandler, { invalidateSubjectDataCache } from "./api/subject-data";
 import bundledMockQuestionsHandler, { invalidateBundledMockQuestionsCache } from "./api/bundled-mock-questions";
-import mistakesHandler from "./src/telegram/mistakesApi";
 
 dotenv.config();
 
@@ -946,9 +945,6 @@ async function startServer() {
 
   // Gemini AI SRS Anki Card Generator Endpoint
   app.post("/api/srs/generate-cards", srsGenerateHandler);
-
-  // Live Mistakes Notebook Endpoint
-  app.all("/api/mistakes", mistakesHandler);
 
   // Automated Mock Error Import Endpoint
   app.post("/api/mock-import", async (req, res) => {

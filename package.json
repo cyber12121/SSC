@@ -5,15 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch server.ts",
-    "bundle:bot": "esbuild src/telegram/bot.ts --bundle --platform=node --format=esm --packages=external --outfile=api/bot.ts",
-    "bundle:mistakes": "esbuild src/telegram/mistakesApi.ts --bundle --platform=node --format=esm --packages=external --outfile=api/mistakes.ts",
-    "bundle:all": "npm run bundle:bot && npm run bundle:mistakes",
-    "prebuild": "npm run bundle:all",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit",
-    "bot": "tsx src/telegram/bot.ts"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
@@ -27,7 +22,6 @@
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
     "firebase": "^12.11.0",
-    "grammy": "^1.46.0",
     "katex": "^0.18.7",
     "lucide-react": "^0.546.0",
     "motion": "^12.23.24",
