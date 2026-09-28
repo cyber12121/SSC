@@ -3,15 +3,33 @@ build/
 dist/
 coverage/
 .DS_Store
+Thumbs.db
 *.log
 .env*
 !.env.example
+
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+venv/
+.venv/
+env/
+
+# Scratch & Extraction Scripts
+grammar_chapters_pdf/
+scratch/
+scripts/
 automation.py
 pdfautomation.py
 extract_english_text_from_pdf.py
 readme.txt
 Screenshots/
 pdfs/
-scripts/
+
+# Editor & Local Agent State
 .vscode/
+.claude/
+.kilo/
+
