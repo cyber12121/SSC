@@ -27,7 +27,7 @@ export function parseSubjectChapter(
   if (data.mockErrors) chapters.push(...data.mockErrors);
 
   // Determine section and topic from path
-  let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'black_book' | 'general' | undefined = undefined;
+  let section: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'black_book' | 'general' | 'grammar' | undefined = undefined;
   let topic_name: string | undefined = undefined;
   let set_name: string | undefined = undefined;
 

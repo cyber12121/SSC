@@ -1013,21 +1013,27 @@ export default function App() {
   };
 
   const startAllSubjectQuiz = (subjectName: string) => {
-    let sourceQuestions = (currentData[subjectName] || []).flatMap(ch => ch.questions);
-    if (category === 'mockErrors' && mockTestTypeFilter !== 'all') {
-      sourceQuestions = sourceQuestions.filter(q => classifyTestType(q) === mockTestTypeFilter);
+    let sourceQuestions: Question[] = [];
+    if (category === 'mockErrors') {
+      sourceQuestions = clubbedMockChapters.flatMap(ch => ch.questions);
+    } else {
+      sourceQuestions = (currentData[subjectName] || []).flatMap(ch => ch.questions);
     }
     const allQuestions = sourceQuestions.map((q, idx) => ({
       ...q,
       q_num: idx + 1
     }));
     if (allQuestions.length === 0) {
-      alert(`No questions available in ${subjectName} for ${mockTestTypeFilter === 'full' ? 'Full Tests' : mockTestTypeFilter === 'sectional' ? 'Sectional Tests' : 'this category'}.`);
+      alert(`No questions available in ${subjectName} for ${mockTestTypeFilter === 'full' ? 'Full Tests' : mockTestTypeFilter === 'sectional' ? 'Sectional Tests' : 'this filter'}.`);
       return;
     }
-    const filterLabel = category === 'mockErrors' && mockTestTypeFilter !== 'all'
+    const scopeLabel = category === 'mockErrors' && mockTestTypeFilter !== 'all'
       ? ` (${mockTestTypeFilter === 'full' ? 'Full Tests' : 'Sectional'})`
       : '';
+    const gkLabel = category === 'mockErrors' && subjectName === 'General Awareness' && mockGKFilter !== 'all'
+      ? ` • ${mockGKFilter.charAt(0).toUpperCase() + mockGKFilter.slice(1).replace('_', ' ')}`
+      : '';
+    const filterLabel = `${scopeLabel}${gkLabel}`;
 
     // In Mock Errors: if questions exceed 25, open the set picker modal
     if (category === 'mockErrors' && allQuestions.length > 25) {
@@ -2604,6 +2610,7 @@ export default function App() {
                                               setSelectedSubject('General Awareness');
                                               setSelectedGKSubject(gkId);
                                               setSelectedGKSubTopic('all');
+                                              setMockGKFilter(gkId);
                                             }}
                                             className="px-1.5 py-0.5 bg-slate-50 hover:bg-amber-50 hover:text-amber-800 text-slate-600 border border-slate-200 rounded text-[10px] font-medium transition-colors cursor-pointer"
                                           >
@@ -3333,20 +3340,26 @@ export default function App() {
                     )}
 
                     {/* GK Quick Filter Chips */}
-                    {category === 'mockErrors' && selectedSubject === 'General Awareness' && (currentData[selectedSubject] || []).length > 0 && (
+                    {category === 'mockErrors' && selectedSubject === 'General Awareness' && (
                       <div className="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scrollbar">
                         <button
                           onClick={() => setMockGKFilter('all')}
-                          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all shrink-0 ${mockGKFilter === 'all'
+                          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all shrink-0 flex items-center gap-1.5 ${mockGKFilter === 'all'
                               ? 'bg-slate-900 text-white shadow-xs font-bold'
                               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
                             }`}
                         >
-                          All GK
+                          <span>All GK</span>
+                          <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                            mockGKFilter === 'all' ? 'bg-slate-800 text-slate-200' : 'bg-slate-100 text-slate-600'
+                          }`}>
+                            {aggregatedMockErrorsData.gkCounts?.all || 0}
+                          </span>
                         </button>
                         {GK_SUBJECT_LIST.filter(s => s.id !== 'full_tests').map((sub) => {
                           const Icon = GK_ICONS[sub.iconName] || Globe2;
                           const isSelected = mockGKFilter === sub.id;
+                          const count = aggregatedMockErrorsData.gkCounts?.[sub.id] || 0;
                           return (
                             <button
                               key={sub.id}
@@ -3358,6 +3371,11 @@ export default function App() {
                             >
                               <Icon className="w-3.5 h-3.5" />
                               <span>{sub.shortTitle}</span>
+                              <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                                isSelected ? 'bg-slate-800 text-slate-200' : 'bg-slate-100 text-slate-600'
+                              }`}>
+                                {count}
+                              </span>
                             </button>
                           );
                         })}
@@ -3365,7 +3383,7 @@ export default function App() {
                     )}
 
                     {category === 'mockErrors' ? (
-                      (currentData[selectedSubject] || []).length === 0 ? (
+                      (mockScopeCounts.all === 0 && mockGKFilter === 'all' && mockTestTypeFilter === 'all') ? (
                         <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-xs">
                           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-50 text-rose-500 mb-2">
                             <Flame className="h-5 w-5" />
@@ -3381,16 +3399,21 @@ export default function App() {
                             <AlertCircle className="h-5 w-5" />
                           </div>
                           <h3 className="text-xs font-bold text-slate-800">
-                            No {mockTestTypeFilter === 'full' ? 'Full Test' : 'Sectional Test'} Errors
+                            {mockGKFilter !== 'all'
+                              ? `No ${mockGKFilter.replace('_', ' ').toUpperCase()} Errors`
+                              : `No ${mockTestTypeFilter === 'full' ? 'Full Test' : 'Sectional Test'} Errors`}
                           </h3>
                           <p className="mt-0.5 text-[11px] text-slate-500 max-w-md">
-                            There are no recorded error questions for {selectedSubject} under this test filter.
+                            There are no recorded error questions for {selectedSubject} under this filter combination.
                           </p>
                           <button
-                            onClick={() => setMockTestTypeFilterPersisted('all')}
+                            onClick={() => {
+                              setMockTestTypeFilterPersisted('all');
+                              setMockGKFilter('all');
+                            }}
                             className="mt-3 px-3 py-1 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold rounded-lg border border-indigo-200 transition-all cursor-pointer"
                           >
-                            Show Combined Errors ({mockScopeCounts.all})
+                            Reset Filters
                           </button>
                         </div>
                       ) : mockViewMode === 'silly' ? (
