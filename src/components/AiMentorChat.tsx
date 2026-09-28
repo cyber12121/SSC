@@ -1216,8 +1216,15 @@ export function AiMentorChat({
           scope.sourceScope === 'mixed' ? 'Full Mock & Subject Errors' :
           `${scope.type.toUpperCase()} Focus`
         );
-        const countText = scope.questions?.length ? ` (${scope.questions.length} mistake questions loaded)` : '';
-        const welcomeText = `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**${countText}\n\nI'm ready! Ask me anything about these questions — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
+        const totalCount = scope.allQuestions?.length || scope.questions?.length || 0;
+        const isBatched = Boolean(scope.totalBatches && scope.totalBatches > 1);
+        const batchInfo = isBatched ? ` • Showing Batch 1 of ${scope.totalBatches} (Q1–${Math.min(100, totalCount)})` : '';
+        const countText = totalCount ? ` (${totalCount} total mistake questions${batchInfo})` : '';
+
+        const welcomeText = isBatched
+          ? `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**\n📊 **Overall Overview:** ${totalCount} mistake questions total across **${scope.totalBatches} batches of 100**.\n📌 **Active Batch:** Currently inspecting **Batch 1 (Questions 1–${Math.min(100, totalCount)})**.\n\nI have full visibility into your overall stats as well as the active batch. Ask me about your general patterns, specific question solutions, or click a batch button above anytime!`
+          : `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**${countText}\n\nI'm ready! Ask me anything about these questions — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
+
         setMessages(prev => [
           ...prev,
           {
@@ -1759,8 +1766,8 @@ ${instructions}`;
 
             {/* Active Scope Focus Banner */}
             {activeScope && (
-              <div className="px-3.5 sm:px-6 py-2 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 border-b border-indigo-700/60 text-indigo-100 flex items-center justify-between text-xs font-semibold select-none shadow-xs shrink-0">
-                <div className="flex items-center gap-1.5 min-w-0">
+              <div className="px-3.5 sm:px-6 py-2 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 border-b border-indigo-700/60 text-indigo-100 flex flex-wrap items-center justify-between gap-2 text-xs font-semibold select-none shadow-xs shrink-0">
+                <div className="flex items-center gap-1.5 min-w-0 flex-wrap">
                   <span className="px-1.5 py-0.5 rounded bg-amber-400/20 text-amber-300 text-[10px] font-extrabold uppercase tracking-wider shrink-0 border border-amber-400/30">
                     {activeScope.sourceScopeLabel || (
                       activeScope.sourceScope === 'full_mock' ? 'Full Mock' :
@@ -1772,18 +1779,63 @@ ${instructions}`;
                   <span className="truncate text-white font-bold" title={activeScope.title}>
                     {activeScope.title}
                   </span>
-                  {activeScope.questions?.length ? (
-                    <span className="text-[10px] text-indigo-300 shrink-0">
-                      ({activeScope.questions.length} Qs)
-                    </span>
-                  ) : null}
+                  <span className="text-[10px] text-indigo-300 shrink-0">
+                    ({activeScope.allQuestions?.length || activeScope.questions?.length || 0} Total Qs)
+                  </span>
+
+                  {/* Batch Switcher Pills if > 100 questions */}
+                  {Boolean(activeScope.totalBatches && activeScope.totalBatches > 1) && (
+                    <div className="flex items-center gap-1 ml-2 bg-black/40 px-1.5 py-0.5 rounded-lg border border-white/10">
+                      <span className="text-[9px] text-indigo-300 font-bold uppercase tracking-wider">Batches:</span>
+                      {Array.from({ length: activeScope.totalBatches! }).map((_, bIdx) => {
+                        const bNum = bIdx + 1;
+                        const isActive = (activeScope.currentBatch || 1) === bNum;
+                        const all = activeScope.allQuestions || [];
+                        const startQ = bIdx * 100 + 1;
+                        const endQ = Math.min((bIdx + 1) * 100, all.length);
+
+                        return (
+                          <button
+                            key={bNum}
+                            type="button"
+                            onClick={() => {
+                              const newBatchQs = all.slice(bIdx * 100, (bIdx + 1) * 100);
+                              const updatedScope: AiFocusedScope = {
+                                ...activeScope,
+                                currentBatch: bNum,
+                                questions: newBatchQs
+                              };
+                              setInternalScope(updatedScope);
+                              setMessages(prev => [
+                                ...prev,
+                                {
+                                  id: `batch_switch_${Date.now()}`,
+                                  role: 'assistant',
+                                  text: `Switched to **Batch ${bNum} of ${activeScope.totalBatches} (Questions ${startQ}–${endQ} of ${all.length})**. You can now ask about questions in this batch or overall patterns!`,
+                                  timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                                }
+                              ]);
+                            }}
+                            className={`px-2 py-0.5 rounded text-[10px] font-bold transition-all cursor-pointer ${
+                              isActive
+                                ? 'bg-indigo-500 text-white shadow-xs font-black'
+                                : 'text-indigo-200 hover:text-white hover:bg-white/15'
+                            }`}
+                            title={`Switch to Batch ${bNum} (Q${startQ}–${endQ})`}
+                          >
+                            Batch {bNum} ({startQ}–{endQ})
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
                 <button
                   onClick={() => {
                     setInternalScope(null);
                     if (onClearScope) onClearScope();
                   }}
-                  className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-white/10 hover:bg-rose-500 hover:text-white transition-colors cursor-pointer shrink-0 ml-2"
+                  className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-white/10 hover:bg-rose-500 hover:text-white transition-colors cursor-pointer shrink-0 ml-auto"
                   title="Clear focus and return to general assistant"
                 >
                   <X className="w-3 h-3" />

@@ -46,5 +46,9 @@ export interface AiFocusedScope {
     unattempted?: number;
   };
   questions?: AiFocusedQuestion[];
+  allQuestions?: AiFocusedQuestion[];
+  currentBatch?: number;
+  totalBatches?: number;
+  batchSize?: number;
   summaryText?: string;
 }

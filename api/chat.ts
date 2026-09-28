@@ -1130,21 +1130,28 @@ export default async function handler(req: any, res: any) {
           : ''
       );
 
+      const currentBatch = (focusedScope as any).currentBatch || 1;
+      const totalBatches = (focusedScope as any).totalBatches || 1;
+      const totalAllQuestions = (focusedScope as any).allQuestions?.length || stats?.totalQuestions || questions?.length || 0;
+
       scopeContext += `\n=========================================\n`;
       scopeContext += `🎯 ACTIVE FOCUSED SCOPE: ${String(type || '').toUpperCase()} - "${title}"${originStr ? ` [Origin: ${originStr}]` : ''}\n`;
       if (originStr) scopeContext += `Origin Category: ${originStr}\n`;
       if (subject) scopeContext += `Subject: ${subject}\n`;
+      if (totalBatches > 1) {
+        scopeContext += `BATCH INSPECTION MODE: Active Batch ${currentBatch} of ${totalBatches} (${questions?.length || 0} questions loaded in this batch | Total across all batches: ${totalAllQuestions} questions)\n`;
+      }
       if (stats) {
         if (stats.score !== undefined) scopeContext += `Score: ${stats.score}/${stats.maxMarks || 200} | Accuracy: ${stats.accuracy}%\n`;
         if (stats.wrong !== undefined || stats.slow !== undefined || stats.unattempted !== undefined) {
-          scopeContext += `Mistake Breakdown: ${stats.wrong ?? 0} Wrong, ${stats.slow ?? 0} Correct but Slow, ${stats.unattempted ?? 0} Unattempted\n`;
+          scopeContext += `Overall Mistake Breakdown: ${stats.wrong ?? 0} Wrong, ${stats.slow ?? 0} Correct but Slow, ${stats.unattempted ?? 0} Unattempted (Overall Questions: ${stats.totalQuestions || stats.total || totalAllQuestions})\n`;
         }
       }
       if (summaryText) {
         scopeContext += `Summary:\n${summaryText}\n`;
       }
       if (Array.isArray(questions) && questions.length > 0) {
-        scopeContext += `\n--- MISTAKE QUESTIONS IN THIS ${String(type || '').toUpperCase()} (${questions.length} Items) ---\n`;
+        scopeContext += `\n--- MISTAKE QUESTIONS IN THIS ${String(type || '').toUpperCase()}${totalBatches > 1 ? ` (Batch ${currentBatch}/${totalBatches}: ${questions.length} Items)` : ` (${questions.length} Items)`} ---\n`;
         scopeContext += questions.map((q: any, i: number) => {
           const num = q.qNum || (i + 1);
           const optStr = q.options ? Object.entries(q.options).map(([k, v]) => `${k.toUpperCase()}) ${v}`).join(' | ') : '';
@@ -1164,6 +1171,7 @@ export default async function handler(req: any, res: any) {
 - The candidate explicitly opened you to discuss this ${type}: "${title}".
 - SOURCE SPECIFICATION MANDATE: Notice whether these questions are from a Full Mock Test, a Sectional Test, or the Subject-Wise Error Bank. In your opening remark and advice, clearly mention this source context (e.g. "Looking at this Question from your Full Mock Test...", "In this Sectional Test...", or "In your Subject-Wise Error practice...").
 - ROOT CAUSE ANALYSIS (RCA) DIRECTIVE: If the scope or questions indicate RCA Mode ([C] Concept Gap, [S] Silly Mistake, [T] Time Issue, [G] Guess), tailor your diagnostic accordingly. For Silly Mistakes, analyze candidate notes and execution traps; for Concept Gaps, teach first-principles theory; for Time Issues, supply rapid shortcuts; for Guesses, teach topper elimination heuristics.
+- BATCHING & OVERALL PERSPECTIVE: If questions are provided in batches of 100, maintain both overall visibility (${totalAllQuestions} total questions) and detailed analysis of the active batch questions. If the candidate asks for overall patterns across the entire topic/mock, use the overall stats and breakdown.
 - If they ask about questions, errors, shortcuts, or concepts from this ${type}, refer directly to the exact questions and details provided above.
 - If they ask general questions or change the topic, answer helpfully and clearly without hallucinating or forcing the test questions into the response.\n`;
     }
