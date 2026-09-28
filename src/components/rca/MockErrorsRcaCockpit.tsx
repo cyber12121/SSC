@@ -1445,6 +1445,26 @@ export const MockErrorsRcaCockpit: React.FC<MockErrorsRcaCockpitProps> = ({
                             <span>AI</span>
                           </button>
 
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              const defaultFilter: ModalFilterType = isChaptersMode
+                                ? chapterFilter === 'all' ? 'all' : chapterFilter
+                                : rcaSelectedFilter === 'all' ? 'all' : rcaSelectedFilter;
+                              onOpenChapterModal(
+                                ch,
+                                defaultFilter,
+                                rcaSelectedFilter === 'S' && sillySubFilter !== 'all' ? sillySubFilter : undefined
+                              );
+                            }}
+                            className="inline-flex items-center gap-1 h-6 px-1.5 text-[10px] font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 rounded-md border border-slate-200 transition shadow-2xs cursor-pointer active:scale-95"
+                            title={`Review all ${ch.total} questions for ${ch.topic}`}
+                          >
+                            <BookOpen className="w-2.5 h-2.5 text-slate-500" />
+                            <span>Review</span>
+                          </button>
+
                           {ch.total > 25 ? (
                             <button
                               type="button"

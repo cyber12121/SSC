@@ -1656,8 +1656,8 @@ export default function App() {
         accuracy: subjectAccuracy,
         chaptersCount: subjectChapters.length
       },
-      weakTopics: weakTopics.slice(0, 6),
-      questions: allMistakeQuestions.slice(0, 30)
+      weakTopics: weakTopics.slice(0, 10),
+      questions: allMistakeQuestions
     });
   };
 
@@ -1885,7 +1885,7 @@ export default function App() {
       ? `[S] ${subCfg.label} Mistakes`
       : `[${tagKey}] ${cfg.label}`;
 
-    const scopedQuestions: AiFocusedQuestion[] = questions.slice(0, 30).map((q, idx) => {
+    const scopedQuestions: AiFocusedQuestion[] = questions.map((q, idx) => {
       let optionsMap: Record<string, string> | undefined = undefined;
       if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
         const optAny = q.options as any;
@@ -1997,7 +1997,7 @@ export default function App() {
       return;
     }
     const typeLabel = type === 'wrong' ? 'Incorrect' : type === 'slow' ? 'Slow' : 'Skipped';
-    const scopedQuestions: AiFocusedQuestion[] = questions.slice(0, 30).map((q, idx) => {
+    const scopedQuestions: AiFocusedQuestion[] = questions.map((q, idx) => {
       let optionsMap: Record<string, string> | undefined = undefined;
       if (q.options && typeof q.options === 'object' && !Array.isArray(q.options)) {
         const optAny = q.options as any;

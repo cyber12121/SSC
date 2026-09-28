@@ -41122,8 +41122,8 @@ bot.callbackQuery(/^run_ga:([a-zA-Z0-9_\-]+):(.+):(all|10)$/, async (ctx) => {
   await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
 });
 bot.callbackQuery("cb_sub_reasoning", async (ctx) => {
-  const kb = new InlineKeyboard().text("\u{1F3AF} Practice ALL Reasoning Mock Mistakes", "run_mock:reasoning:all").row().text("\u26A1 Quick 10 Reasoning Mistakes", "run_mock:reasoning:10").row().text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
-  await ctx.editMessageText("\u{1F9E0} *Reasoning Bank:*\nSelect practice mode below:", {
+  const kb = new InlineKeyboard().text("\u{1F3AF} Practice ALL Reasoning Mock Mistakes", "run_mock:reasoning:all").row().text("\u26A1 Quick 10 Reasoning Mistakes", "run_mock:reasoning:10").row().text("\u{1F4C1} Browse Reasoning Chapters", "me_sub:reas").row().text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
+  await ctx.editMessageText("\u{1F9E0} *Reasoning Mock Mistakes:*\nSelect practice mode below:", {
     parse_mode: "Markdown",
     reply_markup: kb
   });
@@ -41134,12 +41134,6 @@ var SHORT_TO_SUB = {
   math: "mathematics",
   reas: "reasoning",
   ga: "general_awareness"
-};
-var SUB_TO_SHORT = {
-  english: "eng",
-  mathematics: "math",
-  reasoning: "reas",
-  general_awareness: "ga"
 };
 bot.callbackQuery("nav_mock_errors", async (ctx) => {
   const subjects = getMockErrorSubjectsSummary();
@@ -41387,13 +41381,20 @@ bot.callbackQuery(/^qm_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ct
 bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
   const [_, subId, mode] = ctx.match;
-  const shortCode = SUB_TO_SHORT[subId] || "eng";
-  let questions = getUserMistakes(ctx.from.id, "all", subId);
+  const subjectId = subId === "reasoning" ? "reasoning" : subId;
+  let questions = getMockErrorQuestions(subjectId, void 0, mode);
+  if (!questions || questions.length === 0) {
+    questions = getUserMistakes(ctx.from.id, "all", subjectId);
+  }
+  if (!questions || questions.length === 0) {
+    await ctx.reply(`No questions found for ${subId}.`, { reply_markup: getRootMenuKeyboard() });
+    return;
+  }
   if (mode === "10" && questions.length > 10) {
     questions = shuffle(questions).slice(0, 10);
   }
   const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace("_", " ");
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`, questions);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mock Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`, questions);
 });
 bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();

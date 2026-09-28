@@ -287,6 +287,47 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         } catch {}
       }
 
+      // Load from cgl_rca_global_store (mistakes classified or recorded from website mocks & quizzes)
+      let rcaMistakes: RecordedMistake[] = [];
+      try {
+        const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
+        if (rcaRaw) {
+          const rcaMap = JSON.parse(rcaRaw);
+          if (rcaMap && typeof rcaMap === 'object') {
+            for (const item of Object.values(rcaMap) as any[]) {
+              if (item && item.questionText && Array.isArray(item.options) && item.options.length > 0) {
+                const qId = item.id || `rca_${item.questionText.slice(0, 30)}`;
+                let correctOpt = item.answer || item.correctOption || '';
+                let correctIdx = 0;
+                if (['a', 'b', 'c', 'd'].includes(String(correctOpt).toLowerCase())) {
+                  correctIdx = ['a', 'b', 'c', 'd'].indexOf(String(correctOpt).toLowerCase());
+                } else {
+                  const foundIdx = item.options.findIndex((o: any) => String(o).trim() === String(correctOpt).trim());
+                  if (foundIdx >= 0) correctIdx = foundIdx;
+                }
+                rcaMistakes.push({
+                  id: qId,
+                  userId: 0,
+                  question: item.questionText,
+                  options: item.options.map(String),
+                  correctOptionIndex: correctIdx,
+                  explanation: item.solution || item.explanation || '',
+                  subject: normalizeSubject(item.subject),
+                  topic: item.topic || 'Mock Mistake',
+                  topicSlug: (item.topic || 'mock_mistake').toLowerCase().replace(/\s+/g, '_'),
+                  source: 'website_quiz',
+                  timestamp: item.classifiedAt ? new Date(item.classifiedAt).getTime() : Date.now(),
+                  wrongCount: 1,
+                  mastered: false,
+                });
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('[BotMistakesPage] Error reading cgl_rca_global_store:', err);
+      }
+
       // Merge and deduplicate
       const mergedMap = new Map<string, RecordedMistake>();
       for (const m of serverMistakes) {
@@ -296,6 +337,12 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       for (const m of firestoreMistakes) {
         const key = m.id || m.question.trim().toLowerCase();
         mergedMap.set(key, { ...m, subject: normalizeSubject(m.subject) });
+      }
+      for (const m of rcaMistakes) {
+        const key = m.id || m.question.trim().toLowerCase();
+        if (!mergedMap.has(key)) {
+          mergedMap.set(key, { ...m, subject: normalizeSubject(m.subject) });
+        }
       }
       for (const m of localSynced) {
         const key = m.id || m.question.trim().toLowerCase();
@@ -341,7 +388,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           setSelectedSubject(foundWithMistakes);
         }
 
-        // Expand all topic cards by default for smooth browsing
+        // Keep all topic cards open by default
         const initialOpens: Record<string, boolean> = {};
         finalList.forEach((m) => {
           const sub = normalizeSubject(m.subject);
@@ -578,10 +625,23 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
   const toggleTopicCard = (sub: string, topic: string) => {
     const key = `${sub}:${topic}`;
-    setOpenTopicCards((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    setOpenTopicCards((prev) => {
+      const isCurrentlyOpen = prev[key] !== false;
+      return {
+        ...prev,
+        [key]: !isCurrentlyOpen,
+      };
+    });
+  };
+
+  const toggleAllTopicsForSubject = (topics: string[], sub: string, shouldOpen: boolean) => {
+    setOpenTopicCards((prev) => {
+      const updated = { ...prev };
+      topics.forEach((t) => {
+        updated[`${sub}:${t}`] = shouldOpen;
+      });
+      return updated;
+    });
   };
 
   const toggleSolution = (id: string) => {
@@ -931,23 +991,36 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     </span>
                   </div>
 
-                  <button
-                    onClick={() => {
-                      const allSubQuestions = Array.from(stat.topicMap.values()).flat();
-                      startPractice(allSubQuestions);
-                    }}
-                    className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
-                  >
-                    <Play className="w-2.5 h-2.5 fill-current" />
-                    <span>Practice All {conf.label}</span>
-                  </button>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const topicNames = topicEntries.map(([t]) => t);
+                        const anyClosed = topicNames.some((t) => openTopicCards[`${subKey}:${t}`] === false);
+                        toggleAllTopicsForSubject(topicNames, subKey, anyClosed);
+                      }}
+                      className="px-2 py-0.5 rounded text-[10px] font-semibold text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
+                    >
+                      Toggle All
+                    </button>
+                    <button
+                      onClick={() => {
+                        const allSubQuestions = Array.from(stat.topicMap.values()).flat();
+                        startPractice(allSubQuestions);
+                      }}
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
+                    >
+                      <Play className="w-2.5 h-2.5 fill-current" />
+                      <span>Practice All {conf.label}</span>
+                    </button>
+                  </div>
                 </div>
 
                 {/* TOPIC-WISE CARDS GRID FOR THIS SUBJECT */}
                 <div className="space-y-2.5">
                   {topicEntries.map(([topicName, topicQuestions]) => {
                     const cardKey = `${subKey}:${topicName}`;
-                    const isOpen = openTopicCards[cardKey] ?? true;
+                    const isOpen = openTopicCards[cardKey] !== false;
                     const topicIcon = getTopicIcon(topicName);
 
                     return (
@@ -980,7 +1053,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                           </div>
 
                           {/* Topic Actions */}
-                          <div className="flex items-center gap-1.5 shrink-0">
+                          <div className="flex items-center gap-2 shrink-0">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
@@ -990,42 +1063,43 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                               title={`Drill ${topicQuestions.length} questions in ${topicName}`}
                             >
                               <Play className="w-2.5 h-2.5 fill-current" />
-                              <span>Practice</span>
+                              <span>Practice ({topicQuestions.length})</span>
                             </button>
-                            <div className="p-0.5 rounded text-slate-400 hover:text-slate-600">
-                              {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
-                            </div>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleTopicCard(subKey, topicName);
+                              }}
+                              className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 text-[11px] font-semibold transition-colors cursor-pointer"
+                            >
+                              <span>{isOpen ? 'Collapse' : `View (${topicQuestions.length})`}</span>
+                              {isOpen ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
+                            </button>
                           </div>
                         </div>
 
                         {/* LEVEL 3: QUESTION CARDS (INSIDE TOPIC CARD) */}
-                        <AnimatePresence>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              className="border-t border-slate-100 divide-y divide-slate-100 p-3 sm:p-4 space-y-3"
-                            >
-                              {topicQuestions.map((m, idx) => (
-                                <QuestionItemCard
-                                  key={m.id || idx}
-                                  index={idx + 1}
-                                  mistake={m}
-                                  studyMode={studyMode}
-                                  onDelete={() => handleDelete(m)}
-                                  isDeleting={deletingId === m.id}
-                                  isExpanded={expandedSolutions[m.id] ?? true}
-                                  onToggleSolution={() => toggleSolution(m.id)}
-                                  selectedOption={userSelectedOptions[m.id]}
-                                  onSelectOption={(opt) => {
-                                    setUserSelectedOptions((prev) => ({ ...prev, [m.id]: opt }));
-                                  }}
-                                />
-                              ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+                        {isOpen && (
+                          <div className="border-t border-slate-100 divide-y divide-slate-100 p-3 sm:p-4 space-y-3 bg-white">
+                            {topicQuestions.map((m, idx) => (
+                              <QuestionItemCard
+                                key={m.id || idx}
+                                index={idx + 1}
+                                mistake={m}
+                                studyMode={studyMode}
+                                onDelete={() => handleDelete(m)}
+                                isDeleting={deletingId === m.id}
+                                isExpanded={expandedSolutions[m.id] ?? true}
+                                onToggleSolution={() => toggleSolution(m.id)}
+                                selectedOption={userSelectedOptions[m.id]}
+                                onSelectOption={(opt) => {
+                                  setUserSelectedOptions((prev) => ({ ...prev, [m.id]: opt }));
+                                }}
+                              />
+                            ))}
+                          </div>
+                        )}
                       </div>
                     );
                   })}
