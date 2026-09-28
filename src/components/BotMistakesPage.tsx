@@ -826,7 +826,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        const allSubQuestions = Array.from(stats.topicMap.values()).flat();
+                        const allSubQuestions = (Array.from(stats.topicMap.values()) as RecordedMistake[][]).flat();
                         startPractice(allSubQuestions);
                       }}
                       className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer flex items-center gap-1 shadow-2xs"
@@ -1005,7 +1005,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     </button>
                     <button
                       onClick={() => {
-                        const allSubQuestions = Array.from(stat.topicMap.values()).flat();
+                        const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
                         startPractice(allSubQuestions);
                       }}
                       className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}

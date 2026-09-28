@@ -1,0 +1,2417 @@
+{
+  "chapter_num": 1,
+  "chapter_id": "01_noun",
+  "chapter_title": "Noun",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "noun",
+  "total_rules": 23,
+  "total_questions": 120,
+  "cheat_sheet": {
+    "title": "Noun Complete Revision Cheat Sheet",
+    "subtitle": "All 23 Core Rules, Golden Formulas, Complete Word Lists & Exam Traps",
+    "rules": [
+      {
+        "rule_num": 1,
+        "title": "Always Plural Nouns (Take Plural Verb)",
+        "formula": "Noun (Always Plural Form) + Plural Verb",
+        "description": "These nouns are always used in the plural form only and cannot be made singular by removing 's'/'es'. They always take a plural verb.",
+        "categories": {
+          "Instruments / Tools": [
+            "Scissors",
+            "Tongs",
+            "Pliers",
+            "Pincers",
+            "Bellows"
+          ],
+          "Clothing / Accessories": [
+            "Trousers",
+            "Pants",
+            "Pajamas",
+            "Shorts",
+            "Spectacles",
+            "Glasses",
+            "Goggles",
+            "Binoculars",
+            "Sunglasses"
+          ],
+          "Other Common SSC Nouns": [
+            "Alms",
+            "Amends",
+            "Archives",
+            "Arrears",
+            "Auspices",
+            "Congratulations",
+            "Embers",
+            "Fireworks",
+            "Lodgings",
+            "Outskirts",
+            "Particulars",
+            "Proceeds",
+            "Regards",
+            "Remains",
+            "Savings",
+            "Shambles",
+            "Surroundings",
+            "Tidings",
+            "Troops",
+            "Tactics",
+            "Thanks",
+            "Valuables",
+            "Wages",
+            "Belongings"
+          ]
+        },
+        "ssc_traps": [
+          {
+            "incorrect": "Where is my scissors?",
+            "correct": "Where are my scissors?"
+          },
+          {
+            "incorrect": "All his belongings was lost.",
+            "correct": "All his belongings were lost."
+          },
+          {
+            "incorrect": "I bought a spectacles.",
+            "correct": "I bought a pair of spectacles."
+          }
+        ],
+        "key_note": "To indicate singular count, use 'a pair of...'. When 'a pair of' is used as the subject, the verb becomes singular ('A pair of trousers was bought')."
+      },
+      {
+        "rule_num": 2,
+        "title": "Plural in Form, but Singular in Meaning (Take Singular Verb)",
+        "formula": "Plural-looking Noun + Singular Verb",
+        "description": "These nouns end in 's' and look plural, but their meaning is singular and they always take a singular verb.",
+        "categories": {
+          "Subjects / Branches of Study": [
+            "Mathematics",
+            "Physics",
+            "Ethics",
+            "Economics",
+            "Classics",
+            "Politics",
+            "Statistics",
+            "Linguistics"
+          ],
+          "Diseases": [
+            "Measles",
+            "Mumps",
+            "Rickets",
+            "Shingles"
+          ],
+          "Games / Sports": [
+            "Billiards",
+            "Darts",
+            "Draughts",
+            "Athletics"
+          ],
+          "General": [
+            "News",
+            "Innings",
+            "Summons",
+            "Gallows"
+          ]
+        },
+        "ssc_traps": [
+          {
+            "incorrect": "Mathematics are a difficult subject.",
+            "correct": "Mathematics is a difficult subject."
+          },
+          {
+            "incorrect": "No news are good news.",
+            "correct": "No news is good news."
+          },
+          {
+            "incorrect": "He was issued a summon.",
+            "correct": "He was issued a summons (Singular = summons; Plural = summonses)."
+          }
+        ],
+        "special_exception": "When subjects like Mathematics, Politics, Statistics are preceded by a possessive adjective (my, his, our) or 'the' to mean calculations, political views, or data, they take a PLURAL verb: 'His mathematics are very weak', 'The statistics of the survey reveal...'"
+      },
+      {
+        "rule_num": 3,
+        "title": "Singular in Form, but Always Plural in Meaning (Take Plural Verb)",
+        "formula": "Noun (No -s ending) + Plural Verb",
+        "description": "These nouns look singular because they lack an 's' ending, but they are plural in sense and always take a plural verb. Never add '-s' or '-es' to them.",
+        "words": [
+          "Cattle",
+          "Cavalry",
+          "Infantry",
+          "Poultry",
+          "Peasantry",
+          "Children",
+          "Gentry",
+          "Police",
+          "People",
+          "Folk",
+          "Company"
+        ],
+        "ssc_traps": [
+          {
+            "incorrect": "Cattles are grazing in the field.",
+            "correct": "Cattle are grazing in the field (Never say 'cattles')."
+          },
+          {
+            "incorrect": "Police has caught the thief.",
+            "correct": "Police have caught the thief."
+          },
+          {
+            "incorrect": "Our infantry has marched forward.",
+            "correct": "Our infantry have marched forward."
+          }
+        ],
+        "special_exception": "'People' means human beings. 'Peoples' is used ONLY when referring to nations/ethnic groups of the world."
+      },
+      {
+        "rule_num": 4,
+        "title": "Uncountable Nouns (Always Singular Verb, No a/an, No -s/-es)",
+        "formula": "Uncountable Noun + Singular Verb [Never take a/an, never take -s/-es]",
+        "description": "These nouns are strictly uncountable. They cannot be pluralized by adding 's' and never take indefinite articles (a/an) directly.",
+        "words": [
+          "Scenery",
+          "Poetry",
+          "Furniture",
+          "Advice",
+          "Information",
+          "Luggage",
+          "Baggage",
+          "Postage",
+          "Knowledge",
+          "Jewelry",
+          "Work",
+          "Equipment",
+          "Bread",
+          "Cutlery",
+          "Confectionery",
+          "Crockery",
+          "Alphabet",
+          "Percentage",
+          "Dirt",
+          "Dust",
+          "Traffic",
+          "Electricity",
+          "Money",
+          "Music",
+          "Garbage",
+          "Cost",
+          "Fuel",
+          "Paper"
+        ],
+        "ssc_traps": [
+          {
+            "incorrect": "The sceneries of Kashmir are beautiful.",
+            "correct": "The scenery of Kashmir is beautiful."
+          },
+          {
+            "incorrect": "He gave me an advice.",
+            "correct": "He gave me a piece of advice."
+          },
+          {
+            "incorrect": "I have many works to do.",
+            "correct": "I have much work to do (or: many pieces of work)."
+          },
+          {
+            "incorrect": "Furnitures were sold.",
+            "correct": "Furniture was sold."
+          }
+        ],
+        "countability_modifiers": "To express count, use: 'a piece of advice', 'two pieces of information', 'an article of luggage', 'a loaf of bread'."
+      },
+      {
+        "rule_num": 5,
+        "title": "Usage of 'Hair' (Uncountable vs Countable)",
+        "formula": "All hair on head = Uncountable (Singular) | Individual strands = Countable (Plural)",
+        "description": "Hair is normally considered an uncountable collective noun taking a singular verb. However, when counting specific individual strands, it can be pluralized.",
+        "ssc_traps": [
+          {
+            "incorrect": "His hairs are black.",
+            "correct": "His hair is black."
+          },
+          {
+            "incorrect": "She found two hair in the soup.",
+            "correct": "She found two hairs in the soup (Countable strands)."
+          }
+        ]
+      },
+      {
+        "rule_num": 6,
+        "title": "Nouns with Identical Singular & Plural Forms",
+        "formula": "Same Spelling for 1 or Many (Verb depends on context)",
+        "description": "These nouns do not change form in the plural. Their verb is determined by whether the context refers to one or many.",
+        "words": [
+          "Deer",
+          "Sheep",
+          "Fish",
+          "Offspring",
+          "Aircraft",
+          "Spacecraft",
+          "Series",
+          "Species",
+          "Jury",
+          "Team",
+          "Crew",
+          "Family",
+          "Council"
+        ],
+        "ssc_traps": [
+          {
+            "incorrect": "A sheep is grazing / Sheeps are grazing.",
+            "correct": "A sheep is grazing / Sheep are grazing (Never 'sheeps')."
+          },
+          {
+            "incorrect": "Many deers were seen.",
+            "correct": "Many deer were seen (Never 'deers')."
+          },
+          {
+            "incorrect": "A new series are launched.",
+            "correct": "A new series is launched / Two new series are launched."
+          }
+        ],
+        "special_exception": "'Fishes' is only used when referring to different species or varieties of fish, not total quantity."
+      },
+      {
+        "rule_num": 7,
+        "title": "[The + Common Noun] Expressing an Abstract Quality",
+        "formula": "'The' + Common Noun = Abstract Quality / Feeling",
+        "description": "When 'the' is prefixed to a common noun representing a person or relation, it denotes the inner emotion, instinct, or characteristic (functioning as an abstract noun).",
+        "examples": [
+          {
+            "sentence": "The judge in him prevailed over the father.",
+            "explanation": "'The judge' = sense of justice; 'the father' = fatherly affection."
+          },
+          {
+            "sentence": "The mother in her arose when she saw the crying orphan.",
+            "explanation": "'The mother' = maternal instinct."
+          }
+        ]
+      },
+      {
+        "rule_num": 8,
+        "title": "Plural of Nouns Ending in '-ful'",
+        "formula": "Base + ful + 's' -> (cupfuls, handfuls)",
+        "description": "Nouns ending in 'ful' are pluralized by adding 's' at the very end of 'ful', NOT to the base noun.",
+        "words": [
+          "Cupfuls",
+          "Handfuls",
+          "Glassfuls",
+          "Spoonfuls",
+          "Mouthfuls",
+          "Bucketfuls"
+        ],
+        "ssc_traps": [
+          {
+            "incorrect": "He drank three cupsful of coffee.",
+            "correct": "He drank three cupfuls of coffee."
+          },
+          {
+            "incorrect": "Take two spoonsful of syrup.",
+            "correct": "Take two spoonfuls of syrup."
+          }
+        ]
+      },
+      {
+        "rule_num": 9,
+        "title": "Precise Usage of 'Half'",
+        "formula": "Half an hour / A half-hour | Two and a half hours / Two hours and a half",
+        "description": "Specific structural conventions govern how 'half' pairs with time and units:",
+        "rules": [
+          "• 'Half an hour' OR 'A half-hour' (NOT 'A half an hour')",
+          "• 'A half mile' OR 'Half a mile'",
+          "• 'One and a half hours' (Plural unit)",
+          "• 'Two and a half hours' OR 'Two hours and a half'"
+        ],
+        "ssc_traps": [
+          {
+            "incorrect": "I waited for a half an hour.",
+            "correct": "I waited for half an hour (or a half-hour)."
+          }
+        ]
+      },
+      {
+        "rule_num": 10,
+        "title": "Hyphenated Compound Nouns Used as Adjectives",
+        "formula": "Numeral + Hyphen + Singular Noun (Never Pluralized)",
+        "description": "When a compound noun with a numeral functions as an adjective before another noun, the hyphenated noun must ALWAYS be singular.",
+        "examples": [
+          {
+            "incorrect": "A ten-rupees note",
+            "correct": "A ten-rupee note"
+          },
+          {
+            "incorrect": "A five-stars hotel",
+            "correct": "A five-star hotel"
+          },
+          {
+            "incorrect": "A three-days workshop",
+            "correct": "A three-day workshop"
+          },
+          {
+            "incorrect": "A two-miles walk",
+            "correct": "A two-mile walk"
+          }
+        ],
+        "key_note": "If not modifying another noun, the noun is plural: 'He gave me ten rupees'."
+      },
+      {
+        "rule_num": 11,
+        "title": "Definite vs Indefinite Counting Nouns (Dozen, Hundred, Thousand...)",
+        "formula": "Definite Number + Dozen/Hundred/Million + Noun (Singular) | Dozens/Hundreds + of + Noun (Plural)",
+        "description": "Words like dozen, score, hundred, thousand, million, billion remain SINGULAR when preceded by an exact number. They take '-s' and 'of' only when indefinite.",
+        "ssc_traps": [
+          {
+            "incorrect": "I bought two dozens bananas.",
+            "correct": "I bought two dozen bananas."
+          },
+          {
+            "incorrect": "Three thousands people attended.",
+            "correct": "Three thousand people attended."
+          },
+          {
+            "correct_indefinite": "Dozens of bananas were spoiled / Thousands of people attended."
+          }
+        ]
+      },
+      {
+        "rule_num": 12,
+        "title": "'The + Adjective' Representing a Whole Class",
+        "formula": "'The' + Adjective = Plural Common Noun + Plural Verb",
+        "description": "When 'the' is placed before adjectives like poor, rich, blind, deaf, educated, sick, it denotes all people in that category. It acts as a plural noun and takes a plural verb. Never add '-s' to the adjective.",
+        "ssc_traps": [
+          {
+            "incorrect": "The poors are honest.",
+            "correct": "The poor are honest (Never say 'the poors')."
+          },
+          {
+            "incorrect": "The rich exploits the poor.",
+            "correct": "The rich exploit the poor."
+          }
+        ]
+      },
+      {
+        "rule_num": 13,
+        "title": "'The + Plural Surname' Denoting the Whole Family",
+        "formula": "'The' + Surname-s + Plural Verb",
+        "description": "Preceding a pluralized family name with 'The' refers to the entire family as a group, requiring a plural verb.",
+        "examples": [
+          {
+            "sentence": "The Sharmas have gone on vacation.",
+            "explanation": "Refers to the entire Sharma family."
+          },
+          {
+            "sentence": "The Guptas are our neighbors.",
+            "explanation": "Refers to all members of the Gupta family."
+          }
+        ]
+      },
+      {
+        "rule_num": 14,
+        "title": "Frequent Superfluous / Slang Noun Errors in SSC",
+        "description": "Expressions common in colloquial Indian English that are strictly incorrect in Standard English:",
+        "pairs": [
+          {
+            "incorrect": "What is your good name?",
+            "correct": "What is your name?"
+          },
+          {
+            "incorrect": "He is my cousin brother / cousin sister.",
+            "correct": "He is my cousin / She is my cousin."
+          },
+          {
+            "incorrect": "He secured passing marks.",
+            "correct": "He secured pass marks."
+          },
+          {
+            "incorrect": "Take linking road.",
+            "correct": "Take link road."
+          },
+          {
+            "incorrect": "A pickpocketer stole my wallet.",
+            "correct": "A pickpocket stole my wallet."
+          },
+          {
+            "incorrect": "Boarding / Lodging",
+            "correct": "Boarding house / Lodging house"
+          }
+        ]
+      },
+      {
+        "rule_num": 15,
+        "title": "Repeated Nouns Connected by a Preposition",
+        "formula": "Singular Noun + Preposition + Same Singular Noun + Singular Verb",
+        "description": "When the same noun is repeated on either side of a preposition, both nouns MUST be in singular form, and the verb MUST be singular.",
+        "ssc_traps": [
+          {
+            "incorrect": "Pages after pages were read.",
+            "correct": "Page after page was read."
+          },
+          {
+            "incorrect": "Doors to doors were visited.",
+            "correct": "Door to door was visited."
+          },
+          {
+            "incorrect": "Rows upon rows of marble looks beautiful.",
+            "correct": "Row upon row of marble looks beautiful."
+          }
+        ]
+      },
+      {
+        "rule_num": 16,
+        "title": "Common Gender Nouns & Default Pronoun",
+        "formula": "Common Gender Noun (Teacher, Doctor, Student, Clerk, Leader) -> Default Pronoun 'He/His'",
+        "description": "When the gender of a common noun is unknown or unspecified, traditional grammatical convention uses the masculine third-person pronoun (he/his/him), NOT 'it' or 'they'.",
+        "examples": [
+          {
+            "sentence": "Every student must submit his assignment on time.",
+            "note": "Use 'his', not 'their' or 'one's'."
+          }
+        ]
+      },
+      {
+        "rule_num": 17,
+        "title": "Noun Gender & Personified Gender Laws",
+        "description": "Rules for masculine, feminine, and personified objects:",
+        "sections": {
+          "Adding '-ess' with vowel drops": "Actor → Actress, Hunter → Huntress, Waiter → Waitress, Master → Mistress",
+          "Personified Masculine (Strength, Violence, Power)": [
+            "Sun",
+            "Summer",
+            "Winter",
+            "Time",
+            "Death",
+            "War"
+          ],
+          "Personified Feminine (Beauty, Grace, Gentleness, Fertility)": [
+            "Moon",
+            "Earth",
+            "Spring",
+            "Autumn",
+            "Nature",
+            "Liberty",
+            "Justice",
+            "Mercy",
+            "Peace",
+            "Ship"
+          ]
+        },
+        "examples": [
+          {
+            "sentence": "The Sun shed his beams upon rich and poor alike.",
+            "note": "Sun = masculine ('his')."
+          },
+          {
+            "sentence": "The Moon hid her face behind a cloud.",
+            "note": "Moon = feminine ('her')."
+          }
+        ]
+      },
+      {
+        "rule_num": 18,
+        "title": "High-Frequency SSC Collective Nouns",
+        "groups": [
+          "A pride of lions",
+          "A shoal / school of fish",
+          "A pack of wolves / hounds / cards",
+          "A bevy of girls / ladies",
+          "A flock of birds / sheep",
+          "A herd of cattle / elephants",
+          "An orchestra of musicians",
+          "A litter of puppies / kittens / pigs",
+          "A fleet of ships / motor cars",
+          "A swarm of bees / flies / ants",
+          "A bouquet of flowers",
+          "A clump / grove of trees",
+          "A suite of rooms",
+          "A band of musicians / robbers",
+          "A galaxy / constellation of stars"
+        ]
+      },
+      {
+        "rule_num": 19,
+        "title": "Singular to Plural Formation Traps & Compound Plurals",
+        "rules": [
+          "1. Nouns ending in 'o' preceded by vowel add 's' (Radio → Radios, Video → Videos, Bamboo → Bamboos).",
+          "2. Compound Nouns: Pluralize the HEAD / ROOT WORD, not the tail word:",
+          "   • Sister-in-law → Sisters-in-law (NOT sister-in-laws)",
+          "   • Commander-in-chief → Commanders-in-chief (NOT commander-in-chiefs)",
+          "   • Passer-by → Passers-by (NOT passer-bys)",
+          "   • Looker-on → Lookers-on",
+          "   • Maid-servant → Maid-servants",
+          "   • Step-son → Step-sons",
+          "   • Man-servant → Men-servants (Both words change)",
+          "   • Woman-doctor → Women-doctors"
+        ]
+      },
+      {
+        "rule_num": 20,
+        "title": "Foreign Origin Noun Plurals (Greek / Latin Traps)",
+        "conversions": [
+          {
+            "singular": "Datum",
+            "plural": "Data"
+          },
+          {
+            "singular": "Criterion",
+            "plural": "Criteria"
+          },
+          {
+            "singular": "Phenomenon",
+            "plural": "Phenomena"
+          },
+          {
+            "singular": "Oasis",
+            "plural": "Oases"
+          },
+          {
+            "singular": "Crisis",
+            "plural": "Crises"
+          },
+          {
+            "singular": "Basis",
+            "plural": "Bases"
+          },
+          {
+            "singular": "Radius",
+            "plural": "Radii"
+          },
+          {
+            "singular": "Stratum",
+            "plural": "Strata"
+          },
+          {
+            "singular": "Formula",
+            "plural": "Formulae / Formulas"
+          },
+          {
+            "singular": "Bacterium",
+            "plural": "Bacteria"
+          },
+          {
+            "singular": "Medium",
+            "plural": "Media"
+          },
+          {
+            "singular": "Index",
+            "plural": "Indices"
+          }
+        ],
+        "ssc_traps": [
+          {
+            "incorrect": "All the datas were lost.",
+            "correct": "All the data was/were lost (Never say 'datas')."
+          },
+          {
+            "incorrect": "What is the criteria for selection?",
+            "correct": "What is the criterion for selection? (Singular = criterion)."
+          },
+          {
+            "incorrect": "This is a natural phenomena.",
+            "correct": "This is a natural phenomenon (Singular = phenomenon)."
+          }
+        ]
+      },
+      {
+        "rule_num": 21,
+        "title": "Compound Nouns Always Used in Plural Form",
+        "words": [
+          "Current affairs",
+          "Armed forces",
+          "Human rights",
+          "Social studies",
+          "High heels",
+          "Civil rights",
+          "Natural resources",
+          "Public relations",
+          "Winter sports"
+        ],
+        "example": "He has a keen interest in current affairs (NOT current affair)."
+      },
+      {
+        "rule_num": 22,
+        "title": "Complete Noun Meaning Shifts when Pluralized (-s)",
+        "pairs": [
+          {
+            "word": "Wood",
+            "singular_meaning": "Timber / Material",
+            "plural": "Woods",
+            "plural_meaning": "Forest"
+          },
+          {
+            "word": "Good",
+            "singular_meaning": "Benefit / Virtue",
+            "plural": "Goods",
+            "plural_meaning": "Merchandise / Cargo"
+          },
+          {
+            "word": "Force",
+            "singular_meaning": "Strength / Power",
+            "plural": "Forces",
+            "plural_meaning": "Armed troops"
+          },
+          {
+            "word": "Air",
+            "singular_meaning": "Atmospheric gas",
+            "plural": "Airs",
+            "plural_meaning": "Arrogant behavior / affected manners"
+          },
+          {
+            "word": "Iron",
+            "singular_meaning": "Metal element",
+            "plural": "Irons",
+            "plural_meaning": "Chains / Shackles / Fetters"
+          },
+          {
+            "word": "Sand",
+            "singular_meaning": "Granular material",
+            "plural": "Sands",
+            "plural_meaning": "Desert / Beach tract"
+          },
+          {
+            "word": "Water",
+            "singular_meaning": "Liquid",
+            "plural": "Waters",
+            "plural_meaning": "Sea / Ocean territory"
+          },
+          {
+            "word": "Work",
+            "singular_meaning": "Labor / Task",
+            "plural": "Works",
+            "plural_meaning": "Literary compositions / Factory"
+          },
+          {
+            "word": "Damage",
+            "singular_meaning": "Physical harm / Loss",
+            "plural": "Damages",
+            "plural_meaning": "Financial compensation awarded by court"
+          },
+          {
+            "word": "Abuse",
+            "singular_meaning": "Misuse / Bad words",
+            "plural": "Abuses",
+            "plural_meaning": "Social evils / corrupt practices"
+          },
+          {
+            "word": "Arm",
+            "singular_meaning": "Upper limb of body",
+            "plural": "Arms",
+            "plural_meaning": "Weapons"
+          },
+          {
+            "word": "Physic",
+            "singular_meaning": "Medicine",
+            "plural": "Physics",
+            "plural_meaning": "Branch of science"
+          },
+          {
+            "word": "Premise",
+            "singular_meaning": "Proposition in logic",
+            "plural": "Premises",
+            "plural_meaning": "Building / Property grounds"
+          },
+          {
+            "word": "Spectacle",
+            "singular_meaning": "Remarkable sight",
+            "plural": "Spectacles",
+            "plural_meaning": "Eyeglasses"
+          }
+        ]
+      },
+      {
+        "rule_num": 23,
+        "title": "Comprehensive Apostrophe ('s) Laws",
+        "sub_rules": [
+          "i) Used for Living Beings: 'Boy's book', 'Cow's milk'. For Non-Living things, NEVER use 's — use 'of': 'The leg of the table' (NOT 'table's leg'), 'The cover of the book' (NOT 'book's cover').",
+          "ii) Exceptions where Non-Living CAN take 's: Personified objects ('Nature's laws', 'Fortune's favorites'), Time/Space/Weight ('A day's leave', 'A mile's distance', 'A pound's weight'), Dignified celestial bodies ('The earth's surface', 'The sun's rays'), and established Idioms ('At one's wit's end', 'At an arm's length', 'At a stone's throw').",
+          "iii) Nouns ending in 's' or hissing sound: Only add the apostrophe (') without 's': 'Keats' poems', 'Dickens' novels', 'For conscience' sake', 'For peace' sake', 'Boys' school'.",
+          "iv) Joint Possession vs Separate Possession: If two nouns possess something jointly, add 's to the second noun only ('Ram and Shyam's father'). If they possess different items, add 's to both ('Ram's and Shyam's fathers').",
+          "v) Compound Nouns: Apostrophe is added to the LAST word only: 'Father-in-law's house', 'Commander-in-chief's order' (NOT 'Father's-in-law').",
+          "vi) Pronouns that NEVER take an Apostrophe: Possessive pronouns (hers, ours, yours, theirs, its, whose) NEVER take an apostrophe. 'Yours faithfully' (NOT 'Your's faithfully'). 'Its color' (possessive) vs 'It's' (= It is).",
+          "vii) 'Else' following Indefinite Pronouns: When 'else' follows somebody, anybody, nobody, someone, anyone, put the apostrophe on 'else': 'Somebody else's book' (NOT 'Somebody's else')."
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) Rohit came / (b)with three / (c) cupsful of tea / (d) no error.",
+      "options": {
+        "a": "(a) Rohit came",
+        "b": "(b) with three",
+        "c": "(c) cupsful of tea",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'cupsful' with 'cupfuls'.",
+      "solution": "Replace 'cupsful' with 'cupfuls'. Nouns ending with 'ful' are made plural by putting 's' after 'ful'."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) Rahul has given her / (b) thirty five millions dollars to / (c)buy a new house / (d) no error.",
+      "options": {
+        "a": "(a) Rahul has given her",
+        "b": "(b) thirty five millions dollars to",
+        "c": "(c) buy a new house",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'millions' with 'million'.",
+      "solution": "Replace 'millions' with 'million'. The noun 'million' is used as singular when used after a numeral."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) I gifted him / (b) many pair / (c)of shoes / (d) no error.",
+      "options": {
+        "a": "(a) I gifted him",
+        "b": "(b) many pair",
+        "c": "(c) of shoes",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'pair' with 'pairs'.",
+      "solution": "Replace 'pair' with 'pairs'. Pair, dozen, thousand etc. are written in plural form when these words are used with Indefinite countable nouns like dozens of men, thousands of people, many pairs of socks, etc."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) Deaf are / (b) demanding / (c) reservations in jobs / (d) no error.",
+      "options": {
+        "a": "(a) Deaf are",
+        "b": "(b) demanding",
+        "c": "(c) reservations in jobs",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'deaf' with ' the deaf' .",
+      "solution": "Replace 'deaf' with ' the deaf' . 'The deaf' represents the whole community of deafs. === PAGE 16 ==="
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) The book's cover / (b) is highly / (c)glossy / (d) no error.",
+      "options": {
+        "a": "(a) The book's cover",
+        "b": "(b) is highly",
+        "c": "(c) glossy",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'book's cover' with 'the cover of the book'.",
+      "solution": "Replace 'book's cover' with 'the cover of the book'. For non-living things, we use 'of' in place of apostrophe s."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) The scissors / (b) which is lying on the table / (c)can't be used now / (d) no error. === PAGE 12 ===",
+      "options": {
+        "a": "(a) The scissors",
+        "b": "(b) which is lying on the table",
+        "c": "(c) can't be used now",
+        "d": "(d) no error. === PAGE 12 ==="
+      },
+      "answer": "b",
+      "correction": "Replace 'is' with 'are'.",
+      "solution": "Replace 'is' with 'are'. The noun 'scissors' is plural and a plural verb is used with it."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) Pair after pair / (b) of binoculars have been / (c)sent to Mr. Rajkumar / (d) no error.",
+      "options": {
+        "a": "(a) Pair after pair",
+        "b": "(b) of binoculars have been",
+        "c": "(c) sent to Mr. Rajkumar",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'have' with 'has'.",
+      "solution": "Replace 'have' with 'has'. If we use a preposition after a noun and the same noun is repeated after the preposition, both the nouns should be in singular, and a singular verb will be used."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) He received a / (b) summon to appear in court / (c) for the murder case / (d) no error.",
+      "options": {
+        "a": "(a) He received a",
+        "b": "(b) summon to appear in court",
+        "c": "(c) for the murder case",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'summon' with 'summons'.",
+      "solution": "Replace 'summon' with 'summons'. 'Summons' is a singular noun and a singular verb is used with it."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) Mathematics play a critical / (b) role in various fields like / (c) science, engineering, and finance. / (d) no error.",
+      "options": {
+        "a": "(a) Mathematics play a critical",
+        "b": "(b) role in various fields like",
+        "c": "(c) science, engineering, and finance.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'play' with 'plays'.",
+      "solution": "Replace 'play' with 'plays'. The name of the subject ending with 's' appears as plural but they are singular nouns and a singular verb is used with them."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) You will see that different people / (b) living in India / (c) have different cultures / (d) no error.",
+      "options": {
+        "a": "(a) You will see that different people",
+        "b": "(b) living in India",
+        "c": "(c) have different cultures",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'people' with 'peoples'.",
+      "solution": "Replace 'people' with 'peoples'. 'People' is a plural noun and never takes s / es. But when it describes the meaning of race, nation or tribes, the use of 'peoples' is absolutely correct. 'Peoples' is a countable noun."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) Peoples / (b)toil and moil to earn / (c)their bread and butter / (d) no error.",
+      "options": {
+        "a": "(a) Peoples",
+        "b": "(b) toil and moil to earn",
+        "c": "(c) their bread and butter",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'peoples' with 'people'.",
+      "solution": "Replace 'peoples' with 'people'. 'People' is a plural noun and never takes s / es when used in the general sense."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) Can you give / (b) me your half hour / (c) to finish this work? / (d) no error.",
+      "options": {
+        "a": "(a) Can you give",
+        "b": "(b) me your half hour",
+        "c": "(c) to finish this work?",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'half hour' with 'half an hour'.",
+      "solution": "Replace 'half hour' with 'half an hour'. The noun 'half' is always written as 'half a / an noun' or 'a half noun'."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) Three hundred rupees / (b) are not a reasonable price / (c) for this book / (d) no error.",
+      "options": {
+        "a": "(a) Three hundred rupees",
+        "b": "(b) are not a reasonable price",
+        "c": "(c) for this book",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "replace 'are' with 'is'.",
+      "solution": "replace 'are' with 'is'. The amount of money, distance and time are considered as singular units and singular verbs are used with them."
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) Payal is going / (b) to buy a four / (c) rooms flat tomorrow / (d) no error.",
+      "options": {
+        "a": "(a) Payal is going",
+        "b": "(b) to buy a four",
+        "c": "(c) rooms flat tomorrow",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'rooms' with 'room'.",
+      "solution": "Replace 'rooms' with 'room'. When a compound noun(four room) is used before another noun(flat) as an adjective, it is kept in singular form."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) Paramjeet / (b) respects a student / (c) in Karamveer / (d) no error.",
+      "options": {
+        "a": "(a) Paramjeet",
+        "b": "(b) respects a student",
+        "c": "(c) in Karamveer",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'a' with 'the'.",
+      "solution": "Replace 'a' with 'the'. The use of 'the' with any common noun acts as the abstract noun and tells the quality of that noun."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) You should / (b)take care of / (c) the olds / (d) no error.",
+      "options": {
+        "a": "(a) You should",
+        "b": "(b) take care of",
+        "c": "(c) the olds",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'olds' with 'old'.",
+      "solution": "Replace 'olds' with 'old'. 'The old' represents all the old people."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) The police / (b) has arrived on the spot / (c)on time / (d) no error.",
+      "options": {
+        "a": "(a) The police",
+        "b": "(b) has arrived on the spot",
+        "c": "(c) on time",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace ' has' with ' have'.",
+      "solution": "Replace ' has' with ' have'. Police is a plural noun and hence always takes a plural verb."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) Rabies are / (b) a dangerous / (c)disease / (d) no error.",
+      "options": {
+        "a": "(a) Rabies are",
+        "b": "(b) a dangerous",
+        "c": "(c) disease",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'are' with 'is'.",
+      "solution": "Replace 'are' with 'is'. The name of any disease is always a singular noun and hence takes a singular verb."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) Everything's beauty / (b) is difficult / (c) to define. / (d) no error.",
+      "options": {
+        "a": "(a) Everything's beauty",
+        "b": "(b) is difficult",
+        "c": "(c) to define.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'everything's beauty' with 'The beauty of everything' The words 'everything, nothing, something, anything' never takes apostrophes with them.",
+      "solution": "Replace 'everything's beauty' with 'The beauty of everything' The words 'everything, nothing, something, anything' never takes apostrophes with them."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) Poor are / (b) exploited by / (c) the rich / (d) no error.",
+      "options": {
+        "a": "(a) Poor are",
+        "b": "(b) exploited by",
+        "c": "(c) the rich",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'poor' with ' the poor'.",
+      "solution": "Replace 'poor' with ' the poor'. 'The poor' represents the whole community of poors."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "(a) The brave / (b) is loved and respected all over / (c) the world / (d) no error.",
+      "options": {
+        "a": "(a) The brave",
+        "b": "(b) is loved and respected all over",
+        "c": "(c) the world",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'is' with 'are'.",
+      "solution": "Replace 'is' with 'are'. 'The brave' represents the whole community of brave."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "(a) Her knickers, / (b) adorned with intricate lace patterns, / (c)was carefully folded in the drawer / (d) no error.",
+      "options": {
+        "a": "(a) Her knickers,",
+        "b": "(b) adorned with intricate lace patterns,",
+        "c": "(c) was carefully folded in the drawer",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'was' with 'were'.",
+      "solution": "Replace 'was' with 'were'. 'Knickers' is a plural noun and always takes a plural verb."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "(a) The news are / (b) broadcast daily to keep the public informed / (c) about current events / (d) no error.",
+      "options": {
+        "a": "(a) The news are",
+        "b": "(b) broadcast daily to keep the public informed",
+        "c": "(c) about current events",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'are' with 'is'.",
+      "solution": "Replace 'are' with 'is'. 'News' is a singular noun and always takes a singular verb."
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "(a) Diabetes require / (b)careful management of blood sugar levels / (c)through medication and lifestyle changes / (d) no error.",
+      "options": {
+        "a": "(a) Diabetes require",
+        "b": "(b) careful management of blood sugar levels",
+        "c": "(c) through medication and lifestyle changes",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'require' with 'requires'.",
+      "solution": "Replace 'require' with 'requires'. The name of any disease is always a singular noun and hence takes a singular verb."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "(a) The gentry in the / (b) historic town have preserved their cultural / (c)heritage with great care / (d) no error.",
+      "options": {
+        "a": "(a) The gentry in the",
+        "b": "(b) historic town have preserved their cultural",
+        "c": "(c) heritage with great care",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error. Gentry is a plural noun and hence always takes a plural verb."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "(a) Cities after cities / (b) has witnessed significant development / (c) over the years / (d) no error.",
+      "options": {
+        "a": "(a) Cities after cities",
+        "b": "(b) has witnessed significant development",
+        "c": "(c) over the years",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'cities after cities' with 'city after city'.",
+      "solution": "Replace 'cities after cities' with 'city after city'. If we use a preposition after a noun and the same noun is repeated after the preposition, both the nouns should be in singular, and a singular verb will be used."
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "(a) The twenty-men committee, / (b)comprising dedicated individuals from various backgrounds, collaborated seamlessly / (c) to organize the community event / (d) no error.",
+      "options": {
+        "a": "(a) The twenty-men committee,",
+        "b": "(b) comprising dedicated individuals from various backgrounds, collaborated seamlessly",
+        "c": "(c) to organize the community event",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'men' with 'man'.",
+      "solution": "Replace 'men' with 'man'. When a compound noun is used as an adjective, it is kept in singular form."
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "(a) The seven-feet-tall basketball player, / (b)known for his incredible slam dunks and defensive prowess, dominated / (c) the court during the championship game / (d) no error.",
+      "options": {
+        "a": "(a) The seven-feet-tall basketball player,",
+        "b": "(b) known for his incredible slam dunks and defensive prowess, dominated",
+        "c": "(c) the court during the championship game",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'feet' with 'foot'.",
+      "solution": "Replace 'feet' with 'foot'. As feet is the plural form of foot. When a compound noun is used as an adjective, it is kept in singular form."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "(a) All the informations / (b) imparted to me can't be / (c) used for this purpose / (d) no error.",
+      "options": {
+        "a": "(a) All the informations",
+        "b": "(b) imparted to me can't be",
+        "c": "(c) used for this purpose",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'informations' with 'information'.",
+      "solution": "Replace 'informations' with 'information'. 'Information' is an uncountable noun and hence does not have a plural form."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "(a) I have not gone through / (b) this history book, so i can not / (c) tell you anything about its content / (d) no error.",
+      "options": {
+        "a": "(a) I have not gone through",
+        "b": "(b) this history book, so i can not",
+        "c": "(c) tell you anything about its content",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'content' with 'contents'.",
+      "solution": "Replace 'content' with 'contents'. 'Content' means satisfaction while 'contents' is related to subject matter."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "(a) Sweet voice / (b) is one of her / (c) beauty / (d) no error.",
+      "options": {
+        "a": "(a) Sweet voice",
+        "b": "(b) is one of her",
+        "c": "(c) beauty",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'beauty' with 'beauties'.",
+      "solution": "Replace 'beauty' with 'beauties'. Beauty is used as a countable as well as uncountable noun. The noun 'beauty' is uncountable when it talks about the beauty of something or person but it is a countable noun when it talks about the features of something or someone. === PAGE 17 ==="
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "(a) Take off / (b) your cloths / (c) and have a bath / (d) no error.",
+      "options": {
+        "a": "(a) Take off",
+        "b": "(b) your cloths",
+        "c": "(c) and have a bath",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'cloths' with 'clothes'.",
+      "solution": "Replace 'cloths' with 'clothes'. 'Cloth' is a material noun and hence is uncountable. It never takes s / es. But clothes means attire or clad."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "(a) I don't / (b) like the / (c) government's policies / (d) no error.",
+      "options": {
+        "a": "(a) I don't",
+        "b": "(b) like the",
+        "c": "(c) government's policies",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "(a) Sapna is not / (b) beautiful, but / (c) her hair are straight / (d) no error.",
+      "options": {
+        "a": "(a) Sapna is not",
+        "b": "(b) beautiful, but",
+        "c": "(c) her hair are straight",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'are' with 'is'.",
+      "solution": "Replace 'are' with 'is'. 'Hair' is an uncountable noun and hence takes a singular verb."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "(a) This pair of / (b) spectacles / (c) are highly expensive / (d) no error.",
+      "options": {
+        "a": "(a) This pair of",
+        "b": "(b) spectacles",
+        "c": "(c) are highly expensive",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'are' with 'is'.",
+      "solution": "Replace 'are' with 'is'. 'Pair of spectacles' is a singular noun and takes a singular verb."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "(a) Have you ever / (b) seen such a beautiful / (c) shoal of fishes / (d) no error.",
+      "options": {
+        "a": "(a) Have you ever",
+        "b": "(b) seen such a beautiful",
+        "c": "(c) shoal of fishes",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'fishes' with 'fish'.",
+      "solution": "Replace 'fishes' with 'fish'. Rule : Be careful with the noun fish which is normally used as the same in singular and plural form. But when it talks about the kind or type of fish, it is written as fishes."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "(a) I always / (b) have fruits / (c) in my breakfast / (d) no error. === PAGE 13 ===",
+      "options": {
+        "a": "(a) I always",
+        "b": "(b) have fruits",
+        "c": "(c) in my breakfast",
+        "d": "(d) no error. === PAGE 13 ==="
+      },
+      "answer": "b",
+      "correction": "Replace 'fruits' with 'fruit'.",
+      "solution": "Replace 'fruits' with 'fruit'. Rule : The noun 'fruit' is uncountable when it gives the meaning of food. But it is countable when we talk about the kind or type of fruit."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "(a) She has to appear / (b) before the / (c) metropolis magistrate / (d) no error.",
+      "options": {
+        "a": "(a) She has to appear",
+        "b": "(b) before the",
+        "c": "(c) metropolis magistrate",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'metropolis' with 'metropolitan'.",
+      "solution": "Replace 'metropolis' with 'metropolitan'. Rule : 'Metropolis' refers to a large and densely populated industrial and commercial city but 'metropolitan' is the correct term when referring to a person related or connected to a metropolis."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "(a) Pair after pair / (b)of shoes has been / (c) sent to him / (d) no error.",
+      "options": {
+        "a": "(a) Pair after pair",
+        "b": "(b) of shoes has been",
+        "c": "(c) sent to him",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error. If we use a preposition after a noun and the same noun is repeated after the preposition, both the nouns should be in singular, and a singular verb will be used."
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "(a) Are you talking / (b) about India / (c) and China's leaders? / (d) no error.",
+      "options": {
+        "a": "(a) Are you talking",
+        "b": "(b) about India",
+        "c": "(c) and China's leaders?",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"India\" with \"India's\".",
+      "solution": "Replace \"India\" with \"India's\". Rule : For common possession, use 's with the final word. But to show the different possession 's is used with all the words."
+    },
+    {
+      "q_num": 41,
+      "type": "spot_the_error",
+      "question": "(a) Mr. Rajkumar / (b) has five / (c) wifes / (d) no error.",
+      "options": {
+        "a": "(a) Mr. Rajkumar",
+        "b": "(b) has five",
+        "c": "(c) wifes",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'wifes' with 'wives'.",
+      "solution": "Replace 'wifes' with 'wives'. The plural form of wife is wives."
+    },
+    {
+      "q_num": 42,
+      "type": "spot_the_error",
+      "question": "(a) I asked / (b) the address / (c) many passer-bys / (d) no error.",
+      "options": {
+        "a": "(a) I asked",
+        "b": "(b) the address",
+        "c": "(c) many passer-bys",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'passer-bys' with 'passers-by'.",
+      "solution": "Replace 'passer-bys' with 'passers-by'. In case of compound nouns, (except the nouns made with man / woman) use root or head word to make it plural."
+    },
+    {
+      "q_num": 43,
+      "type": "spot_the_error",
+      "question": "(a) Rachna has / (b) only five / (c) childs / (d) no error.",
+      "options": {
+        "a": "(a) Rachna has",
+        "b": "(b) only five",
+        "c": "(c) childs",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'childs' with 'children'.",
+      "solution": "Replace 'childs' with 'children'. The plural form of child is children."
+    },
+    {
+      "q_num": 44,
+      "type": "spot_the_error",
+      "question": "(a) I need / (b) two spoonsful / (c) of sugar / (d) no error.",
+      "options": {
+        "a": "(a) I need",
+        "b": "(b) two spoonsful",
+        "c": "(c) of sugar",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'spoonsful' with 'spoonfuls'.",
+      "solution": "Replace 'spoonsful' with 'spoonfuls'. Nouns ending with 'ful' are made plural by putting 's' after 'ful'."
+    },
+    {
+      "q_num": 45,
+      "type": "spot_the_error",
+      "question": "(a) There are only two / (b) women doctor / (c) in the hospital / (d) no error.",
+      "options": {
+        "a": "(a) There are only two",
+        "b": "(b) women doctor",
+        "c": "(c) in the hospital",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'doctor' with 'doctors'.",
+      "solution": "Replace 'doctor' with 'doctors'. In case of compound nouns starting with man or woman, both the nouns are made plural."
+    },
+    {
+      "q_num": 46,
+      "type": "spot_the_error",
+      "question": "(a) Rachna's and Nancy's / (b) father is / (c) my uncle / (d) no error.",
+      "options": {
+        "a": "(a) Rachna's and Nancy's",
+        "b": "(b) father is",
+        "c": "(c) my uncle",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"Rachna's\" with \"Rachna\".",
+      "solution": "Replace \"Rachna's\" with \"Rachna\". For common possession, use 's with the final word."
+    },
+    {
+      "q_num": 47,
+      "type": "spot_the_error",
+      "question": "(a) I was carrying / (b) someone's else / (c) bag / (d) no error.",
+      "options": {
+        "a": "(a) I was carrying",
+        "b": "(b) someone's else",
+        "c": "(c) bag",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"someone's else\" with \"someone else's\".",
+      "solution": "Replace \"someone's else\" with \"someone else's\". If else is used after 'someone', then 's will be used after else."
+    },
+    {
+      "q_num": 48,
+      "type": "spot_the_error",
+      "question": "(a) Have you heard about / (b) my sister's in law husband / (c) in the news? / (d) no error.",
+      "options": {
+        "a": "(a) Have you heard about",
+        "b": "(b) my sister's in law husband",
+        "c": "(c) in the news?",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"sister's in law\" with \"sister in law's\".",
+      "solution": "Replace \"sister's in law\" with \"sister in law's\". A singular compound noun shows possession with an apostrophe + s at the end of the word."
+    },
+    {
+      "q_num": 49,
+      "type": "spot_the_error",
+      "question": "(a) All the peoples / (b) in North America / (c) are egoistic / (d) no error.",
+      "options": {
+        "a": "(a) All the peoples",
+        "b": "(b) in North America",
+        "c": "(c) are egoistic",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'peoples' with 'people'.",
+      "solution": "Replace 'peoples' with 'people'. 'People' refers to all the people in a region in the general sense. 'Peoples' is used when referring to different ethnic, cultural or national groups within a region."
+    },
+    {
+      "q_num": 50,
+      "type": "spot_the_error",
+      "question": "(a) The leader, in the midst / (b) of a heated debate, defended / (c) his proposal with passion and eloquence / (d) no error.",
+      "options": {
+        "a": "(a) The leader, in the midst",
+        "b": "(b) of a heated debate, defended",
+        "c": "(c) his proposal with passion and eloquence",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error. The noun 'leader' is used for both Male and Female Genders and is used as singular and generally: he / his / him are used after it."
+    },
+    {
+      "q_num": 51,
+      "type": "spot_the_error",
+      "question": "(a) Keep your valuable secure / (b) in the hotel safe while / (c) exploring the vibrant city / (d) no error.",
+      "options": {
+        "a": "(a) Keep your valuable secure",
+        "b": "(b) in the hotel safe while",
+        "c": "(c) exploring the vibrant city",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'valuable' with 'valuables' .",
+      "solution": "Replace 'valuable' with 'valuables' . 'Valuable' is an adjective while 'valuables' refer to items such as money, jewelry or any important documents etc."
+    },
+    {
+      "q_num": 52,
+      "type": "spot_the_error",
+      "question": "(a) Amidst the bustling city, the police, / (b)equipped with state-of-the-art technology / (c) is tirelessly working to ensure the safety of the diverse population. / (d) no error.",
+      "options": {
+        "a": "(a) Amidst the bustling city, the police,",
+        "b": "(b) equipped with state-of-the-art technology",
+        "c": "(c) is tirelessly working to ensure the safety of the diverse population.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'is' with 'are'.",
+      "solution": "Replace 'is' with 'are'. 'Police' is a plural noun and hence always takes a plural verb."
+    },
+    {
+      "q_num": 53,
+      "type": "spot_the_error",
+      "question": "(a) She bought / (b)a beautiful handmade paper / (c)to write a letter to her friend / (d) no error",
+      "options": {
+        "a": "(a) She bought",
+        "b": "(b) a beautiful handmade paper",
+        "c": "(c) to write a letter to her friend",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error."
+    },
+    {
+      "q_num": 54,
+      "type": "spot_the_error",
+      "question": "(a) The artist carefully / (b) selected different types of / (c) papers for her origami creations / (d) no error.",
+      "options": {
+        "a": "(a) The artist carefully",
+        "b": "(b) selected different types of",
+        "c": "(c) papers for her origami creations",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'papers' with 'paper'.",
+      "solution": "Replace 'papers' with 'paper'. (Here, paper is a material noun, so it is treated as a singular noun.)"
+    },
+    {
+      "q_num": 55,
+      "type": "spot_the_error",
+      "question": "(a) The blacksmith / (b) forged intricate designs / (c) using irons in his workshop / (d) no error.",
+      "options": {
+        "a": "(a) The blacksmith",
+        "b": "(b) forged intricate designs",
+        "c": "(c) using irons in his workshop",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'irons' with 'iron'.",
+      "solution": "Replace 'irons' with 'iron'. Here, 'iron' is a material noun while irons means a fetter or chain."
+    },
+    {
+      "q_num": 56,
+      "type": "spot_the_error",
+      "question": "(a) The archaeologists discovered / (b) ancient artifacts buried / (c) in the grounds during the excavation / (d) no error.",
+      "options": {
+        "a": "(a) The archaeologists discovered",
+        "b": "(b) ancient artifacts buried",
+        "c": "(c) in the grounds during the excavation",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'grounds' with 'ground'.",
+      "solution": "Replace 'grounds' with 'ground'. Ground means the solid surface of the earth while grounds means the basis for something. === PAGE 18 ==="
+    },
+    {
+      "q_num": 57,
+      "type": "spot_the_error",
+      "question": "(a) Mary was at / (b) her wit end trying to fix / (c) the computer issue / (d) no error.",
+      "options": {
+        "a": "(a) Mary was at",
+        "b": "(b) her wit end trying to fix",
+        "c": "(c) the computer issue",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace wit with wit's .",
+      "solution": "Replace wit with wit's . \"At one's wit's end\" is an idiomatic phrase."
+    },
+    {
+      "q_num": 58,
+      "type": "spot_the_error",
+      "question": "(a) The two estranged friends kept each other / (b)at an arm length, reluctant to delve into the issues / (c)that had strained their relationship / (d) no error.",
+      "options": {
+        "a": "(a) The two estranged friends kept each other",
+        "b": "(b) at an arm length, reluctant to delve into the issues",
+        "c": "(c) that had strained their relationship",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace arm with arm's .",
+      "solution": "Replace arm with arm's . \"At an arm's length\" is an idiomatic phrase."
+    },
+    {
+      "q_num": 59,
+      "type": "spot_the_error",
+      "question": "(a) The Northern Lights, a breathtaking natural light / (b) display in the polar regions, is a remarkable / (c) phenomena that attracts tourists from around the world / (d) no error.",
+      "options": {
+        "a": "(a) The Northern Lights, a breathtaking natural light",
+        "b": "(b) display in the polar regions, is a remarkable",
+        "c": "(c) phenomena that attracts tourists from around the world",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'phenomena' with 'phenomenon'.",
+      "solution": "Replace 'phenomena' with 'phenomenon'. 'Phenomena' is the plural form of 'phenomenon'."
+    },
+    {
+      "q_num": 60,
+      "type": "spot_the_error",
+      "question": "(a) Ram, Shyam and Rahim / (b) are the MP / (c) of these areas / (d) no error.",
+      "options": {
+        "a": "(a) Ram, Shyam and Rahim",
+        "b": "(b) are the MP",
+        "c": "(c) of these areas",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'MP' with 'MPs'.",
+      "solution": "Replace 'MP' with 'MPs'. The plural form of MP is MPs."
+    },
+    {
+      "q_num": 61,
+      "type": "spot_the_error",
+      "question": "(a) Wearing his round spectacle, / (b) the professor delivered an engaging / (c) lecture to the students / (d) no error.",
+      "options": {
+        "a": "(a) Wearing his round spectacle,",
+        "b": "(b) the professor delivered an engaging",
+        "c": "(c) lecture to the students",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'spectacle' with 'spectacles'.",
+      "solution": "Replace 'spectacle' with 'spectacles'. Spectacles, goggles, binoculars, eyeglasses are always plural and a plural verb is used with them."
+    },
+    {
+      "q_num": 62,
+      "type": "spot_the_error",
+      "question": "(a) A series of lecture on / (b)advanced topics will be delivered by / (c)renowned experts during the academic conference / (d) no error.",
+      "options": {
+        "a": "(a) A series of lecture on",
+        "b": "(b) advanced topics will be delivered by",
+        "c": "(c) renowned experts during the academic conference",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'lecture' with 'lectures'.",
+      "solution": "Replace 'lecture' with 'lectures'. Here, the sentence talks about multiple lectures so plural form of lecture will be used."
+    },
+    {
+      "q_num": 63,
+      "type": "spot_the_error",
+      "question": "(a) A teacher in him emerged / (b) when he saw the kids struggling, / (c) and he stepped in to offer guidance. / (d) no error.",
+      "options": {
+        "a": "(a) A teacher in him emerged",
+        "b": "(b) when he saw the kids struggling,",
+        "c": "(c) and he stepped in to offer guidance.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'a' with 'the'.",
+      "solution": "Replace 'a' with 'the'. The use of 'the' with any common noun acts as the abstract noun and hence denotes that quality."
+    },
+    {
+      "q_num": 64,
+      "type": "spot_the_error",
+      "question": "(a) The soaps, infused with / (b) natural ingredients, left her skin / (c) feeling refreshed and nourished / (d) no error.",
+      "options": {
+        "a": "(a) The soaps, infused with",
+        "b": "(b) natural ingredients, left her skin",
+        "c": "(c) feeling refreshed and nourished",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'soaps' with 'soap'.",
+      "solution": "Replace 'soaps' with 'soap'. 'Soap' is an uncountable noun and never takes s / es with it."
+    },
+    {
+      "q_num": 65,
+      "type": "spot_the_error",
+      "question": "(a) She applied a thin layer of / (b) filths on the antique furniture to give it an aged appearance, / (c)a popular technique among restoration artists. / (d) no error.",
+      "options": {
+        "a": "(a) She applied a thin layer of",
+        "b": "(b) filths on the antique furniture to give it an aged appearance,",
+        "c": "(c) a popular technique among restoration artists.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'filths' with 'filth'.",
+      "solution": "Replace 'filths' with 'filth'. 'Filth' is an uncountable noun and never takes s / es with it."
+    },
+    {
+      "q_num": 66,
+      "type": "spot_the_error",
+      "question": "(a) His deep understanding of current event / (b)allowed him to navigate through the complex / (c) landscape of international politics. / (d) no error. === PAGE 14 ===",
+      "options": {
+        "a": "(a) His deep understanding of current event",
+        "b": "(b) allowed him to navigate through the complex",
+        "c": "(c) landscape of international politics.",
+        "d": "(d) no error. === PAGE 14 ==="
+      },
+      "answer": "a",
+      "correction": "Replace 'event' with 'events'.",
+      "solution": "Replace 'event' with 'events'. 'Current events' is a compound noun which is always used in the plural form."
+    },
+    {
+      "q_num": 67,
+      "type": "spot_the_error",
+      "question": "(a) The three thousand hens lay about thirty / (b) dozens of eggs every month / (c) which I sell in the market to make a living. / (d) No error",
+      "options": {
+        "a": "(a) The three thousand hens lay about thirty",
+        "b": "(b) dozens of eggs every month",
+        "c": "(c) which I sell in the market to make a living.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace 'dozens of eggs' with 'dozen eggs'.",
+      "solution": "Replace 'dozens of eggs' with 'dozen eggs'. When 'dozen' comes after a numeral noun it is always used as a singular noun."
+    },
+    {
+      "q_num": 68,
+      "type": "spot_the_error",
+      "question": "(a) I can do only / (b) your work, / (c) not somebody's else / (d) no error.",
+      "options": {
+        "a": "(a) I can do only",
+        "b": "(b) your work,",
+        "c": "(c) not somebody's else",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"somebody's else\" with \"somebody else's\".",
+      "solution": "Replace \"somebody's else\" with \"somebody else's\". If 'else' is used after 'somebody', then 's will be used after 'else'."
+    },
+    {
+      "q_num": 69,
+      "type": "spot_the_error",
+      "question": "(a) The Earth's atmosphere / (b) protects us from / (c) harmful solar radiation / (d) no error.",
+      "options": {
+        "a": "(a) The Earth's atmosphere",
+        "b": "(b) protects us from",
+        "c": "(c) harmful solar radiation",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error. Apostrophes can be used after a heavenly or celestial body."
+    },
+    {
+      "q_num": 70,
+      "type": "spot_the_error",
+      "question": "(a) The good in the store / (b) ranged from clothing and electronics / (c) to household items / (d) no error.",
+      "options": {
+        "a": "(a) The good in the store",
+        "b": "(b) ranged from clothing and electronics",
+        "c": "(c) to household items",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'good' with 'goods'.",
+      "solution": "Replace 'good' with 'goods'. 'Goods' means belongings while 'good' is related to beneficial."
+    },
+    {
+      "q_num": 71,
+      "type": "spot_the_error",
+      "question": "(a) The sand of the Sahara / (b) stretch for miles, creating a / (c) vast desert landscape. / (d) no error.",
+      "options": {
+        "a": "(a) The sand of the Sahara",
+        "b": "(b) stretch for miles, creating a",
+        "c": "(c) vast desert landscape.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'sand' with 'sands'.",
+      "solution": "Replace 'sand' with 'sands'. 'Sands' means a small desert while 'Sand' is related to a loose granular substance."
+    },
+    {
+      "q_num": 72,
+      "type": "spot_the_error",
+      "question": "(a) The cultural customs of / (b) exchanging gifts during festivals / (c) was deeply ingrained in their society / (d) no error.",
+      "options": {
+        "a": "(a) The cultural customs of",
+        "b": "(b) exchanging gifts during festivals",
+        "c": "(c) was deeply ingrained in their society",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'customs' with 'custom'.",
+      "solution": "Replace 'customs' with 'custom'. 'Custom' means tradition while 'customs' is related to a tax imposed on imports and exports of goods."
+    },
+    {
+      "q_num": 73,
+      "type": "spot_the_error",
+      "question": "(a) The Johnsons / (b) were seen at the local park, / (c) spending quality time together / (d) no error.",
+      "options": {
+        "a": "(a) The Johnsons",
+        "b": "(b) were seen at the local park,",
+        "c": "(c) spending quality time together",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error. 'The + plural surname' denotes a whole family and a plural verb is used with it."
+    },
+    {
+      "q_num": 74,
+      "type": "spot_the_error",
+      "question": "(a) The scientist recorded a crucial / (b) data in the experiment, contributing valuable / (c) information to the study. / (d) no error.",
+      "options": {
+        "a": "(a) The scientist recorded a crucial",
+        "b": "(b) data in the experiment, contributing valuable",
+        "c": "(c) information to the study.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'data' with 'datum'.",
+      "solution": "Replace 'data' with 'datum'. 'Data' is the plural form of 'datum'."
+    },
+    {
+      "q_num": 75,
+      "type": "spot_the_error",
+      "question": "(a) The meeting agenda outlined / (b) the key topics to be discussed, ensuring a / (c) focused and productive session / (d) no error.",
+      "options": {
+        "a": "(a) The meeting agenda outlined",
+        "b": "(b) the key topics to be discussed, ensuring a",
+        "c": "(c) focused and productive session",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error"
+    },
+    {
+      "q_num": 76,
+      "type": "spot_the_error",
+      "question": "(a) The advocate presented / (b) his case eloquently in the courtroom, / (c) persuading the jury / (d) no error.",
+      "options": {
+        "a": "(a) The advocate presented",
+        "b": "(b) his case eloquently in the courtroom,",
+        "c": "(c) persuading the jury",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error. The noun 'advocate' is used for both Male and Female Genders and is used as singular and generally: he / his / him are used after it."
+    },
+    {
+      "q_num": 77,
+      "type": "spot_the_error",
+      "question": "(a) The businesses of creating handcrafted / (b) chocolates turned into a sweet success, / (c) attracting customers from all over. / (d) no error.",
+      "options": {
+        "a": "(a) The businesses of creating handcrafted",
+        "b": "(b) chocolates turned into a sweet success,",
+        "c": "(c) attracting customers from all over.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'businesses' with 'business'.",
+      "solution": "Replace 'businesses' with 'business'. Business is an uncountable noun and hence written in singular form."
+    },
+    {
+      "q_num": 78,
+      "type": "spot_the_error",
+      "question": "(a) The cluster of kittens, with / (b) their playful antics, quickly became the / (c) center of attention in the neighborhood. / (d) no error.",
+      "options": {
+        "a": "(a) The cluster of kittens, with",
+        "b": "(b) their playful antics, quickly became the",
+        "c": "(c) center of attention in the neighborhood.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'cluster' with 'litter'.",
+      "solution": "Replace 'cluster' with 'litter'. A cluster of stars and a litter of puppies / pigs / kittens etc. - fixed group denoting words."
+    },
+    {
+      "q_num": 79,
+      "type": "spot_the_error",
+      "question": "(a) She carefully arranged / (b) a bunch of flowers, selecting / (c) each bloom with artistic precision. / (d) no error.",
+      "options": {
+        "a": "(a) She carefully arranged",
+        "b": "(b) a bunch of flowers, selecting",
+        "c": "(c) each bloom with artistic precision.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'bunch' with 'bouquet'.",
+      "solution": "Replace 'bunch' with 'bouquet'. A bouquet of flowers and a bunch of grapes, keys etc. are fixed group denoting words."
+    },
+    {
+      "q_num": 80,
+      "type": "spot_the_error",
+      "question": "(a) She confidently walked into the room, / (b) wearing high heel that accentuated her posture and / (c) added a touch of elegance to her ensemble. / (d) no error.",
+      "options": {
+        "a": "(a) She confidently walked into the room,",
+        "b": "(b) wearing high heel that accentuated her posture and",
+        "c": "(c) added a touch of elegance to her ensemble.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'heel' with 'heels'.",
+      "solution": "Replace 'heel' with 'heels'. 'High heels' is a compound noun which is always used in the plural form."
+    },
+    {
+      "q_num": 81,
+      "type": "spot_the_error",
+      "question": "(a) The hurricane caused significant / (b) damage to the coastal areas, destroying / (c) homes and infrastructure. / (d) no error",
+      "options": {
+        "a": "(a) The hurricane caused significant",
+        "b": "(b) damage to the coastal areas, destroying",
+        "c": "(c) homes and infrastructure.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error."
+    },
+    {
+      "q_num": 82,
+      "type": "spot_the_error",
+      "question": "(a) The clerk diligently organized / (b) the files on their desk, / (c) ensuring efficiency in the office. / (d) no error.",
+      "options": {
+        "a": "(a) The clerk diligently organized",
+        "b": "(b) the files on their desk,",
+        "c": "(c) ensuring efficiency in the office.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'their' with 'his'.",
+      "solution": "Replace 'their' with 'his'. The noun 'clerk' is used for both Male and Female Genders and is used as singular and generally: he / his / him are used after it."
+    },
+    {
+      "q_num": 83,
+      "type": "spot_the_error",
+      "question": "(a) The teacher was impressed with the / (b) congregation of students who actively / (c) participated in the classroom discussion. / (d) no error",
+      "options": {
+        "a": "(a) The teacher was impressed with the",
+        "b": "(b) congregation of students who actively",
+        "c": "(c) participated in the classroom discussion.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error."
+    },
+    {
+      "q_num": 84,
+      "type": "spot_the_error",
+      "question": "(a) The Brown always bring / (b) homemade treats to the / (c) community events / (d) no error.",
+      "options": {
+        "a": "(a) The Brown always bring",
+        "b": "(b) homemade treats to the",
+        "c": "(c) community events",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'brown' with 'browns'.",
+      "solution": "Replace 'brown' with 'browns'. 'The + plural surname' denotes a whole family and a plural verb is used with it."
+    },
+    {
+      "q_num": 85,
+      "type": "spot_the_error",
+      "question": "(a) Their lodging, nestled in the heart / (b) of the countryside, offered a peaceful retreat / (c)away from the bustling city / (d) no error.",
+      "options": {
+        "a": "(a) Their lodging, nestled in the heart",
+        "b": "(b) of the countryside, offered a peaceful retreat",
+        "c": "(c) away from the bustling city",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'lodging' with 'lodgings'.",
+      "solution": "Replace 'lodging' with 'lodgings'. 'Lodgings' is always written in plural form and takes a plural verb with it."
+    },
+    {
+      "q_num": 86,
+      "type": "spot_the_error",
+      "question": "(a) The archaeological site revealed / (b) the remain of an ancient civilization, offering / (c) insights into its culture and lifestyle / (d) no error.",
+      "options": {
+        "a": "(a) The archaeological site revealed",
+        "b": "(b) the remain of an ancient civilization, offering",
+        "c": "(c) insights into its culture and lifestyle",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'remain' with 'remains'.",
+      "solution": "Replace 'remain' with 'remains'. 'Remains' is always written in plural form and takes a plural verb with it. === PAGE 19 ==="
+    },
+    {
+      "q_num": 87,
+      "type": "spot_the_error",
+      "question": "(a) The school curriculum emphasizes the importance / (b) of social study, encouraging students to / (c) explore diverse cultures and societies.",
+      "options": {
+        "a": "(a) Part (a)",
+        "b": "(b) Part (b)",
+        "c": "(c) Part (c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace 'study' with 'studies'.",
+      "solution": "Replace 'study' with 'studies'. 'Social studies' is a compound noun which is always used in the plural form."
+    },
+    {
+      "q_num": 88,
+      "type": "spot_the_error",
+      "question": "(a) The insurance company / (b) compensated the policyholder for / (c) the damage incurred during the storm. / (d) no error.",
+      "options": {
+        "a": "(a) The insurance company",
+        "b": "(b) compensated the policyholder for",
+        "c": "(c) the damage incurred during the storm.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace 'damage' with 'damages'.",
+      "solution": "Replace 'damage' with 'damages'. 'Damage' means physical harm while damages refers to a sum of money claimed or awarded in compensation for a loss or an injury."
+    },
+    {
+      "q_num": 89,
+      "type": "spot_the_error",
+      "question": "(a) The prisoner / (b) wore heavy irons / (c) on his wrists and ankles. / (d) no error.",
+      "options": {
+        "a": "(a) The prisoner",
+        "b": "(b) wore heavy irons",
+        "c": "(c) on his wrists and ankles.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no error. Irons means fetters or chains."
+    },
+    {
+      "q_num": 90,
+      "type": "spot_the_error",
+      "question": "(a) The chef skillfully prepared an omelet / (b) using a fresh ova, creating / (c) a delightful breakfast dish / (d) no error.",
+      "options": {
+        "a": "(a) The chef skillfully prepared an omelet",
+        "b": "(b) using a fresh ova, creating",
+        "c": "(c) a delightful breakfast dish",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace 'ova' with 'ovum'.",
+      "solution": "Replace 'ova' with 'ovum'. The plural form of ovum is ova."
+    },
+    {
+      "q_num": 91,
+      "type": "spot_the_error",
+      "question": "(a) Wordsworth's poetries is characterized / (b) by his description of the beauty / (c) of Nature. / (d) no error",
+      "options": {
+        "a": "(a) Wordsworth's poetries is characterized",
+        "b": "(b) by his description of the beauty",
+        "c": "(c) of Nature.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"poetries\" with \"poetry\".",
+      "solution": "Replace \"poetries\" with \"poetry\". Rule : These nouns are used in singular form only and they are uncountable form only."
+    },
+    {
+      "q_num": 92,
+      "type": "spot_the_error",
+      "question": "(a) \"Please convey my best / (b) regard to the Boss\", the receptionist said to the peon / (c) of the Manager. / (d) no error",
+      "options": {
+        "a": "(a) \"Please convey my best",
+        "b": "(b) regard to the Boss\", the receptionist said to the peon",
+        "c": "(c) of the Manager.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"regard\" with \"regard.",
+      "solution": "Replace \"regard\" with \"regard.Regard is a verb and regards are best wishes used to express friendliness in greetings."
+    },
+    {
+      "q_num": 93,
+      "type": "spot_the_error",
+      "question": "(a) When he returned from Saudi Arab, / (b) he informed me that he had come here / (c) to do an urgent works. / (d) no error",
+      "options": {
+        "a": "(a) When he returned from Saudi Arab,",
+        "b": "(b) he informed me that he had come here",
+        "c": "(c) to do an urgent works.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Replace \"works\" by \"work\". \"Works\" means the compositions of a writer, painter etc."
+    },
+    {
+      "q_num": 94,
+      "type": "spot_the_error",
+      "question": "(a) This type of exercise / (b) is very helpful to the students preparing for the SSC CGL / (c) Examination at Pinnacle. / (d) no error === PAGE 15 ===",
+      "options": {
+        "a": "(a) This type of exercise",
+        "b": "(b) is very helpful to the students preparing for the SSC CGL",
+        "c": "(c) Examination at Pinnacle.",
+        "d": "(d) no error === PAGE 15 ==="
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error."
+    },
+    {
+      "q_num": 95,
+      "type": "spot_the_error",
+      "question": "(a) \"There are only certain boy / (b) that are sincere and they can do well in the examinations.\" / (c) said the class teacher. / (d) no error",
+      "options": {
+        "a": "(a) \"There are only certain boy",
+        "b": "(b) that are sincere and they can do well in the examinations.\"",
+        "c": "(c) said the class teacher.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "\"There are\" indicates that it is plural, so \"boys\" will be used instead of \"boy\"."
+    },
+    {
+      "q_num": 96,
+      "type": "spot_the_error",
+      "question": "(a) \"I have never seen such a lovely spectacles / (b) ever before\", said / (c) the passer-by. / (d) No error",
+      "options": {
+        "a": "(a) \"I have never seen such a lovely spectacles",
+        "b": "(b) ever before\", said",
+        "c": "(c) the passer-by.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"spectacles\" with \"spectacle\".",
+      "solution": "Replace \"spectacles\" with \"spectacle\". Here, we are talking about the view / event which the speaker is looking at. Therefore, spectacle will be used."
+    },
+    {
+      "q_num": 97,
+      "type": "spot_the_error",
+      "question": "(a) I do my best but I don't know why / (b) I do not get the desired / (c) mark in the examination / (d) no error",
+      "options": {
+        "a": "(a) I do my best but I don't know why",
+        "b": "(b) I do not get the desired",
+        "c": "(c) mark in the examination",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"mark\" with \"marks\".",
+      "solution": "Replace \"mark\" with \"marks\". Mark means to note something. Marks is what one scores in an exam."
+    },
+    {
+      "q_num": 98,
+      "type": "spot_the_error",
+      "question": "(a) You are among those luckiest man who / (b) get name and fame not by / (c) labour but by chance. / (d) no error",
+      "options": {
+        "a": "(a) You are among those luckiest man who",
+        "b": "(b) get name and fame not by",
+        "c": "(c) labour but by chance.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"man\" with \"men\".",
+      "solution": "Replace \"man\" with \"men\". \"Those\" will be followed by a plural noun / pronoun."
+    },
+    {
+      "q_num": 99,
+      "type": "spot_the_error",
+      "question": "(a) Not to speak of failure / (b) even an accident / (c) could not affect his high spirits. / (d) no error",
+      "options": {
+        "a": "(a) Not to speak of failure",
+        "b": "(b) even an accident",
+        "c": "(c) could not affect his high spirits.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"spirits\" with \"spirit\".",
+      "solution": "Replace \"spirits\" with \"spirit\". Spirit means enthusiasm."
+    },
+    {
+      "q_num": 100,
+      "type": "spot_the_error",
+      "question": "(a) \"I don't know about his whereabout, / (b) do you?\" / (c) he said to me. / (d) no error",
+      "options": {
+        "a": "(a) \"I don't know about his whereabout,",
+        "b": "(b) do you?\"",
+        "c": "(c) he said to me.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"whereabout\" with \"whereabouts\".",
+      "solution": "Replace \"whereabout\" with \"whereabouts\". \"Whereabouts\" means the place where someone or something is."
+    },
+    {
+      "q_num": 101,
+      "type": "spot_the_error",
+      "question": "(a) It is harmful to take cupsful / (b) of coffee / (c) five times a day. / (d) no error",
+      "options": {
+        "a": "(a) It is harmful to take cupsful",
+        "b": "(b) of coffee",
+        "c": "(c) five times a day.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"cupsful\" with \"cupfuls\".",
+      "solution": "Replace \"cupsful\" with \"cupfuls\". (Already covered)"
+    },
+    {
+      "q_num": 102,
+      "type": "spot_the_error",
+      "question": "(a) The present datas show that the birth rate / (b) has fallen down but not / (c) to the level of satisfaction. / (d) no error",
+      "options": {
+        "a": "(a) The present datas show that the birth rate",
+        "b": "(b) has fallen down but not",
+        "c": "(c) to the level of satisfaction.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"datas\" with \"data\" which is the correct word.",
+      "solution": "Replace \"datas\" with \"data\" which is the correct word. The correct plural form of the word is data."
+    },
+    {
+      "q_num": 103,
+      "type": "spot_the_error",
+      "question": "(a) He said that he always kept in his pocket / (b) a bundle of one hundred / (c) rupees notes. / (d) no error",
+      "options": {
+        "a": "(a) He said that he always kept in his pocket",
+        "b": "(b) a bundle of one hundred",
+        "c": "(c) rupees notes.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"one hundred rupees notes\" with \"one hundred rupee notes\" Rule : Words like dozen, score, pair, hundred, million when used after a numeral are used as singular.",
+      "solution": "Replace \"one hundred rupees notes\" with \"one hundred rupee notes\" Rule : Words like dozen, score, pair, hundred, million when used after a numeral are used as singular."
+    },
+    {
+      "q_num": 104,
+      "type": "spot_the_error",
+      "question": "(a) Running a five-stars hotel requires more / (b) money than what we have in / (c) our bank. / (d) No error",
+      "options": {
+        "a": "(a) Running a five-stars hotel requires more",
+        "b": "(b) money than what we have in",
+        "c": "(c) our bank.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"five-stars\" with \"five-star\".",
+      "solution": "Replace \"five-stars\" with \"five-star\". Rule : Hyphenated noun: Expressions such as a ten-rupee note, a two-mile walk, five-year old child, a three-day workshop, a twenty-man committee, are treated as singular. We don't pluralize them. Hyphenated words are not pluralized."
+    },
+    {
+      "q_num": 105,
+      "type": "spot_the_error",
+      "question": "(a) She gave me some informations / (b) I had been waiting for / (c) for the previous two months. / (d) no error",
+      "options": {
+        "a": "(a) She gave me some informations",
+        "b": "(b) I had been waiting for",
+        "c": "(c) for the previous two months.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"informations\" with \"information\".",
+      "solution": "Replace \"informations\" with \"information\". Rule : These nouns are used in singular form only and they are uncountable form only."
+    },
+    {
+      "q_num": 106,
+      "type": "spot_the_error",
+      "question": "(a) Your advices are the sign of your / (b) dirty mind and / (c) unacceptable approach. / (d) no error",
+      "options": {
+        "a": "(a) Your advices are the sign of your",
+        "b": "(b) dirty mind and",
+        "c": "(c) unacceptable approach.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"advices\" with \"advice\".",
+      "solution": "Replace \"advices\" with \"advice\". Advice does not have a plural. Rule : These nouns are used in singular form only and they are uncountable form only."
+    },
+    {
+      "q_num": 107,
+      "type": "spot_the_error",
+      "question": "(a) Cyclone is a natural phenomenon / (b) and nobody can / (c) stop it, for sure. / (d) no error",
+      "options": {
+        "a": "(a) Cyclone is a natural phenomenon",
+        "b": "(b) and nobody can",
+        "c": "(c) stop it, for sure.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error."
+    },
+    {
+      "q_num": 108,
+      "type": "spot_the_error",
+      "question": "(a) My uncle gave him a home work / (b) and advised him to read it / (c) at night. / (d) no error",
+      "options": {
+        "a": "(a) My uncle gave him a home work",
+        "b": "(b) and advised him to read it",
+        "c": "(c) at night.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Remove \"a\" before homework. Homework is an uncountable noun."
+    },
+    {
+      "q_num": 109,
+      "type": "spot_the_error",
+      "question": "(a) The sheafs of the plants were too heavy / (b) for me to / (c) carry on the head. / (d) no error",
+      "options": {
+        "a": "(a) The sheafs of the plants were too heavy",
+        "b": "(b) for me to",
+        "c": "(c) carry on the head.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"sheaf\" with \"sheaves\".",
+      "solution": "Replace \"sheaf\" with \"sheaves\".The plural of sheaf is sheaves."
+    },
+    {
+      "q_num": 110,
+      "type": "spot_the_error",
+      "question": "(a) All the Chiefs Ministers are responsible for the / (b) miserable condition of their / (c) states. / (d) no error",
+      "options": {
+        "a": "(a) All the Chiefs Ministers are responsible for the",
+        "b": "(b) miserable condition of their",
+        "c": "(c) states.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"Chiefs Ministers\" with \"Chief Ministers\".",
+      "solution": "Replace \"Chiefs Ministers\" with \"Chief Ministers\". To make plural forms of compound words, we add \"-s\" after the main word."
+    },
+    {
+      "q_num": 111,
+      "type": "spot_the_error",
+      "question": "(a) Three dozens bananas / (b) have been / (c) sold by me. / (d) no error",
+      "options": {
+        "a": "(a) Three dozens bananas",
+        "b": "(b) have been",
+        "c": "(c) sold by me.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"dozens\" with \"dozen\".",
+      "solution": "Replace \"dozens\" with \"dozen\". Rule : Words like dozen, score, pair, hundred, million when used after a numeral are used as singular."
+    },
+    {
+      "q_num": 112,
+      "type": "spot_the_error",
+      "question": "(a) We believe that a two-miles walk / (b) always keeps us / (c) healthy and fresh. / (d) no error",
+      "options": {
+        "a": "(a) We believe that a two-miles walk",
+        "b": "(b) always keeps us",
+        "c": "(c) healthy and fresh.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"a two miles walk\" with \"a two mile walk\".",
+      "solution": "Replace \"a two miles walk\" with \"a two mile walk\". Rule : Hyphenated noun: Expressions such as a ten-rupee note, a two-mile walk, a five-year old child, are treated as === PAGE 20 === singular. We don't pluralize them. Hyphenated words are not pluralized."
+    },
+    {
+      "q_num": 113,
+      "type": "spot_the_error",
+      "question": "(a) \"Language consists of several stratums\", / (b) said the teacher in his lecture on Language / (c) to the students. / (d) no error",
+      "options": {
+        "a": "(a) \"Language consists of several stratums\",",
+        "b": "(b) said the teacher in his lecture on Language",
+        "c": "(c) to the students.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"stratum\" with \"strata\".",
+      "solution": "Replace \"stratum\" with \"strata\".The correct plural form of the word is \"strata\"."
+    },
+    {
+      "q_num": 114,
+      "type": "spot_the_error",
+      "question": "(a) All his sister-in-laws are invited / (b) to attend the party / (c) on the eve of new year. / (d) no error",
+      "options": {
+        "a": "(a) All his sister-in-laws are invited",
+        "b": "(b) to attend the party",
+        "c": "(c) on the eve of new year.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"sister-in-laws\" with \"sisters-in-law\".",
+      "solution": "Replace \"sister-in-laws\" with \"sisters-in-law\".To make plural forms of compound words, we add \"-s\" after the main word."
+    },
+    {
+      "q_num": 115,
+      "type": "spot_the_error",
+      "question": "(a) A readymade cloths shop / (b) has opened in the locality / (c) near the crossroads. / (d) no error",
+      "options": {
+        "a": "(a) A readymade cloths shop",
+        "b": "(b) has opened in the locality",
+        "c": "(c) near the crossroads.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"cloths\" with \"clothes\".",
+      "solution": "Replace \"cloths\" with \"clothes\". Cloth is fabric or material formed by weaving, knitting etc which is unstitched. Its plural is \"cloths\". \"Clothes\" are stitched fabric that are worn. So, it will be available at a readymade clothes shop."
+    },
+    {
+      "q_num": 116,
+      "type": "spot_the_error",
+      "question": "(a) The wall of this building is / (b) fifty foot high and its paintings / (c) are very nice. / (d) no error",
+      "options": {
+        "a": "(a) The wall of this building is",
+        "b": "(b) fifty foot high and its paintings",
+        "c": "(c) are very nice.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"fifty foot\" with \"fifty feet\".",
+      "solution": "Replace \"fifty foot\" with \"fifty feet\". Foot is singular and feet is plural."
+    },
+    {
+      "q_num": 117,
+      "type": "spot_the_error",
+      "question": "(a) If a student needs advice about carrier, / (b) he should visit / (c) Pinnacle Institute. / (d) no error",
+      "options": {
+        "a": "(a) If a student needs advice about carrier,",
+        "b": "(b) he should visit",
+        "c": "(c) Pinnacle Institute.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Replace \"carrier\" by \"career\". Career is an occupation undertaken for a significant period of a person's life."
+    },
+    {
+      "q_num": 118,
+      "type": "spot_the_error",
+      "question": "(a) The beautiful surrounding of the fort / (b) attracted a large number of tourists / (c) coming from abroad. / (d) no error",
+      "options": {
+        "a": "(a) The beautiful surrounding of the fort",
+        "b": "(b) attracted a large number of tourists",
+        "c": "(c) coming from abroad.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"surrounding\" with \"surroundings\".",
+      "solution": "Replace \"surrounding\" with \"surroundings\".Surrounding is a verb and surroundings is a noun."
+    },
+    {
+      "q_num": 119,
+      "type": "spot_the_error",
+      "question": "(a) His means are very limited / (b) even then / (c) we have seen him happy. / (d) no error",
+      "options": {
+        "a": "(a) His means are very limited",
+        "b": "(b) even then",
+        "c": "(c) we have seen him happy.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "No error"
+    },
+    {
+      "q_num": 120,
+      "type": "spot_the_error",
+      "question": "(a) He uses a fine quality of oil / (b) so his hairs are / (c) black and attractive. / (d) no error",
+      "options": {
+        "a": "(a) He uses a fine quality of oil",
+        "b": "(b) so his hairs are",
+        "c": "(c) black and attractive.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"hairs\" with \"hair\".",
+      "solution": "Replace \"hairs\" with \"hair\". These nouns are used in singular form only and they are uncountable form only. Rule : These nouns are used in singular form only and they are uncountable form only."
+    }
+  ]
+}
