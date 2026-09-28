@@ -143,27 +143,56 @@ function cleanExplanationForTelegram(raw: string): string {
 export function encodeQuestionForSync(q: TelegramQuizQuestion): string {
   const min = {
     id: q.id,
-    q: q.question,
-    opts: q.options,
-    ans: q.correctOptionIndex,
-    exp: q.fullSolution || q.explanation || '',
+    q: (q.question || '').slice(0, 250),
+    opts: (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 60)),
+    ans: typeof q.correctOptionIndex === 'number' ? q.correctOptionIndex : 0,
+    exp: (q.explanation || q.fullSolution || '').slice(0, 300),
     sub: q.subject || 'general_awareness',
-    top: q.topic || 'Telegram Quiz',
+    top: (q.topic || 'Telegram Quiz').slice(0, 40),
   };
   return Buffer.from(JSON.stringify(min), 'utf8').toString('base64url');
 }
 
 export function encodeBatchForSync(questions: TelegramQuizQuestion[]): string {
-  const list = questions.slice(0, 30).map((q) => ({
+  const list = questions.slice(0, 15).map((q) => ({
     id: q.id,
-    q: q.question,
-    opts: q.options,
-    ans: q.correctOptionIndex,
-    exp: q.fullSolution || q.explanation || '',
+    q: (q.question || '').slice(0, 120),
+    opts: (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 40)),
+    ans: typeof q.correctOptionIndex === 'number' ? q.correctOptionIndex : 0,
+    exp: (q.fullSolution || q.explanation || '').slice(0, 140),
     sub: q.subject || 'general_awareness',
-    top: q.topic || 'Telegram Quiz',
+    top: (q.topic || 'Telegram Quiz').slice(0, 30),
   }));
   return Buffer.from(JSON.stringify(list), 'utf8').toString('base64url');
+}
+
+export function buildSafeWebSyncUrl(questions: TelegramQuizQuestion[]): string {
+  if (!questions || questions.length === 0) {
+    return 'https://ssc27.vercel.app/?view=botErrors';
+  }
+
+  // Telegram InlineKeyboardButton url has a strict 2048-byte limit; keep safely <= 1800 chars
+  let count = Math.min(questions.length, 12);
+  while (count > 0) {
+    const slice = questions.slice(0, count);
+    const payload = encodeBatchForSync(slice);
+    const candidateUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${payload}`;
+    if (candidateUrl.length <= 1800) {
+      return candidateUrl;
+    }
+    count--;
+  }
+
+  // Fallback to single question payload
+  if (questions.length > 0) {
+    const singlePayload = encodeQuestionForSync(questions[0]);
+    const singleUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${singlePayload}`;
+    if (singleUrl.length <= 1800) {
+      return singleUrl;
+    }
+  }
+
+  return 'https://ssc27.vercel.app/?view=botErrors';
 }
 
 // ----------------------------------------------------
@@ -264,9 +293,9 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
     const missed = (session.missedQuestions && session.missedQuestions.length > 0)
       ? session.missedQuestions
       : session.questions.slice(0, 25);
-    const syncParam = encodeBatchForSync(missed);
+    const syncUrl = buildSafeWebSyncUrl(missed);
     afterQuizKeyboard
-      .url(`📖 View ${missed.length} Solutions & AI Tutor on Web`, `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncParam}`)
+      .url(`📖 View Solutions & AI Tutor on Web`, syncUrl)
       .row();
   }
 
@@ -279,10 +308,23 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
 
   clearSession(session.userId);
 
-  await botInstance.api.sendMessage(session.chatId, report, {
-    parse_mode: 'Markdown',
-    reply_markup: afterQuizKeyboard,
-  });
+  try {
+    await botInstance.api.sendMessage(session.chatId, report, {
+      parse_mode: 'Markdown',
+      reply_markup: afterQuizKeyboard,
+    });
+  } catch (err: any) {
+    console.warn('[sendCompletionSummary] Markup error, falling back:', err?.message || err);
+    const safeKb = new InlineKeyboard()
+      .text('📁 Chapter Bank', 'nav_chapter_bank')
+      .text('🎯 Mock Errors', 'nav_mock_errors')
+      .row()
+      .text('⚡ Speed Lab', 'nav_speed_lab')
+      .text('🏠 Menu', 'nav_root');
+    await botInstance.api.sendMessage(session.chatId, report.replace(/[*_`]/g, ''), {
+      reply_markup: safeKb,
+    }).catch(() => {});
+  }
 }
 
 async function startQuizForUser(
@@ -343,23 +385,34 @@ async function handleSyncCommand(ctx: any) {
     return;
   }
 
-  const syncPayload = encodeBatchForSync(allMistakes);
-  const syncUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`;
+  const syncUrl = buildSafeWebSyncUrl(allMistakes);
 
   const keyboard = new InlineKeyboard()
-    .url(`🚀 Open & Sync ${allMistakes.length} Mistakes on Web`, syncUrl)
+    .url(`🚀 Open & Sync Mistakes on Web`, syncUrl)
     .row()
     .text('🏠 Main Menu', 'nav_root');
 
-  await ctx.reply(
-    `📱 *Telegram Mistake Sync Ready!*\n\n` +
-    `Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.\n\n` +
-    `Tap the button below to instantly import them into your **Web Notebook**, view full step-by-step solutions, and practice with the AI Tutor!`,
-    {
-      parse_mode: 'Markdown',
-      reply_markup: keyboard,
-    }
-  );
+  try {
+    await ctx.reply(
+      `📱 *Telegram Mistake Sync Ready!*\n\n` +
+      `Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.\n\n` +
+      `Tap the button below to instantly import them into your **Web Notebook**, view full step-by-step solutions, and practice with the AI Tutor!`,
+      {
+        parse_mode: 'Markdown',
+        reply_markup: keyboard,
+      }
+    );
+  } catch (syncErr: any) {
+    console.warn('[handleSyncCommand] Error sending sync keyboard, falling back:', syncErr?.message || syncErr);
+    await ctx.reply(
+      `📱 *Telegram Mistake Sync Ready!*\n\n` +
+      `Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.\n\n` +
+      `Open your Web Notebook at https://ssc27.vercel.app/?view=botErrors to review!`,
+      {
+        reply_markup: new InlineKeyboard().url('🚀 Open Web Notebook', 'https://ssc27.vercel.app/?view=botErrors').row().text('🏠 Main Menu', 'nav_root'),
+      }
+    ).catch(() => {});
+  }
 }
 
 bot.command(['start', 'menu'], async (ctx) => {
@@ -892,8 +945,8 @@ bot.callbackQuery('nav_quiz_mistakes', async (ctx) => {
 
   const allUserMistakes = getUserMistakes(ctx.from.id, 'all');
   if (allUserMistakes.length > 0) {
-    const syncPayload = encodeBatchForSync(allUserMistakes);
-    kb.url('📖 View Full Solutions on Web', `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`).row();
+    const syncUrl = buildSafeWebSyncUrl(allUserMistakes);
+    kb.url('📖 View Full Solutions on Web', syncUrl).row();
   }
 
   for (const s of stats) {
@@ -908,11 +961,30 @@ bot.callbackQuery('nav_quiz_mistakes', async (ctx) => {
     `You have *${totalMistakes}* combined mistakes from your *Chapter Bank* and *Mock Errors* practice.\n\n` +
     `Drill all your mistakes or select a subject below:`;
 
-  await ctx.editMessageText(text, {
-    parse_mode: 'Markdown',
-    reply_markup: kb,
-  });
-  await ctx.answerCallbackQuery();
+  try {
+    await ctx.editMessageText(text, {
+      parse_mode: 'Markdown',
+      reply_markup: kb,
+    });
+  } catch (err: any) {
+    console.warn('[nav_quiz_mistakes] Error editing message with rich markup, falling back:', err?.message || err);
+    const safeKb = new InlineKeyboard();
+    safeKb.text(`🔥 Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`)
+      .text('⚡ Quick 10', `qm_run_all:10`)
+      .row();
+    safeKb.url('📖 View Mistakes on Web', 'https://ssc27.vercel.app/?view=botErrors').row();
+    for (const s of stats) {
+      if (s.total > 0) {
+        safeKb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
+      }
+    }
+    safeKb.text('⬅️ Back to Menu', 'nav_root');
+    await ctx.editMessageText(text, {
+      parse_mode: 'Markdown',
+      reply_markup: safeKb,
+    }).catch(() => {});
+  }
+  await ctx.answerCallbackQuery().catch(() => {});
 });
 
 // Drill All Mistakes across all subjects
@@ -1525,7 +1597,9 @@ bot.on('poll_answer', async (ctx) => {
 
     // Deep-link to Web solution & AI mentor with instant question sync payload
     const syncParam = encodeQuestionForSync(currentQ);
-    const webMistakeUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`;
+    const webMistakeUrl = (syncParam && syncParam.length < 1700)
+      ? `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`
+      : 'https://ssc27.vercel.app/?view=botErrors';
     const correctOpt = (currentQ.options && currentQ.options[currentQ.correctOptionIndex]) ? currentQ.options[currentQ.correctOptionIndex].trim() : '';
     const safeCorrectOpt = correctOpt.replace(/([*_`[\]()])/g, '\\$1');
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
@@ -1553,7 +1627,7 @@ bot.on('poll_answer', async (ctx) => {
         session.chatId,
         feedbackMsg.replace(/[*_`]/g, ''),
         {
-          reply_markup: new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl),
+          reply_markup: new InlineKeyboard().url('📖 Open Web Notebook', 'https://ssc27.vercel.app/?view=botErrors'),
         }
       ).catch(() => {});
     });

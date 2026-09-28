@@ -4,13 +4,22 @@ import path from "path";
 import os from "os";
 var TMP_FILE = path.join(os.tmpdir(), "cgl_quiz_mistakes.json");
 var userMistakesMap = /* @__PURE__ */ new Map();
+function normalizeUserId(rawId) {
+  if (typeof rawId === "number" && !isNaN(rawId)) return rawId;
+  if (!rawId) return 0;
+  const num = Number(rawId);
+  if (!isNaN(num)) return num;
+  return 0;
+}
 function saveToDisk() {
   try {
     const serialized = {};
     for (const [userId, map] of userMistakesMap.entries()) {
-      serialized[String(userId)] = Array.from(map.values());
+      const uidKey = String(normalizeUserId(userId));
+      if (!serialized[uidKey]) serialized[uidKey] = [];
+      serialized[uidKey].push(...Array.from(map.values()));
     }
-    fs.writeFileSync(TMP_FILE, JSON.stringify(serialized), "utf8");
+    fs.writeFileSync(TMP_FILE, JSON.stringify(serialized, null, 2), "utf8");
   } catch (err) {
     console.error("[MistakeStore] Error saving quiz mistakes to disk:", err);
   }
@@ -23,12 +32,17 @@ function loadFromDisk() {
       if (parsed && typeof parsed === "object") {
         for (const [userIdStr, list] of Object.entries(parsed)) {
           if (!Array.isArray(list)) continue;
-          const uid = Number(userIdStr);
-          const map = /* @__PURE__ */ new Map();
-          for (const item of list) {
-            map.set(item.id, item);
+          const uid = normalizeUserId(userIdStr);
+          let map = userMistakesMap.get(uid);
+          if (!map) {
+            map = /* @__PURE__ */ new Map();
+            userMistakesMap.set(uid, map);
           }
-          userMistakesMap.set(uid, map);
+          for (const item of list) {
+            if (item && item.id) {
+              map.set(item.id, item);
+            }
+          }
         }
       }
     }
@@ -221,8 +235,9 @@ function classifySubjectAndTopic(q) {
   }
   return { subject, topic, topicSlug };
 }
-function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
+function recordMistake(rawUserId, q, source = "telegram_quiz", isCorrect = false) {
   if (isQuestionDeleted(q.id, q.question)) return;
+  const userId = normalizeUserId(rawUserId);
   let userMap = userMistakesMap.get(userId);
   if (!userMap) {
     userMap = /* @__PURE__ */ new Map();
@@ -262,7 +277,7 @@ function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
   }
   saveToDisk();
 }
-function deleteMistake(userId, questionId, questionText) {
+function deleteMistake(rawUserId, questionId, questionText) {
   if (questionId) deletedQuestionsSet.add(questionId);
   if (questionText) deletedQuestionsSet.add(questionText.trim().toLowerCase());
   saveDeletedToDisk();
@@ -295,7 +310,8 @@ function getAllRecordedMistakes(filter = "all", subject, topicSlug) {
   }
   return results.sort((a, b) => b.timestamp - a.timestamp);
 }
-function getMistakeStats(userId, filter = "all") {
+function getMistakeStats(rawUserId, filter = "all") {
+  const userId = normalizeUserId(rawUserId);
   const subjects = [
     { id: "english", shortCode: "eng", title: "\u{1F4D6} English" },
     { id: "mathematics", shortCode: "math", title: "\u{1F4D0} Mathematics" },
@@ -345,7 +361,8 @@ function getMistakeStats(userId, filter = "all") {
     };
   });
 }
-function getTotalMistakesSummary(userId) {
+function getTotalMistakesSummary(rawUserId) {
+  const userId = normalizeUserId(rawUserId);
   const allStats = getMistakeStats(userId, "all");
   const tgStats = getMistakeStats(userId, "telegram_quiz");
   const webStats = getMistakeStats(userId, "website_quiz");
@@ -367,7 +384,7 @@ async function handler(req, res) {
   if (req.method === "GET") {
     try {
       const { filter = "all", subject, topicSlug, userId } = req.query || {};
-      const numUserId = userId ? Number(userId) : 0;
+      const numUserId = normalizeUserId(userId);
       const mistakes = getAllRecordedMistakes(filter, subject, topicSlug);
       const stats = getMistakeStats(numUserId, filter);
       const summary = getTotalMistakesSummary(numUserId);
@@ -414,7 +431,7 @@ async function handler(req, res) {
         }
         const correctIndex = opts.indexOf(correctOpt) >= 0 ? opts.indexOf(correctOpt) : 0;
         recordMistake(
-          userId ? Number(userId) : 0,
+          normalizeUserId(userId),
           {
             id: String(questionData.id || `web_quiz_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`),
             question: questionData.question,

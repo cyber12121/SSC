@@ -434,9 +434,14 @@ export function loadQuestionsFromSet(
       chosen = shuffle(rawQs).slice(0, 10);
     }
 
+    const relTag = path.relative(CHAPTER_BANK_DIR, filePath)
+      .replace(/\\/g, '_')
+      .replace(/\//g, '_')
+      .replace(/\.json$/i, '');
+
     return chosen.map((q, idx) =>
       sanitizeTelegramQuiz({
-        id: q.id || `set_q_${idx}_${Date.now()}`,
+        id: q.id || `${relTag}_q${q.q_num || idx + 1}`,
         question: q.question || q.questionText,
         options: q.options,
         correctOption: q.answer || q.correctOption || q.correct_answer,

@@ -43,13 +43,23 @@ const TMP_FILE = path.join(os.tmpdir(), 'cgl_quiz_mistakes.json');
 // In-memory cache: userId -> Map<questionId, RecordedMistake>
 const userMistakesMap = new Map<number, Map<string, RecordedMistake>>();
 
+export function normalizeUserId(rawId: any): number {
+  if (typeof rawId === 'number' && !isNaN(rawId)) return rawId;
+  if (!rawId) return 0;
+  const num = Number(rawId);
+  if (!isNaN(num)) return num;
+  return 0;
+}
+
 function saveToDisk() {
   try {
     const serialized: Record<string, RecordedMistake[]> = {};
     for (const [userId, map] of userMistakesMap.entries()) {
-      serialized[String(userId)] = Array.from(map.values());
+      const uidKey = String(normalizeUserId(userId));
+      if (!serialized[uidKey]) serialized[uidKey] = [];
+      serialized[uidKey].push(...Array.from(map.values()));
     }
-    fs.writeFileSync(TMP_FILE, JSON.stringify(serialized), 'utf8');
+    fs.writeFileSync(TMP_FILE, JSON.stringify(serialized, null, 2), 'utf8');
   } catch (err) {
     console.error('[MistakeStore] Error saving quiz mistakes to disk:', err);
   }
@@ -63,12 +73,17 @@ function loadFromDisk() {
       if (parsed && typeof parsed === 'object') {
         for (const [userIdStr, list] of Object.entries(parsed)) {
           if (!Array.isArray(list)) continue;
-          const uid = Number(userIdStr);
-          const map = new Map<string, RecordedMistake>();
-          for (const item of list) {
-            map.set(item.id, item);
+          const uid = normalizeUserId(userIdStr);
+          let map = userMistakesMap.get(uid);
+          if (!map) {
+            map = new Map<string, RecordedMistake>();
+            userMistakesMap.set(uid, map);
           }
-          userMistakesMap.set(uid, map);
+          for (const item of list) {
+            if (item && item.id) {
+              map.set(item.id, item);
+            }
+          }
         }
       }
     }
@@ -237,13 +252,14 @@ export function classifySubjectAndTopic(q: TelegramQuizQuestion): {
 // ----------------------------------------------------
 
 export function recordMistake(
-  userId: number,
+  rawUserId: any,
   q: TelegramQuizQuestion,
   source: MistakeSource = 'telegram_quiz',
   isCorrect = false
 ) {
   if (isQuestionDeleted(q.id, q.question)) return;
 
+  const userId = normalizeUserId(rawUserId);
   let userMap = userMistakesMap.get(userId);
   if (!userMap) {
     userMap = new Map<string, RecordedMistake>();
@@ -290,8 +306,12 @@ export function recordMistake(
   saveToDisk();
 }
 
-export function markMistakeMastered(userId: number, questionId: string, questionText: string = '') {
-  const userMap = userMistakesMap.get(userId);
+export function markMistakeMastered(rawUserId: any, questionId: string, questionText: string = '') {
+  const userId = normalizeUserId(rawUserId);
+  let userMap = userMistakesMap.get(userId);
+  if (!userMap && userId !== 0) {
+    userMap = userMistakesMap.get(0);
+  }
   if (!userMap) return;
 
   if (userMap.has(questionId)) {
@@ -313,7 +333,7 @@ export function markMistakeMastered(userId: number, questionId: string, question
   }
 }
 
-export function deleteMistake(userId: number | undefined, questionId: string, questionText?: string) {
+export function deleteMistake(rawUserId: any, questionId: string, questionText?: string) {
   if (questionId) deletedQuestionsSet.add(questionId);
   if (questionText) deletedQuestionsSet.add(questionText.trim().toLowerCase());
   saveDeletedToDisk();
@@ -338,11 +358,12 @@ export function deleteMistake(userId: number | undefined, questionId: string, qu
 // ----------------------------------------------------
 
 export function getUserMistakes(
-  userId: number,
+  rawUserId: any,
   filter: MistakeFilter = 'all',
   subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness' | undefined = undefined,
   topicSlug: string = ''
 ): TelegramQuizQuestion[] {
+  const userId = normalizeUserId(rawUserId);
   const results: TelegramQuizQuestion[] = [];
   const seenQIds = new Set<string>();
 
@@ -413,7 +434,7 @@ export function getAllRecordedMistakes(
 }
 
 export function getMistakeStats(
-  userId: number,
+  rawUserId: any,
   filter: MistakeFilter = 'all'
 ): {
   subjectId: 'english' | 'mathematics' | 'reasoning' | 'general_awareness';
@@ -422,6 +443,7 @@ export function getMistakeStats(
   total: number;
   topics: { topic: string; slug: string; count: number }[];
 }[] {
+  const userId = normalizeUserId(rawUserId);
   const subjects: {
     id: 'english' | 'mathematics' | 'reasoning' | 'general_awareness';
     shortCode: 'eng' | 'math' | 'reas' | 'ga';
@@ -483,11 +505,12 @@ export function getMistakeStats(
   });
 }
 
-export function getTotalMistakesSummary(userId: number): {
+export function getTotalMistakesSummary(rawUserId: any): {
   all: number;
   telegram_quiz: number;
   website_quiz: number;
 } {
+  const userId = normalizeUserId(rawUserId);
   const allStats = getMistakeStats(userId, 'all');
   const tgStats = getMistakeStats(userId, 'telegram_quiz');
   const webStats = getMistakeStats(userId, 'website_quiz');

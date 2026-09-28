@@ -7,6 +7,7 @@ import {
   getDeletedQuestionIds,
   getAllRecordedMistakes,
   recordMistake,
+  normalizeUserId,
 } from './mistakeStore';
 
 export default async function handler(req: any, res: any) {
@@ -22,7 +23,7 @@ export default async function handler(req: any, res: any) {
   if (req.method === 'GET') {
     try {
       const { filter = 'all', subject, topicSlug, userId } = req.query || {};
-      const numUserId = userId ? Number(userId) : 0;
+      const numUserId = normalizeUserId(userId);
 
       const mistakes = getAllRecordedMistakes(filter as any, subject as any, topicSlug as string);
       const stats = getMistakeStats(numUserId, filter as any);
@@ -76,7 +77,7 @@ export default async function handler(req: any, res: any) {
         }
         const correctIndex = opts.indexOf(correctOpt) >= 0 ? opts.indexOf(correctOpt) : 0;
         recordMistake(
-          userId ? Number(userId) : 0,
+          normalizeUserId(userId),
           {
             id: String(questionData.id || `web_quiz_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`),
             question: questionData.question,

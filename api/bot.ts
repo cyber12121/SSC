@@ -5160,9 +5160,10 @@ function loadQuestionsFromSet(filePath, mode = "all") {
     if (mode === "10" && rawQs.length > 10) {
       chosen = shuffle(rawQs).slice(0, 10);
     }
+    const relTag = path2.relative(CHAPTER_BANK_DIR2, filePath).replace(/\\/g, "_").replace(/\//g, "_").replace(/\.json$/i, "");
     return chosen.map(
       (q, idx) => sanitizeTelegramQuiz({
-        id: q.id || `set_q_${idx}_${Date.now()}`,
+        id: q.id || `${relTag}_q${q.q_num || idx + 1}`,
         question: q.question || q.questionText,
         options: q.options,
         correctOption: q.answer || q.correctOption || q.correct_answer,
@@ -5306,13 +5307,22 @@ import path4 from "path";
 import os2 from "os";
 var TMP_FILE2 = path4.join(os2.tmpdir(), "cgl_quiz_mistakes.json");
 var userMistakesMap = /* @__PURE__ */ new Map();
+function normalizeUserId(rawId) {
+  if (typeof rawId === "number" && !isNaN(rawId)) return rawId;
+  if (!rawId) return 0;
+  const num = Number(rawId);
+  if (!isNaN(num)) return num;
+  return 0;
+}
 function saveToDisk2() {
   try {
     const serialized = {};
     for (const [userId, map] of userMistakesMap.entries()) {
-      serialized[String(userId)] = Array.from(map.values());
+      const uidKey = String(normalizeUserId(userId));
+      if (!serialized[uidKey]) serialized[uidKey] = [];
+      serialized[uidKey].push(...Array.from(map.values()));
     }
-    fs4.writeFileSync(TMP_FILE2, JSON.stringify(serialized), "utf8");
+    fs4.writeFileSync(TMP_FILE2, JSON.stringify(serialized, null, 2), "utf8");
   } catch (err) {
     console.error("[MistakeStore] Error saving quiz mistakes to disk:", err);
   }
@@ -5325,12 +5335,17 @@ function loadFromDisk2() {
       if (parsed && typeof parsed === "object") {
         for (const [userIdStr, list] of Object.entries(parsed)) {
           if (!Array.isArray(list)) continue;
-          const uid = Number(userIdStr);
-          const map = /* @__PURE__ */ new Map();
-          for (const item of list) {
-            map.set(item.id, item);
+          const uid = normalizeUserId(userIdStr);
+          let map = userMistakesMap.get(uid);
+          if (!map) {
+            map = /* @__PURE__ */ new Map();
+            userMistakesMap.set(uid, map);
           }
-          userMistakesMap.set(uid, map);
+          for (const item of list) {
+            if (item && item.id) {
+              map.set(item.id, item);
+            }
+          }
         }
       }
     }
@@ -5510,8 +5525,9 @@ function classifySubjectAndTopic(q) {
   }
   return { subject, topic, topicSlug };
 }
-function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
+function recordMistake(rawUserId, q, source = "telegram_quiz", isCorrect = false) {
   if (isQuestionDeleted(q.id, q.question)) return;
+  const userId = normalizeUserId(rawUserId);
   let userMap = userMistakesMap.get(userId);
   if (!userMap) {
     userMap = /* @__PURE__ */ new Map();
@@ -5551,8 +5567,12 @@ function recordMistake(userId, q, source = "telegram_quiz", isCorrect = false) {
   }
   saveToDisk2();
 }
-function markMistakeMastered(userId, questionId, questionText = "") {
-  const userMap = userMistakesMap.get(userId);
+function markMistakeMastered(rawUserId, questionId, questionText = "") {
+  const userId = normalizeUserId(rawUserId);
+  let userMap = userMistakesMap.get(userId);
+  if (!userMap && userId !== 0) {
+    userMap = userMistakesMap.get(0);
+  }
   if (!userMap) return;
   if (userMap.has(questionId)) {
     const m = userMap.get(questionId);
@@ -5571,7 +5591,7 @@ function markMistakeMastered(userId, questionId, questionText = "") {
     }
   }
 }
-function deleteMistake(userId, questionId, questionText) {
+function deleteMistake(rawUserId, questionId, questionText) {
   if (questionId) deletedQuestionsSet.add(questionId);
   if (questionText) deletedQuestionsSet.add(questionText.trim().toLowerCase());
   saveDeletedToDisk();
@@ -5588,7 +5608,8 @@ function deleteMistake(userId, questionId, questionText) {
   }
   saveToDisk2();
 }
-function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = "") {
+function getUserMistakes(rawUserId, filter = "all", subject = void 0, topicSlug = "") {
+  const userId = normalizeUserId(rawUserId);
   const results = [];
   const seenQIds = /* @__PURE__ */ new Set();
   const checkAndPush = (item) => {
@@ -5625,7 +5646,8 @@ function getUserMistakes(userId, filter = "all", subject = void 0, topicSlug = "
   }
   return results;
 }
-function getMistakeStats(userId, filter = "all") {
+function getMistakeStats(rawUserId, filter = "all") {
+  const userId = normalizeUserId(rawUserId);
   const subjects = [
     { id: "english", shortCode: "eng", title: "\u{1F4D6} English" },
     { id: "mathematics", shortCode: "math", title: "\u{1F4D0} Mathematics" },
@@ -40751,26 +40773,49 @@ function cleanExplanationForTelegram(raw) {
 function encodeQuestionForSync(q) {
   const min = {
     id: q.id,
-    q: q.question,
-    opts: q.options,
-    ans: q.correctOptionIndex,
-    exp: q.fullSolution || q.explanation || "",
+    q: (q.question || "").slice(0, 250),
+    opts: (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 60)),
+    ans: typeof q.correctOptionIndex === "number" ? q.correctOptionIndex : 0,
+    exp: (q.explanation || q.fullSolution || "").slice(0, 300),
     sub: q.subject || "general_awareness",
-    top: q.topic || "Telegram Quiz"
+    top: (q.topic || "Telegram Quiz").slice(0, 40)
   };
   return Buffer.from(JSON.stringify(min), "utf8").toString("base64url");
 }
 function encodeBatchForSync(questions) {
-  const list = questions.slice(0, 30).map((q) => ({
+  const list = questions.slice(0, 15).map((q) => ({
     id: q.id,
-    q: q.question,
-    opts: q.options,
-    ans: q.correctOptionIndex,
-    exp: q.fullSolution || q.explanation || "",
+    q: (q.question || "").slice(0, 120),
+    opts: (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 40)),
+    ans: typeof q.correctOptionIndex === "number" ? q.correctOptionIndex : 0,
+    exp: (q.fullSolution || q.explanation || "").slice(0, 140),
     sub: q.subject || "general_awareness",
-    top: q.topic || "Telegram Quiz"
+    top: (q.topic || "Telegram Quiz").slice(0, 30)
   }));
   return Buffer.from(JSON.stringify(list), "utf8").toString("base64url");
+}
+function buildSafeWebSyncUrl(questions) {
+  if (!questions || questions.length === 0) {
+    return "https://ssc27.vercel.app/?view=botErrors";
+  }
+  let count = Math.min(questions.length, 12);
+  while (count > 0) {
+    const slice = questions.slice(0, count);
+    const payload = encodeBatchForSync(slice);
+    const candidateUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${payload}`;
+    if (candidateUrl.length <= 1800) {
+      return candidateUrl;
+    }
+    count--;
+  }
+  if (questions.length > 0) {
+    const singlePayload = encodeQuestionForSync(questions[0]);
+    const singleUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${singlePayload}`;
+    if (singleUrl.length <= 1800) {
+      return singleUrl;
+    }
+  }
+  return "https://ssc27.vercel.app/?view=botErrors";
 }
 async function sendCurrentQuestion(botInstance, session) {
   if (session.currentIndex >= session.questions.length) {
@@ -40851,15 +40896,24 @@ _${comment}_`;
   const afterQuizKeyboard = new InlineKeyboard();
   if (score < total) {
     const missed = session.missedQuestions && session.missedQuestions.length > 0 ? session.missedQuestions : session.questions.slice(0, 25);
-    const syncParam = encodeBatchForSync(missed);
-    afterQuizKeyboard.url(`\u{1F4D6} View ${missed.length} Solutions & AI Tutor on Web`, `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncParam}`).row();
+    const syncUrl = buildSafeWebSyncUrl(missed);
+    afterQuizKeyboard.url(`\u{1F4D6} View Solutions & AI Tutor on Web`, syncUrl).row();
   }
   afterQuizKeyboard.text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
   clearSession(session.userId);
-  await botInstance.api.sendMessage(session.chatId, report, {
-    parse_mode: "Markdown",
-    reply_markup: afterQuizKeyboard
-  });
+  try {
+    await botInstance.api.sendMessage(session.chatId, report, {
+      parse_mode: "Markdown",
+      reply_markup: afterQuizKeyboard
+    });
+  } catch (err) {
+    console.warn("[sendCompletionSummary] Markup error, falling back:", err?.message || err);
+    const safeKb = new InlineKeyboard().text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
+    await botInstance.api.sendMessage(session.chatId, report.replace(/[*_`]/g, ""), {
+      reply_markup: safeKb
+    }).catch(() => {
+    });
+  }
 }
 async function startQuizForUser(userId, chatId, title, questions) {
   if (!questions || questions.length === 0) {
@@ -40904,20 +40958,34 @@ No mistakes recorded on Telegram yet! When you practice questions in any quiz fr
     );
     return;
   }
-  const syncPayload = encodeBatchForSync(allMistakes);
-  const syncUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`;
-  const keyboard = new InlineKeyboard().url(`\u{1F680} Open & Sync ${allMistakes.length} Mistakes on Web`, syncUrl).row().text("\u{1F3E0} Main Menu", "nav_root");
-  await ctx.reply(
-    `\u{1F4F1} *Telegram Mistake Sync Ready!*
+  const syncUrl = buildSafeWebSyncUrl(allMistakes);
+  const keyboard = new InlineKeyboard().url(`\u{1F680} Open & Sync Mistakes on Web`, syncUrl).row().text("\u{1F3E0} Main Menu", "nav_root");
+  try {
+    await ctx.reply(
+      `\u{1F4F1} *Telegram Mistake Sync Ready!*
 
 Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.
 
 Tap the button below to instantly import them into your **Web Notebook**, view full step-by-step solutions, and practice with the AI Tutor!`,
-    {
-      parse_mode: "Markdown",
-      reply_markup: keyboard
-    }
-  );
+      {
+        parse_mode: "Markdown",
+        reply_markup: keyboard
+      }
+    );
+  } catch (syncErr) {
+    console.warn("[handleSyncCommand] Error sending sync keyboard, falling back:", syncErr?.message || syncErr);
+    await ctx.reply(
+      `\u{1F4F1} *Telegram Mistake Sync Ready!*
+
+Found *${allMistakes.length}* question(s) recorded from your Telegram quiz practice.
+
+Open your Web Notebook at https://ssc27.vercel.app/?view=botErrors to review!`,
+      {
+        reply_markup: new InlineKeyboard().url("\u{1F680} Open Web Notebook", "https://ssc27.vercel.app/?view=botErrors").row().text("\u{1F3E0} Main Menu", "nav_root")
+      }
+    ).catch(() => {
+    });
+  }
 }
 bot.command(["start", "menu"], async (ctx) => {
   if (ctx.match && ctx.match.trim() === "sync") {
@@ -41311,8 +41379,8 @@ Start practicing from /menu, and any missed questions will appear here!`,
   kb.text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row();
   const allUserMistakes = getUserMistakes(ctx.from.id, "all");
   if (allUserMistakes.length > 0) {
-    const syncPayload = encodeBatchForSync(allUserMistakes);
-    kb.url("\u{1F4D6} View Full Solutions on Web", `https://ssc27.vercel.app/?view=botErrors&syncBatch=${syncPayload}`).row();
+    const syncUrl = buildSafeWebSyncUrl(allUserMistakes);
+    kb.url("\u{1F4D6} View Full Solutions on Web", syncUrl).row();
   }
   for (const s of stats) {
     if (s.total > 0) {
@@ -41325,11 +41393,30 @@ Start practicing from /menu, and any missed questions will appear here!`,
 You have *${totalMistakes}* combined mistakes from your *Chapter Bank* and *Mock Errors* practice.
 
 Drill all your mistakes or select a subject below:`;
-  await ctx.editMessageText(text, {
-    parse_mode: "Markdown",
-    reply_markup: kb
+  try {
+    await ctx.editMessageText(text, {
+      parse_mode: "Markdown",
+      reply_markup: kb
+    });
+  } catch (err) {
+    console.warn("[nav_quiz_mistakes] Error editing message with rich markup, falling back:", err?.message || err);
+    const safeKb = new InlineKeyboard();
+    safeKb.text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row();
+    safeKb.url("\u{1F4D6} View Mistakes on Web", "https://ssc27.vercel.app/?view=botErrors").row();
+    for (const s of stats) {
+      if (s.total > 0) {
+        safeKb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
+      }
+    }
+    safeKb.text("\u2B05\uFE0F Back to Menu", "nav_root");
+    await ctx.editMessageText(text, {
+      parse_mode: "Markdown",
+      reply_markup: safeKb
+    }).catch(() => {
+    });
+  }
+  await ctx.answerCallbackQuery().catch(() => {
   });
-  await ctx.answerCallbackQuery();
 });
 bot.callbackQuery(/^qm_run_all:(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
@@ -41768,7 +41855,7 @@ bot.on("poll_answer", async (ctx) => {
     }
     session.missedQuestions.push(currentQ);
     const syncParam = encodeQuestionForSync(currentQ);
-    const webMistakeUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`;
+    const webMistakeUrl = syncParam && syncParam.length < 1700 ? `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}` : "https://ssc27.vercel.app/?view=botErrors";
     const correctOpt = currentQ.options && currentQ.options[currentQ.correctOptionIndex] ? currentQ.options[currentQ.correctOptionIndex].trim() : "";
     const safeCorrectOpt = correctOpt.replace(/([*_`[\]()])/g, "\\$1");
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
@@ -41800,7 +41887,7 @@ bot.on("poll_answer", async (ctx) => {
         session.chatId,
         feedbackMsg.replace(/[*_`]/g, ""),
         {
-          reply_markup: new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl)
+          reply_markup: new InlineKeyboard().url("\u{1F4D6} Open Web Notebook", "https://ssc27.vercel.app/?view=botErrors")
         }
       ).catch(() => {
       });
@@ -41886,6 +41973,7 @@ async function handler(req, res) {
 }
 export {
   bot,
+  buildSafeWebSyncUrl,
   handler as default,
   encodeBatchForSync,
   encodeQuestionForSync,

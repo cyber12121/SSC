@@ -58,7 +58,11 @@ const SYNCED_STORAGE_KEY = 'cgl_synced_telegram_mistakes';
 // Safe base64 / base64url UTF-8 decoder
 function decodeSyncPayload(str: string): any {
   try {
-    let base64 = str.replace(/-/g, '+').replace(/_/g, '/');
+    let cleanStr = str;
+    try {
+      cleanStr = decodeURIComponent(str);
+    } catch {}
+    let base64 = cleanStr.replace(/-/g, '+').replace(/_/g, '/');
     while (base64.length % 4) {
       base64 += '=';
     }
