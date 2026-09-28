@@ -13,6 +13,7 @@ import {
   Filter
 } from 'lucide-react';
 import { Chapter } from '../../types';
+import { ChapterBookTheoryViewer } from './ChapterBookTheoryViewer';
 
 interface CheatSheetModalProps {
   isOpen: boolean;
@@ -220,57 +221,10 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
           {/* Rules Body (Scrollable) */}
           <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-slate-50/50">
             {viewMode === 'full_theory' ? (
-              <div className="bg-white rounded-xl p-5 sm:p-7 border border-slate-200/80 shadow-xs font-sans text-xs sm:text-[13px] text-slate-800 leading-relaxed space-y-4 selection:bg-indigo-100">
-                {loadedTheory ? (
-                  loadedTheory.split('\n\n').map((block, idx) => {
-                    const trimmed = block.trim();
-                    if (!trimmed) return null;
-                    const isRuleHeader = /^RULE\s+[\d\(\)a-z]+/i.test(trimmed);
-                    const isMainTitle = /^(NOUN|Kinds of Nouns|RULES FOR)/i.test(trimmed);
-                    const isCategory = /^\([A-Z1-9]\)\s+/i.test(trimmed);
-
-                    if (isMainTitle) {
-                      return (
-                        <div key={idx} className="pt-2 pb-1 border-b-2 border-indigo-100">
-                          <h2 className="text-sm sm:text-base font-black text-indigo-950 uppercase tracking-wide">
-                            {trimmed}
-                          </h2>
-                        </div>
-                      );
-                    }
-
-                    if (isRuleHeader) {
-                      const [firstLine, ...rest] = trimmed.split('\n');
-                      return (
-                        <div key={idx} className="mt-3 p-4 rounded-xl bg-indigo-50/40 border border-indigo-100/80 shadow-2xs">
-                          <h3 className="text-xs sm:text-sm font-bold text-indigo-950">{firstLine}</h3>
-                          {rest.length > 0 && (
-                            <p className="mt-2 text-xs sm:text-[13px] text-slate-700 whitespace-pre-wrap leading-relaxed">
-                              {rest.join('\n')}
-                            </p>
-                          )}
-                        </div>
-                      );
-                    }
-
-                    if (isCategory) {
-                      return (
-                        <div key={idx} className="font-bold text-indigo-900 text-xs sm:text-sm pt-1">
-                          {trimmed}
-                        </div>
-                      );
-                    }
-
-                    return (
-                      <p key={idx} className="text-slate-700 leading-relaxed whitespace-pre-wrap">
-                        {trimmed}
-                      </p>
-                    );
-                  })
-                ) : (
-                  <div className="py-12 text-center text-slate-400">Loading complete chapter theory...</div>
-                )}
-              </div>
+              <ChapterBookTheoryViewer
+                rawTheoryText={loadedTheory}
+                chapterTitle={chapter.chapter_title}
+              />
             ) : filteredRules.length === 0 ? (
               <div className="py-12 text-center text-slate-400">
                 <Filter className="w-8 h-8 mx-auto mb-2 opacity-40" />
