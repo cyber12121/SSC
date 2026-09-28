@@ -5251,7 +5251,7 @@ function loadFromDisk() {
   }
 }
 loadFromDisk();
-function startSession(userId, chatId, drillTitle, questions) {
+function startSession(userId, chatId, drillTitle, questions, category = "chapter_bank") {
   const session = {
     userId,
     chatId,
@@ -5261,7 +5261,8 @@ function startSession(userId, chatId, drillTitle, questions) {
     score: 0,
     startTime: Date.now(),
     answeredCount: 0,
-    missedQuestions: []
+    missedQuestions: [],
+    category
   };
   sessions.set(userId, session);
   saveToDisk();
@@ -5525,7 +5526,24 @@ function classifySubjectAndTopic(q) {
   }
   return { subject, topic, topicSlug };
 }
+function isSpeedLabItem(q) {
+  const top = (q.topic || "").toLowerCase();
+  const src = (q.source || "").toLowerCase();
+  const sub = (q.subject || "").toLowerCase();
+  if (top.includes("speed") || top.includes("mental math") || top.includes("calc studio") || top.includes("calculation studio") || top.includes("routine") || top.includes("blitz") || top.includes("simplification")) return true;
+  if (src.includes("speed") || src.includes("mental_math")) return true;
+  if (sub === "speed" || sub === "speed_lab") return true;
+  return false;
+}
+function getCleanQuestionKey(text, id) {
+  if (text) {
+    const clean = text.toLowerCase().replace(/^q(?:uestion)?\s*[-:.)]?\s*\d*[-:.)]?\s*/i, "").replace(/^\(?\d+\)?[-:.)]\s*/, "").replace(/[\s\u200B-\u200D\uFEFF]+/g, " ").replace(/[?.!,:;'"()\[\]{}]+$/g, "").trim();
+    if (clean.length > 5) return clean;
+  }
+  return (id || "").trim().toLowerCase();
+}
 function recordMistake(rawUserId, q, source = "telegram_quiz", isCorrect = false) {
+  if (isSpeedLabItem(q) || isSpeedLabItem({ source })) return;
   if (isQuestionDeleted(q.id, q.question)) return;
   const userId = normalizeUserId(rawUserId);
   let userMap = userMistakesMap.get(userId);
@@ -5533,11 +5551,11 @@ function recordMistake(rawUserId, q, source = "telegram_quiz", isCorrect = false
     userMap = /* @__PURE__ */ new Map();
     userMistakesMap.set(userId, userMap);
   }
+  const cleanKey = getCleanQuestionKey(q.question, q.id);
   let existing = userMap.get(q.id);
-  if (!existing && q.question) {
-    const qNorm = q.question.trim().toLowerCase().replace(/\s+/g, " ");
+  if (!existing && cleanKey) {
     for (const m of userMap.values()) {
-      if (m.question && m.question.trim().toLowerCase().replace(/\s+/g, " ") === qNorm) {
+      if (getCleanQuestionKey(m.question, m.id) === cleanKey) {
         existing = m;
         break;
       }
@@ -5620,14 +5638,18 @@ function deleteMistake(rawUserId, questionId, questionText) {
 function getUserMistakes(rawUserId, filter = "all", subject = void 0, topicSlug = "") {
   const userId = normalizeUserId(rawUserId);
   const results = [];
-  const seenQIds = /* @__PURE__ */ new Set();
+  const seenKeys = /* @__PURE__ */ new Set();
   const checkAndPush = (item) => {
+    if (!item || !item.question) return;
     if (isQuestionDeleted(item.id, item.question)) return;
+    if (isSpeedLabItem(item)) return;
     if (filter !== "all" && item.source !== filter) return;
     if (subject && item.subject !== subject) return;
     if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) return;
-    if (seenQIds.has(item.id)) return;
-    seenQIds.add(item.id);
+    const key = getCleanQuestionKey(item.question, item.id);
+    if (!key || seenKeys.has(key)) return;
+    seenKeys.add(key);
+    if (item.id) seenKeys.add(item.id.toLowerCase());
     results.push({
       id: item.id,
       question: item.question,
@@ -11250,6 +11272,358 @@ Key Points: - The error in the sentence is in the phrase "with a view to enhance
           conceptTested: "Ability to synthesize and identify the primary theme, author's intent, and central focus of a passage.",
           difficulty: "hard"
         }
+      },
+      {
+        id: "engl_b07fe720b2",
+        q_num: 155,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:11",
+        avgTime: "00:29",
+        question: "Select the word that is most nearly the SYNONYM of the underlined word in the sentence given below.\n\nThe tribunal threw out the whole affidavit as mendacious and fined the deponent.",
+        options: {
+          a: "Untruthful",
+          b: "Beggarly",
+          c: "Malicious",
+          d: "Menacing"
+        },
+        answer: "a",
+        solution: "Meaning: mendacious = given to lying, false.\n\nAn affidavit thrown out and a fine imposed point to lies, so untruthful = not speaking the truth fits best.",
+        image: null,
+        topic: "Synonyms & Antonyms",
+        subtopic: "Synonyms",
+        conceptTested: "Vocabulary recall and contextual word usage for descriptive adjectives",
+        tags: {
+          topic: "Synonyms & Antonyms",
+          subtopic: "Synonyms",
+          conceptTested: "Vocabulary recall and contextual word usage for descriptive adjectives",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_84291ecc19",
+        q_num: 156,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "C",
+        userTime: "00:36",
+        avgTime: "00:37",
+        question: 'Select the option that expresses the given sentence in indirect speech.\n\nThe curator said to the volunteers, "You should handle these manuscripts with cotton gloves."',
+        options: {
+          a: "The curator told the volunteers that they would handle those manuscripts with cotton gloves.",
+          b: "The curator told the volunteers that they should handle these manuscripts with cotton gloves.",
+          c: "The curator told the volunteers that they should handle those manuscripts with cotton gloves.",
+          d: "The curator told to the volunteers that they should handle those manuscripts with cotton gloves."
+        },
+        answer: "c",
+        solution: 'Rule: a modal of duty (should, must, ought to) does not backshift in reported speech, so \\"should handle\\" stays \\"should handle\\". Also, \\"said to\\" changes to \\"told\\", \\"You\\" changes to \\"they\\", and \\"these\\" changes to \\"those\\".',
+        image: null,
+        topic: "Direct & Indirect Speech",
+        subtopic: "Assertive Sentences & Reporting Verbs",
+        conceptTested: "Modals like should, must, ought to do not backshift in reported speech",
+        tags: {
+          topic: "Direct & Indirect Speech",
+          subtopic: "Assertive Sentences & Reporting Verbs",
+          conceptTested: "Modals like should, must, ought to do not backshift in reported speech",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_605ad953a4",
+        q_num: 157,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "00:43",
+        avgTime: "00:44",
+        question: "The given sentence has been divided into four parts. Select the part that contains a spelling error.",
+        options: {
+          a: "(1) The abbot credited",
+          b: "(3) to the quiet perseverance",
+          c: "(4) of eleven ageing monks.",
+          d: "(2) the monastry\u2019s long survival"
+        },
+        answer: "d",
+        solution: "The error lies in the word `monastry`. The correct spelling is `monastery` (a house of monks). The middle 'e' is often swallowed in pronunciation, but must be retained in spelling (mon - as - ter - y). All other parts are correctly spelt.",
+        image: null,
+        topic: "Spelling Errors",
+        subtopic: "Misspelt Words",
+        conceptTested: "Identification of incorrectly spelt words, such as confusing 'monastery' with 'monastry'.",
+        tags: {
+          topic: "Spelling Errors",
+          subtopic: "Misspelt Words",
+          conceptTested: "Identification of incorrectly spelt words, such as confusing 'monastery' with 'monastry'.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_a138a83b12",
+        q_num: 158,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "C",
+        userTime: "00:40",
+        avgTime: "00:49",
+        question: "Select the part of the given sentence that contains a grammatical error.\n\nAlthough she had joined the office, that she was senior than him, treated the older man as the natural authority, the gradation list drawn up that April",
+        options: {
+          a: "Although she had joined the office",
+          b: "treated the older man as the natural authority",
+          c: "that she was senior than him",
+          d: "the gradation list drawn up that April"
+        },
+        answer: "c",
+        solution: "Rule: Latin comparatives such as senior, junior, superior, inferior, and prior take 'to', never 'than'. Therefore, 'senior than him' must be replaced with 'senior to him'.",
+        image: null,
+        topic: "Spotting Errors",
+        subtopic: "Articles & Determiners",
+        conceptTested: "Latin comparative adjectives (senior, junior, superior, inferior, prior) take 'to' instead of 'than'.",
+        tags: {
+          topic: "Spotting Errors",
+          subtopic: "Articles & Determiners",
+          conceptTested: "Latin comparative adjectives (senior, junior, superior, inferior, prior) take 'to' instead of 'than'.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_8fd30c199f",
+        q_num: 159,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:11",
+        avgTime: "00:31",
+        question: "Select the option that improves the underlined part of the sentence.\n\nEven though the store clerk had produced two witnesses and a stamped delivery challan, and even though nobody at the depot could remember the crates ever arriving, the divisional office went ahead and \\underline{charged him on} the theft of eleven drums of furnace oil, a decision the union has since carried to the tribunal.",
+        options: {
+          a: "charged him with the theft of",
+          b: "charged him for the theft of",
+          c: "charged him of the theft of",
+          d: "No substitution required"
+        },
+        answer: "a",
+        solution: "Rule: You charge a person with an offence. The correct preposition is 'with', never 'on' or 'of'. Thus, 'charged him with the theft of' is grammatically correct.",
+        image: null,
+        topic: "Sentence Improvement",
+        subtopic: "Articles & Determiners",
+        conceptTested: "Correct preposition usage with verbs of accusation and charge: 'charge a person with an offence'.",
+        tags: {
+          topic: "Sentence Improvement",
+          subtopic: "Articles & Determiners",
+          conceptTested: "Correct preposition usage with verbs of accusation and charge: 'charge a person with an offence'.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_680fc3d8e0",
+        q_num: 160,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "A",
+        userTime: "00:12",
+        avgTime: "00:15",
+        question: "Select the option that best expresses the meaning of the idiom given below.\n\nHobson\u2019s choice",
+        options: {
+          a: "An apparent choice that leaves no real alternative",
+          b: "A choice between two equally attractive rewards",
+          c: "A decision reached only after long consultation",
+          d: "A bargain struck at the very last moment"
+        },
+        answer: "a",
+        solution: "Meaning: 'Hobson's choice' refers to an apparent choice where there is actually no real alternative - you either take what is offered or take nothing at all.",
+        image: null,
+        topic: "Idioms & Phrases",
+        subtopic: "Idioms & Idiomatic Expressions",
+        conceptTested: "Understanding historical idioms and their figurative applications in modern English.",
+        tags: {
+          topic: "Idioms & Phrases",
+          subtopic: "Idioms & Idiomatic Expressions",
+          conceptTested: "Understanding historical idioms and their figurative applications in modern English.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_f454a816c2",
+        q_num: 161,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "A",
+        userTime: "00:52",
+        avgTime: "00:53",
+        question: "The following sentences have been jumbled up. Select the option that arranges them in the correct order.\n\nP. Yet no museum has been able to say who carved them, or when.\n\nQ. A row of seven basalt figures stands at the edge of the dry lake.\n\nR. Each one faces east, and each holds a shallow stone bowl.\n\nS. Villagers have swept the ground around them for as long as anyone can remember.",
+        options: {
+          a: "QRSP",
+          b: "QRPS",
+          c: "QSRP",
+          d: "RQSP"
+        },
+        answer: "a",
+        solution: "Step 1: Sentence Q introduces the main subject ('a row of seven basalt figures') for the first time.\nStep 2: Sentence R describes the figures using 'each one', referring back to Q.\nStep 3: Sentence S expands the context by introducing the villagers who tend the ground around them.\nStep 4: Sentence P concludes with 'Yet', stating what remains unknown about them.\nFinal order: QRSP.",
+        image: null,
+        topic: "Para Jumbles",
+        subtopic: "Para Jumbles & Rearrangement",
+        conceptTested: "Logical sequencing of jumbled sentences using introductory nouns, pronoun references, and concluding conjunction markers.",
+        tags: {
+          topic: "Para Jumbles",
+          subtopic: "Para Jumbles & Rearrangement",
+          conceptTested: "Logical sequencing of jumbled sentences using introductory nouns, pronoun references, and concluding conjunction markers.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_075635cebb",
+        q_num: 162,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "00:08",
+        avgTime: "00:13",
+        question: "Select the option that best expresses the meaning of the idiom given below.\n\nTo flog a dead horse",
+        options: {
+          a: "To criticise a person who can no longer reply",
+          b: "To press others into doing one's own work",
+          c: "To revive a quarrel that everyone has forgotten",
+          d: "To persist with an effort that can no longer succeed"
+        },
+        answer: "d",
+        solution: "Meaning: to flog a dead horse = to keep pushing a matter already settled or hopeless (\u0935\u094D\u092F\u0930\u094D\u0925 \u092A\u094D\u0930\u092F\u093E\u0938 \u0915\u0930\u0928\u093E, \u092E\u0930\u0947 \u0918\u094B\u0921\u093C\u0947 \u0915\u094B \u0915\u094B\u0921\u093C\u0947 \u092E\u093E\u0930\u0928\u093E).\n\nWhipping a dead animal moves it nowhere; the labour is simply wasted.",
+        image: null,
+        topic: "Idioms Phrases",
+        subtopic: "Idioms & Idiomatic Expressions",
+        conceptTested: "Understanding the figurative meaning of standard idioms",
+        tags: {
+          topic: "Idioms Phrases",
+          subtopic: "Idioms & Idiomatic Expressions",
+          conceptTested: "Understanding the figurative meaning of standard idioms",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_469fe29506",
+        q_num: 163,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "A",
+        userTime: "00:31",
+        avgTime: "00:29",
+        question: "Select the option that expresses the given sentence in passive voice:\n\nA departmental committee looked into the missing stock register.",
+        options: {
+          a: "The missing stock register was looked into by a departmental committee.",
+          b: "The missing stock register was looked by a departmental committee.",
+          c: "The missing stock register was looked into a departmental committee.",
+          d: "The missing stock register had been looked into by a departmental committee."
+        },
+        answer: "a",
+        solution: "Rule: In a phrasal verb, the preposition travels with the verb into the passive. 'looked into' becomes 'was looked into', never 'was looked'. - Object 'the missing stock register' goes to the front. - 'a departmental committee' takes 'by'. - Simple past gives 'was' plus the participle 'looked', and 'into' rides along behind it.",
+        image: null,
+        topic: "Active Passive Voice",
+        subtopic: "Basic Voice Change Rules",
+        conceptTested: "Retention of prepositions in phrasal verbs during passive voice conversion",
+        tags: {
+          topic: "Active Passive Voice",
+          subtopic: "Basic Voice Change Rules",
+          conceptTested: "Retention of prepositions in phrasal verbs during passive voice conversion",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_dccc7e8477",
+        q_num: 164,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:34",
+        avgTime: "00:36",
+        question: "The given sentence has been divided into four parts. Select the part that contains a grammatical error.\n\n(A) The archivist who the trustees had consulted\n(B) about the water damage in the vault\n(C) suggested a slower method of drying\n(D) that would cost the trust very little.",
+        options: {
+          a: "(B) about the water damage in the vault",
+          b: "(A) The archivist who the trustees had consulted",
+          c: "(C) suggested a slower method of drying",
+          d: "(D) that would cost the trust very little."
+        },
+        answer: "b",
+        solution: "Rule: A relative pronoun takes its case from its job inside its own clause.\n\nIn the clause 'the trustees had consulted', 'the trustees' is the subject, and the pronoun is the object of 'had consulted'. The object form is 'whom', not 'who'.\n\nCorrected part (A): 'The archivist whom the trustees had consulted'.",
+        image: null,
+        topic: "Spotting Errors",
+        subtopic: "Articles & Determiners",
+        conceptTested: "Relative pronoun case usage (subjective vs. objective case: who vs. whom)",
+        tags: {
+          topic: "Spotting Errors",
+          subtopic: "Articles & Determiners",
+          conceptTested: "Relative pronoun case usage (subjective vs. objective case: who vs. whom)",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "engl_634a820124",
+        q_num: 165,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "D",
+        userTime: "00:22",
+        avgTime: "00:34",
+        question: "Select the one word substitution for the italicised part of the sentence given below.\n\nThe inquiry concluded that three of the four senior appointments had been secured through the practice of giving good posts to one's own relatives.",
+        options: {
+          a: "Cronyism",
+          b: "Patronage",
+          c: "Favouritism",
+          d: "Nepotism"
+        },
+        answer: "d",
+        solution: "Meaning: nepotism = favouring one's own relatives in appointments (\u092D\u093E\u0908-\u092D\u0924\u0940\u091C\u093E\u0935\u093E\u0926). - Cronyism = favouring close friends. - Patronage = support given by a powerful person. - Favouritism = general partiality without necessarily involving relatives.\n\nOnly nepotism specifies the favouring of blood relatives.",
+        image: null,
+        topic: "One Word Substitution",
+        subtopic: "Sciences & Studies",
+        conceptTested: "Precise vocabulary replacement for specific descriptive phrases",
+        tags: {
+          topic: "One Word Substitution",
+          subtopic: "Sciences & Studies",
+          conceptTested: "Precise vocabulary replacement for specific descriptive phrases",
+          difficulty: "medium"
+        }
       }
     ]
   }
@@ -16629,6 +17003,198 @@ var mathematics_default = [
           topic: "LCM & HCF",
           subtopic: "LCM & HCF Applications",
           conceptTested: "Finding a specific multiple of an LCM that leaves a fixed remainder and satisfies an additional divisibility condition.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_c7016ce7b6",
+        q_num: 171,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "00:54",
+        avgTime: "00:33",
+        question: "The perimeter of a rhombus is $100\\text{ cm}$. If its longer diagonal measures $40\\text{ cm}$, what is the area enclosed by the rhombus?",
+        options: {
+          a: "$600\\text{ cm}^2$",
+          b: "$1,200\\text{ cm}^2$",
+          c: "$300\\text{ cm}^2$",
+          d: "$500\\text{ cm}^2$"
+        },
+        answer: "a",
+        solution: "All four sides of a rhombus are equal, so side = $100 \\div 4 = 25\\text{ cm}$. Half of the given diagonal = $40 \\div 2 = 20\\text{ cm}$. The half of the other diagonal is given by $\\sqrt{25^2 - 20^2} = \\sqrt{625 - 400} = \\sqrt{225} = 15\\text{ cm}$. So the other diagonal = $2 \\times 15 = 30\\text{ cm}$. Area = $\\frac{1}{2} \\times \\text{product of diagonals} = \\frac{1}{2} \\times 40 \\times 30 = 600\\text{ cm}^2$.",
+        image: null,
+        topic: "Mensuration 2D",
+        subtopic: "Rhombus, Trapezium & Parallelogram",
+        conceptTested: "Relationship between side, perimeter, and diagonals of a rhombus: $d_2 = 2\\sqrt{a^2 - (d_1/2)^2}$ and Area = $\\frac{1}{2} \\times d_1 \\times d_2$.",
+        tags: {
+          topic: "Mensuration 2D",
+          subtopic: "Rhombus, Trapezium & Parallelogram",
+          conceptTested: "Relationship between side, perimeter, and diagonals of a rhombus: $d_2 = 2\\sqrt{a^2 - (d_1/2)^2}$ and Area = $\\frac{1}{2} \\times d_1 \\times d_2$.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_8d77c9c283",
+        q_num: 172,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "00:56",
+        avgTime: "00:29",
+        question: "A circular lawn is to be laid inside a right-angled triangular plot whose two perpendicular sides measure $12\\text{ metres}$ and $16\\text{ metres}$, so that the lawn just touches all three boundaries of the plot. Find the radius of the lawn.",
+        options: {
+          a: "$4\\text{ m}$",
+          b: "$10\\text{ m}$",
+          c: "$2\\text{ m}$",
+          d: "$14\\text{ m}$"
+        },
+        answer: "a",
+        solution: "First, find the hypotenuse of the right - angled triangle: $\\sqrt{12^2 + 16^2} = \\sqrt{144 + 256} = \\sqrt{400} = 20\\text{ m}$. For a right - angled triangle, the inradius is given by $r = \\frac{\\text{sum of perpendicular legs} - \\text{hypotenuse}}{2} = \\frac{12 + 16 - 20}{2} = \\frac{8}{2} = 4\\text{ m}$.",
+        image: null,
+        topic: "Geometry",
+        subtopic: "Circles (Tangents, Chords & Secants)",
+        conceptTested: "Inradius of a right-angled triangle inscribed by a circle touching all three sides: $r = \\frac{a + b - c}{2}$.",
+        tags: {
+          topic: "Geometry",
+          subtopic: "Circles (Tangents, Chords & Secants)",
+          conceptTested: "Inradius of a right-angled triangle inscribed by a circle touching all three sides: $r = \\frac{a + b - c}{2}$.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_633d38b6a4",
+        q_num: 173,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "B",
+        correctOption: "B",
+        userTime: "00:51",
+        avgTime: "00:25",
+        question: "Two inlet pipes can fill an empty tank in 12 hours and 15 hours respectively, while an outlet pipe at the bottom can empty the full tank in 20 hours. All three are opened together when the tank is empty. In how many hours will the tank be filled?",
+        options: {
+          a: "5 hours",
+          b: "10 hours",
+          c: "$6 \\frac{2}{3}$ hours",
+          d: "7 hours"
+        },
+        answer: "b",
+        solution: "Let the total capacity of the tank be the LCM of 12, 15, and 20, which is $60$ units.\n\nFirst inlet 1 - hour work = $60 \\div 12 = 5$ units/houRs. econd inlet 1 - hour work = $60 \\div 15 = 4$ units/hour\nOutlet 1 - hour work (emptying) = $60 \\div 20 = 3$ units/hour\n\nNet work done per hour when all three pipes are opened together = $5 + 4 - 3 = 6$ units/hour.\n\nTotal time required to fill the tank = $\\frac{60}{6} = 10$ hours.",
+        image: null,
+        topic: "Pipes & Cisterns",
+        subtopic: "Inlet Outlet Pipes",
+        conceptTested: "Net work done per hour by multiple inlet and outlet pipes working together.",
+        tags: {
+          topic: "Pipes & Cisterns",
+          subtopic: "Inlet Outlet Pipes",
+          conceptTested: "Net work done per hour by multiple inlet and outlet pipes working together.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_34c2c72fe1",
+        q_num: 174,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "D",
+        correctOption: "D",
+        userTime: "00:30",
+        avgTime: "00:22",
+        question: "A sum of money becomes three times itself in 12 years at simple interest. In how many years will the same sum become five times itself at the same rate?",
+        options: {
+          a: "20 years",
+          b: "30 years",
+          c: "36 years",
+          d: "24 years"
+        },
+        answer: "d",
+        solution: "Let the principal be $P$.\n\nIf the amount becomes $3P$ in 12 years, the simple interest earned is $3P - P = 2P$.\n\nThus, an interest of $2P$ takes 12 years, which means an interest of $P$ takes $\\frac{12}{2} = 6$ years.\n\nTo become 5 times itself, the amount must be $5P$, so the required interest is $5P - P = 4P$.\n\nTime required to earn $4P$ interest = $4 \\times 6 = 24$ years.",
+        image: null,
+        topic: "Simple Interest",
+        subtopic: "Basic Simple Interest",
+        conceptTested: "Simple interest is directly proportional to time for a constant principal and rate of interest.",
+        tags: {
+          topic: "Simple Interest",
+          subtopic: "Basic Simple Interest",
+          conceptTested: "Simple interest is directly proportional to time for a constant principal and rate of interest.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_268c8b7e4c",
+        q_num: 175,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "01:28",
+        avgTime: "00:24",
+        question: "Simplify: $(\\sec \u03B8 - \\cos \u03B8)(\\csc \u03B8 - \\sin \u03B8)(\\tan \u03B8 + \\cot \u03B8)$",
+        options: {
+          a: "1",
+          b: "$\\sin \u03B8 \\cos \u03B8$",
+          c: "$\\sin^2 \u03B8 \\cos^2 \u03B8$",
+          d: "0"
+        },
+        answer: "a",
+        solution: "Rule: write every term in $\\sin \u03B8$ and $\\cos \u03B8$ before multiplying anything.\nFirst bracket: $\\sec \u03B8 - \\cos \u03B8 = \\frac{1}{\\cos \u03B8} - \\cos \u03B8 = \\frac{1 - \\cos^2 \u03B8}{\\cos \u03B8} = \\frac{\\sin^2 \u03B8}{\\cos \u03B8}$\nSecond bracket: $\\csc \u03B8 - \\sin \u03B8 = \\frac{1}{\\sin \u03B8} - \\sin \u03B8 = \\frac{1 - \\sin^2 \u03B8}{\\sin \u03B8} = \\frac{\\cos^2 \u03B8}{\\sin \u03B8}$\nThird bracket: $\\tan \u03B8 + \\cot \u03B8 = \\frac{\\sin \u03B8}{\\cos \u03B8} + \\frac{\\cos \u03B8}{\\sin \u03B8} = \\frac{\\sin^2 \u03B8 + \\cos^2 \u03B8}{\\sin \u03B8 \\cos \u03B8} = \\frac{1}{\\sin \u03B8 \\cos \u03B8}$\nMultiply the first two: $\\left(\\frac{\\sin^2 \u03B8}{\\cos \u03B8}\\right) \\times \\left(\\frac{\\cos^2 \u03B8}{\\sin \u03B8}\\right) = \\sin \u03B8 \\cos \u03B8$\nBring in the third: $\\sin \u03B8 \\cos \u03B8 \\times \\frac{1}{\\sin \u03B8 \\cos \u03B8} = 1$",
+        image: null,
+        topic: "Trigonometry",
+        subtopic: "Trigonometric Ratios & Simplification",
+        conceptTested: "Fundamental trigonometric identities: $\\sec \u03B8 - \\cos \u03B8 = \\frac{\\sin^2 \u03B8}{\\cos \u03B8}$, $\\csc \u03B8 - \\sin \u03B8 = \\frac{\\cos^2 \u03B8}{\\sin \u03B8}$, and $\\tan \u03B8 + \\cot \u03B8 = \\frac{1}{\\sin \u03B8 \\cos \u03B8}$",
+        tags: {
+          topic: "Trigonometry",
+          subtopic: "Trigonometric Ratios & Simplification",
+          conceptTested: "Fundamental trigonometric identities: $\\sec \u03B8 - \\cos \u03B8 = \\frac{\\sin^2 \u03B8}{\\cos \u03B8}$, $\\csc \u03B8 - \\sin \u03B8 = \\frac{\\cos^2 \u03B8}{\\sin \u03B8}$, and $\\tan \u03B8 + \\cot \u03B8 = \\frac{1}{\\sin \u03B8 \\cos \u03B8}$",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "math_cc32451c2d",
+        q_num: 176,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "01:07",
+        avgTime: "00:29",
+        question: "The present ages of Ramesh and his younger sister are in the ratio $7 : 4$. Eight years from now the ratio of their ages will be $3 : 2$. Find Ramesh's present age.",
+        options: {
+          a: "28 years",
+          b: "16 years",
+          c: "36 years",
+          d: "24 years"
+        },
+        answer: "a",
+        solution: "Write the present ages as parts.\n\nRamesh = $7x$ and his sister = $4x$\n\nAdd 8 years to each of them.\n\n$(7x + 8) : (4x + 8) = 3 : 2$\n\nCross - multiply.\n\n$2(7x + 8) = 3(4x + 8)$\n\n$14x + 16 = 12x + 24$\n\nSolve for $x$.\n\n$2x = 8$\n\n$x = 4$\n\nRamesh's present age = $7 \\times 4 = 28$ years.",
+        image: null,
+        topic: "Ratio & Proportion",
+        subtopic: "Age Problems",
+        conceptTested: "Linear equations based on ratio changes over a time period",
+        tags: {
+          topic: "Ratio & Proportion",
+          subtopic: "Age Problems",
+          conceptTested: "Linear equations based on ratio changes over a time period",
           difficulty: "hard"
         }
       }
@@ -24357,6 +24923,198 @@ If set A represents failures, then the complement A' represents passers. Passing
           conceptTested: "Ratio of areas of geometric figures expressed in terms of their linear dimensions (radius and side).",
           difficulty: "medium"
         }
+      },
+      {
+        id: "math_60c12a324d",
+        q_num: 245,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:04",
+        avgTime: "00:22",
+        question: "At the close of the day a stores clerk at a district supply depot empties the counter cash box and finds that the whole of the day's collection is made up of \u20B9500 notes and \u20B9200 notes, with no other denomination and no coins at all. He counts $42$ notes in the box, and the day book shows that the collection came to \u20B9$15,600$. The audit clerk now wants the two kinds entered on separate lines. How many \u20B9$200$ notes are there in the box?",
+        options: {
+          a: "$24\\text{ notes}$",
+          b: "$21\\text{ notes}$",
+          c: "$18\\text{ notes}$",
+          d: "$6\\text{ notes}$"
+        },
+        answer: "c",
+        solution: "Let the number of \u20B9$500$ notes be $n$. Then the \u20B9$200$ notes number $42 - n$. Build the money equation: $500n + 200(42 - n) = 15,600$. Opening the bracket: $500n + 8,400 - 200n = 15,600 \\Rightarrow 300n = 7,200 \\Rightarrow n = 24$ notes of \u20B9$500$. Therefore, the \u20B9$200$ notes = $42 - 24 = 18$ notes.",
+        image: null,
+        topic: "Ratio & Proportion",
+        subtopic: "Coins & Currency Problems",
+        conceptTested: "Solving linear simultaneous equations derived from total value and total count of denomination notes.",
+        tags: {
+          topic: "Ratio & Proportion",
+          subtopic: "Coins & Currency Problems",
+          conceptTested: "Solving linear simultaneous equations derived from total value and total count of denomination notes.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_e454c2c2d0",
+        q_num: 246,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "D",
+        userTime: "00:01",
+        avgTime: "00:03",
+        question: "The public health wing of a municipal body has bought a cylindrical road roller for a newly laid colony road. The drum of the roller is $2\\text{ metres}$ long and its diameter is $1.4\\text{ metres}$, and only the curved surface of the drum ever touches the road. On the first morning the operator drives the roller from one end of the stretch to the other and the drum makes $750$ complete revolutions. Find the area of road levelled in that single run. (Take $\\pi = \\frac{22}{7}$)",
+        options: {
+          a: "$13,200\\text{ m}^2$",
+          b: "$8,910\\text{ m}^2$",
+          c: "$3,300\\text{ m}^2$",
+          d: "$6,600\\text{ m}^2$"
+        },
+        answer: "d",
+        solution: "Radius $r = \\frac{1.4}{2} = 0.7\\text{ m}$. Curved surface area covered in one revolution = $2 \\times \\frac{22}{7} \\times 0.7 \\times 2 = 8.8\\text{ m}^2$. Total area covered in $750$ revolutions = $8.8 \\times 750 = 6,600\\text{ m}^2$.",
+        image: null,
+        topic: "Mensuration 3D",
+        subtopic: "Cylinder (Solid & Hollow)",
+        conceptTested: "Curved surface area of a cylinder and total area covered in multiple revolutions: $\\text{CSA} = 2\\pi rh \\times \\text{revolutions}$.",
+        tags: {
+          topic: "Mensuration 3D",
+          subtopic: "Cylinder (Solid & Hollow)",
+          conceptTested: "Curved surface area of a cylinder and total area covered in multiple revolutions: $\\text{CSA} = 2\\pi rh \\times \\text{revolutions}$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_874de8f59f",
+        q_num: 247,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:50",
+        avgTime: "00:59",
+        question: "In a quadrilateral $ABCD$, $\\angle ABC = 90^\\circ$, $AB = 6\\text{ cm}$, $BC = 8\\text{ cm}$, $CD = 17\\text{ cm}$ and $DA = 21\\text{ cm}$. Find the area of the quadrilateral.",
+        options: {
+          a: "84 cm\xB2",
+          b: "108 cm\xB2",
+          c: "132 cm\xB2",
+          d: "24 cm\xB2"
+        },
+        answer: "b",
+        solution: "Join diagonal $AC$. In right - angled triangle $\\triangle ABC$ at $B$: $$AC = \\sqrt{AB^2 + BC^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10\\text{ cm}$$\n\nArea of $\\triangle ABC$ = $\\frac{1}{2} \\times AB \\times BC = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.\n\nFor $\\triangle ACD$, the sides are $a = 10\\text{ cm}$, $b = 17\\text{ cm}$, and $c = 21\\text{ cm}$.\n\nSemi - perimeter $s = \\frac{10 + 17 + 21}{2} = 24$.\n\nUsing Heron's formula: $$\\text{Area of } \\triangle ACD = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{24 \\times (24-10) \\times (24-17) \\times (24-21)}$$\n\n$$= \\sqrt{24 \\times 14 \\times 7 \\times 3} = \\sqrt{7056} = 84\\text{ cm}^2$$\n\nTotal area of quadrilateral $ABCD$ = $\\text{Area}(\\triangle ABC) + \\text{Area}(\\triangle ACD) = 24 + 84 = 108\\text{ cm}^2$.",
+        image: null,
+        topic: "Mensuration 2D",
+        subtopic: "Triangles & Area Calculations",
+        conceptTested: "Application of Pythagoras theorem and Heron's formula for finding the area of a non-standard quadrilateral.",
+        tags: {
+          topic: "Mensuration 2D",
+          subtopic: "Triangles & Area Calculations",
+          conceptTested: "Application of Pythagoras theorem and Heron's formula for finding the area of a non-standard quadrilateral.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_6eed88e294",
+        q_num: 248,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:03",
+        avgTime: "00:31",
+        question: "A storm snaps a vertical electric pole at a point above the ground. The broken part does not come away; its top rests on the ground 9 metres from the foot of the pole and makes an angle of $30^\\circ$ with the ground. Find the height of the pole before the storm.",
+        options: {
+          a: "$6\\sqrt{3}\\text{ m}$",
+          b: "$3\\sqrt{3}\\text{ m}$",
+          c: "$9\\sqrt{3}\\text{ m}$",
+          d: "$12\\sqrt{3}\\text{ m}$"
+        },
+        answer: "c",
+        solution: "Name the two pieces.\n\nThe stump still standing is the upright leg and the broken part is the slanting piece that meets the ground at $30^\\circ$.\n\nThe standing stump: $\\tan 30^\\circ = \\text{stump} \\div 9$\n\n$\\text{stump} = 9 \\times \\frac{1}{\\sqrt{3}} = 3\\sqrt{3}\\text{ m}$\n\nThe broken part: $\\cos 30^\\circ = 9 \\div \\text{broken part}$\n\n$\\text{broken part} = 9 \\times \\frac{2}{\\sqrt{3}} = 6\\sqrt{3}\\text{ m}$\n\nThe pole before the storm: $\\text{Height} = \\text{stump} + \\text{broken part} = 3\\sqrt{3} + 6\\sqrt{3} = 9\\sqrt{3}\\text{ m}$",
+        image: null,
+        topic: "Height & Distance",
+        subtopic: "Heights & Distances",
+        conceptTested: "Right-angled triangle trigonometric ratios (tan \u03B8 = \\frac{\\text{Perpendicular}}{\\text{Base}}, \\cos \u03B8 = \\frac{\\text{Base}}{\\text{Hypotenuse}})",
+        tags: {
+          topic: "Height & Distance",
+          subtopic: "Heights & Distances",
+          conceptTested: "Right-angled triangle trigonometric ratios (tan \u03B8 = \\frac{\\text{Perpendicular}}{\\text{Base}}, \\cos \u03B8 = \\frac{\\text{Base}}{\\text{Hypotenuse}})",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_bd5cbe27ee",
+        q_num: 249,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "A",
+        userTime: "00:31",
+        avgTime: "00:28",
+        question: "Find the coordinates of the circumcentre of a triangle whose vertices are $(1, 1)$, $(7, 1)$ and $(3, 5)$.",
+        options: {
+          a: "$(4, 2)$",
+          b: "$(4, 1)$",
+          c: "$(3, 2)$",
+          d: "$(3, 1)$"
+        },
+        answer: "a",
+        solution: "Let the circumcentre be $P(x, y)$, with $A(1, 1)$, $B(7, 1)$, $C(3, 5)$.\n\nAB is horizontal, so its perpendicular bisector is the vertical line: $x = \\frac{1 + 7}{2} = 4$\n\nNow use $PA = PC$ with $x = 4$: $(4 - 1)^2 + (y - 1)^2 = (4 - 3)^2 + (y - 5)^2$\n\n$9 + y^2 - 2y + 1 = 1 + y^2 - 10y + 25$\n\n$10 - 2y = 26 - 10y$\n\n$8y = 16 \\implies y = 2$\n\nCircumcentre = $(4, 2)$",
+        image: null,
+        topic: "Coordinate Geometry",
+        subtopic: "General Triangle Properties",
+        conceptTested: "Circumcentre equidistant property: $PA = PB = PC$, and the perpendicular bisector of a horizontal line $y_1 = y_2$ is $x = \\frac{x_1 + x_2}{2}$",
+        tags: {
+          topic: "Coordinate Geometry",
+          subtopic: "General Triangle Properties",
+          conceptTested: "Circumcentre equidistant property: $PA = PB = PC$, and the perpendicular bisector of a horizontal line $y_1 = y_2$ is $x = \\frac{x_1 + x_2}{2}$",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_220b21c4b3",
+        q_num: 250,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:58",
+        avgTime: "00:45",
+        question: "The average age of the 11 members of a colony welfare committee is 42 years. One more member joins the committee and the average age falls by 1.5 years. Find the age of the member who joined.",
+        options: {
+          a: "25.5 years",
+          b: "40.5 years",
+          c: "24 years",
+          d: "60 years"
+        },
+        answer: "c",
+        solution: "Total age before he joined = $11 \\times 42 = 462$ years.\nThe new average = $42 - 1.5 = 40.5$ years.\nTotal age after he joined (12 members) = $12 \\times 40.5 = 486$ years.\nThe newcomer's age = $486 - 462 = 24$ years.",
+        image: null,
+        topic: "Average",
+        subtopic: "Inclusion, Exclusion & Replacement",
+        conceptTested: "Effect on total sum when a new member is added and average changes",
+        tags: {
+          topic: "Average",
+          subtopic: "Inclusion, Exclusion & Replacement",
+          conceptTested: "Effect on total sum when a new member is added and average changes",
+          difficulty: "medium"
+        }
       }
     ]
   },
@@ -27670,6 +28428,166 @@ When relating multiple variables, using ratios reduces calculations significantl
           conceptTested: "Relative speed in the same direction is the difference of speeds ($u - v$), and $\\text{Time} = \\frac{\\text{Distance}}{\\text{Relative Speed}}$.",
           difficulty: "medium"
         }
+      },
+      {
+        id: "math_25cd741286",
+        q_num: 103,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "C",
+        userTime: "00:42",
+        avgTime: "00:52",
+        question: "If $2 \\cos^2\\theta + 3 \\sin \\theta = 3$ and $\\theta$ is an acute angle, find the value of $\\theta$.",
+        options: {
+          a: "90\xB0",
+          b: "60\xB0",
+          c: "30\xB0",
+          d: "45\xB0"
+        },
+        answer: "c",
+        solution: "We are given: $$2 \\cos^2\\theta + 3 \\sin \\theta = 3$$\nSubstitute $\\cos^2\\theta = 1 - \\sin^2\\theta$: $$2(1 - \\sin^2\\theta) + 3 \\sin \\theta = 3$$\n\n$$2 - 2 \\sin^2\\theta + 3 \\sin \\theta = 3$$\n\n$$2 \\sin^2\\theta - 3 \\sin \\theta + 1 = 0$$\n\nFactorise the quadratic equation: $$(2 \\sin \\theta - 1)(\\sin \\theta - 1) = 0$$\nThis gives: $$\\sin \\theta = \\frac{1}{2} \\quad \\text{or} \\quad \\sin \\theta = 1$$\n\nSince $\\theta$ is an acute angle, $\\sin \\theta = 1$ gives $\\theta = 90^\\circ$ (which is not strictly acute or leads to the boundary condition, whereas $\\sin \\theta = \\frac{1}{2}$ gives $\\theta = 30^\\circ$). Therefore, $\\theta = 30^\\circ$.",
+        image: null,
+        topic: "Trigonometry",
+        subtopic: "Trigonometric Ratios & Simplification",
+        conceptTested: "Solving trigonometric quadratic equations using $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+        tags: {
+          topic: "Trigonometry",
+          subtopic: "Trigonometric Ratios & Simplification",
+          conceptTested: "Solving trigonometric quadratic equations using $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_74ac121c83",
+        q_num: 104,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "01:06",
+        avgTime: "01:03",
+        question: "The table shows the monthly sales (in units) of four electronic items across four months. Find the month with the second lowest average sales.",
+        options: {
+          a: "June",
+          b: "August",
+          c: "September",
+          d: "July"
+        },
+        answer: "a",
+        solution: "Summing the sales for each month across the 4 items: - **June:** $180 + 140 + 120 + 60 = 500$ - **July:** $210 + 150 + 132 + 60 = 552$ - **August:** $165 + 130 + 118 + 71 = 484$ - **September:** $195 + 145 + 108 + 80 = 528$\nCalculating the average for each month (divide by 4 items): - June average = $500 \\div 4 = 125$ - July average = $552 \\div 4 = 138$ - August average = $484 \\div 4 = 121$ - September average = $528 \\div 4 = 132$\nArranging the averages in ascending order: $$121 (August) < 125 (June) < 132 (September) < 138 (July)$$\n\nThus, the lowest average is August, and the **second lowest** average is **June**.",
+        image: null,
+        topic: "Data Interpretation",
+        subtopic: "Tables & Tabular Data",
+        conceptTested: "Finding averages from tabular data and identifying specific rank values.",
+        tags: {
+          topic: "Data Interpretation",
+          subtopic: "Tables & Tabular Data",
+          conceptTested: "Finding averages from tabular data and identifying specific rank values.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_bb387e07bb",
+        q_num: 105,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "D",
+        userTime: "00:18",
+        avgTime: "00:42",
+        question: "Find the minimum value of the expression $2x^2 - 8x + 15$.",
+        options: {
+          a: "15",
+          b: "2",
+          c: "-1",
+          d: "7"
+        },
+        answer: "d",
+        solution: "Rule - where a quadratic is smallest. Write it as a perfect square plus a number. A square can never fall below zero, so that number left over is the least value.\n\nPull the 2 out of the first two terms: $2x^2 - 8x + 15 = 2(x^2 - 4x) + 15$\nComplete the square inside: $x^2 - 4x = (x - 2)^2 - 4$\n\n$= 2[(x - 2)^2 - 4] + 15$\n\n$= 2(x - 2)^2 - 8 + 15$\n\n$= 2(x - 2)^2 + 7$\n\nRead the least value off: $(x - 2)^2$ is smallest at $x = 2$, where it becomes 0, leaving only the 7.\nMinimum value = 7",
+        image: null,
+        topic: "Algebra",
+        subtopic: "Maxima, Minima & Value Putting",
+        conceptTested: "Completing the square method to find the minimum value of a quadratic expression $ax^2 + bx + c$",
+        tags: {
+          topic: "Algebra",
+          subtopic: "Maxima, Minima & Value Putting",
+          conceptTested: "Completing the square method to find the minimum value of a quadratic expression $ax^2 + bx + c$",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_45a523e816",
+        q_num: 106,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "B",
+        userTime: "00:30",
+        avgTime: "00:27",
+        question: "AB is a diameter of a circle and C is a point lying on the circle. If AC = 16 cm and BC = 12 cm, find the radius of the circle.",
+        options: {
+          a: "20 cm",
+          b: "10 cm",
+          c: "14 cm",
+          d: "8 cm"
+        },
+        answer: "b",
+        solution: "Rule - the angle in a semicircle. An angle drawn on a diameter from any point of the circle is a right angle. So $\\angle ACB = 90^\\circ$. That makes AB the hypotenuse.\n\n$AB = \\sqrt{16^2 + 12^2} = \\sqrt{256 + 144} = \\sqrt{400} = 20\\text{ cm}$\n\nAB is the diameter, not the radius.\n\n$\\text{Radius} = 20 \\div 2 = 10\\text{ cm}$",
+        image: null,
+        topic: "Geometry",
+        subtopic: "Circles (Tangents, Chords & Secants)",
+        conceptTested: "Thales's Theorem / Angle in a semicircle is a right angle ($90^\\circ$) and Pythagoras theorem in right-angled triangles",
+        tags: {
+          topic: "Geometry",
+          subtopic: "Circles (Tangents, Chords & Secants)",
+          conceptTested: "Thales's Theorem / Angle in a semicircle is a right angle ($90^\\circ$) and Pythagoras theorem in right-angled triangles",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "math_ee7cb1be2c",
+        q_num: 107,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "C",
+        userTime: "00:22",
+        avgTime: "00:32",
+        question: "When 85, 190 and 330 are each divided by the same number, the remainder is the same every time. Find the greatest such number.",
+        options: {
+          a: "15",
+          b: "5",
+          c: "35",
+          d: "105"
+        },
+        answer: "c",
+        solution: "Rule - the same remainder every time.\n\nTake the differences: $190 - 85 = 105$\n\n$330 - 190 = 140$\n\n$330 - 85 = 245$\n\nThe divisor must divide all three differences. So the greatest one is the HCF of 105, 140 and 245.\n\n$105 = 3 \\times 5 \\times 7$\n\n$140 = 2 \\times 2 \\times 5 \\times 7$\n\n$245 = 5 \\times 7 \\times 7$\n\nCommon part = $5 \\times 7 = 35$.",
+        image: null,
+        topic: "LCM & HCF",
+        subtopic: "LCM & HCF Applications",
+        conceptTested: "Greatest number that leaves the same remainder when dividing multiple given numbers is the HCF of their pairwise differences",
+        tags: {
+          topic: "LCM & HCF",
+          subtopic: "LCM & HCF Applications",
+          conceptTested: "Greatest number that leaves the same remainder when dividing multiple given numbers is the HCF of their pairwise differences",
+          difficulty: "medium"
+        }
       }
     ]
   }
@@ -29597,6 +30515,198 @@ Hence, "YQCPJ" is the correct answer.`,
           topic: "Arithmetical Reasoning",
           subtopic: "Word Numbers",
           conceptTested: "Translating word statements into linear algebraic equations and solving for the unknown variable",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_734594f17f",
+        q_num: 58,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "C",
+        correctOption: "C",
+        userTime: "00:18",
+        avgTime: "00:10",
+        question: "Three of the following four are alike in a certain way and so form a group. Select the one that does not belong to that group.",
+        options: {
+          a: "Godavari",
+          b: "Krishna",
+          c: "Chilika",
+          d: "Kaveri"
+        },
+        answer: "c",
+        solution: "Rule: ask what kind of water body each name stands for.\nTake them one at a time: \u2022 Godavari - a river\n\u2022 Krishna - a river\n\u2022 Kaveri - a river\n\u2022 Chilika - a lake in Odisha\nName the shared property: Three are peninsular rivers that drain into the Bay of Bengal. Chilika is a coastal lagoon, so it is not a river at all.\nAnswer: Chilika",
+        image: null,
+        topic: "Classification / Odd One Out",
+        subtopic: "Word & Semantic Classification",
+        conceptTested: "Identification of common characteristics and differentiating properties among geographical entities (rivers vs lagoon).",
+        tags: {
+          topic: "Classification / Odd One Out",
+          subtopic: "Word & Semantic Classification",
+          conceptTested: "Identification of common characteristics and differentiating properties among geographical entities (rivers vs lagoon).",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_dbf19edd7d",
+        q_num: 59,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "C",
+        correctOption: "C",
+        userTime: "01:38",
+        avgTime: "01:20",
+        question: "A ticket counter holds only \u20B9100, \u20B920 and \u20B910 notes. It has twice as many \u20B920 notes as \u20B9100 notes and three times as many \u20B910 notes as \u20B9100 notes. The notes come to \u20B93,060 in all. How many notes does the counter hold?",
+        options: {
+          a: "18",
+          b: "36",
+          c: "108",
+          d: "54"
+        },
+        answer: "c",
+        solution: "Rule: call the smallest group one share and write every other group in shares.\nSet up the shares: \u20B9100 notes = 1 share\n\u20B920 notes = 2 shares\n\u20B910 notes = 3 shares\nValue carried by one share: \u20B9100 \xD7 1 = \u20B9100\n\u20B920 \xD7 2 = \u20B940\n\u20B910 \xD7 3 = \u20B930\nOne share is worth \u20B9100 + \u20B940 + \u20B930 = \u20B9170\nFind the size of a share: \u20B93, 060 \xF7 \u20B9170 = 18\nCount the notes: \u20B9100 notes = 18\n\u20B920 notes = 2 \xD7 18 = 36\n\u20B910 notes = 3 \xD7 18 = 54\nTotal = 18 + 36 + 54 = 108\nAnswer: 108",
+        image: null,
+        topic: "Arithmetical Reasoning",
+        subtopic: "Calculation Reasoning",
+        conceptTested: "Proportional distribution of denominations and calculating total items in a collection based on a given monetary value.",
+        tags: {
+          topic: "Arithmetical Reasoning",
+          subtopic: "Calculation Reasoning",
+          conceptTested: "Proportional distribution of denominations and calculating total items in a collection based on a given monetary value.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_caf18f63d8",
+        q_num: 60,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "C",
+        correctOption: "C",
+        userTime: "01:16",
+        avgTime: "00:55",
+        question: "The symbol $\\oplus$ follows one rule throughout: $9 \\oplus 5 = 56$, $12 \\oplus 7 = 95$ and $10 \\oplus 6 = 64$. What is the value of $(15 \\oplus 8) - (11 \\oplus 9)$?",
+        options: {
+          a: "201",
+          b: "21",
+          c: "121",
+          d: "45"
+        },
+        answer: "c",
+        solution: "Rule: try the worked examples against the sum, the difference and the product before reaching for anything longer.\nRead the examples: 9 \xD7 5 = 45, so the rule is not the product.\n9\xB2 = 81 and 5\xB2 = 25, and 81 - 25 = 56\n12\xB2 - 7\xB2 = 144 - 49 = 95\n10\xB2 - 6\xB2 = 100 - 36 = 64\n\nSo $a \\oplus b = a^2 - b^2$.\n\nThe first bracket: $15 \\oplus 8 = 225 - 64 = 161$\nThe second bracket: $11 \\oplus 9 = 121 - 81 = 40$\nSubtract, as the question asks: $161 - 40 = 121$\nAnswer: 121",
+        image: null,
+        topic: "Coding-Decoding",
+        subtopic: "Number & Value Coding",
+        conceptTested: "Mathematical operation based on algebraic identity $a^2 - b^2$ applied to symbolic operators.",
+        tags: {
+          topic: "Coding-Decoding",
+          subtopic: "Number & Value Coding",
+          conceptTested: "Mathematical operation based on algebraic identity $a^2 - b^2$ applied to symbolic operators.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_3077b02540",
+        q_num: 61,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "D",
+        correctOption: "D",
+        userTime: "01:03",
+        avgTime: "00:42",
+        question: "Four interns - Nandan, Ila, Tejas and Ruhi - sit in a row facing north, and each is posted to a different city: Bhuj, Kota, Salem or Thane. Ila sits at the extreme right end. Nandan sits second to the right of Ruhi. The intern posted to Bhuj sits immediately to the right of the one posted to Kota. Ila is posted to Thane. Nandan is not posted to Bhuj. To which city is Tejas posted?",
+        options: {
+          a: "Kota",
+          b: "Salem",
+          c: "Thane",
+          d: "Bhuj"
+        },
+        answer: "d",
+        solution: "The convention: All four face north, so each intern\u2019s left and right run the same way as the page\u2019s.\nFix the four seats: Ila takes the extreme right, seat 4.\n\nNandan sits two seats to Ruhi\u2019s right, and of the seats left only 1 and 3 stand two apart.\n\nSo Ruhi is 1 and Nandan is 3.\n\nTejas takes the seat left over, 2.\n\nThe row, left to right: Ruhi, Tejas, Nandan, Ila\nPost the cities: Ila at seat 4 has Thane.\n\nKota must sit immediately left of Bhuj, so that pair is seats 1 - 2 or seats 2 - 3.\n\nWere it 2 - 3, Nandan at seat 3 would hold Bhuj, which he does not.\n\nSo Kota is seat 1 and Bhuj is seat 2, and Salem is left for seat 3.\n\nThe matching: \u2022 Ruhi - Kota\n\u2022 Tejas - Bhuj\n\u2022 Nandan - Salem\n\u2022 Ila - Thane\nAnswer: Bhuj",
+        image: null,
+        topic: "Seating Arrangement",
+        subtopic: "Linear Seating Arrangement",
+        conceptTested: "Deduction of linear positions based on relative directional clues and attribute matching.",
+        tags: {
+          topic: "Seating Arrangement",
+          subtopic: "Linear Seating Arrangement",
+          conceptTested: "Deduction of linear positions based on relative directional clues and attribute matching.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_77a9eb9ec1",
+        q_num: 62,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "D",
+        correctOption: "D",
+        userTime: "00:41",
+        avgTime: "00:31",
+        question: "In a certain code language, 'PLANET' is coded as 68 and 'ORBIT' is coded as 64. How will 'COMET' be coded in that same code language?",
+        options: {
+          a: "51",
+          b: "79",
+          c: "61",
+          d: "56"
+        },
+        answer: "d",
+        solution: "Rule: add the alphabet positions of the letters and compare with the code.\nTest PLANET: P = 16, L = 12, A = 1, N = 14, E = 5, T = 20\n16 + 12 + 1 + 14 + 5 + 20 = 68\nTest ORBIT: O = 15, R = 18, B = 2, I = 9, T = 20\n15 + 18 + 2 + 9 + 20 = 64\n\nBoth codes are plain position sums.\n\nNow COMET: C = 3, O = 15, M = 13, E = 5, T = 20\n3 + 15 = 18\n18 + 13 = 31\n31 + 5 = 36\n36 + 20 = 56\nAnswer: 56",
+        image: null,
+        topic: "Coding-Decoding",
+        subtopic: "Pattern Coding & Decoding",
+        conceptTested: "Forward alphabetical position summation code for words.",
+        tags: {
+          topic: "Coding-Decoding",
+          subtopic: "Pattern Coding & Decoding",
+          conceptTested: "Forward alphabetical position summation code for words.",
+          difficulty: "hard"
+        }
+      },
+      {
+        id: "reas_4cf30cccaa",
+        q_num: 63,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Correct (Slow)",
+        chosenOption: "A",
+        correctOption: "A",
+        userTime: "01:30",
+        avgTime: "00:47",
+        question: "Which two signs and which two numbers should be interchanged to make the following equation correct?\n\n$12 \\div 6 + 3 \\times 36 - 2 = 28$",
+        options: {
+          a: "+ and $\\times$, 12 and 36",
+          b: "$\\div$ and $-$, 12 and 2",
+          c: "$\\div$ and $+$, 6 and 2",
+          d: "$\\times$ and $-$, 3 and 2"
+        },
+        answer: "a",
+        solution: "Rule: swap the two signs first, then the two numbers, and solve by BODMAS.\nThe equation as printed: $12 \\div 6 + 3 \\times 36 - 2 = 2 + 108 - 2 = 108$, not 28.\nInterchange $+$ and $\\times$: Every $+$ becomes $\\times$ and every $\\times$ becomes $+$: $12 \\div 6 \\times 3 + 36 - 2$\nNow interchange 12 and 36: $36 \\div 6 \\times 3 + 12 - 2$\n\n$36 \\div 6 = 6$\n\n$6 \\times 3 = 18$\n\n$18 + 12 - 2 = 28$\n\nThis is the value the question asks for.",
+        image: null,
+        topic: "Mathematical Operations",
+        subtopic: "Interchange of Signs & Numbers",
+        conceptTested: "BODMAS rule combined with simultaneous interchange of mathematical signs and numbers to balance an equation.",
+        tags: {
+          topic: "Mathematical Operations",
+          subtopic: "Interchange of Signs & Numbers",
+          conceptTested: "BODMAS rule combined with simultaneous interchange of mathematical signs and numbers to balance an equation.",
           difficulty: "hard"
         }
       }
@@ -35890,6 +37000,326 @@ Literary Style: The book is a masterpiece of travel writing and oral history, re
           conceptTested: "Cultural heritage and traditional festivals of India",
           difficulty: "medium"
         }
+      },
+      {
+        id: "gene_4da44fec23",
+        q_num: 102,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:05",
+        avgTime: "00:13",
+        question: "Which of the following is NOT a traditional festival of the Naga tribes of Nagaland?",
+        options: {
+          a: "Sekrenyi",
+          b: "Moatsu",
+          c: "Chapchar Kut",
+          d: "Tuluni"
+        },
+        answer: "c",
+        solution: "Chapchar Kut is the spring festival of Mizoram, famous for the Cheraw (bamboo) dance. Sekrenyi, Moatsu and Tuluni are all festivals of Naga tribes of Nagaland.",
+        image: null,
+        topic: "Festivals & Fairs",
+        subtopic: "Folk Festivals North East",
+        conceptTested: "Traditional cultural festivals and tribal heritage across the North-Eastern states of India.",
+        tags: {
+          topic: "Festivals & Fairs",
+          subtopic: "Folk Festivals North East",
+          conceptTested: "Traditional cultural festivals and tribal heritage across the North-Eastern states of India.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_308b1874fa",
+        q_num: 103,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "D",
+        userTime: "00:05",
+        avgTime: "00:12",
+        question: "Who was appointed the Chief Executive Officer of NITI Aayog in July 2026?",
+        options: {
+          a: "Suman Bery",
+          b: "Ashok Kumar Lahiri",
+          c: "V. R. Subrahmanyam",
+          d: "Anurag Jain"
+        },
+        answer: "d",
+        solution: "Answer: Option (d) - Anurag Jain\n\nAnurag Jain was appointed Chief Executive Officer of NITI Aayog in July 2026, succeeding B. V. R. Subrahmanyam.\n\nRevision note - NITI Aayog\n\nNITI Aayog stands for the National Institution for Transforming India and was set up on 1 January 2015, replacing the Planning Commission.\n\nIt is neither a constitutional nor a statutory body - it was created by a Cabinet resolution and works as a think tank and advisory body.\n\nThe Prime Minister is its Chairperson; the Vice Chairperson is appointed by the Prime Minister and enjoys Cabinet Minister rank.",
+        image: null,
+        topic: "Government Schemes & Policies",
+        subtopic: "National & Global Events",
+        conceptTested: "Static knowledge of key appointments, office-holders, and constitutional/statutory status of NITI Aayog.",
+        tags: {
+          topic: "Government Schemes & Policies",
+          subtopic: "National & Global Events",
+          conceptTested: "Static knowledge of key appointments, office-holders, and constitutional/statutory status of NITI Aayog.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_7bd8128ebd",
+        q_num: 104,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "A",
+        userTime: "00:11",
+        avgTime: "00:39",
+        question: "For a concave mirror, an object is placed at $u = -15\\text{ cm}$ and the focal length is $f = -10\\text{ cm}$. Find the image distance $v$.",
+        options: {
+          a: "-30 cm",
+          b: "-20 cm",
+          c: "-15 cm",
+          d: "-6 cm"
+        },
+        answer: "a",
+        solution: "Answer: Option (a) - -30 cm\n\nBy the mirror formula $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$, we get $\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = -\\frac{1}{10} + \\frac{1}{15} = -\\frac{1}{30}$, so $v = -30\\text{ cm}$ - a real, inverted, enlarged image 30 cm in front of the mirror.\n\nRevision note - mirror formula and magnification\n\nThe mirror formula is $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$, and the radius of curvature $R = 2f$.\n\nUnder the Cartesian sign convention distances are measured from the pole, with the incident ray direction taken as positive.\n\nFor a concave mirror $f$ is negative; for a convex mirror $f$ is positive.\n\nMagnification $m = -\\frac{v}{u} = \\frac{h'}{h}$. A negative $m$ means a real, inverted image; a positive $m$ means a virtual, erect image.",
+        image: null,
+        topic: "Physics",
+        subtopic: "Optics, Sound & Waves",
+        conceptTested: "Mirror formula $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$ and Cartesian sign conventions for concave mirrors.",
+        tags: {
+          topic: "Physics",
+          subtopic: "Optics, Sound & Waves",
+          conceptTested: "Mirror formula $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$ and Cartesian sign conventions for concave mirrors.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_424fbebfa3",
+        q_num: 105,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "D",
+        userTime: "00:08",
+        avgTime: "00:28",
+        question: "Which of the following statements about the human heart and double circulation is correct?",
+        options: {
+          a: "The right ventricle pumps oxygenated blood into the aorta.",
+          b: "Deoxygenated blood from the body enters the left atrium.",
+          c: "The pulmonary vein carries deoxygenated blood to the lungs.",
+          d: "The left ventricle pumps oxygenated blood to the whole body."
+        },
+        answer: "d",
+        solution: "Answer: Option (d) - The left ventricle pumps oxygenated blood to the whole body.\n\nThe left ventricle receives oxygenated blood from the left atrium and pumps it into the aorta for the whole body. Its wall is the thickest of the four chambers.\n\nRevision note - the human heart and double circulation\n\nThe human heart has four chambers: two atria above and two ventricles below.\n\nDeoxygenated blood from the body reaches the right atrium through the superior and inferior vena cava.\n\nFrom the right ventricle it goes to the lungs through the pulmonary artery - the only artery carrying deoxygenated blood.",
+        image: null,
+        topic: "Biology",
+        subtopic: "General Science Principles",
+        conceptTested: "Anatomy of the human heart and the mechanism of double circulation.",
+        tags: {
+          topic: "Biology",
+          subtopic: "General Science Principles",
+          conceptTested: "Anatomy of the human heart and the mechanism of double circulation.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_ac04d76519",
+        q_num: 106,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "A",
+        userTime: "00:06",
+        avgTime: "00:16",
+        question: "In Kathakali, which type of make-up is used for noble and divine characters such as Krishna and Arjuna?",
+        options: {
+          a: "Pacha",
+          b: "Kathi",
+          c: "Minukku",
+          d: "Kari"
+        },
+        answer: "a",
+        solution: "Answer: Option (a) - Pacha\n\nPacha, meaning green, is the make - up of noble, divine and virtuous characters in Kathakali, such as Krishna, Arjuna and Rama.",
+        image: null,
+        topic: "Folk & Classical Dances",
+        subtopic: "Classical & Folk Dances",
+        conceptTested: "Character make-up, attire, and symbolic classifications (such as Pacha) in Kathakali dance-drama.",
+        tags: {
+          topic: "Folk & Classical Dances",
+          subtopic: "Classical & Folk Dances",
+          conceptTested: "Character make-up, attire, and symbolic classifications (such as Pacha) in Kathakali dance-drama.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_2608a5d054",
+        q_num: 107,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:02",
+        avgTime: "00:21",
+        question: "In 2026, Parveen Shaikh received which award, often called the Green Oscar, for her work to conserve the Indian Skimmer?",
+        options: {
+          a: "Goldman Environmental Prize",
+          b: "Tyler Prize for Environmental Achievement",
+          c: "Whitley Award",
+          d: "Champions of the Earth Award"
+        },
+        answer: "c",
+        solution: "Answer: Option (c) - Whitley Award\n\nParveen Shaikh won the Whitley Award 2026 for the conservation of the Indian Skimmer. The Whitley Awards are popularly called the Green Oscars.",
+        image: null,
+        topic: "Awards & Honours",
+        subtopic: "National & International Awards",
+        conceptTested: "Identification of prominent international environmental awards like the Whitley Award (Green Oscar) and their recipients.",
+        tags: {
+          topic: "Awards & Honours",
+          subtopic: "National & International Awards",
+          conceptTested: "Identification of prominent international environmental awards like the Whitley Award (Green Oscar) and their recipients.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_297316d3f0",
+        q_num: 108,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:02",
+        avgTime: "00:09",
+        question: "In men's artistic gymnastics at the Olympic Games, a gymnast competes on how many apparatus?",
+        options: {
+          a: "4",
+          b: "6",
+          c: "8",
+          d: "10"
+        },
+        answer: "b",
+        solution: "Answer: Option (B) - - 6\nMen's artistic gymnastics has six apparatus: floor exercise, pommel horse, still rings, vault, parallel bars, and horizontal bar. Women's artistic gymnastics has four apparatus.",
+        image: null,
+        topic: "Sports & Trophies",
+        subtopic: "Sports, Cups & Trophies",
+        conceptTested: "Rules, regulations, and apparatus specifications in men's artistic gymnastics at the Olympic Games",
+        tags: {
+          topic: "Sports & Trophies",
+          subtopic: "Sports, Cups & Trophies",
+          conceptTested: "Rules, regulations, and apparatus specifications in men's artistic gymnastics at the Olympic Games",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_896053e403",
+        q_num: 109,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "C",
+        userTime: "00:04",
+        avgTime: "00:23",
+        question: "Consider the following statements about Power Grid Corporation of India Limited.\n\nI. Burra Vamsi Rama Mohan was appointed its Chairman and Managing Director in April 2026.\n\nII. It functions under the Ministry of New and Renewable Energy.\n\nIII. It holds Maharatna status among central public sector enterprises.\n\nWhich of the statements given above are correct?",
+        options: {
+          a: "I and II only",
+          b: "II and III only",
+          c: "I and III only",
+          d: "I, II and III"
+        },
+        answer: "c",
+        solution: "Answer: Option (C) - - I and III only\n\nStatements I and III are correct. Statement II is incorrect: POWERGRID functions under the Ministry of Power, not the Ministry of New and Renewable Energy.",
+        image: null,
+        topic: "Government Schemes & Policies",
+        subtopic: "National & Global Events",
+        conceptTested: "Classification, status, and administrative ministries of Central Public Sector Enterprises (CPSEs) in India",
+        tags: {
+          topic: "Government Schemes & Policies",
+          subtopic: "National & Global Events",
+          conceptTested: "Classification, status, and administrative ministries of Central Public Sector Enterprises (CPSEs) in India",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_c44b2fba95",
+        q_num: 110,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "D",
+        userTime: "00:07",
+        avgTime: "00:09",
+        question: "The first edition of NITI Aayog's Fiscal Health Index assessed the fiscal performance of how many major Indian States?",
+        options: {
+          a: "12",
+          b: "14",
+          c: "16",
+          d: "18"
+        },
+        answer: "d",
+        solution: "Answer: Option (D) - - 18\n\nThe first edition of the Fiscal Health Index, released by NITI Aayog, covered 18 major States that together account for the bulk of India's GDP, population, and fiscal activity.",
+        image: null,
+        topic: "Government Schemes & Policies",
+        subtopic: "Reports, Indices & Rankings",
+        conceptTested: "Methodology, coverage, and findings of NITI Aayog's Fiscal Health Index regarding State finances",
+        tags: {
+          topic: "Government Schemes & Policies",
+          subtopic: "Reports, Indices & Rankings",
+          conceptTested: "Methodology, coverage, and findings of NITI Aayog's Fiscal Health Index regarding State finances",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_8b85d4bf41",
+        q_num: 111,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Unattempted",
+        chosenOption: "Unattempted",
+        correctOption: "B",
+        userTime: "00:13",
+        avgTime: "00:39",
+        question: "Which of the following iron ore mining districts is NOT located in Odisha?",
+        options: {
+          a: "Keonjhar",
+          b: "Singhbhum",
+          c: "Mayurbhanj",
+          d: "Sundargarh"
+        },
+        answer: "b",
+        solution: "Singhbhum is an iron ore district of Jharkhand, with the Noamundi and Gua mines. Keonjhar, Mayurbhanj and Sundargarh are all iron ore districts of Odisha.",
+        image: null,
+        topic: "Indian Drainage & Physiography",
+        subtopic: "Mineral Resources Industry",
+        conceptTested: "Geographical distribution of major iron ore belts and mining districts in India.",
+        tags: {
+          topic: "Indian Drainage & Physiography",
+          subtopic: "Mineral Resources Industry",
+          conceptTested: "Geographical distribution of major iron ore belts and mining districts in India.",
+          difficulty: "medium"
+        }
       }
     ]
   },
@@ -40605,6 +42035,326 @@ Further Insights: \u2022 PRARAMBH 2026 is a nationwide outreach programme launch
           conceptTested: "Planetary characteristics and satellite counts in the Solar System",
           difficulty: "medium"
         }
+      },
+      {
+        id: "gene_854ef5254e",
+        q_num: 148,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "C",
+        userTime: "00:11",
+        avgTime: "00:24",
+        question: "In December 2025, which international body recognised India's Unified Payments Interface (UPI) as the world's largest real-time payment system?",
+        options: {
+          a: "World Bank",
+          b: "Bank for International Settlements",
+          c: "International Monetary Fund",
+          d: "World Economic Forum"
+        },
+        answer: "c",
+        solution: "In December 2025 the IMF recognised India's UPI as the world's largest real - time payment system. UPI is operated by the National Payments Corporation of India (NPCI) and was launched in 2016.",
+        image: null,
+        topic: "National & International Current Affairs",
+        subtopic: "Reports, Indices & Rankings",
+        conceptTested: "Current affairs knowledge regarding global recognition of India's payment infrastructure systems by international financial institutions.",
+        tags: {
+          topic: "National & International Current Affairs",
+          subtopic: "Reports, Indices & Rankings",
+          conceptTested: "Current affairs knowledge regarding global recognition of India's payment infrastructure systems by international financial institutions.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_471b52101a",
+        q_num: 149,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:09",
+        avgTime: "00:43",
+        question: "Consider the following statements about Article 356 of the Constitution.\n\nI. When a Proclamation under it is in force, the powers of the State Legislature are exercised by or under the authority of Parliament.\n\nII. It empowers the President to assume to himself the powers vested in the High Court of that State.\n\nWhich of the statements given above is/are correct?",
+        options: {
+          a: "Only I",
+          b: "Only II",
+          c: "Both I and II",
+          d: "Neither I nor II"
+        },
+        answer: "a",
+        solution: "Statement I is correct: under Article 356 Parliament exercises the State Legislature's powers. Statement II is wrong - the proviso to Article 356 expressly bars the President from assuming any power vested in a High Court.",
+        image: null,
+        topic: "Indian Polity & Constitution",
+        subtopic: "Union & State Executive",
+        conceptTested: "Provisions and constitutional limitations of President's Rule under Article 356 regarding legislative and judicial powers.",
+        tags: {
+          topic: "Indian Polity & Constitution",
+          subtopic: "Union & State Executive",
+          conceptTested: "Provisions and constitutional limitations of President's Rule under Article 356 regarding legislative and judicial powers.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_a7bc402859",
+        q_num: 150,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "C",
+        userTime: "00:09",
+        avgTime: "00:17",
+        question: "Which is the primary payload of India's Aditya-L1 mission, designed to study the solar corona from a halo orbit at L1?",
+        options: {
+          a: "SUIT",
+          b: "HEL1OS",
+          c: "VELC",
+          d: "SoLEXS"
+        },
+        answer: "c",
+        solution: "The Visible Emission Line Coronagraph (VELC) is the primary payload of Aditya - L1 and studies the solar corona. It was built by the Indian Institute of Astrophysics, Bengaluru.",
+        image: null,
+        topic: "Science & Technology",
+        subtopic: "General Science Principles",
+        conceptTested: "Scientific payload details and objectives of India's space exploration missions such as Aditya-L1.",
+        tags: {
+          topic: "Science & Technology",
+          subtopic: "General Science Principles",
+          conceptTested: "Scientific payload details and objectives of India's space exploration missions such as Aditya-L1.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_51e676b8e7",
+        q_num: 151,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:11",
+        avgTime: "00:19",
+        question: "The Ring Fence policy, which sought to create buffer states on the Company's frontiers, is associated with Governor-General ______.",
+        options: {
+          a: "Warren Hastings",
+          b: "Lord Wellesley",
+          c: "Lord Cornwallis",
+          d: "Lord Hastings"
+        },
+        answer: "a",
+        solution: "Answer: Option (a) - Warren Hastings\n\nThe Ring Fence policy was followed by Warren Hastings. It defended the frontiers of neighbouring states such as Awadh, turning them into a buffer protecting Company territory from the Marathas and the Afghans.\n\nRevision note - the Company's policies towards Indian states\n\nWarren Hastings was Governor of Bengal from 1772 and became the first Governor - General of Bengal in 1774 under the Regulating Act of 1773.\n\nHis Ring Fence policy meant defending somebody else's frontier at their expense, so that no hostile army could reach Company land.\n\nAwadh was the chief buffer state, under the Treaty of Benaras, 1773.",
+        image: null,
+        topic: "Modern History",
+        subtopic: "Modern History & Freedom Movement",
+        conceptTested: "Administrative policies of early British Governors-General, specifically Warren Hastings and the Ring Fence policy.",
+        tags: {
+          topic: "Modern History",
+          subtopic: "Modern History & Freedom Movement",
+          conceptTested: "Administrative policies of early British Governors-General, specifically Warren Hastings and the Ring Fence policy.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_2724919c54",
+        q_num: 152,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "C",
+        userTime: "00:08",
+        avgTime: "00:17",
+        question: "Under the Laws of the Game, the half-time interval in a football match must not exceed how many minutes?",
+        options: {
+          a: "10 minutes",
+          b: "12 minutes",
+          c: "15 minutes",
+          d: "20 minutes"
+        },
+        answer: "c",
+        solution: "Answer: Option (c) - 15 minutes\n\nThe Laws of the Game allow players an interval at half - time not exceeding 15 minutes. The match itself is two halves of 45 minutes, that is 90 minutes of regulation play.\n\nRevision note - football, the numbers that are asked\n\nA team has 11 players, one of whom is the goalkeeper; a match needs at least seven players on a side to continue.\n\nRegulation time is 90 minutes, played as two halves of 45 minutes, with stoppage time added at the referee's discretion.\n\nExtra time in a knockout match is two halves of 15 minutes, making 30 minutes in all, followed if necessary by a penalty shoot - out.",
+        image: null,
+        topic: "Sports & Trophies",
+        subtopic: "Important Days, Orgs & Static Facts",
+        conceptTested: "Standard regulations, dimensions, and match durations under the Laws of the Game for football.",
+        tags: {
+          topic: "Sports & Trophies",
+          subtopic: "Important Days, Orgs & Static Facts",
+          conceptTested: "Standard regulations, dimensions, and match durations under the Laws of the Game for football.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_f624c135b8",
+        q_num: 153,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "D",
+        correctOption: "B",
+        userTime: "00:08",
+        avgTime: "00:31",
+        question: "The Global Liveability Index, in which New Delhi was ranked 120th among 173 cities in 2026, is released annually by which organisation?",
+        options: {
+          a: "Mercer",
+          b: "Economist Intelligence Unit",
+          c: "World Economic Forum",
+          d: "Organisation for Economic Co-operation and Development"
+        },
+        answer: "b",
+        solution: "Answer: Option (b) - Economist Intelligence Unit\n\nThe Global Liveability Index is published every year by the Economist Intelligence Unit (EIU), the research arm of The Economist Group. In 2026 New Delhi stood 120th of 173 cities.",
+        image: null,
+        topic: "International Organisations",
+        subtopic: "Global Indices Reports",
+        conceptTested: "Recognition of global rankings and the publishing bodies behind them, such as the Global Liveability Index by the Economist Intelligence Unit.",
+        tags: {
+          topic: "International Organisations",
+          subtopic: "Global Indices Reports",
+          conceptTested: "Recognition of global rankings and the publishing bodies behind them, such as the Global Liveability Index by the Economist Intelligence Unit.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_93935516e4",
+        q_num: 154,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "C",
+        correctOption: "A",
+        userTime: "00:11",
+        avgTime: "00:21",
+        question: "Consider the following statements about India's balance of payments crisis of 1991.\n\nI. Foreign exchange reserves had fallen to a level that could not finance imports for more than about two weeks.\n\nII. As part of the response, the rupee was devalued in two steps in July 1993.\n\nWhich of the statements given above is/are correct?",
+        options: {
+          a: "Only I",
+          b: "Only II",
+          c: "Both I and II",
+          d: "Neither I nor II"
+        },
+        answer: "a",
+        solution: "Answer: Option (a) - Only I\nStatement I is correct - reserves had fallen to about two weeks of imports. Statement II gives the wrong year: the rupee was devalued in two steps in July 1991, not 1993.",
+        image: null,
+        topic: "Modern History",
+        subtopic: "Art, Architecture & Inscriptions",
+        conceptTested: "Historical facts regarding India's 1991 balance of payments crisis, external debt reserves, and the two-step rupee devaluation in July 1991.",
+        tags: {
+          topic: "Modern History",
+          subtopic: "Art, Architecture & Inscriptions",
+          conceptTested: "Historical facts regarding India's 1991 balance of payments crisis, external debt reserves, and the two-step rupee devaluation in July 1991.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_2b6c4adf59",
+        q_num: 155,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "D",
+        userTime: "00:10",
+        avgTime: "00:18",
+        question: "Which class of Vedic priest is associated with the chanting of the Samaveda?",
+        options: {
+          a: "Hotri",
+          b: "Adhvaryu",
+          c: "Brahma",
+          d: "Udgatri"
+        },
+        answer: "d",
+        solution: "Answer: Option (d) - Udgatri\n\nThe Udgatri is the priest who sings the samans of the Samaveda at a sacrifice. The Hotri recites from the Rigveda, the Adhvaryu from the Yajurveda and the Brahma supervises the whole ritual.",
+        image: null,
+        topic: "Ancient History",
+        subtopic: "Ancient History (Harappa to Gupta)",
+        conceptTested: "Association of Vedic priesthood roles and their specific duties during sacrifices, such as the Udgatri for the Samaveda.",
+        tags: {
+          topic: "Ancient History",
+          subtopic: "Ancient History (Harappa to Gupta)",
+          conceptTested: "Association of Vedic priesthood roles and their specific duties during sacrifices, such as the Udgatri for the Samaveda.",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_54a9efac6b",
+        q_num: 156,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "A",
+        correctOption: "B",
+        userTime: "00:13",
+        avgTime: "00:32",
+        question: "Matsya 6000, India's crewed deep-sea submersible under the Samudrayaan project, has been developed by which organisation?",
+        options: {
+          a: "Indian National Centre for Ocean Information Services",
+          b: "National Institute of Ocean Technology",
+          c: "National Centre for Polar and Ocean Research",
+          d: "Central Marine Fisheries Research Institute"
+        },
+        answer: "b",
+        solution: "Answer: Option (B) - - National Institute of Ocean Technology\n\nMatsya 6000 is being built by the National Institute of Ocean Technology (NIOT), Chennai, an institute of the Ministry of Earth Sciences. It is India's first indigenous crewed submersible designed to carry three people to a depth of 6, 000 metres as part of the Samudrayaan project under the Deep Ocean Mission.",
+        image: null,
+        topic: "National & International Current Affairs",
+        subtopic: "National & Global Events",
+        conceptTested: "Recent developments in India's deep-sea missions and institutional projects under the Ministry of Earth Sciences",
+        tags: {
+          topic: "National & International Current Affairs",
+          subtopic: "National & Global Events",
+          conceptTested: "Recent developments in India's deep-sea missions and institutional projects under the Ministry of Earth Sciences",
+          difficulty: "medium"
+        }
+      },
+      {
+        id: "gene_2f4d672110",
+        q_num: 157,
+        mockId: "mock_1790621702819_uneyq",
+        testId: "mock_1790621702819_uneyq",
+        testName: "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        platform: "RBELearning",
+        status: "Incorrect",
+        chosenOption: "B",
+        correctOption: "A",
+        userTime: "00:14",
+        avgTime: "00:37",
+        question: "Which of the following statements about organised crime under the Bharatiya Nyaya Sanhita, 2023, is NOT correct?",
+        options: {
+          a: "Petty organised crime is punishable with imprisonment of up to three years.",
+          b: "Organised crime resulting in the death of a person is punishable with death or imprisonment for life.",
+          c: "Section 111 of the Sanhita deals with the offence of organised crime.",
+          d: "Before the Sanhita, organised crime was covered mainly by State laws such as MCOCA."
+        },
+        answer: "a",
+        solution: "Answer: Option (A) - - Petty organised crime is punishable with imprisonment of up to three years.\n\nThis is the incorrect statement. Petty organised crime under Section 112 carries imprisonment of not less than one year and up to seven years, along with a fine. The other three statements correctly describe the provisions under the Bharatiya Nyaya Sanhita, 2023.",
+        image: null,
+        topic: "Indian Polity & Constitution",
+        subtopic: "Indian Constitution & Governance",
+        conceptTested: "Provisions regarding organised crime and penalties under the Bharatiya Nyaya Sanhita, 2023",
+        tags: {
+          topic: "Indian Polity & Constitution",
+          subtopic: "Indian Constitution & Governance",
+          conceptTested: "Provisions regarding organised crime and penalties under the Bharatiya Nyaya Sanhita, 2023",
+          difficulty: "medium"
+        }
       }
     ]
   }
@@ -40904,21 +42654,28 @@ async function sendCompletionSummary(botInstance, session) {
 
 _${comment}_`;
   const afterQuizKeyboard = new InlineKeyboard();
-  const missedInSession = session.missedQuestions && session.missedQuestions.length > 0 ? session.missedQuestions : score < total ? session.questions.slice(0, 25) : [];
-  const allUserMistakes = getUserMistakes(session.userId, "all");
-  const combinedMap = /* @__PURE__ */ new Map();
-  for (const q of allUserMistakes) {
-    const key = q.id || q.question.trim().toLowerCase();
-    combinedMap.set(key, q);
-  }
-  for (const q of missedInSession) {
-    const key = q.id || q.question.trim().toLowerCase();
-    combinedMap.set(key, q);
-  }
-  const combinedList = Array.from(combinedMap.values());
-  if (combinedList.length > 0) {
-    const syncUrl = buildSafeWebSyncUrl(combinedList);
-    afterQuizKeyboard.url(`\u{1F4D6} View Solutions & AI Tutor on Web`, syncUrl).row();
+  const isSpeedLab = session.category === "speed_lab" || /speed|mental math|calc studio|routine|blitz/i.test(session.drillTitle);
+  if (!isSpeedLab) {
+    const missedInSession = session.missedQuestions && session.missedQuestions.length > 0 ? session.missedQuestions : score < total ? session.questions.slice(0, 25) : [];
+    const allUserMistakes = getUserMistakes(session.userId, "all");
+    const combinedMap = /* @__PURE__ */ new Map();
+    for (const q of allUserMistakes) {
+      if (!isSpeedLabItem(q)) {
+        const key = getCleanQuestionKey(q.question, q.id);
+        if (key && !combinedMap.has(key)) combinedMap.set(key, q);
+      }
+    }
+    for (const q of missedInSession) {
+      if (!isSpeedLabItem(q)) {
+        const key = getCleanQuestionKey(q.question, q.id);
+        if (key && !combinedMap.has(key)) combinedMap.set(key, q);
+      }
+    }
+    const combinedList = Array.from(combinedMap.values());
+    if (combinedList.length > 0) {
+      const syncUrl = buildSafeWebSyncUrl(combinedList);
+      afterQuizKeyboard.url(`\u{1F4D6} View Solutions & AI Tutor on Web`, syncUrl).row();
+    }
   }
   afterQuizKeyboard.text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");
   clearSession(session.userId);
@@ -40936,7 +42693,7 @@ _${comment}_`;
     });
   }
 }
-async function startQuizForUser(userId, chatId, title, questions) {
+async function startQuizForUser(userId, chatId, title, questions, category = "chapter_bank") {
   if (!questions || questions.length === 0) {
     await bot.api.sendMessage(
       chatId,
@@ -40948,7 +42705,7 @@ async function startQuizForUser(userId, chatId, title, questions) {
     );
     return;
   }
-  const session = startSession(userId, chatId, title, questions);
+  const session = startSession(userId, chatId, title, questions, category);
   await sendCurrentQuestion(bot, session);
 }
 async function handleSyncCommand(ctx) {
@@ -41139,7 +42896,7 @@ bot.callbackQuery(/^run_eng:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+):(all|10)$/, a
   if (!setInfo) return;
   const qs = loadQuestionsFromSet(setInfo.filePath, mode);
   const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs, "chapter_bank");
 });
 bot.callbackQuery("cb_sub_math", async (ctx) => {
   const mathSections = getMathCatalog();
@@ -41219,7 +42976,7 @@ bot.callbackQuery(/^run_math:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+):(all|10)$/, asy
   if (!setInfo) return;
   const qs = loadQuestionsFromSet(setInfo.filePath, mode);
   const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs, "chapter_bank");
 });
 bot.callbackQuery("cb_sub_ga", async (ctx) => {
   const topics = getGeneralAwarenessCatalog();
@@ -41275,7 +43032,7 @@ bot.callbackQuery(/^run_ga:([a-zA-Z0-9_\-]+):(.+):(all|10)$/, async (ctx) => {
   if (!setInfo) return;
   const qs = loadQuestionsFromSet(setInfo.filePath, mode);
   const modeLabel = mode === "all" ? `All ${qs.length} Questions` : "Quick 10";
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `${setInfo.title} (${modeLabel})`, qs, "chapter_bank");
 });
 bot.callbackQuery("cb_sub_reasoning", async (ctx) => {
   const kb = new InlineKeyboard().text("\u{1F3AF} Practice ALL Reasoning Mock Mistakes", "run_mock:reasoning:all").row().text("\u26A1 Quick 10 Reasoning Mistakes", "run_mock:reasoning:10").row().text("\u{1F4C1} Browse Reasoning Chapters", "me_sub:reas").row().text("\u2B05\uFE0F Back to Subjects", "nav_chapter_bank");
@@ -41372,7 +43129,8 @@ bot.callbackQuery(/^me_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ct
     ctx.from.id,
     ctx.chat.id,
     `\u{1F3AF} ${label} (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`,
-    questions
+    questions,
+    "mock_errors"
   );
 });
 async function showQuizMistakesMenu(ctx, isEdit = false) {
@@ -41484,7 +43242,8 @@ bot.callbackQuery(/^qm_run_all:(all|10)$/, async (ctx) => {
     ctx.from.id,
     ctx.chat.id,
     `\u{1F4D5} All Quiz Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`,
-    questions
+    questions,
+    "mock_errors"
   );
 });
 bot.callbackQuery(/^qm_sub:(eng|math|reas|ga)$/, async (ctx) => {
@@ -41576,7 +43335,8 @@ bot.callbackQuery(/^qm_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ct
     ctx.from.id,
     ctx.chat.id,
     `\u{1F4D5} ${subTitle} Quiz Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`,
-    questions
+    questions,
+    "chapter_bank"
   );
 });
 bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
@@ -41595,14 +43355,14 @@ bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
     questions = shuffle(questions).slice(0, 10);
   }
   const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace("_", " ");
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mock Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`, questions);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Mock Mistakes (${mode === "all" ? `All ${questions.length}` : "Quick 10"})`, questions, "mock_errors");
 });
 bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();
   const [_, subId, chNum, mode] = ctx.match;
   const qs = loadMockErrorsForSubject(subId, parseInt(chNum, 10), mode);
   const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace("_", " ");
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F3AF} ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs, "mock_errors");
 });
 bot.callbackQuery("nav_speed_lab", async (ctx) => {
   const kb = new InlineKeyboard().text("\u{1F9E0} Mental Math Studio (Arun Sharma)", "speed_mental_math").row().text("\u{1F9EE} Calculation Studio (7 Steps)", "speed_calc_studio").row().text("\u{1F4D0} Simplification Drills", "speed_simp_menu").row().text("\u{1F3C6} Daily 25-Q Routine Workout", "speed_routine").row().text("\u26A1 Rapid 10-Q Speed Blitz", "speed_mixed").row().text("\u2B05\uFE0F Back to Main Menu", "nav_root");
@@ -41709,7 +43469,7 @@ bot.callbackQuery(/^run_mm:([a-z0-9_]+):([0-9]+)$/, async (ctx) => {
     qs = generateMentalMathBlitz(count);
     title = `\u{1F3AF} Mental Math: Arun Sharma Blitz (${count} Qs)`;
   }
-  await startQuizForUser(ctx.from.id, ctx.chat.id, title, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, title, qs, "speed_lab");
 });
 bot.callbackQuery("speed_calc_studio", async (ctx) => {
   const kb = new InlineKeyboard().text("Step 1: \u{1F4D0} Triplets (16 Qs)", "calc_step_triplets").row().text("Step 2: \u2716\uFE0F Tables 12\u201324 (13 Qs)", "calc_step_tables").row().text("Step 3: \u{1F522} Squares 17\u201339 (23 Qs)", "calc_step_squares").row().text("Step 4: \u{1F9CA} Cubes 11\u201325 (15 Qs)", "calc_step_cubes").row().text("Step 5: \u26A1 Powers 2\u20139 (38 Qs)", "calc_step_powers").row().text("Step 6: \u2757 Factorials 1\u20138 (8 Qs)", "calc_step_factorials").row().text("Step 7: \u{1F4AF} Fractions % (73 Qs)", "calc_step_fractions").row().text("\u2B05\uFE0F Back to Speed Lab", "nav_speed_lab");
@@ -41801,7 +43561,7 @@ bot.callbackQuery(/^run_calc:([a-z0-9_]+):(all|10)$/, async (ctx) => {
     qs = getFractionsStepDrill(mode);
     title = `\u{1F4AF} Step 7: Fractions \u2194 % (${mode === "all" ? "All 73" : "10 Qs"})`;
   }
-  await startQuizForUser(ctx.from.id, ctx.chat.id, title, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, title, qs, "speed_lab");
 });
 bot.callbackQuery("speed_simp_menu", async (ctx) => {
   const cat = getSimplificationCatalog();
@@ -41858,16 +43618,16 @@ ${q.question}`,
       source: target.title
     })
   );
-  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F4D0} ${target.title} (All ${questions.length} Qs)`, questions);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, `\u{1F4D0} ${target.title} (All ${questions.length} Qs)`, questions, "speed_lab");
 });
 bot.callbackQuery("speed_routine", async (ctx) => {
   await ctx.answerCallbackQuery();
   const qs = getDailyRoutineWorkout();
-  await startQuizForUser(ctx.from.id, ctx.chat.id, "\u{1F3C6} Daily 25-Question Routine Workout", qs);
+  await startQuizForUser(ctx.from.id, ctx.chat.id, "\u{1F3C6} Daily 25-Question Routine Workout", qs, "speed_lab");
 });
 bot.callbackQuery("speed_mixed", async (ctx) => {
   await ctx.answerCallbackQuery();
-  await startQuizForUser(ctx.from.id, ctx.chat.id, "\u26A1 Mixed Speed Blitz", generateMixedSpeedDrill(10));
+  await startQuizForUser(ctx.from.id, ctx.chat.id, "\u26A1 Mixed Speed Blitz", generateMixedSpeedDrill(10), "speed_lab");
 });
 bot.callbackQuery("nav_help", async (ctx) => {
   const helpText = `\u{1F4A1} *CGL Bot Navigation Guide*
@@ -41896,13 +43656,15 @@ bot.on("poll_answer", async (ctx) => {
       markMistakeMastered(session.userId, currentQ.id, currentQ.question);
     }
   } else {
-    recordMistake(session.userId, currentQ, "telegram_quiz");
-    if (!session.missedQuestions) {
-      session.missedQuestions = [];
+    const isSpeedLab = session.category === "speed_lab" || isSpeedLabItem(currentQ) || /speed|mental math|calc studio|routine|blitz/i.test(session.drillTitle);
+    if (!isSpeedLab) {
+      const source = session.category === "mock_errors" ? "website_mock" : "telegram_quiz";
+      recordMistake(session.userId, currentQ, source);
+      if (!session.missedQuestions) {
+        session.missedQuestions = [];
+      }
+      session.missedQuestions.push(currentQ);
     }
-    session.missedQuestions.push(currentQ);
-    const syncParam = encodeQuestionForSync(currentQ);
-    const webMistakeUrl = syncParam && syncParam.length < 1700 ? `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}` : "https://ssc27.vercel.app/?view=botErrors";
     const correctOpt = currentQ.options && currentQ.options[currentQ.correctOptionIndex] ? currentQ.options[currentQ.correctOptionIndex].trim() : "";
     const safeCorrectOpt = correctOpt.replace(/([*_`[\]()])/g, "\\$1");
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
@@ -41921,20 +43683,26 @@ bot.on("poll_answer", async (ctx) => {
       feedbackMsg += `
 `;
     }
-    feedbackMsg += `\u{1F4D5} _Saved to Mistake Notebook_`;
+    let replyMarkup = void 0;
+    if (!isSpeedLab) {
+      feedbackMsg += `\u{1F4D5} _Saved to Mistake Notebook_`;
+      const syncParam = encodeQuestionForSync(currentQ);
+      const webMistakeUrl = syncParam && syncParam.length < 1700 ? `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}` : "https://ssc27.vercel.app/?view=botErrors";
+      replyMarkup = new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl);
+    }
     bot.api.sendMessage(
       session.chatId,
       feedbackMsg,
       {
         parse_mode: "Markdown",
-        reply_markup: new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl)
+        reply_markup: replyMarkup
       }
     ).catch(() => {
       bot.api.sendMessage(
         session.chatId,
         feedbackMsg.replace(/[*_`]/g, ""),
         {
-          reply_markup: new InlineKeyboard().url("\u{1F4D6} Open Web Notebook", "https://ssc27.vercel.app/?view=botErrors")
+          reply_markup: replyMarkup
         }
       ).catch(() => {
       });

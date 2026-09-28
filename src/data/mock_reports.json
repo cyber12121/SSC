@@ -1,5 +1,53 @@
 [
   {
+    "id": "mock_1790621702819_uneyq",
+    "title": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+    "platform": "RBELearning",
+    "type": "full",
+    "date": "2026-09-28T18:55:02.764Z",
+    "totalQuestions": 100,
+    "maxMarks": 200,
+    "totalScore": 103.5,
+    "overallAccuracy": 69.9,
+    "totalCorrect": 58,
+    "totalWrong": 25,
+    "totalUnattempted": 17,
+    "sections": {
+      "reasoning": {
+        "total": 25,
+        "correct": 25,
+        "wrong": 0,
+        "unattempted": 0,
+        "score": 50,
+        "accuracy": 100
+      },
+      "generalAwareness": {
+        "total": 25,
+        "correct": 5,
+        "wrong": 10,
+        "unattempted": 10,
+        "score": 5,
+        "accuracy": 33.3
+      },
+      "mathematics": {
+        "total": 25,
+        "correct": 14,
+        "wrong": 5,
+        "unattempted": 6,
+        "score": 25.5,
+        "accuracy": 73.7
+      },
+      "english": {
+        "total": 25,
+        "correct": 14,
+        "wrong": 10,
+        "unattempted": 1,
+        "score": 23,
+        "accuracy": 58.3
+      }
+    }
+  },
+  {
     "id": "mock_1790535030393_3im24",
     "title": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
     "platform": "Testbook",

@@ -1782,6 +1782,198 @@
           "conceptTested": "Translating word statements into linear algebraic equations and solving for the unknown variable",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_734594f17f",
+        "q_num": 58,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:18",
+        "avgTime": "00:10",
+        "question": "Three of the following four are alike in a certain way and so form a group. Select the one that does not belong to that group.",
+        "options": {
+          "a": "Godavari",
+          "b": "Krishna",
+          "c": "Chilika",
+          "d": "Kaveri"
+        },
+        "answer": "c",
+        "solution": "Rule: ask what kind of water body each name stands for.\nTake them one at a time: • Godavari - a river\n• Krishna - a river\n• Kaveri - a river\n• Chilika - a lake in Odisha\nName the shared property: Three are peninsular rivers that drain into the Bay of Bengal. Chilika is a coastal lagoon, so it is not a river at all.\nAnswer: Chilika",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Word & Semantic Classification",
+        "conceptTested": "Identification of common characteristics and differentiating properties among geographical entities (rivers vs lagoon).",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Word & Semantic Classification",
+          "conceptTested": "Identification of common characteristics and differentiating properties among geographical entities (rivers vs lagoon).",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_dbf19edd7d",
+        "q_num": 59,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:38",
+        "avgTime": "01:20",
+        "question": "A ticket counter holds only ₹100, ₹20 and ₹10 notes. It has twice as many ₹20 notes as ₹100 notes and three times as many ₹10 notes as ₹100 notes. The notes come to ₹3,060 in all. How many notes does the counter hold?",
+        "options": {
+          "a": "18",
+          "b": "36",
+          "c": "108",
+          "d": "54"
+        },
+        "answer": "c",
+        "solution": "Rule: call the smallest group one share and write every other group in shares.\nSet up the shares: ₹100 notes = 1 share\n₹20 notes = 2 shares\n₹10 notes = 3 shares\nValue carried by one share: ₹100 × 1 = ₹100\n₹20 × 2 = ₹40\n₹10 × 3 = ₹30\nOne share is worth ₹100 + ₹40 + ₹30 = ₹170\nFind the size of a share: ₹3, 060 ÷ ₹170 = 18\nCount the notes: ₹100 notes = 18\n₹20 notes = 2 × 18 = 36\n₹10 notes = 3 × 18 = 54\nTotal = 18 + 36 + 54 = 108\nAnswer: 108",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Calculation Reasoning",
+        "conceptTested": "Proportional distribution of denominations and calculating total items in a collection based on a given monetary value.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Calculation Reasoning",
+          "conceptTested": "Proportional distribution of denominations and calculating total items in a collection based on a given monetary value.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_caf18f63d8",
+        "q_num": 60,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:16",
+        "avgTime": "00:55",
+        "question": "The symbol $\\oplus$ follows one rule throughout: $9 \\oplus 5 = 56$, $12 \\oplus 7 = 95$ and $10 \\oplus 6 = 64$. What is the value of $(15 \\oplus 8) - (11 \\oplus 9)$?",
+        "options": {
+          "a": "201",
+          "b": "21",
+          "c": "121",
+          "d": "45"
+        },
+        "answer": "c",
+        "solution": "Rule: try the worked examples against the sum, the difference and the product before reaching for anything longer.\nRead the examples: 9 × 5 = 45, so the rule is not the product.\n9² = 81 and 5² = 25, and 81 - 25 = 56\n12² - 7² = 144 - 49 = 95\n10² - 6² = 100 - 36 = 64\n\nSo $a \\oplus b = a^2 - b^2$.\n\nThe first bracket: $15 \\oplus 8 = 225 - 64 = 161$\nThe second bracket: $11 \\oplus 9 = 121 - 81 = 40$\nSubtract, as the question asks: $161 - 40 = 121$\nAnswer: 121",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Number & Value Coding",
+        "conceptTested": "Mathematical operation based on algebraic identity $a^2 - b^2$ applied to symbolic operators.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Number & Value Coding",
+          "conceptTested": "Mathematical operation based on algebraic identity $a^2 - b^2$ applied to symbolic operators.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_3077b02540",
+        "q_num": 61,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:03",
+        "avgTime": "00:42",
+        "question": "Four interns - Nandan, Ila, Tejas and Ruhi - sit in a row facing north, and each is posted to a different city: Bhuj, Kota, Salem or Thane. Ila sits at the extreme right end. Nandan sits second to the right of Ruhi. The intern posted to Bhuj sits immediately to the right of the one posted to Kota. Ila is posted to Thane. Nandan is not posted to Bhuj. To which city is Tejas posted?",
+        "options": {
+          "a": "Kota",
+          "b": "Salem",
+          "c": "Thane",
+          "d": "Bhuj"
+        },
+        "answer": "d",
+        "solution": "The convention: All four face north, so each intern’s left and right run the same way as the page’s.\nFix the four seats: Ila takes the extreme right, seat 4.\n\nNandan sits two seats to Ruhi’s right, and of the seats left only 1 and 3 stand two apart.\n\nSo Ruhi is 1 and Nandan is 3.\n\nTejas takes the seat left over, 2.\n\nThe row, left to right: Ruhi, Tejas, Nandan, Ila\nPost the cities: Ila at seat 4 has Thane.\n\nKota must sit immediately left of Bhuj, so that pair is seats 1 - 2 or seats 2 - 3.\n\nWere it 2 - 3, Nandan at seat 3 would hold Bhuj, which he does not.\n\nSo Kota is seat 1 and Bhuj is seat 2, and Salem is left for seat 3.\n\nThe matching: • Ruhi - Kota\n• Tejas - Bhuj\n• Nandan - Salem\n• Ila - Thane\nAnswer: Bhuj",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of linear positions based on relative directional clues and attribute matching.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of linear positions based on relative directional clues and attribute matching.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_77a9eb9ec1",
+        "q_num": 62,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:41",
+        "avgTime": "00:31",
+        "question": "In a certain code language, 'PLANET' is coded as 68 and 'ORBIT' is coded as 64. How will 'COMET' be coded in that same code language?",
+        "options": {
+          "a": "51",
+          "b": "79",
+          "c": "61",
+          "d": "56"
+        },
+        "answer": "d",
+        "solution": "Rule: add the alphabet positions of the letters and compare with the code.\nTest PLANET: P = 16, L = 12, A = 1, N = 14, E = 5, T = 20\n16 + 12 + 1 + 14 + 5 + 20 = 68\nTest ORBIT: O = 15, R = 18, B = 2, I = 9, T = 20\n15 + 18 + 2 + 9 + 20 = 64\n\nBoth codes are plain position sums.\n\nNow COMET: C = 3, O = 15, M = 13, E = 5, T = 20\n3 + 15 = 18\n18 + 13 = 31\n31 + 5 = 36\n36 + 20 = 56\nAnswer: 56",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Pattern Coding & Decoding",
+        "conceptTested": "Forward alphabetical position summation code for words.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Pattern Coding & Decoding",
+          "conceptTested": "Forward alphabetical position summation code for words.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_4cf30cccaa",
+        "q_num": 63,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:30",
+        "avgTime": "00:47",
+        "question": "Which two signs and which two numbers should be interchanged to make the following equation correct?\n\n$12 \\div 6 + 3 \\times 36 - 2 = 28$",
+        "options": {
+          "a": "+ and $\\times$, 12 and 36",
+          "b": "$\\div$ and $-$, 12 and 2",
+          "c": "$\\div$ and $+$, 6 and 2",
+          "d": "$\\times$ and $-$, 3 and 2"
+        },
+        "answer": "a",
+        "solution": "Rule: swap the two signs first, then the two numbers, and solve by BODMAS.\nThe equation as printed: $12 \\div 6 + 3 \\times 36 - 2 = 2 + 108 - 2 = 108$, not 28.\nInterchange $+$ and $\\times$: Every $+$ becomes $\\times$ and every $\\times$ becomes $+$: $12 \\div 6 \\times 3 + 36 - 2$\nNow interchange 12 and 36: $36 \\div 6 \\times 3 + 12 - 2$\n\n$36 \\div 6 = 6$\n\n$6 \\times 3 = 18$\n\n$18 + 12 - 2 = 28$\n\nThis is the value the question asks for.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "BODMAS rule combined with simultaneous interchange of mathematical signs and numbers to balance an equation.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "BODMAS rule combined with simultaneous interchange of mathematical signs and numbers to balance an equation.",
+          "difficulty": "hard"
+        }
       }
     ]
   },

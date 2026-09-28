@@ -58,6 +58,8 @@ import {
   getMistakeStats,
   getTotalMistakesSummary,
   MistakeFilter,
+  isSpeedLabItem,
+  getCleanQuestionKey,
 } from './mistakeStore';
 import {
   getMockErrorSubjectsSummary,
@@ -293,27 +295,35 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
 
   const afterQuizKeyboard = new InlineKeyboard();
 
-  const missedInSession = (session.missedQuestions && session.missedQuestions.length > 0)
-    ? session.missedQuestions
-    : (score < total ? session.questions.slice(0, 25) : []);
+  const isSpeedLab = session.category === 'speed_lab' || /speed|mental math|calc studio|routine|blitz/i.test(session.drillTitle);
 
-  const allUserMistakes = getUserMistakes(session.userId, 'all');
-  const combinedMap = new Map<string, TelegramQuizQuestion>();
-  for (const q of allUserMistakes) {
-    const key = q.id || q.question.trim().toLowerCase();
-    combinedMap.set(key, q);
-  }
-  for (const q of missedInSession) {
-    const key = q.id || q.question.trim().toLowerCase();
-    combinedMap.set(key, q);
-  }
-  const combinedList = Array.from(combinedMap.values());
+  if (!isSpeedLab) {
+    const missedInSession = (session.missedQuestions && session.missedQuestions.length > 0)
+      ? session.missedQuestions
+      : (score < total ? session.questions.slice(0, 25) : []);
 
-  if (combinedList.length > 0) {
-    const syncUrl = buildSafeWebSyncUrl(combinedList);
-    afterQuizKeyboard
-      .url(`📖 View Solutions & AI Tutor on Web`, syncUrl)
-      .row();
+    const allUserMistakes = getUserMistakes(session.userId, 'all');
+    const combinedMap = new Map<string, TelegramQuizQuestion>();
+    for (const q of allUserMistakes) {
+      if (!isSpeedLabItem(q)) {
+        const key = getCleanQuestionKey(q.question, q.id);
+        if (key && !combinedMap.has(key)) combinedMap.set(key, q);
+      }
+    }
+    for (const q of missedInSession) {
+      if (!isSpeedLabItem(q)) {
+        const key = getCleanQuestionKey(q.question, q.id);
+        if (key && !combinedMap.has(key)) combinedMap.set(key, q);
+      }
+    }
+    const combinedList = Array.from(combinedMap.values());
+
+    if (combinedList.length > 0) {
+      const syncUrl = buildSafeWebSyncUrl(combinedList);
+      afterQuizKeyboard
+        .url(`📖 View Solutions & AI Tutor on Web`, syncUrl)
+        .row();
+    }
   }
 
   afterQuizKeyboard
@@ -348,7 +358,8 @@ async function startQuizForUser(
   userId: number,
   chatId: number,
   title: string,
-  questions: TelegramQuizQuestion[]
+  questions: TelegramQuizQuestion[],
+  category: 'chapter_bank' | 'mock_errors' | 'speed_lab' | 'other' = 'chapter_bank'
 ) {
   if (!questions || questions.length === 0) {
     await bot.api.sendMessage(
@@ -362,7 +373,7 @@ async function startQuizForUser(
     return;
   }
 
-  const session = startSession(userId, chatId, title, questions);
+  const session = startSession(userId, chatId, title, questions, category);
   await sendCurrentQuestion(bot, session);
 }
 
@@ -594,7 +605,7 @@ bot.callbackQuery(/^run_eng:(bb|ayush):([a-z_]+):([a-zA-Z0-9_\-]+):(all|10)$/, a
 
   const qs = loadQuestionsFromSet(setInfo.filePath, mode as 'all' | '10');
   const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs, 'chapter_bank');
 });
 
 // ----------------------------------------------------
@@ -695,7 +706,7 @@ bot.callbackQuery(/^run_math:([a-zA-Z0-9_\-]+):([a-zA-Z0-9_\-]+):(all|10)$/, asy
 
   const qs = loadQuestionsFromSet(setInfo.filePath, mode as 'all' | '10');
   const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs, 'chapter_bank');
 });
 
 // ----------------------------------------------------
@@ -770,7 +781,7 @@ bot.callbackQuery(/^run_ga:([a-zA-Z0-9_\-]+):(.+):(all|10)$/, async (ctx) => {
 
   const qs = loadQuestionsFromSet(setInfo.filePath, mode as 'all' | '10');
   const modeLabel = mode === 'all' ? `All ${qs.length} Questions` : 'Quick 10';
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `${setInfo.title} (${modeLabel})`, qs, 'chapter_bank');
 });
 
 // ----------------------------------------------------
@@ -921,7 +932,8 @@ bot.callbackQuery(/^me_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ct
     ctx.from.id,
     ctx.chat!.id,
     `🎯 ${label} (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`,
-    questions
+    questions,
+    'mock_errors'
   );
 });
 
@@ -1060,7 +1072,8 @@ bot.callbackQuery(/^qm_run_all:(all|10)$/, async (ctx) => {
     ctx.from.id,
     ctx.chat!.id,
     `📕 All Quiz Mistakes (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`,
-    questions
+    questions,
+    'mock_errors'
   );
 });
 
@@ -1175,7 +1188,8 @@ bot.callbackQuery(/^qm_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ct
     ctx.from.id,
     ctx.chat!.id,
     `📕 ${subTitle} Quiz Mistakes (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`,
-    questions
+    questions,
+    'chapter_bank'
   );
 });
 
@@ -1196,7 +1210,7 @@ bot.callbackQuery(/^run_mock:([a-z_]+):(all|10)$/, async (ctx) => {
     questions = shuffle(questions).slice(0, 10);
   }
   const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace('_', ' ');
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Mock Mistakes (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`, questions);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Mock Mistakes (${mode === 'all' ? `All ${questions.length}` : 'Quick 10'})`, questions, 'mock_errors');
 });
 
 bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
@@ -1204,7 +1218,7 @@ bot.callbackQuery(/^run_mock_ch:([a-z_]+):([0-9]+):(all|10)$/, async (ctx) => {
   const [_, subId, chNum, mode] = ctx.match;
   const qs = loadMockErrorsForSubject(subId as any, parseInt(chNum, 10), mode as 'all' | '10');
   const subTitle = subId.charAt(0).toUpperCase() + subId.slice(1).replace('_', ' ');
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `🎯 ${subTitle} Chapter ${chNum} Mistakes (${qs.length} Qs)`, qs, 'mock_errors');
 });
 
 // ----------------------------------------------------
@@ -1399,7 +1413,7 @@ bot.callbackQuery(/^run_mm:([a-z0-9_]+):([0-9]+)$/, async (ctx) => {
     title = `🎯 Mental Math: Arun Sharma Blitz (${count} Qs)`;
   }
 
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs, 'speed_lab');
 });
 
 bot.callbackQuery('speed_calc_studio', async (ctx) => {
@@ -1524,7 +1538,7 @@ bot.callbackQuery(/^run_calc:([a-z0-9_]+):(all|10)$/, async (ctx) => {
     title = `💯 Step 7: Fractions ↔ % (${mode === 'all' ? 'All 73' : '10 Qs'})`;
   }
 
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, title, qs, 'speed_lab');
 });
 
 bot.callbackQuery('speed_simp_menu', async (ctx) => {
@@ -1589,18 +1603,18 @@ bot.callbackQuery(/^run_simp:([a-zA-Z0-9_]+)$/, async (ctx) => {
     })
   );
 
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, `📐 ${target.title} (All ${questions.length} Qs)`, questions);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, `📐 ${target.title} (All ${questions.length} Qs)`, questions, 'speed_lab');
 });
 
 bot.callbackQuery('speed_routine', async (ctx) => {
   await ctx.answerCallbackQuery();
   const qs = getDailyRoutineWorkout();
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, '🏆 Daily 25-Question Routine Workout', qs);
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, '🏆 Daily 25-Question Routine Workout', qs, 'speed_lab');
 });
 
 bot.callbackQuery('speed_mixed', async (ctx) => {
   await ctx.answerCallbackQuery();
-  await startQuizForUser(ctx.from.id, ctx.chat!.id, '⚡ Mixed Speed Blitz', generateMixedSpeedDrill(10));
+  await startQuizForUser(ctx.from.id, ctx.chat!.id, '⚡ Mixed Speed Blitz', generateMixedSpeedDrill(10), 'speed_lab');
 });
 
 bot.callbackQuery('nav_help', async (ctx) => {
@@ -1639,17 +1653,18 @@ bot.on('poll_answer', async (ctx) => {
       markMistakeMastered(session.userId, currentQ.id, currentQ.question);
     }
   } else {
-    recordMistake(session.userId, currentQ, 'telegram_quiz');
-    if (!session.missedQuestions) {
-      session.missedQuestions = [];
-    }
-    session.missedQuestions.push(currentQ);
+    // Only record & sync mistakes for Chapter Bank and Mock Errors (never for speed drills)
+    const isSpeedLab = session.category === 'speed_lab' || isSpeedLabItem(currentQ) || /speed|mental math|calc studio|routine|blitz/i.test(session.drillTitle);
 
-    // Deep-link to Web solution & AI mentor with instant question sync payload
-    const syncParam = encodeQuestionForSync(currentQ);
-    const webMistakeUrl = (syncParam && syncParam.length < 1700)
-      ? `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`
-      : 'https://ssc27.vercel.app/?view=botErrors';
+    if (!isSpeedLab) {
+      const source = session.category === 'mock_errors' ? 'website_mock' : 'telegram_quiz';
+      recordMistake(session.userId, currentQ, source);
+      if (!session.missedQuestions) {
+        session.missedQuestions = [];
+      }
+      session.missedQuestions.push(currentQ);
+    }
+
     const correctOpt = (currentQ.options && currentQ.options[currentQ.correctOptionIndex]) ? currentQ.options[currentQ.correctOptionIndex].trim() : '';
     const safeCorrectOpt = correctOpt.replace(/([*_`[\]()])/g, '\\$1');
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
@@ -1663,21 +1678,30 @@ bot.on('poll_answer', async (ctx) => {
     } else {
       feedbackMsg += `\n`;
     }
-    feedbackMsg += `📕 _Saved to Mistake Notebook_`;
+
+    let replyMarkup: InlineKeyboard | undefined = undefined;
+    if (!isSpeedLab) {
+      feedbackMsg += `📕 _Saved to Mistake Notebook_`;
+      const syncParam = encodeQuestionForSync(currentQ);
+      const webMistakeUrl = (syncParam && syncParam.length < 1700)
+        ? `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`
+        : 'https://ssc27.vercel.app/?view=botErrors';
+      replyMarkup = new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl);
+    }
 
     bot.api.sendMessage(
       session.chatId,
       feedbackMsg,
       {
         parse_mode: 'Markdown',
-        reply_markup: new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl),
+        reply_markup: replyMarkup,
       }
     ).catch(() => {
       bot.api.sendMessage(
         session.chatId,
         feedbackMsg.replace(/[*_`]/g, ''),
         {
-          reply_markup: new InlineKeyboard().url('📖 Open Web Notebook', 'https://ssc27.vercel.app/?view=botErrors'),
+          reply_markup: replyMarkup,
         }
       ).catch(() => {});
     });

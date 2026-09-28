@@ -78,10 +78,39 @@ function normalizeSubject(sub?: string): 'english' | 'mathematics' | 'reasoning'
   return 'general_awareness';
 }
 
+// Checks if a question belongs to Speed Drills (Mental Math, Calc Studio, Simplification, etc.)
+export function isSpeedLabQuestion(item: { id?: string; topic?: string; question?: string; source?: string }): boolean {
+  const s = ((item.id || '') + ' ' + (item.topic || '') + ' ' + (item.source || '')).toLowerCase();
+  return (
+    s.includes('speed') ||
+    s.includes('mental_math') ||
+    s.includes('calc_studio') ||
+    s.includes('simplification') ||
+    s.includes('step_triplets') ||
+    s.includes('step_tables') ||
+    s.includes('step_squares') ||
+    s.includes('step_cubes') ||
+    s.includes('step_fractions') ||
+    s.includes('step_compl') ||
+    s.includes('step_mult') ||
+    s.includes('mm_add') ||
+    s.includes('mm_sub') ||
+    s.includes('mm_mul') ||
+    s.includes('mm_div') ||
+    s.includes('mm_sq') ||
+    s.includes('mm_cu') ||
+    s.includes('mm_pct') ||
+    s.includes('simp_cat')
+  );
+}
+
 // Canonical question deduplication key based on normalized question text
 export function getDedupeKey(qText?: string, id?: string): string {
   const text = (qText || '')
     .toLowerCase()
+    // Strip leading question numbers like "Q1.", "Q 1:", "1.", "1)", "Question 1:"
+    .replace(/^(?:question\s*\d+[:.]?|\bq\s*\d+[:.]?|\d+[.)]\s*)/i, '')
+    // Normalize all whitespace & punctuation
     .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
     .replace(/[?.!,:;'"()\[\]{}]+$/g, '')
     .trim();
@@ -232,6 +261,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [selectedSubject, setSelectedSubject] = useState<'all' | 'english' | 'mathematics' | 'reasoning' | 'general_awareness'>('english');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'telegram' | 'website'>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Interactive Practice Modal
@@ -301,6 +331,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       const mergedMap = new Map<string, RecordedMistake>();
 
       const addOrMerge = (m: RecordedMistake) => {
+        if (!m || isSpeedLabQuestion(m)) return;
         const key = getDedupeKey(m.question, m.id);
         if (!key) return;
 
@@ -330,7 +361,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       for (const m of websiteMistakes) addOrMerge(m);
       for (const m of localSynced) addOrMerge(m);
 
-      // Filter out deleted questions
+      // Filter out deleted questions and speed lab items
       let deletedIds = new Set<string>();
       try {
         const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
@@ -341,6 +372,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       } catch {}
 
       const finalList = Array.from(mergedMap.values()).filter((item) => {
+        if (isSpeedLabQuestion(item)) return false;
         if (item.id && deletedIds.has(item.id.toLowerCase())) return false;
         if (item.question && deletedIds.has(item.question.trim().toLowerCase())) return false;
         return true;
@@ -378,15 +410,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         if (foundWithMistakes) {
           setSelectedSubject(foundWithMistakes);
         }
-
-        // Keep all topic cards open by default
-        const initialOpens: Record<string, boolean> = {};
-        finalList.forEach((m) => {
-          const sub = normalizeSubject(m.subject);
-          const top = m.topic || 'General Practice';
-          initialOpens[`${sub}:${top}`] = true;
-        });
-        setOpenTopicCards(initialOpens);
       }
     } catch (err: any) {
       console.error('[BotMistakesPage] Fetch error:', err);
@@ -458,6 +481,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               }
 
               if (!qText) continue;
+              if (isSpeedLabQuestion({ id: qId, topic: top, question: qText })) continue;
               opts = (opts || []).map(String);
               const key = getDedupeKey(qText, qId);
               if (!key) continue;
@@ -1380,199 +1404,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           </div>
         )}
       </AnimatePresence>
-    </div>
-  );
-};
-
-// ----------------------------------------------------
-// QUESTION ITEM CARD COMPONENT
-// ----------------------------------------------------
-
-interface QuestionItemCardProps {
-  index: number;
-  mistake: RecordedMistake;
-  studyMode: 'study' | 'recall';
-  onDelete: () => void;
-  isDeleting: boolean;
-  isExpanded: boolean;
-  onToggleSolution: () => void;
-  selectedOption?: number;
-  onSelectOption?: (optIdx: number) => void;
-}
-
-const QuestionItemCard: React.FC<QuestionItemCardProps> = ({
-  index,
-  mistake,
-  studyMode,
-  onDelete,
-  isDeleting,
-  isExpanded,
-  onToggleSolution,
-  selectedOption,
-  onSelectOption,
-}) => {
-  const letters = ['A', 'B', 'C', 'D'];
-  const normSub = normalizeSubject(mistake.subject);
-  const subConf = SUBJECT_CONFIG[normSub] || SUBJECT_CONFIG.general_awareness;
-  const isTelegram = mistake.source && mistake.source.startsWith('telegram');
-
-  const { coreExplanation, definitions } = useMemo(
-    () => cleanAndFormatExplanation(mistake.explanation),
-    [mistake.explanation]
-  );
-
-  return (
-    <div className="space-y-2.5 pt-1.5">
-      {/* Top Meta Bar */}
-      <div className="flex items-center justify-between gap-1.5 flex-wrap">
-        <div className="flex items-center gap-1.5 flex-wrap">
-          <span className="text-[11px] font-bold text-slate-400 font-mono">#{index}</span>
-          <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded border ${subConf.bg} ${subConf.text} ${subConf.border}`}>
-            {subConf.label}
-          </span>
-          <span className="px-1.5 py-0.5 text-[10px] font-medium rounded bg-slate-100 text-slate-700 border border-slate-200">
-            📌 {mistake.topic || 'Practice'}
-          </span>
-          <span
-            className={`px-1.5 py-0.5 text-[10px] font-semibold rounded border flex items-center gap-1 ${
-              isTelegram ? 'bg-sky-50 text-sky-700 border-sky-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-            }`}
-          >
-            {isTelegram ? (
-              <>
-                <Smartphone className="w-2.5 h-2.5 text-sky-600" />
-                <span>Telegram Bot</span>
-              </>
-            ) : (
-              <>
-                <Laptop className="w-2.5 h-2.5 text-emerald-600" />
-                <span>Website Mock</span>
-              </>
-            )}
-          </span>
-          {mistake.wrongCount > 1 && (
-            <span className="px-1.5 py-0.5 text-[10px] font-bold rounded bg-rose-50 text-rose-700 border border-rose-200">
-              Missed {mistake.wrongCount}x
-            </span>
-          )}
-        </div>
-
-        {/* Delete Button */}
-        <button
-          onClick={onDelete}
-          disabled={isDeleting}
-          className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-slate-400 hover:text-rose-600 hover:bg-rose-50 text-[11px] font-semibold transition-colors disabled:opacity-50 cursor-pointer"
-          title="Delete from mistake notebook"
-        >
-          <Trash2 className="w-3 h-3" />
-          <span>{isDeleting ? 'Deleting...' : 'Delete'}</span>
-        </button>
-      </div>
-
-      {/* Question Prompt */}
-      <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
-        {mistake.question}
-      </div>
-
-      {/* Options */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-        {mistake.options.map((opt, optIdx) => {
-          const isCorrect = optIdx === mistake.correctOptionIndex;
-          const isChosen = selectedOption === optIdx;
-
-          if (studyMode === 'recall') {
-            const hasChosen = selectedOption !== undefined;
-            let optStyle = 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700';
-            if (hasChosen) {
-              if (isCorrect) optStyle = 'bg-emerald-50 border-emerald-400 text-emerald-950 font-bold';
-              else if (isChosen) optStyle = 'bg-rose-50 border-rose-400 text-rose-950 font-medium';
-              else optStyle = 'bg-slate-50 border-slate-200 text-slate-400 opacity-60';
-            }
-
-            return (
-              <button
-                key={optIdx}
-                onClick={() => onSelectOption && onSelectOption(optIdx)}
-                className={`text-left p-2 sm:p-2.5 rounded-lg border text-xs transition-all flex items-start gap-2 cursor-pointer ${optStyle}`}
-              >
-                <span className="w-4.5 h-4.5 rounded flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5 bg-white border border-slate-200">
-                  {letters[optIdx]}
-                </span>
-                <span className="leading-snug">{opt}</span>
-              </button>
-            );
-          }
-
-          return (
-            <div
-              key={optIdx}
-              className={`flex items-start gap-2 p-2 sm:p-2.5 rounded-lg text-xs transition-all border ${
-                isCorrect
-                  ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950 font-medium shadow-2xs'
-                  : 'bg-slate-50/60 border-slate-200/70 text-slate-700'
-              }`}
-            >
-              <span
-                className={`w-4.5 h-4.5 rounded flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5 ${
-                  isCorrect ? 'bg-emerald-600 text-white shadow-2xs' : 'bg-slate-200 text-slate-600'
-                }`}
-              >
-                {isCorrect ? <Check className="w-3 h-3 stroke-[3]" /> : letters[optIdx]}
-              </span>
-              <span className="leading-snug">{opt}</span>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Explanation Panel */}
-      {(coreExplanation || definitions.length > 0) && (
-        <div className="pt-0.5">
-          <div className="rounded-lg border border-slate-200/80 bg-slate-50/70 overflow-hidden">
-            <button
-              onClick={onToggleSolution}
-              className="w-full px-2.5 py-1.5 sm:px-3 sm:py-2 flex items-center justify-between text-[11px] font-bold text-slate-700 hover:text-slate-900 bg-slate-100/50 hover:bg-slate-100/80 transition-colors cursor-pointer"
-            >
-              <span className="flex items-center gap-1.5 text-indigo-700">
-                <Sparkles className="w-3 h-3" />
-                <span>Concept & Solution Breakdown</span>
-              </span>
-              <span className="text-[10px] text-slate-400 font-normal">
-                {isExpanded ? 'Hide' : 'Show Details'}
-              </span>
-            </button>
-
-            {isExpanded && (
-              <div className="p-3 space-y-2 text-xs text-slate-700 leading-relaxed border-t border-slate-200/60">
-                {coreExplanation && (
-                  <p className="whitespace-pre-wrap text-slate-800">
-                    {coreExplanation}
-                  </p>
-                )}
-
-                {definitions.length > 0 && (
-                  <div className="space-y-1 pt-1.5 border-t border-slate-200/60">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
-                      Options Breakdown:
-                    </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                      {definitions.map((def, dIdx) => (
-                        <div
-                          key={dIdx}
-                          className="bg-white p-2 rounded-md border border-slate-200/80 shadow-2xs text-[11px] space-y-0.5"
-                        >
-                          <span className="font-bold text-indigo-900">{def.word}: </span>
-                          <span className="text-slate-600">{def.meaning}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

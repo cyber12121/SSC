@@ -11,6 +11,7 @@ export interface UserQuizSession {
   activePollId?: string;
   answeredCount: number;
   missedQuestions?: TelegramQuizQuestion[];
+  category?: 'chapter_bank' | 'mock_errors' | 'speed_lab' | 'other';
 }
 
 // In-memory sessions mapped by userId
@@ -55,7 +56,8 @@ export function startSession(
   userId: number,
   chatId: number,
   drillTitle: string,
-  questions: TelegramQuizQuestion[]
+  questions: TelegramQuizQuestion[],
+  category: 'chapter_bank' | 'mock_errors' | 'speed_lab' | 'other' = 'chapter_bank'
 ): UserQuizSession {
   const session: UserQuizSession = {
     userId,
@@ -67,6 +69,7 @@ export function startSession(
     startTime: Date.now(),
     answeredCount: 0,
     missedQuestions: [],
+    category,
   };
   sessions.set(userId, session);
   saveToDisk();

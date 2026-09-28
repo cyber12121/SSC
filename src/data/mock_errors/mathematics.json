@@ -5373,6 +5373,198 @@
           "conceptTested": "Finding a specific multiple of an LCM that leaves a fixed remainder and satisfies an additional divisibility condition.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_c7016ce7b6",
+        "q_num": 171,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:54",
+        "avgTime": "00:33",
+        "question": "The perimeter of a rhombus is $100\\text{ cm}$. If its longer diagonal measures $40\\text{ cm}$, what is the area enclosed by the rhombus?",
+        "options": {
+          "a": "$600\\text{ cm}^2$",
+          "b": "$1,200\\text{ cm}^2$",
+          "c": "$300\\text{ cm}^2$",
+          "d": "$500\\text{ cm}^2$"
+        },
+        "answer": "a",
+        "solution": "All four sides of a rhombus are equal, so side = $100 \\div 4 = 25\\text{ cm}$. Half of the given diagonal = $40 \\div 2 = 20\\text{ cm}$. The half of the other diagonal is given by $\\sqrt{25^2 - 20^2} = \\sqrt{625 - 400} = \\sqrt{225} = 15\\text{ cm}$. So the other diagonal = $2 \\times 15 = 30\\text{ cm}$. Area = $\\frac{1}{2} \\times \\text{product of diagonals} = \\frac{1}{2} \\times 40 \\times 30 = 600\\text{ cm}^2$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rhombus, Trapezium & Parallelogram",
+        "conceptTested": "Relationship between side, perimeter, and diagonals of a rhombus: $d_2 = 2\\sqrt{a^2 - (d_1/2)^2}$ and Area = $\\frac{1}{2} \\times d_1 \\times d_2$.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rhombus, Trapezium & Parallelogram",
+          "conceptTested": "Relationship between side, perimeter, and diagonals of a rhombus: $d_2 = 2\\sqrt{a^2 - (d_1/2)^2}$ and Area = $\\frac{1}{2} \\times d_1 \\times d_2$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_8d77c9c283",
+        "q_num": 172,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:56",
+        "avgTime": "00:29",
+        "question": "A circular lawn is to be laid inside a right-angled triangular plot whose two perpendicular sides measure $12\\text{ metres}$ and $16\\text{ metres}$, so that the lawn just touches all three boundaries of the plot. Find the radius of the lawn.",
+        "options": {
+          "a": "$4\\text{ m}$",
+          "b": "$10\\text{ m}$",
+          "c": "$2\\text{ m}$",
+          "d": "$14\\text{ m}$"
+        },
+        "answer": "a",
+        "solution": "First, find the hypotenuse of the right - angled triangle: $\\sqrt{12^2 + 16^2} = \\sqrt{144 + 256} = \\sqrt{400} = 20\\text{ m}$. For a right - angled triangle, the inradius is given by $r = \\frac{\\text{sum of perpendicular legs} - \\text{hypotenuse}}{2} = \\frac{12 + 16 - 20}{2} = \\frac{8}{2} = 4\\text{ m}$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Inradius of a right-angled triangle inscribed by a circle touching all three sides: $r = \\frac{a + b - c}{2}$.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Inradius of a right-angled triangle inscribed by a circle touching all three sides: $r = \\frac{a + b - c}{2}$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_633d38b6a4",
+        "q_num": 173,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:51",
+        "avgTime": "00:25",
+        "question": "Two inlet pipes can fill an empty tank in 12 hours and 15 hours respectively, while an outlet pipe at the bottom can empty the full tank in 20 hours. All three are opened together when the tank is empty. In how many hours will the tank be filled?",
+        "options": {
+          "a": "5 hours",
+          "b": "10 hours",
+          "c": "$6 \\frac{2}{3}$ hours",
+          "d": "7 hours"
+        },
+        "answer": "b",
+        "solution": "Let the total capacity of the tank be the LCM of 12, 15, and 20, which is $60$ units.\n\nFirst inlet 1 - hour work = $60 \\div 12 = 5$ units/houRs. econd inlet 1 - hour work = $60 \\div 15 = 4$ units/hour\nOutlet 1 - hour work (emptying) = $60 \\div 20 = 3$ units/hour\n\nNet work done per hour when all three pipes are opened together = $5 + 4 - 3 = 6$ units/hour.\n\nTotal time required to fill the tank = $\\frac{60}{6} = 10$ hours.",
+        "image": null,
+        "topic": "Pipes & Cisterns",
+        "subtopic": "Inlet Outlet Pipes",
+        "conceptTested": "Net work done per hour by multiple inlet and outlet pipes working together.",
+        "tags": {
+          "topic": "Pipes & Cisterns",
+          "subtopic": "Inlet Outlet Pipes",
+          "conceptTested": "Net work done per hour by multiple inlet and outlet pipes working together.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_34c2c72fe1",
+        "q_num": 174,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:30",
+        "avgTime": "00:22",
+        "question": "A sum of money becomes three times itself in 12 years at simple interest. In how many years will the same sum become five times itself at the same rate?",
+        "options": {
+          "a": "20 years",
+          "b": "30 years",
+          "c": "36 years",
+          "d": "24 years"
+        },
+        "answer": "d",
+        "solution": "Let the principal be $P$.\n\nIf the amount becomes $3P$ in 12 years, the simple interest earned is $3P - P = 2P$.\n\nThus, an interest of $2P$ takes 12 years, which means an interest of $P$ takes $\\frac{12}{2} = 6$ years.\n\nTo become 5 times itself, the amount must be $5P$, so the required interest is $5P - P = 4P$.\n\nTime required to earn $4P$ interest = $4 \\times 6 = 24$ years.",
+        "image": null,
+        "topic": "Simple Interest",
+        "subtopic": "Basic Simple Interest",
+        "conceptTested": "Simple interest is directly proportional to time for a constant principal and rate of interest.",
+        "tags": {
+          "topic": "Simple Interest",
+          "subtopic": "Basic Simple Interest",
+          "conceptTested": "Simple interest is directly proportional to time for a constant principal and rate of interest.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_268c8b7e4c",
+        "q_num": 175,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:28",
+        "avgTime": "00:24",
+        "question": "Simplify: $(\\sec θ - \\cos θ)(\\csc θ - \\sin θ)(\\tan θ + \\cot θ)$",
+        "options": {
+          "a": "1",
+          "b": "$\\sin θ \\cos θ$",
+          "c": "$\\sin^2 θ \\cos^2 θ$",
+          "d": "0"
+        },
+        "answer": "a",
+        "solution": "Rule: write every term in $\\sin θ$ and $\\cos θ$ before multiplying anything.\nFirst bracket: $\\sec θ - \\cos θ = \\frac{1}{\\cos θ} - \\cos θ = \\frac{1 - \\cos^2 θ}{\\cos θ} = \\frac{\\sin^2 θ}{\\cos θ}$\nSecond bracket: $\\csc θ - \\sin θ = \\frac{1}{\\sin θ} - \\sin θ = \\frac{1 - \\sin^2 θ}{\\sin θ} = \\frac{\\cos^2 θ}{\\sin θ}$\nThird bracket: $\\tan θ + \\cot θ = \\frac{\\sin θ}{\\cos θ} + \\frac{\\cos θ}{\\sin θ} = \\frac{\\sin^2 θ + \\cos^2 θ}{\\sin θ \\cos θ} = \\frac{1}{\\sin θ \\cos θ}$\nMultiply the first two: $\\left(\\frac{\\sin^2 θ}{\\cos θ}\\right) \\times \\left(\\frac{\\cos^2 θ}{\\sin θ}\\right) = \\sin θ \\cos θ$\nBring in the third: $\\sin θ \\cos θ \\times \\frac{1}{\\sin θ \\cos θ} = 1$",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Fundamental trigonometric identities: $\\sec θ - \\cos θ = \\frac{\\sin^2 θ}{\\cos θ}$, $\\csc θ - \\sin θ = \\frac{\\cos^2 θ}{\\sin θ}$, and $\\tan θ + \\cot θ = \\frac{1}{\\sin θ \\cos θ}$",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Fundamental trigonometric identities: $\\sec θ - \\cos θ = \\frac{\\sin^2 θ}{\\cos θ}$, $\\csc θ - \\sin θ = \\frac{\\cos^2 θ}{\\sin θ}$, and $\\tan θ + \\cot θ = \\frac{1}{\\sin θ \\cos θ}$",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_cc32451c2d",
+        "q_num": 176,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:07",
+        "avgTime": "00:29",
+        "question": "The present ages of Ramesh and his younger sister are in the ratio $7 : 4$. Eight years from now the ratio of their ages will be $3 : 2$. Find Ramesh's present age.",
+        "options": {
+          "a": "28 years",
+          "b": "16 years",
+          "c": "36 years",
+          "d": "24 years"
+        },
+        "answer": "a",
+        "solution": "Write the present ages as parts.\n\nRamesh = $7x$ and his sister = $4x$\n\nAdd 8 years to each of them.\n\n$(7x + 8) : (4x + 8) = 3 : 2$\n\nCross - multiply.\n\n$2(7x + 8) = 3(4x + 8)$\n\n$14x + 16 = 12x + 24$\n\nSolve for $x$.\n\n$2x = 8$\n\n$x = 4$\n\nRamesh's present age = $7 \\times 4 = 28$ years.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Age Problems",
+        "conceptTested": "Linear equations based on ratio changes over a time period",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Age Problems",
+          "conceptTested": "Linear equations based on ratio changes over a time period",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -13057,6 +13249,198 @@
           "conceptTested": "Ratio of areas of geometric figures expressed in terms of their linear dimensions (radius and side).",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_60c12a324d",
+        "q_num": 245,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:04",
+        "avgTime": "00:22",
+        "question": "At the close of the day a stores clerk at a district supply depot empties the counter cash box and finds that the whole of the day's collection is made up of ₹500 notes and ₹200 notes, with no other denomination and no coins at all. He counts $42$ notes in the box, and the day book shows that the collection came to ₹$15,600$. The audit clerk now wants the two kinds entered on separate lines. How many ₹$200$ notes are there in the box?",
+        "options": {
+          "a": "$24\\text{ notes}$",
+          "b": "$21\\text{ notes}$",
+          "c": "$18\\text{ notes}$",
+          "d": "$6\\text{ notes}$"
+        },
+        "answer": "c",
+        "solution": "Let the number of ₹$500$ notes be $n$. Then the ₹$200$ notes number $42 - n$. Build the money equation: $500n + 200(42 - n) = 15,600$. Opening the bracket: $500n + 8,400 - 200n = 15,600 \\Rightarrow 300n = 7,200 \\Rightarrow n = 24$ notes of ₹$500$. Therefore, the ₹$200$ notes = $42 - 24 = 18$ notes.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Coins & Currency Problems",
+        "conceptTested": "Solving linear simultaneous equations derived from total value and total count of denomination notes.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Coins & Currency Problems",
+          "conceptTested": "Solving linear simultaneous equations derived from total value and total count of denomination notes.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e454c2c2d0",
+        "q_num": 246,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:01",
+        "avgTime": "00:03",
+        "question": "The public health wing of a municipal body has bought a cylindrical road roller for a newly laid colony road. The drum of the roller is $2\\text{ metres}$ long and its diameter is $1.4\\text{ metres}$, and only the curved surface of the drum ever touches the road. On the first morning the operator drives the roller from one end of the stretch to the other and the drum makes $750$ complete revolutions. Find the area of road levelled in that single run. (Take $\\pi = \\frac{22}{7}$)",
+        "options": {
+          "a": "$13,200\\text{ m}^2$",
+          "b": "$8,910\\text{ m}^2$",
+          "c": "$3,300\\text{ m}^2$",
+          "d": "$6,600\\text{ m}^2$"
+        },
+        "answer": "d",
+        "solution": "Radius $r = \\frac{1.4}{2} = 0.7\\text{ m}$. Curved surface area covered in one revolution = $2 \\times \\frac{22}{7} \\times 0.7 \\times 2 = 8.8\\text{ m}^2$. Total area covered in $750$ revolutions = $8.8 \\times 750 = 6,600\\text{ m}^2$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cylinder (Solid & Hollow)",
+        "conceptTested": "Curved surface area of a cylinder and total area covered in multiple revolutions: $\\text{CSA} = 2\\pi rh \\times \\text{revolutions}$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cylinder (Solid & Hollow)",
+          "conceptTested": "Curved surface area of a cylinder and total area covered in multiple revolutions: $\\text{CSA} = 2\\pi rh \\times \\text{revolutions}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_874de8f59f",
+        "q_num": 247,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:50",
+        "avgTime": "00:59",
+        "question": "In a quadrilateral $ABCD$, $\\angle ABC = 90^\\circ$, $AB = 6\\text{ cm}$, $BC = 8\\text{ cm}$, $CD = 17\\text{ cm}$ and $DA = 21\\text{ cm}$. Find the area of the quadrilateral.",
+        "options": {
+          "a": "84 cm²",
+          "b": "108 cm²",
+          "c": "132 cm²",
+          "d": "24 cm²"
+        },
+        "answer": "b",
+        "solution": "Join diagonal $AC$. In right - angled triangle $\\triangle ABC$ at $B$: $$AC = \\sqrt{AB^2 + BC^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10\\text{ cm}$$\n\nArea of $\\triangle ABC$ = $\\frac{1}{2} \\times AB \\times BC = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.\n\nFor $\\triangle ACD$, the sides are $a = 10\\text{ cm}$, $b = 17\\text{ cm}$, and $c = 21\\text{ cm}$.\n\nSemi - perimeter $s = \\frac{10 + 17 + 21}{2} = 24$.\n\nUsing Heron's formula: $$\\text{Area of } \\triangle ACD = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{24 \\times (24-10) \\times (24-17) \\times (24-21)}$$\n\n$$= \\sqrt{24 \\times 14 \\times 7 \\times 3} = \\sqrt{7056} = 84\\text{ cm}^2$$\n\nTotal area of quadrilateral $ABCD$ = $\\text{Area}(\\triangle ABC) + \\text{Area}(\\triangle ACD) = 24 + 84 = 108\\text{ cm}^2$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Triangles & Area Calculations",
+        "conceptTested": "Application of Pythagoras theorem and Heron's formula for finding the area of a non-standard quadrilateral.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Triangles & Area Calculations",
+          "conceptTested": "Application of Pythagoras theorem and Heron's formula for finding the area of a non-standard quadrilateral.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6eed88e294",
+        "q_num": 248,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:03",
+        "avgTime": "00:31",
+        "question": "A storm snaps a vertical electric pole at a point above the ground. The broken part does not come away; its top rests on the ground 9 metres from the foot of the pole and makes an angle of $30^\\circ$ with the ground. Find the height of the pole before the storm.",
+        "options": {
+          "a": "$6\\sqrt{3}\\text{ m}$",
+          "b": "$3\\sqrt{3}\\text{ m}$",
+          "c": "$9\\sqrt{3}\\text{ m}$",
+          "d": "$12\\sqrt{3}\\text{ m}$"
+        },
+        "answer": "c",
+        "solution": "Name the two pieces.\n\nThe stump still standing is the upright leg and the broken part is the slanting piece that meets the ground at $30^\\circ$.\n\nThe standing stump: $\\tan 30^\\circ = \\text{stump} \\div 9$\n\n$\\text{stump} = 9 \\times \\frac{1}{\\sqrt{3}} = 3\\sqrt{3}\\text{ m}$\n\nThe broken part: $\\cos 30^\\circ = 9 \\div \\text{broken part}$\n\n$\\text{broken part} = 9 \\times \\frac{2}{\\sqrt{3}} = 6\\sqrt{3}\\text{ m}$\n\nThe pole before the storm: $\\text{Height} = \\text{stump} + \\text{broken part} = 3\\sqrt{3} + 6\\sqrt{3} = 9\\sqrt{3}\\text{ m}$",
+        "image": null,
+        "topic": "Height & Distance",
+        "subtopic": "Heights & Distances",
+        "conceptTested": "Right-angled triangle trigonometric ratios (tan θ = \\frac{\\text{Perpendicular}}{\\text{Base}}, \\cos θ = \\frac{\\text{Base}}{\\text{Hypotenuse}})",
+        "tags": {
+          "topic": "Height & Distance",
+          "subtopic": "Heights & Distances",
+          "conceptTested": "Right-angled triangle trigonometric ratios (tan θ = \\frac{\\text{Perpendicular}}{\\text{Base}}, \\cos θ = \\frac{\\text{Base}}{\\text{Hypotenuse}})",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bd5cbe27ee",
+        "q_num": 249,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:31",
+        "avgTime": "00:28",
+        "question": "Find the coordinates of the circumcentre of a triangle whose vertices are $(1, 1)$, $(7, 1)$ and $(3, 5)$.",
+        "options": {
+          "a": "$(4, 2)$",
+          "b": "$(4, 1)$",
+          "c": "$(3, 2)$",
+          "d": "$(3, 1)$"
+        },
+        "answer": "a",
+        "solution": "Let the circumcentre be $P(x, y)$, with $A(1, 1)$, $B(7, 1)$, $C(3, 5)$.\n\nAB is horizontal, so its perpendicular bisector is the vertical line: $x = \\frac{1 + 7}{2} = 4$\n\nNow use $PA = PC$ with $x = 4$: $(4 - 1)^2 + (y - 1)^2 = (4 - 3)^2 + (y - 5)^2$\n\n$9 + y^2 - 2y + 1 = 1 + y^2 - 10y + 25$\n\n$10 - 2y = 26 - 10y$\n\n$8y = 16 \\implies y = 2$\n\nCircumcentre = $(4, 2)$",
+        "image": null,
+        "topic": "Coordinate Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "Circumcentre equidistant property: $PA = PB = PC$, and the perpendicular bisector of a horizontal line $y_1 = y_2$ is $x = \\frac{x_1 + x_2}{2}$",
+        "tags": {
+          "topic": "Coordinate Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "Circumcentre equidistant property: $PA = PB = PC$, and the perpendicular bisector of a horizontal line $y_1 = y_2$ is $x = \\frac{x_1 + x_2}{2}$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_220b21c4b3",
+        "q_num": 250,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:58",
+        "avgTime": "00:45",
+        "question": "The average age of the 11 members of a colony welfare committee is 42 years. One more member joins the committee and the average age falls by 1.5 years. Find the age of the member who joined.",
+        "options": {
+          "a": "25.5 years",
+          "b": "40.5 years",
+          "c": "24 years",
+          "d": "60 years"
+        },
+        "answer": "c",
+        "solution": "Total age before he joined = $11 \\times 42 = 462$ years.\nThe new average = $42 - 1.5 = 40.5$ years.\nTotal age after he joined (12 members) = $12 \\times 40.5 = 486$ years.\nThe newcomer's age = $486 - 462 = 24$ years.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Inclusion, Exclusion & Replacement",
+        "conceptTested": "Effect on total sum when a new member is added and average changes",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Inclusion, Exclusion & Replacement",
+          "conceptTested": "Effect on total sum when a new member is added and average changes",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -16281,6 +16665,166 @@
           "topic": "Trains",
           "subtopic": "Relative Speed",
           "conceptTested": "Relative speed in the same direction is the difference of speeds ($u - v$), and $\\text{Time} = \\frac{\\text{Distance}}{\\text{Relative Speed}}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_25cd741286",
+        "q_num": 103,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:42",
+        "avgTime": "00:52",
+        "question": "If $2 \\cos^2\\theta + 3 \\sin \\theta = 3$ and $\\theta$ is an acute angle, find the value of $\\theta$.",
+        "options": {
+          "a": "90°",
+          "b": "60°",
+          "c": "30°",
+          "d": "45°"
+        },
+        "answer": "c",
+        "solution": "We are given: $$2 \\cos^2\\theta + 3 \\sin \\theta = 3$$\nSubstitute $\\cos^2\\theta = 1 - \\sin^2\\theta$: $$2(1 - \\sin^2\\theta) + 3 \\sin \\theta = 3$$\n\n$$2 - 2 \\sin^2\\theta + 3 \\sin \\theta = 3$$\n\n$$2 \\sin^2\\theta - 3 \\sin \\theta + 1 = 0$$\n\nFactorise the quadratic equation: $$(2 \\sin \\theta - 1)(\\sin \\theta - 1) = 0$$\nThis gives: $$\\sin \\theta = \\frac{1}{2} \\quad \\text{or} \\quad \\sin \\theta = 1$$\n\nSince $\\theta$ is an acute angle, $\\sin \\theta = 1$ gives $\\theta = 90^\\circ$ (which is not strictly acute or leads to the boundary condition, whereas $\\sin \\theta = \\frac{1}{2}$ gives $\\theta = 30^\\circ$). Therefore, $\\theta = 30^\\circ$.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Solving trigonometric quadratic equations using $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Solving trigonometric quadratic equations using $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_74ac121c83",
+        "q_num": 104,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "01:06",
+        "avgTime": "01:03",
+        "question": "The table shows the monthly sales (in units) of four electronic items across four months. Find the month with the second lowest average sales.",
+        "options": {
+          "a": "June",
+          "b": "August",
+          "c": "September",
+          "d": "July"
+        },
+        "answer": "a",
+        "solution": "Summing the sales for each month across the 4 items: - **June:** $180 + 140 + 120 + 60 = 500$ - **July:** $210 + 150 + 132 + 60 = 552$ - **August:** $165 + 130 + 118 + 71 = 484$ - **September:** $195 + 145 + 108 + 80 = 528$\nCalculating the average for each month (divide by 4 items): - June average = $500 \\div 4 = 125$ - July average = $552 \\div 4 = 138$ - August average = $484 \\div 4 = 121$ - September average = $528 \\div 4 = 132$\nArranging the averages in ascending order: $$121 (August) < 125 (June) < 132 (September) < 138 (July)$$\n\nThus, the lowest average is August, and the **second lowest** average is **June**.",
+        "image": null,
+        "topic": "Data Interpretation",
+        "subtopic": "Tables & Tabular Data",
+        "conceptTested": "Finding averages from tabular data and identifying specific rank values.",
+        "tags": {
+          "topic": "Data Interpretation",
+          "subtopic": "Tables & Tabular Data",
+          "conceptTested": "Finding averages from tabular data and identifying specific rank values.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bb387e07bb",
+        "q_num": 105,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:18",
+        "avgTime": "00:42",
+        "question": "Find the minimum value of the expression $2x^2 - 8x + 15$.",
+        "options": {
+          "a": "15",
+          "b": "2",
+          "c": "-1",
+          "d": "7"
+        },
+        "answer": "d",
+        "solution": "Rule - where a quadratic is smallest. Write it as a perfect square plus a number. A square can never fall below zero, so that number left over is the least value.\n\nPull the 2 out of the first two terms: $2x^2 - 8x + 15 = 2(x^2 - 4x) + 15$\nComplete the square inside: $x^2 - 4x = (x - 2)^2 - 4$\n\n$= 2[(x - 2)^2 - 4] + 15$\n\n$= 2(x - 2)^2 - 8 + 15$\n\n$= 2(x - 2)^2 + 7$\n\nRead the least value off: $(x - 2)^2$ is smallest at $x = 2$, where it becomes 0, leaving only the 7.\nMinimum value = 7",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Maxima, Minima & Value Putting",
+        "conceptTested": "Completing the square method to find the minimum value of a quadratic expression $ax^2 + bx + c$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Maxima, Minima & Value Putting",
+          "conceptTested": "Completing the square method to find the minimum value of a quadratic expression $ax^2 + bx + c$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_45a523e816",
+        "q_num": 106,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:30",
+        "avgTime": "00:27",
+        "question": "AB is a diameter of a circle and C is a point lying on the circle. If AC = 16 cm and BC = 12 cm, find the radius of the circle.",
+        "options": {
+          "a": "20 cm",
+          "b": "10 cm",
+          "c": "14 cm",
+          "d": "8 cm"
+        },
+        "answer": "b",
+        "solution": "Rule - the angle in a semicircle. An angle drawn on a diameter from any point of the circle is a right angle. So $\\angle ACB = 90^\\circ$. That makes AB the hypotenuse.\n\n$AB = \\sqrt{16^2 + 12^2} = \\sqrt{256 + 144} = \\sqrt{400} = 20\\text{ cm}$\n\nAB is the diameter, not the radius.\n\n$\\text{Radius} = 20 \\div 2 = 10\\text{ cm}$",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Thales's Theorem / Angle in a semicircle is a right angle ($90^\\circ$) and Pythagoras theorem in right-angled triangles",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Thales's Theorem / Angle in a semicircle is a right angle ($90^\\circ$) and Pythagoras theorem in right-angled triangles",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ee7cb1be2c",
+        "q_num": 107,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:22",
+        "avgTime": "00:32",
+        "question": "When 85, 190 and 330 are each divided by the same number, the remainder is the same every time. Find the greatest such number.",
+        "options": {
+          "a": "15",
+          "b": "5",
+          "c": "35",
+          "d": "105"
+        },
+        "answer": "c",
+        "solution": "Rule - the same remainder every time.\n\nTake the differences: $190 - 85 = 105$\n\n$330 - 190 = 140$\n\n$330 - 85 = 245$\n\nThe divisor must divide all three differences. So the greatest one is the HCF of 105, 140 and 245.\n\n$105 = 3 \\times 5 \\times 7$\n\n$140 = 2 \\times 2 \\times 5 \\times 7$\n\n$245 = 5 \\times 7 \\times 7$\n\nCommon part = $5 \\times 7 = 35$.",
+        "image": null,
+        "topic": "LCM & HCF",
+        "subtopic": "LCM & HCF Applications",
+        "conceptTested": "Greatest number that leaves the same remainder when dividing multiple given numbers is the HCF of their pairwise differences",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "LCM & HCF Applications",
+          "conceptTested": "Greatest number that leaves the same remainder when dividing multiple given numbers is the HCF of their pairwise differences",
           "difficulty": "medium"
         }
       }

@@ -251,12 +251,38 @@ export function classifySubjectAndTopic(q: TelegramQuizQuestion): {
 // LIVE MISTAKE RECORDING & MASTERY
 // ----------------------------------------------------
 
+export function isSpeedLabItem(q: { question?: string; topic?: string; source?: string; subject?: string }): boolean {
+  const top = (q.topic || '').toLowerCase();
+  const src = (q.source || '').toLowerCase();
+  const sub = (q.subject || '').toLowerCase();
+  if (top.includes('speed') || top.includes('mental math') || top.includes('calc studio') || top.includes('calculation studio') || top.includes('routine') || top.includes('blitz') || top.includes('simplification')) return true;
+  if (src.includes('speed') || src.includes('mental_math')) return true;
+  if (sub === 'speed' || sub === 'speed_lab') return true;
+  return false;
+}
+
+export function getCleanQuestionKey(text?: string, id?: string): string {
+  if (text) {
+    const clean = text
+      .toLowerCase()
+      .replace(/^q(?:uestion)?\s*[-:.)]?\s*\d*[-:.)]?\s*/i, '')
+      .replace(/^\(?\d+\)?[-:.)]\s*/, '')
+      .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
+      .replace(/[?.!,:;'"()\[\]{}]+$/g, '')
+      .trim();
+    if (clean.length > 5) return clean;
+  }
+  return (id || '').trim().toLowerCase();
+}
+
 export function recordMistake(
   rawUserId: any,
   q: TelegramQuizQuestion,
   source: MistakeSource = 'telegram_quiz',
   isCorrect = false
 ) {
+  // Only record Chapter Bank and Mock Errors — strictly ignore speed drills
+  if (isSpeedLabItem(q) || isSpeedLabItem({ source })) return;
   if (isQuestionDeleted(q.id, q.question)) return;
 
   const userId = normalizeUserId(rawUserId);
@@ -266,11 +292,11 @@ export function recordMistake(
     userMistakesMap.set(userId, userMap);
   }
 
+  const cleanKey = getCleanQuestionKey(q.question, q.id);
   let existing = userMap.get(q.id);
-  if (!existing && q.question) {
-    const qNorm = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+  if (!existing && cleanKey) {
     for (const m of userMap.values()) {
-      if (m.question && m.question.trim().toLowerCase().replace(/\s+/g, ' ') === qNorm) {
+      if (getCleanQuestionKey(m.question, m.id) === cleanKey) {
         existing = m;
         break;
       }
@@ -374,17 +400,21 @@ export function getUserMistakes(
 ): TelegramQuizQuestion[] {
   const userId = normalizeUserId(rawUserId);
   const results: TelegramQuizQuestion[] = [];
-  const seenQIds = new Set<string>();
+  const seenKeys = new Set<string>();
 
   const checkAndPush = (item: RecordedMistake) => {
+    if (!item || !item.question) return;
     if (isQuestionDeleted(item.id, item.question)) return;
+    if (isSpeedLabItem(item)) return; // Strictly ignore speed drills
     if (filter !== 'all' && item.source !== filter) return;
     if (subject && item.subject !== subject) return;
     if (topicSlug && topicSlug !== '_' && item.topicSlug !== topicSlug) return;
 
-    if (seenQIds.has(item.id)) return;
+    const key = getCleanQuestionKey(item.question, item.id);
+    if (!key || seenKeys.has(key)) return; // Strictly prevent double/duplicate questions
 
-    seenQIds.add(item.id);
+    seenKeys.add(key);
+    if (item.id) seenKeys.add(item.id.toLowerCase());
 
     results.push({
       id: item.id,
@@ -428,25 +458,22 @@ export function getAllRecordedMistakes(
 
   for (const map of userMistakesMap.values()) {
     for (const item of map.values()) {
+      if (!item || !item.question) continue;
       if (isQuestionDeleted(item.id, item.question)) continue;
+      if (isSpeedLabItem(item)) continue; // Strictly ignore speed drills
       if (filter !== 'all' && item.source !== filter) continue;
       if (subject && item.subject !== subject) continue;
       if (topicSlug && topicSlug !== '_' && item.topicSlug !== topicSlug) continue;
 
-      const qKey = (item.question || '')
-        .trim()
-        .toLowerCase()
-        .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
-        .replace(/[?.!,:;'"()\[\]{}]+$/g, '') || item.id;
-
-      if (seenKeys.has(qKey)) continue;
+      const qKey = getCleanQuestionKey(item.question, item.id);
+      if (!qKey || seenKeys.has(qKey)) continue; // Strictly prevent double/duplicate questions
 
       seenKeys.add(qKey);
+      if (item.id) seenKeys.add(item.id.toLowerCase());
       results.push(item);
     }
   }
-
-  return results.sort((a, b) => b.timestamp - a.timestamp);
+  return results.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 }
 
 export function clearAllMistakes(userId?: number): void {

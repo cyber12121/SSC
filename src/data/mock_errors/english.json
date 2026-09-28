@@ -4824,6 +4824,358 @@
           "conceptTested": "Ability to synthesize and identify the primary theme, author's intent, and central focus of a passage.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "engl_b07fe720b2",
+        "q_num": 155,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:29",
+        "question": "Select the word that is most nearly the SYNONYM of the underlined word in the sentence given below.\n\nThe tribunal threw out the whole affidavit as mendacious and fined the deponent.",
+        "options": {
+          "a": "Untruthful",
+          "b": "Beggarly",
+          "c": "Malicious",
+          "d": "Menacing"
+        },
+        "answer": "a",
+        "solution": "Meaning: mendacious = given to lying, false.\n\nAn affidavit thrown out and a fine imposed point to lies, so untruthful = not speaking the truth fits best.",
+        "image": null,
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary recall and contextual word usage for descriptive adjectives",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary recall and contextual word usage for descriptive adjectives",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_84291ecc19",
+        "q_num": 156,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:36",
+        "avgTime": "00:37",
+        "question": "Select the option that expresses the given sentence in indirect speech.\n\nThe curator said to the volunteers, \"You should handle these manuscripts with cotton gloves.\"",
+        "options": {
+          "a": "The curator told the volunteers that they would handle those manuscripts with cotton gloves.",
+          "b": "The curator told the volunteers that they should handle these manuscripts with cotton gloves.",
+          "c": "The curator told the volunteers that they should handle those manuscripts with cotton gloves.",
+          "d": "The curator told to the volunteers that they should handle those manuscripts with cotton gloves."
+        },
+        "answer": "c",
+        "solution": "Rule: a modal of duty (should, must, ought to) does not backshift in reported speech, so \\\"should handle\\\" stays \\\"should handle\\\". Also, \\\"said to\\\" changes to \\\"told\\\", \\\"You\\\" changes to \\\"they\\\", and \\\"these\\\" changes to \\\"those\\\".",
+        "image": null,
+        "topic": "Direct & Indirect Speech",
+        "subtopic": "Assertive Sentences & Reporting Verbs",
+        "conceptTested": "Modals like should, must, ought to do not backshift in reported speech",
+        "tags": {
+          "topic": "Direct & Indirect Speech",
+          "subtopic": "Assertive Sentences & Reporting Verbs",
+          "conceptTested": "Modals like should, must, ought to do not backshift in reported speech",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_605ad953a4",
+        "q_num": 157,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:43",
+        "avgTime": "00:44",
+        "question": "The given sentence has been divided into four parts. Select the part that contains a spelling error.",
+        "options": {
+          "a": "(1) The abbot credited",
+          "b": "(3) to the quiet perseverance",
+          "c": "(4) of eleven ageing monks.",
+          "d": "(2) the monastry’s long survival"
+        },
+        "answer": "d",
+        "solution": "The error lies in the word `monastry`. The correct spelling is `monastery` (a house of monks). The middle 'e' is often swallowed in pronunciation, but must be retained in spelling (mon - as - ter - y). All other parts are correctly spelt.",
+        "image": null,
+        "topic": "Spelling Errors",
+        "subtopic": "Misspelt Words",
+        "conceptTested": "Identification of incorrectly spelt words, such as confusing 'monastery' with 'monastry'.",
+        "tags": {
+          "topic": "Spelling Errors",
+          "subtopic": "Misspelt Words",
+          "conceptTested": "Identification of incorrectly spelt words, such as confusing 'monastery' with 'monastry'.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_a138a83b12",
+        "q_num": 158,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:40",
+        "avgTime": "00:49",
+        "question": "Select the part of the given sentence that contains a grammatical error.\n\nAlthough she had joined the office, that she was senior than him, treated the older man as the natural authority, the gradation list drawn up that April",
+        "options": {
+          "a": "Although she had joined the office",
+          "b": "treated the older man as the natural authority",
+          "c": "that she was senior than him",
+          "d": "the gradation list drawn up that April"
+        },
+        "answer": "c",
+        "solution": "Rule: Latin comparatives such as senior, junior, superior, inferior, and prior take 'to', never 'than'. Therefore, 'senior than him' must be replaced with 'senior to him'.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Articles & Determiners",
+        "conceptTested": "Latin comparative adjectives (senior, junior, superior, inferior, prior) take 'to' instead of 'than'.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Articles & Determiners",
+          "conceptTested": "Latin comparative adjectives (senior, junior, superior, inferior, prior) take 'to' instead of 'than'.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8fd30c199f",
+        "q_num": 159,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:31",
+        "question": "Select the option that improves the underlined part of the sentence.\n\nEven though the store clerk had produced two witnesses and a stamped delivery challan, and even though nobody at the depot could remember the crates ever arriving, the divisional office went ahead and \\underline{charged him on} the theft of eleven drums of furnace oil, a decision the union has since carried to the tribunal.",
+        "options": {
+          "a": "charged him with the theft of",
+          "b": "charged him for the theft of",
+          "c": "charged him of the theft of",
+          "d": "No substitution required"
+        },
+        "answer": "a",
+        "solution": "Rule: You charge a person with an offence. The correct preposition is 'with', never 'on' or 'of'. Thus, 'charged him with the theft of' is grammatically correct.",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Articles & Determiners",
+        "conceptTested": "Correct preposition usage with verbs of accusation and charge: 'charge a person with an offence'.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Articles & Determiners",
+          "conceptTested": "Correct preposition usage with verbs of accusation and charge: 'charge a person with an offence'.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_680fc3d8e0",
+        "q_num": 160,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:12",
+        "avgTime": "00:15",
+        "question": "Select the option that best expresses the meaning of the idiom given below.\n\nHobson’s choice",
+        "options": {
+          "a": "An apparent choice that leaves no real alternative",
+          "b": "A choice between two equally attractive rewards",
+          "c": "A decision reached only after long consultation",
+          "d": "A bargain struck at the very last moment"
+        },
+        "answer": "a",
+        "solution": "Meaning: 'Hobson's choice' refers to an apparent choice where there is actually no real alternative - you either take what is offered or take nothing at all.",
+        "image": null,
+        "topic": "Idioms & Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Understanding historical idioms and their figurative applications in modern English.",
+        "tags": {
+          "topic": "Idioms & Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Understanding historical idioms and their figurative applications in modern English.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_f454a816c2",
+        "q_num": 161,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:52",
+        "avgTime": "00:53",
+        "question": "The following sentences have been jumbled up. Select the option that arranges them in the correct order.\n\nP. Yet no museum has been able to say who carved them, or when.\n\nQ. A row of seven basalt figures stands at the edge of the dry lake.\n\nR. Each one faces east, and each holds a shallow stone bowl.\n\nS. Villagers have swept the ground around them for as long as anyone can remember.",
+        "options": {
+          "a": "QRSP",
+          "b": "QRPS",
+          "c": "QSRP",
+          "d": "RQSP"
+        },
+        "answer": "a",
+        "solution": "Step 1: Sentence Q introduces the main subject ('a row of seven basalt figures') for the first time.\nStep 2: Sentence R describes the figures using 'each one', referring back to Q.\nStep 3: Sentence S expands the context by introducing the villagers who tend the ground around them.\nStep 4: Sentence P concludes with 'Yet', stating what remains unknown about them.\nFinal order: QRSP.",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical sequencing of jumbled sentences using introductory nouns, pronoun references, and concluding conjunction markers.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical sequencing of jumbled sentences using introductory nouns, pronoun references, and concluding conjunction markers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_075635cebb",
+        "q_num": 162,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:13",
+        "question": "Select the option that best expresses the meaning of the idiom given below.\n\nTo flog a dead horse",
+        "options": {
+          "a": "To criticise a person who can no longer reply",
+          "b": "To press others into doing one's own work",
+          "c": "To revive a quarrel that everyone has forgotten",
+          "d": "To persist with an effort that can no longer succeed"
+        },
+        "answer": "d",
+        "solution": "Meaning: to flog a dead horse = to keep pushing a matter already settled or hopeless (व्यर्थ प्रयास करना, मरे घोड़े को कोड़े मारना).\n\nWhipping a dead animal moves it nowhere; the labour is simply wasted.",
+        "image": null,
+        "topic": "Idioms Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Understanding the figurative meaning of standard idioms",
+        "tags": {
+          "topic": "Idioms Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Understanding the figurative meaning of standard idioms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_469fe29506",
+        "q_num": 163,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:31",
+        "avgTime": "00:29",
+        "question": "Select the option that expresses the given sentence in passive voice:\n\nA departmental committee looked into the missing stock register.",
+        "options": {
+          "a": "The missing stock register was looked into by a departmental committee.",
+          "b": "The missing stock register was looked by a departmental committee.",
+          "c": "The missing stock register was looked into a departmental committee.",
+          "d": "The missing stock register had been looked into by a departmental committee."
+        },
+        "answer": "a",
+        "solution": "Rule: In a phrasal verb, the preposition travels with the verb into the passive. 'looked into' becomes 'was looked into', never 'was looked'. - Object 'the missing stock register' goes to the front. - 'a departmental committee' takes 'by'. - Simple past gives 'was' plus the participle 'looked', and 'into' rides along behind it.",
+        "image": null,
+        "topic": "Active Passive Voice",
+        "subtopic": "Basic Voice Change Rules",
+        "conceptTested": "Retention of prepositions in phrasal verbs during passive voice conversion",
+        "tags": {
+          "topic": "Active Passive Voice",
+          "subtopic": "Basic Voice Change Rules",
+          "conceptTested": "Retention of prepositions in phrasal verbs during passive voice conversion",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_dccc7e8477",
+        "q_num": 164,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:34",
+        "avgTime": "00:36",
+        "question": "The given sentence has been divided into four parts. Select the part that contains a grammatical error.\n\n(A) The archivist who the trustees had consulted\n(B) about the water damage in the vault\n(C) suggested a slower method of drying\n(D) that would cost the trust very little.",
+        "options": {
+          "a": "(B) about the water damage in the vault",
+          "b": "(A) The archivist who the trustees had consulted",
+          "c": "(C) suggested a slower method of drying",
+          "d": "(D) that would cost the trust very little."
+        },
+        "answer": "b",
+        "solution": "Rule: A relative pronoun takes its case from its job inside its own clause.\n\nIn the clause 'the trustees had consulted', 'the trustees' is the subject, and the pronoun is the object of 'had consulted'. The object form is 'whom', not 'who'.\n\nCorrected part (A): 'The archivist whom the trustees had consulted'.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Articles & Determiners",
+        "conceptTested": "Relative pronoun case usage (subjective vs. objective case: who vs. whom)",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Articles & Determiners",
+          "conceptTested": "Relative pronoun case usage (subjective vs. objective case: who vs. whom)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_634a820124",
+        "q_num": 165,
+        "mockId": "mock_1790621702819_uneyq",
+        "testId": "mock_1790621702819_uneyq",
+        "testName": "SSC CGL 2026 Free Live mock 42 (MEP-7)",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:22",
+        "avgTime": "00:34",
+        "question": "Select the one word substitution for the italicised part of the sentence given below.\n\nThe inquiry concluded that three of the four senior appointments had been secured through the practice of giving good posts to one's own relatives.",
+        "options": {
+          "a": "Cronyism",
+          "b": "Patronage",
+          "c": "Favouritism",
+          "d": "Nepotism"
+        },
+        "answer": "d",
+        "solution": "Meaning: nepotism = favouring one's own relatives in appointments (भाई-भतीजावाद). - Cronyism = favouring close friends. - Patronage = support given by a powerful person. - Favouritism = general partiality without necessarily involving relatives.\n\nOnly nepotism specifies the favouring of blood relatives.",
+        "image": null,
+        "topic": "One Word Substitution",
+        "subtopic": "Sciences & Studies",
+        "conceptTested": "Precise vocabulary replacement for specific descriptive phrases",
+        "tags": {
+          "topic": "One Word Substitution",
+          "subtopic": "Sciences & Studies",
+          "conceptTested": "Precise vocabulary replacement for specific descriptive phrases",
+          "difficulty": "medium"
+        }
       }
     ]
   }

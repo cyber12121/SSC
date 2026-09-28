@@ -1,5 +1,14 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import {
+  getAuth,
+  initializeAuth,
+  indexedDBLocalPersistence,
+  browserLocalPersistence,
+  inMemoryPersistence,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut
+} from 'firebase/auth';
 import {
   getFirestore,
   initializeFirestore,
@@ -33,7 +42,26 @@ try {
 }
 
 export const db = firestoreDb;
-export const auth = getAuth(app);
+
+// Initialize Firebase Auth with graceful persistence fallbacks
+// In Telegram's in-app browser or strict WebView contexts, IndexedDB/storage can throw
+// "SecurityError: Access to storage is not allowed from this context."
+let firebaseAuth: ReturnType<typeof getAuth>;
+try {
+  firebaseAuth = initializeAuth(app, {
+    persistence: [indexedDBLocalPersistence, browserLocalPersistence, inMemoryPersistence]
+  });
+} catch {
+  try {
+    firebaseAuth = getAuth(app);
+  } catch {
+    firebaseAuth = initializeAuth(app, {
+      persistence: inMemoryPersistence
+    });
+  }
+}
+
+export const auth = firebaseAuth;
 export const googleProvider = new GoogleAuthProvider();
 
 export enum OperationType {
