@@ -2,7 +2,13 @@ import { Question } from '../types';
 
 export function normalizeTopicTitle(rawTopic?: string | null): string {
   if (!rawTopic) return 'General';
-  const clean = rawTopic.trim();
+  // Strip emojis, symbols, leading numbers, bullets, and set suffixes (e.g. " - Set 1", " (Set 2)")
+  const clean = rawTopic
+    .replace(/^[\p{Emoji}\p{Symbol}\s\-•#\d.]+/u, '')
+    .replace(/\s*[-–—]\s*set\s*\d+.*$/i, '')
+    .replace(/\s*\(set\s*\d+.*\)$/i, '')
+    .trim();
+
   if (
     !clean ||
     clean === 'General' ||
@@ -16,6 +22,18 @@ export function normalizeTopicTitle(rawTopic?: string | null): string {
     clean === 'Geography'
   ) return 'General';
   
+  // 1. Unify all One Word Substitution / OWS variants into one single topic
+  if (
+    /\b(one\s*[- ]?words?(\s*substitut\w*)?)\b/i.test(clean) ||
+    /\bows([_\s\-\d]|$)/i.test(clean) ||
+    /^ows\b/i.test(clean) ||
+    /one\s*word\s*substitut/i.test(clean) ||
+    /^one\s*[- ]?words?/i.test(clean) ||
+    clean.toLowerCase() === 'ows'
+  ) {
+    return 'One Word Substitution';
+  }
+
   // Unify all Active & Passive Voice subtopics and variants into one chapter bucket
   if (
     /^active\s*(&|and|\/|to)?\s*passive/i.test(clean) ||
@@ -55,7 +73,6 @@ export function normalizeTopicTitle(rawTopic?: string | null): string {
 
   // English & Reasoning
   if (/^missing\s*numbers?(\s*\/\s*matrix)?/i.test(clean) || /^matrix\b/i.test(clean)) return 'Missing Number / Matrix';
-  if (/^one\s*words?(\s*substitut\w*)?/i.test(clean) || /^ows\b/i.test(clean)) return 'One Word Substitution';
   if (/^para\s*jumbles?/i.test(clean) || /^pqrs\b/i.test(clean) || /^sentence\s*rearrangement/i.test(clean)) return 'Para Jumbles';
   if (/^spelling?\s*errors?/i.test(clean) || /^misspelt/i.test(clean) || /^incorrect\s*spellings?/i.test(clean) || /^correctly\s*spelt/i.test(clean) || /^spellings?/i.test(clean)) return 'Spelling Errors';
   if (/^synonyms?\s*(&|and)?\s*antonyms?/i.test(clean) || /^syno\s*(&|and)?\s*anto/i.test(clean) || /^anto\s*(&|and)?\s*syno/i.test(clean) || /^synonyms?/i.test(clean) || /^antonyms?/i.test(clean) || /^syno$/i.test(clean) || /^anto$/i.test(clean)) return 'Synonyms & Antonyms';
@@ -204,7 +221,7 @@ export function detectTopic(q: Question, subject: string): string {
     if (/\b(correctly spelt|incorrectly spelt|misspelt|spelling|spelled|spelt)\b/i.test(s)) return 'Spelling Errors';
     if (/\b(indirect speech|direct speech|reported speech|narration)\b/i.test(s)) return 'Direct & Indirect Speech';
     if (/\b(passive voice|active voice)\b/i.test(s)) return 'Active & Passive Voice';
-    if (/\b(one word substitution|one-word substitute|one word substitute|group of words)\b/i.test(s)) return 'One Word Substitution';
+    if (/\b(one\s*[- ]?words?(\s*substitut\w*)?|group\s*of\s*words|single\s*word\s*for|can\s*be\s*substituted\s*by|ows)\b/i.test(s)) return 'One Word Substitution';
     if (/\b([P-S]{4}|jumbled|para jumbles?|arrange the sentences|order of the parts|order to form a meaningful|sentence rearrangement)\b/i.test(s)) return 'Para Jumbles';
     if (/\b(substitute the underlined|substitute the bold|improve the underlined|improve the segment|sentence improvement)\b/i.test(s)) return 'Sentence Improvement';
     if (/\b(synonym|antonym|similar in meaning|opposite in meaning|closest in meaning|homonym)\b/i.test(s)) return 'Synonyms & Antonyms';

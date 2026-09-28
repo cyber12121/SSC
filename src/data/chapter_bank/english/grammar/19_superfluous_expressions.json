@@ -1,0 +1,712 @@
+{
+  "chapter_num": 19,
+  "chapter_id": "19_superfluous_expressions",
+  "chapter_title": "Superfluous Expressions",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "superfluous_expressions",
+  "total_questions": 50,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "I do not care about the final outcome. I wantto stand beside my friend in this hour of crisis.",
+      "options": {
+        "a": "I want to stand beside",
+        "b": "the final outcome",
+        "c": "I do not care about",
+        "d": "my friend in this hour of crisis"
+      },
+      "answer": "b",
+      "correction": "Remove the word 'final' before 'outcome'.",
+      "solution": "Remove the word 'final' before 'outcome'."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "Supposing if the situation does not turn outto be in your favour, do we have a backup plan?",
+      "options": {
+        "a": "does not turn out to be",
+        "b": "Supposing if the situation",
+        "c": "do we have a back up plan.",
+        "d": "in your favour"
+      },
+      "answer": "b",
+      "correction": "Remove the word if.",
+      "solution": "Remove the word if. 'If' and 'supposing'are not used together."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "By the consensus opinion of everybody we decidedto cooperate with the police in the investigation",
+      "options": {
+        "a": "By the consensus opinion of",
+        "b": "everybody we decided to",
+        "c": "cooperate with the police",
+        "d": "in the investigation"
+      },
+      "answer": "a",
+      "correction": "Remove 'opinion'.",
+      "solution": "Remove 'opinion'. The use of 'opinion' with'consensus' is superfluous."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "The basic necessities include food, clothing,shelter and education",
+      "options": {
+        "a": "The basic necessities",
+        "b": "include food,",
+        "c": "clothing, shelter",
+        "d": "and education"
+      },
+      "answer": "a",
+      "correction": "Remove the word 'basic' before necessities.",
+      "solution": "Remove the word 'basic' before necessities."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "The end result of the election will definitelybe in favour of the Democrats.",
+      "options": {
+        "a": "will definitely be in",
+        "b": "of the election",
+        "c": "favour of the Democrats.",
+        "d": "The end result"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'end' before 'result'.",
+      "solution": "Remove the word 'end' before 'result'."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "He was shot directly on his chest from closeproximity.",
+      "options": {
+        "a": "close proximity",
+        "b": "chest from",
+        "c": "directly on his",
+        "d": "He was shot"
+      },
+      "answer": "a",
+      "correction": "'Remove the word 'close'.",
+      "solution": "'Remove the word 'close'. Close proximityis superfluous."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "We can learn a lot of lessons from the past historybut unfortunately our politicians are not interested in learning from history",
+      "options": {
+        "a": "can learn a lot of lessons",
+        "b": "but unfortunately our politicians",
+        "c": "interested in learning",
+        "d": "from the past history"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'past'.",
+      "solution": "Remove the word 'past'. Use of 'past' with'memories' is superfluous."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "Everybody likes to receive free gifts",
+      "options": {
+        "a": "receive free gifts",
+        "b": "No error",
+        "c": "likes to",
+        "d": "Everybody"
+      },
+      "answer": "a",
+      "correction": "Remove the word free as gifts are alwaysfree.",
+      "solution": "Remove the word free as gifts are alwaysfree."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "Not listening to my parents during the crucialyears of my college life was a blunder mistake that I committed.",
+      "options": {
+        "a": "during the crucial years of my college",
+        "b": "was a blunder mistake",
+        "c": "that I committed",
+        "d": "Not listening to my parents"
+      },
+      "answer": "b",
+      "correction": "Remove the word mistake.",
+      "solution": "Remove the word mistake. A blunder meansa big mistake."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "His close proximity to the chief minister helpedhim in getting many lucrative orders.",
+      "options": {
+        "a": "many lucrative orders.",
+        "b": "helped him in getting",
+        "c": "to the chief minister",
+        "d": "His close proximity"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'close'.",
+      "solution": "Remove the word 'close'. Proximity meansnearness or closeness."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "I have two twins who are very similar in behaviour.",
+      "options": {
+        "a": "I have two twins very",
+        "b": "who are very",
+        "c": "No error",
+        "d": "similar in behaviour"
+      },
+      "answer": "a",
+      "correction": "Remove the word two as twins means twochildren born together.",
+      "solution": "Remove the word two as twins means twochildren born together."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "The prime minister in his speech laid emphasison cutting down of foreign imports.",
+      "options": {
+        "a": "of foreign imports",
+        "b": "on cutting down",
+        "c": "his speech laid emphasis",
+        "d": "The prime minister in"
+      },
+      "answer": "a",
+      "correction": "Remove the word foreign as imports arethe items that are brought from another country.",
+      "solution": "Remove the word foreign as imports arethe items that are brought from another country."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "The child was slow in writing so he requestedthe teacher to repeat the question again",
+      "options": {
+        "a": "the teacher to repeat",
+        "b": "in writing so he requested",
+        "c": "the question again",
+        "d": "The child was slow"
+      },
+      "answer": "c",
+      "correction": "Remove the word 'again' as repeat itselfmeans to do or say something again.",
+      "solution": "Remove the word 'again' as repeat itselfmeans to do or say something again. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Superfluous Expressions"
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "He tried very hard but could not recall thephone number back.",
+      "options": {
+        "a": "No error",
+        "b": "the phone number again",
+        "c": "hard but could not recall",
+        "d": "He tried very"
+      },
+      "answer": "b",
+      "correction": "Remove the word 'back' as recall has been used.",
+      "solution": "Remove the word 'back' as recall has been used."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "Everybody is kindly requested to clear theirdues by the end of the month.",
+      "options": {
+        "a": "Everybody is kindly",
+        "b": "requested to clear their dues",
+        "c": "by the end of the month",
+        "d": "No error"
+      },
+      "answer": "a",
+      "correction": "The word requested has been used, so weneed to remove the word 'kindly'.",
+      "solution": "The word requested has been used, so weneed to remove the word 'kindly'."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "I am feeling comparatively better after discussingthe matter with you.",
+      "options": {
+        "a": "comparatively better",
+        "b": "I am feeling",
+        "c": "after discussing the",
+        "d": "matter with you"
+      },
+      "answer": "a",
+      "correction": "Better is an adjective of comparative degreeso the word 'comparatively' will be removed.",
+      "solution": "Better is an adjective of comparative degreeso the word 'comparatively' will be removed."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "Thereasonwhymostoftheparentsfeeluncomfortablestayingwiththeirchildrenduringoldageisbecausetheyfeeltheyare becoming a burden",
+      "options": {
+        "a": "No error",
+        "b": "old age is because they feel they are becoming a burden",
+        "c": "staying with their children during",
+        "d": "why most of the parents feel uncomfortable"
+      },
+      "answer": "b",
+      "correction": "Remove 'because' as we have already usedthe phrase 'the reason why' to describe the reason.",
+      "solution": "Remove 'because' as we have already usedthe phrase 'the reason why' to describe the reason."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "The lady instructed the gardener that all theempty space of her garden should be occupied by plants",
+      "options": {
+        "a": "by plants",
+        "b": "her garden should be occupied",
+        "c": "that all the empty space of",
+        "d": "The lady instructed the gardener"
+      },
+      "answer": "c",
+      "correction": "Remove the word empty.",
+      "solution": "Remove the word empty. 'Empty' can't beused with 'space'."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "I am absolutely certain that the result of theexam will arrive on Sunday.",
+      "options": {
+        "a": "I am absolutely certain",
+        "b": "that the result",
+        "c": "of the exam will",
+        "d": "arrive on Sunday."
+      },
+      "answer": "a",
+      "correction": "Remove the word absolutely.",
+      "solution": "Remove the word absolutely. 'Certain' itselfgives absolute meaning."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "Despite of working very hard he failed to clearthe third level of the exam",
+      "options": {
+        "a": "the third level of the exam",
+        "b": "he failed to clear",
+        "c": "Despite of",
+        "d": "working very hard"
+      },
+      "answer": "c",
+      "correction": "Remove 'of' after despite.",
+      "solution": "Remove 'of' after despite."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "You are requested to return back all the moneythat you borrowed with interest.",
+      "options": {
+        "a": "You are requested to",
+        "b": "the money that you",
+        "c": "borrowed with interest",
+        "d": "return back all"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'back'.",
+      "solution": "Remove the word 'back'. We do not use theword 'back' with 'return'."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "The child promised his teacher that he wouldnot repeat the careless mistake again.",
+      "options": {
+        "a": "mistake again",
+        "b": "repeat the careless",
+        "c": "that he would not",
+        "d": "child promised his teacher"
+      },
+      "answer": "a",
+      "correction": "Remove the word again as 'repeat' has alreadybeen used.",
+      "solution": "Remove the word again as 'repeat' has alreadybeen used."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "The reason because I am here is that I needto discuss an important issue with you.",
+      "options": {
+        "a": "an important issue with you",
+        "b": "I need to discuss",
+        "c": "The reason because",
+        "d": "I am here is that"
+      },
+      "answer": "c",
+      "correction": "Remove 'because'.",
+      "solution": "Remove 'because'. We do not use 'because'and 'reason' together."
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "The victims were few in number and the policearrived on time so everybody's life was saved.",
+      "options": {
+        "a": "victims were few in number",
+        "b": "on time so everybody's",
+        "c": "and the police arrived",
+        "d": "life was saved."
+      },
+      "answer": "a",
+      "correction": "Few itself means small in number, so weneed to remove \"in number\" from the sentence.",
+      "solution": "Few itself means small in number, so weneed to remove \"in number\" from the sentence."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "A long period of time has passed since I lastmet you for coffee.",
+      "options": {
+        "a": "for coffee",
+        "b": "I met you last",
+        "c": "has passed since",
+        "d": "A long period of time"
+      },
+      "answer": "d",
+      "correction": "Remove 'of time' after 'a long period'.",
+      "solution": "Remove 'of time' after 'a long period'."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "It's the responsibility of the government tolook after the basic necessities of the citizens.",
+      "options": {
+        "a": "No error",
+        "b": "of the citizens",
+        "c": "to look after the basic necessities",
+        "d": "the responsibility of the government"
+      },
+      "answer": "c",
+      "correction": "Remove the word 'basic'.",
+      "solution": "Remove the word 'basic'. Its use is superfluouswith the word 'necessities'."
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "The accountant is expected to do a close scrutinyof all the figures.",
+      "options": {
+        "a": "accountant is expected",
+        "b": "to do a close scrutiny",
+        "c": "of all the figures",
+        "d": "No error"
+      },
+      "answer": "b",
+      "correction": "The word 'scrutiny' means to closely examine.",
+      "solution": "The word 'scrutiny' means to closely examine.So, the word 'close' will be removed."
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "They have decided to collaborate together forthis music album",
+      "options": {
+        "a": "music album",
+        "b": "together for this",
+        "c": "to collaborate",
+        "d": "they have decided"
+      },
+      "answer": "b",
+      "correction": "With 'collaborate', there is no need touse 'together'.",
+      "solution": "With 'collaborate', there is no need touse 'together'."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "I received an unexpected surprise from my brotherlast night.",
+      "options": {
+        "a": "last night",
+        "b": "from my brother",
+        "c": "an unexpected surprise",
+        "d": "I received"
+      },
+      "answer": "c",
+      "correction": "A surprise means an unexpected event.",
+      "solution": "A surprise means an unexpected event. Removethe word 'unexpected'."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "Such cyclones are a regular pattern in thispart of the world.",
+      "options": {
+        "a": "which is seen",
+        "b": "Such cyclones are a regular pattern",
+        "c": "in this part of the world",
+        "d": "No error"
+      },
+      "answer": "b",
+      "correction": "Replace 'a regular pattern' with 'regular'.",
+      "solution": "Replace 'a regular pattern' with 'regular'.The use of 'regular' with 'pattern' is superfluous."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "The speech given by the Director was vaguelyambiguous as no one could understand what he was talking about.",
+      "options": {
+        "a": "what he was talking about.",
+        "b": "The speech given by",
+        "c": "as no one could understand",
+        "d": "the Director was vaguely ambiguous"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'vaguely' as 'ambiguous'and 'vaguely' have the same meaning.",
+      "solution": "Remove the word 'vaguely' as 'ambiguous'and 'vaguely' have the same meaning."
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "She whispered softly in his ear, sharing a secretthat only they would know.",
+      "options": {
+        "a": "whispered softly",
+        "b": "in his ear",
+        "c": "sharing a secret",
+        "d": "they would know"
+      },
+      "answer": "a",
+      "correction": "Remove 'softly' as whispered means to speakvery softly.",
+      "solution": "Remove 'softly' as whispered means to speakvery softly."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "He nodded his head in agreement, acknowledgingthe wisdom of her words.",
+      "options": {
+        "a": "nodded his head",
+        "b": "in agreement",
+        "c": "acknowledging the wisdom",
+        "d": "her words"
+      },
+      "answer": "a",
+      "correction": "'Nodded' means to move your head in agreement.",
+      "solution": "'Nodded' means to move your head in agreement.So remove 'his head'."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "They screamed loudly at the concert, caughtup in the electrifying atmosphere.",
+      "options": {
+        "a": "screamed loudly",
+        "b": "at the concert",
+        "c": "caught up in the electrifying",
+        "d": "they"
+      },
+      "answer": "a",
+      "correction": "As 'screamed' means to cry out loudly.",
+      "solution": "As 'screamed' means to cry out loudly.So use of 'loudly' with screamed is superfluous."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "The police were trying to erase the pre-recordedstatement of the witness.",
+      "options": {
+        "a": "No error",
+        "b": "to erase the pre-recorded",
+        "c": "statement of the witness.",
+        "d": "The police were trying"
+      },
+      "answer": "b",
+      "correction": "'Pre' will be removed.",
+      "solution": "'Pre' will be removed. Recording is somethingthat is 'pre' ."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "He set multiple alarms on his phone lest heshould not oversleep and miss his flight.",
+      "options": {
+        "a": "and miss his flight",
+        "b": "He set multiple alarms on his",
+        "c": "No error",
+        "d": "phone lest he should not oversleep"
+      },
+      "answer": "d",
+      "correction": "We do not use 'not' with lest……should.",
+      "solution": "We do not use 'not' with lest……should.So remove not."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "His annual income increased significantly overthe course of a year.",
+      "options": {
+        "a": "No error",
+        "b": "increased significantly over",
+        "c": "the course of a year",
+        "d": "His annual income"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'annual', as 'over thecourse of a year' is mentioned in the sentence.",
+      "solution": "Remove the word 'annual', as 'over thecourse of a year' is mentioned in the sentence."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "The new initiative is currently in the planningstages at the present time.",
+      "options": {
+        "a": "currently in the planning",
+        "b": "No Error",
+        "c": "stages at the present time",
+        "d": "The new initiative is"
+      },
+      "answer": "c",
+      "correction": "Use of 'at the present time' with 'currently'is superfluous.",
+      "solution": "Use of 'at the present time' with 'currently'is superfluous. So remove 'at the present time'."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "Even after many rounds of talks Russia and Ukrainecould not reach a mutual agreement on the issue of the border area.",
+      "options": {
+        "a": "Russia and Ukraine could not reach",
+        "b": "the issue of the border area",
+        "c": "a mutual agreement on",
+        "d": "Even after many rounds of talks"
+      },
+      "answer": "c",
+      "correction": "'Mutual agreement' is a superfluous expression.",
+      "solution": "'Mutual agreement' is a superfluous expression.So remove 'mutual'."
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "The students have already taken the Tier-2 examand the result is being awaited for.",
+      "options": {
+        "a": "is being awaited for",
+        "b": "No Error",
+        "c": "the Tier-2 exam and the result",
+        "d": "The students have already taken"
+      },
+      "answer": "a",
+      "correction": "we do not use 'for' with awaited.",
+      "solution": "we do not use 'for' with awaited. So remove'for'."
+    },
+    {
+      "q_num": 41,
+      "type": "spot_the_error",
+      "question": "No matter how much it costs, the company willreimburse back all the expenses.",
+      "options": {
+        "a": "No matter how much it costs",
+        "b": "all the expenses",
+        "c": "No error",
+        "d": "the company will reimburse back"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'back'.",
+      "solution": "Remove the word 'back'. As 'reimburse'means to pay back to someone."
+    },
+    {
+      "q_num": 42,
+      "type": "spot_the_error",
+      "question": "One who is not able to face the ups and downsof life manfully is known as a coward man.",
+      "options": {
+        "a": "the ups and downs of life",
+        "b": "manfully is known as a coward man",
+        "c": "No error",
+        "d": "One who is not able to face"
+      },
+      "answer": "b",
+      "correction": "Remove the word 'man'.",
+      "solution": "Remove the word 'man'. 'Coward man' is a superfluous expression."
+    },
+    {
+      "q_num": 43,
+      "type": "spot_the_error",
+      "question": "Ram's calculating skills are equally as goodas yours.",
+      "options": {
+        "a": "are equally as good as",
+        "b": "yours",
+        "c": "No error",
+        "d": "Ram's calculating skills"
+      },
+      "answer": "a",
+      "correction": "'as + positive degree + as' is used forcomparison.",
+      "solution": "'as + positive degree + as' is used forcomparison . So, equally' must be removed."
+    },
+    {
+      "q_num": 44,
+      "type": "spot_the_error",
+      "question": "The magistrate warned the witness, \"you cannot retract back from your statement once it is recorded.\"",
+      "options": {
+        "a": "you can not retract back from",
+        "b": "once it is recorded.",
+        "c": "The magistrate warned the witness",
+        "d": "your statement"
+      },
+      "answer": "a",
+      "correction": "'back' should be omitted.",
+      "solution": "'back' should be omitted."
+    },
+    {
+      "q_num": 45,
+      "type": "spot_the_error",
+      "question": "He didn't mean to cause trouble, but on thecontrary, he hoped to bring peace.",
+      "options": {
+        "a": "No error",
+        "b": "but on the contrary",
+        "c": "he hoped to bring peace",
+        "d": "He didn't mean to cause"
+      },
+      "answer": "b",
+      "correction": "Remove the word 'but'.",
+      "solution": "Remove the word 'but'. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Superfluous Expressions"
+    },
+    {
+      "q_num": 46,
+      "type": "spot_the_error",
+      "question": "We cannot illustrate about the outcome of climate change in just a few days, such changes occur over decades or even centuries.",
+      "options": {
+        "a": "just a few days, such changes occur",
+        "b": "We cannot illustrate about",
+        "c": "over decades or even centuries.",
+        "d": "the outcome of climate change in"
+      },
+      "answer": "b",
+      "correction": "Use of 'illustrate' with 'about' is superfluous.",
+      "solution": "Use of 'illustrate' with 'about' is superfluous.So remove 'about'."
+    },
+    {
+      "q_num": 47,
+      "type": "spot_the_error",
+      "question": "The exam will be conducted at 9:00 A.M tomorrowmorning.",
+      "options": {
+        "a": "No error",
+        "b": "conducted at 9:00 A.M",
+        "c": "tomorrow morning",
+        "d": "The exam will be"
+      },
+      "answer": "c",
+      "correction": "As A.",
+      "solution": "As A.M refers to morning, so remove theword 'morning'."
+    },
+    {
+      "q_num": 48,
+      "type": "spot_the_error",
+      "question": "Anwar, my cousin brother has been promoted tothe position of regional manager.",
+      "options": {
+        "a": "the position of regional manager",
+        "b": "has been promoted to",
+        "c": "No error",
+        "d": "Anwar, my cousin brother"
+      },
+      "answer": "d",
+      "correction": "Remove the word 'brother'.",
+      "solution": "Remove the word 'brother'. ''Cousin brother\"is a superfluous expression."
+    },
+    {
+      "q_num": 49,
+      "type": "spot_the_error",
+      "question": "Raghu left India with bag and baggage to earnmoney.",
+      "options": {
+        "a": "bag and baggage",
+        "b": "No error",
+        "c": "to earn money",
+        "d": "Raghu left India with"
+      },
+      "answer": "a",
+      "correction": "'Bag and Baggage' means with all his belongings.",
+      "solution": "'Bag and Baggage' means with all his belongings.So, remove 'with'."
+    },
+    {
+      "q_num": 50,
+      "type": "spot_the_error",
+      "question": "The athlete had to withdraw back from the competitiondue to injury.",
+      "options": {
+        "a": "The athlete had",
+        "b": "No error",
+        "c": "to withdraw from the",
+        "d": "competition due to injury"
+      },
+      "answer": "c",
+      "correction": "\"Withdraw back\" is a superfluous expression.",
+      "solution": "\"Withdraw back\" is a superfluous expression.So remove 'back'. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

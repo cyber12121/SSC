@@ -2,6 +2,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { db, auth } from '../firebase';
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 import { safeStorage } from '../utils/safeStorage';
+import { normalizeTopicTitle } from '../utils/topicDetector';
+import { Question } from '../types';
 import {
   ArrowLeft,
   Trash2,
@@ -48,6 +50,7 @@ export interface RecordedMistake {
 interface BotMistakesPageProps {
   onBack: () => void;
   onDeleteQuestion?: (questionId: string, questionText: string) => void;
+  onStartPractice?: (topic: string, questions: Question[]) => void;
 }
 
 const SYNCED_STORAGE_KEY = 'cgl_synced_telegram_mistakes';
@@ -216,6 +219,7 @@ function cleanAndFormatExplanation(raw: string): {
 export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   onBack,
   onDeleteQuestion,
+  onStartPractice,
 }) => {
   const [mistakes, setMistakes] = useState<RecordedMistake[]>([]);
   const [loading, setLoading] = useState(false);
@@ -295,31 +299,46 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           const rcaMap = JSON.parse(rcaRaw);
           if (rcaMap && typeof rcaMap === 'object') {
             for (const item of Object.values(rcaMap) as any[]) {
-              if (item && item.questionText && Array.isArray(item.options) && item.options.length > 0) {
-                const qId = item.id || `rca_${item.questionText.slice(0, 30)}`;
-                let correctOpt = item.answer || item.correctOption || '';
-                let correctIdx = 0;
-                if (['a', 'b', 'c', 'd'].includes(String(correctOpt).toLowerCase())) {
-                  correctIdx = ['a', 'b', 'c', 'd'].indexOf(String(correctOpt).toLowerCase());
-                } else {
-                  const foundIdx = item.options.findIndex((o: any) => String(o).trim() === String(correctOpt).trim());
-                  if (foundIdx >= 0) correctIdx = foundIdx;
+              if (item && item.questionText) {
+                let optList: string[] = [];
+                if (Array.isArray(item.options)) {
+                  optList = item.options.map(String);
+                } else if (item.options && typeof item.options === 'object') {
+                  const orderedKeys = ['a', 'b', 'c', 'd'];
+                  const hasAbcd = orderedKeys.some(k => item.options[k] || item.options[k.toUpperCase()]);
+                  if (hasAbcd) {
+                    optList = orderedKeys.map(k => String(item.options[k] || item.options[k.toUpperCase()] || '')).filter(Boolean);
+                  } else {
+                    optList = Object.values(item.options).map(String);
+                  }
                 }
-                rcaMistakes.push({
-                  id: qId,
-                  userId: 0,
-                  question: item.questionText,
-                  options: item.options.map(String),
-                  correctOptionIndex: correctIdx,
-                  explanation: item.solution || item.explanation || '',
-                  subject: normalizeSubject(item.subject),
-                  topic: item.topic || 'Mock Mistake',
-                  topicSlug: (item.topic || 'mock_mistake').toLowerCase().replace(/\s+/g, '_'),
-                  source: 'website_quiz',
-                  timestamp: item.classifiedAt ? new Date(item.classifiedAt).getTime() : Date.now(),
-                  wrongCount: 1,
-                  mastered: false,
-                });
+
+                if (optList.length > 0) {
+                  const qId = item.id || `rca_${item.questionText.slice(0, 30)}`;
+                  let correctOpt = item.answer || item.correctOption || '';
+                  let correctIdx = 0;
+                  if (['a', 'b', 'c', 'd'].includes(String(correctOpt).toLowerCase())) {
+                    correctIdx = ['a', 'b', 'c', 'd'].indexOf(String(correctOpt).toLowerCase());
+                  } else {
+                    const foundIdx = optList.findIndex((o: any) => String(o).trim().toLowerCase() === String(correctOpt).trim().toLowerCase());
+                    if (foundIdx >= 0) correctIdx = foundIdx;
+                  }
+                  rcaMistakes.push({
+                    id: qId,
+                    userId: 0,
+                    question: item.questionText,
+                    options: optList,
+                    correctOptionIndex: correctIdx >= 0 && correctIdx < optList.length ? correctIdx : 0,
+                    explanation: item.solution || item.explanation || '',
+                    subject: normalizeSubject(item.subject),
+                    topic: item.topic || 'Mock Mistake',
+                    topicSlug: (item.topic || 'mock_mistake').toLowerCase().replace(/\s+/g, '_'),
+                    source: item.mockId || item.isFromMock ? 'website_mock' : 'website_quiz',
+                    timestamp: item.classifiedAt ? new Date(item.classifiedAt).getTime() : Date.now(),
+                    wrongCount: 1,
+                    mastered: false,
+                  });
+                }
               }
             }
           }
@@ -599,11 +618,14 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     searchFilteredMistakes.forEach((m) => {
       const sub = normalizeSubject(m.subject);
       map[sub].total++;
-      const topicName = m.topic || 'General Practice';
+      const topicName = normalizeTopicTitle(m.topic) || 'General Practice';
       if (!map[sub].topicMap.has(topicName)) {
         map[sub].topicMap.set(topicName, []);
       }
-      map[sub].topicMap.get(topicName)!.push(m);
+      map[sub].topicMap.get(topicName)!.push({
+        ...m,
+        topic: topicName
+      });
     });
 
     return map;
@@ -651,9 +673,38 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     }));
   };
 
-  // Start Interactive Practice Drill
-  const startPractice = (questionsToPractice: RecordedMistake[]) => {
+  // Start Interactive Practice Drill (opens in full Practice Mode)
+  const startPractice = (questionsToPractice: RecordedMistake[], topicTitle?: string) => {
     if (!questionsToPractice || questionsToPractice.length === 0) return;
+    if (onStartPractice) {
+      const convertedQuestions: Question[] = questionsToPractice.map((m, idx) => {
+        const optObj: { a: string; b: string; c: string; d: string } = {
+          a: m.options[0] || '',
+          b: m.options[1] || '',
+          c: m.options[2] || '',
+          d: m.options[3] || '',
+        };
+        const correctLetters = ['a', 'b', 'c', 'd'];
+        const answer = (correctLetters[m.correctOptionIndex] || 'a') as any;
+
+        return {
+          id: m.id || `mistake_${idx + 1}`,
+          q_num: idx + 1,
+          question: m.question,
+          options: optObj,
+          answer,
+          solution: m.explanation || '',
+          subject: normalizeSubject(m.subject),
+          topic: topicTitle || normalizeTopicTitle(m.topic) || 'General Practice',
+          tags: {
+            topic: topicTitle || normalizeTopicTitle(m.topic) || 'General Practice',
+          }
+        };
+      });
+      onStartPractice(topicTitle || 'Mistakes Practice', convertedQuestions);
+      return;
+    }
+
     setPracticeQuestions(questionsToPractice);
     setPracticeIndex(0);
     setPracticeChosen(null);
@@ -726,7 +777,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         <div className="flex items-center gap-2 shrink-0 flex-wrap">
           {totalFilteredCount > 0 && (
             <button
-              onClick={() => startPractice(searchFilteredMistakes)}
+              onClick={() => startPractice(searchFilteredMistakes, 'All Mistakes')}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-2xs cursor-pointer"
               title="Practice all questions"
             >
@@ -827,7 +878,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                       onClick={(e) => {
                         e.stopPropagation();
                         const allSubQuestions = (Array.from(stats.topicMap.values()) as RecordedMistake[][]).flat();
-                        startPractice(allSubQuestions);
+                        startPractice(allSubQuestions, `${conf.label} Mistakes`);
                       }}
                       className="px-2 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer flex items-center gap-1 shadow-2xs"
                       title={`Practice all ${stats.total} questions in ${conf.label}`}
@@ -1006,7 +1057,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     <button
                       onClick={() => {
                         const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
-                        startPractice(allSubQuestions);
+                        startPractice(allSubQuestions, `${conf.label} Mistakes`);
                       }}
                       className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
                     >
@@ -1057,7 +1108,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                startPractice(topicQuestions);
+                                startPractice(topicQuestions, topicName);
                               }}
                               className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] font-bold transition-colors border border-emerald-200 cursor-pointer shadow-2xs"
                               title={`Drill ${topicQuestions.length} questions in ${topicName}`}

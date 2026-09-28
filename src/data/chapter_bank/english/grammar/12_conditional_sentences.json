@@ -1,0 +1,1132 @@
+{
+  "chapter_num": 12,
+  "chapter_id": "12_conditional_sentences",
+  "chapter_title": "Conditional Sentences",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "conditional_sentences",
+  "total_questions": 70,
+  "questions": [
+    {
+      "q_num": 1,
+      "section_q_num": 1,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If it will rain /(b) tomorrow, we will /(c)stay indoors /(d) no error.",
+      "options": {
+        "a": "(a) If it will rain",
+        "b": "(b) tomorrow, we will",
+        "c": "(c) stay indoors",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"will rain\" with \"rains\".",
+      "solution": "Replace \"will rain\" with \"rains\". We donot use 'will/shall' or 'would' in the if-clause when the main clause is in the Simple Future Tense."
+    },
+    {
+      "q_num": 2,
+      "section_q_num": 2,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I would buy /(b) a new car if I /(c) haveenough money /(d) no error.",
+      "options": {
+        "a": "(a) I would buy",
+        "b": "(b) a new car if I",
+        "c": "(c) haveenough money",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"have\" with \"had\".",
+      "solution": "Replace \"have\" with \"had\". Simple Past Tenseis used in the if-clause in a type 2 conditional sentence."
+    },
+    {
+      "q_num": 3,
+      "section_q_num": 3,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If you study hard, /(b) you will pass /(c)the exam /(d) no error.",
+      "options": {
+        "a": "(a) If you study hard,",
+        "b": "(b) you will pass",
+        "c": "(c) the exam",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 4,
+      "section_q_num": 4,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I was you, /(b) I would take /(c) thejob offer /(d) no error.",
+      "options": {
+        "a": "(a) If I was you,",
+        "b": "(b) I would take",
+        "c": "(c) thejob offer",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"was\" with \"were\".",
+      "solution": "Replace \"was\" with \"were\". Simple Past Tenseis used in the if-clause in a type 2 conditional sentence."
+    },
+    {
+      "q_num": 5,
+      "section_q_num": 5,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If she had called me /(b) earlier, I would/(c) able to help her /(d) no error.",
+      "options": {
+        "a": "(a) If she had called me",
+        "b": "(b) earlier, I would",
+        "c": "(c) able to help her",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"would\" with \"would have been\".",
+      "solution": "Replace \"would\" with \"would have been\".Type 3 conditional follows the structure: 'If + Past perfect, would have + V3'."
+    },
+    {
+      "q_num": 6,
+      "section_q_num": 6,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I will go to the beach /(b) if the weather/(c) was nice /(d) no error.",
+      "options": {
+        "a": "(a) I will go to the beach",
+        "b": "(b) if the weather",
+        "c": "(c) was nice",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"was\" with \"is\".",
+      "solution": "Replace \"was\" with \"is\". Simple PresentTense is used in the if-clause in a Type 1 conditional sentence to express the possible or likely outcome."
+    },
+    {
+      "q_num": 7,
+      "section_q_num": 7,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he will finish /(b) his homework, hecan /(c) play video games /(d) no error.",
+      "options": {
+        "a": "(a) If he will finish",
+        "b": "(b) his homework, hecan",
+        "c": "(c) play video games",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"will finish\" with \"finishes\".",
+      "solution": "Replace \"will finish\" with \"finishes\". Wedo not 'will/shall' or 'would' in the if-clause when the main clause is in the Simple Future Tense."
+    },
+    {
+      "q_num": 8,
+      "section_q_num": 8,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I won the lottery, /(b) I had traveled/(c) around the world /(d) no error.",
+      "options": {
+        "a": "(a) If I won the lottery,",
+        "b": "(b) I had traveled",
+        "c": "(c) around the world",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"had traveled\" with \"would travel\".",
+      "solution": "Replace \"had traveled\" with \"would travel\".Type 2 conditional follows the structure: 'If + Simple Past, would + first form of verb'."
+    },
+    {
+      "q_num": 9,
+      "section_q_num": 9,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If they won't hurry, /(b) they will /(c)miss the bus /(d) no error.",
+      "options": {
+        "a": "(a) If they won't hurry,",
+        "b": "(b) they will",
+        "c": "(c) miss the bus",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"won't\" with \"don't\".",
+      "solution": "Replace \"won't\" with \"don't\". We do not'will/shall' or 'would' in the if-clause when the main clause is in the Simple Future Tense."
+    },
+    {
+      "q_num": 10,
+      "section_q_num": 10,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If it snows tonight, /(b) we can build /(c)a snowman tomorrow /(d) no error.",
+      "options": {
+        "a": "(a) If it snows tonight,",
+        "b": "(b) we can build",
+        "c": "(c) a snowman tomorrow",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 11,
+      "section_q_num": 11,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He walks as if /(b) the Earth belongs /(c)to him /(c) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"belongs\" with \"belonged\".",
+      "solution": "Replace \"belongs\" with \"belonged\". SimplePast tense is used after \"as if\" to give an unreal explanation for a real incident."
+    },
+    {
+      "q_num": 12,
+      "section_q_num": 12,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he had worked hard /(b) he had become/(c) an inspector /(d) no error.",
+      "options": {
+        "a": "(a) If he had worked hard",
+        "b": "(b) he had become",
+        "c": "(c) an inspector",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"had\" with \"would have\".",
+      "solution": "Replace \"had\" with \"would have\". Type 3conditional follows the structure: 'If + Past perfect, would have + V3'."
+    },
+    {
+      "q_num": 13,
+      "section_q_num": 13,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I had not seen /(b) the car coming, I/(c) might have been killed /(d) no error.",
+      "options": {
+        "a": "(a) If I had not seen",
+        "b": "(b) the car coming, I",
+        "c": "(c) might have been killed",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 14,
+      "section_q_num": 14,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If you had told me /(b) yesterday i will/(c) helped him /(d) no error. Conditional Sentences",
+      "options": {
+        "a": "(a) If you had told me",
+        "b": "(b) yesterday i will",
+        "c": "(c) helped him",
+        "d": "(d) no error. Conditional Sentences"
+      },
+      "answer": "b",
+      "correction": "Replace \"will\" with \"would have\".",
+      "solution": "Replace \"will\" with \"would have\". Type3 conditional follows the structure: 'If + Past perfect, would have + V3'."
+    },
+    {
+      "q_num": 15,
+      "section_q_num": 15,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I had a bungalow /(b) I would have /(c) give you /(d) no error.",
+      "options": {
+        "a": "(a) If I had a bungalow",
+        "b": "(b) I would have",
+        "c": "(c) give you",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"have\" from part (b).",
+      "solution": "Remove \"have\" from part (b). Type 2 conditionalfollows the structure: 'If + Simple Past, would + first form of verb'."
+    },
+    {
+      "q_num": 16,
+      "section_q_num": 16,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Were Babita a boy/(b) Navya will /(c) marryher /(d) no error.",
+      "options": {
+        "a": "(a) Were Babita a boy",
+        "b": "(b) Navya will",
+        "c": "(c) marryher",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". Type 2 conditionalfollows the structure: 'If + Simple Past, would + first form of verb'."
+    },
+    {
+      "q_num": 17,
+      "section_q_num": 17,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he had taken the /(b) earlier train,he /(c) will be here by now /(d) no error.",
+      "options": {
+        "a": "(a) If he had taken the",
+        "b": "(b) earlier train,he",
+        "c": "(c) will be here by now",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"will be\" with \"would have been\".",
+      "solution": "Replace \"will be\" with \"would have been\".Type 3 conditional follows the structure: 'If + Past perfect, would have + V3'."
+    },
+    {
+      "q_num": 18,
+      "section_q_num": 18,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I have a million /(b) dollars, I would/(c) buy a yacht /(d) no error.",
+      "options": {
+        "a": "(a) If I have a million",
+        "b": "(b) dollars, I would",
+        "c": "(c) buy a yacht",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"have\" with \"had\".",
+      "solution": "Replace \"have\" with \"had\". Type 2 conditionalfollows the structure: 'If + Simple Past, would + first form of verb'."
+    },
+    {
+      "q_num": 19,
+      "section_q_num": 19,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I had seen /(b) you, I would have /(c)been stopped the car /(d) no error.",
+      "options": {
+        "a": "(a) If I had seen",
+        "b": "(b) you, I would have",
+        "c": "(c) been stopped the car",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"been stopped\" with \"stopped\".",
+      "solution": "Replace \"been stopped\" with \"stopped\".This sentence is an example of Type 3 conditional in the active voice as the subject 'I' is the doer of the action."
+    },
+    {
+      "q_num": 20,
+      "section_q_num": 20,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If you heat water /(b) to 100 degrees Celsius,/(c) it boils /(d) no error.",
+      "options": {
+        "a": "(a) If you heat water",
+        "b": "(b) to 100 degrees Celsius,",
+        "c": "(c) it boils",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. This sentence is an example ofZero conditional."
+    },
+    {
+      "q_num": 21,
+      "section_q_num": 21,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If we leave the mattress in the/(b) sunfor some time/(c) all the dampness would vanish./(d) no error",
+      "options": {
+        "a": "(a) If we leave the mattress in the",
+        "b": "(b) sunfor some time",
+        "c": "(c) all the dampness would vanish.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"would\" with \"will\".",
+      "solution": "Replace \"would\" with \"will\". RULE: The verb in the if Clauseis in the present tense."
+    },
+    {
+      "q_num": 22,
+      "section_q_num": 22,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If you are looking for a course worth yourmoney/(b) you will/(c) join Pinnacle online series./(d) no error",
+      "options": {
+        "a": "(a) If you are looking for a course worth yourmoney",
+        "b": "(b) you will",
+        "c": "(c) join Pinnacle online series.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "It's a suggestion so use \"should\" in placeof \"will\".",
+      "solution": "It's a suggestion so use \"should\" in placeof \"will\"."
+    },
+    {
+      "q_num": 23,
+      "section_q_num": 23,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Many people would be/(b) out of work ifthat/(c) factory close down./(d) no error",
+      "options": {
+        "a": "(a) Many people would be",
+        "b": "(b) out of work ifthat",
+        "c": "(c) factory close down.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"close\" with \"closes\"; factoryis singular.",
+      "solution": "Replace \"close\" with \"closes\"; factoryis singular. So, \"s/es\" will be used with the verb. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Conditional Sentences"
+    },
+    {
+      "q_num": 24,
+      "section_q_num": 24,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If she sold her car,/(b) she will not get/(c)much money for it./(d) no error",
+      "options": {
+        "a": "(a) If she sold her car,",
+        "b": "(b) she will not get",
+        "c": "(c) much money for it.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "With the simple past, \"would\" is used.",
+      "solution": "With the simple past, \"would\" is used. Replace \"will not\" with \"would not\". RULE: Sentence structure: If + Simple past,Subject would + Verb (1stform) Sentence structure: If + Past Perfect, Subject would + have + Verb (3rdform)"
+    },
+    {
+      "q_num": 25,
+      "section_q_num": 25,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If they don't arrive/(b) soon we'll leave/(c)without them./(d) no error",
+      "options": {
+        "a": "(a) If they don't arrive",
+        "b": "(b) soon we'll leave",
+        "c": "(c) without them.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 26,
+      "section_q_num": 26,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Alan is going/(b) to post me/(c) the recipeif he found it./(d) no error",
+      "options": {
+        "a": "(a) Alan is going",
+        "b": "(b) to post me",
+        "c": "(c) the recipeif he found it.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"found\" with \"finds\".",
+      "solution": "Replace \"found\" with \"finds\". With if clause,simple present is used. RULE: The verb in the if clauseis in the present tense."
+    },
+    {
+      "q_num": 27,
+      "section_q_num": 27,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he's staying/(b) at the party,/(c) I'mleaving./(d) no error",
+      "options": {
+        "a": "(a) If he's staying",
+        "b": "(b) at the party,",
+        "c": "(c) I'mleaving.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"he's staying\" with \"he stays\".",
+      "solution": "Replace \"he's staying\" with \"he stays\". RULE: The verb in the if Clauseis in the present tense."
+    },
+    {
+      "q_num": 28,
+      "section_q_num": 28,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I had known/(b) you were coming I would/(c) have ordered food../(d) no error",
+      "options": {
+        "a": "(a) If I had known",
+        "b": "(b) you were coming I would",
+        "c": "(c) have ordered food..",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error"
+    },
+    {
+      "q_num": 29,
+      "section_q_num": 29,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Had he spoken to me/(b) I will have forgiven/(c)him from the bottom of my heart?/(d) no error",
+      "options": {
+        "a": "(a) Had he spoken to me",
+        "b": "(b) I will have forgiven",
+        "c": "(c) him from the bottom of my heart?",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". RULE: The verb in the if Clause is in thepresent tense. The verb in the main clause is in the simple future. It does not matter which clause comes first. Sentence structure: If + simple present, Simple future"
+    },
+    {
+      "q_num": 30,
+      "section_q_num": 30,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I would lose/(b) my job if I were/(c) latefor work./(d) no error",
+      "options": {
+        "a": "(a) I would lose",
+        "b": "(b) my job if I were",
+        "c": "(c) latefor work.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "It is an imaginary sentence; in imaginarysentences, \"were\" is used.",
+      "solution": "It is an imaginary sentence; in imaginarysentences, \"were\" is used."
+    },
+    {
+      "q_num": 31,
+      "section_q_num": 31,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If they are late/(b) I'm going/(c) to beangry./(d) no error",
+      "options": {
+        "a": "(a) If they are late",
+        "b": "(b) I'm going",
+        "c": "(c) to beangry.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 32,
+      "section_q_num": 32,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he fell asleep/(b) while driving,/(c)he will hit his car somewhere./(d) no error",
+      "options": {
+        "a": "(a) If he fell asleep",
+        "b": "(b) while driving,",
+        "c": "(c) he will hit his car somewhere.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"fell\" with \"falls\".",
+      "solution": "Replace \"fell\" with \"falls\". Simple presentshould be used with an if clause. RULE: The verb in the if Clause is in thepresent tense. The verb in the main clause is in the simple future. It does not matter which clause comes first. Sentence structure: If + simple present, Simple future"
+    },
+    {
+      "q_num": 33,
+      "section_q_num": 33,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I lost my job/(b) because I were/(c) latefor work./(d) no error",
+      "options": {
+        "a": "(a) I lost my job",
+        "b": "(b) because I were",
+        "c": "(c) latefor work.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "It is not a conditional sentence.",
+      "solution": "It is not a conditional sentence. It isan assertive sentence simply stating a past fact, so with \"I\", singular verb \"was\" is used. Replace \"were\" with \"was\"."
+    },
+    {
+      "q_num": 34,
+      "section_q_num": 34,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We couldn't go/(b) to the concert becausewe didn't/(c) have enough money./(d) no error",
+      "options": {
+        "a": "(a) We couldn't go",
+        "b": "(b) to the concert becausewe didn't",
+        "c": "(c) have enough money.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "It's an assertive sentence and not a conditionalsentence.",
+      "solution": "It's an assertive sentence and not a conditionalsentence."
+    },
+    {
+      "q_num": 35,
+      "section_q_num": 35,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If we have enough/(b) money, we would/(c)go to the concert./(d) no error",
+      "options": {
+        "a": "(a) If we have enough",
+        "b": "(b) money, we would",
+        "c": "(c) go to the concert.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"have\" with \"had\".",
+      "solution": "Replace \"have\" with \"had\". RULE: Sentence structure: If + Simple past,Subject would + Verb (1stform) Sentence structure: If + Past Perfect, Subject would + have + Verb (3rdform)"
+    },
+    {
+      "q_num": 36,
+      "section_q_num": 36,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The doctor will see/(b) you today only if/(c)it's an emergency./(d) no error",
+      "options": {
+        "a": "(a) The doctor will see",
+        "b": "(b) you today only if",
+        "c": "(c) it's an emergency.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 37,
+      "section_q_num": 37,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Unless/(b) he revises the whole syllabus/(c)he would not be able to score more than 150./(d) no error",
+      "options": {
+        "a": "(a) Unless",
+        "b": "(b) he revises the whole syllabus",
+        "c": "(c) he would not be able to score more than 150.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"would\" with \"will\".",
+      "solution": "Replace \"would\" with \"will\". \"Revises\" represent that sentence is in present tense. Thus, use \"will\"."
+    },
+    {
+      "q_num": 38,
+      "section_q_num": 38,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he called again,/(b) I will call/(c)the police right here./(d) no error",
+      "options": {
+        "a": "(a) If he called again,",
+        "b": "(b) I will call",
+        "c": "(c) the police right here.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"called\" with \"calls\".",
+      "solution": "Replace \"called\" with \"calls\". With \"if\"clause, a simple present is used."
+    },
+    {
+      "q_num": 39,
+      "section_q_num": 39,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I will wait for you/(b) unless/(c) I don'thave an emergency in the hospital./(d) no error",
+      "options": {
+        "a": "(a) I will wait for you",
+        "b": "(b) unless",
+        "c": "(c) I don'thave an emergency in the hospital.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "With \"unless\", \"don't\" is not used.",
+      "solution": "With \"unless\", \"don't\" is not used."
+    },
+    {
+      "q_num": 40,
+      "section_q_num": 40,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I was you/(b) I would stop/(c) talkingto him./(d) no error",
+      "options": {
+        "a": "(a) If I was you",
+        "b": "(b) I would stop",
+        "c": "(c) talkingto him.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"was\" with \"were\" In imaginary sentences, \"were\" is used.",
+      "solution": "Replace \"was\" with \"were\" In imaginary sentences, \"were\" is used."
+    },
+    {
+      "q_num": 41,
+      "section_q_num": 41,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If they had waited for another month,/(b)they would probably get a/(c) better price for their house./(d) no error",
+      "options": {
+        "a": "(a) If they had waited for another month,",
+        "b": "(b) they would probably get a",
+        "c": "(c) better price for their house.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Use \"would have got\".",
+      "solution": "Use \"would have got\". RULE: Sentence structure: If +Simple past, Subject would + Verb (1stform) Sentence structure: If + Past Perfect, Subject would + have + Verb (3rdform)"
+    },
+    {
+      "q_num": 42,
+      "section_q_num": 42,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) It's quite simple really when/(b) it's coldand the temperature/(c) falls, water froze./(d) no error",
+      "options": {
+        "a": "(a) It's quite simple really when",
+        "b": "(b) it's coldand the temperature",
+        "c": "(c) falls, water froze.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"froze\" with \"freezes\".",
+      "solution": "Replace \"froze\" with \"freezes\"."
+    },
+    {
+      "q_num": 43,
+      "section_q_num": 43,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he decides to accept/(b) that job, heregretted it/(c) for the rest of his life./(d) no error",
+      "options": {
+        "a": "(a) If he decides to accept",
+        "b": "(b) that job, heregretted it",
+        "c": "(c) for the rest of his life.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "Replace \"regretted\" with \"will regret\".",
+      "solution": "Replace \"regretted\" with \"will regret\". RULE: The verb in the if Clause is in the presenttense. The verb in the main clause is in the simple future. It does not matter which clause comes first. Sentence structure: If + simple present, Simple future"
+    },
+    {
+      "q_num": 44,
+      "section_q_num": 44,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he hadn't been driving so fast,/(b) hewould not have killed/(c) the motorcyclist./(d) no error",
+      "options": {
+        "a": "(a) If he hadn't been driving so fast,",
+        "b": "(b) hewould not have killed",
+        "c": "(c) the motorcyclist.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 45,
+      "section_q_num": 45,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If he become careful,/(b) he would havespotted/(c) the mistake./(d) no error",
+      "options": {
+        "a": "(a) If he become careful,",
+        "b": "(b) he would havespotted",
+        "c": "(c) the mistake.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"become\" with \"had become\".",
+      "solution": "Replace \"become\" with \"had become\". www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Conditional Sentences RULE: Sentence structure: If + Simple past, Subject would + Verb (1stform) Sentence structure: If + Past Perfect, Subject would + have + Verb (3rdform)"
+    },
+    {
+      "q_num": 46,
+      "section_q_num": 46,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If she goes on/(b) passing her exams,/(c)she will soon be qualified to practise as a lawyer./(d) no error Conditional Sentences",
+      "options": {
+        "a": "(a) If she goes on",
+        "b": "(b) passing her exams,",
+        "c": "(c) she will soon be qualified to practise as a lawyer.",
+        "d": "(d) no error Conditional Sentences"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 47,
+      "section_q_num": 47,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I pay you twice as much,/(b) can you be able/(c) to finish by Tuesday?/(d) no error",
+      "options": {
+        "a": "(a) If I pay you twice as much,",
+        "b": "(b) can you be able",
+        "c": "(c) to finish by Tuesday?",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"can\" with \"will\".",
+      "solution": "Replace \"can\" with \"will\". RULE: The verb in the if Clause is in thepresent tense."
+    },
+    {
+      "q_num": 48,
+      "section_q_num": 48,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If only I'd invested/(b) in that company,I will have become/(c) a millionaire by now./(d) no error",
+      "options": {
+        "a": "(a) If only I'd invested",
+        "b": "(b) in that company,I will have become",
+        "c": "(c) a millionaire by now.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"will have become\" with \"wouldhave become\".",
+      "solution": "Replace \"will have become\" with \"wouldhave become\". RULE: Sentence structure: If + Simple past,Subject would + Verb (1stform) Sentence structure: If + Past Perfect, Subject would + have + Verb (3rdform)"
+    },
+    {
+      "q_num": 49,
+      "section_q_num": 49,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Had the parachute opened/(b) on time theaccident would/(c) not have happened./(d) no error",
+      "options": {
+        "a": "(a) Had the parachute opened",
+        "b": "(b) on time theaccident would",
+        "c": "(c) not have happened.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 50,
+      "section_q_num": 50,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I was you,/(b) I wouldn't/(c) take therisk./(d) no error",
+      "options": {
+        "a": "(a) If I was you,",
+        "b": "(b) I wouldn't",
+        "c": "(c) take therisk.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"was\" with \"were\" as the sentenceis imaginary.",
+      "solution": "Replace \"was\" with \"were\" as the sentenceis imaginary."
+    },
+    {
+      "q_num": 51,
+      "section_q_num": 1,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If the company offers me the job, I think I ________it.",
+      "options": {
+        "a": "will take",
+        "b": "would take",
+        "c": "would have taken",
+        "d": "would have took"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 52,
+      "section_q_num": 2,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I'm sure she will lend you some money. I wouldbe very surprised if she ________.",
+      "options": {
+        "a": "refused",
+        "b": "refuse",
+        "c": "will refuse",
+        "d": "refuses"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 53,
+      "section_q_num": 3,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They would be disappointed if we _________ .",
+      "options": {
+        "a": "did not went",
+        "b": "did not go",
+        "c": "does not go",
+        "d": "would not has gone"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 54,
+      "section_q_num": 4,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Would your father be angry if I ________ hisbicycle without asking ?",
+      "options": {
+        "a": "taken",
+        "b": "took",
+        "c": "had taken",
+        "d": "would have taken"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 55,
+      "section_q_num": 5,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "My mom has given me this gift and she ________terribly upset if I lost it.",
+      "options": {
+        "a": "will be",
+        "b": "shall be",
+        "c": "would be",
+        "d": "would have been"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 56,
+      "section_q_num": 6,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If someone ________in here with a gun, I'd bevery frightened.",
+      "options": {
+        "a": "walk",
+        "b": "walks",
+        "c": "would walk",
+        "d": "walked"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 57,
+      "section_q_num": 7,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "What would happen if you ________ to work tomorrow?",
+      "options": {
+        "a": "do not go",
+        "b": "did not go",
+        "c": "will not go",
+        "d": "would not go"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 58,
+      "section_q_num": 8,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I'm sure she________ if you explain the situationto her.",
+      "options": {
+        "a": "will have understood",
+        "b": "would have understood",
+        "c": "will understand",
+        "d": "shall have understood"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 59,
+      "section_q_num": 9,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The police ________ him if they had any clueabout him.",
+      "options": {
+        "a": "will have arrested",
+        "b": "would have arrested",
+        "c": "will arrest",
+        "d": "shall have arrested"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 60,
+      "section_q_num": 10,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "What will happen if my parachute ________ ?",
+      "options": {
+        "a": "does not open",
+        "b": "do not open",
+        "c": "will not open",
+        "d": "had not opened"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 61,
+      "section_q_num": 11,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I will be angry if he ________ more mistakes.",
+      "options": {
+        "a": "makes",
+        "b": "make",
+        "c": "made",
+        "d": "would have made"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 62,
+      "section_q_num": 12,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If I ________ you ten rupees, when will yougive it back to me?",
+      "options": {
+        "a": "gave",
+        "b": "give",
+        "c": "gives",
+        "d": "had given"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 63,
+      "section_q_num": 13,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you do not like this one, I ________you anotherone.",
+      "options": {
+        "a": "will bring",
+        "b": "would bring",
+        "c": "brings",
+        "d": "shall bring"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 64,
+      "section_q_num": 14,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If we ________ our crops would have been sownon time.",
+      "options": {
+        "a": "had proper rains",
+        "b": "have proper rains",
+        "c": "had rained",
+        "d": "had rain"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 65,
+      "section_q_num": 15,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you paint the walls white the room ________much brighter.",
+      "options": {
+        "a": "will be",
+        "b": "would have been",
+        "c": "could have been",
+        "d": "is to be"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 66,
+      "section_q_num": 16,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I ________ the roof myself if I had a ladder.",
+      "options": {
+        "a": "can repair",
+        "b": "could repair",
+        "c": "could have repaired",
+        "d": "had repaired"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 67,
+      "section_q_num": 17,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "What ________ if you had heard the fire alarm?",
+      "options": {
+        "a": "would you have done",
+        "b": "can you do",
+        "c": "will you do",
+        "d": "you would have done"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 68,
+      "section_q_num": 18,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If anyone attacks me, my dog ________ at him.",
+      "options": {
+        "a": "will jump",
+        "b": "jumped",
+        "c": "is to jump",
+        "d": "can jump www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Conditional Sentences"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 69,
+      "section_q_num": 19,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If everybody gives me 100 rupees we________ enough.",
+      "options": {
+        "a": "will have",
+        "b": "would have",
+        "c": "have",
+        "d": "had"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 70,
+      "section_q_num": 20,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you ________",
+      "options": {
+        "a": "have joined",
+        "b": "had joined",
+        "c": "will join",
+        "d": "would have joined"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    }
+  ]
+}

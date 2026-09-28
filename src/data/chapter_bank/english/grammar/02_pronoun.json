@@ -1,0 +1,1692 @@
+{
+  "chapter_num": 2,
+  "chapter_id": "02_pronoun",
+  "chapter_title": "Pronoun",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "pronoun",
+  "total_questions": 120,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) I don't think either/(b) of the answers/(c)is correct./(d) no error.",
+      "options": {
+        "a": "(a) I don't think either",
+        "b": "(b) of the answers",
+        "c": "(c) is correct.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"don't think either\" with \"thinkneither\".",
+      "solution": "Replace \"don't think either\" with \"thinkneither\". Use of 'either' is ambiguous in this case. It is not clear whether one answer is wrong or both answers are wrong. 'Neither' means none of the two answers is correct."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) All of the /(b) twins have /(c) similar interests./(d)no error.",
+      "options": {
+        "a": "(a) All of the",
+        "b": "(b) twins have",
+        "c": "(c) similar interests.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"all of\" with \"both\".",
+      "solution": "Replace \"all of\" with \"both\". As \"all\"is used for more than two and \"twins\" means pair."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) She hurt /(b) while playing /(c)badmintonlate at night./(d) no error.",
+      "options": {
+        "a": "(a) She hurt",
+        "b": "(b) while playing",
+        "c": "(c) badmintonlate at night.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add herself after \"hurts\".",
+      "solution": "Add herself after \"hurts\". We use a reflexivepronoun with \"hurt\"."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) I bought a few books /(b) and put it in /(c)the bag /(d) no error.",
+      "options": {
+        "a": "(a) I bought a few books",
+        "b": "(b) and put it in",
+        "c": "(c) the bag",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"it\" with \"them\".",
+      "solution": "Replace \"it\" with \"them\". The plural pronounwill be used with the plural noun \"books\"."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) They /(b) praised for /(c) their hard work./(d) no error.",
+      "options": {
+        "a": "(a) They",
+        "b": "(b) praised for",
+        "c": "(c) their hard work.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"themselves\" after \"praised.",
+      "solution": "Add \"themselves\" after \"praised.\" A reflexivepronoun is used with the verb 'praise'."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) This is the /(b) house which owner/(c) isfamous./(d) no error.",
+      "options": {
+        "a": "(a) This is the",
+        "b": "(b) house which owner",
+        "c": "(c) isfamous.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"which\" with \"whose\".",
+      "solution": "Replace \"which\" with \"whose\". 'whose/who'is used for living things; while 'which' is used for non-living things."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) The company /(b)is expanding their/(c) operationsglobally /(d) no error.",
+      "options": {
+        "a": "(a) The company",
+        "b": "(b) is expanding their",
+        "c": "(c) operationsglobally",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"their\" with 'its\".",
+      "solution": "Replace \"their\" with 'its\". Here, we aretalking about \"company\" which is singular. Thus, the singular pronoun 'its' will be used."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) The scenery of Shillong/(b) is more beautiful/(c) than Guwahati.(d) no error.",
+      "options": {
+        "a": "(a) The scenery of Shillong",
+        "b": "(b) is more beautiful",
+        "c": "(c) than Guwahati.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'Than that of' should be in place of 'than'.",
+      "solution": "'Than that of' should be in place of 'than'.Here comparison is between the scenery of two places. So to avoid repetition of a singular noun 'that of' is used."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) He decided to /(b) report his concerns /(c)to the supervisor.(d) no error.",
+      "options": {
+        "a": "(a) He decided to",
+        "b": "(b) report his concerns",
+        "c": "(c) to the supervisor.",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) The manager resigned /(b)herself to thefact that /(c) changes were inevitable./(d) no error.",
+      "options": {
+        "a": "(a) The manager resigned",
+        "b": "(b) herself to thefact that",
+        "c": "(c) changes were inevitable.",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. The reflexive pronoun is usedwith the verb \"resign\"."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) The person /(b) who I met /(c) was friendly./(d) no error.",
+      "options": {
+        "a": "(a) The person",
+        "b": "(b) who I met",
+        "c": "(c) was friendly.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"who\" with \"whom\".",
+      "solution": "Replace \"who\" with \"whom\". \"whom\" is usedto refer to the object of a verb/preposition."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) After the conversation, /(b) she and I foundmyself/(c) wondering about the implications./(d) no error.",
+      "options": {
+        "a": "(a) After the conversation,",
+        "b": "(b) she and I foundmyself",
+        "c": "(c) wondering about the implications.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"myself\" with \"ourselves\".",
+      "solution": "Replace \"myself\" with \"ourselves\". \"Ourselves\"is used as the reflexive pronoun for any two or three persons including the first person."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) The collaborators congratulated /(b) eachother as they celebrated /(c) the completion of his ambitious project./(d) no error.",
+      "options": {
+        "a": "(a) The collaborators congratulated",
+        "b": "(b) eachother as they celebrated",
+        "c": "(c) the completion of his ambitious project.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"his\" with \"their\".",
+      "solution": "Replace \"his\" with \"their\". \"Their\" will be used to match the pronoun 'they'."
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) Whom is /(b) coming to the /(c) birthdayparty today /(d) no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun",
+      "options": {
+        "a": "(a) Whom is",
+        "b": "(b) coming to the",
+        "c": "(c) birthdayparty today",
+        "d": "(d) no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+      },
+      "answer": "a",
+      "correction": "Replace \"whom\" with \"who\".",
+      "solution": "Replace \"whom\" with \"who\". \"Who\" is usedto refer to the subject of a sentence. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) The person to /(b) which the package was addressed /(c) had already moved to a new location./(d) no error.",
+      "options": {
+        "a": "(a) The person to",
+        "b": "(b) which the package was addressed",
+        "c": "(c) had already moved to a new location.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"which\" with \"whom\".",
+      "solution": "Replace \"which\" with \"whom\". \"Which\" is used for non living things, while \"whom\" is used for living things."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) Animals adapt /(a) himself to survive /(c)in harsh environments./(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"himself\" with \"themselves\".",
+      "solution": "Replace \"himself\" with \"themselves\". Forthe plural subject \"animals\", themselves will be used."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) The comedian /(a) amused by watching /(c)his own performance /(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"himself\" after the verb \"amused\".",
+      "solution": "Add \"himself\" after the verb \"amused\".As the verb \"amuse\" always takes a reflexive pronoun with it."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) Whom did you /(a) encounter during yourvisit /(c) to the historical museum? /(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) Him and her /(b) will be attending the office/(c) meeting tomorrow./(d) no error.",
+      "options": {
+        "a": "(a) Him and her",
+        "b": "(b) will be attending the office",
+        "c": "(c) meeting tomorrow.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"him and her\" by \"he and she\".",
+      "solution": "Replace \"him and her\" by \"he and she\".'He' and 'she' are used as the subjects of a sentence."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) The team has truly /(b) excelled, and hishard work /(c) has not gone unnoticed./(d) no error.",
+      "options": {
+        "a": "(a) The team has truly",
+        "b": "(b) excelled, and hishard work",
+        "c": "(c) has not gone unnoticed.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"his\" by \"their\".",
+      "solution": "Replace \"his\" by \"their\". \"Their\" willbe used for the collective noun \"team\" to highlight the hard word of each individual."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "(a) He, you and I have been /(b) awarded theEmployee of the /(c) Month for our outstanding contributions.\"/(d) no error.",
+      "options": {
+        "a": "(a) He, you and I have been",
+        "b": "(b) awarded theEmployee of the",
+        "c": "(c) Month for our outstanding contributions.\"",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"he, you and I\" with \"you, he andI\".",
+      "solution": "Replace \"he, you and I\" with \"you, he andI\". When some pleasant news is to be announced, pronouns are used in the order of2ndperson, 3rdpersonand 1stperson.(i.e. 231)."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "(a) They, you and we should /(b) collaborateto rectify the issues /(c) raised in the recent audit./(d) no error.",
+      "options": {
+        "a": "(a) They, you and we should",
+        "b": "(b) collaborateto rectify the issues",
+        "c": "(c) raised in the recent audit.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace 'they, you and we\" with \"we, youand they\".",
+      "solution": "Replace 'they, you and we\" with \"we, youand they\". In the case of plural pronouns, pronouns are used in the order of 1stperson, 2ndperson and 3rdperson.(i.e. 123)."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "(a) The woman /(b) of which chain has been snatched/(c) has come here. /(d) no error.",
+      "options": {
+        "a": "(a) The woman",
+        "b": "(b) of which chain has been snatched",
+        "c": "(c) has come here.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"of which\" with \"whose\".",
+      "solution": "Replace \"of which\" with \"whose\". \"Whose\"is used for living things."
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "(a) Nobody has given /(b) their best to makeit /(c) a grand success. /(d) no error.",
+      "options": {
+        "a": "(a) Nobody has given",
+        "b": "(b) their best to makeit",
+        "c": "(c) a grand success.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"their\" with \"his\".",
+      "solution": "Replace \"their\" with \"his\". Indefinitepronouns like somebody, nobody, noone, anyone, everybody, everyone takes pronouns according to \"he\" . Hence, \"his\" is the best choice."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "(a) One has the right /(b) to go places /(c)in his life. /(d) no error.",
+      "options": {
+        "a": "(a) One has the right",
+        "b": "(b) to go places",
+        "c": "(c) in his life.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"his\" with \"one's\".",
+      "solution": "Replace \"his\" with \"one's\". If \"one\" isused as the subject of the sentence, one's will be used as the possessive adjective."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "(a) It is very difficult /(b) for me to stand/(c) your separation./(d) no error.",
+      "options": {
+        "a": "(a) It is very difficult",
+        "b": "(b) for me to stand",
+        "c": "(c) your separation.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"your separation\" with \"separationfrom you\".",
+      "solution": "Replace \"your separation\" with \"separationfrom you\". Possessive adjective is not used with \"separation\"."
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "(a) The brave have to /(b) give his best /(c)to save this country./(d) no error.",
+      "options": {
+        "a": "(a) The brave have to",
+        "b": "(b) give his best",
+        "c": "(c) to save this country.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"his\" with \"their\".",
+      "solution": "Replace \"his\" with \"their\". \"The brave\"means the whole community of brave people so plural pronoun \"their\" will be used."
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "(a) Either your wife or your parents /(b) haveto present herself /(c) before the Magistrate. /(d) no error.",
+      "options": {
+        "a": "(a) Either your wife or your parents",
+        "b": "(b) haveto present herself",
+        "c": "(c) before the Magistrate.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"herself\" with \"themselves\".",
+      "solution": "Replace \"herself\" with \"themselves\". For\"parents\" a plural pronoun will be used."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "(a) You are the person /(b) and whom everybody/(c) admires. /(d) no error.",
+      "options": {
+        "a": "(a) You are the person",
+        "b": "(b) and whom everybody",
+        "c": "(c) admires.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"and\".",
+      "solution": "Remove \"and\". We don't use any conjunctionbetween antecedent and relative pronoun."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "(a) You always want to /(b) better the plightof the poor /(c) that is a mark of a good leader./(d) no error.",
+      "options": {
+        "a": "(a) You always want to",
+        "b": "(b) better the plightof the poor",
+        "c": "(c) that is a mark of a good leader.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"that\" with \"which\".",
+      "solution": "Replace \"that\" with \"which\". 'Which' isused for a non-essential clause and 'that' for essential clause. A non-essential clause provides additional information."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "(a) All the girls including whom /(b) I havetaught are going abroad /(c) to delegate India. /(d) no error.",
+      "options": {
+        "a": "(a) All the girls including whom",
+        "b": "(b) I havetaught are going abroad",
+        "c": "(c) to delegate India.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"whom\" with \"those whom\".",
+      "solution": "Replace \"whom\" with \"those whom\". In caseof \"mainly/chiefly/ particularly/ including/ specially/ especially\", always use \"that or those\" with the relative pronoun as per need."
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "(a) This is the same /(b) dog that always barks/(c) to attract someone. /(d) no error.",
+      "options": {
+        "a": "(a) This is the same",
+        "b": "(b) dog that always barks",
+        "c": "(c) to attract someone.",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "(a) Yours is the /(b) same condition /(c) thatmine. /(d) no error.",
+      "options": {
+        "a": "(a) Yours is the",
+        "b": "(b) same condition",
+        "c": "(c) thatmine.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"that\" with \"as\".",
+      "solution": "Replace \"that\" with \"as\". When \"the same\"appears as a noun or noun equivalent, \"as\" is used."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "(a) That was a wonderful /(b) chance but which/(c) you lost./(d) no error.",
+      "options": {
+        "a": "(a) That was a wonderful",
+        "b": "(b) chance but which",
+        "c": "(c) you lost.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"but which\" with \"which\".",
+      "solution": "Replace \"but which\" with \"which\". We don'tuse any conjunction between antecedent and relative pronoun."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "(a) Many a girl /(b) is not doing /(c) theirhomework. /(d) no error.",
+      "options": {
+        "a": "(a) Many a girl",
+        "b": "(b) is not doing",
+        "c": "(c) theirhomework.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"their\" with \"her\".",
+      "solution": "Replace \"their\" with \"her\". With \"many+ a /an + noun\" the pronoun is used according to \"he/ she/ it\"."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "(a) I am getting late /(b) so I will have totake /(c) your leave./(d) no error.",
+      "options": {
+        "a": "(a) I am getting late",
+        "b": "(b) so I will have totake",
+        "c": "(c) your leave.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"your leave\" with \"leave of you\".",
+      "solution": "Replace \"your leave\" with \"leave of you\". Possessive adjective is not used with \"leave\"."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "(a)These books are on /(b) english grammar butthose one /(c) are about history./(d) no error.",
+      "options": {
+        "a": "(a) These books are on",
+        "b": "(b) english grammar butthose one",
+        "c": "(c) are about history.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"one\" with \"ones\".",
+      "solution": "Replace \"one\" with \"ones\". As there aremany books, the plural form \"ones\" will be used."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "(a) The dog which /(b) I bought yesterday /(c)never barks at strangers. /(d) no error.",
+      "options": {
+        "a": "(a) The dog which",
+        "b": "(b) I bought yesterday",
+        "c": "(c) never barks at strangers.",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "(a)The dog which was /(b) barking at you /(c)is my./(d) no error.",
+      "options": {
+        "a": "(a) The dog which was",
+        "b": "(b) barking at you",
+        "c": "(c) is my.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"my\" with \"mine\".",
+      "solution": "Replace \"my\" with \"mine\". Possessive pronounis used when the noun is used separately. Possessive pronoun is used together with the noun."
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "(a) Neither of the two friends/(b) has got theirname/(c)in the merit list./(d) No error.",
+      "options": {
+        "a": "(a) Neither of the two friends",
+        "b": "(b) has got theirname",
+        "c": "(c) in the merit list.",
+        "d": "(d) No error."
+      },
+      "answer": "b",
+      "correction": "Replace \"their\" with \"his\".",
+      "solution": "Replace \"their\" with \"his\". Always a singularpronoun is used with \"neither\"."
+    },
+    {
+      "q_num": 41,
+      "type": "spot_the_error",
+      "question": "(a)The Party Chief and the Chief Minister /(b) expressed his views / (c) on demonetization in India. / (d) no error.",
+      "options": {
+        "a": "(a) The Party Chief and the Chief Minister",
+        "b": "(b) expressed his views",
+        "c": "(c) on demonetization in India.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace 'his' with 'their'.",
+      "solution": "Replace 'his' with 'their'. When two singularnouns are joined by 'and' refer two different persons the pronoun used for them should be 'plural'."
+    },
+    {
+      "q_num": 42,
+      "type": "spot_the_error",
+      "question": "(a) Somebody left his /(b) belongings in theconference /(c) room; please collect that./(d) no error.",
+      "options": {
+        "a": "(a) Somebody left his",
+        "b": "(b) belongings in theconference",
+        "c": "(c) room; please collect that.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"that\" with \"them\".",
+      "solution": "Replace \"that\" with \"them\". The objectiveplural pronoun \"them\" will be used for belongings. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+    },
+    {
+      "q_num": 43,
+      "type": "spot_the_error",
+      "question": "(a) In the midst of the chaos, /(b) she hadto remind to stay /(c) focused on the task at hand./(d) no error.",
+      "options": {
+        "a": "(a) In the midst of the chaos,",
+        "b": "(b) she hadto remind to stay",
+        "c": "(c) focused on the task at hand.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Add \"herself\" after \"remind\".",
+      "solution": "Add \"herself\" after \"remind\". The verb \"remind\" takes a reflexive pronoun with it when there is no object with it."
+    },
+    {
+      "q_num": 44,
+      "type": "spot_the_error",
+      "question": "(a) The Manager ordered the /(b) watchman tolet the boys /(c) and I go in/(d) no error.",
+      "options": {
+        "a": "(a) The Manager ordered the",
+        "b": "(b) watchman tolet the boys",
+        "c": "(c) and I go in",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "Replace 'I' with 'me'.",
+      "solution": "Replace 'I' with 'me'. After the word 'let',pronouns are always used in objective case."
+    },
+    {
+      "q_num": 45,
+      "type": "spot_the_error",
+      "question": "(a) They expected him /(b) to outperform herself/(c) in the upcoming competition./(d) no error.",
+      "options": {
+        "a": "(a) They expected him",
+        "b": "(b) to outperform herself",
+        "c": "(c) in the upcoming competition.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"herself\" with \"himself\".",
+      "solution": "Replace \"herself\" with \"himself\". The reflexivepronoun of him is \"himself\"."
+    },
+    {
+      "q_num": 46,
+      "type": "spot_the_error",
+      "question": "(a) He adjusted /(b) herself to the /(c) newworking environment /(d) no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun",
+      "options": {
+        "a": "(a) He adjusted",
+        "b": "(b) herself to the",
+        "c": "(c) newworking environment",
+        "d": "(d) no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+      },
+      "answer": "b",
+      "correction": "Replace \"herself\" with \"himself\".",
+      "solution": "Replace \"herself\" with \"himself\". The verb\"adjust\" takes a reflexive pronoun with it and the reflexive pronoun of \"he\" is himself."
+    },
+    {
+      "q_num": 47,
+      "type": "spot_the_error",
+      "question": "(a) In the spirit of teamwork, /(b) the two members of the project collaborated /(c) seamlessly, offering insights and support to one another. /(d) no error.",
+      "options": {
+        "a": "(a) In the spirit of teamwork,",
+        "b": "(b) the two members of the project collaborated",
+        "c": "(c) seamlessly, offering insights and support to one another.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"one another\" with \"each other\".",
+      "solution": "Replace \"one another\" with \"each other\".For two persons, 'each other' is used instead of 'one another'."
+    },
+    {
+      "q_num": 48,
+      "type": "spot_the_error",
+      "question": "(a) My sister that is a brilliant /(b) girland always stands first /(c) in the school. /(d) no error.",
+      "options": {
+        "a": "(a) My sister that is a brilliant",
+        "b": "(b) girland always stands first",
+        "c": "(c) in the school.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"that\".",
+      "solution": "Remove \"that\". We don't use any conjunctionbetween antecedent and helping verb."
+    },
+    {
+      "q_num": 49,
+      "type": "spot_the_error",
+      "question": "(a) My dress was /(b) more beautiful /(c) thanher's /(d) no error.",
+      "options": {
+        "a": "(a) My dress was",
+        "b": "(b) more beautiful",
+        "c": "(c) thanher's",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replaceher'swithhers.",
+      "solution": "Replaceher'swithhers. To show possession,her'swill be used."
+    },
+    {
+      "q_num": 50,
+      "type": "spot_the_error",
+      "question": "(a) Gautam is smarter /(b) than either of his/(c) three brothers./(d) no error.",
+      "options": {
+        "a": "(a) Gautam is smarter",
+        "b": "(b) than either of his",
+        "c": "(c) three brothers.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace either with 'any'.",
+      "solution": "Replace either with 'any'. As \"either\"is used for two persons or things and 'any' is used for more than two persons or things."
+    },
+    {
+      "q_num": 51,
+      "type": "spot_the_error",
+      "question": "(a) The daily wagers /(b) whom I have selected/(c) are very sagacious./(d) no error.",
+      "options": {
+        "a": "(a) The daily wagers",
+        "b": "(b) whom I have selected",
+        "c": "(c) are very sagacious.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 52,
+      "type": "spot_the_error",
+      "question": "(a) The team leader is holding a /(b) meetingwith hers subordinates to guide them /(c) about the upcoming projects /(d) no error.",
+      "options": {
+        "a": "(a) The team leader is holding a",
+        "b": "(b) meetingwith hers subordinates to guide them",
+        "c": "(c) about the upcoming projects",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"hers\" with \"his\".",
+      "solution": "Replace \"hers\" with \"his\". In case of acommon gender person, we use a masculine pronoun or adjective."
+    },
+    {
+      "q_num": 53,
+      "type": "spot_the_error",
+      "question": "(a) You, I and Deepak /(b) have broken the main/(c) gate of the building /(d) no error.",
+      "options": {
+        "a": "(a) You, I and Deepak",
+        "b": "(b) have broken the main",
+        "c": "(c) gate of the building",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"You, I and Deepak\" with \"I, youand Deepak\".",
+      "solution": "Replace \"You, I and Deepak\" with \"I, youand Deepak\". When some unpleasant news is to be announced, pronouns are used in the order of1stperson, 2ndperson and 3rdperson.(i.e. 123)."
+    },
+    {
+      "q_num": 54,
+      "type": "spot_the_error",
+      "question": "(a) Despite their best efforts, /(b) both ofthem could not /(c) solve the complex puzzle /(d) no error.",
+      "options": {
+        "a": "(a) Despite their best efforts,",
+        "b": "(b) both ofthem could not",
+        "c": "(c) solve the complex puzzle",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"both of them could not\" with \"neitherof them could\".",
+      "solution": "Replace \"both of them could not\" with \"neitherof them could\". 'Both' is not used in negative sentences."
+    },
+    {
+      "q_num": 55,
+      "type": "spot_the_error",
+      "question": "(a) One should always strive for his personalgrowth /(b) and continuous learning to embrace new /(c) opportunities and challenges in life /(d) no error.",
+      "options": {
+        "a": "(a) One should always strive for his personalgrowth",
+        "b": "(b) and continuous learning to embrace new",
+        "c": "(c) opportunities and challenges in life",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace 'his' withone's.",
+      "solution": "Replace 'his' withone's. If \"one\" is usedas the subject of the sentence, one's will be used in the sentence instead of 'his / him'."
+    },
+    {
+      "q_num": 56,
+      "type": "spot_the_error",
+      "question": "(a) Rachna, the team leader, /(b) she presentedthe quarterly report /(c) during the meeting /(d) no error.",
+      "options": {
+        "a": "(a) Rachna, the team leader,",
+        "b": "(b) she presentedthe quarterly report",
+        "c": "(c) during the meeting",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove 'she'.",
+      "solution": "Remove 'she'. We do not use a pronoun togetherwith the noun it refers to."
+    },
+    {
+      "q_num": 57,
+      "type": "spot_the_error",
+      "question": "(a) The book on the shelf /(b) is not yours;/(c) it's my /(d) no error.",
+      "options": {
+        "a": "(a) The book on the shelf",
+        "b": "(b) is not yours;",
+        "c": "(c) it's my",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"my\" with \"mine\".",
+      "solution": "Replace \"my\" with \"mine\". We use a possessivepronoun when the noun(the book) is used separately."
+    },
+    {
+      "q_num": 58,
+      "type": "spot_the_error",
+      "question": "(a) The novels of J.K. Rowling /(b) are morepopular than /(c) Dan Brown /(d) no error.",
+      "options": {
+        "a": "(a) The novels of J.K. Rowling",
+        "b": "(b) are morepopular than",
+        "c": "(c) Dan Brown",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Use \"those of\" before Dan Brown.",
+      "solution": "Use \"those of\" before Dan Brown. Comparisonis made between the same type of entities. We need to use 'those of' to refer to the books of Dan Brown."
+    },
+    {
+      "q_num": 59,
+      "type": "spot_the_error",
+      "question": "(a) He is as /(b) responsible /(c) as her /(d)no error.",
+      "options": {
+        "a": "(a) He is as",
+        "b": "(b) responsible",
+        "c": "(c) as her",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"her\" with \"she\".",
+      "solution": "Replace \"her\" with \"she\". While makingcomparisons in pronouns, the pronouns compared should be of the same case."
+    },
+    {
+      "q_num": 60,
+      "type": "spot_the_error",
+      "question": "(a) The manager was unaware of /(b) who of theemployees had submitted /(c) the anonymous complaint/(d) no error.",
+      "options": {
+        "a": "(a) The manager was unaware of",
+        "b": "(b) who of theemployees had submitted",
+        "c": "(c) the anonymous complaint",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"who\" with \"which\".",
+      "solution": "Replace \"who\" with \"which\". We have tochoose one among many employees, so \"which\" will be used."
+    },
+    {
+      "q_num": 61,
+      "type": "spot_the_error",
+      "question": "(a) The team members, /(b) most of who participatedin the competition, /(c) were feeling proud of themselves. / (d) no error.",
+      "options": {
+        "a": "(a) The team members,",
+        "b": "(b) most of who participatedin the competition,",
+        "c": "(c) were feeling proud of themselves.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"who\" with \"whom\".",
+      "solution": "Replace \"who\" with \"whom\". We use an objectivecase pronoun after any preposition."
+    },
+    {
+      "q_num": 62,
+      "type": "spot_the_error",
+      "question": "(a) The teacher, pleased with /(b)the students'efforts, congratulated /(c)each of them on their achievements /(d)No error.",
+      "options": {
+        "a": "(a) The teacher, pleased with",
+        "b": "(b) the students'efforts, congratulated",
+        "c": "(c) each of them on their achievements",
+        "d": "(d) No error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 63,
+      "type": "spot_the_error",
+      "question": "(a) Parul hates /(b) everybody and everything/(c) who reminds her of her old flame /(d) no error.",
+      "options": {
+        "a": "(a) Parul hates",
+        "b": "(b) everybody and everything",
+        "c": "(c) who reminds her of her old flame",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"who\" with \"that\".",
+      "solution": "Replace \"who\" with \"that\". Use \"that\"when we talk about both people and things."
+    },
+    {
+      "q_num": 64,
+      "type": "spot_the_error",
+      "question": "(a) He expressed his gratitude /(b) to everyoneexcept she, /(c) feeling a sense of betrayal /(d) no error.",
+      "options": {
+        "a": "(a) He expressed his gratitude",
+        "b": "(b) to everyoneexcept she,",
+        "c": "(c) feeling a sense of betrayal",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"she\" with \"her\".",
+      "solution": "Replace \"she\" with \"her\". An objectivecase comes after all the prepositions."
+    },
+    {
+      "q_num": 65,
+      "type": "spot_the_error",
+      "question": "(a) Stop blaming you /(b) for the mistake; /(c)itwasn't your fault /(d) no error.",
+      "options": {
+        "a": "(a) Stop blaming you",
+        "b": "(b) for the mistake;",
+        "c": "(c) itwasn't your fault",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"you\" with \"yourself\".",
+      "solution": "Replace \"you\" with \"yourself\". The verb'blame' takes a reflexive pronoun when there is no object after it."
+    },
+    {
+      "q_num": 66,
+      "type": "spot_the_error",
+      "question": "(a) Despite facing numerous challenges, /(b)she persevered and ultimately /(c) achieved herself goals/(d) no error.",
+      "options": {
+        "a": "(a) Despite facing numerous challenges,",
+        "b": "(b) she persevered and ultimately",
+        "c": "(c) achieved herself goals",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"herself\" with \"her\".",
+      "solution": "Replace \"herself\" with \"her\". Reflexivepronouns, such as \"herself,\" are used when the subject and the object of the verb are the same person. Here, the subject is \"she,\" and the object is \"her goals\"."
+    },
+    {
+      "q_num": 67,
+      "type": "spot_the_error",
+      "question": "(a) She proved to her /(b) and others that dedicationand /(c) resilience can lead to success /(d) no error.",
+      "options": {
+        "a": "(a) She proved to her",
+        "b": "(b) and others that dedicationand",
+        "c": "(c) resilience can lead to success",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"her' with \"herself\".",
+      "solution": "Replace \"her' with \"herself\". Reflexivepronouns, such as \"herself,\" are used when the subject and the object of the verb are the same person."
+    },
+    {
+      "q_num": 68,
+      "type": "spot_the_error",
+      "question": "(a) It is /(b) me who is responsible /(c) forthe failure of this plan. /(d) no error.",
+      "options": {
+        "a": "(a) It is",
+        "b": "(b) me who is responsible",
+        "c": "(c) forthe failure of this plan.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace 'me' with 'I'.",
+      "solution": "Replace 'me' with 'I'. A subjective pronounis used before a relative pronoun."
+    },
+    {
+      "q_num": 69,
+      "type": "spot_the_error",
+      "question": "(a) The guests enjoyed their time /(b) at theparty; those expressed their /(c) appreciation for the hospitality /(d) no error.",
+      "options": {
+        "a": "(a) The guests enjoyed their time",
+        "b": "(b) at theparty; those expressed their",
+        "c": "(c) appreciation for the hospitality",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"those\" with \"they\".",
+      "solution": "Replace \"those\" with \"they\". A subjectivepronoun is used as the subject of a clause or sentence."
+    },
+    {
+      "q_num": 70,
+      "type": "spot_the_error",
+      "question": "(a) You and me will work together /(b) to createa collaborative and innovative /(c) solution for the upcoming project /(d) no error.",
+      "options": {
+        "a": "(a) You and me will work together",
+        "b": "(b) to createa collaborative and innovative",
+        "c": "(c) solution for the upcoming project",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"me\" with \"I\".",
+      "solution": "Replace \"me\" with \"I\". In a compound subject,the subjective form of the pronoun should be used."
+    },
+    {
+      "q_num": 71,
+      "type": "spot_the_error",
+      "question": "(a) One should prioritize once well-being /(b)by adopting healthy lifestyle /(c) habits and managing stress effectively /(d) no error.",
+      "options": {
+        "a": "(a) One should prioritize once well-being",
+        "b": "(b) by adopting healthy lifestyle",
+        "c": "(c) habits and managing stress effectively",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"once\" withone's.",
+      "solution": "Replace \"once\" withone's. The plural formof 'one' is 'ones' and to show possession,one'sis used. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+    },
+    {
+      "q_num": 72,
+      "type": "spot_the_error",
+      "question": "(a) She absented /(b) from the meeting /(c)without prior notice /(d) no error.",
+      "options": {
+        "a": "(a) She absented",
+        "b": "(b) from the meeting",
+        "c": "(c) without prior notice",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"herself\" after \"absented\".",
+      "solution": "Add \"herself\" after \"absented\".The verb 'absent' always takes a reflexive pronoun with it."
+    },
+    {
+      "q_num": 73,
+      "type": "spot_the_error",
+      "question": "(a) Every of the four employees working on theproject /(b) is proficient in data analysis and brings /(c) valuable skills to the team /(d) no error.",
+      "options": {
+        "a": "(a) Every of the four employees working on theproject",
+        "b": "(b) is proficient in data analysis and brings",
+        "c": "(c) valuable skills to the team",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"every\" with \"each\".",
+      "solution": "Replace \"every\" with \"each\". 'Every of'is not the correct term. Either it should be 'everyone' or 'each of'."
+    },
+    {
+      "q_num": 74,
+      "type": "spot_the_error",
+      "question": "(a) The baby started crying / (b) when he fell/(c) from the bed /(d) no error.",
+      "options": {
+        "a": "(a) The baby started crying",
+        "b": "(b) when he fell",
+        "c": "(c) from the bed",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace 'he' with 'it'.",
+      "solution": "Replace 'he' with 'it'. We use pronoun'it' for human baby, animals, non-living things."
+    },
+    {
+      "q_num": 75,
+      "type": "spot_the_error",
+      "question": "(a) Everybody should /(b) bring their ID card/(c) to the meeting /(d) no error.",
+      "options": {
+        "a": "(a) Everybody should",
+        "b": "(b) bring their ID card",
+        "c": "(c) to the meeting",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"their\" with \"his\".",
+      "solution": "Replace \"their\" with \"his\". \"Everybody\"takes a singular pronoun."
+    },
+    {
+      "q_num": 76,
+      "type": "spot_the_error",
+      "question": "(a) The book is /(b)yours; /(c) you can keepit /(d) no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun",
+      "options": {
+        "a": "(a) The book is",
+        "b": "(b) yours;",
+        "c": "(c) you can keepit",
+        "d": "(d) no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 77,
+      "type": "spot_the_error",
+      "question": "(a) John asked she /(b) and me to join /(c)the committee /(d) no error.",
+      "options": {
+        "a": "(a) John asked she",
+        "b": "(b) and me to join",
+        "c": "(c) the committee",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"she\" with \"her\".",
+      "solution": "Replace \"she\" with \"her\". Here, we needthe object of the verb \"asked\", so the objective case \"her\" will be used."
+    },
+    {
+      "q_num": 78,
+      "type": "spot_the_error",
+      "question": "(a) She bathed /(b) herself in the / cold watersof the lake /(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "'herself' will be removed.",
+      "solution": "'herself' will be removed. We do not usereflexive pronoun with the verb 'bathe'."
+    },
+    {
+      "q_num": 79,
+      "type": "spot_the_error",
+      "question": "(a) The two friends /(b) often help one another/(c) with their homework /(d) no error.",
+      "options": {
+        "a": "(a) The two friends",
+        "b": "(b) often help one another",
+        "c": "(c) with their homework",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"one another\" with \"each other\".",
+      "solution": "Replace \"one another\" with \"each other\".For two persons, each other is used."
+    },
+    {
+      "q_num": 80,
+      "type": "spot_the_error",
+      "question": "(a) What of these options /(b) do you believewill yield /(c) the most significant results?/(d) no error.",
+      "options": {
+        "a": "(a) What of these options",
+        "b": "(b) do you believewill yield",
+        "c": "(c) the most significant results?",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"what\" with \"which\".",
+      "solution": "Replace \"what\" with \"which\". For selection\"which\" is used."
+    },
+    {
+      "q_num": 81,
+      "type": "spot_the_error",
+      "question": "(a) One should make his/(b) best effort if onewishes to achieve/(c) success in this organisation./(d) no error",
+      "options": {
+        "a": "(a) One should make his",
+        "b": "(b) best effort if onewishes to achieve",
+        "c": "(c) success in this organisation.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"his\" with \"one's\" as the subjectis \"one\".",
+      "solution": "Replace \"his\" with \"one's\" as the subjectis \"one\". Rule :If \"one\" is used as the subjectof the sentence then one's and oneself will be used in the sentence and not him and himself."
+    },
+    {
+      "q_num": 82,
+      "type": "spot_the_error",
+      "question": "(a) The little boy who/(b) I met yesterday/(c)was the winner of the quiz./(d) no error",
+      "options": {
+        "a": "(a) The little boy who",
+        "b": "(b) I met yesterday",
+        "c": "(c) was the winner of the quiz.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"who\" with \"whom\".",
+      "solution": "Replace \"who\" with \"whom\". Rule :\"whom\" is used to refer to the objectof a verb/preposition."
+    },
+    {
+      "q_num": 83,
+      "type": "spot_the_error",
+      "question": "(a) She was more garrulous/(b) than either of/(c)her three sisters./(d) no error",
+      "options": {
+        "a": "(a) She was more garrulous",
+        "b": "(b) than either of",
+        "c": "(c) her three sisters.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Eliminate \"three\" as either is used fortwo things/persons only.",
+      "solution": "Eliminate \"three\" as either is used fortwo things/persons only."
+    },
+    {
+      "q_num": 84,
+      "type": "spot_the_error",
+      "question": "(a) He sent all the/(b)furniture to Hisar that/(c) he had bought in Chandigarh./(d) no error",
+      "options": {
+        "a": "(a) He sent all the",
+        "b": "(b) furniture to Hisar that",
+        "c": "(c) he had bought in Chandigarh.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 85,
+      "type": "spot_the_error",
+      "question": "(a) Mr. Chaudhary, our representative,/(b) willget in touch/(c) with you./ (d) no error.",
+      "options": {
+        "a": "(a) Mr. Chaudhary, our representative,",
+        "b": "(b) willget in touch",
+        "c": "(c) with you.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Eliminate \"he\" from part (b).",
+      "solution": "Eliminate \"he\" from part (b). If a person'sname is given followed by a brief phrase giving some additional information about him then the pronoun will not follow such information."
+    },
+    {
+      "q_num": 86,
+      "type": "spot_the_error",
+      "question": "(a) Both of them will not/(b) deny/(c) the accusationsagainst them./(d) no error",
+      "options": {
+        "a": "(a) Both of them will not",
+        "b": "(b) deny",
+        "c": "(c) the accusationsagainst them.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "With \"both\", \"not\" is not used.",
+      "solution": "With \"both\", \"not\" is not used. So, eliminate\"not\". The correct sentence is - Neither of them will refute the charges. Rule :We never use 'both' and'not' together. When we talk about two things, we use: both/either/neither etc."
+    },
+    {
+      "q_num": 87,
+      "type": "spot_the_error",
+      "question": "(a) He claims to have read Shakespeare's/(b)all great tragedies who is the greatest playwright/(c) of English./(d) no error",
+      "options": {
+        "a": "(a) He claims to have read Shakespeare's",
+        "b": "(b) all great tragedies who is the greatest playwright",
+        "c": "(c) of English.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 88,
+      "type": "spot_the_error",
+      "question": "(a) My mother is the kind/(b) of woman whomeverybody knows/(c) is homely and gentle./(d) no error",
+      "options": {
+        "a": "(a) My mother is the kind",
+        "b": "(b) of woman whomeverybody knows",
+        "c": "(c) is homely and gentle.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 89,
+      "type": "spot_the_error",
+      "question": "(a) The Himalayas are the highest mountains/(b)the formation of which /(c) has always been a matter of investigation/(d) no error",
+      "options": {
+        "a": "(a) The Himalayas are the highest mountains",
+        "b": "(b) the formation of which",
+        "c": "(c) has always been a matter of investigation",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "\"The formation of which\" will replace \"whoseformation Rule :'whose' is used for living things;while 'which' is used for non-living things and to make a choice between two or more.",
+      "solution": "\"The formation of which\" will replace \"whoseformation Rule :'whose' is used for living things;while 'which' is used for non-living things and to make a choice between two or more."
+    },
+    {
+      "q_num": 90,
+      "type": "spot_the_error",
+      "question": "(a) The teacher did not know/(b) who of thestudents/(c) had cheated in the exam/(d) no error",
+      "options": {
+        "a": "(a) The teacher did not know",
+        "b": "(b) who of thestudents",
+        "c": "(c) had cheated in the exam",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"who\" with \"which\".",
+      "solution": "Replace \"who\" with \"which\". We have tochoose one between the two so \"which\" will be used."
+    },
+    {
+      "q_num": 91,
+      "type": "spot_the_error",
+      "question": "(a) The Principal ordered/(b) the peon to let/(c)the boys and I go in./(d) no error",
+      "options": {
+        "a": "(a) The Principal ordered",
+        "b": "(b) the peon to let",
+        "c": "(c) the boys and I go in.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"I\" with \"me\".",
+      "solution": "Replace \"I\" with \"me\". \"Let\" is followedby the objective pronoun and not subjective pronoun. Rule :An objective case comesafter : all prepositions, let, like, but, except, between… and.let, like, but, except, between… and."
+    },
+    {
+      "q_num": 92,
+      "type": "spot_the_error",
+      "question": "(a) The newly formed party stood/(b) for Women'sReservation Bill/(c) and their stand was very clear./(d) no error",
+      "options": {
+        "a": "(a) The newly formed party stood",
+        "b": "(b) for Women'sReservation Bill",
+        "c": "(c) and their stand was very clear.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "The subject is singular (Newly formed Party),so \"its\" will be used.",
+      "solution": "The subject is singular (Newly formed Party),so \"its\" will be used. Replace \"their\" with \"its\"."
+    },
+    {
+      "q_num": 93,
+      "type": "spot_the_error",
+      "question": "(a) Such a self-sacrificing man/(b) as him wins/(c)our sympathy and admiration./(d) no error",
+      "options": {
+        "a": "(a) Such a self-sacrificing man",
+        "b": "(b) as him wins",
+        "c": "(c) our sympathy and admiration.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 94,
+      "type": "spot_the_error",
+      "question": "(a) It is the best/(b) which the governmentcan do/(c) for the upliftment of girls/(d) no error",
+      "options": {
+        "a": "(a) It is the best",
+        "b": "(b) which the governmentcan do",
+        "c": "(c) for the upliftment of girls",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"which\" with \"that\".",
+      "solution": "Replace \"which\" with \"that\". There is nochoice so \"which\" can't be used. Rule :Use \"which\" or \"that\" whenwe talk about things (but not people)."
+    },
+    {
+      "q_num": 95,
+      "type": "spot_the_error",
+      "question": "(a) The candidate/(b) being a graduate, he iseligible for/(c) the post of marketing officer./(d) no error",
+      "options": {
+        "a": "(a) The candidate",
+        "b": "(b) being a graduate, he iseligible for",
+        "c": "(c) the post of marketing officer.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Eliminate \"he\" from part (b).",
+      "solution": "Eliminate \"he\" from part (b). If a person'sname is given followed by a brief phrase giving some additional information about him then the pronoun will not follow such information."
+    },
+    {
+      "q_num": 96,
+      "type": "spot_the_error",
+      "question": "(a) One must not think/(b) that he is alwaysright/(c) as this will make it very difficult to work with others./(d) no error",
+      "options": {
+        "a": "(a) One must not think",
+        "b": "(b) that he is alwaysright",
+        "c": "(c) as this will make it very difficult to work with others.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"he\" with \"one\".",
+      "solution": "Replace \"he\" with \"one\". The subject is\"one\" so one/one's and oneself can only be used. He/him will not be used."
+    },
+    {
+      "q_num": 97,
+      "type": "spot_the_error",
+      "question": "(a) All the factories in the area are in losses/(b)and have been unable to pay their employees/(c) since the lockdown./(d) no error",
+      "options": {
+        "a": "(a) All the factories in the area are in losses",
+        "b": "(b) and have been unable to pay their employees",
+        "c": "(c) since the lockdown.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error"
+    },
+    {
+      "q_num": 98,
+      "type": "spot_the_error",
+      "question": "(a) One should respect/(b) the religions ofothers/(c) as much as his own./(d) no error",
+      "options": {
+        "a": "(a) One should respect",
+        "b": "(b) the religions ofothers",
+        "c": "(c) as much as his own.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"his\" with \"one's\".",
+      "solution": "Replace \"his\" with \"one's\". Rule :If \"one\" is used as the subject ofthe sentence then one's and oneself will be used in the sentence and not him and www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun himself."
+    },
+    {
+      "q_num": 99,
+      "type": "spot_the_error",
+      "question": "(a) The father has appointed/(b) teachers tohelp the children improve their communications skills /(c) and prepare for competitive exams./(d) no error",
+      "options": {
+        "a": "(a) The father has appointed",
+        "b": "(b) teachers tohelp the children improve their communications skills",
+        "c": "(c) and prepare for competitive exams.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error"
+    },
+    {
+      "q_num": 100,
+      "type": "spot_the_error",
+      "question": "(a) Having been deprived from its homes/(b)in the recent earthquake they had no other option/(c) but to take shelter in a school./(d) no error",
+      "options": {
+        "a": "(a) Having been deprived from its homes",
+        "b": "(b) in the recent earthquake they had no other option",
+        "c": "(c) but to take shelter in a school.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"its\" with \"their\".",
+      "solution": "Replace \"its\" with \"their\".Here, we aretalking about 'they' which is plural. Thus, the plural pronoun 'their' will be used."
+    },
+    {
+      "q_num": 101,
+      "type": "spot_the_error",
+      "question": "(a) Developed and developing countries mustreduce/(b) its carbon footprint /(c) and promote the use of /(d) solar energy./(d) no error",
+      "options": {
+        "a": "(a) Developed and developing countries mustreduce",
+        "b": "(b) its carbon footprint",
+        "c": "(c) and promote the use of",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"its\" with \"their\" as the subjectis plural.",
+      "solution": "Replace \"its\" with \"their\" as the subjectis plural. 'Developed and developing countries' represent plural nouns, thus, plural verb 'their' will be used."
+    },
+    {
+      "q_num": 102,
+      "type": "spot_the_error",
+      "question": "(a) John I and Hari/(b) have finished/(c) ourstudies./(d) no error",
+      "options": {
+        "a": "(a) John I and Hari",
+        "b": "(b) have finished",
+        "c": "(c) ourstudies.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"John, I and Hari\" with \"John,Hari and I\".",
+      "solution": "Replace \"John, I and Hari\" with \"John,Hari and I\". Rule :In those sentences wherepronouns of different persons are used there is a specific order to place them. When some pleasant news is to be announced the speaker uses this order: 2nd person, 3rd person and 1st person, and when some unpleasant news is to be announced or pronouns are used in plural form, use this order: 1st person, 2nd person and 3rd person."
+    },
+    {
+      "q_num": 103,
+      "type": "spot_the_error",
+      "question": "(a) The players whom/(b) we have selected forour team/(c) are young and ambitious./(d) no error",
+      "options": {
+        "a": "(a) The players whom",
+        "b": "(b) we have selected forour team",
+        "c": "(c) are young and ambitious.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"whom\" with \"which\".",
+      "solution": "Replace \"whom\" with \"which\". Rule :'whose' is used for living things;while 'which' is used for non-living things and to make a choice between two or more."
+    },
+    {
+      "q_num": 104,
+      "type": "spot_the_error",
+      "question": "(a) His efforts/(b) will bring him more success/(c)than your./(d) no error",
+      "options": {
+        "a": "(a) His efforts",
+        "b": "(b) will bring him more success",
+        "c": "(c) than your.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"your\" with \"yours\".",
+      "solution": "Replace \"your\" with \"yours\". A pronounis to be used and not an adjective. Rule :While making comparisons in pronouns,the pronouns compared should be of the same case. It means either both should be of the nominative pronouns or both should be objective pronouns."
+    },
+    {
+      "q_num": 105,
+      "type": "spot_the_error",
+      "question": "(a) My brother doesn't/(b) know/(c) to cook./(d)no error www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun",
+      "options": {
+        "a": "(a) My brother doesn't",
+        "b": "(b) know",
+        "c": "(c) to cook.",
+        "d": "(d) no error www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Pronoun"
+      },
+      "answer": "c",
+      "correction": "Replace \"to cook\" by \"how to cook\".",
+      "solution": "Replace \"to cook\" by \"how to cook\"."
+    },
+    {
+      "q_num": 106,
+      "type": "spot_the_error",
+      "question": "(a) Neither of the two friends/(b) has got their money back/(c) from the company/(d) no error",
+      "options": {
+        "a": "(a) Neither of the two friends",
+        "b": "(b) has got their money back",
+        "c": "(c) from the company",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"their\" with \"his\".",
+      "solution": "Replace \"their\" with \"his\". \"Neither of\"is followed by a plural noun/pronoun but the verb and pronoun used is singular."
+    },
+    {
+      "q_num": 107,
+      "type": "spot_the_error",
+      "question": "(a) The criminal which was chained/(b) grumbledat/(c) the Police Inspector./(d) no error",
+      "options": {
+        "a": "(a) The criminal which was chained",
+        "b": "(b) grumbledat",
+        "c": "(c) the Police Inspector.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"which\" with \"who\" as the subjectis a human.",
+      "solution": "Replace \"which\" with \"who\" as the subjectis a human. Rule :\"Who\" and \"whom\" is used for persons."
+    },
+    {
+      "q_num": 108,
+      "type": "spot_the_error",
+      "question": "(a) There were eight industrious workers/(b)and five lazy one/(c) in this factory./(d) no error",
+      "options": {
+        "a": "(a) There were eight industrious workers",
+        "b": "(b) and five lazy one",
+        "c": "(c) in this factory.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "\"Five lazy one\" is incorrect.",
+      "solution": "\"Five lazy one\" is incorrect. Replaceit with \"five lazy ones\".For singular countable nouns; 'one' is used as a demonstrative pronoun. While for plural countable nouns; 'ones' is used as a demonstrative pronoun."
+    },
+    {
+      "q_num": 109,
+      "type": "spot_the_error",
+      "question": "(a) The beggar whom/(b) we had suspected tobe guilty/(c) turned out to be innocent./(d) no error",
+      "options": {
+        "a": "(a) The beggar whom",
+        "b": "(b) we had suspected tobe guilty",
+        "c": "(c) turned out to be innocent.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 110,
+      "type": "spot_the_error",
+      "question": "(a) I ordered some book/(b) on English Grammar/(c)but none has arrived yet./(d) no error",
+      "options": {
+        "a": "(a) I ordered some book",
+        "b": "(b) on English Grammar",
+        "c": "(c) but none has arrived yet.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"has\" with \"have\".",
+      "solution": "Replace \"has\" with \"have\". \"None\" is beingreferred to as books here which is plural. So, \"have\" will be used."
+    },
+    {
+      "q_num": 111,
+      "type": "spot_the_error",
+      "question": "(a) This bird is such a pest in rural areas/(b)that it has become necessary to find ways/(c) of controlling the growth of their population./(d) no error",
+      "options": {
+        "a": "(a) This bird is such a pest in rural areas",
+        "b": "(b) that it has become necessary to find ways",
+        "c": "(c) of controlling the growth of their population.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "The subject is \"This bird\" which is singular.",
+      "solution": "The subject is \"This bird\" which is singular.So, \"its\" will be used in place of \"their\"."
+    },
+    {
+      "q_num": 112,
+      "type": "spot_the_error",
+      "question": "(a) I don't appreciate/(b) those laugh at otherswithout/(c) any apparent reason./(d) no error",
+      "options": {
+        "a": "(a) I don't appreciate",
+        "b": "(b) those laugh at otherswithout",
+        "c": "(c) any apparent reason.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Use \"who\" after \"those\".",
+      "solution": "Use \"who\" after \"those\".Here, \"those\"is an object and a relative pronoun is used to connect two sentences: \"I don't appreciate those\" and \"laugh at others without any apparent reason\". Therefore, \"who\" will be used as a relative pronoun."
+    },
+    {
+      "q_num": 113,
+      "type": "spot_the_error",
+      "question": "(a) Neither of the two children /(b)said theirprayer/(c) before going to bed./(d) no error",
+      "options": {
+        "a": "(a) Neither of the two children",
+        "b": "(b) said theirprayer",
+        "c": "(c) before going to bed.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Use \"his\" instead of \"their\".",
+      "solution": "Use \"his\" instead of \"their\". \"Neitherof\" is followed by a plural noun or pronoun. But the verb and pronoun used in the latter part of the sentence is singular."
+    },
+    {
+      "q_num": 114,
+      "type": "spot_the_error",
+      "question": "(a) The police said that the fake notes/(b)looked so real/(c) that anyone could have been misled./(d) no error",
+      "options": {
+        "a": "(a) The police said that the fake notes",
+        "b": "(b) looked so real",
+        "c": "(c) that anyone could have been misled.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 115,
+      "type": "spot_the_error",
+      "question": "(a) The bus was hired/(b) by the ladies forits picnic/(c) in the countryside./(d) no error",
+      "options": {
+        "a": "(a) The bus was hired",
+        "b": "(b) by the ladies forits picnic",
+        "c": "(c) in the countryside.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"its\" by \"their\".",
+      "solution": "Replace \"its\" by \"their\".Here, the subjectis \"the ladies\". Thus, the pronoun used will be \"their\", not \"its\"."
+    },
+    {
+      "q_num": 116,
+      "type": "spot_the_error",
+      "question": "(a) These schools have been asked/(b) to furnishall the details/(c) about its directors and affiliations./(d) no error",
+      "options": {
+        "a": "(a) These schools have been asked",
+        "b": "(b) to furnishall the details",
+        "c": "(c) about its directors and affiliations.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"its\" with \"their\" as the subjectis \"these schools\".",
+      "solution": "Replace \"its\" with \"their\" as the subjectis \"these schools\"."
+    },
+    {
+      "q_num": 117,
+      "type": "spot_the_error",
+      "question": "(a) Our school team outwitted their opponents/(b)in every single round/ (c) to win this prestigious trophy./(d) no error",
+      "options": {
+        "a": "(a) Our school team outwitted their opponents",
+        "b": "(b) in every single round",
+        "c": "(c) to win this prestigious trophy.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"their\" with the relative pronoun\"its\".",
+      "solution": "Replace \"their\" with the relative pronoun\"its\"."
+    },
+    {
+      "q_num": 118,
+      "type": "spot_the_error",
+      "question": "(a) The five brothers are at daggers-drawn,/(b)so they feel it below their dignity/(c) to talk to each other./(d) no error",
+      "options": {
+        "a": "(a) The five brothers are at daggers-drawn,",
+        "b": "(b) so they feel it below their dignity",
+        "c": "(c) to talk to each other.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"each other\" by \"one another\".",
+      "solution": "Replace \"each other\" by \"one another\". Use \"each other\" when referring to two things. Use \"one another\" when referring to three or more things."
+    },
+    {
+      "q_num": 119,
+      "type": "spot_the_error",
+      "question": "(a) Each of/(b) the four great tragedies of/(c)Shakespeare is outstanding./(d) no error",
+      "options": {
+        "a": "(a) Each of",
+        "b": "(b) the four great tragedies of",
+        "c": "(c) Shakespeare is outstanding.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 120,
+      "type": "spot_the_error",
+      "question": "(a) He was much more surprised than/(b) meto see the dancing girl/(c) coming towards us./(d) no error",
+      "options": {
+        "a": "(a) He was much more surprised than",
+        "b": "(b) meto see the dancing girl",
+        "c": "(c) coming towards us.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"me\" with \"I\".",
+      "solution": "Replace \"me\" with \"I\".While making comparisonsin pronouns the pronouns compared should be of the same case. It means either both should be of the nominative pronouns or both should be objective pronouns. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

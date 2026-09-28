@@ -8,6 +8,9 @@ export interface SetPickerModalData {
   subtitle?: string;
   subject: string;
   questions: Question[];
+  setSize?: number;
+  chapterNum?: number;
+  section?: string;
 }
 
 interface SetPickerModalProps {
@@ -23,7 +26,8 @@ export const SetPickerModal: React.FC<SetPickerModalProps> = ({
 }) => {
   if (!modalData) return null;
 
-  const totalSets = Math.ceil(modalData.questions.length / 25);
+  const setSize = modalData.setSize || 25;
+  const totalSets = Math.ceil(modalData.questions.length / setSize);
 
   return (
     <AnimatePresence>
@@ -57,13 +61,13 @@ export const SetPickerModal: React.FC<SetPickerModalProps> = ({
           {/* Sets List */}
           <div className="p-6 space-y-3 overflow-y-auto flex-1">
             <p className="text-xs text-slate-500 font-medium mb-1">
-              Choose a 25-question set to drill under focused exam conditions:
+              Choose a {setSize}-question set to drill under focused exam conditions:
             </p>
 
             {Array.from({ length: totalSets }).map((_, idx) => {
               const setNum = idx + 1;
-              const startQ = idx * 25 + 1;
-              const endQ = Math.min((idx + 1) * 25, modalData.questions.length);
+              const startQ = idx * setSize + 1;
+              const endQ = Math.min((idx + 1) * setSize, modalData.questions.length);
               const count = endQ - startQ + 1;
 
               return (
@@ -71,15 +75,16 @@ export const SetPickerModal: React.FC<SetPickerModalProps> = ({
                   key={setNum}
                   onClick={() => {
                     onClose();
-                    const SET_SIZE = 25;
-                    const startIdx = (setNum - 1) * SET_SIZE;
-                    const endIdx = Math.min(startIdx + SET_SIZE, modalData.questions.length);
+                    const startIdx = (setNum - 1) * setSize;
+                    const endIdx = Math.min(startIdx + setSize, modalData.questions.length);
                     const targetQuestions = modalData.questions.slice(startIdx, endIdx);
                     const virtualChapter: Chapter = {
-                      chapter_num: setNum,
+                      chapter_num: modalData.chapterNum || setNum,
+                      original_chapter_num: modalData.chapterNum,
                       chapter_title: `${modalData.title} • Set ${setNum} (Q${startQ}-${endQ})`,
                       subject: modalData.subject,
                       subject_id: modalData.subject.toLowerCase().replace(/\s+/g, '_'),
+                      section: (modalData.section as any) || undefined,
                       questions: targetQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
                     };
                     onStartQuiz(virtualChapter);
@@ -113,10 +118,12 @@ export const SetPickerModal: React.FC<SetPickerModalProps> = ({
                 onClick={() => {
                   onClose();
                   const virtualChapter: Chapter = {
-                    chapter_num: 0,
+                    chapter_num: modalData.chapterNum || 0,
+                    original_chapter_num: modalData.chapterNum,
                     chapter_title: modalData.title,
                     subject: modalData.subject,
                     subject_id: modalData.subject.toLowerCase().replace(/\s+/g, '_'),
+                    section: (modalData.section as any) || undefined,
                     questions: modalData.questions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
                   };
                   onStartQuiz(virtualChapter);

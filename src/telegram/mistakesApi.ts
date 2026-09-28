@@ -85,9 +85,9 @@ export default async function handler(req: any, res: any) {
             explanation: questionData.explanation || questionData.solution || '',
             subject: questionData.subject || 'general_awareness',
             topic: questionData.topic || questionData.subtopic || 'Quiz Practice',
-            source: '💻 Website Quiz Mistake',
+            source: questionData.isMock ? '💻 Website Mock Mistake' : '💻 Website Quiz Mistake',
           },
-          'website_quiz',
+          questionData.isMock ? 'website_mock' : 'website_quiz',
           false
         );
         return res.status(200).json({

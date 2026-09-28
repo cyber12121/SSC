@@ -1,0 +1,292 @@
+{
+  "chapter_num": 15,
+  "chapter_id": "15_inversion",
+  "chapter_title": "Inversion",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "inversion",
+  "total_questions": 20,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) We rarely do witness /(b) such a breathtakingsunset /(c) in this part of the country /(d) no error.",
+      "options": {
+        "a": "(a) We rarely do witness",
+        "b": "(b) such a breathtakingsunset",
+        "c": "(c) in this part of the country",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"We rarely do\" with \"rarely do we\".",
+      "solution": "Replace \"We rarely do\" with \"rarely do we\"."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) Little she knew /(b)that her life /(c)wasabout to change forever /(d) no error.",
+      "options": {
+        "a": "(a) Little she knew",
+        "b": "(b) that her life",
+        "c": "(c) wasabout to change forever",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"she knew\" with \"did she know\".",
+      "solution": "Replace \"she knew\" with \"did she know\"."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) Only after the storm had passed /(b) theyrealized the extent /(c) of the damage /(d) no error.",
+      "options": {
+        "a": "(a) Only after the storm had passed",
+        "b": "(b) theyrealized the extent",
+        "c": "(c) of the damage",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"they realized\" with \"did they realize\".",
+      "solution": "Replace \"they realized\" with \"did they realize\"."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) Not until he lost /(b) everything did hetruly /(c) appreciate what he had /(d) no error.",
+      "options": {
+        "a": "(a) Not until he lost",
+        "b": "(b) everything did hetruly",
+        "c": "(c) appreciate what he had",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) Seldom have I /(b) encounter such kindness/(c) from strangers /(d) no error.",
+      "options": {
+        "a": "(a) Seldom have I",
+        "b": "(b) encounter such kindness",
+        "c": "(c) from strangers",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"encounter\" with \"encountered\".",
+      "solution": "Replace \"encounter\" with \"encountered\".The third form of the verb is used with the helping verb 'have'."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) Under no circumstances /(b) should you attemptto /(c)climb that mountain alone /(d) no error.",
+      "options": {
+        "a": "(a) Under no circumstances",
+        "b": "(b) should you attemptto",
+        "c": "(c) climb that mountain alone",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) Nowhere else in the /(b) can world you find/(c) such unique cultural diversity /(d) no error.",
+      "options": {
+        "a": "(a) Nowhere else in the",
+        "b": "(b) can world you find",
+        "c": "(c) such unique cultural diversity",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \" can world you\" with \" world canwe\".",
+      "solution": "Replace \" can world you\" with \" world canwe\"."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) Only with patience /(b) and perseverancecan /(c) one achieved true mastery/(d) no error.",
+      "options": {
+        "a": "(a) Only with patience",
+        "b": "(b) and perseverancecan",
+        "c": "(c) one achieved true mastery",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"achieved\" with \"achieve\".",
+      "solution": "Replace \"achieved\" with \"achieve\"."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) Not only she won /(b) the competition, butshe /(c) also set a new record /(d) no error.",
+      "options": {
+        "a": "(a) Not only she won",
+        "b": "(b) the competition, butshe",
+        "c": "(c) also set a new record",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"she won\" with \"did she win\".",
+      "solution": "Replace \"she won\" with \"did she win\"."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) Hardly had I began /(b) my journey whenI /(c) encountered my first obstacle/(d) no error.",
+      "options": {
+        "a": "(a) Hardly had I began",
+        "b": "(b) my journey whenI",
+        "c": "(c) encountered my first obstacle",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"began\" with \"begun\".",
+      "solution": "Replace \"began\" with \"begun\". The thirdform of the verb is used with 'had'."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) Never before /(b) I have seen such a /(c)magnificent piece of artwork /(d) no error.",
+      "options": {
+        "a": "(a) Never before",
+        "b": "(b) I have seen such a",
+        "c": "(c) magnificent piece of artwork",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"I have\" with \"have I\".",
+      "solution": "Replace \"I have\" with \"have I\"."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) Rarely a film has left /(b) such a lasting/(c) impression on me /(d) no error.",
+      "options": {
+        "a": "(a) Rarely a film has left",
+        "b": "(b) such a lasting",
+        "c": "(c) impression on me",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"a film has\" with \"has a film\".",
+      "solution": "Replace \"a film has\" with \"has a film\"."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) Only by working /(b) together can we overcome/(c) these challenges /(d) no error.",
+      "options": {
+        "a": "(a) Only by working",
+        "b": "(b) together can we overcome",
+        "c": "(c) these challenges",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) Not until he spoke /(b) I realized the gravity/(c) of the situation /(d) no error.",
+      "options": {
+        "a": "(a) Not until he spoke",
+        "b": "(b) I realized the gravity",
+        "c": "(c) of the situation",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"I realized\" with \"did I realize\".",
+      "solution": "Replace \"I realized\" with \"did I realize\".'Not until he spoke' is a negative expression of time, so we will use inversion after it."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) Little did they suspect /(b) that theirsimple act of kindness /(c) will make such a difference /(d) no error.",
+      "options": {
+        "a": "(a) Little did they suspect",
+        "b": "(b) that theirsimple act of kindness",
+        "c": "(c) will make such a difference",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". Past form'would' is used for a sentence that is in the past tense."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) Under no circumstances you /(b) ignore /(c)your health /(d) no error.",
+      "options": {
+        "a": "(a) Under no circumstances you",
+        "b": "(b) ignore",
+        "c": "(c) your health",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"should\" after circumstances.",
+      "solution": "Add \"should\" after circumstances. Modal'should is used after the expression 'under no circumstances'.'"
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) Nowhere else you can /(b) experience thebeauty /(c) of nature like you can here /(d) no error.",
+      "options": {
+        "a": "(a) Nowhere else you can",
+        "b": "(b) experience thebeauty",
+        "c": "(c) of nature like you can here",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"you can\" with \"can you\".",
+      "solution": "Replace \"you can\" with \"can you\"."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) Only with dedication /(b) and hard work/(c) one can achieve their dreams /(d) no error. Inversion",
+      "options": {
+        "a": "(a) Only with dedication",
+        "b": "(b) and hard work",
+        "c": "(c) one can achieve their dreams",
+        "d": "(d) no error. Inversion"
+      },
+      "answer": "c",
+      "correction": "Replace \"one can\" with \"can one\".",
+      "solution": "Replace \"one can\" with \"can one\"."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) Not until he retired /(b) he had the opportunity /(c) to travel the world /(d) no error.",
+      "options": {
+        "a": "(a) Not until he retired",
+        "b": "(b) he had the opportunity",
+        "c": "(c) to travel the world",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"he had\" with \"did he have\".",
+      "solution": "Replace \"he had\" with \"did he have\". 'Notuntil he retired' is a negative expression of time, so we will use inversion after it."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) Only when the /(b) guests had arrived did/(c) we start preparing the dinner /(d) no error.",
+      "options": {
+        "a": "(a) Only when the",
+        "b": "(b) guests had arrived did",
+        "c": "(c) we start preparing the dinner",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

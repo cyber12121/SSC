@@ -238,28 +238,42 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       ? `${subject}|${coreText.slice(0, 100)}`
       : (qText ? `${subject}|${qText.toLowerCase()}` : String(q.id || ''))).slice(0, 160);
 
-    // Determine error type
+    // Determine error type accurately
     let errorType: 'wrong' | 'unattempted' | 'speed_issue' | null = null;
     const status = String(q.status || q.errorType || '').toLowerCase();
-    if (status.includes('unattempt') || status.includes('skip') || status.includes('left')) {
+    const rawUserAnswer = String(q.userAnswer || q.selectedAnswer || q.chosenOption || '').trim();
+    const hasUserAnswer = rawUserAnswer !== '' && !['unattempted', 'skipped', 'left', 'not attempted'].includes(rawUserAnswer.toLowerCase());
+
+    if (
+      status.includes('unattempt') ||
+      status.includes('skip') ||
+      status.includes('left') ||
+      status === 'not attempted' ||
+      (!hasUserAnswer && q.isCorrect !== true && !status.includes('correct') && status !== 'right')
+    ) {
       errorType = 'unattempted';
     } else if (status.includes('speed') || status.includes('slow') || q.isSlow) {
       errorType = 'speed_issue';
-    } else if (status.includes('wrong') || status.includes('incorrect') || q.isCorrect === false || (q.userAnswer && q.answer && String(q.userAnswer).toLowerCase() !== String(q.answer).toLowerCase())) {
+    } else if (
+      status.includes('wrong') ||
+      status.includes('incorrect') ||
+      (hasUserAnswer && q.isCorrect === false) ||
+      (hasUserAnswer && q.answer && rawUserAnswer.toLowerCase() !== String(q.answer).toLowerCase())
+    ) {
       errorType = 'wrong';
     }
 
     const qRca = findQuestionRca(q, globalRcaStore);
     if (!errorType && qRca) {
-      errorType = 'wrong';
+      errorType = hasUserAnswer ? 'wrong' : 'unattempted';
     }
 
     // Filter out clean correct questions without speed issues or RCA tags
-    if (!errorType && (q.isCorrect === true || status === 'correct')) {
+    if (!errorType && (q.isCorrect === true || status === 'correct' || status === 'right')) {
       return;
     }
     if (!errorType) {
-      errorType = 'wrong';
+      errorType = hasUserAnswer ? 'wrong' : 'unattempted';
     }
 
     // Scope classification: full vs sectional
@@ -283,8 +297,11 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       sourceLabel = `Subject-Wise Error Bank (${subject})`;
     }
 
-    // Resolve topic early
-    const rawT = q.tags?.topic || q.topic || q.detectedTopic;
+    // Resolve topic early (fall back to subtopic if topic is generic e.g. English Comprehension)
+    let rawT = q.tags?.topic || q.topic || q.detectedTopic;
+    if (!rawT || ['General', 'Unknown', 'English Comprehension', 'English', 'General Intelligence', 'General Awareness', 'General Science', 'Quantitative Aptitude'].includes(rawT)) {
+      rawT = q.subtopic || q.tags?.subtopic || rawT;
+    }
     const normT = rawT ? normalizeTopicTitle(rawT) : '';
     const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
 

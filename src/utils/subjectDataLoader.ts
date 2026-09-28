@@ -50,7 +50,7 @@ export function parseSubjectChapter(
         if (subParts.length >= 2) {
           topic_name = subParts[0];
           set_name = subParts[1].replace('.json', '');
-        } else {
+        } else if (section !== 'grammar') {
           topic_name = section;
           set_name = subParts[0].replace('.json', '');
         }

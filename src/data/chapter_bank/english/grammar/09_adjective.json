@@ -1,0 +1,1412 @@
+{
+  "chapter_num": 9,
+  "chapter_id": "09_adjective",
+  "chapter_title": "Adjective",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "adjective",
+  "total_questions": 100,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) Mathematics is /(b) most challenging /(c)than history /(d) no error.",
+      "options": {
+        "a": "(a) Mathematics is",
+        "b": "(b) most challenging",
+        "c": "(c) than history",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"most\" with \"more\".",
+      "solution": "Replace \"most\" with \"more\". For comparison,comparative degree is used."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) The new smartphone /(b) is expensivier than/(c) the older model /(d) no error.",
+      "options": {
+        "a": "(a) The new smartphone",
+        "b": "(b) is expensivier than",
+        "c": "(c) the older model",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"expensivier\" with \"more expensive\".",
+      "solution": "Replace \"expensivier\" with \"more expensive\".The comparative degree of \"expensive\" is \"more expensive\"."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) The Pacific Ocean /(b) is the larger /(c)ocean on Earth /(d) no error.",
+      "options": {
+        "a": "(a) The Pacific Ocean",
+        "b": "(b) is the larger",
+        "c": "(c) ocean on Earth",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"larger\" with \"largest\".",
+      "solution": "Replace \"larger\" with \"largest\". Here, acomparison is made among all the oceans on Earth, so the superlative degree will be used."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) That was the more /(b) challenging exam /(c)I've ever taken /(d) no error.",
+      "options": {
+        "a": "(a) That was the more",
+        "b": "(b) challenging exam",
+        "c": "(c) I've ever taken",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"more\" with \"most\".",
+      "solution": "Replace \"more\" with \"most\". As the comparisonis made among all the exams which have ever been taken."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) The laptop weighs /(b) more than /(c) thetablet /(d) no error.",
+      "options": {
+        "a": "(a) The laptop weighs",
+        "b": "(b) more than",
+        "c": "(c) thetablet",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) Can you provide /(b) farther details /(c)about your proposal? /(d) no error. Adjective",
+      "options": {
+        "a": "(a) Can you provide",
+        "b": "(b) farther details",
+        "c": "(c) about your proposal?",
+        "d": "(d) no error. Adjective"
+      },
+      "answer": "b",
+      "correction": "Replace \"farther\" with \"further\".",
+      "solution": "Replace \"farther\" with \"further\". \"Farther\"is used in terms of distances while further means something additional."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) I have few books /(b) that I need to /(c) return to the library /(d) no error.",
+      "options": {
+        "a": "(a) I have few books",
+        "b": "(b) that I need to",
+        "c": "(c) return to the library",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"few\" with \"a few\".",
+      "solution": "Replace \"few\" with \"a few\". Few is usedfor negative quantity, it means almost none."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) She is good at playing /(b) the piano and/(c) skilled singing /(d) no error.",
+      "options": {
+        "a": "(a) She is good at playing",
+        "b": "(b) the piano and",
+        "c": "(c) skilled singing",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Add \"in\" after \"skilled\".",
+      "solution": "Add \"in\" after \"skilled\". When two or moreadjectives are used in the same sentence, we use appropriate prepositions with them."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) She hit the tennis /(b) ball hardly across/(c) the court /(d) no error.",
+      "options": {
+        "a": "(a) She hit the tennis",
+        "b": "(b) ball hardly across",
+        "c": "(c) the court",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"hardly\" with \"hard\".",
+      "solution": "Replace \"hardly\" with \"hard\". Hardly meansalmost not at all."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) She is superior than /(b) her colleaguesin /(c) terms of productivity /(d) no error.",
+      "options": {
+        "a": "(a) She is superior than",
+        "b": "(b) her colleaguesin",
+        "c": "(c) terms of productivity",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"than\" with \"to\".",
+      "solution": "Replace \"than\" with \"to\". The adjective\"superior\" takes the preposition \"to\" with it."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) The performance of the /(b) new model isinferior to /(c) that of the previous one /(d) no error.",
+      "options": {
+        "a": "(a) The performance of the",
+        "b": "(b) new model isinferior to",
+        "c": "(c) that of the previous one",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) I prefer coffee /(b) than tea /(c) in themorning /(d) no error.",
+      "options": {
+        "a": "(a) I prefer coffee",
+        "b": "(b) than tea",
+        "c": "(c) in themorning",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"than\" with \"to\".",
+      "solution": "Replace \"than\" with \"to\". The preposition\"to\" is used with \"prefer\"."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) The Grand Canyon is /(b) the most uniquenatural /(c) wonder, unlike any other /(d) no error.",
+      "options": {
+        "a": "(a) The Grand Canyon is",
+        "b": "(b) the most uniquenatural",
+        "c": "(c) wonder, unlike any other",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"the most\" with \"a\".",
+      "solution": "Replace \"the most\" with \"a\". No superlativeand comparative degree is used with some adjectives like perfect, absolute, unique etc."
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) An expensive, /(b) a luxurious car /(c)pulled up to the curb /(d) no error.",
+      "options": {
+        "a": "(a) An expensive,",
+        "b": "(b) a luxurious car",
+        "c": "(c) pulled up to the curb",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"a\" from part (b).",
+      "solution": "Remove \"a\" from part (b). The determineris used only with the first adjective when two or more adjectives are used for the same noun."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) Twenty dozens eggs /(b) were delivered /(c)to the bakery /(d) no error.",
+      "options": {
+        "a": "(a) Twenty dozens eggs",
+        "b": "(b) were delivered",
+        "c": "(c) to the bakery",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"dozens\" with \"dozen\".",
+      "solution": "Replace \"dozens\" with \"dozen\". The wordslike \"dozen/billion/trillion etc.\" are used in the singular form when a definite numeral adjective is used before them."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) The poor /(b) struggle to make /(c) endsmeet /(d) no error.",
+      "options": {
+        "a": "(a) The poor",
+        "b": "(b) struggle to make",
+        "c": "(c) endsmeet",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) She is the most /(b) intelligent among all/(c) other students /(d) no error.",
+      "options": {
+        "a": "(a) She is the most",
+        "b": "(b) intelligent among all",
+        "c": "(c) other students",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"other\" from part (c).",
+      "solution": "Remove \"other\" from part (c). \"Other\" isnot used with the superlative degree."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) All books on the /(b) shelf were /(c) novelsexcept one /(d) no error.",
+      "options": {
+        "a": "(a) All books on the",
+        "b": "(b) shelf were",
+        "c": "(c) novelsexcept one",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"other\" after \"all\".",
+      "solution": "Add \"other\" after \"all\". As the comparisonis being in the same group."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) No other student /(b) in the class scored/(c) as high as John /(d) no error.",
+      "options": {
+        "a": "(a) No other student",
+        "b": "(b) in the class scored",
+        "c": "(c) as high as John",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) The new phone is /(b) comparatively cheaper/(c) than its predecessor /(d) no error.",
+      "options": {
+        "a": "(a) The new phone is",
+        "b": "(b) comparatively cheaper",
+        "c": "(c) than its predecessor",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"comparatively\" from part (b).",
+      "solution": "Remove \"comparatively\" from part (b). Thewords \"comparatively/ preferably/ relatively\" are not used with the comparative degree."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "(a) He is as /(b) taller as /(c) his brother/(d) no error.",
+      "options": {
+        "a": "(a) He is as",
+        "b": "(b) taller as",
+        "c": "(c) his brother",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"taller\" with \"tall\".",
+      "solution": "Replace \"taller\" with \"tall\". A positivedegree adjective is used with \"as … as\" and \"so … as\"."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "(a) The sunrise is most /(b) beautiful in themost east /(c) part of the country /(d) no error.",
+      "options": {
+        "a": "(a) The sunrise is most",
+        "b": "(b) beautiful in themost east",
+        "c": "(c) part of the country",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"most east\" with \"easternmost\".",
+      "solution": "Replace \"most east\" with \"easternmost\"."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "(a) Her research project was hailed /(b) asthe most complete study ever /(c) conducted on the subject /(d) no error.",
+      "options": {
+        "a": "(a) Her research project was hailed",
+        "b": "(b) asthe most complete study ever",
+        "c": "(c) conducted on the subject",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"most\" from part (b).",
+      "solution": "Remove \"most\" from part (b). As \"complete\"is a non gradable adjective, no comparative and superlative degree can be formed with it. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Adjective"
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "(a) The city is comparatively /(b) safer nowthan it /(c) was a decade ago /(d) no error.",
+      "options": {
+        "a": "(a) The city is comparatively",
+        "b": "(b) safer nowthan it",
+        "c": "(c) was a decade ago",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"comparatively\" from part (a).",
+      "solution": "Remove \"comparatively\" from part (a). The words \"comparatively/ preferably/ relatively\" are not used with the comparative degree."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "(a) Any other color than purple /(b) would haveclashed /(c) with the decor /(d) no error.",
+      "options": {
+        "a": "(a) Any other color than purple",
+        "b": "(b) would haveclashed",
+        "c": "(c) with the decor",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "(a) Hundred of people /(b) gathered in the square/(c) for the protest /(d) no error.",
+      "options": {
+        "a": "(a) Hundred of people",
+        "b": "(b) gathered in the square",
+        "c": "(c) for the protest",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"hundred\" with \"hundreds\".",
+      "solution": "Replace \"hundred\" with \"hundreds\". Thecounting words like 'hundred, thousand, million, billion' are used in plural form when there is an indefinite number."
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "(a) He greeted his new neighbor /(b) friendly,offering a warm /(c) smile and a handshake /(d) no error.",
+      "options": {
+        "a": "(a) He greeted his new neighbor",
+        "b": "(b) friendly,offering a warm",
+        "c": "(c) smile and a handshake",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"friendly\" with \"in a friendlymanner\".",
+      "solution": "Replace \"friendly\" with \"in a friendlymanner\". As \"friendly\" is an adjective and an adverb is required so \"in a friendly manner\" is the appropriate term."
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "(a) The chef's signature dish /(b) is most perfect;it cannot /(c) be improved upon /(d) no error.",
+      "options": {
+        "a": "(a) The chef's signature dish",
+        "b": "(b) is most perfect;it cannot",
+        "c": "(c) be improved upon",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"most perfect\" with \"perfect\".",
+      "solution": "Replace \"most perfect\" with \"perfect\".As \"perfect\" is a non gradable adjective, no comparative and superlative degree is used with it."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "(a) They prefer working /(b) from home to /(c)commuting to the office /(d) no error.",
+      "options": {
+        "a": "(a) They prefer working",
+        "b": "(b) from home to",
+        "c": "(c) commuting to the office",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "(a) She studied hardly /(b) for the exam /(c)and got an A+ /(d) no error.",
+      "options": {
+        "a": "(a) She studied hardly",
+        "b": "(b) for the exam",
+        "c": "(c) and got an A+",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"hardly\" with \"hard\".",
+      "solution": "Replace \"hardly\" with \"hard\". \"Hardly\"means almost no."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "(a) He is the /(b) smarter student /(c) in theschool /(d) no error.",
+      "options": {
+        "a": "(a) He is the",
+        "b": "(b) smarter student",
+        "c": "(c) in theschool",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"smarter\" with \"smartest\".",
+      "solution": "Replace \"smarter\" with \"smartest\". Herethe comparison is being done with all the boys of the school. Hence, superlative degree will be used."
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "(a) Their common respect for /(b) each other'sopinions fosters /(c) a healthy work environment /(d) no error.",
+      "options": {
+        "a": "(a) Their common respect for",
+        "b": "(b) each other'sopinions fosters",
+        "c": "(c) a healthy work environment",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"common\" with \"mutual\".",
+      "solution": "Replace \"common\" with \"mutual\". \"Mutual\"describes the reciprocal respect each individual has for the other. While \"common\" is used to denote the thing which can be shared."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "(a) He is enough strong /(b) to lift the /(c)heavy box /(d) no error.",
+      "options": {
+        "a": "(a) He is enough strong",
+        "b": "(b) to lift the",
+        "c": "(c) heavy box",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"enough strong\" with \"strong enough\".",
+      "solution": "Replace \"enough strong\" with \"strong enough\".As \"enough\" is used after the positive degree of an adjective."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "(a) She is more brave /(b) enough to face /(c)her fears /(d) no error.",
+      "options": {
+        "a": "(a) She is more brave",
+        "b": "(b) enough to face",
+        "c": "(c) her fears",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"more brave\" with \"brave\".",
+      "solution": "Replace \"more brave\" with \"brave\". As \"enough\" is used after the positive degree of an adjective."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "(a) Their love for pizza is /(b) mutual amongthe group; /(c) almost everyone enjoys it /(d) no error.",
+      "options": {
+        "a": "(a) Their love for pizza is",
+        "b": "(b) mutual amongthe group;",
+        "c": "(c) almost everyone enjoys it",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"mutual\" with \"common\".",
+      "solution": "Replace \"mutual\" with \"common\". Here, \"common\"represents the meaning of the group's collective enjoyment of pizza while \"mutual\" means reciprocal."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "(a) Rohit is /(b) wiser than /(c) assiduous/(d) no error.",
+      "options": {
+        "a": "(a) Rohit is",
+        "b": "(b) wiser than",
+        "c": "(c) assiduous",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"wiser\" with \"more wise\".",
+      "solution": "Replace \"wiser\" with \"more wise\". Whentwo qualities of a person are compared, the structure used is: \"more/less + Positive degree + than + Positive degree\"."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "(a) This table is /(b) more useful /(c) thanbeautiful /(d) no error.",
+      "options": {
+        "a": "(a) This table is",
+        "b": "(b) more useful",
+        "c": "(c) thanbeautiful",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "(a) No other city /(b) in India is as beautiful/(c) as Switzerland /(d) no error. Adjective",
+      "options": {
+        "a": "(a) No other city",
+        "b": "(b) in India is as beautiful",
+        "c": "(c) as Switzerland",
+        "d": "(d) no error. Adjective"
+      },
+      "answer": "a",
+      "correction": "Remove \"other\" from part (a).",
+      "solution": "Remove \"other\" from part (a). \"Other\" isused when comparison is done between the same group but Switzerland is not the city of India."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "(a) This is a /(b) book worth /(c) reading /(d) no error.",
+      "options": {
+        "a": "(a) This is a",
+        "b": "(b) book worth",
+        "c": "(c) reading",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. The adjective 'worth' is usedafter the noun it qualifies."
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "(a) That was the /(b) colder and /(c) driestday /(d) no error.",
+      "options": {
+        "a": "(a) That was the",
+        "b": "(b) colder and",
+        "c": "(c) driestday",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"colder\" with \"coldest\".",
+      "solution": "Replace \"colder\" with \"coldest\". Two samedegree adjectives are connected by \"and\"."
+    },
+    {
+      "q_num": 41,
+      "type": "spot_the_error",
+      "question": "(a) The more electricity /(b) you use, the highthe /(c) bill will be /(d) no error.",
+      "options": {
+        "a": "(a) The more electricity",
+        "b": "(b) you use, the highthe",
+        "c": "(c) bill will be",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"high\" with \"higher\".",
+      "solution": "Replace \"high\" with \"higher\". The structure\"The + Comparative + S + V + ------------- + the + Comparative degree + S + V\" is used."
+    },
+    {
+      "q_num": 42,
+      "type": "spot_the_error",
+      "question": "(a) In old age, a man /(b) is likely to get/(c) more and more weak day by day /(d) no error.",
+      "options": {
+        "a": "(a) In old age, a man",
+        "b": "(b) is likely to get",
+        "c": "(c) more and more weak day by day",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"more and more weak\" with \"weakerand weaker\".",
+      "solution": "Replace \"more and more weak\" with \"weakerand weaker\". The comparative degree of \"weak\" is \"weaker\"."
+    },
+    {
+      "q_num": 43,
+      "type": "spot_the_error",
+      "question": "(a) You are supposed /(b) to behave polite /(c)with everyone /(d) no error.",
+      "options": {
+        "a": "(a) You are supposed",
+        "b": "(b) to behave polite",
+        "c": "(c) with everyone",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"polite\" with \"politely\".",
+      "solution": "Replace \"polite\" with \"politely\". Here,polite is an adjective but the sentence needs an adverb."
+    },
+    {
+      "q_num": 44,
+      "type": "spot_the_error",
+      "question": "(a) She does not have /(b) much time to /(c)spend with you /(d) no error.",
+      "options": {
+        "a": "(a) She does not have",
+        "b": "(b) much time to",
+        "c": "(c) spend with you",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 45,
+      "type": "spot_the_error",
+      "question": "(a) A pencil is /(b) more preferable /(c) toa pen /(d) no error.",
+      "options": {
+        "a": "(a) A pencil is",
+        "b": "(b) more preferable",
+        "c": "(c) toa pen",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"more\" from part (b).",
+      "solution": "Remove \"more\" from part (b). No comparativedegree is used with preferable or prefer."
+    },
+    {
+      "q_num": 46,
+      "type": "spot_the_error",
+      "question": "(a) One thousand of aspirants /(b) attendedthe seminar held in the /(c) home branch of SBI /(d) no error.",
+      "options": {
+        "a": "(a) One thousand of aspirants",
+        "b": "(b) attendedthe seminar held in the",
+        "c": "(c) home branch of SBI",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'Of' does not follow a definite numeraladjective.",
+      "solution": "'Of' does not follow a definite numeraladjective. So, \"one thousand aspirants\" will be used in place of \"one thousand of aspirants\"."
+    },
+    {
+      "q_num": 47,
+      "type": "spot_the_error",
+      "question": "(a) The team considered two proposals for the/(b) project, but they ultimately chose the later /(c) because it offered more innovative solutions /(d) no error.",
+      "options": {
+        "a": "(a) The team considered two proposals for the",
+        "b": "(b) project, but they ultimately chose the later",
+        "c": "(c) because it offered more innovative solutions",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"later\" with \"latter\".",
+      "solution": "Replace \"later\" with \"latter\". \"Latter\"refers to the second of two items or individuals while \"later\" represents the time that comes after the present moment."
+    },
+    {
+      "q_num": 48,
+      "type": "spot_the_error",
+      "question": "(a) Sushma is elder /(b) than her /(c) brother/(d) no error.",
+      "options": {
+        "a": "(a) Sushma is elder",
+        "b": "(b) than her",
+        "c": "(c) brother",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"than\" with \"to\".",
+      "solution": "Replace \"than\" with \"to\". The adjective'elder' takes the preposition 'to' after it."
+    },
+    {
+      "q_num": 49,
+      "type": "spot_the_error",
+      "question": "(a) The further the school, /(b) the better/(c) it is /(d) no error.",
+      "options": {
+        "a": "(a) The further the school,",
+        "b": "(b) the better",
+        "c": "(c) it is",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"further\" with \"farther\".",
+      "solution": "Replace \"further\" with \"farther\". For distance,\"farther\" is used. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Adjective"
+    },
+    {
+      "q_num": 50,
+      "type": "spot_the_error",
+      "question": "(a) Of Delhi, Hisar /(c) and Chandigarh /(c)the former is the best /(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"former\" with \"first\".",
+      "solution": "Replace \"former\" with \"first\". The former and latter are used when we talk about two things."
+    },
+    {
+      "q_num": 51,
+      "type": "spot_the_error",
+      "question": "(a) The climate of Delhi /(b) is far betterthan /(c) Mumbai /(d) no error.",
+      "options": {
+        "a": "(a) The climate of Delhi",
+        "b": "(b) is far betterthan",
+        "c": "(c) Mumbai",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Here, the climate of Delhi is comparedwith the climate of Mumbai.",
+      "solution": "Here, the climate of Delhi is comparedwith the climate of Mumbai. So, 'that of Mumbai' will be the right answer."
+    },
+    {
+      "q_num": 52,
+      "type": "spot_the_error",
+      "question": "(a) Sakshi is the first /(b) to come and the/(c) last to go /(d) no error.",
+      "options": {
+        "a": "(a) Sakshi is the first",
+        "b": "(b) to come and the",
+        "c": "(c) last to go",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 53,
+      "type": "spot_the_error",
+      "question": "(a) Neha is considered /(b) the most ideal /(c)student in the class /(d) no error.",
+      "options": {
+        "a": "(a) Neha is considered",
+        "b": "(b) the most ideal",
+        "c": "(c) student in the class",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"most\" from part (b).",
+      "solution": "Remove \"most\" from part (b). As \"ideal\"is a non gradable adjective, so more/most will not be used with it."
+    },
+    {
+      "q_num": 54,
+      "type": "spot_the_error",
+      "question": "(a) A few books /(b) you have given me /(c)are highly useful /(d) no error.",
+      "options": {
+        "a": "(a) A few books",
+        "b": "(b) you have given me",
+        "c": "(c) are highly useful",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"a few\" with \"the few\".",
+      "solution": "Replace \"a few\" with \"the few\". For definiteplural countable nouns, \"the few\" is used."
+    },
+    {
+      "q_num": 55,
+      "type": "spot_the_error",
+      "question": "(a) I need fewer /(b) than twenty liters /(c)of milk /(d) no error.",
+      "options": {
+        "a": "(a) I need fewer",
+        "b": "(b) than twenty liters",
+        "c": "(c) of milk",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"fewer\" with \"less\".",
+      "solution": "Replace \"fewer\" with \"less\". As \"few\" isused for countable nouns but milk is an uncountable noun so 'less' will be used."
+    },
+    {
+      "q_num": 56,
+      "type": "spot_the_error",
+      "question": "(a) The girl is waiting for you /(b) on theanother side of /(c) the road /(d) no error.",
+      "options": {
+        "a": "(a) The girl is waiting for you",
+        "b": "(b) on theanother side of",
+        "c": "(c) the road",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"another\" with \"other\".",
+      "solution": "Replace \"another\" with \"other\". Anothermeans one more or additional while \"other\" means a person or thing that is different from the one already mentioned."
+    },
+    {
+      "q_num": 57,
+      "type": "spot_the_error",
+      "question": "(a) I need another /(b) two hours to finish/(c) this job /(d) no error.",
+      "options": {
+        "a": "(a) I need another",
+        "b": "(b) two hours to finish",
+        "c": "(c) this job",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 58,
+      "type": "spot_the_error",
+      "question": "(a) I don't want /(b) to talk to /(c) somebody/(d) no error.",
+      "options": {
+        "a": "(a) I don't want",
+        "b": "(b) to talk to",
+        "c": "(c) somebody",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"somebody\" with \"anybody\".",
+      "solution": "Replace \"somebody\" with \"anybody\". \"Any\"is used for negative and interrogative sentences."
+    },
+    {
+      "q_num": 59,
+      "type": "spot_the_error",
+      "question": "(a) He has bought a /(b) white long wooden beautiful/(c) walking stick /(d) no error.",
+      "options": {
+        "a": "(a) He has bought a",
+        "b": "(b) white long wooden beautiful",
+        "c": "(c) walking stick",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \" white long wooden beautiful\"with \"beautiful long white wooden\".",
+      "solution": "Replace \" white long wooden beautiful\"with \"beautiful long white wooden\". The order of adjectives is written as - opinion, size, description, age, shape, colour, origin, material and purpose."
+    },
+    {
+      "q_num": 60,
+      "type": "spot_the_error",
+      "question": "(a) The usually route to work /(b) was blockeddue to construction, /(c) causing delays for commuters /(d) no error.",
+      "options": {
+        "a": "(a) The usually route to work",
+        "b": "(b) was blockeddue to construction,",
+        "c": "(c) causing delays for commuters",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"usually\" with \"usual\".",
+      "solution": "Replace \"usually\" with \"usual\". Usually\"is an adverb which means generally. However, we need an adjective here before the noun - \"problems\". Thus, \"usual\" will come."
+    },
+    {
+      "q_num": 61,
+      "type": "spot_the_error",
+      "question": "(a) The two ministers shouted/(b) at one another/(c)in public./(d) No error",
+      "options": {
+        "a": "(a) The two ministers shouted",
+        "b": "(b) at one another",
+        "c": "(c) in public.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"one another\" with \"each other\".",
+      "solution": "Replace \"one another\" with \"each other\".For two people, each/both/either is used. For many people, any/one/none is used."
+    },
+    {
+      "q_num": 62,
+      "type": "spot_the_error",
+      "question": "(a) In many respects both the sisters are verysimilar characters,/(b) but the eldest has more/(c) spirit and determination./(d) No error",
+      "options": {
+        "a": "(a) In many respects both the sisters are verysimilar characters,",
+        "b": "(b) but the eldest has more",
+        "c": "(c) spirit and determination.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"eldest\" with \"elder\".",
+      "solution": "Replace \"eldest\" with \"elder\". There areonly two sisters. For two things/person, comparative degree is used. While for more than two, superlative degree is used."
+    },
+    {
+      "q_num": 63,
+      "type": "spot_the_error",
+      "question": "(a) According to studies/(b) not more than fivepercent of education loans/(c) taken by students are overdue./(d) No error",
+      "options": {
+        "a": "(a) According to studies",
+        "b": "(b) not more than fivepercent of education loans",
+        "c": "(c) taken by students are overdue.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"education\" with \"educational\".",
+      "solution": "Replace \"education\" with \"educational\".Both \"education\" and \"loans\" are nouns while \"educational\" is an adjective."
+    },
+    {
+      "q_num": 64,
+      "type": "spot_the_error",
+      "question": "(a) It is more better if/(b) one of the parentsstays at home/(c) to look after the children/(d) No error",
+      "options": {
+        "a": "(a) It is more better if",
+        "b": "(b) one of the parentsstays at home",
+        "c": "(c) to look after the children",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"more better\" with \"better\".",
+      "solution": "Replace \"more better\" with \"better\". Doublecomparatives should not be used."
+    },
+    {
+      "q_num": 65,
+      "type": "spot_the_error",
+      "question": "(a) I asked the shopkeeper/(b) if I could changethe faulty mobile/(c) with another mobile./(d) No error",
+      "options": {
+        "a": "(a) I asked the shopkeeper",
+        "b": "(b) if I could changethe faulty mobile",
+        "c": "(c) with another mobile.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Usage of \"another\" is incorrect.",
+      "solution": "Usage of \"another\" is incorrect. Use \"other\"."
+    },
+    {
+      "q_num": 66,
+      "type": "spot_the_error",
+      "question": "(a) The Chinese stock market is one of the worse/(b)performing stock markets in the recent/(c) times and that has impacted the global economy./(d) No error",
+      "options": {
+        "a": "(a) The Chinese stock market is one of the worse",
+        "b": "(b) performing stock markets in the recent",
+        "c": "(c) times and that has impacted the global economy.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"worse\" with \"worst\".",
+      "solution": "Replace \"worse\" with \"worst\".Here, we aretalking about the \"Chinese stock market\" among all the stock markets in the global market. Thus, a superlative degree will be used."
+    },
+    {
+      "q_num": 67,
+      "type": "spot_the_error",
+      "question": "(a) A Panchayat is similarly to a government/(b)in many respects/(c) but it can't impose taxes on the citizens./(d) No error",
+      "options": {
+        "a": "(a) A Panchayat is similarly to a government",
+        "b": "(b) in many respects",
+        "c": "(c) but it can't impose taxes on the citizens.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"similarly\" with \"similar\".",
+      "solution": "Replace \"similarly\" with \"similar\". Rule :With certain adjectives,if we add \"ly\" they become adverbs."
+    },
+    {
+      "q_num": 68,
+      "type": "spot_the_error",
+      "question": "(a) The rate of heart beat/(b) in a human beingis comparatively lower/(c) when he is sleeping./(d) No error Adjective",
+      "options": {
+        "a": "(a) The rate of heart beat",
+        "b": "(b) in a human beingis comparatively lower",
+        "c": "(c) when he is sleeping.",
+        "d": "(d) No error Adjective"
+      },
+      "answer": "b",
+      "correction": "\"comparatively lower\" is incorrect.",
+      "solution": "\"comparatively lower\" is incorrect. Use\"lower\" only. Double comparatives should not be used."
+    },
+    {
+      "q_num": 69,
+      "type": "spot_the_error",
+      "question": "(a) With a fresh coat of paint/(b) the school can/(c) look much nice./(d) No error",
+      "options": {
+        "a": "(a) With a fresh coat of paint",
+        "b": "(b) the school can",
+        "c": "(c) look much nice.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"much nice\" with \"better\".",
+      "solution": "Replace \"much nice\" with \"better\". Thecomparative degree should be used here."
+    },
+    {
+      "q_num": 70,
+      "type": "spot_the_error",
+      "question": "(a) I answered the questions as best as/(b)I could and tried to /(c) explain everything to them./(d) No error",
+      "options": {
+        "a": "(a) I answered the questions as best as",
+        "b": "(b) I could and tried to",
+        "c": "(c) explain everything to them.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"best\" with \"well\".",
+      "solution": "Replace \"best\" with \"well\". \"Well\" is anadverb and \"good\" is an adjective."
+    },
+    {
+      "q_num": 71,
+      "type": "spot_the_error",
+      "question": "(a) Bharatpur is transforming into India's/(b)most fastest growing bird sanctuary/(c) attracting thousands of migratory birds./(d) No error",
+      "options": {
+        "a": "(a) Bharatpur is transforming into India's",
+        "b": "(b) most fastest growing bird sanctuary",
+        "c": "(c) attracting thousands of migratory birds.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Eliminate \"most\".",
+      "solution": "Eliminate \"most\". \"Fastest\" is sufficient.Two superlative or comparative degrees cannot be used together."
+    },
+    {
+      "q_num": 72,
+      "type": "spot_the_error",
+      "question": "(a) Despite taking a lot of interest in studies/(b)there has been any substantial/(c) improvement in his knowledge./(d) No error",
+      "options": {
+        "a": "(a) Despite taking a lot of interest in studies",
+        "b": "(b) there has been any substantial",
+        "c": "(c) improvement in his knowledge.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Use \"not\".",
+      "solution": "Use \"not\". \"There has not been\" will beused."
+    },
+    {
+      "q_num": 73,
+      "type": "spot_the_error",
+      "question": "(a) The recent protests against rape and sexualharassment/(b) have been the most strongest campaigns/(c) for social justice in the history of mankind./(d) No error",
+      "options": {
+        "a": "(a) The recent protests against rape and sexualharassment",
+        "b": "(b) have been the most strongest campaigns",
+        "c": "(c) for social justice in the history of mankind.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Eliminate \"most\".",
+      "solution": "Eliminate \"most\". \"Strongest\" is sufficient. Two superlative or comparative degrees cannot be used together."
+    },
+    {
+      "q_num": 74,
+      "type": "spot_the_error",
+      "question": "(a) We are in the process of finalized a newsite/(b) for the factory and we plan to shift our current factory/(c) there by the end of the year./(d) No error",
+      "options": {
+        "a": "(a) We are in the process of finalized a newsite",
+        "b": "(b) for the factory and we plan to shift our current factory",
+        "c": "(c) there by the end of the year.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "\"Finalized\" is incorrect.",
+      "solution": "\"Finalized\" is incorrect. Use \"finalizing\".Inthe process represents continuous tense of action, thus, \"ing\" form of the verb will be used."
+    },
+    {
+      "q_num": 75,
+      "type": "spot_the_error",
+      "question": "(a) In joint family business it is felt/(b)that joint decisions are more better/(c) than than any one person's decision./(d) No error",
+      "options": {
+        "a": "(a) In joint family business it is felt",
+        "b": "(b) that joint decisions are more better",
+        "c": "(c) than than any one person's decision.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Eliminate \"more\".",
+      "solution": "Eliminate \"more\". \"Better\" is sufficient.Two superlative or comparative degrees cannot be used together."
+    },
+    {
+      "q_num": 76,
+      "type": "spot_the_error",
+      "question": "(a) Unless the new resolution is completely/(b)reviewed it will cause a great deal of/(c) trouble for new employees/(d) No error",
+      "options": {
+        "a": "(a) Unless the new resolution is completely",
+        "b": "(b) reviewed it will cause a great deal of",
+        "c": "(c) trouble for new employees",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 77,
+      "type": "spot_the_error",
+      "question": "(a) Water contamination has become more serious/(b)since chemists have begun to use/(c) new substances/(d) No error",
+      "options": {
+        "a": "(a) Water contamination has become more serious",
+        "b": "(b) since chemists have begun to use",
+        "c": "(c) new substances",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 78,
+      "type": "spot_the_error",
+      "question": "(a) At the utmost gate was/(b) standing a guardholding a/(c) gun in his hand (d) No error",
+      "options": {
+        "a": "(a) At the utmost gate was",
+        "b": "(b) standing a guardholding a",
+        "c": "(c) gun in his hand",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "\"Utmost\" is incorrect.",
+      "solution": "\"Utmost\" is incorrect. Use \"outermost\".\"utmost\" means extreme extent/amount. \"outermost\" means one that is furthest www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Adjective from the centre."
+    },
+    {
+      "q_num": 79,
+      "type": "spot_the_error",
+      "question": "(a) Delhi is further/(b) from Hisar/(c) thanRohtak./(d) No error",
+      "options": {
+        "a": "(a) Delhi is further",
+        "b": "(b) from Hisar",
+        "c": "(c) thanRohtak.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"further\" with \"farther\".",
+      "solution": "Replace \"further\" with \"farther\". Farther– Further \"Farther\" (root word far) is always used for distance, and \"further\" (think furthermore) means advancement."
+    },
+    {
+      "q_num": 80,
+      "type": "spot_the_error",
+      "question": "(a) Of the two players/(b) he is the luckiest/(c)one./(d) No error",
+      "options": {
+        "a": "(a) Of the two players",
+        "b": "(b) he is the luckiest",
+        "c": "(c) one.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"luckiest\" with \"luckier\".",
+      "solution": "Replace \"luckiest\" with \"luckier\". Whilemaking comparisons between two things the comparative degree is used and not the superlative degree."
+    },
+    {
+      "q_num": 81,
+      "type": "spot_the_error",
+      "question": "(a) Sarita is senior to me/(b) but he is junior/(c)than me./(d) No error",
+      "options": {
+        "a": "(a) Sarita is senior to me",
+        "b": "(b) but he is junior",
+        "c": "(c) than me.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "With \"junior\", preposition \"to\" is used.",
+      "solution": "With \"junior\", preposition \"to\" is used.In comparative degrees, \"than\" is used. But for adjectives ending in \"ior\", \"than\" is not used; instead \"to\" is used."
+    },
+    {
+      "q_num": 82,
+      "type": "spot_the_error",
+      "question": "(a) Ritu can sing much than/(b) ten songs ata stretch and she has/(c) developed this ability by laboring hard./(d) No error",
+      "options": {
+        "a": "(a) Ritu can sing much than",
+        "b": "(b) ten songs ata stretch and she has",
+        "c": "(c) developed this ability by laboring hard.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Songs are countable nouns.",
+      "solution": "Songs are countable nouns. So, \"more than\"will be used in place of \"much than\"."
+    },
+    {
+      "q_num": 83,
+      "type": "spot_the_error",
+      "question": "(a) She was willing to know what/(b) it wasthat made him stronger/(c) and braver than any man of this village./(d) No error",
+      "options": {
+        "a": "(a) She was willing to know what",
+        "b": "(b) it wasthat made him stronger",
+        "c": "(c) and braver than any man of this village.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Use \"any other man of this village\".",
+      "solution": "Use \"any other man of this village\"."
+    },
+    {
+      "q_num": 84,
+      "type": "spot_the_error",
+      "question": "(a) Rima has a lovingly appearance/(b) whichbrings her honour/(c) and admiration as well./(d) No error",
+      "options": {
+        "a": "(a) Rima has a lovingly appearance",
+        "b": "(b) whichbrings her honour",
+        "c": "(c) and admiration as well.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "\"Lovingly\" should be replaced with \"loving\".",
+      "solution": "\"Lovingly\" should be replaced with \"loving\". Rule :Few words such as: be, become, turn,grow, keep, prove, make, get and verbs of sensation (smell, sound, taste, feel, appear, look, seem etc.) are modified by adjectives and not adverbs. Here, appear is used. Thus, an adjective \"loving\" will be used."
+    },
+    {
+      "q_num": 85,
+      "type": "spot_the_error",
+      "question": "(a) A lots of books on English Grammar/(b) areavailable in the market/(c) but this one is the best./(d) No error",
+      "options": {
+        "a": "(a) A lots of books on English Grammar",
+        "b": "(b) areavailable in the market",
+        "c": "(c) but this one is the best.",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 86,
+      "type": "spot_the_error",
+      "question": "(a) He does not have some money/(b) to buy anew X-ray plant so/(c) he is very worried./(d) No error",
+      "options": {
+        "a": "(a) He does not have some money",
+        "b": "(b) to buy anew X-ray plant so",
+        "c": "(c) he is very worried.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "In negative sentences, \"some\" is not used.",
+      "solution": "In negative sentences, \"some\" is not used.\"Any\" is used. Replace \"some\" with \"any\" in part (a)."
+    },
+    {
+      "q_num": 87,
+      "type": "spot_the_error",
+      "question": "(a) Gold is the most precious of all metals/(b)that are used in ornaments as/(c) far as we all know./(d) No error",
+      "options": {
+        "a": "(a) Gold is the most precious of all metals",
+        "b": "(b) that are used in ornaments as",
+        "c": "(c) far as we all know.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"the most precious of all metals\"with \"more precious than any other metal\".",
+      "solution": "Replace \"the most precious of all metals\"with \"more precious than any other metal\". Rule :If different things of the same varietyare compared, \"any other\" is used to exclude one from the others."
+    },
+    {
+      "q_num": 88,
+      "type": "spot_the_error",
+      "question": "(a) No less than fifty audiences/(b) are sittingin the hall and/(c) waiting for their beloved artist./(d) No error",
+      "options": {
+        "a": "(a) No less than fifty audiences",
+        "b": "(b) are sittingin the hall and",
+        "c": "(c) waiting for their beloved artist.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"no less\" with \"not less\".",
+      "solution": "Replace \"no less\" with \"not less\"."
+    },
+    {
+      "q_num": 89,
+      "type": "spot_the_error",
+      "question": "(a) Her father told her/(b) that it would beall the more/(c) better if she would find her groom herself./(d) No error",
+      "options": {
+        "a": "(a) Her father told her",
+        "b": "(b) that it would beall the more",
+        "c": "(c) better if she would find her groom herself.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Eliminate \"all the more\".",
+      "solution": "Eliminate \"all the more\". We never usetwo comparative degrees together."
+    },
+    {
+      "q_num": 90,
+      "type": "spot_the_error",
+      "question": "(a) I told the teacher/(b) that the homeworkset for the day/(c) was much too heavy for us to complete./(d) No error",
+      "options": {
+        "a": "(a) I told the teacher",
+        "b": "(b) that the homeworkset for the day",
+        "c": "(c) was much too heavy for us to complete.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"much too heavy\" with \"too heavy\".",
+      "solution": "Replace \"much too heavy\" with \"too heavy\".Use of \"much\" and \"too\" together makes the sentence superfluous."
+    },
+    {
+      "q_num": 91,
+      "type": "spot_the_error",
+      "question": "(a) That lady is more beautiful/(b) but notso cultured/(c) as her youngest sister./(d) No error",
+      "options": {
+        "a": "(a) That lady is more beautiful",
+        "b": "(b) but notso cultured",
+        "c": "(c) as her youngest sister.",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 92,
+      "type": "spot_the_error",
+      "question": "(a) Much to his fortune he/(b) married a girlwho was/(c) more tall and lovelier than he himself./(d) No error",
+      "options": {
+        "a": "(a) Much to his fortune he",
+        "b": "(b) married a girlwho was",
+        "c": "(c) more tall and lovelier than he himself.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"more tall\" with \"taller\".",
+      "solution": "Replace \"more tall\" with \"taller\". Comparativeform of tall is \"taller. Thus, instead of \"more tall\", taller will be used."
+    },
+    {
+      "q_num": 93,
+      "type": "spot_the_error",
+      "question": "(a) What pleases him/(b) more is a healthy criticism/(c)of his performance./(d) No error",
+      "options": {
+        "a": "(a) What pleases him",
+        "b": "(b) more is a healthy criticism",
+        "c": "(c) of his performance.",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 94,
+      "type": "spot_the_error",
+      "question": "(a) Foreign businesses in developing countries/(b)have usually problems/(c) of lack of infrastructure and rigid laws./(d) No error",
+      "options": {
+        "a": "(a) Foreign businesses in developing countries",
+        "b": "(b) have usually problems",
+        "c": "(c) of lack of infrastructure and rigid laws.",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"usually\" with \"usual\".",
+      "solution": "Replace \"usually\" with \"usual\". \"Usually\"is an adverb which means generally. However, we need an adjective here before a noun - \"problems\". Thus, \"usual\" will come."
+    },
+    {
+      "q_num": 95,
+      "type": "spot_the_error",
+      "question": "(a) Raja often tells us that/(b) he does notlike anything/(c) more than sleeping peacefully./(d) No error",
+      "options": {
+        "a": "(a) Raja often tells us that",
+        "b": "(b) he does notlike anything",
+        "c": "(c) more than sleeping peacefully.",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 96,
+      "type": "spot_the_error",
+      "question": "(a) She was startled to/(b) see in her drawingroom/(c) a most popular film producer./(d) No error",
+      "options": {
+        "a": "(a) She was startled to",
+        "b": "(b) see in her drawingroom",
+        "c": "(c) a most popular film producer.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"a most\" with \"the most\".",
+      "solution": "Replace \"a most\" with \"the most\". We use\"the\" before superlative degrees."
+    },
+    {
+      "q_num": 97,
+      "type": "spot_the_error",
+      "question": "(a) India is better than/(b) most others filmproducing countries/(c) of the world./(d) No error Adjective",
+      "options": {
+        "a": "(a) India is better than",
+        "b": "(b) most others filmproducing countries",
+        "c": "(c) of the world.",
+        "d": "(d) No error Adjective"
+      },
+      "answer": "b",
+      "correction": "Replace \"most others\" with \"most other\".",
+      "solution": "Replace \"most others\" with \"most other\"."
+    },
+    {
+      "q_num": 98,
+      "type": "spot_the_error",
+      "question": "(a) This website does not/(b) accept advertisements and is funded entirely/ by donations/(c) given voluntary by the subscribers./(d) No error",
+      "options": {
+        "a": "(a) This website does not",
+        "b": "(b) accept advertisements and is funded entirely",
+        "c": "(c) given voluntary by the subscribers.",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"voluntary\" with \"voluntarily\".",
+      "solution": "Replace \"voluntary\" with \"voluntarily\".Here,\"given\" is a verb. We need an adverb to modify it."
+    },
+    {
+      "q_num": 99,
+      "type": "spot_the_error",
+      "question": "(a) Lightweight and easily to handle two wheelers/(b)have become a boon/(c) for female commuters./(d) No error",
+      "options": {
+        "a": "(a) Lightweight and easily to handle two wheelers",
+        "b": "(b) have become a boon",
+        "c": "(c) for female commuters.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"easily\" with \"easy\".",
+      "solution": "Replace \"easily\" with \"easy\".For \"two wheelers\",we need two adjectives of the same degree. Thus, we will use \"lightweight\" and \"easy\"."
+    },
+    {
+      "q_num": 100,
+      "type": "spot_the_error",
+      "question": "(a) She is as good,/(b) if not better than/(c)he./(d) No error",
+      "options": {
+        "a": "(a) She is as good,",
+        "b": "(b) if not better than",
+        "c": "(c) he.",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace 'as good' by \"as good as\".",
+      "solution": "Replace 'as good' by \"as good as\". Rule :If an adjective is to be used between\"as………as\" and \"so……….as\" the adjective should be in positive degree. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

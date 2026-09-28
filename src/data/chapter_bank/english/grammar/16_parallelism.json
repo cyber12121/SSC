@@ -1,0 +1,222 @@
+{
+  "chapter_num": 16,
+  "chapter_id": "16_parallelism",
+  "chapter_title": "Parallelism",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "parallelism",
+  "total_questions": 15,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) She is the happiest, /(b) the healthier,and the /(c) most fulfilled she has ever been /(d) no error.",
+      "options": {
+        "a": "(a) She is the happiest,",
+        "b": "(b) the healthier,and the",
+        "c": "(c) most fulfilled she has ever been",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"healthier\" with \"healthiest\".",
+      "solution": "Replace \"healthier\" with \"healthiest\". (ParallelStructure in case of Comparatives and Superlatives)"
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) They saved money, /(b) but they also /(c)spend it wisely /(d) no error.",
+      "options": {
+        "a": "(a) They saved money,",
+        "b": "(b) but they also",
+        "c": "(c) spend it wisely",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"spend\" with \"spent\".",
+      "solution": "Replace \"spend\" with \"spent\". (ParallelStructure in Clauses)"
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) He neither listens /(b) to music nor /(c)watched television /(d) no error.",
+      "options": {
+        "a": "(a) He neither listens",
+        "b": "(b) to music nor",
+        "c": "(c) watched television",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"watched\" with \"watches\".",
+      "solution": "Replace \"watched\" with \"watches\".(ParallelStructure in Paired Conjunctions- neither…nor)"
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) Neither the beginning /(b) nor the end ofthe /(c) story was predictable /(d) no error.",
+      "options": {
+        "a": "(a) Neither the beginning",
+        "b": "(b) nor the end ofthe",
+        "c": "(c) story was predictable",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Parallelism"
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) The movie was as /(b) exciting as it was/(c) thought-provoked /(d) no error.",
+      "options": {
+        "a": "(a) The movie was as",
+        "b": "(b) exciting as it was",
+        "c": "(c) thought-provoked",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"provoked\" with \"provoking\".",
+      "solution": "Replace \"provoked\" with \"provoking\". (Parallel Structure in Comparisons)"
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) She is skilled at /(b) writing, edit, /(c)and proofreading /(d) no error.",
+      "options": {
+        "a": "(a) She is skilled at",
+        "b": "(b) writing, edit,",
+        "c": "(c) and proofreading",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"edit\" with \"editing\".",
+      "solution": "Replace \"edit\" with \"editing\".(Parallelismin gerunds)"
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) The challenge is /(b) as daunted as /(c)it is rewarding /(d) no error.",
+      "options": {
+        "a": "(a) The challenge is",
+        "b": "(b) as daunted as",
+        "c": "(c) it is rewarding",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"dauted\" with \"daunting\".",
+      "solution": "Replace \"dauted\" with \"daunting\".(ParallelStructure in Comparisons)"
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) Either we go out /(b) for dinner or /(c)we cook at home /(d) no error.",
+      "options": {
+        "a": "(a) Either we go out",
+        "b": "(b) for dinner or",
+        "c": "(c) we cook at home",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) He bought apples, /(b) oranges, and bananas/(c) from the grocery store /(d) no error.",
+      "options": {
+        "a": "(a) He bought apples,",
+        "b": "(b) oranges, and bananas",
+        "c": "(c) from the grocery store",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) Not only does he /(b) play the piano, buthe /(c) also sang beautifully /(d) no error.",
+      "options": {
+        "a": "(a) Not only does he",
+        "b": "(b) play the piano, buthe",
+        "c": "(c) also sang beautifully",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"sang\" with \"sings\".",
+      "solution": "Replace \"sang\" with \"sings\".(Parallel Structurein Correlative Conjunctions)"
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) We need to clean the kitchen, /(b) vacuumedthe living /(c) room, and dust the shelves /(d) no error.",
+      "options": {
+        "a": "(a) We need to clean the kitchen,",
+        "b": "(b) vacuumedthe living",
+        "c": "(c) room, and dust the shelves",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"vacuumed\" with \"vacuum\".",
+      "solution": "Replace \"vacuumed\" with \"vacuum\". (ParallelStructure in phrases)"
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) She can /(b) both sing /(c) and dance /(d)no error.",
+      "options": {
+        "a": "(a) She can",
+        "b": "(b) both sing",
+        "c": "(c) and dance",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) They traveled to Paris /(b) and then theyexplore the /(c) Louvre Museum /(d) no error.",
+      "options": {
+        "a": "(a) They traveled to Paris",
+        "b": "(b) and then theyexplore the",
+        "c": "(c) Louvre Museum",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"explore\" with \"explored\".",
+      "solution": "Replace \"explore\" with \"explored\". (ParallelStructure in Clauses)"
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) The situation is /(b) getting worse, /(c)not best /(d) no error.",
+      "options": {
+        "a": "(a) The situation is",
+        "b": "(b) getting worse,",
+        "c": "(c) not best",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"best\" with \"better\".",
+      "solution": "Replace \"best\" with \"better\". (ParallelStructure in Comparisons)"
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) The journey was /(b) as enjoyable as /(c)it was adventure /(d) no error.",
+      "options": {
+        "a": "(a) The journey was",
+        "b": "(b) as enjoyable as",
+        "c": "(c) it was adventure",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"adventure\" with the adjective\"adventurous\" to match with the adjective 'enjoyable'.",
+      "solution": "Replace \"adventure\" with the adjective\"adventurous\" to match with the adjective 'enjoyable'. (Parallel Structure in Comparisons) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

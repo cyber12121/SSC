@@ -284,13 +284,81 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                           : 'bg-white/15 hover:bg-white/25 text-white border border-white/10'
                       }`}
                     >
-                      <span>All Mistakes</span>
+                      <span>All</span>
                       <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
                         modalErrorFilter === 'all' ? 'bg-indigo-100 text-indigo-900 font-black' : 'bg-black/25 text-white font-bold'
                       }`}>
                         {data.total}
                       </span>
                     </button>
+
+                    {/* [ ✗ Wrong Questions ] */}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setModalErrorFilter('wrong');
+                        setModalActiveSet(1);
+                      }}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs ${
+                        modalErrorFilter === 'wrong'
+                          ? 'bg-rose-600 text-white shadow-md ring-2 ring-white/80 font-black'
+                          : data.wrong > 0
+                          ? 'bg-rose-500/25 hover:bg-rose-500/40 text-rose-100 border border-rose-400/30'
+                          : 'bg-white/10 text-white/50 hover:bg-white/20'
+                      }`}
+                    >
+                      <span>✗ Wrong</span>
+                      <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+                        modalErrorFilter === 'wrong' ? 'bg-white text-rose-900 font-black' : 'bg-black/25 text-white font-bold'
+                      }`}>
+                        {data.wrong}
+                      </span>
+                    </button>
+
+                    {/* [ ◯ Skipped / Unattempted Questions ] */}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setModalErrorFilter('unattempted');
+                        setModalActiveSet(1);
+                      }}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs ${
+                        modalErrorFilter === 'unattempted'
+                          ? 'bg-blue-600 text-white shadow-md ring-2 ring-white/80 font-black'
+                          : data.unattempted > 0
+                          ? 'bg-blue-500/25 hover:bg-blue-500/40 text-blue-100 border border-blue-400/30'
+                          : 'bg-white/10 text-white/50 hover:bg-white/20'
+                      }`}
+                    >
+                      <span>◯ Skipped</span>
+                      <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+                        modalErrorFilter === 'unattempted' ? 'bg-white text-blue-900 font-black' : 'bg-black/25 text-white font-bold'
+                      }`}>
+                        {data.unattempted}
+                      </span>
+                    </button>
+
+                    {data.slow > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setModalErrorFilter('slow');
+                          setModalActiveSet(1);
+                        }}
+                        className={`px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs ${
+                          modalErrorFilter === 'slow'
+                            ? 'bg-amber-500 text-white shadow-md ring-2 ring-white/80 font-black'
+                            : 'bg-amber-500/25 hover:bg-amber-500/40 text-amber-100 border border-amber-400/30'
+                        }`}
+                      >
+                        <span>⚡ Slow</span>
+                        <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+                          modalErrorFilter === 'slow' ? 'bg-white text-amber-900 font-black' : 'bg-black/25 text-white font-bold'
+                        }`}>
+                          {data.slow}
+                        </span>
+                      </button>
+                    )}
 
                     {/* [ ⚡ Silly Mistakes ] */}
                     <button
@@ -402,59 +470,7 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
                       </button>
                     )}
 
-                    {/* Non-RCA error filter quick toggles when in chapter view */}
-                    {mockViewMode !== 'rca' && (
-                      <div className="flex items-center gap-1 pl-1.5 ml-1 border-l border-white/20">
-                        {data.wrong > 0 && (
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setModalErrorFilter('wrong');
-                              setModalActiveSet(1);
-                            }}
-                            className={`px-2 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1 cursor-pointer ${
-                              modalErrorFilter === 'wrong'
-                                ? 'bg-rose-600 text-white shadow-xs ring-1 ring-white/60'
-                                : 'bg-rose-500/20 hover:bg-rose-500/30 text-rose-100'
-                            }`}
-                          >
-                            <XCircle className="w-3 h-3" /> {data.wrong} Wrong
-                          </button>
-                        )}
-                        {data.slow > 0 && (
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setModalErrorFilter('slow');
-                              setModalActiveSet(1);
-                            }}
-                            className={`px-2 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1 cursor-pointer ${
-                              modalErrorFilter === 'slow'
-                                ? 'bg-amber-600 text-white shadow-xs ring-1 ring-white/60'
-                                : 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-100'
-                            }`}
-                          >
-                            <Zap className="w-3 h-3" /> {data.slow} Slow
-                          </button>
-                        )}
-                        {data.unattempted > 0 && (
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setModalErrorFilter('unattempted');
-                              setModalActiveSet(1);
-                            }}
-                            className={`px-2 py-1 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1 cursor-pointer ${
-                              modalErrorFilter === 'unattempted'
-                                ? 'bg-blue-600 text-white shadow-xs ring-1 ring-white/60'
-                                : 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-100'
-                            }`}
-                          >
-                            <AlertCircle className="w-3 h-3" /> {data.unattempted} Skipped
-                          </button>
-                        )}
-                      </div>
-                    )}
+
                   </div>
 
                   {/* 2. Sub-Type Pills (Appears when you click "Silly Mistakes") */}

@@ -1,0 +1,1412 @@
+{
+  "chapter_num": 10,
+  "chapter_id": "10_adverb",
+  "chapter_title": "Adverb",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "adverb",
+  "total_questions": 100,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) The conversation was /(b) none too insipid/(c) however we enjoyed it /(d) no error.",
+      "options": {
+        "a": "(a) The conversation was",
+        "b": "(b) none too insipid",
+        "c": "(c) however we enjoyed it",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"none too\" with \"rather\".",
+      "solution": "Replace \"none too\" with \"rather\". 'Rather'is used with negative adjectives."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) The milk is /(b) very hot /(c) to drink /(d)no error.",
+      "options": {
+        "a": "(a) The milk is",
+        "b": "(b) very hot",
+        "c": "(c) to drink",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"very\" with \"too\".",
+      "solution": "Replace \"very\" with \"too\". To show the negativemeaning of the sentence we use the following structure: \"too + adjective + to + V1\"."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) I found the movie fairly /(b) boring, soI left /(c) before it finished. /(d) no error.",
+      "options": {
+        "a": "(a) I found the movie fairly",
+        "b": "(b) boring, soI left",
+        "c": "(c) before it finished.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"fairly\" with \"rather\".",
+      "solution": "Replace \"fairly\" with \"rather\". \"Rather\" is used for unpleasant or negative adjectives."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) This machine is highly /(b) useful but itdoes not /(c) work good /(d) no error.",
+      "options": {
+        "a": "(a) This machine is highly",
+        "b": "(b) useful but itdoes not",
+        "c": "(c) work good",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"good\" with \"well\".",
+      "solution": "Replace \"good\" with \"well\". We need an adverbhere to show that the machine does not work properly."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) I am writing /(b) the letter /(c) just /(d)no error.",
+      "options": {
+        "a": "(a) I am writing",
+        "b": "(b) the letter",
+        "c": "(c) just",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"just\" with \"just now\".",
+      "solution": "Replace \"just\" with \"just now\". When thework is being done at the moment, \"just now\" is used."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) Quite a few people /(b) have reached your/(c) home just now /(d) no error.",
+      "options": {
+        "a": "(a) Quite a few people",
+        "b": "(b) have reached your",
+        "c": "(c) home just now",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) I can't let you /(b) waste hardly /(c) earnedmoney /(d) no error. Adverb",
+      "options": {
+        "a": "(a) I can't let you",
+        "b": "(b) waste hardly",
+        "c": "(c) earnedmoney",
+        "d": "(d) no error. Adverb"
+      },
+      "answer": "b",
+      "correction": "Replace \"hardly\" with \"hard\".",
+      "solution": "Replace \"hardly\" with \"hard\". \"Hardly\" isa negative word which means almost not at all so \"hard\" will be used."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) People of this sort /(b) hardly succeed in /(c) their life /(d) no error.",
+      "options": {
+        "a": "(a) People of this sort",
+        "b": "(b) hardly succeed in",
+        "c": "(c) their life",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) The train is /(b) coming lately /(c) by twentyminutes /(d) no error.",
+      "options": {
+        "a": "(a) The train is",
+        "b": "(b) coming lately",
+        "c": "(c) by twentyminutes",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"lately\" with \"late\".",
+      "solution": "Replace \"lately\" with \"late\". \"Lately\" means\"recently\". 'Late' means after the expected or usual time."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) The birds /(b) are flying /(c) very highly/(d) no error.",
+      "options": {
+        "a": "(a) The birds",
+        "b": "(b) are flying",
+        "c": "(c) very highly",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"highly\" with \"high\".",
+      "solution": "Replace \"highly\" with \"high\". \"Highly\"means extremely or greatly. 'High' means above the ground."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) The alarm rang loud, /(b) waking up the/(c) entire household /(d) no error.",
+      "options": {
+        "a": "(a) The alarm rang loud,",
+        "b": "(b) waking up the",
+        "c": "(c) entire household",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"loud\" with \"loudly\".",
+      "solution": "Replace \"loud\" with \"loudly\". \"Loud\" isan adjective, here we need an adverb \"loudly\"."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) I have made such /(b) a mistake /(c) manytimes /(d) no error.",
+      "options": {
+        "a": "(a) I have made such",
+        "b": "(b) a mistake",
+        "c": "(c) manytimes",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) Older person /(b) can travel freely /(c)in Haryana Roadways /(d) no error.",
+      "options": {
+        "a": "(a) Older person",
+        "b": "(b) can travel freely",
+        "c": "(c) in Haryana Roadways",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"freely\" with \"for free\".",
+      "solution": "Replace \"freely\" with \"for free\". \"Freely\"means without any restrictions while 'free' means without any cost or charges."
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) She denied that /(b) she had not /(c) gonethere /(d) no error.",
+      "options": {
+        "a": "(a) She denied that",
+        "b": "(b) she had not",
+        "c": "(c) gonethere",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"not\" from part (b).",
+      "solution": "Remove \"not\" from part (b). We do not usea negative statement after the verb 'deny'."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) It was fairly disappointing /(b) to discoverthat the concert had been /(c) cancelled at the last minute /(d)no error.",
+      "options": {
+        "a": "(a) It was fairly disappointing",
+        "b": "(b) to discoverthat the concert had been",
+        "c": "(c) cancelled at the last minute",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"fairly\" with \"rather\".",
+      "solution": "Replace \"fairly\" with \"rather\". \"Rather\"is used for unpleasant or negative adjectives."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) She spent much too /(b) money on clotheslast month, /(c) exceeding her budget /(d) no error.",
+      "options": {
+        "a": "(a) She spent much too",
+        "b": "(b) money on clotheslast month,",
+        "c": "(c) exceeding her budget",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"much too\" with \"too much\".",
+      "solution": "Replace \"much too\" with \"too much\". \"Muchtoo\" is followed by an adjective and \"money\" is a noun so \"too much\" will replace \"much too\"."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) Rarely do we encounter /(b) such genuinekindness /(c) in strangers /(d) no error.",
+      "options": {
+        "a": "(a) Rarely do we encounter",
+        "b": "(b) such genuinekindness",
+        "c": "(c) in strangers",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) We took a directly route from New York /(b)to Los Angeles, without stopping /(c) anywhere along the way /(d) no error.",
+      "options": {
+        "a": "(a) We took a directly route from New York",
+        "b": "(b) to Los Angeles, without stopping",
+        "c": "(c) anywhere along the way",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"directly\" with \"direct\".",
+      "solution": "Replace \"directly\" with \"direct\". \"Directly\"is an adverb. meaning in a direct manner but \"direct\"is an adjective and used for direct route."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) She felt good /(b) after getting a /(c)good night's sleep /(d) no error.",
+      "options": {
+        "a": "(a) She felt good",
+        "b": "(b) after getting a",
+        "c": "(c) good night's sleep",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"good\" with \"well\".",
+      "solution": "Replace \"good\" with \"well\". For good healthor condition, the adjective \"well\" is used."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) Not only he finished the project ahead /(b)of schedule, but he also /(c) exceeded expectations /(d) no error.",
+      "options": {
+        "a": "(a) Not only he finished the project ahead",
+        "b": "(b) of schedule, but he also",
+        "c": "(c) exceeded expectations",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"he finished\" with \"did he finish\".",
+      "solution": "Replace \"he finished\" with \"did he finish\".In sentences beginning with the adverb, the helping verb is used after the adverb and not the subject."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "(a) The artist portrayed nature /(b) a powerfulforce through bold /(c) colors and dynamic brushstrokes /(d) no error.",
+      "options": {
+        "a": "(a) The artist portrayed nature",
+        "b": "(b) a powerfulforce through bold",
+        "c": "(c) colors and dynamic brushstrokes",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"as\" after nature.",
+      "solution": "Add \"as\" after nature. The words \"define,treat, view, regard, describe, know, respect, portray, depict, select etc.\" take \"as\" with them."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "(a) There was no one else /(b) than her whocould /(c) solve the puzzle /(d) no error.",
+      "options": {
+        "a": "(a) There was no one else",
+        "b": "(b) than her whocould",
+        "c": "(c) solve the puzzle",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"than\" with \"but\".",
+      "solution": "Replace \"than\" with \"but\". \"Else\" is pairedwith \"but\"."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "(a) They finished their work soon /(b) and decidedto go out for /(c) dinner to celebrate /(d) no error.",
+      "options": {
+        "a": "(a) They finished their work soon",
+        "b": "(b) and decidedto go out for",
+        "c": "(c) dinner to celebrate",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"soon\" with \"early\".",
+      "solution": "Replace \"soon\" with \"early\". \"Soon\" meansin the near future while \"early\" is used for something occuring before the expected or usual time."
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "(a) She felt fairly a confident /(b) about herpresentation /(c) after practicing extensively /(d) no error.",
+      "options": {
+        "a": "(a) She felt fairly a confident",
+        "b": "(b) about herpresentation",
+        "c": "(c) after practicing extensively",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"a\" from part (a).",
+      "solution": "Remove \"a\" from part (a). The article \"a\"is used for a noun, not an adjective."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "(a) What are /(b) you doing /(c) presently?/(d) no error.",
+      "options": {
+        "a": "(a) What are",
+        "b": "(b) you doing",
+        "c": "(c) presently?",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "(a) The judges crowned /(b) him as the winner/(c) of the competition /(d) no error.",
+      "options": {
+        "a": "(a) The judges crowned",
+        "b": "(b) him as the winner",
+        "c": "(c) of the competition",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"as\" from part (b).",
+      "solution": "Remove \"as\" from part (b). \"As\" is notused with \"call, appoint, make, choose, name, elect, think, consider, crown etc.\""
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "(a) She was /(b) looking angrily /(c) at me/(d) no error.",
+      "options": {
+        "a": "(a) She was",
+        "b": "(b) looking angrily",
+        "c": "(c) at me",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Adverb"
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "(a) The work has /(b) been done /(c) outly andoutly /(d) no error.",
+      "options": {
+        "a": "(a) The work has",
+        "b": "(b) been done",
+        "c": "(c) outly andoutly",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"outly and outly\" with \"out and out\".",
+      "solution": "Replace \"outly and outly\" with \"out and out\". \"Out and out\" is used as both an adverb and an adjective."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "(a) Outside the room /(b) are lying /(c) somepairs of shoes /(d) no error.",
+      "options": {
+        "a": "(a) Outside the room",
+        "b": "(b) are lying",
+        "c": "(c) somepairs of shoes",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "(a) I treat him /(b) like my /(c) my best friend/(d) no error.",
+      "options": {
+        "a": "(a) I treat him",
+        "b": "(b) like my",
+        "c": "(c) my best friend",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"like\" with \"as\".",
+      "solution": "Replace \"like\" with \"as\". \"As\" is usedwith the words \"regard, respect, treat, portray, depict, define, select etc\"."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "(a) More often than not /(b) I went /(c) totemple /(d) no error.",
+      "options": {
+        "a": "(a) More often than not",
+        "b": "(b) I went",
+        "c": "(c) totemple",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"I went\" with \"did I go\".",
+      "solution": "Replace \"I went\" with \"did I go\". Partialinversion is used with adverbial phrases."
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "(a) I always have /(b) supported him /(c) inall the circumstances /(d) no error.",
+      "options": {
+        "a": "(a) I always have",
+        "b": "(b) supported him",
+        "c": "(c) inall the circumstances",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"always have\" with \"have always\".",
+      "solution": "Replace \"always have\" with \"have always\".The adverbs \"always, hardly, scarcely, rarely, never etc.\" are used after the auxiliary verb and before the main verb."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "(a) She quickly finished /(b) her homework /(c)at the library /(d) no error.",
+      "options": {
+        "a": "(a) She quickly finished",
+        "b": "(b) her homework",
+        "c": "(c) at the library",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. When there are two or more adverbsafter a verb, the normal order is— adverb of manner, adverb of place, adverb of time."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "(a) He went /(b) through the report /(c) athome last night thoroughly /(d) no error.",
+      "options": {
+        "a": "(a) He went",
+        "b": "(b) through the report",
+        "c": "(c) athome last night thoroughly",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"at home last night thoroughly\"with \"thoroughly at home last night\".",
+      "solution": "Replace \"at home last night thoroughly\"with \"thoroughly at home last night\". In the sentence, \"thoroughly\" is an adverb of manners, \"at home\" is an adverb of place, \"last night\" is an adverb of time, so order should be an adverb of manners, adverbs of place and adverbs of time."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "(a) The committee called /(b) her as the bestcandidate /(c) for the job /(d) no error.",
+      "options": {
+        "a": "(a) The committee called",
+        "b": "(b) her as the bestcandidate",
+        "c": "(c) for the job",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"as\" from part (b).",
+      "solution": "Remove \"as\" from part (b). \"As\" is notused with the following words - call, appoint, make, choose, name, elect, think, consider, crown."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "(a) We planted the seeds in the /(b) early springto ensure a bountiful /(c) harvest later in the year /(d) no error.",
+      "options": {
+        "a": "(a) We planted the seeds in the",
+        "b": "(b) early springto ensure a bountiful",
+        "c": "(c) harvest later in the year",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "(a) She would choose to stay /(b) in ratherbut go out /(c) on a rainy day /(d) no error.",
+      "options": {
+        "a": "(a) She would choose to stay",
+        "b": "(b) in ratherbut go out",
+        "c": "(c) on a rainy day",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"but\" with \"than\".",
+      "solution": "Replace \"but\" with \"than\". \"Rather\" ispaired with \"than'."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "(a) Only when the stars align /(b) we can seethe full beauty /(c) of the night sky /(d) no error.",
+      "options": {
+        "a": "(a) Only when the stars align",
+        "b": "(b) we can seethe full beauty",
+        "c": "(c) of the night sky",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"we can see\" with \"can we see\".",
+      "solution": "Replace \"we can see\" with \"can we see\".In sentences beginning with the adverb, the helping verb will be used after the adverb and before the subject."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "(a) He spoke to her direct, /(b) without anyintermediaries or /(c) indirect communication /(d) no error. Adverb",
+      "options": {
+        "a": "(a) He spoke to her direct,",
+        "b": "(b) without anyintermediaries or",
+        "c": "(c) indirect communication",
+        "d": "(d) no error. Adverb"
+      },
+      "answer": "a",
+      "correction": "Replace \"direct\" with \"directly\".",
+      "solution": "Replace \"direct\" with \"directly\". \"Directly\"means in a direct manner."
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "(a) At no cost /(b) she would compromise /(c) her principles /(d) no error",
+      "options": {
+        "a": "(a) At no cost",
+        "b": "(b) she would compromise",
+        "c": "(c) her principles",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"she would\" with \"would she\".",
+      "solution": "Replace \"she would\" with \"would she\". Inthe case of adverbial phrases, partial inversion is used."
+    },
+    {
+      "q_num": 41,
+      "type": "spot_the_error",
+      "question": "(a) The children watched much too /(b) televisionduring their school break, /(c) neglecting other activities /(d) no error.",
+      "options": {
+        "a": "(a) The children watched much too",
+        "b": "(b) televisionduring their school break,",
+        "c": "(c) neglecting other activities",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"much too\" with \"too much\".",
+      "solution": "Replace \"much too\" with \"too much\". As\"too much\" is followed by a noun and television is a noun."
+    },
+    {
+      "q_num": 42,
+      "type": "spot_the_error",
+      "question": "(a) The movie was fairly an entertaining, /(b)but some scenes /(c) felt a bit slow-paced /(d) no error.",
+      "options": {
+        "a": "(a) The movie was fairly an entertaining,",
+        "b": "(b) but some scenes",
+        "c": "(c) felt a bit slow-paced",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove 'an' from part (b).",
+      "solution": "Remove 'an' from part (b). No article isused after fairly."
+    },
+    {
+      "q_num": 43,
+      "type": "spot_the_error",
+      "question": "(a) There was a loudly noise /(b) coming fromthe /(c) construction site /(d) no error.",
+      "options": {
+        "a": "(a) There was a loudly noise",
+        "b": "(b) coming fromthe",
+        "c": "(c) construction site",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"loudly\" with \"loud\".",
+      "solution": "Replace \"loudly\" with \"loud\". \"Loudly\"is an adverb but here we need the adjective \"loud\"."
+    },
+    {
+      "q_num": 44,
+      "type": "spot_the_error",
+      "question": "(a) He drove very /(b) quick to catch /(c) thetrain /(d) no error.",
+      "options": {
+        "a": "(a) He drove very",
+        "b": "(b) quick to catch",
+        "c": "(c) thetrain",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"quick\" with \"quickly\".",
+      "solution": "Replace \"quick\" with \"quickly\". \"Quick\"is an adjective but in the sentence we need an adverb \"quickly\" to modify the verb \"drove\"."
+    },
+    {
+      "q_num": 45,
+      "type": "spot_the_error",
+      "question": "(a) The students /(b) studied hardly /(c) forthe exam /(d) no error.",
+      "options": {
+        "a": "(a) The students",
+        "b": "(b) studied hardly",
+        "c": "(c) forthe exam",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"hardly\" with \"hard\".",
+      "solution": "Replace \"hardly\" with \"hard\". \"Hardly\"is a negative word which means almost not at all, so \"hard\" will be used."
+    },
+    {
+      "q_num": 46,
+      "type": "spot_the_error",
+      "question": "(a) The teacher explained the concept /(b) clear,ensuring that /(c) all students understood /(d) no error.",
+      "options": {
+        "a": "(a) The teacher explained the concept",
+        "b": "(b) clear,ensuring that",
+        "c": "(c) all students understood",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"clear\" with \"clearly\".",
+      "solution": "Replace \"clear\" with \"clearly\". Here, clearis an adjective, but we need an adverb to modify the verb \"explain\". So, \"clearly\" will be used."
+    },
+    {
+      "q_num": 47,
+      "type": "spot_the_error",
+      "question": "(a) The storm raged fiercely outside, /(b) rattlingthe windows with /(c) its forceful winds /(d) no error.",
+      "options": {
+        "a": "(a) The storm raged fiercely outside,",
+        "b": "(b) rattlingthe windows with",
+        "c": "(c) its forceful winds",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 48,
+      "type": "spot_the_error",
+      "question": "(a) She brightly smiled /(b) when she saw her/(c) friend across the room /(d) no error.",
+      "options": {
+        "a": "(a) She brightly smiled",
+        "b": "(b) when she saw her",
+        "c": "(c) friend across the room",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \" brightly smiled\" with \"smiledbrightly\".",
+      "solution": "Replace \" brightly smiled\" with \"smiledbrightly\". The adverb of manner is placed after the verb and the object if any."
+    },
+    {
+      "q_num": 49,
+      "type": "spot_the_error",
+      "question": "(a) The team played exceptionally /(b) wellduring the /(c) championship game /(d) no error.",
+      "options": {
+        "a": "(a) The team played exceptionally",
+        "b": "(b) wellduring the",
+        "c": "(c) championship game",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 50,
+      "type": "spot_the_error",
+      "question": "(a) She told him to return the book /(b) tothe library, but only she knew how difficult /(c) it was to find the time to do so /(d) no error.",
+      "options": {
+        "a": "(a) She told him to return the book",
+        "b": "(b) tothe library, but only she knew how difficult",
+        "c": "(c) it was to find the time to do so",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 51,
+      "type": "spot_the_error",
+      "question": "(a) The faculty worked /(b) very hardly to improve/(c) the score of the weak students. /no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"hardly\" with \"hard\".",
+      "solution": "Replace \"hardly\" with \"hard\". In a few cases, some adverbs are the same in form as the corresponding adjectives. They are sometimes used as adjectives and sometimes as adverbs."
+    },
+    {
+      "q_num": 52,
+      "type": "spot_the_error",
+      "question": "(a) Most maids are very quicker /(b) than housewiveswith household /(c) work as they have to go to many houses. /(d) no error.",
+      "options": {
+        "a": "(a) Most maids are very quicker",
+        "b": "(b) than housewiveswith household",
+        "c": "(c) work as they have to go to many houses.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"very\" with \"much\".",
+      "solution": "Replace \"very\" with \"much\". In a few cases,some adverbs are the same in form as the corresponding adjectives. They are sometimes used as adjectives and sometimes as adverbs."
+    },
+    {
+      "q_num": 53,
+      "type": "spot_the_error",
+      "question": "I was too angry (a)/with him (b)/to overlookhis faults. (c)/no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 54,
+      "type": "spot_the_error",
+      "question": "When viewed from his point of view, the (a)/entireepisode assumes (b)/a differently colour altogether. (c)/no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"differently\" with \"different\".",
+      "solution": "Replace \"differently\" with \"different\".An adjective is to be used. Before a noun, an adjective is used. Here, colour is a noun. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Adverb"
+    },
+    {
+      "q_num": 55,
+      "type": "spot_the_error",
+      "question": "Some students feel that (a)/selectively studyinga few days (b)/before the exam is quite beneficial. (c)/no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"selectedly\" with \"selective\".",
+      "solution": "Replace \"selectedly\" with \"selective\". An adjective has to be used."
+    },
+    {
+      "q_num": 56,
+      "type": "spot_the_error",
+      "question": "Although she is my mother (a)/I cannot ask herfor (b)/money without any validly reason. (c)/no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"validly\" with \"valid\".",
+      "solution": "Replace \"validly\" with \"valid\".For noun- reason, we need an adjective."
+    },
+    {
+      "q_num": 57,
+      "type": "spot_the_error",
+      "question": "The receptionist at Pinnacle was well paid (a)/forskillful receiving (b)/the inquiries and following them up. (c)/no error",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"skillful\" with \"skillfully\".",
+      "solution": "Replace \"skillful\" with \"skillfully\". Anadverb is to be used here in place of an adjective."
+    },
+    {
+      "q_num": 58,
+      "type": "spot_the_error",
+      "question": "All the files and books (a)/are very orderly(b)/arranged at Pinnacle. (c)/no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "\"Orderly\" is incorrect.",
+      "solution": "\"Orderly\" is incorrect. Use \"arranged inan orderly manner\"."
+    },
+    {
+      "q_num": 59,
+      "type": "spot_the_error",
+      "question": "Scarcely had the(a)/ teacher seen the student(b)/ when he started studying. (c)/no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 60,
+      "type": "spot_the_error",
+      "question": "They were exceptional good (a)/leaders so allof us (b)/listened to them very attentively. (c)/ no error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Use \"exceptionally\" in place of \"exceptional\".",
+      "solution": "Use \"exceptionally\" in place of \"exceptional\".An adverb has to be used."
+    },
+    {
+      "q_num": 61,
+      "type": "spot_the_error",
+      "question": "Most maids are very quicker (a)/ than housewiveswith household (b)/work as they have to go to many houses. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"very\" with \"much\".",
+      "solution": "Replace \"very\" with \"much\". In a few cases,some adverbs are the same in form as the corresponding adjectives. They are sometimes used as adjectives and sometimes as adverbs."
+    },
+    {
+      "q_num": 62,
+      "type": "spot_the_error",
+      "question": "I was too angry (a)/with him (b)/to overlookhis faults. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 63,
+      "type": "spot_the_error",
+      "question": "When viewed from his point of view, the (a)/entireepisode assumes (b)/a differently colour altogether. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"differently\" with \"different\".",
+      "solution": "Replace \"differently\" with \"different\".An adjective is to be used. Before a noun, an adjective is used. Here, colour is a noun."
+    },
+    {
+      "q_num": 64,
+      "type": "spot_the_error",
+      "question": "Some students feel that (a)/selectively studyinga few days (b)/before the exam is quite beneficial. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"selectedly\" with \"selective\".",
+      "solution": "Replace \"selectedly\" with \"selective\".An adjective has to be used."
+    },
+    {
+      "q_num": 65,
+      "type": "spot_the_error",
+      "question": "Although she is my mother (a)/I cannot ask herfor (b)/money without any validly reason. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"validly\" with \"valid\".",
+      "solution": "Replace \"validly\" with \"valid\".For noun- reason, we need an adjective."
+    },
+    {
+      "q_num": 66,
+      "type": "spot_the_error",
+      "question": "The receptionist at Pinnacle was well paid (a)/forskillful receiving (b)/the inquiries and following them up. (c)/No error",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"skillful\" with \"skillfully\".",
+      "solution": "Replace \"skillful\" with \"skillfully\". Anadverb is to be used here in place of an adjective."
+    },
+    {
+      "q_num": 67,
+      "type": "spot_the_error",
+      "question": "All the files and books (a)/are very orderly(b)/arranged at Pinnacle. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "\"Orderly\" is incorrect.",
+      "solution": "\"Orderly\" is incorrect. Use \"arranged inan orderly manner\"."
+    },
+    {
+      "q_num": 68,
+      "type": "spot_the_error",
+      "question": "The amount which the company (a)/has paid tothe family (b)/of the worker was fairly unjustified. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Use \"rather\" in place of \"fairly\".",
+      "solution": "Use \"rather\" in place of \"fairly\".For theadverb of degree/ quantity, rather is used."
+    },
+    {
+      "q_num": 69,
+      "type": "spot_the_error",
+      "question": "He is almost quite competent (a)/for the postof the Manager, (b)/he can lead the company to its goal. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Eliminate \"almost\".",
+      "solution": "Eliminate \"almost\".We do not use almostand quite together."
+    },
+    {
+      "q_num": 70,
+      "type": "spot_the_error",
+      "question": "The experts at Adverb",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"hopingly\" with \"hopefully\".",
+      "solution": "Replace \"hopingly\" with \"hopefully\".Hopefullyis an adverb which justifies the verb declared."
+    },
+    {
+      "q_num": 71,
+      "type": "spot_the_error",
+      "question": "The products (a)/which she sells are (b)/enough costly to allow the pocket of an ordinary man. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Use \"enough\" after \"costly\".",
+      "solution": "Use \"enough\" after \"costly\". Rule :ENOUGH: \"Enough\" can beused as an adjective as well as an adverb. With \"enough\" the adjective and adverb used will be of the positive degree. \"Enough\" means just the opposite of \"too\". While too means beyond a proper limit, enough means that the proper limit has been reached and not exceeded."
+    },
+    {
+      "q_num": 72,
+      "type": "spot_the_error",
+      "question": "The child requested his father (a)/to be enoughkind to grant (b)/him five thousand rupees for the educational tour. (c)/ No error",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Use \"enough\" after \"kind\".",
+      "solution": "Use \"enough\" after \"kind\".Here, kind isan adjective. Thus, use \"enough\" after kind."
+    },
+    {
+      "q_num": 73,
+      "type": "spot_the_error",
+      "question": "A part of the training (a)/they offered was(b)/real good. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"real\" with \"really\".",
+      "solution": "Replace \"real\" with \"really\".Good is anadjective."
+    },
+    {
+      "q_num": 74,
+      "type": "spot_the_error",
+      "question": "I met that lady (a)/two years ago and have (b)/rememberedher ever for. (c)/ No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "\"Ever for\" will be replaced with \"eversince\".",
+      "solution": "\"Ever for\" will be replaced with \"eversince\"."
+    },
+    {
+      "q_num": 75,
+      "type": "spot_the_error",
+      "question": "Although he only earns (a)/nine hundred rupeesa month (b)/he manages to feed his family. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Use \"only\" after \"earns\".",
+      "solution": "Use \"only\" after \"earns\"."
+    },
+    {
+      "q_num": 76,
+      "type": "spot_the_error",
+      "question": "I soundly slept (a)/last night as there (b)/wasno power cut. (c)/No Error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "\"Soundly\" will be used after \"slept\".",
+      "solution": "\"Soundly\" will be used after \"slept\".Adverbsof manner include clearly, soundly, bravely, thus, so, well, hard, agreeably etc. Example: Seema writes clearly.The man slept soundly."
+    },
+    {
+      "q_num": 77,
+      "type": "spot_the_error",
+      "question": "We will execute this plan so skillfully (a)/thatour boss (b)/will feel surprised. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 78,
+      "type": "spot_the_error",
+      "question": "I came across her in Delhi last month (a)/andinvited her (b)/to come to my home. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 79,
+      "type": "spot_the_error",
+      "question": "They are a political (a)/important family (b)/inthe area. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"political\" with \"politically\".",
+      "solution": "Replace \"political\" with \"politically\"."
+    },
+    {
+      "q_num": 80,
+      "type": "spot_the_error",
+      "question": "No sooner had the hockey match started (a)/whenit began (b)/to rain. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 81,
+      "type": "spot_the_error",
+      "question": "Hardly she likes to hear my name (a)/after thetension which occurred (b)/between her and me. (c)/ No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "The sentence begins with an adverb.",
+      "solution": "The sentence begins with an adverb. So,\"she likes\" will be replaced with \"does she like\"."
+    },
+    {
+      "q_num": 82,
+      "type": "spot_the_error",
+      "question": "There is (a)/one of his novels (b)/that areonly interesting. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Corrected sentence- There is only one ofhis novels that is interesting.",
+      "solution": "Corrected sentence- There is only one ofhis novels that is interesting."
+    },
+    {
+      "q_num": 83,
+      "type": "spot_the_error",
+      "question": "He does (a)/not know to make (b)/friends sohe leads a lonely life. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"how\"before \"to\".",
+      "solution": "Add \"how\"before \"to\". www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Adverb"
+    },
+    {
+      "q_num": 84,
+      "type": "spot_the_error",
+      "question": "I liked that moment where the workers provedtheir might (a)/to take the risk (b)/and succeeded. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 85,
+      "type": "spot_the_error",
+      "question": "Zahid was very (a)/tired (b)/so he said thathe was (c)/sorry to accompany us. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"sorry\" with \"unable\".",
+      "solution": "Replace \"sorry\" with \"unable\"."
+    },
+    {
+      "q_num": 86,
+      "type": "spot_the_error",
+      "question": "The faculty at Pinnacle tries (a)/their bestto make students (b)/speak and use correctly English. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Use \"correct\" instead of \"correctly\".",
+      "solution": "Use \"correct\" instead of \"correctly\".Fornoun - \"English\" we need an adjective and not an adverb."
+    },
+    {
+      "q_num": 87,
+      "type": "spot_the_error",
+      "question": "He is earning (a)/twenty-five thousand (b)/rupeesmonthly. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "\"Monthly\" is incorrect.",
+      "solution": "\"Monthly\" is incorrect. Use \"per month\"."
+    },
+    {
+      "q_num": 88,
+      "type": "spot_the_error",
+      "question": "Although he ran (a)/ slow in the beginning (b)/hepicked up speed towards the end (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Use \"slowly\"in place of slow.",
+      "solution": "Use \"slowly\"in place of slow."
+    },
+    {
+      "q_num": 89,
+      "type": "spot_the_error",
+      "question": "Somebody reported to (a)/the contractor thathis partner (b)/had only died a week ago. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"had only died\" with \"had diedonly\".",
+      "solution": "Replace \"had only died\" with \"had diedonly\"."
+    },
+    {
+      "q_num": 90,
+      "type": "spot_the_error",
+      "question": "He asked me to (a)/completely forget her (b)/butonly I know how easy it is to say so. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "\"Completely forget her\" will be replacedwith \"forget her completely.",
+      "solution": "\"Completely forget her\" will be replacedwith \"forget her completely.\""
+    },
+    {
+      "q_num": 91,
+      "type": "spot_the_error",
+      "question": "When carefully examined (a)/it will give usa clue (b)/to the mystery of the case. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 92,
+      "type": "spot_the_error",
+      "question": "She looked at the child lovely (a)/but the childdid not (b)/respond to her. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"lovely\" with \"lovingly\".",
+      "solution": "Replace \"lovely\" with \"lovingly\". An adverbis needed to modify the verb - look."
+    },
+    {
+      "q_num": 93,
+      "type": "spot_the_error",
+      "question": "I see him often (a)/at the center but he (b)/hasnot come from the past few days. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "\"Often\" will be used before \"see\".",
+      "solution": "\"Often\" will be used before \"see\". An adverbis placed before a verb. Here, see is a verb."
+    },
+    {
+      "q_num": 94,
+      "type": "spot_the_error",
+      "question": "They are very senior (a)/to me (b)/so I darenot joke with them. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 95,
+      "type": "spot_the_error",
+      "question": "I hardly ever talk to him because (a)/in myopinion he is not (b)/a man to be trusted. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 96,
+      "type": "spot_the_error",
+      "question": "Before the game she felt surely (a)/of winning,but after five minutes (b)/she realized that it was not going to be so easy. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Replace \"surely\" with \"sure\".",
+      "solution": "Replace \"surely\" with \"sure\"."
+    },
+    {
+      "q_num": 97,
+      "type": "spot_the_error",
+      "question": "I know that eventually he will succumb to thepressure (a)/and confess that he (b)/has committed a crime. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 98,
+      "type": "spot_the_error",
+      "question": "\"Where else (a)/did you go besides (b)/the office?\"she asked her husband. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 99,
+      "type": "spot_the_error",
+      "question": "He said that the examination was tough (a)/andadded that he could not answer (b)/questions enough to pass it. (c)/No error",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "\"Enough\"willbeusedbefore\"questions\".",
+      "solution": "\"Enough\"willbeusedbefore\"questions\".Enoughisplacedbeforeanounandafteranadjective.Here,\"questions\"isanoun."
+    },
+    {
+      "q_num": 100,
+      "type": "spot_the_error",
+      "question": "He doesn't (a)/know anyone (b)/here and neitherI do. (c)/No error (d) Adverb",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace\"neither I do\" with \"neither do I\".",
+      "solution": "Replace\"neither I do\" with \"neither do I\". www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

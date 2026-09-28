@@ -1,0 +1,572 @@
+{
+  "chapter_num": 6,
+  "chapter_id": "06_modals",
+  "chapter_title": "Modals",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "modals",
+  "total_questions": 35,
+  "questions": [
+    {
+      "q_num": 1,
+      "section_q_num": 1,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) They mighted /(b) enjoy the concert /(c)last night /(d) no error.",
+      "options": {
+        "a": "(a) They mighted",
+        "b": "(b) enjoy the concert",
+        "c": "(c) last night",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"mighted\" with \"might\".",
+      "solution": "Replace \"mighted\" with \"might\". Modals arealways used in the same form and never take s/es, ing or ed with them."
+    },
+    {
+      "q_num": 2,
+      "section_q_num": 2,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Doctors ought to /(b) can give /(c) propermedication /(d) no error.",
+      "options": {
+        "a": "(a) Doctors ought to",
+        "b": "(b) can give",
+        "c": "(c) propermedication",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"can\" from part (b).",
+      "solution": "Remove \"can\" from part (b). Two modals can'tbe used together."
+    },
+    {
+      "q_num": 3,
+      "section_q_num": 3,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I will completes the /(b) assignment before/(c) the deadline. /(d) no error.",
+      "options": {
+        "a": "(a) I will completes the",
+        "b": "(b) assignment before",
+        "c": "(c) the deadline.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"completes\" with \"complete\".",
+      "solution": "Replace \"completes\" with \"complete\". Theverb that follows modal verbs must be in its base form."
+    },
+    {
+      "q_num": 4,
+      "section_q_num": 4,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) You had better /(b) finish that report /(c)or your boss will not be upset. /(d) no error.",
+      "options": {
+        "a": "(a) You had better",
+        "b": "(b) finish that report",
+        "c": "(c) or your boss will not be upset.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"not\" after will.",
+      "solution": "Remove \"not\" after will. Here, the sentencegives the meaning that not finishing the report will make the boss upset."
+    },
+    {
+      "q_num": 5,
+      "section_q_num": 5,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) May your daughter /(b) live happily /(c)ever after /(d) no error.",
+      "options": {
+        "a": "(a) May your daughter",
+        "b": "(b) live happily",
+        "c": "(c) ever after",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 6,
+      "section_q_num": 6,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She should attend the /(b) conference tomorrowif /(c) her schedule allows /(d) no error.",
+      "options": {
+        "a": "(a) She should attend the",
+        "b": "(b) conference tomorrowif",
+        "c": "(c) her schedule allows",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"should\" with \"might\".",
+      "solution": "Replace \"should\" with \"might\". As \"might\"shows less possibility. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Modal Auxiliary Verb"
+    },
+    {
+      "q_num": 7,
+      "section_q_num": 7,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) You should better /(b) leave the /(c) officenow /(d) no error.",
+      "options": {
+        "a": "(a) You should better",
+        "b": "(b) leave the",
+        "c": "(c) officenow",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"should\" with \"had\".",
+      "solution": "Replace \"should\" with \"had\". To show urgencyor importance \"had better\" is used."
+    },
+    {
+      "q_num": 8,
+      "section_q_num": 8,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Nothing needs /(b) ought to be /(c) donefor now /(d) no error.",
+      "options": {
+        "a": "(a) Nothing needs",
+        "b": "(b) ought to be",
+        "c": "(c) donefor now",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"ought\" from part (b).",
+      "solution": "Remove \"ought\" from part (b). Here, needto be means there is no requirement or obligation for any action."
+    },
+    {
+      "q_num": 9,
+      "section_q_num": 9,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I couldn't /(b) be able to call /(c) heryesterday /(d) no error.",
+      "options": {
+        "a": "(a) I couldn't",
+        "b": "(b) be able to call",
+        "c": "(c) heryesterday",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"be able to\" from part (b).",
+      "solution": "Remove \"be able to\" from part (b). As can/couldis used to show ability, using 'able' with 'could' is superfluous."
+    },
+    {
+      "q_num": 10,
+      "section_q_num": 10,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) It is getting late, you /(b) would betterleave the office now /(c) or you will miss the last train /(d) no error.",
+      "options": {
+        "a": "(a) It is getting late, you",
+        "b": "(b) would betterleave the office now",
+        "c": "(c) or you will miss the last train",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"would\" with \"had\".",
+      "solution": "Replace \"would\" with \"had\".To show urgencyor importance \"had better\" is used."
+    },
+    {
+      "q_num": 11,
+      "section_q_num": 11,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He needs not work hard /(b) because he isrich enough /(c) to live a lavish life. /(d) no error.",
+      "options": {
+        "a": "(a) He needs not work hard",
+        "b": "(b) because he isrich enough",
+        "c": "(c) to live a lavish life.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"needs\" with \"need\".",
+      "solution": "Replace \"needs\" with \"need\"."
+    },
+    {
+      "q_num": 12,
+      "section_q_num": 12,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He used to be /(b) your teacher, /(c) usedn'the? /(d) no error.",
+      "options": {
+        "a": "(a) He used to be",
+        "b": "(b) your teacher,",
+        "c": "(c) usedn'the?",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"usedn't\" with \"didn't\".",
+      "solution": "Replace \"usedn't\" with \"didn't\". In thesentence with modal used to, question tag \"didn't\" is used."
+    },
+    {
+      "q_num": 13,
+      "section_q_num": 13,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We could /(b) leave for the airport soon/(c)to avoid traffic /(d) no error. Modal Auxiliary Verb",
+      "options": {
+        "a": "(a) We could",
+        "b": "(b) leave for the airport soon",
+        "c": "(c) to avoid traffic",
+        "d": "(d) no error. Modal Auxiliary Verb"
+      },
+      "answer": "a",
+      "correction": "Replace \"would\" with \"should\".",
+      "solution": "Replace \"would\" with \"should\". For mildobligations, \"should\" is used."
+    },
+    {
+      "q_num": 14,
+      "section_q_num": 14,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I should like /(b) to discuss the /(c) proposal with you /(d) no error.",
+      "options": {
+        "a": "(a) I should like",
+        "b": "(b) to discuss the",
+        "c": "(c) proposal with you",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"should\" with \"would\".",
+      "solution": "Replace \"should\" with \"would\". \"Would\"is used to form polite expressions."
+    },
+    {
+      "q_num": 15,
+      "section_q_num": 15,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I can suggest trying /(b) the new /(c) restaurantdowntown/(d) no error.",
+      "options": {
+        "a": "(a) I can suggest trying",
+        "b": "(b) the new",
+        "c": "(c) restaurantdowntown",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"can\" with \"would\".",
+      "solution": "Replace \"can\" with \"would\". \"Would\" isused to make offers or suggestions."
+    },
+    {
+      "q_num": 16,
+      "section_q_num": 16,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She said that /(b) she will go /(c) to themarket /(d) no error.",
+      "options": {
+        "a": "(a) She said that",
+        "b": "(b) she will go",
+        "c": "(c) to themarket",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". In indirectspeech, use the past form of \"will\"."
+    },
+    {
+      "q_num": 17,
+      "section_q_num": 17,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I can solve this /(b) math problem without/(c) any difficulty /(d) no error.",
+      "options": {
+        "a": "(a) I can solve this",
+        "b": "(b) math problem without",
+        "c": "(c) any difficulty",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 18,
+      "section_q_num": 18,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) You should consult /(b) a doctor if your/(c) symptoms persist /(d) no error.",
+      "options": {
+        "a": "(a) You should consult",
+        "b": "(b) a doctor if your",
+        "c": "(c) symptoms persist",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 19,
+      "section_q_num": 19,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Employees can attend /(b) the mandatory/(c) training session /(d) no error.",
+      "options": {
+        "a": "(a) Employees can attend",
+        "b": "(b) the mandatory",
+        "c": "(c) training session",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"can\" with \"must\".",
+      "solution": "Replace \"can\" with \"must\". To show compulsion,\"must\" is used."
+    },
+    {
+      "q_num": 20,
+      "section_q_num": 20,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Last year, I can speak only a /(b) few wordsin Spanish, /(c) but now I can hold a conversation /(d) no error.",
+      "options": {
+        "a": "(a) Last year, I can speak only a",
+        "b": "(b) few wordsin Spanish,",
+        "c": "(c) but now I can hold a conversation",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"can\" with \"could\".",
+      "solution": "Replace \"can\" with \"could\". For past abilities,\"could\" is used."
+    },
+    {
+      "q_num": 21,
+      "section_q_num": 1,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Children not go to the terraceat night.",
+      "options": {
+        "a": "Should",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Should'."
+    },
+    {
+      "q_num": 22,
+      "section_q_num": 2,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He read a book while watchingTV during his school days.",
+      "options": {
+        "a": "Would",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Would'."
+    },
+    {
+      "q_num": 23,
+      "section_q_num": 3,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He pass this time as he has workedsatisfactorily hard.",
+      "options": {
+        "a": "May",
+        "b": "Can",
+        "c": "Could",
+        "d": "Might"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'May'."
+    },
+    {
+      "q_num": 24,
+      "section_q_num": 4,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She said that she prepare dinnerherself.",
+      "options": {
+        "a": "Would",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Would'."
+    },
+    {
+      "q_num": 25,
+      "section_q_num": 5,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "his soul rest in peace.",
+      "options": {
+        "a": "May",
+        "b": "Can",
+        "c": "Could",
+        "d": "Might"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'May'."
+    },
+    {
+      "q_num": 26,
+      "section_q_num": 6,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They to play badminton everyday when they were in the college.",
+      "options": {
+        "a": "Used",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Used'."
+    },
+    {
+      "q_num": 27,
+      "section_q_num": 7,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You to go to Mumbai tomorrowto attend the seminar",
+      "options": {
+        "a": "Will Have",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Will Have'."
+    },
+    {
+      "q_num": 28,
+      "section_q_num": 8,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you stayed here, you notface the problem.",
+      "options": {
+        "a": "Would",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Would'."
+    },
+    {
+      "q_num": 29,
+      "section_q_num": 9,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "he had worked hard, he wouldhave passed.",
+      "options": {
+        "a": "Should",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Should'."
+    },
+    {
+      "q_num": 30,
+      "section_q_num": 10,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "you please help me lift thisbag ?",
+      "options": {
+        "a": "Could",
+        "b": "Can",
+        "c": "May",
+        "d": "Might"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Could'."
+    },
+    {
+      "q_num": 31,
+      "section_q_num": 11,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You to submit your file tothe authorities within a week.",
+      "options": {
+        "a": "Have",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Have'."
+    },
+    {
+      "q_num": 32,
+      "section_q_num": 12,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There. .be a school at thisplace",
+      "options": {
+        "a": "Used to",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Used to'."
+    },
+    {
+      "q_num": 33,
+      "section_q_num": 13,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nothing be done under such circumstances.",
+      "options": {
+        "a": "Can",
+        "b": "Could",
+        "c": "May",
+        "d": "Might"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Can'."
+    },
+    {
+      "q_num": 34,
+      "section_q_num": 14,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Had you made one more effort you have won the race.",
+      "options": {
+        "a": "Would",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Would'."
+    },
+    {
+      "q_num": 35,
+      "section_q_num": 15,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Work hard lest you fail.",
+      "options": {
+        "a": "Should",
+        "b": "Can",
+        "c": "Could",
+        "d": "May"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Appropriate modal is 'Should'."
+    }
+  ]
+}

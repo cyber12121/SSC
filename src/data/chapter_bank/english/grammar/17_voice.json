@@ -1,0 +1,1972 @@
+{
+  "chapter_num": 17,
+  "chapter_id": "17_voice",
+  "chapter_title": "Voice",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "voice",
+  "total_questions": 140,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "active_passive_voice",
+      "question": "The chef prepares delicious meals.",
+      "options": {
+        "a": "Delicious meals is prepared by the chef.",
+        "b": "Delicious meals are prepared by the chef.",
+        "c": "The chef are preparedthe delicious meal.",
+        "d": "Delicious meals are preparing by the chef."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Delicious meals are prepared by the chef.(Correct) (a) Delicious mealsisprepared by the chef.(IncorrectHelping Verb) (c) The chef are preparedthe delicious meal.(IncorrectSentence Structure) (d) Delicious meals arepreparingby the chef.(IncorrectForm of the Verb)"
+    },
+    {
+      "q_num": 2,
+      "type": "active_passive_voice",
+      "question": "The students completed their homework.",
+      "options": {
+        "a": "Homework was being completed by the students.",
+        "b": "Homework is completed by the students.",
+        "c": "Homeworkwas completed by a students.",
+        "d": "Homework was completed by the students."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Homework was completed by the students.(Correct) (a) Homework wasbeingcompleted by the students.(IncorrectUse of 'being') (b) Homeworkis completedby the students.(IncorrectTense) (c) Homeworkwas completed byastudents.(IncorrectArticle)"
+    },
+    {
+      "q_num": 3,
+      "type": "active_passive_voice",
+      "question": "The dog chased the cat up the tree.",
+      "options": {
+        "a": "The cat was chased up the tree by the dog.",
+        "b": "The cat was chased down the tree by the dog.",
+        "c": "The cat is chased up the tree by the dog.",
+        "d": "The cat was chased by the tree up the dog."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The cat was chased up the tree by the dog. (Correct) (b) The cat was chaseddownthe tree by the dog.(IncorrectPreposition) (c) The catis chasedup the tree by the dog.(IncorrectTense) (d) The cat was chased by the tree up the dog.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 4,
+      "type": "active_passive_voice",
+      "question": "The company launched a new product.",
+      "options": {
+        "a": "A new product was launched by the company.",
+        "b": "A new company was launched by the product.",
+        "c": "A new product was being launched by the company.",
+        "d": "A new product is launched by the company."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "A new product was launched by the company.(Correct) (b) A new company was launched by the product.(IncorrectSentence Structure) (c) A new productwas beinglaunched by the company.(IncorrectHelping Verb) (d) A new productis launchedby the company.(IncorrectTense)"
+    },
+    {
+      "q_num": 5,
+      "type": "active_passive_voice",
+      "question": "A beautiful landscape was painted by the artist.",
+      "options": {
+        "a": "Painting was a beautiful landscape of the artist.",
+        "b": "The artist was painting a beautiful landscape.",
+        "c": "The artist painted a beautiful landscape.",
+        "d": "The artist paints a beautiful landscape."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The artist painted a beautiful landscape. (Correct) (a) Painting was a beautiful landscape of the artist. (Incorrect Sentence Structure) (b) The artistwas paintinga beautiful landscape.(IncorrectVerb) (d) The artistpaintsa beautiful landscape.(IncorrectTense)"
+    },
+    {
+      "q_num": 6,
+      "type": "active_passive_voice",
+      "question": "The gardener plants flowers in the garden.",
+      "options": {
+        "a": "Flowers are being planted in the garden by the gardener.",
+        "b": "Flowers were planted in the garden by the gardener.",
+        "c": "Flowers are planted in the garden by the gardener.",
+        "d": "Flowers are planted in a garden by the gardener."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Flowers are planted in the garden by thegardener. (Correct) (a) Flowersare beingplanted in the garden by thegardener.(Incorrect Verb) (b) Flowerswereplanted in the garden by the gardener.(IncorrectTense) (d) Flowers are planted inagarden by the gardener.(IncorrectArticle)"
+    },
+    {
+      "q_num": 7,
+      "type": "active_passive_voice",
+      "question": "The mechanic fixed the car's engine.",
+      "options": {
+        "a": "The car's engine was fixed by the mechanic.",
+        "b": "The car's engine is fixed by the mechanic.",
+        "c": "The car's engine was fixed for the mechanic.",
+        "d": "The car's engine was fixing by the mechanic."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The car's enginewas fixedby the mechanic.(Correct) (b) The car's engineis fixedby the mechanic.(IncorrectTense) (c) The car's engine was fixedforthe mechanic.(IncorrectPreposition) (d) The car's engine wasfixingby the mechanic.(IncorrectForm of the Verb)"
+    },
+    {
+      "q_num": 8,
+      "type": "active_passive_voice",
+      "question": "The teacher explains the lesson to the students.",
+      "options": {
+        "a": "The lesson is being explained to the students by the teacher.",
+        "b": "The lesson is explained to the students by the teacher.",
+        "c": "The lesson was explaining to the students by the teacher.",
+        "d": "The lesson was explained to the students by the teacher."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The lesson is explained to the studentsby the teacher. (Correct) (a) The lessonis beingexplained to the studentsby the teacher.(Incorrect Helping Verb) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (c) The lessonwas explainingto the students by the teacher.(Incorrect Verb) (d) The lessonwas explainedto the students by theteacher.(Incorrect Tense)"
+    },
+    {
+      "q_num": 9,
+      "type": "active_passive_voice",
+      "question": "The children played in the park.",
+      "options": {
+        "a": "The park was played by the children.",
+        "b": "The park is played in by the children.",
+        "c": "The park are played in by the children.",
+        "d": "Passive voice cannot be formed"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Passive voice can not be formed. 'Played'is an intransitive verb in this sentence as it does not have any object. So, we cannot form its passive voice."
+    },
+    {
+      "q_num": 10,
+      "type": "active_passive_voice",
+      "question": "Experiments were conducted in the laboratoryby the scientist.",
+      "options": {
+        "a": "The scientist conducted experiments by the laboratory.",
+        "b": "The scientist conducts experiments in the laboratory.",
+        "c": "The laboratory conducted experiments for the scientist.",
+        "d": "The scientist conducted experiments in the laboratory."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "The scientist conducted experiments inthe laboratory. (Correct) (a) The scientist conducted experimentsbythe laboratory.(IncorrectPreposition) (b) The scientistconductsexperiments in the laboratory.(IncorrectTense) (c) The laboratoryconductedexperiments for the scientist.(IncorrectSentence Structure)"
+    },
+    {
+      "q_num": 11,
+      "type": "active_passive_voice",
+      "question": "Please don't forget to sign the document.",
+      "options": {
+        "a": "You are prohibited to forget to sign the document.",
+        "b": "You are requested not forget to sign the document.",
+        "c": "Don't forget to sign the document.",
+        "d": "You are requested not to forget to sign the document."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "You arerequestednot to forget to signthe document. (Correct) (a) You areprohibitedto forget to sign the document.(IncorrectVerb) (b) You are requestednot forgetto sign the document.('To'is missing) (c) Don't forget to sign the document.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 12,
+      "type": "active_passive_voice",
+      "question": "Kindly never arrive late to class again.",
+      "options": {
+        "a": "You are requested never to arrive late to class again.",
+        "b": "You are requested not to arrive late to class again.",
+        "c": "You are never requested to arrive late to class again.",
+        "d": "You are requested to never to arrive late to class again."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "You arerequested neverto arrive lateto class again. (Correct) (b) You are requestednottoarrive late to classagain.(Incorrect Adverb) (c) You areneverrequested toarrive late to classagain.(Incorrect Position of 'Never') (d) You are requestedtoneverto arrive late to classagain.('To' is not required)"
+    },
+    {
+      "q_num": 13,
+      "type": "active_passive_voice",
+      "question": "She looks after her younger brother.",
+      "options": {
+        "a": "Her younger brother was looked after by her.",
+        "b": "Her younger brother is looked before by her.",
+        "c": "Her younger brother is looked by her.",
+        "d": "Her younger brother is looked after by her."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Her younger brotheris lookedafter byher. (Correct) (a) Her younger brotherwaslooked after by her.(IncorrectTense) (b) Her younger brother is lookedbeforeby her.(IncorrectPreposition) (c) Her younger brother islooked byher.('After'is missing)"
+    },
+    {
+      "q_num": 14,
+      "type": "active_passive_voice",
+      "question": "Read the instructions carefully.",
+      "options": {
+        "a": "You are requested to read the instructions carefully.",
+        "b": "You are advised to read the instructions carefully.",
+        "c": "You are instructed to read the instructions carefully.",
+        "d": "Let us read the instructions carefully."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "You are advised to read the instructionscarefully. (Correct. The sentence expresses advice.) (a) You arerequestedto read the instructions carefully.(IncorrectVerb) (c) You areinstructedto read the instructions carefully.(IncorrectVerb) (d) Let us read the instruction carefully.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 15,
+      "type": "active_passive_voice",
+      "question": "She feels happy when she hears her favoritesong.",
+      "options": {
+        "a": "Happiness is felt when she hears her favorite song.",
+        "b": "Happiness was felt when she heard her favorite song.",
+        "c": "Happiness is felt when she heard her favorite song.",
+        "d": "Happiness was felt when she hears her favorite song."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Happiness is felt when she hears her favoritesong. (Correct) (b) Happinesswasfelt when sheheardher favoritesong.(Incorrect Tense) (c) Happiness is felt when sheheardher favoritesong.(Incorrect Tense) (d) Happinesswasfelt when she hears her favoritesong.(Incorrect Tense)"
+    },
+    {
+      "q_num": 16,
+      "type": "active_passive_voice",
+      "question": "They claim that he is the best candidate forthe job.",
+      "options": {
+        "a": "It is claimed that he is the best candidate for the job.",
+        "b": "It is suggested that he is the best candidate for the job.",
+        "c": "It is believed that he was the best candidate for the job.",
+        "d": "It is believed that he is the good candidate for the job."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "It is claimed that he is the best candidatefor the job. (Correct. The sentence expresses a claim.) (b) It issuggestedthat he is the best candidatefor the job.(Incorrect Verb) (c) It isbelievedthat hewasthe best candidatefor the job.(Incorrect Verb and Tense) (d) It isbelievedthat he is thegoodcandidate forthe job.(Incorrect Verb and Adjective)"
+    },
+    {
+      "q_num": 17,
+      "type": "active_passive_voice",
+      "question": "People say that she will win the competition.",
+      "options": {
+        "a": "That she will win the competition was said.",
+        "b": "People say that she will win the competition.",
+        "c": "It is said that she would win the competition.",
+        "d": "It is said that she will win the competition."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "It is said that she will win the competition.(Correct) (a)That she will win the competitionwassaid.(IncorrectTense) (b) People say that she will win the competition.(Voice has not been changed.) (c) It is said that shewouldwin the competition.(IncorrectModal)"
+    },
+    {
+      "q_num": 18,
+      "type": "active_passive_voice",
+      "question": "She can hear the birds singing in the morning.",
+      "options": {
+        "a": "The birds singing in the morning can be hear by her.",
+        "b": "The birds can be heard singing in the morning by she.",
+        "c": "The birds singing in the morning could be heard by her.",
+        "d": "The birds can be heard singing in the morning by her."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "The birds can be heard singing in the morningby her. (a)The birds singing in the morning can behear byher.(Incorrect Sentence Structure) (b) The birds can be heard singing in the morning byshe.(Incorrect Pronoun) (c)The birds singing in the morning could be heard by her.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 19,
+      "type": "active_passive_voice",
+      "question": "Which book did she borrow from the library?",
+      "options": {
+        "a": "Which book was borrowed by she from the library?",
+        "b": "Which book was borrowed for the library by her?",
+        "c": "Which book was borrowed by her from the library?",
+        "d": "Which book is borrowed from the library by her?"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Which book was borrowed by her from thelibrary? (Correct) (a) Which book was borrowed byshefrom the library?(Incorrect Pronoun) (b) Which book was borrowedforthe library by her?(Incorrect Preposition) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (d) Which bookis borrowedfrom the library by her? (Incorrect Tense)"
+    },
+    {
+      "q_num": 20,
+      "type": "active_passive_voice",
+      "question": "It is time to start the meeting.",
+      "options": {
+        "a": "The time for the meeting is about to start.",
+        "b": "It is time for the meeting to be started.",
+        "c": "It is a suitable time for the meeting to be started.",
+        "d": "It is time for the meeting to start."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "It is time for the meeting to be started.(Correct) (a) The time for the meeting is about to start. (Incorrect Sentence Structure) (c) It isa suitabletime for the meeting to be started.(Useof 'suitable' is not required.) (d) It is time for the meeting tostart.(IncorrectVerb)"
+    },
+    {
+      "q_num": 21,
+      "type": "active_passive_voice",
+      "question": "She remembers her mother cooking dinner everyevening.",
+      "options": {
+        "a": "She remembers dinner being cooked by her mother every evening.",
+        "b": "She remembers cooking dinner for her mother every evening.",
+        "c": "The cooked dinner by her mother is remembered by her every evening.",
+        "d": "The dinner is cooked and remembered every evening by her mother for her."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "She remembers dinner being cooked by hermother every evening. (Correct) (b) She remembers cooking dinner for her mother every evening.(Incorrect Sentence Structure) (c) The cooked dinner by her mother is remembered by her every evening.(Incorrect Sentence Structure) (d) The dinner is cooked and remembered every evening by her mother for her.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 22,
+      "type": "active_passive_voice",
+      "question": "Nimesh will not have changed the table cover.",
+      "options": {
+        "a": "The table cover will not have changed by Nimesh.",
+        "b": "Nimesh will not have been changed by the table cover",
+        "c": "She wants to be helped with the project by her friend.",
+        "d": "The table cover will not have been changed through Nimesh."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The table cover will not have been changedby Nimesh.(Correct) (a) The table cover will nothave changedby Nimesh.('Been'is missing) (b) Nimesh will not have been changed by the table cover.(Incorrect Sentence Structure) (d) The table cover will not have been changedthroughNimesh.(Incorrect Preposition)"
+    },
+    {
+      "q_num": 23,
+      "type": "active_passive_voice",
+      "question": "Disha will not arrange the things.",
+      "options": {
+        "a": "The things will not be arranged by Disha.",
+        "b": "Disha will not be arranged the things.",
+        "c": "The things should not be arranged by Disha.",
+        "d": "The things would not be arranged into Disha."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The things will not be arranged by Disha. (b) Disha will not be arranged the things.(Incorrect Sentence Structure ) (c) The thingsshouldnot be arranged by Disha.(IncorrectModal) (d) The things would not be arrangedintoDisha.(IncorrectPreposition)"
+    },
+    {
+      "q_num": 24,
+      "type": "active_passive_voice",
+      "question": "Let's go to the park this afternoon.",
+      "options": {
+        "a": "It is suggested that we should go to the park this afternoon.",
+        "b": "We should go to the park this afternoon.",
+        "c": "It is requested that we should go to the park this afternoon.",
+        "d": "It is stated that we should go to the park this afternoon."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "It is suggested that we should go to thepark this afternoon. (Correct) (b) We should go to the park this afternoon.(Incomplete Sentence) (c) It isrequestedthat we should go to the parkthis afternoon.(Incorrect Verb) (d) It isstatedthat we should go to the park thisafternoon.(Incorrect Verb)"
+    },
+    {
+      "q_num": 25,
+      "type": "active_passive_voice",
+      "question": "Let's complete the project by tomorrow.",
+      "options": {
+        "a": "Let the project complete by us by tomorrow.",
+        "b": "Let the project be completed by us by tomorrow.",
+        "c": "Let us the project be completed by us by tomorrow.",
+        "d": "Let the project be completed by us."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Let the projectbe completedby us by tomorrow.(Correct) (a) Let the projectcompleteby us by tomorrow. (IncorrectVerb) (c) Letusthe project be completed by us by tomorrow.(Incorrect) (d) Let the project be completed by us.(incomplete Sentence)"
+    },
+    {
+      "q_num": 26,
+      "type": "active_passive_voice",
+      "question": "She got her car repaired yesterday.",
+      "options": {
+        "a": "She repaired her car yesterday.",
+        "b": "She got a mechanic to repair her car yesterday.",
+        "c": "She got someone to repair her car yesterday.",
+        "d": "She got someone to repair her car the day before."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "She got someone to repair her car yesterday.(Correct) (a) She repaired her car yesterday.(Incorrect Meaning) (b) She gota mechanicto repair her car yesterday.(Incorrect) (d) She got someone to repair her carthe day before.(IncorrectAdverb)"
+    },
+    {
+      "q_num": 27,
+      "type": "active_passive_voice",
+      "question": "Not a single word did she say during the meeting.",
+      "options": {
+        "a": "Not a single word was said by her during the meeting.",
+        "b": "Not a single word she said during the meeting.",
+        "c": "Not a single word was said to her during the meeting.",
+        "d": "Not a single word was said by her."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Not a single word was said by her duringthe meeting. (Correct) (b) Not a single wordshe saidduring the meeting.(Incorrect) (c) Not a single word was saidtoher during the meeting.(IncorrectPreposition) (d) Not a single word was said by her.(Incomplete)"
+    },
+    {
+      "q_num": 28,
+      "type": "active_passive_voice",
+      "question": "She hears her neighbor singing in the morning.",
+      "options": {
+        "a": "Her neighbor's singing in the morning was heard by her.",
+        "b": "She heard a neighbour's singing in the morning..",
+        "c": "Her neighbor's dancing in the morning is heard by her.",
+        "d": "Her neighbor's singing in the morning is heard by her."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Her neighbor's singing in the morning isheard by her.(Correct) (b) She heard a neighbour's singing in the morning.(Incorrect Sentence) (c) Herneighbor's dancingin the morningis heardby her.(Incorrect Noun) (a) Her neighbor's singing in the morningwas heardby her. (Incorrect Tense)"
+    },
+    {
+      "q_num": 29,
+      "type": "active_passive_voice",
+      "question": "Don't forget to submit your assignment on time.",
+      "options": {
+        "a": "You are advised not to forget to submit your assignment by time.",
+        "b": "Your assignment should not be forgotten to be submitted at time.",
+        "c": "Your assignment should not forget to be submitted on time.",
+        "d": "Your assignment should not be forgotten to be submitted on time."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Your assignment should not be forgottento be submitted on time. (Correct) (a) You areadvised not to forgetto submit your assignmentbytime.(Incorrect Passive Structure) (b) Your assignment should not be forgotten to be submittedattime.(Incorrect Preposition) (c) Your assignmentshould not forgetto be submittedon time.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 30,
+      "type": "active_passive_voice",
+      "question": "She needs someone helping her with the project.",
+      "options": {
+        "a": "She needs to help with the project.",
+        "b": "She needs to be helped with the project.",
+        "c": "She needs helping with the project.",
+        "d": "She needed to be helped with the project."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "She needs to be helped with the project.(Correct) (a) She needsto helpwith the project.(IncorrectSentence Structure) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (c) She needshelpingwith the project.(Incorrect Verb) (d) Sheneededto be helped with the project.(IncorrectTense)"
+    },
+    {
+      "q_num": 31,
+      "type": "active_passive_voice",
+      "question": "The cake has been baked.",
+      "options": {
+        "a": "Someone has baked the cake.",
+        "b": "Someone have baked the cake.",
+        "c": "Someone has made the cake.",
+        "d": "The bakery has baked the cake."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Someone has baked the cake. (Correct) (b) Someonehave bakedthe cake.(Incorrect HelpingVerb) (c) Someonehas madethe cake.(Incorrect Verb) (d) Thebakeryhas baked the cake.(Incorrect Noun)"
+    },
+    {
+      "q_num": 32,
+      "type": "active_passive_voice",
+      "question": "Have they bought the apartment?",
+      "options": {
+        "a": "Has the apartment been bought by them?",
+        "b": "Her friend's singing in the choir was heard by her.",
+        "c": "Has the apartment bought by them?.",
+        "d": "Her friend's singing is heard by her."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Has the apartment been bought by them?(Correct) (b) Has the apartment been bought them?(Preposition 'by' is missing) (c) Has the apartmentboughtby them?('Been' is missing) (d) Has they been bought the apartment.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 33,
+      "type": "active_passive_voice",
+      "question": "Kindly bring your ID card to the meeting.",
+      "options": {
+        "a": "You are requested to bring your ID card in the meeting.",
+        "b": "You are requested to brought your ID card to the meeting.",
+        "c": "You are advised to bring your ID card in the meeting.",
+        "d": "You are requested to bring your ID card to the meeting."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "You are requested to bring your ID cardto the meeting. (Correct) (a) You are requested to bring your ID cardinthemeeting.(Incorrect Preposition) (b) You are requestedtobroughtyour ID card to themeeting.(Incorrect Verb) (c) You areadvisedto bring your ID card in the meeting.(Incorrectuse of 'advise')"
+    },
+    {
+      "q_num": 34,
+      "type": "active_passive_voice",
+      "question": "Don't hesitate to ask for help if you need it.",
+      "options": {
+        "a": "You should not afraid to ask for help if you need it.",
+        "b": "You should not be afraid to ask for help if you need it.",
+        "c": "You should not be afraid in asking for help if you need it.",
+        "d": "You should not be afraid to ask to help if you need it."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "You should not be afraid to ask for helpif you need it. (Correct) (a) You shouldnot afraidto ask for help if you needit.(Incorrect Sentence Structure) (c) You should not be afraidto asking for help ifyou need it.(Incorrect Verb) (d) You should not be afraid to asktohelp if youneed it.(Incorrect Preposition)"
+    },
+    {
+      "q_num": 35,
+      "type": "active_passive_voice",
+      "question": "They want the project completed by the end ofthe month.",
+      "options": {
+        "a": "The project needed to be completed by the end of the month.",
+        "b": "The project needs to complete by the end of the month.",
+        "c": "The project needs to be completed by the end of the month.",
+        "d": "The project needs to be completed in the end of the month."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The project needs to be completed by theend of the month. (Correct) (a) The projectneededto be completed by the endof the month.(Incorrect use of 'needed') (b) The project needs to complete by the end of the month.(Incorrect Sentence Structure) (d) The project needs to be completedinthe end ofthe month.(Incorrect Preposition)"
+    },
+    {
+      "q_num": 36,
+      "type": "active_passive_voice",
+      "question": "He requires the car fixing before the trip.",
+      "options": {
+        "a": "The car need to be fixed before the trip.",
+        "b": "Before the trip he requires the car to be fixed.",
+        "c": "The trip needs to be fixed before the trip.",
+        "d": "The car needs to be fixed before the trip."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "The car needs to be fixed before the trip.(Correct) (a) The carneedto be fixed before the trip.(IncorrectForm of the Verb) (b) Before the trip he requires the car to be fixed.(Incorrect Sentence Structure) (c) Thetripneeds to be fixed before the trip.(IncorrectNoun)"
+    },
+    {
+      "q_num": 37,
+      "type": "active_passive_voice",
+      "question": "Not a single word did she say during the meeting.",
+      "options": {
+        "a": "Not a single word was said by her during the meeting.",
+        "b": "Not a single words were said by her during the meeting.",
+        "c": "Not a single word was said by her in the meeting.",
+        "d": "Not a single word is said by her during the meeting."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Not a single word was said by her duringthe meeting. (Correct) (b) Not a singlewordswere said by her during themeeting.(Incorrect Noun) (c) Not a single word was said by herinthe meeting.(IncorrectPreposition) (d) Not a single wordissaid by her during the meeting.(IncorrectTense)"
+    },
+    {
+      "q_num": 38,
+      "type": "active_passive_voice",
+      "question": "It is time to start the game.",
+      "options": {
+        "a": "It is time for the game to be started.",
+        "b": "It was time for the game to be started.",
+        "c": "It is time for the game to start.",
+        "d": "It is time for the meeting to started."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "It is time for the game to be started.(Correct) (b) Itwastime for the game to be started.(IncorrectTense) (c) It is time for the game to start.(Incorrect Sentence Structure) (d) It is time for the game tostarted.('Be' is missing)"
+    },
+    {
+      "q_num": 39,
+      "type": "active_passive_voice",
+      "question": "She has her car repaired every month.",
+      "options": {
+        "a": "She gets someone to repair her car every month.",
+        "b": "She got someone to repair her car.",
+        "c": "She gets repairment of her car every month.",
+        "d": "She got someone for repairment of her car every month."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "She gets someone to repair her car everymonth. (Correct) (b) She got someone to repair her car.(Incorrect) (c) She getsrepairmentof her car every month.(IncorrectNoun) (d) Shegotsomeone for repairment of her car everymonth.(Incorrect Tense)"
+    },
+    {
+      "q_num": 40,
+      "type": "active_passive_voice",
+      "question": "Let's go to the beach tomorrow.",
+      "options": {
+        "a": "It is better for us that we should go to the beach tomorrow.",
+        "b": "It is a suggestion that we should go to the beach tomorrow.",
+        "c": "It is suggested that we should go to the beach tomorrow.",
+        "d": "It is suggested that we will go to the beach tomorrow."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "It is suggested that we should go to thebeach tomorrow. (Correct) (a) It isbetter forus that we should go to the beachtomorrow.(Incorrect use of 'better') (b) It isa suggestionthat we should go to the beachtomorrow.(Incorrect use of 'a suggestion') (d) It is suggested that wewillgo to the beach tomorrow.(IncorrectTense)"
+    },
+    {
+      "q_num": 41,
+      "type": "active_passive_voice",
+      "question": "It is her duty to submit the report by Friday.",
+      "options": {
+        "a": "She is supposed to submit the report by Friday.",
+        "b": "She is requested to submit the report by Friday.",
+        "c": "She is recommended to submit the report by Friday.",
+        "d": "She is wanted to submit the report by Friday. Voice"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "She is supposed to submit the report byFriday. (Correct) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (b) She is requestedto submit the report by Friday.(Incorrect Sentence Structure) (c) She is recommendedto submit the report by Friday.(IncorrectSentence Structure) (d) She is wanted to submit the report by Friday.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 42,
+      "type": "active_passive_voice",
+      "question": "She wants her friend to help her with the project.",
+      "options": {
+        "a": "She wants to be helped with the project by her friend.",
+        "b": "She wants to be helped in the project by her friend.",
+        "c": "She wants to be helped with.",
+        "d": "She wanted to be helped with the project by her friend."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "She wants to be helped with the projectby her friend. (Correct) (b) She wants to be helpedinthe project by her friend.(IncorrectPreposition) (c) She wants to be helped with.(Incomplete Sentence) (d) Shewantedto be helped with the project by herfriend.(Incorrect use of 'wanted')"
+    },
+    {
+      "q_num": 43,
+      "type": "active_passive_voice",
+      "question": "The student wants the teacher to guide his classmates.",
+      "options": {
+        "a": "The student wanted his classmates to guide by the teacher.",
+        "b": "The student wants his friends to be guided by the teacher.",
+        "c": "The student wants his classmates to guide by the teacher.",
+        "d": "The student wants his classmates to be guided by the teacher."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "The student wants his classmates to beguided by the teacher. (Correct) (a) The studentwanted his classmates to guide bythe teacher.(Incorrect Tense) (b) The student wantshis friendsto be guided bythe teacher.(Incorrect Sentence Structure) (c) The student wants his classmates to be guidedtothe teacher.(Incorrect Preposition)"
+    },
+    {
+      "q_num": 44,
+      "type": "active_passive_voice",
+      "question": "The committee elected John as the presidentof the club.",
+      "options": {
+        "a": "John was elected the president of the club by the committee.",
+        "b": "John was elected as the president of the club for the committee.",
+        "c": "John was elected the president of the club for the committee.",
+        "d": "John was elected as the president of the club by the committee."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "John was elected as the president of theclub by the committee. (Correct) (a) John waselected the presidentof the club bythe committee.(Incorrect Conjunction) (b) John was elected as the president of the clubforthe committee.(Incorrect Preposition) (c) John waselected thepresident of the club forthe committee.(Incorrect Conjunction)"
+    },
+    {
+      "q_num": 45,
+      "type": "active_passive_voice",
+      "question": "Who invited her to the party ?",
+      "options": {
+        "a": "To whom was she invited to the party ?",
+        "b": "By whom was she invited to the party ?",
+        "c": "Who was she invited to the party for ?",
+        "d": "Who was she invited to the party to ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "By whom was she invited to the party? (Correct) (a)To whom was she invited to the party? (IncorrectPreposition) (c) Who was she invited to the partyfor? (IncorrectPreposition) (d) Who was invited to the party by her? (IncorrectSentence)"
+    },
+    {
+      "q_num": 46,
+      "type": "active_passive_voice",
+      "question": "Who knows the answer to this question ?",
+      "options": {
+        "a": "By whom was the answer to this question known ?",
+        "b": "By whom is the answer to this question known ?",
+        "c": "Who is the answer to this question known to ?",
+        "d": "Who is the answer for this question known by ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "By whom is the answer to this questionknown? (Correct) (a) By whomwasthe answer to this question known?(IncorrectTense) (c) Who is the answer to this question knownto?(IncorrectPreposition) (d) Who is the answerforthis question known by?(IncorrectPreposition)"
+    },
+    {
+      "q_num": 47,
+      "type": "active_passive_voice",
+      "question": "Whom did she invite to the party ?",
+      "options": {
+        "a": "Who had been invited to the party by her ?",
+        "b": "Who was invited to the party by her ?",
+        "c": "Who was inviting to the party by her ?",
+        "d": "Who was invited to the party to her ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Who was invited to the party by her? (Correct) (a) Whohad beeninvited to the party by her?(Incorrect) (c) Whowas invitingto the party by her?(IncorrectVerb) (d) Who was invited to the partytoher?(Incorrectpreposition)"
+    },
+    {
+      "q_num": 48,
+      "type": "active_passive_voice",
+      "question": "They remember their teacher explaining the lessonyesterday.",
+      "options": {
+        "a": "They remember being explained the lesson yesterday by their teacher.",
+        "b": "They remember being explaining the lesson yesterday by their teacher.",
+        "c": "They remembered being explained the lesson yesterday by their teacher.",
+        "d": "They remember being explained the lesson the previous day by their teacher."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "They remember being explained the lessonyesterday by their teacher. (Correct) (b) They rememberbeing explaining the lesson yesterdayby their teacher.(Incorrect Verb) (c) Theyrememberedbeing explained the lesson yesterdayby their teacher.(Incorrect Verb) (d) They remember being explained the lesson thepreviousdayby their teacher.(Incorrect)"
+    },
+    {
+      "q_num": 49,
+      "type": "active_passive_voice",
+      "question": "Can I propose to hold a meeting ?",
+      "options": {
+        "a": "Could a meeting be proposed to hold by me ?",
+        "b": "Can a meeting be proposed to be hold by me ?",
+        "c": "Can a meeting be proposed to hold by me ?",
+        "d": "Can a meeting being proposed to hold by me ?"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Can a meeting be proposed to hold by me? (a)Coulda meeting be proposed to hold by me?(IncorrectModal) (b) Can a meeting be proposed tobehold by me?(Incorrectuse of 'be') (c) Can a meetingbeingproposed to hold by me?(Incorrectuse of 'being')"
+    },
+    {
+      "q_num": 50,
+      "type": "active_passive_voice",
+      "question": "People say that he is a talented musician.",
+      "options": {
+        "a": "It is believed that he is a talented musician.",
+        "b": "It was believed that he is a talented musician.",
+        "c": "It is believed that he is the talented musician.",
+        "d": "It is believed that he is a talenting musician."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "It is believed that he is a talented musician.(Correct) (b) Itwas believedthat he is a talented musician.(IncorrectTense) (c) It is believed that heisthetalented musician.(IncorrectArticle) (d) It is believed that he is atalentingmusician.(IncorrectAdjective)"
+    },
+    {
+      "q_num": 51,
+      "type": "active_passive_voice",
+      "question": "The teacher asked the students how they couldimprove their grades.",
+      "options": {
+        "a": "How they could improve their grades was asked by the teacher.",
+        "b": "The teacher was asked how they could improve their grades.",
+        "c": "How could they improve their grades was asked by the teacher.",
+        "d": "How they could improve their grades was asked."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "How they could improve their grades wasasked by the teacher. (Correct) (b) The teacher was asked how they could improve their grades.(Incorrect Sentence Structure) (c) How could they improve their grades was asked by the teacher.(Incorrect Sentence Structure) (d) How they could improve their grades was asked.(Incomplete) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice"
+    },
+    {
+      "q_num": 52,
+      "type": "active_passive_voice",
+      "question": "She wondered if he would come to the party.",
+      "options": {
+        "a": "If he will come to the party was wondered by her.",
+        "b": "If he would come to the party is wondered by her.",
+        "c": "If he would come to the party was wondered by her.",
+        "d": "If he will come to the party is wondered by her."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "If he would come to the party was wondered by her. (Correct) (a) If hewillcome to the party was wondered by her.(IncorrectModal) (b) If he would come to the partyiswondered by her.(Incorrectuse of 'is') (d) If hewillcome to the party is wondered by her.(IncorrectTense)"
+    },
+    {
+      "q_num": 53,
+      "type": "active_passive_voice",
+      "question": "He inquired whether they had finished the project.",
+      "options": {
+        "a": "If the project had been finished was inquired by them.",
+        "b": "Whether the project will finish was inquired by him.",
+        "c": "Whether the project had been finished is inquired by him.",
+        "d": "Whether the project had been finished was inquired by him."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Whether the project had been finished wasinquired by him. (Correct) (a) If the project had been finished was inquired bythem.(Incorrect Pronoun) (b) Whether the projectwill finishwas inquiredby him.(Incorrect Tense) (c) Whether the project had been finishedisinquiredby him.(Incorrect use of 'is')"
+    },
+    {
+      "q_num": 54,
+      "type": "active_passive_voice",
+      "question": "He dreams of traveling to outer space.",
+      "options": {
+        "a": "He dreamt of traveling to outer space.",
+        "b": "Outer space of traveling is dreamt by him.",
+        "c": "Traveling to outer space is dreamed by him.",
+        "d": "No passive is possible."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "no passive is possible."
+    },
+    {
+      "q_num": 55,
+      "type": "active_passive_voice",
+      "question": "Experiments are conducted in the laboratoryby the scientist.",
+      "options": {
+        "a": "Experiments conducted in the laboratory by the scientist.",
+        "b": "The scientist conducted experiments in the laboratory.",
+        "c": "The scientist conducts experiments in the laboratory.",
+        "d": "Experiments conducts in the laboratory by the scientist."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The scientist conducts experiments in thelaboratory. (Correct) (a) Experiments conductedin the laboratory by thescientist.(Incorrect Sentence Structure) (b) The scientistconductedexperiments in the laboratory.(IncorrectVerb) (d)Experiments conductsin the laboratory by thescientist.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 56,
+      "type": "active_passive_voice",
+      "question": "The mechanic fixes cars efficiently.",
+      "options": {
+        "a": "Cars are fixing efficiently by the mechanic.",
+        "b": "Cars are fixed efficiently through the mechanic.",
+        "c": "Cars are fixed by the mechanic efficiently.",
+        "d": "Cars are fixed efficiently by the mechanic."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Cars are fixed efficiently by the mechanic.(Correct) (a) Carsare fixing efficiently by the mechanic.(IncorrectVerb) (b) Cars are fixed efficientlythroughthe mechanic.(IncorrectPreposition ) (c) Cars are fixed by the mechanic efficiently.(Incorrect Sentence Structure)"
+    },
+    {
+      "q_num": 57,
+      "type": "active_passive_voice",
+      "question": "Broken appliances are repaired by them.",
+      "options": {
+        "a": "Broken appliances are repairing by them.",
+        "b": "They repair broken appliances.",
+        "c": "They repaired broken appliances.",
+        "d": "They repair broke appliances."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "They repair broken appliances. (Correct) (a) Broken appliances are repairing by them.(Incorrect Sentence Structure) (c) Theyrepairedbroken appliances.(Incorrect Tense) (d) They repairbrokeappliances.(Incorrect use of'broke')"
+    },
+    {
+      "q_num": 58,
+      "type": "active_passive_voice",
+      "question": "Tell the maid to prepare tea.",
+      "options": {
+        "a": "You are ordered to tell the maid to prepare tea.",
+        "b": "You are said to tell the maid to prepare tea.",
+        "c": "You are advised to tell the maid to prepare tea.",
+        "d": "You are asked to tell the maid to prepare tea."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "You are asked to tell the maid to preparetea. (a) You areorderedto tell the maid to prepare tea.(Incorrectuse of 'ordered') (b) You are asked to tellherto prepare tea.(IncorrectPronoun) (c) You areadvisedto tell the maid to prepare tea.(IncorrectVerb)"
+    },
+    {
+      "q_num": 59,
+      "type": "active_passive_voice",
+      "question": "Tourists should respect the local customs andtraditions.",
+      "options": {
+        "a": "Tourists are requested for respecting the local customs and traditions.",
+        "b": "Tourists are requested to respect the local customs and traditions.",
+        "c": "Tourists are instructed to respect the local customs and traditions.",
+        "d": "Tourists are commanded to respect the local customs and traditions."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Tourists are requested to respect the localcustoms and traditions. (Correct) (a) Tourists are requestedfor respectingthe localcustoms and traditions.(Incorrect Preposition) (c) Tourists are requestedto respecttheirlocalcustoms and traditions.(Incorrect Pronoun) (d) Tourists arecommandedto respect the local customsand traditions.(Incorrect use of 'commanded')"
+    },
+    {
+      "q_num": 60,
+      "type": "active_passive_voice",
+      "question": "Let the documents be signed by tomorrow.",
+      "options": {
+        "a": "The documents are to be signed by tomorrow.",
+        "b": "Sign the documents by tomorrow.",
+        "c": "The documents are let to sign by tomorrow.",
+        "d": "Let them sign the documents."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Sign the documents by tomorrow. (Correct) (a) The documentsare to besigned by tomorrow.(IncorrectVerb) (c) The documents are let to sign by tomorrow.(Incorrect Sentence Structure) (d) Let them sign the documents.(Incorrect)"
+    },
+    {
+      "q_num": 61,
+      "type": "active_passive_voice",
+      "question": "Has the car been cleaned by the driver ?",
+      "options": {
+        "a": "How has the driver cleaned the car ?",
+        "b": "Does the driver clean the car ?",
+        "c": "Has the driver cleaned the car ?",
+        "d": "Did the driver clean the car ?"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Has the driver cleaned the car? (Correct) (a)Howhas the driver cleaned the car? (IncorrectQuestion type (How)) (b)Doesthe driver clean the car? (Incorrect Tense) (d)Didthe driver clean the car? (Incorrect Tense)"
+    },
+    {
+      "q_num": 62,
+      "type": "active_passive_voice",
+      "question": "Preparations were being made for the sportsmeet at the school.",
+      "options": {
+        "a": "They have been making preparations for the sports meet at the school.",
+        "b": "They were making preparations for the sports meet at the school.",
+        "c": "They have started making preparations for the sports meet at the school.",
+        "d": "They have made preparations for the sports meet at the school."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "They were making preparations for the sportsmeet at the school. (Correct) (a) Theyhave beenmaking preparations for the sportsmeet at the school. (Incorrect Tense) (c) Theyhavestarted making preparations for thesports meet at the school. (Incorrect Tense) (d) Theyhave madepreparations for the sports meetat the school. (Incorrect Tense)"
+    },
+    {
+      "q_num": 63,
+      "type": "active_passive_voice",
+      "question": "By whom was this window pane broken ?",
+      "options": {
+        "a": "Who breaks this window pane ?",
+        "b": "Who broke this window pane ?",
+        "c": "Who has broken this window pane ?",
+        "d": "Who will break this window pane ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Who broke this window pane? (Correct) (a) Whobreaksthis window pane? (Incorrect Tense) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (c) Whohas brokenthis window pane? (Incorrect Tense) (d) Whowill breakthis window pane? (Incorrect Tense)"
+    },
+    {
+      "q_num": 64,
+      "type": "active_passive_voice",
+      "question": "A poster on Independence Day was made by Avika.",
+      "options": {
+        "a": "A poster was making Avika on Independence Day.",
+        "b": "Avika was making a poster on Independence Day.",
+        "c": "Avika is making a poster on Independence Day.",
+        "d": "Independence Day was making a poster on Avika."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Avika was making a poster on IndependenceDay. (Correct) (a) Aposter was making Avikaon Independence Day.(Incorrect Subject and Incorrect Object) (c) Avikaismaking a poster on Independence Day.(Incorrect Tense) (d)Independence Day was making a posteron Avika.(Incorrect Subject and Incorrect Object)"
+    },
+    {
+      "q_num": 65,
+      "type": "active_passive_voice",
+      "question": "More roles for women will be opened up in theranks of soldiers by the Indian army.",
+      "options": {
+        "a": "The Indian army has opened up more roles for women in the ranks of soldiers.",
+        "b": "More roles will open up for the Indian army in the ranks of women soldiers.",
+        "c": "The Indian army will open up more roles for women in the ranks of soldiers.",
+        "d": "Women will open up more roles for the Indian army in the ranks of soldiers."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The Indian army will open up more rolesfor women in the ranks of soldiers. (Correct) (a) The Indian armyhasopened up more roles for womenin the ranks of soldiers. (Incorrect Subject) (b)More roles will open upfor the Indian army inthe ranks of women soldiers. (Incorrect Tense) (d)Women will open upmore roles for the Indian armyin the ranks of soldiers. (Incorrect Subject)"
+    },
+    {
+      "q_num": 66,
+      "type": "active_passive_voice",
+      "question": "Pruning of trees in my colony has been startedby the horticulture department.",
+      "options": {
+        "a": "Pruning of trees in my colony has started the horticulture department.",
+        "b": "The horticulture department has been started pruning of trees in my colony.",
+        "c": "The horticulture department has started pruning of trees in my colony.",
+        "d": "The horticulture department will start pruning of trees in my colony"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The horticulture department has startedpruning of trees in my colony. (Correct) (a)Pruning of trees in my colony has startedthehorticulture department. (Incorrect Subject and object) (b) The horticulture departmenthas been startedpruningof trees in my colony. (Incorrect Tense) (d) The horticulture departmentwill startpruningof trees in my colony. (Incorrect Tense"
+    },
+    {
+      "q_num": 67,
+      "type": "active_passive_voice",
+      "question": "Mobile toilets were placed by the district administrationbehind the area where people assembled for army recruitment.",
+      "options": {
+        "a": "The district administration has placed mobile toilets behind the area where people assembled for army recruitment.",
+        "b": "The district administration is planning is place mobile toilets behind the area where people will assemble for army recruitment.",
+        "c": "The district administration placed mobile toilets behind the area where people assembled for army recruitment.",
+        "d": "The mobile toilets placed district administration behind the area where people assembled for army recruitment."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The district administration placed mobiletoilets behind the area where people assembled for army recruitment. (Correct) (a) The district administrationhasplaced mobiletoilets behind the area where people assembled for army recruitment. (Incorrect Tense) (b) The district administrationisplanning to placemobile toilets behind the area where people will assemblefor army recruitment. (Incorrect Tense) (d) Themobile toilets placed district administrationbehind the area where people assembled for army recruitment. (Incorrect Subject and object)"
+    },
+    {
+      "q_num": 68,
+      "type": "active_passive_voice",
+      "question": "The authorities are planning to lift restrictionson the movement of people in the Valley from the coming week.",
+      "options": {
+        "a": "It has been planned to lift restrictions on the movement of people in the Valley from the coming week.",
+        "b": "Restrictions on the movement of people in the Valley from the coming week are planning to lift the authorities in the Valley.",
+        "c": "It is being planned by the authorities to lift restrictions on the movement of people in the Valley from the coming week.",
+        "d": "Lifting restrictions on the movement of people in the Valley is planned from the coming week."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "It is being planned by the authoritiesto lift restrictions on the movement of people in the Valley from the coming week. (Correct) (a) Ithas beenplanned to lift restrictions on themovement of people in the Valley from the coming week. (Incorrect Tense and Subject) (b)Restrictions on the movement of peoplein theValley from the coming week are planning to lift theauthorities in the Valley. (Incorrect Subject and object) (d)Lifting restrictionson the movement of peoplein the Valley is planned from the coming week. (Incorrect Subject and Tense)"
+    },
+    {
+      "q_num": 69,
+      "type": "active_passive_voice",
+      "question": "A brick falling from the rooftop broke the frontglass of my car.",
+      "options": {
+        "a": "The glass of my car has broken a brick falling from the rooftop.",
+        "b": "The front glass of my car was broken by a brick falling from the rooftop.",
+        "c": "The front glass of my car had been broken by a brick falling from the rooftop.",
+        "d": "The front glass of my car has been broken by a brick falling from the rooftop."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The front glass of my car was broken bya brick falling from the roof top. (Correct) (a) The glass of my carhasbroken a brick fallingfrom the roof top. (Incorrect Subject and Tense) (c) The front glass of my carhad beenbroken by abrick falling from the roof top. (Incorrect Tense) (d) The front glass of my carhas beenbroken by abrick falling from the roof top. (Incorrect Tense)"
+    },
+    {
+      "q_num": 70,
+      "type": "active_passive_voice",
+      "question": "Your behaviour annoys me greatly.",
+      "options": {
+        "a": "I was greatly annoyed by your behaviour.",
+        "b": "I have been greatly annoyed by your behaviour.",
+        "c": "I am greatly annoyed by your behaviour.",
+        "d": "Your behaviour has been greatly annoyed by me."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "I am greatly annoyed by your behaviour.(Correct) (a) Iwasgreatly annoyed by your behaviour. (IncorrectTense) (b) Ihave beengreatly annoyed by your behaviour.(Incorrect Tense) (d) Your behaviourhas beengreatly annoyed by me.(Incorrect Subject, object and Tense)"
+    },
+    {
+      "q_num": 71,
+      "type": "active_passive_voice",
+      "question": "The Indian Army has inducted several women officersin infantry and Armoured Corps.",
+      "options": {
+        "a": "Several indian officers will be inducted by the Indian Army in infantry and Armoured Corps.",
+        "b": "Several indian officers were inducted by the Indian Army in infantry and Armoured Corps.",
+        "c": "Several indian officers are being inducted by the Indian Army in infantry and Armoured Corps.",
+        "d": "Several indian officers have been inducted by the Indian Army in infantry and Armoured Corps."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Several indian officers have been inductedby the Indian Army in infantry and Armoured Corps. (Correct) (a) Several Indian officerswill beinducted by theIndian Army in infantry and Armoured Corps. (Incorrect Tense) (b) Several Indian officerswereinducted by the IndianArmy in infantry and Armoured Corps. (Incorrect Tense) (c) Several Indian officersare beinginducted bythe Indian Army in infantry and Armoured Corps.(Incorrect Tense)"
+    },
+    {
+      "q_num": 72,
+      "type": "active_passive_voice",
+      "question": "Did you receive my letter ?",
+      "options": {
+        "a": "Did my letter was received by you ?",
+        "b": "Have you been received by my letter ?",
+        "c": "Was my letter received by you ?",
+        "d": "Has my letter been received by you ?"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Was my letter received by you? (Correct) (a)Didmy letter was received by you? (IncorrectTense) (b)Haveyou been received by my letter? (IncorrectTense) (d)Hasmy letter been received by you? (IncorrectTense) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice"
+    },
+    {
+      "q_num": 73,
+      "type": "active_passive_voice",
+      "question": "Please share your class notes with me.",
+      "options": {
+        "a": "Your class notes have been shared with me.",
+        "b": "You are requested to share your class notes with me.",
+        "c": "Why don't you share your class notes with me?",
+        "d": "You can share your class notes with me."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "You are requested to share your class notes with me. (Correct) (a) Your class noteshave beenshared with me. (IncorrectTense) (c) Whydon'tyou share your class notes with me?(Incorrect) (d) Youcanshare your class notes with me. (IncorrectTense)"
+    },
+    {
+      "q_num": 74,
+      "type": "active_passive_voice",
+      "question": "Doctors are constantly monitoring the conditionof the patient.",
+      "options": {
+        "a": "The condition of the patient has been constantly monitored by the doctors.",
+        "b": "The condition of the patient is being constantly monitored by the doctors.",
+        "c": "The condition of doctors is being constantly monitored by the patient.",
+        "d": "The condition of the patient is constantly monitored by the doctors."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The condition of the patient is being constantlymonitored by the doctors. (Correct) (a) The condition of the patienthas beenconstantlymonitored by the doctors. (Incorrect Tense) (c) Thecondition of doctorsis being constantlymonitoredby the patient. (Incorrect Subject and IncorrectObject) (d) The condition of the patientis constantlymonitoredby the doctors. (Incorrect Tense)"
+    },
+    {
+      "q_num": 75,
+      "type": "active_passive_voice",
+      "question": "Who can help me with Mathematics ?",
+      "options": {
+        "a": "By whom was I helped in Mathematics ?",
+        "b": "By whom can I be helped in Mathematics ?",
+        "c": "Could I be helped in Mathematics by somebody ?",
+        "d": "Whom did I help in Mathematics ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "By whom can I be helped in Mathematics?(Correct) (a) By whomwasI helped in Mathematics? (IncorrectTense) (c)CouldI be helped in Mathematics by somebody?(Incorrect Tense and object) (d) WhomdidI help in Mathematics? (Incorrect Tense)"
+    },
+    {
+      "q_num": 76,
+      "type": "active_passive_voice",
+      "question": "India and Bhutan signed ten MOUs in the fieldof space research, aviation, power and education.",
+      "options": {
+        "a": "Ten MOUs in the field of space research, aviation, power and education have been signed by India and Bhutan.",
+        "b": "Ten MOUs in the field of space research, aviation, power and education will be signed by India and Bhutan.",
+        "c": "Ten MOUs in the field of space research, aviation, power and education were signed by India and Bhutan.",
+        "d": "Ten MOUs in the field of space research, aviation, power and education are being signed by India and Bhutan."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Ten MOUs in the field of space research,aviation, power and education were signed by India and Bhutan. (Correct) (a) Ten MOUs in the field of space research, aviation, power and educationhave beensigned by India andBhutan.(Incorrect Tense) (b) Ten MOUs in the field of space research, aviation, power and educationwill besigned by India and Bhutan.(Incorrect Tense) (d) Ten MOUs in the field of space research, aviation, power and educationare beingsigned by India andBhutan.(Incorrect Tense)"
+    },
+    {
+      "q_num": 77,
+      "type": "active_passive_voice",
+      "question": "I am sure he will give me some advice aboutadmission in the University of Delhi.",
+      "options": {
+        "a": "I am sure he will be given some advice by me about admission in the University of Delhi.",
+        "b": "I am sure I will be given some advice by him about admission in the University of Delhi.",
+        "c": "I am sure I am given some advice by him about admission in the University of Delhi.",
+        "d": "I am sure I can be given some advice by him about admission in the University of Delhi"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "I am sure I will be given some advice byhim about admission in the University of Delhi. (Correct) (a) I am surehewill be given some advice bymeaboutadmission in the University of Delhi. (Incorrect Subject and object) (c) I am sure Iamgiven some advice by him aboutadmission in the University of Delhi. (Incorrect Tense) (d) I am sure Icanbe given some advice by him aboutadmission in the University of Delhi. (Incorrect Tense)"
+    },
+    {
+      "q_num": 78,
+      "type": "active_passive_voice",
+      "question": "Two children were shot dead by a psychopathduring the California music festival.",
+      "options": {
+        "a": "Two children were being shot dead by a psychopath during the California music festival.",
+        "b": "Two children are shot dead by a psychopath during the California music festival.",
+        "c": "A psychopath during the California music festival was shooting dead two children.",
+        "d": "A psychopath shot dead two children during the California music festival."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "A psychopath shot dead two children duringthe California music festival. (Correct) (a) Two childrenwere beingshot dead by a psychopathduring the California music festival. (Incorrect Subject, Object, and Tense) (b) Two childrenareshot dead by a psychopath duringthe California music festival. (Incorrect Subject, Object, and Tense) (c) A psychopath during the California music festivalwas shootingdead two children. (Incorrect Tense)"
+    },
+    {
+      "q_num": 79,
+      "type": "active_passive_voice",
+      "question": "Somebody feeds the stray dog daily.",
+      "options": {
+        "a": "Daily somebody has fed the stray dog.",
+        "b": "The stray dog was fed daily.",
+        "c": "The stray dog is fed daily by somebody.",
+        "d": "The stray dog will be fed daily."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The stray dog is fed daily by somebody.(Correct) (a) Daily somebodyhasfed the stray dog. (IncorrectSubject, Object, and Tense) (b) The stray dogwasfed daily. (Incorrect Tense) (d) The stray dogwill befed daily. (Incorrect Tense)"
+    },
+    {
+      "q_num": 80,
+      "type": "active_passive_voice",
+      "question": "Popular monuments will be kept open till 9 p.m.",
+      "options": {
+        "a": "They had kept popular monuments open till 9 p.m.",
+        "b": "They are keeping popular monuments open till 9 p.m.",
+        "c": "They will keep popular monuments open till 9 p.m.",
+        "d": "They will be keeping popular monuments open till 9 p.m."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "They will keep popular monuments open till9 p.m. (Correct) (a) Theyhadkept popular monuments open till 9 p.m.(Incorrect Tense (b) Theyare keepingpopular monuments open till 9p.m. (Incorrect Tense (d) Theywill be keepingpopular monuments open till9 p.m. (Incorrect Tense)"
+    },
+    {
+      "q_num": 81,
+      "type": "active_passive_voice",
+      "question": "By how many people were you helped in your timeof difficulty ?",
+      "options": {
+        "a": "How many people helped you in your time of difficulty ?",
+        "b": "How many people were you helping in time of difficulty ?",
+        "c": "How many people are you helped by in your time of difficulty ?",
+        "d": "In your time of difficulty how many people were you helped by ?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "How many people helped you in your timeof difficulty? (Correct) (b) How many peoplewere you helpingin time of difficulty?(Incorrect Tense) (c) How many peopleare you helpedby in your timeof difficulty? (Incorrect Tense) (d) In your time of difficulty how many peoplewereyou helped by? (Incorrect Tense)"
+    },
+    {
+      "q_num": 82,
+      "type": "active_passive_voice",
+      "question": "Nobody told me Vanita was unwell.",
+      "options": {
+        "a": "I wasn't being told by anybody that Vanita was unwell.",
+        "b": "I wasn't told by anybody that Vanita was unwell.",
+        "c": "Nobody told me Vanita was being unwell.",
+        "d": "Nobody tells me that Vanita was unwell."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "I wasn't told by anybody that Vanita wasunwell. (Correct) (a) I wasn'tbeing toldby anybody that Vanita wasunwell. (Incorrect Tense) (c) Nobody told me Vanitawas beingunwell. (IncorrectSubject, Object and Tense) (d) Nobodytellsme that Vanita was unwell. (IncorrectSubject, Object and Tense)"
+    },
+    {
+      "q_num": 83,
+      "type": "active_passive_voice",
+      "question": "Do not take the coastal road during monsoons.",
+      "options": {
+        "a": "You are not taking the coastal road during monsoons.",
+        "b": "You will not take the coastal road during monsoons.",
+        "c": "Coastal road is not being taken during monsoons.",
+        "d": "Coastal roads should not be taken during monsoons."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Coastal roads should not be taken duringmonsoons. (Correct) (a) Youare not takingthe coastal road during monsoons.(Incorrect Tense) (b) Youwill not takethe coastal road during monsoons.(Incorrect Tense) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (c) Coastal roadis not beingtaken during monsoons. (Incorrect Tense)"
+    },
+    {
+      "q_num": 84,
+      "type": "active_passive_voice",
+      "question": "The team manager is examining the documentsof all the players.",
+      "options": {
+        "a": "Examination of the documents of all the players was done by the team manager.",
+        "b": "The documents of all the players are being examined by the team manager.",
+        "c": "The documents of all the players the team manager is examining.",
+        "d": "The team manager has been examining the documents of all the players."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The documents of all the players are beingexamined by the team manager. (Correct) (a) Examination of the documents of all the playerswas doneby the team manager. (Incorrect Tense andIncorrect Subject) (c) The documents of all the players the team manageris examining. (Incorrect Tense and structure) (d) The team managerhas been examiningthe documentsof all the players. (Incorrect Tense, Subject and Object)"
+    },
+    {
+      "q_num": 85,
+      "type": "active_passive_voice",
+      "question": "Teenagers don't like being told what to do.",
+      "options": {
+        "a": "Being told what to do was not being liked by teenagers.",
+        "b": "Teenagers should not be told what to do.",
+        "c": "Being told what to do is not liked by teenagers.",
+        "d": "Teenagers are not liking being told what to do Voice"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Being told what to do is not liked by teenagers.(Correct) (a) Being told what to dowas not beingliked by teenagers.(Incorrect Tense) (b)Teenagers should not be toldwhat to do. (Incorrect) (d) Teenagersare not liking beingtold what to do.(Incorrect Tense, object and Subject)"
+    },
+    {
+      "q_num": 86,
+      "type": "active_passive_voice",
+      "question": "People are reading the articles on using plastic waste innovatively with interest.",
+      "options": {
+        "a": "The articles on innovative use of plastic waste are read with interest.",
+        "b": "The articles on using plastic waste innovatively are being read with interest.",
+        "c": "People have been reading the articles on using plastic waste innovatively with interest.",
+        "d": "People were reading the articles on using plastic waste innovatively with interest."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The articles on using plastic waste innovativelyare being read with interest. (Correct) (a) The articles on innovative use of plastic wasteare readwith interest. (Incorrect tense) (c) Peoplehave been readingthe articles on usingplastic waste innovatively with interest. (Incorrect tense and subject) (d) Peoplewere readingthe articles on using plasticwaste innovatively with interest. (Incorrect tense and subject)"
+    },
+    {
+      "q_num": 87,
+      "type": "active_passive_voice",
+      "question": "Please give me some more time to complete theassignments.",
+      "options": {
+        "a": "You may please give me some more time to complete the assignments.",
+        "b": "I am requesting you to give me some more time to complete the assignments.",
+        "c": "Some more time will be given to me to complete the assignments.",
+        "d": "I may please be given some more time to complete the assignments"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "I may please be given some more time tocomplete the assignments. (Correct) (a)You may please give mesome more time to completethe assignments. (incorrect sentence structure) (b) I amrequestingyou to give me some more timeto complete the assignments. (incorrect word) (c) Some more timewill be givento me to completethe assignments. (incorrect tense)"
+    },
+    {
+      "q_num": 88,
+      "type": "active_passive_voice",
+      "question": "They sealed all unauthorized farms on the highway.",
+      "options": {
+        "a": "All unauthorized farms on the highway were sealed.",
+        "b": "They are sealing all unauthorized farms on the highway.",
+        "c": "All unauthorized farms on the highway have sealed the authorities.",
+        "d": "The authorities were sealing all unauthorized farms on the highway."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "All unauthorized farms on the highway weresealed. (Correct) (b) Theyare sealingall unauthorized farms on thehighway. (Incorrect Tense and subject) (c) All unauthorized farms on the highwayhave sealedthe authorities. (Incorrect Tense) (d) The authoritieswere sealingall unauthorizedfarms on the highway. (Incorrect subject and object)"
+    },
+    {
+      "q_num": 89,
+      "type": "active_passive_voice",
+      "question": "Do you think that the government will acceptour demands ?",
+      "options": {
+        "a": "Do you think we will accept the government demands ?",
+        "b": "Do you think that our demands will be accepted by the government ?",
+        "c": "Do you think that the government is going to accept our demands ?",
+        "d": "Do you think that our demands have been accepted by the government ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Do you think that our demands will be acceptedby the government? (Correct) (a) Do you thinkwe will acceptthe government demands?( Incorrect Subject, object, tense) (c) Do you think that the governmentis goingto acceptour demands? (Incorrect Tense) (d) Do you think that our demandshave beenacceptedby the government? ( Incorrect Tense)"
+    },
+    {
+      "q_num": 90,
+      "type": "active_passive_voice",
+      "question": "How many languages are spoken in India ?",
+      "options": {
+        "a": "How many languages did the Indians speak ?",
+        "b": "How many languages are Indians speaking ?",
+        "c": "How many languages do people in India speak ?",
+        "d": "People have been speaking how many languages in India ?"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "How many languages do people in India speak?(Correct) (a) How many languages did the Indians speak? (Incorrect Tense) (b) How many languages are Indians speaking? (Incorrect Tense) (d) People have been speaking how many languages in India? (Incorrect Structure)"
+    },
+    {
+      "q_num": 91,
+      "type": "active_passive_voice",
+      "question": "High interest rates are alarming automobiledealers.",
+      "options": {
+        "a": "Automobile dealers is being alarmed by high interest rates.",
+        "b": "High interest rates has been alarmed by automobile dealers.",
+        "c": "High interest rates have alarmed automobile dealers.",
+        "d": "Automobile dealers are being alarmed by high interest rates."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Automobile dealers are being alarmed byhigh interest rates. (Correct) (a) Automobile dealersisbeing alarmed by high interestrates. (are should be used) (b) High interest rateshas beenalarmed by automobiledealers. (Incorrect tense, subject and object) (c) High interest rateshavealarmed automobile dealers.(Incorrect tense, subject and object)"
+    },
+    {
+      "q_num": 92,
+      "type": "active_passive_voice",
+      "question": "We have written all the library rules on thenotice-board.",
+      "options": {
+        "a": "All the library rules have been written on the notice-board.",
+        "b": "All the library rules were written on the notice-board.",
+        "c": "All the library rules are being written on the notice-board.",
+        "d": "We are writing all the library rules on the notice-board"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "All the library rules have been writtenon the notice-board. (Correct) (b) All the library ruleswerewritten on the notice-board.(Incorrect Tense) (c) All the library rulesare beingwritten on thenotice-board. (Incorrect Tense) (d) Weare writingall the library rules on the notice-board.(Incorrect Tense, Subject and Object)"
+    },
+    {
+      "q_num": 93,
+      "type": "active_passive_voice",
+      "question": "An apple carries about 100 million useful bacteria.",
+      "options": {
+        "a": "About 100 million useful bacteria are being carried by an apple.",
+        "b": "An apple will carry about 100 million useful bacteria.",
+        "c": "The useful bacteria to be carried in an apple is about 100 million.",
+        "d": "About 100 million useful bacteria are carried by an apple."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "About 100 million useful bacteria are carriedby an apple. (Correct) (a) About 100 million useful bacteriaare being carriedby an apple. (Incorrect Tense) (b) An applewill carryabout 100 million useful bacteria.(IncorrectTense) (c)The useful bacteria to be carried in an appleis about 100 million. (Incorrect)"
+    },
+    {
+      "q_num": 94,
+      "type": "active_passive_voice",
+      "question": "Preparations are being made for our Annual fest.",
+      "options": {
+        "a": "We are making preparations for our Annual fest.",
+        "b": "We have made preparations for our Annual fest.",
+        "c": "Preparations were being made for our Annual fest.",
+        "d": "Our Annual fest preparations are made. Voice"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "We are making preparations for our Annualfest.( Correct) (b) Wehavemade preparations for our Annual fest.(Incorrect Tense) (c) Preparationswere beingmade for our Annual fest.(Incorrect tense, Subject and Object) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (d) Our Annual fest preparationsare made. ( Incorrect)"
+    },
+    {
+      "q_num": 95,
+      "type": "active_passive_voice",
+      "question": "The play on environment issues was performed with great professionalism by our students.",
+      "options": {
+        "a": "Our students performed the play on environment issues with great professionalism.",
+        "b": "Our students were to perform with great professionalism the play on environment issue.",
+        "c": "Our students have been performing the play on environment issues with great professionalism.",
+        "d": "The play on environment issues was being performed with great professionalism by our students."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Our students performed the play on environmentissues with great professionalism. (Correct) (b) Our studentswere to performwith great professionalismthe play on environment issue. (Incorrect Tense and structure) (c) Our studentshave been performingthe play onenvironment issues with great professionalism. (Incorrect Tense) (d) The play on environment issueswas being performedwith great professionalism by our students. (Incorrect)"
+    },
+    {
+      "q_num": 96,
+      "type": "active_passive_voice",
+      "question": "Our home was built in 1990 by my father.",
+      "options": {
+        "a": "Our home was being built in 1990 by my father.",
+        "b": "My father had built our home in 1990.",
+        "c": "My father was building our home in 1990.",
+        "d": "My father built our home in 1990."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "My father built our home in 1990. ( Correct) (a) Our homewas beingbuilt in 1990 by my father.(Incorrect) (b) My fatherhad builtour home in 1990. (IncorrectTense) (c) My fatherwas buildingour home in 1990. (IncorrectTense)"
+    },
+    {
+      "q_num": 97,
+      "type": "active_passive_voice",
+      "question": "I regret the way I treated you.",
+      "options": {
+        "a": "I regret the way you were being treated by me.",
+        "b": "I regret the way you were treated by me.",
+        "c": "I regret the way I am treating you.",
+        "d": "I regret the way you treated me."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "I regret the way you were treated by me.(Correct) (a) I regret the way youwere beingtreated by me.(Incorrect Tense) (c) I regret the wayI am treating you. (IncorrectTense, subject and object) (d) I regret the wayyou treated me. (Incorrect Tense)"
+    },
+    {
+      "q_num": 98,
+      "type": "active_passive_voice",
+      "question": "I owe a big debt of gratitude to my mentor,Ms. Pallavi Dutta.",
+      "options": {
+        "a": "A big debt of gratitude had been owed by me to my mentor,Ms. Pallavi Dutta.",
+        "b": "A big debt of gratitude was owing by me to my mentor, Ms. Pallavi Dutta.",
+        "c": "A big debt of gratitude will be owed by to my mentor, Ms. Pallavi Dutta.",
+        "d": "A big debt of gratitude is owed by me to my mentor, Ms Pallavi Dutta."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "A big debt of gratitude is owed by me tomy mentor, Ms Pallavi Dutta. (Correct) (a) A big debt of gratitudehad beenowed by me tomy mentor,Ms. Pallavi Dutta. (Incorrect Tense) (b) A big debt of gratitudewas owingby me to mymentor,Ms. Pallavi Dutta. (Incorrect Tense) (c) A big debt of gratitudewill be owedby to mymentor, Ms. Pallavi Dutta. (Incorrect Tense)"
+    },
+    {
+      "q_num": 99,
+      "type": "active_passive_voice",
+      "question": "Did the boys take permission to go out today?",
+      "options": {
+        "a": "Are the boys taking permission to go out today ?",
+        "b": "Was permission to go out today taken by the boys ?",
+        "c": "Has permission to going out today been taking by the boys ?",
+        "d": "Had the boys taken permission to go out today ?"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Was permission to go out today taken bythe boys? (Correct) (a)Arethe boys taking permission to go out today?(Incorrect Tense, Subject and Object) (c)Haspermission to going out today been takingby the boys? (Incorrect Tense) (d)Hadthe boys taken permission to go out today? (Incorrect Tense,Subject and Object"
+    },
+    {
+      "q_num": 100,
+      "type": "active_passive_voice",
+      "question": "My friends persuaded me that I should forgivehim.",
+      "options": {
+        "a": "I was persuaded by my friends that he should be forgiven.",
+        "b": "I will have been persuaded by my friends to forgive him.",
+        "c": "I am being persuaded by my friends that he should be forgiven.",
+        "d": "I will be persuaded by my friends that he should be forgiven."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "I was persuaded by my friends that heshould be forgiven. (Correct) (b) Iwill have beenpersuaded by my friends to forgivehim. (Incorrect Tense) (c) Iam beingpersuaded by my friends that he shouldbe forgiven. (Incorrect Tense) (d) Iwill bepersuaded by my friends that he shouldbe forgiven. (Incorrect Tense)"
+    },
+    {
+      "q_num": 101,
+      "type": "active_passive_voice",
+      "question": "They shifted the venue of the conference.",
+      "options": {
+        "a": "The venue of the conference was shifted.",
+        "b": "The venue of the conference has been shifted.",
+        "c": "They are shifting the venue of the conference.",
+        "d": "They were shifting the venue of the conference."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The venue of the conference was shifted.(Correct) (b) The venue of the conferencehas beenshifted.(Incorrect Tense) (c) Theyare shiftingthe venue of the conference.(Incorrect Tense, Subject and Object) (d) Theywere shiftingthe venue of the conference.(Incorrect Tense)"
+    },
+    {
+      "q_num": 102,
+      "type": "active_passive_voice",
+      "question": "My grandmother believes that drinking a glassof milk at bedtime is essential for health.",
+      "options": {
+        "a": "It is believed by my grandmother that drinking a glass of milk at bedtime is essential for health.",
+        "b": "It is being believed by my grandmother that drinking a glass of milk at bedtime is essential for health.",
+        "c": "It will have been believed by my grandmother that drinking a glass of milk at bedtime is essential for health.",
+        "d": "It has been believed by my grandmother that drinking a glass of milk at bedtime is essential for health."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "It is believed by my grandmother thatdrinking a glass of milk at bedtime is essential for health. (Correct) (b) It isbeing believedby my grandmother that drinkinga glass of milk at bedtime is essential for health. (Incorrect Reported Verb) (c) Itwill have been believedby my grandmother thatdrinking a glass of milk at bedtime is essential for health. (Incorrect Reported Verb) (d) Ithas been believedby my grandmother that drinkinga glass of milk at bedtime is essential for health. (Incorrect Reported Verb)"
+    },
+    {
+      "q_num": 103,
+      "type": "active_passive_voice",
+      "question": "They are selling very good stationery here.",
+      "options": {
+        "a": "Very good stationery sells here.",
+        "b": "Very good stationery is being sold here.",
+        "c": "Stationery selling here is very good.",
+        "d": "Stationery selling has been very good here."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Very good stationery is being sold here.(Correct) (a) Very good stationerysellshere. (Incorrect Tense) (c)Stationery selling here isvery good. (IncorrectTense) (d) Stationery sellinghas beenvery good here. (IncorrectTense)"
+    },
+    {
+      "q_num": 104,
+      "type": "active_passive_voice",
+      "question": "The two little girls were playing a game ofdice.",
+      "options": {
+        "a": "The two little girls had played a game of dice.",
+        "b": "A game of dice was played by the two little girls.",
+        "c": "A game of dice was being played by the two little girls.",
+        "d": "The two little girls had been playing a game of dice."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "A game of dice was being played by thetwo little girls. (Correct) (a) The two little girlshadplayed a game of dice.(Incorrect Tense) (b) A game of dicewasplayed by the two little girls.(Incorrect Tense) (d) The two little girlshad beenplaying a game ofdice. (Incorrect Tense)"
+    },
+    {
+      "q_num": 105,
+      "type": "active_passive_voice",
+      "question": "To be a good speaker you need to memorize thesespeeches.",
+      "options": {
+        "a": "These speeches will be memorized by you to be a good speaker.",
+        "b": "To be a good speaker these speeches need to be memorized by you",
+        "c": "To be a good speaker these speeches need to memorize by you.",
+        "d": "To be a good speaker these speeches being memorized by you."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "To be a good speaker these speeches needto be memorized by you. (Correct) (a) These speecheswill bememorized by you to bea good speaker. (Incorrect Tense) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (c) To be a good speaker these speeches needto memorizeby you. (Incorrect Tense) (d) To be a good speaker these speechesbeing memorizedby you. (Incorrect Tense)"
+    },
+    {
+      "q_num": 106,
+      "type": "active_passive_voice",
+      "question": "It is known by everyone that the tournamentwill be won by us.",
+      "options": {
+        "a": "It is known to everyone that we are going to win the tournament.",
+        "b": "It is known that the tournament is going to be won by us.",
+        "c": "Everyone knows that we will win the tournament.",
+        "d": "Everyone knows that the tournament was won by us."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Everyone knows that we will win the tournament.(Correct) (a) It is known to everyone that weare goingto winthe tournament. (Incorrect) (b) It is known that the tournamentis goingto bewon by us. (Incorrect Tense, subject, object) (d) Everyone knows that the tournamentwas wonbyus. (Incorrect Tense and Subject)"
+    },
+    {
+      "q_num": 107,
+      "type": "active_passive_voice",
+      "question": "How were they managing the school for one yearwithout a Principal ?",
+      "options": {
+        "a": "How was the Principal managed for one year without a School ?",
+        "b": "How was the school managed for one year without a Principal ?",
+        "c": "How was the Principal being managed for one year without a School ?",
+        "d": "How was the school being managed for one year without a Principal ?"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "How was the school being managed for oneyear without a Principal? (Correct) (a) How was thePrincipal managed for one year withouta School? (Incorrect Tense, subject and object) (b) How was theschool managedfor one year withouta Principal? (Incorrect Tense) (c) How was thePrincipal being managedfor one yearwithout a School? (Incorrect Tense, subject and object)"
+    },
+    {
+      "q_num": 108,
+      "type": "active_passive_voice",
+      "question": "One should leave office on time to maintaingood work life balance.",
+      "options": {
+        "a": "Office is being left on time to maintain good work life balance.",
+        "b": "Office should be left on time to maintain good work life balance.",
+        "c": "Office has to be left on time to maintain good work life balance.",
+        "d": "Office will be left on time to maintain good work life balance."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Office should be left on time to maintaingood work life balance. (Correct) (a) Officeis being lefton time to maintain goodwork life balance. (Incorrect Tense) (c) Officehas to be lefton time to maintain goodwork life balance. (Incorrect Tense) (d) Officewill be lefton time to maintain good worklife balance. (Incorrect Tense)"
+    },
+    {
+      "q_num": 109,
+      "type": "active_passive_voice",
+      "question": "An interesting discussion is being held onenvironmental degradation.",
+      "options": {
+        "a": "They are holding an interesting discussion on environmental degradation.",
+        "b": "An interesting discussion had been held on environmental degradation.",
+        "c": "An interesting discussion is to be held on environmental degradation.",
+        "d": "They will be holding an interesting discussion on environmental degradation."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "They are holding an interesting discussionon environmental degradation. (correct) (b) An interesting discussionhad beenheld on environmentaldegradation. (incorrect tense) (c) An interesting discussionis to beheld on environmentaldegradation. (incorrect tense) (d) Theywill beholding an interesting discussionon environmental degradation. (incorrect tense)"
+    },
+    {
+      "q_num": 110,
+      "type": "active_passive_voice",
+      "question": "My art teacher asked me whether I had attendedher classes.",
+      "options": {
+        "a": "My art teacher was asking me whether I had attended her classes.",
+        "b": "My art teacher asks me whether I attended her classes.",
+        "c": "I was being asked by my art teacher whether I was attending her classes.",
+        "d": "I was asked by my art teacher whether I had attended her classes"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "I was asked by my art teacher whetherI had attended her classes. (Correct) (a) My art teacherwas askingme whether I had attendedher classes. (Incorrect Tense, Subject) (b) My art teacherasks mewhether I attended herclasses. (Incorrect Tense, Subject) (c) Iwas beingasked by my art teacher whether Iwas attending her classes. (Incorrect Tense)"
+    },
+    {
+      "q_num": 111,
+      "type": "active_passive_voice",
+      "question": "We expect an important announcement regardingforeign policy today.",
+      "options": {
+        "a": "An important announcement regarding foreign policy was expected today.",
+        "b": "We had been expected an important announcement regarding the foreign policy today.",
+        "c": "An important announcement regarding foreign policy is expected today.",
+        "d": "An important announcement regarding foreign policy will be expected today."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "An important announcement regarding theforeign policy is expected today. (Correct) (a) An important announcement regarding the foreign policywasexpected today. (Incorrect Tense) (b) Wehad beenexpected an important announcementregarding the foreign policy today. (Incorrect Tense and Subject) (d) An important announcement regarding the foreign policywill beexpected today. (Incorrect Tense)"
+    },
+    {
+      "q_num": 112,
+      "type": "active_passive_voice",
+      "question": "My birthday was celebrated by my colleaguesat the office today.",
+      "options": {
+        "a": "My colleagues have celebrated my birthday at the office today.",
+        "b": "My colleagues are celebrating my birthday at the office today.",
+        "c": "My colleagues will celebrate my birthday at the office today.",
+        "d": "My colleagues celebrated my birthday at the office today."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "My colleagues celebrated my birthday atthe office today.(Correct) (a) My colleagueshavecelebrated my birthday at theoffice today. (Incorrect Tense) (b) My colleaguesarecelebrating my birthday at theoffice today. (Incorrect Tense) (c) My colleagueswillcelebrate my birthday at theoffice today. (Incorrect Tense)"
+    },
+    {
+      "q_num": 113,
+      "type": "active_passive_voice",
+      "question": "Hillary Clinton and her daughter Chelsea areworking on \"The Book of Gutsy women.\"",
+      "options": {
+        "a": "\"The Book of Gutsy Women,\" is being worked upon by Hillary Clinton and her daughter Chelsea.",
+        "b": "Hillary Clinton and Chelsea will have worked upon \"The Book of Gutsy Women\".",
+        "c": "\"The Book of Gutsy Women\" would have been worked upon by Hillary Clinton and her daughter Chelsea.",
+        "d": "Hillary Clinton and her daughter Chelsea were working upon \"The Book of Gutsy Women.\""
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "'The Book of Gutsy Women,' is being workedupon by Hillary Clinton and her daughter Chelsea. (Correct) (b) Hillary Clinton and Chelseawill haveworked upon'The Book of Gutsy Women'. (Incorrect Tense) (c) 'The Book of Gutsy Women'would have beenworkedupon by Hillary Clinton and her daughter Chelsea. (Incorrect Tense, Subject and Object) (d) Hillary Clinton and her daughter Chelseawereworking upon 'The Book of Gutsy Women. (Incorrect Tense, Subject and Object)"
+    },
+    {
+      "q_num": 114,
+      "type": "active_passive_voice",
+      "question": "The monsoons spur the trees to sprout new leaves.",
+      "options": {
+        "a": "Trees were spurred to sprout new leaves by the monsoons.",
+        "b": "The monsoons will have spurred the trees to sprout new leaves.",
+        "c": "Trees are spurred by the monsoons to sprout new leaves.",
+        "d": "The monsoons are spurring the trees to sprout new leaves."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Trees are spurred by the monsoons to sproutnew leaves. (Correct) (a) Treeswerespurred to sprout new leaves by themonsoons. (Incorrect Tense) (b) The monsoonswill havespurred the trees to sproutnew leaves. (Incorrect Tense, Subject and Object) (d) The monsoonsare spurringthe trees to sproutnew leaves. (Incorrect Tense, Subject and Object)"
+    },
+    {
+      "q_num": 115,
+      "type": "active_passive_voice",
+      "question": "The prisoners have made these paintings.",
+      "options": {
+        "a": "These prisoners have been made by the paintings.",
+        "b": "These paintings were made by the prisoners.",
+        "c": "These paintings are made by the prisoners.",
+        "d": "These paintings have been made by the prisoners."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "These paintings have been made by theprisoners. (Correct) (a)These prisonershave been made bythe paintings.(Incorrect Subject and Object) (b) These paintingswere madeby the prisoners. (IncorrectTense) (c) These paintingsare madeby the prisoners. (IncorrectTense) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice"
+    },
+    {
+      "q_num": 116,
+      "type": "active_passive_voice",
+      "question": "The gardener has mowed the lawn.",
+      "options": {
+        "a": "The lawn was mowed by the gardener.",
+        "b": "The lawn has been mowed by the gardener.",
+        "c": "The lawn is mowed by the gardener.",
+        "d": "The gardener has been mowed by the lawn."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The lawn has been mowed by the gardener. (Correct) (a) The lawnwas mowedby the gardener. (IncorrectTense) (c) The lawnis mowedby the gardener. (IncorrectTense) (d)The gardener has been mowed by the lawn. (IncorrectSubject and Object)"
+    },
+    {
+      "q_num": 117,
+      "type": "active_passive_voice",
+      "question": "The Japanese Emperor Akihito abdicated theChrysanthemum Throne in April, 2019.",
+      "options": {
+        "a": "The Japanese Emperor Akihito was abdicated by the Chrysanthemum Throne in April, 2019.",
+        "b": "The Chrysanthemum Throne was abdicated by the Japanese Emperor Akihito in April, 2019.",
+        "c": "The Chrysanthemum Throne has abdicated by the Japanese Emperor Akihito in April, 2019.",
+        "d": "The Chrysanthemum Throne is abdicated by the Japanese Emperor Akihito in April, 2019"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The Chrysanthemum Throne was abdicatedby the Japanese Emperor Akihito in April, 2019. (Correct) (a)The Japanese Emperor Akihito was abdicated bythe Chrysanthemum Thronein April, 2019. (IncorrectSubject and Incorrect Object) (c) The Chrysanthemum Thronehas abdicatedby theJapanese Emperor Akihito in April, 2019. (Incorrect Tense) (d) The Chrysanthemum Throneis abdicatedby the JapaneseEmperor Akihito in April, 2019. (Incorrect Tense)"
+    },
+    {
+      "q_num": 118,
+      "type": "active_passive_voice",
+      "question": "Bill Gates has given away twenty seven percentof his wealth in charity.",
+      "options": {
+        "a": "Twenty seven percent of his wealth had been given away by Bill Gates in charity.",
+        "b": "Twenty seven percent of his wealth has given away Bill Gates in charity.",
+        "c": "Bill Gates has been given away by twenty seven percent of his wealth in charity.",
+        "d": "Twenty seven percent of his wealth has been given away by Bill Gates in charity"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Twenty seven percent of his wealth hasbeen given away by Bill Gates in charity. (Correct) (a) Twenty seven percent of his wealthhad been givenaway by Bill Gates in charity. (Incorrect Tense) (b) Twenty seven percent of his wealthhas given awayBill Gates in charity. (Incorrect Tense) (c)Bill Gates has been given away by twenty sevenpercentof his wealth in charity. (Incorrect subjectand object)"
+    },
+    {
+      "q_num": 119,
+      "type": "active_passive_voice",
+      "question": "The merchant took out the dead parrot fromthe cage.",
+      "options": {
+        "a": "The dead parrot took out from the cage by the merchant.",
+        "b": "The dead parrot is taken out from the cage by the merchant.",
+        "c": "The dead parrot was taking out from the cage by the merchant.",
+        "d": "The dead parrot was taken out from the cage by the merchant."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "The dead parrot was taken out from thecage by the merchant. (correct) (a) The dead parrottook outfrom the cage by themerchant. (Incorrect Tense) (b) The dead parrotis takenout from the cage bythe merchant. (Incorrect Tense) (c) The dead parrotwas taking outfrom the cage bythe merchant. (Incorrect Tense)"
+    },
+    {
+      "q_num": 120,
+      "type": "active_passive_voice",
+      "question": "The merchant brought many gifts for his familyfrom India.",
+      "options": {
+        "a": "Many gifts were brought by the merchant for his family from India.",
+        "b": "His family were brought by the merchant for many gifts from India.",
+        "c": "Many gifts brought by the merchant for his family from india.",
+        "d": "Many gifts are brought by the merchant for his family from India."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Many gifts were brought by the merchantfor his family from India. (Correct) (b)His family were brought by the merchant for manygifts from India. (Incorrect Tense, Subject and Object) (c) Many giftsbroughtby the merchant for his familyfrom india. (Incorrect Tense) (d) Many giftsare broughtby the merchant for hisfamily from India. (Incorrect Tense)"
+    },
+    {
+      "q_num": 121,
+      "type": "active_passive_voice",
+      "question": "The new gardener looks after the plants well.",
+      "options": {
+        "a": "The plants looked after well by the new gardener.",
+        "b": "The plants were looked after well by the new gardener.",
+        "c": "The plants are looked after well by the new gardener.",
+        "d": "The new gardener is looked after well by the plants."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The plants are looked after well by thenew gardener. (correct) (a) The plantslookedafter well by the new gardener.(Incorrect Tense) (b) The plantswere lookedafter well by the new gardener.(Incorrect Tense) (d)The new gardener is looked after well by the plants.(Incorrect Tense, subject and Object)"
+    },
+    {
+      "q_num": 122,
+      "type": "active_passive_voice",
+      "question": "The mechanic repaired my car quite satisfactorily.",
+      "options": {
+        "a": "My car repaired quite satisfactorily by the mechanic.",
+        "b": "The mechanic was repaired quite satisfactorily by my car.",
+        "c": "My car was repaired quite satisfactorily by the mechanic.",
+        "d": "My car is repaired quite satisfactorily by the mechanic."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "My car was repaired quite satisfactorilyby the mechanic. (correct) (a) My carrepairedquite satisfactorily by the mechanic.(Incorrect Tense) (b)The mechanic was repaired quite satisfactorilyby my car. (Incorrect Subject, Object) (d) My caris repairedquite satisfactorily by themechanic. (Incorrect Tense)"
+    },
+    {
+      "q_num": 123,
+      "type": "active_passive_voice",
+      "question": "How much monthly rent did you pay for the house?",
+      "options": {
+        "a": "How much monthly rent was paid for the house ?",
+        "b": "How much monthly rent is being paid for the house ?",
+        "c": "How much monthly rent was being paid for the house ?",
+        "d": "How much monthly rent is paid for the house ?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "How much monthly rent was paid for thehouse? (correct) (b) How much monthly rentis being paidfor the house?(Incorrect Tense) (c) How much monthly rentwas being paidfor the house?(Incorrect Tense) (d) How much monthly rentis paidfor the house? (IncorrectTense)"
+    },
+    {
+      "q_num": 124,
+      "type": "active_passive_voice",
+      "question": "Have you paid your outstanding bills ?",
+      "options": {
+        "a": "Have your outstanding bills been paid ?",
+        "b": "Are your outstanding bills being paid ?",
+        "c": "Have your outstanding bills being paid ?",
+        "d": "Will your outstanding bills be paid ?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Have your outstanding bills been paid? (Correct) (b)Are your outstanding bills beingpaid ? (IncorrectTense) (c) Have your outstanding billsbeingpaid ? (beenshould be used) (d)Will your outstanding bills bepaid ? (IncorrectTense)"
+    },
+    {
+      "q_num": 125,
+      "type": "active_passive_voice",
+      "question": "She answered fifty questions in one hour.",
+      "options": {
+        "a": "Fifty questions have been answered by her in one hour.",
+        "b": "Fifty questions were being answered by her in one hour.",
+        "c": "Fifty questions were answered by her in one hour.",
+        "d": "Fifty questions are answered by her in one hour."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Fifty questions were answered by her inone hour. (Correct) (a) Fifty questionshave been answeredby her in onehour. (Incorrect Tense) (b) Fifty questionswere being answeredby her inone hour. (Incorrect Tense) (d) Fifty questionsare answeredby her in one hour.(Incorrect Tense)"
+    },
+    {
+      "q_num": 126,
+      "type": "active_passive_voice",
+      "question": "They were distributing food grains among thepoor.",
+      "options": {
+        "a": "Food grains were being distributed among the poor.",
+        "b": "Food grains were distributed among the poor.",
+        "c": "The poor will be distributed among food grains",
+        "d": "Food grains will be distributed among the poor"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Food grains were being distributed amongthe poor. (Correct) (b) Food grainswere distributedamong the poor. (IncorrectTense) (c)The poor will be distributed among food grains.(Incorrect Tense, Subject and Object) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (d) Food grainswill bedistributed among the poor. (Incorrect Tense)"
+    },
+    {
+      "q_num": 127,
+      "type": "active_passive_voice",
+      "question": "The store manager caught the teenager shoplifting.",
+      "options": {
+        "a": "The store manager is caught shoplifting by the teenager",
+        "b": "the teenager is caught shoplifting by the store manager",
+        "c": "The teenager has been caught shoplifting by the store manager",
+        "d": "The teenager was caught shoplifting by the store manager"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "The teenager was caught shoplifting bythe store manager. (Correct) (a) The store manageris caughtshoplifting by theteenager. (Incorrect Tense) (b)The teenager is caught shoplifting by the storemanager. (Incorrect Tense, Subject and Object) (c) The teenagerhas been caughtshoplifting by thestore manager. (Incorrect Tense)"
+    },
+    {
+      "q_num": 128,
+      "type": "active_passive_voice",
+      "question": "The surgeon successfully operated upon thepatient.",
+      "options": {
+        "a": "The patient is being successfully operated upon by the surgeon.",
+        "b": "The patient is successfully operated upon by the surgeon.",
+        "c": "The patient was successfully operated upon by the surgeon.",
+        "d": "The surgeon has been successfully operated upon by the patient."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The patient was successfully operatedupon by the surgeon. (Correct) (a) The patientis beingsuccessfully operated uponby the surgeon. (Incorrect Tense) (b) The patientis successfully operatedupon by thesurgeon. (Incorrect Tense) (d)The surgeon has been successfully operated uponby the patient. (Incorrect Tense, Subject and Object)"
+    },
+    {
+      "q_num": 129,
+      "type": "active_passive_voice",
+      "question": "He threw the ball towards his little brother.",
+      "options": {
+        "a": "The ball was thrown towards his little brother.",
+        "b": "The ball is thrown towards his little brother.",
+        "c": "His little brother's ball was thrown at him.",
+        "d": "The ball is being thrown towards his little brother. Voice"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The ball was thrown towards his littlebrother. (Correct) (b) The ballisthrown towards his little brother.(Incorrect Tense) (c)His little brother's ballwas thrown at him. (Incorrect) (d) The ballis being throwntowards his little brother.(Incorrect Tense)"
+    },
+    {
+      "q_num": 130,
+      "type": "active_passive_voice",
+      "question": "Please lock the door.",
+      "options": {
+        "a": "The door should kindly being locked.",
+        "b": "You are requested to lock the door.",
+        "c": "You are being ordered to lock the door.",
+        "d": "Please let the door be lock."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "You are requested to lock the door. (Correct) (a) The doorshould kindly being locked. (Incorrect) (c) You arebeing orderedto lock the door. (beingordered should be replaced by \"requested\") (d)Please let the door be lock. (Incorrect)"
+    },
+    {
+      "q_num": 131,
+      "type": "active_passive_voice",
+      "question": "They will complete the painting in a week'stime.",
+      "options": {
+        "a": "The painting will be completed in a week's time.",
+        "b": "The painting was completed in a week's time.",
+        "c": "The painting is completed in a week's time.",
+        "d": "The painting had been completed in a week's time."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The painting will be completed in a week'stime. (Correct) (b) The paintingwas completedin a week's time. (IncorrectTense) (c) The paintingis completedin a week's time. (IncorrectTense) (d) The paintinghad been completedin a week's time.(Incorrect Tense)"
+    },
+    {
+      "q_num": 132,
+      "type": "active_passive_voice",
+      "question": "They are going to open the shops at eleveno'clock.",
+      "options": {
+        "a": "The shops must be opened at eleven o'clock.",
+        "b": "The shops were opened at eleven o'clock.",
+        "c": "The shops were opened at eleven o'clock.",
+        "d": "The shops have been opened at eleven o'clock."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The shops are going to be opened at eleveno'clock. (Correct) (a) The shopsmust beopened at eleven o'clock. (IncorrectTense) (b) The shopswere openedat eleven o'clock. (IncorrectTense) (d) The shopshave been openedat eleven o'clock.(Incorrect Tense)"
+    },
+    {
+      "q_num": 133,
+      "type": "active_passive_voice",
+      "question": "They will not allow mobile phones in the examinationhall.",
+      "options": {
+        "a": "Mobile phones were not allowed in the examination hall.",
+        "b": "Mobile phones are not being allowed in the examination hall.",
+        "c": "Mobile phones will not be allowed in the examination hall.",
+        "d": "Mobile phones are not allowed in the examination hall."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Mobile phones will not be allowed in theexamination hall. (Correct) (a) Mobile phoneswere notallowed in the examinationhall. (Incorrect Tense) (b) Mobile phonesare not being allowedin the examinationhall. (Incorrect Tense) (d) Mobile phonesare not allowedin the examinationhall. (Incorrect Tense)"
+    },
+    {
+      "q_num": 134,
+      "type": "active_passive_voice",
+      "question": "You have made a mistake in writing your answer.",
+      "options": {
+        "a": "A mistake has been made by you in writing your answer.",
+        "b": "A mistake have been made by you in writing your answer.",
+        "c": "A mistake is being made by you in writing your answer.",
+        "d": "A mistake had been made by you in writing your answer."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "A mistake has been made by you in writingyour answer. (Correct) (b) A mistakehave been madeby you in writing youranswer. (Incorrect Tense) (c) A mistakeis being madeby you in writing youranswer. (Incorrect Tense) (d) A mistakehad been madeby you in writing youranswer. (Incorrect Tense)"
+    },
+    {
+      "q_num": 135,
+      "type": "active_passive_voice",
+      "question": "His mother gave him a note for his teacher.",
+      "options": {
+        "a": "He had been given a note for his teacher by his mother.",
+        "b": "He is given a note for his teacher by his mother.",
+        "c": "He was given a note for his teacher by his mother.",
+        "d": "His teacher was given a note for his mother."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "He was given a note for his teacher byhis mother. (Correct) (a) Hehad been givena note for his teacher by hismother. (Incorrect Tense) (b) Heis givena note for his teacher by his mother.(Incorrect Tense) (d)His teacher was given a notefor his mother. (IncorrectTense, Subject)"
+    },
+    {
+      "q_num": 136,
+      "type": "active_passive_voice",
+      "question": "The chief guest gave prizes to the children.",
+      "options": {
+        "a": "The children were being given prizes by the chief guest",
+        "b": "The children are given prizes by the chief guest.",
+        "c": "The children were given prizes by the chief guest.",
+        "d": "The children was given prizes by the chief guest."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "The children were given prizes by thechief guest. (Correct) (a) The childrenwere being givenprizes by the chiefguest. (Incorrect Tense) (b) The childrenare given prizesby the chief guest.(Incorrect Tense) (d) The childrenwas given prizesby the chief guest.(was should be replaced with were)"
+    },
+    {
+      "q_num": 137,
+      "type": "active_passive_voice",
+      "question": "Someone gave him a new case for his creditcards.",
+      "options": {
+        "a": "He is given a new case for his credit cards.",
+        "b": "He had given a new case for his credit cards.",
+        "c": "He was given a new case for his credit cards.",
+        "d": "He has given a new case for his credit card"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "He was given a new case for his creditcards. (Correct) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Voice (a) Heisgiven a new case for his credit cards. (Incorrect Tense) (b) Hehad givena new case for his credit cards.(Incorrect Tense) (d) Hehas givena new case for his credit cards.(Incorrect Tense)"
+    },
+    {
+      "q_num": 138,
+      "type": "active_passive_voice",
+      "question": "The cyclone has damaged several crops.",
+      "options": {
+        "a": "Several crops are being damaged by the cyclone.",
+        "b": "Several crops had been damaged by the cyclone.",
+        "c": "Several crops have been damaged by the cyclone.",
+        "d": "Several crops have damaged the cyclone."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Several crops have been damaged by thecyclone. (Correct) (a) Several cropsare beingdamaged by the cyclone.(Incorrect Tense) (b) Several cropshad beendamaged by the cyclone.(Incorrect Tense) (d) Several cropshave damagedthe cyclone. (IncorrectTense)"
+    },
+    {
+      "q_num": 139,
+      "type": "active_passive_voice",
+      "question": "Everyone should obey traffic regulations.",
+      "options": {
+        "a": "Traffic regulations are obeyed by everyone.",
+        "b": "Traffic regulations should be obey by everyone.",
+        "c": "Traffic regulations should be obeyed by everyone.",
+        "d": "Traffic regulations will be obeyed by everyone"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Traffic regulations should be obeyed byeveryone. (Correct) (a) Traffic regulationsareobeyed by everyone. (IncorrectTense) (b) Traffic regulations should beobeyby everyone.(Incorrect ) (d) Traffic regulationswill be obeyedby everyone.(Use \"should\" instead of \"will\")"
+    },
+    {
+      "q_num": 140,
+      "type": "active_passive_voice",
+      "question": "The principal convened an urgent meeting todiscuss the changed schedule of the board exams.",
+      "options": {
+        "a": "An urgent meeting was convened by the principal to discuss the changed schedule of the board exams.",
+        "b": "An urgent meeting was convened to discuss the changed schedule of the board exams.",
+        "c": "The changed schedule of the board exams was discussed at the meeting urgently called by the principal.",
+        "d": "The changed schedule of the board exams were discussed at the meeting urgently called by the principal."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "An urgent meeting was convened by theprincipal to discuss the changed schedule of the board exams. (Correct) (b) An urgent meeting was convened to discuss the changed schedule of the board exams. ('the principal' is missing) (c)Thechangedscheduleoftheboardexamswasdiscussedatthemeetingurgentlycalledbytheprincipal.('convened'ismissing) (d) The changed schedule of the board examswerediscussedat the meeting urgently called by the principal. (Incorrect verb) www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

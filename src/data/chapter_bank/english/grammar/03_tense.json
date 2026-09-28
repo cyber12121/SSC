@@ -1,0 +1,3852 @@
+{
+  "chapter_num": 3,
+  "chapter_id": "03_tense",
+  "chapter_title": "Tense",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "tense",
+  "total_questions": 240,
+  "questions": [
+    {
+      "q_num": 1,
+      "section_q_num": 1,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I am visiting this city for / (b) the firsttime so I'm /(c) excited to explore its attractions /(d) no error.",
+      "options": {
+        "a": "(a) I am visiting this city for",
+        "b": "(b) the firsttime so I'm",
+        "c": "(c) excited to explore its attractions",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 2,
+      "section_q_num": 2,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) At present, the company /(b) undergoes significant/(c)changes to enhance its services/(d) no error.",
+      "options": {
+        "a": "(a) At present, the company",
+        "b": "(b) undergoes significant",
+        "c": "(c) changes to enhance its services",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"undergoes\" with \"is undergoing\".",
+      "solution": "Replace \"undergoes\" with \"is undergoing\".(\"At present\" is used to show the temporary nature of action, so present continuous tense will be used.)"
+    },
+    {
+      "q_num": 3,
+      "section_q_num": 3,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Ever since she has visited Paris, /(b) shehas been passionate /(c) about French cuisine /(d) no error.",
+      "options": {
+        "a": "(a) Ever since she has visited Paris,",
+        "b": "(b) shehas been passionate",
+        "c": "(c) about French cuisine",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"has visited\" with \"visited\".",
+      "solution": "Replace \"has visited\" with \"visited\". (Inpresent perfect /present perfect continuous tense, the second form of the verb is used with since/ ever since.)"
+    },
+    {
+      "q_num": 4,
+      "section_q_num": 4,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Aamir is going /(b) to Church /(c) everysunday /(d) no error.",
+      "options": {
+        "a": "(a) Aamir is going",
+        "b": "(b) to Church",
+        "c": "(c) everysunday",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"is going\" with \"goes\".",
+      "solution": "Replace \"is going\" with \"goes\". (For habitualaction, simple present tense is used.)"
+    },
+    {
+      "q_num": 5,
+      "section_q_num": 5,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The headquarters /(b) is being /(c) situatedin Mumbai /(d) no error.",
+      "options": {
+        "a": "(a) The headquarters",
+        "b": "(b) is being",
+        "c": "(c) situatedin Mumbai",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"being\" from part (b).",
+      "solution": "Remove \"being\" from part (b). (For permanentsituations, use simple present tense.)"
+    },
+    {
+      "q_num": 6,
+      "section_q_num": 6,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) It is taking /(b) two to make /(c) a quarrel/(d) no error.",
+      "options": {
+        "a": "(a) It is taking",
+        "b": "(b) two to make",
+        "c": "(c) a quarrel",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"is taking\" with \"takes\".",
+      "solution": "Replace \"is taking\" with \"takes\". (Proverbsor quotations are written in simple present tense)."
+    },
+    {
+      "q_num": 7,
+      "section_q_num": 7,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Impossible is a word /(b) which is foundin the /(c) dictionary of fools /(d) no error.",
+      "options": {
+        "a": "(a) Impossible is a word",
+        "b": "(b) which is foundin the",
+        "c": "(c) dictionary of fools",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 8,
+      "section_q_num": 8,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) You will went /(b) to the market /(c) withhim /(d) no error.",
+      "options": {
+        "a": "(a) You will went",
+        "b": "(b) to the market",
+        "c": "(c) withhim",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"went\" with \"go\".",
+      "solution": "Replace \"went\" with \"go\". (For future tense,will/shall + first form of the verb is used.)"
+    },
+    {
+      "q_num": 9,
+      "section_q_num": 9,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Now a days, she /(b) is not sitting /(c)beside her colleague /(d) no error.",
+      "options": {
+        "a": "(a) Now a days, she",
+        "b": "(b) is not sitting",
+        "c": "(c) beside her colleague",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 10,
+      "section_q_num": 10,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Shivani finds the errors /(b) because themanager /(c) has asked her to do so /(d) no error.",
+      "options": {
+        "a": "(a) Shivani finds the errors",
+        "b": "(b) because themanager",
+        "c": "(c) has asked her to do so",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"finds\" with \"is finding\".",
+      "solution": "Replace \"finds\" with \"is finding\". Thepresent continuous tense is used when a habitual action is taking place with a cause and an effect."
+    },
+    {
+      "q_num": 11,
+      "section_q_num": 11,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The train left /(b) the station at 7 AM/(c) every day /(d) no error.",
+      "options": {
+        "a": "(a) The train left",
+        "b": "(b) the station at 7 AM",
+        "c": "(c) every day",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"left\" with \"leaves\".",
+      "solution": "Replace \"left\" with \"leaves\". For repeatedactions, simple present tense is used."
+    },
+    {
+      "q_num": 12,
+      "section_q_num": 12,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We will be understanding /(b) the instructions/(c) given in the seminar. /(d) no error.",
+      "options": {
+        "a": "(a) We will be understanding",
+        "b": "(b) the instructions",
+        "c": "(c) given in the seminar.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"will be understanding\" with \"willunderstand\".",
+      "solution": "Replace \"will be understanding\" with \"willunderstand\". With stative verbs, simple tense is used. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Tenses"
+    },
+    {
+      "q_num": 13,
+      "section_q_num": 13,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) While I was /(b) studying, my brother /(c)played video games /(d) no error.",
+      "options": {
+        "a": "(a) While I was",
+        "b": "(b) studying, my brother",
+        "c": "(c) played video games",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"played\" with \"was playing\".",
+      "solution": "Replace \"played\" with \"was playing\". When two actions are happening at the same time, past continuous tense is used."
+    },
+    {
+      "q_num": 14,
+      "section_q_num": 14,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I will have been worked /(b) on this projectfor three /(c) months by the deadline/(d) no error.",
+      "options": {
+        "a": "(a) I will have been worked",
+        "b": "(b) on this projectfor three",
+        "c": "(c) months by the deadline",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace 'worked\" with \"working\".",
+      "solution": "Replace 'worked\" with \"working\". Here,future perfect continuous tense has been used"
+    },
+    {
+      "q_num": 15,
+      "section_q_num": 15,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) By the time you arrive, /(b) I will havefinish /(c) cooking dinner./(d) no error.",
+      "options": {
+        "a": "(a) By the time you arrive,",
+        "b": "(b) I will havefinish",
+        "c": "(c) cooking dinner.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"finish\" with \"finished\".",
+      "solution": "Replace \"finish\" with \"finished\". In thefuture perfect tense, the structure is \"will have + past participle.\" The past participle of the verb \"finish\" is \"finished.\""
+    },
+    {
+      "q_num": 16,
+      "section_q_num": 16,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The garden flourishes /(b) day by day withthe /(c) care and attention it receives/(d) no error.",
+      "options": {
+        "a": "(a) The garden flourishes",
+        "b": "(b) day by day withthe",
+        "c": "(c) care and attention it receives",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"flourishes\" with \"is flourishing\".",
+      "solution": "Replace \"flourishes\" with \"is flourishing\".\"Day by day\" is used to show the temporary nature of action and a gradual process, so present continuous tense will be used."
+    },
+    {
+      "q_num": 17,
+      "section_q_num": 17,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If I had a fifty /(b) rupee note, I will/(c) give it to you /(d) no error.",
+      "options": {
+        "a": "(a) If I had a fifty",
+        "b": "(b) rupee note, I will",
+        "c": "(c) give it to you",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". If the mainclause is in the past, the other clause will also be in the past."
+    },
+    {
+      "q_num": 18,
+      "section_q_num": 18,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) If Only /(b) I were a /(c) child again /(d)no error.",
+      "options": {
+        "a": "(a) If Only",
+        "b": "(b) I were a",
+        "c": "(c) child again",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error"
+    },
+    {
+      "q_num": 19,
+      "section_q_num": 19,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) These days, many individuals /(b) opt forremote work to /(c) achieve a better work-life balance /(d) no error.",
+      "options": {
+        "a": "(a) These days, many individuals",
+        "b": "(b) opt forremote work to",
+        "c": "(c) achieve a better work-life balance",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"opt\" with \"are opting\".",
+      "solution": "Replace \"opt\" with \"are opting\". \"Thesedays\" is used to show the temporary nature of action, so present continuous tense will be used."
+    },
+    {
+      "q_num": 20,
+      "section_q_num": 20,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She had expected /(b) to be the winner ofthe /(c) game and she is/(d) no error.",
+      "options": {
+        "a": "(a) She had expected",
+        "b": "(b) to be the winner ofthe",
+        "c": "(c) game and she is",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"had\" from part (a).",
+      "solution": "Remove \"had\" from part (a). The sentencewill remain in simple past tense, if the action is fulfilled."
+    },
+    {
+      "q_num": 21,
+      "section_q_num": 21,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Anuj wanted to be /(b) Prime Minister ofIndia /(c) but now he is a doctor /(d) no error.",
+      "options": {
+        "a": "(a) Anuj wanted to be",
+        "b": "(b) Prime Minister ofIndia",
+        "c": "(c) but now he is a doctor",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"had\" in part (a).",
+      "solution": "Add \"had\" in part (a). The sentence willremain in past perfect tense, if the action is not fulfilled."
+    },
+    {
+      "q_num": 22,
+      "section_q_num": 22,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Anjali passed through a forest /(b) whena tiger jumped /(c) at her /(d) no error. Tenses",
+      "options": {
+        "a": "(a) Anjali passed through a forest",
+        "b": "(b) whena tiger jumped",
+        "c": "(c) at her",
+        "d": "(d) no error. Tenses"
+      },
+      "answer": "a",
+      "correction": "Replace \"passed\" with \"was passing\".",
+      "solution": "Replace \"passed\" with \"was passing\". Ongoingaction in the past which is interrupted by another action, is represented by past continuous tense."
+    },
+    {
+      "q_num": 23,
+      "section_q_num": 23,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She walks as if /(b) the Earth /(c) belongs to her./(d) no error.",
+      "options": {
+        "a": "(a) She walks as if",
+        "b": "(b) the Earth",
+        "c": "(c) belongs to her.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"belongs\" with \"belonged\".",
+      "solution": "Replace \"belongs\" with \"belonged\". Forthe unreal situation of the present, simple past tense is used."
+    },
+    {
+      "q_num": 24,
+      "section_q_num": 24,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He was talking /(b) as if he never /(c)saw me before. /(d) no error.",
+      "options": {
+        "a": "(a) He was talking",
+        "b": "(b) as if he never",
+        "c": "(c) saw me before.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"saw\" with \"had seen\".",
+      "solution": "Replace \"saw\" with \"had seen\". For theunreal situation of the past, past perfect tense is used."
+    },
+    {
+      "q_num": 25,
+      "section_q_num": 25,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I waited for the train /(b) when suddenly/(c) it started raining /(d). no error",
+      "options": {
+        "a": "(a) I waited for the train",
+        "b": "(b) when suddenly",
+        "c": "(c) it started raining",
+        "d": "(d) . no error"
+      },
+      "answer": "a",
+      "correction": "Replace 'waited' with 'was waiting'.",
+      "solution": "Replace 'waited' with 'was waiting'. PastContinuous tense is used for the action that was interrupted by another action in the past."
+    },
+    {
+      "q_num": 26,
+      "section_q_num": 26,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He told me /(b) that he will /(c) not gothere /(d) no error.",
+      "options": {
+        "a": "(a) He told me",
+        "b": "(b) that he will",
+        "c": "(c) not gothere",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". If the principalclause is in the past, the other clause will also be in the past."
+    },
+    {
+      "q_num": 27,
+      "section_q_num": 27,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I knew that /(b) honesty was the /(c) bestpolicy (d) no error.",
+      "options": {
+        "a": "(a) I knew that",
+        "b": "(b) honesty was the",
+        "c": "(c) bestpolicy",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"was\" with \"is\".",
+      "solution": "Replace \"was\" with \"is\". For universaltruth or proverbs, simple present tense is used."
+    },
+    {
+      "q_num": 28,
+      "section_q_num": 28,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The surface /(b) is feeling /(c) smooth/(d) no error.",
+      "options": {
+        "a": "(a) The surface",
+        "b": "(b) is feeling",
+        "c": "(c) smooth",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"is feeling\" with \"feels\".",
+      "solution": "Replace \"is feeling\" with \"feels\". (Weuse simple present tense instead of present continuous tense, with stative verbs such as feel, smell, taste, etc.)"
+    },
+    {
+      "q_num": 29,
+      "section_q_num": 29,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The princess /(b) is having a /(c) largefan following /(d) no error.",
+      "options": {
+        "a": "(a) The princess",
+        "b": "(b) is having a",
+        "c": "(c) largefan following",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"is having\" with \"has\".",
+      "solution": "Replace \"is having\" with \"has\". Verbs denotingpossession are used in simple present tense instead of present continuous tense."
+    },
+    {
+      "q_num": 30,
+      "section_q_num": 30,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She did not miss /(b) even a single lecture/(c) till today /(d) no error.",
+      "options": {
+        "a": "(a) She did not miss",
+        "b": "(b) even a single lecture",
+        "c": "(c) till today",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"did not miss\" with \"has not missed\".",
+      "solution": "Replace \"did not miss\" with \"has not missed\".Present perfect tense is used for the actions that have continued up to the present time, as indicated by the phrase 'till today'."
+    },
+    {
+      "q_num": 31,
+      "section_q_num": 31,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) They are having /(b) breakfast so I /(c)can't talk to them /(d) no error.",
+      "options": {
+        "a": "(a) They are having",
+        "b": "(b) breakfast so I",
+        "c": "(c) can't talk to them",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 32,
+      "section_q_num": 32,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We have been learning /(b) english since/(c) last two days /(d) no error.",
+      "options": {
+        "a": "(a) We have been learning",
+        "b": "(b) english since",
+        "c": "(c) last two days",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"since\" with \"for\".",
+      "solution": "Replace \"since\" with \"for\". With numeraladjectives \"for\" is used."
+    },
+    {
+      "q_num": 33,
+      "section_q_num": 33,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) By the time you /(b) have reached home,/(c) Sahil had typed all the letters /(d) no error.",
+      "options": {
+        "a": "(a) By the time you",
+        "b": "(b) have reached home,",
+        "c": "(c) Sahil had typed all the letters",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"have\" from part (b).",
+      "solution": "Remove \"have\" from part (b). With \"bythe time\", 2nd action is written in Simple past tense and 1st action is written in Past perfect tense."
+    },
+    {
+      "q_num": 34,
+      "section_q_num": 34,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The book is dealing /(b) with the beauty/(c) of Taj Mahal /(d) no error.",
+      "options": {
+        "a": "(a) The book is dealing",
+        "b": "(b) with the beauty",
+        "c": "(c) of Taj Mahal",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"is dealing\" with \"deals\".",
+      "solution": "Replace \"is dealing\" with \"deals\". Simplepresent tense is used to discuss the content or subject matter of a book."
+    },
+    {
+      "q_num": 35,
+      "section_q_num": 35,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I called him /(b) twice to /(c) confirmit /(d) no error.",
+      "options": {
+        "a": "(a) I called him",
+        "b": "(b) twice to",
+        "c": "(c) confirmit",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 36,
+      "section_q_num": 36,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) This is the most /(b) dangerous forest /(c)I ever visited /(d) no error.",
+      "options": {
+        "a": "(a) This is the most",
+        "b": "(b) dangerous forest",
+        "c": "(c) I ever visited",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Add \"have\" in part (c).",
+      "solution": "Add \"have\" in part (c). The correct structureis \"this is the + superlative degree + subject + has/have + the third form of the verb\"."
+    },
+    {
+      "q_num": 37,
+      "section_q_num": 37,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The plane will /(b) take off after the last/(c) passenger has boarded /(d) no error.",
+      "options": {
+        "a": "(a) The plane will",
+        "b": "(b) take off after the last",
+        "c": "(c) passenger has boarded",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace 'has boarded' with 'boards'.",
+      "solution": "Replace 'has boarded' with 'boards'. Simplepresent tense is used with time expressions such as \"before, after, as soon as, until, unless,\" etc."
+    },
+    {
+      "q_num": 38,
+      "section_q_num": 38,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I have been meeting /(b) you many /(c) atime /(d) no error.",
+      "options": {
+        "a": "(a) I have been meeting",
+        "b": "(b) you many",
+        "c": "(c) atime",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"been meeting\" with \"met\".",
+      "solution": "Replace \"been meeting\" with \"met\". Presentperfect tense is used for a repeated action in an unspecified period between the past and now."
+    },
+    {
+      "q_num": 39,
+      "section_q_num": 39,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The Geeta asked /(b) us to believe in the/(c) existence of God /(d) no error.",
+      "options": {
+        "a": "(a) The Geeta asked",
+        "b": "(b) us to believe in the",
+        "c": "(c) existence of God",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"asked\" with \"asks\".",
+      "solution": "Replace \"asked\" with \"asks\". Simple presenttense is used to discuss the content or subject matter of a book. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Tenses"
+    },
+    {
+      "q_num": 40,
+      "section_q_num": 40,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The roads are /(b) flooded, because /(c)it was raining /(d) no error.",
+      "options": {
+        "a": "(a) The roads are",
+        "b": "(b) flooded, because",
+        "c": "(c) it was raining",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"was\" with \"has been\".",
+      "solution": "Replace \"was\" with \"has been\". When the activity is the cause of the effect, present perfect continuous tense is used."
+    },
+    {
+      "q_num": 41,
+      "section_q_num": 41,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) One swallow /(b) did not make /(c) a summer/(d) no error.",
+      "options": {
+        "a": "(a) One swallow",
+        "b": "(b) did not make",
+        "c": "(c) a summer",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"did not\" with \"doesn't\".",
+      "solution": "Replace \"did not\" with \"doesn't\". Proverbsor quotations are written in simple present tense."
+    },
+    {
+      "q_num": 42,
+      "section_q_num": 42,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Some boys were /(b) went out of /(c) theclass /(d) no error.",
+      "options": {
+        "a": "(a) Some boys were",
+        "b": "(b) went out of",
+        "c": "(c) theclass",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"went\" with \"going\".",
+      "solution": "Replace \"went\" with \"going\". We use the-ing form of verb with the helping verb 'was/were' in the past continuous tense."
+    },
+    {
+      "q_num": 43,
+      "section_q_num": 43,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We have been /(b) supported the poor /(c)for many years /(d) no error.",
+      "options": {
+        "a": "(a) We have been",
+        "b": "(b) supported the poor",
+        "c": "(c) for many years",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"supported\" with \"supporting\".",
+      "solution": "Replace \"supported\" with \"supporting\".As the action of supporting the poor has been ongoing for many years. The present perfect continuous tense should be used."
+    },
+    {
+      "q_num": 44,
+      "section_q_num": 44,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) It was your parents /(b) who support me/(c) through thick and thin /(d) no error.",
+      "options": {
+        "a": "(a) It was your parents",
+        "b": "(b) who support me",
+        "c": "(c) through thick and thin",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"support\" with \"supported\".",
+      "solution": "Replace \"support\" with \"supported\". Ifthe main clause is in the past, the relative clause will also be in the past tense."
+    },
+    {
+      "q_num": 45,
+      "section_q_num": 45,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) There is a /(b) possibility of landslide/(c) yesterday /(d) no error.",
+      "options": {
+        "a": "(a) There is a",
+        "b": "(b) possibility of landslide",
+        "c": "(c) yesterday",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"is\" with \"was\".",
+      "solution": "Replace \"is\" with \"was\". Simple past tenseis used with \"yesterday\"."
+    },
+    {
+      "q_num": 46,
+      "section_q_num": 46,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Did you know /(b) that oil floats /(c) onwater ? /(d) no error.",
+      "options": {
+        "a": "(a) Did you know",
+        "b": "(b) that oil floats",
+        "c": "(c) onwater ?",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 47,
+      "section_q_num": 47,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She always interrupts /(b) me during meetings,and it's /(c) getting really annoying /(d) no error.",
+      "options": {
+        "a": "(a) She always interrupts",
+        "b": "(b) me during meetings,and it's",
+        "c": "(c) getting really annoying",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"always interrupts\" with \"is alwaysinterrupting\".",
+      "solution": "Replace \"always interrupts\" with \"is alwaysinterrupting\". The present continuous tense is used when a habitual action is happening but it is becoming a sense of irritation."
+    },
+    {
+      "q_num": 48,
+      "section_q_num": 48,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I drunk a cup /(b) of coffee /(c) everymorning /(d) no error.",
+      "options": {
+        "a": "(a) I drunk a cup",
+        "b": "(b) of coffee",
+        "c": "(c) everymorning",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"drunk\" with \"drink\".",
+      "solution": "Replace \"drunk\" with \"drink\". Habitualactions are written in simple present tense."
+    },
+    {
+      "q_num": 49,
+      "section_q_num": 49,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Penny did her /(b) homework when her /(c)parents came back. /(d) no error.",
+      "options": {
+        "a": "(a) Penny did her",
+        "b": "(b) homework when her",
+        "c": "(c) parents came back.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"did\" with \"had done\".",
+      "solution": "Replace \"did\" with \"had done\". Here, pastperfect tense is used to show that something occurred before another action in the past."
+    },
+    {
+      "q_num": 50,
+      "section_q_num": 50,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I woke up, brushed my teeth, /(b) and havebreakfast before /(c) leaving for work /(d) no error.",
+      "options": {
+        "a": "(a) I woke up, brushed my teeth,",
+        "b": "(b) and havebreakfast before",
+        "c": "(c) leaving for work",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"have\" with \"had\".",
+      "solution": "Replace \"have\" with \"had\". A series ofcontinued actions are written in the same tense."
+    },
+    {
+      "q_num": 51,
+      "section_q_num": 51,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) They were studying in the /(b) library whiletheir classmates /(c) conducted experiments in the laboratory /(d) no error.",
+      "options": {
+        "a": "(a) They were studying in the",
+        "b": "(b) library whiletheir classmates",
+        "c": "(c) conducted experiments in the laboratory",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"conducted\" with \"were conducting\".",
+      "solution": "Replace \"conducted\" with \"were conducting\".Past continuous tense is used for parallel actions in the past."
+    },
+    {
+      "q_num": 52,
+      "section_q_num": 52,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She was studying English /(b) for five yearsbefore she moved /(c) to an English-speaking country /(d) no error.",
+      "options": {
+        "a": "(a) She was studying English",
+        "b": "(b) for five yearsbefore she moved",
+        "c": "(c) to an English-speaking country",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"was\" with \"had been\".",
+      "solution": "Replace \"was\" with \"had been\". Past perfectcontinuous tense is used to show something started in the past and continued up until another time in the past."
+    },
+    {
+      "q_num": 53,
+      "section_q_num": 53,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Would you have been living /(b) in thiscity for a year by /(c) the time your lease ends? /(d) no error.",
+      "options": {
+        "a": "(a) Would you have been living",
+        "b": "(b) in thiscity for a year by",
+        "c": "(c) the time your lease ends?",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"would\" with \"will\".",
+      "solution": "Replace \"would\" with \"will\". Here, thesentence discusses a future event - the point in time when the lease ends."
+    },
+    {
+      "q_num": 54,
+      "section_q_num": 54,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I will not have been using /(b) this computerfor a week /(c) by the end of the month /(d) no error. Tenses",
+      "options": {
+        "a": "(a) I will not have been using",
+        "b": "(b) this computerfor a week",
+        "c": "(c) by the end of the month",
+        "d": "(d) no error. Tenses"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 55,
+      "section_q_num": 55,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) By the time he will arrive, /(b) the meeting will have /(c) already started /(d) no error.",
+      "options": {
+        "a": "(a) By the time he will arrive,",
+        "b": "(b) the meeting will have",
+        "c": "(c) already started",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"will arrive\" with \"arrives\".",
+      "solution": "Replace \"will arrive\" with \"arrives\". Futuretense is not used with time clauses."
+    },
+    {
+      "q_num": 56,
+      "section_q_num": 56,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The committee had been working /(b) on theproposal /(c) when they will receive new information /(d) no error.",
+      "options": {
+        "a": "(a) The committee had been working",
+        "b": "(b) on theproposal",
+        "c": "(c) when they will receive new information",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace 'will receive' with 'received'.",
+      "solution": "Replace 'will receive' with 'received'.Past perfect continuous tense is used for an ongoing action in the past, which was interrupted by another past event."
+    },
+    {
+      "q_num": 57,
+      "section_q_num": 57,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She was not /(b) working on the projectfor /(c) six months /(d) no error.",
+      "options": {
+        "a": "(a) She was not",
+        "b": "(b) working on the projectfor",
+        "c": "(c) six months",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"was not\" with \"had not been\".",
+      "solution": "Replace \"was not\" with \"had not been\".The Past Perfect Continuous tense is used to show that something continued or didn't continue for a period of time in the past."
+    },
+    {
+      "q_num": 58,
+      "section_q_num": 58,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) After he will return /(b) the book, I canlend /(c) it to someone else /(d) no error.",
+      "options": {
+        "a": "(a) After he will return",
+        "b": "(b) the book, I canlend",
+        "c": "(c) it to someone else",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"will return\" with \"returns\".",
+      "solution": "Replace \"will return\" with \"returns\". Whenusing \"after,\" the verb following it should be in the present tense."
+    },
+    {
+      "q_num": 59,
+      "section_q_num": 59,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He used to work at the /(b) bookstore afterschool, and /(c) then he goes to the gym /(d) no error.",
+      "options": {
+        "a": "(a) He used to work at the",
+        "b": "(b) bookstore afterschool, and",
+        "c": "(c) then he goes to the gym",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"goes\" with \"went\".",
+      "solution": "Replace \"goes\" with \"went\". Past tenseis used to show the habitual or repeated actions of the past."
+    },
+    {
+      "q_num": 60,
+      "section_q_num": 60,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Having visit many countries, /(b) he hasa deep understanding /(c) of different cultures /(d) no error.",
+      "options": {
+        "a": "(a) Having visit many countries,",
+        "b": "(b) he hasa deep understanding",
+        "c": "(c) of different cultures",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"visit\" with \"visited\".",
+      "solution": "Replace \"visit\" with \"visited\". The thirdform of verb is used after has/have/had/having."
+    },
+    {
+      "q_num": 61,
+      "section_q_num": 61,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) After winning the championship last year,/(b) she decides to take a /(c) break from competitive sports /(d) no error.",
+      "options": {
+        "a": "(a) After winning the championship last year,",
+        "b": "(b) she decides to take a",
+        "c": "(c) break from competitive sports",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"decides\" with \"decided\".",
+      "solution": "Replace \"decides\" with \"decided\". \"Lastyear\" shows a past event, so the past form \"decided\" will be used."
+    },
+    {
+      "q_num": 62,
+      "section_q_num": 62,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) This is the first time that /(b) I evervisit this city, and I am /(c) amazed by its beauty /(d) no error.",
+      "options": {
+        "a": "(a) This is the first time that",
+        "b": "(b) I evervisit this city, and I am",
+        "c": "(c) amazed by its beauty",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"ever visit\" with \"have ever visited\".",
+      "solution": "Replace \"ever visit\" with \"have ever visited\".The correct structure is \"This is the first/ second time that + subject + has/have + third form of verb\" is used.)"
+    },
+    {
+      "q_num": 63,
+      "section_q_num": 63,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The director informed the team during /(b)the meeting that project deadlines will be shifted /(c) due to unforeseen circumstances /(d) no error.",
+      "options": {
+        "a": "(a) The director informed the team during",
+        "b": "(b) the meeting that project deadlines will be shifted",
+        "c": "(c) due to unforeseen circumstances",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"will\" with \"would\".",
+      "solution": "Replace \"will\" with \"would\". If the principalclause is in the past, the subordinate clause will also be in the past form."
+    },
+    {
+      "q_num": 64,
+      "section_q_num": 64,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The power went out, /(b) and we have touse flashlights /(b) until it was restored /(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Replace \"have\" with \"had\".",
+      "solution": "Replace \"have\" with \"had\". The action ofusing flashlights happened in the past. So, we will use the past form of the verb."
+    },
+    {
+      "q_num": 65,
+      "section_q_num": 65,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) At various events, we /(b) did contributedto environmental causes by planting /(c) trees and promoting recycling /(d)no error.",
+      "options": {
+        "a": "(a) At various events, we",
+        "b": "(b) did contributedto environmental causes by planting",
+        "c": "(c) trees and promoting recycling",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"did contributed\" with \"contributed\".",
+      "solution": "Replace \"did contributed\" with \"contributed\".\"Did + V2\" is a superfluous term. To show a pastevent, the second form of the verb is used."
+    },
+    {
+      "q_num": 66,
+      "section_q_num": 66,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The team has recently undertook /(b) a researchproject to investigate /(c) environmental sustainability /(d) no error.",
+      "options": {
+        "a": "(a) The team has recently undertook",
+        "b": "(b) a researchproject to investigate",
+        "c": "(c) environmental sustainability",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"undertook\" with \"undertaken\".",
+      "solution": "Replace \"undertook\" with \"undertaken\".The present perfect tense follows the structure \"has/have + V3\"."
+    },
+    {
+      "q_num": 67,
+      "section_q_num": 67,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The train had departed /(b) by the timewe had /(c) reached the station /(d) no error.",
+      "options": {
+        "a": "(a) The train had departed",
+        "b": "(b) by the timewe had",
+        "c": "(c) reached the station",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"had\" from part (b).",
+      "solution": "Remove \"had\" from part (b). With \"by thetime\", 2nd action is written in Simple past tense and 1st action is written in Past perfect tense. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Tenses"
+    },
+    {
+      "q_num": 68,
+      "section_q_num": 68,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I am not receiving /(b) any updates on the/(c) project till today /(d) no error.",
+      "options": {
+        "a": "(a) I am not receiving",
+        "b": "(b) any updates on the",
+        "c": "(c) project till today",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"am not receiving\" with \"have not received\".",
+      "solution": "Replace \"am not receiving\" with \"have not received\". Present perfect tense indicates the action of not receiving any update on the project up to the present moment."
+    },
+    {
+      "q_num": 69,
+      "section_q_num": 69,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Till now, I have never /(b) encounteredsuch a challenging /(c) problem in my career /(d) no error.",
+      "options": {
+        "a": "(a) Till now, I have never",
+        "b": "(b) encounteredsuch a challenging",
+        "c": "(c) problem in my career",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 70,
+      "section_q_num": 70,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She had expected that she would /(b) attendthe conference last month, but /(c) her work commitments prevented her /(d) no error.",
+      "options": {
+        "a": "(a) She had expected that she would",
+        "b": "(b) attendthe conference last month, but",
+        "c": "(c) her work commitments prevented her",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 71,
+      "section_q_num": 71,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The students were struggling with the /(b) assignment until the teacher explains / (c) the concept more clearly / (d) no error.",
+      "options": {
+        "a": "(a) The students were struggling with the",
+        "b": "(b) assignment until the teacher explains",
+        "c": "(c) the concept more clearly",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace 'explains' with 'explained'.",
+      "solution": "Replace 'explains' with 'explained'. Themain clause is in the past tense, so the other clause will also be in the past tense."
+    },
+    {
+      "q_num": 72,
+      "section_q_num": 72,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The referee blows the whistle / (b) fora foul, and it looks (c) like a yellow card for the defender / (d) no error",
+      "options": {
+        "a": "(a) The referee blows the whistle",
+        "b": "(b) fora foul, and it looks",
+        "c": "(c) like a yellow card for the defender",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "no error.",
+      "solution": "no error. Simple Present tense is usedin live commentary of games."
+    },
+    {
+      "q_num": 73,
+      "section_q_num": 73,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Have you responding /(b) to the email from/(c) your supervisor? /(d) no error.",
+      "options": {
+        "a": "(a) Have you responding",
+        "b": "(b) to the email from",
+        "c": "(c) your supervisor?",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"responding\" with \"responded\".",
+      "solution": "Replace \"responding\" with \"responded\".The structure of interrogative sentences for present perfect tense is \"Has/have + Subject + 'III form of verb' + Object?\""
+    },
+    {
+      "q_num": 74,
+      "section_q_num": 74,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) In a democracy, each voter /(b) had theright to cast their /(c) ballot without discrimination /(d) no error.",
+      "options": {
+        "a": "(a) In a democracy, each voter",
+        "b": "(b) had theright to cast their",
+        "c": "(c) ballot without discrimination",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"had\" with \"has\".",
+      "solution": "Replace \"had\" with \"has\". Simple presenttense is used to show a fact."
+    },
+    {
+      "q_num": 75,
+      "section_q_num": 75,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The children played /(b) in the park after/(c) school every day /(d) no error.",
+      "options": {
+        "a": "(a) The children played",
+        "b": "(b) in the park after",
+        "c": "(c) school every day",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"played\" with \"play\".",
+      "solution": "Replace \"played\" with \"play\". For habitualaction, simple present tense is used."
+    },
+    {
+      "q_num": 76,
+      "section_q_num": 76,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) They were working on the project /(b) sincemorning when the power /(c) outage occurred /(d) no error.",
+      "options": {
+        "a": "(a) They were working on the project",
+        "b": "(b) sincemorning when the power",
+        "c": "(c) outage occurred",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"were\" with \"had been\".",
+      "solution": "Replace \"were\" with \"had been\". A continuedactivity until a particular event or time in the future is written in future Perfect Continuous tense."
+    },
+    {
+      "q_num": 77,
+      "section_q_num": 77,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) My mom always /(b) cooked dinner /(c) inthe evening /(d) no error.",
+      "options": {
+        "a": "(a) My mom always",
+        "b": "(b) cooked dinner",
+        "c": "(c) inthe evening",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"cooked\" with \"cooks\".",
+      "solution": "Replace \"cooked\" with \"cooks\". For habitualaction, simple present tense is used."
+    },
+    {
+      "q_num": 78,
+      "section_q_num": 78,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The weather forecast says it will /(b) rainheavily tomorrow, /(c) so we will have been staying indoors all day. /(d) no error.",
+      "options": {
+        "a": "(a) The weather forecast says it will",
+        "b": "(b) rainheavily tomorrow,",
+        "c": "(c) so we will have been staying indoors all day.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace 'will have been staying' with 'willbe staying'.",
+      "solution": "Replace 'will have been staying' with 'willbe staying'. Future continuous tense is used for an action that will be happening in the future."
+    },
+    {
+      "q_num": 79,
+      "section_q_num": 79,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She was studying for /(b) the final examsfor the /(c) past few weeks /(d) no error.",
+      "options": {
+        "a": "(a) She was studying for",
+        "b": "(b) the final examsfor the",
+        "c": "(c) past few weeks",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"was\" with \"had been\".",
+      "solution": "Replace \"was\" with \"had been\". We use perfectcontinuous tense when time duration is mentioned using the preposition 'for/since'."
+    },
+    {
+      "q_num": 80,
+      "section_q_num": 80,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Newspapers told us about the events/(b)that happen /(c) all over the world /(d) no error.",
+      "options": {
+        "a": "(a) Newspapers told us about the events",
+        "b": "(b) that happen",
+        "c": "(c) all over the world",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"told\" with \"tell\".",
+      "solution": "Replace \"told\" with \"tell\". Simple presenttense is used to state the general truths. This sentence tells a general truth about Newspapers."
+    },
+    {
+      "q_num": 81,
+      "section_q_num": 81,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She was with me uptil now,/(b) so pleasedon't scold her/(c) for being late./(d) no error",
+      "options": {
+        "a": "(a) She was with me uptil now,",
+        "b": "(b) so pleasedon't scold her",
+        "c": "(c) for being late.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"uptil\" with \"until\".",
+      "solution": "Replace \"uptil\" with \"until\"."
+    },
+    {
+      "q_num": 82,
+      "section_q_num": 82,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I have been adoring/(b) her for/(c) thebeauty of her eyes./(d) no error",
+      "options": {
+        "a": "(a) I have been adoring",
+        "b": "(b) her for",
+        "c": "(c) thebeauty of her eyes.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "We don't add -ing to \"adore\" to make itin continuous tense.",
+      "solution": "We don't add -ing to \"adore\" to make itin continuous tense. Replace \"have been adoring\" with \"adore\"."
+    },
+    {
+      "q_num": 83,
+      "section_q_num": 83,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Had he come even a moment earlier/(b) hewould have/(c) found me there./(d) no error",
+      "options": {
+        "a": "(a) Had he come even a moment earlier",
+        "b": "(b) hewould have",
+        "c": "(c) found me there.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 84,
+      "section_q_num": 84,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Many observations indicate/(b) that thenumber of the drug/(c) addicts grew day by day./(d) no error",
+      "options": {
+        "a": "(a) Many observations indicate",
+        "b": "(b) that thenumber of the drug",
+        "c": "(c) addicts grew day by day.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"grew\" with \"are growing\".",
+      "solution": "Replace \"grew\" with \"are growing\"."
+    },
+    {
+      "q_num": 85,
+      "section_q_num": 85,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Newspapers told us about the events/(b)that happen/(c) all over the world./(d) no error Tenses",
+      "options": {
+        "a": "(a) Newspapers told us about the events",
+        "b": "(b) that happen",
+        "c": "(c) all over the world.",
+        "d": "(d) no error Tenses"
+      },
+      "answer": "a",
+      "correction": "Replace \"told\" with \"tell\".",
+      "solution": "Replace \"told\" with \"tell\". The sentenceis in simple present tense."
+    },
+    {
+      "q_num": 86,
+      "section_q_num": 86,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) \"Here is coming my friends!\"/(b) said Manju when/(c) she was anxious./(d) no error",
+      "options": {
+        "a": "(a) \"Here is coming my friends!\"",
+        "b": "(b) said Manju when",
+        "c": "(c) she was anxious.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"is coming\" with \"come\".",
+      "solution": "Replace \"is coming\" with \"come\". For sentencesbeginning with here and there, the simple present is used."
+    },
+    {
+      "q_num": 87,
+      "section_q_num": 87,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He advised me/(b) to do as he said/(c) butI did not pay any attention to his advice./(d) no error",
+      "options": {
+        "a": "(a) He advised me",
+        "b": "(b) to do as he said",
+        "c": "(c) butI did not pay any attention to his advice.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 88,
+      "section_q_num": 88,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) By this time next year he has had/(b) settledhimself/(c) in London./(d) no error",
+      "options": {
+        "a": "(a) By this time next year he has had",
+        "b": "(b) settledhimself",
+        "c": "(c) in London.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"he had\" with \"he will have had\".",
+      "solution": "Replace \"he had\" with \"he will have had\".The sentence is in future perfect."
+    },
+    {
+      "q_num": 89,
+      "section_q_num": 89,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) It is about time you have taken/(b) yourchildren/(c) to school./(d) no error",
+      "options": {
+        "a": "(a) It is about time you have taken",
+        "b": "(b) yourchildren",
+        "c": "(c) to school.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"have taken\" with \"took\".",
+      "solution": "Replace \"have taken\" with \"took\". For sentencesbeginning with \"Its about time/It's time/It's high time\" simple past is used."
+    },
+    {
+      "q_num": 90,
+      "section_q_num": 90,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I had hoped/(b) that I would see/(c) youthe other day, but unfortunately I fell ill./(d) no error",
+      "options": {
+        "a": "(a) I had hoped",
+        "b": "(b) that I would see",
+        "c": "(c) youthe other day, but unfortunately I fell ill.",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"had hoped\" with \"hoped\".",
+      "solution": "Replace \"had hoped\" with \"hoped\". Use simplepast in the first part of the sentence."
+    },
+    {
+      "q_num": 91,
+      "section_q_num": 91,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The thief was caught/(b) after he has soldoff /(c) the stolen goods./(d) no error",
+      "options": {
+        "a": "(a) The thief was caught",
+        "b": "(b) after he has soldoff",
+        "c": "(c) the stolen goods.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"has\" with \"had\".",
+      "solution": "Replace \"has\" with \"had\". There are twoinstances of the past so past perfect will be used in the first instance and the second instance will be in simple past tense."
+    },
+    {
+      "q_num": 92,
+      "section_q_num": 92,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Sushma arrived here,/(b) did all the preparation/(c)and then has called one of her intimate friends./(d) no error",
+      "options": {
+        "a": "(a) Sushma arrived here,",
+        "b": "(b) did all the preparation",
+        "c": "(c) and then has called one of her intimate friends.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"has called\" with \"called\".",
+      "solution": "Replace \"has called\" with \"called\"."
+    },
+    {
+      "q_num": 93,
+      "section_q_num": 93,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I could not recall/(b) what she has toldme about her/(c) concern for her dog, Moti./(d) no error",
+      "options": {
+        "a": "(a) I could not recall",
+        "b": "(b) what she has toldme about her",
+        "c": "(c) concern for her dog, Moti.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"has\" with \"had\".",
+      "solution": "Replace \"has\" with \"had\". (The sentenceis in past tense.)"
+    },
+    {
+      "q_num": 94,
+      "section_q_num": 94,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Nobody knows/(b) when death/(c) will knockat his door./(d) no error",
+      "options": {
+        "a": "(a) Nobody knows",
+        "b": "(b) when death",
+        "c": "(c) will knockat his door.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 95,
+      "section_q_num": 95,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Dipu hopes to become/(b) an officer afterhe complete /(c) his higher education./(d) no error",
+      "options": {
+        "a": "(a) Dipu hopes to become",
+        "b": "(b) an officer afterhe complete",
+        "c": "(c) his higher education.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"complete\" with \"completes\".",
+      "solution": "Replace \"complete\" with \"completes\".\"He\"is singular. Thus, a singular verb is required."
+    },
+    {
+      "q_num": 96,
+      "section_q_num": 96,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Meenu along with her parents/(b) is goingto Mumbai tonight/(c) because her eldest brother is ill there./(d) no error",
+      "options": {
+        "a": "(a) Meenu along with her parents",
+        "b": "(b) is goingto Mumbai tonight",
+        "c": "(c) because her eldest brother is ill there.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Tenses"
+    },
+    {
+      "q_num": 97,
+      "section_q_num": 97,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He would not have/(b) done all this if hehad not been/(c) instigated by his wife./(d) no error",
+      "options": {
+        "a": "(a) He would not have",
+        "b": "(b) done all this if hehad not been",
+        "c": "(c) instigated by his wife.",
+        "d": "(d) no error"
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 98,
+      "section_q_num": 98,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The teacher said/(b) to us that we shouldstay at home/(c) if it rains./(d) no error",
+      "options": {
+        "a": "(a) The teacher said",
+        "b": "(b) to us that we shouldstay at home",
+        "c": "(c) if it rains.",
+        "d": "(d) no error"
+      },
+      "answer": "c",
+      "correction": "Replace \"rains\" with \"rained\".",
+      "solution": "Replace \"rains\" with \"rained\". The sentenceis in past tense."
+    },
+    {
+      "q_num": 99,
+      "section_q_num": 99,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) How long it takes/(b) to travel from Chennaito Trichy/(c) by train?/(d) no error",
+      "options": {
+        "a": "(a) How long it takes",
+        "b": "(b) to travel from Chennaito Trichy",
+        "c": "(c) by train?",
+        "d": "(d) no error"
+      },
+      "answer": "a",
+      "correction": "Replace \"How long it takes\" with \"How longdoes it take\".",
+      "solution": "Replace \"How long it takes\" with \"How longdoes it take\". The sentence is in an interrogative pattern. In interrogative patterns, the \"wh-\" word is followed by the helping verb. In assertive sentences the subject comes before the verb."
+    },
+    {
+      "q_num": 100,
+      "section_q_num": 100,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I was/(b) laying down/(c) when the doorbell rang./(d) no error",
+      "options": {
+        "a": "(a) I was",
+        "b": "(b) laying down",
+        "c": "(c) when the doorbell rang.",
+        "d": "(d) no error"
+      },
+      "answer": "b",
+      "correction": "Replace \"laying down\" with \"lying down\".",
+      "solution": "Replace \"laying down\" with \"lying down\"."
+    },
+    {
+      "q_num": 101,
+      "section_q_num": 1,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Only one of the boys ________ not done the home-workgiven yesterday.",
+      "options": {
+        "a": "have",
+        "b": "had",
+        "c": "can",
+        "d": "could"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 102,
+      "section_q_num": 2,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It is time we ________ with determination.",
+      "options": {
+        "a": "act",
+        "b": "acted",
+        "c": "have acted",
+        "d": "will act"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 103,
+      "section_q_num": 3,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "When the thief entered the house, the inmates________ in the hall.",
+      "options": {
+        "a": "were sleeping",
+        "b": "slept",
+        "c": "were slept",
+        "d": "had been sleeping"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 104,
+      "section_q_num": 4,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The thief explained how he ________ from thejail.",
+      "options": {
+        "a": "escapes",
+        "b": "had escaped",
+        "c": "escaped",
+        "d": "has escaped"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 105,
+      "section_q_num": 5,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They did not know where they ________ from.",
+      "options": {
+        "a": "come",
+        "b": "had come",
+        "c": "has come",
+        "d": "had came"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 106,
+      "section_q_num": 6,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Madhu has not been able to recall where ________",
+      "options": {
+        "a": "does she live",
+        "b": "she lived",
+        "c": "did she live",
+        "d": "lived the girl"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 107,
+      "section_q_num": 7,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "When he died, Ramanujan ________ behind 3 notebooks.",
+      "options": {
+        "a": "was leaving",
+        "b": "had left",
+        "c": "leave",
+        "d": "leaves"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 108,
+      "section_q_num": 8,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "All the applicants ________ and the results willbe announced next week.",
+      "options": {
+        "a": "rank",
+        "b": "are to rank",
+        "c": "are to be ranked",
+        "d": "are ranking"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 109,
+      "section_q_num": 9,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Tourists always enjoyed ________ the settingSun in the Darjeeling hills.",
+      "options": {
+        "a": "to watch",
+        "b": "watching",
+        "c": "in seeing",
+        "d": "seeing"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 110,
+      "section_q_num": 10,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Ramappa ________as the mayor of the town andhe will assume charge this Friday.",
+      "options": {
+        "a": "elects",
+        "b": "has been elected",
+        "c": "is elected",
+        "d": "is electing Tenses"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 111,
+      "section_q_num": 11,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Justasinafamilyitisthewillingcooperationofitsmembersthat_______happinessandcontentment,soisitinthelargerfamily of the nation.",
+      "options": {
+        "a": "brought",
+        "b": "will bring",
+        "c": "bring",
+        "d": "bought"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 112,
+      "section_q_num": 12,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The old man could not remember where he ________his money.",
+      "options": {
+        "a": "deposits",
+        "b": "is depositing",
+        "c": "had deposited",
+        "d": "will deposit"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 113,
+      "section_q_num": 13,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Hamid ________in Mumbai for three years whenhis parents came to visit.",
+      "options": {
+        "a": "had lived",
+        "b": "had lived",
+        "c": "was living",
+        "d": "had been living."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 114,
+      "section_q_num": 14,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Two years have passed since he ________here.",
+      "options": {
+        "a": "has come",
+        "b": "come",
+        "c": "came",
+        "d": "had come"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 115,
+      "section_q_num": 15,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Will those of you who have objections to thisproposal________ put up your hands, please?",
+      "options": {
+        "a": "discussed",
+        "b": "being discussed",
+        "c": "having discussed",
+        "d": "discussing"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 116,
+      "section_q_num": 16,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She had frequent toothaches. So she decidedto ________",
+      "options": {
+        "a": "remove her teeth",
+        "b": "removing her teeth",
+        "c": "have her teeth removed",
+        "d": "having her teeth removed"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 117,
+      "section_q_num": 17,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The mechanic ________ the vehicle since thismorning.",
+      "options": {
+        "a": "repaired",
+        "b": "repairing",
+        "c": "has been repairing",
+        "d": "will be repairing"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 118,
+      "section_q_num": 18,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If I had worked here, I ________very high marksin the examination.",
+      "options": {
+        "a": "scored",
+        "b": "would score",
+        "c": "could score",
+        "d": "would have scored"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 119,
+      "section_q_num": 19,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I got used ________on the right when I was inthe U.S. for two years.",
+      "options": {
+        "a": "driving",
+        "b": "to drive",
+        "c": "to driving",
+        "d": "by driving"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 120,
+      "section_q_num": 20,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Had you told me earlier I________ the meeting.",
+      "options": {
+        "a": "had attended",
+        "b": "have attended",
+        "c": "attended",
+        "d": "would have attended"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 121,
+      "section_q_num": 21,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There will be a rush for seats when the train________",
+      "options": {
+        "a": "will arrive",
+        "b": "arrived",
+        "c": "is arriving",
+        "d": "arrives"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 122,
+      "section_q_num": 22,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "By the time I reach America, it ________morning.",
+      "options": {
+        "a": "is",
+        "b": "will have become",
+        "c": "must be",
+        "d": "was"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 123,
+      "section_q_num": 23,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She feared that she________",
+      "options": {
+        "a": "will fail",
+        "b": "may fail",
+        "c": "fails",
+        "d": "failed"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 124,
+      "section_q_num": 24,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I was washing my face as the insect ________.quietly into the bedroom.",
+      "options": {
+        "a": "crept",
+        "b": "creeps",
+        "c": "was creeping",
+        "d": "has crept"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 125,
+      "section_q_num": 25,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "During the recent floods two thirds of our city________in ruins.",
+      "options": {
+        "a": "are",
+        "b": "were",
+        "c": "is",
+        "d": "was"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 126,
+      "section_q_num": 26,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I have ________Lakshmi for the past twelveyears.",
+      "options": {
+        "a": "know",
+        "b": "knew",
+        "c": "known",
+        "d": "knows"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 127,
+      "section_q_num": 27,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The engineers ________ this bridge since lastyear.",
+      "options": {
+        "a": "have repaired",
+        "b": "had repaired",
+        "c": "have been repairing",
+        "d": "are repairing"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 128,
+      "section_q_num": 28,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If I had helped him, he ________",
+      "options": {
+        "a": "will not be drowned",
+        "b": "would not be drowned",
+        "c": "will not have drowned",
+        "d": "would not have drowned"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 129,
+      "section_q_num": 29,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The housewife ________ cakes burning, and ranto switch off the oven.",
+      "options": {
+        "a": "smell",
+        "b": "smells",
+        "c": "smelt",
+        "d": "smelling"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 130,
+      "section_q_num": 30,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you had followed the rules, you________ disqualified.",
+      "options": {
+        "a": "will not be",
+        "b": "would not be",
+        "c": "will not have been",
+        "d": "would not have been Tenses"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 131,
+      "section_q_num": 31,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The farmers ________ their farms, if they had known that a thunderstorm was approaching.",
+      "options": {
+        "a": "will leave",
+        "b": "would leave",
+        "c": "will have left",
+        "d": "would have left."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 132,
+      "section_q_num": 32,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "________ you hear the President's speech ?",
+      "options": {
+        "a": "Have",
+        "b": "Has",
+        "c": "Had",
+        "d": "Did"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 133,
+      "section_q_num": 33,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I ________ to the movies with some friends lastnight.",
+      "options": {
+        "a": "have gone",
+        "b": "went",
+        "c": "am gone",
+        "d": "am going"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 134,
+      "section_q_num": 34,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If I ________ a doctor, I would serve the poor,",
+      "options": {
+        "a": "am",
+        "b": "had been",
+        "c": "were",
+        "d": "was"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 135,
+      "section_q_num": 35,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The plane will take off when the thunderstorm________",
+      "options": {
+        "a": "stops",
+        "b": "stopped",
+        "c": "would stop",
+        "d": "will stop"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 136,
+      "section_q_num": 36,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "When the doctor________; the patient was already________",
+      "options": {
+        "a": "arrived; died",
+        "b": "arrived; dead",
+        "c": "arrive; dead",
+        "d": "arriving; dying"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 137,
+      "section_q_num": 37,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you litter, you________ to pay a fine.",
+      "options": {
+        "a": "will have",
+        "b": "would have",
+        "c": "will had",
+        "d": "would had"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 138,
+      "section_q_num": 38,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The life-guard would not let the children________at the deep end of the pool.",
+      "options": {
+        "a": "swims",
+        "b": "swim",
+        "c": "swam",
+        "d": "to swim"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 139,
+      "section_q_num": 39,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The audience watched the clowns________",
+      "options": {
+        "a": "performs",
+        "b": "perform",
+        "c": "performed",
+        "d": "are performing"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 140,
+      "section_q_num": 40,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We shall go for a picnic if the weather________good.",
+      "options": {
+        "a": "is",
+        "b": "was",
+        "c": "has been",
+        "d": "had been"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 141,
+      "section_q_num": 41,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I ________hard to establish the validity ofthe theory since morning.",
+      "options": {
+        "a": "have been trying",
+        "b": "had tried",
+        "c": "tried",
+        "d": "am trying"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 142,
+      "section_q_num": 42,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I wish I ________ her to clean the room.",
+      "options": {
+        "a": "have asking",
+        "b": "have asked",
+        "c": "asked",
+        "d": "had asked"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 143,
+      "section_q_num": 43,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Simon________very polite at the moment, becausehe wants to make a good impression.",
+      "options": {
+        "a": "was being",
+        "b": "has been",
+        "c": "is behaving",
+        "d": "is being."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 144,
+      "section_q_num": 44,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Had I saved money, I ________a new car.",
+      "options": {
+        "a": "will purchase",
+        "b": "would purchase",
+        "c": "would have purchased",
+        "d": "purchased"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 145,
+      "section_q_num": 45,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He told me that he ________ the movie.",
+      "options": {
+        "a": "is finished",
+        "b": "was finished",
+        "c": "had finished",
+        "d": "not finished"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 146,
+      "section_q_num": 46,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The railway coaches ________ by the IntegralCoach Factory, Chennai.",
+      "options": {
+        "a": "is manufactured",
+        "b": "are manufactured",
+        "c": "are manufacture",
+        "d": "is being manufactured"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 147,
+      "section_q_num": 47,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The car broke down and we ________get a taxi.",
+      "options": {
+        "a": "were to",
+        "b": "are to",
+        "c": "had to",
+        "d": "have to"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 148,
+      "section_q_num": 48,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He said I ________ use his car when ever I wanted.",
+      "options": {
+        "a": "could",
+        "b": "can",
+        "c": "will",
+        "d": "would"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 149,
+      "section_q_num": 49,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "While he was working at the site, a block ofwood suddenly ________ his right shoulder.",
+      "options": {
+        "a": "was hitted",
+        "b": "was hit",
+        "c": "had hitted",
+        "d": "hit"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 150,
+      "section_q_num": 50,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "In the tragic incident, none of the 145 passengers________",
+      "options": {
+        "a": "could survived",
+        "b": "survive",
+        "c": "survived",
+        "d": "is surviving"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 151,
+      "section_q_num": 51,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I asked him for some paper, but he ________",
+      "options": {
+        "a": "had not",
+        "b": "has not",
+        "c": "had none",
+        "d": "has none"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 152,
+      "section_q_num": 52,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Did the child ________ from the chair ?",
+      "options": {
+        "a": "fell",
+        "b": "fallen",
+        "c": "falling",
+        "d": "fall"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 153,
+      "section_q_num": 53,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Work hard so that you ________",
+      "options": {
+        "a": "shall get good marks",
+        "b": "will get good marks",
+        "c": "may get good marks",
+        "d": "should get good marks."
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 154,
+      "section_q_num": 54,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The officer ________the car to speak to thedriver.",
+      "options": {
+        "a": "stops",
+        "b": "has stopped",
+        "c": "stopped",
+        "d": "had stopped"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 155,
+      "section_q_num": 55,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Thank God! We reached. If there ________ jamon the highway, we would have been late for the reception.",
+      "options": {
+        "a": "had been",
+        "b": "would have been",
+        "c": "was",
+        "d": "were"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 156,
+      "section_q_num": 56,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "If you ________ me up earlier, we would havegone there together.",
+      "options": {
+        "a": "woke",
+        "b": "had woken",
+        "c": "wake",
+        "d": "wakes"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 157,
+      "section_q_num": 57,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Last night the residents ________ to discussthe occurrence of theft in the locality.",
+      "options": {
+        "a": "assembled",
+        "b": "had assembled",
+        "c": "have assembled",
+        "d": "were assembling"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 158,
+      "section_q_num": 58,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The students decided to donate blood after they________ the plight of the injured in various accidents in a documentary film.",
+      "options": {
+        "a": "saw",
+        "b": "had seen",
+        "c": "had been seen",
+        "d": "had been seeing"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 159,
+      "section_q_num": 59,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The newspaper ________ seven cases of gruesomecrime in the city yesterday.",
+      "options": {
+        "a": "reported",
+        "b": "has reported",
+        "c": "had reported",
+        "d": "have reported"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 160,
+      "section_q_num": 60,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "An enquiry committee has been formed as devastating poverty and indebtedness________ farmers in the countrytocommit suicide.",
+      "options": {
+        "a": "forced",
+        "b": "has forced",
+        "c": "force",
+        "d": "forces"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 161,
+      "section_q_num": 1,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "On one occasion he persuaded me to accompanyhim on a shooting expedition hewas planning.",
+      "options": {
+        "a": "has planned",
+        "b": "had planned",
+        "c": "planned",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 162,
+      "section_q_num": 2,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Many workers were beingheld hostages.",
+      "options": {
+        "a": "held to be hostages",
+        "b": "held as hostages",
+        "c": "held like hostages",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 163,
+      "section_q_num": 3,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "He had his breakfast, when we visited him.",
+      "options": {
+        "a": "He had taken his breakfast",
+        "b": "He wished to have his breakfast",
+        "c": "He avoided his breakfast",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 164,
+      "section_q_num": 4,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The doctorreassuredthat the operation was aroutine one.",
+      "options": {
+        "a": "is reassuming",
+        "b": "reassured me",
+        "c": "was reassuming",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 165,
+      "section_q_num": 5,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "If Iamthe P.M. I would ban all processions.",
+      "options": {
+        "a": "will be",
+        "b": "were",
+        "c": "am",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 166,
+      "section_q_num": 6,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "It's high time that yougohome.",
+      "options": {
+        "a": "have gone",
+        "b": "should go",
+        "c": "went",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 167,
+      "section_q_num": 7,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "By this time tomorrow, Iwill reachmy home.",
+      "options": {
+        "a": "will be reaching",
+        "b": "shall have reached",
+        "c": "can reach",
+        "d": "no improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 168,
+      "section_q_num": 8,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "When we saw him last, heranto catch a bus.",
+      "options": {
+        "a": "has run",
+        "b": "was running",
+        "c": "had run",
+        "d": "no improvement."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 169,
+      "section_q_num": 9,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "If I dyed my hair green, everybodywilllaughat me.",
+      "options": {
+        "a": "would",
+        "b": "did",
+        "c": "may",
+        "d": "no improvement. Tenses"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 170,
+      "section_q_num": 10,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "He comes oftento our house.",
+      "options": {
+        "a": "come often",
+        "b": "often comes",
+        "c": "often come",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 171,
+      "section_q_num": 11,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "As soon as winter sets in,the number of touristsstart increasingsuddenly.",
+      "options": {
+        "a": "the number of tourists are increased",
+        "b": "the amount of tourists start increasing",
+        "c": "the number of tourists increased",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 172,
+      "section_q_num": 12,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "She has sleptfor eight hours last night.",
+      "options": {
+        "a": "slept",
+        "b": "had slept",
+        "c": "has been sleeping",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 173,
+      "section_q_num": 13,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I have seen the film and shealso has.",
+      "options": {
+        "a": "has also",
+        "b": "too has",
+        "c": "too have",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 174,
+      "section_q_num": 14,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I hopethat I shall get a First Class.",
+      "options": {
+        "a": "I feel that",
+        "b": "I hoped",
+        "c": "I am doing hope",
+        "d": "No improvement."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 175,
+      "section_q_num": 15,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "While crossing the roada snake was seen.",
+      "options": {
+        "a": "a snake was moving",
+        "b": "he see a snake",
+        "c": "a snake was observed",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 176,
+      "section_q_num": 16,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Ifyou have studied hard,you would have gota first class.",
+      "options": {
+        "a": "If you studied hard",
+        "b": "If you had studied hard",
+        "c": "If you would have studied",
+        "d": "No improvement."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 177,
+      "section_q_num": 17,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The enemy,beaten at every point,fled fromthe field.",
+      "options": {
+        "a": "having been beaten",
+        "b": "was beaten",
+        "c": "to be beaten",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 178,
+      "section_q_num": 18,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Ihave boughtthis house in 1970 for Rs. twolakhs.",
+      "options": {
+        "a": "had bought",
+        "b": "bought",
+        "c": "have been bought",
+        "d": "no improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 179,
+      "section_q_num": 19,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I will phone you after I shall arrive.",
+      "options": {
+        "a": "after I shall have arrived",
+        "b": "after I arrive",
+        "c": "after I arrived",
+        "d": "no improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 180,
+      "section_q_num": 20,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "It's high time youcometo a decision.",
+      "options": {
+        "a": "came",
+        "b": "had come",
+        "c": "have come",
+        "d": "No improvement."
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 181,
+      "section_q_num": 21,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Didn'tMr. Sharma come to the office yet?",
+      "options": {
+        "a": "Hadn't",
+        "b": "Hasn't",
+        "c": "Isn't",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 182,
+      "section_q_num": 22,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "It is time weleave.",
+      "options": {
+        "a": "left",
+        "b": "have to leave",
+        "c": "would leave",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 183,
+      "section_q_num": 23,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "After the letter reachedme, I shall knowthe result.",
+      "options": {
+        "a": "After the letter reaches",
+        "b": "After the letter will reach",
+        "c": "After the letter has reached",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 184,
+      "section_q_num": 24,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Ihave returnedthe library books yesterday.",
+      "options": {
+        "a": "had returned",
+        "b": "have had returned",
+        "c": "returned",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 185,
+      "section_q_num": 25,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "How long are you working here?",
+      "options": {
+        "a": "have you been working here ?",
+        "b": "you are working here",
+        "c": "were you working?",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 186,
+      "section_q_num": 26,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Whatyou have been doingin the workshop sincelast month?",
+      "options": {
+        "a": "have you done",
+        "b": "you have done",
+        "c": "have you been doing",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 187,
+      "section_q_num": 27,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "If I had followed your advice, Iwould not regrettoday.",
+      "options": {
+        "a": "will not regret",
+        "b": "had not regretted",
+        "c": "would not have regretted",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 188,
+      "section_q_num": 28,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I intend tolearnFrench next year.",
+      "options": {
+        "a": "learning",
+        "b": "learn",
+        "c": "have learnt",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 189,
+      "section_q_num": 29,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "IfI had played well, I would have won the match.",
+      "options": {
+        "a": "I played well",
+        "b": "I play well",
+        "c": "I am playing will",
+        "d": "No improvement."
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 190,
+      "section_q_num": 30,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Whoyou saidwas coming to see me this morning?",
+      "options": {
+        "a": "you did say",
+        "b": "did you say",
+        "c": "did you say that",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 191,
+      "section_q_num": 31,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I have boughtthe library book today.",
+      "options": {
+        "a": "bought",
+        "b": "brought",
+        "c": "bring",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 192,
+      "section_q_num": 32,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "What does it matter mostis the quality of thegoods that we require.",
+      "options": {
+        "a": "What it matters more",
+        "b": "What does it matter more",
+        "c": "What matters most",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 193,
+      "section_q_num": 33,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "He denied that hehad not forgedmy signature.",
+      "options": {
+        "a": "would not forge",
+        "b": "had forged",
+        "c": "did not forge",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 194,
+      "section_q_num": 34,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Iused to havevery thick hair.",
+      "options": {
+        "a": "use to have",
+        "b": "used to having",
+        "c": "used to had",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 195,
+      "section_q_num": 35,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Idid not sawmy cousin in Madras.",
+      "options": {
+        "a": "not seen",
+        "b": "did not see",
+        "c": "did not seen",
+        "d": "No improvement."
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 196,
+      "section_q_num": 36,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I did not see himsince he wrote last.",
+      "options": {
+        "a": "I could not see him",
+        "b": "I shall not see him",
+        "c": "I have not seen him",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 197,
+      "section_q_num": 37,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Riding upon his horse, the tiger jumped at him.",
+      "options": {
+        "a": "Riding upon the tiger, the horse jumped at him.",
+        "b": "The tiger jumped at him while he was riding upon his horse.",
+        "c": "The tiger rode at him while he was jumping upon his horse.",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 198,
+      "section_q_num": 38,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "When we came out of the restaurantit was halfpast eleven.",
+      "options": {
+        "a": "When we had come out of the restaurant",
+        "b": "After we came out of the restaurant",
+        "c": "When we have come out of the restaurant",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 199,
+      "section_q_num": 39,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "We had a grand party and we enjoyed very much.",
+      "options": {
+        "a": "We had a grand party and enjoyed very much.",
+        "b": "We had a grand party to enjoy very much.",
+        "c": "We had a grand party and we enjoyed ourselves very much.",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 200,
+      "section_q_num": 40,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "It is high time youstartedrevising your lessons.",
+      "options": {
+        "a": "start",
+        "b": "had started",
+        "c": "will start",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 201,
+      "section_q_num": 41,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "A pair of shoeshave beenpurchased by me.",
+      "options": {
+        "a": "has been",
+        "b": "has being",
+        "c": "would been",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 202,
+      "section_q_num": 42,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "WhenI shallgo to Agra, I shall visit the TajMahal.",
+      "options": {
+        "a": "have gone",
+        "b": "shall travel",
+        "c": "go",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 203,
+      "section_q_num": 43,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "He throwedit out of the window.",
+      "options": {
+        "a": "threw",
+        "b": "throw",
+        "c": "thrown",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 204,
+      "section_q_num": 44,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Hehangedhis portrait in the main hall.",
+      "options": {
+        "a": "hang",
+        "b": "hung",
+        "c": "had hanged",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 205,
+      "section_q_num": 45,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "His speech was broadcastedover the radio lastThursday.",
+      "options": {
+        "a": "was broadcast",
+        "b": "had been broadcast",
+        "c": "has been broadcast",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 206,
+      "section_q_num": 46,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "His brother never hasand never will be dependable.",
+      "options": {
+        "a": "never had",
+        "b": "never has been",
+        "c": "was never being",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 207,
+      "section_q_num": 47,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "She had read Oliver Twist when shehad beenfourteen years old.",
+      "options": {
+        "a": "had become",
+        "b": "has become",
+        "c": "was",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 208,
+      "section_q_num": 48,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Mayankwas workingovertime for the last twoweeks.",
+      "options": {
+        "a": "is working",
+        "b": "is being working",
+        "c": "has been working",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 209,
+      "section_q_num": 49,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Every morning Iget upat 4 o' clock, but todayI get up at 7 o' clock.",
+      "options": {
+        "a": "got up",
+        "b": "was getting up",
+        "c": "am getting up",
+        "d": "No improvement Tenses"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 210,
+      "section_q_num": 50,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Most childrenare likingice-cream.",
+      "options": {
+        "a": "likes",
+        "b": "like",
+        "c": "were liking",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 211,
+      "section_q_num": 51,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Supposing if he comes,what should I do?",
+      "options": {
+        "a": "If he comes",
+        "b": "In case he will come",
+        "c": "In the event of his being come",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 212,
+      "section_q_num": 52,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Either Vijay or Vimalaregoing to be selectedfor the match.",
+      "options": {
+        "a": "has",
+        "b": "is",
+        "c": "have been",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 213,
+      "section_q_num": 53,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The advancements in medical sciencehas provedto be a boon for all of us.",
+      "options": {
+        "a": "has proven",
+        "b": "had proven",
+        "c": "have proved",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 214,
+      "section_q_num": 54,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "If I was youI would not sign the document.",
+      "options": {
+        "a": "If I have been you",
+        "b": "If I were you",
+        "c": "If I had been you",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 215,
+      "section_q_num": 55,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The fishermenare fishingin the sea from sunriseand will continue to do so until sunset.",
+      "options": {
+        "a": "have fished",
+        "b": "have been fishing",
+        "c": "were fishing",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 216,
+      "section_q_num": 56,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "His friends could not tell me why he did notcometo college yesterday.",
+      "options": {
+        "a": "why had he not come",
+        "b": "why did he not come",
+        "c": "why not had he come",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 217,
+      "section_q_num": 57,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I asked the travellerwhere is he going.",
+      "options": {
+        "a": "where he is going",
+        "b": "where was he going",
+        "c": "where he was going",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 218,
+      "section_q_num": 58,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Rakeshdidn't knewmy address.",
+      "options": {
+        "a": "didn't known",
+        "b": "didn't have",
+        "c": "didn't know",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 219,
+      "section_q_num": 59,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Mary would not go to the market unless Igowith her.",
+      "options": {
+        "a": "shall go",
+        "b": "went",
+        "c": "would go",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 220,
+      "section_q_num": 60,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The stranger asked the little girl what isher name.",
+      "options": {
+        "a": "what her name is",
+        "b": "what her name was",
+        "c": "what was her name",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 221,
+      "section_q_num": 61,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The light went out whileI read.",
+      "options": {
+        "a": "was reading",
+        "b": "am reading",
+        "c": "had read",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 222,
+      "section_q_num": 62,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "He said that hesawhim last year, to discussthe documents.",
+      "options": {
+        "a": "met",
+        "b": "had seen",
+        "c": "seen",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 223,
+      "section_q_num": 63,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The teachertoldthat Monday would be a holiday",
+      "options": {
+        "a": "is telling",
+        "b": "has told",
+        "c": "said",
+        "d": "might tell"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 224,
+      "section_q_num": 64,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Iam working here from2008.",
+      "options": {
+        "a": "have been working here since",
+        "b": "have worked here from",
+        "c": "have been working here from",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 225,
+      "section_q_num": 65,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The qualities which have supported Tilak andgivenhim his hard earned success have been rarein Indian politics.",
+      "options": {
+        "a": "gave",
+        "b": "had given",
+        "c": "have given",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 226,
+      "section_q_num": 66,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Have youtakenyour breakfast?",
+      "options": {
+        "a": "had",
+        "b": "eaten",
+        "c": "done",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 227,
+      "section_q_num": 67,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "My friendwentabroad last week.",
+      "options": {
+        "a": "has gone",
+        "b": "went to",
+        "c": "had gone",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 228,
+      "section_q_num": 68,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "If I had gone to Mumbai, Iwould surely bringyour books.",
+      "options": {
+        "a": "would have surely brought",
+        "b": "could have surely brought",
+        "c": "might have brought",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 229,
+      "section_q_num": 69,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Sheis lovingchocolate ice-cream.",
+      "options": {
+        "a": "has loving",
+        "b": "has been loved",
+        "c": "loves",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 230,
+      "section_q_num": 70,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Jameshad been teachingat the university sinceJune last year before he quit.",
+      "options": {
+        "a": "has been teaching",
+        "b": "have been teaching",
+        "c": "is teaching",
+        "d": "No improvement Tenses"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 231,
+      "section_q_num": 71,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Iam working here from2008.",
+      "options": {
+        "a": "have been working here since",
+        "b": "have worked here from",
+        "c": "have been working here from",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 232,
+      "section_q_num": 72,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I do not think itwould not rain.",
+      "options": {
+        "a": "will rain",
+        "b": "should not rain",
+        "c": "should rain",
+        "d": "will not rain"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 233,
+      "section_q_num": 73,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "The constitution ofIndia guaranteedeach citizenequal rights and privileges.",
+      "options": {
+        "a": "Indian guarantees",
+        "b": "India guarantees",
+        "c": "India guarantee",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 234,
+      "section_q_num": 74,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Wedida test when the lights went out.",
+      "options": {
+        "a": "have been doing",
+        "b": "were doing",
+        "c": "had done",
+        "d": "No improvement"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Correct option is (B)."
+    },
+    {
+      "q_num": 235,
+      "section_q_num": 75,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "She hoped that shewill inherither father'sproperty as she has no other sibling",
+      "options": {
+        "a": "would inherit",
+        "b": "would have inherited",
+        "c": "inherits",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 236,
+      "section_q_num": 76,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "It is wonderful to be successful when oneexpectfailure.",
+      "options": {
+        "a": "expects",
+        "b": "accepted",
+        "c": "were expecting",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 237,
+      "section_q_num": 77,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "Were Ia doctor I would treat him free ?",
+      "options": {
+        "a": "Was I",
+        "b": "If I was",
+        "c": "Had I been",
+        "d": "No improvement"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Correct option is (D)."
+    },
+    {
+      "q_num": 238,
+      "section_q_num": 78,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "When I reached the house it has beenalreadyrented.",
+      "options": {
+        "a": "Have been",
+        "b": "was",
+        "c": "had been",
+        "d": "No improvement"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "Correct option is (C)."
+    },
+    {
+      "q_num": 239,
+      "section_q_num": 79,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I could do nothing butto cry.",
+      "options": {
+        "a": "cry",
+        "b": "cried",
+        "c": "having cried",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    },
+    {
+      "q_num": 240,
+      "section_q_num": 80,
+      "type": "sentence_improvement",
+      "sub_category": "Sentence Improvement",
+      "question": "I won'thave you behavinglike that in my office.",
+      "options": {
+        "a": "have you behave",
+        "b": "have you to behave",
+        "c": "have you behaving",
+        "d": "No improvement"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct option is (A)."
+    }
+  ]
+}

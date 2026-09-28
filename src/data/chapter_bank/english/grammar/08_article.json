@@ -1,0 +1,1932 @@
+{
+  "chapter_num": 8,
+  "chapter_id": "08_article",
+  "chapter_title": "Article",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "article",
+  "total_questions": 120,
+  "questions": [
+    {
+      "q_num": 1,
+      "section_q_num": 1,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I saw /(b) you on /(c) the T.V. /(d) no error.",
+      "options": {
+        "a": "(a) I saw",
+        "b": "(b) you on",
+        "c": "(c) the T.V.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"the\" from part (c).",
+      "solution": "Remove \"the\" from part (c)."
+    },
+    {
+      "q_num": 2,
+      "section_q_num": 2,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We have elected him /(b) the president ofthis /(c) organization once again /(d) no error.",
+      "options": {
+        "a": "(a) We have elected him",
+        "b": "(b) the president ofthis",
+        "c": "(c) organization once again",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"the\" from part (b).",
+      "solution": "Remove \"the\" from part (b). No article isused with \"elect\"."
+    },
+    {
+      "q_num": 3,
+      "section_q_num": 3,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I have an urgent /(b) piece of /(c) work today/(d) no error.",
+      "options": {
+        "a": "(a) I have an urgent",
+        "b": "(b) piece of",
+        "c": "(c) work today",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 4,
+      "section_q_num": 4,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) An early bird /(b) catches the /(c) worm /(d)no error.",
+      "options": {
+        "a": "(a) An early bird",
+        "b": "(b) catches the",
+        "c": "(c) worm",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"an\" with \"the\".",
+      "solution": "Replace \"an\" with \"the\". We use fixed articleswith proverbs or idioms."
+    },
+    {
+      "q_num": 5,
+      "section_q_num": 5,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I am talking about /(b) a first three events/(c) you organized /(d) no error.",
+      "options": {
+        "a": "(a) I am talking about",
+        "b": "(b) a first three events",
+        "c": "(c) you organized",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"a\" with \"the\".",
+      "solution": "Replace \"a\" with \"the\". The article \"the\"is used with ordinal numbers."
+    },
+    {
+      "q_num": 6,
+      "section_q_num": 6,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) To my mind, /(b) the life should be respected/(c) in every form /(d) no error.",
+      "options": {
+        "a": "(a) To my mind,",
+        "b": "(b) the life should be respected",
+        "c": "(c) in every form",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"the\" from part (b).",
+      "solution": "Remove \"the\" from part (b). No article isused with \"life\"."
+    },
+    {
+      "q_num": 7,
+      "section_q_num": 7,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Riya is so beautiful /(b) the woman that she/(c) can mesmerize anyone /(d) no error.",
+      "options": {
+        "a": "(a) Riya is so beautiful",
+        "b": "(b) the woman that she",
+        "c": "(c) can mesmerize anyone",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"the\" with \"a\".",
+      "solution": "Replace \"the\" with \"a\". If a noun and anadjective is used after how/too/so, the article \"a/an\" is used before that noun."
+    },
+    {
+      "q_num": 8,
+      "section_q_num": 8,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) A Sapna /(b) is knocking at /(c) the door/(d) no error.",
+      "options": {
+        "a": "(a) A Sapna",
+        "b": "(b) is knocking at",
+        "c": "(c) the door",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. Here, a Sapna refers to any unknowngirl named Sapna."
+    },
+    {
+      "q_num": 9,
+      "section_q_num": 9,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Neither of books /(b) is on English /(c) grammar/(d) no error.",
+      "options": {
+        "a": "(a) Neither of books",
+        "b": "(b) is on English",
+        "c": "(c) grammar",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before books.",
+      "solution": "Add \"the\" before books. If a proper nounis used after either of / neither of, article \"the\" is used before that noun."
+    },
+    {
+      "q_num": 10,
+      "section_q_num": 10,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Bananas are sold /(b) by counting /(c) inIndia /(d) no error.",
+      "options": {
+        "a": "(a) Bananas are sold",
+        "b": "(b) by counting",
+        "c": "(c) inIndia",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Add \"the\" before counting.",
+      "solution": "Add \"the\" before counting. Article \"the\"is used before the words relating to measurement or counting."
+    },
+    {
+      "q_num": 11,
+      "section_q_num": 11,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) A bird in a hand /(b) is worth two/(c) inthe bush /(d) no error.",
+      "options": {
+        "a": "(a) A bird in a hand",
+        "b": "(b) is worth two",
+        "c": "(c) inthe bush",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"a hand\" with \"the hand\".",
+      "solution": "Replace \"a hand\" with \"the hand\". No articlecan be changed in proverbs or idioms."
+    },
+    {
+      "q_num": 12,
+      "section_q_num": 12,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I have to score /(b) more than 90% marks/(c) in the physics /(d) no error.",
+      "options": {
+        "a": "(a) I have to score",
+        "b": "(b) more than 90% marks",
+        "c": "(c) in the physics",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"the\" before physics.",
+      "solution": "Remove \"the\" before physics. No articleis used before the name of the subject."
+    },
+    {
+      "q_num": 13,
+      "section_q_num": 13,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The Punjab is not /(b) in favor of /(c) thispolicy /(d) no error.",
+      "options": {
+        "a": "(a) The Punjab is not",
+        "b": "(b) in favor of",
+        "c": "(c) thispolicy",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"the\" before Punjab.",
+      "solution": "Remove \"the\" before Punjab. No articleis used before the particular name of the country/ state."
+    },
+    {
+      "q_num": 14,
+      "section_q_num": 14,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) What did you /(b) do in the /(c) summer season/(d) no error.",
+      "options": {
+        "a": "(a) What did you",
+        "b": "(b) do in the",
+        "c": "(c) summer season",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 15,
+      "section_q_num": 15,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Chetna met with an accident /(b) so she wasrushed /(c) to the hospital /(d) no error.",
+      "options": {
+        "a": "(a) Chetna met with an accident",
+        "b": "(b) so she wasrushed",
+        "c": "(c) to the hospital",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"the\" before hospital.",
+      "solution": "Remove \"the\" before hospital. As she wasrushed to the hospital for treatment, it shows the primary real purpose so no article is used."
+    },
+    {
+      "q_num": 16,
+      "section_q_num": 16,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Rahul has been promoted /(b) to the postof /(c) a headmaster /(d) no error.",
+      "options": {
+        "a": "(a) Rahul has been promoted",
+        "b": "(b) to the postof",
+        "c": "(c) a headmaster",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"a\" before headmaster.",
+      "solution": "Remove \"a\" before headmaster. No articleis used between \"post of/ kind of\" and \"noun\"."
+    },
+    {
+      "q_num": 17,
+      "section_q_num": 17,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The robbers were caught /(b)just beforethey were about /(c) to escape the jail. /(d) no error.",
+      "options": {
+        "a": "(a) The robbers were caught",
+        "b": "(b) just beforethey were about",
+        "c": "(c) to escape the jail.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"the\" from part (c).",
+      "solution": "Remove \"the\" from part (c). No articleis used before school, college, university, church, bed, hospital, prison, jail, court, bed, market, when these places are visited or used for their primary purpose."
+    },
+    {
+      "q_num": 18,
+      "section_q_num": 18,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) What kind /(b) of an aspirant /(c) are you?/(d) no error.",
+      "options": {
+        "a": "(a) What kind",
+        "b": "(b) of an aspirant",
+        "c": "(c) are you?",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 19,
+      "section_q_num": 19,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The closer you /(b) come, the farthest /(c)she goes /(d) no error.",
+      "options": {
+        "a": "(a) The closer you",
+        "b": "(b) come, the farthest",
+        "c": "(c) she goes",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"farthest\" with \"farther\".",
+      "solution": "Replace \"farthest\" with \"farther\"."
+    },
+    {
+      "q_num": 20,
+      "section_q_num": 20,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) English are very /(b) diligent and laborious/(c) they do what they want to do /(d) no error.",
+      "options": {
+        "a": "(a) English are very",
+        "b": "(b) diligent and laborious",
+        "c": "(c) they do what they want to do",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"English\" with \"The English\".",
+      "solution": "Replace \"English\" with \"The English\". www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Article"
+    },
+    {
+      "q_num": 21,
+      "section_q_num": 21,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The footballer in you /(b) is better than/(c) a judge in you /(d) no error.",
+      "options": {
+        "a": "(a) The footballer in you",
+        "b": "(b) is better than",
+        "c": "(c) a judge in you",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"a judge\" with \"The judge\".",
+      "solution": "Replace \"a judge\" with \"The judge\"."
+    },
+    {
+      "q_num": 22,
+      "section_q_num": 22,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Behavior of these /(b) children is /(c) praiseworthy/(d) no error.",
+      "options": {
+        "a": "(a) Behavior of these",
+        "b": "(b) children is",
+        "c": "(c) praiseworthy",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before behavior.",
+      "solution": "Add \"the\" before behavior. We use \"the\"before the noun followed by a prepositional phrase."
+    },
+    {
+      "q_num": 23,
+      "section_q_num": 23,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) What the beautiful /(b) bag you /(c) havebought /(d) no error.",
+      "options": {
+        "a": "(a) What the beautiful",
+        "b": "(b) bag you",
+        "c": "(c) havebought",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"the\" with \"a\".",
+      "solution": "Replace \"the\" with \"a\". The article \"a/an\"is used between what/how and a noun."
+    },
+    {
+      "q_num": 24,
+      "section_q_num": 24,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) None of a boy /(b) has arrived at the /(c)airport yet /(d) no error.",
+      "options": {
+        "a": "(a) None of a boy",
+        "b": "(b) has arrived at the",
+        "c": "(c) airport yet",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"a boy\" with \"the boys\".",
+      "solution": "Replace \"a boy\" with \"the boys\". If \"allof\", \"either of\", \"neither of\", \"each of\", \"most of\", \"some of\", \"both of\", \"half of\" \"none of\" etc. follow a noun, we use \"the\" before that noun."
+    },
+    {
+      "q_num": 25,
+      "section_q_num": 25,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) After facing numerous /(b) challenges, hebegan /(c) to lose the heart /(d) no error.",
+      "options": {
+        "a": "(a) After facing numerous",
+        "b": "(b) challenges, hebegan",
+        "c": "(c) to lose the heart",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"the\" before \"heart\".",
+      "solution": "Remove \"the\" before \"heart\". A/An is notused in the following phrases - to lose heart, to set foot, to give ear, at home, last but not least, to catch fire, in hand, set on fire, by car/bus etc, at last, by mistake, in danger, to take heart."
+    },
+    {
+      "q_num": 26,
+      "section_q_num": 26,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The breakfast I have /(b) had with you /(c)is delicious /(d) no error.",
+      "options": {
+        "a": "(a) The breakfast I have",
+        "b": "(b) had with you",
+        "c": "(c) is delicious",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 27,
+      "section_q_num": 27,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I saw him /(b) bagging from the /(c) doorto door /(d) no error.",
+      "options": {
+        "a": "(a) I saw him",
+        "b": "(b) bagging from the",
+        "c": "(c) doorto door",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"the\" from part (b).",
+      "solution": "Remove \"the\" from part (b). No articleis used when there is a preposition between two nouns of the same type."
+    },
+    {
+      "q_num": 28,
+      "section_q_num": 28,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He refused to give /(b) an ear to the rumors/(c) circulating about him /(d) no error. Article",
+      "options": {
+        "a": "(a) He refused to give",
+        "b": "(b) an ear to the rumors",
+        "c": "(c) circulating about him",
+        "d": "(d) no error. Article"
+      },
+      "answer": "b",
+      "correction": "Remove \"an\" from part (b).",
+      "solution": "Remove \"an\" from part (b). As 'give earto' is an idiomatic expression."
+    },
+    {
+      "q_num": 29,
+      "section_q_num": 29,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The death is /(b) something that can not /(c) be avoided /(d) no error.",
+      "options": {
+        "a": "(a) The death is",
+        "b": "(b) something that can not",
+        "c": "(c) be avoided",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"the\" before \"death\".",
+      "solution": "Remove \"the\" before \"death\". In general,no article is used with \"life/ death/ humanity etc.\""
+    },
+    {
+      "q_num": 30,
+      "section_q_num": 30,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Among the art class submissions, /(b) itwas Maya's painting that /(c) became teacher's pride /(d) no error.",
+      "options": {
+        "a": "(a) Among the art class submissions,",
+        "b": "(b) itwas Maya's painting that",
+        "c": "(c) became teacher's pride",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Add \"the\" before \"teacher's pride\".",
+      "solution": "Add \"the\" before \"teacher's pride\". Itmeans she holds a special and unique place as a source of pride for the teacher."
+    },
+    {
+      "q_num": 31,
+      "section_q_num": 31,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He found eight-dollars bill /(b) on the sidewalkand decided to treat /(c) himself to a cup of coffee /(d) no error.",
+      "options": {
+        "a": "(a) He found eight-dollars bill",
+        "b": "(b) on the sidewalkand decided to treat",
+        "c": "(c) himself to a cup of coffee",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"eight dollars' with \"an eightdollar\".",
+      "solution": "Replace \"eight dollars' with \"an eightdollar\".If we put the article\"a/an\"before thepluralnumberthe forthcomingnoun becomes singular."
+    },
+    {
+      "q_num": 32,
+      "section_q_num": 32,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We found ourselves in the fix /(b) when thecar broke down /(c) in the middle of nowhere /(d) no error.",
+      "options": {
+        "a": "(a) We found ourselves in the fix",
+        "b": "(b) when thecar broke down",
+        "c": "(c) in the middle of nowhere",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"the\" with \"a\".",
+      "solution": "Replace \"the\" with \"a\". 'In a fix' is anidiomatic expression. So, no changes are made in idioms or proverbs."
+    },
+    {
+      "q_num": 33,
+      "section_q_num": 33,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She received an award /(b) for creating amost important /(c) contribution to the project /(d) no error.",
+      "options": {
+        "a": "(a) She received an award",
+        "b": "(b) for creating amost important",
+        "c": "(c) contribution to the project",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"a\" with \"the\".",
+      "solution": "Replace \"a\" with \"the\". With the superlativedegrees, the article \"the\" is used."
+    },
+    {
+      "q_num": 34,
+      "section_q_num": 34,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) A computer has become /(b) an essential tool/(c) in modern life /(d) no error.",
+      "options": {
+        "a": "(a) A computer has become",
+        "b": "(b) an essential tool",
+        "c": "(c) in modern life",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"a\" with \"the\" before \"computer\".",
+      "solution": "Replace \"a\" with \"the\" before \"computer\".The article \"the\" is used to make generalizations about an invention."
+    },
+    {
+      "q_num": 35,
+      "section_q_num": 35,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) An Amazon is the largest /(b) river by dischargevolume /(c) in the world /(d) no error.",
+      "options": {
+        "a": "(a) An Amazon is the largest",
+        "b": "(b) river by dischargevolume",
+        "c": "(c) in the world",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"an\" with \"the\".",
+      "solution": "Replace \"an\" with \"the\". The article \"the\"is used with geographical features."
+    },
+    {
+      "q_num": 36,
+      "section_q_num": 36,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She was diagnosed /(b) with the malaria during/(c) her trip to a tropical country /(d) no error.",
+      "options": {
+        "a": "(a) She was diagnosed",
+        "b": "(b) with the malaria during",
+        "c": "(c) her trip to a tropical country",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"the malaria\" with \"malaria\".",
+      "solution": "Replace \"the malaria\" with \"malaria\". Noarticle is used with the name of disease or illness."
+    },
+    {
+      "q_num": 37,
+      "section_q_num": 37,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) They visited the /(b) United Kingdom /(c)for the royal wedding/(d) no error.",
+      "options": {
+        "a": "(a) They visited the",
+        "b": "(b) United Kingdom",
+        "c": "(c) for the royal wedding",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 38,
+      "section_q_num": 38,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) An Everglades in /(b) Florida is a unique/(c) swamp ecosystem /(d) no error.",
+      "options": {
+        "a": "(a) An Everglades in",
+        "b": "(b) Florida is a unique",
+        "c": "(c) swamp ecosystem",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"an\" with \"the\".",
+      "solution": "Replace \"an\" with \"the\". The article \"the\"is used with the name of the river and swamp."
+    },
+    {
+      "q_num": 39,
+      "section_q_num": 39,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Many films feature /(b) scenes shot in /(c)Sahara Desert /(d) no error.",
+      "options": {
+        "a": "(a) Many films feature",
+        "b": "(b) scenes shot in",
+        "c": "(c) Sahara Desert",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Add \"the\" before \"Sahara Desert\".",
+      "solution": "Add \"the\" before \"Sahara Desert\". The article\"the\" is used with the name of the desert."
+    },
+    {
+      "q_num": 40,
+      "section_q_num": 40,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I like to have a /(b) cup of coffee in morning/(c) to start my day /(d) no error.",
+      "options": {
+        "a": "(a) I like to have a",
+        "b": "(b) cup of coffee in morning",
+        "c": "(c) to start my day",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"in morning\" with \"in the morning\".",
+      "solution": "Replace \"in morning\" with \"in the morning\".The article \"the\" is used in time expressions like \"in the morning/ afternoon/ Evening\"."
+    },
+    {
+      "q_num": 41,
+      "section_q_num": 41,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She prefers to work /(b) on creative projects/(c) during day /(d) no error.",
+      "options": {
+        "a": "(a) She prefers to work",
+        "b": "(b) on creative projects",
+        "c": "(c) during day",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Add \"the\" before day.",
+      "solution": "Add \"the\" before day. Article \"the\" isused to show time expressions."
+    },
+    {
+      "q_num": 42,
+      "section_q_num": 42,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) In physics, the harder you /(b) push, thefaster an /(c) object accelerates /(d) no error.",
+      "options": {
+        "a": "(a) In physics, the harder you",
+        "b": "(b) push, thefaster an",
+        "c": "(c) object accelerates",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 43,
+      "section_q_num": 43,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) This is the /(b) more expensive of /(c) twooptions /(d) no error.",
+      "options": {
+        "a": "(a) This is the",
+        "b": "(b) more expensive of",
+        "c": "(c) twooptions",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Add \"the\"before two in part(c).",
+      "solution": "Add \"the\"before two in part(c). Phrase\"Of the two\" is used to compare or contrast between two specific items, people or groups."
+    },
+    {
+      "q_num": 44,
+      "section_q_num": 44,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Many individuals serve in /(b) reserves while/(c) maintaining civilian careers /(d) no error.",
+      "options": {
+        "a": "(a) Many individuals serve in",
+        "b": "(b) reserves while",
+        "c": "(c) maintaining civilian careers",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Add \"the\" before reserves.",
+      "solution": "Add \"the\" before reserves. It specifiesthat we are referring to a specific group of reserves, namely military reserves."
+    },
+    {
+      "q_num": 45,
+      "section_q_num": 45,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) A Coast Guard patrols /(b) coastal waters/(c) to ensure safety /(d) no error.",
+      "options": {
+        "a": "(a) A Coast Guard patrols",
+        "b": "(b) coastal waters",
+        "c": "(c) to ensure safety",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"a\" with \"the\".",
+      "solution": "Replace \"a\" with \"the\". The article \"the\"is used before names of Armed Forces."
+    },
+    {
+      "q_num": 46,
+      "section_q_num": 46,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She is fourth generation /(b) in her familyto /(c) attend that school /(d) no error.",
+      "options": {
+        "a": "(a) She is fourth generation",
+        "b": "(b) in her familyto",
+        "c": "(c) attend that school",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"fourth\".",
+      "solution": "Add \"the\" before \"fourth\". The article\"the\" is used before the ordinals."
+    },
+    {
+      "q_num": 47,
+      "section_q_num": 47,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) We spent the afternoon /(b) exploring a universe/(c) through a powerful telescope /(d) no error.",
+      "options": {
+        "a": "(a) We spent the afternoon",
+        "b": "(b) exploring a universe",
+        "c": "(c) through a powerful telescope",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"a\" with \"the\".",
+      "solution": "Replace \"a\" with \"the\".When a thing orgroup of things is unique we use the article \"the\" before it."
+    },
+    {
+      "q_num": 48,
+      "section_q_num": 48,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Members of an Executive Branch /(b) are responsiblefor implementing /(c) and enforcing laws /(d) no error.",
+      "options": {
+        "a": "(a) Members of an Executive Branch",
+        "b": "(b) are responsiblefor implementing",
+        "c": "(c) and enforcing laws",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"an\" with \"the\".",
+      "solution": "Replace \"an\" with \"the\". The article \"the\"is used for specific branches or entities within a government."
+    },
+    {
+      "q_num": 49,
+      "section_q_num": 49,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He navigates the world /(b) with remarkableskill, considering /(c) he is an one-eyed individual /(d) no error.",
+      "options": {
+        "a": "(a) He navigates the world",
+        "b": "(b) with remarkableskill, considering",
+        "c": "(c) he is an one-eyed individual",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"an\" with \"a\".",
+      "solution": "Replace \"an\" with \"a\". The sound is consonantbefore \"one\"."
+    },
+    {
+      "q_num": 50,
+      "section_q_num": 50,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She heard the noise /(b) coming from theold, /(c) creaky floorboards /(d) no error.",
+      "options": {
+        "a": "(a) She heard the noise",
+        "b": "(b) coming from theold,",
+        "c": "(c) creaky floorboards",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"the\" with \"a\".",
+      "solution": "Replace \"the\" with \"a\". Article 'a' isused with singular words like lie, noise, hole etc. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Article"
+    },
+    {
+      "q_num": 51,
+      "section_q_num": 51,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Vedas are ancient Hindu /(b) scriptures thatcontain hymns, /(c) rituals, and philosophical teachings /(d) no error.",
+      "options": {
+        "a": "(a) Vedas are ancient Hindu",
+        "b": "(b) scriptures thatcontain hymns,",
+        "c": "(c) rituals, and philosophical teachings",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before vedas.",
+      "solution": "Add \"the\" before vedas. The article \"the\" is used before the name of religious books."
+    },
+    {
+      "q_num": 52,
+      "section_q_num": 52,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I love listening /(b) to the music /(c) whileI work /(d) no error.",
+      "options": {
+        "a": "(a) I love listening",
+        "b": "(b) to the music",
+        "c": "(c) whileI work",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"the\" from part (b).",
+      "solution": "Remove \"the\" from part (b). Here, musicis used in a general case, so there is no need for the article \"the\"."
+    },
+    {
+      "q_num": 53,
+      "section_q_num": 53,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The plastic is a commonly /(b) used materialfor packaging /(c) and consumer goods /(d) no error.",
+      "options": {
+        "a": "(a) The plastic is a commonly",
+        "b": "(b) used materialfor packaging",
+        "c": "(c) and consumer goods",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"the\" from part (a).",
+      "solution": "Remove \"the\" from part (a). No articleis used before the material noun."
+    },
+    {
+      "q_num": 54,
+      "section_q_num": 54,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The Sun provides /(b) light and energy for/(c) our solar system /(d) no error.",
+      "options": {
+        "a": "(a) The Sun provides",
+        "b": "(b) light and energy for",
+        "c": "(c) our solar system",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 55,
+      "section_q_num": 55,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a)The earlier you arrive /(b) at the library,/(1c) the quiet it is /(d) no error.",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"quiet\" with \"quieter\".",
+      "solution": "Replace \"quiet\" with \"quieter\"."
+    },
+    {
+      "q_num": 56,
+      "section_q_num": 56,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I bought a new car, /(b) and she got same/(c) model a week later /(d) no error.",
+      "options": {
+        "a": "(a) I bought a new car,",
+        "b": "(b) and she got same",
+        "c": "(c) model a week later",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Add article \"the\" before \"same\".",
+      "solution": "Add article \"the\" before \"same\". The article\"the\" is used with \"same/ whole\"."
+    },
+    {
+      "q_num": 57,
+      "section_q_num": 57,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) It's incredible how the same recipe /(b)can taste different when /(c) prepared by two different chefs /(d) no error.",
+      "options": {
+        "a": "(a) It's incredible how the same recipe",
+        "b": "(b) can taste different when",
+        "c": "(c) prepared by two different chefs",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 58,
+      "section_q_num": 58,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) As we strolled through the park, /(b) weappreciated the gentle breeze /(c) and the rustling of leaves in a wind /(d) no error.",
+      "options": {
+        "a": "(a) As we strolled through the park,",
+        "b": "(b) weappreciated the gentle breeze",
+        "c": "(c) and the rustling of leaves in a wind",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"a\" with \"the\".",
+      "solution": "Replace \"a\" with \"the\". The article \"the\"is used with words related to the physical environment like- the fog, the wind, the sunshine, the rain etc."
+    },
+    {
+      "q_num": 59,
+      "section_q_num": 59,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The journey /(b) provided a sense /(c) ofa fulfillment /(d) no error.",
+      "options": {
+        "a": "(a) The journey",
+        "b": "(b) provided a sense",
+        "c": "(c) ofa fulfillment",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"a\" before \"fulfillment\".",
+      "solution": "Remove \"a\" before \"fulfillment\". As, \"fulfillment\"is an abstract noun, no article will be used here."
+    },
+    {
+      "q_num": 60,
+      "section_q_num": 60,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The report analyzed the project in the detail,/(b) providing insights into each phase and /(c) identifying areas for improvement /(d) no error.",
+      "options": {
+        "a": "(a) The report analyzed the project in the detail,",
+        "b": "(b) providing insights into each phase and",
+        "c": "(c) identifying areas for improvement",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"the\" before \"detail\".",
+      "solution": "Remove \"the\" before \"detail\". \"The\" isused before a definite noun whereas \"detail\" is not a definite noun and can be both countable or uncountable."
+    },
+    {
+      "q_num": 61,
+      "section_q_num": 61,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) A wood is a versatile /(b) material usedin /(c) construction and crafting /(d) no error.",
+      "options": {
+        "a": "(a) A wood is a versatile",
+        "b": "(b) material usedin",
+        "c": "(c) construction and crafting",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"a\" before \"wood\".",
+      "solution": "Remove \"a\" before \"wood\". No article isused with the material noun."
+    },
+    {
+      "q_num": 62,
+      "section_q_num": 62,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Supreme Court is the highest /(b) court inthe land, with the /(c) authority to interpret the Constitution /(d) no error.",
+      "options": {
+        "a": "(a) Supreme Court is the highest",
+        "b": "(b) court inthe land, with the",
+        "c": "(c) authority to interpret the Constitution",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"Supreme Court\".",
+      "solution": "Add \"the\" before \"Supreme Court\". \"The\"is used before government bodies and judicial bodies."
+    },
+    {
+      "q_num": 63,
+      "section_q_num": 63,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The Air Force plays /(b) a crucial role in/(c) national security /(d) no error.",
+      "options": {
+        "a": "(a) The Air Force plays",
+        "b": "(b) a crucial role in",
+        "c": "(c) national security",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 64,
+      "section_q_num": 64,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The best part of /(b) the vacation is /(c)returning the home /(d) no error.",
+      "options": {
+        "a": "(a) The best part of",
+        "b": "(b) the vacation is",
+        "c": "(c) returning the home",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Here, \"home\" is used as an adverb to describethe action of returning, so it doesn't require the definite article \"the.",
+      "solution": "Here, \"home\" is used as an adverb to describethe action of returning, so it doesn't require the definite article \"the.\""
+    },
+    {
+      "q_num": 65,
+      "section_q_num": 65,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The sound of leaves rustling in the /(b)wind provided a soothing /(c) background to the picnic /(d) no error.",
+      "options": {
+        "a": "(a) The sound of leaves rustling in the",
+        "b": "(b) wind provided a soothing",
+        "c": "(c) background to the picnic",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 66,
+      "section_q_num": 66,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) I'll take the quarter of /(b) the cake; the/(c) rest is for everyone else /(d) no error.",
+      "options": {
+        "a": "(a) I'll take the quarter of",
+        "b": "(b) the cake; the",
+        "c": "(c) rest is for everyone else",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"the\" with \"a\".",
+      "solution": "Replace \"the\" with \"a\". \"A\"/ \"An\" are usedbefore some indefinite numbers like \"a lot of\", \" a number of\" \"a half of\", \"a quarter of\"."
+    },
+    {
+      "q_num": 67,
+      "section_q_num": 67,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) She was promoted to the /(b) position ofmarketing /(c) manager last month /(d) no error.",
+      "options": {
+        "a": "(a) She was promoted to the",
+        "b": "(b) position ofmarketing",
+        "c": "(c) manager last month",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 68,
+      "section_q_num": 68,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) United States is grappling /(b) with evolvingsocietal dynamics /(c) and technological advancements /(d) no error.",
+      "options": {
+        "a": "(a) United States is grappling",
+        "b": "(b) with evolvingsocietal dynamics",
+        "c": "(c) and technological advancements",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"united\".",
+      "solution": "Add \"the\" before \"united\". Don't use articlewith the name of states or countries except starting with \"States\", \"Kingdom\", \"Republic\", \"Emirates\", \"Union\", \"Coast\", etc."
+    },
+    {
+      "q_num": 69,
+      "section_q_num": 69,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) He walked the north /(b) for several milesbefore /(c) reaching the mountain pass /(d) no error.",
+      "options": {
+        "a": "(a) He walked the north",
+        "b": "(b) for several milesbefore",
+        "c": "(c) reaching the mountain pass",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"the\" before \"north\".",
+      "solution": "Remove \"the\" before \"north\". If a direction(north, west, southeast, left, right) directly follows a verb, do not use an article with the direction."
+    },
+    {
+      "q_num": 70,
+      "section_q_num": 70,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Only an half of /(b) the pizza remained /(c)after the party /(d) no error.",
+      "options": {
+        "a": "(a) Only an half of",
+        "b": "(b) the pizza remained",
+        "c": "(c) after the party",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"an\" with \"a\".",
+      "solution": "Replace \"an\" with \"a\". \"Half\" gives theconsonant sound, so the article \"a\" will be used here."
+    },
+    {
+      "q_num": 71,
+      "section_q_num": 71,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) After the trip, /(b) it's always nice /(c)to come the home /(d) no error.",
+      "options": {
+        "a": "(a) After the trip,",
+        "b": "(b) it's always nice",
+        "c": "(c) to come the home",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Remove \"the\" before \"home\".",
+      "solution": "Remove \"the\" before \"home\". The article\"THE\" is not used with \"home\" when \"home\" is not preceded or followed by a descriptive word/phrase."
+    },
+    {
+      "q_num": 72,
+      "section_q_num": 72,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Farmers rely on good amounts /(b) of rainfallfor their crops to thrive, /(c) so they welcome a rain /(d) no error.",
+      "options": {
+        "a": "(a) Farmers rely on good amounts",
+        "b": "(b) of rainfallfor their crops to thrive,",
+        "c": "(c) so they welcome a rain",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"a\" with \"the\".",
+      "solution": "Replace \"a\" with \"the\". \"The\" is used beforewords referring to the physical environment."
+    },
+    {
+      "q_num": 73,
+      "section_q_num": 73,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Everyone in the whole /(b) neighborhood gatheredfor /(c) the community picnic /(d) no error.",
+      "options": {
+        "a": "(a) Everyone in the whole",
+        "b": "(b) neighborhood gatheredfor",
+        "c": "(c) the community picnic",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 74,
+      "section_q_num": 74,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) The cotton is a /(b) comfortable fabric /(c)often used in clothing /(d) no error.",
+      "options": {
+        "a": "(a) The cotton is a",
+        "b": "(b) comfortable fabric",
+        "c": "(c) often used in clothing",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"the\" before \"cotton\".",
+      "solution": "Remove \"the\" before \"cotton\". As cottonis a material noun and no article is used with a material noun."
+    },
+    {
+      "q_num": 75,
+      "section_q_num": 75,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "(a) Experiencing headache, /(b) she decided totake /(c) a break from work /(d) no error.",
+      "options": {
+        "a": "(a) Experiencing headache,",
+        "b": "(b) she decided totake",
+        "c": "(c) a break from work",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"a\" before \"headache\".",
+      "solution": "Add \"a\" before \"headache\". Some words likeNoise, Lie, Hole, Headache, Toothache (words ending in ache), commotion etc. take article \"a\" before them."
+    },
+    {
+      "q_num": 76,
+      "section_q_num": 76,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "The long-distance train (a)/which met with accident(b)/was carrying some army men. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Use \"an\" before \"accident\".",
+      "solution": "Use \"an\" before \"accident\". Accident gives a vowel sound. Thus, use \"an\"."
+    },
+    {
+      "q_num": 77,
+      "section_q_num": 77,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "If the worst (a)/comes to worst, (b)/I willhave to bid good-bye to my studies and join my family business. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No Error.",
+      "solution": "No Error."
+    },
+    {
+      "q_num": 78,
+      "section_q_num": 78,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "She pretends as if she has (a)/never in herlife, (b)/told a lies. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Replace \"a lies\" with \"a lie\".",
+      "solution": "Replace \"a lies\" with \"a lie\". \"lie\" is an uncountable noun. We do not use \"s/es\" with it. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Article"
+    },
+    {
+      "q_num": 79,
+      "section_q_num": 79,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "The Principal wanted to know who had arrived(a)/early that day (b)/cashier or the accountant. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Use \"the\" before \"cashier\".",
+      "solution": "Use \"the\" before \"cashier\". \"Cashier\" and \"accountant\" are two different people. Thus, articles will be used before each of them."
+    },
+    {
+      "q_num": 80,
+      "section_q_num": 80,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Members of the Opposition Party in the Parliament(a)/shout upon the minister (b)/if he makes a wrong statement. (c)/No error",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"members\" as they aredefinite.",
+      "solution": "Add \"the\" before \"members\" as they aredefinite."
+    },
+    {
+      "q_num": 81,
+      "section_q_num": 81,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "A milk (a)/can provide protein (b)/for nutritionallybalanced diet. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Eliminate \"a\" before \"milk\" as milk isuncountable.",
+      "solution": "Eliminate \"a\" before \"milk\" as milk isuncountable."
+    },
+    {
+      "q_num": 82,
+      "section_q_num": 82,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "If you do not give (a)/keys of the cupboard(b)/you will be shot. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"the\" before keys, as they are specificand the keys of a particular cupboard.",
+      "solution": "Add \"the\" before keys, as they are specificand the keys of a particular cupboard."
+    },
+    {
+      "q_num": 83,
+      "section_q_num": 83,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "There are billions of stars (a)/in galaxy (b)/aboutwhich man is unaware. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"the\" before \"galaxy\".",
+      "solution": "Add \"the\" before \"galaxy\". According to the rule 9, the is used before galaxy."
+    },
+    {
+      "q_num": 84,
+      "section_q_num": 84,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "I went to bank (a)/to withdraw some money but(b)/it was closed so early in the morning. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 85,
+      "section_q_num": 85,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Standing at (a)/top of the hill, (b)/the housesbelow were hardly visible. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"the\" before \"top\".",
+      "solution": "Add \"the\" before \"top\". For specific hill top, \"the\" will be used."
+    },
+    {
+      "q_num": 86,
+      "section_q_num": 86,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "A lot of scenes from film (a)/were removed (b)/dueto the censor board's objection. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"film\".",
+      "solution": "Add \"the\" before \"film\". Scenes from the specific film were removed by the censor board."
+    },
+    {
+      "q_num": 87,
+      "section_q_num": 87,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Neither of two children (a)/said their prayers(b)/before going to bed. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "After \"neither of\", \"the\" is added beforeadding a noun.",
+      "solution": "After \"neither of\", \"the\" is added beforeadding a noun. RULE: If \"all of\", \"either of\", neither of\",\"each of\", \"most of\", \"some of\", \"both of\", \"half of\" \"none of\" etc follow a noun, we use \"the\" before that noun."
+    },
+    {
+      "q_num": 88,
+      "section_q_num": 88,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Although he is university professor (a)/andearns very well (b)/he leads a very simple life. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"a\" before \"university professor\".",
+      "solution": "Add \"a\" before \"university professor\".Because the word university begins with a consonant sound."
+    },
+    {
+      "q_num": 89,
+      "section_q_num": 89,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Judge in him (a)/prevailed upon the father (b)/andhe sentenced his son to death. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"The\" before Judge.",
+      "solution": "Add \"The\" before Judge. RULE: When the personality present in a personis being talked about, the article comes with the name of that personality."
+    },
+    {
+      "q_num": 90,
+      "section_q_num": 90,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "All our efforts are directed (a)/to bring aboutcompromise (b)/between the two parties. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"a\" before \"compromise\".",
+      "solution": "Add \"a\" before \"compromise\". \"compromise\" is a singular uncountable noun."
+    },
+    {
+      "q_num": 91,
+      "section_q_num": 91,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Until the world lasts, (a)/the earth will go(b)/around sun. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Add \"the\" before \"Sun\".",
+      "solution": "Add \"the\" before \"Sun\". According to rule 9, \"the\" is used before sun/moon/etc."
+    },
+    {
+      "q_num": 92,
+      "section_q_num": 92,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "At the \" Article",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Remove the before \"nouns.",
+      "solution": "Remove the before \"nouns."
+    },
+    {
+      "q_num": 93,
+      "section_q_num": 93,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "The priest read Bible (a)/and blessed all the people (b)/present in the church. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"Bible\".",
+      "solution": "Add \"the\" before \"Bible\". (\"The\" is usedbefore names of holy books)"
+    },
+    {
+      "q_num": 94,
+      "section_q_num": 94,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Shatabdi Express is (a)/an important train (b)/whichis used by a lot of people in India. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"Shatabdi Express\".",
+      "solution": "Add \"the\" before \"Shatabdi Express\".(\"The\"is used before names of ships, aeroplanes and trains."
+    },
+    {
+      "q_num": 95,
+      "section_q_num": 95,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "The science has developed a lot (a)/ in thelast fifty years and it has contributed (b)/a lot to the development of mankind. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Eliminate \"the\" before \"science\" as \"the\"is not used before names of subjects.",
+      "solution": "Eliminate \"the\" before \"science\" as \"the\"is not used before names of subjects."
+    },
+    {
+      "q_num": 96,
+      "section_q_num": 96,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "Radhika is (a)/prettier of (b)/the two sisters.(c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "b",
+      "correction": "Add \"the\" before \"prettier\".",
+      "solution": "Add \"the\" before \"prettier\". RULE:Usage of \"the\" in comparative form. If \"OF THE TWO'\" is there after a comparative degree, we use \"the\" before that comparative."
+    },
+    {
+      "q_num": 97,
+      "section_q_num": 97,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "She celebrated the Christmas (a)/with her friends(b)/in New York. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Eliminate \"the\" before \"Christmas\" as \"the\"is not used before names of festivals.",
+      "solution": "Eliminate \"the\" before \"Christmas\" as \"the\"is not used before names of festivals."
+    },
+    {
+      "q_num": 98,
+      "section_q_num": 98,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "You caught me by arm (a)/,dragged me and (b)/threwme out of the room. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "a",
+      "correction": "Add \"the\" before \"arm\".",
+      "solution": "Add \"the\" before \"arm\"."
+    },
+    {
+      "q_num": 99,
+      "section_q_num": 99,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "The most widely (a)/read newspaper in Poona(b)/is Times of India. (c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "c",
+      "correction": "Add \"the\" before \"Times of India\".",
+      "solution": "Add \"the\" before \"Times of India\". (\"The\"is used before the names of newspapers."
+    },
+    {
+      "q_num": 100,
+      "section_q_num": 100,
+      "type": "spot_the_error",
+      "sub_category": "Spot the Error",
+      "question": "I myself went (a)/to finalise (b)/the deal.(c)/No error (d)",
+      "options": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d) No error"
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error."
+    },
+    {
+      "q_num": 101,
+      "section_q_num": 1,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The more electricity you use , _____________ (a) Your bill will be higher (b) Will your bill be higher (c) Will be higher your bill (d) The higher your bill will be",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "(d)The more electricity you use, the higheryour bill will be."
+    },
+    {
+      "q_num": 102,
+      "section_q_num": 2,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The greater the demand, _____________ the price. (a) higher (b) high (c) the higher (d) the high",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "(c)The greater the demand, the higher the price."
+    },
+    {
+      "q_num": 103,
+      "section_q_num": 3,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "By _____________united struggle, we may achievesuccess. (a) a (b) an (c) the (d) none of the above",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(a)By a united struggle, we may achieve success."
+    },
+    {
+      "q_num": 104,
+      "section_q_num": 4,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Meditation is _____________way to calm your nerves. (a) a best (b) one of the best (c) the best (d) an best",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "(c)Meditation is the best way to calm yournerves."
+    },
+    {
+      "q_num": 105,
+      "section_q_num": 5,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She is_____________ girls I know. (a) from the best (b) the most best (c) the best (d) one of the best",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "(d)She is one of the best girls I know. 'Oneof + the + superlative degree + plural noun' is the correct form."
+    },
+    {
+      "q_num": 106,
+      "section_q_num": 6,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He said to me, \"You are_____________\" (a) fooling (b) a fool (c) a foolish (d) fool",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(b)He said to me, \"You are a fool.\""
+    },
+    {
+      "q_num": 107,
+      "section_q_num": 7,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I will buy you ………………… bungalow when I have enoughmoney. (a) a (b) an (c) the (d) no article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(a)a"
+    },
+    {
+      "q_num": 108,
+      "section_q_num": 8,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I think we should move to my ____ house for acomfortable stay. (a) a (b) the (c) no article (d) the",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "(c)no article."
+    },
+    {
+      "q_num": 109,
+      "section_q_num": 9,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Arnav had ______ backache after falling fromthe stairs. (a) the (b) an (c) a (d) no article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(c)a"
+    },
+    {
+      "q_num": 110,
+      "section_q_num": 10,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Police found ______ Sarthi guilty in last nightrobbery. (a) no article (b) a (c) an (d) the",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "(a)no article"
+    },
+    {
+      "q_num": 111,
+      "section_q_num": 11,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Despite her initial reluctance, she found herselfdrawn to _______ enigmatic stranger she met. (a) a (b) an (c) the (d) none of the above",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(b)the"
+    },
+    {
+      "q_num": 112,
+      "section_q_num": 12,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Jack owns two pets, a dog and a hamster. I don'tlike _____ dog very much, but _____ hamster is adorable. (a) the, a (b) the, the (c) a, the (d) a, an",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "(b)the, the"
+    },
+    {
+      "q_num": 113,
+      "section_q_num": 13,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Garvit is paying eleven thousand _______ monthfor this well furnished 1BHK flat. (a) an (b) the (c) a (d) no article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(c)a"
+    },
+    {
+      "q_num": 114,
+      "section_q_num": 14,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "This is not ______ exhaustive list of words. (a) an (b) No word required (c) many (d) a www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(a)an"
+    },
+    {
+      "q_num": 115,
+      "section_q_num": 15,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "To reach north Goa you should take a flight for ________ Manohar International Airport. (a) the (b) an (c) a (d) no article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "(d)no article"
+    },
+    {
+      "q_num": 116,
+      "section_q_num": 16,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "________ Sharmas are a close-knit family knownfor their hospitality and warmth. (a) Someone (b) An (c) A (d) The",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(d)The"
+    },
+    {
+      "q_num": 117,
+      "section_q_num": 17,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Ram is ____ true Gandhi, advocating for peaceand non-violence in all situations. (a) the (b) an (c) a (d) no article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(c)a"
+    },
+    {
+      "q_num": 118,
+      "section_q_num": 18,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "After visiting the museum, Sarah has taken _______interest in ancient history. (a) an (b) the (c) a (d) no article",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(a)an"
+    },
+    {
+      "q_num": 119,
+      "section_q_num": 19,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Every morning, John starts his day with _____ten-mile walk along the riverbank. (a) no article (b) an (c) the (d) a",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "(d)a"
+    },
+    {
+      "q_num": 120,
+      "section_q_num": 20,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I'm driving right now, but I'll call you backwhen I get to ___ work. (a) no article (b) a (c) the (d) an",
+      "options": {
+        "a": "a",
+        "b": "an",
+        "c": "the",
+        "d": "No article required"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "(a)no article"
+    }
+  ]
+}

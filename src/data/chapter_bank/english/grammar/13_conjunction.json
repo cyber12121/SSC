@@ -1,0 +1,992 @@
+{
+  "chapter_num": 13,
+  "chapter_id": "13_conjunction",
+  "chapter_title": "Conjunction",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "conjunction",
+  "total_questions": 70,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) Either we go to the /(b) park and we stayhome /(c) and watch a movie /(d) no error.",
+      "options": {
+        "a": "(a) Either we go to the",
+        "b": "(b) park and we stayhome",
+        "c": "(c) and watch a movie",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"and\" with \"or\".",
+      "solution": "Replace \"and\" with \"or\". The disjunctiveconjunction \"either\" is followed by \"or\" not \"and\"."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) She is so/(b) smart as she /(c) is beautiful/(d) no error.",
+      "options": {
+        "a": "(a) She is so",
+        "b": "(b) smart as she",
+        "c": "(c) is beautiful",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"so\" with \"as\".",
+      "solution": "Replace \"so\" with \"as\". \"So….as\" is usedin Negative sentences, whereas \"As…..as\" is used in Positive as well as Negative sentences."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) Scarcely had /(b) he arrived home /(c) thenthe phone rang /(d) no error.",
+      "options": {
+        "a": "(a) Scarcely had",
+        "b": "(b) he arrived home",
+        "c": "(c) thenthe phone rang",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"then\" with \"when\".",
+      "solution": "Replace \"then\" with \"when\". The conjunction\"scarcely\" is followed by \"when\"."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) No sooner had the /(b) concert started than/(c) it began to rain /(d) no error.",
+      "options": {
+        "a": "(a) No sooner had the",
+        "b": "(b) concert started than",
+        "c": "(c) it began to rain",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) Both the cat also/(b) the dog were playing/(c) in the backyard /(d) no error.",
+      "options": {
+        "a": "(a) Both the cat also",
+        "b": "(b) the dog were playing",
+        "c": "(c) in the backyard",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"also\" with 'and\".",
+      "solution": "Replace \"also\" with 'and\". \"Both………and\"is a cumulative conjunction."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) Whether you like it and not, /(b) we haveto finish this /(c) project by Friday /(d) no error.",
+      "options": {
+        "a": "(a) Whether you like it and not,",
+        "b": "(b) we haveto finish this",
+        "c": "(c) project by Friday",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"and\" with \"or\".",
+      "solution": "Replace \"and\" with \"or\". \" whether\" and\"or\" used in pairs."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) Neither Sarah not Tom /(b) wants to go to/(c) the party tonight /(d) no error.",
+      "options": {
+        "a": "(a) Neither Sarah not Tom",
+        "b": "(b) wants to go to",
+        "c": "(c) the party tonight",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"not\" with \"nor\".",
+      "solution": "Replace \"not\" with \"nor\". \"Neither\" is followedby \"nor\"."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) He ran so fast /(b) that he won /(c) therace easily /(d) no error.",
+      "options": {
+        "a": "(a) He ran so fast",
+        "b": "(b) that he won",
+        "c": "(c) therace easily",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Conjunction"
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) Hence, he was /(b) feeling unwell, he /(c)decided to stay home /(d) no error.",
+      "options": {
+        "a": "(a) Hence, he was",
+        "b": "(b) feeling unwell, he",
+        "c": "(c) decided to stay home",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"hence\" with \"since\".",
+      "solution": "Replace \"hence\" with \"since\". \"Since\" implies a direct causal relationship between two events or conditions."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) He couldn't come to /(b) the party so/(c)he had to work late /(d) no error.",
+      "options": {
+        "a": "(a) He couldn't come to",
+        "b": "(b) the party so",
+        "c": "(c) he had to work late",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"so\" with \"because\".",
+      "solution": "Replace \"so\" with \"because\". Here the reasonfor coming late is mentioned, \"because\" will be used."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) You can either have /(b) ice cream and cakefor /(c) dessert, but not both /(d) no error.",
+      "options": {
+        "a": "(a) You can either have",
+        "b": "(b) ice cream and cakefor",
+        "c": "(c) dessert, but not both",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"and\" with \"or\".",
+      "solution": "Replace \"and\" with \"or\". The conjunction\"either\" is followed by \"or\"."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) She couldn't go to the party /(b) becauseshe had to /(c) finish her assignment /(d) no error.",
+      "options": {
+        "a": "(a) She couldn't go to the party",
+        "b": "(b) becauseshe had to",
+        "c": "(c) finish her assignment",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) The kids were playing /(b) outside whiletheir /(c) parents called them to eat food /(d) no error.",
+      "options": {
+        "a": "(a) The kids were playing",
+        "b": "(b) outside whiletheir",
+        "c": "(c) parents called them to eat food",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"while\" with \"when\".",
+      "solution": "Replace \"while\" with \"when\". For two simultaneousactions, \"while\" is used but to show interrupted action \"when\" is used."
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) While the project /(b) was challenging,it /(c) was also rewarding /(d) no error.",
+      "options": {
+        "a": "(a) While the project",
+        "b": "(b) was challenging,it",
+        "c": "(c) was also rewarding",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) No sooner had the bell /(b) rung then thestudents /(c) rushed out of the classroom /(d) no error.",
+      "options": {
+        "a": "(a) No sooner had the bell",
+        "b": "(b) rung then thestudents",
+        "c": "(c) rushed out of the classroom",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"then\" with \"than\".",
+      "solution": "Replace \"then\" with \"than\". \"No sooner\"is followed by \"than\"."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) Whether you choose the /(b) chicken andthe fish, both /(c) dishes are delicious /(d) no error.",
+      "options": {
+        "a": "(a) Whether you choose the",
+        "b": "(b) chicken andthe fish, both",
+        "c": "(c) dishes are delicious",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"and\" with \"or\".",
+      "solution": "Replace \"and\" with \"or\". The conjunction\"or\" is used with \"whether\"."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) Nobody else only the president /(b) himselfaddressed the nation /(c) during the crisis /(d) no error.",
+      "options": {
+        "a": "(a) Nobody else only the president",
+        "b": "(b) himselfaddressed the nation",
+        "c": "(c) during the crisis",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"only\" with \"than\".",
+      "solution": "Replace \"only\" with \"than\"."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) She is doubtful /(b) that they will /(c)accept her proposal /(d) no error. Conjunction",
+      "options": {
+        "a": "(a) She is doubtful",
+        "b": "(b) that they will",
+        "c": "(c) accept her proposal",
+        "d": "(d) no error. Conjunction"
+      },
+      "answer": "b",
+      "correction": "Replace \"that'' with \"whether\".",
+      "solution": "Replace \"that'' with \"whether\". In affirmativesentences, the words doubt/ doubtful are followed by 'if' or 'whether'."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) Are you doubtful whether she /(b) can complete /(c) the project by herself? /(d) no error.",
+      "options": {
+        "a": "(a) Are you doubtful whether she",
+        "b": "(b) can complete",
+        "c": "(c) the project by herself?",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"whether\" with \"that\".",
+      "solution": "Replace \"whether\" with \"that\". In negativeor interrogative sentences, the words doubt/ doubtful are followed by \"that\"."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) You won't pass /(b) the test until /(c)you study diligently /(d) no error.",
+      "options": {
+        "a": "(a) You won't pass",
+        "b": "(b) the test until",
+        "c": "(c) you study diligently",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"until\" with \"unless\".",
+      "solution": "Replace \"until\" with \"unless\". \"Until\"is used for time, while \"unless\" is used for condition."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "(a) She will be working /(b) from 9am to 5pm /(c) tomorrow /(d) no error.",
+      "options": {
+        "a": "(a) She will be working",
+        "b": "(b) from 9am to 5pm",
+        "c": "(c) tomorrow",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "(a) Classes will be held from /(b) Monday andFriday, starting at /(c) 9 a.m. and ending at 3 p.m. /(d) no error.",
+      "options": {
+        "a": "(a) Classes will be held from",
+        "b": "(b) Monday andFriday, starting at",
+        "c": "(c) 9 a.m. and ending at 3 p.m.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"and\" with \"to\".",
+      "solution": "Replace \"and\" with \"to\". The correct conjunctionpairs are \"from –to\" and \"between – and\"."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "(a) The reason why he was not allowed /(b) entrywas because he was /(c) less than eighteen years of age /(d) no error.",
+      "options": {
+        "a": "(a) The reason why he was not allowed",
+        "b": "(b) entrywas because he was",
+        "c": "(c) less than eighteen years of age",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"because\" with \"that\".",
+      "solution": "Replace \"because\" with \"that\". \"The reason\"and \"because\" in the sentence make it superfluous so \"the reason\" is followed by \"that\"."
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "(a) Hardly had he begun the exam /(b) then herealized he /(c) forgot his calculator. /(d) no error.",
+      "options": {
+        "a": "(a) Hardly had he begun the exam",
+        "b": "(b) then herealized he",
+        "c": "(c) forgot his calculator.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"then\" with \"when\".",
+      "solution": "Replace \"then\" with \"when\". The conjunction\"hardly\" is followed by \"when\"."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "(a) She would rather stay /(b) home and relaxto go /(c) out to a crowded party /(d) no error.",
+      "options": {
+        "a": "(a) She would rather stay",
+        "b": "(b) home and relaxto go",
+        "c": "(c) out to a crowded party",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"to\" with \"than\".",
+      "solution": "Replace \"to\" with \"than\". \"Rather\" is followedby \"than\"."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "(a) However challenging the task /(b) may be,yet he remains /(c) determined to complete it /(d) no error.",
+      "options": {
+        "a": "(a) However challenging the task",
+        "b": "(b) may be,yet he remains",
+        "c": "(c) determined to complete it",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove 'yet'.",
+      "solution": "Remove 'yet'. Both 'however' and 'yet'convey a sense of contrast and opposition, so using them together in a sentence is unnecessary."
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "(a) Although she studied hard, /(b) but shedidn't perform /(c) well in the exam /(d) no error.",
+      "options": {
+        "a": "(a) Although she studied hard,",
+        "b": "(b) but shedidn't perform",
+        "c": "(c) well in the exam",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"but\" with 'yet\".",
+      "solution": "Replace \"but\" with 'yet\". \"Although\" isfollowed by \"yet\" not by \"but\"."
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "(a) The movie was so /(b) interesting as I /(c)couldn't stop watching /(d) no error.",
+      "options": {
+        "a": "(a) The movie was so",
+        "b": "(b) interesting as I",
+        "c": "(c) couldn't stop watching",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"as\" with \"that\".",
+      "solution": "Replace \"as\" with \"that\". The conjunction\"so…….that\" is used to express purpose or result."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "(a) He couldn't come /(b) to the party so /(c)he had to work late /(d) no error.",
+      "options": {
+        "a": "(a) He couldn't come",
+        "b": "(b) to the party so",
+        "c": "(c) he had to work late",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"so\" with \"because\".",
+      "solution": "Replace \"so\" with \"because\". Here, thereason for not coming to the party is mentioned and to show the reason \"because\" is used."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "(a) I'm not sure whether /(b) I should takethe train /(c) or the bus to get there /(d) no error.",
+      "options": {
+        "a": "(a) I'm not sure whether",
+        "b": "(b) I should takethe train",
+        "c": "(c) or the bus to get there",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "(a) She carried her phone charger /(b) everywherelest her phone /(c) would run out of battery /(d) no error.",
+      "options": {
+        "a": "(a) She carried her phone charger",
+        "b": "(b) everywherelest her phone",
+        "c": "(c) would run out of battery",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"would\" with \"should\".",
+      "solution": "Replace \"would\" with \"should\". \"Lest\" isfollowed by \"should\"."
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "(a) They set multiple alarms /(b) lest theyshould oversleep /(c) for the important meeting /(d) no error.",
+      "options": {
+        "a": "(a) They set multiple alarms",
+        "b": "(b) lest theyshould oversleep",
+        "c": "(c) for the important meeting",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "(a) He ordered the same meal /(b) at the restaurantwhich he had /(c) enjoyed during his last visit /(d) no error.",
+      "options": {
+        "a": "(a) He ordered the same meal",
+        "b": "(b) at the restaurantwhich he had",
+        "c": "(c) enjoyed during his last visit",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"which\" with \"that\".",
+      "solution": "Replace \"which\" with \"that\". \"The same\"is followed by \"that\"."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "(a) The suitcase was too /(b) big for her notto fit in the /(c) overhead compartment /(d) no error.",
+      "options": {
+        "a": "(a) The suitcase was too",
+        "b": "(b) big for her notto fit in the",
+        "c": "(c) overhead compartment",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"not\" from part (b).",
+      "solution": "Remove \"not\" from part (b). \"Too\" is anegative word and no other negative word is used with the conjunction pair \"too — to\"."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "(a) She has no choice other than /(b) to acceptthe job offer; all other /(c) opportunities have fallen through /(d) no error.",
+      "options": {
+        "a": "(a) She has no choice other than",
+        "b": "(b) to acceptthe job offer; all other",
+        "c": "(c) opportunities have fallen through",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "(a) She is so /(b) intelligent as she /(c) ishardworking /(d) no error.",
+      "options": {
+        "a": "(a) She is so",
+        "b": "(b) intelligent as she",
+        "c": "(c) ishardworking",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"so\" with \"as\".",
+      "solution": "Replace \"so\" with \"as\"."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "(a) The store offers as /(b) much as twentydifferent /(c) flavors of ice cream /(d) no error.",
+      "options": {
+        "a": "(a) The store offers as",
+        "b": "(b) much as twentydifferent",
+        "c": "(c) flavors of ice cream",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"much\" with \"many\".",
+      "solution": "Replace \"much\" with \"many\". Since, \"flavors\"is a countable noun so many will be used with it."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "(a) As many as fifty percent /(b) of the students/(c) passed the exam /(d) no error.",
+      "options": {
+        "a": "(a) As many as fifty percent",
+        "b": "(b) of the students",
+        "c": "(c) passed the exam",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "(a) Though it was raining heavily, /(b) butshe decided to go /(c) for a walk in the park /(d) no error.",
+      "options": {
+        "a": "(a) Though it was raining heavily,",
+        "b": "(b) butshe decided to go",
+        "c": "(c) for a walk in the park",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"but\" with \"yet\".",
+      "solution": "Replace \"but\" with \"yet\". The fixed conjunctionpair is \"although — yet\". www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Conjunction"
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "(a) There was nothing /(b) left in the fridgealso a few /(c) eggs and some cheese /(d) no error.",
+      "options": {
+        "a": "(a) There was nothing",
+        "b": "(b) left in the fridgealso a few",
+        "c": "(c) eggs and some cheese",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"also\" with \"only\".",
+      "solution": "Replace \"also\" with \"only\". Here, the conjunction \"only\" represents the meaning of \"but\"."
+    },
+    {
+      "q_num": 41,
+      "type": "spot_the_error",
+      "question": "(a) Sonia wears two /(b) watches if one /(c)of them stops /(d) no error.",
+      "options": {
+        "a": "(a) Sonia wears two",
+        "b": "(b) watches if one",
+        "c": "(c) of them stops",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"if\" with \"in case\".",
+      "solution": "Replace \"if\" with \"in case\". The conjunction\"if\" is used to show a condition where \"in case\" is used for precaution."
+    },
+    {
+      "q_num": 42,
+      "type": "spot_the_error",
+      "question": "(a) I have not seen /(b) nor heard about /(c)the new movie /(d) no error.",
+      "options": {
+        "a": "(a) I have not seen",
+        "b": "(b) nor heard about",
+        "c": "(c) the new movie",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"nor\" with \"or\".",
+      "solution": "Replace \"nor\" with \"or\". In sentences containingnegative terms such as \"no,\" \"not,\" \"never,\" etc., the conjunction \"or\" is used."
+    },
+    {
+      "q_num": 43,
+      "type": "spot_the_error",
+      "question": "(a) She doubts if she will /(b) be ready tomarry /(c) you or not /(d) no error.",
+      "options": {
+        "a": "(a) She doubts if she will",
+        "b": "(b) be ready tomarry",
+        "c": "(c) you or not",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"if\" with \"whether\".",
+      "solution": "Replace \"if\" with \"whether\". In affirmativesentences, these are followed by 'if' or \"whether\"."
+    },
+    {
+      "q_num": 44,
+      "type": "spot_the_error",
+      "question": "(a) Because you have committed/(b) a crime therefore/(c) you will be punished /(d) no error.",
+      "options": {
+        "a": "(a) Because you have committed",
+        "b": "(b) a crime therefore",
+        "c": "(c) you will be punished",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove \"therefore\" from part (b).",
+      "solution": "Remove \"therefore\" from part (b). The conjunction\"because\" and \"therefore\" can't be used in the same sentence."
+    },
+    {
+      "q_num": 45,
+      "type": "spot_the_error",
+      "question": "(a) Walk carefully /(b) lest you should not/(c) fall down /(d) no error.",
+      "options": {
+        "a": "(a) Walk carefully",
+        "b": "(b) lest you should not",
+        "c": "(c) fall down",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"should not\" with \"should\".",
+      "solution": "Replace \"should not\" with \"should\". \"Lest\"is used to express a negative purpose or intention, so any other negative word is not used with it."
+    },
+    {
+      "q_num": 46,
+      "type": "spot_the_error",
+      "question": "(a) you have /(b) no money /(c) nor friends/(d) no error.",
+      "options": {
+        "a": "(a) you have",
+        "b": "(b) no money",
+        "c": "(c) nor friends",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"nor\" with \"or\".",
+      "solution": "Replace \"nor\" with \"or\". The conjunction\"nor\" is not used when a negative word like no / not/ never is already used."
+    },
+    {
+      "q_num": 47,
+      "type": "spot_the_error",
+      "question": "(a) Mr. Chatak always /(b) carries an umbrella/(c) if it rains /(d) no error.",
+      "options": {
+        "a": "(a) Mr. Chatak always",
+        "b": "(b) carries an umbrella",
+        "c": "(c) if it rains",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"if\" with \"in case\".",
+      "solution": "Replace \"if\" with \"in case\". The conjunction\"if\" is used to show a condition where \"in case\" is used for precaution."
+    },
+    {
+      "q_num": 48,
+      "type": "spot_the_error",
+      "question": "(a) Do you have any doubt /(b) if she will /(c)come back ? /(d) no error.",
+      "options": {
+        "a": "(a) Do you have any doubt",
+        "b": "(b) if she will",
+        "c": "(c) come back ?",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"if\" with \"that\".",
+      "solution": "Replace \"if\" with \"that\". The conjunction\"doubt/doubtful\" is followed by \"that\" in negative or interrogative sentences."
+    },
+    {
+      "q_num": 49,
+      "type": "spot_the_error",
+      "question": "(a) Neither the size nor /(b) the shape or thecolour of /(c) the clothes is right /(d) no error.",
+      "options": {
+        "a": "(a) Neither the size nor",
+        "b": "(b) the shape or thecolour of",
+        "c": "(c) the clothes is right",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"or\" with \"nor\".",
+      "solution": "Replace \"or\" with \"nor\". \"Neither\" is alwaysfollowed by \"nor\"."
+    },
+    {
+      "q_num": 50,
+      "type": "spot_the_error",
+      "question": "(a) Though you are /(b) smart but I don't /(c)like you /(d) no error. Conjunction",
+      "options": {
+        "a": "(a) Though you are",
+        "b": "(b) smart but I don't",
+        "c": "(c) like you",
+        "d": "(d) no error. Conjunction"
+      },
+      "answer": "b",
+      "correction": "Replace \"but\" with \"yet\".",
+      "solution": "Replace \"but\" with \"yet\". \"Although / though\"is followed by \"yet\" not by \"but\"."
+    },
+    {
+      "q_num": 51,
+      "type": "spot_the_error",
+      "question": "(a) I have met many great /(b) personalities as /(c) Sachin Tendulkar and Virat Kohli /(d) no error.",
+      "options": {
+        "a": "(a) I have met many great",
+        "b": "(b) personalities as",
+        "c": "(c) Sachin Tendulkar and Virat Kohli",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"as\" with \"like\".",
+      "solution": "Replace \"as\" with \"like\". The conjunction\"like\" conveys the meaning of such as or for example."
+    },
+    {
+      "q_num": 52,
+      "type": "spot_the_error",
+      "question": "(a) They rushed to the /(b) hospital yet theywere /(c) too late /(d) no error.",
+      "options": {
+        "a": "(a) They rushed to the",
+        "b": "(b) hospital yet theywere",
+        "c": "(c) too late",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"yet\" with \"but\".",
+      "solution": "Replace \"yet\" with \"but\". The conjunction\"but\" shows common contrast while \"yet\" expresses the meaning of unexpected contrast."
+    },
+    {
+      "q_num": 53,
+      "type": "spot_the_error",
+      "question": "(a) Suresh is a rich man /(b) but he could not/(c) save his wife /(d) no error.",
+      "options": {
+        "a": "(a) Suresh is a rich man",
+        "b": "(b) but he could not",
+        "c": "(c) save his wife",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"but\" with \"yet\".",
+      "solution": "Replace \"but\" with \"yet\". The conjunction\"but\" gives two general opposite facts or common contrast but \"yet\" shows contradiction."
+    },
+    {
+      "q_num": 54,
+      "type": "spot_the_error",
+      "question": "(a) Suppose if we decide /(b) to take a differentroute /(c) to avoid the traffic /(d) no error.",
+      "options": {
+        "a": "(a) Suppose if we decide",
+        "b": "(b) to take a differentroute",
+        "c": "(c) to avoid the traffic",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove either \"suppose\" or \"if\".",
+      "solution": "Remove either \"suppose\" or \"if\". Both supposeand if are not used together."
+    },
+    {
+      "q_num": 55,
+      "type": "spot_the_error",
+      "question": "(a) We are toiling very hard /(b) so that weshould /(c) make our parents feel proud /(d) no error.",
+      "options": {
+        "a": "(a) We are toiling very hard",
+        "b": "(b) so that weshould",
+        "c": "(c) make our parents feel proud",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"should\" with \"may\".",
+      "solution": "Replace \"should\" with \"may\". The conjunction\"so that\" is followed by the modals \"may /might/ can/ could/ would\"."
+    },
+    {
+      "q_num": 56,
+      "type": "spot_the_error",
+      "question": "(a) I prefer to go out /(b) rather stay /(c)at home /(d) no error.",
+      "options": {
+        "a": "(a) I prefer to go out",
+        "b": "(b) rather stay",
+        "c": "(c) at home",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Add \"than\" after \"rather\".",
+      "solution": "Add \"than\" after \"rather\"."
+    },
+    {
+      "q_num": 57,
+      "type": "spot_the_error",
+      "question": "(a) I need nothing else than /(b) your blessingsin the form of /(c) your health and happiness /(d) no error.",
+      "options": {
+        "a": "(a) I need nothing else than",
+        "b": "(b) your blessingsin the form of",
+        "c": "(c) your health and happiness",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"than\" with \"but\".",
+      "solution": "Replace \"than\" with \"but\". The conjunction\"else\" is paired with \"but\" not with \"than\"."
+    },
+    {
+      "q_num": 58,
+      "type": "spot_the_error",
+      "question": "(a) Unless you don't discipline /(b) yourselfyou can't succeed in /(c) doing anything /(d) no error.",
+      "options": {
+        "a": "(a) Unless you don't discipline",
+        "b": "(b) yourselfyou can't succeed in",
+        "c": "(c) doing anything",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Remove \"don't\" from part (a).",
+      "solution": "Remove \"don't\" from part (a). Unless /until are negative words, no other negative word is used with them."
+    },
+    {
+      "q_num": 59,
+      "type": "spot_the_error",
+      "question": "(a) She did not talk to /(b) any boy unlessshe /(c) became 16 years old /(d) no error.",
+      "options": {
+        "a": "(a) She did not talk to",
+        "b": "(b) any boy unlessshe",
+        "c": "(c) became 16 years old",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"unless\" with \"until\".",
+      "solution": "Replace \"unless\" with \"until\". \"Until\"is used for time, while \"unless\" is used for condition."
+    },
+    {
+      "q_num": 60,
+      "type": "spot_the_error",
+      "question": "(a) Until the bell rings /(b) all of you willnot /(c) go outside /(d) no error.",
+      "options": {
+        "a": "(a) Until the bell rings",
+        "b": "(b) all of you willnot",
+        "c": "(c) go outside",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 61,
+      "type": "spot_the_error",
+      "question": "(a) However fast you /(b) run, you can not /(c)catch me /(d) no error.",
+      "options": {
+        "a": "(a) However fast you",
+        "b": "(b) run, you can not",
+        "c": "(c) catch me",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 62,
+      "type": "spot_the_error",
+      "question": "(a) Even if she was /(b) wounded she /(c) continuedfighting /(d) no error.",
+      "options": {
+        "a": "(a) Even if she was",
+        "b": "(b) wounded she",
+        "c": "(c) continuedfighting",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"even if\" with \"even though\".",
+      "solution": "Replace \"even if\" with \"even though\". \"Evenif\" is used for emphatic conditions while \"even though\" is used to show emphatic contrast."
+    },
+    {
+      "q_num": 63,
+      "type": "spot_the_error",
+      "question": "(a) Even though you have lived in England /(b)for many years you are /(c) unable to speak English /(d) no error.",
+      "options": {
+        "a": "(a) Even though you have lived in England",
+        "b": "(b) for many years you are",
+        "c": "(c) unable to speak English",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 64,
+      "type": "spot_the_error",
+      "question": "(a) I would be very happy /(b) to help you only/(c) I am very busy /(d) no error.",
+      "options": {
+        "a": "(a) I would be very happy",
+        "b": "(b) to help you only",
+        "c": "(c) I am very busy",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. Here, the conjunction \"only\"represents the meaning of but."
+    },
+    {
+      "q_num": 65,
+      "type": "spot_the_error",
+      "question": "(a) It was very late /(b) while I /(c) reachedhome /(d) no error.",
+      "options": {
+        "a": "(a) It was very late",
+        "b": "(b) while I",
+        "c": "(c) reachedhome",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"while\" with \"when\".",
+      "solution": "Replace \"while\" with \"when\".For two simultaneousactions, \"while\" is used but to show interrupted action \"when\" is used."
+    },
+    {
+      "q_num": 66,
+      "type": "spot_the_error",
+      "question": "(a) If you don't know the answer/(b) to a question,make a guess and/(c) come back to it later./(d) no error.",
+      "options": {
+        "a": "(a) If you don't know the answer",
+        "b": "(b) to a question,make a guess and",
+        "c": "(c) come back to it later.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"and' with \"Or\".",
+      "solution": "Replace \"and' with \"Or\". The conjunction\"or\" is used to suggest that only one possibility can be realized. In the given sentence, two options are given."
+    },
+    {
+      "q_num": 67,
+      "type": "spot_the_error",
+      "question": "(a) It may be difficult to finish all the questions/(b)in the time allowed, because/(c) don't spend too long on any one question./(d) no error.",
+      "options": {
+        "a": "(a) It may be difficult to finish all the questions",
+        "b": "(b) in the time allowed, because",
+        "c": "(c) don't spend too long on any one question.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"because\" with \"so\".",
+      "solution": "Replace \"because\" with \"so\". \"So\" is usedto show the results of an action, and \"because\" is used to show the cause of an action. No cause is mentioned in the given sentence. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Conjunction"
+    },
+    {
+      "q_num": 68,
+      "type": "spot_the_error",
+      "question": "(a) The debate on if Australia will have/(b)a nation-wide carbon trading scheme or not ended last week/(c) with the government committed to a national emissions scheme from 2019./(d) no error.",
+      "options": {
+        "a": "(a) The debate on if Australia will have",
+        "b": "(b) a nation-wide carbon trading scheme or not ended last week",
+        "c": "(c) with the government committed to a national emissions scheme from 2019.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"if\" with \"whether\" as whether and or go in pairs.",
+      "solution": "Replace \"if\" with \"whether\" as whether and or go in pairs. \"whether\" is used for the choices, and \"if\" is used for conditional sentences."
+    },
+    {
+      "q_num": 69,
+      "type": "spot_the_error",
+      "question": "(a) This is a useful and important rule/(b)for the exams, and/(c) difficult to remember./(d) no error.",
+      "options": {
+        "a": "(a) This is a useful and important rule",
+        "b": "(b) for the exams, and",
+        "c": "(c) difficult to remember.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"and\" with \"but\" in part (b).",
+      "solution": "Replace \"and\" with \"but\" in part (b). Theconjunction but is used to suggest a contrast. The given sentence is a contradictory statement, The question is important but difficult."
+    },
+    {
+      "q_num": 70,
+      "type": "spot_the_error",
+      "question": "(a) John plays basketball well/(b) and is apart of the school team,/(c) and his favorite sport is badminton./(d) no error.",
+      "options": {
+        "a": "(a) John plays basketball well",
+        "b": "(b) and is apart of the school team,",
+        "c": "(c) and his favorite sport is badminton.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "Replace \"and\"with \"but\".",
+      "solution": "Replace \"and\"with \"but\". The conjunction but is used to suggest a contrast. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

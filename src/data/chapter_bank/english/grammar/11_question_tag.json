@@ -1,0 +1,2412 @@
+{
+  "chapter_num": 11,
+  "chapter_id": "11_question_tag",
+  "chapter_title": "Question Tag",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "question_tag",
+  "total_questions": 150,
+  "questions": [
+    {
+      "q_num": 1,
+      "section_q_num": 1,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Cricket is more popular today, __________?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 2,
+      "section_q_num": 2,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Every action has an opposite reaction, ____?",
+      "options": {
+        "a": "Hasn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hasn't it ?'"
+    },
+    {
+      "q_num": 3,
+      "section_q_num": 3,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I am a student of Pinnacle, _______?",
+      "options": {
+        "a": "Aren't I ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't I ?'"
+    },
+    {
+      "q_num": 4,
+      "section_q_num": 4,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I had a bad headache yesterday, _________?",
+      "options": {
+        "a": "Hadn't I ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hadn't I ?'"
+    },
+    {
+      "q_num": 5,
+      "section_q_num": 5,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It is an important matter, __________?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 6,
+      "section_q_num": 6,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I am happy, _______?",
+      "options": {
+        "a": "Aren't I ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't I ?'"
+    },
+    {
+      "q_num": 7,
+      "section_q_num": 7,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The jury gave different opinions, _______?",
+      "options": {
+        "a": "Didn't they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't they ?'"
+    },
+    {
+      "q_num": 8,
+      "section_q_num": 8,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The kid is crying, _______?",
+      "options": {
+        "a": "Isn't it/he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it/he ?'"
+    },
+    {
+      "q_num": 9,
+      "section_q_num": 9,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It was a terrible accident, __________?",
+      "options": {
+        "a": "Wasn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Wasn't it ?'"
+    },
+    {
+      "q_num": 10,
+      "section_q_num": 10,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We must eat vegetables, _______?",
+      "options": {
+        "a": "Mustn't we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Mustn't we ?'"
+    },
+    {
+      "q_num": 11,
+      "section_q_num": 11,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Love the poor, _______? www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Question Tag",
+      "options": {
+        "a": "Won't you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Won't you ?'"
+    },
+    {
+      "q_num": 12,
+      "section_q_num": 12,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I am taking tea, _______?",
+      "options": {
+        "a": "Aren't I ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't I ?'"
+    },
+    {
+      "q_num": 13,
+      "section_q_num": 13,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We should love our country, _______?",
+      "options": {
+        "a": "Shouldn't we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Shouldn't we ?'"
+    },
+    {
+      "q_num": 14,
+      "section_q_num": 14,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Everything was alright, __________?",
+      "options": {
+        "a": "Wasn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Wasn't it ?'"
+    },
+    {
+      "q_num": 15,
+      "section_q_num": 15,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We were warned of the danger, _______?",
+      "options": {
+        "a": "Weren't we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Weren't we ?'"
+    },
+    {
+      "q_num": 16,
+      "section_q_num": 16,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I am innocent, _______?",
+      "options": {
+        "a": "Aren't I ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't I ?'"
+    },
+    {
+      "q_num": 17,
+      "section_q_num": 17,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Neither of them were responsible, ________?",
+      "options": {
+        "a": "Were they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Were they ?'"
+    },
+    {
+      "q_num": 18,
+      "section_q_num": 18,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Man is mortal, _______?",
+      "options": {
+        "a": "Isn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't he ?'"
+    },
+    {
+      "q_num": 19,
+      "section_q_num": 19,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "I am tired, _______?",
+      "options": {
+        "a": "Aren't I ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't I ?'"
+    },
+    {
+      "q_num": 20,
+      "section_q_num": 20,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Either you or your brother came here, _____?",
+      "options": {
+        "a": "Didn't you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't you ?'"
+    },
+    {
+      "q_num": 21,
+      "section_q_num": 21,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He cast his magic spell in the laboratory,____?",
+      "options": {
+        "a": "Didn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't he ?'"
+    },
+    {
+      "q_num": 22,
+      "section_q_num": 22,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nobody cheated in the exam, ________?",
+      "options": {
+        "a": "Did they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Did they ?'"
+    },
+    {
+      "q_num": 23,
+      "section_q_num": 23,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Ice touches cold, _______?",
+      "options": {
+        "a": "Doesn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Doesn't it ?'"
+    },
+    {
+      "q_num": 24,
+      "section_q_num": 24,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nobody dared to do it, ________?",
+      "options": {
+        "a": "Did they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Did they ?'"
+    },
+    {
+      "q_num": 25,
+      "section_q_num": 25,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It is an important matter, _______?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 26,
+      "section_q_num": 26,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nobody believes you, ________?",
+      "options": {
+        "a": "Do they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Do they ?'"
+    },
+    {
+      "q_num": 27,
+      "section_q_num": 27,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Somebody will say so, ________?",
+      "options": {
+        "a": "Won't they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Won't they ?'"
+    },
+    {
+      "q_num": 28,
+      "section_q_num": 28,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It hardly rains during the dry season, _____?",
+      "options": {
+        "a": "Does it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Does it ?'"
+    },
+    {
+      "q_num": 29,
+      "section_q_num": 29,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There are many mistakes in it , ________?",
+      "options": {
+        "a": "Aren't there ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't there ?'"
+    },
+    {
+      "q_num": 30,
+      "section_q_num": 30,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It is easy to say, _______?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 31,
+      "section_q_num": 31,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There are some problems here, ________?",
+      "options": {
+        "a": "Aren't there ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't there ?'"
+    },
+    {
+      "q_num": 32,
+      "section_q_num": 32,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There is a little water in the pot, ________?",
+      "options": {
+        "a": "Isn't there ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't there ?'"
+    },
+    {
+      "q_num": 33,
+      "section_q_num": 33,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It is quite a big garden, _______?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 34,
+      "section_q_num": 34,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There are six seasons in India, ________?",
+      "options": {
+        "a": "Aren't there ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't there ?'"
+    },
+    {
+      "q_num": 35,
+      "section_q_num": 35,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There has been an accident, ________?",
+      "options": {
+        "a": "Hasn't there ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hasn't there ?'"
+    },
+    {
+      "q_num": 36,
+      "section_q_num": 36,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She needs to buy a pen, _______?",
+      "options": {
+        "a": "Doesn't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Doesn't she ?'"
+    },
+    {
+      "q_num": 37,
+      "section_q_num": 37,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nobody believes a liar, ________?",
+      "options": {
+        "a": "Do they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Do they ?'"
+    },
+    {
+      "q_num": 38,
+      "section_q_num": 38,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "One of the legs has been broken, ________?",
+      "options": {
+        "a": "Hasn't one ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hasn't one ?'"
+    },
+    {
+      "q_num": 39,
+      "section_q_num": 39,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She has been fasting, __________?",
+      "options": {
+        "a": "Hasn't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hasn't she ?'"
+    },
+    {
+      "q_num": 40,
+      "section_q_num": 40,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The poor are born to suffer, __________?",
+      "options": {
+        "a": "Aren't they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't they ?'"
+    },
+    {
+      "q_num": 41,
+      "section_q_num": 41,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Someone went there, _______?",
+      "options": {
+        "a": "Didn't they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't they ?'"
+    },
+    {
+      "q_num": 42,
+      "section_q_num": 42,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Sultan thanked the Quazi, _______? www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Question Tag",
+      "options": {
+        "a": "Didn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't he ?'"
+    },
+    {
+      "q_num": 43,
+      "section_q_num": 43,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nobody called me, ________?",
+      "options": {
+        "a": "Did they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Did they ?'"
+    },
+    {
+      "q_num": 44,
+      "section_q_num": 44,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We had better discuss something else, _____?",
+      "options": {
+        "a": "Hadn't we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hadn't we ?'"
+    },
+    {
+      "q_num": 45,
+      "section_q_num": 45,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Hasan earned very little money, __________?",
+      "options": {
+        "a": "Didn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't he ?'"
+    },
+    {
+      "q_num": 46,
+      "section_q_num": 46,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The baby is innocent, _______?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 47,
+      "section_q_num": 47,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "To err is human, __________?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 48,
+      "section_q_num": 48,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nobody came, ________?",
+      "options": {
+        "a": "Did they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Did they ?'"
+    },
+    {
+      "q_num": 49,
+      "section_q_num": 49,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The baby is playing, _______?",
+      "options": {
+        "a": "Isn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't it ?'"
+    },
+    {
+      "q_num": 50,
+      "section_q_num": 50,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It was a good tiffin, _______?",
+      "options": {
+        "a": "Wasn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Wasn't it ?'"
+    },
+    {
+      "q_num": 51,
+      "section_q_num": 51,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Grandmother can tell good stories,_______?",
+      "options": {
+        "a": "Can't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can't she ?'"
+    },
+    {
+      "q_num": 52,
+      "section_q_num": 52,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nothing is impossible in this world, _____?",
+      "options": {
+        "a": "Is it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Is it ?'"
+    },
+    {
+      "q_num": 53,
+      "section_q_num": 53,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The book is rare now, ________?",
+      "options": {
+        "a": "Is it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Is it ?'"
+    },
+    {
+      "q_num": 54,
+      "section_q_num": 54,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The fishermen catch fishes, _______?",
+      "options": {
+        "a": "Don't they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Don't they ?'"
+    },
+    {
+      "q_num": 55,
+      "section_q_num": 55,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She is happy, _______?",
+      "options": {
+        "a": "Isn't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't she ?'"
+    },
+    {
+      "q_num": 56,
+      "section_q_num": 56,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She does not like bad films, __________?",
+      "options": {
+        "a": "Does she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Does she ?'"
+    },
+    {
+      "q_num": 57,
+      "section_q_num": 57,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She has never visited the Taj Mahal, ______?",
+      "options": {
+        "a": "Has she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Has she ?'"
+    },
+    {
+      "q_num": 58,
+      "section_q_num": 58,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You are not my friend, __________?",
+      "options": {
+        "a": "Are you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Are you ?'"
+    },
+    {
+      "q_num": 59,
+      "section_q_num": 59,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He sat by me, __________?",
+      "options": {
+        "a": "Didn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't he ?'"
+    },
+    {
+      "q_num": 60,
+      "section_q_num": 60,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Kindly do me a favour, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 61,
+      "section_q_num": 61,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let a sleeping dog sleep, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 62,
+      "section_q_num": 62,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We are your well wishers, ________?",
+      "options": {
+        "a": "Aren't we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Aren't we ?'"
+    },
+    {
+      "q_num": 63,
+      "section_q_num": 63,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She is pretty, _______?",
+      "options": {
+        "a": "Isn't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Isn't she ?'"
+    },
+    {
+      "q_num": 64,
+      "section_q_num": 64,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Tareq came from Gazipur, _______?",
+      "options": {
+        "a": "Didn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't he ?'"
+    },
+    {
+      "q_num": 65,
+      "section_q_num": 65,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nothing can satisfy him, __________?",
+      "options": {
+        "a": "Can it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can it ?'"
+    },
+    {
+      "q_num": 66,
+      "section_q_num": 66,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Hasan put the book on his reading table,__?",
+      "options": {
+        "a": "Didn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Didn't he ?'"
+    },
+    {
+      "q_num": 67,
+      "section_q_num": 67,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You need not depend on others, __________?",
+      "options": {
+        "a": "Need you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Need you ?'"
+    },
+    {
+      "q_num": 68,
+      "section_q_num": 68,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Blind men cannot see anything, __________?",
+      "options": {
+        "a": "Can they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can they ?'"
+    },
+    {
+      "q_num": 69,
+      "section_q_num": 69,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We should respect our teachers, ________?",
+      "options": {
+        "a": "Shouldn't we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Shouldn't we ?'"
+    },
+    {
+      "q_num": 70,
+      "section_q_num": 70,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You dare not drive at night, __________?",
+      "options": {
+        "a": "Dare you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Dare you ?'"
+    },
+    {
+      "q_num": 71,
+      "section_q_num": 71,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You must do it, __________?",
+      "options": {
+        "a": "Mustn't you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Mustn't you ?'"
+    },
+    {
+      "q_num": 72,
+      "section_q_num": 72,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Blind men can't read, __________?",
+      "options": {
+        "a": "Can they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can they ?'"
+    },
+    {
+      "q_num": 73,
+      "section_q_num": 73,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Don't boil rice, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 74,
+      "section_q_num": 74,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Get out, __________? www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Question Tag",
+      "options": {
+        "a": "Won't you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Won't you ?'"
+    },
+    {
+      "q_num": 75,
+      "section_q_num": 75,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Give me a glass of water, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 76,
+      "section_q_num": 76,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "How nicely she writes, ________?",
+      "options": {
+        "a": "Doesn't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Doesn't she ?'"
+    },
+    {
+      "q_num": 77,
+      "section_q_num": 77,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let us go out for a walk, __________?",
+      "options": {
+        "a": "Shall we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Shall we ?'"
+    },
+    {
+      "q_num": 78,
+      "section_q_num": 78,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "My friends hardly come here, ________?",
+      "options": {
+        "a": "Do they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Do they ?'"
+    },
+    {
+      "q_num": 79,
+      "section_q_num": 79,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nothing can concern you, ________?",
+      "options": {
+        "a": "Can  it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can  it ?'"
+    },
+    {
+      "q_num": 80,
+      "section_q_num": 80,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He has a few friends, ________?",
+      "options": {
+        "a": "Hasn't he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hasn't he ?'"
+    },
+    {
+      "q_num": 81,
+      "section_q_num": 81,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Don't bother him, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 82,
+      "section_q_num": 82,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He has little idea about it, ________?",
+      "options": {
+        "a": "Has he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Has he ?'"
+    },
+    {
+      "q_num": 83,
+      "section_q_num": 83,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Nothing can help you now, ________?",
+      "options": {
+        "a": "Can it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can it ?'"
+    },
+    {
+      "q_num": 84,
+      "section_q_num": 84,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Close the window, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 85,
+      "section_q_num": 85,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "How sweetly the bird sings, ________?",
+      "options": {
+        "a": "Doesn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Doesn't it ?'"
+    },
+    {
+      "q_num": 86,
+      "section_q_num": 86,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Do sit down, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 87,
+      "section_q_num": 87,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "There is little water in the jar, ________?",
+      "options": {
+        "a": "Is there ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Is there ?'"
+    },
+    {
+      "q_num": 88,
+      "section_q_num": 88,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Don't be late, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 89,
+      "section_q_num": 89,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "My friends and I hardly go there, ________?",
+      "options": {
+        "a": "Do we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Do we ?'"
+    },
+    {
+      "q_num": 90,
+      "section_q_num": 90,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "My friends know you, ________?",
+      "options": {
+        "a": "Don't they ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Don't they ?'"
+    },
+    {
+      "q_num": 91,
+      "section_q_num": 91,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let us have a cup of tea, __________?",
+      "options": {
+        "a": "Shall we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Shall we ?'"
+    },
+    {
+      "q_num": 92,
+      "section_q_num": 92,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He hardly realizes it, ________?",
+      "options": {
+        "a": "Does he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Does he ?'"
+    },
+    {
+      "q_num": 93,
+      "section_q_num": 93,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Come and see me again, __________?",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 94,
+      "section_q_num": 94,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He hardly studies, ________?",
+      "options": {
+        "a": "Does he ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Does he ?'"
+    },
+    {
+      "q_num": 95,
+      "section_q_num": 95,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Grandmother can tell good stories, _______?",
+      "options": {
+        "a": "Can't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Can't she ?'"
+    },
+    {
+      "q_num": 96,
+      "section_q_num": 96,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Her mother couldn't walk, ________?",
+      "options": {
+        "a": "Could she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Could she ?'"
+    },
+    {
+      "q_num": 97,
+      "section_q_num": 97,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Laila knows you, ________?",
+      "options": {
+        "a": "Doesn't she ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Doesn't she ?'"
+    },
+    {
+      "q_num": 98,
+      "section_q_num": 98,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let us go home, __________?",
+      "options": {
+        "a": "Shall we ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Shall we ?'"
+    },
+    {
+      "q_num": 99,
+      "section_q_num": 99,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Pinnacle conducts classes in the morning,___?",
+      "options": {
+        "a": "Doesn't it ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Doesn't it ?'"
+    },
+    {
+      "q_num": 100,
+      "section_q_num": 100,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let her come in, _______",
+      "options": {
+        "a": "Will you ?",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Will you ?'"
+    },
+    {
+      "q_num": 101,
+      "section_q_num": 101,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You're going to the conference next week, ___________?",
+      "options": {
+        "a": "aren't you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'aren't you'"
+    },
+    {
+      "q_num": 102,
+      "section_q_num": 102,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He didn't expect to receive such positive feedbackon his presentation, ___________?",
+      "options": {
+        "a": "did he",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'did he'"
+    },
+    {
+      "q_num": 103,
+      "section_q_num": 103,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They've been working on the project for hourswithout a break, ___________?",
+      "options": {
+        "a": "haven't they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'haven't they'"
+    },
+    {
+      "q_num": 104,
+      "section_q_num": 104,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "We should consider all possible solutions tothe problem, ___________?",
+      "options": {
+        "a": "shouldn't we",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'shouldn't we'"
+    },
+    {
+      "q_num": 105,
+      "section_q_num": 105,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "You won't have any trouble finding your wayback, ___________?",
+      "options": {
+        "a": "will you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'will you'"
+    },
+    {
+      "q_num": 106,
+      "section_q_num": 106,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She won't be able to attend the event due toa prior commitment, ___________? www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Question Tag",
+      "options": {
+        "a": "will she",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'will she'"
+    },
+    {
+      "q_num": 107,
+      "section_q_num": 107,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It's not easy to find reliable information on the internet these days, ___________?",
+      "options": {
+        "a": "is it",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'is it'"
+    },
+    {
+      "q_num": 108,
+      "section_q_num": 108,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "It's important to maintain a healthy work-lifebalance, ___________?",
+      "options": {
+        "a": "isn't it",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'isn't it'"
+    },
+    {
+      "q_num": 109,
+      "section_q_num": 109,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He shall finish the project by Friday, ___________?",
+      "options": {
+        "a": "Shall we",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Shall we'"
+    },
+    {
+      "q_num": 110,
+      "section_q_num": 110,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let me know if you need any help,___________?",
+      "options": {
+        "a": "won't you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'won't you'"
+    },
+    {
+      "q_num": 111,
+      "section_q_num": 111,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Please turn off the lights, _________?",
+      "options": {
+        "a": "will you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'will you'"
+    },
+    {
+      "q_num": 112,
+      "section_q_num": 112,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "No one can solve this problem, ___________?",
+      "options": {
+        "a": "can they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'can they'"
+    },
+    {
+      "q_num": 113,
+      "section_q_num": 113,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Have some more tea, ___________?",
+      "options": {
+        "a": "would you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'would you'"
+    },
+    {
+      "q_num": 114,
+      "section_q_num": 114,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "So you don't like my new hair style ___________?",
+      "options": {
+        "a": "Do you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Do you'"
+    },
+    {
+      "q_num": 115,
+      "section_q_num": 115,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The presentation was informative, ___________?",
+      "options": {
+        "a": "wasn't it",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'wasn't it'"
+    },
+    {
+      "q_num": 116,
+      "section_q_num": 116,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He couldn't find his keys this morning, ___________?",
+      "options": {
+        "a": "could he",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'could he'"
+    },
+    {
+      "q_num": 117,
+      "section_q_num": 117,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She speaks five languages fluently, _____________?",
+      "options": {
+        "a": "doesn't she",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'doesn't she'"
+    },
+    {
+      "q_num": 118,
+      "section_q_num": 118,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "She must be feeling confident after hours ofpreparation,____________?",
+      "options": {
+        "a": "mustn't he",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'mustn't he'"
+    },
+    {
+      "q_num": 119,
+      "section_q_num": 119,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The flowers in the garden were blooming beautifully,_____________?",
+      "options": {
+        "a": "weren't they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'weren't they'"
+    },
+    {
+      "q_num": 120,
+      "section_q_num": 120,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Due to Covid-19, prices may continue to fluctuatein the coming months, ____________?",
+      "options": {
+        "a": "mayn't they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'mayn't they'"
+    },
+    {
+      "q_num": 121,
+      "section_q_num": 121,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "One should always mind one's own business,___________?",
+      "options": {
+        "a": "shouldn't one",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'shouldn't one'"
+    },
+    {
+      "q_num": 122,
+      "section_q_num": 122,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They dare to speak up for what they believein, _____________?",
+      "options": {
+        "a": "don't they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'don't they'"
+    },
+    {
+      "q_num": 123,
+      "section_q_num": 123,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "He scarcely finishes his assignments on time,___________?",
+      "options": {
+        "a": "does he",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'does he'"
+    },
+    {
+      "q_num": 124,
+      "section_q_num": 124,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They dare not enter the haunted house at night,___________?",
+      "options": {
+        "a": "dare they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'dare they'"
+    },
+    {
+      "q_num": 125,
+      "section_q_num": 125,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "some employees might be feeling uncertain abouttheir job security, ____________?",
+      "options": {
+        "a": "mightn't they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'mightn't they'"
+    },
+    {
+      "q_num": 126,
+      "section_q_num": 126,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "They had booked their tickets for the Balitrip, ____________?",
+      "options": {
+        "a": "Hadn't they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'Hadn't they'"
+    },
+    {
+      "q_num": 127,
+      "section_q_num": 127,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "My father need not worry about the expensesof my wedding, __________?",
+      "options": {
+        "a": "need he",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'need he'"
+    },
+    {
+      "q_num": 128,
+      "section_q_num": 128,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "The team wouldn't practice in the rain, ___________?",
+      "options": {
+        "a": "would they",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'would they'"
+    },
+    {
+      "q_num": 129,
+      "section_q_num": 129,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Mind your work,___________?",
+      "options": {
+        "a": "can't you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'can't you'"
+    },
+    {
+      "q_num": 130,
+      "section_q_num": 130,
+      "type": "fill_in_the_blanks",
+      "sub_category": "Fill in the Blanks",
+      "question": "Let me know when you're ready,_________?",
+      "options": {
+        "a": "will you",
+        "b": "isn't it?",
+        "c": "aren't they?",
+        "d": "didn't he?"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Correct question tag is: 'will you'"
+    },
+    {
+      "q_num": 131,
+      "section_q_num": 1,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "It'll rain soon, __________?",
+      "options": {
+        "a": "won't it",
+        "b": "bought it",
+        "c": "isn't it",
+        "d": "may it"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "Same modal has to be used so all otheroptions get eliminated."
+    },
+    {
+      "q_num": 132,
+      "section_q_num": 2,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "They needn't worry, __________?",
+      "options": {
+        "a": "isn't it",
+        "b": "doesn't it",
+        "c": "don't it",
+        "d": "need they"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "Same modal has to be used so all other optionsget eliminated."
+    },
+    {
+      "q_num": 133,
+      "section_q_num": 3,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "None of the food was wasted, __________?",
+      "options": {
+        "a": "wasn't",
+        "b": "was it",
+        "c": "weren't",
+        "d": "were it"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "The statement has \"none\" so the questiontag will be in the positive so option (a) and (c) get eliminated. Food is an uncountable noun so a singular verb will be used."
+    },
+    {
+      "q_num": 134,
+      "section_q_num": 4,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "The hotel was not too expensive, __________?",
+      "options": {
+        "a": "was it?",
+        "b": "wasn't it?",
+        "c": "is it?",
+        "d": "isn't it? Question Tag"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "The statement has \"not\", so the questiontag will be in the positive so option (b) and (d) get eliminated. Tense will be the same so (a) is the correct option."
+    },
+    {
+      "q_num": 135,
+      "section_q_num": 5,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "Your father used to be the principal of this college, __________?",
+      "options": {
+        "a": "did he?",
+        "b": "does he?",
+        "c": "didn't he?",
+        "d": "doesn't he?"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "didn't he?"
+    },
+    {
+      "q_num": 136,
+      "section_q_num": 6,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "I am very happy today, __________?",
+      "options": {
+        "a": "aren't I",
+        "b": "are I",
+        "c": "am I",
+        "d": "are not I"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "aren't I"
+    },
+    {
+      "q_num": 137,
+      "section_q_num": 7,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "They fought bravely for the freedom of the country,__________?",
+      "options": {
+        "a": "did not they",
+        "b": "don't they",
+        "c": "didn't they",
+        "d": "does he"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "didn't they"
+    },
+    {
+      "q_num": 138,
+      "section_q_num": 8,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "The mob has killed the thief, __________?",
+      "options": {
+        "a": "haven't it",
+        "b": "hasn't it",
+        "c": "has it",
+        "d": "isn't it"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "Mob has been treated as singular, so theverb used will be singular."
+    },
+    {
+      "q_num": 139,
+      "section_q_num": 9,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "Somebody has paid the bill for you, __________?",
+      "options": {
+        "a": "haven't they",
+        "b": "is it",
+        "c": "have they",
+        "d": "had they"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "haven't they"
+    },
+    {
+      "q_num": 140,
+      "section_q_num": 10,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "I didn't go for the classes yesterday, __________?",
+      "options": {
+        "a": "didn't I",
+        "b": "did I",
+        "c": "do I",
+        "d": "isn't it"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "did I"
+    },
+    {
+      "q_num": 141,
+      "section_q_num": 11,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "They're planning to travel to Asia next summer,___________?",
+      "options": {
+        "a": "aren't they",
+        "b": "aren't it",
+        "c": "weren't they",
+        "d": "should thay"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "aren't they"
+    },
+    {
+      "q_num": 142,
+      "section_q_num": 12,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "He couldn't attend the meeting last week, ___________?",
+      "options": {
+        "a": "can he",
+        "b": "could he",
+        "c": "couldn't he",
+        "d": "could it"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "could he"
+    },
+    {
+      "q_num": 143,
+      "section_q_num": 13,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "We should finalize the budget by tomorrow, ___________?",
+      "options": {
+        "a": "shouldn't us",
+        "b": "shall we",
+        "c": "shouldn't we",
+        "d": "wouldn't we"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "shouldn't we www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Question Tag"
+    },
+    {
+      "q_num": 144,
+      "section_q_num": 14,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "The concert was rescheduled to next month, ___________?",
+      "options": {
+        "a": "weren't it",
+        "b": "was it",
+        "c": "isn't it",
+        "d": "wasn't it"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "wasn't it"
+    },
+    {
+      "q_num": 145,
+      "section_q_num": 15,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "She won't forget to bring the presentation slides,___________?",
+      "options": {
+        "a": "would she",
+        "b": "will she",
+        "c": "will it",
+        "d": "might she"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "will she"
+    },
+    {
+      "q_num": 146,
+      "section_q_num": 16,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "It's important to double-check the details beforesubmitting the application, ___________?",
+      "options": {
+        "a": "is it",
+        "b": "wasn't it",
+        "c": "isn't it",
+        "d": "don't you"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "isn't it"
+    },
+    {
+      "q_num": 147,
+      "section_q_num": 17,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "She doesn't usually stay up late, ___________?",
+      "options": {
+        "a": "she does",
+        "b": "don't she",
+        "c": "doesn't she",
+        "d": "does she"
+      },
+      "answer": "d",
+      "correction": "",
+      "solution": "does she"
+    },
+    {
+      "q_num": 148,
+      "section_q_num": 18,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "They won't be able to attend the party due toprior commitments, ___________?",
+      "options": {
+        "a": "will they",
+        "b": "would they",
+        "c": "won't they",
+        "d": "will them"
+      },
+      "answer": "a",
+      "correction": "",
+      "solution": "will they"
+    },
+    {
+      "q_num": 149,
+      "section_q_num": 19,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "He's not feeling well today because of the coldweather, ___________?",
+      "options": {
+        "a": "was he",
+        "b": "is it",
+        "c": "is he",
+        "d": "isn't it"
+      },
+      "answer": "c",
+      "correction": "",
+      "solution": "is he"
+    },
+    {
+      "q_num": 150,
+      "section_q_num": 20,
+      "type": "multiple_choice",
+      "sub_category": "Multiple Choice Questions",
+      "question": "It's necessary to review the terms and conditionsbefore signing the contract, ___________?",
+      "options": {
+        "a": "is it",
+        "b": "isn't it",
+        "c": "was it",
+        "d": "isn't they"
+      },
+      "answer": "b",
+      "correction": "",
+      "solution": "isn't it www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}

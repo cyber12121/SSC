@@ -26,8 +26,9 @@ import { openAiWithScope } from './utils/aiScopeHelper';
 import { AiFocusedQuestion } from './types/aiScope';
 import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
 import { MockChapterErrorsModal, MockChapterModalData, ModalFilterType } from './components/modals/MockChapterErrorsModal';
-import { SetPickerModal } from './components/modals/SetPickerModal';
+import { SetPickerModal, SetPickerModalData } from './components/modals/SetPickerModal';
 import { CheatSheetModal } from './components/modals/CheatSheetModal';
+import { getGrammarPdfUrl } from './utils/grammarPdfs';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
@@ -290,12 +291,7 @@ export default function App() {
   const [activeMockChapterModal, setActiveMockChapterModal] = useState<MockChapterModalData | null>(null);
   const [modalActiveSet, setModalActiveSet] = useState<number | 'all'>('all');
   const [modalErrorFilter, setModalErrorFilter] = useState<ModalFilterType>('all');
-  const [setPickerModal, setSetPickerModal] = useState<{
-    title: string;
-    subtitle?: string;
-    subject: string;
-    questions: Question[];
-  } | null>(null);
+  const [setPickerModal, setSetPickerModal] = useState<SetPickerModalData | null>(null);
   const [selectedCheatSheet, setSelectedCheatSheet] = useState<Chapter | null>(null);
 
   // Bundled full mock questions dynamically loaded for unified error aggregation
@@ -374,10 +370,13 @@ export default function App() {
       });
 
       filteredData[subject] = Object.values(mergedChaptersMap).map((chapter, chIdx) => {
+        const origNum = chapter.original_chapter_num || chapter.chapter_num;
         return {
           ...chapter,
-          original_chapter_num: chapter.original_chapter_num || chapter.chapter_num,
-          chapter_num: chIdx + 1,
+          original_chapter_num: origNum,
+          chapter_num: (chapter.section === 'grammar' || chapter.section === 'ayush_vocab' || chapter.section === 'black_book')
+            ? (origNum || chIdx + 1)
+            : chIdx + 1,
           questions: chapter.questions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
         };
       }).filter(chapter => chapter.questions.length > 0);
@@ -1258,6 +1257,8 @@ export default function App() {
       completedAt: new Date().toISOString(),
     };
 
+    let savedResult: QuizResult;
+
     if (!user) {
       const guestSaved: QuizResult = { ...fullResult, id: 'guest-' + Date.now() };
       try {
@@ -1267,70 +1268,159 @@ export default function App() {
         safeStorage.setItem('cgl_user_results_cache_guest', JSON.stringify(updated));
       } catch { }
       setUserResults(prev => [guestSaved, ...prev.filter(r => r.id !== guestSaved.id)]);
-      return guestSaved;
-    }
-
-    let savedResult: QuizResult;
-    try {
-      // 98% Firestore Payload Optimization:
-      // Retain scoring, time, answer choices, and RCA tags while omitting multi-paragraph solutions and image blobs.
-      const lightweightQuestionDetails = (fullResult.questionDetails || []).map(d => ({
-        q_num: d.q_num,
-        timeSpent: d.timeSpent || 0,
-        isCorrect: Boolean(d.isCorrect),
-        selectedAnswer: d.selectedAnswer || '',
-        marked: Boolean(d.marked),
-        avgTime: d.avgTime || d.question?.avgTime || null,
-        avgTimeSeconds: d.avgTimeSeconds || d.question?.avgTimeSeconds || null,
-        rca: d.rca || d.question?.rca || null,
-        question: d.question ? {
-          id: d.question.id || `${fullResult.chapter_title}_${d.q_num}`,
-          q_num: d.question.q_num || d.q_num,
-          question: d.question.question || '',
-          options: d.question.options || { a: '', b: '', c: '', d: '' },
-          answer: d.question.answer || 'a',
-          subject: d.question.subject || fullResult.subject || '',
-          section: d.question.section || '',
-          topic: d.question.topic || d.question.tags?.topic || '',
-          rca: d.rca || d.question?.rca || null,
-        } : null
-      }));
-
-      const firestorePayload = {
-        ...fullResult,
-        questionDetails: lightweightQuestionDetails
-      };
-
-      // Deep sanitize to strip any undefined properties that Firestore rejects
-      const sanitizedDoc = JSON.parse(JSON.stringify(firestorePayload));
-      const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
-      savedResult = { ...fullResult, id: docRef.id };
-      setUserResults(prev => {
-        const updated = [savedResult, ...prev.filter(r => r.id !== savedResult.id)];
-        try {
-          safeStorage.setItem('cgl_user_results_cache_' + user.uid, JSON.stringify(updated.slice(0, 100)));
-        } catch { }
-        return updated;
-      });
-    } catch (error) {
-      console.warn('Firestore offline or storage restricted, saving attempt locally:', error);
-      savedResult = { ...fullResult, id: 'local-' + Date.now() };
+      savedResult = guestSaved;
+    } else {
       try {
-        const localHistory = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
-        safeStorage.setItem('offline_results_' + user.uid, JSON.stringify([savedResult, ...localHistory].slice(0, 50)));
-      } catch { }
-      setUserResults(prev => {
-        const updated = [savedResult, ...prev.filter(r => r.id !== savedResult.id)];
+        // 98% Firestore Payload Optimization:
+        // Retain scoring, time, answer choices, and RCA tags while omitting multi-paragraph solutions and image blobs.
+        const lightweightQuestionDetails = (fullResult.questionDetails || []).map(d => {
+          const hasAnswer = Boolean(d.selectedAnswer && String(d.selectedAnswer).trim() !== '');
+          const isCorrect = Boolean(d.isCorrect);
+          const isSlow = Boolean((d as any).isSlow || (d.timeSpent && d.timeSpent > 90));
+          const status = isCorrect ? (isSlow ? 'Correct (Slow)' : 'Correct') : (hasAnswer ? 'Incorrect' : 'Unattempted');
+          const errorType = isCorrect ? (isSlow ? 'speed_issue' : 'correct') : (hasAnswer ? 'wrong' : 'unattempted');
+
+          return {
+            q_num: d.q_num,
+            timeSpent: d.timeSpent || 0,
+            isCorrect,
+            isSlow,
+            status,
+            errorType,
+            selectedAnswer: d.selectedAnswer || '',
+            marked: Boolean(d.marked),
+            avgTime: d.avgTime || d.question?.avgTime || null,
+            avgTimeSeconds: d.avgTimeSeconds || d.question?.avgTimeSeconds || null,
+            rca: d.rca || d.question?.rca || null,
+            question: d.question ? {
+              id: d.question.id || `${fullResult.chapter_title}_${d.q_num}`,
+              q_num: d.question.q_num || d.q_num,
+              question: d.question.question || '',
+              options: d.question.options || { a: '', b: '', c: '', d: '' },
+              answer: d.question.answer || 'a',
+              subject: d.question.subject || fullResult.subject || '',
+              section: d.question.section || '',
+              topic: d.question.topic || d.question.tags?.topic || '',
+              rca: d.rca || d.question?.rca || null,
+            } : null
+          };
+        });
+
+        const firestorePayload = {
+          ...fullResult,
+          questionDetails: lightweightQuestionDetails
+        };
+
+        // Deep sanitize to strip any undefined properties that Firestore rejects
+        const sanitizedDoc = JSON.parse(JSON.stringify(firestorePayload));
+        const docRef = await addDoc(collection(db, 'results'), sanitizedDoc);
+        savedResult = { ...fullResult, id: docRef.id };
+        setUserResults(prev => {
+          const updated = [savedResult, ...prev.filter(r => r.id !== savedResult.id)];
+          try {
+            safeStorage.setItem('cgl_user_results_cache_' + user.uid, JSON.stringify(updated.slice(0, 100)));
+          } catch { }
+          return updated;
+        });
+      } catch (error) {
+        console.warn('Firestore offline or storage restricted, saving attempt locally:', error);
+        savedResult = { ...fullResult, id: 'local-' + Date.now() };
         try {
-          safeStorage.setItem('cgl_user_results_cache_' + user.uid, JSON.stringify(updated.slice(0, 100)));
+          const localHistory = JSON.parse(safeStorage.getItem('offline_results_' + user.uid) || '[]');
+          safeStorage.setItem('offline_results_' + user.uid, JSON.stringify([savedResult, ...localHistory].slice(0, 50)));
         } catch { }
-        return updated;
-      });
+        setUserResults(prev => {
+          const updated = [savedResult, ...prev.filter(r => r.id !== savedResult.id)];
+          try {
+            safeStorage.setItem('cgl_user_results_cache_' + user.uid, JSON.stringify(updated.slice(0, 100)));
+          } catch { }
+          return updated;
+        });
+      }
     }
 
-    // Asynchronously record wrong answers to live mistakes notebook (/api/mistakes)
+    const isMockTest = fullResult.mode === 'mock' || fullResult.category === 'mockErrors' || fullResult.chapter_title?.toLowerCase().includes('mock');
+
+    // If mock quiz, cache full question attempt details into cgl_mock_questions_* immediately so Mock Errors displays them right away
+    if (isMockTest && fullResult.questionDetails && fullResult.questionDetails.length > 0) {
+      try {
+        const mockQuestionsToSave = fullResult.questionDetails.map((d, idx) => {
+          const hasAnswer = Boolean(d.selectedAnswer && String(d.selectedAnswer).trim() !== '');
+          const isCorrect = Boolean(d.isCorrect);
+          const isSlow = Boolean((d as any).isSlow || (d.timeSpent && d.timeSpent > 90));
+          const status = isCorrect ? (isSlow ? 'Correct (Slow)' : 'Correct') : (hasAnswer ? 'Incorrect' : 'Unattempted');
+          const errorType = isCorrect ? (isSlow ? 'speed_issue' : 'correct') : (hasAnswer ? 'wrong' : 'unattempted');
+
+          return {
+            ...(d.question || {}),
+            q_num: d.q_num || idx + 1,
+            mockId: savedResult.id,
+            testId: savedResult.id,
+            testName: fullResult.chapter_title,
+            userAnswer: d.selectedAnswer || '',
+            selectedAnswer: d.selectedAnswer || '',
+            chosenOption: d.selectedAnswer || '',
+            isCorrect,
+            isSlow,
+            status,
+            errorType,
+            timeSpent: d.timeSpent || 0,
+            userTime: d.timeSpent || 0
+          };
+        });
+        safeStorage.setItem(`cgl_mock_questions_${savedResult.id}`, JSON.stringify(mockQuestionsToSave));
+        fetch(`/api/mock-questions/${encodeURIComponent(savedResult.id)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(mockQuestionsToSave)
+        }).catch(() => {});
+      } catch (err) {
+        console.warn('Failed to cache mock questions locally:', err);
+      }
+    }
+
+    // Record wrong answers to local RCA store & live mistakes notebook (/api/mistakes)
     try {
-      const wrongList = (results.questionDetails || []).filter(d => !d.isCorrect && d.question && d.selectedAnswer);
+      const wrongList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question && d.selectedAnswer);
+      if (wrongList.length > 0) {
+        try {
+          const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
+          const rcaStore = rcaRaw ? JSON.parse(rcaRaw) : {};
+          for (const item of wrongList) {
+            if (!item.question) continue;
+            const q = item.question;
+            const qId = q.id || `quiz_${savedResult.id}_${item.q_num}`;
+            const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
+            rcaStore[qId] = {
+              id: qId,
+              q_num: item.q_num,
+              mockId: isMockTest ? savedResult.id : undefined,
+              mockTitle: fullResult.chapter_title,
+              subject: q.subject || fullResult.subject || 'General Awareness',
+              topic: q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice',
+              questionText: q.question,
+              options: q.options,
+              answer: q.answer,
+              solution: q.solution || (q as any).explanation || '',
+              userAnswer: item.selectedAnswer,
+              selectedAnswer: item.selectedAnswer,
+              chosenOption: item.selectedAnswer,
+              isCorrect: false,
+              status: 'Incorrect',
+              errorType: 'wrong',
+              isFromMock: isMockTest,
+              classifiedAt: new Date().toISOString()
+            };
+            if (qTextNorm) {
+              rcaStore[qTextNorm] = rcaStore[qId];
+            }
+          }
+          safeStorage.setItem('cgl_rca_global_store', JSON.stringify(rcaStore));
+        } catch (err) {
+          console.warn('Could not update cgl_rca_global_store:', err);
+        }
+      }
+
       for (const item of wrongList) {
         if (!item.question) continue;
         fetch('/api/mistakes', {
@@ -1347,6 +1437,7 @@ export default function App() {
               explanation: (item.question as any).explanation || item.question.solution || '',
               subject: item.question.subject || results.subject || 'general_awareness',
               topic: item.question.topic || results.chapter_title || 'Quiz Practice',
+              isMock: isMockTest
             }
           })
         }).catch(() => {});
@@ -2104,6 +2195,7 @@ export default function App() {
       section: 'mockErrors',
       is_test: true
     };
+    setQuizMode('practice');
     startQuiz(virtualChapter);
   };
 
@@ -3831,6 +3923,12 @@ export default function App() {
                             });
                           } else if (isEnglishVocabSection) {
                             chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
+                          } else {
+                            chaptersToRender = [...chaptersToRender].sort((a, b) => {
+                              const aNum = a.original_chapter_num || a.chapter_num || 0;
+                              const bNum = b.original_chapter_num || b.chapter_num || 0;
+                              return aNum - bNum;
+                            });
                           }
 
                           if (chaptersToRender.length === 0) {
@@ -3845,63 +3943,132 @@ export default function App() {
                             <motion.div
                               key={`${chapter.chapter_title}|${chapter.section || ''}|${chapter.set_name || ''}`}
                               whileHover={{ y: -2 }}
-                              onClick={() => startQuiz(chapter)}
+                              onClick={() => {
+                                if (chapter.section === 'grammar' && chapter.questions.length > 50) {
+                                  setSetPickerModal({
+                                    title: chapter.chapter_title,
+                                    subtitle: `Chapter ${chapter.original_chapter_num || chapter.chapter_num} • ${chapter.questions.length} questions • ${Math.ceil(chapter.questions.length / 50)} Sets`,
+                                    subject: 'English',
+                                    questions: chapter.questions,
+                                    setSize: 50,
+                                    chapterNum: chapter.original_chapter_num || chapter.chapter_num,
+                                    section: 'grammar'
+                                  });
+                                  return;
+                                }
+                                startQuiz(chapter);
+                              }}
                               className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${chapter.section === 'black_book' ? 'hover:border-amber-300' : chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
                                 } hover:shadow-md shadow-xs flex flex-col justify-between`}
                             >
-                              <div className="flex items-center justify-between">
-                                <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'black_book'
-                                    ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
-                                    : chapter.section === 'ayush_vocab'
-                                      ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
-                                      : chapter.is_test
-                                        ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
-                                        : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
-                                  } shadow-xs`}>
-                                  {chapter.section === 'black_book' ? <BookMarked className="w-4 h-4" /> : chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
-                                </div>
-                                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${chapter.section === 'black_book'
-                                    ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                                    : chapter.section === 'ayush_vocab'
-                                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                                      : chapter.is_test
-                                        ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                                        : 'bg-slate-50 text-slate-500'
-                                  }`}>
-                                  {chapter.section === 'black_book' || chapter.section === 'ayush_vocab'
-                                    ? `Set ${chapter.chapter_num}`
-                                    : chapter.is_test
-                                      ? 'Full Test'
-                                      : chapter.set_name
-                                        ? `Set ${chapter.set_name.replace('set_', '')}`
-                                        : `Ch ${chapter.chapter_num}`}
-                                </span>
-                              </div>
                               <div>
-                                <h3 className="mt-2.5 text-xs font-bold text-slate-800 line-clamp-1">{chapter.chapter_title}</h3>
-                                <p className="mt-0.5 text-[11px] text-slate-500">
-                                  {chapter.questions.length} Questions {chapter.topic_name ? `• ${formatGKSubTopicTitle(chapter.topic_name)}` : ''}
-                                </p>
+                                <div className="flex items-center justify-between">
+                                  <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'black_book'
+                                      ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                      : chapter.section === 'ayush_vocab'
+                                        ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
+                                        : chapter.is_test
+                                          ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                          : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
+                                    } shadow-xs`}>
+                                    {chapter.section === 'black_book' ? <BookMarked className="w-4 h-4" /> : chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+                                  </div>
+                                  <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${chapter.section === 'black_book'
+                                      ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                      : chapter.section === 'ayush_vocab'
+                                        ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                                        : chapter.section === 'grammar'
+                                          ? 'bg-indigo-50 text-indigo-700 border border-indigo-200'
+                                          : chapter.is_test
+                                            ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                            : 'bg-slate-50 text-slate-500'
+                                    }`}>
+                                    {chapter.section === 'black_book' || chapter.section === 'ayush_vocab'
+                                      ? `Set ${chapter.chapter_num}`
+                                      : chapter.section === 'grammar'
+                                        ? `Ch ${chapter.original_chapter_num || chapter.chapter_num}`
+                                        : chapter.is_test
+                                          ? 'Full Test'
+                                          : chapter.set_name
+                                            ? `Set ${chapter.set_name.replace('set_', '')}`
+                                            : `Ch ${chapter.original_chapter_num || chapter.chapter_num}`}
+                                  </span>
+                                </div>
+                                <div>
+                                  <h3 className="mt-2.5 text-xs font-bold text-slate-800 line-clamp-1">{chapter.chapter_title}</h3>
+                                  <p className="mt-0.5 text-[11px] text-slate-500">
+                                    {chapter.section === 'grammar' && chapter.questions.length > 50
+                                      ? `${chapter.questions.length} Questions • ${Math.ceil(chapter.questions.length / 50)} Sets (50 Qs/set)`
+                                      : `${chapter.questions.length} Questions ${chapter.topic_name ? `• ${formatGKSubTopicTitle(chapter.topic_name)}` : ''}`}
+                                  </p>
+                                </div>
+
+                                {chapter.section === 'grammar' && chapter.questions.length > 50 && (
+                                  <div className="mt-2 flex flex-wrap gap-1 pt-1.5 border-t border-slate-100">
+                                    {Array.from({ length: Math.ceil(chapter.questions.length / 50) }).map((_, sIdx) => {
+                                      const sNum = sIdx + 1;
+                                      const startQ = sIdx * 50 + 1;
+                                      const endQ = Math.min((sIdx + 1) * 50, chapter.questions.length);
+                                      const sCount = endQ - startQ + 1;
+                                      return (
+                                        <button
+                                          key={sNum}
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            const targetQuestions = chapter.questions.slice(sIdx * 50, endQ);
+                                            const virtualChapter: Chapter = {
+                                              ...chapter,
+                                              chapter_num: chapter.original_chapter_num || chapter.chapter_num,
+                                              chapter_title: `${chapter.chapter_title} • Set ${sNum} (Q${startQ}-${endQ})`,
+                                              questions: targetQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
+                                            };
+                                            startQuiz(virtualChapter);
+                                          }}
+                                          className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-indigo-50/80 hover:bg-indigo-600 text-indigo-700 hover:text-white border border-indigo-200/60 transition-all cursor-pointer shadow-2xs"
+                                          title={`Practice Set ${sNum}: Questions ${startQ} to ${endQ} (${sCount} Qs)`}
+                                        >
+                                          Set {sNum} ({sCount})
+                                        </button>
+                                      );
+                                    })}
+                                  </div>
+                                )}
                               </div>
                               <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
                                 <div className={`flex items-center text-xs font-semibold ${chapter.section === 'black_book' ? 'text-amber-600' : chapter.section === 'ayush_vocab' ? 'text-emerald-600' : 'text-indigo-600'}`}>
-                                  Start Set
+                                  {chapter.section === 'grammar' && chapter.questions.length > 50 ? 'Choose Set' : 'Start Set'}
                                   <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                                 </div>
-                                  <div className="flex items-center gap-1.5">
-                                    {chapter.cheat_sheet && (
-                                      <button
-                                        onClick={(e) => {
-                                          e.stopPropagation();
-                                          setSelectedCheatSheet(chapter);
-                                        }}
-                                        className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition-all cursor-pointer shadow-2xs"
-                                        title="Open Chapter Revision Cheat Sheet"
-                                      >
-                                        <BookOpen className="w-3 h-3" />
-                                        <span>Cheat Sheet</span>
-                                      </button>
-                                    )}
+                                <div className="flex items-center gap-1.5">
+                                  {chapter.section === 'grammar' && getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num) && (
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        const pdfUrl = getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num);
+                                        if (pdfUrl) window.open(pdfUrl, '_blank');
+                                      }}
+                                      className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-50 text-amber-800 hover:bg-amber-600 hover:text-white border border-amber-200 transition-all cursor-pointer shadow-2xs"
+                                      title={`Open original book PDF for Chapter ${chapter.original_chapter_num || chapter.chapter_num}`}
+                                    >
+                                      <FileText className="w-3 h-3" />
+                                      <span>PDF</span>
+                                    </button>
+                                  )}
+                                  {chapter.cheat_sheet && (
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSelectedCheatSheet(chapter);
+                                      }}
+                                      className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition-all cursor-pointer shadow-2xs"
+                                      title="Open Chapter Revision Cheat Sheet"
+                                    >
+                                      <BookOpen className="w-3 h-3" />
+                                      <span>Cheat Sheet</span>
+                                    </button>
+                                  )}
                                   <button
                                     onClick={(e) => {
                                       e.stopPropagation();
@@ -4088,6 +4255,34 @@ export default function App() {
                       if (qText) updated.add(qText.trim().toLowerCase());
                       return updated;
                     });
+                  }}
+                  onStartPractice={(topic, questions) => {
+                    const firstQ = questions[0];
+                    const rawSub = firstQ?.subject || 'English';
+                    const formattedSub = rawSub.charAt(0).toUpperCase() + rawSub.slice(1);
+                    setQuizMode('practice');
+                    setCategory('chapter');
+
+                    if (questions.length > 25) {
+                      setSetPickerModal({
+                        title: `Mistakes Drill • ${topic}`,
+                        subtitle: `${questions.length} mistakes recorded in this topic`,
+                        subject: formattedSub,
+                        questions: questions
+                      });
+                      return;
+                    }
+
+                    const virtualChapter: Chapter = {
+                      chapter_num: 0,
+                      chapter_title: `Mistakes Drill • ${topic}`,
+                      subject: formattedSub,
+                      subject_id: (firstQ?.subject || 'english').toLowerCase().replace(/\s+/g, '_'),
+                      questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+                      section: 'mockErrors',
+                      is_test: true
+                    };
+                    startQuiz(virtualChapter);
                   }}
                 />
               </motion.div>

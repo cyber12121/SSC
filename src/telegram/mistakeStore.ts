@@ -14,8 +14,8 @@ export interface TelegramQuizQuestion {
   source?: string;
 }
 
-export type MistakeSource = 'telegram_quiz' | 'website_quiz';
-export type MistakeFilter = 'all' | 'telegram_quiz' | 'website_quiz';
+export type MistakeSource = 'telegram_quiz' | 'website_quiz' | 'website_mock';
+export type MistakeFilter = 'all' | 'telegram_quiz' | 'website_quiz' | 'website_mock';
 
 export interface RecordedMistake {
   id: string;

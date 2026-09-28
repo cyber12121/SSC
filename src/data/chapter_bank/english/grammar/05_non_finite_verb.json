@@ -1,0 +1,572 @@
+{
+  "chapter_num": 5,
+  "chapter_id": "05_non_finite_verb",
+  "chapter_title": "Non-Finite Verb",
+  "subject": "English",
+  "subject_id": "english",
+  "section": "grammar",
+  "topic_name": "non_finite_verb",
+  "total_questions": 40,
+  "questions": [
+    {
+      "q_num": 1,
+      "type": "spot_the_error",
+      "question": "(a) Mom is accustomed /(b) to drink tea /(c)in the morning /(d) no error.",
+      "options": {
+        "a": "(a) Mom is accustomed",
+        "b": "(b) to drink tea",
+        "c": "(c) in the morning",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"drink\" with \"drinking\".",
+      "solution": "Replace \"drink\" with \"drinking\". A gerundis used after \"accustomed to\"."
+    },
+    {
+      "q_num": 2,
+      "type": "spot_the_error",
+      "question": "(a) There is no chance of /(b) pass the interviewwithout /(c) preparing thoroughly /(d) no error.",
+      "options": {
+        "a": "(a) There is no chance of",
+        "b": "(b) pass the interviewwithout",
+        "c": "(c) preparing thoroughly",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"pass\" with \"passing\".",
+      "solution": "Replace \"pass\" with \"passing\". If a verbis used after a preposition, it should be in gerund form."
+    },
+    {
+      "q_num": 3,
+      "type": "spot_the_error",
+      "question": "(a) They are given to /(b) procrastinated whenit /(c) comes to assignments /(d) no error.",
+      "options": {
+        "a": "(a) They are given to",
+        "b": "(b) procrastinated whenit",
+        "c": "(c) comes to assignments",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"procrastinates\" with \"procrastinating\".",
+      "solution": "Replace \"procrastinates\" with \"procrastinating\".There are some phrases like \"given to, accustomed to, prone to etc.\" which take gerunds just after them."
+    },
+    {
+      "q_num": 4,
+      "type": "spot_the_error",
+      "question": "(a) I am used to /(b) taking long /(c) walksin the evening /(d) no error.",
+      "options": {
+        "a": "(a) I am used to",
+        "b": "(b) taking long",
+        "c": "(c) walksin the evening",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. When a verb is used before \"usedto\", a gerund is used after 'used to'."
+    },
+    {
+      "q_num": 5,
+      "type": "spot_the_error",
+      "question": "(a) They object to /(b) smoke in the /(c) officepremises /(d) no error.",
+      "options": {
+        "a": "(a) They object to",
+        "b": "(b) smoke in the",
+        "c": "(c) officepremises",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"smoke\" with \"smoking\".",
+      "solution": "Replace \"smoke\" with \"smoking\". The phrase\"object to\" takes a gerund with it."
+    },
+    {
+      "q_num": 6,
+      "type": "spot_the_error",
+      "question": "(a) The teacher made /(b) her students to practice/(c)their grammar exercises. /(d) no error.",
+      "options": {
+        "a": "(a) The teacher made",
+        "b": "(b) her students to practice",
+        "c": "(c) their grammar exercises.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"to practice\" with \"practice\".",
+      "solution": "Replace \"to practice\" with \"practice\". Weuse bare infinitive with verbs like - make, let, see, feel, watch, notice, hear, bid, behold, etc."
+    },
+    {
+      "q_num": 7,
+      "type": "spot_the_error",
+      "question": "(a) Missing the bus, /(b) they had to find an/(c) alternative mode of transportation /(d) no error.",
+      "options": {
+        "a": "(a) Missing the bus,",
+        "b": "(b) they had to find an",
+        "c": "(c) alternative mode of transportation",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"missing\" with \"having missed\".",
+      "solution": "Replace \"missing\" with \"having missed\".When the second action starts just after finishing the first action, Perfect participle (having + V3) is used."
+    },
+    {
+      "q_num": 8,
+      "type": "spot_the_error",
+      "question": "(a) Exciting by the /(b) news, she shared /(c)it with her friends /(d) no error.",
+      "options": {
+        "a": "(a) Exciting by the",
+        "b": "(b) news, she shared",
+        "c": "(c) it with her friends",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"exciting\" with \"excited\".",
+      "solution": "Replace \"exciting\" with \"excited\". To showcompletion of one action before another, past participle is used."
+    },
+    {
+      "q_num": 9,
+      "type": "spot_the_error",
+      "question": "(a) The ran child /(b) caught the /(c) ball effortlessly /(d) no error.",
+      "options": {
+        "a": "(a) The ran child",
+        "b": "(b) caught the",
+        "c": "(c) ball effortlessly",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace \"ran\" with \"running\".",
+      "solution": "Replace \"ran\" with \"running\". Present participle(V1+ ing) is used to show an action going on atthe time of speaking."
+    },
+    {
+      "q_num": 10,
+      "type": "spot_the_error",
+      "question": "(a) She decided /(b) to pursue a /(c) careerin medicine /(d) no error.",
+      "options": {
+        "a": "(a) She decided",
+        "b": "(b) to pursue a",
+        "c": "(c) careerin medicine",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. After the verb \"decide\", a directinfinitive is used."
+    },
+    {
+      "q_num": 11,
+      "type": "spot_the_error",
+      "question": "(a) The problem appears /(b) being more complicated/(c) than we initially thought /(d) no error.",
+      "options": {
+        "a": "(a) The problem appears",
+        "b": "(b) being more complicated",
+        "c": "(c) than we initially thought",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"being\" with \"to be\".",
+      "solution": "Replace \"being\" with \"to be\". A directinfinitive is used after the verb \"appear\"."
+    },
+    {
+      "q_num": 12,
+      "type": "spot_the_error",
+      "question": "(a) They watched /(b) the sun rising /(c) overthe horizon /(d) no error.",
+      "options": {
+        "a": "(a) They watched",
+        "b": "(b) the sun rising",
+        "c": "(c) overthe horizon",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "No error.",
+      "solution": "No error. We can use present participle(-ingverb) or bare infinitive(V1) after verbs of sensationlike watch, see, hear, etc."
+    },
+    {
+      "q_num": 13,
+      "type": "spot_the_error",
+      "question": "(a) They let /(b) us to go home /(c) early today/(d) no error.",
+      "options": {
+        "a": "(a) They let",
+        "b": "(b) us to go home",
+        "c": "(c) early today",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replace 'to go\" with \"go\".",
+      "solution": "Replace 'to go\" with \"go\". With the verbslike \"let/make/bid\", a bare infinitive is used. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall Non Finite Verb"
+    },
+    {
+      "q_num": 14,
+      "type": "spot_the_error",
+      "question": "(a) We would rather /(b) walking to the park/(c) than take the bus /(d) no error.",
+      "options": {
+        "a": "(a) We would rather",
+        "b": "(b) walking to the park",
+        "c": "(c) than take the bus",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"walking\" with \"walk\".",
+      "solution": "Replace \"walking\" with \"walk\". With \"would rather/had better/ had rather\", the bare infinitive is used."
+    },
+    {
+      "q_num": 15,
+      "type": "spot_the_error",
+      "question": "(a) The teacher compelled /(b) the studentsfor completing the /(c) assignment by the end of the day /(d) no error.",
+      "options": {
+        "a": "(a) The teacher compelled",
+        "b": "(b) the studentsfor completing the",
+        "c": "(c) assignment by the end of the day",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"for completing\" with \"to complete\".",
+      "solution": "Replace \"for completing\" with \"to complete\".With the words \"compel/command/allow/request\" , the pattern \"Object + to + Ist form of Verb\" is used."
+    },
+    {
+      "q_num": 16,
+      "type": "spot_the_error",
+      "question": "(a) The coach ordered the /(b) team to practiceharder /(c) for the upcoming match /(d) no error.",
+      "options": {
+        "a": "(a) The coach ordered the",
+        "b": "(b) team to practiceharder",
+        "c": "(c) for the upcoming match",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 17,
+      "type": "spot_the_error",
+      "question": "(a) The traffic was too /(b) congested for makingit /(c) to the airport on time /(d) no error.",
+      "options": {
+        "a": "(a) The traffic was too",
+        "b": "(b) congested for makingit",
+        "c": "(c) to the airport on time",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"for making\" with \"to make\".",
+      "solution": "Replace \"for making\" with \"to make\". With\"too and enough\", to-infinitive is used."
+    },
+    {
+      "q_num": 18,
+      "type": "spot_the_error",
+      "question": "(a) Our team winning /(b) streak continued for/(c) the entire season /(d) no error.",
+      "options": {
+        "a": "(a) Our team winning",
+        "b": "(b) streak continued for",
+        "c": "(c) the entire season",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Replaceteamwithteam's.",
+      "solution": "Replaceteamwithteam's. If a gerund isused with a noun or pronoun, always use the possessive case of the noun and possessive adjective."
+    },
+    {
+      "q_num": 19,
+      "type": "spot_the_error",
+      "question": "(a) During the summer vacation /(b) they planto spend time /(c) traveling to different countries /(d) no error.",
+      "options": {
+        "a": "(a) During the summer vacation",
+        "b": "(b) they planto spend time",
+        "c": "(c) traveling to different countries",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 20,
+      "type": "spot_the_error",
+      "question": "(a) Being a skilled programmer, /(b) she effortlesslysolved the /(c) complex coding issues. /(d) no error.",
+      "options": {
+        "a": "(a) Being a skilled programmer,",
+        "b": "(b) she effortlesslysolved the",
+        "c": "(c) complex coding issues.",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error."
+    },
+    {
+      "q_num": 21,
+      "type": "spot_the_error",
+      "question": "(a) Being a chilly evening, /(b) they gatheredaround /(c) the fireplace for warmth /(d) no error.",
+      "options": {
+        "a": "(a) Being a chilly evening,",
+        "b": "(b) they gatheredaround",
+        "c": "(c) the fireplace for warmth",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"it\" before being.",
+      "solution": "Add \"it\" before being. Here, the subjectof the participle clause and main clause is not the same."
+    },
+    {
+      "q_num": 22,
+      "type": "spot_the_error",
+      "question": "(a) He is given /(b) to exaggerating /(c) folkstories /(d) no error.",
+      "options": {
+        "a": "(a) He is given",
+        "b": "(b) to exaggerating",
+        "c": "(c) folkstories",
+        "d": "(d) no error."
+      },
+      "answer": "d",
+      "correction": "no error.",
+      "solution": "no error. A gerund is used with \"givento\"."
+    },
+    {
+      "q_num": 23,
+      "type": "spot_the_error",
+      "question": "(a) In addition to /(b) cook, she /(c) enjoysbaking desserts /(d) no error.",
+      "options": {
+        "a": "(a) In addition to",
+        "b": "(b) cook, she",
+        "c": "(c) enjoysbaking desserts",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Replace \"cook\" with \"cooking\".",
+      "solution": "Replace \"cook\" with \"cooking\". If a verbcomes with \"in addition to\", \"V1+ ing\" is used."
+    },
+    {
+      "q_num": 24,
+      "type": "spot_the_error",
+      "question": "(a) Traveling to many countries, /(b) Mariadecided to write a book /(c) about her experiences and adventures /(d) no error. Non Finite Verb",
+      "options": {
+        "a": "(a) Traveling to many countries,",
+        "b": "(b) Mariadecided to write a book",
+        "c": "(c) about her experiences and adventures",
+        "d": "(d) no error. Non Finite Verb"
+      },
+      "answer": "a",
+      "correction": "Replace \"traveling\" with \"having traveled\".",
+      "solution": "Replace \"traveling\" with \"having traveled\".When a second action starts after the first action has finished, a perfect participle (having + V3) is used."
+    },
+    {
+      "q_num": 25,
+      "type": "spot_the_error",
+      "question": "(a) Being a misty morning, /(b) the landscape had /(c) a mystical feel to it /(d) no error.",
+      "options": {
+        "a": "(a) Being a misty morning,",
+        "b": "(b) the landscape had",
+        "c": "(c) a mystical feel to it",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add \"it\" before 'being' as an introductorysubject.",
+      "solution": "Add \"it\" before 'being' as an introductorysubject. Here, the subject of the participle clause and main clause is not the same."
+    },
+    {
+      "q_num": 26,
+      "type": "spot_the_error",
+      "question": "(a) She went there/(b) with a view to/(c) surveythe entire procedure/(d) no error.",
+      "options": {
+        "a": "(a) She went there",
+        "b": "(b) with a view to",
+        "c": "(c) surveythe entire procedure",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "'Survey' will be replaced by 'Surveying'.",
+      "solution": "'Survey' will be replaced by 'Surveying'.'Gerund' is used after the phrase 'with a view to'."
+    },
+    {
+      "q_num": 27,
+      "type": "spot_the_error",
+      "question": "(a) Children visiting the park/(b) are amusedat the monkeys/(c) play in the cages./(d) no error.",
+      "options": {
+        "a": "(a) Children visiting the park",
+        "b": "(b) are amusedat the monkeys",
+        "c": "(c) play in the cages.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "'Play' will be replaced by 'Playing.",
+      "solution": "'Play' will be replaced by 'Playing. Presentparticiple(-ing form of the verb) is used to show two actions happening at the same time."
+    },
+    {
+      "q_num": 28,
+      "type": "spot_the_error",
+      "question": "(a) I regret informing you/(b) that your application/(c)has been refused./(d) no error.",
+      "options": {
+        "a": "(a) I regret informing you",
+        "b": "(b) that your application",
+        "c": "(c) has been refused.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "'Informing' will be replaced by 'to inform'.",
+      "solution": "'Informing' will be replaced by 'to inform'.Gerund is used after the verb 'regret'."
+    },
+    {
+      "q_num": 29,
+      "type": "spot_the_error",
+      "question": "(a) She made me/(b)to do/(c)work against herwishes./(d) no error.",
+      "options": {
+        "a": "(a) She made me",
+        "b": "(b) to do",
+        "c": "(c) work against herwishes.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "Remove 'to' in the sentence.",
+      "solution": "Remove 'to' in the sentence. Bare infinitiveis used after the verbs such as \"let, bid, make\"."
+    },
+    {
+      "q_num": 30,
+      "type": "spot_the_error",
+      "question": "(a) Mohit does not/(b) know to swim, so/(c)he is afraid of water./(d) no error.",
+      "options": {
+        "a": "(a) Mohit does not",
+        "b": "(b) know to swim, so",
+        "c": "(c) he is afraid of water.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'know to swim' will be replaced by 'howto swim'.",
+      "solution": "'know to swim' will be replaced by 'howto swim'. We use the expression \"how to + V1\" whenwe talk about knowing, learning or teaching the way of doing something."
+    },
+    {
+      "q_num": 31,
+      "type": "spot_the_error",
+      "question": "(a) After discuss the matter for an hour/(b)the committee adjourned/(c) without having reached any decision./(d) no error.",
+      "options": {
+        "a": "(a) After discuss the matter for an hour",
+        "b": "(b) the committee adjourned",
+        "c": "(c) without having reached any decision.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "'discuss the matter' will be replacedby 'having discussed the matter'.",
+      "solution": "'discuss the matter' will be replacedby 'having discussed the matter'. When the second action starts just after finishing the first action, Perfect participle (having + V3) is used."
+    },
+    {
+      "q_num": 32,
+      "type": "spot_the_error",
+      "question": "(a) Being a cold morning,(b) I decided not togo/(c) for my morning walk./(d) no error.",
+      "options": {
+        "a": "(a) Being a cold morning,",
+        "b": "(b) I decided not togo",
+        "c": "(c) for my morning walk.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "Add 'it' before 'being'.",
+      "solution": "Add 'it' before 'being'. Here, the subjectof the participle clause and main clause is not the same."
+    },
+    {
+      "q_num": 33,
+      "type": "spot_the_error",
+      "question": "(a) I am looking/(b) forward to/(c) meet yousoon./(d) no error.",
+      "options": {
+        "a": "(a) I am looking",
+        "b": "(b) forward to",
+        "c": "(c) meet yousoon.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "'looking forward to meet' will be replacedby 'looking forward to meeting you'.",
+      "solution": "'looking forward to meet' will be replacedby 'looking forward to meeting you'. Gerund is used after the phrase 'looking forward to'."
+    },
+    {
+      "q_num": 34,
+      "type": "spot_the_error",
+      "question": "(a) Do you mind/(b) help me in/(c) completingthis book./(d) no error.",
+      "options": {
+        "a": "(a) Do you mind",
+        "b": "(b) help me in",
+        "c": "(c) completingthis book.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'help me' will be replaced by 'helpingme'.",
+      "solution": "'help me' will be replaced by 'helpingme'. 'Gerund' is used after the verb 'mind'."
+    },
+    {
+      "q_num": 35,
+      "type": "spot_the_error",
+      "question": "(a) I can hear them/(b) talking but nobody/(c)is coming to opening the door./(d) no error.",
+      "options": {
+        "a": "(a) I can hear them",
+        "b": "(b) talking but nobody",
+        "c": "(c) is coming to opening the door.",
+        "d": "(d) no error."
+      },
+      "answer": "c",
+      "correction": "'opening the door' will be replaced by'open the door'.",
+      "solution": "'opening the door' will be replaced by'open the door'. The first form of the verb is used after the preposition 'to'."
+    },
+    {
+      "q_num": 36,
+      "type": "spot_the_error",
+      "question": "(a) Instead of /(b)to buy books, you should/(c)borrow them from the library./(d) no error.",
+      "options": {
+        "a": "(a) Instead of",
+        "b": "(b) to buy books, you should",
+        "c": "(c) borrow them from the library.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'to buy' will be replaced by 'buying'.",
+      "solution": "'to buy' will be replaced by 'buying'.We use a gerund after any preposition."
+    },
+    {
+      "q_num": 37,
+      "type": "spot_the_error",
+      "question": "(a) Her only motive/(b) was to finding the/(c)truth and to follow it./(d) no error.",
+      "options": {
+        "a": "(a) Her only motive",
+        "b": "(b) was to finding the",
+        "c": "(c) truth and to follow it.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'finding' will be replaced by 'find'.",
+      "solution": "'finding' will be replaced by 'find'.The first form of the verb is used after the preposition 'to'."
+    },
+    {
+      "q_num": 38,
+      "type": "spot_the_error",
+      "question": "(a) The doctor has refused to/(b) gave theman appointment today/(c) because he has another meeting scheduled./(d) no error.",
+      "options": {
+        "a": "(a) The doctor has refused to",
+        "b": "(b) gave theman appointment today",
+        "c": "(c) because he has another meeting scheduled.",
+        "d": "(d) no error."
+      },
+      "answer": "b",
+      "correction": "'gave' will be replaced by 'give'.",
+      "solution": "'gave' will be replaced by 'give'. Infinitive(to + V1) is used after the verb 'refuse'."
+    },
+    {
+      "q_num": 39,
+      "type": "spot_the_error",
+      "question": "(a) You had better worked/(b) harder if youwant/(c) to get a government job./(d) no error.",
+      "options": {
+        "a": "(a) You had better worked",
+        "b": "(b) harder if youwant",
+        "c": "(c) to get a government job.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "'worked' will be replaced by 'work'.",
+      "solution": "'worked' will be replaced by 'work'. Thefirst form of the verb is used after 'had better'."
+    },
+    {
+      "q_num": 40,
+      "type": "spot_the_error",
+      "question": "(a) Being a cold morning/(b) I decided not togo for/(c)morning walk./(d) no error.",
+      "options": {
+        "a": "(a) Being a cold morning",
+        "b": "(b) I decided not togo for",
+        "c": "(c) morning walk.",
+        "d": "(d) no error."
+      },
+      "answer": "a",
+      "correction": "'being a cold morning' will be replacedby 'It being a cold morning'.",
+      "solution": "'being a cold morning' will be replacedby 'It being a cold morning'. Here, the subject of the participle clause and the main clause is not the same. www.ssccglpinnacle.com Download search on TG-@freepdfhall TG-@freepdfhall"
+    }
+  ]
+}
