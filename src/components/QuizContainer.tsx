@@ -807,10 +807,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   }
 
   return (
-    <div className="flex flex-col h-screen w-full bg-white text-gray-900 select-none overflow-hidden font-sans">
+    <div className="flex flex-col h-[100dvh] max-h-[100dvh] w-full bg-slate-50 text-gray-900 select-none overflow-hidden font-sans">
 
       {/* ── TOP HEADER BAR ── */}
-      <header className="h-[60px] bg-white border-b border-gray-300 px-4 flex items-center justify-between shrink-0 shadow-2xs z-30">
+      <header className="h-[52px] sm:h-[60px] bg-white border-b border-gray-300 px-3 sm:px-4 flex items-center justify-between shrink-0 shadow-2xs z-30">
         {/* Left: Brand + Test Subtitle + Mode Badge + Zoom Buttons */}
         <div className="flex items-center gap-3">
           <div className="flex flex-col">
@@ -822,12 +822,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 <span className="font-extrabold text-lg tracking-tight text-[#00baf2] leading-none">testbook</span>
               </div>
               {mode === 'practice' ? (
-                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1 shadow-2xs">
+                <span className="hidden sm:inline-flex text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 items-center gap-1 shadow-2xs">
                   <BookOpen className="w-3 h-3 text-emerald-600" />
                   Practice Mode
                 </span>
               ) : (
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 border border-blue-200">
+                <span className="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 border border-blue-200">
                   Mock Simulator
                 </span>
               )}
@@ -946,8 +946,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         </div>
       </header>
 
-      {/* ── SECOND SUB-HEADER ROW 1 (Links on Left, Status Counter on Right) ── */}
-      <div className="bg-white border-b border-gray-200 px-3 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2">
+      {/* ── SECOND SUB-HEADER ROW 1 (Desktop Links & Counters Only) ── */}
+      <div className="hidden sm:flex bg-white border-b border-gray-200 px-3 sm:px-4 py-1.5 items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2">
         {mode === 'mock' ? (
           /* Quick Links: SYMBOLS | INSTRUCTIONS | OVERALL TEST SUMMARY in Mock */
           <div className="flex items-center gap-2.5 sm:gap-4 text-[10px] sm:text-[11px] font-bold tracking-wide uppercase shrink-0">
@@ -1008,10 +1008,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         )}
       </div>
 
-      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on left, Centered Action Buttons in Mock Mode) ── */}
-      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2 relative">
+      {/* ── SUB-HEADER ROW 2 (Section Pills on left, Controls on Right) ── */}
+      <div className="bg-white border-b border-gray-300 px-2.5 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-1.5 relative">
         {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
-        <div className="flex items-center gap-1.5 shrink-0 lg:min-w-[240px]">
+        <div className="flex items-center gap-1 sm:gap-1.5 shrink-0 overflow-x-auto no-scrollbar py-0.5">
           {sections.map((sec, idx) => {
             const isActive = idx === activeSectionIdx;
             const hasQuestions = sec.count > 0;
@@ -1021,7 +1021,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 onClick={() => handleSectionClick(idx)}
                 disabled={!hasQuestions}
                 title={`${sec.label}: ${sec.title} (${sec.count} Questions)`}
-                className={`px-2.5 sm:px-3 py-1 text-xs sm:text-sm font-bold rounded-[2px] transition-all shrink-0 select-none ${
+                className={`px-2 sm:px-3 py-1 text-xs sm:text-sm font-bold rounded transition-all shrink-0 select-none ${
                   isActive
                     ? 'bg-[#008000] text-white border border-[#006600] shadow-xs'
                     : hasQuestions
@@ -1035,21 +1035,36 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           })}
         </div>
 
-        {/* Mobile Header Controls: Palette Button + Submit Test */}
-        <div className="lg:hidden flex items-center gap-2 shrink-0 ml-auto">
+        {/* Mobile Header Controls: Info + Answered badge + Palette Button + Submit Test */}
+        <div className="lg:hidden flex items-center gap-1.5 shrink-0 ml-auto">
+          {mode === 'mock' && (
+            <div className="flex items-center gap-1 bg-[#ffff00] border border-gray-400 text-black px-1.5 py-0.5 font-bold text-[10px] rounded" title="Total Answered">
+              <span>Ans:</span>
+              <span>{stats.answered}</span>
+            </div>
+          )}
+          {mode === 'mock' && (
+            <button
+              onClick={() => setShowInstructionsModal(true)}
+              className="p-1 rounded text-gray-500 hover:text-gray-900 hover:bg-gray-100 text-xs font-bold cursor-pointer"
+              title="Test Instructions & Symbols"
+            >
+              ℹ️
+            </button>
+          )}
           <button
             onClick={() => setIsMobilePaletteOpen(true)}
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-700 font-bold text-xs transition-colors cursor-pointer shadow-2xs whitespace-nowrap"
+            className="flex items-center gap-1 px-2 py-1 rounded bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-700 font-bold text-[11px] transition-colors cursor-pointer shadow-2xs whitespace-nowrap"
             title="Open Question Palette"
           >
-            <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
-            <span>Palette ({questionNumberInSection}/{activeSection.count || totalQuestions})</span>
+            <BookOpen className="w-3 h-3 text-indigo-600" />
+            <span>({questionNumberInSection}/{activeSection.count || totalQuestions})</span>
           </button>
           {mode === 'mock' && (
             <button
               onClick={() => setShowSubmitModal(true)}
               disabled={isSubmitting}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-bold text-xs px-2.5 py-1 rounded-[2px] shadow-2xs disabled:opacity-50 cursor-pointer whitespace-nowrap"
+              className="bg-[#2460b9] hover:bg-[#1c4d94] text-white font-bold text-[11px] px-2.5 py-1 rounded shadow-2xs disabled:opacity-50 cursor-pointer whitespace-nowrap"
             >
               Submit
             </button>
@@ -1154,8 +1169,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       {/* ── MAIN LAYOUT (QUESTION ON LEFT, PALETTE ON RIGHT) ── */}
       <div className="flex-1 min-h-0 flex overflow-hidden relative">
 
-        {/* ── LEFT PANE: QUESTION & OPTIONS TABLE (Exact match to Testbook) ── */}
-        <div className="flex-1 min-w-0 min-h-0 overflow-y-auto p-3.5 sm:p-6 pb-28 sm:pb-32 bg-white lg:border-r border-gray-200 custom-scrollbar">
+        {/* ── LEFT PANE: QUESTION & OPTIONS PANE ── */}
+        <div className="flex-1 min-w-0 min-h-0 overflow-y-auto p-3 sm:p-6 pb-6 sm:pb-8 bg-slate-50/60 lg:border-r border-gray-200 custom-scrollbar">
 
           {isPaused ? (
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
@@ -1173,11 +1188,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </div>
           ) : (
             <>
-              {/* Question Label Row: Question No. X | Language | Report */}
-              {/* Question Label Row: Question No. X | Bookmark | Language | Report */}
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <span className="font-bold text-gray-900 text-sm sm:text-base">
+              {/* Question Label Row: Question No. X | Bookmark | Delete | Language | Report */}
+              <div className="flex items-center justify-between mb-3 gap-2">
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="font-bold text-gray-900 text-sm sm:text-base whitespace-nowrap">
                     Question No. {questionNumberInSection}
                   </span>
                   {mode === 'practice' && (
@@ -1187,7 +1201,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   )}
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
                   {/* Bookmark Button */}
                   {onBookmarkToggle && currentQuestion && (() => {
                     const isBookmarked =
@@ -1223,15 +1237,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     <button
                       onClick={() => setShowDeleteModal(true)}
                       className="flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 hover:border-rose-300 transition-colors cursor-pointer shadow-2xs"
-                      title="Permanently delete this unwanted or incomplete question from everywhere"
+                      title="Permanently delete this question"
                     >
                       <Trash2 className="w-3.5 h-3.5 text-rose-600" />
                       <span className="hidden sm:inline">Delete</span>
                     </button>
                   )}
 
-                  {/* Language Indicator */}
-                  <div className="flex items-center gap-1.5 text-xs text-gray-700">
+                  {/* Language Indicator (Hidden on mobile to save space) */}
+                  <div className="hidden sm:flex items-center gap-1.5 text-xs text-gray-700">
                     <span className="font-medium text-gray-500">Language:</span>
                     <span className="border border-gray-300 rounded px-2.5 py-0.5 text-xs text-gray-800 bg-slate-50 font-semibold">
                       English
@@ -1241,17 +1255,18 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   {/* Report Button */}
                   <button
                     onClick={() => { setShowReportModal(true); setReportSubmitted(false); }}
-                    className="flex items-center gap-1 text-xs text-gray-600 hover:text-red-600 transition-colors font-medium cursor-pointer"
+                    className="flex items-center gap-1 text-xs text-gray-600 hover:text-red-600 transition-colors font-medium cursor-pointer p-1"
+                    title="Report question"
                   >
                     <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
-                    <span>Report</span>
+                    <span className="hidden sm:inline">Report</span>
                   </button>
                 </div>
               </div>
 
-              {/* Question Statement Box */}
-              <div className="border border-gray-300 rounded-[2px] bg-white overflow-hidden shadow-2xs mb-4">
-                <div className={`p-4 sm:p-5 ${fontSizeClass} text-gray-900 leading-relaxed`}>
+              {/* Question Statement Card */}
+              <div className="rounded-xl border border-slate-200 bg-white p-4 sm:p-5 shadow-xs mb-4">
+                <div className={`${fontSizeClass} text-slate-900 leading-relaxed font-medium select-text`}>
                   <FormattedText
                     text={currentQuestion?.question}
                     language={language}
@@ -1261,63 +1276,72 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     subject={currentQuestion?.subject || currentQuestion?.section}
                   />
                   {currentQuestion?.image?.src && (
-                    <div className="mt-4">
+                    <div className="mt-4 flex justify-center">
                       <img
                         src={currentQuestion.image.src}
                         alt="Question diagram"
-                        className="max-h-72 max-w-full rounded border border-gray-200"
+                        className="max-h-72 max-w-full rounded-lg border border-slate-200 shadow-2xs object-contain"
                       />
                     </div>
                   )}
                 </div>
+              </div>
 
-                {/* Mock Mode Options Table (Official Testbook Table) */}
-                {mode === 'mock' && (
-                  <div className="border-t border-gray-200 divide-y divide-gray-200">
-                    {currentNormalizedOptions.map(({ key: k, text: rawOpt }) => {
-                      const isSelected = answers[currentIdx] === k;
+              {/* Mock Mode Options Cards - Full-Width, Touch-Friendly, Easy to Tick */}
+              {mode === 'mock' && (
+                <div className="space-y-2.5 sm:space-y-3 mb-5">
+                  {currentNormalizedOptions.map(({ key: k, text: rawOpt }) => {
+                    const isSelected = answers[currentIdx] === k;
 
-                      return (
-                        <div
-                          key={k}
-                          onClick={() => handleAnswer(k)}
-                          title={`Option ${k.toUpperCase()}`}
-                          className={`flex items-stretch hover:bg-slate-50/80 cursor-pointer transition-colors ${
-                            isSelected ? 'bg-blue-50/30' : 'bg-white'
-                          }`}
-                        >
-                          {/* Left column: Radio button */}
-                          <div className="w-12 shrink-0 border-r border-gray-200 flex items-center justify-center py-3.5 bg-white">
-                            <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all ${
-                              isSelected ? 'border-blue-600 bg-white' : 'border-gray-400 bg-white'
+                    return (
+                      <div
+                        key={k}
+                        onClick={() => handleAnswer(k)}
+                        title={`Option (${k.toUpperCase()})`}
+                        className={`flex items-center justify-between p-3.5 sm:p-4 rounded-xl border-2 transition-all cursor-pointer select-none active:scale-[0.99] touch-manipulation min-h-[52px] sm:min-h-[58px] ${
+                          isSelected
+                            ? 'border-blue-600 bg-blue-50/70 shadow-sm ring-1 ring-blue-500/30 text-blue-950 font-medium'
+                            : 'border-slate-200 bg-white hover:border-blue-300 hover:bg-blue-50/20 text-slate-800 shadow-2xs'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 sm:gap-3.5 flex-1 min-w-0 pr-2">
+                          {/* Radio Button + Option Letter Badge */}
+                          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                              isSelected ? 'border-blue-600 bg-white' : 'border-slate-400 bg-white'
                             }`}>
-                              {isSelected && <div className="w-2 h-2 rounded-full bg-blue-600" />}
+                              {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-blue-600" />}
                             </div>
+                            <span className={`w-6 h-6 rounded-md flex items-center justify-center font-bold text-xs uppercase transition-colors ${
+                              isSelected ? 'bg-blue-600 text-white shadow-2xs' : 'bg-slate-100 text-slate-600 border border-slate-200'
+                            }`}>
+                              {k}
+                            </span>
                           </div>
 
-                          {/* Right column: Option text */}
-                          <div className={`flex-1 px-4 py-3.5 ${fontSizeClass} text-gray-800 leading-normal flex items-center`}>
+                          {/* Option Text */}
+                          <div className={`flex-1 select-text ${fontSizeClass} text-slate-800 leading-normal py-0.5`}>
                             <FormattedText text={rawOpt} language={language} />
                           </div>
                         </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
 
               {/* Practice Mode Options Cards (Instant Feedback) */}
               {mode === 'practice' && (
-                <div className="space-y-2.5 mb-5">
+                <div className="space-y-2.5 sm:space-y-3 mb-5">
                   {currentNormalizedOptions.map(({ key: k, text: rawOpt }) => {
                     const isSelected = answers[currentIdx] === k;
                     const isAttempted = answers[currentIdx] !== undefined;
                     const isCorrectOption = k === correctOptionKey;
 
-                    let cardStyle = 'border-gray-300 bg-white hover:border-indigo-400 hover:bg-indigo-50/20 text-gray-800';
+                    let cardStyle = 'border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/20 text-slate-800 shadow-2xs';
                     let badgeIcon = (
-                      <div className={`w-7 h-7 rounded-full border flex items-center justify-center font-bold text-xs uppercase ${
-                        isSelected ? 'border-indigo-600 bg-indigo-50 text-indigo-700' : 'border-gray-300 text-gray-600 bg-gray-50'
+                      <div className={`w-7 h-7 rounded-full border flex items-center justify-center font-bold text-xs uppercase shrink-0 ${
+                        isSelected ? 'border-indigo-600 bg-indigo-50 text-indigo-700' : 'border-slate-300 text-slate-600 bg-slate-50'
                       }`}>
                         {k}
                       </div>
@@ -1328,7 +1352,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                       if (isCorrectOption) {
                         cardStyle = 'border-emerald-500 bg-emerald-50/90 text-emerald-950 font-medium ring-1 ring-emerald-500 shadow-2xs';
                         badgeIcon = (
-                          <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+                          <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-xs shrink-0">
                             <Check className="w-4 h-4 stroke-[3]" />
                           </div>
                         );
@@ -1341,7 +1365,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                       } else if (isSelected) {
                         cardStyle = 'border-rose-500 bg-rose-50/90 text-rose-950 font-medium ring-1 ring-rose-500 shadow-2xs';
                         badgeIcon = (
-                          <div className="w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-xs">
+                          <div className="w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-xs shrink-0">
                             <X className="w-4 h-4 stroke-[3]" />
                           </div>
                         );
@@ -1352,9 +1376,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                           </span>
                         );
                       } else {
-                        cardStyle = 'border-gray-200 bg-gray-50/60 text-gray-400 opacity-60';
+                        cardStyle = 'border-slate-200 bg-slate-50/60 text-slate-400 opacity-60';
                         badgeIcon = (
-                          <div className="w-7 h-7 rounded-full border border-gray-200 text-gray-400 bg-gray-100 flex items-center justify-center text-xs uppercase">
+                          <div className="w-7 h-7 rounded-full border border-slate-200 text-slate-400 bg-slate-100 flex items-center justify-center text-xs uppercase shrink-0">
                             {k}
                           </div>
                         );
@@ -1365,9 +1389,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                       <div
                         key={k}
                         onClick={() => handleAnswer(k)}
-                        className={`flex items-center justify-between p-3.5 sm:p-4 rounded-xl border transition-all cursor-pointer ${cardStyle}`}
+                        className={`flex items-center justify-between p-3.5 sm:p-4 rounded-xl border-2 transition-all cursor-pointer min-h-[52px] sm:min-h-[58px] active:scale-[0.99] touch-manipulation select-none ${cardStyle}`}
                       >
-                        <div className="flex items-center gap-3.5 flex-1 min-w-0 pr-2">
+                        <div className="flex items-center gap-3 sm:gap-3.5 flex-1 min-w-0 pr-2">
                           {badgeIcon}
                           <span className={`${fontSizeClass} leading-normal select-text flex-1`}>
                             <FormattedText text={rawOpt} language={language} />
@@ -1388,21 +1412,22 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   {mode === 'mock' ? (
                     <button
                       onClick={handleClearResponse}
-                      className="text-xs text-gray-500 hover:text-red-600 underline font-medium cursor-pointer flex items-center gap-1.5"
+                      className="text-xs text-slate-500 hover:text-red-600 underline font-medium cursor-pointer flex items-center gap-1.5 py-1 px-1.5 rounded hover:bg-rose-50 transition-colors"
                       title="Clear selected option (Delete or X)"
                     >
+                      <RotateCcw className="w-3.5 h-3.5 text-slate-400" />
                       <span>Clear Selected Option</span>
-                      <kbd className="px-1.5 py-0.5 text-[9px] font-mono bg-gray-100 border border-gray-300 rounded text-gray-600">Del / X</kbd>
+                      <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[9px] font-mono bg-slate-100 border border-slate-300 rounded text-slate-600">Del / X</kbd>
                     </button>
                   ) : (
                     <button
                       onClick={handleClearResponse}
-                      className="text-xs text-gray-500 hover:text-red-600 font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="text-xs text-slate-500 hover:text-red-600 font-medium flex items-center gap-1.5 transition-colors cursor-pointer py-1 px-1.5 rounded hover:bg-rose-50"
                       title="Clear selection and try again (Delete or X)"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                       <span>Clear Selection (Try Again)</span>
-                      <kbd className="px-1.5 py-0.5 text-[9px] font-mono bg-gray-100 border border-gray-300 rounded text-gray-600">Del / X</kbd>
+                      <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[9px] font-mono bg-slate-100 border border-slate-300 rounded text-slate-600">Del / X</kbd>
                     </button>
                   )}
                 </div>
@@ -1547,14 +1572,14 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         </div>
       )}
 
-      {/* ── MOBILE FIXED BOTTOM NAVIGATION BAR ── */}
-      <div className="lg:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-gray-300 px-3 py-2 z-30 shadow-lg flex items-center justify-between gap-1.5 safe-bottom">
+      {/* ── MOBILE DOCKED BOTTOM NAVIGATION BAR ── */}
+      <footer className="lg:hidden shrink-0 z-30 bg-white border-t border-slate-200 px-3 py-2 sm:py-2.5 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] flex items-center justify-between gap-1.5 safe-bottom">
         {mode === 'mock' ? (
           <>
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
-              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-800 rounded font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1 shrink-0"
+              className="px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-800 rounded-lg font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1 shrink-0 transition-colors"
               title="Previous question"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -1563,10 +1588,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <button
               onClick={handleToggleMarkForReview}
-              className={`px-2.5 py-2 rounded font-bold text-xs transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0 ${
+              className={`px-3 py-2.5 rounded-lg font-bold text-xs transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0 ${
                 markedForReview.has(currentIdx)
-                  ? 'bg-[#7e57c2] text-white'
-                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                  ? 'bg-[#7e57c2] text-white hover:bg-[#673ab7]'
+                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
               }`}
               title={markedForReview.has(currentIdx) ? "Marked for Review" : "Mark for Review"}
             >
@@ -1576,7 +1601,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <button
               onClick={() => setIsMobilePaletteOpen(true)}
-              className="px-2.5 py-2 bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 text-indigo-700 border border-indigo-200 rounded font-bold text-xs flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer"
+              className="px-3 py-2.5 bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 text-indigo-700 border border-indigo-200 rounded-lg font-bold text-xs flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer transition-colors"
               title="Open Question Palette"
             >
               <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
@@ -1585,7 +1610,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <button
               onClick={handleSaveAndNext}
-              className="px-3.5 py-2 bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white rounded font-bold text-xs flex items-center gap-1 shadow-xs cursor-pointer shrink-0 ml-auto"
+              className="px-4 py-2.5 bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white rounded-lg font-bold text-xs flex items-center gap-1 shadow-sm cursor-pointer shrink-0 ml-auto transition-colors"
               title="Save response & go to next"
             >
               <span>Save &amp; Next</span>
@@ -1597,7 +1622,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             <button
               onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
               disabled={currentIdx === 0}
-              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1 shrink-0"
+              className="px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-800 rounded-lg font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1 shrink-0 transition-colors"
               title="Previous question"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -1606,10 +1631,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <button
               onClick={() => setShowSolutionMap(prev => ({ ...prev, [currentIdx]: !isSolutionOpen }))}
-              className={`px-2.5 py-2 rounded font-bold text-xs flex items-center gap-1 shrink-0 cursor-pointer ${
+              className={`px-3 py-2.5 rounded-lg font-bold text-xs flex items-center gap-1 shrink-0 cursor-pointer transition-colors ${
                 isSolutionOpen
-                  ? 'bg-amber-500 text-white'
-                  : 'bg-amber-50 text-amber-900 border border-amber-300'
+                  ? 'bg-amber-500 text-white hover:bg-amber-600'
+                  : 'bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100'
               }`}
               title="Toggle solution visibility"
             >
@@ -1619,7 +1644,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <button
               onClick={() => setIsMobilePaletteOpen(true)}
-              className="px-2.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded font-bold text-xs flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer"
+              className="px-3 py-2.5 bg-indigo-50 hover:bg-indigo-100 active:bg-indigo-200 text-indigo-700 border border-indigo-200 rounded-lg font-bold text-xs flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer transition-colors"
               title="Open Question Palette"
             >
               <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
@@ -1634,7 +1659,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   setShowSubmitModal(true);
                 }
               }}
-              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded font-bold text-xs flex items-center gap-1 shadow-xs cursor-pointer shrink-0 ml-auto"
+              className="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white rounded-lg font-bold text-xs flex items-center gap-1 shadow-sm cursor-pointer shrink-0 ml-auto transition-colors"
               title="Next question"
             >
               <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
@@ -1642,7 +1667,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             </button>
           </>
         )}
-      </div>
+      </footer>
 
       {/* ── INSTRUCTIONS MODAL ── */}
       {showInstructionsModal && (

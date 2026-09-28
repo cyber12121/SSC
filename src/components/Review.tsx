@@ -1645,7 +1645,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   }
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#f4f7f9] overflow-hidden select-none font-sans text-gray-800">
+    <div className="flex flex-col h-[100dvh] max-h-[100dvh] w-full bg-[#f4f7f9] overflow-hidden select-none font-sans text-gray-800">
       
       {/* 1. TOP NAVBAR (Teal Header) */}
       <header className="bg-[#0097a7] text-white h-14 px-4 flex items-center justify-between shrink-0 shadow z-30">
@@ -2330,21 +2330,22 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           </div>
 
           {/* Bottom Action Bar (Left Pane) */}
-          <div className="bg-[#f5f5f5] border-t border-gray-200 h-13 px-6 flex items-center justify-between shrink-0 z-10">
+          <div className="bg-[#f5f5f5] border-t border-gray-200 min-h-[50px] sm:h-13 px-3 sm:px-6 flex items-center justify-between shrink-0 z-10 safe-bottom">
             {/* Previous Button */}
             <button
               onClick={handlePrevious}
               disabled={currentIdx === 0}
-              className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-4 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
+              className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] font-medium text-xs px-3 sm:px-4 py-2 rounded shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1"
               title="Previous question"
             >
               <span>Previous</span>
             </button>
 
             {/* Practice Mode (Hide Solutions) Toggle Switch */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <span className="text-xs font-semibold text-gray-700 flex items-center gap-1.5">
-                Practice Mode (Hide Solutions)
+                <span className="hidden sm:inline">Practice Mode (Hide Solutions)</span>
+                <span className="sm:hidden text-[11px]">Hide Sol</span>
               </span>
               <button
                 role="switch"

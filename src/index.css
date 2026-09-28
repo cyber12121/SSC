@@ -113,3 +113,8 @@ input[type=number] {
 body, nav, main, div[data-theme-transition] {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
+
+/* Safe area padding utilities for mobile notch & home bar */
+.safe-bottom {
+  padding-bottom: max(0.625rem, env(safe-area-inset-bottom, 10px));
+}

@@ -2340,7 +2340,7 @@ export default function App() {
   }
 
   return (
-    <div className={`font-sans text-slate-900 ${view === 'quiz' || view === 'review' ? 'h-screen overflow-hidden bg-white' : 'min-h-screen bg-slate-100'}`}>
+    <div className={`font-sans text-slate-900 ${view === 'quiz' || view === 'review' ? 'h-[100dvh] max-h-[100dvh] overflow-hidden bg-white' : 'min-h-screen bg-slate-100'}`}>
       {/* Navigation */}
       {view !== 'quiz' && view !== 'review' && (
         <nav className="bg-white/95 backdrop-blur-md border-b border-slate-200/90 sticky top-0 z-50 transition-colors">
@@ -4449,7 +4449,7 @@ export default function App() {
 
       {/* Mobile Bottom Navigation Bar */}
       {view !== 'quiz' && view !== 'review' && (
-        <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-1.5 flex items-center justify-around shadow-lg">
+        <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-1.5 py-1.5 flex items-center justify-around shadow-lg safe-bottom">
           <button
             onClick={resetToHome}
             className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
