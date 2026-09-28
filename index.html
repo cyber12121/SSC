@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
     <title>Sankalp CGL Prep</title>
+    <!-- PWA & Mobile App Configuration -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1e293b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Sankalp CGL" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <!-- Google Fonts: Space Grotesk, Hanken Grotesk & JetBrains Mono for Minimalist Mental Math Cockpit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +32,17 @@
             document.documentElement.classList.remove('dark', 'sage');
           }
         } catch (e) {}
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(reg) {
+              console.log('[PWA] Service Worker registered with scope:', reg.scope);
+            }).catch(function(err) {
+              console.warn('[PWA] Service Worker registration failed:', err);
+            });
+          });
+        }
       })();
     </script>
   </head>
