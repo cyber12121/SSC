@@ -178,18 +178,40 @@ async function sendCurrentQuestion(botInstance: Bot, session: UserQuizSession) {
 
   const q = session.questions[session.currentIndex];
   const qNum = session.currentIndex + 1;
-  const prompt = q.question.trim().slice(0, 298);
+  const prompt = (q.question || 'Question').trim().slice(0, 298);
+
+  // Sanitize options for Telegram (1-100 chars each, 2-10 options)
+  let cleanOptions = (q.options || []).map((opt) => String(opt).trim().slice(0, 98));
+  if (cleanOptions.length < 2) {
+    cleanOptions = ['Option A', 'Option B'];
+  } else if (cleanOptions.length > 10) {
+    cleanOptions = cleanOptions.slice(0, 10);
+  }
+
+  // Ensure correct option index is within bounds
+  let correctIdx = typeof q.correctOptionIndex === 'number' ? q.correctOptionIndex : 0;
+  if (correctIdx < 0 || correctIdx >= cleanOptions.length) {
+    correctIdx = 0;
+  }
+
+  // Telegram explanation in sendPoll must be strictly max 200 chars without entities
+  let shortExplanation: string | undefined = undefined;
+  if (q.explanation) {
+    const rawClean = q.explanation.replace(/[*_`[\]()]/g, ' ').replace(/\s+/g, ' ').trim();
+    if (rawClean.length > 0) {
+      shortExplanation = rawClean.slice(0, 195);
+    }
+  }
 
   try {
     const pollMsg = await botInstance.api.sendPoll(
       session.chatId,
       prompt,
-      q.options,
+      cleanOptions,
       {
         type: 'quiz',
-        correct_option_ids: [q.correctOptionIndex],
-        correct_option_id: q.correctOptionIndex,
-        explanation: q.explanation || undefined,
+        correct_option_id: correctIdx,
+        explanation: shortExplanation,
         is_anonymous: false,
       } as any
     );
@@ -1505,11 +1527,12 @@ bot.on('poll_answer', async (ctx) => {
     const syncParam = encodeQuestionForSync(currentQ);
     const webMistakeUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`;
     const correctOpt = (currentQ.options && currentQ.options[currentQ.correctOptionIndex]) ? currentQ.options[currentQ.correctOptionIndex].trim() : '';
+    const safeCorrectOpt = correctOpt.replace(/([*_`[\]()])/g, '\\$1');
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
 
     let feedbackMsg = `❌ *Incorrect*\n\n`;
-    if (correctOpt) {
-      feedbackMsg += `✅ *Correct:* ${correctOpt}\n`;
+    if (safeCorrectOpt) {
+      feedbackMsg += `✅ *Correct:* ${safeCorrectOpt}\n`;
     }
     if (cleanExpl) {
       feedbackMsg += `💡 ${cleanExpl}\n\n`;
@@ -1525,7 +1548,15 @@ bot.on('poll_answer', async (ctx) => {
         parse_mode: 'Markdown',
         reply_markup: new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl),
       }
-    ).catch(() => {});
+    ).catch(() => {
+      bot.api.sendMessage(
+        session.chatId,
+        feedbackMsg.replace(/[*_`]/g, ''),
+        {
+          reply_markup: new InlineKeyboard().url('📖 Full Solution & AI Tutor on Web', webMistakeUrl),
+        }
+      ).catch(() => {});
+    });
   }
   session.answeredCount++;
   session.currentIndex++;

@@ -40728,17 +40728,33 @@ async function sendCurrentQuestion(botInstance, session) {
   }
   const q = session.questions[session.currentIndex];
   const qNum = session.currentIndex + 1;
-  const prompt = q.question.trim().slice(0, 298);
+  const prompt = (q.question || "Question").trim().slice(0, 298);
+  let cleanOptions = (q.options || []).map((opt) => String(opt).trim().slice(0, 98));
+  if (cleanOptions.length < 2) {
+    cleanOptions = ["Option A", "Option B"];
+  } else if (cleanOptions.length > 10) {
+    cleanOptions = cleanOptions.slice(0, 10);
+  }
+  let correctIdx = typeof q.correctOptionIndex === "number" ? q.correctOptionIndex : 0;
+  if (correctIdx < 0 || correctIdx >= cleanOptions.length) {
+    correctIdx = 0;
+  }
+  let shortExplanation = void 0;
+  if (q.explanation) {
+    const rawClean = q.explanation.replace(/[*_`[\]()]/g, " ").replace(/\s+/g, " ").trim();
+    if (rawClean.length > 0) {
+      shortExplanation = rawClean.slice(0, 195);
+    }
+  }
   try {
     const pollMsg = await botInstance.api.sendPoll(
       session.chatId,
       prompt,
-      q.options,
+      cleanOptions,
       {
         type: "quiz",
-        correct_option_ids: [q.correctOptionIndex],
-        correct_option_id: q.correctOptionIndex,
-        explanation: q.explanation || void 0,
+        correct_option_id: correctIdx,
+        explanation: shortExplanation,
         is_anonymous: false
       }
     );
@@ -41703,12 +41719,13 @@ bot.on("poll_answer", async (ctx) => {
     const syncParam = encodeQuestionForSync(currentQ);
     const webMistakeUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${syncParam}`;
     const correctOpt = currentQ.options && currentQ.options[currentQ.correctOptionIndex] ? currentQ.options[currentQ.correctOptionIndex].trim() : "";
+    const safeCorrectOpt = correctOpt.replace(/([*_`[\]()])/g, "\\$1");
     const cleanExpl = cleanExplanationForTelegram(currentQ.explanation);
     let feedbackMsg = `\u274C *Incorrect*
 
 `;
-    if (correctOpt) {
-      feedbackMsg += `\u2705 *Correct:* ${correctOpt}
+    if (safeCorrectOpt) {
+      feedbackMsg += `\u2705 *Correct:* ${safeCorrectOpt}
 `;
     }
     if (cleanExpl) {
@@ -41728,6 +41745,14 @@ bot.on("poll_answer", async (ctx) => {
         reply_markup: new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl)
       }
     ).catch(() => {
+      bot.api.sendMessage(
+        session.chatId,
+        feedbackMsg.replace(/[*_`]/g, ""),
+        {
+          reply_markup: new InlineKeyboard().url("\u{1F4D6} Full Solution & AI Tutor on Web", webMistakeUrl)
+        }
+      ).catch(() => {
+      });
     });
   }
   session.answeredCount++;
