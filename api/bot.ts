@@ -41354,30 +41354,36 @@ bot.callbackQuery(/^me_run:(eng|math|reas|ga):([a-z0-9_]+):(all|10)$/, async (ct
     questions
   );
 });
-bot.callbackQuery("nav_quiz_mistakes", async (ctx) => {
-  const stats = getMistakeStats(ctx.from.id, "all");
+async function showQuizMistakesMenu(ctx, isEdit = false) {
+  const userId = ctx.from?.id || 0;
+  const stats = getMistakeStats(userId, "all");
   const totalMistakes = stats.reduce((sum, s) => sum + s.total, 0);
   if (totalMistakes === 0) {
     const emptyKb = new InlineKeyboard().text("\u{1F4C1} Practice Chapter Bank", "nav_chapter_bank").row().text("\u{1F3AF} Practice Mock Errors", "nav_mock_errors").row().text("\u2B05\uFE0F Back to Menu", "nav_root");
-    await ctx.editMessageText(
-      `\u{1F4D5} *My Quiz Mistakes Notebook*
+    const emptyText = `\u{1F4D5} *My Quiz Mistakes Notebook*
 
 \u2728 *Zero pending mistakes!*
 
 All mistakes from *Chapter Bank* and *Mock Errors* automatically collect together in this notebook for unified revision.
 
-Start practicing from /menu, and any missed questions will appear here!`,
-      {
+Start practicing from /menu, and any missed questions will appear here!`;
+    if (isEdit) {
+      await ctx.editMessageText(emptyText, {
         parse_mode: "Markdown",
         reply_markup: emptyKb
-      }
-    );
-    await ctx.answerCallbackQuery();
+      }).catch(() => {
+      });
+    } else {
+      await ctx.reply(emptyText, {
+        parse_mode: "Markdown",
+        reply_markup: emptyKb
+      });
+    }
     return;
   }
   const kb = new InlineKeyboard();
   kb.text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row();
-  const allUserMistakes = getUserMistakes(ctx.from.id, "all");
+  const allUserMistakes = getUserMistakes(userId, "all");
   if (allUserMistakes.length > 0) {
     const syncUrl = buildSafeWebSyncUrl(allUserMistakes);
     kb.url("\u{1F4D6} View Full Solutions on Web", syncUrl).row();
@@ -41393,30 +41399,50 @@ Start practicing from /menu, and any missed questions will appear here!`,
 You have *${totalMistakes}* combined mistakes from your *Chapter Bank* and *Mock Errors* practice.
 
 Drill all your mistakes or select a subject below:`;
-  try {
-    await ctx.editMessageText(text, {
-      parse_mode: "Markdown",
-      reply_markup: kb
-    });
-  } catch (err) {
-    console.warn("[nav_quiz_mistakes] Error editing message with rich markup, falling back:", err?.message || err);
-    const safeKb = new InlineKeyboard();
-    safeKb.text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row();
-    safeKb.url("\u{1F4D6} View Mistakes on Web", "https://ssc27.vercel.app/?view=botErrors").row();
-    for (const s of stats) {
-      if (s.total > 0) {
-        safeKb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
+  if (isEdit) {
+    try {
+      await ctx.editMessageText(text, {
+        parse_mode: "Markdown",
+        reply_markup: kb
+      });
+    } catch (err) {
+      console.warn("[nav_quiz_mistakes] Error editing message with rich markup, falling back:", err?.message || err);
+      const safeKb = new InlineKeyboard();
+      safeKb.text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row();
+      safeKb.url("\u{1F4D6} View Mistakes on Web", "https://ssc27.vercel.app/?view=botErrors").row();
+      for (const s of stats) {
+        if (s.total > 0) {
+          safeKb.text(`${s.title} (${s.total} Mistakes)`, `qm_sub:${s.shortCode}`).row();
+        }
       }
+      safeKb.text("\u2B05\uFE0F Back to Menu", "nav_root");
+      await ctx.editMessageText(text, {
+        parse_mode: "Markdown",
+        reply_markup: safeKb
+      }).catch(() => {
+      });
     }
-    safeKb.text("\u2B05\uFE0F Back to Menu", "nav_root");
-    await ctx.editMessageText(text, {
-      parse_mode: "Markdown",
-      reply_markup: safeKb
-    }).catch(() => {
-    });
+  } else {
+    try {
+      await ctx.reply(text, {
+        parse_mode: "Markdown",
+        reply_markup: kb
+      });
+    } catch {
+      await ctx.reply(text.replace(/[*_`]/g, ""), {
+        reply_markup: new InlineKeyboard().text(`\u{1F525} Drill All Mistakes (${totalMistakes} Qs)`, `qm_run_all:all`).text("\u26A1 Quick 10", `qm_run_all:10`).row().url("\u{1F4D6} View Mistakes on Web", "https://ssc27.vercel.app/?view=botErrors").row().text("\u2B05\uFE0F Back to Menu", "nav_root")
+      }).catch(() => {
+      });
+    }
   }
+}
+bot.callbackQuery("nav_quiz_mistakes", async (ctx) => {
+  await showQuizMistakesMenu(ctx, true);
   await ctx.answerCallbackQuery().catch(() => {
   });
+});
+bot.command(["mistakes", "errors", "mymistakes"], async (ctx) => {
+  await showQuizMistakesMenu(ctx, false);
 });
 bot.callbackQuery(/^qm_run_all:(all|10)$/, async (ctx) => {
   await ctx.answerCallbackQuery();

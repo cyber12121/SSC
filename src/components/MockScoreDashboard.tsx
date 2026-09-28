@@ -1043,8 +1043,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
     }
 
-    // 4. Server API lookup
-    if (list.length === 0) {
+    // 4. Server API lookup (also run if local list is unexpectedly small or incomplete for a full mock)
+    if (list.length === 0 || (report.type === 'full' && list.length < 20)) {
       for (const cid of candidateIds) {
         try {
           const res = await fetch(`/api/mock-questions/${cid}`);
@@ -1052,7 +1052,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           if (res.ok && cType.includes('application/json')) {
             const data = await res.json();
             const extracted = tryExtractQuestions(data);
-            if (extracted) { list = extracted; break; }
+            if (extracted && extracted.length > list.length) {
+              list = extracted;
+              safeStorage.setItem(`cgl_mock_questions_${cid}`, JSON.stringify(extracted));
+              break;
+            }
           }
         } catch {}
       }
@@ -1557,6 +1561,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           }
         }
 
+        let secKey: 'part_a' | 'part_b' | 'part_c' | 'part_d' = 'part_a';
+        if (subjectName === 'Reasoning') secKey = 'part_a';
+        else if (subjectName === 'General Awareness') secKey = 'part_b';
+        else if (subjectName === 'Mathematics') secKey = 'part_c';
+        else if (subjectName === 'English') secKey = 'part_d';
+
         return {
           id: qId,
           q_num: idx + 1,
@@ -1566,6 +1576,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           solution: solution || undefined,
           image: item.image || null,
           subject: subjectName,
+          section: item.section || secKey,
           tags: {
             topic: topicText,
             difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'

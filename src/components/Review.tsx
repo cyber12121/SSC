@@ -882,15 +882,27 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   // Helper to map question to SSC canonical section keys
   const getQuestionSectionKey = (q?: Question): 'part_a' | 'part_b' | 'part_c' | 'part_d' | null => {
     if (!q) return null;
-    const explicitSec = (q as any).section;
-    if (explicitSec === 'part_a' || explicitSec === 'part_b' || explicitSec === 'part_c' || explicitSec === 'part_d') {
-      return explicitSec;
-    }
-    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || (q as any).topic || result.subject || '');
+    const explicitSec = String((q as any).section || (q as any).sectionKey || '').toLowerCase().trim();
+    if (explicitSec === 'part_a' || explicitSec === 'part a' || explicitSec === 'part-a' || explicitSec.includes('reason') || explicitSec.includes('intel')) return 'part_a';
+    if (explicitSec === 'part_b' || explicitSec === 'part b' || explicitSec === 'part-b' || explicitSec.includes('aware') || explicitSec.includes('general awareness') || explicitSec.includes('gk') || explicitSec.includes('gs')) return 'part_b';
+    if (explicitSec === 'part_c' || explicitSec === 'part c' || explicitSec === 'part-c' || explicitSec.includes('quant') || explicitSec.includes('math') || explicitSec.includes('aptitude')) return 'part_c';
+    if (explicitSec === 'part_d' || explicitSec === 'part d' || explicitSec === 'part-d' || explicitSec.includes('eng') || explicitSec.includes('comprehension')) return 'part_d';
+
+    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || (q as any).topic || '').trim();
     if (/reason|intel/i.test(raw)) return 'part_a';
-    if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy|economics/i.test(raw)) return 'part_b';
-    if (/quant|math|aptitude|arithmetic|algebra|geometry/i.test(raw)) return 'part_c';
-    if (/eng|vocab|grammar|comprehension/i.test(raw)) return 'part_d';
+    if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy|economics|static/i.test(raw)) return 'part_b';
+    if (/quant|math|aptitude|arithmetic|algebra|geometry|trigonometry|mensuration|number system/i.test(raw)) return 'part_c';
+    if (/eng|vocab|grammar|comprehension|cloze|synonym|antonym|idiom|phrase|one\s*word|substitution|para\s*jumble|jumbled|spelling|misspelt|voice|narration|direct.*indirect|active.*passive|sentence\s*improvement|spotting\s*error|preposition|fill\s*in/i.test(raw)) return 'part_d';
+
+    // Fallback to result.subject if it specifies a canonical subject
+    if (result.subject && result.subject !== 'All 4 Sections Mock') {
+      const s = result.subject.toLowerCase();
+      if (/reason|intel/i.test(s)) return 'part_a';
+      if (/aware|gk|gs|ga/i.test(s)) return 'part_b';
+      if (/quant|math|aptitude/i.test(s)) return 'part_c';
+      if (/eng/i.test(s)) return 'part_d';
+    }
+
     return null;
   };
 

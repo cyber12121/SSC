@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+﻿import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, BookMarked, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, RotateCw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
@@ -13,6 +13,7 @@ const QuizContainer = React.lazy(() => import('./components/QuizContainer').then
 const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
+const SrsHub = React.lazy(() => import('./components/srs/SrsHub').then(m => ({ default: m.SrsHub })));
 
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
@@ -106,7 +107,7 @@ const isLocalhost = typeof window !== 'undefined' && (
 );
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors'>(() => {
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors' | 'srs'>(() => {
     if (typeof window !== 'undefined') {
       try {
         const search = window.location.search;
@@ -116,7 +117,7 @@ export default function App() {
           if (v === 'botErrors' || params.has('syncQ') || params.has('syncBatch')) {
             return 'botErrors';
           }
-          if (v === 'mockScores' || v === 'drill' || v === 'dashboard' || v === 'bookmarks') {
+          if (v === 'mockScores' || v === 'drill' || v === 'dashboard' || v === 'bookmarks' || v === 'srs') {
             return v as any;
           }
         }
@@ -248,17 +249,17 @@ export default function App() {
   });
   const [selectedBookmarkSubject, setSelectedBookmarkSubject] = useState<string | null>(null);
 
-  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA)
-  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca'>(() => {
+  // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA) vs 'silly' (Silly Mistakes)
+  const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca' | 'silly'>(() => {
     try {
       const saved = safeStorage.getItem('mockViewMode');
-      return (saved === 'buckets' || saved === 'rca') ? saved : 'chapters';
+      return (saved === 'buckets' || saved === 'rca' || saved === 'silly') ? saved : 'chapters';
     } catch {
       return 'chapters';
     }
   });
 
-  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca') => {
+  const setMockViewModePersisted = (mode: 'chapters' | 'buckets' | 'rca' | 'silly') => {
     setMockViewMode(mode);
     try { safeStorage.setItem('mockViewMode', mode); } catch { }
   };
@@ -774,16 +775,16 @@ export default function App() {
     } finally {
       setLoadingResults(false);
     }
-  }, [user]);
+  }, [user, hydrateRcaFromResults]);
 
   // Refetch results when the authenticated user changes
   useEffect(() => {
     fetchResults();
   }, [user, fetchResults]);
 
-  // Also refetch/sync results when navigating to dashboard or home
+  // Refetch results when navigating to the analytics dashboard
   useEffect(() => {
-    if (view === 'dashboard' || view === 'home') {
+    if (view === 'dashboard') {
       fetchResults();
     }
   }, [view, fetchResults]);
@@ -820,7 +821,7 @@ export default function App() {
   }, [user]);
 
   useEffect(() => {
-    if (user && (view === 'bookmarks' || view === 'quiz')) {
+    if (user && (view === 'home' || view === 'bookmarks' || view === 'quiz')) {
       fetchBookmarks();
     }
   }, [user, view, fetchBookmarks]);
@@ -1593,6 +1594,17 @@ export default function App() {
       resultToReview.questionDetails = resultToReview.questionDetails.map((qd, idx) => {
         let q = qd.question;
         const qdAny = qd as any;
+
+        const rawSub = qdAny.subject || qdAny.section || (qdAny.tags && qdAny.tags.topic) || qdAny.topic || '';
+        let detectedSub = 'General Awareness';
+        if (/reason|intel/i.test(rawSub)) detectedSub = 'Reasoning';
+        else if (/quant|math|aptitude|arithmetic|advance/i.test(rawSub)) detectedSub = 'Mathematics';
+        else if (/eng|comprehension|verbal|vocab|grammar|cloze|synonym|antonym|idiom|phrase|one\s*word|substitution|para\s*jumble|jumbled|spelling|voice|narration|sentence\s*improvement|spotting\s*error/i.test(rawSub)) detectedSub = 'English';
+        else if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy/i.test(rawSub)) detectedSub = 'General Awareness';
+        else if (result.subject && result.subject !== 'All 4 Sections Mock') detectedSub = result.subject;
+
+        const secKey = detectedSub === 'Reasoning' ? 'part_a' : detectedSub === 'General Awareness' ? 'part_b' : detectedSub === 'Mathematics' ? 'part_c' : 'part_d';
+
         if (!q || !q.question) {
           q = {
             id: qdAny.id || (result.id ? `${result.id}_${idx + 1}` : `q_${idx + 1}`),
@@ -1601,9 +1613,16 @@ export default function App() {
             options: qdAny.options || {},
             answer: qdAny.answer || qdAny.correctAnswer || 'a',
             solution: qdAny.solution || (qdAny.question && qdAny.question.solution) || '',
-            subject: qdAny.subject || result.subject || 'General Awareness',
+            subject: qdAny.subject || detectedSub,
+            section: qdAny.section || secKey,
             topic: qdAny.topic || result.chapter_title || 'Review',
             rca: qd.rca || qdAny.rca || null
+          };
+        } else if (!q.subject || !q.section) {
+          q = {
+            ...q,
+            subject: q.subject || detectedSub,
+            section: (q as any).section || secKey
           };
         }
 
@@ -2254,13 +2273,15 @@ export default function App() {
       }
       return {
         id: q.id || `q_${idx}`,
-        questionText: q.question,
+        qNum: idx + 1,
+        question: q.question,
         options: optionsMap,
-        correctAnswer: q.correct_answer,
-        userAnswer: (q as any).user_answer,
+        correctAnswer: q.answer,
+        userAnswer: (q as any).userAnswer || undefined,
         solution: q.solution,
-        userStatus: (type === 'slow' ? 'slow' : type === 'wrong' ? 'wrong' : 'unattempted') as any,
-        timeSpent: (q as any).time_taken || 0
+        status: (type === 'slow' ? 'slow' : type === 'wrong' ? 'wrong' : 'unattempted') as any,
+        subject: selectedSubject || 'Unknown',
+        topic: (q as any).chapter_title || (q as any).topic || selectedSubject || 'General',
       };
     });
 
@@ -2393,7 +2414,7 @@ export default function App() {
       {view !== 'quiz' && view !== 'review' && (
         <nav className="bg-white/95 backdrop-blur-md border-b border-slate-200/90 sticky top-0 z-50 transition-colors">
           <div className="max-w-[1520px] mx-auto px-3 sm:px-6">
-            <div className="flex items-center justify-between h-15">
+            <div className="flex items-center justify-between h-14">
               
               {/* Brand & Context Switcher */}
               <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
@@ -2448,6 +2469,19 @@ export default function App() {
                 >
                   <Zap className="w-3.5 h-3.5" />
                   <span>Drills</span>
+                </button>
+
+                {/* 3. SRS Memory */}
+                <button
+                  onClick={() => setView('srs')}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                    view === 'srs'
+                      ? 'bg-indigo-50 text-indigo-700 shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <RotateCw className="w-3.5 h-3.5" />
+                  <span>SRS Memory</span>
                 </button>
 
 
@@ -2888,12 +2922,18 @@ export default function App() {
                                   {subject === 'Reasoning' && (
                                     <>
                                       {['Coding', 'Analogy', 'Series', 'Syllogism'].map((rTopic) => (
-                                        <span
+                                        <button
                                           key={rTopic}
-                                          className="px-1.5 py-0.5 bg-slate-50 text-slate-600 border border-slate-200 rounded text-[10px] font-medium"
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSelectedSubject('Reasoning');
+                                            setSelectedTopic(null);
+                                          }}
+                                          className="px-1.5 py-0.5 bg-slate-50 hover:bg-purple-50 hover:text-purple-700 text-slate-600 border border-slate-200 rounded text-[10px] font-medium cursor-pointer transition-colors"
                                         >
                                           {rTopic}
-                                        </span>
+                                        </button>
                                       ))}
                                     </>
                                   )}
@@ -2927,7 +2967,7 @@ export default function App() {
                             </span>
                           </div>
                           <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
-                            Calculation &amp; Speed Drill
+                            Calculation & Speed Drill
                           </h3>
                           <p className="text-xs text-slate-500 mt-1 leading-relaxed">
                             Rapid-fire drills for squares, cubes, fractions, percentages, and Pythagorean triplets.
@@ -3394,7 +3434,7 @@ export default function App() {
                               <Icon className={`w-3.5 h-3.5 ${isSelected ? 'text-indigo-600' : 'text-slate-400'}`} />
                               <span>{s.label}</span>
                               <span
-                                className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                                className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
                                   isSelected
                                     ? 'bg-indigo-50 text-indigo-700'
                                     : 'bg-slate-200/70 text-slate-500'
@@ -3434,7 +3474,7 @@ export default function App() {
                               >
                                 <Icon className="w-3.5 h-3.5" />
                                 <span>{sub.shortTitle}</span>
-                                <span className={`px-1.5 py-0.2 text-[10px] rounded font-bold ${isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                                <span className={`px-1.5 py-0.5 text-[10px] rounded font-bold ${isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
                                   }`}>
                                   {count}
                                 </span>
@@ -3463,8 +3503,8 @@ export default function App() {
                       </div>
                     )}
 
-                    {/* Mock Errors: Streamlined Controls Bar (shown only for buckets mode) */}
-                    {category === 'mockErrors' && mockViewMode === 'buckets' && (currentData[selectedSubject] || []).length > 0 && (
+                    {/* Mock Errors: Controls Bar */}
+                    {category === 'mockErrors' && (currentData[selectedSubject] || []).length > 0 && (
                       <div className="bg-white rounded-xl border border-slate-200/80 p-3 sm:p-3.5 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-3">
                         <div>
                           <div className="flex items-center gap-2">
@@ -3484,50 +3524,52 @@ export default function App() {
                         </div>
 
                         <div className="flex flex-wrap items-center gap-2">
-                          {/* Test Scope Filter (Combined / Full / Sectional) */}
-                          <div className="inline-flex bg-slate-100/90 p-0.5 rounded-lg border border-slate-200/80 text-[11px] font-semibold">
-                            <button
-                              onClick={() => setMockTestTypeFilterPersisted('all')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${mockTestTypeFilter === 'all'
-                                  ? 'bg-white text-slate-900 shadow-xs font-bold'
-                                  : 'text-slate-500 hover:text-slate-800'
-                                }`}
-                              title="Combined: all full and sectional test errors"
-                            >
-                              <span>Combined</span>
-                              <span className={`text-[9px] px-1.5 py-0.2 rounded font-bold ${mockTestTypeFilter === 'all' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-200 text-slate-600'}`}>
-                                {mockScopeCounts.all}
-                              </span>
-                            </button>
-                            <button
-                              onClick={() => setMockTestTypeFilterPersisted('full')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${mockTestTypeFilter === 'full'
-                                  ? 'bg-white text-slate-900 shadow-xs font-bold'
-                                  : 'text-slate-500 hover:text-slate-800'
-                                }`}
-                              title="Errors from Full Mock Tests only"
-                            >
-                              <span>Full</span>
-                              <span className={`text-[9px] px-1.5 py-0.2 rounded font-bold ${mockTestTypeFilter === 'full' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-200 text-slate-600'}`}>
-                                {mockScopeCounts.full}
-                              </span>
-                            </button>
-                            <button
-                              onClick={() => setMockTestTypeFilterPersisted('sectional')}
-                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${mockTestTypeFilter === 'sectional'
-                                  ? 'bg-white text-slate-900 shadow-xs font-bold'
-                                  : 'text-slate-500 hover:text-slate-800'
-                                }`}
-                              title="Errors from Sectional Mock Tests only"
-                            >
-                              <span>Sectional</span>
-                              <span className={`text-[9px] px-1.5 py-0.2 rounded font-bold ${mockTestTypeFilter === 'sectional' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-200 text-slate-600'}`}>
-                                {mockScopeCounts.sectional}
-                              </span>
-                            </button>
-                          </div>
+                          {/* Test Scope Filter (Combined / Full / Sectional) — buckets mode only */}
+                          {mockViewMode === 'buckets' && (
+                            <div className="inline-flex bg-slate-100/90 p-0.5 rounded-lg border border-slate-200/80 text-[11px] font-semibold">
+                              <button
+                                onClick={() => setMockTestTypeFilterPersisted('all')}
+                                className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${mockTestTypeFilter === 'all'
+                                    ? 'bg-white text-slate-900 shadow-xs font-bold'
+                                    : 'text-slate-500 hover:text-slate-800'
+                                  }`}
+                                title="Combined: all full and sectional test errors"
+                              >
+                                <span>Combined</span>
+                                <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold ${mockTestTypeFilter === 'all' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-200 text-slate-600'}`}>
+                                  {mockScopeCounts.all}
+                                </span>
+                              </button>
+                              <button
+                                onClick={() => setMockTestTypeFilterPersisted('full')}
+                                className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${mockTestTypeFilter === 'full'
+                                    ? 'bg-white text-slate-900 shadow-xs font-bold'
+                                    : 'text-slate-500 hover:text-slate-800'
+                                  }`}
+                                title="Errors from Full Mock Tests only"
+                              >
+                                <span>Full</span>
+                                <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold ${mockTestTypeFilter === 'full' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-200 text-slate-600'}`}>
+                                  {mockScopeCounts.full}
+                                </span>
+                              </button>
+                              <button
+                                onClick={() => setMockTestTypeFilterPersisted('sectional')}
+                                className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1.5 cursor-pointer ${mockTestTypeFilter === 'sectional'
+                                    ? 'bg-white text-slate-900 shadow-xs font-bold'
+                                    : 'text-slate-500 hover:text-slate-800'
+                                  }`}
+                                title="Errors from Sectional Mock Tests only"
+                              >
+                                <span>Sectional</span>
+                                <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold ${mockTestTypeFilter === 'sectional' ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-200 text-slate-600'}`}>
+                                  {mockScopeCounts.sectional}
+                                </span>
+                              </button>
+                            </div>
+                          )}
 
-                          {/* Mode Toggle: Chapter-Wise / Error Types / RCA */}
+                          {/* Mode Toggle: Chapter-Wise / Error Types / RCA / Silly — always visible */}
                           <div className="inline-flex bg-slate-100/90 p-0.5 rounded-lg border border-slate-200/80 text-[11px] font-semibold">
                             <button
                               onClick={() => setMockViewModePersisted('chapters')}
@@ -3562,20 +3604,33 @@ export default function App() {
                               <Target className="w-3.5 h-3.5 text-purple-600" />
                               <span>RCA</span>
                             </button>
+                            <button
+                              onClick={() => setMockViewModePersisted('silly')}
+                              className={`px-2.5 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${mockViewMode === 'silly'
+                                  ? 'bg-white text-orange-700 shadow-xs font-bold'
+                                  : 'text-slate-500 hover:text-orange-700'
+                                }`}
+                              title="Silly Mistakes aggregate analysis"
+                            >
+                              <Flame className="w-3.5 h-3.5 text-orange-500" />
+                              <span>Silly</span>
+                            </button>
                           </div>
 
-                          {/* Start All Button */}
-                          <button
-                            onClick={() => startAllSubjectQuiz(selectedSubject)}
-                            disabled={clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0}
-                            className={`inline-flex shrink-0 items-center gap-1.5 rounded-lg h-8 px-3 text-xs font-bold shadow-xs transition-all ${clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
-                                ? 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
-                                : 'bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white cursor-pointer active:scale-95'
-                              }`}
-                          >
-                            <Play className="w-3 h-3 fill-current" />
-                            <span>Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})</span>
-                          </button>
+                          {/* Start All Button — buckets mode only */}
+                          {mockViewMode === 'buckets' && (
+                            <button
+                              onClick={() => startAllSubjectQuiz(selectedSubject)}
+                              disabled={clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0}
+                              className={`inline-flex shrink-0 items-center gap-1.5 rounded-lg h-8 px-3 text-xs font-bold shadow-xs transition-all ${clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0) === 0
+                                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
+                                  : 'bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white cursor-pointer active:scale-95'
+                                }`}
+                            >
+                              <Play className="w-3 h-3 fill-current" />
+                              <span>Start All ({clubbedMockChapters.reduce((acc, ch) => acc + ch.total, 0)})</span>
+                            </button>
+                          )}
                         </div>
                       </div>
                     )}
@@ -3591,7 +3646,7 @@ export default function App() {
                             }`}
                         >
                           <span>All GK</span>
-                          <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                          <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
                             mockGKFilter === 'all' ? 'bg-slate-800 text-slate-200' : 'bg-slate-100 text-slate-600'
                           }`}>
                             {aggregatedMockErrorsData.gkCounts?.all || 0}
@@ -3612,7 +3667,7 @@ export default function App() {
                             >
                               <Icon className="w-3.5 h-3.5" />
                               <span>{sub.shortTitle}</span>
-                              <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
                                 isSelected ? 'bg-slate-800 text-slate-200' : 'bg-slate-100 text-slate-600'
                               }`}>
                                 {count}
@@ -3626,8 +3681,8 @@ export default function App() {
                     {category === 'mockErrors' ? (
                       (mockScopeCounts.all === 0 && mockGKFilter === 'all' && mockTestTypeFilter === 'all') ? (
                         <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-xs">
-                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-50 text-rose-500 mb-2">
-                            <Flame className="h-5 w-5" />
+                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-400 mb-2">
+                            <AlertCircle className="h-5 w-5" />
                           </div>
                           <h3 className="text-xs font-bold text-slate-800">No Mock Errors Recorded</h3>
                           <p className="mt-0.5 text-[11px] text-slate-500 max-w-md">
@@ -3854,7 +3909,7 @@ export default function App() {
                                             <span className="truncate">{topicName}</span>
                                           </div>
                                           <div className="flex items-center gap-1 shrink-0 ml-1.5">
-                                            <span className={`rounded px-1.5 py-0.2 text-[10px] font-bold ${theme.topicCount}`}>
+                                            <span className={`rounded px-1.5 py-0.5 text-[10px] font-bold ${theme.topicCount}`}>
                                               {count}
                                             </span>
                                             <ChevronRight className="w-3 h-3 opacity-40 transition-transform group-hover:translate-x-0.5 group-hover:opacity-100" />
@@ -4334,6 +4389,24 @@ export default function App() {
               </motion.div>
             )}
 
+            {view === 'srs' && (
+              <motion.div
+                key="srs"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+              >
+                <React.Suspense fallback={
+                  <div className="flex flex-col items-center justify-center py-40">
+                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
+                    <p className="text-slate-500 font-bold">Loading SRS memory cards...</p>
+                  </div>
+                }>
+                  <SrsHub onNavigateHome={() => setView('home')} />
+                </React.Suspense>
+              </motion.div>
+            )}
+
             {view === 'mockScores' && (
               <motion.div
                 key="mockScores"
@@ -4387,7 +4460,7 @@ export default function App() {
                     const firstQ = questions[0];
                     const rawSub = firstQ?.subject || 'English';
                     const formattedSub = rawSub.charAt(0).toUpperCase() + rawSub.slice(1);
-                    setCategory('chapter');
+                    setCategory('mockErrors');
 
                     if (questions.length > 25) {
                       setSetPickerModal({
@@ -4471,12 +4544,22 @@ export default function App() {
           </button>
           <button
             onClick={() => { setView('drill'); setSelectedSubject(null); setSelectedTopic(null); }}
-            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+            className={`flex flex-col items-center py-1 px-2 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
               view === 'drill' ? 'text-blue-600 bg-blue-50/60' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
             <Zap className="w-4 h-4 mb-0.5" />
             <span>Drills</span>
+          </button>
+
+          <button
+            onClick={() => setView('srs')}
+            className={`flex flex-col items-center py-1 px-2 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              view === 'srs' ? 'text-indigo-600 bg-indigo-50/60' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <RotateCw className="w-4 h-4 mb-0.5" />
+            <span>SRS</span>
           </button>
 
           <button

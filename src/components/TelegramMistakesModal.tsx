@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { db, auth } from '../firebase';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { X, Trash2, Search, Filter, RefreshCw, CheckCircle2, AlertCircle, BookOpen, ExternalLink } from 'lucide-react';
 
 interface RecordedMistake {

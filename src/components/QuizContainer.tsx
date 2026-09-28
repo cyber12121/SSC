@@ -62,16 +62,16 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   // Normalize subject into canonical SSC section keys (PART-A: Reasoning, PART-B: GA, PART-C: Math, PART-D: English)
   const getQuestionSectionKey = useCallback((q: Question): 'part_a' | 'part_b' | 'part_c' | 'part_d' | null => {
     const rawSec = String((q as any).section || (q as any).sectionKey || '').toLowerCase().trim();
-    if (rawSec === 'part_a' || rawSec === 'part a' || rawSec === 'part-a' || rawSec === 'section 1' || rawSec === 'section a') return 'part_a';
-    if (rawSec === 'part_b' || rawSec === 'part b' || rawSec === 'part-b' || rawSec === 'section 2' || rawSec === 'section b') return 'part_b';
-    if (rawSec === 'part_c' || rawSec === 'part c' || rawSec === 'part-c' || rawSec === 'section 3' || rawSec === 'section c') return 'part_c';
-    if (rawSec === 'part_d' || rawSec === 'part d' || rawSec === 'part-d' || rawSec === 'section 4' || rawSec === 'section d') return 'part_d';
+    if (rawSec === 'part_a' || rawSec === 'part a' || rawSec === 'part-a' || rawSec === 'section 1' || rawSec === 'section a' || rawSec.includes('reason') || rawSec.includes('intel')) return 'part_a';
+    if (rawSec === 'part_b' || rawSec === 'part b' || rawSec === 'part-b' || rawSec === 'section 2' || rawSec === 'section b' || rawSec.includes('aware') || rawSec.includes('general awareness') || rawSec.includes('gk') || rawSec.includes('gs')) return 'part_b';
+    if (rawSec === 'part_c' || rawSec === 'part c' || rawSec === 'part-c' || rawSec === 'section 3' || rawSec === 'section c' || rawSec.includes('quant') || rawSec.includes('math') || rawSec.includes('aptitude')) return 'part_c';
+    if (rawSec === 'part_d' || rawSec === 'part d' || rawSec === 'part-d' || rawSec === 'section 4' || rawSec === 'section d' || rawSec.includes('eng') || rawSec.includes('comprehension')) return 'part_d';
 
     const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || '').toLowerCase();
     if (/reason|intel/i.test(raw)) return 'part_a';
-    if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy|current/i.test(raw)) return 'part_b';
-    if (/quant|math|aptitude|arithmetic|advance/i.test(raw)) return 'part_c';
-    if (/eng|comprehension|verbal/i.test(raw)) return 'part_d';
+    if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy|current|static/i.test(raw)) return 'part_b';
+    if (/quant|math|aptitude|arithmetic|advance|algebra|geometry|trigonometry|mensuration/i.test(raw)) return 'part_c';
+    if (/eng|comprehension|verbal|vocab|grammar|cloze|synonym|antonym|idiom|phrase|one\s*word|substitution|para\s*jumble|jumbled|spelling|misspelt|voice|narration|direct.*indirect|active.*passive|sentence\s*improvement|spotting\s*error|preposition|fill\s*in/i.test(raw)) return 'part_d';
     return null;
   }, []);
 
