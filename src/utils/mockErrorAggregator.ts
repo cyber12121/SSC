@@ -6,6 +6,7 @@ import { classifyTestType, TestScopeFilter } from './testClassifier';
 import { safeStorage } from './safeStorage';
 import { getDeletedMockIds } from './syncMockReports';
 import { findQuestionRca, getGlobalRcaStore } from './rcaHelper';
+import { getTopicGKSubject, GKSubjectId, GK_SUBJECT_CONFIGS } from './gkSubjectHelper';
 
 const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
 
@@ -13,6 +14,7 @@ export interface AggregatedMockData {
   clubbedChapters: Record<string, MockChapterModalData[]>;
   mockScopeCounts: Record<string, { all: number; full: number; sectional: number }>;
   overallScopeCounts: { all: number; full: number; sectional: number };
+  gkCounts: Record<string, number>;
   subjectRcaData: Record<string, {
     totals: Record<RCATagType | 'unclassified', number>;
     questionsByTag: Record<RCATagType | 'unclassified', Question[]>;
@@ -204,6 +206,18 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
   const seenErrorsAll = new Set<string>();
   const processedQuestions = new Map<string, any>();
 
+  // GK question counts under current testScopeFilter
+  const gkCounts: Record<string, number> = {
+    all: 0,
+    history: 0,
+    polity: 0,
+    geography: 0,
+    economics: 0,
+    science: 0,
+    static_gk: 0
+  };
+  const seenGkQuestions = new Set<string>();
+
   const processQuestion = (
     q: any,
     defaultSubject: string,
@@ -269,6 +283,36 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       sourceLabel = `Subject-Wise Error Bank (${subject})`;
     }
 
+    // Resolve topic early
+    const rawT = q.tags?.topic || q.topic || q.detectedTopic;
+    const normT = rawT ? normalizeTopicTitle(rawT) : '';
+    const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
+
+    // Resolve GK sub-discipline and count across unique questions under current testScopeFilter
+    let questionGkSubject: GKSubjectId = 'static_gk';
+    if (subject === 'General Awareness') {
+      const explicitGk = q.gk_subject || q.tags?.gk_subject;
+      if (explicitGk && explicitGk in GK_SUBJECT_CONFIGS) {
+        questionGkSubject = explicitGk as GKSubjectId;
+      } else {
+        questionGkSubject = getTopicGKSubject(topic);
+      }
+
+      if (!seenGkQuestions.has(dedupKey)) {
+        if (testScopeFilter === 'all' || classifiedScope === testScopeFilter) {
+          seenGkQuestions.add(dedupKey);
+          gkCounts.all = (gkCounts.all || 0) + 1;
+          gkCounts[questionGkSubject] = (gkCounts[questionGkSubject] || 0) + 1;
+        }
+      }
+    }
+
+    // GK sub-discipline filter check (History, Geography, Polity, Economics, Science, Static GK)
+    const isGkFilterActive = selectedSubject === 'General Awareness' && gkFilter && gkFilter !== 'all';
+    if (isGkFilterActive && subject === 'General Awareness' && questionGkSubject !== gkFilter) {
+      return;
+    }
+
     // Track scope counts for each unique question (once across all sources)
     if (!seenErrorsAll.has(dedupKey)) {
       seenErrorsAll.add(dedupKey);
@@ -316,10 +360,6 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     if (testScopeFilter !== 'all' && classifiedScope !== testScopeFilter) {
       return;
     }
-
-    const rawT = q.tags?.topic || q.topic || q.detectedTopic;
-    const normT = rawT ? normalizeTopicTitle(rawT) : '';
-    const topic = (normT && normT !== 'General') ? normT : detectTopic(q, subject);
 
     const canonicalSubtopic = normalizeSubtopic(topic, q.subtopic || q.tags?.subtopic || q.conceptTested, qText);
 
@@ -473,6 +513,7 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     clubbedChapters,
     mockScopeCounts,
     overallScopeCounts,
+    gkCounts,
     subjectRcaData,
     overallRcaTotals,
     totalOverallErrors,

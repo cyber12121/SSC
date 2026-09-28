@@ -167,6 +167,48 @@ export function getEnglishCatalog(): SectionEntry[] {
     });
   }
 
+  // Pinnacle Grammar (Topic-Wise)
+  const grammarDir = path.join(CHAPTER_BANK_DIR, 'english', 'grammar');
+  if (fs.existsSync(grammarDir)) {
+    const files = fs
+      .readdirSync(grammarDir)
+      .filter((f) => f.endsWith('.json'))
+      .sort();
+
+    const sets: SetEntry[] = [];
+    for (const file of files) {
+      try {
+        const filePath = path.join(grammarDir, file);
+        const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const qs = content.questions || [];
+        const chNum = content.chapter_num || file.replace(/[^0-9]/g, '') || '1';
+        sets.push({
+          id: `g_${chNum}`,
+          code: String(chNum),
+          title: content.chapter_title ? `${content.chapter_num || ''}. ${content.chapter_title}` : `Chapter ${chNum}`,
+          filePath,
+          totalQuestions: qs.length,
+        });
+      } catch {}
+    }
+
+    if (sets.length > 0) {
+      sections.push({
+        id: 'grammar',
+        code: 'gram',
+        title: '🎯 Grammar (Pinnacle 60 Days)',
+        topics: [
+          {
+            id: 'grammar_chapters',
+            code: 'gch',
+            title: 'Grammar Topics',
+            sets,
+          },
+        ],
+      });
+    }
+  }
+
   return sections;
 }
 

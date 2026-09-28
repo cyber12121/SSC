@@ -38,6 +38,7 @@ export function parseSubjectChapter(
     else if (normalizedPath.includes('/mathematics/top500/')) section = 'top500';
     else if (normalizedPath.includes('/english/ayush_vocab/')) section = 'ayush_vocab';
     else if (normalizedPath.includes('/english/black_book/')) section = 'black_book';
+    else if (normalizedPath.includes('/english/grammar/')) section = 'grammar';
     else if (normalizedPath.includes('/english/')) section = 'general';
 
     if (section && section !== 'general') {
@@ -49,6 +50,9 @@ export function parseSubjectChapter(
         if (subParts.length >= 2) {
           topic_name = subParts[0];
           set_name = subParts[1].replace('.json', '');
+        } else {
+          topic_name = section;
+          set_name = subParts[0].replace('.json', '');
         }
       }
     } else if (normalizedPath.includes('/general_awareness/')) {

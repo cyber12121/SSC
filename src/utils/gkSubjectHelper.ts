@@ -188,30 +188,145 @@ export function getChapterGKSubject(chapter: Chapter): GKSubjectId {
 }
 
 export function getTopicGKSubject(topicName: string): GKSubjectId {
-  const t = (topicName || '').toLowerCase();
+  const t = (topicName || '').toLowerCase().trim();
+  if (!t) return 'static_gk';
+
+  // Full Tests
+  if (t.includes('full test') || t.includes('mock test')) {
+    return 'full_tests';
+  }
 
   // History
-  if (t.includes('history') || t.includes('vedic') || t.includes('harappan') || t.includes('sultanate') || t.includes('mughal') || t.includes('gandhian') || t.includes('revolt')) {
+  if (
+    t.includes('history') ||
+    t.includes('vedic') ||
+    t.includes('harappan') ||
+    t.includes('indus valley') ||
+    t.includes('sultanate') ||
+    t.includes('mughal') ||
+    t.includes('gandhian') ||
+    t.includes('revolt') ||
+    t.includes('dynasty') ||
+    t.includes('empire') ||
+    t.includes('maurya') ||
+    t.includes('gupta') ||
+    t.includes('maratha') ||
+    t.includes('viceroy') ||
+    t.includes('governor general') ||
+    t.includes('battle') ||
+    t.includes('freedom struggle') ||
+    t.includes('national movement') ||
+    t.includes('ancient') ||
+    t.includes('medieval') ||
+    t.includes('modern')
+  ) {
     return 'history';
   }
 
   // Polity
-  if (t.includes('polity') || t.includes('constitution') || t.includes('parliament') || t.includes('judiciary') || t.includes('rights') || t.includes('executive') || t.includes('panchayat')) {
+  if (
+    t.includes('polity') ||
+    t.includes('constitution') ||
+    t.includes('parliament') ||
+    t.includes('judiciary') ||
+    t.includes('supreme court') ||
+    t.includes('high court') ||
+    t.includes('rights') ||
+    t.includes('dpsp') ||
+    t.includes('directive principles') ||
+    t.includes('fundamental duty') ||
+    t.includes('fundamental duties') ||
+    t.includes('amendment') ||
+    t.includes('article') ||
+    t.includes('preamble') ||
+    t.includes('executive') ||
+    t.includes('panchayat') ||
+    t.includes('municipality') ||
+    t.includes('president') ||
+    t.includes('governor') ||
+    t.includes('election commission') ||
+    t.includes('cag') ||
+    t.includes('schedule')
+  ) {
     return 'polity';
   }
 
   // Geography
-  if (t.includes('geography') || t.includes('drainage') || t.includes('river') || t.includes('physiography') || t.includes('climate') || t.includes('soil') || t.includes('park') || t.includes('environment')) {
+  if (
+    t.includes('geography') ||
+    t.includes('drainage') ||
+    t.includes('river') ||
+    t.includes('physiography') ||
+    t.includes('climate') ||
+    t.includes('soil') ||
+    t.includes('national park') ||
+    t.includes('wildlife') ||
+    t.includes('sanctuary') ||
+    t.includes('biosphere') ||
+    t.includes('environment') ||
+    t.includes('mountain') ||
+    t.includes('plateau') ||
+    t.includes('monsoon') ||
+    t.includes('ocean') ||
+    t.includes('lake') ||
+    t.includes('pass') ||
+    t.includes('strait') ||
+    t.includes('forest') ||
+    t.includes('minerals') ||
+    t.includes('agriculture') ||
+    t.includes('park')
+  ) {
     return 'geography';
   }
 
   // Economics
-  if (t.includes('economic') || t.includes('banking') || t.includes('monetary') || t.includes('fiscal') || t.includes('budget') || t.includes('scheme') || t.includes('market') || t.includes('gdp')) {
+  if (
+    t.includes('economic') ||
+    t.includes('banking') ||
+    t.includes('monetary') ||
+    t.includes('fiscal') ||
+    t.includes('budget') ||
+    t.includes('scheme') ||
+    t.includes('market') ||
+    t.includes('gdp') ||
+    t.includes('inflation') ||
+    t.includes('rbi') ||
+    t.includes('tax') ||
+    t.includes('national income') ||
+    t.includes('five year plan') ||
+    t.includes('niti aayog') ||
+    t.includes('trade') ||
+    t.includes('poverty') ||
+    t.includes('unemployment')
+  ) {
     return 'economics';
   }
 
   // Science
-  if (t.includes('biology') || t.includes('chemistry') || t.includes('physics') || t.includes('science') || t.includes('disease') || t.includes('acid') || t.includes('motion')) {
+  if (
+    t.includes('biology') ||
+    t.includes('chemistry') ||
+    t.includes('physics') ||
+    t.includes('science') ||
+    t.includes('disease') ||
+    t.includes('acid') ||
+    t.includes('motion') ||
+    t.includes('cell') ||
+    t.includes('human body') ||
+    t.includes('vitamin') ||
+    t.includes('nutrition') ||
+    t.includes('optics') ||
+    t.includes('light') ||
+    t.includes('electricity') ||
+    t.includes('magnetism') ||
+    t.includes('wave') ||
+    t.includes('periodic table') ||
+    t.includes('metal') ||
+    t.includes('chemical') ||
+    t.includes('reaction') ||
+    t.includes('botany') ||
+    t.includes('zoology')
+  ) {
     return 'science';
   }
 

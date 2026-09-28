@@ -4997,6 +4997,42 @@ function getEnglishCatalog() {
       topics: ayushTopics
     });
   }
+  const grammarDir = path2.join(CHAPTER_BANK_DIR2, "english", "grammar");
+  if (fs2.existsSync(grammarDir)) {
+    const files = fs2.readdirSync(grammarDir).filter((f) => f.endsWith(".json")).sort();
+    const sets = [];
+    for (const file of files) {
+      try {
+        const filePath = path2.join(grammarDir, file);
+        const content = JSON.parse(fs2.readFileSync(filePath, "utf8"));
+        const qs = content.questions || [];
+        const chNum = content.chapter_num || file.replace(/[^0-9]/g, "") || "1";
+        sets.push({
+          id: `g_${chNum}`,
+          code: String(chNum),
+          title: content.chapter_title ? `${content.chapter_num || ""}. ${content.chapter_title}` : `Chapter ${chNum}`,
+          filePath,
+          totalQuestions: qs.length
+        });
+      } catch {
+      }
+    }
+    if (sets.length > 0) {
+      sections.push({
+        id: "grammar",
+        code: "gram",
+        title: "\u{1F3AF} Grammar (Pinnacle 60 Days)",
+        topics: [
+          {
+            id: "grammar_chapters",
+            code: "gch",
+            title: "Grammar Topics",
+            sets
+          }
+        ]
+      });
+    }
+  }
   return sections;
 }
 function getMathCatalog() {
