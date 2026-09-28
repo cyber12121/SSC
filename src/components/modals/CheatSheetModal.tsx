@@ -10,7 +10,9 @@ import {
   XCircle,
   Lightbulb,
   ArrowRight,
-  Filter
+  Filter,
+  Maximize2,
+  Minimize2
 } from 'lucide-react';
 import { Chapter } from '../../types';
 import { ChapterBookTheoryViewer } from './ChapterBookTheoryViewer';
@@ -31,6 +33,7 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'all' | 'traps' | 'formulas'>('all');
   const [viewMode, setViewMode] = useState<'cheat_sheet' | 'full_theory'>('cheat_sheet');
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const cheatSheet = chapter?.cheat_sheet;
   const rules = cheatSheet?.rules || [];
@@ -79,7 +82,7 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-hidden">
+      <div className={`fixed inset-0 z-50 flex items-center justify-center overflow-hidden transition-all ${isFullscreen ? 'p-0' : 'p-2 sm:p-5'}`}>
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -91,14 +94,18 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
 
         {/* Modal Container */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 15 }}
+          initial={{ opacity: 0, scale: 0.98, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.96, y: 15 }}
-          transition={{ duration: 0.2 }}
-          className="relative flex flex-col w-full max-w-4xl max-h-[92vh] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10"
+          exit={{ opacity: 0, scale: 0.98, y: 10 }}
+          transition={{ duration: 0.15 }}
+          className={`relative flex flex-col bg-white shadow-2xl border border-slate-200 overflow-hidden z-10 transition-all ${
+            isFullscreen
+              ? 'w-screen h-screen max-w-none max-h-none rounded-none'
+              : 'w-full max-w-5xl max-h-[94vh] rounded-2xl'
+          }`}
         >
           {/* Header */}
-          <div className="relative px-6 py-5 border-b border-slate-100 bg-gradient-to-r from-slate-50 via-indigo-50/30 to-slate-50">
+          <div className="relative px-5 py-4 sm:px-6 sm:py-5 border-b border-slate-100 bg-gradient-to-r from-slate-50 via-indigo-50/30 to-slate-50">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-3.5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-md shadow-indigo-100">
@@ -125,13 +132,22 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
                 </div>
               </div>
 
-              <button
-                onClick={onClose}
-                className="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer"
-                title="Close Cheat Sheet"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-1 shrink-0">
+                <button
+                  onClick={() => setIsFullscreen(!isFullscreen)}
+                  className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+                  title={isFullscreen ? 'Exit Full Screen' : 'Full Screen'}
+                >
+                  {isFullscreen ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
+                </button>
+                <button
+                  onClick={onClose}
+                  className="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer"
+                  title="Close Cheat Sheet"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {/* View Mode Toggle: Formula Sheet vs Full Theory As in Book */}
