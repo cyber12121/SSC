@@ -183,7 +183,7 @@
     "subject": "Quantitative Aptitude",
     "section": "Quantitative Aptitude",
     "questionNumber": "Question 10",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "Unattempted",
     "correctOption": "D",
     "userTime": "01:50",
@@ -209,7 +209,8 @@
       "topic": "Percentage",
       "subtopic": "Percentage Decrease / Base Value Calculation",
       "conceptTested": "Finding the original base value given a percentage decrease amount: Base = (Value × 100) / Percentage"
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 1",
@@ -253,7 +254,7 @@
     "subject": "Quantitative Aptitude",
     "section": "Quantitative Aptitude",
     "questionNumber": "Question 12",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "Unattempted",
     "correctOption": "B",
     "userTime": "00:43",
@@ -279,7 +280,8 @@
       "topic": "Average",
       "subtopic": "Average - Addition of New Observation",
       "conceptTested": "Deviation method for included items: Required Value = Old Average + (Total New Count \\u00d7 Change in Average)"
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 1",
@@ -323,7 +325,7 @@
     "subject": "Quantitative Aptitude",
     "section": "Quantitative Aptitude",
     "questionNumber": "Question 14",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "Unattempted",
     "correctOption": "D",
     "userTime": "01:16",
@@ -349,7 +351,8 @@
       "topic": "Time & Work",
       "subtopic": "Time & Work - OR / AND Efficiency Rule",
       "conceptTested": "Using equivalent efficiencies from OR conditions to solve combined AND workforce problems: Time = Total Work / Combined Efficiency"
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 1",

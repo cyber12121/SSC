@@ -6,7 +6,7 @@
     "subject": "English Comprehension",
     "section": "English Comprehension",
     "questionNumber": "Question 2",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "N/A",
     "correctOption": "A",
     "userTime": "00:37",
@@ -33,7 +33,8 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of simple past passive interrogative to active voice."
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "CGL 20/09/2025 Shift-3 (English)",
@@ -42,7 +43,7 @@
     "subject": "English Comprehension",
     "section": "English Comprehension",
     "questionNumber": "Question 4",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "N/A",
     "correctOption": "C",
     "userTime": "01:33",
@@ -69,7 +70,8 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of modal perfect passive to active voice with an implied subject."
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "CGL 21/09/2025 Shift-2 (English)",
@@ -78,7 +80,7 @@
     "subject": "English Comprehension",
     "section": "English Comprehension",
     "questionNumber": "Question 8",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "N/A",
     "correctOption": "B",
     "userTime": "00:41",
@@ -105,7 +107,8 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of past perfect passive to active voice."
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "CGL 21/09/2025 Shift-3 (English)",
@@ -330,7 +333,7 @@
     "subject": "English Comprehension",
     "section": "English Comprehension",
     "questionNumber": "Question 19",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "N/A",
     "correctOption": "B",
     "userTime": "00:30",
@@ -357,7 +360,8 @@
       "topic": "Active & Passive Voice",
       "subtopic": "Active/Passive - Future Perfect Tense",
       "conceptTested": "Passive voice for future perfect tense (will have + past participle) requires 'will have been + past participle'."
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "CGL 24/09/2025 Shift-1 (English)",
@@ -366,7 +370,7 @@
     "subject": "English Comprehension",
     "section": "English Comprehension",
     "questionNumber": "Question 23",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "N/A",
     "correctOption": "C",
     "userTime": "00:33",
@@ -393,6 +397,7 @@
       "topic": "English Comprehension",
       "subtopic": "Active & Passive Voice - Modal Continuous",
       "conceptTested": "Conversion of past modal continuous active voice (Subject + modal + have + been + verb-ing + object) to passive voice (Object + modal + have + been + being + V3 + by subject)."
-    }
+    },
+    "isSlow": false
   }
 ]

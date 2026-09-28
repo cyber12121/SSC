@@ -405,6 +405,14 @@ export function getMockQuestionStatus(q: any): MockQuestionErrorStatus {
     ''
   ).trim().toLowerCase();
 
+  const rawTarget = String(
+    q.answer ??
+    q.correctOption ??
+    q.correct_option ??
+    q.correctAnswer ??
+    ''
+  ).trim().toLowerCase();
+
   // 1. Explicit Unattempted / Skipped (MUST BE CHECKED FIRST)
   if (
     rawStatus.includes('unattempt') ||
@@ -415,44 +423,71 @@ export function getMockQuestionStatus(q: any): MockQuestionErrorStatus {
     rawUser === 'skipped' ||
     rawUser === 'not attempted'
   ) {
+    // If explicitly marked correct, return correct
+    if (q.isCorrect === true || q.is_correct === true) return 'correct';
     return 'unattempted';
   }
 
-  // 2. Slow / Speed Issue (Correct, but took too long)
-  if (
-    rawStatus.includes('slow') ||
-    rawStatus.includes('speed') ||
-    q.isSlow === true
-  ) {
-    return 'slow';
-  }
+  // Helper to normalize option key (e.g. "1" -> "a", "option a" -> "a")
+  const normKey = (val: string) => {
+    const s = val.trim().toLowerCase();
+    if (s === '1' || s === 'a' || s === 'option a' || s === 'opt a') return 'a';
+    if (s === '2' || s === 'b' || s === 'option b' || s === 'opt b') return 'b';
+    if (s === '3' || s === 'c' || s === 'option c' || s === 'opt c') return 'c';
+    if (s === '4' || s === 'd' || s === 'option d' || s === 'opt d') return 'd';
+    return s;
+  };
 
-  // 3. Correct (and not incorrect)
-  if (
-    ((rawStatus.includes('correct') && !rawStatus.includes('incorrect'))) ||
-    rawStatus === 'right' ||
-    q.isCorrect === true ||
-    q.is_correct === true
-  ) {
-    return 'correct';
-  }
+  const normUser = normKey(rawUser);
+  const normTarget = normKey(rawTarget);
 
-  // 4. Incorrect / Wrong
+  const isExplicitWrongAnswer = Boolean(
+    normUser &&
+    normTarget &&
+    !['unattempted', 'skipped', 'not attempted', 'left', 'n/a'].includes(normUser) &&
+    normUser !== normTarget
+  );
+
+  // 2. Incorrect / Wrong (MUST BE CHECKED BEFORE SLOW)
+  // An incorrect question must NEVER be marked as 'slow' or 'speed_issue'
   if (
+    isExplicitWrongAnswer ||
     rawStatus.includes('wrong') ||
     rawStatus.includes('incorrect') ||
-    (q.isCorrect === false && rawUser && rawUser !== 'unattempted') ||
-    (q.is_correct === false && rawUser && rawUser !== 'unattempted')
+    rawStatus.includes('fail') ||
+    (q.isCorrect === false && normUser && normUser !== 'unattempted') ||
+    (q.is_correct === false && normUser && normUser !== 'unattempted')
   ) {
     return 'wrong';
   }
 
-  // 5. If no user answer provided or answer is blank, treat as unattempted
-  if (!rawUser || rawUser === 'unattempted' || rawUser === 'skipped') {
-    return 'unattempted';
+  const isConfirmedCorrect = Boolean(
+    (rawStatus.includes('correct') && !rawStatus.includes('incorrect')) ||
+    rawStatus === 'right' ||
+    q.isCorrect === true ||
+    q.is_correct === true ||
+    (normUser && normTarget && normUser === normTarget)
+  );
+
+  // 3. Slow / Speed Issue (ONLY if confirmed correct, but took too long)
+  if (
+    (rawStatus.includes('slow') || rawStatus.includes('speed') || q.isSlow === true) &&
+    isConfirmedCorrect
+  ) {
+    return 'slow';
   }
 
-  // Final fallback: no user answer + no explicit status → treat as unattempted (not wrong)
+  // 4. Correct (and not slow)
+  if (isConfirmedCorrect) {
+    return 'correct';
+  }
+
+  // 5. If user answer provided and didn't match, treat as wrong
+  if (normUser && !['unattempted', 'skipped', 'not attempted', 'left', 'n/a'].includes(normUser)) {
+    return 'wrong';
+  }
+
+  // Final fallback: unattempted
   return 'unattempted';
 }
 
@@ -1498,7 +1533,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           }
         }
 
-        const solution = (item.solution || item.explanation || item.sol || '').trim();
+        const solution = (item.solution || item.explanation || item.sol || item.detailedSolution || item.detailed_solution || item.question?.solution || '').trim();
         const rawT = item.topic || item.tags?.topic;
         const topicText = rawT ? normalizeTopicTitle(rawT) : 'General';
 
@@ -1563,11 +1598,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             let wrongAssigned = 0;
             let correctAssigned = 0;
 
-            // 1. Assign wrong/slow to questions with RCA tags first
+            // 1. Assign wrong to questions with RCA tags first (these are candidate mistakes)
             for (let i = start; i < end; i++) {
               const qRca = formattedQuestions[i]?.rca;
               if (qRca) {
-                inferredStatusMap[i] = qRca.tag === 'T' ? 'slow' : 'wrong';
+                inferredStatusMap[i] = 'wrong';
                 wrongAssigned++;
               }
             }

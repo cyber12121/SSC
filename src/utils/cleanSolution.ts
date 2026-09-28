@@ -142,17 +142,40 @@ export function cleanSolutionText(sol: string = ''): string {
  */
 export function extractSolutionLanguage(
   sol: string = '',
-  language: 'English' | string = 'English'
+  language: 'English' | 'Hindi' | 'Bilingual' | string = 'English'
 ): string {
   if (!sol) return '';
   const cleaned = cleanSolutionText(sol);
 
-  // Always remove any Hindi explanation blocks and trailing Devanagari sections
+  const normLang = String(language || 'English').toLowerCase();
+
+  // If Hindi requested, try to extract Hindi section
+  if (normLang.includes('hindi') || normLang.includes('हिंदी')) {
+    const hindiMatch = cleaned.match(/📖\s*हिंदी\s*स्पष्टीकरण\s*:([\s\S]*)/i);
+    if (hindiMatch && hindiMatch[1].trim()) {
+      return hindiMatch[1].trim();
+    }
+    // If no explicit Hindi block, return cleaned solution so content isn't lost
+    return cleaned;
+  }
+
+  // If Bilingual requested, keep both
+  if (normLang.includes('bilingual')) {
+    return cleaned;
+  }
+
+  // Default: English
+  // Strip trailing Hindi explanation block if present
   const hindiSplitRegex = /📖\s*हिंदी\s*स्पष्टीकरण\s*:[\s\S]*/i;
   let englishOnly = cleaned.replace(hindiSplitRegex, '').trim();
 
   // Strip standalone "📖 English Explanation:" prefix for clean presentation
   englishOnly = englishOnly.replace(/^📖\s*English\s*Explanation\s*:\s*/i, '').trim();
+
+  // Fallback: if stripping left empty string, return cleaned so solution is never lost
+  if (!englishOnly && cleaned) {
+    return cleaned;
+  }
 
   return englishOnly;
 }

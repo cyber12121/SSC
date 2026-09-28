@@ -6,7 +6,7 @@
     "subject": "Quantitative Aptitude",
     "section": "Quantitative Aptitude",
     "questionNumber": "Question 1",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "Unattempted",
     "correctOption": "A",
     "userTime": "00:58",
@@ -32,7 +32,8 @@
       "topic": "Algebra",
       "subtopic": "Algebraic Identities (x + 1/x)",
       "conceptTested": "Finding the value of x^3 + 1/x^3 using the algebraic identity k^3 - 3k when x + 1/x = k."
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 11",
@@ -146,7 +147,7 @@
     "subject": "Quantitative Aptitude",
     "section": "Quantitative Aptitude",
     "questionNumber": "Question 6",
-    "status": "Correct (Slow)",
+    "status": "Unattempted",
     "chosenOption": "Unattempted",
     "correctOption": "A",
     "userTime": "01:28",
@@ -172,7 +173,8 @@
       "topic": "Mensuration 2D",
       "subtopic": "Rectangle and Square",
       "conceptTested": "Relation between diagonal of a rectangle and side of a square, combined with algebraic identity (L + B)^2 = L^2 + B^2 + 2LB."
-    }
+    },
+    "isSlow": false
   },
   {
     "testName": "Quantitative Aptitude Sectional Test - 11",

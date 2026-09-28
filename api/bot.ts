@@ -6314,7 +6314,7 @@ The Correct sentence- He was determined to both beat the record and win the crow
         q_num: 17,
         testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Incorrect",
         chosenOption: "A",
         correctOption: "B",
         userTime: "00:46",
@@ -6338,7 +6338,8 @@ The Correct sentence- He was determined to both beat the record and win the crow
           difficulty: "medium"
         },
         mockId: "mock_1789478579858_bz3ds",
-        testId: "mock_1789478579858_bz3ds"
+        testId: "mock_1789478579858_bz3ds",
+        isSlow: false
       },
       {
         id: "engl_2eb2b7f97b",
@@ -8769,7 +8770,7 @@ The final sentence: The creative team was thrilled when their latest viral reel 
         q_num: 84,
         testName: "SSC CGL Tier I: Full Test - 7",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Incorrect",
         chosenOption: "D",
         correctOption: "C",
         userTime: "00:28",
@@ -8793,7 +8794,8 @@ The final sentence: The creative team was thrilled when their latest viral reel 
           difficulty: "medium"
         },
         mockId: "mock_1789515022905_egyvl",
-        testId: "mock_1789515022905_egyvl"
+        testId: "mock_1789515022905_egyvl",
+        isSlow: false
       },
       {
         id: "engl_48ea449cae",
@@ -9578,7 +9580,7 @@ Ans: Authorities are expected to implement new protocols by fiscal year-end.`,
         testId: "mock_1789684399252_0icxt",
         testName: "CGL 20/09/2025 Shift-2 (English)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "A",
         userTime: "00:37",
@@ -9605,7 +9607,8 @@ Option 1 is correct. Option 2 remains passive. Option 3 changes the tense to pas
           subtopic: "Active & Passive Voice",
           conceptTested: "Conversion of simple past passive interrogative to active voice.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "engl_48ec1c1d35",
@@ -9614,7 +9617,7 @@ Option 1 is correct. Option 2 remains passive. Option 3 changes the tense to pas
         testId: "mock_1789684399252_0icxt",
         testName: "CGL 20/09/2025 Shift-3 (English)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "C",
         userTime: "01:33",
@@ -9641,7 +9644,8 @@ Option 1 changes the modal and meaning. Option 2 remains passive. Option 4 remai
           subtopic: "Active & Passive Voice",
           conceptTested: "Conversion of modal perfect passive to active voice with an implied subject.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "engl_649f138c2d",
@@ -9650,7 +9654,7 @@ Option 1 changes the modal and meaning. Option 2 remains passive. Option 4 remai
         testId: "mock_1789684399252_0icxt",
         testName: "CGL 21/09/2025 Shift-2 (English)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "B",
         userTime: "00:41",
@@ -9677,7 +9681,8 @@ Option 1 uses the simple present. Option 3 is a passive construction. Option 4 u
           subtopic: "Active & Passive Voice",
           conceptTested: "Conversion of past perfect passive to active voice.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "engl_89a64e99d0",
@@ -9910,7 +9915,7 @@ Correct Answer is Option C because it correctly introduces a logical subject and
         testId: "mock_1789684399252_0icxt",
         testName: "CGL 23/09/2025 Shift-2 (English)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "B",
         userTime: "00:30",
@@ -9939,7 +9944,8 @@ Correct Answer is Option B because it correctly uses the future perfect passive.
           subtopic: "Active/Passive - Future Perfect Tense",
           conceptTested: "Passive voice for future perfect tense (will have + past participle) requires 'will have been + past participle'.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "engl_75102fddba",
@@ -9948,7 +9954,7 @@ Correct Answer is Option B because it correctly uses the future perfect passive.
         testId: "mock_1789684399252_0icxt",
         testName: "CGL 24/09/2025 Shift-1 (English)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "C",
         userTime: "00:33",
@@ -9977,7 +9983,8 @@ Correct Answer is Option C because it correctly uses the past modal continuous p
           subtopic: "Active & Passive Voice - Modal Continuous",
           conceptTested: "Conversion of past modal continuous active voice (Subject + modal + have + been + verb-ing + object) to passive voice (Object + modal + have + been + being + V3 + by subject).",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "engl_c700d4b880",
@@ -11482,7 +11489,7 @@ var mathematics_default = [
         q_num: 9,
         testName: "SSC CGL 2026: Officer\u2019s Friday - Mega Live Test",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Incorrect",
         chosenOption: "B",
         correctOption: "D",
         userTime: "00:31",
@@ -11506,7 +11513,8 @@ var mathematics_default = [
           difficulty: "medium"
         },
         mockId: "mock_1789478579858_bz3ds",
-        testId: "mock_1789478579858_bz3ds"
+        testId: "mock_1789478579858_bz3ds",
+        isSlow: false
       },
       {
         id: "math_a648851dab",
@@ -13903,7 +13911,7 @@ var mathematics_default = [
         testId: "mock_1789628610492_0h079",
         testName: "Quantitative Aptitude Sectional Test - 11",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "Unattempted",
         correctOption: "A",
         userTime: "00:58",
@@ -13925,7 +13933,8 @@ var mathematics_default = [
           subtopic: "Algebraic Identities (x + 1/x)",
           conceptTested: "Finding the value of x^3 + 1/x^3 using the algebraic identity k^3 - 3k when x + 1/x = k.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_ba9b23d7c0",
@@ -13934,7 +13943,7 @@ var mathematics_default = [
         testId: "mock_1789628610492_0h079",
         testName: "Quantitative Aptitude Sectional Test - 11",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "Unattempted",
         correctOption: "A",
         userTime: "01:28",
@@ -13956,7 +13965,8 @@ var mathematics_default = [
           subtopic: "Rectangle and Square",
           conceptTested: "Relation between diagonal of a rectangle and side of a square, combined with algebraic identity (L + B)^2 = L^2 + B^2 + 2LB.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_9f2da87d9a",
@@ -15539,7 +15549,7 @@ var mathematics_default = [
         testId: "mock_1789629457851_m8crd",
         testName: "Quantitative Aptitude Sectional Test - 1",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "Unattempted",
         correctOption: "D",
         userTime: "01:50",
@@ -15561,7 +15571,8 @@ var mathematics_default = [
           subtopic: "Percentage Decrease / Base Value Calculation",
           conceptTested: "Finding the original base value given a percentage decrease amount: Base = (Value \xD7 100) / Percentage",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_1007c03c48",
@@ -15570,7 +15581,7 @@ var mathematics_default = [
         testId: "mock_1789629457851_m8crd",
         testName: "Quantitative Aptitude Sectional Test - 1",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "Unattempted",
         correctOption: "B",
         userTime: "00:43",
@@ -15592,7 +15603,8 @@ var mathematics_default = [
           subtopic: "Average - Addition of New Observation",
           conceptTested: "Deviation method for included items: Required Value = Old Average + (Total New Count \\u00d7 Change in Average)",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_2d68963672",
@@ -15601,7 +15613,7 @@ var mathematics_default = [
         testId: "mock_1789629457851_m8crd",
         testName: "Quantitative Aptitude Sectional Test - 1",
         platform: "Testbook",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "Unattempted",
         correctOption: "D",
         userTime: "01:16",
@@ -15623,7 +15635,8 @@ var mathematics_default = [
           subtopic: "Time & Work - OR / AND Efficiency Rule",
           conceptTested: "Using equivalent efficiencies from OR conditions to solve combined AND workforce problems: Time = Total Work / Combined Efficiency",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_2329a40f88",
@@ -15953,7 +15966,7 @@ var mathematics_default = [
         testId: "mock_1789654448115_220yx",
         testName: "CHSL 12/11/2025 Shift-3 (Quant)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "A",
         userTime: "00:46",
@@ -15976,7 +15989,8 @@ var mathematics_default = [
           subtopic: "Numerical Simplification",
           conceptTested: "Arithmetic calculation and equality of numerical expressions.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_4729bef72b",
@@ -16017,7 +16031,7 @@ var mathematics_default = [
         testId: "mock_1789654448115_220yx",
         testName: "CHSL 14/11/2025 Shift-3 (Quant)",
         platform: "MockMatrix",
-        status: "Correct (Slow)",
+        status: "Unattempted",
         chosenOption: "N/A",
         correctOption: "A",
         userTime: "01:16",
@@ -16040,7 +16054,8 @@ var mathematics_default = [
           subtopic: "Conditional Algebraic Identities ($x^3+y^3+z^3 = 3xyz$)",
           conceptTested: "If $x + y + z = 0$, then $x^3 + y^3 + z^3 = 3xyz$, and factoring difference of squares.",
           difficulty: "hard"
-        }
+        },
+        isSlow: false
       },
       {
         id: "math_eed53dfe86",

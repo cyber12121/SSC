@@ -62,7 +62,11 @@ interface MockChapterErrorsModalProps {
   ) => void;
 }
 
-export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
+interface MockChapterErrorsModalDialogProps extends Omit<MockChapterErrorsModalProps, 'data'> {
+  data: MockChapterModalData;
+}
+
+const MockChapterErrorsModalDialog: React.FC<MockChapterErrorsModalDialogProps> = ({
   data,
   modalErrorFilter,
   setModalErrorFilter,
@@ -98,8 +102,6 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
       setShowSillyRevisionList(false);
     }
   }, [modalErrorFilter]);
-
-  if (!data) return null;
 
   // Resolve question's effective RCA with local override
   const getQuestionEffectiveRca = (q: any): RCAClassification | undefined => {
@@ -1256,4 +1258,9 @@ export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = ({
       </div>
     </AnimatePresence>
   );
+};
+
+export const MockChapterErrorsModal: React.FC<MockChapterErrorsModalProps> = (props) => {
+  if (!props.data) return null;
+  return <MockChapterErrorsModalDialog {...props} data={props.data} />;
 };

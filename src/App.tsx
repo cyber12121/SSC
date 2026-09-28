@@ -128,6 +128,9 @@ export default function App() {
   useEffect(() => {
     const handleUrlChange = () => {
       try {
+        if (document.fullscreenElement && document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        }
         const params = new URLSearchParams(window.location.search);
         const v = params.get('view');
         if (v === 'botErrors' || params.has('syncQ') || params.has('syncBatch')) {
@@ -915,7 +918,7 @@ export default function App() {
       next.add(qTextClean);
       if (question.id) next.add(question.id);
       try {
-        localStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(next)));
+        safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(next)));
       } catch { }
       return next;
     });
@@ -1301,6 +1304,7 @@ export default function App() {
               subject: d.question.subject || fullResult.subject || '',
               section: d.question.section || '',
               topic: d.question.topic || d.question.tags?.topic || '',
+              solution: d.question.solution || (d.question as any).explanation || (d as any).solution || '',
               rca: d.rca || d.question?.rca || null,
             } : null
           };
@@ -1379,18 +1383,19 @@ export default function App() {
       }
     }
 
-    // Record wrong answers to local RCA store & live mistakes notebook (/api/mistakes)
+    // Record wrong & unattempted answers to local RCA store & live mistakes notebook (/api/mistakes)
     try {
-      const wrongList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question && d.selectedAnswer);
-      if (wrongList.length > 0) {
+      const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
+      if (errorList.length > 0) {
         try {
           const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
           const rcaStore = rcaRaw ? JSON.parse(rcaRaw) : {};
-          for (const item of wrongList) {
+          for (const item of errorList) {
             if (!item.question) continue;
             const q = item.question;
             const qId = q.id || `quiz_${savedResult.id}_${item.q_num}`;
             const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
+            const hasAnswer = Boolean(item.selectedAnswer && String(item.selectedAnswer).trim() !== '');
             rcaStore[qId] = {
               id: qId,
               q_num: item.q_num,
@@ -1402,12 +1407,12 @@ export default function App() {
               options: q.options,
               answer: q.answer,
               solution: q.solution || (q as any).explanation || '',
-              userAnswer: item.selectedAnswer,
-              selectedAnswer: item.selectedAnswer,
-              chosenOption: item.selectedAnswer,
+              userAnswer: item.selectedAnswer || '',
+              selectedAnswer: item.selectedAnswer || '',
+              chosenOption: item.selectedAnswer || '',
               isCorrect: false,
-              status: 'Incorrect',
-              errorType: 'wrong',
+              status: hasAnswer ? 'Incorrect' : 'Unattempted',
+              errorType: hasAnswer ? 'wrong' : 'unattempted',
               isFromMock: isMockTest,
               classifiedAt: new Date().toISOString()
             };
@@ -1421,7 +1426,7 @@ export default function App() {
         }
       }
 
-      for (const item of wrongList) {
+      for (const item of errorList) {
         if (!item.question) continue;
         fetch('/api/mistakes', {
           method: 'POST',
@@ -1490,7 +1495,7 @@ export default function App() {
     // 1. Immediately record cleared timestamp in localStorage and clear local cache
     const nowIso = new Date().toISOString();
     try {
-      localStorage.setItem('activity_cleared_at_' + user.uid, nowIso);
+      safeStorage.setItem('activity_cleared_at_' + user.uid, nowIso);
       safeStorage.removeItem('cgl_user_results_cache_' + user.uid);
       safeStorage.removeItem('offline_results_' + user.uid);
     } catch { }
@@ -1521,25 +1526,116 @@ export default function App() {
   };
 
   const openReview = (result: QuizResult, backTo: 'home' | 'dashboard' = 'dashboard') => {
-    let resultToReview = result;
-    if (!result.questionDetails || result.questionDetails.length === 0) {
+    let resultToReview: QuizResult = { ...result };
+
+    // 1. If questionDetails is missing or empty, attempt to load from cached mock questions
+    if (!resultToReview.questionDetails || resultToReview.questionDetails.length === 0) {
+      if (result.id) {
+        try {
+          const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
+          if (cachedRaw) {
+            const list = JSON.parse(cachedRaw);
+            if (Array.isArray(list) && list.length > 0) {
+              resultToReview.questionDetails = list.map((q: any, idx: number) => ({
+                q_num: q.q_num || idx + 1,
+                question: q,
+                selectedAnswer: q.userAnswer || q.selectedAnswer || q.chosenOption || '',
+                isCorrect: Boolean(q.isCorrect),
+                timeSpent: q.timeSpent || q.userTime || 0,
+                rca: q.rca
+              }));
+            }
+          }
+        } catch {}
+      }
+    }
+
+    // 2. If still missing, attempt to find matching chapter (including stripped set / drill suffixes)
+    if (!resultToReview.questionDetails || resultToReview.questionDetails.length === 0) {
       const primaryData = result.category === 'mockErrors' ? mockData : bankData;
       const secondaryData = result.category === 'mockErrors' ? bankData : mockData;
-      const chapter = (primaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title)
-        || (secondaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title);
+      const cleanTitle = (result.chapter_title || '')
+        .replace(/\s*•\s*Set\s*\d+.*$/i, '')
+        .replace(/\s*•\s*\[\w+\]\s*.*$/i, '')
+        .trim();
+      const chapter = (primaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title || (cleanTitle && ch.chapter_title === cleanTitle))
+        || (secondaryData[result.subject] || []).find(ch => ch.chapter_title === result.chapter_title || (cleanTitle && ch.chapter_title === cleanTitle));
       if (chapter && chapter.questions) {
         resultToReview = {
-          ...result,
-          questionDetails: chapter.questions.map(q => ({
-            q_num: q.q_num,        // required by QuestionProgress
+          ...resultToReview,
+          questionDetails: chapter.questions.map((q, idx) => ({
+            q_num: q.q_num || idx + 1,
             question: q,
-            selectedAnswer: '',    // required by QuestionProgress
+            selectedAnswer: '',
             isCorrect: false,
             timeSpent: 0
           }))
         };
       }
     }
+
+    // 3. Guarantee every questionDetail has a well-formed Question object and rehydrate missing solutions
+    if (resultToReview.questionDetails && resultToReview.questionDetails.length > 0) {
+      let globalRcaMap: Record<string, any> = {};
+      try {
+        const rawStore = safeStorage.getItem('cgl_rca_global_store');
+        if (rawStore) globalRcaMap = JSON.parse(rawStore);
+      } catch {}
+
+      let cachedMockQuestions: any[] = [];
+      if (result.id) {
+        try {
+          const rawCached = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
+          if (rawCached) cachedMockQuestions = JSON.parse(rawCached);
+        } catch {}
+      }
+
+      resultToReview.questionDetails = resultToReview.questionDetails.map((qd, idx) => {
+        let q = qd.question;
+        const qdAny = qd as any;
+        if (!q || !q.question) {
+          q = {
+            id: qdAny.id || (result.id ? `${result.id}_${idx + 1}` : `q_${idx + 1}`),
+            q_num: qd.q_num || idx + 1,
+            question: qdAny.questionText || qdAny.question || 'Question text unavailable',
+            options: qdAny.options || {},
+            answer: qdAny.answer || qdAny.correctAnswer || 'a',
+            solution: qdAny.solution || (qdAny.question && qdAny.question.solution) || '',
+            subject: qdAny.subject || result.subject || 'General Awareness',
+            topic: qdAny.topic || result.chapter_title || 'Review',
+            rca: qd.rca || qdAny.rca || null
+          };
+        }
+
+        // Rehydrate solution if missing
+        let sol = q.solution || (q as any).explanation || (q as any).sol || (q as any).detailedSolution || qdAny.solution || '';
+        if (!sol) {
+          const qId = q.id || qdAny.id;
+          const qText = (q.question || '').trim().toLowerCase();
+          const rcaMatch = (qId && globalRcaMap[qId]) || (qText && globalRcaMap[qText]);
+          if (rcaMatch && (rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol)) {
+            sol = rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol;
+          } else if (Array.isArray(cachedMockQuestions) && cachedMockQuestions[idx]) {
+            const cachedItem = cachedMockQuestions[idx];
+            sol = cachedItem?.solution || cachedItem?.explanation || cachedItem?.sol || cachedItem?.detailedSolution || '';
+          }
+        }
+
+        if (sol && !q.solution) {
+          q = { ...q, solution: sol };
+        }
+
+        return {
+          ...qd,
+          q_num: qd.q_num || idx + 1,
+          question: q,
+          selectedAnswer: qd.selectedAnswer || (qd as any).userAnswer || '',
+          isCorrect: Boolean(qd.isCorrect),
+          timeSpent: qd.timeSpent || 0
+        };
+      });
+    }
+
     setReviewResult(resultToReview);
     setReviewBackTo(backTo);
     setView('review');
@@ -1562,16 +1658,44 @@ export default function App() {
       totalTime: 0,
       completedAt: new Date().toISOString(),
       questionDetails: questions.map((q, idx) => {
-        const rawUserAns = (q as any).userAnswer || (q as any).chosenOption;
-        const isCorrect = q.status === 'correct' || (rawUserAns && rawUserAns.toLowerCase() === q.answer?.toLowerCase());
-        const isWrong = q.status === 'wrong' || q.errorType === 'wrong' || (rawUserAns && !isCorrect);
-        const isSlow = q.status === 'slow' || q.isSlow || q.errorType === 'speed_issue';
+        const rawUserAns = String((q as any).userAnswer || (q as any).chosenOption || (q as any).selectedAnswer || '').trim().toLowerCase();
+        const rawTargetAns = String(q.answer || (q as any).correctOption || (q as any).correctAnswer || '').trim().toLowerCase();
+        const normUser = rawUserAns === '1' ? 'a' : rawUserAns === '2' ? 'b' : rawUserAns === '3' ? 'c' : rawUserAns === '4' ? 'd' : rawUserAns;
+        const normTarget = rawTargetAns === '1' ? 'a' : rawTargetAns === '2' ? 'b' : rawTargetAns === '3' ? 'c' : rawTargetAns === '4' ? 'd' : rawTargetAns;
+
+        const isExplicitWrongAnswer = Boolean(
+          normUser &&
+          normTarget &&
+          !['unattempted', 'skipped', 'not attempted', 'left', 'n/a'].includes(normUser) &&
+          normUser !== normTarget
+        );
+
+        const isWrong =
+          isExplicitWrongAnswer ||
+          q.status === 'wrong' ||
+          q.status === 'Incorrect' ||
+          q.errorType === 'wrong' ||
+          (normUser && (q as any).isCorrect === false);
+
+        const isConfirmedCorrect = Boolean(
+          !isWrong &&
+          (q.status === 'correct' || q.status === 'Correct' || (q as any).isCorrect === true || (normUser && normTarget && normUser === normTarget))
+        );
+
+        const isSlow = Boolean(isConfirmedCorrect && (q.status === 'slow' || (q as any).isSlow || q.errorType === 'speed_issue'));
+
         return {
           q_num: idx + 1,
-          timeSpent: typeof q.userTime === 'number' ? q.userTime : 0,
-          isCorrect: Boolean(isCorrect && !isSlow),
-          selectedAnswer: rawUserAns || (isWrong ? 'wrong' : ''),
-          question: q,
+          timeSpent: typeof (q as any).userTime === 'number' ? (q as any).userTime : (typeof (q as any).timeSpent === 'number' ? (q as any).timeSpent : 0),
+          isCorrect: isConfirmedCorrect,
+          selectedAnswer: isWrong ? (normUser || (normTarget === 'a' ? 'b' : 'a')) : (isConfirmedCorrect ? normTarget : ''),
+          status: isSlow ? 'slow' : (isConfirmedCorrect ? 'correct' : (isWrong ? 'wrong' : 'unattempted')),
+          errorType: isSlow ? 'speed_issue' : (isConfirmedCorrect ? 'correct' : (isWrong ? 'wrong' : 'unattempted')),
+          isSlow,
+          question: {
+            ...q,
+            solution: q.solution || (q as any).explanation || (q as any).sol || ''
+          },
           marked: false,
           rca: q.rca
         };
@@ -1658,7 +1782,11 @@ export default function App() {
       section: 'mockErrors',
       is_test: true
     };
-    setCategory('mockErrors');
+    if (reviewResult?.category) {
+      setCategory(reviewResult.category);
+    } else if (category !== 'chapterBank') {
+      setCategory('mockErrors');
+    }
     setQuizMode('practice');
     startQuiz(virtualChapter);
   };
@@ -1681,10 +1809,10 @@ export default function App() {
     // Store in hidden list so it immediately and permanently disappears
     try {
       const key = 'hidden_result_ids_' + user.uid;
-      const hidden: string[] = JSON.parse(localStorage.getItem(key) || '[]');
+      const hidden: string[] = JSON.parse(safeStorage.getItem(key) || '[]');
       if (!hidden.includes(resultId)) {
         hidden.push(resultId);
-        localStorage.setItem(key, JSON.stringify(hidden));
+        safeStorage.setItem(key, JSON.stringify(hidden));
       }
       // Update local cache
       const cachedKey = 'cgl_user_results_cache_' + user.uid;
@@ -4289,22 +4417,24 @@ export default function App() {
         )}
 
         {/* Chapter Drill & Questions Preview Modal for Mock Errors */}
-        <MockChapterErrorsModal
-          data={activeMockChapterModal}
-          modalErrorFilter={modalErrorFilter}
-          setModalErrorFilter={setModalErrorFilter}
-          modalActiveSet={modalActiveSet}
-          setModalActiveSet={setModalActiveSet}
-          mockViewMode={mockViewMode}
-          quizMode={quizMode}
-          onClose={() => setActiveMockChapterModal(null)}
-          onStartPractice={(topic, questions, subType, setNum) => {
-            startClubbedChapterQuiz(topic, questions, subType, setNum);
-          }}
-          onAskAi={(topic, subject, questions, counts, mode, activeFilter) => {
-            handleAskAiTopic(topic, subject, questions, counts, mode || mockViewMode, activeFilter || modalErrorFilter);
-          }}
-        />
+        {activeMockChapterModal && (
+          <MockChapterErrorsModal
+            data={activeMockChapterModal}
+            modalErrorFilter={modalErrorFilter}
+            setModalErrorFilter={setModalErrorFilter}
+            modalActiveSet={modalActiveSet}
+            setModalActiveSet={setModalActiveSet}
+            mockViewMode={mockViewMode}
+            quizMode={quizMode}
+            onClose={() => setActiveMockChapterModal(null)}
+            onStartPractice={(topic, questions, subType, setNum) => {
+              startClubbedChapterQuiz(topic, questions, subType, setNum);
+            }}
+            onAskAi={(topic, subject, questions, counts, mode, activeFilter) => {
+              handleAskAiTopic(topic, subject, questions, counts, mode || mockViewMode, activeFilter || modalErrorFilter);
+            }}
+          />
+        )}
 
         {/* Set Picker Modal (For Start All or topic drills with > 25 questions) */}
         <SetPickerModal

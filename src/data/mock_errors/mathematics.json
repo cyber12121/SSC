@@ -262,7 +262,7 @@
         "q_num": 9,
         "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Incorrect",
         "chosenOption": "B",
         "correctOption": "D",
         "userTime": "00:31",
@@ -286,7 +286,8 @@
           "difficulty": "medium"
         },
         "mockId": "mock_1789478579858_bz3ds",
-        "testId": "mock_1789478579858_bz3ds"
+        "testId": "mock_1789478579858_bz3ds",
+        "isSlow": false
       },
       {
         "id": "math_a648851dab",
@@ -2683,7 +2684,7 @@
         "testId": "mock_1789628610492_0h079",
         "testName": "Quantitative Aptitude Sectional Test - 11",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "Unattempted",
         "correctOption": "A",
         "userTime": "00:58",
@@ -2705,7 +2706,8 @@
           "subtopic": "Algebraic Identities (x + 1/x)",
           "conceptTested": "Finding the value of x^3 + 1/x^3 using the algebraic identity k^3 - 3k when x + 1/x = k.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_ba9b23d7c0",
@@ -2714,7 +2716,7 @@
         "testId": "mock_1789628610492_0h079",
         "testName": "Quantitative Aptitude Sectional Test - 11",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "Unattempted",
         "correctOption": "A",
         "userTime": "01:28",
@@ -2736,7 +2738,8 @@
           "subtopic": "Rectangle and Square",
           "conceptTested": "Relation between diagonal of a rectangle and side of a square, combined with algebraic identity (L + B)^2 = L^2 + B^2 + 2LB.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_9f2da87d9a",
@@ -4319,7 +4322,7 @@
         "testId": "mock_1789629457851_m8crd",
         "testName": "Quantitative Aptitude Sectional Test - 1",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "Unattempted",
         "correctOption": "D",
         "userTime": "01:50",
@@ -4341,7 +4344,8 @@
           "subtopic": "Percentage Decrease / Base Value Calculation",
           "conceptTested": "Finding the original base value given a percentage decrease amount: Base = (Value × 100) / Percentage",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_1007c03c48",
@@ -4350,7 +4354,7 @@
         "testId": "mock_1789629457851_m8crd",
         "testName": "Quantitative Aptitude Sectional Test - 1",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "Unattempted",
         "correctOption": "B",
         "userTime": "00:43",
@@ -4372,7 +4376,8 @@
           "subtopic": "Average - Addition of New Observation",
           "conceptTested": "Deviation method for included items: Required Value = Old Average + (Total New Count \\u00d7 Change in Average)",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_2d68963672",
@@ -4381,7 +4386,7 @@
         "testId": "mock_1789629457851_m8crd",
         "testName": "Quantitative Aptitude Sectional Test - 1",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "Unattempted",
         "correctOption": "D",
         "userTime": "01:16",
@@ -4403,7 +4408,8 @@
           "subtopic": "Time & Work - OR / AND Efficiency Rule",
           "conceptTested": "Using equivalent efficiencies from OR conditions to solve combined AND workforce problems: Time = Total Work / Combined Efficiency",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_2329a40f88",
@@ -4733,7 +4739,7 @@
         "testId": "mock_1789654448115_220yx",
         "testName": "CHSL 12/11/2025 Shift-3 (Quant)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "A",
         "userTime": "00:46",
@@ -4756,7 +4762,8 @@
           "subtopic": "Numerical Simplification",
           "conceptTested": "Arithmetic calculation and equality of numerical expressions.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_4729bef72b",
@@ -4797,7 +4804,7 @@
         "testId": "mock_1789654448115_220yx",
         "testName": "CHSL 14/11/2025 Shift-3 (Quant)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "A",
         "userTime": "01:16",
@@ -4820,7 +4827,8 @@
           "subtopic": "Conditional Algebraic Identities ($x^3+y^3+z^3 = 3xyz$)",
           "conceptTested": "If $x + y + z = 0$, then $x^3 + y^3 + z^3 = 3xyz$, and factoring difference of squares.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "math_eed53dfe86",

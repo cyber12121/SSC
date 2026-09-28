@@ -144,9 +144,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [showQuestionPaper, setShowQuestionPaper] = useState(false);
   const [showSummaryModal, setShowSummaryModal] = useState(false);
   const [showReportModal, setShowReportModal] = useState(false);
-  const [reportSubmitted, setReportSubmitted] = useState(false);
   const [localBookmarks, setLocalBookmarks] = useState<Set<number | string>>(new Set(bookmarkedIds));
-  const [deletedIndices, setDeletedIndices] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    setLocalBookmarks(new Set(bookmarkedIds));
+  }, [bookmarkedIds]);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
@@ -155,6 +157,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   const [showSillyRevisionModal, setShowSillyRevisionModal] = useState<boolean>(false);
   const [revisedReviewKeys, setRevisedReviewKeys] = useState<Set<number>>(new Set());
+  const [reportSubmitted, setReportSubmitted] = useState<boolean>(false);
+  const [deletedIndices, setDeletedIndices] = useState<Set<number>>(new Set());
 
   // isMockReview: only true for actual mock/error review sessions, not chapter bank quizzes
   const isMockReview = Boolean(
@@ -173,14 +177,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       if (typeof window !== 'undefined') {
         // Only load result.id scoped storage if it matches this specific result attempt
         if (result.id) {
-          const saved = window.localStorage?.getItem(`cgl_rca_${result.id}`);
+          const saved = safeStorage.getItem(`cgl_rca_${result.id}`);
           if (saved) {
             const parsed = JSON.parse(saved);
             Object.assign(map, parsed);
           }
         }
         // Match from global store BY QUESTION ID OR QUESTION TEXT, NOT by generic chapter_title numeric index!
-        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        const globalRaw = safeStorage.getItem('cgl_rca_global_store');
         if (globalRaw) {
           const globalStore = JSON.parse(globalRaw);
           const globalEntries = Object.values(globalStore) as any[];
@@ -316,14 +320,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       if (typeof window === 'undefined') return;
 
       if (result.id) {
-        window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(updatedMap));
+        safeStorage.setItem(`cgl_rca_${result.id}`, JSON.stringify(updatedMap));
       }
       if (result.chapter_title) {
-        window.localStorage?.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updatedMap));
+        safeStorage.setItem(`cgl_rca_${result.chapter_title}`, JSON.stringify(updatedMap));
       }
 
       // Update global store for Error Heatmap & Sankalp AI
-      const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+      const globalRaw = safeStorage.getItem('cgl_rca_global_store');
       const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
 
       const it = items[targetIdx];
@@ -335,6 +339,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         delete globalStore[qId];
         if (qTextNorm) delete globalStore[qTextNorm];
       } else {
+        const itStatus = getQuestionStatus(targetIdx);
+        const itIsSlow = itStatus === 'slow';
+        const itIsCorrect = itStatus === 'correct' || itIsSlow;
+
         const fullEntry = {
           ...newRca,
           id: qId,
@@ -346,15 +354,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           questionText: q.question,
           options: q.options,
           answer: q.answer,
-          solution: q.solution,
+          solution: q.solution || (q as any).explanation || (it as any)?.solution || '',
           image: q.image,
           userAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
           selectedAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
           chosenOption: it?.selectedAnswer || (it as any)?.userAnswer || '',
-          isCorrect: it?.isCorrect,
-          isSlow: it?.isSlow || (it as any)?.status === 'slow' || (it as any)?.errorType === 'speed_issue',
-          status: (it as any)?.status || (it?.isSlow ? 'slow' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted'))),
-          errorType: (it?.isSlow || (it as any)?.status === 'slow') ? 'speed_issue' : (it?.isCorrect ? 'correct' : (it?.selectedAnswer ? 'wrong' : 'unattempted')),
+          isCorrect: itIsCorrect,
+          isSlow: itIsSlow,
+          status: itStatus === 'slow' ? 'Correct (Slow)' : (itIsCorrect ? 'Correct' : (itStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+          errorType: itIsSlow ? 'speed_issue' : (itIsCorrect ? 'correct' : (itStatus === 'unattempted' ? 'unattempted' : 'wrong')),
           timeSpent: it?.timeSpent,
           userTime: it?.timeSpent,
           avgTime: q.avgTime ?? (it as any)?.avgTime,
@@ -367,35 +375,40 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         }
       }
 
-      window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+      safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
 
       // Update mock questions array in localStorage and trigger background persistence
       if (result.id && !result.id.startsWith('local-')) {
-        const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+        const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
         let cachedList: any[] = [];
         if (cachedRaw) {
           try { cachedList = JSON.parse(cachedRaw); } catch {}
         }
         if (!Array.isArray(cachedList) || cachedList.length === 0) {
-          cachedList = items.map((item, idx) => ({
-            ...(item.question || {}),
-            q_num: idx + 1,
-            userAnswer: item.selectedAnswer || (item as any).userAnswer || '',
-            selectedAnswer: item.selectedAnswer || (item as any).userAnswer || '',
-            chosenOption: item.selectedAnswer || (item as any).userAnswer || '',
-            isCorrect: item.isCorrect,
-            isSlow: item.isSlow || (item as any).status === 'slow' || (item as any).errorType === 'speed_issue',
-            status: (item as any).status || (item.isSlow ? 'slow' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted'))),
-            errorType: (item.isSlow || (item as any).status === 'slow') ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
-            timeSpent: item.timeSpent,
-            userTime: item.timeSpent,
-            rca: updatedMap[idx] || item.rca || item.question?.rca || undefined
-          }));
+          cachedList = items.map((item, idx) => {
+            const itemSt = getQuestionStatus(idx);
+            const itemIsSlow = itemSt === 'slow';
+            const itemIsCorrect = itemSt === 'correct' || itemIsSlow;
+            return {
+              ...(item.question || {}),
+              q_num: idx + 1,
+              userAnswer: item.selectedAnswer || (item as any).userAnswer || '',
+              selectedAnswer: item.selectedAnswer || (item as any).userAnswer || '',
+              chosenOption: item.selectedAnswer || (item as any).userAnswer || '',
+              isCorrect: itemIsCorrect,
+              isSlow: itemIsSlow,
+              status: itemSt === 'slow' ? 'Correct (Slow)' : (itemIsCorrect ? 'Correct' : (itemSt === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+              errorType: itemIsSlow ? 'speed_issue' : (itemIsCorrect ? 'correct' : (itemSt === 'unattempted' ? 'unattempted' : 'wrong')),
+              timeSpent: item.timeSpent,
+              userTime: item.timeSpent,
+              rca: updatedMap[idx] || item.rca || item.question?.rca || undefined
+            };
+          });
         } else if (cachedList[targetIdx]) {
           cachedList[targetIdx].rca = isClear ? undefined : newRca;
         }
 
-        window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
+        safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
 
         // Background sync to backend disk storage
         fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
@@ -498,11 +511,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       // 2. Persist to localStorage
       if (typeof window !== 'undefined') {
         if (result.id && !result.id.startsWith('local-')) {
-          window.localStorage?.setItem(`cgl_rca_${result.id}`, JSON.stringify(currentRcaMap));
+          safeStorage.setItem(`cgl_rca_${result.id}`, JSON.stringify(currentRcaMap));
         }
 
         // Update global store for Error Heatmap & Sankalp AI
-        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        const globalRaw = safeStorage.getItem('cgl_rca_global_store');
         const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
         items.forEach((item, idx) => {
           const rca = currentRcaMap[idx] || item.rca || item.question?.rca;
@@ -521,15 +534,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               questionText: q.question,
               options: q.options,
               answer: q.answer,
-              solution: q.solution,
+              solution: q.solution || (q as any).explanation || (item as any)?.solution || '',
               image: q.image,
               userAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               selectedAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               chosenOption: item.selectedAnswer || (item as any)?.userAnswer || '',
-              isCorrect: item.isCorrect,
-              isSlow: item.isSlow || (item as any)?.status === 'slow' || (item as any)?.errorType === 'speed_issue',
-              status: (item as any)?.status || (item.isSlow ? 'slow' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted'))),
-              errorType: (item.isSlow || (item as any)?.status === 'slow') ? 'speed_issue' : (item.isCorrect ? 'correct' : (item.selectedAnswer ? 'wrong' : 'unattempted')),
+              isCorrect: getQuestionStatus(idx) === 'correct' || getQuestionStatus(idx) === 'slow',
+              isSlow: getQuestionStatus(idx) === 'slow',
+              status: getQuestionStatus(idx) === 'slow' ? 'Correct (Slow)' : (getQuestionStatus(idx) === 'correct' ? 'Correct' : (getQuestionStatus(idx) === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+              errorType: getQuestionStatus(idx) === 'slow' ? 'speed_issue' : (getQuestionStatus(idx) === 'correct' ? 'correct' : (getQuestionStatus(idx) === 'unattempted' ? 'unattempted' : 'wrong')),
               timeSpent: item.timeSpent,
               userTime: item.timeSpent
             };
@@ -537,13 +550,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             if (qTextNorm) globalStore[qTextNorm] = entry;
           }
         });
-        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
         window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { count: Object.keys(currentRcaMap).length } }));
 
         // Update cached mock questions in localStorage with full attempt metadata
         let cachedExisting: any[] = [];
         if (result.id) {
-          const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+          const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
           if (cachedRaw) {
             try {
               cachedExisting = JSON.parse(cachedRaw);
@@ -584,7 +597,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         });
 
         if (result.id && !result.id.startsWith('local-')) {
-          window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
+          safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
           
           // 3. Post to backend /api/mock-questions/:id so disk storage also persists full attempts & RCA tags
           try {
@@ -822,20 +835,20 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
       // 6. Purge from cgl_rca_global_store
       try {
-        const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+        const globalRaw = safeStorage.getItem('cgl_rca_global_store');
         if (globalRaw) {
           const globalStore = JSON.parse(globalRaw);
           const questionIdentifier = qId || (result.id ? `${result.id}_${currentIdx + 1}` : `mock_${currentIdx + 1}`);
           delete globalStore[questionIdentifier];
           if (qTextClean) delete globalStore[qTextClean];
-          window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+          safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
         }
       } catch {}
 
       // 7. If mock result, update cached mock questions in localStorage & server
       if (result.id) {
         try {
-          const cachedRaw = window.localStorage?.getItem(`cgl_mock_questions_${result.id}`);
+          const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
           if (cachedRaw) {
             const list = JSON.parse(cachedRaw);
             if (Array.isArray(list)) {
@@ -843,7 +856,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 const t = (q.question || q.questionText || '').trim().toLowerCase();
                 return t !== qTextClean && (!qId || q.id !== qId);
               });
-              window.localStorage?.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(updatedList));
+              safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(updatedList));
               fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -873,11 +886,11 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (explicitSec === 'part_a' || explicitSec === 'part_b' || explicitSec === 'part_c' || explicitSec === 'part_d') {
       return explicitSec;
     }
-    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || '');
+    const raw = String((q as any).subject || (q as any).subjectName || q.tags?.topic || (q as any).topic || result.subject || '');
     if (/reason|intel/i.test(raw)) return 'part_a';
-    if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'part_b';
-    if (/quant|math|aptitude/i.test(raw)) return 'part_c';
-    if (/eng/i.test(raw)) return 'part_d';
+    if (/aware|gk|gs|ga|knowledge|history|polity|geography|science|economy|economics/i.test(raw)) return 'part_b';
+    if (/quant|math|aptitude|arithmetic|algebra|geometry/i.test(raw)) return 'part_c';
+    if (/eng|vocab|grammar|comprehension/i.test(raw)) return 'part_d';
     return null;
   };
 
@@ -906,14 +919,6 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
     // 1. Explicit or detected section tags
     if (hasExplicit) {
-      if (otherIndices.length > 0) {
-        if (partAIndices.length > 0) partAIndices.push(...otherIndices);
-        else if (partBIndices.length > 0) partBIndices.push(...otherIndices);
-        else if (partCIndices.length > 0) partCIndices.push(...otherIndices);
-        else if (partDIndices.length > 0) partDIndices.push(...otherIndices);
-        else partAIndices.push(...otherIndices);
-      }
-
       const list: ReviewSection[] = [];
       if (partAIndices.length > 0) {
         list.push({
@@ -957,6 +962,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           endIndex: partDIndices[partDIndices.length - 1] + 1,
           count: partDIndices.length,
           indices: partDIndices
+        });
+      }
+      if (otherIndices.length > 0) {
+        list.push({
+          id: 'part_other',
+          label: 'OTHER',
+          title: 'Additional Questions',
+          startIndex: otherIndices[0],
+          endIndex: otherIndices[otherIndices.length - 1] + 1,
+          count: otherIndices.length,
+          indices: otherIndices
         });
       }
       if (list.length > 0) return list;
@@ -1033,6 +1049,60 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const question = current?.question;
   const currentRca: RCAClassification | undefined = rcaMap[currentIdx] || current?.rca || question?.rca;
 
+  // Multi-tier solution resolver: ensures solutions are never missing in analytics/mock review
+  const resolvedSolution = useMemo(() => {
+    const directSol = 
+      question?.solution || 
+      (question as any)?.explanation || 
+      (question as any)?.sol || 
+      (question as any)?.detailedSolution ||
+      (question as any)?.detailed_solution ||
+      (current as any)?.solution || 
+      (current as any)?.explanation || 
+      (current as any)?.sol ||
+      (current as any)?.detailedSolution ||
+      (current as any)?.question?.solution;
+
+    if (directSol && typeof directSol === 'string' && directSol.trim().length > 0) {
+      return directSol.trim();
+    }
+
+    // Tier 2: Lookup in global RCA store
+    try {
+      if (typeof window !== 'undefined') {
+        const rawStore = safeStorage.getItem('cgl_rca_global_store');
+        if (rawStore) {
+          const store = JSON.parse(rawStore);
+          const qId = question?.id || (current as any)?.id;
+          const qText = (question?.question || (current as any)?.question || '').trim().toLowerCase();
+          const match = (qId && store[qId]) || (qText && store[qText]);
+          if (match && (match.solution || match.explanation || match.sol)) {
+            return (match.solution || match.explanation || match.sol).trim();
+          }
+        }
+      }
+    } catch {}
+
+    // Tier 3: Lookup in cached mock questions
+    if (result.id) {
+      try {
+        const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
+        if (cachedRaw) {
+          const list = JSON.parse(cachedRaw);
+          if (Array.isArray(list) && list[currentIdx]) {
+            const cachedQ = list[currentIdx];
+            const cachedSol = cachedQ?.solution || cachedQ?.explanation || cachedQ?.sol || cachedQ?.detailedSolution;
+            if (cachedSol && typeof cachedSol === 'string' && cachedSol.trim().length > 0) {
+              return cachedSol.trim();
+            }
+          }
+        }
+      } catch {}
+    }
+
+    return directSol || '';
+  }, [question, current, currentIdx, result.id]);
+
   const handleBookmarkClick = () => {
     if (!question) return;
     if (onBookmarkToggle) {
@@ -1078,10 +1148,26 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     const rawUser = String(
       item.selectedAnswer ||
       (item as any).userAnswer ||
+      (item as any).chosenOption ||
+      q.chosenOption ||
+      q.userAnswer ||
       ''
     ).trim().toLowerCase();
 
-    // Determine if question is explicitly tagged as slow or speed issue
+    // Target answer
+    const rawTarget = String(
+      q.answer ||
+      (item as any).answer ||
+      q.correctOption ||
+      q.correct_option ||
+      q.correctAnswer ||
+      ''
+    ).trim().toLowerCase();
+
+    const isRawUnattempted = !rawUser || ['unattempted', 'skipped', 'not attempted', 'left', 'n/a', 'none'].includes(rawUser);
+    const normUser = isRawUnattempted ? '' : normalizeAnswerKey(rawUser);
+    const normTarget = normalizeAnswerKey(rawTarget);
+
     const isExplicitSlow =
       qStatus.includes('slow') ||
       qStatus.includes('speed') ||
@@ -1090,54 +1176,72 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       (item as any).errorType === 'speed_issue' ||
       q.errorType === 'speed_issue';
 
-    // 1. Unattempted / Skipped (evaluated first so we never misclassify empty answers)
-    if (
+    const isExplicitUnattempted =
       qStatus.includes('unattempt') ||
       qStatus.includes('skip') ||
       qStatus.includes('left') ||
       qStatus === 'not attempted' ||
-      rawUser === 'unattempted' ||
-      rawUser === 'skipped' ||
-      rawUser === 'not attempted' ||
-      (!rawUser && !qStatus)   // no answer + no explicit status → unattempted
-    ) {
-      // If isCorrect is explicitly true, return slow or correct
-      if (item.isCorrect === true) {
-        return isExplicitSlow ? 'slow' : 'correct';
+      isRawUnattempted ||
+      (!rawUser && !qStatus && item.isCorrect === undefined);
+
+    const isExplicitWrongAnswer = Boolean(
+      normUser &&
+      normTarget &&
+      normUser !== normTarget
+    );
+
+    const isExplicitWrong =
+      isExplicitWrongAnswer ||
+      qStatus.includes('wrong') ||
+      qStatus.includes('incorrect') ||
+      qStatus.includes('fail') ||
+      item.isCorrect === false ||
+      q.isCorrect === false ||
+      (item as any).is_correct === false ||
+      q.is_correct === false;
+
+    // 1. INCORRECT / WRONG (Evaluated first: an incorrect question must NEVER be marked as slow or given marks)
+    if (isExplicitWrong) {
+      if (isRawUnattempted && !qStatus.includes('wrong') && !qStatus.includes('incorrect')) {
+        return 'unattempted';
       }
+      return 'wrong';
+    }
+
+    // 2. Unattempted / Skipped
+    if (isExplicitUnattempted && item.isCorrect !== true && !qStatus.includes('correct') && qStatus !== 'right') {
       return 'unattempted';
     }
 
-    // 2. Slow / Speed Issue (Correct, but took too long)
-    if (isExplicitSlow) {
-      return 'slow';
-    }
+    // 3. Confirmed Correct
+    const isConfirmedCorrect = Boolean(
+      item.isCorrect === true ||
+      q.isCorrect === true ||
+      (item as any).is_correct === true ||
+      (qStatus.includes('correct') && !qStatus.includes('incorrect')) ||
+      qStatus === 'right' ||
+      (normUser && normTarget && normUser === normTarget)
+    );
 
-    // 2.5 Dynamic time-based slow detection for quiz / mock attempts where isSlow flag wasn't pre-computed
+    // Dynamic slow detection
     const uTime = Number(item.timeSpent || (item as any).userTime || q.userTime || 0);
     const aTime = Number((item as any).avgTime || q.avgTime || (item as any).avgTimeSeconds || q.avgTimeSeconds || 0);
-    const isDynamicSlow = (item.isCorrect === true || qStatus.includes('correct') || qStatus === 'right') &&
-      aTime > 0 && uTime > aTime * 1.5 && uTime >= 60;
-    if (isDynamicSlow) {
-      return 'slow';
+    const isDynamicSlow = isConfirmedCorrect && aTime > 0 && uTime > aTime * 1.5 && uTime >= 60;
+
+    // 4. Slow / Speed Issue (ONLY if confirmed correct!)
+    if (isConfirmedCorrect) {
+      if (isExplicitSlow || isDynamicSlow) {
+        return 'slow';
+      }
+      return 'correct';
     }
 
-    // 3. Explicit status tags for correct/wrong
-    if (qStatus.includes('correct') && !qStatus.includes('incorrect')) return 'correct';
-    if (qStatus === 'right') return 'correct';
-    if (qStatus.includes('wrong') || qStatus.includes('incorrect')) return 'wrong';
-
-    // 4. Use isCorrect field (most reliable for QuizContainer-generated QuizResult)
-    if (item.isCorrect === true) {
-      return isExplicitSlow || isDynamicSlow ? 'slow' : 'correct';
-    }
-    if (item.isCorrect === false) {
-      // Only classify as wrong if a user answer was actually recorded
-      if (rawUser && rawUser !== 'unattempted' && rawUser !== 'skipped') return 'wrong';
-      return 'unattempted';
+    // 5. Answer provided that didn't match
+    if (normUser) {
+      return 'wrong';
     }
 
-    // 5. Final fallback
+    // 6. Fallback
     return 'unattempted';
   };
 
@@ -1275,6 +1379,34 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   };
 
   const handlePrevious = () => {
+    if (selectedFilter !== 'all' && filteredIndices.length > 0) {
+      const currentPos = filteredIndices.indexOf(currentIdx);
+      if (currentPos > 0) {
+        const prevIdx = filteredIndices[currentPos - 1];
+        setCurrentIdx(prevIdx);
+        if (activeSectionId !== 'all') {
+          const prevSec = sections.find(s => s.indices.includes(prevIdx));
+          if (prevSec && prevSec.id !== activeSectionId) {
+            setActiveSectionId(prevSec.id);
+          }
+        }
+        return;
+      } else if (currentPos === -1) {
+        const prevCandidates = filteredIndices.filter(i => i < currentIdx);
+        if (prevCandidates.length > 0) {
+          const prevIdx = prevCandidates[prevCandidates.length - 1];
+          setCurrentIdx(prevIdx);
+          if (activeSectionId !== 'all') {
+            const prevSec = sections.find(s => s.indices.includes(prevIdx));
+            if (prevSec && prevSec.id !== activeSectionId) {
+              setActiveSectionId(prevSec.id);
+            }
+          }
+          return;
+        }
+      }
+    }
+
     if (currentIdx > 0) {
       const prevIdx = currentIdx - 1;
       setCurrentIdx(prevIdx);
@@ -1288,6 +1420,34 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   };
 
   const handleNext = () => {
+    if (selectedFilter !== 'all' && filteredIndices.length > 0) {
+      const currentPos = filteredIndices.indexOf(currentIdx);
+      if (currentPos >= 0 && currentPos < filteredIndices.length - 1) {
+        const nextIdx = filteredIndices[currentPos + 1];
+        setCurrentIdx(nextIdx);
+        if (activeSectionId !== 'all') {
+          const nextSec = sections.find(s => s.indices.includes(nextIdx));
+          if (nextSec && nextSec.id !== activeSectionId) {
+            setActiveSectionId(nextSec.id);
+          }
+        }
+        return;
+      } else if (currentPos === -1) {
+        const nextCandidates = filteredIndices.filter(i => i > currentIdx);
+        if (nextCandidates.length > 0) {
+          const nextIdx = nextCandidates[0];
+          setCurrentIdx(nextIdx);
+          if (activeSectionId !== 'all') {
+            const nextSec = sections.find(s => s.indices.includes(nextIdx));
+            if (nextSec && nextSec.id !== activeSectionId) {
+              setActiveSectionId(nextSec.id);
+            }
+          }
+          return;
+        }
+      }
+    }
+
     if (currentIdx < items.length - 1) {
       const nextIdx = currentIdx + 1;
       setCurrentIdx(nextIdx);
@@ -1299,6 +1459,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       }
     }
   };
+
+  // Automatically snap to first filtered question when filter changes
+  useEffect(() => {
+    if (selectedFilter !== 'all' && filteredIndices.length > 0 && !filteredIndices.includes(currentIdx)) {
+      setCurrentIdx(filteredIndices[0]);
+    }
+  }, [selectedFilter, sillySubFilter]);
 
   // ── Global Keyboard Shortcuts for Review Mode ──
   useEffect(() => {
@@ -1315,59 +1482,56 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         return;
       }
 
-      // Ignore modifier combinations (Ctrl, Alt, Meta)
-      if (e.ctrlKey || e.altKey || e.metaKey) return;
-
       const key = e.key.toLowerCase();
 
       // Navigation: ArrowRight or K -> Next
-      if (e.key === 'ArrowRight' || key === 'k') {
+      if (e.key === 'ArrowRight' || (!e.ctrlKey && !e.altKey && !e.metaKey && key === 'k')) {
         e.preventDefault();
         handleNext();
         return;
       }
 
       // Navigation: ArrowLeft or J -> Previous
-      if (e.key === 'ArrowLeft' || key === 'j') {
+      if (e.key === 'ArrowLeft' || (!e.ctrlKey && !e.altKey && !e.metaKey && key === 'j')) {
         e.preventDefault();
         handlePrevious();
         return;
       }
 
       // Toggle Reattempt / Solution: R
-      if (key === 'r') {
+      if (!e.ctrlKey && !e.altKey && !e.metaKey && key === 'r') {
         e.preventDefault();
         setReattemptMode(prev => !prev);
         return;
       }
 
-      // RCA Hotkeys: C, S, T, G (and 'a' for legacy)
-      if (key === 'c') {
-        e.preventDefault();
-        handleSelectRcaTag('C');
-        return;
-      }
-      if (key === 's' || key === 'a') {
-        e.preventDefault();
-        handleSelectRcaTag('S');
-        return;
-      }
-      if (key === 't') {
-        e.preventDefault();
-        handleSelectRcaTag('T');
-        return;
-      }
-      if (key === 'g') {
-        e.preventDefault();
-        handleSelectRcaTag('G');
-        return;
-      }
-
-      // Clear RCA: X or Delete
-      if (key === 'x' || e.key === 'Delete') {
-        e.preventDefault();
-        handleClearRcaTag();
-        return;
+      // RCA Hotkeys with Alt key (Alt + C, Alt + S, Alt + T, Alt + G) to prevent accidental typing misclassifications
+      if (e.altKey) {
+        if (key === 'c') {
+          e.preventDefault();
+          handleSelectRcaTag('C');
+          return;
+        }
+        if (key === 's' || key === 'a') {
+          e.preventDefault();
+          handleSelectRcaTag('S');
+          return;
+        }
+        if (key === 't') {
+          e.preventDefault();
+          handleSelectRcaTag('T');
+          return;
+        }
+        if (key === 'g') {
+          e.preventDefault();
+          handleSelectRcaTag('G');
+          return;
+        }
+        if (key === 'x') {
+          e.preventDefault();
+          handleClearRcaTag();
+          return;
+        }
       }
     };
 
@@ -1735,29 +1899,37 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </span>
               )}
 
-              {/* Status Badge: Skipped / Correct / Incorrect / Slow */}
-              {currentStatus === 'correct' && (
-                <span className="bg-[#2e7d32] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
-                  <Smile className="w-3.5 h-3.5" />
-                  <span>Correct</span>
-                </span>
-              )}
-              {currentStatus === 'slow' && (
-                <span className="bg-[#ef6c00] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
-                  <AlertTriangle className="w-3.5 h-3.5" />
-                  <span>Slow (Correct)</span>
-                </span>
-              )}
-              {currentStatus === 'wrong' && (
-                <span className="bg-[#c62828] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
-                  <Frown className="w-3.5 h-3.5" />
-                  <span>Incorrect</span>
-                </span>
-              )}
-              {currentStatus === 'unattempted' && (
-                <span className="bg-[#757575] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
-                  <HelpCircle className="w-3.5 h-3.5" />
-                  <span>Skipped</span>
+              {/* Question Status Tag (Correct/Incorrect/Skipped) - hidden in reattemptMode until an option is chosen */}
+              {(!reattemptMode || reattemptAnswers[currentIdx] !== undefined) ? (
+                <>
+                  {currentStatus === 'correct' && (
+                    <span className="bg-[#2e7d32] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                      <Smile className="w-3.5 h-3.5" />
+                      <span>Correct</span>
+                    </span>
+                  )}
+                  {currentStatus === 'slow' && (
+                    <span className="bg-[#ef6c00] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                      <AlertTriangle className="w-3.5 h-3.5" />
+                      <span>Slow (Correct)</span>
+                    </span>
+                  )}
+                  {currentStatus === 'wrong' && (
+                    <span className="bg-[#c62828] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                      <Frown className="w-3.5 h-3.5" />
+                      <span>Incorrect</span>
+                    </span>
+                  )}
+                  {currentStatus === 'unattempted' && (
+                    <span className="bg-[#757575] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs">
+                      <HelpCircle className="w-3.5 h-3.5" />
+                      <span>Skipped</span>
+                    </span>
+                  )}
+                </>
+              ) : (
+                <span className="bg-[#0097a7] text-white text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-2xs animate-pulse">
+                  <span>Reattempting</span>
                 </span>
               )}
 
@@ -1770,15 +1942,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               </div>
 
               {/* Marks Badge */}
-              <div className="flex items-center space-x-1 text-xs text-gray-700">
-                <span>Marks</span>
-                <span className="bg-[#616161] text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                  {currentMarks}
-                </span>
-              </div>
+              {(!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && (
+                <div className="flex items-center space-x-1 text-xs text-gray-700">
+                  <span>Marks</span>
+                  <span className="bg-[#616161] text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                    {currentMarks}
+                  </span>
+                </div>
+              )}
 
               {/* Exact Silly Mistake Badge on Question Card */}
-              {(currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') && (() => {
+              {(!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && (currentRca?.tag === 'S' || (currentRca?.tag as any) === 'A') && (() => {
                 const badge = getSillyPrimaryBadge({ ...(question || current), rca: currentRca });
                 return (
                   <span 
@@ -1797,7 +1971,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               })()}
 
               {/* RCA Tag Badge for non-silly */}
-              {currentRca?.tag && currentRca.tag !== 'S' && (currentRca.tag as any) !== 'A' && (
+              {(!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && currentRca?.tag && currentRca.tag !== 'S' && (currentRca.tag as any) !== 'A' && (
                 <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold border shadow-2xs ${
                   RCA_TAG_CONFIG[currentRca.tag]?.lightClass || 'bg-purple-50 text-purple-700 border-purple-200'
                 }`}>
@@ -2056,7 +2230,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 </p>
 
                 {/* 4-Bucket Root Cause Analysis (RCA) Classification Bar */}
-                {classifyModeEnabled && (
+                {classifyModeEnabled && (!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && (
                   <RcaClassifier
                     currentRca={currentRca}
                     onSelectTag={handleSelectRcaTag}
@@ -2128,9 +2302,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                       </div>
 
                       <SolutionViewer
-                        solution={question.solution}
+                        solution={resolvedSolution}
                         language={language}
-                        subject={question.subject || question.section}
+                        subject={question?.subject || question?.section}
                       />
                     </div>
                   </div>

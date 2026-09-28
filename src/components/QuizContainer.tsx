@@ -1008,10 +1008,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         )}
       </div>
 
-      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills and Action Buttons aligned to the left - Testbook Exact) ── */}
-      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2">
+      {/* ── SECOND SUB-HEADER ROW 2 (Section Pills on left, Centered Action Buttons in Mock Mode) ── */}
+      <div className="bg-white border-b border-gray-300 px-3 sm:px-4 py-1.5 flex items-center justify-between shrink-0 z-20 overflow-x-auto no-scrollbar gap-2 relative">
         {/* Section Pills: PART-A, PART-B, PART-C, PART-D */}
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center gap-1.5 shrink-0 lg:min-w-[240px]">
           {sections.map((sec, idx) => {
             const isActive = idx === activeSectionIdx;
             const hasQuestions = sec.count > 0;
@@ -1058,88 +1058,96 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
         {/* Action Buttons: Practice vs Mock Mode (Desktop Only) */}
         {mode === 'practice' ? (
-          <div className="hidden lg:flex items-center gap-2 shrink-0 ml-3 sm:ml-6">
-            <button
-              onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
-              disabled={currentIdx === 0}
-              className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
-              title="Previous question"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              <span>Previous</span>
-            </button>
+          <>
+            <div className="hidden lg:flex items-center justify-center gap-2 flex-1 mx-auto">
+              <button
+                onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+                disabled={currentIdx === 0}
+                className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5"
+                title="Previous question"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span>Previous</span>
+              </button>
 
-            <button
-              onClick={() => setShowSolutionMap(prev => ({ ...prev, [currentIdx]: !isSolutionOpen }))}
-              className={`font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors cursor-pointer flex items-center gap-1.5 ${
-                isSolutionOpen
-                  ? 'bg-amber-500 text-white hover:bg-amber-600'
-                  : 'bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100'
-              }`}
-              title="Toggle solution visibility"
-            >
-              {isSolutionOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5 text-amber-600" />}
-              <span>{isSolutionOpen ? 'Hide Solution' : 'Show Solution'}</span>
-            </button>
+              <button
+                onClick={() => setShowSolutionMap(prev => ({ ...prev, [currentIdx]: !isSolutionOpen }))}
+                className={`font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded transition-colors cursor-pointer flex items-center gap-1.5 ${
+                  isSolutionOpen
+                    ? 'bg-amber-500 text-white hover:bg-amber-600'
+                    : 'bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100'
+                }`}
+                title="Toggle solution visibility"
+              >
+                {isSolutionOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5 text-amber-600" />}
+                <span>{isSolutionOpen ? 'Hide Solution' : 'Show Solution'}</span>
+              </button>
 
-            <button
-              onClick={() => {
-                if (currentIdx < totalQuestions - 1) {
-                  jumpToQuestion(currentIdx + 1);
-                } else {
-                  setShowSubmitModal(true);
-                }
-              }}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded transition-colors shadow-2xs cursor-pointer flex items-center gap-1.5"
-              title="Next question"
-            >
-              <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
+              <button
+                onClick={() => {
+                  if (currentIdx < totalQuestions - 1) {
+                    jumpToQuestion(currentIdx + 1);
+                  } else {
+                    setShowSubmitModal(true);
+                  }
+                }}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded transition-colors shadow-2xs cursor-pointer flex items-center gap-1.5"
+                title="Next question"
+              >
+                <span>{currentIdx < totalQuestions - 1 ? 'Next' : 'Finish'}</span>
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+            {/* Right balancer to keep center buttons strictly centered */}
+            <div className="hidden lg:block shrink-0 min-w-[240px]" aria-hidden="true" />
+          </>
         ) : (
-          /* Mock Mode Buttons (Exact match to official Testbook interface - Left aligned after PART pills) */
-          <div className="hidden lg:flex items-center gap-1.5 sm:gap-2 shrink-0 ml-3 sm:ml-7">
-            <button
-              onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
-              disabled={currentIdx === 0}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap flex items-center gap-1"
-              title="Previous question"
-            >
-              <span>Previous</span>
-            </button>
-            <button
-              onClick={handleToggleMarkForReview}
-              className={`${
-                markedForReview.has(currentIdx)
-                  ? 'bg-[#7e57c2] hover:bg-[#673ab7] active:bg-[#512da8]'
-                  : 'bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a]'
-              } text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap`}
-              title={markedForReview.has(currentIdx) ? "Marked for Review (Click to unmark)" : "Mark for Review (Remain on question)"}
-            >
-              {markedForReview.has(currentIdx) ? 'Marked for Review' : 'Mark for Review'}
-            </button>
-            <button
-              onClick={handleSaveAndNext}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap flex items-center gap-1"
-              title="Save response & go to next"
-            >
-              <span>Save &amp; Next</span>
-            </button>
-            <button
-              onClick={handleSubmitSection}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
-            >
-              Submit Section
-            </button>
-            <button
-              onClick={() => setShowSubmitModal(true)}
-              disabled={isSubmitting}
-              className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer whitespace-nowrap"
-            >
-              Submit Test
-            </button>
-          </div>
+          /* Mock Mode Buttons: Centered in row */
+          <>
+            <div className="hidden lg:flex items-center justify-center gap-1.5 sm:gap-2 flex-1 mx-auto">
+              <button
+                onClick={() => currentIdx > 0 && jumpToQuestion(currentIdx - 1)}
+                disabled={currentIdx === 0}
+                className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap flex items-center gap-1"
+                title="Previous question"
+              >
+                <span>Previous</span>
+              </button>
+              <button
+                onClick={handleToggleMarkForReview}
+                className={`${
+                  markedForReview.has(currentIdx)
+                    ? 'bg-[#7e57c2] hover:bg-[#673ab7] active:bg-[#512da8]'
+                    : 'bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a]'
+                } text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap`}
+                title={markedForReview.has(currentIdx) ? "Marked for Review (Click to unmark)" : "Mark for Review (Remain on question)"}
+              >
+                {markedForReview.has(currentIdx) ? 'Marked for Review' : 'Mark for Review'}
+              </button>
+              <button
+                onClick={handleSaveAndNext}
+                className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-4 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap flex items-center gap-1"
+                title="Save response & go to next"
+              >
+                <span>Save &amp; Next</span>
+              </button>
+              <button
+                onClick={handleSubmitSection}
+                className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs cursor-pointer whitespace-nowrap"
+              >
+                Submit Section
+              </button>
+              <button
+                onClick={() => setShowSubmitModal(true)}
+                disabled={isSubmitting}
+                className="bg-[#2460b9] hover:bg-[#1c4d94] active:bg-[#183f7a] text-white font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-[2px] transition-colors shadow-2xs disabled:opacity-50 cursor-pointer whitespace-nowrap"
+              >
+                Submit Test
+              </button>
+            </div>
+            {/* Right balancer to keep center buttons strictly centered */}
+            <div className="hidden lg:block shrink-0 min-w-[240px]" aria-hidden="true" />
+          </>
         )}
       </div>
 

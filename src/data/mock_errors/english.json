@@ -506,7 +506,7 @@
         "q_num": 17,
         "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Incorrect",
         "chosenOption": "A",
         "correctOption": "B",
         "userTime": "00:46",
@@ -530,7 +530,8 @@
           "difficulty": "medium"
         },
         "mockId": "mock_1789478579858_bz3ds",
-        "testId": "mock_1789478579858_bz3ds"
+        "testId": "mock_1789478579858_bz3ds",
+        "isSlow": false
       },
       {
         "id": "engl_2eb2b7f97b",
@@ -2583,7 +2584,7 @@
         "q_num": 84,
         "testName": "SSC CGL Tier I: Full Test - 7",
         "platform": "Testbook",
-        "status": "Correct (Slow)",
+        "status": "Incorrect",
         "chosenOption": "D",
         "correctOption": "C",
         "userTime": "00:28",
@@ -2607,7 +2608,8 @@
           "difficulty": "medium"
         },
         "mockId": "mock_1789515022905_egyvl",
-        "testId": "mock_1789515022905_egyvl"
+        "testId": "mock_1789515022905_egyvl",
+        "isSlow": false
       },
       {
         "id": "engl_48ea449cae",
@@ -3267,7 +3269,7 @@
         "testId": "mock_1789684399252_0icxt",
         "testName": "CGL 20/09/2025 Shift-2 (English)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "A",
         "userTime": "00:37",
@@ -3290,7 +3292,8 @@
           "subtopic": "Active & Passive Voice",
           "conceptTested": "Conversion of simple past passive interrogative to active voice.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "engl_48ec1c1d35",
@@ -3299,7 +3302,7 @@
         "testId": "mock_1789684399252_0icxt",
         "testName": "CGL 20/09/2025 Shift-3 (English)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "C",
         "userTime": "01:33",
@@ -3322,7 +3325,8 @@
           "subtopic": "Active & Passive Voice",
           "conceptTested": "Conversion of modal perfect passive to active voice with an implied subject.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "engl_649f138c2d",
@@ -3331,7 +3335,7 @@
         "testId": "mock_1789684399252_0icxt",
         "testName": "CGL 21/09/2025 Shift-2 (English)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "B",
         "userTime": "00:41",
@@ -3354,7 +3358,8 @@
           "subtopic": "Active & Passive Voice",
           "conceptTested": "Conversion of past perfect passive to active voice.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "engl_89a64e99d0",
@@ -3555,7 +3560,7 @@
         "testId": "mock_1789684399252_0icxt",
         "testName": "CGL 23/09/2025 Shift-2 (English)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "B",
         "userTime": "00:30",
@@ -3578,7 +3583,8 @@
           "subtopic": "Active/Passive - Future Perfect Tense",
           "conceptTested": "Passive voice for future perfect tense (will have + past participle) requires 'will have been + past participle'.",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "engl_75102fddba",
@@ -3587,7 +3593,7 @@
         "testId": "mock_1789684399252_0icxt",
         "testName": "CGL 24/09/2025 Shift-1 (English)",
         "platform": "MockMatrix",
-        "status": "Correct (Slow)",
+        "status": "Unattempted",
         "chosenOption": "N/A",
         "correctOption": "C",
         "userTime": "00:33",
@@ -3610,7 +3616,8 @@
           "subtopic": "Active & Passive Voice - Modal Continuous",
           "conceptTested": "Conversion of past modal continuous active voice (Subject + modal + have + been + verb-ing + object) to passive voice (Object + modal + have + been + being + V3 + by subject).",
           "difficulty": "hard"
-        }
+        },
+        "isSlow": false
       },
       {
         "id": "engl_c700d4b880",

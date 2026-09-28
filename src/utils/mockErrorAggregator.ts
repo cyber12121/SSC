@@ -244,23 +244,47 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     const rawUserAnswer = String(q.userAnswer || q.selectedAnswer || q.chosenOption || '').trim();
     const hasUserAnswer = rawUserAnswer !== '' && !['unattempted', 'skipped', 'left', 'not attempted'].includes(rawUserAnswer.toLowerCase());
 
+    const rawTarget = String(q.answer || q.correctOption || q.correctAnswer || '').trim().toLowerCase();
+    const isExplicitWrongAnswer = Boolean(
+      hasUserAnswer &&
+      rawTarget &&
+      rawUserAnswer.toLowerCase() !== rawTarget
+    );
+
+    const isWrong =
+      isExplicitWrongAnswer ||
+      status.includes('wrong') ||
+      status.includes('incorrect') ||
+      (hasUserAnswer && q.isCorrect === false) ||
+      q.isCorrect === false ||
+      q.is_correct === false;
+
+    const isConfirmedCorrect =
+      (!isWrong && (
+        (status.includes('correct') && !status.includes('incorrect')) ||
+        status === 'right' ||
+        q.isCorrect === true ||
+        q.is_correct === true ||
+        (hasUserAnswer && rawTarget && rawUserAnswer.toLowerCase() === rawTarget)
+      ));
+
     if (
       status.includes('unattempt') ||
       status.includes('skip') ||
       status.includes('left') ||
       status === 'not attempted' ||
-      (!hasUserAnswer && q.isCorrect !== true && !status.includes('correct') && status !== 'right')
+      (!hasUserAnswer && !isConfirmedCorrect && !isWrong)
     ) {
       errorType = 'unattempted';
-    } else if (status.includes('speed') || status.includes('slow') || q.isSlow) {
-      errorType = 'speed_issue';
-    } else if (
-      status.includes('wrong') ||
-      status.includes('incorrect') ||
-      (hasUserAnswer && q.isCorrect === false) ||
-      (hasUserAnswer && q.answer && rawUserAnswer.toLowerCase() !== String(q.answer).toLowerCase())
-    ) {
+    } else if (isWrong) {
       errorType = 'wrong';
+    } else if ((status.includes('speed') || status.includes('slow') || q.isSlow) && isConfirmedCorrect) {
+      errorType = 'speed_issue';
+    } else if (isConfirmedCorrect) {
+      // Clean correct without speed issues - filter out
+      return;
+    } else {
+      errorType = hasUserAnswer ? 'wrong' : 'unattempted';
     }
 
     const qRca = findQuestionRca(q, globalRcaStore);

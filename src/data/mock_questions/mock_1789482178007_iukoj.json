@@ -1406,7 +1406,7 @@
     "subject": "Quantitative Aptitude",
     "section": "Quantitative Aptitude",
     "questionNumber": "Question 14",
-    "status": "Correct (Slow)",
+    "status": "Incorrect",
     "chosenOption": "B",
     "correctOption": "A",
     "userTime": "00:31",
@@ -1432,7 +1432,8 @@
       "conceptTested": "Relation between Cost Price and Selling Price using profit percentage fraction."
     },
     "question": "In case of a particular transaction, the profit earned is 14 2/7%. What fraction is the cost price of the selling price?",
-    "answer": "a"
+    "answer": "a",
+    "isSlow": false
   },
   {
     "testName": "SSC CGL 2026: Officer’s Friday - Mega Live Test",
