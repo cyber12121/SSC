@@ -39,9 +39,7 @@ import { SolutionViewer } from './SolutionViewer';
 import { RcaClassifier } from './review/RcaClassifier';
 import { safeStorage } from '../utils/safeStorage';
 import { getLanguageText } from '../utils/formatQuestionText';
-import { convertQuestionToSRSCardCandidate, addSRSCardsBatch } from '../utils/srsEngine';
-import { SrsCardConfirmModal } from './srs/SrsCardConfirmModal';
-import { SRSCard } from '../types/srs';
+
 import { db, auth } from '../firebase';
 import { collection, addDoc, deleteDoc, doc, setDoc } from 'firebase/firestore';
 import { 
@@ -154,9 +152,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
   const [isFinishingReview, setIsFinishingReview] = useState(false);
   const [finishToast, setFinishToast] = useState<string | null>(null);
-  const [srsCandidateCards, setSrsCandidateCards] = useState<Array<Partial<SRSCard>>>([]);
-  const [srsModalOpen, setSrsModalOpen] = useState(false);
-  const [srsToast, setSrsToast] = useState<string | null>(null);
+
   const [showSillyRevisionModal, setShowSillyRevisionModal] = useState<boolean>(false);
   const [revisedReviewKeys, setRevisedReviewKeys] = useState<Set<number>>(new Set());
 
@@ -2080,30 +2076,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         Solution
                       </span>
                       <div className="flex items-center space-x-2">
-                        <button
-                          onClick={() => {
-                            if (!question) return;
-                            const uTime = Number(current?.timeSpent || 0);
-                            const aTime = parseAvgTimeToSeconds(current?.avgTimeSeconds || current?.avgTime || question.avgTime) || 45;
-                            const isSlow = uTime > (aTime + 5);
-                            const cardSource = isSlow ? 'speed_trap' : (current?.isCorrect ? 'bookmark' : (current?.userAnswer ? 'quiz_wrong' : 'quiz_unattempted'));
 
-                            const candidate = convertQuestionToSRSCardCandidate(
-                              question,
-                              cardSource,
-                              result.chapter_title,
-                              current?.userAnswer,
-                              { userTime: uTime, avgTime: aTime }
-                            );
-                            setSrsCandidateCards([candidate]);
-                            setSrsModalOpen(true);
-                          }}
-                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer"
-                          title="Generate an Anki flashcard for this question"
-                        >
-                          <RotateCw className="w-3.5 h-3.5 text-white" />
-                          <span>✨ AI Anki</span>
-                        </button>
                         <button
                           onClick={() => {
                             const isSectional = result.is_mock && (
@@ -3111,33 +3084,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         </div>
       )}
 
-      {srsToast && (
-        <div className="fixed bottom-6 right-6 z-50 bg-indigo-900 text-white px-5 py-3 rounded-xl shadow-2xl text-xs sm:text-sm font-bold flex items-center gap-2.5 border border-indigo-500 animate-in slide-in-from-bottom duration-200">
-          <RotateCw className="w-5 h-5 text-amber-400" />
-          <span>{srsToast}</span>
-        </div>
-      )}
 
-      {/* SrsCardConfirmModal for Review Question */}
-      <SrsCardConfirmModal
-        isOpen={srsModalOpen}
-        cards={srsCandidateCards}
-        title="Add to Anki / SRS Deck"
-        sourceLabel={`Question #${questionNumberInSection || currentIdx + 1}`}
-        onConfirm={(confirmed) => {
-          if (confirmed.length > 0) {
-            addSRSCardsBatch(confirmed);
-            setSrsToast(`Successfully added ${confirmed.length} card to your SRS queue!`);
-            setTimeout(() => setSrsToast(null), 3000);
-          }
-          setSrsModalOpen(false);
-          setSrsCandidateCards([]);
-        }}
-        onCancel={() => {
-          setSrsModalOpen(false);
-          setSrsCandidateCards([]);
-        }}
-      />
 
       {/* ── SILLY MISTAKES REVISION SHEET MODAL ── */}
       {showSillyRevisionModal && (

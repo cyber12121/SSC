@@ -13,18 +13,7 @@ const QuizContainer = React.lazy(() => import('./components/QuizContainer').then
 const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
-const SrsHub = React.lazy(() => import('./components/srs/SrsHub').then(m => ({ default: m.SrsHub })));
-import { SrsCardConfirmModal } from './components/srs/SrsCardConfirmModal';
-import {
-  getStoredSRSCards,
-  computeDeckStats,
-  convertQuestionToSRSCardCandidate,
-  addSRSCardsBatch,
-  SRS_UPDATED_EVENT,
-  parseTimeSeconds,
-  getDefaultSubjectAvgTime
-} from './utils/srsEngine';
-import { SRSCard } from './types/srs';
+
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
 import { AiMentorChat } from './components/AiMentorChat';
@@ -109,7 +98,7 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
 };
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'srs' | 'botErrors'>(() => {
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors'>(() => {
     if (typeof window !== 'undefined') {
       try {
         const search = window.location.search;
@@ -119,7 +108,7 @@ export default function App() {
           if (v === 'botErrors' || params.has('syncQ') || params.has('syncBatch')) {
             return 'botErrors';
           }
-          if (v === 'mockScores' || v === 'drill' || v === 'srs' || v === 'dashboard' || v === 'bookmarks') {
+          if (v === 'mockScores' || v === 'drill' || v === 'dashboard' || v === 'bookmarks') {
             return v as any;
           }
         }
@@ -127,16 +116,8 @@ export default function App() {
     }
     return 'home';
   });
-  const [srsCards, setSrsCards] = useState<SRSCard[]>(() => getStoredSRSCards());
-  const [srsConfirmCards, setSrsConfirmCards] = useState<Array<Partial<SRSCard>>>([]);
-  const [srsConfirmOpen, setSrsConfirmOpen] = useState(false);
-  const [srsConfirmTitle, setSrsConfirmTitle] = useState('Enroll Missed Questions to SRS');
-  const [srsConfirmSource, setSrsConfirmSource] = useState<string | undefined>();
 
   useEffect(() => {
-    const updateSrs = () => setSrsCards(getStoredSRSCards());
-    window.addEventListener(SRS_UPDATED_EVENT, updateSrs);
-
     const handleUrlChange = () => {
       try {
         const params = new URLSearchParams(window.location.search);
@@ -149,12 +130,9 @@ export default function App() {
     window.addEventListener('popstate', handleUrlChange);
 
     return () => {
-      window.removeEventListener(SRS_UPDATED_EVENT, updateSrs);
       window.removeEventListener('popstate', handleUrlChange);
     };
   }, []);
-
-  const srsDueCount = useMemo(() => computeDeckStats(srsCards).dueToday, [srsCards]);
   const [dailyThoughtSalt, setDailyThoughtSalt] = useState(0);
   const dailyThought = useMemo(() => getDailyThought(dailyThoughtSalt), [dailyThoughtSalt]);
   const [mockReportsList, setMockReportsList] = useState<MockScoreReport[]>(() => {
@@ -1289,56 +1267,7 @@ export default function App() {
       }
     } catch { }
 
-    // Check for missed questions or speed traps (user time > existing avg + 5s) to offer SRS enrollment
-    try {
-      const candidates: SRSCard[] = [];
 
-      (results.questionDetails || []).forEach(d => {
-        if (!d.question) return;
-
-        const userTime = Number(d.timeSpent || 0);
-        const existingAvg = parseTimeSeconds(d.avgTimeSeconds || d.avgTime || d.question.avgTime) || getDefaultSubjectAvgTime(results.subject || d.question.subject);
-        const isSlow = userTime > (existingAvg + 5);
-
-        if (!d.selectedAnswer) {
-          // Unattempted
-          candidates.push(convertQuestionToSRSCardCandidate(
-            d.question,
-            'quiz_unattempted',
-            results.chapter_title,
-            '',
-            { userTime, avgTime: existingAvg }
-          ));
-        } else if (!d.isCorrect) {
-          // Incorrect
-          candidates.push(convertQuestionToSRSCardCandidate(
-            d.question,
-            'quiz_wrong',
-            results.chapter_title,
-            d.selectedAnswer,
-            { userTime, avgTime: existingAvg }
-          ));
-        } else if (isSlow) {
-          // Correct, but took longer than existing average + 5 seconds
-          candidates.push(convertQuestionToSRSCardCandidate(
-            d.question,
-            'speed_trap',
-            results.chapter_title,
-            d.selectedAnswer,
-            { userTime, avgTime: existingAvg }
-          ));
-        }
-      });
-
-      if (candidates.length > 0) {
-        setSrsConfirmCards(candidates);
-        setSrsConfirmTitle('Enroll Questions to SRS Revision');
-        setSrsConfirmSource(`${results.chapter_title} (${candidates.length} Questions: Missed & Slow Solves)`);
-        setSrsConfirmOpen(true);
-      }
-    } catch (srsErr) {
-      console.warn('SRS auto-enroll check skipped:', srsErr);
-    }
 
     return savedResult;
   };
@@ -2208,23 +2137,7 @@ export default function App() {
                   <span>Drills</span>
                 </button>
 
-                {/* 3. SRS Memory */}
-                <button
-                  onClick={() => setView('srs')}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                    view === 'srs'
-                      ? 'bg-indigo-50 text-indigo-700 shadow-2xs'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
-                  }`}
-                >
-                  <RotateCw className="w-3.5 h-3.5 text-indigo-500" />
-                  <span>SRS</span>
-                  {srsDueCount > 0 && (
-                    <span className="px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[10px] font-black animate-pulse shadow-2xs">
-                      {srsDueCount}
-                    </span>
-                  )}
-                </button>
+
 
                 {/* 4. Saved */}
                 <button
@@ -4053,23 +3966,7 @@ export default function App() {
               </motion.div>
             )}
 
-            {view === 'srs' && (
-              <motion.div
-                key="srs"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-              >
-                <React.Suspense fallback={
-                  <div className="flex flex-col items-center justify-center py-40">
-                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                    <p className="text-slate-500 font-bold">Loading SRS Anki studio...</p>
-                  </div>
-                }>
-                  <SrsHub onNavigateHome={resetToHome} rawChapterData={currentData} />
-                </React.Suspense>
-              </motion.div>
-            )}
+
             {view === 'botErrors' && (
               <motion.div
                 key="botErrors"
@@ -4129,24 +4026,7 @@ export default function App() {
           }}
         />
 
-        {/* SRS Missed Questions Confirmation Modal */}
-        <SrsCardConfirmModal
-          isOpen={srsConfirmOpen}
-          cards={srsConfirmCards}
-          title={srsConfirmTitle}
-          sourceLabel={srsConfirmSource}
-          onConfirm={(confirmed) => {
-            if (confirmed.length > 0) {
-              addSRSCardsBatch(confirmed);
-            }
-            setSrsConfirmOpen(false);
-            setSrsConfirmCards([]);
-          }}
-          onCancel={() => {
-            setSrsConfirmOpen(false);
-            setSrsConfirmCards([]);
-          }}
-        />
+
       </main>
 
       {/* Mobile Bottom Navigation Bar */}
@@ -4170,20 +4050,7 @@ export default function App() {
             <Zap className="w-4 h-4 mb-0.5" />
             <span>Drills</span>
           </button>
-          <button
-            onClick={() => setView('srs')}
-            className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer relative ${
-              view === 'srs' ? 'text-indigo-600 bg-indigo-50/60' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <RotateCw className="w-4 h-4 mb-0.5 text-indigo-500" />
-            <span>SRS</span>
-            {srsDueCount > 0 && (
-              <span className="absolute -top-1 right-1 px-1.5 py-0.2 bg-amber-500 text-white rounded-full text-[9px] font-black shadow-xs animate-pulse">
-                {srsDueCount}
-              </span>
-            )}
-          </button>
+
           <button
             onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
             className={`flex flex-col items-center py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${

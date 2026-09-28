@@ -29,6 +29,7 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'all' | 'traps' | 'formulas'>('all');
+  const [viewMode, setViewMode] = useState<'cheat_sheet' | 'full_theory'>('cheat_sheet');
 
   const cheatSheet = chapter?.cheat_sheet;
   const rules = cheatSheet?.rules || [];
@@ -117,65 +118,97 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({
               </button>
             </div>
 
-            {/* Controls: Search + Filter Tabs */}
-            <div className="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search rules, keywords (e.g. hair, scissors, formula, trap)..."
-                  className="w-full pl-9 pr-3.5 py-1.5 text-xs bg-white rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => setSearchQuery('')}
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
-                  >
-                    Clear
-                  </button>
-                )}
-              </div>
-
-              <div className="flex items-center gap-1 self-start sm:self-auto bg-slate-100 p-0.5 rounded-lg border border-slate-200/60">
-                <button
-                  onClick={() => setActiveTab('all')}
-                  className={`px-2.5 py-1 text-[11px] font-semibold rounded-md transition-all ${
-                    activeTab === 'all'
-                      ? 'bg-white text-indigo-700 shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                >
-                  All ({rules.length})
-                </button>
-                <button
-                  onClick={() => setActiveTab('traps')}
-                  className={`px-2.5 py-1 text-[11px] font-semibold rounded-md transition-all ${
-                    activeTab === 'traps'
-                      ? 'bg-white text-rose-700 shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                >
-                  Exam Traps ⚠️
-                </button>
-                <button
-                  onClick={() => setActiveTab('formulas')}
-                  className={`px-2.5 py-1 text-[11px] font-semibold rounded-md transition-all ${
-                    activeTab === 'formulas'
-                      ? 'bg-white text-indigo-700 shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                >
-                  Formulas ⚡
-                </button>
-              </div>
+            {/* View Mode Toggle: Formula Sheet vs Full Theory As in Book */}
+            <div className="mt-3.5 flex items-center gap-2 border-b border-slate-200/60 pb-3">
+              <button
+                onClick={() => setViewMode('cheat_sheet')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  viewMode === 'cheat_sheet'
+                    ? 'bg-indigo-600 text-white shadow-xs'
+                    : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+                }`}
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>⚡ 5-Min Formula Cheat Sheet</span>
+              </button>
+              <button
+                onClick={() => setViewMode('full_theory')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  viewMode === 'full_theory'
+                    ? 'bg-indigo-600 text-white shadow-xs'
+                    : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+                }`}
+              >
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>📖 Complete Theory (As in Book)</span>
+              </button>
             </div>
+
+            {/* Controls: Search + Filter Tabs (Visible in Cheat Sheet mode) */}
+            {viewMode === 'cheat_sheet' && (
+              <div className="mt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                <div className="relative flex-1">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search rules, keywords (e.g. hair, scissors, formula, trap)..."
+                    className="w-full pl-9 pr-3.5 py-1.5 text-xs bg-white rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-1 self-start sm:self-auto bg-slate-100 p-0.5 rounded-lg border border-slate-200/60">
+                  <button
+                    onClick={() => setActiveTab('all')}
+                    className={`px-2.5 py-1 text-[11px] font-semibold rounded-md transition-all ${
+                      activeTab === 'all'
+                        ? 'bg-white text-indigo-700 shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    All ({rules.length})
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('traps')}
+                    className={`px-2.5 py-1 text-[11px] font-semibold rounded-md transition-all ${
+                      activeTab === 'traps'
+                        ? 'bg-white text-rose-700 shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Exam Traps ⚠️
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('formulas')}
+                    className={`px-2.5 py-1 text-[11px] font-semibold rounded-md transition-all ${
+                      activeTab === 'formulas'
+                        ? 'bg-white text-indigo-700 shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Formulas ⚡
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Rules Body (Scrollable) */}
           <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-slate-50/50">
-            {filteredRules.length === 0 ? (
+            {viewMode === 'full_theory' ? (
+              <div className="bg-white rounded-xl p-5 sm:p-7 border border-slate-200/80 shadow-xs font-sans text-xs sm:text-[13px] text-slate-800 leading-relaxed whitespace-pre-wrap selection:bg-indigo-100">
+                {(cheatSheet as any)?.full_theory || 'Complete theory text loaded.'}
+              </div>
+            ) : filteredRules.length === 0 ? (
               <div className="py-12 text-center text-slate-400">
                 <Filter className="w-8 h-8 mx-auto mb-2 opacity-40" />
                 <p className="text-sm font-semibold text-slate-600">No matching rules found</p>

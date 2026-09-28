@@ -40,9 +40,7 @@ import { QuizResult } from '../types';
 import { buildMockAiSummary } from '../utils/mockAiContext';
 import { AiFocusedScope } from '../types/aiScope';
 import { AI_SCOPE_EVENT } from '../utils/aiScopeHelper';
-import { SrsCardConfirmModal } from './srs/SrsCardConfirmModal';
-import { SRSCard } from '../types/srs';
-import { addSRSCardsBatch } from '../utils/srsEngine';
+
 
 export interface ChatAttachment {
   name: string;
@@ -1108,12 +1106,9 @@ export function AiMentorChat({
   const [showContextDrawer, setShowContextDrawer] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  // Attachment & Anki State
+  // Attachment State
   const [selectedAttachment, setSelectedAttachment] = useState<ChatAttachment | null>(null);
   const [attachmentError, setAttachmentError] = useState<string | null>(null);
-  const [isConvertingToAnki, setIsConvertingToAnki] = useState(false);
-  const [ankiConfirmCards, setAnkiConfirmCards] = useState<Array<Partial<SRSCard>>>([]);
-  const [ankiConfirmOpen, setAnkiConfirmOpen] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -1154,49 +1149,7 @@ export function AiMentorChat({
     reader.readAsDataURL(file);
   };
 
-  const handleCreateAnkiFromMessage = async (assistantText: string) => {
-    setIsConvertingToAnki(true);
-    try {
-      const res = await fetch('/api/srs/generate-cards', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          textNotes: assistantText,
-          prompt: 'Extract 1 to 3 high-yield Anki flashcards with core concepts, shortcuts, and mnemonics from this explanation.',
-          count: 2
-        })
-      });
-      const data = await res.json();
-      if (data?.cards && data.cards.length > 0) {
-        setAnkiConfirmCards(data.cards);
-        setAnkiConfirmOpen(true);
-      } else {
-        const singleCard: Partial<SRSCard> = {
-          subject: activeScope?.subject || 'General',
-          type: 'general',
-          front: assistantText.slice(0, 120).split('\n')[0] || 'Key Concept',
-          back: assistantText,
-          source: 'ai_generated',
-          sourceTitle: 'Tommy AI Chat'
-        };
-        setAnkiConfirmCards([singleCard]);
-        setAnkiConfirmOpen(true);
-      }
-    } catch {
-      const singleCard: Partial<SRSCard> = {
-        subject: activeScope?.subject || 'General',
-        type: 'general',
-        front: 'Concept from Tommy Chat',
-        back: assistantText,
-        source: 'ai_generated',
-        sourceTitle: 'Tommy AI Chat'
-      };
-      setAnkiConfirmCards([singleCard]);
-      setAnkiConfirmOpen(true);
-    } finally {
-      setIsConvertingToAnki(false);
-    }
-  };
+
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -1983,19 +1936,7 @@ ${instructions}`;
                         <span>{msg.timestamp}</span>
                         {isBot && msg.text && (
                           <>
-                            <button
-                              onClick={() => handleCreateAnkiFromMessage(msg.text)}
-                              disabled={isConvertingToAnki}
-                              className="opacity-0 group-hover:opacity-100 hover:text-purple-600 transition-all flex items-center gap-1 text-[9px] font-bold text-slate-500 hover:bg-purple-50 px-1.5 py-0.5 rounded cursor-pointer"
-                              title="Extract Anki flashcards from this explanation"
-                            >
-                              {isConvertingToAnki ? (
-                                <Loader2 className="w-2.5 h-2.5 text-purple-600 animate-spin" />
-                              ) : (
-                                <Sparkles className="w-2.5 h-2.5 text-purple-600" />
-                              )}
-                              <span>+ Anki Card</span>
-                            </button>
+
                             <button
                               onClick={() => copyToClipboard(msg.text, msg.id)}
                               className="opacity-0 group-hover:opacity-100 hover:text-indigo-600 transition-all flex items-center gap-0.5"
@@ -2172,24 +2113,7 @@ ${instructions}`;
         )}
       </AnimatePresence>
 
-      {/* Confirmation Modal for Cards Generated from Tommy Chat */}
-      <SrsCardConfirmModal
-        isOpen={ankiConfirmOpen}
-        cards={ankiConfirmCards}
-        title="Review & Confirm Anki Cards from Tommy"
-        sourceLabel="Tommy AI Conversation"
-        onConfirm={(confirmed) => {
-          if (confirmed.length > 0) {
-            addSRSCardsBatch(confirmed);
-          }
-          setAnkiConfirmOpen(false);
-          setAnkiConfirmCards([]);
-        }}
-        onCancel={() => {
-          setAnkiConfirmOpen(false);
-          setAnkiConfirmCards([]);
-        }}
-      />
+
     </>
   );
 }
