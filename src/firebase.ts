@@ -1,10 +1,38 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-import { getFirestore, collection, addDoc, getDocs, query, where, onSnapshot, doc } from 'firebase/firestore';
+import {
+  getFirestore,
+  initializeFirestore,
+  memoryLocalCache,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where,
+  onSnapshot,
+  doc
+} from 'firebase/firestore';
 import firebaseConfig from '../firebase-applet-config.json';
 
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+
+// Initialize Firestore with memory cache so IndexedDB storage restrictions
+// (which cause "Access to storage is not allowed from this context" and "AbortError: signal is aborted without reason")
+// do not trigger unhandled promise rejections or abort ongoing fetch streams.
+let firestoreDb: ReturnType<typeof getFirestore>;
+try {
+  firestoreDb = initializeFirestore(
+    app,
+    {
+      localCache: memoryLocalCache()
+    },
+    firebaseConfig.firestoreDatabaseId
+  );
+} catch {
+  firestoreDb = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+}
+
+export const db = firestoreDb;
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 

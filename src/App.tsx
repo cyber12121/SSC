@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, BookMarked, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, RotateCw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';

@@ -9,10 +9,20 @@ const getDB = (): Promise<IDBDatabase | null> => {
   if (dbPromise) return dbPromise;
   dbPromise = new Promise((resolve) => {
     try {
-      if (typeof window === 'undefined' || !window.indexedDB) {
+      if (typeof window === 'undefined') {
         return resolve(null);
       }
-      const request = indexedDB.open(DB_NAME, 1);
+      let idb: IDBFactory | undefined;
+      try {
+        idb = window.indexedDB;
+      } catch {
+        // Access to indexedDB prohibited by context
+        return resolve(null);
+      }
+      if (!idb) {
+        return resolve(null);
+      }
+      const request = idb.open(DB_NAME, 1);
       request.onupgradeneeded = () => {
         try {
           const db = request.result;
@@ -24,9 +34,17 @@ const getDB = (): Promise<IDBDatabase | null> => {
         }
       };
       request.onsuccess = () => resolve(request.result);
-      request.onerror = () => {
+      request.onerror = (e) => {
+        try {
+          e.preventDefault?.();
+          e.stopPropagation?.();
+        } catch {}
         dbPromise = null; // allow retry on next call
         resolve(null); // Never reject — prevents "Access to storage is not allowed from this context" uncaught error
+      };
+      request.onblocked = () => {
+        dbPromise = null;
+        resolve(null);
       };
     } catch {
       dbPromise = null;
