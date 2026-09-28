@@ -154,15 +154,16 @@ export function encodeQuestionForSync(q: TelegramQuizQuestion): string {
 }
 
 export function encodeBatchForSync(questions: TelegramQuizQuestion[]): string {
-  const list = questions.slice(0, 15).map((q) => ({
-    id: q.id,
-    q: (q.question || '').slice(0, 120),
-    opts: (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 40)),
-    ans: typeof q.correctOptionIndex === 'number' ? q.correctOptionIndex : 0,
-    exp: (q.fullSolution || q.explanation || '').slice(0, 140),
-    sub: q.subject || 'general_awareness',
-    top: (q.topic || 'Telegram Quiz').slice(0, 30),
-  }));
+  // Compact tuple format: [id, q, opts, ans, exp, sub, top]
+  const list = questions.slice(0, 20).map((q) => [
+    q.id || '',
+    (q.question || '').slice(0, 120),
+    (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 40)),
+    typeof q.correctOptionIndex === 'number' ? q.correctOptionIndex : 0,
+    (q.fullSolution || q.explanation || '').slice(0, 140),
+    q.subject || 'general_awareness',
+    (q.topic || 'Telegram Quiz').slice(0, 30),
+  ]);
   return Buffer.from(JSON.stringify(list), 'utf8').toString('base64url');
 }
 
@@ -171,10 +172,13 @@ export function buildSafeWebSyncUrl(questions: TelegramQuizQuestion[]): string {
     return 'https://ssc27.vercel.app/?view=botErrors';
   }
 
+  // Reverse so newest mistakes are prioritized first
+  const listToSync = [...questions].reverse();
+
   // Telegram InlineKeyboardButton url has a strict 2048-byte limit; keep safely <= 1800 chars
-  let count = Math.min(questions.length, 12);
+  let count = Math.min(listToSync.length, 20);
   while (count > 0) {
-    const slice = questions.slice(0, count);
+    const slice = listToSync.slice(0, count);
     const payload = encodeBatchForSync(slice);
     const candidateUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${payload}`;
     if (candidateUrl.length <= 1800) {
@@ -184,8 +188,8 @@ export function buildSafeWebSyncUrl(questions: TelegramQuizQuestion[]): string {
   }
 
   // Fallback to single question payload
-  if (questions.length > 0) {
-    const singlePayload = encodeQuestionForSync(questions[0]);
+  if (listToSync.length > 0) {
+    const singlePayload = encodeQuestionForSync(listToSync[0]);
     const singleUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${singlePayload}`;
     if (singleUrl.length <= 1800) {
       return singleUrl;
@@ -289,11 +293,24 @@ async function sendCompletionSummary(botInstance: Bot, session: UserQuizSession)
 
   const afterQuizKeyboard = new InlineKeyboard();
 
-  if (score < total) {
-    const missed = (session.missedQuestions && session.missedQuestions.length > 0)
-      ? session.missedQuestions
-      : session.questions.slice(0, 25);
-    const syncUrl = buildSafeWebSyncUrl(missed);
+  const missedInSession = (session.missedQuestions && session.missedQuestions.length > 0)
+    ? session.missedQuestions
+    : (score < total ? session.questions.slice(0, 25) : []);
+
+  const allUserMistakes = getUserMistakes(session.userId, 'all');
+  const combinedMap = new Map<string, TelegramQuizQuestion>();
+  for (const q of allUserMistakes) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  for (const q of missedInSession) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  const combinedList = Array.from(combinedMap.values());
+
+  if (combinedList.length > 0) {
+    const syncUrl = buildSafeWebSyncUrl(combinedList);
     afterQuizKeyboard
       .url(`📖 View Solutions & AI Tutor on Web`, syncUrl)
       .row();

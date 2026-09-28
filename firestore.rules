@@ -71,5 +71,14 @@ service cloud.firestore {
       allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
     }
 
+    // User Mistakes Collection (Permanent Cloud Mistake Notebook)
+    match /user_mistakes_{userId}/{docId} {
+      allow read, write, delete: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    match /users/{userId}/mistakes/{mistakeId} {
+      allow read, write, delete: if isAuthenticated() && request.auth.uid == userId;
+    }
+
   }
 }

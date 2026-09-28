@@ -266,31 +266,7 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
       )}
 
       {/* ─── High-Yield Practice Hub & Feature Cards ─── */}
-      <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-        {/* SRS Spaced Repetition */}
-        <div 
-          onClick={() => setView('srs' as any)}
-          className="group bg-white rounded-xl p-3 border border-slate-200/80 shadow-xs hover:border-indigo-300 hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
-        >
-          <div className="flex items-start justify-between">
-            <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center border border-indigo-100 group-hover:scale-105 transition-transform">
-              <RotateCw className="w-3.5 h-3.5 text-indigo-600" />
-            </div>
-            <span className="px-1.5 py-0.2 rounded text-[9px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 border border-indigo-200">
-              SM-2 Anki
-            </span>
-          </div>
-          <div className="mt-2">
-            <h4 className="text-xs font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">SRS Memory & Anki</h4>
-            <p className="text-[11px] text-slate-500 mt-0.5 leading-relaxed">
-              Spaced repetition flashcards for Vocab, Static GK, Math formulas, and test errors.
-            </p>
-          </div>
-          <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-indigo-600">
-            <span>Daily Review</span>
-            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-          </div>
-        </div>
+      <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
 
         {/* Speed Drill */}
         <div 

@@ -5533,7 +5533,16 @@ function recordMistake(rawUserId, q, source = "telegram_quiz", isCorrect = false
     userMap = /* @__PURE__ */ new Map();
     userMistakesMap.set(userId, userMap);
   }
-  const existing = userMap.get(q.id);
+  let existing = userMap.get(q.id);
+  if (!existing && q.question) {
+    const qNorm = q.question.trim().toLowerCase().replace(/\s+/g, " ");
+    for (const m of userMap.values()) {
+      if (m.question && m.question.trim().toLowerCase().replace(/\s+/g, " ") === qNorm) {
+        existing = m;
+        break;
+      }
+    }
+  }
   if (isCorrect) {
     if (existing) {
       existing.mastered = true;
@@ -40783,24 +40792,25 @@ function encodeQuestionForSync(q) {
   return Buffer.from(JSON.stringify(min), "utf8").toString("base64url");
 }
 function encodeBatchForSync(questions) {
-  const list = questions.slice(0, 15).map((q) => ({
-    id: q.id,
-    q: (q.question || "").slice(0, 120),
-    opts: (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 40)),
-    ans: typeof q.correctOptionIndex === "number" ? q.correctOptionIndex : 0,
-    exp: (q.fullSolution || q.explanation || "").slice(0, 140),
-    sub: q.subject || "general_awareness",
-    top: (q.topic || "Telegram Quiz").slice(0, 30)
-  }));
+  const list = questions.slice(0, 20).map((q) => [
+    q.id || "",
+    (q.question || "").slice(0, 120),
+    (q.options || []).slice(0, 4).map((o) => String(o).slice(0, 40)),
+    typeof q.correctOptionIndex === "number" ? q.correctOptionIndex : 0,
+    (q.fullSolution || q.explanation || "").slice(0, 140),
+    q.subject || "general_awareness",
+    (q.topic || "Telegram Quiz").slice(0, 30)
+  ]);
   return Buffer.from(JSON.stringify(list), "utf8").toString("base64url");
 }
 function buildSafeWebSyncUrl(questions) {
   if (!questions || questions.length === 0) {
     return "https://ssc27.vercel.app/?view=botErrors";
   }
-  let count = Math.min(questions.length, 12);
+  const listToSync = [...questions].reverse();
+  let count = Math.min(listToSync.length, 20);
   while (count > 0) {
-    const slice = questions.slice(0, count);
+    const slice = listToSync.slice(0, count);
     const payload = encodeBatchForSync(slice);
     const candidateUrl = `https://ssc27.vercel.app/?view=botErrors&syncBatch=${payload}`;
     if (candidateUrl.length <= 1800) {
@@ -40808,8 +40818,8 @@ function buildSafeWebSyncUrl(questions) {
     }
     count--;
   }
-  if (questions.length > 0) {
-    const singlePayload = encodeQuestionForSync(questions[0]);
+  if (listToSync.length > 0) {
+    const singlePayload = encodeQuestionForSync(listToSync[0]);
     const singleUrl = `https://ssc27.vercel.app/?view=botErrors&syncQ=${singlePayload}`;
     if (singleUrl.length <= 1800) {
       return singleUrl;
@@ -40894,9 +40904,20 @@ async function sendCompletionSummary(botInstance, session) {
 
 _${comment}_`;
   const afterQuizKeyboard = new InlineKeyboard();
-  if (score < total) {
-    const missed = session.missedQuestions && session.missedQuestions.length > 0 ? session.missedQuestions : session.questions.slice(0, 25);
-    const syncUrl = buildSafeWebSyncUrl(missed);
+  const missedInSession = session.missedQuestions && session.missedQuestions.length > 0 ? session.missedQuestions : score < total ? session.questions.slice(0, 25) : [];
+  const allUserMistakes = getUserMistakes(session.userId, "all");
+  const combinedMap = /* @__PURE__ */ new Map();
+  for (const q of allUserMistakes) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  for (const q of missedInSession) {
+    const key = q.id || q.question.trim().toLowerCase();
+    combinedMap.set(key, q);
+  }
+  const combinedList = Array.from(combinedMap.values());
+  if (combinedList.length > 0) {
+    const syncUrl = buildSafeWebSyncUrl(combinedList);
     afterQuizKeyboard.url(`\u{1F4D6} View Solutions & AI Tutor on Web`, syncUrl).row();
   }
   afterQuizKeyboard.text("\u{1F4C1} Chapter Bank", "nav_chapter_bank").text("\u{1F3AF} Mock Errors", "nav_mock_errors").row().text("\u26A1 Speed Lab", "nav_speed_lab").text("\u{1F3E0} Menu", "nav_root");

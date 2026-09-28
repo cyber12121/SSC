@@ -13,7 +13,6 @@ const QuizContainer = React.lazy(() => import('./components/QuizContainer').then
 const ReviewView = React.lazy(() => import('./components/Review').then(m => ({ default: m.ReviewView })));
 const DrillHub = React.lazy(() => import('./components/drill/DrillHub').then(m => ({ default: m.DrillHub })));
 const MockScoreDashboard = React.lazy(() => import('./components/MockScoreDashboard').then(m => ({ default: m.MockScoreDashboard })));
-const SrsHub = React.lazy(() => import('./components/srs/SrsHub').then(m => ({ default: m.SrsHub })));
 
 import { MockScoreReport } from './types/mockScore';
 import initialMockReports from './data/mock_reports.json';
@@ -44,6 +43,7 @@ import { getInitialTheme, setAppliedTheme } from './utils/theme';
 import { getDailyThought } from './utils/dailyThoughts';
 
 import { getCachedData, setCachedData, clearCachedData } from './utils/cache';
+import { useToast } from './components/ui/Toast';
 
 const GK_ICONS: Record<string, any> = {
   Landmark,
@@ -107,7 +107,8 @@ const isLocalhost = typeof window !== 'undefined' && (
 );
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors' | 'srs'>(() => {
+  const { showToast, showConfirm } = useToast();
+  const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors'>(() => {
     if (typeof window !== 'undefined') {
       try {
         const search = window.location.search;
@@ -117,7 +118,7 @@ export default function App() {
           if (v === 'botErrors' || params.has('syncQ') || params.has('syncBatch')) {
             return 'botErrors';
           }
-          if (v === 'mockScores' || v === 'drill' || v === 'dashboard' || v === 'bookmarks' || v === 'srs') {
+          if (v === 'mockScores' || v === 'drill' || v === 'dashboard' || v === 'bookmarks') {
             return v as any;
           }
         }
@@ -543,96 +544,6 @@ export default function App() {
     fetchDeleted();
   }, [user]);
 
-  // Helper to re-hydrate global RCA store & Silly Mistakes from cloud-stored results
-  const hydrateRcaFromResults = useCallback((resultsList: QuizResult[]) => {
-    try {
-      const globalRaw = safeStorage.getItem('cgl_rca_global_store');
-      const globalStore: Record<string, any> = globalRaw ? JSON.parse(globalRaw) : {};
-      let rcaHydrated = false;
-
-      resultsList.forEach(r => {
-        // 1. From r.rcaMap if attached to result
-        const rMap = (r as any).rcaMap;
-        if (rMap && typeof rMap === 'object') {
-          Object.entries(rMap).forEach(([idxStr, rcaEntry]: [string, any]) => {
-            if (rcaEntry && rcaEntry.tag) {
-              const idx = parseInt(idxStr, 10);
-              const qd = r.questionDetails?.[idx];
-              const q = qd?.question;
-              const qId = q?.id || (qd as any)?.questionId || (r.id ? `${r.id}_${idx + 1}` : undefined);
-              const qText = (q?.question || (qd as any)?.questionText || '').trim().toLowerCase();
-
-              if (qId && !globalStore[qId]) {
-                globalStore[qId] = {
-                  ...rcaEntry,
-                  id: qId,
-                  mockId: r.id,
-                  mockTitle: r.chapter_title,
-                  subject: r.subject || q?.subject || 'General Awareness',
-                  topic: q?.topic || (qd as any)?.topic || 'General'
-                };
-                rcaHydrated = true;
-              }
-              if (qText && !globalStore[qText]) {
-                globalStore[qText] = {
-                  ...rcaEntry,
-                  id: qId || qText,
-                  mockId: r.id,
-                  mockTitle: r.chapter_title,
-                  subject: r.subject || q?.subject || 'General Awareness',
-                  topic: q?.topic || (qd as any)?.topic || 'General',
-                  questionText: qText
-                };
-                rcaHydrated = true;
-              }
-            }
-          });
-        }
-
-        // 2. From questionDetails directly
-        (r.questionDetails || []).forEach((qd, idx) => {
-          const rcaEntry = qd.rca || qd.question?.rca;
-          if (rcaEntry && rcaEntry.tag) {
-            const q = qd.question;
-            const qId = q?.id || (qd as any)?.questionId || (r.id ? `${r.id}_${idx + 1}` : undefined);
-            const qText = (q?.question || (qd as any)?.questionText || '').trim().toLowerCase();
-
-            if (qId && !globalStore[qId]) {
-              globalStore[qId] = {
-                ...rcaEntry,
-                id: qId,
-                mockId: r.id,
-                mockTitle: r.chapter_title,
-                subject: r.subject || q?.subject || 'General Awareness',
-                topic: q?.topic || (qd as any)?.topic || 'General'
-              };
-              rcaHydrated = true;
-            }
-            if (qText && !globalStore[qText]) {
-              globalStore[qText] = {
-                ...rcaEntry,
-                id: qId || qText,
-                mockId: r.id,
-                mockTitle: r.chapter_title,
-                subject: r.subject || q?.subject || 'General Awareness',
-                topic: q?.topic || (qd as any)?.topic || 'General',
-                questionText: qText
-              };
-              rcaHydrated = true;
-            }
-          }
-        });
-      });
-
-      if (rcaHydrated) {
-        safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
-        setRcaVersion(v => v + 1);
-      }
-    } catch (e) {
-      console.warn('Error hydrating global RCA store from results:', e);
-    }
-  }, []);
-
   // Fetch Results
   const fetchResults = useCallback(async () => {
     if (!user) {
@@ -720,9 +631,6 @@ export default function App() {
 
       setUserResults(filtered);
       safeStorage.setItem(`cgl_user_results_cache_${user.uid}`, JSON.stringify(filtered.slice(0, 100)));
-
-      // Re-hydrate global RCA store & Silly Mistakes from cloud-stored results
-      hydrateRcaFromResults(filtered);
     } catch (error) {
       console.warn('Error fetching results with orderBy, attempting fallback query:', error);
       try {
@@ -768,14 +676,13 @@ export default function App() {
         });
         setUserResults(filtered);
         safeStorage.setItem(`cgl_user_results_cache_${user.uid}`, JSON.stringify(filtered.slice(0, 100)));
-        hydrateRcaFromResults(filtered);
       } catch (fallbackErr) {
         console.warn('Fallback result fetch failed, keeping local cache:', fallbackErr);
       }
     } finally {
       setLoadingResults(false);
     }
-  }, [user, hydrateRcaFromResults]);
+  }, [user]);
 
   // Refetch results when the authenticated user changes
   useEffect(() => {
@@ -1385,68 +1292,82 @@ export default function App() {
     }
 
     // Record wrong & unattempted answers to local RCA store & live mistakes notebook (/api/mistakes)
+    // Prompt the user for confirmation before adding to the mistake section
     try {
       const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
       if (errorList.length > 0) {
+        let shouldAdd = false;
         try {
-          const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
-          const rcaStore = rcaRaw ? JSON.parse(rcaRaw) : {};
+          shouldAdd = await showConfirm({
+            title: 'Add to Mistake Notebook?',
+            message: `You had ${errorList.length} incorrect or unattempted question(s). Would you like to add them to your Mistake Notebook for future revision?`,
+            confirmLabel: 'Add to Mistakes',
+            cancelLabel: 'Skip',
+            variant: 'normal'
+          });
+        } catch {
+          shouldAdd = window.confirm(`You had ${errorList.length} incorrect or unattempted question(s). Would you like to add them to your Mistake Notebook?`);
+        }
+
+        if (shouldAdd) {
+          try {
+            const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
+            const rcaStore = rcaRaw ? JSON.parse(rcaRaw) : {};
+            for (const item of errorList) {
+              if (!item.question) continue;
+              const q = item.question;
+              const qId = q.id || `quiz_${savedResult.id}_${item.q_num}`;
+              const hasAnswer = Boolean(item.selectedAnswer && String(item.selectedAnswer).trim() !== '');
+              rcaStore[qId] = {
+                id: qId,
+                q_num: item.q_num,
+                mockId: isMockTest ? savedResult.id : undefined,
+                mockTitle: fullResult.chapter_title,
+                subject: q.subject || fullResult.subject || 'General Awareness',
+                topic: q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice',
+                questionText: q.question,
+                options: q.options,
+                answer: q.answer,
+                solution: q.solution || (q as any).explanation || '',
+                userAnswer: item.selectedAnswer || '',
+                selectedAnswer: item.selectedAnswer || '',
+                chosenOption: item.selectedAnswer || '',
+                isCorrect: false,
+                status: hasAnswer ? 'Incorrect' : 'Unattempted',
+                errorType: hasAnswer ? 'wrong' : 'unattempted',
+                isFromMock: isMockTest,
+                classifiedAt: new Date().toISOString()
+              };
+            }
+            safeStorage.setItem('cgl_rca_global_store', JSON.stringify(rcaStore));
+          } catch (err) {
+            console.warn('Could not update cgl_rca_global_store:', err);
+          }
+
           for (const item of errorList) {
             if (!item.question) continue;
-            const q = item.question;
-            const qId = q.id || `quiz_${savedResult.id}_${item.q_num}`;
-            const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
-            const hasAnswer = Boolean(item.selectedAnswer && String(item.selectedAnswer).trim() !== '');
-            rcaStore[qId] = {
-              id: qId,
-              q_num: item.q_num,
-              mockId: isMockTest ? savedResult.id : undefined,
-              mockTitle: fullResult.chapter_title,
-              subject: q.subject || fullResult.subject || 'General Awareness',
-              topic: q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice',
-              questionText: q.question,
-              options: q.options,
-              answer: q.answer,
-              solution: q.solution || (q as any).explanation || '',
-              userAnswer: item.selectedAnswer || '',
-              selectedAnswer: item.selectedAnswer || '',
-              chosenOption: item.selectedAnswer || '',
-              isCorrect: false,
-              status: hasAnswer ? 'Incorrect' : 'Unattempted',
-              errorType: hasAnswer ? 'wrong' : 'unattempted',
-              isFromMock: isMockTest,
-              classifiedAt: new Date().toISOString()
-            };
-            if (qTextNorm) {
-              rcaStore[qTextNorm] = rcaStore[qId];
-            }
+            fetch('/api/mistakes', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                action: 'record',
+                userId: user ? user.uid : undefined,
+                questionData: {
+                  id: item.question.id || `web_quiz_${Date.now()}_${item.q_num}`,
+                  question: item.question.question,
+                  options: item.question.options,
+                  correctOption: item.question.answer,
+                  explanation: (item.question as any).explanation || item.question.solution || '',
+                  subject: item.question.subject || results.subject || 'general_awareness',
+                  topic: item.question.topic || results.chapter_title || 'Quiz Practice',
+                  isMock: isMockTest
+                }
+              })
+            }).catch(() => {});
           }
-          safeStorage.setItem('cgl_rca_global_store', JSON.stringify(rcaStore));
-        } catch (err) {
-          console.warn('Could not update cgl_rca_global_store:', err);
-        }
-      }
 
-      for (const item of errorList) {
-        if (!item.question) continue;
-        fetch('/api/mistakes', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            action: 'record',
-            userId: user ? user.uid : undefined,
-            questionData: {
-              id: item.question.id || `web_quiz_${Date.now()}_${item.q_num}`,
-              question: item.question.question,
-              options: item.question.options,
-              correctOption: item.question.answer,
-              explanation: (item.question as any).explanation || item.question.solution || '',
-              subject: item.question.subject || results.subject || 'general_awareness',
-              topic: item.question.topic || results.chapter_title || 'Quiz Practice',
-              isMock: isMockTest
-            }
-          })
-        }).catch(() => {});
+          showToast(`Added ${errorList.length} question(s) to Mistake Notebook.`, 'success');
+        }
       }
     } catch { }
 
@@ -2471,22 +2392,7 @@ export default function App() {
                   <span>Drills</span>
                 </button>
 
-                {/* 3. SRS Memory */}
-                <button
-                  onClick={() => setView('srs')}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                    view === 'srs'
-                      ? 'bg-indigo-50 text-indigo-700 shadow-2xs'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
-                  }`}
-                >
-                  <RotateCw className="w-3.5 h-3.5" />
-                  <span>SRS Memory</span>
-                </button>
-
-
-
-                {/* 4. Saved */}
+                {/* 3. Saved */}
                 <button
                   onClick={() => { setView('bookmarks'); setSelectedBookmarkSubject(null); }}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
@@ -4389,24 +4295,6 @@ export default function App() {
               </motion.div>
             )}
 
-            {view === 'srs' && (
-              <motion.div
-                key="srs"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-              >
-                <React.Suspense fallback={
-                  <div className="flex flex-col items-center justify-center py-40">
-                    <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
-                    <p className="text-slate-500 font-bold">Loading SRS memory cards...</p>
-                  </div>
-                }>
-                  <SrsHub onNavigateHome={() => setView('home')} />
-                </React.Suspense>
-              </motion.div>
-            )}
-
             {view === 'mockScores' && (
               <motion.div
                 key="mockScores"
@@ -4550,16 +4438,6 @@ export default function App() {
           >
             <Zap className="w-4 h-4 mb-0.5" />
             <span>Drills</span>
-          </button>
-
-          <button
-            onClick={() => setView('srs')}
-            className={`flex flex-col items-center py-1 px-2 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
-              view === 'srs' ? 'text-indigo-600 bg-indigo-50/60' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <RotateCw className="w-4 h-4 mb-0.5" />
-            <span>SRS</span>
           </button>
 
           <button

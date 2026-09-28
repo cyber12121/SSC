@@ -48,7 +48,16 @@ export const TelegramMistakesModal: React.FC<TelegramMistakesModalProps> = ({
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
       if (Array.isArray(data.mistakes)) {
-        setMistakes(data.mistakes);
+        const seen = new Set<string>();
+        const deduped: RecordedMistake[] = [];
+        for (const item of data.mistakes) {
+          const key = (item.question || '').trim().toLowerCase().replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ').replace(/[?.!,:;'"()\[\]{}]+$/g, '') || item.id;
+          if (!seen.has(key)) {
+            seen.add(key);
+            deduped.push(item);
+          }
+        }
+        setMistakes(deduped);
       }
     } catch (err: any) {
       console.error('[TelegramMistakesModal] Fetch error:', err);
@@ -117,6 +126,28 @@ export const TelegramMistakesModal: React.FC<TelegramMistakesModalProps> = ({
       alert('Error deleting question: ' + (err?.message || err));
     } finally {
       setDeletingId(null);
+    }
+  };
+
+  const handleClearAll = async () => {
+    if (!window.confirm('Are you sure you want to completely clear ALL mistakes from the Telegram and Mock Mistake Bank?')) {
+      return;
+    }
+    setLoading(true);
+    try {
+      await fetch('/api/mistakes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'clear_all' }),
+      });
+
+      setMistakes([]);
+      showToast('All mistakes cleared successfully!');
+    } catch (err: any) {
+      console.error('Error clearing mistakes:', err);
+      showToast('Failed to clear mistakes: ' + (err?.message || err));
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -189,6 +220,15 @@ export const TelegramMistakesModal: React.FC<TelegramMistakesModalProps> = ({
               title="Refresh questions from server"
             >
               <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+            </button>
+            <button
+              onClick={handleClearAll}
+              disabled={loading || mistakes.length === 0}
+              className="px-2.5 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold transition-colors border border-rose-500/30 disabled:opacity-40 flex items-center gap-1.5"
+              title="Clear all mistakes from bank"
+            >
+              <Trash2 className="w-3.5 h-3.5" />
+              <span>Clear All</span>
             </button>
             <button
               onClick={onClose}

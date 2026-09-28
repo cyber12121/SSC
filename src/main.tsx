@@ -21,8 +21,12 @@ if (typeof window !== 'undefined') {
   });
 }
 
+import { ToastProvider } from './components/ui/Toast';
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ToastProvider>
+      <App />
+    </ToastProvider>
   </StrictMode>,
 );

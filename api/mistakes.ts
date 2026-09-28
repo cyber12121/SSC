@@ -243,7 +243,16 @@ function recordMistake(rawUserId, q, source = "telegram_quiz", isCorrect = false
     userMap = /* @__PURE__ */ new Map();
     userMistakesMap.set(userId, userMap);
   }
-  const existing = userMap.get(q.id);
+  let existing = userMap.get(q.id);
+  if (!existing && q.question) {
+    const qNorm = q.question.trim().toLowerCase().replace(/\s+/g, " ");
+    for (const m of userMap.values()) {
+      if (m.question && m.question.trim().toLowerCase().replace(/\s+/g, " ") === qNorm) {
+        existing = m;
+        break;
+      }
+    }
+  }
   if (isCorrect) {
     if (existing) {
       existing.mastered = true;
@@ -296,19 +305,28 @@ function deleteMistake(rawUserId, questionId, questionText) {
 }
 function getAllRecordedMistakes(filter = "all", subject, topicSlug) {
   const results = [];
-  const seenIds = /* @__PURE__ */ new Set();
+  const seenKeys = /* @__PURE__ */ new Set();
   for (const map of userMistakesMap.values()) {
     for (const item of map.values()) {
       if (isQuestionDeleted(item.id, item.question)) continue;
       if (filter !== "all" && item.source !== filter) continue;
       if (subject && item.subject !== subject) continue;
       if (topicSlug && topicSlug !== "_" && item.topicSlug !== topicSlug) continue;
-      if (seenIds.has(item.id)) continue;
-      seenIds.add(item.id);
+      const qKey = (item.question || "").trim().toLowerCase().replace(/[\s\u200B-\u200D\uFEFF]+/g, " ").replace(/[?.!,:;'"()\[\]{}]+$/g, "") || item.id;
+      if (seenKeys.has(qKey)) continue;
+      seenKeys.add(qKey);
       results.push(item);
     }
   }
   return results.sort((a, b) => b.timestamp - a.timestamp);
+}
+function clearAllMistakes(userId) {
+  if (userId !== void 0 && userId !== 0) {
+    userMistakesMap.delete(userId);
+  } else {
+    userMistakesMap.clear();
+  }
+  saveToDisk();
 }
 function getMistakeStats(rawUserId, filter = "all") {
   const userId = normalizeUserId(rawUserId);
@@ -470,6 +488,13 @@ async function handler(req, res) {
           });
         }
         return res.status(400).json({ error: "ids array required for sync_deleted" });
+      }
+      if (action === "clear_all") {
+        clearAllMistakes(userId ? normalizeUserId(userId) : void 0);
+        return res.status(200).json({
+          success: true,
+          message: "All recorded mistakes cleared successfully."
+        });
       }
       return res.status(400).json({ error: "Unknown action" });
     } catch (err) {

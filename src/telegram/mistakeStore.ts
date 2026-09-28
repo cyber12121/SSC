@@ -266,7 +266,16 @@ export function recordMistake(
     userMistakesMap.set(userId, userMap);
   }
 
-  const existing = userMap.get(q.id);
+  let existing = userMap.get(q.id);
+  if (!existing && q.question) {
+    const qNorm = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+    for (const m of userMap.values()) {
+      if (m.question && m.question.trim().toLowerCase().replace(/\s+/g, ' ') === qNorm) {
+        existing = m;
+        break;
+      }
+    }
+  }
 
   if (isCorrect) {
     if (existing) {
@@ -415,7 +424,7 @@ export function getAllRecordedMistakes(
   topicSlug?: string
 ): RecordedMistake[] {
   const results: RecordedMistake[] = [];
-  const seenIds = new Set<string>();
+  const seenKeys = new Set<string>();
 
   for (const map of userMistakesMap.values()) {
     for (const item of map.values()) {
@@ -423,14 +432,30 @@ export function getAllRecordedMistakes(
       if (filter !== 'all' && item.source !== filter) continue;
       if (subject && item.subject !== subject) continue;
       if (topicSlug && topicSlug !== '_' && item.topicSlug !== topicSlug) continue;
-      if (seenIds.has(item.id)) continue;
 
-      seenIds.add(item.id);
+      const qKey = (item.question || '')
+        .trim()
+        .toLowerCase()
+        .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
+        .replace(/[?.!,:;'"()\[\]{}]+$/g, '') || item.id;
+
+      if (seenKeys.has(qKey)) continue;
+
+      seenKeys.add(qKey);
       results.push(item);
     }
   }
 
   return results.sort((a, b) => b.timestamp - a.timestamp);
+}
+
+export function clearAllMistakes(userId?: number): void {
+  if (userId !== undefined && userId !== 0) {
+    userMistakesMap.delete(userId);
+  } else {
+    userMistakesMap.clear();
+  }
+  saveToDisk();
 }
 
 export function getMistakeStats(

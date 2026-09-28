@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { db, auth } from '../firebase';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { collection, addDoc, getDocs, deleteDoc, doc, setDoc } from 'firebase/firestore';
 import { safeStorage } from '../utils/safeStorage';
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import { Question } from '../types';
@@ -11,23 +11,12 @@ import {
   RefreshCw,
   CheckCircle2,
   AlertCircle,
-  BookOpen,
-  Zap,
-  Sparkles,
-  Layers,
-  ChevronRight,
-  ChevronDown,
-  Filter,
-  Check,
   Smartphone,
   Laptop,
-  Eye,
-  EyeOff,
   Play,
-  Folder,
-  FolderOpen,
   RotateCcw,
-  X
+  X,
+  ChevronRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -87,6 +76,16 @@ function normalizeSubject(sub?: string): 'english' | 'mathematics' | 'reasoning'
   if (s.includes('math') || s.includes('quant') || s.includes('arithmetic') || s.includes('algebra') || s.includes('geometry') || s.includes('trig') || s.includes('calc')) return 'mathematics';
   if (s.includes('reason') || s.includes('logic') || s.includes('analogy') || s.includes('series') || s.includes('syllogism')) return 'reasoning';
   return 'general_awareness';
+}
+
+// Canonical question deduplication key based on normalized question text
+export function getDedupeKey(qText?: string, id?: string): string {
+  const text = (qText || '')
+    .toLowerCase()
+    .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
+    .replace(/[?.!,:;'"()\[\]{}]+$/g, '')
+    .trim();
+  return text || (id || '').trim().toLowerCase();
 }
 
 function getTopicIcon(topic: string): string {
@@ -233,15 +232,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [selectedSubject, setSelectedSubject] = useState<'all' | 'english' | 'mathematics' | 'reasoning' | 'general_awareness'>('english');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'telegram' | 'website'>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [studyMode, setStudyMode] = useState<'study' | 'recall'>('study');
-
-  // Open / Closed states for Topic Cards (key = "subject:topic")
-  const [openTopicCards, setOpenTopicCards] = useState<Record<string, boolean>>({});
-
-  // Individual question states
-  const [expandedSolutions, setExpandedSolutions] = useState<Record<string, boolean>>({});
-  const [userSelectedOptions, setUserSelectedOptions] = useState<Record<string, number>>({});
-  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Interactive Practice Modal
@@ -295,87 +285,50 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         } catch {}
       }
 
-      // Load from cgl_rca_global_store (mistakes classified or recorded from website mocks & quizzes)
-      let rcaMistakes: RecordedMistake[] = [];
+      // Load from dedicated website mistake notebook (user-confirmed mistakes only)
+      let websiteMistakes: RecordedMistake[] = [];
       try {
-        const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
-        if (rcaRaw) {
-          const rcaMap = JSON.parse(rcaRaw);
-          if (rcaMap && typeof rcaMap === 'object') {
-            for (const item of Object.values(rcaMap) as any[]) {
-              if (item && item.questionText) {
-                let optList: string[] = [];
-                if (Array.isArray(item.options)) {
-                  optList = item.options.map(String);
-                } else if (item.options && typeof item.options === 'object') {
-                  const orderedKeys = ['a', 'b', 'c', 'd'];
-                  const hasAbcd = orderedKeys.some(k => item.options[k] || item.options[k.toUpperCase()]);
-                  if (hasAbcd) {
-                    optList = orderedKeys.map(k => String(item.options[k] || item.options[k.toUpperCase()] || '')).filter(Boolean);
-                  } else {
-                    optList = Object.values(item.options).map(String);
-                  }
-                }
-
-                if (optList.length > 0) {
-                  const qId = item.id || `rca_${item.questionText.slice(0, 30)}`;
-                  let correctOpt = item.answer || item.correctOption || '';
-                  let correctIdx = 0;
-                  if (['a', 'b', 'c', 'd'].includes(String(correctOpt).toLowerCase())) {
-                    correctIdx = ['a', 'b', 'c', 'd'].indexOf(String(correctOpt).toLowerCase());
-                  } else {
-                    const foundIdx = optList.findIndex((o: any) => String(o).trim().toLowerCase() === String(correctOpt).trim().toLowerCase());
-                    if (foundIdx >= 0) correctIdx = foundIdx;
-                  }
-                  rcaMistakes.push({
-                    id: qId,
-                    userId: 0,
-                    question: item.questionText,
-                    options: optList,
-                    correctOptionIndex: correctIdx >= 0 && correctIdx < optList.length ? correctIdx : 0,
-                    explanation: item.solution || item.explanation || '',
-                    subject: normalizeSubject(item.subject),
-                    topic: item.topic || 'Mock Mistake',
-                    topicSlug: (item.topic || 'mock_mistake').toLowerCase().replace(/\s+/g, '_'),
-                    source: item.mockId || item.isFromMock ? 'website_mock' : 'website_quiz',
-                    timestamp: item.classifiedAt ? new Date(item.classifiedAt).getTime() : Date.now(),
-                    wrongCount: 1,
-                    mastered: false,
-                  });
-                }
-              }
-            }
-          }
+        const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
+        if (nbRaw) {
+          const parsed = JSON.parse(nbRaw);
+          if (Array.isArray(parsed)) websiteMistakes = parsed;
         }
       } catch (err) {
-        console.warn('[BotMistakesPage] Error reading cgl_rca_global_store:', err);
+        console.warn('[BotMistakesPage] Error reading cgl_user_mistake_notebook:', err);
       }
 
-      // Merge and deduplicate
+      // Merge and deduplicate across all sources using canonical normalized question key
       const mergedMap = new Map<string, RecordedMistake>();
-      for (const m of serverMistakes) {
-        const key = m.id || m.question.trim().toLowerCase();
-        mergedMap.set(key, { ...m, subject: normalizeSubject(m.subject) });
-      }
-      for (const m of firestoreMistakes) {
-        const key = m.id || m.question.trim().toLowerCase();
-        mergedMap.set(key, { ...m, subject: normalizeSubject(m.subject) });
-      }
-      for (const m of rcaMistakes) {
-        const key = m.id || m.question.trim().toLowerCase();
-        if (!mergedMap.has(key)) {
-          mergedMap.set(key, { ...m, subject: normalizeSubject(m.subject) });
-        }
-      }
-      for (const m of localSynced) {
-        const key = m.id || m.question.trim().toLowerCase();
+
+      const addOrMerge = (m: RecordedMistake) => {
+        const key = getDedupeKey(m.question, m.id);
+        if (!key) return;
+
+        const normalizedSub = normalizeSubject(m.subject);
         if (mergedMap.has(key)) {
           const existing = mergedMap.get(key)!;
           existing.wrongCount = Math.max(existing.wrongCount || 1, m.wrongCount || 1);
+          existing.timestamp = Math.max(existing.timestamp || 0, m.timestamp || 0);
+          if ((!existing.explanation || existing.explanation.trim().length < 10) && m.explanation) {
+            existing.explanation = m.explanation;
+          }
+          if ((!existing.options || existing.options.length === 0) && (m.options && m.options.length > 0)) {
+            existing.options = m.options;
+            existing.correctOptionIndex = m.correctOptionIndex;
+          }
+          if ((!existing.topic || existing.topic === 'Mock Mistake') && m.topic && m.topic !== 'Mock Mistake') {
+            existing.topic = m.topic;
+            existing.topicSlug = m.topicSlug;
+          }
         } else {
-          mergedMap.set(key, { ...m, subject: normalizeSubject(m.subject) });
+          mergedMap.set(key, { ...m, subject: normalizedSub });
         }
-      }
+      };
+
+      for (const m of serverMistakes) addOrMerge(m);
+      for (const m of firestoreMistakes) addOrMerge(m);
+      for (const m of websiteMistakes) addOrMerge(m);
+      for (const m of localSynced) addOrMerge(m);
 
       // Filter out deleted questions
       let deletedIds = new Set<string>();
@@ -392,9 +345,24 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         if (item.question && deletedIds.has(item.question.trim().toLowerCase())) return false;
         return true;
       });
-
       finalList.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
       setMistakes(finalList);
+
+      // Persist to safeStorage so loaded mistakes stay permanently cached
+      if (finalList.length > 0) {
+        try {
+          safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(finalList));
+        } catch {}
+
+        if (auth.currentUser) {
+          try {
+            for (const m of finalList) {
+              const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}`;
+              setDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId), m, { merge: true }).catch(() => {});
+            }
+          } catch {}
+        }
+      }
 
       // Auto-select subject with mistakes
       if (finalList.length > 0) {
@@ -429,7 +397,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   };
 
   useEffect(() => {
-    // Check URL parameters for direct sync from Telegram
+    // Check URL parameters for direct automatic sync from Telegram
     if (typeof window !== 'undefined') {
       try {
         const params = new URLSearchParams(window.location.search);
@@ -440,13 +408,13 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           const importedQuestions: any[] = [];
           if (syncQParam) {
             const decoded = decodeSyncPayload(syncQParam);
-            if (decoded && decoded.q) importedQuestions.push(decoded);
+            if (decoded) importedQuestions.push(decoded);
           }
           if (syncBatchParam) {
             const decoded = decodeSyncPayload(syncBatchParam);
             if (Array.isArray(decoded)) {
               importedQuestions.push(...decoded);
-            } else if (decoded && decoded.q) {
+            } else if (decoded) {
               importedQuestions.push(decoded);
             }
           }
@@ -460,38 +428,64 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
             const existingMap = new Map<string, RecordedMistake>();
             for (const item of existingSynced) {
-              const key = item.id || item.question.trim().toLowerCase();
-              existingMap.set(key, item);
+              const key = getDedupeKey(item.question, item.id);
+              if (key) existingMap.set(key, item);
             }
 
             let newlyAdded = 0;
             for (const rawQ of importedQuestions) {
-              const qId = rawQ.id || `tg_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`;
-              const key = qId || rawQ.q?.trim().toLowerCase();
-
+              let qId = '';
+              let qText = '';
               let opts: string[] = [];
-              if (Array.isArray(rawQ.opts)) {
-                opts = rawQ.opts.map(String);
-              } else if (rawQ.opts && typeof rawQ.opts === 'object') {
-                opts = Object.values(rawQ.opts).map(String);
+              let ans = 0;
+              let exp = '';
+              let sub = 'general_awareness';
+              let top = 'Telegram Practice';
+
+              if (Array.isArray(rawQ)) {
+                // Compact tuple: [id, q, opts, ans, exp, sub, top]
+                [qId, qText, opts, ans, exp, sub, top] = rawQ;
+              } else if (rawQ && typeof rawQ === 'object') {
+                qId = rawQ.id || '';
+                qText = rawQ.q || rawQ.question || '';
+                if (Array.isArray(rawQ.opts)) opts = rawQ.opts;
+                else if (Array.isArray(rawQ.options)) opts = rawQ.options;
+                else if (rawQ.opts && typeof rawQ.opts === 'object') opts = Object.values(rawQ.opts);
+                ans = typeof rawQ.ans === 'number' ? rawQ.ans : (typeof rawQ.correctOptionIndex === 'number' ? rawQ.correctOptionIndex : 0);
+                exp = rawQ.exp || rawQ.explanation || rawQ.fullSolution || '';
+                sub = rawQ.sub || rawQ.subject || 'general_awareness';
+                top = rawQ.top || rawQ.topic || 'Telegram Practice';
               }
+
+              if (!qText) continue;
+              opts = (opts || []).map(String);
+              const key = getDedupeKey(qText, qId);
+              if (!key) continue;
+
+              const finalQId = qId || `tg_${key.slice(0, 24)}`;
 
               if (existingMap.has(key)) {
                 const ex = existingMap.get(key)!;
                 ex.wrongCount = (ex.wrongCount || 1) + 1;
                 ex.timestamp = Date.now();
+                if ((!ex.explanation || ex.explanation.length < 10) && exp) {
+                  ex.explanation = exp;
+                }
+                if ((!ex.options || ex.options.length === 0) && opts.length > 0) {
+                  ex.options = opts;
+                }
               } else {
-                const normSub = normalizeSubject(rawQ.sub);
+                const normSub = normalizeSubject(sub);
                 const newMistake: RecordedMistake = {
-                  id: qId,
+                  id: finalQId,
                   userId: 0,
-                  question: rawQ.q || '',
+                  question: qText,
                   options: opts,
-                  correctOptionIndex: typeof rawQ.ans === 'number' ? rawQ.ans : 0,
-                  explanation: rawQ.exp || '',
+                  correctOptionIndex: typeof ans === 'number' ? ans : 0,
+                  explanation: exp,
                   subject: normSub,
-                  topic: rawQ.top || 'Telegram Practice',
-                  topicSlug: (rawQ.top || 'telegram').toLowerCase().replace(/\s+/g, '-'),
+                  topic: top,
+                  topicSlug: (top || 'telegram').toLowerCase().replace(/\s+/g, '-'),
                   source: 'telegram_quiz',
                   timestamp: Date.now(),
                   wrongCount: 1,
@@ -505,12 +499,23 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             const updatedList = Array.from(existingMap.values());
             safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(updatedList));
 
+            // Auto-backup to Firestore if authenticated
+            if (auth.currentUser) {
+              try {
+                for (const m of updatedList) {
+                  const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}`;
+                  setDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId), m, { merge: true }).catch(() => {});
+                }
+              } catch {}
+            }
+
+            // Clean query params from address bar silently without reloading
             params.delete('syncQ');
             params.delete('syncBatch');
             const cleanQuery = params.toString() ? `?${params.toString()}` : window.location.pathname;
             window.history.replaceState({}, document.title, cleanQuery);
 
-            showToast(`✨ Synced ${newlyAdded > 0 ? newlyAdded : importedQuestions.length} mistake(s) from Telegram!`);
+            showToast(`✨ Automatically synced ${newlyAdded > 0 ? newlyAdded : importedQuestions.length} mistake(s) from Telegram!`);
           }
         }
       } catch (e) {
@@ -528,6 +533,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
     setDeletingId(m.id);
     try {
+      // 1. Remove from local synced telegram mistakes
       try {
         const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
         if (raw) {
@@ -537,6 +543,17 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         }
       } catch {}
 
+      // 2. Remove from dedicated website mistake notebook
+      try {
+        const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
+        if (nbRaw) {
+          const list: RecordedMistake[] = JSON.parse(nbRaw);
+          const filtered = list.filter((item) => item.id !== m.id && item.question.trim().toLowerCase() !== m.question.trim().toLowerCase());
+          safeStorage.setItem('cgl_user_mistake_notebook', JSON.stringify(filtered));
+        }
+      } catch {}
+
+      // 3. Mark in deleted questions set
       try {
         let deletedSet: string[] = [];
         const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
@@ -548,6 +565,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
       } catch {}
 
+      // 4. Delete on server API / Telegram store
       fetch('/api/mistakes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -558,18 +576,25 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         }),
       }).catch((err) => console.warn('[BotMistakesPage] delete error:', err));
 
+      // 5. Delete from Firebase Firestore permanently
       if (auth.currentUser) {
         try {
-          await addDoc(collection(db, 'deleted_questions'), {
-            questionId: m.id,
-            questionText: m.question.trim().toLowerCase(),
-            chapter_title: m.topic || 'Telegram Mistake',
-            subject: m.subject,
-            deletedBy: auth.currentUser.uid,
-            deletedAt: new Date().toISOString(),
-            source: m.source,
-          });
-        } catch {}
+          const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : '';
+          if (docId) {
+            await deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId)).catch(() => {});
+          }
+          // Also match and delete by question text or ID across docs
+          const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
+          const qClean = (m.question || '').trim().toLowerCase();
+          for (const d of snap.docs) {
+            const dData = d.data();
+            if (d.id === docId || d.id === m.id || (dData?.question && dData.question.trim().toLowerCase() === qClean)) {
+              await deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
+            }
+          }
+        } catch (err) {
+          console.warn('[BotMistakesPage] Firestore deleteDoc error:', err);
+        }
       }
 
       setMistakes((prev) => prev.filter((item) => item.id !== m.id && item.question !== m.question));
@@ -584,6 +609,51 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       alert('Error deleting question: ' + (err?.message || err));
     } finally {
       setDeletingId(null);
+    }
+  };
+
+  const handleClearAll = async () => {
+    if (!window.confirm('Are you sure you want to completely clear ALL mistakes from your Mistake Notebook? This cannot be undone.')) {
+      return;
+    }
+    setLoading(true);
+    try {
+      // 1. Wipe local synced telegram mistakes
+      safeStorage.removeItem(SYNCED_STORAGE_KEY);
+
+      // 2. Wipe dedicated mistake notebook
+      safeStorage.removeItem('cgl_user_mistake_notebook');
+
+      // 3. Wipe mistake entries from cgl_rca_global_store
+      safeStorage.removeItem('cgl_rca_global_store');
+
+      // 4. Clear on server / Telegram bot store
+      await fetch('/api/mistakes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'clear_all' }),
+      }).catch((err) => console.warn('Server clear error:', err));
+
+      // 5. Delete all user_mistakes documents in Firestore if authenticated
+      if (auth.currentUser) {
+        try {
+          const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
+          const batchDeletes = snap.docs.map((d) =>
+            deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {})
+          );
+          await Promise.all(batchDeletes);
+        } catch (err) {
+          console.warn('[BotMistakesPage] Error clearing firestore mistakes:', err);
+        }
+      }
+
+      setMistakes([]);
+      showToast('✨ Mistake Notebook has been completely cleared!');
+    } catch (err: any) {
+      console.error('Error clearing mistakes:', err);
+      showToast('Error clearing mistakes: ' + (err?.message || err));
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -649,32 +719,75 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
   const totalFilteredCount = searchFilteredMistakes.length;
 
-  const toggleTopicCard = (sub: string, topic: string) => {
-    const key = `${sub}:${topic}`;
-    setOpenTopicCards((prev) => {
-      const isCurrentlyOpen = prev[key] !== false;
-      return {
-        ...prev,
-        [key]: !isCurrentlyOpen,
-      };
-    });
-  };
+  const handleClearTopic = async (topicQuestions: RecordedMistake[], topicName: string) => {
+    if (!window.confirm(`Delete all ${topicQuestions.length} mistake(s) in "${topicName}"?`)) {
+      return;
+    }
+    const qIds = new Set(topicQuestions.map((q) => q.id));
+    const qTexts = new Set(topicQuestions.map((q) => q.question.trim().toLowerCase()));
 
-  const toggleAllTopicsForSubject = (topics: string[], sub: string, shouldOpen: boolean) => {
-    setOpenTopicCards((prev) => {
-      const updated = { ...prev };
-      topics.forEach((t) => {
-        updated[`${sub}:${t}`] = shouldOpen;
+    // 1. Remove from local synced telegram mistakes
+    try {
+      const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
+      if (raw) {
+        const list: RecordedMistake[] = JSON.parse(raw);
+        const filtered = list.filter((item) => !qIds.has(item.id) && !qTexts.has(item.question.trim().toLowerCase()));
+        safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(filtered));
+      }
+    } catch {}
+
+    // 2. Remove from dedicated website mistake notebook
+    try {
+      const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
+      if (nbRaw) {
+        const list: RecordedMistake[] = JSON.parse(nbRaw);
+        const filtered = list.filter((item) => !qIds.has(item.id) && !qTexts.has(item.question.trim().toLowerCase()));
+        safeStorage.setItem('cgl_user_mistake_notebook', JSON.stringify(filtered));
+      }
+    } catch {}
+
+    // 3. Mark in deleted questions set
+    try {
+      let deletedSet: string[] = [];
+      const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
+      if (delRaw) deletedSet = JSON.parse(delRaw);
+      topicQuestions.forEach((q) => {
+        if (q.id) deletedSet.push(q.id.toLowerCase());
+        deletedSet.push(q.question.trim().toLowerCase());
       });
-      return updated;
-    });
-  };
+      safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
+    } catch {}
 
-  const toggleSolution = (id: string) => {
-    setExpandedSolutions((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    // 4. Delete on server API / Telegram store
+    for (const q of topicQuestions) {
+      fetch('/api/mistakes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'delete',
+          questionId: q.id,
+          questionText: q.question,
+        }),
+      }).catch(() => {});
+    }
+
+    // 5. Delete from Firebase Firestore if authenticated
+    if (auth.currentUser) {
+      try {
+        const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
+        for (const d of snap.docs) {
+          const dData = d.data();
+          if (qIds.has(d.id) || (dData?.question && qTexts.has(dData.question.trim().toLowerCase()))) {
+            deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
+          }
+        }
+      } catch (err) {
+        console.warn('[BotMistakesPage] Firestore deleteDoc error:', err);
+      }
+    }
+
+    setMistakes((prev) => prev.filter((item) => !qIds.has(item.id) && !qTexts.has(item.question.trim().toLowerCase())));
+    showToast(`Deleted ${topicQuestions.length} mistake(s) from "${topicName}".`);
   };
 
   // Start Interactive Practice Drill (opens in full Practice Mode)
@@ -807,6 +920,15 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           >
             <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${loading ? 'animate-spin' : ''}`} />
             <span className="hidden sm:inline">{loading ? 'Refreshing...' : 'Refresh'}</span>
+          </button>
+          <button
+            onClick={handleClearAll}
+            disabled={loading || mistakes.length === 0}
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold transition-colors border border-rose-200 cursor-pointer disabled:opacity-40"
+            title="Clear all mistakes from notebook"
+          >
+            <Trash2 className="w-3.5 h-3.5 text-rose-600" />
+            <span className="hidden sm:inline">Clear All</span>
           </button>
         </div>
       </div>
@@ -951,20 +1073,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               <span>Website</span>
             </button>
           </div>
-
-          {/* Self-Test Mode Switch */}
-          <button
-            onClick={() => setStudyMode((prev) => (prev === 'study' ? 'recall' : 'study'))}
-            className={`px-2.5 py-1 rounded-lg border text-[11px] font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
-              studyMode === 'recall'
-                ? 'bg-amber-50 text-amber-900 border-amber-300 shadow-2xs'
-                : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
-            }`}
-            title="Toggle between showing solutions or hiding answers for self-testing"
-          >
-            {studyMode === 'recall' ? <EyeOff className="w-3 h-3 text-amber-600" /> : <Eye className="w-3 h-3 text-slate-500" />}
-            <span>{studyMode === 'recall' ? 'Self-Test Mode' : 'Study Mode'}</span>
-          </button>
         </div>
       </div>
 
@@ -1035,126 +1143,91 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
             return (
               <div key={subKey} className="space-y-3">
                 {/* Subject Section Title Bar */}
-                <div className="flex items-center justify-between gap-2 px-1 border-b border-slate-200/80 pb-1.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-base">{conf.icon}</span>
+                <div className="flex items-center justify-between gap-2 px-1 border-b border-slate-200/80 pb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{conf.icon}</span>
                     <h2 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight">
-                      {conf.label} Topics
+                      {conf.label} Chapters
                     </h2>
-                    <span className="text-[11px] text-slate-400 font-medium">
-                      ({stat.total} {stat.total === 1 ? 'question' : 'questions'} across {stat.topicMap.size} {stat.topicMap.size === 1 ? 'topic' : 'topics'})
+                    <span className="text-[11px] text-slate-500 font-medium">
+                      ({stat.total} {stat.total === 1 ? 'mistake' : 'mistakes'} across {stat.topicMap.size} {stat.topicMap.size === 1 ? 'chapter' : 'chapters'})
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-1.5">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        const topicNames = topicEntries.map(([t]) => t);
-                        const anyClosed = topicNames.some((t) => openTopicCards[`${subKey}:${t}`] === false);
-                        toggleAllTopicsForSubject(topicNames, subKey, anyClosed);
-                      }}
-                      className="px-2 py-0.5 rounded text-[10px] font-semibold text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
-                    >
-                      Toggle All
-                    </button>
-                    <button
-                      onClick={() => {
-                        const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
-                        startPractice(allSubQuestions, `${conf.label} Mistakes`);
-                      }}
-                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
-                    >
-                      <Play className="w-2.5 h-2.5 fill-current" />
-                      <span>Practice All {conf.label}</span>
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => {
+                      const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
+                      startPractice(allSubQuestions, `${conf.label} Mistakes`);
+                    }}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
+                  >
+                    <Play className="w-3 h-3 fill-current" />
+                    <span>Practice All {conf.label}</span>
+                  </button>
                 </div>
 
-                {/* TOPIC-WISE CARDS GRID FOR THIS SUBJECT */}
-                <div className="space-y-2.5">
+                {/* CHAPTER-WISE CARDS (NO DROPDOWNS, DIRECT OPEN IN PRACTICE) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {topicEntries.map(([topicName, topicQuestions]) => {
-                    const cardKey = `${subKey}:${topicName}`;
-                    const isOpen = openTopicCards[cardKey] !== false;
                     const topicIcon = getTopicIcon(topicName);
+                    const count = topicQuestions.length;
 
                     return (
                       <div
                         key={topicName}
-                        className="bg-white rounded-xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all hover:border-slate-300"
+                        onClick={() => startPractice(topicQuestions, topicName)}
+                        className="group bg-white rounded-xl border border-slate-200/90 hover:border-indigo-500 p-4 shadow-2xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between relative overflow-hidden"
                       >
-                        {/* Topic Card Header */}
-                        <div
-                          onClick={() => toggleTopicCard(subKey, topicName)}
-                          className="p-3 sm:p-3.5 flex items-center justify-between gap-2.5 cursor-pointer bg-slate-50/40 hover:bg-slate-50 transition-colors"
-                        >
-                          <div className="flex items-center gap-2.5">
-                            <div className="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sm shadow-2xs shrink-0">
-                              {topicIcon}
-                            </div>
-                            <div>
-                              <div className="flex items-center gap-1.5 flex-wrap">
-                                <h3 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight">
+                        <div className="space-y-3">
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center gap-2.5 min-w-0">
+                              <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 group-hover:bg-indigo-50 group-hover:border-indigo-200 transition-all">
+                                {topicIcon}
+                              </div>
+                              <div className="min-w-0">
+                                <h3 className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight truncate group-hover:text-indigo-600 transition-colors" title={topicName}>
                                   {topicName}
                                 </h3>
-                                <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded border ${conf.bg} ${conf.text} ${conf.border}`}>
+                                <span className={`inline-block px-1.5 py-0.2 text-[10px] font-bold rounded border mt-0.5 ${conf.bg} ${conf.text} ${conf.border}`}>
                                   {conf.label}
                                 </span>
                               </div>
-                              <span className="text-[11px] text-slate-400">
-                                {topicQuestions.length} {topicQuestions.length === 1 ? 'mistake recorded' : 'mistakes recorded'}
-                              </span>
                             </div>
-                          </div>
 
-                          {/* Topic Actions */}
-                          <div className="flex items-center gap-2 shrink-0">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                startPractice(topicQuestions, topicName);
+                                handleClearTopic(topicQuestions, topicName);
                               }}
-                              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] font-bold transition-colors border border-emerald-200 cursor-pointer shadow-2xs"
-                              title={`Drill ${topicQuestions.length} questions in ${topicName}`}
+                              className="text-slate-300 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 transition-colors cursor-pointer shrink-0"
+                              title={`Clear mistakes in ${topicName}`}
                             >
-                              <Play className="w-2.5 h-2.5 fill-current" />
-                              <span>Practice ({topicQuestions.length})</span>
-                            </button>
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                toggleTopicCard(subKey, topicName);
-                              }}
-                              className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 text-[11px] font-semibold transition-colors cursor-pointer"
-                            >
-                              <span>{isOpen ? 'Collapse' : `View (${topicQuestions.length})`}</span>
-                              {isOpen ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
+                              <Trash2 className="w-3.5 h-3.5" />
                             </button>
                           </div>
                         </div>
 
-                        {/* LEVEL 3: QUESTION CARDS (INSIDE TOPIC CARD) */}
-                        {isOpen && (
-                          <div className="border-t border-slate-100 divide-y divide-slate-100 p-3 sm:p-4 space-y-3 bg-white">
-                            {topicQuestions.map((m, idx) => (
-                              <QuestionItemCard
-                                key={m.id || idx}
-                                index={idx + 1}
-                                mistake={m}
-                                studyMode={studyMode}
-                                onDelete={() => handleDelete(m)}
-                                isDeleting={deletingId === m.id}
-                                isExpanded={expandedSolutions[m.id] ?? true}
-                                onToggleSolution={() => toggleSolution(m.id)}
-                                selectedOption={userSelectedOptions[m.id]}
-                                onSelectOption={(opt) => {
-                                  setUserSelectedOptions((prev) => ({ ...prev, [m.id]: opt }));
-                                }}
-                              />
-                            ))}
+                        <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                          <div>
+                            <div className="text-xl sm:text-2xl font-black text-rose-600 leading-none">
+                              {count}
+                            </div>
+                            <div className="text-[10px] font-bold text-slate-400 mt-1 uppercase tracking-wider">
+                              {count === 1 ? 'Mistake' : 'Mistakes'}
+                            </div>
                           </div>
-                        )}
+
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              startPractice(topicQuestions, topicName);
+                            }}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-2xs group-hover:shadow-xs cursor-pointer"
+                          >
+                            <Play className="w-3 h-3 fill-current" />
+                            <span>Practice</span>
+                          </button>
+                        </div>
                       </div>
                     );
                   })}

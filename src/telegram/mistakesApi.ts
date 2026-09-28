@@ -3,6 +3,7 @@ import {
   getMistakeStats,
   getTotalMistakesSummary,
   deleteMistake,
+  clearAllMistakes,
   syncDeletedQuestions,
   getDeletedQuestionIds,
   getAllRecordedMistakes,
@@ -120,6 +121,15 @@ export default async function handler(req: any, res: any) {
           });
         }
         return res.status(400).json({ error: 'ids array required for sync_deleted' });
+      }
+
+      // Clear all recorded mistakes
+      if (action === 'clear_all') {
+        clearAllMistakes(userId ? normalizeUserId(userId) : undefined);
+        return res.status(200).json({
+          success: true,
+          message: 'All recorded mistakes cleared successfully.',
+        });
       }
 
       return res.status(400).json({ error: 'Unknown action' });
