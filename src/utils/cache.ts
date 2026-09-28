@@ -1,6 +1,6 @@
 const DB_NAME = 'cgl_app_cache';
 const STORE_NAME = 'datasets';
-const CACHE_KEY = 'subject_data_v4';
+const CACHE_KEY = 'subject_data_v5';
 
 // Singleton DB connection — opened once, reused on every call
 let dbPromise: Promise<IDBDatabase | null> | null = null;

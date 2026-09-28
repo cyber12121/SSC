@@ -97,6 +97,13 @@ const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankDat
   return { rawMockData, rawBankData };
 };
 
+const isLocalhost = typeof window !== 'undefined' && (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname === '0.0.0.0' ||
+  window.location.hostname.endsWith('.localhost')
+);
+
 export default function App() {
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors'>(() => {
     if (typeof window !== 'undefined') {
@@ -456,7 +463,29 @@ export default function App() {
 
   // Auth Listener
   useEffect(() => {
+    // Check if previously logged in as guest on localhost
+    if (typeof window !== 'undefined' && isLocalhost && safeStorage.getItem('cgl_is_guest_login') === 'true') {
+      setUser({
+        uid: 'guest',
+        email: 'guest@localhost',
+        displayName: 'Guest Aspirant',
+        emailVerified: true,
+        isAnonymous: true,
+      } as unknown as User);
+      setLoading(false);
+      try {
+        const cached = safeStorage.getItem('guest_results') || safeStorage.getItem('cgl_user_results_cache_guest');
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Array.isArray(parsed)) setUserResults(parsed);
+        }
+      } catch { }
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (isLocalhost && safeStorage.getItem('cgl_is_guest_login') === 'true') {
+        return;
+      }
       setUser(currentUser);
       setLoading(false);
       try {
@@ -760,6 +789,14 @@ export default function App() {
   // Fetch Bookmarks — wrapped in useCallback to prevent stale closure issues
   const fetchBookmarks = useCallback(async () => {
     if (!user) return;
+    if (user.uid === 'guest') {
+      try {
+        const saved = safeStorage.getItem('cgl_guest_bookmarks');
+        if (saved) setBookmarks(JSON.parse(saved));
+      } catch { }
+      setLoadingBookmarks(false);
+      return;
+    }
     setLoadingBookmarks(true);
     try {
       const q = query(
@@ -788,6 +825,36 @@ export default function App() {
 
   const toggleBookmark = async (question: Question) => {
     if (!user) return;
+
+    if (user.uid === 'guest') {
+      const existing = bookmarks.find(b =>
+        b.question.question === question.question &&
+        b.subject === (activeChapter?.subject || 'Unknown')
+      );
+      if (existing) {
+        setBookmarks(prev => {
+          const updated = prev.filter(b => b.id !== existing.id);
+          try { safeStorage.setItem('cgl_guest_bookmarks', JSON.stringify(updated)); } catch { }
+          return updated;
+        });
+      } else {
+        const newBookmark: Bookmark = {
+          id: `guest_bm_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+          userId: 'guest',
+          question,
+          subject: activeChapter?.subject || 'Unknown',
+          chapter_title: activeChapter?.chapter_title || 'Unknown',
+          category: category,
+          bookmarkedAt: new Date().toISOString()
+        };
+        setBookmarks(prev => {
+          const updated = [newBookmark, ...prev];
+          try { safeStorage.setItem('cgl_guest_bookmarks', JSON.stringify(updated)); } catch { }
+          return updated;
+        });
+      }
+      return;
+    }
 
     const existing = bookmarks.find(b =>
       b.question.question === question.question &&
@@ -963,9 +1030,28 @@ export default function App() {
     }
   };
 
+  const handleGuestLogin = () => {
+    const guestUser = {
+      uid: 'guest',
+      email: 'guest@localhost',
+      displayName: 'Guest Aspirant',
+      emailVerified: true,
+      isAnonymous: true,
+    } as unknown as User;
+    setUser(guestUser);
+    setLoading(false);
+    try {
+      safeStorage.setItem('cgl_is_guest_login', 'true');
+    } catch { }
+  };
+
   const handleLogout = async () => {
     try {
-      await signOut(auth);
+      safeStorage.removeItem('cgl_is_guest_login');
+      if (user?.uid !== 'guest') {
+        await signOut(auth);
+      }
+      setUser(null);
       setView('home');
       setSelectedSubject(null);
       setSelectedMathSection(null);
@@ -2021,7 +2107,7 @@ export default function App() {
     startQuiz(virtualChapter);
   };
 
-  const isAuthorized = user?.email === 'cyberdevil0101@gmail.com';
+  const isAuthorized = user?.email === 'cyberdevil0101@gmail.com' || (isLocalhost && Boolean(user));
 
   // Group bookmarks by subject and then by chapter — memoized to avoid re-running on unrelated renders
   const bookmarksBySubjectAndChapter = useMemo(() => bookmarks.reduce((acc, b) => {
@@ -2044,11 +2130,19 @@ export default function App() {
           <p className="text-slate-500 mb-8 font-medium">Please login to access your private practice dashboard.</p>
           <button
             onClick={handleLogin}
-            className="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center justify-center"
+            className="w-full py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center justify-center cursor-pointer"
           >
             <LogIn className="w-5 h-5 mr-2" />
             Login with Google
           </button>
+          {isLocalhost && (
+            <button
+              onClick={handleGuestLogin}
+              className="w-full mt-3 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 rounded-2xl font-bold transition-all shadow-2xs flex items-center justify-center cursor-pointer gap-2"
+            >
+              <span>👤 Continue as Guest (Localhost)</span>
+            </button>
+          )}
         </div>
       </div>
     );
@@ -2247,18 +2341,29 @@ export default function App() {
                   <button
                     onClick={handleLogout}
                     className="p-1.5 text-slate-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
-                    title={`Logout (${user.email || 'User'})`}
+                    title={`Logout (${user.email || user.displayName || 'User'})`}
                   >
                     <LogOut className="w-4 h-4" />
                   </button>
                 ) : (
-                  <button
-                    onClick={handleLogin}
-                    className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-xs transition-colors flex items-center gap-1.5 shadow-2xs cursor-pointer"
-                  >
-                    <LogIn className="w-3.5 h-3.5" />
-                    <span>Login</span>
-                  </button>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={handleLogin}
+                      className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-xs transition-colors flex items-center gap-1.5 shadow-2xs cursor-pointer"
+                    >
+                      <LogIn className="w-3.5 h-3.5" />
+                      <span>Login</span>
+                    </button>
+                    {isLocalhost && (
+                      <button
+                        onClick={handleGuestLogin}
+                        className="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 rounded-lg font-bold text-xs transition-colors flex items-center gap-1 shadow-2xs cursor-pointer"
+                        title="Login as Guest on Localhost"
+                      >
+                        <span>👤 Guest</span>
+                      </button>
+                    )}
+                  </div>
                 )}
               </div>
 
@@ -2931,11 +3036,11 @@ export default function App() {
                         {
                           key: 'general',
                           icon: BookOpen,
-                          chip: 'from-blue-500 to-indigo-600',
-                          badge: 'Grammar & Core',
-                          title: 'Grammar & Chapter Practice',
-                          desc: 'Topic-wise grammar fundamentals, rule revisions, and chapter-wise question bank.',
-                          count: `${(currentData['English'] || []).filter(ch => ch.section !== 'ayush_vocab' && ch.section !== 'black_book').length} Chapters`
+                          chip: 'from-indigo-600 to-violet-700',
+                          badge: 'Pinnacle 60 Days',
+                          title: 'Grammar (Topic-Wise)',
+                          desc: 'Exhaustive chapter-wise grammar bank with rule revision cheat sheet and practice question sets.',
+                          count: `${(currentData['English'] || []).filter(ch => ch.section === 'grammar' || (ch.section !== 'ayush_vocab' && ch.section !== 'black_book')).reduce((acc, ch) => acc + (ch.questions?.length || 0), 0)} Questions • ${(currentData['English'] || []).filter(ch => ch.section === 'grammar' || (ch.section !== 'ayush_vocab' && ch.section !== 'black_book')).length} Chapters`
                         }
                       ] as const).map(({ key, icon: Icon, chip, badge, title, desc, count }) => (
                         <motion.div
