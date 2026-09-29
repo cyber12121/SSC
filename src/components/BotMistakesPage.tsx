@@ -946,7 +946,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               </div>
 
               {/* Questions List */}
-              <div className="p-4 sm:p-6 overflow-y-auto space-y-4 divide-y divide-slate-100">
+              <div className="flex-1 min-h-0 overflow-y-auto p-4 sm:p-6 space-y-4 divide-y divide-slate-100">
                 {inspectTopic.questions.map((m, idx) => {
                   const solText = resolveQuestionSolution(m) || m.explanation;
                   const normalizedSub = normalizeSubject(m.subject);

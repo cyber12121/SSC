@@ -267,6 +267,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   // Always call the latest version of handleSubmitTest from the timer effect
   const handleSubmitTestRef = useRef<() => Promise<void>>(() => Promise.resolve());
+  // Ref to auto-scroll to solution when it opens
+  const solutionRef = useRef<HTMLDivElement | null>(null);
+
+
 
   // Sync activeSectionIdx when currentIdx changes
   useEffect(() => {
@@ -572,6 +576,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const correctOptionKey = getCorrectOptionKey(currentQuestion);
   const currentNormalizedOptions = useMemo(() => getNormalizedOptions(currentQuestion), [currentQuestion]);
   const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
+
+  // Auto-scroll to solution when it opens
+  useEffect(() => {
+    if (isSolutionOpen && solutionRef.current) {
+      setTimeout(() => {
+        solutionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 150);
+    }
+  }, [isSolutionOpen, currentIdx]);
 
   const getFormattedSolution = () => {
     const sol = currentQuestion?.solution || (currentQuestion as any)?.explanation || (currentQuestion as any)?.sol || (currentQuestion as any)?.detailedSolution;
@@ -1457,6 +1470,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   {/* Practice Mode Solution Box */}
                   {isSolutionOpen && (
                     <motion.div
+                      ref={solutionRef}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       className="rounded-xl border border-emerald-300 bg-emerald-50/30 overflow-hidden shadow-xs mb-6"
