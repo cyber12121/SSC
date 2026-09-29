@@ -130,7 +130,7 @@ export const QuizSubmitModal: React.FC<QuizSubmitModalProps> = ({
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block" />
                   Not Attempted:
                 </span>
-                <span className="font-bold">{totalQuestions - stats.answered - stats.marked}</span>
+                <span className="font-bold">{stats.notAttempted}</span>
               </div>
               <div className="flex justify-between py-0.5 text-purple-700 font-medium">
                 <span className="flex items-center gap-1.5">

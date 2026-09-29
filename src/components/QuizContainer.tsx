@@ -220,11 +220,14 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const [zoomLevel, setZoomLevel] = useState<number>(0); // -1: small, 0: base, 1: large, 2: xl
   const [showInstructionsModal, setShowInstructionsModal] = useState(false);
   const [showSymbolsModal, setShowSymbolsModal] = useState(false);
+  const [showOverallSummaryModal, setShowOverallSummaryModal] = useState(false);
+  const [isPaletteCollapsed, setIsPaletteCollapsed] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteToast, setDeleteToast] = useState<string | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
+  const lastOptionClickRef = useRef<{ key: string; time: number }>({ key: '', time: 0 });
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -313,9 +316,19 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   const handleAnswer = (answer: 'a' | 'b' | 'c' | 'd') => {
+    const now = Date.now();
+    const isDoubleRapidClick =
+      lastOptionClickRef.current.key === answer &&
+      now - lastOptionClickRef.current.time < 350;
+
+    lastOptionClickRef.current = { key: answer, time: now };
+
     setAnswers(prev => {
       const updated = { ...prev };
       if (mode === 'mock' && updated[currentIdx] === answer) {
+        if (isDoubleRapidClick) {
+          return prev;
+        }
         delete updated[currentIdx];
       } else {
         updated[currentIdx] = answer;
@@ -334,12 +347,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       const n = { ...prev };
       delete n[currentIdx];
       answersRef.current = n;
-      return n;
-    });
-    setMarkedForReview(prev => {
-      const n = new Set(prev);
-      n.delete(currentIdx);
-      markedRef.current = n;
       return n;
     });
     if (mode === 'practice') {
@@ -395,15 +402,6 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   };
 
   const handleSaveAndNext = () => {
-    // If current question was marked for review, save answer and remove from review
-    if (markedRef.current.has(currentIdx)) {
-      setMarkedForReview(prev => {
-        const n = new Set(prev);
-        n.delete(currentIdx);
-        markedRef.current = n;
-        return n;
-      });
-    }
     if (currentIdx < totalQuestions - 1) {
       jumpToQuestion(currentIdx + 1);
     } else {
@@ -687,8 +685,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         return;
       }
 
-      // 5. Clear Response: Delete or X
-      if (key === 'Delete' || lowerKey === 'x') {
+      // 5. Toggle Mark for Review: M
+      if (lowerKey === 'm') {
+        e.preventDefault();
+        handleToggleMarkForReview();
+        return;
+      }
+
+      // 6. Clear Response: Delete, Backspace, or X
+      if (key === 'Delete' || key === 'Backspace' || lowerKey === 'x') {
         if (answers[currentIdx] !== undefined) {
           e.preventDefault();
           handleClearResponse();
@@ -710,6 +715,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     showInstructionsModal,
     showQuestionPaper,
     showSymbolsModal,
+    showOverallSummaryModal,
     showDeleteModal,
     answers,
     isSolutionOpen
@@ -974,6 +980,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 </button>
                 <button
                   onClick={() => setShowQuestionPaper(true)}
+                  className="text-[#0070ba] hover:underline font-bold underline decoration-[#0070ba] cursor-pointer"
+                >
+                  QUESTION PAPER
+                </button>
+                <button
+                  onClick={() => setShowOverallSummaryModal(true)}
                   className="text-[#991b1b] hover:underline font-bold underline decoration-[#991b1b] cursor-pointer"
                 >
                   OVERALL TEST SUMMARY
@@ -1146,11 +1158,16 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </button>
-              <div className="hidden lg:block text-[#0087ba]">
+              <button
+                onClick={() => setIsPaletteCollapsed(prev => !prev)}
+                className="hidden lg:block p-1 text-[#0087ba] hover:opacity-80 cursor-pointer transition-transform duration-200"
+                style={{ transform: isPaletteCollapsed ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                title={isPaletteCollapsed ? "Expand Question Palette" : "Collapse Question Palette"}
+              >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -1160,7 +1177,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       <main className="w-full flex-1 flex min-h-0 overflow-hidden" data-purpose="exam-two-column-layout">
 
         {/* ── LEFT COLUMN: QUESTION & OPTIONS PANE (~74% width) ── */}
-        <section className="w-full lg:w-[74%] h-full p-4 overflow-y-auto border-r border-gray-300 flex flex-col bg-white custom-scrollbar" data-purpose="question-container">
+        <section className={`w-full ${isPaletteCollapsed ? 'lg:w-full' : 'lg:w-[74%]'} h-full p-4 overflow-y-auto border-r border-gray-300 flex flex-col bg-white custom-scrollbar`} data-purpose="question-container">
 
           {isPaused ? (
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
@@ -1295,7 +1312,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                           >
                             <input
                               className="w-4 h-4 text-blue-600 focus:ring-0 cursor-pointer pointer-events-none"
-                              name="cbt_option"
+                              name={`cbt_option_${currentIdx}`}
                               type="radio"
                               value={k}
                               checked={isSelected}
@@ -1517,7 +1534,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         </section>
 
         {/* ── RIGHT COLUMN: QUESTION PALETTE & SECTION ANALYSIS (~26% width) ── */}
-        <aside className="hidden lg:flex w-[26%] h-full shrink-0" data-purpose="exam-sidebar-palette">
+        <aside className={`${isPaletteCollapsed ? 'hidden' : 'hidden lg:flex'} w-[26%] h-full shrink-0`} data-purpose="exam-sidebar-palette">
           <QuizPaletteSidebar
             mode={mode}
             activeSection={activeSection}
@@ -1611,7 +1628,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             ) : (
               <button
                 onClick={handleToggleMarkForReview}
-                className="px-3 py-2.5 rounded-lg font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0"
+                className="px-3 py-2.5 rounded-lg font-bold text-xs bg-[#2563eb] hover:bg-blue-700 text-white transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0"
                 title="Mark question for review"
               >
                 <Bookmark className="w-3.5 h-3.5" />
@@ -1753,7 +1770,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     subject={q.subject || q.section}
                   />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    {(Object.entries(q.options) as [string, string][]).map(([k, val]) => (
+                    {getNormalizedOptions(q).map(({ key: k, text: val }) => (
                       <div key={k} className="p-2 rounded border border-gray-200 bg-gray-50 text-gray-700 flex items-start gap-1.5">
                         <span className="uppercase font-bold shrink-0">{k}.</span>
                         <FormattedText text={val} language={language} />
@@ -1769,6 +1786,104 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 onClick={() => setShowQuestionPaper(false)}
                 className="px-5 py-2 text-white text-xs font-bold rounded hover:opacity-90 bg-[#2460b9]"
               >Close</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── OVERALL TEST SUMMARY MODAL ── */}
+      {showOverallSummaryModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 z-50 animate-in fade-in duration-150">
+          <div className="bg-white rounded-lg max-w-3xl w-full shadow-2xl border border-gray-300 overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="bg-[#2460b9] text-white px-4 py-2.5 flex items-center justify-between">
+              <h3 className="font-bold text-sm sm:text-base">Overall Test Summary</h3>
+              <button
+                onClick={() => setShowOverallSummaryModal(false)}
+                className="text-white/80 hover:text-white cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-4 overflow-y-auto custom-scrollbar">
+              <table className="w-full text-xs border border-gray-300 border-collapse">
+                <thead>
+                  <tr className="bg-[#e7dfc8] border-b border-gray-400 text-gray-900">
+                    <th className="py-2 px-3 text-left font-bold border-r border-gray-300">Section Name</th>
+                    <th className="py-2 px-2 text-center font-bold border-r border-gray-300">No. of Questions</th>
+                    <th className="py-2 px-2 text-center font-bold border-r border-gray-300">Answered</th>
+                    <th className="py-2 px-2 text-center font-bold border-r border-gray-300">Not Answered</th>
+                    <th className="py-2 px-2 text-center font-bold border-r border-gray-300">Marked for Review</th>
+                    <th className="py-2 px-2 text-center font-bold border-r border-gray-300">Ans. &amp; Marked</th>
+                    <th className="py-2 px-2 text-center font-bold">Not Visited</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  {sections.map(sec => {
+                    const secQs = questions.slice(sec.startIndex, sec.endIndex);
+                    const ansOnly = secQs.filter((_, i) => !!answers[sec.startIndex + i] && !markedForReview.has(sec.startIndex + i)).length;
+                    const ansMarked = secQs.filter((_, i) => !!answers[sec.startIndex + i] && markedForReview.has(sec.startIndex + i)).length;
+                    const markedOnly = secQs.filter((_, i) => !answers[sec.startIndex + i] && markedForReview.has(sec.startIndex + i)).length;
+                    const notVis = secQs.filter((_, i) => !visited.has(sec.startIndex + i)).length;
+                    const notAns = Math.max(0, secQs.length - ansOnly - ansMarked - markedOnly - notVis);
+
+                    return (
+                      <tr key={sec.id} className="hover:bg-slate-50">
+                        <td className="py-2 px-3 font-semibold text-gray-900 border-r border-gray-200">
+                          {sec.label} - {sec.title}
+                        </td>
+                        <td className="py-2 px-2 text-center font-bold text-gray-800 border-r border-gray-200">
+                          {sec.count}
+                        </td>
+                        <td className="py-2 px-2 text-center font-bold text-emerald-700 bg-emerald-50/50 border-r border-gray-200">
+                          {ansOnly}
+                        </td>
+                        <td className="py-2 px-2 text-center font-bold text-rose-700 bg-rose-50/50 border-r border-gray-200">
+                          {notAns}
+                        </td>
+                        <td className="py-2 px-2 text-center font-bold text-rose-800 border-r border-gray-200">
+                          {markedOnly}
+                        </td>
+                        <td className="py-2 px-2 text-center font-bold text-amber-700 bg-amber-50/50 border-r border-gray-200">
+                          {ansMarked}
+                        </td>
+                        <td className="py-2 px-2 text-center font-bold text-slate-500">
+                          {notVis}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  {/* Total Row */}
+                  {(() => {
+                    const totalAnsOnly = questions.filter((_, i) => !!answers[i] && !markedForReview.has(i)).length;
+                    const totalAnsMarked = questions.filter((_, i) => !!answers[i] && markedForReview.has(i)).length;
+                    const totalMarkedOnly = questions.filter((_, i) => !answers[i] && markedForReview.has(i)).length;
+                    const totalNotVis = questions.filter((_, i) => !visited.has(i)).length;
+                    const totalNotAns = Math.max(0, totalQuestions - totalAnsOnly - totalAnsMarked - totalMarkedOnly - totalNotVis);
+
+                    return (
+                      <tr className="bg-gray-100 font-extrabold border-t-2 border-gray-400 text-gray-900">
+                        <td className="py-2.5 px-3 border-r border-gray-300">Total</td>
+                        <td className="py-2.5 px-2 text-center border-r border-gray-300">{totalQuestions}</td>
+                        <td className="py-2.5 px-2 text-center text-emerald-800 border-r border-gray-300">{totalAnsOnly}</td>
+                        <td className="py-2.5 px-2 text-center text-rose-800 border-r border-gray-300">{totalNotAns}</td>
+                        <td className="py-2.5 px-2 text-center text-rose-900 border-r border-gray-300">{totalMarkedOnly}</td>
+                        <td className="py-2.5 px-2 text-center text-amber-900 border-r border-gray-300">{totalAnsMarked}</td>
+                        <td className="py-2.5 px-2 text-center text-slate-700">{totalNotVis}</td>
+                      </tr>
+                    );
+                  })()}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end">
+              <button
+                onClick={() => setShowOverallSummaryModal(false)}
+                className="px-5 py-1.5 bg-[#2460b9] text-white text-xs font-bold rounded hover:bg-[#1c4d94] cursor-pointer"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

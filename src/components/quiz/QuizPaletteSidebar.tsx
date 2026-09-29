@@ -198,7 +198,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
           }
 
           return (
-            <div key={globalIdx} className="flex flex-col items-center justify-start relative">
+            <div key={globalIdx} className="flex flex-col items-center justify-start h-11 relative">
               <button
                 onClick={() => handleQuestionClick(globalIdx)}
                 className={`w-8 h-8 rounded-[3px] font-bold text-xs flex items-center justify-center cursor-pointer transition-transform ${btnColor} ${ringClass} hover:opacity-95`}
@@ -206,11 +206,13 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
               >
                 <span className="leading-none">{localIdx + 1}</span>
               </button>
-              {showArrow && (
-                <span className="text-[9px] text-black font-black leading-none mt-0.5 select-none" title="Marked for Review">
-                  ▲
-                </span>
-              )}
+              <div className="h-3 flex items-center justify-center">
+                {showArrow && (
+                  <span className="text-[9px] text-black font-black leading-none select-none" title="Marked for Review">
+                    ▲
+                  </span>
+                )}
+              </div>
             </div>
           );
         })}

@@ -63,3 +63,29 @@ export const cleanQuestionForSession = (q: any, idx?: number): Question => {
   };
 };
 
+export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
+  if (rawTime === undefined || rawTime === null) return null;
+  if (typeof rawTime === 'number') {
+    return isNaN(rawTime) || rawTime <= 0 ? null : Math.round(rawTime);
+  }
+  const str = String(rawTime).trim();
+  if (!str) return null;
+
+  // Format "MM:SS", "M:SS", or "HH:MM:SS"
+  if (str.includes(':')) {
+    const parts = str.split(':').map(p => parseInt(p.trim(), 10));
+    if (parts.some(p => isNaN(p))) return null;
+    if (parts.length === 2) {
+      return parts[0] * 60 + parts[1];
+    }
+    if (parts.length === 3) {
+      return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    }
+  }
+
+  // Raw numeric string e.g. "35" or "35s"
+  const parsed = parseInt(str.replace(/[^0-9]/g, ''), 10);
+  return isNaN(parsed) || parsed <= 0 ? null : parsed;
+};
+
+

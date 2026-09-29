@@ -4,7 +4,7 @@ import { Question } from '../types';
 
 import { cleanSolutionText } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
-import { parseAvgTimeToSeconds } from './Review';
+import { parseAvgTimeToSeconds } from '../utils/questionHelpers';
 import { FormattedText } from './FormattedText';
 import { SolutionViewer } from './SolutionViewer';
 

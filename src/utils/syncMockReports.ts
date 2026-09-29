@@ -40,6 +40,15 @@ export function normalizeTestTitle(title: string = ''): string {
 }
 
 /**
+ * Checks if a title is a generic placeholder (like "N/A (English)", "Sectional Test", etc.)
+ */
+export function isGenericTestTitle(title: string = ''): boolean {
+  const norm = normalizeTestTitle(title);
+  if (!norm || norm.length <= 1) return true;
+  return /^(n\/?a|n\/?a\s*\(.*\)|sectional\s*test|mock\s*test|test|quiz|full\s*test|full\s*mock|untitled)$/i.test(norm);
+}
+
+/**
  * Synchronizes reports loaded from storage/API with canonical bundled reports.
  * - Respects user deleted mocks (never revives them)
  * - Migrates any legacy IDs (e.g. Full Test 7 rename)
@@ -68,7 +77,6 @@ export function syncMockReports(
     return [...cleanBundled];
   }
 
-
   // Remap legacy IDs in savedList
   const normalizedSaved = savedList.map(item => {
     if (!item) return item;
@@ -88,13 +96,20 @@ export function syncMockReports(
 
     const normSavedTitle = normalizeTestTitle(item.title);
     const savedPlatform = (item.platform || '').toLowerCase();
+    const isGenericSaved = isGenericTestTitle(item.title);
 
     const match = cleanBundled.find(b => {
+      // 1. Direct ID match
       if (b.id === item.id) return true;
+      // 2. Only match by title if the bundled item hasn't been matched yet AND title is specific (not generic)
+      if (matchedBundledIds.has(b.id)) return false;
+      if (isGenericSaved) return false;
+
       const normBundledTitle = normalizeTestTitle(b.title);
       const bundledPlatform = (b.platform || '').toLowerCase();
-      return normBundledTitle === normSavedTitle && (
-        !savedPlatform || !bundledPlatform || savedPlatform === bundledPlatform
+      return (
+        normBundledTitle === normSavedTitle &&
+        (!savedPlatform || !bundledPlatform || savedPlatform === bundledPlatform)
       );
     });
 
@@ -121,7 +136,7 @@ export function syncMockReports(
 
   // Deduplicate and ensure no deleted mocks slip through
   const seenIds = new Set<string>();
-  const seenKeys = new Set<string>();
+  const seenExactSignatures = new Set<string>();
   return result.filter(r => {
     if (!r || !r.id) return false;
     if (deletedIds.has(r.id)) return false;
@@ -129,9 +144,14 @@ export function syncMockReports(
     if (seenIds.has(r.id)) return false;
     seenIds.add(r.id);
 
-    const key = `${r.platform || ''}|${normalizeTestTitle(r.title)}|${r.type}`;
-    if (seenKeys.has(key)) return false;
-    seenKeys.add(key);
+    // If two reports have different IDs, only treat them as duplicate if they share the exact
+    // non-generic title AND identical score AND identical date AND platform:
+    const normTitle = normalizeTestTitle(r.title);
+    if (!isGenericTestTitle(r.title)) {
+      const exactSig = `${r.platform || ''}|${normTitle}|${r.type}|${r.totalScore}|${r.date || ''}`;
+      if (seenExactSignatures.has(exactSig)) return false;
+      seenExactSignatures.add(exactSig);
+    }
 
     return true;
   });

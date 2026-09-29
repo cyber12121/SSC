@@ -246,7 +246,7 @@ interface AIEnrichmentResult {
 }
 
 // Robust JSON Sanitizer for LLM outputs:
-// Fixes unescaped LaTeX backslashes (\underline, \unit, \alpha, \sqrt, etc.) and bad Unicode escapes
+// Fixes unescaped inner quotes, unescaped LaTeX backslashes (\underline, \unit, \alpha, \sqrt, etc.), and bad Unicode escapes
 function sanitizeJsonString(raw: string): string {
   let result = "";
   let inString = false;
@@ -263,9 +263,24 @@ function sanitizeJsonString(raw: string): string {
       i++;
     } else {
       if (char === '"') {
-        inString = false;
-        result += char;
-        i++;
+        // Peek ahead to determine if this is genuinely a closing quote or an unescaped inner quote
+        let j = i + 1;
+        while (j < raw.length && (raw[j] === ' ' || raw[j] === '\t' || raw[j] === '\r' || raw[j] === '\n')) {
+          j++;
+        }
+        const next = raw[j];
+        // In valid JSON, a closing quote for a value is followed by ',', '}', ']', or ':' (if it was a key)
+        const isClosingQuote = next === ',' || next === '}' || next === ']' || next === ':' || j >= raw.length;
+
+        if (isClosingQuote) {
+          inString = false;
+          result += char;
+          i++;
+        } else {
+          // Unescaped inner quote inside string value (e.g. idiom "apple of eye") -> escape it so JSON.parse succeeds!
+          result += '\\"';
+          i++;
+        }
       } else if (char === '\\') {
         const next = raw[i + 1];
         if (next === undefined) {
@@ -305,7 +320,57 @@ function sanitizeJsonString(raw: string): string {
       }
     }
   }
+
+  // Strip trailing commas before closing braces/brackets (e.g. { "A": "...", } -> { "A": "..." })
+  result = result.replace(/,\s*([\]}])/g, '$1');
+
   return result;
+}
+
+// Fallback extractor that extracts individual JSON objects { ... } from text if outer array is slightly damaged
+function extractJsonObjects(text: string): any[] {
+  const objects: any[] = [];
+  let depth = 0;
+  let start = -1;
+  let inStr = false;
+  let escape = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (escape) {
+      escape = false;
+      continue;
+    }
+    if (c === '\\') {
+      escape = true;
+      continue;
+    }
+    if (c === '"') {
+      inStr = !inStr;
+      continue;
+    }
+    if (!inStr) {
+      if (c === '{') {
+        if (depth === 0) start = i;
+        depth++;
+      } else if (c === '}') {
+        depth--;
+        if (depth === 0 && start !== -1) {
+          const objStr = text.slice(start, i + 1);
+          try {
+            const obj = JSON.parse(sanitizeJsonString(objStr));
+            if (obj && typeof obj === 'object') {
+              objects.push(obj);
+            }
+          } catch {
+            // Skip unparseable chunk
+          }
+          start = -1;
+        }
+      }
+    }
+  }
+  return objects;
 }
 
 function parseGeminiJsonArray(rawText: string): any[] {
@@ -315,7 +380,7 @@ function parseGeminiJsonArray(rawText: string): any[] {
   if (text.endsWith("```")) text = text.slice(0, -3);
   text = text.trim();
 
-  // Try direct parse first
+  // 1. Try direct parse first
   try {
     const direct = JSON.parse(text);
     if (Array.isArray(direct)) return direct;
@@ -323,13 +388,13 @@ function parseGeminiJsonArray(rawText: string): any[] {
     // Continue to sanitization
   }
 
-  // Sanitize invalid backslashes, bad unicode escapes (\underline etc.) and unescaped control chars
+  // 2. Sanitize unescaped inner quotes, invalid backslashes, bad unicode escapes (\underline etc.) and unescaped control chars
   const sanitized = sanitizeJsonString(text);
   try {
     const parsed = JSON.parse(sanitized);
     if (Array.isArray(parsed)) return parsed;
-  } catch (err: any) {
-    // Fallback: extract substring between first '[' and last ']'
+  } catch {
+    // 3. Fallback: extract substring between first '[' and last ']'
     const firstBracket = sanitized.indexOf('[');
     const lastBracket = sanitized.lastIndexOf(']');
     if (firstBracket !== -1 && lastBracket > firstBracket) {
@@ -338,10 +403,15 @@ function parseGeminiJsonArray(rawText: string): any[] {
         const slicedParsed = JSON.parse(sliced);
         if (Array.isArray(slicedParsed)) return slicedParsed;
       } catch {
-        // Fall through
+        // Fall through to object extractor
       }
     }
-    throw err;
+
+    // 4. Resilient Fallback: Extract individual { ... } objects
+    const extracted = extractJsonObjects(sanitized);
+    if (Array.isArray(extracted) && extracted.length > 0) {
+      return extracted;
+    }
   }
   throw new Error("Gemini response is not a valid JSON array");
 }
@@ -815,10 +885,12 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
 
   const activeSubjects = Object.keys(subjectGroups).filter(k => subjectGroups[k].length > 0);
 
-  const detectedFromQuestions = rawList.find(q => q.testName || q.title || q.test_name)?.testName ||
-                                rawList.find(q => q.testName || q.title || q.test_name)?.title ||
-                                rawList.find(q => q.testName || q.title || q.test_name)?.test_name;
-  const rawTitle = ((mockTitle && mockTitle.trim()) || detectedFromQuestions || "").toLowerCase();
+  const detectedCandidate = rawList.find(q => q.testName || q.title || q.test_name)?.testName ||
+                            rawList.find(q => q.testName || q.title || q.test_name)?.title ||
+                            rawList.find(q => q.testName || q.title || q.test_name)?.test_name;
+  const isGeneric = !detectedCandidate || /^n\/?a(\s*\(.*\))?$/i.test(String(detectedCandidate).trim()) || /^test$/i.test(String(detectedCandidate).trim());
+  const detectedFromQuestions = isGeneric ? "" : String(detectedCandidate).trim();
+  const rawTitle = ((mockTitle && mockTitle.trim()) || detectedFromQuestions || (detectedCandidate ? String(detectedCandidate).trim() : "")).toLowerCase();
 
   // Smart Detection:
   // If title explicitly indicates a sectional/chapter/topic test, treat as sectional

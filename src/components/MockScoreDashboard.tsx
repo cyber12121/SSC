@@ -34,7 +34,7 @@ import { Chapter, Question, SubjectData, QuizResult, QuestionProgress } from '..
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import initialMockReports from '../data/mock_reports.json';
 import { safeStorage } from '../utils/safeStorage';
-import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle, getDeletedMockIds, addDeletedMockId } from '../utils/syncMockReports';
+import { syncMockReports, LEGACY_MOCK_ID_MAP, normalizeTestTitle, isGenericTestTitle, getDeletedMockIds, addDeletedMockId } from '../utils/syncMockReports';
 import { clearCachedData } from '../utils/cache';
 import { openAiWithScope } from '../utils/aiScopeHelper';
 import { AiFocusedQuestion } from '../types/aiScope';
@@ -50,7 +50,7 @@ const normalizeSubName = (raw: string = '') => {
   return 'Other';
 };
 
-export const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' => {
+const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' => {
   if (report.subject) {
     const norm = normalizeSubName(report.subject);
     if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
@@ -72,7 +72,7 @@ export const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'Gen
   return 'Mathematics';
 };
 
-export function parseMockDetails(report: MockScoreReport) {
+function parseMockDetails(report: MockScoreReport) {
   const title = (report.title || '').trim();
 
   // 1. Platform Detection
@@ -146,7 +146,7 @@ export function parseMockDetails(report: MockScoreReport) {
   return { shortTitle, platform, subtitle };
 }
 
-export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): MockScoreReport {
+function computeMockScoreClientSide(rawList: any[], mockTitle?: string): MockScoreReport {
   // Use module-level normalizeSubName — same logic, no duplicate needed
   const subjectGroups: Record<string, any[]> = {
     Reasoning: [],
@@ -262,7 +262,7 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
   };
 }
 
-export function normalizeMockQuestions(rawList: any[]): Question[] {
+function normalizeMockQuestions(rawList: any[]): Question[] {
   const normalizeSubject = (raw: string) => {
     if (/reason|intel/i.test(raw)) return 'Reasoning';
     if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
@@ -389,7 +389,7 @@ export function normalizeMockQuestions(rawList: any[]): Question[] {
 
 export type MockQuestionErrorStatus = 'wrong' | 'unattempted' | 'slow' | 'correct';
 
-export function getMockQuestionStatus(q: any): MockQuestionErrorStatus {
+function getMockQuestionStatus(q: any): MockQuestionErrorStatus {
   const rawStatus = String(q.errorType || q.status || q.your_status || q.result || '').toLowerCase();
   const rawUser = String(
     q.chosenOption ??
@@ -1001,7 +1001,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     // Find canonical bundled report if any
     const canonicalReport = (initialMockReports as MockScoreReport[]).find(
       r => r.id === effectiveId || r.id === rawId ||
-           (r.title && report.title && normalizeTestTitle(r.title) === normalizeTestTitle(report.title))
+           (!isGenericTestTitle(r.title) && r.title && report.title && normalizeTestTitle(r.title) === normalizeTestTitle(report.title))
     );
 
     const candidateIds = Array.from(new Set([
@@ -1020,7 +1020,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     }
 
     // 2. Search mockQuestionModules by matching test title in question data
-    if (list.length === 0 && report.title) {
+    if (list.length === 0 && report.title && !isGenericTestTitle(report.title)) {
       const targetNorm = normalizeTestTitle(report.title).replace(/[^a-z0-9]/g, '');
       for (const [, loader] of Object.entries(mockQuestionModules)) {
         try {
