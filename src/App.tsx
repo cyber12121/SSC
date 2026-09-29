@@ -203,15 +203,6 @@ export default function App() {
           }
         }
       } catch (e) { }
-
-      try {
-        await clearCachedData();
-        const fresh = await loadSubjectData();
-        if (fresh && Object.keys(fresh.rawMockData || {}).length > 0) {
-          setRawData(fresh);
-          await setCachedData(fresh);
-        }
-      } catch { }
     };
     window.addEventListener('storage', handleStorage);
     window.addEventListener('cgl_mock_reports_updated', handleStorage);
@@ -507,7 +498,8 @@ export default function App() {
       } catch { }
     }
 
-    // Hydrate RCA classifications from IndexedDB and Firestore on launch
+    // Clean up any stale temporary keys and hydrate RCA from IDB/Firestore
+    safeStorage.clearStaleTemporaryCaches();
     initGlobalRcaStoreFromIdb().catch(() => {});
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

@@ -47,19 +47,36 @@
           }
         } catch (e) {}
 
-        // Register Service Worker for PWA
-        if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
-          window.addEventListener('load', function() {
-            try {
-              navigator.serviceWorker.register('/sw.js').then(function(reg) {
-                console.log('[PWA] Service Worker registered with scope:', reg.scope);
-              }).catch(function(err) {
-                console.warn('[PWA] Service Worker registration unavailable in this context (ignored):', err && err.message);
+        // Service Worker for PWA (Production only — disabled on localhost to prevent Vite dev cache bloat)
+        if ('serviceWorker' in navigator) {
+          var isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          if (isLocalhost) {
+            // Clean up any stale service workers and dev caches on localhost
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+              for (var i = 0; i < registrations.length; i++) {
+                registrations[i].unregister();
+              }
+            });
+            if ('caches' in window) {
+              caches.keys().then(function(keys) {
+                for (var j = 0; j < keys.length; j++) {
+                  caches.delete(keys[j]);
+                }
               });
-            } catch (e) {
-              console.warn('[PWA] Service Worker registration not supported:', e);
             }
-          });
+          } else if (window.location.protocol.startsWith('http')) {
+            window.addEventListener('load', function() {
+              try {
+                navigator.serviceWorker.register('/sw.js').then(function(reg) {
+                  console.log('[PWA] Service Worker registered with scope:', reg.scope);
+                }).catch(function(err) {
+                  console.warn('[PWA] Service Worker registration unavailable in this context:', err && err.message);
+                });
+              } catch (e) {
+                console.warn('[PWA] Service Worker registration not supported:', e);
+              }
+            });
+          }
         }
       })();
     </script>

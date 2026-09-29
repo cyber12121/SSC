@@ -48,8 +48,15 @@ self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (req.method !== 'GET') return;
 
-  // Do not cache API endpoints or external Firebase requests
+  // Do not cache API endpoints, external Firebase requests, or localhost development assets
   if (
+    url.hostname === 'localhost' ||
+    url.hostname === '127.0.0.1' ||
+    url.pathname.includes('/@vite/') ||
+    url.pathname.includes('/@fs/') ||
+    url.pathname.includes('/node_modules/') ||
+    url.pathname.includes('/src/') ||
+    url.search.includes('?t=') ||
     url.pathname.startsWith('/api/') ||
     url.hostname.includes('firebaseio.com') ||
     url.hostname.includes('googleapis.com') ||
