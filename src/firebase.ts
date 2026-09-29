@@ -1,4 +1,3 @@
-import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   initializeAuth,
@@ -7,7 +6,8 @@ import {
   inMemoryPersistence,
   GoogleAuthProvider,
   signInWithPopup,
-  signOut
+  signOut,
+  browserPopupRedirectResolver
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -43,9 +43,8 @@ try {
 
 export const db = firestoreDb;
 
-// Initialize Firebase Auth with graceful persistence fallbacks
-// In restricted browser contexts, extensions, or third-party iframes, IndexedDB/storage can throw:
-// "SecurityError: Access to storage is not allowed from this context."
+// Initialize Firebase Auth with graceful persistence and popup resolver
+// Note: browserPopupRedirectResolver is required by signInWithPopup to avoid auth/argument-error
 let firebaseAuth: ReturnType<typeof getAuth>;
 try {
   // Test if storage is actually accessible before requesting persistence
@@ -64,7 +63,8 @@ try {
   if (isStorageUsable) {
     try {
       firebaseAuth = initializeAuth(app, {
-        persistence: [indexedDBLocalPersistence, browserLocalPersistence, inMemoryPersistence]
+        persistence: [indexedDBLocalPersistence, browserLocalPersistence, inMemoryPersistence],
+        popupRedirectResolver: browserPopupRedirectResolver
       });
     } catch {
       firebaseAuth = getAuth(app);
@@ -73,7 +73,8 @@ try {
     // If storage is blocked by browser policy, use inMemoryPersistence directly
     try {
       firebaseAuth = initializeAuth(app, {
-        persistence: inMemoryPersistence
+        persistence: inMemoryPersistence,
+        popupRedirectResolver: browserPopupRedirectResolver
       });
     } catch {
       firebaseAuth = getAuth(app);
@@ -85,13 +86,18 @@ try {
     firebaseAuth = getAuth(app);
   } catch {
     firebaseAuth = initializeAuth(app, {
-      persistence: inMemoryPersistence
+      persistence: inMemoryPersistence,
+      popupRedirectResolver: browserPopupRedirectResolver
     });
   }
 }
 
 export const auth = firebaseAuth;
 export const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+  prompt: 'select_account'
+});
+export { browserPopupRedirectResolver };
 
 export enum OperationType {
   CREATE = 'create',

@@ -4,7 +4,7 @@ import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { detectTopic, normalizeTopicTitle } from './utils/topicDetector';
 import { GK_SUBJECT_CONFIGS, GK_SUBJECT_LIST, GKSubjectId, getChapterGKSubject, getTopicGKSubject, formatGKSubTopicTitle } from './utils/gkSubjectHelper';
-import { auth, googleProvider, db } from './firebase';
+import { auth, googleProvider, db, browserPopupRedirectResolver } from './firebase';
 import { signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, addDoc, query, where, getDocs, deleteDoc, doc, orderBy } from 'firebase/firestore';
 
@@ -1029,7 +1029,7 @@ export default function App() {
         console.error('Login failed: Firebase Auth is not initialized');
         return;
       }
-      await signInWithPopup(auth, googleProvider);
+      await signInWithPopup(auth, googleProvider, browserPopupRedirectResolver);
     } catch (error: any) {
       console.error('Login failed:', error);
       if (error?.code === 'auth/popup-blocked') {
