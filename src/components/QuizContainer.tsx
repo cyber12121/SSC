@@ -80,8 +80,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     const raw = chapter.questions || [];
     const total = raw.length;
 
-    // 1. Standard 100 questions SSC Full Mock (25 questions each: Reasoning, GA, Quant, English)
-    if (total === 100) {
+    // 1. Standard 100 questions (or 95-100 questions) SSC Full Mock
+    if (total >= 95 && total <= 100) {
       const partA: Question[] = [];
       const partB: Question[] = [];
       const partC: Question[] = [];
@@ -119,15 +119,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       }
 
       // Canonical 25-25-25-25 split for standard SSC CGL Tier 1 Mock tests
-      return {
-        questions: raw,
-        sections: [
-          { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: 25, count: 25 },
-          { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: 25, endIndex: 50, count: 25 },
-          { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: 50, endIndex: 75, count: 25 },
-          { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: 75, endIndex: 100, count: 25 },
-        ]
-      };
+      if (total === 100) {
+        return {
+          questions: raw,
+          sections: [
+            { id: 'part_a', label: 'PART-A', title: 'General Intelligence and Reasoning', startIndex: 0, endIndex: 25, count: 25 },
+            { id: 'part_b', label: 'PART-B', title: 'General Awareness', startIndex: 25, endIndex: 50, count: 25 },
+            { id: 'part_c', label: 'PART-C', title: 'Quantitative Aptitude', startIndex: 50, endIndex: 75, count: 25 },
+            { id: 'part_d', label: 'PART-D', title: 'English Comprehension', startIndex: 75, endIndex: 100, count: 25 },
+          ]
+        };
+      }
     }
 
     // 2. If questions carry section or subject classification (e.g. from Mock Score practice, mock error remediation, or multi-subject test)

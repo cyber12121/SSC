@@ -163,8 +163,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
   // isMockReview: only true for actual mock/error review sessions, not chapter bank quizzes
   const isMockReview = Boolean(
-    result.chapter_title?.toLowerCase().includes('mock') ||
-    result.category === 'mockErrors'
+    result.mode === 'mock' ||
+    result.chapter_title?.toLowerCase().includes('mock')
   );
   const [classifyModeEnabled, setClassifyModeEnabled] = useState<boolean>(true);
   const [rcaMap, setRcaMap] = useState<Record<number, RCAClassification>>(() => {
@@ -519,6 +519,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             const q = item.question || ({} as Question);
             const qId = q.id || (result.id ? `${result.id}_${idx + 1}` : `mock_${idx + 1}`);
             const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
+            const qStatus = getQuestionStatus(idx);
+            const isSlow = qStatus === 'slow';
+            const isCorrect = qStatus === 'correct' || isSlow;
             const leanEntry = {
               ...rca,
               id: qId,
@@ -531,10 +534,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               userAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               selectedAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               chosenOption: item.selectedAnswer || (item as any)?.userAnswer || '',
-              isCorrect: getQuestionStatus(idx) === 'correct' || getQuestionStatus(idx) === 'slow',
-              isSlow: getQuestionStatus(idx) === 'slow',
-              status: getQuestionStatus(idx) === 'slow' ? 'Correct (Slow)' : (getQuestionStatus(idx) === 'correct' ? 'Correct' : (getQuestionStatus(idx) === 'unattempted' ? 'Unattempted' : 'Incorrect')),
-              errorType: getQuestionStatus(idx) === 'slow' ? 'speed_issue' : (getQuestionStatus(idx) === 'correct' ? 'correct' : (getQuestionStatus(idx) === 'unattempted' ? 'unattempted' : 'wrong')),
+              isCorrect,
+              isSlow,
+              status: isSlow ? 'Correct (Slow)' : (isCorrect ? 'Correct' : (qStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+              errorType: isSlow ? 'speed_issue' : (isCorrect ? 'correct' : (qStatus === 'unattempted' ? 'unattempted' : 'wrong')),
               timeSpent: item.timeSpent,
               userTime: item.timeSpent
             };
@@ -565,7 +568,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           // Use ONLY the current attempt's answer — do NOT pull from existingQ.userAnswer etc.,
           // as that is stale data from a previous session and would overwrite an unattempted
           // question with a wrong cached answer, breaking the second-review palette.
-          const selectedAnswer = it.selectedAnswer || (it as any).userAnswer || q.chosenOption || q.userAnswer || '';
+          const selectedAnswer = it.selectedAnswer || (it as any).userAnswer || '';
           const actualStatus = getQuestionStatus(idx);
           const isSlow = actualStatus === 'slow';
           const isCorrect = actualStatus === 'correct' || isSlow;
@@ -630,6 +633,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                   section: it.question.section || '',
                   topic: it.question.topic || it.question.tags?.topic || '',
                   rca: rca || null,
+                  solution: it.question.solution || (it as any).solution || '',
                 } : null
               };
             });

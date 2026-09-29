@@ -107,6 +107,8 @@ const isLocalhost = typeof window !== 'undefined' && (
   window.location.hostname.endsWith('.localhost')
 );
 
+export type ReviewBackTo = 'home' | 'dashboard' | 'mockScores' | 'botErrors';
+
 export default function App() {
   const { showToast, showConfirm } = useToast();
   const [view, setView] = useState<'home' | 'quiz' | 'dashboard' | 'bookmarks' | 'review' | 'drill' | 'mockScores' | 'botErrors'>(() => {
@@ -218,7 +220,7 @@ export default function App() {
     };
   }, []);
   const [reviewResult, setReviewResult] = useState<QuizResult | null>(null);
-  const [reviewBackTo, setReviewBackTo] = useState<'home' | 'dashboard'>('dashboard');
+  const [reviewBackTo, setReviewBackTo] = useState<ReviewBackTo>('dashboard');
   const [category, setCategory] = useState<'mockErrors' | 'chapterBank'>('chapterBank');
   const [quizMode, setQuizMode] = useState<'practice' | 'mock'>(() => {
     try {
@@ -887,13 +889,14 @@ export default function App() {
           const docId = question.id ? question.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : '';
           if (docId) {
             deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId)).catch(() => {});
-          }
-          const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
-          for (const d of snap.docs) {
-            const dData = d.data();
-            const dKey = getDedupeKey(dData?.question, d.id, dData?.options);
-            if (d.id === docId || d.id === question.id || dKey === targetKey) {
-              deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
+          } else {
+            const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
+            for (const d of snap.docs) {
+              const dData = d.data();
+              const dKey = getDedupeKey(dData?.question, d.id, dData?.options);
+              if (d.id === question.id || dKey === targetKey) {
+                deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
+              }
             }
           }
         }
@@ -1382,7 +1385,7 @@ export default function App() {
     // Automatically record wrong & unattempted answers to local Mistake Notebook & Firestore
     // STRICTLY for Chapter Bank quizzes and Mock Error remediation drills (NEVER full/sectional mocks)
     try {
-      const isEligibleCategory = savedResult.category === 'chapterBank' || savedResult.category === 'mockErrors' || isFullOrSectionalMock(savedResult);
+      const isEligibleCategory = (savedResult.category === 'chapterBank' || savedResult.category === 'mockErrors') && !isFullOrSectionalMock(savedResult);
 
       if (isEligibleCategory) {
         const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
@@ -1474,7 +1477,7 @@ export default function App() {
     }
   };
 
-  const openReview = (result: QuizResult, backTo: 'home' | 'dashboard' = 'dashboard') => {
+  const openReview = (result: QuizResult, backTo: ReviewBackTo = 'dashboard') => {
     let resultToReview: QuizResult = { ...result };
 
     // 1. If questionDetails is missing or empty, attempt to load from cached mock questions
@@ -1485,14 +1488,24 @@ export default function App() {
           if (cachedRaw) {
             const list = JSON.parse(cachedRaw);
             if (Array.isArray(list) && list.length > 0) {
-              resultToReview.questionDetails = list.map((q: any, idx: number) => ({
-                q_num: q.q_num || idx + 1,
-                question: q,
-                selectedAnswer: q.userAnswer || q.selectedAnswer || q.chosenOption || '',
-                isCorrect: Boolean(q.isCorrect),
-                timeSpent: q.timeSpent || q.userTime || 0,
-                rca: q.rca
-              }));
+              resultToReview.questionDetails = list.map((q: any, idx: number) => {
+                // Prefer the explicitly saved selectedAnswer; fall back to userAnswer
+                // only when selectedAnswer is truly absent (undefined/null), NOT when it
+                // is '' (empty string = unattempted in the current session). This prevents
+                // imported question-object answers (userAnswer/chosenOption from Testbook
+                // or Oliveboard) from making unattempted questions appear as wrong.
+                const ans = q.selectedAnswer !== undefined && q.selectedAnswer !== null
+                  ? q.selectedAnswer
+                  : (q.userAnswer || q.chosenOption || '');
+                return {
+                  q_num: q.q_num || idx + 1,
+                  question: q,
+                  selectedAnswer: ans,
+                  isCorrect: Boolean(q.isCorrect),
+                  timeSpent: q.timeSpent || q.userTime || 0,
+                  rca: q.rca
+                };
+              });
             }
           }
         } catch {}
@@ -1596,7 +1609,13 @@ export default function App() {
           ...qd,
           q_num: qd.q_num || idx + 1,
           question: q,
-          selectedAnswer: qd.selectedAnswer || (qd as any).userAnswer || '',
+          // Use selectedAnswer as the session-authoritative answer.
+          // Only fall back to userAnswer when selectedAnswer is truly absent (not just
+          // empty string). An empty selectedAnswer means unattempted in this session;
+          // using userAnswer here would pull in the original imported mock answer.
+          selectedAnswer: (qd.selectedAnswer !== undefined && qd.selectedAnswer !== null)
+            ? qd.selectedAnswer
+            : ((qd as any).userAnswer || ''),
           isCorrect: Boolean(qd.isCorrect),
           timeSpent: qd.timeSpent || 0
         };
@@ -1608,7 +1627,7 @@ export default function App() {
     setView('review');
   };
 
-  const openUnclassifiedReview = (title: string, questions: Question[], subject: string) => {
+  const openUnclassifiedReview = (title: string, questions: Question[], subject: string, backTo: ReviewBackTo = 'home') => {
     if (!questions || questions.length === 0) {
       alert('No unclassified questions to review.');
       return;
@@ -1625,7 +1644,9 @@ export default function App() {
       totalTime: 0,
       completedAt: new Date().toISOString(),
       questionDetails: questions.map((q, idx) => {
-        const rawUserAns = String((q as any).userAnswer || (q as any).chosenOption || (q as any).selectedAnswer || '').trim().toLowerCase();
+        const rawUserAns = (q.selectedAnswer !== undefined && q.selectedAnswer !== null)
+          ? String(q.selectedAnswer).trim().toLowerCase()
+          : String((q as any).userAnswer || (q as any).chosenOption || '').trim().toLowerCase();
         const rawTargetAns = String(q.answer || (q as any).correctOption || (q as any).correctAnswer || '').trim().toLowerCase();
         const normUser = rawUserAns === '1' ? 'a' : rawUserAns === '2' ? 'b' : rawUserAns === '3' ? 'c' : rawUserAns === '4' ? 'd' : rawUserAns;
         const normTarget = rawTargetAns === '1' ? 'a' : rawTargetAns === '2' ? 'b' : rawTargetAns === '3' ? 'c' : rawTargetAns === '4' ? 'd' : rawTargetAns;
@@ -1668,7 +1689,7 @@ export default function App() {
         };
       })
     };
-    openReview(syntheticResult, 'home');
+    openReview(syntheticResult, backTo);
   };
 
   const reattemptFromResult = (result: QuizResult) => {
