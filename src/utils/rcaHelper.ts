@@ -3,6 +3,7 @@ import { safeStorage } from './safeStorage';
 import { getIdbKey, setIdbKey } from './cache';
 import { db, auth } from '../firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { toLeanQuestionCache } from './questionHelpers';
 
 export const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
 
@@ -577,8 +578,9 @@ export function saveQuestionRca(
               }
               return item;
             });
-            safeStorage.setItem(`cgl_mock_questions_${mId}`, JSON.stringify(updated));
-            setIdbKey(`cgl_mock_questions_${mId}`, updated).catch(() => {});
+            const leanUpdated = toLeanQuestionCache(updated);
+            safeStorage.setItem(`cgl_mock_questions_${mId}`, JSON.stringify(leanUpdated));
+            setIdbKey(`cgl_mock_questions_${mId}`, leanUpdated).catch(() => {});
           }
         }
       } catch {}

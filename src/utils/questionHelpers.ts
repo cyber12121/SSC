@@ -88,4 +88,22 @@ export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number 
   return isNaN(parsed) || parsed <= 0 ? null : parsed;
 };
 
+/**
+ * Strips heavy static solution/explanation text before saving attempt to browser storage
+ * (localStorage / IndexedDB). Prevents browser storage from exploding into 100+ MB.
+ * Solutions are rehydrated dynamically from disk/bundled files on review via resolveQuestionSolution.
+ */
+export const toLeanQuestionCache = (questions: any[]): any[] => {
+  if (!Array.isArray(questions)) return [];
+  return questions.map(q => {
+    if (!q) return q;
+    if (q.solution || (q as any).explanation || (q as any).detailedSolution) {
+      const { solution, explanation, detailedSolution, sol, ...rest } = q;
+      return { ...rest, solution: '' };
+    }
+    return q;
+  });
+};
+
+
 

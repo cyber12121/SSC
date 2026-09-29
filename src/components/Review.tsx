@@ -33,7 +33,7 @@ import {
 import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
 import { extractSolutionLanguage } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
-import { getNormalizedOptions, getCorrectOptionKey, cleanQuestionForSession, parseAvgTimeToSeconds } from '../utils/questionHelpers';
+import { getNormalizedOptions, getCorrectOptionKey, cleanQuestionForSession, parseAvgTimeToSeconds, toLeanQuestionCache } from '../utils/questionHelpers';
 import { FormattedText } from './FormattedText';
 import { SolutionViewer } from './SolutionViewer';
 import { RcaClassifier } from './review/RcaClassifier';
@@ -392,7 +392,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           cachedList[targetIdx].rcaClassification = isClear ? undefined : newRca;
         }
 
-        safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
+        const leanCached = toLeanQuestionCache(cachedList);
+        safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(leanCached));
+        setIdbKey(`cgl_mock_questions_${result.id}`, leanCached).catch(() => {});
 
         // Background sync to backend disk storage
         fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
@@ -588,8 +590,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         });
 
         if (result.id && !result.id.startsWith('local-')) {
-          safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
-          setIdbKey(`cgl_mock_questions_${result.id}`, questionsToSave).catch(() => {});
+          const leanQuestions = toLeanQuestionCache(questionsToSave);
+          safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(leanQuestions));
+          setIdbKey(`cgl_mock_questions_${result.id}`, leanQuestions).catch(() => {});
           
           // 3. Post to backend /api/mock-questions/:id so disk storage also persists full attempts & RCA tags
           try {

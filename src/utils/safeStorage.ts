@@ -84,6 +84,86 @@ export const safeStorage = {
       keysToRemove.forEach(k => window.localStorage.removeItem(k));
       memStore.clear();
     } catch {}
+  },
+
+  compactAndEvictStaleMockCaches(maxRecentMocks = 15): void {
+    if (!localStorageAvailable) return;
+    try {
+      const mockQuestionKeys: string[] = [];
+      const keysToRemove: string[] = [];
+      const len = window.localStorage.length;
+
+      for (let i = 0; i < len; i++) {
+        const k = window.localStorage.key(i);
+        if (!k) continue;
+
+        // Strip obsolete temporary and backup keys
+        if (k.startsWith('temp_') || k.startsWith('offline_results_') || k.includes('_cache_backup_') || k.startsWith('test_')) {
+          keysToRemove.push(k);
+          continue;
+        }
+
+        if (k.startsWith('cgl_mock_questions_')) {
+          mockQuestionKeys.push(k);
+        }
+      }
+
+      keysToRemove.forEach(k => window.localStorage.removeItem(k));
+
+      // Compact all cgl_mock_questions_* to strip bloated solution texts
+      for (const k of mockQuestionKeys) {
+        try {
+          const raw = window.localStorage.getItem(k);
+          if (!raw) continue;
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            let changed = false;
+            const lean = parsed.map((q: any) => {
+              if (q && (q.solution || q.explanation || q.detailedSolution)) {
+                changed = true;
+                const { solution, explanation, detailedSolution, sol, ...rest } = q;
+                return { ...rest, solution: '' };
+              }
+              return q;
+            });
+            if (changed) {
+              window.localStorage.setItem(k, JSON.stringify(lean));
+            }
+          }
+        } catch {}
+      }
+
+      // If more than maxRecentMocks in localStorage, evict the oldest ones to keep browser lightweight
+      if (mockQuestionKeys.length > maxRecentMocks) {
+        const excess = mockQuestionKeys.slice(maxRecentMocks);
+        for (const exKey of excess) {
+          window.localStorage.removeItem(exKey);
+        }
+      }
+
+      // Compact cgl_rca_global_store if it contains bloated solution texts
+      try {
+        const rawStore = window.localStorage.getItem('cgl_rca_global_store');
+        if (rawStore) {
+          const store = JSON.parse(rawStore);
+          let changed = false;
+          for (const key of Object.keys(store)) {
+            const entry = store[key];
+            if (entry && (entry.solution || entry.explanation || entry.detailedSolution)) {
+              delete entry.solution;
+              delete entry.explanation;
+              delete entry.detailedSolution;
+              changed = true;
+            }
+          }
+          if (changed) {
+            window.localStorage.setItem('cgl_rca_global_store', JSON.stringify(store));
+          }
+        }
+      } catch {}
+    } catch (e) {
+      console.warn('[safeStorage] Error during cache compaction:', e);
+    }
   }
 };
 

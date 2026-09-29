@@ -154,5 +154,30 @@ export const setIdbKey = async <T>(key: string, data: T): Promise<void> => {
   }
 };
 
+/**
+ * Clears old monolithic subject dataset blobs from IndexedDB to reclaim 15-20+ MB.
+ */
+export const purgeBloatedIdbSubjectData = async (): Promise<void> => {
+  try {
+    const db = await getDB();
+    if (!db) return;
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.delete('subject_data_v7');
+        store.delete('subject_data_v6');
+        store.delete('subject_data_v5');
+        store.delete(CACHE_KEY);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+      } catch {
+        resolve();
+      }
+    });
+  } catch {}
+};
+
+
 
 

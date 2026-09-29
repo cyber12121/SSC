@@ -22,7 +22,9 @@ import { syncMockReports } from './utils/syncMockReports';
 import { FormattedText } from './components/FormattedText';
 import { cleanSolutionText } from './utils/cleanSolution';
 import { normalizeAnswerKey } from './utils/mathSanitizer';
-import { cleanQuestionForSession } from './utils/questionHelpers';
+import { cleanQuestionForSession, toLeanQuestionCache } from './utils/questionHelpers';
+import { purgeBloatedIdbSubjectData, setIdbKey } from './utils/cache';
+import { resolveQuestionSolution } from './utils/solutionResolver';
 import { openAiWithScope } from './utils/aiScopeHelper';
 import { AiFocusedQuestion } from './types/aiScope';
 import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
@@ -507,8 +509,10 @@ export default function App() {
       } catch { }
     }
 
-    // Clean up any stale temporary keys and hydrate RCA from IDB/Firestore
+    // Clean up bloated mock caches, stale keys, and hydrate RCA from IDB/Firestore
     safeStorage.clearStaleTemporaryCaches();
+    safeStorage.compactAndEvictStaleMockCaches();
+    purgeBloatedIdbSubjectData().catch(() => {});
     initGlobalRcaStoreFromIdb().catch(() => {});
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -1380,7 +1384,9 @@ export default function App() {
             userTime: d.timeSpent || 0
           };
         });
-        safeStorage.setItem(`cgl_mock_questions_${savedResult.id}`, JSON.stringify(mockQuestionsToSave));
+        const leanToSave = toLeanQuestionCache(mockQuestionsToSave);
+        safeStorage.setItem(`cgl_mock_questions_${savedResult.id}`, JSON.stringify(leanToSave));
+        setIdbKey(`cgl_mock_questions_${savedResult.id}`, leanToSave).catch(() => {});
         fetch(`/api/mock-questions/${encodeURIComponent(savedResult.id)}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1608,6 +1614,9 @@ export default function App() {
             const cachedItem = cachedMockQuestions[idx];
             sol = cachedItem?.solution || cachedItem?.explanation || cachedItem?.sol || cachedItem?.detailedSolution || '';
           }
+        }
+        if (!sol) {
+          sol = resolveQuestionSolution({ ...q, id: q.id || qdAny.id, mockId: result.id, testId: result.id });
         }
 
         if (sol && !q.solution) {
