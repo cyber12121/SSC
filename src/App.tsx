@@ -4524,7 +4524,7 @@ export default function App() {
         mockErrorsData={mockData}
         activeReviewResult={view === 'review' ? reviewResult : null}
         onStartWeakTopicDrill={startWeakTopicDrill}
-        hideFloatingTrigger={view === 'quiz' && quizMode === 'mock'}
+        hideFloatingTrigger={view === 'quiz'}
       />
     </div>
   );

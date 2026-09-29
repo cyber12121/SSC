@@ -754,7 +754,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               </span>
             </div>
             <p className="text-[11px] text-slate-500 mt-0.5">
-              Subject cards & topic-wise revision bank from @My_cgl_bot & Mock tests.
+              Subject cards & chapter-wise revision bank from your practice quizzes and error remediation drills.
             </p>
           </div>
         </div>
