@@ -384,8 +384,8 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       if (q.options && Object.keys(q.options).length > 0) {
         existing.options = q.options;
       }
-      // Merge RCA tag if existing didn't have one and this one does
-      if (qRca && (!existing.rca || !existing.rca.tag)) {
+      // Merge RCA tag: prioritize user classification if available
+      if (qRca) {
         existing.rca = qRca;
         existing.rcaClassification = qRca;
       }

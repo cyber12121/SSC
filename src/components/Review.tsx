@@ -38,6 +38,7 @@ import { FormattedText } from './FormattedText';
 import { SolutionViewer } from './SolutionViewer';
 import { RcaClassifier } from './review/RcaClassifier';
 import { safeStorage } from '../utils/safeStorage';
+import { getIdbKey, setIdbKey } from '../utils/cache';
 import { getLanguageText } from '../utils/formatQuestionText';
 
 import { db, auth } from '../firebase';
@@ -343,7 +344,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         const itIsSlow = itStatus === 'slow';
         const itIsCorrect = itStatus === 'correct' || itIsSlow;
 
-        const fullEntry = {
+        const leanEntry = {
           ...newRca,
           id: qId,
           q_num: targetIdx + 1,
@@ -351,11 +352,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           mockTitle: result.chapter_title,
           subject: q.subject || result.subject || 'General Awareness',
           topic: q.tags?.topic || (q as any).topic || 'General',
-          questionText: q.question,
-          options: q.options,
-          answer: q.answer,
-          solution: q.solution || (q as any).explanation || (it as any)?.solution || '',
-          image: q.image,
+          questionText: (q.question || '').slice(0, 300),
           userAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
           selectedAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
           chosenOption: it?.selectedAnswer || (it as any)?.userAnswer || '',
@@ -364,18 +361,17 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           status: itStatus === 'slow' ? 'Correct (Slow)' : (itIsCorrect ? 'Correct' : (itStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
           errorType: itIsSlow ? 'speed_issue' : (itIsCorrect ? 'correct' : (itStatus === 'unattempted' ? 'unattempted' : 'wrong')),
           timeSpent: it?.timeSpent,
-          userTime: it?.timeSpent,
-          avgTime: q.avgTime ?? (it as any)?.avgTime,
-          avgTimeSeconds: q.avgTimeSeconds ?? (it as any)?.avgTimeSeconds
+          userTime: it?.timeSpent
         };
 
-        globalStore[qId] = fullEntry;
+        globalStore[qId] = leanEntry;
         if (qTextNorm) {
-          globalStore[qTextNorm] = fullEntry;
+          globalStore[qTextNorm] = leanEntry;
         }
       }
 
       safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+      setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
 
       // Update mock questions array in localStorage and trigger background persistence
       if (result.id && !result.id.startsWith('local-')) {
@@ -523,7 +519,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             const q = item.question || ({} as Question);
             const qId = q.id || (result.id ? `${result.id}_${idx + 1}` : `mock_${idx + 1}`);
             const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
-            const entry = {
+            const leanEntry = {
               ...rca,
               id: qId,
               q_num: idx + 1,
@@ -531,11 +527,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               mockTitle: result.chapter_title,
               subject: q.subject || result.subject || 'General Awareness',
               topic: q.tags?.topic || (q as any).topic || 'General',
-              questionText: q.question,
-              options: q.options,
-              answer: q.answer,
-              solution: q.solution || (q as any).explanation || (item as any)?.solution || '',
-              image: q.image,
+              questionText: (q.question || '').slice(0, 300),
               userAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               selectedAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
               chosenOption: item.selectedAnswer || (item as any)?.userAnswer || '',
@@ -546,11 +538,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               timeSpent: item.timeSpent,
               userTime: item.timeSpent
             };
-            globalStore[qId] = entry;
-            if (qTextNorm) globalStore[qTextNorm] = entry;
+            globalStore[qId] = leanEntry;
+            if (qTextNorm) globalStore[qTextNorm] = leanEntry;
           }
         });
         safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
         window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { count: Object.keys(currentRcaMap).length } }));
 
         // Update cached mock questions in localStorage with full attempt metadata
@@ -598,6 +591,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
         if (result.id && !result.id.startsWith('local-')) {
           safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(questionsToSave));
+          setIdbKey(`cgl_mock_questions_${result.id}`, questionsToSave).catch(() => {});
           
           // 3. Post to backend /api/mock-questions/:id so disk storage also persists full attempts & RCA tags
           try {

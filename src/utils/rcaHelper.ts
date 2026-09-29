@@ -1,5 +1,6 @@
 import { RCATagType, RCAClassification, Question } from '../types';
 import { safeStorage } from './safeStorage';
+import { getIdbKey, setIdbKey } from './cache';
 
 export const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
 
@@ -309,7 +310,9 @@ export function generatePatternInsight(questions: any[], subFilter?: string): st
 export function getGlobalRcaStore(): Record<string, any> {
   try {
     const raw = safeStorage.getItem('cgl_rca_global_store');
-    return raw ? JSON.parse(raw) : {};
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' ? parsed : {};
   } catch {
     return {};
   }
@@ -318,8 +321,34 @@ export function getGlobalRcaStore(): Record<string, any> {
 // In-memory cache for bundled mock questions RCA tags
 let bundledRcaCache: Record<string, RCAClassification> | null = null;
 let bundledRcaPromise: Promise<Record<string, RCAClassification>> | null = null;
+let idbHydrated = false;
+
+/**
+ * Hydrates global RCA store from IndexedDB if localStorage was cleared or wiped.
+ */
+export async function initGlobalRcaStoreFromIdb(): Promise<Record<string, any>> {
+  if (idbHydrated) return getGlobalRcaStore();
+  try {
+    const fromIdb = await getIdbKey<Record<string, any>>('cgl_rca_global_store');
+    if (fromIdb && typeof fromIdb === 'object' && Object.keys(fromIdb).length > 0) {
+      const current = getGlobalRcaStore();
+      const merged = { ...fromIdb, ...current };
+      safeStorage.setItem('cgl_rca_global_store', JSON.stringify(merged));
+      idbHydrated = true;
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { hydrated: true } }));
+      }
+      return merged;
+    }
+  } catch {}
+  idbHydrated = true;
+  return getGlobalRcaStore();
+}
 
 export async function loadBundledMockRcaMap(): Promise<Record<string, RCAClassification>> {
+  // Concurrently ensure IDB store is hydrated
+  initGlobalRcaStoreFromIdb().catch(() => {});
+
   if (bundledRcaCache) return bundledRcaCache;
   if (bundledRcaPromise) return bundledRcaPromise;
 
@@ -366,6 +395,19 @@ export function findQuestionRca(
   globalStore?: Record<string, any>,
   bundledMap?: Record<string, RCAClassification>
 ): RCAClassification | undefined {
+  const store = globalStore || getGlobalRcaStore();
+  const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
+
+  // 1. Explicit user classification from globalStore TAKES HIGHEST PRECEDENCE!
+  // This prevents static/bundled defaults from overriding user decisions.
+  if (q.id && store[q.id]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[q.id].tag)) {
+    return normalizeClassification(store[q.id]);
+  }
+  if (textNorm && store[textNorm]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[textNorm].tag)) {
+    return normalizeClassification(store[textNorm]);
+  }
+
+  // 2. Question object RCA (from current active attempt in memory)
   if (q.rca && q.rca.tag && ['C', 'A', 'S', 'T', 'G'].includes(q.rca.tag)) {
     return normalizeClassification(q.rca);
   }
@@ -373,16 +415,7 @@ export function findQuestionRca(
     return normalizeClassification(q.rcaClassification);
   }
 
-  const store = globalStore || getGlobalRcaStore();
-  if (q.id && store[q.id]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[q.id].tag)) {
-    return normalizeClassification(store[q.id]);
-  }
-
-  const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
-  if (textNorm && store[textNorm]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[textNorm].tag)) {
-    return normalizeClassification(store[textNorm]);
-  }
-
+  // 3. Fallback to bundled mock map
   const bMap = bundledMap || bundledRcaCache;
   if (bMap) {
     if (q.id && bMap[q.id]) return normalizeClassification(bMap[q.id]);
@@ -401,13 +434,15 @@ export function saveQuestionRca(
 ): RCAClassification | undefined {
   try {
     const globalStore = getGlobalRcaStore();
-    const qId = targetQ.id || `${targetQ.parentSubject || parentSubject || 'mock'}_${Date.now()}`;
     const textNorm = (targetQ.question || targetQ.questionText || '').trim().toLowerCase();
+    const cleanSlug = textNorm ? textNorm.replace(/[^a-z0-9]/g, '').slice(0, 40) : '';
+    const qId = targetQ.id || `${targetQ.parentSubject || parentSubject || 'mock'}_${cleanSlug || 'q'}`;
 
     if (!tag) {
       if (qId) delete globalStore[qId];
       if (textNorm) delete globalStore[textNorm];
       safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+      setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
       if (typeof window !== 'undefined') {
         window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { qId, textNorm, rca: null } }));
       }
@@ -439,26 +474,21 @@ export function saveQuestionRca(
       classifiedAt: new Date().toISOString()
     };
 
-    const entry = {
+    // CRITICAL: Lean entry without heavy options, solution, or image to stay well within localStorage quota!
+    const leanEntry = {
       ...newRca,
       id: qId,
       mockId: targetQ.mockId || targetQ.testId,
       mockTitle: targetQ.mockTitle || targetQ.testName,
       subject: targetQ.parentSubject || targetQ.subject || parentSubject || 'General Awareness',
       topic: targetQ.detectedTopic || targetQ.tags?.topic || targetQ.topic || 'General',
-      questionText: targetQ.question || targetQ.questionText,
-      options: targetQ.options,
-      answer: targetQ.answer,
-      solution: targetQ.solution,
-      image: targetQ.image,
-      status: targetQ.status || targetQ.errorType || 'wrong',
-      errorType: targetQ.errorType || 'wrong',
-      isCorrect: false
+      questionText: (targetQ.question || targetQ.questionText || '').slice(0, 300)
     };
 
-    globalStore[qId] = entry;
-    if (textNorm) globalStore[textNorm] = entry;
+    globalStore[qId] = leanEntry;
+    if (textNorm) globalStore[textNorm] = leanEntry;
     safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+    setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
 
     // Also update cached mock test if mockId exists
     const mId = targetQ.mockId || targetQ.testId;
@@ -476,6 +506,7 @@ export function saveQuestionRca(
               return item;
             });
             safeStorage.setItem(`cgl_mock_questions_${mId}`, JSON.stringify(updated));
+            setIdbKey(`cgl_mock_questions_${mId}`, updated).catch(() => {});
           }
         }
       } catch {}

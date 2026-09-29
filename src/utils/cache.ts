@@ -94,6 +94,26 @@ export const setCachedData = async <T>(data: T): Promise<void> => {
   }
 };
 
+export const getIdbKey = async <T>(key: string): Promise<T | null> => {
+  try {
+    const db = await getDB();
+    if (!db) return null;
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_NAME, 'readonly');
+        const store = tx.objectStore(STORE_NAME);
+        const getReq = store.get(key);
+        getReq.onsuccess = () => resolve(getReq.result || null);
+        getReq.onerror = () => resolve(null);
+      } catch {
+        resolve(null);
+      }
+    });
+  } catch {
+    return null;
+  }
+};
+
 export const clearCachedData = async (): Promise<void> => {
   try {
     const db = await getDB();
@@ -113,4 +133,26 @@ export const clearCachedData = async (): Promise<void> => {
     // Silently ignore
   }
 };
+
+export const setIdbKey = async <T>(key: string, data: T): Promise<void> => {
+  try {
+    const db = await getDB();
+    if (!db) return;
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.put(data, key);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+      } catch {
+        resolve();
+      }
+    });
+  } catch {
+    // Silently ignore
+  }
+};
+
+
 

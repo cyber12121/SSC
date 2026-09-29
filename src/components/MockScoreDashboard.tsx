@@ -1005,13 +1005,30 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       rawId
     ].filter(Boolean) as string[]));
 
-    // 1. Direct Vite dynamic module lookup for all candidate IDs in mock_questions
+    // 1. LocalStorage cache lookup (holds user's active attempt state & latest RCA tags)
     for (const cid of candidateIds) {
-      const qData = await tryModulePath(`../data/mock_questions/${cid}.json`);
-      if (qData) { list = qData; break; }
+      try {
+        const saved = safeStorage.getItem(`cgl_mock_questions_${cid}`);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          const extracted = tryExtractQuestions(parsed);
+          if (extracted && extracted.length >= (report.type === 'full' ? 20 : 1)) {
+            list = extracted;
+            break;
+          }
+        }
+      } catch {}
     }
 
-    // 2. Search mockQuestionModules by matching test title in question data
+    // 2. Direct Vite dynamic module lookup for all candidate IDs in mock_questions
+    if (list.length === 0) {
+      for (const cid of candidateIds) {
+        const qData = await tryModulePath(`../data/mock_questions/${cid}.json`);
+        if (qData) { list = qData; break; }
+      }
+    }
+
+    // 3. Search mockQuestionModules by matching test title in question data
     if (list.length === 0 && report.title) {
       const targetNorm = normalizeTestTitle(report.title).replace(/[^a-z0-9]/g, '');
       for (const [, loader] of Object.entries(mockQuestionModules)) {
@@ -1024,20 +1041,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               list = items;
               break;
             }
-          }
-        } catch {}
-      }
-    }
-
-    // 3. LocalStorage cache lookup
-    if (list.length === 0) {
-      for (const cid of candidateIds) {
-        try {
-          const saved = safeStorage.getItem(`cgl_mock_questions_${cid}`);
-          if (saved) {
-            const parsed = JSON.parse(saved);
-            const extracted = tryExtractQuestions(parsed);
-            if (extracted) { list = extracted; break; }
           }
         } catch {}
       }
@@ -1543,7 +1546,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
         const qId = item.id || `mock_q_${idx + 1}_${report.id}`;
         const cleanText = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
-        const existingRca = item.rca || rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)] || globalRcaMap[qId] || (cleanText ? globalRcaMap[cleanText] : undefined);
+        const userSavedRca = rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)] || globalRcaMap[qId] || (cleanText ? globalRcaMap[cleanText] : undefined);
+        const existingRca = userSavedRca || item.rca;
 
         const rawAvg = item.avgTime || item.avg_time || item.avgTimeSeconds;
         let parsedAvg = 45;
