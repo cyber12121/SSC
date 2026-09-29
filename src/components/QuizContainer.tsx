@@ -914,11 +914,22 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           />
 
           {mode === 'mock' ? (
-            /* Candidate Profile Photos in Mock Mode */
-            <div className="hidden sm:flex items-center gap-1.5 ml-1">
-              <CandidateAvatar label="Registration Photo" />
-              <CandidateAvatar label="Captured Photo" />
-            </div>
+            <>
+              {/* Mobile & Desktop Submit Button in Mock Mode */}
+              <button
+                onClick={() => setShowSubmitModal(true)}
+                className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-[#2460b9] hover:bg-[#1c4d94] text-white font-bold text-xs rounded transition-colors flex items-center gap-1 shadow-xs cursor-pointer ml-1"
+                title="Submit Test & record score"
+              >
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Submit</span>
+              </button>
+              {/* Candidate Profile Photos in Mock Mode */}
+              <div className="hidden sm:flex items-center gap-1.5 ml-1">
+                <CandidateAvatar label="Registration Photo" />
+                <CandidateAvatar label="Captured Photo" />
+              </div>
+            </>
           ) : (
             /* Finish Practice Button in Practice Mode */
             <button
@@ -934,9 +945,15 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           {/* Exit Button */}
           <button
             onClick={() => {
-              if (window.confirm(mode === 'practice' ? 'Are you sure you want to exit practice mode?' : 'Are you sure you want to exit the test? Your progress will not be saved.')) {
-                onExit();
+              const answeredCount = Object.keys(answers).length;
+              if (answeredCount > 0) {
+                const shouldSave = window.confirm(`You answered ${answeredCount} question(s). Click OK to submit your test and save your mistakes, or Cancel to exit without saving.`);
+                if (shouldSave) {
+                  handleSubmitTest();
+                  return;
+                }
               }
+              onExit();
             }}
             className="p-1 text-gray-400 hover:text-red-600 rounded transition-colors ml-1 cursor-pointer"
             title="Exit"
@@ -1530,6 +1547,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             sectionAnswered={sectionAnswered}
             sectionNotAnswered={sectionNotAnswered}
             sectionMarked={sectionMarked}
+            onSubmit={() => setShowSubmitModal(true)}
+            isSubmitting={isSubmitting}
           />
         </div>
       </div>
@@ -1567,6 +1586,11 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               sections={sections}
               activeSectionIdx={activeSectionIdx}
               onSelectSection={(idx) => handleSectionClick(idx)}
+              onSubmit={() => {
+                setIsMobilePaletteOpen(false);
+                setShowSubmitModal(true);
+              }}
+              isSubmitting={isSubmitting}
             />
           </div>
         </div>

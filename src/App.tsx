@@ -44,6 +44,7 @@ import { getDailyThought } from './utils/dailyThoughts';
 
 import { getCachedData, setCachedData, clearCachedData } from './utils/cache';
 import { useToast } from './components/ui/Toast';
+import { recordQuizMistakes } from './utils/mistakeRecorder';
 
 const GK_ICONS: Record<string, any> = {
   Landmark,
@@ -1301,85 +1302,19 @@ export default function App() {
       }
     }
 
-    // Record wrong & unattempted answers to local RCA store & live mistakes notebook (/api/mistakes)
-    // Prompt the user for confirmation before adding to the mistake section
+    // Automatically record wrong & unattempted answers to local Mistake Notebook, RCA store & Firestore
     try {
       const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
       if (errorList.length > 0) {
-        let shouldAdd = false;
-        try {
-          shouldAdd = await showConfirm({
-            title: 'Add to Mistake Notebook?',
-            message: `You had ${errorList.length} incorrect or unattempted question(s). Would you like to add them to your Mistake Notebook for future revision?`,
-            confirmLabel: 'Add to Mistakes',
-            cancelLabel: 'Skip',
-            variant: 'normal'
-          });
-        } catch {
-          shouldAdd = window.confirm(`You had ${errorList.length} incorrect or unattempted question(s). Would you like to add them to your Mistake Notebook?`);
-        }
-
-        if (shouldAdd) {
-          try {
-            const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
-            const rcaStore = rcaRaw ? JSON.parse(rcaRaw) : {};
-            for (const item of errorList) {
-              if (!item.question) continue;
-              const q = item.question;
-              const qId = q.id || `quiz_${savedResult.id}_${item.q_num}`;
-              const hasAnswer = Boolean(item.selectedAnswer && String(item.selectedAnswer).trim() !== '');
-              rcaStore[qId] = {
-                id: qId,
-                q_num: item.q_num,
-                mockId: isMockTest ? savedResult.id : undefined,
-                mockTitle: fullResult.chapter_title,
-                subject: q.subject || fullResult.subject || 'General Awareness',
-                topic: q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice',
-                questionText: q.question,
-                options: q.options,
-                answer: q.answer,
-                solution: q.solution || (q as any).explanation || '',
-                userAnswer: item.selectedAnswer || '',
-                selectedAnswer: item.selectedAnswer || '',
-                chosenOption: item.selectedAnswer || '',
-                isCorrect: false,
-                status: hasAnswer ? 'Incorrect' : 'Unattempted',
-                errorType: hasAnswer ? 'wrong' : 'unattempted',
-                isFromMock: isMockTest,
-                classifiedAt: new Date().toISOString()
-              };
-            }
-            safeStorage.setItem('cgl_rca_global_store', JSON.stringify(rcaStore));
-          } catch (err) {
-            console.warn('Could not update cgl_rca_global_store:', err);
-          }
-
-          for (const item of errorList) {
-            if (!item.question) continue;
-            fetch('/api/mistakes', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                action: 'record',
-                userId: user ? user.uid : undefined,
-                questionData: {
-                  id: item.question.id || `web_quiz_${Date.now()}_${item.q_num}`,
-                  question: item.question.question,
-                  options: item.question.options,
-                  correctOption: item.question.answer,
-                  explanation: (item.question as any).explanation || item.question.solution || '',
-                  subject: item.question.subject || results.subject || 'general_awareness',
-                  topic: item.question.topic || results.chapter_title || 'Quiz Practice',
-                  isMock: isMockTest
-                }
-              })
-            }).catch(() => {});
-          }
-
-          showToast(`Added ${errorList.length} question(s) to Mistake Notebook.`, 'success');
+        const uid = user ? user.uid : (auth.currentUser ? auth.currentUser.uid : undefined);
+        const recorded = recordQuizMistakes(savedResult, uid);
+        if (recorded && recorded.length > 0) {
+          showToast(`Recorded ${recorded.length} mistake(s) into your Mistake Notebook.`, 'success');
         }
       }
-    } catch { }
+    } catch (err) {
+      console.warn('[handleSaveQuizResult] Error recording mistakes:', err);
+    }
 
 
 

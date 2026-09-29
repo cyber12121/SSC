@@ -19,30 +19,22 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-
-export interface RecordedMistake {
-  id: string;
-  userId: number;
-  question: string;
-  options: string[];
-  correctOptionIndex: number;
-  explanation: string;
-  subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness';
-  topic: string;
-  topicSlug: string;
-  source: 'telegram_quiz' | 'website_quiz' | 'telegram_drill' | 'website_mock';
-  timestamp: number;
-  wrongCount: number;
-  mastered: boolean;
-}
+import { 
+  autoRecoverMistakesFromStorage, 
+  RecordedMistake, 
+  MISTAKE_NOTEBOOK_KEY, 
+  SYNCED_STORAGE_KEY,
+  normalizeSubject,
+  getDedupeKey,
+  isSpeedLabQuestion
+} from '../utils/mistakeRecorder';
+export type { RecordedMistake };
 
 interface BotMistakesPageProps {
   onBack: () => void;
   onDeleteQuestion?: (questionId: string, questionText: string) => void;
   onStartPractice?: (topic: string, questions: Question[]) => void;
 }
-
-const SYNCED_STORAGE_KEY = 'cgl_synced_telegram_mistakes';
 
 // Safe base64 / base64url UTF-8 decoder
 function decodeSyncPayload(str: string): any {
@@ -68,54 +60,6 @@ function decodeSyncPayload(str: string): any {
   }
 }
 
-// Canonical subject normalization
-function normalizeSubject(sub?: string): 'english' | 'mathematics' | 'reasoning' | 'general_awareness' {
-  if (!sub) return 'general_awareness';
-  const s = String(sub).toLowerCase().trim();
-  if (s.includes('eng') || s.includes('vocab') || s.includes('synonym') || s.includes('grammar') || s.includes('idiom') || s.includes('antonym')) return 'english';
-  if (s.includes('math') || s.includes('quant') || s.includes('arithmetic') || s.includes('algebra') || s.includes('geometry') || s.includes('trig') || s.includes('calc')) return 'mathematics';
-  if (s.includes('reason') || s.includes('logic') || s.includes('analogy') || s.includes('series') || s.includes('syllogism')) return 'reasoning';
-  return 'general_awareness';
-}
-
-// Checks if a question belongs to Speed Drills (Mental Math, Calc Studio, Simplification, etc.)
-export function isSpeedLabQuestion(item: { id?: string; topic?: string; question?: string; source?: string }): boolean {
-  const s = ((item.id || '') + ' ' + (item.topic || '') + ' ' + (item.source || '')).toLowerCase();
-  return (
-    s.includes('speed') ||
-    s.includes('mental_math') ||
-    s.includes('calc_studio') ||
-    s.includes('simplification') ||
-    s.includes('step_triplets') ||
-    s.includes('step_tables') ||
-    s.includes('step_squares') ||
-    s.includes('step_cubes') ||
-    s.includes('step_fractions') ||
-    s.includes('step_compl') ||
-    s.includes('step_mult') ||
-    s.includes('mm_add') ||
-    s.includes('mm_sub') ||
-    s.includes('mm_mul') ||
-    s.includes('mm_div') ||
-    s.includes('mm_sq') ||
-    s.includes('mm_cu') ||
-    s.includes('mm_pct') ||
-    s.includes('simp_cat')
-  );
-}
-
-// Canonical question deduplication key based on normalized question text
-export function getDedupeKey(qText?: string, id?: string): string {
-  const text = (qText || '')
-    .toLowerCase()
-    // Strip leading question numbers like "Q1.", "Q 1:", "1.", "1)", "Question 1:"
-    .replace(/^(?:question\s*\d+[:.]?|\bq\s*\d+[:.]?|\d+[.)]\s*)/i, '')
-    // Normalize all whitespace & punctuation
-    .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
-    .replace(/[?.!,:;'"()\[\]{}]+$/g, '')
-    .trim();
-  return text || (id || '').trim().toLowerCase();
-}
 
 function getTopicIcon(topic: string): string {
   const t = topic.toLowerCase();
@@ -281,112 +225,11 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     setLoading(true);
     setError(null);
     try {
-      let serverMistakes: RecordedMistake[] = [];
-
-      // Load synced telegram mistakes from safeStorage
-      let localSynced: RecordedMistake[] = [];
-      try {
-        const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
-        if (raw) localSynced = JSON.parse(raw);
-      } catch {}
-
-      // Load from Firestore if user is logged in
-      let firestoreMistakes: RecordedMistake[] = [];
-      if (auth.currentUser) {
-        try {
-          const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
-          snap.forEach((d) => {
-            const data = d.data() as RecordedMistake;
-            if (data && data.question) {
-              firestoreMistakes.push({ ...data, id: data.id || d.id });
-            }
-          });
-        } catch {}
-      }
-
-      // Load from dedicated website mistake notebook (user-confirmed mistakes only)
-      let websiteMistakes: RecordedMistake[] = [];
-      try {
-        const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
-        if (nbRaw) {
-          const parsed = JSON.parse(nbRaw);
-          if (Array.isArray(parsed)) websiteMistakes = parsed;
-        }
-      } catch (err) {
-        console.warn('[BotMistakesPage] Error reading cgl_user_mistake_notebook:', err);
-      }
-
-      // Merge and deduplicate across all sources using canonical normalized question key
-      const mergedMap = new Map<string, RecordedMistake>();
-
-      const addOrMerge = (m: RecordedMistake) => {
-        if (!m || isSpeedLabQuestion(m)) return;
-        const key = getDedupeKey(m.question, m.id);
-        if (!key) return;
-
-        const normalizedSub = normalizeSubject(m.subject);
-        if (mergedMap.has(key)) {
-          const existing = mergedMap.get(key)!;
-          existing.wrongCount = Math.max(existing.wrongCount || 1, m.wrongCount || 1);
-          existing.timestamp = Math.max(existing.timestamp || 0, m.timestamp || 0);
-          if ((!existing.explanation || existing.explanation.trim().length < 10) && m.explanation) {
-            existing.explanation = m.explanation;
-          }
-          if ((!existing.options || existing.options.length === 0) && (m.options && m.options.length > 0)) {
-            existing.options = m.options;
-            existing.correctOptionIndex = m.correctOptionIndex;
-          }
-          if ((!existing.topic || existing.topic === 'Mock Mistake') && m.topic && m.topic !== 'Mock Mistake') {
-            existing.topic = m.topic;
-            existing.topicSlug = m.topicSlug;
-          }
-        } else {
-          mergedMap.set(key, { ...m, subject: normalizedSub });
-        }
-      };
-
-      for (const m of serverMistakes) addOrMerge(m);
-      for (const m of firestoreMistakes) addOrMerge(m);
-      for (const m of websiteMistakes) addOrMerge(m);
-      for (const m of localSynced) addOrMerge(m);
-
-      // Filter out deleted questions and speed lab items
-      let deletedIds = new Set<string>();
-      try {
-        const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
-        if (delRaw) {
-          const arr = JSON.parse(delRaw);
-          if (Array.isArray(arr)) arr.forEach((id) => deletedIds.add(String(id).toLowerCase()));
-        }
-      } catch {}
-
-      const finalList = Array.from(mergedMap.values()).filter((item) => {
-        if (isSpeedLabQuestion(item)) return false;
-        if (item.id && deletedIds.has(item.id.toLowerCase())) return false;
-        if (item.question && deletedIds.has(item.question.trim().toLowerCase())) return false;
-        return true;
-      });
-      finalList.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-      setMistakes(finalList);
-
-      // Persist to safeStorage so loaded mistakes stay permanently cached
-      if (finalList.length > 0) {
-        try {
-          safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(finalList));
-        } catch {}
-
-        if (auth.currentUser) {
-          try {
-            for (const m of finalList) {
-              const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}`;
-              setDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId), m, { merge: true }).catch(() => {});
-            }
-          } catch {}
-        }
-      }
+      const recovered = await autoRecoverMistakesFromStorage(auth.currentUser?.uid);
+      setMistakes(recovered);
 
       // Auto-select subject with mistakes
-      if (finalList.length > 0) {
+      if (recovered.length > 0) {
         const subjectsPriority: Array<'english' | 'mathematics' | 'reasoning' | 'general_awareness'> = [
           'english',
           'mathematics',
@@ -394,7 +237,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           'general_awareness',
         ];
         const foundWithMistakes = subjectsPriority.find(
-          (s) => finalList.some((m) => normalizeSubject(m.subject) === s)
+          (s) => recovered.some((m) => normalizeSubject(m.subject) === s)
         );
         if (foundWithMistakes) {
           setSelectedSubject(foundWithMistakes);
@@ -407,6 +250,16 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const handleMistakesUpdated = () => {
+      fetchMistakes();
+    };
+    window.addEventListener('cgl_mistakes_updated', handleMistakesUpdated);
+    return () => {
+      window.removeEventListener('cgl_mistakes_updated', handleMistakesUpdated);
+    };
+  }, []);
 
   useEffect(() => {
     // Check URL parameters for direct automatic sync from Telegram

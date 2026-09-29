@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, X } from 'lucide-react';
+import { BookOpen, X, CheckCircle2 } from 'lucide-react';
 import { Question } from '../../types';
 
 export interface MockSection {
@@ -34,6 +34,8 @@ interface QuizPaletteSidebarProps {
   sections?: MockSection[];
   activeSectionIdx?: number;
   onSelectSection?: (idx: number) => void;
+  onSubmit?: () => void;
+  isSubmitting?: boolean;
 }
 
 export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(({
@@ -58,6 +60,8 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
   className = '',
   sections,
   activeSectionIdx,
+  onSubmit,
+  isSubmitting = false,
   onSelectSection
 }) => {
   const handleQuestionClick = (idx: number) => {
@@ -292,6 +296,23 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
               </tr>
             </tbody>
           </table>
+        </div>
+      )}
+
+      {onSubmit && (
+        <div className="mt-3 pt-3 border-t border-gray-200 shrink-0">
+          <button
+            onClick={onSubmit}
+            disabled={isSubmitting}
+            className={`w-full py-2.5 px-3 rounded-lg font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all cursor-pointer ${
+              mode === 'practice'
+                ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                : 'bg-[#2460b9] hover:bg-[#1c4d94] text-white'
+            }`}
+          >
+            <CheckCircle2 className="w-4 h-4" />
+            <span>{isSubmitting ? 'Saving...' : mode === 'practice' ? 'Finish Practice Session' : 'Submit Mock Test'}</span>
+          </button>
         </div>
       )}
     </aside>
