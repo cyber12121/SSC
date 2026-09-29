@@ -1974,6 +1974,230 @@
           "conceptTested": "BODMAS rule combined with simultaneous interchange of mathematical signs and numbers to balance an equation.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_898d817d69",
+        "q_num": 64,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "00:50",
+        "question": "Select the set in which the numbers are related in the same way as are the numbers of the following sets. (NOTE : Operations should be performed on the whole numbers, without breaking down the numbers into its constituent digits. E.g. 13 - Operations on 13 such as adding / subtracting / multiplying etc. to 13 can be performed. Breaking down 13 into 1 and 3 and then performing mathematical operations on 1 and 3 is NOT allowed) \\((125, 87, 49), (236, 198, 160)\\)",
+        "options": {
+          "a": "\\((194, 162, 124)\\)",
+          "b": "\\((222, 186, 140)\\)",
+          "c": "\\((166, 128, 101)\\)",
+          "d": "\\((277, 239, 201)\\)"
+        },
+        "answer": "d",
+        "solution": "The logic followed here is: First Number - Second Number = Second Number - Third Number.\nNow, For, \\((125, 87, 49)\\)\n125 - 87 = 38\n87 - 49 = 38\n\nFor, \\((236, 198, 160)\\)\n\n236 - 198 = 38\n198 - 160 = 38\nLet's check each Option One by One: Option 1) \\((194, 162, 124)\\)\n194 - 162 = 32\n16² - 1²4 = 38\n\nOption 2) \\((222, 186, 140)\\)\n\n222 - 186 = 36\n186 - 140 = 46\n\nOption 3) \\((166, 128, 101)\\)\n\n166 - 128 = 38\n128 - 101 = 27\n\nOption 4) \\((277, 239, 201)\\)\n\n277 - 239 = 38\n239 - 201 = 38\n\nSo, \\((277, 239, 201)\\) follows the given logic.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Number & Set Analogy",
+        "conceptTested": "Arithmetic progression relation between consecutive numbers in a set",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number & Set Analogy",
+          "conceptTested": "Arithmetic progression relation between consecutive numbers in a set",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_3d384ba81d",
+        "q_num": 65,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:35",
+        "avgTime": "00:22",
+        "question": "An elderly couple in your vicinity are treating their maid like a slave because she belongs to a different community and is underprivileged. What will you do first?",
+        "options": {
+          "a": "Let them do what they want. It is none of your business.",
+          "b": "Ask the maid to quit working for them.",
+          "c": "Explain to the elderly couple that it is inappropriate to discriminate based on community or privileges.",
+          "d": "File a complaint against the couple for discrimination."
+        },
+        "answer": "c",
+        "solution": "In the given case, you must make sure that the couple is aware of their inappropriate behavior and discrimination. Hence, the correct initial course of action will be to explain it to them politely. Filing a complaint would be the next step if the couple persists even after knowing it is wrong.",
+        "image": null,
+        "topic": "Course of Action",
+        "subtopic": "Social Ethics Problem Solving",
+        "conceptTested": "Logical deduction for resolving social discrimination and injustice with appropriate initial steps",
+        "tags": {
+          "topic": "Course of Action",
+          "subtopic": "Social Ethics Problem Solving",
+          "conceptTested": "Logical deduction for resolving social discrimination and injustice with appropriate initial steps",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_4b71eef43d",
+        "q_num": 66,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:42",
+        "avgTime": "00:51",
+        "question": "If \\(84 \\oplus 72 = 45\\); \\(63 \\oplus 41 = 33\\); \\(74 \\oplus 52 = 33\\); then, \\(94 \\oplus 82 = ?\\)",
+        "options": {
+          "a": "45",
+          "b": "59",
+          "c": "56",
+          "d": "65"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is:\n\nGiven:\n\\(84 \\oplus 72 = 45 \\Rightarrow (8-4)(7-2) = (4)(5) = 45\\)\n\nSimilarly, \\(63 \\oplus 41 = 33 \\Rightarrow (6-3)(4-1) = (3)(3) = 33\\)\n\nAnd, \\(74 \\oplus 52 = 33 \\Rightarrow (7-4)(5-2) = (3)(3) = 33\\)\n\nSimilarly for \\(94 \\oplus 82\\): \\((9-4)(8-2) = (5)(6) = 56\\)\nHence, \\(56\\) is the correct answer.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Operator Substitution & BODMAS",
+        "conceptTested": "Decoding non-standard mathematical operators based on digit subtraction",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Operator Substitution & BODMAS",
+          "conceptTested": "Decoding non-standard mathematical operators based on digit subtraction",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_23ebb9a6e3",
+        "q_num": 67,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "00:48",
+        "question": "The sum of the squares of three numbers is \\(336\\) and the ratio of the first and the second as also of the second and the third is \\(1 : 2\\). Then find the difference between third and first number?",
+        "options": {
+          "a": "14",
+          "b": "16",
+          "c": "12",
+          "d": "10"
+        },
+        "answer": "c",
+        "solution": "The ratio of the first and the second numbers is \\(1 : 2\\).\n\nThe ratio of the second and the third numbers is \\(1 : 2 = 2 : 4\\).\n\nSo, the ratio of first, second and third numbers is \\(1 : 2 : 4\\).\n\nLet the common multiple of the numbers be \\(k\\).\n\nTherefore, the numbers are \\(1k\\), \\(2k\\), and \\(4k\\).\n\nThen, sum of the squares of the numbers = \\((1k)^2 + (2k)^2 + (4k)^2 = 21k^2\\).\n\nGiven \\(21k^2 = 336\\).\n\n\\(k^2 = \\frac{336}{21} = 16\\).\n\n\\(k = 4\\).\n\nFirst number = \\(k = 4\\)\nSecond number = \\(2k = 8\\)\nThird number = \\(4k = 16\\)\nHence, the difference between the third and the first number = \\(16 - 4 = 12\\).",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Basic Ratio & Distribution",
+        "conceptTested": "Solving algebraic relations involving sums of squares and continued ratios",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Basic Ratio & Distribution",
+          "conceptTested": "Solving algebraic relations involving sums of squares and continued ratios",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_b172c9b081",
+        "q_num": 68,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:11",
+        "avgTime": "00:42",
+        "question": "In a secret code message 'HOTEL' is coded as 300. What will be the code for 'HOSTEL'?",
+        "options": {
+          "a": "474",
+          "b": "374",
+          "c": "420",
+          "d": "558"
+        },
+        "answer": "a",
+        "solution": "On analyzing we get: Code = (sum of positional value of alphabets) $\\times$ (number of alphabets)\nHOTEL = (8 + 15 + 20 + 5 + 12) $\\times$ (5) = 60 $\\times$ 5 = 300.\nHOSTEL = (8 + 15 + 19 + 20 + 5 + 12) $\\times$ (6) = 79 $\\times$ 6 = 474.\n\nSo, the code for HOSTEL is 474.\n\nHence, the correct answer is option A.",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Pattern Coding & Decoding",
+        "conceptTested": "Product of the sum of alphabetical positional values and the total number of letters in the word.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Pattern Coding & Decoding",
+          "conceptTested": "Product of the sum of alphabetical positional values and the total number of letters in the word.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_5735cb65ef",
+        "q_num": 69,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:36",
+        "avgTime": "00:16",
+        "question": "Three different positions of the same dice are shown, the faces of which are marked with the letters L, M, N, O, P and Q. Select the letter that will be on the face opposite to the face having the letter 'M'.",
+        "options": {
+          "a": "N",
+          "b": "P",
+          "c": "L",
+          "d": "Q"
+        },
+        "answer": "b",
+        "solution": "Logic: If two dice have the same face value in the given image then their clockwise or anticlockwise sequence gives the opposite numbers/letters in dice.\n\nComparing dice 1 and dice 2, the letter 'Q' is common. Moving clockwise from Q: Dice 1: Q $\\rightarrow$ M $\\rightarrow$ O\n\nDice 2: Q $\\rightarrow$ N $\\rightarrow$ P\nThus: - M is opposite to P - O is opposite to L - Q is opposite to N\nHence, the correct answer is 'P'.",
+        "image": null,
+        "topic": "Cube & Dice",
+        "subtopic": "Cube & Dice (Opposite Faces)",
+        "conceptTested": "Identifying opposite faces of a dice from multiple rotational positions using a common face.",
+        "tags": {
+          "topic": "Cube & Dice",
+          "subtopic": "Cube & Dice (Opposite Faces)",
+          "conceptTested": "Identifying opposite faces of a dice from multiple rotational positions using a common face.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_871e690584",
+        "q_num": 70,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:46",
+        "avgTime": "00:23",
+        "question": "How many triangles are there in the following picture?",
+        "options": {
+          "a": "10",
+          "b": "14",
+          "c": "15",
+          "d": "17"
+        },
+        "answer": "c",
+        "solution": "According to the given figure, counting all the individual, combined, and large triangles systematically yields a total of 15 triangles.\n\nHence, the correct answer is 15.",
+        "image": null,
+        "topic": "Figure Counting",
+        "subtopic": "Figure Counting",
+        "conceptTested": "Systematic enumeration and counting of triangular geometric sub-units in a complex figure.",
+        "tags": {
+          "topic": "Figure Counting",
+          "subtopic": "Figure Counting",
+          "conceptTested": "Systematic enumeration and counting of triangular geometric sub-units in a complex figure.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -4704,6 +4928,70 @@
           "topic": "Statement & Assumption",
           "subtopic": "Statement & Assumptions",
           "conceptTested": "Logical deduction of underlying assumptions from given statements and arguments",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_aaed20768d",
+        "q_num": 65,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:12",
+        "avgTime": "00:28",
+        "question": "You're a high school teacher. During a lesson, a student repeatedly interrupts and distracts others. You've already given a warning, but the behaviour continues. What should you do next?",
+        "options": {
+          "a": "Ignore the behaviour and continue teaching.",
+          "b": "Pause the lesson and address the behaviour calmly.",
+          "c": "Send the student out of the classroom immediately.",
+          "d": "Call the student's parents during class."
+        },
+        "answer": "b",
+        "solution": "Given Situation: A student repeatedly interrupts and distracts others during a lesson. A warning has already been given, but the behaviour continues.\nAnalysis of the Options: 1) Ignore the behaviour and continue teaching -> Incorrect (The disruption will likely continue and affect other students.)²) Pause the lesson and address the behaviour calmly -> Correct (This addresses the problem directly while maintaining classroom discipline in a calm and respectful manner.)³) Send the student out of the classroom immediately -> Incorrect (This may be unnecessarily harsh without first addressing the behaviour appropriately.)⁴) Call the student's parents during class -> Incorrect (This disrupts the lesson further and is not the immediate appropriate step.)\n\nTherefore, the best action is to pause the lesson and address the behaviour calmly.",
+        "image": null,
+        "topic": "Statement & Conclusion",
+        "subtopic": "Logical Deductions",
+        "conceptTested": "Logical decision making and classroom management under disruptive behavior scenarios",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Logical Deductions",
+          "conceptTested": "Logical decision making and classroom management under disruptive behavior scenarios",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d8e8957712",
+        "q_num": 66,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:27",
+        "avgTime": "00:29",
+        "question": "Consider the given statement(s) and decide which of the given assumption(s) is/are implicit in the statement.\n\nStatement: Organisations that follow certain business ethics have better chances of survival, compared to those whose only goal is to earn profits.\n\nAssumption:\nI. A written code of ethics to let the employees know the do's and don'ts of an organisation is important.\nII. Organisations should focus on training employees on code of ethics.",
+        "options": {
+          "a": "Both I and II are implicit.",
+          "b": "Only assumption I is implicit",
+          "c": "Only assumption II is implicit",
+          "d": "Neither I nor II is implicit"
+        },
+        "answer": "a",
+        "solution": "The statement outlines the benefits gained by organisations upon following business ethics. Therefore, any action which supports the statement would be an implicit assumption.\n\nA written code of ethics is akin to laying out the rules and regulations that are mandatory to be followed by every employee of the organization. Thus, it can ensure business ethics are followed. Therefore, assumption I is implicit.\n\nEducating the employees about the ethical laws of the company will increase awareness and can help effective implementation of the code of ethics. Therefore, assumption II is implicit.\n\nHence, both I and II are implicit.",
+        "image": null,
+        "topic": "Statement & Assumption",
+        "subtopic": "Statement & Assumptions",
+        "conceptTested": "Deduction of underlying logical assumptions supporting a statement about organizational business ethics.",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "subtopic": "Statement & Assumptions",
+          "conceptTested": "Deduction of underlying logical assumptions supporting a statement about organizational business ethics.",
           "difficulty": "medium"
         }
       }

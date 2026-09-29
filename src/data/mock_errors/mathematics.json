@@ -5565,6 +5565,230 @@
           "conceptTested": "Linear equations based on ratio changes over a time period",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_41edfc332e",
+        "q_num": 177,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:50",
+        "avgTime": "00:36",
+        "question": "Excluding the stoppages, the speed of a truck is $90$ km/h and including the stoppages, the speed of the truck is $36$ km/h in a journey. For how many minutes does the truck stop per hour?",
+        "options": {
+          "a": "54 minutes",
+          "b": "36 minutes",
+          "c": "40 minutes",
+          "d": "42 minutes"
+        },
+        "answer": "b",
+        "solution": "Stoppage time per hour = $\\left[\\frac{\\text{Speed without stoppage} - \\text{Speed with stoppage}}{\\text{Speed without stoppage}}\\right] \\times 60$\n⇒ Time = $\\left[\\frac{90 - 36}{90}\\right] \\times 60$\n⇒ Time = $\\frac{54}{90} \\times 60 = 36$ minutes.\n∴ The correct answer is 36 minutes.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Delays, Early-Late & Stoppages",
+        "conceptTested": "Stoppage time per hour = $\\frac{\\text{Speed without stoppage} - \\text{Speed with stoppage}}{\\text{Speed without stoppage}} \\times 60$ minutes.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Delays, Early-Late & Stoppages",
+          "conceptTested": "Stoppage time per hour = $\\frac{\\text{Speed without stoppage} - \\text{Speed with stoppage}}{\\text{Speed without stoppage}} \\times 60$ minutes.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_a263c84eb1",
+        "q_num": 178,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:02",
+        "avgTime": "00:40",
+        "question": "An article is sold at a certain price. If it is sold at $33\\frac{1}{3}\\%$ of this price, there is a loss of $33\\frac{1}{3}\\%$. What is the percentage profit if the article is sold at $80\\%$ of its original selling price?",
+        "options": {
+          "a": "50%",
+          "b": "40%",
+          "c": "60%",
+          "d": "70%"
+        },
+        "answer": "c",
+        "solution": "$33\\frac{1}{3}\\% = \\frac{1}{3}$ of the value.\n\nSelling at $\\frac{1}{3}$ of original SP results in $\\frac{1}{3}$ loss ⇒ $\\frac{1}{3} \\text{SP} = \\left(1 - \\frac{1}{3}\\right) \\text{CP} = \\frac{2}{3} \\text{CP}$.\n\n∴ Original $\\text{SP} = 2 \\text{CP}$.\nNew $\\text{SP} = 80\\%$ of Original $\\text{SP} = 0.8 \\times 2 \\text{CP} = 1.6 \\text{CP}$.\nProfit $\\% = (1.6 - 1) \\times 100 = 60\\%$.\n∴ The correct answer is 60%.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Quantity & Article Variations",
+        "conceptTested": "Relating fractions of Selling Price to percentage loss to calculate Cost Price and new Profit percentages.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Quantity & Article Variations",
+          "conceptTested": "Relating fractions of Selling Price to percentage loss to calculate Cost Price and new Profit percentages.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_a204110598",
+        "q_num": 179,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:51",
+        "avgTime": "00:41",
+        "question": "If twice the son's age is added to the father's age, the sum is $34$ years. If $1.5$ times the father's age is added to the son's age, the sum is $45$ years. What is the father's age (in years)?",
+        "options": {
+          "a": "32",
+          "b": "30",
+          "c": "28",
+          "d": "26"
+        },
+        "answer": "c",
+        "solution": "Let the Father's age be $F$ and Son's age be $S$.\nGiven: $F + 2S = 34$ and $1.5F + S = 45$.\nMultiply the second equation by 2: $3F + 2S = 90$.\nSubtracting the first equation: $(3F + 2S) - (F + 2S) = 90 - 34 \\Rightarrow 2F = 56$.\nDividing by 2 gives the Father's age: $F = 28$ years.\n∴ The correct answer is 28 years.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Age",
+        "conceptTested": "Solving simultaneous linear equations in two variables representing age conditions.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Age",
+          "conceptTested": "Solving simultaneous linear equations in two variables representing age conditions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_96cdc9f88b",
+        "q_num": 180,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:08",
+        "avgTime": "00:49",
+        "question": "Shivam purchased two watches, first for ₹12000 and the second for ₹10000. He sold both the watches, first one at the profit of $10\\%$ and the second at a loss of $10\\%$. What is the overall profit or loss?",
+        "options": {
+          "a": "2.25 percent profit",
+          "b": "2.25 percent loss",
+          "c": "0.909 percent profit",
+          "d": "0.909 percent loss"
+        },
+        "answer": "c",
+        "solution": "Total $\\text{CP} = 12000 + 10000 = \\text{₹}22000$.\n\n$\\text{SP}$ of 1st watch $= 12000 \\times \\frac{110}{100} = \\text{₹}13200$.\n\n$\\text{SP}$ of 2nd watch $= 10000 \\times \\frac{90}{100} = \\text{₹}9000$.\n\nTotal $\\text{SP} = 13200 + 9000 = \\text{₹}22200$.\n\nNet Profit $= 22200 - 22000 = \\text{₹}200$.\n\nProfit $\\% = \\frac{200}{22000} \\times 100 = \\frac{20}{22} \\approx 0.909\\%$.\n∴ The correct answer is 0.909 percent profit.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Basic CP, SP & Profit/Loss%",
+        "conceptTested": "Calculating overall profit or loss percentage by finding total Cost Price and total Selling Price for multiple items.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Basic CP, SP & Profit/Loss%",
+          "conceptTested": "Calculating overall profit or loss percentage by finding total Cost Price and total Selling Price for multiple items.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_6980c0ac5b",
+        "q_num": 181,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:31",
+        "avgTime": "00:22",
+        "question": "If the side of the hexagonal base of pyramid is $2\\sqrt{3}$ cm, then find the volume of the pyramid of height $15$ cm.",
+        "options": {
+          "a": "$80\\sqrt{3} \\text{ cm}^3$",
+          "b": "$90\\sqrt{3} \\text{ cm}^3$",
+          "c": "$91\\sqrt{3} \\text{ cm}^3$",
+          "d": "$100\\sqrt{3} \\text{ cm}^3$"
+        },
+        "answer": "b",
+        "solution": "Volume of a pyramid = $\\frac{1}{3} \\times \\text{Base Area} \\times \\text{Height}$.\nArea of a regular hexagonal base = $\\frac{3\\sqrt{3}}{2} \\times (\\text{side})^2$.\nBase Area = $\\frac{3\\sqrt{3}}{2} \\times (2\\sqrt{3})^2 = \\frac{3\\sqrt{3}}{2} \\times 12 = 18\\sqrt{3} \\text{ cm}^2$.\nVolume = $\\frac{1}{3} \\times 18\\sqrt{3} \\times 15 = 6\\sqrt{3} \\times 15 = 90\\sqrt{3} \\text{ cm}^3$.\n∴ The correct answer is $90\\sqrt{3} \\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cone & Frustum",
+        "conceptTested": "Volume of a pyramid/cone: $V = \\frac{1}{3} \\times \\text{Base Area} \\times \\text{Height}$. Area of a regular hexagon: $\\frac{3\\sqrt{3}}{2} \\times a^2$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cone & Frustum",
+          "conceptTested": "Volume of a pyramid/cone: $V = \\frac{1}{3} \\times \\text{Base Area} \\times \\text{Height}$. Area of a regular hexagon: $\\frac{3\\sqrt{3}}{2} \\times a^2$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_75eaa0076e",
+        "q_num": 182,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:51",
+        "avgTime": "00:29",
+        "question": "A cone of height $22$ cm and diameter $20$ cm is mounted on a hemisphere of the same diameter. Find the volume of the solid formed.",
+        "options": {
+          "a": "$4540 \\text{ cm}^3$",
+          "b": "$5000 \\text{ cm}^3$",
+          "c": "$4600 \\text{ cm}^3$",
+          "d": "$4400 \\text{ cm}^3$"
+        },
+        "answer": "d",
+        "solution": "Total Volume = Volume of Cone + Volume of Hemisphere\n\n$V = \\frac{1}{3} \\times \\pi \\times r^2 \\times (h + 2r)$\n\nSubstitute radius $r = 10$ cm and height $h = 22$ cm: $V = \\frac{1}{3} \\times \\left(\\frac{22}{7}\\right) \\times 100 \\times (22 + 20) = \\left(\\frac{2200}{21}\\right) \\times 42 = 4400 \\text{ cm}^3$.\n\n∴ The correct answer is $4400 \\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Sphere & Hemisphere",
+        "conceptTested": "Combined volume of composite solids: Sum of the volume of a right circular cone and a hemisphere.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Sphere & Hemisphere",
+          "conceptTested": "Combined volume of composite solids: Sum of the volume of a right circular cone and a hemisphere.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_0101c68be0",
+        "q_num": 183,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:33",
+        "avgTime": "00:15",
+        "question": "In a triangle $ABC$, $AB = 6$ cm, $BC = 11$ cm. How many integral values of $AC$ can be possible?",
+        "options": {
+          "a": "10",
+          "b": "8",
+          "c": "12",
+          "d": "11"
+        },
+        "answer": "d",
+        "solution": "Given sides: $AB = 6$ cm\n\n$BC = 11$ cm\n\nLet the third side $AC$ be $x$ cm.\nAccording to the Triangle Inequality Theorem: $|11 - 6| < x < 11 + 6$\n\n$5 < x < 17$\n\nSince $x$ must be an integer, the possible values for $x$ are: $x \\in \\{6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16\\}$\n\nTotal number of integral values = $16 - 6 + 1 = 11$.\n∴ The correct answer is 11.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "Triangle Inequality Theorem: Difference of two sides < Third side < Sum of two sides",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "Triangle Inequality Theorem: Difference of two sides < Third side < Sum of two sides",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -13441,6 +13665,134 @@
           "conceptTested": "Effect on total sum when a new member is added and average changes",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_c69a41c0ac",
+        "q_num": 251,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:03",
+        "avgTime": "00:30",
+        "question": "The monthly income of a person was Rs. 12,000 and his monthly expenditure was Rs. 10,000. In the next year, his income increased by $12\\%$ and his expenditure by $5\\%$. Find the percentage increase in his savings.",
+        "options": {
+          "a": "$48\\%$",
+          "b": "$45\\%$",
+          "c": "$47\\%$",
+          "d": "$46\\%$"
+        },
+        "answer": "c",
+        "solution": "Given:\nInitial Income = ₹12, 000\nInitial Expenditure = ₹10, 000\nInitial Savings = ₹12, 000 - ₹10, 000 = ₹2, 000\nRatio of Income : Expenditure : Savings = $12000 : 10000 : 2000 = 6 : 5 : 1$\nLet the percentage increase in savings be $S\\%$.\nUsing the weighted percentage rule: $(\\text{Income Ratio} \\times \\text{\\% Change}) = (\\text{Expenditure Ratio} \\times \\text{\\% Change}) + (\\text{Savings Ratio} \\times S\\%)$\n\n$6 \\times 12 = (5 \\times 5) + (1 \\times S)$\n\n$72 = 25 + S$\n\n$S = 72 - 25 = 47\\%$\n\n∴ The correct answer is $47\\%$.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Price, Consumption & Expenditure",
+        "conceptTested": "Weighted average percentage change on Income = Expenditure + Savings relation",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Price, Consumption & Expenditure",
+          "conceptTested": "Weighted average percentage change on Income = Expenditure + Savings relation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_163f0fba54",
+        "q_num": 252,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:16",
+        "avgTime": "00:17",
+        "question": "If the perimeters of two similar triangles are in the ratio of $4 : 7$, and the sum of the areas is $195\\text{ cm}^2$, then what is $\\frac{1}{3}$ of the difference between the areas (in $\\text{cm}^2$) of the two triangles?",
+        "options": {
+          "a": "63",
+          "b": "33",
+          "c": "54",
+          "d": "99"
+        },
+        "answer": "b",
+        "solution": "Given:\nRatio of perimeters = Ratio of corresponding sides = $4 : 7$\nRatio of areas = $(\\text{Ratio of sides})^2 = (4)^2 : (7)^2 = 16 : 49$\nLet the areas be $16x$ and $49x$.\nGiven sum of areas = $195\\text{ cm}^2$\n\n$16x + 49x = 195$\n\n$65x = 195 \\Rightarrow x = 3$\n\nDifference between areas = $49x - 16x = 33x = 33 \\times 3 = 99\\text{ cm}^2$.\nRequired value = $\\frac{1}{3} \\times 99 = 33\\text{ cm}^2$.\n∴ The correct answer is 33.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Triangle Similarity & Congruence",
+        "conceptTested": "Ratio of areas of two similar triangles is equal to the square of the ratio of their perimeters",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Triangle Similarity & Congruence",
+          "conceptTested": "Ratio of areas of two similar triangles is equal to the square of the ratio of their perimeters",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_74dd4f0db4",
+        "q_num": 253,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:01",
+        "avgTime": "00:12",
+        "question": "If $\\csc \\theta + \\cot \\theta = s$, then what is the value of $\\cos \\theta$?",
+        "options": {
+          "a": "$\\frac{s^2-1}{s^2+1}$",
+          "b": "$\\frac{s^2+1}{s^2-1}$",
+          "c": "$\\frac{s^2-1}{2s}$",
+          "d": "$\\frac{2s}{s^2+1}$"
+        },
+        "answer": "a",
+        "solution": "Given $\\csc \\theta + \\cot \\theta = s$, we can write $\\frac{1 + \\cos \\theta}{\\sin \\theta} = s$. Squaring both sides and using $\\sin^2 \\theta = 1 - \\cos^2 \\theta$, we get $(1 + \\cos \\theta)^2 = s^2(1 - \\cos^2 \\theta)$. Simplifying gives $\\cos \\theta = \\frac{s^2 - 1}{s^2 + 1}$.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Pythagorean identity $\\sin^2 \\theta + \\cos^2 \\theta = 1$ and reciprocal relations $\\csc \\theta = \\frac{1}{\\sin \\theta}$, $\\cot \\theta = \\frac{\\cos \\theta}{\\sin \\theta}$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Pythagorean identity $\\sin^2 \\theta + \\cos^2 \\theta = 1$ and reciprocal relations $\\csc \\theta = \\frac{1}{\\sin \\theta}$, $\\cot \\theta = \\frac{\\cos \\theta}{\\sin \\theta}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_eb1e8b5a06",
+        "q_num": 254,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:17",
+        "question": "After increasing the selling price of an article by $25\\%$, the new price of the article becomes Rs. $250$. Now a discount of $25\\%$ is offered on the new price. What would be the profit or loss in percentage on the original price?",
+        "options": {
+          "a": "Profit of 6.25%",
+          "b": "Loss of 6.25%",
+          "c": "Loss of 12.5%",
+          "d": "Profit of 12.5%"
+        },
+        "answer": "b",
+        "solution": "When any value is first increased by $R\\%$ and then decreased by $R\\%$, there is always a net loss given by $\\frac{R^2}{100}\\%$. Here $R = 25\\%$, so Net Loss $\\frac{25^2}{100}\\% = \\frac{625}{100}\\% = 6.25\\%$.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Marked Price & Discounts",
+        "conceptTested": "When a value is successively increased by $R\\%$ and decreased by $R\\%$, the net effect is always a loss of $\\frac{R^2}{100}\\%$.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Marked Price & Discounts",
+          "conceptTested": "When a value is successively increased by $R\\%$ and decreased by $R\\%$, the net effect is always a loss of $\\frac{R^2}{100}\\%$.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -16825,6 +17177,230 @@
           "topic": "LCM & HCF",
           "subtopic": "LCM & HCF Applications",
           "conceptTested": "Greatest number that leaves the same remainder when dividing multiple given numbers is the HCF of their pairwise differences",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a65e694de4",
+        "q_num": 108,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "01:06",
+        "avgTime": "01:10",
+        "question": "A takes twice as much time as B or thrice as much as C to finish a piece of work. Working together, they can finish the work in $2$ days. B can do the work alone in",
+        "options": {
+          "a": "$4$ days",
+          "b": "$6$ days",
+          "c": "$8$ days",
+          "d": "$12$ days"
+        },
+        "answer": "b",
+        "solution": "Time ratio of A : B : C = $6 : 3 : 2$\nEfficiency ratio of A : B : C = $\\frac{1}{6} : \\frac{1}{3} : \\frac{1}{2} = 1 : 2 : 3$\nTotal efficiency of A + B + C = $1 + 2 + 3 = 6$ units/day\nTotal work = Combined efficiency $\\times$ Total days = $6 \\times 2 = 12$ units\nTime taken by B alone = Total work $\\div$ B's efficiency = $12 \\div 2 = 6$ days\n∴ The correct answer is $6$ days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Work Efficiency & Ratios",
+        "conceptTested": "Relationship between time taken and efficiency ratios in completing work.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Work Efficiency & Ratios",
+          "conceptTested": "Relationship between time taken and efficiency ratios in completing work.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ed8c21f81d",
+        "q_num": 109,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:20",
+        "avgTime": "00:56",
+        "question": "What is the difference between the compound interest on ₹8,000 at $15\\%$ p.a. for $2$ years when the interest is compounded yearly and when compounded 8-monthly?",
+        "options": {
+          "a": "₹70",
+          "b": "₹72",
+          "c": "₹75",
+          "d": "₹68"
+        },
+        "answer": "d",
+        "solution": "Yearly: Rate = $15\\%$, Time = $2$ years. Effective Rate = $15 + 15 + \\frac{15 \\times 15}{100} = 32.25\\%$.\n8 - Monthly: Rate = $15 \\times \\frac{8}{12} = 10\\%$, Time = $\\frac{24}{8} = 3$ periods. Effective Rate = $10 + 10 + 10 + 3.1 = 33.1\\%$.\nDifference in Rate = $33.1\\% - 32.25\\% = 0.85\\%$.\nDifference in Interest = $8000 \\times 0.85\\% = 80 \\times 0.85 = \\text{₹}68$.\n∴ The correct answer is ₹68.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+        "conceptTested": "Difference between compound interest calculated annually and periodically (e.g., 8-monthly) over a given time duration.",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+          "conceptTested": "Difference between compound interest calculated annually and periodically (e.g., 8-monthly) over a given time duration.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_60036ac40e",
+        "q_num": 110,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:16",
+        "question": "The side of a square is $5$ cm. If the side is doubled, by how many times will the area of the square increase?",
+        "options": {
+          "a": "3 times",
+          "b": "2 times",
+          "c": "5 times",
+          "d": "4 times"
+        },
+        "answer": "a",
+        "solution": "If the side of a square is multiplied by $n$, the area becomes $n^2$ times the original area.\n\nHere, the side is doubled, so $n = 2$.\n\nNew Area = $2^2 = 4$ times the original area.\nIncrease in Area = (New Area - Original Area) = $4 - 1 = 3$ times.\n∴ The correct answer is 3 times.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "Scaling Principle: If the linear dimension of a 2D figure is multiplied by $k$, its area is multiplied by $k^2$.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "Scaling Principle: If the linear dimension of a 2D figure is multiplied by $k$, its area is multiplied by $k^2$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2221422ba8",
+        "q_num": 111,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:43",
+        "avgTime": "00:35",
+        "question": "If the product and HCF of two numbers are $2352$ and $28$ respectively, find the greater number.",
+        "options": {
+          "a": "115",
+          "b": "98",
+          "c": "84",
+          "d": "213"
+        },
+        "answer": "c",
+        "solution": "Product of co - prime ratios $(x \\times y) = \\text{Product of numbers} \\div (\\text{HCF})^2$.\n\n$x \\times y = 2352 \\div (28 \\times 28) = 2352 \\div 784 = 3$.\n\nThe factors of $3$ are $(1, 3)$. Since $3$ is prime, the only co - prime pair is $1$ and $3$.\n\nGreater number = $\\text{HCF} \\times \\text{Greater ratio} = 28 \\times 3 = 84$.\n∴ The correct answer is 84.",
+        "image": null,
+        "topic": "LCM & HCF",
+        "subtopic": "LCM & HCF Applications",
+        "conceptTested": "Relationship between product of two numbers and their HCF: Product = HCF$^2 \\times x \\times y$, where $x$ and $y$ are co-prime.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "LCM & HCF Applications",
+          "conceptTested": "Relationship between product of two numbers and their HCF: Product = HCF$^2 \\times x \\times y$, where $x$ and $y$ are co-prime.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d4f576ed3e",
+        "q_num": 112,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:49",
+        "avgTime": "00:30",
+        "question": "If 5 men or 8 women complete a work in 26 days, then 4 men and 4 women together can complete that work in how many days?",
+        "options": {
+          "a": "13 days",
+          "b": "20 days",
+          "c": "$8\\frac{1}{3}$ days",
+          "d": "none of these"
+        },
+        "answer": "b",
+        "solution": "Given:\n5 men $\\equiv$ 8 women\n\n$\\Rightarrow 1$ man = $\\frac{8}{5}$ women\nTotal work = $8 \\text{ women} \\times 26 \\text{ days} = 208$ woman - days.\nNow, 4 men and 4 women: 4 men = $4 \\times \\frac{8}{5} = \\frac{32}{5}$ women.\nTotal persons working = $\\frac{32}{5} + 4 = \\frac{52}{5}$ women.\nRequired days = $\\frac{\\text{Total Work}}{\\text{Total Efficiency}} = \\frac{208}{\\frac{52}{5}} = \\frac{208 \\times 5}{52} = 4 \\times 5 = 20 \\text{ days}$.\n∴ The correct answer is 20 days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Equating efficiencies of alternative worker groups: $M_1 \\times D_1 = M_2 \\times D_2$",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Equating efficiencies of alternative worker groups: $M_1 \\times D_1 = M_2 \\times D_2$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8326f72cbf",
+        "q_num": 113,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:36",
+        "avgTime": "00:17",
+        "question": "If $a + b + c = 2$, $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = 0$, $ac = \\frac{4}{b}$ and $a^3 + b^3 + c^3 = 28$, find the value of $a^2 + b^2 + c^2$",
+        "options": {
+          "a": "8",
+          "b": "6",
+          "c": "10",
+          "d": "12"
+        },
+        "answer": "a",
+        "solution": "Given:\n$a + b + c = 2$\n\n$\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = 0 \\Rightarrow ab + bc + ca = 0$\n\n$ac = \\frac{4}{b} \\Rightarrow abc = 4$\n\n$a^3 + b^3 + c^3 = 28$\n\nUsing the algebraic identity: $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - (ab + bc + ca))$\nSubstitute the known values: $28 - 3(4) = 2 \\times (a^2 + b^2 + c^2 - 0)$\n\n$28 - 12 = 2(a^2 + b^2 + c^2)$\n\n$16 = 2(a^2 + b^2 + c^2)$\n\n$a^2 + b^2 + c^2 = 8$\n\n∴ The correct answer is 8.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Cubic expansion identity: $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Cubic expansion identity: $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4389621fce",
+        "q_num": 114,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:17",
+        "avgTime": "00:19",
+        "question": "What will be the average of the first 8 positive even numbers divisible by 9?",
+        "options": {
+          "a": "45",
+          "b": "72",
+          "c": "81",
+          "d": "63"
+        },
+        "answer": "c",
+        "solution": "Numbers divisible by both 2 and 9 must be multiples of LCM(2, 9) = 18. The first 8 such numbers form an Arithmetic Progression (AP): 18, 36, ..., 144. Average of an AP = $(\\text{First term} + \\text{Last term}) \\div 2 = (18 + 144) \\div 2 = 162 \\div 2 = 81$.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Age-based Averages",
+        "conceptTested": "The average of an arithmetic progression is given by the mean of the first and last terms: $\\frac{a + l}{2}$.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Age-based Averages",
+          "conceptTested": "The average of an arithmetic progression is given by the mean of the first and last terms: $\\frac{a + l}{2}$.",
           "difficulty": "medium"
         }
       }

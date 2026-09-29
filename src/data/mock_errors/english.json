@@ -5176,6 +5176,326 @@
           "conceptTested": "Precise vocabulary replacement for specific descriptive phrases",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_7bfbc46b84",
+        "q_num": 166,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:39",
+        "avgTime": "00:38",
+        "question": "Find the part of the sentence that contains an error: (1) The structural density of the newly developed titanium-matrix composite / (2) is estimated by materials scientists to be significantly higher than / (3) the conventional aluminum alloys used in the manufacturing / (4) of next-generation aerospace fuselages.",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "The error lies in part (3) because of the improper use of the definite article 'the' before 'manufacturing'. In standard English, 'manufacturing' is a general process and does not require 'the' in this context.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Articles & Determiners",
+        "conceptTested": "Definite article 'the' is not used before general uncountable nouns like 'manufacturing' unless specified.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Articles & Determiners",
+          "conceptTested": "Definite article 'the' is not used before general uncountable nouns like 'manufacturing' unless specified.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5321b01e24",
+        "q_num": 167,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:41",
+        "avgTime": "00:31",
+        "question": "The following sentence has been split into four segments. Identify the segment that contains a grammatical error. The compensation that the [A]/Government agreed to provide to [B]/the dependents of the [C]/train accident is fairly less [D].",
+        "options": {
+          "a": "C",
+          "b": "D",
+          "c": "B",
+          "d": "A"
+        },
+        "answer": "b",
+        "solution": "The error lies in segment (D). The phrase 'fairly less' is incorrect in standard English; when referring to an insufficient amount, expressions such as 'quite low' or 'rather low' should be used.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Articles & Determiners",
+        "conceptTested": "Adverb collocation rules: 'fairly' modifies positive adjectives in their base degree, whereas 'quite' or 'rather' is used for unfavorable or insufficient amounts.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Articles & Determiners",
+          "conceptTested": "Adverb collocation rules: 'fairly' modifies positive adjectives in their base degree, whereas 'quite' or 'rather' is used for unfavorable or insufficient amounts.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_1f80986d25",
+        "q_num": 168,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:20",
+        "avgTime": "00:23",
+        "question": "Choose the idiom from the given alternatives that best matches the following definition: \"A completely unalterable, rigid, or permanent code of conduct or legislative decree that leaves absolutely no room for future modification, compromise, or contextual leniency.\"",
+        "options": {
+          "a": "A code of Draco",
+          "b": "A Procrustean bed",
+          "c": "A sumptuary law",
+          "d": "A law of the Medes and Persians"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Option D i.e. A law of the Medes and Persians.\n\nThe phrase \"A law of the Medes and Persians\" refers to a rule, law, or decree that is unchangeable, rigid, and final.\n\nAdditional Information: - A code of Draco refers to a very severe and harsh set of laws or punishments. - A Procrustean bed refers to a situation or system where different sizes or conditions are forced to fit into one rigid standard. - A sumptuary law refers to laws designed to regulate or control personal expenditures related to luxury.",
+        "image": null,
+        "topic": "Idioms Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Recognition of idiomatic expressions denoting unalterable decrees or laws",
+        "tags": {
+          "topic": "Idioms Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Recognition of idiomatic expressions denoting unalterable decrees or laws",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_77d2bc3827",
+        "q_num": 169,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:13",
+        "question": "Select the most appropriate SYNONYM of the given word. CAPITULATION",
+        "options": {
+          "a": "Investing",
+          "b": "Writing",
+          "c": "Surrender",
+          "d": "Capital"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C i.e. Surrender.\n\nThe word \"Capitulation\" means the act of surrendering or ceasing to resist an opponent or demand. \"Surrender\" refers to the action of giving up or yielding to the power, control, or possession of someone else. Therefore, \"Surrender\" is the direct synonym of \"Capitulation\".",
+        "image": null,
+        "topic": "Synonyms Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Identification of synonymous vocabulary words denoting surrender or yielding",
+        "tags": {
+          "topic": "Synonyms Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Identification of synonymous vocabulary words denoting surrender or yielding",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5123cf5146",
+        "q_num": 170,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "00:17",
+        "question": "Select the option with the correct spelling to replace the underlined word. If the spelling is already correct, choose \"No replacement required.\" The patient’s reuhmatoid arthritis required a complex regimen of immunosuppressants and physical therapy.",
+        "options": {
+          "a": "Rheumattoid",
+          "b": "Rheumatoid",
+          "c": "Rheumatiod",
+          "d": "No replacement required"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option B i.e. Rheumatoid.\n\nThe word \"reuhmatoid\" is a misspelling. The correct spelling is \"rheumatoid\", which refers to a chronic autoimmune disease that primarily affects the joints, causing inflammation, pain, and stiffness.",
+        "image": null,
+        "topic": "Spelling Errors",
+        "subtopic": "Misspelt Words",
+        "conceptTested": "Identification and correction of commonly misspelled medical terms",
+        "tags": {
+          "topic": "Spelling Errors",
+          "subtopic": "Misspelt Words",
+          "conceptTested": "Identification and correction of commonly misspelled medical terms",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b68d1ddfbf",
+        "q_num": 171,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:21",
+        "avgTime": "00:16",
+        "question": "Select the most appropriate ANTONYM of the given word. PLANATE",
+        "options": {
+          "a": "Tabular",
+          "b": "Level",
+          "c": "Convex",
+          "d": "Prostrate"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C i.e. Convex.\n\nThe word \"Planate\" means flat or level, typically referring to something smooth and even in surface. \"Convex\" refers to a surface or shape that curves outward. Hence, the most appropriate antonym of \"Planate\" is \"Convex\".",
+        "image": null,
+        "topic": "Synonyms Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Identification of antonyms for words describing flat or level surfaces",
+        "tags": {
+          "topic": "Synonyms Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Identification of antonyms for words describing flat or level surfaces",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b1b1bf7449",
+        "q_num": 172,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "01:00",
+        "avgTime": "00:35",
+        "question": "Select the option that expresses the given sentence in direct speech. The historian remarked that centuries ago, regional populations would migrate southward whenever the sub-zero winter fronts approached.",
+        "options": {
+          "a": "The historian said, \"Centuries ago, regional populations used to migrate southward whenever the sub-zero winter fronts approached.\"",
+          "b": "The historian said, \"Centuries ago, regional populations migrated southward whenever the sub-zero winter fronts approached.\"",
+          "c": "The historian said, \"Centuries ago, regional populations would migrate southward whenever the sub-zero winter fronts approached.\"",
+          "d": "The historian stated, \"Centuries ago, regional populations will migrate southward whenever the sub-zero winter fronts approach.\""
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C i.e. The historian said, \"Centuries ago, regional populations would migrate southward whenever the sub - zero winter fronts approached.\"\n\nThe given sentence is in indirect speech and needs to be converted into direct speech. In direct speech, the exact words of the speaker are quoted. The phrase \"would migrate\" correctly reflects the past habitual action under specific conditions and remains consistent when converted back to direct speech.",
+        "image": null,
+        "topic": "Direct Indirect Speech",
+        "subtopic": "Assertive Sentences & Reporting Verbs",
+        "conceptTested": "Conversion of indirect narration involving past habitual actions into direct speech",
+        "tags": {
+          "topic": "Direct Indirect Speech",
+          "subtopic": "Assertive Sentences & Reporting Verbs",
+          "conceptTested": "Conversion of indirect narration involving past habitual actions into direct speech",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_245093a40e",
+        "q_num": 173,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:23",
+        "avgTime": "00:32",
+        "question": "Select the option that expresses the given sentence in direct speech. The magistrate warned the witness that under no circumstances was he to leave the jurisdiction without official court authorization.",
+        "options": {
+          "a": "The magistrate said to the witness, \"Under no circumstances are you to leave the jurisdiction without official court authorization.\"",
+          "b": "The magistrate said to the witness, \"Under no circumstances you are to leave the jurisdiction without official court authorization.\"",
+          "c": "The magistrate said to the witness, \"Under no circumstances were you to leave the jurisdiction without official court authorization.\"",
+          "d": "The magistrate said to the witness, \"Under no circumstances should you leave the jurisdiction without official court authorization.\""
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A. The given sentence needs to be converted into direct speech while maintaining the original meaning and grammatical accuracy. In direct speech, the exact words of the speaker are presented within quotation marks. The sentence in direct speech should maintain the use of \"are\" because the context of the magistrate’s warning indicates an instruction or command in the present tense. Key Grammar Rule: The phrase \"Under no circumstances\" introduces an inversion, meaning the auxiliary verb \"are\" comes before the subject \"you\" in direct speech.",
+        "image": null,
+        "topic": "Direct Indirect Speech",
+        "subtopic": "Assertive Sentences & Reporting Verbs",
+        "conceptTested": "Inversion of auxiliary verb after negative adverbial phrases like 'Under no circumstances' when converting from indirect to direct speech.",
+        "tags": {
+          "topic": "Direct Indirect Speech",
+          "subtopic": "Assertive Sentences & Reporting Verbs",
+          "conceptTested": "Inversion of auxiliary verb after negative adverbial phrases like 'Under no circumstances' when converting from indirect to direct speech.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_ccc77c5f55",
+        "q_num": 174,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:11",
+        "avgTime": "00:45",
+        "question": "Which of the following words is most nearly the ANTONYM of the word \"exorbitant\" as used in the fourth paragraph of the passage?",
+        "options": {
+          "a": "Unwarranted",
+          "b": "Moderate",
+          "c": "Extravagant",
+          "d": "Prohibitive"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option B. The word \"exorbitant\" means unreasonably high or excessive. \"Moderate\" means average in amount, intensity, quality, or degree. Therefore, the word most nearly the antonym of \"exorbitant\" is \"moderate\".",
+        "image": null,
+        "topic": "Synonyms Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary comprehension and identification of antonyms in a contextual reading passage.",
+        "tags": {
+          "topic": "Synonyms Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary comprehension and identification of antonyms in a contextual reading passage.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0c99621a0f",
+        "q_num": 175,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "03:14",
+        "avgTime": "00:46",
+        "question": "What can be reasonably inferred from the passage regarding traditional chemotherapy?",
+        "options": {
+          "a": "It specifically targets neoantigens using computational biology to avoid harming healthy host tissues.",
+          "b": "It relies on enhancing the host's natural immune tolerance to suppress endogenous tumor-associated antigens.",
+          "c": "It is an unspecialized, systemic treatment that lacks the patient-specific precision of modern mRNA immunotherapeutics.",
+          "d": "It is primarily effective only when synergized with prophylactic viral vaccines and immune checkpoint inhibitors."
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C. The passage describes traditional chemotherapy as a \"one - size - fits - all cytotoxic\" approach and contrasts it with bespoke immunotherapeutics that use patient - specific neoantigens, implying that chemotherapy is comparatively broad and less precise.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Fact & Detail Comprehension",
+        "conceptTested": "Critical reasoning and inference extraction from a complex scientific passage.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Fact & Detail Comprehension",
+          "conceptTested": "Critical reasoning and inference extraction from a complex scientific passage.",
+          "difficulty": "medium"
+        }
       }
     ]
   }

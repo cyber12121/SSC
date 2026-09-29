@@ -3473,6 +3473,198 @@
           "conceptTested": "Geographical distribution of major iron ore belts and mining districts in India.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_58492b4e96",
+        "q_num": 112,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:17",
+        "avgTime": "00:36",
+        "question": "Consider the following information: Species Conservation Status Region I. Red Fox Least Concern Himalayas II. Indian Rhinoceros Vulnerable Assam III. Asiatic Lion Endangered Rajasthan IV. Wild Water Buffalo Least Concern Gujarat Choose the correct option:",
+        "options": {
+          "a": "I and II only",
+          "b": "II and III only",
+          "c": "I and III only",
+          "d": "III and IV only"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A.\n\nKey Points: - I. Red Fox - Least Concern - Himalayas: The Red Fox (Vulpes vulpes) is classified as Least Concern and occurs in Himalayan and trans - Himalayan regions of India. Hence, Row I is correctly matched. - II. Indian Rhinoceros - Vulnerable - Assam: The Greater One - horned/Indian Rhinoceros (Rhinoceros unicornis) is classified as Vulnerable and Assam contains its major Indian populations, particularly in protected areas such as Kaziranga, Pobitora and Orang. Hence, Row II is correctly matched. - III. Asiatic Lion - Endangered - Rajasthan: The Asiatic Lion is associated with Gujarat, especially the Gir landscape, not Rajasthan. Hence, Row III is incorrectly matched. - IV. Wild Water Buffalo - Least Concern - Gujarat: The Wild Water Buffalo (Bubalus arnee) is classified as Endangered, not Least Concern. Hence, Row IV is incorrectly matched.\nTherefore, Rows I and II only are correctly matched.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "Iucn Status Flora Fauna",
+        "conceptTested": "Matching endangered and vulnerable wildlife species with their correct IUCN status and geographical habitat in India.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Iucn Status Flora Fauna",
+          "conceptTested": "Matching endangered and vulnerable wildlife species with their correct IUCN status and geographical habitat in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a08cbd5856",
+        "q_num": 113,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:12",
+        "avgTime": "00:37",
+        "question": "With reference to the effects of President’s Rule (Article 356) in a state, consider the following statements: I. The Legislative Assembly of the state is automatically dissolved upon the imposition of President’s Rule. II. The Parliament can legislate on subjects in the State List during the period of President’s Rule. III. The Judiciary has no power to review the proclamation of President’s Rule once it has been approved by the Parliament. How many of the statement(s) given above are correct?",
+        "options": {
+          "a": "Only one",
+          "b": "Only two",
+          "c": "All three",
+          "d": "None"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A.\n\nKey Points: - Statement I: The State Legislative Assembly is not automatically dissolved when President’s Rule is imposed. It may either be dissolved or kept under suspended animation. Hence, Statement I is incorrect. - Statement II: During President’s Rule, the powers of the State Legislature may be exercised by or under the authority of Parliament. Therefore, Parliament can make laws on matters in the State List. Hence, Statement II is correct. - Statement III: A proclamation under Article 356 is subject to judicial review as affirmed in the S. R. Bommai v. Union of India (1994) case. Hence, Statement III is incorrect.\nTherefore, only one statement is correct.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Union & State Executive",
+        "conceptTested": "Constitutional implications, dissolution of assemblies, legislative powers, and judicial review regarding President's Rule under Article 356.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Union & State Executive",
+          "conceptTested": "Constitutional implications, dissolution of assemblies, legislative powers, and judicial review regarding President's Rule under Article 356.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_50a25a396c",
+        "q_num": 114,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:20",
+        "question": "Consider the following statements regarding India’s Purchasing Managers’ Index (PMI):\nI. It is indicative of actual production.\nII. A PMI number greater than $50$ indicates expansion in business activity.\nWhich of the above statements is/are incorrect?",
+        "options": {
+          "a": "I only",
+          "b": "II only",
+          "c": "Both I and II",
+          "d": "Neither I nor II"
+        },
+        "answer": "a",
+        "solution": "Statement I is incorrect. The Purchasing Managers’ Index (PMI) is a survey - based indicator, compiled from responses of purchasing managers regarding variables such as new orders, output/business activity, employment, suppliers’ delivery times and inventories. It reflects the direction and pace of change in business conditions, rather than measuring the actual physical quantity or value of production.\nStatement II is correct. PMI is generally interpreted around the benchmark level of $50$: - PMI > $50$: Expansion compared with the previous month. - PMI < $50$: Contraction - PMI = $50$: No change\nHence, only Statement I is incorrect.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "Banking & Monetary Policy",
+        "conceptTested": "Understanding of economic indicators like PMI, its compilation methodology, and benchmark values.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "Banking & Monetary Policy",
+          "conceptTested": "Understanding of economic indicators like PMI, its compilation methodology, and benchmark values.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c45c6cb7f5",
+        "q_num": 115,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:12",
+        "question": "Who was awarded the prestigious Abel Prize in March 2025 for contributions to algebraic analysis and representation theory?",
+        "options": {
+          "a": "Andrew Wiles",
+          "b": "Masaki Kashiwara",
+          "c": "Robert Langlands",
+          "d": "Caucher Birkar"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Masaki Kashiwara.\n\nKey Points - The Abel Prize for the year 2025 was awarded to the renowned Japanese mathematician Masaki Kashiwara for his monumental contributions to algebraic analysis and representation theory. - Masaki Kashiwara is a Professor Emeritus at the Research Institute for Mathematical Sciences (RIMS) at Kyoto University, Japan. - His work is foundational in the development of D - modules and microlocal analysis, which have bridged the gap between analysis and algebraic geometry. - The citation specifically highlights his role in establishing the Riemann - Hilbert correspondence, a profound result that links linear differential equations with topological data. - In representation theory, he is celebrated for introducing crystal bases, which provide a combinatorial framework for understanding the structure of quantum groups and their representations.",
+        "image": null,
+        "topic": "Awards & Honours",
+        "subtopic": "National & International Awards",
+        "conceptTested": "Knowledge of recent international mathematics awards and laureates.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "National & International Awards",
+          "conceptTested": "Knowledge of recent international mathematics awards and laureates.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_fc22038c46",
+        "q_num": 116,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:05",
+        "avgTime": "00:12",
+        "question": "Ustad Amjad Ali Khan is world-renowned for playing which of the following instruments?",
+        "options": {
+          "a": "Violin",
+          "b": "Sarod",
+          "c": "Santoor",
+          "d": "Bansuri"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Sarod.\n\nKey Points - Ustad Amjad Ali Khan, born in 1945, is an internationally acclaimed Indian classical musician and a master of the Sarod. - He belongs to the sixth generation of the illustrious Senia Bangash Gharana, a musical lineage that claims its roots from Mian Tansen, one of the Navaratnas in the court of Emperor Akbar. - He is widely credited with reinventing the Sarod technique, often playing with his fingernails to produce a unique, resonant, and vocal - like sound that distinguishes his style from other traditional schools. - For his extraordinary contributions to the field of arts, he was honored with India's second - highest civilian award, the Padma Vibhushan, in 2001. - The Sarod is a fretless stringed instrument known for its deep, introspective tone and is a cornerstone of Hindustani Classical Music.",
+        "image": null,
+        "topic": "Music & Musical Instruments",
+        "subtopic": "Musical Instruments & Gharanas",
+        "conceptTested": "Association of famous Indian classical musicians with their respective instruments.",
+        "tags": {
+          "topic": "Music & Musical Instruments",
+          "subtopic": "Musical Instruments & Gharanas",
+          "conceptTested": "Association of famous Indian classical musicians with their respective instruments.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8947f1cedc",
+        "q_num": 117,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:03",
+        "avgTime": "00:31",
+        "question": "Consider the following statements:\nStatement-I: GDP Rebasing helps improve the accuracy and relevance of national income estimates.\nStatement-II: GDP rebasing incorporates structural changes in the economy and updates sectoral weights.\nWhich one of the following is correct in respect of the above statements?",
+        "options": {
+          "a": "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+          "b": "Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I",
+          "c": "Statement-I is correct, but Statement-II is incorrect",
+          "d": "Statement-I is incorrect, but Statement-II is correct"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A.\n\nKey Points - Statement - I: GDP rebasing improves the accuracy and relevance of national income estimates by replacing an outdated base year with a more recent one. Hence, Statement - I is correct. - Statement - II: Rebasing captures structural changes in the economy, incorporates newer products and activities, and updates the relative importance or weights of different sectors. Hence, Statement - II is correct. - Statement - II directly explains Statement - I because incorporating current economic structure and updated sectoral weights makes GDP estimates more representative of the contemporary economy.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "National Income & Five Year Plans",
+        "conceptTested": "Understanding the objectives and structural significance of GDP rebasing.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "National Income & Five Year Plans",
+          "conceptTested": "Understanding the objectives and structural significance of GDP rebasing.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -8385,6 +8577,454 @@
           "subtopic": "Indian Constitution & Governance",
           "conceptTested": "Provisions regarding organised crime and penalties under the Bharatiya Nyaya Sanhita, 2023",
           "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a5b1405728",
+        "q_num": 158,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:09",
+        "avgTime": "00:21",
+        "question": "Which Constitution Amendment Bill resulted in the introduction of Goods and Services Tax (GST) in India?",
+        "options": {
+          "a": "103rd Amendment, 2019",
+          "b": "101st Amendment, 2016",
+          "c": "102nd Amendment, 2018",
+          "d": "100th Amendment, 2015"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 101st Amendment, 2016.\n\nKey Points: - The Goods and Services Tax (GST) was introduced in India through the 101st Constitutional Amendment Act, 2016, following the passage of the 122nd Constitution Amendment Bill in Parliament. - It is a comprehensive, multi - stage, destination - based tax that replaced various indirect taxes such as Excise Duty, VAT, Service Tax, and Luxury Tax to create a unified national market. - The amendment inserted Article 246A into the Constitution, granting both the Union and State legislatures the power to make laws with respect to GST. - It also established the GST Council under Article 279A, chaired by the Union Finance Minister, to make recommendations on tax rates, exemptions, and administrative thresholds. - The GST regime officially came into effect across India on July 1, 2017.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Parliament & State Legislatures",
+        "conceptTested": "Constitutional Amendment Acts and introduction of Goods and Services Tax (GST) in India.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Parliament & State Legislatures",
+          "conceptTested": "Constitutional Amendment Acts and introduction of Goods and Services Tax (GST) in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8f37727a9d",
+        "q_num": 159,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:34",
+        "question": "Located between ________, the Bering Strait is the only marine gateway between the icy Arctic and the Pacific Ocean.",
+        "options": {
+          "a": "Panama and Colombia",
+          "b": "Alaska and Russia",
+          "c": "Denmark and Sweden",
+          "d": "Japan and Russia"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Alaska and Russia.\n\nKey Points: - The Bering Strait is a vital geographical waterway that separates the continents of North America and Asia at their closest point. - Geographically, it is situated between Cape Dezhnev, the easternmost point of the Chukchi Peninsula in Russia, and Cape Prince of Wales, the westernmost point of the Seward Peninsula in Alaska, United States. - The strait measures approximately 82 kilometers (51 miles) in width at its narrowest point and has a relatively shallow depth, ranging between 30 to 50 meters. - It serves as the critical marine gateway connecting the Chukchi Sea (part of the Arctic Ocean) to the north with the Bering Sea (part of the Pacific Ocean) to the south. - The International Date Line runs between the Diomede Islands (Big Diomede in Russia and Little Diomede in the USA) located in the middle of the strait, meaning the two islands are in different calendar days despite being only 3.8 kilometers apart.",
+        "image": null,
+        "topic": "World Geography",
+        "subtopic": "Physical & World Geography",
+        "conceptTested": "Geographical locations of major marine straits connecting world oceans and seas.",
+        "tags": {
+          "topic": "World Geography",
+          "subtopic": "Physical & World Geography",
+          "conceptTested": "Geographical locations of major marine straits connecting world oceans and seas.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a9bf273ca5",
+        "q_num": 160,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:14",
+        "avgTime": "00:21",
+        "question": "Which Indian cricketer was conferred with the Padma Shri in 2025 for his outstanding contributions to the sport?",
+        "options": {
+          "a": "R. Ashwin",
+          "b": "Virat Kohli",
+          "c": "Rohit Sharma",
+          "d": "Mohammed Shami"
+        },
+        "answer": "a",
+        "solution": "The correct answer is R. Ashwin.\n\nKey Points: - In January 2025, the Government of India announced the prestigious Padma Awards, where veteran Indian off - spinner Ravichandran Ashwin was conferred with the Padma Shri, the fourth - highest civilian award in the Republic of India. - The award recognizes his monumental contributions to Indian Cricket, particularly his status as one of the greatest match - winners in the Test format and his consistent performance across all formats of the game. - R. Ashwin reached significant milestones leading up to this recognition, including surpassing the 500 - wicket mark in Test cricket, becoming only the second Indian bowler after Anil Kumble to achieve this feat.",
+        "image": null,
+        "topic": "Awards & Honours",
+        "subtopic": "National & International Awards",
+        "conceptTested": "Recipients of prominent national civilian awards like the Padma Shri in sports.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "National & International Awards",
+          "conceptTested": "Recipients of prominent national civilian awards like the Padma Shri in sports.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e2a53be1a6",
+        "q_num": 161,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:05",
+        "avgTime": "00:16",
+        "question": "Which of the following international agreements aims to phase out ozone-depleting substances?",
+        "options": {
+          "a": "Ramsar Convention",
+          "b": "Paris Agreement",
+          "c": "Kyoto Protocol",
+          "d": "Montreal Protocol"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Montreal Protocol.\n\nKey Points: - The Montreal Protocol on Substances that Deplete the Ozone Layer is a global agreement finalized in 1987 and entered into force on January 1, 1989. - It was designed to protect the stratospheric ozone layer by phasing out the production and consumption of Ozone - Depleting Substances (ODS), which allow harmful ultraviolet (UV - B) radiation to reach the Earth. - The treaty targets several groups of halogenated hydrocarbons, including Chlorofluorocarbons (CFCs), Halons, Carbon tetrachloride, and Methyl chloroform. - It is considered one of the most successful environmental treaties, being the first to achieve universal ratification by all 198 UN Member States.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "International Environmental Conventions",
+        "conceptTested": "Objectives and targets of international environmental protocols such as the Montreal Protocol for ozone layer protection.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "International Environmental Conventions",
+          "conceptTested": "Objectives and targets of international environmental protocols such as the Montreal Protocol for ozone layer protection.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_4dcbd98ade",
+        "q_num": 162,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:16",
+        "avgTime": "00:24",
+        "question": "Consider the following statements regarding ozone depletion:\nI. One chlorine atom can destroy only a few ozone molecules before it is removed from the stratosphere.\nII. All chlorine and bromine sources contribute equally to ozone layer depletion.\nWhich of the above statements is/are incorrect?",
+        "options": {
+          "a": "I only",
+          "b": "II only",
+          "c": "Both I and II",
+          "d": "Neither I nor II"
+        },
+        "answer": "c",
+        "solution": "Statement I: A single chlorine atom participates in a catalytic cycle, destroying thousands of ozone molecules before being removed from the reactive cycle. Hence, Statement I is incorrect.\nStatement II: All chlorine - and bromine - containing substances do not contribute equally to ozone depletion. Their impact depends on factors such as atmospheric lifetime, ability to reach the stratosphere, and ozone - depletion potential (ODP). Hence, Statement II is incorrect.\nTherefore, both Statements I and II are incorrect.",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "Human Body, Diseases & Vitamins",
+        "conceptTested": "Chemistry of stratospheric ozone depletion and the catalytic role of chlorine and bromine radicals.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Human Body, Diseases & Vitamins",
+          "conceptTested": "Chemistry of stratospheric ozone depletion and the catalytic role of chlorine and bromine radicals.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_0e0ceb7b23",
+        "q_num": 163,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:14",
+        "question": "In which year and Olympic edition did Vijender Singh Beniwal become the first Indian boxer to win an Olympic medal?",
+        "options": {
+          "a": "2004 Athens",
+          "b": "2008 Beijing",
+          "c": "2012 London",
+          "d": "2016 Rio"
+        },
+        "answer": "b",
+        "solution": "Vijender Singh Beniwal achieved a historic feat at the 2008 Beijing Olympics by winning the Bronze medal in the middleweight category.\n\nThis victory made him the inaugural Indian boxer to stand on an Olympic podium.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Major international sports achievements, Olympic history, and Indian medalists.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Major international sports achievements, Olympic history, and Indian medalists.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ea3e941340",
+        "q_num": 164,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:09",
+        "avgTime": "00:26",
+        "question": "Which one of the following best defines \"Stagflation\"?",
+        "options": {
+          "a": "A situation in which high inflation results from excessive aggregate demand during rapid economic expansion",
+          "b": "A condition where persistent inflation coexists with stagnant economic growth and rising unemployment",
+          "c": "A phase of economic slowdown accompanied by falling prices and declining industrial output",
+          "d": "A macroeconomic condition characterized by low growth and temporary increase in prices caused by supply shortages"
+        },
+        "answer": "b",
+        "solution": "Stagflation refers to the coexistence of persistent inflation, stagnant or weak economic growth, and high/rising unemployment.\n\nStagflation = Stagnation + Inflation.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "Banking & Monetary Policy",
+        "conceptTested": "Definition and characteristics of stagflation as a macroeconomic phenomenon.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "Banking & Monetary Policy",
+          "conceptTested": "Definition and characteristics of stagflation as a macroeconomic phenomenon.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ea45d14a40",
+        "q_num": 165,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:14",
+        "avgTime": "00:26",
+        "question": "In the local Haryanvi dialect, what is the literal meaning of the term 'Loor', after which the Bangar region's feminine dance is named?",
+        "options": {
+          "a": "Flower",
+          "b": "Girl",
+          "c": "Holi",
+          "d": "Moonlight"
+        },
+        "answer": "b",
+        "solution": "The term 'Loor' is a linguistic marker from the local Haryanvi dialect, where it literally translates to 'girl'. This reflects the dance's primary participants, who are young women and girls from the village.",
+        "image": null,
+        "topic": "Folk & Classical Dances",
+        "subtopic": "Classical & Folk Dances",
+        "conceptTested": "Traditional folk dances of India and cultural terminology.",
+        "tags": {
+          "topic": "Folk & Classical Dances",
+          "subtopic": "Classical & Folk Dances",
+          "conceptTested": "Traditional folk dances of India and cultural terminology.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_9a0807f2c6",
+        "q_num": 166,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:12",
+        "question": "Which of the following are the peaks of the Pir Panjal Range at its eastern end?\nI. Deo Tibba\nII. Indrasa",
+        "options": {
+          "a": "I only",
+          "b": "II only",
+          "c": "Both I and II",
+          "d": "Neither I nor II"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Both I and II.\n\nKey Points: - Deo Tibba: Deo Tibba is a prominent peak associated with the eastern end of the Pir Panjal Range in Himachal Pradesh. It is located in the Manali region and forms an important part of the high mountain landscape of the eastern Pir Panjal. Hence, statement I is correct. - Indrasa: Indrasa (Indrasan) is another prominent high peak associated with the eastern section of the Pir Panjal Range in Himachal Pradesh. It lies in the vicinity of the Deo Tibba massif. Hence, statement II is correct.\n\nTherefore, both Deo Tibba and Indrasa are peaks of the Pir Panjal Range at its eastern end.",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Himalayan Ranges Passes",
+        "conceptTested": "Geographical identification of peaks located in the Pir Panjal range.",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Himalayan Ranges Passes",
+          "conceptTested": "Geographical identification of peaks located in the Pir Panjal range.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_09752e52cb",
+        "q_num": 167,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:15",
+        "avgTime": "00:21",
+        "question": "The Seventh Five-Year Plan emphasised employment generation. What was the slogan that guided this objective?",
+        "options": {
+          "a": "Growth with Equity",
+          "b": "Jobs First",
+          "c": "Food for All",
+          "d": "Inclusive India"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Growth with Equity.\n\nKey Points: - The Seventh Five - Year Plan of India was implemented from 1985 to 1990 under the leadership of Prime Minister Rajiv Gandhi. - The primary objectives of this plan were to establish a self - sufficient economy, create opportunities for productive employment, and upgrade technology. - The guiding slogan and central theme of the Seventh Plan was 'Food, Work, and Productivity', which was fundamentally rooted in the philosophy of Growth with Equity and social justice.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "National Income & Five Year Plans",
+        "conceptTested": "Objectives, themes, and slogans of India's Five-Year Plans.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "National Income & Five Year Plans",
+          "conceptTested": "Objectives, themes, and slogans of India's Five-Year Plans.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b94cfa973f",
+        "q_num": 168,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:18",
+        "question": "Pakyong Airport is a landmark engineering project that provided direct regional air connectivity to a remote northeastern state. In which Indian state is Pakyong Airport located on a hilltop site?",
+        "options": {
+          "a": "Arunachal Pradesh",
+          "b": "Nagaland",
+          "c": "Sikkim",
+          "d": "Meghalaya"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Sikkim.\n\nKey Points: - Pakyong Airport is a greenfield airport located in Pakyong, near the state capital Gangtok in the state of Sikkim. - It was inaugurated by Prime Minister Narendra Modi on September 24, 2018, marking the opening of the first airport in the state of Sikkim. - The airport is situated at an altitude of approximately 4, 500 feet (1, 370 meters) above sea level, making it one of the highest airports in India.",
+        "image": null,
+        "topic": "Temples, Monuments & Heritage Sites",
+        "subtopic": "Important Infrastructure Landmarks",
+        "conceptTested": "Geographical location and engineering features of Pakyong Airport in Sikkim.",
+        "tags": {
+          "topic": "Temples, Monuments & Heritage Sites",
+          "subtopic": "Important Infrastructure Landmarks",
+          "conceptTested": "Geographical location and engineering features of Pakyong Airport in Sikkim.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_00f0b3fd83",
+        "q_num": 169,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:16",
+        "avgTime": "00:18",
+        "question": "The Battle of Shopain (1819) was fought between which two powers?",
+        "options": {
+          "a": "Sikhs and Britishers",
+          "b": "Mughals and Afghans",
+          "c": "Sikhs and Mughals",
+          "d": "Sikhs and Afghans"
+        },
+        "answer": "d",
+        "solution": "The correct answer is the Sikhs and Afghans.\n\nKey Points: - The Battle of Shopian, fought on 3 July 1819, was a decisive encounter between the Sikh Empire and Jabbar Khan, the Afghan (Durrani) governor of Kashmir. - The Sikh forces, led in the field by Misr Diwan Chand under Maharaja Ranjit Singh, defeated the entrenched Durrani army despite initial setbacks caused by heavier Afghan artillery. - With this, Afghan control over Kashmir collapsed, and the region was formally annexed into the Sikh Empire.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Historical battles and treaties involving the Sikh Empire and Afghan rulers.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Historical battles and treaties involving the Sikh Empire and Afghan rulers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_907661cee0",
+        "q_num": 170,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:15",
+        "avgTime": "00:25",
+        "question": "Consider the following statements regarding Non-Performing Assets (NPAs):\nI. A loan is generally classified as NPA if interest or principal remains overdue for more than 90 days.\nII. Higher NPAs reduce the profitability and lending capacity of banks.\nIII. Priority Sector Lending is the sole reason behind rising NPAs in India.\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "I and II only",
+          "b": "II only",
+          "c": "I and III only",
+          "d": "I, II and III"
+        },
+        "answer": "a",
+        "solution": "The correct answer is I and II only.\n\nKey Points: - Statement I: As a general prudential norm, a loan is classified as an NPA when interest and/or principal remains overdue for more than 90 days. Hence, Statement I is correct. - Statement II: Higher NPAs reduce banks’ interest income, increase provisioning requirements, weaken profitability and constrain their ability to extend fresh credit. Hence, Statement II is correct. - Statement III: Priority Sector Lending is not the sole reason for rising NPAs. NPAs may arise due to poor credit appraisal, economic slowdown, project delays, sectoral stress, and other factors. Hence, Statement III is incorrect.",
+        "image": null,
+        "topic": "Banking & Monetary Policy",
+        "subtopic": "General Economics & Finance",
+        "conceptTested": "Definition, classification norms, and financial impact of Non-Performing Assets (NPAs) on commercial banks.",
+        "tags": {
+          "topic": "Banking & Monetary Policy",
+          "subtopic": "General Economics & Finance",
+          "conceptTested": "Definition, classification norms, and financial impact of Non-Performing Assets (NPAs) on commercial banks.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_920761087c",
+        "q_num": 171,
+        "mockId": "mock_1790694420538_dg24i",
+        "testId": "mock_1790694420538_dg24i",
+        "testName": "SSC CGL Full Test - 24",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:52",
+        "avgTime": "00:39",
+        "question": "In tennis a player/team needs to win \\(\\dots\\) consecutive points after deuce to win a game.",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 2.\n\nKey Points - A Deuce occurs when both players or teams reach a score of 40 - 40. - To win the game from a deuce, a player or team must win 2 consecutive points. The first point won after a deuce is known as the Advantage point. - If the player holding the advantage wins the following point, they win the game. However, if they lose that point, the score reverts to Deuce, and the cycle continues until one side achieves the necessary 2 back - to - back points.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Important Days, Orgs & Static Facts",
+        "conceptTested": "Rules of tennis scoring systems and tie-breaking conditions.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Important Days, Orgs & Static Facts",
+          "conceptTested": "Rules of tennis scoring systems and tie-breaking conditions.",
+          "difficulty": "hard"
         }
       }
     ]
