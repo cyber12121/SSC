@@ -99,12 +99,14 @@ export interface DashboardStats {
   totalQuizzes: number;
   totalQuestions: number;
   totalCorrect: number;
+  totalWrong: number;
+  totalUnattempted: number;
   overallAccuracy: number;
   totalTimeSeconds: number;
   avgTimePerQ: number;
   mockCount: number;
   practiceCount: number;
-  subjectStats: Record<string, { totalQ: number; correct: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }>;
+  subjectStats: Record<string, { totalQ: number; correct: number; wrong: number; unattempted: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }>;
 }
 
 export const computeDashboardStats = (userResults: any[]): DashboardStats => {
@@ -113,40 +115,69 @@ export const computeDashboardStats = (userResults: any[]): DashboardStats => {
       totalQuizzes: 0,
       totalQuestions: 0,
       totalCorrect: 0,
+      totalWrong: 0,
+      totalUnattempted: 0,
       overallAccuracy: 0,
       totalTimeSeconds: 0,
       avgTimePerQ: 0,
       mockCount: 0,
       practiceCount: 0,
       subjectStats: {
-        'Mathematics': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-        'Reasoning': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-        'English': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-        'General Awareness': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
+        'Mathematics': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+        'Reasoning': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+        'English': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+        'General Awareness': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
       }
     };
   }
 
   let totalQ = 0;
   let totalCorrect = 0;
+  let totalAttempted = 0;
+  let totalWrong = 0;
+  let totalUnattempted = 0;
   let totalTime = 0;
   let mockCount = 0;
   let practiceCount = 0;
 
-  const subjectStats: Record<string, { totalQ: number; correct: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }> = {
-    'Mathematics': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-    'Reasoning': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-    'English': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
-    'General Awareness': { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
+  const subjectStats: Record<string, { totalQ: number; correct: number; wrong: number; unattempted: number; quizzes: number; totalTime: number; accuracy: number; avgTime: number }> = {
+    'Mathematics': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+    'Reasoning': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+    'English': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 },
+    'General Awareness': { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 }
   };
 
   userResults.forEach(r => {
     const qCount = Number(r.totalQuestions) || 0;
-    const score = Number(r.score) || 0;
     const time = Number(r.totalTime) || 0;
 
+    let rCorrect = 0;
+    let rWrong = 0;
+    let rUnattempted = 0;
+
+    if (r.questionDetails && r.questionDetails.length > 0) {
+      r.questionDetails.forEach((qd: any) => {
+        const isAns = Boolean(qd.selectedAnswer && qd.selectedAnswer !== '' && qd.selectedAnswer !== 'unattempted' && qd.status !== 'Unattempted');
+        if (!isAns) {
+          rUnattempted++;
+        } else if (qd.isCorrect) {
+          rCorrect++;
+        } else {
+          rWrong++;
+        }
+      });
+    } else {
+      rCorrect = Number(r.score) || 0;
+      rUnattempted = Number(r.unattemptedCount) || 0;
+      rWrong = Math.max(0, qCount - rCorrect - rUnattempted);
+    }
+    const rAttempted = rCorrect + rWrong;
+
     totalQ += qCount;
-    totalCorrect += score;
+    totalCorrect += rCorrect;
+    totalAttempted += rAttempted;
+    totalWrong += rWrong;
+    totalUnattempted += rUnattempted;
     totalTime += time;
 
     if (r.mode === 'mock') mockCount++;
@@ -156,27 +187,32 @@ export const computeDashboardStats = (userResults: any[]): DashboardStats => {
     const subKey = theme.name;
 
     if (!subjectStats[subKey]) {
-      subjectStats[subKey] = { totalQ: 0, correct: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 };
+      subjectStats[subKey] = { totalQ: 0, correct: 0, wrong: 0, unattempted: 0, quizzes: 0, totalTime: 0, accuracy: 0, avgTime: 0 };
     }
     subjectStats[subKey].quizzes += 1;
     subjectStats[subKey].totalQ += qCount;
-    subjectStats[subKey].correct += score;
+    subjectStats[subKey].correct += rCorrect;
+    subjectStats[subKey].wrong += rWrong;
+    subjectStats[subKey].unattempted += rUnattempted;
     subjectStats[subKey].totalTime += time;
   });
 
   Object.keys(subjectStats).forEach(sub => {
     const s = subjectStats[sub];
-    s.accuracy = s.totalQ > 0 ? Math.round((s.correct / s.totalQ) * 100) : 0;
+    const sAtt = s.correct + s.wrong;
+    s.accuracy = sAtt > 0 ? Math.round((s.correct / sAtt) * 100) : 0;
     s.avgTime = s.totalQ > 0 ? Math.round(s.totalTime / s.totalQ) : 0;
   });
 
-  const overallAccuracy = totalQ > 0 ? Math.round((totalCorrect / totalQ) * 100) : 0;
+  const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
   const avgTimePerQ = totalQ > 0 ? Math.round(totalTime / totalQ) : 0;
 
   return {
     totalQuizzes: userResults.length,
     totalQuestions: totalQ,
     totalCorrect,
+    totalWrong,
+    totalUnattempted,
     overallAccuracy,
     totalTimeSeconds: totalTime,
     avgTimePerQ,

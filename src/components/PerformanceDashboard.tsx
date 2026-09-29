@@ -209,7 +209,7 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               </div>
               <div className="mt-1 pt-1 border-t border-slate-100 flex items-center justify-between text-[10px]">
                 <span className="text-slate-500 font-mono truncate">
-                  <strong className="text-emerald-600 font-semibold">{dashboardStats.totalCorrect}</strong> Correct • {dashboardStats.totalQuestions - dashboardStats.totalCorrect} Inaccurate
+                  <strong className="text-emerald-600 font-semibold">{dashboardStats.totalCorrect}</strong> C • <strong className="text-rose-600 font-semibold">{dashboardStats.totalWrong}</strong> W • <strong className="text-slate-500 font-semibold">{dashboardStats.totalUnattempted}</strong> S
                 </span>
                 <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold bg-purple-50 text-purple-700 shrink-0 ml-1">
                   TOTAL BANK
@@ -438,15 +438,41 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                 {filteredUserResults.map((result, idx) => {
                   const theme = getSubjectTheme(result.subject);
                   const Icon = theme.icon;
-                  const attemptedCount = result.questionDetails && result.questionDetails.length > 0
-                    ? result.questionDetails.filter(qd => Boolean(qd.selectedAnswer && qd.selectedAnswer !== '' && qd.selectedAnswer !== 'unattempted')).length
-                    : result.totalQuestions;
+
+                  const qDetails = result.questionDetails || [];
+                  let correctCount = 0;
+                  let wrongCount = 0;
+                  let unattemptedCount = 0;
+
+                  if (qDetails.length > 0) {
+                    qDetails.forEach(qd => {
+                      const rawAns = qd.selectedAnswer;
+                      const isAns = Boolean(rawAns && rawAns !== '' && rawAns !== 'unattempted' && (qd as any).status !== 'Unattempted');
+                      if (!isAns) {
+                        unattemptedCount++;
+                      } else if (qd.isCorrect) {
+                        correctCount++;
+                      } else {
+                        wrongCount++;
+                      }
+                    });
+                  } else {
+                    correctCount = typeof result.score === 'number' ? result.score : 0;
+                    unattemptedCount = (result as any).unattemptedCount ?? 0;
+                    wrongCount = Math.max(0, result.totalQuestions - correctCount - unattemptedCount);
+                  }
+
+                  const attemptedCount = correctCount + wrongCount;
                   const accuracyRate = attemptedCount > 0
-                    ? Math.round((result.score / attemptedCount) * 100)
+                    ? Math.round((correctCount / attemptedCount) * 100)
                     : 0;
                   const avgQ = result.totalQuestions > 0
                     ? Math.round(result.totalTime / result.totalQuestions)
                     : 0;
+
+                  // Official SSC CGL Marking: +2 for Correct (including slow), -0.5 for Wrong, 0 for Unattempted
+                  const sscMarks = Math.round(((correctCount * 2) - (wrongCount * 0.5)) * 10) / 10;
+                  const maxMarks = result.totalQuestions * 2;
 
                   return (
                     <div
@@ -486,15 +512,37 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                           <p className="text-[10px] text-slate-400 font-medium mt-0.5 font-mono">
                             {formatAttemptDate(result.completedAt)}
                           </p>
+
+                          {/* Detailed Breakdown: Correct (+2), Wrong (-0.5), Skipped (0) */}
+                          <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                              <span>{correctCount} Correct</span>
+                              <span className="text-[9px] text-emerald-800 font-mono">(+{correctCount * 2})</span>
+                            </span>
+                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200">
+                              <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                              <span>{wrongCount} Wrong</span>
+                              <span className="text-[9px] text-rose-800 font-mono">(-{Math.round(wrongCount * 0.5 * 10) / 10})</span>
+                            </span>
+                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200">
+                              <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
+                              <span>{unattemptedCount} Skipped</span>
+                              <span className="text-[9px] text-slate-500 font-mono">(0)</span>
+                            </span>
+                          </div>
                         </div>
                       </div>
 
                       {/* Stat Numbers & Actions */}
                       <div className="flex flex-wrap items-center justify-between lg:justify-end gap-3 sm:gap-4 border-t lg:border-t-0 pt-2 lg:pt-0 border-slate-100">
-                        <div className="text-left sm:text-right min-w-[55px]">
-                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider font-mono">Score</div>
-                          <div className="text-xs font-bold text-slate-900 font-mono">
-                            {result.score}/{result.totalQuestions}
+                        <div className="text-left sm:text-right min-w-[70px]">
+                          <div className="text-slate-400 font-bold uppercase text-[9px] tracking-wider font-mono">Score (SSC)</div>
+                          <div className="text-xs sm:text-sm font-black text-indigo-700 font-mono">
+                            {sscMarks} <span className="text-[10px] font-normal text-slate-400">/{maxMarks}</span>
+                          </div>
+                          <div className="text-[9px] font-semibold text-slate-500 font-mono">
+                            {correctCount}/{result.totalQuestions} Qs
                           </div>
                         </div>
 
