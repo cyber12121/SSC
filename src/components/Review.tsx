@@ -49,7 +49,8 @@ import {
   getQuestionSillySubTypes, 
   matchesSillySubFilter, 
   getSillyPrimaryBadge, 
-  generatePatternInsight 
+  generatePatternInsight,
+  syncRcaToFirestore 
 } from '../utils/rcaHelper';
 
 export const parseAvgTimeToSeconds = (rawTime?: string | number | null): number | null => {
@@ -335,10 +336,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       const q = it?.question || ({} as Question);
       const qId = q.id || (result.id ? `${result.id}_${targetIdx + 1}` : `mock_${targetIdx + 1}`);
       const qTextNorm = q.question ? q.question.trim().toLowerCase() : '';
+      const strippedKey = qTextNorm ? qTextNorm.replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '') : '';
 
       if (isClear || !newRca) {
         delete globalStore[qId];
         if (qTextNorm) delete globalStore[qTextNorm];
+        if (strippedKey) delete globalStore[strippedKey];
       } else {
         const itStatus = getQuestionStatus(targetIdx);
         const itIsSlow = itStatus === 'slow';
@@ -368,12 +371,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         if (qTextNorm) {
           globalStore[qTextNorm] = leanEntry;
         }
+        if (strippedKey) {
+          globalStore[strippedKey] = leanEntry;
+        }
       }
 
       safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
       setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
+      syncRcaToFirestore(globalStore).catch(() => {});
 
-      // Update mock questions array in localStorage and trigger background persistence
+      // Update mock questions array in localStorage and trigger background persistence (ONLY updating RCA metadata)
       if (result.id && !result.id.startsWith('local-')) {
         const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
         let cachedList: any[] = [];
@@ -385,23 +392,27 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             const itemSt = getQuestionStatus(idx);
             const itemIsSlow = itemSt === 'slow';
             const itemIsCorrect = itemSt === 'correct' || itemIsSlow;
+            const originalChosen = (item.question as any)?.chosenOption || item.selectedAnswer || (item as any).userAnswer || '';
+            const originalStatus = (item.question as any)?.status || (itemSt === 'slow' ? 'Correct (Slow)' : (itemIsCorrect ? 'Correct' : (itemSt === 'unattempted' ? 'Unattempted' : 'Incorrect')));
             return {
               ...(item.question || {}),
               q_num: idx + 1,
-              userAnswer: item.selectedAnswer || (item as any).userAnswer || '',
-              selectedAnswer: item.selectedAnswer || (item as any).userAnswer || '',
-              chosenOption: item.selectedAnswer || (item as any).userAnswer || '',
+              userAnswer: originalChosen,
+              selectedAnswer: originalChosen,
+              chosenOption: originalChosen,
               isCorrect: itemIsCorrect,
               isSlow: itemIsSlow,
-              status: itemSt === 'slow' ? 'Correct (Slow)' : (itemIsCorrect ? 'Correct' : (itemSt === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+              status: originalStatus,
               errorType: itemIsSlow ? 'speed_issue' : (itemIsCorrect ? 'correct' : (itemSt === 'unattempted' ? 'unattempted' : 'wrong')),
               timeSpent: item.timeSpent,
               userTime: item.timeSpent,
-              rca: updatedMap[idx] || item.rca || item.question?.rca || undefined
+              rca: updatedMap[idx] || item.rca || item.question?.rca || undefined,
+              rcaClassification: updatedMap[idx] || item.rca || item.question?.rca || undefined
             };
           });
         } else if (cachedList[targetIdx]) {
           cachedList[targetIdx].rca = isClear ? undefined : newRca;
+          cachedList[targetIdx].rcaClassification = isClear ? undefined : newRca;
         }
 
         safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(cachedList));
@@ -560,27 +571,33 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           }
         }
 
+        const isMockReview = result.mode === 'mock';
         const questionsToSave = items.map((it, idx) => {
           const existingQ = (Array.isArray(cachedExisting) && cachedExisting[idx]) || {};
           const q = it.question ? { ...it.question } : { ...existingQ };
           const rca = currentRcaMap[idx] || it.rca || q.rca;
           
-          // Use ONLY the current attempt's answer — do NOT pull from existingQ.userAnswer etc.,
-          // as that is stale data from a previous session and would overwrite an unattempted
-          // question with a wrong cached answer, breaking the second-review palette.
           const selectedAnswer = it.selectedAnswer || (it as any).userAnswer || '';
           const actualStatus = getQuestionStatus(idx);
           const isSlow = actualStatus === 'slow';
           const isCorrect = actualStatus === 'correct' || isSlow;
           const timeSpent = typeof it.timeSpent === 'number' ? it.timeSpent : (typeof existingQ.timeSpent === 'number' ? existingQ.timeSpent : (existingQ.userTime || 0));
 
+          // When reviewing an imported mock, NEVER overwrite the imported attempt's chosenOption or status
+          const preservedChosen = (isMockReview && (existingQ.chosenOption !== undefined || (q as any).chosenOption !== undefined))
+            ? (existingQ.chosenOption ?? (q as any).chosenOption)
+            : selectedAnswer;
+          const preservedStatus = (isMockReview && (existingQ.status || (q as any).status))
+            ? (existingQ.status || (q as any).status)
+            : (actualStatus === 'slow' ? 'Correct (Slow)' : (isCorrect ? 'Correct' : (actualStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')));
+
           return {
             ...existingQ,
             ...q,
-            userAnswer: selectedAnswer,
-            selectedAnswer: selectedAnswer,
-            chosenOption: selectedAnswer,
-            status: actualStatus === 'slow' ? 'Correct (Slow)' : (isCorrect ? 'Correct' : (actualStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
+            userAnswer: preservedChosen,
+            selectedAnswer: preservedChosen,
+            chosenOption: preservedChosen,
+            status: preservedStatus,
             errorType: isSlow ? 'speed_issue' : (isCorrect ? 'correct' : (actualStatus === 'unattempted' ? 'unattempted' : 'wrong')),
             isCorrect,
             isSlow,
@@ -588,7 +605,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             userTime: timeSpent,
             avgTime: q.avgTime ?? (it as any).avgTime ?? existingQ.avgTime,
             avgTimeSeconds: q.avgTimeSeconds ?? (it as any).avgTimeSeconds ?? existingQ.avgTimeSeconds,
-            rca: rca || undefined
+            rca: rca || undefined,
+            rcaClassification: rca || undefined
           };
         });
 

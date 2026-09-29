@@ -33,7 +33,7 @@ import { getGrammarPdfUrl } from './utils/grammarPdfs';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
-import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap, matchesSillySubFilter, SILLY_SUB_TYPES } from './utils/rcaHelper';
+import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap, matchesSillySubFilter, SILLY_SUB_TYPES, initGlobalRcaStoreFromIdb, syncRcaFromFirestore } from './utils/rcaHelper';
 import { RCATagType, RCAClassification } from './types';
 import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
@@ -507,12 +507,18 @@ export default function App() {
       } catch { }
     }
 
+    // Hydrate RCA classifications from IndexedDB and Firestore on launch
+    initGlobalRcaStoreFromIdb().catch(() => {});
+
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (isLocalhost && safeStorage.getItem('cgl_is_guest_login') === 'true') {
         return;
       }
       setUser(currentUser);
       setLoading(false);
+      if (currentUser) {
+        syncRcaFromFirestore().catch(() => {});
+      }
       try {
         const key = currentUser ? `cgl_user_results_cache_${currentUser.uid}` : 'guest_results';
         const cached = safeStorage.getItem(key) || safeStorage.getItem('cgl_user_results_cache_guest');
@@ -1344,7 +1350,7 @@ export default function App() {
       }
     }
 
-    const isMockTest = fullResult.mode === 'mock' || fullResult.category === 'mockErrors' || fullResult.chapter_title?.toLowerCase().includes('mock');
+    const isMockTest = fullResult.mode === 'mock' && isFullOrSectionalMock(fullResult);
 
     // If mock quiz, cache full question attempt details into cgl_mock_questions_* immediately so Mock Errors displays them right away
     if (isMockTest && fullResult.questionDetails && fullResult.questionDetails.length > 0) {

@@ -18,6 +18,28 @@ export default function handler(req: any, res: any) {
   if (req.method === 'POST') {
     try {
       if (req.body && fs.existsSync(qPath)) {
+        const existingRaw = fs.readFileSync(qPath, 'utf-8');
+        try {
+          const existingData = JSON.parse(existingRaw);
+          if (Array.isArray(existingData) && Array.isArray(req.body)) {
+            // Merge safely: ONLY update RCA tags and enriched solutions, NEVER overwrite original attempt status or options
+            const merged = existingData.map((existingItem: any, idx: number) => {
+              const incoming = req.body[idx] || {};
+              return {
+                ...existingItem,
+                rca: incoming.rca !== undefined ? incoming.rca : existingItem.rca,
+                rcaClassification: incoming.rcaClassification !== undefined ? incoming.rcaClassification : existingItem.rcaClassification,
+                sillyMistakeNote: incoming.sillyMistakeNote !== undefined ? incoming.sillyMistakeNote : existingItem.sillyMistakeNote,
+                solution: (incoming.solution && (!existingItem.solution || existingItem.solution.length < incoming.solution.length))
+                  ? incoming.solution
+                  : existingItem.solution
+              };
+            });
+            fs.writeFileSync(qPath, JSON.stringify(merged, null, 2), 'utf-8');
+            return res.status(200).json({ success: true, message: 'RCA updated successfully without altering imported answers' });
+          }
+        } catch {}
+
         fs.writeFileSync(qPath, JSON.stringify(req.body, null, 2), 'utf-8');
         return res.status(200).json({ success: true, message: 'Saved successfully' });
       }

@@ -1,6 +1,8 @@
 import { RCATagType, RCAClassification, Question } from '../types';
 import { safeStorage } from './safeStorage';
 import { getIdbKey, setIdbKey } from './cache';
+import { db, auth } from '../firebase';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 export const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
 
@@ -324,10 +326,56 @@ let bundledRcaPromise: Promise<Record<string, RCAClassification>> | null = null;
 let idbHydrated = false;
 
 /**
- * Hydrates global RCA store from IndexedDB if localStorage was cleared or wiped.
+ * Persists the global RCA classification map to user's Firestore document.
+ * This guarantees cloud resilience across devices or whenever cache is cleared.
+ */
+export async function syncRcaToFirestore(globalStore: Record<string, any>): Promise<void> {
+  if (!auth.currentUser) return;
+  try {
+    const userDocRef = doc(db, 'user_rca', auth.currentUser.uid);
+    const sanitized = JSON.parse(JSON.stringify(globalStore));
+    await setDoc(userDocRef, { store: sanitized, updatedAt: new Date().toISOString() }, { merge: true });
+  } catch (err) {
+    console.warn('[rcaHelper] Firestore sync warning:', err);
+  }
+}
+
+/**
+ * Pulls user RCA classifications from Firestore and merges with local store.
+ */
+export async function syncRcaFromFirestore(): Promise<Record<string, any>> {
+  if (!auth.currentUser) return getGlobalRcaStore();
+  try {
+    const userDocRef = doc(db, 'user_rca', auth.currentUser.uid);
+    const snap = await getDoc(userDocRef);
+    if (snap.exists()) {
+      const data = snap.data();
+      const firestoreStore = data?.store;
+      if (firestoreStore && typeof firestoreStore === 'object' && Object.keys(firestoreStore).length > 0) {
+        const current = getGlobalRcaStore();
+        const merged = { ...firestoreStore, ...current };
+        safeStorage.setItem('cgl_rca_global_store', JSON.stringify(merged));
+        setIdbKey('cgl_rca_global_store', merged).catch(() => {});
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { firestoreSynced: true } }));
+        }
+        return merged;
+      }
+    }
+  } catch (err) {
+    console.warn('[rcaHelper] Failed to load RCA from Firestore:', err);
+  }
+  return getGlobalRcaStore();
+}
+
+/**
+ * Hydrates global RCA store from IndexedDB & Firestore if localStorage was cleared or wiped.
  */
 export async function initGlobalRcaStoreFromIdb(): Promise<Record<string, any>> {
-  if (idbHydrated) return getGlobalRcaStore();
+  if (idbHydrated) {
+    syncRcaFromFirestore().catch(() => {});
+    return getGlobalRcaStore();
+  }
   try {
     const fromIdb = await getIdbKey<Record<string, any>>('cgl_rca_global_store');
     if (fromIdb && typeof fromIdb === 'object' && Object.keys(fromIdb).length > 0) {
@@ -338,10 +386,12 @@ export async function initGlobalRcaStoreFromIdb(): Promise<Record<string, any>> 
       if (typeof window !== 'undefined') {
         window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { hydrated: true } }));
       }
+      syncRcaFromFirestore().catch(() => {});
       return merged;
     }
   } catch {}
   idbHydrated = true;
+  syncRcaFromFirestore().catch(() => {});
   return getGlobalRcaStore();
 }
 
@@ -397,6 +447,7 @@ export function findQuestionRca(
 ): RCAClassification | undefined {
   const store = globalStore || getGlobalRcaStore();
   const textNorm = (q.question || q.questionText || '').trim().toLowerCase();
+  const strippedKey = textNorm ? textNorm.replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '') : '';
 
   // 1. Explicit user classification from globalStore TAKES HIGHEST PRECEDENCE!
   // This prevents static/bundled defaults from overriding user decisions.
@@ -405,6 +456,9 @@ export function findQuestionRca(
   }
   if (textNorm && store[textNorm]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[textNorm].tag)) {
     return normalizeClassification(store[textNorm]);
+  }
+  if (strippedKey && store[strippedKey]?.tag && ['C', 'A', 'S', 'T', 'G'].includes(store[strippedKey].tag)) {
+    return normalizeClassification(store[strippedKey]);
   }
 
   // 2. Question object RCA (from current active attempt in memory)
@@ -420,6 +474,7 @@ export function findQuestionRca(
   if (bMap) {
     if (q.id && bMap[q.id]) return normalizeClassification(bMap[q.id]);
     if (textNorm && bMap[textNorm]) return normalizeClassification(bMap[textNorm]);
+    if (strippedKey && bMap[strippedKey]) return normalizeClassification(bMap[strippedKey]);
   }
 
   return undefined;
@@ -435,14 +490,17 @@ export function saveQuestionRca(
   try {
     const globalStore = getGlobalRcaStore();
     const textNorm = (targetQ.question || targetQ.questionText || '').trim().toLowerCase();
+    const strippedKey = textNorm ? textNorm.replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '') : '';
     const cleanSlug = textNorm ? textNorm.replace(/[^a-z0-9]/g, '').slice(0, 40) : '';
     const qId = targetQ.id || `${targetQ.parentSubject || parentSubject || 'mock'}_${cleanSlug || 'q'}`;
 
     if (!tag) {
       if (qId) delete globalStore[qId];
       if (textNorm) delete globalStore[textNorm];
+      if (strippedKey) delete globalStore[strippedKey];
       safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
       setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
+      syncRcaToFirestore(globalStore).catch(() => {});
       if (typeof window !== 'undefined') {
         window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { qId, textNorm, rca: null } }));
       }
@@ -487,10 +545,12 @@ export function saveQuestionRca(
 
     globalStore[qId] = leanEntry;
     if (textNorm) globalStore[textNorm] = leanEntry;
+    if (strippedKey) globalStore[strippedKey] = leanEntry;
     safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
     setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
+    syncRcaToFirestore(globalStore).catch(() => {});
 
-    // Also update cached mock test if mockId exists
+    // Also update cached mock test if mockId exists (ONLY updating rca metadata, never answers)
     const mId = targetQ.mockId || targetQ.testId;
     if (mId) {
       try {
@@ -500,8 +560,9 @@ export function saveQuestionRca(
           if (Array.isArray(cachedList)) {
             const updated = cachedList.map((item: any) => {
               const itText = (item.question || item.questionText || '').trim().toLowerCase();
-              if ((item.id && item.id === qId) || (textNorm && itText === textNorm)) {
-                return { ...item, rca: newRca, rcaClassification: newRca };
+              const itStripped = itText.replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '');
+              if ((item.id && item.id === qId) || (textNorm && itText === textNorm) || (strippedKey && itStripped === strippedKey)) {
+                return { ...item, rca: newRca, rcaClassification: newRca, sillyMistakeNote: finalNote };
               }
               return item;
             });
