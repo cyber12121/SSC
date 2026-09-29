@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sankalp-cgl-pwa-v1';
+const CACHE_NAME = 'sankalp-cgl-pwa-v2';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
@@ -36,9 +36,16 @@ self.addEventListener('activate', (event) => {
 // Fetch: Strategy depending on request type
 self.addEventListener('fetch', (event) => {
   const req = event.request;
+
+  // Cache API only supports http: and https: schemes.
+  // Ignore chrome-extension://, moz-extension://, data:, file:, etc.
+  if (!req.url.startsWith('http://') && !req.url.startsWith('https://')) {
+    return;
+  }
+
   const url = new URL(req.url);
 
-  // Skip non-GET requests and cross-origin tracking/analytics
+  // Skip non-GET requests
   if (req.method !== 'GET') return;
 
   // Do not cache API endpoints or external Firebase requests
@@ -58,7 +65,7 @@ self.addEventListener('fetch', (event) => {
         .then((res) => {
           if (res.ok) {
             const clone = res.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
+            caches.open(CACHE_NAME).then((cache) => cache.put(req, clone)).catch(() => {});
           }
           return res;
         })
@@ -78,7 +85,7 @@ self.addEventListener('fetch', (event) => {
         .then((networkRes) => {
           if (networkRes.ok && networkRes.type === 'basic') {
             const clone = networkRes.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
+            caches.open(CACHE_NAME).then((cache) => cache.put(req, clone)).catch(() => {});
           }
           return networkRes;
         })

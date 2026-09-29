@@ -44,14 +44,43 @@ try {
 export const db = firestoreDb;
 
 // Initialize Firebase Auth with graceful persistence fallbacks
-// In Telegram's in-app browser or strict WebView contexts, IndexedDB/storage can throw
+// In restricted browser contexts, extensions, or third-party iframes, IndexedDB/storage can throw:
 // "SecurityError: Access to storage is not allowed from this context."
 let firebaseAuth: ReturnType<typeof getAuth>;
 try {
-  firebaseAuth = initializeAuth(app, {
-    persistence: [indexedDBLocalPersistence, browserLocalPersistence, inMemoryPersistence]
-  });
-} catch {
+  // Test if storage is actually accessible before requesting persistence
+  const isStorageUsable = (() => {
+    try {
+      if (typeof window === 'undefined') return false;
+      const test = '__fb_storage_test__';
+      window.localStorage.setItem(test, test);
+      window.localStorage.removeItem(test);
+      return true;
+    } catch {
+      return false;
+    }
+  })();
+
+  if (isStorageUsable) {
+    try {
+      firebaseAuth = initializeAuth(app, {
+        persistence: [indexedDBLocalPersistence, browserLocalPersistence, inMemoryPersistence]
+      });
+    } catch {
+      firebaseAuth = getAuth(app);
+    }
+  } else {
+    // If storage is blocked by browser policy, use inMemoryPersistence directly
+    try {
+      firebaseAuth = initializeAuth(app, {
+        persistence: inMemoryPersistence
+      });
+    } catch {
+      firebaseAuth = getAuth(app);
+    }
+  }
+} catch (e) {
+  console.warn('[Firebase] Fallback initializing auth with getAuth:', e);
   try {
     firebaseAuth = getAuth(app);
   } catch {

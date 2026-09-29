@@ -1025,9 +1025,16 @@ export default function App() {
 
   const handleLogin = async () => {
     try {
+      if (!auth) {
+        console.error('Login failed: Firebase Auth is not initialized');
+        return;
+      }
       await signInWithPopup(auth, googleProvider);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Login failed:', error);
+      if (error?.code === 'auth/popup-blocked') {
+        alert('Popup was blocked by your browser. Please allow popups for this site to sign in with Google.');
+      }
     }
   };
 
@@ -4408,6 +4415,7 @@ export default function App() {
                     const rawSub = firstQ?.subject || 'English';
                     const formattedSub = rawSub.charAt(0).toUpperCase() + rawSub.slice(1);
                     setCategory('mockErrors');
+                    setQuizMode('practice');
 
                     if (questions.length > 25) {
                       setSetPickerModal({
@@ -4426,7 +4434,7 @@ export default function App() {
                       subject_id: (firstQ?.subject || 'english').toLowerCase().replace(/\s+/g, '_'),
                       questions: questions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
                       section: 'mockErrors',
-                      is_test: true
+                      is_test: false
                     };
                     startQuiz(virtualChapter);
                   }}

@@ -570,8 +570,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
 
   const getFormattedSolution = () => {
-    if (!currentQuestion?.solution) return '';
-    return extractSolutionLanguage(currentQuestion.solution, language);
+    const sol = currentQuestion?.solution || (currentQuestion as any)?.explanation || (currentQuestion as any)?.sol || (currentQuestion as any)?.detailedSolution;
+    if (!sol) return '';
+    return extractSolutionLanguage(sol, language);
   };
 
   // Question numbering within section (e.g. Question No. 2)
@@ -1499,7 +1500,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                               options: currentQuestion?.options,
                               userAnswer: answers[currentIdx],
                               correctAnswer: correctOptionKey,
-                              solution: currentQuestion?.solution,
+                              solution: currentQuestion?.solution || (currentQuestion as any)?.explanation || (currentQuestion as any)?.sol || (currentQuestion as any)?.detailedSolution,
                               topic: (currentQuestion as any)?.tags?.topic || (currentQuestion as any)?.topic || chapter?.chapter_title || category || 'Practice',
                               sourceType: sType,
                               sourceLabel: sLabel,

@@ -334,7 +334,13 @@ export function convertToRecordedMistake(
     question: qText,
     options: opts,
     correctOptionIndex: correctIdx,
-    explanation: q.solution || (q as any).explanation || '',
+    explanation: q.solution ||
+      (q as any).explanation ||
+      (q as any).sol ||
+      (q as any).detailedSolution ||
+      (item as any).solution ||
+      (item as any).explanation ||
+      '',
     subject: normSub,
     topic,
     topicSlug: topic.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
@@ -465,9 +471,25 @@ export function recordQuizMistakes(
 export async function autoRecoverMistakesFromStorage(
   userUid?: string
 ): Promise<RecordedMistake[]> {
+  let globalRcaMap: Record<string, any> = {};
+  try {
+    const rawRca = safeStorage.getItem('cgl_rca_global_store');
+    if (rawRca) globalRcaMap = JSON.parse(rawRca);
+  } catch {}
+
   const mergedMap = new Map<string, RecordedMistake>();
   const addMistake = (m: RecordedMistake | null) => {
     if (!m || isSpeedLabQuestion(m)) return;
+
+    // Auto-rehydrate explanation from global RCA store if missing
+    if (!m.explanation || m.explanation.trim().length < 5) {
+      const qId = m.id;
+      const qText = (m.question || '').trim().toLowerCase();
+      const rcaMatch = (qId && globalRcaMap[qId]) || (qText && globalRcaMap[qText]);
+      if (rcaMatch && (rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol)) {
+        m.explanation = rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol;
+      }
+    }
 
     const k = getDedupeKey(m.question, m.id, m.options);
     if (!k) return;

@@ -18,6 +18,7 @@ import {
   Eye
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { SolutionViewer } from './SolutionViewer';
 import { 
   autoRecoverMistakesFromStorage, 
   RecordedMistake, 
@@ -487,6 +488,14 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   // Start Interactive Practice Drill (opens in full Practice Mode)
   const startPractice = (questionsToPractice: RecordedMistake[], topicTitle?: string) => {
     if (!questionsToPractice || questionsToPractice.length === 0) return;
+
+    // Pre-load global RCA store to rehydrate any missing solutions
+    let globalRcaMap: Record<string, any> = {};
+    try {
+      const rawStore = safeStorage.getItem('cgl_rca_global_store');
+      if (rawStore) globalRcaMap = JSON.parse(rawStore);
+    } catch {}
+
     if (onStartPractice) {
       const convertedQuestions: Question[] = questionsToPractice.map((m, idx) => {
         const optObj: { a: string; b: string; c: string; d: string } = {
@@ -498,13 +507,25 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         const correctLetters = ['a', 'b', 'c', 'd'];
         const answer = (correctLetters[m.correctOptionIndex] || 'a') as any;
 
+        // Robust solution resolution
+        let sol = m.explanation || (m as any).solution || (m as any).sol || (m as any).detailedSolution || '';
+        if (!sol || sol.trim().length < 5) {
+          const qId = m.id;
+          const qText = (m.question || '').trim().toLowerCase();
+          const rcaMatch = (qId && globalRcaMap[qId]) || (qText && globalRcaMap[qText]);
+          if (rcaMatch && (rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol)) {
+            sol = rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol;
+          }
+        }
+
         return {
           id: m.id || `mistake_${idx + 1}`,
           q_num: idx + 1,
           question: m.question,
           options: optObj,
           answer,
-          solution: m.explanation || '',
+          solution: sol,
+          explanation: sol,
           subject: normalizeSubject(m.subject),
           topic: topicTitle || normalizeTopicTitle(m.topic) || 'General Practice',
           tags: {
@@ -1062,9 +1083,13 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     {/* Explanation */}
                     {m.explanation && (
                       <div className="pl-8 pt-1">
-                        <div className="text-[11px] bg-slate-50 border border-slate-200/80 rounded-lg p-2.5 text-slate-600 leading-relaxed">
-                          <span className="font-bold text-slate-700 block mb-0.5">Explanation:</span>
-                          {m.explanation}
+                        <div className="text-[11px] bg-slate-50 border border-slate-200/80 rounded-lg p-2.5 text-slate-700 leading-relaxed">
+                          <span className="font-bold text-slate-800 block mb-1">Explanation:</span>
+                          <SolutionViewer
+                            solution={m.explanation}
+                            language="English"
+                            subject={normalizeSubject(m.subject)}
+                          />
                         </div>
                       </div>
                     )}
@@ -1165,9 +1190,13 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                           )}
                         </div>
                         {practiceQuestions[practiceIndex].explanation && (
-                          <p className="text-slate-600 text-xs leading-relaxed whitespace-pre-wrap">
-                            {practiceQuestions[practiceIndex].explanation}
-                          </p>
+                          <div className="mt-2 text-xs">
+                            <SolutionViewer
+                              solution={practiceQuestions[practiceIndex].explanation}
+                              language="English"
+                              subject={normalizeSubject(practiceQuestions[practiceIndex].subject)}
+                            />
+                          </div>
                         )}
                       </motion.div>
                     )}
