@@ -1204,10 +1204,10 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       <main className="w-full flex-1 flex min-h-0 overflow-hidden" data-purpose="exam-two-column-layout">
 
         {/* ── LEFT COLUMN: QUESTION & OPTIONS PANE (~74% width) ── */}
-        <section ref={scrollContainerRef as React.RefObject<HTMLElement>} className={`w-full ${isPaletteCollapsed ? 'lg:w-full' : 'lg:w-[74%]'} h-full p-4 pb-6 overflow-y-auto border-r border-gray-300 flex flex-col bg-white custom-scrollbar`} data-purpose="question-container">
+        <section ref={scrollContainerRef as React.RefObject<HTMLElement>} className={`w-full ${isPaletteCollapsed ? 'lg:w-full' : 'lg:w-[74%]'} h-full p-4 pb-20 overflow-y-auto border-r border-gray-300 bg-white custom-scrollbar`} data-purpose="question-container">
 
           {isPaused ? (
-            <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
+            <div className="min-h-64 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
               <div className="w-14 h-14 bg-[#2460b9] text-white rounded-full flex items-center justify-center mb-3 shadow">
                 <Pause className="w-7 h-7 fill-current" />
               </div>
