@@ -32,3 +32,34 @@ export const getCorrectOptionKey = (q?: Question | null): OptionKey | '' => {
   const rawKey = q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option;
   return (normalizeAnswerKey(rawKey) as OptionKey) || '';
 };
+
+/**
+ * Strips historical / imported mock attempt artifacts from a question object
+ * so that fresh quiz/drill sessions, review screens, and palettes are not corrupted
+ * by stale answers, wrong statuses, or prior mock attempt data.
+ */
+export const cleanQuestionForSession = (q: any, idx?: number): Question => {
+  if (!q) return q;
+  const {
+    userAnswer: _u,
+    chosenOption: _c,
+    selectedAnswer: _s,
+    status: _st,
+    errorType: _e,
+    isCorrect: _ic,
+    isSlow: _is,
+    is_correct: _isc,
+    timeSpent: _ts,
+    userTime: _ut,
+    ...rest
+  } = q;
+
+  return {
+    ...rest,
+    q_num: idx !== undefined ? idx + 1 : (q.q_num || 1),
+    options: q.options || {},
+    answer: q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option || 'a',
+    solution: q.solution || (q as any).explanation || (q as any).sol || (q as any).detailedSolution || ''
+  };
+};
+

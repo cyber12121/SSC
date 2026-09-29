@@ -10,7 +10,7 @@ import { Question, Chapter, QuizResult } from '../types';
 import { extractSolutionLanguage } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { getLanguageText } from '../utils/formatQuestionText';
-import { getNormalizedOptions, getCorrectOptionKey } from '../utils/questionHelpers';
+import { getNormalizedOptions, getCorrectOptionKey, cleanQuestionForSession } from '../utils/questionHelpers';
 import { FormattedText } from './FormattedText';
 import { SolutionViewer } from './SolutionViewer';
 import { QuizPaletteSidebar, MockSection } from './quiz/QuizPaletteSidebar';
@@ -478,14 +478,22 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       score,
       totalQuestions,
       totalTime,
-      questionDetails: questions.map((q, idx) => ({
-        q_num: q.q_num,
-        timeSpent: computedTimeSpent[idx] || 0,
-        isCorrect: isQuestionCorrect(idx, answersMap),
-        selectedAnswer: answersMap[idx] || '',
-        question: q,
-        marked: currentMarked.has(idx),
-      }))
+      questionDetails: questions.map((q, idx) => {
+        const isCorrect = isQuestionCorrect(idx, answersMap);
+        const selAns = answersMap[idx] || '';
+        const cleanQ = cleanQuestionForSession(q, idx);
+
+        return {
+          q_num: q.q_num || idx + 1,
+          timeSpent: computedTimeSpent[idx] || 0,
+          isCorrect,
+          selectedAnswer: selAns,
+          userAnswer: selAns,
+          chosenOption: selAns,
+          question: cleanQ,
+          marked: currentMarked.has(idx),
+        };
+      })
     };
   };
 

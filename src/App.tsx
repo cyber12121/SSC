@@ -22,6 +22,7 @@ import { syncMockReports } from './utils/syncMockReports';
 import { FormattedText } from './components/FormattedText';
 import { cleanSolutionText } from './utils/cleanSolution';
 import { normalizeAnswerKey } from './utils/mathSanitizer';
+import { cleanQuestionForSession } from './utils/questionHelpers';
 import { openAiWithScope } from './utils/aiScopeHelper';
 import { AiFocusedQuestion } from './types/aiScope';
 import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
@@ -1095,10 +1096,7 @@ export default function App() {
     } else {
       sourceQuestions = (currentData[subjectName] || []).flatMap(ch => ch.questions);
     }
-    const allQuestions = sourceQuestions.map((q, idx) => ({
-      ...q,
-      q_num: idx + 1
-    }));
+    const allQuestions = sourceQuestions.map((q, idx) => cleanQuestionForSession(q, idx));
     if (allQuestions.length === 0) {
       alert(`No questions available in ${subjectName} for ${mockTestTypeFilter === 'full' ? 'Full Tests' : mockTestTypeFilter === 'sectional' ? 'Sectional Tests' : 'this filter'}.`);
       return;
@@ -1141,10 +1139,7 @@ export default function App() {
         const raw = q.tags?.topic || (q as any).topic || detectTopic(q, chapter.subject || '');
         return normalizeTopicTitle(raw) === topicName;
       })
-      .map((q, idx) => ({
-        ...q,
-        q_num: idx + 1
-      }));
+      .map((q, idx) => cleanQuestionForSession(q, idx));
     if (filteredQuestions.length === 0) {
       alert(`No questions available in topic "${topicName}" yet.`);
       return;
@@ -1612,17 +1607,18 @@ export default function App() {
           q = { ...q, solution: sol };
         }
 
+        const cleanQ = cleanQuestionForSession(q, idx);
+        const effectiveAns = (qd.selectedAnswer !== undefined && qd.selectedAnswer !== null)
+          ? qd.selectedAnswer
+          : ((qd as any).userAnswer !== undefined && (qd as any).userAnswer !== null ? (qd as any).userAnswer : '');
+
         return {
           ...qd,
           q_num: qd.q_num || idx + 1,
-          question: q,
-          // Use selectedAnswer as the session-authoritative answer.
-          // Only fall back to userAnswer when selectedAnswer is truly absent (not just
-          // empty string). An empty selectedAnswer means unattempted in this session;
-          // using userAnswer here would pull in the original imported mock answer.
-          selectedAnswer: (qd.selectedAnswer !== undefined && qd.selectedAnswer !== null)
-            ? qd.selectedAnswer
-            : ((qd as any).userAnswer || ''),
+          question: cleanQ,
+          selectedAnswer: effectiveAns,
+          userAnswer: effectiveAns,
+          chosenOption: effectiveAns,
           isCorrect: Boolean(qd.isCorrect),
           timeSpent: qd.timeSpent || 0
         };
@@ -2316,7 +2312,7 @@ export default function App() {
       chapter_title: `${topicName}${label}${setLabel}`,
       subject: selectedSubject,
       subject_id: selectedSubject.toLowerCase().replace(/\s+/g, '_'),
-      questions: targetQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+      questions: targetQuestions.map((q, idx) => cleanQuestionForSession(q, idx)),
       section: 'mockErrors',
       is_test: true
     };

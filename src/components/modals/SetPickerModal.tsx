@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Play, Flame } from 'lucide-react';
 import { Question, Chapter } from '../../types';
+import { cleanQuestionForSession } from '../../utils/questionHelpers';
 
 export interface SetPickerModalData {
   title: string;
@@ -85,7 +86,7 @@ export const SetPickerModal: React.FC<SetPickerModalProps> = ({
                       subject: modalData.subject,
                       subject_id: modalData.subject.toLowerCase().replace(/\s+/g, '_'),
                       section: (modalData.section as any) || undefined,
-                      questions: targetQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
+                      questions: targetQuestions.map((q, qIdx) => cleanQuestionForSession(q, qIdx))
                     };
                     onStartQuiz(virtualChapter);
                   }}
@@ -124,7 +125,7 @@ export const SetPickerModal: React.FC<SetPickerModalProps> = ({
                     subject: modalData.subject,
                     subject_id: modalData.subject.toLowerCase().replace(/\s+/g, '_'),
                     section: (modalData.section as any) || undefined,
-                    questions: modalData.questions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
+                    questions: modalData.questions.map((q, qIdx) => cleanQuestionForSession(q, qIdx))
                   };
                   onStartQuiz(virtualChapter);
                 }}

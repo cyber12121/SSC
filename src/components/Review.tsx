@@ -33,7 +33,7 @@ import {
 import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
 import { extractSolutionLanguage } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
-import { getNormalizedOptions, getCorrectOptionKey } from '../utils/questionHelpers';
+import { getNormalizedOptions, getCorrectOptionKey, cleanQuestionForSession } from '../utils/questionHelpers';
 import { FormattedText } from './FormattedText';
 import { SolutionViewer } from './SolutionViewer';
 import { RcaClassifier } from './review/RcaClassifier';
@@ -353,9 +353,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           subject: q.subject || result.subject || 'General Awareness',
           topic: q.tags?.topic || (q as any).topic || 'General',
           questionText: (q.question || '').slice(0, 300),
-          userAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
-          selectedAnswer: it?.selectedAnswer || (it as any)?.userAnswer || '',
-          chosenOption: it?.selectedAnswer || (it as any)?.userAnswer || '',
+          userAnswer: (it?.selectedAnswer !== undefined && it?.selectedAnswer !== null) ? it.selectedAnswer : '',
+          selectedAnswer: (it?.selectedAnswer !== undefined && it?.selectedAnswer !== null) ? it.selectedAnswer : '',
+          chosenOption: (it?.selectedAnswer !== undefined && it?.selectedAnswer !== null) ? it.selectedAnswer : '',
           isCorrect: itIsCorrect,
           isSlow: itIsSlow,
           status: itStatus === 'slow' ? 'Correct (Slow)' : (itIsCorrect ? 'Correct' : (itStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
@@ -531,9 +531,9 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               subject: q.subject || result.subject || 'General Awareness',
               topic: q.tags?.topic || (q as any).topic || 'General',
               questionText: (q.question || '').slice(0, 300),
-              userAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
-              selectedAnswer: item.selectedAnswer || (item as any)?.userAnswer || '',
-              chosenOption: item.selectedAnswer || (item as any)?.userAnswer || '',
+              userAnswer: (item.selectedAnswer !== undefined && item.selectedAnswer !== null) ? item.selectedAnswer : '',
+              selectedAnswer: (item.selectedAnswer !== undefined && item.selectedAnswer !== null) ? item.selectedAnswer : '',
+              chosenOption: (item.selectedAnswer !== undefined && item.selectedAnswer !== null) ? item.selectedAnswer : '',
               isCorrect,
               isSlow,
               status: isSlow ? 'Correct (Slow)' : (isCorrect ? 'Correct' : (qStatus === 'unattempted' ? 'Unattempted' : 'Incorrect')),
@@ -1151,20 +1151,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     }
     const q = (item.question || {}) as any;
 
-    // Prioritise explicit status tags (from item, item.errorType, or underlying question object)
-    const qStatus = String((item as any).status || (item as any).errorType || q.status || q.errorType || '').toLowerCase();
-
     // The user's chosen answer for THIS attempt
-    // Use ONLY item-level answer fields (set by buildResults from the actual quiz session).
+    // Use ONLY session-level answer fields (set by buildResults from the actual quiz session).
     // Do NOT fall back to q.chosenOption / q.userAnswer — those are fields baked into
-    // imported question objects from mock platforms (Testbook/Oliveboard) and represent
-    // the original attempt, not the current session. Reading them caused unattempted
-    // questions to appear as wrong/correct in the review palette and analytics summary.
+    // imported question objects from mock platforms and represent the original imported attempt.
     const rawUser = String(
-      item.selectedAnswer ||
-      (item as any).userAnswer ||
-      (item as any).chosenOption ||
-      ''
+      (item.selectedAnswer !== undefined && item.selectedAnswer !== null)
+        ? item.selectedAnswer
+        : ((item as any).userAnswer !== undefined && (item as any).userAnswer !== null ? (item as any).userAnswer : '')
     ).trim().toLowerCase();
 
     // Target answer
@@ -1181,81 +1175,30 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     const normUser = isRawUnattempted ? '' : normalizeAnswerKey(rawUser);
     const normTarget = normalizeAnswerKey(rawTarget);
 
-    const isExplicitSlow =
-      qStatus.includes('slow') ||
-      qStatus.includes('speed') ||
-      (item as any).isSlow === true ||
-      q.isSlow === true ||
-      (item as any).errorType === 'speed_issue' ||
-      q.errorType === 'speed_issue';
-
-    const isExplicitUnattempted =
-      qStatus.includes('unattempt') ||
-      qStatus.includes('skip') ||
-      qStatus.includes('left') ||
-      qStatus === 'not attempted' ||
-      isRawUnattempted ||
-      (!rawUser && !qStatus && item.isCorrect === undefined);
-
-    const isExplicitWrongAnswer = Boolean(
-      normUser &&
-      normTarget &&
-      normUser !== normTarget
-    );
-
-    const isExplicitWrong =
-      isExplicitWrongAnswer ||
-      qStatus.includes('wrong') ||
-      qStatus.includes('incorrect') ||
-      qStatus.includes('fail') ||
-      item.isCorrect === false ||
-      q.isCorrect === false ||
-      (item as any).is_correct === false ||
-      q.is_correct === false;
-
-    // 1. INCORRECT / WRONG (Evaluated first: an incorrect question must NEVER be marked as slow or given marks)
-    if (isExplicitWrong) {
-      if (isRawUnattempted && !qStatus.includes('wrong') && !qStatus.includes('incorrect')) {
-        return 'unattempted';
-      }
-      return 'wrong';
-    }
-
-    // 2. Unattempted / Skipped
-    if (isExplicitUnattempted && item.isCorrect !== true && !qStatus.includes('correct') && qStatus !== 'right') {
+    // 1. Unattempted in THIS session: ALWAYS return 'unattempted'
+    if (isRawUnattempted) {
       return 'unattempted';
     }
 
-    // 3. Confirmed Correct
+    // 2. Confirmed Correct in THIS session
     const isConfirmedCorrect = Boolean(
       item.isCorrect === true ||
-      q.isCorrect === true ||
-      (item as any).is_correct === true ||
-      (qStatus.includes('correct') && !qStatus.includes('incorrect')) ||
-      qStatus === 'right' ||
       (normUser && normTarget && normUser === normTarget)
     );
 
-    // Dynamic slow detection
-    const uTime = Number(item.timeSpent || (item as any).userTime || q.userTime || 0);
-    const aTime = Number((item as any).avgTime || q.avgTime || (item as any).avgTimeSeconds || q.avgTimeSeconds || 0);
-    const isDynamicSlow = isConfirmedCorrect && aTime > 0 && uTime > aTime * 1.5 && uTime >= 60;
-
-    // 4. Slow / Speed Issue (ONLY if confirmed correct!)
     if (isConfirmedCorrect) {
+      const uTime = Number(item.timeSpent || (item as any).userTime || 0);
+      const aTime = Number((item as any).avgTime || q.avgTime || (item as any).avgTimeSeconds || q.avgTimeSeconds || 0);
+      const isDynamicSlow = aTime > 0 && uTime > aTime * 1.5 && uTime >= 60;
+      const isExplicitSlow = (item as any).isSlow === true || String((item as any).status || '').toLowerCase().includes('slow');
       if (isExplicitSlow || isDynamicSlow) {
         return 'slow';
       }
       return 'correct';
     }
 
-    // 5. Answer provided that didn't match
-    if (normUser) {
-      return 'wrong';
-    }
-
-    // 6. Fallback
-    return 'unattempted';
+    // 3. Attempted but wrong in THIS session
+    return 'wrong';
   };
 
   // Question stats calculation
@@ -2091,22 +2034,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                     const correctKey = getCorrectOptionKey(question);
                     const isCorrectAnswer = correctKey === normKey;
 
-                    const userAnsKey = current.selectedAnswer
-                      ? normalizeAnswerKey(current.selectedAnswer)
-                      : (current as any).userAnswer
-                      ? normalizeAnswerKey((current as any).userAnswer)
-                      : (question as any)?.chosenOption
-                      ? normalizeAnswerKey((question as any).chosenOption)
-                      : (question as any)?.userAnswer
-                      ? normalizeAnswerKey((question as any).userAnswer)
-                      : ((currentStatus === 'correct' || currentStatus === 'slow') && correctKey)
-                      ? correctKey
-                      : null;
+                    const currentSelectedRaw = (current.selectedAnswer !== undefined && current.selectedAnswer !== null)
+                      ? String(current.selectedAnswer).trim()
+                      : ((current as any).userAnswer !== undefined && (current as any).userAnswer !== null ? String((current as any).userAnswer).trim() : '');
+                    const isCurrentUnattempted = !currentSelectedRaw || ['unattempted', 'skipped', 'not attempted', 'left', 'n/a', 'none'].includes(currentSelectedRaw.toLowerCase());
+                    const userAnsKey = isCurrentUnattempted ? null : normalizeAnswerKey(currentSelectedRaw);
                     const reattemptKey = reattemptAnswers[currentIdx] ? normalizeAnswerKey(reattemptAnswers[currentIdx]) : null;
 
                     const userSelected = reattemptMode
                       ? reattemptKey === normKey
-                      : (currentStatus !== 'unattempted' && userAnsKey === normKey);
+                      : (!isCurrentUnattempted && currentStatus !== 'unattempted' && userAnsKey === normKey);
                     const isReattemptSelected = reattemptMode && reattemptAnswers[currentIdx] !== undefined;
 
                     // When reattempt is OFF: normal analysis view matching the screenshot!
