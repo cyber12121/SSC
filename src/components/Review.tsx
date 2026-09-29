@@ -1151,12 +1151,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     const qStatus = String((item as any).status || (item as any).errorType || q.status || q.errorType || '').toLowerCase();
 
     // The user's chosen answer for THIS attempt
+    // Use ONLY item-level answer fields (set by buildResults from the actual quiz session).
+    // Do NOT fall back to q.chosenOption / q.userAnswer — those are fields baked into
+    // imported question objects from mock platforms (Testbook/Oliveboard) and represent
+    // the original attempt, not the current session. Reading them caused unattempted
+    // questions to appear as wrong/correct in the review palette and analytics summary.
     const rawUser = String(
       item.selectedAnswer ||
       (item as any).userAnswer ||
       (item as any).chosenOption ||
-      q.chosenOption ||
-      q.userAnswer ||
       ''
     ).trim().toLowerCase();
 
