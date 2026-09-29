@@ -267,8 +267,9 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   // Always call the latest version of handleSubmitTest from the timer effect
   const handleSubmitTestRef = useRef<() => Promise<void>>(() => Promise.resolve());
-  // Ref to auto-scroll to solution when it opens
+  // Refs for scroll management
   const solutionRef = useRef<HTMLDivElement | null>(null);
+  const scrollContainerRef = useRef<HTMLElement | null>(null);
 
 
 
@@ -577,13 +578,20 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const currentNormalizedOptions = useMemo(() => getNormalizedOptions(currentQuestion), [currentQuestion]);
   const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
 
-  // Auto-scroll to solution when it opens
+  // Auto-scroll solution into view within the left scroll container
   useEffect(() => {
-    if (isSolutionOpen && solutionRef.current) {
-      setTimeout(() => {
-        solutionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 150);
-    }
+    if (!isSolutionOpen) return;
+    setTimeout(() => {
+      const sol = solutionRef.current;
+      const container = scrollContainerRef.current;
+      if (!sol || !container) return;
+      const containerRect = container.getBoundingClientRect();
+      const solRect = sol.getBoundingClientRect();
+      // If solution bottom is below the visible area of the container, scroll it in
+      if (solRect.bottom > containerRect.bottom - 8) {
+        container.scrollTop += solRect.bottom - containerRect.bottom + 24;
+      }
+    }, 160);
   }, [isSolutionOpen, currentIdx]);
 
   const getFormattedSolution = () => {
@@ -1190,7 +1198,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       <main className="w-full flex-1 flex min-h-0 overflow-hidden" data-purpose="exam-two-column-layout">
 
         {/* ── LEFT COLUMN: QUESTION & OPTIONS PANE (~74% width) ── */}
-        <section className={`w-full ${isPaletteCollapsed ? 'lg:w-full' : 'lg:w-[74%]'} h-full p-4 overflow-y-auto border-r border-gray-300 flex flex-col bg-white custom-scrollbar`} data-purpose="question-container">
+        <section ref={scrollContainerRef as React.RefObject<HTMLElement>} className={`w-full ${isPaletteCollapsed ? 'lg:w-full' : 'lg:w-[74%]'} h-full p-4 pb-6 overflow-y-auto border-r border-gray-300 flex flex-col bg-white custom-scrollbar`} data-purpose="question-container">
 
           {isPaused ? (
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50/70 rounded-xl border border-slate-200">
