@@ -174,22 +174,26 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             );
           }
 
-          // CBT Symbol & Color Coding for Mock Mode:
-          let btnColor = 'bg-[#001bff] text-white';
-          let ringClass = isCurrent ? 'ring-2 ring-offset-1 ring-blue-500 shadow-sm z-10' : 'shadow-2xs';
+          // Official CBT Symbol & Color Coding matching SSC/TCS iON specification:
+          let btnColor = 'bg-[#1b44c8] text-white'; // 12: Not yet attempted (Blue)
+          let ringClass = isCurrent ? 'ring-2 ring-offset-1 ring-blue-600 scale-105 shadow-sm z-10' : 'shadow-2xs';
           let showArrow = false;
 
           if (isAnswered && isMarked) {
-            btnColor = 'bg-[#ffff00] text-black font-bold border border-yellow-400';
+            // 15: Answered, but marked for review later (Yellow with black text & ▲ arrow)
+            btnColor = 'bg-[#ffff00] text-black font-extrabold border border-amber-300';
             showArrow = true;
           } else if (isMarked) {
-            btnColor = 'bg-[#cc0000] text-white';
+            // 14: Not yet answered, but marked for review later (Red with white text & ▲ arrow)
+            btnColor = 'bg-[#cc0000] text-white font-bold';
             showArrow = true;
           } else if (isAnswered) {
-            btnColor = 'bg-[#008722] text-white shadow-sm';
+            // 13: Answered the question (Green with white text)
+            btnColor = 'bg-[#008722] text-white font-bold shadow-sm';
             showArrow = false;
           } else {
-            btnColor = 'bg-[#001bff] text-white';
+            // 12: Not yet attempted the question (Blue with white text)
+            btnColor = 'bg-[#1b44c8] text-white font-bold';
             showArrow = false;
           }
 
@@ -197,13 +201,13 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             <div key={globalIdx} className="flex flex-col items-center justify-start relative">
               <button
                 onClick={() => handleQuestionClick(globalIdx)}
-                className={`w-8 h-8 rounded font-bold text-xs flex items-center justify-center cursor-pointer transition-colors ${btnColor} ${ringClass} hover:opacity-90`}
-                title={`Question ${localIdx + 1}`}
+                className={`w-8 h-8 rounded-[3px] font-bold text-xs flex items-center justify-center cursor-pointer transition-transform ${btnColor} ${ringClass} hover:opacity-95`}
+                title={`Question ${localIdx + 1}${isAnswered ? ' (Answered)' : ''}${isMarked ? ' (Marked for Review)' : ''}`}
               >
                 <span className="leading-none">{localIdx + 1}</span>
               </button>
               {showArrow && (
-                <span className="text-[8px] text-black font-black leading-none mt-0.5 select-none">
+                <span className="text-[9px] text-black font-black leading-none mt-0.5 select-none" title="Marked for Review">
                   ▲
                 </span>
               )}

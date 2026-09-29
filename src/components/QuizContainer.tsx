@@ -1054,17 +1054,25 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                   >
                     Previous
                   </button>
-                  <button
-                    onClick={handleToggleMarkForReview}
-                    className={`${
-                      markedForReview.has(currentIdx)
-                        ? 'bg-[#7e57c2] hover:bg-[#673ab7]'
-                        : 'bg-[#2563eb] hover:bg-blue-700'
-                    } text-white font-medium text-xs px-3.5 py-1 rounded shadow-sm cursor-pointer transition-colors`}
-                    type="button"
-                  >
-                    Mark for Review
-                  </button>
+                  {markedForReview.has(currentIdx) ? (
+                    <button
+                      onClick={handleToggleMarkForReview}
+                      className="bg-gradient-to-b from-[#fdfbf6] via-[#ece5ce] to-[#ded5be] hover:brightness-95 active:brightness-90 border border-[#a89b7d] text-gray-900 font-bold text-xs px-3.5 py-1 rounded shadow-2xs cursor-pointer transition-all"
+                      type="button"
+                      title="Unmark question for review"
+                    >
+                      Unmark Review
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleToggleMarkForReview}
+                      className="bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-xs px-3.5 py-1 rounded shadow-sm cursor-pointer transition-colors"
+                      type="button"
+                      title="Mark question for review"
+                    >
+                      Mark for Review
+                    </button>
+                  )}
                   <button
                     onClick={handleSaveAndNext}
                     className="bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-xs px-4 py-1 rounded shadow-sm cursor-pointer transition-colors"
@@ -1278,7 +1286,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                         const isLast = optIdx === currentNormalizedOptions.length - 1;
 
                         return (
-                          <label
+                          <div
                             key={k}
                             onClick={() => handleAnswer(k)}
                             className={`flex items-center space-x-6 py-3 px-2 ${!isLast ? 'border-b border-gray-200' : ''} cursor-pointer hover:bg-slate-50 transition-colors ${
@@ -1286,17 +1294,17 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                             }`}
                           >
                             <input
-                              className="w-4 h-4 text-blue-600 focus:ring-0 cursor-pointer"
+                              className="w-4 h-4 text-blue-600 focus:ring-0 cursor-pointer pointer-events-none"
                               name="cbt_option"
                               type="radio"
                               value={k}
                               checked={isSelected}
-                              onChange={() => handleAnswer(k)}
+                              readOnly
                             />
                             <span className={`text-gray-800 text-[13.5px] select-text flex-1 ${fontSizeClass}`}>
                               <FormattedText text={rawOpt} language={language} />
                             </span>
-                          </label>
+                          </div>
                         );
                       })}
                     </div>
@@ -1592,18 +1600,24 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
               <span>Prev</span>
             </button>
 
-            <button
-              onClick={handleToggleMarkForReview}
-              className={`px-3 py-2.5 rounded-lg font-bold text-xs transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0 ${
-                markedForReview.has(currentIdx)
-                  ? 'bg-[#7e57c2] text-white hover:bg-[#673ab7]'
-                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-              }`}
-              title={markedForReview.has(currentIdx) ? "Marked for Review" : "Mark for Review"}
-            >
-              <Bookmark className="w-3.5 h-3.5" />
-              <span>{markedForReview.has(currentIdx) ? 'Marked' : 'Mark'}</span>
-            </button>
+            {markedForReview.has(currentIdx) ? (
+              <button
+                onClick={handleToggleMarkForReview}
+                className="px-3 py-2.5 bg-gradient-to-b from-[#fdfbf6] via-[#ece5ce] to-[#ded5be] border border-[#a89b7d] text-gray-900 rounded-lg font-bold text-xs shadow-2xs cursor-pointer flex items-center gap-1 shrink-0"
+                title="Unmark question for review"
+              >
+                <span>Unmark</span>
+              </button>
+            ) : (
+              <button
+                onClick={handleToggleMarkForReview}
+                className="px-3 py-2.5 rounded-lg font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors shadow-2xs cursor-pointer flex items-center gap-1 shrink-0"
+                title="Mark question for review"
+              >
+                <Bookmark className="w-3.5 h-3.5" />
+                <span>Mark</span>
+              </button>
+            )}
 
             <button
               onClick={() => setIsMobilePaletteOpen(true)}
@@ -1897,12 +1911,12 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         </div>
       )}
 
-      {/* ── SYMBOLS LEGEND MODAL ── */}
+      {/* ── SYMBOLS LEGEND MODAL (Matching TCS iON / SSC CBT Reference Table) ── */}
       {showSymbolsModal && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in duration-150">
-          <div className="bg-white rounded-lg max-w-md w-full shadow-2xl border border-gray-300 overflow-hidden">
-            <div className="bg-[#0088cc] text-white px-4 py-3 flex items-center justify-between">
-              <h3 className="font-bold text-sm sm:text-base">Question Palette Symbols Legend</h3>
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 z-50 animate-in fade-in duration-150">
+          <div className="bg-white rounded-lg max-w-2xl w-full shadow-2xl border border-gray-300 overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="bg-[#2563eb] text-white px-4 py-2.5 flex items-center justify-between">
+              <h3 className="font-bold text-sm sm:text-base">Symbols &amp; Legend</h3>
               <button
                 onClick={() => setShowSymbolsModal(false)}
                 className="text-white/80 hover:text-white cursor-pointer"
@@ -1910,28 +1924,145 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="p-5 space-y-3 text-xs text-gray-700">
-              <div className="flex items-center gap-3">
-                <span className="w-7 h-7 bg-[#2e7d32] text-white font-bold rounded flex items-center justify-center shrink-0">1</span>
-                <span><b>Answered</b>: You have answered the question.</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-7 h-7 bg-[#c62828] text-white font-bold rounded flex items-center justify-center shrink-0">2</span>
-                <span><b>Not Answered</b>: You have not answered the question.</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-7 h-7 bg-[#6a1b9a] text-white font-bold rounded flex items-center justify-center shrink-0">3</span>
-                <span><b>Marked for Review</b>: You have marked the question for review without answering.</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-7 h-7 bg-[#d32f2f] text-white font-bold rounded flex items-center justify-center shrink-0">4</span>
-                <span><b>Not Visited</b>: You have not visited the question yet.</span>
-              </div>
+            <div className="p-3 sm:p-4 overflow-y-auto custom-scrollbar">
+              <table className="w-full text-xs border border-gray-300 border-collapse">
+                <thead>
+                  <tr className="bg-[#e7dfc8] border-b border-gray-400 text-gray-900">
+                    <th className="py-2 px-3 text-center font-bold w-36 border-r border-gray-300">Symbol</th>
+                    <th className="py-2 px-3 text-left font-bold">Description</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  {/* Row 1: Option Not chosen */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <div className="w-4 h-4 rounded-full border-2 border-slate-400 mx-auto" />
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      Option Not chosen
+                    </td>
+                  </tr>
+
+                  {/* Row 2: Option chosen as correct */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <div className="w-4 h-4 rounded-full border-2 border-blue-600 flex items-center justify-center mx-auto bg-white">
+                        <div className="w-2 h-2 rounded-full bg-blue-600" />
+                      </div>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      Option chosen as correct (By clicking on it again you can delete your option and choose another option if desired.)
+                    </td>
+                  </tr>
+
+                  {/* Row 3: Blue box */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <div className="w-7 h-7 rounded-[3px] bg-[#1b44c8] text-white font-bold text-xs flex items-center justify-center mx-auto shadow-2xs">
+                        12
+                      </div>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      Question number shown in blue color indicates that you have not yet attempted the question.
+                    </td>
+                  </tr>
+
+                  {/* Row 4: Green box */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <div className="w-7 h-7 rounded-[3px] bg-[#008722] text-white font-bold text-xs flex items-center justify-center mx-auto shadow-2xs">
+                        13
+                      </div>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      Question number shown in green color indicates that you have answered the question.
+                    </td>
+                  </tr>
+
+                  {/* Row 5: Red box with arrow */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <div className="flex flex-col items-center justify-center mx-auto">
+                        <div className="w-7 h-7 rounded-[3px] bg-[#cc0000] text-white font-bold text-xs flex items-center justify-center shadow-2xs">
+                          14
+                        </div>
+                        <span className="text-[9px] text-black font-black leading-none mt-0.5 select-none">▲</span>
+                      </div>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      You have not yet answered the question, but marked it for coming back for review later, if time permits.
+                    </td>
+                  </tr>
+
+                  {/* Row 6: Yellow box with arrow */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <div className="flex flex-col items-center justify-center mx-auto">
+                        <div className="w-7 h-7 rounded-[3px] bg-[#ffff00] text-black font-extrabold text-xs flex items-center justify-center shadow-2xs border border-amber-300">
+                          15
+                        </div>
+                        <span className="text-[9px] text-black font-black leading-none mt-0.5 select-none">▲</span>
+                      </div>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      You have answered the question, but marked it for review later, if time permits.
+                    </td>
+                  </tr>
+
+                  {/* Row 7: Save & Next */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <span className="inline-block bg-[#2563eb] text-white font-bold text-[11px] px-3 py-1 rounded shadow-2xs whitespace-nowrap">
+                        Save &amp; Next
+                      </span>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      Clicking on this will take you to the next question.
+                    </td>
+                  </tr>
+
+                  {/* Row 8: Previous */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <span className="inline-block bg-[#2563eb] text-white font-bold text-[11px] px-3.5 py-1 rounded shadow-2xs whitespace-nowrap">
+                        Previous
+                      </span>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      Clicking on this will take you to the previous question.
+                    </td>
+                  </tr>
+
+                  {/* Row 9: Mark for Review */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <span className="inline-block bg-[#2563eb] text-white font-bold text-[11px] px-3 py-1 rounded shadow-2xs whitespace-nowrap">
+                        Mark for Review
+                      </span>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      By clicking on this button, you can mark the question for review later. Please note that if you answer the question and mark for review, the question will be treated as answered and evaluated even if you do not review it.
+                    </td>
+                  </tr>
+
+                  {/* Row 10: Unmark Review */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-2 px-3 text-center border-r border-gray-200">
+                      <span className="inline-block bg-gradient-to-b from-[#fdfbf6] via-[#ece5ce] to-[#ded5be] border border-[#a89b7d] text-gray-900 font-bold text-[11px] px-3 py-1 rounded shadow-2xs whitespace-nowrap">
+                        Unmark Review
+                      </span>
+                    </td>
+                    <td className="py-2 px-3 text-blue-900 font-semibold">
+                      By clicking on this button, you can unmark the question for review
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div className="p-3 bg-gray-50 border-t border-gray-200 flex justify-end">
               <button
                 onClick={() => setShowSymbolsModal(false)}
-                className="px-4 py-1.5 bg-[#0088cc] text-white text-xs font-bold rounded hover:bg-[#0077b3] cursor-pointer"
+                className="px-4 py-1.5 bg-[#2563eb] text-white text-xs font-bold rounded hover:bg-blue-700 cursor-pointer shadow-sm"
               >
                 Close
               </button>
