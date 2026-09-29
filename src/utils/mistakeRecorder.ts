@@ -13,14 +13,40 @@ export interface RecordedMistake {
   subject: 'english' | 'mathematics' | 'reasoning' | 'general_awareness';
   topic: string;
   topicSlug: string;
-  source: 'telegram_quiz' | 'website_quiz' | 'telegram_drill' | 'website_mock';
+  source: 'chapter_bank' | 'mock_errors' | 'website_quiz' | 'website_mock' | 'telegram_quiz' | 'telegram_drill';
   timestamp: number;
   wrongCount: number;
   mastered: boolean;
+  errorType?: 'wrong' | 'unattempted';
+  selectedAnswer?: string;
+  userAnswer?: string;
 }
 
 export const MISTAKE_NOTEBOOK_KEY = 'cgl_user_mistake_notebook';
 export const SYNCED_STORAGE_KEY = 'cgl_synced_telegram_mistakes';
+
+/**
+ * Checks whether a quiz result is strictly Chapter Bank or Mock Errors analytics.
+ */
+export function isAllowedCategory(result: {
+  category?: string;
+  chapter_title?: string;
+  id?: string;
+  mode?: string;
+}): boolean {
+  if (!result) return false;
+  const cat = (result.category || '').toLowerCase();
+  const title = (result.chapter_title || '').toLowerCase();
+  const id = (result.id || '').toLowerCase();
+  if (cat === 'chapterbank' || cat === 'mockerrors') return true;
+  if (title.includes('mock') || title.includes('testbook') || title.includes('oliveboard') || title.includes('sectional') || title.includes('live test') || title.includes('tier')) {
+    return true;
+  }
+  if (id.includes('mock') || id.startsWith('tb_') || id.startsWith('ob_')) {
+    return true;
+  }
+  return false;
+}
 
 // Canonical subject normalization
 export function normalizeSubject(sub?: string): 'english' | 'mathematics' | 'reasoning' | 'general_awareness' {
@@ -274,13 +300,8 @@ export function convertToRecordedMistake(
     section?: string;
   }
 ): RecordedMistake | null {
-  // Do NOT record mistakes from full mocks or sectional mocks
-  if (isFullOrSectionalMock(fullResult)) return null;
-
-  // Only allow chapter practice and mock error remediation
-  if (fullResult.category && fullResult.category !== 'chapterBank' && fullResult.category !== 'mockErrors') {
-    return null;
-  }
+  // Only record Chapter Bank and Mock Errors analytics
+  if (!isAllowedCategory(fullResult)) return null;
 
   const q = item.question;
   if (!q || !q.question) return null;
@@ -292,11 +313,20 @@ export function convertToRecordedMistake(
     return null;
   }
 
+  // Detect whether question was wrong vs skipped/unattempted
+  const userAns = item.selectedAnswer || (item as any).userAnswer || '';
+  const isSkipped = !userAns || userAns === '' || item.status === 'unattempted' || (item as any).errorType === 'unattempted';
+  const errorType: 'wrong' | 'unattempted' = isSkipped ? 'unattempted' : 'wrong';
+
   const opts = extractOptionsArray(q.options);
   const correctIdx = extractCorrectOptionIndex(q.answer, opts.length || 4);
   const normSub = normalizeSubject(q.subject || fullResult.subject);
   const topic = q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice';
-  const qId = q.id || `mistake_${fullResult.id || Date.now()}_${item.q_num}`;
+  const qId = q.id || `mistake_${fullResult.id || 'q'}_${item.q_num}`;
+
+  const isMock = (fullResult.category === 'mockErrors') ||
+    Boolean(fullResult.chapter_title && fullResult.chapter_title.toLowerCase().includes('mock')) ||
+    Boolean(fullResult.id && (fullResult.id.includes('mock') || fullResult.id.startsWith('tb_') || fullResult.id.startsWith('ob_')));
 
   return {
     id: qId,
@@ -308,34 +338,31 @@ export function convertToRecordedMistake(
     subject: normSub,
     topic,
     topicSlug: topic.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-    source: 'website_quiz',
+    source: isMock ? 'mock_errors' : 'chapter_bank',
     timestamp: Date.now(),
     wrongCount: 1,
-    mastered: false
+    mastered: false,
+    errorType,
+    selectedAnswer: userAns,
+    userAnswer: userAns
   };
 }
 
 /**
  * Records mistakes from a submitted quiz into:
  * 1. cgl_user_mistake_notebook (localStorage via safeStorage)
- * 2. cgl_synced_telegram_mistakes (permanent sync cache)
- * 3. Firebase Firestore user_mistakes_{uid} (if authenticated)
+ * 2. Firebase Firestore user_mistakes_{uid} (if authenticated)
  *
- * NOTE: Strictly records ONLY from Chapter Practice ('chapterBank') and
- * Mock Error drills ('mockErrors'). Excludes Full Mocks, Sectional Mocks,
- * and test review screens.
+ * NOTE: Strictly records BOTH wrong and skipped/unattempted questions from:
+ * - Chapter Bank ('chapterBank')
+ * - Mock Errors ('mockErrors' / mock analytics)
  */
 export function recordQuizMistakes(
   fullResult: QuizResult,
   userUid?: string
 ): RecordedMistake[] {
-  // 1. Exclude full mocks and sectional mocks
-  if (isFullOrSectionalMock(fullResult)) {
-    return [];
-  }
-
-  // 2. Only record for chapterBank and mockErrors
-  if (fullResult.category !== 'chapterBank' && fullResult.category !== 'mockErrors') {
+  // 1. Only record for chapterBank and mockErrors analytics
+  if (!isAllowedCategory(fullResult)) {
     return [];
   }
 
@@ -343,6 +370,7 @@ export function recordQuizMistakes(
     return [];
   }
 
+  // 2. Filter for all non-correct questions (captures BOTH wrong and skipped/unattempted)
   const errorItems = fullResult.questionDetails.filter(d => !d.isCorrect && d.question);
   if (errorItems.length === 0) return [];
 
@@ -372,7 +400,7 @@ export function recordQuizMistakes(
 
     const mergedMap = new Map<string, RecordedMistake>();
     for (const m of existingList) {
-      if (isFullOrSectionalMockItem(m)) continue;
+      if (isSpeedLabQuestion(m)) continue;
       const k = getDedupeKey(m.question, m.id, m.options);
       if (k) mergedMap.set(k, m);
     }
@@ -384,6 +412,7 @@ export function recordQuizMistakes(
         const ex = mergedMap.get(k)!;
         ex.wrongCount = (ex.wrongCount || 1) + 1;
         ex.timestamp = Date.now();
+        if (m.errorType) ex.errorType = m.errorType;
         if ((!ex.explanation || ex.explanation.length < 10) && m.explanation) {
           ex.explanation = m.explanation;
         }
@@ -400,30 +429,6 @@ export function recordQuizMistakes(
     updatedNotebook.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
     safeStorage.setItem(MISTAKE_NOTEBOOK_KEY, JSON.stringify(updatedNotebook));
-
-    // Also update synced cache
-    try {
-      const syncedRaw = safeStorage.getItem(SYNCED_STORAGE_KEY);
-      let syncedList: RecordedMistake[] = [];
-      if (syncedRaw) {
-        try {
-          const parsed = JSON.parse(syncedRaw);
-          if (Array.isArray(parsed)) syncedList = parsed;
-        } catch {}
-      }
-      const syncedMap = new Map<string, RecordedMistake>();
-      for (const m of syncedList) {
-        if (isFullOrSectionalMockItem(m)) continue;
-        const k = getDedupeKey(m.question, m.id, m.options);
-        if (k) syncedMap.set(k, m);
-      }
-      for (const m of newMistakes) {
-        const k = getDedupeKey(m.question, m.id, m.options);
-        if (k && !syncedMap.has(k)) syncedMap.set(k, m);
-      }
-      safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(Array.from(syncedMap.values())));
-    } catch {}
-
   } catch (err) {
     console.warn('[mistakeRecorder] Error updating local notebook:', err);
   }
@@ -454,7 +459,7 @@ export function recordQuizMistakes(
 
 /**
  * Scans local and remote sources to auto-recover mistakes.
- * STRICTLY excludes Full Mock, Sectional Mock, and Review items.
+ * Strictly records Chapter Bank and Mock Errors (wrong + skipped).
  * Removes duplicates and ensures distinct questions are never lost.
  */
 export async function autoRecoverMistakesFromStorage(
@@ -463,7 +468,6 @@ export async function autoRecoverMistakesFromStorage(
   const mergedMap = new Map<string, RecordedMistake>();
   const addMistake = (m: RecordedMistake | null) => {
     if (!m || isSpeedLabQuestion(m)) return;
-    if (isFullOrSectionalMockItem(m)) return; // Exclude mock/sectional items
 
     const k = getDedupeKey(m.question, m.id, m.options);
     if (!k) return;
@@ -471,6 +475,7 @@ export async function autoRecoverMistakesFromStorage(
       const ex = mergedMap.get(k)!;
       ex.wrongCount = Math.max(ex.wrongCount || 1, m.wrongCount || 1);
       ex.timestamp = Math.max(ex.timestamp || 0, m.timestamp || 0);
+      if (m.errorType) ex.errorType = m.errorType;
       if ((!ex.explanation || ex.explanation.length < 10) && m.explanation) {
         ex.explanation = m.explanation;
       }
@@ -492,16 +497,7 @@ export async function autoRecoverMistakesFromStorage(
     }
   } catch {}
 
-  // 2. Synced telegram mistakes
-  try {
-    const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
-    if (raw) {
-      const arr = JSON.parse(raw);
-      if (Array.isArray(arr)) arr.forEach(addMistake);
-    }
-  } catch {}
-
-  // 3. Scan local quiz results caches (ONLY chapterBank and mockErrors drills, NEVER full/sectional mocks)
+  // 2. Scan local quiz results caches (Chapter Bank and Mock Errors analytics)
   const cacheKeys = [
     'guest_results',
     'cgl_user_results_cache_guest',
@@ -516,9 +512,7 @@ export async function autoRecoverMistakesFromStorage(
         const results = JSON.parse(raw);
         if (Array.isArray(results)) {
           for (const res of results) {
-            // Strictly exclude full and sectional mocks
-            if (isFullOrSectionalMock(res)) continue;
-            if (res.category !== 'chapterBank' && res.category !== 'mockErrors') continue;
+            if (!isAllowedCategory(res)) continue;
 
             if (res && Array.isArray(res.questionDetails)) {
               for (const d of res.questionDetails) {
@@ -534,7 +528,7 @@ export async function autoRecoverMistakesFromStorage(
     } catch {}
   }
 
-  // 4. Firestore user_mistakes collection
+  // 3. Firestore user_mistakes collection
   const effectiveUid = userUid || (auth.currentUser ? auth.currentUser.uid : undefined);
   if (effectiveUid) {
     try {
@@ -548,19 +542,19 @@ export async function autoRecoverMistakesFromStorage(
     } catch {}
   }
 
-  // 5. Build final list, excluding speed lab questions and mock tests
+  // 4. Build final list, excluding speed lab questions
   const finalList = Array.from(mergedMap.values()).filter(item => {
     if (isSpeedLabQuestion(item)) return false;
-    if (isFullOrSectionalMockItem(item)) return false;
     return true;
   });
 
   finalList.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
-  // Persist cleaned list back to storage so corrupt mock/sectional entries are purged
+  // Persist cleaned list back to storage
   try {
     safeStorage.setItem(MISTAKE_NOTEBOOK_KEY, JSON.stringify(finalList));
-    safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(finalList));
+    // Clean up old Telegram cache key so it doesn't linger
+    safeStorage.removeItem('cgl_synced_telegram_mistakes');
   } catch {}
 
   return finalList;

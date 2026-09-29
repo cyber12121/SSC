@@ -1382,10 +1382,9 @@ export default function App() {
     // Automatically record wrong & unattempted answers to local Mistake Notebook & Firestore
     // STRICTLY for Chapter Bank quizzes and Mock Error remediation drills (NEVER full/sectional mocks)
     try {
-      const isMockOrSectional = isFullOrSectionalMock(savedResult);
-      const isEligibleCategory = savedResult.category === 'chapterBank' || savedResult.category === 'mockErrors';
+      const isEligibleCategory = savedResult.category === 'chapterBank' || savedResult.category === 'mockErrors' || isFullOrSectionalMock(savedResult);
 
-      if (isEligibleCategory && !isMockOrSectional) {
+      if (isEligibleCategory) {
         const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
         if (errorList.length > 0) {
           const uid = user ? user.uid : (auth.currentUser ? auth.currentUser.uid : undefined);

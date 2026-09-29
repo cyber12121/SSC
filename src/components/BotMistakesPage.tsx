@@ -11,8 +11,6 @@ import {
   RefreshCw,
   CheckCircle2,
   AlertCircle,
-  Smartphone,
-  Laptop,
   Play,
   RotateCcw,
   X,
@@ -24,7 +22,6 @@ import {
   autoRecoverMistakesFromStorage, 
   RecordedMistake, 
   MISTAKE_NOTEBOOK_KEY, 
-  SYNCED_STORAGE_KEY,
   normalizeSubject,
   getDedupeKey,
   isSpeedLabQuestion
@@ -34,30 +31,6 @@ export type { RecordedMistake };
 interface BotMistakesPageProps {
   onBack: () => void;
   onStartPractice?: (topic: string, questions: Question[]) => void;
-}
-
-// Safe base64 / base64url UTF-8 decoder
-function decodeSyncPayload(str: string): any {
-  try {
-    let cleanStr = str;
-    try {
-      cleanStr = decodeURIComponent(str);
-    } catch {}
-    let base64 = cleanStr.replace(/-/g, '+').replace(/_/g, '/');
-    while (base64.length % 4) {
-      base64 += '=';
-    }
-    const binary = atob(base64);
-    const bytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-      bytes[i] = binary.charCodeAt(i);
-    }
-    const decodedText = new TextDecoder().decode(bytes);
-    return JSON.parse(decodedText);
-  } catch (e) {
-    console.error('[BotMistakesPage] Failed to decode sync payload:', e);
-    return null;
-  }
 }
 
 
@@ -202,7 +175,8 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
   // Filter & Hierarchy States
   const [selectedSubject, setSelectedSubject] = useState<'all' | 'english' | 'mathematics' | 'reasoning' | 'general_awareness'>('english');
-  const [sourceFilter, setSourceFilter] = useState<'all' | 'telegram' | 'website'>('all');
+  const [sourceFilter, setSourceFilter] = useState<'all' | 'mock_errors' | 'chapter_bank'>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'wrong' | 'unattempted'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -262,136 +236,8 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   }, []);
 
   useEffect(() => {
-    // Check URL parameters for direct automatic sync from Telegram
-    if (typeof window !== 'undefined') {
-      try {
-        const params = new URLSearchParams(window.location.search);
-        const syncQParam = params.get('syncQ');
-        const syncBatchParam = params.get('syncBatch');
-
-        if (syncQParam || syncBatchParam) {
-          const importedQuestions: any[] = [];
-          if (syncQParam) {
-            const decoded = decodeSyncPayload(syncQParam);
-            if (decoded) importedQuestions.push(decoded);
-          }
-          if (syncBatchParam) {
-            const decoded = decodeSyncPayload(syncBatchParam);
-            if (Array.isArray(decoded)) {
-              importedQuestions.push(...decoded);
-            } else if (decoded) {
-              importedQuestions.push(decoded);
-            }
-          }
-
-          if (importedQuestions.length > 0) {
-            let existingSynced: RecordedMistake[] = [];
-            try {
-              const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
-              if (raw) existingSynced = JSON.parse(raw);
-            } catch {}
-
-            const existingMap = new Map<string, RecordedMistake>();
-            for (const item of existingSynced) {
-              const key = getDedupeKey(item.question, item.id);
-              if (key) existingMap.set(key, item);
-            }
-
-            let newlyAdded = 0;
-            for (const rawQ of importedQuestions) {
-              let qId = '';
-              let qText = '';
-              let opts: string[] = [];
-              let ans = 0;
-              let exp = '';
-              let sub = 'general_awareness';
-              let top = 'Telegram Practice';
-
-              if (Array.isArray(rawQ)) {
-                // Compact tuple: [id, q, opts, ans, exp, sub, top]
-                [qId, qText, opts, ans, exp, sub, top] = rawQ;
-              } else if (rawQ && typeof rawQ === 'object') {
-                qId = rawQ.id || '';
-                qText = rawQ.q || rawQ.question || '';
-                if (Array.isArray(rawQ.opts)) opts = rawQ.opts;
-                else if (Array.isArray(rawQ.options)) opts = rawQ.options;
-                else if (rawQ.opts && typeof rawQ.opts === 'object') opts = Object.values(rawQ.opts);
-                ans = typeof rawQ.ans === 'number' ? rawQ.ans : (typeof rawQ.correctOptionIndex === 'number' ? rawQ.correctOptionIndex : 0);
-                exp = rawQ.exp || rawQ.explanation || rawQ.fullSolution || '';
-                sub = rawQ.sub || rawQ.subject || 'general_awareness';
-                top = rawQ.top || rawQ.topic || 'Telegram Practice';
-              }
-
-              if (!qText) continue;
-              if (isSpeedLabQuestion({ id: qId, topic: top, question: qText })) continue;
-              opts = (opts || []).map(String);
-              const key = getDedupeKey(qText, qId);
-              if (!key) continue;
-
-              const finalQId = qId || `tg_${key.slice(0, 24)}`;
-
-              if (existingMap.has(key)) {
-                const ex = existingMap.get(key)!;
-                ex.wrongCount = (ex.wrongCount || 1) + 1;
-                ex.timestamp = Date.now();
-                if ((!ex.explanation || ex.explanation.length < 10) && exp) {
-                  ex.explanation = exp;
-                }
-                if ((!ex.options || ex.options.length === 0) && opts.length > 0) {
-                  ex.options = opts;
-                }
-              } else {
-                const normSub = normalizeSubject(sub);
-                const newMistake: RecordedMistake = {
-                  id: finalQId,
-                  userId: 0,
-                  question: qText,
-                  options: opts,
-                  correctOptionIndex: typeof ans === 'number' ? ans : 0,
-                  explanation: exp,
-                  subject: normSub,
-                  topic: top,
-                  topicSlug: (top || 'telegram').toLowerCase().replace(/\s+/g, '-'),
-                  source: 'telegram_quiz',
-                  timestamp: Date.now(),
-                  wrongCount: 1,
-                  mastered: false,
-                };
-                existingMap.set(key, newMistake);
-                newlyAdded++;
-              }
-            }
-
-            const updatedList = Array.from(existingMap.values());
-            safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(updatedList));
-
-            // Auto-backup to Firestore if authenticated
-            if (auth.currentUser) {
-              try {
-                for (const m of updatedList) {
-                  const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}`;
-                  setDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId), m, { merge: true }).catch(() => {});
-                }
-              } catch {}
-            }
-
-            // Clean query params from address bar silently without reloading
-            params.delete('syncQ');
-            params.delete('syncBatch');
-            const cleanQuery = params.toString() ? `?${params.toString()}` : window.location.pathname;
-            window.history.replaceState({}, document.title, cleanQuery);
-
-            showToast(`✨ Automatically synced ${newlyAdded > 0 ? newlyAdded : importedQuestions.length} mistake(s) from Telegram!`);
-          }
-        }
-      } catch (e) {
-        console.error('[BotMistakesPage] URL sync parsing error:', e);
-      }
-    }
-
     fetchMistakes();
   }, []);
-
   const handleDelete = async (m: RecordedMistake) => {
     if (!window.confirm('Delete this question from your Mistake Notebook? It will only be removed from your mistakes.')) {
       return;
@@ -401,20 +247,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     try {
       const targetKey = getDedupeKey(m.question, m.id, m.options);
 
-      // 1. Remove from local synced telegram mistakes
-      try {
-        const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
-        if (raw) {
-          const list: RecordedMistake[] = JSON.parse(raw);
-          const filtered = list.filter((item) => {
-            const itemKey = getDedupeKey(item.question, item.id, item.options);
-            return item.id !== m.id && itemKey !== targetKey;
-          });
-          safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(filtered));
-        }
-      } catch {}
-
-      // 2. Remove from dedicated website mistake notebook
+      // 1. Remove from dedicated mistake notebook
       try {
         const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
         if (nbRaw) {
@@ -430,7 +263,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       // NOTE: We STRICTLY DO NOT modify cgl_deleted_question_ids or call onDeleteQuestion!
       // This guarantees the question remains available in Chapter Bank and tests.
 
-      // 3. Delete from Firebase Firestore user_mistakes permanently
+      // 2. Delete from Firebase Firestore user_mistakes permanently
       if (auth.currentUser) {
         try {
           const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : '';
@@ -489,10 +322,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     }
     setLoading(true);
     try {
-      // 1. Wipe local synced telegram mistakes
-      safeStorage.removeItem(SYNCED_STORAGE_KEY);
-
-      // 2. Wipe dedicated mistake notebook
+      // 1. Wipe dedicated mistake notebook
       safeStorage.removeItem('cgl_user_mistake_notebook');
 
       // NOTE: DO NOT remove cgl_rca_global_store! RCA mock store belongs to mock analysis.
@@ -528,11 +358,19 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     }
   };
 
-  // Filter by search and source
+  // Filter by search, source, and error status (wrong vs unattempted)
   const searchFilteredMistakes = useMemo(() => {
     return mistakes.filter((m) => {
-      if (sourceFilter === 'telegram' && !m.source.startsWith('telegram')) return false;
-      if (sourceFilter === 'website' && !m.source.startsWith('website')) return false;
+      const s = (m.source || '').toLowerCase();
+      const id = (m.id || '').toLowerCase();
+      const t = (m.topic || '').toLowerCase();
+      const isMock = s.includes('mock') || s === 'mock_errors' || id.startsWith('tb_') || id.startsWith('ob_') || id.startsWith('rca_') || t.includes('mock');
+
+      if (sourceFilter === 'mock_errors' && !isMock) return false;
+      if (sourceFilter === 'chapter_bank' && isMock) return false;
+
+      if (statusFilter === 'wrong' && m.errorType === 'unattempted') return false;
+      if (statusFilter === 'unattempted' && m.errorType !== 'unattempted') return false;
 
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
@@ -543,7 +381,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       }
       return true;
     });
-  }, [mistakes, sourceFilter, searchQuery]);
+  }, [mistakes, sourceFilter, statusFilter, searchQuery]);
 
   // Subject Stats Calculation (Total Questions & Topic Count for each subject)
   const subjectStats = useMemo(() => {
@@ -597,20 +435,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     const qIds = new Set(topicQuestions.map((q) => q.id));
     const targetKeys = new Set(topicQuestions.map((q) => getDedupeKey(q.question, q.id, q.options)));
 
-    // 1. Remove from local synced telegram mistakes
-    try {
-      const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
-      if (raw) {
-        const list: RecordedMistake[] = JSON.parse(raw);
-        const filtered = list.filter((item) => {
-          const itemKey = getDedupeKey(item.question, item.id, item.options);
-          return !qIds.has(item.id) && !targetKeys.has(itemKey);
-        });
-        safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(filtered));
-      }
-    } catch {}
-
-    // 2. Remove from dedicated website mistake notebook
+    // 1. Remove from dedicated website mistake notebook
     try {
       const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
       if (nbRaw) {
@@ -901,8 +726,8 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           )}
         </div>
 
-        {/* Source Toggle & Study Mode Switch */}
-        <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
+        {/* Source & Status Filters */}
+        <div className="flex items-center gap-2 shrink-0 flex-wrap">
           {/* Source Tabs */}
           <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
             <button
@@ -914,22 +739,50 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
               All Sources
             </button>
             <button
-              onClick={() => setSourceFilter('telegram')}
+              onClick={() => setSourceFilter('mock_errors')}
               className={`px-2 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                sourceFilter === 'telegram' ? 'bg-white text-sky-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
+                sourceFilter === 'mock_errors' ? 'bg-white text-indigo-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Smartphone className="w-2.5 h-2.5" />
-              <span>Telegram</span>
+              <span>Mock Errors</span>
             </button>
             <button
-              onClick={() => setSourceFilter('website')}
+              onClick={() => setSourceFilter('chapter_bank')}
               className={`px-2 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
-                sourceFilter === 'website' ? 'bg-white text-indigo-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
+                sourceFilter === 'chapter_bank' ? 'bg-white text-emerald-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Laptop className="w-2.5 h-2.5" />
-              <span>Website</span>
+              <span>Chapter Bank</span>
+            </button>
+          </div>
+
+          {/* Status Tabs */}
+          <div className="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[11px] font-semibold">
+            <button
+              onClick={() => setStatusFilter('all')}
+              className={`px-2 py-1 rounded-md transition-all cursor-pointer ${
+                statusFilter === 'all' ? 'bg-white text-slate-900 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setStatusFilter('wrong')}
+              className={`px-2 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                statusFilter === 'wrong' ? 'bg-white text-rose-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+              <span>Wrong</span>
+            </button>
+            <button
+              onClick={() => setStatusFilter('unattempted')}
+              className={`px-2 py-1 rounded-md transition-all flex items-center gap-1 cursor-pointer ${
+                statusFilter === 'unattempted' ? 'bg-white text-amber-700 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+              <span>Skipped</span>
             </button>
           </div>
         </div>
@@ -1147,11 +1000,27 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                   <div key={m.id || idx} className={idx > 0 ? 'pt-4 space-y-3' : 'space-y-3'}>
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-start gap-2.5 min-w-0">
-                        <span className="w-6 h-6 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="w-6 h-6 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
                           {idx + 1}
                         </span>
-                        <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
-                          {m.question}
+                        <div className="space-y-1 min-w-0">
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            {m.errorType === 'unattempted' ? (
+                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-200">
+                                Skipped
+                              </span>
+                            ) : (
+                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-200">
+                                Wrong
+                              </span>
+                            )}
+                            <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                              {((m.source || '').toLowerCase().includes('mock') || (m.id || '').startsWith('tb_') || (m.id || '').startsWith('ob_')) ? 'Mock Error' : 'Chapter Bank'}
+                            </span>
+                          </div>
+                          <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
+                            {m.question}
+                          </div>
                         </div>
                       </div>
 
