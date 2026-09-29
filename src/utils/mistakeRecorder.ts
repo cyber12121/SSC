@@ -315,7 +315,7 @@ export function convertToRecordedMistake(
 
   // Detect whether question was wrong vs skipped/unattempted
   const userAns = item.selectedAnswer || (item as any).userAnswer || '';
-  const isSkipped = !userAns || userAns === '' || item.status === 'unattempted' || (item as any).errorType === 'unattempted';
+  const isSkipped = !userAns || userAns === '' || (item as any).status === 'unattempted' || (item as any).errorType === 'unattempted';
   const errorType: 'wrong' | 'unattempted' = isSkipped ? 'unattempted' : 'wrong';
 
   const opts = extractOptionsArray(q.options);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { db, auth } from '../firebase';
-import { collection, addDoc, getDocs, deleteDoc, doc, setDoc } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { safeStorage } from '../utils/safeStorage';
 import { normalizeTopicTitle } from '../utils/topicDetector';
 import { Question } from '../types';
@@ -12,9 +12,7 @@ import {
   CheckCircle2,
   AlertCircle,
   Play,
-  RotateCcw,
   X,
-  ChevronRight,
   Eye
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -22,16 +20,14 @@ import { SolutionViewer } from './SolutionViewer';
 import { 
   autoRecoverMistakesFromStorage, 
   RecordedMistake, 
-  MISTAKE_NOTEBOOK_KEY, 
   normalizeSubject,
-  getDedupeKey,
-  isSpeedLabQuestion
+  getDedupeKey
 } from '../utils/mistakeRecorder';
 export type { RecordedMistake };
 
 interface BotMistakesPageProps {
   onBack: () => void;
-  onStartPractice?: (topic: string, questions: Question[]) => void;
+  onStartPractice: (topic: string, questions: Question[]) => void;
 }
 
 
@@ -126,46 +122,6 @@ const SUBJECT_CONFIG: Record<
   },
 };
 
-// Formats messy raw explanation into a clean, human-readable card
-function cleanAndFormatExplanation(raw: string): {
-  coreExplanation: string;
-  definitions: Array<{ word: string; meaning: string }>;
-} {
-  if (!raw) return { coreExplanation: '', definitions: [] };
-  let text = raw.trim();
-
-  // Strip robotic auto-generated prefixes & suffixes
-  text = text.replace(/^The correct answer is\s*["'].*?["']\.?\s*/i, '');
-  text = text.replace(/Therefore,\s*the correct answer is\s*(?:Option\s*)?[A-D]\.?\s*/gi, '');
-  text = text.replace(/^Key Points:\s*/gi, '');
-
-  const definitions: Array<{ word: string; meaning: string }> = [];
-  const otherLines: string[] = [];
-
-  const rawParts = text.split(/(?:\r?\n|(?=[-•]\s*["']?[A-Za-z]+["']?\s*means))/);
-
-  for (let part of rawParts) {
-    part = part.trim();
-    if (!part) continue;
-
-    // Check for "- 'Word' means definition" or "- Word: definition"
-    const defMatch = part.match(/^[-•*]?\s*["']?([A-Za-z\s-]+)["']?\s*(?:means|:)\s*(.+)$/i);
-    if (defMatch && defMatch[1].trim().length < 30) {
-      definitions.push({
-        word: defMatch[1].trim(),
-        meaning: defMatch[2].trim(),
-      });
-    } else {
-      otherLines.push(part.replace(/^[-•*]\s*/, '').trim());
-    }
-  }
-
-  return {
-    coreExplanation: otherLines.join('\n\n').trim(),
-    definitions,
-  };
-}
-
 export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   onBack,
   onStartPractice,
@@ -182,14 +138,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [inspectTopic, setInspectTopic] = useState<{ topicName: string; questions: RecordedMistake[] } | null>(null);
-
-  // Interactive Practice Modal
-  const [practiceModalOpen, setPracticeModalOpen] = useState(false);
-  const [practiceQuestions, setPracticeQuestions] = useState<RecordedMistake[]>([]);
-  const [practiceIndex, setPracticeIndex] = useState(0);
-  const [practiceChosen, setPracticeChosen] = useState<number | null>(null);
-  const [practiceScore, setPracticeScore] = useState(0);
-  const [practiceFinished, setPracticeFinished] = useState(false);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -496,8 +444,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       if (rawStore) globalRcaMap = JSON.parse(rawStore);
     } catch {}
 
-    if (onStartPractice) {
-      const convertedQuestions: Question[] = questionsToPractice.map((m, idx) => {
+    const convertedQuestions: Question[] = questionsToPractice.map((m, idx) => {
         const optObj: { a: string; b: string; c: string; d: string } = {
           a: m.options[0] || '',
           b: m.options[1] || '',
@@ -534,33 +481,6 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         };
       });
       onStartPractice(topicTitle || 'Mistakes Practice', convertedQuestions);
-      return;
-    }
-
-    setPracticeQuestions(questionsToPractice);
-    setPracticeIndex(0);
-    setPracticeChosen(null);
-    setPracticeScore(0);
-    setPracticeFinished(false);
-    setPracticeModalOpen(true);
-  };
-
-  const handlePracticeAnswer = (optIdx: number) => {
-    if (practiceChosen !== null) return;
-    setPracticeChosen(optIdx);
-    const curr = practiceQuestions[practiceIndex];
-    if (optIdx === curr.correctOptionIndex) {
-      setPracticeScore((prev) => prev + 1);
-    }
-  };
-
-  const handleNextPracticeQuestion = () => {
-    if (practiceIndex + 1 < practiceQuestions.length) {
-      setPracticeIndex((prev) => prev + 1);
-      setPracticeChosen(null);
-    } else {
-      setPracticeFinished(true);
-    }
   };
 
   return (
@@ -1100,153 +1020,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           </div>
         )}
       </AnimatePresence>
-
-      {/* INTERACTIVE PRACTICE MODAL */}
-      <AnimatePresence>
-        {practiceModalOpen && practiceQuestions.length > 0 && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]"
-            >
-              {/* Header */}
-              <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                    Recall Drill • Question {practiceIndex + 1} of {practiceQuestions.length}
-                  </span>
-                </div>
-                <button
-                  onClick={() => setPracticeModalOpen(false)}
-                  className="p-1 rounded-lg text-slate-400 hover:text-slate-600 cursor-pointer"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Body */}
-              <div className="p-5 sm:p-6 overflow-y-auto space-y-4">
-                {!practiceFinished ? (
-                  <>
-                    <div className="text-sm sm:text-base font-semibold text-slate-900 leading-relaxed">
-                      {practiceQuestions[practiceIndex].question}
-                    </div>
-
-                    {/* Options */}
-                    <div className="space-y-2 pt-2">
-                      {practiceQuestions[practiceIndex].options.map((opt, optIdx) => {
-                        const isCorrect = optIdx === practiceQuestions[practiceIndex].correctOptionIndex;
-                        const isChosen = practiceChosen === optIdx;
-                        const letters = ['A', 'B', 'C', 'D'];
-
-                        let optClass = 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700';
-                        if (practiceChosen !== null) {
-                          if (isCorrect) {
-                            optClass = 'bg-emerald-50 border-emerald-400 text-emerald-900 font-bold';
-                          } else if (isChosen) {
-                            optClass = 'bg-rose-50 border-rose-400 text-rose-900 font-medium';
-                          } else {
-                            optClass = 'bg-slate-50 border-slate-200 text-slate-400 opacity-60';
-                          }
-                        }
-
-                        return (
-                          <button
-                            key={optIdx}
-                            onClick={() => handlePracticeAnswer(optIdx)}
-                            disabled={practiceChosen !== null}
-                            className={`w-full text-left p-3.5 rounded-xl border text-xs sm:text-sm transition-all flex items-start gap-3 cursor-pointer ${optClass}`}
-                          >
-                            <span className="w-5 h-5 rounded-md flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 bg-white border border-slate-200">
-                              {letters[optIdx]}
-                            </span>
-                            <span className="leading-snug">{opt}</span>
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    {/* Feedback */}
-                    {practiceChosen !== null && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-2"
-                      >
-                        <div className="flex items-center gap-1.5 font-bold">
-                          {practiceChosen === practiceQuestions[practiceIndex].correctOptionIndex ? (
-                            <span className="text-emerald-700 flex items-center gap-1">
-                              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                              <span>Correct! Great memory.</span>
-                            </span>
-                          ) : (
-                            <span className="text-rose-700 flex items-center gap-1">
-                              <AlertCircle className="w-4 h-4 text-rose-600" />
-                              <span>Incorrect. Correct answer is Option {['A', 'B', 'C', 'D'][practiceQuestions[practiceIndex].correctOptionIndex]}.</span>
-                            </span>
-                          )}
-                        </div>
-                        {practiceQuestions[practiceIndex].explanation && (
-                          <div className="mt-2 text-xs">
-                            <SolutionViewer
-                              solution={practiceQuestions[practiceIndex].explanation}
-                              language="English"
-                              subject={normalizeSubject(practiceQuestions[practiceIndex].subject)}
-                            />
-                          </div>
-                        )}
-                      </motion.div>
-                    )}
-                  </>
-                ) : (
-                  <div className="text-center py-6 space-y-3">
-                    <div className="text-4xl">🏆</div>
-                    <h3 className="text-xl font-bold text-slate-900">Drill Completed!</h3>
-                    <p className="text-sm text-slate-600">
-                      You scored <strong className="text-emerald-600 font-black">{practiceScore} / {practiceQuestions.length}</strong> ({Math.round((practiceScore / practiceQuestions.length) * 100)}%)
-                    </p>
-                    <div className="pt-4 flex items-center justify-center gap-2">
-                      <button
-                        onClick={() => {
-                          setPracticeIndex(0);
-                          setPracticeChosen(null);
-                          setPracticeScore(0);
-                          setPracticeFinished(false);
-                        }}
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer"
-                      >
-                        <RotateCcw className="w-3.5 h-3.5" />
-                        <span>Repeat Drill</span>
-                      </button>
-                      <button
-                        onClick={() => setPracticeModalOpen(false)}
-                        className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-black text-white text-xs font-bold transition-colors cursor-pointer"
-                      >
-                        Done
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {!practiceFinished && practiceChosen !== null && (
-                <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-end">
-                  <button
-                    onClick={handleNextPracticeQuestion}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-black text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
-                  >
-                    <span>{practiceIndex + 1 < practiceQuestions.length ? 'Next Question' : 'View Results'}</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              )}
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
+

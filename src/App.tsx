@@ -1647,8 +1647,8 @@ export default function App() {
       totalTime: 0,
       completedAt: new Date().toISOString(),
       questionDetails: questions.map((q, idx) => {
-        const rawUserAns = (q.selectedAnswer !== undefined && q.selectedAnswer !== null)
-          ? String(q.selectedAnswer).trim().toLowerCase()
+        const rawUserAns = ((q as any).selectedAnswer !== undefined && (q as any).selectedAnswer !== null)
+          ? String((q as any).selectedAnswer).trim().toLowerCase()
           : String((q as any).userAnswer || (q as any).chosenOption || '').trim().toLowerCase();
         const rawTargetAns = String(q.answer || (q as any).correctOption || (q as any).correctAnswer || '').trim().toLowerCase();
         const normUser = rawUserAns === '1' ? 'a' : rawUserAns === '2' ? 'b' : rawUserAns === '3' ? 'c' : rawUserAns === '4' ? 'd' : rawUserAns;
