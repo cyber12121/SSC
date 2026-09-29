@@ -16,7 +16,8 @@ import {
   Play,
   RotateCcw,
   X,
-  ChevronRight
+  ChevronRight,
+  Eye
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -32,7 +33,6 @@ export type { RecordedMistake };
 
 interface BotMistakesPageProps {
   onBack: () => void;
-  onDeleteQuestion?: (questionId: string, questionText: string) => void;
   onStartPractice?: (topic: string, questions: Question[]) => void;
 }
 
@@ -194,7 +194,6 @@ function cleanAndFormatExplanation(raw: string): {
 
 export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   onBack,
-  onDeleteQuestion,
   onStartPractice,
 }) => {
   const [mistakes, setMistakes] = useState<RecordedMistake[]>([]);
@@ -207,6 +206,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [inspectTopic, setInspectTopic] = useState<{ topicName: string; questions: RecordedMistake[] } | null>(null);
 
   // Interactive Practice Modal
   const [practiceModalOpen, setPracticeModalOpen] = useState(false);
@@ -393,18 +393,23 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   }, []);
 
   const handleDelete = async (m: RecordedMistake) => {
-    if (!window.confirm('Delete this question permanently from your Mistake Notebook? It will not appear in future bot drills.')) {
+    if (!window.confirm('Delete this question from your Mistake Notebook? It will only be removed from your mistakes.')) {
       return;
     }
 
     setDeletingId(m.id);
     try {
+      const targetKey = getDedupeKey(m.question, m.id, m.options);
+
       // 1. Remove from local synced telegram mistakes
       try {
         const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
         if (raw) {
           const list: RecordedMistake[] = JSON.parse(raw);
-          const filtered = list.filter((item) => item.id !== m.id && item.question.trim().toLowerCase() !== m.question.trim().toLowerCase());
+          const filtered = list.filter((item) => {
+            const itemKey = getDedupeKey(item.question, item.id, item.options);
+            return item.id !== m.id && itemKey !== targetKey;
+          });
           safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(filtered));
         }
       } catch {}
@@ -414,36 +419,30 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
         if (nbRaw) {
           const list: RecordedMistake[] = JSON.parse(nbRaw);
-          const filtered = list.filter((item) => item.id !== m.id && item.question.trim().toLowerCase() !== m.question.trim().toLowerCase());
+          const filtered = list.filter((item) => {
+            const itemKey = getDedupeKey(item.question, item.id, item.options);
+            return item.id !== m.id && itemKey !== targetKey;
+          });
           safeStorage.setItem('cgl_user_mistake_notebook', JSON.stringify(filtered));
         }
       } catch {}
 
-      // 3. Mark in deleted questions set
-      try {
-        let deletedSet: string[] = [];
-        const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
-        if (delRaw) {
-          deletedSet = JSON.parse(delRaw);
-        }
-        if (m.id) deletedSet.push(m.id.toLowerCase());
-        if (m.question) deletedSet.push(m.question.trim().toLowerCase());
-        safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
-      } catch {}
+      // NOTE: We STRICTLY DO NOT modify cgl_deleted_question_ids or call onDeleteQuestion!
+      // This guarantees the question remains available in Chapter Bank and tests.
 
-      // 4. Delete from Firebase Firestore permanently
+      // 3. Delete from Firebase Firestore user_mistakes permanently
       if (auth.currentUser) {
         try {
           const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : '';
           if (docId) {
             await deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId)).catch(() => {});
           }
-          // Also match and delete by question text or ID across docs
+          // Also match and delete by exact dedupe key or matching ID
           const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
-          const qClean = (m.question || '').trim().toLowerCase();
           for (const d of snap.docs) {
             const dData = d.data();
-            if (d.id === docId || d.id === m.id || (dData?.question && dData.question.trim().toLowerCase() === qClean)) {
+            const dKey = getDedupeKey(dData?.question, d.id, dData?.options);
+            if (d.id === docId || d.id === m.id || dKey === targetKey) {
               await deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
             }
           }
@@ -452,13 +451,30 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         }
       }
 
-      setMistakes((prev) => prev.filter((item) => item.id !== m.id && item.question !== m.question));
+      setMistakes((prev) => prev.filter((item) => {
+        const itemKey = getDedupeKey(item.question, item.id, item.options);
+        return item.id !== m.id && itemKey !== targetKey;
+      }));
 
-      if (onDeleteQuestion) {
-        onDeleteQuestion(m.id, m.question);
+      if (inspectTopic) {
+        setInspectTopic((prev) => {
+          if (!prev) return null;
+          const updatedQs = prev.questions.filter((item) => {
+            const itemKey = getDedupeKey(item.question, item.id, item.options);
+            return item.id !== m.id && itemKey !== targetKey;
+          });
+          if (updatedQs.length === 0) return null;
+          return { ...prev, questions: updatedQs };
+        });
       }
 
-      showToast('Question deleted permanently.');
+      try {
+        window.dispatchEvent(new CustomEvent('cgl_mistakes_updated', {
+          detail: { count: 1 }
+        }));
+      } catch {}
+
+      showToast('Question removed from Mistake Notebook.');
     } catch (err: any) {
       console.error('Delete error:', err);
       alert('Error deleting question: ' + (err?.message || err));
@@ -468,7 +484,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   };
 
   const handleClearAll = async () => {
-    if (!window.confirm('Are you sure you want to completely clear ALL mistakes from your Mistake Notebook? This cannot be undone.')) {
+    if (!window.confirm('Are you sure you want to completely clear ALL mistakes from your Mistake Notebook? This will only remove questions from your mistake notebook.')) {
       return;
     }
     setLoading(true);
@@ -479,10 +495,9 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       // 2. Wipe dedicated mistake notebook
       safeStorage.removeItem('cgl_user_mistake_notebook');
 
-      // 3. Wipe mistake entries from cgl_rca_global_store
-      safeStorage.removeItem('cgl_rca_global_store');
+      // NOTE: DO NOT remove cgl_rca_global_store! RCA mock store belongs to mock analysis.
 
-      // 4. Delete all user_mistakes documents in Firestore if authenticated
+      // 3. Delete all user_mistakes documents in Firestore if authenticated
       if (auth.currentUser) {
         try {
           const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
@@ -496,6 +511,14 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       }
 
       setMistakes([]);
+      setInspectTopic(null);
+
+      try {
+        window.dispatchEvent(new CustomEvent('cgl_mistakes_updated', {
+          detail: { count: 0 }
+        }));
+      } catch {}
+
       showToast('✨ Mistake Notebook has been completely cleared!');
     } catch (err: any) {
       console.error('Error clearing mistakes:', err);
@@ -568,18 +591,21 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   const totalFilteredCount = searchFilteredMistakes.length;
 
   const handleClearTopic = async (topicQuestions: RecordedMistake[], topicName: string) => {
-    if (!window.confirm(`Delete all ${topicQuestions.length} mistake(s) in "${topicName}"?`)) {
+    if (!window.confirm(`Remove all ${topicQuestions.length} mistake(s) in "${topicName}" from your Mistake Notebook?`)) {
       return;
     }
     const qIds = new Set(topicQuestions.map((q) => q.id));
-    const qTexts = new Set(topicQuestions.map((q) => q.question.trim().toLowerCase()));
+    const targetKeys = new Set(topicQuestions.map((q) => getDedupeKey(q.question, q.id, q.options)));
 
     // 1. Remove from local synced telegram mistakes
     try {
       const raw = safeStorage.getItem(SYNCED_STORAGE_KEY);
       if (raw) {
         const list: RecordedMistake[] = JSON.parse(raw);
-        const filtered = list.filter((item) => !qIds.has(item.id) && !qTexts.has(item.question.trim().toLowerCase()));
+        const filtered = list.filter((item) => {
+          const itemKey = getDedupeKey(item.question, item.id, item.options);
+          return !qIds.has(item.id) && !targetKeys.has(itemKey);
+        });
         safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(filtered));
       }
     } catch {}
@@ -589,43 +615,24 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
       if (nbRaw) {
         const list: RecordedMistake[] = JSON.parse(nbRaw);
-        const filtered = list.filter((item) => !qIds.has(item.id) && !qTexts.has(item.question.trim().toLowerCase()));
+        const filtered = list.filter((item) => {
+          const itemKey = getDedupeKey(item.question, item.id, item.options);
+          return !qIds.has(item.id) && !targetKeys.has(itemKey);
+        });
         safeStorage.setItem('cgl_user_mistake_notebook', JSON.stringify(filtered));
       }
     } catch {}
 
-    // 3. Mark in deleted questions set
-    try {
-      let deletedSet: string[] = [];
-      const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
-      if (delRaw) deletedSet = JSON.parse(delRaw);
-      topicQuestions.forEach((q) => {
-        if (q.id) deletedSet.push(q.id.toLowerCase());
-        deletedSet.push(q.question.trim().toLowerCase());
-      });
-      safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(new Set(deletedSet))));
-    } catch {}
+    // NOTE: We DO NOT write to cgl_deleted_question_ids! Questions stay available in Chapter Bank.
 
-    // 4. Delete on server API / Telegram store
-    for (const q of topicQuestions) {
-      fetch('/api/mistakes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          action: 'delete',
-          questionId: q.id,
-          questionText: q.question,
-        }),
-      }).catch(() => {});
-    }
-
-    // 5. Delete from Firebase Firestore if authenticated
+    // 3. Delete from Firebase Firestore if authenticated
     if (auth.currentUser) {
       try {
         const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
         for (const d of snap.docs) {
           const dData = d.data();
-          if (qIds.has(d.id) || (dData?.question && qTexts.has(dData.question.trim().toLowerCase()))) {
+          const dKey = getDedupeKey(dData?.question, d.id, dData?.options);
+          if (qIds.has(d.id) || targetKeys.has(dKey)) {
             deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
           }
         }
@@ -634,8 +641,22 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
       }
     }
 
-    setMistakes((prev) => prev.filter((item) => !qIds.has(item.id) && !qTexts.has(item.question.trim().toLowerCase())));
-    showToast(`Deleted ${topicQuestions.length} mistake(s) from "${topicName}".`);
+    setMistakes((prev) => prev.filter((item) => {
+      const itemKey = getDedupeKey(item.question, item.id, item.options);
+      return !qIds.has(item.id) && !targetKeys.has(itemKey);
+    }));
+
+    if (inspectTopic?.topicName === topicName) {
+      setInspectTopic(null);
+    }
+
+    try {
+      window.dispatchEvent(new CustomEvent('cgl_mistakes_updated', {
+        detail: { count: topicQuestions.length }
+      }));
+    } catch {}
+
+    showToast(`Removed ${topicQuestions.length} mistake(s) from "${topicName}".`);
   };
 
   // Start Interactive Practice Drill (opens in full Practice Mode)
@@ -1044,16 +1065,29 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                             </div>
                           </div>
 
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              startPractice(topicQuestions, topicName);
-                            }}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-2xs group-hover:shadow-xs cursor-pointer"
-                          >
-                            <Play className="w-3 h-3 fill-current" />
-                            <span>Practice</span>
-                          </button>
+                          <div className="flex items-center gap-1.5">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setInspectTopic({ topicName, questions: topicQuestions });
+                              }}
+                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all cursor-pointer"
+                              title={`View and manage individual mistakes in ${topicName}`}
+                            >
+                              <Eye className="w-3.5 h-3.5 text-slate-500" />
+                              <span>View</span>
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                startPractice(topicQuestions, topicName);
+                              }}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-2xs group-hover:shadow-xs cursor-pointer"
+                            >
+                              <Play className="w-3 h-3 fill-current" />
+                              <span>Practice</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     );
@@ -1064,6 +1098,114 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           })
         )}
       </div>
+
+      {/* TOPIC QUESTIONS INSPECT MODAL */}
+      <AnimatePresence>
+        {inspectTopic && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[88vh]"
+            >
+              {/* Header */}
+              <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+                <div className="min-w-0">
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 truncate">
+                    {inspectTopic.topicName}
+                  </h3>
+                  <p className="text-xs text-slate-500">
+                    {inspectTopic.questions.length} recorded mistake(s) • Delete removes ONLY from Mistake Notebook
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => {
+                      const qs = inspectTopic.questions;
+                      const name = inspectTopic.topicName;
+                      setInspectTopic(null);
+                      startPractice(qs, name);
+                    }}
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors cursor-pointer"
+                  >
+                    <Play className="w-3 h-3 fill-current" />
+                    <span>Practice All</span>
+                  </button>
+                  <button
+                    onClick={() => setInspectTopic(null)}
+                    className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 cursor-pointer"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Questions List */}
+              <div className="p-4 sm:p-6 overflow-y-auto space-y-4 divide-y divide-slate-100">
+                {inspectTopic.questions.map((m, idx) => (
+                  <div key={m.id || idx} className={idx > 0 ? 'pt-4 space-y-3' : 'space-y-3'}>
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-start gap-2.5 min-w-0">
+                        <span className="w-6 h-6 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                          {idx + 1}
+                        </span>
+                        <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
+                          {m.question}
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => handleDelete(m)}
+                        disabled={deletingId === m.id}
+                        className="text-slate-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 transition-colors cursor-pointer shrink-0 disabled:opacity-40"
+                        title="Delete question from Mistake Notebook only"
+                      >
+                        <Trash2 className="w-4 h-4 text-rose-500" />
+                      </button>
+                    </div>
+
+                    {/* Options Grid */}
+                    {m.options && m.options.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-8">
+                        {m.options.map((opt, optIdx) => {
+                          const isCorrect = optIdx === m.correctOptionIndex;
+                          const letters = ['A', 'B', 'C', 'D'];
+                          return (
+                            <div
+                              key={optIdx}
+                              className={`p-2 rounded-lg text-xs flex items-start gap-2 border ${
+                                isCorrect
+                                  ? 'bg-emerald-50 border-emerald-300 text-emerald-900 font-medium'
+                                  : 'bg-slate-50/70 border-slate-200 text-slate-600'
+                              }`}
+                            >
+                              <span className="font-bold text-[10px] w-4 h-4 rounded flex items-center justify-center bg-white border border-slate-200 shrink-0">
+                                {letters[optIdx]}
+                              </span>
+                              <span className="leading-snug">{opt}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {/* Explanation */}
+                    {m.explanation && (
+                      <div className="pl-8 pt-1">
+                        <div className="text-[11px] bg-slate-50 border border-slate-200/80 rounded-lg p-2.5 text-slate-600 leading-relaxed">
+                          <span className="font-bold text-slate-700 block mb-0.5">Explanation:</span>
+                          {m.explanation}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* INTERACTIVE PRACTICE MODAL */}
       <AnimatePresence>

@@ -44,7 +44,7 @@ import { getDailyThought } from './utils/dailyThoughts';
 
 import { getCachedData, setCachedData, clearCachedData } from './utils/cache';
 import { useToast } from './components/ui/Toast';
-import { recordQuizMistakes } from './utils/mistakeRecorder';
+import { recordQuizMistakes, isFullOrSectionalMock, extractOptionsArray, getDedupeKey } from './utils/mistakeRecorder';
 
 const GK_ICONS: Record<string, any> = {
   Landmark,
@@ -827,8 +827,85 @@ export default function App() {
   };
 
   const handleDeleteQuestion = async (question: Question) => {
+    if (!question) return;
+
     const qTextClean = question.question.trim().toLowerCase();
     const qId = activeChapter ? getQuestionId(activeChapter, question) : (question.id || qTextClean);
+
+    // If deleting during a Mistakes Drill, ONLY remove it from the Mistake Notebook!
+    const isMistakeDrill =
+      activeChapter?.section === 'mistakes_drill' ||
+      (activeChapter?.chapter_title || '').toLowerCase().includes('mistakes drill');
+
+    if (isMistakeDrill) {
+      // 1. Remove from activeChapter questions so current quiz continues without it
+      if (activeChapter) {
+        const updatedQuestions = activeChapter.questions.filter(q => {
+          const thisId = getQuestionId(activeChapter, q);
+          const thisText = q.question.trim().toLowerCase();
+          return thisId !== qId && thisText !== qTextClean && (!question.id || q.id !== question.id);
+        });
+        setActiveChapter({
+          ...activeChapter,
+          questions: updatedQuestions.map((q, idx) => ({ ...q, q_num: idx + 1 }))
+        });
+      }
+
+      // 2. Remove ONLY from Mistake Notebook (local & Firestore)
+      try {
+        const rawOpts = extractOptionsArray(question.options);
+        const targetKey = getDedupeKey(question.question, question.id, rawOpts);
+
+        // Remove from cgl_user_mistake_notebook
+        const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
+        if (nbRaw) {
+          const list = JSON.parse(nbRaw);
+          if (Array.isArray(list)) {
+            const filtered = list.filter((m: any) => {
+              const mKey = getDedupeKey(m.question, m.id, m.options);
+              return m.id !== question.id && mKey !== targetKey;
+            });
+            safeStorage.setItem('cgl_user_mistake_notebook', JSON.stringify(filtered));
+          }
+        }
+
+        // Remove from cgl_synced_telegram_mistakes
+        const synRaw = safeStorage.getItem('cgl_synced_telegram_mistakes');
+        if (synRaw) {
+          const list = JSON.parse(synRaw);
+          if (Array.isArray(list)) {
+            const filtered = list.filter((m: any) => {
+              const mKey = getDedupeKey(m.question, m.id, m.options);
+              return m.id !== question.id && mKey !== targetKey;
+            });
+            safeStorage.setItem('cgl_synced_telegram_mistakes', JSON.stringify(filtered));
+          }
+        }
+
+        // Remove from Firestore user_mistakes if authenticated
+        if (auth.currentUser) {
+          const docId = question.id ? question.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : '';
+          if (docId) {
+            deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, docId)).catch(() => {});
+          }
+          const snap = await getDocs(collection(db, `user_mistakes_${auth.currentUser.uid}`));
+          for (const d of snap.docs) {
+            const dData = d.data();
+            const dKey = getDedupeKey(dData?.question, d.id, dData?.options);
+            if (d.id === docId || d.id === question.id || dKey === targetKey) {
+              deleteDoc(doc(db, `user_mistakes_${auth.currentUser.uid}`, d.id)).catch(() => {});
+            }
+          }
+        }
+
+        window.dispatchEvent(new CustomEvent('cgl_mistakes_updated', { detail: { count: 1 } }));
+      } catch (err) {
+        console.warn('Error removing question from mistake notebook:', err);
+      }
+
+      showToast('Question removed from Mistake Notebook.', 'info');
+      return; // Do NOT proceed to delete from chapter bank or deleted_questions!
+    }
 
     // 1. Immediately update deletedQuestionIds set & localStorage so it's deleted everywhere
     setDeletedQuestionIds(prev => {
@@ -1302,14 +1379,20 @@ export default function App() {
       }
     }
 
-    // Automatically record wrong & unattempted answers to local Mistake Notebook, RCA store & Firestore
+    // Automatically record wrong & unattempted answers to local Mistake Notebook & Firestore
+    // STRICTLY for Chapter Bank quizzes and Mock Error remediation drills (NEVER full/sectional mocks)
     try {
-      const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
-      if (errorList.length > 0) {
-        const uid = user ? user.uid : (auth.currentUser ? auth.currentUser.uid : undefined);
-        const recorded = recordQuizMistakes(savedResult, uid);
-        if (recorded && recorded.length > 0) {
-          showToast(`Recorded ${recorded.length} mistake(s) into your Mistake Notebook.`, 'success');
+      const isMockOrSectional = isFullOrSectionalMock(savedResult);
+      const isEligibleCategory = savedResult.category === 'chapterBank' || savedResult.category === 'mockErrors';
+
+      if (isEligibleCategory && !isMockOrSectional) {
+        const errorList = (fullResult.questionDetails || []).filter(d => !d.isCorrect && d.question);
+        if (errorList.length > 0) {
+          const uid = user ? user.uid : (auth.currentUser ? auth.currentUser.uid : undefined);
+          const recorded = recordQuizMistakes(savedResult, uid);
+          if (recorded && recorded.length > 0) {
+            showToast(`Recorded ${recorded.length} mistake(s) into your Mistake Notebook.`, 'success');
+          }
         }
       }
     } catch (err) {
@@ -4300,14 +4383,6 @@ export default function App() {
               >
                 <BotMistakesPage
                   onBack={resetToHome}
-                  onDeleteQuestion={(qId, qText) => {
-                    setDeletedQuestionIds((prev) => {
-                      const updated = new Set(prev);
-                      if (qId) updated.add(qId);
-                      if (qText) updated.add(qText.trim().toLowerCase());
-                      return updated;
-                    });
-                  }}
                   onStartPractice={(topic, questions) => {
                     const firstQ = questions[0];
                     const rawSub = firstQ?.subject || 'English';

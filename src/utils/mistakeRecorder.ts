@@ -1,7 +1,7 @@
 import { Question, QuestionProgress, QuizResult } from '../types';
 import { safeStorage } from './safeStorage';
 import { db, auth } from '../firebase';
-import { collection, doc, setDoc, getDocs } from 'firebase/firestore';
+import { collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
 
 export interface RecordedMistake {
   id: string;
@@ -32,15 +32,173 @@ export function normalizeSubject(sub?: string): 'english' | 'mathematics' | 'rea
   return 'general_awareness';
 }
 
-// Canonical deduplication key based on normalized question text
-export function getDedupeKey(qText?: string, id?: string): string {
-  const text = (qText || '')
+/**
+ * Robust deduplication key.
+ * Combines normalized question text with sorted options signature.
+ * Prevents distinct questions sharing generic instructions (e.g. "Select the correctly spelt word")
+ * from colliding, while accurately merging true duplicates of the same question.
+ */
+export function getDedupeKey(qText?: string, id?: string, options?: string[]): string {
+  const cleanText = (qText || '')
     .toLowerCase()
     .replace(/^(?:question\s*\d+[:.]?|\bq\s*\d+[:.]?|\d+[.)]\s*)/i, '')
     .replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ')
     .replace(/[?.!,:;'"()\[\]{}]+$/g, '')
     .trim();
-  return text || (id || '').trim().toLowerCase();
+
+  let optStr = '';
+  if (Array.isArray(options) && options.length > 0) {
+    optStr = options
+      .map(o => String(o || '').toLowerCase().trim().replace(/[\s\u200B-\u200D\uFEFF]+/g, ' '))
+      .filter(Boolean)
+      .sort()
+      .join('|');
+  }
+
+  // If text is short or generic, include options or id so different questions don't collide
+  const isGeneric = cleanText.length < 50 || /^(select the|choose the|in the following|identify the|find the|fill in the|what is|which of the)/i.test(cleanText);
+
+  if (cleanText) {
+    if (optStr) {
+      return `${cleanText}::${optStr}`;
+    }
+    if (isGeneric && id) {
+      return `${cleanText}::${id.trim().toLowerCase()}`;
+    }
+    return cleanText;
+  }
+
+  return (id || '').trim().toLowerCase();
+}
+
+/**
+ * Checks if a quiz result is from a Full Mock or Sectional Mock test.
+ * Mistakes from full mock tests or sectional mock tests must NOT be recorded
+ * into the Mistake Notebook (only Chapter Practice and Mock Error remediation drills).
+ */
+export function isFullOrSectionalMock(result: {
+  id?: string;
+  chapter_title?: string;
+  subject?: string;
+  mode?: string;
+  category?: string;
+  totalQuestions?: number;
+  section?: string;
+}): boolean {
+  if (!result) return false;
+
+  const title = (result.chapter_title || '').trim().toLowerCase();
+  const id = (result.id || '').trim().toLowerCase();
+  const mode = (result.mode || '').trim().toLowerCase();
+  const category = (result.category || '').trim().toLowerCase();
+  const section = (result.section || '').trim().toLowerCase();
+  const totalQ = typeof result.totalQuestions === 'number' ? result.totalQuestions : 0;
+
+  // 1. If explicitly a Mistakes Drill or Chapter Error Remediation drill, it is NOT a full/sectional mock
+  if (
+    category === 'mockErrors' &&
+    (title.includes('mistakes drill') ||
+     title.includes('errors •') ||
+     title.includes('remediation') ||
+     section === 'mistakes_drill')
+  ) {
+    return false;
+  }
+
+  // 2. Full mock test indicators:
+  // - 50 or more questions (Tier 1 is 100 questions, Tier 2 is 130+)
+  if (totalQ >= 50) return true;
+
+  // - Title contains full mock / live test / shift / PYP patterns
+  if (
+    title.includes('full mock') ||
+    title.includes('live test') ||
+    title.includes('tier-i full') ||
+    title.includes('tier 1 full') ||
+    title.includes('tier-1 full') ||
+    title.includes('tier i full') ||
+    title.includes('cgl tier 1 -') ||
+    title.includes('cgl tier-1 -') ||
+    title.includes('cgl tier i -') ||
+    title.includes('cgl tier-i -') ||
+    title.includes('previous year paper') ||
+    title.includes('pyp') ||
+    title.includes('shift 1') ||
+    title.includes('shift 2') ||
+    title.includes('shift 3') ||
+    /mock\s*\d+/i.test(title) ||
+    /tier\s*i\s*[-–]?\s*\d+/i.test(title)
+  ) {
+    return true;
+  }
+
+  // 3. Sectional Mock indicators:
+  if (
+    title.includes('sectional timing') ||
+    title.includes('sectional test') ||
+    title.includes('sectional mock') ||
+    title.includes('oliveboard') ||
+    title.includes('testbook') ||
+    id.startsWith('ob_') ||
+    id.startsWith('tb_') ||
+    id.includes('sectional')
+  ) {
+    return true;
+  }
+
+  // 4. If mode is mock and not chapterBank or mockErrors
+  if (mode === 'mock' && category !== 'chapterBank' && category !== 'mockErrors') {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * Checks if an individual recorded mistake came from a full mock or sectional mock test,
+ * so it can be filtered out from the Mistake Notebook.
+ */
+export function isFullOrSectionalMockItem(item: {
+  topic?: string;
+  source?: string;
+  id?: string;
+  question?: string;
+}): boolean {
+  if (item.source === 'website_mock') {
+    const t = (item.topic || '').toLowerCase();
+    if (t.includes('mistake') || t.includes('drill') || t.includes('error') || t.includes('remediation')) {
+      return false;
+    }
+    return true;
+  }
+
+  const t = (item.topic || '').toLowerCase();
+  const id = (item.id || '').toLowerCase();
+
+  if (
+    t.includes('mock test') ||
+    t.includes('full mock') ||
+    t.includes('sectional timing') ||
+    t.includes('sectional') ||
+    t.includes('oliveboard') ||
+    t.includes('testbook') ||
+    t.includes('live test') ||
+    t.includes('tier i -') ||
+    t.includes('tier-i -') ||
+    t.includes('tier 1 -') ||
+    t.includes('tier-1 -') ||
+    /mock\s*\d+/i.test(t) ||
+    id.startsWith('tb_') ||
+    id.startsWith('ob_') ||
+    id.startsWith('rca_')
+  ) {
+    if (t.includes('mistake') || t.includes('drill') || t.includes('error')) {
+      return false;
+    }
+    return true;
+  }
+
+  return false;
 }
 
 // Checks if a question belongs to Speed Drills
@@ -112,8 +270,18 @@ export function convertToRecordedMistake(
     mode?: string;
     category?: string;
     userId?: string;
+    totalQuestions?: number;
+    section?: string;
   }
 ): RecordedMistake | null {
+  // Do NOT record mistakes from full mocks or sectional mocks
+  if (isFullOrSectionalMock(fullResult)) return null;
+
+  // Only allow chapter practice and mock error remediation
+  if (fullResult.category && fullResult.category !== 'chapterBank' && fullResult.category !== 'mockErrors') {
+    return null;
+  }
+
   const q = item.question;
   if (!q || !q.question) return null;
 
@@ -129,7 +297,6 @@ export function convertToRecordedMistake(
   const normSub = normalizeSubject(q.subject || fullResult.subject);
   const topic = q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice';
   const qId = q.id || `mistake_${fullResult.id || Date.now()}_${item.q_num}`;
-  const isMock = fullResult.mode === 'mock' || fullResult.category === 'mockErrors' || (fullResult.chapter_title || '').toLowerCase().includes('mock');
 
   return {
     id: qId,
@@ -141,7 +308,7 @@ export function convertToRecordedMistake(
     subject: normSub,
     topic,
     topicSlug: topic.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-    source: isMock ? 'website_mock' : 'website_quiz',
+    source: 'website_quiz',
     timestamp: Date.now(),
     wrongCount: 1,
     mastered: false
@@ -152,14 +319,26 @@ export function convertToRecordedMistake(
  * Records mistakes from a submitted quiz into:
  * 1. cgl_user_mistake_notebook (localStorage via safeStorage)
  * 2. cgl_synced_telegram_mistakes (permanent sync cache)
- * 3. cgl_rca_global_store (RCA / Silly mistakes cockpit)
- * 4. Firebase Firestore user_mistakes_{uid} (if authenticated)
- * 5. cgl_mock_questions_{mockId} (if mock test)
+ * 3. Firebase Firestore user_mistakes_{uid} (if authenticated)
+ *
+ * NOTE: Strictly records ONLY from Chapter Practice ('chapterBank') and
+ * Mock Error drills ('mockErrors'). Excludes Full Mocks, Sectional Mocks,
+ * and test review screens.
  */
 export function recordQuizMistakes(
   fullResult: QuizResult,
   userUid?: string
 ): RecordedMistake[] {
+  // 1. Exclude full mocks and sectional mocks
+  if (isFullOrSectionalMock(fullResult)) {
+    return [];
+  }
+
+  // 2. Only record for chapterBank and mockErrors
+  if (fullResult.category !== 'chapterBank' && fullResult.category !== 'mockErrors') {
+    return [];
+  }
+
   if (!fullResult.questionDetails || fullResult.questionDetails.length === 0) {
     return [];
   }
@@ -168,9 +347,8 @@ export function recordQuizMistakes(
   if (errorItems.length === 0) return [];
 
   const effectiveUid = userUid || (auth.currentUser ? auth.currentUser.uid : (fullResult.userId !== 'guest' ? fullResult.userId : undefined));
-  const isMock = fullResult.mode === 'mock' || fullResult.category === 'mockErrors' || (fullResult.chapter_title || '').toLowerCase().includes('mock');
 
-  // 1. Convert to RecordedMistake
+  // 3. Convert to RecordedMistake
   const newMistakes: RecordedMistake[] = [];
   for (const item of errorItems) {
     const mistake = convertToRecordedMistake(item, fullResult);
@@ -181,7 +359,7 @@ export function recordQuizMistakes(
 
   if (newMistakes.length === 0) return [];
 
-  // 2. Load existing mistake notebook & merge
+  // 4. Load existing mistake notebook & merge with accurate deduplication
   try {
     const existingRaw = safeStorage.getItem(MISTAKE_NOTEBOOK_KEY);
     let existingList: RecordedMistake[] = [];
@@ -194,12 +372,13 @@ export function recordQuizMistakes(
 
     const mergedMap = new Map<string, RecordedMistake>();
     for (const m of existingList) {
-      const k = getDedupeKey(m.question, m.id);
+      if (isFullOrSectionalMockItem(m)) continue;
+      const k = getDedupeKey(m.question, m.id, m.options);
       if (k) mergedMap.set(k, m);
     }
 
     for (const m of newMistakes) {
-      const k = getDedupeKey(m.question, m.id);
+      const k = getDedupeKey(m.question, m.id, m.options);
       if (!k) continue;
       if (mergedMap.has(k)) {
         const ex = mergedMap.get(k)!;
@@ -234,11 +413,12 @@ export function recordQuizMistakes(
       }
       const syncedMap = new Map<string, RecordedMistake>();
       for (const m of syncedList) {
-        const k = getDedupeKey(m.question, m.id);
+        if (isFullOrSectionalMockItem(m)) continue;
+        const k = getDedupeKey(m.question, m.id, m.options);
         if (k) syncedMap.set(k, m);
       }
       for (const m of newMistakes) {
-        const k = getDedupeKey(m.question, m.id);
+        const k = getDedupeKey(m.question, m.id, m.options);
         if (k && !syncedMap.has(k)) syncedMap.set(k, m);
       }
       safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(Array.from(syncedMap.values())));
@@ -248,46 +428,7 @@ export function recordQuizMistakes(
     console.warn('[mistakeRecorder] Error updating local notebook:', err);
   }
 
-  // 3. Update RCA global store so RCA analysis and heatmaps stay in sync
-  try {
-    const rcaRaw = safeStorage.getItem('cgl_rca_global_store');
-    const rcaStore = rcaRaw ? JSON.parse(rcaRaw) : {};
-    for (const item of errorItems) {
-      if (!item.question) continue;
-      const q = item.question;
-      const qId = q.id || `quiz_${fullResult.id || Date.now()}_${item.q_num}`;
-      const hasAnswer = Boolean(item.selectedAnswer && String(item.selectedAnswer).trim() !== '');
-      rcaStore[qId] = {
-        id: qId,
-        q_num: item.q_num,
-        mockId: isMock ? fullResult.id : undefined,
-        mockTitle: fullResult.chapter_title,
-        subject: q.subject || fullResult.subject || 'General Awareness',
-        topic: q.tags?.topic || q.topic || fullResult.chapter_title || 'General Practice',
-        questionText: q.question,
-        options: q.options,
-        answer: q.answer,
-        solution: q.solution || (q as any).explanation || '',
-        userAnswer: item.selectedAnswer || '',
-        selectedAnswer: item.selectedAnswer || '',
-        chosenOption: item.selectedAnswer || '',
-        isCorrect: false,
-        status: hasAnswer ? 'Incorrect' : 'Unattempted',
-        errorType: hasAnswer ? 'wrong' : 'unattempted',
-        isFromMock: isMock,
-        classifiedAt: new Date().toISOString()
-      };
-      const qNorm = getDedupeKey(q.question);
-      if (qNorm) {
-        rcaStore[qNorm] = rcaStore[qId];
-      }
-    }
-    safeStorage.setItem('cgl_rca_global_store', JSON.stringify(rcaStore));
-  } catch (err) {
-    console.warn('[mistakeRecorder] Error updating rca global store:', err);
-  }
-
-  // 4. Background sync to Firestore if user is authenticated
+  // 5. Background sync to Firestore if user is authenticated
   if (effectiveUid) {
     try {
       for (const m of newMistakes) {
@@ -301,7 +442,7 @@ export function recordQuizMistakes(
     }
   }
 
-  // 5. Notify the rest of the application
+  // 6. Notify the rest of the application
   try {
     window.dispatchEvent(new CustomEvent('cgl_mistakes_updated', {
       detail: { count: newMistakes.length, mistakes: newMistakes }
@@ -312,8 +453,9 @@ export function recordQuizMistakes(
 }
 
 /**
- * Scans all available local and remote sources to auto-recover mistakes
- * from previously submitted quizzes (ensuring past phone/desktop quizzes aren't lost)
+ * Scans local and remote sources to auto-recover mistakes.
+ * STRICTLY excludes Full Mock, Sectional Mock, and Review items.
+ * Removes duplicates and ensures distinct questions are never lost.
  */
 export async function autoRecoverMistakesFromStorage(
   userUid?: string
@@ -321,7 +463,9 @@ export async function autoRecoverMistakesFromStorage(
   const mergedMap = new Map<string, RecordedMistake>();
   const addMistake = (m: RecordedMistake | null) => {
     if (!m || isSpeedLabQuestion(m)) return;
-    const k = getDedupeKey(m.question, m.id);
+    if (isFullOrSectionalMockItem(m)) return; // Exclude mock/sectional items
+
+    const k = getDedupeKey(m.question, m.id, m.options);
     if (!k) return;
     if (mergedMap.has(k)) {
       const ex = mergedMap.get(k)!;
@@ -357,39 +501,7 @@ export async function autoRecoverMistakesFromStorage(
     }
   } catch {}
 
-  // 3. Scan cgl_rca_global_store
-  try {
-    const raw = safeStorage.getItem('cgl_rca_global_store');
-    if (raw) {
-      const rcaStore = JSON.parse(raw);
-      if (rcaStore && typeof rcaStore === 'object') {
-        for (const item of Object.values(rcaStore) as any[]) {
-          if (!item || !item.questionText) continue;
-          if (item.isCorrect === true || item.status === 'Correct') continue;
-          const opts = extractOptionsArray(item.options);
-          const correctIdx = extractCorrectOptionIndex(item.answer, opts.length || 4);
-          const m: RecordedMistake = {
-            id: item.id || `rca_${Date.now()}`,
-            userId: userUid || 'guest',
-            question: item.questionText,
-            options: opts,
-            correctOptionIndex: correctIdx,
-            explanation: item.solution || item.explanation || '',
-            subject: normalizeSubject(item.subject),
-            topic: item.topic || item.mockTitle || 'Practice',
-            topicSlug: (item.topic || 'practice').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-            source: item.isFromMock ? 'website_mock' : 'website_quiz',
-            timestamp: item.classifiedAt ? new Date(item.classifiedAt).getTime() : Date.now(),
-            wrongCount: 1,
-            mastered: false
-          };
-          addMistake(m);
-        }
-      }
-    }
-  } catch {}
-
-  // 4. Scan local quiz results caches
+  // 3. Scan local quiz results caches (ONLY chapterBank and mockErrors drills, NEVER full/sectional mocks)
   const cacheKeys = [
     'guest_results',
     'cgl_user_results_cache_guest',
@@ -404,6 +516,10 @@ export async function autoRecoverMistakesFromStorage(
         const results = JSON.parse(raw);
         if (Array.isArray(results)) {
           for (const res of results) {
+            // Strictly exclude full and sectional mocks
+            if (isFullOrSectionalMock(res)) continue;
+            if (res.category !== 'chapterBank' && res.category !== 'mockErrors') continue;
+
             if (res && Array.isArray(res.questionDetails)) {
               for (const d of res.questionDetails) {
                 if (d && !d.isCorrect && d.question) {
@@ -418,7 +534,7 @@ export async function autoRecoverMistakesFromStorage(
     } catch {}
   }
 
-  // 5. Firestore user_mistakes collection
+  // 4. Firestore user_mistakes collection
   const effectiveUid = userUid || (auth.currentUser ? auth.currentUser.uid : undefined);
   if (effectiveUid) {
     try {
@@ -432,41 +548,20 @@ export async function autoRecoverMistakesFromStorage(
     } catch {}
   }
 
-  // 6. Filter out deleted questions
-  let deletedIds = new Set<string>();
-  try {
-    const delRaw = safeStorage.getItem('cgl_deleted_question_ids');
-    if (delRaw) {
-      const arr = JSON.parse(delRaw);
-      if (Array.isArray(arr)) arr.forEach(id => deletedIds.add(String(id).toLowerCase()));
-    }
-  } catch {}
-
+  // 5. Build final list, excluding speed lab questions and mock tests
   const finalList = Array.from(mergedMap.values()).filter(item => {
     if (isSpeedLabQuestion(item)) return false;
-    if (item.id && deletedIds.has(item.id.toLowerCase())) return false;
-    if (item.question && deletedIds.has(item.question.trim().toLowerCase())) return false;
+    if (isFullOrSectionalMockItem(item)) return false;
     return true;
   });
 
   finalList.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
-  // Persist back to storage so it stays cached
-  if (finalList.length > 0) {
-    try {
-      safeStorage.setItem(MISTAKE_NOTEBOOK_KEY, JSON.stringify(finalList));
-      safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(finalList));
-    } catch {}
-
-    if (effectiveUid) {
-      try {
-        for (const m of finalList) {
-          const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}`;
-          setDoc(doc(db, `user_mistakes_${effectiveUid}`, docId), m, { merge: true }).catch(() => {});
-        }
-      } catch {}
-    }
-  }
+  // Persist cleaned list back to storage so corrupt mock/sectional entries are purged
+  try {
+    safeStorage.setItem(MISTAKE_NOTEBOOK_KEY, JSON.stringify(finalList));
+    safeStorage.setItem(SYNCED_STORAGE_KEY, JSON.stringify(finalList));
+  } catch {}
 
   return finalList;
 }
