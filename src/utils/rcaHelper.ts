@@ -340,32 +340,47 @@ export async function syncRcaToFirestore(globalStore: Record<string, any>): Prom
   }
 }
 
+let firestoreSynced = false;
+let firestoreSyncPromise: Promise<Record<string, any>> | null = null;
+
 /**
  * Pulls user RCA classifications from Firestore and merges with local store.
+ * Guaranteed to execute at most once per session or auth change.
  */
 export async function syncRcaFromFirestore(): Promise<Record<string, any>> {
   if (!auth.currentUser) return getGlobalRcaStore();
-  try {
-    const userDocRef = doc(db, 'user_rca', auth.currentUser.uid);
-    const snap = await getDoc(userDocRef);
-    if (snap.exists()) {
-      const data = snap.data();
-      const firestoreStore = data?.store;
-      if (firestoreStore && typeof firestoreStore === 'object' && Object.keys(firestoreStore).length > 0) {
-        const current = getGlobalRcaStore();
-        const merged = { ...firestoreStore, ...current };
-        safeStorage.setItem('cgl_rca_global_store', JSON.stringify(merged));
-        setIdbKey('cgl_rca_global_store', merged).catch(() => {});
-        if (typeof window !== 'undefined') {
-          window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { firestoreSynced: true } }));
+  if (firestoreSynced) return getGlobalRcaStore();
+  if (firestoreSyncPromise) return firestoreSyncPromise;
+
+  firestoreSyncPromise = (async () => {
+    try {
+      const userDocRef = doc(db, 'user_rca', auth.currentUser!.uid);
+      const snap = await getDoc(userDocRef);
+      firestoreSynced = true;
+      if (snap.exists()) {
+        const data = snap.data();
+        const firestoreStore = data?.store;
+        if (firestoreStore && typeof firestoreStore === 'object' && Object.keys(firestoreStore).length > 0) {
+          const current = getGlobalRcaStore();
+          const merged = { ...firestoreStore, ...current };
+          safeStorage.setItem('cgl_rca_global_store', JSON.stringify(merged));
+          setIdbKey('cgl_rca_global_store', merged).catch(() => {});
+          if (typeof window !== 'undefined') {
+            window.dispatchEvent(new CustomEvent('cgl_rca_updated', { detail: { firestoreSynced: true } }));
+          }
+          return merged;
         }
-        return merged;
       }
+    } catch (err) {
+      console.warn('[rcaHelper] Failed to load RCA from Firestore:', err);
+      firestoreSynced = true;
+    } finally {
+      firestoreSyncPromise = null;
     }
-  } catch (err) {
-    console.warn('[rcaHelper] Failed to load RCA from Firestore:', err);
-  }
-  return getGlobalRcaStore();
+    return getGlobalRcaStore();
+  })();
+
+  return firestoreSyncPromise;
 }
 
 /**
@@ -373,7 +388,6 @@ export async function syncRcaFromFirestore(): Promise<Record<string, any>> {
  */
 export async function initGlobalRcaStoreFromIdb(): Promise<Record<string, any>> {
   if (idbHydrated) {
-    syncRcaFromFirestore().catch(() => {});
     return getGlobalRcaStore();
   }
   try {
@@ -396,9 +410,6 @@ export async function initGlobalRcaStoreFromIdb(): Promise<Record<string, any>> 
 }
 
 export async function loadBundledMockRcaMap(): Promise<Record<string, RCAClassification>> {
-  // Concurrently ensure IDB store is hydrated
-  initGlobalRcaStoreFromIdb().catch(() => {});
-
   if (bundledRcaCache) return bundledRcaCache;
   if (bundledRcaPromise) return bundledRcaPromise;
 

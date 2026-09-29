@@ -285,9 +285,18 @@ export default function App() {
 
   useEffect(() => {
     loadBundledMockRcaMap();
-    const handleRcaUpdated = () => setRcaVersion(v => v + 1);
+    let debounceTimer: any;
+    const handleRcaUpdated = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        setRcaVersion(v => v + 1);
+      }, 300);
+    };
     window.addEventListener('cgl_rca_updated', handleRcaUpdated);
-    return () => window.removeEventListener('cgl_rca_updated', handleRcaUpdated);
+    return () => {
+      clearTimeout(debounceTimer);
+      window.removeEventListener('cgl_rca_updated', handleRcaUpdated);
+    };
   }, []);
 
   // Mock Error Test Scope Filter: 'all' (combined) | 'full' (full tests) | 'sectional' (sectional tests)
@@ -311,7 +320,7 @@ export default function App() {
   const [setPickerModal, setSetPickerModal] = useState<SetPickerModalData | null>(null);
   const [selectedCheatSheet, setSelectedCheatSheet] = useState<Chapter | null>(null);
 
-  // Bundled full mock questions dynamically loaded for unified error aggregation
+  // Bundled full mock questions dynamically loaded once on mount for unified error aggregation
   const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
 
   useEffect(() => {
@@ -320,7 +329,7 @@ export default function App() {
       if (active) setBundledMockQuestions(all);
     });
     return () => { active = false; };
-  }, [rcaVersion]);
+  }, []);
 
   // Resets all home/chapter navigation state and returns to home view
   const resetToHome = useCallback(() => {
