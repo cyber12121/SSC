@@ -68,8 +68,14 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
           const tB = b.completedAt ? new Date(b.completedAt).getTime() : 0;
           return (isNaN(tB) ? 0 : tB) - (isNaN(tA) ? 0 : tA);
         }
-        const accA = a.totalQuestions > 0 ? a.score / a.totalQuestions : 0;
-        const accB = b.totalQuestions > 0 ? b.score / b.totalQuestions : 0;
+        const getAccuracy = (r: QuizResult) => {
+          const attempted = r.questionDetails && r.questionDetails.length > 0
+            ? r.questionDetails.filter(qd => Boolean(qd.selectedAnswer && qd.selectedAnswer !== '' && qd.selectedAnswer !== 'unattempted')).length
+            : r.totalQuestions;
+          return attempted > 0 ? r.score / attempted : 0;
+        };
+        const accA = getAccuracy(a);
+        const accB = getAccuracy(b);
         if (dashSort === 'accuracy-desc') return accB - accA;
         if (dashSort === 'accuracy-asc') return accA - accB;
         return 0;
@@ -432,8 +438,11 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                 {filteredUserResults.map((result, idx) => {
                   const theme = getSubjectTheme(result.subject);
                   const Icon = theme.icon;
-                  const accuracyRate = result.totalQuestions > 0
-                    ? Math.round((result.score / result.totalQuestions) * 100)
+                  const attemptedCount = result.questionDetails && result.questionDetails.length > 0
+                    ? result.questionDetails.filter(qd => Boolean(qd.selectedAnswer && qd.selectedAnswer !== '' && qd.selectedAnswer !== 'unattempted')).length
+                    : result.totalQuestions;
+                  const accuracyRate = attemptedCount > 0
+                    ? Math.round((result.score / attemptedCount) * 100)
                     : 0;
                   const avgQ = result.totalQuestions > 0
                     ? Math.round(result.totalTime / result.totalQuestions)

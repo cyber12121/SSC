@@ -1511,8 +1511,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         return;
       }
 
-      // RCA Hotkeys with Alt key (Alt + C, Alt + S, Alt + T, Alt + G) to prevent accidental typing misclassifications
-      if (e.altKey) {
+      // RCA Hotkeys: Direct keys (C, S, T, G, X) or with Alt key
+      if (!e.ctrlKey && !e.metaKey) {
         if (key === 'c') {
           e.preventDefault();
           handleSelectRcaTag('C');
@@ -2407,10 +2407,10 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
         {/* RIGHT COLUMN: Sidebar (Candidate Info, Legend, Speed Indicators, Question Palette) */}
         {sidebarOpen && (
-          <aside className="fixed inset-y-0 right-0 z-50 w-[85vw] max-w-[340px] shadow-2xl lg:shadow-none lg:static lg:z-auto lg:w-80 bg-[#e1f5fe] border-l border-blue-200 flex flex-col shrink-0 h-full overflow-hidden transition-all select-none animate-in slide-in-from-right lg:animate-none duration-200">
+          <aside className="fixed inset-y-0 right-0 z-50 w-[85vw] max-w-[340px] shadow-2xl lg:shadow-none lg:static lg:z-auto lg:w-80 bg-white border-l border-gray-200 flex flex-col shrink-0 h-full overflow-hidden transition-all select-none animate-in slide-in-from-right lg:animate-none duration-200">
             
             {/* User Profile & Filter Header */}
-            <div className="p-3.5 border-b border-blue-200/80 bg-white/70 flex items-center justify-between shrink-0">
+            <div className="p-3 border-b border-gray-200 bg-slate-50 flex items-center justify-between shrink-0">
               <div className="flex items-center space-x-2.5 min-w-0 pr-2">
                 <div className="w-8 h-8 rounded-full bg-[#00bcd4] text-white flex items-center justify-center font-bold text-xs shadow-sm shrink-0">
                   <User className="w-4 h-4" />
@@ -2530,66 +2530,66 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           </div>
 
             {/* Legend / Status Row (Section & Overall) - Interactive Filters */}
-            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 flex items-center gap-x-2 text-xs shrink-0 flex-wrap gap-y-1.5">
+            <div className="px-3 py-2 border-b border-gray-200 bg-slate-50/70 flex items-center gap-x-2 text-xs shrink-0 flex-wrap gap-y-1.5">
               <button
                 type="button"
                 onClick={() => setSelectedFilter(prev => prev === 'correct' ? 'all' : 'correct')}
-                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
-                  selectedFilter === 'correct' ? 'bg-green-100 ring-1 ring-green-600 font-bold' : 'hover:bg-white/80'
+                className={`flex items-center space-x-1.5 px-2 py-1 rounded-[3px] cursor-pointer transition-all ${
+                  selectedFilter === 'correct' ? 'bg-emerald-50 ring-1 ring-emerald-600 font-bold' : 'hover:bg-white'
                 }`}
                 title={`Filter Correct (Section: ${sectionCorrectCount} | Overall: ${correctCount})`}
               >
-                <span className="w-5 h-5 rounded-full bg-[#2e7d32] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
+                <span className="w-4 h-3.5 rounded-[2px] bg-emerald-600 text-white flex items-center justify-center font-bold text-[9px] shadow-2xs">
                   {sectionCorrectCount}
                 </span>
-                <span className="text-gray-700 font-medium text-[11px]">Correct</span>
+                <span className="text-gray-700 font-semibold text-[11px]">Correct</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => setSelectedFilter(prev => prev === 'slow' ? 'all' : 'slow')}
-                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
-                  selectedFilter === 'slow' ? 'bg-amber-100 ring-1 ring-amber-600 font-bold' : 'hover:bg-white/80'
+                className={`flex items-center space-x-1.5 px-2 py-1 rounded-[3px] cursor-pointer transition-all ${
+                  selectedFilter === 'slow' ? 'bg-amber-50 ring-1 ring-amber-600 font-bold' : 'hover:bg-white'
                 }`}
                 title={`Filter Slow (Section: ${sectionSlowCount} | Overall: ${slowCount})`}
               >
-                <span className="w-5 h-5 rounded-full bg-[#ef6c00] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
+                <span className="w-4 h-3.5 rounded-[2px] bg-amber-500 text-white flex items-center justify-center font-bold text-[9px] shadow-2xs">
                   {sectionSlowCount}
                 </span>
-                <span className="text-gray-700 font-medium text-[11px]">Slow</span>
+                <span className="text-gray-700 font-semibold text-[11px]">Slow</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => setSelectedFilter(prev => prev === 'unattempted' ? 'all' : 'unattempted')}
-                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
-                  selectedFilter === 'unattempted' ? 'bg-gray-200 ring-1 ring-gray-600 font-bold' : 'hover:bg-white/80'
+                className={`flex items-center space-x-1.5 px-2 py-1 rounded-[3px] cursor-pointer transition-all ${
+                  selectedFilter === 'unattempted' ? 'bg-slate-100 ring-1 ring-slate-500 font-bold' : 'hover:bg-white'
                 }`}
                 title={`Filter Skipped (Section: ${sectionUnattemptedCount} | Overall: ${unattemptedCount})`}
               >
-                <span className="w-5 h-5 rounded-full bg-white border-2 border-gray-500 text-gray-900 flex items-center justify-center font-bold text-[10px] shadow-sm">
+                <span className="w-4 h-3.5 rounded-[2px] bg-slate-100 border border-slate-300 text-slate-800 flex items-center justify-center font-bold text-[9px] shadow-2xs">
                   {sectionUnattemptedCount}
                 </span>
-                <span className="text-gray-700 font-medium text-[11px]">Skipped</span>
+                <span className="text-gray-700 font-semibold text-[11px]">Skipped</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => setSelectedFilter(prev => prev === 'incorrect' ? 'all' : 'incorrect')}
-                className={`flex items-center space-x-1 px-1.5 py-0.5 rounded cursor-pointer transition-all ${
-                  selectedFilter === 'incorrect' ? 'bg-red-100 ring-1 ring-red-600 font-bold' : 'hover:bg-white/80'
+                className={`flex items-center space-x-1.5 px-2 py-1 rounded-[3px] cursor-pointer transition-all ${
+                  selectedFilter === 'incorrect' ? 'bg-rose-50 ring-1 ring-rose-600 font-bold' : 'hover:bg-white'
                 }`}
                 title={`Filter Incorrect (Section: ${sectionWrongCount} | Overall: ${wrongCount})`}
               >
-                <span className="w-5 h-5 rounded-full bg-[#c62828] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
+                <span className="w-4 h-3.5 rounded-[2px] bg-rose-600 text-white flex items-center justify-center font-bold text-[9px] shadow-2xs">
                   {sectionWrongCount}
                 </span>
-                <span className="text-gray-700 font-medium text-[11px]">Incorrect</span>
+                <span className="text-gray-700 font-semibold text-[11px]">Incorrect</span>
               </button>
             </div>
 
             {/* SPEED INDICATORS Section */}
-            <div className="px-3 py-2.5 border-b border-blue-200/80 bg-white/40 shrink-0">
+            <div className="px-3 py-2 border-b border-gray-200 bg-white shrink-0">
               <div className="text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-2">
                 SPEED INDICATORS
               </div>
@@ -2783,20 +2783,20 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
             {/* Question Palette Grid (Section-Wise) */}
             <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
                 {filteredIndices.map(idx => {
                   const localNumber = activeIndices.indexOf(idx) + 1;
                   const status = getQuestionStatus(idx);
                   const isCurrent = currentIdx === idx;
                   const qRca = rcaMap[idx] || items[idx]?.rca || items[idx]?.question?.rca;
                   
-                  let badgeStyle = "bg-white border-2 border-gray-400 text-gray-800";
+                  let tileStyle = "bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200";
                   if (status === 'correct') {
-                    badgeStyle = "bg-[#2e7d32] text-white border-transparent";
+                    tileStyle = "bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs";
                   } else if (status === 'slow') {
-                    badgeStyle = "bg-[#ef6c00] text-white border-transparent";
+                    tileStyle = "bg-amber-500 text-white hover:bg-amber-600 shadow-2xs";
                   } else if (status === 'wrong') {
-                    badgeStyle = "bg-[#c62828] text-white border-transparent";
+                    tileStyle = "bg-rose-600 text-white hover:bg-rose-700 shadow-2xs";
                   }
 
                   return (
@@ -2809,13 +2809,13 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         }
                       }}
                       title={`Question ${localNumber} of ${activeSection.label} (Overall #${idx + 1}) - ${status}${qRca ? ` [RCA: ${qRca.tag} - ${qRca.tagName}]` : ''}`}
-                      className={`relative w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all shadow-sm ${badgeStyle} ${
-                        isCurrent ? 'ring-2 ring-[#0097a7] ring-offset-1 scale-110 z-10 shadow-md' : 'hover:opacity-80 hover:scale-105'
+                      className={`relative w-9 h-8 sm:w-10 sm:h-8 rounded-[3px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-all shadow-2xs ${tileStyle} ${
+                        isCurrent ? 'ring-2 ring-indigo-600 ring-offset-1 scale-105 z-10 font-black shadow-xs' : 'hover:opacity-90 hover:scale-102'
                       }`}
                     >
-                      {activeSectionId === 'all' ? idx + 1 : localNumber}
+                      <span className="leading-none">{activeSectionId === 'all' ? idx + 1 : localNumber}</span>
                       {qRca ? (
-                        <span className={`absolute -top-1 -right-1 w-4 h-4 rounded-full text-[9px] font-mono font-black flex items-center justify-center shadow-xs border border-white ${
+                        <span className={`absolute -top-1.5 -right-1.5 min-w-4 h-4 px-0.5 rounded-full text-[9px] font-mono font-black flex items-center justify-center shadow-xs border border-white ${
                           qRca.tag === 'C' ? 'bg-purple-600 text-white' :
                           (qRca.tag === 'S' || (qRca.tag as any) === 'A') ? 'bg-rose-600 text-white' :
                           qRca.tag === 'T' ? 'bg-amber-500 text-white' :
@@ -2825,7 +2825,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                         </span>
                       ) : (status === 'wrong' || status === 'slow') && (
                         <span
-                          className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 border border-white shadow-2xs animate-pulse"
+                          className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-amber-400 border border-white shadow-2xs animate-pulse"
                           title="Needs RCA Tag"
                         />
                       )}
@@ -2836,16 +2836,16 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
 
             {/* Bottom Actions of Sidebar */}
-            <div className="p-3 border-t border-blue-200/80 bg-white/70 grid grid-cols-2 gap-2 shrink-0">
+            <div className="p-3 border-t border-gray-200 bg-slate-50 grid grid-cols-2 gap-2 shrink-0">
               <button
                 onClick={() => setShowQuestionPaper(true)}
-                className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] text-xs font-bold py-2 rounded text-center transition-colors shadow-xs"
+                className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold py-2 rounded text-center transition-colors shadow-2xs cursor-pointer"
               >
                 Question Paper
               </button>
               <button
                 onClick={() => setShowSummaryModal(true)}
-                className="bg-[#b3e5fc] hover:bg-[#81d4fa] text-[#01579b] text-xs font-bold py-2 rounded text-center transition-colors shadow-xs"
+                className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold py-2 rounded text-center transition-colors shadow-2xs cursor-pointer"
               >
                 Summary
               </button>

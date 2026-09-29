@@ -721,63 +721,75 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       completedAt: new Date().toISOString()
     };
 
+    const sscMarks = Math.round(((score * 2) - (wrong * 0.5)) * 10) / 10;
+    const maxMarks = totalQuestions * 2;
+    const isMockOrDrill = mode === 'mock' || category === 'mockErrors' || (chapter.chapter_title && /mock/i.test(chapter.chapter_title));
+
     return (
       <div className="flex items-center justify-center min-h-screen p-4 bg-[#f4f7f9]">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200"
+          className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center border border-slate-200"
         >
-          <div className="w-16 h-16 bg-cyan-50 text-[#0097a7] rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
+          <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-indigo-100">
             <Trophy className="w-8 h-8" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-1">
+          <h2 className="text-2xl font-bold text-slate-900 mb-1">
             {mode === 'practice' ? 'Practice Session Completed!' : 'Test Submitted!'}
           </h2>
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-slate-500 text-xs sm:text-sm mb-6">
             {mode === 'practice' ? 'You practiced ' : 'You completed '}
-            <span className="font-semibold text-gray-700">{chapter.chapter_title}</span>
+            <span className="font-semibold text-slate-800">{chapter.chapter_title}</span>
           </p>
 
-          <div className="grid grid-cols-2 gap-3 mb-6 text-left">
-            <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
-              <span className="text-xs font-semibold text-emerald-700 uppercase">Correct</span>
+          <div className={`grid ${isMockOrDrill ? 'grid-cols-2 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-4'} gap-2.5 mb-6 text-left`}>
+            {isMockOrDrill && (
+              <div className="bg-indigo-50/80 p-3.5 rounded-xl border border-indigo-100 col-span-2 sm:col-span-1">
+                <span className="text-[11px] font-bold text-indigo-700 uppercase tracking-wide">SSC CGL Score</span>
+                <div className="text-2xl font-black text-indigo-950 mt-1">
+                  {sscMarks} <span className="text-xs font-semibold text-indigo-500">/ {maxMarks}</span>
+                </div>
+              </div>
+            )}
+            <div className="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-100">
+              <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wide">Correct</span>
               <div className="text-2xl font-bold text-emerald-800 mt-1">{score}/{totalQuestions}</div>
             </div>
-            <div className="bg-red-50 p-4 rounded-xl border border-red-100">
-              <span className="text-xs font-semibold text-red-700 uppercase">Wrong</span>
-              <div className="text-2xl font-bold text-red-800 mt-1">{wrong}</div>
+            <div className="bg-rose-50/80 p-3.5 rounded-xl border border-rose-100">
+              <span className="text-[11px] font-bold text-rose-700 uppercase tracking-wide">Wrong</span>
+              <div className="text-2xl font-bold text-rose-800 mt-1">{wrong}</div>
             </div>
-            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-              <span className="text-xs font-semibold text-blue-700 uppercase">Accuracy</span>
-              <div className="text-2xl font-bold text-blue-800 mt-1">{accuracy}%</div>
+            <div className="bg-sky-50/80 p-3.5 rounded-xl border border-sky-100">
+              <span className="text-[11px] font-bold text-sky-700 uppercase tracking-wide">Accuracy</span>
+              <div className="text-2xl font-bold text-sky-800 mt-1">{accuracy}%</div>
             </div>
-            <div className="bg-purple-50 p-4 rounded-xl border border-purple-100">
-              <span className="text-xs font-semibold text-purple-700 uppercase">Total Time</span>
+            <div className="bg-purple-50/80 p-3.5 rounded-xl border border-purple-100">
+              <span className="text-[11px] font-bold text-purple-700 uppercase tracking-wide">Total Time</span>
               <div className="text-xl font-bold text-purple-800 mt-1">{Math.floor(totalTime / 60)}m {totalTime % 60}s</div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {onReviewAttempt && (
               <button
                 onClick={() => onReviewAttempt(activeResult)}
-                className="py-3 bg-[#0097a7] hover:bg-[#00838f] text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
+                className="py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center justify-center shadow-md cursor-pointer hover:shadow-lg"
               >
-                <BookOpen className="w-4 h-4 mr-2" />Review Questions
+                <BookOpen className="w-4 h-4 mr-2" />Review Solutions
               </button>
             )}
             <button
               onClick={handleReattempt}
-              className="py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
+              className="py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center justify-center border border-slate-200 cursor-pointer"
             >
               <RotateCcw className="w-4 h-4 mr-2" />Reattempt
             </button>
             <button
               onClick={onExit}
-              className="py-3 bg-slate-800 hover:bg-black text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
+              className="py-3 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs sm:text-sm rounded-xl transition-all flex items-center justify-center shadow cursor-pointer"
             >
-              <CornerDownLeft className="w-4 h-4 mr-2" />Back to Chapters
+              <CornerDownLeft className="w-4 h-4 mr-2" />Exit to Menu
             </button>
           </div>
         </motion.div>

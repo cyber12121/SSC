@@ -164,7 +164,12 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
   });
 
   const activeSubjects = Object.keys(subjectGroups).filter(k => subjectGroups[k].length > 0);
-  const isFullMock = activeSubjects.length >= 2 || rawList.length >= 70;
+  const isErrorDrill = Boolean(
+    (mockTitle && /error|drill|mistake|practice|remediation/i.test(mockTitle)) ||
+    rawList.some(q => q.source === 'mock_errors' || q.source === 'chapter_bank') ||
+    rawList.length < 50
+  );
+  const isFullMock = !isErrorDrill && (rawList.length >= 70 || (activeSubjects.length === 4 && rawList.length >= 50));
   const mockType: 'full' | 'sectional' = isFullMock ? 'full' : 'sectional';
 
   const sections: {
@@ -205,8 +210,8 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     });
 
     const standardTotal = 25;
-    // Only infer missing correct questions for a full 100-question mock attempt
-    if (isFullMock && (!hasExplicitCorrect || qList.length < standardTotal)) {
+    // Only infer missing correct questions for a true full 100-question mock attempt without explicit correct status
+    if (isFullMock && !isErrorDrill && !hasExplicitCorrect && qList.length < standardTotal) {
       correct = Math.max(0, standardTotal - wrong - unattempted);
     }
 
