@@ -578,21 +578,27 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const currentNormalizedOptions = useMemo(() => getNormalizedOptions(currentQuestion), [currentQuestion]);
   const isSolutionOpen = showSolutionMap[currentIdx] ?? (answers[currentIdx] !== undefined);
 
-  // Auto-scroll solution into view within the left scroll container
+  // Scroll to top of question when question changes
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) container.scrollTop = 0;
+  }, [currentIdx]);
+
+  // Auto-scroll solution fully into view — scroll to container bottom since solution is always last
   useEffect(() => {
     if (!isSolutionOpen) return;
-    setTimeout(() => {
-      const sol = solutionRef.current;
+    const scrollToBottom = () => {
       const container = scrollContainerRef.current;
-      if (!sol || !container) return;
-      const containerRect = container.getBoundingClientRect();
-      const solRect = sol.getBoundingClientRect();
-      // If solution bottom is below the visible area of the container, scroll it in
-      if (solRect.bottom > containerRect.bottom - 8) {
-        container.scrollTop += solRect.bottom - containerRect.bottom + 24;
-      }
-    }, 160);
+      if (!container) return;
+      container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+    };
+    // First attempt: after animation starts (250ms)
+    const t1 = setTimeout(scrollToBottom, 250);
+    // Second attempt: after SolutionViewer fully renders LaTeX (700ms)
+    const t2 = setTimeout(scrollToBottom, 700);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [isSolutionOpen, currentIdx]);
+
 
   const getFormattedSolution = () => {
     const sol = currentQuestion?.solution || (currentQuestion as any)?.explanation || (currentQuestion as any)?.sol || (currentQuestion as any)?.detailedSolution;
