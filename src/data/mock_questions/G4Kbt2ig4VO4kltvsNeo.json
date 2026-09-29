@@ -1,7 +1,7 @@
 [
   {
     "subject": "Mathematics",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nWe need to find the value of $x/y + y/x$, which simplifies to $(x^2 + y^2) ÷ xy$.\n\nUsing the identity: $x^2 + y^2 = (x + y)^2 - 2xy$\nSubstitute the given values ($x + y = 12$, $xy = 6$) directly into the combined formula.\nRequired value = $(12^2 - 2 × 6) ÷ 6 = (144 - 12) ÷ 6$.\nRequired value = $132 ÷ 6 = 22$.\n∴ The correct answer is 22.\n\nAlternate Method\nGiven:\n$x + y = 12$\n$xy = 6$\n\nFormula Used:\n$(x + y)^2 = x^2 + y^2 + 2xy$\n\nCalculations:\n⇒ $(12)^2 = x^2 + y^2 + 2 × 6$\n⇒ $144 = x^2 + y^2 + 12$\n⇒ $x^2 + y^2 = 144 - 12$\n⇒ $x^2 + y^2 = 132$\nNow, we need to find the value of the given expression:\n⇒ $x/y + y/x = (x^2 + y^2) ÷ xy$\n⇒ $x/y + y/x = 132 ÷ 6$\n⇒ $x/y + y/x = 22$\n∴ The correct answer is 22.\n\nAdditional Information\nSquare of Difference\n\n$(x - y)^2 = x^2 + y^2 - 2xy$. This identity helps find the difference of variables when their sum and product are given.\nDifference of Squares\n$x^2 - y^2 = (x - y)(x + y)$. A fundamental algebraic identity used widely in factorisation and simplification.\n\nSum of Cubes\n\n$x^3 + y^3 = (x + y)(x^2 - xy + y^2)$ or equivalently, $x^3 + y^3 = (x + y)^3 - 3xy(x + y)$.",
     "rca": {
       "tag": "T",
       "tagName": "Time / Ego Trap",
@@ -63,7 +63,7 @@
       "C": "$\\frac{118}{4}$",
       "D": "$\\frac{109}{9}$"
     },
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$3m - \\frac{3}{m} = 10$\n\nFormula Used:\n$\\left(a - \\frac{1}{a}\\right)^2 = a^2 + \\frac{1}{a^2} - 2$\n\nCalculation:\nDivide the given equation by $3$:\n$\\Rightarrow m - \\frac{1}{m} = \\frac{10}{3}$\n\nSquaring both sides:\n$\\Rightarrow \\left(m - \\frac{1}{m}\\right)^2 = \\left(\\frac{10}{3}\\right)^2$\n$\\Rightarrow m^2 + \\frac{1}{m^2} - 2 = \\frac{100}{9}$\n$\\Rightarrow m^2 + \\frac{1}{m^2} = \\frac{100}{9} + 2$\n$\\Rightarrow m^2 + \\frac{1}{m^2} = \\frac{100 + 18}{9} = \\frac{118}{9}$\n\n∴ The value of $m^2 + \\frac{1}{m^2}$ is $\\frac{118}{9}$.",
     "section": "Quantitative Aptitude",
     "userAnswer": "b",
     "selectedAnswer": "b",
@@ -103,7 +103,7 @@
     },
     "question": "If $x = 3 - \\sqrt{2}$, then find the value of $3x^2 + 2x - 4$",
     "section": "part_c",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nGiven: $x = 3 - \\sqrt{2}$\n⇒ $x - 3 = -\\sqrt{2}$\nSquaring both sides:\n⇒ $(x - 3)^2 = (-\\sqrt{2})^2$\n⇒ $x^2 - 6x + 9 = 2$\n⇒ $x^2 = 6x - 7$\n\nSubstitute $x^2 = 6x - 7$ in the polynomial expression:\n⇒ $3x^2 + 2x - 4 = 3(6x - 7) + 2x - 4$\n⇒ $18x - 21 + 2x - 4 = 20x - 25$\n\nSubstitute $x = 3 - \\sqrt{2}$:\n⇒ $20(3 - \\sqrt{2}) - 25 = 60 - 20\\sqrt{2} - 25 = 35 - 20\\sqrt{2}$\n∴ The correct answer is $35 - 20\\sqrt{2}$.\n\nAlternate Method\nGiven:\n$x = 3 - \\sqrt{2}$\n\nCalculations:\n⇒ $x^2 = (3 - \\sqrt{2})^2 = 9 - 6\\sqrt{2} + 2 = 11 - 6\\sqrt{2}$\n⇒ $3x^2 = 3(11 - 6\\sqrt{2}) = 33 - 18\\sqrt{2}$\n⇒ $2x = 2(3 - \\sqrt{2}) = 6 - 2\\sqrt{2}$\n\nNow calculate $3x^2 + 2x - 4$:\n⇒ $3x^2 + 2x - 4 = (33 - 18\\sqrt{2}) + (6 - 2\\sqrt{2}) - 4$\n⇒ $(33 + 6 - 4) - (18\\sqrt{2} + 2\\sqrt{2})$\n⇒ $35 - 20\\sqrt{2}$\n∴ The correct answer is $35 - 20\\sqrt{2}$.\n\nAdditional Information\nSurd Simplification\nWhen dealing with surds of the form $x = a - \\sqrt{b}$, rearranging to $(x - a)^2 = b$ gives a quadratic relation without square roots, making polynomial reduction faster.",
     "topic": "Algebra",
     "subject": "Mathematics",
     "q_num": 3,
@@ -138,7 +138,7 @@
     },
     "subject": "Mathematics",
     "question": "If $x + \\frac{1}{x} = y + \\frac{1}{y}$, then $x = ?$:",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nGiven: $x + \\frac{1}{x} = y + \\frac{1}{y}$\n⇒ $(x - y) + \\left(\\frac{1}{x} - \\frac{1}{y}\\right) = 0$\n⇒ $(x - y) + \\frac{y - x}{xy} = 0$\n⇒ $(x - y) - \\frac{x - y}{xy} = 0$\n⇒ $(x - y)\\left(1 - \\frac{1}{xy}\\right) = 0$\n\nThis gives two solutions:\nCase 1: $x - y = 0 \\implies x = y$\nCase 2: $1 - \\frac{1}{xy} = 0 \\implies xy = 1 \\implies x = \\frac{1}{y}$\n\nTherefore, $x = y$ or $x = \\frac{1}{y}$ (i.e. $y, \\frac{1}{y}$).\n∴ The correct answer is $y, \\frac{1}{y}$.\n\nAlternate Method\nRearrange as a quadratic in $x$:\n⇒ $x^2 + 1 = x\\left(y + \\frac{1}{y}\\right)$\n⇒ $x^2 - \\left(y + \\frac{1}{y}\\right)x + 1 = 0$\n\nFactoring the quadratic:\n⇒ $(x - y)\\left(x - \\frac{1}{y}\\right) = 0$\n⇒ $x = y$ or $x = \\frac{1}{y}$\n∴ The values of $x$ are $y, \\frac{1}{y}$.\n\nAdditional Information\nSymmetry in Equations\nEquations of the form $f(x) = f(y)$ where $f(t) = t + 1/t$ naturally have symmetry: $x = y$ is always a trivial root, while the reciprocal involution gives the second root $x = 1/y$.",
     "section": "part_c",
     "topic": "Algebra",
     "options": {
@@ -172,7 +172,7 @@
     "correctOption": "D"
   },
   {
-    "solution": "",
+    "solution": "Solution\nShortcut Trick\nUsing identity: (a + b)³ + (a - b)³ = 2a(a2 + 3b2)\nSubstitute a = 5x and b = 3y: 2(5x)((5x)² + 3(3y)²)\n= 10x(25x2 + 27y2) = 250x3 + 270xy2\nComparing with 10(Cx3 + Dxy2) ⇒ C = 25, D = 27\n2√C - D = 2√25 - 27 = 10 - 27 = -17\n∴ The correct answer is -17.\n\nAlternate Method\nGiven: (5x + 3y)³ + (5x - 3y)³ = 10(Cx3 + Dxy2)\nFormula Used: (A + B)³ + (A - B)³ = 2A3 + 6AB2\n⇒ Let A = 5x and B = 3y\n⇒ LHS = 2(5x)³ + 6(5x)(3y)²\n⇒ LHS = 2(125x3) + 30x(9y2)\n⇒ LHS = 250x3 + 270xy2\n⇒ 10(Cx3 + Dxy2) = 250x3 + 270xy2\n⇒ Cx3 + Dxy2 = 25x3 + 27xy2\n⇒ C = 25 and D = 27\n⇒ Required value = 2√C - D\n⇒ 2√25 - 27 = 2 × 5 - 27\n⇒ 10 - 27 = -17\n∴ The correct answer is -17.\n\nAdditional Information\nDifference of Cubes Expansion\n(a + b)³ - (a - b)³ = 2b3 + 6a2b = 2b(b2 + 3a2)\n\nSum and Difference of Two Cubes\n\na3 + b3 = (a + b)(a2 - ab + b2) and a3 - b3 = (a - b)(a2 + ab + b2)\n\nStandard Algebraic Identity\n\n(a + b)³ = a3 + b3 + 3ab(a + b) and (a - b)³ = a3 - b3 - 3ab(a - b)",
     "question": "If \\((5x + 3y)^3 + (5x - 3y)^3 = 10(Cx^3 + Dxy^2)\\), then find the value of \\(2\\sqrt{C} - D\\) :",
     "rca": {
       "classifiedAt": "2026-09-19T14:29:16.116Z",
@@ -223,7 +223,7 @@
     "answer": "d",
     "q_num": 6,
     "subject": "Mathematics",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nFormula: $x^3 - y^3 = (x - y)[(x - y)^2 + 3xy]$\n$\\Rightarrow 316 = 4[4^2 + 3xy]$\n$\\Rightarrow 79 = 16 + 3xy$\n$\\Rightarrow 3xy = 63 \\Rightarrow xy = 21$\n\nFind two factors of 21 whose difference is 4:\n$7 \\times 3 = 21$ and $7 - 3 = 4$.\nThus, $x = 7$ and $y = 3$.\n\nNow calculate $x^2 - y^2$:\n$\\Rightarrow x^2 - y^2 = 7^2 - 3^2 = 49 - 9 = 40$\n\n∴ The correct answer is 40.",
     "topic": "Algebra",
     "question": "If $x - y = 4$ and $x^3 - y^3 = 316$, where $y > 0$, then find the value of $x^2 - y^2$:",
     "section": "Quantitative Aptitude",
@@ -276,7 +276,7 @@
       "C": "27",
       "D": "0"
     },
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nIdentify the conditional algebraic identity:\nIf $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\nRewrite the given equation:\n$\\Rightarrow x^{\\frac{1}{3}} - y^{\\frac{1}{3}} - z^{\\frac{1}{3}} = 0$\n\nLet $a = x^{\\frac{1}{3}}$, $b = -y^{\\frac{1}{3}}$, and $c = -z^{\\frac{1}{3}}$.\nThen $a + b + c = x^{\\frac{1}{3}} + (-y^{\\frac{1}{3}}) + (-z^{\\frac{1}{3}}) = 0$.\n\nApplying the identity $a^3 + b^3 + c^3 = 3abc$:\n$\\Rightarrow \\left(x^{\\frac{1}{3}}\\right)^3 + \\left(-y^{\\frac{1}{3}}\\right)^3 + \\left(-z^{\\frac{1}{3}}\\right)^3 = 3 \\cdot \\left(x^{\\frac{1}{3}}\\right) \\cdot \\left(-y^{\\frac{1}{3}}\\right) \\cdot \\left(-z^{\\frac{1}{3}}\\right)$\n$\\Rightarrow x - y - z = 3(xyz)^{\\frac{1}{3}}$\n\nCubing both sides:\n$\\Rightarrow (x - y - z)^3 = \\left[3(xyz)^{\\frac{1}{3}}\\right]^3 = 27xyz$\n\nSubtracting $27xyz$ from both sides:\n$\\Rightarrow (x - y - z)^3 - 27xyz = 0$\n\n∴ The correct answer is 0.",
     "section": "Quantitative Aptitude",
     "q_num": 7,
     "userAnswer": "",
@@ -307,7 +307,7 @@
     },
     "id": "Algebra • Set 1 (Q1-25)_8",
     "question": "What is the simplified form of the following expression? \\((x - \\frac{1}{y})^3 + (x + \\frac{1}{y})^3\\)",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nUse Algebraic Identity: (a - b)³ + (a + b)³ = 2a(a2 + 3b2).\nHere, a = x and b = 1/y.\nSubstitute: 2(x)[(x)² + 3(1/y)²].\nSimplified result: 2x(x2 + 3/y2).\n∴ The correct answer is 2x(x2 + 3/y2).\n\nAlternate Method\nGiven: (x - 1/y)³ + (x + 1/y)³\nFormula used: (a - b)³ = a3 - 3a2b + 3ab2 - b3 and (a + b)³ = a3 + 3a2b + 3ab2 + b3\n⇒ Expansion of (x - 1/y)³ = x3 - 3x2/y + 3x/y2 - 1/y3\n⇒ Expansion of (x + 1/y)³ = x3 + 3x2/y + 3x/y2 + 1/y3\n⇒ Summing both expressions: (x3 - 3x2/y + 3x/y2 - 1/y3) + (x3 + 3x2/y + 3x/y2 + 1/y3)\n⇒ Combining like terms: (x3 + x3) + (-3x2/y + 3x2/y) + (3x/y2 + 3x/y2) + (-1/y3 + 1/y3)\n⇒ Result = 2x3 + 6x/y2\n⇒ Taking 2x common: 2x(x2 + 3/y2)\n∴ The correct answer is 2x(x2 + 3/y2).\n\nAdditional Information\nCubic Identity (Difference)\n\n(a + b)³ - (a - b)³ = 2b(3a2 + b2) = 6a2b + 2b3\n\nAlgebraic Square Identities\n\n(a + b)² + (a - b)² = 2(a2 + b2) and (a + b)² - (a - b)² = 4ab\n\nSum and Difference of Cubes\n\na3 + b3 = (a + b)(a2 - ab + b2) and a3 - b3 = (a - b)(a2 + ab + b2)",
     "options": {
       "a": "\\(x(x² - \\frac{3}{y²})\\)",
       "b": "\\(-2x(x² + \\frac{3}{y²})\\)",
@@ -353,7 +353,7 @@
       "C": "2\\sqrt{2} - 4",
       "D": "4 + 2\\sqrt{2}"
     },
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nIf x + 1/x = k, then x³ + 1/x³ = k(k² - 3).\nGiven k = 1 - √2, we first find k² = (1 - √2)2 = 3 - 2√2.\nThen, k² - 3 = 3 - 2√2 - 3 = -2√2.\nNow multiply by k: (1 - √2) × (-2√2) = -2√2 + 4 = 4 - 2√2.\n∴ The correct answer is 4 - 2√2.\n\nAlternate Method\nGiven:\nx + 1/x = 1 - √2\n\nFormula Used:\n(a + b)³ = a³ + b³ + 3ab(a + b)\n⇒ x³ + 1/x³ = (x + 1/x)³ - 3(x + 1/x)\n\nCalculations:\n⇒ Let x + 1/x = k = 1 - √2\n⇒ x³ + 1/x³ = k³ - 3k = k(k² - 3)\n⇒ Now, squaring both sides of k = 1 - √2\n⇒ k² = 12 + (√2)2 - 2 × 1 × √2\n⇒ k² = 1 + 2 - 2√2 = 3 - 2√2\n⇒ Now compute the term (k² - 3):\n⇒ k² - 3 = (3 - 2√2) - 3 = -2√2\n⇒ Substitute the values back into the expression k(k² - 3):\n⇒ x³ + 1/x³ = (1 - √2) × (-2√2)\n⇒ x³ + 1/x³ = (1 × -2√2) - (√2 × -2√2)\n⇒ x³ + 1/x³ = -2√2 - (-4) = 4 - 2√2\n∴ The correct answer is 4 - 2√2.\n\nAdditional Information\nCube of a Binomial\n\nThe formula for the sum of cubes is derived from: (a + b)³ = a³ + b³ + 3ab(a + b). Rearranging this gives a³ + b³ = (a + b)³ - 3ab(a + b).\n\nAlgebraic Identities for Squares\n\nIf x + 1/x = k, then x² + 1/x² = k² - 2. This identity is extremely useful for stepping up to higher even powers directly.\n\nAlgebraic Identities for Differences\n\nIf x - 1/x = k, then the corresponding difference formulas are x³ - 1/x³ = k³ + 3k, and x² + 1/x² = k² + 2.",
     "question": "If $x + \\frac{1}{x} = 1 - \\sqrt{2}$, then find the value of $x^3 + \\frac{1}{x^3}$.",
     "topic": "Algebra",
     "subject": "Mathematics",
@@ -396,7 +396,7 @@
       "D": "1 ∶ 1"
     },
     "answer": "d",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nWe can solve this quickly by testing the given options.\n\nLet the two numbers be $x$ and $y$. The given condition is $(x + y)^2 = 4xy$.\nTesting Option 4 ($1 : 1$):\n$\\Rightarrow (1 + 1)^2 = 2^2 = 4$\nAnd $4 \\times 1 \\times 1 = 4$. Both sides are equal.\n\nNone of the other options satisfy this condition.\n∴ The correct answer is $1 : 1$.\n\nAlternate Method\nGiven:\nThe square of the sum of two numbers is equal to $4$ times their product.\nLet the two numbers be $x$ and $y$.\n\nFormula Used:\n$(a + b)^2 = a^2 + b^2 + 2ab$\n$(a - b)^2 = a^2 + b^2 - 2ab$\n\nCalculations:\n$\\Rightarrow (x + y)^2 = 4xy$\n$\\Rightarrow x^2 + y^2 + 2xy = 4xy$\n$\\Rightarrow x^2 + y^2 + 2xy - 4xy = 0$\n$\\Rightarrow x^2 + y^2 - 2xy = 0$\n$\\Rightarrow (x - y)^2 = 0$\n\nTaking the square root on both sides:\n$\\Rightarrow x - y = 0$\n$\\Rightarrow x = y$\n$\\Rightarrow \\frac{x}{y} = \\frac{1}{1}$\n$\\Rightarrow x : y = 1 : 1$\n\n∴ The correct answer is $1 : 1$.\n\nAdditional Information\nPerfect Square Identity:\nThe expression $(a - b)^2 \\ge 0$ for all real numbers. Thus $(a - b)^2 = 0 \\iff a = b$.\nDuplicate Ratio:\nThe duplicate ratio of two numbers $a$ and $b$ is $a^2 : b^2$.\nComponendo and Dividendo Rule:\nIf $\\frac{a}{b} = \\frac{c}{d}$, then $\\frac{a + b}{a - b} = \\frac{c + d}{c - d}$.",
     "question": "If the square of the sum of two numbers is equal to 4 times of their product, then the ratio of these numbers is:",
     "rca": {
       "tag": "T",
@@ -424,7 +424,7 @@
     "correctOption": "D"
   },
   {
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nAdding the given expressions directly:\n$\\Rightarrow (x^4 - xy + 2y^2) + (-x^4 + xy + 2y^2) = 4y^2$\n\nThe result is a single term with only the variable $y$.\nThus, it is a monomial and a polynomial in $y$.\n∴ The correct answer is Monomial and polynomial in y.\n\nAlternate Method\nGiven:\nFirst expression: $x^4 - xy + 2y^2$\nSecond expression: $-x^4 + xy + 2y^2$\n\nCalculations:\nSumming both expressions:\n$\\Rightarrow (x^4 - xy + 2y^2) + (-x^4 + xy + 2y^2)$\n\nGrouping like terms together:\n$\\Rightarrow (x^4 - x^4) + (-xy + xy) + (2y^2 + 2y^2)$\n$\\Rightarrow 0 + 0 + 4y^2 = 4y^2$\n\nA monomial is an algebraic expression consisting of one term.\nSince $4y^2$ contains only a single term and has only the variable $y$, it is a monomial and a polynomial in $y$.\n\n∴ The correct answer is Monomial and polynomial in y.\n\nAdditional Information\nMonomial: A polynomial with exactly one non-zero term (e.g., $3x$, $5y^2$).\nBinomial: A polynomial with exactly two non-zero terms (e.g., $x + 2$, $y^2 - 3$).\nTrinomial: A polynomial with exactly three non-zero terms (e.g., $x^2 + 2x + 1$).\nPolynomial in one variable: An algebraic expression consisting of variables with non-negative integer exponents and involving only one variable (e.g., $4y^2 + y - 2$).",
     "question": "The sum of $(x^4 - xy + 2y^2)$ and $(-x^4 + xy + 2y^2)$ is:",
     "q_num": 11,
     "section": "Quantitative Aptitude",
@@ -466,7 +466,7 @@
     "correctOption": "A"
   },
   {
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nSubstitute x = -1 in the equation: (3 - 1) × (1 + 1/3 + 13/3) + (19/3 + 1/3) = A - B + C + D\n⇒ 2 × (17/3) + 20/3 = 54/3 = 18 ⇒ A - B + C + D = 18\nSubstitute x = 0 in the equation: (-1) × (13/3) + 19/3 = D ⇒ D = 2\n⇒ Required value = (A - B + C - D) = (A - B + C + D) - 2D = 18 - 4 = 14\n∴ The correct answer is 14.\n\nAlternate Method\nGiven:\n(3x² - 1)(x² - x/3 + 13/3) + (19/3 - x/3) = Ax4 + Bx³ + Cx² + D\nMethod Used: Expand the Left Hand Side (LHS) and compare the coefficients of like powers of x with the Right Hand Side (RHS).\n\nCalculations:\n⇒ LHS = 3x2(x² - x/3 + 13/3) - 1(x² - x/3 + 13/3) + 19/3 - x/3\n⇒ LHS = 3x4 - x³ + 13x² - x² + x/3 - 13/3 + 19/3 - x/3\n⇒ LHS = 3x4 - x³ + 12x² + (x/3 - x/3) + (19/3 - 13/3)\n⇒ LHS = 3x4 - x³ + 12x² + 6/3\n⇒ LHS = 3x4 - x³ + 12x² + 2\n\nComparing this with the RHS (Ax4 + Bx³ + Cx² + D), we get:\n\n⇒ A = 3, B = -1, C = 12, D = 2\n\nWe need to find the value of (A - B + C - D):\n\n⇒ A - B + C - D = 3 - (-1) + 12 - 2\n⇒ 3 + 1 + 12 - 2 = 14\n∴ The correct answer is 14.\n\nAdditional Information\nPolynomial Identity\n\nIf two polynomials are identically equal for all values of x, then the coefficients of their corresponding terms are exactly equal.\n\nSubstitution Method\n\nBy substituting convenient values like x = 0, x = 1, or x = -1 into an identity, we can directly find the constant term, sum of coefficients, or alternating sum of coefficients without fully expanding the entire expression.",
     "question": "If \\((3 x^2-1)\\left(x^2-\\frac{1}{3} x+\\frac{13}{3}\\right)+\\left(\\frac{19}{3}-\\frac{x}{3}\\right) = Ax^4 + Bx^3 + Cx^2 + D\\), where A, B, C and D are integers, then what is the value of (A - B + C - D)?",
     "q_num": 12,
     "rca": {
@@ -520,7 +520,7 @@
     },
     "question": "If $\\left(a + \\dfrac{1}{a}\\right)^2 = 3$, find the value of $a^{218} + a^{212} + a^{24} + a^{18}$",
     "section": "Quantitative Aptitude",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nIf $\\left(a + \\dfrac{1}{a}\\right)^2 = 3$, it is a standard identity where a⁶ = -1, which means a⁶ + 1 = 0.\nWhenever a⁶ = -1, the sum of any two terms whose powers differ by exactly 6 is always 0.\nGiven expression: a²¹⁸ + a²¹² + a²⁴ + a¹⁸\n⇒ (a²¹⁸ + a²¹²) + (a²⁴ + a¹⁸)\n⇒ 0 + 0 = 0\n∴ The correct answer is 0.\n\nAlternate Method\nGiven:\n$\\left(a + \\dfrac{1}{a}\\right)^2 = 3$\n\nCalculations:\nExpanding the given equation:\n\n⇒ $a^2 + \\dfrac{1}{a^2} + 2 \\cdot a \\cdot \\dfrac{1}{a} = 3$\n⇒ $a^2 + \\dfrac{1}{a^2} = 3 - 2$\n⇒ $a^2 + \\dfrac{1}{a^2} = 1$\n\nMultiplying the entire equation by a²:\n\n⇒ a⁴ + 1 = a²\n⇒ a⁴ - a² + 1 = 0\n\nMultiplying both sides by (a² + 1):\n\n⇒ (a² + 1)(a⁴ - a² + 1) = 0\nUsing the algebraic identity x³ + y³ = (x + y)(x² - xy + y²):\n⇒ (a²)³ + (1)³ = 0\n⇒ a⁶ + 1 = 0\n⇒ a⁶ = -1\nNow, let us evaluate the given expression by grouping the terms:\n⇒ a²¹⁸ + a²¹² + a²⁴ + a¹⁸\n⇒ a²¹²(a⁶ + 1) + a¹⁸(a⁶ + 1)\nSubstituting the value of (a⁶ + 1) = 0:\n⇒ a²¹² × 0 + a¹⁸ × 0\n⇒ 0\n∴ The correct answer is 0.\n\nAdditional Information\nStandard Algebraic Identity for 3\n\nIf $x + \\dfrac{1}{x} = \\sqrt{3}$ or $\\left(x + \\dfrac{1}{x}\\right)^2 = 3$, then always remember that x⁶ = -1. This makes the sum of any two terms with a power difference of 6 equal to zero.\n\nStandard Algebraic Identity for 2\n\nIf $x + \\dfrac{1}{x} = 2$, then x = 1. If $x + \\dfrac{1}{x} = -2$, then x = -1. This is a very common substitution in simplification questions.\n\nStandard Algebraic Identity for 1\n\nIf $x + \\dfrac{1}{x} = 1$, then x³ = -1. Consequently, if $x + \\dfrac{1}{x} = -1$, then x³ = 1.",
     "topic": "Algebra",
     "rca": {
       "classifiedAt": "2026-09-19T14:31:16.070Z",
@@ -552,7 +552,7 @@
   {
     "subject": "Mathematics",
     "question": "Find the value of $k$ for which the quadratic equation $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$ has equal roots.",
-    "solution": "",
+    "solution": "Solution\n\nGiven:\nQuadratic equation: $(3k + 1)x^2 + 2(k + 1)x + 1 = 0$\nThe equation has equal roots.\n\nFormula Used:\nFor a quadratic equation $Ax^2 + Bx + C = 0$ to have equal roots, its discriminant must be zero:\n$D = B^2 - 4AC = 0$\n\nCalculations:\nHere, $A = (3k + 1)$, $B = 2(k + 1)$, and $C = 1$.\n$\\Rightarrow [2(k + 1)]^2 - 4(3k + 1)(1) = 0$\n$\\Rightarrow 4(k^2 + 2k + 1) - 4(3k + 1) = 0$\n\nDivide by 4 on both sides:\n$\\Rightarrow (k^2 + 2k + 1) - (3k + 1) = 0$\n$\\Rightarrow k^2 + 2k + 1 - 3k - 1 = 0$\n$\\Rightarrow k^2 - k = 0$\n$\\Rightarrow k(k - 1) = 0$\n\n$\\Rightarrow k = 0$ or $k = 1$\n\n∴ The values of $k$ are $k = 0$ and $k = 1$.",
     "topic": "Algebra",
     "answer": "a",
     "options": {
@@ -601,7 +601,7 @@
     "answer": "a",
     "subject": "Mathematics",
     "q_num": 15,
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$-5$ is a root of $2x^2 + px - 15 = 0$ and $p(kx^2 + x) = 0$.\n\nCalculations:\nStep 1: Find $p$:\nSince $-5$ is a root of $2x^2 + px - 15 = 0$:\n$\\Rightarrow 2(-5)^2 + p(-5) - 15 = 0$\n$\\Rightarrow 2(25) - 5p - 15 = 0$\n$\\Rightarrow 50 - 15 = 5p$\n$\\Rightarrow 35 = 5p \\Rightarrow p = 7$\n\nStep 2: Find $k$:\nSubstitute $p = 7$ and $x = -5$ into $p(kx^2 + x) = 0$:\n$\\Rightarrow 7[k(-5)^2 + (-5)] = 0$\n$\\Rightarrow 25k - 5 = 0$\n$\\Rightarrow 25k = 5 \\Rightarrow k = \\frac{5}{25} = \\frac{1}{5} = 0.2$\n\n∴ The values are $p = 7$ and $k = 0.2$.",
     "topic": "Algebra",
     "question": "If $-5$ is a root of the quadratic equation $2x^2 + px - 15 = 0$ and also of the quadratic equation $p(kx^2 + x) = 0$, then what are the values of $p$ and $k$?",
     "section": "Quantitative Aptitude",
@@ -639,7 +639,7 @@
     "id": "Algebra • Set 1 (Q1-25)_16",
     "section": "Quantitative Aptitude",
     "topic": "Algebra",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nFor infinitely many solutions, the ratio of coefficients must be equal: a1/a² = b1/b².\n\n⇒ 2 / (a - b) = 3 / (a + b)\n⇒ 2a + 2b = 3a - 3b ⇒ a = 5b\nCheck options: Only Option 4 has a = 5 and b = 1, which perfectly satisfies a = 5b.\n∴ The correct answer is a = 5, b = 1.\n\nAlternate Method\nGiven:\n2x + 3y = 7\n(a - b)x + (a + b)y = 3a + b - 2\n\nFormula Used:\nFor a system of equations to have infinitely many solutions, the ratio of their coefficients must be equal: a1 / a² = b1 / b² = c1 / c²\n\nCalculations:\n⇒ Here, a1 = 2, b1 = 3, c1 = 7\n⇒ a² = (a - b), b² = (a + b), c² = (3a + b - 2)\n⇒ 2 / (a - b) = 3 / (a + b) = 7 / (3a + b - 2)\n⇒ Equating the first two parts:\n⇒ 2 / (a - b) = 3 / (a + b)\n⇒ 2(a + b) = 3(a - b)\n⇒ 2a + 2b = 3a - 3b\n⇒ a = 5b --- (Equation 1)\n⇒ Equating the second and third parts:\n⇒ 3 / (a + b) = 7 / (3a + b - 2)\n⇒ 3(3a + b - 2) = 7(a + b)\n⇒ 9a + 3b - 6 = 7a + 7b\n⇒ 2a - 4b = 6\n⇒ a - 2b = 3 --- (Equation 2)\n⇒ Substituting a = 5b into Equation 2:\n⇒ 5b - 2b = 3\n⇒ 3b = 3 ⇒ b = 1\n⇒ Substitute b = 1 back into Equation 1:\n⇒ a = 5 × 1 = 5\n∴ The correct answer is a = 5, b = 1.\n\nAdditional Information\nUnique Solution\n\nA system of linear equations has a unique solution if the lines intersect at exactly one point. The condition is a1 / a² = ̸ b1 / b².\n\nNo Solution\n\nA system of equations has no solution if the lines are parallel and never intersect. The condition is a1 / a² = b1 / b² = ̸ c1 / c².\n\nInfinitely Many Solutions\n\nA system of equations has infinitely many solutions if the lines overlap entirely, meaning they represent the exact same line. The condition is a1 / a² = b1 / b² = c1 / c².",
     "rca": {
       "tag": "T",
       "tagName": "Time / Ego Trap",
@@ -689,7 +689,7 @@
       "D": "₹6300"
     },
     "answer": "b",
-    "solution": "",
+    "solution": "Solution\n\nShortcut Trick\nLet T and C be the original cost of a table and a chair.\nGiven: 2T + 3C = 12000 ⇒ (1) and 3(0.9T) + 4(1.2C) = 17100 ⇒ 9T + 16C = 57000 ⇒ (2)\nApplying 16 × (1) - 3 × (2): 32T - 27T = 192000 - 171000 ⇒ 5T = 21000 ⇒ T = 4200.\nSubstitute T = 4200 in (1) to get 2(4200) + 3C = 12000 ⇒ 3C = 3600 ⇒ C = 1200.\nRequired cost = 1 Table + 2 Chairs = 4200 + 2(1200) = ₹6600.\n∴ The correct answer is ₹6600.\n\nAlternate Method\nLet the original cost of a table be T and a chair be C.\n⇒ 2T + 3C = 12000 ...... (Equation 1)\nCost of a table decreased by 10% and cost of a chair increased by 20%.\n\nAccording to the new condition:\n\n⇒ 3 × (0.9T) + 4 × (1.2C) = 17100\n⇒ 2.7T + 4.8C = 17100\n\nDivide the equation by 3:\n\n⇒ 0.9T + 1.6C = 5700\n\nMultiply the equation by 10:\n\n⇒ 9T + 16C = 57000 ...... (Equation 2)\n\nMultiply Equation 1 by 16 and Equation 2 by 3:\n\n⇒ 32T + 48C = 192000\n⇒ 27T + 48C = 171000\n\nSubtract the two modified equations:\n\n⇒ 5T = 21000\n⇒ T = 4200\nSubstitute T = 4200 in Equation 1:\n⇒ 2 × 4200 + 3C = 12000\n⇒ 8400 + 3C = 12000\n⇒ 3C = 3600\n⇒ C = 1200\n\nThe total original cost of 1 table and 2 chairs:\n\n⇒ T + 2C = 4200 + 2 × 1200 = 4200 + 2400 = 6600\n∴ The correct answer is ₹6600.\n\nAdditional Information\nPercentage Change\n\nWhen a value is increased or decreased by x%, the new value becomes (1 ± x/100) × Original Value.\n\nLinear Equations in Two Variables\n\nThese can be solved using substitution, elimination, or cross - multiplication to find unique values of unknown variables.",
     "question": "2 tables and 3 chairs together cost ₹12000. When the cost of a table is decreased by 10% and that of a chair is increased by 20%, then 3 tables and 4 chairs together cost ₹17100. What is the total original cost of 1 table and 2 chairs?",
     "rca": {
       "tag": "C",
@@ -739,7 +739,7 @@
       "D": "22"
     },
     "answer": "c",
-    "solution": "",
+    "solution": "Solution\n\nFormula:\nWe know the algebraic identity:\n$a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\n\nGiven:\n$a^3 + b^3 = 407$\n$a + b = 11$\n\nCalculation:\n⇒ $407 = (11)^3 - 3ab(11)$\n⇒ $407 = 1331 - 33ab$\n⇒ $33ab = 1331 - 407$\n⇒ $33ab = 924$\n⇒ $ab = \\frac{924}{33} = 28$\n\n∴ The value of $ab$ is 28.",
     "question": "If $a^3 + b^3 = 407$ and $a + b = 11$, find the value of $ab$.",
     "userAnswer": "c",
     "selectedAnswer": "c",
@@ -761,7 +761,7 @@
   },
   {
     "question": "If $a + b = 5$ and $ab = 6$, find: $(a^3 + b^3)^2 - 9a^2b^2(a + b)^2$",
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$a + b = 5$\n$ab = 6$\n\nCalculations:\n1. Find $a^3 + b^3$:\n⇒ $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\n⇒ $a^3 + b^3 = (5)^3 - 3(6)(5) = 125 - 90 = 35$\n\n2. Find $9a^2b^2(a + b)^2$:\n⇒ $9a^2b^2(a + b)^2 = [3ab(a + b)]^2 = [3(6)(5)]^2 = (90)^2$\n\n3. Calculate the required expression:\n⇒ $(a^3 + b^3)^2 - 9a^2b^2(a + b)^2 = (35)^2 - (90)^2$\n⇒ Using identity $p^2 - q^2 = (p - q)(p + q)$:\n⇒ $(35 - 90)(35 + 90) = (-55) \\times 125 = -6875$\n\n∴ The correct answer is -6875.",
     "answer": "a",
     "options": {
       "a": "-6875",
@@ -802,7 +802,7 @@
     "correctOption": "A"
   },
   {
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$x + \\frac{1}{x} = 4$\n\nCalculations:\n1. $x^2 + \\frac{1}{x^2} = (x + \\frac{1}{x})^2 - 2 = 4^2 - 2 = 14$\n\n2. $x^4 + \\frac{1}{x^4} = (x^2 + \\frac{1}{x^2})^2 - 2 = 14^2 - 2 = 196 - 2 = 194$\n\n3. $x^6 + \\frac{1}{x^6} = (x^2 + \\frac{1}{x^2})^3 - 3(x^2 + \\frac{1}{x^2}) = 14^3 - 3(14) = 2744 - 42 = 2702$\n\n4. Substitute all values into the given expression:\n⇒ $\\left(x^6 + \\frac{1}{x^6}\\right) - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$\n⇒ $2702 - 3(194) + 4(14)$\n⇒ $2702 - 582 + 56 = 2176$\n\n∴ The correct answer is 2176.",
     "q_num": 20,
     "subject": "Mathematics",
     "question": "Given $x + \\frac{1}{x} = 4$, find the value of: $x^6 + \\frac{1}{x^6} - 3\\left(x^4 + \\frac{1}{x^4}\\right) + 4\\left(x^2 + \\frac{1}{x^2}\\right)$",
@@ -847,7 +847,7 @@
     "answer": "b",
     "subject": "Mathematics",
     "question": "Given $\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$, find the value of $x + \\frac{1}{x}$.",
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 4$\n\nCalculations:\nSquaring both sides:\n⇒ $\\left(\\sqrt{x} + \\frac{1}{\\sqrt{x}}\\right)^2 = 4^2$\n⇒ $(\\sqrt{x})^2 + \\left(\\frac{1}{\\sqrt{x}}\\right)^2 + 2\\left(\\sqrt{x}\\right)\\left(\\frac{1}{\\sqrt{x}}\\right) = 16$\n⇒ $x + \\frac{1}{x} + 2 = 16$\n⇒ $x + \\frac{1}{x} = 16 - 2 = 14$\n\n∴ The correct answer is 14.",
     "topic": "Algebra",
     "q_num": 21,
     "options": {
@@ -901,7 +901,7 @@
     "subject": "Mathematics",
     "q_num": 22,
     "answer": "b",
-    "solution": "",
+    "solution": "Solution\n\nFormula:\n$a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\n\nGiven:\n$x + \\frac{2}{x} = 7$\n\nCalculations:\nHere, $a = x$ and $b = \\frac{2}{x}$.\nProduct of the terms: $ab = x \\times \\frac{2}{x} = 2$.\n\nApplying the identity:\n⇒ $x^3 + \\frac{8}{x^3} = \\left(x + \\frac{2}{x}\\right)^3 - 3 \\left(x \\times \\frac{2}{x}\\right)\\left(x + \\frac{2}{x}\\right)$\n⇒ $x^3 + \\frac{8}{x^3} = (7)^3 - 3(2)(7)$\n⇒ $x^3 + \\frac{8}{x^3} = 343 - 42 = 301$\n\n∴ The correct answer is 301.",
     "id": "Algebra • Set 1 (Q1-25)_22",
     "question": "If $x + \\frac{2}{x} = 7$, find the value of $x^3 + \\frac{8}{x^3}$.",
     "rca": {
@@ -942,7 +942,7 @@
       "D": "2"
     },
     "topic": "Algebra",
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = \\frac{3}{1}$\n\nCalculations:\nApplying Componendo and Dividendo:\n⇒ $\\frac{(\\sqrt{5 + x} + \\sqrt{5 - x}) + (\\sqrt{5 + x} - \\sqrt{5 - x})}{(\\sqrt{5 + x} + \\sqrt{5 - x}) - (\\sqrt{5 + x} - \\sqrt{5 - x})} = \\frac{3 + 1}{3 - 1}$\n⇒ $\\frac{2\\sqrt{5 + x}}{2\\sqrt{5 - x}} = \\frac{4}{2}$\n⇒ $\\frac{\\sqrt{5 + x}}{\\sqrt{5 - x}} = 2$\n\nSquaring both sides:\n⇒ $\\frac{5 + x}{5 - x} = 4$\n⇒ $5 + x = 4(5 - x)$\n⇒ $5 + x = 20 - 4x$\n⇒ $5x = 15$\n⇒ $x = 3$\n\n∴ The value of $x$ is 3.",
     "question": "Given $\\frac{\\sqrt{5 + x} + \\sqrt{5 - x}}{\\sqrt{5 + x} - \\sqrt{5 - x}} = 3$, find the value of $x$.",
     "subject": "Mathematics",
     "id": "Algebra • Set 1 (Q1-25)_23",
@@ -976,7 +976,7 @@
     "topic": "Algebra",
     "subject": "Mathematics",
     "question": "If $\\sqrt{a} + \\sqrt{b} = 5$ and $\\sqrt{a} - \\sqrt{b} = 1$, find the values of $a$ and $b$.",
-    "solution": "",
+    "solution": "Solution\n\nGiven equations:\n1) $\\sqrt{a} + \\sqrt{b} = 5$\n2) $\\sqrt{a} - \\sqrt{b} = 1$\n\nCalculations:\nAdding equations (1) and (2):\n⇒ $(\\sqrt{a} + \\sqrt{b}) + (\\sqrt{a} - \\sqrt{b}) = 5 + 1$\n⇒ $2\\sqrt{a} = 6$\n⇒ $\\sqrt{a} = 3 \\implies a = 3^2 = 9$\n\nSubtracting equation (2) from equation (1):\n⇒ $(\\sqrt{a} + \\sqrt{b}) - (\\sqrt{a} - \\sqrt{b}) = 5 - 1$\n⇒ $2\\sqrt{b} = 4$\n⇒ $\\sqrt{b} = 2 \\implies b = 2^2 = 4$\n\n∴ The values are $a = 9$ and $b = 4$.",
     "id": "Algebra • Set 1 (Q1-25)_24",
     "rca": {
       "tag": "T",
@@ -1026,7 +1026,7 @@
       "D": "8"
     },
     "q_num": 25,
-    "solution": "",
+    "solution": "Solution\n\nMethod 1 (Inspection / Value Putting):\nGiven:\n$ab = 6$ and $a^3 + b^3 = 35$\n\nFactors of 6 are 2 and 3.\nTest $a = 3, b = 2$:\n⇒ $a^3 + b^3 = 3^3 + 2^3 = 27 + 8 = 35$ (Satisfies the condition)\n⇒ $a + b = 3 + 2 = 5$\n\nMethod 2 (Algebraic Identity):\n⇒ $a^3 + b^3 = (a + b)^3 - 3ab(a + b)$\nLet $a + b = s$:\n⇒ $35 = s^3 - 3(6)s$\n⇒ $s^3 - 18s = 35$\n⇒ For $s = 5$: $5^3 - 18(5) = 125 - 90 = 35$\n\n∴ The value of $a + b$ is 5.",
     "rca": {
       "tag": "T",
       "classifiedAt": "2026-09-19T14:30:45.423Z",

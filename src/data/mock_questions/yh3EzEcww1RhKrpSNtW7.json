@@ -7,7 +7,7 @@
       "tagName": "Silly Mistake"
     },
     "id": "Algebra • Set 2 (Q26-40)_1",
-    "solution": "",
+    "solution": "Solution\n\nGiven:\n$x = 2 + \\sqrt{3}$\n\nCalculations:\n1. Find $\\frac{1}{x}$ by rationalising the denominator:\n⇒ $\\frac{1}{x} = \\frac{1}{2 + \\sqrt{3}} \\times \\frac{2 - \\sqrt{3}}{2 - \\sqrt{3}}$\n⇒ $\\frac{1}{x} = \\frac{2 - \\sqrt{3}}{2^2 - (\\sqrt{3})^2} = \\frac{2 - \\sqrt{3}}{4 - 3} = 2 - \\sqrt{3}$\n\n2. Calculate $x - \\frac{1}{x}$:\n⇒ $x - \\frac{1}{x} = (2 + \\sqrt{3}) - (2 - \\sqrt{3})$\n⇒ $x - \\frac{1}{x} = 2 + \\sqrt{3} - 2 + \\sqrt{3} = 2\\sqrt{3}$\n\n∴ The correct answer is $2\\sqrt{3}$.",
     "answer": "a",
     "question": "If $x = 2 + \\sqrt{3}$, find the value of $x - \\frac{1}{x}$.",
     "q_num": 1,
@@ -48,7 +48,7 @@
     "answer": "a",
     "subject": "Mathematics",
     "question": "Find the value of $x$ in the given equation: $\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$",
-    "solution": "",
+    "solution": "Solution\n\nGiven equation:\n$\\frac{\\sqrt{7 + x} + \\sqrt{7 - x}}{\\sqrt{7 + x} - \\sqrt{7 - x}} = \\frac{4}{1}$\n\nCalculations:\nApplying Componendo and Dividendo:\n⇒ $\\frac{(\\sqrt{7 + x} + \\sqrt{7 - x}) + (\\sqrt{7 + x} - \\sqrt{7 - x})}{(\\sqrt{7 + x} + \\sqrt{7 - x}) - (\\sqrt{7 + x} - \\sqrt{7 - x})} = \\frac{4 + 1}{4 - 1}$\n⇒ $\\frac{2\\sqrt{7 + x}}{2\\sqrt{7 - x}} = \\frac{5}{3}$\n⇒ $\\frac{\\sqrt{7 + x}}{\\sqrt{7 - x}} = \\frac{5}{3}$\n\nSquaring both sides:\n⇒ $\\frac{7 + x}{7 - x} = \\frac{25}{9}$\n⇒ $9(7 + x) = 25(7 - x)$\n⇒ $63 + 9x = 175 - 25x$\n⇒ $9x + 25x = 175 - 63$\n⇒ $34x = 112$\n⇒ $x = \\frac{112}{34} = \\frac{56}{17}$\n\n∴ The value of $x$ is $\\frac{56}{17}$.",
     "rca": {
       "tag": "C",
       "tagName": "Conceptual Gap",
@@ -86,7 +86,7 @@
     "correctOption": "A"
   },
   {
-    "solution": "",
+    "solution": "We know that $(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$. Substituting $a = x$ and $b = 1$, we get $(x + 1)^2 + (x - 1)^2 = 2(x^2 + 1^2)$. Given $x = \\sqrt{3}$, $x^2 = 3$. Substituting this value: $2(3 + 1) = 2(4) = 8$.",
     "subject": "Mathematics",
     "question": "Given $x = \\sqrt{3}$, what is$(x + 1)^2 + (x - 1)^2$?",
     "q_num": 3,
@@ -131,7 +131,7 @@
   {
     "subject": "Mathematics",
     "question": "If $3x - ky + 8 = 0$and$9x - 18y + 20 = 0$have no solution, find$k$.",
-    "solution": "",
+    "solution": "For a pair of linear equations $a_1x + b_1y + c_1 = 0$ and $a_2x + b_2y + c_2 = 0$ to have no solution, the condition is $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$. Here, $a_1 = 3$, $b_1 = -k$, $c_1 = 8$ and $a_2 = 9$, $b_2 = -18$, $c_2 = 20$. Therefore, $\\frac{3}{9} = \\frac{-k}{-18} \\implies \\frac{1}{3} = \\frac{k}{18} \\implies 3k = 18 \\implies k = 6$.",
     "rca": {
       "tag": "C",
       "classifiedAt": "2026-09-19T14:46:25.780Z",
@@ -194,7 +194,7 @@
     "subject": "Mathematics",
     "q_num": 5,
     "question": "Simplify: $\\frac{(x + y)^3 + (y + z)^3 + (z + x)^3 - 3(x + y)(y + z)(z + x)}{x^3 + y^3 + z^3 - 3xyz}$",
-    "solution": "",
+    "solution": "The numerator is of the form $A^3 + B^3 + C^3 - 3ABC$, where $A = x + y$, $B = y + z$, $C = z + x$. This simplifies to $(A + B + C)(A^2 + B^2 + C^2 - AB - BC - CA)$. Here $A + B + C = 2(x + y + z)$. The denominator expands to $(x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx)$. A full algebraic expansion of the numerator yields $2(x^3 + y^3 + z^3 - 3xyz)$. Dividing this by the denominator leaves 2.",
     "userAnswer": "",
     "selectedAnswer": "",
     "chosenOption": "",
@@ -226,7 +226,7 @@
       "tagName": "Conceptual Gap",
       "tag": "C"
     },
-    "solution": "",
+    "solution": "The expression can be factored using the identity $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$. Here, it fits $(2x + y - 5z)^2$. Substituting the values: $(2(4) + 3 - 5(2))^2 = (8 + 3 - 10)^2 = (1)^2 = 1$.",
     "question": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$when$x = 4$,$y = 3$, and$z = 2$.",
     "options": {
       "a": "1",
@@ -280,7 +280,7 @@
     "q_num": 7,
     "answer": "a",
     "question": "If $x - y = 8$and$xy = 5$, what is the value of$x^3 - y^3 + 8(x + y)^2$?",
-    "solution": "",
+    "solution": "We need to calculate two parts: $x^3 - y^3$ and $(x+y)^2$. Using the identity $x^3 - y^3 = (x-y)[(x-y)^2 + 3xy]$, we substitute the given values: $x^3 - y^3 = 8[8^2 + 3(5)] = 8[64 + 15] = 8[79] = 632$. Next, using the identity $(x+y)^2 = (x-y)^2 + 4xy$, we get $(x+y)^2 = 8^2 + 4(5) = 64 + 20 = 84$. The full expression is $x^3 - y^3 + 8(x+y)^2 = 632 + 8(84) = 632 + 672 = 1304$.",
     "userAnswer": "a",
     "selectedAnswer": "a",
     "chosenOption": "a",
@@ -304,7 +304,7 @@
     "q_num": 8,
     "subject": "Mathematics",
     "id": "mock_q_7_mock_1789654448115_220yx",
-    "solution": "",
+    "solution": "Multiply through by $x(x+1)$: $x^2 + (x+1) = 3x(x+1) \\implies x^2 + x + 1 = 3x^2 + 3x \\implies 2x^2 + 2x - 1 = 0$. Using the quadratic formula: $x = \\frac{-2 \\pm \\sqrt{4 - 4(2)(-1)}}{2(2)} = \\frac{-2 \\pm \\sqrt{4 + 8}}{4} = \\frac{-2 \\pm \\sqrt{12}}{4} = \\frac{-1 \\pm \\sqrt{3}}{2}$. Taking the positive root: $x = \\frac{-1 + \\sqrt{3}}{2}$.",
     "question": "Solve the equation $x(x + 1) + \\frac{1}{x} = 3$to find the positive root for$x$.",
     "section": "part_c",
     "options": {
@@ -365,7 +365,7 @@
     "answer": "d",
     "subject": "Mathematics",
     "question": "If $x + y + z = 16$and$xy + yz + zx = 75$, what is the value of$x^2 + y^2 + z^2$?",
-    "solution": "",
+    "solution": "Using the identity: $(x + y + z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx)$. Substituting the given values: $(16)^2 = x^2 + y^2 + z^2 + 2(75) \\implies 256 = x^2 + y^2 + z^2 + 150 \\implies x^2 + y^2 + z^2 = 106$.",
     "q_num": 9,
     "userAnswer": "",
     "selectedAnswer": "",
@@ -388,7 +388,7 @@
   },
   {
     "q_num": 10,
-    "solution": "",
+    "solution": "When $x + y + z = 0$, then $x^3 + y^3 + z^3 = 3xyz$. Let $x = a^2 - b^2$, $y = b^2 - c^2$, and $z = c^2 - a^2$. Then $x + y + z = 0$. So the numerator becomes $3(a^2 - b^2)(b^2 - c^2)(c^2 - a^2)$. Similarly, for the denominator terms, let $p = a-b$, $q = b-c$, $r = c-a$; since $p+q+r = 0$, the sum of cubed terms inside the denominator's first factor becomes $3(a-b)(b-c)(c-a)$. Simplifying the full fractional expression yields the required ratio.",
     "question": "Simplify the expression: $\\frac{(a^2 - b^2)^3 + (b^2 - c^2)^3 + (c^2 - a^2)^3}{(a - b)^3 + (b - c)^3 + (c - a)^3(a + 3b)(b + 3c)(c + 3a)}$",
     "section": "part_c",
     "answer": "a",
@@ -430,7 +430,7 @@
     "correctOption": "A"
   },
   {
-    "solution": "",
+    "solution": "Use the identity: $m^3 - n^3 = (m - n)(m^2 + mn + n^2)$\n\n$1216 = 4(m^2 + mn + n^2)$\n\nSo $m^2 + mn + n^2 = 304$.\n\nAlso, $(m - n)^2 = m^2 - 2mn + n^2 = 16$\n\nNow subtract: $(m^2 + mn + n^2) - (m^2 - 2mn + n^2) = 304 - 16$\n\n$3mn = 288$\n\n$mn = 96$.",
     "section": "part_c",
     "id": "mock_q_11_mock_1789654448115_220yx",
     "answer": "b",
@@ -476,7 +476,7 @@
     "answer": "b",
     "question": "If $x + y = 6$and$x^2 + y^2 = 20$, then find the value of$(x^4 + x^2y^2 + y^4)$.",
     "topic": "Algebra",
-    "solution": "",
+    "solution": "$(x + y)^2 = x^2 + y^2 + 2xy$\n\n$36 = 20 + 2xy$\n\n$2xy = 16$\n\n$xy = 8$\n\nNow, $x^4 + x^2y^2 + y^4 = (x^2 + y^2)^2 - x^2y^2$\n\n$= 20^2 - 8^2$\n\n$= 400 - 64$\n\n$= 336$.",
     "options": {
       "a": "412",
       "b": "336",
@@ -538,7 +538,7 @@
     },
     "q_num": 13,
     "question": "If $(6m - 5n)^2 = 7$and$30mn = 60$, then find the value of$(6m + 5n)^2 + 16mn$.",
-    "solution": "",
+    "solution": "$(6m - 5n)^2 = 36m^2 - 60mn + 25n^2 = 7$.\n\nGiven $30mn = 60$, so $60mn = 120$.\n\nThus $36m^2 + 25n^2 = 7 + 120 = 127$.\n\nNow, $(6m + 5n)^2 + 16mn = 36m^2 + 60mn + 25n^2 + 16mn$\n\n$= (36m^2 + 25n^2) + 76mn$\n\n$= 127 + 76mn$.\n\nSince $30mn = 60$, $mn = 2$.\n\nSo $127 + 76 \\times 2 = 127 + 152 = 279$.",
     "userAnswer": "",
     "selectedAnswer": "",
     "chosenOption": "",
@@ -572,7 +572,7 @@
       "D": "-98"
     },
     "q_num": 14,
-    "solution": "",
+    "solution": "Use identity: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$\n\nHere $a = 5x$, $b = 7y$.\n\nSo quotient $= 25x^2 + 35xy + 49y^2$.\n\nComparing with $Ax^2 - By^2 + Cxy$: $A = 25$, $-B = 49 \\implies B = -49$, $C = 35$\nThen: $2A + B - C = 2(25) + (-49) - 35 = 50 - 49 - 35 = -34$.",
     "question": "If $(125x^3 - 343y^3) \\div (5x - 7y) = Ax^2 - By^2 + Cxy$, then find the value of$(2A + B - C)$.",
     "rca": {
       "tag": "C",
@@ -603,7 +603,7 @@
   },
   {
     "question": "If $x^2 + y^2 + z^2 = 2(5x + 6y + 4z) - 77$, then find the value of$2(x + y) - 3z$.",
-    "solution": "",
+    "solution": "Rearrange: $x^2 - 10x + y^2 - 12y + z^2 - 8z + 77 = 0$\n\n$(x - 5)^2 - 25 + (y - 6)^2 - 36 + (z - 4)^2 - 16 + 77 = 0$\n\n$(x - 5)^2 + (y - 6)^2 + (z - 4)^2 = 0$\n\nHence $x = 5$, $y = 6$, $z = 4$.\n\nSo $2(x + y) - 3z = 2(11) - 12 = 10$.",
     "answer": "c",
     "options": {
       "a": "11",

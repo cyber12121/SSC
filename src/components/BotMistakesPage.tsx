@@ -13,16 +13,24 @@ import {
   AlertCircle,
   Play,
   X,
-  Eye
+  Eye,
+  BookOpen,
+  ChevronRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SolutionViewer } from './SolutionViewer';
+import { FormattedText } from './FormattedText';
 import { 
   autoRecoverMistakesFromStorage, 
   RecordedMistake, 
   normalizeSubject,
   getDedupeKey
 } from '../utils/mistakeRecorder';
+import {
+  initSolutionResolver,
+  resolveQuestionSolution,
+  rehydrateMistakesSolutions
+} from '../utils/solutionResolver';
 export type { RecordedMistake };
 
 interface BotMistakesPageProps {
@@ -148,8 +156,10 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
     setLoading(true);
     setError(null);
     try {
+      await initSolutionResolver();
       const recovered = await autoRecoverMistakesFromStorage(auth.currentUser?.uid);
-      setMistakes(recovered);
+      const enriched = rehydrateMistakesSolutions(recovered);
+      setMistakes(enriched);
 
       // Auto-select subject with mistakes
       if (recovered.length > 0) {
@@ -455,7 +465,7 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
         const answer = (correctLetters[m.correctOptionIndex] || 'a') as any;
 
         // Robust solution resolution
-        let sol = m.explanation || (m as any).solution || (m as any).sol || (m as any).detailedSolution || '';
+        let sol = resolveQuestionSolution(m) || m.explanation || (m as any).solution || (m as any).sol || (m as any).detailedSolution || '';
         if (!sol || sol.trim().length < 5) {
           const qId = m.id;
           const qText = (m.question || '').trim().toLowerCase();
@@ -937,84 +947,110 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
               {/* Questions List */}
               <div className="p-4 sm:p-6 overflow-y-auto space-y-4 divide-y divide-slate-100">
-                {inspectTopic.questions.map((m, idx) => (
-                  <div key={m.id || idx} className={idx > 0 ? 'pt-4 space-y-3' : 'space-y-3'}>
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="flex items-start gap-2.5 min-w-0">
-                        <span className="w-6 h-6 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                          {idx + 1}
-                        </span>
-                        <div className="space-y-1 min-w-0">
-                          <div className="flex items-center gap-1.5 flex-wrap">
-                            {m.errorType === 'unattempted' ? (
-                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-200">
-                                Skipped
+                {inspectTopic.questions.map((m, idx) => {
+                  const solText = resolveQuestionSolution(m) || m.explanation;
+                  const normalizedSub = normalizeSubject(m.subject);
+                  return (
+                    <div key={m.id || idx} className={idx > 0 ? 'pt-4 space-y-3' : 'space-y-3'}>
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-start gap-2.5 min-w-0 flex-1">
+                          <span className="w-6 h-6 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                            {idx + 1}
+                          </span>
+                          <div className="space-y-1.5 min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              {m.errorType === 'unattempted' ? (
+                                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-200">
+                                  Skipped
+                                </span>
+                              ) : (
+                                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-200">
+                                  Wrong
+                                </span>
+                              )}
+                              <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                                {((m.source || '').toLowerCase().includes('mock') || (m.id || '').startsWith('tb_') || (m.id || '').startsWith('ob_')) ? 'Mock Error' : 'Chapter Bank'}
                               </span>
-                            ) : (
-                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-200">
-                                Wrong
-                              </span>
-                            )}
-                            <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
-                              {((m.source || '').toLowerCase().includes('mock') || (m.id || '').startsWith('tb_') || (m.id || '').startsWith('ob_')) ? 'Mock Error' : 'Chapter Bank'}
-                            </span>
-                          </div>
-                          <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
-                            {m.question}
-                          </div>
-                        </div>
-                      </div>
-
-                      <button
-                        onClick={() => handleDelete(m)}
-                        disabled={deletingId === m.id}
-                        className="text-slate-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 transition-colors cursor-pointer shrink-0 disabled:opacity-40"
-                        title="Delete question from Mistake Notebook only"
-                      >
-                        <Trash2 className="w-4 h-4 text-rose-500" />
-                      </button>
-                    </div>
-
-                    {/* Options Grid */}
-                    {m.options && m.options.length > 0 && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-8">
-                        {m.options.map((opt, optIdx) => {
-                          const isCorrect = optIdx === m.correctOptionIndex;
-                          const letters = ['A', 'B', 'C', 'D'];
-                          return (
-                            <div
-                              key={optIdx}
-                              className={`p-2 rounded-lg text-xs flex items-start gap-2 border ${
-                                isCorrect
-                                  ? 'bg-emerald-50 border-emerald-300 text-emerald-900 font-medium'
-                                  : 'bg-slate-50/70 border-slate-200 text-slate-600'
-                              }`}
-                            >
-                              <span className="font-bold text-[10px] w-4 h-4 rounded flex items-center justify-center bg-white border border-slate-200 shrink-0">
-                                {letters[optIdx]}
-                              </span>
-                              <span className="leading-snug">{opt}</span>
                             </div>
-                          );
-                        })}
-                      </div>
-                    )}
-
-                    {/* Explanation */}
-                    {m.explanation && (
-                      <div className="pl-8 pt-1">
-                        <div className="text-[11px] bg-slate-50 border border-slate-200/80 rounded-lg p-2.5 text-slate-700 leading-relaxed">
-                          <span className="font-bold text-slate-800 block mb-1">Explanation:</span>
-                          <SolutionViewer
-                            solution={m.explanation}
-                            language="English"
-                            subject={normalizeSubject(m.subject)}
-                          />
+                            <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
+                              <FormattedText
+                                text={m.question}
+                                language="English"
+                                as="div"
+                                isQuestion={true}
+                                subject={normalizedSub}
+                              />
+                            </div>
+                          </div>
                         </div>
+
+                        <button
+                          onClick={() => handleDelete(m)}
+                          disabled={deletingId === m.id}
+                          className="text-slate-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 transition-colors cursor-pointer shrink-0 disabled:opacity-40"
+                          title="Delete question from Mistake Notebook only"
+                        >
+                          <Trash2 className="w-4 h-4 text-rose-500" />
+                        </button>
                       </div>
-                    )}
-                  </div>
-                ))}
+
+                      {/* Options Grid */}
+                      {m.options && m.options.length > 0 && (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-8">
+                          {m.options.map((opt, optIdx) => {
+                            const isCorrect = optIdx === m.correctOptionIndex;
+                            const letters = ['A', 'B', 'C', 'D'];
+                            return (
+                              <div
+                                key={optIdx}
+                                className={`flex items-start gap-2.5 p-2.5 rounded-xl border text-xs font-semibold ${
+                                  isCorrect
+                                    ? 'bg-emerald-50 border-emerald-300 text-emerald-900 shadow-2xs'
+                                    : 'bg-white border-slate-200 text-slate-600'
+                                }`}
+                              >
+                                <span className={`w-5 h-5 rounded-lg flex items-center justify-center font-bold text-[11px] uppercase shrink-0 ${
+                                  isCorrect ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-100 text-slate-500'
+                                }`}>
+                                  {letters[optIdx]}
+                                </span>
+                                <span className="flex-1 min-w-0 leading-relaxed font-normal">
+                                  <FormattedText
+                                    text={opt}
+                                    language="English"
+                                    subject={normalizedSub}
+                                  />
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* Solution Dropdown matching Chapter Bank and Mock Error */}
+                      <details open className="group pl-8 pt-1">
+                        <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none py-1 transition-colors">
+                          <BookOpen className="w-3.5 h-3.5 text-indigo-500" />
+                          <span>View Solution</span>
+                          <ChevronRight className="w-3 h-3 text-indigo-400 transition-transform group-open:rotate-90" />
+                        </summary>
+                        <div className="mt-2 text-xs font-medium text-slate-700 leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+                          {solText ? (
+                            <SolutionViewer
+                              solution={solText}
+                              language="English"
+                              subject={normalizedSub}
+                            />
+                          ) : (
+                            <div className="text-slate-400 italic text-xs py-1">
+                              No detailed solution recorded for this question yet.
+                            </div>
+                          )}
+                        </div>
+                      </details>
+                    </div>
+                  );
+                })}
               </div>
             </motion.div>
           </div>

@@ -2,6 +2,7 @@ import { Question, QuestionProgress, QuizResult } from '../types';
 import { safeStorage } from './safeStorage';
 import { db, auth } from '../firebase';
 import { collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
+import { resolveQuestionSolution } from './solutionResolver';
 
 export interface RecordedMistake {
   id: string;
@@ -334,13 +335,15 @@ export function convertToRecordedMistake(
     question: qText,
     options: opts,
     correctOptionIndex: correctIdx,
-    explanation: q.solution ||
+    explanation: (
+      q.solution ||
       (q as any).explanation ||
       (q as any).sol ||
       (q as any).detailedSolution ||
       (item as any).solution ||
       (item as any).explanation ||
-      '',
+      ''
+    ).trim() || resolveQuestionSolution({ ...q, id: qId, question: qText }),
     subject: normSub,
     topic,
     topicSlug: topic.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
@@ -481,13 +484,18 @@ export async function autoRecoverMistakesFromStorage(
   const addMistake = (m: RecordedMistake | null) => {
     if (!m || isSpeedLabQuestion(m)) return;
 
-    // Auto-rehydrate explanation from global RCA store if missing
+    // Auto-rehydrate explanation from solutionResolver or global RCA store if missing
     if (!m.explanation || m.explanation.trim().length < 5) {
-      const qId = m.id;
-      const qText = (m.question || '').trim().toLowerCase();
-      const rcaMatch = (qId && globalRcaMap[qId]) || (qText && globalRcaMap[qText]);
-      if (rcaMatch && (rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol)) {
-        m.explanation = rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol;
+      const resolved = resolveQuestionSolution(m);
+      if (resolved && resolved.length > 3) {
+        m.explanation = resolved;
+      } else {
+        const qId = m.id;
+        const qText = (m.question || '').trim().toLowerCase();
+        const rcaMatch = (qId && globalRcaMap[qId]) || (qText && globalRcaMap[qText]);
+        if (rcaMatch && (rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol)) {
+          m.explanation = rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol;
+        }
       }
     }
 
