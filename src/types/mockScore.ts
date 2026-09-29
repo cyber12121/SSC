@@ -3,6 +3,7 @@ import { Question } from '../types';
 export interface SectionScore {
   total: number;
   correct: number;
+  slow?: number;
   wrong: number;
   unattempted: number;
   score: number;
@@ -21,6 +22,7 @@ export interface MockScoreReport {
   totalScore: number;
   overallAccuracy: number;
   totalCorrect: number;
+  totalSlow?: number;
   totalWrong: number;
   totalUnattempted: number;
   sections: {

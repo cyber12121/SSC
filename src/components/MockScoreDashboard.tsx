@@ -180,6 +180,7 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
   } = {};
 
   let totalCorrect = 0;
+  let totalSlow = 0;
   let totalWrong = 0;
   let totalUnattempted = 0;
   let totalScore = 0;
@@ -193,16 +194,37 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     let wrong = 0;
     let unattempted = 0;
     let correct = 0;
+    let slow = 0;
     let hasExplicitCorrect = false;
 
     qList.forEach(q => {
       const status = (q.status || '').toLowerCase();
-      if (status.includes('correct') && !status.includes('incorrect')) {
+      const isSlow = Boolean(
+        q.isSlow === true ||
+        status === 'slow' ||
+        status.includes('slow') ||
+        status.includes('speed') ||
+        q.errorType === 'speed_issue'
+      );
+      const isCorrectAnswer = Boolean(
+        q.isCorrect === true ||
+        (status.includes('correct') && !status.includes('incorrect')) ||
+        isSlow
+      );
+      const isUnattempted = Boolean(
+        status.includes('unattempted') ||
+        status.includes('skipped') ||
+        q.errorType === 'unattempted' ||
+        (!q.userAnswer && !q.selectedAnswer && !q.chosenOption && q.isCorrect === undefined)
+      );
+
+      if (isSlow) {
+        slow++;
+        hasExplicitCorrect = true;
+      } else if (isCorrectAnswer) {
         correct++;
         hasExplicitCorrect = true;
-      } else if (status.includes('wrong') || status.includes('incorrect')) {
-        wrong++;
-      } else if (status.includes('unattempted') || status.includes('skipped')) {
+      } else if (isUnattempted) {
         unattempted++;
       } else {
         wrong++;
@@ -212,15 +234,18 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     const standardTotal = 25;
     // Only infer missing correct questions for a true full 100-question mock attempt without explicit correct status
     if (isFullMock && !isErrorDrill && !hasExplicitCorrect && qList.length < standardTotal) {
-      correct = Math.max(0, standardTotal - wrong - unattempted);
+      correct = Math.max(0, standardTotal - wrong - unattempted - slow);
     }
 
     const sectionTotal = isFullMock ? standardTotal : qList.length;
-    const sectionScore = Math.round(((correct * 2) - (wrong * 0.5)) * 10) / 10;
-    const attempted = correct + wrong;
-    const accuracy = attempted > 0 ? Math.round((correct / attempted) * 1000) / 10 : 0;
+    // Score Formula: (correct + slow) = 2 marks, wrong = -0.5 marks, unattempted = 0
+    const totalPositive = correct + slow;
+    const sectionScore = Math.round(((totalPositive * 2) - (wrong * 0.5)) * 10) / 10;
+    const attempted = totalPositive + wrong;
+    const accuracy = attempted > 0 ? Math.round((totalPositive / attempted) * 1000) / 10 : 0;
 
-    totalCorrect += correct;
+    totalCorrect += totalPositive;
+    totalSlow += slow;
     totalWrong += wrong;
     totalUnattempted += unattempted;
     totalScore += sectionScore;
@@ -228,7 +253,8 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     const key = sub === 'General Awareness' ? 'generalAwareness' : sub === 'Mathematics' ? 'mathematics' : (sub.toLowerCase() as 'reasoning' | 'english');
     sections[key] = {
       total: sectionTotal,
-      correct,
+      correct: totalPositive,
+      slow,
       wrong,
       unattempted,
       score: sectionScore,
@@ -256,6 +282,7 @@ export function computeMockScoreClientSide(rawList: any[], mockTitle?: string): 
     totalScore: Math.round(totalScore * 10) / 10,
     overallAccuracy,
     totalCorrect,
+    totalSlow,
     totalWrong,
     totalUnattempted,
     sections
@@ -3079,12 +3106,16 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               </span>
                             </div>
                             <div className="text-xs text-slate-400 mt-0.5">{subtitle} • {dateClean}</div>
-                            <div className="text-[11px] font-medium text-slate-500 mt-1 flex items-center gap-1.5">
-                              <span className="text-emerald-600 font-semibold">{report.totalCorrect}c</span>
-                              <span className="text-slate-300">•</span>
-                              <span className="text-rose-500 font-semibold">{report.totalWrong}w</span>
-                              <span className="text-slate-300">•</span>
-                              <span className="text-slate-400">{report.totalUnattempted}s</span>
+                            <div className="text-[11px] font-medium text-slate-500 mt-1 flex items-center gap-1.5 flex-wrap">
+                              <span className="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">
+                                {report.totalCorrect} Correct
+                              </span>
+                              <span className="px-1.5 py-0.2 rounded bg-rose-50 text-rose-700 border border-rose-200 font-semibold">
+                                {report.totalWrong} Wrong
+                              </span>
+                              <span className="px-1.5 py-0.2 rounded bg-slate-100 text-slate-600 border border-slate-200 font-semibold">
+                                {report.totalUnattempted} Unattempted
+                              </span>
                             </div>
                           </td>
 
@@ -3106,6 +3137,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               }`}>
                                 {reasoningData?.accuracy ?? 0}%
                               </span>
+                              <div className="text-[10px] font-mono text-slate-500 mt-1 flex items-center justify-center gap-1">
+                                <span className="text-emerald-700 font-semibold">{reasoningData?.correct ?? 0}c</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-rose-600 font-semibold">{reasoningData?.wrong ?? 0}w</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-slate-500">{reasoningData?.unattempted ?? 0}s</span>
+                              </div>
                             </button>
                           </td>
 
@@ -3127,6 +3165,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               }`}>
                                 {gaData?.accuracy ?? 0}%
                               </span>
+                              <div className="text-[10px] font-mono text-slate-500 mt-1 flex items-center justify-center gap-1">
+                                <span className="text-emerald-700 font-semibold">{gaData?.correct ?? 0}c</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-rose-600 font-semibold">{gaData?.wrong ?? 0}w</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-slate-500">{gaData?.unattempted ?? 0}s</span>
+                              </div>
                             </button>
                           </td>
 
@@ -3148,6 +3193,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               }`}>
                                 {quantData?.accuracy ?? 0}%
                               </span>
+                              <div className="text-[10px] font-mono text-slate-500 mt-1 flex items-center justify-center gap-1">
+                                <span className="text-emerald-700 font-semibold">{quantData?.correct ?? 0}c</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-rose-600 font-semibold">{quantData?.wrong ?? 0}w</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-slate-500">{quantData?.unattempted ?? 0}s</span>
+                              </div>
                             </button>
                           </td>
 
@@ -3169,6 +3221,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               }`}>
                                 {englishData?.accuracy ?? 0}%
                               </span>
+                              <div className="text-[10px] font-mono text-slate-500 mt-1 flex items-center justify-center gap-1">
+                                <span className="text-emerald-700 font-semibold">{englishData?.correct ?? 0}c</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-rose-600 font-semibold">{englishData?.wrong ?? 0}w</span>
+                                <span className="text-slate-300">•</span>
+                                <span className="text-slate-500">{englishData?.unattempted ?? 0}s</span>
+                              </div>
                             </button>
                           </td>
 
@@ -3182,6 +3241,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               report.overallAccuracy >= 65 ? 'text-amber-600' : 'text-rose-600'
                             }`}>
                               {report.overallAccuracy}% Acc
+                            </div>
+                            <div className="text-[10px] font-mono text-slate-500 mt-0.5">
+                              {report.totalCorrect}C • {report.totalWrong}W • {report.totalUnattempted}S
                             </div>
                           </td>
 
