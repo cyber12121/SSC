@@ -97,15 +97,24 @@ export const QuizTimerBadge: React.FC<QuizTimerBadgeProps> = ({
     return () => clearInterval(interval);
   }, [mode, totalQuizTime, isFinished, isPaused]);
 
+  if (mode === 'mock') {
+    return (
+      <div className="text-center shrink-0">
+        <span className="block text-[11px] font-bold text-gray-700 leading-tight">Section Time</span>
+        <span className="text-lg sm:text-xl font-bold text-red-600 tracking-wider leading-none">
+          {totalQuizTime != null && mockTimeLeft != null ? fmtTime(mockTimeLeft) : fmtTime(questionTimer)}
+        </span>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col items-center">
       <span className="text-[10px] text-gray-500 font-semibold leading-tight">
-        {mode === 'practice' ? 'Time Spent' : 'Section Time'}
+        Time Spent
       </span>
       <div className="bg-[#fff9db] border border-[#ffe066] text-[#d90429] font-mono font-bold text-sm sm:text-base px-2 py-0.5 rounded shadow-2xs leading-none">
-        {mode === 'practice'
-          ? fmtTime(questionTimer)
-          : (totalQuizTime != null && mockTimeLeft != null ? fmtTime(mockTimeLeft) : fmtTime(questionTimer))}
+        {fmtTime(questionTimer)}
       </div>
     </div>
   );

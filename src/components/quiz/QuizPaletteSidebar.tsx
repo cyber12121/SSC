@@ -96,11 +96,13 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-200">
-          <div className="flex items-center gap-2 text-gray-800 font-bold text-sm sm:text-base min-w-0 pr-2">
-            <span className="text-[#00baf2] text-base leading-none shrink-0">▶</span>
-            <span className="font-bold text-gray-900 text-sm truncate">
-              {activeSection.title || 'General Intelligence'}
+        <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-200">
+          <div className="flex items-center gap-2 text-gray-800 font-bold text-sm min-w-0 pr-2">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-600 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            <span className="font-bold text-gray-800 text-sm tracking-tight truncate">
+              {activeSection.title || 'General Intelligence and Reasoning'}
             </span>
           </div>
           {onClose && (
@@ -128,7 +130,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
                 disabled={!hasQuestions}
                 className={`px-2.5 py-1 text-xs font-bold rounded transition-all shrink-0 ${
                   isActive
-                    ? 'bg-[#008000] text-white shadow-2xs'
+                    ? 'bg-[#008722] text-white shadow-2xs'
                     : hasQuestions
                     ? 'bg-gray-100 text-gray-700 hover:bg-gray-200 cursor-pointer'
                     : 'bg-gray-50 text-gray-400 opacity-50 cursor-not-allowed'
@@ -142,7 +144,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
       )}
 
       {/* Question Palette Grid */}
-      <div className="grid grid-cols-6 gap-x-2 gap-y-2.5 mb-4">
+      <div className="grid grid-cols-6 gap-2 mb-4 pr-1">
         {sectionQuestions.map((_, localIdx) => {
           const globalIdx = activeSection.startIndex + localIdx;
           const isAnswered = answers[globalIdx] !== undefined;
@@ -162,7 +164,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
               <button
                 key={globalIdx}
                 onClick={() => handleQuestionClick(globalIdx)}
-                className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[3px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-all ${btnColor} ${
+                className={`w-8 h-8 rounded font-bold text-xs flex items-center justify-center cursor-pointer transition-all ${btnColor} ${
                   isCurrent ? 'ring-2 ring-indigo-600 ring-offset-1 scale-105 z-10 font-black shadow-xs' : ''
                 }`}
                 title={`Question ${localIdx + 1}: ${isAnswered ? (isCorrect ? 'Correct' : 'Incorrect') : 'Not Attempted'}`}
@@ -172,8 +174,9 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             );
           }
 
-          // Official Testbook Symbol & Color Coding for Mock Mode:
-          let btnColor = 'bg-[#0000ff] text-white';
+          // CBT Symbol & Color Coding for Mock Mode:
+          let btnColor = 'bg-[#001bff] text-white';
+          let ringClass = isCurrent ? 'ring-2 ring-offset-1 ring-blue-500 shadow-sm z-10' : 'shadow-2xs';
           let showArrow = false;
 
           if (isAnswered && isMarked) {
@@ -183,10 +186,10 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             btnColor = 'bg-[#cc0000] text-white';
             showArrow = true;
           } else if (isAnswered) {
-            btnColor = 'bg-[#008000] text-white';
+            btnColor = 'bg-[#008722] text-white shadow-sm';
             showArrow = false;
           } else {
-            btnColor = 'bg-[#0000ff] text-white';
+            btnColor = 'bg-[#001bff] text-white';
             showArrow = false;
           }
 
@@ -194,7 +197,7 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
             <div key={globalIdx} className="flex flex-col items-center justify-start relative">
               <button
                 onClick={() => handleQuestionClick(globalIdx)}
-                className={`w-9 h-8 sm:w-10 sm:h-8 rounded-[2px] font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer transition-colors shadow-2xs ${btnColor} hover:opacity-90`}
+                className={`w-8 h-8 rounded font-bold text-xs flex items-center justify-center cursor-pointer transition-colors ${btnColor} ${ringClass} hover:opacity-90`}
                 title={`Question ${localIdx + 1}`}
               >
                 <span className="leading-none">{localIdx + 1}</span>
@@ -263,39 +266,28 @@ export const QuizPaletteSidebar: React.FC<QuizPaletteSidebarProps> = React.memo(
           </table>
         </div>
       ) : (
-        <div className="mt-auto border border-gray-400 rounded-none overflow-hidden shadow-2xs">
-          <div className="bg-[#b8b8b8] border-b border-gray-400 py-1 text-center font-bold text-xs sm:text-sm text-gray-900 tracking-wide">
+        <div className="mt-auto border border-gray-400 text-xs mt-6 overflow-hidden" data-purpose="part-analysis-table">
+          <div className="bg-gray-300 text-gray-900 font-bold py-1 px-3 text-center border-b border-gray-400">
             {activeSection.label} Analysis
           </div>
-
-          <table className="w-full text-xs sm:text-sm border-collapse">
-            <tbody>
-              <tr className="border-b border-gray-400">
-                <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                  Answered
-                </td>
-                <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                  {sectionAnswered}
-                </td>
-              </tr>
-              <tr className="border-b border-gray-400">
-                <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                  Not Answered
-                </td>
-                <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                  {sectionNotAnswered}
-                </td>
-              </tr>
-              <tr>
-                <td className="p-1.5 font-medium text-gray-800 bg-white pl-2.5">
-                  Mark for Review
-                </td>
-                <td className="p-1.5 font-bold text-red-600 bg-[#ffff00] text-center w-14 border-l border-gray-400">
-                  {sectionMarked}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="flex items-center justify-between px-3 py-1 border-b border-gray-300 bg-white">
+            <span className="text-gray-800 font-medium">Answered</span>
+            <span className="inline-block bg-[#ffee00] text-black font-extrabold text-xs px-2 py-0.5 border border-amber-300">
+              {sectionAnswered}
+            </span>
+          </div>
+          <div className="flex items-center justify-between px-3 py-1 border-b border-gray-300 bg-white">
+            <span className="text-gray-800 font-medium">Not Answered</span>
+            <span className="inline-block bg-[#ffee00] text-black font-extrabold text-xs px-2 py-0.5 border border-amber-300">
+              {sectionNotAnswered}
+            </span>
+          </div>
+          <div className="flex items-center justify-between px-3 py-1 bg-white">
+            <span className="text-gray-800 font-medium">Mark for Review</span>
+            <span className="inline-block bg-[#ffee00] text-black font-extrabold text-xs px-2 py-0.5 border border-amber-300">
+              {sectionMarked}
+            </span>
+          </div>
         </div>
       )}
 
