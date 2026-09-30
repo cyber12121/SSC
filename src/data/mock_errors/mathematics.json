@@ -5789,6 +5789,38 @@
           "conceptTested": "Triangle Inequality Theorem: Difference of two sides < Third side < Sum of two sides",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_aa450cdd4e",
+        "q_num": 184,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:43",
+        "avgTime": "00:45",
+        "question": "A sphere passes through the eight corners of a cube of side $14$ cm. Find the volume (in cm³) of the sphere. Take $\\pi = \\frac{22}{7}$",
+        "options": {
+          "a": "$4312\\sqrt{3}$",
+          "b": "$4012\\sqrt{3}$",
+          "c": "$4312\\sqrt{2}$",
+          "d": "$4012\\sqrt{2}$"
+        },
+        "answer": "a",
+        "solution": "For a sphere circumscribing a cube, its diameter is equal to the body diagonal of the cube.\n\nDiameter = $a\\sqrt{3} = 14\\sqrt{3}$ cm $\\implies$ Radius ($r$) = $7\\sqrt{3}$ cm.\nVolume of the sphere = $\\frac{4}{3} \\times \\pi \\times r^3$\nVolume = $\\frac{4}{3} \\times \\frac{22}{7} \\times (7\\sqrt{3})^3 = 4312\\sqrt{3}$ cm³.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Sphere & Hemisphere",
+        "conceptTested": "For a sphere circumscribing a cube, its diameter is equal to the body diagonal of the cube ($D = a\\sqrt{3}$).",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Sphere & Hemisphere",
+          "conceptTested": "For a sphere circumscribing a cube, its diameter is equal to the body diagonal of the cube ($D = a\\sqrt{3}$).",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -13793,6 +13825,422 @@
           "conceptTested": "When a value is successively increased by $R\\%$ and decreased by $R\\%$, the net effect is always a loss of $\\frac{R^2}{100}\\%$.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_f82781a524",
+        "q_num": 255,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:10",
+        "avgTime": "00:42",
+        "question": "The L.C.M. of two prime numbers, $x$ and $y$ ($x > y$) is $161$. Then the value of $(x - y)$ is:",
+        "options": {
+          "a": "9",
+          "b": "13",
+          "c": "15",
+          "d": "16"
+        },
+        "answer": "d",
+        "solution": "The L.C.M. of two distinct prime numbers is equal to their product.\n\nProduct of primes $x$ and $y = 161$.\n\nBy finding prime factors, $161 = 23 \\times 7$.\n\nSince $x > y$, we assign $x = 23$ and $y = 7$.\nTherefore, $x - y = 23 - 7 = 16$.",
+        "image": null,
+        "topic": "LCM & HCF",
+        "subtopic": "LCM & HCF Applications",
+        "conceptTested": "The Least Common Multiple (LCM) of two distinct prime numbers is equal to their product.",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "LCM & HCF Applications",
+          "conceptTested": "The Least Common Multiple (LCM) of two distinct prime numbers is equal to their product.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b63da268b5",
+        "q_num": 256,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:11",
+        "avgTime": "00:48",
+        "question": "$ABCD$ is a parallelogram, $AB = 14$ cm, $BC = 18$ cm and $AC = 16$ cm. Find the length of the other diagonal?",
+        "options": {
+          "a": "32 cm",
+          "b": "28 cm",
+          "c": "26 cm",
+          "d": "30 cm"
+        },
+        "answer": "b",
+        "solution": "For any parallelogram, the sum of the squares of diagonals equals the sum of the squares of its sides.\n\n$d_1^2 + d_2^2 = 2 \\times (a^2 + b^2)$\n\n$16^2 + d_2^2 = 2 \\times (14^2 + 18^2)$\n\n$256 + d_2^2 = 2 \\times (196 + 324) \\implies 256 + d_2^2 = 1040$\n\n$d_2^2 = 784 \\implies d_2 = 28$ cm.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Quadrilaterals & Polygons",
+        "conceptTested": "Parallelogram Law of Diagonals: The sum of the squares of the lengths of the diagonals equals the sum of the squares of the four sides ($d_1^2 + d_2^2 = 2(a^2 + b^2)$).",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Quadrilaterals & Polygons",
+          "conceptTested": "Parallelogram Law of Diagonals: The sum of the squares of the lengths of the diagonals equals the sum of the squares of the four sides ($d_1^2 + d_2^2 = 2(a^2 + b^2)$).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ff21f25f4d",
+        "q_num": 257,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:24",
+        "avgTime": "00:58",
+        "question": "Find the compound interest on Rs. 3,00,000, compounded half-yearly, for $2\\frac{1}{2}$ years at the rate of $20\\%$ per annum.",
+        "options": {
+          "a": "Rs. 1,62,156",
+          "b": "Rs. 1,83,153",
+          "c": "Rs. 1,92,156",
+          "d": "Rs. 1,73,153"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nHalf - yearly rate = $20\\% \\div 2 = 10\\%$ ($1/10$) and Time = $2.5 \\times 2 = 5$ cycles.\nFor 5 cycles, P = $10^5 = 100000$ units, A = $11^5 = 161051$ units.\nCompound Interest (CI) = $161051 - 100000 = 61051$ units.\nSince P = $100000$ units = Rs. 3, 00, 000, Total CI = $61051 \\times 3 =$ Rs. 1, 83, 153.\n∴ The correct answer is Rs. 1, 83, 153.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+        "conceptTested": "Compound Interest formula with half-yearly compounding: A = P(1 + \\frac{R/2}{100})^{2n}",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+          "conceptTested": "Compound Interest formula with half-yearly compounding: A = P(1 + \\frac{R/2}{100})^{2n}",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_267c4bf827",
+        "q_num": 258,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:06",
+        "avgTime": "00:22",
+        "question": "Ritika purchased 'x' kg wheat at Rs. 30/kg and sold 8 kg of this at Rs. 'x' per kg and remaining at Rs. 45/kg. Overall profit percent earned is $10\\%$, then what quantity of wheat Ritika sold at Rs. 45/kg?",
+        "options": {
+          "a": "18 kg",
+          "b": "16 kg",
+          "c": "10 kg",
+          "d": "14 kg"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nOverall Selling Price = $30 \\times 1.10 =$ Rs. 33/kg.\nEquating total SP parts: $8x + 45(x - 8) = 33x$\n\n$53x - 360 = 33x \\implies 20x = 360 \\implies x = 18$\n\nQuantity sold at Rs. 45/kg = $x - 8 = 18 - 8 = 10$ kg.\n\n∴ The correct answer is 10 kg.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Quantity & Article Variations",
+        "conceptTested": "Mixture and Alligation rule for weighted selling price averages and overall profit percentage calculations",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Quantity & Article Variations",
+          "conceptTested": "Mixture and Alligation rule for weighted selling price averages and overall profit percentage calculations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_10a54c945f",
+        "q_num": 259,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:28",
+        "avgTime": "00:28",
+        "question": "L's income is $125\\%$ of M's income and L's expenditure is $120\\%$ of M's expenditure. If L's income is $180\\%$ of M's expenditure, then what is the respective ratio of L's savings and M's savings?",
+        "options": {
+          "a": "17 \\: 23",
+          "b": "12 \\: 5",
+          "c": "15 \\: 11",
+          "d": "5 \\: 9"
+        },
+        "answer": "c",
+        "solution": "Let M's Expenditure = 100 units.\nL's Income = $180\\%$ of 100 = 180 units.\nL's Expenditure = $120\\%$ of 100 = 120 units $\\rightarrow$ L's Savings = 180 $-$ 120 = 60 units.\nM's Income = $(180 \\times 100) \\div 125$ = 144 units $\\rightarrow$ M's Savings = 144 $-$ 100 = 44 units.\nRatio of Savings (L : M) = 60 : 44 = 15 : 11.\n∴ The correct answer is 15 : 11.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Price, Consumption & Expenditure",
+        "conceptTested": "Relating income, expenditure, and savings through multi-variable percentage changes to find ratios.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Price, Consumption & Expenditure",
+          "conceptTested": "Relating income, expenditure, and savings through multi-variable percentage changes to find ratios.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c2c154dcf1",
+        "q_num": 260,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:45",
+        "avgTime": "00:38",
+        "question": "A and B can complete a work in 6 days. B and C can complete the same work in 10 days. A, B and C together can complete the same work in 5 days. In how many days can A and C complete the same work?",
+        "options": {
+          "a": "$8\\frac{1}{2}$ days",
+          "b": "8 days",
+          "c": "7 days",
+          "d": "$7\\frac{1}{2}$ days"
+        },
+        "answer": "d",
+        "solution": "Total Work = $\\text{LCM}(6, 10, 5) = 30$ units.\nEfficiency of (A + B) = 5, (B + C) = 3, and (A + B + C) = 6.\nEfficiency of A = (A + B + C) $-$ (B + C) = $6 - 3 = 3$ units/day.\nEfficiency of C = (A + B + C) $-$ (A + B) = $6 - 5 = 1$ unit/day.\nTime for (A + C) = Total Work $\\div$ Efficiency(A + C) = $30 \\div (3 + 1) = 7.5$ days.\n∴ The correct answer is $7\\frac{1}{2}$ days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Basic Work & Days Calculation",
+        "conceptTested": "Calculating individual and combined worker efficiencies using total work LCM method.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Basic Work & Days Calculation",
+          "conceptTested": "Calculating individual and combined worker efficiencies using total work LCM method.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_284eea5272",
+        "q_num": 261,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:30",
+        "question": "What is the average of eight smallest even natural numbers which are NOT divisible by 3?",
+        "options": {
+          "a": "12",
+          "b": "11",
+          "c": "9",
+          "d": "8"
+        },
+        "answer": "a",
+        "solution": "The first 8 even natural numbers not divisible by 3 are: 2, 4, 8, 10, 14, 16, 20, 22.\n\nThe consecutive gaps between them are 2, 4, 2, 4, 2, 4, 2, which forms a perfectly symmetric sequence.\n\nFor any symmetrically distributed series, $\\text{Average} = (\\text{First Term} + \\text{Last Term}) \\div 2$\n\n$\\Rightarrow \\text{Average} = (2 + 22) \\div 2 = 12$\n\n∴ The correct answer is 12.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Age-based Averages",
+        "conceptTested": "Calculating the average of a symmetric sequence of even numbers with specific divisibility constraints.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Age-based Averages",
+          "conceptTested": "Calculating the average of a symmetric sequence of even numbers with specific divisibility constraints.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_caefde8fec",
+        "q_num": 262,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:17",
+        "avgTime": "00:27",
+        "question": "A divisor is 15 times the quotient and 3 times the remainder. If the quotient is 12, what is the dividend?",
+        "options": {
+          "a": "2200",
+          "b": "2220",
+          "c": "2230",
+          "d": "2210"
+        },
+        "answer": "b",
+        "solution": "Divisor = $15 \\times 12 = 180$\nRemainder = $180 \\div 3 = 60$\nDividend = $(\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$\nDividend = $(180 \\times 12) + 60 = 2160 + 60 = 2220$\n∴ The correct answer is 2220.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Division algorithm relation: $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Division algorithm relation: $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_848b4d4884",
+        "q_num": 263,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:00",
+        "avgTime": "00:14",
+        "question": "Vishal decided to donate $12\\%$ of his salary to the PM Relief Fund. On the day of donation, he changed his mind and donated Rs. 4,200, which was $70\\%$ of what he had decided to donate earlier. His monthly salary is:",
+        "options": {
+          "a": "Rs. 48,000",
+          "b": "Rs. 50,000",
+          "c": "Rs. 52,000",
+          "d": "Rs. 60,000"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nNet percentage of salary donated = $70\\%$ of $12\\% = 8.4\\%$\n$8.4\\%$ of Salary = Rs. 4200\n$1\\%$ of Salary = $4200 ÷ 8.4 = $ Rs. 500\n$100\\%$ of Salary = $500 × 100 = $ Rs. 50, 000\n∴ The correct answer is Rs. 50, 000.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Price, Consumption & Expenditure",
+        "conceptTested": "Equating a real value to its corresponding percentage representation to find the base value (100%).",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Price, Consumption & Expenditure",
+          "conceptTested": "Equating a real value to its corresponding percentage representation to find the base value (100%).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9147ae589e",
+        "q_num": 264,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:17",
+        "question": "If $6\\cot \\theta = 5$, then find the value of $\\frac{6\\cos \\theta + \\sin \\theta}{6\\cos \\theta - 4\\sin \\theta}$.",
+        "options": {
+          "a": "1",
+          "b": "5",
+          "c": "0",
+          "d": "6"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nDivide the numerator and the denominator of the given expression by $\\sin\\theta$.\n\nThe expression $(6\\cos\\theta + \\sin\\theta) \\div (6\\cos\\theta - 4\\sin\\theta)$ becomes $(6\\cot\\theta + 1) \\div (6\\cot\\theta - 4)$.\n\nSubstitute the given value $6\\cot\\theta = 5$ directly into the simplified expression.\n\n$\\Rightarrow (5 + 1) \\div (5 - 4)$\n\n$\\Rightarrow 6 \\div 1 = 6$\n\n∴ The correct answer is 6.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Homogeneous trigonometric expression simplification by substituting ratio values or dividing numerator and denominator by $\\sin\\theta$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Homogeneous trigonometric expression simplification by substituting ratio values or dividing numerator and denominator by $\\sin\\theta$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2bb7491709",
+        "q_num": 265,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:07",
+        "question": "The height of a cone is 30 cm. A small cone is cut off at the top by a plane parallel to its base. If its volume is $\\frac{1}{27}$ of the volume of the given cone, then what is the height of the frustum of the cone?",
+        "options": {
+          "a": "10 cm",
+          "b": "12 cm",
+          "c": "18 cm",
+          "d": "20 cm"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nFor a cone cut by a plane parallel to its base, the volume ratio of the new upper cone to the original cone is the cube of their height ratio: Volume ratio = $(\\text{Height ratio})^3$.\n\nGiven the volume ratio is $1 : 27$, taking the cube root gives the height ratio as $1 : 3$.\n\nHeight of the small cone = $\\frac{1}{3}$ of the total height = $30 \\div 3 = 10$ cm.\nHeight of the frustum = Total height $-$ Small cone height = $30 - 10 = 20$ cm.\n∴ The correct answer is 20 cm.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cone & Frustum",
+        "conceptTested": "Ratio of volumes of similar cones is equal to the cube of the ratio of their corresponding heights: $\\frac{v}{V} = \\left(\\frac{h}{H}\\right)^3$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cone & Frustum",
+          "conceptTested": "Ratio of volumes of similar cones is equal to the cube of the ratio of their corresponding heights: $\\frac{v}{V} = \\left(\\frac{h}{H}\\right)^3$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6ba6c8be59",
+        "q_num": 266,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:15",
+        "question": "Ramesh bought 10 cycles for Rs. 500 each. He spent Rs. 2000 on the repair of all cycles. He sold five of them for Rs. 750 each and the remaining for Rs. 550 each. Then, the total gain or loss% is:",
+        "options": {
+          "a": "Gain of $8\\frac{1}{3}\\%$",
+          "b": "Loss of $8\\frac{1}{3}\\%$",
+          "c": "Gain of $7\\frac{2}{3}\\%$",
+          "d": "Loss of $7\\frac{1}{7}\\%$"
+        },
+        "answer": "d",
+        "solution": "Total CP = $(10 × 500) + 2000 = $ Rs. 7000\nTotal SP = $(5 × 750) + (5 × 550) = 3750 + 2750 = $ Rs. 6500\nLoss = $\\text{CP} - \\text{SP} = 7000 - 6500 = $ Rs. 500\nLoss% = $\\left(\\frac{500}{7000}\\right) \\times 100 = \\frac{50}{7}\\% = 7\\frac{1}{7}\\%$\n∴ The correct answer is Loss of $7\\frac{1}{7}\\%$.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Basic CP, SP & Profit/Loss%",
+        "conceptTested": "Calculation of total effective Cost Price by adding overhead repair costs and determining overall percentage loss.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Basic CP, SP & Profit/Loss%",
+          "conceptTested": "Calculation of total effective Cost Price by adding overhead repair costs and determining overall percentage loss.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7049b0bad2",
+        "q_num": 267,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:11",
+        "question": "If $x$ and $y$ are respectively the supplement and complement of an angle $60^\\circ$, then value of $(x + y)$ is equal to:",
+        "options": {
+          "a": "120°",
+          "b": "135°",
+          "c": "145°",
+          "d": "150°"
+        },
+        "answer": "d",
+        "solution": "Supplement of an angle = $180^\\circ - \\text{Angle}$\n\n$\\Rightarrow x = 180^\\circ - 60^\\circ = 120^\\circ$\n\nComplement of an angle = $90^\\circ - \\text{Angle}$\n\n$\\Rightarrow y = 90^\\circ - 60^\\circ = 30^\\circ$\n\n$\\Rightarrow x + y = 120^\\circ + 30^\\circ = 150^\\circ$\n\n∴ The correct answer is 150°.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "Supplementary angles sum up to $180^\\circ$ and complementary angles sum up to $90^\\circ$.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "Supplementary angles sum up to $180^\\circ$ and complementary angles sum up to $90^\\circ$.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -17401,6 +17849,166 @@
           "topic": "Average",
           "subtopic": "Age-based Averages",
           "conceptTested": "The average of an arithmetic progression is given by the mean of the first and last terms: $\\frac{a + l}{2}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bbb5e42de4",
+        "q_num": 115,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "01:33",
+        "avgTime": "01:03",
+        "question": "The simple interest on a sum of Rs. $8,000$ at a certain rate per cent per annum for $3$ years is Rs. $3,600$. What will be the amount (in Rs.) of the same sum after $2$ years at the same rate, if the interest is compounded 8-monthly?",
+        "options": {
+          "a": "10,580",
+          "b": "10,648",
+          "c": "11,239",
+          "d": "10,450"
+        },
+        "answer": "b",
+        "solution": "Rate ($R$) = $\\frac{SI \\times 100}{P \\times T} = \\frac{3600 \\times 100}{8000 \\times 3} = 15\\%$ p.a.\nFor 8 - monthly compounding, cycle rate = $15\\% \\times \\frac{8}{12} = 10\\%$ per 8 months.\nTotal time of $2$ years = $24$ months, which gives $\\frac{24}{8} = 3$ compounding cycles.\n\nAmount after $3$ cycles at $10\\%$ growth = $8000 \\times \\left(\\frac{11}{10}\\right)^3 = 10648$.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+        "conceptTested": "Effective compounding rate and time cycles when interest is compounded periodically (e.g., 8-monthly).",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+          "conceptTested": "Effective compounding rate and time cycles when interest is compounded periodically (e.g., 8-monthly).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_72a2f729d1",
+        "q_num": 116,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:51",
+        "avgTime": "00:48",
+        "question": "The lengths of one side and a diagonal of a rectangle are 63 cm and 65 cm, respectively. What is the perimeter (in cm) of a square whose area is one-seventh of that of the rectangle?",
+        "options": {
+          "a": "36",
+          "b": "48",
+          "c": "24",
+          "d": "64"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nUsing the Pythagorean triplet (16, 63, 65), the width of the rectangle is 16 cm.\n\nArea of the square = (Area of rectangle) $\\div 7 = (63 \\times 16) \\div 7$\nArea of the square = $9 \\times 16 = 144$ cm².\nSide of the square = $\\sqrt{144} = 12$ cm.\nPerimeter of the square = $4 \\times 12 = 48$ cm.\n∴ The correct answer is 48 cm.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "Pythagorean triplet relation ($d^2 = l^2 + w^2$) and area-perimeter relations of square and rectangle",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "Pythagorean triplet relation ($d^2 = l^2 + w^2$) and area-perimeter relations of square and rectangle",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2a887fba3f",
+        "q_num": 117,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "01:05",
+        "avgTime": "00:55",
+        "question": "A person travels equal distances at speeds of 3 km/h, 4 km/h, 7 km/h and 12 km/h, and takes a total of 680 minutes. What is the total distance (in km) travelled?",
+        "options": {
+          "a": "30",
+          "b": "28",
+          "c": "50",
+          "d": "56"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nLet each equal distance segment be the LCM of speeds (3, 4, 7, 12) = 84 km.\nAssumed total time for $4 \\times 84$ km = $(84/3) + (84/4) + (84/7) + (84/12) = 28 + 21 + 12 + 7 = 68$ hours.\nActual total time given = 680 minutes = $680 \\div 60 = 68/6$ hours.\nDistance multiplier = $\\text{Actual Time} \\div \\text{Assumed Time} = (68/6) \\div 68 = 1/6$.\nTotal distance = $\\text{Assumed Total Distance} \\times \\text{Multiplier} = (4 \\times 84) \\times (1/6) = 336 \\div 6 = 56$ km.\n∴ The correct answer is 56 km.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Average Speed",
+        "conceptTested": "Fundamental relationship between distance, speed, and time: $\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}$",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Average Speed",
+          "conceptTested": "Fundamental relationship between distance, speed, and time: $\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a4d23c7a5a",
+        "q_num": 118,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "01:18",
+        "avgTime": "00:36",
+        "question": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?$",
+        "options": {
+          "a": "-20",
+          "b": "-15",
+          "c": "15",
+          "d": "20"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nDirect combined identity: $a^3 + b^3 + c^3 - 3abc = \\frac{a + b + c}{2} \\times [3(a^2 + b^2 + c^2) - (a + b + c)^2]$\n\n$125 - 3abc = \\frac{5}{2} \\times [3(27) - 5^2]$\n\n$125 - 3abc = \\frac{5}{2} \\times [81 - 25] = \\frac{5}{2} \\times 56 = 140$\n\n$3abc = 125 - 140 = -15 \\implies abc = -5$\n\n$4abc = 4 \\times (-5) = -20$\n\n∴ The correct answer is - 20.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Standard cubic identity: $a^3 + b^3 + c^3 - 3abc = \\frac{1}{2}(a + b + c)[3(a^2 + b^2 + c^2) - (a + b + c)^2]$",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Standard cubic identity: $a^3 + b^3 + c^3 - 3abc = \\frac{1}{2}(a + b + c)[3(a^2 + b^2 + c^2) - (a + b + c)^2]$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1b0f73eaf1",
+        "q_num": 119,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:31",
+        "avgTime": "00:39",
+        "question": "The ratio of length to breadth of a rectangular field is $10 : 3$. The cost of putting fence around it at Rs. 12 per metre is Rs. 6240. The area (in $\\text{m}^2$) of the field is:",
+        "options": {
+          "a": "3000",
+          "b": "6000",
+          "c": "9000",
+          "d": "12000"
+        },
+        "answer": "d",
+        "solution": "Perimeter = Total Cost $\\div$ Rate = $6240 \\div 12 = 520\\text{ m} \\Rightarrow$ Semi - perimeter = $260\\text{ m}$.\nGiven L : B = $10 : 3$, sum of ratio parts = 13 units.\n13 units = $260\\text{ m} \\Rightarrow$ 1 unit = $20\\text{ m}$.\nArea = 10 units $\\times$ 3 units = $30 \\times (20)^2 = 12000\\text{ m}^2$.\n∴ The correct answer is $12000\\text{ m}^2$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "Perimeter and area relationship of a rectangle given ratio of length to breadth and fencing cost.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "Perimeter and area relationship of a rectangle given ratio of length to breadth and fencing cost.",
           "difficulty": "medium"
         }
       }

@@ -2198,6 +2198,70 @@
           "conceptTested": "Systematic enumeration and counting of triangular geometric sub-units in a complex figure.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_b732c93257",
+        "q_num": 71,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:03",
+        "avgTime": "00:39",
+        "question": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?$",
+        "options": {
+          "a": "156",
+          "b": "128",
+          "c": "136",
+          "d": "144"
+        },
+        "answer": "d",
+        "solution": "Based on the given equations, symbol '*' means '+' and '#' means '$\\times$'.\n\nFor the first expression: $(8 + 9) \\times 3 = 17 \\times 3 = 51$\nFor the second expression: $(12 + 6) \\times 4 = 18 \\times 4 = 72$\nSimilarly, for the required expression: $(13 + 11) \\times 6 = 24 \\times 6 = 144$\nHence, '144' is the correct answer.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Substitution of custom symbols into arithmetic expressions following BODMAS order of operations",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Substitution of custom symbols into arithmetic expressions following BODMAS order of operations",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_73cf75aa69",
+        "q_num": 72,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:51",
+        "avgTime": "01:34",
+        "question": "There are two married couples in a family. % has two children. A is wife of @ who is brother of #. F is daughter of %. U is sister of S, who is son of @. T is son of #, who is a male. How is A related to %?",
+        "options": {
+          "a": "Sister",
+          "b": "Brother",
+          "c": "Brother in law",
+          "d": "Sister in law"
+        },
+        "answer": "d",
+        "solution": "1) % has two children.\n2) F is daughter of %.\n3) A is wife of @ who is brother of #.\n4) U is sister of S who is son of @.\n5) T is son of #, who is a male.\n\nSince there are two married couples, @ and A form one couple, and # and % form the other couple. Since A is the wife of @ and @ is the brother of #, A is the sister - in - law of %.\n\nHence, the correct answer is sister - in - law.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Family Tree & Direct Relations",
+        "conceptTested": "Deduction of family relationships through generational hierarchy and marital links",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Family Tree & Direct Relations",
+          "conceptTested": "Deduction of family relationships through generational hierarchy and marital links",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -2923,6 +2987,70 @@
           "topic": "Order & Ranking",
           "subtopic": "Linear Seating Arrangement",
           "conceptTested": "Deduction of linear order and relative positions based on conditional inequalities of quantities or speeds.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_e32f48108e",
+        "q_num": 24,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:21",
+        "avgTime": "00:26",
+        "question": "In the question below, which one of the given responses would be a meaningful order of the following words?\n1. Stitching\n2. Wearing\n3. Measuring\n4. Cutting\n5. Marking",
+        "options": {
+          "a": "3, 1, 4, 5, 2",
+          "b": "3, 4, 2, 1, 5",
+          "c": "3, 2, 1, 4, 5",
+          "d": "3, 5, 4, 1, 2"
+        },
+        "answer": "d",
+        "solution": "The logical chronological order of tailoring and wearing a cloth is as follows: 3. Measuring\n\n5. Marking\n4. Cutting\n1. Stitching\n2. Wearing\nHence, '3, 5, 4, 1, 2' is the correct answer.",
+        "image": null,
+        "topic": "Word Formation & Dictionary Order",
+        "subtopic": "Word Rearrangement",
+        "conceptTested": "Logical sequencing of real-world operational steps and processes",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "subtopic": "Word Rearrangement",
+          "conceptTested": "Logical sequencing of real-world operational steps and processes",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d3bb4a7232",
+        "q_num": 25,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:44",
+        "question": "A vendor packed $96$ eggs into three boxes: $X$, $Y$, and $Z$. There are twice as many eggs in the $Z$ box as there are in the $X$ box, and twice as many in the $X$ and $Y$ boxes combined as there are in the $Z$ box. How many eggs did he pack in the $Y$ box?",
+        "options": {
+          "a": "40",
+          "b": "48",
+          "c": "56",
+          "d": "32"
+        },
+        "answer": "b",
+        "solution": "According to the question: $X + Y + Z = 96 \\quad \\text{--- (1)}$\n\n$Z = 2X \\quad \\text{--- (2)}$\n\n$X + Y = 2Z \\quad \\text{--- (3)}$\n\nSubstitute equation (3) into equation (1): $2Z + Z = 96$\n\n$3Z = 96 \\Rightarrow Z = 32$\n\nSubstitute $Z = 32$ into equation (2): $2X = 32 \\Rightarrow X = 16$\n\nSubstitute $X = 16$ and $Z = 32$ into equation (1): $16 + Y + 32 = 96$\n\n$Y + 48 = 96 \\Rightarrow Y = 48$\n\nHence, $48$ eggs were packed in the $Y$ box.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Calculation Reasoning",
+        "conceptTested": "Solving linear simultaneous equations derived from word problems involving quantities.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Calculation Reasoning",
+          "conceptTested": "Solving linear simultaneous equations derived from word problems involving quantities.",
           "difficulty": "medium"
         }
       }
@@ -4992,6 +5120,134 @@
           "topic": "Statement & Assumption",
           "subtopic": "Statement & Assumptions",
           "conceptTested": "Deduction of underlying logical assumptions supporting a statement about organizational business ethics.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f768dfd348",
+        "q_num": 67,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:52",
+        "avgTime": "01:10",
+        "question": "How many pairs of letters are there in the word \"CONSCIENCE\" that have the same number of letters between them in the word (in both forward and backward directions), as they have in the English alphabetical series?",
+        "options": {
+          "a": "5",
+          "b": "4",
+          "c": "3",
+          "d": "2"
+        },
+        "answer": "b",
+        "solution": "Given Word: CONSCIENCE\n\nChecking all forward and backward pairs according to alphabetical positions: - Forward: C - E - Backward: N - O, C - E, E - I\n\nThus, there are 4 such pairs in total.\n\nHence, 4 is the correct answer.",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Letter Pairs Problem",
+        "conceptTested": "Counting pairs of letters in a given word that have the same relative spacing as in the English alphabet",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Letter Pairs Problem",
+          "conceptTested": "Counting pairs of letters in a given word that have the same relative spacing as in the English alphabet",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1eba767e27",
+        "q_num": 68,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:32",
+        "avgTime": "00:48",
+        "question": "An address is given below which has been reproduced against the four alternatives. Of them, three have some mistakes or the other, while one is exactly the same. Select the option which is exactly the same as the given address.\nShri. Lalji Hariram Patel H. No. 485, Police Chowk, Vapi, Surat, Gujraat - 423809",
+        "options": {
+          "a": "Shri. Lalji Hariram Patil H. No. 485, Police Chowk, Vapi, Surat, Gujraat - 423809",
+          "b": "Shri. Lalji Hariram Patel H. No. 485, Police Chowk, Vapi, Surat, Gujraat - 423809",
+          "c": "Shri. Lalji Hariram Patel H. No. 485, Police Chouraha, Vapi, Surat, Gujraat - 423809",
+          "d": "Shri. Lalji Hariram Patel H. No. 485, Police Chowk, Vashi, Surat, Gujraat - 423809"
+        },
+        "answer": "b",
+        "solution": "Checking all the options against the reference address: - Option A: Incorrect, 'Patil' is given instead of 'Patel'. - Option B: Correct, matches word - for - word and character - for - character. - Option C: Incorrect, 'Chouraha' is given instead of 'Chowk'. - Option D: Incorrect, 'Vashi' is given instead of 'Vapi'.\nHence, option B is the correct answer.",
+        "image": null,
+        "topic": "Word Formation & Dictionary Order",
+        "subtopic": "Address Matching",
+        "conceptTested": "Character-by-character comparison and pattern matching for identifying identical text strings",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "subtopic": "Address Matching",
+          "conceptTested": "Character-by-character comparison and pattern matching for identifying identical text strings",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_13c76383e4",
+        "q_num": 69,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:39",
+        "avgTime": "00:46",
+        "question": "Which two signs should be interchanged to make the given equation correct?\n$108 \\div 2 \\times 10 + 70 - 10 = 480$",
+        "options": {
+          "a": "$+$ and $-$",
+          "b": "$\\div$ and $\\times$",
+          "c": "$+$ and $\\times$",
+          "d": "$\\div$ and $-$"
+        },
+        "answer": "a",
+        "solution": "Given equation: $108 \\div 2 \\times 10 + 70 - 10 = 480$\n\nChecking Option A ($+$ and $-$ interchanged): $\\Rightarrow 108 \\div 2 \\times 10 - 70 + 10$\n\n$\\Rightarrow 54 \\times 10 - 70 + 10$\n\n$\\Rightarrow 540 - 70 + 10$\n\n$\\Rightarrow 540 - 60 = 480$\n\nThus, interchanging $+$ and $-$ makes the equation correct.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs",
+        "conceptTested": "Balancing mathematical equations by interchanging signs using the BODMAS rule.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs",
+          "conceptTested": "Balancing mathematical equations by interchanging signs using the BODMAS rule.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_ec1a874849",
+        "q_num": 70,
+        "mockId": "mock_1790780902717_rfz95",
+        "testId": "mock_1790780902717_rfz95",
+        "testName": "SSC CGL Tier I: Full Test - 9",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:36",
+        "avgTime": "00:33",
+        "question": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements.\n\nStatements:\nAll rings are bangles.\nSome bangles are anklets.\nNo anklet is a pendant.\n\nConclusions:\n(I) All rings being anklets is a possibility.\n(II) All bangles can never be pendants.",
+        "options": {
+          "a": "Only\nconclusion II follows",
+          "b": "None of the conclusions follow",
+          "c": "Only\nconclusion I follows",
+          "d": "Both conclusions I and II follow"
+        },
+        "answer": "d",
+        "solution": "Conclusions: I. All rings being anklets is a possibility $\\rightarrow$ Follows (As all rings are bangles and some bangles are anklets, the entire set of rings can overlap with anklets).\n\nII. All bangles can never be pendants $\\rightarrow$ Follows (Since some bangles are anklets and no anklet is a pendant, the common part between bangles and anklets can never be pendants, making it impossible for all bangles to be pendants).\n\nTherefore, both conclusions I and II follow.",
+        "image": null,
+        "topic": "Syllogism",
+        "subtopic": "Standard Syllogism (Venn)",
+        "conceptTested": "Evaluating categorical syllogism statements, possibilities, and negative universal constraints using Venn diagrams.",
+        "tags": {
+          "topic": "Syllogism",
+          "subtopic": "Standard Syllogism (Venn)",
+          "conceptTested": "Evaluating categorical syllogism statements, possibilities, and negative universal constraints using Venn diagrams.",
           "difficulty": "medium"
         }
       }
