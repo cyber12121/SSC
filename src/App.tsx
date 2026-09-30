@@ -4422,6 +4422,7 @@ export default function App() {
               >
                 <BotMistakesPage
                   onBack={resetToHome}
+                  onAskAiTopic={handleAskAiTopic}
                   onStartPractice={(topic, questions) => {
                     const firstQ = questions[0];
                     const rawSub = firstQ?.subject || 'English';

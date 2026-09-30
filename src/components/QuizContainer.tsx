@@ -1233,9 +1233,51 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                       (Q.{currentIdx + 1} of {totalQuestions})
                     </span>
                   )}
+                  {((chapter?.chapter_title || '').toLowerCase().includes('mistake') || category === 'mockErrors') && (
+                    <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-rose-50 text-rose-700 border border-rose-200">
+                      Mistake
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+                  {/* Ask AI Chip */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const isSectional = (chapter as any)?.is_mock && (
+                        String(chapter?.chapter_title || '').toLowerCase().includes('sectional') ||
+                        (chapter?.questions?.length || 0) === 25
+                      );
+                      const sType: 'full_mock' | 'sectional' | 'subject_wise' = (chapter as any)?.is_mock
+                        ? (isSectional ? 'sectional' : 'full_mock')
+                        : (category === 'mockErrors' ? 'subject_wise' : 'subject_wise');
+                      const sLabel = (chapter as any)?.is_mock
+                        ? (isSectional ? `Sectional Test: ${chapter?.chapter_title}` : `Full Mock Test: ${chapter?.chapter_title}`)
+                        : (category === 'mockErrors' ? `Mistakes Drill: ${chapter?.chapter_title}` : `Chapter Practice: ${chapter?.chapter_title}`);
+
+                      window.dispatchEvent(new CustomEvent('cgl_ask_ai_question', {
+                        detail: {
+                          questionNumber: questionNumberInSection > 0 ? questionNumberInSection : currentIdx + 1,
+                          questionText: currentQuestion?.question,
+                          options: currentQuestion?.options,
+                          userAnswer: answers[currentIdx],
+                          correctAnswer: correctOptionKey,
+                          solution: currentQuestion?.solution || (currentQuestion as any)?.explanation || (currentQuestion as any)?.sol || (currentQuestion as any)?.detailedSolution,
+                          topic: (currentQuestion as any)?.tags?.topic || (currentQuestion as any)?.topic || chapter?.chapter_title || category || 'Practice',
+                          sourceType: sType,
+                          sourceLabel: sLabel,
+                          testName: chapter?.chapter_title
+                        }
+                      }));
+                    }}
+                    className="flex items-center gap-1 text-xs font-bold px-2 py-1 rounded border border-purple-200 bg-purple-50 text-purple-700 hover:bg-purple-100 hover:border-purple-300 transition-colors cursor-pointer shadow-2xs active:scale-95"
+                    title="Ask Tommy AI about this question"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-purple-600" />
+                    <span>Ask AI</span>
+                  </button>
+
                   {/* Bookmark Button */}
                   {onBookmarkToggle && currentQuestion && (() => {
                     const isBookmarked =

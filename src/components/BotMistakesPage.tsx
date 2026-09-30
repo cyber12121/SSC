@@ -15,7 +15,8 @@ import {
   X,
   Eye,
   BookOpen,
-  ChevronRight
+  ChevronRight,
+  Sparkles
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SolutionViewer } from './SolutionViewer';
@@ -36,6 +37,7 @@ export type { RecordedMistake };
 interface BotMistakesPageProps {
   onBack: () => void;
   onStartPractice: (topic: string, questions: Question[]) => void;
+  onAskAiTopic?: (topic: string, subject: string, questions: Question[], stats?: any) => void;
 }
 
 
@@ -133,10 +135,52 @@ const SUBJECT_CONFIG: Record<
 export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
   onBack,
   onStartPractice,
+  onAskAiTopic,
 }) => {
   const [mistakes, setMistakes] = useState<RecordedMistake[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const handleAskAiForQuestion = (m: RecordedMistake, qNum: number) => {
+    const normSub = normalizeSubject(m.subject);
+    const solText = resolveQuestionSolution(m) || m.explanation || m.solution || '';
+    const letters = ['a', 'b', 'c', 'd'];
+    const correctOptKey = (m.correctOptionIndex !== undefined && m.correctOptionIndex >= 0 && m.correctOptionIndex < 4)
+      ? letters[m.correctOptionIndex]
+      : (m.answer || (m as any).correctAnswer || '');
+
+    window.dispatchEvent(
+      new CustomEvent('cgl_ask_ai_question', {
+        detail: {
+          questionNumber: qNum,
+          questionText: m.question,
+          options: m.options,
+          userAnswer: (m as any).userAnswer || undefined,
+          correctAnswer: correctOptKey,
+          solution: solText,
+          topic: m.topic || 'Mistake Practice',
+          sourceType: ((m.source || '').toLowerCase().includes('mock') || (m.id || '').startsWith('tb_') || (m.id || '').startsWith('ob_')) ? 'subject_wise' : 'subject_wise',
+          sourceLabel: `Mistake Notebook: ${m.topic || normSub}`,
+          testName: m.source || 'Mistake Notebook',
+          rcaTag: (m as any).rcaTag || (m.errorType === 'unattempted' ? 'T' : 'C'),
+          rcaTagName: (m as any).rcaTagName || (m.errorType === 'unattempted' ? 'Time / Speed Issue' : 'Concept Gap'),
+          sillyMistakeNote: (m as any).sillyMistakeNote || (m as any).sillyNote
+        }
+      })
+    );
+  };
+
+  const handleAskAiForTopic = (topicName: string, questions: RecordedMistake[], subjectName?: string) => {
+    if (onAskAiTopic) {
+      const normSub = subjectName || (questions[0] ? normalizeSubject(questions[0].subject) : 'General');
+      onAskAiTopic(topicName, normSub, questions as any);
+    } else {
+      const firstQ = questions[0];
+      if (firstQ) {
+        handleAskAiForQuestion(firstQ, 1);
+      }
+    }
+  };
 
   // Filter & Hierarchy States
   const [selectedSubject, setSelectedSubject] = useState<'all' | 'english' | 'mathematics' | 'reasoning' | 'general_awareness'>('english');
@@ -806,16 +850,29 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                     </span>
                   </div>
 
-                  <button
-                    onClick={() => {
-                      const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
-                      startPractice(allSubQuestions, `${conf.label} Mistakes`);
-                    }}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
-                  >
-                    <Play className="w-3 h-3 fill-current" />
-                    <span>Practice All {conf.label}</span>
-                  </button>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={() => {
+                        const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
+                        handleAskAiForTopic(`${conf.label} Mistakes`, allSubQuestions, conf.label);
+                      }}
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 transition-all shadow-2xs cursor-pointer active:scale-95"
+                      title={`Ask Tommy AI to analyze all ${conf.label} mistakes`}
+                    >
+                      <Sparkles className="w-3 h-3 text-purple-600" />
+                      <span>Ask AI</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        const allSubQuestions = (Array.from(stat.topicMap.values()) as RecordedMistake[][]).flat();
+                        startPractice(allSubQuestions, `${conf.label} Mistakes`);
+                      }}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold transition-all shadow-2xs cursor-pointer ${conf.accentBtn}`}
+                    >
+                      <Play className="w-3 h-3 fill-current" />
+                      <span>Practice All {conf.label}</span>
+                    </button>
+                  </div>
                 </div>
 
                 {/* CHAPTER-WISE CARDS (NO DROPDOWNS, DIRECT OPEN IN PRACTICE) */}
@@ -873,6 +930,17 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
+                                handleAskAiForTopic(topicName, topicQuestions, conf.label);
+                              }}
+                              className="inline-flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 shadow-2xs transition-all cursor-pointer active:scale-95"
+                              title={`Ask Tommy AI to analyze ${topicName} mistakes`}
+                            >
+                              <Sparkles className="w-3.5 h-3.5 text-purple-600" />
+                              <span>Ask AI</span>
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
                                 setInspectTopic({ topicName, questions: topicQuestions });
                               }}
                               className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all cursor-pointer"
@@ -926,6 +994,16 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => {
+                      handleAskAiForTopic(inspectTopic.topicName, inspectTopic.questions);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 shadow-2xs transition-colors cursor-pointer active:scale-95"
+                    title={`Ask Tommy AI to analyze all ${inspectTopic.topicName} mistakes`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-purple-600" />
+                    <span>Ask AI</span>
+                  </button>
+                  <button
+                    onClick={() => {
                       const qs = inspectTopic.questions;
                       const name = inspectTopic.topicName;
                       setInspectTopic(null);
@@ -971,6 +1049,17 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                               <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
                                 {((m.source || '').toLowerCase().includes('mock') || (m.id || '').startsWith('tb_') || (m.id || '').startsWith('ob_')) ? 'Mock Error' : 'Chapter Bank'}
                               </span>
+
+                              {/* AI Chip on Question */}
+                              <button
+                                type="button"
+                                onClick={() => handleAskAiForQuestion(m, idx + 1)}
+                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 shadow-2xs transition-all cursor-pointer active:scale-95"
+                                title="Ask Tommy AI to explain this mistake"
+                              >
+                                <Sparkles className="w-3 h-3 text-purple-600" />
+                                <span>Ask AI</span>
+                              </button>
                             </div>
                             <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-relaxed">
                               <FormattedText
@@ -984,14 +1073,25 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
                           </div>
                         </div>
 
-                        <button
-                          onClick={() => handleDelete(m)}
-                          disabled={deletingId === m.id}
-                          className="text-slate-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 transition-colors cursor-pointer shrink-0 disabled:opacity-40"
-                          title="Delete question from Mistake Notebook only"
-                        >
-                          <Trash2 className="w-4 h-4 text-rose-500" />
-                        </button>
+                        <div className="flex items-center gap-1 shrink-0">
+                          <button
+                            type="button"
+                            onClick={() => handleAskAiForQuestion(m, idx + 1)}
+                            className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 shadow-2xs transition-all cursor-pointer active:scale-95"
+                            title="Ask Tommy AI to explain this mistake"
+                          >
+                            <Sparkles className="w-3.5 h-3.5 text-purple-600" />
+                            <span>Ask AI</span>
+                          </button>
+                          <button
+                            onClick={() => handleDelete(m)}
+                            disabled={deletingId === m.id}
+                            className="text-slate-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 transition-colors cursor-pointer shrink-0 disabled:opacity-40"
+                            title="Delete question from Mistake Notebook only"
+                          >
+                            <Trash2 className="w-4 h-4 text-rose-500" />
+                          </button>
+                        </div>
                       </div>
 
                       {/* Options Grid */}
@@ -1029,10 +1129,24 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
                       {/* Solution Dropdown matching Chapter Bank and Mock Error */}
                       <details open className="group pl-8 pt-1">
-                        <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 select-none py-1 transition-colors">
-                          <BookOpen className="w-3.5 h-3.5 text-indigo-500" />
-                          <span>View Solution</span>
-                          <ChevronRight className="w-3 h-3 text-indigo-400 transition-transform group-open:rotate-90" />
+                        <summary className="cursor-pointer text-[11px] font-black uppercase tracking-wider text-indigo-600 hover:text-indigo-800 flex items-center justify-between py-1 transition-colors select-none">
+                          <div className="flex items-center gap-1.5">
+                            <BookOpen className="w-3.5 h-3.5 text-indigo-500" />
+                            <span>View Solution</span>
+                            <ChevronRight className="w-3 h-3 text-indigo-400 transition-transform group-open:rotate-90" />
+                          </div>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleAskAiForQuestion(m, idx + 1);
+                            }}
+                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 transition-all cursor-pointer active:scale-95 normal-case"
+                            title="Ask Tommy AI to explain this step-by-step"
+                          >
+                            <Sparkles className="w-2.5 h-2.5 text-purple-600" />
+                            <span>Ask Tommy</span>
+                          </button>
                         </summary>
                         <div className="mt-2 text-xs font-medium text-slate-700 leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
                           {solText ? (
