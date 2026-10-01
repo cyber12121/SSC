@@ -162,11 +162,14 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             Object.assign(map, parsed);
           }
         }
-        // Match from global store BY QUESTION ID OR QUESTION TEXT, NOT by generic chapter_title numeric index!
+        // Match from global store BY QUESTION ID OR QUESTION TEXT with fast O(1) map
         const globalRaw = safeStorage.getItem('cgl_rca_global_store');
         if (globalRaw) {
           const globalStore = JSON.parse(globalRaw);
-          const globalEntries = Object.values(globalStore) as any[];
+          const textLookup = new Map<string, any>();
+          Object.values(globalStore).forEach((e: any) => {
+            if (e?.questionText) textLookup.set(e.questionText.trim().toLowerCase(), e);
+          });
           (result.questionDetails || []).forEach((qd, idx) => {
             if (map[idx]) return;
             const q = qd.question;
@@ -176,9 +179,8 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
               map[idx] = globalStore[qId];
             } else if (qText && globalStore[qText]) {
               map[idx] = globalStore[qText];
-            } else if (qText) {
-              const matched = globalEntries.find(e => e?.questionText && e.questionText.trim().toLowerCase() === qText);
-              if (matched) map[idx] = matched;
+            } else if (qText && textLookup.has(qText)) {
+              map[idx] = textLookup.get(qText);
             }
           });
         }

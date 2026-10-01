@@ -103,6 +103,36 @@ export async function initSolutionResolver(): Promise<void> {
   return initPromise;
 }
 
+// Pre-indexed map for synchronous bundled mock questions to avoid O(N*M) linear scans
+let bundledIndex: Map<string, string> | null = null;
+let lastBundledRef: any[] | null = null;
+
+function getBundledMap(): Map<string, string> {
+  const bundled = getCachedBundledQuestionsSync();
+  if (bundledIndex && lastBundledRef === bundled) {
+    return bundledIndex;
+  }
+  bundledIndex = new Map<string, string>();
+  lastBundledRef = bundled;
+  for (let i = 0; i < bundled.length; i++) {
+    const b = bundled[i];
+    const sol = b.solution || b.explanation || b.sol;
+    if (sol && typeof sol === 'string' && sol.trim().length > 3) {
+      const cleanSol = sol.trim();
+      if (b.id) bundledIndex.set(b.id, cleanSol);
+      const qText = b.question || b.questionText;
+      if (qText) {
+        bundledIndex.set(qText.trim().toLowerCase(), cleanSol);
+        const stripped = normalizeQuestionKey(qText);
+        if (stripped) bundledIndex.set(stripped, cleanSol);
+      }
+    }
+  }
+  return bundledIndex;
+}
+
+const mockStorageCache = new Map<string, any[]>();
+
 /**
  * Synchronously or best-effort resolves a question's solution.
  */
@@ -117,7 +147,7 @@ export function resolveQuestionSolution(
     return direct.trim();
   }
 
-  // Tier 2: Check solution index
+  // Tier 2: Check solution index (O(1))
   if (q.id && solutionIndex.has(q.id)) {
     return solutionIndex.get(q.id)!;
   }
@@ -134,42 +164,52 @@ export function resolveQuestionSolution(
     }
   }
 
-  // Tier 3: Sync check bundled mock questions if index was populated
-  const bundled = getCachedBundledQuestionsSync();
-  if (bundled.length > 0) {
-    const stripped = normalizeQuestionKey(qText);
-    const match = bundled.find(b => {
-      if (q.id && b.id === q.id) return true;
-      if (stripped && normalizeQuestionKey(b.question || b.questionText) === stripped) return true;
-      return false;
-    });
-    if (match) {
-      const matchSol = match.solution || match.explanation || match.sol;
-      if (matchSol && typeof matchSol === 'string' && matchSol.trim().length > 3) {
-        registerQuestion(match);
-        return matchSol.trim();
+  // Tier 3: Sync check bundled mock questions via O(1) indexed map
+  const bMap = getBundledMap();
+  if (bMap.size > 0) {
+    if (q.id && bMap.has(q.id)) {
+      const sol = bMap.get(q.id)!;
+      solutionIndex.set(q.id, sol);
+      return sol;
+    }
+    if (qText) {
+      const rawLower = qText.trim().toLowerCase();
+      if (bMap.has(rawLower)) {
+        const sol = bMap.get(rawLower)!;
+        solutionIndex.set(rawLower, sol);
+        return sol;
+      }
+      const stripped = normalizeQuestionKey(qText);
+      if (stripped && bMap.has(stripped)) {
+        const sol = bMap.get(stripped)!;
+        solutionIndex.set(stripped, sol);
+        return sol;
       }
     }
   }
 
-  // Tier 4: Safe check in local storage mock questions
+  // Tier 4: Check local storage mock questions with memoized JSON parsing
   const mId = q.mockId || q.testId;
   if (mId) {
     try {
-      const raw = safeStorage.getItem(`cgl_mock_questions_${mId}`);
-      if (raw) {
-        const list = JSON.parse(raw);
-        if (Array.isArray(list)) {
-          const stripped = normalizeQuestionKey(qText);
-          const found = list.find((it: any) => {
-            if (q.id && it.id === q.id) return true;
-            if (stripped && normalizeQuestionKey(it.question || it.questionText) === stripped) return true;
-            return false;
-          });
-          if (found) {
-            const foundSol = found.solution || found.explanation || found.sol;
+      let list = mockStorageCache.get(mId);
+      if (!list) {
+        const raw = safeStorage.getItem(`cgl_mock_questions_${mId}`);
+        if (raw) {
+          list = JSON.parse(raw);
+          if (Array.isArray(list)) {
+            mockStorageCache.set(mId, list);
+          }
+        }
+      }
+      if (Array.isArray(list)) {
+        const stripped = qText ? normalizeQuestionKey(qText) : '';
+        for (let i = 0; i < list.length; i++) {
+          const it = list[i];
+          if ((q.id && it.id === q.id) || (stripped && normalizeQuestionKey(it.question || it.questionText) === stripped)) {
+            const foundSol = it.solution || it.explanation || it.sol;
             if (foundSol && typeof foundSol === 'string' && foundSol.trim().length > 3) {
-              registerQuestion(found);
+              registerQuestion(it);
               return foundSol.trim();
             }
           }

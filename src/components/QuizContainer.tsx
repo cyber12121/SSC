@@ -519,32 +519,29 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     const currentAnswers = answersRef.current;
     const results = buildResults(finalTimeSpent, currentAnswers);
 
+    // Optimistically finish and display score screen immediately (instant <16ms response)
+    const initialLocalResult: QuizResult = {
+      ...results,
+      id: 'local-' + Date.now(),
+      userId: '',
+      completedAt: new Date().toISOString()
+    };
+    setSubmittedResult(initialLocalResult);
+    setIsFinished(true);
+    isFinishedRef.current = true;
+    setShowSubmitModal(false);
+
+    // Save in background without freezing UI
     try {
       const saved = await onSaveResult(results);
       if (saved) {
         setSubmittedResult(saved);
-      } else {
-        setSubmittedResult({
-          ...results,
-          id: 'local-' + Date.now(),
-          userId: '',
-          completedAt: new Date().toISOString()
-        });
       }
     } catch (error) {
-      console.error('Error submitting quiz result:', error);
-      setSubmittedResult({
-        ...results,
-        id: 'local-' + Date.now(),
-        userId: '',
-        completedAt: new Date().toISOString()
-      });
+      console.error('Error submitting quiz result in background:', error);
     } finally {
       setIsSubmitting(false);
       isSubmittingRef.current = false;
-      setIsFinished(true);
-      isFinishedRef.current = true;
-      setShowSubmitModal(false);
     }
   };
 
