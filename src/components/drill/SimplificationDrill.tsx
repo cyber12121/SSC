@@ -62,7 +62,7 @@ export const SimplificationDrill: React.FC = () => {
     setIsFinished(false);
     setTimeLeft(SPRINT_SECONDS);
     setElapsedTime(0);
-    setIsTimerRunning(mode === 'sprint');
+    setIsTimerRunning(true);
   }, [selectedSetId, mode]);
 
   // Timer tick
@@ -214,11 +214,11 @@ export const SimplificationDrill: React.FC = () => {
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono font-bold text-slate-700">
             <Clock className="w-3.5 h-3.5 text-indigo-600" />
             <span>{mode === 'sprint' ? formatTime(timeLeft) : formatTime(elapsedTime)}</span>
-            {mode === 'sprint' && !isFinished && (
+            {!isFinished && (
               <button
                 type="button"
                 onClick={() => setIsTimerRunning(p => !p)}
-                className="text-slate-400 hover:text-slate-700 ml-1 p-0.5"
+                className="text-slate-400 hover:text-slate-700 ml-1 p-0.5 cursor-pointer"
                 title={isTimerRunning ? 'Pause timer' : 'Resume timer'}
               >
                 {isTimerRunning ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
@@ -272,7 +272,10 @@ export const SimplificationDrill: React.FC = () => {
           {!isFinished ? (
             <button
               type="button"
-              onClick={() => setIsFinished(true)}
+              onClick={() => {
+                setIsFinished(true);
+                setIsTimerRunning(false);
+              }}
               className="px-3 py-1 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow-xs transition-colors cursor-pointer active:scale-95"
             >
               Finish Drill

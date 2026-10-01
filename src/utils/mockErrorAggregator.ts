@@ -87,6 +87,7 @@ export async function loadAllBundledMockQuestions(): Promise<any[]> {
             .map((q: any) => ({
               ...q,
               mockId: q.mockId || q.testId || fileId,
+              testId: q.testId || q.mockId || fileId,
               isFromBundledMock: true
             }));
           all.push(...nonDeleted);

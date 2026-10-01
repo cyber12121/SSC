@@ -1360,6 +1360,14 @@ export default function App() {
     // If mock quiz, cache full question attempt details into cgl_mock_questions_* immediately so Mock Errors displays them right away
     if (isMockTest && fullResult.questionDetails && fullResult.questionDetails.length > 0) {
       try {
+        const isSectional = (
+          fullResult.type === 'sectional' ||
+          savedResult.type === 'sectional' ||
+          (fullResult.totalQuestions && fullResult.totalQuestions <= 35) ||
+          (savedResult.totalQuestions && savedResult.totalQuestions <= 35)
+        );
+        const resolvedTestType: 'full' | 'sectional' = isSectional ? 'sectional' : 'full';
+
         const mockQuestionsToSave = fullResult.questionDetails.map((d, idx) => {
           const hasAnswer = Boolean(d.selectedAnswer && String(d.selectedAnswer).trim() !== '');
           const isCorrect = Boolean(d.isCorrect);
@@ -1373,6 +1381,8 @@ export default function App() {
             mockId: savedResult.id,
             testId: savedResult.id,
             testName: fullResult.chapter_title,
+            testType: resolvedTestType,
+            mockType: resolvedTestType,
             userAnswer: d.selectedAnswer || '',
             selectedAnswer: d.selectedAnswer || '',
             chosenOption: d.selectedAnswer || '',

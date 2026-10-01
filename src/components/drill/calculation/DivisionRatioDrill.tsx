@@ -8,6 +8,52 @@ interface DivDrillProps {
   autoStart?: boolean;
 }
 
+export interface DecimalOption {
+  label: string;
+  isCorrect: boolean;
+}
+
+export function generateDecimalOptions(numerator: number, denominator: number): DecimalOption[] {
+  const actualVal = (numerator / denominator) * 100;
+  const baseInt = Math.floor(actualVal);
+  let correctDec = Math.round((actualVal - baseInt) * 100);
+  if (correctDec >= 100) correctDec = 99;
+  if (correctDec < 0) correctDec = 0;
+
+  const correctLabel = `${baseInt}.${correctDec.toString().padStart(2, '0')}%`;
+
+  const distractors = new Set<number>();
+  const candidateDeltas = [-24, -17, -11, -6, 7, 13, 19, 26, -32, 33, -8, 15];
+
+  for (const delta of candidateDeltas) {
+    const candidate = correctDec + delta;
+    if (candidate >= 1 && candidate <= 98 && candidate !== correctDec) {
+      distractors.add(candidate);
+      if (distractors.size === 3) break;
+    }
+  }
+
+  // Fallback if needed so we always have exactly 3 distractors
+  let step = 9;
+  while (distractors.size < 3) {
+    const candidate = Math.min(98, Math.max(1, (correctDec + step) % 100));
+    if (candidate !== correctDec && !distractors.has(candidate)) {
+      distractors.add(candidate);
+    }
+    step += 11;
+  }
+
+  const items: DecimalOption[] = [
+    { label: correctLabel, isCorrect: true },
+    ...Array.from(distractors).map(d => ({
+      label: `${baseInt}.${d.toString().padStart(2, '0')}%`,
+      isCorrect: false,
+    })),
+  ];
+
+  return items.sort(() => Math.random() - 0.5);
+}
+
 export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false }) => {
   const [activeTrack, setActiveTrack] = useState<DivTrack>('decimal_percentage');
   const [isStarted, setIsStarted] = useState<boolean>(false);
@@ -15,8 +61,9 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
   // Decimal estimation state (N / D)
   const [numerator, setNumerator] = useState<number>(53);
   const [denominator, setDenominator] = useState<number>(81);
-  const [selectedBracket, setSelectedBracket] = useState<string | null>(null);
-  const [bracketFeedback, setBracketFeedback] = useState<'idle' | 'correct' | 'wrong'>('idle');
+  const [decimalOptions, setDecimalOptions] = useState<DecimalOption[]>(() => generateDecimalOptions(53, 81));
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [optionFeedback, setOptionFeedback] = useState<'idle' | 'correct' | 'wrong'>('idle');
 
   // Ratio comparison state (N1/D1 vs N2/D2)
   const [r1, setR1] = useState<{ n: number; d: number }>({ n: 173, d: 212 });
@@ -38,9 +85,9 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
     decimal_percentage: {
       title: 'Decimal % Estimation',
       ruleName: '10% & 1% Mental Ladder',
-      description: 'Estimate fraction N / D into instant percentage brackets without manual long division.',
-      concept: 'Calculate 10% of the denominator. Scale up by multiples to bracket the numerator.',
-      example: '53 / 81 ➔ 10% of 81 = 8.1 (60% = 48.6, 70% = 56.7) ➔ 60%–70%',
+      description: 'Estimate fraction N / D into precise decimal percentage without manual long division.',
+      concept: 'Calculate 10% and 1% of the denominator. Scale up to estimate the exact decimal % (e.g. 65.xx%).',
+      example: '53 / 81 ➔ 10% = 8.1 (60% = 48.6, +5% = 52.65, +0.43%) ➔ 65.43%',
       benchmarkSec: 5,
     },
     ratio_compare: {
@@ -55,8 +102,8 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
 
   const generateProblem = (track: DivTrack = activeTrack) => {
     setShowHelper(false);
-    setSelectedBracket(null);
-    setBracketFeedback('idle');
+    setSelectedOption(null);
+    setOptionFeedback('idle');
     setSelectedRatio(null);
     setRatioFeedback('idle');
     setWrongAttempts(0);
@@ -66,6 +113,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
       const n = Math.floor(Math.random() * (d - 15)) + 12;
       setNumerator(n);
       setDenominator(d);
+      setDecimalOptions(generateDecimalOptions(n, d));
     } else {
       const baseD1 = Math.floor(Math.random() * 120) + 150;
       const baseN1 = Math.floor(baseD1 * (Math.random() * 0.4 + 0.45));
@@ -120,23 +168,13 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
   }, [isStarted, isFinished]);
 
   const actualPercent = (numerator / denominator) * 100;
-  const bracketOptions = [
-    { label: '20% – 30%', min: 20, max: 30 },
-    { label: '30% – 40%', min: 30, max: 40 },
-    { label: '40% – 50%', min: 40, max: 50 },
-    { label: '50% – 60%', min: 50, max: 60 },
-    { label: '60% – 70%', min: 60, max: 70 },
-    { label: '70% – 80%', min: 70, max: 80 },
-    { label: '80% – 90%', min: 80, max: 90 },
-  ];
 
-  const handleBracketSelect = (opt: { label: string; min: number; max: number }) => {
-    if (selectedBracket !== null) return;
-    setSelectedBracket(opt.label);
+  const handleDecimalSelect = (opt: DecimalOption) => {
+    if (selectedOption !== null) return;
+    setSelectedOption(opt.label);
 
-    const isCorrect = actualPercent >= opt.min && actualPercent <= opt.max;
-    if (isCorrect) {
-      setBracketFeedback('correct');
+    if (opt.isCorrect) {
+      setOptionFeedback('correct');
       setScore(prev => prev + 1);
       setWrongAttempts(0);
 
@@ -151,18 +189,48 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
     } else {
       const nextAttempts = wrongAttempts + 1;
       setWrongAttempts(nextAttempts);
-      setBracketFeedback('wrong');
+      setOptionFeedback('wrong');
 
       if (nextAttempts >= 3) {
         setShowHelper(true);
       } else {
         setTimeout(() => {
-          setBracketFeedback('idle');
-          setSelectedBracket(null);
+          setOptionFeedback('idle');
+          setSelectedOption(null);
         }, 400);
       }
     }
   };
+
+  // Keyboard navigation for speed drill
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isStarted || isFinished) return;
+      if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement)?.tagName || '')) return;
+
+      const key = e.key.toLowerCase();
+      if (activeTrack === 'decimal_percentage') {
+        const keyMap: Record<string, number> = {
+          '1': 0, '2': 1, '3': 2, '4': 3,
+          'a': 0, 'b': 1, 'c': 2, 'd': 3,
+        };
+        if (keyMap[key] !== undefined && decimalOptions[keyMap[key]]) {
+          e.preventDefault();
+          handleDecimalSelect(decimalOptions[keyMap[key]]);
+        }
+      } else if (activeTrack === 'ratio_compare') {
+        if (key === '1' || key === 'a' || key === 'ArrowLeft') {
+          e.preventDefault();
+          handleRatioSelect('r1');
+        } else if (key === '2' || key === 'b' || key === 'ArrowRight') {
+          e.preventDefault();
+          handleRatioSelect('r2');
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isStarted, isFinished, activeTrack, decimalOptions, selectedOption, selectedRatio]);
 
   const v1 = r1.n / r1.d;
   const v2 = r2.n / r2.d;
@@ -340,26 +408,34 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-xs font-semibold text-slate-600">
-                    Select matching percentage bracket:
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 max-w-md mx-auto">
-                    {bracketOptions.map(opt => {
-                      const isSelected = selectedBracket === opt.label;
+                  <div className="flex items-center justify-between max-w-md mx-auto px-1">
+                    <p className="text-xs font-semibold text-slate-600">
+                      Select matching decimal %:
+                    </p>
+                    <span className="text-[10px] font-mono text-slate-400">Keys 1 - 4</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+                    {decimalOptions.map((opt, idx) => {
+                      const isSelected = selectedOption === opt.label;
                       return (
                         <button
                           key={opt.label}
                           type="button"
-                          onClick={() => handleBracketSelect(opt)}
-                          className={`p-2.5 rounded-xl border text-center font-mono font-semibold text-xs transition-all cursor-pointer ${
-                            isSelected && bracketFeedback === 'correct'
-                              ? 'bg-emerald-600 text-white border-emerald-700 shadow-xs font-bold'
-                              : isSelected && bracketFeedback === 'wrong'
+                          onClick={() => handleDecimalSelect(opt)}
+                          className={`p-3 rounded-xl border flex items-center justify-between font-mono font-bold text-sm sm:text-base transition-all cursor-pointer ${
+                            isSelected && optionFeedback === 'correct'
+                              ? 'bg-emerald-600 text-white border-emerald-700 shadow-xs'
+                              : isSelected && optionFeedback === 'wrong'
                               ? 'bg-rose-500 text-white border-rose-600'
-                              : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800 hover:border-slate-300'
+                              : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800 hover:border-slate-300 shadow-2xs'
                           }`}
                         >
-                          {opt.label}
+                          <span className={`text-[10px] font-sans font-bold px-1.5 py-0.5 rounded ${
+                            isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                          }`}>
+                            {idx + 1}
+                          </span>
+                          <span>{opt.label}</span>
                         </button>
                       );
                     })}
@@ -374,7 +450,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-slate-900">
-                        Exact: <strong className="text-emerald-700">{actualPercent.toFixed(1)}%</strong>
+                        Exact: <strong className="text-emerald-700">{actualPercent.toFixed(2)}%</strong>
                       </span>
                       <button
                         type="button"
@@ -395,6 +471,7 @@ export const DivisionRatioDrill: React.FC<DivDrillProps> = ({ autoStart = false 
                     </div>
                     <div className="text-[11px] text-slate-600 font-mono space-y-0.5">
                       <div>Base {denominator}: 10% = {(denominator * 0.1).toFixed(1)}, 1% = {(denominator * 0.01).toFixed(2)}</div>
+                      <div>{numerator} ÷ {denominator} = {(numerator / denominator).toFixed(4)} ➔ {actualPercent.toFixed(2)}%</div>
                     </div>
                   </motion.div>
                 )}
