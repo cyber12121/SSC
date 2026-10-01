@@ -5821,6 +5821,38 @@
           "conceptTested": "For a sphere circumscribing a cube, its diameter is equal to the body diagonal of the cube ($D = a\\sqrt{3}$).",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_3b39644f46",
+        "q_num": 185,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "N/A (Quant)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:55",
+        "avgTime": "00:43",
+        "question": "A, B, and C invest in a business in the ratio $2 : 3 : 5$. After 4 months, A increases his capital by $50\\%$, B decreases his capital by $\\frac{1}{3}$, and C leaves the capital unchanged. At the end of the year, if the total profit is Rs. 33,000, find the share of B.",
+        "options": {
+          "a": "Rs. 7,700",
+          "b": "Rs. 8,000",
+          "c": "Rs. 9,000",
+          "d": "Rs. 10,500"
+        },
+        "answer": "a",
+        "solution": "For the first 4 months the capitals are $2, 3, 5$; after that A becomes $2 + 50\\% \\text{ of } 2 = 3$, B becomes $3 - \\frac{1}{3}(3) = 2$, and C stays $5$.\n\nProfit weight = Capital $\\times$ Time: A = $2(4) + 3(8) = 32$\nB = $3(4) + 2(8) = 28$\nC = $5(12) = 60$\nTotal weight = $32 + 28 + 60 = 120$\nB's share = $33000 \\times \\frac{28}{120} =$ Rs. 7, 700.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Capital Time Variations",
+        "conceptTested": "Distribution of annual profit according to the ratio of equivalent capitals invested for different periods of time.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Capital Time Variations",
+          "conceptTested": "Distribution of annual profit according to the ratio of equivalent capitals invested for different periods of time.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -14241,6 +14273,230 @@
           "conceptTested": "Supplementary angles sum up to $180^\\circ$ and complementary angles sum up to $90^\\circ$.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_65e5dcd1bb",
+        "q_num": 268,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CGL 20/09/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:28",
+        "avgTime": "01:30",
+        "question": "The investments of three partners, P, Q, and R, are initially in the ratio $6 : 7 : 9$. After a year, P adds Rs. 30,000, Q adds Rs. 25,000, and R adds some amount to their respective investments. The new ratio of their investments becomes $8 : 9 : 11$. Find the amount (in Rs.) added by partner R.",
+        "options": {
+          "a": "Rs. 10,000",
+          "b": "Rs. 12,500",
+          "c": "Rs. 15,000",
+          "d": "Rs. 18,000"
+        },
+        "answer": "c",
+        "solution": "Let the initial investments be $6x$, $7x$, and $9x$. For P and Q, the new ratio gives: $$\\frac{6x + 30000}{7x + 25000} = \\frac{8}{9}$$\n\n$54x + 270000 = 56x + 200000$, so $2x = 70000$ and $x = 35000$.\n\nP's new investment = $6(35000) + 30000 = 240000$, which corresponds to $8$ parts, so one part = $30000$.\nR's new investment = $11 \\times 30000 = 330000$ and his old one = $9(35000) = 315000$.\nAmount added by R = $330000 - 315000 =$ Rs. 15, 000.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Capital Time Variations",
+        "conceptTested": "Profit distribution ratio is directly proportional to the product of capital invested and the time period for which it is invested.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Capital Time Variations",
+          "conceptTested": "Profit distribution ratio is directly proportional to the product of capital invested and the time period for which it is invested.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6e629ecefa",
+        "q_num": 269,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CGL 20/09/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:36",
+        "avgTime": "00:52",
+        "question": "A startup has three stakeholders. A brought $40\\%$ of the capital, and B brought the rest. C joined later and was promised $20\\%$ of the total profit for branding. If total profit was Rs. 2,50,000, how much was B's share?",
+        "options": {
+          "a": "Rs. 1,20,000",
+          "b": "Rs. 1,00,000",
+          "c": "Rs. 90,000",
+          "d": "Rs. 1,10,000"
+        },
+        "answer": "a",
+        "solution": "C's branding share = $20\\%$ of $250000 =$ Rs. 50, 000.\nProfit left for A and B = $250000 - 50000 =$ Rs. 2, 00, 000.\n\nA brought $40\\%$ and B the rest, i.e., $60\\%$ of the capital.\n\nB's share = $200000 \\times \\frac{60}{100} =$ Rs. 1, 20, 000.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Profit Sharing Ratio",
+        "conceptTested": "Total profit is distributed among partners after accounting for special remuneration or stakes given to active/branding partners.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Profit Sharing Ratio",
+          "conceptTested": "Total profit is distributed among partners after accounting for special remuneration or stakes given to active/branding partners.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7ba46f80cc",
+        "q_num": 270,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CGL 22/09/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:04",
+        "avgTime": "00:52",
+        "question": "D and E start a business with equal investments. After 4 months, D adds Rs. 10,000 more. At the end of 1 year, if the total profit is Rs. 33,000, and E's share is Rs. 15,000, what was their initial investment?",
+        "options": {
+          "a": "Rs. 66,333.33",
+          "b": "Rs. 43,333.33",
+          "c": "Rs. 33,333.33",
+          "d": "Rs. 73,333.33"
+        },
+        "answer": "c",
+        "solution": "E's share = Rs. 15, 000, so D's share = $33000 - 15000 =$ Rs. 18, 000, i.e., D : E profit ratio = $18000 : 15000 = 6 : 5$.\n\nLet each start with Rs. $x$; then E's weight = $12x$ and D's weight = $4x + 8(x + 10000) = 12x + 80000$.\n\n$$\\frac{12x + 80000}{12x} = \\frac{6}{5}$$\n\n$60x + 400000 = 72x$, so $12x = 400000$.\n\nInitial investment $x = \\frac{400000}{12} =$ Rs. 33, 333.33.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Capital Time Variations",
+        "conceptTested": "Proportional division of profit based on varying capital contributions over different time periods.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Capital Time Variations",
+          "conceptTested": "Proportional division of profit based on varying capital contributions over different time periods.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d72537e82a",
+        "q_num": 271,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CGL 24/09/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:03",
+        "avgTime": "00:56",
+        "question": "A, B, and C formed a consulting firm. Their capital investments were Rs. 6,00,000, Rs. 4,00,000, and Rs. 5,00,000, respectively. After 3 months, A withdrew Rs. 1,00,000, and B added Rs. 1,00,000. The partnership lasted for 9 months. What was the ratio of their effective capital contributions?",
+        "options": {
+          "a": "16:14:15",
+          "b": "16:15:14",
+          "c": "14:15:16",
+          "d": "14:16:15"
+        },
+        "answer": "a",
+        "solution": "Effective capital = Capital $\\times$ Time, taken in units of Rs. 1, 00, 000: A = $6 \\times 3 + 5 \\times 6 = 18 + 30 = 48$\nB = $4 \\times 3 + 5 \\times 6 = 12 + 30 = 42$\nC = $5 \\times 9 = 45$\nRatio = $48 : 42 : 45 = 16 : 14 : 15$.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Effective Capital Contribution",
+        "conceptTested": "Effective investment for profit sharing is calculated as the sum of products of capital invested and the respective time durations.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Effective Capital Contribution",
+          "conceptTested": "Effective investment for profit sharing is calculated as the sum of products of capital invested and the respective time durations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c6bc456d5a",
+        "q_num": 272,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CHSL 13/11/2025 Shift-1 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:46",
+        "avgTime": "00:47",
+        "question": "If $3(\\text{P's Capital}) = 4(\\text{Q's Capital}) = 7(\\text{R's Capital})$, then out of the total profit of Rs. $3150$, R will receive:",
+        "options": {
+          "a": "800.00",
+          "b": "619.67",
+          "c": "900.00",
+          "d": "718.38"
+        },
+        "answer": "b",
+        "solution": "Let $3P = 4Q = 7R = k$. The ratio of their capitals is $P : Q : R = \\frac{1}{3} : \\frac{1}{4} : \\frac{1}{7}$. Multiply by the LCM of $3, 4, 7$ (which is $84$) to simplify: $P : Q : R = 28 : 21 : 12$. The total parts = $28 + 21 + 12 = 61$. R's share = $\\frac{12}{61} \\times 3150 \\approx 619.67$.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Capital Ratio Share Calculation",
+        "conceptTested": "Division of total profit in proportion to the ratio of capitals when time periods are equal.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Capital Ratio Share Calculation",
+          "conceptTested": "Division of total profit in proportion to the ratio of capitals when time periods are equal.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f54e352680",
+        "q_num": 273,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CHSL 13/11/2025 Shift-2 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:04",
+        "avgTime": "00:45",
+        "question": "A, B, and C enter into a partnership. A invests Rs. $80,000$, B invests Rs. $60,000$, and C invests Rs. $40,000$. After $6$ months, B increases his capital by $25\\%$, while C decreases his capital by $10\\%$. At the end of $1$ year, the total profit is Rs. $1,20,000$. What is C's share in the profit?",
+        "options": {
+          "a": "Rs. 30,000",
+          "b": "Rs. 35,789",
+          "c": "Rs. 20,000",
+          "d": "Rs. 24,582"
+        },
+        "answer": "d",
+        "solution": "To find the profit ratio, we calculate the product of capital and time for each partner. A's effective capital = $80,000 \\times 12 = 9,60,000$. B's capital = $60,000$ for $6$ months, then increased by $25\\%$ (to $75,000$) for the next $6$ months = $(60,000 \\times 6) + (75,000 \\times 6) = 3,60,000 + 4,50,000 = 8,10,000$. C's capital = $40,000$ for $6$ months, then decreased by $10\\%$ (to $36,000$) for the next $6$ months = $(40,000 \\times 6) + (36,000 \\times 6) = 2,40,000 + 2,16,000 = 4,56,000$. The ratio of their profits is $960 : 810 : 456$. Dividing by $6$, we get $160 : 135 : 76$. Total ratio units = $160 + 135 + 76 = 371$ units. C's share = $(\\frac{76}{371}) \\times 1,20,000 \\approx \\text{Rs. } 24,582$.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Modified Capital Investments",
+        "conceptTested": "Calculation of equivalent capitals when investments change midway through the business period.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Modified Capital Investments",
+          "conceptTested": "Calculation of equivalent capitals when investments change midway through the business period.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f491de1ed4",
+        "q_num": 274,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CHSL 13/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Skipped",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:52",
+        "question": "A, B, and C started a business. A contributed Rs. $12,000$, B contributed Rs. $15,000$, and C contributed Rs. $18,000$. After $6$ months, B withdrew Rs. $5,000$, while C added Rs. $10,000$. If the total profit at the end of the year is Rs. $54,000$, how much did C receive?",
+        "options": {
+          "a": "Rs. 26,147",
+          "b": "Rs. 24,901",
+          "c": "Rs. 14,000",
+          "d": "Rs. 17,890"
+        },
+        "answer": "a",
+        "solution": "Formula: Profit share $\\propto \\text{Capital} \\times \\text{Time}$. A = $12,000 \\times 12 = 1,44,000$. B = $15,000 \\times 6 + 10,000 \\times 6 = 90,000 + 60,000 = 1,50,000$. C = $18,000 \\times 6 + 28,000 \\times 6 = 1,08,000 + 1,68,000 = 2,76,000$. Total = $1,44,000 + 1,50,000 + 2,76,000 = 5,70,000$. C's profit = $\\frac{2,76,000}{5,70,000} \\times 54,000 = \\text{Rs. } 26,147 \\text{ (approx.)}$.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Modified Capital Investments",
+        "conceptTested": "Sum of products of varying capitals and respective time intervals determines the profit-sharing ratio.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Modified Capital Investments",
+          "conceptTested": "Sum of products of varying capitals and respective time intervals determines the profit-sharing ratio.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -18009,6 +18265,38 @@
           "topic": "Mensuration 2D",
           "subtopic": "Rectangle & Square (Paths & Fencing)",
           "conceptTested": "Perimeter and area relationship of a rectangle given ratio of length to breadth and fencing cost.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_893107897c",
+        "q_num": 120,
+        "mockId": "mock_1790867750809_bb47d",
+        "testId": "mock_1790867750809_bb47d",
+        "testName": "CHSL 12/11/2025 Shift-3 (Quant)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:59",
+        "avgTime": "00:55",
+        "question": "Three partners share the profit in a business in the ratio $6:8:9$. They invested for $14$ months, $8$ months, and $7$ months, respectively. What is the ratio of their investments?",
+        "options": {
+          "a": "$20:49:64$",
+          "b": "$38:28:21$",
+          "c": "$6:8:9$",
+          "d": "$3:7:9$"
+        },
+        "answer": "d",
+        "solution": "Investment $\\propto \\frac{\\text{Profit}}{\\text{Time}}$. Ratio of investments = $\\frac{6}{14} : \\frac{8}{8} : \\frac{9}{7} = \\frac{3}{7} : 1 : \\frac{9}{7}$. Multiplying by $7$ to simplify, we get $3 : 7 : 9$.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Investment Profit Ratio",
+        "conceptTested": "Profit is shared in the ratio of the product of capital and time period of investment.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Investment Profit Ratio",
+          "conceptTested": "Profit is shared in the ratio of the product of capital and time period of investment.",
           "difficulty": "medium"
         }
       }
