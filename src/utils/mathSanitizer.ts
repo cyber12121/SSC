@@ -551,6 +551,31 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
   s = s.replace(/\\f\s*rac\b/g, '\\frac');
   s = s.replace(/[\x0c\u000c]+/g, ' ');
   s = s.replace(/(?<![a-zA-Z\\])frac\{/g, '\\frac{');
+
+  // Fix tab-character (\x09 / \t) corrupted commands caused by JSON string unescaping
+  s = s.replace(/[\x09\t]+extbf\{/g, '\\textbf{');
+  s = s.replace(/[\x09\t]+extit\{/g, '\\textit{');
+  s = s.replace(/[\x09\t]+ext\{/g, '\\text{');
+  s = s.replace(/[\x09\t]+times\b/g, '\\times');
+  s = s.replace(/[\x09\t]+theta\b/g, '\\theta');
+  s = s.replace(/[\x09\t]+tau\b/g, '\\tau');
+  s = s.replace(/[\x09\t]+tan\b/g, '\\tan');
+
+  // Fix tab-stripped commands where leading \t was stripped/collapsed
+  s = s.replace(/(?<![a-zA-Z\\])extbf\{([^}]*)\}/g, (_, inner) => `\\textbf{${inner}}`);
+  s = s.replace(/(?<![a-zA-Z\\])extit\{([^}]*)\}/g, (_, inner) => `\\textit{${inner}}`);
+  s = s.replace(/(?<![a-zA-Z\\])ext\{([^}]*)\}/g, (_, inner) => `\\text{${inner}}`);
+
+  // Fix tab-stripped English grammar tokens in LaTeX math mode:
+  // e.g. extVerb -> \text{Verb}, extObject -> \text{Object}, extSubject -> \text{Subject}
+  s = s.replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, (_, word) => `\\text{${word}}`);
+
+  // Wrap standalone English words commonly emitted in grammar formulas inside \text{}
+  s = s.replace(/(?<![a-zA-Z\\])(Let|Verb|Object|Subject|Predicate|Do not|not be|be|should be|have|has|had|been|is|are|am|was|were)(?![a-zA-Z{])/g, (_, word) => `\\text{${word}}`);
+
+  // Collapse nested \text{\text{...}}
+  s = s.replace(/\\text\{\\text\{([^}]*)\}\}/g, '\\text{$1}');
+
   // Fix corrupted or LLM-emitted textleft / textright / \text{left} / \text{right}
   s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
   s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');

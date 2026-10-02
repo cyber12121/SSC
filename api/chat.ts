@@ -1017,6 +1017,16 @@ HOW TO ANSWER:
 - For casual greetings ("hi", "hello"), respond warmly, briefly, and ask what they would like to master today. Do not overwhelm them with stats unless asked!
 - STRICT ENGLISH LANGUAGE REQUIREMENT: You must communicate and answer strictly and exclusively in clear, professional, and motivating English at all times. Do NOT use Hindi words, Devanagari script, or Hinglish. Every explanation, breakdown, and greeting must be in standard English.
 - DO NOT append unsolicited practice drill cards, [DRILL: ...] tags, or drill recommendations. Keep answers focused strictly on clear explanation and exam mastery.
+- ENGLISH GRAMMAR & LANGUAGE FORMATTING RULES (CRITICAL):
+  * NEVER use LaTeX math mode ($...$ or $$...$$) or LaTeX commands (\text{}, \textbf{}, \mathrm{}, etc.) for English grammar structures, syntax rules, active/passive voice formulas, direct/indirect speech patterns, or sentence components!
+  * For English grammar formulas and structures, ALWAYS use clean, natural Markdown with bold keywords and standard parenthetical notation:
+    - **Active Structure:** Verb ($V_1$) + Object
+    - **Passive Formula:** Let + Object + be + $V_3$
+    - **Negative Command Active:** Do not + Verb ($V_1$) + Object
+    - **Negative Command Passive:** Let + Object + not be + $V_3$
+    - **Rule:** Subject + auxiliary verb + main verb + object
+  * NEVER output "extVerb", "extObject", "\text{Verb}", or LaTeX formatting for English words. Keep all English grammar explanations in clean, readable text.
+  * Only use LaTeX math blocks ($...$ or $$...$$) for Quantitative Aptitude (mathematical calculations, arithmetic, geometry, algebra, trigonometry).
 - MATHEMATICAL & TEXT FORMATTING RULES:
   * STRICT LATEX RULE: For ALL mathematical formulas, expressions, variables, units, equations, and algebra, ALWAYS enclose them in single dollar signs for inline math (e.g. $CSA = 2\pi rh$, $h = 2r$, $r = 14\text{ m}$, $784\pi\text{ m}^2$, $x^2 + y^2 = r^2$, $\left(\frac{x}{10}\right)^2\%$) or double dollar signs on a single line for display equations ($$\text{Area} = \frac{1}{2} \times b \times h$$).
   * Standalone display equations should always be enclosed in $$...$$ on their own single line without linebreaks between $$ and the equation.
@@ -1047,6 +1057,22 @@ HOW TO ANSWER:
   * State the extracted question clearly if needed, and solve it step-by-step.
   * Highlight the fastest shortcut trick, relevant formula, and options elimination technique.
 - Format responses beautifully using Markdown: bold key terms, use bullet points, and tables when presenting comparisons or schedules.`;
+
+function sanitizeOutgoingAiText(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/[\x09\t]+extbf\{/g, '\\textbf{')
+    .replace(/[\x09\t]+extit\{/g, '\\textit{')
+    .replace(/[\x09\t]+ext\{/g, '\\text{')
+    .replace(/[\x09\t]+times\b/g, '\\times')
+    .replace(/[\x09\t]+theta\b/g, '\\theta')
+    .replace(/[\x09\t]+tau\b/g, '\\tau')
+    .replace(/[\x09\t]+tan\b/g, '\\tan')
+    .replace(/(?<![a-zA-Z\\])extbf\{([^}]*)\}/g, (_, inner) => `\\textbf{${inner}}`)
+    .replace(/(?<![a-zA-Z\\])extit\{([^}]*)\}/g, (_, inner) => `\\textit{${inner}}`)
+    .replace(/(?<![a-zA-Z\\])ext\{([^}]*)\}/g, (_, inner) => `\\text{${inner}}`)
+    .replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, (_, word) => `\\text{${word}}`);
+}
 
 export default async function handler(req: any, res: any) {
   // CORS headers for local and cloud access
@@ -1274,7 +1300,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
             const text = chunk.text || '';
             if (text) {
               receivedAnyText = true;
-              res.write(`data: ${JSON.stringify({ text })}\n\n`);
+              res.write(`data: ${JSON.stringify({ text: sanitizeOutgoingAiText(text) })}\n\n`);
             }
           }
 
@@ -1331,7 +1357,7 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
                     const text = parsed?.candidates?.[0]?.content?.parts?.[0]?.text;
                     if (text) {
                       receivedAnyText = true;
-                      res.write(`data: ${JSON.stringify({ text })}\n\n`);
+                      res.write(`data: ${JSON.stringify({ text: sanitizeOutgoingAiText(text) })}\n\n`);
                     }
                   } catch {}
                 }
@@ -1411,6 +1437,8 @@ ${selectiveContext ? `\n${selectiveContext}\n` : ''}
       reply = lastNonStreamErr
         ? `⚠️ ${lastNonStreamErr}`
         : 'I apologize, but all AI models are temporarily busy. Please try asking again in a few seconds.';
+    } else {
+      reply = sanitizeOutgoingAiText(reply);
     }
 
     return res.status(200).json({ reply });

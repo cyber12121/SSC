@@ -381,6 +381,24 @@ export function normalizeChatLatex(text: string): string {
   // 0. Remove any [DRILL: ...] practice drill tags so they never clutter the chat
   s = s.replace(/\[DRILL:\s*[^\]]+\]/gi, '');
 
+  // Fix tab-character (\x09 / \t) corrupted commands caused by JSON string unescaping
+  s = s.replace(/[\x09\t]+extbf\{/g, '\\textbf{');
+  s = s.replace(/[\x09\t]+extit\{/g, '\\textit{');
+  s = s.replace(/[\x09\t]+ext\{/g, '\\text{');
+  s = s.replace(/[\x09\t]+times\b/g, '\\times');
+  s = s.replace(/[\x09\t]+theta\b/g, '\\theta');
+  s = s.replace(/[\x09\t]+tau\b/g, '\\tau');
+  s = s.replace(/[\x09\t]+tan\b/g, '\\tan');
+
+  // Fix tab-stripped commands where leading \t was stripped/collapsed
+  s = s.replace(/(?<![a-zA-Z\\])extbf\{([^}]*)\}/g, (_, inner) => `\\textbf{${inner}}`);
+  s = s.replace(/(?<![a-zA-Z\\])extit\{([^}]*)\}/g, (_, inner) => `\\textit{${inner}}`);
+  s = s.replace(/(?<![a-zA-Z\\])ext\{([^}]*)\}/g, (_, inner) => `\\text{${inner}}`);
+
+  // Fix tab-stripped English grammar tokens in LaTeX math mode:
+  // e.g. extVerb -> \text{Verb}, extObject -> \text{Object}, extSubject -> \text{Subject}
+  s = s.replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, (_, word) => `\\text{${word}}`);
+
   // Fix corrupted or LLM-emitted textleft / textright / \text{left} / \text{right}
   s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
   s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');
@@ -523,6 +541,12 @@ export function normalizeChatLatex(text: string): string {
     l = l.replace(/\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|phi|psi|rho|tau|delta|epsilon|eta|zeta|kappa|nu|xi|chi|iota|Delta|Sigma|Omega|angle|sim|cong|infty|propto)\b/g, (_, sym) => `$\\${sym}$`);
     l = l.replace(/\\sqrt(?:\[([^\]]*)\])?\{((?:[^{}]|\{[^{}]*\})*)\}/g, (_, root, inner) => root ? `$\\sqrt[${root}]{${inner}}$` : `$\\sqrt{${inner}}$`);
     l = l.replace(/\b(\d+\^[0-9a-zA-Z]+\s*=\s*\d+)\b/g, (_, eq) => `$${eq}$`);
+
+    // Clean raw \text{}, \textbf{}, \textit{} left outside math mode into clean Markdown or text:
+    l = l.replace(/\\textbf\{([^}]*)\}/g, '**$1**');
+    l = l.replace(/\\textit\{([^}]*)\}/g, '*$1*');
+    l = l.replace(/\\text\{([^}]*)\}/g, '$1');
+    l = l.replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, '$1');
 
     return l;
   });
@@ -791,7 +815,11 @@ function FormattedMessage({ content, isStreaming }: { content: string; isStreami
         }
       }
 
-      return part;
+      // Clean plain text fallback from any stray raw \text{} or ext-prefixed words
+      return part
+        .replace(/\\text\{([^}]*)\}/g, '$1')
+        .replace(/\\textbf\{([^}]*)\}/g, '$1')
+        .replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, '$1');
     });
   };
 
