@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Units | English Grammar in Use</title>
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --ink: #1f2933;
+    --muted: #5c6b7a;
+    --accent: #1e6f5c;
+    --accent-light: #e6f2ee;
+    --accent-dark: #14503f;
+    --highlight: #fff3cd;
+    --correct: #2e7d32;
+    --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7;
+    --wrong: #c62828;
+    --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a;
+    --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31, 41, 51, 0.06);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Charter', 'Cambria', serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  .progress-wrap {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: transparent; z-index: 200;
+  }
+  .progress-bar { height: 100%; width: 0%; background: var(--accent); transition: width 0.1s; }
+
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(247, 245, 240, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+  .topbar-inner {
+    max-width: 900px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .brand {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700; font-size: 14px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .nav-links { display: flex; gap: 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  .hero { max-width: 900px; margin: 0 auto; padding: 60px 24px 20px; }
+  .unit-badge {
+    display: inline-block; font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-light); padding: 6px 14px;
+    border-radius: 100px; margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(32px, 5vw, 48px); line-height: 1.15;
+    margin: 0 0 16px; letter-spacing: -0.02em; font-weight: 700;
+  }
+  h1 .sub {
+    display: block; font-size: 0.5em; color: var(--muted);
+    font-weight: 400; margin-top: 10px; font-style: italic;
+  }
+  .lede { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 20px 24px 80px; }
+  section { margin: 48px 0; }
+
+  h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    margin: 0 0 20px; display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+  h3 { font-size: 22px; margin: 32px 0 12px; letter-spacing: -0.01em; }
+  h4 { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; margin: 24px 0 8px; color: var(--ink); }
+  p { margin: 0 0 14px; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px 32px;
+    box-shadow: var(--shadow); margin: 20px 0;
+  }
+  .example-box {
+    background: var(--accent-light); border-left: 4px solid var(--accent);
+    padding: 18px 22px; border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0; font-size: 17px;
+  }
+  .example-box .label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent);
+    display: block; margin-bottom: 8px;
+  }
+  .highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight) 60%);
+    font-weight: 600; padding: 0 2px;
+  }
+  .wrong-note { color: var(--wrong); font-size: 14px; font-style: italic; }
+
+  .conj-table, .summary-table {
+    width: 100%; border-collapse: collapse; margin: 20px 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px;
+    background: var(--card); border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--shadow);
+  }
+  .conj-table th, .summary-table th {
+    background: var(--accent); color: #fff; text-align: left;
+    padding: 14px 20px; font-weight: 600; font-size: 13px;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .conj-table td, .summary-table td {
+    padding: 14px 20px; border-bottom: 1px solid var(--border); vertical-align: top;
+  }
+  .conj-table tr:last-child td, .summary-table tr:last-child td { border-bottom: none; }
+  .conj-table tr:nth-child(even) td, .summary-table tr:nth-child(even) td { background: #fafaf7; }
+  .conj-table code {
+    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+    font-size: 14px; background: var(--accent-light); color: var(--accent-dark);
+    padding: 2px 7px; border-radius: 5px; font-weight: 600;
+  }
+  .summary-table em { font-style: normal; color: var(--accent-dark); font-weight: 600; }
+
+  .exercise {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px 32px;
+    margin: 28px 0; box-shadow: var(--shadow);
+  }
+  .exercise-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .ex-number {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px; font-weight: 700; background: var(--accent);
+    color: #fff; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.05em;
+  }
+  .ex-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600; font-size: 15px; color: var(--ink); margin: 0;
+  }
+  .ex-instruction { color: var(--muted); font-size: 15px; margin: 4px 0 20px; }
+
+  .verb-bank { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 20px; }
+  .verb-chip {
+    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+    font-size: 14px; background: var(--highlight); color: #7a5c00;
+    padding: 5px 12px; border-radius: 100px; font-weight: 600;
+  }
+
+  ol.ex-list { list-style: none; counter-reset: item; padding: 0; margin: 0; }
+  ol.ex-list > li {
+    counter-increment: item; padding: 14px 0 14px 42px;
+    position: relative; border-bottom: 1px dashed var(--border); font-size: 16px;
+  }
+  ol.ex-list > li:last-child { border-bottom: none; }
+  ol.ex-list > li::before {
+    content: counter(item); position: absolute; left: 0; top: 14px;
+    width: 28px; height: 28px; background: var(--accent-light);
+    color: var(--accent-dark); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 700;
+  }
+
+  /* Picture exercise */
+  .pic-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin: 20px 0;
+  }
+  .pic-card {
+    background: #fafaf7; border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px; text-align: center;
+  }
+  .pic-num {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700; color: var(--accent); font-size: 14px;
+    display: block; margin-bottom: 8px;
+  }
+  .pic-emoji { font-size: 40px; display: block; margin: 8px 0; }
+  .pic-text { font-size: 15px; color: var(--muted); }
+
+  /* Matching dropdowns */
+  .match-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden; margin: 20px 0;
+  }
+  .match-col { padding: 16px 20px; }
+  .match-col:first-child { border-right: 1px solid var(--border); }
+  .match-row {
+    padding: 10px 0; font-size: 15px; display: flex; gap: 10px;
+    align-items: center; border-bottom: 1px dashed var(--border);
+    min-height: 48px;
+  }
+  .match-row:last-child { border-bottom: none; }
+  .match-num, .match-letter {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700; color: var(--accent);
+    min-width: 18px; font-size: 14px;
+  }
+  .match-select {
+    margin-left: auto;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px; font-weight: 600;
+    padding: 6px 10px; border: 2px solid var(--border);
+    border-radius: 8px; background: #fff; color: var(--ink);
+    cursor: pointer; outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    min-width: 70px;
+  }
+  .match-select:focus { border-color: var(--accent); }
+  .match-select.correct { border-color: var(--correct); background: var(--correct-bg); color: var(--correct); }
+  .match-select.wrong { border-color: var(--wrong); background: var(--wrong-bg); color: var(--wrong); }
+
+  /* Inputs */
+  .fill-input {
+    font-family: inherit; font-size: 16px;
+    border: none; border-bottom: 2px solid var(--accent);
+    background: transparent; padding: 2px 6px;
+    min-width: 140px; color: var(--accent-dark);
+    font-weight: 600; outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .fill-input:focus {
+    border-bottom-color: var(--accent-dark);
+    background: #f0f7f4;
+  }
+  .fill-input.correct {
+    border-bottom-color: var(--correct);
+    color: var(--correct);
+    background: var(--correct-bg);
+  }
+  .fill-input.wrong {
+    border-bottom-color: var(--wrong);
+    color: var(--wrong);
+    background: var(--wrong-bg);
+  }
+  .fill-input[readonly] {
+    color: var(--accent-dark);
+    border-bottom-color: var(--accent-light);
+    cursor: default;
+  }
+  .fill-input[readonly].correct {
+    color: var(--correct);
+    border-bottom-color: var(--correct);
+    background: var(--correct-bg);
+  }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .check-btn {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.05em;
+    background: var(--accent); color: #fff; border: none;
+    padding: 10px 22px; border-radius: 8px; cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .check-btn:hover { background: var(--accent-dark); }
+  .check-btn:active { transform: scale(0.97); }
+  .show-btn {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 600;
+    background: transparent; color: var(--accent);
+    border: 1px solid var(--accent); padding: 10px 22px;
+    border-radius: 8px; cursor: pointer; transition: all 0.2s;
+  }
+  .show-btn:hover { background: var(--accent-light); }
+  .reset-btn {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 600;
+    background: transparent; color: var(--muted);
+    border: 1px solid var(--border); padding: 10px 22px;
+    border-radius: 8px; cursor: pointer; transition: all 0.2s;
+  }
+  .reset-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .feedback {
+    margin-top: 16px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px; font-weight: 600;
+    padding: 12px 18px; border-radius: 10px;
+    display: none;
+  }
+  .feedback.show { display: block; }
+  .feedback.good { background: var(--correct-bg); color: var(--correct); border: 1px solid var(--correct-border); }
+  .feedback.bad { background: var(--wrong-bg); color: var(--wrong); border: 1px solid var(--wrong-border); }
+
+  .reveal {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; margin: 14px 0; overflow: hidden;
+  }
+  .reveal summary {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px; font-weight: 600; padding: 14px 20px;
+    cursor: pointer; color: var(--accent); list-style: none;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.2s; user-select: none;
+  }
+  .reveal summary:hover { background: #fafaf7; }
+  .reveal summary::-webkit-details-marker { display: none; }
+  .reveal summary::after {
+    content: "+"; font-size: 20px; font-weight: 400;
+    color: var(--muted); transition: transform 0.2s;
+  }
+  .reveal[open] summary::after { transform: rotate(45deg); }
+  .reveal-content {
+    padding: 16px 20px 20px; font-size: 15px;
+    border-top: 1px solid var(--border);
+  }
+  .reveal-content ol { margin: 0; padding-left: 22px; }
+  .reveal-content li { padding: 4px 0; color: var(--muted); }
+  .reveal-content li strong { color: var(--accent-dark); }
+
+  .objectives {
+    list-style: none; padding: 0; margin: 20px 0;
+    display: grid; gap: 10px;
+  }
+  .objectives li { padding-left: 32px; position: relative; font-size: 16px; }
+  .objectives li::before {
+    content: "✓"; position: absolute; left: 0; top: 0;
+    color: var(--accent); font-weight: 700; font-size: 16px;
+  }
+
+  footer {
+    max-width: 900px; margin: 0 auto;
+    padding: 40px 24px 60px; border-top: 1px solid var(--border);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; color: var(--muted); text-align: center;
+  }
+  footer .next-unit {
+    display: inline-block; margin-top: 16px;
+    background: var(--accent); color: #fff;
+    padding: 12px 28px; border-radius: 100px;
+    text-decoration: none; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.03em; transition: background 0.2s;
+  }
+  footer .next-unit:hover { background: var(--accent-dark); }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .card, .exercise { padding: 22px 20px; }
+    .match-grid { grid-template-columns: 1fr; }
+    .match-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+    .nav-links { display: none; }
+    .match-select { min-width: 60px; }
+  }
+
+  /* ---- project additions (real figures + prev/next nav) ---- */
+  .pic-img {
+    display: block; width: 100%; height: auto;
+    border-radius: 8px; margin: 8px 0 12px;
+    background: #fff;
+  }
+  .theory-fig {
+    max-width: 320px; width: 100%;
+    margin: 16px auto 4px;
+  }
+  a.pic-card { text-decoration: none; color: inherit; }
+  a.pic-card:hover { border-color: var(--accent); background: var(--accent-light); }
+  .chapter-list { list-style: none; padding: 0; margin: 18px 0 8px; }
+  .chapter-list li { border-bottom: 1px solid var(--border); }
+  .chapter-list li:first-child { border-top: 1px solid var(--border); }
+  .chapter-list a {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 16px; padding: 13px 4px; text-decoration: none; color: var(--ink);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px; font-weight: 600; transition: color 0.2s;
+  }
+  .chapter-list a:hover { color: var(--accent); }
+  .chapter-list .range { color: var(--muted); font-weight: 500; font-size: 13px; }
+  .footer-nav {
+    display: flex; gap: 12px; justify-content: center;
+    flex-wrap: wrap; margin-top: 16px;
+  }
+  .footer-nav .next-unit { margin-top: 0; }
+  footer .next-unit.prev {
+    background: transparent; color: var(--accent);
+    border: 1px solid var(--accent); padding: 11px 26px;
+  }
+  footer .next-unit.prev:hover { background: var(--accent-light); }
+</style>
+</head>
+<body>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">English Grammar in Use</div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">English Grammar in Use</span>
+  <h1>Grammar Units<span class="sub">I am doing &amp; I do</span></h1>
+  <p class="lede">145 interactive units in 7 chapters — theory, exercises with instant marking, answer keys and a summary for every unit.</p>
+</header>
+
+<main>
+
+  <section id="chapters">
+    <h2>Chapters</h2>
+    <p class="ex-instruction">Jump to a chapter, or scroll down for every unit.</p>
+    <ul class="chapter-list">
+      <li><a href="#units-1"><span>Tenses Basics (Units 1-18)</span><span class="range">Units 1–18 · 18 units</span></a></li>
+      <li><a href="#units-2"><span>Future Modals Passive (Units 19-48)</span><span class="range">Units 19–46 · 28 units</span></a></li>
+      <li><a href="#units-3"><span>Verb Patterns (Units 49-68)</span><span class="range">Units 47–68 · 22 units</span></a></li>
+      <li><a href="#units-4"><span>Nouns Articles Quantifiers (Units 69-91)</span><span class="range">Units 69–91 · 23 units</span></a></li>
+      <li><a href="#units-5"><span>Clauses Adjectives Comparison (Units 92-108)</span><span class="range">Units 92–108 · 17 units</span></a></li>
+      <li><a href="#units-6"><span>Word Order Prepositions (Units 109-136)</span><span class="range">Units 109–136 · 28 units</span></a></li>
+      <li><a href="#units-7"><span>Phrasal Verbs (Units 137-145)</span><span class="range">Units 137–145 · 9 units</span></a></li>
+    </ul>
+  </section>
+
+  <section id="units">
+    <h2>All Units</h2>
+  </section>
+
+  <section id="units-1">
+    <h2>Tenses Basics (Units 1-18)</h2>
+    <p class="ex-instruction">Units 1–18 · 18 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-001.html">
+        <span class="pic-num">Unit 1</span>
+        <p class="pic-text">Present continuous (I am doing)</p>
+      </a>
+      <a class="pic-card" href="unit-002.html">
+        <span class="pic-num">Unit 2</span>
+        <p class="pic-text">Present simple (I do)</p>
+      </a>
+      <a class="pic-card" href="unit-003.html">
+        <span class="pic-num">Unit 3</span>
+        <p class="pic-text">Present continuous and present simple 1 (I am doing and I do)</p>
+      </a>
+      <a class="pic-card" href="unit-004.html">
+        <span class="pic-num">Unit 4</span>
+        <p class="pic-text">Present continuous and present simple 2 (I am doing and I do)</p>
+      </a>
+      <a class="pic-card" href="unit-005.html">
+        <span class="pic-num">Unit 5</span>
+        <p class="pic-text">Past simple (I did)</p>
+      </a>
+      <a class="pic-card" href="unit-006.html">
+        <span class="pic-num">Unit 6</span>
+        <p class="pic-text">Past continuous (I was doing)</p>
+      </a>
+      <a class="pic-card" href="unit-007.html">
+        <span class="pic-num">Unit 7</span>
+        <p class="pic-text">Present perfect 1 (I have done)</p>
+      </a>
+      <a class="pic-card" href="unit-008.html">
+        <span class="pic-num">Unit 8</span>
+        <p class="pic-text">Present perfect 2 (I have done)</p>
+      </a>
+      <a class="pic-card" href="unit-009.html">
+        <span class="pic-num">Unit 9</span>
+        <p class="pic-text">Present perfect continuous (I have been doing)</p>
+      </a>
+      <a class="pic-card" href="unit-010.html">
+        <span class="pic-num">Unit 10</span>
+        <p class="pic-text">Present perfect continuous and simple (I have been doing and I have done)</p>
+      </a>
+      <a class="pic-card" href="unit-011.html">
+        <span class="pic-num">Unit 11</span>
+        <p class="pic-text">how long have you (been) …</p>
+      </a>
+      <a class="pic-card" href="unit-012.html">
+        <span class="pic-num">Unit 12</span>
+        <p class="pic-text">for and since when … and how long …</p>
+      </a>
+      <a class="pic-card" href="unit-013.html">
+        <span class="pic-num">Unit 13</span>
+        <p class="pic-text">Present perfect and past 1 (I have done and I did)</p>
+      </a>
+      <a class="pic-card" href="unit-014.html">
+        <span class="pic-num">Unit 14</span>
+        <p class="pic-text">Present perfect and past 2 (I have done and I did)</p>
+      </a>
+      <a class="pic-card" href="unit-015.html">
+        <span class="pic-num">Unit 15</span>
+        <p class="pic-text">Past perfect (I had done)</p>
+      </a>
+      <a class="pic-card" href="unit-016.html">
+        <span class="pic-num">Unit 16</span>
+        <p class="pic-text">Past perfect continuous (I had been doing)</p>
+      </a>
+      <a class="pic-card" href="unit-017.html">
+        <span class="pic-num">Unit 17</span>
+        <p class="pic-text">have and have got</p>
+      </a>
+      <a class="pic-card" href="unit-018.html">
+        <span class="pic-num">Unit 18</span>
+        <p class="pic-text">used to (do)</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="units-2">
+    <h2>Future Modals Passive (Units 19-48)</h2>
+    <p class="ex-instruction">Units 19–46 · 28 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-019.html">
+        <span class="pic-num">Unit 19</span>
+        <p class="pic-text">Present tenses (I am doing I do) for the future</p>
+      </a>
+      <a class="pic-card" href="unit-020.html">
+        <span class="pic-num">Unit 20</span>
+        <p class="pic-text">I'm going to (do)</p>
+      </a>
+      <a class="pic-card" href="unit-021.html">
+        <span class="pic-num">Unit 21</span>
+        <p class="pic-text">will and shall 1</p>
+      </a>
+      <a class="pic-card" href="unit-022.html">
+        <span class="pic-num">Unit 22</span>
+        <p class="pic-text">will and shall 2</p>
+      </a>
+      <a class="pic-card" href="unit-023.html">
+        <span class="pic-num">Unit 23</span>
+        <p class="pic-text">I will and I'm going to</p>
+      </a>
+      <a class="pic-card" href="unit-024.html">
+        <span class="pic-num">Unit 24</span>
+        <p class="pic-text">will be doing and will have done</p>
+      </a>
+      <a class="pic-card" href="unit-025.html">
+        <span class="pic-num">Unit 25</span>
+        <p class="pic-text">when I do and when I've done if and when</p>
+      </a>
+      <a class="pic-card" href="unit-026.html">
+        <span class="pic-num">Unit 26</span>
+        <p class="pic-text">can, could and (be) able to</p>
+      </a>
+      <a class="pic-card" href="unit-027.html">
+        <span class="pic-num">Unit 27</span>
+        <p class="pic-text">could (do) and could have (done)</p>
+      </a>
+      <a class="pic-card" href="unit-028.html">
+        <span class="pic-num">Unit 28</span>
+        <p class="pic-text">must and can't</p>
+      </a>
+      <a class="pic-card" href="unit-029.html">
+        <span class="pic-num">Unit 29</span>
+        <p class="pic-text">may and might 1</p>
+      </a>
+      <a class="pic-card" href="unit-030.html">
+        <span class="pic-num">Unit 30</span>
+        <p class="pic-text">may and might 2</p>
+      </a>
+      <a class="pic-card" href="unit-031.html">
+        <span class="pic-num">Unit 31</span>
+        <p class="pic-text">have to and must</p>
+      </a>
+      <a class="pic-card" href="unit-032.html">
+        <span class="pic-num">Unit 32</span>
+        <p class="pic-text">must mustn't needn't</p>
+      </a>
+      <a class="pic-card" href="unit-033.html">
+        <span class="pic-num">Unit 33</span>
+        <p class="pic-text">should 1</p>
+      </a>
+      <a class="pic-card" href="unit-034.html">
+        <span class="pic-num">Unit 34</span>
+        <p class="pic-text">should 2</p>
+      </a>
+      <a class="pic-card" href="unit-035.html">
+        <span class="pic-num">Unit 35</span>
+        <p class="pic-text">I'd better … it's time …</p>
+      </a>
+      <a class="pic-card" href="unit-036.html">
+        <span class="pic-num">Unit 36</span>
+        <p class="pic-text">would</p>
+      </a>
+      <a class="pic-card" href="unit-037.html">
+        <span class="pic-num">Unit 37</span>
+        <p class="pic-text">cancouldwould you … etc. (Requests, offers, permission and invitations)</p>
+      </a>
+      <a class="pic-card" href="unit-038.html">
+        <span class="pic-num">Unit 38</span>
+        <p class="pic-text">if I do … and if I did …</p>
+      </a>
+      <a class="pic-card" href="unit-039.html">
+        <span class="pic-num">Unit 39</span>
+        <p class="pic-text">if I knew … I wish I knew …</p>
+      </a>
+      <a class="pic-card" href="unit-040.html">
+        <span class="pic-num">Unit 40</span>
+        <p class="pic-text">if I had known … I wish I had known …</p>
+      </a>
+      <a class="pic-card" href="unit-041.html">
+        <span class="pic-num">Unit 41</span>
+        <p class="pic-text">wish</p>
+      </a>
+      <a class="pic-card" href="unit-042.html">
+        <span class="pic-num">Unit 42</span>
+        <p class="pic-text">Passive 1 (is done was done)</p>
+      </a>
+      <a class="pic-card" href="unit-043.html">
+        <span class="pic-num">Unit 43</span>
+        <p class="pic-text">Passive 2 (be done been done being done)</p>
+      </a>
+      <a class="pic-card" href="unit-044.html">
+        <span class="pic-num">Unit 44</span>
+        <p class="pic-text">Passive 3</p>
+      </a>
+      <a class="pic-card" href="unit-045.html">
+        <span class="pic-num">Unit 45</span>
+        <p class="pic-text">it is said that … he is said to … he is supposed to …</p>
+      </a>
+      <a class="pic-card" href="unit-046.html">
+        <span class="pic-num">Unit 46</span>
+        <p class="pic-text">have something done</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="units-3">
+    <h2>Verb Patterns (Units 49-68)</h2>
+    <p class="ex-instruction">Units 47–68 · 22 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-047.html">
+        <span class="pic-num">Unit 47</span>
+        <p class="pic-text">Reported speech 1 (he said that …)</p>
+      </a>
+      <a class="pic-card" href="unit-048.html">
+        <span class="pic-num">Unit 48</span>
+        <p class="pic-text">Reported speech 2</p>
+      </a>
+      <a class="pic-card" href="unit-049.html">
+        <span class="pic-num">Unit 49</span>
+        <p class="pic-text">Questions 1</p>
+      </a>
+      <a class="pic-card" href="unit-050.html">
+        <span class="pic-num">Unit 50</span>
+        <p class="pic-text">Questions 2 (do you know where … he asked me where …)</p>
+      </a>
+      <a class="pic-card" href="unit-051.html">
+        <span class="pic-num">Unit 51</span>
+        <p class="pic-text">Auxiliary verbs (havedocan etc.) I think so I hope so etc</p>
+      </a>
+      <a class="pic-card" href="unit-052.html">
+        <span class="pic-num">Unit 52</span>
+        <p class="pic-text">Question tags (do you isn't it etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-053.html">
+        <span class="pic-num">Unit 53</span>
+        <p class="pic-text">Verb + -ing (enjoy doing stop doing etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-054.html">
+        <span class="pic-num">Unit 54</span>
+        <p class="pic-text">Verb + to … (decide to … forget to … etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-055.html">
+        <span class="pic-num">Unit 55</span>
+        <p class="pic-text">Verb (+ object) + to … (I want you to …)</p>
+      </a>
+      <a class="pic-card" href="unit-056.html">
+        <span class="pic-num">Unit 56</span>
+        <p class="pic-text">Verb + -ing or to … 1 (remember, regret etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-057.html">
+        <span class="pic-num">Unit 57</span>
+        <p class="pic-text">Verb + -ing or to … 2 (try, need, help)</p>
+      </a>
+      <a class="pic-card" href="unit-058.html">
+        <span class="pic-num">Unit 58</span>
+        <p class="pic-text">Verb + -ing or to … 3 (like would like etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-059.html">
+        <span class="pic-num">Unit 59</span>
+        <p class="pic-text">prefer and would rather</p>
+      </a>
+      <a class="pic-card" href="unit-060.html">
+        <span class="pic-num">Unit 60</span>
+        <p class="pic-text">Preposition (inforabout etc.) + -ing</p>
+      </a>
+      <a class="pic-card" href="unit-061.html">
+        <span class="pic-num">Unit 61</span>
+        <p class="pic-text">beget used to … (I'm used to …)</p>
+      </a>
+      <a class="pic-card" href="unit-062.html">
+        <span class="pic-num">Unit 62</span>
+        <p class="pic-text">Verb + preposition + -ing (succeed in -ing insist on -ing etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-063.html">
+        <span class="pic-num">Unit 63</span>
+        <p class="pic-text">there's no point in -ing, it's worth -ing etc</p>
+      </a>
+      <a class="pic-card" href="unit-064.html">
+        <span class="pic-num">Unit 64</span>
+        <p class="pic-text">to … , for … and so that …</p>
+      </a>
+      <a class="pic-card" href="unit-065.html">
+        <span class="pic-num">Unit 65</span>
+        <p class="pic-text">Adjective + to …</p>
+      </a>
+      <a class="pic-card" href="unit-066.html">
+        <span class="pic-num">Unit 66</span>
+        <p class="pic-text">to … (afraid to do) and preposition + -ing (afraid of -ing)</p>
+      </a>
+      <a class="pic-card" href="unit-067.html">
+        <span class="pic-num">Unit 67</span>
+        <p class="pic-text">see somebody do and see somebody doing</p>
+      </a>
+      <a class="pic-card" href="unit-068.html">
+        <span class="pic-num">Unit 68</span>
+        <p class="pic-text">-ing clauses (He hurt his knee playing football.)</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="units-4">
+    <h2>Nouns Articles Quantifiers (Units 69-91)</h2>
+    <p class="ex-instruction">Units 69–91 · 23 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-069.html">
+        <span class="pic-num">Unit 69</span>
+        <p class="pic-text">Countable and uncountable 1</p>
+      </a>
+      <a class="pic-card" href="unit-070.html">
+        <span class="pic-num">Unit 70</span>
+        <p class="pic-text">Countable and uncountable 2</p>
+      </a>
+      <a class="pic-card" href="unit-071.html">
+        <span class="pic-num">Unit 71</span>
+        <p class="pic-text">Countable nouns with aan and some</p>
+      </a>
+      <a class="pic-card" href="unit-072.html">
+        <span class="pic-num">Unit 72</span>
+        <p class="pic-text">aan and the</p>
+      </a>
+      <a class="pic-card" href="unit-073.html">
+        <span class="pic-num">Unit 73</span>
+        <p class="pic-text">the 1</p>
+      </a>
+      <a class="pic-card" href="unit-074.html">
+        <span class="pic-num">Unit 74</span>
+        <p class="pic-text">the 2 (school the school etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-075.html">
+        <span class="pic-num">Unit 75</span>
+        <p class="pic-text">the 3 (children the children)</p>
+      </a>
+      <a class="pic-card" href="unit-076.html">
+        <span class="pic-num">Unit 76</span>
+        <p class="pic-text">the 4 (the giraff e the telephone the old etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-077.html">
+        <span class="pic-num">Unit 77</span>
+        <p class="pic-text">Names with and without the 1</p>
+      </a>
+      <a class="pic-card" href="unit-078.html">
+        <span class="pic-num">Unit 78</span>
+        <p class="pic-text">Names with and without the 2</p>
+      </a>
+      <a class="pic-card" href="unit-079.html">
+        <span class="pic-num">Unit 79</span>
+        <p class="pic-text">Singular and plural</p>
+      </a>
+      <a class="pic-card" href="unit-080.html">
+        <span class="pic-num">Unit 80</span>
+        <p class="pic-text">Noun + noun (a bus driver a headache)</p>
+      </a>
+      <a class="pic-card" href="unit-081.html">
+        <span class="pic-num">Unit 81</span>
+        <p class="pic-text">-'s (your sister's name) and of … (the name of the book)</p>
+      </a>
+      <a class="pic-card" href="unit-082.html">
+        <span class="pic-num">Unit 82</span>
+        <p class="pic-text">myselfyourselfthemselves etc</p>
+      </a>
+      <a class="pic-card" href="unit-083.html">
+        <span class="pic-num">Unit 83</span>
+        <p class="pic-text">a friend of mine my own house on my own by myself</p>
+      </a>
+      <a class="pic-card" href="unit-084.html">
+        <span class="pic-num">Unit 84</span>
+        <p class="pic-text">there … and it …</p>
+      </a>
+      <a class="pic-card" href="unit-085.html">
+        <span class="pic-num">Unit 85</span>
+        <p class="pic-text">some and any</p>
+      </a>
+      <a class="pic-card" href="unit-086.html">
+        <span class="pic-num">Unit 86</span>
+        <p class="pic-text">nononeany nothingnobody etc</p>
+      </a>
+      <a class="pic-card" href="unit-087.html">
+        <span class="pic-num">Unit 87</span>
+        <p class="pic-text">much, many, little, few, a lot, plenty</p>
+      </a>
+      <a class="pic-card" href="unit-088.html">
+        <span class="pic-num">Unit 88</span>
+        <p class="pic-text">all all of most most of no none of etc</p>
+      </a>
+      <a class="pic-card" href="unit-089.html">
+        <span class="pic-num">Unit 89</span>
+        <p class="pic-text">both both of neither neither of either either of</p>
+      </a>
+      <a class="pic-card" href="unit-090.html">
+        <span class="pic-num">Unit 90</span>
+        <p class="pic-text">all every whole</p>
+      </a>
+      <a class="pic-card" href="unit-091.html">
+        <span class="pic-num">Unit 91</span>
+        <p class="pic-text">each and every</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="units-5">
+    <h2>Clauses Adjectives Comparison (Units 92-108)</h2>
+    <p class="ex-instruction">Units 92–108 · 17 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-092.html">
+        <span class="pic-num">Unit 92</span>
+        <p class="pic-text">Relative clauses 1 clauses with whothatwhich</p>
+      </a>
+      <a class="pic-card" href="unit-093.html">
+        <span class="pic-num">Unit 93</span>
+        <p class="pic-text">Relative clauses 2 clauses with and without whothatwhich</p>
+      </a>
+      <a class="pic-card" href="unit-094.html">
+        <span class="pic-num">Unit 94</span>
+        <p class="pic-text">Relative clauses 3 whosewhomwhere</p>
+      </a>
+      <a class="pic-card" href="unit-095.html">
+        <span class="pic-num">Unit 95</span>
+        <p class="pic-text">Relative clauses 4 extra information clauses (1)</p>
+      </a>
+      <a class="pic-card" href="unit-096.html">
+        <span class="pic-num">Unit 96</span>
+        <p class="pic-text">Relative clauses 5 extra information clauses (2)</p>
+      </a>
+      <a class="pic-card" href="unit-097.html">
+        <span class="pic-num">Unit 97</span>
+        <p class="pic-text">-ing and -ed clauses (the woman talking to Tom, the boy injured in the accident)</p>
+      </a>
+      <a class="pic-card" href="unit-098.html">
+        <span class="pic-num">Unit 98</span>
+        <p class="pic-text">Adjectives ending in -ing and -ed (boringbored etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-099.html">
+        <span class="pic-num">Unit 99</span>
+        <p class="pic-text">Adjectives a nice new house, you look tired</p>
+      </a>
+      <a class="pic-card" href="unit-100.html">
+        <span class="pic-num">Unit 100</span>
+        <p class="pic-text">Adjectives and adverbs 1 (quickquickly)</p>
+      </a>
+      <a class="pic-card" href="unit-101.html">
+        <span class="pic-num">Unit 101</span>
+        <p class="pic-text">Adjectives and adverbs 2 (well, fast, late, hardhardly)</p>
+      </a>
+      <a class="pic-card" href="unit-102.html">
+        <span class="pic-num">Unit 102</span>
+        <p class="pic-text">so and such</p>
+      </a>
+      <a class="pic-card" href="unit-103.html">
+        <span class="pic-num">Unit 103</span>
+        <p class="pic-text">enough and too</p>
+      </a>
+      <a class="pic-card" href="unit-104.html">
+        <span class="pic-num">Unit 104</span>
+        <p class="pic-text">quite, pretty, rather and fairly</p>
+      </a>
+      <a class="pic-card" href="unit-105.html">
+        <span class="pic-num">Unit 105</span>
+        <p class="pic-text">Comparative 1 (cheaper, more expensive etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-106.html">
+        <span class="pic-num">Unit 106</span>
+        <p class="pic-text">Comparative 2 (much better any better etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-107.html">
+        <span class="pic-num">Unit 107</span>
+        <p class="pic-text">Comparative 3 (as … as than)</p>
+      </a>
+      <a class="pic-card" href="unit-108.html">
+        <span class="pic-num">Unit 108</span>
+        <p class="pic-text">Superlative (the longest the most enjoyable etc.)</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="units-6">
+    <h2>Word Order Prepositions (Units 109-136)</h2>
+    <p class="ex-instruction">Units 109–136 · 28 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-109.html">
+        <span class="pic-num">Unit 109</span>
+        <p class="pic-text">Word order 1 verb + object; place and time</p>
+      </a>
+      <a class="pic-card" href="unit-110.html">
+        <span class="pic-num">Unit 110</span>
+        <p class="pic-text">Word order 2 adverbs with the verb</p>
+      </a>
+      <a class="pic-card" href="unit-111.html">
+        <span class="pic-num">Unit 111</span>
+        <p class="pic-text">still any more yet already</p>
+      </a>
+      <a class="pic-card" href="unit-112.html">
+        <span class="pic-num">Unit 112</span>
+        <p class="pic-text">even</p>
+      </a>
+      <a class="pic-card" href="unit-113.html">
+        <span class="pic-num">Unit 113</span>
+        <p class="pic-text">although though even though in spite of despite</p>
+      </a>
+      <a class="pic-card" href="unit-114.html">
+        <span class="pic-num">Unit 114</span>
+        <p class="pic-text">in case</p>
+      </a>
+      <a class="pic-card" href="unit-115.html">
+        <span class="pic-num">Unit 115</span>
+        <p class="pic-text">unless as long as provided</p>
+      </a>
+      <a class="pic-card" href="unit-116.html">
+        <span class="pic-num">Unit 116</span>
+        <p class="pic-text">as (as I walked … as I was … etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-117.html">
+        <span class="pic-num">Unit 117</span>
+        <p class="pic-text">like and as</p>
+      </a>
+      <a class="pic-card" href="unit-118.html">
+        <span class="pic-num">Unit 118</span>
+        <p class="pic-text">like as if</p>
+      </a>
+      <a class="pic-card" href="unit-119.html">
+        <span class="pic-num">Unit 119</span>
+        <p class="pic-text">during for while</p>
+      </a>
+      <a class="pic-card" href="unit-120.html">
+        <span class="pic-num">Unit 120</span>
+        <p class="pic-text">by and until by the time …</p>
+      </a>
+      <a class="pic-card" href="unit-121.html">
+        <span class="pic-num">Unit 121</span>
+        <p class="pic-text">atonin (time)</p>
+      </a>
+      <a class="pic-card" href="unit-122.html">
+        <span class="pic-num">Unit 122</span>
+        <p class="pic-text">on time and in time at the end and in the end</p>
+      </a>
+      <a class="pic-card" href="unit-123.html">
+        <span class="pic-num">Unit 123</span>
+        <p class="pic-text">inaton (position) 1</p>
+      </a>
+      <a class="pic-card" href="unit-124.html">
+        <span class="pic-num">Unit 124</span>
+        <p class="pic-text">inaton (position) 2</p>
+      </a>
+      <a class="pic-card" href="unit-125.html">
+        <span class="pic-num">Unit 125</span>
+        <p class="pic-text">inaton (position) 3</p>
+      </a>
+      <a class="pic-card" href="unit-126.html">
+        <span class="pic-num">Unit 126</span>
+        <p class="pic-text">to, at, in and into</p>
+      </a>
+      <a class="pic-card" href="unit-127.html">
+        <span class="pic-num">Unit 127</span>
+        <p class="pic-text">inonat (other uses)</p>
+      </a>
+      <a class="pic-card" href="unit-128.html">
+        <span class="pic-num">Unit 128</span>
+        <p class="pic-text">by</p>
+      </a>
+      <a class="pic-card" href="unit-129.html">
+        <span class="pic-num">Unit 129</span>
+        <p class="pic-text">Noun + preposition (reason for, cause of etc.)</p>
+      </a>
+      <a class="pic-card" href="unit-130.html">
+        <span class="pic-num">Unit 130</span>
+        <p class="pic-text">Adjective + preposition 1</p>
+      </a>
+      <a class="pic-card" href="unit-131.html">
+        <span class="pic-num">Unit 131</span>
+        <p class="pic-text">Adjective + preposition 2</p>
+      </a>
+      <a class="pic-card" href="unit-132.html">
+        <span class="pic-num">Unit 132</span>
+        <p class="pic-text">Verb + preposition 1 to and at</p>
+      </a>
+      <a class="pic-card" href="unit-133.html">
+        <span class="pic-num">Unit 133</span>
+        <p class="pic-text">Verb + preposition 2 aboutforofafter</p>
+      </a>
+      <a class="pic-card" href="unit-134.html">
+        <span class="pic-num">Unit 134</span>
+        <p class="pic-text">Verb + preposition 3 about and of</p>
+      </a>
+      <a class="pic-card" href="unit-135.html">
+        <span class="pic-num">Unit 135</span>
+        <p class="pic-text">Verb + preposition 4 offorfromon</p>
+      </a>
+      <a class="pic-card" href="unit-136.html">
+        <span class="pic-num">Unit 136</span>
+        <p class="pic-text">Verb + preposition 5 inintowithtoon</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="units-7">
+    <h2>Phrasal Verbs (Units 137-145)</h2>
+    <p class="ex-instruction">Units 137–145 · 9 units</p>
+    <div class="pic-grid">
+      <a class="pic-card" href="unit-137.html">
+        <span class="pic-num">Unit 137</span>
+        <p class="pic-text">Phrasal verbs 1 Introduction</p>
+      </a>
+      <a class="pic-card" href="unit-138.html">
+        <span class="pic-num">Unit 138</span>
+        <p class="pic-text">Phrasal verbs 2 inout</p>
+      </a>
+      <a class="pic-card" href="unit-139.html">
+        <span class="pic-num">Unit 139</span>
+        <p class="pic-text">Phrasal verbs 3 out</p>
+      </a>
+      <a class="pic-card" href="unit-140.html">
+        <span class="pic-num">Unit 140</span>
+        <p class="pic-text">Phrasal verbs 4 onoff (1)</p>
+      </a>
+      <a class="pic-card" href="unit-141.html">
+        <span class="pic-num">Unit 141</span>
+        <p class="pic-text">Phrasal verbs 5 onoff (2)</p>
+      </a>
+      <a class="pic-card" href="unit-142.html">
+        <span class="pic-num">Unit 142</span>
+        <p class="pic-text">Phrasal verbs 6 updown</p>
+      </a>
+      <a class="pic-card" href="unit-143.html">
+        <span class="pic-num">Unit 143</span>
+        <p class="pic-text">Phrasal verbs 7 up (1)</p>
+      </a>
+      <a class="pic-card" href="unit-144.html">
+        <span class="pic-num">Unit 144</span>
+        <p class="pic-text">Phrasal verbs 8 up (2)</p>
+      </a>
+      <a class="pic-card" href="unit-145.html">
+        <span class="pic-num">Unit 145</span>
+        <p class="pic-text">Phrasal verbs 9 awayback</p>
+      </a>
+    </div>
+  </section>
+
+</main>
+<footer>
+  <p>English Grammar in Use — Fifth Edition · Raymond Murphy</p>
+  <a class="next-unit" href="unit-001.html">Start with Unit 1 →</a>
+</footer>
+
+<script>
+  // ---------- Progress bar ----------
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    document.getElementById('progressBar').style.width = pct + '%';
+  });
+
+  // ---------- Smart normalization ----------
+  // Expands contractions and strips punctuation so "I'm not" == "I am not" etc.
+  const CONTRACTIONS = [
+    [/\bi'm\b/g, 'i am'],
+    [/\byou're\b/g, 'you are'],
+    [/\bwe're\b/g, 'we are'],
+    [/\bthey're\b/g, 'they are'],
+    [/\bhe's\b/g, 'he is'],
+    [/\bshe's\b/g, 'she is'],
+    [/\bit's\b/g, 'it is'],
+    [/\bthat's\b/g, 'that is'],
+    [/\bwhat's\b/g, 'what is'],
+    [/\bwho's\b/g, 'who is'],
+    [/\bwhere's\b/g, 'where is'],
+    [/\bwhen's\b/g, 'when is'],
+    [/\bwhy's\b/g, 'why is'],
+    [/\bhow's\b/g, 'how is'],
+    [/\bthere's\b/g, 'there is'],
+    [/\bhere's\b/g, 'here is'],
+    [/\blet's\b/g, 'let us'],
+    [/\bisn't\b/g, 'is not'],
+    [/\baren't\b/g, 'are not'],
+    [/\bwasn't\b/g, 'was not'],
+    [/\bweren't\b/g, 'were not'],
+    [/\bdon't\b/g, 'do not'],
+    [/\bdoesn't\b/g, 'does not'],
+    [/\bdidn't\b/g, 'did not'],
+    [/\bhaven't\b/g, 'have not'],
+    [/\bhasn't\b/g, 'has not'],
+    [/\bhadn't\b/g, 'had not'],
+    [/\bcan't\b/g, 'can not'],
+    [/\bcannot\b/g, 'can not'],
+    [/\bwon't\b/g, 'will not'],
+    [/\bwouldn't\b/g, 'would not'],
+    [/\bshan't\b/g, 'shall not'],
+    [/\bshouldn't\b/g, 'should not'],
+    [/\bmustn't\b/g, 'must not'],
+    [/\bneedn't\b/g, 'need not'],
+    [/\b'd\b/g, ' would'],   // I'd → I would (rough)
+    [/\b'll\b/g, ' will'],   // I'll → I will
+    [/\b've\b/g, ' have'],   // I've → I have
+    [/\b're\b/g, ' are'],    // we're → we are
+  ];
+
+  function normalize(str) {
+    if (!str) return '';
+    let s = str.toString().toLowerCase();
+    // normalize curly apostrophes to straight
+    s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+    // apply contraction expansions
+    CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+    // remove all punctuation except spaces and apostrophes (which we've mostly handled)
+    s = s.replace(/[.,!?;:"()\[\]{}«»…]/g, ' ');
+    s = s.replace(/'/g, '');   // remove any remaining apostrophes
+    // collapse whitespace
+    s = s.replace(/\s+/g, ' ').trim();
+    return s;
+  }
+
+  // ---------- Check single exercise ----------
+  function checkExercise(btn) {
+    const exercise = btn.closest('.exercise');
+    const inputs = exercise.querySelectorAll('.fill-input[data-answer]');
+    const selects = exercise.querySelectorAll('.match-select[data-answer]');
+
+    let correct = 0, total = 0;
+
+    inputs.forEach(input => {
+      total++;
+      const userAns = normalize(input.value);
+      const accepted = input.dataset.answer.split('|').map(a => normalize(a));
+      const isCorrect = accepted.includes(userAns);
+      if (isCorrect) {
+        input.classList.add('correct');
+        input.classList.remove('wrong');
+        correct++;
+      } else {
+        input.classList.add('wrong');
+        input.classList.remove('correct');
+      }
+    });
+
+    selects.forEach(sel => {
+      total++;
+      const userAns = normalize(sel.value);
+      const accepted = sel.dataset.answer.split('|').map(a => normalize(a));
+      const isCorrect = accepted.includes(userAns);
+      if (isCorrect) {
+        sel.classList.add('correct');
+        sel.classList.remove('wrong');
+        correct++;
+      } else {
+        sel.classList.add('wrong');
+        sel.classList.remove('correct');
+      }
+    });
+
+    const feedback = exercise.querySelector('.feedback');
+    feedback.classList.add('show');
+    if (correct === total && total > 0) {
+      feedback.classList.remove('bad');
+      feedback.classList.add('good');
+      feedback.textContent = `Perfect! ${correct}/${total} correct. ✓`;
+    } else {
+      feedback.classList.remove('good');
+      feedback.classList.add('bad');
+      feedback.textContent = `${correct}/${total} correct. Review the highlighted fields — red items need attention.`;
+    }
+  }
+
+  // ---------- Show answers ----------
+  function showAnswers(btn) {
+    const exercise = btn.closest('.exercise');
+
+    exercise.querySelectorAll('.fill-input[data-answer]').forEach(input => {
+      const first = input.dataset.answer.split('|')[0];
+      input.value = first;
+      input.classList.add('correct');
+      input.classList.remove('wrong');
+      input.readOnly = true;
+    });
+
+    exercise.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+      sel.value = sel.dataset.answer.split('|')[0];
+      sel.classList.add('correct');
+      sel.classList.remove('wrong');
+    });
+
+    const feedback = exercise.querySelector('.feedback');
+    feedback.classList.add('show', 'good');
+    feedback.classList.remove('bad');
+    feedback.textContent = 'Answers shown. Click Reset to try again from scratch.';
+  }
+
+  // ---------- Reset ----------
+  function resetExercise(btn) {
+    const exercise = btn.closest('.exercise');
+
+    exercise.querySelectorAll('.fill-input[data-answer]').forEach(input => {
+      if (!input.hasAttribute('data-locked')) {
+        input.value = '';
+        input.readOnly = false;
+      } else {
+        input.value = input.dataset.locked;
+      }
+      input.classList.remove('correct', 'wrong');
+    });
+
+    exercise.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+      sel.value = '';
+      sel.classList.remove('correct', 'wrong');
+    });
+
+    const feedback = exercise.querySelector('.feedback');
+    feedback.classList.remove('show', 'good', 'bad');
+  }
+
+  // ---------- Store initially-locked readonly inputs ----------
+  // (So Reset restores them to their original displayed value, not blank.)
+  document.querySelectorAll('.fill-input[readonly]').forEach(inp => {
+    inp.dataset.locked = inp.value;
+  });
+
+  // ---------- Clear red styling when user edits a field ----------
+  document.querySelectorAll('.fill-input, .match-select').forEach(el => {
+    const evt = el.tagName === 'SELECT' ? 'change' : 'input';
+    el.addEventListener(evt, () => {
+      el.classList.remove('correct', 'wrong');
+    });
+  });
+</script>
+
+</body>
+</html>
