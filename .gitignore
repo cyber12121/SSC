@@ -21,15 +21,21 @@ env/
 grammar_chapters_pdf/
 scratch/
 scripts/
+tools/
+stitch/
+public/murphy/
 automation.py
 pdfautomation.py
 extract_english_text_from_pdf.py
 readme.txt
 Screenshots/
 pdfs/
+plan.md
+SSC_CGL_*.pdf
 
 # Editor & Local Agent State
 .vscode/
 .claude/
 .kilo/
+
 
