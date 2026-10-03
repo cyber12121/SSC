@@ -3213,6 +3213,70 @@
           "conceptTested": "Arithmetic progression with alternating squares and additions/subtractions.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "reas_923a6399d9",
+        "q_num": 28,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "04:57",
+        "avgTime": "02:58",
+        "question": "Seven people K, L, M, N, O, P and Q live on seven different floors of a building, but not necessarily in the same order. The lowermost floor is numbered 1 and the topmost floor is numbered 7. K does not live on the lowermost floor. L lives immediately below N. O lives on an even-numbered floor. Three people live between N and O. The number of people living between N and P is equal to the number of people living between P and O. More than four people live between M and Q. L lives two of the floors below Q.\n\nWho lives two floors below K?",
+        "options": {
+          "a": "O",
+          "b": "M",
+          "c": "P",
+          "d": "Q"
+        },
+        "answer": "b",
+        "solution": "Based on the given conditions, the floor arrangement from top (7) to bottom (1) is: Floor 7: Q\n\nFloor 6: N\nFloor 5: L\nFloor 4: P\nFloor 3: K\nFloor 2: O\nFloor 1: M\n\nTwo floors below K (Floor 3) is Floor 1, where M lives.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of positions based on multi-variable hierarchical floor constraints",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of positions based on multi-variable hierarchical floor constraints",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_fb3bae47bf",
+        "q_num": 29,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:26",
+        "avgTime": "00:30",
+        "question": "The sequence of folding a piece of paper and the manner in which the folded paper has been cut is shown in the following figures. How would this paper look when unfolded?",
+        "options": {
+          "a": "Option A",
+          "b": "Option B",
+          "c": "Option C",
+          "d": "Option D"
+        },
+        "answer": "a",
+        "solution": "By reversing the folds step by step and applying horizontal and vertical line symmetry corresponding to the cut locations, the unfolded paper pattern matches the correct choice.",
+        "image": null,
+        "topic": "Paper Folding & Cutting",
+        "subtopic": "Paper Folding & Cutting",
+        "conceptTested": "Symmetric reflection and spatial visualization of folded paper cuts",
+        "tags": {
+          "topic": "Paper Folding & Cutting",
+          "subtopic": "Paper Folding & Cutting",
+          "conceptTested": "Symmetric reflection and spatial visualization of folded paper cuts",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -5440,6 +5504,70 @@
           "topic": "Seating Arrangement",
           "subtopic": "Linear Seating Arrangement",
           "conceptTested": "Deductive positional mapping based on relative floor conditions",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b55d1c7568",
+        "q_num": 72,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:21",
+        "avgTime": "00:24",
+        "question": "Read the following statement carefully and identify the conclusion that follows.\nStatement:\nAll painters are artists.\nAll artists are imaginative.\nSome imaginative people are careless.\nConclusions:\nI. Some painters are careless.\nII. All painters are imaginative.",
+        "options": {
+          "a": "Only I follows",
+          "b": "Only II follows",
+          "c": "Both I and II follow",
+          "d": "Neither I nor II follows"
+        },
+        "answer": "b",
+        "solution": "From the statements: All painters $\\rightarrow$ artists and all artists $\\rightarrow$ imaginative.\nTherefore, all painters are imaginative. So Conclusion II follows.\n\nThe statement 'Some imaginative people are careless' only tells that a few imaginative people are careless. It does not guarantee that painters are among them.\n\nTherefore, we cannot conclude that some painters are careless.",
+        "image": null,
+        "topic": "Statement & Conclusion",
+        "subtopic": "Statement & Conclusions",
+        "conceptTested": "Logical deduction from universal affirmative categorical statements and particular affirmative statements",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Statement & Conclusions",
+          "conceptTested": "Logical deduction from universal affirmative categorical statements and particular affirmative statements",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_99672f7f33",
+        "q_num": 73,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "01:45",
+        "avgTime": "00:43",
+        "question": "A group of 24 students are sitting in a circle. Each student shakes hands with exactly 2 neighbours. How many handshakes occur?",
+        "options": {
+          "a": "48",
+          "b": "24",
+          "c": "276",
+          "d": "96"
+        },
+        "answer": "b",
+        "solution": "Each student shakes hands with 2 neighbours.\n\nTotal counted handshakes = $24 \\times 2 = 48$\n\nBut every handshake is counted twice (A with B and B with A).\n\nActual handshakes = $48 \\div 2 = 24$",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Calculation Reasoning",
+        "conceptTested": "Calculation of reciprocal interactions in a closed loop (Handshake problem)",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Calculation Reasoning",
+          "conceptTested": "Calculation of reciprocal interactions in a closed loop (Handshake problem)",
           "difficulty": "medium"
         }
       }

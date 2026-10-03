@@ -3921,6 +3921,262 @@
           "conceptTested": "Recipients of India's civilian honours, specifically the Padma Bhushan.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_5c4b5248cb",
+        "q_num": 126,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:06",
+        "avgTime": "00:27",
+        "question": "Consider the following statements regarding the 'National Commission for Scheduled Castes' (NCSC):\n\n1. It was established as a multi-member body by the 65th Constitutional Amendment Act, 1990.\n2. It was bifurcated into two separate commissions (NCSC and NCST) by the 89th Constitutional Amendment Act, 2003.\n3. The Commission has all the powers of a Civil Court while investigating any matter or inquiring into any complaint.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "2 and 3 only",
+          "c": "1 and 3 only",
+          "d": "1, 2, and 3"
+        },
+        "answer": "d",
+        "solution": "Statement 1: The 65th Constitutional Amendment Act, 1990 converted the earlier Special Officer into a multi - member National Commission for Scheduled Castes and Scheduled Tribes.\nStatement 2: The 89th Constitutional Amendment Act, 2003 bifurcated it into two separate bodies: NCSC (Article 338) and NCST (Article 338A).\nStatement 3: The Commission has powers of a Civil Court while investigating or inquiring into complaints.\nHence, all three statements are correct.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Preamble, Schedules & Amendments",
+        "conceptTested": "Powers, establishment acts, and constitutional amendments related to the National Commission for Scheduled Castes (NCSC)",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Preamble, Schedules & Amendments",
+          "conceptTested": "Powers, establishment acts, and constitutional amendments related to the National Commission for Scheduled Castes (NCSC)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_cf4f0ddd4c",
+        "q_num": 127,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "07:00",
+        "avgTime": "00:10",
+        "question": "Which private firm is developing Haven-1, a compact commercial space station, aiming to become the first fully private orbital platform after the International Space Station?",
+        "options": {
+          "a": "Stellar Horizons",
+          "b": "Orbital Ventures",
+          "c": "Vast Space",
+          "d": "CosmicX"
+        },
+        "answer": "c",
+        "solution": "Vast Space is the private company planning to launch Haven - 1, which will be a compact commercial orbital platform. This platform is intended to operate as the first fully private orbital station after the International Space Station (ISS). Haven - 1 represents a significant milestone in commercial space exploration, opening opportunities for private research, tourism, and orbital services.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "National & Global Events",
+        "conceptTested": "Awareness of private space companies and commercial space station initiatives.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "National & Global Events",
+          "conceptTested": "Awareness of private space companies and commercial space station initiatives.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e1ab9f01c2",
+        "q_num": 128,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:11",
+        "avgTime": "00:14",
+        "question": "Who clinched the 2026 Australian Open Women's Singles title by defeating Aryna Sabalenka in the final?",
+        "options": {
+          "a": "Nadia Petrova",
+          "b": "Clara Burel",
+          "c": "Elena Rybakina",
+          "d": "Petra Kvitová"
+        },
+        "answer": "c",
+        "solution": "Elena Rybakina won the Women's Singles championship at the 2026 Australian Open, defeating Aryna Sabalenka in a three - set final. Rybakina prevailed with a final scoreline of 6 - 4, 4 - 6, 6 - 4 to secure the title. This victory marked her second Grand Slam singles title. The match was held in Melbourne Park as part of the annual Grand Slam tournament.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Knowledge of major Grand Slam tennis tournaments and winners.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Knowledge of major Grand Slam tennis tournaments and winners.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2105706c8d",
+        "q_num": 129,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:07",
+        "avgTime": "00:09",
+        "question": "Read the statements given below about Indian Sports Infrastructure:\n\n1. The Sports Authority of India was established in 1985.\n2. National Sports University is located in Manipur.\n3. Army Sports Institute is located in Pune.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "Only 1 and 2 are correct",
+          "b": "Only 2 and 3 are correct",
+          "c": "Only 1 and 3 are correct",
+          "d": "1, 2 and 3 are correct"
+        },
+        "answer": "b",
+        "solution": "The Sports Authority of India (SAI) was set up in 1984 (registered as a society), not 1985 $\\rightarrow$ Statement 1 is incorrect.\n\nThe National Sports University is located in Manipur (Imphal) $\\rightarrow$ Statement 2 is correct.\n\nThe Army Sports Institute is located in Pune $\\rightarrow$ Statement 3 is correct.\n\nHence, only statements 2 and 3 are correct.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Facts regarding sports institutions in India, including the establishment year of the Sports Authority of India and the locations of the National Sports University and Army Sports Institute.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Facts regarding sports institutions in India, including the establishment year of the Sports Authority of India and the locations of the National Sports University and Army Sports Institute.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e8410212c1",
+        "q_num": 130,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:12",
+        "question": "Who has been appointed as the new Chairperson of the National Commission for Backward Classes (NCBC) in March 2026?",
+        "options": {
+          "a": "Ms. Kiran Umesh Mahalle",
+          "b": "Sadhvi Niranjan Jyoti",
+          "c": "Dr. Bhagwan Lal Sahni",
+          "d": "Shri Pankaj Chaudhary"
+        },
+        "answer": "b",
+        "solution": "In March 2026, Sadhvi Niranjan Jyoti was appointed as the Chairperson of the National Commission for Backward Classes (NCBC), taking charge on 18 March 2026.\n\nShe succeeded Hansraj Gangaram Ahir, who served as the NCBC chairperson until her appointment.\n\nSadhvi Niranjan Jyoti is a prominent Indian politician and former Union Minister.",
+        "image": null,
+        "topic": "Awards & Honours",
+        "subtopic": "Important Days, Orgs & Static Facts",
+        "conceptTested": "Current appointments and constitutional/statutory body leadership positions in India.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "Important Days, Orgs & Static Facts",
+          "conceptTested": "Current appointments and constitutional/statutory body leadership positions in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a4bcc81958",
+        "q_num": 131,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:12",
+        "avgTime": "00:20",
+        "question": "The power of the Supreme Court of India to decide disputes between the Centre and the States falls under its",
+        "options": {
+          "a": "advisory jurisdiction",
+          "b": "appellate jurisdiction",
+          "c": "original jurisdiction",
+          "d": "writ jurisdiction"
+        },
+        "answer": "c",
+        "solution": "The Supreme Court of India has original jurisdiction in disputes between the Centre and States or between States.\n\nThis means such cases are filed directly in the Supreme Court, not through lower courts.\n\nIt is provided under Article 131 of the Constitution of India.\n\nHence, the correct answer is original jurisdiction.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Judiciary & Courts",
+        "conceptTested": "Original jurisdiction of the Supreme Court of India under Article 131 for center-state and inter-state disputes.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Judiciary & Courts",
+          "conceptTested": "Original jurisdiction of the Supreme Court of India under Article 131 for center-state and inter-state disputes.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_194b450bfc",
+        "q_num": 132,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:16",
+        "avgTime": "00:19",
+        "question": "What does the term \"Capital Adequacy Ratio (CAR)\" signify for a commercial bank?",
+        "options": {
+          "a": "The ratio of a bank's total deposits to its total loans.",
+          "b": "The amount of cash a bank must keep with the RBI at all times.",
+          "c": "The ratio of a bank's capital to its risk-weighted assets and current liabilities.",
+          "d": "The interest rate at which banks borrow from the interbank market."
+        },
+        "answer": "c",
+        "solution": "Capital Adequacy Ratio (CAR) measures a bank’s financial strength by comparing its capital with risk - weighted assets. It ensures that banks can absorb losses and protect depositors, and is regulated by norms like Basel guidelines to maintain banking stability. Hence, the correct answer is the ratio of capital to risk - weighted assets.",
+        "image": null,
+        "topic": "Banking & Monetary Policy",
+        "subtopic": "General Economics & Finance",
+        "conceptTested": "Capital Adequacy Ratio (CAR) measures a bank's capital relative to its risk-weighted credit exposures to absorb potential losses.",
+        "tags": {
+          "topic": "Banking & Monetary Policy",
+          "subtopic": "General Economics & Finance",
+          "conceptTested": "Capital Adequacy Ratio (CAR) measures a bank's capital relative to its risk-weighted credit exposures to absorb potential losses.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_30e67b2c62",
+        "q_num": 133,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:07",
+        "avgTime": "00:35",
+        "question": "The book \"Jeete Jee Allahabad\", which won the Sahitya Akademi Award in Hindi, is written by:",
+        "options": {
+          "a": "Navtej Sarna",
+          "b": "Mamta Kalia",
+          "c": "Jinder",
+          "d": "Yogesh Vaidya"
+        },
+        "answer": "b",
+        "solution": "The memoir Jeete Jee Allahabad was awarded the Sahitya Akademi Award in the Hindi language. It is authored by the noted Hindi writer Mamta Kalia. The work captures the cultural essence and experiences related to Allahabad (now Prayagraj).",
+        "image": null,
+        "topic": "Books & Authors",
+        "subtopic": "Contemporary Authors",
+        "conceptTested": "Recognition of literary awards and authors in modern Hindi literature such as the Sahitya Akademi Award.",
+        "tags": {
+          "topic": "Books & Authors",
+          "subtopic": "Contemporary Authors",
+          "conceptTested": "Recognition of literary awards and authors in modern Hindi literature such as the Sahitya Akademi Award.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -9856,6 +10112,198 @@
           "topic": "Chemistry",
           "subtopic": "Acids, Bases, Metals & Periodic Table",
           "conceptTested": "The reactivity series of metals places noble metals like gold and platinum at the bottom, making them unreactive and found in their native (pure elemental) state.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e626039d97",
+        "q_num": 190,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:09",
+        "avgTime": "00:14",
+        "question": "Some organisms show binary fission by division in any plane but some shows division in a definite orientation. Which of the following shows definite orientation of binary fission?",
+        "options": {
+          "a": "Paramecium",
+          "b": "Leishmania",
+          "c": "Plasmodium",
+          "d": "Amoeba"
+        },
+        "answer": "b",
+        "solution": "In Leishmania, binary fission occurs in a definite longitudinal plane due to the presence of a flagellum. Organisms like Amoeba divide in any plane, showing no fixed orientation. Therefore, Leishmania is the organism that shows definite orientation of binary fission.",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "Cell Biology & Plant Physiology",
+        "conceptTested": "Reproduction modes in microorganisms such as binary fission planes in Leishmania and Amoeba.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Cell Biology & Plant Physiology",
+          "conceptTested": "Reproduction modes in microorganisms such as binary fission planes in Leishmania and Amoeba.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b6ab0f11df",
+        "q_num": 191,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:16",
+        "avgTime": "00:24",
+        "question": "Which Indian state launched the Sthree Suraksha programme to provide a monthly pension for unemployed women and transwomen?",
+        "options": {
+          "a": "Tamil Nadu",
+          "b": "Andhra Pradesh",
+          "c": "Kerala",
+          "d": "Karnatka"
+        },
+        "answer": "c",
+        "solution": "The Kerala government implemented the Sthree Suraksha programme to give monthly financial support (₹1, 000) to unemployed women and transwomen who are not part of other welfare pension schemes. The scheme aims to improve economic independence and social security for vulnerable groups. Eligible beneficiaries include women and transwomen aged 35 - 60 years who are permanent residents of Kerala. This initiative highlights Kerala's focus on inclusive welfare and gender - sensitive social security measures.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Knowledge of state welfare schemes for financial security and unemployment support.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Knowledge of state welfare schemes for financial security and unemployment support.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2477dc5b16",
+        "q_num": 192,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:19",
+        "question": "Read the statements carefully and choose the correct option.\n\nAssertion (A): Aluminium smelting is the most important metallurgical industry in India.\nReason (R): Aluminium is used in the manufacture of aircraft, wires, and utensils.",
+        "options": {
+          "a": "Both A and R are true, and R is the correct explanation of A",
+          "b": "Both A and R are true, but R is not the correct explanation of A",
+          "c": "A is true, but R is false",
+          "d": "A is false, but R is true"
+        },
+        "answer": "d",
+        "solution": "The Assertion is incorrect because aluminium smelting is important, but it is not the most important metallurgical industry in India; iron and steel industry holds that position. The Reason is correct as aluminium is widely used in aircraft, electrical wires, and utensils. Hence, A is false while R is true.",
+        "image": null,
+        "topic": "Indian Climate & Soil",
+        "subtopic": "Agriculture Crops",
+        "conceptTested": "Understanding of key metallurgical and mineral-based industries in the Indian economy.",
+        "tags": {
+          "topic": "Indian Climate & Soil",
+          "subtopic": "Agriculture Crops",
+          "conceptTested": "Understanding of key metallurgical and mineral-based industries in the Indian economy.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_60e9f45a80",
+        "q_num": 193,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:10",
+        "avgTime": "00:16",
+        "question": "Which of the following approaches to human development is associated with Amartya Sen?",
+        "options": {
+          "a": "Capability Approach",
+          "b": "Basic Needs Approach",
+          "c": "Welfare Approach",
+          "d": "Income Approach"
+        },
+        "answer": "a",
+        "solution": "Amartya Sen is associated with the Capability Approach of human development.\n\nThis approach focuses on enhancing people's freedom, choices, and abilities (capabilities) to lead a meaningful life.\n\nIt goes beyond income and emphasises what individuals can actually do and become.\n\nTherefore, the correct answer is Capability Approach.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "Government Economic Schemes",
+        "conceptTested": "Amartya Sen's Capability Approach emphasizing human freedom, choices, and capabilities over mere income.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "Government Economic Schemes",
+          "conceptTested": "Amartya Sen's Capability Approach emphasizing human freedom, choices, and capabilities over mere income.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_4445722379",
+        "q_num": 194,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:20",
+        "avgTime": "00:21",
+        "question": "What is/are common to the two historical places known as Ajanta and Mahabalipuram?\n\n1. Both were built in the same period.\n2. Both belong to the same religious denomination.\n3. Both have rock-cut monuments.\n\nSelect the correct answer using the code given below.",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "3 only",
+          "c": "1 and 3 only",
+          "d": "None of the statements given above is correct"
+        },
+        "answer": "b",
+        "solution": "Ajanta Caves (mainly 2nd century BCE to 6th century CE) and Mahabalipuram (7th - 8th century CE, Pallava period) were not built in the same period $\\rightarrow$ Statement 1 is incorrect.\n\nAjanta is primarily associated with Buddhism, while Mahabalipuram is linked to Hinduism $\\rightarrow$ Statement 2 is incorrect.\n\nBoth sites feature rock - cut architecture and monuments $\\rightarrow$ Statement 3 is correct.\n\nHence, only statement 3 is correct.",
+        "image": null,
+        "topic": "Temples, Monuments & Heritage Sites",
+        "subtopic": "Unesco Sites",
+        "conceptTested": "Historical and architectural comparison of Ajanta and Mahabalipuram monuments.",
+        "tags": {
+          "topic": "Temples, Monuments & Heritage Sites",
+          "subtopic": "Unesco Sites",
+          "conceptTested": "Historical and architectural comparison of Ajanta and Mahabalipuram monuments.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_513d315faa",
+        "q_num": 195,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:12",
+        "question": "The 'Token Currency' experiment, where copper and brass coins were introduced to be exchanged at the same value as silver coins (Tanka), was initiated by which Sultan?",
+        "options": {
+          "a": "Alauddin Khalji",
+          "b": "Iltutmish",
+          "c": "Muhammad bin Tughlaq",
+          "d": "Firoz Shah Tughlaq"
+        },
+        "answer": "c",
+        "solution": "The Token Currency experiment was introduced by Muhammad bin Tughlaq of the Delhi Sultanate. He issued copper and brass coins and declared them equal in value to the silver Tanka. The experiment failed because of large - scale forgery and lack of proper control. Hence, the policy is associated with Muhammad bin Tughlaq.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Muhammad bin Tughlaq's experiments such as the introduction of token currency (copper and brass coins) to replace silver tanka.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Muhammad bin Tughlaq's experiments such as the introduction of token currency (copper and brass coins) to replace silver tanka.",
           "difficulty": "medium"
         }
       }

@@ -9400,6 +9400,294 @@
           "conceptTested": "Subject-verb agreement rule with phrases like \"Nothing but\" where the verb agrees with the primary singular subject.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_18670eca1a",
+        "q_num": 298,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:20",
+        "avgTime": "00:17",
+        "question": "Select the most appropriate meaning of the given idiom: \"To throw a spanner in the works\"",
+        "options": {
+          "a": "To repair a mechanical fault with precision",
+          "b": "To prevent a plan or activity from succeeding",
+          "c": "To work very hard on a difficult task",
+          "d": "To spend money recklessly on unnecessary things"
+        },
+        "answer": "b",
+        "solution": "The idiom \"to throw a spanner in the works\" means to deliberately or unexpectedly cause a problem that disrupts a plan.\n\nIt refers to obstructing or spoiling the smooth progress of something.\n\nThe phrase originates from machinery, where a spanner (tool) thrown into moving parts would stop or damage the system.",
+        "image": null,
+        "topic": "Idioms Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Meaning and application of common English idioms.",
+        "tags": {
+          "topic": "Idioms Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Meaning and application of common English idioms.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_474e7a65ed",
+        "q_num": 299,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:35",
+        "avgTime": "01:05",
+        "question": "Change the following sentence from Active to Passive:\n\"The homeowner had the interior designer look into the feasibility of installing a glass ceiling in the master bedroom.\"",
+        "options": {
+          "a": "The interior designer was had to look into the feasibility of the glass ceiling by the homeowner.",
+          "b": "The homeowner had the feasibility of installing a glass ceiling in the master bedroom looked into by the interior designer.",
+          "c": "The feasibility of installing a glass ceiling was had looked into by the interior designer for the homeowner.",
+          "d": "Looking into the feasibility of the glass ceiling was had by the homeowner through the interior designer."
+        },
+        "answer": "b",
+        "solution": "The structure “have + object + V1” (causative form) changes in passive to “have + object + V³ (past participle)”.\n\nActive: had the interior designer look into $\\rightarrow$ Passive: had the feasibility looked into.\n\nOption (B) correctly keeps the causative sense and uses “looked into” (V³) with proper object placement.\n\nOther options are grammatically incorrect due to wrong verb forms like “was had” and incorrect sentence structure.",
+        "image": null,
+        "topic": "Active & Passive Voice",
+        "subtopic": "Tense Conversions",
+        "conceptTested": "Conversion of active causative sentences (\"have + object + V1\") to passive voice (\"have + object + V3\").",
+        "tags": {
+          "topic": "Active & Passive Voice",
+          "subtopic": "Tense Conversions",
+          "conceptTested": "Conversion of active causative sentences (\"have + object + V1\") to passive voice (\"have + object + V3\").",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_061b3ba4ef",
+        "q_num": 300,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:33",
+        "avgTime": "00:42",
+        "question": "Given below are six sentences forming a paragraph. The first and the last sentences (S1 and S²) are fixed. The remaining four sentences (A, B, C, D) are jumbled. Arrange them in a logical sequence to form a coherent paragraph.\nS1: In front of this building, overlooking the river, is a garden, where the once well-trimmed box borders that used to define the walks now grow wild as they list.\n\nA: The rich vegetation of those weeds that we call foul adorns the sloping shore.\nB: The wall fruit grows like hedges against the walls.\nC: Several willows that spring from the Loire have grown as rapidly as the hedge that encloses it and half conceal the house.\nD: Fruit trees, neglected for the last ten years, no longer yield their harvest, and their shoots form coppices.\nS2: Paths once gravelled are overgrown with moss, but to tell the truth, there is no trace of a path.",
+        "options": {
+          "a": "CADB",
+          "b": "CABD",
+          "c": "DABC",
+          "d": "ADCB"
+        },
+        "answer": "a",
+        "solution": "The paragraph describes a neglected garden gradually becoming wild, so the flow should move from general to specific details.\n\nC logically follows S1 by introducing willows and overgrowth around the garden, continuing the setting.\n\nA then expands on the wild vegetation near the shore, maintaining thematic continuity.\n\nD follows with neglected fruit trees, showing further decline.\n\nB comes last among the jumbled sentences, describing wall fruit growing like hedges, completing the imagery before S² concludes the decay.\n\nHence, the correct sequence is C $\\rightarrow$ A $\\rightarrow$ D $\\rightarrow$ B (CADB).",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical sequencing of sentences from general description to specific details to form a coherent paragraph.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical sequencing of sentences from general description to specific details to form a coherent paragraph.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_2489528e60",
+        "q_num": 301,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:21",
+        "avgTime": "00:35",
+        "question": "In the given sentence, one part has an error. Identify the part with the error.\n\nThe contractors demanded to be paid in advance on cheque before starting the work.",
+        "options": {
+          "a": "The contractors demanded",
+          "b": "to be paid in advance",
+          "c": "on cheque before",
+          "d": "starting the work"
+        },
+        "answer": "c",
+        "solution": "The error lies in the phrase \"on cheque before\".\n\nCorrect usage should be \"by cheque\" (or \"through cheque\"), not \"on cheque.\", Corrected sentence: The contractors demanded to be paid in advance by cheque before starting the work.\n\nSo the erroneous part is: on cheque before",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Prepositions & Phrasal Verbs",
+        "conceptTested": "Usage of correct prepositions in payment methods (by cheque instead of on cheque).",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Prepositions & Phrasal Verbs",
+          "conceptTested": "Usage of correct prepositions in payment methods (by cheque instead of on cheque).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_173824d27d",
+        "q_num": 302,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:28",
+        "avgTime": "00:43",
+        "question": "Arrange the following parts to form a meaningful sentence:\n\n(A) Epic theatre was developed by Bertolt Brecht in the 1920s\n(B) which rejected the realistic approach of traditional theatre\n(C) and aimed to engage the audience through direct interaction\n(D) breaking the illusion of a continuous dramatic narrative",
+        "options": {
+          "a": "ACBD",
+          "b": "ABCD",
+          "c": "ADBC",
+          "d": "ABDC"
+        },
+        "answer": "d",
+        "solution": "The sentence should start with A as it introduces the subject (Epic theatre).\n\nB logically follows, explaining what it rejected (realistic approach).\n\nD comes next, describing how it functioned (breaking illusion).\n\nC concludes with its purpose (engaging audience through interaction).\n\nHence, the correct sequence is A → B → D → C (ABDC).",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical sequencing of sentence parts to form a coherent paragraph.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical sequencing of sentence parts to form a coherent paragraph.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_8e5e4894bf",
+        "q_num": 303,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:17",
+        "question": "Choose the word that best matches the following description:\n\n\"To speak or write about something in an excessively flattering manner.\"",
+        "options": {
+          "a": "Criticise",
+          "b": "Exaggerate",
+          "c": "Eulogise",
+          "d": "Ignore"
+        },
+        "answer": "c",
+        "solution": "Eulogise means to praise highly, often in an exaggerated way.\n\nIt is often used in formal speeches or writings.\n\nCriticise is the opposite.\n\nExaggerate is similar but not specifically about praise.\n\nIgnore is unrelated.",
+        "image": null,
+        "topic": "One Word Substitution",
+        "subtopic": "General One Word Substitutes",
+        "conceptTested": "Vocabulary knowledge for words describing excessive praise or flattery.",
+        "tags": {
+          "topic": "One Word Substitution",
+          "subtopic": "General One Word Substitutes",
+          "conceptTested": "Vocabulary knowledge for words describing excessive praise or flattery.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0b932faf31",
+        "q_num": 304,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:23",
+        "avgTime": "00:34",
+        "question": "A part of the following sentence is underlined. Choose the option that can replace the underlined part to improve the sentence. If no improvement is needed, choose option (d).\n\nSince the people who gave me a ride decided to leave the concert early, so I had to take a bus home.",
+        "options": {
+          "a": "so I had taken a bus home",
+          "b": "I had to take a bus home",
+          "c": "so I had to get a bus home",
+          "d": "No improvement required"
+        },
+        "answer": "b",
+        "solution": "The error is the use of double conjunction: \"Since\" already expresses cause, so \"so\" should not be used again.\nCorrect structure: Since + clause, subject + verb (without \"so\").\n\nOption (b) correctly removes the unnecessary \"so\" and maintains proper tense.",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Conjunctions & Parallelism",
+        "conceptTested": "Superfluous use of conjunctions (avoiding 'so' after 'since' in subordinate clauses).",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Conjunctions & Parallelism",
+          "conceptTested": "Superfluous use of conjunctions (avoiding 'so' after 'since' in subordinate clauses).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0493640c32",
+        "q_num": 305,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "02:04",
+        "avgTime": "01:35",
+        "question": "Read the passage and answer the question:\n\nAdvaita is a Philosophy of Non-duality rooted in the teachings of Adi Shankaracharya and contending that all beings (Brahman) are linked through a singular consciousness that unites them as one. For Advaita, the realization that you (Atman) are Brahman and part of the same collective consciousness is the way out of your ignorance (avidya); however, the present day is characterized by disconnection from each other and ourselves, and even being engrossed in the materialism of consumer culture, creating an environment that could be said to be slightly barren. Advaita gives us a moral framework and psychological explanation on how to deal with this situation by providing us with the inner insight of being detached from these socially-driven relationships based on the ego. It is also in the same vein that Advaita promotes a vision of oneness that allows for empathy and the breaking down of the artificial barriers that separate the human from the natural world and create a basis for an evolving sense of belonging among the different peoples of the Earth. Advaita offers an eternal lens to help us redefine our responsibilities as individuals within society and how to pursue a sense of well-being and create harmony among all forms of life on the planet.\n\nWhat does Advaita primarily teach?",
+        "options": {
+          "a": "Dualism between soul and God",
+          "b": "Complete isolation from society",
+          "c": "Non-duality and oneness",
+          "d": "Materialism and egoism"
+        },
+        "answer": "c",
+        "solution": "Advaita, rooted in Adi Shankaracharya’s teachings, emphasizes that the Atman (individual self) and Brahman (universal consciousness) are one. It rejects dualism and ego - driven separation, instead promoting unity, empathy, and harmony among all beings and the natural world.\n\nSo the philosophy primarily teaches non - duality (Advaita) and oneness.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Inference & Author Perspective",
+        "conceptTested": "Comprehending core philosophical concepts and themes from informational passages.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Inference & Author Perspective",
+          "conceptTested": "Comprehending core philosophical concepts and themes from informational passages.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_1c4f5c6eee",
+        "q_num": 306,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:55",
+        "avgTime": "00:54",
+        "question": "Read the passage and answer the question:\n\nAdvaita is a Philosophy of Non-duality rooted in the teachings of Adi Shankaracharya and contending that all beings (Brahman) are linked through a singular consciousness that unites them as one. For Advaita, the realization that you (Atman) are Brahman and part of the same collective consciousness is the way out of your ignorance (avidya); however, the present day is characterized by disconnection from each other and ourselves, and even being engrossed in the materialism of consumer culture, creating an environment that could be said to be slightly barren. Advaita gives us a moral framework and psychological explanation on how to deal with this situation by providing us with the inner insight of being detached from these socially-driven relationships based on the ego. It is also in the same vein that Advaita promotes a vision of oneness that allows for empathy and the breaking down of the artificial barriers that separate the human from the natural world and create a basis for an evolving sense of belonging among the different peoples of the Earth. Advaita offers an eternal lens to help us redefine our responsibilities as individuals within society and how to pursue a sense of well-being and create harmony among all forms of life on the planet.\n\nIn what ways does Advaita respond to contemporary issues of disconnection and materialism?",
+        "options": {
+          "a": "It promotes consumerism and fulfilment of materialistic desires as the sole path to satisfaction and success.",
+          "b": "It advises isolation from the community but fails to provide any spiritual guidance.",
+          "c": "It supports competition and gathering wealth as signs of personal value.",
+          "d": "It gives a clear moral framework and psychological tools to detach from ego-based relationships."
+        },
+        "answer": "d",
+        "solution": "The passage explicitly states that Advaita gives us a moral framework and psychological explanation on how to deal with modern disconnection and materialism by providing inner insight of being detached from socially - driven relationships based on the ego. Therefore, option D is the correct answer.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Inference & Author Perspective",
+        "conceptTested": "Ability to comprehend philosophical text and infer the remedial approach to contemporary issues based on passage details.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Inference & Author Perspective",
+          "conceptTested": "Ability to comprehend philosophical text and infer the remedial approach to contemporary issues based on passage details.",
+          "difficulty": "hard"
+        }
       }
     ]
   }

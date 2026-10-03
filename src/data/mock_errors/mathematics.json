@@ -5949,6 +5949,102 @@
           "conceptTested": "Trigonometric identities: $\\tan A = \\frac{\\sin A}{\\cos A}$, $\\sin^2 A + \\cos^2 A = 1$, and $\\cos 2A = \\cos^2 A - \\sin^2 A$.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_1cd1d5b679",
+        "q_num": 189,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:57",
+        "avgTime": "00:44",
+        "question": "X and Y started a business by investing Rs. 171000 and Rs. 243000 respectively. If X's share in the profit earned at the end of the year is Rs. 3800, what will be the total profit (in Rs.) earned by them together?",
+        "options": {
+          "a": "8400",
+          "b": "9200",
+          "c": "9600",
+          "d": "9300"
+        },
+        "answer": "b",
+        "solution": "Investment ratio of X and Y = $171000 : 243000 = 19 : 27$.\nProfit ratio = $19 : 27$.\nTotal parts = $19 + 27 = 46$ parts.\nX's share = 19 parts = Rs. 3800.\n1 part = $\\frac{3800}{19} = \\text{Rs. } 200$.\nTotal profit = $46 \\times 200 = \\text{Rs. } 9200$.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Profit Sharing & Basic Partnership",
+        "conceptTested": "Profits are distributed in the ratio of the product of investments and their respective time periods.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Profit Sharing & Basic Partnership",
+          "conceptTested": "Profits are distributed in the ratio of the product of investments and their respective time periods.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_c8f1d02da0",
+        "q_num": 190,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:44",
+        "avgTime": "00:06",
+        "question": "In a race of $1\\text{ km}$, $A$ beats $B$ by $100\\text{ m}$. In a race of $300\\text{ m}$, $B$ beats $C$ by $50\\text{ m}$. Then in a race of $1\\text{ km}$, by what margin will $A$ beat $C$?",
+        "options": {
+          "a": "$300\\text{ m}$",
+          "b": "$275\\text{ m}$",
+          "c": "$250\\text{ m}$",
+          "d": "$240\\text{ m}$"
+        },
+        "answer": "c",
+        "solution": "A vs B: A : B = 1000 : 900 = 10 : 9\nB vs C: B : C = 300 : 250 = 6 : 5\nA : C = (10 / 9) × (6 / 5) = 60 : 45 = 4 : 3\nSo, in 1000 m race: A : C = 4 : 3\n⇒ When A runs 1000 m, C runs = (3 / 4) × 1000 = 750 m\nMargin = 1000 - 750 = 250 m",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Races & Circular Tracks",
+        "conceptTested": "Relative distances covered in linear races by scaling proportions of running speeds.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Races & Circular Tracks",
+          "conceptTested": "Relative distances covered in linear races by scaling proportions of running speeds.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_275c183e1d",
+        "q_num": 191,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:02",
+        "avgTime": "00:38",
+        "question": "The cost of tilling the floor of a rectangular room is ₹9100 at ₹65 per $\\text{m}^2$. The ratio of the length and breadth of the floor is $7 : 5$. The perimeter (in $\\text{m}$) of the floor of the room is:",
+        "options": {
+          "a": "$46\\text{ m}$",
+          "b": "$48\\text{ m}$",
+          "c": "$50\\text{ m}$",
+          "d": "$52\\text{ m}$"
+        },
+        "answer": "b",
+        "solution": "Total cost = ₹9100, Rate = ₹65 per $\\text{m}^2$\nArea of the room = $\\frac{9100}{65} = 140\\text{ m}^2$\nLet length : breadth = 7 : 5\n⇒ Length = $7x$, Breadth = $5x$\nArea = $7x \\times 5x = 35x^2 = 140$\n⇒ $x^2 = 4 \\implies x = 2$\nLength = $14\\text{ m}$, Breadth = $10\\text{ m}$\nPerimeter = $2(L + B) = 2(14 + 10) = 48\\text{ m}$",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "Relationship between total cost of flooring, rate per unit area, and dimensions of a rectangle.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "Relationship between total cost of flooring, rate per unit area, and dimensions of a rectangle.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -14849,6 +14945,262 @@
           "conceptTested": "Total work equals product of number of workers, daily working hours, and total days",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_371888980b",
+        "q_num": 283,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:36",
+        "avgTime": "00:12",
+        "question": "The sum of the digits of the least number which when divided by 36, 72, 80 and 88 leaves the remainders 16, 52, 60 and 68 respectively, is:",
+        "options": {
+          "a": "18",
+          "b": "16",
+          "c": "15",
+          "d": "7"
+        },
+        "answer": "b",
+        "solution": "Let the required number be $N$. \\\\ Given conditions: \\\\ $N - 16$ is divisible by $36$ $\\Rightarrow$ $36 - 16 = 20$ \\\\ $N - 52$ is divisible by $72$ $\\Rightarrow$ $72 - 52 = 20$ \\\\ $N - 60$ is divisible by $80$ $\\Rightarrow$ $80 - 60 = 20$ \\\\ $N - 68$ is divisible by $88$ $\\Rightarrow$ $88 - 68 = 20$ \\\\ \\\\ Since the difference between the divisor and the respective remainder is a constant $20$ in all cases, the number $N + 20$ must be completely divisible by the LCM of $36, 72, 80,$ and $88$. \\\\ $\\text{LCM}(36, 72, 80, 88) = 3960$ \\\\ $N + 20 = 3960$ \\\\ $N = 3940$ \\\\ \\\\ Sum of the digits of $N = 3 + 9 + 4 + 0 = 16$.",
+        "image": null,
+        "topic": "LCM & HCF",
+        "subtopic": "Remainder-based LCM Problems",
+        "conceptTested": "Finding the least number that leaves specific remainders when divided by given numbers by checking constant differences (divisor - remainder).",
+        "tags": {
+          "topic": "LCM & HCF",
+          "subtopic": "Remainder-based LCM Problems",
+          "conceptTested": "Finding the least number that leaves specific remainders when divided by given numbers by checking constant differences (divisor - remainder).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_54813e4370",
+        "q_num": 284,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:15",
+        "avgTime": "01:12",
+        "question": "A man spends $76\\%$ of his monthly salary on the rent of his house. If every month he also spends ₹627 on his conveyance and ₹3,947 on his grocery and saves the remaining ₹712, his monthly salary is:",
+        "options": {
+          "a": "₹22,023",
+          "b": "₹22,111",
+          "c": "₹22,119",
+          "d": "₹22,025"
+        },
+        "answer": "d",
+        "solution": "Let the monthly salary be $x$. \\\\ Rent = $76\\% \\text{ of } x = 0.76x$ \\\\ Remaining salary = $100\\% - 76\\% = 24\\% \\text{ of } x = 0.24x$ \\\\ \\\\ The remaining amount is spent on conveyance, grocery, and savings: \\\\ $\\text{Total remaining} = 627 + 3947 + 712 = 5286$ \\\\ \\\\ Therefore, $0.24x = 5286$ \\\\ $x = \\frac{5286}{0.24} = 22025$ \\\\ \\\\ Hence, the monthly salary is ₹22, 025.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Price, Consumption & Expenditure",
+        "conceptTested": "Solving percentage expenditure problems using linear equations to find total income.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Price, Consumption & Expenditure",
+          "conceptTested": "Solving percentage expenditure problems using linear equations to find total income.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bddf40046b",
+        "q_num": 285,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:05",
+        "avgTime": "00:20",
+        "question": "6 times the present age of Sujatha is 6 years more than 3 times the present age of Vanita. After 7 years, 4 times the age of Vanita will be 6 years less than 6 times the age of Sujatha. The age of Vanita is $k$ years more than that of Sujatha. What is the value of $k$?",
+        "options": {
+          "a": "4",
+          "b": "6",
+          "c": "8",
+          "d": "9"
+        },
+        "answer": "b",
+        "solution": "From 1st condition $\\Rightarrow 6S = 3V + 6 \\Rightarrow V = 2S - 2$.\n\nFrom 2nd condition $\\Rightarrow 4(V + 7) = 6(S + 7) - 6 \\Rightarrow 4V = 6S + 8$.\n\nPut $V = 2S - 2 \\Rightarrow 8S - 8 = 6S + 8 \\Rightarrow S = 8 \\Rightarrow V = 14$.\n\n$k = V - S = 14 - 8 = 6$.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Age",
+        "conceptTested": "Linear simultaneous equations based on ages to find the difference between two individuals' ages.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Age",
+          "conceptTested": "Linear simultaneous equations based on ages to find the difference between two individuals' ages.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4c218db8f3",
+        "q_num": 286,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:52",
+        "avgTime": "00:18",
+        "question": "When the smallest number $x$ is divided by 5, 6, 8, 9 and 12, it gives remainder 1 in each case. But $x$ is divisible by 13. What will be the remainder when $x$ is divided by 31?",
+        "options": {
+          "a": "3",
+          "b": "4",
+          "c": "6",
+          "d": "5"
+        },
+        "answer": "d",
+        "solution": "Since the remainder is 1, $x - 1$ is divisible by 5, 6, 8, 9, 12.\n\n$\\text{LCM}(5, 6, 8, 9, 12) = 360$.\n\nLet $x = 360k + 1$.\n\nGiven $x$ is divisible by 13 $\\Rightarrow 360k + 1 \\equiv 0 \\pmod{13}$.\n\n$360 \\equiv 9 \\pmod{13} \\Rightarrow 9k + 1 \\equiv 0 \\pmod{13} \\Rightarrow 9k \\equiv 12 \\pmod{13}$.\n\nMultiplying by the modular inverse of 9 mod 13 (which is 3): $27k \\equiv 36 \\pmod{13} \\Rightarrow k \\equiv 10 \\pmod{13}$.\n\nSmallest $x = 360(10) + 1 = 3601$.\n\nNow divide $x$ by 31: $3601 \\div 31$ leaves a remainder of $5$.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Finding the smallest number using LCM with a constant remainder and applying modular arithmetic for divisibility.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Finding the smallest number using LCM with a constant remainder and applying modular arithmetic for divisibility.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_288bd0327d",
+        "q_num": 287,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:20",
+        "avgTime": "00:20",
+        "question": "In an obtuse-angled triangle $ABC$, the length of its longest side $AB$ is $50\\text{ cm}$ and one of the other two sides is $42\\text{ cm}$. If the area of the triangle is $294\\text{ cm}^2$, what is the length (in $\\text{cm}$) of the third side?",
+        "options": {
+          "a": "$2\\sqrt{53}\\text{ cm}$",
+          "b": "$2\\sqrt{58}\\text{ cm}$",
+          "c": "$4\\sqrt{58}\\text{ cm}$",
+          "d": "$4\\sqrt{53}\\text{ cm}$"
+        },
+        "answer": "b",
+        "solution": "Area = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = 294$\n\n$\\frac{1}{2} \\times 42 \\times \\text{AD} = 294 \\implies \\text{AD} = 14\\text{ cm}$.\n\nIn right - angled triangle formed with hypotenuse AB = 50 and altitude AD = 14: BD = $\\sqrt{50^2 - 14^2} = \\sqrt{2500 - 196} = \\sqrt{2304} = 48\\text{ cm}$.\nCD = BD - AC = $48 - 42 = 6\\text{ cm}$.\nNow in $\\triangle BCD$: BC = $\\sqrt{6^2 + 14^2} = \\sqrt{36 + 196} = \\sqrt{232} = 2\\sqrt{58}\\text{ cm}$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "Application of Pythagoras theorem in obtuse-angled triangles using altitude outside the triangle.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "Application of Pythagoras theorem in obtuse-angled triangles using altitude outside the triangle.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a28cd9b50b",
+        "q_num": 288,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:41",
+        "avgTime": "00:49",
+        "question": "Two dice are tossed. The probability that the total score is a prime number is:",
+        "options": {
+          "a": "$7 / 12$",
+          "b": "$5 / 12$",
+          "c": "$5 / 14$",
+          "d": "$7 / 15$"
+        },
+        "answer": "b",
+        "solution": "Clearly, $n(S) = 6 \\times 6 = 36$.\n\nLet $E$ be the event that the sum is a prime number.\n\nPossible sums that are prime are 2, 3, 5, 7, 11.\n\n$E = \\{ (1,1), (1,2), (1,4), (1,6), (2,1), (2,3), (2,5), (3,2), (3,4), (4,1), (4,3), (5,2), (5,6), (6,1), (6,5) \\}$\n\n$n(E) = 15$.\n\nProbability $= \\frac{15}{36} = \\frac{5}{12}$.",
+        "image": null,
+        "topic": "Probability",
+        "subtopic": "Coin Tossing Probability",
+        "conceptTested": "Probability calculation using sample space of two dice and prime number sums.",
+        "tags": {
+          "topic": "Probability",
+          "subtopic": "Coin Tossing Probability",
+          "conceptTested": "Probability calculation using sample space of two dice and prime number sums.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_57fc257aea",
+        "q_num": 289,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:13",
+        "avgTime": "00:44",
+        "question": "If $a + \\frac{1}{a} = 7$, then $a^5 + \\frac{1}{a^5}$ is equal to:",
+        "options": {
+          "a": "15127",
+          "b": "14457",
+          "c": "16387",
+          "d": "17997"
+        },
+        "answer": "a",
+        "solution": "Given $a + \\frac{1}{a} = 7$.\n\nSquaring both sides: $a^2 + \\frac{1}{a^2} = 7^2 - 2 = 47$.\nCubing both sides: $a^3 + \\frac{1}{a^3} = 7^3 - 3(7) = 343 - 21 = 322$.\nNow, $(a^2 + \\frac{1}{a^2})(a^3 + \\frac{1}{a^3}) = a^5 + \\frac{1}{a^5} + (a + \\frac{1}{a})$\n\n$47 \\times 322 = a^5 + \\frac{1}{a^5} + 7$\n\n$15134 = a^5 + \\frac{1}{a^5} + 7$\n\n$a^5 + \\frac{1}{a^5} = 15134 - 7 = 15127$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Expansion and evaluation of fifth powers using identities: $a^5 + \\frac{1}{a^5} = (a^2 + \\frac{1}{a^2})(a^3 + \\frac{1}{a^3}) - (a + \\frac{1}{a})$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Expansion and evaluation of fifth powers using identities: $a^5 + \\frac{1}{a^5} = (a^2 + \\frac{1}{a^2})(a^3 + \\frac{1}{a^3}) - (a + \\frac{1}{a})$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a89f5b5126",
+        "q_num": 290,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:43",
+        "avgTime": "00:34",
+        "question": "A largest possible sphere is carved from a cube of side $14\\text{ cm}$. What is its volume (in $\\text{cm}^3$)?",
+        "options": {
+          "a": "1437.33",
+          "b": "1342.67",
+          "c": "1512.50",
+          "d": "1250.25"
+        },
+        "answer": "a",
+        "solution": "Largest sphere inside cube $\\Rightarrow$ Diameter = side of cube = $14\\text{ cm}$\n\n$\\Rightarrow$ Radius $r = 7\\text{ cm}$\n\nVolume of sphere = $\\frac{4}{3}\\pi r^3 = \\frac{4}{3} \\times \\frac{22}{7} \\times 7^3 = \\frac{4 \\times 22 \\times 343}{3} = \\frac{30184}{3} = 1439.53\\text{ cm}^3$ (or using $\\pi = \\frac{22}{7}$, $\\frac{4}{3} \\times \\frac{22}{7} \\times 343 = 1437.33\\text{ cm}^3$).\nTherefore, the correct volume is $1437.33\\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Sphere & Hemisphere",
+        "conceptTested": "Volume of a sphere inscribed in a cube of side $a$ is given by $V = \\frac{4}{3}\\pi r^3$ where radius $r = \\frac{a}{2}$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Sphere & Hemisphere",
+          "conceptTested": "Volume of a sphere inscribed in a cube of side $a$ is given by $V = \\frac{4}{3}\\pi r^3$ where radius $r = \\frac{a}{2}$.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -18713,6 +19065,102 @@
           "topic": "Simple Interest",
           "subtopic": "Multiplier & Rate-Time Relations",
           "conceptTested": "Simple Interest formula $SI = \\frac{P \\times R \\times T}{100}$ applied to fractional parts of capital investments.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6fbd9ca68c",
+        "q_num": 123,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:31",
+        "avgTime": "01:34",
+        "question": "A sum of money amounts to ₹9,440 in 3 years and to ₹10,400 in 5 years at a certain rate of simple interest per annum. Find the annual rate of interest.",
+        "options": {
+          "a": "5.5\\%",
+          "b": "6.5\\%",
+          "c": "5\\%",
+          "d": "6\\%"
+        },
+        "answer": "d",
+        "solution": "Simple Interest for 2 years = $10400 - 9440 = \\text{₹}960$.\nSimple Interest for 1 year = $\\frac{960}{2} = \\text{₹}480$.\nPrincipal = $9440 - 3 \\times 480 = \\text{₹}8000$.\nRate = $\\frac{480}{8000} \\times 100 = 6\\%$.",
+        "image": null,
+        "topic": "Simple Interest",
+        "subtopic": "Basic Simple Interest",
+        "conceptTested": "Simple Interest formula: $\\text{SI} = \\frac{P \\times R \\times T}{100}$ and principal constancy over time periods.",
+        "tags": {
+          "topic": "Simple Interest",
+          "subtopic": "Basic Simple Interest",
+          "conceptTested": "Simple Interest formula: $\\text{SI} = \\frac{P \\times R \\times T}{100}$ and principal constancy over time periods.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_69c92b7944",
+        "q_num": 124,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:44",
+        "avgTime": "00:12",
+        "question": "What is the value of the expression: $\\cos 2A \\cos 2B + \\sin^2(A - B) - \\sin^2(A + B)$?",
+        "options": {
+          "a": "\\sin(2A - 2B)",
+          "b": "\\sin(2A + 2B)",
+          "c": "\\cos(2A + 2B)",
+          "d": "\\cos(2A - 2B)"
+        },
+        "answer": "c",
+        "solution": "We know that $\\sin^2(A-B) - \\sin^2(A+B) = -\\sin 2A \\sin 2B$.\n\nSubstituting this into the expression gives: $\\cos 2A \\cos 2B - \\sin 2A \\sin 2B = \\cos(2A + 2B)$.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Product-to-sum and difference trigonometric identities: $\\sin^2(A-B) - \\sin^2(A+B) = -\\sin 2A \\sin 2B$ and $\\cos A \\cos B - \\sin A \\sin B = \\cos(A+B)$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Product-to-sum and difference trigonometric identities: $\\sin^2(A-B) - \\sin^2(A+B) = -\\sin 2A \\sin 2B$ and $\\cos A \\cos B - \\sin A \\sin B = \\cos(A+B)$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_488d97fad0",
+        "q_num": 125,
+        "mockId": "mock_1791039655880_70s0w",
+        "testId": "mock_1791039655880_70s0w",
+        "testName": "RBE_Mock_Test",
+        "platform": "RBELearning",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:25",
+        "avgTime": "00:49",
+        "question": "A triangle with side lengths $13.3$, $19$ and $24.7$ must be:",
+        "options": {
+          "a": "Acute-angled",
+          "b": "Obtuse-angled",
+          "c": "Right-angled",
+          "d": "Isosceles"
+        },
+        "answer": "b",
+        "solution": "Largest side = $24.7$\nCheck: $13.3^2 + 19^2 = 176.89 + 361 = 537.89$\n\n$24.7^2 = 610.09$\n\nSince $24.7^2 > 13.3^2 + 19^2$\n\n$\\Rightarrow$ Triangle is obtuse - angled\n\nAnswer: Obtuse - angled",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "In a triangle with sides $a$, $b$, and $c$ (where $c$ is the longest side), if $c^2 > a^2 + b^2$, then the triangle is obtuse-angled.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "In a triangle with sides $a$, $b$, and $c$ (where $c$ is the longest side), if $c^2 > a^2 + b^2$, then the triangle is obtuse-angled.",
           "difficulty": "medium"
         }
       }
