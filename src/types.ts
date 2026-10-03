@@ -67,7 +67,7 @@ export interface Chapter {
   subject_id: string;
   questions: Question[];
   id?: string;
-  section?: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'ayush_vocab' | 'black_book' | 'general' | 'grammar' | string;
+  section?: 'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'mrq' | 'ayush_vocab' | 'black_book' | 'general' | 'grammar' | string;
   topic_name?: string;
   set_name?: string;
   gk_subject?: string;

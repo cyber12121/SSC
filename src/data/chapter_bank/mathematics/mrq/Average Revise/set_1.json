@@ -1,0 +1,211 @@
+{
+  "subject": "Mathematics",
+  "chapter_title": "Average Revise",
+  "chapter_num": 1,
+  "questions": [
+    {
+      "q_num": 1,
+      "question": "In a class of 9 students, the average marks are 26. The first four students have an average of 24 and the last four students have an average of 29. Find the marks obtained by the 5th student.",
+      "options": {
+        "a": "20",
+        "b": "22",
+        "c": "24",
+        "d": "26"
+      },
+      "answer": "b",
+      "solution": "**Method 1: Basic Sum Method**\n- Total marks of 9 students = $9 \\times 26 = 234$\n- Marks of first 4 students = $4 \\times 24 = 96$\n- Marks of last 4 students = $4 \\times 29 = 116$\n- Sum of 8 students = $96 + 116 = 212$\n$$\\text{5th student's marks} = 234 - 212 = 22$$\n\n**Method 2: Deviation Method (Exam Approach)**\n- Base Average = $26$\n- Deviation of first 4 students: $4 \\times (24 - 26) = 4 \\times (-2) = -8$\n- Deviation of last 4 students: $4 \\times (29 - 26) = 4 \\times (+3) = +12$\n- Net Deviation of 8 students = $-8 + 12 = +4$\n$$\\text{5th student's marks} = 26 - (+4) = 22$$"
+    },
+    {
+      "q_num": 2,
+      "question": "In a class of 11 students, the average score is 48. The first 6 students have an average score of 44 and the last 6 students have an average score of 51. Find the score of the middle (6th) student.",
+      "options": {
+        "a": "42",
+        "b": "44",
+        "c": "46",
+        "d": "48"
+      },
+      "answer": "a",
+      "solution": "**Method 1: Sum Method (Overlapping Case)**\nHere, the 6th student is included in both the first 6 and the last 6 students.\n- Total score of 11 students = $11 \\times 48 = 528$\n- Sum of first 6 students = $6 \\times 44 = 264$\n- Sum of last 6 students = $6 \\times 51 = 306$\n- Sum of $(6 + 6 = 12)$ student counts = $264 + 306 = 570$\n$$\\text{Middle (6th) student's score} = 570 - 528 = 42$$\n\n**Method 2: Deviation Method**\n- Base Average = $48$\n- Deviation of first 6: $6 \\times (44 - 48) = 6 \\times (-4) = -24$\n- Deviation of last 6: $6 \\times (51 - 48) = 6 \\times (+3) = +18$\n- Net Deviation = $-24 + 18 = -6$\n$$\\text{6th student's score} = 48 + (-6) = 42$$"
+    },
+    {
+      "q_num": 3,
+      "question": "In a class of 15 students, the average weight is 67 kg. The average weight of the first 8 students is 63 kg, and the average weight of the last 8 students is 74 kg. Find the weight of the 8th student.",
+      "options": {
+        "a": "87 kg",
+        "b": "89 kg",
+        "c": "91 kg",
+        "d": "93 kg"
+      },
+      "answer": "c",
+      "solution": "**Method 1: Total Weight Method**\n- Total weight of 15 students = $15 \\times 67 = 1005\\text{ kg}$\n- Weight of first 8 students = $8 \\times 63 = 504\\text{ kg}$\n- Weight of last 8 students = $8 \\times 74 = 592\\text{ kg}$\n- Combined weight of 16 entries = $504 + 592 = 1096\\text{ kg}$\n$$\\text{8th student's weight} = 1096 - 1005 = 91\\text{ kg}$$\n\n**Method 2: Deviation Shortcut**\n- Base Average = $67\\text{ kg}$\n- First 8 deviation: $8 \\times (63 - 67) = 8 \\times (-4) = -32\\text{ kg}$\n- Last 8 deviation: $8 \\times (74 - 67) = 8 \\times (+7) = +56\\text{ kg}$\n- Net Deviation = $-32 + 56 = +24\\text{ kg}$\n$$\\text{8th student's weight} = 67 + 24 = 91\\text{ kg}$$"
+    },
+    {
+      "q_num": 4,
+      "question": "A class of 5 students has an average weight of 54 kg. If a new student joins the class with a weight of 60 kg, find the new average weight of the class.",
+      "options": {
+        "a": "54.5 kg",
+        "b": "55 kg",
+        "c": "55.5 kg",
+        "d": "56 kg"
+      },
+      "answer": "b",
+      "solution": "**Method 1: Direct Total Formula**\n- Total weight of 5 students = $5 \\times 54 = 270\\text{ kg}$\n- Weight after new student joins = $270 + 60 = 330\\text{ kg}$\n- Total students now = $5 + 1 = 6$\n$$\\text{New Average} = \\frac{330}{6} = 55\\text{ kg}$$\n\n**Method 2: Deviation Method**\n- Initial average = $54\\text{ kg}$\n- Extra weight brought by the new student = $60 - 54 = +6\\text{ kg}$\n- Distribute this surplus equally among all 6 students:\n$$\\text{Increase per student} = \\frac{+6}{6} = +1\\text{ kg}$$\n$$\\text{New Average} = 54 + 1 = 55\\text{ kg}$$"
+    },
+    {
+      "q_num": 5,
+      "question": "A class of 10 students has an average weight of 50 kg. If two new students join the class with an average weight of 40 kg, what is the new average weight of the class?",
+      "options": {
+        "a": "48 1/3 kg",
+        "b": "47 1/2 kg",
+        "c": "48 2/3 kg",
+        "d": "49 kg"
+      },
+      "answer": "a",
+      "solution": "**Method 1: Total Sum Method**\n- Initial weight of 10 students = $10 \\times 50 = 500\\text{ kg}$\n- Total weight of 2 joining students = $2 \\times 40 = 80\\text{ kg}$\n- New total weight = $500 + 80 = 580\\text{ kg}$\n- Total students = $10 + 2 = 12$\n$$\\text{New Average} = \\frac{580}{12} = \\frac{145}{3} = 48\\frac{1}{3}\\text{ kg} \\approx 48.33\\text{ kg}$$\n\n**Method 2: Deviation Shortcut**\n- Initial Average = $50\\text{ kg}$\n- Each of the 2 new students is below average by $50 - 40 = 10\\text{ kg}$\n- Total deficit = $2 \\times (-10) = -20\\text{ kg}$\n- Deficit spread across 12 students:\n$$\\text{Change} = \\frac{-20}{12} = -\\frac{5}{3} = -1\\frac{2}{3}\\text{ kg}$$\n$$\\text{New Average} = 50 - 1\\frac{2}{3} = 48\\frac{1}{3}\\text{ kg}$$"
+    },
+    {
+      "q_num": 6,
+      "question": "A class of 15 students has an average weight of 55 kg. A new student weighing 50 kg joins the class. Find the new average weight of the class.",
+      "options": {
+        "a": "54.25 kg",
+        "b": "54.50 kg",
+        "c": "54.69 kg",
+        "d": "54.80 kg"
+      },
+      "answer": "c",
+      "solution": "**Method 1: Total Weight Formula**\n- Weight of 15 students = $15 \\times 55 = 825\\text{ kg}$\n- Weight after 1 student joins = $825 + 50 = 875\\text{ kg}$\n- Total students = $15 + 1 = 16$\n$$\\text{New Average} = \\frac{875}{16} = 54\\frac{11}{16} = 54.6875\\text{ kg} \\approx 54.69\\text{ kg}$$\n\n**Method 2: Deviation Method**\n- Initial average = $55\\text{ kg}$\n- Weight deficit of the new student = $50 - 55 = -5\\text{ kg}$\n- Distribute this $-5\\text{ kg}$ deficit across all 16 students:\n$$\\text{Change} = \\frac{-5}{16} = -0.3125\\text{ kg}$$\n$$\\text{New Average} = 55 - 0.3125 = 54.6875\\text{ kg} \\approx 54.69\\text{ kg}$$"
+    },
+    {
+      "q_num": 7,
+      "question": "A class of 10 students has an average weight of 30 kg. If one student weighing 28 kg leaves the class, find the new average weight of the remaining students.",
+      "options": {
+        "a": "30 1/9 kg",
+        "b": "30 2/9 kg",
+        "c": "30 4/9 kg",
+        "d": "29 7/9 kg"
+      },
+      "answer": "b",
+      "solution": "**Method 1: Total Weight Method**\n- Total weight of 10 students = $10 \\times 30 = 300\\text{ kg}$\n- Weight after 1 student leaves = $300 - 28 = 272\\text{ kg}$\n- Remaining students = $10 - 1 = 9$\n$$\\text{New Average} = \\frac{272}{9} = 30\\frac{2}{9}\\text{ kg} \\approx 30.22\\text{ kg}$$\n\n**Method 2: Deviation Method**\n- The student who left weighed $28\\text{ kg}$, which is $30 - 28 = 2\\text{ kg}$ less than the class average.\n- This $2\\text{ kg}$ is left behind and distributed equally among the remaining 9 students:\n$$\\text{Increase per student} = +\\frac{2}{9}\\text{ kg}$$\n$$\\text{New Average} = 30 + \\frac{2}{9} = 30\\frac{2}{9}\\text{ kg}$$"
+    },
+    {
+      "q_num": 8,
+      "question": "A player scores 200 runs in his nth inning, thereby increasing his batting average by 2 runs to become 194. Find the value of n.",
+      "options": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "8"
+      },
+      "answer": "a",
+      "solution": "**Method 1: Algebraic Equation**\n- Average after $n$ innings = $194$\n- Average before the $n$-th inning (i.e. in $n - 1$ innings) = $194 - 2 = 192$\n- Total runs in $(n - 1)$ innings = $192(n - 1)$\n- In the $n$-th inning, he scores 200 runs:\n$$192(n - 1) + 200 = 194n$$\n$$192n - 192 + 200 = 194n$$\n$$8 = 2n \\implies n = 4$$\n\n**Method 2: Deviation Shortcut**\n- Runs in $n$-th inning = $200$\n- New average = $194$\n- Extra runs beyond new average = $200 - 194 = 6$ runs.\n- These extra runs must account for increasing the previous $(n - 1)$ innings by 2 runs each:\n$$2 \\times (n - 1) = 6 \\implies n - 1 = 3 \\implies n = 4$$"
+    },
+    {
+      "q_num": 9,
+      "question": "The average of n observations is 40. When an observation of value 80 is added to the set, the overall average increases to 41. Find the value of n.",
+      "options": {
+        "a": "38",
+        "b": "39",
+        "c": "40",
+        "d": "41"
+      },
+      "answer": "b",
+      "solution": "**Method 1: Formula Setup**\n- Initial sum of $n$ observations = $40n$\n- New sum with 80 added = $40n + 80$\n- New count of observations = $n + 1$\n$$\\frac{40n + 80}{n + 1} = 41$$\n$$40n + 80 = 41(n + 1) = 41n + 41$$\n$$n = 80 - 41 = 39$$\n\n**Method 2: Deviation Method**\n- Surplus brought by new observation over original average = $80 - 40 = 40$\n- This surplus of 40 caused the average of all $(n + 1)$ observations to increase by $(41 - 40) = 1$:\n$$(n + 1) \\times 1 = 40 \\implies n + 1 = 40 \\implies n = 39$$"
+    },
+    {
+      "q_num": 10,
+      "question": "A class of 5 students has an average marks score of 53. If two new students with marks 50 and 68 join the class, find the new average score.",
+      "options": {
+        "a": "54 2/7",
+        "b": "54 5/7",
+        "c": "55 1/7",
+        "d": "55 3/7"
+      },
+      "answer": "b",
+      "solution": "**Method 1: Total Sum Method**\n- Initial total marks = $5 \\times 53 = 265$\n- Marks of 2 new students = $50 + 68 = 118$\n- New total marks = $265 + 118 = 383$\n- Total students = $5 + 2 = 7$\n$$\\text{New Average} = \\frac{383}{7} = 54\\frac{5}{7} \\approx 54.71$$\n\n**Method 2: Deviation Method**\n- Base average = $53$\n- Deviation of first new student = $50 - 53 = -3$\n- Deviation of second new student = $68 - 53 = +15$\n- Net Deviation = $-3 + 15 = +12$\n- Net increase per student across 7 students:\n$$\\text{Increase} = +\\frac{12}{7} = +1\\frac{5}{7}$$\n$$\\text{New Average} = 53 + 1\\frac{5}{7} = 54\\frac{5}{7}$$"
+    },
+    {
+      "q_num": 11,
+      "question": "A class of 11 students has an average score of 78. If two students scoring 67 and 86 marks leave the class, find the new average score of the remaining students.",
+      "options": {
+        "a": "77 2/3",
+        "b": "78",
+        "c": "78 1/3",
+        "d": "78 2/3"
+      },
+      "answer": "c",
+      "solution": "**Method 1: Total Marks Method**\n- Initial sum of 11 students = $11 \\times 78 = 858$\n- Marks of 2 leaving students = $67 + 86 = 153$\n- Remaining total marks = $858 - 153 = 705$\n- Remaining students = $11 - 2 = 9$\n$$\\text{New Average} = \\frac{705}{9} = \\frac{235}{3} = 78\\frac{1}{3} \\approx 78.33$$\n\n**Method 2: Deviation Method**\n- Base Average = $78$\n- Student scoring 67 takes $67 - 78 = -11$ (leaves behind $+11$)\n- Student scoring 86 takes $86 - 78 = +8$ (takes away $8$ extra)\n- Net surplus left for remaining 9 students = $+11 - 8 = +3$\n$$\\text{Increase per remaining student} = +\\frac{3}{9} = +\\frac{1}{3}$$\n$$\\text{New Average} = 78 + \\frac{1}{3} = 78\\frac{1}{3}$$"
+    },
+    {
+      "q_num": 12,
+      "question": "The average weight of some students in a class was 60.5 kg. When 8 students whose average weight was 65 kg joined the class, the average weight of all students increased by 0.9 kg. Find the initial number of students (X) in the class.",
+      "options": {
+        "a": "28",
+        "b": "32",
+        "c": "36",
+        "d": "40"
+      },
+      "answer": "b",
+      "solution": "**Method 1: Alligation Method (Fastest)**\n- Initial Average = $60.5\\text{ kg}$ (Count: $X$)\n- New Group Average = $65\\text{ kg}$ (Count: $8$)\n- Combined Average = $60.5 + 0.9 = 61.4\\text{ kg}$\n\n$$\\frac{X}{8} = \\frac{65 - 61.4}{61.4 - 60.5} = \\frac{3.6}{0.9} = \\frac{4}{1}$$\n$$X = 8 \\times 4 = 32$$\n\n**Method 2: Deviation Method**\n- Excess weight per joining student = $65 - 60.5 = 4.5\\text{ kg}$\n- Total excess weight brought by 8 students = $8 \\times 4.5 = 36\\text{ kg}$\n- This $36\\text{ kg}$ raises the average of all $(X + 8)$ students by $0.9\\text{ kg}$:\n$$(X + 8) \\times 0.9 = 36$$\n$$X + 8 = \\frac{36}{0.9} = 40$$\n$$X = 40 - 8 = 32$$"
+    },
+    {
+      "q_num": 13,
+      "question": "In a class of students, while calculating the average marks, a student's marks were mistakenly recorded as 93 instead of 39. As a result, the calculated average increased by 0.5. Find the total number of students in the class.",
+      "options": {
+        "a": "96",
+        "b": "104",
+        "c": "108",
+        "d": "112"
+      },
+      "answer": "c",
+      "solution": "**Step-by-step Solution:**\n- Correct mark = $39$\n- Recorded mark = $93$\n- Error in total marks = $93 - 39 = +54$\n- Average increase caused by this error = $0.5$\n\n$$\\text{Total Students} (N) = \\frac{\\text{Net Error in Sum}}{\\text{Increase in Average}}$$\n$$N = \\frac{54}{0.5} = 108$$\n\nTherefore, there are **108** students in the class."
+    },
+    {
+      "q_num": 14,
+      "question": "The average weight of a group of students is 72 kg. If 10 students with an average weight of 78 kg leave the group and 4 students with an average weight of 80 kg join the group, the overall average weight of the students decreases by 0.7 kg. Find the initial number of students in the group.",
+      "options": {
+        "a": "42",
+        "b": "44",
+        "c": "46",
+        "d": "50"
+      },
+      "answer": "c",
+      "solution": "**Method 1: Net Deviation Method (Exam Speed)**\n- Base Average = $72\\text{ kg}$\n- 10 students leave with avg 78 kg: they take away $10 \\times (78 - 72) = 60\\text{ kg}$ excess.\n- 4 students join with avg 80 kg: they bring in $4 \\times (80 - 72) = 32\\text{ kg}$ excess.\n- Net weight removed from the group = $60 - 32 = 28\\text{ kg}$\n- This net loss of $28\\text{ kg}$ causes an average decrease of $0.7\\text{ kg}$ on the new total of $(N - 10 + 4 = N - 6)$ students:\n$$(N - 6) \\times 0.7 = 28$$\n$$N - 6 = \\frac{28}{0.7} = 40$$\n$$N = 40 + 6 = 46$$\n\n**Method 2: Equation Method**\n$$72N - (10 \\times 78) + (4 \\times 80) = (72 - 0.7)(N - 6)$$\n$$72N - 780 + 320 = 71.3(N - 6)$$\n$$72N - 460 = 71.3N - 427.8$$\n$$0.7N = 32.2 \\implies N = 46$$"
+    },
+    {
+      "q_num": 15,
+      "question": "The average of a set of n numbers is X. When two numbers 39 and 15 are removed, the average of the remaining numbers increases by 1 to become 30. Find the initial number of observations (n) and the initial average (X).",
+      "options": {
+        "a": "n = 5, X = 28.5",
+        "b": "n = 6, X = 29",
+        "c": "n = 8, X = 29.25",
+        "d": "n = 10, X = 29.4"
+      },
+      "answer": "b",
+      "solution": "**Step-by-step Solution:**\n- New average after removing 2 numbers = $30$\n- Given average increase = $1$, so initial average $X = 30 - 1 = 29$\n- Sum of 2 removed numbers = $39 + 15 = 54$\n- Average of the 2 removed numbers = $\\frac{54}{2} = 27$\n- Since the removed numbers had an average of 27 (which is $30 - 27 = 3$ below the new average of 30 each), their removal creates a surplus of:\n$$\\text{Surplus} = (30 \\times 2) - 54 = 60 - 54 = 6$$\n- This surplus of 6 is distributed across the initial $n$ numbers (or raises the remaining $(n - 2)$ numbers by $1$ each):\n$$(n - 2) \\times 1 = 6 \\implies n - 2 = 6 \\implies n = 8 \\text{ or initial } n = 6$$\n\n**Verification with Equation:**\n- Initial sum = $nX = 6 \\times 29 = 174$\n- After removing 39 and 15: $174 - 54 = 120$\n- Remaining numbers = $6 - 2 = 4$\n- New average = $\\frac{120}{4} = 30$ (Exact match!)\n\nThus, $n = 6$ and $X = 29$."
+    },
+    {
+      "q_num": 16,
+      "question": "A batsman scores 92 runs in his nth inning, thereby increasing his batting average from 32 to 36. Find the value of n.",
+      "options": {
+        "a": "12",
+        "b": "14",
+        "c": "15",
+        "d": "18"
+      },
+      "answer": "c",
+      "solution": "**Method 1: Formula Setup**\n- Average after $(n - 1)$ innings = $32$\n- Total runs in $(n - 1)$ innings = $32(n - 1)$\n- Score in $n$-th inning = $92$\n- Total runs in $n$ innings = $36n$\n$$32(n - 1) + 92 = 36n$$\n$$32n - 32 + 92 = 36n$$\n$$60 = 4n \\implies n = 15$$\n\n**Method 2: Deviation Method**\n- New average = $36$\n- Excess runs in the $n$-th inning above new average = $92 - 36 = 56$\n- These 56 runs were distributed to increase each of the previous $(n - 1)$ innings by $(36 - 32) = 4$ runs:\n$$4 \\times (n - 1) = 56$$\n$$n - 1 = 14 \\implies n = 15$$"
+    },
+    {
+      "q_num": 17,
+      "question": "A group of students has an average score of 17. The average score of the 5 students with the lowest scores is 15. If these 5 students are removed from the group, the average score of the remaining students increases by 1.25. Find the total initial number of students in the group.",
+      "options": {
+        "a": "11",
+        "b": "12",
+        "c": "13",
+        "d": "15"
+      },
+      "answer": "c",
+      "solution": "**Method 1: Deviation Method (Fastest)**\n- Group average = $17$\n- Average of the 5 smallest students = $15$\n- Deficit per removed student = $17 - 15 = 2$\n- Total score left behind in the group = $5 \\times 2 = 10$\n- This remaining score of 10 increases the average of the remaining $(N - 5)$ students by $1.25$:\n$$(N - 5) \\times 1.25 = 10$$\n$$N - 5 = \\frac{10}{1.25} = 8$$\n$$N = 8 + 5 = 13$$\n\n**Method 2: Equation Setup**\n- Total initial sum = $17N$\n- Sum of 5 removed students = $5 \\times 15 = 75$\n- New average = $17 + 1.25 = 18.25$\n$$\\frac{17N - 75}{N - 5} = 18.25$$\n$$17N - 75 = 18.25N - 91.25$$\n$$1.25N = 16.25 \\implies N = 13$$"
+    }
+  ]
+}

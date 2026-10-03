@@ -229,7 +229,7 @@ export default function App() {
     try { localStorage.setItem('quizMode', mode); } catch { }
   };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-  const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | null>(null);
+  const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'mrq' | null>(null);
   const [selectedEnglishSection, setSelectedEnglishSection] = useState<'ayush_vocab' | 'black_book' | 'general' | null>(null);
   const [selectedGKSubject, setSelectedGKSubject] = useState<GKSubjectId | null>(null);
   const [selectedGKSubTopic, setSelectedGKSubTopic] = useState<string>('all');
@@ -2900,7 +2900,7 @@ export default function App() {
 
                                   {subject === 'Mathematics' && (
                                     <>
-                                      {['Spartan', 'Pinnacle', 'QRB', 'Top 500'].map((mathSec) => {
+                                      {['Spartan', 'Pinnacle', 'QRB', 'Top 500', 'MRQ'].map((mathSec) => {
                                         const secKey = mathSec === 'Top 500' ? 'top500' : (mathSec.toLowerCase() as any);
                                         return (
                                           <button
@@ -3170,6 +3170,7 @@ export default function App() {
                         { key: 'pinnacle', icon: Crown, chip: 'from-blue-500 to-indigo-600', title: 'Pinnacle Series', desc: 'Comprehensive past year practice sets, exhaustive subject mapping, and exam models.' },
                         { key: 'qrb', icon: Zap, chip: 'from-emerald-500 to-teal-600', title: 'QRB Series', desc: 'Quick Revision Book question bank focusing on high-speed formula checks and concepts.' },
                         { key: 'top500', icon: Star, chip: 'from-violet-500 to-purple-600', title: 'Top 500 Series', desc: 'The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.' },
+                        { key: 'mrq', icon: Sparkles, chip: 'from-pink-500 to-rose-600', title: 'MRQ Series', desc: 'Most Repeated Questions (MRQ) and concept revision series for SSC CGL 2026.' },
                       ] as const).map(({ key, icon: Icon, chip, title, desc }) => (
                         <motion.div
                           key={key}
@@ -3379,7 +3380,9 @@ export default function App() {
                                 ? 'All Vocabs SSC 2025 - by Ayush'
                                 : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book'
                                   ? 'Black Book Vocabulary - OWS'
-                                  : selectedSubject}
+                                  : selectedSubject === 'Mathematics' && category === 'chapterBank' && selectedMathSection === 'mrq'
+                                ? 'MRQ Series - Most Repeated Questions'
+                                : selectedSubject}
                           </h2>
                           <p className="text-[11px] text-slate-500 font-medium">
                             {category === 'mockErrors'
