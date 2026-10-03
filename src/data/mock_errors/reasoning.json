@@ -2262,6 +2262,102 @@
           "conceptTested": "Deduction of family relationships through generational hierarchy and marital links",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_3532f088ae",
+        "q_num": 73,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:27",
+        "avgTime": "00:56",
+        "question": "The following equation is incorrect. Which two signs should be interchanged to correct the equation? $52 + 36 \\div 9 \\times 3 - 5 = 206$",
+        "options": {
+          "a": "+ and -",
+          "b": "- and ×",
+          "c": "× and +",
+          "d": "÷ and ×"
+        },
+        "answer": "c",
+        "solution": "The given equation is: $52 + 36 \\div 9 \\times 3 - 5 = 206$\nLet's check each option: 1) + and - $52 - 36 \\div 9 \\times 3 + 5 = 45 \\neq 206$\n2) - and × $52 + 36 \\div 9 - 3 \\times 5 = 41 \\neq 206$\n3) × and + $52 \\times 36 \\div 9 + 3 - 5 = 208 + 3 - 5 = 206 = 206$\n4) ÷ and × $52 + 36 \\times 9 \\div 3 - 5 = 155 \\neq 206$\nHence, by interchanging × and + the equation will be correct.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Balancing equations by interchanging arithmetic operators using the BODMAS rule",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Balancing equations by interchanging arithmetic operators using the BODMAS rule",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_cb83745d82",
+        "q_num": 74,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:57",
+        "avgTime": "01:04",
+        "question": "The cost of an apple is four less than twice the cost of a banana, and that of a papaya is half the cost of an apple. If the total cost of the fruits is Rs. 150, then what is the cost of a banana?",
+        "options": {
+          "a": "Rs. 33",
+          "b": "Rs. 36",
+          "c": "Rs. 39",
+          "d": "Rs. 42"
+        },
+        "answer": "c",
+        "solution": "Given:\nCost of banana = $x$\n\nThe cost of an apple is four less than twice the cost of a banana.\n\nCost of apple = $2x - 4$\n\nPapaya is half the cost of an apple.\n\nCost of papaya = $\\frac{2x - 4}{2}$\nTotal cost of fruits = 150\n$\\therefore$ Cost of banana + apple + papaya = 150\n\n$\\Rightarrow x + (2x - 4) + \\frac{2x - 4}{2} = 150$\n\n$\\Rightarrow 2x + 4x - 8 + 2x - 4 = 300$\n\n$\\Rightarrow 8x - 12 = 300$\n\n$\\Rightarrow 8x = 312$\n\n$\\Rightarrow x = \\frac{312}{8} = 39$\n\nSo, the cost of a banana is Rs. 39.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Age Cost Word",
+        "conceptTested": "Translating verbal word statements into linear algebraic equations to solve for an unknown variable",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Age Cost Word",
+          "conceptTested": "Translating verbal word statements into linear algebraic equations to solve for an unknown variable",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_4f67a140d1",
+        "q_num": 75,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:58",
+        "avgTime": "00:48",
+        "question": "Select the combination of letters that when sequentially placed in the blanks of the given series, will complete the series. S_T_XW_UT_X_S_TV_WS_ _VX_",
+        "options": {
+          "a": "UVSVUWXUTW",
+          "b": "VUSVWUUXTW",
+          "c": "UVSVWUXUTW",
+          "d": "VUSVUWXUTW"
+        },
+        "answer": "c",
+        "solution": "Checking options one by one: 1) SUTVXW / SUTVXU / SWTVXW / SUTVXW $\\rightarrow$ doesn't follow any pattern\n2) SVTUXW / SUTVXW / SUTVUW / SXTVXW $\\rightarrow$ doesn't follow any pattern\n3) SUTVXW / SUTVXW / SUTVXW / SUTVXW $\\rightarrow$ follows a pattern (SUTVXW)\nHence, the correct answer is \"UVSVWUXUTW\".",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Continuous Pattern Letter Series",
+        "conceptTested": "Identifying repeating block patterns in continuous alphabetical strings",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Continuous Pattern Letter Series",
+          "conceptTested": "Identifying repeating block patterns in continuous alphabetical strings",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -3051,6 +3147,70 @@
           "topic": "Arithmetical Reasoning",
           "subtopic": "Calculation Reasoning",
           "conceptTested": "Solving linear simultaneous equations derived from word problems involving quantities.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_7afb359c3c",
+        "q_num": 26,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:13",
+        "avgTime": "01:02",
+        "question": "Which figure will replace the question mark (?) in the figure series?",
+        "options": {
+          "a": "Option 1",
+          "b": "Option 2",
+          "c": "Option 3",
+          "d": "Option 4"
+        },
+        "answer": "c",
+        "solution": "The pattern followed here is: Imagine the diagram is divided into four quadrants.\nThe pattern followed for each shape is as follows: Step 1) The II quadrant element moves to the I quadrant in the next figure.\nStep 2) The I quadrant element moves to the III quadrant in the next figure, then it vanishes in the next figure.\nStep 3) The IV quadrant element goes to the II quadrant in the next figure.\n\nThe centre element moves to the IV quadrant in the next figure.\n\nLooking at the symbol in the IV quadrant of the last figure in the series, we can determine that the figure in option 3 satisfies the necessary conditions.",
+        "image": null,
+        "topic": "Non-Verbal Series & Analogy",
+        "subtopic": "Letter & Symbol Series",
+        "conceptTested": "Visual reasoning through systematic movement, rotation, and disappearance of quadrant elements",
+        "tags": {
+          "topic": "Non-Verbal Series & Analogy",
+          "subtopic": "Letter & Symbol Series",
+          "conceptTested": "Visual reasoning through systematic movement, rotation, and disappearance of quadrant elements",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d292459b7a",
+        "q_num": 27,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:46",
+        "avgTime": "00:42",
+        "question": "Which number will replace the question mark (?) in the following number series? 17, 20, 30, 45, 71, 106, ?",
+        "options": {
+          "a": "143",
+          "b": "171",
+          "c": "167",
+          "d": "156"
+        },
+        "answer": "d",
+        "solution": "The logic followed here is:\n\nAlternate Method:\n17 + (2² - 1) = 17 + 3 = 20\n20 + (3² + 1) = 20 + 10 = 30\n30 + (4² - 1) = 30 + 15 = 45\n45 + (5² + 1) = 45 + 26 = 71\n71 + (6² - 1) = 71 + 35 = 106\n106 + (7² + 1) = 106 + 50 = 156\nHence, the correct answer is \"156\".",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Arithmetic progression with alternating squares and additions/subtractions.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Arithmetic progression with alternating squares and additions/subtractions.",
           "difficulty": "medium"
         }
       }
@@ -5248,6 +5408,38 @@
           "topic": "Syllogism",
           "subtopic": "Standard Syllogism (Venn)",
           "conceptTested": "Evaluating categorical syllogism statements, possibilities, and negative universal constraints using Venn diagrams.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_0dc5fe0ae1",
+        "q_num": 71,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:01",
+        "avgTime": "00:24",
+        "question": "Six families - Udayars, Vermas, Wangchooks, Qureshis, Yadavs and Sharmas live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it, number 2 and so on till the topmost floor is numbered 6. Only one family live between Vermas and Wangchooks. Udayars do not live immediately above or below Vermas. Only one family lives between Sharmas and Wangchooks. Sharmas lives immediately above Yadavs. If Yadavs lives on the first floor, who live on the fifth floor?",
+        "options": {
+          "a": "Vermas",
+          "b": "Sharmas",
+          "c": "Qureshis",
+          "d": "Udayars"
+        },
+        "answer": "c",
+        "solution": "Given:\nSix families - Udayars, Vermas, Wangchooks, Qureshis, Yadavs and Sharmas live on six different floors of the same building.\n\n1) Yadavs lives on the first floor.\n2) Sharmas lives immediately above Yadavs (Floor 2).\n3) Only one family lives between Sharmas and Wangchooks (Wangchooks on Floor 4).\n4) Only one family live between Vermas and Wangchooks (Vermas on Floor 6).\n5) Udayars do not live immediately above or below Vermas (Udayars on Floor 3).\n6) Qureshis occupy the remaining Floor 5.\n\nThus, Qureshis live on the fifth floor.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deductive positional mapping based on relative floor conditions",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deductive positional mapping based on relative floor conditions",
           "difficulty": "medium"
         }
       }

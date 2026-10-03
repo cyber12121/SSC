@@ -37,7 +37,8 @@ export function normalizeSubtopic(
 ): string {
   const top = (topic || '').trim();
   const sub = cleanSubtopicText(rawSubtopic || '');
-  const s = `${sub} ${cleanSubtopicText(questionText || '')}`.toLowerCase();
+  const extra = cleanSubtopicText(extraContext || '');
+  const s = `${sub} ${extra} ${cleanSubtopicText(questionText || '')}`.toLowerCase();
 
   // ══════════════════════════════════════════════════════════════════════
   // QUANTITATIVE APTITUDE
@@ -85,7 +86,7 @@ export function normalizeSubtopic(
   }
 
   if (/ratio\s*(&|and)?\s*proportion/i.test(top)) {
-    if (/age|father.*son|years ago|hence/.test(s)) return 'Age Problems';
+    if (/\b(ages?|present age)\b|father.*son|years ago|hence/.test(s)) return 'Age Problems';
     if (/coin|rupee|fifty paise|twenty five paise|denomination|currency/.test(s)) return 'Coins & Currency Problems';
     if (/mixture|alligation|milk.*water|alloy|replaced/.test(s)) return 'Mixture & Alligation Ratios';
     if (/income|expenditure|savings|salaries/.test(s)) return 'Income, Expense & Savings Ratios';
@@ -102,6 +103,17 @@ export function normalizeSubtopic(
     if (/linear equation|system of equations|two variables|three variables/.test(s)) return 'Linear Equations';
     if (/maximum|minimum|maxima|minima|value putting/.test(s)) return 'Maxima, Minima & Value Putting';
     return 'Basic Algebraic Identities';
+  }
+
+  // Coordinate Geometry (CHECK BEFORE generic /geometry/)
+  if (/coordinate\s*geometry/i.test(top)) {
+    if (/slope|equation of line|intercept|gradient|parallel line|perpendicular line/.test(s)) return 'Slope & Equations of Lines';
+    if (/distance|section|midpoint|internal division|external division/.test(s)) return 'Distance & Section Formula';
+    if (/intersection|concurrent|collinear|point on line/.test(s)) return 'Intersection of Lines & Collinearity';
+    if (/area.*triangle|vertices.*triangle|area.*quadrilateral/.test(s)) return 'Area of Triangles & Quadrilaterals';
+    if (/reflection|mirror image|axis reflection/.test(s)) return 'Reflection & Coordinate Transformations';
+    if (/circle|radius|centre/.test(s)) return 'Circles in Coordinates';
+    return 'Basic Coordinate Geometry';
   }
 
   if (/geometry/i.test(top)) {
@@ -135,25 +147,35 @@ export function normalizeSubtopic(
     return 'General 2D Area & Perimeter';
   }
 
-  if (/trigonometry/i.test(top) || /height\s*(&|and)?\s*distance/i.test(top)) {
+  if (/height\s*(&|and)?\s*distance/i.test(top)) {
+    if (/elevation.*depression|depression.*elevation|two positions|same side|opposite side/.test(s)) return 'Two Points on Same/Opposite Side';
+    if (/depression/.test(s)) return 'Angle of Depression';
+    if (/elevation|building height|tower height/.test(s)) return 'Angle of Elevation & Heights';
+    if (/shadow|sun altitude|pole.*shadow/.test(s)) return 'Shadow & Sun Altitude';
+    if (/broken|tree.*broken|flagstaff/.test(s)) return 'Broken Trees & Flagstaff';
+    return 'Heights & Distances';
+  }
+
+  if (/trigonometry/i.test(top)) {
     if (/height|distance|elevation|depression|shadow|tower|pole|cliff/.test(s)) return 'Heights & Distances';
-    if (/max|min|maximum|minimum|greatest|least/.test(s)) return 'Maximum & Minimum Values';
+    if (/\b(max|min|maximum|minimum|maxima|minima|greatest|least)\b/.test(s)) return 'Maximum & Minimum Values';
     if (/complementary|supplementary|90\s*-\s*theta|co-function/.test(s)) return 'Complementary Angles';
-    if (/0|30|45|60|90|standard value|table value/.test(s)) return 'Standard Angle Ratios';
+    if (/\b(0|30|45|60|90)\b|standard value|table value/.test(s)) return 'Standard Angle Ratios';
     if (/identity|sin\^2|cos\^2|sec\^2|tan\^2|cosec\^2|cot\^2/.test(s)) return 'Trigonometric Identities';
     if (/radian|degree|circular measure/.test(s)) return 'Radian & Circular Measurement';
     return 'Trigonometric Ratios & Simplification';
   }
 
-  if (/compound\s*interest/i.test(top) || /simple\s*interest/i.test(top)) {
+  if (/compound\s*interest/i.test(top) || /simple\s*interest/i.test(top) || /simple.*compound/i.test(top)) {
     if (/difference between (ci|si)|ci.*si difference|si.*ci difference/.test(s)) return 'Difference Between CI & SI';
     if (/installment|annual payment|borrowed|debt/.test(s)) return 'Installments & Repayments';
     if (/half yearly|quarterly|8 monthly|semi annually/.test(s)) return 'Compounding Periods (Half-Yearly/Quarterly)';
     if (/equal interest|invested in two parts|three parts/.test(s)) return 'Equal Interest & Division in Parts';
     if (/population|growth|depreciation|scrap value/.test(s)) return 'Population Growth & Depreciation';
     if (/rate.*time|times of itself|doubles|triples/.test(s)) return 'Multiplier & Rate-Time Relations';
-    if (/simple interest|si/.test(s)) return 'Basic Simple Interest';
-    return 'Basic Compound Interest';
+    if (/\b(simple interest|s\.i\.|si)\b/i.test(s) && !/compound/i.test(s)) return 'Basic Simple Interest';
+    if (/compound interest|c\.i\./i.test(s)) return 'Basic Compound Interest';
+    return /simple/i.test(top) ? 'Basic Simple Interest' : 'Basic Compound Interest';
   }
 
   if (/number\s*system/i.test(top)) {
@@ -166,21 +188,81 @@ export function normalizeSubtopic(
     return 'Number Properties & Basic Operations';
   }
 
-  if (/simplification/i.test(top) || /lcm\s*(&|and)?\s*hcf/i.test(top)) {
-    if (/lcm|hcf|highest common|least common|bells ring|circular track/.test(s)) return 'LCM & HCF Applications';
+  if (/lcm\s*(&|and)?\s*hcf/i.test(top)) {
+    if (/circular track|bell|bells ring|traffic light|intervals?|simultaneous/.test(s)) return 'Circular Tracks & Bells Intervals';
+    if (/relation between|product of (two )?numbers|sum of numbers.*lcm/.test(s)) return 'Relation between LCM & HCF';
+    if (/remainder.*lcm|least number.*divided by.*remainder|divisible.*remainder/.test(s)) return 'Remainder-based LCM Problems';
+    if (/greatest number.*divides.*leaving|equal division|hcf.*remainder/.test(s)) return 'Remainder-based HCF & Partitioning';
+    if (/fraction|decimal|polynomial/.test(s)) return 'Fractions & Decimals LCM-HCF';
+    if (/tile|tiling|capacity|partition|minimum can/.test(s)) return 'Tiling & Capacity Applications';
+    return 'LCM & HCF Applications';
+  }
+
+  if (/simplification/i.test(top)) {
     if (/surd|indices|root|power|exponent|rationalize/.test(s)) return 'Surds & Indices';
-    if (/bodmas|vbodmas|bracket|of|division/.test(s)) return 'VBODMAS & Order of Operations';
+    if (/\b(bodmas|vbodmas|bracket|brackets)\b|order of operations?/.test(s)) return 'VBODMAS & Order of Operations';
     if (/fraction|mixed fraction|continued fraction/.test(s)) return 'Fractions & Continued Fractions';
     if (/algebraic simplification|identit/.test(s)) return 'Algebraic Simplification';
+    if (/decimal|bar|recurring/.test(s)) return 'Decimals & Recurring Fractions';
     return 'Basic Calculation & Simplification';
   }
 
+  if (/partnership/i.test(top)) {
+    if (/modified capital|capital adjustment|changes? capital|mid.*year|withdrew|invested more/.test(s)) return 'Mid-Term Capital Changes';
+    if (/capital.*time|time.*variation|different periods?/.test(s)) return 'Capital & Time Ratio Variations';
+    if (/fractional capital|simple partnership/.test(s)) return 'Fractional & Proportionate Capital';
+    if (/charity|salary|working partner|sleeping partner|commission/.test(s)) return 'Salary, Charity & Commission';
+    if (/rent|pasture|grazing|consumption/.test(s)) return 'Rent & Equivalent Consumption';
+    return 'Profit Sharing & Basic Partnership';
+  }
+
+  if (/pipes?\s*(&|and)?\s*cisterns?/i.test(top)) {
+    if (/alternate|alternatively|one by one/.test(s)) return 'Alternate Filling & Emptying';
+    if (/leak|emptying|leakage/.test(s)) return 'Leaks & Emptying Pipes';
+    if (/multiple inlet|combined flow|three pipes/.test(s)) return 'Multiple Inlets & Combined Flow';
+    if (/efficiency|twice as fast|diameter/.test(s)) return 'Pipe Efficiency & Flow Rates';
+    if (/closed before|turned off/.test(s)) return 'Pipes Closed Before Full';
+    return 'Inlet & Outlet Pipes';
+  }
+
+  if (/probability/i.test(top)) {
+    if (/dependent|without replacement|selection/.test(s)) return 'Dependent Events & Selection';
+    if (/independent|derangement|complementary/.test(s)) return 'Independent Events & Derangements';
+    if (/coin|toss/.test(s)) return 'Coin Tossing Probability';
+    if (/dice|cards|deck/.test(s)) return 'Dice & Card Pack Probability';
+    return 'Basic Probability Concepts';
+  }
+
+  if (/statistics/i.test(top)) {
+    if (/grouped data|frequency|class interval/.test(s)) return 'Grouped Data & Frequency';
+    if (/empirical relationship|empirical relation|mode.*3.*median/.test(s)) return 'Empirical Relation (Mean, Median, Mode)';
+    if (/standard deviation|variance|dispersion/.test(s)) return 'Standard Deviation & Variance';
+    if (/measures of central tendency|mean.*median|mean|median|mode/.test(s)) return 'Measures of Central Tendency';
+    return 'Basic Statistical Calculations';
+  }
+
+  if (/trains?/i.test(top)) {
+    if (/pole|man|standing|post|telegraph/.test(s)) return 'Crossing Poles & Standing Persons';
+    if (/platform|bridge|tunnel/.test(s)) return 'Crossing Platforms & Bridges';
+    if (/opposite direction|same direction|relative speed/.test(s)) return 'Relative Speed & Direction';
+    if (/delayed start|leaves at|meets/.test(s)) return 'Delayed Starts & Meeting Points';
+    return 'Basic Train Calculations';
+  }
+
+  if (/boats?\s*(&|and)?\s*streams?/i.test(top)) {
+    if (/equal time|same time|round trip/.test(s)) return 'Round Trips & Equal Time Equations';
+    if (/still water|speed of stream|stream speed/.test(s)) return 'Still Water & Stream Speed';
+    if (/speed relations|equations|ratio/.test(s)) return 'Speed Relations & Equations';
+    return 'Upstream & Downstream Calculations';
+  }
+
   if (/average/i.test(top)) {
-    if (/addition|removal|replacement|inclusion|exclusion|leaves|joins/.test(s)) return 'Inclusion, Exclusion & Replacement';
-    if (/weighted|combined average|two groups/.test(s)) return 'Weighted & Combined Average';
     if (/batting|bowling|innings|batsman|cricket|runs/.test(s)) return 'Cricket & Sports Average';
-    if (/age|family|average age/.test(s)) return 'Age-based Averages';
+    if (/\b(ages?|family members?|family average)\b|father.*son|average age of/.test(s)) return 'Age-based Averages';
+    if (/weighted|combined average|two groups/.test(s)) return 'Weighted & Combined Average';
+    if (/consecutive|ap|arithmetic progression|multiples|even.*odd/.test(s)) return 'Consecutive Numbers & AP Average';
     if (/error|wrongly entered|corrected average|mistake/.test(s)) return 'Average Error Correction';
+    if (/inclusion|exclusion|member|leaves|joins|replacement|added.*group|new observation/.test(s)) return 'Inclusion, Exclusion & Replacement';
     return 'Basic Average Calculation';
   }
 
@@ -379,30 +461,90 @@ export function normalizeSubtopic(
     return 'Cardinal Directions & Turns';
   }
 
-  if (/syllogism/i.test(top) || /statement/i.test(top)) {
-    if (/all.*some|no.*some|syllogism/.test(s)) return 'Standard Syllogism (Venn)';
-    if (/possibility|can be|may be/.test(s)) return 'Possibility Cases';
-    if (/assumption/.test(s)) return 'Statement & Assumptions';
-    if (/conclusion/.test(s)) return 'Statement & Conclusions';
-    if (/course of action|argument/.test(s)) return 'Arguments & Courses of Action';
-    return 'Logical Deductions';
+  if (/syllogism/i.test(top)) {
+    if (/\b(possibility|can be|may be|is a possibility)\b/.test(s)) return 'Possibility Cases';
+    if (/\b(either.*or|neither.*nor|complementary)\b/.test(s)) return 'Either-Or Cases';
+    if (/\b(only a few|only few|only [a-z]+ are)\b/.test(s)) return 'Only & Only A Few Cases';
+    if (/\b(no [a-z]+ is|some [a-z]+ are not)\b/.test(s)) return 'Negative Conclusions (No/Some Not)';
+    return 'Standard Syllogism (Venn)';
   }
 
-  if (/non\s*verbal/i.test(top) || /figure/i.test(top) || /cube/i.test(top) || /dice/i.test(top) || /paper/i.test(top) || /mirror/i.test(top)) {
-    if (/cube|dice|opposite face/.test(s)) return 'Cube & Dice (Opposite Faces)';
+  if (/order\s*(&|and)?\s*ranking/i.test(top)) {
+    if (/interchange of positions|interchanged/.test(s)) return 'Position Interchange Ranking';
+    if (/total persons|total students|from left.*from right|top.*bottom/.test(s)) return 'Total Persons & Direct Ranking';
+    if (/overlap|between them|minimum persons/.test(s)) return 'Overlapping & Between Problems';
+    if (/taller|heavier|shorter|more marks|comparison/.test(s)) return 'Comparison Ranking (Height/Weight)';
+    return 'Order & Ranking Calculations';
+  }
+
+  if (/seating/i.test(top)) {
+    if (/circular|circle|round table/.test(s)) return 'Circular Seating Arrangement';
+    if (/parallel|facing each other|two rows/.test(s)) return 'Parallel Rows Seating';
+    if (/square|rectangle/.test(s)) return 'Square & Rectangular Seating';
+    return 'Linear Seating Arrangement';
+  }
+
+  if (/figure\s*counting/i.test(top) || (/non\s*verbal|figure/i.test(top) && /count/i.test(s))) {
+    if (/triangle/.test(s)) return 'Counting Triangles';
+    if (/square|rectangle/.test(s)) return 'Counting Squares & Rectangles';
+    if (/straight line|circle/.test(s)) return 'Counting Straight Lines & Circles';
+    return 'Complex Figure Counting';
+  }
+
+  if (/cube|dice/i.test(top)) {
+    if (/open dice|unfolded|folding|folded into/.test(s)) return 'Open Dice & Folding Patterns';
+    if (/painted|cut into|smaller cubes|faces painted/.test(s)) return 'Painted Faces & Cube Cutting';
+    if (/opposite face|adjacent face|opposite to/.test(s)) return 'Opposite Faces of Dice';
+    return 'Cube & Dice (Opposite Faces)';
+  }
+
+  if (/non\s*verbal/i.test(top) || /figure/i.test(top) || /paper/i.test(top) || /mirror/i.test(top)) {
     if (/mirror|water image/.test(s)) return 'Mirror & Water Images';
     if (/paper folding|cutting|unfolded/.test(s)) return 'Paper Folding & Cutting';
-    if (/count|triangle count|square count|rectangles/.test(s)) return 'Figure Counting';
     if (/embedded|hidden|completion/.test(s)) return 'Embedded Figures & Completion';
     return 'Figure Pattern Series & Analogy';
   }
 
-  if (/order\s*(&|and)?\s*ranking/i.test(top) || /seating/i.test(top)) {
-    if (/circular|circle|round table/.test(s)) return 'Circular Seating Arrangement';
-    if (/linear|row|facing north|facing south/.test(s)) return 'Linear Seating Arrangement';
-    if (/interchange of positions/.test(s)) return 'Position Interchange Ranking';
-    if (/top|bottom|left|right|rank|total persons/.test(s)) return 'Order & Ranking Calculations';
-    return 'Seating & Ordering Problems';
+  if (/alphabet\s*test/i.test(top)) {
+    if (/vowel|consonant/.test(s)) return 'Vowel & Consonant Operations';
+    if (/letter pair|pairs of letters|forward.*backward/.test(s)) return 'Letter Pairs Problem';
+    if (/word rearrangement|alphabetical sorting/.test(s)) return 'Alphabetical Sorting of Words';
+    if (/midpoint|middle letter|between/.test(s)) return 'Midpoint & Position Finding';
+    return 'Alphabet Order & Operations';
+  }
+
+  if (/word\s*formation|dictionary/i.test(top)) {
+    if (/dictionary|alphabetical order/.test(s)) return 'Dictionary Arrangement';
+    if (/cannot be formed|can be formed|formation/.test(s)) return 'Word Formation from Letters';
+    if (/matrix|address matching/.test(s)) return 'Matrix & Address Matching';
+    if (/rearrangement|unscramble/.test(s)) return 'Word Rearrangement & Unscrambling';
+    return 'Dictionary & Word Formation';
+  }
+
+  if (/statement\s*(&|and)?\s*assumption/i.test(top) || /assumption/i.test(top)) {
+    if (/policy|government|advertisement|business/.test(s)) return 'Policy & Public Notice Assumptions';
+    if (/cause|consequence|action/.test(s)) return 'Action-Oriented Assumptions';
+    return 'Statement & Assumptions';
+  }
+
+  if (/statement\s*(&|and)?\s*conclusion/i.test(top)) {
+    if (/eligibility|criteria/.test(s)) return 'Eligibility Criteria Evaluation';
+    if (/conditional|fallacy|fallacies/.test(s)) return 'Conditional Deductions & Fallacies';
+    if (/situation|reaction/.test(s)) return 'Situation Reaction & Judgment';
+    if (/critical|verbal/.test(s)) return 'Critical Verbal Reasoning';
+    return 'Statement & Conclusions';
+  }
+
+  if (/statement\s*(&|and)?\s*argument/i.test(top) || /argument/i.test(top)) {
+    return 'Strong & Weak Arguments';
+  }
+
+  if (/course\s*of\s*action/i.test(top)) {
+    return 'Administrative & Problem Solving Actions';
+  }
+
+  if (/cause\s*(&|and)?\s*effect/i.test(top)) {
+    return 'Principal Cause & Effect';
   }
 
   if (/mathematical\s*operations/i.test(top)) {

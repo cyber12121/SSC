@@ -5853,6 +5853,102 @@
           "conceptTested": "Distribution of annual profit according to the ratio of equivalent capitals invested for different periods of time.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_7b39e049b2",
+        "q_num": 186,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:54",
+        "avgTime": "00:39",
+        "question": "Sapna invests an amount of Rs. 80000 to start a business. After 6 months Khyati joined his business with an amount of Rs. 30000. If they got a profit of Rs. 25500 after one year, then find the share of Khyati in the profit. (rounded off to the nearest rupee)",
+        "options": {
+          "a": "Rs. 4426",
+          "b": "Rs. 3940",
+          "c": "Rs. 4026",
+          "d": "Rs. 3826"
+        },
+        "answer": "c",
+        "solution": "Profit ratio = $(Capital_1 \\times Time_1) : (Capital_2 \\times Time_2)$\nSapna : Khyati = $(80000 \\times 12) : (30000 \\times 6) = 16 : 3$\nTotal profit parts = $16 + 3 = 19$ parts = 25500\nKhyati's share = 3 parts = $(25500 \\div 19) \\times 3 \\approx 4026.31$\n\n$\\therefore$ The correct answer is ₹ 4026.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Profit Sharing & Basic Partnership",
+        "conceptTested": "Profit Ratio = Compound Ratio of Capital investments and respective Time periods: $Profit = Capital \\times Time$.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Profit Sharing & Basic Partnership",
+          "conceptTested": "Profit Ratio = Compound Ratio of Capital investments and respective Time periods: $Profit = Capital \\times Time$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_771ad874c1",
+        "q_num": 187,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:02",
+        "avgTime": "00:34",
+        "question": "Ram can do $50\\%$ of a work in $24$ days, Shyam can do $rac{1}{4}\text{th}$ of the work in $36$ days. In how many days can they do $rac{1}{6}\text{th}$ of the work working together?",
+        "options": {
+          "a": "10 days",
+          "b": "6 days",
+          "c": "8 days",
+          "d": "12 days"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nRam's $100\\%$ work time = $24 \\times 2 = 48$ days; Shyam's $100\\%$ work time = $36 \\times 4 = 144$ days.\nTotal work = LCM of $48$ and $144 = 144$ units.\nCombined efficiency = $(144 \\div 48) + (144 \\div 144) = 3 + 1 = 4$ units/day.\nRequired work to complete = $\\frac{1}{6} \\times 144 = 24$ units.\nTime required = $24$ units $\\div 4$ units/day $= 6$ days.\n∴ The correct answer is 6 days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Basic Work & Days Calculation",
+        "conceptTested": "Total Work = Efficiency × Time; combined efficiencies are added directly when working simultaneously.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Basic Work & Days Calculation",
+          "conceptTested": "Total Work = Efficiency × Time; combined efficiencies are added directly when working simultaneously.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_2c07fe1a4a",
+        "q_num": 188,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:01",
+        "avgTime": "00:24",
+        "question": "Find the value of $\\sqrt{\\frac{1-\\tan A}{1+\\tan A}}$.",
+        "options": {
+          "a": "$\\sqrt{\\frac{1+\\sin 2A}{\\cos 2A}}$",
+          "b": "$\\sqrt{\\frac{1-\\sin 2A}{\\cos 2A}}$",
+          "c": "$\\sqrt{\\frac{1+\\sin A}{\\cos A}}$",
+          "d": "$\\sqrt{\\frac{1-\\sin A}{\\cos A}}$"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nPut $A = 30^\\circ$ in the given expression.\n\n⇒ $\\sqrt{\\frac{1 - \\tan 30^\\circ}{1 + \\tan 30^\\circ}} = \\sqrt{\\frac{1 - \\frac{1}{\\sqrt{3}}}{1 + \\frac{1}{\\sqrt{3}}}} = \\sqrt{\\frac{\\sqrt{3} - 1}{\\sqrt{3} + 1}}$\n⇒ Multiply numerator and denominator by $(\\sqrt{3} - 1)$ to get $\\sqrt{2 - \\sqrt{3}}$.\nNow, substitute $A = 30^\\circ$ in the correct expression:\n⇒ $\\sqrt{\\frac{1 - \\sin 60^\\circ}{\\cos 60^\\circ}} = \\sqrt{\\frac{1 - \\frac{\\sqrt{3}}{2}}{\\frac{1}{2}}} = \\sqrt{2 - \\sqrt{3}}$.\n∴ The correct answer is $\\sqrt{\\frac{1 - \\sin 2A}{\\cos 2A}}$.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Trigonometric identities: $\\tan A = \\frac{\\sin A}{\\cos A}$, $\\sin^2 A + \\cos^2 A = 1$, and $\\cos 2A = \\cos^2 A - \\sin^2 A$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Trigonometric identities: $\\tan A = \\frac{\\sin A}{\\cos A}$, $\\sin^2 A + \\cos^2 A = 1$, and $\\cos 2A = \\cos^2 A - \\sin^2 A$.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -14497,6 +14593,262 @@
           "conceptTested": "Sum of products of varying capitals and respective time intervals determines the profit-sharing ratio.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_2a2e99f8b9",
+        "q_num": 275,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:47",
+        "avgTime": "01:02",
+        "question": "Find the interest earned in the first year on ₹ 200 at $20\\%$ p.a. compound interest, interest compounded every three months.",
+        "options": {
+          "a": "₹ 44.101",
+          "b": "₹ 44.701",
+          "c": "₹ 41.101",
+          "d": "₹ 43.101"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick:\nQuarterly Rate = $20\\% \\div 4 = 5\\%$ and cycles = 4.\n\nEffective rate for 4 cycles of $5\\%$ is calculated by combining $5\\%$ successively: - For 2 cycles: $5 + 5 + \\frac{5 \\times 5}{100} = 10.25\\%$ - For 4 cycles: $10.25 + 10.25 + \\frac{10.25 \\times 10.25}{100} = 20.5 + 1.050625 = 21.550625\\%$\n\nInterest = $21.550625\\%$ of ₹ 200 = $21.550625 \\times 2 =$ ₹ 43.10125\n∴ The correct answer is ₹ 43.101.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Basic Compound Interest",
+        "conceptTested": "Compound interest formula with quarterly compounding periods: $A = P\\left(1 + \\frac{r}{100}\\right)^n$",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Basic Compound Interest",
+          "conceptTested": "Compound interest formula with quarterly compounding periods: $A = P\\left(1 + \\frac{r}{100}\\right)^n$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_dc1b7b3cd9",
+        "q_num": 276,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "01:02",
+        "avgTime": "00:42",
+        "question": "A train leaves Hyderabad at 4:00 A.M. and reaches Vijayawada at 8:00 A.M. the same day. Another train leaves Vijayawada at 6:00 A.M. and reaches Hyderabad at 9:30 A.M. the same day. At what time do the two trains cross each other?",
+        "options": {
+          "a": "6:45 A.M.",
+          "b": "7:56 A.M.",
+          "c": "7:45 A.M.",
+          "d": "6:56 A.M."
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nLet total distance = LCM of 4 and 3.5 = 28 units. Speeds are 28 $\\div$ 4 = 7 units/hr and 28 $\\div$ 3.5 = 8 units/hr.\nTrain 1 travels from 4:00 A.M. to 6:00 A.M., covering 7 $\\times$ 2 = 14 units.\nRemaining distance = 28 $-$ 14 = 14 units, and Relative speed = 7 + 8 = 15 units/hr.\nTime to meet = 14 $\\div$ 15 hours = 56 minutes after 6:00 A.M., which is 6:56 A.M.\n$\\therefore$ The correct answer is 6:56 A.M.",
+        "image": null,
+        "topic": "Trains",
+        "subtopic": "Basic Train Calculations",
+        "conceptTested": "Relative Speed: When two bodies move towards each other, their relative speed is the sum of their individual speeds ($S_1 + S_2$).",
+        "tags": {
+          "topic": "Trains",
+          "subtopic": "Basic Train Calculations",
+          "conceptTested": "Relative Speed: When two bodies move towards each other, their relative speed is the sum of their individual speeds ($S_1 + S_2$).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f70bba6937",
+        "q_num": 277,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:30",
+        "avgTime": "01:07",
+        "question": "The ratio of income of two persons is $10 : 6$ and that of their expenditures is $18 : 10$. If they save ₹ 5,200 and ₹ 3,600 respectively, their incomes are :",
+        "options": {
+          "a": "₹ 16,000, ₹ 9,600",
+          "b": "₹ 6,000; ₹ 3,600",
+          "c": "₹ 10,000 ₹ 6,000",
+          "d": "₹ 9,000; ₹ 5,400"
+        },
+        "answer": "a",
+        "solution": "Using the cross - multiplication method: Income ratio = $10 : 6$, Expenditure ratio = $18 : 10$, Savings = ₹ 5200 and ₹ 3600.\nCross - product difference of ratios = $|10 \\times 10 - 18 \\times 6| = |100 - 108| = 8$ units.\nCross - product difference of expenditures and savings = $|18 \\times 3600 - 10 \\times 5200| = |64800 - 52000| = 12800$.\n\n8 units $\\equiv$ 12800 $\\implies$ 1 unit $\\equiv$ 1600.\n\n$\\therefore$ The correct answer is ₹ 16, 000, ₹ 9, 600.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Income, Expense & Savings Ratios",
+        "conceptTested": "Income = Expenditure + Savings relation combined with cross-multiplication ratio methods.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Income, Expense & Savings Ratios",
+          "conceptTested": "Income = Expenditure + Savings relation combined with cross-multiplication ratio methods.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b131688ee6",
+        "q_num": 278,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:11",
+        "avgTime": "00:19",
+        "question": "The average weight of $14$ persons is $76.5\\text{ kg}$. If $3$ more persons of weight $82\\text{ kg}$, $75\\text{ kg}$ and $x\\text{ kg}$ join them, then the average weight of all the persons increases by $0.5\\text{ kg}$. What is the value of $x$?",
+        "options": {
+          "a": "80.5",
+          "b": "79.5",
+          "c": "81",
+          "d": "85"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nNet increase in total weight = Total persons $\\times$ Increase in average = $17 \\times 0.5 = 8.5\\text{ kg}$\nSum of weights of $3$ new persons = $(3 \\times 76.5) + 8.5 = 229.5 + 8.5 = 238\\text{ kg}$\n\nGiven weights are $82\\text{ kg}$, $75\\text{ kg}$, and $x\\text{ kg}$ ⇒ $82 + 75 + x = 238$\n\n⇒ $157 + x = 238$ ⇒ $x = 81$\n∴ The correct answer is $81\\text{ kg}$.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Basic Average Calculation",
+        "conceptTested": "Sum of observations = Average × Number of observations; Net deviation method for weighted groups.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Basic Average Calculation",
+          "conceptTested": "Sum of observations = Average × Number of observations; Net deviation method for weighted groups.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_237d3ba058",
+        "q_num": 279,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:10",
+        "question": "A triangle and a parallelogram are on the same base and between the same parallels. The ratio of the area of triangle and parallelogram is _______.",
+        "options": {
+          "a": "$1 : 3$",
+          "b": "$1 : 2$",
+          "c": "$2 : 3$",
+          "d": "$3 : 4$"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nBy geometric properties, a triangle and a parallelogram on the same base and between the same parallel lines share equal base length and perpendicular height.\n\nArea of triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$\nArea of parallelogram = $\\text{base} \\times \\text{height}$\nRequired Ratio = $\\frac{\\frac{1}{2} \\times \\text{base} \\times \\text{height}}{\\text{base} \\times \\text{height}} = \\frac{1}{2}$\n∴ The correct answer is $1 : 2$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Quadrilaterals & Polygons",
+        "conceptTested": "A triangle and a parallelogram on the same base and between the same parallel lines have areas in the ratio $1 : 2$, as Area of Triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$ and Area of Parallelogram = $\\text{base} \\times \\text{height}$.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Quadrilaterals & Polygons",
+          "conceptTested": "A triangle and a parallelogram on the same base and between the same parallel lines have areas in the ratio $1 : 2$, as Area of Triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$ and Area of Parallelogram = $\\text{base} \\times \\text{height}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c605714105",
+        "q_num": 280,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:01",
+        "avgTime": "00:19",
+        "question": "In the given figure, if $AB \\parallel CD$, then find $x + y$.",
+        "options": {
+          "a": "$100^\\circ$",
+          "b": "$110^\\circ$",
+          "c": "$60^\\circ$",
+          "d": "$125^\\circ$"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nFor any zigzag transversal between two parallel lines, the sum of left - pointing angles equals the sum of right - pointing angles.\n\nIn the given figure, the transversals form right - pointing angles $x$ and $y$, and a left - pointing angle of $60^\\circ$.\n\nEquating the angles pointing in opposite directions directly gives: x + y = 60°\n\n∴ The correct answer is $60^\\circ$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "Zigzag Transversal Rule: If two parallel lines are intersected by a transversal, the sum of all left-pointing angles equals the sum of all right-pointing angles.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "Zigzag Transversal Rule: If two parallel lines are intersected by a transversal, the sum of all left-pointing angles equals the sum of all right-pointing angles.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_43a158549e",
+        "q_num": 281,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:02",
+        "avgTime": "00:18",
+        "question": "The simplified value of $(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$ is:",
+        "options": {
+          "a": "$125 \\frac{1}{25}$",
+          "b": "$325 \\frac{3}{25}$",
+          "c": "$225 \\frac{2}{25}$",
+          "d": "$150 \\frac{1}{50}$"
+        },
+        "answer": "a",
+        "solution": "Given:\n$(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$\n\nFormula used:\nBODMAS Rule (Bracket, Of, Division, Multiplication, Addition, Subtraction)\n\nCalculations:\n$(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$\n\n$\\Rightarrow 0.008 \\times 400 \\div (2000 \\times 0.04)$\n\n$\\Rightarrow 0.008 \\times 400 \\div 80$\n\n$\\Rightarrow 0.008 \\times 5$\n\n$\\Rightarrow 0.04$\n\n$\\Rightarrow \\frac{4}{100}$\n\n$\\Rightarrow \\frac{1}{25}$\n\n∴ The correct answer is option A.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "Surds & Indices",
+        "conceptTested": "BODMAS Rule order of operations and decimal exponentiation",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Surds & Indices",
+          "conceptTested": "BODMAS Rule order of operations and decimal exponentiation",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e414fdb398",
+        "q_num": 282,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:03",
+        "avgTime": "00:17",
+        "question": "Shyam alone can do a piece of work in 40 days working 2 hours a day. Ram alone can do the same work in 60 days working 2 hours a day. How many hours per day do they need to work together to complete the same work in 12 days?",
+        "options": {
+          "a": "2.5 hours",
+          "b": "4 hours",
+          "c": "3 hours",
+          "d": "5 hours"
+        },
+        "answer": "b",
+        "solution": "Total time needed by Shyam = $40 \\times 2 = 80$ hours and Ram = $60 \\times 2 = 120$ hours.\nTime taken by both working together = $(80 \\times 120) \\div (80 + 120) = 9600 \\div 200 = 48$ hours.\nHours per day required to complete the work in 12 days = $48 \\div 12 = 4$ hours.\n∴ The correct answer is 4 hours.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Total work equals product of number of workers, daily working hours, and total days",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Total work equals product of number of workers, daily working hours, and total days",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -18297,6 +18649,70 @@
           "topic": "Partnership",
           "subtopic": "Investment Profit Ratio",
           "conceptTested": "Profit is shared in the ratio of the product of capital and time period of investment.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2ffc20fa7a",
+        "q_num": 121,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "01:10",
+        "avgTime": "00:40",
+        "question": "If the 11-digit number $79x6402087y$ is divisible by 72, then for smallest value of $x$, what is the value of $(x + 2y)$?",
+        "options": {
+          "a": "4",
+          "b": "9",
+          "c": "2",
+          "d": "6"
+        },
+        "answer": "a",
+        "solution": "For a number to be divisible by 72, it must be perfectly divisible by both 8 and 9.\n\nRule of 8: The last three digits ($87y$) must be divisible by 8 $\\implies$ 872 is divisible by 8, so $y = 2$.\nRule of 9: The sum of digits ($45 + x$) must be divisible by 9 $\\implies$ The smallest possible value for $x$ is 0.\nRequired value = $(x + 2y) = 0 + 2 \\times 2 = 4$.\n\n$\\therefore$ The correct answer is 4.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Co-prime Divisibility Theorem: If a number is divisible by two co-prime factors $a$ and $b$ (e.g., $72 = 8 \\times 9$), it is divisible by their product.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Co-prime Divisibility Theorem: If a number is divisible by two co-prime factors $a$ and $b$ (e.g., $72 = 8 \\times 9$), it is divisible by their product.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9cb9a0d354",
+        "q_num": 122,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:55",
+        "avgTime": "00:19",
+        "question": "A man invested $\\frac{1}{3}$ of his retirement gratuity at $6\\%$ simple interest; $\\frac{1}{4}$ of his gratuity at $7\\%$ and the rest at $8\\%$ simple interest. If his annual return on these investments is Rs. 7012.5, find the total amount of gratuity invested by the man.",
+        "options": {
+          "a": "Rs. 89,000",
+          "b": "Rs. 99,000",
+          "c": "Rs. 95,000",
+          "d": "Rs. 1,05,000"
+        },
+        "answer": "b",
+        "solution": "Let the total gratuity be 1200 units (LCM of 3 and 4 multiplied by 100 for easy percentage calculation).\n\nInvestment parts: 400 units ($\\frac{1}{3}$), 300 units ($\\frac{1}{4}$), and remaining 500 units.\nTotal Interest = $(400 \\times 6\\%) + (300 \\times 7\\%) + (500 \\times 8\\%) = 24 + 21 + 40 = 85$ units.\nGiven 85 units = ₹ 7012.5 $\\implies$ 1 unit = $7012.5 \\div 85 =$ ₹ 82.5\nTotal gratuity = 1200 units = $1200 \\times 82.5 =$ ₹ 99, 000.\n\n$\\therefore$ The correct answer is ₹ 99, 000.",
+        "image": null,
+        "topic": "Simple Interest",
+        "subtopic": "Multiplier & Rate-Time Relations",
+        "conceptTested": "Simple Interest formula $SI = \\frac{P \\times R \\times T}{100}$ applied to fractional parts of capital investments.",
+        "tags": {
+          "topic": "Simple Interest",
+          "subtopic": "Multiplier & Rate-Time Relations",
+          "conceptTested": "Simple Interest formula $SI = \\frac{P \\times R \\times T}{100}$ applied to fractional parts of capital investments.",
           "difficulty": "medium"
         }
       }

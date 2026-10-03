@@ -3857,6 +3857,70 @@
           "conceptTested": "Provisions of Articles 20 and 21 under Indian Constitution regarding National Emergency suspension rules.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_7c7ad69bfc",
+        "q_num": 124,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "00:16",
+        "question": "Which cricketer has been appointed the official tournament ambassador for the ICC Men’s T20 World Cup 2026, to be jointly hosted by India and Sri Lanka?",
+        "options": {
+          "a": "Virat Kohli",
+          "b": "Rohit Sharma",
+          "c": "Kane Williamson",
+          "d": "Jos Buttler"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Rohit Sharma.\n\nIn News: Rohit Sharma has been named the official tournament ambassador for the ICC Men’s T20 World Cup 2026, which will be jointly hosted by India and Sri Lanka.\nKey Points: - Rohit Sharma is a two - time T20 World Cup winner (2007, 2024), making him a fitting choice as ambassador. - He captained India to the 2024 T20 World Cup title, showcasing exemplary leadership. - He holds a stellar T20I record with 4, 231 runs at an average of 32.01 and a strike rate of 140.89. - His ambassador role aims to boost fan engagement and strengthen excitement for the 2026 event.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Appointments & Resignations",
+        "conceptTested": "Recent sports appointments and brand ambassadors for major international cricket tournaments.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Appointments & Resignations",
+          "conceptTested": "Recent sports appointments and brand ambassadors for major international cricket tournaments.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_612280afb9",
+        "q_num": 125,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:06",
+        "avgTime": "00:17",
+        "question": "Legendary Bollywood actor Dharmendra passed away at 89 in Mumbai. In which year did Dharmendra receive the Padma Bhushan, one of India’s highest civilian honours?",
+        "options": {
+          "a": "2006",
+          "b": "2008",
+          "c": "2010",
+          "d": "2012"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 2012.\n\nIn News: Legendary Bollywood actor Dharmendra passed away on November 24, 2025, at the age of 89, leaving behind a six - decade - long cinematic legacy.\nKey Points: - Dharmendra was honoured with the Padma Bhushan in 2012, recognising his immense contribution to Indian cinema. - He made his film debut in 1960 with \"Dil Bhi Tera Hum Bhi Tere.\". - Known as Bollywood’s 'He - Man', he enjoyed massive popularity for his versatility across action, romance, and drama.",
+        "image": null,
+        "topic": "Awards & Honours",
+        "subtopic": "National & International Awards",
+        "conceptTested": "Recipients of India's civilian honours, specifically the Padma Bhushan.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "National & International Awards",
+          "conceptTested": "Recipients of India's civilian honours, specifically the Padma Bhushan.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -9440,6 +9504,358 @@
           "topic": "Awards & Honours",
           "subtopic": "National & International Awards",
           "conceptTested": "Recognition of exceptional service and achievements in various fields through the Padma Awards.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_e0c585aaeb",
+        "q_num": 179,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:19",
+        "avgTime": "00:47",
+        "question": "Which one of the following statements regarding an Overseas Citizen of India (OCI) is not correct?",
+        "options": {
+          "a": "An OCI is a citizen of another country.",
+          "b": "An OCI possesses multiple-entry long-term visa for visiting India.",
+          "c": "An OCI is at par with NRIs in all matters",
+          "d": "An OCI is not entitled to the fundamental right to equality of opportunity in public employment."
+        },
+        "answer": "c",
+        "solution": "Overseas Citizens of India (OCI) refers to all Persons of Indian Origin (PIOs) who were citizens of India on 26th January 1950 or thereafter or were eligible to become citizens of India on 26th January 1950 except those who have been citizens of Pakistan or Bangladesh. A registered OCI enjoys a multiple - entry, multi - purpose, life - long visa for visiting India and general parity with Non - Resident Indians in economic, financial, and educational fields except in matters relating to the acquisition of agricultural or plantation properties. Hence, an OCI is not at par with NRIs in all matters.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Indian Constitution & Governance",
+        "conceptTested": "Legal status and constitutional rights of Overseas Citizens of India (OCI).",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Indian Constitution & Governance",
+          "conceptTested": "Legal status and constitutional rights of Overseas Citizens of India (OCI).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c6b390bf1b",
+        "q_num": 180,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "01:11",
+        "question": "Who was the Governor General of India at the time of the Sepoy Mutiny?",
+        "options": {
+          "a": "Lord Hardings",
+          "b": "Lord Canning",
+          "c": "Lord Lytton",
+          "d": "Lord Dalhousie"
+        },
+        "answer": "b",
+        "solution": "Lord Canning served as the Governor - General of India from 1856 to 1862 and was in office during the Indian Rebellion of 1857. Following the revolt, the Government of India Act, 1858 was passed, making him the first Viceroy of India.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "British administrators and key figures during the Indian Rebellion of 1857.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "British administrators and key figures during the Indian Rebellion of 1857.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5ce7961747",
+        "q_num": 181,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:19",
+        "avgTime": "00:25",
+        "question": "Which of the following statements is/are incorrect about the Allahabad Treaty?\n1. Allahabad Treaty concluded (1765) under the rule of Ahmad Shah.\n2. Under this treaty Diwani rights of Bengal, Bihar, and Orissa granted to the British.\nFind the right code given below.",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "a",
+        "solution": "The Treaty of Allahabad was signed on August 12, 1765, between Mughal Emperor Shah Alam II and Robert Clive after the Battle of Buxar. Thus, it occurred under Shah Alam II, not Ahmad Shah, making Statement 1 incorrect. The treaty granted the Diwani rights (right to collect revenue) of Bengal, Bihar, and Orissa to the East India Company, making Statement 2 correct.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "The Treaty of Allahabad (1765) following the Battle of Buxar under Robert Clive and Mughal Emperor Shah Alam II.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "The Treaty of Allahabad (1765) following the Battle of Buxar under Robert Clive and Mughal Emperor Shah Alam II.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_98059a6fc0",
+        "q_num": 182,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:13",
+        "avgTime": "00:19",
+        "question": "Spherical mirror whose reflecting surface is bent inward is called-",
+        "options": {
+          "a": "Concave Mirror",
+          "b": "Convex Mirror",
+          "c": "Plane Mirror",
+          "d": "Both Concave and Convex Mirror"
+        },
+        "answer": "a",
+        "solution": "A spherical mirror whose reflecting surface is bent inward is called a concave mirror. In a concave mirror, the inner surface acts as the reflecting surface, and it forms both real and virtual images.",
+        "image": null,
+        "topic": "Physics",
+        "subtopic": "Optics, Sound & Waves",
+        "conceptTested": "Characteristics and properties of spherical mirrors (Concave and Convex mirrors).",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Optics, Sound & Waves",
+          "conceptTested": "Characteristics and properties of spherical mirrors (Concave and Convex mirrors).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_1c00a15460",
+        "q_num": 183,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:10",
+        "avgTime": "00:17",
+        "question": "In 1817, Paika rebellion broke out in Odisha. Who among the following was the leader of this rebellion?",
+        "options": {
+          "a": "Sidhu and Kanhu",
+          "b": "Baba Ram Singh",
+          "c": "Birsa Munda",
+          "d": "Bakshi Jagabandhu"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Bakshi Jagabandhu. Bakshi Jagabandhu was the military chief of the Raja of Khurda. In 1817, he led the Paiks of Odisha against the forces of the East India Company.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Identification of regional peasant and tribal rebellion leaders during the British colonial period.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Identification of regional peasant and tribal rebellion leaders during the British colonial period.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_78a9a8a739",
+        "q_num": 184,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:15",
+        "question": "Tapan Kumar Pattanayak won the Sangeet Natak Akademi Award in which dance form?",
+        "options": {
+          "a": "Kuchipudi",
+          "b": "Chhau",
+          "c": "Sattriya",
+          "d": "Odissi"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Chhau. Tapan Kumar Pattanayak won the Sangeet Natak Akademi Award for Chhau, which is a traditional Indian dance form known for its martial arts - like movements.",
+        "image": null,
+        "topic": "Folk & Classical Dances",
+        "subtopic": "Classical & Folk Dances",
+        "conceptTested": "Major awards and honors received by classical and traditional Indian dance exponents.",
+        "tags": {
+          "topic": "Folk & Classical Dances",
+          "subtopic": "Classical & Folk Dances",
+          "conceptTested": "Major awards and honors received by classical and traditional Indian dance exponents.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_77330be393",
+        "q_num": 185,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:14",
+        "avgTime": "00:28",
+        "question": "Consider the following statements with reference to the Central Council of Ministers:\n1. A nominated member can be appointed as a minister, but within six months he must become an elected member of either House of Parliament.\n2. The salaries and allowances of ministers are given in the Second Schedule of the Indian Constitution.\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "d",
+        "solution": "Statement 1 is incorrect because a person who is not a member can become a minister and can enter Parliament through either election or nomination within six months. Statement 2 is incorrect because the salaries and allowances of ministers are determined by Parliament by law under Article 75(6), not by the Second Schedule.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Union & State Executive",
+        "conceptTested": "Provisions related to the appointment of ministers and constitutional schedules regarding salaries.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Union & State Executive",
+          "conceptTested": "Provisions related to the appointment of ministers and constitutional schedules regarding salaries.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b2c0a194cf",
+        "q_num": 186,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:04",
+        "avgTime": "00:10",
+        "question": "The Arya Samaj was founded by Swami Dayanand Saraswati in:",
+        "options": {
+          "a": "1867",
+          "b": "1888",
+          "c": "1880",
+          "d": "1875"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 1875. Arya Samaj was founded by Swami Dayanand Saraswati on April 7, 1875, in Bombay.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Establishment dates and founders of 19th-century socio-religious reform associations in India.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Establishment dates and founders of 19th-century socio-religious reform associations in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_09938b87bc",
+        "q_num": 187,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:09",
+        "avgTime": "00:16",
+        "question": "Which was the capital of the Chalukyas?",
+        "options": {
+          "a": "Madurai",
+          "b": "Amaravati",
+          "c": "Bharuch",
+          "d": "Aihole"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Aihole. Aihole, located in present - day Karnataka, served as the early capital of the Chalukyas and is renowned as a cradle of early Indian temple architecture.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Capitals and architectural centers of early medieval South Indian dynasties like the Chalukyas.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Capitals and architectural centers of early medieval South Indian dynasties like the Chalukyas.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_338052a3ac",
+        "q_num": 188,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:24",
+        "question": "The direction of acceleration in uniform circular motion is along the",
+        "options": {
+          "a": "direction of motion.",
+          "b": "tangent to the circle at the point of observation",
+          "c": "direction of velocity",
+          "d": "direction perpendicular to velocity"
+        },
+        "answer": "d",
+        "solution": "The correct answer is direction perpendicular to the velocity.\n\nKey Points: - The direction of the acceleration is inwards. The acceleration in a uniform circular motion is along the radius and towards the center. - The movement of a body following a circular path is called a circular motion. - The motion of a body moving with constant speed along a circular path is called Uniform Circular Motion. - In this motion speed is constant but the velocity changes. - In the case of uniform circular motion, the acceleration is $a_r = \\frac{v^2}{r} = \\omega^2 r$. - A particle is moving in a uniform circular motion: * Velocity is changing at every instant. * There is no tangential acceleration. * Its speed is constant.",
+        "image": null,
+        "topic": "Physics",
+        "subtopic": "Mechanics, Force & Motion",
+        "conceptTested": "In uniform circular motion, the acceleration vector is always directed radially inwards, perpendicular to the tangential velocity vector.",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Mechanics, Force & Motion",
+          "conceptTested": "In uniform circular motion, the acceleration vector is always directed radially inwards, perpendicular to the tangential velocity vector.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c7bc5e72e2",
+        "q_num": 189,
+        "mockId": "mock_1791012434816_8hbzi",
+        "testId": "mock_1791012434816_8hbzi",
+        "testName": "SSC CGL Tier I: Full Test - 10",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:13",
+        "avgTime": "00:24",
+        "question": "According to the reactivity series of metals, which metal pair is found in native state?",
+        "options": {
+          "a": "Calcium and aluminium",
+          "b": "Gold and platinum",
+          "c": "Calcium and magnesium",
+          "d": "Sodium and potassium"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Gold and platinum.\n\nKey Points: - Gold and platinum are found in their native state due to their low reactivity. - They are part of the noble metals group, which resist oxidation and corrosion. - Gold and platinum are often found in their elemental form in nature, not combined with other elements. - These metals are less likely to form compounds with other elements, which is why they are found in pure form. - Both metals have been used historically in coinage, jewelry, and industrial applications due to their stability and rarity.",
+        "image": null,
+        "topic": "Chemistry",
+        "subtopic": "Acids, Bases, Metals & Periodic Table",
+        "conceptTested": "The reactivity series of metals places noble metals like gold and platinum at the bottom, making them unreactive and found in their native (pure elemental) state.",
+        "tags": {
+          "topic": "Chemistry",
+          "subtopic": "Acids, Bases, Metals & Periodic Table",
+          "conceptTested": "The reactivity series of metals places noble metals like gold and platinum at the bottom, making them unreactive and found in their native (pure elemental) state.",
           "difficulty": "medium"
         }
       }
