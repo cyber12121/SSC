@@ -143,11 +143,11 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
 
   const handleAskAiForQuestion = (m: RecordedMistake, qNum: number) => {
     const normSub = normalizeSubject(m.subject);
-    const solText = resolveQuestionSolution(m) || m.explanation || m.solution || '';
+    const solText = resolveQuestionSolution(m) || m.explanation || (m as any).solution || '';
     const letters = ['a', 'b', 'c', 'd'];
     const correctOptKey = (m.correctOptionIndex !== undefined && m.correctOptionIndex >= 0 && m.correctOptionIndex < 4)
       ? letters[m.correctOptionIndex]
-      : (m.answer || (m as any).correctAnswer || '');
+      : ((m as any).answer || (m as any).correctAnswer || '');
 
     window.dispatchEvent(
       new CustomEvent('cgl_ask_ai_question', {

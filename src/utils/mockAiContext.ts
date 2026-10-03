@@ -133,6 +133,7 @@ export function buildMockAiSummary(
           qs.forEach((q: any) => {
             const rawTopic = q.tags?.topic || q.topic;
             const topic = normalizeTopicTitle(rawTopic);
+            const rawSubtopic = q.tags?.subtopic || q.subtopic || topic;
             const extraContext = [q.conceptTested, q.tags?.conceptTested, q.solution, q.explanation].filter(Boolean).join(' ');
             const subtopic = normalizeSubtopic(topic, rawSubtopic, q.question, extraContext);
             const concept = (q.tags?.conceptTested || q.conceptTested || '').trim();

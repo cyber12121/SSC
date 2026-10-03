@@ -1361,8 +1361,8 @@ export default function App() {
     if (isMockTest && fullResult.questionDetails && fullResult.questionDetails.length > 0) {
       try {
         const isSectional = (
-          fullResult.type === 'sectional' ||
-          savedResult.type === 'sectional' ||
+          (fullResult as any).type === 'sectional' ||
+          (savedResult as any).type === 'sectional' ||
           (fullResult.totalQuestions && fullResult.totalQuestions <= 35) ||
           (savedResult.totalQuestions && savedResult.totalQuestions <= 35)
         );
