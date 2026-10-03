@@ -1635,12 +1635,12 @@
     "mockId": "mock_1790621702819_uneyq",
     "testId": "mock_1790621702819_uneyq",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Latin comparative adjectives (senior, junior, superior, inferior, prior) take 'to' instead of 'than'.",
     "question": "Select the part of the given sentence that contains a grammatical error.\n\nAlthough she had joined the office, that she was senior than him, treated the older man as the natural authority, the gradation list drawn up that April",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Latin comparative adjectives (senior, junior, superior, inferior, prior) take 'to' instead of 'than'."
     }
   },
@@ -1670,12 +1670,12 @@
     "mockId": "mock_1790621702819_uneyq",
     "testId": "mock_1790621702819_uneyq",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Prepositions & Phrasal Verbs",
     "conceptTested": "Correct preposition usage with verbs of accusation and charge: 'charge a person with an offence'.",
     "question": "Select the option that improves the underlined part of the sentence.\n\nEven though the store clerk had produced two witnesses and a stamped delivery challan, and even though nobody at the depot could remember the crates ever arriving, the divisional office went ahead and \\underline{charged him on} the theft of eleven drums of furnace oil, a decision the union has since carried to the tribunal.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Prepositions & Phrasal Verbs",
       "conceptTested": "Correct preposition usage with verbs of accusation and charge: 'charge a person with an offence'."
     }
   },

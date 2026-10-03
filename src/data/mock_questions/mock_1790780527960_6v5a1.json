@@ -206,12 +206,12 @@
     "mockId": "mock_1790780527960_6v5a1",
     "testId": "mock_1790780527960_6v5a1",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Conjunctions & Parallelism",
     "conceptTested": "Correlative conjunction pair 'Scarcely... when' used for immediate sequence of actions.",
     "question": "Choose the correct option: Scarcely had the satellite deployed ____ it transmitted its first data packet.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Conjunctions & Parallelism",
       "conceptTested": "Correlative conjunction pair 'Scarcely... when' used for immediate sequence of actions."
     }
   },
@@ -278,12 +278,12 @@
     "mockId": "mock_1790780527960_6v5a1",
     "testId": "mock_1790780527960_6v5a1",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Verbs, Modals & Non-Finites",
     "conceptTested": "Subjunctive mood requirement in subordinate clauses following expressions of necessity or urgency (e.g., 'It was imperative that').",
     "question": "Choose the correct option: It was imperative that the document ___ signed before the close of business.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Verbs, Modals & Non-Finites",
       "conceptTested": "Subjunctive mood requirement in subordinate clauses following expressions of necessity or urgency (e.g., 'It was imperative that')."
     }
   },

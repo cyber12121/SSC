@@ -134,12 +134,12 @@
     "mockId": "mock_1791004191829_ywc9j",
     "testId": "mock_1791004191829_ywc9j",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Conjunctions & Parallelism",
     "conceptTested": "Parallel Structure: Correlative conjunctions like 'neither... nor' must precede parallel grammatical forms.",
     "question": "Find the part of the sentence that contains an error:\n\nThe policy aims to neither penalise first-time offenders (1)/ nor those who may have violated norms (2)/ due to systemic ambiguity (3)/ rather than deliberate intent. (4)",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Conjunctions & Parallelism",
       "conceptTested": "Parallel Structure: Correlative conjunctions like 'neither... nor' must precede parallel grammatical forms."
     }
   },
@@ -170,12 +170,12 @@
     "mockId": "mock_1791004191829_ywc9j",
     "testId": "mock_1791004191829_ywc9j",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Conjunctions & Parallelism",
     "conceptTested": "Clause Structure: Reporting verbs require a conjunction like 'that' to introduce subordinate object clauses clearly.",
     "question": "Find the part of the sentence that contains an error:\n\nThe investigation's findings, alarming in both scope and content, (1)/ prompted responses not just from the agencies concerned (2)/ but also from the auditors who report they (3)/ were never granted access to critical records. (4)",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Conjunctions & Parallelism",
       "conceptTested": "Clause Structure: Reporting verbs require a conjunction like 'that' to introduce subordinate object clauses clearly."
     }
   },
@@ -206,12 +206,12 @@
     "mockId": "mock_1791004191829_ywc9j",
     "testId": "mock_1791004191829_ywc9j",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Conjunctions & Parallelism",
     "conceptTested": "Correlative conjunction placement: 'Not only ... but also' must be placed immediately before the parallel parts of speech they connect.",
     "question": "Find the part of the sentence that contains an error:\n\nThat certain state governments have invoked archaic laws (1)/ to suppress dissent does not only reflect legal opportunism (2)/ but also undermines the constitutional ethos (3)/ that such provisions were meant to uphold. (4)",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Conjunctions & Parallelism",
       "conceptTested": "Correlative conjunction placement: 'Not only ... but also' must be placed immediately before the parallel parts of speech they connect."
     }
   },
@@ -242,12 +242,12 @@
     "mockId": "mock_1791004191829_ywc9j",
     "testId": "mock_1791004191829_ywc9j",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Conjunctions & Parallelism",
     "conceptTested": "Parallelism and Correlative Structure: 'Whether' should be paired with 'or whether' (or balanced without redundant 'if' clauses) to maintain parallel structure in indirect interrogative clauses.",
     "question": "Find the part of the sentence that contains an error:\n\nIt remains unclear whether the board intends to implement the proposal (1)/ or if the statement was merely a strategic ploy (2)/ aimed at appeasing shareholders (3)/ in light of the recent legal setbacks. (4)",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Conjunctions & Parallelism",
       "conceptTested": "Parallelism and Correlative Structure: 'Whether' should be paired with 'or whether' (or balanced without redundant 'if' clauses) to maintain parallel structure in indirect interrogative clauses."
     }
   },
@@ -278,12 +278,12 @@
     "mockId": "mock_1791004191829_ywc9j",
     "testId": "mock_1791004191829_ywc9j",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Nouns & Question Tags",
     "conceptTested": "Uncountable Nouns: Uncountable nouns like 'feedback', 'information', 'advice', and 'furniture' cannot be preceded by indefinite articles ('a' or 'an').",
     "question": "Find the part of the sentence that contains an error:\n\nThe company needs a detailed feedback (1)/ from all departments (2)/ before finalising its restructuring plan (3)/ for the upcoming fiscal year. (4)",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Nouns & Question Tags",
       "conceptTested": "Uncountable Nouns: Uncountable nouns like 'feedback', 'information', 'advice', and 'furniture' cannot be preceded by indefinite articles ('a' or 'an')."
     }
   }

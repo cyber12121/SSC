@@ -62,12 +62,12 @@
     "mockId": "mock_1790927247080_is0za",
     "testId": "mock_1790927247080_is0za",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Prepositions & Phrasal Verbs",
     "conceptTested": "The verb 'direct' takes a direct object followed by a to-infinitive (direct + person + to-infinitive).",
     "question": "Choose the best option to replace the underlined part to improve the given sentence. If no substitution is required, select 'No substitution.'\n\nThe teacher directed the students to submit their assignments before the deadline.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Prepositions & Phrasal Verbs",
       "conceptTested": "The verb 'direct' takes a direct object followed by a to-infinitive (direct + person + to-infinitive)."
     }
   },
@@ -170,12 +170,12 @@
     "mockId": "mock_1790927247080_is0za",
     "testId": "mock_1790927247080_is0za",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Comparative degree (more ... of the two) is used when comparing exactly two entities, whereas superlative degree is used for three or more.",
     "question": "In the following sentence, a part of the sentence is bolded. Choose the correct alternative that best improves the bolded part.\n\nShe is considered the most intelligent of the two architects who designed the sustainable skyscraper project for the new business district.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Comparative degree (more ... of the two) is used when comparing exactly two entities, whereas superlative degree is used for three or more."
     }
   },
@@ -206,12 +206,12 @@
     "mockId": "mock_1790927247080_is0za",
     "testId": "mock_1790927247080_is0za",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Verbs, Modals & Non-Finites",
     "conceptTested": "The verb 'prefer' follows the structure prefer + gerund (... to + gerund) when comparing two activities.",
     "question": "In the following sentence, a part of the sentence is bolded. Choose the correct alternative that best improves the bolded part.\n\nI prefer to analyze the raw data personally to relying on the subjective interpretations provided by the junior researchers.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Verbs, Modals & Non-Finites",
       "conceptTested": "The verb 'prefer' follows the structure prefer + gerund (... to + gerund) when comparing two activities."
     }
   },
@@ -242,12 +242,12 @@
     "mockId": "mock_1790927247080_is0za",
     "testId": "mock_1790927247080_is0za",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Conjunctions & Parallelism",
     "conceptTested": "The correlative conjunction pair 'neither' must be followed by 'nor', maintaining parallel grammatical structures.",
     "question": "Choose the most suitable option to replace the highlighted part of the sentence:\n\nThe committee concluded that the proposal was not acceptable nor was it feasible for implementation.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Conjunctions & Parallelism",
       "conceptTested": "The correlative conjunction pair 'neither' must be followed by 'nor', maintaining parallel grammatical structures."
     }
   },
@@ -350,12 +350,12 @@
     "mockId": "mock_1790927247080_is0za",
     "testId": "mock_1790927247080_is0za",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Latin comparative adjectives (superior, inferior, senior, junior) are followed by 'to' instead of 'than' and do not take 'more' or 'most'.",
     "question": "In the following sentence, a part of the sentence is bolded. Choose the correct alternative that best improves the bolded part.\n\nHe is superior than his contemporaries in the field of theoretical physics and quantum mechanics due to his innovative research.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Latin comparative adjectives (superior, inferior, senior, junior) are followed by 'to' instead of 'than' and do not take 'more' or 'most'."
     }
   }

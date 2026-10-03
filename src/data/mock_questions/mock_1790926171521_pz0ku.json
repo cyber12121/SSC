@@ -62,12 +62,12 @@
     "mockId": "mock_1790926171521_pz0ku",
     "testId": "mock_1790926171521_pz0ku",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Verbs, Modals & Non-Finites",
     "conceptTested": "Past participles (-ed form) are used to describe feelings, whereas present participles (-ing form) describe the source or cause of the feeling.",
     "question": "The following sentence has been divided into four parts, namely A, B, C and D, which are given in the alternatives. Select the alternative that contains the part of the sentence with an error.\n\nThe ancient ruins attract thousands of tourists every year who are fascinating by the rich history and culture of the place.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Verbs, Modals & Non-Finites",
       "conceptTested": "Past participles (-ed form) are used to describe feelings, whereas present participles (-ing form) describe the source or cause of the feeling."
     }
   },
@@ -206,12 +206,12 @@
     "mockId": "mock_1790926171521_pz0ku",
     "testId": "mock_1790926171521_pz0ku",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Subject-Verb Agreement",
     "conceptTested": "Subject-verb agreement and voice: Subjects performing an action require active voice constructions rather than incorrect passive forms.",
     "question": "Identify the grammatical error in the sentence below.\n\nThe bank will be continued to transfer the interest to your account unless instructed otherwise.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Subject-Verb Agreement",
       "conceptTested": "Subject-verb agreement and voice: Subjects performing an action require active voice constructions rather than incorrect passive forms."
     }
   },
@@ -278,12 +278,12 @@
     "mockId": "mock_1790926171521_pz0ku",
     "testId": "mock_1790926171521_pz0ku",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Adverbs modify verbs, whereas adjectives modify nouns. Verbs of action like 'brush' must be modified by adverbs ('thoroughly').",
     "question": "The following sentence has been divided into four parts, namely A, B, C and D, which are given in the alternatives. Select the alternative that contains the part of the sentence with an error.\n\nRemember to brush your teeth thorough before you go to bed every single night without fail as instructed by the dentist.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Adverbs modify verbs, whereas adjectives modify nouns. Verbs of action like 'brush' must be modified by adverbs ('thoroughly')."
     }
   },
@@ -458,12 +458,12 @@
     "mockId": "mock_1790926171521_pz0ku",
     "testId": "mock_1790926171521_pz0ku",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Verbs, Modals & Non-Finites",
     "conceptTested": "Use of Modal Auxiliaries: Modal verbs like 'must' are followed directly by a bare infinitive without the particle 'to'.",
     "question": "Identify the part of the sentence that contains a grammatical error.\n\nYou must to ensure that (1)/ all parameters are recorded (2)/ before the simulation (3)/ can be rerun. (4)",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Verbs, Modals & Non-Finites",
       "conceptTested": "Use of Modal Auxiliaries: Modal verbs like 'must' are followed directly by a bare infinitive without the particle 'to'."
     }
   }

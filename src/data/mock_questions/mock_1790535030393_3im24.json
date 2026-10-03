@@ -1466,12 +1466,12 @@
     "mockId": "mock_1790535030393_3im24",
     "testId": "mock_1790535030393_3im24",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Pronouns & Modifiers",
     "conceptTested": "Possessive pronouns must be used before a gerund instead of objective pronouns.",
     "question": "Find the part of the sentence that contains an error: (1) The university’s board of trustees expressed deep reservations regarding them approving the multi-million-dollar endowment / (2) without a rigorous, independent audit of the biotechnology firm’s intellectual property, / (3) fearing that the proprietary gene-editing algorithms might be subject / (4) to pending patent litigation in federal court.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Pronouns & Modifiers",
       "conceptTested": "Possessive pronouns must be used before a gerund instead of objective pronouns."
     }
   },
@@ -1502,12 +1502,12 @@
     "mockId": "mock_1790535030393_3im24",
     "testId": "mock_1790535030393_3im24",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Verbs, Modals & Non-Finites",
     "conceptTested": "The subjunctive mood uses the base form of the verb after verbs of request or demand.",
     "question": "Select the most appropriate option that rectifies the underlined group of words in the given sentence. What the board requested was that the treasurer stripped of his administrative clearance pending the final results of the forensic accounting investigation.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Verbs, Modals & Non-Finites",
       "conceptTested": "The subjunctive mood uses the base form of the verb after verbs of request or demand."
     }
   },

@@ -1718,12 +1718,12 @@
     "mockId": "mock_1790780902717_rfz95",
     "testId": "mock_1790780902717_rfz95",
     "topic": "Sentence Improvement",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Grammatical structure involving selections and plural forms following 'one of' or superlative comparisons.",
     "question": "Below are given alternatives to the italicised part which may improve the sentence. Choose the correct alternative. In case no improvement is needed, Option 'D' is the answer. The easiest of the thing to do is to ask the address from the postman.",
     "tags": {
       "topic": "Sentence Improvement",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Grammatical structure involving selections and plural forms following 'one of' or superlative comparisons."
     }
   },
@@ -1970,12 +1970,12 @@
     "mockId": "mock_1790780902717_rfz95",
     "testId": "mock_1790780902717_rfz95",
     "topic": "Spotting Errors",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Proper usage and placement of adverbs to modify verbs correctly.",
     "question": "Find the part of the given sentence that has an error in it. If there is no error, choose 'No error'. You will certain pay for what you have done to your mother.",
     "tags": {
       "topic": "Spotting Errors",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Proper usage and placement of adverbs to modify verbs correctly."
     }
   },
@@ -2006,12 +2006,12 @@
     "mockId": "mock_1790780902717_rfz95",
     "testId": "mock_1790780902717_rfz95",
     "topic": "Fill in the Blanks",
-    "subtopic": "Articles & Determiners",
+    "subtopic": "Adjectives & Adverbs",
     "conceptTested": "Adjective usage to modify a noun correctly in context",
     "question": "Find the most appropriate option for the given blank space which can make the given sentence grammatically and contextually correct. He made several _______ suggestions.",
     "tags": {
       "topic": "Fill in the Blanks",
-      "subtopic": "Articles & Determiners",
+      "subtopic": "Adjectives & Adverbs",
       "conceptTested": "Adjective usage to modify a noun correctly in context"
     }
   },

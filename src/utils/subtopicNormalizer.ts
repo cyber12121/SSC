@@ -29,7 +29,12 @@ export function cleanSubtopicText(raw?: string | null): string {
 /**
  * Normalizes a raw subtopic string into one of the canonical 6-8 subtopics for the given chapter/topic.
  */
-export function normalizeSubtopic(topic: string, rawSubtopic?: string | null, questionText?: string | null): string {
+export function normalizeSubtopic(
+  topic: string,
+  rawSubtopic?: string | null,
+  questionText?: string | null,
+  extraContext?: string | null
+): string {
   const top = (topic || '').trim();
   const sub = cleanSubtopicText(rawSubtopic || '');
   const s = `${sub} ${cleanSubtopicText(questionText || '')}`.toLowerCase();
@@ -220,13 +225,75 @@ export function normalizeSubtopic(topic: string, rawSubtopic?: string | null, qu
   }
 
   if (/spotting\s*errors/i.test(top) || /sentence\s*improvement/i.test(top) || /fill\s*in\s*the\s*blanks?/i.test(top)) {
-    if (/subject.*verb|agreement|singular.*plural/.test(s)) return 'Subject-Verb Agreement';
-    if (/preposition|phrasal verb/.test(s)) return 'Prepositions & Phrasal Verbs';
-    if (/tense|conditional|if clause|had.*would have/.test(s)) return 'Tenses & Conditionals';
-    if (/article|determiner|a|an|the/.test(s)) return 'Articles & Determiners';
-    if (/conjunction|correlative|neither.*nor|either.*or|hardly.*when/.test(s)) return 'Conjunctions & Parallelism';
-    if (/pronoun|relative pronoun|who.*whom/.test(s)) return 'Pronouns & Modifiers';
-    if (/adjective|adverb|degree|comparative|superlative/.test(s)) return 'Adjectives & Adverbs';
+    const rawClean = (rawSubtopic || '').toLowerCase();
+    const isCorruptOrGenericRaw = /articles?\s*(&|and)?\s*determiners?|general\s*concepts?|grammar\s*(&|and)?\s*syntax/i.test(rawClean);
+    const diag = `${!isCorruptOrGenericRaw ? rawClean : ''} ${(extraContext || '').toLowerCase()}`.trim();
+    const qStr = (questionText || '').toLowerCase();
+    const combined = `${diag} ${qStr}`;
+
+    // 1. Spelling / Misspelt Errors
+    if (/\b(spell|spelling|misspelt|misspelled|wrongly spelt|incorrectly spelt)\b/i.test(diag) ||
+        /\b(spelling error|misspelt word|incorrectly spelt)\b/i.test(qStr)) {
+      return 'Spelling Errors';
+    }
+
+    // 2. Subject-Verb Agreement
+    if (/\b(subject\s*verb|subject-verb|agreement|singular\s*verb|plural\s*verb|verb\s*agreement|neither\s*of|either\s*of|one\s*of\s*the|each\s*of)\b/i.test(diag) ||
+        /\b(neither of|either of|each of|one of the|along with|as well as|together with)\b/i.test(qStr)) {
+      return 'Subject-Verb Agreement';
+    }
+
+    // 3. Conjunctions & Parallelism
+    if (/\b(conjunction|correlative|parallelism|scarcely\s*when|hardly\s*when|no\s*sooner\s*than|not\s*only\s*but\s*also|lest|neither\s*nor|either\s*or)\b/i.test(diag) ||
+        /\b(no sooner\b.*\bthan|hardly\b.*\bwhen|scarcely\b.*\bwhen|not only\b.*\bbut also|neither\b.*\bnor|either\b.*\bor)\b/i.test(qStr)) {
+      return 'Conjunctions & Parallelism';
+    }
+
+    // 4. Prepositions & Phrasal Verbs
+    if (/\b(preposition|prepositional|phrasal\s*verb|fixed\s*preposition|dispense\s*with|prone\s*to|cope\s*with|accused\s*of|abstain\s*from|refrain\s*from)\b/i.test(diag)) {
+      return 'Prepositions & Phrasal Verbs';
+    }
+
+    // 5. Tenses & Conditionals
+    if (/\b(tense|conditional|if\s*clause|subjunctive|past\s*perfect|simple\s*past|present\s*perfect|had\s*been|hypothetical|would\s*have)\b/i.test(diag) ||
+        /\b(had\b.*\bwould have|if\s+i\s+were|if\s+it\s+were)\b/i.test(qStr)) {
+      return 'Tenses & Conditionals';
+    }
+
+    // 6. Verbs, Modals & Non-Finites
+    if (/\b(gerund|infinitive|participle|bare\s*infinitive|non\s*finite|modal|passive\s*voice|active\s*voice|causative|verb\s*form|transitive|intransitive)\b/i.test(diag)) {
+      return 'Verbs, Modals & Non-Finites';
+    }
+
+    // 7. Pronouns & Modifiers
+    if (/\b(pronoun|relative\s*pronoun|who\s*vs\s*whom|antecedent|modifier|dangling|misplaced|reflexive|each\s*other|one\s*another)\b/i.test(diag) ||
+        /\b(who\b.*\bwhom|one another|each other)\b/i.test(qStr)) {
+      return 'Pronouns & Modifiers';
+    }
+
+    // 8. Adjectives & Adverbs
+    if (/\b(adjective|adverb|comparative|superlative|degree\s*of\s*comparison|double\s*comparative|inversion|hardly\b|seldom\b|scarcely\b|little\s*vs\s*few)\b/i.test(diag)) {
+      return 'Adjectives & Adverbs';
+    }
+
+    // 9. Nouns & Question Tags
+    if (/\b(noun|uncountable|collective\s*noun|question\s*tag|plural\s*noun|apostrophe|hyphenated\s*noun)\b/i.test(diag)) {
+      return 'Nouns & Question Tags';
+    }
+
+    // 10. Articles & Determiners - ONLY if explicitly specified in diagnostic text or clean rawSubtopic
+    if (/\b(article|articles|determiner|determiners|definite\s*article|indefinite\s*article|a\s*vs\s*an|an\s*vs\s*a|omission\s*of\s*article|zero\s*article|use\s*of\s*the|much\s*vs\s*many)\b/i.test(diag) ||
+        (/article|determiner/i.test(rawClean) && !/grammar\s*(&|and)?\s*syntax/i.test(rawClean))) {
+      return 'Articles & Determiners';
+    }
+
+    if (/subject.*verb|agreement/.test(combined)) return 'Subject-Verb Agreement';
+    if (/preposition|phrasal/.test(combined)) return 'Prepositions & Phrasal Verbs';
+    if (/tense|conditional/.test(combined)) return 'Tenses & Conditionals';
+    if (/conjunction|parallel/.test(combined)) return 'Conjunctions & Parallelism';
+    if (/pronoun/.test(combined)) return 'Pronouns & Modifiers';
+    if (/adjective|adverb/.test(combined)) return 'Adjectives & Adverbs';
+
     return 'Grammar & Syntax Errors';
   }
 
@@ -449,7 +516,8 @@ export function getConsolidatedSubtopicsForQuestions(
 
   questions.forEach(q => {
     const raw = q.subtopic || (q as any).tags?.subtopic || q.conceptTested || (q as any).tags?.conceptTested || null;
-    const canonical = normalizeSubtopic(topic, raw, q.question);
+    const extra = [q.conceptTested, (q as any).tags?.conceptTested, q.solution, (q as any).explanation].filter(Boolean).join(' ');
+    const canonical = normalizeSubtopic(topic, raw, q.question, extra);
     if (!map.has(canonical)) {
       map.set(canonical, []);
     }

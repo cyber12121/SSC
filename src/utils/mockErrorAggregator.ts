@@ -403,7 +403,8 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
       return;
     }
 
-    const canonicalSubtopic = normalizeSubtopic(topic, q.subtopic || q.tags?.subtopic || q.conceptTested, qText);
+    const extraContext = [q.conceptTested, q.tags?.conceptTested, q.solution, (q as any).explanation].filter(Boolean).join(' ');
+    const canonicalSubtopic = normalizeSubtopic(topic, q.subtopic || q.tags?.subtopic || q.conceptTested, qText, extraContext);
 
     const enrichedQuestion: Question & {
       errorType: 'speed_issue' | 'unattempted' | 'wrong';
