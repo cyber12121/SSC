@@ -1180,7 +1180,8 @@ export default async function handler(req: any, res: any) {
         scopeContext += `Summary:\n${summaryText}\n`;
       }
       if (Array.isArray(questions) && questions.length > 0) {
-        scopeContext += `\n--- MISTAKE QUESTIONS IN THIS ${String(type || '').toUpperCase()}${totalBatches > 1 ? ` (Batch ${currentBatch}/${totalBatches}: ${questions.length} Items)` : ` (${questions.length} Items)`} ---\n`;
+        const qHeading = (sourceScopeLabel || '').includes('Chapter Bank') ? 'PRACTICE' : 'MISTAKE';
+      scopeContext += `\n--- ${qHeading} QUESTIONS IN THIS ${String(type || '').toUpperCase()}${totalBatches > 1 ? ` (Batch ${currentBatch}/${totalBatches}: ${questions.length} Items)` : ` (${questions.length} Items)`} ---\n`;
         scopeContext += questions.map((q: any, i: number) => {
           const num = q.qNum || (i + 1);
           const optStr = q.options ? Object.entries(q.options).map(([k, v]) => `${k.toUpperCase()}) ${v}`).join(' | ') : '';

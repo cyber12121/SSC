@@ -1315,7 +1315,7 @@ export function AiMentorChat({
         const totalCount = scope.allQuestions?.length || scope.questions?.length || 0;
         const isBatched = Boolean(scope.totalBatches && scope.totalBatches > 1);
         const batchInfo = isBatched ? ` • Showing Batch 1 of ${scope.totalBatches} (Q1–${Math.min(100, totalCount)})` : '';
-        const countText = totalCount ? ` (${totalCount} total mistake questions${batchInfo})` : '';
+        const countText = totalCount ? ` (${totalCount} total ${scope.sourceScopeLabel?.includes('Chapter Bank') ? 'practice' : 'mistake'} questions${batchInfo})` : '';
 
         const welcomeText = isBatched
           ? `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**\n📊 **Overall Overview:** ${totalCount} mistake questions total across **${scope.totalBatches} batches of 100**.\n📌 **Active Batch:** Currently inspecting **Batch 1 (Questions 1–${Math.min(100, totalCount)})**.\n\nI have full visibility into your overall stats as well as the active batch. Ask me about your general patterns, specific question solutions, or click a batch button above anytime!`

@@ -1889,7 +1889,7 @@ export default function App() {
           correctAnswer: q.answer,
           userAnswer: (q as any).userAnswer || undefined,
           solution: q.solution,
-          status: ((q as any).status || (q as any).errorType || 'wrong') as any,
+          status: ((q as any).status || (q as any).errorType || (isChapterBank ? 'practice' : 'wrong')) as any,
           subject: subjectName,
           topic: ch.chapter_title
         });
@@ -1940,10 +1940,14 @@ export default function App() {
       ? (rcaTagFilter === 'unclassified' ? 'Unclassified' : `[${rcaTagFilter}] ${RCA_TAG_CONFIG[rcaTagFilter as RCATagType]?.label || rcaTagFilter}`)
       : undefined;
 
+    const isChapterBank = category === 'chapterBank';
+
     let sourceScope: 'full_mock' | 'sectional' | 'subject_wise' | 'mixed' = 'subject_wise';
     let sourceScopeLabel = isRcaMode
       ? `RCA Analysis${rcaTagLabel ? ` • ${rcaTagLabel}` : ''} (${subject} • ${topicName})`
-      : `Subject-Wise Mock Errors (${subject} • ${topicName})`;
+      : isChapterBank
+        ? `Chapter Bank Practice (${subject} • ${topicName})`
+        : `Subject-Wise Mock Errors (${subject} • ${topicName})`;
 
     if (mockTestTypeFilter === 'full' || (hasFull && !hasSectional && !hasSubjectWise)) {
       sourceScope = 'full_mock';
