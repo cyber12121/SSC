@@ -6045,6 +6045,198 @@
           "conceptTested": "Relationship between total cost of flooring, rate per unit area, and dimensions of a rectangle.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_4b2969906f",
+        "q_num": 192,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:50",
+        "avgTime": "00:41",
+        "question": "The bisector of $\\angle QPR$ of $\\Delta PQR$ meets the side $QR$ at $S$. If $PQ = 12\\text{ cm}$, $PR = 15\\text{ cm}$ and $QR = 18\\text{ cm}$, then the length of $SR$ is",
+        "options": {
+          "a": "$10\\text{ cm}$",
+          "b": "$12\\text{ cm}$",
+          "c": "$8\\text{ cm}$",
+          "d": "$13\\text{ cm}$"
+        },
+        "answer": "a",
+        "solution": "By the Angle Bisector Theorem, $\\frac{PQ}{PR} = \\frac{QS}{SR} \\implies \\frac{12}{15} = \\frac{18 - x}{x} \\implies \\frac{4}{5} = \\frac{18 - x}{x} \\implies 4x = 90 - 5x \\implies 9x = 90 \\implies x = 10\\text{ cm}$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "Internal Angle Bisector Theorem states that the angle bisector of a triangle divides the opposite side into two segments proportional to the adjacent sides.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "Internal Angle Bisector Theorem states that the angle bisector of a triangle divides the opposite side into two segments proportional to the adjacent sides.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_7621d1bcf2",
+        "q_num": 193,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:53",
+        "avgTime": "00:39",
+        "question": "In a division question, the divisor is 6 times the quotient and twice the remainder. If the remainder is 6, what is the number?",
+        "options": {
+          "a": "30",
+          "b": "36",
+          "c": "24",
+          "d": "42"
+        },
+        "answer": "a",
+        "solution": "Given $\\text{Remainder} = 6$. $\\text{Divisor} = 2 \\times \\text{Remainder} = 2 \\times 6 = 12$. Also, $\\text{Divisor} = 6 \\times \\text{Quotient} \\implies 12 = 6 \\times \\text{Quotient} \\implies \\text{Quotient} = 2$. Using the division algorithm, $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder} = (12 \\times 2) + 6 = 24 + 6 = 30$.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Division algorithm relation: $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Division algorithm relation: $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_3650ab20a9",
+        "q_num": 194,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:50",
+        "avgTime": "00:38",
+        "question": "It is given that $\\Delta ABC \\sim \\Delta XYZ$ and $\\text{Area } \\Delta ABC : \\text{Area } \\Delta XYZ = 81 : 25$. If $AB = 18\\text{ cm}$, $BC = 10\\text{ cm}$, $CA = 15\\text{ cm}$, then what is the side $XZ$ (in cm)?",
+        "options": {
+          "a": "$10\\frac{10}{3}$",
+          "b": "$75\\frac{16}{16}$",
+          "c": "$15\\frac{15}{4}$",
+          "d": "$25\\frac{25}{3}$"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nFor similar triangles, the ratio of corresponding sides is equal to the square root of the ratio of their areas.\n\nRatio of sides $(CA / XZ) = \\sqrt{81 / 25} = 9 / 5$\n\n$\\Rightarrow 15 / XZ = 9 / 5$\n\n$\\Rightarrow XZ = (15 \\times 5) / 9 = 75 / 9 = 25 / 3\\text{ cm}$\n\n$\\therefore$ The correct answer is $25/3\\text{ cm}$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "The ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "The ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_d189288896",
+        "q_num": 195,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:11",
+        "avgTime": "00:50",
+        "question": "The marked price of a dress is Rs. $2500$. The trader gives two successive discounts of $15\\%$ and $D\\%$ and sells it to Pratham. Pratham sells the same dress to Anya at a profit of $20\\%$. Anya paid Rs. $2244$ for the same dress. Find the value of $D$.",
+        "options": {
+          "a": "10",
+          "b": "12",
+          "c": "20",
+          "d": "15"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nGiven:\nMarked Price $= \\text{Rs. } 2500$\n\nAnya's CP (Pratham's SP) $= \\text{Rs. } 2244$\n\nPratham's Profit $= 20\\%$\n\nCalculations:\nPratham's $\\text{CP} = \\frac{2244}{1.20} = 1870$\n\n$\\text{MP} \\times \\left(1 - \\frac{15}{100}\\right) \\times \\left(1 - \\frac{D}{100}\\right) = 1870$\n\n$2500 \\times 0.85 \\times \\left(1 - \\frac{D}{100}\\right) = 1870$\n\n$2125 \\times \\left(1 - \\frac{D}{100}\\right) = 1870$\n\n$100 - D = \\frac{187000}{2125} = 88$\n\n$D = 12$.\n\n$\\therefore$ The correct answer is $12$.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Marked Price & Discounts",
+        "conceptTested": "Successive discounts applied on Marked Price determine the Selling Price, which relates to Cost Price through profit percentage.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Marked Price & Discounts",
+          "conceptTested": "Successive discounts applied on Marked Price determine the Selling Price, which relates to Cost Price through profit percentage.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_dc2b86ea26",
+        "q_num": 196,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:58",
+        "avgTime": "00:34",
+        "question": "The tops of two poles of height $30\\text{ m}$ and $14\\text{ m}$ are connected by a string. If the wire makes an angle of $30^\\circ$ with the horizontal, find the length of the wire.",
+        "options": {
+          "a": "36 m",
+          "b": "34 m",
+          "c": "30 m",
+          "d": "32 m"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nGiven:\nHeight of taller pole $= 30\\text{ m}$, Height of shorter pole $= 14\\text{ m}$.\n\nVertical difference in heights $= 30 - 14 = 16\\text{ m}$.\n\nUsing $\\sin(30^\\circ) = \\frac{\\text{Perpendicular}}{\\text{Hypotenuse}}$: $\\frac{1}{2} = \\frac{16}{\\text{Length of wire}}$\n\n$\\Rightarrow \\text{Length of wire} = 16 \\times 2 = 32\\text{ m}$.\n\n$\\therefore$ The correct answer is $32\\text{ m}$.",
+        "image": null,
+        "topic": "Height & Distance",
+        "subtopic": "Two Points on Same/Opposite Side",
+        "conceptTested": "Trigonometric ratios in right-angled triangles using sine function to find hypotenuse.",
+        "tags": {
+          "topic": "Height & Distance",
+          "subtopic": "Two Points on Same/Opposite Side",
+          "conceptTested": "Trigonometric ratios in right-angled triangles using sine function to find hypotenuse.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_f77a410ec1",
+        "q_num": 197,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:37",
+        "avgTime": "00:19",
+        "question": "The length and breadth of a rectangle are $20$ meters and $12$ meters respectively. If the perimeter of the rectangle is equal to the area of a square, then what is the perimeter of the square?",
+        "options": {
+          "a": "$64$",
+          "b": "$32$",
+          "c": "$16$",
+          "d": "$42$"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nPerimeter of Rectangle = $2 \\times (20 + 12) = 64$ m\nArea of Square = Perimeter of Rectangle = $64$ m² Side of Square = $\\sqrt{64} = 8$ m\nPerimeter of Square = $4 \\times 8 = 32$ m\n\n\\therefore$ The correct answer is $32$ m.\n\nAlternate Method\nGiven:\nLength of the rectangle ($L$) = $20$ m\nBreadth of the rectangle ($B$) = $12$ m\n\nFormula Used:\nPerimeter of a rectangle = $2 × (L + B)\nArea of a square = $a^2$ (where $a$ is the side of the square)\nPerimeter of a square = $4 \\times a$",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "Relation between perimeter of a rectangle and area of a square to determine dimensions.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "Relation between perimeter of a rectangle and area of a square to determine dimensions.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -15201,6 +15393,390 @@
           "conceptTested": "Volume of a sphere inscribed in a cube of side $a$ is given by $V = \\frac{4}{3}\\pi r^3$ where radius $r = \\frac{a}{2}$.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_7451817f9c",
+        "q_num": 291,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:52",
+        "avgTime": "00:48",
+        "question": "If $x+\\frac{1}{x}=\\sqrt{13}$, then one of the values $x^3-\\frac{1}{x^3}$ is:",
+        "options": {
+          "a": "36",
+          "b": "32",
+          "c": "$4\\sqrt{13}$",
+          "d": "$4\\sqrt{11}$"
+        },
+        "answer": "a",
+        "solution": "Given $x + \\frac{1}{x} = \\sqrt{13}$. We know that $(x - \\frac{1}{x})^2 = (x + \\frac{1}{x})^2 - 4 = (\\sqrt{13})^2 - 4 = 13 - 4 = 9$, which gives $x - \\frac{1}{x} = 3$. Then, $x^3 - \\frac{1}{x^3} = (x - \\frac{1}{x})^3 + 3(x - \\frac{1}{x}) = 3^3 + 3(3) = 27 + 9 = 36$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Application of algebraic identities such as $(x-\\frac{1}{x})^2 = (x+\\frac{1}{x})^2 - 4$ and $x^3-\\frac{1}{x^3} = (x-\\frac{1}{x})^3 + 3(x-\\frac{1}{x})$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Application of algebraic identities such as $(x-\\frac{1}{x})^2 = (x+\\frac{1}{x})^2 - 4$ and $x^3-\\frac{1}{x^3} = (x-\\frac{1}{x})^3 + 3(x-\\frac{1}{x})$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6bbe487694",
+        "q_num": 292,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:40",
+        "avgTime": "01:06",
+        "question": "The curved surface area of a cylinder is two-third of its total surface area. If the total surface area is $231\\text{ cm}^2$, then its volume is:",
+        "options": {
+          "a": "$239.5\\text{ cm}^3$",
+          "b": "$249.5\\text{ cm}^3$",
+          "c": "$269.5\\text{ cm}^3$",
+          "d": "$259.5\\text{ cm}^3$"
+        },
+        "answer": "c",
+        "solution": "Given $\\text{TSA} = 231\\text{ cm}^2$ and $\\text{CSA} = \\frac{2}{3} \\times 231 = 154\\text{ cm}^2$. Since $\\text{TSA} = \\text{CSA} + 2\\pi r^2$, we get $231 = 154 + 2\\pi r^2 \\implies 2\\pi r^2 = 77 \\implies 2 \\times \\frac{22}{7} \\times r^2 = 77 \\implies r^2 = \\frac{49}{4} \\implies r = \\frac{7}{2}\\text{ cm}$. Using $\\text{CSA} = 2\\pi rh = 154$, we find $h = 7\\text{ cm}$. Thus, $\\text{Volume} = \\pi r^2 h = \\frac{22}{7} \\times \\frac{49}{4} \\times 7 = 269.5\\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cylinder (Solid & Hollow)",
+        "conceptTested": "Formulas for curved surface area ($2\\pi rh$), total surface area ($2\\pi r(r + h)$), and volume ($\\pi r^2 h$) of a right circular cylinder.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cylinder (Solid & Hollow)",
+          "conceptTested": "Formulas for curved surface area ($2\\pi rh$), total surface area ($2\\pi r(r + h)$), and volume ($\\pi r^2 h$) of a right circular cylinder.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_e9b8e8feb6",
+        "q_num": 293,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:19",
+        "avgTime": "00:11",
+        "question": "The external radius and internal radius of a hollow cylinder are $42\\text{ cm}$ and $36\\text{ cm}$ and its length is $56\\text{ cm}$. If we put two hollow cones of a height of $28\\text{ cm}$ one on the top and one on the bottom then what will be the volume of the material used to make the structure? Given the external and internal radius of the cone is the same as the cylinder.",
+        "options": {
+          "a": "$108924\\text{ cm}^3$",
+          "b": "$109856\\text{ cm}^3$",
+          "c": "$109843\\text{ cm}^3$",
+          "d": "$109824\\text{ cm}^3$"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nGiven:\nExternal radius $(R) = 42\\text{ cm}$, Internal radius $(r) = 36\\text{ cm}$, Height of hollow cylinder $(H) = 56\\text{ cm}$, Height of each hollow cone $(h) = 28\\text{ cm}$.\n\nFormula Used:\nVolume of hollow cylinder = $\\pi(R^2 - r^2)H$\nVolume of a hollow cone = $\\frac{1}{3} \\pi(R^2 - r^2)h$\n\nCalculations:\nTotal volume = $\\pi(R^2 - r^2)H + 2 \\times \\left[\\frac{1}{3} \\pi(R^2 - r^2)h\\right]$\n\n$= \\frac{22}{7} \\times (42^2 - 36^2) \\times \\left[56 + \\frac{2 \\times 28}{3}\\right]$\n\n$= \\frac{22}{7} \\times 468 \\times \\frac{224}{3} = 109824\\text{ cm}^3$.\n\n$\\therefore$ The correct answer is $109824\\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cylinder (Solid & Hollow)",
+        "conceptTested": "Total volume of a composite 3D solid is the sum of volumes of its individual components: cylinder and cones.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cylinder (Solid & Hollow)",
+          "conceptTested": "Total volume of a composite 3D solid is the sum of volumes of its individual components: cylinder and cones.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9ec565e204",
+        "q_num": 294,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:42",
+        "avgTime": "00:17",
+        "question": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?$",
+        "options": {
+          "a": "\\sec x + \\tan x",
+          "b": "\\csc x + \\tan x",
+          "c": "\\sec x - \\tan x",
+          "d": "\\cos x - \\sin x"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nPut $(3 - 2\\sqrt{2})(\\sqrt{2} + 1) = 3\\sqrt{2} + 3 - 4 - 2\\sqrt{2} = \\sqrt{2} - 1\n\nChecking options at $x = 45^\\circ$, we find $\\sec 45^\\circ - \\tan 45^\\circ = \\sqrt{2} - 1$, which matches exactly.\n\n\\therefore$ in the given expression: $[1 + 2\\cot²(90° - 45°) - 2\\csc(90° - 45°) × \\cot(90° - 45°)] ÷ [\\csc(90° - 45°) - \\cot(90° - 45°)]\n\\Rightarrow [1 + 2(1)² - 2(\\sqrt{2})(1)] ÷ [\\sqrt{2} - 1] = (3 - 2\\sqrt{2}) ÷ (\\sqrt{2} - 1)\nRationalizing by multiplying with $(\\sqrt{2} + 1)$: $x = 45^\\circ$ The correct answer is $\\sec x - \\tan x$.\n\nAlternate Method\nGiven:\nExpression = $[1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\times \\cot(90^\\circ - x)] \\div [\\csc(90^\\circ - x) - \\cot(90^\\circ - x)]\\n\\nFormula Used:\\n\\n$\\Rightarrow \\cot(90° - x) = \\tan x$\\n\\n$\\Rightarrow \\csc(90° - x) = \\sec x$\\n\\n$\\Rightarrow 1 + \\tan² x = \\sec² x$\\n\\n$\\Rightarrow a² + b² - 2ab = (a - b)² Calculation:\n$\\Rightarrow$ Expression = $[1 + 2\\tan^2 x - 2\\sec x \\times \\tan x] \\div [\\sec x - \\tan x]\\n\\n$\\Rightarrow$ Expression = $[(1 + \\tan^2 x) + \\tan^2 x - 2\\sec x \\times \\tan x] \\div [\\sec x - \\tan x]\\n\\n$\\Rightarrow$ Replace $(1 + \\tan^2 x)$ with $\\sec^2 x$ in the numerator: $\\Rightarrow$ Expression = $[\\sec^2 x + \\tan^2 x - 2\\sec x \\times \\tan x] \\div [\\sec x - \\tan x]\\n\\n$\\Rightarrow$ Expression = $(\\sec x - \\tan x)^2 \\div (\\sec x - \\tan x)\\n\\n$\\Rightarrow$ Expression = $\\sec x - \\tan x\\n\\n\\therefore$ The correct answer is $\\sec x - \\tan x$.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Complementary Angles",
+        "conceptTested": "Complementary angle trigonometric identities such as \\cot(90^\\circ - x) = \\tan x, \\ cosec(90^\\circ - x) = \\sec x, and algebraic identities.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Complementary Angles",
+          "conceptTested": "Complementary angle trigonometric identities such as \\cot(90^\\circ - x) = \\tan x, \\ cosec(90^\\circ - x) = \\sec x, and algebraic identities.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ca162d915b",
+        "q_num": 295,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:35",
+        "avgTime": "00:31",
+        "question": "A number of men went to a hotel and each spent as many rupees as there were men. If the money spent is ₹$17424$, then what is the number of men?",
+        "options": {
+          "a": "$102$",
+          "b": "$132$",
+          "c": "$122$",
+          "d": "$92$"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nTotal money spent = (Number of men)$^2$\n$\\Rightarrow$ Number of men = $\\sqrt{17424} = 132$.\n\n\\therefore$ The correct answer is $132$ men.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Number Properties & Basic Operations",
+        "conceptTested": "Finding square roots of large numbers and applying quadratic equations to practical word problems.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Number Properties & Basic Operations",
+          "conceptTested": "Finding square roots of large numbers and applying quadratic equations to practical word problems.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b6b2b479dd",
+        "q_num": 296,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:02",
+        "avgTime": "00:38",
+        "question": "If Ram's age is $\\frac{1}{3}$ times Rohan's age and Ravi's age is $\\frac{5}{2}$ times Ram's age. The average age of Ram, Ravi, and Rohan are $52$ years. Then the difference between Ram's age and Rohan's age is",
+        "options": {
+          "a": "$52$ years",
+          "b": "$48$ years",
+          "c": "$45$ years",
+          "d": "$21$ years"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nShortcut Trick\nRatio of Ram : Rohan : Ravi = $2 : 6 : 5$ (since Ram is $\\frac{1}{3}$ of Rohan and $\\frac{2}{5}$ of Ravi).\nTotal parts = $2 + 6 + 5 = 13$ parts.\nTotal sum of their ages = Average $\\times 3 = 52 \\times 3 = 156$ years.\n$1$ part = $156 \\div 13 = 12$ years.\nDifference between Rohan and Ram = $6 - 2 = 4$ parts = $4 \\times 12 = 48$ years.\n\n\\therefore$ The correct answer is $48$ years.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Age Problems",
+        "conceptTested": "Combining multiple ratios and using average to find individual ages and differences.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Age Problems",
+          "conceptTested": "Combining multiple ratios and using average to find individual ages and differences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a636c23b55",
+        "q_num": 297,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "01:30",
+        "avgTime": "00:40",
+        "question": "X and Y can do a piece of work in 45 days and 40 days respectively. They begin to work together, but X leaves after $n$ days and then Y completes the remaining work in 23 days. What is $n$ equal to?",
+        "options": {
+          "a": "8",
+          "b": "9",
+          "c": "10",
+          "d": "12"
+        },
+        "answer": "b",
+        "solution": "Total work = LCM of 45 and 40 = 360 units.\nEfficiency of X = $360 \\div 45 = 8$ units/day | Efficiency of Y = $360 \\div 40 = 9$ units/day.\nWork done by Y alone in the last 23 days = $23 \\times 9 = 207$ units.\nRemaining work done by X and Y together = $360 - 207 = 153$ units.\nCombined efficiency = $8 + 9 = 17$ units/day $\\Rightarrow n = 153 \\div 17 = 9$.\n\n$\\therefore$ The correct answer is $n = 9$.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Alternate Days Work",
+        "conceptTested": "Total Work = LCM of days, Individual Efficiency = Total Work $\\div$ Time Taken",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Alternate Days Work",
+          "conceptTested": "Total Work = LCM of days, Individual Efficiency = Total Work $\\div$ Time Taken",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7cd6a92dfb",
+        "q_num": 298,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:00",
+        "avgTime": "00:26",
+        "question": "Average weight of A, B and C is 45 kg. If average weight of A and B is 35 kg and that of B and C is 48 kg. The weight of A is?",
+        "options": {
+          "a": "39",
+          "b": "31",
+          "c": "38",
+          "d": "42"
+        },
+        "answer": "a",
+        "solution": "Total weight of A, B, and C = $45 \\times 3 = 135$ kg.\nTotal weight of B and C = $48 \\times 2 = 96$ kg.\nWeight of A = Total weight of (A + B + C) $-$ Total weight of (B + C).\n$\\Rightarrow$ Weight of A = $135 - 96 = 39$ kg.\n\n$\\therefore$ The correct answer is 39 kg.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Weighted & Combined Average",
+        "conceptTested": "Sum of observations = Average $\\times$ Number of observations",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Weighted & Combined Average",
+          "conceptTested": "Sum of observations = Average $\\times$ Number of observations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cfdeb0c5c2",
+        "q_num": 299,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:32",
+        "question": "The speed of the stream is 4 km/h. A boat can cover a distance of 40 km downstream and 12 km upstream in 4 hours. Find the speed of the boat in still water (in km/h).",
+        "options": {
+          "a": "14",
+          "b": "16",
+          "c": "10",
+          "d": "12"
+        },
+        "answer": "d",
+        "solution": "Given:\nSpeed of stream ($u$) = 4 km/h\nTotal Time = $\\frac{40}{v + 4} + \\frac{12}{v - 4} = 4$\nDividing by 4: $\\frac{10}{v + 4} + \\frac{3}{v - 4} = 1$\nChecking Option D ($v = 12$): $\\frac{10}{16} + \\frac{3}{8} = \\frac{5}{8} + \\frac{3}{8} = 1$ (Satisfied).\n\n$\\therefore$ The correct answer is 12 km/h.",
+        "image": null,
+        "topic": "Boats & Streams",
+        "subtopic": "Still Water & Stream Speed",
+        "conceptTested": "Time = Distance $\\div$ Speed, where Downstream Speed = $v + u$ and Upstream Speed = $v - u$",
+        "tags": {
+          "topic": "Boats & Streams",
+          "subtopic": "Still Water & Stream Speed",
+          "conceptTested": "Time = Distance $\\div$ Speed, where Downstream Speed = $v + u$ and Upstream Speed = $v - u$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f6329ac4ef",
+        "q_num": 300,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:20",
+        "question": "The value of $\\left(3\\frac{1}{5} \\div \\frac{2}{3} \\text{ of } 4\\frac{1}{2}\\right) + 5\\frac{2}{3} \\div 1\\frac{2}{3} \\text{ of } 4\\frac{1}{4} - 5\\frac{1}{3} \\times \\frac{3}{4} \\div 2\\frac{2}{3}$ is:",
+        "options": {
+          "a": "$28\\frac{2}{15}$",
+          "b": "$25\\frac{2}{5}$",
+          "c": "$13\\frac{1}{3}$",
+          "d": "$\\frac{11}{30}$"
+        },
+        "answer": "d",
+        "solution": "Using VBODMAS Rule: $\\Rightarrow \\left(\\frac{16}{5} \\div \\left(\\frac{2}{3} \\times \\frac{9}{2}\\right)\\right) + \\left(\\frac{17}{3} \\div \\left(\\frac{5}{3} \\times \\frac{17}{4}\\right)\\right) - \\left(\\frac{16}{3} \\times \\frac{3}{4} \\times \\frac{3}{8}\\right)$\n\n$\\Rightarrow \\left(\\frac{16}{5} \\div 3\\right) + \\left(\\frac{17}{3} \\div \\frac{85}{12}\\right) - \\frac{3}{2}$\n\n$\\Rightarrow \\frac{16}{15} + \\left(\\frac{17}{3} \\times \\frac{12}{85}\\right) - \\frac{3}{2}$\n\n$\\Rightarrow \\frac{16}{15} + \\frac{4}{5} - \\frac{3}{2} = \\frac{32 + 24 - 45}{30} = \\frac{11}{30}$\n\n$\\therefore$ The correct answer is $\\frac{11}{30}$.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "VBODMAS & Order of Operations",
+        "conceptTested": "VBODMAS Rule (Vinculum, Bracket, Of, Division, Multiplication, Addition, Subtraction)",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "VBODMAS & Order of Operations",
+          "conceptTested": "VBODMAS Rule (Vinculum, Bracket, Of, Division, Multiplication, Addition, Subtraction)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_29389e9ecb",
+        "q_num": 301,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:15",
+        "question": "The population of a country has been growing at a rate of 4% every decade. If the projected population of the country in 2030 is given as 1,58,18,400, what was the population of the country in 2000?",
+        "options": {
+          "a": "1,40,62,000",
+          "b": "1,40,65,200",
+          "c": "1,40,56,200",
+          "d": "1,40,62,500"
+        },
+        "answer": "d",
+        "solution": "Given:\nProjected population in 2030 ($A$) = 1, 58, 18, 400\nGrowth rate ($R$) = $4\\%$\nTime period ($n$) = $(2030 - 2000) \\div 10 = 3$ decades\nFormula: $A = P \\times \\left(1 + \\frac{R}{100}\\right)^n$\n\n$\\Rightarrow 1,58,18,400 = P \\times \\left(1 + \\frac{4}{100}\\right)^3$\n\n$\\Rightarrow 1,58,18,400 = P \\times \\left(\\frac{26}{25}\\right)^3$\n\n$\\Rightarrow P = 1,58,18,400 \\times \\frac{15625}{17576} = 1,40,62,500$\n\n$\\therefore$ The correct answer is 1, 40, 62, 500.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Population & Depreciation",
+        "conceptTested": "Compound Growth Formula: $A = P \\times \\left(1 + \\frac{R}{100}\\right)^n$",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Population & Depreciation",
+          "conceptTested": "Compound Growth Formula: $A = P \\times \\left(1 + \\frac{R}{100}\\right)^n$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d45c0e7a1e",
+        "q_num": 302,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:00",
+        "avgTime": "00:15",
+        "question": "Two trains started at the same time, one from A to B and other from B to A. They arrive at B and A respectively in 2 hours and 8 hours after they pass each other, what is the ratio of speeds of the two trains?",
+        "options": {
+          "a": "2 ∶ 1",
+          "b": "3 ∶ 2",
+          "c": "4 ∶ 3",
+          "d": "5 ∶ 4"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick:\nWhen two objects move towards each other and take $t_1$ and $t_2$ hours to reach their destinations after crossing: $\\text{Speed Ratio } (S_1 : S_2) = \\sqrt{t_2 \\div t_1}$\n\nGiven, $t_1 = 2$ hours and $t_2 = 8$ hours.\n\n$\\text{Speed Ratio} = \\sqrt{8 \\div 2} = \\sqrt{4} = 2 : 1$.\n\nTherefore, the correct answer is 2 : 1.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Trains (Poles, Platforms & Lengths)",
+        "conceptTested": "When two objects start from two points towards each other and after meeting take $t_1$ and $t_2$ hours to reach destinations, the ratio of their speeds is $\\frac{S_1}{S_2} = \\sqrt{\\frac{t_2}{t_1}}.$",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Trains (Poles, Platforms & Lengths)",
+          "conceptTested": "When two objects start from two points towards each other and after meeting take $t_1$ and $t_2$ hours to reach destinations, the ratio of their speeds is $\\frac{S_1}{S_2} = \\sqrt{\\frac{t_2}{t_1}}.$",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -19161,6 +19737,70 @@
           "topic": "Geometry",
           "subtopic": "General Triangle Properties",
           "conceptTested": "In a triangle with sides $a$, $b$, and $c$ (where $c$ is the longest side), if $c^2 > a^2 + b^2$, then the triangle is obtuse-angled.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_bc8ffc0f1c",
+        "q_num": 126,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "01:07",
+        "avgTime": "00:48",
+        "question": "A tank is $25\\text{ m}$ long, $12\\text{ m}$ wide and $6\\text{ m}$ deep. The cost (in Rs) of plastering its walls and bottom at Rs. $10\\text{ per m}^2$ is:",
+        "options": {
+          "a": "11,160",
+          "b": "6,275",
+          "c": "12,500",
+          "d": "7,440"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nGiven:\nLength $(l) = 25\\text{ m}$, Width $(b) = 12\\text{ m}$, Depth $(h) = 6\\text{ m}$.\n\nRate = $\\text{Rs. } 10\\text{ per m}^2$.\n\nFormula Used:\nTotal Area to be plastered = Area of 4 walls + Area of bottom\n\n$= 2h(l + b) + (l \\times b)$\n\nCalculations:\nArea $= 2 \\times 6 \\times (25 + 12) + (25 \\times 12)$\n\n$= 12 \\times 37 + 300 = 444 + 300 = 744\\text{ m}^2$.\n\nTotal Cost $= 744 \\times 10 = \\text{Rs. } 7440$.\n\n$\\therefore$ The correct answer is $7440$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cube & Cuboid",
+        "conceptTested": "Total surface area of a open-top cuboidal tank includes the lateral surface area and the base area.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cube & Cuboid",
+          "conceptTested": "Total surface area of a open-top cuboidal tank includes the lateral surface area and the base area.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5549de2c33",
+        "q_num": 127,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:22",
+        "avgTime": "00:24",
+        "question": "The virus count in a culture decreases at the rate of $5\\%$ per hour due to a medicine. If the virus count in the culture at $11.00$ a.m. was $2.3 \\times 10^7$, find the virus count at $1.00$ p.m. on the same day.",
+        "options": {
+          "a": "$2.076 \\times 10^7$",
+          "b": "$2.415 \\times 10^7$",
+          "c": "$2.143 \\times 10^7$",
+          "d": "$2.54 \\times 10^7$"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nNet percentage decrease for $2$ hours at $5\\%$ per hour = $-5 - 5 + (5 \\times 5) \\div 100 = -9.75\\%$\n\nRemaining percentage of virus count = $100\\% - 9.75\\% = 90.25\\%$\nFinal count = $2.3 \\times 10^7 \\times 90.25\\% = 2.07575 \\times 10^7 \\approx 2.076 \\times 10^7$\n\n\\therefore$ The correct answer is $2.076 \\times 10^7$.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Percentage Change & Comparison",
+        "conceptTested": "Successive percentage decrease formula and multiplicative factor method for exponential decay.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Percentage Change & Comparison",
+          "conceptTested": "Successive percentage decrease formula and multiplicative factor method for exponential decay.",
           "difficulty": "medium"
         }
       }

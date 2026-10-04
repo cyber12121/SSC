@@ -4177,6 +4177,134 @@
           "conceptTested": "Recognition of literary awards and authors in modern Hindi literature such as the Sahitya Akademi Award.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_9b505c6612",
+        "q_num": 134,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:09",
+        "avgTime": "00:23",
+        "question": "The terracotta art of ancient India was redefined at its best under the patronage of which dynasty?",
+        "options": {
+          "a": "Sunga Dynasty",
+          "b": "Mauryan Dynasty",
+          "c": "Gupta Dynasty",
+          "d": "Kushan Dynasty"
+        },
+        "answer": "a",
+        "solution": "Terracotta art executed during pre - Mauryan and Mauryan periods is redefined at its best during the Sunga period. The Sunga period is also marked by the emergence of mould - made terracotta plaques in the cities of the Gangetic valley.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Art, Architecture & Inscriptions",
+        "conceptTested": "Art and architecture patronized by various ancient Indian dynasties, specifically Sunga terracotta art.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Art, Architecture & Inscriptions",
+          "conceptTested": "Art and architecture patronized by various ancient Indian dynasties, specifically Sunga terracotta art.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_cf92cbf6a0",
+        "q_num": 135,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:04",
+        "avgTime": "00:14",
+        "question": "By which Constitutional Amendment Act the eleventh fundamental duty was added to the Indian Constitution?",
+        "options": {
+          "a": "82nd Amendment Act",
+          "b": "86th Amendment Act",
+          "c": "84th Amendment Act",
+          "d": "80st Amendment Act"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 86th Amendment Act. The 86th Constitutional Amendment Act, 2002, added the eleventh fundamental duty to the Indian Constitution under Article 51A, emphasizing the duty of every citizen to provide opportunities for education to their child or ward between the ages of 6 and 14 years.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Fundamental Rights, Duties & DPSP",
+        "conceptTested": "Eighty-sixth Constitutional Amendment Act, 2002 inserted Article 21A and the 11th Fundamental Duty under Article 51A.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Fundamental Rights, Duties & DPSP",
+          "conceptTested": "Eighty-sixth Constitutional Amendment Act, 2002 inserted Article 21A and the 11th Fundamental Duty under Article 51A.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_1e1502f80a",
+        "q_num": 136,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:02",
+        "avgTime": "00:10",
+        "question": "What is India's rank in the Global Innovation Index (GII) 2025?",
+        "options": {
+          "a": "28",
+          "b": "38",
+          "c": "48",
+          "d": "58"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 38. India improved its ranking to 38th place in the Global Innovation Index (GII) 2025, showcasing its growing innovation performance globally and ranking #1 among lower - middle - income economies.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Reports, Indices & Rankings",
+        "conceptTested": "Global Innovation Index rankings and India's position in global innovation metrics.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Reports, Indices & Rankings",
+          "conceptTested": "Global Innovation Index rankings and India's position in global innovation metrics.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5ead3fa802",
+        "q_num": 137,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:05",
+        "avgTime": "00:30",
+        "question": "Which of the following is/are correctly matched?\nFestival & Place:\n1. Nongkrem Festival - Arunachal Pradesh\n2. Chapcharkut Festival - Meghalaya\n3. Kharchi Puja - Tripura\n4. Dree festival - Mizoram",
+        "options": {
+          "a": "1-A, 2-B, 3-C, 4-D",
+          "b": "1-B, 2-A, 3-C, 4-D",
+          "c": "1-B, 2-D, 3-C, 4-A",
+          "d": "1-A, 2-B, 3-D, 4-C"
+        },
+        "answer": "c",
+        "solution": "The correct matching is: Nongkrem Festival is celebrated in Meghalaya (1 - B), Chapcharkut Festival in Mizoram (2 - D), Kharchi Puja in Tripura (3 - C), and Dree festival in Arunachal Pradesh (4 - A). Thus, the correct combination is 1 - B, 2 - D, 3 - C, 4 - A.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "Indian Cultural Festivals",
+        "conceptTested": "State-wise mapping of prominent traditional and cultural festivals of India.",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "Indian Cultural Festivals",
+          "conceptTested": "State-wise mapping of prominent traditional and cultural festivals of India.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -10304,6 +10432,230 @@
           "topic": "Medieval History",
           "subtopic": "Historical Personalities & Events",
           "conceptTested": "Muhammad bin Tughlaq's experiments such as the introduction of token currency (copper and brass coins) to replace silver tanka.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5687e72dea",
+        "q_num": 196,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:11",
+        "avgTime": "00:19",
+        "question": "Which of the following festival is celebrated in Odisha?",
+        "options": {
+          "a": "Hornbill",
+          "b": "Chappar mela",
+          "c": "Bonalu",
+          "d": "Bali Trutiya"
+        },
+        "answer": "d",
+        "solution": "Bali Trutiya is celebrated in Odisha.\n\nOn this day married women observe fasting and worship the Lord Shiva and Goddess Parvati.\n\nBali Trutiya is celebrated in the month of August - September.\n\nThe ritual of this festival is that the people beat the roofs of their houses with sticks and remove the stone steps in front of the house to get rid of evils.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "State Wise Festivals",
+        "conceptTested": "Static GK knowledge of state-specific cultural festivals in India.",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "State Wise Festivals",
+          "conceptTested": "Static GK knowledge of state-specific cultural festivals in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8bebac5f96",
+        "q_num": 197,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:41",
+        "avgTime": "00:51",
+        "question": "Match the pairs:\nAct Provision\na. Indian Councils Act, 1909 I. The Crown is no longer the source of authority\nb. Govt. of India Act, 1919 II. Dyarchy at the centre\nc. Govt. of India Act, 1935 III. First time, separate represent to the Muslim community\nd. Indian Independence Act, 1947 IV. Dyarchy in the provinces",
+        "options": {
+          "a": "a - III, b - IV, c - II, d - I",
+          "b": "a - IV, b - III, c - II, d - I",
+          "c": "a - III, b - IV, c - I, d - II",
+          "d": "a - IV, b - II, c - I, d - III"
+        },
+        "answer": "a",
+        "solution": "The Correct Answer is a - III, b - IV, c - II, d - I.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Indian Constitution & Governance",
+        "conceptTested": "Chronology and key provisions of British-era Acts including Morley-Minto reforms and Government of India Acts.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Indian Constitution & Governance",
+          "conceptTested": "Chronology and key provisions of British-era Acts including Morley-Minto reforms and Government of India Acts.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c744b25e74",
+        "q_num": 198,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:11",
+        "avgTime": "00:18",
+        "question": "River Sutlej enters India through which pass?",
+        "options": {
+          "a": "Zoji la",
+          "b": "Nathula",
+          "c": "Lipulekh",
+          "d": "Shipki la"
+        },
+        "answer": "d",
+        "solution": "Shipki La is a mountain pass and border post on the India - Tibet border. The river Sutlej enters India through this pass. It is located in the Kinnaur district in the state of Himachal Pradesh, India, and Tibet.",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Himalayan Rivers Passes",
+        "conceptTested": "Geography of Himalayan passes and river entry points into India.",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Himalayan Rivers Passes",
+          "conceptTested": "Geography of Himalayan passes and river entry points into India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ad405873bc",
+        "q_num": 199,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:23",
+        "avgTime": "00:24",
+        "question": "Name the sodium compound which is used to permanently remove the hardness of water.",
+        "options": {
+          "a": "Sodium hydroxide",
+          "b": "Sodium hydrogen carbonate",
+          "c": "Sodium carbonate",
+          "d": "Sodium chloride"
+        },
+        "answer": "c",
+        "solution": "Hard water is softened with the sodium component. The lasting hardness of the water is removed with washing soda or sodium carbonate. The chemical formula for washing soda is $Na_2CO_3 \\cdot 10H_2O$.",
+        "image": null,
+        "topic": "Chemistry",
+        "subtopic": "Acids, Bases, Metals & Periodic Table",
+        "conceptTested": "Chemical compounds used in water softening and removing permanent water hardness.",
+        "tags": {
+          "topic": "Chemistry",
+          "subtopic": "Acids, Bases, Metals & Periodic Table",
+          "conceptTested": "Chemical compounds used in water softening and removing permanent water hardness.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_67db830b4a",
+        "q_num": 200,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:19",
+        "avgTime": "00:27",
+        "question": "Consider the following statement: Assertion (A): The discovery of similar pottery styles across Harappan sites suggests a shared cultural framework among the regions. Reason (R): Pottery was traded between Harappan cities, leading to homogeneity in material culture.",
+        "options": {
+          "a": "Both A and R are true, and R is the correct explanation for A.",
+          "b": "Both A and R are true, but R is not the correct explanation for A.",
+          "c": "A is true, but R is false.",
+          "d": "Both A and R are false."
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'Both A and R are true, and R is the correct explanation for A.' Archaeologists have found similar pottery styles across various Harappan sites, indicating a shared cultural framework which was further facilitated by inter - city trade leading to material culture homogeneity.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Ancient History (Harappa to Gupta)",
+        "conceptTested": "Harappan material culture homogeneity and inter-city trade networks.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Ancient History (Harappa to Gupta)",
+          "conceptTested": "Harappan material culture homogeneity and inter-city trade networks.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2b3a03f0d1",
+        "q_num": 201,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:13",
+        "question": "Rovers Cup is related to which of the following sports?",
+        "options": {
+          "a": "Football",
+          "b": "Cricket",
+          "c": "Hockey",
+          "d": "Tennis"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Football. The Rovers Cup was an annual football tournament held in India, started in 1891 in Bombay, and stands as one of the oldest football tournaments in the country.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Identification of national and international sports tournaments such as the Rovers Cup.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Identification of national and international sports tournaments such as the Rovers Cup.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_33cc04ee75",
+        "q_num": 202,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:09",
+        "avgTime": "00:17",
+        "question": "Which is the first northeastern state to partner with Bhashini for multilingual e-governance?",
+        "options": {
+          "a": "Assam",
+          "b": "Meghalaya",
+          "c": "Manipur",
+          "d": "Tripura"
+        },
+        "answer": "d",
+        "solution": "Tripura became the first North Eastern and Eastern Indian state to sign an MoU with Bhashini for multilingual governance under the Digital India initiative, aiming to increase the use of regional languages in governance through AI - driven real - time translation.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "Government Schemes Policies",
+        "conceptTested": "Familiarity with national digital governance initiatives, regional language AI translation tools (Bhashini), and state-level policy adoption.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Government Schemes Policies",
+          "conceptTested": "Familiarity with national digital governance initiatives, regional language AI translation tools (Bhashini), and state-level policy adoption.",
           "difficulty": "medium"
         }
       }

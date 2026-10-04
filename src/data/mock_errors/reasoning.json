@@ -2358,6 +2358,102 @@
           "conceptTested": "Identifying repeating block patterns in continuous alphabetical strings",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_df6ab05a55",
+        "q_num": 76,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:58",
+        "avgTime": "00:37",
+        "question": "Five persons Q, M, E, S and T are live in five-storey building numbered as floor 1 to floor 5. Bottom floor numbered as floor 1 and its above-numbered as floor 2 and so on the top floor is numbered as floor 5. Q lives on the second floor. Two persons are live between Q and M. S is not an immediate neighbour of M and T. T lives below Q. Who lives on the 4th floor?",
+        "options": {
+          "a": "E",
+          "b": "T",
+          "c": "S",
+          "d": "M"
+        },
+        "answer": "a",
+        "solution": "According to the given information: 1) Q lives on the second floor.\n2) Two persons live between Q and M, so M lives on the 5th floor.\n3) T lives below Q, so T lives on the 1st floor.\n4) S is not an immediate neighbour of M and T, so S lives on the 3rd floor.\n5) E lives on the remaining 4th floor.\nHence, E lives on the 4th floor.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of linear/floor positions based on relative spatial clues and adjacency conditions.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of linear/floor positions based on relative spatial clues and adjacency conditions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_1e0ed54ec1",
+        "q_num": 77,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:04",
+        "avgTime": "00:21",
+        "question": "In a certain code language, 'NAME' is written as 'FNBO' and 'NANO' is written as 'POBO'. How will 'NAIL' be written in that language?",
+        "options": {
+          "a": "MJOB",
+          "b": "MJBO",
+          "c": "MOJB",
+          "d": "MOBJ"
+        },
+        "answer": "b",
+        "solution": "Analyzing the coding pattern between the letters of the words yields the logical shift corresponding to MJBO for 'NAIL'.",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Pattern Coding & Decoding",
+        "conceptTested": "Pattern recognition involving letter shifting and positional coding transformations",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Pattern Coding & Decoding",
+          "conceptTested": "Pattern recognition involving letter shifting and positional coding transformations",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_0317635765",
+        "q_num": 78,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:31",
+        "avgTime": "00:21",
+        "question": "Identify the figure given in the options which when put in place of the question mark (?) will logically complete the series?",
+        "options": {
+          "a": "Option 1",
+          "b": "Option 2",
+          "c": "Option 3",
+          "d": "Option 4"
+        },
+        "answer": "a",
+        "solution": "All the elements shift in a clockwise direction including the central element, forming the sequence shown in Option 1.",
+        "image": null,
+        "topic": "Non-Verbal Series & Analogy",
+        "subtopic": "Letter & Symbol Series",
+        "conceptTested": "Rotational symmetry and element shifting logic in non-verbal matrix/series",
+        "tags": {
+          "topic": "Non-Verbal Series & Analogy",
+          "subtopic": "Letter & Symbol Series",
+          "conceptTested": "Rotational symmetry and element shifting logic in non-verbal matrix/series",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -3275,6 +3371,38 @@
           "topic": "Paper Folding & Cutting",
           "subtopic": "Paper Folding & Cutting",
           "conceptTested": "Symmetric reflection and spatial visualization of folded paper cuts",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_adbd66ef66",
+        "q_num": 30,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:37",
+        "avgTime": "00:36",
+        "question": "Rearrange the jumbled letters to make meaningful words and then select the one which is different.",
+        "options": {
+          "a": "LOWELY",
+          "b": "IFER",
+          "c": "THIWE",
+          "d": "WRONB"
+        },
+        "answer": "b",
+        "solution": "Rearranging the letters: LOWELY $\\rightarrow$ YELLOW (Color)\n\nIFER $\\rightarrow$ FIRE (Element/Phenomenon)\n\nTHIWE $\\rightarrow$ WHITE (Color)\n\nWRONB $\\rightarrow$ BROWN (Color)\n\nAll the options except IFER represent names of colors. Hence, IFER is different.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Letter Classification",
+        "conceptTested": "Jumbled letter word rearrangement and categorical grouping based on semantic properties (colors vs non-colors).",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Letter Classification",
+          "conceptTested": "Jumbled letter word rearrangement and categorical grouping based on semantic properties (colors vs non-colors).",
           "difficulty": "medium"
         }
       }
@@ -5568,6 +5696,198 @@
           "topic": "Arithmetical Reasoning",
           "subtopic": "Calculation Reasoning",
           "conceptTested": "Calculation of reciprocal interactions in a closed loop (Handshake problem)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_70d66ee9ff",
+        "q_num": 74,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:54",
+        "avgTime": "00:59",
+        "question": "In a row of boys, Rahul is 33rd from the left end. Rajat is 17 ranks to the right of Rahul. If Rajat is 35th from right end, then what will be the rank of Rahul from the right end?",
+        "options": {
+          "a": "49",
+          "b": "50",
+          "c": "51",
+          "d": "52"
+        },
+        "answer": "d",
+        "solution": "Rahul’s rank from the left = 33\nRajat’s rank from the right = 35\nRajat’s rank = 17 to the right of Rahul\nSo, Rajat’s rank from the left = 33 + 17 = 50\nTotal students = Rajat’s rank from left + Rajat’s rank from the right - 1 = 50 + 35 - 1 = 84\nRahul’s rank from the right = Total students - Rahul’s rank from the left + 1 = 84 - 33 + 1 = 52\nHence, Rahul’s rank from the right is 52.",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Total Persons & Direct Ranking",
+        "conceptTested": "Total persons = (Rank from left + Rank from right) - 1, and Rank from right = Total - Rank from left + 1",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Total Persons & Direct Ranking",
+          "conceptTested": "Total persons = (Rank from left + Rank from right) - 1, and Rank from right = Total - Rank from left + 1",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_9fac85089e",
+        "q_num": 75,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:32",
+        "avgTime": "00:43",
+        "question": "Direction: In the question below are given three statements followed by three conclusions numbered I, II, and III. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.\nStatements:\nSome fire is stone.\nSome stone is water.\nAll camp is fire.\nConclusions:\nI. Some camp is fire.\nII. All water is stone.\nIII. Some water is not stone.",
+        "options": {
+          "a": "Only I and either II or III follows",
+          "b": "Only I follows",
+          "c": "Only II and either I or III follows",
+          "d": "Only II follows"
+        },
+        "answer": "a",
+        "solution": "Conclusions: I. Some camp is fire → True (As all camp is fire, some part of camp will also be fire)\n\nII. All water is stone → False (It is possible but not definite)\n\nIII. Some water is not stone → False (It is possible but not definite)\n\nAs conclusions II and III form a complementary pair ('All' and 'Some not' with the same elements), either conclusion II or III follows along with conclusion I.",
+        "image": null,
+        "topic": "Syllogism",
+        "subtopic": "Either-Or Cases",
+        "conceptTested": "Complementary pair condition in syllogism: 'All + Some not' forms an either-or case when both individual conclusions are false.",
+        "tags": {
+          "topic": "Syllogism",
+          "subtopic": "Either-Or Cases",
+          "conceptTested": "Complementary pair condition in syllogism: 'All + Some not' forms an either-or case when both individual conclusions are false.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_3c74310c90",
+        "q_num": 76,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:29",
+        "avgTime": "00:36",
+        "question": "Select the number from among the given options that can replace the question mark (?) in the following series.\n13, 14, 18, 20, 23, ?, 28, 32",
+        "options": {
+          "a": "26",
+          "b": "33",
+          "c": "24",
+          "d": "29"
+        },
+        "answer": "a",
+        "solution": "The pattern followed here involves alternating additions or systematic increments between consecutive terms.\n\nChecking differences or pattern: 13 + 1 = 14\n14 + 4 = 18\n18 + 2 = 20\n20 + 3 = 23\n23 + 3 = 26\n26 + 2 = 28\n28 + 4 = 32\nHence, 26 is the missing term.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Identifying alternating or arithmetic step-pattern differences in a sequence of numbers.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Identifying alternating or arithmetic step-pattern differences in a sequence of numbers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_905c43c25b",
+        "q_num": 77,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:14",
+        "avgTime": "00:53",
+        "question": "While going on a picnic organized by the company in the hilly area on an off-road cycle, his cycle got punctured in a jungle and no help is readily available at that time. All other colleague's cycles are already overloaded. He will",
+        "options": {
+          "a": "wait for some help to come till morning, let his colleagues to go to the picnic spot and he sleeps there in the night.",
+          "b": "take his colleague cycle and tell him to wait there till he returns back and find some help from the nearby area.",
+          "c": "transfer the load from his colleague's cycle to his cycle, sit on his friend's cycle and balance the cycle with one hand till they reach a village where they get the puncture repaired and proceed to enjoy the picnic.",
+          "d": "called his brother and asked him to bring a mechanic to fix his punctured along with a tube, all of them waited till his brother reached the spot. The mechanic fixed his punctured and they continued their journey to reach the picnic spot."
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C. This demonstrates your quality of reasoning ability, initiative, self - confidence, and a sense of responsibility by managing things independently, fixing problems, and continuing the journey.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Situation Reaction Test",
+        "conceptTested": "Effective intelligence, initiative, and problem-solving ability in practical dilemma situations",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Situation Reaction Test",
+          "conceptTested": "Effective intelligence, initiative, and problem-solving ability in practical dilemma situations",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d1521c2b00",
+        "q_num": 78,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:33",
+        "avgTime": "00:26",
+        "question": "How many 8's are there in the following sequence which are preceded by 5 but not immediately followed by 3? 5 8 3 7 5 8 6 3 8 5 4 5 8 4 7 6 5 5 8 3 5 8 7 5 8 2 8 5",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "7",
+          "d": "3"
+        },
+        "answer": "a",
+        "solution": "Given series: 5 8 3 7 5 8 6 3 8 5 4 5 8 4 7 6 5 5 8 3 5 8 7 5 8 2 8 5. We need to find 8's preceded by 5 and not followed by 3. The valid pairs form 586, 584, 587, and 582. There are 4 such occurrences.",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Vowel & Consonant Operations",
+        "conceptTested": "Counting specific digit/character patterns based on positional conditions (preceded/followed by)",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Vowel & Consonant Operations",
+          "conceptTested": "Counting specific digit/character patterns based on positional conditions (preceded/followed by)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_54d7f07156",
+        "q_num": 79,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "01:03",
+        "avgTime": "00:28",
+        "question": "If 1 is subtracted from each odd digit and 2 is added to each even digit in the number $9345712$, what will be the difference between the largest and smallest digits thus formed?",
+        "options": {
+          "a": "4",
+          "b": "8",
+          "c": "6",
+          "d": "2"
+        },
+        "answer": "b",
+        "solution": "Given number: $9345712$. Subtract 1 from odd digits and add 2 to even digits. The transformed number is $8264604$. The largest digit is $8$ and the smallest digit is $0$. The difference is $8 - 0 = 8$.",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Vowel & Consonant Operations",
+        "conceptTested": "Applying arithmetic operations (+/-) based on digit parity (odd/even) and finding extremes",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Vowel & Consonant Operations",
+          "conceptTested": "Applying arithmetic operations (+/-) based on digit parity (odd/even) and finding extremes",
           "difficulty": "medium"
         }
       }

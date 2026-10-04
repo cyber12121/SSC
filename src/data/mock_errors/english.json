@@ -9688,6 +9688,326 @@
           "conceptTested": "Ability to comprehend philosophical text and infer the remedial approach to contemporary issues based on passage details.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "engl_d3aa5fcb3e",
+        "q_num": 307,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:16",
+        "question": "A sentence has been given with a blank to be filled with an appropriate word. Choose the correct alternative. I felt _______ about not being able to help her.",
+        "options": {
+          "a": "awful",
+          "b": "calm",
+          "c": "sorrow",
+          "d": "tranquil"
+        },
+        "answer": "a",
+        "solution": "The correct answer is awful.\n\nKey Points: The sentence requires an adjective that denotes the feeling of discomfort or unpleasantness about being unable to help someone. - Calm: Still, without excitement. - Tranquil: Peaceful, free from emotions. - Sorrow: Grief or sadness (noun, not grammatically fitting the adjective position). - Awful: Bad, unpleasant, dreadful, which is both relevant and grammatically qualified for the given situation.\n\nThus, the appropriate word for the blank space is 'awful'.",
+        "image": null,
+        "topic": "Fill Blanks",
+        "subtopic": "Fill Blanks",
+        "conceptTested": "Vocabulary selection based on contextual appropriateness and precise shade of meaning.",
+        "tags": {
+          "topic": "Fill Blanks",
+          "subtopic": "Fill Blanks",
+          "conceptTested": "Vocabulary selection based on contextual appropriateness and precise shade of meaning.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5a0356c58d",
+        "q_num": 308,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "02:43",
+        "avgTime": "01:32",
+        "question": "The largest comprehensive scientific study on alien species, published by the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services in 2023, identifies 3,500 established harmful invasive species, and estimates that they cost the globe a staggering amount each year: nearly half a trillion dollars. The report also claims that such species have become one of the top five drivers of biodiversity loss. Take a second to imagine 3,500 cases of invasive species, each with the kinds of detrimental effects described above, and you understand the scope of the problem. You also start to understand why it is our problem: these species often invade because we humans provide them with the means. In some cases, we’ve intentionally introduced them to new lands and waters. In others, we’ve unintentionally provided them with new means of dispersal on planes, trains, ships and trucks. That means biological invasions are, like climate change or plastics pollution, an ecological crisis that our species is responsible for and should thus take charge in addressing. But what are we to do? Scientists and governments clearly take the threat of invasive species seriously and, when it comes to combating them, environmental science and policy have managed to work hand in hand surprisingly well. It’s often a tough battle to get governments to regulate greenhouse gas emissions, plastics pollution, and other serious drivers of environmental harm. By contrast, states have tended to be very willing to fight back against invasive species. I already mentioned New Zealand’s ambitious Predator Free 2050 programme, which parallels Australia’s drive to eradicate feral cats, as well as hundreds of invasive predator-eradication projects on other islands around the world. A different front of the war is biosecurity. Travellers will be familiar with measures meant to prevent the transit of invasive species, such as when the interiors of passenger planes get sprayed with pesticide to kill invasive insects just before landing. Similarly, at many borders, cargo is inspected for hitchhiking invaders. At the local level, municipalities often fight their own battles through invasive plant-removal programmes, and many have codes and ordinances that encourage the use of native plants while discouraging the spread of alien species. These kinds of actions are widespread in part because invasive species management isn’t just a conservation issue. Many of these policy measures are carried out by public health agencies and agriculture ministries, for instance. Some governments even consider invasive species as threats to national security. In the US, for instance, the Department of Homeland Security is one of the major actors in invasive species management and a key member of the National Invasive Species Council. Governments have been very willing to take significant action to eradicate, manage and prevent the spread of invasives.\n\nWhat is the main idea of the passage?",
+        "options": {
+          "a": "Alien species only affect certain countries",
+          "b": "Invasive species are a major, human-driven ecological crisis requiring coordinated action",
+          "c": "Climate change is more serious than biological invasions",
+          "d": "Governments are generally unwilling to address environmental issues"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option 2.\n\nKey Points: - Scale of the Crisis: The passage identifies 3, 500 harmful invasive species costing nearly half a trillion dollars annually and acting as a top driver of biodiversity loss. - Human Responsibility: The text emphasizes that humans are responsible for this ecological crisis through both intentional and unintentional introductions. - Coordinated Global Action: It highlights that governments are very willing to take action through biosecurity, national security agencies, and eradication programs.\n\nTherefore, the correct answer is Invasive species are a major, human - driven ecological crisis requiring coordinated action.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Comprehension of global theme, author's main argument, and synthesis of descriptive paragraphs.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Comprehension of global theme, author's main argument, and synthesis of descriptive paragraphs.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_689d0d5a64",
+        "q_num": 309,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:21",
+        "question": "One word substitution for: Of or pertaining to the saltiness of the sea or a salt-saturated environment.",
+        "options": {
+          "a": "Saliferous",
+          "b": "Salient",
+          "c": "Salal",
+          "d": "Salineous"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Saliferous.\n\nKey Points: The word 'Saliferous' pertains to something that contains, produces, or is associated with salt or a salt - saturated environment. - Salient: Most noticeable or important. - Salal: A type of evergreen shrub. - Salineous: Related to salt, but less common and not standard for salt - saturated environments compared to saliferous.\nTherefore, the correct option is Saliferous.",
+        "image": null,
+        "topic": "One Word Substitution",
+        "subtopic": "General One Word Substitutes",
+        "conceptTested": "Precise vocabulary recall for descriptions relating to saltiness and saline environments.",
+        "tags": {
+          "topic": "One Word Substitution",
+          "subtopic": "General One Word Substitutes",
+          "conceptTested": "Precise vocabulary recall for descriptions relating to saltiness and saline environments.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_94fe6d3909",
+        "q_num": 310,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:35",
+        "avgTime": "00:48",
+        "question": "Find the part of the sentence that contains an error: (1) Having been recognized as one of the most influential architectural achievements of the twentieth century, / (2) the critics praised the museum’s cantilevered glass wings / (3) for their ability to harmonize with the rugged topography of the surrounding cliffs / (4) while maintaining a strictly modernist aesthetic.",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 2 i.e., 'the critics praised the museum’s cantilevered glass wings'.\n\nKey Points: The error lies in part (2) because of a dangling modifier. The introductory phrase 'Having been recognized as one of the most influential architectural achievements of the twentieth century' modifies the museum itself, not the critics. Therefore, the main clause must have the museum or its architectural parts as the subject, or the sentence structure must be recast in the passive voice.\nCorrected sentence: 'Having been recognized as one of the most influential architectural achievements of the twentieth century, the museum’s cantilevered glass wings were praised by the critics...'\nHence, part (2) contains the grammatical flaw.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Subject-Verb Agreement",
+        "conceptTested": "Dangling modifier / Participial phrase agreement error where the subject of the introductory participial clause must match the subject of the main clause.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Subject-Verb Agreement",
+          "conceptTested": "Dangling modifier / Participial phrase agreement error where the subject of the introductory participial clause must match the subject of the main clause.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_66ce21c1b1",
+        "q_num": 311,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:21",
+        "avgTime": "00:41",
+        "question": "Find the part of the sentence that contains an error: (1) The CEO's mandate that every department head submits a comprehensive audit / (2) and prepare a contingency plan for the upcoming fiscal quarter / (3) was met with immediate resistance from the regional managers, / (4) who argued that the timeline was practically impossible to meet.",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "a",
+        "solution": "The correct answer is '1' i.e., contains an error. The error lies in the first part of the sentence: 'The CEO's mandate that every department head submits a comprehensive audit.' The verb 'submits' is incorrectly used. When expressing a mandate or directive, the subjunctive mood is appropriate. The correct form is 'submit.'",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Tenses & Conditionals",
+        "conceptTested": "The subjunctive mood is used after nouns like 'mandate' to express demands or directives, requiring the base form of the verb (e.g., 'submit' instead of 'submits').",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Tenses & Conditionals",
+          "conceptTested": "The subjunctive mood is used after nouns like 'mandate' to express demands or directives, requiring the base form of the verb (e.g., 'submit' instead of 'submits').",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_c206591030",
+        "q_num": 312,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:32",
+        "avgTime": "00:38",
+        "question": "Select the most appropriate option that rectifies the underlined group of words in the given sentence. If any of the parameters should change unexpectedly during the vacuum-sealing process, the automated system is programmed to initiate an immediate emergency shutdown.",
+        "options": {
+          "a": "Should any of the parameters change",
+          "b": "If any of the parameters shall change",
+          "c": "If any of the parameters should have changed",
+          "d": "No improvement needed."
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'Should any of the parameters change'. The phrase 'Should any of the parameters change' is a more formal and concise way to express the conditional idea in technical or formal contexts.",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Tenses & Conditionals",
+        "conceptTested": "In formal conditional sentences expressing hypothetical situations, 'Should + subject + base verb' is used at the beginning of the clause.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Tenses & Conditionals",
+          "conceptTested": "In formal conditional sentences expressing hypothetical situations, 'Should + subject + base verb' is used at the beginning of the clause.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_a3b7a68d42",
+        "q_num": 313,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:58",
+        "avgTime": "00:33",
+        "question": "Select the most appropriate option that rectifies the underlined group of words in the given sentence. The new policy is not only intended to streamline the administrative workflow but also for the purpose of increasing transparency across all departments.",
+        "options": {
+          "a": "but also for increasing",
+          "b": "but also to increase",
+          "c": "and also to increase",
+          "d": "No improvement needed"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'but also to increase'. The sentence uses the correlative conjunction not only...but also, which requires parallelism. The underlined phrase does not maintain parallel structure with 'to streamline'. The correct form should be 'but also to increase'.",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Conjunctions & Parallelism",
+        "conceptTested": "Correlative conjunctions like 'not only... but also' require parallel grammatical structures on both sides.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Conjunctions & Parallelism",
+          "conceptTested": "Correlative conjunctions like 'not only... but also' require parallel grammatical structures on both sides.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_5147938f18",
+        "q_num": 314,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:07",
+        "avgTime": "00:58",
+        "question": "The question below consists of a set of labelled sentences. Out of four options given, select the most logical order of the sentences which form a paragraph. When his parents moved to Italy in 1893, Einstein dropped out of school and renounced both his German citizenship and his Jewish faith. P. He applied to study at the Zurich Polytechnic, an advanced Swiss technical institute. Q. However, he failed the entrance examinations and was not accepted until spending a year of preparation at a Swiss secondary school. R. Between 1896 and 1900, he participated in a teachers' training program at the Zurich Polytechnic, where he met his lifelong friends Marcel Grossman and Michele Angelo Besso, as well as his first wife, Mileva Maric. S. Following the completion of his program in 1900, Einstein went on to work as a teacher and tutor in a series of posts in Germany and Switzerland. He finally settled in Bern, Switzerland, in 1902, where he received a job as a technical expert in a patent office. In Bern, Einstein married Mileva and the couple raised two sons together",
+        "options": {
+          "a": "PSQR",
+          "b": "PQRS",
+          "c": "PRSQ",
+          "d": "PSRQ"
+        },
+        "answer": "b",
+        "solution": "The correct answer is PQRS. After leaving school, Einstein applied to study at the Zurich Polytechnic (P), failed the entrance exam and prepared for a year (Q), participated in the teachers' training program from 1896 to 1900 (R), and finally completed his program in 1900 (S).",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical chronological sequencing of biographical events based on transition words and cause-effect relationships.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical chronological sequencing of biographical events based on transition words and cause-effect relationships.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_059d090571",
+        "q_num": 315,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:18",
+        "avgTime": "00:13",
+        "question": "Select the most appropriate meaning of the given idiom. Take away your breath",
+        "options": {
+          "a": "Astonishing",
+          "b": "Falling in love",
+          "c": "Killing",
+          "d": "Exhausting"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'Astonishing'. The idiom 'take away your breath' is used to describe something extremely beautiful or surprising that it makes you gasp in amazement.",
+        "image": null,
+        "topic": "Idioms & Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Identification of figurative meanings behind common idiomatic expressions used to describe extreme emotional or sensory impact.",
+        "tags": {
+          "topic": "Idioms & Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Identification of figurative meanings behind common idiomatic expressions used to describe extreme emotional or sensory impact.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_72085bd323",
+        "q_num": 316,
+        "mockId": "mock_1791114884575_j5r4z",
+        "testId": "mock_1791114884575_j5r4z",
+        "testName": "SSC CGL Tier I: Full Test - 11",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:10",
+        "avgTime": "00:18",
+        "question": "Select the word similar in meaning to the given word.\n\nQualm",
+        "options": {
+          "a": "Impunity",
+          "b": "Persevere",
+          "c": "Distress",
+          "d": "Scruple"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Option 4 (Scruple).\n\nKey Points: - The word \\\"Qualm\\\" refers to an uneasy feeling of doubt, worry, or fear, especially about one's own conduct. - \\\"Scruple\\\" is a feeling of doubt or hesitation regarding the morality or propriety of an action, which is similar in meaning to qualm.\nAdditional Information: - Impunity: Exemption from punishment or freedom from the injurious consequences of an action. - Persevere: Continue in a course of action even in the face of difficulty. - Distress: Extreme anxiety, sorrow, or pain.",
+        "image": null,
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary recall and matching synonymous words based on contextual meaning",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary recall and matching synonymous words based on contextual meaning",
+          "difficulty": "medium"
+        }
       }
     ]
   }
