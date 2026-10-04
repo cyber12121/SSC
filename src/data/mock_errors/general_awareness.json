@@ -4305,6 +4305,166 @@
           "conceptTested": "State-wise mapping of prominent traditional and cultural festivals of India.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_ab66e95f65",
+        "q_num": 138,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:12",
+        "avgTime": "00:32",
+        "question": "Consider the following statements regarding the criteria adopted by the Census of India for defining urban settlements:\n\nI. All places with a municipality, municipal corporation, cantonment board, or notified town area committee are automatically classified as Statutory Towns.\n\nII. A Census Town must satisfy a minimum population of 5,000, at least 75% of the male main working population engaged in non-agricultural pursuits, and a density of at least 400 persons per square kilometre.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "I only",
+          "b": "II only",
+          "c": "Both I and II",
+          "d": "Neither I nor II"
+        },
+        "answer": "c",
+        "solution": "Statement I is correct: Places having a municipality, municipal corporation, cantonment board, notified town area committee or similar statutory urban body are classified as Statutory Towns.\nStatement II is correct: For a place to qualify as a Census Town, three conditions must be satisfied simultaneously: a population of at least 5, 000, at least 75% of the male main working population engaged in non - agricultural pursuits, and a population density of at least 400 persons per square kilometre.",
+        "image": null,
+        "topic": "Census & Demographics",
+        "subtopic": "Census 2011 Definitions",
+        "conceptTested": "Criteria adopted by the Census of India for defining statutory and census towns.",
+        "tags": {
+          "topic": "Census & Demographics",
+          "subtopic": "Census 2011 Definitions",
+          "conceptTested": "Criteria adopted by the Census of India for defining statutory and census towns.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_deee7c4564",
+        "q_num": 139,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:23",
+        "question": "Under which of the following Governor-General the policy of \"paramountcy\" was initiated?",
+        "options": {
+          "a": "Lord Warren Hastings",
+          "b": "Lord Cornwallis",
+          "c": "Lord Wellesley",
+          "d": "Lord William Bentinck"
+        },
+        "answer": "a",
+        "solution": "Under Lord Warren Hastings (Governor - General from 1813 to 1823) a new policy of \\\"paramountcy\\\" was initiated. Now the Company claimed that its authority was paramount or supreme, hence its power was greater than that of Indian states.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "British expansionist policies and the introduction of 'paramountcy' under Lord Warren Hastings.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "British expansionist policies and the introduction of 'paramountcy' under Lord Warren Hastings.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d97d6c6444",
+        "q_num": 140,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:04",
+        "avgTime": "00:21",
+        "question": "Which of the following best describes the contribution of Tyagaraja to Indian classical music?",
+        "options": {
+          "a": "He codified Hindustani ragas into a ten-parent-scale (that) system and authored music treatises in Sanskrit.",
+          "b": "He composed thousands of devotional kritis in Telugu and Sanskrit addressed to Lord Rama, and is regarded as one of the three pillars of Carnatic music.",
+          "c": "He invented the sitar and introduced Persian melodic concepts into the Hindustani tradition during the Mughal period.",
+          "d": "He pioneered the Khyal form of singing as a successor to Dhrupad, composing bandishes in Braj Bhasha."
+        },
+        "answer": "b",
+        "solution": "Tyagaraja (1767 - 1847) is a towering figure in the history of Carnatic music (the classical music of South India). His contributions are central to the art form as we know it today.\n\nKey Contributions of Tyagaraja: - The Trinity of Carnatic Music: Along with Muthuswami Dikshitar and Syama Sastri, Tyagaraja is one of the \"Trinity\" (Trimurti) who shaped the modern Carnatic tradition. - The Kriti Format: He perfected the kriti (a devotional song format), focusing on the structure of Pallavi, Anupallavi, and Charanam. - Devotion to Rama: Most of his compositions are deeply spiritual and dedicated to Lord Rama. His works, such as the Pancharatna Kritis (Five Gems), are celebrated for their poetic beauty and technical complexity. - Innovations in Raga: He is credited with introducing many new ragas and popularizing the use of Sangatis - variations on a melodic line that gradually reveal the depth of a raga.\nWhy the other options are incorrect: - A: This describes Vishnu Narayan Bhatkhande, who codified the Thaat system in Hindustani music. - C: This is traditionally attributed to Amir Khusrau, a Sufi musician and poet of the 13th century. - D: This refers to the evolution of Hindustani music styles, often associated with figures like Niyamat Khan (Sadarang).",
+        "image": null,
+        "topic": "Music & Musical Instruments",
+        "subtopic": "Musical Instruments & Gharanas",
+        "conceptTested": "Historical personalities and major milestones in the evolution of Carnatic and Hindustani classical music traditions.",
+        "tags": {
+          "topic": "Music & Musical Instruments",
+          "subtopic": "Musical Instruments & Gharanas",
+          "conceptTested": "Historical personalities and major milestones in the evolution of Carnatic and Hindustani classical music traditions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_83dd51caa0",
+        "q_num": 141,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:04",
+        "avgTime": "00:52",
+        "question": "Consider the following statements regarding the characteristics and crop suitability of Indian soils:\nStatement I: Black soils exhibit a high moisture-retaining capacity due to their clayey composition, causing them to swell when wet and develop deep cracks when dry.\nStatement II: Black soils are rich in lime, iron, magnesia and alumina, but are generally deficient in phosphoric acid, nitrogen and organic matter.\nStatement III: Owing to their physical and chemical characteristics, black soils are suitable for the cultivation of crops such as cotton, sugarcane, jowar and wheat.\nStatement IV: Tea plants thrive exceptionally well in deep, waterlogged clay basins of black soil regions, whereas apple orchards grow best in the acidic loamy variations of laterite soils.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "Only\nStatement II,\nStatement III and\nStatement IV",
+          "b": "Only\nStatement I,\nStatement III and\nStatement IV",
+          "c": "Only\nStatement I,\nStatement II and\nStatement III",
+          "d": "Statement I,\nStatement II,\nStatement III and\nStatement IV"
+        },
+        "answer": "c",
+        "solution": "Statement I is correct\n\nBlack soils are generally clayey and possess a high capacity to retain moisture.\n\nDuring the wet season, these soils absorb water and swell, whereas in the dry season they shrink and develop wide and deep cracks.\n\nStatement II is correct\n\nBlack soils contain important mineral constituents such as lime, iron, magnesia and alumina.\n\nHowever, they are generally deficient in phosphoric acid, nitrogen and organic matter.\n\nStatement III is correct\n\nThe moisture - retaining and nutrient characteristics of black soils make them suitable for several crops.\n\nCotton is particularly associated with black soil, while crops such as sugarcane, jowar and wheat are also cultivated in these soils.\n\nStatement IV is incorrect\n\nTea requires well - drained soil and does not thrive in waterlogged black clay basins.\n\nApple cultivation is mainly associated with suitable temperate climatic conditions and well - drained soils rather than laterite soils as a general rule.",
+        "image": null,
+        "topic": "Indian Climate & Soil",
+        "subtopic": "Soil Types",
+        "conceptTested": "Characteristics, mineral composition, and crop suitability of Indian soils such as black soil.",
+        "tags": {
+          "topic": "Indian Climate & Soil",
+          "subtopic": "Soil Types",
+          "conceptTested": "Characteristics, mineral composition, and crop suitability of Indian soils such as black soil.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_1340c8ce4c",
+        "q_num": 142,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:11",
+        "avgTime": "00:23",
+        "question": "Who among the following, appointed as Advisor to Telangana Government (Preventive, Curative and Affordable Cancer Care) in June 2025, received the Padma Bhushan in 2026?",
+        "options": {
+          "a": "S K M Maeilanandhan",
+          "b": "Chandramouli Gaddamanugu",
+          "c": "Nori Dattatreyudu",
+          "d": "Deepika Reddy"
+        },
+        "answer": "c",
+        "solution": "Dr. Dattatreyudu Nori was awarded the third highest civilian award of India, Padma Bhushan, in 2026.\n\nHe was awarded Padma Shri, the fourth - highest civilian award of India, in 2015 for his contributions in the field of medicine.\n\nHe is an Indian - American radiation oncologist and was appointed as Advisor to Telangana Government (Preventive, Curative and Affordable Cancer Care) on 28 June 2025.",
+        "image": null,
+        "topic": "Awards & Honours",
+        "subtopic": "National & International Awards",
+        "conceptTested": "Recipients of prestigious national civilian awards such as the Padma Bhushan and Padma Shri.",
+        "tags": {
+          "topic": "Awards & Honours",
+          "subtopic": "National & International Awards",
+          "conceptTested": "Recipients of prestigious national civilian awards such as the Padma Bhushan and Padma Shri.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -10656,6 +10816,294 @@
           "topic": "National Parks & Environment",
           "subtopic": "Government Schemes Policies",
           "conceptTested": "Familiarity with national digital governance initiatives, regional language AI translation tools (Bhashini), and state-level policy adoption.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_7a04e911fb",
+        "q_num": 203,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:31",
+        "avgTime": "00:54",
+        "question": "Which of the following species-focused conservation programmes was inaugurated by Union Environment Minister Bhupender Yadav at Sasan Gir, Gujarat, as part of the Pre-Summit Species Events under the International Big Cat Alliance (IBCA) Summit 2026 in May 2026?",
+        "options": {
+          "a": "Global Cheetah Restoration Forum",
+          "b": "Lion Species Spotlight Event",
+          "c": "Panthera Habitat Protection Initiative",
+          "d": "Asiatic Wildlife Preservation Summit"
+        },
+        "answer": "b",
+        "solution": "Union Minister for Environment, Forest and Climate Change, Shri Bhupender Yadav inaugurated the 'Lion' Species Spotlight Event at Sasan Gir, Gujarat. The programme was organised as part of the series of Pre - Summit Species Events under the International Big Cat Alliance (IBCA) Summit 2026. Shri Yadav said the 'Lion' Species Spotlight Event highlighted the global conservation status of lions and India's initiatives towards species conservation.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Recent national conservation initiatives and species-focused programmes launched under international alliances.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Recent national conservation initiatives and species-focused programmes launched under international alliances.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c3641d9075",
+        "q_num": 204,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:14",
+        "avgTime": "00:26",
+        "question": "Which of the following folk dances in Rajasthan describes the art of collecting water in a pot by the Rajasthani womens in their day to day life?",
+        "options": {
+          "a": "Gair",
+          "b": "Ghoomar",
+          "c": "Terah Taali",
+          "d": "Chari"
+        },
+        "answer": "d",
+        "solution": "Chari dance is one of the popular folk dances in Rajasthan India. This dance describes the art of collecting water in a chari or pot by the Rajasthani womens in their day to day life. The woman's travels miles to collect water for the families and the joy is reflected through this Chari dance.",
+        "image": null,
+        "topic": "Folk & Classical Dances",
+        "subtopic": "Classical & Folk Dances",
+        "conceptTested": "Identification of regional folk dances and their cultural significance.",
+        "tags": {
+          "topic": "Folk & Classical Dances",
+          "subtopic": "Classical & Folk Dances",
+          "conceptTested": "Identification of regional folk dances and their cultural significance.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f6db913ebf",
+        "q_num": 205,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:19",
+        "avgTime": "00:23",
+        "question": "In Basketball, which of the following violations occurs when a player moves their pivot foot without dribbling the ball?",
+        "options": {
+          "a": "Double Dribble",
+          "b": "Charging",
+          "c": "Traveling",
+          "d": "Three-Second Violation"
+        },
+        "answer": "c",
+        "solution": "Traveling (also colloquially called walking or steps) is a rules violation in basketball that occurs when a player holding the ball illegally moves one or both of their feet without dribbling. Specifically, if a player lifts or moves their designated pivot foot before releasing the ball to pass, shoot, or start a dribble, traveling is called.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Basketball rule violations concerning pivot foot movement and dribbling.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Basketball rule violations concerning pivot foot movement and dribbling.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2b749b28c4",
+        "q_num": 206,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:16",
+        "avgTime": "00:35",
+        "question": "Consider the following statements regarding categories of goods in an economy:\nStatement I: Intermediate goods are final goods that pass out of the active economic flow and undergo no further transformation by producers.\nStatement II: Capital goods are completely consumed or transformed within a single cycle of the production process like raw materials.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "Only\nStatement I",
+          "b": "Only\nStatement II",
+          "c": "Both\nStatement I and\nStatement II",
+          "d": "Neither\nStatement I nor\nStatement II"
+        },
+        "answer": "d",
+        "solution": "Statement I is incorrect.\n\nThe description given actually refers to final goods, not intermediate goods.\n\nIntermediate goods are goods used as inputs in the production of other goods and are transformed during the production process.\n\nFinal goods pass out of the active economic flow after being sold and undergo no further transformation by producers.\n\nStatement II is incorrect.\n\nCapital goods are durable producer goods such as machines, equipment, and factory buildings that are used repeatedly in the production process over several years.\n\nThey are not completely consumed or transformed in a single production cycle like raw materials or intermediate goods.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "National Income & Five Year Plans",
+        "conceptTested": "Definitions and distinctions between intermediate goods, final goods, and capital goods in economic circular flow.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "National Income & Five Year Plans",
+          "conceptTested": "Definitions and distinctions between intermediate goods, final goods, and capital goods in economic circular flow.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2c5f37be1d",
+        "q_num": 207,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:15",
+        "avgTime": "00:19",
+        "question": "Which of the following empire is associated with the 'Ashtadiggajas'?",
+        "options": {
+          "a": "Maratha Empire",
+          "b": "Vijayanagar Empire",
+          "c": "Gupta Empire",
+          "d": "Maurya Empire"
+        },
+        "answer": "b",
+        "solution": "Ashtadiggajas is the collective name of the eight Telugu poets in the court of Emperor Krishna Deva Raya who ruled the Vijayanagara Empire from 1509 to 1529. These eight poets were regarded as the eight pillars of Krishna Deva Raya's literary Assembly. The Period of Ashtadiggajas is called Prabandha age. These poets were: · Allasani Peddanna\n\n· Ayyalaraju Ramambhadrudu\n\n· Ramarajabhushanudu\n\n· Madayyagari Mallana\n\n· Tenali Ramakrishna\n\n· Nandi Thimmana\n\n· Dhurjaty\n\n· Pingali Surana",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Cultural and literary contributions of the Vijayanagar Empire under Emperor Krishna Deva Raya.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Cultural and literary contributions of the Vijayanagar Empire under Emperor Krishna Deva Raya.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d00ca7a8f0",
+        "q_num": 208,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:33",
+        "avgTime": "00:37",
+        "question": "In March 2026, the Indian Railways has launched a 'SHINE' app for women employees to lodge complaints about sexual harassment at the workplace on the occasion of International Women's Day. What is the correct expansion of the acronym SHINE?",
+        "options": {
+          "a": "Sexual Harassment Incident Notification for Empowerment",
+          "b": "Sexual Harassment Information and Navigation Engine",
+          "c": "Safety and Harassment Incident Notifier for Employees",
+          "d": "Sexual Harassment Inquiry Network for Employees"
+        },
+        "answer": "a",
+        "solution": "The Indian Railways has launched a customised app for women employees to lodge complaints about sexual harassment at the workplace. Sexual Harassment Incident Notification for Empowerment (SHINE) was made operational on the occasion of the International Women's Day on March 8, 2026. This facility would be in addition to the existing internal complaints committee formed in every organisation in compliance with the Visakha guidelines of the Supreme Court in 1997 and Government of India instructions to protect women at workplace issued from time to time. With SHINE, women employees can lodge complaints through the Human Resources Management System (HRMS). According to railway sources, SHINE also allows reporting incidents or complaints on behalf of outsiders (visitors), contractual staff, students and others who may not have access to the app. SHINE had been developed to make the mechanism more confidential and to be addressed in an expeditious manner.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Recent current affairs regarding digital governance initiatives and welfare applications launched by Indian Railways.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Recent current affairs regarding digital governance initiatives and welfare applications launched by Indian Railways.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f3cc11f24f",
+        "q_num": 209,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:12",
+        "avgTime": "00:23",
+        "question": "Consider the following statements regarding Geeta Phogat's performance at the 2010 Commonwealth Games:\n\n1) She became the first Indian woman to win a gold medal in wrestling at any Commonwealth Games.\n\n2) She secured the top podium finish by defeating Australia's Emily Bensted in the final of the 65 kg freestyle category.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2 only",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "a",
+        "solution": "Geeta Phogat won gold medal in wrestling at the Commonwealth Games in 2010.\n\nShe achieved this historic feat in the women's freestyle wrestling event at the Delhi Games, becoming the first Indian woman wrestler to win gold at the Commonwealth Games.\n\nGeeta Phogat did defeat Australia's Emily Bensted in the final, the match was in the 55 kg freestyle category, not 65 kg.\n\nFurther Insights: · Geeta Phogat hails from Balali village in Haryana, coached by her father Mahavir Singh Phogat.\n\n· Her gold medal win was featured in the Bollywood film Dangal.\n\n· She was also the first Indian female wrestler to qualify for the Olympics.\n\n· Emily Bensted was the Australian finalist whom she defeated in the 55 kg category.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Factual knowledge of historical Indian sporting milestones at multi-sport international competitions like the Commonwealth Games.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Factual knowledge of historical Indian sporting milestones at multi-sport international competitions like the Commonwealth Games.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_db4dcc7017",
+        "q_num": 210,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:12",
+        "avgTime": "00:24",
+        "question": "In government budgeting and public finance, which of the following expressions correctly defines the Revenue Deficit?",
+        "options": {
+          "a": "The excess of total revenue expenditure over total revenue receipts",
+          "b": "The excess of total government expenditure over total receipts excluding borrowings",
+          "c": "The difference between total fiscal deficit and net interest payments",
+          "d": "The excess of capital expenditure over capital receipts of the government"
+        },
+        "answer": "a",
+        "solution": "Revenue Deficit refers to the excess of the government's revenue expenditure over its revenue receipts. It indicates that current revenue receipts are insufficient to meet current revenue expenditure. Its standard formula is: Revenue Deficit = Revenue Expenditure - Revenue Receipts.",
+        "image": null,
+        "topic": "Fiscal Policy & Budget",
+        "subtopic": "Deficit",
+        "conceptTested": "Definition and formula of Revenue Deficit in government budgeting and public finance.",
+        "tags": {
+          "topic": "Fiscal Policy & Budget",
+          "subtopic": "Deficit",
+          "conceptTested": "Definition and formula of Revenue Deficit in government budgeting and public finance.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_eb2b867974",
+        "q_num": 211,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:22",
+        "question": "Which Booker-shortlisted debut novel by Avni Doshi from 2019 tells the story of a troubled mother-daughter relationship in Pune?",
+        "options": {
+          "a": "The Lowland",
+          "b": "The Lives of Others",
+          "c": "Girl in White Cotton",
+          "d": "The Loneliness of Sonia and Sunny"
+        },
+        "answer": "c",
+        "solution": "Girl in White Cotton is the debut novel by Avni Doshi, an American writer of Indian origin. It tells the story of a troubled mother - daughter relationship in Pune, India, and was shortlisted for the 2020 Booker Prize.",
+        "image": null,
+        "topic": "Books & Authors",
+        "subtopic": "Contemporary Authors Novels",
+        "conceptTested": "Recognition of award-nominated contemporary debut novels and their literary backgrounds.",
+        "tags": {
+          "topic": "Books & Authors",
+          "subtopic": "Contemporary Authors Novels",
+          "conceptTested": "Recognition of award-nominated contemporary debut novels and their literary backgrounds.",
           "difficulty": "medium"
         }
       }

@@ -2454,6 +2454,166 @@
           "conceptTested": "Rotational symmetry and element shifting logic in non-verbal matrix/series",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_d3084f87cb",
+        "q_num": 79,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:55",
+        "avgTime": "00:38",
+        "question": "If 'a' means addition, 'b' means subtraction, 'c' means multiplication and 'd' means division, then what is the value of $(48 \\text{ d } 3) \\text{ c } 2 \\text{ a } 56 \\text{ b } 34 \\text{ b } 2 \\text{ c } 3$?",
+        "options": {
+          "a": "60",
+          "b": "24",
+          "c": "72",
+          "d": "48"
+        },
+        "answer": "d",
+        "solution": "It is given that, $(48 \\div 3) \\times 2 + 56 - 34 - 2 \\times 3$ = $32 + 22 - 6$ = 48",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Balancing Equations",
+        "conceptTested": "Substitution of arithmetic symbols and evaluation using the BODMAS rule.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Balancing Equations",
+          "conceptTested": "Substitution of arithmetic symbols and evaluation using the BODMAS rule.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_3c0124f607",
+        "q_num": 80,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:31",
+        "avgTime": "00:21",
+        "question": "Read the given statements and conclusions carefully. Assuming that the information given in the statements is true, even if it appears to be at variance with commonly known facts, decide which of the given conclusions logically follow(s) from the statements.\n\nStatements:\nSome Thread is Yarn\nNo Yarn is Cord\n\nConclusions:\nI. Some Thread is not Cord\nII. Some Yarn is Thread",
+        "options": {
+          "a": "Only\nconclusion I follows",
+          "b": "Both conclusions I and II follow",
+          "c": "Only\nconclusion II follows",
+          "d": "Neither\nconclusion I nor II follows"
+        },
+        "answer": "b",
+        "solution": "Statements: Some Thread is Yarn\n\nNo Yarn is Cord\n\nSome Thread is not Cord: Some Thread is Yarn. No Yarn is Cord. Thus, the Thread which is Yarn is not Cord. So, conclusion I is true.\nSome Yarn is Thread: Some Thread is Yarn. Thus, Some Yarn is Thread. So, conclusion II is true.\nHence, both conclusions I and II follow.",
+        "image": null,
+        "topic": "Syllogism",
+        "subtopic": "Standard Syllogism (Venn)",
+        "conceptTested": "Deduction of categorical propositions involving 'Some' and 'No' relationships.",
+        "tags": {
+          "topic": "Syllogism",
+          "subtopic": "Standard Syllogism (Venn)",
+          "conceptTested": "Deduction of categorical propositions involving 'Some' and 'No' relationships.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_04f3555108",
+        "q_num": 81,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:37",
+        "avgTime": "00:23",
+        "question": "Select the number from among the given options that can replace the question mark (?) in the following series:\n259, 270, 283, 298, ?, 334",
+        "options": {
+          "a": "315",
+          "b": "325",
+          "c": "380",
+          "d": "361"
+        },
+        "answer": "a",
+        "solution": "$259 + 11 = 270$\n\n$270 + 13 = 283$\n\n$283 + 15 = 298$\n\n$298 + 17 = 315$\n\n$315 + 19 = 334$\n\nThus, the answer is option A.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Arithmetic progression with increasing common difference between consecutive terms.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Arithmetic progression with increasing common difference between consecutive terms.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_dcd255a9d7",
+        "q_num": 82,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:03",
+        "avgTime": "00:51",
+        "question": "Seven people - A, B, C, D, E, F and G are seated around a circular table facing inwards (not necessarily in the same order). B is seated third to the left of G. F is seated second to the right of G. A is seated to the immediate left of D. C is not an immediate neighbour of G.\n\nHow many people are seated between F and A when counted from the left of A?",
+        "options": {
+          "a": "5",
+          "b": "2",
+          "c": "6",
+          "d": "1"
+        },
+        "answer": "b",
+        "solution": "B is seated third to the left of G. F is seated second to the right of G.\n\nA is seated to the immediate left of D. C is not an immediate neighbour of G.\n\n2 people are seated between F and A when counted from the left of A.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Circular Seating Arrangement",
+        "conceptTested": "Determining relative positions in a circular table arrangement facing inwards.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Circular Seating Arrangement",
+          "conceptTested": "Determining relative positions in a circular table arrangement facing inwards.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_27940361c2",
+        "q_num": 83,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:47",
+        "avgTime": "00:39",
+        "question": "Select the option that is related to the fifth letter-cluster in the same way as the second letter-cluster is related to the first letter-cluster and the fourth letter-cluster is related to the third letter-cluster.\n\nVEGM : JKBZ :: HTFP : MJQL :: UKPS : ?",
+        "options": {
+          "a": "PHSY",
+          "b": "PUHZ",
+          "c": "PTHY",
+          "d": "PTHZ"
+        },
+        "answer": "c",
+        "solution": "The cluster follows a reverse pattern with alternate subtraction and addition: VEGM to JKBZ: M - 3 = J, G + 4 = K, E - 3 = B, V + 4 = Z\n\nHTFP to MJQL: P - 3 = M, F + 4 = J, T - 3 = Q, H + 4 = L\nApplying the same logic to UKPS: S - 3 = P\nP + 4 = T\nK - 3 = H\nU + 4 = Y\n\nThus, UKPS is related to PTHY.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Applying reverse alphabetical positioning and letter shifting patterns across letter clusters.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Applying reverse alphabetical positioning and letter shifting patterns across letter clusters.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -3403,6 +3563,38 @@
           "topic": "Classification / Odd One Out",
           "subtopic": "Letter Classification",
           "conceptTested": "Jumbled letter word rearrangement and categorical grouping based on semantic properties (colors vs non-colors).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_6ca20e07f5",
+        "q_num": 31,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:39",
+        "avgTime": "00:41",
+        "question": "Select the option corresponding to the number which can replace the question mark (?) in the given series.\n\n23, 36, 51, 55, 79, 74, ?, 93, 135",
+        "options": {
+          "a": "98",
+          "b": "103",
+          "c": "110",
+          "d": "107"
+        },
+        "answer": "d",
+        "solution": "This is an alternating series.\n\nFirst alternating sequence: 23 + 28 = 51, 51 + 28 = 79, 79 + 28 = 107, 107 + 28 = 135\nSecond alternating sequence: 36 + 19 = 55, 55 + 19 = 74, 74 + 19 = 93.\nTherefore, the missing number is 107.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Identifying alternating patterns in a complex number sequence.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Identifying alternating patterns in a complex number sequence.",
           "difficulty": "medium"
         }
       }
@@ -5888,6 +6080,134 @@
           "topic": "Alphabet Test",
           "subtopic": "Vowel & Consonant Operations",
           "conceptTested": "Applying arithmetic operations (+/-) based on digit parity (odd/even) and finding extremes",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_3947be5f30",
+        "q_num": 80,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:50",
+        "avgTime": "01:20",
+        "question": "Transform the letters in DAYLIGHTS: apply \"shift each vowel backward by 2\" to vowels and \"shift each consonant backward by 1\" to consonants.\n\nAfter transformation, how many letters lie between the third from the left and the fifth from the left of the new string?",
+        "options": {
+          "a": "One",
+          "b": "Two",
+          "c": "Three",
+          "d": "Four"
+        },
+        "answer": "a",
+        "solution": "D A Y L I G H T S\n\n↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓\n\nC Y X K G F G S R\n\nTransformed = CYXKGFGSR. third from the left = X, fifth from the left = G → between them: K = > One",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Vowel & Consonant Operations",
+        "conceptTested": "Alphabetical shift operations applied separately to vowels and consonants based on specified positional rules.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Vowel & Consonant Operations",
+          "conceptTested": "Alphabetical shift operations applied separately to vowels and consonants based on specified positional rules.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_330156b663",
+        "q_num": 81,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:21",
+        "avgTime": "00:34",
+        "question": "Select the missing number from the given options:\n\n| 5 | 7 | 3 |\n| 3 | 4 | 2 |\n| 65 | 122 | ? |",
+        "options": {
+          "a": "141",
+          "b": "17",
+          "c": "37",
+          "d": "26"
+        },
+        "answer": "d",
+        "solution": "The number in the third row in each column is one more than the square of the sum of first two numbers in that column.\n\n5 + 3 = 8; $8^2 = 64$; $64 + 1 = 65$\n7 + 4 = 11; $11^2 = 121$; $121 + 1 = 122$\n3 + 2 = 5; $5^2 = 25$; $25 + 1 = 26$",
+        "image": null,
+        "topic": "Missing Number / Matrix",
+        "subtopic": "Number Puzzles Grids",
+        "conceptTested": "Identification of column-wise arithmetic patterns involving squares and additions in a matrix grid.",
+        "tags": {
+          "topic": "Missing Number / Matrix",
+          "subtopic": "Number Puzzles Grids",
+          "conceptTested": "Identification of column-wise arithmetic patterns involving squares and additions in a matrix grid.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_adef0a0fe8",
+        "q_num": 82,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:24",
+        "avgTime": "00:32",
+        "question": "The following question consists of a statement and two contradictory arguments. Decide which of the argument is strong.\n\nShould all colleges have uniforms for all the students?\n\nI. Yes, uniforms will make students identify with their colleges more.\n\nII. No, students should be given the freedom to wear what they want.",
+        "options": {
+          "a": "Either I or II is strong",
+          "b": "Both I and II are strong",
+          "c": "Only argument I is strong",
+          "d": "Only argument II is strong"
+        },
+        "answer": "d",
+        "solution": "Only argument II is strong. (I) is not a strong argument as uniforms do not necessarily make students identify with their colleges. (II) is strong as the personal choices of a person heavily depend on what he/she wears and so giving a uniform might make the young adults feel like they are compromising with their freedom. Hence, (D) is the right answer.",
+        "image": null,
+        "topic": "Statement & Arguments",
+        "subtopic": "Strong & Weak Arguments",
+        "conceptTested": "Evaluating the strength of arguments based on logical validity, social impact, and practical viability.",
+        "tags": {
+          "topic": "Statement & Arguments",
+          "subtopic": "Strong & Weak Arguments",
+          "conceptTested": "Evaluating the strength of arguments based on logical validity, social impact, and practical viability.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_fbf79f8e78",
+        "q_num": 83,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "00:18",
+        "question": "Read the given statement and conclusions carefully. Decide which of the given conclusions is/are definitely true from the statement.\n\nStatement: $A = S < R = V < C \\geq B = L$\nConclusion I: $C \\geq L$\nConclusion II: $S < B$",
+        "options": {
+          "a": "Only\nconclusion II is true",
+          "b": "Only\nconclusion I is true",
+          "c": "Both\nconclusion I and\nconclusion II are true",
+          "d": "Neither\nconclusion I nor\nconclusion II is true"
+        },
+        "answer": "b",
+        "solution": "It is given that, $A = S < R = V < C \\geq B = L$\n\nConclusion I: $C \\geq L$ follows as $C \\geq B = L$, hence $C \\geq L$.\nConclusion II: $S < B$ does not follow as the relationship between S and B cannot be uniquely determined due to opposite signs or indeterminate blocks.\nHence, option (B) is correct.",
+        "image": null,
+        "topic": "Statement & Conclusion",
+        "subtopic": "Statement & Conclusions",
+        "conceptTested": "Deducing relationships between variables from a combined inequality statement.",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Statement & Conclusions",
+          "conceptTested": "Deducing relationships between variables from a combined inequality statement.",
           "difficulty": "medium"
         }
       }

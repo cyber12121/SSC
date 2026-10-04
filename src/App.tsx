@@ -1851,6 +1851,7 @@ export default function App() {
   };
 
   const handleAskAiSubject = (subjectName: string) => {
+    const isChapterBank = category === 'chapterBank';
     const subjectChapters = currentData[subjectName] || [];
     const weakTopics: { topic: string; mistakeCount: number }[] = [];
     let totalQuestions = 0;

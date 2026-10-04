@@ -6237,6 +6237,198 @@
           "conceptTested": "Relation between perimeter of a rectangle and area of a square to determine dimensions.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_8fd3f5515b",
+        "q_num": 198,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:44",
+        "avgTime": "00:35",
+        "question": "What is the value of $(2m - 3n)^2 + 4(m + n)^2 - (m - 2n)^2$?",
+        "options": {
+          "a": "$7m^2 + 9n^2$",
+          "b": "$10m^2 - 7n^2 - mn$",
+          "c": "$3m^2 + 5n^2 - 2mn$",
+          "d": "$4mn$"
+        },
+        "answer": "a",
+        "solution": "Expanding the terms using standard algebraic identities: $(2m - 3n)^2 + 4(m + n)^2 - (m - 2n)^2$\n\n$= (4m^2 - 12mn + 9n^2) + 4(m^2 + 2mn + n^2) - (m^2 - 4mn + 4n^2)$\n\n$= 4m^2 - 12mn + 9n^2 + 4m^2 + 8mn + 4n^2 - m^2 + 4mn - 4n^2$\n\n$= (4m^2 + 4m^2 - m^2) + (-12mn + 8mn + 4mn) + (9n^2 + 4n^2 - 4n^2)$\n\n$= 7m^2 + 9n^2$",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Expansion and simplification of algebraic expressions using standard algebraic identities like $(a-b)^2$ and $(a+b)^2$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Expansion and simplification of algebraic expressions using standard algebraic identities like $(a-b)^2$ and $(a+b)^2$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_4f5c29acd7",
+        "q_num": 199,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:08",
+        "avgTime": "00:27",
+        "question": "Meera placed the first nine multiples of 12 marbles into different jars. What is the average number of marbles per jar?",
+        "options": {
+          "a": "48",
+          "b": "54",
+          "c": "60",
+          "d": "66"
+        },
+        "answer": "c",
+        "solution": "First 9 multiples of 12 are: 12, 24, 36, 48, 60, 72, 84, 96, 108\n\nSince these numbers form an arithmetic progression with a common difference of 12, the average is the mean of the first and the last term: Average = $\\frac{12 + 108}{2} = \\frac{120}{2} = 60$\n\nSo, the average number of marbles is 60.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Consecutive Numbers & AP Average",
+        "conceptTested": "The average of an arithmetic progression is given by the average of the first and last terms: $\\frac{\\text{First Term} + \\text{Last Term}}{2}$.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Consecutive Numbers & AP Average",
+          "conceptTested": "The average of an arithmetic progression is given by the average of the first and last terms: $\\frac{\\text{First Term} + \\text{Last Term}}{2}$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_82b0ed0d6e",
+        "q_num": 200,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:33",
+        "avgTime": "00:51",
+        "question": "If 27 workers constructed a $90\\text{ m} \\times 100\\text{ m}$ wall in 14 days, then 24 workers will construct a $128\\text{ m} \\times 125\\text{ m}$ wall in how many days?",
+        "options": {
+          "a": "21 days",
+          "b": "42 days",
+          "c": "28 days",
+          "d": "35 days"
+        },
+        "answer": "c",
+        "solution": "Using the chain rule formula: $$\\frac{M_1 \\times D_1}{W_1} = \\frac{M_2 \\times D_2}{W_2}$$\nSubstitute the given values: $$\\frac{27 \\times 14}{90 \\times 100} = \\frac{24 \\times D_2}{128 \\times 125}$|\n\nSolving for $D_2$:\n$$D_2 = $\\frac{27 \\times 14 \\times 128 \\times 125}{90 \\times 100 \\times 24}$$$\n\n$$D_2 = 28 \\text{ days}$|",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "MDH Formula & Chain Rule",
+        "conceptTested": "Application of the chain rule formula: $\\frac{M_1 \\times D_1}{W_1} = \\frac{M_2 \\times D_2}{W_2}$.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "MDH Formula & Chain Rule",
+          "conceptTested": "Application of the chain rule formula: $\\frac{M_1 \\times D_1}{W_1} = \\frac{M_2 \\times D_2}{W_2}$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_ed9ad533cb",
+        "q_num": 201,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:07",
+        "avgTime": "00:37",
+        "question": "In a $\\triangle ABC$, $\\angle C$ is a right angle and $\\angle B = 45^\\circ$. If $D$ is a point drawn on the line $BC$ such that $AD$ is an angle bisector of $\\angle A$, then what is the value of $\\angle CDA$?",
+        "options": {
+          "a": "$53.5^\\circ$",
+          "b": "$48.5^\\circ$",
+          "c": "$67.5^\\circ$",
+          "d": "$70.5^\\circ$"
+        },
+        "answer": "c",
+        "solution": "Here, $\\angle C = 90^\\circ$ and $\\angle B = 45^\\circ$.\n\nIn $\\triangle ABC$, using the angle sum property: $$\\angle A = 180^\\circ - 90^\\circ - 45^\\circ = 45^\\circ$$\n\nSince $AD$ is the angle bisector of $\\angle A$: $$\\angle DAC = \\frac{45^\\circ}{2} = 22.5^\\circ$$\n\nNow, in $\\triangle ADC$, $\\angle C = 90^\\circ$, so: $$\\angle CDA = 180^\\circ - 90^\\circ - 22.5^\\circ = 67.5^\\circ$$",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Centers of Triangles",
+        "conceptTested": "Angle sum property of triangles and angle bisector properties.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Centers of Triangles",
+          "conceptTested": "Angle sum property of triangles and angle bisector properties.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_79e2e36532",
+        "q_num": 202,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:55",
+        "avgTime": "00:40",
+        "question": "Prithvi invested $15\\%$ of his income in scheme A, $10\\%$ of his income in scheme B and $20\\%$ of rest in scheme C. If the difference between his investment in scheme B and C is Rs.390, then find his income.",
+        "options": {
+          "a": "Rs.6500",
+          "b": "Rs.9100",
+          "c": "Rs.7800",
+          "d": "Rs.5200"
+        },
+        "answer": "c",
+        "solution": "Let the monthly income = Rs. $a$\nAmount invested in scheme A = $15\\%$ of $a$ = $0.15a$\nAmount invested in scheme B = $10\\%$ of $a$ = $0.1a$\nAmount invested in scheme C = $20\\%$ of $(a - 0.15a - 0.1a)$ = $0.15a$\nNow, $0.15a - 0.1a = 390$\n\n$a = 7800$",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Price, Consumption & Expenditure",
+        "conceptTested": "Successive percentage distribution of income and solving for the initial base value using linear equations.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Price, Consumption & Expenditure",
+          "conceptTested": "Successive percentage distribution of income and solving for the initial base value using linear equations.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_8cf3bb127b",
+        "q_num": 203,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:46",
+        "avgTime": "00:29",
+        "question": "Each interior angle of a regular polygon is $165^{\\circ}$. How many diagonals does the polygon have?",
+        "options": {
+          "a": "220",
+          "b": "210",
+          "c": "252",
+          "d": "240"
+        },
+        "answer": "c",
+        "solution": "Let $n$ = number of sides\nEach interior angle = $\\frac{(n - 2) \\times 180^{\\circ}}{n}$\n\n$165 = \\frac{(n - 2) \\times 180}{n}$\n\n$165n = 180n - 360$\n\n$15n = 360$\n\n$n = 24$\n\nNumber of diagonals = $\\frac{n(n - 3)}{2}$ = $\\frac{24(24 - 3)}{2}$ = $\\frac{24 \\times 21}{2}$ = $252$",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Lines & Angles Properties",
+        "conceptTested": "Interior angle formula of a regular polygon: Each interior angle = $\\frac{(n - 2) \\times 180^{\\circ}}{n}$ and Number of diagonals = $\\frac{n(n - 3)}{2}$.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Lines & Angles Properties",
+          "conceptTested": "Interior angle formula of a regular polygon: Each interior angle = $\\frac{(n - 2) \\times 180^{\\circ}}{n}$ and Number of diagonals = $\\frac{n(n - 3)}{2}$.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -15777,6 +15969,262 @@
           "conceptTested": "When two objects start from two points towards each other and after meeting take $t_1$ and $t_2$ hours to reach destinations, the ratio of their speeds is $\\frac{S_1}{S_2} = \\sqrt{\\frac{t_2}{t_1}}.$",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_86bcc5c211",
+        "q_num": 303,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "01:22",
+        "avgTime": "01:03",
+        "question": "The Selling Price of three pens is equal to the Cost Price of five pens. The Marked Price of three pens is equal to the Selling Price of five pens. The Cost Price of twelve pens is approximately what percentage of the Marked Price of seventeen pens?",
+        "options": {
+          "a": "23\\%",
+          "b": "24.02\\%",
+          "c": "25.41\\%",
+          "d": "26.75\\%"
+        },
+        "answer": "c",
+        "solution": "Let the Marked Price, Selling Price and Cost Price of each pen be Rs. $M$, $S$ and $C$ respectively.\n\nAccording to the question, $3S = 5C$\n\n$S : C = 5 : 3 \\quad \\text{--- (1)}$\n\nSimilarly, $3M = 5S$\n\n$M : S = 5 : 3 \\quad \\text{--- (2)}$\n\nFrom (1) and (2), combining the ratios: $M : S : C = 25 : 15 : 9$\n\nHence, Cost Price of 12 pens as a percentage of Marked Price of 17 pens is: $$\\frac{12 \\times 9}{17 \\times 25} \\times 100\\% = \\frac{108}{425} \\times 100\\% \\approx 25.41\\%$$",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Marked Price & Discounts",
+        "conceptTested": "Relating Cost Price, Selling Price, and Marked Price through proportional equivalence across different quantities.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Marked Price & Discounts",
+          "conceptTested": "Relating Cost Price, Selling Price, and Marked Price through proportional equivalence across different quantities.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_4144cf9b6b",
+        "q_num": 304,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:38",
+        "question": "A garden wall $10\\text{ m}$ wide and $5\\text{ m}$ tall is topped by a semicircular arch of diameter $10\\text{ m}$. If the entire wall surface is to be painted, what area must be covered? (Use $\\pi = 3.14$.)",
+        "options": {
+          "a": "95.00 m²",
+          "b": "80.00 m²",
+          "c": "89.25 m²",
+          "d": "87.50 m²"
+        },
+        "answer": "c",
+        "solution": "Area of the rectangular part of the wall = $10\\text{ m} \\times 5\\text{ m} = 50\\text{ m}^2$.\nRadius of the semicircular arch = $\\frac{10}{2} = 5\\text{ m}$.\nArea of the semicircle = $\\frac{\\pi r^2}{2} = \\frac{3.14 \\times 5^2}{2} = 39.25\\text{ m}^2$.\nTotal painted area = $50.00 + 39.25 = 89.25\\text{ m}^2$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Sectors & Arcs of Circles",
+        "conceptTested": "Combined area calculation of composite figures using rectangle and semicircle area formulas.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Sectors & Arcs of Circles",
+          "conceptTested": "Combined area calculation of composite figures using rectangle and semicircle area formulas.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_36037ec5e4",
+        "q_num": 305,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:04",
+        "avgTime": "00:39",
+        "question": "Kavita invested Rs. 30000 and Dhruv invested Rs. 20000 at the beginning. After 6 months Jaya joined with Rs. 25000, and after 9 months Dhruv increased his capital by $50\\%$. If the total profit at the end of one year was Rs. 78000, what was Kavita's share?",
+        "options": {
+          "a": "Rs. 34000",
+          "b": "Rs. 32000",
+          "c": "Rs. 30000",
+          "d": "Rs. 36000"
+        },
+        "answer": "d",
+        "solution": "Ratio of profit share of Kavita, Dhruv and Jaya = $(30000 \\times 12) : [(20000 \\times 9) + (20000 \\times 1.5) \\times 3] : (25000 \\times 6)$ = $360000 : 270000 : 150000 = 12 : 9 : 5$\nHence, Kavita's profit share = $78000 \\times \\frac{12}{26} = \\text{Rs. } 36000$",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Capital & Time Ratio Variations",
+        "conceptTested": "Apportionment of profit based on capital invested multiplied by the respective time period.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Capital & Time Ratio Variations",
+          "conceptTested": "Apportionment of profit based on capital invested multiplied by the respective time period.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_df8b71bfdc",
+        "q_num": 306,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:09",
+        "avgTime": "00:38",
+        "question": "An express train travelling at $80\\text{ km/h}$ overtakes a goods train traveling in the same direction, twice as long and going at $40\\text{ km/h}$ on a parallel track, in $54\\text{ seconds}$. How long will the express train take to cross a station $400\\text{ m}$ long?",
+        "options": {
+          "a": "18 seconds",
+          "b": "27 seconds",
+          "c": "36 seconds",
+          "d": "54 seconds"
+        },
+        "answer": "b",
+        "solution": "Let express train have Length $L\\text{ km}$, goods train $2L\\text{ km}$\n\nRelative speed = $80 - 40 = 40\\text{ km/h}$\nGiven : $\\frac{3L}{40} = \\frac{54}{3600}$\n\nOr, $L = \\frac{40 \\times 54}{3600 \\times 3}\\text{ km}$\n\n$L = 0.2\\text{ km}$ or $200\\text{ m}$\n\nTime taken to cross station for express train = $\\frac{200\\text{ m} + 400\\text{ m}}{80\\text{ km/h}}$ = $\\frac{0.6\\text{ km}}{80\\text{ km/h}}$ = $\\frac{0.6 \\times 3600}{80}\\text{ seconds}$ = $27\\text{ seconds}$.",
+        "image": null,
+        "topic": "Trains",
+        "subtopic": "Crossing Poles & Standing Persons",
+        "conceptTested": "Relative speed concept for bodies moving in the same direction and calculating length and crossing time using $Time = \\frac{Distance}{Speed}$.",
+        "tags": {
+          "topic": "Trains",
+          "subtopic": "Crossing Poles & Standing Persons",
+          "conceptTested": "Relative speed concept for bodies moving in the same direction and calculating length and crossing time using $Time = \\frac{Distance}{Speed}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_623f17ca83",
+        "q_num": 307,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:04",
+        "avgTime": "00:35",
+        "question": "The perimeter of the base and total surface area of a cuboid is $86\\text{ cm}$ and $1760\\text{ cm}^2$ respectively. If the breadth of the cuboid is $18\\text{ cm}$, then find the height of the cuboid.",
+        "options": {
+          "a": "$8\\text{ cm}$",
+          "b": "$10\\text{ cm}$",
+          "c": "$12\\text{ cm}$",
+          "d": "$9\\text{ cm}$"
+        },
+        "answer": "b",
+        "solution": "Breadth of the cuboid = $18\\text{ cm}$\nPerimeter of the base = $86\\text{ cm}$\n\n$2(l + 18) = 86$\n\n$l + 18 = 43$\n\n$l = 25\\text{ cm}$\n\nTotal surface area of a cuboid = $1760\\text{ cm}^2$\n\n$2(25 \\times 18 + 25 \\times h + 18 \\times h) = 1760$\n\n$2(450 + 43h) = 1760$\n\n$450 + 43h = 880$\n\n$43h = 430$\n\n$h = 10\\text{ cm}$\n\nSo, the height of the cuboid = $10\\text{ cm}$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cube & Cuboid",
+        "conceptTested": "Total surface area of a cuboid formula: $TSA = 2(lb + bh + hl)$ and base perimeter formula: $P = 2(l + b)$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cube & Cuboid",
+          "conceptTested": "Total surface area of a cuboid formula: $TSA = 2(lb + bh + hl)$ and base perimeter formula: $P = 2(l + b)$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_ae837cc3c2",
+        "q_num": 308,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:43",
+        "avgTime": "00:32",
+        "question": "The ratio of iron and zinc in alloy A is $2:3$ while the same ratio in alloy B is $3:5$. If $6\\text{ kg}$ of alloy A is mixed with $8\\text{ kg}$ of alloy B, what is the ratio of iron and zinc in the resultant mixture?",
+        "options": {
+          "a": "$33:37$",
+          "b": "$27:43$",
+          "c": "$67:73$",
+          "d": "$16:19$"
+        },
+        "answer": "b",
+        "solution": "Iron in alloy A = $\\frac{2}{2+3} \\times 6 = 2.4\\text{ kg}$\nZinc in alloy A = $6 - 2.4 = 3.6\\text{ kg}$\nIron in alloy B = $\\frac{3}{3+5} \\times 8 = 3\\text{ kg}$\nZinc in alloy B = $8 - 3 = 5\\text{ kg}$\nTotal iron in the mixture = $2.4 + 3 = 5.4\\text{ kg}$\nTotal zinc in the mixture = $3.6 + 5 = 8.6\\text{ kg}$\nRequired ratio = $5.4 : 8.6 = 27 : 43$.",
+        "image": null,
+        "topic": "Mixture & Alligation",
+        "subtopic": "Alloys & Multi-Component Mixtures",
+        "conceptTested": "Weighted proportion of components in combined alloys.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "subtopic": "Alloys & Multi-Component Mixtures",
+          "conceptTested": "Weighted proportion of components in combined alloys.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cdf084db98",
+        "q_num": 309,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:00",
+        "avgTime": "00:10",
+        "question": "In the area of a triangle formula $\\sqrt{s(s-a)(s-b)(s-c)}$, where $a, b, c$ are the sides of triangle, the value of '$s$' is:",
+        "options": {
+          "a": "$a + b + c$",
+          "b": "$\\frac{a^2 + b^2 + c^2}{2}$",
+          "c": "$a - b - c$",
+          "d": "$\\frac{a + b + c}{2}$"
+        },
+        "answer": "d",
+        "solution": "According to Heron's formula for the area of a triangle, $s$ represents the semi - perimeter of the triangle, which is given by half of the sum of all three sides: $s = \\frac{a + b + c}{2}$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Triangles & Area Calculations",
+        "conceptTested": "Heron's Formula definition for the area of a triangle where $s$ is the semi-perimeter.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Triangles & Area Calculations",
+          "conceptTested": "Heron's Formula definition for the area of a triangle where $s$ is the semi-perimeter.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_26b31cbe70",
+        "q_num": 310,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:00",
+        "avgTime": "00:14",
+        "question": "Find the value of $7^3 - 21$.",
+        "options": {
+          "a": "$149$",
+          "b": "$322$",
+          "c": "$427$",
+          "d": "$294$"
+        },
+        "answer": "b",
+        "solution": "$7^3 = 343$\n\n$343 - 21 = 322$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Algebraic evaluation based on standard polynomial expansion or identity pattern.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Algebraic evaluation based on standard polynomial expansion or identity pattern.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -19801,6 +20249,38 @@
           "topic": "Percentage",
           "subtopic": "Percentage Change & Comparison",
           "conceptTested": "Successive percentage decrease formula and multiplicative factor method for exponential decay.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_98e5b3a0c5",
+        "q_num": 128,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:36",
+        "avgTime": "00:30",
+        "question": "Evaluate $\\csc^2 \\delta - \\frac{\\cos^2 \\delta - 2 \\cos^4 \\delta}{2 \\sin^4 \\delta - \\sin^2 \\delta}$",
+        "options": {
+          "a": "0",
+          "b": "-1",
+          "c": "2",
+          "d": "1"
+        },
+        "answer": "d",
+        "solution": "Given expression: $$\\csc^2 \\delta - \\frac{\\cos^2 \\delta - 2 \\cos^4 \\delta}{2 \\sin^4 \\delta - \\sin^2 \\delta}$|\n\nFactor out $\\cos^2 \\delta$ from the numerator and $\\sin^2 \\delta$ from the denominator:\nNumerator $= \\cos^2 \\delta(1 - 2\\cos^2 \\delta)$\nDenominator $= \\sin^2 \\delta(2\\sin^2 \\delta - 1)$\n\nUsing $\\cos^2 \\delta = 1 - \\sin^2 \\delta$:\n$1 - 2\\cos^2 \\delta = 1 - 2(1 - \\sin^2 \\delta) = 2\\sin^2 \\delta - 1$\n\nThus, the fraction simplifies to:\n$$$\\frac{\\cos^2 \\delta (2\\sin^2 \\delta - 1)}{\\sin^2 \\delta (2\\sin^2 \\delta - 1)}$ = \\cot² \\delta$$\n\nNow, substituting back into the original expression:\n$$\\csc² \\delta - \\cot² \\delta = 1$$",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Simplification of trigonometric expressions using fundamental relations and reciprocal identities.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Simplification of trigonometric expressions using fundamental relations and reciprocal identities.",
           "difficulty": "medium"
         }
       }

@@ -10008,6 +10008,230 @@
           "conceptTested": "Vocabulary recall and matching synonymous words based on contextual meaning",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_2e71607f76",
+        "q_num": 317,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:28",
+        "avgTime": "00:48",
+        "question": "Select the option that expresses the given sentence in reported speech.\n\nThe anchor said to the contestant, \"What is your talent?\"",
+        "options": {
+          "a": "The anchor asked the contestant what was his talent.",
+          "b": "The anchor asked the contestant what talent he had.",
+          "c": "The anchor asked the contestant what his talent was.",
+          "d": "The anchor asked the contestant what is his talent."
+        },
+        "answer": "c",
+        "solution": "For Wh - interrogative sentences, the reporting verb \"said to\" changes to \"asked\". The question transforms into an assertive sentence where the subject precedes the verb, and the tense shifts from Present Indefinite to Past Indefinite. Thus, \"What is your talent?\" becomes \"what his talent was\".",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Interrogative Sentences",
+        "conceptTested": "Conversion of direct interrogative questions into indirect speech with appropriate reporting verbs and tense backshift.",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Interrogative Sentences",
+          "conceptTested": "Conversion of direct interrogative questions into indirect speech with appropriate reporting verbs and tense backshift.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_32338e2873",
+        "q_num": 318,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:23",
+        "avgTime": "00:28",
+        "question": "Select the most appropriate option to fill in the blank.\n\nOne of the children stood at the door to _____if he saw the apparitor coming, who was an officer of the spiritual court.",
+        "options": {
+          "a": "give notice",
+          "b": "give advice",
+          "c": "give thought",
+          "d": "give a hand"
+        },
+        "answer": "a",
+        "solution": "Give notice: To inform or alert others about something. This fits the blank as the child is likely tasked with watching for the apparitor and informing others of his arrival. This matches the context of someone being positioned at the door for a specific purpose related to observation and communication.\nThe complete sentence is: One of the children stood at the door to give notice if he saw the apparitor coming, who was an officer of the spiritual court.\nHence, (a) is the correct answer.\nOption (b): It means to offer suggestions or recommendations about a course of action. This is not meaningful in the context because the child is not expected to provide counsel or suggestions about the apparitor's arrival.\nOption (c): It means to consider or think about something carefully, which doesn't align with the practical task of keeping watch.\nOption (d): It means to offer help or assistance, which suggests active assistance rather than passive vigilance.",
+        "image": null,
+        "topic": "Fill in the Blanks",
+        "subtopic": "Subject-Verb Agreement",
+        "conceptTested": "Collocations and phrasal expressions in context (give notice vs give advice/thought/hand)",
+        "tags": {
+          "topic": "Fill in the Blanks",
+          "subtopic": "Subject-Verb Agreement",
+          "conceptTested": "Collocations and phrasal expressions in context (give notice vs give advice/thought/hand)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_f5f94b14f8",
+        "q_num": 319,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:18",
+        "avgTime": "00:19",
+        "question": "Select the option that expresses the given sentence in reported speech.\n\nHemant said, \"I do yoga regularly.\"",
+        "options": {
+          "a": "Hemant said that I have done yoga regularly.",
+          "b": "Hemant said that I did yoga regularly.",
+          "c": "Hemant said that he does yoga regularly.",
+          "d": "Hemant said that he did yoga regularly."
+        },
+        "answer": "c",
+        "solution": "When expressing a habitual truth or regular action in direct speech, the tense in indirect speech generally remains unchanged (Present Simple stays Present Simple), though pronouns and verb agreement change accordingly. - The pronoun 'I' changes to 'he'. - The verb 'do' changes to 'does'. - Inverted commas (\"...\") are replaced with 'that'.\n\nTherefore, the correct sentence is: Hemant said that he does yoga regularly.",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Pronoun & Time-Place Changes",
+        "conceptTested": "Conversion of direct speech to indirect speech when reporting habitual actions (Present Simple remains Present Simple if habitual/universal, with pronoun adjustments)",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Pronoun & Time-Place Changes",
+          "conceptTested": "Conversion of direct speech to indirect speech when reporting habitual actions (Present Simple remains Present Simple if habitual/universal, with pronoun adjustments)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_1d0177bc50",
+        "q_num": 320,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:33",
+        "avgTime": "00:16",
+        "question": "Select the option that expresses the given sentence in passive voice.\n\nYou should wear this pantsuit.",
+        "options": {
+          "a": "This pantsuit should been worn by you.",
+          "b": "This pantsuit should being worn by you.",
+          "c": "This pantsuit shall be worn by you.",
+          "d": "This pantsuit should be worn by you."
+        },
+        "answer": "d",
+        "solution": "The subject of the active voice becomes the object in the passive voice, and the object of the active voice becomes the subject. For modal verbs, the structure is: Object (Subjective case) + Modal + be + V³ + by + Subject (Objective case).\n\nThus, 'You should wear this pantsuit' becomes 'This pantsuit should be worn by you.'\n\nTherefore, the correct answer is option (d).",
+        "image": null,
+        "topic": "Active & Passive Voice",
+        "subtopic": "Modal Auxiliaries",
+        "conceptTested": "Passive voice conversion for sentences with modal verbs: Subject + Modal + V1 + Object $\\to$ Object + Modal + be + V3 + by + Subject",
+        "tags": {
+          "topic": "Active & Passive Voice",
+          "subtopic": "Modal Auxiliaries",
+          "conceptTested": "Passive voice conversion for sentences with modal verbs: Subject + Modal + V1 + Object $\\to$ Object + Modal + be + V3 + by + Subject",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_2a2c99d40e",
+        "q_num": 321,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:40",
+        "avgTime": "00:28",
+        "question": "Parts of following sentence have been underlined and given as options. Select the option that contains an error.\n\nHas Gita any previous knowledge of work with junior colleagues?",
+        "options": {
+          "a": "with",
+          "b": "has",
+          "c": "any",
+          "d": "work"
+        },
+        "answer": "d",
+        "solution": "When prepositions ('of' in the given sentence) are followed by a verb, the verb should be in the present participle (-ing) form.\n\nSo, 'work' should be replaced with 'working' because it acts as a verb following the preposition 'of'.\n\nHence, option (d) is the answer.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Prepositions & Phrasal Verbs",
+        "conceptTested": "A preposition (such as 'of') when followed by a verb must take the gerund (-ing) form rather than the base verb form",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Prepositions & Phrasal Verbs",
+          "conceptTested": "A preposition (such as 'of') when followed by a verb must take the gerund (-ing) form rather than the base verb form",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_3b34221d68",
+        "q_num": 322,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:19",
+        "avgTime": "00:15",
+        "question": "Pick the spelling that is correct for the official person who checks tickets at an event entry.",
+        "options": {
+          "a": "Attendent",
+          "b": "Attendant",
+          "c": "Atendant",
+          "d": "Attendunt"
+        },
+        "answer": "b",
+        "solution": "The correct spelling is 'Attendant'; it has double 't' and ends with '-ant'. Many agent nouns end with '-ant' (such as assistant, attendant). - Option A uses '-ent' (Attendent) which is incorrect. - Option C misses a 't' (Atendant). - Option D uses the wrong vowel (Attendunt).\n\nTherefore, the correct option is B.",
+        "image": null,
+        "topic": "Spelling Errors",
+        "subtopic": "Misspelt Words",
+        "conceptTested": "Identifying correct suffix spellings for agent nouns ending in '-ant' (e.g., attendant)",
+        "tags": {
+          "topic": "Spelling Errors",
+          "subtopic": "Misspelt Words",
+          "conceptTested": "Identifying correct suffix spellings for agent nouns ending in '-ant' (e.g., attendant)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_d761c182d8",
+        "q_num": 323,
+        "mockId": "mock_1791115242919_ef1nf",
+        "testId": "mock_1791115242919_ef1nf",
+        "testName": "SSC CGL 2026 [Sectional Timing] - Tier I 2026 Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "00:25",
+        "question": "Select the option that can be used as a one-word substitute for the given group of words.\n\nVery silly or unreasonable often in a way that is humorous",
+        "options": {
+          "a": "imperious",
+          "b": "farcical",
+          "c": "peremptory",
+          "d": "notorious"
+        },
+        "answer": "b",
+        "solution": "Farcical (adj.) = very silly, unlikely, or unreasonable, often in a way that is humorous.\n\nUsage: The whole situation of the government has become farcical during the election time.\n\nNotorious (adj.) = famous or well known, typically for some bad quality or deed.\n\nImperious (adj.) = arrogant and domineering; unpleasantly proud and expecting to be obeyed.\n\nPeremptory (adj.) = expecting to be obeyed immediately and without any questions.\n\nAs per the stated meanings, 'farcical' is the correct one - word substitute.",
+        "image": null,
+        "topic": "One Word Substitution",
+        "subtopic": "General One Word Substitutes",
+        "conceptTested": "Vocabulary and word meaning correlation for descriptive traits.",
+        "tags": {
+          "topic": "One Word Substitution",
+          "subtopic": "General One Word Substitutes",
+          "conceptTested": "Vocabulary and word meaning correlation for descriptive traits.",
+          "difficulty": "medium"
+        }
       }
     ]
   }

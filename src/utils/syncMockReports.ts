@@ -49,6 +49,26 @@ export function isGenericTestTitle(title: string = ''): boolean {
 }
 
 /**
+ * Ensures that full mocks (e.g. Oliveboard tests labeled "[Sectional Timing] - Tier I" or tests with 70+ questions)
+ * are never wrongly classified as sectional mocks.
+ */
+export function ensureCorrectMockType(r: MockScoreReport): MockScoreReport {
+  if (!r) return r;
+  const isMultiSection = Boolean(r.sections && Object.keys(r.sections).length >= 3);
+  const is100Q = Boolean((r.totalQuestions && r.totalQuestions >= 70) || (r.maxMarks && r.maxMarks >= 150));
+  const isSectionalTiming = /\[Sectional\s*Timing\]/i.test(r.title || '') || /Sectional\s*Timing.*(?:Tier\s*I|Live)/i.test(r.title || '');
+
+  if (isMultiSection || is100Q || isSectionalTiming) {
+    if (r.type !== 'full') {
+      const copy = { ...r, type: 'full' as const };
+      delete (copy as any).subject;
+      return copy;
+    }
+  }
+  return r;
+}
+
+/**
  * Synchronizes reports loaded from storage/API with canonical bundled reports.
  * - Respects user deleted mocks (never revives them)
  * - Migrates any legacy IDs (e.g. Full Test 7 rename)
@@ -137,22 +157,24 @@ export function syncMockReports(
   // Deduplicate and ensure no deleted mocks slip through
   const seenIds = new Set<string>();
   const seenExactSignatures = new Set<string>();
-  return result.filter(r => {
-    if (!r || !r.id) return false;
-    if (deletedIds.has(r.id)) return false;
-    if (r.id === 'mock_1789390419229_wwxcs' || r.id === 'mock_1789389316470_i3i84') return false;
-    if (seenIds.has(r.id)) return false;
-    seenIds.add(r.id);
+  return result
+    .map(ensureCorrectMockType)
+    .filter(r => {
+      if (!r || !r.id) return false;
+      if (deletedIds.has(r.id)) return false;
+      if (r.id === 'mock_1789390419229_wwxcs' || r.id === 'mock_1789389316470_i3i84') return false;
+      if (seenIds.has(r.id)) return false;
+      seenIds.add(r.id);
 
-    // If two reports have different IDs, only treat them as duplicate if they share the exact
-    // non-generic title AND identical score AND identical date AND platform:
-    const normTitle = normalizeTestTitle(r.title);
-    if (!isGenericTestTitle(r.title)) {
-      const exactSig = `${r.platform || ''}|${normTitle}|${r.type}|${r.totalScore}|${r.date || ''}`;
-      if (seenExactSignatures.has(exactSig)) return false;
-      seenExactSignatures.add(exactSig);
-    }
+      // If two reports have different IDs, only treat them as duplicate if they share the exact
+      // non-generic title AND identical score AND identical date AND platform:
+      const normTitle = normalizeTestTitle(r.title);
+      if (!isGenericTestTitle(r.title)) {
+        const exactSig = `${r.platform || ''}|${normTitle}|${r.type}|${r.totalScore}|${r.date || ''}`;
+        if (seenExactSignatures.has(exactSig)) return false;
+        seenExactSignatures.add(exactSig);
+      }
 
-    return true;
-  });
+      return true;
+    });
 }

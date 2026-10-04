@@ -12,7 +12,8 @@ export function initReportMap(reports?: MockScoreReport[]) {
   const source = reports && reports.length > 0 ? reports : (initialMockReports as unknown as MockScoreReport[]);
   source.forEach(r => {
     if (!r) return;
-    const t: 'full' | 'sectional' = r.type === 'sectional' ? 'sectional' : 'full';
+    const isFull = r.type === 'full' || (r.totalQuestions && r.totalQuestions >= 70) || /\[Sectional\s*Timing\]/i.test(r.title || '') || (r.sections && Object.keys(r.sections).length >= 3);
+    const t: 'full' | 'sectional' = isFull ? 'full' : (r.type === 'sectional' ? 'sectional' : 'full');
     if (r.id) reportTypeCache.set(String(r.id).trim().toLowerCase(), t);
     if (r.title) reportTypeCache.set(String(r.title).trim().toLowerCase(), t);
   });
@@ -25,7 +26,8 @@ export function initReportMap(reports?: MockScoreReport[]) {
       if (Array.isArray(parsed)) {
         parsed.forEach((r: any) => {
           if (!r) return;
-          const t: 'full' | 'sectional' = r.type === 'sectional' ? 'sectional' : 'full';
+          const isFull = r.type === 'full' || (r.totalQuestions && r.totalQuestions >= 70) || /\[Sectional\s*Timing\]/i.test(r.title || '') || (r.sections && Object.keys(r.sections).length >= 3);
+          const t: 'full' | 'sectional' = isFull ? 'full' : (r.type === 'sectional' ? 'sectional' : 'full');
           if (r.id) reportTypeCache.set(String(r.id).trim().toLowerCase(), t);
           if (r.title) reportTypeCache.set(String(r.title).trim().toLowerCase(), t);
         });
