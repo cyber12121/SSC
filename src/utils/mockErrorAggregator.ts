@@ -39,11 +39,44 @@ export interface AggregateOptions {
   testScopeFilter?: TestScopeFilter;
   gkFilter?: string;
   selectedSubject?: string | null;
+  deletedQuestionIds?: Set<string>;
 }
 
 // In-memory cache for bundled mock questions
 let cachedBundledQuestions: any[] | null = null;
 let bundledPromise: Promise<any[]> | null = null;
+
+export function getDeletedQuestionIds(): Set<string> {
+  try {
+    const raw = safeStorage.getItem('cgl_deleted_question_ids');
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        return new Set(parsed.map((s: string) => String(s).trim().toLowerCase()));
+      }
+    }
+  } catch {}
+  return new Set();
+}
+
+export function evictDeletedQuestionFromAggregator(questionId?: string, questionText?: string): void {
+  const qIdLower = questionId ? String(questionId).toLowerCase().trim() : '';
+  const qTextLower = questionText ? questionText.trim().toLowerCase() : '';
+  const coreLower = qTextLower ? qTextLower.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+
+  if (cachedBundledQuestions && Array.isArray(cachedBundledQuestions)) {
+    cachedBundledQuestions = cachedBundledQuestions.filter((q: any) => {
+      const thisId = q.id ? String(q.id).toLowerCase().trim() : '';
+      const thisText = (q.question || q.questionText || '').trim().toLowerCase();
+      const thisCore = thisText ? thisText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+
+      if (qIdLower && thisId === qIdLower) return false;
+      if (qTextLower && thisText === qTextLower) return false;
+      if (coreLower && thisCore && coreLower === thisCore) return false;
+      return true;
+    });
+  }
+}
 
 export async function loadAllBundledMockQuestions(): Promise<any[]> {
   if (cachedBundledQuestions) return cachedBundledQuestions;
@@ -51,6 +84,18 @@ export async function loadAllBundledMockQuestions(): Promise<any[]> {
 
   bundledPromise = (async () => {
     const deletedIds = getDeletedMockIds();
+    const deletedQIds = getDeletedQuestionIds();
+
+    const isQDeleted = (q: any) => {
+      const qId = q.id ? String(q.id).toLowerCase().trim() : '';
+      const qText = (q.question || q.questionText || '').trim().toLowerCase();
+      const core = qText ? qText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+      return (
+        (qId && deletedQIds.has(qId)) ||
+        (qText && deletedQIds.has(qText)) ||
+        (core && deletedQIds.has(core))
+      );
+    };
 
     // 1. Fast path: single network request from backend cache (~20ms)
     try {
@@ -60,7 +105,8 @@ export async function loadAllBundledMockQuestions(): Promise<any[]> {
         if (Array.isArray(list) && list.length > 0) {
           const filtered = list.filter((q: any) => {
             const mId = q.mockId || q.testId;
-            return !mId || !deletedIds.has(mId);
+            if (mId && deletedIds.has(mId)) return false;
+            return !isQDeleted(q);
           });
           cachedBundledQuestions = filtered;
           return filtered;
@@ -82,7 +128,8 @@ export async function loadAllBundledMockQuestions(): Promise<any[]> {
           const nonDeleted = list
             .filter((q: any) => {
               const mId = q.mockId || q.testId || fileId;
-              return !mId || !deletedIds.has(mId);
+              if (mId && deletedIds.has(mId)) return false;
+              return !isQDeleted(q);
             })
             .map((q: any) => ({
               ...q,
@@ -111,6 +158,7 @@ export function getAllCachedMockQuestions(): any[] {
   const cachedMockQuestions: any[] = [];
   try {
     const deletedMockIds = getDeletedMockIds();
+    const deletedQIds = getDeletedQuestionIds();
     const allKeys = safeStorage.getAllKeys();
     for (const key of allKeys) {
       if (key && key.startsWith('cgl_mock_questions_')) {
@@ -124,7 +172,14 @@ export function getAllCachedMockQuestions(): any[] {
               const valid = parsed
                 .filter((q: any) => {
                   const qMId = q.mockId || q.testId || mId;
-                  return !deletedMockIds.has(qMId);
+                  if (deletedMockIds.has(qMId)) return false;
+                  const qId = q.id ? String(q.id).toLowerCase().trim() : '';
+                  const qText = (q.question || q.questionText || '').trim().toLowerCase();
+                  const core = qText ? qText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+                  if (qId && deletedQIds.has(qId)) return false;
+                  if (qText && deletedQIds.has(qText)) return false;
+                  if (core && deletedQIds.has(core)) return false;
+                  return true;
                 })
                 .map((q: any) => ({
                   ...q,
@@ -162,9 +217,11 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     bundledQuestions = getCachedBundledQuestionsSync(),
     testScopeFilter = 'all',
     gkFilter = 'all',
-    selectedSubject = null
+    selectedSubject = null,
+    deletedQuestionIds
   } = options;
 
+  const deletedQuestionSet = deletedQuestionIds || getDeletedQuestionIds();
   const canonicalSubjects = ['Mathematics', 'Reasoning', 'English', 'General Awareness'];
   const globalRcaStore = getGlobalRcaStore();
   const cachedUserQuestions = getAllCachedMockQuestions();
@@ -227,14 +284,26 @@ export function aggregateMockErrors(options: AggregateOptions): AggregatedMockDa
     const mId = q.mockId || q.testId;
     if (mId && deletedMockIds.has(mId)) return;
 
-    const subject = normalizeSubjectName(q.subject || q.section || defaultSubject);
     const qText = (q.question || q.questionText || '').trim();
     if (!qText && !q.id) return;
 
-    // Use core alphanumeric signature to avoid duplicate questions caused by minor LaTeX syntax differences
+    const qTextLower = qText.toLowerCase();
+    const qIdLower = q.id ? String(q.id).toLowerCase().trim() : '';
     const coreText = qText
       ? qText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
       : '';
+
+    // Permanently filter out deleted questions
+    if (
+      (qIdLower && deletedQuestionSet.has(qIdLower)) ||
+      (qTextLower && deletedQuestionSet.has(qTextLower)) ||
+      (coreText && deletedQuestionSet.has(coreText))
+    ) {
+      return;
+    }
+
+    const subject = normalizeSubjectName(q.subject || q.section || defaultSubject);
+
     const dedupKey = (coreText.length >= 12
       ? `${subject}|${coreText.slice(0, 100)}`
       : (qText ? `${subject}|${qText.toLowerCase()}` : String(q.id || ''))).slice(0, 160);

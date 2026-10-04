@@ -1104,8 +1104,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           const deletedSet = new Set(deletedArr.map(s => String(s).trim().toLowerCase()));
           list = list.filter(item => {
             const t = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+            const core = t ? t.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
             const id = item.id ? String(item.id).trim().toLowerCase() : '';
-            return !deletedSet.has(t) && (!id || !deletedSet.has(id));
+            return !deletedSet.has(t) && (!id || !deletedSet.has(id)) && (!core || !deletedSet.has(core));
           });
         }
       }

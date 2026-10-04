@@ -35,9 +35,9 @@ import { getGrammarPdfUrl } from './utils/grammarPdfs';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
-import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap, matchesSillySubFilter, SILLY_SUB_TYPES, initGlobalRcaStoreFromIdb, syncRcaFromFirestore } from './utils/rcaHelper';
+import { findQuestionRca, RCA_TAG_CONFIG, loadBundledMockRcaMap, matchesSillySubFilter, SILLY_SUB_TYPES, initGlobalRcaStoreFromIdb, syncRcaFromFirestore, syncRcaToFirestore } from './utils/rcaHelper';
 import { RCATagType, RCAClassification } from './types';
-import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
+import { loadAllBundledMockQuestions, aggregateMockErrors, evictDeletedQuestionFromAggregator } from './utils/mockErrorAggregator';
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
 import { SillyMistakesAggregateView } from './components/rca/SillyMistakesAggregateView';
 import { ThemeSelector } from './components/ThemeSelector';
@@ -846,12 +846,14 @@ export default function App() {
     if (!question) return;
 
     const qTextClean = question.question.trim().toLowerCase();
-    const qId = activeChapter ? getQuestionId(activeChapter, question) : (question.id || qTextClean);
+    const coreText = qTextClean ? qTextClean.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+    const qId = (view === 'quiz' && activeChapter) ? getQuestionId(activeChapter, question) : (question.id || qTextClean);
 
-    // If deleting during a Mistakes Drill, ONLY remove it from the Mistake Notebook!
+    // If deleting during an active Mistakes Drill in quiz mode, ONLY remove it from the Mistake Notebook!
     const isMistakeDrill =
-      activeChapter?.section === 'mistakes_drill' ||
-      (activeChapter?.chapter_title || '').toLowerCase().includes('mistakes drill');
+      view === 'quiz' &&
+      (activeChapter?.section === 'mistakes_drill' ||
+       (activeChapter?.chapter_title || '').toLowerCase().includes('mistakes drill'));
 
     if (isMistakeDrill) {
       // 1. Remove from activeChapter questions so current quiz continues without it
@@ -927,16 +929,53 @@ export default function App() {
     // 1. Immediately update deletedQuestionIds set & localStorage so it's deleted everywhere
     setDeletedQuestionIds(prev => {
       const next = new Set(prev);
-      next.add(qId);
-      next.add(qTextClean);
-      if (question.id) next.add(question.id);
+      if (qId) next.add(String(qId).toLowerCase().trim());
+      if (question.id) next.add(String(question.id).toLowerCase().trim());
+      if (qTextClean) next.add(qTextClean);
+      if (coreText) next.add(coreText);
       try {
         safeStorage.setItem('cgl_deleted_question_ids', JSON.stringify(Array.from(next)));
       } catch { }
       return next;
     });
 
-    // 2. Remove from activeChapter immediately for instant UI reactivity
+    // 2. Evict from memory in mock aggregator
+    evictDeletedQuestionFromAggregator(question.id, qTextClean);
+
+    // 3. Update bundledMockQuestions state
+    setBundledMockQuestions(prev => prev.filter(q => {
+      const thisId = q.id ? String(q.id).toLowerCase().trim() : '';
+      const thisText = (q.question || q.questionText || '').trim().toLowerCase();
+      const thisCore = thisText ? thisText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+      if (question.id && thisId === String(question.id).toLowerCase().trim()) return false;
+      if (qId && thisId === String(qId).toLowerCase().trim()) return false;
+      if (thisText === qTextClean) return false;
+      if (coreText && thisCore === coreText) return false;
+      return true;
+    }));
+
+    // 4. Update rawData state so mockData re-derives immediately
+    setRawData(prev => {
+      const nextMock: SubjectData = {};
+      Object.entries(prev.rawMockData || {}).forEach(([sub, chs]) => {
+        nextMock[sub] = (chs as Chapter[] || []).map(ch => ({
+          ...ch,
+          questions: (ch.questions || []).filter(q => {
+            const thisId = q.id ? String(q.id).toLowerCase().trim() : '';
+            const thisText = (q.question || (q as any).questionText || '').trim().toLowerCase();
+            const thisCore = thisText ? thisText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+            if (question.id && thisId === String(question.id).toLowerCase().trim()) return false;
+            if (qId && thisId === String(qId).toLowerCase().trim()) return false;
+            if (thisText === qTextClean) return false;
+            if (coreText && thisCore === coreText) return false;
+            return true;
+          })
+        }));
+      });
+      return { ...prev, rawMockData: nextMock };
+    });
+
+    // 5. Remove from activeChapter immediately if in quiz mode
     if (activeChapter) {
       const updatedQuestions = activeChapter.questions.filter(q => {
         const thisId = getQuestionId(activeChapter, q);
@@ -949,12 +988,18 @@ export default function App() {
       });
     }
 
-    // 3. Immediately update reviewResult if currently reviewing
+    // 6. Immediately update reviewResult if currently reviewing
     setReviewResult(prev => {
       if (!prev || !prev.questionDetails) return prev;
       const updatedDetails = prev.questionDetails.filter(qd => {
+        const thisId = qd.question?.id ? String(qd.question.id).toLowerCase().trim() : '';
         const thisText = (qd.question?.question || '').trim().toLowerCase();
-        return thisText !== qTextClean && (!question.id || qd.question?.id !== question.id);
+        const thisCore = thisText ? thisText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+        if (question.id && thisId === String(question.id).toLowerCase().trim()) return false;
+        if (qId && thisId === String(qId).toLowerCase().trim()) return false;
+        if (thisText === qTextClean) return false;
+        if (coreText && thisCore === coreText) return false;
+        return true;
       });
       return {
         ...prev,
@@ -963,12 +1008,18 @@ export default function App() {
       };
     });
 
-    // 4. Update userResults so previous results state don't hold the deleted question
+    // 7. Update userResults so previous results state don't hold the deleted question
     setUserResults(prev => prev.map(res => {
       if (!res.questionDetails) return res;
       const updatedDetails = res.questionDetails.filter(qd => {
+        const thisId = qd.question?.id ? String(qd.question.id).toLowerCase().trim() : '';
         const thisText = (qd.question?.question || '').trim().toLowerCase();
-        return thisText !== qTextClean && (!question.id || qd.question?.id !== question.id);
+        const thisCore = thisText ? thisText.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+        if (question.id && thisId === String(question.id).toLowerCase().trim()) return false;
+        if (qId && thisId === String(qId).toLowerCase().trim()) return false;
+        if (thisText === qTextClean) return false;
+        if (coreText && thisCore === coreText) return false;
+        return true;
       });
       return {
         ...res,
@@ -977,10 +1028,10 @@ export default function App() {
       };
     }));
 
-    // 5. Also remove from bookmarks if present
+    // 8. Also remove from bookmarks if present
     setBookmarks(prev => prev.filter(b => b.question.question.trim().toLowerCase() !== qTextClean));
 
-    // 6. Purge from all cached mock questions (cgl_mock_questions_*) and sync to backend
+    // 9. Purge from all cached mock questions (cgl_mock_questions_*) and sync to backend
     try {
       const allKeys = safeStorage.getAllKeys();
       for (const key of allKeys) {
@@ -992,7 +1043,12 @@ export default function App() {
               if (Array.isArray(list)) {
                 const updated = list.filter((q: any) => {
                   const t = (q.question || q.questionText || '').trim().toLowerCase();
-                  return t !== qTextClean && (!question.id || q.id !== question.id);
+                  const c = t ? t.replace(/\\[a-zA-Z]+/g, ' ').replace(/[^a-zA-Z0-9]/g, '') : '';
+                  const thisId = q.id ? String(q.id).toLowerCase().trim() : '';
+                  if (question.id && thisId === String(question.id).toLowerCase().trim()) return false;
+                  if (t === qTextClean) return false;
+                  if (coreText && c === coreText) return false;
+                  return true;
                 });
                 if (updated.length !== list.length) {
                   safeStorage.setItem(key, JSON.stringify(updated));
@@ -1010,31 +1066,55 @@ export default function App() {
       }
     } catch { }
 
-    // 7. Purge from cgl_rca_global_store
+    // 10. Purge from cgl_rca_global_store and sync to Firestore
     try {
-      const globalRaw = window.localStorage?.getItem('cgl_rca_global_store');
+      const globalRaw = safeStorage.getItem('cgl_rca_global_store');
       if (globalRaw) {
         const globalStore = JSON.parse(globalRaw);
         if (question.id) delete globalStore[question.id];
         delete globalStore[qId];
         delete globalStore[qTextClean];
-        window.localStorage?.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        if (coreText) delete globalStore[coreText];
+        safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
+        syncRcaToFirestore(globalStore).catch(() => {});
       }
     } catch { }
 
-    // 8. Persist to Firestore deleted_questions collection
+    // 11. Remove from Mistake Notebook
+    try {
+      const rawOpts = extractOptionsArray(question.options);
+      const targetKey = getDedupeKey(question.question, question.id, rawOpts);
+      const nbRaw = safeStorage.getItem('cgl_user_mistake_notebook');
+      if (nbRaw) {
+        const list = JSON.parse(nbRaw);
+        if (Array.isArray(list)) {
+          const filtered = list.filter((m: any) => {
+            const mKey = getDedupeKey(m.question, m.id, m.options);
+            return m.id !== question.id && mKey !== targetKey;
+          });
+          safeStorage.setItem('cgl_user_mistake_notebook', JSON.stringify(filtered));
+        }
+      }
+    } catch {}
+
+    // 12. Persist to Firestore deleted_questions collection
     try {
       await addDoc(collection(db, 'deleted_questions'), {
-        questionId: qId,
+        questionId: question.id || qId,
         questionText: qTextClean,
-        chapter_title: activeChapter?.chapter_title || 'Unknown',
-        subject: activeChapter?.subject || 'Unknown',
+        coreText,
+        chapter_title: activeChapter?.chapter_title || reviewResult?.chapter_title || 'Unknown',
+        subject: activeChapter?.subject || reviewResult?.subject || 'Unknown',
         deletedBy: user?.uid || 'user',
         deletedAt: new Date().toISOString()
       });
     } catch (error) {
       console.warn('Could not sync deleted question to remote DB (offline/rules):', error);
     }
+
+    // 13. Force immediate recalculation of all aggregated mock errors data
+    setRcaVersion(v => v + 1);
+    window.dispatchEvent(new CustomEvent('cgl_rca_updated'));
   };
 
   const handleLogin = async () => {
@@ -2057,9 +2137,10 @@ export default function App() {
       bundledQuestions: bundledMockQuestions,
       testScopeFilter: mockTestTypeFilter,
       gkFilter: mockGKFilter,
-      selectedSubject
+      selectedSubject,
+      deletedQuestionIds
     });
-  }, [mockData, bundledMockQuestions, mockTestTypeFilter, mockGKFilter, selectedSubject, rcaVersion]);
+  }, [mockData, bundledMockQuestions, mockTestTypeFilter, mockGKFilter, selectedSubject, rcaVersion, deletedQuestionIds]);
 
   // Test scope question counts for currently selected subject in Mock Errors
   const mockScopeCounts = useMemo(() => {
