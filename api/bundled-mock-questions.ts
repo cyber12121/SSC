@@ -34,7 +34,7 @@ export function buildServerBundledMockQuestions(): any[] {
 }
 
 export function getOrBuildBundledMockQuestions(): any[] {
-  if (!cachedBundledQuestions) {
+  if (process.env.NODE_ENV !== 'production' || !cachedBundledQuestions) {
     cachedBundledQuestions = buildServerBundledMockQuestions();
   }
   return cachedBundledQuestions;

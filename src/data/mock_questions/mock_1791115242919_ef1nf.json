@@ -44,7 +44,7 @@
       "sillyMistakeNote": "between two letters means xcvy between xy two letters sometime place value",
       "classifiedAt": "2026-10-04T13:21:23.973Z"
     },
-    "solution": "",
+    "solution": "D A Y L I G H T S\n\n↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓\n\nC Y X K G F G S R\n\nTransformed = CYXKGFGSR. third from the left = X, fifth from the left = G → between them: K = > One",
     "questionText": "Transform the letters in DAYLIGHTS: apply \"shift each vowel backward by 2\" to vowels and \"shift each consonant backward by 1\" to consonants.\n\nAfter transformation, how many letters lie between the third from the left and the fifth from the left of the new string?",
     "correctOption": "A"
   },
@@ -81,7 +81,7 @@
     "errorType": "wrong",
     "timeSpent": 81,
     "userTime": 81,
-    "solution": "",
+    "solution": "The number in the third row in each column is one more than the square of the sum of first two numbers in that column.\n\n5 + 3 = 8; $8^2 = 64$; $64 + 1 = 65$\n7 + 4 = 11; $11^2 = 121$; $121 + 1 = 122$\n3 + 2 = 5; $5^2 = 25$; $25 + 1 = 26$",
     "rca": {
       "tag": "C",
       "tagName": "Conceptual Gap",
@@ -128,7 +128,7 @@
     "errorType": "speed_issue",
     "timeSpent": 55,
     "userTime": 55,
-    "solution": "",
+    "solution": "It is given that, $(48 \\div 3) \\times 2 + 56 - 34 - 2 \\times 3$ = $32 + 22 - 6$ = 48",
     "rca": {
       "tag": "T",
       "tagName": "Time / Ego Trap",
@@ -175,7 +175,7 @@
     "errorType": "speed_issue",
     "timeSpent": 31,
     "userTime": 31,
-    "solution": "",
+    "solution": "Statements: Some Thread is Yarn\n\nNo Yarn is Cord\n\nSome Thread is not Cord: Some Thread is Yarn. No Yarn is Cord. Thus, the Thread which is Yarn is not Cord. So, conclusion I is true.\nSome Yarn is Thread: Some Thread is Yarn. Thus, Some Yarn is Thread. So, conclusion II is true.\nHence, both conclusions I and II follow.",
     "rca": {
       "tag": "T",
       "tagName": "Time / Ego Trap",
@@ -222,7 +222,7 @@
     "errorType": "speed_issue",
     "timeSpent": 37,
     "userTime": 37,
-    "solution": "",
+    "solution": "$259 + 11 = 270$\n\n$270 + 13 = 283$\n\n$283 + 15 = 298$\n\n$298 + 17 = 315$\n\n$315 + 19 = 334$\n\nThus, the answer is option A.",
     "rca": {
       "tag": "T",
       "tagName": "Time / Ego Trap",
@@ -269,7 +269,17 @@
     "errorType": "wrong",
     "timeSpent": 24,
     "userTime": 24,
-    "solution": "",
+    "solution": "Only argument II is strong. (I) is not a strong argument as uniforms do not necessarily make students identify with their colleges. (II) is strong as the personal choices of a person heavily depend on what he/she wears and so giving a uniform might make the young adults feel like they are compromising with their freedom. Hence, (D) is the right answer.",
+    "rca": {
+      "tag": "C",
+      "tagName": "Conceptual Gap",
+      "classifiedAt": "2026-10-04T13:23:53.779Z"
+    },
+    "rcaClassification": {
+      "tag": "C",
+      "tagName": "Conceptual Gap",
+      "classifiedAt": "2026-10-04T13:23:53.779Z"
+    },
     "questionText": "The following question consists of a statement and two contradictory arguments. Decide which of the argument is strong.\n\nShould all colleges have uniforms for all the students?\n\nI. Yes, uniforms will make students identify with their colleges more.\n\nII. No, students should be given the freedom to wear what they want.",
     "correctOption": "D"
   },
@@ -306,7 +316,7 @@
     "errorType": "speed_issue",
     "timeSpent": 63,
     "userTime": 63,
-    "solution": "",
+    "solution": "B is seated third to the left of G. F is seated second to the right of G.\n\nA is seated to the immediate left of D. C is not an immediate neighbour of G.\n\n2 people are seated between F and A when counted from the left of A.",
     "questionText": "Seven people - A, B, C, D, E, F and G are seated around a circular table facing inwards (not necessarily in the same order). B is seated third to the left of G. F is seated second to the right of G. A is seated to the immediate left of D. C is not an immediate neighbour of G.\n\nHow many people are seated between F and A when counted from the left of A?",
     "correctOption": "B"
   },
@@ -343,7 +353,17 @@
     "errorType": "speed_issue",
     "timeSpent": 47,
     "userTime": 47,
-    "solution": "",
+    "solution": "The cluster follows a reverse pattern with alternate subtraction and addition: VEGM to JKBZ: M - 3 = J, G + 4 = K, E - 3 = B, V + 4 = Z\n\nHTFP to MJQL: P - 3 = M, F + 4 = J, T - 3 = Q, H + 4 = L\nApplying the same logic to UKPS: S - 3 = P\nP + 4 = T\nK - 3 = H\nU + 4 = Y\n\nThus, UKPS is related to PTHY.",
+    "rca": {
+      "tag": "T",
+      "tagName": "Time / Ego Trap",
+      "classifiedAt": "2026-10-04T13:24:15.905Z"
+    },
+    "rcaClassification": {
+      "tag": "T",
+      "tagName": "Time / Ego Trap",
+      "classifiedAt": "2026-10-04T13:24:15.905Z"
+    },
     "questionText": "Select the option that is related to the fifth letter-cluster in the same way as the second letter-cluster is related to the first letter-cluster and the fourth letter-cluster is related to the third letter-cluster.\n\nVEGM : JKBZ :: HTFP : MJQL :: UKPS : ?",
     "correctOption": "C"
   },
@@ -380,7 +400,7 @@
     "errorType": "unattempted",
     "timeSpent": 39,
     "userTime": 39,
-    "solution": "",
+    "solution": "This is an alternating series.\n\nFirst alternating sequence: 23 + 28 = 51, 51 + 28 = 79, 79 + 28 = 107, 107 + 28 = 135\nSecond alternating sequence: 36 + 19 = 55, 55 + 19 = 74, 74 + 19 = 93.\nTherefore, the missing number is 107.",
     "questionText": "Select the option corresponding to the number which can replace the question mark (?) in the given series.\n\n23, 36, 51, 55, 79, 74, ?, 93, 135",
     "correctOption": "D"
   },
@@ -417,7 +437,7 @@
     "errorType": "wrong",
     "timeSpent": 18,
     "userTime": 18,
-    "solution": "",
+    "solution": "It is given that, $A = S < R = V < C \\geq B = L$\n\nConclusion I: $C \\geq L$ follows as $C \\geq B = L$, hence $C \\geq L$.\nConclusion II: $S < B$ does not follow as the relationship between S and B cannot be uniquely determined due to opposite signs or indeterminate blocks.\nHence, option (B) is correct.",
     "questionText": "Read the given statement and conclusions carefully. Decide which of the given conclusions is/are definitely true from the statement.\n\nStatement: $A = S < R = V < C \\geq B = L$\nConclusion I: $C \\geq L$\nConclusion II: $S < B$",
     "correctOption": "B"
   },
@@ -454,7 +474,7 @@
     "errorType": "wrong",
     "timeSpent": 31,
     "userTime": 31,
-    "solution": "",
+    "solution": "Union Minister for Environment, Forest and Climate Change, Shri Bhupender Yadav inaugurated the 'Lion' Species Spotlight Event at Sasan Gir, Gujarat. The programme was organised as part of the series of Pre - Summit Species Events under the International Big Cat Alliance (IBCA) Summit 2026. Shri Yadav said the 'Lion' Species Spotlight Event highlighted the global conservation status of lions and India's initiatives towards species conservation.",
     "questionText": "Which of the following species-focused conservation programmes was inaugurated by Union Environment Minister Bhupender Yadav at Sasan Gir, Gujarat, as part of the Pre-Summit Species Events under the International Big Cat Alliance (IBCA) Summit 2026 in May 2026?",
     "correctOption": "B"
   },
@@ -491,7 +511,7 @@
     "errorType": "wrong",
     "timeSpent": 14,
     "userTime": 14,
-    "solution": "",
+    "solution": "Chari dance is one of the popular folk dances in Rajasthan India. This dance describes the art of collecting water in a chari or pot by the Rajasthani womens in their day to day life. The woman's travels miles to collect water for the families and the joy is reflected through this Chari dance.",
     "questionText": "Which of the following folk dances in Rajasthan describes the art of collecting water in a pot by the Rajasthani womens in their day to day life?",
     "correctOption": "D"
   },
@@ -528,7 +548,7 @@
     "errorType": "unattempted",
     "timeSpent": 12,
     "userTime": 12,
-    "solution": "",
+    "solution": "Statement I is correct: Places having a municipality, municipal corporation, cantonment board, notified town area committee or similar statutory urban body are classified as Statutory Towns.\nStatement II is correct: For a place to qualify as a Census Town, three conditions must be satisfied simultaneously: a population of at least 5, 000, at least 75% of the male main working population engaged in non - agricultural pursuits, and a population density of at least 400 persons per square kilometre.",
     "questionText": "Consider the following statements regarding the criteria adopted by the Census of India for defining urban settlements:\n\nI. All places with a municipality, municipal corporation, cantonment board, or notified town area committee are automatically classified as Statutory Towns.\n\nII. A Census Town must satisfy a minimum population of 5,000, at least 75% of the male main working population engaged in non-agricultural pursuits, and a density of at least 400 persons per square kilometre.\n\nWhich of the statements given above is/are correct?",
     "correctOption": "C"
   },
@@ -565,7 +585,7 @@
     "errorType": "unattempted",
     "timeSpent": 8,
     "userTime": 8,
-    "solution": "",
+    "solution": "Under Lord Warren Hastings (Governor - General from 1813 to 1823) a new policy of \\\"paramountcy\\\" was initiated. Now the Company claimed that its authority was paramount or supreme, hence its power was greater than that of Indian states.",
     "questionText": "Under which of the following Governor-General the policy of \"paramountcy\" was initiated?",
     "correctOption": "A"
   },
@@ -602,7 +622,7 @@
     "errorType": "wrong",
     "timeSpent": 19,
     "userTime": 19,
-    "solution": "",
+    "solution": "Traveling (also colloquially called walking or steps) is a rules violation in basketball that occurs when a player holding the ball illegally moves one or both of their feet without dribbling. Specifically, if a player lifts or moves their designated pivot foot before releasing the ball to pass, shoot, or start a dribble, traveling is called.",
     "questionText": "In Basketball, which of the following violations occurs when a player moves their pivot foot without dribbling the ball?",
     "correctOption": "C"
   },
@@ -639,7 +659,7 @@
     "errorType": "wrong",
     "timeSpent": 16,
     "userTime": 16,
-    "solution": "",
+    "solution": "Statement I is incorrect.\n\nThe description given actually refers to final goods, not intermediate goods.\n\nIntermediate goods are goods used as inputs in the production of other goods and are transformed during the production process.\n\nFinal goods pass out of the active economic flow after being sold and undergo no further transformation by producers.\n\nStatement II is incorrect.\n\nCapital goods are durable producer goods such as machines, equipment, and factory buildings that are used repeatedly in the production process over several years.\n\nThey are not completely consumed or transformed in a single production cycle like raw materials or intermediate goods.",
     "questionText": "Consider the following statements regarding categories of goods in an economy:\nStatement I: Intermediate goods are final goods that pass out of the active economic flow and undergo no further transformation by producers.\nStatement II: Capital goods are completely consumed or transformed within a single cycle of the production process like raw materials.\n\nWhich of the statements given above is/are correct?",
     "correctOption": "D"
   },
@@ -676,7 +696,7 @@
     "errorType": "wrong",
     "timeSpent": 15,
     "userTime": 15,
-    "solution": "",
+    "solution": "Ashtadiggajas is the collective name of the eight Telugu poets in the court of Emperor Krishna Deva Raya who ruled the Vijayanagara Empire from 1509 to 1529. These eight poets were regarded as the eight pillars of Krishna Deva Raya's literary Assembly. The Period of Ashtadiggajas is called Prabandha age. These poets were: · Allasani Peddanna\n\n· Ayyalaraju Ramambhadrudu\n\n· Ramarajabhushanudu\n\n· Madayyagari Mallana\n\n· Tenali Ramakrishna\n\n· Nandi Thimmana\n\n· Dhurjaty\n\n· Pingali Surana",
     "questionText": "Which of the following empire is associated with the 'Ashtadiggajas'?",
     "correctOption": "B"
   },
@@ -713,7 +733,7 @@
     "errorType": "wrong",
     "timeSpent": 33,
     "userTime": 33,
-    "solution": "",
+    "solution": "The Indian Railways has launched a customised app for women employees to lodge complaints about sexual harassment at the workplace. Sexual Harassment Incident Notification for Empowerment (SHINE) was made operational on the occasion of the International Women's Day on March 8, 2026. This facility would be in addition to the existing internal complaints committee formed in every organisation in compliance with the Visakha guidelines of the Supreme Court in 1997 and Government of India instructions to protect women at workplace issued from time to time. With SHINE, women employees can lodge complaints through the Human Resources Management System (HRMS). According to railway sources, SHINE also allows reporting incidents or complaints on behalf of outsiders (visitors), contractual staff, students and others who may not have access to the app. SHINE had been developed to make the mechanism more confidential and to be addressed in an expeditious manner.",
     "questionText": "In March 2026, the Indian Railways has launched a 'SHINE' app for women employees to lodge complaints about sexual harassment at the workplace on the occasion of International Women's Day. What is the correct expansion of the acronym SHINE?",
     "correctOption": "A"
   },
@@ -750,7 +770,7 @@
     "errorType": "wrong",
     "timeSpent": 12,
     "userTime": 12,
-    "solution": "",
+    "solution": "Geeta Phogat won gold medal in wrestling at the Commonwealth Games in 2010.\n\nShe achieved this historic feat in the women's freestyle wrestling event at the Delhi Games, becoming the first Indian woman wrestler to win gold at the Commonwealth Games.\n\nGeeta Phogat did defeat Australia's Emily Bensted in the final, the match was in the 55 kg freestyle category, not 65 kg.\n\nFurther Insights: · Geeta Phogat hails from Balali village in Haryana, coached by her father Mahavir Singh Phogat.\n\n· Her gold medal win was featured in the Bollywood film Dangal.\n\n· She was also the first Indian female wrestler to qualify for the Olympics.\n\n· Emily Bensted was the Australian finalist whom she defeated in the 55 kg category.",
     "questionText": "Consider the following statements regarding Geeta Phogat's performance at the 2010 Commonwealth Games:\n\n1) She became the first Indian woman to win a gold medal in wrestling at any Commonwealth Games.\n\n2) She secured the top podium finish by defeating Australia's Emily Bensted in the final of the 65 kg freestyle category.\n\nWhich of the statements given above is/are correct?",
     "correctOption": "A"
   },
@@ -787,7 +807,7 @@
     "errorType": "unattempted",
     "timeSpent": 4,
     "userTime": 4,
-    "solution": "",
+    "solution": "Tyagaraja (1767 - 1847) is a towering figure in the history of Carnatic music (the classical music of South India). His contributions are central to the art form as we know it today.\n\nKey Contributions of Tyagaraja: - The Trinity of Carnatic Music: Along with Muthuswami Dikshitar and Syama Sastri, Tyagaraja is one of the \"Trinity\" (Trimurti) who shaped the modern Carnatic tradition. - The Kriti Format: He perfected the kriti (a devotional song format), focusing on the structure of Pallavi, Anupallavi, and Charanam. - Devotion to Rama: Most of his compositions are deeply spiritual and dedicated to Lord Rama. His works, such as the Pancharatna Kritis (Five Gems), are celebrated for their poetic beauty and technical complexity. - Innovations in Raga: He is credited with introducing many new ragas and popularizing the use of Sangatis - variations on a melodic line that gradually reveal the depth of a raga.\nWhy the other options are incorrect: - A: This describes Vishnu Narayan Bhatkhande, who codified the Thaat system in Hindustani music. - C: This is traditionally attributed to Amir Khusrau, a Sufi musician and poet of the 13th century. - D: This refers to the evolution of Hindustani music styles, often associated with figures like Niyamat Khan (Sadarang).",
     "questionText": "Which of the following best describes the contribution of Tyagaraja to Indian classical music?",
     "correctOption": "B"
   },
@@ -824,7 +844,7 @@
     "errorType": "unattempted",
     "timeSpent": 4,
     "userTime": 4,
-    "solution": "",
+    "solution": "Statement I is correct\n\nBlack soils are generally clayey and possess a high capacity to retain moisture.\n\nDuring the wet season, these soils absorb water and swell, whereas in the dry season they shrink and develop wide and deep cracks.\n\nStatement II is correct\n\nBlack soils contain important mineral constituents such as lime, iron, magnesia and alumina.\n\nHowever, they are generally deficient in phosphoric acid, nitrogen and organic matter.\n\nStatement III is correct\n\nThe moisture - retaining and nutrient characteristics of black soils make them suitable for several crops.\n\nCotton is particularly associated with black soil, while crops such as sugarcane, jowar and wheat are also cultivated in these soils.\n\nStatement IV is incorrect\n\nTea requires well - drained soil and does not thrive in waterlogged black clay basins.\n\nApple cultivation is mainly associated with suitable temperate climatic conditions and well - drained soils rather than laterite soils as a general rule.",
     "questionText": "Consider the following statements regarding the characteristics and crop suitability of Indian soils:\nStatement I: Black soils exhibit a high moisture-retaining capacity due to their clayey composition, causing them to swell when wet and develop deep cracks when dry.\nStatement II: Black soils are rich in lime, iron, magnesia and alumina, but are generally deficient in phosphoric acid, nitrogen and organic matter.\nStatement III: Owing to their physical and chemical characteristics, black soils are suitable for the cultivation of crops such as cotton, sugarcane, jowar and wheat.\nStatement IV: Tea plants thrive exceptionally well in deep, waterlogged clay basins of black soil regions, whereas apple orchards grow best in the acidic loamy variations of laterite soils.\n\nWhich of the statements given above are correct?",
     "correctOption": "C"
   },
@@ -861,7 +881,7 @@
     "errorType": "unattempted",
     "timeSpent": 11,
     "userTime": 11,
-    "solution": "",
+    "solution": "Dr. Dattatreyudu Nori was awarded the third highest civilian award of India, Padma Bhushan, in 2026.\n\nHe was awarded Padma Shri, the fourth - highest civilian award of India, in 2015 for his contributions in the field of medicine.\n\nHe is an Indian - American radiation oncologist and was appointed as Advisor to Telangana Government (Preventive, Curative and Affordable Cancer Care) on 28 June 2025.",
     "questionText": "Who among the following, appointed as Advisor to Telangana Government (Preventive, Curative and Affordable Cancer Care) in June 2025, received the Padma Bhushan in 2026?",
     "correctOption": "C"
   },
@@ -898,7 +918,7 @@
     "errorType": "wrong",
     "timeSpent": 12,
     "userTime": 12,
-    "solution": "",
+    "solution": "Revenue Deficit refers to the excess of the government's revenue expenditure over its revenue receipts. It indicates that current revenue receipts are insufficient to meet current revenue expenditure. Its standard formula is: Revenue Deficit = Revenue Expenditure - Revenue Receipts.",
     "questionText": "In government budgeting and public finance, which of the following expressions correctly defines the Revenue Deficit?",
     "correctOption": "A"
   },
@@ -935,7 +955,7 @@
     "errorType": "wrong",
     "timeSpent": 6,
     "userTime": 6,
-    "solution": "",
+    "solution": "Girl in White Cotton is the debut novel by Avni Doshi, an American writer of Indian origin. It tells the story of a troubled mother - daughter relationship in Pune, India, and was shortlisted for the 2020 Booker Prize.",
     "questionText": "Which Booker-shortlisted debut novel by Avni Doshi from 2019 tells the story of a troubled mother-daughter relationship in Pune?",
     "correctOption": "C"
   },
@@ -972,7 +992,7 @@
     "errorType": "unattempted",
     "timeSpent": 82,
     "userTime": 82,
-    "solution": "",
+    "solution": "Let the Marked Price, Selling Price and Cost Price of each pen be Rs. $M$, $S$ and $C$ respectively.\n\nAccording to the question, $3S = 5C$\n\n$S : C = 5 : 3 \\quad \\text{--- (1)}$\n\nSimilarly, $3M = 5S$\n\n$M : S = 5 : 3 \\quad \\text{--- (2)}$\n\nFrom (1) and (2), combining the ratios: $M : S : C = 25 : 15 : 9$\n\nHence, Cost Price of 12 pens as a percentage of Marked Price of 17 pens is: $$\\frac{12 \\times 9}{17 \\times 25} \\times 100\\% = \\frac{108}{425} \\times 100\\% \\approx 25.41\\%$$",
     "questionText": "The Selling Price of three pens is equal to the Cost Price of five pens. The Marked Price of three pens is equal to the Selling Price of five pens. The Cost Price of twelve pens is approximately what percentage of the Marked Price of seventeen pens?",
     "correctOption": "C"
   },
@@ -1009,7 +1029,7 @@
     "errorType": "speed_issue",
     "timeSpent": 44,
     "userTime": 44,
-    "solution": "",
+    "solution": "Expanding the terms using standard algebraic identities: $(2m - 3n)^2 + 4(m + n)^2 - (m - 2n)^2$\n\n$= (4m^2 - 12mn + 9n^2) + 4(m^2 + 2mn + n^2) - (m^2 - 4mn + 4n^2)$\n\n$= 4m^2 - 12mn + 9n^2 + 4m^2 + 8mn + 4n^2 - m^2 + 4mn - 4n^2$\n\n$= (4m^2 + 4m^2 - m^2) + (-12mn + 8mn + 4mn) + (9n^2 + 4n^2 - 4n^2)$\n\n$= 7m^2 + 9n^2$",
     "questionText": "What is the value of $(2m - 3n)^2 + 4(m + n)^2 - (m - 2n)^2$?",
     "correctOption": "A"
   },
@@ -1046,7 +1066,7 @@
     "errorType": "speed_issue",
     "timeSpent": 68,
     "userTime": 68,
-    "solution": "",
+    "solution": "First 9 multiples of 12 are: 12, 24, 36, 48, 60, 72, 84, 96, 108\n\nSince these numbers form an arithmetic progression with a common difference of 12, the average is the mean of the first and the last term: Average = $\\frac{12 + 108}{2} = \\frac{120}{2} = 60$\n\nSo, the average number of marbles is 60.",
     "questionText": "Meera placed the first nine multiples of 12 marbles into different jars. What is the average number of marbles per jar?",
     "correctOption": "C"
   },
@@ -1083,7 +1103,7 @@
     "errorType": "wrong",
     "timeSpent": 36,
     "userTime": 36,
-    "solution": "",
+    "solution": "Given expression: $$\\csc^2 \\delta - \\frac{\\cos^2 \\delta - 2 \\cos^4 \\delta}{2 \\sin^4 \\delta - \\sin^2 \\delta}$|\n\nFactor out $\\cos^2 \\delta$ from the numerator and $\\sin^2 \\delta$ from the denominator:\nNumerator $= \\cos^2 \\delta(1 - 2\\cos^2 \\delta)$\nDenominator $= \\sin^2 \\delta(2\\sin^2 \\delta - 1)$\n\nUsing $\\cos^2 \\delta = 1 - \\sin^2 \\delta$:\n$1 - 2\\cos^2 \\delta = 1 - 2(1 - \\sin^2 \\delta) = 2\\sin^2 \\delta - 1$\n\nThus, the fraction simplifies to:\n$$$\\frac{\\cos^2 \\delta (2\\sin^2 \\delta - 1)}{\\sin^2 \\delta (2\\sin^2 \\delta - 1)}$ = \\cot² \\delta$$\n\nNow, substituting back into the original expression:\n$$\\csc² \\delta - \\cot² \\delta = 1$$",
     "questionText": "Evaluate $\\csc^2 \\delta - \\frac{\\cos^2 \\delta - 2 \\cos^4 \\delta}{2 \\sin^4 \\delta - \\sin^2 \\delta}$",
     "correctOption": "D"
   },
@@ -1120,7 +1140,7 @@
     "errorType": "speed_issue",
     "timeSpent": 93,
     "userTime": 93,
-    "solution": "",
+    "solution": "Using the chain rule formula: $$\\frac{M_1 \\times D_1}{W_1} = \\frac{M_2 \\times D_2}{W_2}$$\nSubstitute the given values: $$\\frac{27 \\times 14}{90 \\times 100} = \\frac{24 \\times D_2}{128 \\times 125}$|\n\nSolving for $D_2$:\n$$D_2 = $\\frac{27 \\times 14 \\times 128 \\times 125}{90 \\times 100 \\times 24}$$$\n\n$$D_2 = 28 \\text{ days}$|",
     "questionText": "If 27 workers constructed a $90\\text{ m} \\times 100\\text{ m}$ wall in 14 days, then 24 workers will construct a $128\\text{ m} \\times 125\\text{ m}$ wall in how many days?",
     "correctOption": "C"
   },
@@ -1157,7 +1177,7 @@
     "errorType": "speed_issue",
     "timeSpent": 67,
     "userTime": 67,
-    "solution": "",
+    "solution": "Here, $\\angle C = 90^\\circ$ and $\\angle B = 45^\\circ$.\n\nIn $\\triangle ABC$, using the angle sum property: $$\\angle A = 180^\\circ - 90^\\circ - 45^\\circ = 45^\\circ$$\n\nSince $AD$ is the angle bisector of $\\angle A$: $$\\angle DAC = \\frac{45^\\circ}{2} = 22.5^\\circ$$\n\nNow, in $\\triangle ADC$, $\\angle C = 90^\\circ$, so: $$\\angle CDA = 180^\\circ - 90^\\circ - 22.5^\\circ = 67.5^\\circ$$",
     "questionText": "In a $\\triangle ABC$, $\\angle C$ is a right angle and $\\angle B = 45^\\circ$. If $D$ is a point drawn on the line $BC$ such that $AD$ is an angle bisector of $\\angle A$, then what is the value of $\\angle CDA$?",
     "correctOption": "C"
   },
@@ -1194,7 +1214,7 @@
     "errorType": "speed_issue",
     "timeSpent": 55,
     "userTime": 55,
-    "solution": "",
+    "solution": "Let the monthly income = Rs. $a$\nAmount invested in scheme A = $15\\%$ of $a$ = $0.15a$\nAmount invested in scheme B = $10\\%$ of $a$ = $0.1a$\nAmount invested in scheme C = $20\\%$ of $(a - 0.15a - 0.1a)$ = $0.15a$\nNow, $0.15a - 0.1a = 390$\n\n$a = 7800$",
     "questionText": "Prithvi invested $15\\%$ of his income in scheme A, $10\\%$ of his income in scheme B and $20\\%$ of rest in scheme C. If the difference between his investment in scheme B and C is Rs.390, then find his income.",
     "correctOption": "C"
   },
@@ -1231,7 +1251,7 @@
     "errorType": "speed_issue",
     "timeSpent": 46,
     "userTime": 46,
-    "solution": "",
+    "solution": "Let $n$ = number of sides\nEach interior angle = $\\frac{(n - 2) \\times 180^{\\circ}}{n}$\n\n$165 = \\frac{(n - 2) \\times 180}{n}$\n\n$165n = 180n - 360$\n\n$15n = 360$\n\n$n = 24$\n\nNumber of diagonals = $\\frac{n(n - 3)}{2}$ = $\\frac{24(24 - 3)}{2}$ = $\\frac{24 \\times 21}{2}$ = $252$",
     "questionText": "Each interior angle of a regular polygon is $165^{\\circ}$. How many diagonals does the polygon have?",
     "correctOption": "C"
   },
@@ -1268,7 +1288,7 @@
     "errorType": "unattempted",
     "timeSpent": 6,
     "userTime": 6,
-    "solution": "",
+    "solution": "Area of the rectangular part of the wall = $10\\text{ m} \\times 5\\text{ m} = 50\\text{ m}^2$.\nRadius of the semicircular arch = $\\frac{10}{2} = 5\\text{ m}$.\nArea of the semicircle = $\\frac{\\pi r^2}{2} = \\frac{3.14 \\times 5^2}{2} = 39.25\\text{ m}^2$.\nTotal painted area = $50.00 + 39.25 = 89.25\\text{ m}^2$.",
     "questionText": "A garden wall $10\\text{ m}$ wide and $5\\text{ m}$ tall is topped by a semicircular arch of diameter $10\\text{ m}$. If the entire wall surface is to be painted, what area must be covered? (Use $\\pi = 3.14$.)",
     "correctOption": "C"
   },
@@ -1305,7 +1325,7 @@
     "errorType": "unattempted",
     "timeSpent": 4,
     "userTime": 4,
-    "solution": "",
+    "solution": "Ratio of profit share of Kavita, Dhruv and Jaya = $(30000 \\times 12) : [(20000 \\times 9) + (20000 \\times 1.5) \\times 3] : (25000 \\times 6)$ = $360000 : 270000 : 150000 = 12 : 9 : 5$\nHence, Kavita's profit share = $78000 \\times \\frac{12}{26} = \\text{Rs. } 36000$",
     "questionText": "Kavita invested Rs. 30000 and Dhruv invested Rs. 20000 at the beginning. After 6 months Jaya joined with Rs. 25000, and after 9 months Dhruv increased his capital by $50\\%$. If the total profit at the end of one year was Rs. 78000, what was Kavita's share?",
     "correctOption": "D"
   },
@@ -1342,7 +1362,7 @@
     "errorType": "unattempted",
     "timeSpent": 9,
     "userTime": 9,
-    "solution": "",
+    "solution": "Let express train have Length $L\\text{ km}$, goods train $2L\\text{ km}$\n\nRelative speed = $80 - 40 = 40\\text{ km/h}$\nGiven : $\\frac{3L}{40} = \\frac{54}{3600}$\n\nOr, $L = \\frac{40 \\times 54}{3600 \\times 3}\\text{ km}$\n\n$L = 0.2\\text{ km}$ or $200\\text{ m}$\n\nTime taken to cross station for express train = $\\frac{200\\text{ m} + 400\\text{ m}}{80\\text{ km/h}}$ = $\\frac{0.6\\text{ km}}{80\\text{ km/h}}$ = $\\frac{0.6 \\times 3600}{80}\\text{ seconds}$ = $27\\text{ seconds}$.",
     "questionText": "An express train travelling at $80\\text{ km/h}$ overtakes a goods train traveling in the same direction, twice as long and going at $40\\text{ km/h}$ on a parallel track, in $54\\text{ seconds}$. How long will the express train take to cross a station $400\\text{ m}$ long?",
     "correctOption": "B"
   },
@@ -1379,7 +1399,7 @@
     "errorType": "unattempted",
     "timeSpent": 4,
     "userTime": 4,
-    "solution": "",
+    "solution": "Breadth of the cuboid = $18\\text{ cm}$\nPerimeter of the base = $86\\text{ cm}$\n\n$2(l + 18) = 86$\n\n$l + 18 = 43$\n\n$l = 25\\text{ cm}$\n\nTotal surface area of a cuboid = $1760\\text{ cm}^2$\n\n$2(25 \\times 18 + 25 \\times h + 18 \\times h) = 1760$\n\n$2(450 + 43h) = 1760$\n\n$450 + 43h = 880$\n\n$43h = 430$\n\n$h = 10\\text{ cm}$\n\nSo, the height of the cuboid = $10\\text{ cm}$.",
     "questionText": "The perimeter of the base and total surface area of a cuboid is $86\\text{ cm}$ and $1760\\text{ cm}^2$ respectively. If the breadth of the cuboid is $18\\text{ cm}$, then find the height of the cuboid.",
     "correctOption": "B"
   },
@@ -1416,7 +1436,7 @@
     "errorType": "unattempted",
     "timeSpent": 43,
     "userTime": 43,
-    "solution": "",
+    "solution": "Iron in alloy A = $\\frac{2}{2+3} \\times 6 = 2.4\\text{ kg}$\nZinc in alloy A = $6 - 2.4 = 3.6\\text{ kg}$\nIron in alloy B = $\\frac{3}{3+5} \\times 8 = 3\\text{ kg}$\nZinc in alloy B = $8 - 3 = 5\\text{ kg}$\nTotal iron in the mixture = $2.4 + 3 = 5.4\\text{ kg}$\nTotal zinc in the mixture = $3.6 + 5 = 8.6\\text{ kg}$\nRequired ratio = $5.4 : 8.6 = 27 : 43$.",
     "questionText": "The ratio of iron and zinc in alloy A is $2:3$ while the same ratio in alloy B is $3:5$. If $6\\text{ kg}$ of alloy A is mixed with $8\\text{ kg}$ of alloy B, what is the ratio of iron and zinc in the resultant mixture?",
     "correctOption": "B"
   },
@@ -1453,7 +1473,7 @@
     "errorType": "unattempted",
     "timeSpent": 0,
     "userTime": 0,
-    "solution": "",
+    "solution": "According to Heron's formula for the area of a triangle, $s$ represents the semi - perimeter of the triangle, which is given by half of the sum of all three sides: $s = \\frac{a + b + c}{2}$.",
     "questionText": "In the area of a triangle formula $\\sqrt{s(s-a)(s-b)(s-c)}$, where $a, b, c$ are the sides of triangle, the value of '$s$' is:",
     "correctOption": "D"
   },
@@ -1490,7 +1510,7 @@
     "errorType": "unattempted",
     "timeSpent": 0,
     "userTime": 0,
-    "solution": "",
+    "solution": "$7^3 = 343$\n\n$343 - 21 = 322$.",
     "questionText": "Find the value of $7^3 - 21$.",
     "correctOption": "B"
   },
@@ -1527,7 +1547,7 @@
     "errorType": "wrong",
     "timeSpent": 28,
     "userTime": 28,
-    "solution": "",
+    "solution": "For Wh - interrogative sentences, the reporting verb \"said to\" changes to \"asked\". The question transforms into an assertive sentence where the subject precedes the verb, and the tense shifts from Present Indefinite to Past Indefinite. Thus, \"What is your talent?\" becomes \"what his talent was\".",
     "questionText": "Select the option that expresses the given sentence in reported speech.\n\nThe anchor said to the contestant, \"What is your talent?\"",
     "correctOption": "C"
   },
@@ -1564,7 +1584,7 @@
     "errorType": "wrong",
     "timeSpent": 23,
     "userTime": 23,
-    "solution": "",
+    "solution": "Give notice: To inform or alert others about something. This fits the blank as the child is likely tasked with watching for the apparitor and informing others of his arrival. This matches the context of someone being positioned at the door for a specific purpose related to observation and communication.\nThe complete sentence is: One of the children stood at the door to give notice if he saw the apparitor coming, who was an officer of the spiritual court.\nHence, (a) is the correct answer.\nOption (b): It means to offer suggestions or recommendations about a course of action. This is not meaningful in the context because the child is not expected to provide counsel or suggestions about the apparitor's arrival.\nOption (c): It means to consider or think about something carefully, which doesn't align with the practical task of keeping watch.\nOption (d): It means to offer help or assistance, which suggests active assistance rather than passive vigilance.",
     "questionText": "Select the most appropriate option to fill in the blank.\n\nOne of the children stood at the door to _____if he saw the apparitor coming, who was an officer of the spiritual court.",
     "correctOption": "A"
   },
@@ -1601,7 +1621,7 @@
     "errorType": "wrong",
     "timeSpent": 18,
     "userTime": 18,
-    "solution": "",
+    "solution": "When expressing a habitual truth or regular action in direct speech, the tense in indirect speech generally remains unchanged (Present Simple stays Present Simple), though pronouns and verb agreement change accordingly. - The pronoun 'I' changes to 'he'. - The verb 'do' changes to 'does'. - Inverted commas (\"...\") are replaced with 'that'.\n\nTherefore, the correct sentence is: Hemant said that he does yoga regularly.",
     "questionText": "Select the option that expresses the given sentence in reported speech.\n\nHemant said, \"I do yoga regularly.\"",
     "correctOption": "C"
   },
@@ -1638,7 +1658,7 @@
     "errorType": "speed_issue",
     "timeSpent": 33,
     "userTime": 33,
-    "solution": "",
+    "solution": "The subject of the active voice becomes the object in the passive voice, and the object of the active voice becomes the subject. For modal verbs, the structure is: Object (Subjective case) + Modal + be + V³ + by + Subject (Objective case).\n\nThus, 'You should wear this pantsuit' becomes 'This pantsuit should be worn by you.'\n\nTherefore, the correct answer is option (d).",
     "questionText": "Select the option that expresses the given sentence in passive voice.\n\nYou should wear this pantsuit.",
     "correctOption": "D"
   },
@@ -1675,7 +1695,7 @@
     "errorType": "wrong",
     "timeSpent": 40,
     "userTime": 40,
-    "solution": "",
+    "solution": "When prepositions ('of' in the given sentence) are followed by a verb, the verb should be in the present participle (-ing) form.\n\nSo, 'work' should be replaced with 'working' because it acts as a verb following the preposition 'of'.\n\nHence, option (d) is the answer.",
     "questionText": "Parts of following sentence have been underlined and given as options. Select the option that contains an error.\n\nHas Gita any previous knowledge of work with junior colleagues?",
     "correctOption": "D"
   },
@@ -1712,7 +1732,7 @@
     "errorType": "wrong",
     "timeSpent": 19,
     "userTime": 19,
-    "solution": "",
+    "solution": "The correct spelling is 'Attendant'; it has double 't' and ends with '-ant'. Many agent nouns end with '-ant' (such as assistant, attendant). - Option A uses '-ent' (Attendent) which is incorrect. - Option C misses a 't' (Atendant). - Option D uses the wrong vowel (Attendunt).\n\nTherefore, the correct option is B.",
     "questionText": "Pick the spelling that is correct for the official person who checks tickets at an event entry.",
     "correctOption": "B"
   },
@@ -1749,7 +1769,7 @@
     "errorType": "wrong",
     "timeSpent": 18,
     "userTime": 18,
-    "solution": "",
+    "solution": "Farcical (adj.) = very silly, unlikely, or unreasonable, often in a way that is humorous.\n\nUsage: The whole situation of the government has become farcical during the election time.\n\nNotorious (adj.) = famous or well known, typically for some bad quality or deed.\n\nImperious (adj.) = arrogant and domineering; unpleasantly proud and expecting to be obeyed.\n\nPeremptory (adj.) = expecting to be obeyed immediately and without any questions.\n\nAs per the stated meanings, 'farcical' is the correct one - word substitute.",
     "questionText": "Select the option that can be used as a one-word substitute for the given group of words.\n\nVery silly or unreasonable often in a way that is humorous",
     "correctOption": "B"
   }

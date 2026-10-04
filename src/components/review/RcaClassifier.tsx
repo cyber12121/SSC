@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Target, Check, Edit3 } from 'lucide-react';
 import { RCATagType, RCAClassification } from '../../types';
 
@@ -19,6 +19,70 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
   onSaveSillyNote,
   onToggleSillyChip
 }) => {
+  const [localNote, setLocalNote] = useState<string>(activeSillyNote || '');
+  const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const latestLocalNoteRef = useRef<string>(localNote);
+  latestLocalNoteRef.current = localNote;
+
+  // Keep local note in sync when activeSillyNote changes from parent (e.g. switching question)
+  useEffect(() => {
+    setLocalNote(activeSillyNote || '');
+  }, [activeSillyNote]);
+
+  // Flush pending save immediately
+  const flushSave = useCallback((noteToSave: string) => {
+    if (debounceTimerRef.current) {
+      clearTimeout(debounceTimerRef.current);
+      debounceTimerRef.current = null;
+    }
+    if (noteToSave !== (activeSillyNote || '')) {
+      onSaveSillyNote(noteToSave);
+    }
+  }, [activeSillyNote, onSaveSillyNote]);
+
+  // Handle local keystrokes with fast local state and debounced parent save
+  const handleNoteChange = (newVal: string) => {
+    setLocalNote(newVal);
+    if (debounceTimerRef.current) {
+      clearTimeout(debounceTimerRef.current);
+    }
+    debounceTimerRef.current = setTimeout(() => {
+      onSaveSillyNote(newVal);
+      debounceTimerRef.current = null;
+    }, 350);
+  };
+
+  // Immediate flush on unmount or question change
+  useEffect(() => {
+    return () => {
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
+        onSaveSillyNote(latestLocalNoteRef.current);
+      }
+    };
+  }, [onSaveSillyNote]);
+
+  const handleChipClick = (chipLabel: string) => {
+    const rawTokens = localNote
+      ? localNote.split(',').map((s) => s.trim()).filter(Boolean)
+      : [];
+    const exists = rawTokens.some((t) => t.toLowerCase() === chipLabel.toLowerCase());
+    let nextTokens: string[];
+    if (exists) {
+      nextTokens = rawTokens.filter((t) => t.toLowerCase() !== chipLabel.toLowerCase());
+    } else {
+      nextTokens = [...rawTokens, chipLabel];
+    }
+    const nextStr = nextTokens.join(', ');
+    setLocalNote(nextStr);
+    flushSave(nextStr);
+  };
+
+  const handleClearNote = () => {
+    setLocalNote('');
+    flushSave('');
+  };
+
   return (
     <div className="my-5 p-3.5 sm:p-4 rounded-xl border border-indigo-200 bg-gradient-to-r from-indigo-50/70 via-purple-50/50 to-cyan-50/60 shadow-xs">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
@@ -202,10 +266,10 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
               <span>Quick Reason or Custom Note:</span>
             </label>
             <div className="flex items-center gap-2">
-              {activeSillyNote && (
+              {localNote && (
                 <button
                   type="button"
-                  onClick={() => onSaveSillyNote('')}
+                  onClick={handleClearNote}
                   className="text-[10px] text-rose-600 hover:text-rose-800 underline font-semibold cursor-pointer"
                 >
                   Clear
@@ -226,7 +290,7 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
               { label: 'Unit conversion missed', icon: '📐' },
               { label: 'Formula slip / Sign error', icon: '⚡' }
             ].map((chip) => {
-              const isSelected = activeSillyNote
+              const isSelected = localNote
                 .split(',')
                 .map((s) => s.trim().toLowerCase())
                 .includes(chip.label.toLowerCase());
@@ -235,7 +299,7 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
                 <button
                   key={chip.label}
                   type="button"
-                  onClick={() => onToggleSillyChip(chip.label)}
+                  onClick={() => handleChipClick(chip.label)}
                   className={`text-[11px] px-2.5 py-0.5 rounded-full border transition-all cursor-pointer flex items-center gap-1 shadow-2xs ${
                     isSelected
                       ? 'bg-rose-600 text-white font-bold border-rose-600 shadow-xs scale-102'
@@ -251,8 +315,9 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
           </div>
 
           <textarea
-            value={activeSillyNote}
-            onChange={(e) => onSaveSillyNote(e.target.value)}
+            value={localNote}
+            onChange={(e) => handleNoteChange(e.target.value)}
+            onBlur={() => flushSave(localNote)}
             placeholder="Or type custom details: e.g. Added 14 instead of 24 in step 2, forgot to divide by 2..."
             rows={2}
             className="w-full text-xs p-2.5 rounded-md border border-rose-300 focus:border-rose-500 focus:ring-1 focus:ring-rose-400 bg-white text-gray-800 placeholder-gray-400 outline-none"

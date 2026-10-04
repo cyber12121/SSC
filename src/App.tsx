@@ -24,7 +24,7 @@ import { cleanSolutionText } from './utils/cleanSolution';
 import { normalizeAnswerKey } from './utils/mathSanitizer';
 import { cleanQuestionForSession, toLeanQuestionCache } from './utils/questionHelpers';
 import { purgeBloatedIdbSubjectData, setIdbKey } from './utils/cache';
-import { resolveQuestionSolution } from './utils/solutionResolver';
+import { resolveQuestionSolution, initSolutionResolver } from './utils/solutionResolver';
 import { openAiWithScope } from './utils/aiScopeHelper';
 import { AiFocusedQuestion } from './types/aiScope';
 import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
@@ -63,6 +63,7 @@ import { parseSubjectChapter } from './utils/subjectDataLoader';
 
 // Dynamic import fallback of all subject JSON files (used if API is unavailable, e.g. static export)
 const subjectModules = import.meta.glob('./data/{mock_errors,chapter_bank}/**/*.json');
+const mockQuestionModules = import.meta.glob('./data/mock_questions/*.json', { eager: true });
 
 const loadSubjectData = async (): Promise<{ rawMockData: SubjectData; rawBankData: SubjectData }> => {
   // 1. Fast Path: Single fetch from Express backend (~50ms)
@@ -287,6 +288,7 @@ export default function App() {
 
   useEffect(() => {
     loadBundledMockRcaMap();
+    initSolutionResolver().catch(() => {});
     let debounceTimer: any;
     const handleRcaUpdated = () => {
       clearTimeout(debounceTimer);
@@ -1510,28 +1512,33 @@ export default function App() {
       if (result.id) {
         try {
           const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
-          if (cachedRaw) {
-            const list = JSON.parse(cachedRaw);
-            if (Array.isArray(list) && list.length > 0) {
-              resultToReview.questionDetails = list.map((q: any, idx: number) => {
-                // Prefer the explicitly saved selectedAnswer; fall back to userAnswer
-                // only when selectedAnswer is truly absent (undefined/null), NOT when it
-                // is '' (empty string = unattempted in the current session). This prevents
-                // imported question-object answers (userAnswer/chosenOption from Testbook
-                // or Oliveboard) from making unattempted questions appear as wrong.
-                const ans = q.selectedAnswer !== undefined && q.selectedAnswer !== null
-                  ? q.selectedAnswer
-                  : (q.userAnswer || q.chosenOption || '');
-                return {
-                  q_num: q.q_num || idx + 1,
-                  question: q,
-                  selectedAnswer: ans,
-                  isCorrect: Boolean(q.isCorrect),
-                  timeSpent: q.timeSpent || q.userTime || 0,
-                  rca: q.rca
-                };
-              });
+          let list = cachedRaw ? JSON.parse(cachedRaw) : null;
+          if (!list || !Array.isArray(list) || list.length === 0) {
+            const bundledMod = (mockQuestionModules as any)[`./data/mock_questions/${result.id}.json`];
+            if (bundledMod) {
+              const rawMod = bundledMod.default || bundledMod;
+              list = Array.isArray(rawMod) ? rawMod : (rawMod?.questions || rawMod?.data || null);
             }
+          }
+          if (Array.isArray(list) && list.length > 0) {
+            resultToReview.questionDetails = list.map((q: any, idx: number) => {
+              // Prefer the explicitly saved selectedAnswer; fall back to userAnswer
+              // only when selectedAnswer is truly absent (undefined/null), NOT when it
+              // is '' (empty string = unattempted in the current session). This prevents
+              // imported question-object answers (userAnswer/chosenOption from Testbook
+              // or Oliveboard) from making unattempted questions appear as wrong.
+              const ans = q.selectedAnswer !== undefined && q.selectedAnswer !== null
+                ? q.selectedAnswer
+                : (q.userAnswer || q.chosenOption || '');
+              return {
+                q_num: q.q_num || idx + 1,
+                question: q,
+                selectedAnswer: ans,
+                isCorrect: Boolean(q.isCorrect),
+                timeSpent: q.timeSpent || q.userTime || 0,
+                rca: q.rca
+              };
+            });
           }
         } catch {}
       }
@@ -4421,9 +4428,7 @@ export default function App() {
                       startQuiz(chapter);
                     }}
                     onReviewMock={(quizResult: QuizResult) => {
-                      setReviewResult(quizResult);
-                      setReviewBackTo('mockScores');
-                      setView('review');
+                      openReview(quizResult, 'mockScores');
                     }}
                   />
                 </React.Suspense>

@@ -103,6 +103,36 @@ export async function initSolutionResolver(): Promise<void> {
   return initPromise;
 }
 
+// Eager bundled mock modules: ensures all mock tests (including Oliveboard live tests) have 100% synchronous solution availability
+const eagerMockModules = import.meta.glob('../data/mock_questions/*.json', { eager: true });
+let eagerIndex: Map<string, string> | null = null;
+
+function getEagerMap(): Map<string, string> {
+  if (eagerIndex) return eagerIndex;
+  eagerIndex = new Map<string, string>();
+  for (const [, mod] of Object.entries(eagerMockModules)) {
+    const raw = (mod as any)?.default || mod;
+    const list = Array.isArray(raw) ? raw : (raw?.questions || raw?.data || []);
+    if (Array.isArray(list)) {
+      for (let i = 0; i < list.length; i++) {
+        const b = list[i];
+        const sol = b.solution || b.explanation || b.sol || b.detailedSolution || b.detailed_solution;
+        if (sol && typeof sol === 'string' && sol.trim().length > 3) {
+          const cleanSol = sol.trim();
+          if (b.id) eagerIndex.set(b.id, cleanSol);
+          const qText = b.question || b.questionText;
+          if (qText) {
+            eagerIndex.set(qText.trim().toLowerCase(), cleanSol);
+            const stripped = normalizeQuestionKey(qText);
+            if (stripped) eagerIndex.set(stripped, cleanSol);
+          }
+        }
+      }
+    }
+  }
+  return eagerIndex;
+}
+
 // Pre-indexed map for synchronous bundled mock questions to avoid O(N*M) linear scans
 let bundledIndex: Map<string, string> | null = null;
 let lastBundledRef: any[] | null = null;
@@ -164,6 +194,30 @@ export function resolveQuestionSolution(
     }
   }
 
+  // Tier 2.5: Synchronous lookup across all bundled mock modules (O(1))
+  const eMap = getEagerMap();
+  if (eMap.size > 0) {
+    if (q.id && eMap.has(q.id)) {
+      const sol = eMap.get(q.id)!;
+      solutionIndex.set(q.id, sol);
+      return sol;
+    }
+    if (qText) {
+      const rawLower = qText.trim().toLowerCase();
+      if (eMap.has(rawLower)) {
+        const sol = eMap.get(rawLower)!;
+        solutionIndex.set(rawLower, sol);
+        return sol;
+      }
+      const stripped = normalizeQuestionKey(qText);
+      if (stripped && eMap.has(stripped)) {
+        const sol = eMap.get(stripped)!;
+        solutionIndex.set(stripped, sol);
+        return sol;
+      }
+    }
+  }
+
   // Tier 3: Sync check bundled mock questions via O(1) indexed map
   const bMap = getBundledMap();
   if (bMap.size > 0) {
@@ -220,6 +274,8 @@ export function resolveQuestionSolution(
 
   return '';
 }
+
+export const resolveSolutionSync = resolveQuestionSolution;
 
 /**
  * Rehydrates missing explanations in a list of RecordedMistake items.

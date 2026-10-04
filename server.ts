@@ -1012,6 +1012,21 @@ async function startServer() {
   // Fast Aggregated Bundled Mock Questions
   app.get("/api/bundled-mock-questions", bundledMockQuestionsHandler);
 
+  // Individual Mock Questions File
+  app.get("/api/mock-questions/:id", (req, res) => {
+    try {
+      const qDir = path.join(process.cwd(), "src", "data", "mock_questions");
+      const filePath = path.join(qDir, `${req.params.id}.json`);
+      if (fs.existsSync(filePath)) {
+        res.setHeader("Content-Type", "application/json");
+        return res.sendFile(filePath);
+      }
+      return res.status(404).json({ error: "Mock questions not found" });
+    } catch (e: any) {
+      return res.status(500).json({ error: e.message });
+    }
+  });
+
   // Gemini AI Chatbot Endpoint (Same handler as Vercel serverless)
   app.post("/api/chat", chatHandler);
 

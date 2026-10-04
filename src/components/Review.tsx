@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { 
   ArrowLeft, 
   Clock, 
@@ -40,6 +40,7 @@ import { RcaClassifier } from './review/RcaClassifier';
 import { safeStorage } from '../utils/safeStorage';
 import { getIdbKey, setIdbKey } from '../utils/cache';
 import { getLanguageText } from '../utils/formatQuestionText';
+import { resolveSolutionSync } from '../utils/solutionResolver';
 
 import { db, auth } from '../firebase';
 import { collection, addDoc, deleteDoc, doc, setDoc } from 'firebase/firestore';
@@ -190,6 +191,15 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   });
 
   const [activeSillyNote, setActiveSillyNote] = useState<string>('');
+  const heavySyncTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (heavySyncTimerRef.current) {
+        clearTimeout(heavySyncTimerRef.current);
+      }
+    };
+  }, []);
 
   // Sync active silly note when moving between questions
   useEffect(() => {
@@ -356,60 +366,72 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
       }
 
       safeStorage.setItem('cgl_rca_global_store', JSON.stringify(globalStore));
-      setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
-      syncRcaToFirestore(globalStore).catch(() => {});
-
-      // Update mock questions array in localStorage and trigger background persistence (ONLY updating RCA metadata)
-      if (result.id && !result.id.startsWith('local-')) {
-        const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
-        let cachedList: any[] = [];
-        if (cachedRaw) {
-          try { cachedList = JSON.parse(cachedRaw); } catch {}
-        }
-        if (!Array.isArray(cachedList) || cachedList.length === 0) {
-          cachedList = items.map((item, idx) => {
-            const itemSt = getQuestionStatus(idx);
-            const itemIsSlow = itemSt === 'slow';
-            const itemIsCorrect = itemSt === 'correct' || itemIsSlow;
-            const originalChosen = (item.question as any)?.chosenOption || item.selectedAnswer || (item as any).userAnswer || '';
-            const originalStatus = (item.question as any)?.status || (itemSt === 'slow' ? 'Correct (Slow)' : (itemIsCorrect ? 'Correct' : (itemSt === 'unattempted' ? 'Unattempted' : 'Incorrect')));
-            return {
-              ...(item.question || {}),
-              q_num: idx + 1,
-              userAnswer: originalChosen,
-              selectedAnswer: originalChosen,
-              chosenOption: originalChosen,
-              isCorrect: itemIsCorrect,
-              isSlow: itemIsSlow,
-              status: originalStatus,
-              errorType: itemIsSlow ? 'speed_issue' : (itemIsCorrect ? 'correct' : (itemSt === 'unattempted' ? 'unattempted' : 'wrong')),
-              timeSpent: item.timeSpent,
-              userTime: item.timeSpent,
-              rca: updatedMap[idx] || item.rca || item.question?.rca || undefined,
-              rcaClassification: updatedMap[idx] || item.rca || item.question?.rca || undefined
-            };
-          });
-        } else if (cachedList[targetIdx]) {
-          cachedList[targetIdx].rca = isClear ? undefined : newRca;
-          cachedList[targetIdx].rcaClassification = isClear ? undefined : newRca;
-        }
-
-        const leanCached = toLeanQuestionCache(cachedList);
-        safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(leanCached));
-        setIdbKey(`cgl_mock_questions_${result.id}`, leanCached).catch(() => {});
-
-        // Background sync to backend disk storage
-        fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(cachedList)
-        }).catch(() => {});
-      }
 
       // Notify other views (ErrorHeatmap, Dashboard) immediately
       window.dispatchEvent(new CustomEvent('cgl_rca_updated', {
         detail: { qId, qTextNorm, rca: isClear ? null : newRca }
       }));
+
+      // Debounce heavy mock questions serialization & network sync to prevent blocking the UI
+      if (heavySyncTimerRef.current) {
+        clearTimeout(heavySyncTimerRef.current);
+      }
+      heavySyncTimerRef.current = setTimeout(() => {
+        heavySyncTimerRef.current = null;
+        setIdbKey('cgl_rca_global_store', globalStore).catch(() => {});
+        syncRcaToFirestore(globalStore).catch(() => {});
+
+        // Update mock questions array in localStorage and trigger background persistence (ONLY updating RCA metadata)
+        if (result.id && !result.id.startsWith('local-')) {
+          try {
+            const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
+            let cachedList: any[] = [];
+            if (cachedRaw) {
+              try { cachedList = JSON.parse(cachedRaw); } catch {}
+            }
+            if (!Array.isArray(cachedList) || cachedList.length === 0) {
+              cachedList = items.map((item, idx) => {
+                const itemSt = getQuestionStatus(idx);
+                const itemIsSlow = itemSt === 'slow';
+                const itemIsCorrect = itemSt === 'correct' || itemIsSlow;
+                const originalChosen = (item.question as any)?.chosenOption || item.selectedAnswer || (item as any).userAnswer || '';
+                const originalStatus = (item.question as any)?.status || (itemSt === 'slow' ? 'Correct (Slow)' : (itemIsCorrect ? 'Correct' : (itemSt === 'unattempted' ? 'Unattempted' : 'Incorrect')));
+                return {
+                  ...(item.question || {}),
+                  q_num: idx + 1,
+                  userAnswer: originalChosen,
+                  selectedAnswer: originalChosen,
+                  chosenOption: originalChosen,
+                  isCorrect: itemIsCorrect,
+                  isSlow: itemIsSlow,
+                  status: originalStatus,
+                  errorType: itemIsSlow ? 'speed_issue' : (itemIsCorrect ? 'correct' : (itemSt === 'unattempted' ? 'unattempted' : 'wrong')),
+                  timeSpent: item.timeSpent,
+                  userTime: item.timeSpent,
+                  rca: updatedMap[idx] || item.rca || item.question?.rca || undefined,
+                  rcaClassification: updatedMap[idx] || item.rca || item.question?.rca || undefined
+                };
+              });
+            } else if (cachedList[targetIdx]) {
+              cachedList[targetIdx].rca = isClear ? undefined : newRca;
+              cachedList[targetIdx].rcaClassification = isClear ? undefined : newRca;
+            }
+
+            const leanCached = toLeanQuestionCache(cachedList);
+            safeStorage.setItem(`cgl_mock_questions_${result.id}`, JSON.stringify(leanCached));
+            setIdbKey(`cgl_mock_questions_${result.id}`, leanCached).catch(() => {});
+
+            // Background sync to backend disk storage
+            fetch(`/api/mock-questions/${encodeURIComponent(result.id)}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(cachedList)
+            }).catch(() => {});
+          } catch (err) {
+            console.warn('[Review] Async mock questions sync notice:', err);
+          }
+        }
+      }, 500);
     } catch (e) {
       console.error('Error persisting RCA:', e);
     }
@@ -1076,6 +1098,25 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (directSol && typeof directSol === 'string' && directSol.trim().length > 0) {
       return directSol.trim();
     }
+
+    // Tier 1.5: Synchronous lookup across bundled tests, mock files & chapter bank
+    try {
+      const qLookup = question || current?.question || current;
+      const solFromResolver = resolveSolutionSync({
+        ...qLookup,
+        id: qLookup?.id || (current as any)?.id,
+        question: qLookup?.question || (current as any)?.question,
+        questionText: qLookup?.questionText || qLookup?.question,
+        mockId: result.id,
+        testId: result.id
+      });
+      if (solFromResolver && typeof solFromResolver === 'string' && solFromResolver.trim().length > 0) {
+        if (question && !question.solution) {
+          question.solution = solFromResolver.trim();
+        }
+        return solFromResolver.trim();
+      }
+    } catch {}
 
     // Tier 2: Lookup in global RCA store
     try {
