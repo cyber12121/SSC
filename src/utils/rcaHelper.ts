@@ -326,19 +326,47 @@ let bundledRcaCache: Record<string, RCAClassification> | null = null;
 let bundledRcaPromise: Promise<Record<string, RCAClassification>> | null = null;
 let idbHydrated = false;
 
+let rcaSyncTimer: any = null;
+let pendingStoreToSync: Record<string, any> | null = null;
+let isSyncingRca = false;
+
 /**
  * Persists the global RCA classification map to user's Firestore document.
- * This guarantees cloud resilience across devices or whenever cache is cleared.
+ * Debounced and serialized to adhere to Firestore's 1-write-per-second limit and prevent write stream exhaustion.
  */
 export async function syncRcaToFirestore(globalStore: Record<string, any>): Promise<void> {
   if (!auth.currentUser) return;
-  try {
-    const userDocRef = doc(db, 'user_rca', auth.currentUser.uid);
-    const sanitized = JSON.parse(JSON.stringify(globalStore));
-    await setDoc(userDocRef, { store: sanitized, updatedAt: new Date().toISOString() }, { merge: true });
-  } catch (err) {
-    console.warn('[rcaHelper] Firestore sync warning:', err);
+  pendingStoreToSync = globalStore;
+
+  if (rcaSyncTimer) {
+    clearTimeout(rcaSyncTimer);
   }
+
+  return new Promise<void>((resolve) => {
+    rcaSyncTimer = setTimeout(async () => {
+      rcaSyncTimer = null;
+      if (!auth.currentUser || !pendingStoreToSync || isSyncingRca) {
+        resolve();
+        return;
+      }
+      isSyncingRca = true;
+      try {
+        const storeToSave = pendingStoreToSync;
+        pendingStoreToSync = null;
+        const userDocRef = doc(db, 'user_rca', auth.currentUser.uid);
+        const sanitized = JSON.parse(JSON.stringify(storeToSave));
+        await setDoc(userDocRef, { store: sanitized, updatedAt: new Date().toISOString() }, { merge: true });
+      } catch (err: any) {
+        console.warn('[rcaHelper] Firestore sync warning:', err?.message || err);
+      } finally {
+        isSyncingRca = false;
+        if (pendingStoreToSync) {
+          syncRcaToFirestore(pendingStoreToSync);
+        }
+        resolve();
+      }
+    }, 1500);
+  });
 }
 
 let firestoreSynced = false;

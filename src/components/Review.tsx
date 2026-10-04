@@ -28,7 +28,8 @@ import {
   Edit3,
   BookOpen,
   RotateCw,
-  Info
+  Info,
+  StickyNote
 } from 'lucide-react';
 import { QuizResult, Question, QuestionProgress, RCATagType, RCAClassification } from '../types';
 import { extractSolutionLanguage } from '../utils/cleanSolution';
@@ -41,6 +42,7 @@ import { safeStorage } from '../utils/safeStorage';
 import { getIdbKey, setIdbKey } from '../utils/cache';
 import { getLanguageText } from '../utils/formatQuestionText';
 import { resolveSolutionSync } from '../utils/solutionResolver';
+import { saveRevisionNote, getNoteForQuestion, deleteRevisionNote, REVISION_NOTEBOOK_EVENT, RevisionNoteItem } from '../utils/revisionNotesHelper';
 
 import { db, auth } from '../firebase';
 import { collection, addDoc, deleteDoc, doc, setDoc } from 'firebase/firestore';
@@ -209,7 +211,77 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     } else {
       setActiveSillyNote('');
     }
-  }, [currentIdx, rcaMap]);
+  }, [currentIdx]);
+
+  // Question Note State for Review Mode
+  const [showQuestionNoteDrawer, setShowQuestionNoteDrawer] = useState(false);
+  const [questionNoteInput, setQuestionNoteInput] = useState('');
+  const [savedQuestionNote, setSavedQuestionNote] = useState<RevisionNoteItem | null>(null);
+  const [noteSavedFeedback, setNoteSavedFeedback] = useState(false);
+
+  // Sync question note when moving between questions
+  useEffect(() => {
+    const qObj = items[currentIdx]?.question;
+    const qId = qObj?.id;
+    const qText = qObj?.question;
+    const foundNote = getNoteForQuestion(qId, qText);
+    if (foundNote) {
+      setSavedQuestionNote(foundNote);
+      setQuestionNoteInput(foundNote.text);
+    } else {
+      setSavedQuestionNote(null);
+      const currentRca = rcaMap[currentIdx] || items[currentIdx]?.rca || items[currentIdx]?.question?.rca;
+      setQuestionNoteInput(currentRca?.sillyMistakeNote || '');
+    }
+  }, [currentIdx, items, rcaMap]);
+
+  // Listen for notebook updates across tabs/mentor chat
+  useEffect(() => {
+    const handleNotebookUpdate = () => {
+      const qObj = items[currentIdx]?.question;
+      const foundNote = getNoteForQuestion(qObj?.id, qObj?.question);
+      if (foundNote) {
+        setSavedQuestionNote(foundNote);
+      }
+    };
+    window.addEventListener(REVISION_NOTEBOOK_EVENT, handleNotebookUpdate);
+    return () => window.removeEventListener(REVISION_NOTEBOOK_EVENT, handleNotebookUpdate);
+  }, [currentIdx, items]);
+
+  const handleSaveQuestionNote = () => {
+    const qObj = items[currentIdx]?.question;
+    if (!qObj) return;
+    const trimmed = questionNoteInput.trim();
+    if (!trimmed) {
+      if (savedQuestionNote) {
+        deleteRevisionNote(savedQuestionNote.id);
+        setSavedQuestionNote(null);
+      }
+      return;
+    }
+
+    const saved = saveRevisionNote({
+      id: savedQuestionNote?.id,
+      text: trimmed,
+      type: savedQuestionNote?.type || 'user_note',
+      subject: qObj.subject || result.subject || 'General',
+      topic: qObj.tags?.topic || (qObj as any).topic || result.chapter_title || 'Review',
+      questionId: qObj.id,
+      questionText: qObj.question
+    });
+
+    setSavedQuestionNote(saved);
+    setNoteSavedFeedback(true);
+    setTimeout(() => setNoteSavedFeedback(false), 2000);
+  };
+
+  const handleDeleteQuestionNote = () => {
+    if (savedQuestionNote) {
+      deleteRevisionNote(savedQuestionNote.id);
+      setSavedQuestionNote(null);
+      setQuestionNoteInput('');
+    }
+  };
 
   const rcaStats = useMemo(() => {
     const counts: Record<string, number> = { C: 0, S: 0, T: 0, G: 0, total: 0 };
@@ -1979,7 +2051,25 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
             </div>
 
             {/* Save & Report Actions */}
-            <div className="flex items-center space-x-3 text-xs font-medium text-gray-600">
+            <div className="flex items-center space-x-2.5 text-xs font-medium text-gray-600">
+              {/* Question Note Icon Button */}
+              <button
+                type="button"
+                onClick={() => setShowQuestionNoteDrawer(prev => !prev)}
+                className={`flex items-center space-x-1.5 px-2 py-1 rounded-md text-xs font-bold transition-all cursor-pointer ${
+                  savedQuestionNote || showQuestionNoteDrawer
+                    ? 'bg-amber-100 text-amber-900 border border-amber-300 shadow-2xs'
+                    : 'hover:text-indigo-600 hover:bg-slate-100 text-gray-600'
+                }`}
+                title={savedQuestionNote ? "View / Edit Note for this question" : "Add Note to this question"}
+              >
+                <StickyNote className={`w-4 h-4 ${savedQuestionNote ? 'text-amber-600 fill-amber-300' : 'text-slate-500'}`} />
+                <span>{savedQuestionNote ? 'Note' : 'Add Note'}</span>
+                {savedQuestionNote && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                )}
+              </button>
+
               <button 
                 onClick={handleBookmarkClick}
                 className={`flex items-center space-x-1 hover:text-[#0097a7] transition-colors ${
@@ -2021,6 +2111,65 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
           <div className="flex-1 overflow-y-auto px-6 sm:px-8 py-5 custom-scrollbar">
             {question ? (
               <div className="max-w-4xl">
+                {/* Expandable Question Note Drawer */}
+                {showQuestionNoteDrawer && (
+                  <div className="mb-4 p-4 rounded-xl border border-amber-300 bg-amber-50/80 shadow-xs relative transition-all">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <StickyNote className="w-4 h-4 text-amber-700 fill-amber-300" />
+                        <span className="text-xs font-bold text-amber-950">
+                          {savedQuestionNote?.type === 'tommy_insight' ? '✨ Tommy AI Insight & Concept' : '📝 Question Revision Note'}
+                        </span>
+                        {savedQuestionNote && (
+                          <span className="text-[10px] px-2 py-0.2 rounded-full bg-amber-200/90 text-amber-900 font-bold border border-amber-300">
+                            Saved in Notebook
+                          </span>
+                        )}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setShowQuestionNoteDrawer(false)}
+                        className="text-amber-800 hover:text-amber-950 text-xs font-bold px-2 py-0.5 hover:bg-amber-200/60 rounded cursor-pointer"
+                      >
+                        ✕ Close
+                      </button>
+                    </div>
+
+                    <textarea
+                      value={questionNoteInput}
+                      onChange={e => setQuestionNoteInput(e.target.value)}
+                      placeholder="Type key takeaway, formula, shortcut, trap to avoid, or Tommy explanation for this question..."
+                      rows={3}
+                      className="w-full text-xs p-2.5 rounded-lg border border-amber-300 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 font-sans leading-relaxed"
+                    />
+
+                    <div className="flex items-center justify-between mt-2 pt-1">
+                      <span className="text-[10px] text-amber-900 font-medium italic">
+                        {noteSavedFeedback ? '✓ Saved to your Master Revision Notebook!' : 'Synced into your Concept & Silly Notebook'}
+                      </span>
+                      <div className="flex items-center gap-2">
+                        {savedQuestionNote && (
+                          <button
+                            type="button"
+                            onClick={handleDeleteQuestionNote}
+                            className="px-2.5 py-1 text-xs text-rose-600 hover:text-rose-800 hover:bg-rose-50 rounded font-semibold cursor-pointer"
+                          >
+                            Delete
+                          </button>
+                        )}
+                        <button
+                          type="button"
+                          onClick={handleSaveQuestionNote}
+                          className="px-3.5 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-lg shadow-xs transition-all cursor-pointer flex items-center gap-1"
+                        >
+                          <Check className="w-3.5 h-3.5" />
+                          <span>{noteSavedFeedback ? 'Saved!' : 'Save Note'}</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Speed & Pattern Insight Banner */}
                 {reviewPatternInsight && (
                   <div className="mb-4 p-3.5 bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-purple-500/10 border border-amber-400/40 rounded-2xl flex items-start gap-3 shadow-xs">
@@ -2223,6 +2372,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                 {/* 4-Bucket Root Cause Analysis (RCA) Classification Bar */}
                 {classifyModeEnabled && (!reattemptMode || reattemptAnswers[currentIdx] !== undefined) && (
                   <RcaClassifier
+                    key={`rca_${currentIdx}_${result.id || ''}`}
                     currentRca={currentRca}
                     onSelectTag={handleSelectRcaTag}
                     onClearTag={handleClearRcaTag}

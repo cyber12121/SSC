@@ -1,7 +1,7 @@
 import { Question, QuestionProgress, QuizResult } from '../types';
 import { safeStorage } from './safeStorage';
 import { db, auth } from '../firebase';
-import { collection, doc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
+import { collection, doc, setDoc, getDocs, deleteDoc, writeBatch } from 'firebase/firestore';
 import { resolveQuestionSolution } from './solutionResolver';
 
 export interface RecordedMistake {
@@ -442,13 +442,20 @@ export function recordQuizMistakes(
     console.warn('[mistakeRecorder] Error updating local notebook:', err);
   }
 
-  // 5. Background sync to Firestore if user is authenticated
-  if (effectiveUid) {
+  // 5. Background sync to Firestore if user is authenticated (batched into single writes to prevent stream exhaustion)
+  if (effectiveUid && newMistakes.length > 0) {
     try {
-      for (const m of newMistakes) {
-        const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
-        setDoc(doc(db, `user_mistakes_${effectiveUid}`, docId), m, { merge: true }).catch(e => {
-          console.warn('[mistakeRecorder] Firestore setDoc error:', e);
+      const batchSize = 100;
+      for (let i = 0; i < newMistakes.length; i += batchSize) {
+        const chunk = newMistakes.slice(i, i + batchSize);
+        const batch = writeBatch(db);
+        for (const m of chunk) {
+          const docId = m.id ? m.id.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60) : `m_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+          const docRef = doc(db, `user_mistakes_${effectiveUid}`, docId);
+          batch.set(docRef, m, { merge: true });
+        }
+        batch.commit().catch(e => {
+          console.warn('[mistakeRecorder] Firestore batch commit error:', e);
         });
       }
     } catch (e) {

@@ -23,11 +23,19 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
   const latestLocalNoteRef = useRef<string>(localNote);
   latestLocalNoteRef.current = localNote;
+  const onSaveRef = useRef(onSaveSillyNote);
+  onSaveRef.current = onSaveSillyNote;
 
-  // Keep local note in sync when activeSillyNote changes from parent (e.g. switching question)
+  // Flush pending changes on unmount (e.g. moving questions or closing review)
   useEffect(() => {
-    setLocalNote(activeSillyNote || '');
-  }, [activeSillyNote]);
+    return () => {
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
+        debounceTimerRef.current = null;
+        onSaveRef.current(latestLocalNoteRef.current);
+      }
+    };
+  }, []);
 
   // Flush pending save immediately
   const flushSave = useCallback((noteToSave: string) => {
@@ -35,32 +43,20 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
       clearTimeout(debounceTimerRef.current);
       debounceTimerRef.current = null;
     }
-    if (noteToSave !== (activeSillyNote || '')) {
-      onSaveSillyNote(noteToSave);
-    }
-  }, [activeSillyNote, onSaveSillyNote]);
+    onSaveRef.current(noteToSave);
+  }, []);
 
-  // Handle local keystrokes with fast local state and debounced parent save
+  // Handle local keystrokes smoothly with debounce
   const handleNoteChange = (newVal: string) => {
     setLocalNote(newVal);
     if (debounceTimerRef.current) {
       clearTimeout(debounceTimerRef.current);
     }
     debounceTimerRef.current = setTimeout(() => {
-      onSaveSillyNote(newVal);
+      onSaveRef.current(newVal);
       debounceTimerRef.current = null;
-    }, 350);
+    }, 400);
   };
-
-  // Immediate flush on unmount or question change
-  useEffect(() => {
-    return () => {
-      if (debounceTimerRef.current) {
-        clearTimeout(debounceTimerRef.current);
-        onSaveSillyNote(latestLocalNoteRef.current);
-      }
-    };
-  }, [onSaveSillyNote]);
 
   const handleChipClick = (chipLabel: string) => {
     const rawTokens = localNote
@@ -76,6 +72,7 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
     const nextStr = nextTokens.join(', ');
     setLocalNote(nextStr);
     flushSave(nextStr);
+    if (onToggleSillyChip) onToggleSillyChip(chipLabel);
   };
 
   const handleClearNote = () => {
@@ -317,6 +314,7 @@ export const RcaClassifier: React.FC<RcaClassifierProps> = ({
           <textarea
             value={localNote}
             onChange={(e) => handleNoteChange(e.target.value)}
+            onKeyDown={(e) => e.stopPropagation()}
             onBlur={() => flushSave(localNote)}
             placeholder="Or type custom details: e.g. Added 14 instead of 24 in step 2, forgot to divide by 2..."
             rows={2}

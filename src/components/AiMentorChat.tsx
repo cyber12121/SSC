@@ -31,7 +31,8 @@ import {
   Paperclip,
   Image as ImageIcon,
   FileText,
-  Loader2
+  Loader2,
+  Bookmark
 } from 'lucide-react';
 import katex from 'katex';
 import { sanitizeLatexForKatex, wrapUnwrappedFractions } from '../utils/mathSanitizer';
@@ -40,6 +41,7 @@ import { QuizResult } from '../types';
 import { buildMockAiSummary } from '../utils/mockAiContext';
 import { AiFocusedScope } from '../types/aiScope';
 import { AI_SCOPE_EVENT } from '../utils/aiScopeHelper';
+import { saveRevisionNote } from '../utils/revisionNotesHelper';
 
 
 export interface ChatAttachment {
@@ -55,6 +57,7 @@ interface ChatMessage {
   text: string;
   timestamp: string;
   attachment?: ChatAttachment;
+  questionContext?: any;
 }
 
 interface AiMentorChatProps {
@@ -1248,6 +1251,22 @@ export function AiMentorChat({
   const [isLoading, setIsLoading] = useState(false);
   const [showContextDrawer, setShowContextDrawer] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [savedNoteMsgIds, setSavedNoteMsgIds] = useState<Set<string>>(new Set());
+  const lastQuestionContextRef = useRef<any>(null);
+
+  const handleSaveMessageToNotes = (msg: ChatMessage) => {
+    if (!msg.text) return;
+    const qCtx = msg.questionContext || lastQuestionContextRef.current;
+    saveRevisionNote({
+      text: msg.text,
+      type: 'tommy_insight',
+      subject: qCtx?.subject || activeScope?.title || 'General',
+      topic: qCtx?.topic || activeScope?.title || 'Tommy AI Concept',
+      questionSnippet: qCtx?.question ? qCtx.question.slice(0, 100) : undefined,
+      questionId: qCtx?.id || (qCtx?.qNum ? `q_${qCtx.qNum}` : undefined)
+    });
+    setSavedNoteMsgIds(prev => new Set(prev).add(msg.id));
+  };
 
   // Attachment State
   const [selectedAttachment, setSelectedAttachment] = useState<ChatAttachment | null>(null);
@@ -1409,6 +1428,10 @@ export function AiMentorChat({
   const dynamicSuggestions = useDynamicSuggestions(mockReports, topWeakTopic, activeReviewResult, activeScope);
 
   const handleSendMessage = async (textToSend?: string, specificQuestion?: any) => {
+    if (specificQuestion) {
+      lastQuestionContextRef.current = specificQuestion;
+    }
+    const currentQContext = specificQuestion || lastQuestionContextRef.current;
     const query = (textToSend || inputText).trim();
     const currentAttachment = selectedAttachment;
     if (!query && !currentAttachment) return;
@@ -1447,7 +1470,8 @@ export function AiMentorChat({
         id: botMessageId,
         role: 'assistant',
         text: '',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        questionContext: currentQContext
       };
       setMessages(prev => [...prev, userMessage, initialBotMessage]);
       setInputText('');
@@ -1472,7 +1496,8 @@ export function AiMentorChat({
       id: botMessageId,
       role: 'assistant',
       text: '',
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      questionContext: currentQContext
     };
 
     setMessages(prev => [...prev, userMessage, initialBotMessage]);
@@ -2096,10 +2121,32 @@ ${instructions}`;
                         <span>{msg.timestamp}</span>
                         {isBot && msg.text && (
                           <>
+                            <button
+                              type="button"
+                              onClick={() => handleSaveMessageToNotes(msg)}
+                              className={`flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold transition-all shadow-2xs cursor-pointer ${
+                                savedNoteMsgIds.has(msg.id)
+                                  ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
+                                  : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 hover:text-indigo-900 border border-indigo-200'
+                              }`}
+                              title="Save this Tommy insight to your Master Revision Notebook"
+                            >
+                              {savedNoteMsgIds.has(msg.id) ? (
+                                <>
+                                  <Check className="w-2.5 h-2.5 text-emerald-600" />
+                                  <span>Saved to Notes</span>
+                                </>
+                              ) : (
+                                <>
+                                  <Bookmark className="w-2.5 h-2.5 text-indigo-500 fill-indigo-200" />
+                                  <span>📌 Save to Notes & Concept</span>
+                                </>
+                              )}
+                            </button>
 
                             <button
                               onClick={() => copyToClipboard(msg.text, msg.id)}
-                              className="opacity-0 group-hover:opacity-100 hover:text-indigo-600 transition-all flex items-center gap-0.5"
+                              className="opacity-0 group-hover:opacity-100 hover:text-indigo-600 transition-all flex items-center gap-0.5 ml-1"
                               title="Copy reply"
                             >
                               {copiedId === msg.id ? (

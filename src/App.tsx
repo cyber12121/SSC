@@ -40,6 +40,7 @@ import { RCATagType, RCAClassification } from './types';
 import { loadAllBundledMockQuestions, aggregateMockErrors } from './utils/mockErrorAggregator';
 import { MockErrorsRcaCockpit } from './components/rca/MockErrorsRcaCockpit';
 import { SillyMistakesAggregateView } from './components/rca/SillyMistakesAggregateView';
+import { MasterRevisionNotebookCard } from './components/rca/MasterRevisionNotebookCard';
 import { ThemeSelector } from './components/ThemeSelector';
 import { BotMistakesPage } from './components/BotMistakesPage';
 import { getInitialTheme, setAppliedTheme } from './utils/theme';
@@ -3730,43 +3731,50 @@ export default function App() {
                           </button>
                         </div>
                       ) : mockViewMode === 'silly' ? (
-                        <SillyMistakesAggregateView
-                          subjectRcaData={aggregatedMockErrorsData.subjectRcaData}
-                          selectedSubject={selectedSubject}
-                          onSelectSubject={(sub) => {
-                            if (sub !== 'all') setSelectedSubject(sub);
-                          }}
-                          onStartPractice={(title, qs) => {
-                            if (qs.length === 0) return;
-                            if (qs.length > 25) {
-                              setSetPickerModal({
-                                title,
-                                subtitle: `${qs.length} silly mistake questions`,
+                        <>
+                          <MasterRevisionNotebookCard currentSubject={selectedSubject} defaultTab="silly" />
+                          <SillyMistakesAggregateView
+                            subjectRcaData={aggregatedMockErrorsData.subjectRcaData}
+                            selectedSubject={selectedSubject}
+                            onSelectSubject={(sub) => {
+                              if (sub !== 'all') setSelectedSubject(sub);
+                            }}
+                            onStartPractice={(title, qs) => {
+                              if (qs.length === 0) return;
+                              if (qs.length > 25) {
+                                setSetPickerModal({
+                                  title,
+                                  subtitle: `${qs.length} silly mistake questions`,
+                                  subject: selectedSubject || 'Mathematics',
+                                  questions: qs
+                                });
+                                return;
+                              }
+                              const virtualChapter: Chapter = {
+                                chapter_num: 0,
+                                chapter_title: title,
                                 subject: selectedSubject || 'Mathematics',
-                                questions: qs
-                              });
-                              return;
-                            }
-                            const virtualChapter: Chapter = {
-                              chapter_num: 0,
-                              chapter_title: title,
-                              subject: selectedSubject || 'Mathematics',
-                              subject_id: (selectedSubject || 'mathematics').toLowerCase().replace(/\s+/g, '_'),
-                              questions: qs.map((q, idx) => ({ ...q, q_num: idx + 1 })),
-                              section: 'mockErrors',
-                              is_test: true
-                            };
-                            startQuiz(virtualChapter);
-                          }}
-                          onBack={() => setMockViewModePersisted('rca')}
-                          language="english"
-                        />
+                                subject_id: (selectedSubject || 'mathematics').toLowerCase().replace(/\s+/g, '_'),
+                                questions: qs.map((q, idx) => ({ ...q, q_num: idx + 1 })),
+                                section: 'mockErrors',
+                                is_test: true
+                              };
+                              startQuiz(virtualChapter);
+                            }}
+                            onBack={() => setMockViewModePersisted('rca')}
+                            language="english"
+                          />
+                        </>
                       ) : mockViewMode === 'chapters' || mockViewMode === 'rca' ? (
                         /* Minimalist Mock Errors Cockpit (Stitch Design) - Supports Chapters and RCA */
-                        <MockErrorsRcaCockpit
-                          mode={mockViewMode}
-                          quizMode={quizMode}
-                          selectedSubject={selectedSubject}
+                        <>
+                          {mockViewMode === 'rca' && (
+                            <MasterRevisionNotebookCard currentSubject={selectedSubject} defaultTab="notes" />
+                          )}
+                          <MockErrorsRcaCockpit
+                            mode={mockViewMode}
+                            quizMode={quizMode}
+                            selectedSubject={selectedSubject}
                           clubbedChapters={clubbedMockChapters}
                           filteredChapters={filteredRcaChapters}
                           subjectRcaData={subjectRcaData}
@@ -3794,6 +3802,7 @@ export default function App() {
                             setModalActiveSet(ch.total > 25 ? 1 : 'all');
                           }}
                         />
+                        </>
                       ) : (
                         /* Original By Error Bucket View */
                         <div className={`grid gap-3.5 ${(currentData[selectedSubject] || []).length === 1

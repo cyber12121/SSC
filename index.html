@@ -19,17 +19,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
       (function() {
-        // Early safeguard against browser storage-policy rejections
+        // Early safeguard against browser storage-policy, extension message-channel, and write-stream rejections
         window.addEventListener('unhandledrejection', function(event) {
           var reason = event.reason;
           var msg = (reason && (reason.message || reason.name || String(reason))) || '';
           if (
             msg.indexOf('Access to storage is not allowed') !== -1 ||
             msg.indexOf('signal is aborted without reason') !== -1 ||
+            msg.indexOf('message channel closed') !== -1 ||
+            msg.indexOf('asynchronous response by returning true') !== -1 ||
+            msg.indexOf('Write stream exhausted') !== -1 ||
+            msg.indexOf('resource-exhausted') !== -1 ||
             (reason && reason.name === 'AbortError')
           ) {
             event.preventDefault();
-            console.warn('[Storage] Suppressed restricted context rejection:', msg);
+            console.warn('[EarlySafeguard] Handled browser/extension notice:', msg);
+          }
+        });
+
+        window.addEventListener('error', function(event) {
+          var msg = (event && (event.message || String(event))) || '';
+          if (
+            msg.indexOf('Access to storage is not allowed') !== -1 ||
+            msg.indexOf('message channel closed') !== -1 ||
+            msg.indexOf('asynchronous response by returning true') !== -1 ||
+            msg.indexOf('Write stream exhausted') !== -1 ||
+            msg.indexOf('resource-exhausted') !== -1
+          ) {
+            event.preventDefault();
+            console.warn('[EarlySafeguard] Handled window error notice:', msg);
           }
         });
 

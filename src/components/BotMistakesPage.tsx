@@ -32,6 +32,7 @@ import {
   resolveQuestionSolution,
   rehydrateMistakesSolutions
 } from '../utils/solutionResolver';
+import { MasterRevisionNotebookCard } from './rca/MasterRevisionNotebookCard';
 export type { RecordedMistake };
 
 interface BotMistakesPageProps {
@@ -611,6 +612,12 @@ export const BotMistakesPage: React.FC<BotMistakesPageProps> = ({
           </button>
         </div>
       </div>
+
+      {/* MASTER REVISION NOTEBOOK: SILLY MISTAKES & REVISION NOTES / CONCEPTS */}
+      <MasterRevisionNotebookCard
+        currentSubject={selectedSubject === 'all' ? undefined : SUBJECT_CONFIG[selectedSubject]?.label}
+        defaultTab="notes"
+      />
 
       {/* LEVEL 1: SUBJECT CARDS GRID */}
       <div>

@@ -64,7 +64,7 @@ try {
   if (isStorageUsable) {
     try {
       firebaseAuth = initializeAuth(app, {
-        persistence: [indexedDBLocalPersistence, browserLocalPersistence, inMemoryPersistence],
+        persistence: [browserLocalPersistence, inMemoryPersistence],
         popupRedirectResolver: browserPopupRedirectResolver
       });
     } catch {
