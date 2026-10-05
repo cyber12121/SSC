@@ -1381,14 +1381,14 @@
     "avgTime": "00:31",
     "questionText": "If $5a + \\frac{1}{3a} = 5$, then the value of $9a^2 + \\frac{1}{25a^2}$ is:",
     "options": {
-      "A": "$515 \\frac{51}{5}$",
-      "B": "$295 \\frac{29}{5}$",
-      "C": "$525 \\frac{52}{5}$",
-      "D": "$395 \\frac{39}{5}$",
-      "a": "$515 \\frac{51}{5}$",
-      "b": "$295 \\frac{29}{5}$",
-      "c": "$525 \\frac{52}{5}$",
-      "d": "$395 \\frac{39}{5}$"
+      "A": "$\\frac{51}{5}$",
+      "B": "$\\frac{29}{5}$",
+      "C": "$\\frac{52}{5}$",
+      "D": "$\\frac{39}{5}$",
+      "a": "$\\frac{51}{5}$",
+      "b": "$\\frac{29}{5}$",
+      "c": "$\\frac{52}{5}$",
+      "d": "$\\frac{39}{5}$"
     },
     "solution": "Multiply the given equation $5a + \\frac{1}{3a} = 5$ by $\\frac{3}{5}$ to get: $3a + \\frac{1}{5a} = 3$\n\nSquaring both sides: $\\left(3a + \\frac{1}{5a}\\right)^2 = 3^2$\n\n$\\Rightarrow 9a^2 + \\frac{1}{25a^2} + 2(3a)\\left(\\frac{1}{5a}\\right) = 9$\n\n$\\Rightarrow 9a^2 + \\frac{1}{25a^2} = 9 - \\frac{6}{5} = \\frac{39}{5}$.",
     "mockId": "mock_1791186998326_to50p",

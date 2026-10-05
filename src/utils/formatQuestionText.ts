@@ -9,7 +9,7 @@
  * 6. Tokenizing LaTeX math for KaTeX rendering
  */
 
-import { reconstructScrapedMath, wrapUnwrappedFractions, cleanAlgebraPowers, normalizeListCommas } from './mathSanitizer';
+import { reconstructScrapedMath, wrapUnwrappedFractions, cleanAlgebraPowers, normalizeListCommas, cleanScrapedFractionPrefixes } from './mathSanitizer';
 
 export interface MathToken {
   type: 'text' | 'math';
@@ -24,7 +24,7 @@ const DEVANAGARI_REGEX = /[\u0900-\u097F]/;
  */
 export function cleanQuestionText(text: string = ''): string {
   if (!text) return '';
-  let s = String(text);
+  let s = cleanScrapedFractionPrefixes(String(text));
 
   // Decode literal escaped quotes from scrapers (e.g. \"A\" -> "A")
   s = s.replace(/\\"/g, '"');

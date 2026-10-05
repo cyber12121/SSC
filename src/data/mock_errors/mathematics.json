@@ -15472,10 +15472,10 @@
         "avgTime": "00:18",
         "question": "The simplified value of $(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$ is:",
         "options": {
-          "a": "$125 \\frac{1}{25}$",
-          "b": "$325 \\frac{3}{25}$",
-          "c": "$225 \\frac{2}{25}$",
-          "d": "$150 \\frac{1}{50}$"
+          "a": "$\\frac{1}{25}$",
+          "b": "$\\frac{3}{25}$",
+          "c": "$\\frac{2}{25}$",
+          "d": "$\\frac{1}{50}$"
         },
         "answer": "a",
         "solution": "Given:\n$(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$\n\nFormula used:\nBODMAS Rule (Bracket, Of, Division, Multiplication, Addition, Subtraction)\n\nCalculations:\n$(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$\n\n$\\Rightarrow 0.008 \\times 400 \\div (2000 \\times 0.04)$\n\n$\\Rightarrow 0.008 \\times 400 \\div 80$\n\n$\\Rightarrow 0.008 \\times 5$\n\n$\\Rightarrow 0.04$\n\n$\\Rightarrow \\frac{4}{100}$\n\n$\\Rightarrow \\frac{1}{25}$\n\n∴ The correct answer is option A.",
@@ -16528,10 +16528,10 @@
         "avgTime": "00:31",
         "question": "If $5a + \\frac{1}{3a} = 5$, then the value of $9a^2 + \\frac{1}{25a^2}$ is:",
         "options": {
-          "a": "$515 \\frac{51}{5}$",
-          "b": "$295 \\frac{29}{5}$",
-          "c": "$525 \\frac{52}{5}$",
-          "d": "$395 \\frac{39}{5}$"
+          "a": "$\\frac{51}{5}$",
+          "b": "$\\frac{29}{5}$",
+          "c": "$\\frac{52}{5}$",
+          "d": "$\\frac{39}{5}$"
         },
         "answer": "d",
         "solution": "Multiply the given equation $5a + \\frac{1}{3a} = 5$ by $\\frac{3}{5}$ to get: $3a + \\frac{1}{5a} = 3$\n\nSquaring both sides: $\\left(3a + \\frac{1}{5a}\\right)^2 = 3^2$\n\n$\\Rightarrow 9a^2 + \\frac{1}{25a^2} + 2(3a)\\left(\\frac{1}{5a}\\right) = 9$\n\n$\\Rightarrow 9a^2 + \\frac{1}{25a^2} = 9 - \\frac{6}{5} = \\frac{39}{5}$.",

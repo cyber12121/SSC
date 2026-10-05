@@ -1093,14 +1093,14 @@
     "avgTime": "00:18",
     "questionText": "The simplified value of $(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$ is:",
     "options": {
-      "A": "$125 \\frac{1}{25}$",
-      "B": "$325 \\frac{3}{25}$",
-      "C": "$225 \\frac{2}{25}$",
-      "D": "$150 \\frac{1}{50}$",
-      "a": "$125 \\frac{1}{25}$",
-      "b": "$325 \\frac{3}{25}$",
-      "c": "$225 \\frac{2}{25}$",
-      "d": "$150 \\frac{1}{50}$"
+      "A": "$\\frac{1}{25}$",
+      "B": "$\\frac{3}{25}$",
+      "C": "$\\frac{2}{25}$",
+      "D": "$\\frac{1}{50}$",
+      "a": "$\\frac{1}{25}$",
+      "b": "$\\frac{3}{25}$",
+      "c": "$\\frac{2}{25}$",
+      "d": "$\\frac{1}{50}$"
     },
     "solution": "Given:\n$(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$\n\nFormula used:\nBODMAS Rule (Bracket, Of, Division, Multiplication, Addition, Subtraction)\n\nCalculations:\n$(0.2)^3 \\times 400 \\div 2000 \\text{ of } (0.2)^2$\n\n$\\Rightarrow 0.008 \\times 400 \\div (2000 \\times 0.04)$\n\n$\\Rightarrow 0.008 \\times 400 \\div 80$\n\n$\\Rightarrow 0.008 \\times 5$\n\n$\\Rightarrow 0.04$\n\n$\\Rightarrow \\frac{4}{100}$\n\n$\\Rightarrow \\frac{1}{25}$\n\n∴ The correct answer is option A.",
     "mockId": "mock_1791012434816_8hbzi",

@@ -64,6 +64,38 @@ export function normalizeUnicodeMath(text: string = ''): string {
   return s;
 }
 
+/**
+ * Strips concatenated fraction scraper artifacts:
+ * When scrapers extract HTML fractions, they often concatenate the numerator and denominator
+ * without a delimiter as a fallback text prefix before the LaTeX/text fraction:
+ * e.g. "$515 \frac{51}{5}$" (515 === "51" + "5") -> "$\frac{51}{5}$"
+ * e.g. "$125 \frac{1}{25}$" (125 === "1" + "25") -> "$\frac{1}{25}$"
+ * e.g. "515 51/5" -> "51/5"
+ * Safely preserves genuine mixed numbers (e.g. "13\frac{1}{3}", "12\frac{1}{2}", "25\frac{2}{5}").
+ */
+export function cleanScrapedFractionPrefixes(text: string = ''): string {
+  if (!text) return '';
+  let s = text;
+
+  // 1. LaTeX \frac / \cfrac / \dfrac format: e.g. "$515 \frac{51}{5}$", "515 $\frac{51}{5}$", "515 \frac{51}{5}"
+  s = s.replace(/(?:(?<=[$])|\b)(\d+)\s*(\$?)\s*\\+(?:d?frac|cfrac)\{(\d+)\}\{(\d+)\}/g, (match, prefix, dollar, num, den) => {
+    if (prefix === num + den && (num.length > 1 || den.length > 1 || parseInt(num, 10) >= parseInt(den, 10))) {
+      return (dollar || '') + `\\frac{${num}}{${den}}`;
+    }
+    return match;
+  });
+
+  // 2. Plain text slash format: e.g. "515 51/5" or "125 1/25"
+  s = s.replace(/(?:(?<=[$])|\b)(\d+)\s+(\d+)\s*\/\s*(\d+\b)/g, (match, prefix, num, den) => {
+    if (prefix === num + den && (num.length > 1 || den.length > 1 || parseInt(num, 10) >= parseInt(den, 10))) {
+      return `${num}/${den}`;
+    }
+    return match;
+  });
+
+  return s;
+}
+
 
 /**
  * Extracts balanced curly braces starting at a given '{' index.
@@ -210,6 +242,7 @@ export function wrapUnwrappedFractions(rawText: string = ''): string {
 export function reconstructScrapedMath(rawText: string = ''): string {
   if (!rawText) return '';
   let s = normalizeUnicodeMath(rawText);
+  s = cleanScrapedFractionPrefixes(s);
 
   // Preserve existing math blocks so regex cleanups do not corrupt math expressions
   const mathPlaceholders: string[] = [];
@@ -543,7 +576,7 @@ export function reconstructScrapedSolutionMath(rawText: string = ''): string {
  */
 export function sanitizeLatexForKatex(latex: string = ''): string {
   if (!latex) return '';
-  let s = latex.trim();
+  let s = cleanScrapedFractionPrefixes(latex.trim());
 
   // 1. Fix corrupted \left / \right and form-feed corrupted \frac
   s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
@@ -835,10 +868,10 @@ export function normalizeQuestionOptions(options: any): { a: string; b: string; 
   result.c = getVal('c', 'C', '3', 'opt3', 'option3', 'optionC', 'option 3', 'option c');
   result.d = getVal('d', 'D', '4', 'opt4', 'option4', 'optionD', 'option 4', 'option d');
 
-  // Automatically future-proof option text formatting (powers & comma spacing)
+  // Automatically future-proof option text formatting (powers & comma spacing & fraction artifact cleaning)
   for (const k of ['a', 'b', 'c', 'd'] as const) {
     if (result[k]) {
-      result[k] = normalizeListCommas(cleanAlgebraPowers(result[k]));
+      result[k] = cleanScrapedFractionPrefixes(normalizeListCommas(cleanAlgebraPowers(result[k])));
     }
   }
 
