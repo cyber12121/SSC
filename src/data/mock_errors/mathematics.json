@@ -6429,6 +6429,198 @@
           "conceptTested": "Interior angle formula of a regular polygon: Each interior angle = $\\frac{(n - 2) \\times 180^{\\circ}}{n}$ and Number of diagonals = $\\frac{n(n - 3)}{2}$.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_f730eb1766",
+        "q_num": 204,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:54",
+        "avgTime": "00:52",
+        "question": "The total outer surface area of a right circular cone of height $24\\text{ cm}$ with a hemisphere of radius $7\\text{ cm}$ upon its base is",
+        "options": {
+          "a": "327π \\text{ square cm}",
+          "b": "307π \\text{ square cm}",
+          "c": "293π \\text{ square cm}",
+          "d": "273π \\text{ square cm}"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nOuter surface area = CSA of cone + CSA of hemisphere\n\n$\\Rightarrow \\text{Area} = \\pi rl + 2\\pi r^2$\n\n$\\Rightarrow l = \\sqrt{7^2 + 24^2} = 25\\text{ cm}$: $\\Rightarrow \\text{Area} = \\pi \\times 7 \\times 25 + 2 \\times \\pi \\times 7^2$\n\n$\\Rightarrow \\text{Area} = 175\\pi + 98\\pi = 273\\pi$\n\n∴ The correct answer is $273\\pi \\text{ square cm}$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Sphere & Hemisphere",
+        "conceptTested": "Combined solid surface area using curved surface areas of a right circular cone and a hemisphere.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Sphere & Hemisphere",
+          "conceptTested": "Combined solid surface area using curved surface areas of a right circular cone and a hemisphere.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_fe8728e605",
+        "q_num": 205,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:12",
+        "avgTime": "00:47",
+        "question": "If 4 men or 7 women can finish a work in 60 days then in how many days the same work can be finished by 8 men, 7 women working together?",
+        "options": {
+          "a": "26 days",
+          "b": "25 days",
+          "c": "21 days",
+          "d": "20 days"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nDirect formula for OR & AND conditions in Time & Work problems: Required Days = Given Days $\\div$ [(New Men $\\div$ Old Men) + (New Women $\\div$ Old Women)]\n\nRequired Days = $60 \\div [(8 \\div 4) + (7 \\div 7)]$\nRequired Days = $60 \\div [2 + 1]$\nRequired Days = $60 \\div 3 = 20$\n\n$\\therefore$ The correct answer is 20 days.\n\nAlternate Method\nGiven:\nTime taken by 4 Men to complete the work = 60 days\nTime taken by 7 Women to complete the work = 60 days\n\nCalculations:\n$\\Rightarrow$ Efficiency of 4 Men = 1 unit/day\n$\\Rightarrow$ Efficiency of 8 Men = $1 \\times 2 = 2$ units/day\n$\\Rightarrow$ Efficiency of 7 Women = 1 unit/day\n\n$\\Rightarrow$ Combined efficiency of 8 Men and 7 Women working together = $2 + 1 = 3$ units/day\n\n$\\Rightarrow$ Total time required = Total Work $\\div$ Combined Efficiency\n$\\Rightarrow$ Total time required = $60 \\div 3 = 20$ days\n\n$\\therefore$ The correct answer is 20 days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Work equivalence rule: If $M_1$ men or $W_1$ women can do a work in $D$ days, then $M_2$ men and $W_2$ women together finish it in $\\frac{D}{\\frac{M_2}{M_1} + \\frac{W_2}{W_1}}$ days.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Work equivalence rule: If $M_1$ men or $W_1$ women can do a work in $D$ days, then $M_2$ men and $W_2$ women together finish it in $\\frac{D}{\\frac{M_2}{M_1} + \\frac{W_2}{W_1}}$ days.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_e4e5fba576",
+        "q_num": 206,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:40",
+        "avgTime": "00:30",
+        "question": "If Ram walks at a speed of 8 km/h, he misses a train by 7 minutes. However, if he walks at a speed of 10 km/h, he reaches the station 5 minutes before the departure of the train. Find the distance (in km) between Ram’s house and the station.",
+        "options": {
+          "a": "9",
+          "b": "7",
+          "c": "6",
+          "d": "8"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nDistance = $[(S_1 \\times S_2) \\div (S_2 - S_1)] \\times \\text{Total Time Difference}$\n\n$S_1 = 8$ km/h, $S_2 = 10$ km/h, Time Difference = $7 + 5 = 12$ mins = $\\frac{1}{5}$ hr.\n\nDistance = $[(8 \\times 10) \\div (10 - 8)] \\times \\frac{1}{5}$\nDistance = $(80 \\div 2) \\times \\frac{1}{5} = 40 \\times \\frac{1}{5} = 8$ km.\n\n$\\therefore$ The correct answer is 8 km.\n\nAlternate Method\nLet the distance between Ram's house and the station be $D$ km.\n\n$\\Rightarrow \\frac{D}{8} - \\frac{D}{10} = \\frac{12}{60}$\n\n$\\Rightarrow \\frac{5D - 4D}{40} = \\frac{1}{5}$\n\n$\\Rightarrow \\frac{D}{40} = \\frac{1}{5} \\Rightarrow D = 8$ km.\n\n$\\therefore$ The correct answer is 8 km.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Trains (Poles, Platforms & Lengths)",
+        "conceptTested": "Distance formula using two speeds and arrival time differences: $\\text{Distance} = \\frac{S_1 \\times S_2}{S_2 - S_1} \\times \\Delta T$",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Trains (Poles, Platforms & Lengths)",
+          "conceptTested": "Distance formula using two speeds and arrival time differences: $\\text{Distance} = \\frac{S_1 \\times S_2}{S_2 - S_1} \\times \\Delta T$",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_8b0395fdc3",
+        "q_num": 207,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:05",
+        "avgTime": "00:41",
+        "question": "Aman alone can do a work in 7 days working 4 hours a day. Geeta alone can do the same work in 2 days working 7 hours a day. How many hours do they need to work together in a day to complete the same work in 7 days?",
+        "options": {
+          "a": "$\\frac{3}{7}$ hours",
+          "b": "$\\frac{4}{3}$ hours",
+          "c": "$\\frac{4}{9}$ hours",
+          "d": "$\\frac{5}{8}$ hours"
+        },
+        "answer": "b",
+        "solution": "Solution\n\nTotal time taken by Aman = $7 \\times 4 = 28$ hours, and by Geeta = $2 \\times 7 = 14$ hours.\nTime taken working together = $(28 \\times 14) \\div (28 + 14) = \\frac{28}{3}$ hours.\nDaily hours needed to complete the work in 7 days = Total time $\\div 7 = \\frac{28}{3} \\div 7 = \\frac{4}{3}$ hours.\n\n$\\therefore$ The correct answer is $\\frac{4}{3}$ hours.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Work Efficiency & Ratios",
+        "conceptTested": "Total work equivalence in man-hours and proportional allocation of hours for target completion days.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Work Efficiency & Ratios",
+          "conceptTested": "Total work equivalence in man-hours and proportional allocation of hours for target completion days.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_43524101d0",
+        "q_num": 208,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:56",
+        "avgTime": "00:35",
+        "question": "If the compound interest on a certain sum of money for two years at 9% p.a. is Rs. 3,762, then the sum is:",
+        "options": {
+          "a": "Rs. 20,000",
+          "b": "Rs. 18,000",
+          "c": "Rs. 25,000",
+          "d": "Rs. 24,000"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nShortcut Trick\nEffective Compound Interest rate for 2 years = $R + R + \\frac{R \\times R}{100}$.\nEffective rate for 9% = $9 + 9 + \\frac{81}{100} = 18.81\\%$.\nLet the principal sum be $P$.\n\n$\\Rightarrow 18.81\\% \\text{ of } P = 3762$\n\n$\\Rightarrow P = 3762 \\times \\frac{100}{18.81} = 20000$\n\n$\\therefore$ The correct answer is Rs. 20, 000.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Basic Compound Interest",
+        "conceptTested": "Effective compound interest rate for 2 years: $\\text{Effective Rate} = 2R + \\frac{R^2}{100}\\%$.",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Basic Compound Interest",
+          "conceptTested": "Effective compound interest rate for 2 years: $\\text{Effective Rate} = 2R + \\frac{R^2}{100}\\%$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_fd66e795bf",
+        "q_num": 209,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:34",
+        "avgTime": "00:23",
+        "question": "The difference between the simple interest received from two different sources on Rs. $1,500$ for three years is Rs. $13.50$. The difference between their rates of interest is:",
+        "options": {
+          "a": "0.1%",
+          "b": "0.2%",
+          "c": "0.3%",
+          "d": "0.4%"
+        },
+        "answer": "c",
+        "solution": "Difference in Rates = $(\\text{Difference in SI} \\times 100) \\div (\\text{Principal} \\times \\text{Time})$\n\n$\\Rightarrow \\Delta R = (13.50 \\times 100) \\div (1500 \\times 3)$\n\n$\\Rightarrow \\Delta R = 1350 \\div 4500 = 0.3\\%$.",
+        "image": null,
+        "topic": "Simple Interest",
+        "subtopic": "Multiplier & Rate-Time Relations",
+        "conceptTested": "Difference in simple interest for a given principal and time is directly proportional to the difference in their rates: $\\Delta SI = \\frac{P \\times T \\times \\Delta R}{100}$.",
+        "tags": {
+          "topic": "Simple Interest",
+          "subtopic": "Multiplier & Rate-Time Relations",
+          "conceptTested": "Difference in simple interest for a given principal and time is directly proportional to the difference in their rates: $\\Delta SI = \\frac{P \\times T \\times \\Delta R}{100}$.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -16225,6 +16417,262 @@
           "conceptTested": "Algebraic evaluation based on standard polynomial expansion or identity pattern.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_c51bcbfdcc",
+        "q_num": 311,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:02",
+        "avgTime": "00:56",
+        "question": "$\\Delta ABC$ is drawn in a circle such that $AC = BC$ and $\\angle BAC = 65^\\circ$. From points $B$ and $C$ two tangents are drawn which intersect at point $P$. What is the measure of $\\angle BPC$?",
+        "options": {
+          "a": "52.5°",
+          "b": "32.5°",
+          "c": "50°",
+          "d": "55°"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nBy the Alternate Segment Theorem, the angle between a tangent and a chord equals the angle subtended by that chord in the alternate segment.\n\n$\\Rightarrow \\angle PBC = \\angle BAC = 65^\\circ$\n\n$\\Rightarrow \\angle PCB = \\angle BAC = 65^\\circ$\n\nIn $\\Delta BPC$, the sum of all interior angles is $180^\\circ$: $\\Rightarrow \\angle BPC + 65^\\circ + 65^\\circ = 180^\\circ$\n\n$\\Rightarrow \\angle BPC = 180^\\circ - 130^\\circ = 50^\\circ$\n\n∴ The correct answer is $50^\\circ$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Alternate Segment Theorem and cyclic properties of angles subtended by tangents and chords.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Alternate Segment Theorem and cyclic properties of angles subtended by tangents and chords.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_f4b9fec4b4",
+        "q_num": 312,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:13",
+        "avgTime": "00:35",
+        "question": "A, B and C enter into a partnership in the ratio $\\frac{4}{3} \\colon \\frac{5}{2} \\colon \\frac{6}{7}$. After 3 months, B increases his share by 40%. If the total profit at the end of one year is Rs. 2,19,360, then A's share in the profit is:",
+        "options": {
+          "a": "Rs. 53,760",
+          "b": "Rs. 34,560",
+          "c": "Rs. 1,31,040",
+          "d": "Rs. 88,320"
+        },
+        "answer": "a",
+        "solution": "Solution\n\nInitial capital ratio = $\\frac{4}{3} \\colon \\frac{5}{2} \\colon \\frac{6}{7} \\implies$ Multiply by LCM 42 $\\implies 56 \\colon 105 \\colon 36$.\nB's increased capital after 3 months = $105 \\times 1.4 = 147$ units.\nProfit ratio = $(56 \\times 12) \\colon (105 \\times 3 + 147 \\times 9) \\colon (36 \\times 12)$.\nSimplified profit ratio = $672 \\colon 1638 \\colon 432 = 112 \\colon 273 \\colon 72$.\nTotal profit ratio parts = $112 + 273 + 72 = 457$ parts.\nA's share = $\\left(\\frac{112}{457}\\right) \\times 219360 = 112 \\times 480 = 53760$.\n\n$\\therefore$ The correct answer is Rs. 53, 760.",
+        "image": null,
+        "topic": "Partnership",
+        "subtopic": "Profit Sharing & Basic Partnership",
+        "conceptTested": "Profit distribution ratio is directly proportional to the product of investment capital and the time period it is invested for: $\\text{Profit Ratio} = (C_1 \\times T_1) : (C_2 \\times T_2)$.",
+        "tags": {
+          "topic": "Partnership",
+          "subtopic": "Profit Sharing & Basic Partnership",
+          "conceptTested": "Profit distribution ratio is directly proportional to the product of investment capital and the time period it is invested for: $\\text{Profit Ratio} = (C_1 \\times T_1) : (C_2 \\times T_2)$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b192475c8b",
+        "q_num": 313,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:02",
+        "avgTime": "00:34",
+        "question": "In a class, there are $54$ students. $33\\frac{1}{3}\\%$ of the number of students are boys and the rest are girls. The average score in mathematics of boys is $50\\%$ more than that of the girls. If the average score of all the students is $70$, then what is the average score of the boys?",
+        "options": {
+          "a": "90",
+          "b": "84",
+          "c": "81",
+          "d": "87"
+        },
+        "answer": "a",
+        "solution": "Ratio of Boys to Girls = $33\\frac{1}{3}\\% : 66\\frac{2}{3}\\% = 1 : 2$.\n\nLet the average score of girls be $2x$ and boys be $3x$. Using weighted average: $(1 \\times 3x + 2 \\times 2x) \\div 3 = 70$\n\n$\\Rightarrow 7x \\div 3 = 70 \\Rightarrow x = 30$.\n\nAverage score of boys = $3x = 3 \\times 30 = 90$.\n∴ The correct answer is 90.",
+        "image": null,
+        "topic": "Average",
+        "subtopic": "Weighted & Combined Average",
+        "conceptTested": "Weighted Average formula: $A_w = \\frac{n_1A_1 + n_2A_2}{n_1 + n_2}$ combined with percentage ratio distributions.",
+        "tags": {
+          "topic": "Average",
+          "subtopic": "Weighted & Combined Average",
+          "conceptTested": "Weighted Average formula: $A_w = \\frac{n_1A_1 + n_2A_2}{n_1 + n_2}$ combined with percentage ratio distributions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b68e971def",
+        "q_num": 314,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:57",
+        "avgTime": "00:31",
+        "question": "If $5a + \\frac{1}{3a} = 5$, then the value of $9a^2 + \\frac{1}{25a^2}$ is:",
+        "options": {
+          "a": "$515 \\frac{51}{5}$",
+          "b": "$295 \\frac{29}{5}$",
+          "c": "$525 \\frac{52}{5}$",
+          "d": "$395 \\frac{39}{5}$"
+        },
+        "answer": "d",
+        "solution": "Multiply the given equation $5a + \\frac{1}{3a} = 5$ by $\\frac{3}{5}$ to get: $3a + \\frac{1}{5a} = 3$\n\nSquaring both sides: $\\left(3a + \\frac{1}{5a}\\right)^2 = 3^2$\n\n$\\Rightarrow 9a^2 + \\frac{1}{25a^2} + 2(3a)\\left(\\frac{1}{5a}\\right) = 9$\n\n$\\Rightarrow 9a^2 + \\frac{1}{25a^2} = 9 - \\frac{6}{5} = \\frac{39}{5}$.",
+        "image": null,
+        "topic": "Algebra",
+        "subtopic": "Basic Algebraic Identities",
+        "conceptTested": "Modified reciprocal identity: If $cx + \\frac{1}{dx} = k$, then $c^2x^2 + \\frac{1}{d^2x^2} = k^2 - 2\\left(\\frac{c}{d}\\right)$.",
+        "tags": {
+          "topic": "Algebra",
+          "subtopic": "Basic Algebraic Identities",
+          "conceptTested": "Modified reciprocal identity: If $cx + \\frac{1}{dx} = k$, then $c^2x^2 + \\frac{1}{d^2x^2} = k^2 - 2\\left(\\frac{c}{d}\\right)$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_9c4c61a3df",
+        "q_num": 315,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "01:03",
+        "avgTime": "00:25",
+        "question": "Simplify $\\frac{10^2 \\text{ of } \\left(\\frac{1}{5}\\right)^3 \\div \\frac{1}{4} \\times 4 - \\frac{2}{5} \\text{ of } 15}{\\frac{4}{5}\\left(5 \\div 5 \\text{ of } 12 + \\frac{1}{6}\\right)}$",
+        "options": {
+          "a": "$-\\frac{65}{73}$",
+          "b": "34",
+          "c": "$-\\frac{147}{73}$",
+          "d": "$-\\frac{78}{73}$"
+        },
+        "answer": "b",
+        "solution": "Evaluating the numerator and denominator step by step using BODMAS yields: Numerator = $100 \\times \\frac{1}{125} \\div \\frac{1}{4} \\times 4 - 6 = \\frac{64}{5} - 6 = \\frac{34}{5}$\n\nDenominator = $\\frac{4}{5}\\left(5 \\div 60 + \\frac{1}{6}\\right) = \\frac{4}{5}\\left(\\frac{1}{12} + \\frac{1}{6}\\right) = \\frac{1}{5}$\nSimplifying the expression: $\\frac{34 / 5}{1 / 5} = 34$.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "VBODMAS & Order of Operations",
+        "conceptTested": "BODMAS rule priority: Brackets, Of, Division, Multiplication, Addition, and Subtraction.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "VBODMAS & Order of Operations",
+          "conceptTested": "BODMAS rule priority: Brackets, Of, Division, Multiplication, Addition, and Subtraction.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_52754613d0",
+        "q_num": 316,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:07",
+        "avgTime": "00:19",
+        "question": "A shopkeeper bought two pairs of shoes at the same price and sold one pair at a profit of $15\\%$ and the other pair at a loss of $5\\%$. If the difference between their selling prices is ₹140, then how much profit did he earn in the whole transaction?",
+        "options": {
+          "a": "₹210",
+          "b": "₹35",
+          "c": "₹70",
+          "d": "₹7"
+        },
+        "answer": "c",
+        "solution": "Let the cost price (CP) of each pair of shoes be $100\\%$.\n\nThe selling prices are $115\\%$ ($15\\%$ profit) and $95\\%$ ($5\\%$ loss).\n\nDifference in selling price = $115\\% - 95\\% = 20\\%$.\n\nGiven $20\\% = \\text{₹}140 \\Rightarrow 10\\% = \\text{₹}70$.\n\nOverall net profit = $(+15\\%) - 5\\% = +10\\%$.\n∴ The correct answer is ₹70.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Basic CP, SP & Profit/Loss%",
+        "conceptTested": "Overall profit/loss percentage calculation when two items are bought at the same cost price.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Basic CP, SP & Profit/Loss%",
+          "conceptTested": "Overall profit/loss percentage calculation when two items are bought at the same cost price.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0bd9ac928b",
+        "q_num": 317,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:01",
+        "avgTime": "00:09",
+        "question": "A wooden piece in the shape of a cuboid is divided into five equal parts by cutting it with four cuts perpendicular to its length, and it turns out that each piece is a cube of volume $64\\text{ cm}^3$. What is the total surface area (in $\\text{cm}^2$) of the cuboid?",
+        "options": {
+          "a": "362 $\\text{cm}^2$",
+          "b": "256 $\\text{cm}^2$",
+          "c": "378 $\\text{cm}^2$",
+          "d": "352 $\\text{cm}^2$"
+        },
+        "answer": "d",
+        "solution": "Let the side of each cube be '$a$'. Volume of a cube = $a^3 = 64 \\Rightarrow a = 4\\text{ cm}$.\n\nWhen 5 cubes are joined end - to - end, they form a cuboid with exactly 22 exposed square faces (4 lateral faces per cube $\\times$ 5 cubes + 2 end faces).\n\nTotal Surface Area = $22 \\times (\\text{Area of one square face})$\nTotal Surface Area = $22 \\times (4 \\times 4) = 22 \\times 16 = 352\\text{ cm}^2$.\n∴ The correct answer is 352 $\\text{cm}^2$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cube & Cuboid",
+        "conceptTested": "Total surface area and volume relationship of cubes and cuboids.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cube & Cuboid",
+          "conceptTested": "Total surface area and volume relationship of cubes and cuboids.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c38c282df0",
+        "q_num": 318,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:09",
+        "avgTime": "00:24",
+        "question": "Total surface area of a solid right circular cylinder is $462\\text{ cm}^2$. If its curved surface area is one-third of its total surface area, then the radius and height of the cylinder are (in cm) respectively $\\left(\\text{Use } \\pi = \\frac{22}{7}\\right)$:",
+        "options": {
+          "a": "7 and 14",
+          "b": "14 and 7",
+          "c": "3.5 and 7",
+          "d": "7 and 3.5"
+        },
+        "answer": "d",
+        "solution": "Given $\\text{CSA} : \\text{TSA} = 1 : 3 \\Rightarrow \\frac{2\\pi rh}{2\\pi r(r + h)} = \\frac{1}{3}$\n\n$\\Rightarrow \\frac{h}{r + h} = \\frac{1}{3} \\Rightarrow 3h = r + h \\Rightarrow r = 2h$\n\nChecking TSA for $r = 7\\text{ cm}, h = 3.5\\text{ cm}$: $\\text{TSA} = 2 \\times \\left(\\frac{22}{7}\\right) \\times 7 \\times (7 + 3.5) = 44 \\times 10.5 = 462\\text{ cm}^2$.\n∴ The correct answer is 7 and 3.5.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cylinder (Solid & Hollow)",
+        "conceptTested": "Curved surface area and total surface area formulas of a right circular cylinder.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cylinder (Solid & Hollow)",
+          "conceptTested": "Curved surface area and total surface area formulas of a right circular cylinder.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -20281,6 +20729,70 @@
           "topic": "Trigonometry",
           "subtopic": "Trigonometric Ratios & Simplification",
           "conceptTested": "Simplification of trigonometric expressions using fundamental relations and reciprocal identities.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d81b8ca152",
+        "q_num": 129,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "01:34",
+        "avgTime": "00:53",
+        "question": "On dividing $15968$ by a certain number, the quotient is $89$ and the remainder is $37$. Find the divisor.",
+        "options": {
+          "a": "178",
+          "b": "187",
+          "c": "197",
+          "d": "179"
+        },
+        "answer": "d",
+        "solution": "Solution\n\nShortcut Trick\nSubtract the remainder from the dividend to get the exactly divisible part: $15968 - 37 = 15931$.\n\nWe know: $\\text{Divisor} \\times \\text{Quotient} = 15931 \\Rightarrow \\text{Divisor} \\times 89 = 15931$.kon\n\nFrom the given options, only $179$ multiplied by $89$ gives $15931$ with remainder $37$.\n\n∴ The correct answer is $179$.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Division algorithm relation: $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Division algorithm relation: $\\text{Dividend} = (\\text{Divisor} \\times \\text{Quotient}) + \\text{Remainder}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0cbdeeb447",
+        "q_num": 130,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:27",
+        "avgTime": "00:21",
+        "question": "Two trains are running in opposite directions with the same speed. If the length of each train is $540$ metres and they cross each other in $54$ seconds, then what is the speed of each train?",
+        "options": {
+          "a": "15 m/s",
+          "b": "10 m/s",
+          "c": "20 m/s",
+          "d": "5 m/s"
+        },
+        "answer": "b",
+        "solution": "Total distance to cross = Sum of train lengths = $540 + 540 = 1080$ m.\nRelative speed = Total Distance $\\div$ Time = $1080 \\div 54 = 20$ m/s.\n\nSince both trains are moving in opposite directions at the same speed, relative speed is twice the speed of one train.\n\nSpeed of each train = $20 \\div 2 = 10$ m/s.\n∴ The correct answer is 10 m/s.",
+        "image": null,
+        "topic": "Trains",
+        "subtopic": "Relative Speed & Direction",
+        "conceptTested": "Relative speed in opposite directions is the sum of individual speeds, and total distance covered is the sum of the lengths of both trains.",
+        "tags": {
+          "topic": "Trains",
+          "subtopic": "Relative Speed & Direction",
+          "conceptTested": "Relative speed in opposite directions is the sum of individual speeds, and total distance covered is the sum of the lengths of both trains.",
           "difficulty": "medium"
         }
       }

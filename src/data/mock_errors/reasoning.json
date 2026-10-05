@@ -2614,6 +2614,70 @@
           "conceptTested": "Applying reverse alphabetical positioning and letter shifting patterns across letter clusters.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_86261e8b11",
+        "q_num": 84,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:42",
+        "avgTime": "01:04",
+        "question": "Select the correct combination of mathematical signs that can sequentially replace the $*$ signs and balance the equation.\n$$512 * 32 * 9 * 100 * 6 * 25 * 2$$",
+        "options": {
+          "a": "+, ×, ÷, =, -, ×",
+          "b": "÷, ×, +, -, =, ×",
+          "c": "÷, ×, +, =, -, ×",
+          "d": "÷, ×, -, +, =, ×"
+        },
+        "answer": "d",
+        "solution": "According to the BODMAS rule, testing Option 4: $$512 \\div 32 \\times 9 - 100 + 6 = 25 \\times 2$$\n\n$$16 \\times 9 - 100 + 6 = 50$$\n\n$$144 - 100 + 6 = 50$$\n\n$$44 + 6 = 50 \\implies 50 = 50 \\text{ (LHS = RHS)}$$",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Balancing mathematical equations by sequentially replacing placeholder symbols using the BODMAS rule.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Balancing mathematical equations by sequentially replacing placeholder symbols using the BODMAS rule.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_716c3bb247",
+        "q_num": 85,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:09",
+        "avgTime": "00:27",
+        "question": "Four number-pairs have been given, out of which three are alike in some manner and one is different. Select the number-pair that is different",
+        "options": {
+          "a": "12 : 432",
+          "b": "7 : 147",
+          "c": "8 : 192",
+          "d": "13 : 506"
+        },
+        "answer": "d",
+        "solution": "The logic follows here is: Square of 1st number × 3 = 2nd number\nOption 1 \\rightarrow 12 : 432 \\rightarrow (12)² × 3 = 144 × 3 = 432\nOption 2 \\rightarrow 7 : 147 \\rightarrow (7)² × 3 = 49 × 3 = 147\nOption 3 \\rightarrow 8 : 192 \\rightarrow (8)² × 3 = 64 × 3 = 192\nOption 4 \\rightarrow 13 : 506 \\rightarrow (13)² × 3 = 169 × 3 = 507\n\neq 506\n\nHence, the correct answer is option D.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Number & Set Analogy",
+        "conceptTested": "Arithmetic relationship of square of the first number multiplied by a constant factor equals the second number ($x^2 \\times 3 = y$).",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number & Set Analogy",
+          "conceptTested": "Arithmetic relationship of square of the first number multiplied by a constant factor equals the second number ($x^2 \\times 3 = y$).",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -3595,6 +3659,134 @@
           "topic": "Number Series",
           "subtopic": "Missing Number Series",
           "conceptTested": "Identifying alternating patterns in a complex number sequence.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_5fce68c9e1",
+        "q_num": 32,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:02",
+        "avgTime": "00:48",
+        "question": "In a seven-storeyed building, having floors numbered from 1 to 7, A, B, C, D, E, and F each live on a different floor. The ground floor is numbered floor number 1, the floor above it is floor number 2 and so on. One of the floors in the building is vacant. B lives on the floor no. 6. No floor below the floor no. 3 is vacant; and no odd numbered floor is vacant. Only B lives between the floors of A and F. Only one person lives between E and D. Only two floors are between C and F. C lives on one of the floors below F. More than one person lives between D and B. Which of the following floor numbers is vacant?",
+        "options": {
+          "a": "4",
+          "b": "7",
+          "c": "6",
+          "d": "5"
+        },
+        "answer": "a",
+        "solution": "By placing individuals according to the given clues: - Floor 7: A - Floor 6: B - Floor 5: F - Floor 4: Vacant - Floor 3: E - Floor 2: C - Floor 1: D\n\nThus, floor 4 is vacant.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deducing positions and vacancy slots based on floor-wise constraints.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deducing positions and vacancy slots based on floor-wise constraints.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_c5c02d5ab9",
+        "q_num": 33,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:11",
+        "avgTime": "01:02",
+        "question": "Carefully read the given information and answer the given questions. There are six students named Anne, Bristo, Chintu, Dani, Emily, and Freight, sitting in a row facing north. (Not necessarily in this order) Chintu is fifth from the right. There are three persons between Freight and Chintu. There is a person right between Emily and Anne who is not neighbour of Chintu. Bristo and Chintu are not neighbors. Which of the following statements is correct in relation to the system?",
+        "options": {
+          "a": "Emily is sitting at the fourth place from the left side of the freight.",
+          "b": "Bristo is sitting second to the right of freight.",
+          "c": "Freight and Dani are sitting on the last end of the line",
+          "d": "Dani and Emily are neighbors"
+        },
+        "answer": "c",
+        "solution": "Given: There are six students named Anne, Bristo, Chintu, Dani, Emily, and Freight, sitting in a row facing north. (Not necessarily in this order)\n\nChintu is fifth from the right.\n\nThere are three persons between Freight and Chintu.\n\nThere is a person right between Emily and Anne who is not neighbour of Chintu.\n\nBristo and Chintu are not neighbors.\n\nHence, the correct answer is Freight and Dani are sitting on the last end of the line.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of linear positions of individuals facing North based on relative placement constraints.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of linear positions of individuals facing North based on relative placement constraints.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b1b9d58e62",
+        "q_num": 34,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:23",
+        "avgTime": "00:34",
+        "question": "A and B are facing North, starting from extreme right A moves to the 7th place in left and starting from extreme left B moves to the 7th place in right. Now A is to the immediate right of B. How many persons are there in the row?",
+        "options": {
+          "a": "13",
+          "b": "15",
+          "c": "14",
+          "d": "16"
+        },
+        "answer": "c",
+        "solution": "As per the given information: After moving to the 7th place right and left by B and A respectively, we have 14 persons in the row to get A to the immediate right of B.\nHence, the correct answer is 14.",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Order & Ranking Calculations",
+        "conceptTested": "Determination of total number of persons in a row based on positional shifts from extreme ends.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Order & Ranking Calculations",
+          "conceptTested": "Determination of total number of persons in a row based on positional shifts from extreme ends.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b0cac4370f",
+        "q_num": 35,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:26",
+        "avgTime": "00:44",
+        "question": "How many such pairs of letters are there in the word INTERNATIONAL (in both forward and backward directions) which have as many letters between them in the word as there are in the English alphabetical order?",
+        "options": {
+          "a": "5",
+          "b": "7",
+          "c": "4",
+          "d": "6"
+        },
+        "answer": "d",
+        "solution": "Given word: INTERNATIONAL\nForward Pairs: IN, NT\nBackward Pairs: LN, LO, NO, RT\nTotal pairs = 6 such pairs of letters which have as many letters between them in the word as they have in the English alphabetical series.\nHence, the correct answer is 6.",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Letter Pairs Problem",
+        "conceptTested": "Counting forward and backward alphabetical distance pairs within a given word.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Letter Pairs Problem",
+          "conceptTested": "Counting forward and backward alphabetical distance pairs within a given word.",
           "difficulty": "medium"
         }
       }
@@ -6208,6 +6400,166 @@
           "topic": "Statement & Conclusion",
           "subtopic": "Statement & Conclusions",
           "conceptTested": "Deducing relationships between variables from a combined inequality statement.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_1747917fab",
+        "q_num": 84,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "01:29",
+        "avgTime": "00:45",
+        "question": "A word is represented by only one set of numbers as given in any one of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as shown in the given two matrices. The columns and rows of Matrix-I are numbered from 0 to 4 and that of Matrix-II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, for example, 'K' can be represented by 01, 65, etc., and 'A' can be represented by 44, 95, etc. Similarly, you have to identify the set for the word \"CHAMP\".\n\nMATRIX - I\n| | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| 0 | V | K | D | F | R |\n| 1 | C | W | O | H | V |\n| 2 | T | S | Y | J | S |\n| 3 | H | F | I | C | R |\n| 4 | D | S | U | N | A |\n\nMATRIX - II\n| | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|\n| 5 | W | C | U | G | I |\n| 6 | K | I | H | Q | S |\n| 7 | U | E | Y | B | A |\n| 8 | F | H | P | L | N |\n| 9 | A | R | M | T | O |",
+        "options": {
+          "a": "10, 13, 44, 11, 41",
+          "b": "56, 67, 97, 67, 43",
+          "c": "58, 86, 44, 59, 87",
+          "d": "33, 13, 79, 97, 87"
+        },
+        "answer": "d",
+        "solution": "1) 10, 13, 44, 11, 41 - C, H, A, W, S\n2) 56, 67, 97, 67, 43 - C, H, M, H, N\n3) 58, 86, 44, 59, 87 - G, H, A, I, P\n4) 33, 13, 79, 97, 87 - C, H, A, M, P\nHence, the correct answer is \"33, 13, 79, 97, 87\".",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Number & Value Coding",
+        "conceptTested": "Identification of words using row and column matrix representations.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Number & Value Coding",
+          "conceptTested": "Identification of words using row and column matrix representations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_23b48bc4cd",
+        "q_num": 85,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:45",
+        "avgTime": "00:40",
+        "question": "A girl introduces a man as the son of her grandfather and the brother of her maternal aunt. How is the man related to the girl?",
+        "options": {
+          "a": "Brother",
+          "b": "Father",
+          "c": "Nephew",
+          "d": "Uncle"
+        },
+        "answer": "d",
+        "solution": "The son of the girl's grandfather who is also the brother of her maternal aunt means he is the brother of her mother, hence he is her maternal uncle.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Family Tree & Direct Relations",
+        "conceptTested": "Tracing familial generations and relationships through descriptive statements.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Family Tree & Direct Relations",
+          "conceptTested": "Tracing familial generations and relationships through descriptive statements.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_814b5a9335",
+        "q_num": 86,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:18",
+        "avgTime": "00:34",
+        "question": "Read the statement given below and the action taken carefully and select the action which is logical from the given statement.\nStatement: Retired professors, who have worked in the same college, should be included in the advisory committee for college improvement.\nAction:\n1. Management should take suggestions from its employees.\n2. Management should involve experienced persons for the development of the college.",
+        "options": {
+          "a": "Only 2 follows the statement",
+          "b": "Both 1 and 2 follow the statement",
+          "c": "Only 1 follows the statement",
+          "d": "Neither 1 nor 2 follows the statement"
+        },
+        "answer": "a",
+        "solution": "The statement emphasizes taking advice from retired professors for improvement. Action I does not follow because retired professors are no longer current employees. Action II follows because retired professors are experienced persons whose involvement aids college development.",
+        "image": null,
+        "topic": "Course of Action",
+        "subtopic": "Administrative & Problem Solving Actions",
+        "conceptTested": "Evaluating logical validity of actions based on premises and statements.",
+        "tags": {
+          "topic": "Course of Action",
+          "subtopic": "Administrative & Problem Solving Actions",
+          "conceptTested": "Evaluating logical validity of actions based on premises and statements.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_77f9df7453",
+        "q_num": 87,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:44",
+        "avgTime": "00:27",
+        "question": "Six boxes, J, K, L, M, N and O, are kept one over the other, but not necessarily in the same order. J is kept immediately above N. Only one box is kept between K and O. O is the bottom-most box, and M is the top-most box. Which box is kept immediately below M?",
+        "options": {
+          "a": "N",
+          "b": "J",
+          "c": "L",
+          "d": "K"
+        },
+        "answer": "b",
+        "solution": "Boxes: J, K, L, M, N and O\nAccording to the given information: M is the top - most box and O is the bottom - most box.\n\nJ is kept immediately above N and only one box is kept between K and O.\n\nFinally, we get J kept immediately below M.\n\nHence, the correct answer is J.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Determining relative vertical stack order of items based on directional constraints.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Determining relative vertical stack order of items based on directional constraints.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f7cc9fbe42",
+        "q_num": 88,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:31",
+        "avgTime": "00:33",
+        "question": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?$",
+        "options": {
+          "a": "151",
+          "b": "170",
+          "c": "179",
+          "d": "174"
+        },
+        "answer": "d",
+        "solution": "The pattern followed in the series is as follows: $35 + 19 = 54$\n\n$54 + 23 = 77$\n\n$77 + 29 = 106$\n\n$106 + 31 = 137$\n\n$137 + 37 = 174$\n\nHere, successive prime numbers starting from $19$ are added.\n\nHence, the correct answer is 174.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Identification of a prime number sequence addition pattern in a number series.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Identification of a prime number sequence addition pattern in a number series.",
           "difficulty": "medium"
         }
       }

@@ -4465,6 +4465,134 @@
           "conceptTested": "Recipients of prestigious national civilian awards such as the Padma Bhushan and Padma Shri.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_db70ce3840",
+        "q_num": 143,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:10",
+        "avgTime": "00:17",
+        "question": "India has been re-elected to which UNESCO body for the term 2025-2029?",
+        "options": {
+          "a": "UNESCO General Conference",
+          "b": "UNESCO Secretariat",
+          "c": "UNESCO Executive Board",
+          "d": "UNESCO World Heritage Committee"
+        },
+        "answer": "c",
+        "solution": "The correct answer is UNESCO Executive Board.\n\nIndia has been re - elected to the UNESCO Executive Board for the 2025 - 2029 term, reaffirming global confidence in India's role in education, culture, science, and communication. The UNESCO Executive Board is one of the three constitutional organs of UNESCO and guides the organisation's strategic direction.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "National & Global Events",
+        "conceptTested": "Recent international appointments and India's representation in global bodies like UNESCO",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "National & Global Events",
+          "conceptTested": "Recent international appointments and India's representation in global bodies like UNESCO",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_75ec04ab8b",
+        "q_num": 144,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:10",
+        "avgTime": "00:13",
+        "question": "The famous \"Dudhsagar Falls\" is situated on which river?",
+        "options": {
+          "a": "Mandovi river",
+          "b": "Bhadra river",
+          "c": "Sharavati river",
+          "d": "Ulhas river"
+        },
+        "answer": "a",
+        "solution": "The Correct answer is Mandovi River.\n\nKey Points: - The Dudhsagar Falls is a spectacular waterfall located in the Indian state of Goa. - It is situated on the Mandovi River, which originates in the Western Ghats and flows westward into the Arabian Sea. - The name \"Dudhsagar\" translates to \"Sea of Milk\" in English, owing to the waterfall's appearance of milky white water cascading down the rocks. - It is one of the tallest waterfalls in India, with a height of approximately 310 meters (1017 feet).",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Rivers Tributaries",
+        "conceptTested": "Geographical location and source of major rivers and waterfalls in India.",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Rivers Tributaries",
+          "conceptTested": "Geographical location and source of major rivers and waterfalls in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_3c25bb5fa1",
+        "q_num": 145,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:12",
+        "question": "Into how many agro-climatic regions has Rajasthan been divided by ICAR (Indian Council of Agricultural Research)?",
+        "options": {
+          "a": "8",
+          "b": "10",
+          "c": "12",
+          "d": "14"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 10.\n\nKey Points: - Rajasthan has been divided into 10 agro - climatic zones by the Indian Council of Agricultural Research (ICAR) for better agricultural planning and management. - These zones are demarcated based on various factors such as climate, soil type, cropping patterns, and irrigation availability. - The classification is aimed at optimizing agricultural productivity and ensuring sustainable farming practices.",
+        "image": null,
+        "topic": "Indian Climate & Soil",
+        "subtopic": "Agricultural Zones",
+        "conceptTested": "Agro-climatic classification of states by the Indian Council of Agricultural Research (ICAR).",
+        "tags": {
+          "topic": "Indian Climate & Soil",
+          "subtopic": "Agricultural Zones",
+          "conceptTested": "Agro-climatic classification of states by the Indian Council of Agricultural Research (ICAR).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_6ecfc8db65",
+        "q_num": 146,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:14",
+        "avgTime": "00:52",
+        "question": "'Nile river' does not flow through which of the following countries?",
+        "options": {
+          "a": "Sudan",
+          "b": "Chad",
+          "c": "Uganda",
+          "d": "Egypt"
+        },
+        "answer": "b",
+        "solution": "The Correct answer is Chad.\n\nKey Points\nThe Nile River is the longest river in the world, stretching approximately 6, 650 kilometers (4, 130 miles).\n\nIt flows through 11 countries, including Egypt, Sudan, South Sudan, Uganda, and Ethiopia, among others.\n\nThe river is divided into two major tributaries: the White Nile, which originates in Lake Victoria (Uganda), and the Blue Nile, which originates in Lake Tana (Ethiopia).\n\nThe Nile plays a crucial role in supporting agriculture, as its waters are used for irrigation in arid regions, especially in Egypt and Sudan.\n\nChad, however, is not located along the Nile River or its tributaries. It lies to the west of Sudan and is part of the Lake Chad Basin, which is a different hydrological system.",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "River Systems India World",
+        "conceptTested": "Geographical course and basin identification of major international river systems like the Nile.",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "River Systems India World",
+          "conceptTested": "Geographical course and basin identification of major international river systems like the Nile.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -11104,6 +11232,390 @@
           "topic": "Books & Authors",
           "subtopic": "Contemporary Authors Novels",
           "conceptTested": "Recognition of award-nominated contemporary debut novels and their literary backgrounds.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_1ba387e736",
+        "q_num": 212,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:14",
+        "avgTime": "00:28",
+        "question": "Senguttuvan is the name of",
+        "options": {
+          "a": "a Pandya rule",
+          "b": "a Chola king",
+          "c": "a minister in Satavahana court",
+          "d": "a Chera king"
+        },
+        "answer": "d",
+        "solution": "Cheran Senguttuvan was a famous early Chera king, known for his military victories and his legendary Himalayan expedition detailed in the Tamil epic Silapathikaram. He is traditionally associated with the worship of Kannaki and played a vital role in expanding the Chera dynasty's influence.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Identification of prominent rulers of the early Chera dynasty in ancient South India.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Identification of prominent rulers of the early Chera dynasty in ancient South India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a54d11245f",
+        "q_num": 213,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:06",
+        "avgTime": "00:29",
+        "question": "Which of the following statement/s is/are correct about the PM SHRI Schools Scheme?\n(A) PM SHRI Schools will act as exemplar schools showcasing all components of NEP 2020.\n(B) This scheme will apply to schools managed by the Central Government only.\nSelect the correct answer using the code given below:",
+        "options": {
+          "a": "(A) only",
+          "b": "(B) only",
+          "c": "Both (A) and (B)",
+          "d": "Neither (A) nor (B)"
+        },
+        "answer": "a",
+        "solution": "Statement (A) is correct: The PM SHRI Schools Scheme aims to develop selected schools into exemplar schools showcasing all components of the National Education Policy (NEP) 2020.\nStatement (B) is incorrect: The scheme is not limited to schools managed by the Central Government; it also applies to schools managed by state governments, local bodies, and private entities.\nTherefore, only statement (A) is correct.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Features and implementation scope of the PM SHRI Schools Scheme under NEP 2020.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Features and implementation scope of the PM SHRI Schools Scheme under NEP 2020.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ea5f5346ce",
+        "q_num": 214,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:13",
+        "avgTime": "00:29",
+        "question": "Which of the following statement/s is/are correct?\n(A) In 1946, The Cabinet Mission had recommended a loose three-tier confederation for India.\n(B) The Cabinet Mission had recommended a strong Central Government with all residual powers.\nSelect the correct answer using the code given below:",
+        "options": {
+          "a": "(A) only",
+          "b": "(B) only",
+          "c": "Both (A) and (B)",
+          "d": "Neither (A) nor (B)"
+        },
+        "answer": "a",
+        "solution": "Statement (A) is correct: The Cabinet Mission of 1946 proposed a three - tier structure for the governance of India comprising the Union, provinces, and princely states, aiming to create a loose confederation with a weak center.\nStatement (B) is incorrect: The Cabinet Mission did not recommend a strong central government with all residual powers; rather, residual powers were vested in the provinces.\n\nThus, only statement (A) is correct.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Proposals and structural recommendations of the Cabinet Mission of 1946.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Proposals and structural recommendations of the Cabinet Mission of 1946.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c066ff09fa",
+        "q_num": 215,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:12",
+        "avgTime": "00:23",
+        "question": "Which of the following statements about Justice Sanjiv Khanna is/are correct?\n1. He became the 51st Chief Justice of India.\n2. He succeeded Justice D.Y. Chandrachud.\n3. His tenure as CJI began in 2023.",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "2 and 3 only",
+          "c": "1 and 3 only",
+          "d": "All 1, 2, and 3"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct: Justice Sanjiv Khanna became the 51st Chief Justice of India.\nStatement 2 is correct: He succeeded Justice D.Y. Chandrachud.\nStatement 3 is incorrect: His tenure as Chief Justice of India began in November 2024, not 2023.\nHence, statements 1 and 2 only are correct.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Appointments & Resignations",
+        "conceptTested": "Knowledge of recent appointments to the post of Chief Justice of India.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Appointments & Resignations",
+          "conceptTested": "Knowledge of recent appointments to the post of Chief Justice of India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_fc5f471189",
+        "q_num": 216,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:10",
+        "avgTime": "00:15",
+        "question": "Which chemical is used for artificial rain?",
+        "options": {
+          "a": "Silver Oxide",
+          "b": "Silver Nitrate",
+          "c": "Silver Iodide",
+          "d": "Silver Chloride"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Silver Iodide.\n\nArtificial rain, also known as cloud seeding, is a process by which specific chemicals are introduced into clouds to stimulate precipitation. The most commonly used chemical for this process is Silver Iodide.\n\nSilver Iodide serves as an effective nucleating agent because its crystalline structure is similar to that of ice. This similarity allows it to promote the formation of ice crystals in clouds, which grow and eventually fall as precipitation. Hence, Silver Iodide is widely used in artificial rain creation.",
+        "image": null,
+        "topic": "Chemistry",
+        "subtopic": "General Science Principles",
+        "conceptTested": "Chemical applications and cloud seeding agents such as Silver Iodide",
+        "tags": {
+          "topic": "Chemistry",
+          "subtopic": "General Science Principles",
+          "conceptTested": "Chemical applications and cloud seeding agents such as Silver Iodide",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2d2271aaad",
+        "q_num": 217,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:07",
+        "avgTime": "00:14",
+        "question": "Which gland is the largest gland in the human body?",
+        "options": {
+          "a": "Pancreas",
+          "b": "Pituitary",
+          "c": "Liver",
+          "d": "Gall bladder"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Liver.\n\nLiver is the largest gland in the human body, weighing approximately 1.4 to 1.6 kilograms in an average adult. It is located in the upper right portion of the abdomen, beneath the diaphragm, and is protected by the rib cage. The liver is a vital organ responsible for performing more than 500 different functions, including detoxification, protein synthesis, and the production of bile, which aids in digestion.",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "General Science Principles",
+        "conceptTested": "Anatomy of human digestive and glandular systems, specifically identifying the largest gland (Liver)",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "General Science Principles",
+          "conceptTested": "Anatomy of human digestive and glandular systems, specifically identifying the largest gland (Liver)",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_7a35e96431",
+        "q_num": 218,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:39",
+        "avgTime": "00:21",
+        "question": "The 'Lodi Dynasty' was the first dynasty of which origin to rule the Delhi Sultanate?",
+        "options": {
+          "a": "Turkish",
+          "b": "Persian",
+          "c": "Afghan",
+          "d": "Mongol"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Afghan.\n\nThe Lodi Dynasty, established in 1451 by Bahlul Lodi, was the first Afghan dynasty to rule over the Delhi Sultanate. The dynasty marked the last phase of the Delhi Sultanate before its downfall and the establishment of the Mughal Empire under Babur.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Medieval History (Sultanate & Mughals)",
+        "conceptTested": "Establishment and origins of dynasties during the Delhi Sultanate period",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Medieval History (Sultanate & Mughals)",
+          "conceptTested": "Establishment and origins of dynasties during the Delhi Sultanate period",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_058b302839",
+        "q_num": 219,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:20",
+        "avgTime": "00:27",
+        "question": "When light enters from air into a medium, its speed changes. Which of the following properties of light remains constant during this transition?",
+        "options": {
+          "a": "Wavelength",
+          "b": "Frequency",
+          "c": "Speed",
+          "d": "Amplitude"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Frequency.\n\nWhen light transitions from one medium to another, its frequency remains constant because frequency is determined by the source of the light and does not change during refraction. The speed of light changes depending on the refractive index of the medium, resulting in a change in wavelength to maintain the constant frequency.",
+        "image": null,
+        "topic": "Physics",
+        "subtopic": "Optics, Sound & Waves",
+        "conceptTested": "Refraction of light: invariance of frequency and change in speed and wavelength across media",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Optics, Sound & Waves",
+          "conceptTested": "Refraction of light: invariance of frequency and change in speed and wavelength across media",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_3f89c71548",
+        "q_num": 220,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:15",
+        "question": "The chairman of the Steering Committee in the Constituent Assembly was _____.",
+        "options": {
+          "a": "B.R. Ambedkar",
+          "b": "Alladi Krishnaswami Ayyar",
+          "c": "J.B. Kripalani",
+          "d": "Dr. Rajendra Prasad"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Dr. Rajendra Prasad.\n\nKey Points: - Dr. Rajendra Prasad was the chairman of the Steering Committee in the Constituent Assembly of India. - The Steering Committee was responsible for coordinating the activities and functions of the Constituent Assembly. - Dr. Rajendra Prasad also served as the President of the Constituent Assembly, overseeing the drafting of the Indian Constitution.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Parliament & State Legislatures",
+        "conceptTested": "Composition and committees of the Constituent Assembly of India.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Parliament & State Legislatures",
+          "conceptTested": "Composition and committees of the Constituent Assembly of India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_617fbe3123",
+        "q_num": 221,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:15",
+        "question": "Which of the following Committees recommended the 'two-tier system' of Panchayati Raj?",
+        "options": {
+          "a": "G. V. K. Rao Committee",
+          "b": "L. M. Singhvi Committee",
+          "c": "Ashok Mehta Committee",
+          "d": "Gadgil Committee"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Ashok Mehta Committee.\n\nKey Points: - The Ashok Mehta Committee (1977) was constituted to review the working of Panchayati Raj Institutions after their decline in the 1960s - 70s. - The committee recommended replacing the earlier three - tier system (village - block - district) with a two - tier system consisting of Zila Parishad and Mandal Panchayat.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Panchayati Raj & Local Bodies",
+        "conceptTested": "Recommendations of various committees on Panchayati Raj Institutions in India.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Panchayati Raj & Local Bodies",
+          "conceptTested": "Recommendations of various committees on Panchayati Raj Institutions in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_021e32200c",
+        "q_num": 222,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:09",
+        "avgTime": "00:21",
+        "question": "4th December marks the celebration of International Cheetah Day. What is the global IUCN status of the cheetah (Acinonyx jubatus)?",
+        "options": {
+          "a": "Vulnerable",
+          "b": "Endangered",
+          "c": "Critically Endangered",
+          "d": "Near Threatened"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Vulnerable.\n\nIn News: - International Cheetah Day is observed annually on 4th December to raise global awareness about cheetah conservation, with the species (Acinonyx jubatus) listed as 'Vulnerable' on the IUCN Red List.\nKey Points: - The global IUCN status of the cheetah is 'Vulnerable' due to declining global populations. - Only around 7, 100 - 7, 500 cheetahs are left in the wild. - Threats include habitat loss, human - wildlife conflict, and poaching.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "Biodiversity Conservation",
+        "conceptTested": "IUCN Red List status and conservation status of endangered species like the cheetah.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Biodiversity Conservation",
+          "conceptTested": "IUCN Red List status and conservation status of endangered species like the cheetah.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_41c41e6d9a",
+        "q_num": 223,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:14",
+        "question": "The fiscal deficit target of the Union Government for Budget 2026-27 is approximately what percentage of GDP?",
+        "options": {
+          "a": "6.5\\%",
+          "b": "5.6\\%",
+          "c": "4.3\\%",
+          "d": "3.8\\%"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 4.3\\%.\n\nKey Points\nThe fiscal deficit represents the difference between the total revenue and total expenditure of the government, excluding borrowings. It is a crucial indicator of a country\\'s financial health.\n\nFor the Union Budget 2026 - 27, the fiscal deficit target has been set at approximately 4.3\\% of GDP, which aligns with the government\\'s goal of fiscal consolidation.\n\nThe fiscal deficit reflects the government\\'s borrowing requirements to bridge the gap between revenue and expenditure. A lower deficit is indicative of financial discipline and economic stability.\n\nThe government has been consistently working to reduce the fiscal deficit to ensure compliance with the Fiscal Responsibility and Budget Management (FRBM) Act, which mandates prudent fiscal management.\n\nBy targeting a fiscal deficit of 4.3\\%, the government aims to achieve a balance between economic growth and financial sustainability.",
+        "image": null,
+        "topic": "Fiscal Policy & Budget",
+        "subtopic": "Union Budget",
+        "conceptTested": "Union budget fiscal deficit target as a percentage of GDP for financial planning.",
+        "tags": {
+          "topic": "Fiscal Policy & Budget",
+          "subtopic": "Union Budget",
+          "conceptTested": "Union budget fiscal deficit target as a percentage of GDP for financial planning.",
           "difficulty": "medium"
         }
       }

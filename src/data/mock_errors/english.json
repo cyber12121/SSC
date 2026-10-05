@@ -10232,6 +10232,422 @@
           "conceptTested": "Vocabulary and word meaning correlation for descriptive traits.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_9a9ce19df9",
+        "q_num": 324,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:48",
+        "avgTime": "00:48",
+        "question": "In the following question, a sentence is given in Direct/Indirect speech. Out of the four alternatives choose the one which best expresses the sentence in Indirect/Direct Speech. Radhika says to me, \" I don't like watching animals in the zoo.\"",
+        "options": {
+          "a": "Radhika tells me that she don't like watching animals in the zoo.",
+          "b": "Radhika tells me that she doesn't like watching animals in the zoo.",
+          "c": "Radhika tell me that she doesn't like watching animals in the zoo.",
+          "d": "Radhika tells me that she doesn't liked watching animals in the zoo."
+        },
+        "answer": "b",
+        "solution": "While changing the narration, when the reporting verb 'says to' is used, it converts to 'tells'. Since the reporting verb is in the present tense, there is no change in the tense of the reported speech. Inverted commas are replaced by 'that', and 'I' changes to 'she' to match the subject Radhika. Thus, the correct sentence is 'Radhika tells me that she doesn't like watching animals in the zoo.'",
+        "image": null,
+        "topic": "Direct & Indirect Speech",
+        "subtopic": "Interrogative Sentences",
+        "conceptTested": "Narration change rules for present tense reporting verb and simple present reported speech.",
+        "tags": {
+          "topic": "Direct & Indirect Speech",
+          "subtopic": "Interrogative Sentences",
+          "conceptTested": "Narration change rules for present tense reporting verb and simple present reported speech.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5bf0795ce4",
+        "q_num": 325,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:13",
+        "question": "Select the most appropriate meaning of the given idiom. Steal someone’s thunder",
+        "options": {
+          "a": "To follow a successful person’s instructions",
+          "b": "To imitate others",
+          "c": "To take the credit for something someone else did",
+          "d": "To find it difficult to choose between two alternatives"
+        },
+        "answer": "c",
+        "solution": "The idiom \"Steal someone's thunder\" means to take the credit or praise for something that someone else did or achieved. Therefore, the correct option is to take the credit for something someone else did.",
+        "image": null,
+        "topic": "Idioms & Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Meaning and contextual usage of common English idioms.",
+        "tags": {
+          "topic": "Idioms & Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Meaning and contextual usage of common English idioms.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_748f4e204d",
+        "q_num": 326,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:55",
+        "avgTime": "00:56",
+        "question": "Directions: In this section, each item consists of six sentences of a passage. The first and sixth sentences are given in the beginning as S1 and S6. The middle four sentences in each have been jumbled up and labelled as P, Q, R and S. You are required to find the proper sequence of the four sentences and mark your response accordingly on the answer sheet.\nS1: The Hubble Space Telescope has provided invaluable data on the universe since its launch.\nS6: This has dramatically expanded our understanding of phenomena like black holes and nebulae.\nP: It was precisely to repair these initial issues that several space shuttle missions were conducted.\nQ: However, shortly after its deployment, it encountered significant problems with its main mirror.\nR: But it wasn't just about fixing problems; these missions also upgraded its systems.\nS: As a result, the Hubble's capabilities were enhanced, allowing it to take more detailed images.",
+        "options": {
+          "a": "QPSR",
+          "b": "QPRS",
+          "c": "PSQR",
+          "d": "QSRP"
+        },
+        "answer": "b",
+        "solution": "The passage flows logically from identifying an initial issue with the Hubble Space Telescope (Q), sending missions to repair and address this issue (P), and upgrading its systems for better functionality (R), leading to the improvement mentioned in S1 and S6.\n\nQ identifies the specific initial problem encountered by the Hubble Space Telescope which directly relates to the subject introduced in S1, making it the natural starting point for the middle sentences.\n\nP logically follows as it talks about the action taken to correct the initial issue identified in Q.\n\nR expands on the repair missions by mentioning the upgrades made, which is a continuation of the action mentioned in P but with a forward - looking outcome.\n\nS reveals the result of these repairs and upgrades, leading directly into S6, which talks about the expanded understanding of the universe thanks to Hubble's improved capabilities.\n\nHence, the correct answer is 'QPRS'.",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical sequencing of sentences to form a coherent passage.",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical sequencing of sentences to form a coherent passage.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_6bdc51ab75",
+        "q_num": 327,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:17",
+        "question": "Select the most appropriate synonym of the given word. Evasive",
+        "options": {
+          "a": "Equivocal",
+          "b": "Cohesive",
+          "c": "Accessible",
+          "d": "Abrasive"
+        },
+        "answer": "a",
+        "solution": "The word 'Evasive' means trying to avoid something; not direct.\n\nExample - His answers were evasive and didn't address the real issue.\n\n'Equivocal' means open to more than one interpretation; ambiguous or evasive.\n\nExample - He gave an equivocal answer to the question.\n\nHence, we can infer that the synonym of 'evasive' is 'equivocal'.",
+        "image": null,
+        "topic": "Synonyms Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary knowledge and identification of synonymous words.",
+        "tags": {
+          "topic": "Synonyms Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary knowledge and identification of synonymous words.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_757da8c600",
+        "q_num": 328,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:17",
+        "avgTime": "00:40",
+        "question": "Find the part of the sentence that contains an error: While the committee’s proposal to overhaul the tax code was met with significant skepticism, (1) / their primary objectives remain to simplify the filing (2) / process, increasing transparency for middle-income earners, (3) / and to eliminate loopholes that benefit multinational corporations. (4)",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "The sentence contains a list of objectives using parallel structure. The list should follow consistent grammatical structure.\n\nIn this case, the list includes \"simplify the filing process, \" \"eliminating loopholes, \" and \"increasing transparency.\" The first and third objectives are inconsistent in form.\n\nThe correct parallel structure would be: \"to simplify the filing process, \" \"to increase transparency, \" and \"to eliminate loopholes.\"\nCorrect sentence: While the committee’s proposal to overhaul the tax code was met with significant skepticism, their primary objectives remain to simplify the filing process, to increase transparency for middle - income earners, and to eliminate loopholes that benefit multinational corporations.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Grammar & Syntax Errors",
+        "conceptTested": "Parallelism in coordinate structures and lists.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Grammar & Syntax Errors",
+          "conceptTested": "Parallelism in coordinate structures and lists.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_3915f71447",
+        "q_num": 329,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:38",
+        "avgTime": "00:34",
+        "question": "Find the part of the sentence that contains an error: Had the lead architect insisted that the structural integrity of the bridge be verified (1) / by an independent firm before construction commencing, (2) / the catastrophic failure that occurred during the monsoon (3) / might have been averted, or at the very least, its impact minimized. (4)",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "b",
+        "solution": "The sentence uses the third conditional structure, which refers to unreal past situations and their possible imagined outcomes.\n\nThe phrase \"by an independent firm before construction commencing\" contains an error in the use of the word \"commencing.\"\n\nIn formal contexts, the phrase should be restructured for clarity. A more appropriate phrasing would be \"by an independent firm before the commencement of construction.\"\n\nCorrect sentence: Had the lead architect insisted that the structural integrity of the bridge be verified by an independent firm before the commencement of construction, the catastrophic failure that occurred during the monsoon might have been averted, or at the very least, its impact minimized.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Grammar & Syntax Errors",
+        "conceptTested": "Correct use of gerunds, infinitives, and prepositional phrases in conditional clauses.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Grammar & Syntax Errors",
+          "conceptTested": "Correct use of gerunds, infinitives, and prepositional phrases in conditional clauses.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_d4939cb951",
+        "q_num": 330,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:59",
+        "avgTime": "00:40",
+        "question": "Select the most appropriate option that rectifies the underlined group of words in the given sentence. Upon realizing the data was corrupted, the experiments were halted by the laboratory assistants before any further resources were squandered.",
+        "options": {
+          "a": "Realizing the data was corrupted, the experiments were halted by the laboratory assistants",
+          "b": "Having realized the data was corrupted, the experiments were halted by the laboratory assistants",
+          "c": "The data being realized as corrupted, the experiments were halted by the laboratory assistants",
+          "d": "Upon realizing the data was corrupted, the laboratory assistants halted the experiments"
+        },
+        "answer": "d",
+        "solution": "The sentence needs correction to clearly indicate who performed the action. The original sentence makes it seem as though the experiments themselves realized the data was corrupted, which is illogical.\n\nOption D corrects this ambiguity by placing the subject \"the laboratory assistants\" right after the introductory clause, ensuring clarity in the action.\n\nUsing \"Upon realizing\" is appropriate to show the sequence of events leading to the halting of the experiments.\n\nCorrect sentence: Upon realizing the data was corrupted, the laboratory assistants halted the experiments.",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Grammar & Syntax Errors",
+        "conceptTested": "Avoiding dangling modifiers and ensuring proper alignment of introductory participial phrases with subjects.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Grammar & Syntax Errors",
+          "conceptTested": "Avoiding dangling modifiers and ensuring proper alignment of introductory participial phrases with subjects.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_44d2065075",
+        "q_num": 331,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:05",
+        "avgTime": "00:14",
+        "question": "Select the most appropriate SYNONYM of the given word. TRACTABLE",
+        "options": {
+          "a": "Docile",
+          "b": "Long-winded",
+          "c": "Religious",
+          "d": "Ductile"
+        },
+        "answer": "a",
+        "solution": "The correct answer is Docile.\n\nKey Points: - The word 'tractable' means easy to control or influence; manageable or obedient. - 'Docile' refers to someone or something that is easily managed, led, or taught; submissive or compliant. - Hence, the synonym of 'tractable' is 'docile'.",
+        "image": null,
+        "topic": "Synonyms Antonyms",
+        "subtopic": "Synonyms",
+        "conceptTested": "Vocabulary knowledge and word meaning identification",
+        "tags": {
+          "topic": "Synonyms Antonyms",
+          "subtopic": "Synonyms",
+          "conceptTested": "Vocabulary knowledge and word meaning identification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_5fc18567df",
+        "q_num": 332,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "02:59",
+        "avgTime": "01:23",
+        "question": "Read the comprehension and answer the question below:\n\nPersonnel accounts for some of bioethics’ irrelevance for practising physicians. The field has long been under the control of non-physicians who focus - understandably - more on patients’ rights than on doctors’ inner experience. A hospital bioethics committee, for instance, typically has a doctor on it, but other members might be nurses, lawyers, sociologists, clergymen or even just laypeople. In fact, anyone can call themselves a bioethicist; it is an unregulated field without formal certification for the title. Non-physician bioethicists tend to overlook doctors’ complaints of 'burnout' and their struggle to preserve their decision-making independence inside large companies. As a result, bioethics tends to ignore the hospital rooms where a doctor’s bad conscience lives. Inflicting severe pain on a patient creates a kind of moral residue for a physician that begs for relief - something utilitarianism alone cannot supply. A routine intubation on an unconscious patient may prompt, at most, quiet professional satisfaction; a difficult one performed successfully can arouse in a doctor the feeling athletes experience when registering a sports record. An awake intubation is different. It means passing a breathing tube into a conscious person’s windpipe, a procedure that can mimic suffocation. And when the airway cannot be numbed beforehand, the doctor doesn’t just perform the act; the doctor absorbs it - feeling the event deep within. Recently, bioethics has paid more attention to what it calls 'moral distress', a concept created with the launch of clinical bioethics to capture what doctors experience when their consciences feel violated, comparable to post-traumatic stress disorder. Yet the field still doesn’t penetrate the doctor’s psyche all that deeply. Typically, it focuses on moral distress stemming from insufficient resources, as during the COVID-19 pandemic, when doctors had an inadequate number of ventilators amid high patient volume, or when cost controls prevent doctors from prescribing patients the best medication with the fewest side-effects. It is why the field so often emphasises healthcare re-organisation as a corrective, presuming that, with more resources available, doctors will face fewer morally compromising situations. Still, nothing about a lack of resources is unique to the plight of doctors. Bioethicists say ethics is 'central to a physician’s identity', and that ethics is about compassion, empathy and virtue. But most doctors think quite differently. They think being a doctor is first and foremost a burden because the doctor’s moral sense and civilised sentiments are always playing defence against the savagery of physical existence. In the operating room that day, I did not see myself as the compassionate and empathetic caregiver portrayed in bioethics, but as an ordinary worker doing a dirty job the best he could; not as someone on a higher plane, but of this world; not super-earthly but the sum and substance of all that is earthly.\n\nWhat is the main idea of the passage?",
+        "options": {
+          "a": "Bioethics often fails to address the psychological and experiential realities of physicians, focusing instead on external ethical frameworks and resource issues.",
+          "b": "Only doctors should be allowed to serve on hospital bioethics committees.",
+          "c": "The main problem in healthcare ethics is a lack of compassion among medical professionals.",
+          "d": "Burnout among doctors is primarily caused by inadequate medical training."
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option A.\n\nKey Points: - Bioethics often fails to address the psychological and experiential realities of physicians, focusing instead on external ethical frameworks and resource issues. - This is the main idea of the passage. The author argues that bioethics is largely controlled by non - physicians who focus on patient rights and resource allocation rather than the doctor's 'inner experience'. - The text highlights that bioethics misses the deep psychological toll, or 'moral residue', that doctors experience when performing physically and emotionally taxing procedures.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Comprehension of central theme and main idea from a given passage",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Comprehension of central theme and main idea from a given passage",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_1ff1cdc7bc",
+        "q_num": 333,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:16",
+        "avgTime": "00:26",
+        "question": "In the context of the passage, which word is closest in meaning to 'residue' as used in 'creates a kind of moral residue for a physician that begs for relief'?",
+        "options": {
+          "a": "Scar",
+          "b": "Aftereffect",
+          "c": "Disguise",
+          "d": "Remedy"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Aftereffect.\n\nKey Points: - The word 'residue' in general usage means a small amount of something that remains after the main part has gone or been removed. - In the context of the passage, 'moral residue' refers to the lingering feelings or effects that remain with a physician after experiencing a morally challenging situation. - The closest synonym for this context is 'aftereffect', which means the aftertaste, outcome, or remaining impact of a previous action or experience.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Fact & Detail Comprehension",
+        "conceptTested": "Contextual vocabulary analysis and synonym identification",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Fact & Detail Comprehension",
+          "conceptTested": "Contextual vocabulary analysis and synonym identification",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_b45f975041",
+        "q_num": 334,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:55",
+        "avgTime": "00:40",
+        "question": "There are four jumbled sentences given below. Select the option that gives their correct order.\n\nA: It is responsible for the issue and supply of the Indian rupee and the regulation of the Indian banking system.\nB: RBI is India's central bank and regulatory body under the jurisdiction of Ministry of Finance, Government of India.\nC: Its top official is designated as Governor who is a civil servant of the IAS or IES or ISS cadre.\nD: It also manages the country's main payment systems and works to promote its economic development.",
+        "options": {
+          "a": "BCDA",
+          "b": "BDAC",
+          "c": "DCBA",
+          "d": "BADC"
+        },
+        "answer": "d",
+        "solution": "The correct sequence for the given sentences is BADC.\n\nKey Points: - Sentence B will be placed first as it introduces the subject (RBI). - Sentence A will be placed second as it explains its primary responsibility of issuing currency and regulating banking. - Sentence D follows A, describing its role in managing payment systems and economic development. - Sentence C comes last, describing the top official designated as the Governor.",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Sentence rearrangement and logical coherence in paragraph building",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Sentence rearrangement and logical coherence in paragraph building",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_cf2ea5c75e",
+        "q_num": 335,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:12",
+        "avgTime": "00:46",
+        "question": "Select the grammatically correct sentence.\n\nA. One of the most serious issues with youngsters is addiction to social media. An issue which needs attention.\nB. One of the most serious issues with youngsters is addiction to social media. Issue which needs attention.\nC. One of most serious issues with youngsters is an addiction to social media. An issue which needs attention.\nD. One of the most serious issues with youngsters is an addiction to social media. An issue which needs attention.",
+        "options": {
+          "a": "B",
+          "b": "A",
+          "c": "D",
+          "d": "C"
+        },
+        "answer": "c",
+        "solution": "The correct answer is D.\n\nKey Points: - We use 'one of the' followed by a superlative degree and a plural noun (e.g., 'one of the most serious issues'). - The article 'an' is used before 'addiction' because 'addiction' begins with a vowel sound. - Hence, the grammatically correct sentence is: 'One of the most serious issues with youngsters is an addiction to social media. An issue which needs attention.'",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Subject-Verb Agreement",
+        "conceptTested": "Correct usage of articles, superlative degrees, and noun modifiers",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Subject-Verb Agreement",
+          "conceptTested": "Correct usage of articles, superlative degrees, and noun modifiers",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_0cb6cdd9bb",
+        "q_num": 336,
+        "mockId": "mock_1791186998326_to50p",
+        "testId": "mock_1791186998326_to50p",
+        "testName": "SSC CGL Tier I: Full Test - 12",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:45",
+        "avgTime": "00:58",
+        "question": "Each of the following question consists of six sentences of a passage. The first and sixth sentences are given as S1 and S6. The middle four sentences in each have been jumbled up and labelled as P, Q, R and S. Find the proper sequence of the four sentences and mar your response accordingly.\nS1: Dolphins are regarded as the friendliest creatures in the sea and stories of them helping drowning sailors have been common since Roman times.\nP: They look after other dolphins when they are ill, care for pregnant mothers and protect the weakest in the community, as we do.\nQ: Some scientists have suggested that dolphins have a language but it is much more probable that they communicate with each other without needing words.\nR: The more we learn about dolphins, the more we realize that their society is more complex than people previously imagined.\nS: Certainly the most common argument in favor of man's superiority over them that we can kill them more easily than they can kill us is the least satisfactory.\nS6: On the contrary, the more we discover about these remarkable creatures, the less we appear superior when we destroy them.",
+        "options": {
+          "a": "PSQR",
+          "b": "RPQS",
+          "c": "QPSR",
+          "d": "SQPR"
+        },
+        "answer": "b",
+        "solution": "The correct answer is RPQS.\n\nHere, the first and last sentences are given. Thus, it becomes easy to identify the second and fifth sentences. The second sentence would be the continuation of the first. Here, the first sentence mentions about 'dolphins'. The second sentence is R, as it gives us more idea about them. The third sentence is P. It mentions the characteristics of 'dolphins'. The fourth sentence is Q, it mentions the thoughts of scientists. The fifth sentence is S as the sixth sentence is a continuation of it. Hence, option B is correct.",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical flow and contextual linkage of sentences between fixed endpoints S1 and S6",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical flow and contextual linkage of sentences between fixed endpoints S1 and S6",
+          "difficulty": "medium"
+        }
       }
     ]
   }
