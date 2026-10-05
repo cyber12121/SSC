@@ -890,3 +890,195 @@ export function normalizeAnswerKey(ans: any): 'a' | 'b' | 'c' | 'd' {
   if (raw === 'd' || raw === 'opt4' || raw === 'option 4' || raw === 'option d' || raw === '4') return 'd';
   return (raw[0] as any) || 'a';
 }
+
+/**
+ * Normalizes AI output text for robust KaTeX rendering:
+ * 1. Converts \( ... \) to $ ... $ and \[ ... \] to $$ ... $$ (collapsing multiline display blocks)
+ * 2. Unescapes \$ and stray backslashes before punctuation (\. -> .)
+ * 3. Auto-closes unclosed/truncated math delimiters ($ or $$)
+ * 4. Wraps unwrapped math lines and equations containing LaTeX commands in $$...$$ or $...$
+ */
+export function normalizeChatLatex(text: string): string {
+  if (!text) return '';
+  let s = text;
+
+  // 0. Remove any [DRILL: ...] practice drill tags so they never clutter the chat
+  s = s.replace(/\[DRILL:\s*[^\]]+\]/gi, '');
+
+  // Fix tab-character (\x09 / \t) corrupted commands caused by JSON string unescaping
+  s = s.replace(/[\x09\t]+extbf\{/g, '\\textbf{');
+  s = s.replace(/[\x09\t]+extit\{/g, '\\textit{');
+  s = s.replace(/[\x09\t]+ext\{/g, '\\text{');
+  s = s.replace(/[\x09\t]+times\b/g, '\\times');
+  s = s.replace(/[\x09\t]+theta\b/g, '\\theta');
+  s = s.replace(/[\x09\t]+tau\b/g, '\\tau');
+  s = s.replace(/[\x09\t]+tan\b/g, '\\tan');
+
+  // Fix tab-stripped commands where leading \t was stripped/collapsed
+  s = s.replace(/(?<![a-zA-Z\\])extbf\{([^}]*)\}/g, (_, inner) => `\\textbf{${inner}}`);
+  s = s.replace(/(?<![a-zA-Z\\])extit\{([^}]*)\}/g, (_, inner) => `\\textit{${inner}}`);
+  s = s.replace(/(?<![a-zA-Z\\])ext\{([^}]*)\}/g, (_, inner) => `\\text{${inner}}`);
+
+  // Fix tab-stripped English grammar tokens in LaTeX math mode:
+  // e.g. extVerb -> \text{Verb}, extObject -> \text{Object}, extSubject -> \text{Subject}
+  s = s.replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, (_, word) => `\\text{${word}}`);
+
+  // Fix corrupted or LLM-emitted textleft / textright / \text{left} / \text{right}
+  s = s.replace(/\\?text\s*left\s*([(\[{|])/gi, '\\left$1');
+  s = s.replace(/\\?text\s*right\s*([)\]}|])/gi, '\\right$1');
+  s = s.replace(/\\text\{(left|right)\}\s*([()\[\]{}|])/gi, '\\$1$2');
+  s = s.replace(/\\?text\s*left\b/gi, '\\left');
+  s = s.replace(/\\?text\s*right\b/gi, '\\right');
+
+  // Clean formfeed / JSON escape artifacts on \frac
+  s = s.replace(/[\x0c\u000c]+(?:f?rac)\b/g, '\\frac');
+  s = s.replace(/\\f\s*frac\b/g, '\\frac');
+  s = s.replace(/\\f\s*rac\b/g, '\\frac');
+  s = s.replace(/[\x0c\u000c]+/g, ' ');
+
+  // Clean scraped fraction prefixes
+  s = cleanScrapedFractionPrefixes(s);
+
+  // Wrap unwrapped fractions (including mixed fractions and percentages) safely using balanced brace parser
+  s = wrapUnwrappedFractions(s);
+
+  // 1. Convert LaTeX standard display math \[ ... \] to $$ ... $$ and inline \( ... \) to $ ... $
+  // Collapse inner newlines into single spaces so $$...$$ remains unbroken across lines
+  s = s.replace(/\\\[([\s\S]*?)\\\]/g, (_, inner) => {
+    const cleanInner = inner.trim().replace(/\r?\n+/g, ' ');
+    return `\n\n$$${cleanInner}$$\n\n`;
+  });
+  s = s.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
+
+  // Collapse existing multiline $$...$$ blocks so split('\n') never tears opening & closing $$ apart
+  s = s.replace(/\$\$([\s\S]*?)\$\$/g, (_, inner) => {
+    const cleanInner = inner.trim().replace(/\r?\n+/g, ' ');
+    return `\n\n$$${cleanInner}$$\n\n`;
+  });
+
+  // 2. Convert escaped dollar signs \$...$ or \$...\$ or standalone \$ to standard $
+  s = s.replace(/\\\$([^\$\n]+?)\\\$/g, '$$$1$$');
+  s = s.replace(/\\\$([^\$\n]+?)\$/g, '$$$1$$');
+  s = s.replace(/\$([^\$\n]+?)\\\$/g, '$$$1$$');
+  s = s.replace(/\\\$/g, '$');
+
+  // 3. Clean stray markdown escapes on punctuation like \. or \! or \) (do not strip \- or \_ which are math tokens)
+  s = s.replace(/\\([.!?,;:~])/g, '$1');
+
+  // 4. Auto-balance unclosed single $ on individual lines (e.g. streaming cutoff or LLM unclosed dollar sign)
+  const rawLines = s.split('\n');
+  const balancedLines = rawLines.map(line => {
+    let l = line;
+    const doubleCount = (l.match(/\$\$/g) || []).length;
+    if (doubleCount % 2 === 0) {
+      const withoutDouble = l.replace(/\$\$/g, '');
+      const singleCount = (withoutDouble.match(/\$/g) || []).length;
+      if (singleCount % 2 !== 0) {
+        l = l + '$';
+      }
+    }
+    return l;
+  });
+  s = balancedLines.join('\n');
+
+  // 4b. Strip single dollar signs around plain scalar numbers (e.g. $4$ -> 4, $9$ -> 9, $72$ -> 72, $6$ -> 6)
+  s = s.replace(/(?<=[^\$]|^)\$(-?\d{1,3}(?:,\d{3})*(?:\.\d+)?)\$(?=[^\$]|$)/g, '$1');
+
+  // 5. PROTECT EXISTING MATH BLOCKS ($$...$$ and $...$)
+  const mathBlocks: string[] = [];
+  const placeholderPrefix = '@@CHAT_MATH_BLOCK_';
+
+  // Extract display math $$...$$ first (including multiline)
+  s = s.replace(/\$\$([\s\S]*?)\$\$/g, (_, inner) => {
+    const idx = mathBlocks.length;
+    const cleanInner = inner
+      .replace(/(?<!\\)%/g, '\\%')
+      .replace(/(?<!\\)#/g, '\\#');
+    mathBlocks.push(`$$${cleanInner}$$`);
+    return `${placeholderPrefix}${idx}@@`;
+  });
+
+  // Extract inline math $...$
+  s = s.replace(/\$([^\$\n]+?)\$/g, (_, inner) => {
+    const idx = mathBlocks.length;
+    const cleanInner = inner
+      .replace(/(?<!\\)%/g, '\\%')
+      .replace(/(?<!\\)#/g, '\\#');
+    mathBlocks.push(`$${cleanInner}$`);
+    return `${placeholderPrefix}${idx}@@`;
+  });
+
+  // 6. PROCESS NON-MATH TEXT FOR UNWRAPPED LATEX
+  const lines = s.split('\n');
+  const processedLines = lines.map(line => {
+    let l = line;
+    l = l.replace(/\\\s*$/, '');
+
+    // 6a. Check if whole line is an equation with LaTeX commands
+    const trimmedL = l.trim();
+    if (
+      !trimmedL.includes(placeholderPrefix) &&
+      /\\(?:left|right|frac|sqrt|quad|qquad|text\{)/.test(trimmedL) &&
+      /=|≈|≠|≤|≥|\\Rightarrow|=>/.test(trimmedL)
+    ) {
+      const plainWords = trimmedL
+        .replace(/\\text\{[^}]*\}/g, '')
+        .replace(/\\[a-zA-Z]+/g, '')
+        .match(/\b[a-zA-Z]{4,}\b/g) || [];
+      if (plainWords.length <= 4 && !trimmedL.startsWith('*') && !trimmedL.startsWith('-') && !trimmedL.startsWith('•')) {
+        return `$$${trimmedL}$$`;
+      }
+    }
+
+    // Wrap unwrapped \left...\right expressions in $...$
+    l = l.replace(/\\left([(\[{|])[\s\S]*?\\right([)\]}|])(?:\^\{?[0-9a-zA-Z]+\}?)?%?/g, (match) => {
+      const cleanMatch = match.replace(/(?<!\\)%/g, '\\%').replace(/(?<!\\)#/g, '\\#');
+      return `$${cleanMatch}$`;
+    });
+
+    // Wrap unwrapped \frac with nested braces
+    l = l.replace(/\\frac\{((?:[^{}]|\{[^{}]*\})*)\}\{((?:[^{}]|\{[^{}]*\})*)\}/g, (_, a, b) => `$\\frac{${a}}{${b}}$`);
+
+    // In plain text, convert standalone arithmetic & logical operators to clean Unicode symbols
+    l = l.replace(/\\times\b/g, '×');
+    l = l.replace(/\\div\b/g, '÷');
+    l = l.replace(/\\pm\b/g, '±');
+    l = l.replace(/\\mp\b/g, '∓');
+    l = l.replace(/\\approx\b/g, '≈');
+    l = l.replace(/\\neq\b/g, '≠');
+    l = l.replace(/\\le\b/g, '≤');
+    l = l.replace(/\\ge\b/g, '≥');
+    l = l.replace(/\\quad|\\qquad/g, ' ');
+    l = l.replace(/\\Rightarrow\b|=>/g, '⇒');
+    l = l.replace(/\\rightarrow\b|->/g, '→');
+    l = l.replace(/\\Leftarrow\b|<=/g, '⇐');
+    l = l.replace(/\\leftrightarrow\b|<=>/g, '⇔');
+    l = l.replace(/\\therefore\b/g, '∴');
+    l = l.replace(/\\because\b/g, '∵');
+    l = l.replace(/\\degree\b/g, '°');
+    l = l.replace(/(\d+)\s*\^\s*\\?circ\b/g, '$1°');
+
+    // Wrap unwrapped symbols and functions like \pi, \theta, \sqrt
+    l = l.replace(/\\(pi|theta|alpha|beta|gamma|lambda|mu|sigma|omega|phi|psi|rho|tau|delta|epsilon|eta|zeta|kappa|nu|xi|chi|iota|Delta|Sigma|Omega|angle|sim|cong|infty|propto)\b/g, (_, sym) => `$\\${sym}$`);
+    l = l.replace(/\\sqrt(?:\[([^\]]*)\])?\{((?:[^{}]|\{[^{}]*\})*)\}/g, (_, root, inner) => root ? `$\\sqrt[${root}]{${inner}}$` : `$\\sqrt{${inner}}$`);
+    l = l.replace(/\b(\d+\^[0-9a-zA-Z]+\s*=\s*\d+)\b/g, (_, eq) => `$${eq}$`);
+
+    // Clean raw \text{}, \textbf{}, \textit{} left outside math mode into clean Markdown or text:
+    l = l.replace(/\\textbf\{([^}]*)\}/g, '**$1**');
+    l = l.replace(/\\textit\{([^}]*)\}/g, '*$1*');
+    l = l.replace(/\\text\{([^}]*)\}/g, '$1');
+    l = l.replace(/(?<![a-zA-Z\\])ext([A-Z][a-zA-Z]*)/g, '$1');
+
+    return l;
+  });
+
+  let joined = processedLines.join('\n');
+
+  // 7. RESTORE PROTECTED MATH BLOCKS
+  joined = joined.replace(/@@CHAT_MATH_BLOCK_(\d+)@@/g, (_, idxStr) => {
+    const idx = parseInt(idxStr, 10);
+    return mathBlocks[idx] || '';
+  });
+
+  return joined;
+}

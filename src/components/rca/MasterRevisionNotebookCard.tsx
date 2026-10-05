@@ -14,7 +14,8 @@ import {
   ChevronUp,
   Filter,
   StickyNote,
-  ExternalLink
+  ExternalLink,
+  ArrowLeft
 } from 'lucide-react';
 import {
   getAllRevisionNotes,
@@ -29,19 +30,24 @@ import {
   SillyNotebookItem,
   REVISION_NOTEBOOK_EVENT
 } from '../../utils/revisionNotesHelper';
+import { FormattedAiNote } from '../FormattedAiNote';
 
 interface MasterRevisionNotebookCardProps {
   currentSubject?: string;
   defaultTab?: 'silly' | 'notes';
   onReviewQuestion?: (questionId: string) => void;
   className?: string;
+  isStandalonePage?: boolean;
+  onBack?: () => void;
 }
 
 export const MasterRevisionNotebookCard: React.FC<MasterRevisionNotebookCardProps> = ({
   currentSubject,
   defaultTab = 'silly',
   onReviewQuestion,
-  className = ''
+  className = '',
+  isStandalonePage = false,
+  onBack
 }) => {
   const [activeTab, setActiveTab] = useState<'silly' | 'notes'>(defaultTab);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -217,8 +223,19 @@ export const MasterRevisionNotebookCard: React.FC<MasterRevisionNotebookCardProp
   return (
     <div className={`mb-4 rounded-xl border border-stone-300/90 bg-[#faf8f5] shadow-xs overflow-hidden transition-all ${className}`}>
       {/* ─── NOTEBOOK BINDER & TABS HEADER ─── */}
-      <div className="bg-[#24292e] text-white px-3 sm:px-4 py-2 flex flex-wrap items-center justify-between gap-2 border-b border-stone-800">
+      <div className="bg-[#24292e] text-white px-3 sm:px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 border-b border-stone-800">
         <div className="flex items-center gap-2">
+          {onBack && (
+            <button
+              type="button"
+              onClick={onBack}
+              className="mr-1 px-2.5 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 hover:text-white transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-bold border border-stone-700"
+              title="Back to Mistakes"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Back</span>
+            </button>
+          )}
           {/* Notebook Spiral Accent */}
           <div className="flex items-center gap-1 opacity-70">
             <span className="w-1.5 h-3 rounded-full bg-stone-400" />
@@ -274,19 +291,21 @@ export const MasterRevisionNotebookCard: React.FC<MasterRevisionNotebookCardProp
           </div>
 
           {/* Minimize / Expand */}
-          <button
-            type="button"
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="p-1 text-stone-400 hover:text-white hover:bg-stone-800 rounded transition-colors cursor-pointer"
-            title={isCollapsed ? 'Expand Notebook' : 'Collapse Notebook'}
-          >
-            {isCollapsed ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
-          </button>
+          {!isStandalonePage && (
+            <button
+              type="button"
+              onClick={() => setIsCollapsed(!isCollapsed)}
+              className="p-1 text-stone-400 hover:text-white hover:bg-stone-800 rounded transition-colors cursor-pointer"
+              title={isCollapsed ? 'Expand Notebook' : 'Collapse Notebook'}
+            >
+              {isCollapsed ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
+            </button>
+          )}
         </div>
       </div>
 
       {/* ─── NOTEBOOK PAGE BODY (RULED PAPER DESIGN) ─── */}
-      {!isCollapsed && (
+      {(!isCollapsed || isStandalonePage) && (
         <div className="bg-[#fcfbf9] border-t border-stone-200/80">
           {/* Compact Ruled Filter Line */}
           <div className="px-3 sm:px-4 py-1.5 bg-[#f5f3ee] border-b border-stone-200/90 flex flex-wrap items-center justify-between gap-2 text-xs">
@@ -659,8 +678,9 @@ export const MasterRevisionNotebookCard: React.FC<MasterRevisionNotebookCardProp
 
                             {/* Question snippet reference if any */}
                             {item.questionSnippet && (
-                              <div className="mt-1 px-2 py-0.5 bg-stone-100 rounded text-[10px] text-stone-600 truncate">
-                                <span className="font-bold text-stone-700">Q:</span> {item.questionSnippet}
+                              <div className="mt-1 px-2.5 py-1 bg-stone-100/90 rounded text-[11px] text-stone-600 border border-stone-200/50">
+                                <span className="font-bold text-stone-700 mr-1.5">Q:</span>
+                                <FormattedAiNote content={item.questionSnippet} className="inline" />
                               </div>
                             )}
 
@@ -670,14 +690,14 @@ export const MasterRevisionNotebookCard: React.FC<MasterRevisionNotebookCardProp
                                 <textarea
                                   value={editNoteText}
                                   onChange={e => setEditNoteText(e.target.value)}
-                                  rows={2}
-                                  className="w-full text-xs p-2 rounded border border-indigo-300 bg-white text-stone-900 outline-none leading-relaxed"
+                                  rows={4}
+                                  className="w-full text-xs p-2.5 rounded-lg border border-indigo-300 bg-white text-stone-900 outline-none leading-relaxed font-sans"
                                 />
                                 <div className="flex items-center gap-1.5">
                                   <button
                                     type="button"
                                     onClick={() => handleSaveEditNote(item.id)}
-                                    className="px-2 py-0.5 bg-indigo-600 text-white rounded text-xs font-bold flex items-center gap-1 cursor-pointer"
+                                    className="px-2.5 py-1 bg-indigo-600 text-white rounded text-xs font-bold flex items-center gap-1 cursor-pointer hover:bg-indigo-700 transition-colors shadow-2xs"
                                   >
                                     <Check className="w-3 h-3" />
                                     <span>Save</span>
@@ -685,15 +705,15 @@ export const MasterRevisionNotebookCard: React.FC<MasterRevisionNotebookCardProp
                                   <button
                                     type="button"
                                     onClick={() => setEditingNoteId(null)}
-                                    className="px-2 py-0.5 text-stone-600 hover:bg-stone-200 rounded text-xs cursor-pointer"
+                                    className="px-2.5 py-1 text-stone-600 hover:bg-stone-200 rounded text-xs cursor-pointer transition-colors"
                                   >
                                     Cancel
                                   </button>
                                 </div>
                               </div>
                             ) : (
-                              <div className="text-xs text-stone-800 font-normal leading-relaxed mt-1 whitespace-pre-wrap select-text">
-                                {item.text}
+                              <div className="text-xs text-stone-800 font-normal leading-relaxed mt-1.5 select-text overflow-hidden">
+                                <FormattedAiNote content={item.text} variant="notebook" />
                               </div>
                             )}
                           </div>

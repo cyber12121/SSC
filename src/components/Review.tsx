@@ -36,6 +36,7 @@ import { extractSolutionLanguage } from '../utils/cleanSolution';
 import { normalizeAnswerKey } from '../utils/mathSanitizer';
 import { getNormalizedOptions, getCorrectOptionKey, cleanQuestionForSession, parseAvgTimeToSeconds, toLeanQuestionCache } from '../utils/questionHelpers';
 import { FormattedText } from './FormattedText';
+import { FormattedAiNote } from './FormattedAiNote';
 import { SolutionViewer } from './SolutionViewer';
 import { RcaClassifier } from './review/RcaClassifier';
 import { safeStorage } from '../utils/safeStorage';
@@ -218,6 +219,7 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
   const [questionNoteInput, setQuestionNoteInput] = useState('');
   const [savedQuestionNote, setSavedQuestionNote] = useState<RevisionNoteItem | null>(null);
   const [noteSavedFeedback, setNoteSavedFeedback] = useState(false);
+  const [noteViewMode, setNoteViewMode] = useState<'preview' | 'edit'>('preview');
 
   // Sync question note when moving between questions
   useEffect(() => {
@@ -228,10 +230,12 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
     if (foundNote) {
       setSavedQuestionNote(foundNote);
       setQuestionNoteInput(foundNote.text);
+      setNoteViewMode(foundNote.type === 'tommy_insight' ? 'preview' : 'edit');
     } else {
       setSavedQuestionNote(null);
       const currentRca = rcaMap[currentIdx] || items[currentIdx]?.rca || items[currentIdx]?.question?.rca;
       setQuestionNoteInput(currentRca?.sillyMistakeNote || '');
+      setNoteViewMode('edit');
     }
   }, [currentIdx, items, rcaMap]);
 
@@ -2126,22 +2130,52 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
                           </span>
                         )}
                       </div>
-                      <button
-                        type="button"
-                        onClick={() => setShowQuestionNoteDrawer(false)}
-                        className="text-amber-800 hover:text-amber-950 text-xs font-bold px-2 py-0.5 hover:bg-amber-200/60 rounded cursor-pointer"
-                      >
-                        ✕ Close
-                      </button>
+                      <div className="flex items-center gap-1.5">
+                        {questionNoteInput.trim() && (
+                          <div className="flex items-center bg-amber-200/60 p-0.5 rounded-lg border border-amber-300 mr-1 text-[10px] font-bold">
+                            <button
+                              type="button"
+                              onClick={() => setNoteViewMode('preview')}
+                              className={`px-2 py-0.5 rounded cursor-pointer transition-colors ${
+                                noteViewMode === 'preview' ? 'bg-amber-700 text-white shadow-2xs' : 'text-amber-900 hover:bg-amber-200'
+                              }`}
+                            >
+                              Formatted
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setNoteViewMode('edit')}
+                              className={`px-2 py-0.5 rounded cursor-pointer transition-colors ${
+                                noteViewMode === 'edit' ? 'bg-amber-700 text-white shadow-2xs' : 'text-amber-900 hover:bg-amber-200'
+                              }`}
+                            >
+                              Edit
+                            </button>
+                          </div>
+                        )}
+                        <button
+                          type="button"
+                          onClick={() => setShowQuestionNoteDrawer(false)}
+                          className="text-amber-800 hover:text-amber-950 text-xs font-bold px-2 py-0.5 hover:bg-amber-200/60 rounded cursor-pointer"
+                        >
+                          ✕ Close
+                        </button>
+                      </div>
                     </div>
 
-                    <textarea
-                      value={questionNoteInput}
-                      onChange={e => setQuestionNoteInput(e.target.value)}
-                      placeholder="Type key takeaway, formula, shortcut, trap to avoid, or Tommy explanation for this question..."
-                      rows={3}
-                      className="w-full text-xs p-2.5 rounded-lg border border-amber-300 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 font-sans leading-relaxed"
-                    />
+                    {noteViewMode === 'preview' && questionNoteInput.trim() ? (
+                      <div className="w-full text-xs p-3 rounded-lg border border-amber-300 bg-white/95 text-slate-800 font-sans leading-relaxed max-h-80 overflow-y-auto">
+                        <FormattedAiNote content={questionNoteInput} variant="notebook" />
+                      </div>
+                    ) : (
+                      <textarea
+                        value={questionNoteInput}
+                        onChange={e => setQuestionNoteInput(e.target.value)}
+                        placeholder="Type key takeaway, formula, shortcut, trap to avoid, or Tommy explanation for this question..."
+                        rows={4}
+                        className="w-full text-xs p-2.5 rounded-lg border border-amber-300 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 font-sans leading-relaxed"
+                      />
+                    )}
 
                     <div className="flex items-center justify-between mt-2 pt-1">
                       <span className="text-[10px] text-amber-900 font-medium italic">
