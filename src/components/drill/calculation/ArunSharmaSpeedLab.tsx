@@ -162,7 +162,7 @@ export const ArunSharmaSpeedLab: React.FC = () => {
     };
   }, []);
 
-  // Global keydown listeners (1–6 to switch tabs, Escape to exit fullscreen)
+  // Global keydown listeners: Escape to exit fullscreen, Alt+1 to Alt+6 for tab switching
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isFullscreen) {
@@ -173,15 +173,17 @@ export const ArunSharmaSpeedLab: React.FC = () => {
         return;
       }
 
-      const activeTag = (document.activeElement?.tagName || '').toUpperCase();
-      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeTag)) return;
-
-      if (e.key === '1') setActiveSubTab('chain_addition');
-      else if (e.key === '2') setActiveSubTab('subtraction');
-      else if (e.key === '3') setActiveSubTab('multiplication');
-      else if (e.key === '4') setActiveSubTab('division');
-      else if (e.key === '5') setActiveSubTab('squares_cubes');
-      else if (e.key === '6') setActiveSubTab('matrix_grid');
+      // Do NOT intercept bare number keys (1, 2, 3, 4, etc.) because sub-drills
+      // use them to select multiple-choice options or type answers!
+      // Only switch tabs if the user explicitly presses Alt + [1-6].
+      if (e.altKey && !e.ctrlKey && !e.metaKey) {
+        if (e.key === '1') { e.preventDefault(); setActiveSubTab('chain_addition'); }
+        else if (e.key === '2') { e.preventDefault(); setActiveSubTab('subtraction'); }
+        else if (e.key === '3') { e.preventDefault(); setActiveSubTab('multiplication'); }
+        else if (e.key === '4') { e.preventDefault(); setActiveSubTab('division'); }
+        else if (e.key === '5') { e.preventDefault(); setActiveSubTab('squares_cubes'); }
+        else if (e.key === '6') { e.preventDefault(); setActiveSubTab('matrix_grid'); }
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
@@ -237,7 +239,7 @@ export const ArunSharmaSpeedLab: React.FC = () => {
                       ? 'bg-white text-blue-600 shadow-xs font-bold'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50'
                   }`}
-                  title={`Practice ${tab.label} (Key ${tab.keyNum})`}
+                  title={`Practice ${tab.label} (Alt+${tab.keyNum})`}
                 >
                   <IconComp className="w-3.5 h-3.5 shrink-0" />
                   <span>{tab.label}</span>

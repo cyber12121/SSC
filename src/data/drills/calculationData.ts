@@ -4,9 +4,26 @@ export interface FractionItem {
   fraction: string;
   percentage: string;
   decimal: string;
+  part?: number;
 }
 
 export const FRACTIONS_DATA: FractionItem[] = fractionsData;
+
+export const FRACTIONS_PART_1 = FRACTIONS_DATA.filter((f) => f.part === 1);
+export const FRACTIONS_PART_2 = FRACTIONS_DATA.filter((f) => f.part === 2);
+export const FRACTIONS_PART_3 = FRACTIONS_DATA.filter((f) => f.part === 3);
+export const FRACTIONS_PART_4 = FRACTIONS_DATA.filter((f) => f.part === 4);
+export const FRACTIONS_PART_5 = FRACTIONS_DATA.filter((f) => f.part === 5);
+
+export type FractionPartId = 'part1' | 'part2' | 'part3' | 'part4' | 'part5' | 'all';
+
+export const FRACTION_PARTS_INFO = [
+  { id: 'part1', partNum: 1, title: 'Part 1: Core Bases (1/2–1/6)', shortTitle: 'Part 1 (1/2–1/6)', count: FRACTIONS_PART_1.length, badge: 'Core' },
+  { id: 'part2', partNum: 2, title: 'Part 2: 1/7 & 1/8 Families', shortTitle: 'Part 2 (1/7 & 1/8)', count: FRACTIONS_PART_2.length, badge: 'High-Freq' },
+  { id: 'part3', partNum: 3, title: 'Part 3: 1/9 to 1/11 Twins', shortTitle: 'Part 3 (1/9–1/11)', count: FRACTIONS_PART_3.length, badge: 'Twins' },
+  { id: 'part4', partNum: 4, title: 'Part 4: 1/12 to 1/16 Commercial', shortTitle: 'Part 4 (1/12–1/16)', count: FRACTIONS_PART_4.length, badge: 'Commercial' },
+  { id: 'part5', partNum: 5, title: 'Part 5: 1/17 to 1/50 Milestones', shortTitle: 'Part 5 (1/17–1/50)', count: FRACTIONS_PART_5.length, badge: 'Primes' },
+] as const;
 
 export interface TripletItem {
   a: number;
@@ -29,24 +46,34 @@ export interface CalculationQuestion {
   metadata?: Record<string, any>;
 }
 
-// 1. Primitive Triplets Only (All 16 must-know SSC primitive triplets)
+// 1. Primitive Triplets - Split into 2 Balanced Sets of 8 each
+// SET 1: Must-Know Core Triplets (85% of SSC CGL exam occurrences)
+export const PRIMITIVE_TRIPLETS_SET_1: TripletItem[] = [
+  { a: 3, b: 4, c: 5, type: 'primitive', tags: ['basic', 'must-know', 'set1'] },
+  { a: 5, b: 12, c: 13, type: 'primitive', tags: ['basic', 'must-know', 'set1'] },
+  { a: 7, b: 24, c: 25, type: 'primitive', tags: ['basic', 'must-know', 'set1'] },
+  { a: 8, b: 15, c: 17, type: 'primitive', tags: ['basic', 'must-know', 'set1'] },
+  { a: 9, b: 40, c: 41, type: 'primitive', tags: ['basic', 'must-know', 'set1'] },
+  { a: 11, b: 60, c: 61, type: 'primitive', tags: ['standard', 'set1'] },
+  { a: 12, b: 35, c: 37, type: 'primitive', tags: ['standard', 'high-frequency', 'set1'] },
+  { a: 20, b: 21, c: 29, type: 'primitive', tags: ['basic', 'high-frequency', 'set1'] },
+];
+
+// SET 2: Advanced Rank-Decider Triplets (Tier-1/Tier-2 harder shifts)
+export const PRIMITIVE_TRIPLETS_SET_2: TripletItem[] = [
+  { a: 13, b: 84, c: 85, type: 'primitive', tags: ['advanced', 'set2'] },
+  { a: 16, b: 63, c: 65, type: 'primitive', tags: ['standard', 'set2'] },
+  { a: 28, b: 45, c: 53, type: 'primitive', tags: ['standard', 'set2'] },
+  { a: 33, b: 56, c: 65, type: 'primitive', tags: ['advanced', 'set2'] },
+  { a: 36, b: 77, c: 85, type: 'primitive', tags: ['advanced', 'set2'] },
+  { a: 39, b: 80, c: 89, type: 'primitive', tags: ['advanced', 'set2'] },
+  { a: 48, b: 55, c: 73, type: 'primitive', tags: ['advanced', 'set2'] },
+  { a: 65, b: 72, c: 97, type: 'primitive', tags: ['advanced', 'set2'] },
+];
+
 export const PRIMITIVE_TRIPLETS: TripletItem[] = [
-  { a: 3, b: 4, c: 5, type: 'primitive', tags: ['basic', 'must-know'] },
-  { a: 5, b: 12, c: 13, type: 'primitive', tags: ['basic', 'must-know'] },
-  { a: 7, b: 24, c: 25, type: 'primitive', tags: ['basic', 'must-know'] },
-  { a: 8, b: 15, c: 17, type: 'primitive', tags: ['basic', 'must-know'] },
-  { a: 9, b: 40, c: 41, type: 'primitive', tags: ['basic', 'must-know'] },
-  { a: 11, b: 60, c: 61, type: 'primitive', tags: ['standard'] },
-  { a: 12, b: 35, c: 37, type: 'primitive', tags: ['standard', 'high-frequency'] },
-  { a: 13, b: 84, c: 85, type: 'primitive', tags: ['advanced'] },
-  { a: 16, b: 63, c: 65, type: 'primitive', tags: ['standard'] },
-  { a: 20, b: 21, c: 29, type: 'primitive', tags: ['high-frequency'] },
-  { a: 28, b: 45, c: 53, type: 'primitive', tags: ['standard'] },
-  { a: 33, b: 56, c: 65, type: 'primitive', tags: ['advanced'] },
-  { a: 36, b: 77, c: 85, type: 'primitive', tags: ['advanced'] },
-  { a: 39, b: 80, c: 89, type: 'primitive', tags: ['advanced'] },
-  { a: 48, b: 55, c: 73, type: 'primitive', tags: ['advanced'] },
-  { a: 65, b: 72, c: 97, type: 'primitive', tags: ['advanced'] },
+  ...PRIMITIVE_TRIPLETS_SET_1,
+  ...PRIMITIVE_TRIPLETS_SET_2,
 ];
 
 export const TRIPLETS_DATA = PRIMITIVE_TRIPLETS;
@@ -212,10 +239,10 @@ export const CALC_SECTIONS = [
   },
   {
     id: 'fractions',
-    title: 'Fractions & Percentages (1/2 to 1/25)',
+    title: 'Fractions & % (1/2 to 1/50)',
     shortTitle: 'Fractions %',
     badge: 'Step 7',
-    description: 'Master core percentage conversions from 1/2 to 1/25 with decimal equivalents',
+    description: 'Master core percentage conversions from 1/2 to 1/50 across 5 progressive parts',
     count: FRACTIONS_DATA.length,
     color: 'from-indigo-600 to-violet-600',
     lightBg: 'bg-indigo-50 text-indigo-700 border-indigo-200',
@@ -401,11 +428,17 @@ export function createFractionQuestion(
  * Generates an EXHAUSTIVE, shuffled deck for a section guaranteeing that
  * EVERY single number in the required range appears at least once!
  */
-export function generateExhaustiveDeckForSection(section: SectionId): CalculationQuestion[] {
+export function generateExhaustiveDeckForSection(
+  section: SectionId,
+  tripletSet: 'set1' | 'set2' | 'all' = 'all',
+  fractionPart: FractionPartId = 'all'
+): CalculationQuestion[] {
   switch (section) {
     case 'triplets': {
-      // All 16 primitive triplets
-      const deck = PRIMITIVE_TRIPLETS.map((t) => createTripletQuestion(t));
+      let pool = PRIMITIVE_TRIPLETS;
+      if (tripletSet === 'set1') pool = PRIMITIVE_TRIPLETS_SET_1;
+      else if (tripletSet === 'set2') pool = PRIMITIVE_TRIPLETS_SET_2;
+      const deck = pool.map((t) => createTripletQuestion(t));
       return shuffleArray(deck);
     }
 
@@ -444,8 +477,13 @@ export function generateExhaustiveDeckForSection(section: SectionId): Calculatio
     }
 
     case 'fractions': {
-      // All key fractions
-      const deck = FRACTIONS_DATA.map((item) => createFractionQuestion(item, FRACTIONS_DATA));
+      let pool = FRACTIONS_DATA;
+      if (fractionPart === 'part1') pool = FRACTIONS_PART_1;
+      else if (fractionPart === 'part2') pool = FRACTIONS_PART_2;
+      else if (fractionPart === 'part3') pool = FRACTIONS_PART_3;
+      else if (fractionPart === 'part4') pool = FRACTIONS_PART_4;
+      else if (fractionPart === 'part5') pool = FRACTIONS_PART_5;
+      const deck = pool.map((item) => createFractionQuestion(item, pool));
       return shuffleArray(deck);
     }
   }

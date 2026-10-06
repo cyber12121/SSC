@@ -2,14 +2,21 @@ import React, { useState } from 'react';
 import { X, BookOpen, Sparkles, Check, ChevronRight } from 'lucide-react';
 import {
   TRIPLETS_DATA,
+  PRIMITIVE_TRIPLETS_SET_1,
+  PRIMITIVE_TRIPLETS_SET_2,
   SQUARES_17_39,
   CUBES_11_25,
   POWERS_DATA,
   FACTORIALS_DATA,
   CALC_SECTIONS,
+  FRACTIONS_PART_1,
+  FRACTIONS_PART_2,
+  FRACTIONS_PART_3,
+  FRACTIONS_PART_4,
+  FRACTIONS_PART_5,
+  FRACTION_PARTS_INFO,
   SectionId,
 } from '../../data/drills/calculationData';
-import fractionsData from '../../data/drills/fractions.json';
 
 type SheetTab = SectionId | 'fractions';
 
@@ -77,24 +84,74 @@ export const CalculationCheatSheet: React.FC<Props> = ({ isOpen, onClose, initia
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {/* Section 1: Triplets */}
           {activeTab === 'triplets' && (
-            <div className="space-y-4">
-              <div className="p-4 bg-blue-50/60 rounded-2xl border border-blue-100 text-xs text-blue-900 font-medium">
-                <strong>Pythagorean Triplet Formula:</strong> $a^2 + b^2 = c^2$, where $c$ is the longest side (Hypotenuse).
+            <div className="space-y-6">
+              <div className="p-4 bg-blue-50/60 rounded-2xl border border-blue-100 text-xs text-blue-900 font-medium flex items-center justify-between">
+                <span>
+                  <strong>Pythagorean Triplet Formula:</strong> a² + b² = c², where c is the hypotenuse.
+                </span>
+                <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">
+                  16 Total (8 + 8)
+                </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {TRIPLETS_DATA.map((t, idx) => (
-                  <div
-                    key={idx}
-                    className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:border-blue-300 transition-all text-center"
-                  >
-                    <div className="text-sm font-extrabold text-slate-800">
-                      ({t.a}, {t.b}, {t.c})
-                    </div>
-                    <div className="text-[11px] text-blue-600 mt-1 font-bold">
-                      Primitive
-                    </div>
+
+              {/* Set 1: Core 8 */}
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
+                      Set 1: Must-Know Core Triplets
+                    </span>
+                    <span className="text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-md">
+                      85% Exam Frequency
+                    </span>
                   </div>
-                ))}
+                  <span className="text-[11px] text-slate-400 font-semibold">8 Triplets</span>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {PRIMITIVE_TRIPLETS_SET_1.map((t, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 bg-white rounded-2xl border border-emerald-200/80 shadow-2xs hover:border-emerald-400 transition-all text-center"
+                    >
+                      <div className="text-sm font-extrabold text-slate-800">
+                        ({t.a}, {t.b}, {t.c})
+                      </div>
+                      <div className="text-[10px] text-emerald-600 mt-1 font-bold">
+                        Core Must-Know
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Set 2: Advanced 8 */}
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
+                      Set 2: Advanced Rank-Deciders
+                    </span>
+                    <span className="text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-md">
+                      Tier-1 / Tier-2 Deciders
+                    </span>
+                  </div>
+                  <span className="text-[11px] text-slate-400 font-semibold">8 Triplets</span>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {PRIMITIVE_TRIPLETS_SET_2.map((t, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 bg-white rounded-2xl border border-indigo-200/80 shadow-2xs hover:border-indigo-400 transition-all text-center"
+                    >
+                      <div className="text-sm font-extrabold text-slate-800">
+                        ({t.a}, {t.b}, {t.c})
+                      </div>
+                      <div className="text-[10px] text-indigo-600 mt-1 font-bold">
+                        Advanced
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -226,33 +283,58 @@ export const CalculationCheatSheet: React.FC<Props> = ({ isOpen, onClose, initia
             </div>
           )}
 
-          {/* Section 7: Fractions & Percentages */}
+          {/* Section 7: Fractions & Percentages - 5 Progressive Parts */}
           {activeTab === 'fractions' && (
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="p-4 bg-indigo-50/60 rounded-2xl border border-indigo-100 text-xs text-indigo-900 font-medium flex items-center justify-between">
-                <span><strong>Fractions to Percentages (1/2 to 1/25):</strong> High-frequency percentage conversions for Arithmetic & DI.</span>
-                <span className="text-[11px] font-bold text-indigo-600 bg-white px-2.5 py-1 rounded-lg border border-indigo-200">
-                  {fractionsData.length} Values
+                <span>
+                  <strong>Fraction to Percentage Mastery:</strong> Split into 5 progressive parts for systematic daily retention.
+                </span>
+                <span className="text-[10px] font-bold text-indigo-700 bg-indigo-100 px-2.5 py-1 rounded-full">
+                  5 Parts (70 Total)
                 </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                {fractionsData.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:border-indigo-300 transition-all text-center"
-                  >
-                    <div className="text-base font-black text-slate-900">
-                      {item.fraction}
+
+              {[
+                { info: FRACTION_PARTS_INFO[0], items: FRACTIONS_PART_1, badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+                { info: FRACTION_PARTS_INFO[1], items: FRACTIONS_PART_2, badgeColor: 'bg-blue-50 text-blue-700 border-blue-200' },
+                { info: FRACTION_PARTS_INFO[2], items: FRACTIONS_PART_3, badgeColor: 'bg-purple-50 text-purple-700 border-purple-200' },
+                { info: FRACTION_PARTS_INFO[3], items: FRACTIONS_PART_4, badgeColor: 'bg-amber-50 text-amber-700 border-amber-200' },
+                { info: FRACTION_PARTS_INFO[4], items: FRACTIONS_PART_5, badgeColor: 'bg-rose-50 text-rose-700 border-rose-200' },
+              ].map(({ info, items, badgeColor }) => (
+                <div key={info.id} className="space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-black text-slate-800 uppercase tracking-wider">
+                        {info.title}
+                      </span>
+                      <span className={`text-[10px] font-bold border px-2 py-0.5 rounded-md ${badgeColor}`}>
+                        {info.badge}
+                      </span>
                     </div>
-                    <div className="text-sm font-extrabold text-indigo-600 mt-0.5">
-                      {item.percentage}
-                    </div>
-                    <div className="text-[10px] text-slate-400 font-mono mt-0.5">
-                      ≈ {item.decimal}
-                    </div>
+                    <span className="text-[11px] text-slate-400 font-semibold">{items.length} values</span>
                   </div>
-                ))}
-              </div>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
+                    {items.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="p-2.5 bg-white rounded-xl border border-slate-200/80 shadow-2xs hover:border-indigo-400 transition-all text-center"
+                      >
+                        <div className="text-sm font-black text-slate-900 font-mono">
+                          {item.fraction}
+                        </div>
+                        <div className="text-xs font-extrabold text-indigo-600 mt-0.5">
+                          {item.percentage}
+                        </div>
+                        <div className="text-[10px] text-slate-400 font-mono mt-0.5">
+                          ≈ {item.decimal}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </div>

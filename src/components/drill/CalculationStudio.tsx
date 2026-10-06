@@ -19,11 +19,13 @@ import {
   Repeat,
   Trophy,
   ChevronLeft,
+  Clock,
 } from 'lucide-react';
 import {
   CALC_SECTIONS,
   SectionId,
   CalculationQuestion,
+  FractionPartId,
   generateExhaustiveDeckForSection,
 } from '../../data/drills/calculationData';
 import { CalculationCheatSheet } from './CalculationCheatSheet';
@@ -50,6 +52,8 @@ export const CalculationStudio: React.FC<Props> = ({
   const [drillMode, setDrillMode] = useState<'routine' | 'free'>(initialMode);
   const [activeSectionId, setActiveSectionId] = useState<SectionId>(initialSection);
   const [routineSectionIndex, setRoutineSectionIndex] = useState<number>(0);
+  const [tripletSetFilter, setTripletSetFilter] = useState<'set1' | 'set2' | 'all'>('set1');
+  const [fractionPartFilter, setFractionPartFilter] = useState<FractionPartId>('part1');
 
   // Decks & Repetition Queues
   const [deck, setDeck] = useState<CalculationQuestion[]>([]);
@@ -146,24 +150,31 @@ export const CalculationStudio: React.FC<Props> = ({
   const startTimeRef = useRef<number>(Date.now());
 
   // Initialize or transition section
-  const initSection = useCallback((secId: SectionId) => {
-    const fullDeck = generateExhaustiveDeckForSection(secId);
-    setInitialDeckSize(fullDeck.length);
-    setRepeatQueue([]);
-    setActiveRepeatItem(null);
-    setInputVal('');
-    setFeedback(null);
-    setRevealed(false);
-    setWrongAttempts(0);
-    setElapsedSeconds(0);
-    startTimeRef.current = Date.now();
+  const initSection = useCallback(
+    (
+      secId: SectionId,
+      tripletFilter: 'set1' | 'set2' | 'all' = tripletSetFilter,
+      fracPart: FractionPartId = fractionPartFilter
+    ) => {
+      const fullDeck = generateExhaustiveDeckForSection(secId, tripletFilter, fracPart);
+      setInitialDeckSize(fullDeck.length);
+      setRepeatQueue([]);
+      setActiveRepeatItem(null);
+      setInputVal('');
+      setFeedback(null);
+      setRevealed(false);
+      setWrongAttempts(0);
+      setElapsedSeconds(0);
+      startTimeRef.current = Date.now();
 
-    // Pick first question
-    const firstQ = fullDeck[0];
-    const remainingDeck = fullDeck.slice(1);
-    setDeck(remainingDeck);
-    setCurrentQuestion(firstQ);
-  }, []);
+      // Pick first question
+      const firstQ = fullDeck[0];
+      const remainingDeck = fullDeck.slice(1);
+      setDeck(remainingDeck);
+      setCurrentQuestion(firstQ);
+    },
+    [tripletSetFilter, fractionPartFilter]
+  );
 
   // When section or drill mode changes, initialize section
   useEffect(() => {
@@ -321,8 +332,8 @@ export const CalculationStudio: React.FC<Props> = ({
         setRoutineSectionIndex(nextSecIdx);
       }
     } else {
-      // In free mode, restart deck or offer review
-      initSection(activeSectionId);
+      // In free mode (Section Focus), cleanly finish set and show scorecard
+      setIsFinished(true);
     }
   };
 
@@ -530,7 +541,12 @@ export const CalculationStudio: React.FC<Props> = ({
   const switchToIndividualSection = (secId: SectionId) => {
     setDrillMode('free');
     setActiveSectionId(secId);
+    setStatsBySection((prev) => ({
+      ...prev,
+      [secId]: { correct: 0, total: 0 },
+    }));
     setIsFinished(false);
+    initSection(secId);
   };
 
   // Progress metrics
@@ -541,46 +557,43 @@ export const CalculationStudio: React.FC<Props> = ({
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-40 bg-slate-50 text-slate-900 flex flex-col overflow-hidden select-none font-sans"
+      className="fixed inset-0 z-[70] bg-slate-100 text-slate-900 flex flex-col overflow-hidden select-none font-sans"
     >
-      {/* Header Bar */}
-      <header className="flex items-center justify-between px-4 sm:px-6 py-3 bg-white/95 border-b border-slate-200/90 backdrop-blur-md shadow-2xs">
-        {/* Left: Back Button, Branding & Mode Switcher */}
+      {/* Header Bar - High Z-Index Distraction-Free Workout Header */}
+      <header className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-white border-b border-slate-200/90 shadow-2xs shrink-0 z-10">
+        {/* Left: Back/Exit Button, Branding & Mode Switcher */}
         <div className="flex items-center space-x-3 sm:space-x-4">
           {onClose && (
             <button
               onClick={onClose}
               type="button"
-              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-50 bg-white transition text-xs font-semibold cursor-pointer shadow-2xs"
-              title="Back to Drill Hub"
+              className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-50 bg-white transition text-xs font-bold cursor-pointer shadow-2xs"
+              title="Exit Workout Studio (Esc)"
             >
               <ChevronLeft className="w-4 h-4" />
-              <span>Back</span>
+              <span>Exit</span>
             </button>
           )}
 
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white shadow-xs">
-              <Zap className="w-4 h-4 fill-white" />
+            <div className="w-7 h-7 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white shadow-xs">
+              <Zap className="w-3.5 h-3.5 fill-white" />
             </div>
             <div className="hidden sm:block">
               <span className="font-bold text-sm text-slate-900 tracking-tight">Calculation Studio</span>
-              <span className="text-[10px] text-blue-600 font-semibold block uppercase tracking-wider">
-                Full Screen Drill
-              </span>
             </div>
           </div>
 
-          <div className="h-5 w-px bg-slate-200" />
+          <div className="h-4 w-px bg-slate-200 hidden sm:block" />
 
           {/* Mode Pill Toggle */}
-          <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200/80">
+          <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200/80 text-xs">
             <button
               onClick={() => {
                 setDrillMode('routine');
                 setRoutineSectionIndex(0);
               }}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1 rounded-lg font-bold transition-all cursor-pointer ${
                 drillMode === 'routine'
                   ? 'bg-white text-blue-600 shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
@@ -592,7 +605,7 @@ export const CalculationStudio: React.FC<Props> = ({
               onClick={() => {
                 setDrillMode('free');
               }}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              className={`px-3 py-1 rounded-lg font-bold transition-all cursor-pointer ${
                 drillMode === 'free'
                   ? 'bg-white text-blue-600 shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
@@ -604,23 +617,24 @@ export const CalculationStudio: React.FC<Props> = ({
         </div>
 
         {/* Center: Live Workout Metrics */}
-        <div className="hidden md:flex items-center space-x-6 text-xs font-bold">
-          <div className="flex items-center text-amber-700 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200">
-            <Flame className="w-4 h-4 mr-1.5 fill-amber-500 text-amber-500" />
+        <div className="hidden md:flex items-center space-x-3 text-xs font-bold">
+          <div className="flex items-center text-amber-800 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200">
+            <Flame className="w-3.5 h-3.5 mr-1.5 fill-amber-500 text-amber-500" />
             <span>{streak} Streak</span>
           </div>
 
-          <div className="text-slate-400 font-mono">
-            Time: <span className="text-slate-900 font-bold">{formatTime(elapsedSeconds)}</span>
+          <div className="flex items-center text-slate-700 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200/80 font-mono">
+            <Clock className="w-3.5 h-3.5 mr-1.5 text-slate-400" />
+            <span>{formatTime(elapsedSeconds)}</span>
           </div>
         </div>
 
         {/* Right: Controls & Exit */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-1.5 sm:space-x-2">
           {/* Reference Cheat Sheet Button */}
           <button
             onClick={() => setShowCheatSheet(true)}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-blue-600 text-xs font-bold transition-colors border border-slate-200 shadow-2xs cursor-pointer"
+            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-blue-600 text-xs font-bold transition-colors border border-slate-200 shadow-2xs cursor-pointer"
             title="Open Formula / Number Reference Sheet"
           >
             <BookOpen className="w-3.5 h-3.5 text-blue-600" />
@@ -666,7 +680,7 @@ export const CalculationStudio: React.FC<Props> = ({
           {onClose && (
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 transition-colors shadow-2xs cursor-pointer"
+              className="p-2 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-500 hover:text-rose-600 border border-slate-200 hover:border-rose-200 transition-colors shadow-2xs cursor-pointer ml-1"
               title="Exit Workout Studio (Esc)"
             >
               <X className="w-4 h-4" />
@@ -676,9 +690,9 @@ export const CalculationStudio: React.FC<Props> = ({
       </header>
 
       {/* Routine Progress / Section Tabs Subheader */}
-      <div className="px-4 sm:px-6 py-2.5 bg-white border-b border-slate-200 flex items-center justify-between overflow-x-auto scrollbar-none gap-4 shadow-2xs">
+      <div className="px-4 sm:px-6 py-2 bg-white/80 border-b border-slate-200/90 flex items-center justify-between overflow-x-auto scrollbar-none gap-3 shrink-0 shadow-2xs">
         {drillMode === 'routine' ? (
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex items-center space-x-2">
             {CALC_SECTIONS.map((sec, idx) => {
               const isCurrent = idx === routineSectionIndex;
               const isCompleted = idx < routineSectionIndex;
@@ -687,7 +701,7 @@ export const CalculationStudio: React.FC<Props> = ({
                   key={sec.id}
                   className={`flex items-center whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                     isCurrent
-                      ? 'bg-blue-50 text-blue-700 border border-blue-200'
+                      ? 'bg-blue-50 text-blue-700 border border-blue-200 shadow-2xs'
                       : isCompleted
                       ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                       : 'text-slate-400'
@@ -701,7 +715,7 @@ export const CalculationStudio: React.FC<Props> = ({
             })}
           </div>
         ) : (
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1.5 overflow-x-auto custom-scrollbar py-0.5">
             {CALC_SECTIONS.map((sec) => {
               const isSelected = activeSectionId === sec.id;
               return (
@@ -711,7 +725,7 @@ export const CalculationStudio: React.FC<Props> = ({
                   className={`flex items-center whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                     isSelected
                       ? 'bg-blue-600 text-white shadow-xs'
-                      : 'bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
+                      : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/70 border border-slate-200/60'
                   }`}
                 >
                   <span>{sec.title}</span>
@@ -721,64 +735,138 @@ export const CalculationStudio: React.FC<Props> = ({
           </div>
         )}
 
-        {/* Section Live Counters */}
-        <div className="flex items-center space-x-3 text-xs font-bold whitespace-nowrap">
-          <span className="text-slate-500">
-            Covered: <strong className="text-slate-900">{answeredDeckCount}</strong>/{initialDeckSize}
-          </span>
+        {/* Section Live Counters with Mini Progress Bar */}
+        <div className="flex items-center space-x-3 text-xs font-bold whitespace-nowrap shrink-0">
+          <div className="flex items-center gap-2">
+            <span className="text-slate-500">
+              Covered: <strong className="text-slate-900">{answeredDeckCount}</strong>/{initialDeckSize}
+            </span>
+            <div className="w-14 h-1.5 bg-slate-200 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-blue-600 rounded-full transition-all duration-300"
+                style={{
+                  width: `${initialDeckSize > 0 ? Math.min(100, Math.round((answeredDeckCount / initialDeckSize) * 100)) : 0}%`,
+                }}
+              />
+            </div>
+          </div>
           {pendingMistakes > 0 && (
-            <span className="flex items-center text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-lg">
+            <span className="flex items-center text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-lg text-[11px]">
               <Repeat className="w-3 h-3 mr-1 text-amber-600" />
-              {pendingMistakes} mistake{pendingMistakes > 1 ? 's' : ''} (repeating 3×)
+              {pendingMistakes} to repeat 3×
             </span>
           )}
         </div>
       </div>
 
       {/* Main Studio Body */}
-      <main className="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 relative overflow-y-auto bg-slate-50">
+      <main className="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 relative overflow-y-auto bg-slate-100/70">
         {isFinished ? (
           <CalculationSummary
             statsBySection={statsBySection}
             totalSeconds={elapsedSeconds}
+            drillMode={drillMode}
+            activeSectionId={activeSectionId}
             onRestartRoutine={restartRoutine}
             onPracticeSection={(secId) => switchToIndividualSection(secId)}
             onExit={() => (onClose ? onClose() : restartRoutine())}
           />
         ) : (
           <div className="w-full max-w-xl mx-auto flex flex-col items-center">
-            {/* Header info / mistake repetition notice */}
-            {activeRepeatItem ? (
-              <div className="mb-4 inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-xs font-black text-amber-800 animate-pulse shadow-2xs">
-                <Repeat className="w-3.5 h-3.5 text-amber-600" />
-                <span>Mistake Drill: Repeat ({activeRepeatItem.remainingRepeats} of 3 remaining)</span>
-              </div>
-            ) : (
-              <div className="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                <span>{currentSection.title}</span>
-                <span className="text-slate-300">•</span>
-                <span className="text-slate-500">
-                  {remainingInDeck} number{remainingInDeck !== 1 ? 's' : ''} remaining
-                </span>
+            {/* Triplets Set 1 vs Set 2 Toggle */}
+            {currentSection.id === 'triplets' && !activeRepeatItem && (
+              <div className="mb-3.5 w-full flex justify-center">
+                <div className="inline-flex items-center gap-1 bg-white p-1 rounded-2xl border border-slate-200 shadow-2xs">
+                  {[
+                    { id: 'set1', label: 'Set 1: Core (8)' },
+                    { id: 'set2', label: 'Set 2: Advanced (8)' },
+                    { id: 'all', label: 'All Base (16)' },
+                  ].map((s) => (
+                    <button
+                      key={s.id}
+                      type="button"
+                      onClick={() => {
+                        setTripletSetFilter(s.id as any);
+                        initSection('triplets', s.id as any);
+                      }}
+                      className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                        tripletSetFilter === s.id
+                          ? 'bg-blue-600 text-white shadow-xs'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                      }`}
+                    >
+                      {s.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
 
-            {/* Flashcard Box */}
+            {/* Fractions 5-Part Toggle */}
+            {currentSection.id === 'fractions' && !activeRepeatItem && (
+              <div className="mb-3.5 w-full flex justify-center">
+                <div className="inline-flex flex-wrap items-center justify-center gap-1 bg-white p-1 rounded-2xl border border-slate-200 shadow-2xs">
+                  {[
+                    { id: 'part1', label: 'Part 1 (1/2–1/6)' },
+                    { id: 'part2', label: 'Part 2 (1/7 & 1/8)' },
+                    { id: 'part3', label: 'Part 3 (1/9–1/11)' },
+                    { id: 'part4', label: 'Part 4 (1/12–1/16)' },
+                    { id: 'part5', label: 'Part 5 (1/17–1/50)' },
+                    { id: 'all', label: 'All Parts' },
+                  ].map((p) => (
+                    <button
+                      key={p.id}
+                      type="button"
+                      onClick={() => {
+                        setFractionPartFilter(p.id as any);
+                        initSection('fractions', tripletSetFilter, p.id as any);
+                      }}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                        fractionPartFilter === p.id
+                          ? 'bg-blue-600 text-white shadow-xs'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                      }`}
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Main Flashcard Box */}
             <div
-              className={`w-full bg-white rounded-3xl p-6 sm:p-10 border transition-all duration-200 shadow-sm relative overflow-hidden flex flex-col items-center justify-center ${
+              className={`w-full bg-white rounded-3xl p-6 sm:p-8 border transition-all duration-200 shadow-md shadow-slate-200/50 relative overflow-hidden flex flex-col items-center justify-center ${
                 feedback === 'correct'
-                  ? 'border-emerald-500 bg-emerald-50/50 ring-4 ring-emerald-50'
+                  ? 'border-emerald-500 bg-emerald-50/40 ring-4 ring-emerald-50'
                   : feedback === 'wrong'
-                  ? 'border-rose-400 bg-rose-50/50 ring-4 ring-rose-50 animate-shake'
+                  ? 'border-rose-400 bg-rose-50/40 ring-4 ring-rose-50 animate-shake'
                   : activeRepeatItem
-                  ? 'border-amber-300 bg-amber-50/30'
+                  ? 'border-amber-300 bg-amber-50/20'
                   : 'border-slate-200 hover:border-slate-300'
               }`}
             >
+              {/* Card Header Info Pill */}
+              <div className="w-full flex items-center justify-between pb-3 mb-3 border-b border-slate-100 text-xs">
+                {activeRepeatItem ? (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-xs font-black text-amber-800 animate-pulse">
+                    <Repeat className="w-3.5 h-3.5 text-amber-600" />
+                    <span>Mistake Drill ({activeRepeatItem.remainingRepeats} of 3 remaining)</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-bold border border-slate-200/70">
+                    <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                    <span>{currentSection.title}</span>
+                  </span>
+                )}
+                <span className="font-mono text-slate-400 font-semibold text-xs">
+                  {remainingInDeck} number{remainingInDeck !== 1 ? 's' : ''} left
+                </span>
+              </div>
+
               {/* Question Subtitle */}
               {currentQuestion?.subPrompt && (
-                <div className="text-slate-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3">
+                <div className="text-slate-400 text-xs font-bold tracking-wider uppercase text-center mt-2 mb-1">
                   {currentQuestion.subPrompt}
                 </div>
               )}
@@ -791,7 +879,7 @@ export const CalculationStudio: React.FC<Props> = ({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.12 }}
-                  className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight mb-8 text-center"
+                  className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight my-5 text-center font-display"
                 >
                   {currentQuestion?.prompt}
                 </motion.div>
@@ -799,7 +887,7 @@ export const CalculationStudio: React.FC<Props> = ({
 
               {/* Input Area or Option Selection Area */}
               {currentQuestion?.options && currentQuestion.options.length > 0 ? (
-                <div className="w-full max-w-md grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-4">
+                <div className="w-full max-w-md grid grid-cols-2 gap-3 my-2">
                   {currentQuestion.options.map((opt, idx) => {
                     const isSelected = selectedOption === opt;
                     const isCorrectOpt = opt === String(currentQuestion.answer);
@@ -813,37 +901,39 @@ export const CalculationStudio: React.FC<Props> = ({
                         type="button"
                         onClick={() => handleSelectOption(opt)}
                         disabled={revealed || feedback !== null}
-                        className={`p-3.5 rounded-2xl border-2 text-left font-bold transition-all flex items-center justify-between cursor-pointer active:scale-98 ${
+                        className={`group relative p-3.5 sm:p-4 rounded-2xl border-2 text-left font-bold transition-all flex items-center justify-between cursor-pointer active:scale-98 shadow-2xs ${
                           showSuccessHighlight || showCorrectHighlight
-                            ? 'border-emerald-500 bg-emerald-50 text-emerald-800 ring-2 ring-emerald-100'
+                            ? 'border-emerald-500 bg-emerald-50 text-emerald-900 ring-2 ring-emerald-200'
                             : showWrongHighlight
-                            ? 'border-rose-400 bg-rose-50 text-rose-800 ring-2 ring-rose-100'
-                            : 'border-slate-200 bg-slate-50 hover:bg-white text-slate-800 hover:border-blue-500'
+                            ? 'border-rose-400 bg-rose-50 text-rose-900 ring-2 ring-rose-200'
+                            : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:border-blue-500 hover:shadow-xs'
                         }`}
                       >
-                        <div className="flex items-center gap-2.5">
+                        <div className="flex items-center gap-3">
                           <span
-                            className={`w-6 h-6 rounded-lg text-xs font-black flex items-center justify-center ${
+                            className={`w-7 h-7 rounded-lg text-xs font-mono font-bold flex items-center justify-center transition-colors ${
                               showSuccessHighlight || showCorrectHighlight
-                                ? 'bg-emerald-500 text-white'
+                                ? 'bg-emerald-600 text-white'
                                 : showWrongHighlight
-                                ? 'bg-rose-500 text-white'
-                                : 'bg-slate-200 text-slate-600'
+                                ? 'bg-rose-600 text-white'
+                                : 'bg-slate-100 text-slate-500 border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200'
                             }`}
                           >
                             {idx + 1}
                           </span>
-                          <span className="text-base sm:text-lg">{opt}</span>
+                          <span className="text-xl sm:text-2xl font-bold tracking-tight font-display">{opt}</span>
                         </div>
                         {showSuccessHighlight || showCorrectHighlight ? (
-                          <Check className="w-4 h-4 text-emerald-600" />
+                          <Check className="w-5 h-5 text-emerald-600" />
+                        ) : showWrongHighlight ? (
+                          <X className="w-5 h-5 text-rose-600" />
                         ) : null}
                       </button>
                     );
                   })}
                 </div>
               ) : (
-                <div className="w-full max-w-xs relative mb-4">
+                <div className="w-full max-w-xs relative my-2">
                   <input
                     ref={inputRef}
                     type="text"
@@ -855,12 +945,12 @@ export const CalculationStudio: React.FC<Props> = ({
                     placeholder="Type answer..."
                     autoFocus
                     disabled={revealed}
-                    className={`w-full py-3.5 px-4 text-center text-2xl sm:text-3xl font-black rounded-2xl bg-white border-2 transition-all outline-none shadow-xs ${
+                    className={`w-full py-4 px-5 text-center text-3xl sm:text-4xl font-black rounded-2xl bg-white border-2 transition-all outline-none font-mono shadow-xs ${
                       feedback === 'correct'
-                        ? 'border-emerald-500 text-emerald-700 bg-emerald-50'
+                        ? 'border-emerald-500 text-emerald-700 bg-emerald-50 ring-4 ring-emerald-100'
                         : feedback === 'wrong'
-                        ? 'border-rose-400 text-rose-700 bg-rose-50'
-                        : 'border-slate-300 focus:border-blue-600 text-slate-900 placeholder:text-slate-400'
+                        ? 'border-rose-400 text-rose-700 bg-rose-50 ring-4 ring-rose-100'
+                        : 'border-slate-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 text-slate-900 placeholder:text-slate-300'
                     }`}
                   />
                 </div>
@@ -871,7 +961,7 @@ export const CalculationStudio: React.FC<Props> = ({
                 <motion.div
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="w-full p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-4 text-center shadow-xs"
+                  className="w-full p-4 rounded-2xl bg-slate-50 border border-slate-200 my-3 text-center shadow-xs"
                 >
                   <div className="text-xs text-slate-500 font-bold uppercase mb-1">Correct Answer</div>
                   <div className="text-2xl font-black text-emerald-600 mb-1">{currentQuestion.answer}</div>
@@ -893,17 +983,17 @@ export const CalculationStudio: React.FC<Props> = ({
 
               {/* Skip / Reveal / Enter Hint */}
               {!revealed && (
-                <div className="flex items-center justify-between w-full text-xs text-slate-500 px-2 mt-2">
-                  <span>
+                <div className="flex items-center justify-between w-full pt-4 mt-2 border-t border-slate-100 text-xs text-slate-500">
+                  <span className="text-slate-500 font-medium">
                     {currentQuestion?.options && currentQuestion.options.length > 0 ? (
                       <>
-                        Press <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px]">1</kbd>–<kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px]">4</kbd> or click option
+                        Press <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px] font-bold">1</kbd>–<kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px] font-bold">4</kbd> or click option
                       </>
                     ) : (
                       <>
                         Press{' '}
-                        <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px]">
-                          Enter
+                        <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px] font-bold">
+                          Enter ↵
                         </kbd>{' '}
                         to submit
                       </>
@@ -911,9 +1001,9 @@ export const CalculationStudio: React.FC<Props> = ({
                   </span>
                   <button
                     onClick={handleReveal}
-                    className="text-slate-500 hover:text-amber-600 font-bold underline transition-colors cursor-pointer"
+                    className="text-slate-400 hover:text-amber-700 font-semibold hover:underline transition-colors cursor-pointer"
                   >
-                    Reveal Answer (Repeat 3×)
+                    Don't know? Reveal Answer (Repeat 3×)
                   </button>
                 </div>
               )}
@@ -921,7 +1011,7 @@ export const CalculationStudio: React.FC<Props> = ({
 
             {/* Optional On-Screen Numeric Keypad */}
             {showNumpad && !currentQuestion?.options && (
-              <div className="mt-6 w-full max-w-xs bg-white p-3 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-3 gap-2">
+              <div className="mt-5 w-full max-w-xs bg-white p-3 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-3 gap-2">
                 {['1', '2', '3', '4', '5', '6', '7', '8', '9', 'clear', '0', 'backspace'].map((btn) => (
                   <button
                     key={btn}
@@ -950,19 +1040,19 @@ export const CalculationStudio: React.FC<Props> = ({
         initialSection={currentSection.id}
       />
 
-      {/* Bottom Shortcut Hints Bar */}
-      <footer className="px-4 sm:px-6 py-2.5 bg-white border-t border-slate-200 text-center text-xs text-slate-500 flex items-center justify-between shrink-0">
-        <div className="flex items-center space-x-3">
-          <span>
-            Press <span className="font-mono text-slate-700 font-bold">Enter ↵</span> to Submit
+      {/* Bottom Shortcut Hints Bar - Right Padded so Tommy Ask AI Never Overlaps */}
+      <footer className="px-4 sm:px-6 py-2.5 bg-white border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between shrink-0 pr-24 sm:pr-28 shadow-2xs">
+        <div className="flex items-center space-x-3 text-xs">
+          <span className="hidden sm:inline">
+            <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px] font-bold">Enter ↵</kbd> Submit
           </span>
-          <span>•</span>
+          <span className="hidden sm:inline text-slate-300">•</span>
           <span>
-            Press <span className="font-mono text-slate-700 font-bold">Esc</span> to Exit Studio
+            <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[10px] font-bold">Esc</kbd> Exit Studio
           </span>
         </div>
-        <div className="hidden sm:block text-slate-400">
-          Calculation Studio • Full Screen Training
+        <div className="hidden sm:block text-[11px] font-medium text-slate-400">
+          Calculation Studio • Mental Speed Lab
         </div>
       </footer>
     </div>

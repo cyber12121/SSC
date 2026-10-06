@@ -10,6 +10,8 @@ export interface SectionStats {
 interface Props {
   statsBySection: Record<SectionId, SectionStats>;
   totalSeconds: number;
+  drillMode?: 'routine' | 'free';
+  activeSectionId?: SectionId;
   onRestartRoutine: () => void;
   onPracticeSection: (sectionId: SectionId) => void;
   onExit: () => void;
@@ -18,11 +20,19 @@ interface Props {
 export const CalculationSummary: React.FC<Props> = ({
   statsBySection,
   totalSeconds,
+  drillMode = 'routine',
+  activeSectionId,
   onRestartRoutine,
   onPracticeSection,
   onExit,
 }) => {
-  const statsList = Object.values(statsBySection) as SectionStats[];
+  const currentSec = activeSectionId ? CALC_SECTIONS.find((s) => s.id === activeSectionId) : null;
+  const isSingleSection = drillMode === 'free';
+
+  const statsList = isSingleSection && activeSectionId
+    ? [statsBySection[activeSectionId] || { correct: 0, total: 0 }]
+    : (Object.values(statsBySection) as SectionStats[]);
+
   const totalAttempted = statsList.reduce((acc, curr) => acc + curr.total, 0);
   const totalCorrect = statsList.reduce((acc, curr) => acc + curr.correct, 0);
   const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
@@ -42,10 +52,12 @@ export const CalculationSummary: React.FC<Props> = ({
           <Trophy className="w-10 h-10 fill-amber-500" />
         </div>
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-          Calculation Routine Completed!
+          {isSingleSection && currentSec ? `${currentSec.title} Completed!` : 'Calculation Routine Completed!'}
         </h1>
         <p className="text-slate-500 mt-2 text-sm max-w-md mx-auto">
-          Awesome speed session! Consistent daily practice with these key numbers sharpens your instincts for SSC CGL Tier 1 & 2.
+          {isSingleSection
+            ? 'Awesome workout! You completed all questions in this practice set cleanly.'
+            : 'Awesome speed session! Consistent daily practice with these key numbers sharpens your instincts for SSC CGL Tier 1 & 2.'}
         </p>
       </div>
 
