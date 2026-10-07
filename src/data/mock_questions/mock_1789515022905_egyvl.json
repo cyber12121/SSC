@@ -1217,14 +1217,14 @@
     "q_num": 31,
     "question": "Amit borrowed a sum of ₹25,000 on simple interest. Bhola borrowed the same amount on compound interest (interest compounded yearly). At the end of 2 years, Bhola had to pay ₹160 more interest than Amit. The rate of interest charged per annum is:",
     "options": {
-      "a": "1625% $\\frac{16}{25} \\%$",
-      "b": "825% $\\frac{8}{25} \\%$",
+      "a": "$\\frac{16}{25} \\%$",
+      "b": "$\\frac{8}{25} \\%$",
       "c": "8%",
-      "d": "318% $3\\frac{1}{8} \\%$",
-      "A": "1625% $\\frac{16}{25} \\%$",
-      "B": "825% $\\frac{8}{25} \\%$",
+      "d": "$3\\frac{1}{8} \\%$",
+      "A": "$\\frac{16}{25} \\%$",
+      "B": "$\\frac{8}{25} \\%$",
       "C": "8%",
-      "D": "318% $3\\frac{1}{8} \\%$"
+      "D": "$3\\frac{1}{8} \\%$"
     },
     "answer": "c",
     "solution": "Solution\n\nShortcut Trick\nDifference (2 years) = P × (R / 100)² ⇒ 160 = 25000 × (R / 100)² ⇒ (R / 100)² = 160 ÷ 25000 = 16 / 2500 = (4 / 50)² ⇒ R = (4 × 100) ÷ 50 = 8\n∴ The correct answer is 8%.\n\nAlternate Method\nGiven:\nPrincipal (P) = ₹25, 000\nTime (T) = 2 years\nDifference between CI and SI (D) = ₹160\n\nFormula Used:\nFor 2 years, D = P × (R / 100)² Calculations:\n⇒ 160 = 25000 × (R / 100)² ⇒ 160 = 25000 × (R² / 10000)\n⇒ 160 = 2.5 × R² ⇒ R² = 160 ÷ 2.5\n⇒ R² = 1600 ÷ 25\n⇒ R² = 64\n⇒ R = √64 = 8%\n∴ The correct answer is 8%.\n\nAdditional Information\nDifference between CI and SI for 3 years\n\nFor 3 years, the difference between CI and SI is calculated as: D = P × (R / 100)² × ((300 + R) / 100).\n\nEffective Compound Interest Rate\n\nThe effective compound interest rate for 2 years is calculated using the successive percentage formula: Rate = 2R + (R² / 100)%.\n\nRule of 72\n\nTo quickly estimate the number of years required to double an investment at a given annual compound interest rate, use the formula: Time ≈ 72 ÷ R.",
@@ -1505,14 +1505,14 @@
     "q_num": 38,
     "question": "The average speed of a train is 180% of the average speed of a car. The car covers a distance of 990 km in 15 hours. The time taken (in hours) by the train to cover the distance of 891 km is:",
     "options": {
-      "a": "912 $\\frac{1}{2}$",
-      "b": "712 $\\frac{1}{2}$",
-      "c": "612 $\\frac{1}{2}$",
-      "d": "512 $\\frac{1}{2}$",
-      "A": "912 $\\frac{1}{2}$",
-      "B": "712 $\\frac{1}{2}$",
-      "C": "612 $\\frac{1}{2}$",
-      "D": "512 $\\frac{1}{2}$"
+      "a": "$9\\frac{1}{2}$",
+      "b": "$7\\frac{1}{2}$",
+      "c": "$6\\frac{1}{2}$",
+      "d": "$5\\frac{1}{2}$",
+      "A": "$9\\frac{1}{2}$",
+      "B": "$7\\frac{1}{2}$",
+      "C": "$6\\frac{1}{2}$",
+      "D": "$5\\frac{1}{2}$"
     },
     "answer": "b",
     "solution": "Solution\n\nShortcut Trick\nSpeed of the car = 990 ÷ 15 = 66 km/h.\nSpeed of the train = 180% of 66 = 1.8 × 66 = 118.8 km/h.\nTime taken by train = Distance ÷ Speed = 891 ÷ 118.8 = 7.5 hours. 7.5 hours is equal to 71⁄2 hours.\n∴ The correct answer is 71⁄2 hours.\n\nAlternate Method\nGiven:\nDistance covered by car = 990 km\nTime taken by car = 15 hours\nAverage speed of train = 180% of average speed of car\nDistance to be covered by train = 891 km\n\nFormula Used:\nSpeed = Distance ÷ Time\n\nCalculations:\n⇒ Speed of the car = 990 ÷ 15\n⇒ Speed of the car = 66 km/h\n⇒ Speed of the train = 180% of 66\n⇒ Speed of the train = (180 ÷ 100) × 66 = 1.8 × 66 = 118.8 km/h\n⇒ Time taken by the train = 891 ÷ 118.8\n⇒ Time taken by the train = 8910 ÷ 1188\n⇒ Time taken by the train = 7.5 hours\n⇒ 7.5 hours = 71⁄2 hours\n∴ The correct answer is 71⁄2 hours.\n\nAdditional Information\nAverage Speed\n\nAverage speed is the total distance traveled divided by the total time taken. Formula: Average Speed = Total Distance ÷ Total Time.\n\nRelative Speed\n\nWhen two objects move in the same direction, their relative speed is the difference of their individual speeds (S1 - S²). In opposite directions, it is the sum (S1 + S²).\n\nConversion of Units\n\nTo convert speed from km/h to m/s, multiply by 5 ÷ 18. To convert from m/s to km/h, multiply by 18 ÷ 5.",

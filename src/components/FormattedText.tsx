@@ -387,7 +387,10 @@ function getCachedKatexHtml(latex: string, displayMode: boolean): string {
         const rCount = (specialFixed.match(/\\right\b/g) || []).length;
         if (lCount > rCount) {
           specialFixed += ' \\right.'.repeat(lCount - rCount);
+        } else if (rCount > lCount) {
+          specialFixed = '\\left. '.repeat(rCount - lCount) + specialFixed;
         }
+        specialFixed = specialFixed.replace(/^\\right\s*([)\]}|])$/, '$1').replace(/^\\left\s*([(\[{|])$/, '$1');
         if (specialFixed !== sanitized) {
           const retrySpecial = katex.renderToString(specialFixed, { throwOnError: false, displayMode });
           if (!retrySpecial.includes('katex-error') && !retrySpecial.includes('color:#cc0000')) {
@@ -413,8 +416,12 @@ function renderTokenList(tokens: MathToken[], breakOnSentences = false, subject?
     if (token.type === 'math') {
       const html = getCachedKatexHtml(token.value, Boolean(token.display));
 
-      // If KaTeX produced an error span or failed, recover with a clean pill
+      // If KaTeX produced an error span or failed, recover with a clean delimiter or pill
       if (!html || html.includes('class="katex-error"')) {
+        const cleanDelimiter = token.value.replace(/^\\right\s*([)\]}|])$/, '$1').replace(/^\\left\s*([(\[{|])$/, '$1');
+        if (cleanDelimiter !== token.value) {
+          return <span key={idx} className="align-baseline">{cleanDelimiter}</span>;
+        }
         return (
           <span
             key={idx}

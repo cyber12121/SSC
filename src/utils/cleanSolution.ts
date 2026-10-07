@@ -1,4 +1,11 @@
-import { reconstructScrapedMath, reconstructScrapedSolutionMath, wrapUnwrappedFractions } from './mathSanitizer';
+import {
+  reconstructScrapedMath,
+  reconstructScrapedSolutionMath,
+  wrapUnwrappedFractions,
+  normalizeParenthesizedMathBlocks,
+  balanceUnclosedDollarSigns,
+  wrapStandaloneLatexEquations,
+} from './mathSanitizer';
 
 /**
  * Utility to clean solutions:
@@ -24,7 +31,10 @@ export function cleanSolutionText(sol: string = ''): string {
     .replace(/&gt;/g, '>')
     .replace(/&nbsp;/g, ' ');
 
-  // 1b. Wrap unwrapped \frac formulas before extracting math placeholders
+  // 1b. Normalize parenthesized math, balance unclosed dollars, and wrap standalone equations/fractions
+  s = normalizeParenthesizedMathBlocks(s);
+  s = balanceUnclosedDollarSigns(s);
+  s = wrapStandaloneLatexEquations(s);
   s = wrapUnwrappedFractions(s);
 
   // 2. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))

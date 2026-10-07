@@ -9,7 +9,16 @@
  * 6. Tokenizing LaTeX math for KaTeX rendering
  */
 
-import { reconstructScrapedMath, wrapUnwrappedFractions, cleanAlgebraPowers, normalizeListCommas, cleanScrapedFractionPrefixes } from './mathSanitizer';
+import {
+  reconstructScrapedMath,
+  wrapUnwrappedFractions,
+  cleanAlgebraPowers,
+  normalizeListCommas,
+  cleanScrapedFractionPrefixes,
+  normalizeParenthesizedMathBlocks,
+  balanceUnclosedDollarSigns,
+  wrapStandaloneLatexEquations,
+} from './mathSanitizer';
 
 export interface MathToken {
   type: 'text' | 'math';
@@ -52,6 +61,9 @@ export function cleanQuestionText(text: string = ''): string {
     return trimmed ? `$${trimmed}$` : '$$';
   });
 
+  s = normalizeParenthesizedMathBlocks(s);
+  s = balanceUnclosedDollarSigns(s);
+  s = wrapStandaloneLatexEquations(s);
   s = wrapUnwrappedFractions(s);
 
   // 1. Temporarily extract and preserve math blocks ($$...$$, $...$, \[...\], \(...\))
@@ -209,12 +221,17 @@ export function getLanguageText(
 export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   if (!rawText) return [];
 
+  let text = cleanScrapedFractionPrefixes(rawText);
+
   // Step 0: Clean escaped quotes and normalize double-escaped delimiters
-  let text = rawText.replace(/\\"/g, '"');
+  text = text.replace(/\\"/g, '"');
   text = text.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
   text = text.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
 
-  // Step 1: Wrap unwrapped fractions (\frac and \over) including mixed fractions
+  // Step 1: Normalize parenthesized math, balance unclosed dollars, and wrap unwrapped equations/fractions
+  text = normalizeParenthesizedMathBlocks(text);
+  text = balanceUnclosedDollarSigns(text);
+  text = wrapStandaloneLatexEquations(text);
   text = wrapUnwrappedFractions(text);
 
   // Step 2: Normalize \(...\) to $...$ and \[...\] to $$...$$
@@ -245,8 +262,7 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   // Step 3: Combined pattern for:
   // - $$ display math $$
   // - $ inline math $ (opening $ NOT followed by space, closing $ NOT preceded by space)
-  // - Unwrapped LaTeX formulas starting with \command (e.g. \sin, \cos, \frac, \sqrt, \theta, \pi, \Delta, \angle, \sim, \cong, etc.)
-  const combinedRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|delta|Delta|angle|sim|cong|times|div|pm|mp|cdot|approx|neq|leq|geq|le|ge|infty|sum|prod|lim|log|ln|text|left|right|rm|mathrm)[a-zA-Z0-9\+\-\*\/\=\(\)\{\}\[\]\^\_\s\.,\\|<>]+?(?=\s+(?:is|are|was|were|if|then|where|find|when|and|with|for|to|of|as|by|in|such|given)\b|[\?\:\.](?:\s|$)|$))/g;
+  const combinedRegex = /(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$|\\(?:frac|dfrac|cfrac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|delta|Delta|angle|sim|cong|times|div|pm|mp|cdot|approx|neq|leq|geq|le|ge|infty|sum|prod|lim|log|ln|text|left|right|rm|mathrm|Rightarrow|Leftarrow|Leftrightarrow|rightarrow|leftarrow|to|therefore|because|circ|degree|triangle|parallel|perp)[a-zA-Z0-9\+\-\*\/\=\(\)\{\}\[\]\^\_\s\.,\\|<>÷×±∓°√≠≤≥~≈·]+?(?=\s+(?:is|are|was|were|if|then|where|find|when|and|with|for|to|of|as|by|in|such|given)\b|[\?\:\.](?:\s|$)|$))/g;
 
   const tokens: MathToken[] = [];
   let lastIndex = 0;

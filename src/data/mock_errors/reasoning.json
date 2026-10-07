@@ -2870,6 +2870,198 @@
           "conceptTested": "Identification of complex difference patterns in numeric sequences.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_b52ff6631b",
+        "q_num": 92,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:45",
+        "avgTime": "00:28",
+        "question": "Three of the following four words are alike in a certain way and one is different. Choose the odd one.",
+        "options": {
+          "a": "PRUY",
+          "b": "GILP",
+          "c": "DFIL",
+          "d": "OQTX"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is that each letter has an increasing gap between successive letters.\n\nOption (A) PRUY: P (+2) R (+3) U (+4) Y\nOption (B) GILP: G (+2) I (+3) L (+4) P\nOption (C) DFIL: D (+2) F (+3) I (+3) L (Here the gap is + 2, +3, +3)\nOption (D) OQTX: O (+2) Q (+3) T (+4) X\n\nAll the given options follow the same logic (+2, +3, +4) except DFIL.\n\nHence, DFIL is the odd one out.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Letter Classification",
+        "conceptTested": "Identification of alphabetical position difference patterns between consecutive letters to find the odd option.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Letter Classification",
+          "conceptTested": "Identification of alphabetical position difference patterns between consecutive letters to find the odd option.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_845122ce8f",
+        "q_num": 93,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:44",
+        "avgTime": "00:29",
+        "question": "Which of the following numbers will replace the question mark (?) in the given series?\n27, ?, 101, 138, 175, 212, 249",
+        "options": {
+          "a": "64",
+          "b": "59",
+          "c": "66",
+          "d": "72"
+        },
+        "answer": "a",
+        "solution": "The logic followed in the series is a constant difference of + 37 between consecutive terms: 249 - 212 = 37\n\n212 - 175 = 37\n175 - 138 = 37\n138 - 101 = 37\nTherefore, 101 - 37 = 64\nAnd 64 - 37 = 27\nHence, the correct answer is \"64\".",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Identification of arithmetic progression or difference patterns in a numerical sequence.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Identification of arithmetic progression or difference patterns in a numerical sequence.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_c3a8846750",
+        "q_num": 94,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:34",
+        "avgTime": "00:36",
+        "question": "In a certain code language, 'STADIUM' is coded as 'TSADIMU'. What is the code for the word 'CRICKET' in that language?",
+        "options": {
+          "a": "RCICKET",
+          "b": "RCICKTE",
+          "c": "RCIKCTE",
+          "d": "RCIKCET"
+        },
+        "answer": "b",
+        "solution": "The logic followed here is that letters of the word are split and reversed in pairs or blocks: 'STADIUM' -> ST (TS), AD (AD), IU (IMU altered)\n\nMore precisely: S - T $\\rightarrow$ T - S, A - D $\\rightarrow$ A - D, I - U $\\rightarrow$ I - U with 'M' remaining fixed or middle letters swapped in pairs.\nLet's check letter position swapping for 'CRICKET': C - R $\\rightarrow$ R - CI - C $\\rightarrow$ C - I\n\nK - E $\\rightarrow$ E - K\n\nT remains T $\\rightarrow$ RCICKTE.\n\nHence, the correct answer is \"RCICKTE\".",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Pattern Coding & Decoding",
+        "conceptTested": "Reversing segments or specific blocks of letters in a given word to establish a substitution pattern.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Pattern Coding & Decoding",
+          "conceptTested": "Reversing segments or specific blocks of letters in a given word to establish a substitution pattern.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_f1c12504aa",
+        "q_num": 95,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:38",
+        "avgTime": "00:18",
+        "question": "In the following question, there is a certain relationship between the first two terms. Choose the fourth term from the following options which has a similar kind of relationship with the third term.\n\n$LOM : NQM :: PSQ : ?$",
+        "options": {
+          "a": "RIH",
+          "b": "SHA",
+          "c": "RUQ",
+          "d": "RHG"
+        },
+        "answer": "c",
+        "solution": "The pattern followed here in $LOM : NQM$: - L (+2) = N - O (+2) = Q - M (+0) = M (or specific shift pattern)\nSimilarly applying the logic to $PSQ$: - P (+2) = R - S (+2) = U - Q (+0) = Q\nHence, the code for the word PSQ is RUQ.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Positional alphabet coding pattern matching and forward/backward letter shifts.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Positional alphabet coding pattern matching and forward/backward letter shifts.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_d806adbca1",
+        "q_num": 96,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:36",
+        "avgTime": "01:09",
+        "question": "$P \\times Q$ means P is the brother of Q; $P \\div Q$ means Q is the mother of P; $P + Q$ means P is the father of Q; $P - Q$ means Q is the sister of P. In $G + R \\div S - H \\div J$, how is H related to R?",
+        "options": {
+          "a": "Maternal aunt",
+          "b": "Maternal grandmother",
+          "c": "Nephew",
+          "d": "Cannot be determined"
+        },
+        "answer": "a",
+        "solution": "According to the given expression: - $G + R$ $\\rightarrow$ G is the father of R - $R \\div S$ $\\rightarrow$ S is the mother of R - $S - H$ $\\rightarrow$ H is the sister of S - $H \\div J$ $\\rightarrow$ J is the mother of H\n\nTracing the family tree, S is the mother of R and H is the sister of S. Therefore, H is the maternal aunt of R.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Coded Blood Relations",
+        "conceptTested": "Decoding relational symbols and constructing a family tree to determine generation gaps and relations.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Coded Blood Relations",
+          "conceptTested": "Decoding relational symbols and constructing a family tree to determine generation gaps and relations.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_8076643046",
+        "q_num": 97,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "02:54",
+        "avgTime": "00:52",
+        "question": "If 18 @ 27 # 2 = 72 and 14 # 3 @ 17 = 59, then 16 @ 24 # 3 = ?",
+        "options": {
+          "a": "86",
+          "b": "84",
+          "c": "88",
+          "d": "83"
+        },
+        "answer": "c",
+        "solution": "Here, @ = + # = \\ ×\n\nGiven:\n18 @ 27 # 2 = 72\nPutting the value of @ and # = 18 + 27 \\ × 2 = 18 + 54 = 72\n\nAnd\n\n14 # 3 @ 17 = 59\nPutting the value of @ and # = 14 \\ × 3 + 17 = 42 + 17 = 59\nSimilarly, 16 @ 24 # 3 = ?\nPutting the value of @ and # = 16 + 24 \\ × 3 = 16 + 72 = 88\nHence, '88' is the correct answer.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs & Numbers",
+        "conceptTested": "Substitution of given symbols with arithmetic operators to evaluate expressions using BODMAS.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs & Numbers",
+          "conceptTested": "Substitution of given symbols with arithmetic operators to evaluate expressions using BODMAS.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -4075,6 +4267,70 @@
           "topic": "Seating Arrangement",
           "subtopic": "Linear Seating Arrangement",
           "conceptTested": "Deduction of relative positions based on conditional ordering constraints.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_f03297709c",
+        "q_num": 39,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:53",
+        "avgTime": "00:59",
+        "question": "Nirav's house is $40\\text{ m}$ south of Akash's house. Daksh's house is to the east of Akash's house in a straight line at a distance of $X\\text{ m}$. Prakash's house is to the west of Akash's house in a straight line at a distance of $Y\\text{ m}$. If the shortest distance between Prakash's house and Nirav's house is $50\\text{ m}$ and the shortest distance between Daksh's house and Nirav's house is also $50\\text{ m}$, then what is the distance between Prakash's house and Daksh's house?",
+        "options": {
+          "a": "40 m",
+          "b": "30 m",
+          "c": "60 m",
+          "d": "80 m"
+        },
+        "answer": "c",
+        "solution": "Let Akash's house be at the origin $(0, 40)$. Nirav's house is at $(0, 0)$.\n\nDaksh's house is at $(X, 40)$ and Prakash's house is at $(-Y, 40)$.\n\nIn right - angled triangle formed by Prakash's house, Akash's house, and Nirav's house: $Y^2 + (40)^2 = (50)^2$\n\n$Y^2 = 2500 - 1600 = 900$\n\n$Y = \\sqrt{900} = 30\\text{ m}$\n\nSimilarly, in right - angled triangle formed by Daksh's house, Akash's house, and Nirav's house: $X^2 + (40)^2 = (50)^2$\n\n$X^2 = 2500 - 1600 = 900$\n\n$X = \\sqrt{900} = 30\\text{ m}$\n\nThe distance between Prakash's house and Daksh's house = $X + Y = 30\\text{ m} + 30\\text{ m} = 60\\text{ m}$.\nHence, the correct answer is \"60 m\".",
+        "image": null,
+        "topic": "Direction & Distance",
+        "subtopic": "Shortest Distance (Pythagoras)",
+        "conceptTested": "Pythagoras theorem ($a^2 + b^2 = c^2$) applied to right-angled triangles in cardinal direction planes.",
+        "tags": {
+          "topic": "Direction & Distance",
+          "subtopic": "Shortest Distance (Pythagoras)",
+          "conceptTested": "Pythagoras theorem ($a^2 + b^2 = c^2$) applied to right-angled triangles in cardinal direction planes.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d72de6a14d",
+        "q_num": 40,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "02:09",
+        "avgTime": "01:07",
+        "question": "If $\\times$ means 'subtraction', $+$ means 'division', $-$ means 'addition', and $\\div$ means 'multiplication', what will be the value of the following expression?\n$$30 + [\\{(12 - 13) \\times (5 \\div 2)\\} + (18 \\times 13)]$$",
+        "options": {
+          "a": "15",
+          "b": "10",
+          "c": "6",
+          "d": "3"
+        },
+        "answer": "b",
+        "solution": "Decoding the information: - means Addition (+)\n\n$\\times$ means Subtraction (-)\n\n$\\div$ means Multiplication ($\\times$) + means Division ($\\div$)\n\nGiven expression: $$30 + [\\{(12 - 13) \\times (5 \\div 2)\\} + (18 \\times 13)]$$\n\nAfter replacing the signs from left to right and using the BODMAS rule: $$30 \\div [\\{(12 + 13) - (5 \\times 2)\\} \\div (18 - 13)]$$\n\n$$= 30 \\div \\{(25 - 10) \\div 5\\}$$\n\n$$= 30 \\div (15 \\div 5)$$\n\n$$= 30 \\div 3$$\n\n$$= 10$$\n\nHence, 10 is the correct answer.",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs",
+        "conceptTested": "BODMAS rule for evaluating arithmetic expressions after substituting mathematical operators.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs",
+          "conceptTested": "BODMAS rule for evaluating arithmetic expressions after substituting mathematical operators.",
           "difficulty": "medium"
         }
       }
@@ -6880,6 +7136,230 @@
           "topic": "Letter & Symbol Series",
           "subtopic": "Alphanumeric Series",
           "conceptTested": "Identification of specific alphanumeric combination patterns within a mixed sequence.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_578ca607bd",
+        "q_num": 90,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "01:00",
+        "avgTime": "00:38",
+        "question": "Consider the given statement and decide which of the given assumptions is/are implicit in the statement.\nStatement: Inculcate 'Help ever-Hurt never' in school going children at an early age.\nAssumptions:\nI. Any pain or wrong inflicted on another is but an affliction to oneself.\nII. Good habits should be inculcated from childhood to grow up and become better people.",
+        "options": {
+          "a": "Only assumption I is implicit",
+          "b": "Both assumptions I and II are implicit",
+          "c": "Only assumption II is implicit",
+          "d": "Either assumption I or II is implicit"
+        },
+        "answer": "b",
+        "solution": "Statement: Inculcate 'Help ever - Hurt never' in school going children at an early age.\n\nAssumption I implies that hurting others ultimately affects one's own self and wellbeing, which justifies the 'Hurt never' principle. Thus, it is implicit.\n\nAssumption II implies that early childhood teaching shapes individuals into better, more considerate citizens later in life, which is the underlying rationale for targeting school - going children at an early age. Thus, it is also implicit.\n\nTherefore, both assumptions I and II are implicit.",
+        "image": null,
+        "topic": "Statement & Assumption",
+        "subtopic": "Statement & Assumptions",
+        "conceptTested": "Evaluating underlying beliefs, intents, or unstated premises behind a given recommendation or directive statement.",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "subtopic": "Statement & Assumptions",
+          "conceptTested": "Evaluating underlying beliefs, intents, or unstated premises behind a given recommendation or directive statement.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_98c57ffd8e",
+        "q_num": 91,
+        "mockId": "mock_1791386683184_iggko",
+        "testId": "mock_1791386683184_iggko",
+        "testName": "SSC CGL Tier I: Full Test - 14",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "01:16",
+        "avgTime": "01:53",
+        "question": "Seven people J, K, L, M, N, O and P are living in a building having seven floors but not necessarily in the same order such that the bottommost floor is numbered 1 and the topmost floor is numbered 7. K lives on the fifth floor. There is one floor between K and P. M lives three floors above O and lives on a perfect square numbered floor. L lives immediately below N. The number of persons living between J and N is double the number of persons living between J and K. How many persons live between J and L?",
+        "options": {
+          "a": "Zero",
+          "b": "Two",
+          "c": "More than two",
+          "d": "One"
+        },
+        "answer": "c",
+        "solution": "Given:\nSeven people - J, K, L, M, N, O and P are living in a building having seven floors. Bottommost floor is numbered 1 to the topmost floor numbered 7.\n\nExplanation: 1) K lives on the fifth floor. There is one floor between K and P.\n2) M lives three floors above O and lives on a perfect square numbered floor (Floor 4).\n3) L lives immediately below N.\n4) The number of persons living between J and N is double the number of persons living between J and K.\nArrangement from top to bottom: Floor 7: N\nFloor 6: L\nFloor 5: K\nFloor 4: M\nFloor 3: P\nFloor 2: J\nFloor 1: O\n\nThus, the number of persons between J and L is three (N, K, M, P - wait, between J and L on floors 2 and 6 are floors 3, 4, 5 which is three persons: P, M, K). Hence, 'More than two' is the correct answer.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Square & Rectangular Seating",
+        "conceptTested": "Deduction of linear positions based on floor/building living constraints and mathematical clues.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Square & Rectangular Seating",
+          "conceptTested": "Deduction of linear positions based on floor/building living constraints and mathematical clues.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_6cf8475a00",
+        "q_num": 92,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:18",
+        "avgTime": "00:36",
+        "question": "Directions: Given below is a statement followed by two assumptions numbered 1 and 2. You have to consider the statement and the following assumptions and decide which of the assumptions is implicit in the statement.\n\nStatement: One can customize Dell laptop if they want as per their needs.\n\nAssumptions:\n1. They want to increase their customer base throughout the world.\n2. They want to prove they are the best company for laptops.",
+        "options": {
+          "a": "Only assumption 1 is implicit.",
+          "b": "Only assumption 2 is implicit.",
+          "c": "Either 1 or 2 is implicit.",
+          "d": "Both 1 and 2 are implicit."
+        },
+        "answer": "a",
+        "solution": "Statement: One can customize Dell laptop if they want as per their needs.\nAssumptions: I. They want to increase their customer base throughout the world - True (Because offering laptop customization is a customer - oriented feature introduced to attract and retain more customers, expanding the company's customer base).\n\nII. They want to prove they are the best company for laptops - False (Because the statement only informs customers about the availability of customization and does not require the assumption that Dell is trying to establish itself as the best laptop company).\n\nThus, only Assumption I is implicit.",
+        "image": null,
+        "topic": "Statement & Assumption",
+        "subtopic": "Policy & Public Notice Assumptions",
+        "conceptTested": "Evaluating implicit assumptions behind commercial decisions and customer-oriented features.",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "subtopic": "Policy & Public Notice Assumptions",
+          "conceptTested": "Evaluating implicit assumptions behind commercial decisions and customer-oriented features.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_6d6e23470c",
+        "q_num": 93,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:11",
+        "avgTime": "00:16",
+        "question": "Find the odd word from the given alternatives.",
+        "options": {
+          "a": "Keyboard",
+          "b": "Joystick",
+          "c": "Scanner",
+          "d": "Printer"
+        },
+        "answer": "d",
+        "solution": "Except Printer, all other options (Keyboard, Joystick, Scanner) are examples of input devices of a computer. Printer is an output device of a computer.\n\nHence, Printer is the odd one out.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Word & Semantic Classification",
+        "conceptTested": "Categorization of computer hardware peripherals into input and output devices.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Word & Semantic Classification",
+          "conceptTested": "Categorization of computer hardware peripherals into input and output devices.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_4c57d91929",
+        "q_num": 94,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:07",
+        "avgTime": "00:19",
+        "question": "Select the option that is related to the third term in the same way as the second term is related to the first term.\n\n$Boxing : Round :: Badminton : ?$?",
+        "options": {
+          "a": "Match",
+          "b": "Point",
+          "c": "Tournament",
+          "d": "Game"
+        },
+        "answer": "d",
+        "solution": "As in boxing, a match is divided into a number of rounds played. Similarly, in badminton, a match consists of a number of games played. Therefore, 'Game' is the corresponding term used in badminton.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Semantic & Word Analogy",
+        "conceptTested": "Relating a sport to its fundamental unit of division or terminology.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Semantic & Word Analogy",
+          "conceptTested": "Relating a sport to its fundamental unit of division or terminology.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_bf8c74914f",
+        "q_num": 95,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:48",
+        "avgTime": "00:45",
+        "question": "A is 5 ranks ahead of B in a class of 46 students. If B's rank is twelfth from the last, what is A's rank from the start?",
+        "options": {
+          "a": "28",
+          "b": "29",
+          "c": "30",
+          "d": "31"
+        },
+        "answer": "c",
+        "solution": "The pattern followed here is: 1) A is 5 ranks ahead of B in a class of 46 students.\n2) B's rank is twelfth from the last.\nTotal students in a row = 46 - A's position from the last end + 1. = 46 - 17 + 1 = 29 + 1\n\nSo, A's position from the front end is 30.\n\nHence, the correct answer is '30'.",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Order & Ranking Calculations",
+        "conceptTested": "Finding a person's position from the start using total strength and position from the end.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Order & Ranking Calculations",
+          "conceptTested": "Finding a person's position from the start using total strength and position from the end.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_d253b48e39",
+        "q_num": 96,
+        "mockId": "mock_1791390404633_a5upk",
+        "testId": "mock_1791390404633_a5upk",
+        "testName": "SSC CGL Tier I: Full Test - 16",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "01:34",
+        "avgTime": "01:06",
+        "question": "A is the brother-in-law of B. B is the daughter of M who is the wife of G. J is the father of N. N is the only son-in-law of G. B is the daughter-in-law of C who is grandparent of F. Then how is A related to F?",
+        "options": {
+          "a": "Paternal uncle",
+          "b": "Maternal uncle",
+          "c": "Brother",
+          "d": "Grandfather"
+        },
+        "answer": "a",
+        "solution": "According to given conditions, 1) B is the daughter of M who is the wife of G.\n\n2) N is the only son - in - law of G.\n3) J is the father of N.\n4) A is the brother - in - law of B.\n5) B is the daughter - in - law of C who is grandparent of F.\n\nAs the only married child till now is N, therefore F is either daughter or son of B and N.\n\nThus, according to the final family tree A is the paternal uncle of F.\n\nHence, 'Paternal uncle' is the correct answer.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Family Tree & Direct Relations",
+        "conceptTested": "Deduction of familial relationship through generations using a multi-person family tree.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Family Tree & Direct Relations",
+          "conceptTested": "Deduction of familial relationship through generations using a multi-person family tree.",
           "difficulty": "medium"
         }
       }

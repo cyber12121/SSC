@@ -77,18 +77,59 @@ export function cleanScrapedFractionPrefixes(text: string = ''): string {
   if (!text) return '';
   let s = text;
 
-  // 1. LaTeX \frac / \cfrac / \dfrac format: e.g. "$515 \frac{51}{5}$", "515 $\frac{51}{5}$", "515 \frac{51}{5}"
-  s = s.replace(/(?:(?<=[$])|\b)(\d+)\s*(\$?)\s*\\+(?:d?frac|cfrac)\{(\d+)\}\{(\d+)\}/g, (match, prefix, dollar, num, den) => {
-    if (prefix === num + den && (num.length > 1 || den.length > 1 || parseInt(num, 10) >= parseInt(den, 10))) {
-      return (dollar || '') + `\\frac{${num}}{${den}}`;
+  // 1. Mixed fraction with whole number inside LaTeX preceded by concatenated scraper fallback:
+  // e.g. "318% $3\frac{1}{8} %$" (318 === "3" + "1" + "8") -> "$3\frac{1}{8} %$"
+  // e.g. "111330 $11\frac{{13}}{{30}}$ litres" (111330 === "11" + "13" + "30") -> "$11\frac{13}{30}$ litres"
+  s = s.replace(/(?<![\$\\\w])(\d+)(%?)\s*\$\s*(\d+)\s*\\+(?:d?frac|cfrac)\{+(\d+)\}+\{+(\d+)\}+/g, (match, prefix, pct, whole, num, den) => {
+    if (prefix === whole + num + den) {
+      return `$${whole}\\frac{${num}}{${den}}`;
     }
     return match;
   });
 
-  // 2. Plain text slash format: e.g. "515 51/5" or "125 1/25"
-  s = s.replace(/(?:(?<=[$])|\b)(\d+)\s+(\d+)\s*\/\s*(\d+\b)/g, (match, prefix, num, den) => {
-    if (prefix === num + den && (num.length > 1 || den.length > 1 || parseInt(num, 10) >= parseInt(den, 10))) {
+  // 2. LaTeX fraction with dollar sign and scraper fallback prefix:
+  // e.g. "16 $\frac{1}{6}$", "13 $\frac{1}{3}$", "12 $\frac{1}{2}$", "14 $\frac{1}{4}$" -> "$\frac{1}{6}$", etc.
+  // e.g. "1625% $\frac{16}{25} %$" -> "$\frac{16}{25} %$"
+  // e.g. "712 $\frac{1}{2}$" -> "$7\frac{1}{2}$"
+  s = s.replace(/(?<![\$\\\w])(\d+)(%?)\s*\$\s*\\+(?:d?frac|cfrac)\{+(\d+)\}+\{+(\d+)\}+/g, (match, prefix, pct, num, den) => {
+    // Pure fraction fallback prefix: e.g. "16" for 1/6, "13" for 1/3, "1625" for 16/25
+    if (prefix === num + den) {
+      return `$\\frac{${num}}{${den}}`;
+    }
+    // Mixed fraction fallback prefix where whole number was prepended: e.g. "712" for 7 and 1/2
+    const concatSuffix = num + den;
+    if (prefix.length > concatSuffix.length && prefix.endsWith(concatSuffix)) {
+      const whole = prefix.slice(0, -concatSuffix.length);
+      return `$${whole}\\frac{${num}}{${den}}`;
+    }
+    return match;
+  });
+
+  // 3. LaTeX fraction outside dollar sign with explicit space separator between prefix and \frac:
+  // e.g. "16 \frac{1}{6}" -> "\frac{1}{6}"
+  // e.g. "515 \frac{51}{5}" -> "\frac{51}{5}"
+  // Note: We require (?<![\$\\\w]) so we NEVER touch genuine mixed fractions inside math like "$13\frac{1}{3}$" or "$2\frac{1}{2}$"!
+  s = s.replace(/(?<![\$\\\w])(\d+)(%?)\s+\\+(?:d?frac|cfrac)\{+(\d+)\}+\{+(\d+)\}+/g, (match, prefix, pct, num, den) => {
+    if (prefix === num + den) {
+      return `\\frac{${num}}{${den}}`;
+    }
+    const concatSuffix = num + den;
+    if (prefix.length > concatSuffix.length && prefix.endsWith(concatSuffix)) {
+      const whole = prefix.slice(0, -concatSuffix.length);
+      return `${whole}\\frac{${num}}{${den}}`;
+    }
+    return match;
+  });
+
+  // 4. Plain text slash format: e.g. "515 51/5", "16 1/6", "712 1/2"
+  s = s.replace(/(?<![\$\\\w])(\d+)\s+(\d+)\s*\/\s*(\d+\b)/g, (match, prefix, num, den) => {
+    if (prefix === num + den) {
       return `${num}/${den}`;
+    }
+    const concatSuffix = num + den;
+    if (prefix.length > concatSuffix.length && prefix.endsWith(concatSuffix)) {
+      const whole = prefix.slice(0, -concatSuffix.length);
+      return `${whole} ${num}/${den}`;
     }
     return match;
   });
@@ -145,12 +186,130 @@ export function parseFraction(str: string, startIndex: number): { fullMatch: str
 }
 
 /**
+ * Normalizes parenthesized math blocks where \left and \right delimiters contain inner $ signs
+ * or where coordinates/tuples of fractions are split across text and math tokens.
+ * e.g. "\left( 1, $\frac{\sqrt{3}}{2}$ \right)" -> "$\left( 1, \frac{\sqrt{3}}{2} \right)$"
+ * e.g. "\left( $\frac{2}{3}$, $\frac{1}{\sqrt{3}}$ \right)" -> "$\left( \frac{2}{3}, \frac{1}{\sqrt{3}} \right)$"
+ * e.g. "\left( 1, \frac{\sqrt{3}}{2} \right)" -> "$\left( 1, \frac{\sqrt{3}}{2} \right)$"
+ */
+export function normalizeParenthesizedMathBlocks(text: string = ''): string {
+  if (!text) return '';
+  let s = text;
+
+  // 1. Fix \left ... \right blocks that have internal $ signs
+  s = s.replace(/(\\left\s*([(\[{|])[\s\S]*?\\right\s*([)\]}|]))/g, (fullMatch) => {
+    if (fullMatch.includes('$')) {
+      const stripped = fullMatch.replace(/\$/g, '').trim();
+      return `$${stripped}$`;
+    }
+    return fullMatch;
+  });
+
+  // 2. Wrap completely unwrapped \left...\right expressions outside math blocks
+  // e.g. "\left( 1, \frac{\sqrt{3}}{2} \right)" -> "$\left( 1, \frac{\sqrt{3}}{2} \right)$"
+  s = s.replace(/(?<!\$)\\left\s*([(\[{|])[\s\S]*?\\right\s*([)\]}|])(?!\$)/g, (fullMatch) => {
+    return `$${fullMatch.trim()}$`;
+  });
+
+  // 3. Fix plain parentheses with inner math blocks: e.g. "( $\frac{2}{3}$, $\frac{1}{\sqrt{3}}$ )"
+  s = s.replace(/\(\s*(\$[^$\n]+\$(?:\s*,\s*\$[^$\n]+\$)+)\s*\)/g, (_, inner) => {
+    const stripped = inner.replace(/\$/g, '');
+    return `$\\left( ${stripped} \\right)$`;
+  });
+
+  return s;
+}
+
+/**
+ * Automatically balances unclosed single dollar signs on individual lines
+ * where a math expression was started with '$' but left open at the end of the line or before punctuation.
+ * e.g. "expression: $(2\sin 45° + 3\cos 45°) ÷ (\csc 45° + \sec 45°)"
+ *   -> "expression: $(2\sin 45° + 3\cos 45°) ÷ (\csc 45° + \sec 45°)$"
+ */
+export function balanceUnclosedDollarSigns(text: string = ''): string {
+  if (!text) return '';
+  const lines = text.split('\n');
+  const processed = lines.map((line) => {
+    const doubleMasked = line.replace(/\$\$[\s\S]*?\$\$/g, '___DISPLAY_MATH___');
+    const dollars = doubleMasked.match(/(?<!\\)\$/g);
+    if (!dollars || dollars.length % 2 === 0) {
+      return line;
+    }
+
+    const lastDollarIdx = line.lastIndexOf('$');
+    const afterDollar = line.slice(lastDollarIdx + 1);
+
+    // If afterDollar contains math operators, latex commands, trigonometry, or degrees:
+    if (/[\\+=\-×*÷√^°_]|\\(?:sin|cos|tan|cot|sec|csc|cosec|frac|sqrt|theta|pi)/.test(afterDollar)) {
+      const matchTrailingPunct = /([.?!\s]+)$/.exec(afterDollar);
+      if (matchTrailingPunct) {
+        const punct = matchTrailingPunct[1];
+        const content = afterDollar.slice(0, afterDollar.length - punct.length).trimEnd();
+        return line.slice(0, lastDollarIdx) + `$${content}$` + punct;
+      }
+      return line + '$';
+    }
+
+    return line;
+  });
+
+  return processed.join('\n');
+}
+
+/**
+ * Detects standalone lines containing LaTeX math equations without enclosing '$' delimiters
+ * and safely wraps them into '$...$' or '$$...$$'.
+ * e.g. "\Rightarrow [2(1/\sqrt{2}) + 3(1/\sqrt{2})] ÷ (\sqrt{2} + \sqrt{2}) = (5/\sqrt{2}) ÷ 2\sqrt{2} = 5/4."
+ *   -> "$\Rightarrow [2(1/\sqrt{2}) + 3(1/\sqrt{2})] ÷ (\sqrt{2} + \sqrt{2}) = (5/\sqrt{2}) ÷ 2\sqrt{2} = 5/4$."
+ * e.g. "4\sqrt{2}" -> "$4\sqrt{2}$"
+ */
+export function wrapStandaloneLatexEquations(text: string = ''): string {
+  if (!text) return '';
+  const lines = text.split('\n');
+  const processed = lines.map((line) => {
+    let l = line.trim();
+    if (!l) return line;
+
+    if (/^\$\$[\s\S]+\$\$$/.test(l) || /^\$[^\$]+\$$/.test(l)) {
+      return line;
+    }
+
+    const startsWithMathOp = /^\\(?:Rightarrow|Leftarrow|Leftrightarrow|rightarrow|leftarrow|to|therefore|because)\b|^[⇒→⇐⇔∴∵]/.test(l);
+    const hasLatexCommand = /\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|Delta|angle|sim|cong|left|right|pm|mp)\b/.test(l);
+    const hasMathEquality = /[=≈≠≤≥<>]/.test(l);
+
+    if (startsWithMathOp || (hasLatexCommand && (hasMathEquality || /^\s*4?\\sqrt/.test(l)))) {
+      const englishWords = l
+        .replace(/\\[a-zA-Z]+/g, '')
+        .replace(/[$_^{}]/g, '')
+        .match(/\b[a-zA-Z]{4,}\b/g) || [];
+
+      const isExplanation = englishWords.some(w =>
+        /^(where|substitute|substituting|putting|according|question|answer|hence|therefore|because|triangle|consider|suppose|assume|formula|theorem|correct)$/i.test(w)
+      );
+
+      if (!isExplanation && englishWords.length <= 2) {
+        const endsWithPeriod = /\.$/.test(l);
+        const formula = endsWithPeriod ? l.slice(0, -1).trim() : l;
+        if (!formula.startsWith('$') && !formula.endsWith('$')) {
+          return `$${formula}$` + (endsWithPeriod ? '.' : '');
+        }
+      }
+    }
+
+    return line;
+  });
+
+  return processed.join('\n');
+}
+
+/**
  * Finds all unwrapped \frac{...}{...} outside existing LaTeX math blocks ($$, $, \[, \()
  * and safely wraps them into $...$ (supporting mixed fractions like 9 \frac{1}{2} and percentages \frac{2}{3}%).
  */
 export function wrapUnwrappedFractions(rawText: string = ''): string {
   if (!rawText) return '';
-  let s = rawText;
+  let s = normalizeParenthesizedMathBlocks(rawText);
 
   // Normalize TeX \over into \frac or mixed fractions
   if (/\\*over/i.test(s)) {
@@ -679,12 +838,17 @@ export function sanitizeLatexForKatex(latex: string = ''): string {
     s = s.replace(/(?<!\\)&/g, '\\&');
   }
 
-  // 5d. Auto-close unbalanced \left delimiters to avoid syntax errors
+  // 5d. Auto-close unbalanced \left and \right delimiters to avoid syntax errors
   const leftMatches = (s.match(/\\left\b/g) || []).length;
   const rightMatches = (s.match(/\\right\b/g) || []).length;
   if (leftMatches > rightMatches) {
     s += ' \\right.'.repeat(leftMatches - rightMatches);
+  } else if (rightMatches > leftMatches) {
+    s = '\\left. '.repeat(rightMatches - leftMatches) + s;
   }
+  // Strip orphaned lone \right) or \left( with no counterpart if string is literally just the delimiter
+  s = s.replace(/^\\right\s*([)\]}|])$/, '$1');
+  s = s.replace(/^\\left\s*([(\[{|])$/, '$1');
 
   // If there was an accidental double escaping or spacing like 2\% \pi
   // or a swallowed command like 2\%\pi -> 2\pi (when % was an artifact)
@@ -868,10 +1032,10 @@ export function normalizeQuestionOptions(options: any): { a: string; b: string; 
   result.c = getVal('c', 'C', '3', 'opt3', 'option3', 'optionC', 'option 3', 'option c');
   result.d = getVal('d', 'D', '4', 'opt4', 'option4', 'optionD', 'option 4', 'option d');
 
-  // Automatically future-proof option text formatting (powers & comma spacing & fraction artifact cleaning)
+  // Automatically future-proof option text formatting (powers & comma spacing & fraction artifact cleaning & parenthesized math)
   for (const k of ['a', 'b', 'c', 'd'] as const) {
     if (result[k]) {
-      result[k] = cleanScrapedFractionPrefixes(normalizeListCommas(cleanAlgebraPowers(result[k])));
+      result[k] = normalizeParenthesizedMathBlocks(cleanScrapedFractionPrefixes(normalizeListCommas(cleanAlgebraPowers(result[k]))));
     }
   }
 

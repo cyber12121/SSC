@@ -1,5 +1,5 @@
 import { Question } from '../types';
-import { normalizeAnswerKey } from './mathSanitizer';
+import { normalizeAnswerKey, cleanScrapedFractionPrefixes } from './mathSanitizer';
 
 export type OptionKey = 'a' | 'b' | 'c' | 'd';
 
@@ -18,7 +18,10 @@ export const getNormalizedOptions = (q?: Question | null): NormalizedOption[] =>
   if (!q || !q.options) return [];
   const opts = q.options as Record<string, string>;
   return OPTION_KEYS.map(key => {
-    const text = opts[key] || opts[key.toUpperCase()] || '';
+    let text = opts[key] || opts[key.toUpperCase()] || '';
+    if (text) {
+      text = cleanScrapedFractionPrefixes(text);
+    }
     return { key, text };
   }).filter(o => Boolean(o.text));
 };
@@ -57,7 +60,9 @@ export const cleanQuestionForSession = (q: any, idx?: number): Question => {
   return {
     ...rest,
     q_num: idx !== undefined ? idx + 1 : (q.q_num || 1),
-    options: q.options || {},
+    options: q.options
+      ? Object.fromEntries(Object.entries(q.options).map(([k, v]) => [k, typeof v === 'string' ? cleanScrapedFractionPrefixes(v) : v]))
+      : {},
     answer: q.answer || (q as any).correct_answer || (q as any).correctOption || (q as any).correct_option || 'a',
     solution: q.solution || (q as any).explanation || (q as any).sol || (q as any).detailedSolution || ''
   };
