@@ -2678,6 +2678,198 @@
           "conceptTested": "Arithmetic relationship of square of the first number multiplied by a constant factor equals the second number ($x^2 \\times 3 = y$).",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_1c64a02bc9",
+        "q_num": 86,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:56",
+        "avgTime": "00:28",
+        "question": "If $3 @ 5 = 80$, $32 @ 9 = 410$, $10 @ 2 = 120$, then what is the value of $18 @ 32 = \\text{?}$",
+        "options": {
+          "a": "98",
+          "b": "42",
+          "c": "26",
+          "d": "500"
+        },
+        "answer": "d",
+        "solution": "The logic is to add the two numbers and multiply the sum by 10: - $3 @ 5 = (3 + 5) \\times 10 = 80$ - $32 @ 9 = (32 + 9) \\times 10 = 410$ - $10 @ 2 = (10 + 2) \\times 10 = 120$\n\nSimilarly, - $18 @ 32 = (18 + 32) \\times 10 = 50 \\times 10 = 500$",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Calculation Reasoning",
+        "conceptTested": "Identifying mathematical operations hidden behind symbolic operators like '@'",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Calculation Reasoning",
+          "conceptTested": "Identifying mathematical operations hidden behind symbolic operators like '@'",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_341d9b362d",
+        "q_num": 87,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:19",
+        "avgTime": "00:57",
+        "question": "Six people, A, B, C, K, X, and Z are standing in a single line. X is somewhere ahead of K. C and Z are standing adjacent to each other. A is immediately ahead of K. There is one person between A and B. If K and C are at the fourth and the fifth place respectively, then who is behind 'C' in the line?",
+        "options": {
+          "a": "Z",
+          "b": "X",
+          "c": "C",
+          "d": "B"
+        },
+        "answer": "a",
+        "solution": "According to the given information, K and C are at the 4th and 5th positions respectively. Since C and Z are standing adjacent to each other, and C is 5th, Z must be at the 6th position (behind C).",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Total Persons & Direct Ranking",
+        "conceptTested": "Determining relative linear positions of items from a fixed set of clues",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Total Persons & Direct Ranking",
+          "conceptTested": "Determining relative linear positions of items from a fixed set of clues",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_34757b1e01",
+        "q_num": 88,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:51",
+        "avgTime": "00:30",
+        "question": "Select the option that represents the letters that, when placed from left to right in the blanks, will complete the letter series: $\\_ \\text{P N I E X} \\_ \\text{N I E Y P N} \\_ \\text{E Z P} \\_ \\text{I} \\_",
+        "options": {
+          "a": "I E W P N",
+          "b": "N I E W P",
+          "c": "W P I N E",
+          "d": "E W P N I"
+        },
+        "answer": "c",
+        "solution": "Testing option C (W P I N E): - W P N I E - X P N I E - Y P N I E - Z P N I E\n\nThis forms a valid sequential pattern where the starting letter increments alphabetically (W, X, Y, Z) followed by the fixed cluster 'P N I E'.",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Continuous Pattern Letter Series",
+        "conceptTested": "Identifying repeating or progressive letter cluster patterns in blank-fill series",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Continuous Pattern Letter Series",
+          "conceptTested": "Identifying repeating or progressive letter cluster patterns in blank-fill series",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_3b1b79eb04",
+        "q_num": 89,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:27",
+        "avgTime": "00:57",
+        "question": "If M denotes \\(-\\), N denotes \\(\\div\\), O denotes \\(\\times\\) and P denotes \\(+\\), then what will come in place of \\(?\\) in the following equation \\((16 \\times 7) + 124 - 92 + (86 \\div 43) \\times 18 - 29 = ?\\)?",
+        "options": {
+          "a": "145",
+          "b": "151",
+          "c": "160",
+          "d": "148"
+        },
+        "answer": "b",
+        "solution": "From the given information, we substitute the values and solve the equation using BODMAS rule: \\((16 \\times 7) + 124 - 92 + (86 \\div 43) \\times 18 - 29 = ?\\)\n\n\\(112 + 124 - 92 + 2 \\times 18 - 29 = ?\\)\n\n\\(112 + 124 - 92 + 36 - 29 = ?\\)\n\n\\(272 - 92 - 29 = 151\\)",
+        "image": null,
+        "topic": "Mathematical Operations",
+        "subtopic": "Interchange of Signs",
+        "conceptTested": "BODMAS rule for arithmetic calculations involving substituted operators.",
+        "tags": {
+          "topic": "Mathematical Operations",
+          "subtopic": "Interchange of Signs",
+          "conceptTested": "BODMAS rule for arithmetic calculations involving substituted operators.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_a02cd2ac29",
+        "q_num": 90,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:43",
+        "avgTime": "00:25",
+        "question": "Read the following statements and answer the question.\n- \\(A \\text{ @ } B\\) means \\(A\\) is the husband of \\(B\\)\n- \\(A \\text{ # } B\\) means \\(A\\) is the wife of \\(B\\)\n- \\(A \\text{ \\$ } B\\) means \\(A\\) is the son of \\(B\\)\n- \\(A \\text{ \\% } B\\) means \\(A\\) is the daughter of \\(B\\)\nIn the equation \\(P \\text{ \\% } Q \\text{ @ } R \\text{ \\% } S\\), how is \\(S\\) related to \\(P\\), if \\(S\\) is a male?",
+        "options": {
+          "a": "Grandfather",
+          "b": "Father-in-law",
+          "c": "Granduncle",
+          "d": "Father"
+        },
+        "answer": "a",
+        "solution": "Drawing the family tree for \\(P \\text{ \\% } Q \\text{ @ } R \\text{ \\% } S\\): 1) \\(P \\text{ \\% } Q\\) \\(\\rightarrow\\) \\(P\\) is the daughter of \\(Q\\).\n2) \\(Q \\text{ @ } R\\) \\(\\rightarrow\\) \\(Q\\) is the husband of \\(R\\).\n3) \\(R \\text{ \\% } S\\) \\(\\rightarrow\\) \\(R\\) is the daughter of \\(S\\).\n\nSince \\(S\\) is a male, \\(S\\) is the father of \\(R\\) and father - in - law of \\(Q\\), making \\(S\\) the grandfather of \\(P\\).",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Coded Blood Relations",
+        "conceptTested": "Decoding symbol-based family tree relationships.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Coded Blood Relations",
+          "conceptTested": "Decoding symbol-based family tree relationships.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_ab72c92d3e",
+        "q_num": 91,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:04",
+        "avgTime": "00:41",
+        "question": "Find the next number in the series. \\(1225, 1150, 990, 745, 415, ?\\)",
+        "options": {
+          "a": "8",
+          "b": "0",
+          "c": "1",
+          "d": "9"
+        },
+        "answer": "b",
+        "solution": "Analyzing the differences between consecutive terms: \\(1225 - 75 = 1150\\)\n\n\\(1150 - 160 = 990\\)\n\n\\(990 - 245 = 745\\)\n\n\\(745 - 330 = 415\\)\n\nDifferences of differences: \\(160 - 75 = 85\\), \\(245 - 160 = 85\\), \\(330 - 245 = 85\\).\nNext difference of difference = \\(85\\).\nNext difference = \\(330 + 85 = 415\\).\nNext term = \\(415 - 415 = 0\\).",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Identification of complex difference patterns in numeric sequences.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Identification of complex difference patterns in numeric sequences.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -3787,6 +3979,102 @@
           "topic": "Alphabet Test",
           "subtopic": "Letter Pairs Problem",
           "conceptTested": "Counting forward and backward alphabetical distance pairs within a given word.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_5abd01abf1",
+        "q_num": 36,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "01:07",
+        "avgTime": "00:55",
+        "question": "In a code language, CARNIVAL is written as LPYAJYTG. How will DISTANCE be written as in that language?",
+        "options": {
+          "a": "RPGBCZLY",
+          "b": "RQGBDAMY",
+          "c": "RQGBCALY",
+          "d": "SQHBCALZ"
+        },
+        "answer": "c",
+        "solution": "The pattern followed involves a specific shift or reverse - mapping of letters. Applying the same letter - substitution logic to DISTANCE yields RQGBCALY.",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Pattern Coding & Decoding",
+        "conceptTested": "Positional shift coding pattern applied uniformly to alphabets in a word",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Pattern Coding & Decoding",
+          "conceptTested": "Positional shift coding pattern applied uniformly to alphabets in a word",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_267566f995",
+        "q_num": 37,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:03",
+        "avgTime": "01:45",
+        "question": "J, K, L, M, N and O are six teachers. Each one teaches a different subject out of Hindi, English, Math, Science, Social Science and Arts, not necessarily in the same order. Each of them teaches on only one day, from Monday to Saturday not necessarily in the same order. J teaches Science on Wednesday. O teaches Math second after J. K teaches on the first day of the week, but teaches neither Hindi nor English. M teaches English before N and L teaches Arts before J. Which subject is taught on Saturday?",
+        "options": {
+          "a": "Hindi",
+          "b": "English",
+          "c": "Social Science",
+          "d": "Science"
+        },
+        "answer": "a",
+        "solution": "By placing the teachers and subjects according to the given conditions day by day from Monday to Saturday: - Monday: K (Social Science) - Tuesday: L (Arts) - Wednesday: J (Science) - Thursday: M (English) - Friday: O (Maths) - Saturday: N (Hindi)\n\nThus, Hindi is taught on Saturday.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of positions in a linear sequence using relative constraints and clues",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of positions in a linear sequence using relative constraints and clues",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_05613d705c",
+        "q_num": 38,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:16",
+        "avgTime": "00:29",
+        "question": "On five floors, one above the other live five doctors. The Endocrinologist is equally friendly to all and lives on the third floor. The Nephrologist has to go up to meet his Neurologist friend above whose floor lives the Dermatologist. The Nephrologist has to go up as many floors up to meet Dermatologist as many floors Neurologist has to go down to meet Ophthalmologist. Which of the following statements is true?",
+        "options": {
+          "a": "Ophthalmologist live on a floor above Nephrologist.",
+          "b": "Nephrologist live on the top floor.",
+          "c": "Endocrinologist live on a floor above Ophthalmologist.",
+          "d": "Dermatologist live on a floor below Neurologist."
+        },
+        "answer": "c",
+        "solution": "Based on the given conditions: 1) Endocrinologist lives on the 3rd floor.\n2) Dermatologist > Neurologist > Nephrologist.\n3) Floor distribution: 5th floor: Dermatologist, 4th floor: Neurologist, 3rd floor: Endocrinologist, 2nd floor: Nephrologist, 1st floor: Ophthalmologist.\nTherefore, Endocrinologist lives on a floor above Ophthalmologist is true.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Deduction of relative positions based on conditional ordering constraints.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Deduction of relative positions based on conditional ordering constraints.",
           "difficulty": "medium"
         }
       }
@@ -6560,6 +6848,38 @@
           "topic": "Number Series",
           "subtopic": "Missing Number Series",
           "conceptTested": "Identification of a prime number sequence addition pattern in a number series.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_6408bc95aa",
+        "q_num": 89,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:41",
+        "avgTime": "00:38",
+        "question": "Refer to the following letter, number, symbol series and answer the question.\n(Left) \\(B \\; F \\; \\% \\; 6 \\; J \\; Q \\; 6 \\; H \\; \\& \\; K \\; M \\; 8 \\; 1 \\; 5 \\; T \\; Z \\; \\# \\; @ \\; K \\; L \\; 9\\) (Right)\nHow many such letters are there which are immediately preceded by a letter and also immediately followed by a number?",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "Pattern required: Letter followed by Letter followed by Number (Letter - Letter - Number).\nScanning the sequence: Three such letters satisfy the given condition.\nHence, '3' is the correct answer.",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Alphanumeric Series",
+        "conceptTested": "Identification of specific alphanumeric combination patterns within a mixed sequence.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Alphanumeric Series",
+          "conceptTested": "Identification of specific alphanumeric combination patterns within a mixed sequence.",
           "difficulty": "medium"
         }
       }

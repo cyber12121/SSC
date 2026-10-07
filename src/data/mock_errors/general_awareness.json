@@ -4593,6 +4593,70 @@
           "conceptTested": "Geographical course and basin identification of major international river systems like the Nile.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_43846c3ab9",
+        "q_num": 147,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:07",
+        "avgTime": "00:17",
+        "question": "Which wetland has been declared Chhattisgarh's first Ramsar Site, marking a major environmental milestone for the state?",
+        "options": {
+          "a": "Hasdeo Bango Reservoir",
+          "b": "Gangrel Reservoir",
+          "c": "Kopra Reservoir",
+          "d": "Minimata Bango Reservoir"
+        },
+        "answer": "c",
+        "solution": "Kopra Reservoir in the Bilaspur district has been declared Chhattisgarh's first Ramsar Site under the Ramsar Convention on Wetlands, recognizing its hydrological and ecological importance.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "Ramsar Sites",
+        "conceptTested": "Identification of newly declared Ramsar wetland sites in India and their ecological significance.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Ramsar Sites",
+          "conceptTested": "Identification of newly declared Ramsar wetland sites in India and their ecological significance.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_0c1d6a3a48",
+        "q_num": 148,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:04",
+        "avgTime": "00:23",
+        "question": "Which of the following statements is correct about Dhamek Stupa? I. It is one of the most prominent Buddhist structures in India. II. The Dhamek Stupa was built in 500 CE to replace an earlier structure commissioned by Mauryan king Ashoka in 249 BCE.",
+        "options": {
+          "a": "Both I and II",
+          "b": "Only II",
+          "c": "Neither I nor II",
+          "d": "Only I"
+        },
+        "answer": "a",
+        "solution": "Both statements are correct. The Dhamek Stupa in Sarnath is a prominent Buddhist structure marking where Lord Buddha delivered his first sermon, constructed in 500 CE over an earlier structure commissioned by Emperor Ashoka.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Ancient History (Harappa to Gupta)",
+        "conceptTested": "Key Buddhist archaeological sites, monuments, and their historical evolution under the Mauryas and subsequent dynasties.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Ancient History (Harappa to Gupta)",
+          "conceptTested": "Key Buddhist archaeological sites, monuments, and their historical evolution under the Mauryas and subsequent dynasties.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -11616,6 +11680,294 @@
           "topic": "Fiscal Policy & Budget",
           "subtopic": "Union Budget",
           "conceptTested": "Union budget fiscal deficit target as a percentage of GDP for financial planning.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ca8e596cb5",
+        "q_num": 224,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:16",
+        "avgTime": "00:18",
+        "question": "A person with weak muscles and very little energy, has a deficiency of Vitamin B1 is suffering from which of the following diseases?",
+        "options": {
+          "a": "Scurvy",
+          "b": "Rickets",
+          "c": "Night blindness",
+          "d": "Beriberi"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Beriberi.\n\nBeriberi: It is a disorder that can occur when a person lacks thiamine or vitamin B - 1.\n\nThe deficiency in this nutrient can lead to lasting damage to the nervous system and heart.\n\nVitamins | Chemical name | Deficiency Disease\n\nVitamin A | Retinol | Night/Color Blindness\n\nVitamin B1 | Thymine | Beriberi\n\nVitamin B³ | Niacin | Whitening of skin, mentally retardedness\n\nVitamin B5 | Pantothenic | Cracking of skin\n\nVitamin B6 | Pyridoxine | Anaemia, skin disease\n\nVitamin B7 | Biotin | Paralysis, Body pain, hair falling\n\nVitamin B9/B11 | Folic Acid | Anaemia, dysentery\n\nVitamin B12 | Cyanocobalamin | Jaundice, Anemia\n\nVitamin C | Ascorbic Acid | Scurvy, Swelling of Gum\n\nVitamin D | Calciferol | Rickets\n\nVitamin E | Tocopherol | Less fertility\n\nVitamin K | Phylloquinone | Non - Clotting of blood",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "Human Body, Diseases & Vitamins",
+        "conceptTested": "Deficiency of Vitamin B1 (Thiamine) leads to Beriberi.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Human Body, Diseases & Vitamins",
+          "conceptTested": "Deficiency of Vitamin B1 (Thiamine) leads to Beriberi.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_eace71ed96",
+        "q_num": 225,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:14",
+        "avgTime": "02:17",
+        "question": "Match the following:\n1. Chola\n2. Chera\n3. Pandya\n\nEmblem:\nA. Fish\n5. Tiger\nC. Bow and arrow",
+        "options": {
+          "a": "1(B), 2(C), 3(A)",
+          "b": "1(B), 2(A), 3(C)",
+          "c": "1(C), 2(A), 3(B)",
+          "d": "1(C), 2(B), 3(A)"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 1(B), 2(C), 3(A).\n\nKey Points: - Cholas: Emblem - Tiger. They ruled the central and northern parts of Tamil Nadu with capital at Uraiyur. - Cheras: Emblem - Bow and arrow. They controlled central and northern parts of Kerala and Kongu region with capital at Vanji. - Pandyas: Emblem - Fish. They ruled from Madurai with Korkai as their main port.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Identification of royal emblems of ancient South Indian kingdoms (Chola, Chera, Pandya).",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Identification of royal emblems of ancient South Indian kingdoms (Chola, Chera, Pandya).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_579364c340",
+        "q_num": 226,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:07",
+        "avgTime": "00:16",
+        "question": "Abdul Karim Khan and Abdul Wahid Khan were the founders of the ______ gharana.",
+        "options": {
+          "a": "Jaipur - Atrauli",
+          "b": "Gwalior",
+          "c": "Agra",
+          "d": "Kirana"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Kirana.\n\nKey Points: Kirana Gharana is one of Hindustan's most prolific Khayal Gharanas. The name stems from Kirana or Kairana in Uttar Pradesh's Shamli region, hometown of stalwarts like Ustad Abdul Karim Khan and Ustad Abdul Waheed Khan who founded this Gharana. The Kirana style is primarily concerned with Swara, or individual notes, specifically precision tuning and note expression.",
+        "image": null,
+        "topic": "Music & Musical Instruments",
+        "subtopic": "Musical Instruments & Gharanas",
+        "conceptTested": "Founders and origin of classical music Gharanas such as Kirana Gharana.",
+        "tags": {
+          "topic": "Music & Musical Instruments",
+          "subtopic": "Musical Instruments & Gharanas",
+          "conceptTested": "Founders and origin of classical music Gharanas such as Kirana Gharana.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b825bac325",
+        "q_num": 227,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:17",
+        "question": "The feature of 'Joint Sitting of two houses of Parliament' in the Indian Constitution is borrowed from the constitution of ____________.",
+        "options": {
+          "a": "Canada",
+          "b": "United States of America",
+          "c": "Australia",
+          "d": "France"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Australia.\n\nKey Points: The joint sitting of the two Houses of Parliament in the Indian Constitution is borrowed from the Constitution of Australia (Article 108). Australia also contributed the concept of the Concurrent list and Freedom of trade and commerce.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Parliament & State Legislatures",
+        "conceptTested": "Borrowing of features from foreign constitutions, specifically the Joint Sitting of Parliament from Australia.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Parliament & State Legislatures",
+          "conceptTested": "Borrowing of features from foreign constitutions, specifically the Joint Sitting of Parliament from Australia.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d6641a5ff6",
+        "q_num": 228,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:21",
+        "question": "_________ is an assessment of economic production in an economy that includes current prices in its calculation.",
+        "options": {
+          "a": "Ordinal GDP",
+          "b": "Interval GDP",
+          "c": "Nominal GDP",
+          "d": "Real GDP"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Nominal GDP.\n\nKey Points: Nominal GDP is an assessment of economic production in an economy but includes the current prices of goods and services in its calculation without adjusting for inflation. Contrast this with real GDP, which measures a country's economic output adjusted for the impact of inflation.",
+        "image": null,
+        "topic": "Macroeconomics & National Income",
+        "subtopic": "National Income & Five Year Plans",
+        "conceptTested": "Definition and calculation of Nominal GDP using current prices.",
+        "tags": {
+          "topic": "Macroeconomics & National Income",
+          "subtopic": "National Income & Five Year Plans",
+          "conceptTested": "Definition and calculation of Nominal GDP using current prices.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c8cfb17bb4",
+        "q_num": 229,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:09",
+        "avgTime": "00:18",
+        "question": "Who among the following established the association known as Adi Brahmo Samaj?",
+        "options": {
+          "a": "Raja Ram Mohan Roy",
+          "b": "Atmaram Pandurang",
+          "c": "Keshab Chandra Sen",
+          "d": "Debendranath Tagore"
+        },
+        "answer": "d",
+        "solution": "Adi Brahmo Samaj was founded by Devendranath Tagore in 1866 following the split of the Brahmo Samaj, whereas the 'Bharatiya Brahmo Samaj' was established under Keshav Chandra Sen. The original Brahmo Samaj was founded by Raja Ram Mohan Roy in 1828.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Origins and founders of nineteenth-century socio-religious reform associations such as Adi Brahmo Samaj.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Origins and founders of nineteenth-century socio-religious reform associations such as Adi Brahmo Samaj.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_18f4bb4afb",
+        "q_num": 230,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:09",
+        "avgTime": "00:15",
+        "question": "The magnificent temple at Gangaikonda Cholapuram was commissioned by which Chola ruler?",
+        "options": {
+          "a": "Rajaraja Chola I",
+          "b": "Rajendra Chola I",
+          "c": "Rajadhiraja Chola I",
+          "d": "Kulothunga Chola I"
+        },
+        "answer": "b",
+        "solution": "The magnificent temple at Gangaikonda Cholapuram was commissioned by Rajendra Chola I to commemorate his victories in Northern India and his successful campaign bringing the waters of the Ganges to his kingdom.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Art, Architecture & Inscriptions",
+        "conceptTested": "Architectural achievements, temples, and military campaigns of Chola rulers like Rajendra Chola I.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Art, Architecture & Inscriptions",
+          "conceptTested": "Architectural achievements, temples, and military campaigns of Chola rulers like Rajendra Chola I.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8076eb94b4",
+        "q_num": 231,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:16",
+        "question": "Which state secured the first position nationally in organ donations, according to official data?",
+        "options": {
+          "a": "Tamil Nadu",
+          "b": "Karnataka",
+          "c": "Telangana",
+          "d": "Maharashtra"
+        },
+        "answer": "a",
+        "solution": "Tamil Nadu topped the national organ donation chart, reporting the highest number of organ donations and maintaining a strong organ transplant framework.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Reports, Indices & Rankings",
+        "conceptTested": "Current statistics and rankings of Indian states in healthcare achievements such as organ donations.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Reports, Indices & Rankings",
+          "conceptTested": "Current statistics and rankings of Indian states in healthcare achievements such as organ donations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b6801fa01c",
+        "q_num": 232,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:57",
+        "question": "As per the Census of India 2011, which of the following Union Territories recorded the lowest population growth rate?",
+        "options": {
+          "a": "Puducherry",
+          "b": "Lakshadweep",
+          "c": "Andaman and Nicobar Islands",
+          "d": "Chandigarh"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Lakshadweep.\n\nKey Points\nAs per the Census of India 2011, Lakshadweep recorded the lowest population growth rate among all Union Territories (UTs).\n\nThe population growth rate of Lakshadweep was 6.23%, significantly lower than other Union Territories.\n\nLakshadweep is the smallest Union Territory of India in terms of population, with a total population of 64, 429 as per the 2011 Census.\n\nThe low growth rate is attributed to factors such as geographical isolation, limited migration, and stable demographic trends.\n\nLakshadweep comprises a group of islands in the Arabian Sea, and its population density is 2, 013 per square kilometer.",
+        "image": null,
+        "topic": "Census & Demographics",
+        "subtopic": "2011 Census Data",
+        "conceptTested": "Census of India 2011 demographic indicators for Union Territories including population growth rates and total population figures.",
+        "tags": {
+          "topic": "Census & Demographics",
+          "subtopic": "2011 Census Data",
+          "conceptTested": "Census of India 2011 demographic indicators for Union Territories including population growth rates and total population figures.",
           "difficulty": "medium"
         }
       }

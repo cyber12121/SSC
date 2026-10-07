@@ -6621,6 +6621,422 @@
           "conceptTested": "Difference in simple interest for a given principal and time is directly proportional to the difference in their rates: $\\Delta SI = \\frac{P \\times T \\times \\Delta R}{100}$.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_3ac9df7d95",
+        "q_num": 210,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:22",
+        "avgTime": "00:55",
+        "question": "The value of $\\frac{6.25+\\frac{6}{7}\\:of\\:21-3}{\\frac{3}{4}\\:of(15.8-3.4)+5\\times2.39}$ is:",
+        "options": {
+          "a": "0",
+          "b": "1",
+          "c": "$\\frac{11}{5}$",
+          "d": "$\\frac{17}{5}$"
+        },
+        "answer": "b",
+        "solution": "Given expression: $$\\frac{6.25 + \\frac{6}{7} \\times 21 - 3}{\\frac{3}{4} \\times (15.8 - 3.4) + 5 \\times 2.39}$$\nUsing the BODMAS rule: Numerator = $6.25 + (6 \\times 3) - 3 = 6.25 + 18 - 3 = 21.25$\nDenominator = $\\frac{3}{4} \\times 12.4 + 11.95 = 3 \\times 3.1 + 11.95 = 9.3 + 11.95 = 21.25$\nValue = $\\frac{21.25}{21.25} = 1$\nTherefore, the correct answer is option B.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "VBODMAS & Order of Operations",
+        "conceptTested": "Evaluation of arithmetic expressions using the standard BODMAS rule (Bracket, Of, Division, Multiplication, Addition, Subtraction).",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "VBODMAS & Order of Operations",
+          "conceptTested": "Evaluation of arithmetic expressions using the standard BODMAS rule (Bracket, Of, Division, Multiplication, Addition, Subtraction).",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_63be5cdb21",
+        "q_num": 211,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:08",
+        "avgTime": "00:55",
+        "question": "A number is increased by $30\\%$ and then again increased by $30\\%$. By what percentage should the increased number be reduced so as to get back the original number?",
+        "options": {
+          "a": "$40.82\\%$",
+          "b": "$48.20\\%$",
+          "c": "$42.80\\%$",
+          "d": "$38.28\\%$"
+        },
+        "answer": "a",
+        "solution": "Two successive increases of $30\\%$ result in a net increase of: $30 + 30 + \\frac{30 \\times 30}{100} = 60 + 9 = 69\\%$.\n\nLet the original number be 100. The final increased number becomes 169.\n\nTo restore the original number, we must reduce 169 by 69.\n\nRequired percentage reduction = $\\frac{69}{169} \\times 100 \\approx 40.82\\%$.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Percentage Change & Comparison",
+        "conceptTested": "Effective percentage change formula: $a + b + \\frac{a \\times b}{100}$ and reversal of percentage changes.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Percentage Change & Comparison",
+          "conceptTested": "Effective percentage change formula: $a + b + \\frac{a \\times b}{100}$ and reversal of percentage changes.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_119e051d9b",
+        "q_num": 212,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:27",
+        "avgTime": "00:57",
+        "question": "Cost of four chairs is equal to cost of two tables. Cost of four tables is equal to cost of two boards and cost of four boards is equal to cost of two fans. If a fan costs ₹850, then the cost of a chair is:",
+        "options": {
+          "a": "₹425",
+          "b": "₹237.50",
+          "c": "₹106.25",
+          "d": "₹475"
+        },
+        "answer": "c",
+        "solution": "Given:\n$4 \\times \\text{Chair} = 2 \\times \\text{Table} \\implies \\text{Table} = 2 \\times \\text{Chair}$\n\n$4 \\times \\text{Table} = 2 \\times \\text{Board} \\implies \\text{Board} = 2 \\times \\text{Table} = 4 \\times \\text{Chair}$\n\n$4 \\times \\text{Board} = 2 \\times \\text{Fan} \\implies \\text{Fan} = 2 \\times \\text{Board} = 8 \\times \\text{Chair}$\n\nSince 1 Fan = ₹850: $8 \\times \\text{Chair} = 850$\n\n$\\text{Chair} = \\frac{850}{8} = \\text{₹}106.25$.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Basic Ratio & Distribution",
+        "conceptTested": "Establishing continuous equivalence relations and unitary method to find single unit costs.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Basic Ratio & Distribution",
+          "conceptTested": "Establishing continuous equivalence relations and unitary method to find single unit costs.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_b31b49a3b0",
+        "q_num": 213,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:42",
+        "avgTime": "00:32",
+        "question": "A sum of ₹9,000 is lent partly at $7\\%$ and the remaining at $9\\%$ per annum. If the yearly interest on the average is $8.5\\%$, then the sum (in ₹) which is lent at $9\\%$ is:",
+        "options": {
+          "a": "6,750",
+          "b": "7,000",
+          "c": "2,250",
+          "d": "5,250"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nRatio of sums using Alligation = (Higher Rate - Avg Rate) : (Avg Rate - Lower Rate)\nRatio ($7\\%$ : $9\\%$) = $(9 - 8.5) : (8.5 - 7) = 0.5 : 1.5 = 1 : 3$\nTotal 4 units ($1 + 3$) = ₹9, 000\nSum lent at $9\\%$ (3 units) = $(9000 \\div 4) \\times 3 = 2250 \\times 3 = ₹6,750$\n∴ The correct answer is 6750.",
+        "image": null,
+        "topic": "Simple & Compound Interest",
+        "subtopic": "Basic Simple Interest",
+        "conceptTested": "Method of Alligation for finding weighted average distribution between two interest rates.",
+        "tags": {
+          "topic": "Simple & Compound Interest",
+          "subtopic": "Basic Simple Interest",
+          "conceptTested": "Method of Alligation for finding weighted average distribution between two interest rates.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_1786987262",
+        "q_num": 214,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:24",
+        "avgTime": "00:40",
+        "question": "Avi runs at $16\\text{ km/hr}$ and Vikas runs at $25\\%$ more speed than Avi towards each other. What was the distance between them when they started if they meet after $1\\text{ hr } 12\\text{ minutes}$?",
+        "options": {
+          "a": "$47.2\\text{ km}$",
+          "b": "$42.3\\text{ km}$",
+          "c": "$42.2\\text{ km}$",
+          "d": "$43.2\\text{ km}$"
+        },
+        "answer": "d",
+        "solution": "Speed of Avi = $16\\text{ km/hr}$.\nSpeed of Vikas = $16 + (25\\% \\text{ of } 16) = 16 + 4 = 20\\text{ km/hr}$.\nSince they run towards each other, their relative speed = $16 + 20 = 36\\text{ km/hr}$.\nTotal time taken = $1\\text{ hr } 12\\text{ min} = 1 + \\left(\\frac{12}{60}\\right)\\text{ hr} = 1.2\\text{ hours}$.\nTotal initial distance = $\\text{Relative speed} \\times \\text{Time} = 36 \\times 1.2 = 43.2\\text{ km}$.\n∴ The correct answer is $43.2\\text{ km}$.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Relative Speed & Police-Thief",
+        "conceptTested": "Relative speed in opposite direction equals sum of individual speeds: $\\text{Relative Speed} = S_1 + S_2$.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Relative Speed & Police-Thief",
+          "conceptTested": "Relative speed in opposite direction equals sum of individual speeds: $\\text{Relative Speed} = S_1 + S_2$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_460a68e7aa",
+        "q_num": 215,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:03",
+        "avgTime": "00:29",
+        "question": "The value of $[0.004 \\times \\{5 \\div (21 - 6) \\times 3\\} + 0.8]$ lies between:",
+        "options": {
+          "a": "$0$ and $0.4$",
+          "b": "$1.0$ and $1.4$",
+          "c": "$0.5$ and $0.9$",
+          "d": "$1.5$ and $1.9$"
+        },
+        "answer": "c",
+        "solution": "Given expression: $[0.004 \\times \\{5 \\div (21 - 6) \\times 3\\} + 0.8]$\nUsing BODMAS Rule: $= [0.004 \\times \\{5 \\div 15 \\times 3\\} + 0.8]$\n\n$= [0.004 \\times \\{\\frac{1}{3} \\times 3\\} + 0.8]$\n\n$= [0.004 \\times 1 + 0.8]$\n\n$= 0.004 + 0.8 = 0.804$\n\nSince $0.804$ lies between $0.5$ and $0.9$, the correct option is C.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "VBODMAS & Order of Operations",
+        "conceptTested": "Order of operations governed by the BODMAS rule (Brackets, Orders, Division, Multiplication, Addition, Subtraction).",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "VBODMAS & Order of Operations",
+          "conceptTested": "Order of operations governed by the BODMAS rule (Brackets, Orders, Division, Multiplication, Addition, Subtraction).",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_8e8f3ce08e",
+        "q_num": 216,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:37",
+        "avgTime": "00:27",
+        "question": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?$",
+        "options": {
+          "a": "30°",
+          "b": "45°",
+          "c": "60°",
+          "d": "90°"
+        },
+        "answer": "c",
+        "solution": "By applying the Componendo and Dividendo rule: $\\frac{\\tan\\theta}{\\cot\\theta} = \\frac{2 + 1}{2 - 1}$\n\n$\\tan^2\\theta = 3$\n\n$\\tan\\theta = \\sqrt{3} \\implies \\theta = 60^\\circ$\n\n∴ The correct answer is 60°.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Componendo and Dividendo rule along with standard reciprocal trigonometric identities.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Componendo and Dividendo rule along with standard reciprocal trigonometric identities.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_b15834e974",
+        "q_num": 217,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:52",
+        "avgTime": "00:39",
+        "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The allegation that the system had been hacked was denied by the company.",
+        "options": {
+          "a": "The company denied that the system had been hacked.",
+          "b": "The hacking of the system was denied by the company.",
+          "c": "It was denied that the hacking occurred by the company.",
+          "d": "The company had denied hacking the system."
+        },
+        "answer": "a",
+        "solution": "The correct answer is Option 1.\n\nIn the passive voice, the subject is 'The allegation...'. To convert to active voice, the agent 'the company' becomes the subject taking the active verb 'denied', followed by the object clause 'that the system had been hacked'.\n\nCorrect Sentence: 'The company denied that the system had been hacked.'",
+        "image": null,
+        "topic": "Active & Passive Voice",
+        "subtopic": "Tense Conversions",
+        "conceptTested": "Conversion of a passive voice clause with a subordinate that-clause into active voice.",
+        "tags": {
+          "topic": "Active & Passive Voice",
+          "subtopic": "Tense Conversions",
+          "conceptTested": "Conversion of a passive voice clause with a subordinate that-clause into active voice.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_c02ed9259f",
+        "q_num": 218,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:39",
+        "avgTime": "00:14",
+        "question": "Choose the most suitable option to replace the highlighted part of the sentence: He is more tall than his brother.",
+        "options": {
+          "a": "taller to",
+          "b": "as tall as",
+          "c": "taller than",
+          "d": "more taller than"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'taller than'.\n\nThe adjective 'taller' is the correct comparative form of 'tall', and 'than' is used to introduce the second part of the comparison. Combining 'more' with 'taller' is redundant and grammatically incorrect.\n\nComplete Sentence: 'He is taller than his brother.'",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Adjectives & Adverbs",
+        "conceptTested": "Correct formation of comparative degree adjectives without redundant modifiers.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Adjectives & Adverbs",
+          "conceptTested": "Correct formation of comparative degree adjectives without redundant modifiers.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_8e7f639e95",
+        "q_num": 219,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "02:19",
+        "avgTime": "01:55",
+        "question": "According to the passage, how do constraints impact creativity?",
+        "options": {
+          "a": "They invariably limit original thinking.",
+          "b": "They catalyze creativity by challenging conventional problem-solving.",
+          "c": "They make creative thinking predictable and repetitive.",
+          "d": "They increase reliance on external sources."
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option 2.\n\nThe passage explicitly states that innovation emerges not in spite of constraints but often because of them - forcing the mind to navigate beyond linearity into realms of associative reasoning and metaphorical abstraction. Thus, constraints catalyze creativity.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Fact & Detail Comprehension",
+        "conceptTested": "Ability to draw direct inferences and identify specific thematic points from a provided passage.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Fact & Detail Comprehension",
+          "conceptTested": "Ability to draw direct inferences and identify specific thematic points from a provided passage.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_a32cf99975",
+        "q_num": 220,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:59",
+        "avgTime": "00:28",
+        "question": "Select the correct option for the Direct Speech conversion of the sentence below. He commented that the policy's efficacy would remain conjectural until longitudinal data accrued.",
+        "options": {
+          "a": "He commented \"The efficacy of the policy remains conjectural as the data are yet to be collected.\"",
+          "b": "He commented, \"The policy's efficacy will remain conjectural until longitudinal data accrue.\"",
+          "c": "He commented, \"Until longitudinal data had accrued, the policy's efficacy might have remained conjectural.\"",
+          "d": "He commented, \"Efficacy remains conjecture till data accumulates.\""
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option 2.\n\nIn converting from indirect to direct speech, the past modal \"would\" becomes the present modal \"will\", and the past tense verb \"accrued\" becomes the present tense verb \"accrue\" to preserve the exact original meaning in direct speech formatting.",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Tense Change Rules",
+        "conceptTested": "Conversion of indirect speech back to direct speech with appropriate back-shift of modals and tenses.",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Tense Change Rules",
+          "conceptTested": "Conversion of indirect speech back to direct speech with appropriate back-shift of modals and tenses.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_88d432452c",
+        "q_num": 221,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:26",
+        "avgTime": "00:18",
+        "question": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech. She said, \"I enjoy painting.\"",
+        "options": {
+          "a": "She said that she enjoys painting.",
+          "b": "She said that she enjoyed painting.",
+          "c": "She said she was enjoying painting.",
+          "d": "She said that she had enjoyed painting."
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option 2.\n\nSince the reporting verb \"said\" is in the past tense, the present simple verb \"enjoy\" in the direct speech changes to the past simple verb \"enjoyed\" in indirect speech. The pronoun \"I\" changes to \"she\".",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Tense Change Rules",
+        "conceptTested": "Shifting present tense to past tense in reported speech when the reporting verb is in the past tense.",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Tense Change Rules",
+          "conceptTested": "Shifting present tense to past tense in reported speech when the reporting verb is in the past tense.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_567ab152a0",
+        "q_num": 222,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "02:15",
+        "avgTime": "00:38",
+        "question": "Rearrange the following sentences to form a coherent paragraph:\n1. Overfishing poses a significant threat to global marine ecosystems, leading to the collapse of fish stocks and disrupting the food web.\n2. This measure helps to restore fish populations, enhance biodiversity, and ultimately support sustainable fishing practices in adjacent waters. 3. The depletion of key species, such as sharks and tuna, can trigger a cascading effect, with far-reaching consequences for the entire ecosystem.\n4. To combat this issue, many governments and conservation organizations have established marine protected areas (MPAs) where fishing is either restricted or prohibited.",
+        "options": {
+          "a": "2, 3, 1, 4",
+          "b": "3, 4, 1, 2",
+          "c": "1, 3, 4, 2",
+          "d": "4, 3, 1, 2"
+        },
+        "answer": "c",
+        "solution": "The paragraph starts by introducing the threat posed to marine ecosystems due to overfishing.\n\nSentence 1 is the first sentence as it sets the context by describing the problem of overfishing: \"Overfishing poses a significant threat to global marine ecosystems, leading to the collapse of fish stocks and disrupting the food web.\".\n\nSentence 3 follows as it elaborates on the consequences of the depletion of key species.\n\nSentence 4 comes next as it introduces the solution to combat overfishing.\n\nSentence 2 is the final sentence as it explains the benefits of MPAs.\n\nThe correct sequence is 1, 3, 4, 2.",
+        "image": null,
+        "topic": "Para Jumbles",
+        "subtopic": "Para Jumbles & Rearrangement",
+        "conceptTested": "Logical flow and thematic continuity in paragraph construction (Problem-Cause-Solution-Result structure)",
+        "tags": {
+          "topic": "Para Jumbles",
+          "subtopic": "Para Jumbles & Rearrangement",
+          "conceptTested": "Logical flow and thematic continuity in paragraph construction (Problem-Cause-Solution-Result structure)",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -16673,6 +17089,198 @@
           "conceptTested": "Curved surface area and total surface area formulas of a right circular cylinder.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_4dd3b22145",
+        "q_num": 319,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "01:03",
+        "avgTime": "00:52",
+        "question": "If 49 litres of a milk solution has $63\\%$ milk in it, then how much milk should be added to make the concentration of milk $70\\%$ in the solution?",
+        "options": {
+          "a": "$11\\frac{13}{30}$ litres",
+          "b": "$14\\frac{7}{30}$ litres",
+          "c": "$12\\frac{11}{30}$ litres",
+          "d": "$13\\frac{1}{30}$ litres"
+        },
+        "answer": "a",
+        "solution": "Initial Water percentage = $100\\% - 63\\% = 37\\%$\nInitial Volume = 49 litres\nFinal Water percentage = $100\\% - 70\\% = 30\\%$\nSince water is constant: Initial Water = Final Water\n\n$37\\% \\times 49 = 30\\% \\times \\text{Final Volume}$\n\n$\\text{Final Volume} = \\frac{37 \\times 49}{30} = \\frac{1813}{30}\\text{ L}$\n\nAdded Milk = Final Volume - Initial Volume\n\n$= \\frac{1813}{30} - 49 = \\frac{1813 - 1470}{30} = \\frac{343}{30} = 11\\frac{13}{30}\\text{ litres}$.",
+        "image": null,
+        "topic": "Mixture & Alligation",
+        "subtopic": "Two-Liquid Mixtures & Ratios",
+        "conceptTested": "Equating the absolute quantity of the unchanged component when another ingredient is added to a mixture.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "subtopic": "Two-Liquid Mixtures & Ratios",
+          "conceptTested": "Equating the absolute quantity of the unchanged component when another ingredient is added to a mixture.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_54175e9b31",
+        "q_num": 320,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:03",
+        "avgTime": "00:23",
+        "question": "A cylindrical tube open at both ends is made of metal. The internal diameter of tube is $11.2\\text{ cm}$ and its length is $21\\text{ cm}$. The metal everywhere is $0.4\\text{ cm}$ thick. The volume of the metal $\\left( \\text{Take } \\pi = \\frac{22}{7} \\right)$ is",
+        "options": {
+          "a": "$316\\text{ cm}^3$",
+          "b": "$310\\text{ cm}^3$",
+          "c": "$306.24\\text{ cm}^3$",
+          "d": "$280.52\\text{ cm}^3$"
+        },
+        "answer": "c",
+        "solution": "Internal radius ($r$) = $11.2 \\div 2 = 5.6\\text{ cm}$, External radius ($R$) = $5.6 + 0.4 = 6.0\\text{ cm}$\nVolume of metal = $\\pi \\times h \\times (R + r)(R - r)$\nVolume = $\\left(\\frac{22}{7}\\right) \\times 21 \\times (6 + 5.6)(6 - 5.6)$\nVolume = $66 \\times 11.6 \\times 0.4 = 306.24\\text{ cm}^3$\n∴ The correct answer is $306.24\\text{ cm}^3$.",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Cylinder (Solid & Hollow)",
+        "conceptTested": "Volume of a hollow cylindrical tube calculated using external and internal radii: $V = \\pi h (R^2 - r^2)$.",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Cylinder (Solid & Hollow)",
+          "conceptTested": "Volume of a hollow cylindrical tube calculated using external and internal radii: $V = \\pi h (R^2 - r^2)$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_eabf7aa461",
+        "q_num": 321,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:10",
+        "avgTime": "00:19",
+        "question": "A select group of 4 is to be formed from 8 men and 6 women in such a way that the group must have at least 1 woman. In how many different ways can it be done?",
+        "options": {
+          "a": "931",
+          "b": "567",
+          "c": "442",
+          "d": "728"
+        },
+        "answer": "a",
+        "solution": "Total ways with at least 1 woman = (Total ways to choose 4 people) - (Ways to choose 4 men only)\nTotal ways = $^{14}C_4 - ^8C_4$\n\n$^{14}C_4 = \\frac{14 \\times 13 \\times 12 \\times 11}{4 \\times 3 \\times 2 \\times 1} = 1001$\n\n$^8C_4 = \\frac{8 \\times 7 \\times 6 \\times 5}{4 \\times 3 \\times 2 \\times 1} = 70$\n\nRequired ways = $1001 - 70 = 931$\n∴ The correct answer is 931 ways.",
+        "image": null,
+        "topic": "Permutation & Combination",
+        "subtopic": "Combinations Group Formation",
+        "conceptTested": "Selection of objects using combinations with the at-least condition: Total ways − Ways with zero occurrences.",
+        "tags": {
+          "topic": "Permutation & Combination",
+          "subtopic": "Combinations Group Formation",
+          "conceptTested": "Selection of objects using combinations with the at-least condition: Total ways − Ways with zero occurrences.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5d9c248961",
+        "q_num": 322,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:04",
+        "avgTime": "00:19",
+        "question": "The downstream speed for the boat is 100 kmph and the upstream speed is $75\\%$ of the downstream speed. Find the time taken by the boat to travel 350 km in still water.",
+        "options": {
+          "a": "4 hours",
+          "b": "2 hours",
+          "c": "6 hours",
+          "d": "9 hours"
+        },
+        "answer": "a",
+        "solution": "Upstream speed = $75\\%$ of 100 = 75 kmph\nSpeed in still water = $\\frac{\\text{Downstream speed} + \\text{Upstream speed}}{2} = \\frac{100 + 75}{2} = 87.5 \\text{ kmph}$\nTime taken = $\\frac{\\text{Distance}}{\\text{Speed}} = \\frac{350}{87.5} = 4 \\text{ hours}$\n∴ The correct answer is 4 hours.",
+        "image": null,
+        "topic": "Boats & Streams",
+        "subtopic": "Still Water & Stream Speed",
+        "conceptTested": "Speed of a boat in still water is calculated as half the sum of downstream and upstream speeds.",
+        "tags": {
+          "topic": "Boats & Streams",
+          "subtopic": "Still Water & Stream Speed",
+          "conceptTested": "Speed of a boat in still water is calculated as half the sum of downstream and upstream speeds.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_1ebebec7de",
+        "q_num": 323,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:04",
+        "avgTime": "00:10",
+        "question": "The price of two types of rice is Rs. 15/kg and Rs. 20/kg. If both the types are mixed in the ratio $3 : 2$ respectively, then what is the price per kg of the mixed variety of rice?",
+        "options": {
+          "a": "Rs. 18",
+          "b": "Rs. 16",
+          "c": "Rs. 15",
+          "d": "Rs. 17"
+        },
+        "answer": "d",
+        "solution": "Using the weighted average method: Mean Price = $\\frac{15 \\times 3 + 20 \\times 2}{3 + 2} = \\frac{45 + 40}{5} = \\frac{85}{5} = 17$\n∴ The correct answer is Rs. 17.",
+        "image": null,
+        "topic": "Mixture & Alligation",
+        "subtopic": "Two-Liquid Mixtures & Ratios",
+        "conceptTested": "Weighted average price of two ingredients mixed in a given ratio: Mean Price = $\\frac{P_1Q_1 + P_2Q_2}{Q_1 + Q_2}$.",
+        "tags": {
+          "topic": "Mixture & Alligation",
+          "subtopic": "Two-Liquid Mixtures & Ratios",
+          "conceptTested": "Weighted average price of two ingredients mixed in a given ratio: Mean Price = $\\frac{P_1Q_1 + P_2Q_2}{Q_1 + Q_2}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6769537971",
+        "q_num": 324,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:02",
+        "avgTime": "00:19",
+        "question": "A thief is spotted by a policeman from a distance of $400$ metres. When the policeman starts to chase the thief also starts running. If the speed of the thief is $18$ km/h and that of the policeman $20$ km/h, then how far would the thief have run before he is overtaken?",
+        "options": {
+          "a": "1.8 km",
+          "b": "3.6 km",
+          "c": "9 km",
+          "d": "2.5 km"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nRatio of speeds (Thief : Policeman) = $18 : 20 = 9 : 10$\nSince time is constant, the ratio of distances covered = $9 : 10$\nDifference in ratio parts = $10 - 9 = 1$ part\n$1$ part represents the initial gap = $400$ m\nDistance run by the thief = $9$ parts = $9 \\times 400$ m = $3600$ m = $3.6$ km\n\n$\\therefore$ The correct answer is $3.6$ km.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Relative Speed & Police-Thief",
+        "conceptTested": "Relative Speed in same direction: $S_{rel} = S_1 - S_2$ and Distance = Relative Speed $\\times$ Time.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Relative Speed & Police-Thief",
+          "conceptTested": "Relative Speed in same direction: $S_{rel} = S_1 - S_2$ and Distance = Relative Speed $\\times$ Time.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -20793,6 +21401,230 @@
           "topic": "Trains",
           "subtopic": "Relative Speed & Direction",
           "conceptTested": "Relative speed in opposite directions is the sum of individual speeds, and total distance covered is the sum of the lengths of both trains.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_118741d3be",
+        "q_num": 131,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:22",
+        "avgTime": "00:30",
+        "question": "The average price of three items of furniture is $\\text{Rs } 16020$. If their prices are in the ratio $3:5:7$, the price of the costliest item (in $\\text{Rs}$) is",
+        "options": {
+          "a": "$3204$",
+          "b": "$22428$",
+          "c": "$7476$",
+          "d": "$5340$"
+        },
+        "answer": "b",
+        "solution": "Average of the given ratio units = $(3 + 5 + 7) \\div 3 = 5$ units.\nGiven average price = ₹$16020$, so $5$ units = ₹$16020$.\nValue of $1$ unit = $16020 \\div 5 = ₹3204$.\n\nThe costliest item corresponds to the highest ratio, which is $7$ units.\n\nCostliest item price = $7 \\times 3204 = 22428$.\n∴ The correct answer is ₹$22428$.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Basic Ratio & Distribution",
+        "conceptTested": "Determining individual component values from ratio parts given their aggregate average.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Basic Ratio & Distribution",
+          "conceptTested": "Determining individual component values from ratio parts given their aggregate average.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_3bee51ec34",
+        "q_num": 132,
+        "mockId": "mock_1791297322022_w8sez",
+        "testId": "mock_1791297322022_w8sez",
+        "testName": "SSC CGL Tier I: Full Test - 13",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:12",
+        "question": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?$",
+        "options": {
+          "a": "60°",
+          "b": "55°",
+          "c": "50°",
+          "d": "70°"
+        },
+        "answer": "b",
+        "solution": "Since $LM = NM$, the angle at $L$ is equal to the angle at $N$ ($\\angle L = \\angle N$).\n\nThe sum of angles in a triangle is 180°, so $\\angle L + \\angle N = 180^\\circ - \\angle M$.\n\n$2\\angle N = 180^\\circ - 70^\\circ = 110^\\circ$\n\n$\\angle N = \\frac{110^\\circ}{2} = 55^\\circ$\n\n∴ The correct answer is 55°.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "General Triangle Properties",
+        "conceptTested": "In an isosceles triangle, angles opposite to equal sides are equal, and the sum of interior angles is 180°.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "General Triangle Properties",
+          "conceptTested": "In an isosceles triangle, angles opposite to equal sides are equal, and the sum of interior angles is 180°.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cb71e6e291",
+        "q_num": 133,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:14",
+        "question": "Select the most appropriate antonym of the given word. Obdurate",
+        "options": {
+          "a": "Callous",
+          "b": "Yielding",
+          "c": "Adamant",
+          "d": "Hardened"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Yielding.\n\nThe word Obdurate means stubbornly refusing to change one's opinion or course of action, even in the face of reason or persuasion.\n\nYielding refers to being inclined to give way to the wishes of others or being flexible and accommodating.\n\nHence, the opposite of Obdurate is Yielding.",
+        "image": null,
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Antonyms",
+        "conceptTested": "Vocabulary and lexical opposition between adjectives.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Antonyms",
+          "conceptTested": "Vocabulary and lexical opposition between adjectives.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_21ad8995bc",
+        "q_num": 134,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:05",
+        "avgTime": "00:13",
+        "question": "Choose the correct one-word substitution for: A place where wild animals are kept.",
+        "options": {
+          "a": "Aviary",
+          "b": "Sanctuary",
+          "c": "Menagerie",
+          "d": "Park"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Menagerie.\n\nThe word Menagerie refers to a collection of wild animals that are kept in captivity, typically for exhibition.\n\nAviary is a large cage or enclosure for keeping birds.\n\nSanctuary is a protected area where animals are kept safe in their natural habitat.\n\nPark is a public area with greenery, often used for recreational purposes.",
+        "image": null,
+        "topic": "One Word Substitution",
+        "subtopic": "General One Word Substitutes",
+        "conceptTested": "Identification of a specific single word describing a collection of captive wild animals.",
+        "tags": {
+          "topic": "One Word Substitution",
+          "subtopic": "General One Word Substitutes",
+          "conceptTested": "Identification of a specific single word describing a collection of captive wild animals.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_cee98468f0",
+        "q_num": 135,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "00:20",
+        "question": "Find the part of the sentence that contains an error: The team's objective, despite its vagueness, (1)/ were understood by the evaluators (2)/ to focus more on inclusivity (3)/ than on quantifiable metrics. (4)",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option 2.\n\nThe error lies in part 2. The subject 'The team's objective' is singular, so the verb should also be singular ('was' instead of 'were').\n\nCorrect Sentence: 'The team's objective, despite its vagueness, was understood by the evaluators to focus more on inclusivity than on quantifiable metrics.'",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Subject-Verb Agreement",
+        "conceptTested": "Agreement of the verb with a singular head noun separated by a modifying prepositional phrase.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Subject-Verb Agreement",
+          "conceptTested": "Agreement of the verb with a singular head noun separated by a modifying prepositional phrase.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c445b60883",
+        "q_num": 136,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:16",
+        "avgTime": "00:21",
+        "question": "Choose the most suitable option to replace the highlighted part of the sentence: He did not succeed despite of his hard work.",
+        "options": {
+          "a": "in spite of his working hard",
+          "b": "despite his hard work",
+          "c": "although his hard work",
+          "d": "although he worked hard"
+        },
+        "answer": "b",
+        "solution": "The correct answer is 'despite his hard work'.\n\nThe word \"despite\" is used to express contrast or concession without the preposition \"of.\" The phrase \"despite his hard work\" is grammatically correct and concise. \"In spite of\" includes \"of\", but \"despite\" does not.",
+        "image": null,
+        "topic": "Sentence Improvement",
+        "subtopic": "Prepositions & Phrasal Verbs",
+        "conceptTested": "Omission of redundant prepositions like 'of' after prepositions/conjunctions such as 'despite'.",
+        "tags": {
+          "topic": "Sentence Improvement",
+          "subtopic": "Prepositions & Phrasal Verbs",
+          "conceptTested": "Omission of redundant prepositions like 'of' after prepositions/conjunctions such as 'despite'.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_87fa6aae2b",
+        "q_num": 137,
+        "mockId": "mock_1791370205328_6xpsd",
+        "testId": "mock_1791370205328_6xpsd",
+        "testName": "PYST 23: SSC CGL 2025 - English (Held On: 19th_September_2025_Shift_2)",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:16",
+        "avgTime": "00:42",
+        "question": "Which of the following is NOT suggested by the passage as a factor in fostering creativity?",
+        "options": {
+          "a": "Reclaiming spaces of solitude, boredom, and analog play.",
+          "b": "Engaging in open-ended inquiry and transdisciplinary exposure.",
+          "c": "Reframing failure as an opportunity for experimentation.",
+          "d": "Relying on didactic orthodoxy and rote memorization."
+        },
+        "answer": "d",
+        "solution": "The correct answer is Option 4.\n\nThe passage explicitly criticizes didactic orthodoxy and rote memorization, stating that traditional models valorizing them engender cognitive rigidity and discourage risk - taking and divergent thinking. Hence, it is not suggested as a factor in fostering creativity.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Fact & Detail Comprehension",
+        "conceptTested": "Ability to identify factual details and negate options not supported or directly contradicted by the text.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Fact & Detail Comprehension",
+          "conceptTested": "Ability to identify factual details and negate options not supported or directly contradicted by the text.",
           "difficulty": "medium"
         }
       }
