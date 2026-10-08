@@ -7261,6 +7261,134 @@
           "conceptTested": "Pythagoras Theorem in right-angled triangle formed by radius, tangent, and line joining centre to external point: $OP^2 = OT^2 + PT^2$",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_6c1881971f",
+        "q_num": 230,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:49",
+        "avgTime": "00:36",
+        "question": "The ratio of the income of Ram and Shyam is $15 : 16$, the ratio of their expenditure is $5 : 6$. If both of them saves Rs. 10000 each, then find the amount by which the income of Ram is less than the Shyam's income.",
+        "options": {
+          "a": "Rs. 1000",
+          "b": "Rs. 5000",
+          "c": "Rs. 6000",
+          "d": "None of the above"
+        },
+        "answer": "a",
+        "solution": "Shortcut Trick\nIncome ratio of Ram and Shyam = $15 : 16$\nExpenditure ratio of Ram and Shyam = $5 : 6$\n\nSince both save the same amount, we check the vertical difference in ratio parts.\n\nSavings (Ram) = $15 - 5 = 10$ parts | Savings (Shyam) = $16 - 6 = 10$ parts\n⇒ $10$ parts = $10000$ ⇒ $1$ part = $1000$\nDifference in income = $16 - 15 = 1$ part = Rs. $1000$\n∴ The correct answer is Rs. 1000.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Income, Expense & Savings Ratios",
+        "conceptTested": "Income minus expenditure equals savings, and the ratio proportionality method for income-expenditure problems.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Income, Expense & Savings Ratios",
+          "conceptTested": "Income minus expenditure equals savings, and the ratio proportionality method for income-expenditure problems.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_12927e2b68",
+        "q_num": 231,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:39",
+        "avgTime": "00:29",
+        "question": "A, B and C individually can complete a work in 12, 10 and 15 days, respectively. All three work together and after 3 days, B and C leave the work. The remaining work will be completed by A in:",
+        "options": {
+          "a": "6 days",
+          "b": "5 days",
+          "c": "3 days",
+          "d": "4 days"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nTotal work (LCM of 12, 10, 15) = 60 units\nEfficiencies: A = 5, B = 6, C = 4 | Total = 15 units/day\n3 days work (A + B+C) = 15 × 3 = 45 units\nRemaining work = 60 - 45 = 15 units\nTime for A = 15 ÷ 5 = 3 days\n∴ The correct answer is 3 days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Leaving & Joining Work",
+        "conceptTested": "Total work equals the product of efficiency and time. Work done by individuals is determined via the LCM method.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Leaving & Joining Work",
+          "conceptTested": "Total work equals the product of efficiency and time. Work done by individuals is determined via the LCM method.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_2182a8006f",
+        "q_num": 232,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:34",
+        "avgTime": "00:07",
+        "question": "What is the value of $\\sqrt{6 + \\sqrt{6 + \\sqrt{6 + \\dots}}}$?",
+        "options": {
+          "a": "3.2",
+          "b": "3",
+          "c": "6",
+          "d": "6.2"
+        },
+        "answer": "b",
+        "solution": "Let $x = \\sqrt{6 + \\sqrt{6 + \\sqrt{6 + \\dots}}}$. Squaring both sides, we get $x^2 = 6 + x$, which simplifies to $x^2 - x - 6 = 0$. Factoring the quadratic equation gives $(x - 3)(x + 2) = 0$. Since the value under the square root is positive, $x = 3$.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "Surds & Indices",
+        "conceptTested": "Infinite nested radical evaluation using quadratic factorization",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Surds & Indices",
+          "conceptTested": "Infinite nested radical evaluation using quadratic factorization",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_6b95db0378",
+        "q_num": 233,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:59",
+        "avgTime": "00:21",
+        "question": "A pole $10\\text{ m}$ long rests slantly against a vertical wall AB making an angle $30^\\circ$ with the horizontal (ground). Find how far the foot of the pole is from the wall (in metres).",
+        "options": {
+          "a": "15",
+          "b": "5 / \\sqrt{3}",
+          "c": "10",
+          "d": "5\\sqrt{3}"
+        },
+        "answer": "d",
+        "solution": "Let the length of the pole (Hypotenuse) be $AC = 10\\text{ m}$ and the distance from the wall be $BC$. Using trigonometry, $\\cos(30^\\circ) = \\frac{\\text{Base}}{\\text{Hypotenuse}} = \\frac{BC}{AC}$. Thus, $BC = 10 \\times \\cos(30^\\circ) = 10 \\times \\frac{\\sqrt{3}}{2} = 5\\sqrt{3}\\text{ m}$.",
+        "image": null,
+        "topic": "Height & Distance",
+        "subtopic": "Two Points on Same/Opposite Side",
+        "conceptTested": "Trigonometric ratios in right-angled triangles: $\\cos(\\theta) = \\frac{\\text{Base}}{\\text{Hypotenuse}}$",
+        "tags": {
+          "topic": "Height & Distance",
+          "subtopic": "Two Points on Same/Opposite Side",
+          "conceptTested": "Trigonometric ratios in right-angled triangles: $\\cos(\\theta) = \\frac{\\text{Base}}{\\text{Hypotenuse}}$",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -18241,6 +18369,134 @@
           "conceptTested": "Combined Average Formula and Redundant Data Analysis: Total Sum = Sum of subgroups; extra uncorrelated group data can be bypassed.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_40a757b562",
+        "q_num": 348,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:10",
+        "avgTime": "00:23",
+        "question": "A sum of ₹9,000 amounts to ₹11,979 at $x\\%$ p.a. for $1 \\frac{1}{2}$ years, interest compounded semi-annually. What will be the compound interest on the same sum at the same rate for 2 years, if interest is compounded yearly?",
+        "options": {
+          "a": "₹3,980",
+          "b": "₹3,890",
+          "c": "₹3,860",
+          "d": "₹3,960"
+        },
+        "answer": "d",
+        "solution": "For 1.5 years compounded semi - annually, total periods ($n$) = 3 half - years.\n\nAmount to Principal Ratio = $11979 \\div 9000 = 1331 \\div 1000 = (11 \\div 10)^3$.\n\nThis implies the rate per half - year is $10\\%$, meaning the annual rate is $20\\%$ p.a.\n\nFor 2 years compounded yearly at $20\\%$ p.a., effective CI rate = $20\\% + 20\\% + \\frac{20 \\times 20}{100} = 44\\%$.\n\nCompound Interest = $44\\%$ of ₹9, 000 = ₹3, 960.\n∴ The correct answer is ₹3, 960.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+        "conceptTested": "Relation between semi-annual and annual compounding periods using the formula $A = P(1 + \\frac{R}{100})^n$ and effective rate formulas.",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Compounding Periods (Half-Yearly/Quarterly)",
+          "conceptTested": "Relation between semi-annual and annual compounding periods using the formula $A = P(1 + \\frac{R}{100})^n$ and effective rate formulas.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_567cab6e42",
+        "q_num": 349,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:45",
+        "avgTime": "00:32",
+        "question": "A square and a rectangle have same perimeter. They differ in areas by $1$ square cm. The length of the rectangle exceeds its breadth by",
+        "options": {
+          "a": "1 cm",
+          "b": "2 cm",
+          "c": "3 cm",
+          "d": "4 cm"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nLet the rectangle's length and breadth be $(x + d)$ and $(x - d)$ cm.\n\nPerimeter = $2(x + d + x - d) = 4x$. For the same perimeter, the square's side is $x$.\nArea difference = Area of Square - Area of Rectangle = $x^2 - (x + d)(x - d) = d^2$.\n\nGiven $d^2 = 1$ ⇒ $d = 1$ cm.\n\nDifference between length and breadth = $(x + d) - (x - d) = 2d = 2(1) = 2$ cm.\n∴ The correct answer is 2 cm.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Rectangle & Square (Paths & Fencing)",
+        "conceptTested": "For a square and a rectangle of equal perimeters, the difference in their areas is given by $\\left(\\frac{l - b}{2}\\right)^2$.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Rectangle & Square (Paths & Fencing)",
+          "conceptTested": "For a square and a rectangle of equal perimeters, the difference in their areas is given by $\\left(\\frac{l - b}{2}\\right)^2$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_26cf1d9b79",
+        "q_num": 350,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:08",
+        "avgTime": "00:15",
+        "question": "A boat can go 40 km downstream and 25 km upstream in 7 hours 30 minutes. It can go 48 km downstream and 36 km upstream in 10 hours. What is the speed (in km/h) of the boat in still water?",
+        "options": {
+          "a": "6",
+          "b": "12",
+          "c": "9",
+          "d": "15"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nLet Downstream speed = $D$ and Upstream speed = $U$.\nGiven time equations: $\\frac{40}{D} + \\frac{25}{U} = 7.5$ and $\\frac{48}{D} + \\frac{36}{U} = 10$.\nMultiply the first by 6 and the second by 5: $\\frac{240}{D} + \\frac{150}{U} = 45$ and $\\frac{240}{D} + \\frac{180}{U} = 50$.\nSubtracting yields: $\\frac{30}{U} = 5$ ⇒ $U = 6$ km/h. Substituting $U$ back gives $D = 12$ km/h.\nSpeed in still water = $(D + U) \\div 2 = (12 + 6) \\div 2 = 9$ km/h.\n∴ The correct answer is 9 km/h.",
+        "image": null,
+        "topic": "Boats & Streams",
+        "subtopic": "Still Water & Stream Speed",
+        "conceptTested": "Speed of a boat in still water is half the sum of downstream and upstream speeds: $\\text{Speed} = \\frac{D + U}{2}$.",
+        "tags": {
+          "topic": "Boats & Streams",
+          "subtopic": "Still Water & Stream Speed",
+          "conceptTested": "Speed of a boat in still water is half the sum of downstream and upstream speeds: $\\text{Speed} = \\frac{D + U}{2}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_871f31b37e",
+        "q_num": 351,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:50",
+        "avgTime": "00:29",
+        "question": "A shopkeeper allows $18\\%$ discount on the marked price of an article and still makes a profit of $23\\%$. If he gains ₹1,840 on the sale of the article, then what is the marked price of the article?",
+        "options": {
+          "a": "₹15,000",
+          "b": "₹12,000",
+          "c": "₹9,840",
+          "d": "₹10,000"
+        },
+        "answer": "b",
+        "solution": "Given that $23\\%$ of CP = ₹1, 840, the Cost Price (CP) = $\\frac{1840 \\times 100}{23} = \\text{₹}8,000$. The Selling Price (SP) = CP + Profit = $8000 + 1840 = \\text{₹}9,840$. Since $SP = MP \\times \\frac{100 - \\text{Discount}\\%}{100}$, we have $9840 = MP \\times \\frac{82}{100}$, which gives $MP = \\text{₹}12,000$.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Marked Price & Discounts",
+        "conceptTested": "Relation between Cost Price, Selling Price, Marked Price, Profit%, and Discount%",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Marked Price & Discounts",
+          "conceptTested": "Relation between Cost Price, Selling Price, Marked Price, Profit%, and Discount%",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -22841,6 +23097,102 @@
           "topic": "Compound Interest",
           "subtopic": "Basic Compound Interest",
           "conceptTested": "Compound Amount formula: $A = P \\times \\left(1 + \\frac{R}{100}\\right)^n$",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_6fae392fd7",
+        "q_num": 146,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:14",
+        "avgTime": "00:34",
+        "question": "A contractor employed 69 workers to complete a work in 20 days. How many more workers he should employ to complete the work in 12 days?",
+        "options": {
+          "a": "115 workers",
+          "b": "46 workers",
+          "c": "51 workers",
+          "d": "64 workers"
+        },
+        "answer": "b",
+        "solution": "Using the constant work rule: $M_1 \\times D_1 = M_2 \\times D_2$\n\n$69 \\times 20 = M_2 \\times 12$\n\nTotal workers required ($M_2$) = $1380 \\div 12 = 115$\nAdditional workers needed = $115 - 69 = 46$.\n∴ The correct answer is 46 workers.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Inverse proportionality between the number of workers and the time taken to complete a constant amount of work ($M_1 \\times D_1 = M_2 \\times D_2$).",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Inverse proportionality between the number of workers and the time taken to complete a constant amount of work ($M_1 \\times D_1 = M_2 \\times D_2$).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_75ce7aab75",
+        "q_num": 147,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:28",
+        "avgTime": "00:47",
+        "question": "Find the lowest positive value of $(c - b)$ such that the 7-digit number $1738b9c$ is divisible by 12.",
+        "options": {
+          "a": "4",
+          "b": "1",
+          "c": "7",
+          "d": "2"
+        },
+        "answer": "b",
+        "solution": "For a number to be divisible by 12, it must be divisible by both 3 and 4.\n\nFor divisibility by 4, the last two digits $9c$ must be divisible by 4 $\\Rightarrow c = 2$ or $c = 6$.\n\nFor divisibility by 3, the sum of all digits $(28 + b + c)$ must be a multiple of 3.\n\nIf $c = 6$, the digit sum is $34 + b$. For this to be a multiple of 3, $b$ can be 2, 5, or 8.\n\nTo find the lowest positive value of $(c - b)$, we take $c = 6$ and $b = 5 \\Rightarrow 6 - 5 = 1.\\n\\n∴ The correct answer is 1$.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Combined divisibility rules for composite numbers (e.g., divisibility by 12 requires simultaneous divisibility by 3 and 4).",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Combined divisibility rules for composite numbers (e.g., divisibility by 12 requires simultaneous divisibility by 3 and 4).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8563edd08d",
+        "q_num": 148,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:54",
+        "avgTime": "00:30",
+        "question": "The value of $\\frac{(\\sin 35^\\circ \\cos 55^\\circ + \\sec^2 65^\\circ) + \\cos^2 35^\\circ - \\tan^2 65^\\circ}{\\cos^2 5^\\circ + \\cos^2 7^\\circ + \\cos^2 9^\\circ + \\cdots + \\cos^2 85^\\circ}$ is:",
+        "options": {
+          "a": "$245\\frac{2}{45}$",
+          "b": "$441\\frac{4}{41}$",
+          "c": "$-441\\frac{4}{41}$",
+          "d": "$-245\\frac{2}{45}$"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nNumerator: $(\\sin^2 35^\\circ + \\cos^2 35^\\circ) + (\\sec^2 65^\\circ - \\tan^2 65^\\circ) = 1 + 1 = 2$.\nDenominator: Series of $\\cos^2 \\theta$ from $5^\\circ$ to $85^\\circ$ with a step of $2^\\circ$.\nTotal terms $(n) = (85 - 5) \\div 2 + 1 = 41$.\n\nSum of such complementary angle arithmetic series is simply $n \\div 2 = 41/2$.\n\nRequired expression value = Numerator $\\div$ Denominator = $2 \\div (41/2) = 4/41$.\n∴ The correct answer is 4/41.",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Complementary Angles",
+        "conceptTested": "Complementary angle trigonometric relations: $\\sin(90^\\circ - \\theta) = \\cos\\theta$, $\\sin^2\\theta + \\cos^2\\theta = 1$, and $\\sec^2\\theta - \\tan^2\\theta = 1$.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Complementary Angles",
+          "conceptTested": "Complementary angle trigonometric relations: $\\sin(90^\\circ - \\theta) = \\cos\\theta$, $\\sin^2\\theta + \\cos^2\\theta = 1$, and $\\sec^2\\theta - \\tan^2\\theta = 1$.",
           "difficulty": "medium"
         }
       }

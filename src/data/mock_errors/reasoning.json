@@ -3062,6 +3062,198 @@
           "conceptTested": "Substitution of given symbols with arithmetic operators to evaluate expressions using BODMAS.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_33467bd06e",
+        "q_num": 98,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:27",
+        "avgTime": "01:12",
+        "question": "In the following question, select the related letter pair from the given alternatives. $POEM : RIRR :: ?$ मापने के लिए सही विकल्प चुनें:",
+        "options": {
+          "a": "TIRX : CVLV",
+          "b": "HANG : LRDF",
+          "c": "LOMP : UQQN",
+          "d": "MATB : GXXO"
+        },
+        "answer": "a",
+        "solution": "The logic followed here is: $P (+2) = R$, $O (+4) = I$, $E (+13) = R$, $M (+5) = R$\nSimilarly for $TIRX : CVLV$: $T (+9) = C$, $I (+13) = V$, $R (+4) = L$, $X (+2) = V$.\n\nThus, $TIRX : CVLV$ follows the same analogy.\n\nHence, the correct answer is \"TIRX : CVLV\".",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Alphabetical position shifting pattern across corresponding letter pairs.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Alphabetical position shifting pattern across corresponding letter pairs.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_4f1e8d157e",
+        "q_num": 99,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:55",
+        "avgTime": "00:46",
+        "question": "What should come in place of the question mark (?) in the given series? $208 \\quad 190 \\quad 163 \\quad 127 \\quad 82 \\quad ?$",
+        "options": {
+          "a": "54",
+          "b": "45",
+          "c": "28",
+          "d": "12"
+        },
+        "answer": "c",
+        "solution": "The logic followed here is: $208 - 18 = 190$\n\n$190 - 27 = 163$\n\n$163 - 36 = 127$\n\n$127 - 45 = 82$\n\nThe differences are decreasing by consecutive multiples of 9 ($18, 27, 36, 45$). The next difference is $54$.\n\n$82 - 54 = 28$.\n\nHence, \"28\" is the correct answer.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Difference of differences (second-order arithmetic progression) in decreasing sequences.",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Difference of differences (second-order arithmetic progression) in decreasing sequences.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_77a8fb9cb4",
+        "q_num": 100,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:24",
+        "avgTime": "00:48",
+        "question": "A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it, number 2 and so on, till the topmost floor is numbered 6. B lives on an odd numbered floor but not 3. The sum of floors on which B and D live is 7. E lives immediately below F. C lives on the top floor. How many people live above E?",
+        "options": {
+          "a": "2",
+          "b": "1",
+          "c": "3",
+          "d": "4"
+        },
+        "answer": "c",
+        "solution": "Given:\n1) C lives on the top floor (Floor 6).\n2) B lives on an odd numbered floor but not 3. Thus, B lives on Floor 5 or Floor 1.\n3) The sum of floors of B and D is 7. Since B is on Floor 5, D must be on Floor 2 ($5 + 2 = 7$).\n4) E lives immediately below F. The only vacant consecutive slots for F and E are Floors 4 and 3 respectively.\n5) The remaining person A occupies the lowermost Floor 1.\nFinal arrangement from top to bottom: Floor 6: C\nFloor 5: B\nFloor 4: F\nFloor 3: E\nFloor 2: D\nFloor 1: A\n\nThree people (F, B, C) live above E.\n\nHence, the correct answer is \"3\".",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Floor-based puzzle arrangement involving multiple constraints on floor numbers and positions.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Floor-based puzzle arrangement involving multiple constraints on floor numbers and positions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_be2f8cc420",
+        "q_num": 101,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:05",
+        "avgTime": "00:51",
+        "question": "Each of the seven friends, Misha, Minshu, Mohi, Priya, Veer, Pari and Krishi, has a different height. Krishi is taller than only three people. Pari is taller than only Veer. Misha is taller than Minshu but not Mohi. Priya is taller than Mohi. Who is tallest among them?",
+        "options": {
+          "a": "Krishi",
+          "b": "Mohi",
+          "c": "Minshu",
+          "d": "Priya"
+        },
+        "answer": "d",
+        "solution": "Seven friends: Misha, Minshu, Mohi, Priya, Veer, Pari and Krishi.\n1) Krishi is taller than only three people (meaning Krishi is at 4th position from top).\n2) Pari is taller than only Veer (Pari is 6th, Veer is 7th).\n3) Misha is taller than Minshu but not Mohi ($Mohi > Misha > Minshu$).\n4) Priya is taller than Mohi ($Priya > Mohi$).\nCombining all statements in descending order of height: Priya > Mohi > Misha > Krishi > Minshu > Pari > Veer\n\nPriya is the tallest among all of them.\n\nHence, the correct answer is \"Priya\".",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Total Persons & Direct Ranking",
+        "conceptTested": "Linear ordering of heights and comparative inequality deductions.",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Total Persons & Direct Ranking",
+          "conceptTested": "Linear ordering of heights and comparative inequality deductions.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_1aab237383",
+        "q_num": 102,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:04",
+        "avgTime": "00:40",
+        "question": "If ‘G @ T’ means ‘G is the father of T’, ‘G % T’ means ‘G is the wife of T’, ‘G # T’ means ‘G is the daughter of T’, and ‘G * T’ means ‘G is the son of T’, then which of the following options is true based on the expression 'L * M @ N % O * P'?",
+        "options": {
+          "a": "N is the mother of L.",
+          "b": "N is the daughter-in-law of P.",
+          "c": "O is the son of M.",
+          "d": "O is the brother of L."
+        },
+        "answer": "b",
+        "solution": "According to the given information: - L * M means L is the son of M. - M @ N means M is the father of N. - N % O means N is the wife of O. - O * P means O is the son of P.\n\nFrom this family tree, L, N, and potentially others are related, and since M is the father of N, and N is married to O whose father is P, N is the daughter - in - law of P.\n\nHence, Option B is correct.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Coded Blood Relations",
+        "conceptTested": "Deduction of family tree relationships and gender identities from symbolic relation codes.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Coded Blood Relations",
+          "conceptTested": "Deduction of family tree relationships and gender identities from symbolic relation codes.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_a1fbb3fb27",
+        "q_num": 103,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:43",
+        "avgTime": "00:33",
+        "question": "In the following question, select the related letters from the given alternatives.\n\nTG : DQ :: LP : ?",
+        "options": {
+          "a": "OM",
+          "b": "MI",
+          "c": "IM",
+          "d": "MO"
+        },
+        "answer": "b",
+        "solution": "The pattern followed in TG : DQ: T - 3 = Q\nG - 3 = D\nSimilarly for LP: L - 3 = I\nP - 3 = M\nThus LP : MI.\nHence, the correct answer is Option B.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Alphabetical reverse position coding or backward shift patterns in letter clusters.",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Alphabetical reverse position coding or backward shift patterns in letter clusters.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -7360,6 +7552,38 @@
           "topic": "Blood Relations",
           "subtopic": "Family Tree & Direct Relations",
           "conceptTested": "Deduction of familial relationship through generations using a multi-person family tree.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_4def31e467",
+        "q_num": 97,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:21",
+        "question": "You saw your cousin taking drugs. You will-",
+        "options": {
+          "a": "Complain to his parents.",
+          "b": "Talk to your cousin and counsel him regarding the consequences of taking them.",
+          "c": "Ignore it.",
+          "d": "Talk to him and his parents and take him to a rehab center."
+        },
+        "answer": "d",
+        "solution": "The correct answer is Talk to him and his parents and take him to a rehab center.\n\nReasoning: Simply complaining to parents or ignoring shows lack of responsibility. Just counselling may not be enough. Taking him to a rehab center along with informing his parents reflects effective intelligence, high sense of responsibility, and problem - solving determination.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Situation Reaction Test",
+        "conceptTested": "Assessing officer-like qualities including effective intelligence, sense of responsibility, and logical decision making.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Situation Reaction Test",
+          "conceptTested": "Assessing officer-like qualities including effective intelligence, sense of responsibility, and logical decision making.",
           "difficulty": "medium"
         }
       }

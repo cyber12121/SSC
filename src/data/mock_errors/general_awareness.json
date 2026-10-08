@@ -4977,6 +4977,166 @@
           "conceptTested": "Current affairs related to regional digital initiatives and multilingual e-governance collaborations in India.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_11d6311ee2",
+        "q_num": 159,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:03",
+        "avgTime": "00:27",
+        "question": "Match List - I with List - II and select the correct answer from the code given below the lists.\n\nList - I (Sustainable Development Goal (SDG))\n- A. SDG 10\n- B. SDG 13\n- C. SDG 14\n- D. SDG 15\n\nList-II (Related with)\n- 1. Climate change\n- 2. Life on land\n- 3. Reduced inequalities\n- 4. Life below water",
+        "options": {
+          "a": "A - 1, B - 2, C - 3, D - 4",
+          "b": "A - 2, B - 3, C - 1, D - 4",
+          "c": "A - 3, B - 2, C - 4, D - 1",
+          "d": "A - 3, B - 1, C - 4, D - 2"
+        },
+        "answer": "d",
+        "solution": "The correct matching is: - SDG 10: Reduced inequalities (A - 3) - SDG 13: Climate change (B - 1) - SDG 14: Life below water (C - 4) - SDG 15: Life on land (D - 2)\nTherefore, the correct code is A - 3, B - 1, C - 4, D - 2.\nHence, the correct answer is Option D.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Knowledge of the United Nations Sustainable Development Goals (SDGs) and their specific thematic targets.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Knowledge of the United Nations Sustainable Development Goals (SDGs) and their specific thematic targets.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_ae3db33260",
+        "q_num": 160,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:13",
+        "avgTime": "00:32",
+        "question": "Consider the following statements regarding the reactivity series of metals. Which of these statements is/are correct?\nStatement I: A piece of iron placed in a solution of copper sulfate gradually develops a reddish layer.\nStatement II: Copper is more reactive than iron and replaces it in the solution.",
+        "options": {
+          "a": "Only\nStatement 2 is true",
+          "b": "Only\nStatement 1 is true",
+          "c": "Both statements are true",
+          "d": "Both statements are false"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Only Statement 1 is true.\n\nStatement I is correct because iron is more reactive than copper. When placed in a copper sulfate solution, iron displaces copper and forms iron sulfate while copper gets deposited on the iron surface as a reddish layer ($Fe + CuSO_4 \\to FeSO_4 + Cu$).\nStatement II is incorrect because copper is less reactive than iron and cannot replace iron from its salt solution.",
+        "image": null,
+        "topic": "Chemistry",
+        "subtopic": "Acids, Bases, Metals & Periodic Table",
+        "conceptTested": "Reactivity series of metals and displacement reactions where a more reactive metal displaces a less reactive metal from its salt solution.",
+        "tags": {
+          "topic": "Chemistry",
+          "subtopic": "Acids, Bases, Metals & Periodic Table",
+          "conceptTested": "Reactivity series of metals and displacement reactions where a more reactive metal displaces a less reactive metal from its salt solution.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f2a64aff69",
+        "q_num": 161,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:06",
+        "avgTime": "00:16",
+        "question": "Who is the author of the book 'Gandhi in Champaran', which describes Mahatma Gandhi's first Satyagraha struggle on Indian soil in 1917?",
+        "options": {
+          "a": "Toru Dutt",
+          "b": "Rajendra Prasad",
+          "c": "D.G. Tendulkar",
+          "d": "Kamala Das"
+        },
+        "answer": "c",
+        "solution": "The correct answer is D.G. Tendulkar.\n\nD.G. Tendulkar is the author of the book \"Gandhi in Champaran\", which provides an in - depth account of Mahatma Gandhi's first Satyagraha in India in 1917 against the oppressive indigo planters in Champaran, Bihar.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Authors and historical texts related to Mahatma Gandhi's early movements, specifically the Champaran Satyagraha.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Authors and historical texts related to Mahatma Gandhi's early movements, specifically the Champaran Satyagraha.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a50c146e4f",
+        "q_num": 162,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:13",
+        "avgTime": "00:18",
+        "question": "Recently, scientists discovered a giant black coral believed to be 300-400 years old. Where was this coral discovered?",
+        "options": {
+          "a": "Red Sea near Israel",
+          "b": "Coral Triangle near Indonesia",
+          "c": "Great Barrier Reef, Australia",
+          "d": "Fiordland waters off New Zealand"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Fiordland waters off New Zealand.\n\nMarine scientists discovered a giant black coral measuring over 13 feet tall and 15 feet wide in the deep waters of Fiordland, New Zealand, estimated to be around 300 to 400 years old.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "National & Global Events",
+        "conceptTested": "Current affairs related to marine biological discoveries and geographical locations.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "National & Global Events",
+          "conceptTested": "Current affairs related to marine biological discoveries and geographical locations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_46a359cd80",
+        "q_num": 163,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:21",
+        "avgTime": "00:20",
+        "question": "Who systematized Hindustani classical music notation and compiled compositions in the Kramik Pustak Malika?",
+        "options": {
+          "a": "Ustad Allauddin Khan",
+          "b": "Pandit Vishnu Narayan Bhatkhande",
+          "c": "Pandit Vishnu Digambar Paluskar",
+          "d": "Swami Haridas"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Pandit Vishnu Narayan Bhatkhande.\n\nPandit Vishnu Narayan Bhatkhande is credited with systematizing the notation system of Hindustani classical music. He compiled and categorized various ragas and compositions into a structured system, creating the monumental work known as the Kramik Pustak Malika.",
+        "image": null,
+        "topic": "Music & Musical Instruments",
+        "subtopic": "Musical Instruments & Gharanas",
+        "conceptTested": "Identification of prominent musicologists and their literary works in Indian classical music.",
+        "tags": {
+          "topic": "Music & Musical Instruments",
+          "subtopic": "Musical Instruments & Gharanas",
+          "conceptTested": "Identification of prominent musicologists and their literary works in Indian classical music.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -12896,6 +13056,262 @@
           "topic": "Modern History",
           "subtopic": "Historical Personalities & Events",
           "conceptTested": "Foundation of Arya Samaj and contributions of Swami Dayanand Saraswati.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_108cdcf5fc",
+        "q_num": 252,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:07",
+        "avgTime": "00:25",
+        "question": "Who was the last ruler of the Tughlaq dynasty of the Delhi Sultanate?",
+        "options": {
+          "a": "Nusrat Shah",
+          "b": "Nasir ud-din Mahmud",
+          "c": "Feroz Shah Tughlaq",
+          "d": "Ghiyasuddin Tughalq Shah II"
+        },
+        "answer": "b",
+        "solution": "Nasir ud - din Mahmud was the last ruler of the Tughlaq dynasty of the Delhi Sultanate, reigning from 1394 to 1413. His reign saw the invasion of Timur in 1398, leading to severe decline.\n\nHence, the correct answer is Option B.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Medieval History (Sultanate & Mughals)",
+        "conceptTested": "Chronology and historical rulers of the Tughlaq dynasty during the Delhi Sultanate.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Medieval History (Sultanate & Mughals)",
+          "conceptTested": "Chronology and historical rulers of the Tughlaq dynasty during the Delhi Sultanate.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_63107292bf",
+        "q_num": 253,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:11",
+        "avgTime": "00:28",
+        "question": "The 'Chitra-Vichitra' fair, which is mainly celebrated by the 'Garasia' and 'Bhil' tribes, is held in which state?",
+        "options": {
+          "a": "Rajasthan",
+          "b": "Gujarat",
+          "c": "Goa",
+          "d": "Madhya Pradesh"
+        },
+        "answer": "b",
+        "solution": "The 'Chitra - Vichitra' fair is a vibrant tribal fair predominantly celebrated in the state of Gujarat by the Garasia and Bhil tribes at the confluence of the Sabay and Wakal rivers in the Sabarkantha district.\n\nHence, the correct answer is Option B.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "Fairs Cultural Festivals",
+        "conceptTested": "Important traditional tribal fairs and regional celebrations in India.",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "Fairs Cultural Festivals",
+          "conceptTested": "Important traditional tribal fairs and regional celebrations in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f4fde5fe92",
+        "q_num": 254,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:23",
+        "question": "Alauddin Khalji ruled in India in which of the following periods?",
+        "options": {
+          "a": "1290-1296",
+          "b": "1266-1287",
+          "c": "1210-1236",
+          "d": "1296-1316"
+        },
+        "answer": "d",
+        "solution": "The correct answer is 1296 - 1316.\n\nAlauddin Khalji ruled over the Delhi Sultanate from 1296 to 1316. He was the second and most prominent ruler of the Khalji dynasty, known for his market reforms, centralized administration, and successful defense against Mongol invasions.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Historical Personalities & Events",
+        "conceptTested": "Reign and timeline of the Khalji dynasty ruler, Alauddin Khalji.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Historical Personalities & Events",
+          "conceptTested": "Reign and timeline of the Khalji dynasty ruler, Alauddin Khalji.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c8aa5a1d4d",
+        "q_num": 255,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:21",
+        "question": "Which of the following statements regarding nutrients in food is/are correct?\nA. Diseases caused by long-term deficiency of essential nutrients are called deficiency diseases.\nB. Vitamin C deficiency causes rickets.",
+        "options": {
+          "a": "Both A and B",
+          "b": "Only A",
+          "c": "Neither A nor B",
+          "d": "Only B"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Only A.\n\nStatement A is correct because diseases caused by the prolonged absence of essential nutrients in the diet are termed deficiency diseases.\n\nStatement B is incorrect because vitamin C deficiency causes scurvy, whereas rickets is caused by a deficiency of vitamin D.",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "Human Body, Diseases & Vitamins",
+        "conceptTested": "Identification of deficiency diseases caused by prolonged lack of essential nutrients and vitamins.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Human Body, Diseases & Vitamins",
+          "conceptTested": "Identification of deficiency diseases caused by prolonged lack of essential nutrients and vitamins.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_554bb5c77a",
+        "q_num": 256,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:09",
+        "avgTime": "00:19",
+        "question": "Under which initiative has the Government launched the 'Kaushal Rath' mobile programme to promote AI literacy?",
+        "options": {
+          "a": "IndiaAI Mission 2.0",
+          "b": "Yuva AI for All",
+          "c": "Digital India 2030",
+          "d": "Skill India Digital 2.0"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Yuva AI for All.\n\nIn News\nThe Ministry of Electronics and Information Technology launched \\'Kaushal Rath\\' under the National AI Literacy programme \\\"Yuva AI for All\\\".\n\nKey Points - Kaushal Rath is a mobile AI awareness initiative under \\\"Yuva AI for All\\\". - The programme aims to democratise foundational AI education across semi - urban and underserved regions. - The mobile unit is equipped with internet - enabled systems and hands - on AI training modules.",
+        "image": null,
+        "topic": "Government Schemes & Policies",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Recent government initiatives and awareness programmes launched under technology missions.",
+        "tags": {
+          "topic": "Government Schemes & Policies",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Recent government initiatives and awareness programmes launched under technology missions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_624b3bdfc5",
+        "q_num": 257,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:18",
+        "avgTime": "00:38",
+        "question": "Consider the following statements:\nStatement I: The procedure for impeachment of the President of India is deliberately made stringent.\nStatement II: Members of Parliament from the House investigating the charges function as the prosecuting authority during impeachment proceedings.\nWhich one of the following is correct?",
+        "options": {
+          "a": "Both\nStatement I and\nStatement II are correct and\nStatement II explains\nStatement I",
+          "b": "Both\nStatement I and\nStatement II are correct but\nStatement II does not explain\nStatement I",
+          "c": "Statement I is correct but\nStatement II is incorrect.",
+          "d": "Statement I is incorrect but\nStatement II is correct."
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C.\n\nKey Points - The procedure for impeachment of the President of India under Article 61 is intentionally made stringent to ensure the stability and dignity of the highest constitutional office. Hence, Statement I is correct. - During impeachment, the investigating House acts as a fact - finding or investigative body, not as an adversarial prosecuting authority in the legal sense. Hence, Statement II is incorrect.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Union & State Executive",
+        "conceptTested": "Article 61: Procedure and constitutional nature of the impeachment of the President of India.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Union & State Executive",
+          "conceptTested": "Article 61: Procedure and constitutional nature of the impeachment of the President of India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_401e1777e8",
+        "q_num": 258,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:22",
+        "question": "Read the below statements marked as Assertion (A) and Reason (R). Mark the correct option:\nAssertion (A): The Ghadar Party aimed to overthrow British rule through armed uprising during World War I.\nReason (R): It was secretly financed and supported by revolutionary groups based outside India.",
+        "options": {
+          "a": "Both A and R are true, and R is the correct explanation of A.",
+          "b": "Both A and R are true, but R is not the correct explanation of A.",
+          "c": "A is true, but R is false.",
+          "d": "A is false, but R is true."
+        },
+        "answer": "b",
+        "solution": "The correct answer is Both A and R are true, but R is not the correct explanation of A.\n\nKey Points - The Ghadar Party was founded in 1913 by Indian immigrants in the United States and Canada to fight against British colonial rule through armed revolution. - Although it received financial and secret support from revolutionary groups and foreign entities outside India, external support alone does not explain the primary political aim of the party to overthrow British rule.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Origins, objectives, and external support mechanisms of the Ghadar Party during World War I.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Origins, objectives, and external support mechanisms of the Ghadar Party during World War I.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8eb9408e93",
+        "q_num": 259,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "01:13",
+        "avgTime": "00:55",
+        "question": "Which part of India is the main natural habitat of maximum number of flamingos?",
+        "options": {
+          "a": "North-West",
+          "b": "East",
+          "c": "South-West",
+          "d": "South"
+        },
+        "answer": "a",
+        "solution": "The correct answer is North - West.\n\nThe North - West region of India, particularly areas like the Rann of Kutch in Gujarat, is the main natural habitat of the maximum number of flamingos due to rich food sources and shallow water bodies.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "Wildlife Sanctuaries Flora Fauna",
+        "conceptTested": "Geographical distribution of migratory and resident bird species in India.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Wildlife Sanctuaries Flora Fauna",
+          "conceptTested": "Geographical distribution of migratory and resident bird species in India.",
           "difficulty": "medium"
         }
       }

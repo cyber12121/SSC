@@ -16888,6 +16888,166 @@
           "conceptTested": "Knowledge of advanced English vocabulary and identification of synonymous meanings.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_e66a435e18",
+        "q_num": 532,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "04:02",
+        "avgTime": "02:10",
+        "question": "How does the author characterize their disagreement with \"ecological nativists\" in the final paragraph?",
+        "options": {
+          "a": "As a fundamental clash of values regarding the importance of wildness and sustainable futures.",
+          "b": "As a political struggle between those who support biodiversity and those who wish to see it decline.",
+          "c": "As an empirical dispute over what the scientific evidence actually proves, rather than a difference in environmental goals.",
+          "d": "As a rejection of the idea that humans should have any role in dominating the planet’s ecosystems."
+        },
+        "answer": "c",
+        "solution": "The author explicitly states that their disagreements with ecological nativists are \"almost entirely about what the scientific evidence supports\" and emphasizes that the conflict is \"not about values, \" as they share core environmental commitments with nativists.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Inference & Author Perspective",
+        "conceptTested": "Critical reading and comprehension of authorial intent and differentiation of arguments",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Inference & Author Perspective",
+          "conceptTested": "Critical reading and comprehension of authorial intent and differentiation of arguments",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_4b12918cf0",
+        "q_num": 533,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "02:08",
+        "avgTime": "00:43",
+        "question": "Which statement best reflects the author’s \"alternative\" to ecological nativism as presented in the text?",
+        "options": {
+          "a": "A \"Native-Only\" policy that focuses exclusively on the protection of flagship endangered species.",
+          "b": "A \"Fair Trial\" doctrine where destructive measures are a last resort, regardless of an organism's origin.",
+          "c": "The total cessation of all intervention in ecosystems to allow \"wildness\" to reclaim human-dominated spaces.",
+          "d": "The reclassification of all invasive parrots as \"native\" to prevent further mass culls in Spain and England."
+        },
+        "answer": "b",
+        "solution": "The author argues that we should \"pursue coexistence, and take destructive measures only if all else fails, \" treating alien invaders with the same ethical and scientific rigor applied to native species rather than resorting immediately to eradication.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Tone, Theme & Main Idea",
+        "conceptTested": "Extracting central thesis and alternative policy frameworks from descriptive texts",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Tone, Theme & Main Idea",
+          "conceptTested": "Extracting central thesis and alternative policy frameworks from descriptive texts",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_5f594a5f97",
+        "q_num": 534,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:40",
+        "avgTime": "00:37",
+        "question": "The author uses the comparison between African elephants and European parrots primarily to demonstrate that:",
+        "options": {
+          "a": "Parrots possess a level of cognitive complexity and social structure that is biologically superior to that of elephants.",
+          "b": "Human management strategies are dictated more by the perceived \"belonging\" of a species than by the actual degree of harm it causes.",
+          "c": "Endangered species status is the only universally accepted justification for the lethal control of animal populations.",
+          "d": "Green monk parakeets in Spain have become a flagship species for ecological nativism due to their invasive success."
+        },
+        "answer": "b",
+        "solution": "The correct answer is Option B. The author notes that while both elephants and parrots cause similar disruptions, our response is vastly different based on whether the species is native or alien, indicating that management is based on origin rather than actual ecological impact.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Inference & Author Perspective",
+        "conceptTested": "Evaluating the underlying purpose and comparative analysis used by the author in a literary passage.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Inference & Author Perspective",
+          "conceptTested": "Evaluating the underlying purpose and comparative analysis used by the author in a literary passage.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_cbc25bb4ee",
+        "q_num": 535,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:33",
+        "avgTime": "00:29",
+        "question": "Which of the following best expresses the author's \"concession\" regarding the difference between elephants and parrots?",
+        "options": {
+          "a": "Elephants are inherently more valuable to global biodiversity because they are a \"flagship\" endangered group.",
+          "b": "Lethal methods against parrots are justified because their global populations are not currently threatened with extinction.",
+          "c": "The conservation status of a species (vulnerable vs. stable) provides a common, though perhaps insufficient, rationale for differing management styles.",
+          "d": "Parrots in Europe do not actually cause enough crop damage to be compared to the destructive potential of African elephants."
+        },
+        "answer": "c",
+        "solution": "The correct answer is Option C. The author makes a concession by noting that elephants' status as 'flagship endangered species' provides a reason why society is more protective of them, while stable species populations are often cited as justification for lethal control.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Fact & Detail Comprehension",
+        "conceptTested": "Identifying authorial concessions and evaluating how differing statuses influence general management logic.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Fact & Detail Comprehension",
+          "conceptTested": "Identifying authorial concessions and evaluating how differing statuses influence general management logic.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "engl_25030e8ac0",
+        "q_num": 536,
+        "mockId": "mock_1791473643219_6ivip",
+        "testId": "mock_1791473643219_6ivip",
+        "testName": "SSC CGL Tier I: Full Test - 17",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:16",
+        "question": "Choose the word that is opposite in meaning to the given word: Antsy",
+        "options": {
+          "a": "Collected",
+          "b": "Perturbed",
+          "c": "Pure",
+          "d": "Adulation"
+        },
+        "answer": "a",
+        "solution": "The correct answer is 'Collected'. 'Antsy' means restlessness or impatience due to nervousness. 'Collected' describes someone calm, in control of their emotions, and not nervous, making it the correct antonym.",
+        "image": null,
+        "topic": "Synonyms & Antonyms",
+        "subtopic": "Antonyms",
+        "conceptTested": "Vocabulary recall and identification of words with contrasting meanings.",
+        "tags": {
+          "topic": "Synonyms & Antonyms",
+          "subtopic": "Antonyms",
+          "conceptTested": "Vocabulary recall and identification of words with contrasting meanings.",
+          "difficulty": "medium"
+        }
       }
     ]
   }
