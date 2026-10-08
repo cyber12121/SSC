@@ -3075,7 +3075,7 @@
         "correctOption": "A",
         "userTime": "01:27",
         "avgTime": "01:12",
-        "question": "In the following question, select the related letter pair from the given alternatives. $POEM : RIRR :: ?$ मापने के लिए सही विकल्प चुनें:",
+        "question": "In the following question, select the related letter pair from the given alternatives. POEM : RIRR :: ? मापने के लिए सही विकल्प चुनें:",
         "options": {
           "a": "TIRX : CVLV",
           "b": "HANG : LRDF",
@@ -3083,7 +3083,7 @@
           "d": "MATB : GXXO"
         },
         "answer": "a",
-        "solution": "The logic followed here is: $P (+2) = R$, $O (+4) = I$, $E (+13) = R$, $M (+5) = R$\nSimilarly for $TIRX : CVLV$: $T (+9) = C$, $I (+13) = V$, $R (+4) = L$, $X (+2) = V$.\n\nThus, $TIRX : CVLV$ follows the same analogy.\n\nHence, the correct answer is \"TIRX : CVLV\".",
+        "solution": "Solution\n\nThe logic followed here is:\n\nPOEM ∶ RIRR\n$P (+2) = R$, $O (+4) = I$, $E (+13) = R$, $M (+5) = R$\n\nSimilarly,\n\nTIRX ∶ CVLV\n$T (+9) = C$, $I (+13) = V$, $R (+4) = L$, $X (+2) = V$\n\nThus, TIRX ∶ CVLV is related to POEM ∶ RIRR.\n\nHence, the correct answer is \"TIRX ∶ CVLV\".",
         "image": null,
         "topic": "Analogy",
         "subtopic": "Letter & Alphabet Analogy",
@@ -3115,7 +3115,7 @@
           "d": "12"
         },
         "answer": "c",
-        "solution": "The logic followed here is: $208 - 18 = 190$\n\n$190 - 27 = 163$\n\n$163 - 36 = 127$\n\n$127 - 45 = 82$\n\nThe differences are decreasing by consecutive multiples of 9 ($18, 27, 36, 45$). The next difference is $54$.\n\n$82 - 54 = 28$.\n\nHence, \"28\" is the correct answer.",
+        "solution": "Solution\n\nThe logic followed here is:\n\n$208 - 18 = 190$\n$190 - 27 = 163$\n$163 - 36 = 127$\n$127 - 45 = 82$\n\nThe differences are decreasing by consecutive multiples of 9 ($18, 27, 36, 45, 54$).\n\n$82 - 54 = 28$\n\nHence, \"Option 3\" (28) is the correct answer.",
         "image": null,
         "topic": "Number Series",
         "subtopic": "Missing Number Series",
@@ -3147,7 +3147,7 @@
           "d": "4"
         },
         "answer": "c",
-        "solution": "Given:\n1) C lives on the top floor (Floor 6).\n2) B lives on an odd numbered floor but not 3. Thus, B lives on Floor 5 or Floor 1.\n3) The sum of floors of B and D is 7. Since B is on Floor 5, D must be on Floor 2 ($5 + 2 = 7$).\n4) E lives immediately below F. The only vacant consecutive slots for F and E are Floors 4 and 3 respectively.\n5) The remaining person A occupies the lowermost Floor 1.\nFinal arrangement from top to bottom: Floor 6: C\nFloor 5: B\nFloor 4: F\nFloor 3: E\nFloor 2: D\nFloor 1: A\n\nThree people (F, B, C) live above E.\n\nHence, the correct answer is \"3\".",
+        "solution": "Solution\n\nGiven: A, B, C, D, E and F live on six different floors of the same building. The lowermost floor in the building is numbered 1, the floor above it, number 2 and so on, till the topmost floor is numbered 6.\n\n1) C lives on the top floor.\n\nThis means C is on Floor 6.\n\nFloor\tPerson\n6\tC\n5\t \n4\t \n3\t \n2\t \n1\t \n\n2) B lives on an odd numbered floor but not 3.\n\nPossible odd floors for B are 1 or 5.\n\n3) The sum of floors on which B and D live is 7.\n\nCase 1: B is on Floor 1. Then D must be on Floor 6 (1 + 6 = 7). But C is already on Floor 6. So, this case is not possible.\nCase 2: B is on Floor 5. Then D must be on Floor 2 (5 + 2 = 7). This is a valid pair.\n\nTherefore, B lives on Floor 5 and D lives on Floor 2.\n\nFloor\tPerson\n6\tC\n5\tB\n4\t \n3\t \n2\tD\n1\t \n\n4) E lives immediately below F.\n\n5) The only remaining person is A, and the only remaining floor is 1. So, A lives on Floor 1.\n\nFloor\tPerson\n6\tC\n5\tB\n4\tF\n3\tE\n2\tD\n1\tA\n\nThus, Three people (F, B, C) live above E.\n\nHence, the correct answer is \"Option 3\".",
         "image": null,
         "topic": "Seating Arrangement",
         "subtopic": "Linear Seating Arrangement",
@@ -3179,7 +3179,7 @@
           "d": "Priya"
         },
         "answer": "d",
-        "solution": "Seven friends: Misha, Minshu, Mohi, Priya, Veer, Pari and Krishi.\n1) Krishi is taller than only three people (meaning Krishi is at 4th position from top).\n2) Pari is taller than only Veer (Pari is 6th, Veer is 7th).\n3) Misha is taller than Minshu but not Mohi ($Mohi > Misha > Minshu$).\n4) Priya is taller than Mohi ($Priya > Mohi$).\nCombining all statements in descending order of height: Priya > Mohi > Misha > Krishi > Minshu > Pari > Veer\n\nPriya is the tallest among all of them.\n\nHence, the correct answer is \"Priya\".",
+        "solution": "Solution\n\nSeven friends: Misha, Minshu, Mohi, Priya, Veer, Pari and Krishi.\n\n1) Krishi is taller than only three people.\n\n_ > _ > _ > Krishi > _ > _ > _\n\n2) Pari is taller than only Veer.\n\n_ > _ > _ > _ >_ > Pari > Veer\n\n3) Misha is taller than Minshu but not Mohi.\n\nMohi > Misha > Minshu\n\n4) Priya is taller than Mohi.\n\nPriya > Mohi\n\nCombining all the statements:\n\nPriya > Mohi > Misha > Krishi > Minshu > Pari > Veer\n\nPriya is tallest among all of them.\n\nHence, the correct answer is \"Priya\".",
         "image": null,
         "topic": "Order & Ranking",
         "subtopic": "Total Persons & Direct Ranking",
@@ -3211,7 +3211,7 @@
           "d": "O is the brother of L."
         },
         "answer": "b",
-        "solution": "According to the given information: - L * M means L is the son of M. - M @ N means M is the father of N. - N % O means N is the wife of O. - O * P means O is the son of P.\n\nFrom this family tree, L, N, and potentially others are related, and since M is the father of N, and N is married to O whose father is P, N is the daughter - in - law of P.\n\nHence, Option B is correct.",
+        "solution": "Solution\n\nFor this question, we use the table given below:\n\nSymbol\tMeaning\n@\tFather of T\n%\tWife of T\n#\tDaughter of T\n*\tSon of T\n\nBy using the symbols given in the above table we solve the expression, L * M @ N % O * P:\n\n1) L * M: L is the son of M.\n2) M @ N: M is the father of N (and father of L).\n3) N % O: N is the wife of O (O is the husband of N).\n4) O * P: O is the son of P.\n\nFrom the above relations, since N is married to O and O is the son of P, N is the daughter-in-law of P.\n\nHence, Option (2) is correct.",
         "image": null,
         "topic": "Blood Relations",
         "subtopic": "Coded Blood Relations",
@@ -3243,7 +3243,7 @@
           "d": "MO"
         },
         "answer": "b",
-        "solution": "The pattern followed in TG : DQ: T - 3 = Q\nG - 3 = D\nSimilarly for LP: L - 3 = I\nP - 3 = M\nThus LP : MI.\nHence, the correct answer is Option B.",
+        "solution": "Solution\n\nThe logic followed here is:\n\nPOEM ∶ RIRR\n$P (+2) = R$, $O (+4) = I$, $E (+13) = R$, $M (+5) = R$\n\nSimilarly,\n\nTIRX ∶ CVLV\n$T (+9) = C$, $I (+13) = V$, $R (+4) = L$, $X (+2) = V$\n\nThus, TIRX ∶ CVLV is related to POEM ∶ RIRR.\n\nHence, the correct answer is \"TIRX ∶ CVLV\".",
         "image": null,
         "topic": "Analogy",
         "subtopic": "Letter & Alphabet Analogy",
@@ -7575,7 +7575,7 @@
           "d": "Talk to him and his parents and take him to a rehab center."
         },
         "answer": "d",
-        "solution": "The correct answer is Talk to him and his parents and take him to a rehab center.\n\nReasoning: Simply complaining to parents or ignoring shows lack of responsibility. Just counselling may not be enough. Taking him to a rehab center along with informing his parents reflects effective intelligence, high sense of responsibility, and problem - solving determination.",
+        "solution": "Solution\n\nThe correct answer is Option 4: Talk to him and his parents and take him to a rehab center.\n\nStatement\tCorrectness\tReasoning\nComplain to his parents.\tIncorrect\tThis shows you lack reasoning ability. If you complain to his parents, they will scold him or he will start hating you and also he may increase his consumption in secret.\nTalk to your cousin and counsel him regarding the consequences of taking them.\tIncorrect\tThis shows you have reasoning ability and a sense of responsibility.  But just talking to him will not solve the problem. He should be taken to a rehab center and you should also inform his parents\nIgnore it.\tIncorrect\tThis shows you don't have sense of responsibility.\nTalk to him and his parents and take him to a rehab center.\tCorrect\tThis shows you have effective intelligence, sense of responsibility, reasoning ability, and determination.\n\nQualities Projected in this situation: (Effective intelligence, reasoning ability, sense of responsibility, and determination).\n\nKey Points\n\nChecklist for attempting SRT questions:\nRead the question and options carefully.\nLook for options that are realistic, optimistic, and reflect officer-like qualities.\nDo not skip any situation.\nRelegate the negative sentences and choose the most logical option among the remaining. As time is an important factor, hence your thinking ability should be swift.\nReact quickly and be logical.\n\nAdditional Information\n\nOfficer qualities:",
         "image": null,
         "topic": "Arithmetical Reasoning",
         "subtopic": "Situation Reaction Test",

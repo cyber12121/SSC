@@ -245,12 +245,15 @@ export function parseSolutionSections(solText: string = ''): SolutionSection[] {
   let text = solText.replace(/^Solution\s*\n+/i, '').trim();
 
   // 1. Ensure known section headers start on their own fresh lines even if concatenated without newlines
+  const headersList = 'Shortcut Trick|Alternate Method|Method\\s+\\d+|Traditional Method|Given|Formula Used|Calculations?|Steps?|Additional Information|Key Points?|Important Points?|In News|Theme of the Question|Officer qualities|Qualities Projected[^\n:]*|Note';
+
+  const splitEnsureRegex = new RegExp(`([^\\n])\\s*\\b(${headersList})\\s*:`, 'gi');
   text = text
-    .replace(/([^\n])\s*\b(Shortcut Trick|Alternate Method|Method\s+\d+|Traditional Method|Given|Formula Used|Calculations?|Steps?|Additional Information|Key Points?|Note)\s*:/gi, '$1\n\n$2:')
+    .replace(splitEnsureRegex, '$1\n\n$2:')
     .replace(/([^\n])\s*([⇒∴])/g, '$1\n$2')
     .replace(/([^\n])\s*(Formula\s*:)/gi, '$1\n$2');
 
-  const headerRegex = /(?<=^|\n)\s*(Shortcut Trick|Alternate Method|Method\s+\d+|Traditional Method|Given|Formula Used|Calculations?|Steps?|Additional Information|Key Points?|Note)\s*:?(?:\s*\n+|$)/gi;
+  const headerRegex = new RegExp(`(?<=^|\\n)\\s*(${headersList})\\s*:?(?:\\s*\\n+|$)`, 'gi');
 
   const splits: { header: string; index: number; headerLength: number }[] = [];
   let match: RegExpExecArray | null;
@@ -288,7 +291,7 @@ export function parseSolutionSections(solText: string = ''): SolutionSection[] {
     else if (hLower.includes('formula')) type = 'formula';
     else if (hLower.includes('given')) type = 'given';
     else if (hLower.includes('calc') || hLower.includes('step')) type = 'calculation';
-    else if (hLower.includes('additional') || hLower.includes('key point')) type = 'additional';
+    else if (hLower.includes('additional') || hLower.includes('key point') || hLower.includes('important point') || hLower.includes('in news') || hLower.includes('theme') || hLower.includes('qualit')) type = 'additional';
     else if (hLower.includes('alternate') || hLower.includes('method') || hLower.includes('traditional')) type = 'method';
 
     // Format section contents to break continuous steps into clean lines

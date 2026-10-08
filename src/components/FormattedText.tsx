@@ -38,15 +38,18 @@ function formatInlineMarkdown(text: string): React.ReactNode {
 
 function renderTableBlock(tableLines: string[], keyPrefix: string | number) {
   if (tableLines.length === 0) return null;
-  const rows = tableLines.map(line =>
-    line
-      .trim()
+  const rows = tableLines.map(line => {
+    const trimmed = line.trim();
+    if (trimmed.includes('\t')) {
+      return trimmed.split('\t').map(cell => cell.trim());
+    }
+    return trimmed
       .replace(/^\||\|$/g, '')
       .split('|')
-      .map(cell => cell.trim())
-  );
+      .map(cell => cell.trim());
+  });
 
-  const headerRow = rows[0];
+  const headerRow = rows[0] || [];
   const isSeparator = (row: string[]) => row.every(c => /^[-:\s]+$/.test(c));
   const bodyRows = rows.slice(1).filter(r => !isSeparator(r));
 
@@ -98,62 +101,6 @@ function isAnalogyLine(line: string): boolean {
   return false;
 }
 
-function renderAnalogyBlock(line: string, key: string) {
-  let pairs: string[] = [];
-  if (/::|:\s*:/.test(line)) {
-    pairs = line.split(/\s*(?:::|:\s*:)\s*/);
-  } else {
-    const allParts = line.split(/\s*:\s*/);
-    if (allParts.length === 4) {
-      pairs = [`${allParts[0]} : ${allParts[1]}`, `${allParts[2]} : ${allParts[3]}`];
-    } else {
-      pairs = [line];
-    }
-  }
-
-  return (
-    <div
-      key={key}
-      className="my-2.5 p-2.5 sm:px-4 sm:py-3 bg-gradient-to-r from-slate-50 via-indigo-50/25 to-slate-50 border border-slate-200/90 rounded-xl inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 text-slate-800 font-semibold tracking-wide text-xs sm:text-sm md:text-[15px] shadow-2xs select-text"
-    >
-      {pairs.map((pair, pIdx) => {
-        const terms = pair.split(/\s*:\s*/);
-        return (
-          <React.Fragment key={pIdx}>
-            {pIdx > 0 && (
-              <span className="font-black text-indigo-600 bg-white border border-indigo-200/80 rounded px-1.5 py-0.5 shadow-2xs text-xs sm:text-sm tracking-wider select-none shrink-0">
-                ::
-              </span>
-            )}
-            <div className="inline-flex items-center gap-1.5 shrink-0">
-              {terms.map((term, tIdx) => {
-                const cleanTerm = term.trim();
-                const isMissing = cleanTerm === '?' || cleanTerm.includes('?');
-                return (
-                  <React.Fragment key={tIdx}>
-                    {tIdx > 0 && (
-                      <span className="font-bold text-slate-400 select-none px-0.5">:</span>
-                    )}
-                    <span
-                      className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md font-mono text-center tracking-normal ${
-                        isMissing
-                          ? 'bg-amber-100 text-amber-900 font-bold border border-amber-300 ring-2 ring-amber-200/60 shadow-2xs'
-                          : 'bg-white text-slate-800 font-medium border border-slate-200/90 shadow-2xs'
-                      }`}
-                    >
-                      {formatInlineMarkdown(cleanTerm)}
-                    </span>
-                  </React.Fragment>
-                );
-              })}
-            </div>
-          </React.Fragment>
-        );
-      })}
-    </div>
-  );
-}
-
 function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences = false, subject?: string) {
   // When breakOnSentences is true, replace ". " with ".\n" so each sentence
   // starts on its own line (used in solution view).
@@ -189,7 +136,8 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
 
   lines.forEach((rawLine, i) => {
     const line = rawLine.trim();
-    const isTableLine = line.startsWith('|') && line.endsWith('|');
+    const hasTabs = line.includes('\t') && line.split('\t').filter(c => c.trim().length > 0).length >= 2;
+    const isTableLine = (line.startsWith('|') && line.endsWith('|')) || hasTabs;
 
     if (isTableLine) {
       tableBuffer.push(rawLine);
@@ -243,12 +191,6 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
           <span className="flex-1">{formatInlineMarkdown(line.replace(/^∴\s*/, ''))}</span>
         </div>
       );
-      return;
-    }
-
-    // Analogy / Proportion line (e.g. "AFTER : ZJWKT :: MODEL : LSGKN :: LIGHT : ?" or "25 : 37 :: 64 : ?")
-    if (isAnalogyLine(line)) {
-      elements.push(renderAnalogyBlock(line, `analogy-${tokenIdx}-${i}`));
       return;
     }
 

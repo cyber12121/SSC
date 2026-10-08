@@ -52,6 +52,9 @@ export function cleanQuestionText(text: string = ''): string {
   s = s.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
   s = s.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
 
+  // Strip spurious dollar signs placed around reasoning analogies or letter sequences (e.g. "$POEM : RIRR :: ?$" -> "POEM : RIRR :: ?")
+  s = s.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\s\-']+\s*:\s*[A-Za-z0-9\s\-']+(?:\s*::\s*[^$\n]+)?)\$(?=[^\$]|$)/g, '$1');
+
   // Normalize spaces inside dollar delimiters: only if not containing natural language words
   s = s.replace(/\$([^\$\n]+?)\$/g, (m, inner) => {
     const trimmed = inner.trim();
@@ -122,7 +125,7 @@ export function cleanQuestionText(text: string = ''): string {
   // - Clean redundant spacing around analogy/ratio single colons while avoiding URLs or time (e.g. "12:00", "http://")
   s = s.replace(/(?<=[A-Za-z0-9?])\s+:\s+(?=[A-Za-z0-9?])/g, ' : ');
   // - Ensure directive ending with a period/question mark followed immediately by an analogy is placed on a fresh line
-  s = s.replace(/([.?!])\s+(?=(?:[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*::|[A-Za-z0-9]+\s*:\s*[A-Za-z0-9]+\s*:\s*[A-Za-z0-9]+\s*:))/g, '$1\n\n');
+  s = s.replace(/([.?!])\s+(?=(?:\$?[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*::|[A-Za-z0-9]+\s*:\s*[A-Za-z0-9]+\s*:\s*[A-Za-z0-9]+\s*:))/g, '$1\n\n');
 
   // 7. If question ends with ? followed by an equation or number without newline
   s = s.replace(/\?([ \t]*)(?=[0-9A-Za-z\+\-\*\/÷×=]+\s*[\+\-\*\/÷×=]\s*[0-9A-Za-z])/g, '?\n');
@@ -243,6 +246,9 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   text = text.replace(/\\+\$([^$]+?)\$/g, '$$$1$$');
   text = text.replace(/\$([^$]+?)\\+\$/g, '$$$1$$');
 
+  // Strip spurious dollar signs placed around reasoning analogies or letter sequences
+  text = text.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\s\-']+\s*:\s*[A-Za-z0-9\s\-']+(?:\s*::\s*[^$\n]+)?)\$(?=[^\$]|$)/g, '$1');
+
   // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "num $ num", "$ stands for")
   text = text.replace(/(['"`])\$(['"`])/g, '$1___DOLLAR_SYM___$2');
   text = text.replace(/(\b\d+)\s*\$\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
@@ -337,8 +343,15 @@ export function splitInstructionAndQuestion(
     }
   }
 
-  // Case 2: Directive ending with colon ':' on the first line (e.g. "Letter Analogy: GFEH : MLKN :: ONMP : ?" or "Directions:")
-  // Strict rule: The colon MUST be on the first line, and candidateInst must NOT look like an analogy term (e.g. "AFTER :")
+  // Case 2: Single line where directive ends with a period/question mark followed by an analogy or question content
+  // e.g. "Select the option... related to 1st number. 25 : 37 :: 64 : ?"
+  const periodMatch = trimmed.match(/^([A-Z\u0900-\u097F][^.!?\n]*[.?!])\s+((?:[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*::|[\d\s,]+:\s*[\d\s,]+|.+:\s*.+))/);
+  if (periodMatch && DIRECTIVE_PREFIX.test(periodMatch[1])) {
+    return { instruction: periodMatch[1].trim(), content: periodMatch[2].trim() };
+  }
+
+  // Case 3: Directive ending with colon ':' on the first line (e.g. "Letter Analogy: GFEH : MLKN :: ONMP : ?" or "Directions:")
+  // Strict rule: The colon MUST be on the first line, and candidateInst must NOT contain internal sentence ends or look like an analogy term
   const firstLine = lines[0].trim();
   const colonIdx = firstLine.indexOf(':');
   if (colonIdx > 8 && colonIdx < 120) {
@@ -348,17 +361,11 @@ export function splitInstructionAndQuestion(
     const isDirective = DIRECTIVE_PREFIX.test(candidateInst);
     const hasAnalogyOps = /::|[<>=]/.test(candidateInst);
     const isAnalogyTerm = /^[A-Z0-9,\s\-']{1,10}\s*:?$/.test(candidateInst) || candidateInst.split(/\s+/).length < 2;
+    const hasSentenceEnd = /[.?!]/.test(candidateInst.slice(0, -1));
 
-    if (candidateContent && isDirective && !hasAnalogyOps && !isAnalogyTerm) {
+    if (candidateContent && isDirective && !hasAnalogyOps && !isAnalogyTerm && !hasSentenceEnd) {
       return { instruction: candidateInst, content: candidateContent };
     }
-  }
-
-  // Case 3: Single line where directive ends with a period/question mark followed by an analogy or question content
-  // e.g. "Select the option... related to 1st number. 25 : 37 :: 64 : ?"
-  const periodMatch = trimmed.match(/^([A-Z\u0900-\u097F][^.!?\n]*[.?!])\s+((?:[A-Za-z0-9,\s\-']+\s*:\s*[A-Za-z0-9,\s\-']+\s*::|[\d\s,]+:\s*[\d\s,]+|.+:\s*.+))/);
-  if (periodMatch && DIRECTIVE_PREFIX.test(periodMatch[1])) {
-    return { instruction: periodMatch[1].trim(), content: periodMatch[2].trim() };
   }
 
   return { instruction: null, content: trimmed };
