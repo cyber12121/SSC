@@ -17048,6 +17048,102 @@
           "conceptTested": "Vocabulary recall and identification of words with contrasting meanings.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "engl_05bb15498f",
+        "q_num": 537,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:45",
+        "avgTime": "00:27",
+        "question": "Direction- In the following question, a sentence is given in Direct/Indirect speech. Out of the four alternatives choose the one which best expresses the sentence is Direct/Indirect Speech. They said to the thief, \" If you tell us the truth we won't send you to jail\".",
+        "options": {
+          "a": "They told the thief that if he told them the truth they wouldn't send him to jail.",
+          "b": "They asked the truth from the thief.",
+          "c": "They said to the thief tell them the truth.",
+          "d": "They said to the thief that if he told us the truth they wouldn't send him to jail."
+        },
+        "answer": "a",
+        "solution": "The correct sentence is 'They told the thief that if he told them the truth they wouldn't send him to jail.'\n\nKey Points\nAs we know that the sentence is a conditional sentence of open type in which there's a probability that if the thief tells them the truth they will not send him to jail. So, we need to change the tense of the sentence accordingly.\n\nAs the reported verb has an object in it i.e. 'they said to the thief', we need to change 'said to' to 'told'.",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Interrogative Sentences",
+        "conceptTested": "In indirect speech, reporting verb 'said to' changes to 'told', conditional clauses maintain logical tense backshifting, and pronouns change according to the subject/object.",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Interrogative Sentences",
+          "conceptTested": "In indirect speech, reporting verb 'said to' changes to 'told', conditional clauses maintain logical tense backshifting, and pronouns change according to the subject/object.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_1330b7ba09",
+        "q_num": 538,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:37",
+        "avgTime": "00:22",
+        "question": "Select the INCORRECTLY spelt word.",
+        "options": {
+          "a": "Essence",
+          "b": "Innocence",
+          "c": "Conveniance",
+          "d": "Conveyance"
+        },
+        "answer": "c",
+        "solution": "The erroneously spelt word is Conveniance. The correct spelling is Convenience, which means the quality of being easy, useful, or suitable for somebody.",
+        "image": null,
+        "topic": "Correctly Spelt Words",
+        "subtopic": "Correctly Spelt Words",
+        "conceptTested": "Identification of misspelled words based on standard English orthography rules.",
+        "tags": {
+          "topic": "Correctly Spelt Words",
+          "subtopic": "Correctly Spelt Words",
+          "conceptTested": "Identification of misspelled words based on standard English orthography rules.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "engl_cd280f1e57",
+        "q_num": 539,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:45",
+        "avgTime": "00:35",
+        "question": "The sentence below contains errors. Select the option with the correct use of tenses: \"I will revised my course at least three times before my final examination.\"",
+        "options": {
+          "a": "I will have revised my course at least three times before my final examination.",
+          "b": "I must revised my course at least three times before my final examination.",
+          "c": "I would revised my course at least three times before my final examination.",
+          "d": "I will be revised my course at least three times since my final examination."
+        },
+        "answer": "a",
+        "solution": "The primary issue in the sentence is the incorrect use of the verb tense. The phrase \"I will revised\" is grammatically incorrect because \"revised\" is the past form and cannot be used directly with \"will\". The correct future perfect tense is \"I will have revised\", which indicates that the action of revising will be completed before the final examination.",
+        "image": null,
+        "topic": "Tenses",
+        "subtopic": "Tenses",
+        "conceptTested": "Use of the future perfect tense to express an action that will be completed before a specified point in the future.",
+        "tags": {
+          "topic": "Tenses",
+          "subtopic": "Tenses",
+          "conceptTested": "Use of the future perfect tense to express an action that will be completed before a specified point in the future.",
+          "difficulty": "hard"
+        }
       }
     ]
   }

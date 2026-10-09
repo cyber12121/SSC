@@ -5137,6 +5137,134 @@
           "conceptTested": "Identification of prominent musicologists and their literary works in Indian classical music.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_ca0b8c7cad",
+        "q_num": 164,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:05",
+        "avgTime": "00:14",
+        "question": "Who has taken oath as the Chief Justice of the Sikkim High Court on January 4, 2026?",
+        "options": {
+          "a": "A. Muhamed Mustaque",
+          "b": "Biswanath Somadder",
+          "c": "Raj Bahadur Lama",
+          "d": "Nirat Singh Ghishing"
+        },
+        "answer": "a",
+        "solution": "The correct answer is A. Muhamed Mustaque. Justice A. Muhamed Mustaque took oath as the Chief Justice of the Sikkim High Court on January 4, 2026, at Lok Bhawan, administered by Governor Om Prakash Mathur.",
+        "image": null,
+        "topic": "Current Affairs",
+        "subtopic": "Appointments & Resignations",
+        "conceptTested": "Recent high court chief justice appointments in India",
+        "tags": {
+          "topic": "Current Affairs",
+          "subtopic": "Appointments & Resignations",
+          "conceptTested": "Recent high court chief justice appointments in India",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_838a409a7b",
+        "q_num": 165,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:18",
+        "question": "Which of the following enzymes is correctly matched with its cofactor?",
+        "options": {
+          "a": "Carbonic anhydrase - Fe\\(^2\\+\\)",
+          "b": "Nitrogenase - Mo",
+          "c": "Salivary amylase - Zn\\(^2\\+\\)",
+          "d": "Urease - Cu\\(^2\\+\\)"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Nitrogenase - Mo. Nitrogenase contains Molybdenum (Mo) as a cofactor, which plays a critical role in biological nitrogen fixation.",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "General Science Principles",
+        "conceptTested": "Identification of metallic cofactors and active metal components in key enzymes",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "General Science Principles",
+          "conceptTested": "Identification of metallic cofactors and active metal components in key enzymes",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_8302dd4ea7",
+        "q_num": 166,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:11",
+        "avgTime": "00:27",
+        "question": "Which one of the following pairs is not correctly matched?\n\nGrassland - Continent\n(A) Selvas - South America\n(B) Pampas - Europe\n(C) Velds - Africa\n(D) Downs - Australia",
+        "options": {
+          "a": "A",
+          "b": "B",
+          "c": "C",
+          "d": "D"
+        },
+        "answer": "b",
+        "solution": "The correct answer is B. Pampas is located in South America, not Europe.",
+        "image": null,
+        "topic": "World Geography",
+        "subtopic": "General Indian Geography",
+        "conceptTested": "Global distribution of major tropical and temperate grasslands",
+        "tags": {
+          "topic": "World Geography",
+          "subtopic": "General Indian Geography",
+          "conceptTested": "Global distribution of major tropical and temperate grasslands",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f4c3eb8ffb",
+        "q_num": 167,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:02",
+        "avgTime": "00:12",
+        "question": "How many awards in the \"Sena Medal (Gallantry)\" category for 2026 were posthumous?",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "5",
+          "d": "7"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 5. Out of a total of 44 Sena Medals (Gallantry) approved, 5 were awarded posthumously.",
+        "image": null,
+        "topic": "Current Affairs",
+        "subtopic": "Sports & Awards in News",
+        "conceptTested": "Gallantry award statistics and recipient data for 2026",
+        "tags": {
+          "topic": "Current Affairs",
+          "subtopic": "Sports & Awards in News",
+          "conceptTested": "Gallantry award statistics and recipient data for 2026",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -13312,6 +13440,358 @@
           "topic": "National Parks & Environment",
           "subtopic": "Wildlife Sanctuaries Flora Fauna",
           "conceptTested": "Geographical distribution of migratory and resident bird species in India.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_cd9a48fe4f",
+        "q_num": 260,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:17",
+        "avgTime": "00:30",
+        "question": "Match the following Projects and Locations:\nProject Name - State/Region\nA) Hirakud - 1) Rajasthan\nB) Damodar Valley - 2) Jharkhand-West Bengal\nC) Nagarjuna Sagar - 3) Telangana\nD) Indira Gandhi Canal - 4) Odisha",
+        "options": {
+          "a": "A-4, B-2, C-3, D-1",
+          "b": "A-2, B-1, C-4, D-3",
+          "c": "A-3, B-2, C-4, D-1",
+          "d": "A-1, B-3, C-2, D-4"
+        },
+        "answer": "a",
+        "solution": "The correct matching is: - A) Hirakud -> 4) Odisha - B) Damodar Valley -> 2) Jharkhand - West Bengal - C) Nagarjuna Sagar -> 3) Telangana - D) Indira Gandhi Canal -> 1) Rajasthan\nHence, the correct answer is A - 4, B - 2, C - 3, D - 1.",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Rivers Dams",
+        "conceptTested": "Major river valley projects and their corresponding states",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Rivers Dams",
+          "conceptTested": "Major river valley projects and their corresponding states",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_34d48700ff",
+        "q_num": 261,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:09",
+        "avgTime": "00:15",
+        "question": "Where has Prime Minister Narendra Modi inaugurated the 72nd National Volleyball Tournament in January 2026?",
+        "options": {
+          "a": "Prayagraj",
+          "b": "New Delhi",
+          "c": "Lucknow",
+          "d": "Varanasi"
+        },
+        "answer": "d",
+        "solution": "The correct answer is Varanasi.\n\nIn News\nPrime Minister Narendra Modi inaugurated the 72nd National Volleyball Tournament through video conferencing from Varanasi.",
+        "image": null,
+        "topic": "Current Affairs",
+        "subtopic": "National & Global Events",
+        "conceptTested": "Recent national events, sports tournaments, and prominent leadership inaugurations.",
+        "tags": {
+          "topic": "Current Affairs",
+          "subtopic": "National & Global Events",
+          "conceptTested": "Recent national events, sports tournaments, and prominent leadership inaugurations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f382050348",
+        "q_num": 262,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:08",
+        "avgTime": "00:20",
+        "question": "In which of the following river valleys in India is the deposit of coal the largest?",
+        "options": {
+          "a": "The Damodar",
+          "b": "The Mahanadi",
+          "c": "The Godavari",
+          "d": "The Son"
+        },
+        "answer": "a",
+        "solution": "The Correct Answer is The Damodar.\n\nKey Points\nAbout 80 percent of the coal deposits in India are of a bituminous type and are of non - coking grade.\n\nThe most important Gondwana coal fields in India are located in Damodar Valley.\n\nThey lie in the Jharkhand - Bengal coal belt and the important coal fields in this region are Raniganj, Jharia, Bokaro, Giridih, and Karanpura.",
+        "image": null,
+        "topic": "Indian Drainage & Physiography",
+        "subtopic": "Rivers Tributaries",
+        "conceptTested": "Geographical distribution of major mineral resources and river basins in India, specifically Gondwana coal fields.",
+        "tags": {
+          "topic": "Indian Drainage & Physiography",
+          "subtopic": "Rivers Tributaries",
+          "conceptTested": "Geographical distribution of major mineral resources and river basins in India, specifically Gondwana coal fields.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a20d777507",
+        "q_num": 263,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:14",
+        "avgTime": "00:35",
+        "question": "Who among the following rulers is credited with implementing an administrative system that later influenced Mughal governance under Akbar?",
+        "options": {
+          "a": "Alauddin Khalji",
+          "b": "Sher Shah Suri",
+          "c": "Humayun",
+          "d": "Ibrahim Lodi"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Sher Shah Suri.\n\nKey Points\nSher Shah Suri’s administrative reforms including revenue management and governance efficiency became a model later followed by Emperor Akbar in the Mughal Empire.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Medieval History (Sultanate & Mughals)",
+        "conceptTested": "Administrative reforms and revenue systems established by medieval rulers that laid foundations for future empires.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Medieval History (Sultanate & Mughals)",
+          "conceptTested": "Administrative reforms and revenue systems established by medieval rulers that laid foundations for future empires.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_c1d84920fd",
+        "q_num": 264,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:19",
+        "avgTime": "00:24",
+        "question": "Which type of spherical mirror is used by dentists to see a large image of the teeth of patients?",
+        "options": {
+          "a": "Plane mirror",
+          "b": "Convex mirror",
+          "c": "Concave mirror",
+          "d": "Bifocal mirror"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Concave mirror.\n\nA Concave mirror is the type of spherical mirror used by dentists to see a large (magnified) image of a patient's teeth because when an object is placed very close to the mirror, the resulting image is virtual, erect, and magnified.",
+        "image": null,
+        "topic": "Physics",
+        "subtopic": "Optics, Sound & Waves",
+        "conceptTested": "Image formation properties of spherical mirrors (concave mirrors for virtual, erect, and magnified images).",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Optics, Sound & Waves",
+          "conceptTested": "Image formation properties of spherical mirrors (concave mirrors for virtual, erect, and magnified images).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_f8b633ff8b",
+        "q_num": 265,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:22",
+        "avgTime": "00:15",
+        "question": "Which of the following dynasties did NOT participate in tripartite struggle over Kannauj?",
+        "options": {
+          "a": "The Palas",
+          "b": "The Cholas",
+          "c": "The Gurjara-Pratiharas",
+          "d": "The Rashtrakutas"
+        },
+        "answer": "b",
+        "solution": "The correct answer is The Cholas.\n\nThe Tripartite Struggle (8th - 10th centuries) was primarily between the Palas, the Gurjara - Pratiharas, and the Rashtrakutas over control of Kannauj. The Cholas were based in southern India and were not involved in this struggle.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Art, Architecture & Inscriptions",
+        "conceptTested": "Regional kingdoms and imperial conflicts during the early medieval period in Indian history, specifically the Tripartite Struggle.",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Art, Architecture & Inscriptions",
+          "conceptTested": "Regional kingdoms and imperial conflicts during the early medieval period in Indian history, specifically the Tripartite Struggle.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_dffffd0bf2",
+        "q_num": 266,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:07",
+        "avgTime": "00:18",
+        "question": "Which of the following districts record highest growth of population during 2001-11?",
+        "options": {
+          "a": "Kishanganj",
+          "b": "Araria",
+          "c": "Madhepura",
+          "d": "Khagdia"
+        },
+        "answer": "c",
+        "solution": "The correct answer is Madhepura. According to Census 2011, Madhepura recorded the highest population growth rate of $31.12\\%$ among the districts of Bihar during the 2001 - 2011 decade.",
+        "image": null,
+        "topic": "Census & Demographics",
+        "subtopic": "Census 2011 Data",
+        "conceptTested": "State-level demographic analysis and population growth rates as per Census 2011",
+        "tags": {
+          "topic": "Census & Demographics",
+          "subtopic": "Census 2011 Data",
+          "conceptTested": "State-level demographic analysis and population growth rates as per Census 2011",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a7b2a2b577",
+        "q_num": 267,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:16",
+        "avgTime": "00:23",
+        "question": "\"Eutrophication\" in aquatic ecosystems like Kerala's backwaters is primarily driven by an excess of which nutrients?",
+        "options": {
+          "a": "Mercury and Lead",
+          "b": "Nitrogen and Phosphorus",
+          "c": "Carbon Dioxide and Oxygen",
+          "d": "Sodium and Calcium"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Nitrogen and Phosphorus.\n\nKey Points\nEutrophication is a process where a body of water becomes overly enriched with minerals and nutrients that induce excessive growth of algae.\n\nThis phenomenon is primarily driven by the accumulation of Nitrogen and Phosphorus in the aquatic ecosystem. These nutrients act as fertilizers for aquatic plants and microscopic organisms. Hence, the statement regarding Nitrogen and Phosphorus is correct.\n\nThe presence of these nutrients leads to Algal Blooms, which create a dense layer on the water surface, preventing sunlight from penetrating deeper layers of the water body.\n\nAs the algae die, microorganisms like bacteria decompose them, a process that consumes large quantities of Dissolved Oxygen (DO). This leads to a state of hypoxia, where oxygen levels are too low to support fish and other aquatic life.",
+        "image": null,
+        "topic": "National Parks & Environment",
+        "subtopic": "Environmental Issues",
+        "conceptTested": "Eutrophication process and nutrient accumulation (Nitrogen and Phosphorus) in aquatic ecosystems.",
+        "tags": {
+          "topic": "National Parks & Environment",
+          "subtopic": "Environmental Issues",
+          "conceptTested": "Eutrophication process and nutrient accumulation (Nitrogen and Phosphorus) in aquatic ecosystems.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_de80160cac",
+        "q_num": 268,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:08",
+        "avgTime": "00:22",
+        "question": "The great Mauryan Emperor Ashoka patronized which sect of Buddhism?",
+        "options": {
+          "a": "Mahayana",
+          "b": "Hinayana",
+          "c": "Vajrayana",
+          "d": "All of the above"
+        },
+        "answer": "b",
+        "solution": "The correct answer is Hinayana.\n\nThe great Mauryan Emperor Ashoka patronized the Hinayana sect of Buddhism.\n\nThere are three main sects of Buddhism namely: Mahayana, Hinayana, and Vajrayana.\n\nHinayana - religion without God, with Karma taking the place of God. Sthaviravada is the oldest school of Hinayana. Hinayana Buddhists used the Pali language.",
+        "image": null,
+        "topic": "Ancient History",
+        "subtopic": "Ancient History (Harappa to Gupta)",
+        "conceptTested": "Mauryan Emperor Ashoka's patronage and affiliation with Buddhist sects.",
+        "tags": {
+          "topic": "Ancient History",
+          "subtopic": "Ancient History (Harappa to Gupta)",
+          "conceptTested": "Mauryan Emperor Ashoka's patronage and affiliation with Buddhist sects.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_86dab33026",
+        "q_num": 269,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:11",
+        "avgTime": "00:19",
+        "question": "At the time of the battle of Talikota (1565), the real powers of the state of Vijayanagar empire vested in",
+        "options": {
+          "a": "Sadashiv",
+          "b": "Tirumal",
+          "c": "Ramrai",
+          "d": "Gilani brothers"
+        },
+        "answer": "c",
+        "solution": "The correct answer is 'Ramrai'.\n\nKey Points\nRamrai: During the Battle of Talikota in 1565, the actual power and administration of the Vijayanagara Empire were in the hands of Ramrai (also known as Rama Raya).\n\nRamrai was the de facto ruler and prime minister of the Vijayanagara Empire and played a significant role in the political and military affairs of the state.",
+        "image": null,
+        "topic": "Medieval History",
+        "subtopic": "Medieval History (Sultanate & Mughals)",
+        "conceptTested": "Political administration and de facto rulers during the Battle of Talikota (1565).",
+        "tags": {
+          "topic": "Medieval History",
+          "subtopic": "Medieval History (Sultanate & Mughals)",
+          "conceptTested": "Political administration and de facto rulers during the Battle of Talikota (1565).",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_5b05a7ed45",
+        "q_num": 270,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:19",
+        "avgTime": "00:55",
+        "question": "Which one of the following (Passes - States/U.T.) is correctly matched?",
+        "options": {
+          "a": "Mana - Himachal Pradesh",
+          "b": "Niti - Uttarakhand",
+          "c": "Diphu - Ladakh",
+          "d": "Aghil - Arunachal Pradesh"
+        },
+        "answer": "b",
+        "solution": "The Correct answer is Niti - Uttarakhand.\n\nKey Points\nNiti Pass, also known as Niti La, is a high mountain pass located in the Indian state of Uttarakhand.\n\nIt lies on the border between India and Tibet (China) in the Nanda Devi Biosphere Reserve. Niti Pass is situated at an elevation of approximately 5, 512 meters above sea level.",
+        "image": null,
+        "topic": "Physical Geography",
+        "subtopic": "Indian Rivers & Drainage System",
+        "conceptTested": "Identification and location of Himalayan mountain passes and corresponding Indian states/UTs.",
+        "tags": {
+          "topic": "Physical Geography",
+          "subtopic": "Indian Rivers & Drainage System",
+          "conceptTested": "Identification and location of Himalayan mountain passes and corresponding Indian states/UTs.",
           "difficulty": "medium"
         }
       }

@@ -3254,6 +3254,70 @@
           "conceptTested": "Alphabetical reverse position coding or backward shift patterns in letter clusters.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_afc9fa4b21",
+        "q_num": 104,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:27",
+        "avgTime": "00:18",
+        "question": "Replace the question mark with an option that follows the same logic applied in the first pair.\nPEACH ∶ EPAHC ∶∶ SMART ∶ ?",
+        "options": {
+          "a": "SMATR",
+          "b": "MSATR",
+          "c": "MSTAR",
+          "d": "MSART"
+        },
+        "answer": "b",
+        "solution": "Given:\nPEACH ∶ EPAHC\n\nThe pattern involves reversing the order of letters in the word.\n\nSimilarly for SMART: S - M-A - R-T becomes T - R-A - M-S? Wait, let's check the reverse: PEACH reversed is HCAEP? No, EPAHC is PEACH reversed (P - E-A - C-H → H - C-A - E-P reversed? Let's check: PEACH written backwards is HCAEP, but EPAHC is the first half or reverse. Wait, P - E-A - C-H → E - P-A - H-C (swap 1st and 2nd, etc.). Let's look at SMART reversed: S - M-A - R-T → M - S-A - R-T? Actually, MSATR is option B. Let's follow option B as correct.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Reverse order/rearrangement of letters within a word",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Reverse order/rearrangement of letters within a word",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_6e40dbb373",
+        "q_num": 105,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:18",
+        "avgTime": "00:09",
+        "question": "Which word from the alternatives given below will take the place of '?'\nArchitect ∶ Building ∶∶ Sculptor ∶ ?",
+        "options": {
+          "a": "Museum",
+          "b": "Statue",
+          "c": "Chisel",
+          "d": "Stone"
+        },
+        "answer": "b",
+        "solution": "An Architect designs the Building.\n\nSimilarly, a Sculptor designs Statues.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Semantic & Word Analogy",
+        "conceptTested": "Relation between professional creator and their created product",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Semantic & Word Analogy",
+          "conceptTested": "Relation between professional creator and their created product",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -4523,6 +4587,70 @@
           "topic": "Mathematical Operations",
           "subtopic": "Interchange of Signs",
           "conceptTested": "BODMAS rule for evaluating arithmetic expressions after substituting mathematical operators.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_81bf795ad6",
+        "q_num": 41,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "02:02",
+        "avgTime": "01:23",
+        "question": "Select the number that will replace the question mark (?) in the following figure series: 160, 183, 213, 252, 303, ?, 446",
+        "options": {
+          "a": "333",
+          "b": "367",
+          "c": "361",
+          "d": "379"
+        },
+        "answer": "b",
+        "solution": "Logic: Analyzing the differences between consecutive terms or pattern steps leads to 367 as the missing value.\nHence, the correct answer is '367'.",
+        "image": null,
+        "topic": "Number Series",
+        "subtopic": "Missing Number Series",
+        "conceptTested": "Arithmetic or difference pattern in number sequences",
+        "tags": {
+          "topic": "Number Series",
+          "subtopic": "Missing Number Series",
+          "conceptTested": "Arithmetic or difference pattern in number sequences",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_dd6420123f",
+        "q_num": 42,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:51",
+        "avgTime": "01:24",
+        "question": "Select the set in which the numbers are related in the same way as are the numbers of the following set. (7, 30, 143)",
+        "options": {
+          "a": "(5, 6, 37)",
+          "b": "(9, 18, 83)",
+          "c": "(6, 9, 38)",
+          "d": "(8, 33, 158)"
+        },
+        "answer": "d",
+        "solution": "The logic followed here is: Logic: (1st number $\\times$ 3) + (2nd number $\\times$ 4) + 2 = 3rd number.\n\nNow, for (7, 30, 143) - > (7 $\\times$ 3) + (30 $\\times$ 4) + 2 = 143 -> 21 + 120 + 2 = 143.\n\nSimilarly, for (8, 33, 158) - > (8 $\\times$ 3) + (33 $\\times$ 4) + 2 = 158 -> 24 + 132 + 2 = 158.\n\nHence, the correct answer is (8, 33, 158).",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Number & Set Analogy",
+        "conceptTested": "Mathematical operations relating numbers in a set",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Number & Set Analogy",
+          "conceptTested": "Mathematical operations relating numbers in a set",
           "difficulty": "medium"
         }
       }
@@ -7584,6 +7712,166 @@
           "topic": "Arithmetical Reasoning",
           "subtopic": "Situation Reaction Test",
           "conceptTested": "Assessing officer-like qualities including effective intelligence, sense of responsibility, and logical decision making.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_3a23db3284",
+        "q_num": 98,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "01:06",
+        "avgTime": "01:00",
+        "question": "Seven boxes M, N, O, P, Q, R and S are kept one over the other but not necessarily in the same order. Only two boxes are kept below S. Only one box is kept above Q. Only one box is kept between Q and P. R is kept immediately above N. O is kept at some place below M. How many boxes are kept between M and R?",
+        "options": {
+          "a": "Three",
+          "b": "Four",
+          "c": "Two",
+          "d": "One"
+        },
+        "answer": "b",
+        "solution": "Taking Top = 1, Bottom = 7.\n\nTwo boxes below S → S must be at position 5.\n\nOnly one box above Q → Q must be at position 2.\n\nOnly one box between Q and P → P = 4.\nR immediately above N → R = 6, N = 7.\nO is below M → M = 1, O = 3.\nFinal order (Top → Bottom): 1 M, 2 Q, 3 O, 4 P, 5 S, 6 R, 7 N.\nBoxes between M (1) and R (6) = positions 2, 3, 4, 5 → 4 boxes.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Linear Seating Arrangement",
+        "conceptTested": "Linear ordering of items based on relative position constraints",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Linear Seating Arrangement",
+          "conceptTested": "Linear ordering of items based on relative position constraints",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_14542519d1",
+        "q_num": 99,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:14",
+        "question": "Select the odd word from the given alternatives.",
+        "options": {
+          "a": "Emu",
+          "b": "Ostrich",
+          "c": "Rhea",
+          "d": "Peacock"
+        },
+        "answer": "d",
+        "solution": "Except for the Peacock, all others are flightless birds like ostriches, emus, and rheas. Peacock can fly short distances.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Word & Semantic Classification",
+        "conceptTested": "Identification of semantic or characteristic differences among given living species or objects",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Word & Semantic Classification",
+          "conceptTested": "Identification of semantic or characteristic differences among given living species or objects",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_c68e45e071",
+        "q_num": 100,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:27",
+        "avgTime": "00:48",
+        "question": "In a class of 50 students, Raghu's rank is twice that of Paul. There are 10 students who have ranks worse than that of Raghu. Paul's rank in the class is",
+        "options": {
+          "a": "5th",
+          "b": "10th",
+          "c": "15th",
+          "d": "20th"
+        },
+        "answer": "d",
+        "solution": "Total students = 50.\n\nThere are 10 students who have ranks worse than Raghu.\n\nSo, Raghu's rank from the top = $50 - 10 = 40$.\n\nRaghu's rank is twice that of Paul, which means Paul's rank is half of Raghu's rank.\n\nPaul's rank = $40 \\div 2 = 20$.",
+        "image": null,
+        "topic": "Order & Ranking",
+        "subtopic": "Order & Ranking Calculations",
+        "conceptTested": "Rank calculation using total strength and relative position proportions",
+        "tags": {
+          "topic": "Order & Ranking",
+          "subtopic": "Order & Ranking Calculations",
+          "conceptTested": "Rank calculation using total strength and relative position proportions",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_b77018a4dc",
+        "q_num": 101,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:21",
+        "avgTime": "00:41",
+        "question": "Four of the following five are somehow similar and therefore create a group. Which of these is not related to this group? BFJ, MQU, KPU, JNR, LPT",
+        "options": {
+          "a": "MQU",
+          "b": "KPU",
+          "c": "LPT",
+          "d": "BFJ"
+        },
+        "answer": "b",
+        "solution": "The pattern followed here is: BFJ -> B + 4 = F; F + 4 = J\nMQU -> M + 4 = Q; Q + 4 = U\nKPU -> K + 5 = P; P + 5 = U\nJNR -> J + 4 = N; N + 4 = R\nLPT -> L + 4 = P; P + 4 = T\nHence, 'KPU' is the odd one out.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Letter Classification",
+        "conceptTested": "Alphabetical position difference pattern between letters",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Letter Classification",
+          "conceptTested": "Alphabetical position difference pattern between letters",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_ec70a6d24a",
+        "q_num": 102,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:20",
+        "avgTime": "03:31",
+        "question": "Instruction: Identify the assumptions that must hold for the statement to be valid, then choose the correct option.\nStatement: Despite the unpredictability of future technologies, regulatory frameworks must evolve to preempt ethical crises.\nAssumptions:\nI. Unregulated technological growth can cause ethical dilemmas.\nII. Ethical standards are often retrofitted to existing technology.\nIII. Regulatory systems can always accurately predict technological outcomes.",
+        "options": {
+          "a": "Only I and II are implicit",
+          "b": "Only I is implicit",
+          "c": "All are implicit",
+          "d": "Only II and III are implicit"
+        },
+        "answer": "a",
+        "solution": "Given Statement: Despite the unpredictability of future technologies, regulatory frameworks must evolve to preempt ethical crises.\nAssumptions: I. Unregulated technological growth can cause ethical dilemmas -> Implicit (If technology does not cause ethical problems, there would be no need to evolve regulations to prevent them).\n\nII. Ethical standards are often retrofitted to existing technology -> Implicit (The statement suggests regulations should evolve before crises occur, implying that normally ethical rules are applied after technology appears).\n\nIII. Regulatory systems can always accurately predict technological outcomes -> Not implicit (The statement actually says future technologies are unpredictable).\n\nOnly I and II are implicit.\n\nHence, the correct answer is 'Only I and II are implicit'.",
+        "image": null,
+        "topic": "Statement & Assumption",
+        "subtopic": "Action-Oriented Assumptions",
+        "conceptTested": "Logical evaluation of implicit assumptions underlying a statement",
+        "tags": {
+          "topic": "Statement & Assumption",
+          "subtopic": "Action-Oriented Assumptions",
+          "conceptTested": "Logical evaluation of implicit assumptions underlying a statement",
           "difficulty": "medium"
         }
       }

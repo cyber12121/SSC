@@ -7389,6 +7389,134 @@
           "conceptTested": "Trigonometric ratios in right-angled triangles: $\\cos(\\theta) = \\frac{\\text{Base}}{\\text{Hypotenuse}}$",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_ebd42382a4",
+        "q_num": 234,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:27",
+        "avgTime": "00:51",
+        "question": "If the area of a sector is $58.5\\text{ cm}^2$, then find its perimeter if the radius of the circle is $6.5\\text{ cm}$.",
+        "options": {
+          "a": "$22\\text{ cm}$",
+          "b": "$31\\text{ cm}$",
+          "c": "$21\\text{ cm}$",
+          "d": "$317\\frac{31}{7}\\text{ cm}$"
+        },
+        "answer": "b",
+        "solution": "Shortcut Trick\nArc Length ($l$) = $(2 \\times \\text{Area}) \\div \\text{Radius}$\n\n$l = (2 \\times 58.5) \\div 6.5 = 117 \\div 6.5 = 18\\text{ cm}$\n\nPerimeter of Sector = $l + 2r$\nPerimeter = $18 + 2 \\times 6.5 = 18 + 13 = 31\\text{ cm}$\n∴ The correct answer is $31\\text{ cm}$.",
+        "image": null,
+        "topic": "Mensuration 2D",
+        "subtopic": "Sectors & Arcs of Circles",
+        "conceptTested": "Formulas for area and perimeter of a circular sector: $\\text{Area} = \\frac{1}{2} \\times r \\times l$ and $\\text{Perimeter} = l + 2r$.",
+        "tags": {
+          "topic": "Mensuration 2D",
+          "subtopic": "Sectors & Arcs of Circles",
+          "conceptTested": "Formulas for area and perimeter of a circular sector: $\\text{Area} = \\frac{1}{2} \\times r \\times l$ and $\\text{Perimeter} = l + 2r$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_baf59ff922",
+        "q_num": 235,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:44",
+        "avgTime": "00:58",
+        "question": "A sum, when invested at $20\\%$ simple interest per annum, amounts to ₹3120 after 3 years. What is the simple interest (in ₹) on the same sum at the same rate in 1 year?",
+        "options": {
+          "a": "195",
+          "b": "390",
+          "c": "1560",
+          "d": "780"
+        },
+        "answer": "b",
+        "solution": "Total Interest for 3 years at $20\\% = 20\\% \\times 3 = 60\\%$. Amount $\\% = 100\\% + 60\\% = 160\\%$. Given: $160\\%$ of Sum = ₹3120. Interest for 1 year = $20\\%$ of Sum = $(3120 \\div 160) \\times 20 = 390$.",
+        "image": null,
+        "topic": "Simple Interest",
+        "subtopic": "Basic Simple Interest",
+        "conceptTested": "Simple Interest remains constant annually, and total amount is the sum of principal and interest.",
+        "tags": {
+          "topic": "Simple Interest",
+          "subtopic": "Basic Simple Interest",
+          "conceptTested": "Simple Interest remains constant annually, and total amount is the sum of principal and interest.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_fe29fca081",
+        "q_num": 236,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:47",
+        "avgTime": "00:33",
+        "question": "The least number which must be added to $1728$ to make it a perfect square is",
+        "options": {
+          "a": "36",
+          "b": "32",
+          "c": "38",
+          "d": "30"
+        },
+        "answer": "a",
+        "solution": "We know $40^2 = 1600$ and $42^2 = 1764$. Since $1728$ lies between $41^2$ ($1681$) and $42^2$ ($1764$), the next perfect square is $1764$. Least number to be added = $1764 - 1728 = 36$.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "Finding the least number to be added to make a number a perfect square by identifying the next consecutive square.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "Finding the least number to be added to make a number a perfect square by identifying the next consecutive square.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_0cff95ebd1",
+        "q_num": 237,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:44",
+        "avgTime": "00:25",
+        "question": "A student scored $20\\%$ less and another student scored $25\\%$ more than the average marks of the class. What is the ratio of the 1st student to the average score of the student to the another student?",
+        "options": {
+          "a": "2 : 4 : 5",
+          "b": "16 : 20 : 25",
+          "c": "4 : 5 : 6",
+          "d": "1 : 2 : 3"
+        },
+        "answer": "b",
+        "solution": "Let the average marks of the class be $100$. Score of the 1st student = $100 - 20 = 80$. Score of the 2nd student = $100 + 25 = 125$. Required Ratio = $80 : 100 : 125 = 16 : 20 : 25$.",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Exam Marks & Pass/Fail",
+        "conceptTested": "Expressing multiple quantities in a simplified ratio based on a common base percentage reference value.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Exam Marks & Pass/Fail",
+          "conceptTested": "Expressing multiple quantities in a simplified ratio based on a common base percentage reference value.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -18497,6 +18625,230 @@
           "conceptTested": "Relation between Cost Price, Selling Price, Marked Price, Profit%, and Discount%",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_9df6ab1e37",
+        "q_num": 352,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:25",
+        "avgTime": "00:43",
+        "question": "The value of simple interest and compound interest on a certain principal at a certain rate after two years is Rs. 2400 and Rs. 2544 respectively. Find the value of the principal.",
+        "options": {
+          "a": "Rs. 12000",
+          "b": "Rs. 8000",
+          "c": "Rs. 9000",
+          "d": "Rs. 10000"
+        },
+        "answer": "d",
+        "solution": "Simple interest for 1 year = $2400 \\div 2 = \\text{Rs. } 1200$. Difference between CI and SI for 2 years = $2544 - 2400 = \\text{Rs. } 144$. Rate $(R) = (144 \\div 1200) \\times 100 = 12\\%$. Principal = $(1200 \\times 100) \\div 12 = 10000$.",
+        "image": null,
+        "topic": "Compound Interest",
+        "subtopic": "Basic Compound Interest",
+        "conceptTested": "Difference between compound interest and simple interest for 2 years used to find the rate and principal.",
+        "tags": {
+          "topic": "Compound Interest",
+          "subtopic": "Basic Compound Interest",
+          "conceptTested": "Difference between compound interest and simple interest for 2 years used to find the rate and principal.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_7fe139db04",
+        "q_num": 353,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "A",
+        "userTime": "00:18",
+        "avgTime": "00:27",
+        "question": "A 6 cm long chord subtends an angle of $60^\\circ$ at the center of the circle. If the length of another chord of the same circle is $6\\sqrt{3}$ cm, then find the measure of the angle subtended by the chord at the center of the circle.",
+        "options": {
+          "a": "120 degree",
+          "b": "135 degree",
+          "c": "75 degree",
+          "d": "90 degrees"
+        },
+        "answer": "a",
+        "solution": "If a chord subtends $60^\\circ$ at the center, the radius $r = 6$ cm. Using the chord length formula $L = 2 \\times r \\times \\sin(\\theta/2)$: $6\\sqrt{3} = 2 \\times 6 \\times \\sin(\\theta/2) \\Rightarrow \\sin(\\theta/2) = \\frac{\\sqrt{3}}{2}$. Since $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, $\\frac{\\theta}{2} = 60^\\circ \\Rightarrow \\theta = 120^\\circ$.",
+        "image": null,
+        "topic": "Geometry",
+        "subtopic": "Circles (Tangents, Chords & Secants)",
+        "conceptTested": "Chord length formula: $L = 2r \\sin(\\theta/2)$ and equilateral triangle property when angle is $60^\\circ$.",
+        "tags": {
+          "topic": "Geometry",
+          "subtopic": "Circles (Tangents, Chords & Secants)",
+          "conceptTested": "Chord length formula: $L = 2r \\sin(\\theta/2)$ and equilateral triangle property when angle is $60^\\circ$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b5a6cd59d6",
+        "q_num": 354,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "B",
+        "userTime": "00:27",
+        "avgTime": "00:22",
+        "question": "A, B and C can do a piece of work in $8$ days, $12$ days and $16$ days respectively. If the total amount paid for the piece of work is Rs. $2600$. Find the difference in the wages earned by A and B.",
+        "options": {
+          "a": "Rs. 500",
+          "b": "Rs. 400",
+          "c": "Rs. 600",
+          "d": "Rs. 1200"
+        },
+        "answer": "b",
+        "solution": "Efficiency ratio of A : B : C = $\\frac{1}{8} : \\frac{1}{12} : \\frac{1}{16} = 6 : 4 : 3$. Total efficiency parts = $6 + 4 + 3 = 13$ units. $13$ units = Rs. $2600 \\Rightarrow 1$ unit = Rs. $200$. Wage difference between A and B = $6 - 4 = 2$ units = $2 × 200 = $ Rs. $400$.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Distributing total wages in the direct ratio of individual efficiencies when time worked is the same.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Distributing total wages in the direct ratio of individual efficiencies when time worked is the same.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a97dd0a634",
+        "q_num": 355,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:05",
+        "avgTime": "00:13",
+        "question": "Ramu's father told Ramu to find the smallest number which is a perfect square and is also divisible by 12, 18, 24, and 27.",
+        "options": {
+          "a": "1209",
+          "b": "1300",
+          "c": "1290",
+          "d": "1296"
+        },
+        "answer": "d",
+        "solution": "Find the LCM of 12, 18, 24, and 27 first.\n\nLCM(12, 18, 24, 27) = 216.\nPrime factorize 216: $216 = 2^3 \\times 3^3$.\n\nTo make it a perfect square, multiply by the missing factors to make powers even: $216 \\times (2 \\times 3) = 1296$.\n\nCheck options: 1296 is the only perfect square ($36^2$) divisible by all given numbers.\n∴ The correct answer is 1296.",
+        "image": null,
+        "topic": "Number System",
+        "subtopic": "Divisibility Rules & Remainders",
+        "conceptTested": "A number is a perfect square if and only if all exponents in its prime factorization are even integers.",
+        "tags": {
+          "topic": "Number System",
+          "subtopic": "Divisibility Rules & Remainders",
+          "conceptTested": "A number is a perfect square if and only if all exponents in its prime factorization are even integers.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_a8f7f01590",
+        "q_num": 356,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "D",
+        "userTime": "00:04",
+        "avgTime": "00:32",
+        "question": "A retailer buys a cell phone at a discount of $15\\%$ and sells it for ₹5865. Thus he makes a profit of $15\\%$. The discount is?",
+        "options": {
+          "a": "650",
+          "b": "750",
+          "c": "800",
+          "d": "900"
+        },
+        "answer": "d",
+        "solution": "Shortcut Trick\nRatio MP : CP = $100 : 85 = 20 : 17$\nRatio CP : SP = $100 : 115 = 20 : 23$\nMerged MP : CP : SP = $(20 \\times 20) : (17 \\times 20) : (17 \\times 23) = 400 : 340 : 391$\nGiven SP 391 units = ₹5865 $\\rightarrow$ 1 unit = ₹15\nDiscount = MP - CP = $400 − 340 = 60$ units = $60 \\times 15$ = ₹900\n∴ The correct answer is ₹900.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Marked Price & Discounts",
+        "conceptTested": "Relationship between Marked Price and Cost Price: $\\frac{MP}{CP} = \\frac{100 + \\text{Profit}\\%}{100 - \\text{Discount}\\%}$.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Marked Price & Discounts",
+          "conceptTested": "Relationship between Marked Price and Cost Price: $\\frac{MP}{CP} = \\frac{100 + \\text{Profit}\\%}{100 - \\text{Discount}\\%}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0256fb8c75",
+        "q_num": 357,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:01",
+        "avgTime": "00:17",
+        "question": "A can row 15 km/h in still water, it takes him twice long as time to row down as to row up the River. Find the rate of downstream?",
+        "options": {
+          "a": "10 km/h",
+          "b": "3 km/h",
+          "c": "20 km/h",
+          "d": "15 km/h"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nRatio of Time taken (Upstream : Downstream) = $2 : 1$\nSince Distance is constant, Ratio of Speed (Upstream : Downstream) = $1 : 2$\nSpeed in still water = $(2 + 1) \\div 2 = 1.5$ units\n\nGiven, 1.5 units = 15 km/h $\\Rightarrow$ 1 unit = 10 km/h\n\nRate of downstream = 2 units = $2 \\times 10 = 20$ km/h\n∴ The correct answer is 20 km/h.",
+        "image": null,
+        "topic": "Boats & Streams",
+        "subtopic": "Still Water & Stream Speed",
+        "conceptTested": "Downstream speed is $u + v$ and upstream speed is $u - v$, where $u$ is speed in still water and $v$ is stream speed.",
+        "tags": {
+          "topic": "Boats & Streams",
+          "subtopic": "Still Water & Stream Speed",
+          "conceptTested": "Downstream speed is $u + v$ and upstream speed is $u - v$, where $u$ is speed in still water and $v$ is stream speed.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_af6fefcdfd",
+        "q_num": 358,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Unattempted",
+        "chosenOption": "Unattempted",
+        "correctOption": "C",
+        "userTime": "00:15",
+        "avgTime": "00:14",
+        "question": "When the elevation of the sun changes from $45^\\circ$ to $30^\\circ$, the shadow of the tower changes by 20 m. Find the height of the tower.",
+        "options": {
+          "a": "$10(\\sqrt{3} - 1)$ m",
+          "b": "$10\\sqrt{3}$ m",
+          "c": "$10(\\sqrt{3} + 1)$ m",
+          "d": "10 m"
+        },
+        "answer": "c",
+        "solution": "Shortcut Trick\nDistance ($d$) between two shadow points is given by: $d = h(\\cot \\theta_2 - \\cot \\theta_1)$\n\nGiven, $d = 20$ m, $\\theta_1 = 45^\\circ$, and $\\theta_2 = 30^\\circ$\n\n$\\Rightarrow 20 = h(\\cot 30^\\circ - \\cot 45^\\circ) = h(\\sqrt{3} - 1)$\n\n$\\Rightarrow h = 20 \\div (\\sqrt{3} - 1)$\n\n$\\Rightarrow h = [20(\\sqrt{3} + 1)] \\div 2 = 10(\\sqrt{3} + 1)$ m\n\n∴ The correct answer is $10(\\sqrt{3} + 1)$ m.",
+        "image": null,
+        "topic": "Height & Distance",
+        "subtopic": "Angle of Elevation & Heights",
+        "conceptTested": "Distance $d$ between two shadow points for angles of elevation $\\theta_1$ and $\\theta_2$ is given by $d = h(\\cot \\theta_2 - \\cot \\theta_1)$.",
+        "tags": {
+          "topic": "Height & Distance",
+          "subtopic": "Angle of Elevation & Heights",
+          "conceptTested": "Distance $d$ between two shadow points for angles of elevation $\\theta_1$ and $\\theta_2$ is given by $d = h(\\cot \\theta_2 - \\cot \\theta_1)$.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -23193,6 +23545,134 @@
           "topic": "Trigonometry",
           "subtopic": "Complementary Angles",
           "conceptTested": "Complementary angle trigonometric relations: $\\sin(90^\\circ - \\theta) = \\cos\\theta$, $\\sin^2\\theta + \\cos^2\\theta = 1$, and $\\sec^2\\theta - \\tan^2\\theta = 1$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_70bbe35c28",
+        "q_num": 149,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "01:58",
+        "avgTime": "01:03",
+        "question": "10 women take 16 days to complete a work which can be completed by 6 men in 8 days. 12 men started working and after 2 days 6 men left, and 5 women joined them. In how many days will the work be completed?",
+        "options": {
+          "a": "$32\\frac{3}{2}$",
+          "b": "$16\\frac{16}{5}$",
+          "c": "$52\\frac{5}{2}$",
+          "d": "$26\\frac{6}{5}$"
+        },
+        "answer": "d",
+        "solution": "Efficiency Ratio (W:M) $\\Rightarrow 10W \\times 16 : 6M \\times 8 \\Rightarrow 160 : 48 \\Rightarrow 10 : 3$ (W = 3, M = 10). Total Work = $10 \\times 3 \\times 16 = 480$ units. Work done by 12 men in 2 days = $12 \\times 10 \\times 2 = 240$ units. Remaining Work = $480 - 240 = 240$ units. New Efficiency $(6M + 5W) = (6 \\times 10) + (5 \\times 3) = 75$ units/day. Total time = $2 + (240 \\div 75) = 2 + \\frac{16}{5} = \\frac{26}{5}$ days.",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Equating total work of men and women to find efficiency ratios and applying remaining work formulas.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Equating total work of men and women to find efficiency ratios and applying remaining work formulas.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_15f684342e",
+        "q_num": 150,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "01:04",
+        "avgTime": "00:40",
+        "question": "Simplify the following expression. $\\sqrt{{5^2}\\sqrt{{25^2}\\sqrt{{16^2}\\sqrt{{32^{16}}}}}}$",
+        "options": {
+          "a": "800",
+          "b": "1600",
+          "c": "4000",
+          "d": "8000"
+        },
+        "answer": "b",
+        "solution": "Applying fractional exponents successively inward out: $\\sqrt{{5^2}\\sqrt{{25^2}\\sqrt{{16^2} \\times 32^8}}} \\Rightarrow \\sqrt{{5^2}\\sqrt{{25^2}(2^4)^2 \\times (2^5)^8}} \\Rightarrow \\sqrt{{5^2}\\sqrt{{5^4} \\times 2^{24}}} \\Rightarrow 5^2 \\times 2^6 = 25 \\times 64 = 1600$.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "Surds & Indices",
+        "conceptTested": "Rules of exponents and radical transformations: $\\sqrt[n]{x} = x^{1/n}$ and $(a^m)^n = a^{m \\times n}$.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Surds & Indices",
+          "conceptTested": "Rules of exponents and radical transformations: $\\sqrt[n]{x} = x^{1/n}$ and $(a^m)^n = a^{m \\times n}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_0a24ca28cc",
+        "q_num": 151,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "01:00",
+        "avgTime": "00:44",
+        "question": "A man travelled from A to B at a speed of $10$ m/sec, and returned to A from B at a speed of $x$ km/h. If his average speed is $45$ km/h, then what is the value of $x$?",
+        "options": {
+          "a": "54",
+          "b": "50",
+          "c": "56",
+          "d": "60"
+        },
+        "answer": "d",
+        "solution": "Convert the forward speed from m/s to km/h: $S_1 = 10 \\times \\frac{18}{5} = 36$ km/h. Using the average speed formula: $45 = \\frac{2 \\times 36 \\times x}{36 + x} \\Rightarrow 45(36 + x) = 72x \\Rightarrow 1620 + 45x = 72x \\Rightarrow 27x = 1620 \\Rightarrow x = 60$.",
+        "image": null,
+        "topic": "Time, Speed & Distance",
+        "subtopic": "Average Speed",
+        "conceptTested": "Average speed for equal distances covered at two different speeds $S_1$ and $S_2$ is given by $\\frac{2S_1 S_2}{S_1 + S_2}$.",
+        "tags": {
+          "topic": "Time, Speed & Distance",
+          "subtopic": "Average Speed",
+          "conceptTested": "Average speed for equal distances covered at two different speeds $S_1$ and $S_2$ is given by $\\frac{2S_1 S_2}{S_1 + S_2}$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b6c2d031fb",
+        "q_num": 152,
+        "mockId": "mock_1791559418319_s6m22",
+        "testId": "mock_1791559418319_s6m22",
+        "testName": "SSC CGL Tier I: Full Test - 18",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:12",
+        "avgTime": "00:23",
+        "question": "A table fan, passing through two hands, is sold finally at a profit of $30\\%$ of the original cost price. If the first dealer makes a profit of $25\\%$, then the profit made by the second dealer is:",
+        "options": {
+          "a": "5%",
+          "b": "10%",
+          "c": "15%",
+          "d": "4%"
+        },
+        "answer": "d",
+        "solution": "Let the original Cost Price be $100$. Final Selling Price = $130$. Selling Price after 1st dealer = $125$. This $125$ becomes the Cost Price for the second dealer. Profit made by second dealer = $130 - 125 = 5$. Profit % = $\\frac{5}{125} \\times 100 = 4\\%$.",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Successive Transactions",
+        "conceptTested": "Calculating individual profit percentage of a subsequent dealer using cost price and selling price relations in successive trade.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Successive Transactions",
+          "conceptTested": "Calculating individual profit percentage of a subsequent dealer using cost price and selling price relations in successive trade.",
           "difficulty": "medium"
         }
       }
