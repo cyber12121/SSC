@@ -1539,6 +1539,267 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     }
   };
 
+  const formatReportQuestions = (
+    report: MockScoreReport,
+    rawList: any[],
+    startIndex: number = 0,
+    sourcePrefix?: string
+  ): { formattedQuestions: Question[]; questionDetails: QuestionProgress[] } => {
+    const effectiveId = LEGACY_MOCK_ID_MAP[report.id] || report.id;
+    let rcaMap: Record<string, any> = {};
+    let globalRcaMap: Record<string, any> = {};
+    try {
+      const savedRca = safeStorage.getItem(`cgl_rca_${report.id}`) || safeStorage.getItem(`cgl_rca_${effectiveId}`) || safeStorage.getItem(`cgl_rca_${report.title}`);
+      if (savedRca) rcaMap = JSON.parse(savedRca);
+      const globalRaw = safeStorage.getItem('cgl_rca_global_store');
+      if (globalRaw) globalRcaMap = JSON.parse(globalRaw);
+    } catch {}
+
+    const formattedQuestions: Question[] = rawList.map((item, idx) => {
+      const rawSub = item.subject || item.section || item.subjectName || (report.type === 'sectional' && report.subject ? report.subject : 'Quantitative Aptitude');
+      const subjectName = normalizeSubName(rawSub);
+
+      let options: { a: string; b: string; c: string; d: string } = { a: '', b: '', c: '', d: '' };
+      if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
+        options = {
+          a: String(item.options.a || item.options['1'] || item.options.A || '').trim(),
+          b: String(item.options.b || item.options['2'] || item.options.B || '').trim(),
+          c: String(item.options.c || item.options['3'] || item.options.C || '').trim(),
+          d: String(item.options.d || item.options['4'] || item.options.D || '').trim()
+        };
+      } else if (Array.isArray(item.options)) {
+        options = {
+          a: typeof item.options[0] === 'object' ? String(item.options[0]?.text || item.options[0]?.value || item.options[0]?.val || '') : String(item.options[0] || ''),
+          b: typeof item.options[1] === 'object' ? String(item.options[1]?.text || item.options[1]?.value || item.options[1]?.val || '') : String(item.options[1] || ''),
+          c: typeof item.options[2] === 'object' ? String(item.options[2]?.text || item.options[2]?.value || item.options[2]?.val || '') : String(item.options[2] || ''),
+          d: typeof item.options[3] === 'object' ? String(item.options[3]?.text || item.options[3]?.value || item.options[3]?.val || '') : String(item.options[3] || '')
+        };
+      }
+
+      let ans: 'a' | 'b' | 'c' | 'd' = 'a';
+      const rawAns = item.answer || item.correctOption || item.correct_option || item.correctAnswer || item.right_answer || item.ans || '';
+      const strAns = String(rawAns).trim().toLowerCase();
+      if (strAns === 'a' || strAns === '1' || strAns === 'option a' || strAns === 'opt a') ans = 'a';
+      else if (strAns === 'b' || strAns === '2' || strAns === 'option b' || strAns === 'opt b') ans = 'b';
+      else if (strAns === 'c' || strAns === '3' || strAns === 'option c' || strAns === 'opt c') ans = 'c';
+      else if (strAns === 'd' || strAns === '4' || strAns === 'option d' || strAns === 'opt d') ans = 'd';
+      else {
+        if (options.a && strAns === options.a.trim().toLowerCase()) ans = 'a';
+        else if (options.b && strAns === options.b.trim().toLowerCase()) ans = 'b';
+        else if (options.c && strAns === options.c.trim().toLowerCase()) ans = 'c';
+        else if (options.d && strAns === options.d.trim().toLowerCase()) ans = 'd';
+      }
+
+      if (strAns === 'n/a' || !strAns || (!options[ans] && strAns !== 'a')) {
+        const sol = String(item.solution || item.explanation || item.sol || '').toLowerCase();
+        const m = sol.match(/correct\s*(?:answer|option)\s*(?:is|=|:)?\s*["']?(?:option\s*)?([1-4a-d])/i);
+        if (m) {
+          const v = m[1].toLowerCase();
+          if (v === '1' || v === 'a') ans = 'a';
+          else if (v === '2' || v === 'b') ans = 'b';
+          else if (v === '3' || v === 'c') ans = 'c';
+          else if (v === '4' || v === 'd') ans = 'd';
+        } else {
+          (['a', 'b', 'c', 'd'] as const).forEach(k => {
+            const optVal = options[k]?.toLowerCase().trim();
+            if (optVal && optVal.length > 0 && (sol.includes(`"${optVal}"`) || sol.includes(`'${optVal}'`))) {
+              ans = k;
+            }
+          });
+        }
+      }
+
+      const solution = (item.solution || item.explanation || item.sol || item.detailedSolution || item.detailed_solution || item.question?.solution || '').trim();
+      const rawT = item.topic || item.tags?.topic;
+      const topicText = rawT ? normalizeTopicTitle(rawT) : 'General';
+
+      const qId = item.id || `mock_q_${startIndex + idx + 1}_${report.id}`;
+      const cleanText = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
+      const strippedText = cleanText ? cleanText.replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '') : '';
+      const userSavedRca = rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)] || globalRcaMap[qId] || (cleanText ? globalRcaMap[cleanText] : undefined) || (strippedText ? globalRcaMap[strippedText] : undefined);
+      const existingRca = userSavedRca || item.rca;
+
+      const rawAvg = item.avgTime || item.avg_time || item.avgTimeSeconds;
+      let parsedAvg = 45;
+      if (typeof rawAvg === 'number' && rawAvg > 0) {
+        parsedAvg = rawAvg;
+      } else if (rawAvg) {
+        const str = String(rawAvg).trim();
+        if (str.includes(':')) {
+          const p = str.split(':').map(x => parseInt(x, 10));
+          if (p.length === 2 && !isNaN(p[0]) && !isNaN(p[1])) parsedAvg = p[0] * 60 + p[1];
+          else if (p.length === 3 && !isNaN(p[0]) && !isNaN(p[1]) && !isNaN(p[2])) parsedAvg = p[0] * 3600 + p[1] * 60 + p[2];
+        } else {
+          const n = parseInt(str.replace(/[^0-9]/g, ''), 10);
+          if (!isNaN(n) && n > 0) parsedAvg = n;
+        }
+      }
+
+      let secKey: 'part_a' | 'part_b' | 'part_c' | 'part_d' = 'part_a';
+      if (subjectName === 'Reasoning') secKey = 'part_a';
+      else if (subjectName === 'General Awareness') secKey = 'part_b';
+      else if (subjectName === 'Mathematics') secKey = 'part_c';
+      else if (subjectName === 'English') secKey = 'part_d';
+
+      const rawQText = (item.question || item.questionText || item.qText || `Question ${startIndex + idx + 1}`).trim();
+      const fullQText = sourcePrefix ? `[${sourcePrefix}] ${rawQText}` : rawQText;
+
+      return {
+        id: qId,
+        q_num: startIndex + idx + 1,
+        question: fullQText,
+        options,
+        answer: ans,
+        solution: solution || undefined,
+        image: item.image || null,
+        subject: subjectName,
+        section: item.section || secKey,
+        tags: {
+          topic: topicText,
+          difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
+        },
+        avgTime: parsedAvg,
+        avgTimeSeconds: parsedAvg,
+        rca: existingRca
+      };
+    });
+
+    // Check if dataset lost explicit status/answers
+    const allUnattempted = rawList.every(item => getMockQuestionStatus(item) === 'unattempted');
+    const hasReportStats = Boolean((report.totalCorrect || 0) > 0 || (report.totalWrong || 0) > 0);
+
+    const inferredStatusMap: Record<number, MockQuestionErrorStatus> = {};
+    if (allUnattempted && hasReportStats) {
+      if (report.sections && rawList.length === 100) {
+        const secList: { key: keyof typeof report.sections; start: number; end: number }[] = [
+          { key: 'reasoning', start: 0, end: 25 },
+          { key: 'generalAwareness', start: 25, end: 50 },
+          { key: 'mathematics', start: 50, end: 75 },
+          { key: 'english', start: 75, end: 100 }
+        ];
+
+        secList.forEach(({ key, start, end }) => {
+          const secData = report.sections?.[key];
+          const targetWrong = secData ? secData.wrong : 0;
+          const targetCorrect = secData ? secData.correct : 0;
+          let wrongAssigned = 0;
+          let correctAssigned = 0;
+
+          for (let i = start; i < end; i++) {
+            const qRca = formattedQuestions[i]?.rca;
+            if (qRca) {
+              inferredStatusMap[i] = 'wrong';
+              wrongAssigned++;
+            }
+          }
+
+          for (let i = start; i < end && wrongAssigned < targetWrong; i++) {
+            if (!inferredStatusMap[i]) {
+              inferredStatusMap[i] = 'wrong';
+              wrongAssigned++;
+            }
+          }
+
+          for (let i = start; i < end && correctAssigned < targetCorrect; i++) {
+            if (!inferredStatusMap[i]) {
+              inferredStatusMap[i] = 'correct';
+              correctAssigned++;
+            }
+          }
+
+          for (let i = start; i < end; i++) {
+            if (!inferredStatusMap[i]) {
+              inferredStatusMap[i] = 'unattempted';
+            }
+          }
+        });
+      }
+    }
+
+    const questionDetails: QuestionProgress[] = rawList.map((item, idx) => {
+      const q = formattedQuestions[idx];
+      const status = inferredStatusMap[idx] || getMockQuestionStatus(item);
+      const isSlow = status === 'slow';
+      const isCorrect = status === 'correct' || isSlow;
+      const isUnattempted = status === 'unattempted';
+      const isWrong = status === 'wrong';
+
+      let selected = '';
+      const rawUser = String(
+        item.chosenOption ??
+        item.chosen_option ??
+        item.userAnswer ??
+        item.user_answer ??
+        item.selected ??
+        item.selectedAnswer ??
+        item.yourOption ??
+        item.your_option ??
+        item.markedOption ??
+        item.marked_option ??
+        item.userAttempt ??
+        item.givenAnswer ??
+        item.given_answer ??
+        item.candidateAnswer ??
+        item.myAnswer ??
+        ''
+      ).trim().toLowerCase();
+
+      if (isUnattempted || rawUser === 'unattempted' || rawUser === 'skipped' || rawUser === 'not attempted') {
+        selected = '';
+      } else if (rawUser === 'a' || rawUser === '1' || rawUser === 'option a' || rawUser === 'opt a') selected = 'a';
+      else if (rawUser === 'b' || rawUser === '2' || rawUser === 'option b' || rawUser === 'opt b') selected = 'b';
+      else if (rawUser === 'c' || rawUser === '3' || rawUser === 'option c' || rawUser === 'opt c') selected = 'c';
+      else if (rawUser === 'd' || rawUser === '4' || rawUser === 'option d' || rawUser === 'opt d') selected = 'd';
+      else if (q.options) {
+        if (q.options.a && rawUser === q.options.a.trim().toLowerCase()) selected = 'a';
+        else if (q.options.b && rawUser === q.options.b.trim().toLowerCase()) selected = 'b';
+        else if (q.options.c && rawUser === q.options.c.trim().toLowerCase()) selected = 'c';
+        else if (q.options.d && rawUser === q.options.d.trim().toLowerCase()) selected = 'd';
+      }
+
+      if (!selected && !isUnattempted) {
+        if (isCorrect) {
+          selected = q.answer;
+        } else if (isWrong) {
+          const altOptions: ('a' | 'b' | 'c' | 'd')[] = (['a', 'b', 'c', 'd'] as const).filter(k => k !== q.answer);
+          selected = altOptions[0] || 'b';
+        }
+      }
+
+      const rawUserTime = item.userTime || item.user_time || item.timeSpent || item.timeTaken || item.time_spent || item.time;
+      let timeSpent = isSlow ? 65 : 35;
+      if (typeof rawUserTime === 'number' && rawUserTime > 0) {
+        timeSpent = rawUserTime;
+      } else if (rawUserTime) {
+        const str = String(rawUserTime).trim();
+        if (str.includes(':')) {
+          const p = str.split(':').map(x => parseInt(x, 10));
+          if (p.length === 2 && !isNaN(p[0]) && !isNaN(p[1])) timeSpent = p[0] * 60 + p[1];
+          else if (p.length === 3 && !isNaN(p[0]) && !isNaN(p[1]) && !isNaN(p[2])) timeSpent = p[0] * 3600 + p[1] * 60 + p[2];
+        } else {
+          const n = parseInt(str.replace(/[^0-9]/g, ''), 10);
+          if (!isNaN(n) && n > 0) timeSpent = n;
+        }
+      }
+
+      return {
+        q_num: startIndex + idx + 1,
+        timeSpent,
+        isCorrect,
+        selectedAnswer: isUnattempted ? '' : selected,
+        status: isSlow ? 'slow' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
+        errorType: isSlow ? 'speed_issue' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
+        isSlow,
+        avgTime: q.avgTime,
+        avgTimeSeconds: typeof q.avgTime === 'number' ? q.avgTime : undefined,
+        question: q,
+        rca: q.rca
+      };
+    });
+
+    return { formattedQuestions, questionDetails };
+  };
+
   const handleReviewMock = async (report: MockScoreReport) => {
     if (!onReviewMock) return;
     setReviewingId(report.id);
@@ -1550,263 +1811,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
 
       const effectiveId = LEGACY_MOCK_ID_MAP[report.id] || report.id;
-      // Load existing RCA classifications from localStorage if any
-      let rcaMap: Record<string, any> = {};
-      let globalRcaMap: Record<string, any> = {};
-      try {
-        const savedRca = safeStorage.getItem(`cgl_rca_${report.id}`) || safeStorage.getItem(`cgl_rca_${effectiveId}`) || safeStorage.getItem(`cgl_rca_${report.title}`);
-        if (savedRca) rcaMap = JSON.parse(savedRca);
-        const globalRaw = safeStorage.getItem('cgl_rca_global_store');
-        if (globalRaw) globalRcaMap = JSON.parse(globalRaw);
-      } catch {}
-
-      const formattedQuestions: Question[] = rawList.map((item, idx) => {
-        const rawSub = item.subject || item.section || item.subjectName || (report.type === 'sectional' && report.subject ? report.subject : 'Quantitative Aptitude');
-        const subjectName = normalizeSubName(rawSub);
-
-        let options: { a: string; b: string; c: string; d: string } = { a: '', b: '', c: '', d: '' };
-        if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
-          options = {
-            a: String(item.options.a || item.options['1'] || item.options.A || '').trim(),
-            b: String(item.options.b || item.options['2'] || item.options.B || '').trim(),
-            c: String(item.options.c || item.options['3'] || item.options.C || '').trim(),
-            d: String(item.options.d || item.options['4'] || item.options.D || '').trim()
-          };
-        } else if (Array.isArray(item.options)) {
-          options = {
-            a: typeof item.options[0] === 'object' ? String(item.options[0]?.text || item.options[0]?.value || item.options[0]?.val || '') : String(item.options[0] || ''),
-            b: typeof item.options[1] === 'object' ? String(item.options[1]?.text || item.options[1]?.value || item.options[1]?.val || '') : String(item.options[1] || ''),
-            c: typeof item.options[2] === 'object' ? String(item.options[2]?.text || item.options[2]?.value || item.options[2]?.val || '') : String(item.options[2] || ''),
-            d: typeof item.options[3] === 'object' ? String(item.options[3]?.text || item.options[3]?.value || item.options[3]?.val || '') : String(item.options[3] || '')
-          };
-        }
-
-        let ans: 'a' | 'b' | 'c' | 'd' = 'a';
-        const rawAns = item.answer || item.correctOption || item.correct_option || item.correctAnswer || item.right_answer || item.ans || '';
-        const strAns = String(rawAns).trim().toLowerCase();
-        if (strAns === 'a' || strAns === '1' || strAns === 'option a' || strAns === 'opt a') ans = 'a';
-        else if (strAns === 'b' || strAns === '2' || strAns === 'option b' || strAns === 'opt b') ans = 'b';
-        else if (strAns === 'c' || strAns === '3' || strAns === 'option c' || strAns === 'opt c') ans = 'c';
-        else if (strAns === 'd' || strAns === '4' || strAns === 'option d' || strAns === 'opt d') ans = 'd';
-        else {
-          if (options.a && strAns === options.a.trim().toLowerCase()) ans = 'a';
-          else if (options.b && strAns === options.b.trim().toLowerCase()) ans = 'b';
-          else if (options.c && strAns === options.c.trim().toLowerCase()) ans = 'c';
-          else if (options.d && strAns === options.d.trim().toLowerCase()) ans = 'd';
-        }
-
-        // Fallback for "N/A" correctOption: extract from solution
-        if (strAns === 'n/a' || !strAns || (!options[ans] && strAns !== 'a')) {
-          const sol = String(item.solution || item.explanation || item.sol || '').toLowerCase();
-          const m = sol.match(/correct\s*(?:answer|option)\s*(?:is|=|:)?\s*["']?(?:option\s*)?([1-4a-d])/i);
-          if (m) {
-            const v = m[1].toLowerCase();
-            if (v === '1' || v === 'a') ans = 'a';
-            else if (v === '2' || v === 'b') ans = 'b';
-            else if (v === '3' || v === 'c') ans = 'c';
-            else if (v === '4' || v === 'd') ans = 'd';
-          } else {
-            (['a', 'b', 'c', 'd'] as const).forEach(k => {
-              const optVal = options[k]?.toLowerCase().trim();
-              if (optVal && optVal.length > 0 && (sol.includes(`"${optVal}"`) || sol.includes(`'${optVal}'`))) {
-                ans = k;
-              }
-            });
-          }
-        }
-
-        const solution = (item.solution || item.explanation || item.sol || item.detailedSolution || item.detailed_solution || item.question?.solution || '').trim();
-        const rawT = item.topic || item.tags?.topic;
-        const topicText = rawT ? normalizeTopicTitle(rawT) : 'General';
-
-        const qId = item.id || `mock_q_${idx + 1}_${report.id}`;
-        const cleanText = (item.question || item.questionText || item.qText || '').trim().toLowerCase();
-        const strippedText = cleanText ? cleanText.replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '') : '';
-        const userSavedRca = rcaMap[idx] || rcaMap[qId] || rcaMap[String(idx + 1)] || globalRcaMap[qId] || (cleanText ? globalRcaMap[cleanText] : undefined) || (strippedText ? globalRcaMap[strippedText] : undefined);
-        const existingRca = userSavedRca || item.rca;
-
-        const rawAvg = item.avgTime || item.avg_time || item.avgTimeSeconds;
-        let parsedAvg = 45;
-        if (typeof rawAvg === 'number' && rawAvg > 0) {
-          parsedAvg = rawAvg;
-        } else if (rawAvg) {
-          const str = String(rawAvg).trim();
-          if (str.includes(':')) {
-            const p = str.split(':').map(x => parseInt(x, 10));
-            if (p.length === 2 && !isNaN(p[0]) && !isNaN(p[1])) parsedAvg = p[0] * 60 + p[1];
-            else if (p.length === 3 && !isNaN(p[0]) && !isNaN(p[1]) && !isNaN(p[2])) parsedAvg = p[0] * 3600 + p[1] * 60 + p[2];
-          } else {
-            const n = parseInt(str.replace(/[^0-9]/g, ''), 10);
-            if (!isNaN(n) && n > 0) parsedAvg = n;
-          }
-        }
-
-        let secKey: 'part_a' | 'part_b' | 'part_c' | 'part_d' = 'part_a';
-        if (subjectName === 'Reasoning') secKey = 'part_a';
-        else if (subjectName === 'General Awareness') secKey = 'part_b';
-        else if (subjectName === 'Mathematics') secKey = 'part_c';
-        else if (subjectName === 'English') secKey = 'part_d';
-
-        return {
-          id: qId,
-          q_num: idx + 1,
-          question: (item.question || item.questionText || item.qText || `Question ${idx + 1}`).trim(),
-          options,
-          answer: ans,
-          solution: solution || undefined,
-          image: item.image || null,
-          subject: subjectName,
-          section: item.section || secKey,
-          tags: {
-            topic: topicText,
-            difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
-          },
-          avgTime: parsedAvg,
-          avgTimeSeconds: parsedAvg,
-          rca: existingRca
-        };
-      });
-
-      // Check if dataset lost explicit status/answers (e.g. from previously stripped JSON)
-      const allUnattempted = rawList.every(item => getMockQuestionStatus(item) === 'unattempted');
-      const hasReportStats = Boolean((report.totalCorrect || 0) > 0 || (report.totalWrong || 0) > 0);
-
-      // Map of inferred statuses if dataset had lost statuses
-      const inferredStatusMap: Record<number, MockQuestionErrorStatus> = {};
-      if (allUnattempted && hasReportStats) {
-        if (report.sections && rawList.length === 100) {
-          const secList: { key: keyof typeof report.sections; start: number; end: number }[] = [
-            { key: 'reasoning', start: 0, end: 25 },
-            { key: 'generalAwareness', start: 25, end: 50 },
-            { key: 'mathematics', start: 50, end: 75 },
-            { key: 'english', start: 75, end: 100 }
-          ];
-
-          secList.forEach(({ key, start, end }) => {
-            const secData = report.sections?.[key];
-            const targetWrong = secData ? secData.wrong : 0;
-            const targetCorrect = secData ? secData.correct : 0;
-            let wrongAssigned = 0;
-            let correctAssigned = 0;
-
-            // 1. Assign wrong to questions with RCA tags first (these are candidate mistakes)
-            for (let i = start; i < end; i++) {
-              const qRca = formattedQuestions[i]?.rca;
-              if (qRca) {
-                inferredStatusMap[i] = 'wrong';
-                wrongAssigned++;
-              }
-            }
-
-            // 2. Assign remaining wrong count
-            for (let i = start; i < end && wrongAssigned < targetWrong; i++) {
-              if (!inferredStatusMap[i]) {
-                inferredStatusMap[i] = 'wrong';
-                wrongAssigned++;
-              }
-            }
-
-            // 3. Assign correct count
-            for (let i = start; i < end && correctAssigned < targetCorrect; i++) {
-              if (!inferredStatusMap[i]) {
-                inferredStatusMap[i] = 'correct';
-                correctAssigned++;
-              }
-            }
-
-            // 4. Remainder are unattempted
-            for (let i = start; i < end; i++) {
-              if (!inferredStatusMap[i]) {
-                inferredStatusMap[i] = 'unattempted';
-              }
-            }
-          });
-        }
-      }
-
-      const questionDetails: QuestionProgress[] = rawList.map((item, idx) => {
-        const q = formattedQuestions[idx];
-        const status = inferredStatusMap[idx] || getMockQuestionStatus(item);
-        const isSlow = status === 'slow';
-        const isCorrect = status === 'correct' || isSlow;
-        const isUnattempted = status === 'unattempted';
-        const isWrong = status === 'wrong';
-
-        let selected = '';
-        const rawUser = String(
-          item.chosenOption ??
-          item.chosen_option ??
-          item.userAnswer ??
-          item.user_answer ??
-          item.selected ??
-          item.selectedAnswer ??
-          item.yourOption ??
-          item.your_option ??
-          item.markedOption ??
-          item.marked_option ??
-          item.userAttempt ??
-          item.givenAnswer ??
-          item.given_answer ??
-          item.candidateAnswer ??
-          item.myAnswer ??
-          ''
-        ).trim().toLowerCase();
-
-        if (isUnattempted || rawUser === 'unattempted' || rawUser === 'skipped' || rawUser === 'not attempted') {
-          selected = '';
-        } else if (rawUser === 'a' || rawUser === '1' || rawUser === 'option a' || rawUser === 'opt a') selected = 'a';
-        else if (rawUser === 'b' || rawUser === '2' || rawUser === 'option b' || rawUser === 'opt b') selected = 'b';
-        else if (rawUser === 'c' || rawUser === '3' || rawUser === 'option c' || rawUser === 'opt c') selected = 'c';
-        else if (rawUser === 'd' || rawUser === '4' || rawUser === 'option d' || rawUser === 'opt d') selected = 'd';
-        else if (q.options) {
-          if (q.options.a && rawUser === q.options.a.trim().toLowerCase()) selected = 'a';
-          else if (q.options.b && rawUser === q.options.b.trim().toLowerCase()) selected = 'b';
-          else if (q.options.c && rawUser === q.options.c.trim().toLowerCase()) selected = 'c';
-          else if (q.options.d && rawUser === q.options.d.trim().toLowerCase()) selected = 'd';
-        }
-
-        if (!selected && !isUnattempted) {
-          if (isCorrect) {
-            selected = q.answer;
-          } else if (isWrong) {
-            // Student made a wrong choice; select alternate option so Review shows incorrect attempt
-            const altOptions: ('a' | 'b' | 'c' | 'd')[] = (['a', 'b', 'c', 'd'] as const).filter(k => k !== q.answer);
-            selected = altOptions[0] || 'b';
-          }
-        }
-
-        // Parse user time from "01:01" or seconds
-        const rawUserTime = item.userTime || item.user_time || item.timeSpent || item.timeTaken || item.time_spent || item.time;
-        let timeSpent = isSlow ? 65 : 35;
-        if (typeof rawUserTime === 'number' && rawUserTime > 0) {
-          timeSpent = rawUserTime;
-        } else if (rawUserTime) {
-          const str = String(rawUserTime).trim();
-          if (str.includes(':')) {
-            const p = str.split(':').map(x => parseInt(x, 10));
-            if (p.length === 2 && !isNaN(p[0]) && !isNaN(p[1])) timeSpent = p[0] * 60 + p[1];
-            else if (p.length === 3 && !isNaN(p[0]) && !isNaN(p[1]) && !isNaN(p[2])) timeSpent = p[0] * 3600 + p[1] * 60 + p[2];
-          } else {
-            const n = parseInt(str.replace(/[^0-9]/g, ''), 10);
-            if (!isNaN(n) && n > 0) timeSpent = n;
-          }
-        }
-
-        return {
-          q_num: idx + 1,
-          timeSpent,
-          isCorrect,
-          selectedAnswer: isUnattempted ? '' : selected,
-          status: isSlow ? 'slow' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
-          errorType: isSlow ? 'speed_issue' : (isCorrect ? 'correct' : (isUnattempted ? 'unattempted' : 'wrong')),
-          isSlow,
-          avgTime: q.avgTime,
-          avgTimeSeconds: typeof q.avgTime === 'number' ? q.avgTime : undefined,
-          question: q,
-          rca: q.rca
-        };
-      });
-
+      const { formattedQuestions, questionDetails } = formatReportQuestions(report, rawList);
       const totalTime = questionDetails.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
 
       const reviewQuizResult: QuizResult = {
@@ -1829,6 +1834,160 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       alert('Error opening review: ' + (err.message || 'Unknown error'));
     } finally {
       setReviewingId(null);
+    }
+  };
+
+  const handleMultiReviewMock = async () => {
+    if (!onReviewMock || selectedMockIds.length === 0) return;
+    const chosenReports = filteredReports.filter(r => selectedMockIds.includes(r.id));
+    if (chosenReports.length === 0) return;
+
+    setReviewingId('multi');
+    try {
+      const allQuestionDetails: QuestionProgress[] = [];
+      let totalScore = 0;
+
+      for (const report of chosenReports) {
+        totalScore += report.totalScore;
+        const rawList = await loadRawMockQuestions(report);
+        if (!rawList || rawList.length === 0) continue;
+
+        const { shortTitle } = parseMockDetails(report);
+        const { questionDetails } = formatReportQuestions(report, rawList, allQuestionDetails.length, shortTitle);
+        allQuestionDetails.push(...questionDetails);
+      }
+
+      if (allQuestionDetails.length === 0) {
+        alert('Could not find question data for the selected mock tests.');
+        return;
+      }
+
+      const totalTime = allQuestionDetails.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
+
+      const reviewQuizResult: QuizResult = {
+        id: `combined_${selectedMockIds.slice(0, 3).join('_')}`,
+        userId: 'mock_candidate',
+        chapter_title: `${chosenReports.length} Mocks Combined Review`,
+        subject: chosenReports[0]?.type === 'sectional' && chosenReports[0]?.subject ? chosenReports[0].subject : 'All 4 Sections Mock',
+        category: 'mockErrors',
+        mode: 'mock',
+        score: Math.round(totalScore * 10) / 10,
+        totalQuestions: allQuestionDetails.length,
+        totalTime,
+        completedAt: new Date().toISOString(),
+        questionDetails: allQuestionDetails
+      };
+
+      onReviewMock(reviewQuizResult);
+    } catch (err: any) {
+      console.error('Failed to open multi-mock review:', err);
+      alert('Error opening review: ' + (err.message || 'Unknown error'));
+    } finally {
+      setReviewingId(null);
+    }
+  };
+
+  const handleMultiAskAiMock = async () => {
+    if (selectedMockIds.length === 0) return;
+    const chosenReports = filteredReports.filter(r => selectedMockIds.includes(r.id));
+    if (chosenReports.length === 0) return;
+
+    setAskingAiId('multi');
+    try {
+      let totalScore = 0;
+      let maxMarks = 0;
+      let totalCorrect = 0;
+      let totalWrong = 0;
+      let totalUnattempted = 0;
+      let totalQuestions = 0;
+      const allScopedQuestions: AiFocusedQuestion[] = [];
+
+      for (const report of chosenReports) {
+        totalScore += report.totalScore;
+        maxMarks += report.maxMarks;
+        totalCorrect += report.totalCorrect;
+        totalWrong += report.totalWrong;
+        totalUnattempted += (report.totalUnattempted ?? (report as any).unattempted ?? 0);
+        totalQuestions += report.totalQuestions;
+
+        const rawList = await loadRawMockQuestions(report);
+        const { shortTitle } = parseMockDetails(report);
+
+        const normalizeSub = (raw: string) => {
+          if (/reason|intel/i.test(raw)) return 'Reasoning';
+          if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
+          if (/quant|math|aptitude/i.test(raw)) return 'Quantitative Aptitude';
+          if (/eng/i.test(raw)) return 'English';
+          return raw || 'General';
+        };
+
+        rawList.forEach((item, idx) => {
+          const status = getMockQuestionStatus(item);
+          let userAns = item.userAnswer || item.user_answer || item.myAnswer;
+          if (!userAns && status === 'unattempted') userAns = 'Unattempted / Skipped';
+
+          let optionsMap: Record<string, string> | undefined = undefined;
+          if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
+            optionsMap = {
+              A: String(item.options.a || item.options['1'] || item.options.A || '').trim(),
+              B: String(item.options.b || item.options['2'] || item.options.B || '').trim(),
+              C: String(item.options.c || item.options['3'] || item.options.C || '').trim(),
+              D: String(item.options.d || item.options['4'] || item.options.D || '').trim(),
+            };
+          } else if (Array.isArray(item.options)) {
+            optionsMap = {
+              A: String(item.options[0]?.text || item.options[0] || '').trim(),
+              B: String(item.options[1]?.text || item.options[1] || '').trim(),
+              C: String(item.options[2]?.text || item.options[2] || '').trim(),
+              D: String(item.options[3]?.text || item.options[3] || '').trim(),
+            };
+          }
+
+          allScopedQuestions.push({
+            id: item.id || `mock_q_${allScopedQuestions.length + 1}`,
+            qNum: allScopedQuestions.length + 1,
+            question: (item.question || item.questionText || item.qText || `Question ${idx + 1}`).trim(),
+            options: optionsMap,
+            correctAnswer: item.answer || item.correctOption || item.correctAnswer || '',
+            userAnswer: userAns,
+            solution: (item.solution || item.explanation || item.sol || '').trim(),
+            status: status as any,
+            subject: normalizeSub(item.subject || item.section || item.subjectName || ''),
+            topic: item.topic || item.tags?.topic,
+            rcaReason: item.rca?.reason || item.rcaReason || undefined,
+            sourceType: report.type === 'sectional' ? 'sectional' : 'full_mock',
+            sourceLabel: shortTitle,
+            testName: `${shortTitle} (${report.title})`
+          });
+        });
+      }
+
+      const overallAttempted = totalCorrect + totalWrong;
+      const avgAccuracy = overallAttempted > 0 ? Math.round((totalCorrect / overallAttempted) * 1000) / 10 : 0;
+
+      openAiWithScope({
+        type: 'mock',
+        title: `${chosenReports.length} Mocks Combined Analysis`,
+        subject: chosenReports[0]?.type === 'sectional' ? getSectionalSubject(chosenReports[0]) : undefined,
+        sourceScope: chosenReports[0]?.type === 'sectional' ? 'sectional' : 'full_mock',
+        sourceScopeLabel: `${chosenReports.length} Mocks Combined`,
+        testName: `${chosenReports.length} Selected Mocks`,
+        stats: {
+          totalScore: Math.round(totalScore * 10) / 10,
+          maxMarks,
+          accuracy: avgAccuracy,
+          totalQuestions,
+          correct: totalCorrect,
+          wrong: totalWrong,
+          unattempted: totalUnattempted,
+        },
+        questions: allScopedQuestions
+      });
+    } catch (err: any) {
+      console.error('Failed to prepare multi-mock AI scope:', err);
+      alert('Error preparing AI scope: ' + (err.message || 'Unknown error'));
+    } finally {
+      setAskingAiId(null);
     }
   };
 
@@ -3380,19 +3539,36 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 text-white backdrop-blur-md px-4 py-2.5 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-3 text-xs"
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 text-white backdrop-blur-md px-3.5 py-2 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-2 text-xs"
           >
-            <div className="flex items-center gap-2 pl-1">
+            <div className="flex items-center gap-1.5 pl-1 pr-1">
               <span className="w-5 h-5 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[11px] font-bold">
                 {selectedMockIds.length}
               </span>
-              <span className="font-semibold text-slate-200">
-                {selectedMockIds.length === 1 ? '1 mock selected' : `${selectedMockIds.length} mocks selected`}
+              <span className="font-semibold text-slate-200 hidden sm:inline">
+                {selectedMockIds.length === 1 ? '1 mock' : `${selectedMockIds.length} mocks`}
               </span>
             </div>
 
-            <div className="h-4 w-px bg-slate-700" />
+            <div className="h-4 w-px bg-slate-700 mx-0.5" />
 
+            {/* 1. Review Selected */}
+            <button
+              type="button"
+              onClick={handleMultiReviewMock}
+              disabled={reviewingId !== null}
+              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs disabled:opacity-50 shrink-0"
+              title="Review all questions from selected mocks"
+            >
+              {reviewingId === 'multi' ? (
+                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+              ) : (
+                <Eye className="w-3.5 h-3.5" />
+              )}
+              <span>Review</span>
+            </button>
+
+            {/* 2. Practice Mistakes */}
             <button
               type="button"
               onClick={() => {
@@ -3401,16 +3577,34 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   openPracticeModal(chosen, 'all');
                 }
               }}
-              className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold inline-flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs"
+              className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold inline-flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs shrink-0"
+              title="Practice mistakes across selected mocks"
             >
               <Play className="w-3.5 h-3.5 fill-current" />
-              <span>Practice Mistakes ({selectedMockIds.length})</span>
+              <span>Practice</span>
             </button>
 
+            {/* 3. Ask AI */}
+            <button
+              type="button"
+              onClick={handleMultiAskAiMock}
+              disabled={askingAiId !== null}
+              className="px-3 py-1.5 bg-purple-600 hover:bg-purple-500 text-white rounded-full font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs disabled:opacity-50 shrink-0"
+              title="Ask Tommy AI to analyze combined performance"
+            >
+              {askingAiId === 'multi' ? (
+                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+              ) : (
+                <Sparkles className="w-3.5 h-3.5 text-purple-200" />
+              )}
+              <span>Ask AI</span>
+            </button>
+
+            {/* 4. Clear Selection */}
             <button
               type="button"
               onClick={() => setSelectedMockIds([])}
-              className="p-1 text-slate-400 hover:text-white rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
+              className="p-1 text-slate-400 hover:text-white rounded-full hover:bg-slate-800 transition-colors cursor-pointer ml-0.5"
               title="Clear selection"
             >
               <X className="w-3.5 h-3.5" />
