@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import bundledReports from '../src/data/mock_reports.json';
 
 function getMockReports(): any[] {
   try {
@@ -7,12 +8,13 @@ function getMockReports(): any[] {
     const filePath = path.join(cwd, 'src', 'data', 'mock_reports.json');
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf-8');
-      return JSON.parse(content);
+      const parsed = JSON.parse(content);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
     }
   } catch (err) {
     console.error('[api/mock-reports] Error reading mock_reports.json:', err);
   }
-  return [];
+  return (bundledReports as any[]) || [];
 }
 
 export default function handler(req: any, res: any) {
