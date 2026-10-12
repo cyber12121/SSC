@@ -590,14 +590,14 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   }, [activeTab, selectedSectionalSubject]);
 
   const [practiceSection, setPracticeSection] = useState<string>('Reasoning');
-  const [practiceTopic, setPracticeTopic] = useState<string>('all');
+  const [practiceTopics, setPracticeTopics] = useState<string[]>([]);
   const [practiceErrorFilter, setPracticeErrorFilter] = useState<'all' | 'wrong' | 'unattempted' | 'slow'>('all');
   const [modalIntent, setModalIntent] = useState<'practice' | 'review'>('practice');
   const [practiceReviewFilter, setPracticeReviewFilter] = useState<'all' | 'mistakes' | 'wrong' | 'unattempted' | 'slow' | 'correct'>('all');
 
-  // Reset practice topic when section, intent, or selected reports change
+  // Reset practice topics when section, intent, or selected reports change
   useEffect(() => {
-    setPracticeTopic('all');
+    setPracticeTopics([]);
   }, [practiceSection, practiceModalReports, modalIntent]);
   const [rawQuestionsCache, setRawQuestionsCache] = useState<Record<string, any[]>>({});
   const [loadingQuestions, setLoadingQuestions] = useState(false);
@@ -1212,7 +1212,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     setModalIntent(intent);
     setPracticeModalReports(reps);
     setPracticeSection(normalizedTarget);
-    setPracticeTopic('all');
+    setPracticeTopics([]);
     setPracticeErrorFilter('all');
     setPracticeReviewFilter('all');
 
@@ -1385,10 +1385,39 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   }, [practiceModalReports, rawQuestionsCache, practiceSection, modalIntent]);
 
   const activeTopicStats = useMemo(() => {
-    if (practiceTopic === 'all') return activeSectionStats;
-    const found = availableTopics.find(t => t.topic.toLowerCase() === practiceTopic.toLowerCase());
-    return found || null;
-  }, [practiceTopic, availableTopics, activeSectionStats]);
+    if (practiceTopics.length === 0) return activeSectionStats;
+    const selectedSet = new Set(practiceTopics.map(t => t.toLowerCase()));
+    const matched = availableTopics.filter(t => selectedSet.has(t.topic.toLowerCase()));
+    if (matched.length === 0) return null;
+
+    let total = 0;
+    let totalMistakes = 0;
+    let totalAll = 0;
+    let wrong = 0;
+    let unattempted = 0;
+    let slow = 0;
+    let correct = 0;
+
+    matched.forEach(t => {
+      total += t.total;
+      totalMistakes += (t as any).totalMistakes ?? (t.wrong + t.unattempted + t.slow);
+      totalAll += (t as any).totalAll ?? t.total;
+      wrong += t.wrong;
+      unattempted += t.unattempted;
+      slow += t.slow;
+      correct += (t as any).correct ?? 0;
+    });
+
+    return {
+      total: modalIntent === 'review' ? (totalAll || total) : (totalMistakes || total),
+      totalMistakes,
+      totalAll,
+      wrong,
+      unattempted,
+      slow,
+      correct
+    };
+  }, [practiceTopics, availableTopics, activeSectionStats, modalIntent]);
 
   const activeFilteredCount = useMemo(() => {
     if (!activeTopicStats) return 0;
@@ -1438,11 +1467,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       });
 
       // 2. Filter by topic / chapter (if selected)
-      if (practiceTopic !== 'all') {
+      if (practiceTopics.length > 0) {
+        const selectedSet = new Set(practiceTopics.map(t => t.toLowerCase()));
         filtered = filtered.filter(q => {
           const rawT = q.topic || q.tags?.topic;
           const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
-          return cleanT.toLowerCase() === practiceTopic.toLowerCase();
+          return selectedSet.has(cleanT.toLowerCase());
         });
       }
 
@@ -1548,7 +1578,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         };
       });
 
-      const topicSuffix = practiceTopic !== 'all' ? ` • ${practiceTopic}` : '';
+      const topicSuffix = practiceTopics.length === 0
+        ? ''
+        : practiceTopics.length === 1
+          ? ` • ${practiceTopics[0]}`
+          : ` • ${practiceTopics.length} Topics (${practiceTopics.slice(0, 2).join(', ')}${practiceTopics.length > 2 ? '...' : ''})`;
       const sectionTitle = practiceSection === 'all' ? 'All 4 Sections Mistakes' : `${practiceSection} Mistakes`;
       const filterLabel = practiceErrorFilter === 'all' ? '' : ` (${practiceErrorFilter.toUpperCase()})`;
       const combinedTitle = isMultiMock
@@ -1606,12 +1640,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         return qSub === practiceSection;
       });
 
-      // 2. Filter by chapter / topic (if not 'all')
-      if (practiceTopic !== 'all') {
+      // 2. Filter by chapter / topic (if selected)
+      if (practiceTopics.length > 0) {
+        const selectedSet = new Set(practiceTopics.map(t => t.toLowerCase()));
         filtered = filtered.filter(qd => {
           const rawT = qd.question?.tags?.topic || (qd.question as any)?.topic;
           const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
-          return cleanT.toLowerCase() === practiceTopic.toLowerCase();
+          return selectedSet.has(cleanT.toLowerCase());
         });
       }
 
@@ -1640,7 +1675,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
 
       const totalTime = filtered.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
-      const topicSuffix = practiceTopic !== 'all' ? ` • ${practiceTopic}` : '';
+      const topicSuffix = practiceTopics.length === 0
+        ? ''
+        : practiceTopics.length === 1
+          ? ` • ${practiceTopics[0]}`
+          : ` • ${practiceTopics.length} Topics (${practiceTopics.slice(0, 2).join(', ')}${practiceTopics.length > 2 ? '...' : ''})`;
       const sectionTitle = practiceSection === 'all' ? 'All Sections' : practiceSection;
       const filterSuffix = practiceReviewFilter === 'all' ? '' : ` (${practiceReviewFilter.toUpperCase()})`;
 
@@ -3968,19 +4007,39 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 {availableTopics.length > 0 && (
                   <div>
                     <div className="flex items-center justify-between mb-1.5">
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                        2. Filter Chapter / Topic <span className="font-normal text-slate-400 lowercase">(optional)</span>
-                      </label>
-                      <span className="text-[10px] text-slate-400 font-medium">
-                        {availableTopics.length} chapters found
-                      </span>
+                      <div className="flex items-center gap-1.5">
+                        <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                          2. Filter Chapters / Topics
+                        </label>
+                        {practiceTopics.length > 0 && (
+                          <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-full ${
+                            modalIntent === 'review' ? 'bg-emerald-100 text-emerald-800' : 'bg-indigo-100 text-indigo-800'
+                          }`}>
+                            {practiceTopics.length} selected
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {practiceTopics.length > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setPracticeTopics([])}
+                            className="text-[10px] text-indigo-600 hover:text-indigo-800 font-semibold cursor-pointer underline"
+                          >
+                            Clear
+                          </button>
+                        )}
+                        <span className="text-[10px] text-slate-400 font-medium">
+                          {availableTopics.length} chapters
+                        </span>
+                      </div>
                     </div>
                     <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pr-1 py-0.5">
                       <button
                         type="button"
-                        onClick={() => setPracticeTopic('all')}
+                        onClick={() => setPracticeTopics([])}
                         className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
-                          practiceTopic === 'all'
+                          practiceTopics.length === 0
                             ? modalIntent === 'review'
                               ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
                               : 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
@@ -3989,18 +4048,27 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                       >
                         <span>All Topics</span>
                         <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
-                          practiceTopic === 'all' ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                          practiceTopics.length === 0 ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
                         }`}>
                           {activeSectionStats?.total || 0}
                         </span>
                       </button>
                       {availableTopics.map(t => {
-                        const isSelected = practiceTopic.toLowerCase() === t.topic.toLowerCase();
+                        const isSelected = practiceTopics.some(pt => pt.toLowerCase() === t.topic.toLowerCase());
                         return (
                           <button
                             key={t.topic}
                             type="button"
-                            onClick={() => setPracticeTopic(t.topic)}
+                            onClick={() => {
+                              setPracticeTopics(prev => {
+                                const exists = prev.some(pt => pt.toLowerCase() === t.topic.toLowerCase());
+                                if (exists) {
+                                  return prev.filter(pt => pt.toLowerCase() !== t.topic.toLowerCase());
+                                } else {
+                                  return [...prev, t.topic];
+                                }
+                              });
+                            }}
                             className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
                               isSelected
                                 ? modalIntent === 'review'
@@ -4009,6 +4077,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                                 : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                             }`}
                           >
+                            {isSelected && <Check className="w-3 h-3 stroke-[3]" />}
                             <span className="truncate max-w-[150px]">{t.topic}</span>
                             <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
                               isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
@@ -4158,7 +4227,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 {activeFilteredCount === 0 && (
                   <div className="p-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    <span>0 questions for this filter in {practiceTopic !== 'all' ? practiceTopic : practiceSection}.</span>
+                    <span>0 questions for this filter in {practiceTopics.length > 0 ? (practiceTopics.length === 1 ? practiceTopics[0] : `${practiceTopics.length} selected chapters`) : practiceSection}.</span>
                   </div>
                 )}
               </div>
