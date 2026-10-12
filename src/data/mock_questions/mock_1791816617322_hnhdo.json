@@ -25,12 +25,12 @@
     "solution": "Definition: An epigraph is a short quotation or saying at the beginning of a book or chapter, intended to suggest its theme.\nOther options: • Epilogue: A section or speech at the end of a book or play that serves as a comment on or a conclusion to what has happened.\n• Prologue: A separate introductory section of a literary, dramatic, or musical work.\n• Blurb: A short description of a book, movie, or other product written for promotional purposes.",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "English Comprehension",
+    "topic": "One Word Substitution",
     "subtopic": "One Word Substitution",
     "conceptTested": "Vocabulary substitution for a short quotation at the beginning of a literary work.",
     "question": "Read the sentence and choose the correct one-word substitution for the underlined part.\n\nThe author began her novel with a short quotation at the beginning of the book to set the theme.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "One Word Substitution",
       "subtopic": "One Word Substitution",
       "conceptTested": "Vocabulary substitution for a short quotation at the beginning of a literary work."
     }
@@ -61,12 +61,12 @@
     "solution": "Context: The clause \"refusing to let emotions affect his judgments\" indicates an objective, calm, and unemotional manner.\n• Dispassionately: In an unemotional, impartial, or calm manner.\nOther options: • Flamboyantly: In a noticeably stylish, bright, or showy way.\n• Effusively: In a way that expresses feelings of gratitude, pleasure, or approval in an unrestrained or heartfelt manner.\n• Mendaciously: In a dishonest, untruthful way.",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "English Comprehension",
+    "topic": "Fill in the Blanks",
     "subtopic": "Fill Blanks",
     "conceptTested": "Adverb selection based on contextual clues and semantic fit.",
     "question": "Fill in the blank with the appropriate adverb.\n\nHe completed the negotiations ________ refusing to let emotions affect his judgments.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Fill in the Blanks",
       "subtopic": "Fill Blanks",
       "conceptTested": "Adverb selection based on contextual clues and semantic fit."
     }
@@ -97,12 +97,12 @@
     "solution": "Rule: The subject \"hypotheses\" is plural (singular: hypothesis).\n• In the first clause, negative inversion (\"Not only...\") requires the plural auxiliary verb were before \"the hypotheses\".\n• In the second clause, parallel structure (\"were questioned, but also [were] invalidated\") requires the past participle invalidated sharing the passive auxiliary.",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "English Comprehension",
+    "topic": "Spotting Errors",
     "subtopic": "Spotting Errors",
     "conceptTested": "Subject-verb agreement and negative inversion with correlative conjunctions (Not only... but also).",
     "question": "Fill in the blanks with appropriate parts of speech.\n\nNot only ________ the hypotheses questioned, but also ________ by leading experts in the field.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Spotting Errors",
       "subtopic": "Spotting Errors",
       "conceptTested": "Subject-verb agreement and negative inversion with correlative conjunctions (Not only... but also)."
     }
@@ -133,12 +133,12 @@
     "solution": "Idiom: The correct idiom is a great time or a good time when referring to enjoying oneself during holidays.\n• Alternatively, \"high time\" is used in the structure \"It is high time (that)...\" to mean past the appropriate time.\n• Therefore, using high to describe having a good time is incorrect.",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "English Comprehension",
+    "topic": "Spotting Errors",
     "subtopic": "Spotting Errors",
     "conceptTested": "Idiomatic usage and correct collocation of expressions.",
     "question": "Identify the error in the sentence.\n\nWe had a high time during the holidays.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Spotting Errors",
       "subtopic": "Spotting Errors",
       "conceptTested": "Idiomatic usage and correct collocation of expressions."
     }
@@ -169,12 +169,12 @@
     "solution": "Meaning: The idiom crow over means to gloat, boast, or express great satisfaction over one's own success or an opponent's defeat or misfortune.\nVocab Meanings: • Crow over: To boast about one's success or another's failure (किसी की हार पर इतराना / शेखी बघारना)",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "English Comprehension",
+    "topic": "Idioms & Phrases",
     "subtopic": "Idioms Phrases",
     "conceptTested": "Meaning and correct interpretation of English idiomatic expressions.",
     "question": "Choose the correct meaning of idiom:\n\nCrow over",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Idioms & Phrases",
       "subtopic": "Idioms Phrases",
       "conceptTested": "Meaning and correct interpretation of English idiomatic expressions."
     }
@@ -205,12 +205,12 @@
     "solution": "Supporting line: The passage states: \"This 'availability heuristic' leads individuals to judge risks based on how easily examples come to mind, not on actual probability.\"\n• This directly matches \"Judging risk based on memorable examples.\"\n• Options A, B, and D contradict the passage description.",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "Statement & Conclusion",
+    "topic": "Reading Comprehension",
     "subtopic": "Situation Reaction & Judgment",
     "conceptTested": "Critical reading comprehension and direct inference from psychological principles described in a passage.",
     "question": "Human decision-making is rarely based on logic alone; emotion, bias, and perception play critical roles, especially in assessing risk. Psychologists have observed that people often fear unlikely events-such as airplane crashes-more than common dangers like car accidents. This \"availability heuristic\" leads individuals to judge risks based on how easily examples come to mind, not on actual probability. Moreover, emotions like fear or excitement can distort rational thinking. People also tend to avoid losses more strongly than they pursue gains, a concept known as \"loss aversion.\" This is why investors might hold on to failing stocks rather than accept a small loss. Understanding these psychological patterns can improve personal and policy-level decisions. Rather than eliminating emotion, effective risk management involves recognizing how it influences choices. Awareness of these tendencies allows individuals to make more balanced, informed decisions in uncertain situations.\n\nWhat is the availability heuristic, as described in the passage?",
     "tags": {
-      "topic": "Statement & Conclusion",
+      "topic": "Reading Comprehension",
       "subtopic": "Situation Reaction & Judgment",
       "conceptTested": "Critical reading comprehension and direct inference from psychological principles described in a passage."
     }
@@ -277,12 +277,12 @@
     "solution": "Rule: The phrase \"would rather\" corresponds directly to \"would rather\" (contracted as \"I\\'d rather\") in direct speech.\n• Third - person pronoun \"he\" shifts back to first - person \"I\".\n• Direct speech: \"I\\'d rather not comment on the allegations, \" he said.",
     "mockId": "mock_1791816617322_hnhdo",
     "testId": "mock_1791816617322_hnhdo",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Indirect to Direct Conversion",
     "conceptTested": "Conversion of reported speech involving modal auxiliary \"would rather\" back into direct speech with pronoun shift.",
     "question": "A sentence is provided in indirect speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding direct speech.\n\nHe said that he would rather not comment on the allegations.",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Indirect to Direct Conversion",
       "conceptTested": "Conversion of reported speech involving modal auxiliary \"would rather\" back into direct speech with pronoun shift."
     }

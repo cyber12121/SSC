@@ -25,12 +25,12 @@
     "solution": "The correct answer is Dusky.\n\nKey Points: The word \"Incandescent\" means emitting light as a result of being heated, or something that is glowing and extremely bright.\n\n\"Dusky\" refers to something that is dim, shadowy, or lacking brightness. It describes a darker or muted tone.\n\nHence, the opposite of 'Incandescent' is 'Dusky'.",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "English Comprehension",
+    "topic": "Synonyms & Antonyms",
     "subtopic": "Synonyms Antonyms",
     "conceptTested": "Lexical knowledge of antonyms and word meanings.",
     "question": "Select the most appropriate antonym of the given word. Incandescent",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms Antonyms",
       "conceptTested": "Lexical knowledge of antonyms and word meanings."
     }
@@ -61,12 +61,12 @@
     "solution": "The correct answer is clean out.\n\nKey Points: The phrasal verb \"clean out\" means to remove everything from inside a space or container, typically to tidy it up or make room for something else.\n\nIn the given sentence, \"We need to clean out the old files before moving the new ones, \" it involves removing old files completely to make way for the new ones.",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "English Comprehension",
+    "topic": "Fill in the Blanks",
     "subtopic": "Fill Blanks",
     "conceptTested": "Usage of appropriate phrasal verbs in context.",
     "question": "Select the correct phrasal verb: We need to ____ the old files before moving the new ones.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Fill in the Blanks",
       "subtopic": "Fill Blanks",
       "conceptTested": "Usage of appropriate phrasal verbs in context."
     }
@@ -97,12 +97,12 @@
     "solution": "The correct answer is scrutiny.\n\nKey Points: The word \"scrutiny\" refers to close and critical examination. The sentence suggests that the theory has been examined and reinterpreted in light of recent discoveries, which aligns with the meaning of \"scrutiny\".",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "English Comprehension",
+    "topic": "Fill in the Blanks",
     "subtopic": "Fill Blanks",
     "conceptTested": "Vocabulary and contextual word usage.",
     "question": "Select the correct option: In light of recent discoveries, the theory has been subject to rigorous ____ and reinterpretation.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Fill in the Blanks",
       "subtopic": "Fill Blanks",
       "conceptTested": "Vocabulary and contextual word usage."
     }
@@ -133,12 +133,12 @@
     "solution": "The correct answer is Option 3.\n\nKey Points: In the active voice, the sentence is: \"The professor could have been explaining differential topology for hours.\"\n\nTo convert to passive voice, place the object \"differential topology\" at the beginning and change the verb form \"could have been explaining\" to \"could have been being explained\". Add \"by the professor\".",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active Passive Voice",
     "conceptTested": "Conversion of active voice sentences containing modal verbs in continuous tenses into passive voice.",
     "question": "Change the following from active to passive: The professor could have been explaining differential topology for hours.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active Passive Voice",
       "conceptTested": "Conversion of active voice sentences containing modal verbs in continuous tenses into passive voice."
     }
@@ -169,12 +169,12 @@
     "solution": "The correct answer is Option 2.\n\nKey Points: In the given passive voice sentence: \"The documents had been submitted by the assistant before the deadline, \" the subject of the active voice sentence is the assistant.\n\nThe verb form \"had been submitted\" (past perfect passive) is converted to \"had submitted\" (past perfect active).",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active Passive Voice",
     "conceptTested": "Conversion of passive voice sentences in past perfect tense back into active voice.",
     "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The documents had been submitted by the assistant before the deadline.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active Passive Voice",
       "conceptTested": "Conversion of passive voice sentences in past perfect tense back into active voice."
     }
@@ -349,12 +349,12 @@
     "solution": "The correct answer is Option B.\n\nIn indirect speech, the subjunctive mood (\"were\") is retained in direct speech. The modal verb \"might\" also remains unchanged as it reflects possibility. Thus, the direct speech retains the exact hypothetical structure: The composer said, \"Were the leitmotif transposed an octave higher, the tension might dissipate prematurely.\"",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Interrogative Sentences",
     "conceptTested": "Conversion of indirect speech involving past subjunctive conditional clauses into direct speech without altering mood or tense.",
     "question": "Select the correct option for the Direct Speech conversion of the sentence below.\n\nThe composer explained that, were the leitmotif transposed an octave higher, the tension might dissipate prematurely.",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Interrogative Sentences",
       "conceptTested": "Conversion of indirect speech involving past subjunctive conditional clauses into direct speech without altering mood or tense."
     }
@@ -385,12 +385,12 @@
     "solution": "The correct answer is Option 1 (2, 4, 3, 1).\n\nKey Points: Sentence 2 is the introductory sentence as it defines robotics: \"Robotics is an interdisciplinary field of engineering and computer science that deals with the design, construction, and operation of robots.\".\nSentence 4 follows to explain the purpose of these machines: \"These machines are designed to assist humans by automating tasks that are either repetitive, hazardous, or require a level of accuracy beyond human capability.\".\nSentence 3 describes the internal mechanism and programming: \"The core of a modern robot is its programming, which utilizes sophisticated algorithms and sensors to process information.\".\n\nSentence 1 concludes the paragraph by explaining the result of these mechanisms: \"This allows them to navigate and perform tasks with a high degree of precision in various environments, from factory floors to surgical theaters.\".\n\nTherefore, the correct coherent sequence is 2, 4, 3, 1.",
     "mockId": "mock_1791370032911_fff7u",
     "testId": "mock_1791370032911_fff7u",
-    "topic": "English Comprehension",
+    "topic": "Para Jumbles",
     "subtopic": "Sentence Rearrangement",
     "conceptTested": "Logical sequencing of sentences to form a coherent paragraph based on thematic introduction, purpose, mechanism, and outcome.",
     "question": "Rearrange the following sentences to form a coherent paragraph:\n1. This allows them to navigate and perform tasks with a high degree of precision in various environments, from factory floors to surgical theaters. 2. Robotics is an interdisciplinary field of engineering and computer science that deals with the design, construction, and operation of robots.\n3. The core of a modern robot is its programming, which utilizes sophisticated algorithms and sensors to process information.\n4. These machines are designed to assist humans by automating tasks that are either repetitive, hazardous, or require a level of accuracy beyond human capability.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Para Jumbles",
       "subtopic": "Sentence Rearrangement",
       "conceptTested": "Logical sequencing of sentences to form a coherent paragraph based on thematic introduction, purpose, mechanism, and outcome."
     }

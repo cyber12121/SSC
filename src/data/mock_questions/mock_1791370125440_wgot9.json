@@ -25,12 +25,12 @@
     "solution": "The correct answer is 'Abscond'.\n\nKey Points\nThe word \"Abscond\" means to leave hurriedly and secretly, especially to avoid arrest or legal action.\n\nExample: The accused tried to abscond after committing the crime.\n\nAdditional Information\nPerambulate: To walk through or around a place.\nCircumambulate: To walk all the way around something, especially in a ritual manner.\nLoiter: To stand or wait around without purpose.",
     "mockId": "mock_1791370125440_wgot9",
     "testId": "mock_1791370125440_wgot9",
-    "topic": "English Comprehension",
+    "topic": "One Word Substitution",
     "subtopic": "One Word Substitution",
     "conceptTested": "Knowledge of vocabulary and precise one-word substitutes for specific phrases.",
     "question": "Choose the correct one-word substitute for: \"To leave suddenly and hurriedly\".",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "One Word Substitution",
       "subtopic": "One Word Substitution",
       "conceptTested": "Knowledge of vocabulary and precise one-word substitutes for specific phrases."
     }
@@ -61,12 +61,12 @@
     "solution": "The correct answer is Option 3.\n\nKey Points\nThe given sentence is in the simple past tense (\"damaged\").\n\nIn passive voice, the structure for simple past is Object + was/were + past participle + by + subject.\n\nThe object \"many houses\" becomes the subject in the passive voice.\n\nSince \"houses\" is plural, we use \"were damaged\".\nCorrect sentence: Many houses were damaged by the storm.",
     "mockId": "mock_1791370125440_wgot9",
     "testId": "mock_1791370125440_wgot9",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active Passive Voice",
     "conceptTested": "Conversion of simple past tense sentences from active to passive voice.",
     "question": "Change the following from active to passive: The storm damaged many houses.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active Passive Voice",
       "conceptTested": "Conversion of simple past tense sentences from active to passive voice."
     }
@@ -97,12 +97,12 @@
     "solution": "The correct answer is Option 3.\n\nKey Points\nThe given sentence is in passive voice, where the focus is on \"the findings\" rather than the doer of the action.\n\nThe phrase \"were interpreted to have been misrepresented\" indicates a reporting structure in passive form.\n\nTo convert into active voice, the doer (the spokesperson) must become the subject of the sentence.\n\nOption (3) correctly shifts the focus to the spokesperson and maintains the intended meaning.\n\nCorrect sentence: The spokesperson was believed to have misrepresented the findings in the official release.",
     "mockId": "mock_1791370125440_wgot9",
     "testId": "mock_1791370125440_wgot9",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Passive Active Conversion",
     "conceptTested": "Conversion of complex reporting structures from passive voice to active voice.",
     "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The findings were interpreted to have been misrepresented by the spokesperson in the official release.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Passive Active Conversion",
       "conceptTested": "Conversion of complex reporting structures from passive voice to active voice."
     }
@@ -133,12 +133,12 @@
     "solution": "The correct answer is Option 2: True freedom requires interrogation of influences.\n\nKey Points\nThe passage argues that modern society subtly shapes and modifies individual choices through systems like social conditioning, digital surveillance, and algorithmic influence.\n\nIt suggests that what appears to be free will is often structured and conditioned by external forces such as market mechanisms and political strategies.\n\nThe author clarifies that the aim is not fatalism but awareness - true autonomy requires conscious interrogation of the influences shaping decisions.",
     "mockId": "mock_1791370125440_wgot9",
     "testId": "mock_1791370125440_wgot9",
-    "topic": "English Comprehension",
+    "topic": "Reading Comprehension",
     "subtopic": "Reading Comprehension",
     "conceptTested": "Comprehension and identification of the central theme or argument of a discursive passage.",
     "question": "Read the passage below and answer the question:\n\nIn contemporary discourse, \"free will\" is often celebrated as the cornerstone of individual autonomy and democratic agency. Yet, a deeper examination reveals that this perceived freedom may be more constructed than authentic. Modern society, while outwardly championing liberty, subtly engineers conformity through systems of social conditioning, digital surveillance, and algorithmic manipulation. The choices we make-what to wear, what to consume, even what to believe-are frequently shaped less by volition than by invisible frameworks of control. Consumer behavior is a telling example. Market forces, armed with behavioral data and predictive analytics, sculpt preferences before individuals are even conscious of them. Personalization engines masquerade as facilitators of choice, but in reality, they nudge individuals toward decisions already engineered to optimize corporate profit. Similarly, social media platforms curate information ecosystems that reinforce existing biases, creating cognitive echo chambers that masquerade as informed choice. Even political decisions-arguably the most significant expression of agency-are susceptible to manipulation. Campaign strategies leveraging psychographic profiling can influence voting behavior by exploiting psychological vulnerabilities rather than rational deliberation. The illusion of participation, thus, replaces genuine engagement. Moreover, societal norms, instilled through education, media, and cultural traditions, define the boundaries within which 'freedom' operates. A person may \"choose\" a career path, but that choice is often filtered through expectations shaped by socioeconomic class, geography, and familial pressures. What appears voluntary is often a conditioned response disguised as self-determination. To be clear, this is not an argument for fatalism, but rather a call for awareness. Recognizing the architecture that underpins our choices is the first step toward reclaiming autonomy. True agency, therefore, is not the absence of influence but the conscious interrogation of it. Without such reflection, free will in modern society may remain a comforting mirage rather than an existential reality.\n\nWhat is the central argument of the passage?",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Comprehension and identification of the central theme or argument of a discursive passage."
     }
@@ -169,12 +169,12 @@
     "solution": "The correct answer is Option 3: They manipulate preferences subtly.\n\nKey Points\nThe passage states that personalization engines masquerade as facilitators of choice while subtly guiding users.\n\nThey nudge individuals toward decisions already engineered to maximize corporate profit.\n\nConsumer preferences are shaped using behavioral data and predictive analytics before individuals become consciously aware.",
     "mockId": "mock_1791370125440_wgot9",
     "testId": "mock_1791370125440_wgot9",
-    "topic": "English Comprehension",
+    "topic": "Reading Comprehension",
     "subtopic": "Reading Comprehension",
     "conceptTested": "Information extraction and detailed comprehension from a descriptive text.",
     "question": "Read the passage below and answer the question:\n\nIn contemporary discourse, \"free will\" is often celebrated as the cornerstone of individual autonomy and democratic agency. Yet, a deeper examination reveals that this perceived freedom may be more constructed than authentic. Modern society, while outwardly championing liberty, subtly engineers conformity through systems of social conditioning, digital surveillance, and algorithmic manipulation. The choices we make-what to wear, what to consume, even what to believe-are frequently shaped less by volition than by invisible frameworks of control. Consumer behavior is a telling example. Market forces, armed with behavioral data and predictive analytics, sculpt preferences before individuals are even conscious of them. Personalization engines masquerade as facilitators of choice, but in reality, they nudge individuals toward decisions already engineered to optimize corporate profit. Similarly, social media platforms curate information ecosystems that reinforce existing biases, creating cognitive echo chambers that masquerade as informed choice. Even political decisions-arguably the most significant expression of agency-are susceptible to manipulation. Campaign strategies leveraging psychographic profiling can influence voting behavior by exploiting psychological vulnerabilities rather than rational deliberation. The illusion of participation, thus, replaces genuine engagement. Moreover, societal norms, instilled through education, media, and cultural traditions, define the boundaries within which 'freedom' operates. A person may \"choose\" a career path, but that choice is often filtered through expectations shaped by socioeconomic class, geography, and familial pressures. What appears voluntary is often a conditioned response disguised as self-determination. To be clear, this is not an argument for fatalism, but rather a call for awareness. Recognizing the architecture that underpins our choices is the first step toward reclaiming autonomy. True agency, therefore, is not the absence of influence but the conscious interrogation of it. Without such reflection, free will in modern society may remain a comforting mirage rather than an existential reality.\n\nAccording to the passage, how do personalization algorithms affect consumer choice?",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Information extraction and detailed comprehension from a descriptive text."
     }

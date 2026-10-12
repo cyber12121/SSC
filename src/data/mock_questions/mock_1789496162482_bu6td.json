@@ -1313,7 +1313,8 @@
     "timeSpent": 81,
     "userTime": 81,
     "questionText": "Read the following passage carefully and answer the question that follows:\n\nIn an age marked by constant stimulation, emotional volatility, and instant reactions, the idea of Zen Mode as emotional discipline has gained renewed relevance. Emotional discipline does not imply suppression of feelings or emotional detachment; rather, it refers to the conscious regulation of one's emotional responses. Zen Mode encourages individuals to pause, observe, and respond thoughtfully instead of reacting impulsively. In doing so, it transforms emotions from disruptive forces into sources of clarity and balance. Zen Mode emphasises awareness over impulse. Emotions such as anger, frustration, anxiety, or excitement are natural human experiences, but problems arise when these emotions dictate behaviour without reflection. Emotional discipline begins with recognising these feelings as they arise, without judgement or resistance. By cultivating mindfulness, Zen Mode creates a mental space between stimulus and response, allowing individuals to choose calm and reason over emotional overflow. This practice strengthens self-control and fosters inner stability.\n\nIn personal relationships, Zen Mode as emotional discipline plays a crucial role. Conflicts often escalate not because of the issue at hand but due to unchecked emotional reactions. Practising Zen Mode enables individuals to listen actively, empathise sincerely, and respond with composure. Instead of reacting defensively or aggressively, emotionally disciplined individuals communicate with clarity and respect. This approach not only prevents unnecessary misunderstandings but also deepens trust and emotional maturity in relationships. Zen Mode also serves as an essential discipline in professional environments. Workplaces today demand constant multitasking, rapid decision-making, and emotional resilience. Without emotional discipline, stress and pressure can lead to burnout, impulsive decisions, and strained professional interactions. Zen Mode encourages calm focus, patience, and emotional neutrality, enabling individuals to navigate challenges without being overwhelmed. Leaders who practise Zen Mode demonstrate balanced judgement, inspire confidence, and handle crises with composure. Ultimately, Zen Mode as emotional discipline is a lifelong practice rather than a temporary state. It requires consistent self-awareness, reflection, and intentional restraint. By choosing mindfulness over reactivity, individuals gain mastery over their emotional landscape. In a world driven by speed and intensity, Zen Mode offers a quiet yet powerful discipline, one that nurtures emotional intelligence, inner peace, and thoughtful engagement with life.\n\nWhich of the following best expresses the central idea of the passage?",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Reading Comprehension"
   },
   {
     "id": "mock_q_38_mock_1789496162482_bu6td",
@@ -1349,7 +1350,8 @@
     "timeSpent": 28,
     "userTime": 28,
     "questionText": "Identify the segment in the sentence which contains a grammatical error. If there is no error in the sentence, select 'No error'.\n\nI cracked SSC CGL with nothing else but determination and the guts to never give up.",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_39_mock_1789496162482_bu6td",
@@ -1385,7 +1387,8 @@
     "timeSpent": 9,
     "userTime": 9,
     "questionText": "Choose the word from the options that is opposite in meaning to the given word:\n\nIndigent",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Synonyms & Antonyms"
   },
   {
     "id": "mock_q_40_mock_1789496162482_bu6td",
@@ -1421,7 +1424,8 @@
     "timeSpent": 13,
     "userTime": 13,
     "questionText": "Select the most appropriate synonym of the given word:\n\nFerocious",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Synonyms & Antonyms"
   },
   {
     "id": "mock_q_41_mock_1789496162482_bu6td",
@@ -1456,7 +1460,8 @@
     "timeSpent": 8,
     "userTime": 8,
     "questionText": "Which spelling is correct for expressing disapproval?",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Spelling Errors"
   },
   {
     "id": "mock_q_42_mock_1789496162482_bu6td",
@@ -1492,7 +1497,8 @@
     "timeSpent": 16,
     "userTime": 16,
     "questionText": "Select the most appropriate ANTONYM to replace the underlined word.\n\nToxic workplaces impose serious and lasting harm on affected employees.",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Synonyms & Antonyms"
   },
   {
     "id": "mock_q_43_mock_1789496162482_bu6td",
@@ -1528,6 +1534,7 @@
     "timeSpent": 16,
     "userTime": 16,
     "questionText": "Parts of a sentence are given below in jumbled order. Arrange the parts in the correct order to form a meaningful sentence.\n\nO. of being posted\nP. the creative team was thrilled\nQ. when their latest viral reel\nR. gained millions of views\nS. within just a few hours",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Para Jumbles"
   }
 ]

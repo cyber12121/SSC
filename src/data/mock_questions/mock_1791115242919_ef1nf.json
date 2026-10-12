@@ -1549,7 +1549,8 @@
     "userTime": 28,
     "solution": "For Wh - interrogative sentences, the reporting verb \"said to\" changes to \"asked\". The question transforms into an assertive sentence where the subject precedes the verb, and the tense shifts from Present Indefinite to Past Indefinite. Thus, \"What is your talent?\" becomes \"what his talent was\".",
     "questionText": "Select the option that expresses the given sentence in reported speech.\n\nThe anchor said to the contestant, \"What is your talent?\"",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Direct & Indirect Speech"
   },
   {
     "id": "mock_q_41_mock_1791115242919_ef1nf",
@@ -1586,7 +1587,8 @@
     "userTime": 23,
     "solution": "Give notice: To inform or alert others about something. This fits the blank as the child is likely tasked with watching for the apparitor and informing others of his arrival. This matches the context of someone being positioned at the door for a specific purpose related to observation and communication.\nThe complete sentence is: One of the children stood at the door to give notice if he saw the apparitor coming, who was an officer of the spiritual court.\nHence, (a) is the correct answer.\nOption (b): It means to offer suggestions or recommendations about a course of action. This is not meaningful in the context because the child is not expected to provide counsel or suggestions about the apparitor's arrival.\nOption (c): It means to consider or think about something carefully, which doesn't align with the practical task of keeping watch.\nOption (d): It means to offer help or assistance, which suggests active assistance rather than passive vigilance.",
     "questionText": "Select the most appropriate option to fill in the blank.\n\nOne of the children stood at the door to _____if he saw the apparitor coming, who was an officer of the spiritual court.",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Fill in the Blanks"
   },
   {
     "id": "mock_q_42_mock_1791115242919_ef1nf",
@@ -1623,7 +1625,8 @@
     "userTime": 18,
     "solution": "When expressing a habitual truth or regular action in direct speech, the tense in indirect speech generally remains unchanged (Present Simple stays Present Simple), though pronouns and verb agreement change accordingly. - The pronoun 'I' changes to 'he'. - The verb 'do' changes to 'does'. - Inverted commas (\"...\") are replaced with 'that'.\n\nTherefore, the correct sentence is: Hemant said that he does yoga regularly.",
     "questionText": "Select the option that expresses the given sentence in reported speech.\n\nHemant said, \"I do yoga regularly.\"",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Direct & Indirect Speech"
   },
   {
     "id": "mock_q_43_mock_1791115242919_ef1nf",
@@ -1660,7 +1663,8 @@
     "userTime": 33,
     "solution": "The subject of the active voice becomes the object in the passive voice, and the object of the active voice becomes the subject. For modal verbs, the structure is: Object (Subjective case) + Modal + be + V³ + by + Subject (Objective case).\n\nThus, 'You should wear this pantsuit' becomes 'This pantsuit should be worn by you.'\n\nTherefore, the correct answer is option (d).",
     "questionText": "Select the option that expresses the given sentence in passive voice.\n\nYou should wear this pantsuit.",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Active & Passive Voice"
   },
   {
     "id": "mock_q_44_mock_1791115242919_ef1nf",
@@ -1697,7 +1701,8 @@
     "userTime": 40,
     "solution": "When prepositions ('of' in the given sentence) are followed by a verb, the verb should be in the present participle (-ing) form.\n\nSo, 'work' should be replaced with 'working' because it acts as a verb following the preposition 'of'.\n\nHence, option (d) is the answer.",
     "questionText": "Parts of following sentence have been underlined and given as options. Select the option that contains an error.\n\nHas Gita any previous knowledge of work with junior colleagues?",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_45_mock_1791115242919_ef1nf",
@@ -1734,7 +1739,8 @@
     "userTime": 19,
     "solution": "The correct spelling is 'Attendant'; it has double 't' and ends with '-ant'. Many agent nouns end with '-ant' (such as assistant, attendant). - Option A uses '-ent' (Attendent) which is incorrect. - Option C misses a 't' (Atendant). - Option D uses the wrong vowel (Attendunt).\n\nTherefore, the correct option is B.",
     "questionText": "Pick the spelling that is correct for the official person who checks tickets at an event entry.",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Spelling Errors"
   },
   {
     "id": "mock_q_46_mock_1791115242919_ef1nf",
@@ -1771,6 +1777,7 @@
     "userTime": 18,
     "solution": "Farcical (adj.) = very silly, unlikely, or unreasonable, often in a way that is humorous.\n\nUsage: The whole situation of the government has become farcical during the election time.\n\nNotorious (adj.) = famous or well known, typically for some bad quality or deed.\n\nImperious (adj.) = arrogant and domineering; unpleasantly proud and expecting to be obeyed.\n\nPeremptory (adj.) = expecting to be obeyed immediately and without any questions.\n\nAs per the stated meanings, 'farcical' is the correct one - word substitute.",
     "questionText": "Select the option that can be used as a one-word substitute for the given group of words.\n\nVery silly or unreasonable often in a way that is humorous",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "One Word Substitution"
   }
 ]

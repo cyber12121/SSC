@@ -25,12 +25,12 @@
     "solution": "Rule: The simple past passive ('was reached') converts to the simple past active question ('Did...reach?'). The agent becomes the subject.\n\nThe passive question \"Was the conclusion reached by the jury...?\" is in the simple past tense. To convert to active, the agent 'the jury' becomes the subject. The verb phrase 'was reached' changes to 'did reach'.\n\nOption 1 is correct. Option 2 remains passive. Option 3 changes the tense to past perfect. Option 4 changes the subject and meaning.",
     "mockId": "mock_1789684399252_0icxt",
     "testId": "mock_1789684399252_0icxt",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice",
     "conceptTested": "Conversion of simple past passive interrogative to active voice.",
     "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: Was the conclusion reached by the jury after reviewing all the evidence?",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of simple past passive interrogative to active voice."
     },
@@ -62,12 +62,12 @@
     "solution": "Rule: When converting from passive to active, identify the logical subject performing the action. The passive structure 'must have been implemented' becomes active 'must have implemented'.\n\nThe passive sentence \"The changes must have been implemented...\" has an implied subject. To make it active, a logical subject like 'Someone' is introduced. The verb phrase 'must have been implemented' changes to 'must have implemented'.\n\nOption 1 changes the modal and meaning. Option 2 remains passive. Option 4 remains passive.",
     "mockId": "mock_1789684399252_0icxt",
     "testId": "mock_1789684399252_0icxt",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice",
     "conceptTested": "Conversion of modal perfect passive to active voice with an implied subject.",
     "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The changes must have been implemented without consulting the advisory board.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of modal perfect passive to active voice with an implied subject."
     },
@@ -99,12 +99,12 @@
     "solution": "Rule: The past perfect passive ('had been parked') converts to the past perfect active ('had parked'). The agent becomes the subject.\n\nThe passive sentence \"The car had been parked by the visitor...\" is in the past perfect tense. To convert to active, the agent 'the visitor' becomes the subject. The verb phrase 'had been parked' changes to 'had parked'.\n\nOption 1 uses the simple present. Option 3 is a passive construction. Option 4 uses the simple future.",
     "mockId": "mock_1789684399252_0icxt",
     "testId": "mock_1789684399252_0icxt",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice",
     "conceptTested": "Conversion of past perfect passive to active voice.",
     "question": "Convert the sentence provided below from its passive voice structure to an active voice structure: The car had been parked in front of the gate by the visitor.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of past perfect passive to active voice."
     },
@@ -136,12 +136,12 @@
     "solution": "Rule: For a question in the simple future tense, the passive voice is formed using 'will + subject + be + past participle?'.\n\nThe active question \"Where will they hold the conference?\" is in the simple future tense. To convert to passive, the object 'the conference' becomes the subject. The verb phrase 'will hold' becomes 'will be held'.\n\nOption 1 has incorrect word order. Option 3 uses the simple present. Option 4 uses the present perfect.",
     "mockId": "mock_1789684399252_0icxt",
     "testId": "mock_1789684399252_0icxt",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice",
     "conceptTested": "Conversion of simple future active interrogative to passive voice.",
     "question": "Change the following from active to passive:\n\nWhere will they hold the conference?",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of simple future active interrogative to passive voice."
     }
@@ -172,12 +172,12 @@
     "solution": "Rule: With the 'going to' future structure, the passive voice is formed using 'is going to be + past participle'.\n\nThe active sentence \"We are going to start...\" is in the 'going to' future tense. To convert to passive, the object 'the project' becomes the subject. The verb phrase 'are going to start' changes to 'is going to be started'.\n\nOption 2 uses 'was going to', changing the tense. Option 3 uses 'being going to', which is incorrect. Option 4 uses 'has been going to', which is incorrect.",
     "mockId": "mock_1789684399252_0icxt",
     "testId": "mock_1789684399252_0icxt",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice",
     "conceptTested": "Conversion of 'going to' future active to passive voice.",
     "question": "Change the following from active to passive:\n\nWe are going to start the project soon.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice",
       "conceptTested": "Conversion of 'going to' future active to passive voice."
     }
@@ -389,12 +389,12 @@
     "solution": "Rule: The past modal continuous active voice ('may have been undervaluing') converts to the past modal continuous passive voice ('may have been being undervalued').\n\nThe active sentence \"They may have been undervaluing...\" is in the past modal continuous tense. To convert to passive, the object 'the intellectual property portfolio' becomes the subject. The verb phrase 'may have been undervaluing' changes to 'may have been being undervalued'.\n\nOption A uses incorrect 'be being'. Option B is missing 'been' and 'being'. Option D uses 'had been'.\n\nCorrect Answer is Option C because it correctly uses the past modal continuous passive form.",
     "mockId": "mock_1789684399252_0icxt",
     "testId": "mock_1789684399252_0icxt",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice - Modal Continuous",
     "conceptTested": "Conversion of past modal continuous active voice (Subject + modal + have + been + verb-ing + object) to passive voice (Object + modal + have + been + being + V3 + by subject).",
     "question": "Change the following from active to passive:\n\nThey may have been undervaluing the intellectual property portfolio.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice - Modal Continuous",
       "conceptTested": "Conversion of past modal continuous active voice (Subject + modal + have + been + verb-ing + object) to passive voice (Object + modal + have + been + being + V3 + by subject)."
     },

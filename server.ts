@@ -156,6 +156,23 @@ function getLocalTopicTag(subject: string, text: string, currentTopic?: string):
     }
   }
 
+  if (/english/i.test(subject)) {
+    if (
+      currentTopic === "English Comprehension" ||
+      currentTopic === "English" ||
+      currentTopic === "Statement & Conclusion" ||
+      currentTopic === "Time & Work" ||
+      currentTopic === "Prepositions" ||
+      currentTopic === "Articles" ||
+      currentTopic === "Conjunctions" ||
+      currentTopic === "Pronouns" ||
+      currentTopic === "Tenses" ||
+      currentTopic === "Subject-Verb Agreement"
+    ) {
+      currentTopic = undefined;
+    }
+  }
+
   if (currentTopic && currentTopic !== "General" && currentTopic !== "Unknown") {
     return currentTopic;
   }
@@ -239,20 +256,18 @@ function getLocalTopicTag(subject: string, text: string, currentTopic?: string):
     if (/\b(correctly spelt|incorrectly spelt|misspelt|spelling|spelled|spelt)\b/i.test(s)) return "Spelling Errors";
     if (/\b(indirect speech|direct speech|reported speech|narration)\b/i.test(s)) return "Direct & Indirect Speech";
     if (/\b(passive voice|active voice)\b/i.test(s)) return "Active & Passive Voice";
-    if (/\b(one word substitution|one-word substitute|one word substitute|group of words)\b/i.test(s)) return "One Word Substitution";
-    if (/\b([P-S]{4}|jumbled|para jumbles?|arrange the sentences|order of the parts|order to form a meaningful)\b/i.test(s)) return "Para Jumbles";
-    if (/\b(substitute|substitution|underline|improve|sentence improvement)\b/i.test(s)) return "Sentence Improvement";
-    if (/\b(synonym|antonym|similar|opposite in meaning|homonym)\b/i.test(s)) return "Synonyms & Antonyms";
+    if (/\b(one word substitution|one-word substitute|one word substitute|group of words|single word for|can be substituted by|ows)\b/i.test(s)) return "One Word Substitution";
+    if (/\b([P-S]{4}|jumbled|para jumbles?|arrange the sentences|order of the parts|order to form a meaningful|sentence rearrangement)\b/i.test(s)) return "Para Jumbles";
+    if (/\b(substitute the underlined|substitute the bold|improve the underlined|improve the segment|sentence improvement)\b/i.test(s)) return "Sentence Improvement";
+    if (/\b(synonym|antonym|similar in meaning|opposite in meaning|closest in meaning|homonym)\b/i.test(s)) return "Synonyms & Antonyms";
     if (/\b(idiom|phrase)\b/i.test(s)) return "Idioms & Phrases";
-    if (/\b(fill in the blank|blank)\b/i.test(s)) return "Fill in the Blanks";
-    if (/\b(subject-verb agreement|subject verb agreement)\b/i.test(s)) return "Subject-Verb Agreement";
-    if (/\b(preposition|prepositions)\b/i.test(s)) return "Prepositions";
-    if (/\b(article|articles)\b/i.test(s)) return "Articles";
-    if (/\b(conjunction|conjunctions)\b/i.test(s)) return "Conjunctions";
-    if (/\b(pronoun|pronouns)\b/i.test(s)) return "Pronouns";
-    if (/\b(tenses|sequence of tenses)\b/i.test(s)) return "Tenses";
+    if (/\b(what will come in blank \(\d+\)|blank \(\d+\)|cloze test|cloze passage)\b/i.test(s)) return "Cloze Test";
+    if (/\b(according to the passage|based on the passage|author's tone|author’s tone|reading comprehension)\b/i.test(s)) return "Reading Comprehension";
+    if (/\b(fill in the blank|single filler|double filler)\b/i.test(s)) return "Fill in the Blanks";
     if (/\b(grammatical error|spot the error|contains an error|spotting error|grammatically correct)\b/i.test(s)) return "Spotting Errors";
-    if (/\b(cloze|passage|reading comprehension)\b/i.test(s)) return "Cloze Test";
+    if (/\b(cloze)\b/i.test(s)) return "Cloze Test";
+    if (/\b(passage)\b/i.test(s)) return "Reading Comprehension";
+    if (/\b(blank)\b/i.test(s)) return "Fill in the Blanks";
     return "Spotting Errors";
   }
 

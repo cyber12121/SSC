@@ -1877,7 +1877,8 @@
     "timeSpent": 39,
     "userTime": 39,
     "questionText": "Find the part of the sentence that contains an error: (1) The structural density of the newly developed titanium-matrix composite / (2) is estimated by materials scientists to be significantly higher than / (3) the conventional aluminum alloys used in the manufacturing / (4) of next-generation aerospace fuselages.",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_49_mock_1790694420538_dg24i",
@@ -1914,7 +1915,8 @@
     "timeSpent": 41,
     "userTime": 41,
     "questionText": "The following sentence has been split into four segments. Identify the segment that contains a grammatical error. The compensation that the [A]/Government agreed to provide to [B]/the dependents of the [C]/train accident is fairly less [D].",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_50_mock_1790694420538_dg24i",
@@ -1936,7 +1938,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Idioms & Phrases",
       "difficulty": "medium"
     },
     "avgTime": 23,
@@ -1951,7 +1953,8 @@
     "timeSpent": 20,
     "userTime": 20,
     "questionText": "Choose the idiom from the given alternatives that best matches the following definition: \"A completely unalterable, rigid, or permanent code of conduct or legislative decree that leaves absolutely no room for future modification, compromise, or contextual leniency.\"",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Idioms & Phrases"
   },
   {
     "id": "mock_q_51_mock_1790694420538_dg24i",
@@ -1973,7 +1976,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Synonyms & Antonyms",
       "difficulty": "medium"
     },
     "avgTime": 13,
@@ -1988,7 +1991,8 @@
     "timeSpent": 9,
     "userTime": 9,
     "questionText": "Select the most appropriate SYNONYM of the given word. CAPITULATION",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Synonyms & Antonyms"
   },
   {
     "id": "mock_q_52_mock_1790694420538_dg24i",
@@ -2010,7 +2014,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Spotting Errors",
       "difficulty": "medium"
     },
     "avgTime": 17,
@@ -2025,7 +2029,8 @@
     "timeSpent": 18,
     "userTime": 18,
     "questionText": "Select the option with the correct spelling to replace the underlined word. If the spelling is already correct, choose \"No replacement required.\" The patient’s reuhmatoid arthritis required a complex regimen of immunosuppressants and physical therapy.",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_53_mock_1790694420538_dg24i",
@@ -2047,7 +2052,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Synonyms & Antonyms",
       "difficulty": "medium"
     },
     "avgTime": 16,
@@ -2062,7 +2067,8 @@
     "timeSpent": 21,
     "userTime": 21,
     "questionText": "Select the most appropriate ANTONYM of the given word. PLANATE",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Synonyms & Antonyms"
   },
   {
     "id": "mock_q_54_mock_1790694420538_dg24i",
@@ -2084,7 +2090,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Direct & Indirect Speech",
       "difficulty": "medium"
     },
     "avgTime": 35,
@@ -2099,7 +2105,8 @@
     "timeSpent": 60,
     "userTime": 60,
     "questionText": "Select the option that expresses the given sentence in direct speech. The historian remarked that centuries ago, regional populations would migrate southward whenever the sub-zero winter fronts approached.",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Direct & Indirect Speech"
   },
   {
     "id": "mock_q_55_mock_1790694420538_dg24i",
@@ -2121,7 +2128,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Direct & Indirect Speech",
       "difficulty": "medium"
     },
     "avgTime": 32,
@@ -2136,7 +2143,8 @@
     "timeSpent": 23,
     "userTime": 23,
     "questionText": "Select the option that expresses the given sentence in direct speech. The magistrate warned the witness that under no circumstances was he to leave the jurisdiction without official court authorization.",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Direct & Indirect Speech"
   },
   {
     "id": "mock_q_56_mock_1790694420538_dg24i",
@@ -2158,7 +2166,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Synonyms & Antonyms",
       "difficulty": "medium"
     },
     "avgTime": 45,
@@ -2173,7 +2181,8 @@
     "timeSpent": 11,
     "userTime": 11,
     "questionText": "Which of the following words is most nearly the ANTONYM of the word \"exorbitant\" as used in the fourth paragraph of the passage?",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Synonyms & Antonyms"
   },
   {
     "id": "mock_q_57_mock_1790694420538_dg24i",
@@ -2195,7 +2204,7 @@
     "subject": "English",
     "section": "English Comprehension",
     "tags": {
-      "topic": "General",
+      "topic": "Spotting Errors",
       "difficulty": "medium"
     },
     "avgTime": 46,
@@ -2210,6 +2219,7 @@
     "timeSpent": 194,
     "userTime": 194,
     "questionText": "What can be reasonably inferred from the passage regarding traditional chemotherapy?",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Spotting Errors"
   }
 ]

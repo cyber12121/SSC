@@ -82,6 +82,7 @@ export function normalizeTopicTitle(rawTopic?: string | null): string {
   if (/^spotting?\s*errors?/i.test(clean)) return 'Spotting Errors';
   if (/^cloze\s*test/i.test(clean) || /^cloze\b/i.test(clean)) return 'Cloze Test';
   if (/^reading\s*comprehension/i.test(clean) || /^rc\b/i.test(clean) || /^comprehension/i.test(clean)) return 'Reading Comprehension';
+  if (/^(subject[- ]?verb agreement|prepositions?|articles?|conjunctions?|pronouns?|tenses?|grammar)$/i.test(clean)) return 'Spotting Errors';
   return clean;
 }
 
@@ -89,6 +90,7 @@ export function detectTopic(q: Question, subject: string): string {
   const s = (q.question + ' ' + (q.solution || '')).toLowerCase();
   const sub = (subject || '').toLowerCase();
   const isReasoning = sub.includes('reason') || sub.includes('intel');
+  const isEnglish = sub.includes('eng');
 
   const rawTag = q.tags?.topic || (q as any).topic;
   let currentTopic: string | undefined = rawTag ? normalizeTopicTitle(rawTag) : undefined;
@@ -148,6 +150,18 @@ export function detectTopic(q: Question, subject: string): string {
       (currentTopic === 'Coding-Decoding' && /\b(interchanged|equation|pairs of letters|vowel is changed)\b/i.test(s)) ||
       (currentTopic === 'Seating Arrangement' && /\b(flagpoles|rank|corridor|how many flagpoles|from the left end and)\b/i.test(s)) ||
       (currentTopic === 'Syllogism' && !/\b(all\s+\w+\s+are|some\s+\w+\s+are|no\s+\w+\s+is)\b/i.test(s))
+    ) {
+      currentTopic = undefined;
+    }
+  }
+
+  if (isEnglish && currentTopic) {
+    if (
+      currentTopic === 'English Comprehension' ||
+      currentTopic === 'English' ||
+      currentTopic === 'Statement & Conclusion' ||
+      currentTopic === 'Time & Work' ||
+      currentTopic === 'General'
     ) {
       currentTopic = undefined;
     }
@@ -229,13 +243,7 @@ export function detectTopic(q: Question, subject: string): string {
     if (/\b(what will come in blank \(\d+\)|blank \(\d+\)|cloze test|cloze passage)\b/i.test(s)) return 'Cloze Test';
     if (/\b(according to the passage|based on the passage|author's tone|author’s tone|reading comprehension)\b/i.test(s)) return 'Reading Comprehension';
     if (/\b(fill in the blank|single filler|double filler)\b/i.test(s)) return 'Fill in the Blanks';
-    if (/\b(subject-verb agreement|subject verb agreement)\b/i.test(s)) return 'Subject-Verb Agreement';
-    if (/\b(preposition|prepositions)\b/i.test(s)) return 'Prepositions';
-    if (/\b(article|articles)\b/i.test(s)) return 'Articles';
-    if (/\b(conjunction|conjunctions)\b/i.test(s)) return 'Conjunctions';
-    if (/\b(pronoun|pronouns)\b/i.test(s)) return 'Pronouns';
-    if (/\b(tenses|sequence of tenses)\b/i.test(s)) return 'Tenses';
-    if (/\b(grammatical error|spot the error|contains an error|spotting error|grammatically correct)\b/i.test(s)) return 'Spotting Errors';
+    if (/\b(subject-verb agreement|subject verb agreement|preposition|prepositions|article|articles|conjunction|conjunctions|pronoun|pronouns|tenses|sequence of tenses|grammatical error|spot the error|contains an error|spotting error|grammatically correct)\b/i.test(s)) return 'Spotting Errors';
     if (/\b(cloze)\b/i.test(s)) return 'Cloze Test';
     if (/\b(passage)\b/i.test(s)) return 'Reading Comprehension';
     if (/\b(blank)\b/i.test(s)) return 'Fill in the Blanks';

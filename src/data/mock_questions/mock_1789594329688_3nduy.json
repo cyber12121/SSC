@@ -166,11 +166,11 @@
       "D": "The protocols were implemented as expected."
     },
     "solution": "Rule: When converting from passive to active, identify the subject performing the action. The passive structure 'are expected to have been implemented' becomes active 'are expected to implement'.\nThe passive sentence \"New protocols are expected to have been implemented by the authorities...\" has 'the authorities' as the doer. To make it active, 'Authorities' becomes the subject. The verb phrase becomes 'are expected to implement'.\nOption 1 changes the meaning. Option 2 uses 'expects to implement', which is a different meaning. Option 4 is a passive structure.\nCorrect Answer is Authorities are expected to implement new protocols by fiscal year-end because it correctly identifies the subject and uses the active infinitive.\nAns: Authorities are expected to implement new protocols by fiscal year-end.",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice - Infinitive & Complex Sentences",
     "conceptTested": "Conversion of passive voice with reporting verbs and perfect infinitives into active voice.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice - Infinitive & Complex Sentences",
       "conceptTested": "Conversion of passive voice with reporting verbs and perfect infinitives into active voice."
     }
@@ -195,11 +195,11 @@
       "D": "The staff had been made report discrepancies silently."
     },
     "solution": "Rule: The past perfect continuous active voice ('had been making') with a causative structure ('make + object + V1') converts to the passive voice as 'had been made to + V1'.\nThe active sentence \"They had been making the staff report...\" is in the past perfect continuous tense with a causative structure. To convert to passive, the object 'the staff' becomes the subject. The verb phrase 'had been making... report' changes to 'had been made to report'.\nOption 2 uses 'were made' (simple past). Option 3 focuses on 'discrepancies', changing the meaning. Option 4 is grammatically incorrect as it omits 'to'.\nCorrect Answer is The staff had been made to report discrepancies silently because it correctly uses the past perfect passive causative structure.\nAns: The staff had been made to report discrepancies silently.",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice - Causative Verbs",
     "conceptTested": "Conversion of active voice with causative verbs (make + object + bare infinitive) into passive voice (object + be made + to + V1).",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice - Causative Verbs",
       "conceptTested": "Conversion of active voice with causative verbs (make + object + bare infinitive) into passive voice (object + be made + to + V1)."
     }
@@ -224,11 +224,11 @@
       "D": "People believed that certain board members had misallocated the funds over several quarters."
     },
     "solution": "Rule: When converting a passive sentence into an active sentence, the doer of the action becomes the subject of the active sentence.\n\nIn the given sentence, \"The funds were believed to have been misallocated by certain board members over several quarters\", the phrase \"by certain board members\" identifies the doer of the action. The passive structure \"were believed to have been misallocated\" can be converted into the active structure \"People believed that certain board members had misallocated\".\n\nTherefore, the correct active sentence is: \"People believed that certain board members had misallocated the funds over several quarters.\"\n\nOption 1 is grammatically incomplete. Option 2 is still a passive construction because \"are believed\" is passive. Option 3 changes the tense and meaning of the original sentence. Option 4 correctly changes the sentence into an active structure while preserving the original meaning and time reference.\n\nAns: People believed that certain board members had misallocated the funds over several quarters.",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active & Passive Voice - Impersonal Passive to Active",
     "conceptTested": "Conversion of impersonal passive structures with perfect infinitives into active clauses using 'People believed that...'.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active & Passive Voice - Impersonal Passive to Active",
       "conceptTested": "Conversion of impersonal passive structures with perfect infinitives into active clauses using 'People believed that...'."
     }

@@ -205,12 +205,12 @@
     "solution": "Answer: A Blizzard is a severe snowstorm with high winds and intensely reduced visibility.\nOther options: • Earthquake: A sudden violent shaking of the ground.\n• Hurricane: A severe tropical cyclone with high - speed winds and heavy rain.\n• Tsunami: A series of huge sea waves caused by an underwater earthquake.",
     "mockId": "mock_1791815967739_ftepb",
     "testId": "mock_1791815967739_ftepb",
-    "topic": "English Comprehension",
+    "topic": "One Word Substitution",
     "subtopic": "One Word Substitution",
     "conceptTested": "Substitution of a phrase describing a natural weather event with a single precise vocabulary word.",
     "question": "Choose the alternative which can be substituted for the given words/sentence.\n\nA severe snowstorm with high winds and low visibility:",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "One Word Substitution",
       "subtopic": "One Word Substitution",
       "conceptTested": "Substitution of a phrase describing a natural weather event with a single precise vocabulary word."
     }
@@ -241,12 +241,12 @@
     "solution": "Rule: Modal Perfect Active (could not have + V³) converts to Passive as could not have been + V³.\nActive: 'could not have stolen' -> Passive: could not have been stolen.\n\nOption (A) correctly carries out this change without changing modality or adding redundant repeated phrases as in (B).",
     "mockId": "mock_1791815967739_ftepb",
     "testId": "mock_1791815967739_ftepb",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Passive Active Conversion",
     "conceptTested": "Conversion of modal perfect verbs (could not have + V3) to passive voice (could not have been + V3).",
     "question": "Select the correct passive form of the given sentence.\n\nThe accused could not have stolen the confidential files from the minister's office without inside assistance.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Passive Active Conversion",
       "conceptTested": "Conversion of modal perfect verbs (could not have + V3) to passive voice (could not have been + V3)."
     }

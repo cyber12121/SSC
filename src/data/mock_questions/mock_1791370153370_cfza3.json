@@ -205,12 +205,12 @@
     "solution": "The correct answer is 'She asked why I had lied to her'.\n\nKey Points: - The given sentence is an interrogative sentence in direct speech beginning with 'Why'. - In indirect speech, interrogative sentences are introduced by 'asked' and follow the statement word order (subject + verb). - The past tense 'did lie' changes to past perfect ('had lied') because the reporting verb 'said' is in the past. - Pronouns also change appropriately: 'you' $\\rightarrow$ 'I' and 'me' $\\rightarrow$ 'her'.",
     "mockId": "mock_1791370153370_cfza3",
     "testId": "mock_1791370153370_cfza3",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Interrogative Sentences",
     "conceptTested": "In indirect speech, interrogative sentences change to statement word order and past tense (did lie) shifts to past perfect (had lied).",
     "question": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech. She said, \"Why did you lie to me?\"",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Interrogative Sentences",
       "conceptTested": "In indirect speech, interrogative sentences change to statement word order and past tense (did lie) shifts to past perfect (had lied)."
     }

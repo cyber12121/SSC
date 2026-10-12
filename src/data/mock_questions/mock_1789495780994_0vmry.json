@@ -1380,7 +1380,8 @@
     "timeSpent": 29,
     "userTime": 29,
     "questionText": "Sentences of a paragraph are given below in jumbled order. Arrange the sentences in the correct order to form a meaningful and coherent paragraph.\nA. When the fish, at last, had been safely landed, I asked the brothers if they ate fish.\nB. The condition that I put was that they had to help me land another fish for my men.\nC. On receiving their eager answer that they most certainly did, I told them I would give them the fish we had just landed.\nD. To this they readily agreed and the wait started again.",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Para Jumbles"
   },
   {
     "id": "mock_q_39_mock_1789495780994_0vmry",
@@ -1416,7 +1417,8 @@
     "timeSpent": 62,
     "userTime": 62,
     "questionText": "Directions: In this section, the item consists of six sentences of a passage. The first and the sixth sentences are given in the beginning as S1 and S6. The middle four sentences in each have been jumbled up and labeled as P, Q, R, and S. You are required to find the proper sequence of the four sentences and mark your response accordingly.\nS1 : Environmental campaigns are marked by rousing calls for collective, transformative action on a global scale.\nS6 : For example, a farmer producer organization in Anantapur needs to know what changes to make to improve income and adapt to a water-stressed future, or a conservation group in Wayanad needs a list of native species for landscape restoration work.\nP : Addressing this bedrock issue of data access is vitally important at a time when the impacts of climate change are manifesting with increasing severity.\nQ : For human settlements to thrive in a climate-changing world, planning must be informed by a deep understanding of local ecologies and socio-economic contexts.\nR : But to achieve this, access to the right data is essential.\nS : It has pushed us into new territory where the contextual and traditional knowledge of farmers and indigenous communities needs to be integrated with better data.\nThe correct sequence should be:",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Para Jumbles"
   },
   {
     "id": "mock_q_40_mock_1789495780994_0vmry",
@@ -1452,7 +1454,8 @@
     "timeSpent": 31,
     "userTime": 31,
     "questionText": "Choose the correct sentence.",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_41_mock_1789495780994_0vmry",
@@ -1488,7 +1491,8 @@
     "timeSpent": 9,
     "userTime": 9,
     "questionText": "Choose the appropriate word to complete the given sentence:\nI suggest ______ a search party.",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Fill in the Blanks"
   },
   {
     "id": "mock_q_42_mock_1789495780994_0vmry",
@@ -1524,7 +1528,8 @@
     "timeSpent": 40,
     "userTime": 40,
     "questionText": "Select the alternative which will improve the underlined part of the sentence. In case no improvement is needed, select “No improvement”.\nThey built a wall to avoid soil being washed away.",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Sentence Improvement"
   },
   {
     "id": "mock_q_43_mock_1789495780994_0vmry",
@@ -1560,7 +1565,8 @@
     "timeSpent": 57,
     "userTime": 57,
     "questionText": "What will come in blank (2)?\n\nContext from passage: \"...the realization that its economic destiny is inextricably tethered to the stability of the 'global commons' necessitates that the Ministry of Defence (2) __________ a more expansive naval posture.\"",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Cloze Test"
   },
   {
     "id": "mock_q_44_mock_1789495780994_0vmry",
@@ -1596,7 +1602,8 @@
     "timeSpent": 18,
     "userTime": 18,
     "questionText": "What will come in blank (5)?\n\nContext from passage: \"Should India (5) __________ to ignore the imperative of underwater domain awareness and the modernization of its aging submarine fleet, the resulting vulnerability in the 'silent service' could prove to be a cataclysm...\"",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Cloze Test"
   },
   {
     "id": "mock_q_45_mock_1789495780994_0vmry",
@@ -1632,6 +1639,7 @@
     "timeSpent": 80,
     "userTime": 80,
     "questionText": "The following passage consists of six sentences. The first and the sixth sentences are given. The middle four sentences in each have been removed and jumbled up. These are labelled P, Q, R and S. Find the proper sequence of the four sentences.\nS1: The empowerment of women and the improvement of their political, social, economic and health status is a highly important end in itself.\nP: In addition, it is essential for the achievement of sustainable development.\nQ: In all parts of the world, women are facing threats to their lives, health and well-being as a result of being overburdened with work and of their lack of power and influence.\nR: In most regions of the world, women receive less formal education than men, and at the same time, women's own knowledge, abilities and coping mechanisms often go unrecognized.\nS: The full participation and partnership of both women and men is required in productive and reproductive life, including shared responsibilities for the care and nurturing of children and maintenance of the household.\nS6: The power relations that impede women's attainment of healthy and fulfilling lives operate at many levels of society, from the most personal to the highly public.",
-    "correctOption": "B"
+    "correctOption": "B",
+    "topic": "Para Jumbles"
   }
 ]

@@ -26971,6 +26971,40 @@
           "conceptTested": "Conversion of indirect speech statements involving modal phrases like \"would rather\" back into direct speech.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_1b7e67c97c",
+        "q_num": 170,
+        "testName": "SSC CGL Tier I: Full Test - 7",
+        "platform": "Testbook",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "C",
+        "userTime": "00:28",
+        "avgTime": "00:18",
+        "question": "A, B and C can reap a field in 2 days; B, C and D in 3 days; C, D and A in 7 days; D, A and B in 10 days. In what time can A, B, C and D together reap it?",
+        "options": {
+          "a": "75/14 days",
+          "b": "66/7 days",
+          "c": "630/226 days",
+          "d": "94/3 days"
+        },
+        "answer": "c",
+        "solution": "Solution\n\nShortcut Trick\nLet Total Work = LCM(2, 3, 7, 10) = 210 units.\nSum of 1-day work (efficiencies) of all 4 groups = (210 ÷ 2) + (210 ÷ 3) + (210 ÷ 7) + (210 ÷ 10) = 105 + 70 + 30 + 21 = 226.\n\nSince each person is included in exactly 3 groups, their combined actual efficiency = 226 / 3 units/day.\n\nTime required = Total Work ÷ Actual Efficiency = 210 ÷ (226 / 3) = 630 / 226 days.\n∴ The correct answer is 630/226 days.\n\nAlternate Method\nGiven:\nTime taken by (A + B + C) = 2 days\nTime taken by (B + C + D) = 3 days\nTime taken by (C + D + A) = 7 days\nTime taken by (D + A + B) = 10 days\n\nFormula Used:\nTotal Work = LCM of time taken\nEfficiency = Total Work ÷ Time\nTime Taken = Total Work ÷ Combined Efficiency\n\nPerson\tDays\tTotal Work\tEfficiency\nA + B + C\t2\t210\t105\nB + C + D\t3\t70\nC + D + A\t7\t30\nD + A + B\t10\t21\n\n⇒ Sum of the efficiencies = 105 + 70 + 30 + 21 = 226 units/day\n⇒ (A + B + C) + (B + C + D) + (C + D + A) + (D + A + B) = 226\n⇒ 3A + 3B + 3C + 3D = 226\n⇒ 3 × (A + B + C + D) = 226\n⇒ Combined efficiency of (A + B + C + D) = 226 / 3 units/day\n⇒ Time required = Total Work ÷ Combined Efficiency\n⇒ Time required = 210 ÷ (226 / 3)\n⇒ Time required = (210 × 3) / 226 = 630 / 226 days\n∴ The correct answer is 630/226 days.\n\nAdditional Information\nTime and Work LCM Method\n\nAlways assume Total Work as the Lowest Common Multiple (LCM) of the given days to make calculations fraction-free. Efficiency is calculated as Total Work ÷ Time.\n\nCombined Group Work Principle\n\nWhen individuals work in overlapping pairs or triplets, sum their combined group efficiencies and divide by the frequency of each person's appearance to find the actual joint efficiency.\n\nWork and Time Relationship\n\nTime and efficiency are inversely proportional. A higher combined efficiency directly results in proportionally less time taken to complete the assigned task.",
+        "topic": "Time & Work",
+        "subtopic": "Group Efficiency & Overlapping Work",
+        "conceptTested": "Finding combined efficiency when groups of workers are given in overlapping combinations.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Group Efficiency & Overlapping Work",
+          "conceptTested": "Finding combined efficiency when groups of workers are given in overlapping combinations.",
+          "difficulty": "medium"
+        },
+        "mockId": "mock_1789515022905_egyvl",
+        "testId": "mock_1789515022905_egyvl",
+        "isSlow": false,
+        "subject": "Mathematics",
+        "subject_id": "mathematics"
       }
     ]
   }

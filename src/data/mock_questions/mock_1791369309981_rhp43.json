@@ -205,12 +205,12 @@
     "solution": "The correct answer is: Subtle and inwardly destructive. The passage highlights Meera's psychological decline as a gradual, introspective process, marked by internal struggles rather than outward confrontation or dramatic behavior.",
     "mockId": "mock_1791369309981_rhp43",
     "testId": "mock_1791369309981_rhp43",
-    "topic": "English Comprehension",
+    "topic": "Reading Comprehension",
     "subtopic": "Reading Comprehension",
     "conceptTested": "Ability to comprehend, analyze, and infer specific details regarding a character's psychological state and narrative arc from a given passage.",
     "question": "How does the passage describe Meera's psychological decline?",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Ability to comprehend, analyze, and infer specific details regarding a character's psychological state and narrative arc from a given passage."
     }
@@ -241,12 +241,12 @@
     "solution": "The correct answer is Option B.\n\nKey Points\nIndirect Speech: The manager informed the employees that the deadline for submission had been extended by two days.\nKey Conversions: - \"the deadline for submission had been extended\" becomes \"The deadline has been extended\" - In direct speech, the past perfect tense (\"had been extended\") is changed to the present perfect tense (\"has been extended\") to reflect the immediacy of the direct statement. - \"by two days\" remains \"by two days\".\nReporting Verb: - Indirect: \"informed\" - Converted to: \"said\" in direct speech to reflect a neutral reporting tone.\nTherefore, the correct answer is Option B.\nCorrect Sentence: \"The deadline has been extended by two days, \" said the manager.",
     "mockId": "mock_1791369309981_rhp43",
     "testId": "mock_1791369309981_rhp43",
-    "topic": "English Comprehension",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Direct Indirect Speech",
     "conceptTested": "Conversion from indirect speech to direct speech, specifically changing past perfect tense (\"had been extended\") back to present perfect tense (\"has been extended\") and adjusting reporting verbs.",
     "question": "A sentence is provided in indirect speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding direct speech.\n\nThe manager informed the employees that the deadline for submission had been extended by two days.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Direct Indirect Speech",
       "conceptTested": "Conversion from indirect speech to direct speech, specifically changing past perfect tense (\"had been extended\") back to present perfect tense (\"has been extended\") and adjusting reporting verbs."
     }

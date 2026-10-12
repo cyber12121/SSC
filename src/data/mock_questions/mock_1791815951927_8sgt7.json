@@ -205,12 +205,12 @@
     "solution": "Rule: The modal auxiliary might remains unchanged in indirect speech, followed by the base form of the verb (V1: consider). The first - person pronoun 'I' changes to 'she', and 'your' changes to 'my'.",
     "mockId": "mock_1791815951927_8sgt7",
     "testId": "mock_1791815951927_8sgt7",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Assertive Sentences & Reporting Verbs",
     "conceptTested": "In indirect speech, past modal auxiliaries like might generally remain unchanged, and pronouns shift according to the speaker and listener.",
     "question": "Choose the correct indirect speech of the sentence:\n\nShe said, \"I might consider your proposal.\"",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Assertive Sentences & Reporting Verbs",
       "conceptTested": "In indirect speech, past modal auxiliaries like might generally remain unchanged, and pronouns shift according to the speaker and listener."
     }
@@ -241,12 +241,12 @@
     "solution": "Rule: The past perfect form with inverted syntax (\"No sooner had + subject + V³ ... than ...\") in indirect speech corresponds directly to the identical past perfect construction in direct speech with quotation marks and pronoun adjustment.",
     "mockId": "mock_1791815951927_8sgt7",
     "testId": "mock_1791815951927_8sgt7",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Tense Change Rules",
     "conceptTested": "Direct speech using past perfect tense with inversion (\"No sooner had...\") corresponds directly to the same past perfect tense construction in indirect speech.",
     "question": "A sentence is provided in indirect speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding direct speech.\n\nHe said that no sooner had he arrived than the meeting began.",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Tense Change Rules",
       "conceptTested": "Direct speech using past perfect tense with inversion (\"No sooner had...\") corresponds directly to the same past perfect tense construction in indirect speech."
     }

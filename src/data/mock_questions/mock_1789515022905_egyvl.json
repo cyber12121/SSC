@@ -1787,7 +1787,8 @@
     "timeSpent": 61,
     "userTime": 61,
     "questionText": "Directions: This question consists of six sentences of a passage. The first and sixth sentences are given as S1 and S6. The middle four sentences in each have been jumbled up and labelled as P, Q, R and S. You are required to find the proper sequence of the four sentences and mark your response accordingly.\nS1: Elon Musk, the billionaire owner of Twitter, ran a poll that just concluded today. Like all musk polls, the question was very simple. “Should I step down as head of Twitter? I will abide by the results of this poll.”\nP: And if we know something about him, he’s a true believer in free speech, the rule of law, and keeping the promises that he has made.\nQ: Twitter subscribers had about 24 hours to respond. Over 17.5 million responded and the vote was overwhelmingly against him running Twitter, 57 per cent to 43 per cent.\nR: Nothing can be more democratic than this, although corporations are anything but democratic.\nS: The idea that a CEO of a company would ask his subscribers whether or not he should be at the helm is in and of itself very intriguing.\nS6: Musk has turned to Twitter polls for other seismic decisions about the company.",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Para Jumbles"
   },
   {
     "id": "mock_q_45_mock_1789515022905_egyvl",
@@ -1828,7 +1829,8 @@
     "timeSpent": 11,
     "userTime": 11,
     "questionText": "Direction: Choose the correct word to fill up the blanks from the alternatives. Mohamed Ghazni ______ a lot of wealth from India.",
-    "correctOption": "A"
+    "correctOption": "A",
+    "topic": "Fill in the Blanks"
   },
   {
     "id": "mock_q_46_mock_1789515022905_egyvl",
@@ -1869,7 +1871,8 @@
       "classifiedAt": "2026-09-16T09:36:53.940Z"
     },
     "questionText": "Directions: Each item in this section has a sentence with three underlined parts labelled (a), (b) and (c). Read each sentence to find out whether there is any error in any underlined part. Indicate your response in the Answer Sheet against the corresponding letter, i.e., (a) or (b) or (c). If you find no error, your response should be indicated as (d). An provision of quality education(A)/ and healthcare services(B)/ must be considered as a basic need for all individuals.(C)/ No error(D)",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_47_mock_1789515022905_egyvl",
@@ -1910,7 +1913,8 @@
     "timeSpent": 33,
     "userTime": 33,
     "questionText": "In which of the following question tag is incorrectly put?",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_48_mock_1789515022905_egyvl",
@@ -1951,7 +1955,8 @@
     "timeSpent": 64,
     "userTime": 64,
     "questionText": "Select the most appropriate option that can substitute the underlined segment in the given sentence. If there is no need to substitute it, select ‘No substitution required’. Economic and Political Weekly is not more popular than some other business magazines in India.",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Sentence Improvement"
   },
   {
     "id": "mock_q_50_mock_1789515022905_egyvl",
@@ -1992,7 +1997,8 @@
       "classifiedAt": "2026-09-16T09:37:45.585Z"
     },
     "questionText": "Choose the grammatically correct sentence.",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Direct & Indirect Speech"
   },
   {
     "id": "mock_q_51_mock_1789515022905_egyvl",
@@ -2013,7 +2019,7 @@
     "image": null,
     "subject": "English",
     "tags": {
-      "topic": "General",
+      "topic": "Idioms & Phrases",
       "difficulty": "medium"
     },
     "avgTime": 13,
@@ -2033,7 +2039,8 @@
     "timeSpent": 8,
     "userTime": 8,
     "questionText": "Select the alternative which best express the meaning of the idioms/phrase. A man of letters",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Idioms & Phrases"
   },
   {
     "id": "mock_q_52_mock_1789515022905_egyvl",
@@ -2054,7 +2061,7 @@
     "image": null,
     "subject": "English",
     "tags": {
-      "topic": "General",
+      "topic": "Spotting Errors",
       "difficulty": "medium"
     },
     "avgTime": 27,
@@ -2074,7 +2081,8 @@
     "timeSpent": 48,
     "userTime": 48,
     "questionText": "Choose the correct sentence from the following:",
-    "correctOption": "D"
+    "correctOption": "D",
+    "topic": "Spotting Errors"
   },
   {
     "id": "mock_q_53_mock_1789515022905_egyvl",
@@ -2095,7 +2103,7 @@
     "image": null,
     "subject": "English",
     "tags": {
-      "topic": "General",
+      "topic": "Spelling Errors",
       "difficulty": "medium"
     },
     "avgTime": 13,
@@ -2115,6 +2123,7 @@
     "timeSpent": 13,
     "userTime": 13,
     "questionText": "Which of the following is correctly spelt?",
-    "correctOption": "C"
+    "correctOption": "C",
+    "topic": "Spelling Errors"
   }
 ]

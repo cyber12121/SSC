@@ -205,12 +205,12 @@
     "solution": "The correct answer is Option B.\n\nKey Points\nIndirect Speech: They said they were going on a trip.\nKey Conversions: Direct Speech: \"We are going on a trip.\"\nIndirect Speech: \"They said they were going on a trip.\"\nChanges: The pronoun \"We\" changes to \"They\" to match the subject of the reporting speech.\n\nThe verb \"are\" (present tense) changes to \"were\" (past tense) to align with the rules of reported speech.\n\nThe reporting verb \"said\" remains unchanged as it simply introduces the indirect speech.\n\nPunctuation and Format: Quotation marks are removed in indirect speech.\n\nThe sentence structure is adjusted to integrate the reported clause seamlessly.\n\nCorrect Sentence: \"They said they were going on a trip.\"\n\nAdditional Information\nOption A: \"They said they are going on a trip.\"\n\nIncorrect because the verb \"are\" does not change to \"were\", which is required for past reporting.\n\nOption C: \"They said they went on a trip.\"\n\nIncorrect because \"went\" (past tense) changes the meaning to indicate the trip has already been completed, which is not implied in the original direct speech.\n\nOption D: \"They said they had going on a trip.\"\n\nIncorrect because \"had going\" is grammatically incorrect and does not follow the rules of indirect speech.",
     "mockId": "mock_1791369990748_vcacw",
     "testId": "mock_1791369990748_vcacw",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Tense Change Rules",
     "conceptTested": "When the reporting verb is in the past tense, present continuous tense verbs in direct speech change to past continuous tense in indirect speech.",
     "question": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech. They said, \"We are going on a trip.\"",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Tense Change Rules",
       "conceptTested": "When the reporting verb is in the past tense, present continuous tense verbs in direct speech change to past continuous tense in indirect speech."
     }
@@ -241,12 +241,12 @@
     "solution": "The correct answer is Option C.\n\nKey Points\nThe paragraph discusses the disruptions caused by anthropogenic climate change and builds coherence by connecting the effects systematically.\n\nSentence 1 is the first sentence as it introduces the central theme of climate change and its anthropogenic causes: \"Anthropogenic climate change, driven by the emission of greenhouse gases, is causing a wide range of disruptions to global ecosystems.\"\n\nSentence 3 follows as it elaborates on the immediate consequences of climate change, focusing on extreme weather events: \"This has led to more frequent and intense extreme weather events, including droughts, floods, and heatwaves.\"\n\nSentence 2 comes next as it highlights specific phenomena like glacial retreat and rising sea levels: \"Glacial retreat and the melting of polar ice caps have accelerated, contributing to a rise in global sea levels.\"\n\nSentence 4 concludes the paragraph as it sums up the collective impact of these changes, emphasizing the threat to human societies and biodiversity: \"The collective impact of these changes poses a serious threat to human societies and biodiversity.\"\n\nThe correct sequence is 1, 3, 2, 4.\n\nCoherent paragraph after rearrangement: \"Anthropogenic climate change, driven by the emission of greenhouse gases, is causing a wide range of disruptions to global ecosystems. This has led to more frequent and intense extreme weather events, including droughts, floods, and heatwaves. Glacial retreat and the melting of polar ice caps have accelerated, contributing to a rise in global sea levels. The collective impact of these changes poses a serious threat to human societies and biodiversity.\"",
     "mockId": "mock_1791369990748_vcacw",
     "testId": "mock_1791369990748_vcacw",
-    "topic": "Para Jumbles (PQRS Sentence rearrangement)",
+    "topic": "Para Jumbles",
     "subtopic": "Para Jumbles & Rearrangement",
     "conceptTested": "Logical flow from a general thematic introduction (cause) to immediate consequences, specific environmental impacts, and a concluding summary of the collective threat.",
     "question": "Rearrange the following sentences to form a coherent paragraph: 1. Anthropogenic climate change, driven by the emission of greenhouse gases, is causing a wide range of disruptions to global ecosystems. 2. Glacial retreat and the melting of polar ice caps have accelerated, contributing to a rise in global sea levels. 3. This has led to more frequent and intense extreme weather events, including droughts, floods, and heatwaves. 4. The collective impact of these changes poses a serious threat to human societies and biodiversity.",
     "tags": {
-      "topic": "Para Jumbles (PQRS Sentence rearrangement)",
+      "topic": "Para Jumbles",
       "subtopic": "Para Jumbles & Rearrangement",
       "conceptTested": "Logical flow from a general thematic introduction (cause) to immediate consequences, specific environmental impacts, and a concluding summary of the collective threat."
     }

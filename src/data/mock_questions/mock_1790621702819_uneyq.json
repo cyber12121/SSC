@@ -1774,12 +1774,12 @@
     "solution": "Meaning: to flog a dead horse = to keep pushing a matter already settled or hopeless (व्यर्थ प्रयास करना, मरे घोड़े को कोड़े मारना).\n\nWhipping a dead animal moves it nowhere; the labour is simply wasted.",
     "mockId": "mock_1790621702819_uneyq",
     "testId": "mock_1790621702819_uneyq",
-    "topic": "English Comprehension",
+    "topic": "Idioms & Phrases",
     "subtopic": "Idioms Phrases",
     "conceptTested": "Understanding the figurative meaning of standard idioms",
     "question": "Select the option that best expresses the meaning of the idiom given below.\n\nTo flog a dead horse",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Idioms & Phrases",
       "subtopic": "Idioms Phrases",
       "conceptTested": "Understanding the figurative meaning of standard idioms"
     }
@@ -1809,12 +1809,12 @@
     "solution": "Rule: In a phrasal verb, the preposition travels with the verb into the passive. 'looked into' becomes 'was looked into', never 'was looked'. - Object 'the missing stock register' goes to the front. - 'a departmental committee' takes 'by'. - Simple past gives 'was' plus the participle 'looked', and 'into' rides along behind it.",
     "mockId": "mock_1790621702819_uneyq",
     "testId": "mock_1790621702819_uneyq",
-    "topic": "English Comprehension",
+    "topic": "Active & Passive Voice",
     "subtopic": "Active Passive Voice",
     "conceptTested": "Retention of prepositions in phrasal verbs during passive voice conversion",
     "question": "Select the option that expresses the given sentence in passive voice:\n\nA departmental committee looked into the missing stock register.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Active & Passive Voice",
       "subtopic": "Active Passive Voice",
       "conceptTested": "Retention of prepositions in phrasal verbs during passive voice conversion"
     }
@@ -1844,12 +1844,12 @@
     "solution": "Rule: A relative pronoun takes its case from its job inside its own clause.\n\nIn the clause 'the trustees had consulted', 'the trustees' is the subject, and the pronoun is the object of 'had consulted'. The object form is 'whom', not 'who'.\n\nCorrected part (A): 'The archivist whom the trustees had consulted'.",
     "mockId": "mock_1790621702819_uneyq",
     "testId": "mock_1790621702819_uneyq",
-    "topic": "English Comprehension",
+    "topic": "Spotting Errors",
     "subtopic": "Spotting Errors",
     "conceptTested": "Relative pronoun case usage (subjective vs. objective case: who vs. whom)",
     "question": "The given sentence has been divided into four parts. Select the part that contains a grammatical error.\n\n(A) The archivist who the trustees had consulted\n(B) about the water damage in the vault\n(C) suggested a slower method of drying\n(D) that would cost the trust very little.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Spotting Errors",
       "subtopic": "Spotting Errors",
       "conceptTested": "Relative pronoun case usage (subjective vs. objective case: who vs. whom)"
     }
@@ -1879,12 +1879,12 @@
     "solution": "Meaning: nepotism = favouring one's own relatives in appointments (भाई-भतीजावाद). - Cronyism = favouring close friends. - Patronage = support given by a powerful person. - Favouritism = general partiality without necessarily involving relatives.\n\nOnly nepotism specifies the favouring of blood relatives.",
     "mockId": "mock_1790621702819_uneyq",
     "testId": "mock_1790621702819_uneyq",
-    "topic": "English Comprehension",
+    "topic": "One Word Substitution",
     "subtopic": "One Word Substitution",
     "conceptTested": "Precise vocabulary replacement for specific descriptive phrases",
     "question": "Select the one word substitution for the italicised part of the sentence given below.\n\nThe inquiry concluded that three of the four senior appointments had been secured through the practice of giving good posts to one's own relatives.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "One Word Substitution",
       "subtopic": "One Word Substitution",
       "conceptTested": "Precise vocabulary replacement for specific descriptive phrases"
     }

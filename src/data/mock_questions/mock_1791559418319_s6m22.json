@@ -1429,12 +1429,12 @@
     "solution": "The correct sentence is 'They told the thief that if he told them the truth they wouldn't send him to jail.'\n\nKey Points\nAs we know that the sentence is a conditional sentence of open type in which there's a probability that if the thief tells them the truth they will not send him to jail. So, we need to change the tense of the sentence accordingly.\n\nAs the reported verb has an object in it i.e. 'they said to the thief', we need to change 'said to' to 'told'.",
     "mockId": "mock_1791559418319_s6m22",
     "testId": "mock_1791559418319_s6m22",
-    "topic": "Direct & Indirect Speech (Narration)",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Interrogative Sentences",
     "conceptTested": "In indirect speech, reporting verb 'said to' changes to 'told', conditional clauses maintain logical tense backshifting, and pronouns change according to the subject/object.",
     "question": "Direction- In the following question, a sentence is given in Direct/Indirect speech. Out of the four alternatives choose the one which best expresses the sentence is Direct/Indirect Speech. They said to the thief, \" If you tell us the truth we won't send you to jail\".",
     "tags": {
-      "topic": "Direct & Indirect Speech (Narration)",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Interrogative Sentences",
       "conceptTested": "In indirect speech, reporting verb 'said to' changes to 'told', conditional clauses maintain logical tense backshifting, and pronouns change according to the subject/object."
     }
@@ -1465,12 +1465,12 @@
     "solution": "The erroneously spelt word is Conveniance. The correct spelling is Convenience, which means the quality of being easy, useful, or suitable for somebody.",
     "mockId": "mock_1791559418319_s6m22",
     "testId": "mock_1791559418319_s6m22",
-    "topic": "English Comprehension",
+    "topic": "Spelling Errors",
     "subtopic": "Correctly Spelt Words",
     "conceptTested": "Identification of misspelled words based on standard English orthography rules.",
     "question": "Select the INCORRECTLY spelt word.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Spelling Errors",
       "subtopic": "Correctly Spelt Words",
       "conceptTested": "Identification of misspelled words based on standard English orthography rules."
     }
@@ -1501,12 +1501,12 @@
     "solution": "The primary issue in the sentence is the incorrect use of the verb tense. The phrase \"I will revised\" is grammatically incorrect because \"revised\" is the past form and cannot be used directly with \"will\". The correct future perfect tense is \"I will have revised\", which indicates that the action of revising will be completed before the final examination.",
     "mockId": "mock_1791559418319_s6m22",
     "testId": "mock_1791559418319_s6m22",
-    "topic": "English Comprehension",
+    "topic": "Spotting Errors",
     "subtopic": "Tenses",
     "conceptTested": "Use of the future perfect tense to express an action that will be completed before a specified point in the future.",
     "question": "The sentence below contains errors. Select the option with the correct use of tenses: \"I will revised my course at least three times before my final examination.\"",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Spotting Errors",
       "subtopic": "Tenses",
       "conceptTested": "Use of the future perfect tense to express an action that will be completed before a specified point in the future."
     }

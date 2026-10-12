@@ -25,12 +25,12 @@
     "solution": "The word 'cadaverous' refers to something that resembles a corpse, especially in being very pale, thin, or bony. 'Pale' means having a light or whitish complexion or lacking color, often due to illness or fear. Hence, the most appropriate synonym is 'pale'.",
     "mockId": "mock_1791370259145_a29a9",
     "testId": "mock_1791370259145_a29a9",
-    "topic": "English Comprehension",
+    "topic": "Synonyms & Antonyms",
     "subtopic": "Synonyms Antonyms",
     "conceptTested": "Vocabulary and contextual word meaning recognition",
     "question": "Select the most appropriate synonym of the given word: CADAVEROUS",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms Antonyms",
       "conceptTested": "Vocabulary and contextual word meaning recognition"
     }
@@ -61,12 +61,12 @@
     "solution": "The primary issue in the sentence lies in the phrase 'comprises of experts.' The verb 'comprise' is a transitive verb and does not require the preposition 'of' after it. The correct usage is simply 'comprises experts.' Thus, the error is located in part 2 of the sentence.",
     "mockId": "mock_1791370259145_a29a9",
     "testId": "mock_1791370259145_a29a9",
-    "topic": "English Comprehension",
+    "topic": "Spotting Errors",
     "subtopic": "Spotting Errors",
     "conceptTested": "Transitive verbs and incorrect preposition usage",
     "question": "Find the part of the sentence that contains an error: The finance team (1)/ comprises of experts (2)/ in risk, audit, and compliance (3)/ from various industries. (4)/",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Spotting Errors",
       "subtopic": "Spotting Errors",
       "conceptTested": "Transitive verbs and incorrect preposition usage"
     }
@@ -97,12 +97,12 @@
     "solution": "The word 'tableau' refers to a group of models or figures arranged to represent a scene or event, often displayed artistically. A homonym refers to a word that is spelled and pronounced the same as another word but has a different meaning. In this context, the highlighted word 'tableau' is used to refer to a static artistic representation, whereas in Option 4, it refers to the arrangement of the cabinet.",
     "mockId": "mock_1791370259145_a29a9",
     "testId": "mock_1791370259145_a29a9",
-    "topic": "English Comprehension",
+    "topic": "Synonyms & Antonyms",
     "subtopic": "Synonyms Antonyms",
     "conceptTested": "Understanding homonyms and contextual usage",
     "question": "Select the sentence containing the homonym of the highlighted word: The tableau of human suffering was etched into memory by the war artist.",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Synonyms & Antonyms",
       "subtopic": "Synonyms Antonyms",
       "conceptTested": "Understanding homonyms and contextual usage"
     }
@@ -133,12 +133,12 @@
     "solution": "The passage explains that masculinity in Indian society valorizes dominance, stoicism, and economic provisioning, which restrict men by stigmatizing emotional vulnerability and non - conformist identity expression. Therefore, it imposes restrictive roles on men as well.",
     "mockId": "mock_1791370259145_a29a9",
     "testId": "mock_1791370259145_a29a9",
-    "topic": "English Comprehension",
+    "topic": "Reading Comprehension",
     "subtopic": "Reading Comprehension",
     "conceptTested": "Critical reading and comprehension inference",
     "question": "What does the author suggest about masculinity in Indian society?",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Reading Comprehension",
       "subtopic": "Reading Comprehension",
       "conceptTested": "Critical reading and comprehension inference"
     }
@@ -169,12 +169,12 @@
     "solution": "In indirect speech, the present perfect tense 'has been' is converted to the past perfect tense 'had been'. The first - person pronoun 'I' changes to the third - person pronoun 'he', and 'slept' becomes 'had last slept'. Therefore, the correct sentence is 'The patient said that it had been three days since he had last slept.'",
     "mockId": "mock_1791370259145_a29a9",
     "testId": "mock_1791370259145_a29a9",
-    "topic": "English Comprehension",
+    "topic": "Direct & Indirect Speech",
     "subtopic": "Direct Indirect Speech",
     "conceptTested": "Narration change from direct to indirect speech involving present perfect tense",
     "question": "A sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech. The patient said, 'It has been three days since I last slept.'",
     "tags": {
-      "topic": "English Comprehension",
+      "topic": "Direct & Indirect Speech",
       "subtopic": "Direct Indirect Speech",
       "conceptTested": "Narration change from direct to indirect speech involving present perfect tense"
     }
