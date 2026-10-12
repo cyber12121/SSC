@@ -572,7 +572,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   }, [activeTab, selectedSectionalSubject]);
 
   const [practiceSection, setPracticeSection] = useState<string>('Reasoning');
+  const [practiceTopic, setPracticeTopic] = useState<string>('all');
   const [practiceErrorFilter, setPracticeErrorFilter] = useState<'all' | 'wrong' | 'unattempted' | 'slow'>('all');
+
+  // Reset practice topic when section or selected reports change
+  useEffect(() => {
+    setPracticeTopic('all');
+  }, [practiceSection, practiceModalReports]);
   const [rawQuestionsCache, setRawQuestionsCache] = useState<Record<string, any[]>>({});
   const [loadingQuestions, setLoadingQuestions] = useState(false);
 
@@ -1181,6 +1187,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
     setPracticeModalReports(reps);
     setPracticeSection(normalizedTarget);
+    setPracticeTopic('all');
     setPracticeErrorFilter('all');
 
     // Preload raw questions in background
@@ -1272,14 +1279,64 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     ] || null;
   }, [modalStats, practiceSection]);
 
-  const activeSectionCount = useMemo(() => {
-    if (!activeSectionStats) return 0;
-    if (practiceErrorFilter === 'all') return activeSectionStats.total;
-    if (practiceErrorFilter === 'wrong') return activeSectionStats.wrong;
-    if (practiceErrorFilter === 'unattempted') return activeSectionStats.unattempted;
-    if (practiceErrorFilter === 'slow') return activeSectionStats.slow;
-    return activeSectionStats.total;
-  }, [activeSectionStats, practiceErrorFilter]);
+  // Dynamically extract all available topics for the current section from the loaded mock questions
+  const availableTopics = useMemo(() => {
+    if (practiceModalReports.length === 0) return [];
+
+    const normalizeSub = (raw: string) => {
+      if (/reason|intel/i.test(raw)) return 'Reasoning';
+      if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
+      if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
+      if (/eng/i.test(raw)) return 'English';
+      return 'Other';
+    };
+
+    const topicMap: Record<string, { total: number; wrong: number; unattempted: number; slow: number }> = {};
+
+    practiceModalReports.forEach(rep => {
+      const qList = rawQuestionsCache[rep.id] || [];
+      qList.forEach(q => {
+        if (practiceSection !== 'all') {
+          const qSub = normalizeSub(q.subject || q.section || q.subjectName || '');
+          if (qSub !== practiceSection) return;
+        }
+
+        const st = getMockQuestionStatus(q);
+        const isMistake = st === 'wrong' || st === 'unattempted' || st === 'slow';
+        if (!isMistake) return;
+
+        const rawT = q.topic || q.tags?.topic;
+        const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
+        if (!topicMap[cleanT]) {
+          topicMap[cleanT] = { total: 0, wrong: 0, unattempted: 0, slow: 0 };
+        }
+        topicMap[cleanT].total++;
+        if (st === 'wrong') topicMap[cleanT].wrong++;
+        else if (st === 'unattempted') topicMap[cleanT].unattempted++;
+        else if (st === 'slow') topicMap[cleanT].slow++;
+      });
+    });
+
+    return Object.entries(topicMap).map(([topic, counts]) => ({
+      topic,
+      ...counts
+    })).sort((a, b) => b.total - a.total);
+  }, [practiceModalReports, rawQuestionsCache, practiceSection]);
+
+  const activeTopicStats = useMemo(() => {
+    if (practiceTopic === 'all') return activeSectionStats;
+    const found = availableTopics.find(t => t.topic.toLowerCase() === practiceTopic.toLowerCase());
+    return found || null;
+  }, [practiceTopic, availableTopics, activeSectionStats]);
+
+  const activeFilteredCount = useMemo(() => {
+    if (!activeTopicStats) return 0;
+    if (practiceErrorFilter === 'all') return activeTopicStats.total;
+    if (practiceErrorFilter === 'wrong') return activeTopicStats.wrong;
+    if (practiceErrorFilter === 'unattempted') return activeTopicStats.unattempted;
+    if (practiceErrorFilter === 'slow') return activeTopicStats.slow;
+    return activeTopicStats.total;
+  }, [activeTopicStats, practiceErrorFilter]);
 
   const handleStartFilteredPractice = async () => {
     if (practiceModalReports.length === 0) return;
@@ -1316,7 +1373,16 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         return qSub === practiceSection;
       });
 
-      // 2. Filter by error status (slow, incorrect, unattempted - EXCLUDING correct on-time!)
+      // 2. Filter by topic / chapter (if selected)
+      if (practiceTopic !== 'all') {
+        filtered = filtered.filter(q => {
+          const rawT = q.topic || q.tags?.topic;
+          const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
+          return cleanT.toLowerCase() === practiceTopic.toLowerCase();
+        });
+      }
+
+      // 3. Filter by error status (slow, incorrect, unattempted - EXCLUDING correct on-time!)
       filtered = filtered.filter(q => {
         const status = getMockQuestionStatus(q);
         if (practiceErrorFilter === 'all') {
@@ -1419,11 +1485,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         };
       });
 
+      const topicSuffix = practiceTopic !== 'all' ? ` • ${practiceTopic}` : '';
       const sectionTitle = practiceSection === 'all' ? 'All 4 Sections Mistakes' : `${practiceSection} Mistakes`;
       const filterLabel = practiceErrorFilter === 'all' ? '' : ` (${practiceErrorFilter.toUpperCase()})`;
       const combinedTitle = isMultiMock
-        ? `${practiceModalReports.length} Mocks Combined - ${sectionTitle}${filterLabel}`
-        : `${practiceModalReports[0].title} - ${sectionTitle}${filterLabel}`;
+        ? `${practiceModalReports.length} Mocks Combined - ${sectionTitle}${topicSuffix}${filterLabel}`
+        : `${practiceModalReports[0].title} - ${sectionTitle}${topicSuffix}${filterLabel}`;
 
       const virtualChapter: Chapter = {
         chapter_num: 0,
@@ -3729,17 +3796,71 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   </div>
                 </div>
 
-                {/* 2. Filter Error Types */}
+                {/* 2. Filter Chapter / Topic (if available) */}
+                {availableTopics.length > 0 && (
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                        2. Filter Chapter / Topic <span className="font-normal text-slate-400 lowercase">(optional)</span>
+                      </label>
+                      <span className="text-[10px] text-slate-400 font-medium">
+                        {availableTopics.length} chapters found
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto pr-1">
+                      <button
+                        type="button"
+                        onClick={() => setPracticeTopic('all')}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
+                          practiceTopic === 'all'
+                            ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
+                            : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                        }`}
+                      >
+                        <span>All Topics</span>
+                        <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
+                          practiceTopic === 'all' ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                        }`}>
+                          {activeSectionStats?.total || 0}
+                        </span>
+                      </button>
+                      {availableTopics.map(t => {
+                        const isSelected = practiceTopic.toLowerCase() === t.topic.toLowerCase();
+                        return (
+                          <button
+                            key={t.topic}
+                            type="button"
+                            onClick={() => setPracticeTopic(t.topic)}
+                            className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
+                              isSelected
+                                ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
+                                : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                            }`}
+                          >
+                            <span className="truncate max-w-[150px]">{t.topic}</span>
+                            <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
+                              isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                            }`}>
+                              {t.total}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Filter Error Types */}
                 <div>
                   <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
-                    2. Filter Error Type
+                    {availableTopics.length > 0 ? '3. Filter Error Type' : '2. Filter Error Type'}
                   </label>
                   <div className="flex flex-wrap gap-1.5">
                     {[
-                      { id: 'all', label: 'All Mistakes', count: activeSectionStats?.total ?? 0 },
-                      { id: 'wrong', label: '❌ Wrong', count: activeSectionStats?.wrong ?? 0 },
-                      { id: 'unattempted', label: '⏸ Skipped', count: activeSectionStats?.unattempted ?? 0 },
-                      { id: 'slow', label: '⏱ Slow', count: activeSectionStats?.slow ?? 0 },
+                      { id: 'all', label: 'All Mistakes', count: activeTopicStats?.total ?? 0 },
+                      { id: 'wrong', label: '❌ Wrong', count: activeTopicStats?.wrong ?? 0 },
+                      { id: 'unattempted', label: '⏸ Skipped', count: activeTopicStats?.unattempted ?? 0 },
+                      { id: 'slow', label: '⏱ Slow', count: activeTopicStats?.slow ?? 0 },
                     ].map((f) => (
                       <button
                         key={f.id}
@@ -3764,10 +3885,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   </div>
                 </div>
 
-                {/* 3. Choose Mode (Practice vs Mock Test) */}
+                {/* Choose Mode (Practice vs Mock Test) */}
                 <div>
                   <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
-                    3. Choose Mode
+                    {availableTopics.length > 0 ? '4. Choose Mode' : '3. Choose Mode'}
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <button
@@ -3819,10 +3940,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 </div>
 
                 {/* Status Notice if 0 matching questions */}
-                {activeSectionCount === 0 && (
+                {activeFilteredCount === 0 && (
                   <div className="p-2 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>0 mistake questions for this filter in {practiceSection}. 100% accuracy! 🎉</span>
+                    <span>0 mistake questions for this filter in {practiceTopic !== 'all' ? practiceTopic : practiceSection}. 100% accuracy! 🎉</span>
                   </div>
                 )}
               </div>
@@ -3840,7 +3961,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <button
                   type="button"
                   onClick={handleStartFilteredPractice}
-                  disabled={activeSectionCount === 0 || practicingId !== null}
+                  disabled={activeFilteredCount === 0 || practicingId !== null}
                   className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white rounded-lg shadow-xs transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
                     modalQuizMode === 'mock'
                       ? 'bg-rose-600 hover:bg-rose-700'
@@ -3855,7 +3976,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   ) : (
                     <>
                       <Play className="w-3 h-3 fill-current" />
-                      <span>Start {modalQuizMode === 'mock' ? 'Mock Test' : 'Practice'}</span>
+                      <span>Start {modalQuizMode === 'mock' ? 'Mock Test' : 'Practice'} ({activeFilteredCount})</span>
                     </>
                   )}
                 </button>
