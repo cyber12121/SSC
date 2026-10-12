@@ -90,6 +90,9 @@ export interface QuestionProgress {
   avgTime?: string | number;
   avgTimeSeconds?: number;
   rca?: RCAClassification;
+  status?: string;
+  isSlow?: boolean;
+  errorType?: string;
 }
 
 export interface QuizResult {

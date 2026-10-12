@@ -72,6 +72,24 @@ const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Aw
   return 'Mathematics';
 };
 
+const resolveQuestionSubject = (q: any, report?: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' => {
+  const raw = q?.subject || q?.section || q?.subjectName || '';
+  const norm = normalizeSubName(raw);
+  if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
+    return norm as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+  }
+  if (report) {
+    const repSub = getSectionalSubject(report);
+    if (repSub) return repSub;
+  }
+  const testName = q?.testName || '';
+  const normTest = normalizeSubName(testName);
+  if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(normTest)) {
+    return normTest as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+  }
+  return 'Mathematics';
+};
+
 function parseMockDetails(report: MockScoreReport) {
   const title = (report.title || '').trim();
 
@@ -574,11 +592,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const [practiceSection, setPracticeSection] = useState<string>('Reasoning');
   const [practiceTopic, setPracticeTopic] = useState<string>('all');
   const [practiceErrorFilter, setPracticeErrorFilter] = useState<'all' | 'wrong' | 'unattempted' | 'slow'>('all');
+  const [modalIntent, setModalIntent] = useState<'practice' | 'review'>('practice');
+  const [practiceReviewFilter, setPracticeReviewFilter] = useState<'all' | 'mistakes' | 'wrong' | 'unattempted' | 'slow' | 'correct'>('all');
 
-  // Reset practice topic when section or selected reports change
+  // Reset practice topic when section, intent, or selected reports change
   useEffect(() => {
     setPracticeTopic('all');
-  }, [practiceSection, practiceModalReports]);
+  }, [practiceSection, practiceModalReports, modalIntent]);
   const [rawQuestionsCache, setRawQuestionsCache] = useState<Record<string, any[]>>({});
   const [loadingQuestions, setLoadingQuestions] = useState(false);
 
@@ -1174,7 +1194,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     return list;
   };
 
-  const openPracticeModal = async (input: MockScoreReport | MockScoreReport[], targetSection: string = 'all') => {
+  const openPracticeModal = async (
+    input: MockScoreReport | MockScoreReport[], 
+    targetSection: string = 'all',
+    intent: 'practice' | 'review' = 'practice'
+  ) => {
     const reps = Array.isArray(input) ? input : [input];
     if (reps.length === 0) return;
 
@@ -1185,10 +1209,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     else if (/eng/i.test(targetSection)) normalizedTarget = 'English';
     else if (targetSection === 'all') normalizedTarget = 'all';
 
+    setModalIntent(intent);
     setPracticeModalReports(reps);
     setPracticeSection(normalizedTarget);
     setPracticeTopic('all');
     setPracticeErrorFilter('all');
+    setPracticeReviewFilter('all');
 
     // Preload raw questions in background
     const missing = reps.filter(r => !rawQuestionsCache[r.id]);
@@ -1203,32 +1229,28 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const modalStats = useMemo(() => {
     if (practiceModalReports.length === 0) return null;
 
-    const normalizeSub = (raw: string) => {
-      if (/reason|intel/i.test(raw)) return 'Reasoning';
-      if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
-      if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
-      if (/eng/i.test(raw)) return 'English';
-      return 'Other';
-    };
-
     const getCounts = (subjectKey: string) => {
       let wrong = 0;
       let unattempted = 0;
       let slow = 0;
+      let correct = 0;
+      let totalAll = 0;
 
       practiceModalReports.forEach(rep => {
         const rawList = rawQuestionsCache[rep.id] || [];
         if (rawList.length > 0) {
           const items = rawList.filter(q => {
             if (subjectKey === 'all') return true;
-            return normalizeSub(q.subject || q.section || q.subjectName || '') === subjectKey;
+            return resolveQuestionSubject(q, rep) === subjectKey;
           });
 
           items.forEach(q => {
+            totalAll++;
             const st = getMockQuestionStatus(q);
             if (st === 'wrong') wrong++;
             else if (st === 'unattempted') unattempted++;
             else if (st === 'slow') slow++;
+            else correct++;
           });
         } else {
           // Instant preview from report.sections before rawList finishes loading
@@ -1242,21 +1264,34 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           if (subjectKey === 'all') {
             wrong += rep.totalWrong || 0;
             unattempted += rep.totalUnattempted || 0;
+            totalAll += rep.totalQuestions || ((rep.totalCorrect || 0) + (rep.totalWrong || 0) + (rep.totalUnattempted || 0));
           } else {
-            const sData = rep.sections?.[secMap[subjectKey]];
-            if (sData) {
-              wrong += sData.wrong || 0;
-              unattempted += sData.unattempted || 0;
+            const repSub = getSectionalSubject(rep);
+            if (rep.type === 'sectional' && repSub === subjectKey) {
+              wrong += rep.totalWrong || 0;
+              unattempted += rep.totalUnattempted || 0;
+              totalAll += rep.totalQuestions || 25;
+            } else {
+              const sData = rep.sections?.[secMap[subjectKey]];
+              if (sData) {
+                wrong += sData.wrong || 0;
+                unattempted += sData.unattempted || 0;
+                totalAll += sData.total || ((sData.correct || 0) + (sData.wrong || 0) + (sData.unattempted || 0));
+              }
             }
           }
         }
       });
 
+      const totalMistakes = wrong + unattempted + slow;
       return {
-        total: wrong + unattempted + slow,
+        totalMistakes,
+        totalAll,
+        total: modalIntent === 'review' ? totalAll : totalMistakes,
         wrong,
         unattempted,
-        slow
+        slow,
+        correct
       };
     };
 
@@ -1267,7 +1302,30 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       english: getCounts('English'),
       all: getCounts('all')
     };
-  }, [practiceModalReports, rawQuestionsCache]);
+  }, [practiceModalReports, rawQuestionsCache, modalIntent]);
+
+  // Hide subjects that have 0 questions (clean & uncluttered)
+  const availableSections = useMemo(() => {
+    if (!modalStats) return [];
+    const allDefs = [
+      { key: 'Reasoning', label: 'Reasoning', icon: Brain, color: 'text-indigo-600', stats: modalStats.reasoning },
+      { key: 'General Awareness', label: 'GA / GK', icon: Compass, color: 'text-amber-600', stats: modalStats.generalAwareness },
+      { key: 'Mathematics', label: 'Quantitative', icon: Calculator, color: 'text-blue-600', stats: modalStats.mathematics },
+      { key: 'English', label: 'English', icon: BookOpen, color: 'text-emerald-600', stats: modalStats.english },
+    ];
+    return allDefs.filter(s => (s.stats?.total || 0) > 0);
+  }, [modalStats]);
+
+  // Auto-sync practiceSection if only 1 section exists or current section has 0 questions
+  useEffect(() => {
+    if (availableSections.length === 1) {
+      if (practiceSection !== availableSections[0].key) {
+        setPracticeSection(availableSections[0].key);
+      }
+    } else if (practiceSection !== 'all' && !availableSections.some(s => s.key === practiceSection)) {
+      setPracticeSection(availableSections[0]?.key || 'all');
+    }
+  }, [availableSections, practiceSection]);
 
   const activeSectionStats = useMemo(() => {
     if (!modalStats) return null;
@@ -1283,37 +1341,40 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const availableTopics = useMemo(() => {
     if (practiceModalReports.length === 0) return [];
 
-    const normalizeSub = (raw: string) => {
-      if (/reason|intel/i.test(raw)) return 'Reasoning';
-      if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
-      if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
-      if (/eng/i.test(raw)) return 'English';
-      return 'Other';
-    };
-
-    const topicMap: Record<string, { total: number; wrong: number; unattempted: number; slow: number }> = {};
+    const topicMap: Record<string, {
+      total: number;
+      totalMistakes: number;
+      totalAll: number;
+      wrong: number;
+      unattempted: number;
+      slow: number;
+      correct: number;
+    }> = {};
 
     practiceModalReports.forEach(rep => {
       const qList = rawQuestionsCache[rep.id] || [];
       qList.forEach(q => {
-        if (practiceSection !== 'all') {
-          const qSub = normalizeSub(q.subject || q.section || q.subjectName || '');
-          if (qSub !== practiceSection) return;
-        }
+        const qSub = resolveQuestionSubject(q, rep);
+        if (practiceSection !== 'all' && qSub !== practiceSection) return;
 
         const st = getMockQuestionStatus(q);
         const isMistake = st === 'wrong' || st === 'unattempted' || st === 'slow';
-        if (!isMistake) return;
+
+        if (modalIntent === 'practice' && !isMistake) return;
 
         const rawT = q.topic || q.tags?.topic;
         const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
         if (!topicMap[cleanT]) {
-          topicMap[cleanT] = { total: 0, wrong: 0, unattempted: 0, slow: 0 };
+          topicMap[cleanT] = { total: 0, totalMistakes: 0, totalAll: 0, wrong: 0, unattempted: 0, slow: 0, correct: 0 };
         }
-        topicMap[cleanT].total++;
+        topicMap[cleanT].totalAll++;
+        if (isMistake) topicMap[cleanT].totalMistakes++;
+        topicMap[cleanT].total = modalIntent === 'review' ? topicMap[cleanT].totalAll : topicMap[cleanT].totalMistakes;
+
         if (st === 'wrong') topicMap[cleanT].wrong++;
         else if (st === 'unattempted') topicMap[cleanT].unattempted++;
         else if (st === 'slow') topicMap[cleanT].slow++;
+        else topicMap[cleanT].correct++;
       });
     });
 
@@ -1321,7 +1382,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       topic,
       ...counts
     })).sort((a, b) => b.total - a.total);
-  }, [practiceModalReports, rawQuestionsCache, practiceSection]);
+  }, [practiceModalReports, rawQuestionsCache, practiceSection, modalIntent]);
 
   const activeTopicStats = useMemo(() => {
     if (practiceTopic === 'all') return activeSectionStats;
@@ -1331,12 +1392,22 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
   const activeFilteredCount = useMemo(() => {
     if (!activeTopicStats) return 0;
-    if (practiceErrorFilter === 'all') return activeTopicStats.total;
-    if (practiceErrorFilter === 'wrong') return activeTopicStats.wrong;
-    if (practiceErrorFilter === 'unattempted') return activeTopicStats.unattempted;
-    if (practiceErrorFilter === 'slow') return activeTopicStats.slow;
-    return activeTopicStats.total;
-  }, [activeTopicStats, practiceErrorFilter]);
+    if (modalIntent === 'practice') {
+      if (practiceErrorFilter === 'all') return activeTopicStats.total;
+      if (practiceErrorFilter === 'wrong') return activeTopicStats.wrong;
+      if (practiceErrorFilter === 'unattempted') return activeTopicStats.unattempted;
+      if (practiceErrorFilter === 'slow') return activeTopicStats.slow;
+      return activeTopicStats.total;
+    } else {
+      if (practiceReviewFilter === 'all') return (activeTopicStats as any).totalAll ?? activeTopicStats.total;
+      if (practiceReviewFilter === 'mistakes') return (activeTopicStats as any).totalMistakes ?? activeTopicStats.total;
+      if (practiceReviewFilter === 'wrong') return activeTopicStats.wrong;
+      if (practiceReviewFilter === 'unattempted') return activeTopicStats.unattempted;
+      if (practiceReviewFilter === 'slow') return activeTopicStats.slow;
+      if (practiceReviewFilter === 'correct') return (activeTopicStats as any).correct ?? 0;
+      return activeTopicStats.total;
+    }
+  }, [activeTopicStats, practiceErrorFilter, practiceReviewFilter, modalIntent]);
 
   const handleStartFilteredPractice = async () => {
     if (practiceModalReports.length === 0) return;
@@ -1344,14 +1415,6 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
     try {
       const lists = await Promise.all(practiceModalReports.map(r => loadRawMockQuestions(r)));
-
-      const normalizeSub = (raw: string) => {
-        if (/reason|intel/i.test(raw)) return 'Reasoning';
-        if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
-        if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
-        if (/eng/i.test(raw)) return 'English';
-        return 'Other';
-      };
 
       // Flatten and preserve mock origin metadata
       const rawList: any[] = [];
@@ -1361,7 +1424,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         qList.forEach(q => {
           rawList.push({
             ...q,
-            _sourceMockTitle: shortTitle || rep.title
+            _sourceMockTitle: shortTitle || rep.title,
+            _sourceReport: rep
           });
         });
       });
@@ -1369,7 +1433,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       // 1. Filter by section
       let filtered = rawList.filter(q => {
         if (practiceSection === 'all') return true;
-        const qSub = normalizeSub(q.subject || q.section || q.subjectName || '');
+        const qSub = resolveQuestionSubject(q, q._sourceReport);
         return qSub === practiceSection;
       });
 
@@ -1406,8 +1470,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       };
 
       filtered.sort((a, b) => {
-        const subA = normalizeSub(a.subject || a.section || a.subjectName || '');
-        const subB = normalizeSub(b.subject || b.section || b.subjectName || '');
+        const subA = resolveQuestionSubject(a, a._sourceReport);
+        const subB = resolveQuestionSubject(b, b._sourceReport);
         const ordA = subjectOrder[subA] || 99;
         const ordB = subjectOrder[subB] || 99;
         if (ordA !== ordB) return ordA - ordB;
@@ -1418,8 +1482,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
       // 3. Format questions for quiz
       const formattedQuestions: Question[] = filtered.map((item, idx) => {
-        const rawSub = item.subject || item.section || item.subjectName || practiceSection;
-        const subjectName = normalizeSub(rawSub);
+        const subjectName = resolveQuestionSubject(item, item._sourceReport);
         const status = getMockQuestionStatus(item);
         const statusLabel = status === 'wrong' ? '❌ Wrong' : status === 'unattempted' ? '⏸ Skipped' : '⏱ Slow';
         const originTag = isMultiMock && item._sourceMockTitle ? `[${item._sourceMockTitle}] ` : '';
@@ -1510,6 +1573,98 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       alert('Error launching practice: ' + (err.message || 'Unknown'));
     } finally {
       setPracticingId(null);
+    }
+  };
+
+  const handleStartFilteredReview = async () => {
+    if (!onReviewMock || practiceModalReports.length === 0) return;
+    setReviewingId(practiceModalReports.map(r => r.id).join('_'));
+
+    try {
+      const allQuestionDetails: QuestionProgress[] = [];
+      let totalScore = 0;
+
+      for (const rep of practiceModalReports) {
+        totalScore += rep.totalScore;
+        const rawList = await loadRawMockQuestions(rep);
+        if (!rawList || rawList.length === 0) continue;
+
+        const { shortTitle } = parseMockDetails(rep);
+        const { questionDetails } = formatReportQuestions(rep, rawList, allQuestionDetails.length, shortTitle);
+        allQuestionDetails.push(...questionDetails);
+      }
+
+      if (allQuestionDetails.length === 0) {
+        alert('Could not find question data for the selected mock tests.');
+        return;
+      }
+
+      // 1. Filter by section
+      let filtered = allQuestionDetails.filter(qd => {
+        if (practiceSection === 'all') return true;
+        const qSub = resolveQuestionSubject(qd.question);
+        return qSub === practiceSection;
+      });
+
+      // 2. Filter by chapter / topic (if not 'all')
+      if (practiceTopic !== 'all') {
+        filtered = filtered.filter(qd => {
+          const rawT = qd.question?.tags?.topic || (qd.question as any)?.topic;
+          const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
+          return cleanT.toLowerCase() === practiceTopic.toLowerCase();
+        });
+      }
+
+      // 3. Filter by question status
+      if (practiceReviewFilter !== 'all') {
+        filtered = filtered.filter(qd => {
+          const qdStatus = qd.status || (
+            !qd.selectedAnswer ? 'unattempted' :
+            qd.isSlow ? 'slow' :
+            qd.isCorrect ? 'correct' : 'wrong'
+          );
+          if (practiceReviewFilter === 'mistakes') {
+            return qdStatus === 'wrong' || qdStatus === 'unattempted' || qdStatus === 'slow';
+          }
+          if (practiceReviewFilter === 'wrong') return qdStatus === 'wrong';
+          if (practiceReviewFilter === 'unattempted') return qdStatus === 'unattempted';
+          if (practiceReviewFilter === 'slow') return qdStatus === 'slow';
+          if (practiceReviewFilter === 'correct') return qdStatus === 'correct';
+          return true;
+        });
+      }
+
+      if (filtered.length === 0) {
+        alert('No questions match your selected filter in this chapter/section.');
+        return;
+      }
+
+      const totalTime = filtered.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
+      const topicSuffix = practiceTopic !== 'all' ? ` • ${practiceTopic}` : '';
+      const sectionTitle = practiceSection === 'all' ? 'All Sections' : practiceSection;
+      const filterSuffix = practiceReviewFilter === 'all' ? '' : ` (${practiceReviewFilter.toUpperCase()})`;
+
+      const reviewQuizResult: QuizResult = {
+        id: `combined_${practiceModalReports.slice(0, 3).map(r => r.id).join('_')}`,
+        userId: 'mock_candidate',
+        chapter_title: `${practiceModalReports.length} Mocks Combined Review - ${sectionTitle}${topicSuffix}${filterSuffix}`,
+        subject: practiceSection === 'all' ? 'All 4 Sections Mock' : practiceSection,
+        category: 'mockErrors',
+        mode: 'mock',
+        score: Math.round(totalScore * 10) / 10,
+        totalQuestions: filtered.length,
+        totalTime,
+        completedAt: new Date().toISOString(),
+        questionDetails: filtered
+      };
+
+      setPracticeModalReports([]);
+      onReviewMock(reviewQuizResult);
+    } catch (err: any) {
+      console.error('Failed to open filtered review:', err);
+      alert('Error opening review: ' + (err.message || 'Unknown error'));
+    } finally {
+      setReviewingId(null);
     }
   };
 
@@ -1623,8 +1778,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     } catch {}
 
     const formattedQuestions: Question[] = rawList.map((item, idx) => {
-      const rawSub = item.subject || item.section || item.subjectName || (report.type === 'sectional' && report.subject ? report.subject : 'Quantitative Aptitude');
-      const subjectName = normalizeSubName(rawSub);
+      const subjectName = resolveQuestionSubject(item, report);
 
       let options: { a: string; b: string; c: string; d: string } = { a: '', b: '', c: '', d: '' };
       if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
@@ -1904,54 +2058,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     }
   };
 
-  const handleMultiReviewMock = async () => {
-    if (!onReviewMock || selectedMockIds.length === 0) return;
+  const handleMultiReviewMock = () => {
+    if (selectedMockIds.length === 0) return;
     const chosenReports = filteredReports.filter(r => selectedMockIds.includes(r.id));
     if (chosenReports.length === 0) return;
-
-    setReviewingId('multi');
-    try {
-      const allQuestionDetails: QuestionProgress[] = [];
-      let totalScore = 0;
-
-      for (const report of chosenReports) {
-        totalScore += report.totalScore;
-        const rawList = await loadRawMockQuestions(report);
-        if (!rawList || rawList.length === 0) continue;
-
-        const { shortTitle } = parseMockDetails(report);
-        const { questionDetails } = formatReportQuestions(report, rawList, allQuestionDetails.length, shortTitle);
-        allQuestionDetails.push(...questionDetails);
-      }
-
-      if (allQuestionDetails.length === 0) {
-        alert('Could not find question data for the selected mock tests.');
-        return;
-      }
-
-      const totalTime = allQuestionDetails.reduce((sum, q) => sum + (q.timeSpent || 0), 0) || 3600;
-
-      const reviewQuizResult: QuizResult = {
-        id: `combined_${selectedMockIds.slice(0, 3).join('_')}`,
-        userId: 'mock_candidate',
-        chapter_title: `${chosenReports.length} Mocks Combined Review`,
-        subject: chosenReports[0]?.type === 'sectional' && chosenReports[0]?.subject ? chosenReports[0].subject : 'All 4 Sections Mock',
-        category: 'mockErrors',
-        mode: 'mock',
-        score: Math.round(totalScore * 10) / 10,
-        totalQuestions: allQuestionDetails.length,
-        totalTime,
-        completedAt: new Date().toISOString(),
-        questionDetails: allQuestionDetails
-      };
-
-      onReviewMock(reviewQuizResult);
-    } catch (err: any) {
-      console.error('Failed to open multi-mock review:', err);
-      alert('Error opening review: ' + (err.message || 'Unknown error'));
-    } finally {
-      setReviewingId(null);
-    }
+    openPracticeModal(chosenReports, 'all', 'review');
   };
 
   const handleMultiAskAiMock = async () => {
@@ -3690,111 +3801,168 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               exit={{ opacity: 0, scale: 0.95, y: 8 }}
               className="bg-white rounded-2xl border border-slate-200 shadow-xl w-full max-w-lg overflow-hidden"
             >
-              {/* Modal Header */}
-              <div className="px-4 py-2.5 border-b border-slate-100 flex items-center justify-between bg-slate-50/60">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
-                    <Target className="w-3.5 h-3.5" />
+              {/* Modal Header & Mode Switcher */}
+              <div className="px-4 pt-3 pb-2 border-b border-slate-100 bg-slate-50/70">
+                <div className="flex items-center justify-between mb-2.5">
+                  <div className="flex items-center gap-2">
+                    <div className={`w-7 h-7 rounded-xl flex items-center justify-center font-bold transition-colors ${
+                      modalIntent === 'review' ? 'bg-emerald-100 text-emerald-700' : 'bg-indigo-100 text-indigo-700'
+                    }`}>
+                      {modalIntent === 'review' ? <Eye className="w-4 h-4" /> : <Target className="w-4 h-4" />}
+                    </div>
+                    <div>
+                      <h3 className="text-xs font-bold text-slate-900 leading-tight">
+                        {modalIntent === 'review'
+                          ? (isMultiMock ? `Review ${practiceModalReports.length} Mocks Combined` : `Review ${practiceModalReport.title}`)
+                          : (isMultiMock ? `Practice ${practiceModalReports.length} Mocks Combined` : 'Practice Mock Mistakes')}
+                      </h3>
+                      <p className="text-[10px] text-slate-400 font-medium">
+                        {isMultiMock
+                          ? `${practiceModalReports.length} Mocks Selected • ${modalIntent === 'review' ? (modalStats?.all?.totalAll || 0) + ' questions' : (modalStats?.all?.totalMistakes || 0) + ' mistakes'}`
+                          : `${practiceModalReport.title} • ${modalIntent === 'review' ? (modalStats?.all?.totalAll || 0) + ' questions' : (modalStats?.all?.totalMistakes || 0) + ' mistakes'}`}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xs font-bold text-slate-900 leading-tight">
-                      {isMultiMock ? `Practice ${practiceModalReports.length} Mocks Combined` : 'Practice Mock Mistakes'}
-                    </h3>
-                    <p className="text-[10px] text-slate-400 font-medium">
-                      {isMultiMock
-                        ? `${practiceModalReports.length} Mocks Selected • ${modalStats?.all?.total || 0} total mistakes`
-                        : `${practiceModalReport.title} • ${practiceModalReport.totalWrong + practiceModalReport.totalUnattempted} total errors`}
-                    </p>
-                  </div>
+                  <button
+                    onClick={() => setPracticeModalReport(null)}
+                    className="p-1 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors cursor-pointer"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
                 </div>
-                <button
-                  onClick={() => setPracticeModalReport(null)}
-                  className="p-1 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
+
+                {/* Clean Toggle Tabs: Practice vs Review */}
+                <div className="grid grid-cols-2 gap-1 p-0.5 bg-slate-200/70 rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() => setModalIntent('practice')}
+                    className={`py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                      modalIntent === 'practice'
+                        ? 'bg-white text-indigo-700 shadow-2xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <Target className="w-3.5 h-3.5" />
+                    <span>Practice Mode</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setModalIntent('review')}
+                    className={`py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                      modalIntent === 'review'
+                        ? 'bg-white text-emerald-700 shadow-2xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <Eye className="w-3.5 h-3.5" />
+                    <span>Review Mode</span>
+                  </button>
+                </div>
               </div>
 
               {/* Modal Body */}
               <div className="p-3.5 space-y-3">
-                {/* 1. Select Section to Practice */}
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                      1. Select Section
-                    </label>
-                    <span className="text-[10px] text-indigo-600 font-medium">
-                      Mistakes &amp; leaks only
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
-                    {[
-                      { key: 'Reasoning', label: 'Reasoning', icon: Brain, color: 'text-indigo-600', stats: modalStats?.reasoning },
-                      { key: 'General Awareness', label: 'GA / GK', icon: Compass, color: 'text-amber-600', stats: modalStats?.generalAwareness },
-                      { key: 'Mathematics', label: 'Quantitative', icon: Calculator, color: 'text-blue-600', stats: modalStats?.mathematics },
-                      { key: 'English', label: 'English', icon: BookOpen, color: 'text-emerald-600', stats: modalStats?.english },
-                    ].map((sec) => {
-                      const isSelected = practiceSection === sec.key;
-                      const Icon = sec.icon;
-                      const count = sec.stats?.total || 0;
+                {/* 1. Select Section (Hide subjects with 0 questions) */}
+                {availableSections.length > 0 ? (
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                        1. {availableSections.length === 1 ? 'Section' : 'Select Section'}
+                      </label>
+                      <span className="text-[10px] text-slate-400 font-medium">
+                        {modalIntent === 'review' ? 'Full question review' : 'Mistakes & leaks only'}
+                      </span>
+                    </div>
 
-                      return (
+                    {availableSections.length === 1 ? (
+                      /* Clean single-subject banner when only 1 subject is present (e.g. sectional mock) */
+                      <div className={`flex items-center justify-between p-2.5 rounded-xl border ${
+                        modalIntent === 'review' ? 'border-emerald-200 bg-emerald-50/60' : 'border-indigo-200 bg-indigo-50/60'
+                      }`}>
+                        <div className="flex items-center gap-2">
+                          {React.createElement(availableSections[0].icon, { className: `w-4 h-4 ${availableSections[0].color}` })}
+                          <span className="text-xs font-bold text-slate-800">{availableSections[0].label}</span>
+                        </div>
+                        <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${
+                          modalIntent === 'review'
+                            ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                            : 'bg-rose-50 text-rose-600 border border-rose-200'
+                        }`}>
+                          {availableSections[0].stats?.total || 0} {modalIntent === 'review' ? 'Questions' : 'Mistakes'}
+                        </span>
+                      </div>
+                    ) : (
+                      /* 2+ active subjects: compact grid of available subjects + All Combined */
+                      <div className="space-y-1.5">
+                        <div className={`grid gap-1.5 ${availableSections.length === 2 ? 'grid-cols-2' : 'grid-cols-2 sm:grid-cols-4'}`}>
+                          {availableSections.map((sec) => {
+                            const isSelected = practiceSection === sec.key;
+                            const Icon = sec.icon;
+                            const count = sec.stats?.total || 0;
+
+                            return (
+                              <button
+                                key={sec.key}
+                                type="button"
+                                onClick={() => setPracticeSection(sec.key)}
+                                className={`p-2 rounded-xl border text-left transition-all cursor-pointer ${
+                                  isSelected
+                                    ? modalIntent === 'review'
+                                      ? 'border-emerald-600 bg-emerald-50/70 text-emerald-950 ring-1 ring-emerald-500/30'
+                                      : 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-1 ring-indigo-500/30'
+                                    : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-white'
+                                }`}
+                              >
+                                <div className="flex items-center justify-between mb-1">
+                                  <Icon className={`w-3.5 h-3.5 ${sec.color}`} />
+                                  <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded-full ${
+                                    modalIntent === 'review'
+                                      ? 'bg-emerald-100 text-emerald-800'
+                                      : 'bg-rose-50 text-rose-600 border border-rose-200'
+                                  }`}>
+                                    {count} {modalIntent === 'review' ? 'q' : 'err'}
+                                  </span>
+                                </div>
+                                <div className="font-bold text-xs text-slate-900 leading-tight truncate">{sec.label}</div>
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {/* All Sections Combined Option */}
                         <button
-                          key={sec.key}
                           type="button"
-                          onClick={() => setPracticeSection(sec.key)}
-                          className={`p-2 rounded-xl border text-left transition-all relative ${
-                            isSelected
-                              ? 'border-indigo-600 bg-indigo-50/50 ring-1 ring-indigo-500/30'
-                              : 'border-slate-200 hover:border-slate-300 bg-white'
+                          onClick={() => setPracticeSection('all')}
+                          className={`w-full px-2.5 py-1.5 rounded-xl border text-xs font-semibold flex items-center justify-between transition-all cursor-pointer ${
+                            practiceSection === 'all'
+                              ? modalIntent === 'review'
+                                ? 'border-emerald-600 bg-emerald-50/70 text-emerald-950 ring-1 ring-emerald-500/30'
+                                : 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-1 ring-indigo-500/30'
+                              : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-slate-50/50'
                           }`}
                         >
-                          <div className="flex items-center justify-between mb-1">
-                            <Icon className={`w-3.5 h-3.5 ${sec.color}`} />
-                            <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded-full ${
-                              count > 0 ? 'bg-rose-50 text-rose-600 border border-rose-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                            }`}>
-                              {count} err
-                            </span>
+                          <div className="flex items-center gap-1.5">
+                            <Layers className="w-3.5 h-3.5 text-indigo-600" />
+                            <span>All {availableSections.length} Sections Combined</span>
                           </div>
-                          <div className="font-bold text-xs text-slate-900 leading-tight truncate">{sec.label}</div>
-                          <div className="text-[10px] text-slate-400 mt-0.5 font-medium flex items-center gap-1">
-                            <span>{sec.stats?.wrong || 0}w</span>
-                            <span>•</span>
-                            <span>{sec.stats?.unattempted || 0}s</span>
-                            {(sec.stats?.slow || 0) > 0 && (
-                              <>
-                                <span>•</span>
-                                <span className="text-amber-600">{sec.stats?.slow} slow</span>
-                              </>
-                            )}
-                          </div>
+                          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                            modalIntent === 'review'
+                              ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                              : 'bg-rose-50 text-rose-600 border border-rose-200'
+                          }`}>
+                            {modalStats?.all?.total || 0} {modalIntent === 'review' ? 'Total Questions' : 'Total Mistakes'}
+                          </span>
                         </button>
-                      );
-                    })}
-                  </div>
-
-                  {/* All Sections Combined Option */}
-                  <div className="mt-1.5">
-                    <button
-                      type="button"
-                      onClick={() => setPracticeSection('all')}
-                      className={`w-full px-2.5 py-1.5 rounded-lg border text-xs font-semibold flex items-center justify-between transition-all ${
-                        practiceSection === 'all'
-                          ? 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-1 ring-indigo-500/30'
-                          : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-slate-50/50'
-                      }`}
-                    >
-                      <div className="flex items-center gap-1.5">
-                        <Layers className="w-3.5 h-3.5 text-indigo-600" />
-                        <span>All 4 Sections Combined (Mistakes Only)</span>
                       </div>
-                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-rose-50 text-rose-600 border border-rose-200">
-                        {modalStats?.all?.total || 0} Total Mistakes
-                      </span>
-                    </button>
+                    )}
                   </div>
-                </div>
+                ) : (
+                  <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-center">
+                    <Check className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
+                    <span className="text-xs font-bold text-emerald-800">100% Accuracy! 🎉</span>
+                    <p className="text-[11px] text-emerald-700 mt-0.5">No mistakes to practice in these mocks. Switch to Review Mode to view questions.</p>
+                  </div>
+                )}
 
                 {/* 2. Filter Chapter / Topic (if available) */}
                 {availableTopics.length > 0 && (
@@ -3807,13 +3975,15 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                         {availableTopics.length} chapters found
                       </span>
                     </div>
-                    <div className="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto pr-1">
+                    <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pr-1 py-0.5">
                       <button
                         type="button"
                         onClick={() => setPracticeTopic('all')}
                         className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
                           practiceTopic === 'all'
-                            ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
+                            ? modalIntent === 'review'
+                              ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                              : 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
                             : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                         }`}
                       >
@@ -3833,7 +4003,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                             onClick={() => setPracticeTopic(t.topic)}
                             className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
                               isSelected
-                                ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
+                                ? modalIntent === 'review'
+                                  ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                                  : 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
                                 : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                             }`}
                           >
@@ -3850,100 +4022,143 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   </div>
                 )}
 
-                {/* Filter Error Types */}
-                <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
-                    {availableTopics.length > 0 ? '3. Filter Error Type' : '2. Filter Error Type'}
-                  </label>
-                  <div className="flex flex-wrap gap-1.5">
-                    {[
-                      { id: 'all', label: 'All Mistakes', count: activeTopicStats?.total ?? 0 },
-                      { id: 'wrong', label: '❌ Wrong', count: activeTopicStats?.wrong ?? 0 },
-                      { id: 'unattempted', label: '⏸ Skipped', count: activeTopicStats?.unattempted ?? 0 },
-                      { id: 'slow', label: '⏱ Slow', count: activeTopicStats?.slow ?? 0 },
-                    ].map((f) => (
+                {/* 3. Filter Error Type (Practice Mode) */}
+                {modalIntent === 'practice' && (
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                      {availableTopics.length > 0 ? '3. Filter Error Type' : '2. Filter Error Type'}
+                    </label>
+                    <div className="flex flex-wrap gap-1.5">
+                      {[
+                        { id: 'all', label: 'All Mistakes', count: activeTopicStats?.total ?? 0 },
+                        { id: 'wrong', label: '❌ Wrong', count: activeTopicStats?.wrong ?? 0 },
+                        { id: 'unattempted', label: '⏸ Skipped', count: activeTopicStats?.unattempted ?? 0 },
+                        { id: 'slow', label: '⏱ Slow', count: activeTopicStats?.slow ?? 0 },
+                      ].map((f) => (
+                        <button
+                          key={f.id}
+                          type="button"
+                          onClick={() => setPracticeErrorFilter(f.id as any)}
+                          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
+                            practiceErrorFilter === f.id
+                              ? 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
+                              : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                          }`}
+                        >
+                          <span>{f.label}</span>
+                          <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
+                            practiceErrorFilter === f.id
+                              ? 'bg-white/20 text-white'
+                              : 'bg-slate-100 text-slate-500'
+                          }`}>
+                            {f.count}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* 3. Filter Question Status (Review Mode) */}
+                {modalIntent === 'review' && (
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                      {availableTopics.length > 0 ? '3. Filter Question Status' : '2. Filter Question Status'}
+                    </label>
+                    <div className="flex flex-wrap gap-1.5">
+                      {[
+                        { id: 'all', label: 'All Questions', count: (activeTopicStats as any)?.totalAll ?? activeTopicStats?.total ?? 0 },
+                        { id: 'mistakes', label: 'Mistakes Only', count: (activeTopicStats as any)?.totalMistakes ?? 0 },
+                        { id: 'wrong', label: '❌ Wrong', count: activeTopicStats?.wrong ?? 0 },
+                        { id: 'unattempted', label: '⏸ Skipped', count: activeTopicStats?.unattempted ?? 0 },
+                        { id: 'slow', label: '⏱ Slow', count: activeTopicStats?.slow ?? 0 },
+                        { id: 'correct', label: '✅ Correct', count: (activeTopicStats as any)?.correct ?? 0 },
+                      ].filter(f => f.count > 0 || f.id === 'all').map((f) => (
+                        <button
+                          key={f.id}
+                          type="button"
+                          onClick={() => setPracticeReviewFilter(f.id as any)}
+                          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
+                            practiceReviewFilter === f.id
+                              ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                              : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                          }`}
+                        >
+                          <span>{f.label}</span>
+                          <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
+                            practiceReviewFilter === f.id
+                              ? 'bg-white/20 text-white'
+                              : 'bg-slate-100 text-slate-500'
+                          }`}>
+                            {f.count}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* 4. Choose Mode (Only in Practice Mode) */}
+                {modalIntent === 'practice' && (
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                      {availableTopics.length > 0 ? '4. Choose Mode' : '3. Choose Mode'}
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       <button
-                        key={f.id}
                         type="button"
-                        onClick={() => setPracticeErrorFilter(f.id as any)}
-                        className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 ${
-                          practiceErrorFilter === f.id
-                            ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
-                            : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                        onClick={() => setModalQuizMode('practice')}
+                        className={`p-2 rounded-xl border text-left transition-all cursor-pointer ${
+                          modalQuizMode === 'practice'
+                            ? 'border-emerald-600 bg-emerald-50/70 ring-1 ring-emerald-500/30'
+                            : 'border-slate-200 hover:border-slate-300 bg-white'
                         }`}
                       >
-                        <span>{f.label}</span>
-                        <span className={`text-[10px] px-1 py-0.2 rounded-full font-bold ${
-                          practiceErrorFilter === f.id
-                            ? 'bg-white/20 text-white'
-                            : 'bg-slate-100 text-slate-500'
-                        }`}>
-                          {f.count}
-                        </span>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                            <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
+                            Practice Mode
+                          </span>
+                          <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800">
+                            Instant Ans
+                          </span>
+                        </div>
+                        <p className="text-[10px] text-slate-500 mt-1 leading-tight">
+                          Instant answer &amp; solution upon click. No timer pressure.
+                        </p>
                       </button>
-                    ))}
-                  </div>
-                </div>
 
-                {/* Choose Mode (Practice vs Mock Test) */}
-                <div>
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
-                    {availableTopics.length > 0 ? '4. Choose Mode' : '3. Choose Mode'}
-                  </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setModalQuizMode('practice')}
-                      className={`p-2 rounded-lg border text-left transition-all ${
-                        modalQuizMode === 'practice'
-                          ? 'border-emerald-600 bg-emerald-50/70 ring-1 ring-emerald-500/30'
-                          : 'border-slate-200 hover:border-slate-300 bg-white'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                          <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
-                          Practice Mode
-                        </span>
-                        <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800">
-                          Instant Ans
-                        </span>
-                      </div>
-                      <p className="text-[10px] text-slate-500 mt-1 leading-tight">
-                        Instant answer &amp; solution upon click. No timer pressure.
-                      </p>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setModalQuizMode('mock')}
-                      className={`p-2 rounded-lg border text-left transition-all ${
-                        modalQuizMode === 'mock'
-                          ? 'border-rose-600 bg-rose-50/70 ring-1 ring-rose-500/30'
-                          : 'border-slate-200 hover:border-slate-300 bg-white'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                          <Trophy className="w-3.5 h-3.5 text-rose-600" />
-                          Mock Test Mode
-                        </span>
-                        <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-rose-100 text-rose-800">
-                          Timed
-                        </span>
-                      </div>
-                      <p className="text-[10px] text-slate-500 mt-1 leading-tight">
-                        Countdown timer active (36s/Q). Answers &amp; score revealed only at the end.
-                      </p>
-                    </button>
+                      <button
+                        type="button"
+                        onClick={() => setModalQuizMode('mock')}
+                        className={`p-2 rounded-xl border text-left transition-all cursor-pointer ${
+                          modalQuizMode === 'mock'
+                            ? 'border-rose-600 bg-rose-50/70 ring-1 ring-rose-500/30'
+                            : 'border-slate-200 hover:border-slate-300 bg-white'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                            <Trophy className="w-3.5 h-3.5 text-rose-600" />
+                            Mock Test Mode
+                          </span>
+                          <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-rose-100 text-rose-800">
+                            Timed
+                          </span>
+                        </div>
+                        <p className="text-[10px] text-slate-500 mt-1 leading-tight">
+                          Countdown timer active (36s/Q). Answers revealed at the end.
+                        </p>
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Status Notice if 0 matching questions */}
                 {activeFilteredCount === 0 && (
-                  <div className="p-2 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium flex items-center gap-1.5">
-                    <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>0 mistake questions for this filter in {practiceTopic !== 'all' ? practiceTopic : practiceSection}. 100% accuracy! 🎉</span>
+                  <div className="p-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>0 questions for this filter in {practiceTopic !== 'all' ? practiceTopic : practiceSection}.</span>
                   </div>
                 )}
               </div>
@@ -3953,33 +4168,54 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <button
                   type="button"
                   onClick={() => setPracticeModalReport(null)}
-                  className="px-3 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-200/50 transition-colors"
+                  className="px-3 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-200/50 transition-colors cursor-pointer"
                 >
                   Cancel
                 </button>
 
-                <button
-                  type="button"
-                  onClick={handleStartFilteredPractice}
-                  disabled={activeFilteredCount === 0 || practicingId !== null}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white rounded-lg shadow-xs transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
-                    modalQuizMode === 'mock'
-                      ? 'bg-rose-600 hover:bg-rose-700'
-                      : 'bg-indigo-600 hover:bg-indigo-700'
-                  }`}
-                >
-                  {practicingId ? (
-                    <>
-                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                      <span>Loading...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Play className="w-3 h-3 fill-current" />
-                      <span>Start {modalQuizMode === 'mock' ? 'Mock Test' : 'Practice'} ({activeFilteredCount})</span>
-                    </>
-                  )}
-                </button>
+                {modalIntent === 'review' ? (
+                  <button
+                    type="button"
+                    onClick={handleStartFilteredReview}
+                    disabled={activeFilteredCount === 0 || reviewingId !== null}
+                    className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-2xs transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    {reviewingId ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Loading Review...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Start Review ({activeFilteredCount})</span>
+                      </>
+                    )}
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handleStartFilteredPractice}
+                    disabled={activeFilteredCount === 0 || practicingId !== null}
+                    className={`inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-white rounded-lg shadow-2xs transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer ${
+                      modalQuizMode === 'mock'
+                        ? 'bg-rose-600 hover:bg-rose-700'
+                        : 'bg-indigo-600 hover:bg-indigo-700'
+                    }`}
+                  >
+                    {practicingId ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Loading...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Play className="w-3 h-3 fill-current" />
+                        <span>Start {modalQuizMode === 'mock' ? 'Mock Test' : 'Practice'} ({activeFilteredCount})</span>
+                      </>
+                    )}
+                  </button>
+                )}
               </div>
             </motion.div>
           </div>
