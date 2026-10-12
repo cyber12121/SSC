@@ -592,7 +592,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const [practiceSection, setPracticeSection] = useState<string>('Reasoning');
   const [practiceTopics, setPracticeTopics] = useState<string[]>([]);
   const [practiceErrorFilter, setPracticeErrorFilter] = useState<'all' | 'wrong' | 'unattempted' | 'slow'>('all');
-  const [modalIntent, setModalIntent] = useState<'practice' | 'review'>('practice');
+  const [modalIntent, setModalIntent] = useState<'practice' | 'review' | 'ai'>('practice');
   const [practiceReviewFilter, setPracticeReviewFilter] = useState<'all' | 'mistakes' | 'wrong' | 'unattempted' | 'slow' | 'correct'>('all');
 
   // Reset practice topics when section, intent, or selected reports change
@@ -1197,7 +1197,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const openPracticeModal = async (
     input: MockScoreReport | MockScoreReport[], 
     targetSection: string = 'all',
-    intent: 'practice' | 'review' = 'practice'
+    intent: 'practice' | 'review' | 'ai' = 'practice'
   ) => {
     const reps = Array.isArray(input) ? input : [input];
     if (reps.length === 0) return;
@@ -1704,6 +1704,160 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       alert('Error opening review: ' + (err.message || 'Unknown error'));
     } finally {
       setReviewingId(null);
+    }
+  };
+
+  const handleStartFilteredAskAi = async () => {
+    if (practiceModalReports.length === 0) return;
+    setAskingAiId('filtered_ai');
+
+    try {
+      let totalScore = 0;
+      let maxMarks = 0;
+      let totalCorrect = 0;
+      let totalWrong = 0;
+      let totalUnattempted = 0;
+      let totalSlow = 0;
+      let totalQuestions = 0;
+      const allScopedQuestions: AiFocusedQuestion[] = [];
+
+      for (const rep of practiceModalReports) {
+        const rawList = await loadRawMockQuestions(rep);
+        if (!rawList || rawList.length === 0) continue;
+
+        const { shortTitle } = parseMockDetails(rep);
+
+        const normalizeSub = (raw: string) => {
+          if (/reason|intel/i.test(raw)) return 'Reasoning';
+          if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
+          if (/quant|math|aptitude/i.test(raw)) return 'Quantitative Aptitude';
+          if (/eng/i.test(raw)) return 'English';
+          return raw || 'General';
+        };
+
+        for (let idx = 0; idx < rawList.length; idx++) {
+          const item = rawList[idx];
+
+          // 1. Filter by section
+          if (practiceSection !== 'all') {
+            const qSub = resolveQuestionSubject(item, rep);
+            if (qSub !== practiceSection) continue;
+          }
+
+          // 2. Filter by chapter / topic (if selected)
+          if (practiceTopics.length > 0) {
+            const rawT = item.topic || item.tags?.topic;
+            const cleanT = rawT ? normalizeTopicTitle(rawT) : 'General';
+            const selectedSet = new Set(practiceTopics.map(t => t.toLowerCase()));
+            if (!selectedSet.has(cleanT.toLowerCase())) continue;
+          }
+
+          // 3. Filter by question status
+          const status = getMockQuestionStatus(item);
+          if (practiceReviewFilter === 'mistakes') {
+            if (status !== 'wrong' && status !== 'unattempted' && status !== 'slow') continue;
+          } else if (practiceReviewFilter !== 'all') {
+            if (status !== practiceReviewFilter) continue;
+          }
+
+          totalQuestions++;
+          if (status === 'correct') {
+            totalCorrect++;
+            totalScore += 2;
+          } else if (status === 'wrong') {
+            totalWrong++;
+            totalScore -= 0.5;
+          } else if (status === 'unattempted') {
+            totalUnattempted++;
+          }
+          if (status === 'slow') totalSlow++;
+          maxMarks += 2;
+
+          let userAns = item.userAnswer || item.user_answer || item.myAnswer;
+          if (!userAns && status === 'unattempted') userAns = 'Unattempted / Skipped';
+
+          let optionsMap: Record<string, string> | undefined = undefined;
+          if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
+            optionsMap = {
+              A: String(item.options.a || item.options['1'] || item.options.A || '').trim(),
+              B: String(item.options.b || item.options['2'] || item.options.B || '').trim(),
+              C: String(item.options.c || item.options['3'] || item.options.C || '').trim(),
+              D: String(item.options.d || item.options['4'] || item.options.D || '').trim(),
+            };
+          } else if (Array.isArray(item.options)) {
+            optionsMap = {
+              A: String(item.options[0]?.text || item.options[0] || '').trim(),
+              B: String(item.options[1]?.text || item.options[1] || '').trim(),
+              C: String(item.options[2]?.text || item.options[2] || '').trim(),
+              D: String(item.options[3]?.text || item.options[3] || '').trim(),
+            };
+          }
+
+          allScopedQuestions.push({
+            id: item.id || `mock_q_${allScopedQuestions.length + 1}`,
+            qNum: allScopedQuestions.length + 1,
+            question: (item.question || item.questionText || item.qText || `Question ${allScopedQuestions.length + 1}`).trim(),
+            options: optionsMap,
+            correctAnswer: item.answer || item.correctOption || item.correctAnswer || '',
+            userAnswer: userAns,
+            solution: (item.solution || item.explanation || item.sol || '').trim(),
+            status: status as any,
+            subject: normalizeSub(item.subject || item.section || item.subjectName || ''),
+            topic: item.topic || item.tags?.topic,
+            rcaReason: item.rca?.reason || item.rcaReason || undefined,
+            sourceType: rep.type === 'sectional' ? 'sectional' : 'full_mock',
+            sourceLabel: shortTitle,
+            testName: `${shortTitle} (${rep.title})`
+          });
+        }
+      }
+
+      if (allScopedQuestions.length === 0) {
+        alert('No questions match your selected filter in this chapter/section.');
+        return;
+      }
+
+      const overallAttempted = totalCorrect + totalWrong;
+      const avgAccuracy = overallAttempted > 0 ? Math.round((totalCorrect / overallAttempted) * 1000) / 10 : 0;
+
+      const topicSuffix = practiceTopics.length === 0
+        ? ''
+        : practiceTopics.length === 1
+          ? ` • ${practiceTopics[0]}`
+          : ` • ${practiceTopics.length} Topics (${practiceTopics.slice(0, 2).join(', ')}${practiceTopics.length > 2 ? '...' : ''})`;
+      const sectionTitle = practiceSection === 'all' ? 'All Sections' : practiceSection;
+      const filterLabel = practiceReviewFilter === 'all' ? '' : ` (${practiceReviewFilter.toUpperCase()})`;
+
+      const combinedTitle = practiceModalReports.length > 1
+        ? `${practiceModalReports.length} Mocks AI Analysis • ${sectionTitle}${topicSuffix}${filterLabel}`
+        : `${practiceModalReports[0].title} • ${sectionTitle}${topicSuffix}${filterLabel}`;
+
+      openAiWithScope({
+        type: 'mock',
+        title: combinedTitle,
+        subject: practiceSection !== 'all' ? practiceSection : (practiceModalReports[0]?.type === 'sectional' ? getSectionalSubject(practiceModalReports[0]) : undefined),
+        sourceScope: practiceModalReports.length > 1 ? 'mixed' : (practiceModalReports[0]?.type === 'sectional' ? 'sectional' : 'full_mock'),
+        sourceScopeLabel: practiceModalReports.length > 1 ? `${practiceModalReports.length} Mocks Combined` : practiceModalReports[0]?.title,
+        testName: combinedTitle,
+        stats: {
+          totalScore: Math.round(totalScore * 10) / 10,
+          maxMarks,
+          accuracy: avgAccuracy,
+          totalQuestions,
+          correct: totalCorrect,
+          wrong: totalWrong,
+          unattempted: totalUnattempted,
+          slow: totalSlow
+        },
+        questions: allScopedQuestions
+      });
+
+      setPracticeModalReports([]);
+    } catch (err: any) {
+      console.error('Failed to prepare filtered AI scope:', err);
+      alert('Error preparing AI analysis: ' + (err.message || 'Unknown error'));
+    } finally {
+      setAskingAiId(null);
     }
   };
 
@@ -3804,12 +3958,15 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             {/* 3. Ask AI */}
             <button
               type="button"
-              onClick={handleMultiAskAiMock}
+              onClick={() => {
+                const chosen = filteredReports.filter(r => selectedMockIds.includes(r.id));
+                if (chosen.length > 0) openPracticeModal(chosen, 'all', 'ai');
+              }}
               disabled={askingAiId !== null}
               className="px-3 py-1.5 bg-purple-600 hover:bg-purple-500 text-white rounded-full font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs disabled:opacity-50 shrink-0"
               title="Ask Tommy AI to analyze combined performance"
             >
-              {askingAiId === 'multi' ? (
+              {askingAiId === 'filtered_ai' || askingAiId === 'multi' ? (
                 <Loader2 className="w-3.5 h-3.5 animate-spin" />
               ) : (
                 <Sparkles className="w-3.5 h-3.5 text-purple-200" />
@@ -3830,7 +3987,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         )}
       </AnimatePresence>
 
-      {/* ─── SECTION-WISE PRACTICE MODAL (Compact, Crisp & Sleek) ─── */}
+      {/* ─── SECTION-WISE PRACTICE / REVIEW / AI MODAL (Compact, Crisp & Sleek) ─── */}
       <AnimatePresence>
         {practiceModalReports.length > 0 && practiceModalReport && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-3 sm:p-4">
@@ -3845,20 +4002,32 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <div className="flex items-center justify-between mb-2.5">
                   <div className="flex items-center gap-2">
                     <div className={`w-7 h-7 rounded-xl flex items-center justify-center font-bold transition-colors ${
-                      modalIntent === 'review' ? 'bg-emerald-100 text-emerald-700' : 'bg-indigo-100 text-indigo-700'
+                      modalIntent === 'review'
+                        ? 'bg-emerald-100 text-emerald-700'
+                        : modalIntent === 'ai'
+                        ? 'bg-purple-100 text-purple-700'
+                        : 'bg-indigo-100 text-indigo-700'
                     }`}>
-                      {modalIntent === 'review' ? <Eye className="w-4 h-4" /> : <Target className="w-4 h-4" />}
+                      {modalIntent === 'review' ? (
+                        <Eye className="w-4 h-4" />
+                      ) : modalIntent === 'ai' ? (
+                        <Sparkles className="w-4 h-4" />
+                      ) : (
+                        <Target className="w-4 h-4" />
+                      )}
                     </div>
                     <div>
                       <h3 className="text-xs font-bold text-slate-900 leading-tight">
                         {modalIntent === 'review'
                           ? (isMultiMock ? `Review ${practiceModalReports.length} Mocks Combined` : `Review ${practiceModalReport.title}`)
+                          : modalIntent === 'ai'
+                          ? (isMultiMock ? `Analyze ${practiceModalReports.length} Mocks with Tommy AI` : `Analyze ${practiceModalReport.title} with Tommy AI`)
                           : (isMultiMock ? `Practice ${practiceModalReports.length} Mocks Combined` : 'Practice Mock Mistakes')}
                       </h3>
                       <p className="text-[10px] text-slate-400 font-medium">
                         {isMultiMock
-                          ? `${practiceModalReports.length} Mocks Selected • ${modalIntent === 'review' ? (modalStats?.all?.totalAll || 0) + ' questions' : (modalStats?.all?.totalMistakes || 0) + ' mistakes'}`
-                          : `${practiceModalReport.title} • ${modalIntent === 'review' ? (modalStats?.all?.totalAll || 0) + ' questions' : (modalStats?.all?.totalMistakes || 0) + ' mistakes'}`}
+                          ? `${practiceModalReports.length} Mocks Selected • ${modalIntent === 'practice' ? (modalStats?.all?.totalMistakes || 0) + ' mistakes' : (modalStats?.all?.totalAll || 0) + ' questions'}`
+                          : `${practiceModalReport.title} • ${modalIntent === 'practice' ? (modalStats?.all?.totalMistakes || 0) + ' mistakes' : (modalStats?.all?.totalAll || 0) + ' questions'}`}
                       </p>
                     </div>
                   </div>
@@ -3870,31 +4039,43 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   </button>
                 </div>
 
-                {/* Clean Toggle Tabs: Practice vs Review */}
-                <div className="grid grid-cols-2 gap-1 p-0.5 bg-slate-200/70 rounded-xl">
+                {/* Clean Toggle Tabs: Practice vs Review vs Ask AI */}
+                <div className="grid grid-cols-3 gap-1 p-0.5 bg-slate-200/70 rounded-xl">
                   <button
                     type="button"
                     onClick={() => setModalIntent('practice')}
-                    className={`py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                    className={`py-1.5 px-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer ${
                       modalIntent === 'practice'
                         ? 'bg-white text-indigo-700 shadow-2xs'
                         : 'text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    <Target className="w-3.5 h-3.5" />
-                    <span>Practice Mode</span>
+                    <Target className="w-3.5 h-3.5 shrink-0" />
+                    <span>Practice</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => setModalIntent('review')}
-                    className={`py-1.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                    className={`py-1.5 px-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer ${
                       modalIntent === 'review'
                         ? 'bg-white text-emerald-700 shadow-2xs'
                         : 'text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>Review Mode</span>
+                    <Eye className="w-3.5 h-3.5 shrink-0" />
+                    <span>Review</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setModalIntent('ai')}
+                    className={`py-1.5 px-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer ${
+                      modalIntent === 'ai'
+                        ? 'bg-white text-purple-700 shadow-2xs'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5 shrink-0 text-purple-600" />
+                    <span>Ask AI</span>
                   </button>
                 </div>
               </div>
@@ -3909,14 +4090,18 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                         1. {availableSections.length === 1 ? 'Section' : 'Select Section'}
                       </label>
                       <span className="text-[10px] text-slate-400 font-medium">
-                        {modalIntent === 'review' ? 'Full question review' : 'Mistakes & leaks only'}
+                        {modalIntent === 'practice' ? 'Mistakes & leaks only' : modalIntent === 'ai' ? 'Targeted AI focus' : 'Full question review'}
                       </span>
                     </div>
 
                     {availableSections.length === 1 ? (
                       /* Clean single-subject banner when only 1 subject is present (e.g. sectional mock) */
                       <div className={`flex items-center justify-between p-2.5 rounded-xl border ${
-                        modalIntent === 'review' ? 'border-emerald-200 bg-emerald-50/60' : 'border-indigo-200 bg-indigo-50/60'
+                        modalIntent === 'review'
+                          ? 'border-emerald-200 bg-emerald-50/60'
+                          : modalIntent === 'ai'
+                          ? 'border-purple-200 bg-purple-50/60'
+                          : 'border-indigo-200 bg-indigo-50/60'
                       }`}>
                         <div className="flex items-center gap-2">
                           {React.createElement(availableSections[0].icon, { className: `w-4 h-4 ${availableSections[0].color}` })}
@@ -3925,9 +4110,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                         <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${
                           modalIntent === 'review'
                             ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                            : modalIntent === 'ai'
+                            ? 'bg-purple-100 text-purple-800 border border-purple-200'
                             : 'bg-rose-50 text-rose-600 border border-rose-200'
                         }`}>
-                          {availableSections[0].stats?.total || 0} {modalIntent === 'review' ? 'Questions' : 'Mistakes'}
+                          {availableSections[0].stats?.total || 0} {modalIntent === 'practice' ? 'Mistakes' : 'Questions'}
                         </span>
                       </div>
                     ) : (
@@ -3948,6 +4135,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                                   isSelected
                                     ? modalIntent === 'review'
                                       ? 'border-emerald-600 bg-emerald-50/70 text-emerald-950 ring-1 ring-emerald-500/30'
+                                      : modalIntent === 'ai'
+                                      ? 'border-purple-600 bg-purple-50/70 text-purple-950 ring-1 ring-purple-500/30'
                                       : 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-1 ring-indigo-500/30'
                                     : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-white'
                                 }`}
@@ -3957,9 +4146,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                                   <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded-full ${
                                     modalIntent === 'review'
                                       ? 'bg-emerald-100 text-emerald-800'
+                                      : modalIntent === 'ai'
+                                      ? 'bg-purple-100 text-purple-800'
                                       : 'bg-rose-50 text-rose-600 border border-rose-200'
                                   }`}>
-                                    {count} {modalIntent === 'review' ? 'q' : 'err'}
+                                    {count} {modalIntent === 'practice' ? 'err' : 'q'}
                                   </span>
                                 </div>
                                 <div className="font-bold text-xs text-slate-900 leading-tight truncate">{sec.label}</div>
@@ -3976,6 +4167,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                             practiceSection === 'all'
                               ? modalIntent === 'review'
                                 ? 'border-emerald-600 bg-emerald-50/70 text-emerald-950 ring-1 ring-emerald-500/30'
+                                : modalIntent === 'ai'
+                                ? 'border-purple-600 bg-purple-50/70 text-purple-950 ring-1 ring-purple-500/30'
                                 : 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-1 ring-indigo-500/30'
                               : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-slate-50/50'
                           }`}
@@ -3987,9 +4180,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                           <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
                             modalIntent === 'review'
                               ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                              : modalIntent === 'ai'
+                              ? 'bg-purple-100 text-purple-800 border border-purple-200'
                               : 'bg-rose-50 text-rose-600 border border-rose-200'
                           }`}>
-                            {modalStats?.all?.total || 0} {modalIntent === 'review' ? 'Total Questions' : 'Total Mistakes'}
+                            {modalStats?.all?.total || 0} {modalIntent === 'practice' ? 'Total Mistakes' : 'Total Questions'}
                           </span>
                         </button>
                       </div>
@@ -3999,7 +4194,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-center">
                     <Check className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
                     <span className="text-xs font-bold text-emerald-800">100% Accuracy! 🎉</span>
-                    <p className="text-[11px] text-emerald-700 mt-0.5">No mistakes to practice in these mocks. Switch to Review Mode to view questions.</p>
+                    <p className="text-[11px] text-emerald-700 mt-0.5">No mistakes to practice in these mocks. Switch to Review or Ask AI mode to view questions.</p>
                   </div>
                 )}
 
@@ -4013,7 +4208,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                         </label>
                         {practiceTopics.length > 0 && (
                           <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded-full ${
-                            modalIntent === 'review' ? 'bg-emerald-100 text-emerald-800' : 'bg-indigo-100 text-indigo-800'
+                            modalIntent === 'review'
+                              ? 'bg-emerald-100 text-emerald-800'
+                              : modalIntent === 'ai'
+                              ? 'bg-purple-100 text-purple-800'
+                              : 'bg-indigo-100 text-indigo-800'
                           }`}>
                             {practiceTopics.length} selected
                           </span>
@@ -4024,7 +4223,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                           <button
                             type="button"
                             onClick={() => setPracticeTopics([])}
-                            className="text-[10px] text-indigo-600 hover:text-indigo-800 font-semibold cursor-pointer underline"
+                            className={`text-[10px] font-semibold cursor-pointer underline ${
+                              modalIntent === 'ai' ? 'text-purple-600 hover:text-purple-800' : 'text-indigo-600 hover:text-indigo-800'
+                            }`}
                           >
                             Clear
                           </button>
@@ -4042,6 +4243,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                           practiceTopics.length === 0
                             ? modalIntent === 'review'
                               ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                              : modalIntent === 'ai'
+                              ? 'bg-purple-600 text-white border-purple-600 shadow-2xs'
                               : 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
                             : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                         }`}
@@ -4073,6 +4276,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               isSelected
                                 ? modalIntent === 'review'
                                   ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                                  : modalIntent === 'ai'
+                                  ? 'bg-purple-600 text-white border-purple-600 shadow-2xs'
                                   : 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
                                 : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                             }`}
@@ -4128,11 +4333,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   </div>
                 )}
 
-                {/* 3. Filter Question Status (Review Mode) */}
-                {modalIntent === 'review' && (
+                {/* 3. Filter Question Status (Review & AI Mode) */}
+                {(modalIntent === 'review' || modalIntent === 'ai') && (
                   <div>
                     <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
-                      {availableTopics.length > 0 ? '3. Filter Question Status' : '2. Filter Question Status'}
+                      {availableTopics.length > 0 ? '3. Filter Question Focus' : '2. Filter Question Focus'}
                     </label>
                     <div className="flex flex-wrap gap-1.5">
                       {[
@@ -4149,7 +4354,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                           onClick={() => setPracticeReviewFilter(f.id as any)}
                           className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all border flex items-center gap-1.5 cursor-pointer ${
                             practiceReviewFilter === f.id
-                              ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                              ? modalIntent === 'ai'
+                                ? 'bg-purple-600 text-white border-purple-600 shadow-2xs'
+                                : 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
                               : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                           }`}
                         >
@@ -4242,7 +4449,26 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   Cancel
                 </button>
 
-                {modalIntent === 'review' ? (
+                {modalIntent === 'ai' ? (
+                  <button
+                    type="button"
+                    onClick={handleStartFilteredAskAi}
+                    disabled={activeFilteredCount === 0 || askingAiId !== null}
+                    className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-2xs transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    {askingAiId ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Sending to AI...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Sparkles className="w-3.5 h-3.5 text-purple-200" />
+                        <span>Ask Tommy AI ({activeFilteredCount})</span>
+                      </>
+                    )}
+                  </button>
+                ) : modalIntent === 'review' ? (
                   <button
                     type="button"
                     onClick={handleStartFilteredReview}
