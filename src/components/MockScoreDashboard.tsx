@@ -556,8 +556,21 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   const [askingAiId, setAskingAiId] = useState<string | null>(null);
   const [modalQuizMode, setModalQuizMode] = useState<'practice' | 'mock'>('practice');
 
-  // Section-Wise Practice Modal State
-  const [practiceModalReport, setPracticeModalReport] = useState<MockScoreReport | null>(null);
+  // Section-Wise Practice Modal State & Multi-Mock Selection
+  const [selectedMockIds, setSelectedMockIds] = useState<string[]>([]);
+  const [practiceModalReports, setPracticeModalReports] = useState<MockScoreReport[]>([]);
+  const practiceModalReport = practiceModalReports[0] || null;
+  const isMultiMock = practiceModalReports.length > 1;
+
+  const setPracticeModalReport = (report: MockScoreReport | null) => {
+    setPracticeModalReports(report ? [report] : []);
+  };
+
+  // Clear selections when tab or subject changes
+  useEffect(() => {
+    setSelectedMockIds([]);
+  }, [activeTab, selectedSectionalSubject]);
+
   const [practiceSection, setPracticeSection] = useState<string>('Reasoning');
   const [practiceErrorFilter, setPracticeErrorFilter] = useState<'all' | 'wrong' | 'unattempted' | 'slow'>('all');
   const [rawQuestionsCache, setRawQuestionsCache] = useState<Record<string, any[]>>({});
@@ -646,7 +659,23 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     return reports.filter(r => r.type === 'sectional' && getSectionalSubject(r) === selectedSectionalSubject);
   }, [reports, activeTab, selectedSectionalSubject]);
 
+  const allCurrentIds = useMemo(() => filteredReports.map(r => r.id), [filteredReports]);
+  const isAllSelected = allCurrentIds.length > 0 && allCurrentIds.every(id => selectedMockIds.includes(id));
+  const isSomeSelected = allCurrentIds.some(id => selectedMockIds.includes(id)) && !isAllSelected;
 
+  const toggleSelectAll = () => {
+    if (isAllSelected) {
+      setSelectedMockIds([]);
+    } else {
+      setSelectedMockIds(allCurrentIds);
+    }
+  };
+
+  const toggleSelectMock = (id: string) => {
+    setSelectedMockIds(prev =>
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
+  };
 
   const latestReport = filteredReports[0] || null;
 
@@ -1124,7 +1153,10 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     return list;
   };
 
-  const openPracticeModal = async (report: MockScoreReport, targetSection: string = 'all') => {
+  const openPracticeModal = async (input: MockScoreReport | MockScoreReport[], targetSection: string = 'all') => {
+    const reps = Array.isArray(input) ? input : [input];
+    if (reps.length === 0) return;
+
     let normalizedTarget = targetSection;
     if (/quant|math/i.test(targetSection)) normalizedTarget = 'Mathematics';
     else if (/reason/i.test(targetSection)) normalizedTarget = 'Reasoning';
@@ -1132,22 +1164,22 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     else if (/eng/i.test(targetSection)) normalizedTarget = 'English';
     else if (targetSection === 'all') normalizedTarget = 'all';
 
-    setPracticeModalReport(report);
+    setPracticeModalReports(reps);
     setPracticeSection(normalizedTarget);
     setPracticeErrorFilter('all');
 
     // Preload raw questions in background
-    if (!rawQuestionsCache[report.id]) {
+    const missing = reps.filter(r => !rawQuestionsCache[r.id]);
+    if (missing.length > 0) {
       setLoadingQuestions(true);
-      await loadRawMockQuestions(report);
+      await Promise.all(missing.map(r => loadRawMockQuestions(r)));
       setLoadingQuestions(false);
     }
   };
 
-  // Live stats in practice modal
+  // Live stats in practice modal (aggregated across all selected mocks)
   const modalStats = useMemo(() => {
-    if (!practiceModalReport) return null;
-    const rawList = rawQuestionsCache[practiceModalReport.id] || [];
+    if (practiceModalReports.length === 0) return null;
 
     const normalizeSub = (raw: string) => {
       if (/reason|intel/i.test(raw)) return 'Reasoning';
@@ -1162,38 +1194,41 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       let unattempted = 0;
       let slow = 0;
 
-      if (rawList.length > 0) {
-        const items = rawList.filter(q => {
-          if (subjectKey === 'all') return true;
-          return normalizeSub(q.subject || q.section || q.subjectName || '') === subjectKey;
-        });
+      practiceModalReports.forEach(rep => {
+        const rawList = rawQuestionsCache[rep.id] || [];
+        if (rawList.length > 0) {
+          const items = rawList.filter(q => {
+            if (subjectKey === 'all') return true;
+            return normalizeSub(q.subject || q.section || q.subjectName || '') === subjectKey;
+          });
 
-        items.forEach(q => {
-          const st = getMockQuestionStatus(q);
-          if (st === 'wrong') wrong++;
-          else if (st === 'unattempted') unattempted++;
-          else if (st === 'slow') slow++;
-        });
-      } else {
-        // Instant preview from report.sections before rawList finishes loading
-        const secMap: Record<string, keyof typeof practiceModalReport.sections> = {
-          'Reasoning': 'reasoning',
-          'General Awareness': 'generalAwareness',
-          'Mathematics': 'mathematics',
-          'English': 'english'
-        };
-
-        if (subjectKey === 'all') {
-          wrong = practiceModalReport.totalWrong || 0;
-          unattempted = practiceModalReport.totalUnattempted || 0;
+          items.forEach(q => {
+            const st = getMockQuestionStatus(q);
+            if (st === 'wrong') wrong++;
+            else if (st === 'unattempted') unattempted++;
+            else if (st === 'slow') slow++;
+          });
         } else {
-          const sData = practiceModalReport.sections?.[secMap[subjectKey]];
-          if (sData) {
-            wrong = sData.wrong || 0;
-            unattempted = sData.unattempted || 0;
+          // Instant preview from report.sections before rawList finishes loading
+          const secMap: Record<string, keyof typeof rep.sections> = {
+            'Reasoning': 'reasoning',
+            'General Awareness': 'generalAwareness',
+            'Mathematics': 'mathematics',
+            'English': 'english'
+          };
+
+          if (subjectKey === 'all') {
+            wrong += rep.totalWrong || 0;
+            unattempted += rep.totalUnattempted || 0;
+          } else {
+            const sData = rep.sections?.[secMap[subjectKey]];
+            if (sData) {
+              wrong += sData.wrong || 0;
+              unattempted += sData.unattempted || 0;
+            }
           }
         }
-      }
+      });
 
       return {
         total: wrong + unattempted + slow,
@@ -1210,7 +1245,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       english: getCounts('English'),
       all: getCounts('all')
     };
-  }, [practiceModalReport, rawQuestionsCache]);
+  }, [practiceModalReports, rawQuestionsCache]);
 
   const activeSectionStats = useMemo(() => {
     if (!modalStats) return null;
@@ -1232,11 +1267,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   }, [activeSectionStats, practiceErrorFilter]);
 
   const handleStartFilteredPractice = async () => {
-    if (!practiceModalReport) return;
-    setPracticingId(practiceModalReport.id);
+    if (practiceModalReports.length === 0) return;
+    setPracticingId(practiceModalReports.map(r => r.id).join('_'));
 
     try {
-      const rawList = await loadRawMockQuestions(practiceModalReport);
+      const lists = await Promise.all(practiceModalReports.map(r => loadRawMockQuestions(r)));
 
       const normalizeSub = (raw: string) => {
         if (/reason|intel/i.test(raw)) return 'Reasoning';
@@ -1245,6 +1280,19 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         if (/eng/i.test(raw)) return 'English';
         return 'Other';
       };
+
+      // Flatten and preserve mock origin metadata
+      const rawList: any[] = [];
+      practiceModalReports.forEach((rep, rIdx) => {
+        const qList = lists[rIdx] || [];
+        const { shortTitle } = parseMockDetails(rep);
+        qList.forEach(q => {
+          rawList.push({
+            ...q,
+            _sourceMockTitle: shortTitle || rep.title
+          });
+        });
+      });
 
       // 1. Filter by section
       let filtered = rawList.filter(q => {
@@ -1293,6 +1341,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         const subjectName = normalizeSub(rawSub);
         const status = getMockQuestionStatus(item);
         const statusLabel = status === 'wrong' ? '❌ Wrong' : status === 'unattempted' ? '⏸ Skipped' : '⏱ Slow';
+        const originTag = isMultiMock && item._sourceMockTitle ? `[${item._sourceMockTitle}] ` : '';
 
         let options: { a: string; b: string; c: string; d: string } = { a: '', b: '', c: '', d: '' };
         if (item.options && typeof item.options === 'object' && !Array.isArray(item.options)) {
@@ -1348,7 +1397,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           subject: subjectName,
           section: secKey,
           tags: {
-            topic: `${subjectName} • ${statusLabel} • ${topicText}`,
+            topic: `${originTag}${subjectName} • ${statusLabel} • ${topicText}`,
             difficulty: (item.difficulty || item.tags?.difficulty || 'medium') as 'easy' | 'medium' | 'hard'
           },
           avgTime: item.avgTime || item.avg_time || item.avgTimeSeconds
@@ -1357,16 +1406,19 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
       const sectionTitle = practiceSection === 'all' ? 'All 4 Sections Mistakes' : `${practiceSection} Mistakes`;
       const filterLabel = practiceErrorFilter === 'all' ? '' : ` (${practiceErrorFilter.toUpperCase()})`;
+      const combinedTitle = isMultiMock
+        ? `${practiceModalReports.length} Mocks Combined - ${sectionTitle}${filterLabel}`
+        : `${practiceModalReports[0].title} - ${sectionTitle}${filterLabel}`;
 
       const virtualChapter: Chapter = {
         chapter_num: 0,
-        chapter_title: `${practiceModalReport.title} - ${sectionTitle}${filterLabel}`,
+        chapter_title: combinedTitle,
         subject: practiceSection === 'all' ? 'All 4 Sections Mock' : practiceSection,
         subject_id: practiceSection === 'all' ? 'all_sections_mock' : practiceSection.toLowerCase().replace(/\s+/g, '_'),
         questions: formattedQuestions
       };
 
-      setPracticeModalReport(null);
+      setPracticeModalReports([]);
 
       if (onStartPracticeMock) {
         onStartPracticeMock(virtualChapter, modalQuizMode);
@@ -2856,7 +2908,17 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <table className="w-full text-left border-collapse min-w-[880px]">
                   <thead>
                     <tr className="bg-slate-50/80 border-b border-slate-200 text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
-                      <th className="py-3.5 px-4 font-semibold align-middle w-[34%]" scope="col">Sectional Attempt</th>
+                      <th className="py-3.5 px-3 w-10 text-center align-middle" scope="col">
+                        <input
+                          type="checkbox"
+                          checked={isAllSelected}
+                          ref={el => { if (el) el.indeterminate = isSomeSelected; }}
+                          onChange={toggleSelectAll}
+                          className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer accent-indigo-600"
+                          title="Select all sectional mocks"
+                        />
+                      </th>
+                      <th className="py-3.5 px-4 font-semibold align-middle w-[32%]" scope="col">Sectional Attempt</th>
                       <th className="py-3.5 px-4 font-semibold text-center align-middle w-[22%]" scope="col">Questions Breakdown</th>
                       <th className="py-3.5 px-4 font-semibold text-center align-middle w-[12%]" scope="col">Score</th>
                       <th className="py-3.5 px-4 font-semibold text-center align-middle w-[12%]" scope="col">Accuracy</th>
@@ -2882,7 +2944,17 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                       const SubIcon = subMeta.icon;
 
                       return (
-                        <tr key={report.id} className="hover:bg-slate-50/70 transition-colors">
+                        <tr key={report.id} className={`hover:bg-slate-50/70 transition-colors ${selectedMockIds.includes(report.id) ? 'bg-indigo-50/40' : ''}`}>
+                          {/* Selection Checkbox */}
+                          <td className="py-3.5 px-3 text-center align-middle">
+                            <input
+                              type="checkbox"
+                              checked={selectedMockIds.includes(report.id)}
+                              onChange={() => toggleSelectMock(report.id)}
+                              className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer accent-indigo-600"
+                              title={`Select ${shortTitle}`}
+                            />
+                          </td>
                           {/* 1. Sectional Attempt details */}
                           <td className="py-3.5 px-4 align-middle">
                             <div className="flex items-center gap-3">
@@ -3044,7 +3116,17 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                 <table className="w-full text-left border-collapse min-w-[960px]">
                   <thead>
                     <tr className="bg-slate-50/80 border-b border-slate-200 text-[11px] font-semibold tracking-wider text-slate-500 uppercase">
-                      <th className="py-3.5 px-4 font-semibold align-middle w-[26%]" scope="col">Mock Attempt</th>
+                      <th className="py-3.5 px-3 w-10 text-center align-middle" scope="col">
+                        <input
+                          type="checkbox"
+                          checked={isAllSelected}
+                          ref={el => { if (el) el.indeterminate = isSomeSelected; }}
+                          onChange={toggleSelectAll}
+                          className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer accent-indigo-600"
+                          title="Select all full mocks"
+                        />
+                      </th>
+                      <th className="py-3.5 px-4 font-semibold align-middle w-[24%]" scope="col">Mock Attempt</th>
                       <th className="py-3.5 px-3 font-semibold text-center text-blue-700 align-middle w-[11%]" scope="col">Reasoning</th>
                       <th className="py-3.5 px-3 font-semibold text-center text-amber-700 align-middle w-[11%]" scope="col">GA / GK</th>
                       <th className="py-3.5 px-3 font-semibold text-center text-indigo-700 align-middle w-[11%]" scope="col">Quantitative</th>
@@ -3069,7 +3151,17 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                       const englishData = report.sections?.english;
 
                       return (
-                        <tr key={report.id} className="hover:bg-slate-50/70 transition-colors">
+                        <tr key={report.id} className={`hover:bg-slate-50/70 transition-colors ${selectedMockIds.includes(report.id) ? 'bg-indigo-50/40' : ''}`}>
+                          {/* Selection Checkbox */}
+                          <td className="py-3.5 px-3 text-center align-middle">
+                            <input
+                              type="checkbox"
+                              checked={selectedMockIds.includes(report.id)}
+                              onChange={() => toggleSelectMock(report.id)}
+                              className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer accent-indigo-600"
+                              title={`Select ${shortTitle}`}
+                            />
+                          </td>
                           {/* 1. Mock Attempt details */}
                           <td className="py-3.5 px-4 align-middle">
                             <div className="flex items-center gap-2">
@@ -3265,9 +3357,56 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         </>
       )}
 
+      {/* ─── FLOATING MULTI-MOCK ACTION BAR (Crisp & Simple) ─── */}
+      <AnimatePresence>
+        {selectedMockIds.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 30, scale: 0.95 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-slate-900/95 text-white backdrop-blur-md px-4 py-2.5 rounded-full shadow-2xl border border-slate-700/60 flex items-center gap-3 text-xs"
+          >
+            <div className="flex items-center gap-2 pl-1">
+              <span className="w-5 h-5 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[11px] font-bold">
+                {selectedMockIds.length}
+              </span>
+              <span className="font-semibold text-slate-200">
+                {selectedMockIds.length === 1 ? '1 mock selected' : `${selectedMockIds.length} mocks selected`}
+              </span>
+            </div>
+
+            <div className="h-4 w-px bg-slate-700" />
+
+            <button
+              type="button"
+              onClick={() => {
+                const chosen = filteredReports.filter(r => selectedMockIds.includes(r.id));
+                if (chosen.length > 0) {
+                  openPracticeModal(chosen, 'all');
+                }
+              }}
+              className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold inline-flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs"
+            >
+              <Play className="w-3.5 h-3.5 fill-current" />
+              <span>Practice Mistakes ({selectedMockIds.length})</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setSelectedMockIds([])}
+              className="p-1 text-slate-400 hover:text-white rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
+              title="Clear selection"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* ─── SECTION-WISE PRACTICE MODAL (Compact, Crisp & Sleek) ─── */}
       <AnimatePresence>
-        {practiceModalReport && (
+        {practiceModalReports.length > 0 && practiceModalReport && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-3 sm:p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 8 }}
@@ -3282,9 +3421,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                     <Target className="w-3.5 h-3.5" />
                   </div>
                   <div>
-                    <h3 className="text-xs font-bold text-slate-900 leading-tight">Practice Mock Mistakes</h3>
+                    <h3 className="text-xs font-bold text-slate-900 leading-tight">
+                      {isMultiMock ? `Practice ${practiceModalReports.length} Mocks Combined` : 'Practice Mock Mistakes'}
+                    </h3>
                     <p className="text-[10px] text-slate-400 font-medium">
-                      {practiceModalReport.title} • {practiceModalReport.totalWrong + practiceModalReport.totalUnattempted} total errors
+                      {isMultiMock
+                        ? `${practiceModalReports.length} Mocks Selected • ${modalStats?.all?.total || 0} total mistakes`
+                        : `${practiceModalReport.title} • ${practiceModalReport.totalWrong + practiceModalReport.totalUnattempted} total errors`}
                     </p>
                   </div>
                 </div>

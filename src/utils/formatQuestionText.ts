@@ -117,7 +117,7 @@ export function cleanQuestionText(text: string = ''): string {
   s = s.replace(/(?<=[.!?]|\n|^)\s*([PQRS]\s*:|\([PQRS]\)\s*|\[[PQRS]\]\s*)(?!\s*[:=])/g, '\n$1');
 
   // Statements & Conclusions in Reasoning questions
-  s = s.replace(/([^\n])\s*(Statement\s+[I|V|X|\d]+:?|Conclusion\s+[I|V|X|\d]+:?)/gi, '$1\n$2');
+  s = s.replace(/(?<=[^\n\-•·*\s])\s+(Statement\s+[I|V|X|\d]+:?|Conclusion\s+[I|V|X|\d]+:?)/gi, '\n$1');
 
   // 6. Reasoning Analogy & Proportion normalizations:
   // - Convert spaced double colons (e.g. " : : " or ": :") into clean " :: "

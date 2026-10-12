@@ -101,7 +101,13 @@ function isAnalogyLine(line: string): boolean {
   return false;
 }
 
-function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences = false, subject?: string) {
+function renderTextWithTables(
+  text: string,
+  tokenIdx: number,
+  breakOnSentences = false,
+  subject?: string,
+  isLineStartAtZero = true
+) {
   // When breakOnSentences is true, replace ". " with ".\n" so each sentence
   // starts on its own line (used in solution view).
   let processedText = breakOnSentences
@@ -135,7 +141,22 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
   };
 
   lines.forEach((rawLine, i) => {
+    const isLineStart = i > 0 || isLineStartAtZero;
     const line = rawLine.trim();
+
+    // If this line does not start at the beginning of a line (e.g. directly continuing an inline math token),
+    // it MUST render as inline text to prevent fracturing sentences or turning suffixes into block elements.
+    if (!isLineStart) {
+      if (rawLine) {
+        elements.push(
+          <span key={`text-${tokenIdx}-${i}`} className="inline text-slate-800 leading-relaxed">
+            {formatInlineMarkdown(rawLine)}
+          </span>
+        );
+      }
+      return;
+    }
+
     const hasTabs = line.includes('\t') && line.split('\t').filter(c => c.trim().length > 0).length >= 2;
     const isTableLine = (line.startsWith('|') && line.endsWith('|')) || hasTabs;
 
@@ -173,11 +194,11 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     }
 
     // Mathematical derivation step (⇒ or =>)
-    if (/^[⇒=>]/.test(line)) {
+    if (/^(?:⇒|=>)\s*/.test(line)) {
       elements.push(
         <div key={`step-${tokenIdx}-${i}`} className="flex items-start gap-2 my-1.5 text-slate-800 leading-relaxed font-mono text-[13.5px]">
           <span className="text-indigo-600 font-bold shrink-0 mt-0.5">⇒</span>
-          <span className="flex-1 font-sans">{formatInlineMarkdown(line.replace(/^[⇒=>]+\s*/, ''))}</span>
+          <span className="flex-1 font-sans">{formatInlineMarkdown(line.replace(/^(?:⇒|=>)\s*/, ''))}</span>
         </div>
       );
       return;
@@ -195,9 +216,11 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     }
 
     // Bullet points (·, •, -, *)
-    const bulletMatch = line.match(/^([·•\-\*])\s*(.*)/);
+    // • and · are explicit bullet markers (optional space)
+    // - and * require at least one space (\s+) and must not be followed by a digit or math operator
+    const bulletMatch = line.match(/^(?:([·•])\s*|([\-*])\s+)(?!\d|[=+\/*])(\S.*)/);
     if (bulletMatch) {
-      const bulletContent = bulletMatch[2] || '';
+      const bulletContent = bulletMatch[3] || '';
       // Check if this bullet discusses a statement correctness (e.g. Statement I is incorrect/correct)
       const statementMatch = bulletContent.match(/^(Statement\s+[I|V|X|0-9]+)\s+is\s+(correct|incorrect)(.*)/i);
       if (statementMatch) {
@@ -275,7 +298,7 @@ function renderTextWithTables(text: string, tokenIdx: number, breakOnSentences =
     } else {
       elements.push(
         <span key={`text-${tokenIdx}-${i}`} className="inline text-slate-800 leading-relaxed">
-          {formatInlineMarkdown(rawLine)}{' '}
+          {formatInlineMarkdown(rawLine)}
         </span>
       );
     }
@@ -383,9 +406,12 @@ function renderTokenList(tokens: MathToken[], breakOnSentences = false, subject?
       );
     }
 
+    const prevToken = idx > 0 ? tokens[idx - 1] : null;
+    const isLineStartAtZero = idx === 0 || Boolean(prevToken?.display);
+
     return (
       <React.Fragment key={idx}>
-        {renderTextWithTables(token.value, idx, breakOnSentences, subject)}
+        {renderTextWithTables(token.value, idx, breakOnSentences, subject, isLineStartAtZero)}
       </React.Fragment>
     );
   });
