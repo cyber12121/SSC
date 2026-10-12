@@ -8509,6 +8509,70 @@
           "conceptTested": "Tangents drawn from an external point to a circle are equal in length: $AD = AF$, $BD = BE$, and $CE = CF$, where $AD = s - BC$, etc., and $s$ is the semi-perimeter.",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_ee6c92ad63",
+        "q_num": 269,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:24",
+        "avgTime": "01:14",
+        "question": "Human decision-making is rarely based on logic alone; emotion, bias, and perception play critical roles, especially in assessing risk. Psychologists have observed that people often fear unlikely events-such as airplane crashes-more than common dangers like car accidents. This \"availability heuristic\" leads individuals to judge risks based on how easily examples come to mind, not on actual probability. Moreover, emotions like fear or excitement can distort rational thinking. People also tend to avoid losses more strongly than they pursue gains, a concept known as \"loss aversion.\" This is why investors might hold on to failing stocks rather than accept a small loss. Understanding these psychological patterns can improve personal and policy-level decisions. Rather than eliminating emotion, effective risk management involves recognizing how it influences choices. Awareness of these tendencies allows individuals to make more balanced, informed decisions in uncertain situations.\n\nWhat is the availability heuristic, as described in the passage?",
+        "options": {
+          "a": "Judging risk by probability only",
+          "b": "Estimating risk by logic and data",
+          "c": "Judging risk based on memorable examples",
+          "d": "Avoiding all forms of risk"
+        },
+        "answer": "c",
+        "solution": "Supporting line: The passage states: \"This 'availability heuristic' leads individuals to judge risks based on how easily examples come to mind, not on actual probability.\"\n• This directly matches \"Judging risk based on memorable examples.\"\n• Options A, B, and D contradict the passage description.",
+        "image": null,
+        "topic": "Reading Comprehension",
+        "subtopic": "Inference & Author Perspective",
+        "conceptTested": "Ability to accurately extract and interpret specific cognitive concepts and definitions from a given informational passage.",
+        "tags": {
+          "topic": "Reading Comprehension",
+          "subtopic": "Inference & Author Perspective",
+          "conceptTested": "Ability to accurately extract and interpret specific cognitive concepts and definitions from a given informational passage.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_7efcb9a5ef",
+        "q_num": 270,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:22",
+        "avgTime": "00:14",
+        "question": "Choose the correct Active Voice form of the given sentence:\n\nThe food has been ordered by Raj for the entire team.",
+        "options": {
+          "a": "Raj orders the food for the entire team.",
+          "b": "Raj had ordered the food for the entire team.",
+          "c": "Raj is ordering the food for the entire team.",
+          "d": "Raj has ordered the food for the entire team."
+        },
+        "answer": "d",
+        "solution": "Rule: Present Perfect Passive (has/have been + V³) converts to Present Perfect Active (has/have + V³).\n• Passive: The food has been ordered by Raj...\n• Active: Raj has ordered the food for the entire team.\n• Option A is Simple Present, B is Past Perfect, and C is Present Continuous.",
+        "image": null,
+        "topic": "Active & Passive Voice",
+        "subtopic": "Imperative Sentences",
+        "conceptTested": "Conversion of Present Perfect Passive (has/have been + V3) to Present Perfect Active (has/have + V3).",
+        "tags": {
+          "topic": "Active & Passive Voice",
+          "subtopic": "Imperative Sentences",
+          "conceptTested": "Conversion of Present Perfect Passive (has/have been + V3) to Present Perfect Active (has/have + V3).",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -26713,6 +26777,198 @@
           "topic": "Profit, Loss & Discount",
           "subtopic": "Dishonest Dealer & False Weights",
           "conceptTested": "Profit percentage in a dishonest dealer scenario is calculated based on the true weight versus the false weight given: $\\frac{\\text{Error}}{\\text{False Weight}} \\times 100\\%$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_8cb23b9944",
+        "q_num": 164,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:06",
+        "avgTime": "00:20",
+        "question": "Read the sentence and choose the correct one-word substitution for the underlined part.\n\nThe author began her novel with a short quotation at the beginning of the book to set the theme.",
+        "options": {
+          "a": "Epilogue",
+          "b": "Epigraph",
+          "c": "Prologue",
+          "d": "Blurb"
+        },
+        "answer": "b",
+        "solution": "Definition: An epigraph is a short quotation or saying at the beginning of a book or chapter, intended to suggest its theme.\nOther options: • Epilogue: A section or speech at the end of a book or play that serves as a comment on or a conclusion to what has happened.\n• Prologue: A separate introductory section of a literary, dramatic, or musical work.\n• Blurb: A short description of a book, movie, or other product written for promotional purposes.",
+        "image": null,
+        "topic": "One Word Substitution",
+        "subtopic": "Sciences & Studies",
+        "conceptTested": "Identification of a single word representing a descriptive definition or phrase.",
+        "tags": {
+          "topic": "One Word Substitution",
+          "subtopic": "Sciences & Studies",
+          "conceptTested": "Identification of a single word representing a descriptive definition or phrase.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_551056750a",
+        "q_num": 165,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "00:26",
+        "avgTime": "00:32",
+        "question": "Fill in the blank with the appropriate adverb.\n\nHe completed the negotiations ________ refusing to let emotions affect his judgments.",
+        "options": {
+          "a": "flamboyantly",
+          "b": "effusively",
+          "c": "dispassionately",
+          "d": "mendaciously"
+        },
+        "answer": "c",
+        "solution": "Context: The clause 'refusing to let emotions affect his judgments' indicates an objective, calm, and unemotional manner.\n• Dispassionately: In an unemotional, impartial, or calm manner.\nOther options: • Flamboyantly: In a noticeably stylish, bright, or showy way.\n• Effusively: In a way that expresses feelings of gratitude, pleasure, or approval in an unrestrained or heartfelt manner.\n• Mendaciously: In a dishonest, untruthful way.",
+        "image": null,
+        "topic": "Fill Blanks",
+        "subtopic": "Fill Blanks",
+        "conceptTested": "Selection of the appropriate adverb matching the contextual meaning of the sentence.",
+        "tags": {
+          "topic": "Fill Blanks",
+          "subtopic": "Fill Blanks",
+          "conceptTested": "Selection of the appropriate adverb matching the contextual meaning of the sentence.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_2dbf6f885f",
+        "q_num": 166,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:22",
+        "avgTime": "00:45",
+        "question": "Fill in the blanks with appropriate parts of speech.\n\nNot only ________ the hypotheses questioned, but also ________ by leading experts in the field.",
+        "options": {
+          "a": "were, invalidated",
+          "b": "was, invalidated",
+          "c": "were, was invalidated",
+          "d": "was, were invalidated"
+        },
+        "answer": "a",
+        "solution": "Rule: The subject 'hypotheses' is plural (singular: hypothesis).\n• In the first clause, negative inversion ('Not only...') requires the plural auxiliary verb were before 'the hypotheses'.\n• In the second clause, parallel structure ('were questioned, but also [were] invalidated') requires the past participle invalidated sharing the passive auxiliary.",
+        "image": null,
+        "topic": "Fill Blanks",
+        "subtopic": "Fill Blanks",
+        "conceptTested": "Subject-verb agreement and negative inversion in correlative conjunction structures.",
+        "tags": {
+          "topic": "Fill Blanks",
+          "subtopic": "Fill Blanks",
+          "conceptTested": "Subject-verb agreement and negative inversion in correlative conjunction structures.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_5eb00203cb",
+        "q_num": 167,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "B",
+        "userTime": "00:13",
+        "avgTime": "00:33",
+        "question": "Identify the error in the sentence.\n\nWe had a high time during the holidays.",
+        "options": {
+          "a": "during",
+          "b": "high",
+          "c": "had",
+          "d": "time"
+        },
+        "answer": "b",
+        "solution": "Idiom: The correct idiom is a great time or a good time when referring to enjoying oneself during holidays.\n• Alternatively, 'high time' is used in the structure 'It is high time (that)...' to mean past the appropriate time.\n• Therefore, using high to describe having a good time is incorrect.",
+        "image": null,
+        "topic": "Spotting Errors",
+        "subtopic": "Grammar & Syntax Errors",
+        "conceptTested": "Idiomatic usage and correct lexical collocations.",
+        "tags": {
+          "topic": "Spotting Errors",
+          "subtopic": "Grammar & Syntax Errors",
+          "conceptTested": "Idiomatic usage and correct lexical collocations.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_d4f32a8faf",
+        "q_num": 168,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "D",
+        "userTime": "00:05",
+        "avgTime": "00:24",
+        "question": "Choose the correct meaning of idiom:\n\nCrow over",
+        "options": {
+          "a": "To provoke someone subtly through mimicry",
+          "b": "To weep bitterly over the past",
+          "c": "To warn others through exaggeration",
+          "d": "To gloat triumphantly over someone's defeat"
+        },
+        "answer": "d",
+        "solution": "Meaning: The idiom crow over means to gloat, boast, or express great satisfaction over one's own success or an opponent's defeat or misfortune.\nVocab Meanings: • Crow over: To boast about one's success or another's failure (किसी की हार पर इतराना / शेखी बघारना)",
+        "image": null,
+        "topic": "Idioms Phrases",
+        "subtopic": "Idioms & Idiomatic Expressions",
+        "conceptTested": "Interpretation of standard idiomatic expressions.",
+        "tags": {
+          "topic": "Idioms Phrases",
+          "subtopic": "Idioms & Idiomatic Expressions",
+          "conceptTested": "Interpretation of standard idiomatic expressions.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_08091f9632",
+        "q_num": 169,
+        "mockId": "mock_1791788943237_uelb4",
+        "testId": "mock_1791788943237_uelb4",
+        "testName": "N/A (General)",
+        "platform": "MockMatrix",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:14",
+        "avgTime": "00:32",
+        "question": "A sentence is provided in indirect speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding direct speech.\n\nHe said that he would rather not comment on the allegations.",
+        "options": {
+          "a": "\"I'd rather not comment on the allegations, \" he said.",
+          "b": "\"I would not comment on the allegations, \" he said.",
+          "c": "\"I will rather not speak about the allegations, \" said he.",
+          "d": "\"I'd prefer to stay silent, \" he said."
+        },
+        "answer": "a",
+        "solution": "Rule: The phrase \"would rather\" corresponds directly to \"would rather\" (contracted as \"I'd rather\") in direct speech.\n• Third - person pronoun \"he\" shifts back to first - person \"I\".\n• Direct speech: \"I'd rather not comment on the allegations, \" he said.",
+        "image": null,
+        "topic": "Direct & Indirect Speech (Narration)",
+        "subtopic": "Indirect to Direct Conversion",
+        "conceptTested": "Conversion of indirect speech statements involving modal phrases like \"would rather\" back into direct speech.",
+        "tags": {
+          "topic": "Direct & Indirect Speech (Narration)",
+          "subtopic": "Indirect to Direct Conversion",
+          "conceptTested": "Conversion of indirect speech statements involving modal phrases like \"would rather\" back into direct speech.",
           "difficulty": "medium"
         }
       }

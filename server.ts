@@ -52,13 +52,89 @@ export function cleanAndNormalizeQuestion(q: any): any {
   };
 }
 
-// Subject standardizer
-function normalizeSubject(raw: string): { name: string; file: string } {
-  if (/quant|math|aptitude/i.test(raw)) return { name: "Mathematics", file: "mathematics.json" };
-  if (/reason|intel/i.test(raw)) return { name: "Reasoning", file: "reasoning.json" };
-  if (/eng/i.test(raw)) return { name: "English", file: "english.json" };
-  if (/aware|gk|gs|ga|knowledge/i.test(raw)) return { name: "General Awareness", file: "general_awareness.json" };
+// Comprehensive SSC Subject Standardizer & Topic-Based Classifier
+function inferSubject(raw?: string, q?: any, enriched?: any, mockTitle?: string): { name: string; file: string } {
+  const cleanRaw = String(raw || "").trim();
+  const isGenericRaw = !cleanRaw || /^(general|n\/?a|unknown|test|sectional|mock|all|default)$/i.test(cleanRaw);
+
+  const topicStr = [
+    enriched?.topic,
+    q?.topic,
+    enriched?.subtopic,
+    q?.subtopic,
+    enriched?.conceptTested,
+    q?.conceptTested,
+    q?.chapter_title,
+    q?.tags?.topic,
+    q?.tags?.subtopic
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  const textStr = [
+    enriched?.question,
+    enriched?.questionText,
+    q?.questionText,
+    q?.question,
+    enriched?.solution,
+    q?.solution,
+    mockTitle,
+    q?.testName,
+    q?.title
+  ].filter(Boolean).join(" ");
+
+  // 1. High-Confidence Topic Check for English
+  const isEnglishTopic = /\b(synonyms?|antonyms?|spellings?|misspelt|misspelled|one[- ]word|substitutions?|idioms?|phrases?|cloze|reading comprehension|comprehensions?|spotting errors?|error spottings?|sentence improvements?|active voice|passive voice|direct speech|indirect speech|narrations?|para jumbles?|jumbled|fill in the blanks?|prepositions?|adjectives?|adverbs?|conjunctions?|interjections?|nouns?|pronouns?|tenses?|grammars?|vocabulary|vocab|phrasal verbs?|parts of speech|subject-verb agreement|english)\b/i.test(topicStr);
+
+  // 2. High-Confidence Topic Check for Reasoning
+  const isReasoningTopic = /\b(reasoning|intelligence|analog(y|ies)|classifications?|odd one out|coding[- ]decoding|coding decoding|blood relations?|directions? & distance|directions? and distance|order & rankings?|order and rankings?|syllogisms?|venn diagrams?|logical venn|cubes? & dice|cubes? and dice|dice|missing numbers?|number series|alphabet series|letter series|paper foldings?|paper cuttings?|mirror images?|water images?|embedded figures?|figure completions?|counting figures?|counting of figures|seating arrangements?|statements? & conclusions?|statements? & assumptions?|statements? and arguments?|cause and effect|assertion and reason|dictionary order|mathematical operations?)\b/i.test(topicStr);
+
+  // 3. High-Confidence Topic Check for General Awareness
+  const isGATopic = /\b(general awareness|static gk|current affairs|histor(y|ies)|ancient history|medieval history|modern history|polity|indian polity|constitutions?|governances?|geograph(y|ies)|physical geography|indian geography|world geography|economics?|indian economy|macroeconomics|microeconomics|biology|chemistry|physics|monuments?|national parks?|wildlife sanctuary|folk dances?|classical dances?|festivals?|fairs and festivals|awards?|honours?|books? & authors?|sports|troph(y|ies)|census|fundamental rights|panchayat)\b/i.test(topicStr);
+
+  // 4. High-Confidence Topic Check for Mathematics
+  const isMathTopic = /\b(mathematics|quant|quantitative|percentages?|profits?|loss(es)?|discounts?|ratio(s)? & proportions?|ratio(s)? and proportions?|mixtures? & alligations?|alligation|time & works?|pipes? & cisterns?|pipes? and cisterns?|time, speed & distance|time and distance|speed and distance|boats? & streams?|boat and stream|trains?|simple interests?|compound interests?|installments?|partnerships?|averages?|number systems?|simplifications?|surds & indices|surds and indices|lcm & hcfs?|lcm and hcfs?|divisibilit(y|ies)|algebra|geometr(y|ies)|circles?|triangles?|quadrilaterals?|mensurations?|trigonometr(y|ies)|height(s)? & distance(s)?|heights and distances|coordinate geometr(y|ies)|data interpretations?|statistics?|probabilit(y|ies))\b/i.test(topicStr);
+
+  // Priority 1: When topic is clear, trust the topic!
+  if (isEnglishTopic) return { name: "English", file: "english.json" };
+  if (isReasoningTopic) return { name: "Reasoning", file: "reasoning.json" };
+  if (isGATopic) return { name: "General Awareness", file: "general_awareness.json" };
+  if (isMathTopic) return { name: "Mathematics", file: "mathematics.json" };
+
+  // Priority 2: If rawSubject explicitly specifies a specific non-generic subject
+  if (!isGenericRaw) {
+    if (/eng|verbal ability|comprehension/i.test(cleanRaw) && !/reasoning/i.test(cleanRaw)) return { name: "English", file: "english.json" };
+    if (/reason|intel/i.test(cleanRaw)) return { name: "Reasoning", file: "reasoning.json" };
+    if (/aware|gk|gs|\bga\b|knowledge/i.test(cleanRaw)) return { name: "General Awareness", file: "general_awareness.json" };
+    if (/quant|math|aptitude|arithmetic/i.test(cleanRaw)) return { name: "Mathematics", file: "mathematics.json" };
+  }
+
+  // Priority 3: Check content patterns (question text/LaTeX/keywords)
+  const isEnglishContent = /\b(antonym of|synonym of|one-word substitution|one word substitute|correctly spelt|misspelt|misspelled|grammatically correct|grammatical error|underlined (word|phrase|segment|part)|most appropriate option to fill|fill in the blank|meaning of the given (idiom|phrase)|passive form|active form|reported speech|indirect speech|direct speech|jumbled sentence|cloze test|identify the segment that contains a grammatical error|select the most appropriate)\b/i.test(textStr);
+  if (isEnglishContent) return { name: "English", file: "english.json" };
+
+  const isReasoningContent = /\b(coded as|in a certain code|mirror image of the given figure|water image|when the paper is folded|transparent sheet is folded|embedded in the given figure|meaningful order of the following words|dictionary order|brother of|sister of|facing north|facing south|which conclusion|statements:\s*\(?1\)?|select the figure from among the given options that can replace the question mark)\b/i.test(textStr);
+  if (isReasoningContent) return { name: "Reasoning", file: "reasoning.json" };
+
+  const isGAContent = /\b(dynasty|mughal|maurya|gupta|delhi sultanate|constitution of india|article \d+|fundamental rights|amendment act|panchayati raj|governor|vice president|president of india|national park|biosphere reserve|chemical formula|atomic number|photosynthesis|dna|rna|deficiency of|padma shri|padma vibhushan|bharat ratna|nobel prize)\b/i.test(textStr);
+  if (isGAContent) return { name: "General Awareness", file: "general_awareness.json" };
+
+  const isMathContent = /(\$|\\frac|\\sqrt|\\degree|\\pi|\\text\{|\^2|\^3)/.test(textStr) ||
+    /\b(inradius|circumradius|hypotenuse|chord|tangent|semi-perimeter|cost price|selling price|marked price|simple interest|compound interest|divisible by|find the value of|evaluated as|polynomial|quadratic equation)\b/i.test(textStr);
+  if (isMathContent) return { name: "Mathematics", file: "mathematics.json" };
+
+  // Priority 4: Check mockTitle if present
+  if (mockTitle) {
+    if (/eng/i.test(mockTitle)) return { name: "English", file: "english.json" };
+    if (/reason|intel/i.test(mockTitle)) return { name: "Reasoning", file: "reasoning.json" };
+    if (/gk|ga|aware/i.test(mockTitle)) return { name: "General Awareness", file: "general_awareness.json" };
+    if (/math|quant/i.test(mockTitle)) return { name: "Mathematics", file: "mathematics.json" };
+  }
+
+  // Fallback
   return { name: "Mathematics", file: "mathematics.json" };
+}
+
+function normalizeSubject(raw?: string, q?: any, enriched?: any, mockTitle?: string): { name: string; file: string } {
+  return inferSubject(raw, q, enriched, mockTitle);
 }
 
 // Fast Rule-Based SSC Topic Matcher (instant local fallback)
@@ -876,8 +952,8 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
   };
 
   rawList.forEach(q => {
-    const rawSubject = q.subject || q.section || "Quantitative Aptitude";
-    const { name } = normalizeSubject(rawSubject);
+    const rawSubject = q.subject || q.section;
+    const { name } = inferSubject(rawSubject, q, undefined, mockTitle);
     if (subjectGroups[name]) {
       subjectGroups[name].push(q);
     }
@@ -893,16 +969,38 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
   const rawTitle = ((mockTitle && mockTitle.trim()) || detectedFromQuestions || (detectedCandidate ? String(detectedCandidate).trim() : "")).toLowerCase();
 
   // Smart Detection:
-  // If title explicitly indicates a sectional/chapter/topic test, treat as sectional
-  const isExplicitSectional = /sectional|chapter|topic|subject\s*test|\b(quant|english|reasoning|gk|ga|general awareness|maths?)\s*(sectional|test|mock)?\b/i.test(rawTitle) && !/full\s*(test|mock|length)/i.test(rawTitle);
+  // If metadata or title indicates sectional, treat as sectional
+  const hasSectionalMeta = rawList.some(q => String(q.testType || q.test_type || "").toLowerCase() === "sectional");
+  const isExplicitSectional = (
+    hasSectionalMeta ||
+    /sectional|chapter|topic|subject\s*test|\b(quant|english|reasoning|gk|ga|general awareness|maths?)\s*(sectional|test|mock)?\b/i.test(rawTitle)
+  ) && !/full\s*(test|mock|length)/i.test(rawTitle);
 
-  // If title has "full test", "full mock", "tier 1", "tier-1", etc., treat as full mock even if errors came from only 1 subject
+  // If title explicitly has "full test", "full mock", "tier 1", "tier-1", etc., treat as full mock
   const titleIndicatesFull = /full\s*(test|mock|length)|tier\s*[-_ ]*1|tier\s*[-_ ]*i\b|cgl\s*(prelims|tier)/i.test(rawTitle);
 
-  const isFullMock = isExplicitSectional
-    ? false
-    : (titleIndicatesFull || activeSubjects.length >= 2 || rawList.length >= 70);
+  // Dominant Subject Analysis: if a subject has >= 70% of questions in a test with < 50 items, it is a sectional test
+  const sortedSubjects = Object.entries(subjectGroups).sort((a, b) => b[1].length - a[1].length);
+  const dominantSubEntry = sortedSubjects[0];
+  const dominantSubject = dominantSubEntry ? dominantSubEntry[0] : "General";
+  const dominantCount = dominantSubEntry ? dominantSubEntry[1].length : 0;
+  const isDominantSectional = rawList.length < 50 && (dominantCount / Math.max(1, rawList.length)) >= 0.70;
 
+  const isFullMock = (isExplicitSectional || isDominantSectional)
+    ? false
+    : (titleIndicatesFull || (activeSubjects.length >= 2 && rawList.length >= 50) || rawList.length >= 70);
+
+  // If sectional test with a clear dominant subject, consolidate any stray minority questions
+  if (!isFullMock && (isDominantSectional || isExplicitSectional) && activeSubjects.length > 1) {
+    for (const [subName, qList] of Object.entries(subjectGroups)) {
+      if (subName !== dominantSubject && qList.length > 0) {
+        subjectGroups[dominantSubject].push(...qList);
+        subjectGroups[subName] = [];
+      }
+    }
+  }
+
+  const effectiveActiveSubjects = Object.keys(subjectGroups).filter(k => subjectGroups[k].length > 0);
   const mockType: "full" | "sectional" = isFullMock ? "full" : "sectional";
 
   const sections: Record<string, any> = {};
@@ -911,7 +1009,7 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
   let totalUnattempted = 0;
   let totalScore = 0;
 
-  const subjectsToProcess = isFullMock ? ["Reasoning", "General Awareness", "Mathematics", "English"] : activeSubjects;
+  const subjectsToProcess = isFullMock ? ["Reasoning", "General Awareness", "Mathematics", "English"] : effectiveActiveSubjects;
 
   for (const sub of subjectsToProcess) {
     const qList = subjectGroups[sub] || [];
@@ -966,7 +1064,7 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
 
   const now = new Date();
   const dateStr = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-  const title = (mockTitle && mockTitle.trim()) || detectedFromQuestions || (isFullMock ? `Full Mock - ${dateStr}` : `${activeSubjects[0] || "Sectional"} Mock - ${dateStr}`);
+  const title = (mockTitle && mockTitle.trim()) || detectedFromQuestions || (isFullMock ? `Full Mock - ${dateStr}` : `${effectiveActiveSubjects[0] || dominantSubject || "Sectional"} Mock - ${dateStr}`);
 
   const detectedPlatform = preferredPlatform ||
                            rawList.find(q => q.platform)?.platform ||
@@ -981,7 +1079,7 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
     title,
     platform: detectedPlatform,
     type: mockType,
-    subject: isFullMock ? undefined : (activeSubjects[0] || "General"),
+    subject: isFullMock ? undefined : (effectiveActiveSubjects[0] || dominantSubject || "General"),
     date: now.toISOString(),
     totalQuestions,
     maxMarks,
@@ -1066,8 +1164,8 @@ async function startServer() {
       const subjectMap: Record<string, any[]> = {};
 
       rawList.forEach((q, idx) => {
-        const rawSubject = q.subject || q.section || "Quantitative Aptitude";
-        const { name, file } = normalizeSubject(rawSubject);
+        const rawSubject = q.subject || q.section;
+        const { name, file } = inferSubject(rawSubject, q, enriched[idx], payload.title || payload.testName || payload.name);
         if (!subjectMap[file]) subjectMap[file] = [];
         subjectMap[file].push({
           raw: q,
@@ -1282,8 +1380,11 @@ async function startServer() {
               const cleanAns = rawAns.toLowerCase().trim();
               const masterTopic = enr.topic || q.topic || "General";
               const masterSubtopic = normalizeSubtopic(masterTopic, enr.subtopic || q.subtopic || enr.topic, enr.question || q.questionText || q.question);
+              const { name: detectedSub } = inferSubject(q.subject || q.section, q, enr, payload.title || payload.testName || payload.name);
               return {
                 ...q,
+                subject: detectedSub,
+                section: detectedSub,
                 mockId: calculatedReport.id,
                 testId: calculatedReport.id,
                 testName: q.testName || payload.title || payload.testName,
