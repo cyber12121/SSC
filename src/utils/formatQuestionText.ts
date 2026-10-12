@@ -41,9 +41,9 @@ export function cleanQuestionText(text: string = ''): string {
   // Strip residual redundant options block appended at the end of question statements
   s = s.replace(/\n\s*Options:\s*\n\s*A:[\s\S]+$/i, '');
 
-  // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "num $ num", "$ stands for")
-  s = s.replace(/(['"`])\$(['"`])/g, '$1___DOLLAR_SYM___$2');
-  s = s.replace(/(\b\d+)\s*\$\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
+  // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "'\$'", "'\$\$'")
+  s = s.replace(/(['"`])(?:\$|\\+\$|\$\\+\$)(['"`])/g, '$1___DOLLAR_SYM___$2');
+  s = s.replace(/(\b\d+)\s*(?:\\+\$|\$)\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
   s = s.replace(/\$\s+(stands\s+for)/gi, '___DOLLAR_SYM___ $1');
   s = s.replace(/(stands\s+for\s+['"`]?)\$/gi, '$1___DOLLAR_SYM___');
   s = s.replace(/([@%#*^]\s*\d+\s*)\$(\s*\d+)/g, '$1___DOLLAR_SYM___$2');
@@ -52,14 +52,35 @@ export function cleanQuestionText(text: string = ''): string {
   s = s.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
   s = s.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
 
-  // Strip spurious dollar signs placed around reasoning analogies or letter sequences (e.g. "$POEM : RIRR :: ?$" -> "POEM : RIRR :: ?")
-  s = s.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\s\-']+\s*:\s*[A-Za-z0-9\s\-']+(?:\s*::\s*[^$\n]+)?)\$(?=[^\$]|$)/g, '$1');
+  // Repair spurious starting dollar before English word + dollar: "$If $x = ..." -> "If $x = ..."
+  s = s.replace(/(?<=[^\$]|^)\$([A-Za-z]{2,})\s+\$(?=[A-Za-z0-9\\])/g, '$1 $');
 
-  // Normalize spaces inside dollar delimiters: only if not containing natural language words
+  // Repair spurious trailing dollar after punctuation at end of line/string: "?$" -> "?"
+  s = s.replace(/([?!:\.])\$(?=\s*$|\n)/g, '$1');
+
+  // Strip spurious dollar signs placed around reasoning analogies or letter sequences (e.g. "$POEM : RIRR :: ?$" -> "POEM : RIRR :: ?")
+  s = s.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\s\-']{1,30}\s*::\s*[^$\n]+)\$(?=[^\$]|$)/g, '$1');
+  s = s.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\-']+\s*:\s*[A-Za-z0-9\-']+(?:\s*::\s*[^$\n]+)?)\$(?=[^\$]|$)/g, '$1');
+
+  // Normalize spaces inside dollar delimiters & strip bogus dollars around natural language
   s = s.replace(/\$([^\$\n]+?)\$/g, (m, inner) => {
     const trimmed = inner.trim();
-    if (/\b(?:stands|then|find|which|option|select)\b/i.test(trimmed)) {
-      return m;
+    const hasLatex = /\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|Delta|pm|times|div|text|left|right)\b/.test(trimmed);
+    const words = trimmed.match(/\b[A-Za-z]{2,}\b/g) || [];
+
+    if (!hasLatex) {
+      // Natural language phrases: "what is the value of", "find the value of", "is equal to"
+      if (/\b(?:what|when|where|then|find|value\s+of|is\s+equal|with|and|is|are|the|if)\b/i.test(trimmed) && words.length >= 2) {
+        return ` ${trimmed} `;
+      }
+      // Single natural language conjunctions/prepositions: "$when$", "$and$", "$where$", "$then$", "$if$"
+      if (/^(?:when|where|and|then|or|if|is|are|was|were|the|of|to|in|at|by|from|with|what|which|find)$/i.test(trimmed)) {
+        return ` ${trimmed} `;
+      }
+    }
+
+    if (/\b(?:stands|then|find|which|option|select)\b/i.test(trimmed) && !hasLatex) {
+      return trimmed;
     }
     return trimmed ? `$${trimmed}$` : '$$';
   });
@@ -231,6 +252,12 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   text = text.replace(/\\+\(/g, '\\(').replace(/\\+\)/g, '\\)');
   text = text.replace(/\\+\[/g, '\\[').replace(/\\+\]/g, '\\]');
 
+  // Repair spurious starting dollar before English word + dollar: "$If $x = ..." -> "If $x = ..."
+  text = text.replace(/(?<=[^\$]|^)\$([A-Za-z]{2,})\s+\$(?=[A-Za-z0-9\\])/g, '$1 $');
+
+  // Repair spurious trailing dollar after punctuation at end of line/string: "?$" -> "?"
+  text = text.replace(/([?!:\.])\$(?=\s*$|\n)/g, '$1');
+
   // Step 1: Normalize parenthesized math, balance unclosed dollars, and wrap unwrapped equations/fractions
   text = normalizeParenthesizedMathBlocks(text);
   text = balanceUnclosedDollarSigns(text);
@@ -247,20 +274,33 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
   text = text.replace(/\$([^$]+?)\\+\$/g, '$$$1$$');
 
   // Strip spurious dollar signs placed around reasoning analogies or letter sequences
-  text = text.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\s\-']+\s*:\s*[A-Za-z0-9\s\-']+(?:\s*::\s*[^$\n]+)?)\$(?=[^\$]|$)/g, '$1');
+  text = text.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\s\-']{1,30}\s*::\s*[^$\n]+)\$(?=[^\$]|$)/g, '$1');
+  text = text.replace(/(?<=[^\$]|^)\$([A-Za-z0-9\-']+\s*:\s*[A-Za-z0-9\-']+(?:\s*::\s*[^$\n]+)?)\$(?=[^\$]|$)/g, '$1');
 
-  // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "num $ num", "$ stands for")
-  text = text.replace(/(['"`])\$(['"`])/g, '$1___DOLLAR_SYM___$2');
-  text = text.replace(/(\b\d+)\s*\$\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
+  // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "'\$'", "'\$\$'")
+  text = text.replace(/(['"`])(?:\$|\\+\$|\$\\+\$)(['"`])/g, '$1___DOLLAR_SYM___$2');
+  text = text.replace(/(\b\d+)\s*(?:\\+\$|\$)\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');
   text = text.replace(/\$\s+(stands\s+for)/gi, '___DOLLAR_SYM___ $1');
   text = text.replace(/(stands\s+for\s+['"`]?)\$/gi, '$1___DOLLAR_SYM___');
   text = text.replace(/([@%#*^]\s*\d+\s*)\$(\s*\d+)/g, '$1___DOLLAR_SYM___$2');
 
-  // Normalize spaces inside dollar delimiters: only if valid math expression
+  // Normalize spaces inside dollar delimiters & strip bogus dollars around natural language
   text = text.replace(/\$([^\$\n]+?)\$/g, (m, inner) => {
     const trimmed = inner.trim();
-    if (/\b(?:stands|then|find|which|option|select|value)\b/i.test(trimmed)) {
-      return m;
+    const hasLatex = /\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|Delta|pm|times|div|text|left|right)\b/.test(trimmed);
+    const words = trimmed.match(/\b[A-Za-z]{2,}\b/g) || [];
+
+    if (!hasLatex) {
+      if (/\b(?:what|when|where|then|find|value\s+of|is\s+equal|with|and|is|are|the|if)\b/i.test(trimmed) && words.length >= 2) {
+        return ` ${trimmed} `;
+      }
+      if (/^(?:when|where|and|then|or|if|is|are|was|were|the|of|to|in|at|by|from|with|what|which|find)$/i.test(trimmed)) {
+        return ` ${trimmed} `;
+      }
+    }
+
+    if (/\b(?:stands|then|find|which|option|select|value)\b/i.test(trimmed) && !hasLatex) {
+      return trimmed;
     }
     return trimmed ? `$${trimmed}$` : '$$';
   });
@@ -285,8 +325,9 @@ export function tokenizeTextWithMath(rawText: string = ''): MathToken[] {
 
     if (mathStr.startsWith('$') && !mathStr.startsWith('$$')) {
       const inner = mathStr.slice(1, -1);
-      // If it contains natural language words like " and " or " then " without \text, it's not a single LaTeX math token
-      if (/\s+(?:and|then|where|with|from|between)\s+/i.test(inner) && !/\\text\{/.test(inner)) {
+      const hasLatex = /\\(?:frac|sqrt|sin|cos|tan|cot|sec|csc|cosec|theta|pi|alpha|beta|gamma|Delta|pm|times|div|text|left|right)\b/.test(inner);
+      // If it contains natural language words without \text, it's not a single LaTeX math token
+      if (!hasLatex && (/\s+(?:and|then|where|with|from|between|what|when|which|is|are|the|value|find)\s+/i.test(inner) || /^(?:when|where|and|then|or|if|is|are|the|what|which|find)$/i.test(inner.trim()))) {
         continue;
       }
     }

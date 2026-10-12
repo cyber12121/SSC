@@ -998,11 +998,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     const rawId = report.id;
     const effectiveId = LEGACY_MOCK_ID_MAP[rawId] || rawId;
 
-    if (rawQuestionsCache[effectiveId] && rawQuestionsCache[effectiveId].length > 0) {
-      return rawQuestionsCache[effectiveId];
-    }
     if (rawQuestionsCache[rawId] && rawQuestionsCache[rawId].length > 0) {
       return rawQuestionsCache[rawId];
+    }
+    if (effectiveId !== rawId && rawQuestionsCache[effectiveId] && rawQuestionsCache[effectiveId].length > 0) {
+      return rawQuestionsCache[effectiveId];
     }
 
     let list: any[] = [];
@@ -1027,55 +1027,31 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       return null;
     };
 
-    // Find canonical bundled report if any
-    const canonicalReport = (initialMockReports as MockScoreReport[]).find(
-      r => r.id === effectiveId || r.id === rawId ||
-           (!isGenericTestTitle(r.title) && r.title && report.title && normalizeTestTitle(r.title) === normalizeTestTitle(report.title))
-    );
+    const minExpected = report.type === 'full' ? 20 : 1;
 
-    const candidateIds = Array.from(new Set([
-      canonicalReport?.id,
-      effectiveId,
-      rawId
-    ].filter(Boolean) as string[]));
+    // ─── 1. EXACT ATTEMPT IDS (rawId, effectiveId) ───
+    // Always load the mock's own unique file first. Never let cross-attempt titles override real test IDs!
+    const exactIds = Array.from(new Set([rawId, effectiveId].filter(Boolean) as string[]));
 
-    // 1. Direct Vite dynamic module lookup for all candidate IDs in mock_questions (IMMUTABLE IMPORTED GROUND TRUTH)
-    for (const cid of candidateIds) {
-      const qData = await tryModulePath(`../data/mock_questions/${cid}.json`);
-      if (qData && qData.length >= (report.type === 'full' ? 20 : 1)) {
+    // 1A. Direct Vite dynamic module lookup for exact IDs
+    for (const eid of exactIds) {
+      const qData = await tryModulePath(`../data/mock_questions/${eid}.json`);
+      if (qData && qData.length >= minExpected) {
         list = qData;
         break;
       }
     }
 
-    // 2. Search mockQuestionModules by matching test title in question data
-    if (list.length === 0 && report.title && !isGenericTestTitle(report.title)) {
-      const targetNorm = normalizeTestTitle(report.title).replace(/[^a-z0-9]/g, '');
-      for (const [, loader] of Object.entries(mockQuestionModules)) {
-        try {
-          const mod = await (loader as () => Promise<any>)();
-          const items = tryExtractQuestions(mod);
-          if (items && items.length > 0) {
-            const firstTestName = normalizeTestTitle(items[0]?.testName || '').replace(/[^a-z0-9]/g, '');
-            if (firstTestName && (firstTestName === targetNorm || firstTestName.includes(targetNorm) || targetNorm.includes(firstTestName))) {
-              list = items;
-              break;
-            }
-          }
-        } catch {}
-      }
-    }
-
-    // 3. Server API lookup (read pristine file from server disk)
+    // 1B. Server API lookup (reads pristine file from disk for exact IDs)
     if (list.length === 0 || (report.type === 'full' && list.length < 20)) {
-      for (const cid of candidateIds) {
+      for (const eid of exactIds) {
         try {
-          const res = await fetch(`/api/mock-questions/${cid}`);
+          const res = await fetch(`/api/mock-questions/${eid}`);
           const cType = res.headers.get('content-type') || '';
           if (res.ok && cType.includes('application/json')) {
             const data = await res.json();
             const extracted = tryExtractQuestions(data);
-            if (extracted && extracted.length >= (report.type === 'full' ? 20 : 1)) {
+            if (extracted && extracted.length >= minExpected) {
               list = extracted;
               break;
             }
@@ -1084,15 +1060,15 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
     }
 
-    // 4. LocalStorage cache lookup (for user-custom uploaded mocks not bundled in code)
+    // 1C. LocalStorage cache lookup for exact IDs
     if (list.length === 0) {
-      for (const cid of candidateIds) {
+      for (const eid of exactIds) {
         try {
-          const saved = safeStorage.getItem(`cgl_mock_questions_${cid}`);
+          const saved = safeStorage.getItem(`cgl_mock_questions_${eid}`);
           if (saved) {
             const parsed = JSON.parse(saved);
             const extracted = tryExtractQuestions(parsed);
-            if (extracted && extracted.length >= (report.type === 'full' ? 20 : 1)) {
+            if (extracted && extracted.length >= minExpected) {
               list = extracted;
               break;
             }
@@ -1101,7 +1077,47 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
     }
 
-    // 5. Fallback: gather questions from mock_errors if subject matches
+    // ─── 2. FALLBACK LOOKUP (ONLY IF EXACT IDS YIELDED 0 QUESTIONS) ───
+    if (list.length === 0) {
+      const isDateOrGenericTitle = (t: string = '') => {
+        if (isGenericTestTitle(t)) return true;
+        // Contains dates or timestamps e.g. "12 Oct 2026" or "12-10-2026"
+        if (/\b\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/i.test(t)) return true;
+        if (/\b\d{1,2}[-\/]\d{1,2}[-\/]\d{2,4}\b/.test(t)) return true;
+        return false;
+      };
+
+      if (report.title && !isDateOrGenericTitle(report.title)) {
+        const normReportTitle = normalizeTestTitle(report.title);
+        // Only consider canonical fallback if there is EXACTLY ONE report with this title in initialMockReports
+        const matchingReports = (initialMockReports as MockScoreReport[]).filter(
+          r => r.title && normalizeTestTitle(r.title) === normReportTitle
+        );
+
+        if (matchingReports.length === 1) {
+          const canonicalId = matchingReports[0].id;
+          if (canonicalId && !exactIds.includes(canonicalId)) {
+            const qData = await tryModulePath(`../data/mock_questions/${canonicalId}.json`);
+            if (qData && qData.length >= minExpected) {
+              list = qData;
+            } else {
+              try {
+                const res = await fetch(`/api/mock-questions/${canonicalId}`);
+                if (res.ok) {
+                  const data = await res.json();
+                  const extracted = tryExtractQuestions(data);
+                  if (extracted && extracted.length >= minExpected) {
+                    list = extracted;
+                  }
+                }
+              } catch {}
+            }
+          }
+        }
+      }
+    }
+
+    // ─── 3. FALLBACK: Gather questions from mock_errors if subject matches ───
     if (list.length === 0 && mockData) {
       const subjectsInOrder = ['Reasoning', 'General Awareness', 'Mathematics', 'English'];
       subjectsInOrder.forEach(sub => {
@@ -1145,8 +1161,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       setRawQuestionsCache(prev => ({
         ...prev,
         [rawId]: list,
-        [effectiveId]: list,
-        ...(canonicalReport?.id ? { [canonicalReport.id]: list } : {})
+        [effectiveId]: list
       }));
     }
 

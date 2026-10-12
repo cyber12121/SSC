@@ -1091,7 +1091,7 @@
     "correctOption": "C",
     "userTime": "00:42",
     "avgTime": "00:17",
-    "questionText": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?$",
+    "questionText": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?",
     "options": {
       "A": "\\sec x + \\tan x",
       "B": "\\csc x + \\tan x",
@@ -1108,7 +1108,7 @@
     "topic": "Trigonometry",
     "subtopic": "Complementary Angles",
     "conceptTested": "Complementary angle trigonometric identities such as \\cot(90^\\circ - x) = \\tan x, \\ cosec(90^\\circ - x) = \\sec x, and algebraic identities.",
-    "question": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?$",
+    "question": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?",
     "tags": {
       "topic": "Trigonometry",
       "subtopic": "Complementary Angles",

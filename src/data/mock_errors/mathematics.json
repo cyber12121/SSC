@@ -6826,7 +6826,7 @@
         "correctOption": "C",
         "userTime": "00:37",
         "avgTime": "00:27",
-        "question": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?$",
+        "question": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?",
         "options": {
           "a": "30°",
           "b": "45°",
@@ -15025,7 +15025,7 @@
         "correctOption": "A",
         "userTime": "01:29",
         "avgTime": "01:04",
-        "question": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$when$x = 4$,$y = 3$, and$z = 2$.",
+        "question": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$ when $x = 4$,$y = 3$, and$z = 2$.",
         "options": {
           "a": "1",
           "b": "3",
@@ -17774,7 +17774,7 @@
         "correctOption": "C",
         "userTime": "00:42",
         "avgTime": "00:17",
-        "question": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?$",
+        "question": "$\\frac{1 + 2\\cot^2(90^\\circ - x) - 2\\csc(90^\\circ - x) \\cdot \\cot(90^\\circ - x)}{\\csc(90^\\circ - x) - \\cot(90^\\circ - x)} = ?",
         "options": {
           "a": "\\sec x + \\tan x",
           "b": "\\csc x + \\tan x",
@@ -21422,7 +21422,7 @@
         "correctOption": "D",
         "userTime": "00:46",
         "avgTime": "01:13",
-        "question": "$If $x = 6 - 3\\sqrt{3}$, what is the value of $(x - \\frac{3}{x})^2$?$",
+        "question": "If $1 = 6 - 3\\sqrt{3}$, what is the value of $(x - \\frac{3}{x})^2$?",
         "options": {
           "a": "1",
           "b": "2",
@@ -25256,7 +25256,7 @@
         "correctOption": "A",
         "userTime": "01:18",
         "avgTime": "00:36",
-        "question": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?$",
+        "question": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?",
         "options": {
           "a": "-20",
           "b": "-15",
@@ -25704,7 +25704,7 @@
         "correctOption": "B",
         "userTime": "00:06",
         "avgTime": "00:12",
-        "question": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?$",
+        "question": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?",
         "options": {
           "a": "60°",
           "b": "55°",

@@ -263,7 +263,7 @@
     "correctOption": "D",
     "userTime": "00:46",
     "avgTime": "01:13",
-    "questionText": "$If $x = 6 - 3\\sqrt{3}$, what is the value of $(x - \\frac{3}{x})^2$?$",
+    "questionText": "If $1 = 6 - 3\\sqrt{3}$, what is the value of $(x - \\frac{3}{x})^2$?",
     "options": {
       "A": "1",
       "B": "2",
@@ -280,7 +280,7 @@
     "topic": "Algebra",
     "subtopic": "Basic Algebraic Identities",
     "conceptTested": "Simplification of surds and algebraic manipulation using $(x - \\frac{3}{x})^2 = x + \\frac{9}{x} - 2 \\cdot 3$.",
-    "question": "$If $x = 6 - 3\\sqrt{3}$, what is the value of $(x - \\frac{3}{x})^2$?$",
+    "question": "If $1 = 6 - 3\\sqrt{3}$, what is the value of $(x - \\frac{3}{x})^2$?",
     "tags": {
       "topic": "Algebra",
       "subtopic": "Basic Algebraic Identities",

@@ -155,7 +155,7 @@
     "correctOption": "A",
     "userTime": "00:49",
     "avgTime": "00:31",
-    "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n$14, 14, 17, 85, 92, ?$",
+    "questionText": "Which of the following numbers will replace the question mark (?) in the given series?\n$14, 14, 17, 85, 92, ?",
     "options": {
       "A": "828",
       "B": "628",
@@ -172,7 +172,7 @@
     "topic": "Number Series",
     "subtopic": "Missing Number Series",
     "conceptTested": "Identification of alternating or combined arithmetic operation patterns in number sequences.",
-    "question": "Which of the following numbers will replace the question mark (?) in the given series?\n$14, 14, 17, 85, 92, ?$",
+    "question": "Which of the following numbers will replace the question mark (?) in the given series?\n$14, 14, 17, 85, 92, ?",
     "tags": {
       "topic": "Number Series",
       "subtopic": "Missing Number Series",

@@ -371,7 +371,7 @@
     "correctOption": "D",
     "userTime": "00:31",
     "avgTime": "00:33",
-    "questionText": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?$",
+    "questionText": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?",
     "options": {
       "A": "151",
       "B": "170",
@@ -388,7 +388,7 @@
     "topic": "Number Series",
     "subtopic": "Missing Number Series",
     "conceptTested": "Identification of a prime number sequence addition pattern in a number series.",
-    "question": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?$",
+    "question": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?",
     "tags": {
       "topic": "Number Series",
       "subtopic": "Missing Number Series",

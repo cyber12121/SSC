@@ -11,7 +11,7 @@
     "correctOption": "D",
     "userTime": "01:03",
     "avgTime": "00:39",
-    "questionText": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?$",
+    "questionText": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?",
     "options": {
       "A": "156",
       "B": "128",
@@ -28,7 +28,7 @@
     "topic": "Mathematical Operations",
     "subtopic": "Interchange of Signs & Numbers",
     "conceptTested": "Substitution of custom symbols into arithmetic expressions following BODMAS order of operations",
-    "question": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?$",
+    "question": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?",
     "tags": {
       "topic": "Mathematical Operations",
       "subtopic": "Interchange of Signs & Numbers",
@@ -1019,7 +1019,7 @@
     "correctOption": "A",
     "userTime": "01:18",
     "avgTime": "00:36",
-    "questionText": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?$",
+    "questionText": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?",
     "options": {
       "A": "-20",
       "B": "-15",
@@ -1036,7 +1036,7 @@
     "topic": "Algebra",
     "subtopic": "Basic Algebraic Identities",
     "conceptTested": "Standard cubic identity: $a^3 + b^3 + c^3 - 3abc = \\frac{1}{2}(a + b + c)[3(a^2 + b^2 + c^2) - (a + b + c)^2]$",
-    "question": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?$",
+    "question": "If $a + b + c = 5$, $a^2 + b^2 + c^2 = 27$, and $a^3 + b^3 + c^3 = 125$, then $4abc = ?",
     "tags": {
       "topic": "Algebra",
       "subtopic": "Basic Algebraic Identities",

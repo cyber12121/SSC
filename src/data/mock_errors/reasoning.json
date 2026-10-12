@@ -1603,7 +1603,7 @@
         "correctOption": "A",
         "userTime": "00:49",
         "avgTime": "00:31",
-        "question": "Which of the following numbers will replace the question mark (?) in the given series?\n$14, 14, 17, 85, 92, ?$",
+        "question": "Which of the following numbers will replace the question mark (?) in the given series?\n$14, 14, 17, 85, 92, ?",
         "options": {
           "a": "828",
           "b": "628",
@@ -2211,7 +2211,7 @@
         "correctOption": "D",
         "userTime": "01:03",
         "avgTime": "00:39",
-        "question": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?$",
+        "question": "If $8 * 9 \\# 3 = 51$ and $12 * 6 \\# 4 = 72$, then $13 * 11 \\# 6 = ?",
         "options": {
           "a": "156",
           "b": "128",
@@ -2979,7 +2979,7 @@
         "correctOption": "C",
         "userTime": "00:38",
         "avgTime": "00:18",
-        "question": "In the following question, there is a certain relationship between the first two terms. Choose the fourth term from the following options which has a similar kind of relationship with the third term.\n\n$LOM : NQM :: PSQ : ?$",
+        "question": "In the following question, there is a certain relationship between the first two terms. Choose the fourth term from the following options which has a similar kind of relationship with the third term.\n\n$LOM : NQM :: PSQ : ?",
         "options": {
           "a": "RIH",
           "b": "SHA",
@@ -3107,7 +3107,7 @@
         "correctOption": "C",
         "userTime": "00:55",
         "avgTime": "00:46",
-        "question": "What should come in place of the question mark (?) in the given series? $208 \\quad 190 \\quad 163 \\quad 127 \\quad 82 \\quad ?$",
+        "question": "What should come in place of the question mark (?) in the given series? $208 \\quad 190 \\quad 163 \\quad 127 \\quad 82 \\quad ?",
         "options": {
           "a": "54",
           "b": "45",
@@ -7407,7 +7407,7 @@
         "correctOption": "D",
         "userTime": "00:31",
         "avgTime": "00:33",
-        "question": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?$",
+        "question": "Select the number from among the given options that can replace the question mark (?) in the following series. $35, 54, 77, 106, 137, ?",
         "options": {
           "a": "151",
           "b": "170",

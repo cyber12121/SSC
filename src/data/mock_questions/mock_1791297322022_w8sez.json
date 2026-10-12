@@ -1091,7 +1091,7 @@
     "correctOption": "C",
     "userTime": "00:37",
     "avgTime": "00:27",
-    "questionText": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?$",
+    "questionText": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?",
     "options": {
       "A": "30°",
       "B": "45°",
@@ -1108,7 +1108,7 @@
     "topic": "Trigonometry",
     "subtopic": "Trigonometric Ratios & Simplification",
     "conceptTested": "Componendo and Dividendo rule along with standard reciprocal trigonometric identities.",
-    "question": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?$",
+    "question": "If $\\frac{\\tan\\theta + \\cot\\theta}{\\tan\\theta - \\cot\\theta} = 2$, then find the value of $\\theta = ?",
     "tags": {
       "topic": "Trigonometry",
       "subtopic": "Trigonometric Ratios & Simplification",
@@ -1199,7 +1199,7 @@
     "correctOption": "B",
     "userTime": "00:06",
     "avgTime": "00:12",
-    "questionText": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?$",
+    "questionText": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?",
     "options": {
       "A": "60°",
       "B": "55°",
@@ -1216,7 +1216,7 @@
     "topic": "Geometry",
     "subtopic": "General Triangle Properties",
     "conceptTested": "In an isosceles triangle, angles opposite to equal sides are equal, and the sum of interior angles is 180°.",
-    "question": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?$",
+    "question": "In $\\triangle LMN$, $\\angle M = 70^\\circ$ and $LM = NM$. Then $\\angle N = ?",
     "tags": {
       "topic": "Geometry",
       "subtopic": "General Triangle Properties",

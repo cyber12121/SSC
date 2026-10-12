@@ -146,7 +146,7 @@
   {
     "id": "mock_q_5_mock_1789654448115_220yx",
     "q_num": 5,
-    "question": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$when$x = 4$,$y = 3$, and$z = 2$.",
+    "question": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$ when $x = 4$,$y = 3$, and$z = 2$.",
     "options": {
       "a": "1",
       "b": "3",
@@ -176,7 +176,7 @@
     "errorType": "unattempted",
     "timeSpent": 89,
     "userTime": 89,
-    "questionText": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$when$x = 4$,$y = 3$, and$z = 2$.",
+    "questionText": "Find the value of $4x^2 + y^2 + 25z^2 + 4xy - 10yz - 20zx$ when $x = 4$,$y = 3$, and$z = 2$.",
     "correctOption": "A"
   },
   {

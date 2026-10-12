@@ -194,7 +194,9 @@ export function parseFraction(str: string, startIndex: number): { fullMatch: str
  */
 export function normalizeParenthesizedMathBlocks(text: string = ''): string {
   if (!text) return '';
-  let s = text;
+  let s = text
+    .replace(/\\\[([\s\S]*?)\\\]/g, (_, eq) => `$$${eq}$$`)
+    .replace(/\\\(([\s\S]*?)\\\)/g, (_, eq) => `$${eq}$`);
 
   // 1. Fix \left ... \right blocks that have internal $ signs
   s = s.replace(/(\\left\s*([(\[{|])[\s\S]*?\\right\s*([)\]}|]))/g, (fullMatch) => {
@@ -206,15 +208,29 @@ export function normalizeParenthesizedMathBlocks(text: string = ''): string {
   });
 
   // 2. Wrap completely unwrapped \left...\right expressions outside math blocks
-  // e.g. "\left( 1, \frac{\sqrt{3}}{2} \right)" -> "$\left( 1, \frac{\sqrt{3}}{2} \right)$"
-  s = s.replace(/(?<!\$)\\left\s*([(\[{|])[\s\S]*?\\right\s*([)\]}|])(?!\$)/g, (fullMatch) => {
+  // Mask existing balanced math blocks first so we never inject nested $ into equations!
+  const mathBlocks: string[] = [];
+  s = s.replace(/(\$\$[\s\S]*?\$\$|\$(?!\s)[^\$]+?(?<!\s)\$)/g, (m) => {
+    mathBlocks.push(m);
+    return `___MATH_BLOCK_${mathBlocks.length - 1}___`;
+  });
+
+  s = s.replace(/\\left\s*([(\[{|])[\s\S]*?\\right\s*([)\]}|])/g, (fullMatch) => {
     return `$${fullMatch.trim()}$`;
   });
 
   // 3. Fix plain parentheses with inner math blocks: e.g. "( $\frac{2}{3}$, $\frac{1}{\sqrt{3}}$ )"
-  s = s.replace(/\(\s*(\$[^$\n]+\$(?:\s*,\s*\$[^$\n]+\$)+)\s*\)/g, (_, inner) => {
-    const stripped = inner.replace(/\$/g, '');
-    return `$\\left( ${stripped} \\right)$`;
+  s = s.replace(/\(\s*(___MATH_BLOCK_\d+___(?:\s*,\s*___MATH_BLOCK_\d+___)+)\s*\)/g, (_, inner) => {
+    let resolved = inner;
+    mathBlocks.forEach((mb, idx) => {
+      resolved = resolved.replace(`___MATH_BLOCK_${idx}___`, mb.slice(1, -1));
+    });
+    return `$\\left( ${resolved} \\right)$`;
+  });
+
+  // Restore math blocks
+  mathBlocks.forEach((mb, idx) => {
+    s = s.replace(`___MATH_BLOCK_${idx}___`, mb);
   });
 
   return s;
@@ -270,7 +286,18 @@ export function wrapStandaloneLatexEquations(text: string = ''): string {
     let l = line.trim();
     if (!l) return line;
 
-    if (/^\$\$[\s\S]+\$\$$/.test(l) || /^\$[^\$]+\$$/.test(l)) {
+    // Never wrap lines that ALREADY contain math delimiters ($, $$, \(, \[, \begin)
+    if (l.includes('$') || l.includes('\\(') || l.includes('\\[') || l.includes('\\begin')) {
+      return line;
+    }
+
+    // Never wrap lines that are English questions or prose starting with English words
+    if (/^(?:If|When|Where|What|Find|Given|Then|Consider|Suppose|Assume|Calculate|Evaluate|Determine|The|In|A|An|For|Let|Which|How|Is|Are)\b/i.test(l)) {
+      return line;
+    }
+
+    // Never wrap lines that contain question marks or colons followed by English text
+    if (/\?/.test(l)) {
       return line;
     }
 
@@ -282,13 +309,14 @@ export function wrapStandaloneLatexEquations(text: string = ''): string {
       const englishWords = l
         .replace(/\\[a-zA-Z]+/g, '')
         .replace(/[$_^{}]/g, '')
-        .match(/\b[a-zA-Z]{4,}\b/g) || [];
+        .match(/\b[a-zA-Z]{3,}\b/g) || [];
 
       const isExplanation = englishWords.some(w =>
         /^(where|substitute|substituting|putting|according|question|answer|hence|therefore|because|triangle|consider|suppose|assume|formula|theorem|correct)$/i.test(w)
       );
 
-      if (!isExplanation && englishWords.length <= 2) {
+      // Only wrap pure equations with 0 English words (or at most 1 math abbreviation like LHS/RHS)
+      if (!isExplanation && englishWords.length <= 1) {
         const endsWithPeriod = /\.$/.test(l);
         const formula = endsWithPeriod ? l.slice(0, -1).trim() : l;
         if (!formula.startsWith('$') && !formula.endsWith('$')) {
