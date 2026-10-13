@@ -1,224 +1,18 @@
 {
   "chapter_num": 10,
-  "chapter_title": "One Word Substitution - Set 10",
+  "chapter_title": "OWS - Set 10 (Letters R-S)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_10",
   "is_test": true,
+  "letter_range": "Letters R-S",
+  "start_letter": "R",
+  "end_letter": "S",
   "questions": [
     {
       "q_num": 1,
-      "question": "A person who denies the existence of God.",
-      "options": {
-        "a": "Skeptic",
-        "b": "Epicurean",
-        "c": "Atheist",
-        "d": "Fatalist (n)"
-      },
-      "answer": "c",
-      "solution": "Atheist denies the existence of God. Agnostic holds God's existence cannot be known either way. Theist believes in a god who intervenes in the universe. Heretic holds beliefs contrary to established doctrine.\n\n💡 Mnemonic Trick: Memory trick: link “Atheist” with “Atheist denies existence Agnostic holds”.\n📖 Source: HTML file • Question 53\n🎯 Target Word: Atheist",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 2,
-      "question": "A person who deliberately sets fire to property.",
-      "options": {
-        "a": "Arson (n)",
-        "b": "Veteran (n)",
-        "c": "Arsonist",
-        "d": "Incendiary"
-      },
-      "answer": "c",
-      "solution": "Arsonist deliberately sets fire to property, often for criminal/insurance motives. Pyromaniac has an uncontrollable compulsion to start fires. Vandal deliberately damages property. Saboteur deliberately destroys something, often for political/military advantage.\n\n💡 Mnemonic Trick: Memory trick: link “Arsonist” with “Arsonist deliberately sets fire property,”.\n📖 Source: HTML file • Question 54\n🎯 Target Word: Arsonist",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "A speech delivered without any prior preparation.",
-      "options": {
-        "a": "Impromptu (n)",
-        "b": "Extempore (adj/adv)",
-        "c": "Extempore",
-        "d": "Vagabond (n)"
-      },
-      "answer": "c",
-      "solution": "Extempore is a speech given without prior preparation. Monologue is a long speech by one person. Dialogue is a conversation between people. Soliloquy is a character voicing inner thoughts alone.\n\n💡 Mnemonic Trick: Memory trick: link “Extempore” with “Extempore speech given without prior”.\n📖 Source: HTML file • Question 55\n🎯 Target Word: Extempore",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "A person who believes that all events are predetermined and inevitable.",
-      "options": {
-        "a": "Hypocrite",
-        "b": "Pacifist",
-        "c": "Pedant",
-        "d": "Fatalist"
-      },
-      "answer": "d",
-      "solution": "Fatalist believes all events are predetermined and unavoidable. Optimist expects good outcomes. Pedant overemphasises minor rules/details. Realist deals with facts rather than ideas or emotions.\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist” with “Fatalist believes events predetermined unavoidable”.\n📖 Source: HTML file • Question 56\n🎯 Target Word: Fatalist",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "A government ruled by a king or queen.",
-      "options": {
-        "a": "Aristocracy",
-        "b": "Kleptocracy",
-        "c": "Stratocracy",
-        "d": "Monarchy"
-      },
-      "answer": "d",
-      "solution": "Monarchy is government headed by a king or queen. Democracy vests power in elected representatives of the people. Oligarchy is rule by a small group. Autocracy is rule by a single person with absolute power.\n\n💡 Mnemonic Trick: Memory trick: link “Monarchy” with “Monarchy government headed king queen”.\n📖 Source: HTML file • Question 57\n🎯 Target Word: Monarchy",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "A person who is excessively concerned with minor details and rules.",
-      "options": {
-        "a": "Pedant",
-        "b": "Epicurean",
-        "c": "Cynic",
-        "d": "Fatalist"
-      },
-      "answer": "a",
-      "solution": "Pedant is excessively concerned with minor details and rules. Altruist is devoted to others' welfare. Philistine is indifferent/hostile to culture and the arts. Dilettante dabbles in an interest without real commitment.\n\n💡 Mnemonic Trick: Memory trick: link “Pedant” with “Pedant excessively concerned with minor”.\n📖 Source: HTML file • Question 58\n🎯 Target Word: Pedant",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "A person who cannot be satisfied.",
-      "options": {
-        "a": "Infallible (adj)",
-        "b": "Insatiable",
-        "c": "Veteran (n)",
-        "d": "Author (n)"
-      },
-      "answer": "b",
-      "solution": "Insatiable means impossible to satisfy; having an unquenchable desire. Contented means pleased with what one has. Avaricious means extremely greedy for wealth. Sanguine means optimistic even in difficulty.\n\n💡 Mnemonic Trick: Memory trick: link “Insatiable” with “Insatiable means impossible satisfy having”.\n📖 Source: HTML file • Question 59\n🎯 Target Word: Insatiable",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
-      "question": "A person who finds joy in the pain or suffering of others.",
-      "options": {
-        "a": "Epicurean",
-        "b": "Sadist",
-        "c": "Stoic (n)",
-        "d": "Hedonist"
-      },
-      "answer": "b",
-      "solution": "Sadist finds pleasure in others' pain or suffering. Pessimist sees the worst side of things. Masochist derives gratification from their own pain. Narcissist has excessive self-admiration.\n\n💡 Mnemonic Trick: Memory trick: link “Sadist” with “Sadist finds pleasure others pain”.\n📖 Source: HTML file • Question 60\n🎯 Target Word: Sadist",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "A form of government in which power is held by the nobility.",
-      "options": {
-        "a": "Aristocracy",
-        "b": "Stratocracy",
-        "c": "Monarchy",
-        "d": "Kleptocracy"
-      },
-      "answer": "a",
-      "solution": "Aristocracy is government in which power rests with the nobility. Monarchy is rule headed by a monarch. Gerontocracy is rule by the elderly. Authoritarianism values control/order over personal freedom.\n\n💡 Mnemonic Trick: Memory trick: link “Aristocracy” with “Aristocracy government which power rests”.\n📖 Source: HTML file • Question 61\n🎯 Target Word: Aristocracy",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
-      "question": "A person appointed to advise an organization on a particular subject.",
-      "options": {
-        "a": "Consultant",
-        "b": "Meddler (n)",
-        "c": "Incendiary",
-        "d": "Cynic (n)"
-      },
-      "answer": "a",
-      "solution": "Consultant is appointed to advise an organisation on a specific subject. Delegate represents others, e.g. at a conference. Intrusive describes unwanted presence/involvement. Mentor is an experienced, trusted adviser generally.\n\n💡 Mnemonic Trick: Memory trick: link “Consultant” with “Consultant appointed advise organisation specific”.\n📖 Source: HTML file • Question 62\n🎯 Target Word: Consultant",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "A person who travels on foot.",
-      "options": {
-        "a": "Veteran (n)",
-        "b": "Extempore",
-        "c": "Pedestrian",
-        "d": "Author (n)"
-      },
-      "answer": "c",
-      "solution": "Pedestrian specifically means a person travelling on foot. Voyager travels long distances, often by sea/space. Walker is a general, less formal term. Hiker walks long distances in nature for recreation.\n\n💡 Mnemonic Trick: Memory trick: link “Pedestrian” with “Pedestrian specifically means person travelling”.\n📖 Source: HTML file • Question 63\n🎯 Target Word: Pedestrian",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
       "question": "A person who lives a solitary life and tends to avoid other people.",
       "options": {
         "a": "Recluse",
@@ -234,159 +28,388 @@
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q1"
     },
     {
-      "q_num": 13,
-      "question": "The study of ancient inscriptions.",
+      "q_num": 2,
+      "question": "A person who avoids human society and prefers to live alone.",
       "options": {
-        "a": "Entomologist",
-        "b": "Epigraphy",
-        "c": "Psychology (n)",
-        "d": "Paleographer"
+        "a": "Philosopher",
+        "b": "Pilgrim",
+        "c": "Ascetic",
+        "d": "Recluse"
       },
-      "answer": "b",
-      "solution": "Epigraphy is the study of ancient inscriptions. Numismatics studies coins/currency. Cartography is mapmaking. Archaeology studies human history through excavation of sites and artefacts.\n\n💡 Mnemonic Trick: Memory trick: link “Epigraphy” with “Epigraphy study ancient inscriptions Numismatics”.\n📖 Source: HTML file • Question 65\n🎯 Target Word: Epigraphy",
+      "answer": "d",
+      "solution": "Recluse avoids human society and lives in solitude. Renegade deserts or betrays a group/cause. Prodigy is someone with exceptional talent, often young. Mystic seeks spiritual truth through contemplation.\n\n💡 Mnemonic Trick: Memory trick: link “Recluse” with “Recluse avoids human society lives”.\n📖 Source: HTML file • Question 35\n🎯 Target Word: Recluse",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q2"
     },
     {
-      "q_num": 14,
-      "question": "A person who talks too much about trivial matters.",
+      "q_num": 3,
+      "question": "Choose the one-word substitution for: \"Someone who has been forced to flee his or her country because of persecution, war or violence.\"",
+      "options": {
+        "a": "Refugee (n)",
+        "b": "Veteran (n)",
+        "c": "Expatriate (n/adj/v)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "a",
+      "solution": "Someone who has been forced to flee his or her country because of persecution, war or violence.\n\n💡 Mnemonic Trick: Memory trick: link “Refugee (n)” with “Someone been forced flee country”.\n📖 Source: PDF • page 20\n🎯 Target Word: Refugee (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q3"
+    },
+    {
+      "q_num": 4,
+      "question": "A person morally unprincipled; a wicked or evil person.",
       "options": {
         "a": "Loquacious",
         "b": "Pacifist",
-        "c": "Garrulous (n)",
-        "d": "Pedestrian"
+        "c": "Pedestrian",
+        "d": "Reprobate"
       },
-      "answer": "a",
-      "solution": "Loquacious describes someone who talks excessively about trivial matters. Taciturn means reserved/silent by nature. Reticent means unwilling to express thoughts freely. Pithy means concise and meaningful.\n\n💡 Mnemonic Trick: Memory trick: link “Loquacious” with “Loquacious describes someone talks excessively”.\n📖 Source: HTML file • Question 66\n🎯 Target Word: Loquacious",
+      "answer": "d",
+      "solution": "Reprobate is a morally unprincipled, wicked person. Sycophant is a flatterer seeking advantage. Mendacious means dishonest. Insouciant means carefree/unconcerned.\n\n💡 Mnemonic Trick: Memory trick: link “Reprobate” with “Reprobate morally unprincipled, wicked person”.\n📖 Source: HTML file • Question 47\n🎯 Target Word: Reprobate",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the one-word substitution for: \"Showing deep respect.\"",
+      "options": {
+        "a": "Plutocracy (n)",
+        "b": "Matricide (n)",
+        "c": "Facsimile (n)",
+        "d": "Reverent (adj)"
+      },
+      "answer": "d",
+      "solution": "Showing deep respect.\n\n💡 Mnemonic Trick: Memory trick: link “Reverent (adj)” with “Showing deep respect”.\n📖 Source: PDF • page 7\n🎯 Target Word: Reverent (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q5"
+    },
+    {
+      "q_num": 6,
+      "question": "A person who finds joy in the pain or suffering of others.",
+      "options": {
+        "a": "Epicurean",
+        "b": "Sadist",
+        "c": "Stoic (n)",
+        "d": "Hedonist"
+      },
+      "answer": "b",
+      "solution": "Sadist finds pleasure in others' pain or suffering. Pessimist sees the worst side of things. Masochist derives gratification from their own pain. Narcissist has excessive self-admiration.\n\n💡 Mnemonic Trick: Memory trick: link “Sadist” with “Sadist finds pleasure others pain”.\n📖 Source: HTML file • Question 60\n🎯 Target Word: Sadist",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "A place for the care and treatment of people who are recovering from illness.",
+      "options": {
+        "a": "Exodus (n)",
+        "b": "Sanatorium",
+        "c": "Archive (n)",
+        "d": "Alumni (n)"
+      },
+      "answer": "b",
+      "solution": "Sanatorium is a facility for the care of people recovering from illness. Dormitory is a shared sleeping hall. Cemetery is a burial ground. Refuge is a place of safety/shelter.\n\n💡 Mnemonic Trick: Memory trick: link “Sanatorium” with “Sanatorium facility care people recovering”.\n📖 Source: HTML file • Question 11\n🎯 Target Word: Sanatorium",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "The detective was searching for a person who is blamed for the wrongdoings, mistakes, or faults of others, especially for reasons of expediency.",
+      "options": {
+        "a": "Stoic (n)",
+        "b": "Philanthropist (n)",
+        "c": "Cynic (n)",
+        "d": "Scapegoat"
+      },
+      "answer": "d",
+      "solution": "Scapegoat is someone blamed for others' wrongdoings for convenience. Culprit is the one actually responsible for a misdeed. Accomplice helps commit a crime. Perpetrator carries out the harmful act.\n\n💡 Mnemonic Trick: Memory trick: link “Scapegoat” with “Scapegoat someone blamed others wrongdoings”.\n📖 Source: HTML file • Question 83\n🎯 Target Word: Scapegoat",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "An animal that feeds on dead animals.",
+      "options": {
+        "a": "Scavenger",
+        "b": "Entomologist",
+        "c": "Solipsist",
+        "d": "Vegetarian"
+      },
+      "answer": "a",
+      "solution": "Scavenger feeds on dead animals. Predator hunts and kills prey. Omnivore eats both plants and animals. Herbivore feeds only on plants.\n\n💡 Mnemonic Trick: Memory trick: link “Scavenger” with “Scavenger feeds dead animals Predator”.\n📖 Source: HTML file • Question 19\n🎯 Target Word: Scavenger",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the one-word substitution for: \"A formal split within a religious organization\"",
+      "options": {
+        "a": "Apostate (n)",
+        "b": "Elegy (n)",
+        "c": "Schism (n)",
+        "d": "Abeyance (n)"
+      },
+      "answer": "c",
+      "solution": "A formal split within a religious organization\n\n💡 Mnemonic Trick: Memory trick: link “Schism (n)” with “formal split within religious organization”.\n📖 Source: PDF • page 27\n🎯 Target Word: Schism (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the one-word substitution for: \"A medicine or other substance that has a calming or soothing effect.\"",
+      "options": {
+        "a": "Analgesic (n/adj)",
+        "b": "Narcotic (n)",
+        "c": "Blot (n/v)",
+        "d": "Sedative (n/adj)"
+      },
+      "answer": "d",
+      "solution": "A medicine or other substance that has a calming or soothing effect.\n\n💡 Mnemonic Trick: Memory trick: link “Sedative (n/adj)” with “medicine other substance that calming”.\n📖 Source: PDF • page 6\n🎯 Target Word: Sedative (n/adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q11"
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the one-word substitution for: \"Using long words\"",
+      "options": {
+        "a": "Embezzlement (n)",
+        "b": "Sesquipedalian (adj)",
+        "c": "Calligraphy (n)",
+        "d": "Kleptomaniac (n)"
+      },
+      "answer": "b",
+      "solution": "Using long words\n\n💡 Mnemonic Trick: Memory trick: link “Sesquipedalian (adj)” with “Using long words”.\n📖 Source: PDF • page 12\n🎯 Target Word: Sesquipedalian (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q12"
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the one-word substitution for: \"When the opposite of what is expected happens\"",
+      "options": {
+        "a": "Calligraphy (n)",
+        "b": "Situational Irony (n)",
+        "c": "Embezzlement (n)",
+        "d": "Kleptomaniac (n)"
+      },
+      "answer": "b",
+      "solution": "When the opposite of what is expected happens\n\n💡 Mnemonic Trick: Memory trick: link “Situational Irony (n)” with “When opposite what expected happens”.\n📖 Source: PDF • page 15\n🎯 Target Word: Situational Irony (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q13"
+    },
+    {
+      "q_num": 14,
+      "question": "One who finds it difficult to believe anything without proof.",
+      "options": {
+        "a": "Cynic",
+        "b": "Atheist",
+        "c": "Skeptic",
+        "d": "Hedonist"
+      },
+      "answer": "c",
+      "solution": "Skeptic doubts things without proof. Credulous means overly ready to believe things. Agnostic holds that God's existence cannot be known. Cynic believes people act only from self-interest.\n\n💡 Mnemonic Trick: Memory trick: link “Skeptic” with “Skeptic doubts things without proof”.\n📖 Source: HTML file • Question 8\n🎯 Target Word: Skeptic",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q14"
     },
     {
       "q_num": 15,
-      "question": "Practising severe self-discipline and abstention, typically for religious reasons.",
+      "question": "Vocabulary that is used between people who belong to the same social group and who know each other well.",
       "options": {
-        "a": "Pilgrim",
-        "b": "Loquacious",
-        "c": "Ascetic",
-        "d": "Austere"
+        "a": "Totem (n)",
+        "b": "Alumni (n)",
+        "c": "Slang",
+        "d": "Palindrome"
       },
-      "answer": "d",
-      "solution": "Austere describes strict self-discipline and abstaining from comforts, often for religious reasons. Hedonistic means pursuing pleasure. Debauched means indulging excessively in sensual pleasure. Sybaritic means fond of luxury.\n\n💡 Mnemonic Trick: Memory trick: link “Austere” with “Austere describes strict self-discipline abstaining”.\n📖 Source: HTML file • Question 67\n🎯 Target Word: Austere",
+      "answer": "c",
+      "solution": "Slang is informal vocabulary used within a close social group. Idiom is a fixed phrase whose meaning isn't deducible from individual words. Colloquialism is informal, conversational language generally. Euphemism substitutes a milder word for a harsh one.\n\n💡 Mnemonic Trick: Memory trick: link “Slang” with “Slang informal vocabulary used within”.\n📖 Source: HTML file • Question 73\n🎯 Target Word: Slang",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q15"
     },
     {
       "q_num": 16,
-      "question": "Able to be understood by only a few people who have special knowledge or interest.",
+      "question": "A person who believes that only the self exists and that everything outside one&#x27;s own mind is merely an illusion.",
       "options": {
-        "a": "Hedonist",
-        "b": "Esoteric",
-        "c": "Hypocrite",
-        "d": "Skeptic"
+        "a": "Solipsist",
+        "b": "Fatalist (n)",
+        "c": "Fatalist",
+        "d": "Epicurean"
       },
-      "answer": "b",
-      "solution": "Esoteric means understood by only a select few with specialised knowledge. Opaque means hard to understand generally. Inefficient means not productive. Illegible means unable to be read clearly.\n\n💡 Mnemonic Trick: Memory trick: link “Esoteric” with “Esoteric means understood only select”.\n📖 Source: HTML file • Question 68\n🎯 Target Word: Esoteric",
+      "answer": "a",
+      "solution": "Solipsist believes only their own mind is certain to exist, and everything else may be illusion. Nihilist rejects all moral/religious principles. Existentialist emphasises individual freedom and meaning-making. Idealist believes reality is fundamentally mental or spiritual.\n\n💡 Mnemonic Trick: Memory trick: link “Solipsist” with “Solipsist believes only their mind”.\n📖 Source: HTML file • Question 74\n🎯 Target Word: Solipsist",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q16"
     },
     {
       "q_num": 17,
-      "question": "A story, poem, or picture that can be interpreted to reveal a hidden meaning, typically a moral or political one.",
+      "question": "Choose the one-word substitution for: \"A person who talks in sleep\"",
       "options": {
-        "a": "Fable",
-        "b": "Parable (n)",
-        "c": "Allegory",
-        "d": "Fatalist"
+        "a": "Garrulous (n)",
+        "b": "Cobbler (n)",
+        "c": "Somniloquist (n)",
+        "d": "Recluse (n)"
       },
       "answer": "c",
-      "solution": "Allegory conveys a hidden moral/political meaning through story, poem, or image. Fable is a short story with animal characters teaching a moral. Parable is a simple story with a spiritual lesson. Anecdote is a short real-life story.\n\n💡 Mnemonic Trick: Memory trick: link “Allegory” with “Allegory conveys hidden moral political”.\n📖 Source: HTML file • Question 69\n🎯 Target Word: Allegory",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "A general pardon for offences, especially political ones, granted by an authority.",
-      "options": {
-        "a": "Amnesty",
-        "b": "Exonerate",
-        "c": "Incendiary",
-        "d": "Amnesty (n)"
-      },
-      "answer": "a",
-      "solution": "Amnesty is an official pardon for political offences. Absolution is release from guilt. Reprieve is postponing punishment. Exoneration is clearing someone from blame.\n\n💡 Mnemonic Trick: Memory trick: link “Amnesty” with “Amnesty official pardon political offences”.\n📖 Source: HTML file • Question 70\n🎯 Target Word: Amnesty",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 19,
-      "question": "The humorous or mildly sarcastic use of words to imply the opposite of what they normally mean.",
-      "options": {
-        "a": "Paradox",
-        "b": "Irony",
-        "c": "Paradox (n)",
-        "d": "Slang"
-      },
-      "answer": "b",
-      "solution": "Irony is the use of words to imply the opposite of their literal meaning, often humorously. Sarcasm is irony used to mock or convey contempt. Satire uses humour/ridicule to critique folly or vice. Paradox is a seemingly contradictory but possibly True statement.\n\n💡 Mnemonic Trick: Memory trick: link “Irony” with “Irony words imply opposite their”.\n📖 Source: HTML file • Question 71\n🎯 Target Word: Irony",
+      "solution": "A person who talks in sleep\n\n💡 Mnemonic Trick: Memory trick: link “Somniloquist (n)” with “person talks sleep”.\n📖 Source: PDF • page 29\n🎯 Target Word: Somniloquist (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q17"
     },
     {
-      "q_num": 20,
-      "question": "A secret plot or conspiracy, especially one intended to overthrow a government or leader.",
+      "q_num": 18,
+      "question": "Choose the one-word substitution for: \"A person who spends money recklessly\"",
       "options": {
-        "a": "Cipher (n)",
-        "b": "Cabal",
-        "c": "Heresy (n)",
-        "d": "Zoo (n)"
+        "a": "Spendthrift (n)",
+        "b": "Somniloquist (n)",
+        "c": "Garrulous (n)",
+        "d": "Recluse (n)"
       },
-      "answer": "b",
-      "solution": "Cabal is a secret plot/conspiracy aimed at overthrowing a government or leader. Coup is a sudden, illegal seizure of power. Mutiny is open rebellion, especially by soldiers/sailors. Machination is a crafty secret scheme for an evil purpose.\n\n💡 Mnemonic Trick: Memory trick: link “Cabal” with “Cabal secret plot conspiracy aimed”.\n📖 Source: HTML file • Question 72\n🎯 Target Word: Cabal",
+      "answer": "a",
+      "solution": "A person who spends money recklessly\n\n💡 Mnemonic Trick: Memory trick: link “Spendthrift (n)” with “person spends money recklessly”.\n📖 Source: PDF • page 20\n🎯 Target Word: Spendthrift (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set10_q18"
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the one-word substitution for: \"A person who is different to pleasure or pain\"",
+      "options": {
+        "a": "Author (n)",
+        "b": "Stoic (n)",
+        "c": "Recluse (n)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "b",
+      "solution": "A person who is different to pleasure or pain\n\n💡 Mnemonic Trick: Memory trick: link “Stoic (n)” with “person different pleasure pain”.\n📖 Source: PDF • page 21\n🎯 Target Word: Stoic (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "A government or state ruled directly by the military.",
+      "options": {
+        "a": "Stratocracy",
+        "b": "Monarchy",
+        "c": "Plutocracy (n)",
+        "d": "Kleptocracy"
+      },
+      "answer": "a",
+      "solution": "Stratocracy is government ruled directly by the military. Bureaucracy is rule by officials/administrators. Autocracy is rule by one person with absolute power. Plutocracy is rule by the wealthy.\n\n💡 Mnemonic Trick: Memory trick: link “Stratocracy” with “Stratocracy government ruled directly military”.\n📖 Source: HTML file • Question 43\n🎯 Target Word: Stratocracy",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set10_q20"
     }
   ]
 }

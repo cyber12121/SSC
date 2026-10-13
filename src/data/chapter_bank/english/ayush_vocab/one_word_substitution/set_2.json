@@ -1,392 +1,415 @@
 {
   "chapter_num": 2,
-  "chapter_title": "One Word Substitution - Set 2",
+  "chapter_title": "OWS - Set 2 (Letters A-B)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_2",
   "is_test": true,
+  "letter_range": "Letters A-B",
+  "start_letter": "A",
+  "end_letter": "B",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the one-word substitution for: \"A person who can talk non-stop or can speak continuously.\"",
+      "question": "Choose the one-word substitution for: \"A person who studies the origin and development of human societies and cultures\"",
       "options": {
-        "a": "Somniloquist (n)",
-        "b": "Garrulous (n)",
-        "c": "Recluse (n)",
-        "d": "Garrulous (adj)"
+        "a": "Mineralogist (n)",
+        "b": "Anthropology (n)",
+        "c": "Anthropologist (n)",
+        "d": "Bibliophile (n)"
       },
-      "answer": "d",
-      "solution": "A person who can talk non-stop or can speak continuously.\n\n💡 Mnemonic Trick: Memory trick: link “Garrulous (adj)” with “person talk non-stop speak continuously”.\n📖 Source: PDF • page 7\n🎯 Target Word: Garrulous (adj)",
+      "answer": "c",
+      "solution": "A person who studies the origin and development of human societies and cultures\n\n💡 Mnemonic Trick: Memory trick: link “Anthropologist (n)” with “person studies origin development human”.\n📖 Source: PDF • page 20\n🎯 Target Word: Anthropologist (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q1"
     },
     {
       "q_num": 2,
-      "question": "Choose the one-word substitution for: \"A person who does not drink any alcohol.\"",
+      "question": "Choose the one-word substitution for: \"The study of human races, origins, and societies\"",
       "options": {
-        "a": "Garrulous (n)",
-        "b": "Somniloquist (n)",
-        "c": "Teetotaler (n)",
-        "d": "Recluse (n)"
+        "a": "Psychology (n)",
+        "b": "Anthropologist (n)",
+        "c": "Anthropology (n)",
+        "d": "Abscond (v)"
       },
       "answer": "c",
-      "solution": "A person who does not drink any alcohol.\n\n💡 Mnemonic Trick: Memory trick: link “Teetotaler (n)” with “person does drink alcohol”.\n📖 Source: PDF • page 7\n🎯 Target Word: Teetotaler (n)",
+      "solution": "The study of human races, origins, and societies\n\n💡 Mnemonic Trick: Memory trick: link “Anthropology (n)” with “study human races, origins, societies”.\n📖 Source: PDF • page 28\n🎯 Target Word: Anthropology (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q2"
     },
     {
       "q_num": 3,
-      "question": "Choose the one-word substitution for: \"A person who helps others through charity\"",
+      "question": "A sudden, violent outburst of emotion or activity.",
       "options": {
-        "a": "Philanthropist (n)",
-        "b": "Cynic (n)",
-        "c": "Garrulous (n)",
-        "d": "Somniloquist (n)"
+        "a": "Cataclysm (n)",
+        "b": "Omnipotent",
+        "c": "Apoplexy",
+        "d": "Zoo (n)"
       },
-      "answer": "a",
-      "solution": "A person who helps others through charity\n\n💡 Mnemonic Trick: Memory trick: link “Philanthropist (n)” with “person helps others through charity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Philanthropist (n)",
+      "answer": "c",
+      "solution": "Apoplexy denotes a sudden violent outburst of emotion or activity. Frenzy is wild excitement/uncontrolled activity. Tempest is a violent storm. Maelstrom is a powerful whirlpool or chaotic situation.\n\n💡 Mnemonic Trick: Memory trick: link “Apoplexy” with “Apoplexy denotes sudden violent outburst”.\n📖 Source: HTML file • Question 4\n🎯 Target Word: Apoplexy",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q3"
     },
     {
       "q_num": 4,
-      "question": "Choose the one-word substitution for: \"One who always expects the worst\"",
+      "question": "A sudden, violent outburst of emotion or activity.",
       "options": {
-        "a": "Pessimist (n)",
-        "b": "Recluse (n)",
-        "c": "Garrulous (n)",
-        "d": "Cobbler (n)"
+        "a": "Dilettante",
+        "b": "Apoplexy",
+        "c": "Zoo (n)",
+        "d": "Cataclysm (n)"
       },
-      "answer": "a",
-      "solution": "One who always expects the worst\n\n💡 Mnemonic Trick: Memory trick: link “Pessimist (n)” with “always expects worst”.\n📖 Source: PDF • page 12\n🎯 Target Word: Pessimist (n)",
+      "answer": "b",
+      "solution": "Apoplexy denotes a sudden violent outburst of emotion or activity. Frenzy is wild, uncontrolled excitement. Tempest is a violent storm. Maelstrom is a turbulent whirlpool or chaotic situation.\n\n💡 Mnemonic Trick: Memory trick: link “Apoplexy” with “Apoplexy denotes sudden violent outburst”.\n📖 Source: HTML file • Question 23\n🎯 Target Word: Apoplexy",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q4"
     },
     {
       "q_num": 5,
-      "question": "Choose the one-word substitution for: \"Honesty and strong moral principles\"",
+      "question": "Choose the one-word substitution for: \"One who abandons one&#x27;s religious faith or principles\"",
       "options": {
-        "a": "Integrity (n)",
-        "b": "Abscond (v)",
-        "c": "Modesty (n)",
-        "d": "Apostate (n)"
+        "a": "Pessimist (n)",
+        "b": "Apostate (n)",
+        "c": "Garrulous (n)",
+        "d": "Recluse (n)"
       },
-      "answer": "a",
-      "solution": "Honesty and strong moral principles\n\n💡 Mnemonic Trick: Memory trick: link “Integrity (n)” with “Honesty strong moral principles”.\n📖 Source: PDF • page 12\n🎯 Target Word: Integrity (n)",
+      "answer": "b",
+      "solution": "One who abandons one's religious faith or principles\n\n💡 Mnemonic Trick: Memory trick: link “Apostate (n)” with “abandons religious faith principles”.\n📖 Source: PDF • page 20\n🎯 Target Word: Apostate (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q5"
     },
     {
       "q_num": 6,
-      "question": "Choose the one-word substitution for: \"Humility and lack of vanity\"",
+      "question": "Choose the one-word substitution for: \"An independent person appointed to settle a dispute\"",
       "options": {
-        "a": "Abeyance (n)",
-        "b": "Modesty (n)",
-        "c": "Ennui (n)",
-        "d": "Abscond (v)"
+        "a": "Autocracy (n)",
+        "b": "Dromomaniac (n)",
+        "c": "Garrulous (n)",
+        "d": "Arbitrator (n)"
       },
-      "answer": "b",
-      "solution": "Humility and lack of vanity\n\n💡 Mnemonic Trick: Memory trick: link “Modesty (n)” with “Humility lack vanity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Modesty (n)",
+      "answer": "d",
+      "solution": "An independent person appointed to settle a dispute\n\n💡 Mnemonic Trick: Memory trick: link “Arbitrator (n)” with “independent person appointed settle dispute”.\n📖 Source: PDF • page 15\n🎯 Target Word: Arbitrator (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q6"
     },
     {
       "q_num": 7,
-      "question": "Choose the one-word substitution for: \"A short interesting story\"",
+      "question": "Choose the one-word substitution for: \"A place where records and documents are stored\"",
       "options": {
-        "a": "Ephemeral (adj)",
-        "b": "Cliffhanger (n)",
-        "c": "Anecdote (n)",
-        "d": "Parable (n)"
+        "a": "Hangar (n)",
+        "b": "Zoo (n)",
+        "c": "Morgue (n)",
+        "d": "Archive (n)"
       },
-      "answer": "c",
-      "solution": "A short interesting story\n\n💡 Mnemonic Trick: Memory trick: link “Anecdote (n)” with “short interesting story”.\n📖 Source: PDF • page 12\n🎯 Target Word: Anecdote (n)",
+      "answer": "d",
+      "solution": "A place where records and documents are stored\n\n💡 Mnemonic Trick: Memory trick: link “Archive (n)” with “place where records documents stored”.\n📖 Source: PDF • page 6\n🎯 Target Word: Archive (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q7"
     },
     {
       "q_num": 8,
-      "question": "Choose the one-word substitution for: \"Government by the wealthy\"",
+      "question": "A form of government in which power is held by the nobility.",
       "options": {
-        "a": "Autocracy (n)",
-        "b": "Matricide (n)",
-        "c": "Plutocracy (n)",
-        "d": "Facsimile (n)"
+        "a": "Aristocracy",
+        "b": "Stratocracy",
+        "c": "Monarchy",
+        "d": "Kleptocracy"
       },
-      "answer": "c",
-      "solution": "Government by the wealthy\n\n💡 Mnemonic Trick: Memory trick: link “Plutocracy (n)” with “Government wealthy”.\n📖 Source: PDF • page 12\n🎯 Target Word: Plutocracy (n)",
+      "answer": "a",
+      "solution": "Aristocracy is government in which power rests with the nobility. Monarchy is rule headed by a monarch. Gerontocracy is rule by the elderly. Authoritarianism values control/order over personal freedom.\n\n💡 Mnemonic Trick: Memory trick: link “Aristocracy” with “Aristocracy government which power rests”.\n📖 Source: HTML file • Question 61\n🎯 Target Word: Aristocracy",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q8"
     },
     {
       "q_num": 9,
-      "question": "Choose the one-word substitution for: \"Love of mankind; charity\"",
+      "question": "A place where weapons and ammunition are stored.",
       "options": {
-        "a": "Kleptomaniac (n)",
-        "b": "Anthropologist (n)",
-        "c": "Philanthropy (n)",
-        "d": "Embezzlement (n)"
+        "a": "Arsenal",
+        "b": "Zoo (n)",
+        "c": "Hangar (n)",
+        "d": "Archive (n)"
       },
-      "answer": "c",
-      "solution": "Love of mankind; charity\n\n💡 Mnemonic Trick: Memory trick: link “Philanthropy (n)” with “Love mankind charity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Philanthropy (n)",
+      "answer": "a",
+      "solution": "Arsenal is a place where weapons/ammunition are made, stored or repaired. Dockyard is where ships are built/repaired. Repository is a general storage place. Hangar houses aircraft.\n\n💡 Mnemonic Trick: Memory trick: link “Arsenal” with “Arsenal place where weapons ammunition”.\n📖 Source: HTML file • Question 14\n🎯 Target Word: Arsenal",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q9"
     },
     {
       "q_num": 10,
-      "question": "Choose the one-word substitution for: \"Using long words\"",
+      "question": "Choose the one-word substitution for: \"An act of intentionally setting fire to property\"",
       "options": {
-        "a": "Embezzlement (n)",
-        "b": "Sesquipedalian (adj)",
-        "c": "Calligraphy (n)",
-        "d": "Kleptomaniac (n)"
+        "a": "Elegy (n)",
+        "b": "Patrimony (n)",
+        "c": "Arson (n)",
+        "d": "Interment (n)"
       },
-      "answer": "b",
-      "solution": "Using long words\n\n💡 Mnemonic Trick: Memory trick: link “Sesquipedalian (adj)” with “Using long words”.\n📖 Source: PDF • page 12\n🎯 Target Word: Sesquipedalian (adj)",
+      "answer": "c",
+      "solution": "An act of intentionally setting fire to property\n\n💡 Mnemonic Trick: Memory trick: link “Arson (n)” with “intentionally setting fire property”.\n📖 Source: PDF • page 27\n🎯 Target Word: Arson (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q10"
     },
     {
       "q_num": 11,
-      "question": "Choose the one-word substitution for: \"Decorative handwriting\"",
+      "question": "A person who deliberately sets fire to property.",
       "options": {
-        "a": "Kleptomaniac (n)",
-        "b": "Calligraphy (n)",
-        "c": "Plutocracy (n)",
-        "d": "Embezzlement (n)"
+        "a": "Arson (n)",
+        "b": "Veteran (n)",
+        "c": "Arsonist",
+        "d": "Incendiary"
       },
-      "answer": "b",
-      "solution": "Decorative handwriting\n\n💡 Mnemonic Trick: Memory trick: link “Calligraphy (n)” with “Decorative handwriting”.\n📖 Source: PDF • page 12\n🎯 Target Word: Calligraphy (n)",
+      "answer": "c",
+      "solution": "Arsonist deliberately sets fire to property, often for criminal/insurance motives. Pyromaniac has an uncontrollable compulsion to start fires. Vandal deliberately damages property. Saboteur deliberately destroys something, often for political/military advantage.\n\n💡 Mnemonic Trick: Memory trick: link “Arsonist” with “Arsonist deliberately sets fire property,”.\n📖 Source: HTML file • Question 54\n🎯 Target Word: Arsonist",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q11"
     },
     {
       "q_num": 12,
-      "question": "Choose the one-word substitution for: \"Art of taking photographs\"",
+      "question": "A person who chooses to live a simple life, often for religious or spiritual reasons, abstaining from worldly pleasures.",
       "options": {
-        "a": "Calligraphy (n)",
-        "b": "Cartography (n)",
-        "c": "Photography (n)",
-        "d": "Embezzlement (n)"
+        "a": "Ascetic",
+        "b": "Recluse",
+        "c": "Pilgrim",
+        "d": "Austere"
       },
-      "answer": "c",
-      "solution": "Art of taking photographs\n\n💡 Mnemonic Trick: Memory trick: link “Photography (n)” with “taking photographs”.\n📖 Source: PDF • page 12\n🎯 Target Word: Photography (n)",
+      "answer": "a",
+      "solution": "Ascetic lives a simple life, abstaining from worldly pleasures for spiritual reasons. Hedonist pursues pleasure as life's main goal. Sybarite indulges in luxury. Libertine acts without moral restraint, especially sexually.\n\n💡 Mnemonic Trick: Memory trick: link “Ascetic” with “Ascetic lives simple life, abstaining”.\n📖 Source: HTML file • Question 81\n🎯 Target Word: Ascetic",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q12"
     },
     {
       "q_num": 13,
-      "question": "Choose the one-word substitution for: \"Delaying tasks unnecessarily\"",
+      "question": "Choose the one-word substitution for: \"A person who abstains from all forms of indulgence\"",
       "options": {
-        "a": "Embezzlement (n)",
-        "b": "Calligraphy (n)",
-        "c": "Procrastination (n)",
-        "d": "Kleptomaniac (n)"
+        "a": "Cobbler (n)",
+        "b": "Ascetic (n)",
+        "c": "Recluse (n)",
+        "d": "Garrulous (n)"
       },
-      "answer": "c",
-      "solution": "Delaying tasks unnecessarily\n\n💡 Mnemonic Trick: Memory trick: link “Procrastination (n)” with “Delaying tasks unnecessarily”.\n📖 Source: PDF • page 12\n🎯 Target Word: Procrastination (n)",
+      "answer": "b",
+      "solution": "A person who abstains from all forms of indulgence\n\n💡 Mnemonic Trick: Memory trick: link “Ascetic (n)” with “person abstains from forms indulgence”.\n📖 Source: PDF • page 27\n🎯 Target Word: Ascetic (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q13"
     },
     {
       "q_num": 14,
-      "question": "Choose the one-word substitution for: \"Discussion to reach agreement\"",
+      "question": "A person who denies the existence of God.",
       "options": {
-        "a": "Kleptomaniac (n)",
-        "b": "Calligraphy (n)",
-        "c": "Negotiation (n)",
-        "d": "Embezzlement (n)"
+        "a": "Skeptic",
+        "b": "Epicurean",
+        "c": "Atheist",
+        "d": "Fatalist (n)"
       },
       "answer": "c",
-      "solution": "Discussion to reach agreement\n\n💡 Mnemonic Trick: Memory trick: link “Negotiation (n)” with “Discussion reach agreement”.\n📖 Source: PDF • page 12\n🎯 Target Word: Negotiation (n)",
+      "solution": "Atheist denies the existence of God. Agnostic holds God's existence cannot be known either way. Theist believes in a god who intervenes in the universe. Heretic holds beliefs contrary to established doctrine.\n\n💡 Mnemonic Trick: Memory trick: link “Atheist” with “Atheist denies existence Agnostic holds”.\n📖 Source: HTML file • Question 53\n🎯 Target Word: Atheist",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q14"
     },
     {
       "q_num": 15,
-      "question": "Choose the one-word substitution for: \"Temporary suspension\"",
+      "question": "Practising severe self-discipline and abstention, typically for religious reasons.",
       "options": {
-        "a": "Facsimile (n)",
-        "b": "Matricide (n)",
-        "c": "Abeyance (n)",
-        "d": "Plutocracy (n)"
+        "a": "Pilgrim",
+        "b": "Loquacious",
+        "c": "Ascetic",
+        "d": "Austere"
       },
-      "answer": "c",
-      "solution": "Temporary suspension\n\n💡 Mnemonic Trick: Memory trick: link “Abeyance (n)” with “Temporary suspension”.\n📖 Source: PDF • page 12\n🎯 Target Word: Abeyance (n)",
+      "answer": "d",
+      "solution": "Austere describes strict self-discipline and abstaining from comforts, often for religious reasons. Hedonistic means pursuing pleasure. Debauched means indulging excessively in sensual pleasure. Sybaritic means fond of luxury.\n\n💡 Mnemonic Trick: Memory trick: link “Austere” with “Austere describes strict self-discipline abstaining”.\n📖 Source: HTML file • Question 67\n🎯 Target Word: Austere",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q15"
     },
     {
       "q_num": 16,
-      "question": "Choose the one-word substitution for: \"Compulsive thief\"",
+      "question": "Choose the one-word substitution for: \"A person who writes books\"",
       "options": {
-        "a": "Plutocracy (n)",
-        "b": "Calligraphy (n)",
-        "c": "Embezzlement (n)",
-        "d": "Kleptomaniac (n)"
+        "a": "Recluse (n)",
+        "b": "Author (n)",
+        "c": "Bibliophile (n)",
+        "d": "Garrulous (n)"
       },
-      "answer": "d",
-      "solution": "Compulsive thief\n\n💡 Mnemonic Trick: Memory trick: link “Kleptomaniac (n)” with “Compulsive thief”.\n📖 Source: PDF • page 12\n🎯 Target Word: Kleptomaniac (n)",
+      "answer": "b",
+      "solution": "A person who writes books\n\n💡 Mnemonic Trick: Memory trick: link “Author (n)” with “person writes books”.\n📖 Source: PDF • page 21\n🎯 Target Word: Author (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q16"
     },
     {
       "q_num": 17,
-      "question": "Choose the one-word substitution for: \"Person overly anxious about health\"",
+      "question": "Choose the one-word substitution for: \"A government by a single person.\"",
       "options": {
-        "a": "Somniloquist (n)",
-        "b": "Autocracy (n)",
-        "c": "Hypochondriac (n)",
-        "d": "Garrulous (n)"
+        "a": "Vagabond (n)",
+        "b": "Garrulous (n)",
+        "c": "Plutocracy (n)",
+        "d": "Autocracy (n)"
       },
-      "answer": "c",
-      "solution": "Person overly anxious about health\n\n💡 Mnemonic Trick: Memory trick: link “Hypochondriac (n)” with “Person overly anxious about health”.\n📖 Source: PDF • page 12\n🎯 Target Word: Hypochondriac (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "Choose the one-word substitution for: \"The act of imitating someone&#x27;s speech, mannerisms, or actions for entertainment or ridicule\"",
-      "options": {
-        "a": "Interment (n)",
-        "b": "Arson (n)",
-        "c": "Mimicry (n)",
-        "d": "Impromptu (n)"
-      },
-      "answer": "c",
-      "solution": "The act of imitating someone's speech, mannerisms, or actions for entertainment or ridicule\n\n💡 Mnemonic Trick: Memory trick: link “Mimicry (n)” with “imitating someone speech, mannerisms, actions”.\n📖 Source: PDF • page 15\n🎯 Target Word: Mimicry (n)",
+      "answer": "d",
+      "solution": "A government by a single person.\n\n💡 Mnemonic Trick: Memory trick: link “Autocracy (n)” with “government single person”.\n📖 Source: PDF • page 7\n🎯 Target Word: Autocracy (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set2_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the one-word substitution for: \"One who writes traditional poems\"",
+      "options": {
+        "a": "Author (n)",
+        "b": "Bard (n)",
+        "c": "Recluse (n)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "b",
+      "solution": "One who writes traditional poems\n\n💡 Mnemonic Trick: Memory trick: link “Bard (n)” with “writes traditional poems”.\n📖 Source: PDF • page 28\n🎯 Target Word: Bard (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set2_q18"
     },
     {
       "q_num": 19,
-      "question": "Choose the one-word substitution for: \"A communicable disease that can spread rapidly from person to person through direct contact\"",
+      "question": "Choose the one-word substitution for: \"A person who loves or collects books\"",
       "options": {
-        "a": "Autocracy (n)",
-        "b": "Philanthropist (n)",
-        "c": "Garrulous (n)",
-        "d": "Contagious (adj)"
+        "a": "Bibliophile (n)",
+        "b": "Garrulous (n)",
+        "c": "Somniloquist (n)",
+        "d": "Author (n)"
       },
-      "answer": "d",
-      "solution": "A communicable disease that can spread rapidly from person to person through direct contact\n\n💡 Mnemonic Trick: Memory trick: link “Contagious (adj)” with “communicable disease that spread rapidly”.\n📖 Source: PDF • page 15\n🎯 Target Word: Contagious (adj)",
+      "answer": "a",
+      "solution": "A person who loves or collects books\n\n💡 Mnemonic Trick: Memory trick: link “Bibliophile (n)” with “person loves collects books”.\n📖 Source: PDF • page 20\n🎯 Target Word: Bibliophile (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set2_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the one-word substitution for: \"A person who loves and collects books\"",
+      "options": {
+        "a": "Mineralogist (n)",
+        "b": "Author (n)",
+        "c": "Bibliophile (n)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "c",
+      "solution": "A person who loves and collects books\n\n💡 Mnemonic Trick: Memory trick: link “Bibliophile (n)” with “person loves collects books”.\n📖 Source: PDF • page 28\n🎯 Target Word: Bibliophile (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 20,
-      "question": "Choose the one-word substitution for: \"In his extreme old age when he behaves like a fool\"",
-      "options": {
-        "a": "Elegy (n)",
-        "b": "Facsimile (n)",
-        "c": "Abeyance (n)",
-        "d": "Dotage (n)"
       },
-      "answer": "d",
-      "solution": "In his extreme old age when he behaves like a fool\n\n💡 Mnemonic Trick: Memory trick: link “Dotage (n)” with “extreme when behaves like fool”.\n📖 Source: PDF • page 15\n🎯 Target Word: Dotage (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
+      "id": "ayush_one_word_substitution_set2_q20"
     }
   ]
 }

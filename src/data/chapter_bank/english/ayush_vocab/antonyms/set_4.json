@@ -1,186 +1,118 @@
 {
   "chapter_num": 4,
-  "chapter_title": "Antonyms - Set 4",
+  "chapter_title": "Antonyms - Set 4 (Letters H-K)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "antonyms",
   "set_name": "set_4",
   "is_test": true,
+  "letter_range": "Letters H-K",
+  "start_letter": "H",
+  "end_letter": "K",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the antonym of \"Superfluous\"",
+      "question": "Choose the antonym of \"Hegemony\"",
       "options": {
-        "a": "Celebrated",
-        "b": "Obscure",
-        "c": "Diminish",
-        "d": "Essential"
+        "a": "Innovate",
+        "b": "Subordination (v/hurk)",
+        "c": "Commend",
+        "d": "Inexpressive"
       },
-      "answer": "d",
-      "solution": "More than what is needed; unnecessary\n\n💡 Mnemonic Trick: Memory trick: link “Essential (vko';d)” with “More than what needed unnecessary”.\n📖 Source: PDF • page 10\n🎯 Target Word: Superfluous (adj)",
+      "answer": "b",
+      "solution": "Dominance, leadership\n\n💡 Mnemonic Trick: Memory trick: link “Subordination (v/hurk)” with “Dominance, leadership”.\n📖 Source: PDF • page 5\n🎯 Target Word: Hegemony (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q1"
     },
     {
       "q_num": 2,
-      "question": "Choose the antonym of \"Propitiate\"",
+      "question": "Choose the antonym of \"Heresy\"",
       "options": {
-        "a": "Deceitful (/ks[ksckt)",
-        "b": "Descend",
-        "c": "Refuse",
-        "d": "Enrage (Øksf/r djuk)"
+        "a": "Commend",
+        "b": "Inexpressive",
+        "c": "Orthodoxy (:f<+okfnrk)",
+        "d": "Innovate"
       },
-      "answer": "d",
-      "solution": "To appease or win favor by making concessions\n\n💡 Mnemonic Trick: Memory trick: link “Enrage (Øksf/r djuk)” with “appease favor making concessions”.\n📖 Source: PDF • page 10\n🎯 Target Word: Propitiate (v)",
+      "answer": "c",
+      "solution": "Belief or opinion contrary to orthodox religious doctrine\n\n💡 Mnemonic Trick: Memory trick: link “Orthodoxy (:f<+okfnrk)” with “Belief opinion contrary orthodox religious”.\n📖 Source: PDF • page 5\n🎯 Target Word: Heresy (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q2"
     },
     {
       "q_num": 3,
-      "question": "Choose the antonym of \"Dogmatic\"",
+      "question": "Choose the antonym of \"Hostile\"",
       "options": {
-        "a": "Flexible",
-        "b": "Fragile",
-        "c": "Obscure",
-        "d": "Compromise (le>kSrk)"
+        "a": "Celebrated",
+        "b": "Forbid",
+        "c": "Friendly (fe=kor)",
+        "d": "Diminish"
       },
-      "answer": "a",
-      "solution": "Strongly opinionated; asserting views as absolute\n\n💡 Mnemonic Trick: Memory trick: link “Flexible (yphyk)” with “Strongly opinionated asserting views absolute”.\n📖 Source: PDF • page 11\n🎯 Target Word: Dogmatic (adj)",
+      "answer": "c",
+      "solution": "Unfriendly\n\n💡 Mnemonic Trick: Memory trick: link “Friendly (fe=kor)” with “Unfriendly”.\n📖 Source: PDF • page 19\n🎯 Target Word: Hostile (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q3"
     },
     {
       "q_num": 4,
-      "question": "Choose the antonym of \"Clandestine\"",
+      "question": "Choose the antonym of \"Iconoclast\"",
       "options": {
-        "a": "Oppose (fojks/ djuk)",
-        "b": "Biased (i{kikrh)",
-        "c": "Open (•qyk)",
-        "d": "Deep"
+        "a": "Conformist",
+        "b": "Inexpressive",
+        "c": "Honorees",
+        "d": "Virtuous"
       },
-      "answer": "c",
-      "solution": "Done secretly, often for illegal reasons\n\n💡 Mnemonic Trick: Memory trick: link “Open (•qyk)” with “Done secretly, often illegal reasons”.\n📖 Source: PDF • page 11\n🎯 Target Word: Clandestine (adj)",
+      "answer": "a",
+      "solution": "A person who opposes established beliefs or institutions\n\n💡 Mnemonic Trick: Memory trick: link “Conformist (ijaijkoknh)” with “person opposes established beliefs institutions”.\n📖 Source: PDF • page 4\n🎯 Target Word: Iconoclast (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q4"
     },
     {
       "q_num": 5,
-      "question": "Choose the antonym of \"Sanguine\"",
+      "question": "Choose the antonym of \"Ignorance\"",
       "options": {
-        "a": "Straight Forward (ljy] Li\"V)",
-        "b": "Pessimistic",
-        "c": "Melancholic",
-        "d": "Morose"
+        "a": "Enthusiasm",
+        "b": "Knowledge (Kku)",
+        "c": "Fragile",
+        "d": "Obscure"
       },
       "answer": "b",
-      "solution": "Optimistic or cheerful in difficult situations\n\n💡 Mnemonic Trick: Memory trick: link “Pessimistic (fujk'kkoknh)” with “Optimistic cheerful difficult situations”.\n📖 Source: PDF • page 11\n🎯 Target Word: Sanguine (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "Choose the antonym of \"Rebarbative\"",
-      "options": {
-        "a": "Deceitful (/ks[ksckt)",
-        "b": "Descend",
-        "c": "Attractive",
-        "d": "Harmless"
-      },
-      "answer": "c",
-      "solution": "Causing dislike or irritation; repellent\n\n💡 Mnemonic Trick: Memory trick: link “Attractive (vkd\"kZd)” with “Causing dislike irritation repellent”.\n📖 Source: PDF • page 11\n🎯 Target Word: Rebarbative (adj)",
+      "solution": "Lack of knowledge or awareness\n\n💡 Mnemonic Trick: Memory trick: link “Knowledge (Kku)” with “Lack knowledge awareness”.\n📖 Source: PDF • page 4\n🎯 Target Word: Ignorance (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "Choose the antonym of \"Exonerate\"",
-      "options": {
-        "a": "Support",
-        "b": "Commend",
-        "c": "Inexpressive",
-        "d": "Convict (nks\"kh Bgjkuk @ vijk/h)"
       },
-      "answer": "d",
-      "solution": "To free someone from blame or accusation\n\n💡 Mnemonic Trick: Memory trick: link “Convict (nks\"kh Bgjkuk @ vijk/h)” with “free someone from blame accusation”.\n📖 Source: PDF • page 11\n🎯 Target Word: Exonerate (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
+      "id": "ayush_antonyms_set4_q5"
     },
     {
-      "q_num": 8,
-      "question": "Choose the antonym of \"Scrupulous\"",
-      "options": {
-        "a": "Negligent",
-        "b": "Immoral",
-        "c": "Generous",
-        "d": "Chilly"
-      },
-      "answer": "b",
-      "solution": "Extremely careful about honesty or correctness\n\n💡 Mnemonic Trick: Memory trick: link “Immoral (vuSfrd)” with “Extremely careful about honesty correctness”.\n📖 Source: PDF • page 11\n🎯 Target Word: Scrupulous (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "Choose the antonym of \"Intransigence\"",
-      "options": {
-        "a": "Descend",
-        "b": "Flexible",
-        "c": "Compromise (le>kSrk)",
-        "d": "Pliable (yphyk] vklkuh ls <yus okyk)"
-      },
-      "answer": "c",
-      "solution": "Refusal to compromise or change one’s views\n\n💡 Mnemonic Trick: Memory trick: link “Compromise (le>kSrk)” with “Refusal compromise change views”.\n📖 Source: PDF • page 11\n🎯 Target Word: Intransigence (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
+      "q_num": 6,
       "question": "Choose the antonym of \"Imbroglio\"",
       "options": {
         "a": "Honest",
@@ -196,197 +128,288 @@
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the antonym of \"Imitate\"",
+      "options": {
+        "a": "Inexpressive",
+        "b": "Agitate (mÙksftr djuk)",
+        "c": "Commend",
+        "d": "Innovate"
+      },
+      "answer": "d",
+      "solution": "To copy\n\n💡 Mnemonic Trick: Memory trick: link “Innovate (uokpkj djuk)” with “copy”.\n📖 Source: PDF • page 19\n🎯 Target Word: Imitate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the antonym of \"Impecunious\"",
+      "options": {
+        "a": "Wealthy (/uh)",
+        "b": "Brave",
+        "c": "Vague",
+        "d": "Corrupt"
+      },
+      "answer": "a",
+      "solution": "Having no money\n\n💡 Mnemonic Trick: Memory trick: link “Wealthy (/uh)” with “Having money”.\n📖 Source: PDF • page 27\n🎯 Target Word: Impecunious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the antonym of \"Impervious\"",
+      "options": {
+        "a": "Celebrated",
+        "b": "Verifiable",
+        "c": "Harmful",
+        "d": "Permeable"
+      },
+      "answer": "d",
+      "solution": "Not affected, unpenetrable\n\n💡 Mnemonic Trick: Memory trick: link “Permeable (ikjxE;)” with “affected, unpenetrable”.\n📖 Source: PDF • page 14\n🎯 Target Word: Impervious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the antonym of \"Impute\"",
+      "options": {
+        "a": "Thoughtless",
+        "b": "Malevolent",
+        "c": "Deceitful (/ks[ksckt)",
+        "d": "Support"
+      },
+      "answer": "d",
+      "solution": "Assign blame\n\n💡 Mnemonic Trick: Memory trick: link “Support (leFkZu djuk)” with “Assign blame”.\n📖 Source: PDF • page 19\n🎯 Target Word: Impute (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q10"
     },
     {
       "q_num": 11,
-      "question": "Choose the antonym of \"Tedious\"",
+      "question": "Choose the antonym of \"Incipient\"",
       "options": {
-        "a": "Light (çdk'k @ gYdk)",
-        "b": "Exciting",
-        "c": "Expressible",
-        "d": "Descend"
+        "a": "Obscure",
+        "b": "Advanced",
+        "c": "Fragile",
+        "d": "Healthy"
       },
       "answer": "b",
-      "solution": "Too long, slow, or boring\n\n💡 Mnemonic Trick: Memory trick: link “Exciting (jksekapd)” with “long, slow, boring”.\n📖 Source: PDF • page 11\n🎯 Target Word: Tedious (adj)",
+      "solution": "Beginning stage\n\n💡 Mnemonic Trick: Memory trick: link “Advanced (mUur)” with “Beginning stage”.\n📖 Source: PDF • page 27\n🎯 Target Word: Incipient (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q11"
     },
     {
       "q_num": 12,
-      "question": "Choose the antonym of \"Covert\"",
+      "question": "Choose the antonym of \"Incorrigible\"",
       "options": {
-        "a": "Open (•qyk)",
-        "b": "Candour",
-        "c": "Overt (çR;{k)",
-        "d": "Overt (çR;{k] •qyk)"
+        "a": "Innovate",
+        "b": "Reclaimable (iqu% çkIr djus ;ksX;)",
+        "c": "Inexpressive",
+        "d": "Commend"
       },
-      "answer": "d",
-      "solution": "Hidden or secret, not openly shown\n\n💡 Mnemonic Trick: Memory trick: link “Overt (çR;{k] •qyk)” with “Hidden secret, openly shown”.\n📖 Source: PDF • page 11\n🎯 Target Word: Covert (adj)",
+      "answer": "b",
+      "solution": "Cannot be corrected\n\n💡 Mnemonic Trick: Memory trick: link “Reclaimable (iqu% çkIr djus ;ksX;)” with “Cannot corrected”.\n📖 Source: PDF • page 26\n🎯 Target Word: Incorrigible (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q12"
     },
     {
       "q_num": 13,
-      "question": "Choose the antonym of \"Disparate\"",
+      "question": "Choose the antonym of \"Ineffable\"",
       "options": {
-        "a": "Deep",
-        "b": "Malevolent",
-        "c": "Alike",
-        "d": "Brave"
+        "a": "Exciting",
+        "b": "Expressible",
+        "c": "Misery (nq%•)",
+        "d": "Inexpressive"
       },
-      "answer": "c",
-      "solution": "Fundamentally different in kind or nature\n\n💡 Mnemonic Trick: Memory trick: link “Alike (leku)” with “Fundamentally different kind nature”.\n📖 Source: PDF • page 11\n🎯 Target Word: Disparate (adj)",
+      "answer": "b",
+      "solution": "Too great to be expressed in words\n\n💡 Mnemonic Trick: Memory trick: link “Expressible (O;Dr djus ;ksX;)” with “great expressed words”.\n📖 Source: PDF • page 4\n🎯 Target Word: Ineffable (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q13"
     },
     {
       "q_num": 14,
-      "question": "Choose the antonym of \"Candid\"",
-      "options": {
-        "a": "Corrupt",
-        "b": "Evasive",
-        "c": "Honest",
-        "d": "Deceitful (/ks[ksckt)"
-      },
-      "answer": "c",
-      "solution": "Honest, open, and frank\n\n💡 Mnemonic Trick: Memory trick: link “Honest (bZekunkj)” with “Honest, open, frank”.\n📖 Source: PDF • page 11\n🎯 Target Word: Candid (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 15,
-      "question": "Choose the antonym of \"Accentuate\"",
-      "options": {
-        "a": "Follower",
-        "b": "Obscure",
-        "c": "Reduce (?kVkuk)",
-        "d": "Essential"
-      },
-      "answer": "b",
-      "solution": "To emphasize or make something more noticeable\n\n💡 Mnemonic Trick: Memory trick: link “Obscure (vLi\"V)” with “emphasize make something more noticeable”.\n📖 Source: PDF • page 11\n🎯 Target Word: Accentuate (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "Choose the antonym of \"Cursory\"",
-      "options": {
-        "a": "Agreement (le>kSrk] lgefr)",
-        "b": "Fragile",
-        "c": "Honest",
-        "d": "Thorough (iw.kZ] vPNh rjg ls)"
-      },
-      "answer": "d",
-      "solution": "Done quickly and without attention to detail\n\n💡 Mnemonic Trick: Memory trick: link “Thorough (iw.kZ] vPNh rjg ls)” with “Done quickly without attention detail”.\n📖 Source: PDF • page 11\n🎯 Target Word: Cursory (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 17,
-      "question": "Choose the antonym of \"Maladroit\"",
-      "options": {
-        "a": "Skillful",
-        "b": "Obscure",
-        "c": "Forbid",
-        "d": "Fragile"
-      },
-      "answer": "a",
-      "solution": "Clumsy or lacking skill\n\n💡 Mnemonic Trick: Memory trick: link “Skillful (dq'ky)” with “Clumsy lacking skill”.\n📖 Source: PDF • page 11\n🎯 Target Word: Maladroit (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "Choose the antonym of \"Harbinger\"",
-      "options": {
-        "a": "Obscure",
-        "b": "Follower",
-        "c": "Diminish",
-        "d": "Celebrated"
-      },
-      "answer": "b",
-      "solution": "A sign or signal of something to come\n\n💡 Mnemonic Trick: Memory trick: link “Follower (vuq;k;h)” with “sign signal something come”.\n📖 Source: PDF • page 11\n🎯 Target Word: Harbinger (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 19,
-      "question": "Choose the antonym of \"Amiable\"",
+      "question": "Choose the antonym of \"Ineluctable\"",
       "options": {
         "a": "Inexpressive",
         "b": "Innovate",
         "c": "Commend",
-        "d": "Hostile ('k=kqrkiw.kZ)"
+        "d": "Preventable"
       },
       "answer": "d",
-      "solution": "Friendly, pleasant\n\n💡 Mnemonic Trick: Memory trick: link “Hostile ('k=kqrkiw.kZ)” with “Friendly, pleasant”.\n📖 Source: PDF • page 14\n🎯 Target Word: Amiable (adj)",
+      "solution": "Impossible to avoid or evade\n\n💡 Mnemonic Trick: Memory trick: link “Preventable (jksds tk ldus ;ksX;)” with “Impossible avoid evade”.\n📖 Source: PDF • page 5\n🎯 Target Word: Ineluctable (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q14"
     },
     {
-      "q_num": 20,
-      "question": "Choose the antonym of \"Lucid\"",
+      "q_num": 15,
+      "question": "Choose the antonym of \"Inflate\"",
       "options": {
-        "a": "Confusing",
-        "b": "Vague",
-        "c": "Inexpressive",
+        "a": "Reduce (?kVkuk)",
+        "b": "Fragile",
+        "c": "Obscure",
+        "d": "Healthy"
+      },
+      "answer": "a",
+      "solution": "To exaggerate\n\n💡 Mnemonic Trick: Memory trick: link “Reduce (?kVkuk)” with “exaggerate”.\n📖 Source: PDF • page 19\n🎯 Target Word: Inflate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the antonym of \"Innocuous\"",
+      "options": {
+        "a": "Permeable",
+        "b": "Overt (çR;{k] •qyk)",
+        "c": "Verifiable",
+        "d": "Harmful"
+      },
+      "answer": "d",
+      "solution": "Harmless, not likely to offend\n\n💡 Mnemonic Trick: Memory trick: link “Harmful (gkfudkjd)” with “Harmless, likely offend”.\n📖 Source: PDF • page 4\n🎯 Target Word: Innocuous (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the antonym of \"Intimate\"",
+      "options": {
+        "a": "Distant",
+        "b": "Forbid",
+        "c": "Fragile",
         "d": "Obscure"
       },
       "answer": "a",
-      "solution": "Clear, understandable\n\n💡 Mnemonic Trick: Memory trick: link “Confusing (Hkzfer djus okyk)” with “Clear, understandable”.\n📖 Source: PDF • page 14\n🎯 Target Word: Lucid (adj)",
+      "solution": "Close, personal, familiar\n\n💡 Mnemonic Trick: Memory trick: link “Distant (nwjLFk)” with “Close, personal, familiar”.\n📖 Source: PDF • page 4\n🎯 Target Word: Intimate (adj/v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the antonym of \"Intransigence\"",
+      "options": {
+        "a": "Descend",
+        "b": "Flexible",
+        "c": "Compromise (le>kSrk)",
+        "d": "Pliable (yphyk] vklkuh ls <yus okyk)"
+      },
+      "answer": "c",
+      "solution": "Refusal to compromise or change one’s views\n\n💡 Mnemonic Trick: Memory trick: link “Compromise (le>kSrk)” with “Refusal compromise change views”.\n📖 Source: PDF • page 11\n🎯 Target Word: Intransigence (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q18"
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the antonym of \"Jovial\"",
+      "options": {
+        "a": "Morose",
+        "b": "Deep",
+        "c": "Brave",
+        "d": "Vague"
+      },
+      "answer": "a",
+      "solution": "Cheerful, happy\n\n💡 Mnemonic Trick: Memory trick: link “Morose (mnkl)” with “Cheerful, happy”.\n📖 Source: PDF • page 15\n🎯 Target Word: Jovial (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_antonyms_set4_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the antonym of \"Knave\"",
+      "options": {
+        "a": "Forbid",
+        "b": "Paragon",
+        "c": "Obscure",
+        "d": "Fragile"
+      },
+      "answer": "b",
+      "solution": "Dishonest man\n\n💡 Mnemonic Trick: Memory trick: link “Paragon (vkn'kZ)” with “Dishonest”.\n📖 Source: PDF • page 19\n🎯 Target Word: Knave (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_antonyms_set4_q20"
     }
   ]
 }

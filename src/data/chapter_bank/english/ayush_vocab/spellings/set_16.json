@@ -1,183 +1,195 @@
 {
   "chapter_num": 16,
-  "chapter_title": "Spellings - Set 16",
+  "chapter_title": "Spellings - Set 16 (Letters U-V)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "spellings",
   "set_name": "set_16",
   "is_test": true,
+  "letter_range": "Letters U-V",
+  "start_letter": "U",
+  "end_letter": "V",
   "questions": [
     {
       "q_num": 1,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Suurveillance",
-        "b": "Srveillance",
-        "c": "Surveillance",
-        "d": "Surveillanec"
+        "a": "Uassailable",
+        "b": "Unassailabel",
+        "c": "Unassailable",
+        "d": "Unnassailable"
       },
       "answer": "c",
-      "solution": "Surveillance is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Surveillance.\n🎯 Target Word: Surveillance",
+      "solution": "Unassailable is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Unassailable.\n🎯 Target Word: Unassailable",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q1"
     },
     {
       "q_num": 2,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Coontrary",
-        "b": "Contrary",
-        "c": "Cntrary",
-        "d": "Contrayr"
+        "a": "Unequivocla",
+        "b": "Unnequivocal",
+        "c": "Uequivocal",
+        "d": "Unequivocal"
       },
-      "answer": "b",
-      "solution": "Contrary is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Contrary.\n🎯 Target Word: Contrary",
+      "answer": "d",
+      "solution": "Unequivocal is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Unequivocal.\n🎯 Target Word: Unequivocal",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q2"
     },
     {
       "q_num": 3,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Penitent",
-        "b": "Peenitent",
-        "c": "Penitetn",
-        "d": "Pnitent"
+        "a": "Utilitarianism",
+        "b": "Utilitarianims",
+        "c": "Uttilitarianism",
+        "d": "Uilitarianism"
       },
       "answer": "a",
-      "solution": "Penitent is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Penitent.\n🎯 Target Word: Penitent",
+      "solution": "Utilitarianism is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Utilitarianism.\n🎯 Target Word: Utilitarianism",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q3"
     },
     {
       "q_num": 4,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Teertiary",
-        "b": "Tertiayr",
-        "c": "Tertiary",
-        "d": "Trtiary"
+        "a": "Uttilitarianism",
+        "b": "Uilitarianism",
+        "c": "Utilitarianims",
+        "d": "Utilitarianism"
       },
-      "answer": "c",
-      "solution": "Tertiary is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Tertiary.\n🎯 Target Word: Tertiary",
+      "answer": "d",
+      "solution": "Utilitarianism is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Utilitarianism.\n🎯 Target Word: Utilitarianism",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q4"
     },
     {
       "q_num": 5,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Emmpiricism",
-        "b": "Empiricism",
-        "c": "Empiricims",
-        "d": "Epiricism"
+        "a": "Vnquish",
+        "b": "Vaanquish",
+        "c": "Vanquish",
+        "d": "Vanquihs"
       },
-      "answer": "b",
-      "solution": "Empiricism is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Empiricism.\n🎯 Target Word: Empiricism",
+      "answer": "c",
+      "solution": "Vanquish is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Vanquish.\n🎯 Target Word: Vanquish",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q5"
     },
     {
       "q_num": 6,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Schism",
-        "b": "Scchism",
-        "c": "Schims",
-        "d": "Shism"
+        "a": "Ventriculoperitonela",
+        "b": "Ventriculoperitoneal",
+        "c": "Veentriculoperitoneal",
+        "d": "Vntriculoperitoneal"
       },
-      "answer": "a",
-      "solution": "Schism is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Schism.\n🎯 Target Word: Schism",
+      "answer": "b",
+      "solution": "Ventriculoperitoneal is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Ventriculoperitoneal.\n🎯 Target Word: Ventriculoperitoneal",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q6"
     },
     {
       "q_num": 7,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Plimpsest",
-        "b": "Palimpsest",
-        "c": "Palimpsets",
-        "d": "Paalimpsest"
+        "a": "Veernacular",
+        "b": "Vrnacular",
+        "c": "Vernaculra",
+        "d": "Vernacular"
       },
-      "answer": "b",
-      "solution": "Palimpsest is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Palimpsest.\n🎯 Target Word: Palimpsest",
+      "answer": "d",
+      "solution": "Vernacular is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Vernacular.\n🎯 Target Word: Vernacular",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q7"
     },
     {
       "q_num": 8,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Eolutionary",
-        "b": "Evolutionary",
-        "c": "Evolutionayr",
-        "d": "Evvolutionary"
+        "a": "Vicereine",
+        "b": "Vicereien",
+        "c": "Vcereine",
+        "d": "Viicereine"
       },
-      "answer": "b",
-      "solution": "Evolutionary is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Evolutionary.\n🎯 Target Word: Evolutionary",
+      "answer": "a",
+      "solution": "Vicereine is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Vicereine.\n🎯 Target Word: Vicereine",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q8"
     },
     {
       "q_num": 9,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Sperficial",
-        "b": "Superficila",
-        "c": "Suuperficial",
-        "d": "Superficial"
+        "a": "Vooluptuous",
+        "b": "Vluptuous",
+        "c": "Voluptuosu",
+        "d": "Voluptuous"
       },
       "answer": "d",
-      "solution": "Superficial is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Superficial.\n🎯 Target Word: Superficial",
+      "solution": "Voluptuous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Voluptuous.\n🎯 Target Word: Voluptuous",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set16_q9"
     }
   ]
 }

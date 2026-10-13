@@ -1,281 +1,38 @@
 {
   "chapter_num": 3,
-  "chapter_title": "Idioms & Phrases - Set 3",
+  "chapter_title": "Idioms & Phrases - Set 3 (Letters H-N)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "idioms_and_phrases",
   "set_name": "set_3",
   "is_test": true,
+  "letter_range": "Letters H-N",
+  "start_letter": "H",
+  "end_letter": "N",
   "questions": [
     {
       "q_num": 1,
-      "question": "What does the idiom \"“To send someone to Coventry”\" mean?",
-      "options": {
-        "a": "Ignored me deliberately",
-        "b": "Ignore advice",
-        "c": "To ignore someone deliberately",
-        "d": "To accuse someone first"
-      },
-      "answer": "c",
-      "solution": "To ignore someone deliberately\n\n💡 Mnemonic Trick: Recall cue: link “To send someone to Coventry” with “ignore someone deliberately”.\n📖 Source: PDF • page 13\n🎯 Target Word: To send someone to Coventry",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 2,
-      "question": "What does the idiom \"“Call it a day”\" mean?",
-      "options": {
-        "a": "To stop something or bring it to an end",
-        "b": "To give up, stop trying",
-        "c": "Be sold cheaply",
-        "d": "Stop working for the day"
-      },
-      "answer": "d",
-      "solution": "Stop working for the day\n\n💡 Mnemonic Trick: Recall cue: link “Call it a day” with “Stop working”.\n📖 Source: PDF • page 13\n🎯 Target Word: Call it a day",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "What does the idiom \"“Play it by ear”\" mean?",
-      "options": {
-        "a": "To speak without hesitation or euphemism",
-        "b": "To act cowardly",
-        "c": "Ignore advice",
-        "d": "Act spontaneously without planning"
-      },
-      "answer": "d",
-      "solution": "Act spontaneously without planning\n\n💡 Mnemonic Trick: Recall cue: link “Play it by ear” with “spontaneously without planning”.\n📖 Source: PDF • page 13\n🎯 Target Word: Play it by ear",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "What does the idiom \"“Go the extra mile”\" mean?",
-      "options": {
-        "a": "Work harder than expected",
-        "b": "Give up",
-        "c": "Made additional effort",
-        "d": "Confront difficulties"
-      },
-      "answer": "c",
-      "solution": "Made additional effort\n\n💡 Mnemonic Trick: Recall cue: link “Go the extra mile” with “Made additional effort”.\n📖 Source: PDF • page 13\n🎯 Target Word: Go the extra mile",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "What does the idiom \"“Burned the midnight oil”\" mean?",
-      "options": {
-        "a": "Remaining undecided",
-        "b": "Give up",
-        "c": "Confront difficulties",
-        "d": "Worked late at night"
-      },
-      "answer": "d",
-      "solution": "Worked late at night\n\n💡 Mnemonic Trick: Recall cue: link “Burned the midnight oil” with “Worked late night”.\n📖 Source: PDF • page 13\n🎯 Target Word: Burned the midnight oil",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "What does the idiom \"“Throw down the gauntlet”\" mean?",
-      "options": {
-        "a": "Give up",
-        "b": "Issue a challenge",
-        "c": "To give up, stop trying",
-        "d": "Announce one's candidacy or challenge"
-      },
-      "answer": "b",
-      "solution": "Issue a challenge\n\n💡 Mnemonic Trick: Recall cue: link “Throw down the gauntlet” with “Issue challenge”.\n📖 Source: PDF • page 16\n🎯 Target Word: Throw down the gauntlet",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "What does the idiom \"“Cast the first stone”\" mean?",
-      "options": {
-        "a": "Search thoroughly",
-        "b": "To ignore someone deliberately",
-        "c": "Ignored me deliberately",
-        "d": "To accuse someone first"
-      },
-      "answer": "d",
-      "solution": "To accuse someone first\n\n💡 Mnemonic Trick: Recall cue: link “Cast the first stone” with “accuse someone first”.\n📖 Source: PDF • page 16\n🎯 Target Word: Cast the first stone",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
       "question": "What does the idiom \"“Hoist with one&#x27;s own petard”\" mean?",
       "options": {
         "a": "Destroyed by one's own trap or scheme",
         "b": "Be hurt by one's own scheme",
-        "c": "To face the consequences of one's actions",
-        "d": "Undervaluing one's own worth or effort"
+        "c": "Undervaluing one's own worth or effort",
+        "d": "To face the consequences of one's actions"
       },
-      "answer": "b",
-      "solution": "Be hurt by one's own scheme\n\n💡 Mnemonic Trick: Recall cue: link “Hoist with one's own petard” with “hurt scheme”.\n📖 Source: PDF • page 16\n🎯 Target Word: Hoist with one's own petard",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "What does the idiom \"“Jump through hoops”\" mean?",
-      "options": {
-        "a": "Seeking approval through flattery",
-        "b": "To reach a peak and begin to decline",
-        "c": "Confront difficulties",
-        "d": "To go through many difficulties"
-      },
-      "answer": "d",
-      "solution": "To go through many difficulties\n\n💡 Mnemonic Trick: Recall cue: link “Jump through hoops” with “through many difficulties”.\n📖 Source: PDF • page 16\n🎯 Target Word: Jump through hoops",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
-      "question": "What does the idiom \"“Toe the line”\" mean?",
-      "options": {
-        "a": "Give up",
-        "b": "To follow rules",
-        "c": "Obey rules or authority exactly",
-        "d": "Increase prices"
-      },
-      "answer": "b",
-      "solution": "To follow rules\n\n💡 Mnemonic Trick: Recall cue: link “Toe the line” with “follow rules”.\n📖 Source: PDF • page 16\n🎯 Target Word: Toe the line",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "What does the idiom \"“Pound of flesh”\" mean?",
-      "options": {
-        "a": "Feeling confused or perplexed",
-        "b": "A harsh demand for rightful payment",
-        "c": "Be sold cheaply",
-        "d": "Stop working for the day"
-      },
-      "answer": "b",
-      "solution": "A harsh demand for rightful payment\n\n💡 Mnemonic Trick: Recall cue: link “Pound of flesh” with “harsh demand rightful payment”.\n📖 Source: PDF • page 16\n🎯 Target Word: Pound of flesh",
+      "answer": "a",
+      "solution": "Destroyed by one's own trap or scheme\n\n💡 Mnemonic Trick: Recall cue: link “Hoist with one's own petard” with “Destroyed trap scheme”.\n📖 Source: PDF • page 29\n🎯 Target Word: Hoist with one's own petard",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Idioms & Phrases",
         "difficulty": "medium",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
-      "question": "What does the idiom \"“In the same boat”\" mean?",
-      "options": {
-        "a": "Facing the same situation",
-        "b": "A complex or problematic situation",
-        "c": "Give up",
-        "d": "Taken out of the situation or original meaning"
       },
-      "answer": "a",
-      "solution": "Facing the same situation\n\n💡 Mnemonic Trick: Recall cue: link “In the same boat” with “Facing same situation”.\n📖 Source: PDF • page 16\n🎯 Target Word: In the same boat",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
+      "id": "ayush_idioms_and_phrases_set3_q1"
     },
     {
-      "q_num": 13,
-      "question": "What does the idiom \"“Go the extra mile”\" mean?",
-      "options": {
-        "a": "Work harder than expected",
-        "b": "Facing the same situation",
-        "c": "Extra perks beyond a regular salary",
-        "d": "Made additional effort"
-      },
-      "answer": "a",
-      "solution": "Work harder than expected\n\n💡 Mnemonic Trick: Recall cue: link “Go the extra mile” with “Work harder than expected”.\n📖 Source: PDF • page 21\n🎯 Target Word: Go the extra mile",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 14,
-      "question": "What does the idiom \"“Bite the bullet”\" mean?",
-      "options": {
-        "a": "Something misleading or distracting",
-        "b": "Give up",
-        "c": "To stop something or bring it to an end",
-        "d": "Endure something painful"
-      },
-      "answer": "d",
-      "solution": "Endure something painful\n\n💡 Mnemonic Trick: Recall cue: link “Bite the bullet” with “Endure something painful”.\n📖 Source: PDF • page 21\n🎯 Target Word: Bite the bullet",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 15,
+      "q_num": 2,
       "question": "What does the idiom \"“In black and white”\" mean?",
       "options": {
         "a": "To act cowardly",
@@ -291,102 +48,368 @@
         "topic": "Idioms & Phrases",
         "difficulty": "medium",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "What does the idiom \"“To have the last laugh”\" mean?",
-      "options": {
-        "a": "Remaining undecided",
-        "b": "To have a hidden personal motive",
-        "c": "Give up",
-        "d": "Succeed eventually"
       },
-      "answer": "d",
-      "solution": "Succeed eventually\n\n💡 Mnemonic Trick: Recall cue: link “To have the last laugh” with “Succeed eventually”.\n📖 Source: PDF • page 21\n🎯 Target Word: To have the last laugh",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "easy",
-        "high_yield": true
-      }
+      "id": "ayush_idioms_and_phrases_set3_q2"
     },
     {
-      "q_num": 17,
-      "question": "What does the idiom \"“To turn over a new leaf”\" mean?",
+      "q_num": 3,
+      "question": "What does the idiom \"“In the limelight”\" mean?",
       "options": {
-        "a": "Start studying seriously",
-        "b": "To start over after a failure",
-        "c": "Start afresh",
-        "d": "Ignore advice"
-      },
-      "answer": "c",
-      "solution": "Start afresh\n\n💡 Mnemonic Trick: Recall cue: link “To turn over a new leaf” with “Start afresh”.\n📖 Source: PDF • page 21\n🎯 Target Word: To turn over a new leaf",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "What does the idiom \"“Face the music”\" mean?",
-      "options": {
-        "a": "Give up",
-        "b": "To go through many difficulties",
-        "c": "Confront difficulties",
-        "d": "To face the consequences of one's actions"
-      },
-      "answer": "c",
-      "solution": "Confront difficulties\n\n💡 Mnemonic Trick: Recall cue: link “Face the music” with “Confront difficulties”.\n📖 Source: PDF • page 21\n🎯 Target Word: Face the music",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 19,
-      "question": "What does the idiom \"“&#x27;Turn a deaf ear&#x27;”\" mean?",
-      "options": {
-        "a": "Start afresh",
-        "b": "Ignore advice",
-        "c": "To ignore someone deliberately",
+        "a": "Facing the same situation",
+        "b": "Being the focus of attention",
+        "c": "Feeling confused or perplexed",
         "d": "Give up"
       },
       "answer": "b",
-      "solution": "Ignore advice\n\n💡 Mnemonic Trick: Recall cue: link “'Turn a deaf ear'” with “Ignore advice”.\n📖 Source: PDF • page 21\n🎯 Target Word: 'Turn a deaf ear'",
+      "solution": "Being the focus of attention\n\n💡 Mnemonic Trick: Recall cue: link “In the limelight” with “Being focus attention”.\n📖 Source: PDF • page 22\n🎯 Target Word: In the limelight",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Idioms & Phrases",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_idioms_and_phrases_set3_q3"
     },
     {
-      "q_num": 20,
-      "question": "What does the idiom \"“Cry over spilt milk”\" mean?",
+      "q_num": 4,
+      "question": "What does the idiom \"“In the same boat”\" mean?",
       "options": {
-        "a": "Start afresh",
-        "b": "Remaining undecided",
-        "c": "To start over after a failure",
-        "d": "Regret a past loss"
+        "a": "Facing the same situation",
+        "b": "A complex or problematic situation",
+        "c": "Give up",
+        "d": "Taken out of the situation or original meaning"
       },
-      "answer": "d",
-      "solution": "Regret a past loss\n\n💡 Mnemonic Trick: Recall cue: link “Cry over spilt milk” with “Regret past loss”.\n📖 Source: PDF • page 21\n🎯 Target Word: Cry over spilt milk",
+      "answer": "a",
+      "solution": "Facing the same situation\n\n💡 Mnemonic Trick: Recall cue: link “In the same boat” with “Facing same situation”.\n📖 Source: PDF • page 16\n🎯 Target Word: In the same boat",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Idioms & Phrases",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_idioms_and_phrases_set3_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "What does the idiom \"“Jack up the rates”\" mean?",
+      "options": {
+        "a": "Be sold cheaply",
+        "b": "To follow rules",
+        "c": "Give up",
+        "d": "Increase prices"
+      },
+      "answer": "d",
+      "solution": "Increase prices\n\n💡 Mnemonic Trick: Recall cue: link “Jack up the rates” with “Increase prices”.\n📖 Source: PDF • page 21\n🎯 Target Word: Jack up the rates",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q5"
+    },
+    {
+      "q_num": 6,
+      "question": "What does the idiom \"“Jump the shark”\" mean?",
+      "options": {
+        "a": "To reach a peak and begin to decline",
+        "b": "Active and socializing",
+        "c": "To go through many difficulties",
+        "d": "Increased and decreased"
+      },
+      "answer": "a",
+      "solution": "To reach a peak and begin to decline\n\n💡 Mnemonic Trick: Recall cue: link “Jump the shark” with “reach peak begin decline”.\n📖 Source: PDF • page 30\n🎯 Target Word: Jump the shark",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "What does the idiom \"“Jump through hoops”\" mean?",
+      "options": {
+        "a": "Seeking approval through flattery",
+        "b": "To reach a peak and begin to decline",
+        "c": "Confront difficulties",
+        "d": "To go through many difficulties"
+      },
+      "answer": "d",
+      "solution": "To go through many difficulties\n\n💡 Mnemonic Trick: Recall cue: link “Jump through hoops” with “through many difficulties”.\n📖 Source: PDF • page 16\n🎯 Target Word: Jump through hoops",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "What does the idiom \"“Keep at bay”\" mean?",
+      "options": {
+        "a": "Give up",
+        "b": "Keep quiet",
+        "c": "To keep away or at a safe distance",
+        "d": "Feeling confused or perplexed"
+      },
+      "answer": "c",
+      "solution": "To keep away or at a safe distance\n\n💡 Mnemonic Trick: Recall cue: link “Keep at bay” with “keep away safe distance”.\n📖 Source: PDF • page 29\n🎯 Target Word: Keep at bay",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "What does the idiom \"“Keep her nose to the grindstone”\" mean?",
+      "options": {
+        "a": "Made the right choices and succeeded",
+        "b": "To work hard and continuously",
+        "c": "To work tirelessly to achieve something",
+        "d": "Keep quiet"
+      },
+      "answer": "b",
+      "solution": "To work hard and continuously\n\n💡 Mnemonic Trick: Recall cue: link “Keep her nose to the grindstone” with “work hard continuously”.\n📖 Source: PDF • page 7\n🎯 Target Word: Keep her nose to the grindstone",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "What does the idiom \"“Kill two birds with one stone”\" mean?",
+      "options": {
+        "a": "Be hurt by one's own scheme",
+        "b": "To accomplish two tasks with one action",
+        "c": "Destroyed by one's own trap or scheme",
+        "d": "To face the consequences of one's actions"
+      },
+      "answer": "b",
+      "solution": "To accomplish two tasks with one action\n\n💡 Mnemonic Trick: Recall cue: link “Kill two birds with one stone” with “accomplish tasks with action”.\n📖 Source: PDF • page 8\n🎯 Target Word: Kill two birds with one stone",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "What does the idiom \"“Know which way the wind blows”\" mean?",
+      "options": {
+        "a": "A final performance or act before retirement",
+        "b": "To refuse to give an opinion or take a side",
+        "c": "Sense how events or opinion are trending before acting",
+        "d": "Gain an advantage by acting before others do"
+      },
+      "answer": "c",
+      "solution": "Sense how events or opinion are trending before acting\n\n💡 Mnemonic Trick: Recall cue: link “Know which way the wind blows” with “Sense events opinion trending before”.\n📖 Source: PDF • page 30\n🎯 Target Word: Know which way the wind blows",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q11"
+    },
+    {
+      "q_num": 12,
+      "question": "What does the idiom \"“Let the cat out of the bag”\" mean?",
+      "options": {
+        "a": "To accidentally reveal a secret",
+        "b": "Taken out of the situation or original meaning",
+        "c": "Active and socializing",
+        "d": "Took away her strength or energy"
+      },
+      "answer": "a",
+      "solution": "To accidentally reveal a secret\n\n💡 Mnemonic Trick: Recall cue: link “Let the cat out of the bag” with “accidentally reveal secret”.\n📖 Source: PDF • page 8\n🎯 Target Word: Let the cat out of the bag",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q12"
+    },
+    {
+      "q_num": 13,
+      "question": "What does the idiom \"“Let the cat out of the bag”\" mean?",
+      "options": {
+        "a": "Took away her strength or energy",
+        "b": "Taken out of the situation or original meaning",
+        "c": "To accidentally reveal a secret",
+        "d": "Active and socializing"
+      },
+      "answer": "c",
+      "solution": "To accidentally reveal a secret\n\n💡 Mnemonic Trick: Recall cue: link “Let the cat out of the bag” with “accidentally reveal secret”.\n📖 Source: PDF • page 8\n🎯 Target Word: Let the cat out of the bag",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q13"
+    },
+    {
+      "q_num": 14,
+      "question": "What does the idiom \"“Look before you leap”\" mean?",
+      "options": {
+        "a": "Delay taking action or making a decision",
+        "b": "To face the consequences of one's actions",
+        "c": "Gain an advantage by acting before others do",
+        "d": "Analyze the consequences before making a decision"
+      },
+      "answer": "d",
+      "solution": "Analyze the consequences before making a decision\n\n💡 Mnemonic Trick: Recall cue: link “Look before you leap” with “Analyze consequences before making decision”.\n📖 Source: PDF • page 9\n🎯 Target Word: Look before you leap",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q14"
+    },
+    {
+      "q_num": 15,
+      "question": "What does the idiom \"“Mad as a hatter”\" mean?",
+      "options": {
+        "a": "Completely insane or eccentric",
+        "b": "Give up",
+        "c": "Being the focus of attention",
+        "d": "Feeling confused or perplexed"
+      },
+      "answer": "a",
+      "solution": "Completely insane or eccentric\n\n💡 Mnemonic Trick: Recall cue: link “Mad as a hatter” with “Completely insane eccentric”.\n📖 Source: PDF • page 30\n🎯 Target Word: Mad as a hatter",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "What does the idiom \"“Make a clean breast of”\" mean?",
+      "options": {
+        "a": "Keep quiet",
+        "b": "Give up",
+        "c": "Confess",
+        "d": "Make peace"
+      },
+      "answer": "c",
+      "solution": "Confess\n\n💡 Mnemonic Trick: Recall cue: link “Make a clean breast of” with “Confess”.\n📖 Source: PDF • page 22\n🎯 Target Word: Make a clean breast of",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "What does the idiom \"“Make no bones about it”\" mean?",
+      "options": {
+        "a": "Active and socializing",
+        "b": "Make peace",
+        "c": "Confess",
+        "d": "To be direct and honest"
+      },
+      "answer": "d",
+      "solution": "To be direct and honest\n\n💡 Mnemonic Trick: Recall cue: link “Make no bones about it” with “direct honest”.\n📖 Source: PDF • page 29\n🎯 Target Word: Make no bones about it",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "What does the idiom \"“Move heaven and earth”\" mean?",
+      "options": {
+        "a": "Endure something painful",
+        "b": "To work hard and continuously",
+        "c": "Something misleading or distracting",
+        "d": "To work tirelessly to achieve something"
+      },
+      "answer": "d",
+      "solution": "To work tirelessly to achieve something\n\n💡 Mnemonic Trick: Recall cue: link “Move heaven and earth” with “work tirelessly achieve something”.\n📖 Source: PDF • page 29\n🎯 Target Word: Move heaven and earth",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q18"
+    },
+    {
+      "q_num": 19,
+      "question": "What does the idiom \"“Mum&#x27;s the word”\" mean?",
+      "options": {
+        "a": "Keep quiet",
+        "b": "Give up",
+        "c": "Make peace",
+        "d": "Stay neutral"
+      },
+      "answer": "a",
+      "solution": "Keep quiet\n\n💡 Mnemonic Trick: Recall cue: link “Mum's the word” with “Keep quiet”.\n📖 Source: PDF • page 8\n🎯 Target Word: Mum's the word",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "What does the idiom \"“Not to mince matters”\" mean?",
+      "options": {
+        "a": "Act spontaneously without planning",
+        "b": "Feeling confused or perplexed",
+        "c": "To speak without hesitation or euphemism",
+        "d": "Will not meet required standards"
+      },
+      "answer": "c",
+      "solution": "To speak without hesitation or euphemism\n\n💡 Mnemonic Trick: Recall cue: link “Not to mince matters” with “speak without hesitation euphemism”.\n📖 Source: PDF • page 30\n🎯 Target Word: Not to mince matters",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set3_q20"
     }
   ]
 }

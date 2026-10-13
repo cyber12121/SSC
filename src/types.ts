@@ -78,6 +78,9 @@ export interface Chapter {
     rules: any[];
   };
   original_chapter_num?: number;
+  letter_range?: string;
+  start_letter?: string;
+  end_letter?: string;
 }
 
 export interface QuestionProgress {

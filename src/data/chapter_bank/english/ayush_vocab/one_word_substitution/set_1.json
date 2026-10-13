@@ -1,392 +1,415 @@
 {
   "chapter_num": 1,
-  "chapter_title": "One Word Substitution - Set 1",
+  "chapter_title": "OWS - Set 1 (Letter A)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_1",
   "is_test": true,
+  "letter_range": "Letter A",
+  "start_letter": "A",
+  "end_letter": "A",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the one-word substitution for: \"A belief that the Earth is the center of the universe\"",
+      "question": "Choose the one-word substitution for: \"Temporary suspension\"",
       "options": {
-        "a": "Geocentrism (n)",
-        "b": "Analgesic (n/adj)",
-        "c": "Calligraphy (n)",
-        "d": "Narcotic (n)"
+        "a": "Facsimile (n)",
+        "b": "Matricide (n)",
+        "c": "Abeyance (n)",
+        "d": "Plutocracy (n)"
       },
-      "answer": "a",
-      "solution": "A belief that the Earth is the center of the universe\n\n💡 Mnemonic Trick: Memory trick: link “Geocentrism (n)” with “belief that Earth center universe”.\n📖 Source: PDF • page 6\n🎯 Target Word: Geocentrism (n)",
+      "answer": "c",
+      "solution": "Temporary suspension\n\n💡 Mnemonic Trick: Memory trick: link “Abeyance (n)” with “Temporary suspension”.\n📖 Source: PDF • page 12\n🎯 Target Word: Abeyance (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q1"
     },
     {
       "q_num": 2,
-      "question": "Choose the one-word substitution for: \"A place where records and documents are stored\"",
+      "question": "Choose the one-word substitution for: \"To leave suddenly and hurriedly\"",
       "options": {
-        "a": "Hangar (n)",
-        "b": "Zoo (n)",
-        "c": "Morgue (n)",
-        "d": "Archive (n)"
-      },
-      "answer": "d",
-      "solution": "A place where records and documents are stored\n\n💡 Mnemonic Trick: Memory trick: link “Archive (n)” with “place where records documents stored”.\n📖 Source: PDF • page 6\n🎯 Target Word: Archive (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "Choose the one-word substitution for: \"A large-scale departure of people from one place\"",
-      "options": {
-        "a": "Genocide (n)",
-        "b": "Exodus (n)",
-        "c": "Patrimony (n)",
-        "d": "Hangar (n)"
-      },
-      "answer": "b",
-      "solution": "A large-scale departure of people from one place\n\n💡 Mnemonic Trick: Memory trick: link “Exodus (n)” with “large-scale departure people from place”.\n📖 Source: PDF • page 6\n🎯 Target Word: Exodus (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "Choose the one-word substitution for: \"A person who believes that everything in life is determined by fate\"",
-      "options": {
-        "a": "Recluse (n)",
-        "b": "Garrulous (n)",
-        "c": "Cobbler (n)",
-        "d": "Fatalist (n)"
-      },
-      "answer": "d",
-      "solution": "A person who believes that everything in life is determined by fate\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist (n)” with “person believes that everything life”.\n📖 Source: PDF • page 6\n🎯 Target Word: Fatalist (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "Choose the one-word substitution for: \"A sudden and violent event causing great destruction\"",
-      "options": {
-        "a": "Integrity (n)",
-        "b": "Cataclysm (n)",
-        "c": "Abscond (v)",
+        "a": "Facsimile (n)",
+        "b": "Abscond (v)",
+        "c": "Abeyance (n)",
         "d": "Modesty (n)"
       },
       "answer": "b",
-      "solution": "A sudden and violent event causing great destruction\n\n💡 Mnemonic Trick: Memory trick: link “Cataclysm (n)” with “sudden violent event causing great”.\n📖 Source: PDF • page 6\n🎯 Target Word: Cataclysm (n)",
+      "solution": "To leave suddenly and hurriedly\n\n💡 Mnemonic Trick: Memory trick: link “Abscond (v)” with “leave suddenly hurriedly”.\n📖 Source: PDF • page 28\n🎯 Target Word: Abscond (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q2"
+    },
+    {
+      "q_num": 3,
+      "question": "Choose the one-word substitution for: \"A deep and seemingly bottomless chasm\"",
+      "options": {
+        "a": "Abyss (n)",
+        "b": "Modesty (n)",
+        "c": "Abscond (v)",
+        "d": "Reverent (adj)"
+      },
+      "answer": "a",
+      "solution": "A deep and seemingly bottomless chasm\n\n💡 Mnemonic Trick: Memory trick: link “Abyss (n)” with “deep seemingly bottomless chasm”.\n📖 Source: PDF • page 27\n🎯 Target Word: Abyss (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q3"
+    },
+    {
+      "q_num": 4,
+      "question": "Choose the one-word substitution for: \"The branch of science concerned with the study of sound, its production, transmission, and effects\"",
+      "options": {
+        "a": "Anthropology (n)",
+        "b": "Knell (n/v)",
+        "c": "Psychology (n)",
+        "d": "Acoustics (n)"
+      },
+      "answer": "d",
+      "solution": "The branch of science concerned with the study of sound, its production, transmission, and effects\n\n💡 Mnemonic Trick: Memory trick: link “Acoustics (n)” with “branch science concerned with study”.\n📖 Source: PDF • page 20\n🎯 Target Word: Acoustics (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the one-word substitution for: \"A word formed from the initial letters of a name\"",
+      "options": {
+        "a": "Abeyance (n)",
+        "b": "Patrimony (n)",
+        "c": "Acronym (n)",
+        "d": "Facsimile (n)"
+      },
+      "answer": "c",
+      "solution": "A word formed from the initial letters of a name\n\n💡 Mnemonic Trick: Memory trick: link “Acronym (n)” with “word formed from initial letters”.\n📖 Source: PDF • page 20\n🎯 Target Word: Acronym (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q5"
     },
     {
       "q_num": 6,
-      "question": "Choose the one-word substitution for: \"A person who studies casually without seriousness.\"",
+      "question": "Choose the one-word substitution for: \"Fear of open spaces\"",
       "options": {
-        "a": "Garrulous (n)",
-        "b": "Somniloquist (n)",
-        "c": "Dilettante (n)",
-        "d": "Mineralogist (n)"
+        "a": "Embezzlement (n)",
+        "b": "Calligraphy (n)",
+        "c": "Claustrophobia (n)",
+        "d": "Agoraphobia (n)"
       },
-      "answer": "c",
-      "solution": "A person who studies casually without seriousness.\n\n💡 Mnemonic Trick: Memory trick: link “Dilettante (n)” with “person studies casually without seriousness”.\n📖 Source: PDF • page 6\n🎯 Target Word: Dilettante (n)",
+      "answer": "d",
+      "solution": "Fear of open spaces\n\n💡 Mnemonic Trick: Memory trick: link “Agoraphobia (n)” with “Fear open spaces”.\n📖 Source: PDF • page 29\n🎯 Target Word: Agoraphobia (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q6"
     },
     {
       "q_num": 7,
-      "question": "Choose the one-word substitution for: \"A person who supports the status quo and is opposed to change\"",
+      "question": "Fear of open or crowded places.",
       "options": {
-        "a": "Garrulous (n)",
-        "b": "Mineralogist (n)",
-        "c": "Conservative (n/adj)",
-        "d": "Bibliophile (n)"
+        "a": "Haphephobia",
+        "b": "Agoraphobia",
+        "c": "Agoraphobia (n)",
+        "d": "Nyctophobia"
       },
-      "answer": "c",
-      "solution": "A person who supports the status quo and is opposed to change\n\n💡 Mnemonic Trick: Memory trick: link “Conservative (n/adj)” with “person supports status opposed change”.\n📖 Source: PDF • page 6\n🎯 Target Word: Conservative (n/adj)",
+      "answer": "b",
+      "solution": "Agoraphobia is fear of open or crowded places. Thanatophobia is fear of death. Acrophobia is fear of heights. Xenophobia is fear/dislike of foreigners.\n\n💡 Mnemonic Trick: Memory trick: link “Agoraphobia” with “Agoraphobia fear open crowded places”.\n📖 Source: HTML file • Question 51\n🎯 Target Word: Agoraphobia",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q7"
     },
     {
       "q_num": 8,
-      "question": "Choose the one-word substitution for: \"A stain caused by a discoloring substance.\"",
+      "question": "An expression of excessive pride or self-importance.",
       "options": {
-        "a": "Analgesic (n/adj)",
-        "b": "Abeyance (n)",
-        "c": "Blot (n/v)",
-        "d": "Elegy (n)"
+        "a": "Cynic",
+        "b": "Archive (n)",
+        "c": "All are correct",
+        "d": "Modesty (n)"
       },
       "answer": "c",
-      "solution": "A stain caused by a discoloring substance.\n\n💡 Mnemonic Trick: Memory trick: link “Blot (n/v)” with “stain caused discoloring substance”.\n📖 Source: PDF • page 6\n🎯 Target Word: Blot (n/v)",
+      "solution": "Arrogance, Hubris, and Vanity all express excessive pride or self-importance in slightly different shades, so all are considered correct here.\n\n💡 Mnemonic Trick: Memory trick: link “All are correct” with “Arrogance, Hubris, Vanity express excessive”.\n📖 Source: HTML file • Question 20\n🎯 Target Word: All are correct",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q8"
     },
     {
       "q_num": 9,
-      "question": "Choose the one-word substitution for: \"A medicine or other substance that has a calming or soothing effect.\"",
+      "question": "A story, poem, or picture that can be interpreted to reveal a hidden meaning, typically a moral or political one.",
       "options": {
-        "a": "Analgesic (n/adj)",
-        "b": "Narcotic (n)",
-        "c": "Blot (n/v)",
-        "d": "Sedative (n/adj)"
+        "a": "Fable",
+        "b": "Parable (n)",
+        "c": "Allegory",
+        "d": "Fatalist"
       },
-      "answer": "d",
-      "solution": "A medicine or other substance that has a calming or soothing effect.\n\n💡 Mnemonic Trick: Memory trick: link “Sedative (n/adj)” with “medicine other substance that calming”.\n📖 Source: PDF • page 6\n🎯 Target Word: Sedative (n/adj)",
+      "answer": "c",
+      "solution": "Allegory conveys a hidden moral/political meaning through story, poem, or image. Fable is a short story with animal characters teaching a moral. Parable is a simple story with a spiritual lesson. Anecdote is a short real-life story.\n\n💡 Mnemonic Trick: Memory trick: link “Allegory” with “Allegory conveys hidden moral political”.\n📖 Source: HTML file • Question 69\n🎯 Target Word: Allegory",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q9"
     },
     {
       "q_num": 10,
-      "question": "Choose the one-word substitution for: \"A place where dead bodies are kept for examination\"",
+      "question": "Choose the one-word substitution for: \"A group of people who have graduated from a particular school, college, or university\"",
       "options": {
-        "a": "Morgue (n)",
-        "b": "Zoo (n)",
-        "c": "Mortuary (n)",
-        "d": "Hangar (n)"
+        "a": "Genocide (n)",
+        "b": "Exodus (n)",
+        "c": "Charlatan (n)",
+        "d": "Alumni (n)"
       },
-      "answer": "a",
-      "solution": "A place where dead bodies are kept for examination\n\n💡 Mnemonic Trick: Memory trick: link “Morgue (n)” with “place where dead bodies kept”.\n📖 Source: PDF • page 6\n🎯 Target Word: Morgue (n)",
+      "answer": "d",
+      "solution": "A group of people who have graduated from a particular school, college, or university\n\n💡 Mnemonic Trick: Memory trick: link “Alumni (n)” with “group people have graduated from”.\n📖 Source: PDF • page 20\n🎯 Target Word: Alumni (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q10"
     },
     {
       "q_num": 11,
-      "question": "Choose the one-word substitution for: \"A person who repairs shoes.\"",
+      "question": "A drug that causes temporary loss of memory.",
       "options": {
-        "a": "Author (n)",
-        "b": "Cobbler (n)",
-        "c": "Garrulous (n)",
-        "d": "Recluse (n)"
+        "a": "Amnesiac",
+        "b": "Analgesic",
+        "c": "Epicurean",
+        "d": "Narcotic (n)"
       },
-      "answer": "b",
-      "solution": "A person who repairs shoes.\n\n💡 Mnemonic Trick: Memory trick: link “Cobbler (n)” with “person repairs shoes”.\n📖 Source: PDF • page 6\n🎯 Target Word: Cobbler (n)",
+      "answer": "a",
+      "solution": "Amnesiac (in this context) refers to a drug causing temporary memory loss. Narcotic relieves pain and induces drowsiness. Hypnotic induces sleep. Purgative empties the bowels.\n\n💡 Mnemonic Trick: Memory trick: link “Amnesiac” with “Amnesiac refers drug causing temporary”.\n📖 Source: HTML file • Question 22\n🎯 Target Word: Amnesiac",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q11"
     },
     {
       "q_num": 12,
-      "question": "Choose the one-word substitution for: \"A style of writing characterized by exaggerated sentimentality\"",
+      "question": "A general pardon for offences, especially political ones, granted by an authority.",
       "options": {
-        "a": "Cipher (n)",
-        "b": "Melodrama (n)",
-        "c": "Facsimile (n)",
-        "d": "Matricide (n)"
+        "a": "Amnesty",
+        "b": "Exonerate",
+        "c": "Incendiary",
+        "d": "Amnesty (n)"
       },
-      "answer": "b",
-      "solution": "A style of writing characterized by exaggerated sentimentality\n\n💡 Mnemonic Trick: Memory trick: link “Melodrama (n)” with “style writing characterized exaggerated sentimentality”.\n📖 Source: PDF • page 6\n🎯 Target Word: Melodrama (n)",
+      "answer": "a",
+      "solution": "Amnesty is an official pardon for political offences. Absolution is release from guilt. Reprieve is postponing punishment. Exoneration is clearing someone from blame.\n\n💡 Mnemonic Trick: Memory trick: link “Amnesty” with “Amnesty official pardon political offences”.\n📖 Source: HTML file • Question 70\n🎯 Target Word: Amnesty",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q12"
     },
     {
       "q_num": 13,
-      "question": "Choose the one-word substitution for: \"A person who lives in solitude\"",
-      "options": {
-        "a": "Garrulous (n)",
-        "b": "Recluse (n)",
-        "c": "Cobbler (n)",
-        "d": "Expatriate (n/adj/v)"
-      },
-      "answer": "b",
-      "solution": "A person who lives in solitude\n\n💡 Mnemonic Trick: Memory trick: link “Recluse (n)” with “person lives solitude”.\n📖 Source: PDF • page 6\n🎯 Target Word: Recluse (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 14,
-      "question": "Choose the one-word substitution for: \"A feeling of apprehension in tense situations.\"",
-      "options": {
-        "a": "Embezzlement (n)",
-        "b": "Trepidation (n)",
-        "c": "Calligraphy (n)",
-        "d": "Kleptomaniac (n)"
-      },
-      "answer": "b",
-      "solution": "A feeling of apprehension in tense situations.\n\n💡 Mnemonic Trick: Memory trick: link “Trepidation (n)” with “feeling apprehension tense situations”.\n📖 Source: PDF • page 6\n🎯 Target Word: Trepidation (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 15,
-      "question": "Choose the one-word substitution for: \"A person who studies rocks and minerals\"",
-      "options": {
-        "a": "Dilettante (n)",
-        "b": "Mineralogist (n)",
-        "c": "Bibliophile (n)",
-        "d": "Garrulous (n)"
-      },
-      "answer": "b",
-      "solution": "A person who studies rocks and minerals\n\n💡 Mnemonic Trick: Memory trick: link “Mineralogist (n)” with “person studies rocks minerals”.\n📖 Source: PDF • page 6\n🎯 Target Word: Mineralogist (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "Choose the one-word substitution for: \"The study of the human mind and its functions.\"",
-      "options": {
-        "a": "Kantianism (n)",
-        "b": "Abscond (v)",
-        "c": "Psychology (n)",
-        "d": "Anthropology (n)"
-      },
-      "answer": "c",
-      "solution": "The study of the human mind and its functions.\n\n💡 Mnemonic Trick: Memory trick: link “Psychology (n)” with “study human mind functions”.\n📖 Source: PDF • page 6\n🎯 Target Word: Psychology (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 17,
-      "question": "Choose the one-word substitution for: \"A person who lives in a foreign country\"",
-      "options": {
-        "a": "Recluse (n)",
-        "b": "Expatriate (n/adj/v)",
-        "c": "Garrulous (n)",
-        "d": "Somniloquist (n)"
-      },
-      "answer": "b",
-      "solution": "A person who lives in a foreign country\n\n💡 Mnemonic Trick: Memory trick: link “Expatriate (n/adj/v)” with “person lives foreign country”.\n📖 Source: PDF • page 7\n🎯 Target Word: Expatriate (n/adj/v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "Choose the one-word substitution for: \"A government by a single person.\"",
-      "options": {
-        "a": "Vagabond (n)",
-        "b": "Garrulous (n)",
-        "c": "Plutocracy (n)",
-        "d": "Autocracy (n)"
-      },
-      "answer": "d",
-      "solution": "A government by a single person.\n\n💡 Mnemonic Trick: Memory trick: link “Autocracy (n)” with “government single person”.\n📖 Source: PDF • page 7\n🎯 Target Word: Autocracy (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 19,
-      "question": "Choose the one-word substitution for: \"Showing deep respect.\"",
-      "options": {
-        "a": "Plutocracy (n)",
-        "b": "Matricide (n)",
-        "c": "Facsimile (n)",
-        "d": "Reverent (adj)"
-      },
-      "answer": "d",
-      "solution": "Showing deep respect.\n\n💡 Mnemonic Trick: Memory trick: link “Reverent (adj)” with “Showing deep respect”.\n📖 Source: PDF • page 7\n🎯 Target Word: Reverent (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 20,
-      "question": "Choose the one-word substitution for: \"A state of stunned confusion.\"",
+      "question": "Choose the one-word substitution for: \"An official pardon for offenders\"",
       "options": {
         "a": "Abeyance (n)",
         "b": "Facsimile (n)",
-        "c": "Daze (n/v)",
+        "c": "Amnesty (n)",
         "d": "Elegy (n)"
       },
       "answer": "c",
-      "solution": "A state of stunned confusion.\n\n💡 Mnemonic Trick: Memory trick: link “Daze (n/v)” with “state stunned confusion”.\n📖 Source: PDF • page 7\n🎯 Target Word: Daze (n/v)",
+      "solution": "An official pardon for offenders\n\n💡 Mnemonic Trick: Memory trick: link “Amnesty (n)” with “official pardon offenders”.\n📖 Source: PDF • page 21\n🎯 Target Word: Amnesty (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set1_q13"
+    },
+    {
+      "q_num": 14,
+      "question": "A general pardon for offences, especially political ones, against a state.",
+      "options": {
+        "a": "Exonerate",
+        "b": "Amnesty (n)",
+        "c": "Heresy (n)",
+        "d": "Amnesty"
+      },
+      "answer": "d",
+      "solution": "Amnesty is an official pardon, especially for political offences. Absolution is a formal release from guilt. Reprieve is a postponement of punishment. Exoneration is officially clearing someone of blame.\n\n💡 Mnemonic Trick: Memory trick: link “Amnesty” with “Amnesty official pardon, especially political”.\n📖 Source: HTML file • Question 6\n🎯 Target Word: Amnesty",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q14"
+    },
+    {
+      "q_num": 15,
+      "question": "A drug or agent that relieves pain without causing loss of consciousness.",
+      "options": {
+        "a": "Analgesic",
+        "b": "Stoic (n)",
+        "c": "Amnesiac",
+        "d": "Narcotic (n)"
+      },
+      "answer": "a",
+      "solution": "Analgesic relieves pain while keeping the person conscious. Narcotic dulls the senses and can cause dependence. Sedative calms/induces sleep. Anesthetic causes loss of sensation, often for surgery.\n\n💡 Mnemonic Trick: Memory trick: link “Analgesic” with “Analgesic relieves pain while keeping”.\n📖 Source: HTML file • Question 44\n🎯 Target Word: Analgesic",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the one-word substitution for: \"A substance that reduces pain\"",
+      "options": {
+        "a": "Narcotic (n)",
+        "b": "Analgesic (n/adj)",
+        "c": "Blot (n/v)",
+        "d": "Embezzlement (n)"
+      },
+      "answer": "b",
+      "solution": "A substance that reduces pain\n\n💡 Mnemonic Trick: Memory trick: link “Analgesic (n/adj)” with “substance that reduces pain”.\n📖 Source: PDF • page 29\n🎯 Target Word: Analgesic (n/adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the one-word substitution for: \"A short interesting story\"",
+      "options": {
+        "a": "Ephemeral (adj)",
+        "b": "Cliffhanger (n)",
+        "c": "Anecdote (n)",
+        "d": "Parable (n)"
+      },
+      "answer": "c",
+      "solution": "A short interesting story\n\n💡 Mnemonic Trick: Memory trick: link “Anecdote (n)” with “short interesting story”.\n📖 Source: PDF • page 12\n🎯 Target Word: Anecdote (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the one-word substitution for: \"Extremely old-fashioned; belonging to a time before the biblical flood\"",
+      "options": {
+        "a": "Embezzlement (n)",
+        "b": "Antediluvian (adj)",
+        "c": "Kleptomaniac (n)",
+        "d": "Flashback (n)"
+      },
+      "answer": "b",
+      "solution": "Extremely old-fashioned; belonging to a time before the biblical flood\n\n💡 Mnemonic Trick: Memory trick: link “Antediluvian (adj)” with “Extremely old-fashioned belonging time before”.\n📖 Source: PDF • page 27\n🎯 Target Word: Antediluvian (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q18"
+    },
+    {
+      "q_num": 19,
+      "question": "A collection of literary extracts, especially from one author.",
+      "options": {
+        "a": "Author (n)",
+        "b": "Anthology",
+        "c": "Omnipotent",
+        "d": "Bibliophile (n)"
+      },
+      "answer": "b",
+      "solution": "Anthology is a collection of literary pieces, often from one author or theme. Lexicographer compiles dictionaries. Bibliophile loves collecting books. Ennui means boredom/dissatisfaction.\n\n💡 Mnemonic Trick: Memory trick: link “Anthology” with “Anthology collection literary pieces, often”.\n📖 Source: HTML file • Question 31\n🎯 Target Word: Anthology",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the one-word substitution for: \"One who studies the evolution of mankind\"",
+      "options": {
+        "a": "Anthropologist (n)",
+        "b": "Mineralogist (n)",
+        "c": "Garrulous (n)",
+        "d": "Philanthropy (n)"
+      },
+      "answer": "a",
+      "solution": "One who studies the evolution of mankind\n\n💡 Mnemonic Trick: Memory trick: link “Anthropologist (n)” with “studies evolution mankind”.\n📖 Source: PDF • page 20\n🎯 Target Word: Anthropologist (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set1_q20"
     }
   ]
 }

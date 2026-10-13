@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, BookMarked, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, RotateCw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText, Smartphone } from 'lucide-react';
+import { BookOpen, Trophy, GraduationCap, LayoutDashboard, LogIn, LogOut, Loader2, AlertCircle, ListChecks, ChevronRight, ChevronLeft, Play, Layers, Bookmark as BookmarkIcon, BookMarked, Trash2, Shield, Crown, Zap, Flame, Star, History, RotateCcw, RotateCw, Calculator, Compass, Languages, Globe2, Clock, Target, Search, Filter, X, XCircle, Landmark, Scale, TrendingUp, Atom, Sparkles, FileText, Smartphone, Check, CheckSquare } from 'lucide-react';
 import { Chapter, SubjectData, QuizResult, Bookmark, Question } from './types';
 import { detectTopic, normalizeTopicTitle } from './utils/topicDetector';
 import { GK_SUBJECT_CONFIGS, GK_SUBJECT_LIST, GKSubjectId, getChapterGKSubject, getTopicGKSubject, formatGKSubTopicTitle } from './utils/gkSubjectHelper';
@@ -236,6 +236,8 @@ export default function App() {
   const [selectedGKSubTopic, setSelectedGKSubTopic] = useState<string>('all');
   const [mockGKFilter, setMockGKFilter] = useState<string>('all');
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+  const [selectedChapterKeys, setSelectedChapterKeys] = useState<string[]>([]);
+  const [vocabAlphabetFilter, setVocabAlphabetFilter] = useState<string>('all');
   const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -264,6 +266,11 @@ export default function App() {
       window.removeEventListener('beforeinstallprompt', handler);
     };
   }, []);
+
+  useEffect(() => {
+    setSelectedChapterKeys([]);
+    setVocabAlphabetFilter('all');
+  }, [selectedSubject, selectedTopic, selectedEnglishSection, selectedMathSection, selectedGKSubject, category]);
 
   // Mock Error View Mode: 'chapters' (clubbed chapter-wise) vs 'buckets' (by error type) vs 'rca' (4-Bucket RCA) vs 'silly' (Silly Mistakes)
   const [mockViewMode, setMockViewMode] = useState<'chapters' | 'buckets' | 'rca' | 'silly'>(() => {
@@ -1181,6 +1188,74 @@ export default function App() {
       }
     }
   };
+
+  const getChapterKey = useCallback((ch: Chapter) =>
+    `${ch.subject || ''}|${ch.section || ''}|${ch.topic_name || ''}|${ch.set_name || ''}|${ch.chapter_title || ''}|${ch.chapter_num || ''}`,
+  []);
+
+  const toggleChapterSelection = useCallback((key: string) => {
+    setSelectedChapterKeys(prev =>
+      prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
+    );
+  }, []);
+
+  const chapterMatchesLetter = useCallback((ch: Chapter, letter: string): boolean => {
+    if (letter === 'all') return true;
+    const upper = letter.toUpperCase();
+    const anyCh = ch as any;
+    if (anyCh.start_letter && anyCh.end_letter) {
+      return upper >= anyCh.start_letter && upper <= anyCh.end_letter;
+    }
+    const title = (ch.chapter_title || '') + ' ' + (anyCh.letter_range || '');
+    const rangeMatch = title.match(/Letters?\s+([A-Z])\s*[-–]\s*([A-Z])/i);
+    if (rangeMatch) {
+      const start = rangeMatch[1].toUpperCase();
+      const end = rangeMatch[2].toUpperCase();
+      return upper >= start && upper <= end;
+    }
+    const singleMatch = title.match(/Letters?\s+([A-Z])/i);
+    if (singleMatch) {
+      return singleMatch[1].toUpperCase() === upper;
+    }
+    if (Array.isArray(ch.questions)) {
+      return ch.questions.some(q => {
+        const qText = (q.question || '').toLowerCase();
+        const sol = (q.solution || '').toLowerCase();
+        const tw = sol.match(/target word:\s*([a-z])/i) || qText.match(/["“]([a-z])/i);
+        return tw && tw[1].toUpperCase() === upper;
+      });
+    }
+    return true;
+  }, []);
+
+  const startMultiSetQuiz = useCallback((chapters: Chapter[]) => {
+    if (!chapters || chapters.length === 0) return;
+    const combinedQuestions: Question[] = [];
+    chapters.forEach(ch => {
+      (ch.questions || []).forEach(q => {
+        combinedQuestions.push(cleanQuestionForSession(q, combinedQuestions.length));
+      });
+    });
+    if (combinedQuestions.length === 0) {
+      alert('No questions available in the selected sets.');
+      return;
+    }
+    const topicLabel = selectedTopic
+      ? (selectedTopic === 'one_word_substitution' ? 'One Word Substitution' : selectedTopic.replace(/_/g, ' '))
+      : (selectedEnglishSection === 'ayush_vocab' ? 'Ayush Vocab SSC 2025' : selectedSubject || 'Practice');
+
+    const virtualChapter: Chapter = {
+      chapter_num: 0,
+      chapter_title: `${topicLabel} • ${chapters.length} Sets (${combinedQuestions.length} Qs)`,
+      subject: chapters[0].subject || selectedSubject || 'English',
+      subject_id: chapters[0].subject_id || (selectedSubject || 'English').toLowerCase().replace(/\s+/g, '_'),
+      section: chapters[0].section,
+      topic_name: chapters[0].topic_name || selectedTopic || undefined,
+      is_test: true,
+      questions: combinedQuestions
+    };
+    startQuiz(virtualChapter);
+  }, [selectedTopic, selectedEnglishSection, selectedSubject]);
 
   const startAllSubjectQuiz = (subjectName: string) => {
     let sourceQuestions: Question[] = [];
@@ -4203,9 +4278,11 @@ export default function App() {
                             });
                           }
 
-                          let chaptersToRender = isTopicLevelSection && selectedTopic
+                          const baseTopicChapters = isTopicLevelSection && selectedTopic
                             ? relevantChapters.filter(ch => ch.topic_name === selectedTopic)
                             : relevantChapters;
+
+                          let chaptersToRender = baseTopicChapters;
 
                           if (selectedSubject === 'General Awareness') {
                             chaptersToRender = [...chaptersToRender].sort((a, b) => {
@@ -4215,6 +4292,9 @@ export default function App() {
                             });
                           } else if (isEnglishVocabSection) {
                             chaptersToRender = [...chaptersToRender].sort((a, b) => (a.chapter_num || 0) - (b.chapter_num || 0));
+                            if (selectedTopic && vocabAlphabetFilter !== 'all') {
+                              chaptersToRender = chaptersToRender.filter(ch => chapterMatchesLetter(ch, vocabAlphabetFilter));
+                            }
                           } else {
                             chaptersToRender = [...chaptersToRender].sort((a, b) => {
                               const aNum = a.original_chapter_num || a.chapter_num || 0;
@@ -4223,171 +4303,380 @@ export default function App() {
                             });
                           }
 
-                          if (chaptersToRender.length === 0) {
-                            return (
-                              <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-slate-200">
-                                <p className="text-xs font-bold text-slate-600">No chapters found for this selection.</p>
-                              </div>
-                            );
-                          }
+                          const visibleKeys = chaptersToRender.map(ch => getChapterKey(ch));
+                          const allVisibleSelected = visibleKeys.length > 0 && visibleKeys.every(k => selectedChapterKeys.includes(k));
+                          const selectedChaptersList = relevantChapters.filter(ch => selectedChapterKeys.includes(getChapterKey(ch)));
+                          const selectedTotalQuestions = selectedChaptersList.reduce((acc, ch) => acc + (ch.questions?.length || 0), 0);
 
-                          return chaptersToRender.map((chapter) => (
-                            <motion.div
-                              key={`${chapter.chapter_title}|${chapter.section || ''}|${chapter.set_name || ''}`}
-                              whileHover={{ y: -2 }}
-                              onClick={() => {
-                                if (chapter.section === 'grammar' && chapter.questions.length > 50) {
-                                  setSetPickerModal({
-                                    title: chapter.chapter_title,
-                                    subtitle: `Chapter ${chapter.original_chapter_num || chapter.chapter_num} • ${chapter.questions.length} questions • ${Math.ceil(chapter.questions.length / 50)} Sets`,
-                                    subject: 'English',
-                                    questions: chapter.questions,
-                                    setSize: 50,
-                                    chapterNum: chapter.original_chapter_num || chapter.chapter_num,
-                                    section: 'grammar'
-                                  });
-                                  return;
-                                }
-                                startQuiz(chapter);
-                              }}
-                              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-3.5 transition-all duration-200 ${chapter.section === 'black_book' ? 'hover:border-amber-300' : chapter.section === 'ayush_vocab' ? 'hover:border-emerald-300' : 'hover:border-indigo-300'
-                                } hover:shadow-md shadow-xs flex flex-col justify-between`}
-                            >
-                              <div>
-                                <div className="flex items-center justify-between">
-                                  <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'black_book'
-                                      ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
-                                      : chapter.section === 'ayush_vocab'
-                                        ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
-                                        : chapter.is_test
-                                          ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
-                                          : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
-                                    } shadow-xs`}>
-                                    {chapter.section === 'black_book' ? <BookMarked className="w-4 h-4" /> : chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
-                                  </div>
-                                  <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${chapter.section === 'black_book'
-                                      ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                                      : chapter.section === 'ayush_vocab'
-                                        ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                                        : chapter.section === 'grammar'
-                                          ? 'bg-indigo-50 text-indigo-700 border border-indigo-200'
-                                          : chapter.is_test
-                                            ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                                            : 'bg-slate-50 text-slate-500'
-                                    }`}>
-                                    {chapter.section === 'black_book' || chapter.section === 'ayush_vocab'
-                                      ? `Set ${chapter.chapter_num}`
-                                      : chapter.section === 'grammar'
-                                        ? `Ch ${chapter.original_chapter_num || chapter.chapter_num}`
-                                        : chapter.is_test
-                                          ? 'Full Test'
-                                          : chapter.set_name
-                                            ? `Set ${chapter.set_name.replace('set_', '')}`
-                                            : `Ch ${chapter.original_chapter_num || chapter.chapter_num}`}
+                          const handleToggleSelectAllVisible = () => {
+                            if (allVisibleSelected) {
+                              setSelectedChapterKeys(prev => prev.filter(k => !visibleKeys.includes(k)));
+                            } else {
+                              setSelectedChapterKeys(prev => Array.from(new Set([...prev, ...visibleKeys])));
+                            }
+                          };
+
+                          return (
+                            <div className="col-span-full space-y-3">
+                              {/* Alphabet Filter for English Vocab (Ayush Vocab and Black Book) */}
+                              {isEnglishVocabSection && selectedTopic && (
+                                <div className="flex items-center gap-1.5 p-1.5 bg-white rounded-xl border border-slate-200/80 shadow-2xs overflow-x-auto custom-scrollbar">
+                                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 shrink-0">
+                                    Letter:
                                   </span>
-                                </div>
-                                <div>
-                                  <h3 className="mt-2.5 text-xs font-bold text-slate-800 line-clamp-1">{chapter.chapter_title}</h3>
-                                  <p className="mt-0.5 text-[11px] text-slate-500">
-                                    {chapter.section === 'grammar' && chapter.questions.length > 50
-                                      ? `${chapter.questions.length} Questions • ${Math.ceil(chapter.questions.length / 50)} Sets (50 Qs/set)`
-                                      : `${chapter.questions.length} Questions ${chapter.topic_name ? `• ${formatGKSubTopicTitle(chapter.topic_name)}` : ''}`}
-                                  </p>
-                                </div>
+                                  <button
+                                    type="button"
+                                    onClick={() => setVocabAlphabetFilter('all')}
+                                    className={`px-2.5 py-1 text-xs font-bold rounded-lg transition-all shrink-0 cursor-pointer ${
+                                      vocabAlphabetFilter === 'all'
+                                        ? 'bg-emerald-600 text-white shadow-xs'
+                                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                                    }`}
+                                  >
+                                    All ({baseTopicChapters.length})
+                                  </button>
+                                  {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => {
+                                    const matchingSets = baseTopicChapters.filter(ch => chapterMatchesLetter(ch, letter));
+                                    const isAvailable = matchingSets.length > 0;
+                                    const isLetterActive = vocabAlphabetFilter === letter;
 
-                                {chapter.section === 'grammar' && chapter.questions.length > 50 && (
-                                  <div className="mt-2 flex flex-wrap gap-1 pt-1.5 border-t border-slate-100">
-                                    {Array.from({ length: Math.ceil(chapter.questions.length / 50) }).map((_, sIdx) => {
-                                      const sNum = sIdx + 1;
-                                      const startQ = sIdx * 50 + 1;
-                                      const endQ = Math.min((sIdx + 1) * 50, chapter.questions.length);
-                                      const sCount = endQ - startQ + 1;
-                                      return (
-                                        <button
-                                          key={sNum}
-                                          type="button"
-                                          onClick={(e) => {
-                                            e.stopPropagation();
-                                            const targetQuestions = chapter.questions.slice(sIdx * 50, endQ);
-                                            const virtualChapter: Chapter = {
-                                              ...chapter,
-                                              chapter_num: chapter.original_chapter_num || chapter.chapter_num,
-                                              chapter_title: `${chapter.chapter_title} • Set ${sNum} (Q${startQ}-${endQ})`,
-                                              questions: targetQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
-                                            };
-                                            startQuiz(virtualChapter);
-                                          }}
-                                          className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-indigo-50/80 hover:bg-indigo-600 text-indigo-700 hover:text-white border border-indigo-200/60 transition-all cursor-pointer shadow-2xs"
-                                          title={`Practice Set ${sNum}: Questions ${startQ} to ${endQ} (${sCount} Qs)`}
-                                        >
-                                          Set {sNum} ({sCount})
-                                        </button>
-                                      );
-                                    })}
-                                  </div>
-                                )}
-                              </div>
-                              <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
-                                <div className={`flex items-center text-xs font-semibold ${chapter.section === 'black_book' ? 'text-amber-600' : chapter.section === 'ayush_vocab' ? 'text-emerald-600' : 'text-indigo-600'}`}>
-                                  {chapter.section === 'grammar' && chapter.questions.length > 50 ? 'Choose Set' : 'Start Set'}
-                                  <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+                                    return (
+                                      <button
+                                        key={letter}
+                                        type="button"
+                                        disabled={!isAvailable}
+                                        onClick={() => setVocabAlphabetFilter(isLetterActive ? 'all' : letter)}
+                                        className={`min-w-7 h-7 px-1 text-xs font-bold rounded-lg transition-all shrink-0 flex items-center justify-center ${
+                                          isLetterActive
+                                            ? 'bg-emerald-600 text-white shadow-xs scale-105'
+                                            : isAvailable
+                                              ? 'text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200/70 cursor-pointer'
+                                              : 'text-slate-300 opacity-40 cursor-not-allowed border border-transparent'
+                                        }`}
+                                        title={isAvailable ? `Letter ${letter}: ${matchingSets.length} sets` : `No sets for letter ${letter}`}
+                                      >
+                                        {letter}
+                                      </button>
+                                    );
+                                  })}
                                 </div>
-                                <div className="flex items-center gap-1.5">
-                                  {chapter.section === 'grammar' && getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num) && (
+                              )}
+
+                              {/* Multi-set Selection Toolbar */}
+                              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 py-2.5 bg-white rounded-xl border border-slate-200/80 shadow-2xs">
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    type="button"
+                                    onClick={handleToggleSelectAllVisible}
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-700 hover:text-emerald-700 bg-slate-50 hover:bg-emerald-50 rounded-lg border border-slate-200 hover:border-emerald-300 transition-all cursor-pointer shadow-2xs"
+                                  >
+                                    <CheckSquare className="w-3.5 h-3.5 text-emerald-600" />
+                                    {allVisibleSelected ? 'Deselect All' : `Select All Visible (${chaptersToRender.length})`}
+                                  </button>
+                                  {selectedChapterKeys.length > 0 && (
                                     <button
                                       type="button"
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        const pdfUrl = getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num);
-                                        if (pdfUrl) window.open(pdfUrl, '_blank');
-                                      }}
-                                      className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-50 text-amber-800 hover:bg-amber-600 hover:text-white border border-amber-200 transition-all cursor-pointer shadow-2xs"
-                                      title={`Open original book PDF for Chapter ${chapter.original_chapter_num || chapter.chapter_num}`}
+                                      onClick={() => setSelectedChapterKeys([])}
+                                      className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-slate-500 hover:text-rose-600 bg-slate-50 hover:bg-rose-50 rounded-lg border border-slate-200/80 transition-all cursor-pointer"
                                     >
-                                      <FileText className="w-3 h-3" />
-                                      <span>PDF</span>
-                                    </button>
-                                  )}
-                                  {chapter.cheat_sheet && (
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setSelectedCheatSheet(chapter);
-                                      }}
-                                      className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition-all cursor-pointer shadow-2xs"
-                                      title="Open Chapter Revision Cheat Sheet"
-                                    >
-                                      <BookOpen className="w-3 h-3" />
-                                      <span>Cheat Sheet</span>
-                                    </button>
-                                  )}
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      handleAskAiTopic(chapter.chapter_title, chapter.subject, chapter.questions);
-                                    }}
-                                    className="p-1.5 rounded-md bg-violet-50 text-violet-600 hover:bg-violet-600 hover:text-white transition-colors cursor-pointer"
-                                    title={`Ask Tommy AI about this chapter`}
-                                  >
-                                    <Sparkles className="w-3.5 h-3.5" />
-                                  </button>
-                                  {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
-                                    <button
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
-                                        if (r) openReview(r, 'home');
-                                      }}
-                                      className="p-1.5 rounded-md bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
-                                      title="Review last attempt"
-                                    >
-                                      <History className="w-3.5 h-3.5" />
+                                      <X className="w-3.5 h-3.5" />
+                                      Clear ({selectedChapterKeys.length})
                                     </button>
                                   )}
                                 </div>
+                                <div className="flex items-center gap-2 text-xs font-semibold">
+                                  {selectedChapterKeys.length > 0 ? (
+                                    <div className="flex items-center gap-2">
+                                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold border border-emerald-200">
+                                        <Sparkles className="w-3 h-3 text-emerald-600" />
+                                        {selectedChapterKeys.length} {selectedChapterKeys.length === 1 ? 'Set' : 'Sets'} Selected • {selectedTotalQuestions} Qs
+                                      </span>
+                                      <button
+                                        type="button"
+                                        onClick={() => startMultiSetQuiz(selectedChaptersList)}
+                                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-lg shadow-xs transition-all cursor-pointer active:scale-95"
+                                      >
+                                        <Play className="w-3 h-3 fill-current" />
+                                        Practice Selected
+                                      </button>
+                                    </div>
+                                  ) : (
+                                    <span className="text-[11px] text-slate-500 font-medium">
+                                      Select checkboxes to practice multiple sets together
+                                    </span>
+                                  )}
+                                </div>
                               </div>
-                            </motion.div>
-                          ));
+
+                              {/* Sets Grid */}
+                              {chaptersToRender.length === 0 ? (
+                                <div className="py-12 text-center bg-white rounded-xl border border-dashed border-slate-200">
+                                  <p className="text-xs font-bold text-slate-600">No sets found for this letter selection.</p>
+                                </div>
+                              ) : (
+                                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                  {chaptersToRender.map((chapter) => {
+                                    const chKey = getChapterKey(chapter);
+                                    const isChSelected = selectedChapterKeys.includes(chKey);
+
+                                    return (
+                                      <motion.div
+                                        key={`${chapter.chapter_title}|${chapter.section || ''}|${chapter.set_name || ''}`}
+                                        whileHover={{ y: -2 }}
+                                        onClick={() => {
+                                          if (selectedChapterKeys.length > 0) {
+                                            toggleChapterSelection(chKey);
+                                            return;
+                                          }
+                                          if (chapter.section === 'grammar' && chapter.questions.length > 50) {
+                                            setSetPickerModal({
+                                              title: chapter.chapter_title,
+                                              subtitle: `Chapter ${chapter.original_chapter_num || chapter.chapter_num} • ${chapter.questions.length} questions • ${Math.ceil(chapter.questions.length / 50)} Sets`,
+                                              subject: 'English',
+                                              questions: chapter.questions,
+                                              setSize: 50,
+                                              chapterNum: chapter.original_chapter_num || chapter.chapter_num,
+                                              section: 'grammar'
+                                            });
+                                            return;
+                                          }
+                                          startQuiz(chapter);
+                                        }}
+                                        className={`group relative cursor-pointer overflow-hidden rounded-xl border p-3.5 transition-all duration-200 flex flex-col justify-between shadow-xs ${
+                                          isChSelected
+                                            ? 'border-emerald-500 bg-emerald-50/30 ring-2 ring-emerald-500/25 shadow-md'
+                                            : chapter.section === 'black_book'
+                                              ? 'border-slate-200/80 bg-white hover:border-amber-300 hover:shadow-md'
+                                              : chapter.section === 'ayush_vocab'
+                                                ? 'border-slate-200/80 bg-white hover:border-emerald-300 hover:shadow-md'
+                                                : 'border-slate-200/80 bg-white hover:border-indigo-300 hover:shadow-md'
+                                        }`}
+                                      >
+                                        <div>
+                                          <div className="flex items-center justify-between">
+                                            <div className="flex items-center gap-2">
+                                              {/* Checkbox */}
+                                              <div
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  toggleChapterSelection(chKey);
+                                                }}
+                                                className={`w-5 h-5 rounded-md border flex items-center justify-center transition-all cursor-pointer ${
+                                                  isChSelected
+                                                    ? 'bg-emerald-600 border-emerald-600 text-white shadow-xs'
+                                                    : 'border-slate-300 hover:border-emerald-500 bg-white/95 text-transparent hover:text-slate-400'
+                                                }`}
+                                                title={isChSelected ? "Deselect set" : "Select set to practice together"}
+                                              >
+                                                <Check className="w-3.5 h-3.5 stroke-[3]" />
+                                              </div>
+                                              <div className={`flex h-8 w-8 items-center justify-center rounded-lg ${chapter.section === 'black_book'
+                                                  ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                                  : chapter.section === 'ayush_vocab'
+                                                    ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
+                                                    : chapter.is_test
+                                                      ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-white'
+                                                      : 'bg-gradient-to-br from-indigo-500 to-violet-600 text-white'
+                                                } shadow-xs`}>
+                                                {chapter.section === 'black_book' ? <BookMarked className="w-4 h-4" /> : chapter.section === 'ayush_vocab' ? <Sparkles className="w-4 h-4" /> : chapter.is_test ? <FileText className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+                                              </div>
+                                            </div>
+                                            <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${
+                                              isChSelected
+                                                ? 'bg-emerald-600 text-white shadow-xs'
+                                                : chapter.section === 'black_book'
+                                                  ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                                  : chapter.section === 'ayush_vocab'
+                                                    ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                                                    : chapter.section === 'grammar'
+                                                      ? 'bg-indigo-50 text-indigo-700 border border-indigo-200'
+                                                      : chapter.is_test
+                                                        ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                                                        : 'bg-slate-50 text-slate-500'
+                                            }`}>
+                                              {chapter.letter_range || (
+                                                chapter.section === 'black_book' || chapter.section === 'ayush_vocab'
+                                                  ? `Set ${chapter.chapter_num}`
+                                                  : chapter.section === 'grammar'
+                                                    ? `Ch ${chapter.original_chapter_num || chapter.chapter_num}`
+                                                    : chapter.is_test
+                                                      ? 'Full Test'
+                                                      : chapter.set_name
+                                                        ? `Set ${chapter.set_name.replace('set_', '')}`
+                                                        : `Ch ${chapter.original_chapter_num || chapter.chapter_num}`
+                                              )}
+                                            </span>
+                                          </div>
+                                          <div>
+                                            <h3 className="mt-2.5 text-xs font-bold text-slate-800 line-clamp-1">{chapter.chapter_title}</h3>
+                                            <p className="mt-0.5 text-[11px] text-slate-500">
+                                              {chapter.section === 'grammar' && chapter.questions.length > 50
+                                                ? `${chapter.questions.length} Questions • ${Math.ceil(chapter.questions.length / 50)} Sets (50 Qs/set)`
+                                                : `${chapter.questions.length} Questions ${chapter.topic_name ? `• ${formatGKSubTopicTitle(chapter.topic_name)}` : ''}`}
+                                            </p>
+                                          </div>
+
+                                          {chapter.section === 'grammar' && chapter.questions.length > 50 && (
+                                            <div className="mt-2 flex flex-wrap gap-1 pt-1.5 border-t border-slate-100">
+                                              {Array.from({ length: Math.ceil(chapter.questions.length / 50) }).map((_, sIdx) => {
+                                                const sNum = sIdx + 1;
+                                                const startQ = sIdx * 50 + 1;
+                                                const endQ = Math.min((sIdx + 1) * 50, chapter.questions.length);
+                                                const sCount = endQ - startQ + 1;
+                                                return (
+                                                  <button
+                                                    key={sNum}
+                                                    type="button"
+                                                    onClick={(e) => {
+                                                      e.stopPropagation();
+                                                      const targetQuestions = chapter.questions.slice(sIdx * 50, endQ);
+                                                      const virtualChapter: Chapter = {
+                                                        ...chapter,
+                                                        chapter_num: chapter.original_chapter_num || chapter.chapter_num,
+                                                        chapter_title: `${chapter.chapter_title} • Set ${sNum} (Q${startQ}-${endQ})`,
+                                                        questions: targetQuestions.map((q, qIdx) => ({ ...q, q_num: qIdx + 1 }))
+                                                      };
+                                                      startQuiz(virtualChapter);
+                                                    }}
+                                                    className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-indigo-50/80 hover:bg-indigo-600 text-indigo-700 hover:text-white border border-indigo-200/60 transition-all cursor-pointer shadow-2xs"
+                                                    title={`Practice Set ${sNum}: Questions ${startQ} to ${endQ} (${sCount} Qs)`}
+                                                  >
+                                                    Set {sNum} ({sCount})
+                                                  </button>
+                                                );
+                                              })}
+                                            </div>
+                                          )}
+                                        </div>
+                                        <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-slate-100">
+                                          <div className={`flex items-center text-xs font-semibold ${
+                                            isChSelected
+                                              ? 'text-emerald-700 font-bold'
+                                              : chapter.section === 'black_book'
+                                                ? 'text-amber-600'
+                                                : chapter.section === 'ayush_vocab'
+                                                  ? 'text-emerald-600'
+                                                  : 'text-indigo-600'
+                                          }`}>
+                                            {isChSelected ? (
+                                              <span className="flex items-center gap-1 text-emerald-700">
+                                                <CheckSquare className="w-3.5 h-3.5" />
+                                                Selected
+                                              </span>
+                                            ) : (
+                                              <>
+                                                {chapter.section === 'grammar' && chapter.questions.length > 50 ? 'Choose Set' : 'Start Set'}
+                                                <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
+                                              </>
+                                            )}
+                                          </div>
+                                          <div className="flex items-center gap-1.5">
+                                            {chapter.section === 'grammar' && getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num) && (
+                                              <button
+                                                type="button"
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  const pdfUrl = getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num);
+                                                  if (pdfUrl) window.open(pdfUrl, '_blank');
+                                                }}
+                                                className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-50 text-amber-800 hover:bg-amber-600 hover:text-white border border-amber-200 transition-all cursor-pointer shadow-2xs"
+                                                title={`Open original book PDF for Chapter ${chapter.original_chapter_num || chapter.chapter_num}`}
+                                              >
+                                                <FileText className="w-3 h-3" />
+                                                <span>PDF</span>
+                                              </button>
+                                            )}
+                                            {chapter.cheat_sheet && (
+                                              <button
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  setSelectedCheatSheet(chapter);
+                                                }}
+                                                className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition-all cursor-pointer shadow-2xs"
+                                                title="Open Chapter Revision Cheat Sheet"
+                                              >
+                                                <BookOpen className="w-3 h-3" />
+                                                <span>Cheat Sheet</span>
+                                              </button>
+                                            )}
+                                            <button
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleAskAiTopic(chapter.chapter_title, chapter.subject, chapter.questions);
+                                              }}
+                                              className="p-1.5 rounded-md bg-violet-50 text-violet-600 hover:bg-violet-600 hover:text-white transition-colors cursor-pointer"
+                                              title={`Ask Tommy AI about this chapter`}
+                                            >
+                                              <Sparkles className="w-3.5 h-3.5" />
+                                            </button>
+                                            {latestResultByChapter.has(`${chapter.subject}|${chapter.chapter_title}`) && (
+                                              <button
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  const r = latestResultByChapter.get(`${chapter.subject}|${chapter.chapter_title}`);
+                                                  if (r) openReview(r, 'home');
+                                                }}
+                                                className="p-1.5 rounded-md bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors cursor-pointer"
+                                                title="Review last attempt"
+                                              >
+                                                <History className="w-3.5 h-3.5" />
+                                              </button>
+                                            )}
+                                          </div>
+                                        </div>
+                                      </motion.div>
+                                    );
+                                  })}
+                                </div>
+                              )}
+
+                              {/* Floating Action Bar for Selected Sets */}
+                              <AnimatePresence>
+                                {selectedChapterKeys.length > 0 && (
+                                  <motion.div
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    exit={{ y: 50, opacity: 0 }}
+                                    transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                                    className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xl px-4 pointer-events-auto"
+                                  >
+                                    <div className="flex items-center justify-between gap-3 p-3.5 bg-slate-900/95 backdrop-blur-md rounded-2xl border border-slate-700/60 shadow-2xl text-white">
+                                      <div className="flex items-center gap-2.5 pl-1.5">
+                                        <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                                          <Sparkles className="w-4 h-4" />
+                                        </div>
+                                        <div>
+                                          <p className="text-xs font-bold text-white tracking-wide">
+                                            {selectedChapterKeys.length} {selectedChapterKeys.length === 1 ? 'Set' : 'Sets'} Selected
+                                          </p>
+                                          <p className="text-[11px] text-slate-300 font-medium">
+                                            {selectedTotalQuestions} Questions Combined
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div className="flex items-center gap-2">
+                                        <button
+                                          type="button"
+                                          onClick={() => setSelectedChapterKeys([])}
+                                          className="px-3 py-1.5 text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-all cursor-pointer"
+                                        >
+                                          Clear
+                                        </button>
+                                        <button
+                                          type="button"
+                                          onClick={() => startMultiSetQuiz(selectedChaptersList)}
+                                          className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 rounded-xl shadow-lg shadow-emerald-950/40 hover:shadow-emerald-500/25 transition-all cursor-pointer active:scale-95"
+                                        >
+                                          <Play className="w-3.5 h-3.5 fill-current" />
+                                          Practice Selected Sets
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
+                            </div>
+                          );
                         })()}
                       </div>
                     )}

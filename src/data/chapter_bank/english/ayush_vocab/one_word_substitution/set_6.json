@@ -1,34 +1,158 @@
 {
   "chapter_num": 6,
-  "chapter_title": "One Word Substitution - Set 6",
+  "chapter_title": "OWS - Set 6 (Letters G-K)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_6",
   "is_test": true,
+  "letter_range": "Letters G-K",
+  "start_letter": "G",
+  "end_letter": "K",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the one-word substitution for: \"One who pretends to have knowledge or skills\"",
+      "question": "Choose the one-word substitution for: \"A person who talks excessively\"",
       "options": {
-        "a": "Recluse (n)",
-        "b": "Garrulous (n)",
-        "c": "Charlatan (n)",
-        "d": "Pessimist (n)"
+        "a": "Somniloquist (n)",
+        "b": "Cobbler (n)",
+        "c": "Garrulous (n)",
+        "d": "Recluse (n)"
       },
       "answer": "c",
-      "solution": "One who pretends to have knowledge or skills\n\n💡 Mnemonic Trick: Memory trick: link “Charlatan (n)” with “pretends have knowledge skills”.\n📖 Source: PDF • page 27\n🎯 Target Word: Charlatan (n)",
+      "solution": "A person who talks excessively\n\n💡 Mnemonic Trick: Memory trick: link “Garrulous (n)” with “person talks excessively”.\n📖 Source: PDF • page 20\n🎯 Target Word: Garrulous (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q1"
+    },
+    {
+      "q_num": 2,
+      "question": "Choose the one-word substitution for: \"The killing of a whole group of people\"",
+      "options": {
+        "a": "Totem (n)",
+        "b": "Genocide (n)",
+        "c": "Matricide (n)",
+        "d": "Abeyance (n)"
+      },
+      "answer": "b",
+      "solution": "The killing of a whole group of people\n\n💡 Mnemonic Trick: Memory trick: link “Genocide (n)” with “killing whole group people”.\n📖 Source: PDF • page 15\n🎯 Target Word: Genocide (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q2"
+    },
+    {
+      "q_num": 3,
+      "question": "Choose the one-word substitution for: \"A belief that the Earth is the center of the universe\"",
+      "options": {
+        "a": "Geocentrism (n)",
+        "b": "Analgesic (n/adj)",
+        "c": "Calligraphy (n)",
+        "d": "Narcotic (n)"
+      },
+      "answer": "a",
+      "solution": "A belief that the Earth is the center of the universe\n\n💡 Mnemonic Trick: Memory trick: link “Geocentrism (n)” with “belief that Earth center universe”.\n📖 Source: PDF • page 6\n🎯 Target Word: Geocentrism (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q3"
     },
     {
-      "q_num": 2,
+      "q_num": 4,
+      "question": "The study of handwriting to analyse personality.",
+      "options": {
+        "a": "Calligraphy (n)",
+        "b": "Calligraphy",
+        "c": "Graphology",
+        "d": "Entomologist"
+      },
+      "answer": "c",
+      "solution": "Graphology studies handwriting to analyse personality. Typography is arranging printed text. Calligraphy is decorative/beautiful handwriting. Orthography is the conventional spelling system of a language.\n\n💡 Mnemonic Trick: Memory trick: link “Graphology” with “Graphology studies handwriting analyse personality”.\n📖 Source: HTML file • Question 48\n🎯 Target Word: Graphology",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the one-word substitution for: \"A place where aircraft are kept\"",
+      "options": {
+        "a": "Archive (n)",
+        "b": "Hangar (n)",
+        "c": "Zoo (n)",
+        "d": "Morgue (n)"
+      },
+      "answer": "b",
+      "solution": "A place where aircraft are kept\n\n💡 Mnemonic Trick: Memory trick: link “Hangar (n)” with “place where aircraft kept”.\n📖 Source: PDF • page 20\n🎯 Target Word: Hangar (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q5"
+    },
+    {
+      "q_num": 6,
+      "question": "Fear of being touched.",
+      "options": {
+        "a": "Abscond (v)",
+        "b": "Agoraphobia",
+        "c": "Haphephobia",
+        "d": "Modesty (n)"
+      },
+      "answer": "c",
+      "solution": "Haphephobia is an irrational fear of being touched. Atychiphobia is fear of failure, Gamophobia is fear of marriage, and Thanatophobia is fear of death.\n\n💡 Mnemonic Trick: Memory trick: link “Haphephobia” with “Haphephobia irrational fear being touched”.\n📖 Source: HTML file • Question 29\n🎯 Target Word: Haphephobia",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "A person who believes that pleasure is the chief good in life.",
+      "options": {
+        "a": "Epicurean",
+        "b": "Recluse",
+        "c": "Cynic",
+        "d": "Hedonist"
+      },
+      "answer": "d",
+      "solution": "Hedonist believes the pursuit of pleasure is life's chief good. Stoic endures hardship without complaint. Cynic believes people act from self-interest. Epicure is someone with refined taste in food/drink.\n\n💡 Mnemonic Trick: Memory trick: link “Hedonist” with “Hedonist believes pursuit pleasure life”.\n📖 Source: HTML file • Question 24\n🎯 Target Word: Hedonist",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q7"
+    },
+    {
+      "q_num": 8,
       "question": "Choose the one-word substitution for: \"Belief against established doctrine, especially religion/ ideology\"",
       "options": {
         "a": "Elegy (n)",
@@ -44,349 +168,248 @@
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "Choose the one-word substitution for: \"One who writes traditional poems\"",
-      "options": {
-        "a": "Author (n)",
-        "b": "Bard (n)",
-        "c": "Recluse (n)",
-        "d": "Garrulous (n)"
       },
-      "answer": "b",
-      "solution": "One who writes traditional poems\n\n💡 Mnemonic Trick: Memory trick: link “Bard (n)” with “writes traditional poems”.\n📖 Source: PDF • page 28\n🎯 Target Word: Bard (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "Choose the one-word substitution for: \"To leave suddenly and hurriedly\"",
-      "options": {
-        "a": "Facsimile (n)",
-        "b": "Abscond (v)",
-        "c": "Abeyance (n)",
-        "d": "Modesty (n)"
-      },
-      "answer": "b",
-      "solution": "To leave suddenly and hurriedly\n\n💡 Mnemonic Trick: Memory trick: link “Abscond (v)” with “leave suddenly hurriedly”.\n📖 Source: PDF • page 28\n🎯 Target Word: Abscond (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "Choose the one-word substitution for: \"A person who believes in fate or destiny\"",
-      "options": {
-        "a": "Fatalist (n)",
-        "b": "Cobbler (n)",
-        "c": "Garrulous (n)",
-        "d": "Recluse (n)"
-      },
-      "answer": "a",
-      "solution": "A person who believes in fate or destiny\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist (n)” with “person believes fate destiny”.\n📖 Source: PDF • page 28\n🎯 Target Word: Fatalist (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "Choose the one-word substitution for: \"A government where rulers steal national resources\"",
-      "options": {
-        "a": "Plutocracy (n)",
-        "b": "Calligraphy (n)",
-        "c": "Kleptocracy (n)",
-        "d": "Autocracy (n)"
-      },
-      "answer": "c",
-      "solution": "A government where rulers steal national resources\n\n💡 Mnemonic Trick: Memory trick: link “Kleptocracy (n)” with “government where rulers steal national”.\n📖 Source: PDF • page 28\n🎯 Target Word: Kleptocracy (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "Choose the one-word substitution for: \"A building where dead bodies are kept temporarily\"",
-      "options": {
-        "a": "Zoo (n)",
-        "b": "Morgue (n)",
-        "c": "Hangar (n)",
-        "d": "Mortuary (n)"
-      },
-      "answer": "d",
-      "solution": "A building where dead bodies are kept temporarily\n\n💡 Mnemonic Trick: Memory trick: link “Mortuary (n)” with “building where dead bodies kept”.\n📖 Source: PDF • page 28\n🎯 Target Word: Mortuary (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
-      "question": "Choose the one-word substitution for: \"A harmless pill given for psychological benefit, not real cure\"",
-      "options": {
-        "a": "Elegy (n)",
-        "b": "Placebo (n)",
-        "c": "Facsimile (n)",
-        "d": "Abeyance (n)"
-      },
-      "answer": "b",
-      "solution": "A harmless pill given for psychological benefit, not real cure\n\n💡 Mnemonic Trick: Memory trick: link “Placebo (n)” with “harmless pill given psychological benefit,”.\n📖 Source: PDF • page 28\n🎯 Target Word: Placebo (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
+      "id": "ayush_one_word_substitution_set6_q8"
     },
     {
       "q_num": 9,
-      "question": "Choose the one-word substitution for: \"Use of trickery to achieve political/financial goal\"",
+      "question": "Choose the one-word substitution for: \"Person overly anxious about health\"",
       "options": {
-        "a": "Chicanery (n)",
-        "b": "Matricide (n)",
-        "c": "Plutocracy (n)",
-        "d": "Facsimile (n)"
+        "a": "Somniloquist (n)",
+        "b": "Autocracy (n)",
+        "c": "Hypochondriac (n)",
+        "d": "Garrulous (n)"
       },
-      "answer": "a",
-      "solution": "Use of trickery to achieve political/financial goal\n\n💡 Mnemonic Trick: Memory trick: link “Chicanery (n)” with “trickery achieve political financial goal”.\n📖 Source: PDF • page 28\n🎯 Target Word: Chicanery (n)",
+      "answer": "c",
+      "solution": "Person overly anxious about health\n\n💡 Mnemonic Trick: Memory trick: link “Hypochondriac (n)” with “Person overly anxious about health”.\n📖 Source: PDF • page 12\n🎯 Target Word: Hypochondriac (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q9"
     },
     {
       "q_num": 10,
-      "question": "Choose the one-word substitution for: \"A person who loves and collects books\"",
+      "question": "A person who pretends to have virtues, morals, or principles that they do not actually possess.",
       "options": {
-        "a": "Mineralogist (n)",
-        "b": "Author (n)",
-        "c": "Bibliophile (n)",
-        "d": "Garrulous (n)"
+        "a": "Epicurean",
+        "b": "Fatalist",
+        "c": "Hypocrite",
+        "d": "Philosopher"
       },
       "answer": "c",
-      "solution": "A person who loves and collects books\n\n💡 Mnemonic Trick: Memory trick: link “Bibliophile (n)” with “person loves collects books”.\n📖 Source: PDF • page 28\n🎯 Target Word: Bibliophile (n)",
+      "solution": "Hypocrite pretends to hold virtues/principles they don't truly have. Philosopher studies wisdom academically. Altruist genuinely helps others selflessly. Realist deals practically with facts as they are.\n\n💡 Mnemonic Trick: Memory trick: link “Hypocrite” with “Hypocrite pretends hold virtues principles”.\n📖 Source: HTML file • Question 78\n🎯 Target Word: Hypocrite",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q10"
     },
     {
       "q_num": 11,
-      "question": "Choose the one-word substitution for: \"A person with great skill in music or arts\"",
+      "question": "A person who pretends to have virtues, moral or religious beliefs he does not possess.",
       "options": {
-        "a": "Dromomaniac (n)",
-        "b": "Garrulous (n)",
-        "c": "Autocracy (n)",
-        "d": "Virtuoso (n/adj)"
+        "a": "Charlatan (n)",
+        "b": "Esoteric",
+        "c": "Vegetarian",
+        "d": "Hypocrite"
       },
       "answer": "d",
-      "solution": "A person with great skill in music or arts\n\n💡 Mnemonic Trick: Memory trick: link “Virtuoso (n/adj)” with “person with great skill music”.\n📖 Source: PDF • page 28\n🎯 Target Word: Virtuoso (n/adj)",
+      "solution": "Hypocrite pretends to hold virtues or beliefs they lack. Charlatan falsely claims special knowledge/skills. Fraud deceives others for personal gain. Indolent means habitually lazy.\n\n💡 Mnemonic Trick: Memory trick: link “Hypocrite” with “Hypocrite pretends hold virtues beliefs”.\n📖 Source: HTML file • Question 80\n🎯 Target Word: Hypocrite",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q11"
     },
     {
       "q_num": 12,
-      "question": "Choose the one-word substitution for: \"The study of human races, origins, and societies\"",
+      "question": "Choose the one-word substitution for: \"A person&#x27;s peculiar habit or mannerism\"",
       "options": {
-        "a": "Psychology (n)",
-        "b": "Anthropologist (n)",
-        "c": "Anthropology (n)",
-        "d": "Abscond (v)"
+        "a": "Idiosyncrasy (n)",
+        "b": "Somniloquist (n)",
+        "c": "Garrulous (n)",
+        "d": "Autocracy (n)"
       },
-      "answer": "c",
-      "solution": "The study of human races, origins, and societies\n\n💡 Mnemonic Trick: Memory trick: link “Anthropology (n)” with “study human races, origins, societies”.\n📖 Source: PDF • page 28\n🎯 Target Word: Anthropology (n)",
+      "answer": "a",
+      "solution": "A person's peculiar habit or mannerism\n\n💡 Mnemonic Trick: Memory trick: link “Idiosyncrasy (n)” with “person peculiar habit mannerism”.\n📖 Source: PDF • page 20\n🎯 Target Word: Idiosyncrasy (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q12"
     },
     {
       "q_num": 13,
-      "question": "Choose the one-word substitution for: \"A person who is indifferent to or distrustful of human morality\"",
+      "question": "Choose the one-word substitution for: \"A speech delivered without preparation\"",
       "options": {
-        "a": "Cynic (n)",
-        "b": "Author (n)",
-        "c": "Recluse (n)",
-        "d": "Garrulous (n)"
+        "a": "Extempore (adj/adv)",
+        "b": "Facsimile (n)",
+        "c": "Vagabond (n)",
+        "d": "Impromptu (n)"
       },
-      "answer": "a",
-      "solution": "A person who is indifferent to or distrustful of human morality\n\n💡 Mnemonic Trick: Memory trick: link “Cynic (n)” with “person indifferent distrustful human morality”.\n📖 Source: PDF • page 28\n🎯 Target Word: Cynic (n)",
+      "answer": "d",
+      "solution": "A speech delivered without preparation\n\n💡 Mnemonic Trick: Memory trick: link “Impromptu (n)” with “speech delivered without preparation”.\n📖 Source: PDF • page 20\n🎯 Target Word: Impromptu (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q13"
     },
     {
       "q_num": 14,
-      "question": "Choose the one-word substitution for: \"Fear of confined spaces\"",
+      "question": "A person who deliberately stirs up discord or rebellion within an organization, often to achieve personal or political ends.",
       "options": {
-        "a": "Embezzlement (n)",
-        "b": "Kleptomaniac (n)",
-        "c": "Agoraphobia (n)",
-        "d": "Claustrophobia (n)"
+        "a": "Arsonist",
+        "b": "Loquacious",
+        "c": "Incendiary",
+        "d": "Hypocrite"
       },
-      "answer": "d",
-      "solution": "Fear of confined spaces\n\n💡 Mnemonic Trick: Memory trick: link “Claustrophobia (n)” with “Fear confined spaces”.\n📖 Source: PDF • page 28\n🎯 Target Word: Claustrophobia (n)",
+      "answer": "c",
+      "solution": "Incendiary here describes someone who deliberately provokes discord or rebellion for personal/political gain. Iconoclast attacks established beliefs. Insubordinate refuses to obey authority. Insurrectionist takes part in an organised uprising.\n\n💡 Mnemonic Trick: Memory trick: link “Incendiary” with “Incendiary here describes someone deliberately”.\n📖 Source: HTML file • Question 82\n🎯 Target Word: Incendiary",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q14"
     },
     {
       "q_num": 15,
-      "question": "Choose the one-word substitution for: \"Words inscribed on a tomb in memory of a dead person\"",
+      "question": "Choose the one-word substitution for: \"A person who cannot make mistakes\"",
       "options": {
         "a": "Garrulous (n)",
-        "b": "Autocracy (n)",
-        "c": "Interment (n)",
-        "d": "Epitaph (n)"
+        "b": "Recluse (n)",
+        "c": "Infallible (adj)",
+        "d": "Somniloquist (n)"
       },
-      "answer": "d",
-      "solution": "Words inscribed on a tomb in memory of a dead person\n\n💡 Mnemonic Trick: Memory trick: link “Epitaph (n)” with “Words inscribed tomb memory dead”.\n📖 Source: PDF • page 28\n🎯 Target Word: Epitaph (n)",
+      "answer": "c",
+      "solution": "A person who cannot make mistakes\n\n💡 Mnemonic Trick: Memory trick: link “Infallible (adj)” with “person cannot make mistakes”.\n📖 Source: PDF • page 15\n🎯 Target Word: Infallible (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q15"
     },
     {
       "q_num": 16,
-      "question": "Choose the one-word substitution for: \"A speech delivered without prior preparation\"",
+      "question": "A person who cannot be satisfied.",
       "options": {
-        "a": "Impromptu (n)",
-        "b": "Embezzlement (n)",
-        "c": "Vagabond (n)",
-        "d": "Extempore (adj/adv)"
+        "a": "Infallible (adj)",
+        "b": "Insatiable",
+        "c": "Veteran (n)",
+        "d": "Author (n)"
       },
-      "answer": "d",
-      "solution": "A speech delivered without prior preparation\n\n💡 Mnemonic Trick: Memory trick: link “Extempore (adj/adv)” with “speech delivered without prior preparation”.\n📖 Source: PDF • page 28\n🎯 Target Word: Extempore (adj/adv)",
+      "answer": "b",
+      "solution": "Insatiable means impossible to satisfy; having an unquenchable desire. Contented means pleased with what one has. Avaricious means extremely greedy for wealth. Sanguine means optimistic even in difficulty.\n\n💡 Mnemonic Trick: Memory trick: link “Insatiable” with “Insatiable means impossible satisfy having”.\n📖 Source: HTML file • Question 59\n🎯 Target Word: Insatiable",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q16"
     },
     {
       "q_num": 17,
-      "question": "Choose the one-word substitution for: \"A mild expression used in place of a harsh one\"",
+      "question": "Choose the one-word substitution for: \"Honesty and strong moral principles\"",
       "options": {
-        "a": "Facsimile (n)",
-        "b": "Matricide (n)",
-        "c": "Euphemism (n)",
-        "d": "Lament (n/v)"
-      },
-      "answer": "c",
-      "solution": "A mild expression used in place of a harsh one\n\n💡 Mnemonic Trick: Memory trick: link “Euphemism (n)” with “mild expression used place harsh”.\n📖 Source: PDF • page 28\n🎯 Target Word: Euphemism (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "Choose the one-word substitution for: \"A short-lived or fleeting phenomenon\"",
-      "options": {
-        "a": "Ephemeral (adj)",
-        "b": "Embezzlement (n)",
-        "c": "Anecdote (n)",
-        "d": "Calligraphy (n)"
+        "a": "Integrity (n)",
+        "b": "Abscond (v)",
+        "c": "Modesty (n)",
+        "d": "Apostate (n)"
       },
       "answer": "a",
-      "solution": "A short-lived or fleeting phenomenon\n\n💡 Mnemonic Trick: Memory trick: link “Ephemeral (adj)” with “short-lived fleeting phenomenon”.\n📖 Source: PDF • page 28\n🎯 Target Word: Ephemeral (adj)",
+      "solution": "Honesty and strong moral principles\n\n💡 Mnemonic Trick: Memory trick: link “Integrity (n)” with “Honesty strong moral principles”.\n📖 Source: PDF • page 12\n🎯 Target Word: Integrity (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q17"
     },
     {
-      "q_num": 19,
-      "question": "Choose the one-word substitution for: \"A person who doubts the sincerity or goodness of others\"",
+      "q_num": 18,
+      "question": "Choose the one-word substitution for: \"The act of placing a dead person in a grave\"",
       "options": {
-        "a": "Cynic (n)",
-        "b": "Author (n)",
-        "c": "Garrulous (n)",
-        "d": "Recluse (n)"
+        "a": "Epitaph (n)",
+        "b": "Garrulous (n)",
+        "c": "Autocracy (n)",
+        "d": "Interment (n)"
       },
-      "answer": "a",
-      "solution": "A person who doubts the sincerity or goodness of others\n\n💡 Mnemonic Trick: Memory trick: link “Cynic (n)” with “person doubts sincerity goodness others”.\n📖 Source: PDF • page 28\n🎯 Target Word: Cynic (n)",
+      "answer": "d",
+      "solution": "The act of placing a dead person in a grave\n\n💡 Mnemonic Trick: Memory trick: link “Interment (n)” with “placing dead person grave”.\n📖 Source: PDF • page 20\n🎯 Target Word: Interment (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q18"
     },
     {
-      "q_num": 20,
-      "question": "Choose the one-word substitution for: \"A person who insists on strict adherence to rules\"",
+      "q_num": 19,
+      "question": "The humorous or mildly sarcastic use of words to imply the opposite of what they normally mean.",
       "options": {
-        "a": "Recluse (n)",
-        "b": "Cobbler (n)",
-        "c": "Martinet (n)",
-        "d": "Garrulous (n)"
+        "a": "Paradox",
+        "b": "Irony",
+        "c": "Paradox (n)",
+        "d": "Slang"
       },
-      "answer": "c",
-      "solution": "A person who insists on strict adherence to rules\n\n💡 Mnemonic Trick: Memory trick: link “Martinet (n)” with “person insists strict adherence rules”.\n📖 Source: PDF • page 28\n🎯 Target Word: Martinet (n)",
+      "answer": "b",
+      "solution": "Irony is the use of words to imply the opposite of their literal meaning, often humorously. Sarcasm is irony used to mock or convey contempt. Satire uses humour/ridicule to critique folly or vice. Paradox is a seemingly contradictory but possibly True statement.\n\n💡 Mnemonic Trick: Memory trick: link “Irony” with “Irony words imply opposite their”.\n📖 Source: HTML file • Question 71\n🎯 Target Word: Irony",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set6_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the one-word substitution for: \"The view that human knowledge is limited by the human mind\"",
+      "options": {
+        "a": "Analgesic (n/adj)",
+        "b": "Narcotic (n)",
+        "c": "Kantianism (n)",
+        "d": "Psychology (n)"
+      },
+      "answer": "c",
+      "solution": "The view that human knowledge is limited by the human mind\n\n💡 Mnemonic Trick: Memory trick: link “Kantianism (n)” with “view that human knowledge limited”.\n📖 Source: PDF • page 15\n🎯 Target Word: Kantianism (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set6_q20"
     }
   ]
 }

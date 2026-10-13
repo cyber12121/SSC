@@ -1,392 +1,415 @@
 {
   "chapter_num": 5,
-  "chapter_title": "One Word Substitution - Set 5",
+  "chapter_title": "OWS - Set 5 (Letters E-G)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_5",
   "is_test": true,
+  "letter_range": "Letters E-G",
+  "start_letter": "E",
+  "end_letter": "G",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the one-word substitution for: \"A person who has long experience in a field\"",
+      "question": "Choose the one-word substitution for: \"Words inscribed on a tomb in memory of a dead person\"",
       "options": {
         "a": "Garrulous (n)",
-        "b": "Cobbler (n)",
-        "c": "Veteran (n)",
-        "d": "Recluse (n)"
+        "b": "Autocracy (n)",
+        "c": "Interment (n)",
+        "d": "Epitaph (n)"
       },
-      "answer": "c",
-      "solution": "A person who has long experience in a field\n\n💡 Mnemonic Trick: Memory trick: link “Veteran (n)” with “person long experience field”.\n📖 Source: PDF • page 20\n🎯 Target Word: Veteran (n)",
+      "answer": "d",
+      "solution": "Words inscribed on a tomb in memory of a dead person\n\n💡 Mnemonic Trick: Memory trick: link “Epitaph (n)” with “Words inscribed tomb memory dead”.\n📖 Source: PDF • page 28\n🎯 Target Word: Epitaph (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q1"
     },
     {
       "q_num": 2,
-      "question": "Choose the one-word substitution for: \"A person who writes books\"",
+      "question": "Able to be understood by only a few people who have special knowledge or interest.",
       "options": {
-        "a": "Recluse (n)",
-        "b": "Author (n)",
-        "c": "Bibliophile (n)",
-        "d": "Garrulous (n)"
+        "a": "Hedonist",
+        "b": "Esoteric",
+        "c": "Hypocrite",
+        "d": "Skeptic"
       },
       "answer": "b",
-      "solution": "A person who writes books\n\n💡 Mnemonic Trick: Memory trick: link “Author (n)” with “person writes books”.\n📖 Source: PDF • page 21\n🎯 Target Word: Author (n)",
+      "solution": "Esoteric means understood by only a select few with specialised knowledge. Opaque means hard to understand generally. Inefficient means not productive. Illegible means unable to be read clearly.\n\n💡 Mnemonic Trick: Memory trick: link “Esoteric” with “Esoteric means understood only select”.\n📖 Source: HTML file • Question 68\n🎯 Target Word: Esoteric",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q2"
     },
     {
       "q_num": 3,
-      "question": "Choose the one-word substitution for: \"A poem of mourning\"",
+      "question": "Choose the one-word substitution for: \"A mild expression used in place of a harsh one\"",
       "options": {
         "a": "Facsimile (n)",
-        "b": "Abeyance (n)",
-        "c": "Elegy (n)",
-        "d": "Limerick (n)"
+        "b": "Matricide (n)",
+        "c": "Euphemism (n)",
+        "d": "Lament (n/v)"
       },
       "answer": "c",
-      "solution": "A poem of mourning\n\n💡 Mnemonic Trick: Memory trick: link “Elegy (n)” with “poem mourning”.\n📖 Source: PDF • page 21\n🎯 Target Word: Elegy (n)",
+      "solution": "A mild expression used in place of a harsh one\n\n💡 Mnemonic Trick: Memory trick: link “Euphemism (n)” with “mild expression used place harsh”.\n📖 Source: PDF • page 28\n🎯 Target Word: Euphemism (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q3"
     },
     {
       "q_num": 4,
-      "question": "Choose the one-word substitution for: \"A symbol that serves as an emblem of a group of people\"",
+      "question": "Choose the one-word substitution for: \"A large-scale departure of people from one place\"",
       "options": {
-        "a": "Totem (n)",
-        "b": "Narcotic (n)",
-        "c": "Analgesic (n/adj)",
-        "d": "Genocide (n)"
+        "a": "Genocide (n)",
+        "b": "Exodus (n)",
+        "c": "Patrimony (n)",
+        "d": "Hangar (n)"
       },
-      "answer": "a",
-      "solution": "A symbol that serves as an emblem of a group of people\n\n💡 Mnemonic Trick: Memory trick: link “Totem (n)” with “symbol that serves emblem group”.\n📖 Source: PDF • page 21\n🎯 Target Word: Totem (n)",
+      "answer": "b",
+      "solution": "A large-scale departure of people from one place\n\n💡 Mnemonic Trick: Memory trick: link “Exodus (n)” with “large-scale departure people from place”.\n📖 Source: PDF • page 6\n🎯 Target Word: Exodus (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q4"
     },
     {
       "q_num": 5,
-      "question": "Choose the one-word substitution for: \"A man whose wife is dead\"",
+      "question": "To clear someone of blame or suspicion.",
       "options": {
-        "a": "Widower (n)",
-        "b": "Elegy (n)",
-        "c": "Facsimile (n)",
-        "d": "Abeyance (n)"
+        "a": "Exonerate",
+        "b": "Amnesty",
+        "c": "Hedonist",
+        "d": "Anthology"
       },
       "answer": "a",
-      "solution": "A man whose wife is dead\n\n💡 Mnemonic Trick: Memory trick: link “Widower (n)” with “whose wife dead”.\n📖 Source: PDF • page 21\n🎯 Target Word: Widower (n)",
+      "solution": "Exonerate means to free someone from blame. Accuse means to charge someone. Indict means to formally charge with a serious crime. Incriminate means to make someone appear guilty.\n\n💡 Mnemonic Trick: Memory trick: link “Exonerate” with “Exonerate means free someone from”.\n📖 Source: HTML file • Question 9\n🎯 Target Word: Exonerate",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q5"
     },
     {
       "q_num": 6,
-      "question": "Choose the one-word substitution for: \"An official pardon for offenders\"",
+      "question": "Choose the one-word substitution for: \"A person who lives in a foreign country\"",
       "options": {
-        "a": "Abeyance (n)",
-        "b": "Facsimile (n)",
-        "c": "Amnesty (n)",
-        "d": "Elegy (n)"
+        "a": "Recluse (n)",
+        "b": "Expatriate (n/adj/v)",
+        "c": "Garrulous (n)",
+        "d": "Somniloquist (n)"
       },
-      "answer": "c",
-      "solution": "An official pardon for offenders\n\n💡 Mnemonic Trick: Memory trick: link “Amnesty (n)” with “official pardon offenders”.\n📖 Source: PDF • page 21\n🎯 Target Word: Amnesty (n)",
+      "answer": "b",
+      "solution": "A person who lives in a foreign country\n\n💡 Mnemonic Trick: Memory trick: link “Expatriate (n/adj/v)” with “person lives foreign country”.\n📖 Source: PDF • page 7\n🎯 Target Word: Expatriate (n/adj/v)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q6"
     },
     {
       "q_num": 7,
-      "question": "Choose the one-word substitution for: \"The pratice of delibrately expressing less than what is meant\"",
+      "question": "A speech delivered without any prior preparation.",
       "options": {
-        "a": "Facsimile (n)",
-        "b": "Abeyance (n)",
-        "c": "Elegy (n)",
-        "d": "Litotes (n)"
+        "a": "Impromptu (n)",
+        "b": "Extempore (adj/adv)",
+        "c": "Extempore",
+        "d": "Vagabond (n)"
       },
-      "answer": "d",
-      "solution": "The pratice of delibrately expressing less than what is meant\n\n💡 Mnemonic Trick: Memory trick: link “Litotes (n)” with “pratice delibrately expressing less than”.\n📖 Source: PDF • page 21\n🎯 Target Word: Litotes (n)",
+      "answer": "c",
+      "solution": "Extempore is a speech given without prior preparation. Monologue is a long speech by one person. Dialogue is a conversation between people. Soliloquy is a character voicing inner thoughts alone.\n\n💡 Mnemonic Trick: Memory trick: link “Extempore” with “Extempore speech given without prior”.\n📖 Source: HTML file • Question 55\n🎯 Target Word: Extempore",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q7"
     },
     {
       "q_num": 8,
-      "question": "Choose the one-word substitution for: \"A humorous poem of five lines\"",
+      "question": "A speech made without any preparation.",
       "options": {
-        "a": "Abeyance (n)",
-        "b": "Facsimile (n)",
-        "c": "Limerick (n)",
-        "d": "Elegy (n)"
+        "a": "Vagabond (n)",
+        "b": "Extempore (adj/adv)",
+        "c": "Impromptu (n)",
+        "d": "Extempore"
       },
-      "answer": "c",
-      "solution": "A humorous poem of five lines\n\n💡 Mnemonic Trick: Memory trick: link “Limerick (n)” with “humorous poem five lines”.\n📖 Source: PDF • page 21\n🎯 Target Word: Limerick (n)",
+      "answer": "d",
+      "solution": "Extempore is a speech delivered without prior preparation. Dialogue is a conversation between people. Monologue is a long speech by one person. Soliloquy is a character speaking their thoughts aloud alone.\n\n💡 Mnemonic Trick: Memory trick: link “Extempore” with “Extempore speech delivered without prior”.\n📖 Source: HTML file • Question 32\n🎯 Target Word: Extempore",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q8"
     },
     {
       "q_num": 9,
-      "question": "Choose the one-word substitution for: \"A person who is different to pleasure or pain\"",
+      "question": "A speech made without any preparation.",
       "options": {
-        "a": "Author (n)",
-        "b": "Stoic (n)",
-        "c": "Recluse (n)",
-        "d": "Garrulous (n)"
+        "a": "Impromptu (n)",
+        "b": "Extempore (adj/adv)",
+        "c": "Vagabond (n)",
+        "d": "Extempore"
       },
-      "answer": "b",
-      "solution": "A person who is different to pleasure or pain\n\n💡 Mnemonic Trick: Memory trick: link “Stoic (n)” with “person different pleasure pain”.\n📖 Source: PDF • page 21\n🎯 Target Word: Stoic (n)",
+      "answer": "d",
+      "solution": "Extempore is an unprepared, impromptu speech. Oration is a formal, often ceremonial speech. Soliloquy is a character's spoken inner thoughts. Monologue is a long speech by one person.\n\n💡 Mnemonic Trick: Memory trick: link “Extempore” with “Extempore unprepared, impromptu speech Oration”.\n📖 Source: HTML file • Question 49\n🎯 Target Word: Extempore",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q9"
     },
     {
       "q_num": 10,
-      "question": "Choose the one-word substitution for: \"A person who abstains from all forms of indulgence\"",
+      "question": "Choose the one-word substitution for: \"A speech delivered without prior preparation\"",
       "options": {
-        "a": "Cobbler (n)",
-        "b": "Ascetic (n)",
-        "c": "Recluse (n)",
-        "d": "Garrulous (n)"
+        "a": "Impromptu (n)",
+        "b": "Embezzlement (n)",
+        "c": "Vagabond (n)",
+        "d": "Extempore (adj/adv)"
       },
-      "answer": "b",
-      "solution": "A person who abstains from all forms of indulgence\n\n💡 Mnemonic Trick: Memory trick: link “Ascetic (n)” with “person abstains from forms indulgence”.\n📖 Source: PDF • page 27\n🎯 Target Word: Ascetic (n)",
+      "answer": "d",
+      "solution": "A speech delivered without prior preparation\n\n💡 Mnemonic Trick: Memory trick: link “Extempore (adj/adv)” with “speech delivered without prior preparation”.\n📖 Source: PDF • page 28\n🎯 Target Word: Extempore (adj/adv)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q10"
     },
     {
       "q_num": 11,
-      "question": "Choose the one-word substitution for: \"A political system based on the rule of the wealthy\"",
+      "question": "A story with a moral lesson.",
       "options": {
-        "a": "Matricide (n)",
-        "b": "Facsimile (n)",
-        "c": "Plutocracy (n)",
-        "d": "Calligraphy (n)"
+        "a": "Fable",
+        "b": "Recluse",
+        "c": "Parable (n)",
+        "d": "Allegory"
       },
-      "answer": "c",
-      "solution": "A political system based on the rule of the wealthy\n\n💡 Mnemonic Trick: Memory trick: link “Plutocracy (n)” with “political system based rule wealthy”.\n📖 Source: PDF • page 27\n🎯 Target Word: Plutocracy (n)",
+      "answer": "a",
+      "solution": "Fable is a short story, often with animal characters, teaching a moral lesson. Novel is a long fictional narrative. Drama is a stage play. Poem expresses ideas through rhythm and style.\n\n💡 Mnemonic Trick: Memory trick: link “Fable” with “Fable short story, often with”.\n📖 Source: HTML file • Question 15\n🎯 Target Word: Fable",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q11"
     },
     {
       "q_num": 12,
-      "question": "Choose the one-word substitution for: \"A professional who prepares maps\"",
+      "question": "Choose the one-word substitution for: \"An exact copy\"",
       "options": {
-        "a": "Cartographer (n)",
-        "b": "Garrulous (n)",
-        "c": "Somniloquist (n)",
-        "d": "Cartography (n)"
+        "a": "Abeyance (n)",
+        "b": "Plutocracy (n)",
+        "c": "Facsimile (n)",
+        "d": "Matricide (n)"
       },
-      "answer": "a",
-      "solution": "A professional who prepares maps\n\n💡 Mnemonic Trick: Memory trick: link “Cartographer (n)” with “professional prepares maps”.\n📖 Source: PDF • page 27\n🎯 Target Word: Cartographer (n)",
+      "answer": "c",
+      "solution": "An exact copy\n\n💡 Mnemonic Trick: Memory trick: link “Facsimile (n)” with “exact copy”.\n📖 Source: PDF • page 28\n🎯 Target Word: Facsimile (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q12"
     },
     {
       "q_num": 13,
-      "question": "Choose the one-word substitution for: \"A statement that seems self-contradictory yet may be true\"",
+      "question": "Choose the one-word substitution for: \"A person who believes that everything in life is determined by fate\"",
       "options": {
-        "a": "Narcotic (n)",
-        "b": "Paradox (n)",
-        "c": "Geocentrism (n)",
-        "d": "Analgesic (n/adj)"
+        "a": "Recluse (n)",
+        "b": "Garrulous (n)",
+        "c": "Cobbler (n)",
+        "d": "Fatalist (n)"
       },
-      "answer": "b",
-      "solution": "A statement that seems self-contradictory yet may be true\n\n💡 Mnemonic Trick: Memory trick: link “Paradox (n)” with “statement that seems self-contradictory true”.\n📖 Source: PDF • page 27\n🎯 Target Word: Paradox (n)",
+      "answer": "d",
+      "solution": "A person who believes that everything in life is determined by fate\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist (n)” with “person believes that everything life”.\n📖 Source: PDF • page 6\n🎯 Target Word: Fatalist (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q13"
     },
     {
       "q_num": 14,
-      "question": "Choose the one-word substitution for: \"An act of intentionally setting fire to property\"",
+      "question": "A person who believes that all events are predetermined and inevitable.",
       "options": {
-        "a": "Elegy (n)",
-        "b": "Patrimony (n)",
-        "c": "Arson (n)",
-        "d": "Interment (n)"
+        "a": "Hypocrite",
+        "b": "Pacifist",
+        "c": "Pedant",
+        "d": "Fatalist"
       },
-      "answer": "c",
-      "solution": "An act of intentionally setting fire to property\n\n💡 Mnemonic Trick: Memory trick: link “Arson (n)” with “intentionally setting fire property”.\n📖 Source: PDF • page 27\n🎯 Target Word: Arson (n)",
+      "answer": "d",
+      "solution": "Fatalist believes all events are predetermined and unavoidable. Optimist expects good outcomes. Pedant overemphasises minor rules/details. Realist deals with facts rather than ideas or emotions.\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist” with “Fatalist believes events predetermined unavoidable”.\n📖 Source: HTML file • Question 56\n🎯 Target Word: Fatalist",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q14"
     },
     {
       "q_num": 15,
-      "question": "Choose the one-word substitution for: \"A person who opposes official policy\"",
+      "question": "A person who believes that all events are ultimately determined by causes external to the will.",
       "options": {
-        "a": "Cobbler (n)",
-        "b": "Recluse (n)",
-        "c": "Garrulous (n)",
-        "d": "Dissident (n)"
+        "a": "Epicurean",
+        "b": "Fatalist",
+        "c": "Solipsist",
+        "d": "Fatalist (n)"
       },
-      "answer": "d",
-      "solution": "A person who opposes official policy\n\n💡 Mnemonic Trick: Memory trick: link “Dissident (n)” with “person opposes official policy”.\n📖 Source: PDF • page 27\n🎯 Target Word: Dissident (n)",
+      "answer": "b",
+      "solution": "Fatalist believes events are predetermined by forces outside one's control. Nihilist rejects all moral/religious meaning in life. Idealist is guided by ideals over practicality. Hedonist pursues pleasure as life's chief aim.\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist” with “Fatalist believes events predetermined forces”.\n📖 Source: HTML file • Question 79\n🎯 Target Word: Fatalist",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q15"
     },
     {
       "q_num": 16,
-      "question": "Choose the one-word substitution for: \"Mental weariness and lack of enthusiasm\"",
+      "question": "Choose the one-word substitution for: \"A person who believes in fate or destiny\"",
       "options": {
-        "a": "Abyss (n)",
-        "b": "Abscond (v)",
-        "c": "Modesty (n)",
-        "d": "Ennui (n)"
+        "a": "Fatalist (n)",
+        "b": "Cobbler (n)",
+        "c": "Garrulous (n)",
+        "d": "Recluse (n)"
       },
-      "answer": "d",
-      "solution": "Mental weariness and lack of enthusiasm\n\n💡 Mnemonic Trick: Memory trick: link “Ennui (n)” with “Mental weariness lack enthusiasm”.\n📖 Source: PDF • page 27\n🎯 Target Word: Ennui (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 17,
-      "question": "Choose the one-word substitution for: \"A secret or disguised way of writing\"",
-      "options": {
-        "a": "Facsimile (n)",
-        "b": "Cipher (n)",
-        "c": "Elegy (n)",
-        "d": "Abeyance (n)"
-      },
-      "answer": "b",
-      "solution": "A secret or disguised way of writing\n\n💡 Mnemonic Trick: Memory trick: link “Cipher (n)” with “secret disguised writing”.\n📖 Source: PDF • page 27\n🎯 Target Word: Cipher (n)",
+      "answer": "a",
+      "solution": "A person who believes in fate or destiny\n\n💡 Mnemonic Trick: Memory trick: link “Fatalist (n)” with “person believes fate destiny”.\n📖 Source: PDF • page 28\n🎯 Target Word: Fatalist (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "A prolonged and bitter quarrel or dispute.",
+      "options": {
+        "a": "Cynic",
+        "b": "Feud",
+        "c": "Slang",
+        "d": "Fable"
+      },
+      "answer": "b",
+      "solution": "Feud is a long-running, bitter quarrel between parties. Consensus means general agreement. Amity is friendliness. Concord means harmony between people/groups.\n\n💡 Mnemonic Trick: Memory trick: link “Feud” with “Feud long-running, bitter quarrel between”.\n📖 Source: HTML file • Question 5\n🎯 Target Word: Feud",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set5_q17"
     },
     {
       "q_num": 18,
-      "question": "Choose the one-word substitution for: \"A deep and seemingly bottomless chasm\"",
+      "question": "Choose the one-word substitution for: \"A backward jump in a story to an earlier time\"",
       "options": {
-        "a": "Abyss (n)",
-        "b": "Modesty (n)",
-        "c": "Abscond (v)",
-        "d": "Reverent (adj)"
+        "a": "Flashback (n)",
+        "b": "Anecdote (n)",
+        "c": "Cliffhanger (n)",
+        "d": "Facsimile (n)"
       },
       "answer": "a",
-      "solution": "A deep and seemingly bottomless chasm\n\n💡 Mnemonic Trick: Memory trick: link “Abyss (n)” with “deep seemingly bottomless chasm”.\n📖 Source: PDF • page 27\n🎯 Target Word: Abyss (n)",
+      "solution": "A backward jump in a story to an earlier time\n\n💡 Mnemonic Trick: Memory trick: link “Flashback (n)” with “backward jump story earlier time”.\n📖 Source: PDF • page 15\n🎯 Target Word: Flashback (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q18"
     },
     {
       "q_num": 19,
-      "question": "Choose the one-word substitution for: \"A formal split within a religious organization\"",
+      "question": "Choose the one-word substitution for: \"A person who can talk non-stop or can speak continuously.\"",
       "options": {
-        "a": "Apostate (n)",
-        "b": "Elegy (n)",
-        "c": "Schism (n)",
-        "d": "Abeyance (n)"
+        "a": "Somniloquist (n)",
+        "b": "Garrulous (n)",
+        "c": "Recluse (n)",
+        "d": "Garrulous (adj)"
       },
-      "answer": "c",
-      "solution": "A formal split within a religious organization\n\n💡 Mnemonic Trick: Memory trick: link “Schism (n)” with “formal split within religious organization”.\n📖 Source: PDF • page 27\n🎯 Target Word: Schism (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 20,
-      "question": "Choose the one-word substitution for: \"Extremely old-fashioned; belonging to a time before the biblical flood\"",
-      "options": {
-        "a": "Embezzlement (n)",
-        "b": "Antediluvian (adj)",
-        "c": "Kleptomaniac (n)",
-        "d": "Flashback (n)"
-      },
-      "answer": "b",
-      "solution": "Extremely old-fashioned; belonging to a time before the biblical flood\n\n💡 Mnemonic Trick: Memory trick: link “Antediluvian (adj)” with “Extremely old-fashioned belonging time before”.\n📖 Source: PDF • page 27\n🎯 Target Word: Antediluvian (adj)",
+      "answer": "d",
+      "solution": "A person who can talk non-stop or can speak continuously.\n\n💡 Mnemonic Trick: Memory trick: link “Garrulous (adj)” with “person talk non-stop speak continuously”.\n📖 Source: PDF • page 7\n🎯 Target Word: Garrulous (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set5_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the one-word substitution for: \"A person who is talkative\"",
+      "options": {
+        "a": "Garrulous (n)",
+        "b": "Cobbler (n)",
+        "c": "Recluse (n)",
+        "d": "Somniloquist (n)"
+      },
+      "answer": "a",
+      "solution": "A person who is talkative\n\n💡 Mnemonic Trick: Memory trick: link “Garrulous (n)” with “person talkative”.\n📖 Source: PDF • page 20\n🎯 Target Word: Garrulous (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set5_q20"
     }
   ]
 }

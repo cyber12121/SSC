@@ -1,72 +1,378 @@
 {
   "chapter_num": 8,
-  "chapter_title": "Spellings - Set 8",
+  "chapter_title": "Spellings - Set 8 (Letter I)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "spellings",
   "set_name": "set_8",
   "is_test": true,
+  "letter_range": "Letter I",
+  "start_letter": "I",
+  "end_letter": "I",
   "questions": [
     {
       "q_num": 1,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Uiquitous",
-        "b": "Ubbiquitous",
-        "c": "Ubiquitosu",
-        "d": "Ubiquitous"
+        "a": "Iconoclast",
+        "b": "Icconoclast",
+        "c": "Iconoclats",
+        "d": "Ionoclast"
       },
-      "answer": "d",
-      "solution": "Ubiquitous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Ubiquitous.\n🎯 Target Word: Ubiquitous",
+      "answer": "a",
+      "solution": "Iconoclast is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Iconoclast.\n🎯 Target Word: Iconoclast",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set8_q1"
     },
     {
       "q_num": 2,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Pseudonmy",
-        "b": "Peudonym",
-        "c": "Psseudonym",
-        "d": "Pseudonym"
+        "a": "Iddiosyncrasy",
+        "b": "Iiosyncrasy",
+        "c": "Idiosyncrays",
+        "d": "Idiosyncrasy"
       },
       "answer": "d",
-      "solution": "Pseudonym is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Pseudonym.\n🎯 Target Word: Pseudonym",
+      "solution": "Idiosyncrasy is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Idiosyncrasy.\n🎯 Target Word: Idiosyncrasy",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set8_q2"
     },
     {
       "q_num": 3,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
-        "a": "Bureaucrayc",
-        "b": "Bureaucracy",
-        "c": "Buureaucracy",
-        "d": "Breaucracy"
+        "a": "Immperious",
+        "b": "Iperious",
+        "c": "Imperious",
+        "d": "Imperiosu"
       },
-      "answer": "b",
-      "solution": "Bureaucracy is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Bureaucracy.\n🎯 Target Word: Bureaucracy",
+      "answer": "c",
+      "solution": "Imperious is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Imperious.\n🎯 Target Word: Imperious",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_spellings_set8_q3"
     },
     {
       "q_num": 4,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Inadvertetn",
+        "b": "Inadvertent",
+        "c": "Iadvertent",
+        "d": "Innadvertent"
+      },
+      "answer": "b",
+      "solution": "Inadvertent is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Inadvertent.\n🎯 Target Word: Inadvertent",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Iadvertently",
+        "b": "Inadvertentyl",
+        "c": "Inadvertently",
+        "d": "Innadvertently"
+      },
+      "answer": "c",
+      "solution": "Inadvertently is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Inadvertently.\n🎯 Target Word: Inadvertently",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q5"
+    },
+    {
+      "q_num": 6,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Incongruosu",
+        "b": "Icongruous",
+        "c": "Incongruous",
+        "d": "Inncongruous"
+      },
+      "answer": "c",
+      "solution": "Incongruous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Incongruous.\n🎯 Target Word: Incongruous",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Inncontrovertible",
+        "b": "Icontrovertible",
+        "c": "Incontrovertible",
+        "d": "Incontrovertibel"
+      },
+      "answer": "c",
+      "solution": "Incontrovertible is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Incontrovertible.\n🎯 Target Word: Incontrovertible",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Inncredible",
+        "b": "Incredibel",
+        "c": "Incredible",
+        "d": "Icredible"
+      },
+      "answer": "c",
+      "solution": "Incredible is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Incredible.\n🎯 Target Word: Incredible",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Inndispensable",
+        "b": "Indispensable",
+        "c": "Idispensable",
+        "d": "Indispensabel"
+      },
+      "answer": "b",
+      "solution": "Indispensable is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Indispensable.\n🎯 Target Word: Indispensable",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Infinitesimal",
+        "b": "Ifinitesimal",
+        "c": "Infinitesimla",
+        "d": "Innfinitesimal"
+      },
+      "answer": "a",
+      "solution": "Infinitesimal is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Infinitesimal.\n🎯 Target Word: Infinitesimal",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Innfluential",
+        "b": "Influential",
+        "c": "Influentila",
+        "d": "Ifluential"
+      },
+      "answer": "b",
+      "solution": "Influential is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Influential.\n🎯 Target Word: Influential",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q11"
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Inimicla",
+        "b": "Iimical",
+        "c": "Inimical",
+        "d": "Innimical"
+      },
+      "answer": "c",
+      "solution": "Inimical is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Inimical.\n🎯 Target Word: Inimical",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q12"
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Innocuosu",
+        "b": "Innnocuous",
+        "c": "Inocuous",
+        "d": "Innocuous"
+      },
+      "answer": "d",
+      "solution": "Innocuous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Innocuous.\n🎯 Target Word: Innocuous",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q13"
+    },
+    {
+      "q_num": 14,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Innocuous",
+        "b": "Inocuous",
+        "c": "Innnocuous",
+        "d": "Innocuosu"
+      },
+      "answer": "a",
+      "solution": "Innocuous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Innocuous.\n🎯 Target Word: Innocuous",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q14"
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Insatiable",
+        "b": "Isatiable",
+        "c": "Insatiabel",
+        "d": "Innsatiable"
+      },
+      "answer": "a",
+      "solution": "Insatiable is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Insatiable.\n🎯 Target Word: Insatiable",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Isouciant",
+        "b": "Innsouciant",
+        "c": "Insouciatn",
+        "d": "Insouciant"
+      },
+      "answer": "d",
+      "solution": "Insouciant is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Insouciant.\n🎯 Target Word: Insouciant",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Insurmountable",
+        "b": "Insurmountabel",
+        "c": "Isurmountable",
+        "d": "Innsurmountable"
+      },
+      "answer": "a",
+      "solution": "Insurmountable is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Insurmountable.\n🎯 Target Word: Insurmountable",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the \"correctly spelt word\".",
+      "options": {
+        "a": "Intelligetn",
+        "b": "Intelligent",
+        "c": "Itelligent",
+        "d": "Inntelligent"
+      },
+      "answer": "b",
+      "solution": "Intelligent is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Intelligent.\n🎯 Target Word: Intelligent",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Spelling Errors",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_spellings_set8_q18"
+    },
+    {
+      "q_num": 19,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
         "a": "Innterference",
@@ -82,48 +388,11 @@
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Ciircumlocution",
-        "b": "Crcumlocution",
-        "c": "Circumlocution",
-        "d": "Circumlocutino"
       },
-      "answer": "c",
-      "solution": "Circumlocution is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Circumlocution.\n🎯 Target Word: Circumlocution",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
+      "id": "ayush_spellings_set8_q19"
     },
     {
-      "q_num": 6,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Questionnaire",
-        "b": "Questionnaier",
-        "c": "Quuestionnaire",
-        "d": "Qestionnaire"
-      },
-      "answer": "a",
-      "solution": "Questionnaire is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Questionnaire.\n🎯 Target Word: Questionnaire",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
+      "q_num": 20,
       "question": "Choose the \"correctly spelt word\".",
       "options": {
         "a": "Interrupt",
@@ -139,254 +408,8 @@
         "topic": "Spelling Errors",
         "difficulty": "medium",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Misanthrope",
-        "b": "Miisanthrope",
-        "c": "Msanthrope",
-        "d": "Misanthroep"
       },
-      "answer": "a",
-      "solution": "Misanthrope is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Misanthrope.\n🎯 Target Word: Misanthrope",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Diploam",
-        "b": "Dploma",
-        "c": "Diiploma",
-        "d": "Diploma"
-      },
-      "answer": "d",
-      "solution": "Diploma is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Diploma.\n🎯 Target Word: Diploma",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Belife",
-        "b": "Beelief",
-        "c": "Blief",
-        "d": "Belief"
-      },
-      "answer": "d",
-      "solution": "Belief is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Belief.\n🎯 Target Word: Belief",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Qintessential",
-        "b": "Quintessentila",
-        "c": "Quuintessential",
-        "d": "Quintessential"
-      },
-      "answer": "d",
-      "solution": "Quintessential is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Quintessential.\n🎯 Target Word: Quintessential",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Preposterous",
-        "b": "Preposterosu",
-        "c": "Peposterous",
-        "d": "Prreposterous"
-      },
-      "answer": "a",
-      "solution": "Preposterous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Preposterous.\n🎯 Target Word: Preposterous",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 13,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Haarass",
-        "b": "Hrass",
-        "c": "Herass",
-        "d": "Harass"
-      },
-      "answer": "d",
-      "solution": "Harass is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Harass.\n🎯 Target Word: Harass",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 14,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Resurgence",
-        "b": "Reesurgence",
-        "c": "Resurgenec",
-        "d": "Rsurgence"
-      },
-      "answer": "a",
-      "solution": "Resurgence is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Resurgence.\n🎯 Target Word: Resurgence",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 15,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Leegitimate",
-        "b": "Lgitimate",
-        "c": "Legitimate",
-        "d": "Legitimaet"
-      },
-      "answer": "c",
-      "solution": "Legitimate is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Legitimate.\n🎯 Target Word: Legitimate",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Goovernment",
-        "b": "Gvernment",
-        "c": "Government",
-        "d": "Governmetn"
-      },
-      "answer": "c",
-      "solution": "Government is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Government.\n🎯 Target Word: Government",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 17,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Archetyep",
-        "b": "Archetype",
-        "c": "Achetype",
-        "d": "Arrchetype"
-      },
-      "answer": "b",
-      "solution": "Archetype is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Archetype.\n🎯 Target Word: Archetype",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Kneel",
-        "b": "Knele",
-        "c": "Keel",
-        "d": "Knneel"
-      },
-      "answer": "a",
-      "solution": "Kneel is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Kneel.\n🎯 Target Word: Kneel",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 19,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Calendar",
-        "b": "Caalendar",
-        "c": "Calendra",
-        "d": "Clendar"
-      },
-      "answer": "a",
-      "solution": "Calendar is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Calendar.\n🎯 Target Word: Calendar",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 20,
-      "question": "Choose the \"correctly spelt word\".",
-      "options": {
-        "a": "Mschievous",
-        "b": "Mischievosu",
-        "c": "Mischievous",
-        "d": "Miischievous"
-      },
-      "answer": "c",
-      "solution": "Mischievous is the spelling given in the PDF's SPELLINGS section.\n\n💡 Mnemonic Trick: Remember the exact letter pattern in Mischievous.\n🎯 Target Word: Mischievous",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Spelling Errors",
-        "difficulty": "medium",
-        "high_yield": true
-      }
+      "id": "ayush_spellings_set8_q20"
     }
   ]
 }

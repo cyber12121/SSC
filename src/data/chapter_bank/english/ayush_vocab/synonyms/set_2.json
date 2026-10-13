@@ -1,338 +1,38 @@
 {
   "chapter_num": 2,
-  "chapter_title": "Synonyms - Set 2",
+  "chapter_title": "Synonyms - Set 2 (Letters C-D)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "synonyms",
   "set_name": "set_2",
   "is_test": true,
+  "letter_range": "Letters C-D",
+  "start_letter": "C",
+  "end_letter": "D",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the closest synonym of \"Turgid\"",
+      "question": "Choose the closest synonym of \"Callow\"",
       "options": {
-        "a": "Submissive",
-        "b": "Inflated",
-        "c": "Tirade",
-        "d": "Skillful"
+        "a": "Generous",
+        "b": "Inexperienced",
+        "c": "Coward",
+        "d": "Erratic"
       },
       "answer": "b",
-      "solution": "Overly inflated or pompous, often used to describe language\n\n💡 Mnemonic Trick: Memory trick: link “Inflated” with “Overly inflated pompous, often used”.\n📖 Source: PDF • page 3\n🎯 Target Word: Turgid (adj)",
+      "solution": "Young and lacking experience\n\n💡 Mnemonic Trick: Memory trick: link “Inexperienced” with “Young lacking experience”.\n📖 Source: PDF • page 24\n🎯 Target Word: Callow (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set2_q1"
     },
     {
       "q_num": 2,
-      "question": "Choose the closest synonym of \"Palimpsestic\"",
-      "options": {
-        "a": "Reject",
-        "b": "Layered",
-        "c": "Origin",
-        "d": "Renounce"
-      },
-      "answer": "b",
-      "solution": "Referring to something with multiple layers or histories\n\n💡 Mnemonic Trick: Memory trick: link “Layered” with “Referring something with multiple layers”.\n📖 Source: PDF • page 3\n🎯 Target Word: Palimpsestic (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "Choose the closest synonym of \"Aporetic\"",
-      "options": {
-        "a": "Decline",
-        "b": "Persuasive",
-        "c": "Skillful",
-        "d": "Conflicted"
-      },
-      "answer": "d",
-      "solution": "Involving doubt or contradiction, especially in philosophical contexts\n\n💡 Mnemonic Trick: Memory trick: link “Conflicted” with “Involving doubt contradiction, especially philosophical”.\n📖 Source: PDF • page 3\n🎯 Target Word: Aporetic (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "Choose the closest synonym of \"Provenance\"",
-      "options": {
-        "a": "Coarse",
-        "b": "Renounce",
-        "c": "Reject",
-        "d": "Origin"
-      },
-      "answer": "d",
-      "solution": "The origin or source of something\n\n💡 Mnemonic Trick: Memory trick: link “Origin” with “origin source something”.\n📖 Source: PDF • page 3\n🎯 Target Word: Provenance (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "Choose the closest synonym of \"Reticent\"",
-      "options": {
-        "a": "Amplify",
-        "b": "Childish",
-        "c": "Reserved",
-        "d": "Skillful"
-      },
-      "answer": "c",
-      "solution": "Reserved in speech, reluctant to express thoughts\n\n💡 Mnemonic Trick: Memory trick: link “Reserved” with “Reserved speech, reluctant express thoughts”.\n📖 Source: PDF • page 3\n🎯 Target Word: Reticent (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "Choose the closest synonym of \"Dread\"",
-      "options": {
-        "a": "Weak",
-        "b": "Fear",
-        "c": "Pacify",
-        "d": "Rash"
-      },
-      "answer": "b",
-      "solution": "A great fear or apprehension\n\n💡 Mnemonic Trick: Memory trick: link “Fear” with “great fear apprehension”.\n📖 Source: PDF • page 3\n🎯 Target Word: Dread (n/v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "Choose the closest synonym of \"Pernicious\"",
-      "options": {
-        "a": "Malicious",
-        "b": "Persuasive",
-        "c": "Improve",
-        "d": "Sarcastic"
-      },
-      "answer": "a",
-      "solution": "Having a harmful effect, especially in a gradual or subtle way\n\n💡 Mnemonic Trick: Memory trick: link “Malicious” with “Having harmful effect, especially gradual”.\n📖 Source: PDF • page 3\n🎯 Target Word: Pernicious (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
-      "question": "Choose the closest synonym of \"Renounce\"",
-      "options": {
-        "a": "Renounce",
-        "b": "Reject",
-        "c": "Abandon",
-        "d": "Origin"
-      },
-      "answer": "b",
-      "solution": "To reject or give up something formally\n\n💡 Mnemonic Trick: Memory trick: link “Reject” with “reject give something formally”.\n📖 Source: PDF • page 3\n🎯 Target Word: Renounce (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "Choose the closest synonym of \"Uplift\"",
-      "options": {
-        "a": "Promote",
-        "b": "Quibble",
-        "c": "Amplify",
-        "d": "Improve"
-      },
-      "answer": "d",
-      "solution": "To raise or improve in a positive way\n\n💡 Mnemonic Trick: Memory trick: link “Improve” with “raise improve positive”.\n📖 Source: PDF • page 3\n🎯 Target Word: Uplift (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
-      "question": "Choose the closest synonym of \"Impediment\"",
-      "options": {
-        "a": "Barrier",
-        "b": "Promote",
-        "c": "Amplify",
-        "d": "Abandon"
-      },
-      "answer": "a",
-      "solution": "An obstacle or hindrance\n\n💡 Mnemonic Trick: Memory trick: link “Barrier” with “obstacle hindrance”.\n📖 Source: PDF • page 3\n🎯 Target Word: Impediment (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "Choose the closest synonym of \"Efficiency\"",
-      "options": {
-        "a": "Layered",
-        "b": "Origin",
-        "c": "Effectiveness",
-        "d": "Confusion"
-      },
-      "answer": "c",
-      "solution": "The ability to accomplish something with minimal waste or effort\n\n💡 Mnemonic Trick: Memory trick: link “Effectiveness” with “ability accomplish something with minimal”.\n📖 Source: PDF • page 3\n🎯 Target Word: Efficiency (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
-      "question": "Choose the closest synonym of \"Clout\"",
-      "options": {
-        "a": "Delay",
-        "b": "Alert",
-        "c": "Power",
-        "d": "Annoy"
-      },
-      "answer": "c",
-      "solution": "Influence or power, especially in politics or business\n\n💡 Mnemonic Trick: Memory trick: link “Power” with “Influence power, especially politics business”.\n📖 Source: PDF • page 3\n🎯 Target Word: Clout (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 13,
-      "question": "Choose the closest synonym of \"Mirage\"",
-      "options": {
-        "a": "Reject",
-        "b": "Origin",
-        "c": "Renounce",
-        "d": "Fantasy"
-      },
-      "answer": "d",
-      "solution": "An optical illusion or something that appears real but isn't\n\n💡 Mnemonic Trick: Memory trick: link “Fantasy” with “optical illusion something that appears”.\n📖 Source: PDF • page 3\n🎯 Target Word: Mirage (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 14,
-      "question": "Choose the closest synonym of \"Fugal\"",
-      "options": {
-        "a": "Thrifty",
-        "b": "Generous",
-        "c": "Unhappy",
-        "d": "Erratic"
-      },
-      "answer": "a",
-      "solution": "Spending money freely and wastefully; extravagant\n\n💡 Mnemonic Trick: Memory trick: link “Thrifty” with “Spending money freely wastefully extravagant”.\n📖 Source: PDF • page 10\n🎯 Target Word: Fugal (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 15,
-      "question": "Choose the closest synonym of \"Intransigence\"",
-      "options": {
-        "a": "Stubbornness",
-        "b": "Unyielding",
-        "c": "Disrespectful",
-        "d": "Skillful"
-      },
-      "answer": "a",
-      "solution": "Refusal to compromise or change one’s views\n\n💡 Mnemonic Trick: Memory trick: link “Stubbornness” with “Refusal compromise change views”.\n📖 Source: PDF • page 10\n🎯 Target Word: Intransigence (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "Choose the closest synonym of \"Melancholy\"",
-      "options": {
-        "a": "Amplify",
-        "b": "Sadness",
-        "c": "Promote",
-        "d": "Abandon"
-      },
-      "answer": "b",
-      "solution": "A deep, persistent sadness or depression\n\n💡 Mnemonic Trick: Memory trick: link “Sadness” with “deep, persistent sadness depression”.\n📖 Source: PDF • page 10\n🎯 Target Word: Melancholy (n/adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 17,
-      "question": "Choose the closest synonym of \"Tranquilizing\"",
-      "options": {
-        "a": "Skillful",
-        "b": "Childish",
-        "c": "Amplify",
-        "d": "Soothing"
-      },
-      "answer": "d",
-      "solution": "Producing calmness; soothing anxiety or stress\n\n💡 Mnemonic Trick: Memory trick: link “Soothing” with “Producing calmness soothing anxiety stress”.\n📖 Source: PDF • page 10\n🎯 Target Word: Tranquilizing (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 18,
       "question": "Choose the closest synonym of \"Calumny\"",
       "options": {
         "a": "Harmful",
@@ -348,10 +48,351 @@
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set2_q2"
+    },
+    {
+      "q_num": 3,
+      "question": "Choose the closest synonym of \"Capitulate\"",
+      "options": {
+        "a": "Yield",
+        "b": "Renounce",
+        "c": "Abandon",
+        "d": "Surrender"
+      },
+      "answer": "d",
+      "solution": "To surrender or give up resistance\n\n💡 Mnemonic Trick: Memory trick: link “Surrender” with “surrender give resistance”.\n📖 Source: PDF • page 10\n🎯 Target Word: Capitulate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q3"
+    },
+    {
+      "q_num": 4,
+      "question": "Choose the closest synonym of \"Capricious\"",
+      "options": {
+        "a": "Generous",
+        "b": "Erratic",
+        "c": "Amplify",
+        "d": "Promote"
+      },
+      "answer": "b",
+      "solution": "Changing suddenly and unpredictably\n\n💡 Mnemonic Trick: Memory trick: link “Erratic” with “Changing suddenly unpredictably”.\n📖 Source: PDF • page 14\n🎯 Target Word: Capricious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "Choose the closest synonym of \"Carnal\"",
+      "options": {
+        "a": "Promote",
+        "b": "Earthly",
+        "c": "Amplify",
+        "d": "Abandon"
+      },
+      "answer": "b",
+      "solution": "Related body\n\n💡 Mnemonic Trick: Memory trick: link “Earthly” with “Related body”.\n📖 Source: PDF • page 18\n🎯 Target Word: Carnal (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q5"
+    },
+    {
+      "q_num": 6,
+      "question": "Choose the closest synonym of \"Caustic\"",
+      "options": {
+        "a": "Improve",
+        "b": "Skillful",
+        "c": "Incisive",
+        "d": "Sarcastic"
+      },
+      "answer": "d",
+      "solution": "Speaking in a sharp, biting, or hurtful way\n\n💡 Mnemonic Trick: Memory trick: link “Sarcastic” with “Speaking sharp, biting, hurtful”.\n📖 Source: PDF • page 24\n🎯 Target Word: Caustic (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the closest synonym of \"Cavil\"",
+      "options": {
+        "a": "Quibble",
+        "b": "Promote",
+        "c": "Amplify",
+        "d": "Improve"
+      },
+      "answer": "a",
+      "solution": "To raise petty or minor objections\n\n💡 Mnemonic Trick: Memory trick: link “Quibble” with “raise petty minor objections”.\n📖 Source: PDF • page 25\n🎯 Target Word: Cavil (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the closest synonym of \"Chronic\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Persistent",
+        "c": "Amplify",
+        "d": "Childish"
+      },
+      "answer": "b",
+      "solution": "Long lasting\n\n💡 Mnemonic Trick: Memory trick: link “Persistent” with “Long lasting”.\n📖 Source: PDF • page 18\n🎯 Target Word: Chronic (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the closest synonym of \"Clout\"",
+      "options": {
+        "a": "Delay",
+        "b": "Alert",
+        "c": "Power",
+        "d": "Annoy"
+      },
+      "answer": "c",
+      "solution": "Influence or power, especially in politics or business\n\n💡 Mnemonic Trick: Memory trick: link “Power” with “Influence power, especially politics business”.\n📖 Source: PDF • page 3\n🎯 Target Word: Clout (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the closest synonym of \"Cogent\"",
+      "options": {
+        "a": "Inexperienced",
+        "b": "Persuasive",
+        "c": "Generous",
+        "d": "Feud"
+      },
+      "answer": "b",
+      "solution": "Persuasive and convincing, especially in argument\n\n💡 Mnemonic Trick: Memory trick: link “Persuasive” with “Persuasive convincing, especially argument”.\n📖 Source: PDF • page 2\n🎯 Target Word: Cogent (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the closest synonym of \"Complaisant\"",
+      "options": {
+        "a": "Submissive",
+        "b": "Unyielding",
+        "c": "Skillful",
+        "d": "Childish"
+      },
+      "answer": "a",
+      "solution": "Willing to please or agree with others\n\n💡 Mnemonic Trick: Memory trick: link “Submissive” with “Willing please agree with others”.\n📖 Source: PDF • page 24\n🎯 Target Word: Complaisant (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q11"
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the closest synonym of \"Conundrum\"",
+      "options": {
+        "a": "Problem",
+        "b": "Amplify",
+        "c": "Promote",
+        "d": "Abandon"
+      },
+      "answer": "a",
+      "solution": "Difficult problem\n\n💡 Mnemonic Trick: Memory trick: link “Problem” with “Difficult problem”.\n📖 Source: PDF • page 18\n🎯 Target Word: Conundrum (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q12"
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the closest synonym of \"Defer\"",
+      "options": {
+        "a": "Delay",
+        "b": "Annoy",
+        "c": "Rash",
+        "d": "Alert"
+      },
+      "answer": "a",
+      "solution": "To postpone\n\n💡 Mnemonic Trick: Memory trick: link “Delay” with “postpone”.\n📖 Source: PDF • page 18\n🎯 Target Word: Defer (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q13"
+    },
+    {
+      "q_num": 14,
+      "question": "Choose the closest synonym of \"Deft\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Promote",
+        "c": "Amplify",
+        "d": "Childish"
+      },
+      "answer": "a",
+      "solution": "Skillful\n\n💡 Mnemonic Trick: Memory trick: link “Skillful” with “Skillful”.\n📖 Source: PDF • page 18\n🎯 Target Word: Deft (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q14"
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the closest synonym of \"Deleterious\"",
+      "options": {
+        "a": "Promote",
+        "b": "Harmful",
+        "c": "Tardy",
+        "d": "Amplify"
+      },
+      "answer": "b",
+      "solution": "Causing damage or harm\n\n💡 Mnemonic Trick: Memory trick: link “Harmful” with “Causing damage harm”.\n📖 Source: PDF • page 24\n🎯 Target Word: Deleterious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the closest synonym of \"Deleterious\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Harmful",
+        "c": "Promote",
+        "d": "Tardy"
+      },
+      "answer": "b",
+      "solution": "Causing damage or harm\n\n💡 Mnemonic Trick: Memory trick: link “Harmful” with “Causing damage harm”.\n📖 Source: PDF • page 25\n🎯 Target Word: Deleterious (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the closest synonym of \"Deteriorate\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Worsen",
+        "c": "Coarse",
+        "d": "Annoy"
+      },
+      "answer": "b",
+      "solution": "Become worse\n\n💡 Mnemonic Trick: Memory trick: link “Worsen” with “Become worse”.\n📖 Source: PDF • page 18\n🎯 Target Word: Deteriorate (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the closest synonym of \"Diffident\"",
+      "options": {
+        "a": "Coward",
+        "b": "Timid",
+        "c": "Deceit",
+        "d": "Annoy"
+      },
+      "answer": "b",
+      "solution": "Lacking self-confidence or being reserved in behavior\n\n💡 Mnemonic Trick: Memory trick: link “Timid” with “Lacking self-confidence being reserved behavior”.\n📖 Source: PDF • page 2\n🎯 Target Word: Diffident (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q18"
     },
     {
       "q_num": 19,
+      "question": "Choose the closest synonym of \"Dilatory\"",
+      "options": {
+        "a": "Delay",
+        "b": "Harmful",
+        "c": "Annoy",
+        "d": "Tardy"
+      },
+      "answer": "d",
+      "solution": "Slow to act; causing delay\n\n💡 Mnemonic Trick: Memory trick: link “Tardy” with “Slow causing delay”.\n📖 Source: PDF • page 25\n🎯 Target Word: Dilatory (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set2_q19"
+    },
+    {
+      "q_num": 20,
       "question": "Choose the closest synonym of \"Disconsolate\"",
       "options": {
         "a": "Unhappy",
@@ -367,26 +408,8 @@
         "topic": "Synonyms & Antonyms",
         "difficulty": "easy",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 20,
-      "question": "Choose the closest synonym of \"Effrontery\"",
-      "options": {
-        "a": "Childish",
-        "b": "Skillful",
-        "c": "Audacity",
-        "d": "Amplify"
       },
-      "answer": "c",
-      "solution": "Shameless audacity; bold disrespect\n\n💡 Mnemonic Trick: Memory trick: link “Audacity” with “Shameless audacity bold disrespect”.\n📖 Source: PDF • page 10\n🎯 Target Word: Effrontery (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
+      "id": "ayush_synonyms_set2_q20"
     }
   ]
 }

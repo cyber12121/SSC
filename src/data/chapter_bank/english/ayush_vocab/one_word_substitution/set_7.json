@@ -1,72 +1,98 @@
 {
   "chapter_num": 7,
-  "chapter_title": "One Word Substitution - Set 7",
+  "chapter_title": "OWS - Set 7 (Letters K-M)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_7",
   "is_test": true,
+  "letter_range": "Letters K-M",
+  "start_letter": "K",
+  "end_letter": "M",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the one-word substitution for: \"A person who is skilled in many areas\"",
+      "question": "A form of government characterized by rampant corruption, where leaders exploit national resources for personal gain.",
       "options": {
-        "a": "Recluse (n)",
-        "b": "Polyglot (n/adj)",
-        "c": "Polymath (n)",
-        "d": "Garrulous (n)"
-      },
-      "answer": "c",
-      "solution": "A person who is skilled in many areas\n\n💡 Mnemonic Trick: Memory trick: link “Polymath (n)” with “person skilled many areas”.\n📖 Source: PDF • page 28\n🎯 Target Word: Polymath (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 2,
-      "question": "Choose the one-word substitution for: \"Something mysterious or difficult to understand\"",
-      "options": {
-        "a": "Elegy (n)",
-        "b": "Abeyance (n)",
-        "c": "Facsimile (n)",
-        "d": "Enigma (n)"
+        "a": "Kleptocracy (n)",
+        "b": "Monarchy",
+        "c": "Stratocracy",
+        "d": "Kleptocracy"
       },
       "answer": "d",
-      "solution": "Something mysterious or difficult to understand\n\n💡 Mnemonic Trick: Memory trick: link “Enigma (n)” with “Something mysterious difficult understand”.\n📖 Source: PDF • page 28\n🎯 Target Word: Enigma (n)",
+      "solution": "Kleptocracy is government marked by rampant corruption where leaders loot national resources. Plutocracy is rule by the wealthy. Oligarchy is rule by a small group. Autocracy is rule by one absolute ruler.\n\n💡 Mnemonic Trick: Memory trick: link “Kleptocracy” with “Kleptocracy government marked rampant corruption”.\n📖 Source: HTML file • Question 75\n🎯 Target Word: Kleptocracy",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q1"
+    },
+    {
+      "q_num": 2,
+      "question": "Choose the one-word substitution for: \"A government where rulers steal national resources\"",
+      "options": {
+        "a": "Plutocracy (n)",
+        "b": "Calligraphy (n)",
+        "c": "Kleptocracy (n)",
+        "d": "Autocracy (n)"
+      },
+      "answer": "c",
+      "solution": "A government where rulers steal national resources\n\n💡 Mnemonic Trick: Memory trick: link “Kleptocracy (n)” with “government where rulers steal national”.\n📖 Source: PDF • page 28\n🎯 Target Word: Kleptocracy (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q2"
     },
     {
       "q_num": 3,
-      "question": "Choose the one-word substitution for: \"An exact copy\"",
+      "question": "Choose the one-word substitution for: \"Compulsive thief\"",
       "options": {
-        "a": "Abeyance (n)",
-        "b": "Plutocracy (n)",
-        "c": "Facsimile (n)",
-        "d": "Matricide (n)"
+        "a": "Plutocracy (n)",
+        "b": "Calligraphy (n)",
+        "c": "Embezzlement (n)",
+        "d": "Kleptomaniac (n)"
       },
-      "answer": "c",
-      "solution": "An exact copy\n\n💡 Mnemonic Trick: Memory trick: link “Facsimile (n)” with “exact copy”.\n📖 Source: PDF • page 28\n🎯 Target Word: Facsimile (n)",
+      "answer": "d",
+      "solution": "Compulsive thief\n\n💡 Mnemonic Trick: Memory trick: link “Kleptomaniac (n)” with “Compulsive thief”.\n📖 Source: PDF • page 12\n🎯 Target Word: Kleptomaniac (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q3"
+    },
+    {
+      "q_num": 4,
+      "question": "Choose the one-word substitution for: \"The sound of a funeral bell\"",
+      "options": {
+        "a": "Facsimile (n)",
+        "b": "Knell (n/v)",
+        "c": "Elegy (n)",
+        "d": "Abeyance (n)"
+      },
+      "answer": "b",
+      "solution": "The sound of a funeral bell\n\n💡 Mnemonic Trick: Memory trick: link “Knell (n/v)” with “sound funeral bell”.\n📖 Source: PDF • page 15\n🎯 Target Word: Knell (n/v)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q4"
     },
     {
-      "q_num": 4,
+      "q_num": 5,
       "question": "Choose the one-word substitution for: \"An expression of grief or sorrow\"",
       "options": {
         "a": "Matricide (n)",
@@ -82,10 +108,131 @@
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q5"
     },
     {
-      "q_num": 5,
+      "q_num": 6,
+      "question": "Choose the one-word substitution for: \"A humorous poem of five lines\"",
+      "options": {
+        "a": "Abeyance (n)",
+        "b": "Facsimile (n)",
+        "c": "Limerick (n)",
+        "d": "Elegy (n)"
+      },
+      "answer": "c",
+      "solution": "A humorous poem of five lines\n\n💡 Mnemonic Trick: Memory trick: link “Limerick (n)” with “humorous poem five lines”.\n📖 Source: PDF • page 21\n🎯 Target Word: Limerick (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q6"
+    },
+    {
+      "q_num": 7,
+      "question": "Choose the one-word substitution for: \"The pratice of delibrately expressing less than what is meant\"",
+      "options": {
+        "a": "Facsimile (n)",
+        "b": "Abeyance (n)",
+        "c": "Elegy (n)",
+        "d": "Litotes (n)"
+      },
+      "answer": "d",
+      "solution": "The pratice of delibrately expressing less than what is meant\n\n💡 Mnemonic Trick: Memory trick: link “Litotes (n)” with “pratice delibrately expressing less than”.\n📖 Source: PDF • page 21\n🎯 Target Word: Litotes (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "A person who talks too much about trivial matters.",
+      "options": {
+        "a": "Loquacious",
+        "b": "Pacifist",
+        "c": "Garrulous (n)",
+        "d": "Pedestrian"
+      },
+      "answer": "a",
+      "solution": "Loquacious describes someone who talks excessively about trivial matters. Taciturn means reserved/silent by nature. Reticent means unwilling to express thoughts freely. Pithy means concise and meaningful.\n\n💡 Mnemonic Trick: Memory trick: link “Loquacious” with “Loquacious describes someone talks excessively”.\n📖 Source: HTML file • Question 66\n🎯 Target Word: Loquacious",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "A person who talks too much about trivial matters.",
+      "options": {
+        "a": "Incendiary",
+        "b": "Austere",
+        "c": "Garrulous (n)",
+        "d": "Loquacious"
+      },
+      "answer": "d",
+      "solution": "Loquacious describes someone who talks excessively, often about unimportant things. Taciturn and Reticent both mean reserved/unwilling to speak. Pithy means concise and meaningful.\n\n💡 Mnemonic Trick: Memory trick: link “Loquacious” with “Loquacious describes someone talks excessively,”.\n📖 Source: HTML file • Question 28\n🎯 Target Word: Loquacious",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the one-word substitution for: \"A person who insists on strict adherence to rules\"",
+      "options": {
+        "a": "Recluse (n)",
+        "b": "Cobbler (n)",
+        "c": "Martinet (n)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "c",
+      "solution": "A person who insists on strict adherence to rules\n\n💡 Mnemonic Trick: Memory trick: link “Martinet (n)” with “person insists strict adherence rules”.\n📖 Source: PDF • page 28\n🎯 Target Word: Martinet (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the one-word substitution for: \"Killing of one&#x27;s mother\"",
+      "options": {
+        "a": "Genocide (n)",
+        "b": "Abeyance (n)",
+        "c": "Facsimile (n)",
+        "d": "Matricide (n)"
+      },
+      "answer": "d",
+      "solution": "Killing of one's mother\n\n💡 Mnemonic Trick: Memory trick: link “Matricide (n)” with “Killing mother”.\n📖 Source: PDF • page 20\n🎯 Target Word: Matricide (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q11"
+    },
+    {
+      "q_num": 12,
       "question": "Choose the one-word substitution for: \"A person who gives unwanted advice\"",
       "options": {
         "a": "Garrulous (n)",
@@ -101,235 +248,108 @@
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "Choose the one-word substitution for: \"A person who talks in sleep\"",
-      "options": {
-        "a": "Garrulous (n)",
-        "b": "Cobbler (n)",
-        "c": "Somniloquist (n)",
-        "d": "Recluse (n)"
       },
-      "answer": "c",
-      "solution": "A person who talks in sleep\n\n💡 Mnemonic Trick: Memory trick: link “Somniloquist (n)” with “person talks sleep”.\n📖 Source: PDF • page 29\n🎯 Target Word: Somniloquist (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "Choose the one-word substitution for: \"A substance that reduces pain\"",
-      "options": {
-        "a": "Narcotic (n)",
-        "b": "Analgesic (n/adj)",
-        "c": "Blot (n/v)",
-        "d": "Embezzlement (n)"
-      },
-      "answer": "b",
-      "solution": "A substance that reduces pain\n\n💡 Mnemonic Trick: Memory trick: link “Analgesic (n/adj)” with “substance that reduces pain”.\n📖 Source: PDF • page 29\n🎯 Target Word: Analgesic (n/adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
-      "question": "Choose the one-word substitution for: \"Fear of open spaces\"",
-      "options": {
-        "a": "Embezzlement (n)",
-        "b": "Calligraphy (n)",
-        "c": "Claustrophobia (n)",
-        "d": "Agoraphobia (n)"
-      },
-      "answer": "d",
-      "solution": "Fear of open spaces\n\n💡 Mnemonic Trick: Memory trick: link “Agoraphobia (n)” with “Fear open spaces”.\n📖 Source: PDF • page 29\n🎯 Target Word: Agoraphobia (n)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "A place where two rivers meet.",
-      "options": {
-        "a": "Hangar (n)",
-        "b": "Morgue (n)",
-        "c": "Archive (n)",
-        "d": "Confluence"
-      },
-      "answer": "d",
-      "solution": "Confluence is the point where two rivers meet. Estuary is a tidal river mouth. Delta is a sediment tract at a river's mouth. Tributary is a stream flowing into a larger river.\n\n💡 Mnemonic Trick: Memory trick: link “Confluence” with “Confluence point where rivers meet”.\n📖 Source: HTML file • Question 1\n🎯 Target Word: Confluence",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
-      "question": "One who is all-powerful.",
-      "options": {
-        "a": "Ascetic (n)",
-        "b": "Insatiable",
-        "c": "Anthology",
-        "d": "Omnipotent"
-      },
-      "answer": "d",
-      "solution": "Omnipotent means having unlimited power. Omnipresent means present everywhere at once. Omniscient means all-knowing. Magnanimous means generous, especially toward a rival.\n\n💡 Mnemonic Trick: Memory trick: link “Omnipotent” with “Omnipotent means having unlimited power”.\n📖 Source: HTML file • Question 2\n🎯 Target Word: Omnipotent",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "A word or phrase that reads the same backwards as forwards.",
-      "options": {
-        "a": "Palindrome",
-        "b": "Slang",
-        "c": "Acronym (n)",
-        "d": "Acoustics (n)"
-      },
-      "answer": "a",
-      "solution": "Palindrome is a word/phrase that reads identically backwards and forwards (e.g. 'madam'). Anagram is formed by rearranging letters of another word. Homonym refers to words with same spelling/sound but different meaning. Synonym means a word with nearly the same meaning as another.\n\n💡 Mnemonic Trick: Memory trick: link “Palindrome” with “Palindrome word phrase that reads”.\n📖 Source: HTML file • Question 3\n🎯 Target Word: Palindrome",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
-      "question": "A sudden, violent outburst of emotion or activity.",
-      "options": {
-        "a": "Cataclysm (n)",
-        "b": "Omnipotent",
-        "c": "Apoplexy",
-        "d": "Zoo (n)"
-      },
-      "answer": "c",
-      "solution": "Apoplexy denotes a sudden violent outburst of emotion or activity. Frenzy is wild excitement/uncontrolled activity. Tempest is a violent storm. Maelstrom is a powerful whirlpool or chaotic situation.\n\n💡 Mnemonic Trick: Memory trick: link “Apoplexy” with “Apoplexy denotes sudden violent outburst”.\n📖 Source: HTML file • Question 4\n🎯 Target Word: Apoplexy",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
+      "id": "ayush_one_word_substitution_set7_q12"
     },
     {
       "q_num": 13,
-      "question": "A prolonged and bitter quarrel or dispute.",
+      "question": "A person who acts as a go-between or intermediary between two parties.",
       "options": {
-        "a": "Cynic",
-        "b": "Feud",
-        "c": "Slang",
-        "d": "Fable"
-      },
-      "answer": "b",
-      "solution": "Feud is a long-running, bitter quarrel between parties. Consensus means general agreement. Amity is friendliness. Concord means harmony between people/groups.\n\n💡 Mnemonic Trick: Memory trick: link “Feud” with “Feud long-running, bitter quarrel between”.\n📖 Source: HTML file • Question 5\n🎯 Target Word: Feud",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 14,
-      "question": "A general pardon for offences, especially political ones, against a state.",
-      "options": {
-        "a": "Exonerate",
-        "b": "Amnesty (n)",
-        "c": "Heresy (n)",
-        "d": "Amnesty"
+        "a": "Incendiary",
+        "b": "Extempore",
+        "c": "Arbitrator (n)",
+        "d": "Mediator"
       },
       "answer": "d",
-      "solution": "Amnesty is an official pardon, especially for political offences. Absolution is a formal release from guilt. Reprieve is a postponement of punishment. Exoneration is officially clearing someone of blame.\n\n💡 Mnemonic Trick: Memory trick: link “Amnesty” with “Amnesty official pardon, especially political”.\n📖 Source: HTML file • Question 6\n🎯 Target Word: Amnesty",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 15,
-      "question": "One who engages in a foolishly idealistic pursuit of unreachable goals.",
-      "options": {
-        "a": "Quixotic",
-        "b": "Pacifist",
-        "c": "Bard (n)",
-        "d": "Abyss (n)"
-      },
-      "answer": "a",
-      "solution": "Quixotic describes extremely idealistic, unrealistic pursuit of goals. Visionary plans the future thoughtfully. Sagacious means wise and shrewd. Maverick is an independent-minded non-conformist.\n\n💡 Mnemonic Trick: Memory trick: link “Quixotic” with “Quixotic describes extremely idealistic, unrealistic”.\n📖 Source: HTML file • Question 7\n🎯 Target Word: Quixotic",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "One who finds it difficult to believe anything without proof.",
-      "options": {
-        "a": "Cynic",
-        "b": "Atheist",
-        "c": "Skeptic",
-        "d": "Hedonist"
-      },
-      "answer": "c",
-      "solution": "Skeptic doubts things without proof. Credulous means overly ready to believe things. Agnostic holds that God's existence cannot be known. Cynic believes people act only from self-interest.\n\n💡 Mnemonic Trick: Memory trick: link “Skeptic” with “Skeptic doubts things without proof”.\n📖 Source: HTML file • Question 8\n🎯 Target Word: Skeptic",
+      "solution": "Mediator acts as a go-between resolving matters between two parties. Arbitrator is officially appointed to settle a dispute. Emissary is sent on a special/diplomatic mission. Interlocutor takes part in a dialogue.\n\n💡 Mnemonic Trick: Memory trick: link “Mediator” with “Mediator acts go-between resolving matters”.\n📖 Source: HTML file • Question 40\n🎯 Target Word: Mediator",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q13"
     },
     {
-      "q_num": 17,
-      "question": "To clear someone of blame or suspicion.",
+      "q_num": 14,
+      "question": "Choose the one-word substitution for: \"A style of writing characterized by exaggerated sentimentality\"",
       "options": {
-        "a": "Exonerate",
-        "b": "Amnesty",
-        "c": "Hedonist",
-        "d": "Anthology"
+        "a": "Cipher (n)",
+        "b": "Melodrama (n)",
+        "c": "Facsimile (n)",
+        "d": "Matricide (n)"
       },
-      "answer": "a",
-      "solution": "Exonerate means to free someone from blame. Accuse means to charge someone. Indict means to formally charge with a serious crime. Incriminate means to make someone appear guilty.\n\n💡 Mnemonic Trick: Memory trick: link “Exonerate” with “Exonerate means free someone from”.\n📖 Source: HTML file • Question 9\n🎯 Target Word: Exonerate",
+      "answer": "b",
+      "solution": "A style of writing characterized by exaggerated sentimentality\n\n💡 Mnemonic Trick: Memory trick: link “Melodrama (n)” with “style writing characterized exaggerated sentimentality”.\n📖 Source: PDF • page 6\n🎯 Target Word: Melodrama (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q14"
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the one-word substitution for: \"Fiction aware of its own fictional nature\"",
+      "options": {
+        "a": "Metafiction (n)",
+        "b": "Kleptomaniac (n)",
+        "c": "Embezzlement (n)",
+        "d": "Calligraphy (n)"
+      },
+      "answer": "a",
+      "solution": "Fiction aware of its own fictional nature\n\n💡 Mnemonic Trick: Memory trick: link “Metafiction (n)” with “Fiction aware fictional nature”.\n📖 Source: PDF • page 15\n🎯 Target Word: Metafiction (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the one-word substitution for: \"The act of imitating someone&#x27;s speech, mannerisms, or actions for entertainment or ridicule\"",
+      "options": {
+        "a": "Interment (n)",
+        "b": "Arson (n)",
+        "c": "Mimicry (n)",
+        "d": "Impromptu (n)"
+      },
+      "answer": "c",
+      "solution": "The act of imitating someone's speech, mannerisms, or actions for entertainment or ridicule\n\n💡 Mnemonic Trick: Memory trick: link “Mimicry (n)” with “imitating someone speech, mannerisms, actions”.\n📖 Source: PDF • page 15\n🎯 Target Word: Mimicry (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the one-word substitution for: \"A person who studies rocks and minerals\"",
+      "options": {
+        "a": "Dilettante (n)",
+        "b": "Mineralogist (n)",
+        "c": "Bibliophile (n)",
+        "d": "Garrulous (n)"
+      },
+      "answer": "b",
+      "solution": "A person who studies rocks and minerals\n\n💡 Mnemonic Trick: Memory trick: link “Mineralogist (n)” with “person studies rocks minerals”.\n📖 Source: PDF • page 6\n🎯 Target Word: Mineralogist (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set7_q17"
     },
     {
       "q_num": 18,
@@ -348,45 +368,48 @@
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q18"
     },
     {
       "q_num": 19,
-      "question": "A place for the care and treatment of people who are recovering from illness.",
+      "question": "Choose the one-word substitution for: \"Humility and lack of vanity\"",
       "options": {
-        "a": "Exodus (n)",
-        "b": "Sanatorium",
-        "c": "Archive (n)",
-        "d": "Alumni (n)"
+        "a": "Abeyance (n)",
+        "b": "Modesty (n)",
+        "c": "Ennui (n)",
+        "d": "Abscond (v)"
       },
       "answer": "b",
-      "solution": "Sanatorium is a facility for the care of people recovering from illness. Dormitory is a shared sleeping hall. Cemetery is a burial ground. Refuge is a place of safety/shelter.\n\n💡 Mnemonic Trick: Memory trick: link “Sanatorium” with “Sanatorium facility care people recovering”.\n📖 Source: HTML file • Question 11\n🎯 Target Word: Sanatorium",
+      "solution": "Humility and lack of vanity\n\n💡 Mnemonic Trick: Memory trick: link “Modesty (n)” with “Humility lack vanity”.\n📖 Source: PDF • page 12\n🎯 Target Word: Modesty (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q19"
     },
     {
       "q_num": 20,
-      "question": "The deliberate use of misleading information to influence public opinion.",
+      "question": "A government ruled by a king or queen.",
       "options": {
-        "a": "Lament (n/v)",
-        "b": "Integrity (n)",
-        "c": "Euphemism (n)",
-        "d": "Disinformation"
+        "a": "Aristocracy",
+        "b": "Kleptocracy",
+        "c": "Stratocracy",
+        "d": "Monarchy"
       },
       "answer": "d",
-      "solution": "Disinformation is deliberately misleading information spread to shape opinion. Transparency means openness. Candour means honesty in expression. Veracity means conformity to truth.\n\n💡 Mnemonic Trick: Memory trick: link “Disinformation” with “Disinformation deliberately misleading information spread”.\n📖 Source: HTML file • Question 12\n🎯 Target Word: Disinformation",
+      "solution": "Monarchy is government headed by a king or queen. Democracy vests power in elected representatives of the people. Oligarchy is rule by a small group. Autocracy is rule by a single person with absolute power.\n\n💡 Mnemonic Trick: Memory trick: link “Monarchy” with “Monarchy government headed king queen”.\n📖 Source: HTML file • Question 57\n🎯 Target Word: Monarchy",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set7_q20"
     }
   ]
 }

@@ -1,167 +1,98 @@
 {
   "chapter_num": 8,
-  "chapter_title": "One Word Substitution - Set 8",
+  "chapter_title": "OWS - Set 8 (Letters M-P)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "one_word_substitution",
   "set_name": "set_8",
   "is_test": true,
+  "letter_range": "Letters M-P",
+  "start_letter": "M",
+  "end_letter": "P",
   "questions": [
     {
       "q_num": 1,
-      "question": "Excessively idealistic; unrealistic and impractical.",
+      "question": "Choose the one-word substitution for: \"A condition of having only one chromosome\"",
       "options": {
-        "a": "Quixotic",
-        "b": "Fatalist",
-        "c": "Austere",
-        "d": "Pedant"
+        "a": "Monosomy (n)",
+        "b": "Abeyance (n)",
+        "c": "Matricide (n)",
+        "d": "Facsimile (n)"
       },
       "answer": "a",
-      "solution": "Quixotic means excessively idealistic and impractical. Temerity means reckless boldness. Pedantic means overly focused on minor details. Pusillanimous means cowardly.\n\n💡 Mnemonic Trick: Memory trick: link “Quixotic” with “Quixotic means excessively idealistic impractical”.\n📖 Source: HTML file • Question 13\n🎯 Target Word: Quixotic",
+      "solution": "A condition of having only one chromosome\n\n💡 Mnemonic Trick: Memory trick: link “Monosomy (n)” with “condition having only chromosome”.\n📖 Source: PDF • page 15\n🎯 Target Word: Monosomy (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q1"
     },
     {
       "q_num": 2,
-      "question": "A place where weapons and ammunition are stored.",
+      "question": "Choose the one-word substitution for: \"A place where dead bodies are kept for examination\"",
       "options": {
-        "a": "Arsenal",
+        "a": "Morgue (n)",
         "b": "Zoo (n)",
-        "c": "Hangar (n)",
-        "d": "Archive (n)"
+        "c": "Mortuary (n)",
+        "d": "Hangar (n)"
       },
       "answer": "a",
-      "solution": "Arsenal is a place where weapons/ammunition are made, stored or repaired. Dockyard is where ships are built/repaired. Repository is a general storage place. Hangar houses aircraft.\n\n💡 Mnemonic Trick: Memory trick: link “Arsenal” with “Arsenal place where weapons ammunition”.\n📖 Source: HTML file • Question 14\n🎯 Target Word: Arsenal",
+      "solution": "A place where dead bodies are kept for examination\n\n💡 Mnemonic Trick: Memory trick: link “Morgue (n)” with “place where dead bodies kept”.\n📖 Source: PDF • page 6\n🎯 Target Word: Morgue (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q2"
     },
     {
       "q_num": 3,
-      "question": "A story with a moral lesson.",
+      "question": "Choose the one-word substitution for: \"A place where dead bodies are kept temporarily\"",
       "options": {
-        "a": "Fable",
-        "b": "Recluse",
-        "c": "Parable (n)",
-        "d": "Allegory"
+        "a": "Mortuary (n)",
+        "b": "Hangar (n)",
+        "c": "Morgue (n)",
+        "d": "Zoo (n)"
       },
-      "answer": "a",
-      "solution": "Fable is a short story, often with animal characters, teaching a moral lesson. Novel is a long fictional narrative. Drama is a stage play. Poem expresses ideas through rhythm and style.\n\n💡 Mnemonic Trick: Memory trick: link “Fable” with “Fable short story, often with”.\n📖 Source: HTML file • Question 15\n🎯 Target Word: Fable",
+      "answer": "c",
+      "solution": "A place where dead bodies are kept temporarily\n\n💡 Mnemonic Trick: Memory trick: link “Morgue (n)” with “place where dead bodies kept”.\n📖 Source: PDF • page 20\n🎯 Target Word: Morgue (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q3"
     },
     {
       "q_num": 4,
-      "question": "The art of beautiful handwriting.",
+      "question": "Choose the one-word substitution for: \"A building where dead bodies are kept temporarily\"",
       "options": {
-        "a": "Graphology",
-        "b": "Chronicle",
-        "c": "Cartographer",
-        "d": "Calligraphy"
+        "a": "Zoo (n)",
+        "b": "Morgue (n)",
+        "c": "Hangar (n)",
+        "d": "Mortuary (n)"
       },
       "answer": "d",
-      "solution": "Calligraphy is the art of beautiful, stylised handwriting. Geography studies the earth's surface. Typography is the style/arrangement of printed text. Biography is a written account of someone's life.\n\n💡 Mnemonic Trick: Memory trick: link “Calligraphy” with “Calligraphy beautiful, stylised handwriting Geography”.\n📖 Source: HTML file • Question 16\n🎯 Target Word: Calligraphy",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "A statement that appears self-contradictory but contains a deeper truth.",
-      "options": {
-        "a": "Irony",
-        "b": "Paradox (n)",
-        "c": "Paradox",
-        "d": "Skeptic"
-      },
-      "answer": "c",
-      "solution": "Paradox appears self-contradictory yet may hold a deeper truth. Conundrum is a confusing, difficult problem. Riddle is a question phrased to require ingenuity to answer. Puzzle tests ingenuity or knowledge generally.\n\n💡 Mnemonic Trick: Memory trick: link “Paradox” with “Paradox appears self-contradictory hold deeper”.\n📖 Source: HTML file • Question 17\n🎯 Target Word: Paradox",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "An organism that is genetically identical to another organism.",
-      "options": {
-        "a": "Cynic",
-        "b": "Paradox",
-        "c": "Slang",
-        "d": "Clone"
-      },
-      "answer": "d",
-      "solution": "Clone is an organism genetically identical to another. Blueprint is a design plan. Prototype is a first/preliminary version of a device. Schema is an outline or model of a plan/theory.\n\n💡 Mnemonic Trick: Memory trick: link “Clone” with “Clone organism genetically identical another”.\n📖 Source: HTML file • Question 18\n🎯 Target Word: Clone",
+      "solution": "A building where dead bodies are kept temporarily\n\n💡 Mnemonic Trick: Memory trick: link “Mortuary (n)” with “building where dead bodies kept”.\n📖 Source: PDF • page 28\n🎯 Target Word: Mortuary (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 7,
-      "question": "An animal that feeds on dead animals.",
-      "options": {
-        "a": "Scavenger",
-        "b": "Entomologist",
-        "c": "Solipsist",
-        "d": "Vegetarian"
       },
-      "answer": "a",
-      "solution": "Scavenger feeds on dead animals. Predator hunts and kills prey. Omnivore eats both plants and animals. Herbivore feeds only on plants.\n\n💡 Mnemonic Trick: Memory trick: link “Scavenger” with “Scavenger feeds dead animals Predator”.\n📖 Source: HTML file • Question 19\n🎯 Target Word: Scavenger",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
+      "id": "ayush_one_word_substitution_set8_q4"
     },
     {
-      "q_num": 8,
-      "question": "An expression of excessive pride or self-importance.",
-      "options": {
-        "a": "Cynic",
-        "b": "Archive (n)",
-        "c": "All are correct",
-        "d": "Modesty (n)"
-      },
-      "answer": "c",
-      "solution": "Arrogance, Hubris, and Vanity all express excessive pride or self-importance in slightly different shades, so all are considered correct here.\n\n💡 Mnemonic Trick: Memory trick: link “All are correct” with “Arrogance, Hubris, Vanity express excessive”.\n📖 Source: HTML file • Question 20\n🎯 Target Word: All are correct",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
+      "q_num": 5,
       "question": "A group of crows.",
       "options": {
         "a": "Slang",
@@ -177,67 +108,71 @@
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q5"
     },
     {
-      "q_num": 10,
-      "question": "A drug that causes temporary loss of memory.",
+      "q_num": 6,
+      "question": "Choose the one-word substitution for: \"A medicine that induces sleep\"",
       "options": {
-        "a": "Amnesiac",
-        "b": "Analgesic",
-        "c": "Epicurean",
-        "d": "Narcotic (n)"
+        "a": "Abeyance (n)",
+        "b": "Somniloquist (n)",
+        "c": "Narcotic (n)",
+        "d": "Analgesic (n/adj)"
       },
-      "answer": "a",
-      "solution": "Amnesiac (in this context) refers to a drug causing temporary memory loss. Narcotic relieves pain and induces drowsiness. Hypnotic induces sleep. Purgative empties the bowels.\n\n💡 Mnemonic Trick: Memory trick: link “Amnesiac” with “Amnesiac refers drug causing temporary”.\n📖 Source: HTML file • Question 22\n🎯 Target Word: Amnesiac",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "A sudden, violent outburst of emotion or activity.",
-      "options": {
-        "a": "Dilettante",
-        "b": "Apoplexy",
-        "c": "Zoo (n)",
-        "d": "Cataclysm (n)"
-      },
-      "answer": "b",
-      "solution": "Apoplexy denotes a sudden violent outburst of emotion or activity. Frenzy is wild, uncontrolled excitement. Tempest is a violent storm. Maelstrom is a turbulent whirlpool or chaotic situation.\n\n💡 Mnemonic Trick: Memory trick: link “Apoplexy” with “Apoplexy denotes sudden violent outburst”.\n📖 Source: HTML file • Question 23\n🎯 Target Word: Apoplexy",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
-      "question": "A person who believes that pleasure is the chief good in life.",
-      "options": {
-        "a": "Epicurean",
-        "b": "Recluse",
-        "c": "Cynic",
-        "d": "Hedonist"
-      },
-      "answer": "d",
-      "solution": "Hedonist believes the pursuit of pleasure is life's chief good. Stoic endures hardship without complaint. Cynic believes people act from self-interest. Epicure is someone with refined taste in food/drink.\n\n💡 Mnemonic Trick: Memory trick: link “Hedonist” with “Hedonist believes pursuit pleasure life”.\n📖 Source: HTML file • Question 24\n🎯 Target Word: Hedonist",
+      "answer": "c",
+      "solution": "A medicine that induces sleep\n\n💡 Mnemonic Trick: Memory trick: link “Narcotic (n)” with “medicine that induces sleep”.\n📖 Source: PDF • page 20\n🎯 Target Word: Narcotic (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q6"
     },
     {
-      "q_num": 13,
+      "q_num": 7,
+      "question": "The official act of a country or state allowing a person who is not a citizen to live there permanently.",
+      "options": {
+        "a": "Garrulous (adj)",
+        "b": "Naturalization",
+        "c": "Dissident (n)",
+        "d": "Teetotaler (n)"
+      },
+      "answer": "b",
+      "solution": "Naturalization is the official process granting a non-citizen permanent residence/citizenship. Asylum is protection for political refugees. Expatriation is abandoning one's native country. Deportation is expelling a foreigner from a country.\n\n💡 Mnemonic Trick: Memory trick: link “Naturalization” with “Naturalization official process granting non-citizen”.\n📖 Source: HTML file • Question 76\n🎯 Target Word: Naturalization",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the one-word substitution for: \"Discussion to reach agreement\"",
+      "options": {
+        "a": "Kleptomaniac (n)",
+        "b": "Calligraphy (n)",
+        "c": "Negotiation (n)",
+        "d": "Embezzlement (n)"
+      },
+      "answer": "c",
+      "solution": "Discussion to reach agreement\n\n💡 Mnemonic Trick: Memory trick: link “Negotiation (n)” with “Discussion reach agreement”.\n📖 Source: PDF • page 12\n🎯 Target Word: Negotiation (n)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q8"
+    },
+    {
+      "q_num": 9,
       "question": "Fear of darkness.",
       "options": {
         "a": "Nyctophobia",
@@ -253,140 +188,228 @@
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "One who is all-powerful.",
+      "options": {
+        "a": "Ascetic (n)",
+        "b": "Insatiable",
+        "c": "Anthology",
+        "d": "Omnipotent"
+      },
+      "answer": "d",
+      "solution": "Omnipotent means having unlimited power. Omnipresent means present everywhere at once. Omniscient means all-knowing. Magnanimous means generous, especially toward a rival.\n\n💡 Mnemonic Trick: Memory trick: link “Omnipotent” with “Omnipotent means having unlimited power”.\n📖 Source: HTML file • Question 2\n🎯 Target Word: Omnipotent",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "The professor delivered a fascinating lecture on the study of birds.",
+      "options": {
+        "a": "Acoustics (n)",
+        "b": "Epigraphy",
+        "c": "Ornithology",
+        "d": "Entomologist"
+      },
+      "answer": "c",
+      "solution": "Ornithology is the study of birds. Entomology studies insects, Zoology studies animals broadly, and Ecology studies organisms' relationship with their environment.\n\n💡 Mnemonic Trick: Memory trick: link “Ornithology” with “Ornithology study birds Entomology studies”.\n📖 Source: HTML file • Question 46\n🎯 Target Word: Ornithology",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q11"
+    },
+    {
+      "q_num": 12,
+      "question": "A person who believes that war and violence are unjustifiable.",
+      "options": {
+        "a": "Fatalist",
+        "b": "Pacifist",
+        "c": "Cynic",
+        "d": "Epicurean"
+      },
+      "answer": "b",
+      "solution": "Pacifist believes war and violence cannot be justified. Chauvinist shows exaggerated patriotism. Maverick is unorthodox/independent. Belligerent means hostile and aggressive.\n\n💡 Mnemonic Trick: Memory trick: link “Pacifist” with “Pacifist believes violence cannot justified”.\n📖 Source: HTML file • Question 36\n🎯 Target Word: Pacifist",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q12"
+    },
+    {
+      "q_num": 13,
+      "question": "A person who studies ancient writings and inscriptions.",
+      "options": {
+        "a": "Epigraphy",
+        "b": "Mineralogist (n)",
+        "c": "Paleographer",
+        "d": "Philosopher"
+      },
+      "answer": "c",
+      "solution": "Paleographer studies ancient writings and inscriptions/handwriting. Archaeologist studies history through excavation. Epigraphist studies inscriptions on stone/metal specifically. Philologist studies language in historical texts.\n\n💡 Mnemonic Trick: Memory trick: link “Paleographer” with “Paleographer studies ancient writings inscriptions”.\n📖 Source: HTML file • Question 33\n🎯 Target Word: Paleographer",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q13"
     },
     {
       "q_num": 14,
-      "question": "Choose the correct meaning of the word: Nihilism",
+      "question": "A word or phrase that reads the same backwards as forwards.",
       "options": {
-        "a": "Integrity (n)",
-        "b": "Geocentrism (n)",
-        "c": "Apostate (n)",
-        "d": "the rejection of all religious and moral principles, often in the belief that life is meaningless"
+        "a": "Palindrome",
+        "b": "Slang",
+        "c": "Acronym (n)",
+        "d": "Acoustics (n)"
       },
-      "answer": "d",
-      "solution": "Nihilism is the rejection of all religious and moral principles, often coupled with the belief that life has no meaning.\n\n💡 Mnemonic Trick: Memory trick: link “the rejection of all religious and moral principles, often in the belief that life is meaningless” with “Nihilism rejection religious moral principles,”.\n📖 Source: HTML file • Question 26\n🎯 Target Word: the rejection of all religious and moral principles, often in the belief that life is meaningless",
+      "answer": "a",
+      "solution": "Palindrome is a word/phrase that reads identically backwards and forwards (e.g. 'madam'). Anagram is formed by rearranging letters of another word. Homonym refers to words with same spelling/sound but different meaning. Synonym means a word with nearly the same meaning as another.\n\n💡 Mnemonic Trick: Memory trick: link “Palindrome” with “Palindrome word phrase that reads”.\n📖 Source: HTML file • Question 3\n🎯 Target Word: Palindrome",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q14"
     },
     {
       "q_num": 15,
-      "question": "A specialist in the study of insects.",
+      "question": "Choose the one-word substitution for: \"A short story with a moral lesson\"",
       "options": {
-        "a": "Epigraphy",
-        "b": "Entomologist",
-        "c": "Psychology (n)",
-        "d": "Ornithology"
+        "a": "Anecdote (n)",
+        "b": "Ephemeral (adj)",
+        "c": "Parable (n)",
+        "d": "Dromomaniac (n)"
       },
-      "answer": "b",
-      "solution": "Entomologist studies insects. Zoologist studies animals in general, Ornithologist studies birds, and Botanist studies plants.\n\n💡 Mnemonic Trick: Memory trick: link “Entomologist” with “Entomologist studies insects Zoologist studies”.\n📖 Source: HTML file • Question 27\n🎯 Target Word: Entomologist",
+      "answer": "c",
+      "solution": "A short story with a moral lesson\n\n💡 Mnemonic Trick: Memory trick: link “Parable (n)” with “short story with moral lesson”.\n📖 Source: PDF • page 15\n🎯 Target Word: Parable (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q15"
     },
     {
       "q_num": 16,
-      "question": "A person who talks too much about trivial matters.",
+      "question": "Choose the one-word substitution for: \"A statement that seems self-contradictory yet may be true\"",
       "options": {
-        "a": "Incendiary",
-        "b": "Austere",
-        "c": "Garrulous (n)",
-        "d": "Loquacious"
+        "a": "Narcotic (n)",
+        "b": "Paradox (n)",
+        "c": "Geocentrism (n)",
+        "d": "Analgesic (n/adj)"
       },
-      "answer": "d",
-      "solution": "Loquacious describes someone who talks excessively, often about unimportant things. Taciturn and Reticent both mean reserved/unwilling to speak. Pithy means concise and meaningful.\n\n💡 Mnemonic Trick: Memory trick: link “Loquacious” with “Loquacious describes someone talks excessively,”.\n📖 Source: HTML file • Question 28\n🎯 Target Word: Loquacious",
+      "answer": "b",
+      "solution": "A statement that seems self-contradictory yet may be true\n\n💡 Mnemonic Trick: Memory trick: link “Paradox (n)” with “statement that seems self-contradictory true”.\n📖 Source: PDF • page 27\n🎯 Target Word: Paradox (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q16"
     },
     {
       "q_num": 17,
-      "question": "Fear of being touched.",
+      "question": "A statement that appears self-contradictory but contains a deeper truth.",
       "options": {
-        "a": "Abscond (v)",
-        "b": "Agoraphobia",
-        "c": "Haphephobia",
-        "d": "Modesty (n)"
+        "a": "Irony",
+        "b": "Paradox (n)",
+        "c": "Paradox",
+        "d": "Skeptic"
       },
       "answer": "c",
-      "solution": "Haphephobia is an irrational fear of being touched. Atychiphobia is fear of failure, Gamophobia is fear of marriage, and Thanatophobia is fear of death.\n\n💡 Mnemonic Trick: Memory trick: link “Haphephobia” with “Haphephobia irrational fear being touched”.\n📖 Source: HTML file • Question 29\n🎯 Target Word: Haphephobia",
+      "solution": "Paradox appears self-contradictory yet may hold a deeper truth. Conundrum is a confusing, difficult problem. Riddle is a question phrased to require ingenuity to answer. Puzzle tests ingenuity or knowledge generally.\n\n💡 Mnemonic Trick: Memory trick: link “Paradox” with “Paradox appears self-contradictory hold deeper”.\n📖 Source: HTML file • Question 17\n🎯 Target Word: Paradox",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q17"
     },
     {
       "q_num": 18,
-      "question": "Friendly and welcoming to strangers or foreigners.",
+      "question": "A statement that seems self-contradictory but may be True.",
       "options": {
-        "a": "Archive (n)",
-        "b": "Abscond (v)",
-        "c": "Modesty (n)",
-        "d": "Xenodochial"
+        "a": "Irony",
+        "b": "Solipsist",
+        "c": "Paradox (n)",
+        "d": "Paradox"
       },
       "answer": "d",
-      "solution": "Xenodochial means friendly and kind toward strangers/foreigners. Misoneistic means fearing/hating change. Misanthropic means disliking humankind. Xylotomous relates to boring into wood (used for insects).\n\n💡 Mnemonic Trick: Memory trick: link “Xenodochial” with “Xenodochial means friendly kind toward”.\n📖 Source: HTML file • Question 30\n🎯 Target Word: Xenodochial",
+      "solution": "Paradox is a statement that appears self-contradictory yet may hold truth. Epigram is a short witty saying. Aphorism is a concise statement of a general truth. Dogma is a fixed, unquestionable belief.\n\n💡 Mnemonic Trick: Memory trick: link “Paradox” with “Paradox statement that appears self-contradictory”.\n📖 Source: HTML file • Question 34\n🎯 Target Word: Paradox",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "One Word Substitution",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_one_word_substitution_set8_q18"
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the one-word substitution for: \"Someone who is consistently excluded or ignored by a community due to lack of trust or popularity\"",
+      "options": {
+        "a": "Garrulous (n)",
+        "b": "Pariah (n)",
+        "c": "Author (n)",
+        "d": "Modesty (n)"
+      },
+      "answer": "b",
+      "solution": "Someone who is consistently excluded or ignored by a community due to lack of trust or popularity\n\n💡 Mnemonic Trick: Memory trick: link “Pariah (n)” with “Someone consistently excluded ignored community”.\n📖 Source: PDF • page 20\n🎯 Target Word: Pariah (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_one_word_substitution_set8_q19"
     },
     {
-      "q_num": 19,
-      "question": "A collection of literary extracts, especially from one author.",
+      "q_num": 20,
+      "question": "Choose the one-word substitution for: \"Property inherited from one&#x27;s father\"",
       "options": {
-        "a": "Author (n)",
-        "b": "Anthology",
-        "c": "Omnipotent",
-        "d": "Bibliophile (n)"
+        "a": "Matricide (n)",
+        "b": "Facsimile (n)",
+        "c": "Patrimony (n)",
+        "d": "Abeyance (n)"
       },
-      "answer": "b",
-      "solution": "Anthology is a collection of literary pieces, often from one author or theme. Lexicographer compiles dictionaries. Bibliophile loves collecting books. Ennui means boredom/dissatisfaction.\n\n💡 Mnemonic Trick: Memory trick: link “Anthology” with “Anthology collection literary pieces, often”.\n📖 Source: HTML file • Question 31\n🎯 Target Word: Anthology",
+      "answer": "c",
+      "solution": "Property inherited from one's father\n\n💡 Mnemonic Trick: Memory trick: link “Patrimony (n)” with “Property inherited from father”.\n📖 Source: PDF • page 20\n🎯 Target Word: Patrimony (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "One Word Substitution",
         "difficulty": "easy",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 20,
-      "question": "A speech made without any preparation.",
-      "options": {
-        "a": "Vagabond (n)",
-        "b": "Extempore (adj/adv)",
-        "c": "Impromptu (n)",
-        "d": "Extempore"
       },
-      "answer": "d",
-      "solution": "Extempore is a speech delivered without prior preparation. Dialogue is a conversation between people. Monologue is a long speech by one person. Soliloquy is a character speaking their thoughts aloud alone.\n\n💡 Mnemonic Trick: Memory trick: link “Extempore” with “Extempore speech delivered without prior”.\n📖 Source: HTML file • Question 32\n🎯 Target Word: Extempore",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "One Word Substitution",
-        "difficulty": "medium",
-        "high_yield": true
-      }
+      "id": "ayush_one_word_substitution_set8_q20"
     }
   ]
 }

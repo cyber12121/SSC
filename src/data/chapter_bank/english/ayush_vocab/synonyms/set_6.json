@@ -1,224 +1,38 @@
 {
   "chapter_num": 6,
-  "chapter_title": "Synonyms - Set 6",
+  "chapter_title": "Synonyms - Set 6 (Letters P-T)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "synonyms",
   "set_name": "set_6",
   "is_test": true,
+  "letter_range": "Letters P-T",
+  "start_letter": "P",
+  "end_letter": "T",
   "questions": [
     {
       "q_num": 1,
-      "question": "Choose the closest synonym of \"Carnal\"",
+      "question": "Choose the closest synonym of \"Propitiate\"",
       "options": {
-        "a": "Promote",
-        "b": "Earthly",
-        "c": "Amplify",
-        "d": "Abandon"
-      },
-      "answer": "b",
-      "solution": "Related body\n\n💡 Mnemonic Trick: Memory trick: link “Earthly” with “Related body”.\n📖 Source: PDF • page 18\n🎯 Target Word: Carnal (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 2,
-      "question": "Choose the closest synonym of \"Exquisite\"",
-      "options": {
-        "a": "Childish",
-        "b": "Skillful",
-        "c": "Amplify",
-        "d": "Delicate"
-      },
-      "answer": "d",
-      "solution": "Extremely beautiful\n\n💡 Mnemonic Trick: Memory trick: link “Delicate” with “Extremely beautiful”.\n📖 Source: PDF • page 18\n🎯 Target Word: Exquisite (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "Choose the closest synonym of \"Taciturn\"",
-      "options": {
-        "a": "Reserved",
-        "b": "Childish",
-        "c": "Amplify",
-        "d": "Skillful"
-      },
-      "answer": "a",
-      "solution": "Habitually silent\n\n💡 Mnemonic Trick: Memory trick: link “Reserved” with “Habitually silent”.\n📖 Source: PDF • page 18\n🎯 Target Word: Taciturn (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "Choose the closest synonym of \"Enervate\"",
-      "options": {
-        "a": "Promote",
-        "b": "Amplify",
-        "c": "Exhaust",
+        "a": "Amplify",
+        "b": "Promote",
+        "c": "Appease",
         "d": "Abandon"
       },
       "answer": "c",
-      "solution": "To weaken of energy\n\n💡 Mnemonic Trick: Memory trick: link “Exhaust” with “weaken energy”.\n📖 Source: PDF • page 19\n🎯 Target Word: Enervate (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "Choose the closest synonym of \"Reckless\"",
-      "options": {
-        "a": "Rash",
-        "b": "Hate",
-        "c": "Weak",
-        "d": "Annoy"
-      },
-      "answer": "a",
-      "solution": "Careless\n\n💡 Mnemonic Trick: Memory trick: link “Rash” with “Careless”.\n📖 Source: PDF • page 19\n🎯 Target Word: Reckless (adj)",
+      "solution": "To win favor or calm anger through actions\n\n💡 Mnemonic Trick: Memory trick: link “Appease” with “favor calm anger through actions”.\n📖 Source: PDF • page 10\n🎯 Target Word: Propitiate (v)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
-    },
-    {
-      "q_num": 6,
-      "question": "Choose the closest synonym of \"Exasperate\"",
-      "options": {
-        "a": "Annoy",
-        "b": "Alert",
-        "c": "Rash",
-        "d": "Delay"
       },
-      "answer": "a",
-      "solution": "To irritate\n\n💡 Mnemonic Trick: Memory trick: link “Annoy” with “irritate”.\n📖 Source: PDF • page 19\n🎯 Target Word: Exasperate (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
+      "id": "ayush_synonyms_set6_q1"
     },
     {
-      "q_num": 7,
-      "question": "Choose the closest synonym of \"Abnegate\"",
-      "options": {
-        "a": "Renounce",
-        "b": "Abandon",
-        "c": "Reject",
-        "d": "Surrender"
-      },
-      "answer": "a",
-      "solution": "To reject or give up something willingly\n\n💡 Mnemonic Trick: Memory trick: link “Renounce” with “reject give something willingly”.\n📖 Source: PDF • page 24\n🎯 Target Word: Abnegate (v)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 8,
-      "question": "Choose the closest synonym of \"Caustic\"",
-      "options": {
-        "a": "Improve",
-        "b": "Skillful",
-        "c": "Incisive",
-        "d": "Sarcastic"
-      },
-      "answer": "d",
-      "solution": "Speaking in a sharp, biting, or hurtful way\n\n💡 Mnemonic Trick: Memory trick: link “Sarcastic” with “Speaking sharp, biting, hurtful”.\n📖 Source: PDF • page 24\n🎯 Target Word: Caustic (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 9,
-      "question": "Choose the closest synonym of \"Deleterious\"",
-      "options": {
-        "a": "Promote",
-        "b": "Harmful",
-        "c": "Tardy",
-        "d": "Amplify"
-      },
-      "answer": "b",
-      "solution": "Causing damage or harm\n\n💡 Mnemonic Trick: Memory trick: link “Harmful” with “Causing damage harm”.\n📖 Source: PDF • page 24\n🎯 Target Word: Deleterious (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 10,
-      "question": "Choose the closest synonym of \"Callow\"",
-      "options": {
-        "a": "Generous",
-        "b": "Inexperienced",
-        "c": "Coward",
-        "d": "Erratic"
-      },
-      "answer": "b",
-      "solution": "Young and lacking experience\n\n💡 Mnemonic Trick: Memory trick: link “Inexperienced” with “Young lacking experience”.\n📖 Source: PDF • page 24\n🎯 Target Word: Callow (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 11,
-      "question": "Choose the closest synonym of \"Nonchalant\"",
-      "options": {
-        "a": "Carefree",
-        "b": "Erratic",
-        "c": "Generous",
-        "d": "Askew"
-      },
-      "answer": "a",
-      "solution": "Calm and not worried; casually indifferent\n\n💡 Mnemonic Trick: Memory trick: link “Carefree” with “Calm worried casually indifferent”.\n📖 Source: PDF • page 24\n🎯 Target Word: Nonchalant (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 12,
+      "q_num": 2,
       "question": "Choose the closest synonym of \"Propitious\"",
       "options": {
         "a": "Childish",
@@ -234,159 +48,368 @@
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set6_q2"
     },
     {
-      "q_num": 13,
-      "question": "Choose the closest synonym of \"Garrulous\"",
+      "q_num": 3,
+      "question": "Choose the closest synonym of \"Provenance\"",
       "options": {
-        "a": "Decline",
-        "b": "Talkative",
-        "c": "Persuasive",
-        "d": "Conscious"
+        "a": "Coarse",
+        "b": "Renounce",
+        "c": "Reject",
+        "d": "Origin"
       },
-      "answer": "b",
-      "solution": "Talking too much, especially about trivial things\n\n💡 Mnemonic Trick: Memory trick: link “Talkative” with “Talking much, especially about trivial”.\n📖 Source: PDF • page 24\n🎯 Target Word: Garrulous (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 14,
-      "question": "Choose the closest synonym of \"Luminous\"",
-      "options": {
-        "a": "Amplify",
-        "b": "Radiant",
-        "c": "Promote",
-        "d": "Abandon"
-      },
-      "answer": "b",
-      "solution": "Giving off light; shining brightly\n\n💡 Mnemonic Trick: Memory trick: link “Radiant” with “Giving light shining brightly”.\n📖 Source: PDF • page 24\n🎯 Target Word: Luminous (adj)",
+      "answer": "d",
+      "solution": "The origin or source of something\n\n💡 Mnemonic Trick: Memory trick: link “Origin” with “origin source something”.\n📖 Source: PDF • page 3\n🎯 Target Word: Provenance (n)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set6_q3"
     },
     {
-      "q_num": 15,
-      "question": "Choose the closest synonym of \"Haphazard\"",
+      "q_num": 4,
+      "question": "Choose the closest synonym of \"Quarrel\"",
       "options": {
-        "a": "Random",
-        "b": "Annoy",
-        "c": "Cursory",
-        "d": "Coarse"
+        "a": "Rash",
+        "b": "Feud",
+        "c": "Weak",
+        "d": "Hate"
       },
-      "answer": "a",
-      "solution": "Done without planning or order\n\n💡 Mnemonic Trick: Memory trick: link “Random” with “Done without planning order”.\n📖 Source: PDF • page 24\n🎯 Target Word: Haphazard (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "easy",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 16,
-      "question": "Choose the closest synonym of \"Eulogy\"",
-      "options": {
-        "a": "Articulate",
-        "b": "Flattery",
-        "c": "Tribute",
-        "d": "Reserved"
-      },
-      "answer": "c",
-      "solution": "A speech or praise for someone (often after death)\n\n💡 Mnemonic Trick: Memory trick: link “Tribute” with “speech praise someone”.\n📖 Source: PDF • page 24\n🎯 Target Word: Eulogy (n)",
+      "answer": "b",
+      "solution": "A heated argument or disagreement\n\n💡 Mnemonic Trick: Memory trick: link “Feud” with “heated argument disagreement”.\n📖 Source: PDF • page 10\n🎯 Target Word: Quarrel (n/v)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set6_q4"
     },
     {
-      "q_num": 17,
-      "question": "Choose the closest synonym of \"Invective\"",
+      "q_num": 5,
+      "question": "Choose the closest synonym of \"Querulous\"",
       "options": {
-        "a": "Annoy",
-        "b": "Discord",
-        "c": "Coarse",
-        "d": "Tirade"
+        "a": "Disrespectful",
+        "b": "Skillful",
+        "c": "Complaining",
+        "d": "Childish"
       },
-      "answer": "d",
-      "solution": "Harsh or insulting language\n\n💡 Mnemonic Trick: Memory trick: link “Tirade” with “Harsh insulting language”.\n📖 Source: PDF • page 24\n🎯 Target Word: Invective (n)",
+      "answer": "c",
+      "solution": "Complaining or expressing dissatisfaction\n\n💡 Mnemonic Trick: Memory trick: link “Complaining” with “Complaining expressing dissatisfaction”.\n📖 Source: PDF • page 2\n🎯 Target Word: Querulous (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set6_q5"
     },
     {
-      "q_num": 18,
-      "question": "Choose the closest synonym of \"Complaisant\"",
+      "q_num": 6,
+      "question": "Choose the closest synonym of \"Recalcitrant\"",
       "options": {
-        "a": "Submissive",
-        "b": "Unyielding",
-        "c": "Skillful",
+        "a": "Rebellious",
+        "b": "Skillful",
+        "c": "Disobedient",
         "d": "Childish"
       },
       "answer": "a",
-      "solution": "Willing to please or agree with others\n\n💡 Mnemonic Trick: Memory trick: link “Submissive” with “Willing please agree with others”.\n📖 Source: PDF • page 24\n🎯 Target Word: Complaisant (adj)",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Synonyms & Antonyms",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 19,
-      "question": "Choose the closest synonym of \"Dilatory\"",
-      "options": {
-        "a": "Delay",
-        "b": "Harmful",
-        "c": "Annoy",
-        "d": "Tardy"
-      },
-      "answer": "d",
-      "solution": "Slow to act; causing delay\n\n💡 Mnemonic Trick: Memory trick: link “Tardy” with “Slow causing delay”.\n📖 Source: PDF • page 25\n🎯 Target Word: Dilatory (adj)",
+      "solution": "Stubbornly resistant to authority or control\n\n💡 Mnemonic Trick: Memory trick: link “Rebellious” with “Stubbornly resistant authority control”.\n📖 Source: PDF • page 14\n🎯 Target Word: Recalcitrant (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set6_q6"
     },
     {
-      "q_num": 20,
-      "question": "Choose the closest synonym of \"Cadaverous\"",
+      "q_num": 7,
+      "question": "Choose the closest synonym of \"Recalcitrant\"",
       "options": {
-        "a": "Earthly",
-        "b": "Deceit",
-        "c": "Pale",
-        "d": "Generous"
+        "a": "Rebellious",
+        "b": "Disrespectful",
+        "c": "Skillful",
+        "d": "Disobedient"
+      },
+      "answer": "d",
+      "solution": "Stubbornly resistant to authority\n\n💡 Mnemonic Trick: Memory trick: link “Disobedient” with “Stubbornly resistant authority”.\n📖 Source: PDF • page 18\n🎯 Target Word: Recalcitrant (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q7"
+    },
+    {
+      "q_num": 8,
+      "question": "Choose the closest synonym of \"Reckless\"",
+      "options": {
+        "a": "Rash",
+        "b": "Hate",
+        "c": "Weak",
+        "d": "Annoy"
+      },
+      "answer": "a",
+      "solution": "Careless\n\n💡 Mnemonic Trick: Memory trick: link “Rash” with “Careless”.\n📖 Source: PDF • page 19\n🎯 Target Word: Reckless (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q8"
+    },
+    {
+      "q_num": 9,
+      "question": "Choose the closest synonym of \"Recreant\"",
+      "options": {
+        "a": "Coward",
+        "b": "Coarse",
+        "c": "Annoy",
+        "d": "Amplify"
+      },
+      "answer": "a",
+      "solution": "Lacking courage or loyalty\n\n💡 Mnemonic Trick: Memory trick: link “Coward” with “Lacking courage loyalty”.\n📖 Source: PDF • page 14\n🎯 Target Word: Recreant (n/adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q9"
+    },
+    {
+      "q_num": 10,
+      "question": "Choose the closest synonym of \"Relinquish\"",
+      "options": {
+        "a": "Surrender",
+        "b": "Abandon",
+        "c": "Amplify",
+        "d": "Promote"
+      },
+      "answer": "b",
+      "solution": "To give up\n\n💡 Mnemonic Trick: Memory trick: link “Abandon” with “give”.\n📖 Source: PDF • page 18\n🎯 Target Word: Relinquish (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q10"
+    },
+    {
+      "q_num": 11,
+      "question": "Choose the closest synonym of \"Renounce\"",
+      "options": {
+        "a": "Renounce",
+        "b": "Reject",
+        "c": "Abandon",
+        "d": "Origin"
+      },
+      "answer": "b",
+      "solution": "To reject or give up something formally\n\n💡 Mnemonic Trick: Memory trick: link “Reject” with “reject give something formally”.\n📖 Source: PDF • page 3\n🎯 Target Word: Renounce (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q11"
+    },
+    {
+      "q_num": 12,
+      "question": "Choose the closest synonym of \"Reticent\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Childish",
+        "c": "Reserved",
+        "d": "Skillful"
       },
       "answer": "c",
-      "solution": "Very thin and pale, like a dead body\n\n💡 Mnemonic Trick: Memory trick: link “Pale” with “Very thin pale, like dead”.\n📖 Source: PDF • page 25\n🎯 Target Word: Cadaverous (adj)",
+      "solution": "Reserved in speech, reluctant to express thoughts\n\n💡 Mnemonic Trick: Memory trick: link “Reserved” with “Reserved speech, reluctant express thoughts”.\n📖 Source: PDF • page 3\n🎯 Target Word: Reticent (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "easy",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q12"
+    },
+    {
+      "q_num": 13,
+      "question": "Choose the closest synonym of \"Reticent\"",
+      "options": {
+        "a": "Amplify",
+        "b": "Reserved",
+        "c": "Skillful",
+        "d": "Childish"
+      },
+      "answer": "b",
+      "solution": "Habitually silent\n\n💡 Mnemonic Trick: Memory trick: link “Reserved” with “Habitually silent”.\n📖 Source: PDF • page 18\n🎯 Target Word: Reticent (adj)",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Synonyms & Antonyms",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_synonyms_set6_q13"
+    },
+    {
+      "q_num": 14,
+      "question": "Choose the closest synonym of \"Sentient\"",
+      "options": {
+        "a": "Conscious",
+        "b": "Childish",
+        "c": "Amplify",
+        "d": "Skillful"
+      },
+      "answer": "a",
+      "solution": "Able to feel or perceive things\n\n💡 Mnemonic Trick: Memory trick: link “Conscious” with “Able feel perceive things”.\n📖 Source: PDF • page 25\n🎯 Target Word: Sentient (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q14"
+    },
+    {
+      "q_num": 15,
+      "question": "Choose the closest synonym of \"Summon\"",
+      "options": {
+        "a": "Weak",
+        "b": "Rash",
+        "c": "Call",
+        "d": "Hate"
+      },
+      "answer": "c",
+      "solution": "Call officially\n\n💡 Mnemonic Trick: Memory trick: link “Call” with “Call officially”.\n📖 Source: PDF • page 18\n🎯 Target Word: Summon (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q15"
+    },
+    {
+      "q_num": 16,
+      "question": "Choose the closest synonym of \"Surrender\"",
+      "options": {
+        "a": "Surrender",
+        "b": "Abandon",
+        "c": "Reject",
+        "d": "Yield"
+      },
+      "answer": "d",
+      "solution": "To yield or give up, especially under pressure\n\n💡 Mnemonic Trick: Memory trick: link “Yield” with “yield give especially under pressure”.\n📖 Source: PDF • page 2\n🎯 Target Word: Surrender (v)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q16"
+    },
+    {
+      "q_num": 17,
+      "question": "Choose the closest synonym of \"Taciturn\"",
+      "options": {
+        "a": "Reserved",
+        "b": "Childish",
+        "c": "Amplify",
+        "d": "Skillful"
+      },
+      "answer": "a",
+      "solution": "Habitually silent\n\n💡 Mnemonic Trick: Memory trick: link “Reserved” with “Habitually silent”.\n📖 Source: PDF • page 18\n🎯 Target Word: Taciturn (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q17"
+    },
+    {
+      "q_num": 18,
+      "question": "Choose the closest synonym of \"Teleological\"",
+      "options": {
+        "a": "Knowledge-related",
+        "b": "Purpose-driven",
+        "c": "Historical writing",
+        "d": "Disrespectful"
+      },
+      "answer": "b",
+      "solution": "Relating to purpose or goal-directed processes\n\n💡 Mnemonic Trick: Memory trick: link “Purpose-driven” with “Relating purpose goal-directed processes”.\n📖 Source: PDF • page 2\n🎯 Target Word: Teleological (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q18"
+    },
+    {
+      "q_num": 19,
+      "question": "Choose the closest synonym of \"Tranquilizing\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Childish",
+        "c": "Amplify",
+        "d": "Soothing"
+      },
+      "answer": "d",
+      "solution": "Producing calmness; soothing anxiety or stress\n\n💡 Mnemonic Trick: Memory trick: link “Soothing” with “Producing calmness soothing anxiety stress”.\n📖 Source: PDF • page 10\n🎯 Target Word: Tranquilizing (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q19"
+    },
+    {
+      "q_num": 20,
+      "question": "Choose the closest synonym of \"Transhistorical\"",
+      "options": {
+        "a": "Skillful",
+        "b": "Timeless",
+        "c": "Amplify",
+        "d": "Childish"
+      },
+      "answer": "b",
+      "solution": "Timeless, existing beyond a particular historical context\n\n💡 Mnemonic Trick: Memory trick: link “Timeless” with “Timeless, existing beyond particular historical”.\n📖 Source: PDF • page 2\n🎯 Target Word: Transhistorical (adj)",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Synonyms & Antonyms",
+        "difficulty": "hard",
+        "high_yield": true
+      },
+      "id": "ayush_synonyms_set6_q20"
     }
   ]
 }

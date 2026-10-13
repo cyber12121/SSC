@@ -1,126 +1,135 @@
 {
   "chapter_num": 6,
-  "chapter_title": "Idioms & Phrases - Set 6",
+  "chapter_title": "Idioms & Phrases - Set 6 (Letters W-Y)",
   "subject": "English",
   "subject_id": "english",
   "section": "ayush_vocab",
   "topic_name": "idioms_and_phrases",
   "set_name": "set_6",
   "is_test": true,
+  "letter_range": "Letters W-Y",
+  "start_letter": "W",
+  "end_letter": "Y",
   "questions": [
     {
       "q_num": 1,
-      "question": "What does the idiom \"“Jump the shark”\" mean?",
+      "question": "What does the idiom \"“Waxed and waned”\" mean?",
       "options": {
-        "a": "To reach a peak and begin to decline",
-        "b": "Active and socializing",
-        "c": "To go through many difficulties",
-        "d": "Increased and decreased"
+        "a": "To be direct and honest",
+        "b": "Increased and decreased",
+        "c": "Officially in writing",
+        "d": "Active and socializing"
       },
-      "answer": "a",
-      "solution": "To reach a peak and begin to decline\n\n💡 Mnemonic Trick: Recall cue: link “Jump the shark” with “reach peak begin decline”.\n📖 Source: PDF • page 30\n🎯 Target Word: Jump the shark",
+      "answer": "b",
+      "solution": "Increased and decreased\n\n💡 Mnemonic Trick: Recall cue: link “Waxed and waned” with “Increased decreased”.\n📖 Source: PDF • page 7\n🎯 Target Word: Waxed and waned",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Idioms & Phrases",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_idioms_and_phrases_set6_q1"
     },
     {
       "q_num": 2,
-      "question": "What does the idiom \"“Red herring”\" mean?",
+      "question": "What does the idiom \"“Whatever floats your boat”\" mean?",
       "options": {
-        "a": "Feeling confused or perplexed",
-        "b": "A false clue meant to mislead",
-        "c": "Being the focus of attention",
-        "d": "Something misleading or distracting"
-      },
-      "answer": "b",
-      "solution": "A false clue meant to mislead\n\n💡 Mnemonic Trick: Recall cue: link “Red herring” with “false clue meant mislead”.\n📖 Source: PDF • page 30\n🎯 Target Word: Red herring",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 3,
-      "question": "What does the idiom \"“Not to mince matters”\" mean?",
-      "options": {
-        "a": "Act spontaneously without planning",
-        "b": "Feeling confused or perplexed",
-        "c": "To speak without hesitation or euphemism",
-        "d": "Will not meet required standards"
-      },
-      "answer": "c",
-      "solution": "To speak without hesitation or euphemism\n\n💡 Mnemonic Trick: Recall cue: link “Not to mince matters” with “speak without hesitation euphemism”.\n📖 Source: PDF • page 30\n🎯 Target Word: Not to mince matters",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "hard",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 4,
-      "question": "What does the idiom \"“Back to the drawing board”\" mean?",
-      "options": {
-        "a": "To start over after a failure",
-        "b": "A constant threat hanging over someone",
-        "c": "Start studying seriously",
-        "d": "Start afresh"
-      },
-      "answer": "a",
-      "solution": "To start over after a failure\n\n💡 Mnemonic Trick: Recall cue: link “Back to the drawing board” with “start over after failure”.\n📖 Source: PDF • page 30\n🎯 Target Word: Back to the drawing board",
-      "subject": "English",
-      "section": "ayush_vocab",
-      "tags": {
-        "topic": "Idioms & Phrases",
-        "difficulty": "medium",
-        "high_yield": true
-      }
-    },
-    {
-      "q_num": 5,
-      "question": "What does the idiom \"“Sitting on the fence”\" mean?",
-      "options": {
-        "a": "Confront difficulties",
-        "b": "Give up",
-        "c": "Stay neutral",
-        "d": "Remaining undecided"
+        "a": "Facing the same situation",
+        "b": "Endure something painful",
+        "c": "Something misleading or distracting",
+        "d": "Something that makes you happy"
       },
       "answer": "d",
-      "solution": "Remaining undecided\n\n💡 Mnemonic Trick: Recall cue: link “Sitting on the fence” with “Remaining undecided”.\n📖 Source: PDF • page 30\n🎯 Target Word: Sitting on the fence",
+      "solution": "Something that makes you happy\n\n💡 Mnemonic Trick: Recall cue: link “Whatever floats your boat” with “Something that makes happy”.\n📖 Source: PDF • page 7\n🎯 Target Word: Whatever floats your boat",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Idioms & Phrases",
         "difficulty": "easy",
         "high_yield": true
-      }
+      },
+      "id": "ayush_idioms_and_phrases_set6_q2"
     },
     {
-      "q_num": 6,
-      "question": "What does the idiom \"“Rising to the occasion”\" mean?",
+      "q_num": 3,
+      "question": "What does the idiom \"“Where the shoe pinches”\" mean?",
       "options": {
-        "a": "Feeling confused or perplexed",
-        "b": "Give up",
-        "c": "An exceptionally loyal and useful service",
-        "d": "Performing exceptionally under pressure"
+        "a": "A weakness or vulnerable point",
+        "b": "Feeling confused or perplexed",
+        "c": "Give up",
+        "d": "The point of real difficulty or discomfort"
       },
       "answer": "d",
-      "solution": "Performing exceptionally under pressure\n\n💡 Mnemonic Trick: Recall cue: link “Rising to the occasion” with “Performing exceptionally under pressure”.\n📖 Source: PDF • page 30\n🎯 Target Word: Rising to the occasion",
+      "solution": "The point of real difficulty or discomfort\n\n💡 Mnemonic Trick: Recall cue: link “Where the shoe pinches” with “point real difficulty discomfort”.\n📖 Source: PDF • page 12\n🎯 Target Word: Where the shoe pinches",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set6_q3"
+    },
+    {
+      "q_num": 4,
+      "question": "What does the idiom \"“Will not pass muster”\" mean?",
+      "options": {
+        "a": "Will not meet required standards",
+        "b": "Being the focus of attention",
+        "c": "Feeling confused or perplexed",
+        "d": "To speak without hesitation or euphemism"
+      },
+      "answer": "a",
+      "solution": "Will not meet required standards\n\n💡 Mnemonic Trick: Recall cue: link “Will not pass muster” with “Will meet required standards”.\n📖 Source: PDF • page 12\n🎯 Target Word: Will not pass muster",
       "subject": "English",
       "section": "ayush_vocab",
       "tags": {
         "topic": "Idioms & Phrases",
         "difficulty": "hard",
         "high_yield": true
-      }
+      },
+      "id": "ayush_idioms_and_phrases_set6_q4"
+    },
+    {
+      "q_num": 5,
+      "question": "What does the idiom \"“With a grain of salt”\" mean?",
+      "options": {
+        "a": "To view something with suspicion or doubt",
+        "b": "Endure something painful",
+        "c": "Something misleading or distracting",
+        "d": "To stop something or bring it to an end"
+      },
+      "answer": "a",
+      "solution": "To view something with suspicion or doubt\n\n💡 Mnemonic Trick: Recall cue: link “With a grain of salt” with “view something with suspicion doubt”.\n📖 Source: PDF • page 7\n🎯 Target Word: With a grain of salt",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set6_q5"
+    },
+    {
+      "q_num": 6,
+      "question": "What does the idiom \"“Yeoman service”\" mean?",
+      "options": {
+        "a": "An exceptionally loyal and useful service",
+        "b": "Active and socializing",
+        "c": "Increased and decreased",
+        "d": "Officially in writing"
+      },
+      "answer": "a",
+      "solution": "An exceptionally loyal and useful service\n\n💡 Mnemonic Trick: Recall cue: link “Yeoman service” with “exceptionally loyal useful service”.\n📖 Source: PDF • page 30\n🎯 Target Word: Yeoman service",
+      "subject": "English",
+      "section": "ayush_vocab",
+      "tags": {
+        "topic": "Idioms & Phrases",
+        "difficulty": "medium",
+        "high_yield": true
+      },
+      "id": "ayush_idioms_and_phrases_set6_q6"
     }
   ]
 }
