@@ -1707,9 +1707,21 @@ export default function App() {
           const rcaMatch = (qId && globalRcaMap[qId]) || (qText && globalRcaMap[qText]);
           if (rcaMatch && (rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol)) {
             sol = rcaMatch.solution || rcaMatch.explanation || rcaMatch.sol;
-          } else if (Array.isArray(cachedMockQuestions) && cachedMockQuestions[idx]) {
-            const cachedItem = cachedMockQuestions[idx];
-            sol = cachedItem?.solution || cachedItem?.explanation || cachedItem?.sol || cachedItem?.detailedSolution || '';
+          } else if (Array.isArray(cachedMockQuestions) && cachedMockQuestions.length > 0) {
+            const targetId = q.id || qdAny.id;
+            const targetText = (q.question || '').trim().toLowerCase();
+            const targetNum = q.q_num || qd.q_num;
+            const targetSub = (q.subject || detectedSub || '').toLowerCase();
+            const cachedItem = cachedMockQuestions.find((item: any) => {
+              if (targetId && item.id === targetId) return true;
+              const itemText = (item.question || item.questionText || '').trim().toLowerCase();
+              if (targetText && itemText && targetText === itemText) return true;
+              if (targetNum && item.q_num === targetNum && targetSub && (item.subject || '').toLowerCase() === targetSub) return true;
+              return false;
+            }) || (cachedMockQuestions.length === resultToReview.questionDetails.length ? cachedMockQuestions[idx] : null);
+            if (cachedItem) {
+              sol = cachedItem?.solution || cachedItem?.explanation || cachedItem?.sol || cachedItem?.detailedSolution || '';
+            }
           }
         }
         if (!sol) {

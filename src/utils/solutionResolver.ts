@@ -14,6 +14,23 @@ export function normalizeQuestionKey(text: string): string {
   return text.trim().toLowerCase().replace(/[\$\\\{\}\_\^\s\.,\-\?!;:'"()\[\]]/g, '');
 }
 
+export function isGenericPrompt(text: string): boolean {
+  if (!text) return false;
+  const clean = text.trim().toLowerCase();
+  if (clean.length > 140) return false;
+  return /^(select|choose|identify|find)\s+(the\s+)?(most\s+appropriate\s+)?(synonym|antonym|meaning|correctly\s*spelt|incorrectly\s*spelt|option|part|sentence|alternative|word)/i.test(clean) ||
+         /^(what\s+does\s+the\s+idiom|which\s+of\s+the\s+following\s+is\s+a\s+one-word)/i.test(clean);
+}
+
+export function getOptionsKey(options: any): string {
+  if (!options || typeof options !== 'object') return '';
+  const vals = Object.values(options)
+    .map(v => typeof v === 'string' ? v.trim().toLowerCase() : '')
+    .filter(Boolean);
+  if (vals.length === 0) return '';
+  return Array.from(new Set(vals)).sort().join('|');
+}
+
 function registerSolution(key: string | undefined, solution: string | undefined) {
   if (!key || !solution || typeof solution !== 'string') return;
   const cleanSol = solution.trim();
@@ -36,10 +53,23 @@ function registerQuestion(q: any) {
   const qText = q.question || q.questionText || '';
   if (qText) {
     const rawLower = qText.trim().toLowerCase();
-    registerSolution(rawLower, cleanSol);
     const stripped = normalizeQuestionKey(qText);
-    if (stripped) {
-      registerSolution(stripped, cleanSol);
+    const optKey = getOptionsKey(q.options);
+
+    // If options are available, register composite key (collision-proof)
+    if (optKey) {
+      registerSolution(rawLower + '::' + optKey, cleanSol);
+      if (stripped) {
+        registerSolution(stripped + '::' + optKey, cleanSol);
+      }
+    }
+
+    // Only register bare question text if it is NOT a generic template prompt
+    if (!isGenericPrompt(rawLower)) {
+      registerSolution(rawLower, cleanSol);
+      if (stripped) {
+        registerSolution(stripped, cleanSol);
+      }
     }
   }
 }
@@ -122,9 +152,17 @@ function getEagerMap(): Map<string, string> {
           if (b.id) eagerIndex.set(b.id, cleanSol);
           const qText = b.question || b.questionText;
           if (qText) {
-            eagerIndex.set(qText.trim().toLowerCase(), cleanSol);
+            const rawLower = qText.trim().toLowerCase();
             const stripped = normalizeQuestionKey(qText);
-            if (stripped) eagerIndex.set(stripped, cleanSol);
+            const optKey = getOptionsKey(b.options);
+            if (optKey) {
+              eagerIndex.set(rawLower + '::' + optKey, cleanSol);
+              if (stripped) eagerIndex.set(stripped + '::' + optKey, cleanSol);
+            }
+            if (!isGenericPrompt(rawLower)) {
+              eagerIndex.set(rawLower, cleanSol);
+              if (stripped) eagerIndex.set(stripped, cleanSol);
+            }
           }
         }
       }
@@ -152,9 +190,17 @@ function getBundledMap(): Map<string, string> {
       if (b.id) bundledIndex.set(b.id, cleanSol);
       const qText = b.question || b.questionText;
       if (qText) {
-        bundledIndex.set(qText.trim().toLowerCase(), cleanSol);
+        const rawLower = qText.trim().toLowerCase();
         const stripped = normalizeQuestionKey(qText);
-        if (stripped) bundledIndex.set(stripped, cleanSol);
+        const optKey = getOptionsKey(b.options);
+        if (optKey) {
+          bundledIndex.set(rawLower + '::' + optKey, cleanSol);
+          if (stripped) bundledIndex.set(stripped + '::' + optKey, cleanSol);
+        }
+        if (!isGenericPrompt(rawLower)) {
+          bundledIndex.set(rawLower, cleanSol);
+          if (stripped) bundledIndex.set(stripped, cleanSol);
+        }
       }
     }
   }
@@ -167,7 +213,7 @@ const mockStorageCache = new Map<string, any[]>();
  * Synchronously or best-effort resolves a question's solution.
  */
 export function resolveQuestionSolution(
-  q: { id?: string; question?: string; questionText?: string; explanation?: string; solution?: string; sol?: string; detailedSolution?: string; mockId?: string; testId?: string; [key: string]: any }
+  q: { id?: string; question?: string; questionText?: string; explanation?: string; solution?: string; sol?: string; detailedSolution?: string; mockId?: string; testId?: string; options?: any; [key: string]: any }
 ): string {
   if (!q) return '';
 
@@ -177,20 +223,36 @@ export function resolveQuestionSolution(
     return direct.trim();
   }
 
-  // Tier 2: Check solution index (O(1))
+  // Tier 2: Check solution index by ID (O(1))
   if (q.id && solutionIndex.has(q.id)) {
     return solutionIndex.get(q.id)!;
   }
 
   const qText = q.question || q.questionText || '';
+  const optKey = getOptionsKey(q.options);
+
   if (qText) {
     const rawLower = qText.trim().toLowerCase();
-    if (solutionIndex.has(rawLower)) {
-      return solutionIndex.get(rawLower)!;
-    }
     const stripped = normalizeQuestionKey(qText);
-    if (stripped && solutionIndex.has(stripped)) {
-      return solutionIndex.get(stripped)!;
+
+    // Check composite key with options first (highest accuracy)
+    if (optKey) {
+      if (solutionIndex.has(rawLower + '::' + optKey)) {
+        return solutionIndex.get(rawLower + '::' + optKey)!;
+      }
+      if (stripped && solutionIndex.has(stripped + '::' + optKey)) {
+        return solutionIndex.get(stripped + '::' + optKey)!;
+      }
+    }
+
+    // Only fallback to bare question text if NOT a generic template prompt
+    if (!isGenericPrompt(rawLower)) {
+      if (solutionIndex.has(rawLower)) {
+        return solutionIndex.get(rawLower)!;
+      }
+      if (stripped && solutionIndex.has(stripped)) {
+        return solutionIndex.get(stripped)!;
+      }
     }
   }
 
@@ -204,16 +266,30 @@ export function resolveQuestionSolution(
     }
     if (qText) {
       const rawLower = qText.trim().toLowerCase();
-      if (eMap.has(rawLower)) {
-        const sol = eMap.get(rawLower)!;
-        solutionIndex.set(rawLower, sol);
-        return sol;
-      }
       const stripped = normalizeQuestionKey(qText);
-      if (stripped && eMap.has(stripped)) {
-        const sol = eMap.get(stripped)!;
-        solutionIndex.set(stripped, sol);
-        return sol;
+      if (optKey) {
+        if (eMap.has(rawLower + '::' + optKey)) {
+          const sol = eMap.get(rawLower + '::' + optKey)!;
+          solutionIndex.set(rawLower + '::' + optKey, sol);
+          return sol;
+        }
+        if (stripped && eMap.has(stripped + '::' + optKey)) {
+          const sol = eMap.get(stripped + '::' + optKey)!;
+          solutionIndex.set(stripped + '::' + optKey, sol);
+          return sol;
+        }
+      }
+      if (!isGenericPrompt(rawLower)) {
+        if (eMap.has(rawLower)) {
+          const sol = eMap.get(rawLower)!;
+          solutionIndex.set(rawLower, sol);
+          return sol;
+        }
+        if (stripped && eMap.has(stripped)) {
+          const sol = eMap.get(stripped)!;
+          solutionIndex.set(stripped, sol);
+          return sol;
+        }
       }
     }
   }
@@ -228,16 +304,30 @@ export function resolveQuestionSolution(
     }
     if (qText) {
       const rawLower = qText.trim().toLowerCase();
-      if (bMap.has(rawLower)) {
-        const sol = bMap.get(rawLower)!;
-        solutionIndex.set(rawLower, sol);
-        return sol;
-      }
       const stripped = normalizeQuestionKey(qText);
-      if (stripped && bMap.has(stripped)) {
-        const sol = bMap.get(stripped)!;
-        solutionIndex.set(stripped, sol);
-        return sol;
+      if (optKey) {
+        if (bMap.has(rawLower + '::' + optKey)) {
+          const sol = bMap.get(rawLower + '::' + optKey)!;
+          solutionIndex.set(rawLower + '::' + optKey, sol);
+          return sol;
+        }
+        if (stripped && bMap.has(stripped + '::' + optKey)) {
+          const sol = bMap.get(stripped + '::' + optKey)!;
+          solutionIndex.set(stripped + '::' + optKey, sol);
+          return sol;
+        }
+      }
+      if (!isGenericPrompt(rawLower)) {
+        if (bMap.has(rawLower)) {
+          const sol = bMap.get(rawLower)!;
+          solutionIndex.set(rawLower, sol);
+          return sol;
+        }
+        if (stripped && bMap.has(stripped)) {
+          const sol = bMap.get(stripped)!;
+          solutionIndex.set(stripped, sol);
+          return sol;
+        }
       }
     }
   }
@@ -260,7 +350,12 @@ export function resolveQuestionSolution(
         const stripped = qText ? normalizeQuestionKey(qText) : '';
         for (let i = 0; i < list.length; i++) {
           const it = list[i];
-          if ((q.id && it.id === q.id) || (stripped && normalizeQuestionKey(it.question || it.questionText) === stripped)) {
+          const itOptsKey = getOptionsKey(it.options);
+          const sameOpts = optKey && itOptsKey ? optKey === itOptsKey : true;
+          const sameId = q.id && it.id === q.id;
+          const sameText = stripped && normalizeQuestionKey(it.question || it.questionText) === stripped && sameOpts;
+
+          if (sameId || sameText) {
             const foundSol = it.solution || it.explanation || it.sol;
             if (foundSol && typeof foundSol === 'string' && foundSol.trim().length > 3) {
               registerQuestion(it);

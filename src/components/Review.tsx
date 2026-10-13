@@ -652,7 +652,19 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
 
         const isMockReview = result.mode === 'mock';
         const questionsToSave = items.map((it, idx) => {
-          const existingQ = (Array.isArray(cachedExisting) && cachedExisting[idx]) || {};
+          const targetId = it.question?.id || (it as any)?.id;
+          const targetText = (it.question?.question || (it as any)?.question || '').trim().toLowerCase();
+          const targetNum = it.question?.q_num || it.q_num;
+          const targetSub = (it.question?.subject || (it as any)?.subject || '').toLowerCase();
+          const existingQ = (Array.isArray(cachedExisting) && (
+            cachedExisting.find((ce: any) => {
+              if (targetId && ce.id === targetId) return true;
+              const ceText = (ce.question || ce.questionText || '').trim().toLowerCase();
+              if (targetText && ceText && targetText === ceText) return true;
+              if (targetNum && ce.q_num === targetNum && targetSub && (ce.subject || '').toLowerCase() === targetSub) return true;
+              return false;
+            }) || (cachedExisting.length === items.length ? cachedExisting[idx] : {})
+          )) || {};
           const q = it.question ? { ...it.question } : { ...existingQ };
           const rca = currentRcaMap[idx] || it.rca || q.rca;
           
@@ -1216,8 +1228,18 @@ export const ReviewView: React.FC<ReviewViewProps> = ({
         const cachedRaw = safeStorage.getItem(`cgl_mock_questions_${result.id}`);
         if (cachedRaw) {
           const list = JSON.parse(cachedRaw);
-          if (Array.isArray(list) && list[currentIdx]) {
-            const cachedQ = list[currentIdx];
+          if (Array.isArray(list) && list.length > 0) {
+            const qId = question?.id || (current as any)?.id;
+            const qText = (question?.question || (current as any)?.question || '').trim().toLowerCase();
+            const qNum = question?.q_num || current?.q_num;
+            const qSub = (question?.subject || current?.question?.subject || '').toLowerCase();
+            const cachedQ = list.find((item: any) => {
+              if (qId && item.id === qId) return true;
+              const itemText = (item.question || item.questionText || '').trim().toLowerCase();
+              if (qText && itemText && qText === itemText) return true;
+              if (qNum && item.q_num === qNum && qSub && (item.subject || '').toLowerCase() === qSub) return true;
+              return false;
+            }) || (list.length === items.length ? list[currentIdx] : null);
             const cachedSol = cachedQ?.solution || cachedQ?.explanation || cachedQ?.sol || cachedQ?.detailedSolution;
             if (cachedSol && typeof cachedSol === 'string' && cachedSol.trim().length > 0) {
               return cachedSol.trim();
