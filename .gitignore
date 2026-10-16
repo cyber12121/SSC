@@ -23,7 +23,6 @@ scratch/
 scripts/
 tools/
 stitch/
-public/murphy/
 automation.py
 pdfautomation.py
 extract_english_text_from_pdf.py

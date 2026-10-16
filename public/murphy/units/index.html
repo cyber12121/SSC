@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Grammar in Use — Complete Interactive Course</title>
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --ink: #1f2933;
+    --muted: #5c6b7a;
+    --accent: #1e6f5c;
+    --accent-light: #e6f2ee;
+    --accent-dark: #14503f;
+    --highlight: #fff3cd;
+    --gold: #d4a017;
+    --correct: #2e7d32;
+    --correct-bg: #e8f5e9;
+    --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31, 41, 51, 0.06);
+    --shadow-lg: 0 12px 40px rgba(31, 41, 51, 0.10);
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Charter', 'Cambria', serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(247, 245, 240, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  .topbar-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; gap: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+  }
+  .brand {
+    font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent);
+    font-size: 13px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .brand-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+  }
+  .topbar-spacer { flex: 1; }
+  .topbar-stat {
+    color: var(--muted); font-weight: 600; font-size: 13px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .topbar-stat strong { color: var(--accent-dark); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    max-width: 1100px; margin: 0 auto;
+    padding: 70px 24px 40px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-light); padding: 6px 16px;
+    border-radius: 100px; margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 60px); line-height: 1.05;
+    margin: 0 0 20px; letter-spacing: -0.03em; font-weight: 700;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--accent-dark);
+  }
+  .hero-sub {
+    font-size: 19px; color: var(--muted); max-width: 640px;
+    margin: 0 auto 32px; line-height: 1.6;
+  }
+
+  /* ---------- Continue card ---------- */
+  .continue-card {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    display: flex; align-items: center; gap: 24px;
+    flex-wrap: wrap;
+    margin: 40px auto 0;
+    max-width: 900px;
+    box-shadow: var(--shadow-lg);
+  }
+  .continue-icon {
+    font-size: 40px;
+    width: 72px; height: 72px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .continue-body { flex: 1; min-width: 200px; }
+  .continue-label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    opacity: 0.75; margin-bottom: 4px;
+  }
+  .continue-title {
+    font-size: 20px; font-weight: 700; margin: 0 0 4px;
+  }
+  .continue-meta {
+    font-size: 15px; opacity: 0.85; margin: 0;
+  }
+  .continue-btn {
+    background: #fff; color: var(--accent-dark);
+    padding: 12px 24px; border-radius: 100px;
+    text-decoration: none; font-weight: 700; font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: transform 0.2s;
+  }
+  .continue-btn:hover { transform: translateY(-2px); }
+
+  /* ---------- Overview stats ---------- */
+  .overview {
+    max-width: 1100px; margin: 60px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+  }
+  .stat-value {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 32px; font-weight: 700; color: var(--accent-dark);
+    line-height: 1; margin-bottom: 6px;
+  }
+  .stat-label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- Search ---------- */
+  .search-wrap {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    position: sticky; top: 62px; z-index: 50;
+  }
+  .search-box {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-light), var(--shadow);
+  }
+  .search-icon {
+    position: absolute;
+    left: 22px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px; color: var(--muted);
+  }
+  .search-input {
+    width: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    padding: 18px 24px 18px 56px;
+    border: none;
+    background: transparent;
+    border-radius: 100px;
+    outline: none;
+    color: var(--ink);
+  }
+  .search-input::placeholder { color: var(--muted); }
+
+  /* ---------- Main ---------- */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 100px;
+  }
+
+  /* ---------- Section card ---------- */
+  .section-group {
+    margin: 24px 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .section-group:hover { box-shadow: var(--shadow-lg); }
+
+  .section-head {
+    display: flex; align-items: center; gap: 20px;
+    padding: 24px 28px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+    border-bottom: 1px solid transparent;
+  }
+  .section-head:hover { background: #fafaf7; }
+  .section-group.open .section-head { border-bottom-color: var(--border); }
+
+  .section-number {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 700;
+    background: var(--accent-light); color: var(--accent);
+    padding: 6px 12px; border-radius: 8px;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+  .section-meta { flex: 1; min-width: 0; }
+  .section-name {
+    font-size: 20px; font-weight: 700;
+    margin: 0 0 4px; letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .section-range {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; color: var(--muted);
+  }
+  .section-progress {
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; color: var(--muted);
+    flex-shrink: 0;
+  }
+  .section-progress-bar {
+    width: 80px; height: 6px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .section-progress-bar > div {
+    height: 100%;
+    background: var(--accent);
+    width: 0%;
+    transition: width 0.4s;
+  }
+  .chevron {
+    font-size: 14px; color: var(--muted);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .section-group.open .chevron { transform: rotate(180deg); }
+
+  .section-body {
+    display: none;
+    padding: 20px 28px 28px;
+  }
+  .section-group.open .section-body { display: block; }
+
+  .unit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+
+  /* ---------- Unit tile ---------- */
+  .unit-tile {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px;
+    background: #fafaf7;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.15s;
+    position: relative;
+  }
+  .unit-tile:hover {
+    border-color: var(--accent);
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30,111,92,0.12);
+  }
+  .unit-tile.done {
+    background: var(--correct-bg);
+    border-color: #a5d6a7;
+  }
+  .unit-tile.done .unit-num {
+    background: var(--correct);
+    color: #fff;
+  }
+  .unit-num {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px; font-weight: 700;
+    background: var(--accent-light); color: var(--accent);
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+  .unit-tile:hover .unit-num {
+    background: var(--accent); color: #fff;
+  }
+  .unit-tile.done:hover .unit-num {
+    background: var(--correct); color: #fff;
+  }
+  .unit-info { flex: 1; min-width: 0; }
+  .unit-title {
+    font-size: 14px; font-weight: 600;
+    line-height: 1.35;
+    margin: 0;
+    color: var(--ink);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .unit-check {
+    color: var(--correct);
+    font-size: 16px;
+    flex-shrink: 0;
+    display: none;
+  }
+  .unit-tile.done .unit-check { display: block; }
+
+  /* ---------- Back matter ---------- */
+  .back-matter {
+    margin-top: 60px;
+  }
+  .back-matter-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .back-matter-title::after {
+    content: ""; flex: 1; height: 1px; background: var(--border);
+  }
+  .back-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .back-card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.15s;
+    box-shadow: var(--shadow);
+  }
+  .back-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  .back-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .back-title {
+    font-size: 16px; font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .back-meta {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px; color: var(--muted);
+    margin: 0;
+  }
+
+  /* ---------- Empty state ---------- */
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: none;
+  }
+  .empty.show { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    border-top: 1px solid var(--border);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+  footer strong { color: var(--accent-dark); }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .hero { padding: 40px 20px 20px; }
+    .hero h1 { font-size: 34px; }
+    .hero-sub { font-size: 16px; }
+    .search-wrap { top: 60px; padding: 0 16px; }
+    main { padding: 30px 16px 60px; }
+    .section-head { padding: 18px 20px; gap: 14px; }
+    .section-name { font-size: 17px; }
+    .section-progress-bar { display: none; }
+    .section-body { padding: 16px 20px 20px; }
+    .unit-grid { grid-template-columns: 1fr; }
+    .overview { grid-template-columns: 1fr 1fr; padding: 0 16px; }
+    .continue-card { padding: 22px; }
+    .continue-btn { width: 100%; justify-content: center; }
+    .topbar-stat:last-child { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      English Grammar in Use
+    </div>
+    <span class="topbar-spacer"></span>
+    <span class="topbar-stat">
+      🔥 <strong id="streakCount">0</strong> day streak
+    </span>
+    <span class="topbar-stat">
+      <strong id="doneCount">0</strong> / 145 units
+    </span>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <span class="hero-badge">Fifth Edition · Raymond Murphy</span>
+  <h1>Master English grammar,<br><em>one unit at a time.</em></h1>
+  <p class="hero-sub">145 interactive units with instant feedback, smart answer checking, and progress tracking. Your complete self-study course.</p>
+</header>
+
+<!-- ================= CONTINUE CARD ================= -->
+<div id="continueContainer"></div>
+
+<!-- ================= STATS OVERVIEW ================= -->
+<section class="overview">
+  <div class="stat-card">
+    <div class="stat-value" id="statDone">0</div>
+    <div class="stat-label">Units completed</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" id="statPercent">0%</div>
+    <div class="stat-label">Course progress</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">15</div>
+    <div class="stat-label">Sections</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">12</div>
+    <div class="stat-label">Exercise types</div>
+  </div>
+</section>
+
+<!-- ================= SEARCH ================= -->
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input
+      type="text"
+      class="search-input"
+      id="searchInput"
+      placeholder="Search units by topic… (e.g. present perfect, articles, phrasal verbs)"
+      autocomplete="off"
+    >
+  </div>
+</div>
+
+<!-- ================= MAIN ================= -->
+<main>
+  <div id="sectionsContainer"></div>
+
+  <div class="empty" id="emptyState">
+    <p style="font-size: 40px; margin: 0 0 12px;">🔍</p>
+    <p>No units match your search.</p>
+  </div>
+
+  <!-- ================= BACK MATTER ================= -->
+  <div class="back-matter">
+    <h3 class="back-matter-title">Reference &amp; Practice</h3>
+    <div class="back-grid">
+      <a class="back-card" href="appendix/irregular-verbs.html">
+        <span class="back-icon">📋</span>
+        <p class="back-title">Appendix 1 — Irregular verbs</p>
+        <p class="back-meta">Complete reference table</p>
+      </a>
+      <a class="back-card" href="appendix/tenses-summary.html">
+        <span class="back-icon">⏱️</span>
+        <p class="back-title">Appendix 2 — Tenses summary</p>
+        <p class="back-meta">Present and past in one view</p>
+      </a>
+      <a class="back-card" href="appendix/future.html">
+        <span class="back-icon">🔮</span>
+        <p class="back-title">Appendix 3 — The future</p>
+        <p class="back-meta">All future forms compared</p>
+      </a>
+      <a class="back-card" href="appendix/modal-verbs.html">
+        <span class="back-icon">🧩</span>
+        <p class="back-title">Appendix 4 — Modal verbs</p>
+        <p class="back-meta">can/could/will/would etc.</p>
+      </a>
+      <a class="back-card" href="appendix/short-forms.html">
+        <span class="back-icon">✂️</span>
+        <p class="back-title">Appendix 5 — Short forms</p>
+        <p class="back-meta">I'm / you've / didn't etc.</p>
+      </a>
+      <a class="back-card" href="appendix/spelling.html">
+        <span class="back-icon">✏️</span>
+        <p class="back-title">Appendix 6 — Spelling</p>
+        <p class="back-meta">Rules for endings and changes</p>
+      </a>
+      <a class="back-card" href="appendix/american-english.html">
+        <span class="back-icon">🇺🇸</span>
+        <p class="back-title">Appendix 7 — American English</p>
+        <p class="back-meta">British vs American differences</p>
+      </a>
+      <a class="back-card" href="additional-exercises.html">
+        <span class="back-icon">🎯</span>
+        <p class="back-title">Additional exercises</p>
+        <p class="back-meta">41 mixed practice sets</p>
+      </a>
+      <a class="back-card" href="study-guide.html">
+        <span class="back-icon">🧭</span>
+        <p class="back-title">Study guide</p>
+        <p class="back-meta">Find the units you need</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p><strong>English Grammar in Use</strong> — Fifth Edition · Raymond Murphy</p>
+  <p style="margin-top: 8px;">An interactive adaptation for self-study.</p>
+</footer>
+
+<script>
+/* ============================================================
+   DATA: all 15 sections with their units
+   ============================================================ */
+const SECTIONS = [
+  {
+    name: "Present and past",
+    units: [
+      { n: 1,  title: "Present continuous", sub: "I am doing" },
+      { n: 2,  title: "Present simple", sub: "I do" },
+      { n: 3,  title: "Present continuous and present simple 1", sub: "I am doing and I do" },
+      { n: 4,  title: "Present continuous and present simple 2", sub: "I am doing and I do" },
+      { n: 5,  title: "Past simple", sub: "I did" },
+      { n: 6,  title: "Past continuous", sub: "I was doing" },
+      { n: 7,  title: "Present perfect 1", sub: "I have done" },
+      { n: 8,  title: "Present perfect 2", sub: "I have done" },
+      { n: 9,  title: "Present perfect continuous", sub: "I have been doing" },
+      { n: 10, title: "Present perfect continuous and simple", sub: "I have been doing and I have done" },
+      { n: 11, title: "how long have you (been) …?", sub: "" },
+      { n: 12, title: "for and since · when …? · how long …?", sub: "" },
+      { n: 13, title: "Present perfect and past 1", sub: "I have done and I did" },
+      { n: 14, title: "Present perfect and past 2", sub: "I have done and I did" },
+      { n: 15, title: "Past perfect", sub: "I had done" },
+      { n: 16, title: "Past perfect continuous", sub: "I had been doing" },
+      { n: 17, title: "have and have got", sub: "" },
+      { n: 18, title: "used to (do)", sub: "" }
+    ]
+  },
+  {
+    name: "Future",
+    units: [
+      { n: 19, title: "Present tenses for the future", sub: "I am doing / I do" },
+      { n: 20, title: "I'm going to (do)", sub: "" },
+      { n: 21, title: "will and shall 1", sub: "" },
+      { n: 22, title: "will and shall 2", sub: "" },
+      { n: 23, title: "I will and I'm going to", sub: "" },
+      { n: 24, title: "will be doing and will have done", sub: "" },
+      { n: 25, title: "when I do and when I've done · if and when", sub: "" }
+    ]
+  },
+  {
+    name: "Modals",
+    units: [
+      { n: 26, title: "can, could and (be) able to", sub: "" },
+      { n: 27, title: "could (do) and could have (done)", sub: "" },
+      { n: 28, title: "must and can't", sub: "" },
+      { n: 29, title: "may and might 1", sub: "" },
+      { n: 30, title: "may and might 2", sub: "" },
+      { n: 31, title: "have to and must", sub: "" },
+      { n: 32, title: "must · mustn't · needn't", sub: "" },
+      { n: 33, title: "should 1", sub: "" },
+      { n: 34, title: "should 2", sub: "" },
+      { n: 35, title: "I'd better … · it's time …", sub: "" },
+      { n: 36, title: "would", sub: "" },
+      { n: 37, title: "can/could/would you …? etc.", sub: "Requests, offers, permission and invitations" }
+    ]
+  },
+  {
+    name: "if and wish",
+    units: [
+      { n: 38, title: "if I do … and if I did …", sub: "" },
+      { n: 39, title: "if I knew … I wish I knew …", sub: "" },
+      { n: 40, title: "if I had known … I wish I had known …", sub: "" },
+      { n: 41, title: "wish", sub: "" }
+    ]
+  },
+  {
+    name: "Passive",
+    units: [
+      { n: 42, title: "Passive 1", sub: "is done / was done" },
+      { n: 43, title: "Passive 2", sub: "be done / been done / being done" },
+      { n: 44, title: "Passive 3", sub: "" },
+      { n: 45, title: "it is said that … · he is said to … · he is supposed to …", sub: "" },
+      { n: 46, title: "have something done", sub: "" }
+    ]
+  },
+  {
+    name: "Reported speech",
+    units: [
+      { n: 47, title: "Reported speech 1", sub: "he said that …" },
+      { n: 48, title: "Reported speech 2", sub: "" }
+    ]
+  },
+  {
+    name: "Questions and auxiliary verbs",
+    units: [
+      { n: 49, title: "Questions 1", sub: "" },
+      { n: 50, title: "Questions 2", sub: "do you know where …? / he asked me where …" },
+      { n: 51, title: "Auxiliary verbs (have/do/can etc.)", sub: "I think so / I hope so etc." },
+      { n: 52, title: "Question tags", sub: "do you? isn't it? etc." }
+    ]
+  },
+  {
+    name: "-ing and to …",
+    units: [
+      { n: 53, title: "Verb + -ing", sub: "enjoy doing / stop doing etc." },
+      { n: 54, title: "Verb + to …", sub: "decide to … / forget to … etc." },
+      { n: 55, title: "Verb (+ object) + to …", sub: "I want you to …" },
+      { n: 56, title: "Verb + -ing or to … 1", sub: "remember, regret etc." },
+      { n: 57, title: "Verb + -ing or to … 2", sub: "try, need, help" },
+      { n: 58, title: "Verb + -ing or to … 3", sub: "like / would like etc." },
+      { n: 59, title: "prefer and would rather", sub: "" },
+      { n: 60, title: "Preposition + -ing", sub: "in/for/about etc." },
+      { n: 61, title: "be/get used to …", sub: "I'm used to …" },
+      { n: 62, title: "Verb + preposition + -ing", sub: "succeed in -ing / insist on -ing etc." },
+      { n: 63, title: "there's no point in -ing, it's worth -ing etc.", sub: "" },
+      { n: 64, title: "to …, for … and so that …", sub: "" },
+      { n: 65, title: "Adjective + to …", sub: "" },
+      { n: 66, title: "to … (afraid to do) and preposition + -ing (afraid of -ing)", sub: "" },
+      { n: 67, title: "see somebody do and see somebody doing", sub: "" },
+      { n: 68, title: "-ing clauses", sub: "He hurt his knee playing football." }
+    ]
+  },
+  {
+    name: "Articles and nouns",
+    units: [
+      { n: 69, title: "Countable and uncountable 1", sub: "" },
+      { n: 70, title: "Countable and uncountable 2", sub: "" },
+      { n: 71, title: "Countable nouns with a/an and some", sub: "" },
+      { n: 72, title: "a/an and the", sub: "" },
+      { n: 73, title: "the 1", sub: "" },
+      { n: 74, title: "the 2", sub: "school / the school etc." },
+      { n: 75, title: "the 3", sub: "children / the children" },
+      { n: 76, title: "the 4", sub: "the giraffe / the telephone / the old etc." },
+      { n: 77, title: "Names with and without the 1", sub: "" },
+      { n: 78, title: "Names with and without the 2", sub: "" },
+      { n: 79, title: "Singular and plural", sub: "" },
+      { n: 80, title: "Noun + noun", sub: "a bus driver / a headache" },
+      { n: 81, title: "-'s (your sister's name) and of …", sub: "the name of the book" }
+    ]
+  },
+  {
+    name: "Pronouns and determiners",
+    units: [
+      { n: 82, title: "myself/yourself/themselves etc.", sub: "" },
+      { n: 83, title: "a friend of mine · my own house · on my own / by myself", sub: "" },
+      { n: 84, title: "there … and it …", sub: "" },
+      { n: 85, title: "some and any", sub: "" },
+      { n: 86, title: "no/none/any · nothing/nobody etc.", sub: "" },
+      { n: 87, title: "much, many, little, few, a lot, plenty", sub: "" },
+      { n: 88, title: "all / all of · most / most of · no / none of etc.", sub: "" },
+      { n: 89, title: "both / both of · neither / neither of · either / either of", sub: "" },
+      { n: 90, title: "all · every · whole", sub: "" },
+      { n: 91, title: "each and every", sub: "" }
+    ]
+  },
+  {
+    name: "Relative clauses",
+    units: [
+      { n: 92, title: "Relative clauses 1", sub: "clauses with who/that/which" },
+      { n: 93, title: "Relative clauses 2", sub: "clauses with and without who/that/which" },
+      { n: 94, title: "Relative clauses 3", sub: "whose/whom/where" },
+      { n: 95, title: "Relative clauses 4", sub: "extra information clauses (1)" },
+      { n: 96, title: "Relative clauses 5", sub: "extra information clauses (2)" },
+      { n: 97, title: "-ing and -ed clauses", sub: "the woman talking to Tom, the boy injured in the accident" }
+    ]
+  },
+  {
+    name: "Adjectives and adverbs",
+    units: [
+      { n: 98,  title: "Adjectives ending in -ing and -ed", sub: "boring/bored etc." },
+      { n: 99,  title: "Adjectives", sub: "a nice new house, you look tired" },
+      { n: 100, title: "Adjectives and adverbs 1", sub: "quick/quickly" },
+      { n: 101, title: "Adjectives and adverbs 2", sub: "well, fast, late, hard/hardly" },
+      { n: 102, title: "so and such", sub: "" },
+      { n: 103, title: "enough and too", sub: "" },
+      { n: 104, title: "quite, pretty, rather and fairly", sub: "" },
+      { n: 105, title: "Comparative 1", sub: "cheaper, more expensive etc." },
+      { n: 106, title: "Comparative 2", sub: "much better / any better etc." },
+      { n: 107, title: "Comparative 3", sub: "as … as / than" },
+      { n: 108, title: "Superlative", sub: "the longest, the most enjoyable etc." },
+      { n: 109, title: "Word order 1", sub: "verb + object; place and time" },
+      { n: 110, title: "Word order 2", sub: "adverbs with the verb" },
+      { n: 111, title: "still · any more · yet · already", sub: "" },
+      { n: 112, title: "even", sub: "" }
+    ]
+  },
+  {
+    name: "Conjunctions and prepositions",
+    units: [
+      { n: 113, title: "although · though · even though · in spite of · despite", sub: "" },
+      { n: 114, title: "in case", sub: "" },
+      { n: 115, title: "unless · as long as · provided", sub: "" },
+      { n: 116, title: "as", sub: "as I walked … / as I was … etc." },
+      { n: 117, title: "like and as", sub: "" },
+      { n: 118, title: "like · as if", sub: "" },
+      { n: 119, title: "during · for · while", sub: "" },
+      { n: 120, title: "by and until · by the time …", sub: "" }
+    ]
+  },
+  {
+    name: "Prepositions",
+    units: [
+      { n: 121, title: "at/on/in (time)", sub: "" },
+      { n: 122, title: "on time and in time · at the end and in the end", sub: "" },
+      { n: 123, title: "in/at/on (position) 1", sub: "" },
+      { n: 124, title: "in/at/on (position) 2", sub: "" },
+      { n: 125, title: "in/at/on (position) 3", sub: "" },
+      { n: 126, title: "to, at, in and into", sub: "" },
+      { n: 127, title: "in/on/at (other uses)", sub: "" },
+      { n: 128, title: "by", sub: "" },
+      { n: 129, title: "Noun + preposition", sub: "reason for, cause of etc." },
+      { n: 130, title: "Adjective + preposition 1", sub: "" },
+      { n: 131, title: "Adjective + preposition 2", sub: "" },
+      { n: 132, title: "Verb + preposition 1", sub: "to and at" },
+      { n: 133, title: "Verb + preposition 2", sub: "about/for/of/after" },
+      { n: 134, title: "Verb + preposition 3", sub: "about and of" },
+      { n: 135, title: "Verb + preposition 4", sub: "of/for/from/on" },
+      { n: 136, title: "Verb + preposition 5", sub: "in/into/with/to/on" }
+    ]
+  },
+  {
+    name: "Phrasal verbs",
+    units: [
+      { n: 137, title: "Phrasal verbs 1", sub: "Introduction" },
+      { n: 138, title: "Phrasal verbs 2", sub: "in/out" },
+      { n: 139, title: "Phrasal verbs 3", sub: "out" },
+      { n: 140, title: "Phrasal verbs 4", sub: "on/off (1)" },
+      { n: 141, title: "Phrasal verbs 5", sub: "on/off (2)" },
+      { n: 142, title: "Phrasal verbs 6", sub: "up/down" },
+      { n: 143, title: "Phrasal verbs 7", sub: "up (1)" },
+      { n: 144, title: "Phrasal verbs 8", sub: "up (2)" },
+      { n: 145, title: "Phrasal verbs 9", sub: "away/back" }
+    ]
+  }
+];
+
+/* ============================================================
+   PROGRESS: localStorage keys
+   ============================================================ */
+const STORAGE_KEY = 'egiu_done_units';   // JSON array of unit numbers
+const LAST_VISIT_KEY = 'egiu_last_unit'; // number
+
+function getDoneUnits() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+  } catch { return new Set(); }
+}
+
+function markDone(n) {
+  const done = getDoneUnits();
+  done.add(n);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify([...done]));
+  updateAllProgress();
+}
+
+/* ============================================================
+   RENDER: sections + units
+   ============================================================ */
+function getUnitFolder(n) {
+  if (n <= 18) return "01_Present_and_Past";
+  if (n <= 25) return "02_Future";
+  if (n <= 37) return "03_Modals";
+  if (n <= 41) return "04_If_and_Wish";
+  if (n <= 46) return "05_Passive";
+  if (n <= 48) return "06_Reported_Speech";
+  if (n <= 52) return "07_Questions_and_Auxiliary_Verbs";
+  if (n <= 68) return "08_Ing_and_To";
+  if (n <= 81) return "09_Articles_and_Nouns";
+  if (n <= 91) return "10_Pronouns_and_Determiners";
+  if (n <= 97) return "11_Relative_Clauses";
+  if (n <= 112) return "12_Adjectives_and_Adverbs";
+  if (n <= 120) return "13_Conjunctions_and_Prepositions";
+  if (n <= 136) return "14_Prepositions";
+  return "15_Phrasal_Verbs";
+}
+
+function pad3(n) { return String(n).padStart(3, '0'); }
+
+function unitHref(n) { return `${getUnitFolder(n)}/unit-${pad3(n)}.html`; }
+
+function renderSections() {
+  const container = document.getElementById('sectionsContainer');
+  const done = getDoneUnits();
+
+  container.innerHTML = SECTIONS.map((section, idx) => {
+    const firstN = section.units[0].n;
+    const lastN = section.units[section.units.length - 1].n;
+    const doneInSection = section.units.filter(u => done.has(u.n)).length;
+    const pct = Math.round(doneInSection / section.units.length * 100);
+
+    const unitsHTML = section.units.map(u => {
+      const isDone = done.has(u.n);
+      return `
+        <a class="unit-tile ${isDone ? 'done' : ''}"
+           href="${unitHref(u.n)}"
+           data-title="${u.title.toLowerCase()}"
+           data-sub="${(u.sub || '').toLowerCase()}"
+           data-num="${u.n}">
+          <span class="unit-num">${u.n}</span>
+          <div class="unit-info">
+            <p class="unit-title">${u.title}</p>
+          </div>
+          <span class="unit-check">✓</span>
+        </a>
+      `;
+    }).join('');
+
+    return `
+      <div class="section-group ${idx === 0 ? 'open' : ''}">
+        <div class="section-head" data-section-toggle>
+          <span class="section-number">§${idx + 1}</span>
+          <div class="section-meta">
+            <p class="section-name">${section.name}</p>
+            <span class="section-range">Units ${firstN}–${lastN}</span>
+          </div>
+          <div class="section-progress">
+            <span>${doneInSection}/${section.units.length}</span>
+            <div class="section-progress-bar">
+              <div style="width:${pct}%"></div>
+            </div>
+            <span class="chevron">▾</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="unit-grid">${unitsHTML}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Wire up section toggles
+  container.querySelectorAll('[data-section-toggle]').forEach(head => {
+    head.addEventListener('click', () => {
+      head.parentElement.classList.toggle('open');
+    });
+  });
+}
+
+/* ============================================================
+   PROGRESS OVERVIEW + CONTINUE
+   ============================================================ */
+function updateAllProgress() {
+  const done = getDoneUnits();
+  const total = 145;
+  const n = done.size;
+
+  document.getElementById('doneCount').textContent = n;
+  document.getElementById('statDone').textContent = n;
+  document.getElementById('statPercent').textContent =
+    Math.round(n / total * 100) + '%';
+
+  // Update section tiles
+  document.querySelectorAll('.unit-tile').forEach(tile => {
+    const num = parseInt(tile.dataset.num, 10);
+    tile.classList.toggle('done', done.has(num));
+  });
+
+  // Update section progress bars
+  document.querySelectorAll('.section-group').forEach((group, i) => {
+    const section = SECTIONS[i];
+    const doneInSection = section.units.filter(u => done.has(u.n)).length;
+    const pct = Math.round(doneInSection / section.units.length * 100);
+    const label = group.querySelector('.section-progress span');
+    const bar = group.querySelector('.section-progress-bar > div');
+    if (label) label.textContent = `${doneInSection}/${section.units.length}`;
+    if (bar) bar.style.width = pct + '%';
+  });
+
+  renderContinue();
+}
+
+function renderContinue() {
+  const container = document.getElementById('continueContainer');
+  const done = getDoneUnits();
+  const lastVisit = parseInt(localStorage.getItem(LAST_VISIT_KEY) || '0', 10);
+
+  // Find target unit: last visited, else first not-done, else first
+  let targetN;
+  if (lastVisit && !done.has(lastVisit)) {
+    targetN = lastVisit;
+  } else {
+    // first not-done
+    for (let i = 1; i <= 145; i++) {
+      if (!done.has(i)) { targetN = i; break; }
+    }
+    if (!targetN) targetN = 145;
+  }
+
+  // Find unit info
+  let targetUnit = null;
+  for (const s of SECTIONS) {
+    const found = s.units.find(u => u.n === targetN);
+    if (found) { targetUnit = found; break; }
+  }
+  if (!targetUnit) { container.innerHTML = ''; return; }
+
+  const isNew = done.size === 0;
+  const label = isNew ? "Start here" : "Continue where you left off";
+
+  container.innerHTML = `
+    <div class="continue-card">
+      <div class="continue-icon">${isNew ? '🚀' : '📖'}</div>
+      <div class="continue-body">
+        <div class="continue-label">${label}</div>
+        <h3 class="continue-title">Unit ${targetUnit.n} — ${targetUnit.title}</h3>
+        <p class="continue-meta">${targetUnit.sub || 'Tap to open this unit'}</p>
+      </div>
+      <a class="continue-btn" href="${unitHref(targetUnit.n)}">
+        ${isNew ? 'Get started' : 'Continue'} →
+      </a>
+    </div>
+  `;
+}
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+function setupSearch() {
+  const input = document.getElementById('searchInput');
+  const empty = document.getElementById('emptyState');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let anyVisible = false;
+
+    document.querySelectorAll('.section-group').forEach(group => {
+      const tiles = group.querySelectorAll('.unit-tile');
+      let sectionMatches = 0;
+
+      tiles.forEach(tile => {
+        const t = tile.dataset.title;
+        const s = tile.dataset.sub;
+        const n = tile.dataset.num;
+        const match = !q || t.includes(q) || s.includes(q) || n === q;
+        tile.style.display = match ? '' : 'none';
+        if (match) sectionMatches++;
+      });
+
+      // Hide section if no matches, and open it if searching
+      if (sectionMatches === 0) {
+        group.style.display = 'none';
+      } else {
+        group.style.display = '';
+        anyVisible = true;
+        if (q) group.classList.add('open');
+      }
+    });
+
+    empty.classList.toggle('show', !anyVisible);
+  });
+}
+
+/* ============================================================
+   TRACK LAST VISIT (on tile click, before navigating)
+   ============================================================ */
+function trackVisits() {
+  document.querySelectorAll('.unit-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      const num = parseInt(tile.dataset.num, 10);
+      localStorage.setItem(LAST_VISIT_KEY, String(num));
+    });
+  });
+}
+
+/* ============================================================
+   STREAK (days in a row)
+   ============================================================ */
+function updateStreak() {
+  const today = new Date().toISOString().slice(0, 10);
+  const lastDay = localStorage.getItem('egiu_last_day');
+  let streak = parseInt(localStorage.getItem('egiu_streak') || '0', 10);
+
+  if (lastDay === today) {
+    // already counted today
+  } else if (lastDay === yesterday()) {
+    streak++;
+    localStorage.setItem('egiu_streak', String(streak));
+    localStorage.setItem('egiu_last_day', today);
+  } else {
+    streak = 1;
+    localStorage.setItem('egiu_streak', String(streak));
+    localStorage.setItem('egiu_last_day', today);
+  }
+  document.getElementById('streakCount').textContent = streak;
+}
+
+function yesterday() {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+/* ============================================================
+   BOOT
+   ============================================================ */
+function boot() {
+  renderSections();
+  setupSearch();
+  trackVisits();
+  updateAllProgress();
+  updateStreak();
+}
+
+boot();
+</script>
+
+</body>
+</html>

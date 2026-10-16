@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 40 — if I had known … I wish I had known … | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="40" data-unit-title="if I had known … I wish I had known …" data-next-unit="41">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 40 &bull; if and wish</span>
+  <h1>if I had known … I wish I had known …<span class="sub">Past counterfactual conditionals and past regrets with wish</span></h1>
+  <p class="lede">Master third conditional sentences and learn how to express regrets about past events using had done and wish.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Form third conditional sentences using <em>if + past perfect</em> and <em>would have + past participle</em>.</li>
+<li>Express past regrets using <em>I wish + past perfect</em>.</li>
+<li>Distinguish between hypothetical present situations (Unit 39) and past counterfactuals (Unit 40).</li>
+<li>Identify mixed conditionals linking past causes to present effects.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<div class="card">
+  <h3>A. Third Conditional: if + had ('d) done, would have done</h3>
+  <p>Study this example situation:</p>
+  <div class="example-box">
+    <span class="label">Situation</span>
+    Last month Gary was in hospital for a few days. Rachel didn't know this. A few days ago they met by chance. Rachel said:<br>
+    <strong>&ldquo;If I'd known you were in hospital, I would have gone to visit you.&rdquo;</strong><br>
+    <span class="ex-note">(= I didn't know, so I didn't go to visit you. If I'd known = If I had known)</span>
+  </div>
+
+  <p>We use <strong>if + had ('d) done</strong> to talk about something in the <strong>past</strong> that did not happen:</p>
+  <ul style="margin:8px 0 16px; padding-left:20px;">
+    <li>I didn't see you when you passed me in the street. If I'd <strong>seen</strong> you, I <strong>would have said</strong> hello.</li>
+    <li>They didn't go out last night. They <strong>would have gone</strong> out if they <strong>hadn't been</strong> so tired.</li>
+    <li>If you'd <strong>been looking</strong> where you were going, you <strong>wouldn't have walked</strong> into the wall.</li>
+    <li>The view was wonderful. I <strong>would have taken</strong> some pictures if I'd <strong>had</strong> (= if I had had) a camera with me.</li>
+  </ul>
+
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">Present (Unit 39)</div>
+      <p>I'm not hungry. If I <strong>was</strong> hungry, I <strong>would eat</strong> something. <em>(now)</em></p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">Past (Unit 40)</div>
+      <p>I wasn't hungry. If I <strong>had been</strong> hungry, I <strong>would have eaten</strong> something. <em>(past)</em></p>
+    </div>
+  </div>
+
+  <div class="example-box">
+    <span class="label">Contraction Note</span>
+    The short form <strong>&rsquo;d</strong> can be <em>would</em> or <em>had</em>:<br>
+    If I<strong>&rsquo;d seen</strong> you <em>(= had seen)</em>, I<strong>&rsquo;d have said</strong> hello <em>(= would have said)</em>.
+  </div>
+</div>
+
+<div class="card">
+  <h3>B. I wish + had done for Past Regrets</h3>
+  <p>We use <strong>had done / known / been</strong> etc. in the same way after <strong>wish</strong> to express regret about past actions:</p>
+  <ul style="margin:8px 0 16px; padding-left:20px;">
+    <li>I wish I'd <strong>known</strong> that Gary was ill. I would have gone to see him. <span class="ex-note">(but I didn't know)</span></li>
+    <li>I feel sick. I wish I <strong>hadn't eaten</strong> so much. <span class="ex-note">(I ate too much)</span></li>
+    <li>Do you wish you'd <strong>studied</strong> science instead of languages? <span class="ex-note">(you didn't study science)</span></li>
+  </ul>
+
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">Fact</div>
+      <p>I'm glad I <strong>saw</strong> him. (= I saw him)</p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">Regret</div>
+      <p>I wish I'd <strong>seen</strong> him. (= I didn't see him)</p>
+    </div>
+  </div>
+  <p class="wrong-note">Do not say &lsquo;wish ... would have&rsquo;. Say: <em>I wish it had been warmer.</em> (NOT I wish it would have been)</p>
+</div>
+
+<div class="card">
+  <h3>C. would have &bull; could have &bull; might have</h3>
+  <p>Compare how modal auxiliaries change the meaning in past conditionals:</p>
+  <div class="example-box">
+    <strong>If the weather hadn't been so bad:</strong>
+    <ul style="margin:6px 0 0; padding-left:20px;">
+      <li>we <strong>would have gone</strong> out. <span class="ex-note">(certain result)</span></li>
+      <li>we <strong>could have gone</strong> out. <span class="ex-note">(= we would have been able to go out)</span></li>
+      <li>we <strong>might have gone</strong> out. <span class="ex-note">(= maybe / perhaps we would have gone out)</span></li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<!-- 40.1 -->
+<div class="exercise" data-ex="40.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 40.1</span>
+    <span style="font-size:13px; color:var(--muted);">9 items &bull; Put the verb into the correct form</span>
+  </div>
+  <p class="ex-prompt">Put the verb into the correct form (past perfect, would have done, or would do).</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      I didn't see you. If <input class="fill-input" type="text" value="I'd seen" readonly style="width:100px;"> (I / see) you, <input class="fill-input" type="text" value="I would have said" readonly style="width:160px;"> (I / say) hello.
+    </li>
+    <li class="q-item">
+      Sarah got to the station just in time to catch her train to the airport. If <input class="fill-input" type="text" data-answer="she'd missed|she had missed" placeholder="she'd missed..." style="width:140px;"> (she / miss) the train, <input class="fill-input" type="text" data-answer="she'd have missed|she would have missed" placeholder="she would have missed..." style="width:200px;"> (she / miss) her flight too.
+    </li>
+    <li class="q-item">
+      Thanks for reminding me about Lisa's birthday. <input class="fill-input" type="text" data-answer="I'd have forgotten|I would have forgotten" placeholder="I'd have forgotten..." style="width:180px;"> (I / forget) if <input class="fill-input" type="text" data-answer="you hadn't reminded" placeholder="you hadn't reminded..." style="width:170px;"> (you / not / remind) me.
+    </li>
+    <li class="q-item">
+      I didn't have your email address, so I couldn't contact you. If <input class="fill-input" type="text" data-answer="I'd had|I had had" placeholder="I'd had / I had had..." style="width:140px;"> (I / have) your email address, <input class="fill-input" type="text" data-answer="I'd have sent|I would have sent" placeholder="I'd have sent..." style="width:170px;"> (I / send) you an email.
+    </li>
+    <li class="q-item">
+      Their trip was OK, but <input class="fill-input" type="text" data-answer="they'd have enjoyed|they would have enjoyed" placeholder="they'd have enjoyed..." style="width:200px;"> (they / enjoy) it more if the weather <input class="fill-input" type="text" data-answer="had been" placeholder="had been..." style="width:100px;"> (be) better.
+    </li>
+    <li class="q-item">
+      Sorry we're late. Our taxi got stuck in the traffic. <input class="fill-input" type="text" data-answer="It would have been|It'd have been" placeholder="It would have been..." style="width:180px;"> (it / be) quicker if <input class="fill-input" type="text" data-answer="we'd walked|we had walked" placeholder="we'd walked..." style="width:130px;"> (we / walk).
+    </li>
+    <li class="q-item">
+      Why didn't you tell me about your problem? If <input class="fill-input" type="text" data-answer="you'd told|you had told" placeholder="you'd told..." style="width:130px;"> (you / tell) me, <input class="fill-input" type="text" data-answer="I'd have tried|I would have tried" placeholder="I'd have tried..." style="width:160px;"> (I / try) to help you.
+    </li>
+    <li class="q-item">
+      I'm not tired. If <input class="fill-input" type="text" data-answer="I were|I was" placeholder="I was / I were..." style="width:110px;"> (I / be) tired, I'd go home now.
+    </li>
+    <li class="q-item">
+      I wasn't tired last night. If <input class="fill-input" type="text" data-answer="I'd been|I had been" placeholder="I'd been / I had been..." style="width:140px;"> (I / be) tired, I would have gone home earlier.
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 40.2 -->
+<div class="exercise" data-ex="40.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 40.2</span>
+    <span style="font-size:13px; color:var(--muted);">8 items &bull; Write sentences beginning with If</span>
+  </div>
+  <p class="ex-prompt">For each situation, write a conditional sentence beginning with <strong>If</strong>.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      I wasn't hungry, so I didn't eat anything.<br>
+      <input class="fill-input" type="text" value="If I'd been hungry, I would have eaten something." readonly style="width:430px;">
+    </li>
+    <li class="q-item">
+      The accident happened because the road was icy.<br>
+      <input class="fill-input" type="text" data-answer="If the road hadn't been icy, the accident wouldn't have happened.|If the road hadn't been icy the accident wouldn't have happened." placeholder="If the road hadn't been icy, the accident wouldn't have happened." style="width:480px;">
+    </li>
+    <li class="q-item">
+      I didn't know that you had to get up early, so I didn't wake you up.<br>
+      <input class="fill-input" type="text" data-answer="If I'd known that you had to get up early, I'd have woken you up.|If I had known that you had to get up early, I would have woken you up.|If I'd known that you had to get up early, I would have woken you up.|If I had known you had to get up early, I'd have woken you up." placeholder="If I'd known that you had to get up early, I'd have woken you up." style="width:490px;">
+    </li>
+    <li class="q-item">
+      Unfortunately I lost my phone, so I couldn't call you.<br>
+      <input class="fill-input" type="text" data-answer="If I hadn't lost my phone, I'd have called you.|If I hadn't lost my phone, I would have called you.|If I'd had my phone, I'd have called you.|If I hadn't lost my phone I would have called you." placeholder="If I hadn't lost my phone, I'd have called you." style="width:450px;">
+    </li>
+    <li class="q-item">
+      Karen wasn't injured in the crash, because fortunately she was wearing a seat belt.<br>
+      <input class="fill-input" type="text" data-answer="If Karen hadn't been wearing a seat belt, she'd have been injured.|If Karen hadn't been wearing a seat belt, she would have been injured.|If Karen hadn't been wearing a seat belt, she might have been injured." placeholder="If Karen hadn't been wearing a seat belt, she'd have been injured." style="width:490px;">
+    </li>
+    <li class="q-item">
+      You didn't have any breakfast &ndash; that's why you're hungry now.<br>
+      <input class="fill-input" type="text" data-answer="If you'd had some breakfast, you wouldn't be hungry now.|If you had had some breakfast, you wouldn't be hungry now.|If you'd had breakfast, you wouldn't be hungry now." placeholder="If you'd had breakfast, you wouldn't be hungry now." style="width:470px;">
+    </li>
+    <li class="q-item">
+      I didn't get a taxi because I didn't have enough money.<br>
+      <input class="fill-input" type="text" data-answer="If I'd had enough money, I'd have got a taxi.|If I had had enough money, I would have got a taxi.|If I'd had enough money, I would have taken a taxi." placeholder="If I'd had enough money, I'd have got a taxi." style="width:460px;">
+    </li>
+    <li class="q-item">
+      Dan didn't do well at school, so he couldn't go to university.<br>
+      <input class="fill-input" type="text" data-answer="If Dan had done well at school, he could have gone to university.|If Dan had done better at school, he would have gone to university.|If Dan had done well at school, he would have gone to university." placeholder="If Dan had done well at school, he could have gone to university." style="width:490px;">
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 40.3 -->
+<div class="exercise" data-ex="40.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 40.3</span>
+    <span style="font-size:13px; color:var(--muted);">6 items &bull; Express past regrets with I wish</span>
+  </div>
+  <p class="ex-prompt">Imagine that you are in these situations. For each situation, write a sentence with <strong>I wish</strong>.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      You've eaten too much and now you feel sick.<br>
+      <input class="fill-input" type="text" value="I wish I hadn't eaten so much." readonly style="width:310px;">
+    </li>
+    <li class="q-item">
+      When you were younger, you never learned to play a musical instrument. Now you regret this.<br>
+      <input class="fill-input" type="text" data-answer="I wish I'd learned to play a musical instrument.|I wish I had learned to play a musical instrument.|I wish I had learnt to play a musical instrument.|I wish I'd learnt to play a musical instrument." placeholder="I wish I'd learned to play a musical instrument." style="width:420px;">
+    </li>
+    <li class="q-item">
+      You've painted the gate red. Now you think it doesn't look good. Red was the wrong colour.<br>
+      <input class="fill-input" type="text" data-answer="I wish I hadn't painted it red.|I wish I hadn't painted the gate red.|I wish I had painted it a different colour." placeholder="I wish I hadn't painted it red." style="width:360px;">
+    </li>
+    <li class="q-item">
+      You decided to travel by car, but the journey was long and tiring. Going by train would have been better.<br>
+      <input class="fill-input" type="text" data-answer="I wish we'd gone by train.|I wish we had gone by train.|I wish we hadn't gone by car." placeholder="I wish we'd gone by train." style="width:320px;">
+    </li>
+    <li class="q-item">
+      Last year you went to New York with a friend. You didn't have time to do all the things you wanted to do.<br>
+      <input class="fill-input" type="text" data-answer="I wish we'd had more time.|I wish we had had more time.|I wish we'd had more time to do all the things we wanted to do." placeholder="I wish we'd had more time." style="width:340px;">
+    </li>
+    <li class="q-item">
+      You moved to a new flat a few months ago. Now you don't like your new flat. You think that moving was a bad idea.<br>
+      <input class="fill-input" type="text" data-answer="I wish I hadn't moved.|I wish I hadn't moved to my new flat.|I wish I'd stayed where I was.|I wish I had stayed where I was." placeholder="I wish I hadn't moved." style="width:330px;">
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Exercise 40.1 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>I'd seen ... I would have said</strong> (example)</li>
+      <li><strong>she'd missed / she had missed ... she'd have missed / she would have missed</strong></li>
+      <li><strong>I'd have forgotten / I would have forgotten ... you hadn't reminded</strong></li>
+      <li><strong>I'd had / I had had ... I'd have sent / I would have sent</strong></li>
+      <li><strong>they'd have enjoyed / they would have enjoyed ... had been</strong></li>
+      <li><strong>It would have been / It'd have been ... we'd walked / we had walked</strong></li>
+      <li><strong>you'd told / you had told ... I'd have tried / I would have tried</strong></li>
+      <li><strong>I were / I was</strong> &mdash; present hypothetical: <em>I'd go home now</em>.</li>
+      <li><strong>I'd been / I had been</strong> &mdash; past hypothetical: <em>I would have gone home earlier</em>.</li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 40.2 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>If I'd been hungry, I would have eaten something.</strong> (example)</li>
+      <li><strong>If the road hadn't been icy, the accident wouldn't have happened.</strong></li>
+      <li><strong>If I'd known / If I had known (that you had to get up early), I'd have woken you up.</strong></li>
+      <li><strong>If I hadn't lost my phone, I'd have called you.</strong> (or: <em>...I would / could have called you</em>)</li>
+      <li><strong>If Karen hadn't been wearing a seat belt, she'd have been injured.</strong> (or: <em>...might / could have been injured</em>)</li>
+      <li><strong>If you'd had / If you had had (some) breakfast, you wouldn't be hungry now.</strong> (mixed conditional: past action, present result)</li>
+      <li><strong>If I'd had / If I had had enough money, I'd have got / taken a taxi.</strong></li>
+      <li><strong>If Dan had done well/better at school, he could/would have gone to university.</strong></li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 40.3 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>I wish I hadn't eaten so much.</strong> (example)</li>
+      <li><strong>I wish I'd learned / had learned to play a musical instrument.</strong></li>
+      <li><strong>I wish I hadn't painted it red.</strong> (or: <em>...painted the gate red</em> / <em>...had painted it a different colour</em>)</li>
+      <li><strong>I wish we'd gone / had gone by train.</strong> (or: <em>...wish we hadn't gone by car</em>)</li>
+      <li><strong>I wish we'd had / had had more time.</strong></li>
+      <li><strong>I wish I hadn't moved (to my new flat).</strong> (or: <em>...wish I'd stayed where I was</em>)</li>
+    </ol>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 40</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td>Past condition</td><td>if + past perfect (had done)</td><td>If I had known you were ill, I would have visited you.</td></tr>
+<tr><td>Past result</td><td>would have + past participle</td><td>I would have gone to the party if I hadn't been tired.</td></tr>
+<tr><td>Past regret</td><td>I wish + past perfect (had done)</td><td>I wish I had studied harder. (I didn't study hard)</td></tr>
+<tr><td>Modal past options</td><td>could have (= ability), might have (= possibility)</td><td>If we had left earlier, we could have caught the train.</td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 40 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-039.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 39: if I knew … I wish I knew …</span>
+    </a>
+    <a href="unit-041.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 41: wish</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

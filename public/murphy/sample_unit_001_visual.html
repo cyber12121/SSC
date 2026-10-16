@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 (Interactive Visual Edition) — Present Continuous | English Grammar in Use</title>
+<link rel="stylesheet" href="assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --shadow-lg: 0 10px 30px rgba(30,111,92,0.12);
+    --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; }
+
+  /* Top sticky bar */
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .nav-links { display:flex; gap:16px; font-family:var(--font-sans); font-size:14px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:600; }
+  .nav-links a:hover { color:var(--accent); }
+
+  .progress-wrap { position:sticky; top:49px; z-index:99; height:3px; background:var(--border); }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  /* Hero */
+  .hero { max-width:920px; margin:0 auto; padding:40px 24px 10px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:14px; }
+  .visual-pill { display:inline-block; background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-size:11px; font-weight:700; text-transform:uppercase; padding:4px 10px; border-radius:100px; margin-left:8px; letter-spacing:0.05em; }
+  h1 { font-size:clamp(28px,4.5vw,40px); line-height:1.2; margin:0 0 10px; font-weight:700; }
+  h1 .sub { display:block; font-size:0.55em; color:var(--muted); font-weight:400; margin-top:6px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 20px; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:36px 0; }
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 18px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:21px; margin:28px 0 12px; color:var(--ink); }
+  h4 { font-size:17px; margin:16px 0 8px; color:var(--accent-dark); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:24px 28px; box-shadow:var(--shadow); margin:18px 0; }
+
+  /* Visual Story Scenario */
+  .visual-story-card {
+    display:grid; grid-template-columns: 320px 1fr; gap:24px;
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:20px; box-shadow:var(--shadow-lg); align-items:center; margin:20px 0;
+  }
+  @media (max-width: 720px) { .visual-story-card { grid-template-columns: 1fr; } }
+
+  .scene-canvas {
+    background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 60%, #e2e8f0 60%, #cbd5e1 100%);
+    border-radius: 12px; padding: 20px 10px 10px; position:relative; overflow:hidden;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.06); text-align:center;
+  }
+  .scene-sun {
+    position:absolute; top:12px; right:16px; width:32px; height:32px;
+    background:#fbbf24; border-radius:50%; box-shadow:0 0 16px #fbbf24;
+  }
+  .scene-road {
+    position:relative; width:100%; height:46px; background:#475569;
+    border-radius:4px; display:flex; align-items:center; justify-content:center;
+    margin-top:10px; overflow:hidden;
+  }
+  .road-dashes {
+    width:100%; height:4px; border-top:3px dashed #f8fafc;
+    animation: roadMove 1s linear infinite;
+  }
+  @keyframes roadMove { 0% { transform: translateX(0); } 100% { transform: translateX(-30px); } }
+
+  .car-svg {
+    width: 140px; margin: 0 auto; filter: drop-shadow(0 6px 8px rgba(0,0,0,0.25));
+    animation: carBounce 0.4s ease-in-out infinite alternate;
+  }
+  @keyframes carBounce { from { transform: translateY(0); } to { transform: translateY(-2px); } }
+
+  .thought-bubble {
+    background: #ffffff; border: 2px solid var(--accent); border-radius: 20px;
+    padding: 8px 14px; font-size: 13px; font-weight: 700; color: var(--accent-dark);
+    display: inline-block; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position:relative;
+  }
+  .thought-bubble::after {
+    content:""; position:absolute; bottom:-7px; left:50%; transform:translateX(-50%);
+    border-width:7px 7px 0; border-style:solid; border-color:#ffffff transparent;
+  }
+
+  /* Interactive Timeline Widget */
+  .timeline-widget {
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:20px 24px; margin:24px 0; box-shadow:var(--shadow);
+  }
+  .timeline-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:8px; }
+  .timeline-track {
+    position:relative; height:10px; background:#e2e8f0; border-radius:100px; margin:40px 20px 30px;
+  }
+  .timeline-span {
+    position:absolute; left:25%; width:50%; height:100%;
+    background:linear-gradient(90deg, var(--accent), #3b82f6);
+    border-radius:100px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .timeline-marker {
+    position:absolute; top:-36px; transform:translateX(-50%);
+    font-family:var(--font-sans); font-size:12px; font-weight:700;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .timeline-marker.now {
+    left:50%; top:-42px; background:var(--accent); color:#fff;
+    padding:4px 10px; border-radius:100px; box-shadow:0 4px 10px rgba(30,111,92,0.3);
+  }
+  .timeline-marker.start { left:25%; }
+  .timeline-marker.end { left:75%; }
+  .timeline-action-label {
+    text-align:center; font-family:var(--font-sans); font-size:14px; color:var(--accent-dark);
+    font-weight:600; margin-top:14px;
+  }
+  .toggle-pill-btn {
+    background:var(--accent-light); color:var(--accent-dark); border:1px solid var(--accent);
+    padding:6px 14px; border-radius:100px; font-size:12px; font-weight:700; cursor:pointer;
+  }
+
+  /* Tables & chips */
+  .conj-table, .summary-table { width:100%; border-collapse:collapse; margin:16px 0; font-size:15px; }
+  .conj-table th, .conj-table td, .summary-table th, .summary-table td { padding:10px 14px; text-align:left; border-bottom:1px solid var(--border); }
+  .conj-table th, .summary-table th { font-family:var(--font-sans); font-weight:700; color:var(--accent-dark); background:var(--accent-light); }
+  .verb-bank { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 20px; }
+  .verb-chip {
+    font-family:'SF Mono','Monaco','Consolas',monospace; font-size:14px;
+    background:var(--highlight); color:#7a5c00; padding:5px 12px;
+    border-radius:100px; font-weight:600;
+  }
+  .highlight { background:var(--highlight); padding:1px 6px; border-radius:4px; font-weight:600; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; margin-left:6px; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; margin:28px 0; box-shadow:var(--shadow); }
+  .exercise-header { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .ex-number { font-family:var(--font-sans); font-size:12px; font-weight:700; background:var(--accent); color:#fff; padding:4px 10px; border-radius:6px; letter-spacing:0.05em; }
+  .ex-title { font-family:var(--font-sans); font-weight:600; font-size:16px; color:var(--ink); margin:0; }
+  .ex-instruction { color:var(--muted); font-size:15px; margin:4px 0 20px; }
+
+  /* Exercise 1.1 Visual Picture Cards */
+  .visual-pic-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin:20px 0; }
+  .visual-pic-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform 0.2s, box-shadow 0.2s; }
+  .visual-pic-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+  .visual-pic-scene { height:130px; display:flex; align-items:center; justify-content:center; position:relative; font-size:52px; }
+  .visual-pic-num { position:absolute; top:10px; left:10px; background:rgba(255,255,255,0.9); color:var(--accent-dark); font-weight:800; font-size:12px; padding:3px 8px; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+  .visual-pic-body { padding:16px 18px; line-height:1.8; font-size:16px; }
+
+  /* Exercise 1.2 Matching Grid */
+  .match-grid { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin:20px 0; }
+  .match-col { padding:16px 20px; }
+  .match-col:first-child { border-right:1px solid var(--border); }
+  .match-row { padding:10px 0; font-size:15px; display:flex; gap:10px; align-items:center; border-bottom:1px dashed var(--border); min-height:48px; }
+  .match-row:last-child { border-bottom:none; }
+  .match-num, .match-letter { font-family:var(--font-sans); font-weight:700; color:var(--accent); min-width:18px; font-size:14px; }
+  .match-select { margin-left:auto; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:6px 10px; border:2px solid var(--border); border-radius:8px; background:#fff; color:var(--ink); cursor:pointer; outline:none; transition:border-color 0.2s, background 0.2s; min-width:70px; }
+  .match-select:focus { border-color:var(--accent); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  /* Exercise 1.3 & 1.4 List */
+  ol.ex-list { list-style:none; counter-reset:item; padding:0; margin:0; }
+  ol.ex-list > li { counter-increment:item; padding:14px 0 14px 42px; position:relative; border-bottom:1px dashed var(--border); font-size:16px; }
+  ol.ex-list > li:last-child { border-bottom:none; }
+  ol.ex-list > li::before { content:counter(item); position:absolute; left:0; top:14px; width:28px; height:28px; background:var(--accent-light); color:var(--accent-dark); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-sans); font-size:13px; font-weight:700; }
+
+  /* Inputs & Buttons */
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--accent); background:transparent; padding:2px 6px; min-width:140px; color:var(--accent-dark); font-weight:600; outline:none; transition:border-color 0.2s, background 0.2s; }
+  .fill-input:focus { border-bottom-color:var(--accent-dark); background:#f0f7f4; }
+  .fill-input.correct { border-bottom-color:var(--correct); color:var(--correct); background:var(--correct-bg); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); color:var(--wrong); background:var(--wrong-bg); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .btn-row { display:flex; gap:10px; margin-top:20px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; padding:10px 20px; border-radius:8px; border:none; cursor:pointer; transition:all 0.15s; }
+  .btn-check { background:var(--accent); color:#fff; }
+  .btn-check:hover { background:var(--accent-dark); }
+  .btn-show { background:var(--bg); color:var(--muted); border:1px solid var(--border); }
+  .btn-show:hover { color:var(--ink); border-color:var(--muted); }
+  .btn-reset { background:transparent; color:var(--muted); }
+  .btn-reset:hover { color:var(--wrong); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  /* Reveal Answers Accordion */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:#fafaf7; }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  /* Completion & Nav */
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; box-shadow:var(--shadow-lg); }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+  .unit-nav .nav-disabled { background:#f0efeb; border-color:var(--border); opacity:0.5; cursor:default; display:flex; flex-direction:column; justify-content:center; padding:18px 22px; border-radius:var(--radius); border:1px solid var(--border); }
+  .unit-nav .nav-disabled .nav-label { color:var(--muted); }
+  .unit-nav .nav-disabled .nav-title { color:var(--muted); font-family:var(--font-sans); font-size:14px; }
+
+  @media (max-width: 600px) {
+    .card, .exercise { padding:22px 20px; }
+    .match-grid { grid-template-columns:1fr; }
+    .match-col:first-child { border-right:none; border-bottom:1px solid var(--border); }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body data-unit="1" data-unit-title="Present continuous">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&larr; English Grammar in Use</a>
+    <nav class="nav-links">
+      <a href="#theory">Theory</a>
+      <a href="#exercises">All 4 Exercises</a>
+      <a href="#answers">Answers</a>
+      <a href="#summary">Summary</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 1</span><span class="visual-pill">Interactive Visual Edition ✨</span>
+  <h1>Present Continuous<span class="sub">I am doing</span></h1>
+  <p class="lede">Learn to talk about actions happening now, temporary situations, and ongoing changes with interactive visual scenes, live timelines, and all 4 complete Cambridge exercises.</p>
+</header>
+
+<main>
+
+  <!-- ================= PART A: VISUAL THEORY ================= -->
+  <section id="theory">
+    <h2>Part A — Visual Theory & Scenarios</h2>
+
+    <!-- Visual Story 1: Sarah Driving -->
+    <div class="visual-story-card">
+      <div class="scene-canvas">
+        <div class="scene-sun"></div>
+        <div class="thought-bubble">"I'm driving to work! 🚗"</div>
+        
+        <!-- Animated Car SVG -->
+        <svg class="car-svg" viewBox="0 0 120 60">
+          <rect x="15" y="25" width="90" height="20" rx="6" fill="#1e6f5c" />
+          <path d="M 30 25 L 45 10 L 80 10 L 95 25 Z" fill="#2e7d32" opacity="0.9" />
+          <polygon points="46,13 77,13 77,24 35,24" fill="#e0f2fe" />
+          <circle cx="102" cy="35" r="4" fill="#fef08a" />
+          <circle cx="35" cy="45" r="10" fill="#1f2933" />
+          <circle cx="35" cy="45" r="4" fill="#cbd5e1" />
+          <circle cx="85" cy="45" r="10" fill="#1f2933" />
+          <circle cx="85" cy="45" r="4" fill="#cbd5e1" />
+          <circle cx="58" cy="18" r="4" fill="#fbcfe8" />
+        </svg>
+
+        <div class="scene-road">
+          <div class="road-dashes"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="margin-top:0;font-size:22px;color:var(--accent);">Study this situation:</h3>
+        <p style="font-size:18px;line-height:1.6;">
+          <strong>Sarah is in her car. She is on her way to work.</strong><br>
+          <span style="font-size:20px;color:var(--accent-dark);font-weight:700;">She's driving to work.</span>
+        </p>
+        <p>This means: she is driving <span class="highlight">now</span>, at the time of speaking. <strong>The action is not finished.</strong></p>
+        <div style="background:var(--accent-light);padding:10px 14px;border-radius:8px;font-size:15px;color:var(--accent-dark);font-weight:600;">
+          💡 Formula: <code>am / is / are + -ing</code> (Present Continuous)
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Timeline Widget -->
+    <div class="timeline-widget">
+      <div class="timeline-head">
+        <div>
+          <h4 style="margin:0;font-size:16px;">Interactive Action Timeline</h4>
+          <span style="font-size:13px;color:var(--muted);">Click the toggle to compare in-progress vs finished actions</span>
+        </div>
+        <button class="toggle-pill-btn" onclick="toggleTimelineMode(this)">Switch to: Finished Action</button>
+      </div>
+
+      <div class="timeline-track">
+        <div class="timeline-marker start">Past<br><small style="font-weight:400;color:var(--muted);">Started</small></div>
+        <div class="timeline-span" id="timeSpan"></div>
+        <div class="timeline-marker now" id="timeNow">NOW (Speaking)</div>
+        <div class="timeline-marker end">Future<br><small style="font-weight:400;color:var(--muted);">Finishes</small></div>
+      </div>
+
+      <div class="timeline-action-label" id="timelineCaption">
+        ⏳ <strong>In the middle of doing it:</strong> Sarah started driving before now, is driving right now, and hasn't finished yet.
+      </div>
+    </div>
+
+    <table class="conj-table">
+      <thead><tr><th>Subject</th><th>Auxiliary</th><th>Verb + -ing</th><th>Contraction</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td><code>am</code></td><td>driving</td><td><strong>I'm</strong> driving</td></tr>
+        <tr><td>he / she / it</td><td><code>is</code></td><td>working</td><td><strong>he's / she's / it's</strong> working</td></tr>
+        <tr><td>we / you / they</td><td><code>are</code></td><td>doing</td><td><strong>we're / you're / they're</strong> doing</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Visual Story 2: Steve on the phone -->
+    <div class="card" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+      <div style="font-size:46px;background:var(--accent-light);padding:16px 20px;border-radius:14px;text-align:center;">
+        📖 📱
+      </div>
+      <div style="flex:1;min-width:240px;">
+        <h4 style="margin-top:0;">Action in progress, but not at the exact moment of speaking:</h4>
+        <p>Steve is talking to a friend on the phone. He says: <br>
+        <em>"<strong>I’m reading</strong> a really good book at the moment. It’s about a man who…"</em></p>
+        <p style="font-size:14.5px;color:var(--muted);margin:0;">
+          Steve is on the phone (he is not holding the book open right now). But he has <strong>started</strong> reading it and <strong>hasn't finished</strong> it. He is in the middle of reading it!
+        </p>
+      </div>
+    </div>
+
+    <!-- Part C: Changing situations -->
+    <div class="card">
+      <h4 style="margin-top:0;">Changes that have started to happen:</h4>
+      <p>We often use the present continuous with verbs describing changes or trends:</p>
+      <div class="verb-bank">
+        <span class="verb-chip">getting</span><span class="verb-chip">becoming</span>
+        <span class="verb-chip">changing</span><span class="verb-chip">improving</span>
+        <span class="verb-chip">starting</span><span class="verb-chip">beginning</span>
+        <span class="verb-chip">increasing</span><span class="verb-chip">rising</span>
+        <span class="verb-chip">falling</span><span class="verb-chip">growing</span>
+      </div>
+      <p>• The population of the world <span class="highlight">is increasing</span> very fast. <span class="wrong-note">(not increases)</span></p>
+      <p>• <span class="highlight">Is</span> your English <span class="highlight">getting</span> better? <span class="wrong-note">(not Does your English get better)</span></p>
+    </div>
+  </section>
+
+  <!-- ================= PART B: ALL 4 COMPLETE EXERCISES ================= -->
+  <section id="exercises">
+    <h2>Part B — Exercises (All 4 Complete)</h2>
+
+    <!-- 1.1 -->
+    <div class="exercise" data-ex="1.1">
+      <div class="exercise-header">
+        <span class="ex-number">1.1</span>
+        <p class="ex-title">What's happening in the pictures?</p>
+      </div>
+      <p class="ex-instruction">Look at the visual scenes and choose from these verbs: <strong>cross &bull; hide &bull; scratch &bull; take &bull; tie &bull; wave</strong></p>
+
+      <div class="visual-pic-grid">
+        <div class="visual-pic-card">
+          <div class="visual-pic-scene" style="background:linear-gradient(135deg, #e0f2fe, #bae6fd);">
+            <span class="visual-pic-num">1</span>
+            <span>📸</span>
+          </div>
+          <div class="visual-pic-body">
+            She's <input class="fill-input" data-answer="taking" value="taking" readonly> a picture.
+          </div>
+        </div>
+
+        <div class="visual-pic-card">
+          <div class="visual-pic-scene" style="background:linear-gradient(135deg, #fef3c7, #fde68a);">
+            <span class="visual-pic-num">2</span>
+            <span>👟</span>
+          </div>
+          <div class="visual-pic-body">
+            He <input class="fill-input" data-answer="is tying|he's tying|'s tying" placeholder="…"> a shoelace.
+          </div>
+        </div>
+
+        <div class="visual-pic-card">
+          <div class="visual-pic-scene" style="background:linear-gradient(135deg, #fee2e2, #fecaca);">
+            <span class="visual-pic-num">3</span>
+            <span>🚸</span>
+          </div>
+          <div class="visual-pic-body">
+            They <input class="fill-input" data-answer="are crossing|they're crossing|'re crossing" placeholder="…"> the road.
+          </div>
+        </div>
+
+        <div class="visual-pic-card">
+          <div class="visual-pic-scene" style="background:linear-gradient(135deg, #dcfce7, #bbf7d0);">
+            <span class="visual-pic-num">4</span>
+            <span>💆</span>
+          </div>
+          <div class="visual-pic-body">
+            He <input class="fill-input" data-answer="is scratching|he's scratching|'s scratching" placeholder="…"> his head.
+          </div>
+        </div>
+
+        <div class="visual-pic-card">
+          <div class="visual-pic-scene" style="background:linear-gradient(135deg, #f3e8ff, #e9d5ff);">
+            <span class="visual-pic-num">5</span>
+            <span>🌳</span>
+          </div>
+          <div class="visual-pic-body">
+            She <input class="fill-input" data-answer="is hiding|she's hiding|'s hiding" placeholder="…"> behind a tree.
+          </div>
+        </div>
+
+        <div class="visual-pic-card">
+          <div class="visual-pic-scene" style="background:linear-gradient(135deg, #e0e7ff, #c7d2fe);">
+            <span class="visual-pic-num">6</span>
+            <span>👋</span>
+          </div>
+          <div class="visual-pic-body">
+            They <input class="fill-input" data-answer="are waving|they're waving|'re waving" placeholder="…"> to somebody.
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-check" onclick="checkExercise(this)">Check answers</button>
+        <button class="btn btn-show" onclick="showAnswers(this)">Show answers</button>
+        <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- 1.2 -->
+    <div class="exercise" data-ex="1.2">
+      <div class="exercise-header">
+        <span class="ex-number">1.2</span>
+        <p class="ex-title">Which sentence goes with which?</p>
+      </div>
+      <p class="ex-instruction">Match each sentence on the left with the correct one on the right using the dropdown menus:</p>
+
+      <div class="match-grid">
+        <div class="match-col">
+          <div class="match-row"><span class="match-num">1</span> Please don't make so much noise.
+            <select class="match-select" data-answer="f">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">2</span> We need to leave soon.
+            <select class="match-select" data-answer="e">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">3</span> I don't have anywhere to live right now.
+            <select class="match-select" data-answer="g">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">4</span> I need to eat something soon.
+            <select class="match-select" data-answer="a">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">5</span> They don't need their car any more.
+            <select class="match-select" data-answer="d">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">6</span> Things are not so good at work.
+            <select class="match-select" data-answer="h">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">7</span> It isn't true what they say.
+            <select class="match-select" data-answer="b">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+          <div class="match-row"><span class="match-num">8</span> We're going to get wet.
+            <select class="match-select" data-answer="c">
+              <option value="">—</option>
+              <option>a</option><option>b</option><option>c</option><option>d</option>
+              <option>e</option><option>f</option><option>g</option><option>h</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-col">
+          <div class="match-row"><span class="match-letter">a</span> I'm getting hungry.</div>
+          <div class="match-row"><span class="match-letter">b</span> They're lying.</div>
+          <div class="match-row"><span class="match-letter">c</span> It's starting to rain.</div>
+          <div class="match-row"><span class="match-letter">d</span> They're trying to sell it.</div>
+          <div class="match-row"><span class="match-letter">e</span> It's getting late.</div>
+          <div class="match-row"><span class="match-letter">f</span> I'm trying to work.</div>
+          <div class="match-row"><span class="match-letter">g</span> I'm staying with friends.</div>
+          <div class="match-row"><span class="match-letter">h</span> The company is losing money.</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-check" onclick="checkExercise(this)">Check answers</button>
+        <button class="btn btn-show" onclick="showAnswers(this)">Show answers</button>
+        <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- 1.3 -->
+    <div class="exercise" data-ex="1.3">
+      <div class="exercise-header">
+        <span class="ex-number">1.3</span>
+        <p class="ex-title">Write questions. Use the present continuous.</p>
+      </div>
+      <p class="ex-instruction">Contractions like <em>What's</em> and full forms like <em>What is</em> are both accepted.</p>
+
+      <ol class="ex-list">
+        <li>What's all that noise? <input class="fill-input" data-answer="What's happening?|What is happening?" placeholder="(what / happen?)" style="min-width:240px;"></li>
+        <li>What's the matter? <input class="fill-input" data-answer="Why are you crying?" placeholder="(why / you / cry?)" style="min-width:220px;"></li>
+        <li>Where's your mother? <input class="fill-input" data-answer="Is she working today?" placeholder="(she / work / today?)" style="min-width:220px;"></li>
+        <li>I haven't seen you for ages. <input class="fill-input" data-answer="What are you doing these days?" placeholder="(what / you / do / these days?)" style="min-width:260px;"></li>
+        <li>Amy is a student. <input class="fill-input" data-answer="What is she studying?|What's she studying?" placeholder="(what / she / study?)" style="min-width:220px;"></li>
+        <li>Who are those people? <input class="fill-input" data-answer="What are they doing?" placeholder="(what / they / do?)" style="min-width:220px;"></li>
+        <li>I heard you started a new job. <input class="fill-input" data-answer="Are you enjoying it?" placeholder="(you / enjoy / it?)" style="min-width:220px;"></li>
+        <li>We're not in a hurry. <input class="fill-input" data-answer="Why are you walking so fast?" placeholder="(why / you / walk / so fast?)" style="min-width:260px;"></li>
+      </ol>
+
+      <div class="btn-row">
+        <button class="btn btn-check" onclick="checkExercise(this)">Check answers</button>
+        <button class="btn btn-show" onclick="showAnswers(this)">Show answers</button>
+        <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- 1.4 -->
+    <div class="exercise" data-ex="1.4">
+      <div class="exercise-header">
+        <span class="ex-number">1.4</span>
+        <p class="ex-title">Put the verb into the correct form, positive or negative.</p>
+      </div>
+      <p class="ex-instruction">Use <strong>I'm doing</strong> etc. or <strong>I'm not doing</strong> etc. Both contractions and full forms are accepted.</p>
+
+      <ol class="ex-list">
+        <li>Please don't make so much noise. <input class="fill-input" data-answer="I'm trying|I am trying" value="I'm trying" readonly> to work.</li>
+        <li>Let's go out now. <input class="fill-input" data-answer="It isn't raining|It is not raining|It's not raining" value="It isn't raining" readonly> any more.</li>
+        <li>You can turn off the radio. <input class="fill-input" data-answer="I'm not listening|I am not listening" placeholder="(I / listen)" style="min-width:180px;"> to it.</li>
+        <li>Kate phoned last night. She's on holiday with friends. <input class="fill-input" data-answer="She's having|She is having" placeholder="(She / have)" style="min-width:170px;"> a great time and doesn't want to come back.</li>
+        <li>Andrew started evening classes recently. <input class="fill-input" data-answer="He's learning|He is learning" placeholder="(He / learn)" style="min-width:170px;"> Japanese.</li>
+        <li>Paul and Sarah have had an argument and now <input class="fill-input" data-answer="they aren't speaking|they're not speaking|they are not speaking" placeholder="(they / speak)" style="min-width:210px;"> to one another.</li>
+        <li>The situation is already very bad and now <input class="fill-input" data-answer="it's getting|it is getting" placeholder="(it / get)" style="min-width:160px;"> worse.</li>
+        <li>Tim <input class="fill-input" data-answer="isn't working|is not working|'s not working" placeholder="(work)" style="min-width:170px;"> today. He's taken the day off.</li>
+        <li><input class="fill-input" data-answer="I'm looking|I am looking" placeholder="(I / look)" style="min-width:160px;"> for Sophie. Do you know where she is?</li>
+        <li>The washing machine has been repaired. <input class="fill-input" data-answer="It's working|It is working" placeholder="(It / work)" style="min-width:160px;"> now.</li>
+        <li><input class="fill-input" data-answer="They're building|They are building" placeholder="(They / build)" style="min-width:180px;"> a new hospital. It will be finished next year.</li>
+        <li>Ben is a student, but he's not very happy. <input class="fill-input" data-answer="He's not enjoying|He is not enjoying|He isn't enjoying" placeholder="(He / enjoy)" style="min-width:200px;"> his course.</li>
+        <li><input class="fill-input" data-answer="The weather's changing|The weather is changing" placeholder="(The weather / change)" style="min-width:220px;">. Look at those clouds. I think it's going to rain.</li>
+        <li>Dan has been in the same job for a long time. <input class="fill-input" data-answer="He's starting|He is starting" placeholder="(He / start)" style="min-width:170px;"> to get bored with it.</li>
+      </ol>
+
+      <div class="btn-row">
+        <button class="btn btn-check" onclick="checkExercise(this)">Check answers</button>
+        <button class="btn btn-show" onclick="showAnswers(this)">Show answers</button>
+        <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- ================= PART C: ACCORDION ANSWER KEYS ================= -->
+  <section id="answers">
+    <h2>Answer Key</h2>
+
+    <details class="reveal">
+      <summary>Exercise 1.1 — What's happening in the pictures?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>She's <strong>taking</strong> a picture.</li>
+          <li>He <strong>is tying</strong> a shoelace.</li>
+          <li>They <strong>are crossing</strong> the road.</li>
+          <li>He <strong>is scratching</strong> his head.</li>
+          <li>She <strong>is hiding</strong> behind a tree.</li>
+          <li>They <strong>are waving</strong> to somebody.</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal">
+      <summary>Exercise 1.2 — Which sentence goes with which?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>f</strong> — I'm trying to work.</li>
+          <li><strong>e</strong> — It's getting late.</li>
+          <li><strong>g</strong> — I'm staying with friends.</li>
+          <li><strong>a</strong> — I'm getting hungry.</li>
+          <li><strong>d</strong> — They're trying to sell it.</li>
+          <li><strong>h</strong> — The company is losing money.</li>
+          <li><strong>b</strong> — They're lying.</li>
+          <li><strong>c</strong> — It's starting to rain.</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal">
+      <summary>Exercise 1.3 — Write questions</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>What's happening? / What is happening?</li>
+          <li>Why are you crying?</li>
+          <li>Is she working today?</li>
+          <li>What are you doing these days?</li>
+          <li>What is she studying? / What's she studying?</li>
+          <li>What are they doing?</li>
+          <li>Are you enjoying it?</li>
+          <li>Why are you walking so fast?</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal">
+      <summary>Exercise 1.4 — Positive or negative verb forms</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>I'm trying / I am trying</li>
+          <li>It isn't raining / It is not raining / It's not raining</li>
+          <li>I'm not listening / I am not listening</li>
+          <li>She's having / She is having</li>
+          <li>He's learning / He is learning</li>
+          <li>they aren't speaking / they're not speaking / they are not speaking</li>
+          <li>it's getting / it is getting</li>
+          <li>isn't working / is not working / 's not working</li>
+          <li>I'm looking / I am looking</li>
+          <li>It's working / It is working</li>
+          <li>They're building / They are building</li>
+          <li>He's not enjoying / He is not enjoying / He isn't enjoying</li>
+          <li>The weather's changing / The weather is changing</li>
+          <li>He's starting / He is starting</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= SUMMARY TABLE ================= -->
+  <section id="summary">
+    <h2>Summary Table</h2>
+    <table class="summary-table">
+      <thead><tr><th>Usage Rule</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Action happening now (at the moment of speaking)</td><td>She<em>'s driving</em> to work right now.</td></tr>
+        <tr><td>Action in progress (not at this exact moment)</td><td>I<em>'m reading</em> a good book at the moment.</td></tr>
+        <tr><td>Temporary situations</td><td>I<em>'m living</em> with friends until I find a place.</td></tr>
+        <tr><td>Periods around now (today / this week / this year)</td><td>You<em>'re working</em> hard today.</td></tr>
+        <tr><td>Changes / Trends in progress</td><td>The population <em>is increasing</em> very quickly.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- Completion banner (shown when all 4 exercises are done) -->
+<div class="completion-banner" id="completionBanner">
+  <div class="completion-inner">
+    <span class="trophy">🏆</span>
+    <div class="text">
+      <h3>Unit 1 Complete!</h3>
+      <p>Awesome job! You finished all 4 exercises in Unit 1.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Unit navigation -->
+<div class="unit-nav">
+  <div class="nav-disabled">
+    <div class="nav-label">&larr; Previous</div>
+    <div class="nav-title">This is the first unit</div>
+  </div>
+  <a href="units/01_Present_and_Past/unit-002.html" class="nav-next">
+    <div class="nav-label">Next &rarr;</div>
+    <div class="nav-title">Unit 2 — Present Simple (I do)</div>
+  </a>
+</div>
+
+<script>
+/* Progress bar scroll indicator */
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+});
+
+/* Timeline toggle interaction */
+let isFinishedMode = false;
+function toggleTimelineMode(btn) {
+  const span = document.getElementById('timeSpan');
+  const now = document.getElementById('timeNow');
+  const caption = document.getElementById('timelineCaption');
+  
+  isFinishedMode = !isFinishedMode;
+  if (isFinishedMode) {
+    btn.textContent = 'Switch to: Action in Progress (Continuous)';
+    span.style.left = '10%';
+    span.style.width = '30%';
+    span.style.background = '#94a3b8';
+    now.style.opacity = '0.5';
+    caption.innerHTML = '🏁 <strong>Finished Action (Past Simple):</strong> Sarah drove to work. The driving is completely over before NOW.';
+  } else {
+    btn.textContent = 'Switch to: Finished Action';
+    span.style.left = '25%';
+    span.style.width = '50%';
+    span.style.background = 'linear-gradient(90deg, var(--accent), #3b82f6)';
+    now.style.opacity = '1';
+    caption.innerHTML = '⏳ <strong>In the middle of doing it (Present Continuous):</strong> Sarah started driving before now, is driving right now, and hasn\'t finished yet.';
+  }
+}
+
+/* Contraction normalization */
+const CONTRACTIONS = [
+  [/\bi'm\b/g, 'i am'],
+  [/\byou're\b/g, 'you are'],
+  [/\bwe're\b/g, 'we are'],
+  [/\bthey're\b/g, 'they are'],
+  [/\bhe's\b/g, 'he is'],
+  [/\bshe's\b/g, 'she is'],
+  [/\bit's\b/g, 'it is'],
+  [/\bthat's\b/g, 'that is'],
+  [/\bwhat's\b/g, 'what is'],
+  [/\bwho's\b/g, 'who is'],
+  [/\bwhere's\b/g, 'where is'],
+  [/\bwhen's\b/g, 'when is'],
+  [/\bwhy's\b/g, 'why is'],
+  [/\bhow's\b/g, 'how is'],
+  [/\bthere's\b/g, 'there is'],
+  [/\bhere's\b/g, 'here is'],
+  [/\blet's\b/g, 'let us'],
+  [/\bisn't\b/g, 'is not'],
+  [/\baren't\b/g, 'are not'],
+  [/\bwasn't\b/g, 'was not'],
+  [/\bweren't\b/g, 'were not'],
+  [/\bdon't\b/g, 'do not'],
+  [/\bdoesn't\b/g, 'does not'],
+  [/\bdidn't\b/g, 'did not'],
+  [/\bhaven't\b/g, 'have not'],
+  [/\bhasn't\b/g, 'has not'],
+  [/\bhadn't\b/g, 'had not'],
+  [/\bcan't\b/g, 'can not'],
+  [/\bcannot\b/g, 'can not'],
+  [/\bwon't\b/g, 'will not'],
+  [/\bwouldn't\b/g, 'would not'],
+  [/\bshan't\b/g, 'shall not'],
+  [/\bshouldn't\b/g, 'should not'],
+  [/\bmustn't\b/g, 'must not'],
+  [/\bneedn't\b/g, 'need not'],
+  [/\b'd\b/g, ' would'],
+  [/\b'll\b/g, ' will'],
+  [/\b've\b/g, ' have'],
+  [/\b're\b/g, ' are'],
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}«»…]/g, ' ');
+  s = s.replace(/'/g, '');
+  s = s.replace(/\s+/g, ' ').trim();
+  return s;
+}
+
+/* Completion tracking for all 4 exercises */
+const exerciseStatus = {};
+function updateExerciseStatus(exNumber, isComplete) {
+  if (isComplete) exerciseStatus[exNumber] = true;
+  const exercises = document.querySelectorAll('.exercise');
+  const total = exercises.length;
+  const done = Object.keys(exerciseStatus).length;
+  if (done === total && total > 0) {
+    document.getElementById('completionBanner').classList.add('show');
+  }
+}
+
+/* Universal Check function for all exercises */
+function checkExercise(btn) {
+  const exercise = btn.closest('.exercise');
+  const inputs = exercise.querySelectorAll('.fill-input[data-answer]');
+  const selects = exercise.querySelectorAll('.match-select[data-answer]');
+
+  let correct = 0, total = 0;
+
+  inputs.forEach(input => {
+    total++;
+    const userAns = normalize(input.value);
+    const accepted = input.dataset.answer.split('|').map(a => normalize(a));
+    const card = input.closest('.visual-pic-card');
+
+    if (accepted.includes(userAns)) {
+      input.classList.add('correct'); input.classList.remove('wrong');
+      if (card) { card.style.borderColor = 'var(--correct)'; card.style.boxShadow = '0 0 14px rgba(46,125,50,0.2)'; }
+      correct++;
+    } else {
+      input.classList.add('wrong'); input.classList.remove('correct');
+      if (card) { card.style.borderColor = 'var(--wrong)'; card.style.boxShadow = '0 0 14px rgba(198,40,40,0.2)'; }
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const userAns = normalize(sel.value);
+    const accepted = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (accepted.includes(userAns)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  const feedback = exercise.querySelector('.feedback');
+  feedback.classList.add('show');
+  if (correct === total && total > 0) {
+    feedback.classList.remove('bad'); feedback.classList.add('good');
+    feedback.textContent = `Perfect! ${correct}/${total} correct. ✓`;
+    updateExerciseStatus(exercise.dataset.ex, true);
+  } else {
+    feedback.classList.remove('good'); feedback.classList.add('bad');
+    feedback.textContent = `${correct}/${total} correct. Review the highlighted fields.`;
+  }
+}
+
+/* Universal Show Answers function */
+function showAnswers(btn) {
+  const exercise = btn.closest('.exercise');
+
+  exercise.querySelectorAll('.fill-input[data-answer]').forEach(input => {
+    input.value = input.dataset.answer.split('|')[0];
+    input.classList.add('correct'); input.classList.remove('wrong');
+    const card = input.closest('.visual-pic-card');
+    if (card) { card.style.borderColor = 'var(--correct)'; }
+  });
+
+  exercise.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+
+  const feedback = exercise.querySelector('.feedback');
+  feedback.classList.add('show', 'good'); feedback.classList.remove('bad');
+  feedback.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(exercise.dataset.ex, true);
+}
+
+/* Universal Reset function */
+function resetExercise(btn) {
+  const exercise = btn.closest('.exercise');
+
+  exercise.querySelectorAll('.fill-input[data-answer]').forEach(input => {
+    if (!input.hasAttribute('data-locked')) {
+      input.value = '';
+    } else {
+      input.value = input.dataset.locked;
+    }
+    input.classList.remove('correct', 'wrong');
+    const card = input.closest('.visual-pic-card');
+    if (card) { card.style.borderColor = 'var(--border)'; card.style.boxShadow = 'var(--shadow)'; }
+  });
+
+  exercise.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+
+  const feedback = exercise.querySelector('.feedback');
+  feedback.classList.remove('show', 'good', 'bad');
+}
+
+/* Lock initial readonly inputs so Reset preserves them */
+document.querySelectorAll('.fill-input[readonly]').forEach(inp => {
+  inp.dataset.locked = inp.value;
+});
+
+/* Reset field styling on user typing / selection */
+document.querySelectorAll('.fill-input, .match-select').forEach(el => {
+  const evt = el.tagName === 'SELECT' ? 'change' : 'input';
+  el.addEventListener(evt, () => {
+    el.classList.remove('correct', 'wrong');
+    const card = el.closest('.visual-pic-card');
+    if (card) { card.style.borderColor = 'var(--border)'; card.style.boxShadow = 'var(--shadow)'; }
+  });
+});
+</script>
+
+</body>
+</html>

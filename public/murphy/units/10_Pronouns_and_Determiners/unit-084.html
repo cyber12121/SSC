@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 84 — there … and it … | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="84" data-unit-title="there … and it …" data-next-unit="85">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 84 &bull; Pronouns and determiners</span>
+  <h1>there … and it …<span class="sub">there is/was, there will be vs it is/was (existence vs specific reference, weather, time, distance)</span></h1>
+  <p class="lede">We use 'there' when introducing the existence of something for the first time. We use 'it' for a specific thing, situation, distance, time, and weather.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Understand when to introduce new entities with <strong>there …</strong> versus referring to specific items with <strong>it …</strong>.</li>
+<li>Use modal structures with <em>there</em>: <em>there will be, there must be, there used to be, there's sure to be</em>.</li>
+<li>Use <strong>it</strong> as a dummy subject for adjectives + infinitives: <em>It's dangerous to walk in the road</em>.</li>
+<li>Use <strong>it</strong> for distance, time, and weather: <em>It's 10 miles; It's raining; It was windy</em> vs <em>There was a cold wind</em>.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<section>
+  <h2>Part A: There … vs It … (First Mention vs Specific Reference)</h2>
+  <div class="card">
+    <p>Study this example:</p>
+    <div class="example-box">
+      <strong>&lsquo;There's a new restaurant in Hill Street.&rsquo;</strong><br>
+      <strong>&lsquo;Yes, I know. I've heard it's very good.&rsquo;</strong>
+    </div>
+    <p>We use <strong>there …</strong> when we talk about something for the first time, to state that it exists:</p>
+    <div class="example-box">
+      <strong>There's</strong> a new restaurant in Hill Street.<br>
+      I'm sorry I'm late. <strong>There was</strong> a lot of traffic. <span class="wrong-note">(not It was a lot of traffic)</span><br>
+      Things are very expensive now. <strong>There has been</strong> a big rise in the cost of living.
+    </div>
+    <p><strong>It</strong> = a specific thing, place, fact, or situation previously mentioned:</p>
+    <div class="example-box">
+      We went to the new restaurant. <strong>It's</strong> very good. <em>(It = the restaurant)</em><br>
+      I wasn't expecting her to call me. <strong>It</strong> was a complete surprise. <em>(It = that she called)</em>
+    </div>
+    <div class="compare-cols">
+      <div class="compare-col simple">
+        <div class="compare-head">there (existence)</div>
+        <p>I like this town. <strong>There's</strong> a lot to do here.<br>
+        The house is empty. <strong>There's</strong> nobody living there. <em>(there = in that place)</em></p>
+      </div>
+      <div class="compare-col continuous">
+        <div class="compare-head">it (specific place / fact)</div>
+        <p><strong>It's</strong> an interesting place.<br>
+        I like this house. <strong>It's</strong> very spacious.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part B: Modal and Aspectual Structures with There</h2>
+  <div class="card">
+    <p>You can use <em>there</em> with modals, semi-modals, and aspectual forms:</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0;">
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there will be</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there must be</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there might be</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there must have been</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there should have been</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there would have been</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there is sure to be</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there is bound to be</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there is going to be</strong></div>
+      <div style="background:var(--bg);padding:10px 14px;border-radius:8px;border:1px solid var(--border);"><strong>there used to be</strong></div>
+    </div>
+    <div class="example-box">
+      &lsquo;Is there a flight to Rome tonight?&rsquo; &lsquo;<strong>There might be</strong>. I'll check online.&rsquo;<br>
+      If people drove more carefully, <strong>there wouldn't be</strong> so many accidents.<br>
+      I could hear music coming from the house. <strong>There must have been</strong> somebody at home.<br>
+      <strong>There's bound to be</strong> a cafe somewhere near here. <em>(= There's sure to be …)</em>
+    </div>
+    <p>Compare <strong>there</strong> and <strong>it</strong> with modal expressions:</p>
+    <div class="compare-cols">
+      <div class="compare-col simple">
+        <p>They live on a busy road. <strong>There must be</strong> a lot of noise from the traffic.<br>
+        <strong>There used to be</strong> a cinema here, but it closed.<br>
+        <strong>There's sure to be</strong> a flight to Rome tonight.</p>
+      </div>
+      <div class="compare-col continuous">
+        <p>They live on a busy road. <strong>It must be</strong> very noisy. <em>(It = living there)</em><br>
+        That building is now a shop. <strong>It used to be</strong> a cinema. <em>(It = the building)</em><br>
+        There's a flight tonight, but <strong>it's sure to be</strong> full. <em>(it = the flight)</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part C: It + Adjective + to … &amp; Distance, Time, Weather</h2>
+  <div class="card">
+    <p>We use <strong>it</strong> as preparatory subject:</p>
+    <div class="example-box">
+      <strong>It's dangerous to walk</strong> in the road. <span class="wrong-note">(not To walk in the road is dangerous)</span><br>
+      <strong>It didn't take us long</strong> to get here.<br>
+      <strong>It's a shame (that)</strong> you can't come to the party.<br>
+      <strong>It's not worth</strong> waiting any longer.
+    </div>
+    <p>We also use <strong>it</strong> to talk about distance, time, and weather:</p>
+    <div class="example-box">
+      How far is <strong>it</strong> from here to the airport?<br>
+      <strong>It's</strong> a long time since we last saw you.<br>
+      <strong>It's</strong> 10 o'clock. / <strong>It's</strong> Monday today.
+    </div>
+    <p>Compare weather descriptions with <em>it</em> and <em>there</em>:</p>
+    <div class="example-box">
+      <strong>It was windy.</strong> &nbsp;<em>but</em>&nbsp; <strong>There was a cold wind.</strong><br>
+      <strong>It's raining.</strong> &nbsp;<em>but</em>&nbsp; <strong>There's a lot of rain.</strong>
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="84.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 84.1</span>
+    <span class="ex-prompt">Put in there is/was or it is/was (affirmative, negative, or question).</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">The journey took a long time. <input class="fill-input" style="min-width:110px" readonly value="There was"> a lot of traffic.</li>
+    <li class="q-item">What's the new restaurant like? <input class="fill-input" style="min-width:90px" readonly value="Is it"> good?</li>
+    <li class="q-item"><input class="fill-input" style="min-width:120px" data-answer="There's|There is"> something wrong with the washing machine. It's not working properly.</li>
+    <li class="q-item">I wanted to visit the museum yesterday, but <input class="fill-input" style="min-width:120px" data-answer="there wasn't"> enough time.</li>
+    <li class="q-item">What's that new building over there? <input class="fill-input" style="min-width:90px" data-answer="Is it"> a hotel?</li>
+    <li class="q-item">How can we get across the river? <input class="fill-input" style="min-width:100px" data-answer="Is there"> a bridge?</li>
+    <li class="q-item">A few days ago <input class="fill-input" style="min-width:110px" data-answer="there was"> a big storm, which caused a lot of damage.</li>
+    <li class="q-item">I can't find my phone. <input class="fill-input" style="min-width:120px" data-answer="It isn't|It's not"> in my bag &ndash; I just looked.</li>
+    <li class="q-item"><input class="fill-input" style="min-width:130px" data-answer="There wasn't"> anything interesting on TV, so I turned it off.</li>
+    <li class="q-item"><input class="fill-input" style="min-width:100px" data-answer="It's|It is"> often very cold here, but <input class="fill-input" style="min-width:110px" data-answer="there isn't"> much snow.</li>
+    <li class="q-item">I couldn't see anything. <input class="fill-input" style="min-width:100px" data-answer="It was"> completely dark.</li>
+    <li class="q-item">&lsquo;<input class="fill-input" style="min-width:100px" data-answer="Is there"> a bookshop near here?&rsquo; &lsquo;Yes, <input class="fill-input" style="min-width:110px" data-answer="there's|there is"> one in Hudson Street.&rsquo;</li>
+    <li class="q-item"><input class="fill-input" style="min-width:100px" data-answer="It's|It is"> difficult to get a job right now. <input class="fill-input" style="min-width:120px" data-answer="There's|There is"> a lot of unemployment.</li>
+    <li class="q-item">When we got to the cinema, <input class="fill-input" style="min-width:110px" data-answer="there was"> a queue outside. <input class="fill-input" style="min-width:100px" data-answer="It was"> a very long queue, so we decided not to wait.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="84.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 84.2</span>
+    <span class="ex-prompt">Read the first sentence and then write a sentence beginning There … .</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">The roads were busy yesterday. &rarr; <input class="fill-input" style="min-width:260px" readonly value="There was a lot of traffic."></li>
+    <li class="q-item">This soup is very salty. &rarr; There <input class="fill-input" style="min-width:320px" data-answer="'s a lot of salt in the soup|is a lot of salt in the soup|'s too much salt in the soup|is too much salt in the soup|is a lot of salt|'s a lot of salt|is too much salt|'s too much salt"> in the soup.</li>
+    <li class="q-item">The box was empty. &rarr; <input class="fill-input" style="min-width:340px" data-answer="There was nothing in the box.|There wasn't anything in the box."></li>
+    <li class="q-item">About 50 people came to the meeting. &rarr; <input class="fill-input" style="min-width:340px" data-answer="There were about 50 people at the meeting."></li>
+    <li class="q-item">The film is very violent. &rarr; <input class="fill-input" style="min-width:340px" data-answer="There's a lot of violence in the film.|There is a lot of violence in the film."></li>
+    <li class="q-item">I like this town &ndash; it's lively. &rarr; <input class="fill-input" style="min-width:340px" data-answer="There is a lot to do in this town.|There's a lot to do in this town.|There's plenty to do in this town.|There is plenty to do in this town.|There are a lot of places to go in this town.|There's a lot happening in this town."></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="84.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 84.3</span>
+    <span class="ex-prompt">Complete the sentences. Use there would be, there used to be etc. Choose from:</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-size:15px;line-height:1.8;">
+    won't &bull; may &bull; would &bull; wouldn't &bull; should &bull; used to &bull; is going to
+  </div>
+  <ul class="q-list">
+    <li class="q-item">If people drove more carefully, <input class="fill-input" style="min-width:150px" readonly value="there would be"> fewer accidents.</li>
+    <li class="q-item">&lsquo;Do we have any eggs?&rsquo; &lsquo;I'm not sure. <input class="fill-input" style="min-width:160px" data-answer="There may be"> some in the fridge.&rsquo;</li>
+    <li class="q-item">I think everything will be OK. <input class="fill-input" style="min-width:160px" data-answer="There won't be"> any problems.</li>
+    <li class="q-item">Look at those clouds. <input class="fill-input" style="min-width:180px" data-answer="There's going to be|There is going to be"> a storm. I'm sure of it.</li>
+    <li class="q-item">There isn't a school in the village. <input class="fill-input" style="min-width:160px" data-answer="There used to be"> one, but it closed a few years ago.</li>
+    <li class="q-item">People drive too fast on this road. I think <input class="fill-input" style="min-width:160px" data-answer="there should be"> a speed limit.</li>
+    <li class="q-item">If people weren't so aggressive, <input class="fill-input" style="min-width:160px" data-answer="there wouldn't be"> any wars.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="84.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 84.4</span>
+    <span class="ex-prompt">Are these sentences OK? Change it to there where necessary.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">They live on a busy road. It must be a lot of noise. &rarr; <input class="fill-input" style="min-width:280px" readonly value="There must be a lot of noise."></li>
+    <li class="q-item">It's a long way from my house to the nearest shop. &rarr; <input class="fill-input" style="min-width:120px" readonly value="OK"></li>
+    <li class="q-item">After the lecture it will be an opportunity to ask questions. &rarr; <input class="fill-input" style="min-width:320px" data-answer="there will be an opportunity|There will be an opportunity|After the lecture there will be an opportunity to ask questions."></li>
+    <li class="q-item">Why was she so unfriendly? It must have been a reason. &rarr; <input class="fill-input" style="min-width:320px" data-answer="There must have been a reason.|there must have been a reason"></li>
+    <li class="q-item">I like where I live, but it would be nicer to live by the sea. &rarr; <input class="fill-input" style="min-width:120px" data-answer="OK"></li>
+    <li class="q-item">How long is it since you last went to the theatre? &rarr; <input class="fill-input" style="min-width:120px" data-answer="OK"></li>
+    <li class="q-item">It used to be a lot of tourists here, but not many come now. &rarr; <input class="fill-input" style="min-width:340px" data-answer="There used to be a lot of tourists|There used to be a lot of tourists here"></li>
+    <li class="q-item">My phone won't work here. It's no signal. &rarr; <input class="fill-input" style="min-width:240px" data-answer="There's no signal.|There is no signal."></li>
+    <li class="q-item">It was Ken's birthday yesterday. We had a party. &rarr; <input class="fill-input" style="min-width:120px" data-answer="OK"></li>
+    <li class="q-item">We won't have any problem parking the car. It's sure to be a car park somewhere. &rarr; <input class="fill-input" style="min-width:340px" data-answer="There's sure to be a car park somewhere.|There is sure to be a car park somewhere.|There's sure to be a car park|There is sure to be a car park"></li>
+    <li class="q-item">I'm sorry about what happened. It was my fault. &rarr; <input class="fill-input" style="min-width:120px" data-answer="OK"></li>
+    <li class="q-item">I was told that it would be somebody to meet me at the station, but it wasn't anybody. &rarr; <input class="fill-input" style="min-width:360px" data-answer="there would be somebody … but there wasn't anybody.|there would be somebody ... but there wasn't anybody|there would be somebody|there wasn't anybody"></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Key to Exercises 84.1 &ndash; 84.4</summary>
+  <div class="reveal-content">
+    <h4>Exercise 84.1</h4>
+    <p>3 There's / There is &nbsp;|&nbsp; 4 there wasn't &nbsp;|&nbsp; 5 Is it &nbsp;|&nbsp; 6 Is there &nbsp;|&nbsp; 7 there was &nbsp;|&nbsp; 8 It isn't / It's not &nbsp;|&nbsp; 9 There wasn't &nbsp;|&nbsp; 10 It's / It is … there isn't &nbsp;|&nbsp; 11 It was &nbsp;|&nbsp; 12 Is there … there's / there is &nbsp;|&nbsp; 13 It's / It is … There's / There is &nbsp;|&nbsp; 14 there was … It was</p>
+    <h4>Exercise 84.2</h4>
+    <p>2 There's / There is a lot of salt in the soup. (or … too much salt …) &nbsp;|&nbsp; 3 There was nothing in the box. &nbsp;|&nbsp; 4 There were about 50 people at the meeting. &nbsp;|&nbsp; 5 There's / There is a lot of violence in the film. &nbsp;|&nbsp; 6 There is a lot to do in this town. / … plenty to do … / … a lot happening … (or There are a lot of places to go …)</p>
+    <h4>Exercise 84.3</h4>
+    <p>2 There may be &nbsp;|&nbsp; 3 There won't be &nbsp;|&nbsp; 4 There's / There is going to be &nbsp;|&nbsp; 5 There used to be &nbsp;|&nbsp; 6 there should be &nbsp;|&nbsp; 7 there wouldn't be</p>
+    <h4>Exercise 84.4</h4>
+    <p>3 there will be an opportunity &nbsp;|&nbsp; 4 There must have been a reason. &nbsp;|&nbsp; 5 OK &nbsp;|&nbsp; 6 OK &nbsp;|&nbsp; 7 There used to be a lot of tourists &nbsp;|&nbsp; 8 There's no signal. &nbsp;|&nbsp; 9 OK &nbsp;|&nbsp; 10 There's sure to be a car park somewhere. &nbsp;|&nbsp; 11 OK &nbsp;|&nbsp; 12 there would be somebody … but there wasn't anybody.</p>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 84</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>Existential There</strong></td><td>Introduces a fact or entity into the conversation for the first time</td><td><em>There's a new restaurant in Hill Street. There was a lot of traffic.</em></td></tr>
+<tr><td><strong>Referential It</strong></td><td>Refers back to a specific entity, statement, or situation already mentioned</td><td><em>We went to the restaurant. It was very good.</em></td></tr>
+<tr><td><strong>Modal Structures</strong></td><td><code>there + modal + be / have been</code> for deduction, possibility, past habit</td><td><em>There must have been somebody at home. There used to be a cinema.</em></td></tr>
+<tr><td><strong>Dummy It</strong></td><td>Used for time, distance, weather, and <em>it + adj + to-infinitive</em></td><td><em>How far is it? It was windy. It's dangerous to walk in the road.</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 84 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-083.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 83: a friend of mine / my own house / on my own / by myself</span>
+    </a>
+    <a href="unit-085.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 85: some and any</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

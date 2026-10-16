@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 94 — Relative clauses 3: whose/whom/where | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="94" data-unit-title="Relative clauses 3: whose/whom/where" data-next-unit="95">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 94 &bull; Relative clauses</span>
+  <h1>Relative clauses 3: whose/whom/where<span class="sub">Possessive whose, formal whom with prepositions, and spatial where</span></h1>
+  <p class="lede">We use whose for possession instead of his/her/their. We use whom in formal contexts and after prepositions, and where for places.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Master <strong>whose</strong> for possession (replacing <em>his/her/their</em>: <em>a widow whose husband is dead</em>).</li>
+<li>Use <strong>whom</strong> in formal English and after prepositions (<em>with whom, to whom</em>).</li>
+<li>Use <strong>where</strong> to refer to places (<em>the hotel where we stayed</em>).</li>
+<li>Use <em>the day / the time / the year / the reason</em> (with <em>that / why</em> or no pronoun).</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<section>
+  <h2>Part A: Whose (Possession)</h2>
+  <div class="card">
+    <p>We use <strong>whose</strong> in relative clauses instead of <em>his / her / their</em>:</p>
+    <div class="example-box">
+      We helped some people <strong>whose car had broken down</strong>.<br>
+      <small style="color:var(--muted);">(their car had broken down)</small><br>
+      A widow is a woman <strong>whose husband is dead</strong>.<br>
+      <small style="color:var(--muted);">(her husband is dead)</small><br>
+      What’s the name of the man <strong>whose phone you borrowed</strong>?
+    </div>
+    <div class="compare-cols" style="margin:14px 0 0;">
+      <div>I met a man <strong>who knows</strong> you.<br><small style="color:var(--muted);">(he knows you)</small></div>
+      <div>I met a man <strong>whose sister knows</strong> you.<br><small style="color:var(--muted);">(his sister knows you)</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part B: Whom (Formal / After Prepositions)</h2>
+  <div class="card">
+    <p><strong>Whom</strong> is possible instead of <em>who</em> when it is the <strong>object</strong> of the verb (formal English):</p>
+    <div class="example-box">
+      The woman <strong>whom I wanted to see</strong> was away on holiday.<br>
+      <small style="color:var(--muted);">(In informal spoken English we usually say: <em>The woman I wanted to see...</em> or <em>who I wanted to see...</em>)</small>
+    </div>
+    <p>We also use <em>whom</em> directly after prepositions: <strong>to whom &bull; with whom &bull; for whom &bull; about whom</strong>:</p>
+    <div class="example-box">
+      The people <strong>with whom I work</strong> are very nice. <small style="color:var(--muted);">(more formal)</small><br>
+      The people <strong>I work with</strong> are very nice. <small style="color:var(--muted);">(everyday English)</small>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part C: Where (Places)</h2>
+  <div class="card">
+    <p>We use <strong>where</strong> in a relative clause to talk about a place:</p>
+    <div class="example-box">
+      The restaurant <strong>where we had dinner</strong> was near the airport.<br>
+      A cemetery is a place <strong>where people are buried</strong>.<br>
+      I live in a friendly village <strong>where everybody knows everybody else</strong>.
+    </div>
+    <p><em>Compare:</em> <strong>the hotel where we stayed</strong> &nbsp;|&nbsp; <strong>the hotel (that) we stayed at</strong>.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Part D: The Day / The Time / The Reason</h2>
+  <div class="card">
+    <p>We say <strong>the day / the year / the time</strong> (that) something happened:</p>
+    <div class="example-box">
+      Do you remember the day <strong>(that) we first met</strong>?<br>
+      2009 was the year <strong>(that) Amanda got married</strong>.
+    </div>
+    <p>We say <strong>the reason (why / that)</strong> something happened:</p>
+    <div class="example-box">
+      The reason <strong>(why / that) I’m calling you</strong> is to ask for advice.
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="94.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 94.1</span>
+    <span class="ex-prompt">Complete the sentences using who or whose.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I met somebody <input class="fill-input" style="min-width:320px" readonly value="whose mother writes detective stories">.</li>
+    <li class="q-item">I met a man <input class="fill-input" style="min-width:320px" data-answer="whose wife is an English teacher">.</li>
+    <li class="q-item">I met a woman <input class="fill-input" style="min-width:320px" data-answer="who owns a restaurant">.</li>
+    <li class="q-item">I met somebody <input class="fill-input" style="min-width:320px" data-answer="whose ambition is to climb Everest|whose ambition is to climb Mount Everest">.</li>
+    <li class="q-item">I met a couple <input class="fill-input" style="min-width:320px" data-answer="who have just got married">.</li>
+    <li class="q-item">I met somebody <input class="fill-input" style="min-width:320px" data-answer="whose parents used to work in a circus">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="94.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 94.2</span>
+    <span class="ex-prompt">For each situation write a sentence with whom (more formal) and without whom (less formal).</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">
+      You met a friend. You hadn't seen him for years.<br>
+      <em>more formal:</em> <input class="fill-input" style="min-width:320px" readonly value="I met a friend whom I hadn't seen for years."><br>
+      <em>less formal:</em> <input class="fill-input" style="min-width:320px" readonly value="I met a friend I hadn't seen for years.">
+    </li>
+    <li class="q-item">
+      You needed a lawyer. A friend of yours recommended one.<br>
+      <em>more formal:</em> I went to see a lawyer <input class="fill-input" style="min-width:320px" data-answer="whom a friend of mine recommended.|whom a friend of mine had recommended.">.<br>
+      <em>less formal:</em> I went to see a lawyer <input class="fill-input" style="min-width:320px" data-answer="a friend of mine recommended.|a friend of mine had recommended.">.
+    </li>
+    <li class="q-item">
+      You called your bank with a problem. You spoke to somebody, but he wasn't very helpful.<br>
+      <em>more formal:</em> The person <input class="fill-input" style="min-width:320px" data-answer="to whom I spoke"> wasn't very helpful.<br>
+      <em>less formal:</em> The person <input class="fill-input" style="min-width:320px" data-answer="I spoke to"> wasn't very helpful.
+    </li>
+    <li class="q-item">
+      Tom was in love with a woman, but she wasn't in love with Tom.<br>
+      <em>more formal:</em> The woman <input class="fill-input" style="min-width:320px" data-answer="with whom Tom was in love"> wasn't in love with him.<br>
+      <em>less formal:</em> The woman <input class="fill-input" style="min-width:320px" data-answer="Tom was in love with"> wasn't in love with him.
+    </li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="94.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 94.3</span>
+    <span class="ex-prompt">Complete the sentences using who, whom, whose, or where.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">We helped some people <input class="fill-input" style="min-width:80px" readonly value="whose"> car had broken down.</li>
+    <li class="q-item">A cemetery is a place <input class="fill-input" style="min-width:80px" data-answer="where"> people are buried.</li>
+    <li class="q-item">A pacifist is a person <input class="fill-input" style="min-width:80px" data-answer="who"> believes that all wars are wrong.</li>
+    <li class="q-item">An orphan is a child <input class="fill-input" style="min-width:80px" data-answer="whose"> parents are dead.</li>
+    <li class="q-item">What's the name of the hotel <input class="fill-input" style="min-width:80px" data-answer="where"> your parents are staying?</li>
+    <li class="q-item">This school is only for children <input class="fill-input" style="min-width:80px" data-answer="whose"> first language is not English.</li>
+    <li class="q-item">The person from <input class="fill-input" style="min-width:80px" data-answer="whom"> I bought my car is a friend of my father's.</li>
+    <li class="q-item">I live in a friendly village <input class="fill-input" style="min-width:80px" data-answer="where"> everybody knows everybody else.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="94.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 94.4</span>
+    <span class="ex-prompt">Complete these sentences using your own ideas / sample answers.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I can't meet you on Friday. That's the day <input class="fill-input" style="min-width:240px" readonly value="I'm going away">.</li>
+    <li class="q-item">The reason <input class="fill-input" style="min-width:240px" data-answer="I left my job|why I left my job|that I left my job"> was that the salary was too low.</li>
+    <li class="q-item">I'll never forget the time <input class="fill-input" style="min-width:260px" data-answer="I got stuck in a lift|we first met|I visited Paris">.</li>
+    <li class="q-item"><input class="fill-input" style="min-width:100px" data-answer="2009|2015|2020"> was the year <input class="fill-input" style="min-width:200px" data-answer="Amanda got married|I graduated|we moved house">.</li>
+    <li class="q-item">The reason <input class="fill-input" style="min-width:240px" data-answer="they don't have a car|why they don't have a car"> is that neither of them can drive.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<div class="reveal">
+  <div class="reveal-head" onclick="toggleReveal(this)"><span>Key to Exercises 94.1 &ndash; 94.4</span><span class="reveal-arrow">&blacktriangledown;</span></div>
+  <div class="reveal-body">
+    <h4>Exercise 94.1</h4>
+    <p>2 whose wife is an English teacher &nbsp;|&nbsp; 3 who owns a restaurant &nbsp;|&nbsp; 4 whose ambition is to climb Everest &nbsp;|&nbsp; 5 who have just got married &nbsp;|&nbsp; 6 whose parents used to work in a circus</p>
+    <h4>Exercise 94.2</h4>
+    <p>2 <em>more formal:</em> I went to see a lawyer whom a friend of mine (had) recommended.<br>
+       &nbsp;&nbsp;<em>less formal:</em> I went to see a lawyer a friend of mine (had) recommended.<br>
+       3 <em>more formal:</em> The person to whom I spoke wasn't very helpful.<br>
+       &nbsp;&nbsp;<em>less formal:</em> The person I spoke to wasn't very helpful.<br>
+       4 <em>more formal:</em> The woman with whom Tom was in love wasn't in love with him.<br>
+       &nbsp;&nbsp;<em>less formal:</em> The woman Tom was in love with wasn't in love with him.</p>
+    <h4>Exercise 94.3</h4>
+    <p>2 where &nbsp;|&nbsp; 3 who &nbsp;|&nbsp; 4 whose &nbsp;|&nbsp; 5 where &nbsp;|&nbsp; 6 whose &nbsp;|&nbsp; 7 whom &nbsp;|&nbsp; 8 where</p>
+    <h4>Exercise 94.4 (Example answers)</h4>
+    <p>2 The reason I left my job was that the salary was too low.<br>
+       3 I'll never forget the time I got stuck in a lift.<br>
+       4 2009 was the year Amanda got married.<br>
+       5 The reason they don't have a car is that neither of them can drive.</p>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 94</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>whose</strong></td><td>Replaces possessives <em>his / her / their</em></td><td><em>someone whose car broke down</em></td></tr>
+<tr><td><strong>whom</strong></td><td>Formal object form or directly after prepositions</td><td><em>the person to whom I spoke</em> (formal) vs <em>the person I spoke to</em></td></tr>
+<tr><td><strong>where</strong></td><td>Refers to places</td><td><em>the hotel where we stayed</em></td></tr>
+<tr><td><strong>the day / reason</strong></td><td>Can be followed by <em>that / why</em> or zero pronoun</td><td><em>the day we met, the reason I called</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 94 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-093.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 93: Relative clauses 2: with and without who/that/which</span>
+    </a>
+    <a href="unit-095.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 95: Relative clauses 4: extra information clauses (1)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

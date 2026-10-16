@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 &#8212; Present Continuous and Present Simple 1 | English Grammar in Use</title>
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:'Georgia','Charter','Cambria',serif; background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  .topbar-inner { max-width:900px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-links { display:flex; gap:20px; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+
+  .hero { max-width:900px; margin:0 auto; padding:60px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:20px; }
+  h1 { font-size:clamp(30px,5vw,44px); line-height:1.15; margin:0 0 16px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.5em; color:var(--muted); font-weight:400; margin-top:10px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:640px; margin:0; }
+
+  main { max-width:900px; margin:0 auto; padding:20px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:21px; margin:32px 0 12px; letter-spacing:-0.01em; }
+  h4 { font-family:'Helvetica Neue',Arial,sans-serif; font-size:15px; font-weight:700; margin:24px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:18px 22px; border-radius:0 var(--radius) var(--radius) 0; margin:20px 0; font-size:16px; }
+  .example-box .label { font-family:'Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:8px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+  code { font-family:'SF Mono','Monaco','Consolas',monospace; font-size:14px; background:var(--accent-light); color:var(--accent-dark); padding:2px 7px; border-radius:5px; font-weight:600; }
+
+  /* Two-column compare layout */
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; box-shadow:var(--shadow); }
+  .compare-col.cont-col { border-top:4px solid var(--accent); }
+  .compare-col.simp-col { border-top:4px solid #2c5f8a; }
+  .compare-col h4 { margin-top:0; }
+  .compare-col h4.cont-h { color:var(--accent); }
+  .compare-col h4.simp-h { color:#2c5f8a; }
+  .compare-col p { font-size:15px; margin-bottom:10px; }
+  .compare-col p:last-child { margin-bottom:0; }
+
+  /* Timeline illustration */
+  .timeline-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0; }
+  .timeline-box { background:#fafaf7; border:1px solid var(--border); border-radius:10px; padding:16px; text-align:center; }
+  .timeline-label { font-family:'Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; display:block; }
+  .timeline-bar { display:flex; align-items:center; justify-content:center; gap:6px; font-size:13px; color:var(--muted); font-family:'Helvetica Neue',Arial,sans-serif; }
+  .timeline-dot { width:10px; height:10px; border-radius:50%; background:var(--accent); display:inline-block; }
+  .timeline-line { height:2px; width:40px; background:var(--border); }
+  .timeline-verb { font-family:'SF Mono','Monaco','Consolas',monospace; font-size:13px; color:var(--accent-dark); font-weight:700; background:var(--accent-light); padding:3px 8px; border-radius:5px; margin-top:8px; display:inline-block; }
+
+  .conj-table, .summary-table { width:100%; border-collapse:collapse; margin:20px 0; font-family:'Helvetica Neue',Arial,sans-serif; font-size:15px; background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); }
+  .conj-table th, .summary-table th { background:var(--accent); color:#fff; text-align:left; padding:14px 20px; font-weight:600; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
+  .conj-table td, .summary-table td { padding:14px 20px; border-bottom:1px solid var(--border); vertical-align:top; }
+  .conj-table tr:last-child td, .summary-table tr:last-child td { border-bottom:none; }
+  .conj-table tr:nth-child(even) td, .summary-table tr:nth-child(even) td { background:#fafaf7; }
+  .summary-table em { font-style:normal; color:var(--accent-dark); font-weight:600; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; margin:28px 0; box-shadow:var(--shadow); }
+  .exercise-header { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .ex-number { font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; background:var(--accent); color:#fff; padding:4px 10px; border-radius:6px; letter-spacing:0.05em; }
+  .ex-title { font-family:'Helvetica Neue',Arial,sans-serif; font-weight:600; font-size:15px; color:var(--ink); margin:0; }
+  .ex-instruction { color:var(--muted); font-size:15px; margin:4px 0 20px; }
+
+  ol.ex-list { list-style:none; counter-reset:item; padding:0; margin:0; }
+  ol.ex-list > li { counter-increment:item; padding:14px 0 14px 42px; position:relative; border-bottom:1px dashed var(--border); font-size:16px; line-height:1.6; }
+  ol.ex-list > li:last-child { border-bottom:none; }
+  ol.ex-list > li::before { content:counter(item); position:absolute; left:0; top:14px; width:28px; height:28px; background:var(--accent-light); color:var(--accent-dark); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:700; }
+
+  /* a/b sub-items */
+  .ab-block { margin:4px 0; }
+  .ab-label { font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:13px; color:var(--accent); display:inline-block; width:18px; }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--accent); background:transparent; padding:2px 6px; min-width:160px; color:var(--accent-dark); font-weight:600; outline:none; transition:border-color 0.2s,background 0.2s; }
+  .fill-input:focus { border-bottom-color:var(--accent-dark); background:#f0f7f4; }
+  .fill-input.correct { border-bottom-color:var(--correct); color:var(--correct); background:var(--correct-bg); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); color:var(--wrong); background:var(--wrong-bg); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .btn-row { display:flex; gap:10px; margin-top:20px; flex-wrap:wrap; }
+  .check-btn { font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:600; letter-spacing:0.05em; background:var(--accent); color:#fff; border:none; padding:10px 22px; border-radius:8px; cursor:pointer; transition:background 0.2s,transform 0.1s; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .check-btn:active { transform:scale(0.97); }
+  .show-btn { font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:600; background:transparent; color:var(--accent); border:1px solid var(--accent); padding:10px 22px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:600; background:transparent; color:var(--muted); border:1px solid var(--border); padding:10px 22px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:#fafaf7; }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:900px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:'Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:'Helvetica Neue',Arial,sans-serif; font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:900px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; color:var(--muted); background:#fafaf7; border:1px solid var(--border); border-radius:8px; padding:10px 16px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:600px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 20px; }
+    .compare-cols,.timeline-grid { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body data-unit="3" data-unit-title="Present continuous and present simple 1">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <nav class="nav-links">
+      <a href="#theory">Theory</a>
+      <a href="#exercises">Exercises</a>
+      <a href="#answers">Answers</a>
+      <a href="#summary">Summary</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 3</span>
+  <h1>Present Continuous and Present Simple 1<span class="sub">I am doing &amp; I do</span></h1>
+  <p class="lede">Compare the present continuous and present simple — when to use each, and what &#8220;I&#8217;m always doing&#8221; really means.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Learning Objectives</h2>
+    <ul class="objectives">
+      <li>Use continuous for things happening <em>at or around</em> the time of speaking</li>
+      <li>Use simple for things in general or things that happen repeatedly</li>
+      <li>Distinguish temporary situations (continuous) from permanent ones (simple)</li>
+      <li>Understand &#8220;I always do&#8221; vs &#8220;I&#8217;m always doing&#8221; and the difference in meaning</li>
+    </ul>
+  </section>
+
+  <!-- ======= THEORY ======= -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+
+    <h3>Compare</h3>
+
+    <!-- Timeline visual -->
+    <div class="timeline-grid">
+      <div class="timeline-box">
+        <span class="timeline-label">Present Continuous</span>
+        <div class="timeline-bar">
+          <span>past</span>
+          <span class="timeline-line"></span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+          <span>future</span>
+        </div>
+        <span class="timeline-verb">I am doing</span>
+      </div>
+      <div class="timeline-box">
+        <span class="timeline-label">Present Simple</span>
+        <div class="timeline-bar">
+          <span>past</span>
+          <span class="timeline-line"></span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+          <span>future</span>
+        </div>
+        <span class="timeline-verb" style="background:#e8f0fe;color:#1a47a0;">I do</span>
+      </div>
+    </div>
+
+    <div class="compare-cols">
+      <div class="compare-col cont-col">
+        <h4 class="cont-h">Present Continuous (I am doing)</h4>
+        <p>We use the continuous for things <strong>happening at or around the time of speaking</strong>. The action is not complete.</p>
+        <p>The water <span class="highlight">is boiling</span>. Be careful.</p>
+        <p>Listen to those people. What language <span class="highlight">are they speaking</span>?</p>
+        <p>Let&#8217;s go out. It <span class="highlight">isn&#8217;t raining</span> now.</p>
+        <p>&#8216;I&#8217;m busy.&#8217; &#8216;What <span class="highlight">are you doing</span>?&#8217;</p>
+        <p><span class="highlight">I&#8217;m getting</span> hungry. Let&#8217;s go and eat.</p>
+        <p>Kate wants to work in Italy, so <span class="highlight">she&#8217;s learning</span> Italian.</p>
+        <p>The population of the world <span class="highlight">is increasing</span> very fast.</p>
+      </div>
+      <div class="compare-col simp-col">
+        <h4 class="simp-h">Present Simple (I do)</h4>
+        <p>We use the simple for things <strong>in general</strong> or things that <strong>happen repeatedly</strong>.</p>
+        <p>Water <span class="highlight">boils</span> at 100 degrees Celsius.</p>
+        <p>Excuse me, <span class="highlight">do you speak</span> English?</p>
+        <p>It <span class="highlight">doesn&#8217;t rain</span> very much in summer.</p>
+        <p>What <span class="highlight">do you usually do</span> at weekends?</p>
+        <p>I always <span class="highlight">get</span> hungry in the afternoon.</p>
+        <p>Most people <span class="highlight">learn</span> to swim when they are children.</p>
+        <p>Every day the population of the world <span class="highlight">increases</span> by about 200,000 people.</p>
+      </div>
+    </div>
+
+    <div class="cross-ref">
+      See <a href="unit-001.html">Unit 1</a> for more information about the present continuous.
+      See <a href="unit-002.html">Unit 2</a> for more information about the present simple.
+    </div>
+
+    <h3>Temporary vs. Permanent</h3>
+
+    <div class="compare-cols">
+      <div class="compare-col cont-col">
+        <h4 class="cont-h">Continuous &#8212; temporary situations</h4>
+        <p>We use the continuous for <strong>temporary situations</strong> (things that continue for a short time):</p>
+        <p><span class="highlight">I&#8217;m living</span> with some friends until I find a place of my own.</p>
+        <p>a: <span class="highlight">You&#8217;re working</span> hard today.<br>b: Yes, I have a lot to do.</p>
+      </div>
+      <div class="compare-col simp-col">
+        <h4 class="simp-h">Simple &#8212; permanent situations</h4>
+        <p>We use the simple for <strong>permanent situations</strong> (things that continue for a long time):</p>
+        <p>My parents <span class="highlight">live</span> in London. They <span class="highlight">have lived</span> there all their lives.</p>
+        <p>Joe isn&#8217;t lazy. He <span class="highlight">works</span> hard most of the time.</p>
+      </div>
+    </div>
+
+    <!-- SECTION B -->
+    <h3>B &nbsp;&nbsp; I always do and I&#8217;m always doing</h3>
+
+    <div class="card">
+      <h4>I always do something = I do it every time:</h4>
+      <p><span class="highlight">I always go</span> to work by car. <span class="wrong-note">(not I&#8217;m always going)</span></p>
+    </div>
+
+    <div class="card">
+      <h4>I&#8217;m always doing something = I do it too often, or more often than normal:</h4>
+      <p>I&#8217;ve lost my keys again. <span class="highlight">I&#8217;m always losing</span> them. <span class="wrong-note">(= I lose them too often, more often than normal)</span></p>
+      <p>Paul is never satisfied. <span class="highlight">He&#8217;s always complaining</span>. <span class="wrong-note">(= he complains too much)</span></p>
+      <p>You&#8217;re always looking at your phone. Don&#8217;t you have anything else to do?</p>
+    </div>
+
+    <div class="cross-ref">
+      Present continuous and simple 2 &#8594; <a href="unit-004.html">Unit 4</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+      Present tenses for the future &#8594; <a href="../02_Future/unit-019.html">Unit 19</a>
+    </div>
+  </section>
+
+  <!-- ======= EXERCISES ======= -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+
+    <!-- ===== 3.1 ===== -->
+    <div class="exercise" data-ex="3.1">
+      <div class="exercise-header">
+        <span class="ex-number">3.1</span>
+        <p class="ex-title">Are the underlined verbs OK? Correct them where necessary.</p>
+      </div>
+      <p class="ex-instruction">If the underlined verb form is correct write <strong>OK</strong>. If it is wrong, write the correct verb form.</p>
+
+      <ol class="ex-list">
+        <li>Water <u>boils</u> at 100 degrees Celsius. &rarr; <input class="fill-input" data-answer="OK" placeholder="OK or correct form"></li>
+        <li>How often <u>are you going</u> to the cinema? &rarr; <input class="fill-input" data-answer="do you go" placeholder="OK or correct form"></li>
+        <li>Ben <u>tries</u> to find a job, but he hasn't had any luck yet. &rarr; <input class="fill-input" data-answer="is trying" placeholder="OK or correct form"></li>
+        <li>Martina <u>is phoning</u> her mother every day. &rarr; <input class="fill-input" data-answer="phones" placeholder="OK or correct form"></li>
+        <li>The moon <u>goes</u> round the earth in about 27 days. &rarr; <input class="fill-input" data-answer="OK" placeholder="OK or correct form"></li>
+        <li>Can you hear those people? What <u>do they talk</u> about? &rarr; <input class="fill-input" data-answer="are they talking" placeholder="OK or correct form"></li>
+        <li>What <u>do you do</u> in your spare time? &rarr; <input class="fill-input" data-answer="OK" placeholder="OK or correct form"></li>
+        <li>Sarah is a vegetarian. She <u>doesn't eat</u> meat. &rarr; <input class="fill-input" data-answer="OK" placeholder="OK or correct form"></li>
+        <li>I must go now. It <u>gets</u> late. &rarr; <input class="fill-input" data-answer="is getting" placeholder="OK or correct form"></li>
+        <li>&#8216;Come on! It&#8217;s time to leave.&#8217; &#8216;OK, I <u>come</u>.&#8217; &rarr; <input class="fill-input" data-answer="I'm coming|I am coming" placeholder="OK or correct form"></li>
+        <li>Paul is never late. He&#8217;s <u>always starting</u> work on time. &rarr; <input class="fill-input" data-answer="always starts" placeholder="OK or correct form"></li>
+        <li>They don&#8217;t get on well. They&#8217;re <u>always arguing</u>. &rarr; <input class="fill-input" data-answer="OK" placeholder="OK or correct form"></li>
+      </ol>
+
+      <div class="btn-row">
+        <button class="check-btn" onclick="checkExercise(this)">Check answers</button>
+        <button class="show-btn" onclick="showAnswers(this)">Show answers</button>
+        <button class="reset-btn" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- ===== 3.2 ===== -->
+    <div class="exercise" data-ex="3.2">
+      <div class="exercise-header">
+        <span class="ex-number">3.2</span>
+        <p class="ex-title">Put the verb into the correct form, present continuous or present simple.</p>
+      </div>
+      <p class="ex-instruction">Each question has an <strong>a</strong> and a <strong>b</strong> sentence. The verb hint is in brackets.</p>
+
+      <ol class="ex-list">
+        <li>
+          <div class="ab-block"><span class="ab-label">a</span> <input class="fill-input" data-answer="I usually get" value="I usually get" readonly> (I / usually / get) hungry in the afternoon.</div>
+          <div class="ab-block"><span class="ab-label">b</span> <input class="fill-input" data-answer="I'm getting|I am getting" value="I'm getting" readonly> (I / get) hungry. Let&#8217;s go and eat something.</div>
+        </li>
+        <li>
+          <div class="ab-block"><span class="ab-label">a</span> &#8216;<input class="fill-input" data-answer="Are you listening" placeholder="(you / listen)"> to the radio?&#8217; &#8216;No, you can turn it off.&#8217;</div>
+          <div class="ab-block"><span class="ab-label">b</span> &#8216;<input class="fill-input" data-answer="Do you listen" placeholder="(you / listen)"> to the radio a lot?&#8217; &#8216;No, not very often.&#8217;</div>
+        </li>
+        <li>
+          <div class="ab-block"><span class="ab-label">a</span> The River Nile <input class="fill-input" data-answer="flows" placeholder="(flow)"> into the Mediterranean.</div>
+          <div class="ab-block"><span class="ab-label">b</span> The river <input class="fill-input" data-answer="is flowing" placeholder="(flow)"> very fast today &#8211; much faster than usual.</div>
+        </li>
+        <li>
+          <div class="ab-block"><span class="ab-label">a</span> I&#8217;m not very active. <input class="fill-input" data-answer="I don't do|I do not do" placeholder="(I / not / do)"> any sport.</div>
+          <div class="ab-block"><span class="ab-label">b</span> What <input class="fill-input" data-answer="do you usually do" placeholder="(you / usually / do)"> at weekends?</div>
+        </li>
+        <li>
+          <div class="ab-block"><span class="ab-label">a</span> Rachel is in New York right now. <input class="fill-input" data-answer="She's staying|She is staying" placeholder="(She / stay)"> at the Park Hotel.</div>
+          <div class="ab-block"><span class="ab-label">b</span> <input class="fill-input" data-answer="She always stays" placeholder="(She / always / stay)"> there when she&#8217;s in New York.</div>
+        </li>
+      </ol>
+
+      <div class="btn-row">
+        <button class="check-btn" onclick="checkExercise(this)">Check answers</button>
+        <button class="show-btn" onclick="showAnswers(this)">Show answers</button>
+        <button class="reset-btn" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- ===== 3.3 ===== -->
+    <div class="exercise" data-ex="3.3">
+      <div class="exercise-header">
+        <span class="ex-number">3.3</span>
+        <p class="ex-title">Put the verb into the correct form, present continuous or present simple.</p>
+      </div>
+      <p class="ex-instruction">The verb hint is in brackets. Decide which tense to use.</p>
+
+      <ol class="ex-list">
+        <li>Why are all these people here? <input class="fill-input" data-answer="What's happening|What is happening" value="What's happening" readonly> (What / happen)?</li>
+        <li>Julia is good at languages. <input class="fill-input" data-answer="She speaks" placeholder="(She / speak)"> four languages very well.</li>
+        <li>Are you ready yet? <input class="fill-input" data-answer="Everybody is waiting|Everybody's waiting" placeholder="(Everybody / wait)"> for you.</li>
+        <li>I&#8217;ve never heard this word. How <input class="fill-input" data-answer="do you pronounce" placeholder="(you / pronounce)"> it?</li>
+        <li>Kate <input class="fill-input" data-answer="isn't working|is not working" placeholder="(not / work)"> this week. She&#8217;s on holiday.</li>
+        <li>I think my English <input class="fill-input" data-answer="is improving" placeholder="(improve)"> slowly. It&#8217;s better than it was.</li>
+        <li>Nicola <input class="fill-input" data-answer="lives" placeholder="(live)"> in Manchester. She has never lived anywhere else.</li>
+        <li>Can we stop walking soon? <input class="fill-input" data-answer="I'm starting|I am starting" placeholder="(I / start)"> to get tired.</li>
+        <li>Sam and Tina are in Madrid right now. <input class="fill-input" data-answer="They're visiting|They are visiting" placeholder="(They / visit)"> a friend of theirs.</li>
+        <li>&#8216;What <input class="fill-input" data-answer="does your father do" placeholder="(your father / do)">?&#8217; &#8216;He&#8217;s an architect.&#8217;</li>
+        <li>It took me an hour to get to work this morning. Most days <input class="fill-input" data-answer="it doesn't take|it does not take" placeholder="(it / not / take)"> so long.</li>
+        <li><input class="fill-input" data-answer="I'm learning|I am learning" placeholder="(I / learn)"> to drive. My driving test is next month. My father <input class="fill-input" data-answer="is teaching" placeholder="(teach)"> me.</li>
+      </ol>
+
+      <div class="btn-row">
+        <button class="check-btn" onclick="checkExercise(this)">Check answers</button>
+        <button class="show-btn" onclick="showAnswers(this)">Show answers</button>
+        <button class="reset-btn" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+    <!-- ===== 3.4 ===== -->
+    <div class="exercise" data-ex="3.4">
+      <div class="exercise-header">
+        <span class="ex-number">3.4</span>
+        <p class="ex-title">Finish B&#8217;s sentences. Use <em>always&#8209;ing</em>.</p>
+      </div>
+      <p class="ex-instruction">Complete B&#8217;s response using <strong>always + -ing</strong> to show the action happens too often.</p>
+
+      <ol class="ex-list">
+        <li>
+          <div><strong>A:</strong> I&#8217;ve lost my keys again.</div>
+          <div><strong>B:</strong> Not again! <input class="fill-input" data-answer="You're always losing your keys|You are always losing your keys" value="You're always losing your keys" readonly style="min-width:280px">.</div>
+        </li>
+        <li>
+          <div><strong>A:</strong> The car has broken down again.</div>
+          <div><strong>B:</strong> That car is useless. It <input class="fill-input" data-answer="is always breaking down" placeholder="…" style="min-width:220px">.</div>
+        </li>
+        <li>
+          <div><strong>A:</strong> Look! You&#8217;ve made the same mistake again.</div>
+          <div><strong>B:</strong> Oh no, not again! I <input class="fill-input" data-answer="am always making the same mistake|'m always making the same mistake" placeholder="…" style="min-width:280px">.</div>
+        </li>
+        <li>
+          <div><strong>A:</strong> Oh, I&#8217;ve left my phone at home again.</div>
+          <div><strong>B:</strong> Typical! <input class="fill-input" data-answer="You're always leaving your phone at home|You are always leaving your phone at home" placeholder="…" style="min-width:300px">.</div>
+        </li>
+      </ol>
+
+      <div class="btn-row">
+        <button class="check-btn" onclick="checkExercise(this)">Check answers</button>
+        <button class="show-btn" onclick="showAnswers(this)">Show answers</button>
+        <button class="reset-btn" onclick="resetExercise(this)">Reset</button>
+      </div>
+      <div class="feedback"></div>
+    </div>
+
+  </section>
+
+  <!-- ======= ANSWERS ======= -->
+  <section id="answers">
+    <h2>Answers</h2>
+
+    <details class="reveal">
+      <summary>Exercise 3.1 &#8212; Correct the underlined verbs</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>OK</strong></li>
+          <li><strong>do you go</strong></li>
+          <li><strong>is trying</strong></li>
+          <li><strong>phones</strong></li>
+          <li><strong>OK</strong></li>
+          <li><strong>are they talking</strong></li>
+          <li><strong>OK</strong></li>
+          <li><strong>OK</strong></li>
+          <li><strong>is getting</strong></li>
+          <li><strong>I&#8217;m coming</strong></li>
+          <li><strong>always starts</strong></li>
+          <li><strong>OK</strong></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal">
+      <summary>Exercise 3.2 &#8212; Present continuous or present simple (a/b pairs)</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>a) I usually get &nbsp; b) I&#8217;m getting <em>(example &#8212; shown)</em></li>
+          <li>a) <strong>Are you listening</strong> &nbsp; b) <strong>Do you listen</strong></li>
+          <li>a) <strong>flows</strong> &nbsp; b) <strong>is flowing</strong></li>
+          <li>a) <strong>I don&#8217;t do</strong> &nbsp; b) <strong>do you usually do</strong></li>
+          <li>a) <strong>She&#8217;s staying</strong> &nbsp; b) <strong>She always stays</strong></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal">
+      <summary>Exercise 3.3 &#8212; Present continuous or present simple</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>What&#8217;s happening <em>(shown)</em></li>
+          <li><strong>She speaks</strong></li>
+          <li><strong>Everybody is waiting</strong></li>
+          <li><strong>do you pronounce</strong></li>
+          <li><strong>isn&#8217;t working</strong></li>
+          <li><strong>is improving</strong></li>
+          <li><strong>lives</strong></li>
+          <li><strong>I&#8217;m starting</strong></li>
+          <li><strong>They&#8217;re visiting</strong></li>
+          <li><strong>does your father do</strong></li>
+          <li><strong>it doesn&#8217;t take</strong></li>
+          <li><strong>I&#8217;m learning</strong> / <strong>is teaching</strong></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal">
+      <summary>Exercise 3.4 &#8212; always&#8209;ing completions</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>You&#8217;re always losing your keys <em>(shown)</em></li>
+          <li><strong>It&#8217;s always breaking down</strong></li>
+          <li><strong>I&#8217;m always making the same mistake</strong></li>
+          <li><strong>You&#8217;re always leaving your phone at home</strong></li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ======= SUMMARY ======= -->
+  <section id="summary">
+    <h2>Summary</h2>
+    <table class="summary-table">
+      <thead><tr><th>Situation</th><th>Tense</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Happening now / around now</td><td>Continuous</td><td>The water <em>is boiling</em>. Be careful.</td></tr>
+        <tr><td>In general / repeatedly</td><td>Simple</td><td>Water <em>boils</em> at 100&#176;C.</td></tr>
+        <tr><td>Temporary situation</td><td>Continuous</td><td>I <em>&#8217;m living</em> with friends until I find a place.</td></tr>
+        <tr><td>Permanent situation</td><td>Simple</td><td>My parents <em>live</em> in London.</td></tr>
+        <tr><td>Every time (routine)</td><td>Simple</td><td>I <em>always go</em> to work by car.</td></tr>
+        <tr><td>Too often / annoyingly often</td><td>Continuous + always</td><td>I <em>&#8217;m always losing</em> my keys.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<div class="completion-banner" id="completionBanner">
+  <div class="completion-inner">
+    <span class="trophy">&#127942;</span>
+    <div class="text">
+      <h3>Unit 3 complete!</h3>
+      <p>You finished all 4 exercises. Well done.</p>
+    </div>
+  </div>
+</div>
+
+<div class="unit-nav">
+  <a href="unit-002.html">
+    <div class="nav-label">&#8592; Previous</div>
+    <div class="nav-title">Unit 2 &#8212; Present simple (I do)</div>
+  </a>
+  <a href="unit-004.html" class="nav-next">
+    <div class="nav-label">Next &#8594;</div>
+    <div class="nav-title">Unit 4 &#8212; Present continuous and present simple 2</div>
+  </a>
+</div>
+
+<script>
+const UNIT_NUMBER = parseInt(document.body.dataset.unit, 10) || 3;
+const KEY_DONE = 'egiu_done_units';
+const KEY_LAST = 'egiu_last_unit';
+
+function getDoneUnits() { try { return new Set(JSON.parse(localStorage.getItem(KEY_DONE)||'[]')); } catch { return new Set(); } }
+function saveDoneUnits(s) { localStorage.setItem(KEY_DONE, JSON.stringify([...s])); }
+function markUnitDone() { const d=getDoneUnits(); if(!d.has(UNIT_NUMBER)){d.add(UNIT_NUMBER);saveDoneUnits(d);} }
+localStorage.setItem(KEY_LAST, String(UNIT_NUMBER));
+
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  document.getElementById('progressBar').style.width = (h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+});
+
+const CONTRACTIONS = [
+  [/\bi'm\b/g,'i am'],[/\byou're\b/g,'you are'],[/\bwe're\b/g,'we are'],
+  [/\bthey're\b/g,'they are'],[/\bhe's\b/g,'he is'],[/\bshe's\b/g,'she is'],
+  [/\bit's\b/g,'it is'],[/\bthere's\b/g,'there is'],[/\blet's\b/g,'let us'],
+  [/\bisn't\b/g,'is not'],[/\baren't\b/g,'are not'],[/\bwasn't\b/g,'was not'],
+  [/\bweren't\b/g,'were not'],[/\bdon't\b/g,'do not'],[/\bdoesn't\b/g,'does not'],
+  [/\bdidn't\b/g,'did not'],[/\bhaven't\b/g,'have not'],[/\bhasn't\b/g,'has not'],
+  [/\bhadn't\b/g,'had not'],[/\bcan't\b/g,'can not'],[/\bcannot\b/g,'can not'],
+  [/\bwon't\b/g,'will not'],[/\bwouldn't\b/g,'would not'],[/\bshouldn't\b/g,'should not'],
+  [/\bmustn't\b/g,'must not'],[/\bneedn't\b/g,'need not'],
+  [/\b'd\b/g,' would'],[/\b'll\b/g,' will'],[/\b've\b/g,' have'],[/\b're\b/g,' are'],
+];
+function normalize(str) {
+  if(!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g,"'");
+  CONTRACTIONS.forEach(([re,rep])=>{ s=s.replace(re,rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g,' ');
+  s = s.replace(/'/g,'');
+  return s.replace(/\s+/g,' ').trim();
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(n, ok) { if(ok) exerciseStatus[n]=true; checkAll(); }
+function checkAll() {
+  const exs = document.querySelectorAll('.exercise');
+  if(Object.keys(exerciseStatus).length===exs.length && exs.length>0){
+    markUnitDone();
+    document.getElementById('completionBanner').classList.add('show');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct=0, total=0;
+  inputs.forEach(inp => {
+    if(inp.readOnly && !inp.dataset.checkReadonly) { return; } // skip locked examples unless flagged
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a=>normalize(a));
+    if(ok.includes(user)){ inp.classList.add('correct'); inp.classList.remove('wrong'); correct++; }
+    else { inp.classList.add('wrong'); inp.classList.remove('correct'); }
+  });
+  selects.forEach(sel => {
+    total++;
+    const user=normalize(sel.value);
+    const ok=sel.dataset.answer.split('|').map(a=>normalize(a));
+    if(ok.includes(user)){ sel.classList.add('correct'); sel.classList.remove('wrong'); correct++; }
+    else { sel.classList.add('wrong'); sel.classList.remove('correct'); }
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if(correct===total && total>0){
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! '+correct+'/'+total+' correct. \u2713';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct+'/'+total+' correct. Review the highlighted fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show','good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to try again from scratch.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    if(inp.dataset.locked !== undefined){ inp.value=inp.dataset.locked; }
+    else { inp.value=''; inp.readOnly=false; }
+    inp.classList.remove('correct','wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value=''; sel.classList.remove('correct','wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show','good','bad');
+}
+
+// Store original readonly values for reset
+document.querySelectorAll('.fill-input[readonly]').forEach(inp => {
+  inp.dataset.locked = inp.value;
+});
+// Clear styling on edit
+document.querySelectorAll('.fill-input,.match-select').forEach(el => {
+  el.addEventListener(el.tagName==='SELECT'?'change':'input', ()=>{
+    el.classList.remove('correct','wrong');
+  });
+});
+</script>
+</body>
+</html>

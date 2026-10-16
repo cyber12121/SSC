@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 79 — Singular and plural | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="79" data-unit-title="Singular and plural" data-next-unit="80">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 79 &bull; Articles and nouns</span>
+  <h1>Singular and plural<span class="sub">Two-part nouns (trousers/glasses), news, series/species, collective nouns</span></h1>
+  <p class="lede">Some nouns are always plural (trousers, scissors, glasses) and take a plural verb. Some nouns end in -s but are singular (news, physics, athletics). Collective nouns (government, staff, team) can take singular or plural verbs.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Master two-part nouns that are always plural: <strong>trousers, jeans, shorts, pyjamas, glasses, binoculars, scissors</strong>.</li>
+<li>Learn nouns ending in -s that are singular: <strong>news, mathematics/maths, physics, athletics, economics</strong>.</li>
+<li>Identify nouns with identical singular and plural forms: <strong>means, series, species</strong>.</li>
+<li>Understand collective nouns (<em>government, team, family, police</em>) and sums of money/time taking singular verbs (<em>three years is a long time</em>).</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<section>
+  <h2>Part A: Two-Part Plural Nouns</h2>
+  <div class="card">
+    <p>Sometimes we use a plural noun for one thing that has two parts. These words take a <strong>plural verb</strong>:</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0;">
+      <div><strong>Clothes:</strong> trousers, jeans, tights, shorts, pants, pyjamas</div>
+      <div><strong>Tools &amp; Optical:</strong> glasses, binoculars, scissors</div>
+    </div>
+    <div class="example-box">
+      My trousers <strong>are</strong> too long. <span class="wrong-note">(not My trousers is)</span><br>
+      Those <strong>are</strong> nice jeans. &nbsp;<em>or</em>&nbsp; That’s a nice <strong>pair of</strong> jeans. <span class="wrong-note">(not a nice jeans)</span><br>
+      I need <strong>some</strong> scissors / a pair of scissors.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part B: Singular Nouns Ending in -s; Means / Series / Species</h2>
+  <div class="card">
+    <p>Some nouns end in <strong>-s</strong> but are <strong>singular</strong>:</p>
+    <div class="example-box">
+      <strong>news:</strong> The news <strong>was</strong> unexpected. <span class="wrong-note">(not The news were)</span><br>
+      <strong>games:</strong> gymnastics, billiards, darts, dominoes<br>
+      <strong>subjects/activities:</strong> physics, maths, economics, politics, athletics: <em>Physics <strong>was</strong> my favourite subject.</em>
+    </div>
+    <p>Some nouns end in <strong>-s</strong> and can be <strong>either singular or plural</strong>:</p>
+    <div class="example-box">
+      <strong>means</strong> (= a method): <em>a means of transport / many means of transport</em><br>
+      <strong>series:</strong> <em>a television series / two television series</em><br>
+      <strong>species:</strong> <em>a species of bird / 200 species of birds</em>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part C: Collective Nouns (Government, Team, Police)</h2>
+  <div class="card">
+    <p>Some nouns can take either a singular or a plural verb depending on whether we think of the group as a single whole or individual members:</p>
+    <div class="example-box">
+      <strong>audience &bull; committee &bull; company &bull; family &bull; government &bull; staff &bull; team</strong><br>
+      The government <strong>wants</strong> (or <strong>want</strong>) to improve education.<br>
+      The team <strong>is</strong> (or <strong>are</strong>) playing well.
+    </div>
+    <p><strong>Warning:</strong> <strong>The police</strong> is ALWAYS plural and takes a plural verb:</p>
+    <div class="example-box">
+      The police <strong>are</strong> investigating the murder. <span class="wrong-note">(not The police is)</span><br>
+      A police officer / a policeman / a policewoman <small style="color:var(--muted);">(for one individual)</small>.
+    </div>
+    <p><strong>Person / People:</strong> <em>He is a nice person.</em> &rarr; <em>They are nice people.</em> <span class="wrong-note">(not persons)</span>.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Part D: Sums of Money, Periods of Time, Distances</h2>
+  <div class="card">
+    <p>We use a <strong>singular verb</strong> with sums of money, periods of time, and distances because we think of them as a single amount/unit:</p>
+    <div class="example-box">
+      <strong>Twenty thousand pounds was</strong> stolen in the robbery. <span class="wrong-note">(not were stolen)</span><br>
+      <strong>Three years is</strong> a long time to be without a job. <span class="wrong-note">(not are a long time)</span><br>
+      <strong>Six miles is</strong> a long way to walk every day.
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="79.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 79.1</span>
+    <span class="ex-prompt">Complete the sentences. Choose from the box.</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-style:italic;">
+    a &bull; are &bull; doesn't &bull; don't &bull; glasses &bull; it &bull; pair &bull; some &bull; them
+  </div>
+  <ul class="q-list">
+    <li class="q-item">My eyesight is getting worse. I need <input class="fill-input" style="min-width:120px" readonly value="glasses">.</li>
+    <li class="q-item">The trousers you bought for me <input class="fill-input" style="min-width:120px" data-answer="don't"> fit me.</li>
+    <li class="q-item">The jacket you bought for me <input class="fill-input" style="min-width:120px" data-answer="doesn't"> fit me.</li>
+    <li class="q-item">I need <input class="fill-input" style="min-width:120px" data-answer="some"> scissors to cut this piece of material.</li>
+    <li class="q-item">I can't find my binoculars. Have you seen <input class="fill-input" style="min-width:120px" data-answer="them">?</li>
+    <li class="q-item">I went shopping and bought a <input class="fill-input" style="min-width:120px" data-answer="pair"> of jeans.</li>
+    <li class="q-item">Where <input class="fill-input" style="min-width:120px" data-answer="are"> my sunglasses?</li>
+    <li class="q-item">I went shopping and bought <input class="fill-input" style="min-width:120px" data-answer="a"> pair of pyjamas.</li>
+    <li class="q-item">I don't know much about politics. I'm not interested in <input class="fill-input" style="min-width:120px" data-answer="it">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="79.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 79.2</span>
+    <span class="ex-prompt">Complete the sentences. Use a word from section B (news, series, species, means).</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">'Have you heard <input class="fill-input" style="min-width:120px" readonly value="the news">?' 'No. What's happened?'</li>
+    <li class="q-item">The bicycle is a <input class="fill-input" style="min-width:120px" data-answer="means"> of transport.</li>
+    <li class="q-item">A lot of American TV <input class="fill-input" style="min-width:120px" data-answer="series"> are shown in other countries.</li>
+    <li class="q-item">The tiger is an endangered <input class="fill-input" style="min-width:120px" data-answer="species">.</li>
+    <li class="q-item">There will be a <input class="fill-input" style="min-width:120px" data-answer="series"> of meetings to discuss the problem.</li>
+    <li class="q-item">Fortunately the <input class="fill-input" style="min-width:120px" data-answer="news"> wasn't as bad as we expected.</li>
+    <li class="q-item">How many <input class="fill-input" style="min-width:120px" data-answer="species"> of bird are there in the world?</li>
+    <li class="q-item">I didn't have my phone, so I had no <input class="fill-input" style="min-width:120px" data-answer="means"> of contacting you.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="79.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 79.3</span>
+    <span class="ex-prompt">Choose the correct form of the verb, singular or plural.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Gymnastics <select class="match-select" disabled><option>is</option></select> my favourite sport.</li>
+    <li class="q-item">My new glasses 
+      <select class="match-select" data-answer="don't">
+        <option value="">-- select --</option>
+        <option value="doesn't">doesn't</option>
+        <option value="don't">don't</option>
+      </select> fit very well.
+    </li>
+    <li class="q-item">The police 
+      <select class="match-select" data-answer="want">
+        <option value="">-- select --</option>
+        <option value="wants">wants</option>
+        <option value="want">want</option>
+      </select> to interview two men about the robbery.
+    </li>
+    <li class="q-item">Physics 
+      <select class="match-select" data-answer="was">
+        <option value="">-- select --</option>
+        <option value="was">was</option>
+        <option value="were">were</option>
+      </select> my favourite subject at school.
+    </li>
+    <li class="q-item">It's a nice place to visit. The people 
+      <select class="match-select" data-answer="are">
+        <option value="">-- select --</option>
+        <option value="is">is</option>
+        <option value="are">are</option>
+      </select> very friendly.
+    </li>
+    <li class="q-item">Germany 
+      <select class="match-select" data-answer="is|are">
+        <option value="">-- select --</option>
+        <option value="is">is</option>
+        <option value="are">are</option>
+      </select> playing Spain tomorrow night.
+    </li>
+    <li class="q-item">
+      <select class="match-select" data-answer="Do">
+        <option value="">-- select --</option>
+        <option value="Does">Does</option>
+        <option value="Do">Do</option>
+      </select> the police know how the accident happened?
+    </li>
+    <li class="q-item">Where 
+      <select class="match-select" data-answer="do|does">
+        <option value="">-- select --</option>
+        <option value="do">do</option>
+        <option value="does">does</option>
+      </select> your family live?
+    </li>
+    <li class="q-item">Most people 
+      <select class="match-select" data-answer="enjoy">
+        <option value="">-- select --</option>
+        <option value="enjoy">enjoy</option>
+        <option value="enjoys">enjoys</option>
+      </select> music.
+    </li>
+    <li class="q-item">I like this cafe. The staff here 
+      <select class="match-select" data-answer="are|is">
+        <option value="">-- select --</option>
+        <option value="is">is</option>
+        <option value="are">are</option>
+      </select> really friendly and efficient.
+    </li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="79.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 79.4</span>
+    <span class="ex-prompt">Complete the sentences. Use is or isn't, and choose from the box.</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-style:italic;">
+    a lot to carry &bull; enough money &bull; too hot &bull; long enough &bull; a long time
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Three years <input class="fill-input" style="min-width:160px" readonly value="is a long time"> to be without a job.</li>
+    <li class="q-item">Thirty degrees <input class="fill-input" style="min-width:180px" data-answer="is too hot"> for Tom. He doesn't like hot weather.</li>
+    <li class="q-item">Ten dollars <input class="fill-input" style="min-width:180px" data-answer="isn't enough money">. We need more than that.</li>
+    <li class="q-item">Four days <input class="fill-input" style="min-width:180px" data-answer="isn't long enough"> for a holiday. You need at least a week.</li>
+    <li class="q-item">Twenty kilos <input class="fill-input" style="min-width:180px" data-answer="is a lot to carry">. Are you sure you can manage?</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="79.5">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 79.5</span>
+    <span class="ex-prompt">Are these sentences OK? Correct them where necessary, or write 'OK'.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Three years are a long time to be without a job. &rarr; <input class="fill-input" style="min-width:260px" readonly value="Three years is a long time"></li>
+    <li class="q-item">The committee want to change the rules of the club. &rarr; <input class="fill-input" style="min-width:260px" readonly value="OK"></li>
+    <li class="q-item">Susan was wearing a black jeans. &rarr; <input class="fill-input" style="min-width:280px" data-answer="Susan was wearing black jeans.|wearing black jeans.|black jeans"></li>
+    <li class="q-item">I like Martin and Jane. They're very nice persons. &rarr; <input class="fill-input" style="min-width:280px" data-answer="They're very nice people.|very nice people.|very nice people"></li>
+    <li class="q-item">I'm going to buy some new pyjamas. &rarr; <input class="fill-input" style="min-width:280px" data-answer="OK"></li>
+    <li class="q-item">There was a police directing traffic in the street. &rarr; <input class="fill-input" style="min-width:320px" data-answer="There was a police officer directing traffic|There was a policeman directing traffic|a police officer|a policeman"></li>
+    <li class="q-item">This scissors isn't very sharp. &rarr; <input class="fill-input" style="min-width:280px" data-answer="These scissors aren't very sharp.|These scissors aren't"></li>
+    <li class="q-item">The company have decided to open a new factory. &rarr; <input class="fill-input" style="min-width:280px" data-answer="OK"></li>
+    <li class="q-item">This plant is very rare species. &rarr; <input class="fill-input" style="min-width:280px" data-answer="This plant is a very rare species.|is a very rare species.|a very rare species"></li>
+    <li class="q-item">Twelve hours are a long time to be on a plane. &rarr; <input class="fill-input" style="min-width:280px" data-answer="Twelve hours is a long time|Twelve hours is"></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<div class="reveal">
+  <div class="reveal-head" onclick="toggleReveal(this)"><span>Key to Exercises 79.1 &ndash; 79.5</span><span class="reveal-arrow">&blacktriangledown;</span></div>
+  <div class="reveal-body">
+    <h4>Exercise 79.1</h4>
+    <p>2 don't &nbsp;|&nbsp; 3 doesn't &nbsp;|&nbsp; 4 some &nbsp;|&nbsp; 5 them &nbsp;|&nbsp; 6 pair &nbsp;|&nbsp; 7 are &nbsp;|&nbsp; 8 a &nbsp;|&nbsp; 9 it</p>
+    <h4>Exercise 79.2</h4>
+    <p>2 means &nbsp;|&nbsp; 3 series &nbsp;|&nbsp; 4 species &nbsp;|&nbsp; 5 series &nbsp;|&nbsp; 6 news &nbsp;|&nbsp; 7 species &nbsp;|&nbsp; 8 means</p>
+    <h4>Exercise 79.3</h4>
+    <p>2 don't &nbsp;|&nbsp; 3 want &nbsp;|&nbsp; 4 was &nbsp;|&nbsp; 5 are &nbsp;|&nbsp; 6 is / are &nbsp;|&nbsp; 7 Do &nbsp;|&nbsp; 8 do / does &nbsp;|&nbsp; 9 enjoy &nbsp;|&nbsp; 10 is / are</p>
+    <h4>Exercise 79.4</h4>
+    <p>2 is too hot &nbsp;|&nbsp; 3 isn't enough money &nbsp;|&nbsp; 4 isn't long enough &nbsp;|&nbsp; 5 is a lot to carry</p>
+    <h4>Exercise 79.5</h4>
+    <p>3 … wearing black jeans. &nbsp;|&nbsp; 4 … very nice people. &nbsp;|&nbsp; 5 OK &nbsp;|&nbsp; 6 There was a police officer / a policeman / a policewoman … &nbsp;|&nbsp; 7 These scissors aren't … &nbsp;|&nbsp; 8 OK &nbsp;|&nbsp; 9 … is a very rare species. &nbsp;|&nbsp; 10 Twelve hours is …</p>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 79</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>Two-Part Nouns (Plural)</strong></td><td><code>trousers, jeans, scissors, glasses</code> &ndash; take plural verbs</td><td><em>My trousers are long. / a pair of jeans</em></td></tr>
+<tr><td><strong>-s but Singular</strong></td><td><code>news, physics, maths, athletics, gymnastics</code></td><td><em>The news was good. Physics is interesting.</em></td></tr>
+<tr><td><strong>Dual Form</strong></td><td><code>means, series, species</code> (same form for sing. and pl.)</td><td><em>a TV series / two TV series</em></td></tr>
+<tr><td><strong>Time, Money, Distance</strong></td><td>Take a <strong>singular verb</strong></td><td><em>Three years is a long time.</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 79 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-078.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 78: Names with and without the 2</span>
+    </a>
+    <a href="unit-080.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 80: Noun + noun (a bus driver / a headache)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

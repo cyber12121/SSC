@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 49 — Questions 1 | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="49" data-unit-title="Questions 1" data-next-unit="50">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 49 &bull; Questions and auxiliary verbs</span>
+  <h1>Questions 1<span class="sub">Basic word order, do/does/did, who/what questions, and prepositions at the end</span></h1>
+  <p class="lede">Master question structures: inversion with auxiliary verbs, subject vs. object questions, and preposition placement.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Master the auxiliary + subject question word order across all tenses.</li>
+<li>Distinguish between subject questions (without <em>do/does/did</em>) and object questions (with <em>do/does/did</em>).</li>
+<li>Place prepositions naturally at the end of wh-questions.</li>
+<li>Form negative questions to express surprise or seek confirmation.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<div class="card">
+  <h3>A. Basic Question Word Order</h3>
+  <p>In questions, the subject is usually <strong>after the first auxiliary verb</strong>:</p>
+  <table style="width:100%; border-collapse:collapse; margin:14px 0; font-size:15px;">
+    <thead>
+      <tr style="border-bottom:2px solid var(--border); text-align:left;">
+        <th style="padding:8px 12px; color:var(--accent);">Statement</th>
+        <th style="padding:8px 12px; color:var(--accent);">&rarr;</th>
+        <th style="padding:8px 12px; color:var(--accent);">Question</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--border);"><td>Tom <strong>will</strong> be here.</td><td>&rarr;</td><td><strong>Will</strong> Tom be here tomorrow?</td></tr>
+      <tr style="border-bottom:1px solid var(--border);"><td>You <strong>have</strong> worked.</td><td>&rarr;</td><td><strong>Have</strong> you been working hard?</td></tr>
+      <tr><td>The house <strong>was</strong> built.</td><td>&rarr;</td><td>When <strong>was</strong> the house built?</td></tr>
+    </tbody>
+  </table>
+  <p class="ex-note">Remember: the subject is after the <em>first</em> verb: <em>Is Katherine working today?</em> <span class="wrong-note">(NOT Is working Katherine)</span></p>
+</div>
+
+<div class="card">
+  <h3>B. Questions with do / does / did &bull; Subject vs. Object Questions</h3>
+  <p>In present simple questions we use <strong>do / does</strong>; in past simple questions we use <strong>did</strong>:</p>
+  <ul style="margin:8px 0 14px; padding-left:20px;">
+    <li><strong>Do you live</strong> near here? &bull; What time <strong>does the film start</strong>?</li>
+    <li><strong>Did you sell</strong> your car? &bull; Why <strong>did the train stop</strong>?</li>
+  </ul>
+
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">Object Question (use do/does/did)</div>
+      <p>Emma phoned <strong>somebody</strong> (object).</p>
+      <p>&rarr; <strong>Who did Emma phone?</strong></p>
+      <p>Diane said <strong>something</strong>.</p>
+      <p>&rarr; <strong>What did Diane say?</strong></p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">Subject Question (NO do/does/did)</div>
+      <p><strong>Somebody</strong> (subject) phoned Emma.</p>
+      <p>&rarr; <strong>Who phoned Emma?</strong> <span class="wrong-note">(NOT Who did phone)</span></p>
+      <p><strong>Something</strong> happened.</p>
+      <p>&rarr; <strong>What happened?</strong> <span class="wrong-note">(NOT What did happen)</span></p>
+    </div>
+  </div>
+
+  <div class="example-box">
+    <span class="label">More Subject Question Examples</span>
+    <ul style="margin:4px 0 0; padding-left:20px;">
+      <li>Who <strong>wants</strong> something to eat? <span class="wrong-note">(NOT Who does want)</span></li>
+      <li>How many people <strong>came</strong> to the party? <span class="wrong-note">(NOT did come)</span></li>
+      <li>Which bus <strong>goes</strong> to the centre? <span class="wrong-note">(NOT does go)</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>C. Prepositions at the End &bull; Negative Questions</h3>
+  <p>In questions beginning <em>who / what / which / where</em>, prepositions usually go <strong>at the end</strong>:</p>
+  <ul style="margin:8px 0 14px; padding-left:20px;">
+    <li>Where are you <strong>from</strong>? &bull; What was the weather <strong>like</strong>?</li>
+    <li>Who do you want to speak <strong>to</strong>? &bull; Which job has Tina applied <strong>for</strong>?</li>
+  </ul>
+  <p class="ex-note">Formal style: <em>To whom do you wish to speak?</em></p>
+
+  <p><strong>Negative questions</strong> (<em>isn't it? / didn't you? / don't you?</em>):</p>
+  <ul style="margin:8px 0; padding-left:20px;">
+    <li>To show surprise: <strong>Didn't you hear</strong> the doorbell? I rang it three times.</li>
+    <li>Expecting agreement: <strong>Haven't we met</strong> before? &ndash; Yes, I think we have.</li>
+    <li>With <em>Why</em>: <strong>Why don't we</strong> eat out tonight? <span class="wrong-note">(NOT Why we don't eat)</span></li>
+  </ul>
+</div>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<!-- 49.1 -->
+<div class="exercise" data-ex="49.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 49.1</span>
+    <span style="font-size:13px; color:var(--muted);">8 items &bull; Ask Joe questions</span>
+  </div>
+  <p class="ex-prompt">Read Joe's answers, then write the questions based on the prompts.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      (where / live)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" value="Where do you live?" readonly style="width:200px;"><br>
+      <strong>Joe:</strong> In Manchester.
+    </li>
+    <li class="q-item">
+      (born there?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="Were you born there?|Were you born there" placeholder="Were you born there?" style="width:230px;"><br>
+      <strong>Joe:</strong> No, I was born in London.
+    </li>
+    <li class="q-item">
+      (married?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="Are you married?|Are you married" placeholder="Are you married?" style="width:200px;"><br>
+      <strong>Joe:</strong> Yes.
+    </li>
+    <li class="q-item">
+      (how long?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="How long have you been married?|How long have you been married" placeholder="How long have you been married?" style="width:300px;"><br>
+      <strong>Joe:</strong> 17 years.
+    </li>
+    <li class="q-item">
+      (what / do?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="What do you do?|What do you do" placeholder="What do you do?" style="width:190px;"><br>
+      <strong>Joe:</strong> I'm a journalist.
+    </li>
+    <li class="q-item">
+      (what wife / do?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="What does your wife do?|What does your wife do" placeholder="What does your wife do?" style="width:240px;"><br>
+      <strong>Joe:</strong> She's a doctor.
+    </li>
+    <li class="q-item">
+      (children?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="Do you have children?|Do you have any children?|Have you got any children?|Have you got children?|Do you have any children" placeholder="Do you have any children?" style="width:280px;"><br>
+      <strong>Joe:</strong> Yes, two boys.
+    </li>
+    <li class="q-item">
+      (how old?)<br>
+      <strong>You:</strong> <input class="fill-input" type="text" data-answer="How old are they?|How old are they" placeholder="How old are they?" style="width:200px;"><br>
+      <strong>Joe:</strong> 12 and 15.
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 49.2 -->
+<div class="exercise" data-ex="49.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 49.2</span>
+    <span style="font-size:13px; color:var(--muted);">14 items &bull; Questions with who or what</span>
+  </div>
+  <p class="ex-prompt">Make questions with <strong>who</strong> or <strong>what</strong> (subject or object).</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      Somebody hit me. &rarr; <input class="fill-input" type="text" value="Who hit you?" readonly style="width:160px;">
+    </li>
+    <li class="q-item">
+      I hit somebody. &rarr; <input class="fill-input" type="text" value="Who did you hit?" readonly style="width:170px;">
+    </li>
+    <li class="q-item">
+      Somebody paid the bill. &rarr; <input class="fill-input" type="text" data-answer="Who paid the bill?|Who paid it?|Who paid the bill|Who paid it" placeholder="Who paid the bill?" style="width:200px;">
+    </li>
+    <li class="q-item">
+      I'm worried about something. &rarr; <input class="fill-input" type="text" data-answer="What are you worried about?|What are you worried about" placeholder="What are you worried about?" style="width:260px;">
+    </li>
+    <li class="q-item">
+      Something happened. &rarr; <input class="fill-input" type="text" data-answer="What happened?|What happened" placeholder="What happened?" style="width:170px;">
+    </li>
+    <li class="q-item">
+      Diane said something. &rarr; <input class="fill-input" type="text" data-answer="What did Diane say?|What did she say?|What did Diane say" placeholder="What did Diane say?" style="width:200px;">
+    </li>
+    <li class="q-item">
+      This book belongs to somebody. &rarr; <input class="fill-input" type="text" data-answer="Who does this book belong to?|Who does it belong to?|Who does this book belong to" placeholder="Who does this book belong to?" style="width:280px;">
+    </li>
+    <li class="q-item">
+      Somebody lives in that house. &rarr; <input class="fill-input" type="text" data-answer="Who lives in that house?|Who lives there?|Who lives in that house" placeholder="Who lives in that house?" style="width:250px;">
+    </li>
+    <li class="q-item">
+      I fell over something. &rarr; <input class="fill-input" type="text" data-answer="What did you fall over?|What did you fall over" placeholder="What did you fall over?" style="width:230px;">
+    </li>
+    <li class="q-item">
+      Something fell off the shelf. &rarr; <input class="fill-input" type="text" data-answer="What fell off the shelf?|What fell off the shelf" placeholder="What fell off the shelf?" style="width:230px;">
+    </li>
+    <li class="q-item">
+      This word means something. &rarr; <input class="fill-input" type="text" data-answer="What does this word mean?|What does it mean?|What does this word mean" placeholder="What does this word mean?" style="width:260px;">
+    </li>
+    <li class="q-item">
+      Sarah was with somebody. &rarr; <input class="fill-input" type="text" data-answer="Who was Sarah with?|Who was she with?|Who was Sarah with" placeholder="Who was Sarah with?" style="width:210px;">
+    </li>
+    <li class="q-item">
+      I'm looking for something. &rarr; <input class="fill-input" type="text" data-answer="What are you looking for?|What are you looking for" placeholder="What are you looking for?" style="width:250px;">
+    </li>
+    <li class="q-item">
+      Emma reminds me of somebody. &rarr; <input class="fill-input" type="text" data-answer="Who does Emma remind you of?|Who does she remind you of?|Who does Emma remind you of" placeholder="Who does Emma remind you of?" style="width:280px;">
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 49.3 -->
+<div class="exercise" data-ex="49.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 49.3</span>
+    <span style="font-size:13px; color:var(--muted);">11 items &bull; Word order in questions</span>
+  </div>
+  <p class="ex-prompt">Put the words in brackets in the correct order to make questions.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      (when / was / built / this house?) &rarr; <input class="fill-input" type="text" value="When was this house built?" readonly style="width:260px;">
+    </li>
+    <li class="q-item">
+      (how / cheese / is / made?) &rarr; <input class="fill-input" type="text" data-answer="How is cheese made?|How is cheese made" placeholder="How is cheese made?" style="width:220px;">
+    </li>
+    <li class="q-item">
+      (why / Sue / working / isn't / today?) &rarr; <input class="fill-input" type="text" data-answer="Why isn't Sue working today?|Why is Sue not working today?|Why isn't Sue working today" placeholder="Why isn't Sue working today?" style="width:270px;">
+    </li>
+    <li class="q-item">
+      (what time / arriving / your friends / are?) &rarr; <input class="fill-input" type="text" data-answer="What time are your friends arriving?|What time are your friends arriving" placeholder="What time are your friends arriving?" style="width:310px;">
+    </li>
+    <li class="q-item">
+      (why / was / cancelled / the meeting?) &rarr; <input class="fill-input" type="text" data-answer="Why was the meeting cancelled?|Why was the meeting canceled?|Why was the meeting cancelled" placeholder="Why was the meeting cancelled?" style="width:280px;">
+    </li>
+    <li class="q-item">
+      (when / invented / paper / was?) &rarr; <input class="fill-input" type="text" data-answer="When was paper invented?|When was paper invented" placeholder="When was paper invented?" style="width:230px;">
+    </li>
+    <li class="q-item">
+      (where / your parents / were / born?) &rarr; <input class="fill-input" type="text" data-answer="Where were your parents born?|Where were your parents born" placeholder="Where were your parents born?" style="width:270px;">
+    </li>
+    <li class="q-item">
+      (why / you / to the party / didn't / come?) &rarr; <input class="fill-input" type="text" data-answer="Why didn't you come to the party?|Why did you not come to the party?|Why didn't you come to the party" placeholder="Why didn't you come to the party?" style="width:310px;">
+    </li>
+    <li class="q-item">
+      (how / the accident / did / happen?) &rarr; <input class="fill-input" type="text" data-answer="How did the accident happen?|How did the accident happen" placeholder="How did the accident happen?" style="width:260px;">
+    </li>
+    <li class="q-item">
+      (why / happy / you / aren't?) &rarr; <input class="fill-input" type="text" data-answer="Why aren't you happy?|Why are you not happy?|Why aren't you happy" placeholder="Why aren't you happy?" style="width:210px;">
+    </li>
+    <li class="q-item">
+      (how many / speak / can / languages / you?) &rarr; <input class="fill-input" type="text" data-answer="How many languages can you speak?|How many languages can you speak" placeholder="How many languages can you speak?" style="width:310px;">
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 49.4 -->
+<div class="exercise" data-ex="49.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 49.4</span>
+    <span style="font-size:13px; color:var(--muted);">4 items &bull; Negative questions</span>
+  </div>
+  <p class="ex-prompt">Write negative questions from the words in brackets. In each situation you are surprised.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      <strong>A:</strong> We won't see Lisa this evening.<br>
+      <strong>B:</strong> Why not? (she / not / come / out with us?) &rarr; <input class="fill-input" type="text" value="Isn't she coming out with us?" readonly style="width:260px;">
+    </li>
+    <li class="q-item">
+      <strong>A:</strong> I hope we don't meet Luke tonight.<br>
+      <strong>B:</strong> Why? (you / not / like / him?) &rarr; <input class="fill-input" type="text" data-answer="Don't you like him?|Don't you like him" placeholder="Don't you like him?" style="width:210px;">
+    </li>
+    <li class="q-item">
+      <strong>A:</strong> Don't go and see that film.<br>
+      <strong>B:</strong> Why not? (it / not / good?) &rarr; <input class="fill-input" type="text" data-answer="Isn't it good?|Isn't it good" placeholder="Isn't it good?" style="width:170px;">
+    </li>
+    <li class="q-item">
+      <strong>A:</strong> I'll have to borrow some money.<br>
+      <strong>B:</strong> Why? (you / not / have / any?) &rarr; <input class="fill-input" type="text" data-answer="Don't you have any?|Haven't you got any?|Don't you have any" placeholder="Don't you have any?" style="width:230px;">
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Exercise 49.1 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>Where do you live?</strong> (example)</li>
+      <li><strong>Were you born there?</strong> &mdash; past simple of <em>be</em>.</li>
+      <li><strong>Are you married?</strong> &mdash; present simple of <em>be</em>.</li>
+      <li><strong>How long have you been married?</strong> &mdash; present perfect continuous duration.</li>
+      <li><strong>What do you do?</strong> &mdash; asking about occupation.</li>
+      <li><strong>What does your wife do?</strong> &mdash; third-person singular auxiliary <em>does</em>.</li>
+      <li><strong>Do you have (any) children? / Have you got (any) children?</strong></li>
+      <li><strong>How old are they?</strong></li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 49.2 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>Who hit you?</strong> (example &mdash; subject question)</li>
+      <li><strong>Who did you hit?</strong> (example &mdash; object question)</li>
+      <li><strong>Who paid the bill? / Who paid it?</strong> &mdash; subject question (no <em>did</em>).</li>
+      <li><strong>What are you worried about?</strong> &mdash; preposition at the end.</li>
+      <li><strong>What happened?</strong> &mdash; subject question (no <em>did</em>).</li>
+      <li><strong>What did she / Diane say?</strong> &mdash; object question.</li>
+      <li><strong>Who does it / this book belong to?</strong> &mdash; preposition at the end.</li>
+      <li><strong>Who lives in that house? / Who lives there?</strong> &mdash; subject question.</li>
+      <li><strong>What did you fall over?</strong> &mdash; object question with preposition.</li>
+      <li><strong>What fell off the shelf?</strong> &mdash; subject question.</li>
+      <li><strong>What does it / this word mean?</strong> &mdash; object question.</li>
+      <li><strong>Who was she / Sarah with?</strong> &mdash; preposition at the end.</li>
+      <li><strong>What are you looking for?</strong> &mdash; preposition at the end.</li>
+      <li><strong>Who does she / Emma remind you of?</strong> &mdash; preposition at the end.</li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 49.3 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>When was this house built?</strong> (example)</li>
+      <li><strong>How is cheese made?</strong></li>
+      <li><strong>Why isn't Sue working today?</strong></li>
+      <li><strong>What time are your friends arriving?</strong></li>
+      <li><strong>Why was the meeting cancelled?</strong></li>
+      <li><strong>When was paper invented?</strong></li>
+      <li><strong>Where were your parents born?</strong></li>
+      <li><strong>Why didn't you come to the party?</strong></li>
+      <li><strong>How did the accident happen?</strong></li>
+      <li><strong>Why aren't you happy?</strong></li>
+      <li><strong>How many languages can you speak?</strong></li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 49.4 &mdash; Key &amp; Explanations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>Isn't she coming out with us?</strong> (example)</li>
+      <li><strong>Don't you like him?</strong> &mdash; showing surprise.</li>
+      <li><strong>Isn't it good?</strong> &mdash; asking for confirmation.</li>
+      <li><strong>Don't you have any? / Haven't you got any?</strong></li>
+    </ol>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 49</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td>Question word order</td><td>Auxiliary verb + subject + main verb</td><td>Will Tom be here? &bull; Did you sell the car?</td></tr>
+<tr><td>Subject questions</td><td>who/what as subject &rarr; NO do/does/did</td><td>Who phoned you? &bull; What happened?</td></tr>
+<tr><td>Prepositions</td><td>Prepositions normally go at the end</td><td>Where are you from? &bull; Who were you with?</td></tr>
+<tr><td>Negative questions</td><td>Show surprise or expect agreement</td><td>Didn't you hear the bell? &bull; Why aren't you happy?</td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 49 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="../06_Reported_Speech/unit-048.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 48: Reported speech 2</span>
+    </a>
+    <a href="unit-050.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 50: Questions 2 (do you know where …? / he asked me where …)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

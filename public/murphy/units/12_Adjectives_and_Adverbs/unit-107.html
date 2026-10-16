@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 107 — Comparative 3 (as … as / than) | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="107" data-unit-title="Comparative 3 (as … as / than)" data-next-unit="108">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 107 &bull; Adjectives and adverbs</span>
+  <h1>Comparative 3 (as … as / than)<span class="sub">as … as equality & not as … as inequality; twice as … as; the same as; than me vs than I am</span></h1>
+  <p class="lede">We use 'as … as' to show that two things are equal, and 'not as … as' (or 'less than') to show that they are not equal. We say 'the same as' (not 'the same like').</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Use <strong>not as … as</strong> (and <strong>less than</strong>) to show inequality: <em>He isn't as rich as Sarah</em>.</li>
+<li>Use <strong>as … as</strong> in positive sentences, questions, and multipliers: <em>twice as expensive as</em>.</li>
+<li>Use <strong>the same as</strong> (never <em>the same like</em>).</li>
+<li>Identify object pronoun vs subject pronoun + auxiliary after than/as: <em>taller than me</em> or <em>taller than I am</em>.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<section>
+  <h2>Part A: Not as … as vs Less than</h2>
+  <div class="card">
+    <p>Study this example:</p>
+    <div class="example-box">
+      Sarah has $20 million, Joe has $15 million, and David has $10 million.<br>
+      &bull; Joe is rich.<br>
+      &bull; He is <strong>richer than</strong> David.<br>
+      &bull; But he <strong>isn't as rich as</strong> Sarah. <em>(= Sarah is richer than he is)</em>
+    </div>
+    <div class="example-box">
+      Jack isn't <strong>as old as</strong> he looks. <em>(= he looks older than he is)</em><br>
+      The town centre wasn't <strong>as crowded as</strong> usual.<br>
+      Lisa didn't do <strong>as well</strong> in the exam as she had hoped.<br>
+      I don't know <strong>as many people as</strong> you do.
+    </div>
+    <p><strong>Less than</strong> is similar to <em>not as … as</em>:</p>
+    <div class="example-box">
+      I spent <strong>less money than</strong> you. <em>(= I didn't spend as much money as you)</em><br>
+      The city was <strong>less crowded than</strong> usual. <em>(= wasn't as crowded as usual)</em>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part B: As … as &bull; Twice as … as</h2>
+  <div class="card">
+    <p>We use <strong>as … as</strong> in positive statements and questions:</p>
+    <div class="example-box">
+      I'm sorry I'm late. I got here <strong>as fast as I could</strong>.<br>
+      You can have <strong>as much as you want</strong>.<br>
+      Can you send the info <strong>as soon as possible</strong>?<br>
+      Let's walk. It's <strong>just as quick as</strong> taking the bus.
+    </div>
+    <p>With multipliers (<em>twice as … as, three times as … as</em>):</p>
+    <div class="example-box">
+      Petrol is <strong>twice as expensive as</strong> it was a few years ago.<br>
+      Their house is about <strong>three times as big as</strong> ours.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part C: The Same As</h2>
+  <div class="card">
+    <p>We say <strong>the same as</strong> <span class="wrong-note">(not the same like)</span>:</p>
+    <div class="example-box">
+      Laura's salary is <strong>the same as mine</strong>.<br>
+      David is <strong>the same age as</strong> James.<br>
+      She still looks <strong>the same as</strong> she did ten years ago.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part D: Than Me / Than I Am</h2>
+  <div class="card">
+    <p>After <em>than</em> and <em>as</em>, both object pronouns and subject + verb are standard:</p>
+    <div class="compare-cols">
+      <div class="compare-col simple">
+        <div class="compare-head">Object Pronoun</div>
+        <p>You're taller <strong>than me</strong>.<br>
+        He's not as clever <strong>as her</strong>.<br>
+        They have more money <strong>than us</strong>.<br>
+        I can't run as fast <strong>as him</strong>.</p>
+      </div>
+      <div class="compare-col continuous">
+        <div class="compare-head">Subject + Auxiliary Verb</div>
+        <p>You're taller <strong>than I am</strong>.<br>
+        He's not as clever <strong>as she is</strong>.<br>
+        They have more money <strong>than we have</strong>.<br>
+        I can't run as fast <strong>as he can</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="107.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 107.1</span>
+    <span class="ex-prompt">Complete the sentences using as … as.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I'm tall, but you are taller. &rarr; <input class="fill-input" style="min-width:240px" readonly value="I'm not as tall as you."></li>
+    <li class="q-item">My salary is high, but yours is higher. &rarr; My salary isn't <input class="fill-input" style="min-width:240px" data-answer="as high as yours.|as high as yours"></li>
+    <li class="q-item">You know a bit about cars, but I know more. &rarr; You don't <input class="fill-input" style="min-width:280px" data-answer="know as much about cars as me.|know as much about cars as I do.|know as much about cars as I know.|know as much about cars as me|know as much about cars as I do"></li>
+    <li class="q-item">We are busy today, but we were busier yesterday. &rarr; We aren't <input class="fill-input" style="min-width:300px" data-answer="as busy today as we were yesterday.|as busy today as yesterday.|as busy today as we were yesterday|as busy today as yesterday"></li>
+    <li class="q-item">I still feel bad, but I felt a lot worse earlier. &rarr; I don't <input class="fill-input" style="min-width:280px" data-answer="feel as bad as I did earlier.|feel as bad as I felt earlier.|feel as bad as I did earlier|feel as bad as I felt earlier"></li>
+    <li class="q-item">Our neighbours have lived here for quite a long time, but we've lived here longer. &rarr; Our neighbours haven't <input class="fill-input" style="min-width:280px" data-answer="lived here as long as us.|lived here as long as we have.|lived here as long as us|lived here as long as we have"></li>
+    <li class="q-item">I was a little nervous before the interview, but usually I'm a lot more nervous. &rarr; I wasn't <input class="fill-input" style="min-width:320px" data-answer="as nervous (before the interview) as I usually am.|as nervous as I usually am.|as nervous as usual.|as nervous before the interview as I usually am."></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="107.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 107.2</span>
+    <span class="ex-prompt">Write a new sentence with the same meaning.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Jack is younger than he looks. &rarr; <input class="fill-input" style="min-width:280px" readonly value="Jack isn't as old as he looks."></li>
+    <li class="q-item">I didn't spend as much money as you. &rarr; <input class="fill-input" style="min-width:280px" readonly value="You spent more money than me."></li>
+    <li class="q-item">The station was nearer than I thought. &rarr; The station wasn't <input class="fill-input" style="min-width:240px" data-answer="as far as I thought.|as far as I thought"></li>
+    <li class="q-item">The meal didn't cost as much as I expected. &rarr; The meal cost <input class="fill-input" style="min-width:240px" data-answer="less than I expected.|less than I expected"></li>
+    <li class="q-item">I watch TV less than I used to. &rarr; I don't <input class="fill-input" style="min-width:280px" data-answer="watch TV as much as I used to.|watch TV as often as I used to.|watch TV as much as I used to|watch TV as often as I used to"></li>
+    <li class="q-item">Karen's hair isn't as long as it used to be. &rarr; Karen used to <input class="fill-input" style="min-width:240px" data-answer="have longer hair.|have longer hair"></li>
+    <li class="q-item">I know them better than you do. &rarr; You don't <input class="fill-input" style="min-width:280px" data-answer="know them as well as me.|know them as well as I do.|know them as well as me|know them as well as I do"></li>
+    <li class="q-item">There are fewer students in this class than in the other one. &rarr; There aren't <input class="fill-input" style="min-width:300px" data-answer="as many students in this class as in the other one.|as many students in this class as in the other one"></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="107.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 107.3</span>
+    <span class="ex-prompt">Complete the sentences using as … as. Choose from: fast, hard, long, often, quietly, soon, well.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I'm sorry I'm late. I got here <input class="fill-input" style="min-width:140px" readonly value="as fast as"> I could.</li>
+    <li class="q-item">It was a difficult question. I answered it <input class="fill-input" style="min-width:140px" data-answer="as well as"> I could.</li>
+    <li class="q-item">&lsquo;How long can I stay with you?&rsquo; &lsquo;You can stay <input class="fill-input" style="min-width:140px" data-answer="as long as"> you like.&rsquo;</li>
+    <li class="q-item">I need the information quickly, so let me know <input class="fill-input" style="min-width:140px" data-answer="as soon as"> possible.</li>
+    <li class="q-item">I like to keep fit, so I go swimming <input class="fill-input" style="min-width:140px" data-answer="as often as"> I can.</li>
+    <li class="q-item">I didn't want to wake anybody, so I came in <input class="fill-input" style="min-width:140px" data-answer="as quietly as"> I could.</li>
+    <li class="q-item">You always say how tiring your job is, but I work just <input class="fill-input" style="min-width:140px" data-answer="as hard as"> you.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="107.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 107.4</span>
+    <span class="ex-prompt">Write sentences using the same as.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">David and James are both 22 years old. &rarr; David <input class="fill-input" style="min-width:240px" readonly value="is the same age as"> James.</li>
+    <li class="q-item">You and I both have dark brown hair. &rarr; Your hair <input class="fill-input" style="min-width:240px" data-answer="is the same colour as|is the same color as"> mine.</li>
+    <li class="q-item">I arrived at 10.25 and so did you. &rarr; I arrived <input class="fill-input" style="min-width:240px" data-answer="the same time as|at the same time as"> you.</li>
+    <li class="q-item">My birthday is 5 April. It's Tom's birthday too. &rarr; My birthday <input class="fill-input" style="min-width:260px" data-answer="is on the same day as|is the same day as|is the same as"> Tom's.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="107.5">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 107.5</span>
+    <span class="ex-prompt">Complete the sentences. Choose from: as, him, is, less, me, much, soon, than, twice.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I'll let you know as <input class="fill-input" style="min-width:80px" readonly value="soon"> as I have any more news.</li>
+    <li class="q-item">My friends arrived earlier <input class="fill-input" style="min-width:80px" data-answer="than"> I expected.</li>
+    <li class="q-item">I live in the same street <input class="fill-input" style="min-width:80px" data-answer="as"> Katherine. We're neighbours.</li>
+    <li class="q-item">He doesn't know much. I know more than <input class="fill-input" style="min-width:80px" data-answer="him">.</li>
+    <li class="q-item">This morning there was <input class="fill-input" style="min-width:80px" data-answer="less"> traffic than usual.</li>
+    <li class="q-item">I don't watch TV as <input class="fill-input" style="min-width:80px" data-answer="much"> as I used to.</li>
+    <li class="q-item">Your bag is quite light. Mine is <input class="fill-input" style="min-width:80px" data-answer="twice"> as heavy as yours.</li>
+    <li class="q-item">We were born in the same year. I'm a little older than she <input class="fill-input" style="min-width:80px" data-answer="is">.</li>
+    <li class="q-item">I was really surprised. Nobody was more surprised than <input class="fill-input" style="min-width:80px" data-answer="me">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Key to Exercises 107.1 &ndash; 107.5</summary>
+  <div class="reveal-content">
+    <h4>Exercise 107.1</h4>
+    <p>2 My salary isn't as high as yours. &nbsp;|&nbsp; 3 You don't know as much about cars as me. (or … as I do. / … as I know.) &nbsp;|&nbsp; 4 We aren't as busy today as we were yesterday. (or … as busy today as yesterday.) &nbsp;|&nbsp; 5 I don't feel as bad as I did earlier. (or … as I felt earlier.) &nbsp;|&nbsp; 6 Our neighbours haven't lived here as long as us. (or … as long as we have.) &nbsp;|&nbsp; 7 I wasn't as nervous (before the interview) as I usually am. (or … as usual.)</p>
+    <h4>Exercise 107.2</h4>
+    <p>3 The station wasn't as far as I thought. &nbsp;|&nbsp; 4 The meal cost less than I expected. &nbsp;|&nbsp; 5 I don't watch TV as much as I used to. (or … as often as I used to.) &nbsp;|&nbsp; 6 Karen used to have longer hair. &nbsp;|&nbsp; 7 You don't know them as well as me. (or … as I do.) &nbsp;|&nbsp; 8 There aren't as many students in this class as in the other one.</p>
+    <h4>Exercise 107.3</h4>
+    <p>2 as well as &nbsp;|&nbsp; 3 as long as &nbsp;|&nbsp; 4 as soon as &nbsp;|&nbsp; 5 as often as &nbsp;|&nbsp; 6 as quietly as &nbsp;|&nbsp; 7 as hard as</p>
+    <h4>Exercise 107.4</h4>
+    <p>2 Your hair is the same colour as mine. &nbsp;|&nbsp; 3 I arrived (at) the same time as you. &nbsp;|&nbsp; 4 My birthday is (on) the same day as Tom's. (or My birthday is the same as Tom's.)</p>
+    <h4>Exercise 107.5</h4>
+    <p>2 than &nbsp;|&nbsp; 3 as &nbsp;|&nbsp; 4 him &nbsp;|&nbsp; 5 less &nbsp;|&nbsp; 6 much &nbsp;|&nbsp; 7 twice &nbsp;|&nbsp; 8 is &nbsp;|&nbsp; 9 me</p>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 107</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>As … as (Equality)</strong></td><td>Used in affirmative, negative, and questions for equal degree</td><td><em>as fast as I could, not as old as he looks</em></td></tr>
+<tr><td><strong>Not as … as &amp; Less than</strong></td><td>Expresses inequality: <em>not as … as</em> = <em>less … than</em></td><td><em>The meal cost less than expected = didn't cost as much as expected.</em></td></tr>
+<tr><td><strong>The Same As</strong></td><td>Always use <em>the same as</em> (never <em>the same like</em>)</td><td><em>Her salary is the same as mine. The same age as James.</em></td></tr>
+<tr><td><strong>Pronoun Forms</strong></td><td><em>than me / as me</em> (informal) or <em>than I am / as I am</em> (formal)</td><td><em>taller than me / taller than I am</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 107 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-106.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 106: Comparative 2 (much better, any better etc.)</span>
+    </a>
+    <a href="unit-108.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 108: Superlative (the longest, the most enjoyable etc.)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

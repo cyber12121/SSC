@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 9 — Present Perfect Continuous | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="9" data-unit-title="Present Perfect Continuous" data-next-unit="10">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 9 &bull; Tenses Basics</span>
+  <h1>Present Perfect Continuous<span class="sub">I have been doing</span></h1>
+  <p class="lede">Learn how to describe activities that have just finished and have a direct effect on the present, and how to use <em>How long have you been ...?</em> for actions continuing up to now.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Form the present perfect continuous (<strong>have/has been + -ing</strong>).</li>
+<li>Talk about an activity that has recently stopped or just stopped with a connection to now.</li>
+<li>Use <strong>how long</strong> with actions continuing up to the present.</li>
+<li>Distinguish between continuous action in progress vs finished action.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<h3>A. Activity with a Result Now</h3>
+<div class="card">
+  <div class="example-box">
+    <span class="label">It has been raining</span>
+    <p>Is it raining? &bull; No, but the ground is wet.<br>
+    It <span class="highlight">has been raining</span>.<br>
+    <em>have/has been + -ing</em> is the present perfect continuous.</p>
+  </div>
+  <p>We use the present perfect continuous for an activity that has recently stopped or just stopped:</p>
+  <ul style="padding-left:22px; margin:10px 0;">
+    <li>Why are your clothes so dirty? What <span class="highlight">have you been doing</span>?</li>
+    <li>I've <span class="highlight">been talking</span> to Amanda about the problem and she agrees with me.</li>
+    <li>Where have you been? I've <span class="highlight">been looking</span> everywhere for you.</li>
+  </ul>
+</div>
+
+<h3>B. How long has it been happening?</h3>
+<div class="card">
+  <p>It began raining two hours ago and it is still raining now:</p>
+  <div class="example-box">
+    <p>&bull; How long <span class="highlight">has it been raining</span>? &mdash; It <span class="highlight">has been raining</span> for two hours.</p>
+    <p>&bull; How long <span class="highlight">have you been learning</span> English?</p>
+    <p style="margin:0;">&bull; Tim is still watching TV. He's <span class="highlight">been watching TV</span> all day.</p>
+  </div>
+</div>
+
+<div class="cross-ref">
+  <strong>Cross references:</strong> Present perfect continuous and simple &rarr; <a href="unit-010.html">Unit 10</a> &nbsp;|&nbsp; How long have you (been) ...? &rarr; <a href="unit-011.html">Unit 11</a> &nbsp;|&nbsp; for and since &rarr; <a href="unit-012.html">Unit 12</a>
+</div>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<!-- 9.1 -->
+<div class="exercise" data-ex="9.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 9.1</span>
+    <span style="font-size:13px; color:var(--muted);">4 items &bull; What have they been doing?</span>
+  </div>
+  <p class="ex-prompt">What have these people been doing or what has been happening?</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      (earlier: rain &rarr; now: wet ground) <input class="fill-input" type="text" value="It's been raining." readonly data-locked="It's been raining." style="width:200px;">
+    </li>
+    <li class="q-item">
+      (earlier: watching TV &rarr; now: sofa, TV on) She <input class="fill-input" type="text" data-answer="'s been watching TV|has been watching TV|'s been watching television|has been watching television" placeholder="verb phrase..." style="width:220px;">.
+    </li>
+    <li class="q-item">
+      (earlier: playing tennis &rarr; now: rackets) They <input class="fill-input" type="text" data-answer="'ve been playing tennis|have been playing tennis" placeholder="verb phrase..." style="width:230px;">.
+    </li>
+    <li class="q-item">
+      (earlier: running &rarr; now: out of breath) He <input class="fill-input" type="text" data-answer="'s been running|has been running" placeholder="verb phrase..." style="width:200px;">.
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 9.2 -->
+<div class="exercise" data-ex="9.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 9.2</span>
+    <span style="font-size:13px; color:var(--muted);">5 items &bull; Write a question for each situation</span>
+  </div>
+  <p class="ex-prompt">Write a question for each situation.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      You meet Kate as she is leaving the swimming pool. You say:<br>
+      Hi, Kate. (you / swim?) <input class="fill-input" type="text" value="Have you been swimming?" readonly data-locked="Have you been swimming?" style="width:230px;">
+    </li>
+    <li class="q-item">
+      You have arrived a little late to meet Ben who is waiting for you. You say:<br>
+      I'm sorry I'm late, Ben. (you / wait / long?) <input class="fill-input" type="text" data-answer="Have you been waiting long?|Have you been waiting long" placeholder="Write question..." style="width:260px;">
+    </li>
+    <li class="q-item">
+      Jane's little boy comes into the house with a very dirty face and dirty hands. His mother says:<br>
+      Why are you so dirty? (what / you / do?) <input class="fill-input" type="text" data-answer="What have you been doing?|What have you been doing" placeholder="Write question..." style="width:260px;">
+    </li>
+    <li class="q-item">
+      You are in a shop and see Anna. You didn't know she worked there. You say:<br>
+      Hi, Anna. (how long / you / work / here?) <input class="fill-input" type="text" data-answer="How long have you been working here?|How long have you been working here" placeholder="Write question..." style="width:300px;">
+    </li>
+    <li class="q-item">
+      A friend tells you about his job &#8211; he sells phones. You say:<br>
+      You sell phones? (how long / you / do / that?) <input class="fill-input" type="text" data-answer="How long have you been doing that?|How long have you been doing that" placeholder="Write question..." style="width:300px;">
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 9.3 -->
+<div class="exercise" data-ex="9.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 9.3</span>
+    <span style="font-size:13px; color:var(--muted);">5 items &bull; Read situations and complete</span>
+  </div>
+  <p class="ex-prompt">Read the situations and complete the sentences.</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      It's raining. The rain started two hours ago.<br>
+      It <input class="fill-input" type="text" value="'s been raining" readonly data-locked="'s been raining" style="width:130px;"> for two hours.
+    </li>
+    <li class="q-item">
+      We are waiting for the bus. We started waiting 20 minutes ago.<br>
+      We <input class="fill-input" type="text" data-answer="'ve been waiting|have been waiting" placeholder="verb..." style="width:160px;"> for 20 minutes.
+    </li>
+    <li class="q-item">
+      I'm learning Japanese. I started classes in December.<br>
+      I <input class="fill-input" type="text" data-answer="'ve been learning Japanese|have been learning Japanese" placeholder="verb..." style="width:230px;"> since December.
+    </li>
+    <li class="q-item">
+      Jessica is working in a hotel. She started working there on 18 January.<br>
+      <input class="fill-input" type="text" data-answer="She's been working there|She has been working there" placeholder="sentence..." style="width:230px;"> since 18 January.
+    </li>
+    <li class="q-item">
+      Our friends always go to Italy for their holidays. The first time was years ago.<br>
+      <input class="fill-input" type="text" data-answer="They've been going there|They have been going there|They've been going to Italy|They have been going to Italy" placeholder="sentence..." style="width:250px;"> for years.
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- 9.4 -->
+<div class="exercise" data-ex="9.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 9.4</span>
+    <span style="font-size:13px; color:var(--muted);">9 items &bull; Present continuous vs Present perfect continuous</span>
+  </div>
+  <p class="ex-prompt">Put the verb into the present continuous (<strong>am/is/are + -ing</strong>) or present perfect continuous (<strong>have/has been + -ing</strong>).</p>
+
+  <ol class="q-list">
+    <li class="q-item">
+      <input class="fill-input" type="text" value="Maria has been learning" readonly data-locked="Maria has been learning" style="width:210px;"> <em>(Maria / learn)</em> English for two years.
+    </li>
+    <li class="q-item">
+      Hi, Tom. <input class="fill-input" type="text" data-answer="I've been looking|I have been looking" placeholder="verb..." style="width:160px;"> <em>(I / look)</em> for you. I need to ask you something.
+    </li>
+    <li class="q-item">
+      Why <input class="fill-input" type="text" data-answer="are you looking" placeholder="verb..." style="width:140px;"> <em>(you / look)</em> at me like that? Stop it!
+    </li>
+    <li class="q-item">
+      Rachel is a teacher. <input class="fill-input" type="text" data-answer="She's been teaching|She has been teaching" placeholder="verb..." style="width:180px;"> <em>(she / teach)</em> for ten years.
+    </li>
+    <li class="q-item">
+      <input class="fill-input" type="text" data-answer="I've been thinking|I have been thinking" placeholder="verb..." style="width:170px;"> <em>(I / think)</em> about what you said and I've decided to take your advice.
+    </li>
+    <li class="q-item">
+      &#8216;Is Paul on holiday this week?&#8217; &#8216;No, <input class="fill-input" type="text" data-answer="he's working|he is working" placeholder="verb..." style="width:140px;"> <em>(he / work)</em>.&#8217;
+    </li>
+    <li class="q-item">
+      Sarah is very tired. <input class="fill-input" type="text" data-answer="She's been working|She has been working" placeholder="verb..." style="width:180px;"> <em>(she / work)</em> very hard recently.
+    </li>
+    <li class="q-item">
+      It's dangerous to use your phone when <input class="fill-input" type="text" data-answer="you're driving|you are driving" placeholder="verb..." style="width:150px;"> <em>(you / drive)</em>.
+    </li>
+    <li class="q-item">
+      Laura <input class="fill-input" type="text" data-answer="has been travelling|has been traveling|'s been travelling|'s been traveling" placeholder="verb..." style="width:180px;"> <em>(travel)</em> in South America for the last three months.
+    </li>
+  </ol>
+
+  <div class="btn-row">
+    <button class="btn check-btn" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn" onclick="resetExercise(this)">Reset</button>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Exercise 9.1 &bull; Recent activity</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>It's been raining.</strong></li>
+      <li><strong>'s been watching TV</strong> (or has been watching TV / television)</li>
+      <li><strong>'ve been playing tennis</strong> (or have been playing tennis)</li>
+      <li><strong>'s been running</strong> (or has been running)</li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 9.2 &bull; Questions</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>Have you been swimming?</strong></li>
+      <li><strong>Have you been waiting long?</strong></li>
+      <li><strong>What have you been doing?</strong></li>
+      <li><strong>How long have you been working here?</strong></li>
+      <li><strong>How long have you been doing that?</strong></li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 9.3 &bull; Situations</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>'s been raining</strong></li>
+      <li><strong>'ve been waiting / have been waiting</strong></li>
+      <li><strong>'ve been learning Japanese / have been learning Japanese</strong></li>
+      <li><strong>She's been working there / She has been working there</strong></li>
+      <li><strong>They've been going there / They have been going there</strong></li>
+    </ol>
+  </div>
+</details>
+
+<details class="reveal">
+  <summary>Exercise 9.4 &bull; Continuous vs Perfect Continuous</summary>
+  <div class="reveal-content">
+    <ol>
+      <li><strong>Maria has been learning</strong></li>
+      <li><strong>I've been looking / I have been looking</strong></li>
+      <li><strong>are you looking</strong> (right now)</li>
+      <li><strong>She's been teaching / She has been teaching</strong></li>
+      <li><strong>I've been thinking / I have been thinking</strong></li>
+      <li><strong>he's working / he is working</strong> (around now)</li>
+      <li><strong>She's been working / She has been working</strong></li>
+      <li><strong>you're driving / you are driving</strong> (at the same time)</li>
+      <li><strong>has been travelling / has been traveling</strong></li>
+    </ol>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 9</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr style="border-bottom:1px solid var(--border);">
+  <td style="padding:10px 12px; font-weight:600;">Recent Activity</td>
+  <td style="padding:10px 12px;">Activity recently stopped with present result</td>
+  <td style="padding:10px 12px;"><em>The ground is wet. It has been raining.</em></td>
+</tr>
+<tr>
+  <td style="padding:10px 12px; font-weight:600;">Duration to now</td>
+  <td style="padding:10px 12px;">How long something has been continuing</td>
+  <td style="padding:10px 12px;"><em>I've been learning English for two years.</em></td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 9 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-008.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 8: Present perfect 2 (I have done)</span>
+    </a>
+    <a href="unit-010.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 10: Present perfect continuous and simple (I have been doing and I have done)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

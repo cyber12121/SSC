@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 128 — by | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="128" data-unit-title="by" data-next-unit="129">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 128 &bull; Prepositions</span>
+  <h1>by<span class="sub">by mistake/car; passive agent; beside/next to; margin of difference</span></h1>
+  <p class="lede">Explore the versatile preposition <strong>by</strong>: for method and transport (<em>by car, by email</em>), agency in passives (<em>by Shakespeare</em>), proximity (<em>by the door = beside</em>), and margins of difference (<em>increased by 10%</em>).</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Use <strong>by + noun</strong> without articles for methods: <em>by mistake, by accident, by chance, by post, by email, by hand</em> vs <em>on purpose</em>.</li>
+<li>Use <strong>by</strong> for transport modes: <em>by car, by train, by bus, by plane, by bike</em> vs <em>in my car, on the train, on foot</em>.</li>
+<li>Distinguish the passive agent (<strong>by + person/force</strong>) from instruments (<strong>with + tool</strong>): <em>opened by someone with a key</em>.</li>
+<li>Use <strong>by</strong> to mean 'beside / next to': <em>sit by me, the table by the bed</em>.</li>
+<li>Use <strong>by</strong> to express margins of change or difference: <em>won by five metres, increased by 6 million</em>.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<div class="card">
+  <h3>Part A: by for Methods &amp; Fixed Expressions</h3>
+  <div class="example-box">
+    &bull; <strong>by mistake / by accident / by chance</strong> (no article):<br>
+    <em>We hadn't arranged to meet. We met by chance.</em><br>
+    &bull; Contrast with <strong>on purpose</strong> (= intentionally): <em>I didn't do it on purpose. It was an accident.</em><br>
+    &bull; <strong>by post / by email / by hand / by credit card / by cheque</strong>:<br>
+    <em>Can I pay by credit card? (but note: pay cash or pay in cash).</em>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Part B: Transport &bull; by vs in / on</h3>
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">by + noun (general means)</div>
+      <p><strong>by car / by train / by bus<br>
+      by plane / by boat / by bike</strong><br>
+      <em>Jess usually goes to work by bus / by bike / by car.</em></p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">in / on + determiner</div>
+      <p><strong>in my car / in a taxi</strong> (not by my car)<br>
+      <strong>on the train / on the 6.45 bus</strong><br>
+      <strong>on foot</strong> (walk, not by foot)</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Part C: Agency &bull; by vs with</h3>
+  <p>In passive sentences, <strong>by</strong> indicates who or what performed the action; <strong>with</strong> indicates the instrument used:</p>
+  <div class="example-box">
+    &bull; <em>Have you ever been bitten <strong>by a dog</strong>?</em><br>
+    &bull; <em>The door must have been opened <strong>by somebody with a key</strong>. (not by a key)</em><br>
+    &bull; <em>We put the fire out <strong>with a fire extinguisher</strong>.</em><br>
+    &bull; <em>a play <strong>by Shakespeare</strong> &bull; a painting <strong>by Rembrandt</strong> &bull; music <strong>by Beethoven</strong></em>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Part D: Proximity &amp; Margins of Difference</h3>
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">by = next to / beside</div>
+      <p><em>&bull; The light switch is <strong>by the door</strong>.<br>
+      &bull; Come and sit <strong>by me</strong>.<br>
+      &bull; They live in a house <strong>by the sea</strong>.</em></p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">by = margin of difference</div>
+      <p><em>&bull; Clare's salary has increased <strong>by ten per cent</strong>.<br>
+      &bull; Carl won the race <strong>by five metres</strong>.<br>
+      &bull; Helen won <strong>by two votes</strong>.</em></p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="128.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 128.1</span>
+    <span class="ex-prompt">Complete the sentences. Choose from the box:</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-size:15px;line-height:1.8;">
+    <del>by credit card</del> &bull; by email &bull; by mistake &bull; on purpose &bull; by chance &bull; by hand
+  </div>
+  <ul class="q-list">
+    <li class="q-item">We don't need cash. We can pay <input class="fill-input" style="min-width:180px" readonly value="by credit card">.</li>
+    <li class="q-item">Kate and James keep in touch with one another mainly <input class="fill-input" style="min-width:180px" data-answer="by email">.</li>
+    <li class="q-item">I didn't intend to take your umbrella. I took it <input class="fill-input" style="min-width:180px" data-answer="by mistake">.</li>
+    <li class="q-item">I think he arrived late <input class="fill-input" style="min-width:180px" data-answer="on purpose">. He wanted to keep us waiting.</li>
+    <li class="q-item">Some things are planned. Other things happen <input class="fill-input" style="min-width:180px" data-answer="by chance">.</li>
+    <li class="q-item">Don't put my sweater in the washing machine. It has to be washed <input class="fill-input" style="min-width:180px" data-answer="by hand">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="128.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 128.2</span>
+    <span class="ex-prompt">Put in by, in or on.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Jess usually goes to work <input class="fill-input" style="min-width:60px" readonly value="by"> bus.</li>
+    <li class="q-item">I saw Jane this morning. She was <input class="fill-input" style="min-width:60px" data-answer="on"> the bus.</li>
+    <li class="q-item">How did you get here? Did you come <input class="fill-input" style="min-width:60px" data-answer="by"> train?</li>
+    <li class="q-item">I couldn't find a seat <input class="fill-input" style="min-width:60px" data-answer="on"> the train. It was full.</li>
+    <li class="q-item">How much will it cost to the airport <input class="fill-input" style="min-width:60px" data-answer="by"> taxi?</li>
+    <li class="q-item">Did you come here <input class="fill-input" style="min-width:60px" data-answer="in"> Sarah's car or yours?</li>
+    <li class="q-item">The injured man was taken to hospital <input class="fill-input" style="min-width:60px" data-answer="by"> ambulance.</li>
+    <li class="q-item">How long does it take to cross the Atlantic <input class="fill-input" style="min-width:60px" data-answer="by"> ship?</li>
+    <li class="q-item">He doesn't drive much. He goes everywhere <input class="fill-input" style="min-width:60px" data-answer="by|on his"> bike or <input class="fill-input" style="min-width:60px" data-answer="on"> foot.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="128.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 128.3</span>
+    <span class="ex-prompt">Complete these sentences about books, paintings etc. Choose from the box:</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-size:15px;line-height:1.8;">
+    by mosquitoes &bull; by one of our players &bull; by lightning &bull; by Beethoven &bull; <del>by a strange noise</del> &bull; by Leonardo da Vinci &bull; by a professional photographer
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I was woken up in the night <input class="fill-input" style="min-width:200px" readonly value="by a strange noise">.</li>
+    <li class="q-item">These pictures were taken <input class="fill-input" style="min-width:240px" data-answer="by a professional photographer">.</li>
+    <li class="q-item">I hate getting bitten <input class="fill-input" style="min-width:200px" data-answer="by mosquitoes">.</li>
+    <li class="q-item">'Mona Lisa' is a famous painting <input class="fill-input" style="min-width:200px" data-answer="by Leonardo da Vinci">.</li>
+    <li class="q-item">We lost the game because of a mistake <input class="fill-input" style="min-width:220px" data-answer="by one of our players">.</li>
+    <li class="q-item">The plane was damaged <input class="fill-input" style="min-width:200px" data-answer="by lightning">, but landed safely.</li>
+    <li class="q-item">This music is <input class="fill-input" style="min-width:200px" data-answer="by Beethoven">, but I can't remember what it's called.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="128.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 128.4</span>
+    <span class="ex-prompt">Put in by, in, on or with.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Have you ever been bitten <input class="fill-input" style="min-width:60px" readonly value="by"> a dog?</li>
+    <li class="q-item">We managed to put the fire out <input class="fill-input" style="min-width:60px" data-answer="with"> a fire extinguisher.</li>
+    <li class="q-item">Who's that man standing <input class="fill-input" style="min-width:60px" data-answer="by"> the window?</li>
+    <li class="q-item">Do you travel much <input class="fill-input" style="min-width:60px" data-answer="by"> bus?</li>
+    <li class="q-item">We travelled <input class="fill-input" style="min-width:60px" data-answer="in"> my friend's car because it is larger and more comfortable than mine.</li>
+    <li class="q-item">It was only <input class="fill-input" style="min-width:60px" data-answer="by"> accident that I discovered the error.</li>
+    <li class="q-item">These pictures were taken <input class="fill-input" style="min-width:60px" data-answer="with"> a very good camera.</li>
+    <li class="q-item">My friends live in a beautiful house <input class="fill-input" style="min-width:60px" data-answer="by"> the sea.</li>
+    <li class="q-item">There were only a few people <input class="fill-input" style="min-width:60px" data-answer="on"> the plane. It was almost empty.</li>
+    <li class="q-item">The new railway line will reduce the journey time <input class="fill-input" style="min-width:60px" data-answer="by"> two hours (from five hours to three).</li>
+    <li class="q-item">There was a small table <input class="fill-input" style="min-width:60px" data-answer="by"> the bed <input class="fill-input" style="min-width:60px" data-answer="with"> a lamp and a clock <input class="fill-input" style="min-width:60px" data-answer="on"> it.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="128.5">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 128.5</span>
+    <span class="ex-prompt">Complete the sentences using by.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Carl won the race. He was five metres in front of the other runners.<br>&rarr; <input class="fill-input" style="min-width:280px" readonly value="Carl won by five metres."></li>
+    <li class="q-item">Ten years ago the population of the country was 50 million. Now it is 56 million.<br>&rarr; In the last ten years the population has <input class="fill-input" style="min-width:320px" data-answer="increased by 6 million.|gone up by 6 million.|grown by 6 million.|risen by 6 million.|increased by 6 million|gone up by 6 million">.</li>
+    <li class="q-item">There was an election. Helen won. She got 25 votes and James got 23.<br>&rarr; Helen won <input class="fill-input" style="min-width:300px" data-answer="by two votes.|by 2 votes.|by two votes|by 2 votes|the election by two votes.|the election by two votes">.</li>
+    <li class="q-item">I went to Kate's office to see her, but she had left work five minutes before I arrived.<br>&rarr; I missed <input class="fill-input" style="min-width:300px" data-answer="her by five minutes.|Kate by five minutes.|her by 5 minutes.|Kate by 5 minutes.|her by five minutes|Kate by five minutes">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Key to Exercises 128.1 &ndash; 128.5</summary>
+  <div class="reveal-content">
+    <h4>Exercise 128.1</h4>
+    <p>2 by email &nbsp;|&nbsp; 3 by mistake &nbsp;|&nbsp; 4 on purpose &nbsp;|&nbsp; 5 by chance &nbsp;|&nbsp; 6 by hand</p>
+    <h4>Exercise 128.2</h4>
+    <p>2 on &nbsp;|&nbsp; 3 by &nbsp;|&nbsp; 4 on &nbsp;|&nbsp; 5 by &nbsp;|&nbsp; 6 in &nbsp;|&nbsp; 7 by &nbsp;|&nbsp; 8 by &nbsp;|&nbsp; 9 by bike (or on his bike) ... on foot</p>
+    <h4>Exercise 128.3</h4>
+    <p>2 by a professional photographer &nbsp;|&nbsp; 3 by mosquitoes &nbsp;|&nbsp; 4 by Leonardo da Vinci &nbsp;|&nbsp; 5 by one of our players &nbsp;|&nbsp; 6 by lightning &nbsp;|&nbsp; 7 by Beethoven</p>
+    <h4>Exercise 128.4</h4>
+    <p>2 with &nbsp;|&nbsp; 3 by &nbsp;|&nbsp; 4 by &nbsp;|&nbsp; 5 in &nbsp;|&nbsp; 6 by &nbsp;|&nbsp; 7 with &nbsp;|&nbsp; 8 by &nbsp;|&nbsp; 9 on &nbsp;|&nbsp; 10 by &nbsp;|&nbsp; 11 by ... with ... on</p>
+    <h4>Exercise 128.5</h4>
+    <p>2 In the last ten years the population has gone up / increased / grown / risen by 6 million. &nbsp;|&nbsp; 3 Helen won (the election) by two votes. &nbsp;|&nbsp; 4 I missed her/Kate by five minutes.</p>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 128</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>Method / Travel</strong></td><td><em>by</em> + noun (no article): <em>by mistake, by car, by train, by email</em></td><td><em>Jess goes to work by bus. I took it by mistake.</em></td></tr>
+<tr><td><strong>Agent vs Instrument</strong></td><td><em>by</em> + person/force; <em>with</em> + tool/instrument</td><td><em>opened by someone with a key &bull; bitten by a dog</em></td></tr>
+<tr><td><strong>Proximity &amp; Margin</strong></td><td><em>by</em> = beside; <em>by</em> = degree or margin of difference</td><td><em>sit by me &bull; won by five metres &bull; increased by 10%</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 128 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-127.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 127: in/on/at (other uses)</span>
+    </a>
+    <a href="unit-129.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 129: Noun + preposition</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

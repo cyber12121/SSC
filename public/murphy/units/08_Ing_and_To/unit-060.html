@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 60 — Preposition + -ing | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="60" data-unit-title="Preposition + -ing" data-next-unit="61">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 60 &bull; -ing and to ...</span>
+  <h1>Preposition + -ing<span class="sub">in/for/about etc. + -ing</span></h1>
+  <p class="lede">Master the core grammatical rule that verbs following any preposition must be in <code>-ing</code> form, with special focus on <em>by -ing</em>, <em>without -ing</em>, and prepositional <em>to + -ing</em> (such as <em>look forward to doing</em>).</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+      <li>Apply the universal rule: any verb following a preposition (<em>in, at, with, of, for, about, instead of, in spite of</em>) ends in <code>-ing</code>.</li>
+      <li>Use <strong>by -ing</strong> to explain how something happens or is achieved.</li>
+      <li>Use <strong>without -ing</strong> and clauses with <em>before -ing</em> and <em>after -ing</em>.</li>
+      <li>Recognize when <strong>to</strong> functions as a preposition requiring <code>-ing</code> (e.g. <em>look forward to doing</em>, <em>prefer doing X to doing Y</em>).</li>
+    
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+      <div class="card">
+        <h3>A. Preposition + Verb (-ing)</h3>
+        <p>If a preposition (<em>in, for, about, at, of, with, instead of, in spite of</em>) is followed by a verb, the verb ends in <strong>-ing</strong>:</p>
+        <div style="background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 12px 12px 0; margin:16px 0; font-size:16px; line-height:2.0;">
+          • Are you interested <strong>in working</strong> for us?<br>
+          • I’m not good <strong>at learning</strong> languages.<br>
+          • Kate must be fed up <strong>with studying</strong>.<br>
+          • What are the advantages <strong>of having</strong> a car?<br>
+          • Thanks very much <strong>for inviting</strong> me to your party.<br>
+          • How <strong>about meeting</strong> for lunch tomorrow?<br>
+          • Why don’t you go out <strong>instead of sitting</strong> at home all the time?<br>
+          • Amy went to work <strong>in spite of feeling</strong> ill.
+        </div>
+        <p>You can also say <em>instead of somebody doing</em> or <em>fed up with people doing</em>:<br>
+        • I’m fed up with <strong>people telling</strong> me what to do.</p>
+      </div>
+
+      <div class="card">
+        <h3>B. by -ing and without -ing</h3>
+        <p><strong>by -ing</strong> tells us <em>how</em> something happens:</p>
+        <ul style="margin:8px 0 0 20px; line-height:1.8;">
+          <li>You can improve your English <strong>by reading</strong> more.</li>
+          <li>She made herself ill <strong>by not eating</strong> properly.</li>
+          <li>The burglars got into the house <strong>by breaking</strong> a window and climbing in.</li>
+        </ul>
+
+        <p style="margin-top:16px;"><strong>without -ing</strong>:</p>
+        <ul style="margin:8px 0 0 20px; line-height:1.8;">
+          <li>We ran ten kilometres <strong>without stopping</strong>.</li>
+          <li>It was a stupid thing to say. I said it <strong>without thinking</strong>.</li>
+          <li>She needs to work <strong>without people disturbing</strong> her. (<em>or</em> … <strong>without being disturbed</strong>)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>C. to + -ing (to as a Preposition)</h3>
+        <p><strong>To</strong> is normally part of the infinitive (<em>decided to go</em>, <em>like to meet</em>). But <strong>to</strong> is also a preposition (e.g. <em>We drove from London to Paris</em>, <em>I prefer tea to coffee</em>).</p>
+        <p>When <strong>to</strong> is a preposition, it must be followed by <strong>-ing</strong>:</p>
+        <div class="example-box">
+          <span class="label">Crucial Rule</span>
+          • I prefer driving <strong>to travelling</strong> by train. (<em>not</em> <span class="wrong-note">to travel</span>)<br>
+          • Are you looking forward <strong>to going</strong> on holiday? (<em>not</em> <span class="wrong-note">looking forward to go</span>)<br>
+          • I’m looking forward <strong>to seeing</strong> you soon.
+        </div>
+      </div>
+    
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+      <!-- Exercise 60.1 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 60.1</span>
+          <span class="ex-note">Complete the second sentence so that it means the same as the first.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            Why is it useful to have a car?<br>
+            ➔ What are the advantages <strong>of having a car</strong>? <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            I don’t intend to apply for the job.<br>
+            ➔ I have no intention of <input type="text" class="fill-input" data-answer="applying for the job" style="min-width:240px;"> .
+          </li>
+          <li class="q-item">
+            Helen has a good memory for names.<br>
+            ➔ Helen is good at <input type="text" class="fill-input" data-answer="remembering names" style="min-width:220px;"> .
+          </li>
+          <li class="q-item">
+            You probably won’t win the lottery. You have little chance.<br>
+            ➔ You have little chance of <input type="text" class="fill-input" data-answer="winning the lottery" style="min-width:240px;"> .
+          </li>
+          <li class="q-item">
+            Did you get into trouble because you were late?<br>
+            ➔ Did you get into trouble for <input type="text" class="fill-input" data-answer="being late" style="min-width:200px;"> ?
+          </li>
+          <li class="q-item">
+            We didn’t eat at home. We went to a restaurant instead.<br>
+            ➔ We went to a restaurant instead of <input type="text" class="fill-input" data-answer="eating at home" style="min-width:220px;"> .
+          </li>
+          <li class="q-item">
+            We got into the exhibition. We didn’t have to queue.<br>
+            ➔ We got into the exhibition without <input type="text" class="fill-input" data-answer="having to queue|queuing" style="min-width:220px;"> .
+          </li>
+          <li class="q-item">
+            Amy is 90 years old, but she’s fit and healthy.<br>
+            ➔ Amy is fit and healthy despite <input type="text" class="fill-input" data-answer="being 90 years old|being 90" style="min-width:220px;"> .
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 60.2 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 60.2</span>
+          <span class="ex-note">Complete the sentences using by -ing. Choose from: borrow, break, drive, press, put, stand.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            The burglars got into the house <strong>by breaking</strong> a window. <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            I was able to reach the top shelf <input type="text" class="fill-input" data-answer="by standing" style="min-width:140px;"> on a chair.
+          </li>
+          <li class="q-item">
+            You turn on the computer <input type="text" class="fill-input" data-answer="by pressing" style="min-width:140px;"> the button at the back.
+          </li>
+          <li class="q-item">
+            Kevin got himself into financial trouble <input type="text" class="fill-input" data-answer="by borrowing" style="min-width:140px;"> too much money.
+          </li>
+          <li class="q-item">
+            You can put people’s lives in danger <input type="text" class="fill-input" data-answer="by driving" style="min-width:140px;"> too fast.
+          </li>
+          <li class="q-item">
+            We made the room look nicer <input type="text" class="fill-input" data-answer="by putting" style="min-width:140px;"> some pictures on the walls.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 60.3 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 60.3</span>
+          <span class="ex-note">Complete the sentences with a suitable word. Use only one word each time.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            We ran ten kilometres without <strong>stopping</strong>. <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            Dan left the hotel without <input type="text" class="fill-input" data-answer="paying|settling" style="min-width:110px;"> his bill.
+          </li>
+          <li class="q-item">
+            It’s a nice morning. How about <input type="text" class="fill-input" data-answer="going" style="min-width:100px;"> for a walk?
+          </li>
+          <li class="q-item">
+            You need to think carefully before <input type="text" class="fill-input" data-answer="making" style="min-width:110px;"> an important decision.
+          </li>
+          <li class="q-item">
+            It was a long trip. We were tired after <input type="text" class="fill-input" data-answer="being|travelling|sitting" style="min-width:120px;"> on a train for 36 hours.
+          </li>
+          <li class="q-item">
+            I’m not looking forward to <input type="text" class="fill-input" data-answer="going" style="min-width:100px;"> away. I’d prefer to stay here.
+          </li>
+          <li class="q-item">
+            I was annoyed because the decision was made without anybody <input type="text" class="fill-input" data-answer="asking|telling|consulting|informing" style="min-width:130px;"> me.
+          </li>
+          <li class="q-item">
+            After <input type="text" class="fill-input" data-answer="doing|having" style="min-width:110px;"> the same job for ten years, Ellie felt she needed a change.
+          </li>
+          <li class="q-item">
+            We got lost because we went straight on instead of <input type="text" class="fill-input" data-answer="turning|going" style="min-width:110px;"> left.
+          </li>
+          <li class="q-item">
+            I like these pictures you took. You’re good at <input type="text" class="fill-input" data-answer="taking" style="min-width:100px;"> pictures.
+          </li>
+          <li class="q-item">
+            Can you touch your toes without <input type="text" class="fill-input" data-answer="bending" style="min-width:110px;"> your knees?
+          </li>
+          <li class="q-item">
+            We’ve decided to sell our car. Are you interested in <input type="text" class="fill-input" data-answer="buying" style="min-width:110px;"> it?
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 60.4 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 60.4</span>
+          <span class="ex-note">For each situation, write a sentence with looking forward to.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            You are going on holiday next week. How do you feel?<br>
+            ➔ <strong>I’m looking forward to going on holiday.</strong> <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            A good friend of yours is coming to visit you soon. It will be good to see her again. How do you feel?<br>
+            ➔ I’m <input type="text" class="fill-input" data-answer="looking forward to seeing her|looking forward to seeing her again" style="min-width:300px;"> .
+          </li>
+          <li class="q-item">
+            You’re going to the dentist tomorrow. You don’t enjoy visits to the dentist. How do you feel?<br>
+            ➔ I’m not <input type="text" class="fill-input" data-answer="looking forward to going to the dentist|looking forward to going to the dentist tomorrow" style="min-width:320px;"> .
+          </li>
+          <li class="q-item">
+            Rachel doesn’t like school, but she’s leaving next summer. How does she feel?<br>
+            ➔ She’s <input type="text" class="fill-input" data-answer="looking forward to leaving school|looking forward to leaving school next summer" style="min-width:320px;"> .
+          </li>
+          <li class="q-item">
+            Joe and Helen are moving to a new apartment soon. It’s much nicer than where they live now. How do they feel?<br>
+            ➔ They’re <input type="text" class="fill-input" data-answer="looking forward to moving|looking forward to moving to their new apartment" style="min-width:320px;"> .
+          </li>
+        </ol>
+      </div>
+    
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+      <div class="answers-card">
+        <h3>Answer Key — Unit 60</h3>
+        <h4>60.1</h4>
+        <p>2 applying for the job &nbsp;•&nbsp; 3 remembering names &nbsp;•&nbsp; 4 winning the lottery &nbsp;•&nbsp; 5 being late &nbsp;•&nbsp; 6 eating at home &nbsp;•&nbsp; 7 having to queue (<em>or</em> queuing) &nbsp;•&nbsp; 8 being 90 years old</p>
+        
+        <h4>60.2</h4>
+        <p>2 by standing &nbsp;•&nbsp; 3 by pressing &nbsp;•&nbsp; 4 by borrowing &nbsp;•&nbsp; 5 by driving &nbsp;•&nbsp; 6 by putting</p>
+        
+        <h4>60.3</h4>
+        <p>2 paying / settling &nbsp;•&nbsp; 3 going &nbsp;•&nbsp; 4 making &nbsp;•&nbsp; 5 being / travelling / sitting &nbsp;•&nbsp; 6 going &nbsp;•&nbsp; 7 asking / telling / consulting &nbsp;•&nbsp; 8 doing / having &nbsp;•&nbsp; 9 turning / going &nbsp;•&nbsp; 10 taking &nbsp;•&nbsp; 11 bending &nbsp;•&nbsp; 12 buying</p>
+        
+        <h4>60.4</h4>
+        <p>2 I’m looking forward to seeing her (again). &nbsp;•&nbsp; 3 I’m not looking forward to going to the dentist (tomorrow). &nbsp;•&nbsp; 4 She’s looking forward to leaving school (next summer). &nbsp;•&nbsp; 5 They’re looking forward to moving (to their new apartment).</p>
+      </div>
+    
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 60</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+      <tr><td>60.1</td><td>Preposition + <code>-ing</code> transformations</td><td>7 items</td></tr>
+      <tr><td>60.2</td><td>Expressing method with <em>by -ing</em></td><td>5 items</td></tr>
+      <tr><td>60.3</td><td>One-word verb completions</td><td>11 items</td></tr>
+      <tr><td>60.4</td><td>Situational sentences with <em>look forward to -ing</em></td><td>4 items</td></tr>
+    
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 60 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-059.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 59: prefer and would rather</span>
+    </a>
+    <a href="unit-061.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 61: be/get used to … (I'm used to …)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

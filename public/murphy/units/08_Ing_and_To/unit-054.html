@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 54 — Verb + to … | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="54" data-unit-title="Verb + to …" data-next-unit="55">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 54 &bull; -ing and to ...</span>
+  <h1>Verb + to …<span class="sub">decide to … forget to … etc.</span></h1>
+  <p class="lede">Learn the essential verbs followed by the infinitive with <code>to</code>, continuous and perfect infinitives (<code>to be doing</code>, <code>to have done</code>), and question words + <code>to …</code>.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+      <li>Recognize verbs followed by <code>to …</code>: <em>offer, agree, refuse, decide, plan, arrange, hope, forget, manage, fail, promise, threaten, deserve, afford, learn, tend</em>.</li>
+      <li>Form negatives correctly with <code>not to …</code> (e.g. <em>decided not to go</em>).</li>
+      <li>Use continuous (<code>to be doing</code>) and perfect infinitives (<code>to have done</code>) with <em>seem, appear, claim, pretend</em>.</li>
+      <li>Master question words + <code>to …</code> (<em>how to get, what to do, whether to go</em>).</li>
+    
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+      <div class="card">
+        <h3>A. Verbs Followed by to … (Infinitive)</h3>
+        <p>After these verbs you can use <strong>to …</strong>:</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); gap:10px; margin:16px 0;">
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">offer</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">agree</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">refuse</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">decide</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">plan</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">arrange</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">hope</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">forget</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">manage</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">fail</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">promise</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">threaten</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">deserve</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">afford</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">learn</div>
+          <div style="background:var(--accent-light); padding:8px 10px; border-radius:6px; font-weight:600; text-align:center;">tend</div>
+        </div>
+
+        <ul style="margin:14px 0 0 20px; line-height:1.9;">
+          <li>It was a long way to walk, so we <strong>decided to take</strong> a taxi home.</li>
+          <li>Simon was in a difficult situation, so I <strong>agreed to help</strong> him.</li>
+          <li>I waved to Karen, but <strong>failed to attract</strong> her attention.</li>
+          <li>I like Dan, but I think he <strong>tends to talk</strong> too much.</li>
+          <li>How old were you when you <strong>learnt to drive</strong>? (or … <em>learnt how to drive</em>?)</li>
+        </ul>
+
+        <div class="example-box">
+          <span class="label">Negative Form: not to …</span>
+          • We decided <strong>not to go out</strong> because of the weather.<br>
+          • I promised <strong>not to be late</strong>.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>B. Continuous &amp; Perfect Infinitives with Seem, Appear, Pretend, Claim</h3>
+        <p>After verbs like <strong>seem</strong>, <strong>appear</strong>, <strong>pretend</strong> and <strong>claim</strong>, you can use:</p>
+        <ul style="margin:10px 0 0 20px; line-height:1.9;">
+          <li><strong>Simple infinitive</strong>: They <strong>seem to have</strong> plenty of money.</li>
+          <li><strong>Continuous infinitive (to be -ing)</strong>: I pretended <strong>to be reading</strong> the newspaper. (= I pretended that I was reading)</li>
+          <li><strong>Perfect infinitive (to have done)</strong>: Have you seen my keys? I seem <strong>to have lost</strong> them. (= it seems that I have lost them)</li>
+          <li>She claimed <strong>not to have seen</strong> me. (= she claimed that she hadn't seen me)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>C. Question Words + to … (what/how/where to …)</h3>
+        <p>After verbs like <em>ask, know, decide, remember, forget, learn, explain, understand, wonder</em>, we can use <strong>what/how/where/whether + to …</strong>:</p>
+        <div class="example-box">
+          • We asked <strong>how to get</strong> to the station.<br>
+          • Have you decided <strong>where to go</strong> on holiday?<br>
+          • I don’t know <strong>whether to apply</strong> for the job or not.<br>
+          • Do you understand <strong>what to do</strong>?<br>
+          • Can somebody show me <strong>how to use</strong> this camera?
+        </div>
+      </div>
+    
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+      <!-- Exercise 54.1 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 54.1</span>
+          <span class="ex-note">Complete the sentences for these situations.</span>
+        </div>
+        <div class="dialog-box" style="margin-bottom:18px;">
+          1. <em>"Shall we get married?" "Yes, let's."</em> ➔ They decided to get married.<br>
+          2. <em>"Please help me." "OK."</em><br>
+          3. <em>"Can I carry your bag for you?" "No, thanks. I can manage."</em><br>
+          4. <em>"Let's meet at 8 o'clock." "OK, fine."</em><br>
+          5. <em>"What's your name?" "I'm not going to tell you."</em><br>
+          6. <em>"Please don't tell anyone." "I won't. I promise."</em>
+        </div>
+
+        <ol class="q-list">
+          <li class="q-item">
+            They decided to get married. <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            She agreed <input type="text" class="fill-input" data-answer="to help him" style="min-width:180px;"> .
+          </li>
+          <li class="q-item">
+            He offered <input type="text" class="fill-input" data-answer="to carry her bag|to carry her bag for her" style="min-width:220px;"> .
+          </li>
+          <li class="q-item">
+            They arranged <input type="text" class="fill-input" data-answer="to meet at 8 o'clock|to meet at 8" style="min-width:200px;"> .
+          </li>
+          <li class="q-item">
+            She refused <input type="text" class="fill-input" data-answer="to tell him her name|to give him her name" style="min-width:220px;"> .
+          </li>
+          <li class="q-item">
+            She promised <input type="text" class="fill-input" data-answer="not to tell anyone|she wouldn't tell anyone" style="min-width:220px;"> .
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 54.2 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 54.2</span>
+          <span class="ex-note">Complete the sentences. Use a suitable verb.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            Don’t forget to lock the door when you go out. <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            There was a lot of traffic, but we managed <input type="text" class="fill-input" data-answer="to get" style="min-width:110px;"> to the airport in time.
+          </li>
+          <li class="q-item">
+            We couldn’t afford <input type="text" class="fill-input" data-answer="to live" style="min-width:110px;"> in London. It’s too expensive.
+          </li>
+          <li class="q-item">
+            I can’t play a musical instrument, but I’d like to learn <input type="text" class="fill-input" data-answer="to play" style="min-width:110px;"> the guitar.
+          </li>
+          <li class="q-item">
+            I don’t want Mark to know what happened. I decided not <input type="text" class="fill-input" data-answer="to tell" style="min-width:110px;"> him.
+          </li>
+          <li class="q-item">
+            We were all afraid to speak. Nobody dared <input type="text" class="fill-input" data-answer="say|to say" style="min-width:110px;"> anything.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 54.3 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 54.3</span>
+          <span class="ex-note">Put the verb into the correct form, to … or -ing.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            When I’m tired, I enjoy <strong>watching</strong> TV. It’s relaxing. (watch) <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            I’ve decided <input type="text" class="fill-input" data-answer="to look" style="min-width:120px;"> for another job. I need a change. (look)
+          </li>
+          <li class="q-item">
+            I’m not going anywhere! I refuse <input type="text" class="fill-input" data-answer="to move" style="min-width:120px;"> . (move)
+          </li>
+          <li class="q-item">
+            I’m not in a hurry. I don’t mind <input type="text" class="fill-input" data-answer="waiting" style="min-width:120px;"> . (wait)
+          </li>
+          <li class="q-item">
+            Tina ran in a marathon last week, but she failed <input type="text" class="fill-input" data-answer="to finish" style="min-width:120px;"> . (finish)
+          </li>
+          <li class="q-item">
+            I wish that dog would stop <input type="text" class="fill-input" data-answer="barking" style="min-width:120px;"> . It’s driving me crazy. (bark)
+          </li>
+          <li class="q-item">
+            They didn’t know I was listening to them. I pretended <input type="text" class="fill-input" data-answer="to be" style="min-width:120px;"> asleep. (be)
+          </li>
+          <li class="q-item">
+            We were hungry, so I suggested <input type="text" class="fill-input" data-answer="having" style="min-width:120px;"> dinner early. (have)
+          </li>
+          <li class="q-item">
+            Hurry up! I don’t want to risk <input type="text" class="fill-input" data-answer="missing" style="min-width:120px;"> the train. (miss)
+          </li>
+          <li class="q-item">
+            David is very quiet. He tends not <input type="text" class="fill-input" data-answer="to say" style="min-width:120px;"> much. (say)
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 54.4 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 54.4</span>
+          <span class="ex-note">Make a new sentence using the verb in brackets.</span>
+        </div>
+        <ol class="q-list">
+          <li class="q-item">
+            I’ve lost my keys. (seem)<br>
+            ➔ <strong>I seem to have lost my keys.</strong> <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            Tom is worried about something. (appear)<br>
+            ➔ Tom appears <input type="text" class="fill-input" data-answer="to be worried about something" style="min-width:280px;"> .
+          </li>
+          <li class="q-item">
+            You know a lot of people. (seem)<br>
+            ➔ You <input type="text" class="fill-input" data-answer="seem to know a lot of people" style="min-width:280px;"> .
+          </li>
+          <li class="q-item">
+            My English is getting better. (seem)<br>
+            ➔ My English <input type="text" class="fill-input" data-answer="seems to be getting better" style="min-width:280px;"> .
+          </li>
+          <li class="q-item">
+            That car has broken down. (appear)<br>
+            ➔ That car <input type="text" class="fill-input" data-answer="appears to have broken down" style="min-width:280px;"> .
+          </li>
+          <li class="q-item">
+            Rachel is enjoying her job. (seem)<br>
+            ➔ Rachel <input type="text" class="fill-input" data-answer="seems to be enjoying her job" style="min-width:280px;"> .
+          </li>
+          <li class="q-item">
+            They have solved the problem. (claim)<br>
+            ➔ They <input type="text" class="fill-input" data-answer="claim to have solved the problem" style="min-width:280px;"> .
+          </li>
+        </ol>
+      </div>
+
+      <!-- Exercise 54.5 -->
+      <div class="exercise">
+        <div class="ex-head">
+          <span class="ex-badge">Exercise 54.5</span>
+          <span class="ex-note">Complete each sentence using what/how/where/whether + these verbs:</span>
+        </div>
+        <p class="ex-prompt" style="font-family:var(--font-sans); font-size:14px; background:var(--accent-light); padding:10px 14px; border-radius:8px;">
+          <strong>Verbs:</strong> do &nbsp;•&nbsp; get &nbsp;•&nbsp; go &nbsp;•&nbsp; put &nbsp;•&nbsp; ride &nbsp;•&nbsp; use
+        </p>
+        <ol class="q-list">
+          <li class="q-item">
+            Do you know <strong>how to get to</strong> the airport from here? <span style="color:var(--muted); font-size:14px;">(Example)</span>
+          </li>
+          <li class="q-item">
+            Would you know <input type="text" class="fill-input" data-answer="what to do" style="min-width:140px;"> if there was a fire in the building?
+          </li>
+          <li class="q-item">
+            You’ll never forget <input type="text" class="fill-input" data-answer="how to ride" style="min-width:140px;"> a bike once you’ve learnt.
+          </li>
+          <li class="q-item">
+            I’ve been invited to the party, but I haven’t decided <input type="text" class="fill-input" data-answer="whether to go|if to go" style="min-width:160px;"> or not.
+          </li>
+          <li class="q-item">
+            My room is very untidy. I’ve got so many things and I don’t know <input type="text" class="fill-input" data-answer="where to put" style="min-width:160px;"> them.
+          </li>
+          <li class="q-item">
+            I have some clothes to wash. Can you show me <input type="text" class="fill-input" data-answer="how to use" style="min-width:140px;"> the washing machine?
+          </li>
+        </ol>
+      </div>
+    
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+      <div class="answers-card">
+        <h3>Answer Key — Unit 54</h3>
+        <h4>54.1</h4>
+        <p>2 to help him &nbsp;•&nbsp; 3 to carry her bag (for her) &nbsp;•&nbsp; 4 to meet at 8 o’clock &nbsp;•&nbsp; 5 to tell him her name (<em>or</em> to give him her name) &nbsp;•&nbsp; 6 not to tell anyone (<em>or</em> she wouldn't tell anyone)</p>
+        
+        <h4>54.2</h4>
+        <p>2 to get &nbsp;•&nbsp; 3 to live &nbsp;•&nbsp; 4 to play &nbsp;•&nbsp; 5 to tell &nbsp;•&nbsp; 6 say (<em>or</em> to say)</p>
+        
+        <h4>54.3</h4>
+        <p>2 to look &nbsp;•&nbsp; 3 to move &nbsp;•&nbsp; 4 waiting &nbsp;•&nbsp; 5 to finish &nbsp;•&nbsp; 6 barking &nbsp;•&nbsp; 7 to be &nbsp;•&nbsp; 8 having &nbsp;•&nbsp; 9 missing &nbsp;•&nbsp; 10 to say</p>
+        
+        <h4>54.4</h4>
+        <p>2 Tom appears to be worried about something. &nbsp;•&nbsp; 3 You seem to know a lot of people. &nbsp;•&nbsp; 4 My English seems to be getting better. &nbsp;•&nbsp; 5 That car appears to have broken down. &nbsp;•&nbsp; 6 Rachel seems to be enjoying her job. &nbsp;•&nbsp; 7 They claim to have solved the problem.</p>
+
+        <h4>54.5</h4>
+        <p>2 what to do &nbsp;•&nbsp; 3 how to ride &nbsp;•&nbsp; 4 whether to go &nbsp;•&nbsp; 5 where to put &nbsp;•&nbsp; 6 how to use</p>
+      </div>
+    
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 54</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+      <tr><td>54.1</td><td>Reported offers, agreements &amp; promises</td><td>5 items</td></tr>
+      <tr><td>54.2</td><td>Verb completion with infinitives</td><td>5 items</td></tr>
+      <tr><td>54.3</td><td>Contrasting <code>to …</code> vs <code>-ing</code></td><td>9 items</td></tr>
+      <tr><td>54.4</td><td>Infinitives with <em>seem, appear, claim</em></td><td>6 items</td></tr>
+      <tr><td>54.5</td><td>Question words + infinitive (<em>how/what to</em>)</td><td>5 items</td></tr>
+    
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 54 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-053.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 53: Verb + -ing (enjoy doing / stop doing etc.)</span>
+    </a>
+    <a href="unit-055.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 55: Verb (+ object) + to … (I want you to …)</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

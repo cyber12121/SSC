@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 92 — Relative clauses 1: clauses with who/that/which | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="92" data-unit-title="Relative clauses 1: clauses with who/that/which" data-next-unit="93">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 92 &bull; Relative clauses</span>
+  <h1>Relative clauses 1: clauses with who/that/which<span class="sub">Subject relative clauses for people (who/that) and things (that/which)</span></h1>
+  <p class="lede">A relative clause tells us which person or thing the speaker means. We use who or that for people, and that or which for things.</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Understand what a relative clause is and how it tells us which person or thing the speaker means.</li>
+<li>Use <strong>who</strong> (or <strong>that</strong>) for people (<em>the woman who lives next door, someone who designs buildings</em>).</li>
+<li>Use <strong>that</strong> or <strong>which</strong> (never <em>who</em>) for things (<em>the machine that/which was broken</em>).</li>
+<li>Avoid duplicating pronouns (<em>the woman who lives next door</em>, not *who she lives).</li>
+<li>Contrast <strong>what</strong> (= the thing that) with <strong>that</strong>.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<section>
+  <h2>Part A: What is a Relative Clause?</h2>
+  <div class="card">
+    <p>A clause is a part of a sentence. A <strong>relative clause</strong> tells us which person or thing (or what kind of person or thing) the speaker means:</p>
+    <div class="example-box">
+      The woman <strong>who lives next door</strong> is a doctor.<br>
+      <small style="color:var(--muted);">(‘who lives next door’ tells us which woman)</small><br>
+      We stayed at a hotel <strong>which had a swimming pool</strong>.<br>
+      <small style="color:var(--muted);">(‘which had a swimming pool’ tells us what kind of hotel)</small>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part B: Who / That for People</h2>
+  <div class="card">
+    <p>We use <strong>who</strong> in a relative clause when we are talking about <strong>people</strong> (not things):</p>
+    <div class="example-box">
+      An architect is someone <strong>who designs buildings</strong>.<br>
+      What was the name of the person <strong>who called you</strong>?<br>
+      Anyone <strong>who wants to apply for the job</strong> must do so by Friday.
+    </div>
+    <p>You can also use <strong>that</strong> (instead of <em>who</em>) for people, but <strong>who</strong> is more usual:</p>
+    <div class="example-box">
+      The woman <strong>that lives next door</strong> is a doctor.
+    </div>
+    <p><strong>Warning:</strong> Do NOT use <span class="wrong-note">which</span> for people: <em>the driver who caused the accident</em> <span class="wrong-note">(not the driver which)</span>.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Part C: That / Which for Things</h2>
+  <div class="card">
+    <p>When we talk about <strong>things</strong>, we use <strong>that</strong> or <strong>which</strong> (not <em>who</em>):</p>
+    <div class="example-box">
+      Where is the cheese <strong>that was in the fridge</strong>?<br>
+      Where is the cheese <strong>which was in the fridge</strong>?<br>
+      I don’t like stories <strong>that have unhappy endings</strong>. <span class="wrong-note">(not stories who have)</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Part D: No Duplicate Pronouns; That vs What</h2>
+  <div class="card">
+    <p>Remember that in relative clauses we use <em>who/that/which</em>, <strong>not</strong> <em>he/she/they/it</em>:</p>
+    <div class="example-box">
+      I’ve never spoken to the woman <strong>who lives next door</strong>. <span class="wrong-note">(not who she lives next door)</span><br>
+      The car <strong>that broke down</strong> has been towed away. <span class="wrong-note">(not that it broke down)</span>
+    </div>
+    <p><strong>What</strong> means ‘the thing(s) that’. Compare <em>what</em> and <em>that</em>:</p>
+    <div class="example-box">
+      <strong>What happened</strong> was my fault. <em>(= The thing that happened was my fault.)</em><br>
+      Everything <strong>that happened</strong> was my fault. <span class="wrong-note">(not Everything what happened)</span><br>
+      The machine <strong>that broke down</strong> is working again. <span class="wrong-note">(not The machine what broke down)</span>
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="92.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 92.1</span>
+    <span class="ex-prompt">What do these words mean? Choose from the box and write sentences with who.</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-style:italic;">
+    steals from a shop &bull; designs buildings &bull; doesn't tell the truth &bull; is not brave &bull; buys something from a shop &bull; pays rent to live somewhere &bull; breaks into a house to steal things &bull; expects the worst to happen
+  </div>
+  <ul class="q-list">
+    <li class="q-item">(an architect) &rarr; <input class="fill-input" style="min-width:320px" readonly value="An architect is someone who designs buildings."></li>
+    <li class="q-item">(a customer) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A customer is someone who buys something from a shop.|someone who buys something from a shop"></li>
+    <li class="q-item">(a burglar) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A burglar is someone who breaks into a house to steal things.|someone who breaks into a house to steal things"></li>
+    <li class="q-item">(a coward) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A coward is someone who is not brave.|someone who is not brave"></li>
+    <li class="q-item">(a tenant) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A tenant is someone who pays rent to live somewhere.|someone who pays rent to live somewhere"></li>
+    <li class="q-item">(a shoplifter) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A shoplifter is someone who steals from a shop.|someone who steals from a shop"></li>
+    <li class="q-item">(a liar) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A liar is someone who doesn't tell the truth.|someone who doesn't tell the truth"></li>
+    <li class="q-item">(a pessimist) &rarr; <input class="fill-input" style="min-width:320px" data-answer="A pessimist is someone who expects the worst to happen.|someone who expects the worst to happen"></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="92.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 92.2</span>
+    <span class="ex-prompt">Make one sentence from two. Use who/that/which.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">A girl was injured in the accident. She is now in hospital. &rarr; <input class="fill-input" style="min-width:320px" readonly value="The girl who was injured in the accident is now in hospital."></li>
+    <li class="q-item">A waiter served us. He was impolite and impatient. &rarr; The <input class="fill-input" style="min-width:320px" data-answer="waiter who served us was impolite and impatient.|waiter that served us was impolite and impatient.|waiter who/that served us was impolite and impatient."></li>
+    <li class="q-item">A building was destroyed in the fire. It has now been rebuilt. &rarr; The <input class="fill-input" style="min-width:320px" data-answer="building that was destroyed in the fire has now been rebuilt.|building which was destroyed in the fire has now been rebuilt.|building that/which was destroyed in the fire has now been rebuilt."></li>
+    <li class="q-item">Some people were arrested. They have now been released. &rarr; The <input class="fill-input" style="min-width:320px" data-answer="people who were arrested have now been released.|people that were arrested have now been released.|people who/that were arrested have now been released."></li>
+    <li class="q-item">A bus goes to the airport. It runs every half hour. &rarr; The <input class="fill-input" style="min-width:320px" data-answer="bus that goes to the airport runs every half hour.|bus which goes to the airport runs every half hour.|bus that/which goes to the airport runs every half hour."></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="92.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 92.3</span>
+    <span class="ex-prompt">Complete the sentences. Choose from the box and use who/that/which.</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-style:italic;">
+    happened in the past &bull; runs away from home &bull; cannot be explained &bull; developed the theory of relativity &bull; makes furniture &bull; can support life &bull; has stayed there &bull; were hanging on the wall
+  </div>
+  <ul class="q-list">
+    <li class="q-item">Helen works for a company <input class="fill-input" style="min-width:240px" readonly value="that makes furniture">.</li>
+    <li class="q-item">The movie is about a girl <input class="fill-input" style="min-width:260px" data-answer="who runs away from home|that runs away from home">.</li>
+    <li class="q-item">What happened to the pictures <input class="fill-input" style="min-width:260px" data-answer="that were hanging on the wall|which were hanging on the wall">?</li>
+    <li class="q-item">A mystery is something <input class="fill-input" style="min-width:260px" data-answer="that cannot be explained|which cannot be explained">.</li>
+    <li class="q-item">I've heard it's a good hotel, but I don't know anyone <input class="fill-input" style="min-width:260px" data-answer="who has stayed there|that has stayed there">.</li>
+    <li class="q-item">History is the study of things <input class="fill-input" style="min-width:260px" data-answer="that happened in the past|which happened in the past">.</li>
+    <li class="q-item">Albert Einstein was the scientist <input class="fill-input" style="min-width:260px" data-answer="who developed the theory of relativity|that developed the theory of relativity">.</li>
+    <li class="q-item">It seems that Earth is the only planet <input class="fill-input" style="min-width:260px" data-answer="that can support life|which can support life">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="92.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 92.4</span>
+    <span class="ex-prompt">Are these sentences right or wrong? Correct them where necessary, or write 'OK'.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I don't like stories who have unhappy endings. &rarr; <input class="fill-input" style="min-width:260px" readonly value="stories that have"></li>
+    <li class="q-item">What was the name of the person who phoned? &rarr; <input class="fill-input" style="min-width:260px" readonly value="OK"></li>
+    <li class="q-item">Where's the nearest shop who sells bread? &rarr; <input class="fill-input" style="min-width:260px" data-answer="that sells|which sells|shop that sells bread|shop which sells bread"></li>
+    <li class="q-item">Dan said some things about me they were not true. &rarr; <input class="fill-input" style="min-width:260px" data-answer="that were not true|which were not true"></li>
+    <li class="q-item">The driver which caused the accident was fined &pound;500. &rarr; <input class="fill-input" style="min-width:260px" data-answer="The driver who caused|The driver that caused|who caused"></li>
+    <li class="q-item">Do you know the person that took these pictures? &rarr; <input class="fill-input" style="min-width:260px" data-answer="OK"></li>
+    <li class="q-item">We live in a world what is changing all the time. &rarr; <input class="fill-input" style="min-width:260px" data-answer="that is changing|which is changing"></li>
+    <li class="q-item">Gary apologised for what he said. &rarr; <input class="fill-input" style="min-width:260px" data-answer="OK"></li>
+    <li class="q-item">What was the name of the horse what won the race? &rarr; <input class="fill-input" style="min-width:260px" data-answer="that won|which won"></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<div class="reveal">
+  <div class="reveal-head" onclick="toggleReveal(this)"><span>Key to Exercises 92.1 &ndash; 92.4</span><span class="reveal-arrow">&blacktriangledown;</span></div>
+  <div class="reveal-body">
+    <h4>Exercise 92.1</h4>
+    <p>2 A customer is someone who buys something from a shop.<br>
+       3 A burglar is someone who breaks into a house to steal things.<br>
+       4 A coward is someone who is not brave.<br>
+       5 A tenant is someone who pays rent to live somewhere.<br>
+       6 A shoplifter is someone who steals from a shop.<br>
+       7 A liar is someone who doesn't tell the truth.<br>
+       8 A pessimist is someone who expects the worst to happen.</p>
+    <h4>Exercise 92.2</h4>
+    <p>2 The waiter who/that served us was impolite and impatient.<br>
+       3 The building that/which was destroyed in the fire has now been rebuilt.<br>
+       4 The people who/that were arrested have now been released.<br>
+       5 The bus that/which goes to the airport runs every half hour.</p>
+    <h4>Exercise 92.3</h4>
+    <p>2 who/that runs away from home &nbsp;|&nbsp; 3 that/which were hanging on the wall &nbsp;|&nbsp; 4 that/which cannot be explained &nbsp;|&nbsp; 5 who/that has stayed there &nbsp;|&nbsp; 6 that/which happened in the past &nbsp;|&nbsp; 7 who/that developed the theory of relativity &nbsp;|&nbsp; 8 that/which can support life</p>
+    <h4>Exercise 92.4</h4>
+    <p>3 shop that/which sells &nbsp;|&nbsp; 4 things that/which were not true &nbsp;|&nbsp; 5 driver who/that caused &nbsp;|&nbsp; 6 OK &nbsp;|&nbsp; 7 world that/which is changing &nbsp;|&nbsp; 8 OK &nbsp;|&nbsp; 9 horse that/which won</p>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 92</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>For People</strong></td><td>Use <code>who</code> or <code>that</code> (never <em>which</em>)</td><td><em>the person who phoned, someone that works hard</em></td></tr>
+<tr><td><strong>For Things</strong></td><td>Use <code>that</code> or <code>which</code> (never <em>who</em>)</td><td><em>the cheese that was in the fridge</em></td></tr>
+<tr><td><strong>No Duplicate Pronoun</strong></td><td>Do not repeat subject pronoun inside clause</td><td><em>the woman who lives here</em> (not *who she lives)</td></tr>
+<tr><td><strong>What vs That</strong></td><td><code>what</code> = the thing that; <code>that</code> links to a preceding noun</td><td><em>What happened was my fault. Everything that happened...</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 92 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="../10_Pronouns_and_Determiners/unit-091.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 91: each and every</span>
+    </a>
+    <a href="unit-093.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 93: Relative clauses 2: with and without who/that/which</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 122 — on time and in time · at the end and in the end | English Grammar in Use</title>
+<link rel="stylesheet" href="../../assets/egiu.css">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1f2933; --muted: #5c6b7a;
+    --accent: #1e6f5c; --accent-light: #e6f2ee; --accent-dark: #14503f;
+    --highlight: #fff3cd; --correct: #2e7d32; --correct-bg: #e8f5e9;
+    --correct-border: #a5d6a7; --wrong: #c62828; --wrong-bg: #ffebee;
+    --wrong-border: #ef9a9a; --border: #e3ddd0;
+    --shadow: 0 4px 20px rgba(31,41,51,0.06); --radius: 14px;
+    --font-serif: 'Georgia', 'Charter', 'Cambria', serif;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #141820; --card: #1e2433; --ink: #e8e6e3; --muted: #8a97a8;
+    --accent: #4db896; --accent-light: #1a3028; --accent-dark: #3da07e;
+    --highlight: #3d3010; --correct: #66bb6a; --correct-bg: #1a2e1a;
+    --correct-border: #2e5c30; --wrong: #ef5350; --wrong-bg: #2e1a1a;
+    --wrong-border: #5c2e2e; --border: #2e3550;
+    --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font-serif); background:var(--bg); color:var(--ink); line-height:1.7; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+  .progress-wrap { position:fixed; top:0; left:0; width:100%; height:3px; z-index:200; }
+  .progress-bar { height:100%; width:0%; background:var(--accent); transition:width 0.1s; }
+
+  .topbar { position:sticky; top:0; z-index:100; background:rgba(247,245,240,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:12px 0; }
+  [data-theme="dark"] .topbar { background:rgba(20,24,32,0.92); }
+  .topbar-inner { max-width:920px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:var(--font-sans); font-weight:700; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand:hover { color:var(--accent-dark); }
+  .nav-right { display:flex; align-items:center; gap:20px; }
+  .nav-links { display:flex; gap:18px; font-family:var(--font-sans); font-size:13px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+  .theme-toggle-btn { background:transparent; border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:16px; cursor:pointer; color:var(--ink); }
+
+  .hero { max-width:920px; margin:0 auto; padding:50px 24px 20px; }
+  .unit-badge { display:inline-block; font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); background:var(--accent-light); padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+  h1 { font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 14px; letter-spacing:-0.02em; font-weight:700; }
+  h1 .sub { display:block; font-size:0.52em; color:var(--muted); font-weight:400; margin-top:8px; font-style:italic; }
+  .lede { font-size:19px; color:var(--muted); max-width:700px; margin:0; }
+
+  main { max-width:920px; margin:0 auto; padding:10px 24px 80px; }
+  section { margin:48px 0; }
+
+  h2 { font-family:var(--font-sans); font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin:0 0 20px; display:flex; align-items:center; gap:12px; }
+  h2::after { content:""; flex:1; height:1px; background:var(--border); }
+  h3 { font-size:22px; margin:28px 0 14px; letter-spacing:-0.01em; color:var(--ink); }
+  h4 { font-family:var(--font-sans); font-size:15px; font-weight:700; margin:20px 0 8px; color:var(--ink); }
+  p { margin:0 0 14px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 30px; box-shadow:var(--shadow); margin:20px 0; }
+  .example-box { background:var(--accent-light); border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 var(--radius) var(--radius) 0; margin:18px 0; font-size:16px; }
+  .example-box .label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px; }
+  .highlight { background:linear-gradient(180deg,transparent 60%,var(--highlight) 60%); font-weight:600; padding:0 2px; }
+  .wrong-note { color:var(--wrong); font-size:14px; font-style:italic; }
+
+  .compare-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:20px 0; }
+  .compare-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+  .compare-col.simple { border-top:4px solid var(--accent); }
+  .compare-col.continuous { border-top:4px solid #3b82f6; }
+  .compare-head { font-family:var(--font-sans); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; }
+  .compare-col.simple .compare-head { color:var(--accent); }
+  .compare-col.continuous .compare-head { color:#2563eb; }
+
+  /* Exercises */
+  .exercise { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; box-shadow:var(--shadow); margin:28px 0; }
+  .ex-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .ex-badge { font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--accent); text-transform:uppercase; background:var(--accent-light); padding:4px 10px; border-radius:6px; }
+  .ex-prompt { font-weight:600; font-size:17px; margin:0 0 16px; color:var(--ink); }
+  .ex-note { font-size:14px; color:var(--muted); margin-bottom:18px; font-style:italic; }
+
+  .q-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; counter-reset:q-counter; }
+  .q-item { position:relative; padding-left:36px; line-height:2.1; font-size:16.5px; }
+  .q-item::before { counter-increment:q-counter; content:counter(q-counter); position:absolute; left:0; top:4px; font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--muted); width:24px; text-align:right; }
+
+  .dialog-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:8px 0; line-height:1.9; }
+  .speaker { font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--accent); margin-right:6px; }
+
+  .underlined { text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; font-weight:600; color:var(--ink); }
+
+  .fill-input { font-family:inherit; font-size:16px; border:none; border-bottom:2px solid var(--border); padding:3px 8px; margin:0 4px; background:var(--bg); border-radius:4px 4px 0 0; color:var(--ink); transition:all 0.2s; min-width:140px; }
+  .fill-input:focus { outline:none; border-bottom-color:var(--accent); background:var(--accent-light); }
+  .fill-input.correct { border-bottom-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .fill-input.wrong { border-bottom-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+  .fill-input[readonly] { color:var(--accent-dark); border-bottom-color:var(--accent-light); cursor:default; }
+  .fill-input[readonly].correct { color:var(--correct); border-bottom-color:var(--correct); background:var(--correct-bg); }
+
+  .match-select { font-family:inherit; font-size:16px; border:1px solid var(--border); padding:4px 8px; margin:0 4px; background:var(--bg); border-radius:6px; color:var(--ink); }
+  .match-select.correct { border-color:var(--correct); background:var(--correct-bg); color:var(--correct); }
+  .match-select.wrong { border-color:var(--wrong); background:var(--wrong-bg); color:var(--wrong); }
+
+  .btn-row { display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+  .btn { font-family:var(--font-sans); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; }
+  .check-btn { background:var(--accent); color:#fff; border:none; }
+  .check-btn:hover { background:var(--accent-dark); }
+  .show-btn { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .show-btn:hover { background:var(--accent-light); }
+  .reset-btn { background:transparent; color:var(--muted); border:1px solid var(--border); }
+  .reset-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+  .feedback { margin-top:16px; font-family:var(--font-sans); font-size:14px; font-weight:600; padding:12px 18px; border-radius:10px; display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct-border); }
+  .feedback.bad { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong-border); }
+
+  .score-bar-wrap { margin-top:16px; font-family:var(--font-sans); font-size:13px; }
+  .score-label { display:flex; justify-content:space-between; margin-bottom:6px; font-weight:600; color:var(--muted); }
+  .score-bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+  .score-bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s ease; }
+  .score-bar-fill.full { background:var(--correct); }
+  .score-bar-fill.partial { background:var(--wrong); }
+
+  /* Accordion Reveal */
+  .reveal { background:var(--card); border:1px solid var(--border); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .reveal summary { font-family:var(--font-sans); font-size:14px; font-weight:600; padding:14px 20px; cursor:pointer; color:var(--accent); list-style:none; display:flex; align-items:center; justify-content:space-between; transition:background 0.2s; user-select:none; }
+  .reveal summary:hover { background:rgba(30,111,92,0.04); }
+  .reveal summary::-webkit-details-marker { display:none; }
+  .reveal summary::after { content:"+"; font-size:20px; font-weight:400; color:var(--muted); transition:transform 0.2s; }
+  .reveal[open] summary::after { transform:rotate(45deg); }
+  .reveal-content { padding:16px 20px 20px; font-size:15px; border-top:1px solid var(--border); }
+  .reveal-content ol { margin:0; padding-left:22px; }
+  .reveal-content li { padding:4px 0; color:var(--muted); }
+  .reveal-content li strong { color:var(--accent-dark); }
+
+  .objectives { list-style:none; padding:0; margin:20px 0; display:grid; gap:10px; }
+  .objectives li { padding-left:32px; position:relative; font-size:16px; }
+  .objectives li::before { content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; font-size:16px; }
+
+  .unit-nav { max-width:920px; margin:40px auto 0; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .unit-nav a { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; text-decoration:none; color:var(--ink); transition:all 0.15s; box-shadow:var(--shadow); }
+  .unit-nav a:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(30,111,92,0.12); }
+  .unit-nav .nav-label { font-family:var(--font-sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .unit-nav .nav-title { font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--accent-dark); }
+  .unit-nav .nav-next { text-align:right; }
+
+  .completion-banner { max-width:920px; margin:40px auto 0; padding:0 24px; display:none; }
+  .completion-banner.show { display:block; }
+  .completion-inner { background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%); color:#fff; border-radius:var(--radius); padding:30px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .completion-inner .trophy { font-size:42px; }
+  .completion-inner .text { flex:1; min-width:200px; }
+  .completion-inner h3 { margin:0 0 4px; font-size:20px; color:#fff; }
+  .completion-inner p { margin:0; opacity:0.9; font-size:15px; }
+
+  .cross-ref { font-family:var(--font-sans); font-size:13px; color:var(--muted); background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-top:24px; }
+  .cross-ref a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .cross-ref a:hover { text-decoration:underline; }
+
+  @media(max-width:650px) {
+    body { font-size:16px; }
+    .card,.exercise { padding:22px 18px; }
+    .compare-cols { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .unit-nav { grid-template-columns:1fr; }
+    .fill-input { min-width:110px; }
+  }
+</style>
+</head>
+<body data-unit="122" data-unit-title="on time and in time · at the end and in the end" data-next-unit="123">
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../index.html">&#8592; English Grammar in Use</a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#answers">Answers</a>
+        <a href="#summary">Summary</a>
+      </nav>
+      <button class="theme-toggle-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <span class="unit-badge">Unit 122 &bull; Prepositions</span>
+  <h1>on time and in time · at the end and in the end<span class="sub">punctual vs soon enough; at the time when something ends vs finally</span></h1>
+  <p class="lede">Master the critical distinctions between <strong>on time</strong> (punctual, at the planned time) and <strong>in time</strong> (soon enough, before it's too late), and between <strong>at the end</strong> (the point when something finishes) and <strong>in the end</strong> (finally, the ultimate outcome).</p>
+</header>
+
+<main>
+  <!-- Objectives -->
+  <section>
+    <h2>Learning Objectives</h2>
+    <div class="card">
+      <p style="margin:0 0 12px; font-weight:600;">After completing this unit, you will be able to:</p>
+      <ul class="objectives">
+        
+<li>Contrast <strong>on time</strong> (punctual, according to schedule) and <strong>in time</strong> (soon enough for something / to do something).</li>
+<li>Use <strong>just in time</strong> for situations where something happened almost too late.</li>
+<li>Differentiate <strong>at the end of (something)</strong> (the closing point of an event or period) from <strong>in the end</strong> (finally / eventually).</li>
+<li>Identify the opposites: <em>too late</em> is opposite <em>in time</em>; <em>at the beginning</em> is opposite <em>at the end</em>; <em>at first</em> is opposite <em>in the end</em>.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theory Part A -->
+  <section id="theory">
+    <h2>Part A &#8212; Theory</h2>
+    
+<div class="card">
+  <h3>Part A: on time vs in time</h3>
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">on time = punctual, not late</div>
+      <p>If something happens <strong>on time</strong>, it happens at the scheduled or planned time:<br>
+      &bull; <em>The 11.45 train left <strong>on time</strong>. (= it left at 11.45)</em><br>
+      &bull; <em>Please be <strong>on time</strong>. Don't be late.</em><br>
+      &bull; <em>The conference was well-organised. Everything began and finished <strong>on time</strong>.</em></p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">in time = soon enough</div>
+      <p><strong>in time (for something / to do something)</strong> means soon enough, not too late:<br>
+      &bull; <em>Will you be home <strong>in time for dinner</strong>?</em><br>
+      &bull; <em>I want to get home <strong>in time to watch</strong> the game.</em><br>
+      &bull; Opposite: <strong>too late</strong> (<em>I got home too late to watch the game</em>).<br>
+      &bull; <strong>just in time</strong> (= almost too late): <em>We managed to stop <strong>just in time</strong>.</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Part B: at the end vs in the end</h3>
+  <div class="compare-cols">
+    <div class="compare-col simple">
+      <div class="compare-head">at the end (of something)</div>
+      <p>At the time when something ends (followed by <em>of</em>):<br>
+      &bull; <strong>at the end of the month / January</strong><br>
+      &bull; <strong>at the end of the film / game / concert</strong><br>
+      &bull; <em>The players shook hands <strong>at the end of the game</strong>.</em><br>
+      &bull; We do <strong>not</strong> say 'in the end of...'.<br>
+      &bull; Opposite: <strong>at the beginning</strong> (<em>at the beginning of January</em>).</p>
+    </div>
+    <div class="compare-col continuous">
+      <div class="compare-head">in the end = finally</div>
+      <p>Used to say what the final result or outcome of a situation was:<br>
+      &bull; <em>We had a lot of problems with our car. We sold it <strong>in the end</strong>. (= finally)</em><br>
+      &bull; <em>Alan couldn't decide where to go. He didn't go anywhere <strong>in the end</strong>.</em><br>
+      &bull; Opposite: <strong>at first</strong> (<em>At first we didn't get on, but in the end we became friends</em>).</p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part B: Exercises -->
+  <section id="exercises">
+    <h2>Part B &#8212; Exercises</h2>
+    
+<div class="exercise" data-ex="122.1">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 122.1</span>
+    <span class="ex-prompt">Complete the sentences with on time or in time.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">The bus is usually <input class="fill-input" style="min-width:110px" readonly value="on time">, but it was late this morning.</li>
+    <li class="q-item">The film was supposed to start at 8.30, but it didn't begin <input class="fill-input" style="min-width:110px" data-answer="on time">.</li>
+    <li class="q-item">The train service isn't very good. The trains are rarely <input class="fill-input" style="min-width:110px" data-answer="on time">.</li>
+    <li class="q-item">We nearly missed our train. We got to the station just <input class="fill-input" style="min-width:110px" data-answer="in time">.</li>
+    <li class="q-item">We want to start the meeting <input class="fill-input" style="min-width:110px" data-answer="on time">, so please don't be late.</li>
+    <li class="q-item">I've just washed this shirt. I want to wear it this evening, so I hope it will be dry <input class="fill-input" style="min-width:110px" data-answer="in time">.</li>
+    <li class="q-item">I almost forgot that it was Joe's birthday. Fortunately I remembered <input class="fill-input" style="min-width:110px" data-answer="in time">.</li>
+    <li class="q-item">Why are you never <input class="fill-input" style="min-width:110px" data-answer="on time">? You always keep everybody waiting.</li>
+    <li class="q-item">It is hoped that the new stadium will be ready <input class="fill-input" style="min-width:110px" data-answer="in time"> for the tournament later this year.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="122.2">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 122.2</span>
+    <span class="ex-prompt">Read the situations and make sentences using just in time.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">A child ran into the road in front of your car. You saw the child at the last moment. (manage / stop)<br>&rarr; <input class="fill-input" style="min-width:320px" readonly value="I managed to stop just in time."></li>
+    <li class="q-item">You were walking home. Just after you got home, it started to rain very heavily. (get / home)<br>&rarr; I <input class="fill-input" style="min-width:320px" data-answer="got home just in time.|got home just in time">.</li>
+    <li class="q-item">Your friend was going to sit on the chair you had just painted. You said, 'Don't sit on that chair!', so he didn't. (stop / him)<br>&rarr; I <input class="fill-input" style="min-width:320px" data-answer="stopped him just in time.|stopped him just in time">.</li>
+    <li class="q-item">You and a friend went to the cinema. You were late, and you thought you would miss the beginning of the film. But the film began just as you sat down in the cinema. (get / cinema / beginning / film)<br>&rarr; We <input class="fill-input" style="min-width:440px" data-answer="got to the cinema just in time for the beginning of the film.|got to the cinema just in time to see the beginning of the film.|got to the cinema just in time for the beginning of the film|got to the cinema just in time to see the beginning of the film">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="122.3">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 122.3</span>
+    <span class="ex-prompt">Complete the sentences using at the end + the following:</span>
+  </div>
+  <div class="card" style="padding:12px 18px;margin-bottom:18px;font-size:15px;line-height:1.8;">
+    the course &bull; <del>the game</del> &bull; the interview &bull; the month &bull; the race
+  </div>
+  <ul class="q-list">
+    <li class="q-item">The players shook hands <input class="fill-input" style="min-width:200px" readonly value="at the end of the game">.</li>
+    <li class="q-item">I get paid <input class="fill-input" style="min-width:220px" data-answer="at the end of the month">.</li>
+    <li class="q-item">The students had a party <input class="fill-input" style="min-width:220px" data-answer="at the end of the course">.</li>
+    <li class="q-item">Two of the runners collapsed <input class="fill-input" style="min-width:220px" data-answer="at the end of the race">.</li>
+    <li class="q-item">I was surprised when I was offered the job <input class="fill-input" style="min-width:240px" data-answer="at the end of the interview">.</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="122.4">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 122.4</span>
+    <span class="ex-prompt">Write sentences with in the end. Use the verb in brackets.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">We had a lot of problems with our car. (sell)<br>&rarr; <input class="fill-input" style="min-width:320px" readonly value="In the end we sold it."></li>
+    <li class="q-item">Anna got more and more fed up with her job. (resign)<br>&rarr; <input class="fill-input" style="min-width:380px" data-answer="In the end she resigned.|She resigned in the end.|In the end she resigned from her job.|She resigned from her job in the end.|In the end Anna resigned.|Anna resigned in the end."></li>
+    <li class="q-item">I tried to learn Japanese, but I found it too difficult. (give up)<br>&rarr; <input class="fill-input" style="min-width:380px" data-answer="In the end I gave up.|I gave up in the end.|In the end I gave up trying to learn Japanese.|In the end I gave up learning Japanese.|I gave up trying to learn Japanese in the end.|I gave up learning Japanese in the end."></li>
+    <li class="q-item">We couldn't decide whether to go to the party or not. (not / go)<br>&rarr; <input class="fill-input" style="min-width:380px" data-answer="In the end we decided not to go.|In the end we didn't go.|We decided not to go in the end.|We didn't go in the end.|In the end we decided not to go to the party.|In the end we didn't go to the party.|We decided not to go to the party in the end.|We didn't go to the party in the end."></li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+<div class="exercise" data-ex="122.5">
+  <div class="ex-head">
+    <span class="ex-badge">Exercise 122.5</span>
+    <span class="ex-prompt">Put in at or in.</span>
+  </div>
+  <ul class="q-list">
+    <li class="q-item">I'm going away <input class="fill-input" style="min-width:60px" readonly value="at"> the end of the month.</li>
+    <li class="q-item">It took Gary a long time to find work. <input class="fill-input" style="min-width:60px" data-answer="In|in"> the end he got a job as a bus driver.</li>
+    <li class="q-item">I couldn't decide what to buy Amy for her birthday. I didn't buy her anything <input class="fill-input" style="min-width:60px" data-answer="in"> the end.</li>
+    <li class="q-item">I'm going away <input class="fill-input" style="min-width:60px" data-answer="at"> the end of this week.</li>
+    <li class="q-item">We waited ages for a bus. <input class="fill-input" style="min-width:60px" data-answer="In|in"> the end we had to get a taxi.</li>
+    <li class="q-item"><input class="fill-input" style="min-width:60px" data-answer="At|at"> the end of the lesson, all the students left the classroom.</li>
+    <li class="q-item">We had a few problems at first, but <input class="fill-input" style="min-width:60px" data-answer="in"> the end everything was OK.</li>
+    <li class="q-item">You were in a difficult position. What did you do <input class="fill-input" style="min-width:60px" data-answer="in"> the end?</li>
+    <li class="q-item">The journey took a very long time, but we got there <input class="fill-input" style="min-width:60px" data-answer="in"> the end.</li>
+    <li class="q-item">Are you going away <input class="fill-input" style="min-width:60px" data-answer="at"> the beginning of August or <input class="fill-input" style="min-width:60px" data-answer="at"> the end?</li>
+  </ul>
+  <div class="feedback"></div>
+  <div class="btn-row">
+    <button class="btn check-btn btn-check" onclick="checkExercise(this)">Check Answers</button>
+    <button class="btn show-btn btn-show" onclick="showAnswers(this)">Show Answers</button>
+    <button class="btn reset-btn btn-reset" onclick="resetExercise(this)">Reset</button>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Part C: Answers with Explanations -->
+  <section id="answers">
+    <h2>Answers with Full Explanations</h2>
+    
+<details class="reveal">
+  <summary>Key to Exercises 122.1 &ndash; 122.5</summary>
+  <div class="reveal-content">
+    <h4>Exercise 122.1</h4>
+    <p>2 on time &nbsp;|&nbsp; 3 on time &nbsp;|&nbsp; 4 in time &nbsp;|&nbsp; 5 on time &nbsp;|&nbsp; 6 in time &nbsp;|&nbsp; 7 in time &nbsp;|&nbsp; 8 on time &nbsp;|&nbsp; 9 in time</p>
+    <h4>Exercise 122.2</h4>
+    <p>2 I got home just in time. &nbsp;|&nbsp; 3 I stopped him just in time. &nbsp;|&nbsp; 4 We got to the cinema just in time for the beginning of the film. (or ... just in time to see the beginning of the film.)</p>
+    <h4>Exercise 122.3</h4>
+    <p>2 at the end of the month &nbsp;|&nbsp; 3 at the end of the course &nbsp;|&nbsp; 4 at the end of the race &nbsp;|&nbsp; 5 at the end of the interview</p>
+    <h4>Exercise 122.4</h4>
+    <p>2 In the end she resigned (from her job). / She resigned (from her job) in the end. &nbsp;|&nbsp; 3 In the end I gave up (trying to learn Japanese / learning Japanese). / I gave up in the end. &nbsp;|&nbsp; 4 In the end we decided not to go (to the party). / In the end we didn't go. / We decided not to go in the end. / We didn't go in the end.</p>
+    <h4>Exercise 122.5</h4>
+    <p>2 In &nbsp;|&nbsp; 3 in &nbsp;|&nbsp; 4 at &nbsp;|&nbsp; 5 In &nbsp;|&nbsp; 6 At &nbsp;|&nbsp; 7 in &nbsp;|&nbsp; 8 in &nbsp;|&nbsp; 9 in &nbsp;|&nbsp; 10 at ... at</p>
+  </div>
+</details>
+
+  </section>
+
+  <!-- Summary Section -->
+  <section id="summary">
+    <h2>Summary &amp; Quick Reference</h2>
+    <div class="card">
+      <h4 style="margin-top:0;">Key Takeaways for Unit 122</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:15px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border); text-align:left;">
+            <th style="padding:8px 12px; color:var(--accent);">Category</th>
+            <th style="padding:8px 12px; color:var(--accent);">Rule</th>
+            <th style="padding:8px 12px; color:var(--accent);">Correct Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td><strong>on time</strong></td><td>Punctual, at the exact scheduled time</td><td><em>The train left on time. Please be on time.</em></td></tr>
+<tr><td><strong>in time</strong></td><td>Soon enough (for an event or to do something)</td><td><em>Will you be home in time for dinner? We arrived just in time.</em></td></tr>
+<tr><td><strong>at the end (of)</strong></td><td>Point when an event or period finishes (opposite: at the beginning)</td><td><em>at the end of the month, at the end of the film</em></td></tr>
+<tr><td><strong>in the end</strong></td><td>Finally, what the ultimate result was (opposite: at first)</td><td><em>We had problems with the car. In the end we sold it.</em></td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Completion Banner -->
+  <div class="completion-banner" id="completionBanner">
+    <div class="completion-inner">
+      <div class="trophy">&#127942;</div>
+      <div class="text">
+        <h3>Unit 122 Completed!</h3>
+        <p>Outstanding work! You have mastered the rules and completed all exercises for this unit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="unit-nav">
+    <a href="unit-121.html">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">Unit 121: at/on/in (time)</span>
+    </a>
+    <a href="unit-123.html" class="nav-next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">Unit 123: in/at/on (position) 1</span>
+    </a>
+  </div>
+</main>
+
+<script src="../../assets/egiu.js"></script>
+<script>
+// Standalone fallback & interactive engine
+const CONTRACTIONS = [
+  [/\bi'm\b/gi, 'i am'], [/\byou're\b/gi, 'you are'], [/\bwe're\b/gi, 'we are'],
+  [/\bthey're\b/gi, 'they are'], [/\bhe's\b/gi, 'he is'], [/\bshe's\b/gi, 'she is'],
+  [/\bit's\b/gi, 'it is'], [/\bisn't\b/gi, 'is not'], [/\baren't\b/gi, 'are not'],
+  [/\bwasn't\b/gi, 'was not'], [/\bweren't\b/gi, 'were not'],
+  [/\bdon't\b/gi, 'do not'], [/\bdoesn't\b/gi, 'does not'], [/\bdidn't\b/gi, 'did not'],
+  [/\bcan't\b/gi, 'can not'], [/\bcannot\b/gi, 'can not'], [/\bwon't\b/gi, 'will not'],
+  [/\bhaven't\b/gi, 'have not'], [/\bhasn't\b/gi, 'has not'], [/\bhadn't\b/gi, 'had not'],
+  [/\b've\b/gi, ' have'], [/\b'll\b/gi, ' will'], [/\b'd\b/gi, ' would']
+];
+
+function normalize(str) {
+  if (!str) return '';
+  let s = str.toString().toLowerCase();
+  s = s.replace(/[\u2018\u2019\u02BC]/g, "'");
+  CONTRACTIONS.forEach(([re, rep]) => { s = s.replace(re, rep); });
+  s = s.replace(/[.,!?;:"()\[\]{}\u2013\u2014]/g, ' ');
+  s = s.replace(/'/g, '');
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// Progress bar on scroll
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.getElementById('progressBar');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Dark mode toggle
+const themeBtn = document.getElementById('themeBtn');
+if (themeBtn) {
+  const savedTheme = localStorage.getItem('egiu_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('egiu_theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
+  });
+}
+
+const exerciseStatus = {};
+function updateExerciseStatus(id, ok) {
+  if (ok) exerciseStatus[id] = true;
+  const total = document.querySelectorAll('.exercise').length;
+  if (Object.keys(exerciseStatus).length === total && total > 0) {
+    const banner = document.getElementById('completionBanner');
+    if (banner) banner.classList.add('show');
+  }
+}
+
+function renderScoreBar(ex, correct, total) {
+  let wrap = ex.querySelector('.score-bar-wrap');
+  if (!wrap) {
+    wrap = document.createElement('div');
+    wrap.className = 'score-bar-wrap';
+    wrap.innerHTML = `
+      <div class="score-label"><span></span><span></span></div>
+      <div class="score-bar-track"><div class="score-bar-fill"></div></div>`;
+    const btnRow = ex.querySelector('.btn-row');
+    if (btnRow) btnRow.parentNode.insertBefore(wrap, btnRow);
+  }
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const labels = wrap.querySelectorAll('.score-label span');
+  if (labels[0]) labels[0].textContent = `${correct}/${total} correct`;
+  if (labels[1]) labels[1].textContent = `${pct}%`;
+  const fill = wrap.querySelector('.score-bar-fill');
+  if (fill) {
+    fill.style.width = pct + '%';
+    fill.className = 'score-bar-fill ' + (pct === 100 ? 'full' : pct >= 50 ? '' : 'partial');
+  }
+}
+
+function checkExercise(btn) {
+  const ex = btn.closest('.exercise');
+  const inputs = ex.querySelectorAll('.fill-input[data-answer]');
+  const selects = ex.querySelectorAll('.match-select[data-answer]');
+  let correct = 0, total = 0;
+  
+  inputs.forEach(inp => {
+    total++;
+    const user = normalize(inp.value);
+    const ok = inp.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      inp.classList.add('correct'); inp.classList.remove('wrong');
+      correct++;
+    } else {
+      inp.classList.add('wrong'); inp.classList.remove('correct');
+    }
+  });
+
+  selects.forEach(sel => {
+    total++;
+    const user = normalize(sel.value);
+    const ok = sel.dataset.answer.split('|').map(a => normalize(a));
+    if (ok.includes(user)) {
+      sel.classList.add('correct'); sel.classList.remove('wrong');
+      correct++;
+    } else {
+      sel.classList.add('wrong'); sel.classList.remove('correct');
+    }
+  });
+
+  renderScoreBar(ex, correct, total);
+
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show');
+  if (correct === total && total > 0) {
+    fb.classList.remove('bad'); fb.classList.add('good');
+    fb.textContent = 'Perfect! ' + correct + '/' + total + ' correct. ✓';
+    updateExerciseStatus(ex.dataset.ex, true);
+  } else {
+    fb.classList.remove('good'); fb.classList.add('bad');
+    fb.textContent = correct + '/' + total + ' correct. Check the highlighted red fields.';
+  }
+}
+
+function showAnswers(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = inp.dataset.answer.split('|')[0];
+    inp.classList.add('correct'); inp.classList.remove('wrong');
+    inp.readOnly = true;
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = sel.dataset.answer.split('|')[0];
+    sel.classList.add('correct'); sel.classList.remove('wrong');
+  });
+  const count = ex.querySelectorAll('[data-answer]').length;
+  renderScoreBar(ex, count, count);
+  const fb = ex.querySelector('.feedback');
+  fb.classList.add('show', 'good'); fb.classList.remove('bad');
+  fb.textContent = 'Answers shown. Click Reset to practice again.';
+  updateExerciseStatus(ex.dataset.ex, true);
+}
+
+function resetExercise(btn) {
+  const ex = btn.closest('.exercise');
+  ex.querySelectorAll('.fill-input[data-answer]').forEach(inp => {
+    inp.value = ''; inp.readOnly = false;
+    inp.classList.remove('correct', 'wrong');
+  });
+  ex.querySelectorAll('.match-select[data-answer]').forEach(sel => {
+    sel.value = '';
+    sel.classList.remove('correct', 'wrong');
+  });
+  const fb = ex.querySelector('.feedback');
+  fb.classList.remove('show', 'good', 'bad');
+  const wrap = ex.querySelector('.score-bar-wrap');
+  if (wrap) wrap.remove();
+}
+
+// Clear styling on edit
+document.querySelectorAll('.fill-input').forEach(el => {
+  el.addEventListener('input', () => { el.classList.remove('correct', 'wrong'); });
+});
+document.querySelectorAll('.match-select').forEach(el => {
+  el.addEventListener('change', () => { el.classList.remove('correct', 'wrong'); });
+});
+</script>
+</body>
+</html>
