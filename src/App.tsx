@@ -33,7 +33,7 @@ import { SetPickerModal, SetPickerModalData } from './components/modals/SetPicke
 import { CheatSheetModal } from './components/modals/CheatSheetModal';
 import { MurphyGrammarModal } from './components/modals/MurphyGrammarModal';
 import { getGrammarPdfUrl } from './utils/grammarPdfs';
-import { getMurphyUnitForChapter, MurphyMapping } from './utils/murphyGrammar';
+import { getMurphyUnitForChapter, MurphyMapping, FULL_MURPHY_PORTAL } from './utils/murphyGrammar';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
@@ -2707,6 +2707,19 @@ export default function App() {
                   <span className="text-xs">📕</span>
                   <span>My Mistakes</span>
                 </button>
+
+                {/* 8. Raymond Murphy Grammar */}
+                <button
+                  onClick={() => setMurphyModalMapping(FULL_MURPHY_PORTAL)}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-semibold whitespace-nowrap bg-teal-50 text-teal-700 hover:bg-teal-100/80 hover:text-teal-900 border border-teal-200/80 transition-all cursor-pointer shadow-2xs"
+                  title="Raymond Murphy English Grammar in Use — 145 Units Interactive Practice"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-teal-600" />
+                  <span>Murphy Book</span>
+                  <span className="hidden xl:inline-block px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-teal-200/60 text-teal-800">
+                    145 Units
+                  </span>
+                </button>
               </div>
 
               {/* Utility & Actions Right Cluster */}
@@ -3054,6 +3067,18 @@ export default function App() {
                                       >
                                         Grammar
                                       </button>
+                                      <button
+                                        type="button"
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setMurphyModalMapping(FULL_MURPHY_PORTAL);
+                                        }}
+                                        className="px-1.5 py-0.5 bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200/80 rounded text-[10px] font-bold transition-colors cursor-pointer inline-flex items-center gap-1"
+                                        title="Raymond Murphy English Grammar in Use — 145 Interactive Units"
+                                      >
+                                        <BookOpen className="w-2.5 h-2.5 text-teal-600" />
+                                        <span>Murphy (145 Units)</span>
+                                      </button>
                                     </>
                                   )}
 
@@ -3135,8 +3160,8 @@ export default function App() {
                       </div>
                     )}
 
-                    {/* Fast Drill & Bookmarks Utility Section (2-Column Grid) */}
-                    <section aria-label="Quick Practice Studios" className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                    {/* Fast Drill, Murphy & Bookmarks Utility Section (3-Column Grid) */}
+                    <section aria-label="Quick Practice Studios" className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
                       {/* Calculation & Speed Drill Studio */}
                       <div
                         onClick={() => setView('drill')}
@@ -3160,6 +3185,33 @@ export default function App() {
                         </div>
                         <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-600">
                           <span>Open Speed Studio</span>
+                          <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                        </div>
+                      </div>
+
+                      {/* Raymond Murphy English Grammar Studio */}
+                      <div
+                        onClick={() => setMurphyModalMapping(FULL_MURPHY_PORTAL)}
+                        className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-xs hover:shadow-sm hover:border-teal-300 transition-all duration-200 flex flex-col justify-between group cursor-pointer"
+                      >
+                        <div>
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center border border-teal-100 group-hover:scale-105 transition-transform">
+                              <BookOpen className="w-4 h-4 text-teal-600" />
+                            </div>
+                            <span className="px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase text-teal-700 bg-teal-50 rounded-md border border-teal-200/80">
+                              CAMBRIDGE 5TH ED
+                            </span>
+                          </div>
+                          <h3 className="text-base font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                            Murphy Grammar Portal
+                          </h3>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                            145 interactive grammar units with instant exercises, explanations, and smart answer checking.
+                          </p>
+                        </div>
+                        <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-teal-600">
+                          <span>Open 145 Units</span>
                           <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                         </div>
                       </div>
@@ -3458,7 +3510,7 @@ export default function App() {
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
                       {([
                         {
                           key: 'black_book',
@@ -3486,13 +3538,31 @@ export default function App() {
                           title: 'Grammar (Topic-Wise)',
                           desc: 'Exhaustive chapter-wise grammar bank with rule revision cheat sheet and practice question sets.',
                           count: `${(currentData['English'] || []).filter(ch => ch.section === 'grammar' || (ch.section !== 'ayush_vocab' && ch.section !== 'black_book')).reduce((acc, ch) => acc + (ch.questions?.length || 0), 0)} Questions • ${(currentData['English'] || []).filter(ch => ch.section === 'grammar' || (ch.section !== 'ayush_vocab' && ch.section !== 'black_book')).length} Chapters`
+                        },
+                        {
+                          key: 'murphy_book',
+                          icon: BookOpen,
+                          chip: 'from-teal-600 to-emerald-700',
+                          badge: 'Cambridge 5th Edition',
+                          title: 'Raymond Murphy Grammar',
+                          desc: '145 interactive study units with instant exercise feedback, explanations, and comprehensive rule reference.',
+                          count: '145 Interactive Units • Cambridge'
                         }
                       ] as const).map(({ key, icon: Icon, chip, badge, title, desc, count }) => (
                         <motion.div
                           key={key}
                           whileHover={{ y: -2 }}
-                          onClick={() => { setSelectedEnglishSection(key); setSelectedTopic(null); }}
-                          className="group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-4 transition-all duration-200 hover:border-emerald-300 hover:shadow-md flex flex-col justify-between shadow-xs"
+                          onClick={() => {
+                            if (key === 'murphy_book') {
+                              setMurphyModalMapping(FULL_MURPHY_PORTAL);
+                            } else {
+                              setSelectedEnglishSection(key);
+                              setSelectedTopic(null);
+                            }
+                          }}
+                          className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-4 transition-all duration-200 ${
+                            key === 'murphy_book' ? 'hover:border-teal-300' : 'hover:border-emerald-300'
+                          } hover:shadow-md flex flex-col justify-between shadow-xs`}
                         >
                           <div>
                             <div className="flex items-center justify-between">
@@ -3502,7 +3572,11 @@ export default function App() {
                                 </div>
                                 <div>
                                   <h3 className="text-sm font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">{title}</h3>
-                                  <span className="inline-block text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 mt-0.5">
+                                  <span className={`inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full border mt-0.5 ${
+                                    key === 'murphy_book'
+                                      ? 'text-teal-700 bg-teal-50 border-teal-100'
+                                      : 'text-emerald-700 bg-emerald-50 border-emerald-100'
+                                  }`}>
                                     {badge}
                                   </span>
                                 </div>
@@ -3514,8 +3588,8 @@ export default function App() {
                             <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[11px] font-semibold text-slate-500">
                               {count}
                             </span>
-                            <div className="flex items-center text-xs font-bold text-emerald-600">
-                              Enter Section
+                            <div className={`flex items-center text-xs font-bold ${key === 'murphy_book' ? 'text-teal-600' : 'text-emerald-600'}`}>
+                              {key === 'murphy_book' ? 'Open Murphy' : 'Enter Section'}
                               <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                             </div>
                           </div>
@@ -3688,6 +3762,40 @@ export default function App() {
                             ))}
                           </div>
                         )}
+                      </div>
+                    )}
+
+                    {/* Raymond Murphy Interactive Grammar Portal Banner */}
+                    {selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'general' && (
+                      <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-emerald-900 rounded-xl p-3.5 sm:p-4 text-white shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 border border-teal-700/50">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center shrink-0 text-teal-200 shadow-inner">
+                            <BookOpen className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <h3 className="text-sm sm:text-base font-bold text-white">
+                                English Grammar in Use · Raymond Murphy
+                              </h3>
+                              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/30 text-teal-200 border border-teal-400/30">
+                                5th Edition Cambridge
+                              </span>
+                            </div>
+                            <p className="text-xs text-teal-100/80 mt-0.5 leading-relaxed">
+                              Complete 145 interactive grammar units with instant exercises, explanations, rule checking &amp; appendices.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <button
+                            type="button"
+                            onClick={() => setMurphyModalMapping(FULL_MURPHY_PORTAL)}
+                            className="w-full sm:w-auto px-3.5 py-2 rounded-lg bg-white text-teal-900 hover:bg-teal-50 font-bold text-xs shadow-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+                          >
+                            <BookOpen className="w-3.5 h-3.5 text-teal-700" />
+                            <span>Open Murphy Portal (145 Units)</span>
+                          </button>
+                        </div>
                       </div>
                     )}
 

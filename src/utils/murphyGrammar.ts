@@ -52,12 +52,25 @@ export const MURPHY_CHAPTER_MAP: Record<number, MurphyMapping> = {
   },
 };
 
+export const FULL_MURPHY_PORTAL: MurphyMapping = {
+  url: '/murphy/index.html',
+  title: 'English Grammar in Use — Raymond Murphy',
+  unitRange: 'Complete 145 Units',
+};
+
 export function getMurphyUnitForChapter(chapterNum?: number, title?: string): MurphyMapping {
   if (chapterNum && MURPHY_CHAPTER_MAP[chapterNum]) {
     return MURPHY_CHAPTER_MAP[chapterNum];
   }
 
   const cleanTitle = (title || '').toLowerCase();
+  if (cleanTitle.includes('future') || cleanTitle.includes('will')) {
+    return {
+      url: '/murphy/units/02_Future/unit-019.html',
+      title: 'Future (Will, Going to, etc.)',
+      unitRange: 'Units 19–25',
+    };
+  }
   if (cleanTitle.includes('tense')) {
     return MURPHY_CHAPTER_MAP[3];
   }
@@ -76,11 +89,13 @@ export function getMurphyUnitForChapter(chapterNum?: number, title?: string): Mu
   if (cleanTitle.includes('tag')) {
     return MURPHY_CHAPTER_MAP[11];
   }
+  if (cleanTitle.includes('inversion')) {
+    return MURPHY_CHAPTER_MAP[15];
+  }
+  if (cleanTitle.includes('verb')) {
+    return MURPHY_CHAPTER_MAP[4];
+  }
 
   // Default to the full interactive dashboard
-  return {
-    url: '/murphy/index.html',
-    title: 'English Grammar in Use — Interactive Portal',
-    unitRange: 'Complete 145 Units',
-  };
+  return FULL_MURPHY_PORTAL;
 }

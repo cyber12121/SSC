@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink, Maximize2, Minimize2, BookOpen, RotateCw, Sparkles, Layers } from 'lucide-react';
-import { MurphyMapping } from '../../utils/murphyGrammar';
+import { X, ExternalLink, Maximize2, Minimize2, BookOpen, RotateCw, Layers } from 'lucide-react';
+import { MurphyMapping, FULL_MURPHY_PORTAL } from '../../utils/murphyGrammar';
 
 interface MurphyGrammarModalProps {
   isOpen: boolean;
@@ -14,9 +14,14 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
   onClose,
   mapping,
 }) => {
+  const [activeMapping, setActiveMapping] = useState<MurphyMapping | null>(mapping);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [iframeKey, setIframeKey] = useState(0);
+
+  useEffect(() => {
+    setActiveMapping(mapping);
+  }, [mapping]);
 
   // Close on Escape key
   useEffect(() => {
@@ -28,9 +33,9 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
       setIsLoading(true);
     }
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, mapping?.url]);
+  }, [isOpen, activeMapping?.url]);
 
-  if (!isOpen || !mapping) return null;
+  if (!isOpen || !activeMapping) return null;
 
   const handleReload = () => {
     setIsLoading(true);
@@ -38,8 +43,15 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
   };
 
   const handleOpenExternal = () => {
-    window.open(mapping.url, '_blank');
+    window.open(activeMapping.url, '_blank');
   };
+
+  const handleShowAllUnits = () => {
+    setIsLoading(true);
+    setActiveMapping(FULL_MURPHY_PORTAL);
+  };
+
+  const isFullIndex = activeMapping.url === FULL_MURPHY_PORTAL.url;
 
   return (
     <AnimatePresence>
@@ -64,10 +76,10 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
                   <h3 className="text-sm sm:text-base font-bold text-stone-900 dark:text-stone-100 truncate">
-                    {mapping.title}
+                    {activeMapping.title}
                   </h3>
                   <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-teal-100 text-teal-800 dark:bg-teal-900/60 dark:text-teal-300">
-                    {mapping.unitRange}
+                    {activeMapping.unitRange}
                   </span>
                 </div>
                 <p className="text-[11px] text-stone-500 dark:text-stone-400 flex items-center gap-1 truncate">
@@ -80,6 +92,18 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
 
             {/* Action Buttons */}
             <div className="flex items-center gap-1 sm:gap-1.5 shrink-0 ml-2">
+              {!isFullIndex && (
+                <button
+                  type="button"
+                  onClick={handleShowAllUnits}
+                  className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-stone-700 dark:text-stone-300 bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 rounded-lg transition-colors cursor-pointer"
+                  title="Browse all 145 Units"
+                >
+                  <Layers className="w-3.5 h-3.5" />
+                  <span>All 145 Units</span>
+                </button>
+              )}
+
               <button
                 type="button"
                 onClick={handleReload}
@@ -131,7 +155,7 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
             )}
             <iframe
               key={iframeKey}
-              src={mapping.url}
+              src={activeMapping.url}
               className="w-full h-full border-0 select-text"
               title="Murphy Grammar Unit"
               onLoad={() => setIsLoading(false)}
