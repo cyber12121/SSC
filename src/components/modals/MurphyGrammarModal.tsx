@@ -15,7 +15,7 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
   mapping,
 }) => {
   const [activeMapping, setActiveMapping] = useState<MurphyMapping | null>(mapping);
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [iframeKey, setIframeKey] = useState(0);
 
@@ -23,12 +23,13 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
     setActiveMapping(mapping);
   }, [mapping]);
 
-  // Close on Escape key
+  // Close on Escape key and reset to fullscreen on open
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     if (isOpen) {
+      setIsFullscreen(true);
       window.addEventListener('keydown', handleKeyDown);
       setIsLoading(true);
     }
@@ -55,16 +56,16 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/75 backdrop-blur-md">
+      <div className={`fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md ${isFullscreen ? 'p-0' : 'p-2 sm:p-4 md:p-6'}`}>
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 10 }}
-          transition={{ duration: 0.2, ease: 'easeOut' }}
-          className={`relative flex flex-col bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ${
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{ duration: 0.18, ease: 'easeOut' }}
+          className={`relative flex flex-col bg-stone-50 dark:bg-stone-900 overflow-hidden transition-all duration-200 ${
             isFullscreen
-              ? 'w-full h-full rounded-none'
-              : 'w-full max-w-6xl h-[92vh]'
+              ? 'w-screen h-[100dvh] rounded-none border-0'
+              : 'w-full max-w-6xl h-[92vh] rounded-2xl border border-stone-200 dark:border-stone-800 shadow-2xl'
           }`}
         >
           {/* Header Bar */}
