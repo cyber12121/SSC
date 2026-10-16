@@ -31,7 +31,9 @@ import { classifyTestType, TestScopeFilter } from './utils/testClassifier';
 import { MockChapterErrorsModal, MockChapterModalData, ModalFilterType } from './components/modals/MockChapterErrorsModal';
 import { SetPickerModal, SetPickerModalData } from './components/modals/SetPickerModal';
 import { CheatSheetModal } from './components/modals/CheatSheetModal';
+import { MurphyGrammarModal } from './components/modals/MurphyGrammarModal';
 import { getGrammarPdfUrl } from './utils/grammarPdfs';
+import { getMurphyUnitForChapter, MurphyMapping } from './utils/murphyGrammar';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
@@ -330,6 +332,7 @@ export default function App() {
   const [modalErrorFilter, setModalErrorFilter] = useState<ModalFilterType>('all');
   const [setPickerModal, setSetPickerModal] = useState<SetPickerModalData | null>(null);
   const [selectedCheatSheet, setSelectedCheatSheet] = useState<Chapter | null>(null);
+  const [murphyModalMapping, setMurphyModalMapping] = useState<MurphyMapping | null>(null);
 
   // Bundled full mock questions dynamically loaded once on mount for unified error aggregation
   const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
@@ -4571,6 +4574,24 @@ export default function App() {
                                             )}
                                           </div>
                                           <div className="flex items-center gap-1.5">
+                                            {chapter.section === 'grammar' && (
+                                              <button
+                                                type="button"
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  const mapping = getMurphyUnitForChapter(
+                                                    chapter.original_chapter_num || chapter.chapter_num,
+                                                    chapter.chapter_title
+                                                  );
+                                                  setMurphyModalMapping(mapping);
+                                                }}
+                                                className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-teal-50 text-teal-800 hover:bg-teal-600 hover:text-white border border-teal-200 transition-all cursor-pointer shadow-2xs"
+                                                title={`Open Raymond Murphy English Grammar practice for ${chapter.chapter_title}`}
+                                              >
+                                                <BookOpen className="w-3 h-3" />
+                                                <span>Murphy</span>
+                                              </button>
+                                            )}
                                             {chapter.section === 'grammar' && getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num) && (
                                               <button
                                                 type="button"
@@ -4898,6 +4919,13 @@ export default function App() {
             setSelectedCheatSheet(null);
             startQuiz(ch);
           }}
+        />
+
+        {/* Raymond Murphy Interactive Grammar Modal */}
+        <MurphyGrammarModal
+          isOpen={!!murphyModalMapping}
+          onClose={() => setMurphyModalMapping(null)}
+          mapping={murphyModalMapping}
         />
 
 
