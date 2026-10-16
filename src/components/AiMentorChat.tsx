@@ -42,6 +42,7 @@ import { buildMockAiSummary } from '../utils/mockAiContext';
 import { AiFocusedScope } from '../types/aiScope';
 import { AI_SCOPE_EVENT } from '../utils/aiScopeHelper';
 import { saveRevisionNote } from '../utils/revisionNotesHelper';
+import { openMurphyAiUnit } from '../utils/murphyGrammar';
 
 
 export interface ChatAttachment {
@@ -105,8 +106,35 @@ function useDynamicSuggestions(
           }
         );
       } else if (focusedScope.type === 'topic') {
+        const isMurphy = Boolean(
+          focusedScope.sourceScopeLabel?.includes('Murphy') ||
+          focusedScope.title?.includes('Murphy')
+        );
         const isRca = (focusedScope as any).rcaMode === 'rca' || Boolean((focusedScope as any).rcaTag) || String(focusedScope.title).includes('RCA') || String(focusedScope.sourceScopeLabel).includes('RCA');
-        if (isRca) {
+        if (isMurphy) {
+          suggestions.push(
+            {
+              icon: Brain,
+              label: `Core rules & usage for this unit`,
+              text: `Explain all core grammar rules, structural formulas, and key distinctions taught in ${focusedScope.title}.`
+            },
+            {
+              icon: Target,
+              label: `SSC CGL exam traps for this topic`,
+              text: `What are the most common error-spotting and sentence-improvement traps asked by SSC CGL from ${focusedScope.title}?`
+            },
+            {
+              icon: Zap,
+              label: `Help solve unit exercises`,
+              text: `Guide me through the main exercise patterns in ${focusedScope.title} with step-by-step reasoning.`
+            },
+            {
+              icon: Flame,
+              label: `3 exam-level practice questions`,
+              text: `Give me 3 SSC CGL Tier-1 level practice questions strictly on ${focusedScope.title} with answers and detailed explanations.`
+            }
+          );
+        } else if (isRca) {
           suggestions.push(
             {
               icon: Target,
@@ -1336,9 +1364,19 @@ export function AiMentorChat({
         const batchInfo = isBatched ? ` • Showing Batch 1 of ${scope.totalBatches} (Q1–${Math.min(100, totalCount)})` : '';
         const countText = totalCount ? ` (${totalCount} total ${scope.sourceScopeLabel?.includes('Chapter Bank') ? 'practice' : 'mistake'} questions${batchInfo})` : '';
 
-        const welcomeText = isBatched
-          ? `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**\n📊 **Overall Overview:** ${totalCount} mistake questions total across **${scope.totalBatches} batches of 100**.\n📌 **Active Batch:** Currently inspecting **Batch 1 (Questions 1–${Math.min(100, totalCount)})**.\n\nI have full visibility into your overall stats as well as the active batch. Ask me about your general patterns, specific question solutions, or click a batch button above anytime!`
-          : `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**${countText}\n\nI'm ready! Ask me anything about these questions — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
+        const isMurphy = Boolean(
+          scope.sourceScopeLabel?.includes('Murphy') ||
+          scope.title?.includes('Murphy')
+        );
+
+        let welcomeText: string;
+        if (isMurphy) {
+          welcomeText = `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**\n\nI'm locked exclusively onto this unit! Ask me about:\n- 📖 Core grammar rules, structure formulas, and contextual usage\n- 🎯 SSC CGL spotting errors & sentence improvement traps for this topic\n- ✏️ Step-by-step guidance on unit exercises and tricky doubts\n\nWhat would you like to master in **${scope.title}**?`;
+        } else if (isBatched) {
+          welcomeText = `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**\n📊 **Overall Overview:** ${totalCount} mistake questions total across **${scope.totalBatches} batches of 100**.\n📌 **Active Batch:** Currently inspecting **Batch 1 (Questions 1–${Math.min(100, totalCount)})**.\n\nI have full visibility into your overall stats as well as the active batch. Ask me about your general patterns, specific question solutions, or click a batch button above anytime!`;
+        } else {
+          welcomeText = `🎯 **Focused Scope Active: [${originLabel}] ${scope.title}**${countText}\n\nI'm ready! Ask me anything about these questions — step-by-step question breakdowns, shortcut tricks, core rules, or your mistake patterns.`;
+        }
 
         setMessages(prev => [
           ...prev,
@@ -1806,6 +1844,11 @@ ${instructions}`;
               e.preventDefault();
               return;
             }
+            const activeMurphy = typeof window !== 'undefined' ? (window as any).__CGL_ACTIVE_MURPHY_UNIT__ : null;
+            if (activeMurphy?.unitNum && (!internalScope || !internalScope.title?.includes(`Unit ${activeMurphy.unitNum}`))) {
+              openMurphyAiUnit(activeMurphy.unitNum, activeMurphy.title, activeMurphy.sub);
+              return;
+            }
             setIsOpen(true);
           }}
           className="group relative flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 text-white shadow-xl hover:shadow-2xl hover:shadow-indigo-500/30 transition-shadow duration-300 cursor-grab active:cursor-grabbing border border-white/20"
@@ -1824,7 +1867,11 @@ ${instructions}`;
               Tommy
             </span>
             <span className="text-[9px] text-indigo-200/90 font-medium leading-tight">
-              Ask AI
+              {(typeof window !== 'undefined' && (window as any).__CGL_ACTIVE_MURPHY_UNIT__?.unitNum)
+                ? `Unit ${(window as any).__CGL_ACTIVE_MURPHY_UNIT__.unitNum}`
+                : activeScope?.title?.includes('Murphy Unit')
+                ? activeScope.title.replace('Murphy ', '')
+                : 'Ask AI'}
             </span>
           </div>
         </button>
@@ -1917,9 +1964,15 @@ ${instructions}`;
                   <span className="truncate text-white font-bold" title={activeScope.title}>
                     {activeScope.title}
                   </span>
-                  <span className="text-[10px] text-indigo-300 shrink-0">
-                    ({activeScope.allQuestions?.length || activeScope.questions?.length || 0} Total Qs)
-                  </span>
+                  {Boolean(activeScope.allQuestions?.length || activeScope.questions?.length) ? (
+                    <span className="text-[10px] text-indigo-300 shrink-0">
+                      ({activeScope.allQuestions?.length || activeScope.questions?.length || 0} Total Qs)
+                    </span>
+                  ) : (
+                    <span className="text-[10px] text-teal-300 shrink-0 font-medium">
+                      (Unit Guide & Practice)
+                    </span>
+                  )}
 
                   {/* Batch Switcher Pills if > 100 questions */}
                   {Boolean(activeScope.totalBatches && activeScope.totalBatches > 1) && (

@@ -1,12 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink, Maximize2, Minimize2, BookOpen, RotateCw, Layers } from 'lucide-react';
-import { MurphyMapping, FULL_MURPHY_PORTAL } from '../../utils/murphyGrammar';
+import { X, ExternalLink, Maximize2, Minimize2, BookOpen, RotateCw, Layers, Sparkles } from 'lucide-react';
+import {
+  MurphyMapping,
+  FULL_MURPHY_PORTAL,
+  openMurphyAiUnit,
+  getMurphyUnitMeta
+} from '../../utils/murphyGrammar';
 
 interface MurphyGrammarModalProps {
   isOpen: boolean;
   onClose: () => void;
   mapping: MurphyMapping | null;
+}
+
+function extractUnitNum(url?: string): number | null {
+  if (!url) return null;
+  const match = url.match(/unit-(\d+)\.html/i);
+  return match ? parseInt(match[1], 10) : null;
 }
 
 export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
@@ -15,13 +26,54 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
   mapping,
 }) => {
   const [activeMapping, setActiveMapping] = useState<MurphyMapping | null>(mapping);
+  const [currentUnitNum, setCurrentUnitNum] = useState<number | null>(() => extractUnitNum(mapping?.url));
   const [isFullscreen, setIsFullscreen] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [iframeKey, setIframeKey] = useState(0);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     setActiveMapping(mapping);
+    const num = extractUnitNum(mapping?.url);
+    setCurrentUnitNum(num);
   }, [mapping]);
+
+  // Sync active unit to window so global Tommy button is aware of the current unit
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (isOpen && currentUnitNum) {
+        const meta = getMurphyUnitMeta(currentUnitNum);
+        (window as any).__CGL_ACTIVE_MURPHY_UNIT__ = {
+          unitNum: currentUnitNum,
+          title: meta?.title,
+          sub: meta?.sub
+        };
+      } else {
+        (window as any).__CGL_ACTIVE_MURPHY_UNIT__ = null;
+      }
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        (window as any).__CGL_ACTIVE_MURPHY_UNIT__ = null;
+      }
+    };
+  }, [isOpen, currentUnitNum]);
+
+  // Listen to postMessage from iframe (unit catalogues or unit pages)
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data?.type === 'CGL_OPEN_AI_MURPHY_UNIT') {
+        const { unitNum, title, sub } = e.data;
+        if (unitNum) {
+          const num = Number(unitNum);
+          setCurrentUnitNum(num);
+          openMurphyAiUnit(num, title, sub);
+        }
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   // Close on Escape key and reset to fullscreen on open
   useEffect(() => {
@@ -44,15 +96,66 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
   };
 
   const handleOpenExternal = () => {
-    window.open(activeMapping.url, '_blank');
+    let targetUrl = activeMapping.url;
+    try {
+      const iframePath = iframeRef.current?.contentWindow?.location.pathname;
+      if (iframePath && iframePath.includes('/murphy/')) {
+        targetUrl = iframePath;
+      }
+    } catch {}
+
+    const uNum = extractUnitNum(targetUrl) || currentUnitNum;
+    const targetParams = new URLSearchParams();
+    targetParams.set('murphyUrl', targetUrl);
+    if (uNum) targetParams.set('murphyUnit', String(uNum));
+
+    window.open(`/?${targetParams.toString()}`, '_blank');
   };
 
   const handleShowAllUnits = () => {
     setIsLoading(true);
+    setCurrentUnitNum(null);
     setActiveMapping(FULL_MURPHY_PORTAL);
   };
 
+  const handleIframeLoad = () => {
+    setIsLoading(false);
+    try {
+      const iframeWindow = iframeRef.current?.contentWindow;
+      const iframeDoc = iframeRef.current?.contentDocument;
+
+      if (iframeWindow && iframeWindow.location) {
+        const pathname = iframeWindow.location.pathname;
+        const detectedNum = extractUnitNum(pathname);
+        if (detectedNum) {
+          setCurrentUnitNum(detectedNum);
+        } else if (pathname.includes('index.html')) {
+          setCurrentUnitNum(null);
+        }
+      }
+
+      // Inject bridge into iframe document so units can trigger AI directly
+      if (iframeDoc && iframeWindow) {
+        (iframeWindow as any).openAiForUnit = (n: number, title?: string, sub?: string) => {
+          openMurphyAiUnit(n, title, sub);
+        };
+
+        // Remove any legacy injected floating button to prevent collision with Tommy's global button
+        const existingBtn = iframeDoc.getElementById('murphy-embedded-ai-btn');
+        if (existingBtn) {
+          existingBtn.remove();
+        }
+      }
+    } catch {
+      // Ignore cross-origin access restriction if any
+    }
+  };
+
   const isFullIndex = activeMapping.url === FULL_MURPHY_PORTAL.url;
+  const unitMeta = currentUnitNum ? getMurphyUnitMeta(currentUnitNum) : null;
+  const displayTitle = unitMeta
+    ? `Unit ${currentUnitNum}: ${unitMeta.title}`
+    : activeMapping.title;
 
   return (
     <AnimatePresence>
@@ -69,7 +172,7 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
           }`}
         >
           {/* Header Bar */}
-          <div className="flex items-center justify-between px-4 py-3 bg-white dark:bg-stone-900/90 border-b border-stone-200 dark:border-stone-800 select-none">
+          <div className="flex items-center justify-between px-4 py-2.5 bg-white dark:bg-stone-900/90 border-b border-stone-200 dark:border-stone-800 select-none">
             <div className="flex items-center gap-3 min-w-0">
               <div className="w-9 h-9 rounded-xl bg-teal-600/10 text-teal-700 dark:text-teal-400 flex items-center justify-center font-bold text-sm border border-teal-500/20 shrink-0">
                 <BookOpen className="w-4 h-4" />
@@ -77,10 +180,10 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
                   <h3 className="text-sm sm:text-base font-bold text-stone-900 dark:text-stone-100 truncate">
-                    {activeMapping.title}
+                    {displayTitle}
                   </h3>
                   <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-teal-100 text-teal-800 dark:bg-teal-900/60 dark:text-teal-300">
-                    {activeMapping.unitRange}
+                    {currentUnitNum ? `Unit ${currentUnitNum}` : activeMapping.unitRange}
                   </span>
                 </div>
                 <p className="text-[11px] text-stone-500 dark:text-stone-400 flex items-center gap-1 truncate">
@@ -92,7 +195,30 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center gap-1 sm:gap-1.5 shrink-0 ml-2">
+            <div className="flex items-center gap-1 sm:gap-2 shrink-0 ml-2">
+              {/* Unit-Scoped AI Feature */}
+              {currentUnitNum ? (
+                <button
+                  type="button"
+                  onClick={() => openMurphyAiUnit(currentUnitNum, unitMeta?.title, unitMeta?.sub)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-teal-900 dark:text-teal-100 bg-gradient-to-r from-teal-500/15 via-emerald-500/15 to-teal-500/20 hover:from-teal-500/25 hover:to-emerald-500/30 border border-teal-500/40 rounded-lg shadow-sm transition-all cursor-pointer hover:scale-105 active:scale-95"
+                  title={`Ask Tommy AI Mentor strictly about Unit ${currentUnitNum}`}
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 animate-pulse" />
+                  <span className="font-semibold">Ask AI (Unit {currentUnitNum})</span>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => openMurphyAiUnit(1)}
+                  className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-teal-900 dark:text-teal-100 bg-teal-50 dark:bg-teal-950/60 hover:bg-teal-100 dark:hover:bg-teal-900 border border-teal-300 dark:border-teal-700/80 rounded-lg shadow-sm transition-all cursor-pointer"
+                  title="Ask AI Mentor about Murphy Grammar"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                  <span>Ask AI Tutor</span>
+                </button>
+              )}
+
               {!isFullIndex && (
                 <button
                   type="button"
@@ -155,11 +281,12 @@ export const MurphyGrammarModal: React.FC<MurphyGrammarModalProps> = ({
               </div>
             )}
             <iframe
+              ref={iframeRef}
               key={iframeKey}
               src={activeMapping.url}
               className="w-full h-full border-0 select-text"
               title="Murphy Grammar Unit"
-              onLoad={() => setIsLoading(false)}
+              onLoad={handleIframeLoad}
             />
           </div>
         </motion.div>

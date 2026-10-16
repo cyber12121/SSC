@@ -33,7 +33,7 @@ import { SetPickerModal, SetPickerModalData } from './components/modals/SetPicke
 import { CheatSheetModal } from './components/modals/CheatSheetModal';
 import { MurphyGrammarModal } from './components/modals/MurphyGrammarModal';
 import { getGrammarPdfUrl } from './utils/grammarPdfs';
-import { getMurphyUnitForChapter, MurphyMapping, FULL_MURPHY_PORTAL } from './utils/murphyGrammar';
+import { getMurphyUnitForChapter, MurphyMapping, FULL_MURPHY_PORTAL, getMurphyUnitMeta, getMurphyUnitUrl, openMurphyAiUnit } from './utils/murphyGrammar';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
@@ -333,6 +333,43 @@ export default function App() {
   const [setPickerModal, setSetPickerModal] = useState<SetPickerModalData | null>(null);
   const [selectedCheatSheet, setSelectedCheatSheet] = useState<Chapter | null>(null);
   const [murphyModalMapping, setMurphyModalMapping] = useState<MurphyMapping | null>(null);
+
+  // Auto-open Murphy unit when opened in New Tab via URL parameters
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const murphyUrl = params.get('murphyUrl');
+      const murphyUnit = params.get('murphyUnit');
+      const askAi = params.get('askAi');
+
+      if (murphyUrl || murphyUnit) {
+        let url = murphyUrl || '';
+        let uNum = murphyUnit ? parseInt(murphyUnit, 10) : null;
+        if (!uNum && url) {
+          const match = url.match(/unit-(\d+)\.html/i);
+          if (match) uNum = parseInt(match[1], 10);
+        }
+        if (!url && uNum) {
+          url = getMurphyUnitUrl(uNum);
+        }
+
+        const meta = uNum ? getMurphyUnitMeta(uNum) : null;
+        const mapping: MurphyMapping = {
+          url: url || FULL_MURPHY_PORTAL.url,
+          title: meta ? `Unit ${uNum}: ${meta.title}` : (uNum ? `Unit ${uNum}` : FULL_MURPHY_PORTAL.title),
+          unitRange: uNum ? `Unit ${uNum}` : FULL_MURPHY_PORTAL.unitRange
+        };
+
+        setMurphyModalMapping(mapping);
+
+        if (askAi && uNum) {
+          setTimeout(() => {
+            openMurphyAiUnit(uNum, meta?.title, meta?.sub);
+          }, 600);
+        }
+      }
+    } catch {}
+  }, []);
 
   // Bundled full mock questions dynamically loaded once on mount for unified error aggregation
   const [bundledMockQuestions, setBundledMockQuestions] = useState<any[]>([]);
