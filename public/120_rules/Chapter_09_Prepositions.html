@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9: Prepositions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .list-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        .list-item { background: var(--bg-color); padding: 10px; border-radius: 6px; font-size: 0.9rem; border: 1px solid var(--border); }
+        .list-item strong { color: var(--primary-dark); }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 10 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 9: Prepositions</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 9 Mini Mock</h2>
+            <p>Test your knowledge on these 10 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Fill in the blank: "For babies, breastfeeding is superior ____ bottle-feeding."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) than</label>
+                    <label><input type="radio" name="q1" value="B"> B) to</label>
+                    <label><input type="radio" name="q1" value="C"> C) from</label>
+                    <label><input type="radio" name="q1" value="D"> D) over</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) I am angry on him.</label>
+                    <label><input type="radio" name="q2" value="B"> B) I am angry at him.</label>
+                    <label><input type="radio" name="q2" value="C"> C) I am angry with him.</label>
+                    <label><input type="radio" name="q2" value="D"> D) I am angry for him.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blank: "My exams start ____ Monday."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) from</label>
+                    <label><input type="radio" name="q3" value="B"> B) on</label>
+                    <label><input type="radio" name="q3" value="C"> C) in</label>
+                    <label><input type="radio" name="q3" value="D"> D) at</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) He died from cancer.</label>
+                    <label><input type="radio" name="q4" value="B"> B) He died of cancer.</label>
+                    <label><input type="radio" name="q4" value="C"> C) He died with cancer.</label>
+                    <label><input type="radio" name="q4" value="D"> D) Both A and B are correct.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Fill in the blank: "He will distribute these sweets ____ 4 pm and 5 pm."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) between</label>
+                    <label><input type="radio" name="q5" value="B"> B) from</label>
+                    <label><input type="radio" name="q5" value="C"> C) among</label>
+                    <label><input type="radio" name="q5" value="D"> D) to</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule31', num: 'RULE 1 (Rule 31)', title: 'Words Always Followed by "To"',
+            tabs: [
+                { 
+                    name: '📖 The List', 
+                    content: `
+                        <p>Certain words are always followed by the preposition <b>"to"</b>.</p>
+                        <div class="list-grid">
+                            <div class="list-item">Prefer</div><div class="list-item">Superior</div><div class="list-item">Inferior</div>
+                            <div class="list-item">Injurious</div><div class="list-item">Junior</div><div class="list-item">Ancillary</div>
+                            <div class="list-item">Addicted</div><div class="list-item">Senior</div><div class="list-item">Exterior</div>
+                            <div class="list-item">Known</div><div class="list-item">Ulterior</div><div class="list-item">Posterior</div>
+                        </div>
+                        <div class="note-box">
+                            <b>Note:</b> Any word suffixed with <b>"-ior"</b> will always be followed by the preposition "to".
+                        </div>
+                    `
+                },
+                { 
+                    name: '📝 Examples', 
+                    content: `
+                        <div class="example-row correct"><div class="example-sentence">For babies, breastfeeding is superior to bottle-feeding.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Too much alcohol is injurious to your health.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Would you prefer to pay by cash, cheque, or credit card?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">They promoted a man who was junior to me and made him my boss.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Paragraph 19 was merely ancillary to paragraph 16.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I prefer tea to coffee.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Passive Voice Trap', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ Marry & Known in Passive</div>
+                            <p>The words "marry" and "known" are always followed by the preposition <b>"to"</b> in the Passive voice.</p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Rama is married to Sita.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I am known to him.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">I am known by him.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule53', num: 'RULE 2 (Rule 53)', title: 'Angry with vs Angry at',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>Angry with:</b> Used when referring to a person or living thing.</p>
+                        <div class="example-row correct"><div class="example-sentence">I got really angry with her.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I am angry with Shyam because he did not go to the class.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Angry at:</b> Used when referring to something other than a person or living thing.</p>
+                        <div class="example-row correct"><div class="example-sentence">The local residents were angry at the lack of parking spaces.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">They are angry at the way they have been treated.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b> We follow the same rule with the word <b>"Annoy"</b>.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule57', num: 'RULE 3 (Rule 57)', title: 'In vs Inside vs Into',
+            tabs: [
+                { 
+                    name: '📖 Inside (Movement)', 
+                    content: `
+                        <p><b>Inside:</b> Implies <b>movement</b>. Used when we move from outside to inside.</p>
+                        <div class="example-row correct"><div class="example-sentence">I came inside the class.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He tried to get inside her mind.</div></div>
+                        
+                        <div class="note-box">
+                            <b>"Inside out":</b> Completely different. It means if something is inside out, it has the usual inside part on the outside and the usual outside part on the inside. It also means "completely".<br><br>
+                            <b>Examples:</b><br>
+                            I know my husband inside out. [completely]<br>
+                            She had her sweater on inside out.
+                        </div>
+                    `
+                },
+                { 
+                    name: '📖 In (Static)', 
+                    content: `
+                        <p><b>In:</b> Implies <b>static</b>. Used when something referred to is already inside.</p>
+                        <div class="example-row correct"><div class="example-sentence">I am in the class.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The chlorine in the pool makes my eyes sore.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Into (Coming Toward)', 
+                    content: `
+                        <p><b>Into:</b> Implies <b>coming toward something</b>. Used when we move to a position in or inside something. It is also used to show a change in state.</p>
+                        <div class="example-row correct"><div class="example-sentence">Come into the house.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He threw the letter into the fire.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Can you translate this passage into German?</div><div class="reason">[Change in state]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The fruit can be made into jam.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He jumped into the well.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She wove her ideas into a story.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule58', num: 'RULE 4 (Rule 58)', title: 'With vs By',
+            tabs: [
+                { 
+                    name: '📖 With (Non-living)', 
+                    content: `
+                        <p>We use <b>"with"</b> when we refer to <b>non-living things</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">We write with a pen.</div><div class="reason">[Pen being a non-living thing]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She wiped her lipstick off with a tissue.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He hit the dog with a stick.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 By (Living)', 
+                    content: `
+                        <p>We use <b>"by"</b> when we refer to <b>living things</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">The motorcycle was driven by a tiny bald man.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The book was translated by a well-known author.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Any painting by Van Gogh is worth a fortune.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Watch:</b> Whenever we talk about "watch", we use "by".<br><br>
+                            What is the time by your watch? (In your watch is incorrect)
+                        </div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">She had promised to be back by five o'clock.</div><div class="reason">[referring time]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have got to be home by seven.</div><div class="reason">[referring time]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule59', num: 'RULE 5 (Rule 59)', title: 'No "From" with "Start"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>We do <b>NOT</b> use the preposition "from" with the word "start" when referring to a specific day.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">My exams start from Monday.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">My exams start on Monday.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He will start his preparation from Monday.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He will start his preparation on Monday.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Exception:</b> We can use "from" if it implies continuation.<br>
+                            He will prepare for the exams from Monday. [Correct]
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule76', num: 'RULE 6 (Rule 76)', title: 'In, On, At (Time & Place)',
+            tabs: [
+                { 
+                    name: '📖 Place (Area, Surface, Point)', 
+                    content: `
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>In:</b> Implies Area/Volume. Refers to town, cities, and countries.</li>
+                            <li><b>On:</b> Implies Surface.</li>
+                            <li><b>At:</b> Implies Point. Used for comparatively smaller places.</li>
+                        </ul>
+                        <div class="example-row correct"><div class="example-sentence">In Delhi, in Dubai, in Saudi Arabia.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">At Rohini in Delhi, at Laxminagar.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Time (At < On < In < In)', 
+                    content: `
+                        <p>Based on the concept of Point &rarr; Surface &rarr; Volume, we use these prepositions in the following order:</p>
+                        <div class="formula-box">Point of time < day < month < year<br>At < on < in < in</div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">At 4 pm.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">On Sunday.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">In 1947.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">On 15th August.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">In April.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">At night.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">In the morning.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">There's a meeting at 2.30 this afternoon.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Are you free at lunchtime?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Hair salons don't usually open on Sundays.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">My birthday is on 30 May.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I started working here in 2009.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">We are going to Italy in April.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Bye, see you in the morning.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ No Preposition Trap', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ No Preposition</div>
+                            <p>There are certain words before which we don't use any preposition: <b>last Monday, coming Monday, today, tomorrow, yesterday, etc.</b></p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">I am having dinner with Rachel tomorrow night.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I saw her yesterday afternoon.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have a checklist of things that I must do today.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The weather forecast said it would be fine and dry coming Monday.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule81', num: 'RULE 7 (Rule 81)', title: 'Proper Prepositions',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>It is important to use exact prepositions after specific words.</p>
+                        <div class="example-row correct"><div class="example-sentence">He is superior to and older than me.</div><div class="reason">"superior" takes "to", "older" takes "than".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This book is different from and better than that book.</div><div class="reason">"different" takes "from", "better" takes "than".</div></div>
+                    `
+                },
+                { 
+                    name: '📝 The Big List (Part 1)', 
+                    content: `
+                        <div class="list-grid">
+                            <div class="list-item">Responsibility <strong>for</strong></div>
+                            <div class="list-item">Reason <strong>for</strong></div>
+                            <div class="list-item">Increase <strong>in</strong></div>
+                            <div class="list-item">Address <strong>of</strong></div>
+                            <div class="list-item">Reaction <strong>to</strong></div>
+                            <div class="list-item">Response <strong>to</strong></div>
+                            <div class="list-item">Age <strong>at</strong> which</div>
+                            <div class="list-item">Attempt <strong>at</strong></div>
+                            <div class="list-item">Inquiry <strong>into</strong></div>
+                            <div class="list-item">Research <strong>into</strong></div>
+                            <div class="list-item">Example <strong>of</strong></div>
+                            <div class="list-item">Way <strong>of</strong></div>
+                            <div class="list-item">Advertisement <strong>for</strong></div>
+                            <div class="list-item">Awareness <strong>of</strong></div>
+                            <div class="list-item">Congratulations <strong>on</strong></div>
+                            <div class="list-item">Course <strong>in</strong></div>
+                        </div>
+                    `
+                },
+                { 
+                    name: '📝 The Big List (Part 2)', 
+                    content: `
+                        <div class="list-grid">
+                            <div class="list-item">Experience <strong>of</strong></div>
+                            <div class="list-item">Interest <strong>in</strong></div>
+                            <div class="list-item">Information <strong>on/about</strong></div>
+                            <div class="list-item">Invitation <strong>to</strong></div>
+                            <div class="list-item">Knowledge <strong>of</strong></div>
+                            <div class="list-item">Member <strong>of</strong></div>
+                            <div class="list-item">Newcomer <strong>to</strong></div>
+                            <div class="list-item">Places <strong>in</strong></div>
+                            <div class="list-item">Visit <strong>to</strong></div>
+                            <div class="list-item">Lessons <strong>in</strong></div>
+                            <div class="list-item">Changes <strong>in</strong> (happen)</div>
+                            <div class="list-item">Changes <strong>to</strong> (purposely)</div>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">The director of studies must be informed of any changes to the timetable.</div><div class="reason">[Changes that people purposely make]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule101', num: 'RULE 8 (Rule 101)', title: 'Die of vs Die from',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>Die of:</b> Used for a disease.</li>
+                            <li><b>Die from:</b> Used for the reason.</li>
+                        </ul>
+                        
+                        <div class="example-row correct"><div class="example-sentence">She died from overwork.</div><div class="reason">[Reason]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He died of cancer.</div><div class="reason">[Disease]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He died of tuberculosis.</div><div class="reason">[Disease]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Trees are dying from acid rain.</div><div class="reason">[Reason]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule102', num: 'RULE 9 (Rule 102)', title: 'Beside vs Besides',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>Beside:</b> A preposition meaning at the side of, next to.</p>
+                        <p><b>Besides:</b> A linking adverb meaning in addition to; also.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Come and sit here beside me.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She knelt down beside the child.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Do you play any other sports besides basketball?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Besides being a doctor, he is also an actor.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule107', num: 'RULE 10 (Rule 107)', title: 'Between...and',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>"Between"</b> is always followed by <b>"and"</b> and not "to".</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He will distribute these sweets between 4 pm to 5 pm.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He will distribute these sweets between 4 pm and 5 pm.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He will distribute these sweets from 4 pm to 5 pm.</div><div class="reason">[From takes "to"]</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 10;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh9')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh9')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh9', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "B", // Superior takes "to".
+        q2: "C", // Angry with a person.
+        q3: "B", // Start takes "on" for a specific day.
+        q4: "B", // Die of a disease.
+        q5: "A", // Between...and (never "between...to").
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

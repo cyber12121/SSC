@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Tenses & Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 10 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 7: Tenses & Time</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 7 Mini Mock</h2>
+            <p>Test your knowledge on these 10 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Fill in the blank: "I have been waiting for him ____ the time I completed my graduation."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) since</label>
+                    <label><input type="radio" name="q1" value="B"> B) for</label>
+                    <label><input type="radio" name="q1" value="C"> C) from</label>
+                    <label><input type="radio" name="q1" value="D"> D) until</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) The patient died before the doctor arrived.</label>
+                    <label><input type="radio" name="q2" value="B"> B) The patient had died before the doctor arrived.</label>
+                    <label><input type="radio" name="q2" value="C"> C) The patient has died before the doctor arrived.</label>
+                    <label><input type="radio" name="q2" value="D"> D) The patient was dying before the doctor arrived.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blank: "He ____ to the market yesterday to purchase a car."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) has gone</label>
+                    <label><input type="radio" name="q3" value="B"> B) had gone</label>
+                    <label><input type="radio" name="q3" value="C"> C) went</label>
+                    <label><input type="radio" name="q3" value="D"> D) was going</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) It is time to work hard.</label>
+                    <label><input type="radio" name="q4" value="B"> B) It is high time he works hard.</label>
+                    <label><input type="radio" name="q4" value="C"> C) It is high time he worked hard.</label>
+                    <label><input type="radio" name="q4" value="D"> D) Both A and C are correct.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Fill in the blank: "Wait for me ____ sunset."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) unless</label>
+                    <label><input type="radio" name="q5" value="B"> B) until</label>
+                    <label><input type="radio" name="q5" value="C"> C) till</label>
+                    <label><input type="radio" name="q5" value="D"> D) Both B and C are correct.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule7', num: 'RULE 1 (Rule 7)', title: 'Expressions of Time, Money, Speed, etc.',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Expressions of time, money, speed, weight, height, and distance, when used or covered in <b>one way</b>, usually take a <b>Singular verb</b>. However, when used or covered in <b>various ways</b>, a <b>Plural verb</b> is used.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Ten miles needs to be covered completely on foot.</div><div class="reason">[Singular verb] The complete distance is covered by just one means.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Ten miles need to be covered partly by car and rest on foot.</div><div class="reason">[Plural verb] The distance is covered by two means.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Five thousand rupees is his salary.</div><div class="reason">[Singular verb]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Five thousand rupees were spent on food and entertainment.</div><div class="reason">[Plural verb]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Six weeks is not long enough.</div><div class="reason">[Singular verb]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Five kilograms is his weight.</div><div class="reason">[Singular verb]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule9', num: 'RULE 2 (Rule 9)', title: 'Prepositions of Time: Since vs For',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Used when something started in the past and continues into the present.</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>For:</b> Used for <b>duration</b> (amount of time). Seconds, minutes, hours, days, months, years.</li>
+                            <li><b>Since:</b> Used to denote <b>Point of start</b> (a particular point in time). E.g., last Tuesday, 2008, midnight.</li>
+                        </ul>
+                        
+                        <div class="example-row correct"><div class="example-sentence">He has been here for 6 months and still cannot speak a word of German.</div><div class="reason">[for + a period of time]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I've only known her since the beginning of last week.</div><div class="reason">[since + a particular point in time]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He has been learning English since childhood.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Tense Rules & Traps', 
+                    content: `
+                        <div class="note-box">
+                            <b>Note 1:</b> Only the <b>Perfect Tense</b> or <b>Perfect Continuous Tense</b> is used before "since" and "for" when they denote time.
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">It has been raining since 8 a.m.</div><div class="reason">[Present Perfect Continuous Tense]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have had this watch since 1965.</div><div class="reason">[Present Perfect Tense]</div></div>
+                        
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ "Since" + Simple Past</div>
+                            <p>"Since" is always followed by the <b>Simple Past</b> tense when referring to a past point in time.</p>
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">I had been waiting for him since the time I had completed my graduation.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I had been waiting for him since the time I completed my graduation.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule10', num: 'RULE 3 (Rule 10)', title: 'Two Actions in Past (Past Perfect)',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When two actions occurred in the past:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>The action which happened <b>earlier</b> uses <b>Past Perfect Tense</b> (had + V3).</li>
+                            <li>The action which happened <b>later</b> uses <b>Simple Past Tense</b> (V2).</li>
+                        </ul>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He had finished the work after we had met him.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He finished the work after we had met him.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The patient died before the doctor arrived.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The patient had died before the doctor arrived.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">I finished the book after I had returned from college.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule29', num: 'RULE 4 (Rule 29)', title: 'Words Always Used in Perfect Tense',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>These words are always used in Perfect Tense: <b>ever, never, yet, already, now, just now, until now, always, occasionally, often, lately, recently, so far, upto now, upto the present.</b></p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The concert had already begun by the time we arrived.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I went to Paris last summer. Have you ever been there?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have not spoken to her yet.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He has gone just now.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He went there already.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He had gone there already.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Aman completed his work upto now.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Aman has not completed his work upto now.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The train already left.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The train has already left.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule39', num: 'RULE 5 (Rule 39)', title: 'Narration: Sequence of Tenses',
+            tabs: [
+                { 
+                    name: '📖 Universal Truth & History', 
+                    content: `
+                        <p>The tense of the verb does <b>NOT</b> change even if the Reporting verb is in the past tense for the following cases:</p>
+                        <p><b>(1) Universal Truth:</b></p>
+                        <div class="example-row incorrect"><div class="example-sentence">He told me that honey was sweet.</div><div class="reason">"Honey is sweet" is a universal truth.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He told me that honey is sweet.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He told me that the honey is sweet.</div><div class="reason">"the honey" is a particular type, not universal.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He told me that the honey was sweet.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>(2) Historical Facts:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The teacher said that Kalidas is the Shakespeare of India.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Sequence of Tenses:</b> If the principal clause is in Past Tense, the subordinate clause will also be in Past Tense (unless it falls under the exceptions).
+                        </div>
+                    `
+                },
+                { 
+                    name: '📖 Proverbs & Habits', 
+                    content: `
+                        <p><b>(3) Proverbs:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">Rohit said that where there is a will there is a way.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>(4) Habitual Facts:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">He said that he snoozes his alarm every day.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule45', num: 'RULE 6 (Rule 45)', title: 'Point of Time in the Past',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Whenever a <b>point of time in the past</b> is mentioned (yesterday, 10 days ago, last week), we always use the <b>Simple Past</b> tense.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">I have gone to the market yesterday to purchase a car.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I went to the market yesterday to purchase a car.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The company's shares have dived by 90p to 165p on the stock market last week.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The company's shares dived by 90p to 165p on the stock market last week.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule48', num: 'RULE 7 (Rule 48)', title: 'Ago vs Before',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>Ago:</b> Use <b>Simple Past</b> tense.</li>
+                            <li><b>Before:</b> Use <b>Past Perfect</b> tense.</li>
+                        </ul>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He had gone two seconds ago.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He went two seconds ago.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">She had submitted the work five hours ago.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She submitted the work five hours ago.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The patient died before the doctor came.</div><div class="reason">Two actions in past. Earlier action needs Past Perfect.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The patient had died before the doctor came.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule52', num: 'RULE 8 (Rule 52)', title: 'It is time / It is high time',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Follow either of the two conditions:</p>
+                        
+                        <p><b>(1) No Subject attached:</b> Use <b>to + V1</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">It is time to work hard.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It is time to ask for a raise.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>(2) Directly followed by a Subject:</b> Use <b>V2 (past tense)</b> after the subject.</p>
+                        <div class="example-row correct"><div class="example-sentence">It is time he worked hard.</div><div class="reason">[followed by subject "he"]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Gosh! It's almost midnight. It is time we went home.</div><div class="reason">[followed by subject "we"]</div></div>
+                        
+                        <div class="note-box">
+                            We use "it's time + subject + past verb form" to refer to the present moment.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule70', num: 'RULE 9 (Rule 70)', title: 'Question Tag: "aren\'t I"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>For the statement "I am", the question tag is <b>"aren't I?"</b> (There is no such word as "amn't").</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">I am working very hard for my students, amn't I?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I am working very hard for my students, aren't I?</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">I am getting better at this, aren't I?</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule79', num: 'RULE 10 (Rule 79)', title: 'Until vs Unless',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>Until:</b> Time Oriented.</li>
+                            <li><b>Unless:</b> Action Oriented (means "if not").</li>
+                        </ul>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Wait for me until sunset.</div><div class="reason">[referring Time]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Unless the government reduces the tax, the tax-payer base will not increase.</div><div class="reason">[referring Action]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I was up until three o'clock trying to get it finished!</div><div class="reason">[referring Time]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Unless you call me to say you're not coming, I will see you at the theatre.</div><div class="reason">[referring Action]</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b> There is no difference in meaning between "till" and "until" as both mean "up to (the time that)". However, we cannot use "till" at the beginning of the sentence which is not the case with "until".
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Until your next birthday, you will have to wait for a new bike.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">We did not eat till past midnight.</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 10;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh7')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh7')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh7', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "A", // "Since" for point of start. And "since" is followed by simple past ("completed").
+        q2: "B", // Earlier action (patient died) needs Past Perfect ("had died").
+        q3: "C", // "yesterday" is a specific point of time -> Simple Past.
+        q4: "D", // "It is time to work hard" (no subject) and "It is high time he worked hard" (subject + V2) are both correct.
+        q5: "D"  // "Until" and "till" are both correct for time here.
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

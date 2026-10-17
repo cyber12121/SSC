@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Conditionals, Inversion & Modals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 6 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 8: Conditionals & Inversion</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 8 Mini Mock</h2>
+            <p>Test your knowledge on these 6 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Fill in the blank: "If I ____ you, I would plant some saplings round the house."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) am</label>
+                    <label><input type="radio" name="q1" value="B"> B) was</label>
+                    <label><input type="radio" name="q1" value="C"> C) were</label>
+                    <label><input type="radio" name="q1" value="D"> D) had been</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) No sooner had I entered the class when it began to rain.</label>
+                    <label><input type="radio" name="q2" value="B"> B) No sooner had I entered the class than it began to rain.</label>
+                    <label><input type="radio" name="q2" value="C"> C) No sooner did I entered the class than it began to rain.</label>
+                    <label><input type="radio" name="q2" value="D"> D) No sooner I had entered the class than it began to rain.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Identify the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) Seldom or ever he comes to my house.</label>
+                    <label><input type="radio" name="q3" value="B"> B) Seldom or never does he come to my house.</label>
+                    <label><input type="radio" name="q3" value="C"> C) Seldom or never he comes to my house.</label>
+                    <label><input type="radio" name="q3" value="D"> D) Seldom, if never does he come to my house.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Fill in the blank: "Work hard, lest you ____ fail."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) would</label>
+                    <label><input type="radio" name="q4" value="B"> B) should</label>
+                    <label><input type="radio" name="q4" value="C"> C) will</label>
+                    <label><input type="radio" name="q4" value="D"> D) could</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Choose the correct conditional sentence for a Universal Truth:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) If water reached 100 degrees Celsius, it boiled.</label>
+                    <label><input type="radio" name="q5" value="B"> B) If water reaches 100 degrees Celsius, it boils.</label>
+                    <label><input type="radio" name="q5" value="C"> C) If water will reach 100 degrees Celsius, it will boil.</label>
+                    <label><input type="radio" name="q5" value="D"> D) If water would reach 100 degrees Celsius, it would boil.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule4', num: 'RULE 1 (Rule 4)', title: 'Conditional Sentences',
+            tabs: [
+                { 
+                    name: '📖 The Three Types', 
+                    content: `
+                        <div class="formula-box">
+                            Type I: If + Simple Present, will-future (or Modal + V1)<br>
+                            Type II: If + Simple Past, would + V1 (or could/might/should + V1)<br>
+                            Type III: If + Past Perfect, would + have + V3
+                        </div>
+                        
+                        <p><b>Type I (Possible to fulfill):</b></p>
+                        <div class="example-row correct"><div class="example-sentence">If I study, I will pass the exam.</div></div>
+                        
+                        <p><b>Type II (Theory possible to fulfill):</b></p>
+                        <div class="example-row correct"><div class="example-sentence">If I studied, I would pass the exam.</div></div>
+                        
+                        <p><b>Type III (Not possible to fulfill - too late):</b></p>
+                        <div class="example-row correct"><div class="example-sentence">If I had studied, I would have passed the exam.</div></div>
+                    `
+                },
+                { 
+                    name: '📝 More Examples', 
+                    content: `
+                        <div class="example-row correct"><div class="example-sentence">If your files are in order you may/can leave at once.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">If you want to lose weight you must eat less fat diet.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">If I lived near my metro station I would be in time for work.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">If I were you I would plant some saplings round the house.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">If we had found him earlier we could have arrested him saved the crime.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Had you obeyed orders this fire accident would have been averted.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Universal Truth Trap', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ Exception: Universal Truth</div>
+                            <p>The conditional rules do NOT apply to universal truths. They remain in the Simple Present tense.</p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">If water reaches 100 degree celcius, it boils.</div><div class="reason">[Universal truth]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">If you heat water, it turns into vapour.</div><div class="reason">[Universal truth]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule12', num: 'RULE 2 (Rule 12)', title: 'Law of Inversion',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Inversion means putting the verb <b>before</b> the subject. It is a literary technique used for emphasis.</p>
+                        <p><b>Normal:</b> Subject + helping verb + Main verb.</p>
+                        <p><b>Inversion:</b> Helping verb + Subject + Main Verb.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">My students are working very hard.</div><div class="reason">[Normal sentence]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have never seen such a beautiful place.</div><div class="reason">[Normal sentence]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Never have I seen such a beautiful place.</div><div class="reason">[Inversion - emphasizes the fact]</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Partial vs Complete', 
+                    content: `
+                        <p><b>Partial Inversion:</b> Adverb + helping verb + subject + main verb.</p>
+                        <div class="example-row correct"><div class="example-sentence">Rarely did he go there.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Seldom have I seen such a beautiful view.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Complete Inversion:</b> Adverb + main verb + subject.</p>
+                        <div class="example-row correct"><div class="example-sentence">Here comes the King!</div></div>
+                        <div class="example-row correct"><div class="example-sentence">There goes all our money!</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ No Sooner & Neither', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ No Sooner...than</div>
+                            <p>"No sooner" always comes with <b>"than"</b> and NOT with "when".</p>
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">No sooner had I entered the class when it began to rain.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">No sooner had I entered the class than it began to rain.</div></div>
+                        
+                        <div class="trap-box" style="margin-top:15px;">
+                            <div class="trap-title">⚠️ Neither</div>
+                            <p>When the second part starts with "Neither", follow the Law of Inversion.</p>
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">He never goes to temple. Neither she does.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He never goes to temple. Neither does she.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule14', num: 'RULE 3 (Rule 14)', title: 'No sooner, Hardly, Scarcely',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Whenever adverbs like <b>No sooner, Hardly, Scarcely, etc.</b> are used at the beginning of a sentence, they are always followed by a helping verb (Inversion).</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Hardly had I begun to speak when I was interrupted.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Scarcely had we started our meal when the phone rang.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">No sooner had I arrived than they all started to argue.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b> Adverbs "hardly, scarcely, barely" are always followed by <b>"when"</b>, while "No sooner" is followed by <b>"than"</b>.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule23', num: 'RULE 4 (Rule 23)', title: 'Seldom or never / Little or nothing',
+            tabs: [
+                { 
+                    name: '📖 Seldom', 
+                    content: `
+                        <p>When a sentence begins with "seldom", the law of inversion is followed.</p>
+                        <p>We can either use <b>"Seldom or never"</b> or <b>"Seldom, if ever"</b>, but we cannot use "Seldom or ever".</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Seldom or never he comes to my house.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">Seldom or ever he comes to my house.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Seldom, if ever does he come to my house.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Seldom or never does he come to my house.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Little', 
+                    content: `
+                        <p>The phrase "Little or nothing" means "Hardly anything".</p>
+                        <p>We can use <b>"Little or nothing"</b> or <b>"Little, if anything"</b>, but not "Little or everything" or "Little if nothing".</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">I can find little or nothing on this table.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I can find little, if anything on this table.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">I can find little if nothing on this table.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">I can find little or anything on this table.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule78', num: 'RULE 5 (Rule 78)', title: 'Use of Conjunction "Lest"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>Lest</b> means "otherwise".</p>
+                        <p>The conjunction "lest" is always followed either by the verb <b>"should"</b> or <b>no helping verb at all</b>.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Work hard, lest you would fail.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Work hard, lest you fail.</div><div class="reason">[No helping verb]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Work hard, lest you should fail.</div><div class="reason">[Should]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">He cut the remark out of the final program lest it should offend listeners.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule95', num: 'RULE 6 (Rule 95)', title: 'Conditional Sentences (Additional Examples)',
+            tabs: [
+                { 
+                    name: '📖 More Examples', 
+                    content: `
+                        <p>A recap of Conditional Sentences with more examples from the PDF:</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">As soon as he comes, I will ask him this question.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">When he comes, I will ask him this question.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Had he come earlier, I would have asked him this question.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">If he studied, he would pass the exam.</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 6;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh8')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh8')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh8', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "C", // Type 2 conditional uses "were" for all subjects.
+        q2: "B", // No sooner...than + inversion (had I).
+        q3: "B", // Seldom or never + inversion (does he).
+        q4: "B", // Lest + should (or no helping verb).
+        q5: "B", // Universal truth -> Simple Present.
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

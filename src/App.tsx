@@ -32,8 +32,10 @@ import { MockChapterErrorsModal, MockChapterModalData, ModalFilterType } from '.
 import { SetPickerModal, SetPickerModalData } from './components/modals/SetPickerModal';
 import { CheatSheetModal } from './components/modals/CheatSheetModal';
 import { MurphyGrammarModal } from './components/modals/MurphyGrammarModal';
+import { Rules120Modal } from './components/modals/Rules120Modal';
 import { getGrammarPdfUrl } from './utils/grammarPdfs';
 import { getMurphyUnitForChapter, MurphyMapping, FULL_MURPHY_PORTAL, getMurphyUnitMeta, getMurphyUnitUrl, openMurphyAiUnit } from './utils/murphyGrammar';
+import { Rule120ChapterMeta, RULES_120_CATALOG, get120RulesForGrammarChapter } from './utils/rules120Grammar';
 import { BookmarksView } from './components/BookmarksView';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { getSubjectTheme, getQuestionId, formatAttemptDate, computeDashboardStats } from './utils/subjectThemes';
@@ -333,14 +335,24 @@ export default function App() {
   const [setPickerModal, setSetPickerModal] = useState<SetPickerModalData | null>(null);
   const [selectedCheatSheet, setSelectedCheatSheet] = useState<Chapter | null>(null);
   const [murphyModalMapping, setMurphyModalMapping] = useState<MurphyMapping | null>(null);
+  const [rules120ModalChapter, setRules120ModalChapter] = useState<Rule120ChapterMeta | null>(null);
 
-  // Auto-open Murphy unit when opened in New Tab via URL parameters
+  // Auto-open Murphy unit or 120 Rules when opened in New Tab via URL parameters
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search);
       const murphyUrl = params.get('murphyUrl');
       const murphyUnit = params.get('murphyUnit');
       const askAi = params.get('askAi');
+      const rule120Chapter = params.get('rule120Chapter');
+
+      if (rule120Chapter) {
+        const cNum = parseInt(rule120Chapter, 10);
+        const matchChap = RULES_120_CATALOG.find(c => c.chapterNum === cNum);
+        if (matchChap) {
+          setRules120ModalChapter(matchChap);
+        }
+      }
 
       if (murphyUrl || murphyUnit) {
         let url = murphyUrl || '';
@@ -3091,6 +3103,17 @@ export default function App() {
                                       >
                                         Grammar
                                       </button>
+                                      <button
+                                        type="button"
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setRules120ModalChapter(RULES_120_CATALOG[0]);
+                                        }}
+                                        className="px-1.5 py-0.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 rounded text-[10px] font-bold transition-colors cursor-pointer"
+                                        title="120 Rules of Grammar (Nimisha Bansal)"
+                                      >
+                                        120 Rules
+                                      </button>
                                     </>
                                   )}
 
@@ -3495,7 +3518,7 @@ export default function App() {
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                       {([
                         {
                           key: 'black_book',
@@ -3525,6 +3548,15 @@ export default function App() {
                           count: `${(currentData['English'] || []).filter(ch => ch.section === 'grammar' || (ch.section !== 'ayush_vocab' && ch.section !== 'black_book')).reduce((acc, ch) => acc + (ch.questions?.length || 0), 0)} Questions • ${(currentData['English'] || []).filter(ch => ch.section === 'grammar' || (ch.section !== 'ayush_vocab' && ch.section !== 'black_book')).length} Chapters`
                         },
                         {
+                          key: '120_rules',
+                          icon: Sparkles,
+                          chip: 'from-amber-500 to-rose-600',
+                          badge: 'Nimisha Bansal',
+                          title: '120 Rules of Grammar',
+                          desc: 'Complete 120 Golden Rules across 15 interactive chapters with real-time error drills, theory tabs & collapsible mini-mocks.',
+                          count: '15 Chapters • 120 Rules'
+                        },
+                        {
                           key: 'murphy_book',
                           icon: BookOpen,
                           chip: 'from-teal-600 to-emerald-700',
@@ -3540,13 +3572,19 @@ export default function App() {
                           onClick={() => {
                             if (key === 'murphy_book') {
                               setMurphyModalMapping(FULL_MURPHY_PORTAL);
+                            } else if (key === '120_rules') {
+                              setRules120ModalChapter(RULES_120_CATALOG[0]);
                             } else {
                               setSelectedEnglishSection(key);
                               setSelectedTopic(null);
                             }
                           }}
                           className={`group relative cursor-pointer overflow-hidden rounded-xl border border-slate-200/80 bg-white p-4 transition-all duration-200 ${
-                            key === 'murphy_book' ? 'hover:border-teal-300' : 'hover:border-emerald-300'
+                            key === 'murphy_book'
+                              ? 'hover:border-teal-300'
+                              : key === '120_rules'
+                              ? 'hover:border-amber-300'
+                              : 'hover:border-emerald-300'
                           } hover:shadow-md flex flex-col justify-between shadow-xs`}
                         >
                           <div>
@@ -3560,6 +3598,8 @@ export default function App() {
                                   <span className={`inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full border mt-0.5 ${
                                     key === 'murphy_book'
                                       ? 'text-teal-700 bg-teal-50 border-teal-100'
+                                      : key === '120_rules'
+                                      ? 'text-amber-800 bg-amber-50 border-amber-200'
                                       : 'text-emerald-700 bg-emerald-50 border-emerald-100'
                                   }`}>
                                     {badge}
@@ -3573,8 +3613,14 @@ export default function App() {
                             <span className="rounded-md bg-slate-50 px-2 py-0.5 text-[11px] font-semibold text-slate-500">
                               {count}
                             </span>
-                            <div className={`flex items-center text-xs font-bold ${key === 'murphy_book' ? 'text-teal-600' : 'text-emerald-600'}`}>
-                              {key === 'murphy_book' ? 'Open Murphy' : 'Enter Section'}
+                            <div className={`flex items-center text-xs font-bold ${
+                              key === 'murphy_book'
+                                ? 'text-teal-600'
+                                : key === '120_rules'
+                                ? 'text-amber-600'
+                                : 'text-emerald-600'
+                            }`}>
+                              {key === 'murphy_book' ? 'Open Murphy' : key === '120_rules' ? 'Open 120 Rules' : 'Enter Section'}
                               <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                             </div>
                           </div>
@@ -4651,6 +4697,24 @@ export default function App() {
                                                 <span>Murphy</span>
                                               </button>
                                             )}
+                                            {chapter.section === 'grammar' && (
+                                              <button
+                                                type="button"
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  const rule120Meta = get120RulesForGrammarChapter(
+                                                    chapter.original_chapter_num || chapter.chapter_num,
+                                                    chapter.chapter_title
+                                                  );
+                                                  setRules120ModalChapter(rule120Meta || RULES_120_CATALOG[0]);
+                                                }}
+                                                className="flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-50 text-amber-900 hover:bg-amber-600 hover:text-white border border-amber-300 transition-all cursor-pointer shadow-2xs"
+                                                title={`Open 120 Rules of Grammar (Nimisha Bansal) for ${chapter.chapter_title}`}
+                                              >
+                                                <Sparkles className="w-3 h-3 text-amber-600 hover:text-white" />
+                                                <span>120 Rules</span>
+                                              </button>
+                                            )}
                                             {chapter.section === 'grammar' && getGrammarPdfUrl(chapter.original_chapter_num || chapter.chapter_num) && (
                                               <button
                                                 type="button"
@@ -4985,6 +5049,13 @@ export default function App() {
           isOpen={!!murphyModalMapping}
           onClose={() => setMurphyModalMapping(null)}
           mapping={murphyModalMapping}
+        />
+
+        {/* 120 Rules of Grammar (Nimisha Bansal) Interactive Modal */}
+        <Rules120Modal
+          isOpen={!!rules120ModalChapter}
+          onClose={() => setRules120ModalChapter(null)}
+          initialChapter={rules120ModalChapter}
         />
 
 

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10: Conjunctions, Connectors & Narration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); width: 0%; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; font-family: 'JetBrains Mono', monospace; }
+        .theme-toggle { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 6px; border-radius: 8px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        .header { text-align: center; padding: 100px 20px 35px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .chapter-tag { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 1rem; }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 14px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.1rem; }
+        .chevron { transition: transform 0.3s; font-size: 0.85rem; color: var(--text-muted); }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 22px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1.5px dashed var(--primary); border-radius: 10px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; color: var(--primary-dark); text-align: center; margin-bottom: 18px; font-size: 0.95rem; font-weight: 600; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 14px 16px; border-radius: 10px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.25); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.25); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 16px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+
+        .mark-learned-btn { width: 100%; padding: 14px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; font-weight: 700; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.1); }
+        .mock-header { background: var(--primary); color: #fff; padding: 24px; text-align: center; }
+        .mock-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+        .mock-body { padding: 26px; }
+        .mcq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 12px; }
+        .mcq-options label { display: block; padding: 12px 16px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; transition: all 0.2s; }
+        .mcq-options label:hover { background: var(--primary-light); border-color: var(--primary); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 12px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+        .submit-btn:hover { opacity: 0.92; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.25rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 8 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle Theme">🌙</button>
+</div>
+
+<div class="header">
+    <div class="chapter-tag">120 Rules Mastery Series</div>
+    <h1>Chapter 10: Conjunctions, Connectors & Narration</h1>
+    <p>Exhaustive Breakdown of 8 Critical Rules from Nimisha Bansal PDF + High-Yield Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules dynamically loaded by JavaScript -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 10 Mini Mock Test</h2>
+            <p>Targeted exam questions testing all 8 rules covered in this chapter</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Identify the grammatically correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) Although she worked with dedication, but she could not secure the first rank.</label>
+                    <label><input type="radio" name="q1" value="B"> B) Although she worked with dedication, yet she could not secure the first rank.</label>
+                    <label><input type="radio" name="q1" value="C"> C) Although she worked with dedication, still she could not secure the first rank.</label>
+                    <label><input type="radio" name="q1" value="D"> D) Even although she worked with dedication, but she missed the rank.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Select the correct indirect speech transformation:<br><i>The manager asked him, "Why did you arrive late today?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) The manager asked him why did he arrive late that day.</label>
+                    <label><input type="radio" name="q2" value="B"> B) The manager asked him why had he arrived late that day.</label>
+                    <label><input type="radio" name="q2" value="C"> C) The manager asked him why he had arrived late that day.</label>
+                    <label><input type="radio" name="q2" value="D"> D) The manager asked him that why he arrived late that day.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blanks appropriately:<br><i>"I have no doubt _______ he will succeed, but there is still some doubt _______ the dates will be postponed."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) whether / that</label>
+                    <label><input type="radio" name="q3" value="B"> B) that / whether</label>
+                    <label><input type="radio" name="q3" value="C"> C) if / that</label>
+                    <label><input type="radio" name="q3" value="D"> D) that / that</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Choose the error-free sentence with correct adverbial correlatives:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) It was nothing else than sheer jealousy on their part.</label>
+                    <label><input type="radio" name="q4" value="B"> B) He had no other choice but to accept the verdict.</label>
+                    <label><input type="radio" name="q4" value="C"> C) I would rather stay at the library than going home early.</label>
+                    <label><input type="radio" name="q4" value="D"> D) It is nothing else but mere foolishness, and he had no other option than to quit.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Which of the following sentences correctly applies the conjunction 'Both' and preposition usage?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) Both Priya as well as Neha are good in mathematics.</label>
+                    <label><input type="radio" name="q5" value="B"> B) Both Priya and Neha are good in mathematics.</label>
+                    <label><input type="radio" name="q5" value="C"> C) Both Priya and Neha are good at mathematics.</label>
+                    <label><input type="radio" name="q5" value="D"> D) Both Priya as well as Neha are good at mathematics.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="mcq-item">
+                <div class="mcq-question">6. Which of the following violates the Rule of Parallelism?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q6" value="A"> A) She enjoys swimming, playing badminton, and cycling on weekends.</label>
+                    <label><input type="radio" name="q6" value="B"> B) The professor asked us to write an essay, to submit it on time, and revising the draft.</label>
+                    <label><input type="radio" name="q6" value="C"> C) Tom is recognized for his courage and his integrity.</label>
+                    <label><input type="radio" name="q6" value="D"> D) To learn new languages is to understand diverse cultures.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q6"></div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="mcq-item">
+                <div class="mcq-question">7. Identify the superfluous construction in the options below:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q7" value="A"> A) As soon as the bell rang, the students rushed outside.</label>
+                    <label><input type="radio" name="q7" value="B"> B) As he was unwell, so he took permission to leave early.</label>
+                    <label><input type="radio" name="q7" value="C"> C) No sooner had the bell rung than the students rushed outside.</label>
+                    <label><input type="radio" name="q7" value="D"> D) He missed the lecture due to sudden illness.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q7"></div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="mcq-item">
+                <div class="mcq-question">8. Fill in the blank according to Rule 117:<br><i>"We have never witnessed _______ an inspiring leader _______ was described in the biography."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q8" value="A"> A) so / that</label>
+                    <label><input type="radio" name="q8" value="B"> B) such / that</label>
+                    <label><input type="radio" name="q8" value="C"> C) such / as</label>
+                    <label><input type="radio" name="q8" value="D"> D) very / as</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q8"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitTest()">Submit & Check Answers 🎯</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule27',
+            num: 'RULE 1 (Rule 27)',
+            title: 'Use of Conjunction "Although / Though"',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p><b>"Although"</b> (or "Though"), meaning <i>"in spite of something"</i>, is a subordinating conjunction. The clause it introduces is a subordinate clause requiring a main clause to make complete sense.</p>
+                        
+                        <div class="formula-box">
+                            Although / Though + Subordinate Clause + , (comma) / YET + Main Clause
+                        </div>
+                        
+                        <p style="margin-top: 10px;"><b>Core Grammar Rule:</b> "Although" as a subordinate clause may take <b>"yet"</b> or a <b>comma (,)</b> in the main clause. <b>"Yet" is optional</b>. However, "although" <u>NEVER</u> takes <b>"but"</b>.</p>
+                        
+                        <div class="example-row correct">
+                            <div class="example-sentence">Although she is rich, she thinks twice before spending a penny.</div>
+                            <div class="reason">[Correct: Comma alone connects the clauses smoothly]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Although she is rich, yet she thinks twice before spending a penny.</div>
+                            <div class="reason">[Correct: "Yet" is paired with "although"]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Although she is rich, but she thinks twice before spending a penny.</div>
+                            <div class="reason">[Incorrect: "Although" and "but" cannot be used together in a sentence; it creates double contrast]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ Exam Traps',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Trap 1: The 'Although... but' Trap</div>
+                            Examiners love inserting "but" or "still" after "although / though". Always look for "but" and replace it with either a comma or "yet".
+                        </div>
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Trap 2: Even Although vs Even Though</div>
+                            "Even although" is non-standard and incorrect in formal English. Use either <b>"Even though"</b> or <b>"Although"</b>.
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Even although it rained heavily, but the match continued.</div>
+                            <div class="reason">[Double Error: 'Even although' is redundant and 'but' is illegal with although]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Even though it rained heavily, the match continued.</div>
+                            <div class="reason">[Correct format]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule34',
+            num: 'RULE 2 (Rule 34)',
+            title: 'Narration Errors: Indirect Speech Word Order',
+            tabs: [
+                {
+                    name: '📖 Concept & Structures',
+                    content: `
+                        <p><b>Rule:</b> In narration, <b>Indirect Speech is ALWAYS a statement</b> (an assertive clause), never an inverted question. Therefore, the helping verb must always follow the subject, never precede it.</p>
+                        
+                        <div class="formula-box">
+                            Statement (Indirect): Subject + Helping Verb + Main Verb<br>
+                            Question (Direct): Wh-word + Helping Verb + Subject + Main Verb?
+                        </div>
+
+                        <p>Hence, a helping verb comes <b>after</b> the subject in statements and <b>before</b> the subject in interrogatives.</p>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He asked me where are you going.</div>
+                            <div class="reason">[Incorrect: Retains question inversion 'are you' and incorrect tense/pronoun]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He asked me where I was going.</div>
+                            <div class="reason">[Correct: Assertive word order: Wh-word + Subject (I) + Verb (was going)]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He asked me what was my name.</div>
+                            <div class="reason">[Incorrect: Verb 'was' precedes the subject 'my name']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He asked me what my name was.</div>
+                            <div class="reason">[Correct: Subject 'my name' precedes the verb 'was']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '💡 All Sentence Types in Indirect',
+                    content: `
+                        <p>Regardless of whether the original direct speech was assertive, imperative, exclamatory, interrogative, or optative, all indirect sentences turn into statements:</p>
+                        
+                        <div class="note-box">
+                            <b>1. Assertive:</b> She says that she is a little bit nervous.<br>
+                            <b>2. Imperative:</b> The teacher ordered me to shut the door.<br>
+                            <b>3. Exclamatory:</b> He exclaimed with great joy that he had won the match.<br>
+                            <b>4. Interrogative:</b> We asked him if he was ill. (No question mark!)<br>
+                            <b>5. Optative:</b> He prayed that I might live long.<br>
+                            <b>6. Optative Wish:</b> She wished she had been rich.
+                        </div>
+
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Trap: Never Use "that" with Wh-words or "if/whether"</div>
+                            In indirect questions, the connector is the Wh-word itself or "if/whether". Never write "that why", "that where", or "that if".
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule38',
+            num: 'RULE 3 (Rule 38)',
+            title: 'Doubt & Doubtful: "If / Whether" vs "That"',
+            tabs: [
+                {
+                    name: '📖 Concept & The Rule',
+                    content: `
+                        <p>The choice of connector after <b>doubt</b> or <b>doubtful</b> depends entirely on whether the sentence expresses <b>uncertainty (Affirmative)</b> or <b>certainty (Negative/Interrogative)</b>.</p>
+
+                        <div class="formula-box">
+                            Doubt / Doubtful (Affirmative / Positive) ➔ use IF or WHETHER<br>
+                            No Doubt / Not Doubtful (Negative / Questions) ➔ use THAT
+                        </div>
+
+                        <p><b>Logic:</b> When you have doubt, the outcome is uncertain (hence <i>if / whether</i>). When you have <b>no doubt</b>, there is 100% certainty (hence <i>that</i>).</p>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I have no doubt whether it will rain or not.</div>
+                            <div class="reason">[Incorrect: 'No doubt' expresses certainty, so 'whether' cannot be used]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have no doubt that it will rain or not.</div>
+                            <div class="reason">[Correct: 'No doubt' takes connector 'that']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">There is a doubt that he goes there or not.</div>
+                            <div class="reason">[Incorrect: Affirmative 'doubt' cannot take 'that']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">There is a doubt whether he goes there or not.</div>
+                            <div class="reason">[Correct: Affirmative 'doubt' takes 'whether']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He has no doubt if Shyam is his best friend.</div>
+                            <div class="reason">[Incorrect: 'No doubt' cannot take 'if']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has no doubt that Shyam is his best friend.</div>
+                            <div class="reason">[Correct: 'No doubt' takes 'that']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚡ Quick Reference Matrix',
+                    content: `
+                        <div class="note-box">
+                            <b>Summary Matrix for SSC / Banking Exams:</b><br><br>
+                            • <b>Sentence has:</b> <i>doubt / doubtful</i> (Positive sentence) ➔ <b>if / whether</b><br>
+                            • <b>Sentence has:</b> <i>no doubt / without doubt / not doubtful</i> (Negative) ➔ <b>that</b><br>
+                            • <b>Sentence is an interrogative doubt:</b> <i>"Do you have any doubt that...?"</i> ➔ <b>that</b>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule55',
+            num: 'RULE 4 (Rule 55)',
+            title: 'Adverbial Correlatives: "Else... but" & "Other / Rather... than"',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>Correlative connectors and adverbs must always follow their fixed partner:</p>
+
+                        <div class="formula-box">
+                            ELSE ➔ followed by BUT<br>
+                            OTHER / RATHER ➔ followed by THAN
+                        </div>
+
+                        <p><b>1. Else is always followed by "but":</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">It is nothing else but mere foolishness.</div>
+                            <div class="reason">[Correct: 'else' takes 'but', not 'than']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Everybody else has agreed but you.</div>
+                            <div class="reason">[Correct: 'else' takes 'but']</div>
+                        </div>
+
+                        <p style="margin-top: 15px;"><b>2. "Other" and "Rather" are always followed by "than":</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He met no other person than Ram.</div>
+                            <div class="reason">[Correct: 'other' takes 'than', not 'but']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I think I would rather stay at home this evening than go out.</div>
+                            <div class="reason">[Correct: 'rather' takes 'than']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ Exam Traps',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Classic Switcheroo Trap</div>
+                            Exam setters routinely swap these pairs: they will give <i>"nothing else than"</i> (WRONG) or <i>"no other choice but"</i> (WRONG).
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">It is nothing else than vanity that drives him.</div>
+                            <div class="reason">[Incorrect: Replace 'than' with 'but']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He had no other option but to resign from his post.</div>
+                            <div class="reason">[Incorrect: Replace 'but' with 'than']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He had no other option than to resign from his post.</div>
+                            <div class="reason">[Correct: 'other' takes 'than']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule77',
+            num: 'RULE 5 (Rule 77)',
+            title: 'Conjunction "Both... and" & The "Good at" Rule',
+            tabs: [
+                {
+                    name: '📖 "Both... and"',
+                    content: `
+                        <p>The correlative conjunction <b>"Both"</b> is always followed by <b>"and"</b>. It can <b>NEVER</b> be followed by "as well as", "or", "along with", or "together with".</p>
+
+                        <div class="formula-box">
+                            Both + A + AND + B (Never 'as well as')
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Both Ram as well as Shyam are good at English.</div>
+                            <div class="reason">[Incorrect: 'as well as' cannot be paired with 'Both']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Both Ram and Shyam are good at English.</div>
+                            <div class="reason">[Correct: 'Both' is paired with 'and']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Both men as well as women have complained about the advertisement.</div>
+                            <div class="reason">[Incorrect]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Both men and women have complained about the advertisement.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I felt both happy as well as sad at the same time.</div>
+                            <div class="reason">[Incorrect]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I felt both happy and sad at the same time.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⭐ The Bonus "Good at" Rule',
+                    content: `
+                        <div class="note-box">
+                            <b>*SPECIAL EXAM NOTE (From Nimisha Bansal PDF):</b><br>
+                            The adjective <b>"good"</b> (meaning skillful or proficient) is ALWAYS followed by the preposition <b>"at"</b>, NOT "in".
+                        </div>
+
+                        <div class="formula-box">
+                            Subject + be verb + GOOD AT + Activity / Subject (Never 'good in')
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">She is very good at geography.</div>
+                            <div class="reason">[Correct: 'good at', not 'good in geography']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Rohan is good at football.</div>
+                            <div class="reason">[Correct: 'good at', not 'good in football']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He is exceptionally good in singing and dancing.</div>
+                            <div class="reason">[Incorrect: Preposition 'in' must be replaced with 'at']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule80',
+            num: 'RULE 6 (Rule 80)',
+            title: 'The Error of Parallelism',
+            tabs: [
+                {
+                    name: '📖 The Law of Parallelism',
+                    content: `
+                        <p><b>Principle of Parallelism:</b> Sentence elements that are alike in function must also be alike in construction. They must share the same grammatical form to maintain balance, rhythm, and clarity.</p>
+
+                        <div class="formula-box">
+                            Element 1 [Form X] + Conjunction + Element 2 [Form X] + Element 3 [Form X]
+                        </div>
+
+                        <p>Parallel elements apply across:<br>
+                        • <b>Words / Gerunds:</b> thinking, running, walking<br>
+                        • <b>Infinitives:</b> to see, to understand, to act<br>
+                        • <b>Prepositional phrases:</b> at the time, in the house<br>
+                        • <b>Clauses & Nouns:</b> honesty and originality (not honesty and original ideas)
+                        </p>
+                    `
+                },
+                {
+                    name: '📝 Exhaustive PDF Examples',
+                    content: `
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I like singing, dancing, and to walk.</div>
+                            <div class="reason">[Incorrect: Mixes gerunds with infinitive 'to walk']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I like singing, dancing, and walking.</div>
+                            <div class="reason">[Correct: All three are parallel V1+ing gerunds]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He asked his mother to cook, to rest and prepare the dish.</div>
+                            <div class="reason">[Incorrect: Unbalanced infinitive sequence]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He asked his mother to cook, to rest and to prepare the dish.</div>
+                            <div class="reason">[Correct: Parallel infinitives (or 'to cook, rest and prepare')]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">My friends never judged me by my words or what I did.</div>
+                            <div class="reason">[Incorrect: Noun phrase 'my words' contrasted with a clause 'what I did']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">My friends never judged me by my words or my actions.</div>
+                            <div class="reason">[Correct: Noun phrase parallel with noun phrase]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The teacher not only wants his students to keep quiet but also to do the task.</div>
+                            <div class="reason">[Incorrect: 'not only' is before verb 'wants', while 'but also' is before infinitive]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The teacher wants his students not only to keep quiet but also to do the task.</div>
+                            <div class="reason">[Correct: Both correlatives precede parallel infinitives]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I would rather pay for my education than financial aid.</div>
+                            <div class="reason">[Incorrect: Verb phrase 'pay for...' compared with noun 'financial aid']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I would rather pay for my education than receive financial aid.</div>
+                            <div class="reason">[Correct: Parallel verb phrases: pay... receive...]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">To learn is understanding the world.</div>
+                            <div class="reason">[Incorrect: Infinitive subject 'To learn' matched with gerund 'understanding']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">To learn is to understand the world.</div>
+                            <div class="reason">[Correct: Infinitive equals infinitive]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">This task can be done individually, in pairs, or can be done in groups of four.</div>
+                            <div class="reason">[Incorrect: Adverb, prepositional phrase, then redundant verb clause]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">This task can be done individually, in pairs, or in groups of four.</div>
+                            <div class="reason">[Correct: Concise parallel modifiers]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule97',
+            num: 'RULE 7 (Rule 97)',
+            title: 'Superfluous Sentences & Redundant Connectors',
+            tabs: [
+                {
+                    name: '📖 3 Cardinal Superfluous Traps',
+                    content: `
+                        <div class="note-box">
+                            <b>(1) "As soon as" vs "No sooner":</b><br>
+                            • "As soon as" is <b>NEVER</b> followed by "than".<br>
+                            • "Than" is used exclusively with <b>"No sooner"</b>.
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">As soon as I complete the work than I will go to his house.</div>
+                            <div class="reason">[Incorrect: 'than' is superfluous after 'as soon as']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">As soon as I complete the work I will go to his house.</div>
+                            <div class="reason">[Correct: Only a comma is required]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">No sooner had I started mowing the lawn than it started raining.</div>
+                            <div class="reason">[Correct: 'No sooner' correctly pairs with 'than']</div>
+                        </div>
+
+                        <div class="note-box" style="margin-top: 15px;">
+                            <b>(2) "As" is never followed by "so":</b><br>
+                            When a sentence begins with <i>"As"</i>, <i>"Since"</i>, or <i>"Because"</i> to indicate cause, do not use <i>"so"</i>, <i>"therefore"</i>, or <i>"thus"</i> in the main clause.
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">As he was unwell, so he didn't come to the class.</div>
+                            <div class="reason">[Incorrect: 'so' is superfluous]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">As he was unwell, he didn't come to the class.</div>
+                            <div class="reason">[Correct: A simple comma suffices]</div>
+                        </div>
+
+                        <div class="note-box" style="margin-top: 15px;">
+                            <b>(3) "Due to" is not used with "the reason":</b><br>
+                            Both denote cause; using them together is a serious superfluous error.
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Due to the reason that he is not well, he did not come to the class.</div>
+                            <div class="reason">[Incorrect: 'Due to' + 'the reason' is redundant]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He did not come to the class due to sickness.</div>
+                            <div class="reason">[Correct: Concise and non-redundant]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule117',
+            num: 'RULE 8 (Rule 117)',
+            title: 'Use of "Such... as" Determiner & "Nothing else... but"',
+            tabs: [
+                {
+                    name: '📖 Determiner "Such... as"',
+                    content: `
+                        <p>When we use the word <b>"such" as a determiner</b> (categorizing or giving examples), it takes <b>"as"</b> as its connector, NOT "that".</p>
+
+                        <div class="formula-box">
+                            SUCH + Noun + AS (for category / illustration)<br>
+                            SUCH + Noun + THAT (only when expressing a direct result/consequence)
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He is such a person that you mentioned.</div>
+                            <div class="reason">[Incorrect: Comparing/identifying a category takes 'as']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is such a person as you mentioned.</div>
+                            <div class="reason">[Correct: 'Such... as']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Such a book as this is referred by a teacher.</div>
+                            <div class="reason">[Correct: Categorical reference with 'as']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '📖 "Nothing else... but" Reinforcement',
+                    content: `
+                        <p>Reiterating the golden rule for <i>"Nothing else"</i>:</p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">They want nothing else but to have their honor and dignity.</div>
+                            <div class="reason">[Correct: 'nothing else' + 'but']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">It was nothing else but sheer madness.</div>
+                            <div class="reason">[Correct: 'nothing else' + 'but']</div>
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper">
+                        <span class="rule-number">${rule.num}</span>
+                        <span class="rule-title">${rule.title}</span>
+                    </div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            btn.innerText = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = rulesData.length;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh10')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                if (btn) {
+                    btn.classList.add('learned');
+                    btn.innerHTML = 'Learned ✅';
+                    btn.disabled = true;
+                }
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh10')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId);
+            localStorage.setItem('grammarCh10', JSON.stringify(saved));
+            btn.classList.add('learned');
+            btn.innerHTML = 'Learned ✅';
+            btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = {
+        q1: "B", // Although takes yet (or comma), never but.
+        q2: "C", // Indirect speech is always a statement: why he had arrived late.
+        q3: "B", // No doubt takes 'that', doubt takes 'whether'.
+        q4: "D", // else but, other than.
+        q5: "C", // Both... and, and 'good at' (not good in).
+        q6: "B", // to write, to submit, and revising violates parallelism.
+        q7: "B", // As... so is superfluous.
+        q8: "C", // such... as for determiner.
+    };
+
+    const explanations = {
+        q1: "Rule 27: 'Although' can be paired with 'yet' or a comma, but NEVER with 'but' or 'still'. Option B is correct.",
+        q2: "Rule 34: Indirect speech must be assertive (Subject + Verb: 'why he had arrived...'). Auxiliary inversion ('why had he...') is an error.",
+        q3: "Rule 38: 'No doubt' expresses certainty and takes 'that'. 'Doubt' in affirmative expresses uncertainty and takes 'whether'.",
+        q4: "Rule 55: 'Else' is paired with 'but' (nothing else but), and 'other/rather' is paired with 'than' (no other option than).",
+        q5: "Rule 77: 'Both' is always paired with 'and' (not 'as well as'), and proficiency takes 'good at' (not 'good in').",
+        q6: "Rule 80: 'to write, to submit, and revising' mixes infinitives with a gerund. It must be 'to write, to submit, and to revise'.",
+        q7: "Rule 97: 'As' indicating reason must not be followed by 'so' or 'therefore' in the main clause.",
+        q8: "Rule 117: 'Such' as a determiner takes 'as' as its connector ('such an inspiring leader as was described')."
+    };
+
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) {
+                    score++;
+                    fb.innerHTML = `✅ <b>Correct!</b> ${explanations[q]}`;
+                    fb.classList.add('correct');
+                } else {
+                    fb.innerHTML = `❌ <b>Incorrect.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                    fb.classList.add('wrong');
+                }
+            } else {
+                fb.innerHTML = `⚠️ <b>Skipped.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                fb.classList.add('wrong');
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 6 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 6 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 8!<br><small>${score >= 6 ? 'Outstanding! You have mastered Conjunctions & Narration.' : 'Review the flagged rules above and try again!'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

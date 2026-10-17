@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 13: Adverbs & Placement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); width: 0%; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; font-family: 'JetBrains Mono', monospace; }
+        .theme-toggle { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 6px; border-radius: 8px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        .header { text-align: center; padding: 100px 20px 35px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .chapter-tag { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 1rem; }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 14px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.1rem; }
+        .chevron { transition: transform 0.3s; font-size: 0.85rem; color: var(--text-muted); }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 22px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1.5px dashed var(--primary); border-radius: 10px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; color: var(--primary-dark); text-align: center; margin-bottom: 18px; font-size: 0.95rem; font-weight: 600; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 14px 16px; border-radius: 10px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.25); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.25); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 16px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+
+        .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.92rem; }
+        .data-table th, .data-table td { padding: 10px 14px; border: 1px solid var(--border); text-align: left; }
+        .data-table th { background: var(--bg-color); color: var(--primary-dark); font-weight: 700; }
+        .data-table tr:hover { background: var(--bg-color); }
+
+        .mark-learned-btn { width: 100%; padding: 14px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; font-weight: 700; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.1); }
+        .mock-header { background: var(--primary); color: #fff; padding: 24px; text-align: center; }
+        .mock-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+        .mock-body { padding: 26px; }
+        .mcq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 12px; }
+        .mcq-options label { display: block; padding: 12px 16px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; transition: all 0.2s; }
+        .mcq-options label:hover { background: var(--primary-light); border-color: var(--primary); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 12px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+        .submit-btn:hover { opacity: 0.92; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.25rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 7 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle Theme">🌙</button>
+</div>
+
+<div class="header">
+    <div class="chapter-tag">120 Rules Mastery Series</div>
+    <h1>Chapter 13: Adverbs & Placement</h1>
+    <p>Adverb Positioning, Inversion, MPT Order & High-Yield Modifiers (7 Rules)</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules dynamically injected by JavaScript -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 13 Mini Mock Test</h2>
+            <p>Test your precision on adverb placements, modifier pairs, and exam traps</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Choose the sentence where the adverb 'as' is INCORRECTLY used (Rule 26):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) Dr. Kalam is regarded as one of India's greatest visionaries.</label>
+                    <label><input type="radio" name="q1" value="B"> B) The committee appointed him as the chief executive officer.</label>
+                    <label><input type="radio" name="q1" value="C"> C) She is portrayed as an ambitious leader in the documentary.</label>
+                    <label><input type="radio" name="q1" value="D"> D) He treats his junior colleagues as equals.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Which sentence correctly eliminates redundancy between 'quite' and 'all' (Rule 47)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) He has recovered and is quite all right now.</label>
+                    <label><input type="radio" name="q2" value="B"> B) The students have finished quite all the syllabus questions.</label>
+                    <label><input type="radio" name="q2" value="C"> C) She was quiet well prepared for the entrance examination.</label>
+                    <label><input type="radio" name="q2" value="D"> D) The patient is quite well and ready for discharge.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blanks with the correct modifier pair (Rule 82):<br><i>"This vintage watch is _______ expensive, and buying it caused _______ financial strain."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) too much / much too</label>
+                    <label><input type="radio" name="q3" value="B"> B) much too / too much</label>
+                    <label><input type="radio" name="q3" value="C"> C) too much / too much</label>
+                    <label><input type="radio" name="q3" value="D"> D) much too / much too</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Which of the following sentences adheres to correct terminal adverb placement (Rule 87)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) She has submitted her research assignment also.</label>
+                    <label><input type="radio" name="q4" value="B"> B) The weather today is too pleasant.</label>
+                    <label><input type="radio" name="q4" value="C"> C) He is very talented, and his sister is an artist as well.</label>
+                    <label><input type="radio" name="q4" value="D"> D) I have received the invitation also.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Spot the sentence with the CORRECT adverb placement relative to verb and object (Rule 104):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) The teacher tells always the students to maintain discipline.</label>
+                    <label><input type="radio" name="q5" value="B"> B) He completed quickly the test before the allotted time.</label>
+                    <label><input type="radio" name="q5" value="C"> C) She always speaks the truth even under intense pressure.</label>
+                    <label><input type="radio" name="q5" value="D"> D) They visited often their grandparents during the vacations.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="mcq-item">
+                <div class="mcq-question">6. Select the sentence that correctly follows the MPT (Manner - Place - Time) order (Rule 105):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q6" value="A"> A) She sang at the auditorium beautifully yesterday evening.</label>
+                    <label><input type="radio" name="q6" value="B"> B) She sang beautifully at the auditorium yesterday evening.</label>
+                    <label><input type="radio" name="q6" value="C"> C) She sang yesterday evening beautifully at the auditorium.</label>
+                    <label><input type="radio" name="q6" value="D"> D) She sang at the auditorium yesterday evening beautifully.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q6"></div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="mcq-item">
+                <div class="mcq-question">7. Fill in the blank according to Rule 106:<br><i>"The climate in the valley is _______ more pleasant than in the plains."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q7" value="A"> A) very</label>
+                    <label><input type="radio" name="q7" value="B"> B) much</label>
+                    <label><input type="radio" name="q7" value="C"> C) too much</label>
+                    <label><input type="radio" name="q7" value="D"> D) quite all</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q7"></div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="mcq-item">
+                <div class="mcq-question">8. Which sentence correctly utilizes 'very' to emphasize a superlative or sequential adjective?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q8" value="A"> A) This was the much best performance of his theatrical career.</label>
+                    <label><input type="radio" name="q8" value="B"> B) This is your very last chance to rectify the discrepancies.</label>
+                    <label><input type="radio" name="q8" value="C"> C) He is very superior than his competitors.</label>
+                    <label><input type="radio" name="q8" value="D"> D) She feels very better after taking the prescribed syrup.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q8"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitTest()">Submit & Check Answers 🎯</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule26',
+            num: 'RULE 1 (Rule 26)',
+            title: 'Verbs that Take "As" vs Verbs that CANNOT Take "As"',
+            tabs: [
+                {
+                    name: '📖 Concept & The Two Lists',
+                    content: `
+                        <p>The word <b>"as"</b> functions as an adverbial connector with certain verbs, but is <b>strictly prohibited</b> with several common transitive verbs of naming, choosing, and designation.</p>
+
+                        <div class="note-box">
+                            <b>✅ Category 1: Verbs that CAN take "as":</b><br>
+                            <i>treat, define, regard, describe, respect, depict, portray, view, know</i>.<br><br>
+                            • Biology is defined <b>as</b> the science of living beings.<br>
+                            • He is regarded <b>as</b> God in India.<br>
+                            • She described Gary <b>as</b> shy.<br>
+                            • She is treated <b>as</b> a child.
+                        </div>
+
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Category 2: Verbs that CANNOT take "as" (Exam Favorites!)</div>
+                            <i>elect, name, think, consider, call, make, choose, appoint</i>.<br><br>
+                            Never place "as" after these verbs!
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She was elected as Chair of the Board of Governors.</div>
+                            <div class="reason">[Incorrect: 'elected' cannot take 'as']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She was elected Chair of the Board of Governors.</div>
+                            <div class="reason">[Correct: Direct noun complement]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He has just been appointed as director of the publishing division.</div>
+                            <div class="reason">[Incorrect: 'appointed' cannot take 'as']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has just been appointed director of the publishing division.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I consider him as my best friend.</div>
+                            <div class="reason">[Incorrect: 'consider' takes direct object + complement without 'as']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I consider him my best friend.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He thinks her a fool. / The teacher called him stupid.</div>
+                            <div class="reason">[Correct: No 'as' used after 'thinks' or 'called']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule47',
+            num: 'RULE 2 (Rule 47)',
+            title: 'Redundancy of "Quite" & "All" + Quiet vs Quite',
+            tabs: [
+                {
+                    name: '📖 The Redundancy Rule',
+                    content: `
+                        <p>The words <b>"Quite"</b> and <b>"All"</b> both denote completeness or entirety. Using them together in the same clause is a <b>superfluous redundancy error</b>.</p>
+
+                        <div class="formula-box">
+                            Wrong: QUITE + ALL together ❌<br>
+                            Right: Use either QUITE or ALL alone ✅
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He is quite all well.</div>
+                            <div class="reason">[Incorrect: Double completeness modifier]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is quite well.</div>
+                            <div class="reason">[Correct: 'quite' modifies adjective 'well']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He has done quite all the work.</div>
+                            <div class="reason">[Incorrect]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has done all the work.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '💡 Quiet vs Quite',
+                    content: `
+                        <div class="note-box">
+                            <b>*Do not confuse similar-sounding words:</b><br><br>
+                            • <b>Quiet</b> [Noun/Adjective]: The state of being silent; free from noise.<br>
+                            <i>e.g., Please remain quiet during the test.</i><br><br>
+                            • <b>Quite</b> [Adverb]: Completely, entirely, or to a considerable degree.<br>
+                            <i>e.g., The outcome was quite unexpected.</i>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule82',
+            num: 'RULE 3 (Rule 82)',
+            title: '"Too Much" (Adjective) vs "Much Too" (Adverb)',
+            tabs: [
+                {
+                    name: '📖 Master Formula',
+                    content: `
+                        <p>Students frequently confuse <b>too much</b> and <b>much too</b>. The difference is governed by what part of speech follows them:</p>
+
+                        <div class="formula-box">
+                            TOO MUCH + Uncountable Noun (Functions as Adjective)<br>
+                            MUCH TOO + Adjective (Functions as Adverb)
+                        </div>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Construction</th><th>Part of Speech</th><th>Followed By</th><th>Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Too much</b></td>
+                                    <td>Adjective phrase</td>
+                                    <td>Uncountable Noun</td>
+                                    <td>too much <b>sugar</b>, too much <b>work</b>, too much <b>pain</b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Much too</b></td>
+                                    <td>Adverb phrase</td>
+                                    <td>Adjective</td>
+                                    <td>much too <b>expensive</b>, much too <b>painful</b>, much too <b>heavy</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `
+                },
+                {
+                    name: '📝 PDF Examples & Applications',
+                    content: `
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He is too much strong.</div>
+                            <div class="reason">[Incorrect: 'strong' is an adjective, so it requires the adverb 'much too']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is much too strong.</div>
+                            <div class="reason">[Correct: 'much too' modifies adjective 'strong']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">There is much too sugar in the dessert.</div>
+                            <div class="reason">[Incorrect: 'sugar' is an uncountable noun; requires adjective 'too much']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">There is too much sugar in the dessert.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">This car is much too expensive for me to buy.</div>
+                            <div class="reason">[Correct: 'expensive' = adjective ➔ 'much too']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">This case is much too heavy; you can't carry it!</div>
+                            <div class="reason">[Correct: 'heavy' = adjective ➔ 'much too']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Too much work and not enough play make Jack a dull boy.</div>
+                            <div class="reason">[Correct: 'work' = noun ➔ 'too much']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule87',
+            num: 'RULE 4 (Rule 87)',
+            title: 'Placement of "Too", "As well", and "Also" + Intensity Trap',
+            tabs: [
+                {
+                    name: '📖 Sentence-End Placement',
+                    content: `
+                        <p>When denoting addition or inclusion (<i>in addition / furthermore</i>):</p>
+                        <div class="formula-box">
+                            • 'TOO' and 'AS WELL' can be placed at the END of a sentence.<br>
+                            • 'ALSO' can NEVER be placed at the end of a sentence.
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have brought a bag too.</div>
+                            <div class="reason">[Correct: 'too' can end the sentence]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have brought a bag as well.</div>
+                            <div class="reason">[Correct: 'as well' can end the sentence]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I have brought a bag also.</div>
+                            <div class="reason">[Incorrect: 'also' cannot terminate the clause]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have also brought a bag.</div>
+                            <div class="reason">[Correct: 'also' placed before the main verb]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ "Too" Intensity Trap',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 "Too" Meaning Excessively Unpleasant</div>
+                            When "too" denotes high intensity, it carries an inherently <b>unfavorable or negative</b> connotation (meaning <i>more than desirable</i>). Therefore, using "too" alone with positive adjectives is non-standard.
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She is too beautiful.</div>
+                            <div class="reason">[Incorrect: Incomplete/inappropriate; 'too' implies an undesirable excess]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She is very beautiful.</div>
+                            <div class="reason">[Correct: Positive degree of admiration]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">It is too hot to go outside.</div>
+                            <div class="reason">[Correct: 'too... to' format = It is so hot that I cannot go outside]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The question was too difficult to solve.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule104',
+            num: 'RULE 5 (Rule 104)',
+            title: 'Position of Adverbs: The Cardinal Placement Rule',
+            tabs: [
+                {
+                    name: '📖 Standard Adverb Positions',
+                    content: `
+                        <p>Adverbs generally occupy three primary positions in a sentence:</p>
+                        <p><b>1. At the Beginning:</b> To modify the whole clause (e.g., <i>Suddenly the phone rang.</i>)<br>
+                        <b>2. Mid-position:</b> Between the auxiliary verb and the main verb (e.g., <i>He was probably late for the interview.</i>)<br>
+                        <b>3. At the End:</b> Adverbs of manner (e.g., <i>They ate dinner quietly.</i>)</p>
+
+                        <div class="formula-box">
+                            🚨 THE GOLDEN RULE: An adverb can NEVER be placed between a transitive Main Verb and its Object!
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He tells always the truth.</div>
+                            <div class="reason">[Incorrect: 'always' is wedged between verb 'tells' and object 'the truth']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He always tells the truth.</div>
+                            <div class="reason">[Correct: Frequency adverb placed before main verb]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He comes often to my house.</div>
+                            <div class="reason">[Incorrect: 'often' misplaced after the verb]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He often comes to my house.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '💡 Exceptions: Focus Adverbs',
+                    content: `
+                        <div class="note-box">
+                            <b>Exceptions:</b> Focus adverbs such as <b>only, even, too</b> are placed directly next to the specific word they modify, which can change sentence meaning entirely based on their position:<br><br>
+                            • <b>Only</b> Ram saw the thief (Nobody else saw him).<br>
+                            • Ram <b>only</b> saw the thief (He didn't catch him).<br>
+                            • Ram saw <b>only</b> the thief (He saw nothing else).
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule105',
+            num: 'RULE 6 (Rule 105)',
+            title: 'Multiple Adverbs: The MPT Rule (Manner - Place - Time)',
+            tabs: [
+                {
+                    name: '📖 The MPT Sequence',
+                    content: `
+                        <p>When multiple adverbs or adverbial phrases occur in the same clause, they must follow the standard grammatical sequence:</p>
+
+                        <div class="formula-box">
+                            Adverb of MANNER (M) ➔ Adverb of PLACE (P) ➔ Adverb of TIME (T)
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I walked yesterday slowly.</div>
+                            <div class="reason">[Incorrect: Time placed before Manner]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I walked slowly yesterday.</div>
+                            <div class="reason">[Correct: Manner (slowly) ➔ Time (yesterday)]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have to run quickly (Manner) down the street (Place) each morning (Frequency/Time).</div>
+                            <div class="reason">[Correct: MPT sequence followed]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Impatiently (Manner), I waited by the bank (Place) yesterday (Time) for my father.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The choir sang at the cathedral (Place) melodiously (Manner) last Sunday (Time).</div>
+                            <div class="reason">[Incorrect: Place before Manner violates MPT]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The choir sang melodiously (Manner) at the cathedral (Place) last Sunday (Time).</div>
+                            <div class="reason">[Correct: M ➔ P ➔ T]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule106',
+            num: 'RULE 7 (Rule 106)',
+            title: 'Distinction between "Very" and "Much"',
+            tabs: [
+                {
+                    name: '📖 Core Distinctions',
+                    content: `
+                        <p><b>VERY</b> and <b>MUCH</b> modify different grammatical degrees and verb participles:</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Feature</th><th>VERY</th><th>MUCH</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Degree of Adjective</b></td>
+                                    <td><b>Positive Degree</b><br>(<i>very good, very strong</i>)</td>
+                                    <td><b>Comparative Degree</b><br>(<i>much better, much stronger</i>)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Participles</b></td>
+                                    <td><b>Present Participles (V-ing)</b><br>(<i>very interesting, very shocking</i>)</td>
+                                    <td><b>Past Participles (V3)</b><br>(<i>much interested, much grieved</i>)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Adverbial modification</b></td>
+                                    <td>Modifies simple adverbs<br>(<i>very quickly, very well</i>)</td>
+                                    <td>Modifies comparative adverbs<br>(<i>much more quickly</i>)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">It is very interesting.</div>
+                            <div class="reason">[very + present participle (V-ing)]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is much weaker than Shyam.</div>
+                            <div class="reason">[much + comparative degree]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I am much better now.</div>
+                            <div class="reason">[much + comparative 'better']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is much interested in the project.</div>
+                            <div class="reason">[much + past participle 'interested']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⭐ The Superlative "Very" Exception',
+                    content: `
+                        <div class="note-box">
+                            <b>*SPECIAL EXAM NOTE (From Nimisha Bansal PDF):</b><br>
+                            We do not usually use <i>very</i> to modify comparative degrees, but <b>\"very\" CAN be used to emphasize superlatives and ordinal markers</b> when placed directly after \"the\":<br><br>
+                            • <b>The very best:</b> <i>\"This is the very best wine I have tasted in my life.\"</i><br>
+                            • <b>The very first / very last:</b> <i>\"This is your very last chance.\"</i>
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper">
+                        <span class="rule-number">${rule.num}</span>
+                        <span class="rule-title">${rule.title}</span>
+                    </div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            btn.innerText = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = rulesData.length;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh13')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                if (btn) {
+                    btn.classList.add('learned');
+                    btn.innerHTML = 'Learned ✅';
+                    btn.disabled = true;
+                }
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh13')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId);
+            localStorage.setItem('grammarCh13', JSON.stringify(saved));
+            btn.classList.add('learned');
+            btn.innerHTML = 'Learned ✅';
+            btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = {
+        q1: "B", // appointed him as CEO is incorrect (no 'as' with appoint/elect/consider)
+        q2: "D", // quite well (quite and all cannot be together)
+        q3: "B", // much too expensive (adj) / too much strain (noun)
+        q4: "C", // 'as well' at end is correct ('also' cannot be at end)
+        q5: "C", // always speaks the truth (never between verb and object)
+        q6: "B", // beautifully (M) at the auditorium (P) yesterday evening (T)
+        q7: "B", // much + comparative degree ('more pleasant')
+        q8: "B", // the very last chance (emphasizing superlative/sequence)
+    };
+
+    const explanations = {
+        q1: "Rule 26: Verbs like 'elect, name, appoint, consider, call' CANNOT take 'as'. It must be 'appointed him chief executive officer'.",
+        q2: "Rule 47: 'Quite' and 'all' cannot be combined in the same sentence as both indicate totality. 'Quite well' is the correct formulation.",
+        q3: "Rule 82: 'Expensive' is an adjective, so it takes the adverb 'much too'. 'Strain' is an uncountable noun, so it takes adjective 'too much'.",
+        q4: "Rule 87: 'Also' cannot end a sentence ('too' and 'as well' can). Sentence B is flawed because 'too' alone carries negative excess connotation.",
+        q5: "Rule 104: Adverbs cannot be placed between a transitive verb and its direct object. Option C correctly positions frequency adverb 'always' before 'speaks'.",
+        q6: "Rule 105: Multiple adverbs must follow the MPT order: Manner (beautifully) ➔ Place (at the auditorium) ➔ Time (yesterday evening).",
+        q7: "Rule 106: Comparative degrees ('more pleasant') are modified by 'much', not 'very'.",
+        q8: "Rule 106: 'Very' can be used with the definite article 'the' to emphasize superlatives and sequence markers ('the very last chance', 'the very best')."
+    };
+
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) {
+                    score++;
+                    fb.innerHTML = `✅ <b>Correct!</b> ${explanations[q]}`;
+                    fb.classList.add('correct');
+                } else {
+                    fb.innerHTML = `❌ <b>Incorrect.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                    fb.classList.add('wrong');
+                }
+            } else {
+                fb.innerHTML = `⚠️ <b>Skipped.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                fb.classList.add('wrong');
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 6 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 6 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 8!<br><small>${score >= 6 ? 'Masterful! Adverb placement and modifiers conquered.' : 'Review the flagged rules above and try again!'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

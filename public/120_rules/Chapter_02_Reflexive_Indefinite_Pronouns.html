@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Reflexive & Indefinite Pronouns</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 5 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 2: Reflexive & Indefinites</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 2 Mini Mock</h2>
+            <p>Test your knowledge on these 5 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Find the error: "Every of the students (A) / was asked (B) / to submit the assignment (C) / by tomorrow (D)."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A</label>
+                    <label><input type="radio" name="q1" value="B"> B</label>
+                    <label><input type="radio" name="q1" value="C"> C</label>
+                    <label><input type="radio" name="q1" value="D"> D</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) Both Ram and Shyam are not going.</label>
+                    <label><input type="radio" name="q2" value="B"> B) Neither Ram nor Shyam is going.</label>
+                    <label><input type="radio" name="q2" value="C"> C) Neither Ram or Shyam is going.</label>
+                    <label><input type="radio" name="q2" value="D"> D) Both Ram nor Shyam are not going.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blank: "She availed ____ of the opportunity and got a promotion."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) her</label>
+                    <label><input type="radio" name="q3" value="B"> B) herself</label>
+                    <label><input type="radio" name="q3" value="C"> C) hers</label>
+                    <label><input type="radio" name="q3" value="D"> D) she</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Find the error: "He hid himself (A) / in the cave (B) / and thus saved (C) / his life (D)."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A</label>
+                    <label><input type="radio" name="q4" value="B"> B</label>
+                    <label><input type="radio" name="q4" value="C"> C</label>
+                    <label><input type="radio" name="q4" value="D"> D</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Fill in the blank: "All citizens should love ____."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) each other</label>
+                    <label><input type="radio" name="q5" value="B"> B) one another</label>
+                    <label><input type="radio" name="q5" value="C"> C) other</label>
+                    <label><input type="radio" name="q5" value="D"> D) another</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule1', num: 'RULE 1 (Rule 1)', title: 'Difference between "Each" and "Every"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Both are always followed by a <b>Singular Verb</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">Each student is very talented.</div><div class="reason">[Singular verb is used]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Each of my students is very talented.</div><div class="reason">[Singular verb is used]</div></div>
+                        
+                        <div class="note-box">
+                            <b>Adjective vs Pronoun:</b><br>
+                            In "Each student...", "each" is an Adjective describing the noun "student".<br>
+                            In "Each of my students...", "each" is a Pronoun.<br>
+                            In both cases, we use the singular verb "is".
+                        </div>
+                        <div class="note-box">
+                            <b>Approach:</b><br>
+                            <b>Each:</b> Individualistic Approach. It considers each person/item as an individual or dissimilar unit, not collectively.<br>
+                            <b>Every:</b> General Approach. It considers people/items as part of a similar collective group.
+                        </div>
+                    `
+                },
+                { 
+                    name: '⚠️ Exam Traps', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ Trap 1: Pronoun vs Adjective</div>
+                            <p>"Each" can play the role of both Pronoun and Adjective. However, <b>"Every" is used as an Adjective only.</b></p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Every student is very talented.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">Every of my students is very talented.</div><div class="reason">Incorrect because "Every" is acting as a pronoun here.</div></div>
+
+                        <div class="trap-box" style="margin-top:15px;">
+                            <div class="trap-title">⚠️ Trap 2: The "Exactly Two" Rule</div>
+                            <p>"Each" is used for two or more items. <b>"Every" is used ONLY for more than two items.</b> We cannot use "every" for exactly two things (replace with "each" or "both").</p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Each person on this earth has to die one day.</div><div class="reason">[more than two persons]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Every person I know has watched the movie.</div><div class="reason">[more than two persons]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He has a book in each hand.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">He has a book in every hand.</div><div class="reason">[Every cannot be used with two things]</div></div>
+
+                        <div class="trap-box" style="margin-top:15px;">
+                            <div class="trap-title">⚠️ Trap 3: Abstract Nouns</div>
+                            <p>"Every" (but not "each") can be used with abstract nouns.</p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">They have every reason to be happy with their new home.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">They have each reason to be happy with their new home.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule2', num: 'RULE 2 (Rule 2)', title: 'Both & Not / Neither...nor',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>"Both" and "not" cannot be used together.</b> In such cases, we use <b>"Neither...nor"</b> which is used when we want to say that two or more things are not true.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Both Ram and Shyam are not going to visit this place.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Neither Ram nor Shyam is going to visit this place.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">This is a war which both sides cannot win.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This is a war which neither side can win.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Important Note:</b> "Neither" allows us to make a negative statement about two people or things at the same time. "Neither" goes before <b>singular countable nouns</b>. We use it to say "not either" in relation to two things.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule15', num: 'RULE 3 (Rule 15)', title: 'Reflexive Pronoun as Object',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>The object of a sentence is the person or thing that receives the action of the verb. It answers "whom" or "what".</p>
+                        <p>There are certain words which are <b>always followed by an object</b>: <i>enjoy, avail, absent, pride, adjust, reconcile, acquit, amuse, resign, avenge, exert, apply, adapt, etc.</i></p>
+                        <p>When these words are not followed by an object in the sentence, we use <b>reflexive pronouns</b> (myself, himself, herself, etc.) as their object.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">He enjoyed himself at the party.</div><div class="reason">[Object] "He enjoyed whom?" - "himself".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She availed herself of the opportunity and thus got a promotion.</div><div class="reason">[Object] "availed" is followed by the object "herself".</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">They enjoyed the picture last evening.</div><div class="reason">[Object] Here, "enjoyed" is followed by the object "picture". Thus, we do NOT need a reflexive pronoun.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The former IPS officer acquitted himself effectively.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He absented himself from the class.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Note', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ Words NOT followed by Reflexive Pronouns</div>
+                            <p>There are certain words which are <b>not</b> followed by reflexive pronouns as their object: <i>keep, stop, turn, qualify, bathe, move, rest, hide, etc.</i></p>
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">He hid himself in the room.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He hid in the room.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">She has qualified herself for the post.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She has qualified for the post.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule16', num: 'RULE 4 (Rule 16)', title: 'Words NEVER followed by Reflexive Pronoun',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>There are certain words which are never followed by Reflexive pronoun: <i>hide, keep, stop, turn, shave, bathe, etc.</i></p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He hid himself in the cave and thus saved his life.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He hid in the cave and thus saved his life.</div><div class="reason">We cannot use "himself" as "hid" is not followed by a reflexive pronoun.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule22', num: 'RULE 5 (Rule 22)', title: 'Each other vs One another / Other vs Another',
+            tabs: [
+                { 
+                    name: '📖 Each other / One another', 
+                    content: `
+                        <p>We use these to show that each person in a group does something to the others.</p>
+                        <ul style="margin-left:20px; margin-bottom:15px;">
+                            <li><b>Each other:</b> Generally used for <b>two</b> people.</li>
+                            <li><b>One another:</b> Used for <b>more than two</b> people.</li>
+                        </ul>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">All citizens should love each other.</div><div class="reason">"All citizens" refers to more than two people.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">All citizens should love one another.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Peter and Mary helped each other.</div><div class="reason">[Peter helped Mary and Mary helped Peter - 2 people]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">We sent one another Christmas cards.</div><div class="reason">[We sent them a Christmas card and they sent us a Christmas card]</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Other vs Another', 
+                    content: `
+                        <p><b>Other:</b> An adjective meaning 'different' or 'the second of two items'. Can be used with singular or plural nouns. Plural form is <b>others</b>.</p>
+                        <p><b>Another:</b> 'An' + 'other' = 'additional' or 'one more'. Can be used before a plural noun when preceded by a number, or phrases like a couple of, few, etc.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Some children learn quickly but other children need more time.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Have you got any other questions?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Only half of the guests have arrived. Where are the others?</div><div class="reason">[Plural]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">This cake is delicious. Could I have another slice please?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The investigation will take another two weeks/couple of weeks.</div><div class="reason">[Plural noun preceded by a number]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This place isn't great. Is there another place we could go to?</div><div class="reason">[Another can also mean 'an alternative' or 'different']</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 5;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh2')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh2')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh2', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "A", // "Every of" is wrong. It should be "Each of" (Every cannot be a pronoun).
+        q2: "B", // Neither...nor takes singular verb.
+        q3: "B", // Avail takes reflexive pronoun "herself" when no object is present.
+        q4: "A", // "He hid himself" is wrong. "Hide" is never followed by a reflexive pronoun. Should be "He hid".
+        q5: "B"  // "All citizens" = more than two -> "one another".
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

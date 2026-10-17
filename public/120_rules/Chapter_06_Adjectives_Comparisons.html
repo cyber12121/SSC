@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Adjectives & Comparisons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 11 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 6: Adjectives & Comparisons</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 6 Mini Mock</h2>
+            <p>Test your knowledge on these 11 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) He saw a ten inches snake.</label>
+                    <label><input type="radio" name="q1" value="B"> B) He saw a ten inch snake.</label>
+                    <label><input type="radio" name="q1" value="C"> C) He saw a ten-inch snake.</label>
+                    <label><input type="radio" name="q1" value="D"> D) Both B and C are correct.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Fill in the blank: "I ____ a car."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) am owning</label>
+                    <label><input type="radio" name="q2" value="B"> B) own</label>
+                    <label><input type="radio" name="q2" value="C"> C) am having</label>
+                    <label><input type="radio" name="q2" value="D"> D) owning</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) This book is three times larger than that book.</label>
+                    <label><input type="radio" name="q3" value="B"> B) This book is three times as large as that book.</label>
+                    <label><input type="radio" name="q3" value="C"> C) This book is three times large than that book.</label>
+                    <label><input type="radio" name="q3" value="D"> D) This book is three times more large than that book.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Find the error: "The weather of Delhi (A) / is far better than (B) / Mumbai (C) / no error (D)."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A</label>
+                    <label><input type="radio" name="q4" value="B"> B</label>
+                    <label><input type="radio" name="q4" value="C"> C</label>
+                    <label><input type="radio" name="q4" value="D"> D</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) He is the most excellent student.</label>
+                    <label><input type="radio" name="q5" value="B"> B) He is an excellent student.</label>
+                    <label><input type="radio" name="q5" value="C"> C) He is the more excellent student.</label>
+                    <label><input type="radio" name="q5" value="D"> D) He is most unique student.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule6', num: 'RULE 1 (Rule 6)', title: 'Number + Unit + Noun/Adjective',
+            tabs: [
+                { 
+                    name: '📖 Singular Unit', 
+                    content: `
+                        <p>If there is a combination of <b>"Number + Unit + Noun"</b> or <b>"Number + Unit + Adjective"</b>, we always use the <b>Singular form of the Unit</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">He saw a ten inch snake.</div><div class="reason">[Unit - Singular]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She gave me two five hundred rupee notes.</div><div class="reason">[Unit - Singular]</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Exceptions & Notes', 
+                    content: `
+                        <div class="note-box">
+                            <b>Note 1: Self-Explanatory</b><br>
+                            A singular Unit is used if the sentence is NOT self-explanatory. A plural Unit is used if it IS self-explanatory.
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">He had five dozen.</div><div class="reason">[Singular Unit - Not self explanatory]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have five rupees.</div><div class="reason">[Plural Unit - Explanatory]</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note 2: Ascending Order</b><br>
+                            If there is more than one Unit, they are arranged in ascending order.
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Thousands of lakhs of students took the test.</div><div class="reason">[Units arranged in ascending order]</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note 3: Arbitrary Units</b><br>
+                            Words like "handful, glassful, fistful" are arbitrary units. They can be singular or plural.
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">He pulled out a handful of coins from his pocket.</div><div class="reason">[Unit - Singular]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I use two handfuls of pasta per person.</div><div class="reason">[Unit - Plural]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Drink a glassful of water with this medicine.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She drank two whole glassfuls of orange juice.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He has a fistful of acting awards.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">All of a sudden we just started having fistfuls of money.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule8', num: 'RULE 2 (Rule 8)', title: 'Certain Cases of Comparisons',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When comparing something with a group it belongs to, use <b>"any other"</b>.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Gold is more precious than all metals.</div><div class="reason">Incorrect. Gold is itself a metal. This implies "Gold is more precious than gold".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Gold is more precious than any other metals.</div><div class="reason">Correct. Gold is compared with metals other than gold.</div></div>
+                        
+                        <p style="margin-top:15px;">If the subject is NOT part of the group, use <b>"all"</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">Diamond is more precious than all metals.</div><div class="reason">Correct. Diamond is a non-metal, so it is compared to all metals.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Kalidasa was more famous than all English poets.</div><div class="reason">Correct. Kalidasa was not an English poet.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">Kalidasa was more famous than all poets.</div><div class="reason">Incorrect. Kalidasa was a poet himself, so this includes him.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule24', num: 'RULE 3 (Rule 24)', title: 'Very vs Much with Superlative',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When we use <b>"very"</b> with a Superlative degree, the article <b>"the"</b> is always used before "very" (the very superlative).</p>
+                        <p>"Very" modifies present participle, adverb, and positive degree adjectives.</p>
+                        <div class="example-row correct"><div class="example-sentence">It is a very interesting novel.</div></div>
+                        
+                        <p style="margin-top:15px;">When we use <b>"much"</b> with a Superlative degree, the article <b>"the"</b> is used before the superlative (much the superlative).</p>
+                        <p>"Much" is used with comparative degree and past participle.</p>
+                        <div class="example-row correct"><div class="example-sentence">He is much interested.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is much smarter.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He is the much best student of my class.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">He is very the best student of my class.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is the very best student of my class.</div><div class="reason">[It means really]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is much the best student of my class.</div><div class="reason">[It means decidedly]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is much smarter than all other students.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I was very exhausted after the match.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule28', num: 'RULE 4 (Rule 28)', title: 'Verbs Not Existing in "-ing" Form',
+            tabs: [
+                { 
+                    name: '📖 The Lists', 
+                    content: `
+                        <p>Certain verbs do NOT exist in the "-ing" form. They are divided into three categories:</p>
+                        <ul style="margin-left:20px; margin-bottom:15px;">
+                            <li><b>Possession:</b> Own, Belong, Have, Include, Possess, Owe, Contain, Compromise</li>
+                            <li><b>Perception:</b> See, Smell, Taste, Hear, Feel, Appear, Seem, Resemble, Notice, Like, Consist</li>
+                            <li><b>Feeling:</b> Love, Know, Think, Hate, Want, Need, Desire, Wish</li>
+                        </ul>
+                    `
+                },
+                { 
+                    name: '📝 Examples', 
+                    content: `
+                        <div class="example-row incorrect"><div class="example-sentence">I am owning a car.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I own a car.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">I am loving it.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I love it.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">This sauce is tasting strange.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This sauce tastes strange.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">This perfume is smelling like roses.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This perfume smells like roses.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">She has always been hating jazz.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She has always hated jazz.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">All the luggage is belonging to me.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">All the luggage belongs to me.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Notes on "Loving" & "Having"', 
+                    content: `
+                        <div class="note-box">
+                            <b>"Loving" as an Adjective:</b> Sometimes "loving" is used as an adjective, which should not be confused with a verb.<br><br>
+                            Example: He is a very <b>loving</b> person. [Adjective]<br>
+                            Example: He described his work in <b>loving</b> detail. [Adjective]
+                        </div>
+                        
+                        <div class="note-box">
+                            <b>"Having" Usage:</b> When "have" is used in the sense of possession/belongingness/ownership, we cannot use "having". Apart from this, we can use "having" as a perfect participle or in other cases.
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">I am having a book.</div><div class="reason">[Possession - incorrect]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I have a book.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I am having lunch now.</div><div class="reason">[Not possession - correct]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Having done the work, he went to play.</div><div class="reason">[Perfect participle - correct]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule32', num: 'RULE 5 (Rule 32)', title: 'as...as vs so...as',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>These blanks are filled up with adjectives of <b>positive degree</b>.</p>
+                        <p><b>"as...as"</b> can be used to denote both positive and negative sentences.</p>
+                        <p><b>"so...as"</b> can ONLY be used to denote negative sentences.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">If we pass on the information, he's as good as dead.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I'm not so desperate as to agree to that.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">He is as good as Ram.</div><div class="reason">[Positive sentence]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is not as good as Ram.</div><div class="reason">[Negative sentence]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is not so good as Ram.</div><div class="reason">[Negative sentence]</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">He is so good as Ram.</div><div class="reason">[Positive sentence - incorrect usage of "so...as"]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule33', num: 'RULE 6 (Rule 33)', title: 'The "Times" Rule',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>In a comparison, whenever the word <b>"times"</b> comes up, it is <b>never</b> followed by a comparative degree.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">This book is three times larger than that book.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">This book is three times heavier than that book.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">This book is three times as large as that book.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It is two times as costly as that.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">It is twice cheaper than that.</div><div class="reason">[Correct - Times is not written, hence comparative is allowed]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It is twice costlier than that.</div><div class="reason">[Correct - No "times"]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule36', num: 'RULE 7 (Rule 36)', title: 'Comparison Between Two Qualities',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Whenever two qualities of an object are compared, we always use the word <b>"more"</b>. We do <b>NOT</b> use the comparative degree in that case.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">This pen is redder than white.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">This book is heavier than larger.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">This shirt is more white than red.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This umbrella is more beautiful than strong.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule46', num: 'RULE 8 (Rule 46)', title: 'Words Never Used with "Most"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Certain words like <b>unique, excellent, perfect, ideal, entire, complete, etc.</b> are never used with "most".</p>
+                        <p><b>The List:</b> chief, round, unique, total, whole, singular, rectangular, square, excellent, spherical, extreme, annual, golden, deaf, blind, right, empty, circular, wrong, impossible, perfect, entire, external, ideal, solar, etc.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He is the most excellent student.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is an excellent student.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">This is the most unique product of our company.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This is a unique product of our company.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He is completely perfect.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is perfect.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">I think you're the most perfect person I've ever met.</div><div class="reason">[Note: The PDF lists this as correct in a specific context, but generally "perfect" doesn't take "most".]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule112', num: 'RULE 9 (Rule 112)', title: 'Elder/Older, Later/Latter, etc.',
+            tabs: [
+                { 
+                    name: '📖 Elder vs Older', 
+                    content: `
+                        <p><b>Elder:</b> Used for someone in our family.</p>
+                        <p><b>Older:</b> Used for someone not in the family.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">A friend of mine in my company is elder than me.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A friend of mine in my company is older than me.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The elder son of King John, Henry was nine when his father died.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Later vs Latter', 
+                    content: `
+                        <p><b>Later:</b> Refers to time.</p>
+                        <p><b>Latter:</b> Refers to the second of two persons or things mentioned previously.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Bran said that he would call me later.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">There are two kinds of worries: those you can do something about and those you can't. Don't spend any time on the latter.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Farther vs Further', 
+                    content: `
+                        <p><b>Farther:</b> Used for more distant object (physical distance).</p>
+                        <p><b>Further:</b> Used for extra or additional distance (figurative/abstract).</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Villagers saw a temple on the farther side of the river.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Suman has appealed in the high court for further judgement.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Nearest vs Next', 
+                    content: `
+                        <p><b>Nearest:</b> Used for space or distance.</p>
+                        <p><b>Next:</b> Used for order or position.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Delhi railway station is nearest to my house.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Mr. gupta lives in the next house.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Latest vs Last', 
+                    content: `
+                        <p><b>Latest:</b> Opposite to Earliest, denotes time.</p>
+                        <p><b>Last:</b> Opposite to first, denotes order or position.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">She is the last girl to stay in the office.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">What is the latest news today?</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Less vs Fewer & Lesser', 
+                    content: `
+                        <p><b>Less:</b> Quantity (Singular Uncountable Noun).<br><b>Fewer:</b> Number (Plural Countable Noun).</p>
+                        <div class="example-row correct"><div class="example-sentence">He has less money than I.</div><div class="reason">[Money is an Uncountable noun]</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">He has fewer money than I.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Lesser:</b> Denotes something not so great as the other one.</p>
+                        <div class="example-row correct"><div class="example-sentence">Maths is less difficult than English.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She agreed to plead guilty to a lesser charge.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule113', num: 'RULE 10 (Rule 113)', title: 'Comparison of Things',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>While making comparisons, it is necessary to look at the things being compared. Comparisons should be made on common grounds.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The weather of Delhi is far better than Mumbai.</div><div class="reason">Comparing "weather of Delhi" with "Mumbai".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The weather of Delhi is far better than the weather of Mumbai.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The weather of Delhi is far better than that of Mumbai.</div><div class="reason">["that" replaces "the weather"]</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The apples of Shimla are tastier than Ooty.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The apples of Shimla are tastier than those of Ooty.</div><div class="reason">["those" replaces "the apples"]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule120', num: 'RULE 11 (Rule 120)', title: 'Words Never Followed by a Noun',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Certain words are never followed by a Noun: <b>afraid, asleep, due, ready, unable, alike, aware, glad, sorry, well, alone, ill, sure, worth, etc.</b></p>
+                        <p>These are predicative adjectives and are used after linking verbs (is, am, are, seem, etc.).</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">We were unable to contact him at the time.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The army is said to be ready for action.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I am glad to know the parcel arrived safely.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He likes being alone in the house.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Your painting has come out really well.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He has proved his worth to the team.</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 11;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh6')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh6')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh6', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "B", // "ten inch snake" - singular unit.
+        q2: "B", // "own" - verbs of possession don't take -ing.
+        q3: "B", // "three times as large as" - "times" never takes comparative.
+        q4: "C", // Compare weather of Delhi with "that of Mumbai".
+        q5: "B", // "most excellent" is wrong. "an excellent" is correct.
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

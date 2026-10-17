@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12: Verbs & Verb Forms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); width: 0%; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; font-family: 'JetBrains Mono', monospace; }
+        .theme-toggle { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 6px; border-radius: 8px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        .header { text-align: center; padding: 100px 20px 35px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .chapter-tag { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 1rem; }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 14px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.1rem; }
+        .chevron { transition: transform 0.3s; font-size: 0.85rem; color: var(--text-muted); }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 22px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1.5px dashed var(--primary); border-radius: 10px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; color: var(--primary-dark); text-align: center; margin-bottom: 18px; font-size: 0.95rem; font-weight: 600; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 14px 16px; border-radius: 10px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.25); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.25); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 16px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+
+        .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.92rem; }
+        .data-table th, .data-table td { padding: 10px 14px; border: 1px solid var(--border); text-align: left; }
+        .data-table th { background: var(--bg-color); color: var(--primary-dark); font-weight: 700; }
+        .data-table tr:hover { background: var(--bg-color); }
+
+        .mark-learned-btn { width: 100%; padding: 14px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; font-weight: 700; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.1); }
+        .mock-header { background: var(--primary); color: #fff; padding: 24px; text-align: center; }
+        .mock-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+        .mock-body { padding: 26px; }
+        .mcq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 12px; }
+        .mcq-options label { display: block; padding: 12px 16px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; transition: all 0.2s; }
+        .mcq-options label:hover { background: var(--primary-light); border-color: var(--primary); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 12px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+        .submit-btn:hover { opacity: 0.92; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.25rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 8 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle Theme">🌙</button>
+</div>
+
+<div class="header">
+    <div class="chapter-tag">120 Rules Mastery Series</div>
+    <h1>Chapter 12: Verbs & Verb Forms</h1>
+    <p>Confusing Verbs, Infinitives, Gerunds & High-Frequency Exam Pitfalls (8 Rules)</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules dynamically loaded by JavaScript -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 12 Mini Mock Test</h2>
+            <p>Test your command over confusing verbs, infinitives, and structural verb rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Choose the grammatically correct sentence distinguishing Noun and Verb (Rule 18):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) He gave me a very useful advise before the interview.</label>
+                    <label><input type="radio" name="q1" value="B"> B) The coach will advice you to practice daily in the nets.</label>
+                    <label><input type="radio" name="q1" value="C"> C) I advise you to practise regularly because practice makes a man perfect.</label>
+                    <label><input type="radio" name="q1" value="D"> D) He practises law and gave me a valuable advice.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Correct the sentence according to Rule 54:<br><i>"He doesn't know to operate this advanced computer software."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) He doesn't know that to operate this advanced computer software.</label>
+                    <label><input type="radio" name="q2" value="B"> B) He doesn't know how to operate this advanced computer software.</label>
+                    <label><input type="radio" name="q2" value="C"> C) He doesn't know for operating this advanced computer software.</label>
+                    <label><input type="radio" name="q2" value="D"> D) He doesn't know to operating this advanced computer software.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blank using Rule 60 (Prepositional 'To + V1+ing'):<br><i>"The government launched new initiatives with a view to _______ the employment rate."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) increase</label>
+                    <label><input type="radio" name="q3" value="B"> B) increasing</label>
+                    <label><input type="radio" name="q3" value="C"> C) have increased</label>
+                    <label><input type="radio" name="q3" value="D"> D) increased</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Which of the following sentences correctly includes the terminal preposition for the infinitive (Rule 90)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) The poor man had no chair to sit.</label>
+                    <label><input type="radio" name="q4" value="B"> B) I need a reliable fountain pen to write with.</label>
+                    <label><input type="radio" name="q4" value="C"> C) The orphan child was given a toy to play.</label>
+                    <label><input type="radio" name="q4" value="D"> D) They were looking for a cozy house to live.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Spot the error-free sentence involving two distinct helping verbs (Rule 91):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) I have never and will never tolerate such indiscipline.</label>
+                    <label><input type="radio" name="q5" value="B"> B) I have never tolerated and will never tolerate such indiscipline.</label>
+                    <label><input type="radio" name="q5" value="C"> C) I have never tolerated and will never tolerated such indiscipline.</label>
+                    <label><input type="radio" name="q5" value="D"> D) I have never tolerate and will never tolerate such indiscipline.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="mcq-item">
+                <div class="mcq-question">6. Select the sentence with correct verb forms of Fly / Flow / Hang / Found (Rule 99):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q6" value="A"> A) The mighty river has overflown its banks due to incessant rain.</label>
+                    <label><input type="radio" name="q6" value="B"> B) The innocent victim was hung till death by the ruthless tribunal.</label>
+                    <label><input type="radio" name="q6" value="C"> C) The beautiful portrait was hanged on the gallery wall.</label>
+                    <label><input type="radio" name="q6" value="D"> D) The trust founded three new charitable hospitals last year.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q6"></div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="mcq-item">
+                <div class="mcq-question">7. Fill in the blanks with appropriate forms of Lie / Lay (Rule 100):<br><i>"Yesterday, feeling exhausted, she _______ down on the sofa, while her mother _______ the sleeping baby in the cot."</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q7" value="A"> A) laid / lay</label>
+                    <label><input type="radio" name="q7" value="B"> B) lay / laid</label>
+                    <label><input type="radio" name="q7" value="C"> C) lied / laid</label>
+                    <label><input type="radio" name="q7" value="D"> D) lain / lay</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q7"></div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="mcq-item">
+                <div class="mcq-question">8. Identify the sentence that correctly uses words ending in '-ly' (Rule 103):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q8" value="A"> A) Although he was frightened, he did not behave cowardly.</label>
+                    <label><input type="radio" name="q8" value="B"> B) The senior manager always talks friendly with everyone.</label>
+                    <label><input type="radio" name="q8" value="C"> C) He lived miserly throughout his life despite owning vast wealth.</label>
+                    <label><input type="radio" name="q8" value="D"> D) The soldiers faced the ambush with manly courage and determination.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q8"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitTest()">Submit & Check Answers 🎯</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule18',
+            num: 'RULE 1 (Rule 18)',
+            title: 'Noun vs Verb in Similar-Sounding Words',
+            tabs: [
+                {
+                    name: '📖 Concept & Pairs',
+                    content: `
+                        <p>In English, pairs of words sound nearly identical but serve entirely different grammatical functions (Noun vs Verb). Mixing them up is one of the commonest spotting-the-error traps in competitive exams.</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Noun (Entity / Idea)</th><th>Verb (Action / State)</th><th>Distinction Key</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><b>Advice</b> [Noun]</td><td><b>Advise</b> [Verb]</td><td>'c' = Noun; 's' = Verb</td></tr>
+                                <tr><td><b>Practice</b> [Noun]</td><td><b>Practise</b> [Verb]</td><td>'c' = Noun; 's' = Verb</td></tr>
+                                <tr><td><b>Belief</b> [Noun]</td><td><b>Believe</b> [Verb]</td><td>'f' = Noun; 've' = Verb</td></tr>
+                                <tr><td><b>Device</b> [Noun]</td><td><b>Devise</b> [Verb]</td><td>'c' = Noun; 's' = Verb</td></tr>
+                                <tr><td><b>License</b> [Noun - UK: Licence]</td><td><b>License</b> [Verb]</td><td>Action of granting permit vs document</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note-box">
+                            <b>*How to test for a Noun:</b> A noun typically answers the question <b>'What?'</b>, <b>'Who?'</b>, or <b>'Whom?'</b>. An action word following an auxiliary or subject is a <b>Verb</b>.
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">I advise you to practise a lot since practice makes a man perfect.</div>
+                            <div class="reason">[advise = verb; practise = verb infinitive; practice = noun subject]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He gave me a valuable piece of advice.</div>
+                            <div class="reason">[advice = noun object of preposition 'of']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He adviced me to stay calm during the crisis.</div>
+                            <div class="reason">[Incorrect: 'adviced' is non-existent; past verb is 'advised']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">It is my belief that honesty always prevails, and I believe my team.</div>
+                            <div class="reason">[belief = noun; believe = transitive verb]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule54',
+            num: 'RULE 2 (Rule 54)',
+            title: 'Verb "Know" Cannot Take a Direct Bare Infinitive',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>Whenever the verb <b>"know"</b> denotes ability, technique, or information, it <b>CANNOT be followed directly by an infinitive (to + V1)</b>. It must be mediated by a question-word connector like <b>"how, when, why, where"</b>.</p>
+
+                        <div class="formula-box">
+                            KNOW + HOW / WHERE / WHEN / WHAT + TO + V1<br>
+                            (Never: KNOW + TO + V1)
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I don't know to make tea.</div>
+                            <div class="reason">[Incorrect: 'know' cannot link directly to 'to make']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I do not know how to make tea; hence you should help me out.</div>
+                            <div class="reason">[Correct: Mediated by 'how']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She knows to swim across the swift river.</div>
+                            <div class="reason">[Incorrect: Missing 'how']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She knows how to swim across the swift river.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Do you know where the Post Office is?</div>
+                            <div class="reason">[Correct: Mediated by 'where']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule60',
+            num: 'RULE 3 (Rule 60)',
+            title: 'Prepositional "To" Followed by Gerund (To + V1+ing)',
+            tabs: [
+                {
+                    name: '📖 The Rule & Golden List',
+                    content: `
+                        <p>In standard grammar, an infinitive consists of <b>to + V1</b>. However, in certain fixed idioms and phrases, <b>"to" is a PREPOSITION</b> (not an infinitive particle). Since prepositions are followed by gerunds (nouns), these expressions must be followed by <b>V1+ing</b>!</p>
+
+                        <div class="formula-box">
+                            Prepositional Phrase ending in 'TO' + V1+ing (Gerund)
+                        </div>
+
+                        <div class="note-box">
+                            <b>The Mandatory 11 Phrases (Commit to memory!):</b><br>
+                            1. <b>be + used to</b> + V1+ing (habituated)<br>
+                            2. <b>accustomed to</b> + V1+ing<br>
+                            3. <b>addicted to</b> + V1+ing<br>
+                            4. <b>with a view to</b> + V1+ing<br>
+                            5. <b>look forward to</b> + V1+ing<br>
+                            6. <b>given to</b> + V1+ing<br>
+                            7. <b>prone to</b> + V1+ing<br>
+                            8. <b>devoted to</b> + V1+ing<br>
+                            9. <b>in addition to</b> + V1+ing<br>
+                            10. <b>confess to</b> + V1+ing<br>
+                            11. <b>disposed to / object to</b> + V1+ing
+                        </div>
+                    `
+                },
+                {
+                    name: '📝 Authentic Examples & Traps',
+                    content: `
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I look forward to meet you at the summit.</div>
+                            <div class="reason">[Incorrect: 'look forward to' requires gerund 'meeting']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I look forward to hearing from you.</div>
+                            <div class="reason">[Correct: 'hearing' is the gerund object]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">These measures have been taken with a view to increasing the company's profits.</div>
+                            <div class="reason">[Correct: 'with a view to' + V1+ing]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She was given to staying in bed till lunchtime.</div>
+                            <div class="reason">[Correct: 'given to' = habitual]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is rather prone to making tactless remarks.</div>
+                            <div class="reason">[Correct: 'prone to' + V1+ing]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I am not accustomed to being treated like this.</div>
+                            <div class="reason">[Correct: 'accustomed to' + V1+ing]</div>
+                        </div>
+
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 "Used to + V1" vs "Be + Used to + V1+ing"</div>
+                            • <b>Subject + used to + V1:</b> Past discontinued habit (e.g., <i>He used to smoke</i>).<br>
+                            • <b>Subject + IS/ARE/AM/WAS/WERE + used to + V1+ing:</b> Accustomed to something in present/past (e.g., <i>He is used to working late</i>).
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule90',
+            num: 'RULE 4 (Rule 90)',
+            title: 'Terminal Preposition with Qualifying Infinitives',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>Whenever an infinitive (<b>to + V1</b>) qualifies a noun and that noun acts as the logical object of an action requiring an instrument, location, or medium, the sentence <b>MUST end with the appropriate governing preposition</b>.</p>
+
+                        <div class="formula-box">
+                            Noun + to + V1 + REQUIRED PREPOSITION (in / with / on / at)
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The child has no bed to sleep.</div>
+                            <div class="reason">[Incorrect: You sleep IN a bed; terminal preposition 'in' is missing]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The child has no bed to sleep in.</div>
+                            <div class="reason">[Correct: 'in' qualifies the location noun 'bed']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I have no pen to write.</div>
+                            <div class="reason">[Incorrect: You write WITH a pen]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have a pen to write with.</div>
+                            <div class="reason">[Correct: 'with' qualifies instrument noun 'pen']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The child wanted a toy to play.</div>
+                            <div class="reason">[Incorrect: You play WITH a toy]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The child wanted a toy to play with.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule91',
+            num: 'RULE 5 (Rule 91)',
+            title: 'Distinct Helping Verbs Require Distinct Main Verbs',
+            tabs: [
+                {
+                    name: '📖 Concept & The Principle',
+                    content: `
+                        <p>When two auxiliary (helping) verbs requiring different forms of the principal verb are joined by a conjunction (and, or, but), <b>both helping verbs MUST be supplied with their respective main verb forms</b>. One single verb form cannot serve both if their grammatical requirements conflict!</p>
+
+                        <div class="formula-box">
+                            Aux 1 (Have/Has/Had) + V3 + Conjunction + Aux 2 (Will/Can/Shall) + V1
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I have never and will never watch this movie.</div>
+                            <div class="reason">[Incorrect: 'have' requires V3 (watched), but only V1 (watch) was provided]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I have never watched and will never watch this movie.</div>
+                            <div class="reason">[Correct: 'watched' satisfies 'have', and 'watch' satisfies 'will']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He has not and will not listen to your advice.</div>
+                            <div class="reason">[Incorrect: 'has not' requires V3 'listened']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has not listened and will not listen to your advice.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule99',
+            num: 'RULE 6 (Rule 99)',
+            title: 'Confusing Verb Forms (Fly/Flow, Hang/Hung, Find/Found)',
+            tabs: [
+                {
+                    name: '📖 Master Verb Chart',
+                    content: `
+                        <p>Several verbs have overlapping or deceptively similar base forms in V1, V2, and V3. Memorizing their precise distinction prevents fatal exam errors:</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Base (V1)</th><th>Past (V2)</th><th>Past Participle (V3)</th><th>Meaning / Usage</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><b>Fly</b></td><td>Flew</td><td>Flown</td><td>Birds / aircraft through air</td></tr>
+                                <tr><td><b>Flow</b></td><td>Flowed</td><td>Flowed</td><td>Water / rivers / liquids (NEVER 'flown')</td></tr>
+                                <tr><td><b>Find</b></td><td>Found</td><td>Found</td><td>To discover / locate something</td></tr>
+                                <tr><td><b>Found</b></td><td>Founded</td><td>Founded</td><td>To establish / set up an institution</td></tr>
+                                <tr><td><b>Hang</b></td><td>Hanged</td><td>Hanged</td><td>Execution / capital punishment of humans</td></tr>
+                                <tr><td><b>Hang</b></td><td>Hung</td><td>Hung</td><td>Suspending objects (pictures, clocks, clothes)</td></tr>
+                            </tbody>
+                        </table>
+                    `
+                },
+                {
+                    name: '📝 PDF Exemplars & Pitfalls',
+                    content: `
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The water overflown from the banks.</div>
+                            <div class="reason">[Incorrect: Rivers 'flow', not 'fly'. Past of overflow is 'overflowed']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The water overflowed from the banks.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The secretary has found this organization in 1980.</div>
+                            <div class="reason">[Incorrect: 'found' means discovered; establishment requires 'founded']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The secretary has founded this organization.</div>
+                            <div class="reason">[Correct: Established an organization]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The prisoner was hanged till death.</div>
+                            <div class="reason">[Correct: 'hanged' is used for capital execution]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The clock was hung on the wall.</div>
+                            <div class="reason">[Correct: Inanimate object suspended ➔ 'hung']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule100',
+            num: 'RULE 7 (Rule 100)',
+            title: 'The "Lie" vs "Lay" Dilemma Unraveled',
+            tabs: [
+                {
+                    name: '📖 The Three Forms',
+                    content: `
+                        <p>No verb causes more confusion than <b>LIE</b> and <b>LAY</b>. Here is the definitive formula:</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Verb</th><th>V1</th><th>V2</th><th>V3</th><th>V-ing</th><th>Type & Function</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Lie</b> (untruth)</td>
+                                    <td>Lie</td><td>Lied</td><td>Lied</td><td>Lying</td>
+                                    <td>Intransitive: Speak falsely to deceive</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lay</b> (put/place)</td>
+                                    <td>Lay</td><td>Laid</td><td>Laid</td><td>Laying</td>
+                                    <td><b>Transitive</b> (takes direct object): Place down flat</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lie</b> (recline)</td>
+                                    <td>Lie</td><td>Lay</td><td>Lain</td><td>Lying</td>
+                                    <td><b>Intransitive</b> (no object): Rest or recline horizontally</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note-box">
+                            <b>Memory Trick:</b> <i>Lay</i> requires an action on an object (<i>lay something down</i>). <i>Lie</i> is what a subject does by itself without touching an object (<i>lie down and sleep</i>). Notice that the past tense of <i>Lie (recline)</i> is <b>Lay</b>!
+                        </div>
+                    `
+                },
+                {
+                    name: '📝 Concrete PDF Examples',
+                    content: `
+                        <p><b>1. Untruth:</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She lied to her parents about her new car.</div>
+                            <div class="reason">[V2 of lie = falsehood]</div>
+                        </div>
+
+                        <p style="margin-top: 15px;"><b>2. Lay (Put/Place - Transitive):</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She laid the baby on the bed.</div>
+                            <div class="reason">[V2 of transitive 'lay'; 'the baby' is the direct object]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has laid his bag on the ground.</div>
+                            <div class="reason">[V3 of transitive 'lay']</div>
+                        </div>
+
+                        <p style="margin-top: 15px;"><b>3. Lie (Recline/Rest - Intransitive):</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">A pen lay on the desk.</div>
+                            <div class="reason">[V2 of intransitive 'lie'; meaning it was resting on the desk]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Women have lain down their lives throughout history.</div>
+                            <div class="reason">[V3 of intransitive 'lie']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule103',
+            num: 'RULE 8 (Rule 103)',
+            title: '-ly Words that are Adjectives, NOT Adverbs',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>Many students assume that every word ending in <b>\"-ly\"</b> is an adverb. This is a common misconception! Certain words ending in \"-ly\" are <b>ADJECTIVES</b>, and using them directly to modify a verb is a grammatical error.</p>
+
+                        <div class="note-box">
+                            <b>Adjectives ending in -ly:</b><br>
+                            Friendly, miserly, cowardly, monthly, yearly, weekly, manly, orderly, brotherly, lovely, scholarly, niggardly.
+                        </div>
+
+                        <div class="formula-box">
+                            Wrong: Verb + Adjective (He fought cowardly ❌)<br>
+                            Right: Verb + in a + Adjective + manner / way (He fought in a cowardly manner ✅)
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He behaved friendly with all the delegates.</div>
+                            <div class="reason">[Incorrect: 'friendly' is an adjective, cannot directly modify the verb 'behaved']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He behaved in a friendly manner with all the delegates.</div>
+                            <div class="reason">[Correct: Adverbial phrase formed with adjective 'friendly']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">This was a particularly brutal and cowardly attack.</div>
+                            <div class="reason">[Correct: 'cowardly' directly modifies noun 'attack']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The workers are paid a miserly $2 a day.</div>
+                            <div class="reason">[Correct: 'miserly' modifies noun amount]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She put the letters in three orderly piles.</div>
+                            <div class="reason">[Correct: 'orderly' modifies noun 'piles']</div>
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper">
+                        <span class="rule-number">${rule.num}</span>
+                        <span class="rule-title">${rule.title}</span>
+                    </div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            btn.innerText = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = rulesData.length;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh12')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                if (btn) {
+                    btn.classList.add('learned');
+                    btn.innerHTML = 'Learned ✅';
+                    btn.disabled = true;
+                }
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh12')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId);
+            localStorage.setItem('grammarCh12', JSON.stringify(saved));
+            btn.classList.add('learned');
+            btn.innerHTML = 'Learned ✅';
+            btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = {
+        q1: "C", // advise (verb) + practise (verb) + practice (noun)
+        q2: "B", // know how to operate
+        q3: "B", // with a view to + V1+ing (increasing)
+        q4: "B", // write with a pen
+        q5: "B", // have never tolerated and will never tolerate
+        q6: "D", // founded = established
+        q7: "B", // lay (past of lie = recline) / laid (past of lay = placed the baby)
+        q8: "D", // manly courage (adjective modifying noun)
+    };
+
+    const explanations = {
+        q1: "Rule 18: 'Advise' is a verb ('I advise you'), 'practise' is the verb form following 'to', and 'practice' is the noun subject ('practice makes...').",
+        q2: "Rule 54: The verb 'know' cannot take a direct bare infinitive ('know to operate'); it must be mediated by 'how to operate'.",
+        q3: "Rule 60: 'With a view to' is a fixed prepositional expression that must be followed by a gerund ('increasing').",
+        q4: "Rule 90: When an infinitive qualifies an instrument noun ('pen'), the sentence must terminate with the appropriate preposition ('write with').",
+        q5: "Rule 91: 'Have' requires the past participle 'tolerated', while modal 'will' requires base form 'tolerate'. Both distinct verbs must be present.",
+        q6: "Rule 99: 'Founded' is the correct past tense of 'found' meaning established. Liquids overflow (overflowed, never overflown); execution is 'hanged'.",
+        q7: "Rule 100: Reclining in past is 'lay' (from lie/lay/lain). Placing an object in past is 'laid' (from lay/laid/laid).",
+        q8: "Rule 103: Words like 'manly, cowardly, friendly' are adjectives. Modifying a verb requires 'in a cowardly manner'. In option D, 'manly' correctly qualifies the noun 'courage'."
+    };
+
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) {
+                    score++;
+                    fb.innerHTML = `✅ <b>Correct!</b> ${explanations[q]}`;
+                    fb.classList.add('correct');
+                } else {
+                    fb.innerHTML = `❌ <b>Incorrect.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                    fb.classList.add('wrong');
+                }
+            } else {
+                fb.innerHTML = `⚠️ <b>Skipped.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                fb.classList.add('wrong');
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 6 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 6 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 8!<br><small>${score >= 6 ? 'Outstanding! Verbs and Verb Forms mastered.' : 'Review the flagged rules above and try again!'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Pronouns (Full Detail)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 8 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 1: Pronoun Cases & Relatives</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 1 Mini Mock</h2>
+            <p>Test your knowledge on these 8 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Find the error: "The delegates differed as to (A) / who they thought (B) / might win the election (C) / no error (D)."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A</label>
+                    <label><input type="radio" name="q1" value="B"> B</label>
+                    <label><input type="radio" name="q1" value="C"> C</label>
+                    <label><input type="radio" name="q1" value="D"> D</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) I, you and he are robbers.</label>
+                    <label><input type="radio" name="q2" value="B"> B) You, he and I are robbers.</label>
+                    <label><input type="radio" name="q2" value="C"> C) He, I and you are robbers.</label>
+                    <label><input type="radio" name="q2" value="D"> D) You, I and he are robbers.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Fill in the blank: "He spent up the little amount ____ he had."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) which</label>
+                    <label><input type="radio" name="q3" value="B"> B) who</label>
+                    <label><input type="radio" name="q3" value="C"> C) that</label>
+                    <label><input type="radio" name="q3" value="D"> D) whom</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Identify the error: "My parents scold me more than him." (Meaning: More than they scold him)</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) No error (Objective compared with Objective)</label>
+                    <label><input type="radio" name="q4" value="B"> B) "him" should be "he"</label>
+                    <label><input type="radio" name="q4" value="C"> C) "me" should be "I"</label>
+                    <label><input type="radio" name="q4" value="D"> D) "more" should be "most"</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Fill in the blank: "All except ____ liked the performance."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) he</label>
+                    <label><input type="radio" name="q5" value="B"> B) him</label>
+                    <label><input type="radio" name="q5" value="C"> C) his</label>
+                    <label><input type="radio" name="q5" value="D"> D) himself</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule3', num: 'RULE 1 (Rule 3)', title: 'Relative Pronouns (Who, Whom, Which, That)',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p style="margin-bottom:10px;">(1) <b>Who & Whom:</b> Mainly used for people. They can also be used for animals that are mentioned by name and domesticated (pets).</p>
+                        <div class="example-row correct"><div class="example-sentence">The witnesses whom I interviewed gave conflicting evidence.</div><div class="reason">Used for people.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The vacuum scared our dog Rocky, who was sleeping on the rug.</div><div class="reason">Used for a domesticated pet.</div></div>
+                        
+                        <p style="margin: 15px 0 10px 0;">(2) <b>Which:</b> Used for animals in general (non-domestic) and non-living things.</p>
+                        <div class="example-row correct"><div class="example-sentence">Vinita visited the park with a dog, which likes to chase squirrels.</div><div class="reason">Used for an animal (general).</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The bomb, which killed 15 people, was the worst outrage.</div><div class="reason">Used for a non-living thing.</div></div>
+                        
+                        <p style="margin: 15px 0 10px 0;">(3) <b>That:</b> Can be used for people, animals, or things. (No restrictions).</p>
+                        <div class="example-row correct"><div class="example-sentence">The car that Jasprit bought runs on electricity.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The musician that won the award is Indian.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ The "That" Trap', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ Words that take ONLY "That"</div>
+                            <p>All, any, the only, the same, none, much, no, the little, the few, something, anything, nothing, and <b>Superlative degrees</b>. They cannot be followed by who or which.</p>
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">This is the same book which you were reading.</div><div class="reason">"Same" requires "that".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This is the same book that you were reading.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">He spent up the little amount which he had.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He spent up the little amount that he had.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This is the best that I can do for you.</div><div class="reason">Superlative degree "best" takes "that".</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule19', num: 'RULE 2 (Rule 19)', title: 'Cases of Pronouns (Comparison)',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Comparisons are done between the same things. We compare <b>Subjective case to Subjective case</b> and <b>Objective case to Objective case</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">My parents scold me more than he.</div><div class="reason">Correct. Meaning: "...more than he does." (Subjective vs Subjective)</div></div>
+                        <div class="example-row correct"><div class="example-sentence">My parents scold me more than him.</div><div class="reason">Correct. Meaning: "...more than they scold him." (Objective vs Objective)</div></div>
+                        
+                        <div class="example-row incorrect" style="margin-top:15px;"><div class="example-sentence">She is taller than me.</div><div class="reason">Incorrect. Comparing a subjective case "She" with objective "me".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She is taller than I.</div></div>
+                        
+                        <div class="example-row incorrect" style="margin-top:15px;"><div class="example-sentence">She likes chocolates more than me.</div><div class="reason">Incorrect. Cannot compare "chocolates" with a person "me".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She likes chocolates more than I.</div></div>
+                        
+                        <div class="example-row correct" style="margin-top:15px;"><div class="example-sentence">He is as tall as I.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He speaks more frequently than she.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule20', num: 'RULE 3 (Rule 20)', title: 'Who vs. Whom (The Hack)',
+            tabs: [
+                { 
+                    name: '📖 The Rule & Hack', 
+                    content: `
+                        <div class="formula-box">Substitute: He/She = Who | Him/Her = Whom</div>
+                        <p>If you can substitute "he/she", use Who. If you substitute "him/her", use Whom.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Mrs. Dixit consulted an astrologer whom she met in Sonpur.</div><div class="reason">She met <b>him</b> in Sonpur. (Him = Whom)</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Jack is the man whom I went fishing with last spring.</div><div class="reason">I went fishing with <b>him</b>. (Him = Whom)</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Jyoti is the girl who got the job.</div><div class="reason"><b>She</b> got the job. (She = Who)</div></div>
+                        
+                        <div class="note-box">
+                            <b>Tricky Exam Example:</b> The delegates differed as to <b>who</b> they thought might win.<br>
+                            <i>Reason: They thought <b>he</b> might win. (He = Who). Here, the entire clause is the object of the preposition.</i>
+                        </div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">She is one of the professors who I think is a mathematician.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is the man whom everyone admires.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">They hired the man whom we interviewed last week.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule41', num: 'RULE 4 (Rule 41)', title: 'Objective Case after Preposition',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>The objective case of a pronoun (me, him, her, us, them) comes after a preposition (like but, except, between).</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">None but he is going to the party.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">None but him is going to the party.</div><div class="reason">"But" acts as a preposition here.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">All except he liked the performance.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">All except him liked the performance.</div><div class="reason">"Except" is a preposition.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Important Note:</b> A verb is also followed by the pronoun of the objective case.<br>
+                            Example: <b>Let him</b> do that work. (Let acts as a verb here).
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Ram as well as he is going to the party.</div><div class="reason">"As well as" is NOT a preposition here, so Subjective "he" is used.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">There is good friendship between you and him.</div><div class="reason">"Between" is a preposition.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule42', num: 'RULE 5 (Rule 42)', title: 'Sequence of Pronouns (231 / 123)',
+            tabs: [
+                { 
+                    name: '📖 Positive Sense', 
+                    content: `
+                        <div class="formula-box">Positive Sense = 231 (Second, Third, First Person)</div>
+                        <p><b>Rule:</b> When all three persons are subjects and connected by 'and', sequence is You (2), He (3), I (1).</p>
+                        <div class="example-row correct"><div class="example-sentence">You, he and I are good friends.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Rule for Two Persons (Positive):</b></p>
+                        <ul style="margin-left:20px;">
+                            <li>Sequence (2,3): <b>You and she</b> are good friends.</li>
+                            <li>Sequence (2,1): <b>You and I</b> are playing chess.</li>
+                            <li>Sequence (3,1): <b>He and I</b> were watching T.V.</li>
+                        </ul>
+                    `
+                },
+                { 
+                    name: '📖 Negative Sense', 
+                    content: `
+                        <div class="formula-box">Negative Sense = 123 (First, Second, Third Person)</div>
+                        <p><b>Rule:</b> When talking about a mistake, blame, or guilt, sequence is I (1), You (2), He (3).</p>
+                        <div class="example-row correct"><div class="example-sentence">I, you and he are guilty.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I, you and he are robbers.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Rule for Two Persons (Negative):</b></p>
+                        <ul style="margin-left:20px;">
+                            <li>Sequence (1,2): <b>I and you</b> have committed a crime.</li>
+                            <li>Sequence (2,3): <b>You and he</b> are sinners.</li>
+                            <li>Sequence (1,3): <b>I and he</b> were guilty.</li>
+                        </ul>
+                        <div class="note-box">If all pronouns are plural, we use the order 123 in all cases. (We, you and they are going to watch a movie.)</div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule68', num: 'RULE 6 (Rule 68)', title: 'Antecedent Rule',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>The noun or pronoun that comes just before a Relative pronoun is called an <b>Antecedent</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">Ram met him who they say has helped us.</div><div class="reason">"him" is the antecedent.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He saw her whom everyone admires.</div><div class="reason">"her" is the antecedent.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Rule:</b> When there is NO antecedent in a sentence, we use <b>whoever, whomever</b> as relative pronouns.
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Ram met whoever they has helped us.</div><div class="reason">No Antecedent present.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He saw whomever everyone admires.</div><div class="reason">No Antecedent present.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule115', num: 'RULE 7 (Rule 115)', title: 'But, Except, Between',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When "but, except, between" are used as prepositions, they must be followed by the <b>objective case</b> (me, him, her, you, us, them).</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">There is friendship between you and I.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">There is friendship between you and me.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">All but he are going to the party.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">All but him are going to the party.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Let he do the work.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Let him do the work.</div><div class="reason">"Let" is a verb.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">All except him are going to the party.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule116', num: 'RULE 8 (Rule 116)', title: 'Pseudo Subject',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Whenever we use a pseudo subject (like "It is...") in a sentence, the pronoun following it should be in the <b>subjective case</b> (he, she, I, we, they).</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">It is him who should be blamed.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It is he who should be blamed.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">It is a lovely day.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">It is us who have defeated the champion.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It is we who have defeated the champion.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">It is me who am guilty.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It is I who am guilty.</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 8;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh1')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh1')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh1', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "B", // "who" is correct. (They thought HE might win -> Who). The delegates differed as to who...
+        q2: "A", // Negative sense -> 123 -> I, you and he.
+        q3: "C", // "little" takes "that".
+        q4: "A", // "My parents scold me more than him" is correct when meaning "more than they scold him" (Objective vs Objective).
+        q5: "B"  // "except" is a preposition -> objective case "him".
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

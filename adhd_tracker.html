@@ -1,0 +1,2996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Focus — SSC CGL Tier 2 (6+1 Rhythm)</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --accent: #4f46e5;
+            --accent-soft: #eef2ff;
+            --accent-hover: #4338ca;
+            --success: #10b981;
+            --success-soft: #ecfdf5;
+            --warning: #f59e0b;
+            --warning-soft: #fef3c7;
+            --math: #e11d48;
+            --ga: #059669;
+            --eng: #7c3aed;
+            --reas: #d97706;
+            --mock: #db2777;
+            --vt-color: #ef4444;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0b1120;
+            --card: #151f32;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #283548;
+            --accent: #6366f1;
+            --accent-soft: rgba(99, 102, 241, 0.16);
+            --accent-hover: #818cf8;
+            --success: #10b981;
+            --success-soft: rgba(16, 185, 129, 0.14);
+            --warning: #fbbf24;
+            --warning-soft: rgba(251, 191, 36, 0.14);
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px 16px 80px;
+            transition: background-color 0.25s ease, color 0.25s ease;
+            position: relative;
+        }
+
+        #confettiCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 99999;
+        }
+
+        .app-shell {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .brand-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+
+        .streak-pill {
+            background: linear-gradient(135deg, #f97316, #ef4444);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 99px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
+        }
+
+        .top-actions {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .icon-btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 7px 12px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        .icon-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .icon-btn:active {
+            transform: translateY(1px);
+        }
+
+        .icon-btn.active {
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Quick Search Bar */
+        .search-container {
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .search-input-wrap {
+            display: flex;
+            align-items: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 8px 14px;
+            transition: all 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-input-wrap:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        .search-icon {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-right: 8px;
+        }
+
+        .search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-size: 0.88rem;
+        }
+
+        .search-input::placeholder {
+            color: var(--muted);
+            opacity: 0.7;
+        }
+
+        .search-shortcut-hint {
+            font-size: 0.72rem;
+            color: var(--muted);
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+
+        .search-results-panel {
+            margin-top: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            max-height: 280px;
+            overflow-y: auto;
+            padding: 8px;
+            box-shadow: var(--shadow-md);
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.15s;
+        }
+
+        .search-result-item:hover {
+            background: var(--accent-soft);
+        }
+
+        .search-result-title {
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+
+        .search-result-tag {
+            font-size: 0.74rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        /* Hero Day Switcher */
+        .day-hero {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 20px 22px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-hero.is-seventh {
+            border-color: var(--mock);
+            background: linear-gradient(180deg, var(--card) 0%, rgba(219, 39, 119, 0.05) 100%);
+        }
+
+        .nav-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .nav-btn {
+            background: var(--accent-soft);
+            color: var(--accent);
+            border: none;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .day-selector-wrap {
+            text-align: center;
+            flex: 1;
+        }
+
+        .day-select {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            outline: none;
+            max-width: 100%;
+        }
+
+        .day-select option {
+            background: var(--card);
+            color: var(--text);
+            font-size: 0.92rem;
+        }
+
+        .phase-subtitle {
+            font-size: 0.84rem;
+            color: var(--muted);
+            font-weight: 600;
+            margin-top: 3px;
+            outline: none;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .phase-subtitle:focus {
+            background: var(--bg);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        /* Action bar inside Hero */
+        .hero-action-bar {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 12px 0 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-pill-btn {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 6px 14px;
+            border-radius: 99px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+
+        .hero-pill-btn:hover {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: var(--accent);
+            transform: scale(1.03);
+        }
+
+        .hero-pill-btn.dopamine {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(236, 72, 153, 0.15));
+            border-color: rgba(99, 102, 241, 0.3);
+            color: var(--text);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .progress-track {
+            height: 10px;
+            background: var(--border);
+            border-radius: 99px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+            border-radius: 99px;
+            transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ========================================================
+           VISUAL TIMER DROPDOWN COMPONENT (Main Page)
+        ======================================================== */
+        .vt-dropdown-wrapper {
+            background: #090e17;
+            color: #f8fafc;
+            border: 1px solid #1e293b;
+            border-radius: var(--radius-lg);
+            margin-bottom: 16px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .vt-dropdown-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 18px;
+            cursor: pointer;
+            background: #090e17;
+            transition: background 0.15s ease;
+            user-select: none;
+            gap: 10px;
+        }
+
+        .vt-dropdown-header:hover {
+            background: #111a28;
+        }
+
+        .vt-dropdown-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .vt-dropdown-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .vt-dropdown-mini-time {
+            font-size: 1.15rem;
+            font-weight: 900;
+            font-variant-numeric: tabular-nums;
+            color: var(--vt-color);
+            letter-spacing: -0.02em;
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            padding: 2px 10px;
+            border-radius: 8px;
+        }
+
+        .vt-status-badge {
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: #1e293b;
+            color: #94a3b8;
+        }
+
+        .vt-status-badge.running {
+            background: rgba(16, 185, 129, 0.18);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .vt-dropdown-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vt-toggle-arrow {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            transition: transform 0.25s ease;
+            padding: 4px;
+        }
+
+        .vt-dropdown-wrapper.open .vt-toggle-arrow {
+            transform: rotate(180deg);
+        }
+
+        .vt-dropdown-body {
+            display: none;
+            padding: 10px 18px 22px;
+            border-top: 1px solid #1e293b;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .vt-dropdown-wrapper.open .vt-dropdown-body {
+            display: flex;
+        }
+
+        .vt-top-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin: 8px 0 10px;
+            width: 100%;
+        }
+
+        .vt-preset-btn {
+            background: #182234;
+            color: #94a3b8;
+            border: 1px solid #283548;
+            padding: 6px 11px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .vt-preset-btn:hover {
+            background: #283548;
+            color: #ffffff;
+            border-color: #475569;
+        }
+
+        .vt-preset-btn.active {
+            background: #334155;
+            color: #ffffff;
+            border-color: var(--vt-color);
+            box-shadow: 0 0 0 1px var(--vt-color);
+        }
+
+        .vt-input-time {
+            width: 66px;
+            background: #182234;
+            color: #ffffff;
+            border: 1px solid #283548;
+            padding: 6px 8px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-align: center;
+            outline: none;
+            transition: border 0.15s;
+        }
+
+        .vt-input-time:focus {
+            border-color: var(--vt-color);
+        }
+
+        .vt-color-wrap {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.15s;
+        }
+
+        .vt-color-wrap:hover {
+            transform: scale(1.08);
+        }
+
+        .vt-color-picker {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .vt-color-preview {
+            width: 100%;
+            height: 100%;
+            background-color: var(--vt-color);
+        }
+
+        .vt-checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #94a3b8;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 8px;
+            background: #182234;
+            border: 1px solid #283548;
+        }
+
+        .vt-checkbox {
+            width: 15px;
+            height: 15px;
+            accent-color: var(--vt-color);
+            cursor: pointer;
+        }
+
+        .vt-digital-display {
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            font-variant-numeric: tabular-nums;
+            color: #ffffff;
+            margin: 6px 0 12px;
+            line-height: 1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .vt-dial-container {
+            position: relative;
+            width: 290px;
+            height: 290px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vt-clock-svg {
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+            touch-action: none;
+            overflow: visible;
+        }
+
+        .vt-bottom-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .vt-action-btn {
+            padding: 9px 18px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .vt-btn-play {
+            background: var(--vt-color);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+        }
+
+        .vt-btn-play:hover {
+            filter: brightness(1.12);
+            transform: translateY(-1px);
+        }
+
+        .vt-btn-sub {
+            background: #182234;
+            color: #f8fafc;
+            border: 1px solid #283548;
+        }
+
+        .vt-btn-sub:hover {
+            border-color: #475569;
+            background: #283548;
+        }
+
+        .vt-hint {
+            font-size: 0.73rem;
+            color: #64748b;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* 45-Day Rhythm Matrix (Heatmap) */
+        .matrix-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            display: none;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .matrix-card.open {
+            display: block;
+        }
+
+        .matrix-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .matrix-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--muted);
+            letter-spacing: 0.03em;
+        }
+
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+        }
+
+        .matrix-day-cell {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .matrix-day-cell:hover {
+            transform: scale(1.06);
+            border-color: var(--accent);
+            z-index: 2;
+        }
+
+        .matrix-day-cell.current {
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-soft);
+        }
+
+        .matrix-day-cell.is-done {
+            background: var(--success-soft);
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .matrix-day-cell.is-mock {
+            border-color: rgba(219, 39, 119, 0.4);
+        }
+
+        .cell-num {
+            font-size: 0.76rem;
+            font-weight: 800;
+        }
+
+        .cell-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 99px;
+            background: var(--border);
+        }
+
+        .matrix-day-cell.is-done .cell-dot {
+            background: var(--success);
+        }
+
+        .matrix-day-cell.is-mock .cell-dot {
+            background: var(--mock);
+        }
+
+        /* Mock Score Chart Drawer */
+        .analytics-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            display: none;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .analytics-card.open {
+            display: block;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .svg-chart-container {
+            width: 100%;
+            height: 180px;
+            margin-top: 8px;
+        }
+
+        /* Subject Cards */
+        .subjects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .subject-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px 20px;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .subject-card.all-done {
+            border-color: var(--success);
+            background: var(--success-soft);
+        }
+
+        .subject-card.spotlight {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft), 0 8px 25px rgba(99, 102, 241, 0.25);
+            animation: pulseGlow 1.8s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.015); }
+            100% { transform: scale(1); }
+        }
+
+        .subject-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+
+        .subject-title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .subject-pill {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.04em;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .pill-math { background: var(--math); }
+        .pill-ga { background: var(--ga); }
+        .pill-eng { background: var(--eng); }
+        .pill-reas { background: var(--reas); }
+        .pill-mock { background: var(--mock); }
+
+        .subject-topic {
+            font-size: 0.98rem;
+            font-weight: 700;
+            outline: none;
+            padding: 2px 6px;
+            border-radius: 4px;
+            flex: 1;
+        }
+
+        .subject-topic:focus {
+            background: var(--bg);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .subject-time {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--muted);
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 99px;
+            flex-shrink: 0;
+        }
+
+        .subtask-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .subtask-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: var(--bg);
+            border: 1px solid transparent;
+            transition: all 0.15s;
+        }
+
+        .subtask-item:hover {
+            border-color: var(--border);
+            transform: translateX(2px);
+        }
+
+        .subtask-item.done {
+            opacity: 0.55;
+        }
+
+        .subtask-item.done .subtask-text {
+            text-decoration: line-through;
+            color: var(--muted);
+        }
+
+        .subtask-item.target-highlight {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .subtask-cb {
+            width: 19px;
+            height: 19px;
+            accent-color: var(--success);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .subtask-text {
+            flex: 1;
+            font-size: 0.91rem;
+            outline: none;
+            padding: 2px 4px;
+            border-radius: 4px;
+            line-height: 1.35;
+        }
+
+        .subtask-text:focus {
+            background: var(--card);
+            box-shadow: 0 0 0 2px var(--accent);
+            text-decoration: none !important;
+        }
+
+        .subtask-actions {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+
+        .subtask-item:hover .subtask-actions {
+            opacity: 1;
+        }
+
+        .sub-action-btn {
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 0.8rem;
+            padding: 4px 6px;
+            border-radius: 4px;
+            transition: all 0.15s;
+        }
+
+        .sub-action-btn:hover {
+            color: var(--text);
+            background: var(--card);
+        }
+
+        .add-sub-btn {
+            margin-top: 10px;
+            background: transparent;
+            border: 1px dashed var(--border);
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 7px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            transition: all 0.15s;
+        }
+
+        .add-sub-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        /* Extras Card */
+        .extras-card {
+            margin-top: 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mock-input-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(219, 39, 119, 0.08);
+            border: 1px solid rgba(219, 39, 119, 0.25);
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .mock-input {
+            width: 95px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            font-weight: 800;
+            text-align: center;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .mock-input:focus {
+            border-color: var(--mock);
+            box-shadow: 0 0 0 2px rgba(219, 39, 119, 0.2);
+        }
+
+        .brain-dump-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brain-dump-label {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .brain-dump {
+            min-height: 52px;
+            font-size: 0.9rem;
+            color: var(--text);
+            background: var(--bg);
+            padding: 10px 14px;
+            border-radius: 10px;
+            outline: none;
+            line-height: 1.4;
+            transition: border 0.15s;
+            border: 1px solid transparent;
+        }
+
+        .brain-dump:focus {
+            border-color: var(--accent);
+            background: var(--card);
+        }
+
+        .brain-dump:empty:before {
+            content: "Quick brain dump: Park distracting thoughts, weak formulas, or tomorrow's reminder...";
+            color: var(--muted);
+            opacity: 0.65;
+        }
+
+        .footer-nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .overall-mini {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        /* ========================================================
+           ZEN FOCUS MODAL OVERLAY (With Visual Timer Inside)
+        ======================================================== */
+        .zen-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(11, 17, 32, 0.92);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .zen-modal-backdrop.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .zen-modal-content {
+            background: #090e17;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            max-width: 540px;
+            width: 100%;
+            padding: 26px 24px 28px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.25s ease;
+        }
+
+        .zen-modal-backdrop.open .zen-modal-content {
+            transform: scale(1);
+        }
+
+        .zen-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 4px 8px;
+            transition: color 0.15s;
+        }
+
+        .zen-close-btn:hover {
+            color: #ffffff;
+        }
+
+        .zen-tag {
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 99px;
+            color: white;
+        }
+
+        .zen-task-title {
+            font-size: 1.22rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.35;
+            margin-top: 4px;
+            max-width: 90%;
+        }
+
+        .zen-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .zen-btn {
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.15s;
+        }
+
+        .zen-btn-primary {
+            background: var(--success);
+            color: white;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+        }
+
+        .zen-btn-primary:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+        }
+
+        .zen-btn-secondary {
+            background: #182234;
+            border: 1px solid #283548;
+            color: #ffffff;
+        }
+
+        .zen-btn-secondary:hover {
+            border-color: var(--accent);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+<canvas id="confettiCanvas"></canvas>
+
+<!-- ========================================================
+     ZEN FOCUS OVERLAY (LAUNCHED ON CLICKING 'FOCUS')
+======================================================== -->
+<div class="zen-modal-backdrop" id="zenModal" onclick="handleZenBackdropClick(event)">
+    <div class="zen-modal-content">
+        <button class="zen-close-btn" onclick="closeZenModal()">✕</button>
+        <div style="display:flex; align-items:center; gap:8px;">
+            <span class="zen-tag pill-math" id="zenTag">MATHS</span>
+            <span style="font-size:0.75rem; font-weight:700; color:#64748b; letter-spacing:0.04em;">FOCUS SESSION</span>
+        </div>
+        <div class="zen-task-title" id="zenTitle">Active Task</div>
+
+        <!-- Presets inside Focus Mode -->
+        <div class="vt-top-controls" style="margin-top:8px; margin-bottom:4px;">
+            <button class="vt-preset-btn" onclick="setTimerMinutes(10)">10m</button>
+            <button class="vt-preset-btn" onclick="setTimerMinutes(15)">15m</button>
+            <button class="vt-preset-btn active" onclick="setTimerMinutes(25)">25m</button>
+            <button class="vt-preset-btn" onclick="setTimerMinutes(30)">30m</button>
+            <button class="vt-preset-btn" onclick="setTimerMinutes(45)">45m</button>
+            <button class="vt-preset-btn" onclick="addSprintMinutes(5)">+5m</button>
+        </div>
+
+        <div class="vt-digital-display" id="zenTimerDisplay" style="font-size:3.2rem; margin:2px 0 8px;">25:00</div>
+
+        <!-- Visual Timer Dial inside Focus Mode -->
+        <div class="vt-dial-container" style="width:250px; height:250px;">
+            <svg class="vt-clock-svg" id="zenVisualTimerSvg" viewBox="0 0 320 320">
+                <circle cx="160" cy="160" r="132" fill="#141d2b" stroke="#253246" stroke-width="2"/>
+                <path id="zenVisualTimerWedge" fill="var(--vt-color)" d=""></path>
+                <g id="zenVtTicksGroup"></g>
+                <g id="zenVtLabelsGroup"></g>
+                <circle cx="160" cy="160" r="5" fill="#090e17" stroke="#ffffff" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <div class="zen-actions" style="margin-top:14px;">
+            <button class="vt-action-btn vt-btn-play" id="zenPlayBtn" onclick="toggleSprintTimer()">▶ Start</button>
+            <button class="zen-btn zen-btn-secondary" onclick="resetSprintTimer()">🔄 Reset</button>
+            <button class="zen-btn zen-btn-primary" onclick="completeZenTask()">✓ Complete & Claim Win</button>
+        </div>
+        <div style="font-size:0.74rem; color:#64748b; margin-top:8px;">💡 Drag the clock to adjust time • <kbd>Space</kbd> to toggle • <kbd>Esc</kbd> to exit</div>
+    </div>
+</div>
+
+<div class="app-shell">
+    <!-- Top Brand & Header -->
+    <div class="top-bar">
+        <div class="brand-group">
+            <div class="brand">🎯 SSC CGL TIER 2 • 6+1 RHYTHM</div>
+            <div class="streak-pill" id="streakPill">🔥 <span id="streakCount">1</span> Day Streak</div>
+        </div>
+        <div class="top-actions">
+            <button class="icon-btn" id="soundToggleBtn" onclick="toggleAudio()" title="Toggle dopamine sound effects">🔊 Sound: ON</button>
+            <button class="icon-btn" id="noiseToggleBtn" onclick="toggleBrownNoise()" title="ADHD Brown Noise Focus Masking">🎧 Noise: OFF</button>
+            <button class="icon-btn" onclick="toggleTheme()">🌗 Theme</button>
+            <button class="icon-btn" onclick="exportData()">💾 Backup</button>
+            <button class="icon-btn" onclick="document.getElementById('importInput').click()">📂 Restore</button>
+            <input type="file" id="importInput" style="display:none" accept=".json" onchange="importData(event)">
+            <button class="icon-btn" onclick="resetPlan()">🔄 Reset</button>
+        </div>
+    </div>
+
+    <!-- Quick Search Bar -->
+    <div class="search-container">
+        <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" id="topicSearchInput" placeholder="Search 45 days (e.g. 'Divisibility', 'Indus Valley', 'Frustum', 'Preamble')..." oninput="handleSearch(this.value)">
+            <span class="search-shortcut-hint">Ctrl + K</span>
+        </div>
+        <div class="search-results-panel" id="searchResultsPanel"></div>
+    </div>
+
+    <!-- Hero Day Switcher -->
+    <div class="day-hero" id="dayHeroBox">
+        <div class="nav-row">
+            <button class="nav-btn" id="prevBtn" onclick="changeDay(-1)">← Prev</button>
+            <div class="day-selector-wrap">
+                <select class="day-select" id="dayDropdown" onchange="jumpToDay(this.value)"></select>
+                <div class="phase-subtitle" id="dayPhase" contenteditable="true" onblur="savePhase(this.innerText)"></div>
+            </div>
+            <button class="nav-btn" id="nextBtn" onclick="changeDay(1)">Next →</button>
+        </div>
+
+        <!-- Interactive Quick Action Pills -->
+        <div class="hero-action-bar">
+            <button class="hero-pill-btn dopamine" onclick="rollForNextTask()" title="Pick an unfinished task to overcome decision paralysis">
+                🎲 Pick Next Task
+            </button>
+            <button class="hero-pill-btn" onclick="toggleMatrix()" id="matrixToggleBtn">
+                🗺️ 45-Day Rhythm Matrix
+            </button>
+            <button class="hero-pill-btn" onclick="toggleAnalytics()" id="analyticsToggleBtn">
+                📊 Mock Score Trajectory
+            </button>
+        </div>
+
+        <div class="progress-header">
+            <span id="todayStatusText">Today's Micro-Steps: 0/0</span>
+            <span id="todayPctText">0%</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" id="todayProgressFill"></div>
+        </div>
+    </div>
+
+    <!-- 45-Day Matrix (Heatmap) -->
+    <div class="matrix-card" id="matrixCard">
+        <div class="matrix-header">
+            <span class="matrix-title">🗓️ 45-DAY RHYTHM MATRIX (7 WEEKS • 6 STUDY + 1 MOCK/REV)</span>
+            <button class="icon-btn" onclick="toggleMatrix()">✕ Close</button>
+        </div>
+        <div class="matrix-grid" id="matrixGrid"></div>
+    </div>
+
+    <!-- Mock Score Trajectory Chart -->
+    <div class="analytics-card" id="analyticsCard">
+        <div class="chart-header">
+            <div>
+                <span class="matrix-title">🔥 TIER-2 MOCK SCORE PROGRESS (MOCKS 1 TO 10)</span>
+                <div style="font-size:0.75rem; color:var(--muted); margin-top:2px;">Target: 300+ / 390 Marks</div>
+            </div>
+            <button class="icon-btn" onclick="toggleAnalytics()">✕ Close</button>
+        </div>
+        <div class="svg-chart-container" id="chartContainer"></div>
+    </div>
+
+    <!-- ========================================================
+         VISUAL TIMER DROPDOWN CARD (COLLAPSIBLE ON MAIN PAGE)
+    ======================================================== -->
+    <div class="vt-dropdown-wrapper" id="visualTimerDropdownWrapper">
+        <div class="vt-dropdown-header" onclick="toggleVisualTimerDropdown()">
+            <div class="vt-dropdown-left">
+                <span class="vt-dropdown-title">⏱️ Visual Timer</span>
+                <span class="vt-dropdown-mini-time" id="vtMiniTimeDisplay">25:00</span>
+                <span class="vt-status-badge" id="vtStatusBadge">PAUSED</span>
+            </div>
+            <div class="vt-dropdown-right">
+                <button class="vt-action-btn vt-btn-play" id="vtMiniPlayBtn" style="padding:5px 12px; font-size:0.78rem;" onclick="event.stopPropagation(); toggleSprintTimer();">▶ Start</button>
+                <span class="vt-toggle-arrow" id="vtDropdownArrow">▼</span>
+            </div>
+        </div>
+
+        <!-- Expandable Full Visual Dial & Presets -->
+        <div class="vt-dropdown-body" id="vtDropdownBody">
+            <div class="vt-top-controls">
+                <button class="vt-preset-btn" onclick="setTimerMinutes(5)">5</button>
+                <button class="vt-preset-btn" onclick="setTimerMinutes(10)">10</button>
+                <button class="vt-preset-btn" onclick="setTimerMinutes(15)">15</button>
+                <button class="vt-preset-btn active" onclick="setTimerMinutes(25)">25</button>
+                <button class="vt-preset-btn" onclick="setTimerMinutes(30)">30</button>
+                <button class="vt-preset-btn" onclick="setTimerMinutes(45)">45</button>
+                <button class="vt-preset-btn" onclick="setTimerMinutes(60)">60</button>
+
+                <input type="text" class="vt-input-time" id="vtCustomInput" placeholder="m:ss" onchange="setCustomTime(this.value)" onkeydown="if(event.key==='Enter')setCustomTime(this.value)">
+
+                <!-- Color Swatch Picker -->
+                <div class="vt-color-wrap" title="Change wedge color">
+                    <input type="color" class="vt-color-picker" id="vtColorPicker" value="#ef4444" oninput="changeWedgeColor(this.value)">
+                    <div class="vt-color-preview" id="vtColorPreview"></div>
+                </div>
+
+                <!-- Proportional Mode Toggle -->
+                <label class="vt-checkbox-label" title="When checked, dial spans selected duration; when unchecked, dial is standard 60-minute face">
+                    <input type="checkbox" id="vtProportionalCb" class="vt-checkbox" onchange="toggleProportionalMode(this.checked)">
+                    Proportional
+                </label>
+            </div>
+
+            <!-- Digital Display -->
+            <div class="vt-digital-display" id="vtDigitalDisplay">25:00</div>
+
+            <!-- Clock Face Dial SVG -->
+            <div class="vt-dial-container">
+                <svg class="vt-clock-svg" id="visualTimerSvg" viewBox="0 0 320 320">
+                    <circle cx="160" cy="160" r="132" fill="#141d2b" stroke="#253246" stroke-width="2"/>
+                    <path id="visualTimerWedge" fill="var(--vt-color)" d=""></path>
+                    <g id="vtTicksGroup"></g>
+                    <g id="vtLabelsGroup"></g>
+                    <circle cx="160" cy="160" r="5" fill="#090e17" stroke="#ffffff" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <!-- Bottom Controls -->
+            <div class="vt-bottom-controls">
+                <button class="vt-action-btn vt-btn-play" id="vtPlayBtn" onclick="toggleSprintTimer()">▶ Start</button>
+                <button class="vt-action-btn vt-btn-sub" onclick="pauseTimer()">⏸ Pause</button>
+                <button class="vt-action-btn vt-btn-sub" onclick="resetSprintTimer()">🔄 Reset</button>
+                <button class="vt-action-btn vt-btn-sub" onclick="addSprintMinutes(1)">+1m</button>
+                <button class="vt-action-btn vt-btn-sub" onclick="addSprintMinutes(5)">+5m</button>
+            </div>
+            <div class="vt-hint">💡 Tip: Click or drag anywhere on the circle with your mouse to set time instantly!</div>
+        </div>
+    </div>
+
+    <!-- Subjects Container -->
+    <div class="subjects-list" id="subjectsContainer"></div>
+
+    <!-- Extras & ADHD Brain Dump -->
+    <div class="extras-card">
+        <div class="mock-input-row" id="mockScoreRow" style="display:none;">
+            <span>🔥 Full Mock Score (out of 390):</span>
+            <input type="number" class="mock-input" id="mockScoreInput" placeholder="---" min="0" max="390" oninput="saveMockScore(this.value)">
+        </div>
+        <div class="brain-dump-header">
+            <div class="brain-dump-label">🧠 ADHD Brain Dump / Formula Scratchpad (Auto-saves)</div>
+            <button class="icon-btn" style="padding:3px 8px; font-size:0.72rem;" onclick="copyBrainDump()">📋 Copy</button>
+        </div>
+        <div class="brain-dump" id="brainDumpBox" contenteditable="true" onblur="saveNotes(this.innerText)"></div>
+    </div>
+
+    <!-- Footer Stats & Jump -->
+    <div class="footer-nav">
+        <div class="overall-mini" id="overallMiniStats">Overall 45-Day Progress: 0%</div>
+        <button class="icon-btn" onclick="jumpToNextIncomplete()">⏩ Jump to First Incomplete Day</button>
+    </div>
+</div>
+
+<script>
+const rawSchedule = [
+    // ================= WEEK 1: ECONOMICS + BIOLOGY PART 1 + STATS/PROB/%/P&L =================
+    { d: 1, phase: "Week 1 (Day 1/6) • Eco + Bio + Stats", mock: false,
+      math: ["Statistics Part 1 (2.5h)", ["Learn Mean, Median, Mode of Ungrouped & Grouped data", "Learn Empirical Formula & Range", "Solve 25 Tier-2 PYQs"]],
+      ga: ["Economics + Biology + Static (1.5h)", ["Core (Eco): Basics of Economy, Sectors & National Income (GDP, GNP, NNP)", "Science (Bio): Cell Structure, Organelles & Cell Division", "Static GK: Classical Dances of India & Exponents"]],
+      eng: ["Subject-Verb Agreement + RC (1h)", ["Read Subject-Verb Agreement rules", "Solve 2 Tier-2 RCs + 1 Cloze Test", "Learn 30 Syno/Anto from Blackbook"]],
+      reas: ["Coding-Decoding (1h)", ["20 Letter & Number Coding Qs", "15 Mixed/Chinese Coding Qs"]]
+    },
+    { d: 2, phase: "Week 1 (Day 2/6) • Eco + Bio + Stats", mock: false,
+      math: ["Statistics Part 2 (2.5h)", ["Learn Mean Deviation, Variance & Standard Deviation", "Learn Coefficient of Variation formula", "Solve 30 Tier-2 PYQs"]],
+      ga: ["Economics + Biology + Static (1.5h)", ["Core (Eco): Money, Banking, RBI Functions & Monetary Policy (Repo, CRR, SLR)", "Science (Bio): Plant & Animal Tissues", "Static GK: Folk Dances of India (State-wise)"]],
+      eng: ["Tenses + PQRS + Vocab (1h)", ["Tenses & Conditional Sentences rules", "Solve 10 Para Jumbles (PQRS) + 2 RCs", "Learn 30 One Word Substitutions (OWS)"]],
+      reas: ["Analogy & Odd One Out (1h)", ["20 Number-Set Analogy Qs (a, b, c pattern)", "20 Word & Letter Analogy Qs"]]
+    },
+    { d: 3, phase: "Week 1 (Day 3/6) • Eco + Bio + Probability", mock: false,
+      math: ["Probability Part 1 (2.5h)", ["Learn Permutations & Combinations (nCr) basics", "Coins, Dice & Playing Cards probability concepts", "Solve 30 Basic-to-Moderate Qs"]],
+      ga: ["Economics + Biology + Static (1.5h)", ["Core (Eco): Five Year Plans (1st to 12th - Objectives & Models) & NITI Aayog", "Science (Bio): Human Digestive System & Enzymes", "Static GK: Musical Instruments & Famous Exponents"]],
+      eng: ["Active/Passive Voice + RC (1h)", ["Voice Rules + 35 Active/Passive Rapid Drill", "Solve 2 RCs + 1 Cloze Test", "Learn 30 Idioms & Phrases"]],
+      reas: ["Number Series (1h)", ["20 Missing Number Series Qs", "15 Wrong Number Series & Missing Matrix Qs"]]
+    },
+    { d: 4, phase: "Week 1 (Day 4/6) • Eco + Bio + Probability", mock: false,
+      math: ["Probability Part 2 (2.5h)", ["Bag/Balls problems, Conditional Probability & Independent Events", "Solve 25 Tier-2 PYQs", "Attempt 20-Q Mixed Stats + Prob Quiz"]],
+      ga: ["Economics + Biology + Static (1.5h)", ["Core (Eco): Inflation (WPI, CPI, Types) & Phillips/Lorenz/Kuznets Curves", "Science (Bio): Human Respiratory System", "Static GK: Major Indian Classical Music Gharanas"]],
+      eng: ["Narration + PQRS + Vocab (1h)", ["Direct/Indirect Speech rules + 35 Practice Qs", "Solve 10 PQRS + 2 RCs", "Learn 30 Syno/Anto"]],
+      reas: ["Syllogism & Venn Diagrams (1h)", ["20 Syllogism Qs (Only a few, Either/Or, Possibility)", "15 Venn Diagram Qs"]]
+    },
+    { d: 5, phase: "Week 1 (Day 5/6) • Eco + Bio + Percentage", mock: false,
+      math: ["Percentage (2.5h)", ["Election, Venn Diagram & Income-Expenditure concepts", "Solve 35 Tier-2 Level Percentage Qs", "15-min Speed Calculation Drill"]],
+      ga: ["Economics + Biology + Static (1.5h)", ["Core (Eco): Fiscal Policy, Union Budget Terms & Taxation (GST, Direct/Indirect)", "Science (Bio): Human Circulatory System (Heart, Blood, Vessels)", "Static GK: State-wise Festivals & Fairs (Part 1)"]],
+      eng: ["Pronouns/Adjectives + RC (1h)", ["Pronoun & Adjective error rules", "Solve 2 RCs + 1 Cloze Test", "Learn 30 OWS"]],
+      reas: ["Blood Relations & Directions (1h)", ["20 Coded & Pointing Blood Relation Qs", "15 Direction & Shadow Qs"]]
+    },
+    { d: 6, phase: "Week 1 (Day 6/6) • Eco Finish + Bio + P&L", mock: false,
+      math: ["Profit, Loss & Discount - Gap Focus (2.5h)", ["Master Dishonest Dealer / Faulty Weights concept", "Marked Price, Successive Discount & Free Article schemes", "Solve 35 Timed PYQs"]],
+      ga: ["Economics Finish + Biology + Static (1.5h)", ["Core (Eco): Balance of Payments, Foreign Trade, Poverty & Unemployment", "Science (Bio): Human Excretory System (Kidney/Nephron)", "Static GK: State-wise Festivals & Fairs (Part 2)"]],
+      eng: ["Verbs/Modals + PQRS (1h)", ["Verbs, Gerunds, Infinitives & Participles", "Solve 10 PQRS + 2 RCs", "Learn 30 Idioms"]],
+      reas: ["Seating Arrangement (1h)", ["4 Linear & Parallel Row sets", "4 Circular Arrangement sets"]]
+    },
+    { d: 7, phase: "🔥 DAY 7: MOCK #1 + WEEK 1 FULL REVISION", mock: true,
+      math: ["Full Tier-2 Mock #1 + Analysis (3h)", ["Attempt Full-Length Tier-2 Mock #1 (2h 15m)", "Analyze mistakes & log weak concepts (45m)"]],
+      ga: ["Week 1 GK Revision (1h)", ["Revise Complete Economics Notes (Days 1–6)", "Revise Biology (Cell to Excretory) & Dance/Music/Festival tables"]],
+      eng: ["Week 1 Maths Revision (1h)", ["Revise Statistics & Probability Formulas + Dishonest Dealer tricks", "Re-solve Mock #1 wrong Maths Qs"]],
+      reas: ["Week 1 Eng & Reasoning Revision (1h)", ["Revise 180 Vocab words & Grammar rules from Days 1–6", "Re-solve Mock #1 Reasoning errors"]]
+    },
+
+    // ================= WEEK 2: POLITY PART 1 + BIOLOGY PART 2 + ARITHMETIC FINISH =================
+    { d: 8, phase: "Week 2 (Day 1/6) • Polity + Bio + SI/CI", mock: false,
+      math: ["SI & CI Part 1 (2.5h)", ["Half-yearly, Quarterly, 8-monthly compounding", "SI-CI 2yr/3yr Difference & Tree/Ratio method", "Solve 35 Timed Qs"]],
+      ga: ["Polity + Biology + Static (1.5h)", ["Core (Polity): Making of Constitution, Constituent Assembly & Borrowed Sources", "Science (Bio): Nervous System (Brain/Spinal Cord) & Sense Organs", "Static GK: Famous Temples of India & Architecture Styles"]],
+      eng: ["Prepositions + RC (1h)", ["Preposition rules & Fixed Prepositions (Part 1)", "Solve 2 RCs + 1 Cloze Test", "Learn 30 Syno/Anto"]],
+      reas: ["Critical Reasoning Part 1 (1h)", ["15 Statement & Assumption Qs", "15 Statement & Conclusion Qs"]]
+    },
+    { d: 9, phase: "Week 2 (Day 2/6) • Polity + Bio + Installments", mock: false,
+      math: ["SI & CI Part 2 - Installment Gap (2.5h)", ["Master SI Installment formula & solve 15 Qs", "Master CI Equal/Unequal Installments & solve 15 Qs", "20-Q SI/CI Speed Drill"]],
+      ga: ["Polity + Biology + Static (1.5h)", ["Core (Polity): Preamble, Parts, 12 Schedules, Union & Territory, Citizenship", "Science (Bio): Endocrine System (Glands, Hormones & Disorders)", "Static GK: Historical Monuments, Caves & UNESCO World Heritage Sites"]],
+      eng: ["Fixed Prepositions + PQRS (1h)", ["Fixed Prepositions (Part 2) & Phrasal Verbs", "Solve 10 PQRS + 2 RCs", "Learn 30 OWS"]],
+      reas: ["Critical Reasoning Part 2 (1h)", ["15 Cause & Effect Qs", "15 Course of Action & Strong/Weak Arguments Qs"]]
+    },
+    { d: 10, phase: "Week 2 (Day 3/6) • Polity + Bio + Ratio", mock: false,
+      math: ["Ratio, Partnership & Ages (2.5h)", ["Income-Savings Cross Product & Coin distribution", "Partnership & Ages problems", "Solve 40 Timed Qs"]],
+      ga: ["Polity + Biology + Static (1.5h)", ["Core (Polity): Fundamental Rights (Art 12–35) & Writs", "Science (Bio): Skeletal System (Bones/Joints) & Reproductive System", "Static GK: National Parks of India (State-wise)"]],
+      eng: ["Conjunctions/Articles + RC (1h)", ["Conjunction & Article rules", "Solve 2 RCs + 1 Cloze Test", "Learn 30 Idioms"]],
+      reas: ["Mathematical Operations & Inequality (1h)", ["20 BODMAS Sign Interchange Qs", "20 Coded & Direct Inequality Qs"]]
+    },
+    { d: 11, phase: "Week 2 (Day 4/6) • Polity + Bio + Mixture", mock: false,
+      math: ["Average + Mixture & Alligation (2.5h)", ["Weighted Average, Cricket Avg & Repeated Replacement Mixture", "Alligation applications", "Solve 40 Timed Qs"]],
+      ga: ["Polity + Biology + Static (1.5h)", ["Core (Polity): DPSP (Art 36–51) & Fundamental Duties (Art 51A)", "Science (Bio): Vitamins, Scientific Names, Minerals & Deficiency Diseases", "Static GK: Tiger Reserves, Elephant & Biosphere Reserves"]],
+      eng: ["Adverbs/Inversion + PQRS (1h)", ["Adverb & Inversion rules", "Solve 10 PQRS + 2 RCs", "Learn 30 Spellings"]],
+      reas: ["Order, Ranking & Puzzles (1h)", ["15 Order & Ranking Qs", "5 Floor, Box & Schedule Puzzles"]]
+    },
+    { d: 12, phase: "Week 2 (Day 5/6) • Polity + Bio + Time & Work", mock: false,
+      math: ["Time & Work + Pipes & Cisterns (2.5h)", ["Alternate Days, Leaving Before/After & Efficiency", "MDH Contractors & Pipes with leaks", "Solve 40 Timed Qs"]],
+      ga: ["Polity + Biology + Static (1.5h)", ["Core (Polity): President, Vice President, PM & Council of Ministers", "Science (Bio): Human Diseases (Bacterial, Viral, Protozoan, Fungal, Genetic)", "Static GK: Wildlife Sanctuaries & Ramsar Wetland Sites"]],
+      eng: ["Spot the Error Drill (1h)", ["Solve 40 Mixed Spot the Error Qs", "Solve 15 Sentence Improvement Qs", "Learn 30 Syno/Anto"]],
+      reas: ["Dice, Cube & Figure Counting (1h)", ["15 Open/Closed Dice & Cube Cutting Qs", "20 Counting Triangles & Squares Qs"]]
+    },
+    { d: 13, phase: "Week 2 (Day 6/6) • Polity + Bio Finish + TSD/Races", mock: false,
+      math: ["Time, Speed, Distance, Trains, Boats & Races (2.5h)", ["Relative Speed, Trains & Boats/Streams", "Master Linear & Circular Races (Head start/Dead heat)", "Solve 40 Timed Qs"]],
+      ga: ["Polity + Biology Finish + Static (1.5h)", ["Core (Polity): Parliament (Lok Sabha, Rajya Sabha, Sessions, Bills, Committees)", "Science (Bio Finish): Plant Kingdom (Algae to Angiosperms) & Animal Kingdom Phyla", "Static GK: Rivers-side Cities, Major Waterfalls & Lakes"]],
+      eng: ["RC + Cloze + PQRS (1h)", ["Solve 2 RCs + 1 Cloze Test + 10 PQRS", "Learn 30 OWS"]],
+      reas: ["Calendar, Clock & Non-Verbal (1h)", ["15 Calendar & Clock Qs", "20 Mirror Image, Paper Folding & Embedded Figure Qs"]]
+    },
+    { d: 14, phase: "🔥 DAY 14: MOCK #2 + WEEK 2 FULL REVISION", mock: true,
+      math: ["Full Tier-2 Mock #2 + Analysis (3h)", ["Attempt Full-Length Tier-2 Mock #2 (2h 15m)", "Analyze accuracy in Arithmetic & log mistakes (45m)"]],
+      ga: ["Week 2 GK Revision (1h)", ["Revise Polity Part 1 (Preamble to Parliament)", "Revise Biology Part 2 (Vitamins, Diseases, Plant/Animal Kingdom) & National Parks"]],
+      eng: ["Week 2 Maths Revision (1h)", ["Revise SI/CI Installments, Replacement Mixture, Time-Work & Circular Races", "Re-solve Mock #2 wrong Maths Qs"]],
+      reas: ["Week 2 Eng & Reasoning Revision (1h)", ["Revise Week 2 Prepositions, Grammar rules & 180 Vocab words", "Revise Critical Reasoning & Dice/Calendar tricks"]]
+    },
+
+    // ================= WEEK 3: POLITY FINISH & ANCIENT HISTORY + PHYSICS PART 1 + ADVANCE MATHS 1 =================
+    { d: 15, phase: "Week 3 (Day 1/6) • Polity + Physics + Number Sys", mock: false,
+      math: ["Number System Part 1 (2.5h)", ["Divisibility Rules (7, 11, 13, 37, 72, 88, 99)", "Unit Digit, Last Two Digits & Number of Zeros", "Solve 35 Timed Qs"]],
+      ga: ["Polity + Physics + Static (1.5h)", ["Core (Polity): Supreme Court, High Courts, Judicial Review & PIL", "Science (Physics): Units, Dimensions, Scalar/Vector & Kinematics (Motion)", "Static GK: Census 2011 (Literacy, Density, Sex Ratio, Urbanization)"]],
+      eng: ["English Sectional #1 (1h)", ["Attempt Full English Sectional Mock (45 Qs in 35m)", "Analyze errors + Learn 30 Idioms"]],
+      reas: ["Data Sufficiency & Coded Drills (1h)", ["15 Data Sufficiency Qs", "15 Coded Blood Relation & Inequality Qs"]]
+    },
+    { d: 16, phase: "Week 3 (Day 2/6) • Polity + Physics + HCF/LCM", mock: false,
+      math: ["Number System Part 2 + HCF & LCM (2.5h)", ["Remainder Theorem (Fermat/Euler/Negative), Factors & AP/GP", "HCF & LCM applications", "Solve 40 Timed Qs"]],
+      ga: ["Polity + Physics + Static (1.5h)", ["Core (Polity): Governor, CM, State Legislature & Panchayati Raj / Municipalities", "Science (Physics): Newton's Laws of Motion, Friction, Circular Motion & Gravitation", "Static GK: Famous Books & Authors (Historical, Autobiographies & Modern)"]],
+      eng: ["Voice/Narration Speed Drill (1h)", ["25 Active/Passive + 25 Direct/Indirect Qs", "Solve 2 RCs", "Learn 30 Syno/Anto"]],
+      reas: ["Number Set & Missing Matrix (1h)", ["Solve 35 Tough Number Set (a,b,c) & Missing Matrix PYQs"]]
+    },
+    { d: 17, phase: "Week 3 (Day 3/6) • Polity Finish + Physics + Algebra", mock: false,
+      math: ["Algebra Part 1 (2.5h)", ["Quadratic & Cubic Identities, x + 1/x patterns", "Symmetric Expressions & Value Putting", "Solve 40 Timed Qs"]],
+      ga: ["Polity Finish + Physics + Static (1.5h)", ["Core (Polity Finish): Constitutional & Non-Constitutional Bodies (EC, CAG, UPSC, Finance Comm) & Important Amendments", "Science (Physics): Work, Power, Energy & Mechanical Properties (Elasticity, Pressure, Surface Tension, Viscosity)", "Static GK: National & International Awards (Bharat Ratna, Padma, Nobel, Grammy)"]],
+      eng: ["English Sectional #2 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Analyze errors + Learn 30 OWS"]],
+      reas: ["Reasoning Sectional #1 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "Re-solve wrong questions"]]
+    },
+    { d: 18, phase: "Week 3 (Day 4/6) • Ancient History + Physics + Algebra", mock: false,
+      math: ["Algebra Part 2 + Surds & Indices (2.5h)", ["Maxima/Minima, Componendo-Dividendo & Rationalization of Surds", "Solve 35 Timed Qs + 15-min Calculation Drill"]],
+      ga: ["Ancient History + Physics + Static (1.5h)", ["Core (History): Pre-History, Indus Valley Civilization (Sites/Findings) & Vedic Age", "Science (Physics): Heat, Temperature, Calorimetry & Laws of Thermodynamics", "Static GK: Sports Terminology, Cups & Trophies"]],
+      eng: ["PQRS + Cloze + Fillers (1h)", ["15 PQRS + 2 Cloze Tests + 15 Fillers", "Learn 30 Idioms"]],
+      reas: ["Seating & Puzzles Drill (1h)", ["Solve 8 Timed Seating Arrangement & Puzzle sets"]]
+    },
+    { d: 19, phase: "Week 3 (Day 5/6) • Ancient History + Physics + Trig", mock: false,
+      math: ["Trigonometry Part 1 (2.5h)", ["Trig Ratios, Radian/Degree, Quadrant Rule & Basic Identities", "Complementary Angles & Value Putting tricks", "Solve 40 Timed Qs"]],
+      ga: ["Ancient History + Physics + Static (1.5h)", ["Core (History): Buddhism (Councils/Texts), Jainism (Tirthankaras) & 16 Mahajanapadas", "Science (Physics): Oscillations, SHM, Sound Waves & Doppler Effect", "Static GK: Olympic Games, Commonwealth & Asian Games Facts"]],
+      eng: ["English Sectional #3 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Learn 30 Homonyms & Spellings"]],
+      reas: ["Reasoning Sectional #2 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Critical Reasoning Qs"]]
+    },
+    { d: 20, phase: "Week 3 (Day 6/6) • Ancient History + Physics + Heights", mock: false,
+      math: ["Trigonometry Part 2 + Heights & Distances (2.5h)", ["Trig Maxima/Minima & Advanced Identities", "Heights & Distances (Shadow, Broken Tree, Moving Object, 2 Angles)", "Solve 40 Timed Qs"]],
+      ga: ["Ancient History + Physics + Static (1.5h)", ["Core (History): Mauryan Empire (Chandragupta, Ashoka Edicts, Administration) & Post-Mauryan", "Science (Physics): Reflection of Light, Plane & Spherical Mirrors (Mirror Formula/Magnification)", "Static GK: International Organizations, Headquarters & Heads"]],
+      eng: ["Grammar Rules 1–60 + RC (1h)", ["Revise 120 Rules of Grammar (Rules 1–60)", "Solve 2 RCs + 1 Cloze Test"]],
+      reas: ["Alphanumeric & Coding Drill (1h)", ["20 Alphanumeric Series Qs", "20 Tough Coding-Decoding Qs"]]
+    },
+    { d: 21, phase: "🔥 DAY 21: MOCK #3 + WEEK 3 FULL REVISION", mock: true,
+      math: ["Full Tier-2 Mock #3 + Analysis (3h)", ["Attempt Full-Length Tier-2 Mock #3 (2h 15m)", "Analyze performance in Number System, Algebra & Trig (45m)"]],
+      ga: ["Week 3 GK Revision (1h)", ["Revise Polity Part 2 (Judiciary, Bodies, Amendments) & Ancient History (IVC to Mauryas)", "Revise Physics Part 1 (Units to Mirrors) & Census/Awards/Orgs"]],
+      eng: ["Week 3 Maths Revision (1h)", ["Revise Divisibility, Remainder Theorem, Algebra Identities & Trig Maxima/Minima", "Re-solve Mock #3 wrong Maths Qs"]],
+      reas: ["Week 3 Eng & Reasoning Revision (1h)", ["Revise Grammar Rules 1–60 & Week 3 Vocab", "Re-solve Mock #3 Reasoning errors"]]
+    },
+
+    // ================= WEEK 4: MEDIEVAL HISTORY + PHYSICS FINISH & CHEM 1 + GEOMETRY/MENSURATION =================
+    { d: 22, phase: "Week 4 (Day 1/6) • History + Physics + Geometry", mock: false,
+      math: ["Geometry Part 1 - Lines & Triangles (2.5h)", ["Lines, Angles, Triangle Inequality, Sine/Cosine Rule", "Similarity & Congruency of Triangles, Thales & Mid-point Theorem", "Solve 40 Timed Qs"]],
+      ga: ["History + Physics + Static (1.5h)", ["Core (History): Gupta Empire (Golden Age), Harshavardhana & Sangam Age", "Science (Physics): Refraction, Total Internal Reflection (TIR), Lenses, Prism & Human Eye", "Static GK: First in India & World (Male & Female)"]],
+      eng: ["Grammar Rules 61–120 + RC (1h)", ["Revise 120 Rules of Grammar (Rules 61–120)", "Solve 2 RCs + 10 PQRS"]],
+      reas: ["Reasoning Sectional #3 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Syllogism & Blood Relation Qs"]]
+    },
+    { d: 23, phase: "Week 4 (Day 2/6) • History + Physics + Geometry", mock: false,
+      math: ["Geometry Part 2 - Centers of Triangle (2.5h)", ["Incenter, Circumcenter, Orthocenter & Centroid properties", "Angle Bisector Theorem, Apollonius Theorem & Right-Angle Median", "Solve 40 Timed Qs"]],
+      ga: ["History + Physics + Static (1.5h)", ["Core (History): South Indian Dynasties (Cholas, Pallavas, Chalukyas, Rashtrakutas) & Arab/Turk Invasions", "Science (Physics): Electrostatics, Electric Current, Ohm's Law, Resistors & Heating Effect", "Static GK: Superlatives of India & World (Largest, Longest, Highest)"]],
+      eng: ["English Sectional #4 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Analyze errors + Learn 30 Syno/Anto"]],
+      reas: ["Non-Verbal & Figure Counting (1h)", ["35 Figure Counting, Mirror/Water Image & Paper Cutting Qs"]]
+    },
+    { d: 24, phase: "Week 4 (Day 3/6) • History + Physics Finish + Circles", mock: false,
+      math: ["Geometry Part 3 - Circles, Quads & Polygons (2.5h)", ["Circle Chord & Arc properties, Secant-Tangent Theorems, Alternate Segment", "Common Tangents, Cyclic Quadrilaterals & Regular Polygons", "Solve 40 Timed Qs"]],
+      ga: ["Medieval History + Physics Finish + Static (1.5h)", ["Core (History): Delhi Sultanate (Slave, Khilji, Tughlaq, Sayyid, Lodi Dynasties)", "Science (Physics Finish): Magnetism, EMI, Modern/Nuclear Physics & Scientific Instruments", "Static GK: Important Days & Themes (Jan to Dec)"]],
+      eng: ["Voice/Narration + Cloze (1h)", ["25 Voice + 25 Narration Rapid Drill", "Solve 2 Cloze Tests + Learn 30 OWS"]],
+      reas: ["Reasoning Sectional #4 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Number Series Qs"]]
+    },
+    { d: 25, phase: "Week 4 (Day 4/6) • History + Chem + Mensuration 2D/Coord", mock: false,
+      math: ["Mensuration 2D + Coordinate Geometry (2.5h)", ["2D Areas (Triangles, Quads, Circles, Shaded Regions, Path/Wheel)", "Coordinate Geo: Distance, Section, Slope, Line Eq, Reflection & Triangle Area", "Solve 40 Timed Qs"]],
+      ga: ["Medieval History + Chemistry + Static (1.5h)", ["Core (History): Vijayanagara Empire, Bahmani Kingdom & Bhakti/Sufi Movements", "Science (Chem): Matter, Atomic Structure, Models & Isotopes/Isobars", "Static GK: Major Tribes of India & World"]],
+      eng: ["English Sectional #5 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Learn 30 Idioms & Phrasal Verbs"]],
+      reas: ["Critical Reasoning Drill (1h)", ["Solve 30 Mixed Assumptions, Conclusions & Arguments Qs"]]
+    },
+    { d: 26, phase: "Week 4 (Day 5/6) • History + Chem + Mensuration 3D", mock: false,
+      math: ["Mensuration 3D Part 1 (2.5h)", ["Cube, Cuboid, Cylinder, Hollow Cylinder, Cone, Sphere & Hemisphere", "Melting/Recasting, Cutting & Embankment problems", "Solve 40 Timed Qs"]],
+      ga: ["Medieval History + Chemistry + Static (1.5h)", ["Core (History): Mughal Empire Part 1 (Babur, Humayun, Sher Shah Suri, Akbar)", "Science (Chem): Periodic Table History & Modern Trends (Atomic Radius, Electronegativity)", "Static GK: Nicknames of Famous Personalities & Slogans"]],
+      eng: ["RC + PQRS Intensive (1h)", ["Solve 3 Tier-2 RCs + 15 Para Jumbles (PQRS)"]],
+      reas: ["Reasoning Sectional #5 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 BODMAS & Inequality Qs"]]
+    },
+    { d: 27, phase: "Week 4 (Day 6/6) • History + Chem + Prism/Pyramid", mock: false,
+      math: ["Mensuration 3D Part 2 - Gap Focus (2.5h)", ["Master Frustum of a Cone", "Master Prism & Pyramid (Triangular, Square & Hexagonal Base)", "Solve 35 Tier-2 PYQs (100% Maths Syllabus Complete!)"]],
+      ga: ["Medieval History Finish + Chemistry + Static (1.5h)", ["Core (History): Mughal Empire Part 2 (Jahangir, Shah Jahan, Aurangzeb), Maratha Empire (Shivaji) & 10 Sikh Gurus", "Science (Chem): Chemical Bonding, Oxidation-Reduction & Types of Chemical Reactions", "Static GK: Intelligence/Space Agencies & Parliament Names of Countries"]],
+      eng: ["English Sectional #6 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Analyze RC & Cloze errors"]],
+      reas: ["Puzzles & Seating Drill (1h)", ["Solve 8 Timed Linear, Circular & Floor Puzzle sets"]]
+    },
+    { d: 28, phase: "🔥 DAY 28: MOCK #4 + WEEK 4 FULL REVISION", mock: true,
+      math: ["Full Tier-2 Mock #4 + Analysis (3h)", ["Attempt Full-Length Tier-2 Mock #4 (2h 15m)", "Analyze Geometry & Mensuration 3D performance (45m)"]],
+      ga: ["Week 4 GK Revision (1h)", ["Revise Medieval History (Sultanate to Mughals/Marathas)", "Revise Physics Part 2 (Optics/Electricity) & Chemistry Part 1 (Periodic Table)"]],
+      eng: ["Week 4 Maths Revision (1h)", ["Revise All Geometry Theorems, Coordinate Geo & Prism/Pyramid/Frustum formulas", "Re-solve Mock #4 wrong Maths Qs"]],
+      reas: ["Week 4 Eng & Reasoning Revision (1h)", ["Revise Grammar Rules 61–120 & Week 4 Vocab", "Re-solve Mock #4 Reasoning errors"]]
+    },
+
+    // ================= WEEK 5: MODERN HISTORY + CHEMISTRY FINISH + CURRENT AFFAIRS (M 1-3) =================
+    { d: 29, phase: "Week 5 (Day 1/6) • Modern History + Chem + Maths Speed", mock: false,
+      math: ["Maths Speed Drill: Stats, Prob & % (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 High-Level Qs of Statistics, Probability & Percentage"]],
+      ga: ["Modern History + Chemistry + CA (1.5h)", ["Core (History): Advent of Europeans (Portuguese to British) & Battle of Plassey/Buxar", "Science (Chem): Acids, Bases, Salts, Indicators & pH Scale values", "Current Affairs (Month 1): National News, Appointments & Awards"]],
+      eng: ["English Sectional #7 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise Fixed Prepositions"]],
+      reas: ["Reasoning Sectional #6 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Number Analogy Qs"]]
+    },
+    { d: 30, phase: "Week 5 (Day 2/6) • Modern History + Chem + Maths Speed", mock: false,
+      math: ["Maths Speed Drill: P&L, SI/CI & Installments (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Qs of Dishonest Dealer, Discount & SI/CI Installments"]],
+      ga: ["Modern History + Chemistry + CA (1.5h)", ["Core (History): Revolt of 1857 (Centers/Leaders) & Socio-Religious Reform Movements (Brahmo, Arya Samaj, etc.)", "Science (Chem): Metals, Non-Metals, reactivity series, Important Ores & Alloys (Brass, Bronze, Solder, etc.)", "Current Affairs (Month 1): Sports, Books, Ranks/Indices"]],
+      eng: ["RC + Cloze + Vocab Rev (1h)", ["Solve 3 RCs + 2 Cloze Tests", "Revise 100 Blackbook Syno/Anto"]],
+      reas: ["Full Section-I Simulation #1 (1h)", ["Attempt Combined 30 Maths + 30 Reasoning in 60 Mins strict timer"]]
+    },
+    { d: 31, phase: "Week 5 (Day 3/6) • Mid-Week Speed Mock #5 + Modern History", mock: true,
+      math: ["🔥 Full Tier-2 Mock #5 + Analysis (3.5h)", ["Attempt Full-Length Tier-2 Mock #5 (2h 15m)", "Analyze & Re-solve wrong Maths/Reasoning Qs (1h 15m)"]],
+      ga: ["Modern History + Chemistry + CA (1.5h)", ["Core (History): Formation of INC, Important INC Sessions, Moderates vs Extremists & Partition of Bengal (1905)", "Science (Chem): Carbon & Its Compounds (Allotropes, Functional Groups, IUPAC basics)", "Current Affairs (Month 2): Govt Schemes, Summits & Defense"]],
+      eng: ["Mock #5 English Review (30m)", ["Review all English RC & Grammar mistakes from Mock #5"]],
+      reas: ["Calculation & Reasoning Warmup (30m)", ["15-min Mental Calculation + 15-min Number Series"]]
+    },
+    { d: 32, phase: "Week 5 (Day 4/6) • Modern History + Chem + Maths Speed", mock: false,
+      math: ["Maths Speed Drill: Ratio, Mixture & Time-Work (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Qs of Ratio, Replacement Mixture & Time-Work"]],
+      ga: ["Modern History + Chemistry + CA (1.5h)", ["Core (History): Gandhian Era Part 1 (Champaran, Kheda, Non-Cooperation, Swaraj Party, Simon Commission)", "Science (Chem): Everyday Chemistry (Common & Chemical Names: Baking Soda, Washing Soda, Bleaching Powder, POP, Aqua Regia)", "Current Affairs (Month 2): Awards, Sports & Appointments"]],
+      eng: ["English Sectional #8 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise 100 OWS"]],
+      reas: ["Reasoning Sectional #7 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Critical Reasoning Qs"]]
+    },
+    { d: 33, phase: "Week 5 (Day 5/6) • Modern History + Chem + Maths Speed", mock: false,
+      math: ["Maths Speed Drill: TSD, Races & DI (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Qs of TSD, Trains, Circular Races & Data Interpretation"]],
+      ga: ["Modern History + Chemistry + CA (1.5h)", ["Core (History): Gandhian Era Part 2 (Lahore Session, Civil Disobedience, Round Table Conferences, Quit India, INA, Partition)", "Science (Chem): Polymers, Soaps/Detergents, Glass, Cement, Fertilizers & Fuels", "Current Affairs (Month 3): National/International News & Schemes"]],
+      eng: ["Error + Improvement + Idioms (1h)", ["40 Spot the Error + 30 Sentence Improvement", "Revise 100 Idioms"]],
+      reas: ["Reasoning Sectional #8 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Dice, Cube & Calendar Qs"]]
+    },
+    { d: 34, phase: "Week 5 (Day 6/6) • Modern History Finish + Chem Finish", mock: false,
+      math: ["Maths Speed Drill: Number System & Algebra (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Tough Qs of Number System & Algebra"]],
+      ga: ["Modern History Finish + Chem Finish + CA (1.5h)", ["Core (History Finish): Governor Generals & Viceroys, British Acts (1773–1935) & Newspapers/Journals", "Science (Chem Finish): Gas Laws, Radioactivity & Top 50 Chemistry PYQs", "Current Affairs (Month 3): Sports, Ranks & Science/Tech"]],
+      eng: ["English Sectional #9 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise Voice & Narration rules"]],
+      reas: ["Full Section-I Simulation #2 (1h)", ["Attempt Combined 30 Maths + 30 Reasoning in 60 Mins strict timer"]]
+    },
+    { d: 35, phase: "🔥 DAY 35: MOCK #6 + WEEK 5 FULL REVISION", mock: true,
+      math: ["Full Tier-2 Mock #6 + Analysis (3h)", ["Attempt Full-Length Tier-2 Mock #6 (2h 15m)", "Analyze speed & accuracy across Section I & II (45m)"]],
+      ga: ["Week 5 GK Revision (1h)", ["Revise Complete Modern History (1857 to 1947, Viceroys, INC, Acts)", "Revise Chemistry Part 2 (Common Chemical Names, Alloys, Ores, Acids) & CA Months 1–3"]],
+      eng: ["Week 5 Maths Revision (1h)", ["Re-solve Mock #5 & #6 wrong Maths questions", "Revise Arithmetic Formula Notebook"]],
+      reas: ["Week 5 Eng & Reasoning Revision (1h)", ["Revise Starred OWS/Idioms & Fixed Prepositions", "Re-solve Mock #6 Reasoning errors"]]
+    },
+
+    // ================= WEEK 6: GEOGRAPHY (WORLD & INDIA) + SCIENCE TABLES + CURRENT AFFAIRS (M 4-6) =================
+    { d: 36, phase: "Week 6 (Day 1/6) • World Geo + Science Tables + Trig", mock: false,
+      math: ["Maths Speed Drill: Trig & Coordinate Geo (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Qs of Trigonometry, Heights & Distances & Coordinate Geo"]],
+      ga: ["World Geography + Science Tables + CA (1.5h)", ["Core (Geo): Universe, Solar System, Latitudes, Longitudes, Time Zones & Earth Motions", "Science Consolidation: Revise SI Units, Scientific Instruments & Inventions Table", "Current Affairs (Month 4): Appointments, Awards & Govt Schemes"]],
+      eng: ["English Sectional #10 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise Phrasal Verbs"]],
+      reas: ["Reasoning Sectional #9 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "Solve 4 Seating Sets"]]
+    },
+    { d: 37, phase: "Week 6 (Day 2/6) • World Geo + Science Tables + Geometry", mock: false,
+      math: ["Maths Speed Drill: Geometry (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Tough Qs of Triangles & Circles"]],
+      ga: ["World Geography + Science Tables + CA (1.5h)", ["Core (Geo): Earth Interior, Plate Tectonics, Earthquakes, Volcanoes & Rocks (Igneous, Sedimentary, Metamorphic)", "Science Consolidation: Revise Biology Vitamins, Deficiency Diseases & Hormones Table", "Current Affairs (Month 4): Sports, Defense Exercises & Indices"]],
+      eng: ["RC + Cloze + PQRS (1h)", ["Solve 3 RCs + 2 Cloze Tests + 15 PQRS"]],
+      reas: ["Reasoning Sectional #10 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Missing Number & Coding Qs"]]
+    },
+    { d: 38, phase: "Week 6 (Day 3/6) • Mid-Week Speed Mock #7 + Geo", mock: true,
+      math: ["🔥 Full Tier-2 Mock #7 + Analysis (3.5h)", ["Attempt Full-Length Tier-2 Mock #7 (2h 15m)", "Analyze & Re-solve wrong Maths/Reasoning Qs (1h 15m)"]],
+      ga: ["World Geography + Science Tables + CA (1.5h)", ["Core (Geo): Atmosphere Layers, Winds, Cyclones, Ocean Currents, Continents & Straits", "Science Consolidation: Revise Chemistry Common Names, Chemical Formulas & Ores Table", "Current Affairs (Month 5): National/International News & Summits"]],
+      eng: ["Mock #7 English Review (30m)", ["Review English RC & Grammar mistakes from Mock #7"]],
+      reas: ["Reasoning Error Drill (30m)", ["Review tough Reasoning sets from Mock #7"]]
+    },
+    { d: 39, phase: "Week 6 (Day 4/6) • Indian Geo + Science Tables + Mensuration", mock: false,
+      math: ["Maths Speed Drill: Mensuration 2D & 3D (2.5h)", ["Attempt 1 Full Timed Maths Sectional (30 Qs in 35m)", "Solve 35 Qs of Prism, Pyramid, Frustum, Cone, Cylinder & Sphere"]],
+      ga: ["Indian Geography + Science Tables + CA (1.5h)", ["Core (Geo): India Size/Location, Neighbours, Himalayas, Mountain Peaks, Passes, Plateaus & Islands", "Science Consolidation: Revise Physics Mirror/Lens Ray Diagrams & Formulas", "Current Affairs (Month 5): Sports, Awards & Books"]],
+      eng: ["English Sectional #11 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise Spellings & Homonyms"]],
+      reas: ["Reasoning Sectional #11 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "15 Critical Reasoning Qs"]]
+    },
+    { d: 40, phase: "Week 6 (Day 5/6) • Late-Week Speed Mock #8 + Indian Geo", mock: true,
+      math: ["🔥 Full Tier-2 Mock #8 + Analysis (3.5h)", ["Attempt Full-Length Tier-2 Mock #8 (2h 15m)", "Analyze & Re-solve wrong Maths/Reasoning Qs (1h 15m)"]],
+      ga: ["Indian Geography + Science Tables + CA (1.5h)", ["Core (Geo): Indian Drainage System (Indus, Ganga, Brahmaputra & Peninsular Rivers), Dams & Lakes", "Science Consolidation: Revise Plant & Animal Kingdom Phyla Examples", "Current Affairs (Month 6): Schemes, Appointments & Defense"]],
+      eng: ["Mock #8 English Review (30m)", ["Review English mistakes from Mock #8"]],
+      reas: ["Calculation Warmup (30m)", ["Revise Squares (1-50), Cubes (1-30) & Pythagorean Triplets"]]
+    },
+    { d: 41, phase: "Week 6 (Day 6/6) • Indian Geo + CA Finish + Error Log", mock: false,
+      math: ["Error Notebook Marathon: Arithmetic (2.5h)", ["Re-solve 50 Star-Marked Arithmetic Qs from your Error Notebook", "Attempt 1 Full Timed Maths Sectional (30 Qs)"]],
+      ga: ["Indian Geography + CA Finish (1.5h)", ["Core (Geo): Indian Climate, Monsoon (SW/NE), Soils of India & Natural Vegetation/Forests", "Current Affairs (Month 6 Finish): Sports, Ranks/Indices, Science/Space & Obituaries"]],
+      eng: ["English Sectional #12 (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise 120 Grammar Rules Summary"]],
+      reas: ["Full Section-I Simulation #3 (1h)", ["Attempt Combined 30 Maths + 30 Reasoning in 60 Mins strict timer"]]
+    },
+    { d: 42, phase: "🔥 DAY 42: MOCK #9 + WEEK 6 FULL REVISION", mock: true,
+      math: ["Full Tier-2 Mock #9 + Analysis (3h)", ["Attempt Full-Length Tier-2 Mock #9 (2h 15m)", "Analyze performance across all 4 sections (45m)"]],
+      ga: ["Week 6 GK Revision (1h)", ["Revise World & Indian Geography (Atmosphere, Himalayas, Passes, Rivers, Soils)", "Revise Current Affairs Months 4–6 & Science Tables"]],
+      eng: ["Week 6 Maths Revision (1h)", ["Re-solve Mock #7, #8 & #9 wrong Maths Qs", "Revise Advance Maths Formula Sheet"]],
+      reas: ["Week 6 Eng & Reasoning Revision (1h)", ["Revise Starred Vocab & Grammar Error Log", "Re-solve Mock #9 Reasoning errors"]]
+    },
+
+    // ================= FINAL 3 DAYS (DAYS 43-45): GEOGRAPHY FINISH + MOCK #10 + FINAL GLANCE =================
+    { d: 43, phase: "Day 43 • Geography Part 2 + Advance Error Log", mock: false,
+      math: ["Error Notebook Marathon: Advance + Stats/Prob (2.5h)", ["Re-solve 50 Star-Marked Advance Maths, Statistics & Probability Qs", "Attempt 1 Full Timed Maths Sectional (30 Qs)"]],
+      ga: ["Indian Geography (Crops & Minerals) + Static Tables (1.5h)", ["Core (Geo): Indian Agriculture, Rabi/Kharif/Zaid Crops, Green Revolution & Mineral Resources (Coal, Iron, Mica, Copper)", "Static Tables Glance: Classical/Folk Dances, Musical Instruments, Gharanas & Census 2011"]],
+      eng: ["English Sectional #13 + Vocab (1h)", ["Attempt Full English Sectional Mock (45 Qs)", "Revise Top 200 Starred OWS, Idioms & Syno/Anto"]],
+      reas: ["Reasoning Sectional #12 (1h)", ["Attempt 30-Q Reasoning Sectional in 20 mins", "Revise Statement-Assumption/Conclusion"]]
+    },
+    { d: 44, phase: "🔥 DAY 44: MOCK #10 (FINAL REHEARSAL) + GEO FINISH", mock: true,
+      math: ["Full Tier-2 Mock #10 + Light Review (3.5h)", ["Attempt Final Dress Rehearsal Mock #10 (2h 15m)", "Review only silly mistakes & formula slips — keep confidence high! (1h 15m)"]],
+      ga: ["Indian Geography Finish (1.5h)", ["Core (Geo Finish): Major Industries, National Highways, Waterways, Major Ports & Railways Zones (100% GK Stretch Complete!)", "Quick glance at GA Error Notebook from Mocks 1–10"]],
+      eng: ["Grammar & Voice/Narration Glance (30m)", ["Quick flip through Voice, Narration & Fixed Preposition charts"]],
+      reas: ["Reasoning Formula Glance (30m)", ["Glance through Clock, Calendar, Dice & Figure Counting tricks"]]
+    },
+    { d: 45, phase: "Day 45 • Calm Mind & Final Formula Consolidation", mock: false,
+      math: ["Final Maths Formula Consolidation (2h)", ["Glance through Stats & Probability formulas (Mean, SD, Variance, Conditional Prob)", "Glance through Installments, Races, Geometry Theorems & Mensuration 3D (Prism/Pyramid/Frustum)"]],
+      ga: ["Final GK High-Yield Glance (1.5h)", ["Flip through Short Notes: Eco Five Year Plans/RBI, Polity Articles/Amendments, History Chronology & Science Vitamins/Formulas"]],
+      eng: ["Final English Glance (1.5h)", ["Flip through Golden Grammar Rules & Starred Vocabulary list"]],
+      reas: ["Pack Exam Kit & Rest Early (1h)", ["Check Admit Card, ID Proof, Photos & sleep early with a calm, confident mind!"]]
+    }
+];
+
+const STORAGE_KEY = "ssc_cgl_adhd_6plus1_v3";
+const DAY_KEY = "ssc_cgl_adhd_6plus1_day";
+const SOUND_KEY = "ssc_cgl_sound_fx";
+const STREAK_KEY = "ssc_cgl_streak_data";
+const VT_COLOR_KEY = "ssc_cgl_vt_color";
+const VT_PROP_KEY = "ssc_cgl_vt_prop";
+const VT_DROPDOWN_KEY = "ssc_cgl_vt_dropdown_open";
+
+let plan = [];
+let currentDayIdx = 0;
+let soundEnabled = true;
+
+// Visual Timer State
+let timerSeconds = 25 * 60;
+let initialSprintSeconds = 25 * 60;
+let timerInterval = null;
+let vtIsProportional = false;
+let vtColor = "#ef4444";
+let isDraggingDial = false;
+
+// Zen Overlay State
+let activeZenSubjectIdx = null;
+let activeZenSubtaskIdx = null;
+
+// ==========================================
+// 1. WEB AUDIO API SYNTHESIZER
+// ==========================================
+let audioCtx = null;
+let brownNoiseNode = null;
+let brownNoiseGain = null;
+let isBrownNoisePlaying = false;
+
+function getAudioContext() {
+    if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+    }
+    return audioCtx;
+}
+
+function playPop() {
+    if (!soundEnabled) return;
+    try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(450, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(920, ctx.currentTime + 0.08);
+
+        gain.gain.setValueAtTime(0.18, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.1);
+    } catch(e) {}
+}
+
+function playCardComplete() {
+    if (!soundEnabled) return;
+    try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+        [523.25, 659.25, 783.99].forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(freq, now + idx * 0.09);
+            gain.gain.setValueAtTime(0.15, now + idx * 0.09);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.09 + 0.25);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(now + idx * 0.09);
+            osc.stop(now + idx * 0.09 + 0.28);
+        });
+    } catch(e) {}
+}
+
+function playFanfare() {
+    if (!soundEnabled) return;
+    try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+        const notes = [523.25, 659.25, 783.99, 1046.50];
+        notes.forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(freq, now + idx * 0.12);
+            gain.gain.setValueAtTime(0.2, now + idx * 0.12);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.12 + 0.5);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(now + idx * 0.12);
+            osc.stop(now + idx * 0.12 + 0.55);
+        });
+    } catch(e) {}
+}
+
+function playTimerChime() {
+    if (!soundEnabled) return;
+    try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(587.33, now);
+        osc.frequency.exponentialRampToValueAtTime(440, now + 1.2);
+        gain.gain.setValueAtTime(0.35, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 1.3);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(now + 1.3);
+    } catch(e) {}
+}
+
+function toggleAudio() {
+    soundEnabled = !soundEnabled;
+    localStorage.setItem(SOUND_KEY, soundEnabled ? "1" : "0");
+    const btn = document.getElementById("soundToggleBtn");
+    btn.innerText = soundEnabled ? "🔊 Sound: ON" : "🔇 Sound: OFF";
+    btn.classList.toggle("active", soundEnabled);
+    if (soundEnabled) playPop();
+}
+
+function toggleBrownNoise() {
+    const btn = document.getElementById("noiseToggleBtn");
+    const ctx = getAudioContext();
+
+    if (isBrownNoisePlaying) {
+        if (brownNoiseNode) {
+            try { brownNoiseNode.stop(); brownNoiseNode.disconnect(); } catch(e){}
+        }
+        isBrownNoisePlaying = false;
+        btn.innerText = "🎧 Noise: OFF";
+        btn.classList.remove("active");
+        return;
+    }
+
+    try {
+        const bufferSize = 2 * ctx.sampleRate;
+        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        let lastOut = 0.0;
+        for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            output[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = output[i];
+            output[i] *= 3.5;
+        }
+
+        brownNoiseNode = ctx.createBufferSource();
+        brownNoiseNode.buffer = noiseBuffer;
+        brownNoiseNode.loop = true;
+
+        brownNoiseGain = ctx.createGain();
+        brownNoiseGain.gain.setValueAtTime(0.07, ctx.currentTime);
+
+        brownNoiseNode.connect(brownNoiseGain);
+        brownNoiseGain.connect(ctx.destination);
+        brownNoiseNode.start();
+        isBrownNoisePlaying = true;
+        btn.innerText = "🎧 Noise: ON";
+        btn.classList.add("active");
+    } catch(e) {
+        console.error(e);
+    }
+}
+
+// ==========================================
+// 2. CANVAS CONFETTI ENGINE
+// ==========================================
+let confettiParticles = [];
+let confettiAnimId = null;
+
+function fireConfetti(burstIntensity = 60) {
+    const canvas = document.getElementById("confettiCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const colors = ["#4f46e5", "#10b981", "#f59e0b", "#ec4899", "#3b82f6", "#ef4444", "#8b5cf6"];
+    confettiParticles = [];
+
+    for (let i = 0; i < burstIntensity; i++) {
+        confettiParticles.push({
+            x: canvas.width / 2 + (Math.random() * 240 - 120),
+            y: canvas.height * 0.45,
+            w: Math.random() * 8 + 5,
+            h: Math.random() * 6 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            vx: (Math.random() - 0.5) * 16,
+            vy: (Math.random() - 1.2) * 14,
+            rotation: Math.random() * 360,
+            rotSpeed: (Math.random() - 0.5) * 10,
+            gravity: 0.35,
+            opacity: 1
+        });
+    }
+
+    if (!confettiAnimId) {
+        animateConfetti();
+    }
+}
+
+function animateConfetti() {
+    const canvas = document.getElementById("confettiCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    confettiParticles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.rotation += p.rotSpeed;
+        p.opacity -= 0.008;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = Math.max(0, p.opacity);
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+    });
+
+    confettiParticles = confettiParticles.filter(p => p.opacity > 0 && p.y < canvas.height + 20);
+
+    if (confettiParticles.length > 0) {
+        confettiAnimId = requestAnimationFrame(animateConfetti);
+    } else {
+        cancelAnimationFrame(confettiAnimId);
+        confettiAnimId = null;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+}
+
+// ==========================================
+// 3. CORE PLAN SETUP & STORAGE
+// ==========================================
+function buildDefaultPlan() {
+    return rawSchedule.map(item => ({
+        day: item.d,
+        phase: item.phase,
+        isMock: item.mock,
+        mockScore: "",
+        notes: "",
+        subjects: [
+            { code: item.mock ? "Mock / Maths" : "Maths", pill: item.mock ? "pill-mock" : "pill-math", title: item.math[0], subtasks: item.math[1].map(t => ({ text: t, done: false })) },
+            { code: "GA", pill: "pill-ga", title: item.ga[0], subtasks: item.ga[1].map(t => ({ text: t, done: false })) },
+            { code: item.d % 7 === 0 ? "Maths Rev" : "English", pill: item.d % 7 === 0 ? "pill-math" : "pill-eng", title: item.eng[0], subtasks: item.eng[1].map(t => ({ text: t, done: false })) },
+            { code: item.d % 7 === 0 ? "Eng & Reas Rev" : "Reasoning", pill: "pill-reas", title: item.reas[0], subtasks: item.reas[1].map(t => ({ text: t, done: false })) }
+        ]
+    }));
+}
+
+function loadApp() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+        try { plan = JSON.parse(saved); } catch (e) { plan = buildDefaultPlan(); }
+    } else {
+        plan = buildDefaultPlan();
+    }
+
+    const savedDay = localStorage.getItem(DAY_KEY);
+    if (savedDay !== null && !isNaN(parseInt(savedDay))) {
+        currentDayIdx = Math.min(44, Math.max(0, parseInt(savedDay)));
+    }
+
+    const savedSound = localStorage.getItem(SOUND_KEY);
+    if (savedSound !== null) {
+        soundEnabled = savedSound === "1";
+        const btn = document.getElementById("soundToggleBtn");
+        btn.innerText = soundEnabled ? "🔊 Sound: ON" : "🔇 Sound: OFF";
+        btn.classList.toggle("active", soundEnabled);
+    }
+
+    const savedColor = localStorage.getItem(VT_COLOR_KEY);
+    if (savedColor) {
+        vtColor = savedColor;
+        document.documentElement.style.setProperty('--vt-color', vtColor);
+        const picker = document.getElementById("vtColorPicker");
+        if (picker) picker.value = vtColor;
+        const prev = document.getElementById("vtColorPreview");
+        if (prev) prev.style.backgroundColor = vtColor;
+    }
+
+    const savedProp = localStorage.getItem(VT_PROP_KEY);
+    if (savedProp !== null) {
+        vtIsProportional = savedProp === "1";
+        const propCb = document.getElementById("vtProportionalCb");
+        if (propCb) propCb.checked = vtIsProportional;
+    }
+
+    const savedDropdown = localStorage.getItem(VT_DROPDOWN_KEY);
+    if (savedDropdown === "1") {
+        const wrapper = document.getElementById("visualTimerDropdownWrapper");
+        if (wrapper) wrapper.classList.add("open");
+        const arrow = document.getElementById("vtDropdownArrow");
+        if (arrow) arrow.innerText = "▲";
+    }
+
+    updateStreakUI();
+    renderDay();
+    initVisualTimerDial();
+    setupDialInteractions();
+    setupKeyboardShortcuts();
+    renderTimer();
+}
+
+function saveApp() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(plan));
+    localStorage.setItem(DAY_KEY, currentDayIdx.toString());
+    recordStreakActivity();
+    updateProgressUI();
+}
+
+// ==========================================
+// 4. RENDERING & UI
+// ==========================================
+function renderDay() {
+    const dayObj = plan[currentDayIdx];
+    const heroBox = document.getElementById("dayHeroBox");
+    if (dayObj.isMock) {
+        heroBox.classList.add("is-seventh");
+    } else {
+        heroBox.classList.remove("is-seventh");
+    }
+
+    const dd = document.getElementById("dayDropdown");
+    dd.innerHTML = "";
+    plan.forEach((d, idx) => {
+        const allSub = d.subjects.flatMap(s => s.subtasks);
+        const isDone = allSub.length > 0 && allSub.every(st => st.done);
+        const isSeventh = d.day % 7 === 0;
+        const opt = document.createElement("option");
+        opt.value = idx;
+        opt.text = `Day ${d.day} of 45 ${isSeventh ? '🔄 (Mock + Rev)' : (d.isMock ? '🔥 (Mock Day)' : '')} ${isDone ? '✓' : ''}`;
+        if (idx === currentDayIdx) opt.selected = true;
+        dd.appendChild(opt);
+    });
+
+    document.getElementById("dayPhase").innerText = dayObj.phase;
+    document.getElementById("prevBtn").disabled = currentDayIdx === 0;
+    document.getElementById("nextBtn").disabled = currentDayIdx === plan.length - 1;
+
+    const container = document.getElementById("subjectsContainer");
+    container.innerHTML = "";
+
+    dayObj.subjects.forEach((subj, sIdx) => {
+        const totalSub = subj.subtasks.length;
+        const doneSub = subj.subtasks.filter(st => st.done).length;
+        const allSubDone = totalSub > 0 && doneSub === totalSub;
+
+        const card = document.createElement("div");
+        card.className = `subject-card ${allSubDone ? 'all-done' : ''}`;
+        card.id = `subjectCard-${sIdx}`;
+
+        let subtasksHtml = "";
+        subj.subtasks.forEach((st, stIdx) => {
+            subtasksHtml += `
+                <div class="subtask-item ${st.done ? 'done' : ''}" id="taskItem-${sIdx}-${stIdx}">
+                    <input type="checkbox" class="subtask-cb" ${st.done ? 'checked' : ''} onchange="toggleSubtask(${sIdx}, ${stIdx}, this.checked)">
+                    <div class="subtask-text" contenteditable="true" onblur="editSubtask(${sIdx}, ${stIdx}, this.innerText)">${st.text}</div>
+                    <div class="subtask-actions">
+                        <button class="sub-action-btn" title="Open Focus Mode on this step" onclick="openZenForTask(${sIdx}, ${stIdx})">🎯 Focus</button>
+                        <button class="sub-action-btn" title="Remove step" onclick="deleteSubtask(${sIdx}, ${stIdx})">✕</button>
+                    </div>
+                </div>
+            `;
+        });
+
+        card.innerHTML = `
+            <div class="subject-top">
+                <div class="subject-title-group">
+                    <span class="subject-pill ${subj.pill}">${subj.code}</span>
+                    <span class="subject-topic" contenteditable="true" onblur="editSubjectTitle(${sIdx}, this.innerText)">${subj.title}</span>
+                </div>
+                <span class="subject-time">${doneSub}/${totalSub}</span>
+            </div>
+            <div class="subtask-list">
+                ${subtasksHtml}
+            </div>
+            <button class="add-sub-btn" onclick="addSubtask(${sIdx})">+ Add micro-step</button>
+        `;
+
+        container.appendChild(card);
+    });
+
+    const mockRow = document.getElementById("mockScoreRow");
+    if (dayObj.isMock) {
+        mockRow.style.display = "flex";
+        document.getElementById("mockScoreInput").value = dayObj.mockScore || "";
+    } else {
+        mockRow.style.display = "none";
+    }
+
+    document.getElementById("brainDumpBox").innerText = dayObj.notes || "";
+    updateProgressUI();
+    renderMatrix();
+    renderAnalyticsChart();
+}
+
+function updateProgressUI() {
+    const dayObj = plan[currentDayIdx];
+    const todaySubs = dayObj.subjects.flatMap(s => s.subtasks);
+    const todayTotal = todaySubs.length;
+    const todayDone = todaySubs.filter(s => s.done).length;
+    const todayPct = todayTotal > 0 ? Math.round((todayDone / todayTotal) * 100) : 0;
+
+    document.getElementById("todayStatusText").innerText = `Today's Micro-Steps: ${todayDone} / ${todayTotal} Done`;
+    document.getElementById("todayPctText").innerText = `${todayPct}%`;
+    document.getElementById("todayProgressFill").style.width = `${todayPct}%`;
+
+    const allSubs = plan.flatMap(d => d.subjects.flatMap(s => s.subtasks));
+    const allDone = allSubs.filter(s => s.done).length;
+    const allPct = allSubs.length > 0 ? Math.round((allDone / allSubs.length) * 100) : 0;
+    document.getElementById("overallMiniStats").innerText = `Overall 45-Day Progress: ${allPct}% (${allDone}/${allSubs.length} steps)`;
+}
+
+// ==========================================
+// 5. TASK MANIPULATION & SOUND TRIGGERS
+// ==========================================
+function toggleSubtask(sIdx, stIdx, checked) {
+    plan[currentDayIdx].subjects[sIdx].subtasks[stIdx].done = checked;
+
+    if (checked) {
+        playPop();
+        const subj = plan[currentDayIdx].subjects[sIdx];
+        if (subj.subtasks.every(t => t.done)) {
+            playCardComplete();
+            fireConfetti(28);
+        }
+
+        const todaySubs = plan[currentDayIdx].subjects.flatMap(s => s.subtasks);
+        if (todaySubs.length > 0 && todaySubs.every(t => t.done)) {
+            playFanfare();
+            fireConfetti(90);
+        }
+    }
+
+    saveApp();
+    renderDay();
+}
+
+function editSubtask(sIdx, stIdx, val) {
+    plan[currentDayIdx].subjects[sIdx].subtasks[stIdx].text = val.trim();
+    saveApp();
+}
+
+function editSubjectTitle(sIdx, val) {
+    plan[currentDayIdx].subjects[sIdx].title = val.trim();
+    saveApp();
+}
+
+function addSubtask(sIdx) {
+    plan[currentDayIdx].subjects[sIdx].subtasks.push({ text: "Click to edit new micro-step...", done: false });
+    saveApp();
+    renderDay();
+}
+
+function deleteSubtask(sIdx, stIdx) {
+    plan[currentDayIdx].subjects[sIdx].subtasks.splice(stIdx, 1);
+    saveApp();
+    renderDay();
+}
+
+function savePhase(val) {
+    plan[currentDayIdx].phase = val.trim();
+    saveApp();
+}
+
+function saveMockScore(val) {
+    plan[currentDayIdx].mockScore = val;
+    saveApp();
+    renderAnalyticsChart();
+    if (val && parseInt(val) >= 300) {
+        playFanfare();
+        fireConfetti(70);
+    }
+}
+
+function saveNotes(val) {
+    plan[currentDayIdx].notes = val.trim();
+    saveApp();
+}
+
+function copyBrainDump() {
+    const text = document.getElementById("brainDumpBox").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        playPop();
+        alert("Brain dump copied to clipboard!");
+    });
+}
+
+function changeDay(delta) {
+    const next = currentDayIdx + delta;
+    if (next >= 0 && next < plan.length) {
+        currentDayIdx = next;
+        saveApp();
+        renderDay();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function jumpToDay(idxStr) {
+    currentDayIdx = parseInt(idxStr);
+    saveApp();
+    renderDay();
+}
+
+function jumpToNextIncomplete() {
+    const idx = plan.findIndex(d => d.subjects.flatMap(s => s.subtasks).some(st => !st.done));
+    if (idx !== -1) {
+        currentDayIdx = idx;
+        saveApp();
+        renderDay();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function toggleTheme() {
+    const body = document.body;
+    body.setAttribute("data-theme", body.getAttribute("data-theme") === "dark" ? "light" : "dark");
+}
+
+// ==========================================
+// 6. ADHD DECISION SOLVER: "PICK FOR ME"
+// ==========================================
+function rollForNextTask() {
+    const dayObj = plan[currentDayIdx];
+    const uncompleted = [];
+
+    dayObj.subjects.forEach((subj, sIdx) => {
+        subj.subtasks.forEach((st, stIdx) => {
+            if (!st.done) {
+                uncompleted.push({ sIdx, stIdx, text: st.text, code: subj.code, pill: subj.pill });
+            }
+        });
+    });
+
+    if (uncompleted.length === 0) {
+        playFanfare();
+        alert("🌟 All steps for today are already complete! You crushed it.");
+        return;
+    }
+
+    const chosen = uncompleted[Math.floor(Math.random() * uncompleted.length)];
+    playPop();
+
+    const targetItem = document.getElementById(`taskItem-${chosen.sIdx}-${chosen.stIdx}`);
+    const targetCard = document.getElementById(`subjectCard-${chosen.sIdx}`);
+
+    document.querySelectorAll('.subtask-item').forEach(el => el.classList.remove('target-highlight'));
+    document.querySelectorAll('.subject-card').forEach(el => el.classList.remove('spotlight'));
+
+    if (targetCard && targetItem) {
+        targetCard.classList.add('spotlight');
+        targetItem.classList.add('target-highlight');
+        targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        setTimeout(() => {
+            targetCard.classList.remove('spotlight');
+        }, 3500);
+    }
+}
+
+// ==========================================
+// 7. ZEN / FOCUS MODE OVERLAY (WITH VISUAL TIMER)
+// ==========================================
+function openZenForTask(sIdx, stIdx) {
+    activeZenSubjectIdx = sIdx;
+    activeZenSubtaskIdx = stIdx;
+
+    const subj = plan[currentDayIdx].subjects[sIdx];
+    const task = subj.subtasks[stIdx];
+
+    const tag = document.getElementById("zenTag");
+    tag.innerText = subj.code;
+    tag.className = `zen-tag ${subj.pill}`;
+
+    document.getElementById("zenTitle").innerText = task.text;
+    document.getElementById("zenModal").classList.add("open");
+
+    // Initialize visual dial for Zen mode if needed
+    renderTimer();
+    playPop();
+}
+
+function closeZenModal() {
+    document.getElementById("zenModal").classList.remove("open");
+}
+
+function handleZenBackdropClick(e) {
+    if (e.target.id === "zenModal") {
+        closeZenModal();
+    }
+}
+
+function completeZenTask() {
+    if (activeZenSubjectIdx !== null && activeZenSubtaskIdx !== null) {
+        toggleSubtask(activeZenSubjectIdx, activeZenSubtaskIdx, true);
+        closeZenModal();
+    }
+}
+
+// ========================================================
+// 8. VISUAL TIMER (COUNTER-CLOCKWISE TIME TIMER DIAL)
+// ========================================================
+function toggleVisualTimerDropdown() {
+    const wrapper = document.getElementById("visualTimerDropdownWrapper");
+    if (!wrapper) return;
+    wrapper.classList.toggle("open");
+    const isOpen = wrapper.classList.contains("open");
+    localStorage.setItem(VT_DROPDOWN_KEY, isOpen ? "1" : "0");
+    const arrow = document.getElementById("vtDropdownArrow");
+    if (arrow) arrow.innerText = isOpen ? "▲" : "▼";
+}
+
+function initVisualTimerDial() {
+    const tickGroups = ["vtTicksGroup", "zenVtTicksGroup"];
+    const labelGroups = ["vtLabelsGroup", "zenVtLabelsGroup"];
+
+    tickGroups.forEach(gId => {
+        const g = document.getElementById(gId);
+        if (g) g.innerHTML = "";
+    });
+    labelGroups.forEach(gId => {
+        const g = document.getElementById(gId);
+        if (g) g.innerHTML = "";
+    });
+
+    const cx = 160, cy = 160;
+
+    for (let m = 0; m < 60; m++) {
+        const theta = 2 * Math.PI * (m / 60); // counter-clockwise from 12 o'clock
+        const sinT = Math.sin(theta);
+        const cosT = Math.cos(theta);
+
+        const isMajor = (m % 5 === 0);
+        const rIn = isMajor ? 104 : 116;
+        const rOut = 126;
+
+        const x1 = cx - rIn * sinT;
+        const y1 = cy - rIn * cosT;
+        const x2 = cx - rOut * sinT;
+        const y2 = cy - rOut * cosT;
+
+        tickGroups.forEach(gId => {
+            const g = document.getElementById(gId);
+            if (!g) return;
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", x1.toFixed(1));
+            line.setAttribute("y1", y1.toFixed(1));
+            line.setAttribute("x2", x2.toFixed(1));
+            line.setAttribute("y2", y2.toFixed(1));
+            line.setAttribute("stroke", isMajor ? "#94a3b8" : "#334155");
+            line.setAttribute("stroke-width", isMajor ? "2.5" : "1.2");
+            line.setAttribute("stroke-linecap", "round");
+            g.appendChild(line);
+        });
+
+        if (isMajor) {
+            const rNum = 145;
+            const tx = cx - rNum * sinT;
+            const ty = cy - rNum * cosT + 4;
+
+            labelGroups.forEach(gId => {
+                const g = document.getElementById(gId);
+                if (!g) return;
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", tx.toFixed(1));
+                text.setAttribute("y", ty.toFixed(1));
+                text.setAttribute("fill", "#94a3b8");
+                text.setAttribute("font-size", "12");
+                text.setAttribute("font-weight", "800");
+                text.setAttribute("text-anchor", "middle");
+                text.textContent = m.toString();
+                g.appendChild(text);
+            });
+        }
+    }
+}
+
+function updateVisualTimerWedge() {
+    let f = 0;
+    if (vtIsProportional) {
+        f = initialSprintSeconds > 0 ? (timerSeconds / initialSprintSeconds) : 0;
+    } else {
+        f = timerSeconds / 3600; // 60 mins dial
+    }
+    f = Math.max(0, Math.min(1, f));
+
+    const cx = 160, cy = 160, r = 125;
+
+    const wedges = [
+        document.getElementById("visualTimerWedge"),
+        document.getElementById("zenVisualTimerWedge")
+    ];
+
+    if (f <= 0.0001) {
+        wedges.forEach(w => w && w.setAttribute("d", ""));
+        return;
+    }
+
+    if (f >= 0.9999) {
+        const fullCircleD = `M ${cx} ${cy - r} A ${r} ${r} 0 1 0 ${cx} ${cy + r} A ${r} ${r} 0 1 0 ${cx} ${cy - r} Z`;
+        wedges.forEach(w => w && w.setAttribute("d", fullCircleD));
+        return;
+    }
+
+    const theta = 2 * Math.PI * f; // counter-clockwise from 12 o'clock
+    const endX = cx - r * Math.sin(theta);
+    const endY = cy - r * Math.cos(theta);
+
+    const largeArcFlag = f > 0.5 ? 1 : 0;
+    const sweepFlag = 0; // counter-clockwise
+
+    const d = `M ${cx} ${cy} L ${cx} ${cy - r} A ${r} ${r} 0 ${largeArcFlag} ${sweepFlag} ${endX.toFixed(2)} ${endY.toFixed(2)} Z`;
+    wedges.forEach(w => w && w.setAttribute("d", d));
+}
+
+function setupDialInteractions() {
+    const svgs = [
+        document.getElementById("visualTimerSvg"),
+        document.getElementById("zenVisualTimerSvg")
+    ];
+
+    svgs.forEach(svg => {
+        if (!svg) return;
+
+        function handleDialEvent(e) {
+            e.preventDefault();
+            const rect = svg.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+            const mx = ((clientX - rect.left) / rect.width) * 320;
+            const my = ((clientY - rect.top) / rect.height) * 320;
+
+            const cx = 160, cy = 160;
+            const dx = mx - cx;
+            const dy = my - cy;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 15) return;
+
+            let theta = Math.atan2(-dx, -dy);
+            if (theta < 0) theta += 2 * Math.PI;
+
+            const f = theta / (2 * Math.PI);
+
+            let newSecs;
+            if (vtIsProportional) {
+                newSecs = Math.round(f * initialSprintSeconds);
+            } else {
+                const mins = f * 60;
+                newSecs = Math.round(mins * 2) * 30; // 30-sec snap
+                if (newSecs === 0 && f > 0.95) newSecs = 3600;
+            }
+
+            newSecs = Math.max(0, Math.min(3600, newSecs));
+            timerSeconds = newSecs;
+            if (!timerInterval) {
+                initialSprintSeconds = newSecs > 0 ? newSecs : 1500;
+            }
+
+            renderTimer();
+        }
+
+        svg.addEventListener("mousedown", (e) => {
+            isDraggingDial = true;
+            handleDialEvent(e);
+            playPop();
+        });
+
+        svg.addEventListener("touchstart", (e) => {
+            isDraggingDial = true;
+            handleDialEvent(e);
+            playPop();
+        }, { passive: false });
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (isDraggingDial) {
+            const activeSvg = document.getElementById("zenModal").classList.contains("open") 
+                ? document.getElementById("zenVisualTimerSvg") 
+                : document.getElementById("visualTimerSvg");
+            if (!activeSvg) return;
+            const rect = activeSvg.getBoundingClientRect();
+            const mx = ((e.clientX - rect.left) / rect.width) * 320;
+            const my = ((e.clientY - rect.top) / rect.height) * 320;
+            const cx = 160, cy = 160;
+            const dx = mx - cx;
+            const dy = my - cy;
+            if (Math.sqrt(dx * dx + dy * dy) < 15) return;
+            let theta = Math.atan2(-dx, -dy);
+            if (theta < 0) theta += 2 * Math.PI;
+            const f = theta / (2 * Math.PI);
+            let newSecs = vtIsProportional ? Math.round(f * initialSprintSeconds) : Math.round((f * 60) * 2) * 30;
+            if (newSecs === 0 && f > 0.95) newSecs = 3600;
+            timerSeconds = Math.max(0, Math.min(3600, newSecs));
+            if (!timerInterval) initialSprintSeconds = timerSeconds > 0 ? timerSeconds : 1500;
+            renderTimer();
+        }
+    });
+
+    window.addEventListener("touchmove", (e) => {
+        if (isDraggingDial) {
+            const activeSvg = document.getElementById("zenModal").classList.contains("open") 
+                ? document.getElementById("zenVisualTimerSvg") 
+                : document.getElementById("visualTimerSvg");
+            if (!activeSvg) return;
+            const rect = activeSvg.getBoundingClientRect();
+            const mx = ((e.touches[0].clientX - rect.left) / rect.width) * 320;
+            const my = ((e.touches[0].clientY - rect.top) / rect.height) * 320;
+            const cx = 160, cy = 160;
+            const dx = mx - cx;
+            const dy = my - cy;
+            if (Math.sqrt(dx * dx + dy * dy) < 15) return;
+            let theta = Math.atan2(-dx, -dy);
+            if (theta < 0) theta += 2 * Math.PI;
+            const f = theta / (2 * Math.PI);
+            let newSecs = vtIsProportional ? Math.round(f * initialSprintSeconds) : Math.round((f * 60) * 2) * 30;
+            if (newSecs === 0 && f > 0.95) newSecs = 3600;
+            timerSeconds = Math.max(0, Math.min(3600, newSecs));
+            if (!timerInterval) initialSprintSeconds = timerSeconds > 0 ? timerSeconds : 1500;
+            renderTimer();
+        }
+    }, { passive: false });
+
+    window.addEventListener("mouseup", () => { isDraggingDial = false; });
+    window.addEventListener("touchend", () => { isDraggingDial = false; });
+}
+
+function renderTimer() {
+    const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+    const s = (timerSeconds % 60).toString().padStart(2, '0');
+    const timeStr = `${m}:${s}`;
+
+    const dig = document.getElementById("vtDigitalDisplay");
+    if (dig) dig.innerText = timeStr;
+
+    const miniTime = document.getElementById("vtMiniTimeDisplay");
+    if (miniTime) miniTime.innerText = timeStr;
+
+    const zenDig = document.getElementById("zenTimerDisplay");
+    if (zenDig) zenDig.innerText = timeStr;
+
+    const isRunning = timerInterval !== null;
+    const playBtn = document.getElementById("vtPlayBtn");
+    if (playBtn) playBtn.innerText = isRunning ? "⏸ Pause" : "▶ Start";
+
+    const miniPlayBtn = document.getElementById("vtMiniPlayBtn");
+    if (miniPlayBtn) miniPlayBtn.innerText = isRunning ? "⏸ Pause" : "▶ Start";
+
+    const zenPlayBtn = document.getElementById("zenPlayBtn");
+    if (zenPlayBtn) zenPlayBtn.innerText = isRunning ? "⏸ Pause" : "▶ Start";
+
+    const badge = document.getElementById("vtStatusBadge");
+    if (badge) {
+        badge.innerText = isRunning ? "RUNNING" : "PAUSED";
+        badge.classList.toggle("running", isRunning);
+    }
+
+    updateVisualTimerWedge();
+    updatePresetHighlight();
+}
+
+function updatePresetHighlight() {
+    const currentMins = Math.round(timerSeconds / 60);
+    const isExact = (timerSeconds % 60 === 0);
+    document.querySelectorAll(".vt-preset-btn").forEach(btn => {
+        const val = parseInt(btn.innerText);
+        if (isExact && val === currentMins) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+}
+
+function toggleSprintTimer() {
+    if (timerInterval) {
+        pauseTimer();
+    } else {
+        startTimer();
+    }
+}
+
+function startTimer() {
+    if (timerInterval) return;
+    getAudioContext();
+    timerInterval = setInterval(() => {
+        if (timerSeconds > 0) {
+            timerSeconds--;
+            renderTimer();
+        } else {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            playTimerChime();
+            fireConfetti(80);
+            renderTimer();
+            alert("🎉 Focus Sprint Complete! Take a 5-minute break and recharge.");
+        }
+    }, 1000);
+    renderTimer();
+}
+
+function pauseTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    renderTimer();
+}
+
+function resetSprintTimer() {
+    pauseTimer();
+    timerSeconds = initialSprintSeconds > 0 ? initialSprintSeconds : 25 * 60;
+    renderTimer();
+    playPop();
+}
+
+function setTimerMinutes(mins) {
+    pauseTimer();
+    timerSeconds = mins * 60;
+    initialSprintSeconds = mins * 60;
+    renderTimer();
+    playPop();
+}
+
+function addSprintMinutes(mins) {
+    timerSeconds += mins * 60;
+    initialSprintSeconds += mins * 60;
+    renderTimer();
+    playPop();
+}
+
+function setCustomTime(val) {
+    if (!val) return;
+    let parts = val.trim().split(":");
+    let mins = 0, secs = 0;
+    if (parts.length === 2) {
+        mins = parseInt(parts[0]) || 0;
+        secs = parseInt(parts[1]) || 0;
+    } else {
+        mins = parseInt(parts[0]) || 0;
+    }
+    const total = mins * 60 + secs;
+    if (total >= 0 && total <= 3600) {
+        pauseTimer();
+        timerSeconds = total;
+        initialSprintSeconds = total;
+        renderTimer();
+        playPop();
+    }
+}
+
+function changeWedgeColor(color) {
+    vtColor = color;
+    localStorage.setItem(VT_COLOR_KEY, color);
+    document.documentElement.style.setProperty('--vt-color', color);
+    const prev = document.getElementById("vtColorPreview");
+    if (prev) prev.style.backgroundColor = color;
+    updateVisualTimerWedge();
+}
+
+function toggleProportionalMode(checked) {
+    vtIsProportional = checked;
+    localStorage.setItem(VT_PROP_KEY, checked ? "1" : "0");
+    renderTimer();
+}
+
+// ==========================================
+// 9. 45-DAY RHYTHM MATRIX (EXPANDABLE GRID)
+// ==========================================
+function toggleMatrix() {
+    const card = document.getElementById("matrixCard");
+    const btn = document.getElementById("matrixToggleBtn");
+    card.classList.toggle("open");
+    btn.classList.toggle("active", card.classList.contains("open"));
+    if (card.classList.contains("open")) {
+        renderMatrix();
+    }
+}
+
+function renderMatrix() {
+    const grid = document.getElementById("matrixGrid");
+    if (!grid) return;
+    grid.innerHTML = "";
+
+    plan.forEach((d, idx) => {
+        const allSubs = d.subjects.flatMap(s => s.subtasks);
+        const isDone = allSubs.length > 0 && allSubs.every(st => st.done);
+        const isCurrent = idx === currentDayIdx;
+        const isMock = d.isMock;
+
+        const cell = document.createElement("div");
+        cell.className = `matrix-day-cell ${isDone ? 'is-done' : ''} ${isMock ? 'is-mock' : ''} ${isCurrent ? 'current' : ''}`;
+        cell.title = `Day ${d.day}: ${d.phase}`;
+        cell.onclick = () => {
+            jumpToDay(idx);
+            playPop();
+        };
+
+        cell.innerHTML = `
+            <span class="cell-num">D${d.day}</span>
+            <div class="cell-dot"></div>
+        `;
+
+        grid.appendChild(cell);
+    });
+}
+
+// ==========================================
+// 10. MOCK SCORE TRAJECTORY (INTERACTIVE SVG)
+// ==========================================
+function toggleAnalytics() {
+    const card = document.getElementById("analyticsCard");
+    const btn = document.getElementById("analyticsToggleBtn");
+    card.classList.toggle("open");
+    btn.classList.toggle("active", card.classList.contains("open"));
+    if (card.classList.contains("open")) {
+        renderAnalyticsChart();
+    }
+}
+
+function renderAnalyticsChart() {
+    const container = document.getElementById("chartContainer");
+    if (!container) return;
+
+    const mockDays = plan.filter(d => d.isMock);
+    const scores = mockDays.map((d, i) => ({
+        label: `M#${i+1} (D${d.day})`,
+        score: d.mockScore ? parseInt(d.mockScore) : null
+    }));
+
+    const width = 680;
+    const height = 170;
+    const padding = { top: 20, right: 30, bottom: 30, left: 40 };
+
+    const maxScore = 390;
+    const targetScore = 300;
+
+    const plotW = width - padding.left - padding.right;
+    const plotH = height - padding.top - padding.bottom;
+
+    const targetY = padding.top + plotH - (targetScore / maxScore) * plotH;
+
+    let points = [];
+    scores.forEach((item, idx) => {
+        const x = padding.left + (idx / (scores.length - 1)) * plotW;
+        const y = item.score !== null ? padding.top + plotH - (item.score / maxScore) * plotH : null;
+        points.push({ x, y, label: item.label, score: item.score });
+    });
+
+    const validPoints = points.filter(p => p.y !== null);
+
+    let pathD = "";
+    if (validPoints.length > 0) {
+        pathD = `M ${validPoints[0].x} ${validPoints[0].y}`;
+        for (let i = 1; i < validPoints.length; i++) {
+            pathD += ` L ${validPoints[i].x} ${validPoints[i].y}`;
+        }
+    }
+
+    let dotsHtml = "";
+    points.forEach(p => {
+        if (p.score !== null) {
+            dotsHtml += `
+                <circle cx="${p.x}" cy="${p.y}" r="5" fill="#db2777" stroke="#ffffff" stroke-width="2" />
+                <text x="${p.x}" y="${p.y - 10}" font-size="11" font-weight="800" fill="var(--text)" text-anchor="middle">${p.score}</text>
+            `;
+        } else {
+            dotsHtml += `
+                <circle cx="${p.x}" cy="${padding.top + plotH}" r="3" fill="var(--border)" />
+            `;
+        }
+        dotsHtml += `
+            <text x="${p.x}" y="${height - 8}" font-size="9" font-weight="600" fill="var(--muted)" text-anchor="middle">${p.label}</text>
+        `;
+    });
+
+    container.innerHTML = `
+        <svg viewBox="0 0 ${width} ${height}" style="width:100%; height:100%; overflow:visible;">
+            <line x1="${padding.left}" y1="${targetY}" x2="${width - padding.right}" y2="${targetY}" stroke="#10b981" stroke-dasharray="4 4" stroke-width="1.5" opacity="0.6"/>
+            <text x="${width - padding.right + 5}" y="${targetY + 4}" font-size="10" font-weight="700" fill="#10b981">300 (Cutoff Target)</text>
+            <line x1="${padding.left}" y1="${padding.top + plotH}" x2="${width - padding.right}" y2="${padding.top + plotH}" stroke="var(--border)" stroke-width="1"/>
+            ${pathD ? `<path d="${pathD}" fill="none" stroke="#db2777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />` : ''}
+            ${dotsHtml}
+        </svg>
+    `;
+}
+
+// ==========================================
+// 11. GLOBAL SEARCH (ALL 45 DAYS)
+// ==========================================
+function handleSearch(query) {
+    const panel = document.getElementById("searchResultsPanel");
+    const q = query.trim().toLowerCase();
+
+    if (!q) {
+        panel.style.display = "none";
+        panel.innerHTML = "";
+        return;
+    }
+
+    const matches = [];
+    plan.forEach((d, idx) => {
+        let matchText = "";
+        if (d.phase.toLowerCase().includes(q)) matchText = d.phase;
+
+        d.subjects.forEach(s => {
+            if (s.title.toLowerCase().includes(q)) matchText = `${s.code}: ${s.title}`;
+            s.subtasks.forEach(st => {
+                if (st.text.toLowerCase().includes(q)) matchText = `${s.code} step: ${st.text}`;
+            });
+        });
+
+        if (matchText) {
+            matches.push({ dayIdx: idx, dayNum: d.day, phase: d.phase, snippet: matchText });
+        }
+    });
+
+    if (matches.length === 0) {
+        panel.style.display = "block";
+        panel.innerHTML = `<div style="padding:10px; font-size:0.85rem; color:var(--muted); text-align:center;">No topics found for "${query}"</div>`;
+        return;
+    }
+
+    panel.style.display = "block";
+    panel.innerHTML = matches.slice(0, 8).map(m => `
+        <div class="search-result-item" onclick="selectSearchResult(${m.dayIdx})">
+            <div>
+                <div class="search-result-title">Day ${m.dayNum}: ${m.snippet}</div>
+                <div style="font-size:0.75rem; color:var(--muted);">${m.phase}</div>
+            </div>
+            <span class="search-result-tag" style="background:var(--accent-soft); color:var(--accent);">Jump →</span>
+        </div>
+    `).join("");
+}
+
+function selectSearchResult(dayIdx) {
+    jumpToDay(dayIdx);
+    document.getElementById("topicSearchInput").value = "";
+    document.getElementById("searchResultsPanel").style.display = "none";
+    playPop();
+}
+
+// ==========================================
+// 12. STREAK TRACKING
+// ==========================================
+function recordStreakActivity() {
+    const todayStr = new Date().toISOString().slice(0, 10);
+    let streakData = JSON.parse(localStorage.getItem(STREAK_KEY) || '{"lastDate":"","streak":0}');
+
+    if (streakData.lastDate !== todayStr) {
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yestStr = yesterday.toISOString().slice(0, 10);
+
+        if (streakData.lastDate === yestStr) {
+            streakData.streak += 1;
+        } else if (!streakData.lastDate) {
+            streakData.streak = 1;
+        } else {
+            streakData.streak = 1;
+        }
+        streakData.lastDate = todayStr;
+        localStorage.setItem(STREAK_KEY, JSON.stringify(streakData));
+    }
+    updateStreakUI();
+}
+
+function updateStreakUI() {
+    const streakData = JSON.parse(localStorage.getItem(STREAK_KEY) || '{"lastDate":"","streak":1}');
+    const countEl = document.getElementById("streakCount");
+    if (countEl) countEl.innerText = Math.max(1, streakData.streak);
+}
+
+// ==========================================
+// 13. KEYBOARD SHORTCUTS
+// ==========================================
+function setupKeyboardShortcuts() {
+    window.addEventListener("keydown", (e) => {
+        if (["INPUT", "TEXTAREA"].includes(e.target.tagName) || e.target.isContentEditable) {
+            return;
+        }
+
+        if (e.code === "Space") {
+            e.preventDefault();
+            toggleSprintTimer();
+        } else if (e.key === "[" || e.key === "ArrowLeft") {
+            changeDay(-1);
+        } else if (e.key === "]" || e.key === "ArrowRight") {
+            changeDay(1);
+        } else if (e.key.toLowerCase() === "r") {
+            rollForNextTask();
+        } else if (e.key === "Escape") {
+            closeZenModal();
+        } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+            e.preventDefault();
+            document.getElementById("topicSearchInput").focus();
+        }
+    });
+}
+
+// ==========================================
+// 14. DATA EXPORT / IMPORT / RESET
+// ==========================================
+function exportData() {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(plan, null, 2));
+    const a = document.createElement('a');
+    a.href = dataStr;
+    a.download = "ssc_cgl_adhd_6plus1_backup.json";
+    a.click();
+}
+
+function importData(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+        try {
+            const parsed = JSON.parse(evt.target.result);
+            if (Array.isArray(parsed)) {
+                plan = parsed;
+                saveApp();
+                renderDay();
+                playFanfare();
+                alert("Backup restored successfully!");
+            }
+        } catch (err) {
+            alert("Invalid backup file.");
+        }
+    };
+    reader.readAsText(file);
+}
+
+function resetPlan() {
+    if (confirm("Reset all checkboxes and notes back to factory plan?")) {
+        plan = buildDefaultPlan();
+        currentDayIdx = 0;
+        saveApp();
+        renderDay();
+    }
+}
+
+window.onload = loadApp;
+</script>
+</body>
+</html>

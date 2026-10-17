@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Possessives & Gerunds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 7 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 3: Possessives & Gerunds</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 3 Mini Mock</h2>
+            <p>Test your knowledge on these 7 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Fill in the blank: "I hope you don't mind ____ borrowing your car."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) me</label>
+                    <label><input type="radio" name="q1" value="B"> B) my</label>
+                    <label><input type="radio" name="q1" value="C"> C) mine</label>
+                    <label><input type="radio" name="q1" value="D"> D) myself</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Find the error: "Your separation (A) / pains me a lot (B) / and I become sad (C) / no error (D)."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A</label>
+                    <label><input type="radio" name="q2" value="B"> B</label>
+                    <label><input type="radio" name="q2" value="C"> C</label>
+                    <label><input type="radio" name="q2" value="D"> D</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) My all students are very talented.</label>
+                    <label><input type="radio" name="q3" value="B"> B) My both friends are very talented.</label>
+                    <label><input type="radio" name="q3" value="C"> C) All my students are very talented.</label>
+                    <label><input type="radio" name="q3" value="D"> D) Both of my friends is talented.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Fill in the blank: "A person can turn on either of the light ____."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) bulb</label>
+                    <label><input type="radio" name="q4" value="B"> B) bulbs</label>
+                    <label><input type="radio" name="q4" value="C"> C) bulb's</label>
+                    <label><input type="radio" name="q4" value="D"> D) bulbs'</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Choose the INCORRECT sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) Yours friendly.</label>
+                    <label><input type="radio" name="q5" value="B"> B) Government girls' school.</label>
+                    <label><input type="radio" name="q5" value="C"> C) The ring is hers.</label>
+                    <label><input type="radio" name="q5" value="D"> D) Your's friendly.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule11', num: 'RULE 1 (Rule 11)', title: 'Possessive Adjective before Gerund',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>We use a <b>Possessive Adjective</b> (my, our, his, her, their, your) before a <b>Gerund</b>.</p>
+                        <p><b>Gerund:</b> When V1+ING is used as a noun.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">I hope you don't mind me borrowing your car.</div><div class="reason">"Me" is the objective case.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I hope you don't mind my borrowing your car.</div><div class="reason">"My" is the possessive form. "Borrowing" is a gerund playing the role of a noun.</div></div>
+                        
+                        <div class="note-box">
+                            "My book" and "my idea" are possessives. The book and idea belong to me. "Me" is the objective case. We use possessive before a gerund.
+                        </div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">I know his reading every night has helped him pass the test.</div><div class="reason">[Possessive and Gerund – focus is on reading]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I hope you don't mind my staying with you next week.</div><div class="reason">[Possessive and Gerund – focus is on staying]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">My father doesn't like my going outside with Ram.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule21', num: 'RULE 2 (Rule 21)', title: 'Words Not Taking Possessive Case',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Certain words like <b>separation, excuse, mention, favour, pardon, leave, report, sight, etc.</b> do <b>not</b> take a Possessive case (my, your, his) before them.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Your separation pains me a lot and I become sad.</div><div class="reason">Cannot use "your" with "separation".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Separation from you pains me a lot and I become sad.</div><div class="reason">Rewritten without altering the meaning.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">I want your favour, will you please help me?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">I want favour from you, will you please help me?</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">His mention in the story received great applause from audience.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Mention of him in the story received great applause from audience.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">At his sight the robbers fled.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">At the sight of him, the robbers fled.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Possessive Case:</b> your, his, her, my, their, our, its, etc.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule96', num: 'RULE 3 (Rule 96)', title: 'Possessive Case after All & Both',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Possessive case is used <b>after</b> "all" and "both".</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">My all students are very talented.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">All my students are very talented.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">My both friends are very talented.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Both my friends are very talented.</div><div class="reason">Possessive case "my" should be placed after "all" and "both".</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule110', num: 'RULE 4 (Rule 110)', title: 'Use of Possessive Adjectives',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Possessive adjectives modify a noun by showing possession or belonging.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Everyone should do one's duty.</div><div class="reason">"Everyone" is not the subject "One".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Everyone should do his duty.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">One should do his duty.</div><div class="reason">If the subject is "One", use "one's".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">One should do one's duty.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b> We use "one's" only when the Subject is "One". If the subject is "Every, each, etc.", we use "his" or "her" accordingly.<br><br>
+                            <b>Example:</b> Every girl should do her duty. (Gender is clearly mentioned. When gender is not clear, we give priority to "his").
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule114', num: 'RULE 5 (Rule 114)', title: 'One of the, Either of, Neither of, Each of',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>The words <b>"One of the, either of, neither of, and each of"</b> are always followed by <b>plural nouns</b>.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">One of the student was selected to visit NASA.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">One of the students was selected to visit NASA.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">A person can turn on either of the light bulb.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A person can turn on either of the light bulbs.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Do you go to each of the meetings?</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule118', num: 'RULE 6 (Rule 118)', title: 'Apostrophe with Plural Nouns',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>While showing possession with a plural noun, we should make sure that we do not put an apostrophe ('s) in such a way that it creates a hissing sound. In English, words creating a hissing sound are avoided.</p>
+                        <p><b>Exception:</b> "else's" is grammatically correct in spite of the hissing sound.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Government girls's school.</div><div class="reason">"girls's" creates a hissing sound.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Government girls' school.</div></div>
+                        
+                        <div class="note-box">
+                            <b>More Examples:</b><br>
+                            Jesus' sake<br>
+                            For peace' sake<br>
+                            Residents' Welfare Association<br>
+                            Pythagoras' theorem<br>
+                            For goodness' sake<br>
+                            For justice' sake
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule119', num: 'RULE 7 (Rule 119)', title: 'No Apostrophe with Pronouns',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>We <b>never</b> use an apostrophe ('s) with pronouns to show possession. It is only used with nouns.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Your's friendly.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Yours friendly.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The kids are yours and mine.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">We shall finally have what is rightfully ours.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The ring is hers.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The bag is theirs.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Their mother gets along well with yours.</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 7;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh3')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh3')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh3', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "B", // "my" is possessive, used before Gerund "borrowing".
+        q2: "A", // "Your separation" is wrong. Should be "Separation from you".
+        q3: "C", // "All my students" (possessive comes after 'all').
+        q4: "B", // "either of the" takes plural noun "bulbs".
+        q5: "D"  // "Your's friendly" is incorrect. No apostrophe with pronouns. "Yours friendly" is correct.
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

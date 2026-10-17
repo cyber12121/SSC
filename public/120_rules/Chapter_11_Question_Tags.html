@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11: Question Tags</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); width: 0%; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; font-family: 'JetBrains Mono', monospace; }
+        .theme-toggle { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 6px; border-radius: 8px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        .header { text-align: center; padding: 100px 20px 35px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .chapter-tag { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 1rem; }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 14px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.1rem; }
+        .chevron { transition: transform 0.3s; font-size: 0.85rem; color: var(--text-muted); }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 22px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1.5px dashed var(--primary); border-radius: 10px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; color: var(--primary-dark); text-align: center; margin-bottom: 18px; font-size: 0.95rem; font-weight: 600; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 14px 16px; border-radius: 10px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.25); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.25); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 16px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+
+        .mark-learned-btn { width: 100%; padding: 14px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; font-weight: 700; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.1); }
+        .mock-header { background: var(--primary); color: #fff; padding: 24px; text-align: center; }
+        .mock-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+        .mock-body { padding: 26px; }
+        .mcq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 12px; }
+        .mcq-options label { display: block; padding: 12px 16px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; transition: all 0.2s; }
+        .mcq-options label:hover { background: var(--primary-light); border-color: var(--primary); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 12px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+        .submit-btn:hover { opacity: 0.92; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.25rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 7 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle Theme">🌙</button>
+</div>
+
+<div class="header">
+    <div class="chapter-tag">120 Rules Mastery Series</div>
+    <h1>Chapter 11: Question Tags</h1>
+    <p>Exhaustive Breakdown of All Question Tag Rules (Rules 69 – 75) + SSC/Banking Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules dynamically injected by JavaScript -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 11 Mini Mock Test</h2>
+            <p>Test your mastery across all Question Tag mechanics and edge cases</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Complete the sentence with the appropriate question tag:<br><i>"I am responsible for coordinating the event, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) amn't I</label>
+                    <label><input type="radio" name="q1" value="B"> B) aren't I</label>
+                    <label><input type="radio" name="q1" value="C"> C) don't I</label>
+                    <label><input type="radio" name="q1" value="D"> D) isn't I</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Select the correct question tag:<br><i>"He seldom visits his native village nowadays, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) doesn't he</label>
+                    <label><input type="radio" name="q2" value="B"> B) does he</label>
+                    <label><input type="radio" name="q2" value="C"> C) hasn't he</label>
+                    <label><input type="radio" name="q2" value="D"> D) isn't he</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Choose the grammatically sound question tag according to Rule 72 (Tense Consistency):<br><i>"She has already finished her revision, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) didn't she</label>
+                    <label><input type="radio" name="q3" value="B"> B) doesn't she</label>
+                    <label><input type="radio" name="q3" value="C"> C) hasn't she</label>
+                    <label><input type="radio" name="q3" value="D"> D) isn't she</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Identify the correct question tag for the indefinite subject:<br><i>"Every student in the hall has brought their admit card, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) hasn't he</label>
+                    <label><input type="radio" name="q4" value="B"> B) hasn't they</label>
+                    <label><input type="radio" name="q4" value="C"> C) haven't they</label>
+                    <label><input type="radio" name="q4" value="D"> D) didn't they</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Complete the sentence where the collective noun acts as a single unified body:<br><i>"The jury has unanimously announced the verdict, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) hasn't it</label>
+                    <label><input type="radio" name="q5" value="B"> B) haven't they</label>
+                    <label><input type="radio" name="q5" value="C"> C) didn't it</label>
+                    <label><input type="radio" name="q5" value="D"> D) isn't it</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="mcq-item">
+                <div class="mcq-question">6. Select the correct question tag where the units of a collective noun act individually:<br><i>"The audience took their respective seats before the performance, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q6" value="A"> A) didn't it</label>
+                    <label><input type="radio" name="q6" value="B"> B) didn't they</label>
+                    <label><input type="radio" name="q6" value="C"> C) hadn't they</label>
+                    <label><input type="radio" name="q6" value="D"> D) took they</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q6"></div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="mcq-item">
+                <div class="mcq-question">7. Which question tag is correct for proposals/suggestions starting with 'Let us':<br><i>"Let us discuss the strategy thoroughly before execution, _______?"</i></div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q7" value="A"> A) will we</label>
+                    <label><input type="radio" name="q7" value="B"> B) shall we</label>
+                    <label><input type="radio" name="q7" value="C"> C) don't we</label>
+                    <label><input type="radio" name="q7" value="D"> D) shouldn't we</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q7"></div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="mcq-item">
+                <div class="mcq-question">8. Identify the sentence with the INCORRECT question tag:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q8" value="A"> A) We hardly ever see him at social gatherings, do we?</label>
+                    <label><input type="radio" name="q8" value="B"> B) Each of the candidates has performed well, haven't they?</label>
+                    <label><input type="radio" name="q8" value="C"> C) I am doing the work assigned by the manager, don't I?</label>
+                    <label><input type="radio" name="q8" value="D"> D) The army changed their uniforms, didn't they?</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q8"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitTest()">Submit & Check Answers 🎯</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule69',
+            num: 'RULE 1 (Rule 69)',
+            title: 'Fundamental Law of Question Tags (Polarity Reversal)',
+            tabs: [
+                {
+                    name: '📖 Core Concept',
+                    content: `
+                        <p>A <b>Question Tag</b> is a mini-question tagged onto the end of a statement, typically used to confirm information or solicit agreement.</p>
+                        
+                        <div class="formula-box">
+                            Positive Statement (+) ➔ Negative Question Tag (-)<br>
+                            Negative Statement (-) ➔ Positive Question Tag (+)
+                        </div>
+                        
+                        <p><b>Rules of Formation:</b><br>
+                        1. Always use the contracted form for negative tags (e.g., <i>hasn't, don't, aren't, won't</i>). Never write <i>has not he?</i>.<br>
+                        2. The subject in a question tag must ALWAYS be a <b>pronoun</b> (never a proper or common noun).
+                        </p>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has worked very hard on this project, hasn't he?</div>
+                            <div class="reason">[Positive statement takes negative question tag]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He has not worked hard on this project, has he?</div>
+                            <div class="reason">[Negative statement takes positive question tag]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Rohan is coming today, isn't Rohan?</div>
+                            <div class="reason">[Incorrect: A noun cannot be used as the subject of a tag; use pronoun 'he']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Rohan is coming today, isn't he?</div>
+                            <div class="reason">[Correct format]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ Exam Traps',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Trap: Uncontracted Form in Tag</div>
+                            In standard English examination rules, full negative forms like <i>\"is not he?\"</i> or <i>\"did not they?\"</i> are deemed grammatically wrong. The tag MUST be contracted: <i>\"isn't he?\"</i>, <i>\"didn't they?\"</i>.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule70',
+            num: 'RULE 2 (Rule 70)',
+            title: 'The "I am" Exception ("aren\'t I?" vs "amn\'t I")',
+            tabs: [
+                {
+                    name: '📖 The Exception',
+                    content: `
+                        <p>In standard modern English, there is <b>NO word such as \"amn't\"</b>. Therefore, when a positive statement starts with <b>\"I am\"</b>, the negative question tag is always <b>\"aren't I?\"</b> (meaning <i>am I not</i>).</p>
+
+                        <div class="formula-box">
+                            I am + positive clause ➔ AREN'T I?<br>
+                            I am not + negative clause ➔ AM I?
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I am working very hard for my students, amn't I?</div>
+                            <div class="reason">[Incorrect: 'amn\'t' is an invalid English word]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I am working very hard for my students, aren't I?</div>
+                            <div class="reason">[Correct: Standard grammatical tag for positive 'I am']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I am getting better at this, aren't I?</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I am not disturbing you, am I?</div>
+                            <div class="reason">[Correct: When the statement is negative ('I am not'), the positive tag is simply 'am I?']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ Trap Alert',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Don't Invert the Negative Form!</div>
+                            While <i>\"I am\"</i> takes <i>\"aren't I?\"</i>, <i>\"I am not\"</i> DOES NOT take <i>\"are I?\"</i>! It takes the normal <b>\"am I?\"</b>.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule71',
+            num: 'RULE 3 (Rule 71)',
+            title: 'Implicit Negative Words Take Positive Tags',
+            tabs: [
+                {
+                    name: '📖 Concept & The Negative List',
+                    content: `
+                        <p>Certain words carry an inherently <b>negative meaning</b> without using the explicit word \"not\". Because the statement is logically negative, it <b>MUST take a POSITIVE question tag</b>.</p>
+
+                        <div class="formula-box">
+                            Seldom, Barely, Hardly, Scarcely, Never, Rarely, Little, Few ➔ POSITIVE TAG (+)
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">He seldom comes to my house, does he?</div>
+                            <div class="reason">[Correct: 'Seldom' is negative, hence positive tag 'does he?']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He seldom comes to my house, doesn't he?</div>
+                            <div class="reason">[Incorrect: 'doesn\'t he' creates a double negative]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">They have barely enough to pay the rent this month, have they?</div>
+                            <div class="reason">[Correct: 'Barely' is negative]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I never realized you knew my brother, did I?</div>
+                            <div class="reason">[Correct: 'Never' is negative, verb is past (realized) -> 'did I?']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">We hardly ever go to concerts, do we?</div>
+                            <div class="reason">[Correct: 'Hardly' is negative]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I scarcely registered the fact that he was there, did I?</div>
+                            <div class="reason">[Correct: 'Scarcely' is negative]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ "Few / Little" vs "A Few / A Little"',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 Crucial Exam Distinction</div>
+                            • <b>Few / Little:</b> Negative (almost none) ➔ Takes <b>POSITIVE tag</b>.<br>
+                            • <b>A Few / A Little:</b> Positive (some amount) ➔ Takes <b>NEGATIVE tag</b>.
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">Few students attended the seminar, did they?</div>
+                            <div class="reason">[Correct: 'Few' is negative ➔ positive tag 'did they?']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">A few students attended the seminar, didn't they?</div>
+                            <div class="reason">[Correct: 'A few' is positive ➔ negative tag 'didn\'t they?']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule72',
+            num: 'RULE 4 (Rule 72)',
+            title: 'Strict Tense & Auxiliary Consistency',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>The auxiliary verb used in the question tag <b>must strictly match the tense and auxiliary of the main statement</b>.</p>
+
+                        <div class="formula-box">
+                            Main Verb Tense ➔ Matching Helping Verb in Tag<br>
+                            Continuous ➔ is / are / was / were<br>
+                            Simple Present ➔ do / does | Simple Past ➔ did<br>
+                            Perfect ➔ has / have / had | Modals ➔ can / could / will / would
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">I am doing the work which you gave me, don't I?</div>
+                            <div class="reason">[Incorrect: Main clause is Present Continuous ('am doing'), tag cannot be 'don\'t']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">I am doing the work which you gave me, aren't I?</div>
+                            <div class="reason">[Correct: Preserves Present Continuous auxiliary]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She completed the project yesterday, doesn't she?</div>
+                            <div class="reason">[Incorrect: Past tense 'completed' requires past auxiliary 'did']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She completed the project yesterday, didn't she?</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule73',
+            num: 'RULE 5 (Rule 73)',
+            title: 'Indefinite Pronouns: "Each / Every / Everyone" in Tags',
+            tabs: [
+                {
+                    name: '📖 Concept & The Discord Rule',
+                    content: `
+                        <p>When words like <b>Each, Every, Everyone, Everybody, Someone, Somebody, Anyone, Nobody</b> are used in the main sentence, the main clause uses a <b>singular verb</b>.</p>
+                        
+                        <p><b>HOWEVER</b>, in the question tag, these words are treated as plural people, so the tag pronoun is <b>THEY</b>, and the auxiliary verb in the tag must also become <b>PLURAL</b>!</p>
+
+                        <div class="formula-box">
+                            Main Clause: Each / Every + Singular Verb (is / has / was)<br>
+                            ⬇<br>
+                            Question Tag: PLURAL VERB (aren't / haven't / weren't) + THEY?
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Every girl is very talented, isn't she?</div>
+                            <div class="reason">[Incorrect: Tag pronoun for 'Every girl' must be 'they', requiring plural verb 'aren\'t']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Every girl is very talented, aren't they?</div>
+                            <div class="reason">[Correct: 'they' requires 'aren\'t']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Each one has to work hard to make both ends meet, hasn't he?</div>
+                            <div class="reason">[Incorrect: Tag pronoun cannot be 'he']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Each one has to work hard to make both ends meet, haven't they?</div>
+                            <div class="reason">[Correct: 'they' requires plural auxiliary 'haven\'t']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ "Body / One" vs "Thing"',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 People vs Things</div>
+                            • <b>Everyone, Somebody, Anybody, Nobody:</b> Refers to people ➔ Pronoun in tag is <b>THEY</b> (plural verb).<br>
+                            • <b>Everything, Something, Anything, Nothing:</b> Refers to things/objects ➔ Pronoun in tag is <b>IT</b> (singular verb).
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">Everything is arranged properly, isn't it?</div>
+                            <div class="reason">[Correct: 'Everything' takes singular 'it']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Nobody phoned while I was out, did they?</div>
+                            <div class="reason">[Correct: 'Nobody' is negative ➔ positive plural tag 'did they?']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule74',
+            num: 'RULE 6 (Rule 74)',
+            title: 'Collective Nouns: Unified (It) vs Divided (They)',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>When a <b>collective noun</b> (jury, committee, council, audience, army, team) is used in the main sentence:</p>
+
+                        <div class="formula-box">
+                            1. Unified Action (acting as one body) ➔ Singular Pronoun IT + Singular Verb<br>
+                            2. Divided Action (acting individually or with difference of opinion) ➔ Plural Pronoun THEY + Plural Verb
+                        </div>
+
+                        <p><b>Case 1: Unified Action (Singular 'It')</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The jury has taken the decision, hasn't it?</div>
+                            <div class="reason">[Correct: The jury reached one unanimous decision as a single entity]</div>
+                        </div>
+
+                        <p style="margin-top: 15px;"><b>Case 2: Divided Action (Plural 'They')</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The audience took the seats, didn't they?</div>
+                            <div class="reason">[Correct: Each member took their individual respective seat ➔ plural 'they']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The army changed the uniforms, didn't they?</div>
+                            <div class="reason">[Correct: Soldiers changed their separate individual uniforms ➔ plural 'they']</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚠️ Exam Traps',
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">🚨 The Divided Committee Trap</div>
+                            Whenever you see words like <i>\"divided in their opinion\"</i>, <i>\"separate ways\"</i>, or <i>\"individual seats\"</i>, the collective noun is PLURAL.
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The committee were divided in their opinion, wasn't it?</div>
+                            <div class="reason">[Incorrect: Division indicates individual members ➔ use 'weren\'t they?']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The committee were divided in their opinion, weren't they?</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule75',
+            num: 'RULE 7 (Rule 75)',
+            title: 'Imperative Sentences & Proposals ("Shall we?" vs "Will you?")',
+            tabs: [
+                {
+                    name: '📖 Proposals with "Let us / Let\'s"',
+                    content: `
+                        <p>When an imperative sentence expresses a <b>proposal or suggestion</b> starting with <b>\"Let us\"</b> or <b>\"Let's\"</b>, the question tag is ALWAYS <b>\"SHALL WE?\"</b>.</p>
+
+                        <div class="formula-box">
+                            Let us / Let's + V1 (Proposal / Suggestion) ➔ SHALL WE?
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Let us go for a walk, don't we?</div>
+                            <div class="reason">[Incorrect: 'don\'t we' is wrong for a proposal]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Let us go for a walk, shall we?</div>
+                            <div class="reason">[Correct: Fixed idiom for suggestions]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Let us consider all the possibilities, shall we?</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Let us hear from Sue at our travel desk, shall we?</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Let us go out to dinner, shall we?</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '💡 Orders, Requests & "Let him/her"',
+                    content: `
+                        <div class="note-box">
+                            <b>Other Imperative Types:</b><br><br>
+                            • <b>Orders / Requests / Commands (Open the door, Please help me):</b> Tag is <b>will you?</b> or <b>won't you?</b>.<br>
+                            • <b>Negative Imperatives (Don't make noise):</b> Tag is <b>will you?</b>.<br>
+                            • <b>Imperatives with \"Let him / Let them / Let her\" (Permission, not proposal):</b> Tag is <b>will you?</b>.
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">Close the window, will you?</div>
+                            <div class="reason">[Request/Order ➔ 'will you?']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Don't be late tomorrow, will you?</div>
+                            <div class="reason">[Negative imperative takes positive 'will you?']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Let him do his homework, will you?</div>
+                            <div class="reason">[Seeking permission for him ➔ 'will you?']</div>
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper">
+                        <span class="rule-number">${rule.num}</span>
+                        <span class="rule-title">${rule.title}</span>
+                    </div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            btn.innerText = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = rulesData.length;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh11')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                if (btn) {
+                    btn.classList.add('learned');
+                    btn.innerHTML = 'Learned ✅';
+                    btn.disabled = true;
+                }
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh11')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId);
+            localStorage.setItem('grammarCh11', JSON.stringify(saved));
+            btn.classList.add('learned');
+            btn.innerHTML = 'Learned ✅';
+            btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = {
+        q1: "B", // aren't I (Rule 70)
+        q2: "B", // seldom takes positive tag 'does he' (Rule 71)
+        q3: "C", // has finished takes 'hasn't she' (Rule 72)
+        q4: "C", // Every takes plural tag 'haven't they' (Rule 73)
+        q5: "A", // Unanimous jury takes singular 'hasn't it' (Rule 74)
+        q6: "B", // Individual seats taken by audience takes 'didn't they' (Rule 74)
+        q7: "B", // Let us takes 'shall we' (Rule 75)
+        q8: "C", // 'I am doing... don't I' violates tense consistency (Rule 72)
+    };
+
+    const explanations = {
+        q1: "Rule 70: 'amn't I' is non-standard. The standard tag for 'I am' is 'aren't I?'.",
+        q2: "Rule 71: 'Seldom' expresses negative polarity, which demands a positive tag ('does he?').",
+        q3: "Rule 72: Tense consistency requires matching the Present Perfect auxiliary 'has' -> 'hasn't she?'.",
+        q4: "Rule 73: In question tags, indefinite subjects like 'Every student' are replaced by 'they', demanding plural verb 'haven't they?'.",
+        q5: "Rule 74: The jury acted unanimously as a single entity, requiring the neuter singular tag 'hasn't it?'.",
+        q6: "Rule 74: Taking their separate seats reflects individual action by members of the audience, requiring plural pronoun 'they' and past auxiliary 'didn't they?'.",
+        q7: "Rule 75: Imperative suggestions or proposals beginning with 'Let us' / 'Let's' always take 'shall we?'.",
+        q8: "Rule 72: 'I am doing the work... don't I?' violates tense consistency. Present continuous must be tagged with 'aren't I?'."
+    };
+
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) {
+                    score++;
+                    fb.innerHTML = `✅ <b>Correct!</b> ${explanations[q]}`;
+                    fb.classList.add('correct');
+                } else {
+                    fb.innerHTML = `❌ <b>Incorrect.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                    fb.classList.add('wrong');
+                }
+            } else {
+                fb.innerHTML = `⚠️ <b>Skipped.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                fb.classList.add('wrong');
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 6 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 6 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 8!<br><small>${score >= 6 ? 'Superb! Question Tags are fully conquered.' : 'Revisit the rules above and try again!'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

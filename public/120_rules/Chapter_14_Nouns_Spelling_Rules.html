@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14: Nouns & Spelling Rules</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); width: 0%; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; font-family: 'JetBrains Mono', monospace; }
+        .theme-toggle { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 6px; border-radius: 8px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        .header { text-align: center; padding: 100px 20px 35px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .chapter-tag { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 1rem; }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 14px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.1rem; }
+        .chevron { transition: transform 0.3s; font-size: 0.85rem; color: var(--text-muted); }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 22px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1.5px dashed var(--primary); border-radius: 10px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; color: var(--primary-dark); text-align: center; margin-bottom: 18px; font-size: 0.95rem; font-weight: 600; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 14px 16px; border-radius: 10px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.25); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.25); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 16px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+
+        .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.92rem; }
+        .data-table th, .data-table td { padding: 10px 14px; border: 1px solid var(--border); text-align: left; }
+        .data-table th { background: var(--bg-color); color: var(--primary-dark); font-weight: 700; }
+        .data-table tr:hover { background: var(--bg-color); }
+
+        .mark-learned-btn { width: 100%; padding: 14px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; font-weight: 700; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.1); }
+        .mock-header { background: var(--primary); color: #fff; padding: 24px; text-align: center; }
+        .mock-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+        .mock-body { padding: 26px; }
+        .mcq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 12px; }
+        .mcq-options label { display: block; padding: 12px 16px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; transition: all 0.2s; }
+        .mcq-options label:hover { background: var(--primary-light); border-color: var(--primary); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 12px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+        .submit-btn:hover { opacity: 0.92; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.25rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 9 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle Theme">🌙</button>
+</div>
+
+<div class="header">
+    <div class="chapter-tag">120 Rules Mastery Series</div>
+    <h1>Chapter 14: Nouns & Spelling Rules</h1>
+    <p>Apostrophe Rules, Compound Plurals, Uncountable Nouns & Suffix Shift Nuances (9 Rules)</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules dynamically injected by JavaScript -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 14 Mini Mock Test</h2>
+            <p>Challenge yourself on noun cases, possession, compound plurals, and semantic shifts</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Identify the grammatically sound use of the possessive apostrophe (Rule 44):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) The table's legs were broken during transportation.</label>
+                    <label><input type="radio" name="q1" value="B"> B) The book's pages were stained with tea.</label>
+                    <label><input type="radio" name="q1" value="C"> C) He requested a week's leave from the office.</label>
+                    <label><input type="radio" name="q1" value="D"> D) The door's bolt was rusted completely.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. When two brothers jointly own a single automobile, how should possession be represented (Rule 49)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) Rohan's and Sohan's car is parked outside.</label>
+                    <label><input type="radio" name="q2" value="B"> B) Rohan and Sohan's car is parked outside.</label>
+                    <label><input type="radio" name="q2" value="C"> C) Rohan's and Sohan car is parked outside.</label>
+                    <label><input type="radio" name="q2" value="D"> D) Both Rohans and Sohans car is parked outside.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Choose the sentence with the correct usage of 'its' and 'it\'s' (Rule 50):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) The company doubled it's profits because its a pioneer in AI.</label>
+                    <label><input type="radio" name="q3" value="B"> B) The company doubled its profits because it's a pioneer in AI.</label>
+                    <label><input type="radio" name="q3" value="C"> C) The company doubled its profits because its a pioneer in AI.</label>
+                    <label><input type="radio" name="q3" value="D"> D) The company doubled it's profits because it's a pioneer in AI.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Select the correct plural form of the compound noun 'Commander-in-chief' (Rule 66):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) Commander-in-chiefs</label>
+                    <label><input type="radio" name="q4" value="B"> B) Commanders-in-chief</label>
+                    <label><input type="radio" name="q4" value="C"> C) Commanders-in-chiefs</label>
+                    <label><input type="radio" name="q4" value="D"> D) Commander-ins-chief</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Which phrase correctly designates a practicing medical professional who is female (Rule 67)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) Female doctor</label>
+                    <label><input type="radio" name="q5" value="B"> B) Woman doctor</label>
+                    <label><input type="radio" name="q5" value="C"> C) Lady doctor</label>
+                    <label><input type="radio" name="q5" value="D"> D) She doctor</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="mcq-item">
+                <div class="mcq-question">6. Select the sentence with the correct verb agreement for plural-only nouns (Rule 92):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q6" value="A"> A) These scissors is too blunt to cut the cardboard.</label>
+                    <label><input type="radio" name="q6" value="B"> B) The proceeds from the charity match was donated to the orphanage.</label>
+                    <label><input type="radio" name="q6" value="C"> C) His belongings were misplaced at the airport.</label>
+                    <label><input type="radio" name="q6" value="D"> D) The hospital premises is kept thoroughly sanitized.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q6"></div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="mcq-item">
+                <div class="mcq-question">7. Identify the grammatically correct sentence without improper pluralization of uncountable nouns (Rule 94):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q7" value="A"> A) The sceneries of Kashmir are beyond description.</label>
+                    <label><input type="radio" name="q7" value="B"> B) He ordered new furnitures and machineries for the workshop.</label>
+                    <label><input type="radio" name="q7" value="C"> C) I packed all my luggage and reached the terminal on time.</label>
+                    <label><input type="radio" name="q7" value="D"> D) The publisher admired the poetries written by Tagore.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q7"></div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="mcq-item">
+                <div class="mcq-question">8. In the sentence <i>\"Ever since he received the promotion, he has been putting on _______\"</i>, which noun form correctly conveys arrogance (Rule 108)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q8" value="A"> A) air</label>
+                    <label><input type="radio" name="q8" value="B"> B) airs</label>
+                    <label><input type="radio" name="q8" value="C"> C) forces</label>
+                    <label><input type="radio" name="q8" value="D"> D) contents</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q8"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitTest()">Submit & Check Answers 🎯</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule44',
+            num: 'RULE 1 (Rule 44)',
+            title: 'Use of Apostrophe (\'s) & Non-Living Things',
+            tabs: [
+                {
+                    name: '📖 Core Rule & Exceptions',
+                    content: `
+                        <p>In standard English, the possessive apostrophe (<b>'s</b>) is <b>NOT used with non-living things</b>. Instead, possession is expressed using the preposition <b>\"of\"</b>.</p>
+
+                        <div class="formula-box">
+                            Non-Living Object + 's ❌ ➔ The [Part] of the [Object] ✅
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Table's legs / Chair's legs / Door's bolt / Pen's ink.</div>
+                            <div class="reason">[Incorrect: Inanimate objects cannot possess anything via 's]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Legs of the table / Legs of the chair / Bolt of the door / Ink of the pen.</div>
+                            <div class="reason">[Correct: Uses 'of the' construction]</div>
+                        </div>
+
+                        <div class="note-box">
+                            <b>*Permitted Exceptions (Commit to memory):</b><br>
+                            An apostrophe ('s) CAN be used with non-living nouns in cases of:<br>
+                            1. <b>Time / Duration:</b> a day's leave, a month's salary, a moment's delay.<br>
+                            2. <b>Distance / Weight:</b> a stone's throw, a metre's length, a ton's weight.<br>
+                            3. <b>Idioms & Personification:</b> at an arm's length, at wit's end, Nature's fury, the Sun's rays.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule49',
+            num: 'RULE 2 (Rule 49)',
+            title: 'Common Possession vs Split Possession',
+            tabs: [
+                {
+                    name: '📖 Concept & The Apostrophe Law',
+                    content: `
+                        <p>When multiple nouns indicate possession, the placement of the apostrophe determines whether ownership is <b>shared jointly</b> or <b>held individually</b>.</p>
+
+                        <div class="formula-box">
+                            Common (Joint) Possession: Noun 1 and Noun 2's + Noun (Single apostrophe on last noun)<br>
+                            Split (Separate) Possession: Noun 1's and Noun 2's + Nouns (Apostrophe on both nouns)
+                        </div>
+
+                        <p><b>1. Common Possession:</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Ram and Shyam's car is being decorated for Balram's marriage.</div>
+                            <div class="reason">[Correct: Ram and Shyam jointly own one single car]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Ram and Shyam's cars are being decorated for Balram's marriage.</div>
+                            <div class="reason">[Correct: They jointly own a collection of cars]</div>
+                        </div>
+
+                        <p style="margin-top: 15px;"><b>2. Split Possession:</b></p>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Ram's and Shyam's cars are parked outside.</div>
+                            <div class="reason">[Correct: Ram owns his car(s), and Shyam owns his separate car(s)]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Ram's and Shyam's wife attended the party.</div>
+                            <div class="reason">[Illogical error: Implies they share wives! Must be 'Ram's and Shyam's wives']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule50',
+            num: 'RULE 3 (Rule 50)',
+            title: 'Possession vs Contraction: "Its" vs "It\'s"',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>One of the most frequent errors in English writing is confusing the possessive pronoun with the verbal contraction:</p>
+
+                        <div class="formula-box">
+                            IT'S = Contraction of 'It is' or 'It has'<br>
+                            ITS = Possessive determiner / pronoun (belonging to it)
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The child is carrying it's book.</div>
+                            <div class="reason">[Incorrect: 'it\'s' means 'it is', which is meaningless here]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The child is carrying its book.</div>
+                            <div class="reason">[Correct: Possessive determiner 'its']</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Its called a miracle.</div>
+                            <div class="reason">[Incorrect: Missing contraction apostrophe for 'It is']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">It's called a miracle.</div>
+                            <div class="reason">[Correct: 'It\'s' = It is]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule66',
+            num: 'RULE 4 (Rule 66)',
+            title: 'Irregular Plurals & Compound Noun Formations',
+            tabs: [
+                {
+                    name: '📖 Root-Word Pluralization',
+                    content: `
+                        <p>When forming plurals of <b>compound nouns</b> (hyphenated nouns), we add <b>\"-s\" to the principal/root word</b>, NEVER to the preposition or adjunct:</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Singular Compound Noun</th><th>Correct Plural Form</th><th>Exam Trap (WRONG)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Commander-in-chief</td><td><b>Commanders-in-chief</b></td><td>Commander-in-chiefs ❌</td></tr>
+                                <tr><td>Daughter-in-law</td><td><b>Daughters-in-law</b></td><td>Daughter-in-laws ❌</td></tr>
+                                <tr><td>Passer-by</td><td><b>Passers-by</b></td><td>Passer-bys ❌</td></tr>
+                                <tr><td>Looker-on</td><td><b>Lookers-on</b></td><td>Looker-ons ❌</td></tr>
+                                <tr><td>Hanger-on</td><td><b>Hangers-on</b></td><td>Hanger-ons ❌</td></tr>
+                                <tr><td>Brother-in-law</td><td><b>Brothers-in-law</b></td><td>Brother-in-laws ❌</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note-box">
+                            <b>Irregular Plurals by Vowel Mutation:</b><br>
+                            Foot ➔ <b>Feet</b> | Goose ➔ <b>Geese</b> | Tooth ➔ <b>Teeth</b> | Mouse ➔ <b>Mice</b> | Louse ➔ <b>Lice</b> | Dormouse ➔ <b>Dormice</b> | Man ➔ <b>Men</b> | Woman ➔ <b>Women</b>.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule67',
+            num: 'RULE 5 (Rule 67)',
+            title: '"Male / Female" vs "Man / Woman"',
+            tabs: [
+                {
+                    name: '📖 Descriptive Characteristics vs Gender Designation',
+                    content: `
+                        <p>Examiners frequently test whether you understand the semantic distinction between <b>Male/Female</b> and <b>Man/Woman</b> before a noun:</p>
+
+                        <div class="formula-box">
+                            MALE / FEMALE ➔ Used to specify physical characteristics or merchandise designed for that sex<br>
+                            MAN / WOMAN ➔ Used to designate profession, role, title, or human agent
+                        </div>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Category</th><th>Correct Phrase</th><th>Meaning</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Product / Design</td><td><b>Female watch / Male shoes</b></td><td>Articles tailored specifically for female/male users</td></tr>
+                                <tr><td>Profession / Human</td><td><b>Woman doctor / Man soldier</b></td><td>The doctor is a woman; the soldier is a man</td></tr>
+                                <tr><td>Student / Colleague</td><td><b>Woman student / Man worker</b></td><td>Human being performing that role</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She consulted a female doctor yesterday.</div>
+                            <div class="reason">[Incorrect in formal usage: Profession takes 'woman doctor']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She consulted a woman doctor yesterday.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule83',
+            num: 'RULE 6 (Rule 83)',
+            title: 'Possessive Determiners Always Require a Noun',
+            tabs: [
+                {
+                    name: '📖 Concept',
+                    content: `
+                        <p>Possessive determiners (<b>my, your, his, her, their, our, its</b>) <b>MUST be followed by a noun</b>. Often, words following possessive determiners appear to be participles or adjectives, but they are actually nouns that require plural agreement.</p>
+
+                        <div class="formula-box">
+                            Possessive Case (his/her/their) + NOUN (belongings / surroundings / earnings)
+                        </div>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">His belongings were lost during transit.</div>
+                            <div class="reason">[Correct: 'belongings' is a plural noun following possessive 'his']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">His earnings are not enough to sustain the family.</div>
+                            <div class="reason">[Correct: 'earnings' = plural noun taking plural verb 'are']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">His surroundings are clean and peaceful.</div>
+                            <div class="reason">[Correct: 'surroundings' is a noun taking plural verb 'are']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule92',
+            num: 'RULE 7 (Rule 92)',
+            title: 'Nouns Existing ONLY in Plural Form (Taking Plural Verbs)',
+            tabs: [
+                {
+                    name: '📖 The Master Plural-Only List',
+                    content: `
+                        <p>Certain nouns consist of two symmetrical parts, or represent cumulative entities, and <b>have NO singular form</b>. They must ALWAYS take a <b>PLURAL verb</b>.</p>
+
+                        <div class="note-box">
+                            <b>Dual-part Instruments & Clothing:</b> Scissors, pliers, tongs, pincers, spectacles, glasses, goggles, binoculars, trousers, pants, jeans, shorts, pyjamas.<br><br>
+                            <b>Cumulative Nouns:</b> Belongings, earnings, savings, proceeds, surroundings, premises, outskirts, credentials, regards, thanks, tidings, riches, valuables, alms.
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">These scissors is very blunt.</div>
+                            <div class="reason">[Incorrect: 'scissors' is plural and takes 'are']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">These scissors are for cutting paper.</div>
+                            <div class="reason">[Correct: Plural verb 'are']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">A pair of scissors was bought yesterday.</div>
+                            <div class="reason">[Correct: When preceded by 'A pair of', verb is singular 'was']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">All proceeds from the auction are donated to charity.</div>
+                            <div class="reason">[Correct: 'proceeds' takes plural verb 'are']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule94',
+            num: 'RULE 8 (Rule 94)',
+            title: 'Uncountable Nouns that NEVER Take "-s" or "a/an"',
+            tabs: [
+                {
+                    name: '📖 The Uncountable Roster',
+                    content: `
+                        <p>Certain nouns are strictly <b>uncountable</b> in English. They do NOT exist in plural form (never append '-s' or '-es'), cannot take 'a' or 'an' directly, and always take a <b>singular verb</b>.</p>
+
+                        <div class="formula-box">
+                            Luggage, Baggage, Furniture, Scenery, Poetry, Machinery, Equipment, Jewellery, Advice, Information, Hair, Bread, Stationery
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">His luggages was booked at the counter.</div>
+                            <div class="reason">[Incorrect: 'luggages' does not exist; use 'luggage']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">His luggage was booked at the counter.</div>
+                            <div class="reason">[Correct: Singular uncountable noun with singular verb]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The sceneries of Switzerland captivated the tourists.</div>
+                            <div class="reason">[Incorrect: 'sceneries' is non-standard; use 'scenery']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The scenery of Switzerland captivated the tourists.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He gave me an advice.</div>
+                            <div class="reason">[Incorrect: Uncountable nouns cannot take article 'an']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He gave me a piece of advice.</div>
+                            <div class="reason">[Correct: Countable unit phrase 'a piece of']</div>
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule108',
+            num: 'RULE 9 (Rule 108)',
+            title: 'Semantic Shift: Nouns that Change Meaning with "-s"',
+            tabs: [
+                {
+                    name: '📖 The Meaning Transformation Table',
+                    content: `
+                        <p>Generally, uncountable nouns do not take \"-s\". However, adding \"-s\" to certain nouns creates a <b>completely different word with an entirely new meaning</b>:</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Singular Word</th><th>Original Meaning</th><th>With "-s"</th><th>Transformed Meaning</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><b>Air</b></td><td>Atmospheric gas</td><td><b>Airs</b></td><td>Arrogant behavior / snobbery</td></tr>
+                                <tr><td><b>Iron</b></td><td>Chemical metal element</td><td><b>Irons</b></td><td>Chains, handcuffs, fetters</td></tr>
+                                <tr><td><b>Wood</b></td><td>Timber / tree material</td><td><b>Woods</b></td><td>Forest</td></tr>
+                                <tr><td><b>Force</b></td><td>Physical strength / energy</td><td><b>Forces</b></td><td>Armed troops / military units</td></tr>
+                                <tr><td><b>Advice</b></td><td>Recommendation / counsel</td><td><b>Advices</b></td><td>Commercial notices / information</td></tr>
+                                <tr><td><b>Work</b></td><td>Labor / occupation</td><td><b>Works</b></td><td>Literary/artistic compositions, factories</td></tr>
+                                <tr><td><b>Respect</b></td><td>Regard / admiration</td><td><b>Respects</b></td><td>Polite greetings / homage</td></tr>
+                                <tr><td><b>Content</b></td><td>State of satisfaction</td><td><b>Contents</b></td><td>Items contained inside / index</td></tr>
+                                <tr><td><b>Cloth</b></td><td>Material / fabric (Plural: <i>Cloths</i>)</td><td><b>Clothes</b></td><td>Stitched wearable garments</td></tr>
+                                <tr><td><b>Brother</b></td><td>Son of same parents (Plural: <i>Brothers</i>)</td><td><b>Brethren</b></td><td>Members of a religious/professional guild</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="example-row correct">
+                            <div class="example-sentence">The judge ordered that the irons of the under-trial should be removed.</div>
+                            <div class="reason">['irons' = fetters / handcuffs]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She wanders alone in the deep woods.</div>
+                            <div class="reason">['woods' = forest]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">We are all brethren of the medical fraternity.</div>
+                            <div class="reason">['brethren' = members of the same society or fraternity]</div>
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper">
+                        <span class="rule-number">${rule.num}</span>
+                        <span class="rule-title">${rule.title}</span>
+                    </div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            btn.innerText = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = rulesData.length;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh14')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                if (btn) {
+                    btn.classList.add('learned');
+                    btn.innerHTML = 'Learned ✅';
+                    btn.disabled = true;
+                }
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh14')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId);
+            localStorage.setItem('grammarCh14', JSON.stringify(saved));
+            btn.classList.add('learned');
+            btn.innerHTML = 'Learned ✅';
+            btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = {
+        q1: "C", // a week's leave (time is a valid exception for 's)
+        q2: "B", // Rohan and Sohan's car (joint possession = apostrophe on the last noun)
+        q3: "B", // its profits (possessive) / it's a pioneer (contraction)
+        q4: "B", // Commanders-in-chief (root word pluralized)
+        q5: "B", // Woman doctor (designating profession of human)
+        q6: "C", // belongings were misplaced (belongings is plural-only)
+        q7: "C", // luggage is uncountable (sceneries, furnitures, poetries are wrong)
+        q8: "B", // airs (arrogance)
+    };
+
+    const explanations = {
+        q1: "Rule 44: Non-living things cannot take 's (table's legs is wrong), but time expressions ('a week's leave') are standard permitted exceptions.",
+        q2: "Rule 49: When two nouns jointly possess a single entity (Common Possession), only the second/last noun receives the apostrophe ('Rohan and Sohan's car').",
+        q3: "Rule 50: 'Its' expresses possession ('its profits'), while 'it\'s' is the contraction of 'it is' ('it\'s a pioneer').",
+        q4: "Rule 66: Compound nouns pluralize the principal root word ('Commanders-in-chief', 'Daughters-in-law').",
+        q5: "Rule 67: In formal grammar, professions are denoted by 'man / woman' ('woman doctor'), whereas 'female' denotes physical characteristics.",
+        q6: "Rule 92: 'Belongings, scissors, proceeds, premises' are plural-only nouns and strictly require plural verbs ('belongings were misplaced').",
+        q7: "Rule 94: 'Luggage, furniture, scenery, poetry' are strictly uncountable and do not form plurals with '-s'.",
+        q8: "Rule 108: 'Air' denotes gas; 'Airs' denotes snobbery or arrogant pretension ('putting on airs')."
+    };
+
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) {
+                    score++;
+                    fb.innerHTML = `✅ <b>Correct!</b> ${explanations[q]}`;
+                    fb.classList.add('correct');
+                } else {
+                    fb.innerHTML = `❌ <b>Incorrect.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                    fb.classList.add('wrong');
+                }
+            } else {
+                fb.innerHTML = `⚠️ <b>Skipped.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                fb.classList.add('wrong');
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 6 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 6 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 8!<br><small>${score >= 6 ? 'Brilliant! Nouns and spelling rules are fully mastered.' : 'Review the flagged rules above and try again!'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

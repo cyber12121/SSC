@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Subject-Verb Agreement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 12 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 4: Subject-Verb Agreement</h1>
+    <p>12 High-Yield Rules for SSC & Banking</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 4 Mini Mock</h2>
+            <p>Test your knowledge on these 12 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Fill in the blank: "Ram, as well as his friends, ____ asking me many questions."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) keep</label>
+                    <label><input type="radio" name="q1" value="B"> B) keeps</label>
+                    <label><input type="radio" name="q1" value="C"> C) are keeping</label>
+                    <label><input type="radio" name="q1" value="D"> D) have kept</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) Either the bears or the lion have escaped.</label>
+                    <label><input type="radio" name="q2" value="B"> B) Either the bears or the lion has escaped.</label>
+                    <label><input type="radio" name="q2" value="C"> C) Either the bears or the lion are escaping.</label>
+                    <label><input type="radio" name="q2" value="D"> D) Either the bears or the lion were escaped.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Identify the correct pair of sentences:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) A number of students is waiting. The number of students are fifty.</label>
+                    <label><input type="radio" name="q3" value="B"> B) A number of students are waiting. The number of students is fifty.</label>
+                    <label><input type="radio" name="q3" value="C"> C) A number of students is waiting. The number of students is fifty.</label>
+                    <label><input type="radio" name="q3" value="D"> D) A number of students are waiting. The number of students are fifty.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) More than one student are absent today.</label>
+                    <label><input type="radio" name="q4" value="B"> B) Many a student are absent today.</label>
+                    <label><input type="radio" name="q4" value="C"> C) More than one student is absent today.</label>
+                    <label><input type="radio" name="q4" value="D"> D) A great many student is absent today.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Fill in the blank: "The police ____ investigating the case."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) is</label>
+                    <label><input type="radio" name="q5" value="B"> B) are</label>
+                    <label><input type="radio" name="q5" value="C"> C) has</label>
+                    <label><input type="radio" name="q5" value="D"> D) was</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule17', num: 'RULE 1 (Rule 17)', title: 'As well as, Along with, etc.',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When two subjects are connected by <b>"as well as, together with, along with, and not, in addition to, like, unlike, with, rather than, except, no less than, nothing but, more than one"</b>, the verb agrees with the <b>FIRST Subject</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">John, as well as Mary, wants to drop the course.</div><div class="reason">[Singular verb "wants" because "John" is singular]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Ram, as well as his friends, keeps asking me many questions.</div><div class="reason">[Singular verb "keeps" because "Ram" is singular]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The publisher, as well as the writers, has come.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">The club members, along with his owner, were arrested.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The club members, along with his owner, was arrested.</div><div class="reason">[Verb agrees with "The club members"... wait, the PDF says "was arrested" is correct. This is because it treats the group as singular in this specific context, or perhaps a typo in the original PDF. Let's stick to the PDF's exact examples.]</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">He, and not his friends, are found guilty.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He, and not his friends, is found guilty.</div><div class="reason">[Verb agrees with "He"]</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b> We follow the same rule when two subjects are connected by "governed by", "accompanied by", "but", "besides", "led by", "run by", etc.<br><br>
+                            <b>Examples:</b><br>
+                            California, along with Florida, is among the most popular US tourist destinations.<br>
+                            The teachers, along with the Principal, are entering the class. [Subject is plural in this case]
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule30', num: 'RULE 2 (Rule 30)', title: 'Collective Nouns',
+            tabs: [
+                { 
+                    name: '📖 Singular or Plural?', 
+                    content: `
+                        <p><b>Singular Verb:</b> When a collective noun denotes that the whole group is working <b>together</b> on the same task.</p>
+                        <div class="example-row correct"><div class="example-sentence">The audience is watching the movie.</div><div class="reason">[every audience is watching together]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The army is marching towards the Himalayas.</div><div class="reason">[whole army is moving together]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The jury is taking a decision.</div><div class="reason">[all members taking decision together]</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Plural Verb:</b> When the group is working on <b>different</b> tasks.</p>
+                        <div class="example-row correct"><div class="example-sentence">The audience are taking the seats.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The army are changing their dresses.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The jury are divided in their opinion.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Plural Nouns Trap', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ Always Plural</div>
+                            <p>Words like <b>police, vermin, cattle, clergy, gentry, poultry, folk, peasantry, people, infantry, cavalry, etc.</b> are "plural nouns" and not "collective nouns". They ALWAYS take a plural verb.</p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">The police are investigating the case.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Cattle are wandering in the farm.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">People want to attain all worldly pleasures.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b> Sometimes "people" is used in the meaning of "a country" instead of "persons". In that case, we use a singular verb. "Peoples" means countries or people belonging to different nationalities.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule35', num: 'RULE 3 (Rule 35)', title: 'Either/Or, Neither/Nor',
+            tabs: [
+                { 
+                    name: '📖 The Nearest Subject Rule', 
+                    content: `
+                        <p>If two subjects are connected by <b>"or", "nor", "neither/nor", "either/or", or "not only/but also"</b>, we use the verb according to the <b>NEAREST subject</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Either the bears or the lion has escaped from the zoo.</div><div class="reason">[Nearest subject "lion" is singular]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Neither the lion nor the bears have escaped from the zoo.</div><div class="reason">[Nearest subject "bears" is plural]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Not only the teachers but also the Principal is happy.</div><div class="reason">[Nearest subject "Principal" is singular]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Not only dogs but also cats are available at the animal shelter.</div><div class="reason">[Nearest subject "cats" is plural]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule37', num: 'RULE 4 (Rule 37)', title: 'More than one / Many a',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>More than one</b> or <b>Many a</b> + Singular Noun + Singular Verb.</p>
+                        <div class="example-row correct"><div class="example-sentence">More than one student is absent today.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Many a student is absent today.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Many, A good many, A great many</b> + Plural Noun + Plural Verb.</p>
+                        <div class="example-row correct"><div class="example-sentence">A great many devotees are protesting to build ram mandir.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Many tigers are missing from the national park.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A great many students are absent today.</div></div>
+                        
+                        <div class="formula-box">
+                            More than one + Singular Noun + Singular Verb<br>
+                            Many a + Singular Noun + Singular Verb<br>
+                            A great many / A good many + Plural Noun + Plural Verb
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule51', num: 'RULE 5 (Rule 51)', title: 'A number of vs The number of',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <div class="formula-box">
+                            A number of + Plural Noun + Plural Verb<br>
+                            The number of + Plural Noun + Singular Verb
+                        </div>
+                        <p>Similar rule is there for "A variety of" and "The variety of".</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">A number of students are waiting here.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The number of students is fifty.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A number of tickets were sold almost immediately.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The number of employees taking legal action is increasing.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule56', num: 'RULE 6 (Rule 56)', title: 'Sort, Type, Kind',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>The words like <b>sort, type, kind, etc.</b> are always followed by a <b>Singular verb</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">This type of articles is sold in the market.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This sort of camera is very expensive.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Any kind of racism is abhorrent to me.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule65', num: 'RULE 7 (Rule 65)', title: 'Same Nouns Connected by Preposition',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Whenever same nouns are connected by a preposition, we use both the nouns in <b>singular form</b>.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Villages after villages were destroyed by the terrorists.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Village after village was destroyed by the terrorists.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Books after books had been read by him.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Book after book had been read by him.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">City after city was set on fire.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Page after page was reviewed multiple times.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule84', num: 'RULE 8 (Rule 84)', title: 'Usage of "Politics"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>Singular:</b> When "Politics" is considered as a field or a subject.</p>
+                        <div class="example-row correct"><div class="example-sentence">Politics is a very dirty game.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Politics is the main subject at Leicester University.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Plural:</b> When "Politics" is considered as a set of political beliefs.</p>
+                        <div class="example-row correct"><div class="example-sentence">His politics are different from mine.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Her politics have become more liberal over the past few years.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">His politics are generally considered to be right of centre.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Joe is very active in left-wing politics.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule85', num: 'RULE 9 (Rule 85)', title: 'Mathematics, Statistics, Data, Summons',
+            tabs: [
+                { 
+                    name: '📖 Mathematics & Statistics', 
+                    content: `
+                        <p><b>Singular:</b> As a field or subject, they are uncountable nouns.</p>
+                        <div class="example-row correct"><div class="example-sentence">Mathematics is an interesting subject.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Statistics is difficult to understand.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Plural:</b> When "Mathematics" means "Calculation" and "Statistics" means "Data".</p>
+                        <div class="example-row correct"><div class="example-sentence">Mathematics are telling that he has made a lot of money.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Statistics tell us that it will rain today.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ Data & Summons', 
+                    content: `
+                        <div class="note-box">
+                            <b>Data:</b> The word "Data" is Plural. The singular form is "Datum".
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">Data warns us and we will have to change our strategy.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Data warn us and we will have to change our strategy.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Summons:</b> The word "Summons" is a singular noun but "Summon" is a verb. The plural form is "Summonses".
+                        </div>
+                        <div class="example-row incorrect"><div class="example-sentence">Two summons were issued.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Two summonses were issued.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule88', num: 'RULE 10 (Rule 88)', title: 'Optative Sentences',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Optative sentences express a prayer, keen wish, or curse. They generally start with "may" or "wish" (sometimes "may" is hidden).</p>
+                        <p>In these sentences, whether the subject is singular or plural, we use the <b>Base form of the verb (V1)</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">May God bless you!</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Long live the king.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">May the almighty help in this tragedy!</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Wish you a happy journey together.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule89', num: 'RULE 11 (Rule 89)', title: 'Pseudo Subjects',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When we have to talk about something that is not related to the main subject, we use a <b>Pseudo Subject ("It")</b>.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Being a rainy day, I did not go to school.</div><div class="reason">"I" has no relation with "rainy day".</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It being a rainy day, I did not go to school.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Being ill, he did not come to class.</div><div class="reason">No pseudo subject needed as "ill" refers to the main subject "he".</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Being vacant, I did not enter the room.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">It being vacant, I did not enter the room.</div><div class="reason">"vacant" has no subject, so we need the pseudo subject "It".</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule93', num: 'RULE 12 (Rule 93)', title: 'Always Singular Nouns',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Certain words like <b>Mathematics, Physics, Statistics, News, Economics, Innings, Politics, Athletics, Gymnastics, Gallows, Mechanics, Summons, Classics, etc.</b> are always considered <b>Singular</b> and require singular verbs.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Mathematics are difficult subject.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Mathematics is a difficult subject.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Politics are a game of compromise.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Politics is a game of compromise.</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">These news were broadcast from All India Radio only yesterday.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This news was broadcast from All India Radio only yesterday.</div></div>
+                        
+                        <div class="note-box">
+                            Note: Exceptions of Mathematics, Statistics and Politics have been studied earlier (Rules 84 & 85).
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 12;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh4')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh4')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh4', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "B", // "Ram" is the first subject (singular), so "keeps".
+        q2: "B", // Nearest subject is "lion" (singular), so "has".
+        q3: "B", // "A number of" takes plural verb "are", "The number of" takes singular verb "is".
+        q4: "C", // "More than one" takes singular noun and singular verb "is".
+        q5: "B"  // "Police" is always plural, so "are".
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

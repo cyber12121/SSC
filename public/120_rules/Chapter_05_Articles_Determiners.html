@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Articles & Determiners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.4s; }
+        .progress-text { font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; }
+        .theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        .header { text-align: center; padding: 100px 20px 30px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 12px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.05rem; }
+        .chevron { transition: transform 0.3s; }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter'; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 20px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1px dashed var(--border); border-radius: 8px; padding: 15px; font-family: 'JetBrains Mono'; color: var(--primary-dark); text-align: center; margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 15px; border-radius: 8px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.2); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.2); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; }
+
+        .mark-learned-btn { width: 100%; padding: 15px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter'; font-size: 1rem; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; }
+        .mock-header { background: var(--primary); color: #fff; padding: 20px; text-align: center; }
+        .mock-body { padding: 25px; }
+        .mcq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; margin-bottom: 10px; }
+        .mcq-options label { display: block; padding: 10px 15px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; }
+        .mcq-options label:hover { background: var(--primary-light); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 11 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+</div>
+
+<div class="header">
+    <h1>Chapter 5: Articles & Determiners</h1>
+    <p>Exhaustive Detail from the PDF + Exam Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules injected by JS -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 5 Mini Mock</h2>
+            <p>Test your knowledge on these 11 rules</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) Rina is one of the girls who has been to India.</label>
+                    <label><input type="radio" name="q1" value="B"> B) Rina is the only one of the girls who has been to India.</label>
+                    <label><input type="radio" name="q1" value="C"> C) Rina is the only one of the girls who have been to India.</label>
+                    <label><input type="radio" name="q1" value="D"> D) Rina is one of the girl who has been to India.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Fill in the blank: "I cannot make tea since there is ____ milk."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) a little</label>
+                    <label><input type="radio" name="q2" value="B"> B) little</label>
+                    <label><input type="radio" name="q2" value="C"> C) the little</label>
+                    <label><input type="radio" name="q2" value="D"> D) few</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) He is a M.Tech graduate.</label>
+                    <label><input type="radio" name="q3" value="B"> B) He is an M.Tech graduate.</label>
+                    <label><input type="radio" name="q3" value="C"> C) He is a European.</label>
+                    <label><input type="radio" name="q3" value="D"> D) He is an university student.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Fill in the blank: "The politician was sent to ____."</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) the jail</label>
+                    <label><input type="radio" name="q4" value="B"> B) jail</label>
+                    <label><input type="radio" name="q4" value="C"> C) a jail</label>
+                    <label><input type="radio" name="q4" value="D"> D) an jail</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Choose the correct sentence:</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) No less than 50 students completed the work.</label>
+                    <label><input type="radio" name="q5" value="B"> B) No fewer than 50 students completed the work.</label>
+                    <label><input type="radio" name="q5" value="C"> C) There is no fewer than five liters of water.</label>
+                    <label><input type="radio" name="q5" value="D"> D) Both A and B are correct.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule5', num: 'RULE 1 (Rule 5)', title: 'The "One of the" Structure',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <div class="formula-box">One of the + PLURAL NOUN + that/who etc. + SINGULAR/PLURAL VERB</div>
+                        <p>(1) When the relative pronoun "who/that" is <b>NOT</b> used (i.e. "one of the NOUNs" is the subject) &rarr; <b>Singular Verb</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">There are many birds on the tree. One of the birds is red.</div><div class="reason">["One of the birds" is the Subject]</div></div>
+                        
+                        <p>(2) When the relative pronoun "who/that" <b>IS</b> used (i.e. "one of the NOUNs" is NOT the subject) &rarr; <b>Plural Verb</b>.</p>
+                        <div class="example-row correct"><div class="example-sentence">That is one of the birds that fly over my house at night.</div><div class="reason">"That" refers to birds (plural), so "fly" (plural) is used.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She is one of the mothers who are really working hard to make both ends meet.</div><div class="reason">"Who" refers to mothers (plural), so "are" (plural) is used.</div></div>
+                    `
+                },
+                { 
+                    name: '⚠️ The "Only One" Trap', 
+                    content: `
+                        <div class="trap-box">
+                            <div class="trap-title">⚠️ The "Only One" Rule</div>
+                            <p>If the sentence follows the form <b>"The only one of the + PLURAL NOUN + WHO/THAT etc."</b>, a <b>SINGULAR verb</b> is required.</p>
+                        </div>
+                        <div class="example-row correct"><div class="example-sentence">Rina is the only one of the girls who has ever been to India.</div><div class="reason">[Singular verb]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">This is the only one of the novels which is interesting.</div><div class="reason">[Singular verb]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule13', num: 'RULE 2 (Rule 13)', title: 'Primary vs Secondary Purpose',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When we use normal places like <b>school, college, church, bed, table, hospital, market, prison, jail, court, temple, mosque, university</b> for their <b>primary purpose</b> (for which they are made), the article "The" is <b>NOT</b> used.</p>
+                        <p>When these places are used for a <b>secondary purpose</b>, the article "The" <b>IS</b> used.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Children go to school every day.</div><div class="reason">[Primary purpose]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He goes to temple.</div><div class="reason">[Primary purpose - to worship]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">His home is just beside the temple.</div><div class="reason">[Secondary purpose - location, not worship]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">We go to church on fridays.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">We go to the church on fridays.</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The politician was sent to jail.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">The politician was sent to the jail.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Note:</b><br>
+                            He goes to temple. [He goes there to worship]<br>
+                            He goes to the temple. [He goes there to do any work other than worship]
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule25', num: 'RULE 3 (Rule 25)', title: 'Usage of "Enough"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p><b>Adverb:</b> Qualifies an adjective/verb/adverb. Placed <b>after</b> the adjective (adjective + enough).</p>
+                        <p><b>Adjective:</b> Qualifies a noun/pronoun. Placed <b>before</b> the noun (enough + noun).</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">He has enough sugar.</div><div class="reason">[Used as an Adjective]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She is smart enough.</div><div class="reason">[Used as an Adverb]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">On neither of those trips was there enough sun to get any decent photographs.</div><div class="reason">[Adjective]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Test reports indicate that it develops enough power for the job and is flexible.</div><div class="reason">[Adjective]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">You are not big enough for basketball.</div><div class="reason">[Adverb]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A landing between the ground and first floors is ample enough to be used as a study.</div><div class="reason">[Adverb]</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule40', num: 'RULE 4 (Rule 40)', title: 'Little/A little/The little & Few/A few/The few',
+            tabs: [
+                { 
+                    name: '📖 Uncountable (Little)', 
+                    content: `
+                        <p>Used with <b>Uncountable nouns</b>:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>Little:</b> Hardly any</li>
+                            <li><b>A little:</b> Some but not much</li>
+                            <li><b>The little:</b> All that is available</li>
+                        </ul>
+                        <div class="example-row correct"><div class="example-sentence">I cannot make tea since there is little milk.</div><div class="reason">[Hardly any milk]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A little knowledge is dangerous.</div><div class="reason">[Some but not much]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He utilized the little water that was available.</div><div class="reason">[All that is available]</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Countable (Few)', 
+                    content: `
+                        <p>Used with <b>Countable nouns</b>:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>Few:</b> Hardly any</li>
+                            <li><b>A few:</b> Some but not many (Positive meaning)</li>
+                            <li><b>The few:</b> All that are available</li>
+                        </ul>
+                        <div class="example-row correct"><div class="example-sentence">Few members attended the meeting.</div><div class="reason">[Hardly any member attended]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">There were a few members present.</div><div class="reason">[Some members were present]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He lost the few friends he had.</div><div class="reason">[All those he had]</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Some vs Any', 
+                    content: `
+                        <p><b>Any:</b> Used for questions and negative sentences.</p>
+                        <p><b>Some:</b> Used for positive sentences.</p>
+                        <p>Both can be used with countable and uncountable nouns.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">Do we need any rice?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">No, we don't need any rice.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">We have some rice in the cupboard.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Would you like some water?</div></div>
+                        <div class="example-row correct"><div class="example-sentence">May I have some more chocolate?</div></div>
+                        
+                        <div class="note-box">
+                            <b>Exception:</b> In some interrogative sentences, "Some" is used when we know that the answer will be <b>Yes</b>.<br>
+                            Example: Do you have some water??? (Correct, because we know the answer is yes).
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule61', num: 'RULE 5 (Rule 61)', title: 'A vs An (Sound Rule)',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>The choice between 'a' & 'an' is determined by <b>sound</b>. Words beginning with consonant sounds &rarr; <b>A</b>. Words beginning with vowel sounds &rarr; <b>An</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">An NCC cadet.</div><div class="reason">[Vowel sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A UNICEF participating nation.</div><div class="reason">[Consonant sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">An umbrella.</div><div class="reason">[Vowel sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">An M. Tech. graduate.</div><div class="reason">[Vowel sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A utensil.</div><div class="reason">[Consonant sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A university.</div><div class="reason">[Consonant sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A unicorn.</div><div class="reason">[Consonant sounding word]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A year.</div><div class="reason">[Exception: With every word that starts with "y" and "w" we use article "a"]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">A European university.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A Uniform.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A one- rupee note.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A Union.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A one- eyed girl.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A unanimous decision.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule62', num: 'RULE 6 (Rule 62)', title: 'Usage of Definite Article "The"',
+            tabs: [
+                { 
+                    name: '📖 Unique & Geography', 
+                    content: `
+                        <p>Series of Mountains, Bays/Gulfs, Group of islands, Canals, Aeroplanes, Ships, Planes, Religious books, Government branches, Armed forces, Names of Deserts, Political parties, Musical instrument, Rivers, Oceans, Seas, and things which are "unique" in themselves &rarr; Always preceded by "The".</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The Sahara.</div><div class="reason">[Name of Desert]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Pacific.</div><div class="reason">[Name of Ocean]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Nile.</div><div class="reason">[Name of river]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Coral sea.</div><div class="reason">[Name of sea]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Himalayas.</div><div class="reason">[Name of mountain range]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Guitar.</div><div class="reason">[Musical Instrument]</div></div>
+                        
+                        <div class="note-box">
+                            <b>Important:</b> Names of mountain ranges are preceded by "THE" but mountain peaks are never preceded by "the".<br>
+                            The Himalayas (Correct) / The Mount Everest (Wrong) &rarr; Everest.
+                        </div>
+                    `
+                },
+                { 
+                    name: '📖 Newspapers & Countries', 
+                    content: `
+                        <p><b>Names of Newspaper:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The Times of India.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Hindu.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Indian Express.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Names of Countries (Abbreviated forms only):</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The USA.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The UK.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The UAE.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The USSR.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Grammar Rules', 
+                    content: `
+                        <p><b>Superlative Degree:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The best book.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The darkest cloud.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Comparative Case:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The higher you go, the cooler it is.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The faster you walk, the sooner you reach.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The more sugar you put in the dish, the sweeter it is.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is the better of the two.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">She is the poorer of the two women.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">He is the better candidate of the two for the job.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Metaphor:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">He is the Mahatma Gandhi of our class.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Delhi is the Paris of India.</div></div>
+                    `
+                },
+                { 
+                    name: '📖 Proper Nouns & Unique', 
+                    content: `
+                        <p><b>Combination of Common + Proper Noun:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The river Nile.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The Muslim League Party.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The New York City.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Only one of a kind in the universe:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The moon is shining tonight.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The earth is moving around the sun.</div></div>
+                        
+                        <p style="margin-top:15px;"><b>Government Organizations:</b></p>
+                        <div class="example-row correct"><div class="example-sentence">The Society for the protection of Child's Rights.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The judiciary is composed of a supreme court of seven members...</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule63', num: 'RULE 7 (Rule 63)', title: 'Omission of Article "The"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>We do <b>NOT</b> use any article before:</p>
+                        <ul style="margin-left:20px; margin-bottom:15px;">
+                            <li>(1) Names of Cities: Los Angeles, Alaska, Sydney.</li>
+                            <li>(2) Names of Countries (except abbreviated): Australia, Bolivia, England, France, Spain.</li>
+                            <li>(3) Names of continents: Asia, Europe, Australia, Africa, South America, North America, Antarctica.</li>
+                            <li>(4) Names of streets: George Street, Albion Street, New town Street.</li>
+                            <li>(5) Names of singular lakes and bays: Lake Carey, Lake Eyre, Lake Hillier, Shark Bay.</li>
+                            <li>(6) Names of Mountain Peaks: Mount Everest, Mount Solitary, Mount Bindo, Mount Fuji.</li>
+                            <li>(7) Names of single islands: Easter Island, Bare Island, Bird Island, Fatima Island.</li>
+                            <li>(8) Names of languages: Spanish, Russian, English (When 'the' precedes these, they refer to the population).</li>
+                            <li>(9) Names of sports: cricket, football, basketball.</li>
+                        </ul>
+                        
+                        <div class="note-box">
+                            <b>Normal Cases:</b> We do not use any article before season, language, drinks, meals, God, life, money, etc. However, when we use these words to particularize the information, we use "the".<br><br>
+                            Example: Breakfast should be light but <b>the breakfast</b> I had this morning was heavy.
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule64', num: 'RULE 8 (Rule 64)', title: 'The + Adjective',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Whenever "the" is used before an adjective, it determines the whole group (it becomes a plural noun).</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The poor &rarr; poor people</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The needy &rarr; needy people</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The brave &rarr; brave people</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The rich &rarr; Rich people</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The honest are respected.</div><div class="reason">['The' + 'adjectives' = Plural noun. It means Honest people]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The poor are not always dishonest.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule86', num: 'RULE 9 (Rule 86)', title: 'A vs The with Cases',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>Use <b>"A"</b> when we mean <b>"One of many"</b>.<br>
+                        Use <b>"The"</b> when we mean <b>"Only one"</b>.</p>
+                        <p>Moreover, we use "A" with the <b>possessive case</b> and "The" with the <b>objective case</b>.</p>
+                        
+                        <div class="example-row correct"><div class="example-sentence">The brother of me is a scientist.</div><div class="reason">[Objective case - suggests there is only one brother]</div></div>
+                        <div class="example-row correct"><div class="example-sentence">A brother of mine is a scientist.</div><div class="reason">[Possessive case - suggests there are many brothers]</div></div>
+                        
+                        <div class="example-row correct"><div class="example-sentence">A servant of theirs lives in Delhi.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">The servant of them lives in Delhi.</div></div>
+                        
+                        <div class="note-box">
+                            <b>Rewrites:</b><br>
+                            My car &rarr; The car of me<br>
+                            My brother &rarr; The brother of me<br>
+                            One of my brothers &rarr; A brother of mine
+                        </div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule98', num: 'RULE 10 (Rule 98)', title: 'Usage of "Quantity"',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <p>When the word "quantity" is used, we cannot use "little" or "few" with it. We can only use <b>"small"</b>.</p>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">Little quantity of food was wasted.</div></div>
+                        <div class="example-row incorrect"><div class="example-sentence">Few quantity of food was wasted.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">Small quantity of food was wasted.</div></div>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule111', num: 'RULE 11 (Rule 111)', title: 'Fewer vs Less',
+            tabs: [
+                { 
+                    name: '📖 Concept', 
+                    content: `
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><b>Fewer:</b> Used with Countable subjects.</li>
+                            <li><b>Less:</b> Used with Uncountable subjects.</li>
+                        </ul>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">No less than 50 students completed the work.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">No fewer than 50 students completed the work.</div><div class="reason">["Students" is countable]</div></div>
+                        
+                        <div class="example-row incorrect"><div class="example-sentence">There is no fewer than five liters of water in the vessel.</div></div>
+                        <div class="example-row correct"><div class="example-sentence">There is no less than five liters of water in the vessel.</div><div class="reason">["Water" is uncountable]</div></div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper"><span class="rule-number">${rule.num}</span><span class="rule-title">${rule.title}</span></div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark'); btn.innerText = '☀️'; localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light'); btn.innerText = '🌙'; localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = 11;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh5')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh5')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId); localStorage.setItem('grammarCh5', JSON.stringify(saved));
+            btn.classList.add('learned'); btn.innerHTML = 'Learned ✅'; btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active'); document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = { 
+        q1: "B", // "The only one of the girls who has..." -> singular verb.
+        q2: "B", // "little" means hardly any. (Cannot make tea).
+        q3: "B", // "M.Tech" starts with a vowel sound (em), so "an".
+        q4: "B", // Primary purpose -> no article.
+        q5: "B"  // "Fewer" for countable (students).
+    };
+    
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) { score++; fb.innerHTML = `✅ Correct!`; fb.classList.add('correct'); }
+                else { 
+                    fb.innerHTML = `❌ Incorrect. Correct answer is <b>${answers[q]}</b>.`; 
+                    fb.classList.add('wrong'); 
+                }
+            } else { 
+                fb.innerHTML = `⚠️ Skipped. Correct answer is <b>${answers[q]}</b>.`; 
+                fb.classList.add('wrong'); 
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 3 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 3 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 5!<br><small>${score === 5 ? 'Perfect! You are exam-ready.' : 'Review the rules and try again.'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

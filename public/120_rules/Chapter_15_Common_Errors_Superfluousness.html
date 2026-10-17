@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15: Common Errors & Superfluousness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5; --primary-light: #E0E7FF; --primary-dark: #3730A3;
+            --bg-color: #F8FAFC; --text-main: #1E293B; --text-muted: #64748B;
+            --correct: #10B981; --correct-bg: #D1FAE5;
+            --incorrect: #EF4444; --incorrect-bg: #FEE2E2;
+            --warning: #F59E0B; --warning-bg: #FEF3C7;
+            --card-bg: #FFFFFF; --border: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0F172A; --text-main: #F8FAFC; --text-muted: #94A3B8;
+            --card-bg: #1E293B; --border: #334155; --primary-light: #312E81; --primary-dark: #A5B4FC;
+            --correct-bg: #064E3B; --incorrect-bg: #7F1D1D; --warning-bg: #78350F;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 80px; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: var(--card-bg); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .progress-container { flex-grow: 1; margin-right: 20px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), #818cf8); width: 0%; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-right: 15px; font-family: 'JetBrains Mono', monospace; }
+        .theme-toggle { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 6px; border-radius: 8px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        .header { text-align: center; padding: 100px 20px 35px; background: var(--card-bg); border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .chapter-tag { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header h1 { font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 1rem; }
+        
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        .rule-card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .rule-header { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+        .rule-header:hover { background: var(--bg-color); }
+        .title-wrapper { display: flex; align-items: center; gap: 14px; }
+        .rule-number { background: var(--primary-light); color: var(--primary-dark); padding: 5px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+        .rule-title { font-weight: 600; font-size: 1.1rem; }
+        .chevron { transition: transform 0.3s; font-size: 0.85rem; color: var(--text-muted); }
+        .rule-header.active .chevron { transform: rotate(180deg); }
+
+        .rule-body { display: none; border-top: 1px solid var(--border); }
+        .rule-body.active { display: block; animation: slideDown 0.3s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs { display: flex; background: var(--bg-color); padding: 8px 16px; gap: 8px; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab-btn { padding: 8px 16px; border: none; background: transparent; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: all 0.2s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .tab-content { display: none; padding: 22px; }
+        .tab-content.active { display: block; }
+
+        .formula-box { background: var(--bg-color); border: 1.5px dashed var(--primary); border-radius: 10px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; color: var(--primary-dark); text-align: center; margin-bottom: 18px; font-size: 0.95rem; font-weight: 600; }
+        
+        .example-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; padding: 14px 16px; border-radius: 10px; border: 1px solid transparent; font-size: 0.95rem; }
+        .example-row.correct { background: var(--correct-bg); border-color: rgba(16, 185, 129, 0.25); }
+        .example-row.incorrect { background: var(--incorrect-bg); border-color: rgba(239, 68, 68, 0.25); }
+        .example-row.correct .example-sentence { color: var(--correct); font-weight: 600; }
+        .example-row.incorrect .example-sentence { color: var(--incorrect); font-weight: 600; text-decoration: line-through; }
+        .reason { font-size: 0.85rem; color: var(--text-main); margin-top: 4px; opacity: 0.9; }
+        
+        .note-box { background: var(--bg-color); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 0.95rem; }
+        .trap-box { background: var(--warning-bg); border-left: 4px solid var(--warning); padding: 14px 18px; border-radius: 0 10px 10px 0; margin-bottom: 16px; font-size: 0.95rem; }
+        .trap-title { font-weight: 700; color: var(--warning); margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+
+        .data-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.92rem; }
+        .data-table th, .data-table td { padding: 10px 14px; border: 1px solid var(--border); text-align: left; }
+        .data-table th { background: var(--bg-color); color: var(--primary-dark); font-weight: 700; }
+        .data-table tr:hover { background: var(--bg-color); }
+
+        .mark-learned-btn { width: 100%; padding: 14px; background: var(--card-bg); border: none; border-top: 1px solid var(--border); font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .mark-learned-btn:hover { background: var(--correct-bg); color: var(--correct); }
+        .mark-learned-btn.learned { background: var(--correct-bg); color: var(--correct); pointer-events: none; font-weight: 700; }
+
+        .mock-test-section { margin-top: 50px; background: var(--card-bg); border-radius: 16px; border: 2px solid var(--primary); overflow: hidden; box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.1); }
+        .mock-header { background: var(--primary); color: #fff; padding: 24px; text-align: center; }
+        .mock-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+        .mock-body { padding: 26px; }
+        .mcq-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
+        .mcq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 12px; }
+        .mcq-options label { display: block; padding: 12px 16px; margin-bottom: 8px; background: var(--bg-color); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 0.95rem; transition: all 0.2s; }
+        .mcq-options label:hover { background: var(--primary-light); border-color: var(--primary); }
+        .mcq-feedback { display: none; margin-top: 10px; padding: 12px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .mcq-feedback.correct { display: block; background: var(--correct-bg); color: var(--correct); border-left: 4px solid var(--correct); }
+        .mcq-feedback.wrong { display: block; background: var(--incorrect-bg); color: var(--incorrect); border-left: 4px solid var(--incorrect); }
+        .submit-btn { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+        .submit-btn:hover { opacity: 0.92; }
+        .result-box { display: none; margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px; font-size: 1.25rem; font-weight: 700; }
+    </style>
+</head>
+<body data-theme="light">
+
+<div class="top-bar">
+    <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="progress-text" id="progress-text">0 / 2 Learned</div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle Theme">🌙</button>
+</div>
+
+<div class="header">
+    <div class="chapter-tag">120 Rules Mastery Series • Grand Finale</div>
+    <h1>Chapter 15: Common Errors & Superfluousness</h1>
+    <p>Redundancy Elimination, Idiomatic Correctness & Everyday Colloquial Slang Traps</p>
+</div>
+
+<div class="container" id="rules-container">
+    <!-- Rules dynamically injected by JavaScript -->
+</div>
+
+<div class="container">
+    <div class="mock-test-section">
+        <div class="mock-header" onclick="toggleMockTest()" style="cursor: pointer; user-select: none;" title="Click to collapse / expand exercise">
+            <h2>🏆 Chapter 15 Final Mastery Mock Test</h2>
+            <p>The definitive test on eliminating redundant phrasing and colloquial misnomers</p>
+        
+            <div id="mock-toggle-indicator" style="margin-top: 10px; font-size: 0.85rem; display: inline-block; background: rgba(255,255,255,0.22); padding: 4px 14px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px;">▲ Click to Collapse Exercise</div>
+        </div>
+        <div class="mock-body" id="mock-body">
+            <!-- Q1 -->
+            <div class="mcq-item">
+                <div class="mcq-question">1. Identify the sentence that is completely FREE from superfluous error (Rule 43):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q1" value="A"> A) Suppose if you are selected as an officer, where would you like to be posted?</label>
+                    <label><input type="radio" name="q1" value="B"> B) The retreating army decided to retreat back to their base camp.</label>
+                    <label><input type="radio" name="q1" value="C"> C) When I was walking through the market, I suddenly came across my childhood friend.</label>
+                    <label><input type="radio" name="q1" value="D"> D) The minister reiterated his stance on tax reforms.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q1"></div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="mcq-item">
+                <div class="mcq-question">2. Which sentence correctly corrects the redundant expression 'equally as good as' (Rule 43)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q2" value="A"> A) Manu is equally as good as Sharma in solving puzzles.</label>
+                    <label><input type="radio" name="q2" value="B"> B) Manu and Sharma are equally good in solving puzzles.</label>
+                    <label><input type="radio" name="q2" value="C"> C) Manu is as equally good as Sharma in solving puzzles.</label>
+                    <label><input type="radio" name="q2" value="D"> D) Manu is more equally good as Sharma in solving puzzles.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q2"></div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="mcq-item">
+                <div class="mcq-question">3. Select the sentence with the correct idiomatic usage of 'bag and baggage' (Rule 43):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q3" value="A"> A) The tenant evacuated the premises with bag and baggage.</label>
+                    <label><input type="radio" name="q3" value="B"> B) The tenant evacuated the premises, bag and baggage.</label>
+                    <label><input type="radio" name="q3" value="C"> C) The tenant evacuated the premises along with his bag and baggage.</label>
+                    <label><input type="radio" name="q3" value="D"> D) The tenant evacuated the premises together with bag and baggage.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q3"></div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="mcq-item">
+                <div class="mcq-question">4. Which of the following sentences correctly applies standard examination phrasing (Rule 43 & 109)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q4" value="A"> A) The passing marks for this qualification test are forty percent.</label>
+                    <label><input type="radio" name="q4" value="B"> B) English serves as a linking language between the diverse regions.</label>
+                    <label><input type="radio" name="q4" value="C"> C) The pass marks for this qualification test are forty percent.</label>
+                    <label><input type="radio" name="q4" value="D"> D) She has a commendable dressing sense.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q4"></div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="mcq-item">
+                <div class="mcq-question">5. Correct the colloquial misnomer in: <i>\"Mr. Roy is our new English teacher.\"</i> (Rule 109)</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q5" value="A"> A) Mr. Roy is our new teacher of English.</label>
+                    <label><input type="radio" name="q5" value="B"> B) Mr. Roy is our new England teacher.</label>
+                    <label><input type="radio" name="q5" value="C"> C) Mr. Roy is our new English-teaching person.</label>
+                    <label><input type="radio" name="q5" value="D"> D) Mr. Roy is our new master in English.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q5"></div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="mcq-item">
+                <div class="mcq-question">6. Select the sentence that is grammatically correct without colloquial kinship errors (Rule 109):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q6" value="A"> A) She invited her cousin sister to the wedding ceremony.</label>
+                    <label><input type="radio" name="q6" value="B"> B) He is my cousin brother who works in Bengaluru.</label>
+                    <label><input type="radio" name="q6" value="C"> C) All his family members have arrived for the celebration.</label>
+                    <label><input type="radio" name="q6" value="D"> D) All the members of his family have arrived for the celebration.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q6"></div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="mcq-item">
+                <div class="mcq-question">7. In the sentence <i>\"There is no _______ for any additional passengers on this bench\"</i>, what is the correct formal term (Rule 109)?</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q7" value="A"> A) place</label>
+                    <label><input type="radio" name="q7" value="B"> B) room</label>
+                    <label><input type="radio" name="q7" value="C"> C) seat</label>
+                    <label><input type="radio" name="q7" value="D"> D) space</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q7"></div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="mcq-item">
+                <div class="mcq-question">8. Identify the sentence that avoids double negative error after 'forbid' (Rule 43):</div>
+                <div class="mcq-options">
+                    <label><input type="radio" name="q8" value="A"> A) The warden forbade the students not to enter the laboratory after 6 PM.</label>
+                    <label><input type="radio" name="q8" value="B"> B) The warden forbade the students to enter the laboratory after 6 PM.</label>
+                    <label><input type="radio" name="q8" value="C"> C) The warden prohibited the students from not entering the laboratory.</label>
+                    <label><input type="radio" name="q8" value="D"> D) Unless you do not work hard, you will not succeed.</label>
+                </div>
+                <div class="mcq-feedback" id="fb-q8"></div>
+            </div>
+
+            <button class="submit-btn" onclick="submitTest()">Submit & Check Answers 🎯</button>
+            <div class="result-box" id="result-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rulesData = [
+        {
+            id: 'rule43',
+            num: 'RULE 1 (Rule 43)',
+            title: 'Master Catalog of Superfluous Expressions & Redundancy',
+            tabs: [
+                {
+                    name: '📖 The Concept of Superfluousness',
+                    content: `
+                        <p><b>Superfluousness</b> refers to using more words than necessary to express an idea. In competitive grammar exams (SSC CGL, CHSL, Banking), redundant phrases are classified as grammatical errors.</p>
+
+                        <div class="formula-box">
+                            SUPERFLUOUS = Unnecessary repetition of already inherent meaning
+                        </div>
+
+                        <div class="note-box">
+                            <b>The 12 High-Yield Redundancy Traps:</b><br><br>
+                            1. <b>Previous record ➔ Record</b> (A record is inherently prior/previous).<br>
+                            2. <b>Wet water ➔ Water</b> (Water is already wet).<br>
+                            3. <b>Suppose if ➔ Suppose OR If</b> (Never combine both).<br>
+                            4. <b>Retreat back / Return back ➔ Retreat / Return</b> ('Re-' already implies back).<br>
+                            5. <b>Reborn again / Rebuild again / Reiterate again ➔ Reborn / Rebuild / Reiterate</b>.<br>
+                            6. <b>Equally as good as ➔ As good as OR Equally good</b>.<br>
+                            7. <b>Mutual agreement ➔ Agreement</b> (An agreement is always mutual).<br>
+                            8. <b>Mutual friend ➔ Common friend</b> (A person cannot be mutually shared; they are in common).<br>
+                            9. <b>Negative verbs + NOT</b>: <i>Forbid, prohibit, prevent, deny, refuse, unless, until, lest</i> are ALREADY negative! Never use 'not' after them.<br>
+                            10. <b>Coward man / Coward person ➔ A coward</b> ('Coward' is a noun meaning a person lacking courage).<br>
+                            11. <b>With bag and baggage ➔ Bag and baggage</b> ('Bag and baggage' already means with all belongings).<br>
+                            12. <b>Suddenly came across ➔ Came across</b> ('Come across' already means to meet suddenly by chance).
+                        </div>
+                    `
+                },
+                {
+                    name: '📝 Concrete PDF Examples',
+                    content: `
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">Suppose if you won the Oscar, what would you do?</div>
+                            <div class="reason">[Incorrect: 'if' is superfluous after 'suppose']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">Suppose you won the Oscar, what would you do?</div>
+                            <div class="reason">[Correct: Uses 'suppose' alone]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The army retreated back from the conflict zone.</div>
+                            <div class="reason">[Incorrect: 'retreat' already means withdraw/fall back]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The army retreated from the conflict zone.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">The sage was reborn again in Vijayanagara.</div>
+                            <div class="reason">[Incorrect: 'again' is redundant after 'reborn']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">The sage was reborn in Vijayanagara.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She forbade me not to leave her alone.</div>
+                            <div class="reason">[Incorrect: 'forbade' is negative; adding 'not' creates a double negative]</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She forbade me to leave her alone.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">He is a coward person.</div>
+                            <div class="reason">[Incorrect: 'coward' is a noun; use 'He is a coward' or 'cowardly person']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">He is a coward.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+
+                        <div class="example-row incorrect">
+                            <div class="example-sentence">She left the town with bag and baggage.</div>
+                            <div class="reason">[Incorrect: Omit preposition 'with']</div>
+                        </div>
+                        <div class="example-row correct">
+                            <div class="example-sentence">She left the town, bag and baggage.</div>
+                            <div class="reason">[Correct]</div>
+                        </div>
+                    `
+                },
+                {
+                    name: '⚡ Additional Superfluous Pairs',
+                    content: `
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Superfluous Expression (WRONG ❌)</th><th>Standard Expression (CORRECT ✅)</th><th>Underlying Reason</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Final destination</td><td><b>Destination</b></td><td>A destination is inherently final</td></tr>
+                                <tr><td>Rough estimate / approximation</td><td><b>Estimate / Approximation</b></td><td>Estimates are by definition rough</td></tr>
+                                <tr><td>Past history</td><td><b>History</b></td><td>History by definition is of the past</td></tr>
+                                <tr><td>Coming future</td><td><b>Future</b></td><td>Future is always coming</td></tr>
+                                <tr><td>Passing marks</td><td><b>Pass marks</b></td><td>Standard examination terminology</td></tr>
+                                <tr><td>Linking language / network</td><td><b>Link language / network</b></td><td>Noun-adjunct 'link' is correct</td></tr>
+                                <tr><td>Dressing sense</td><td><b>Dress sense</b></td><td>Standard idiom is 'dress sense'</td></tr>
+                            </tbody>
+                        </table>
+                    `
+                }
+            ]
+        },
+        {
+            id: 'rule109',
+            num: 'RULE 2 (Rule 109)',
+            title: 'Colloquial Misnomers & Idiomatic Precision',
+            tabs: [
+                {
+                    name: '📖 Frequent Colloquial Errors',
+                    content: `
+                        <p>Everyday Indian colloquial English frequently introduces grammatical inaccuracies that examiners love to target in error detection and sentence improvement:</p>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Colloquial Slang (INCORRECT ❌)</th><th>Grammatically Sound Form (CORRECT ✅)</th><th>Grammar Rationale</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>English teacher / Mathematics teacher</td>
+                                    <td><b>Teacher of English / Teacher of Mathematics</b></td>
+                                    <td>'English teacher' literally denotes a teacher from England</td>
+                                </tr>
+                                <tr>
+                                    <td>Family members</td>
+                                    <td><b>Members of the family</b></td>
+                                    <td>'Family members' literally denotes members composed of family</td>
+                                </tr>
+                                <tr>
+                                    <td>Cousin brother / Cousin sister</td>
+                                    <td><b>Cousin</b></td>
+                                    <td>'Brother' or 'sister' never follows 'cousin' in English</td>
+                                </tr>
+                                <tr>
+                                    <td>Pick-pocketer</td>
+                                    <td><b>Pickpocket</b></td>
+                                    <td>The noun for a thief who steals from pockets is 'pickpocket'</td>
+                                </tr>
+                                <tr>
+                                    <td>Boarding</td>
+                                    <td><b>Boarding house</b></td>
+                                    <td>'Boarding' is a participle; the residence is a 'boarding house'</td>
+                                </tr>
+                                <tr>
+                                    <td>Poor peoples</td>
+                                    <td><b>The poor</b></td>
+                                    <td>'The poor' serves as the collective plural noun</td>
+                                </tr>
+                                <tr>
+                                    <td>Put your sign here</td>
+                                    <td><b>Put your signature here</b></td>
+                                    <td>'Sign' is a verb; the written mark is 'signature' (noun)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `
+                },
+                {
+                    name: '💡 Essential Nuances: Room, Meals, Agenda',
+                    content: `
+                        <div class="note-box">
+                            <b>1. "Room" on a bench / compartment:</b><br>
+                            In transportation and seated venues, <i>room</i> denotes <b>unoccupied space or seating capacity</b>. Saying <i>\"there is no place on the bench\"</i> is incorrect in formal English.<br>
+                            • <i>There is no <b>room</b> on this bench for another person.</i> [Correct]
+                        </div>
+
+                        <div class="note-box">
+                            <b>2. "Meal" vs "Meals":</b><br>
+                            Food taken at one specific sitting is a <b>meal</b>. <i>Meals</i> refers to multiple eating occasions across the day (such as breakfast, lunch, and dinner together). You cannot have 'meals' in one sitting!
+                        </div>
+
+                        <div class="note-box">
+                            <b>3. "Agenda" & "Mankind":</b><br>
+                            • <b>Agenda:</b> The program of a meeting is treated as a <b>singular noun</b> in modern English.<br>
+                            • <b>Mankind:</b> Represents the entirety of the human race and is <b>never pluralized</b>.
+                        </div>
+                    `
+                }
+            ]
+        }
+    ];
+
+    // --- RENDER RULES ---
+    const container = document.getElementById('rules-container');
+    rulesData.forEach(rule => {
+        let tabsHTML = '';
+        let contentsHTML = '';
+        rule.tabs.forEach((tab, index) => {
+            tabsHTML += `<button class="tab-btn ${index === 0 ? 'active' : ''}" onclick="switchTab(this, '${rule.id}-tab${index}')">${tab.name}</button>`;
+            contentsHTML += `<div id="${rule.id}-tab${index}" class="tab-content ${index === 0 ? 'active' : ''}">${tab.content}</div>`;
+        });
+
+        container.innerHTML += `
+            <div class="rule-card" id="card-${rule.id}">
+                <div class="rule-header" onclick="toggleAccordion(this)">
+                    <div class="title-wrapper">
+                        <span class="rule-number">${rule.num}</span>
+                        <span class="rule-title">${rule.title}</span>
+                    </div>
+                    <div class="chevron">▼</div>
+                </div>
+                <div class="rule-body">
+                    <div class="tabs">${tabsHTML}</div>
+                    ${contentsHTML}
+                    <button class="mark-learned-btn" onclick="markLearned('${rule.id}', this)">Mark as Learned ✅</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // --- THEME LOGIC ---
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-btn');
+        if (body.getAttribute('data-theme') === 'light') {
+            body.setAttribute('data-theme', 'dark');
+            btn.innerText = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            btn.innerText = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.getElementById('theme-btn').innerText = '☀️';
+    }
+
+    // --- PROGRESS TRACKER ---
+    const totalRules = rulesData.length;
+    function loadProgress() {
+        let saved = JSON.parse(localStorage.getItem('grammarCh15')) || [];
+        saved.forEach(ruleId => {
+            const card = document.getElementById(`card-${ruleId}`);
+            if (card) {
+                const btn = card.querySelector('.mark-learned-btn');
+                if (btn) {
+                    btn.classList.add('learned');
+                    btn.innerHTML = 'Learned ✅';
+                    btn.disabled = true;
+                }
+            }
+        });
+        let percent = (saved.length / totalRules) * 100;
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-text').innerText = `${saved.length} / ${totalRules} Learned`;
+    }
+    loadProgress();
+
+    function markLearned(ruleId, btn) {
+        let saved = JSON.parse(localStorage.getItem('grammarCh15')) || [];
+        if (!saved.includes(ruleId)) {
+            saved.push(ruleId);
+            localStorage.setItem('grammarCh15', JSON.stringify(saved));
+            btn.classList.add('learned');
+            btn.innerHTML = 'Learned ✅';
+            btn.disabled = true;
+            loadProgress();
+        }
+    }
+
+    // --- ACCORDION & TABS ---
+    function toggleAccordion(header) {
+        const body = header.nextElementSibling;
+        header.classList.toggle('active');
+        body.classList.toggle('active');
+    }
+    function switchTab(btn, tabId) {
+        const card = btn.closest('.rule-body');
+        card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // --- MOCK TEST ---
+    const answers = {
+        q1: "D", // reiterated his stance (no 'again')
+        q2: "B", // equally good (or as good as)
+        q3: "B", // bag and baggage (no 'with')
+        q4: "C", // pass marks (not passing marks)
+        q5: "A", // teacher of English
+        q6: "D", // members of his family (never family members or cousin brother)
+        q7: "B", // room (meaning unoccupied seat/space)
+        q8: "B", // forbade takes positive infinitive 'to enter' (no 'not')
+    };
+
+    const explanations = {
+        q1: "Rule 43: 'Suppose if' is redundant; 'retreat back' is redundant; 'suddenly came across' is redundant because 'come across' already implies suddenly. 'Reiterated' is used cleanly without 'again'.",
+        q2: "Rule 43: 'Equally as good as' is a double comparative error. Use either 'equally good' or 'as good as'.",
+        q3: "Rule 43: 'Bag and baggage' is an idiom that already means 'with all belongings'; adding 'with' is a superfluous error.",
+        q4: "Rule 43: Standard exam grammar requires 'pass marks' (not passing marks), 'link language' (not linking language), and 'dress sense' (not dressing sense).",
+        q5: "Rule 109: 'English teacher' denotes nationality (a teacher from England). The academic discipline is expressed as 'a teacher of English'.",
+        q6: "Rule 109: 'Cousin brother/sister' and 'family members' are colloquial misnomers. The correct forms are 'cousin' and 'members of his family'.",
+        q7: "Rule 109: Unoccupied space or capacity on a bench, carriage, or compartment is formally termed 'room', not 'place' or 'space'.",
+        q8: "Rule 43: Negative verbs like 'forbid, prohibit, unless, deny' inherently contain negation. Adding 'not' is a fatal double negative."
+    };
+
+    function submitTest() {
+        let score = 0;
+        for (let q in answers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            const fb = document.getElementById(`fb-${q}`);
+            fb.className = 'mcq-feedback';
+            if (selected) {
+                if (selected.value === answers[q]) {
+                    score++;
+                    fb.innerHTML = `✅ <b>Correct!</b> ${explanations[q]}`;
+                    fb.classList.add('correct');
+                } else {
+                    fb.innerHTML = `❌ <b>Incorrect.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                    fb.classList.add('wrong');
+                }
+            } else {
+                fb.innerHTML = `⚠️ <b>Skipped.</b> Correct answer is <b>${answers[q]}</b>.<br>${explanations[q]}`;
+                fb.classList.add('wrong');
+            }
+        }
+        const res = document.getElementById('result-box');
+        res.style.display = 'block';
+        res.style.background = score >= 6 ? 'var(--correct-bg)' : 'var(--incorrect-bg)';
+        res.style.color = score >= 6 ? 'var(--correct)' : 'var(--incorrect)';
+        res.innerHTML = `You scored ${score} / 8!<br><small>${score >= 6 ? '🎉 Congratulations! You have conquered the entire 120 Rules Series with flawless mastery!' : 'Review the flagged rules above and try again!'}</small>`;
+        res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // --- COLLAPSIBLE EXERCISE / MOCK TEST ---
+    function toggleMockTest() {
+        const body = document.getElementById('mock-body');
+        const indicator = document.getElementById('mock-toggle-indicator');
+        if (!body) return;
+        if (body.style.display === 'none') {
+            body.style.display = 'block';
+            if (indicator) indicator.innerHTML = '▲ Click to Collapse Exercise';
+        } else {
+            body.style.display = 'none';
+            if (indicator) indicator.innerHTML = '▼ Click to Expand Exercise';
+        }
+    }
+
+</script>
+</body>
+</html>

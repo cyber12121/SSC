@@ -45,6 +45,7 @@ interface HomeDashboardViewProps {
   handleClearAllResults: () => void;
   openReview: (result: QuizResult, fromView: string) => void;
   handleAskAiSubject: (subject: string) => void;
+  onOpen120Rules?: () => void;
 }
 
 export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
@@ -65,7 +66,8 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
   setView,
   handleClearAllResults,
   openReview,
-  handleAskAiSubject
+  handleAskAiSubject,
+  onOpen120Rules
 }) => {
   return (
     <>
@@ -257,6 +259,18 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
                     >
                       Grammar
                     </button>
+                    {onOpen120Rules && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onOpen120Rules();
+                        }}
+                        className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 transition-colors cursor-pointer"
+                        title="Open 120 Rules of Grammar (Nimisha Bansal)"
+                      >
+                        120 Rules
+                      </button>
+                    )}
                   </div>
                 )}
               </motion.div>
