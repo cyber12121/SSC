@@ -48,11 +48,7 @@ export function parseSubjectChapter(
   let set_name: string | undefined = undefined;
 
   if (isBank) {
-    if (normalizedPath.includes('/mathematics/spartan/')) section = 'spartan';
-    else if (normalizedPath.includes('/mathematics/pinnacle/')) section = 'pinnacle';
-    else if (normalizedPath.includes('/mathematics/qrb/')) section = 'qrb';
-    else if (normalizedPath.includes('/mathematics/top500/')) section = 'top500';
-    else if (normalizedPath.includes('/mathematics/mrq/')) section = 'mrq';
+    if (normalizedPath.includes('/mathematics/top500/') || normalizedPath.includes('/mathematics/')) section = 'top500';
     else if (normalizedPath.includes('/english/ayush_vocab/')) section = 'ayush_vocab';
     else if (normalizedPath.includes('/english/black_book/')) section = 'black_book';
     else if (normalizedPath.includes('/english/grammar/')) section = 'grammar';

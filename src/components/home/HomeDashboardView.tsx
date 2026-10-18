@@ -163,7 +163,7 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
                     setSelectedGKSubTopic('all');
                   }
                   if (subject === 'Mathematics') {
-                    setSelectedMathSection(null);
+                    setSelectedMathSection('top500');
                   }
                   if (subject === 'English') {
                     setSelectedEnglishSection(null);
@@ -200,6 +200,23 @@ export const HomeDashboardView: React.FC<HomeDashboardViewProps> = ({
                     <ChevronRight className="w-3 h-3 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                   </div>
                 </div>
+
+                {subject === 'Mathematics' && (
+                  <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedSubject('Mathematics');
+                        setSelectedMathSection('top500');
+                        setSelectedTopic(null);
+                      }}
+                      className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-violet-50 hover:bg-violet-100 text-violet-700 border border-violet-200 transition-colors cursor-pointer"
+                      title="Open Top 500 Arithmetic Series"
+                    >
+                      Top 500 ({(bankData['Mathematics'] || []).reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
+                    </button>
+                  </div>
+                )}
 
                 {subject === 'General Awareness' && (
                   <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">

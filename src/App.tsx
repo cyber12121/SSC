@@ -234,7 +234,7 @@ export default function App() {
     try { localStorage.setItem('quizMode', mode); } catch { }
   };
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-  const [selectedMathSection, setSelectedMathSection] = useState<'spartan' | 'pinnacle' | 'qrb' | 'top500' | 'mrq' | null>(null);
+  const [selectedMathSection, setSelectedMathSection] = useState<'top500' | string | null>('top500');
   const [selectedEnglishSection, setSelectedEnglishSection] = useState<'ayush_vocab' | 'black_book' | 'general' | null>(null);
   const [selectedGKSubject, setSelectedGKSubject] = useState<GKSubjectId | null>(null);
   const [selectedGKSubTopic, setSelectedGKSubTopic] = useState<string>('all');
@@ -2928,7 +2928,7 @@ export default function App() {
                             type="button"
                             onClick={() => {
                               setCategory('chapterBank');
-                              setSelectedMathSection(null);
+                              setSelectedMathSection('top500');
                               setSelectedEnglishSection(null);
                               setSelectedGKSubject(null);
                               setSelectedGKSubTopic('all');
@@ -2997,7 +2997,7 @@ export default function App() {
                             Mathematics: {
                               icon: Calculator,
                               iconBg: 'bg-blue-50 text-blue-600 border-blue-100',
-                              desc: 'Arithmetic & Advanced sets',
+                              desc: 'Top 500 Arithmetic Series',
                             },
                             Reasoning: {
                               icon: Compass,
@@ -3023,7 +3023,7 @@ export default function App() {
                                   setSelectedGKSubTopic('all');
                                 }
                                 if (subject === 'Mathematics') {
-                                  setSelectedMathSection(null);
+                                  setSelectedMathSection('top500');
                                 }
                                 if (subject === 'English') {
                                   setSelectedEnglishSection(null);
@@ -3143,24 +3143,18 @@ export default function App() {
 
                                   {subject === 'Mathematics' && (
                                     <>
-                                      {['Spartan', 'Pinnacle', 'QRB', 'Top 500', 'MRQ'].map((mathSec) => {
-                                        const secKey = mathSec === 'Top 500' ? 'top500' : (mathSec.toLowerCase() as any);
-                                        return (
-                                          <button
-                                            key={mathSec}
-                                            type="button"
-                                            onClick={(e) => {
-                                              e.stopPropagation();
-                                              setSelectedSubject('Mathematics');
-                                              setSelectedMathSection(secKey);
-                                              setSelectedTopic(null);
-                                            }}
-                                            className="px-1.5 py-0.5 bg-slate-50 hover:bg-blue-50 hover:text-blue-800 text-slate-600 border border-slate-200 rounded text-[10px] font-medium transition-colors cursor-pointer"
-                                          >
-                                            {mathSec}
-                                          </button>
-                                        );
-                                      })}
+                                      <button
+                                        type="button"
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setSelectedSubject('Mathematics');
+                                          setSelectedMathSection('top500');
+                                          setSelectedTopic(null);
+                                        }}
+                                        className="px-1.5 py-0.5 bg-violet-50 hover:bg-violet-100 text-violet-700 border border-violet-200/60 rounded text-[10px] font-bold transition-colors cursor-pointer"
+                                      >
+                                        Top 500 ({(bankData['Mathematics'] || []).reduce((sum, ch) => sum + (ch.questions?.length || 0), 0)} Qs)
+                                      </button>
                                     </>
                                   )}
 
@@ -3409,11 +3403,7 @@ export default function App() {
 
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {([
-                        { key: 'spartan', icon: Shield, chip: 'from-amber-500 to-orange-600', title: 'Spartan Series', desc: 'High-yield, battle-tested challenges and conceptually advanced problem sets.' },
-                        { key: 'pinnacle', icon: Crown, chip: 'from-blue-500 to-indigo-600', title: 'Pinnacle Series', desc: 'Comprehensive past year practice sets, exhaustive subject mapping, and exam models.' },
-                        { key: 'qrb', icon: Zap, chip: 'from-emerald-500 to-teal-600', title: 'QRB Series', desc: 'Quick Revision Book question bank focusing on high-speed formula checks and concepts.' },
                         { key: 'top500', icon: Star, chip: 'from-violet-500 to-purple-600', title: 'Top 500 Series', desc: 'The most repeated Arithmetic questions for SSC CGL, level-wise to master high-yield exam patterns.' },
-                        { key: 'mrq', icon: Sparkles, chip: 'from-pink-500 to-rose-600', title: 'MRQ Series', desc: 'Most Repeated Questions (MRQ) and concept revision series for SSC CGL 2026.' },
                       ] as const).map(({ key, icon: Icon, chip, title, desc }) => (
                         <motion.div
                           key={key}
@@ -3640,7 +3630,8 @@ export default function App() {
                               setSelectedGKSubject(null);
                               setSelectedGKSubTopic('all');
                             } else if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
-                              setSelectedMathSection(null);
+                              setSelectedSubject(null);
+                              setSelectedMathSection('top500');
                             } else if (selectedSubject === 'English' && category === 'chapterBank') {
                               setSelectedEnglishSection(null);
                             } else {
@@ -3655,7 +3646,7 @@ export default function App() {
                             : (selectedSubject === 'General Awareness' && category === 'chapterBank' && selectedGKSubject
                               ? 'GK Subjects'
                               : (selectedSubject === 'Mathematics' && category === 'chapterBank'
-                                ? 'Math Sections'
+                                ? 'Subjects'
                                 : (selectedSubject === 'English' && category === 'chapterBank'
                                   ? 'English Sections'
                                   : 'Subjects')))}
@@ -3668,9 +3659,9 @@ export default function App() {
                                 ? 'All Vocabs SSC 2025 - by Ayush'
                                 : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book'
                                   ? 'Black Book Vocabulary - OWS'
-                                  : selectedSubject === 'Mathematics' && category === 'chapterBank' && selectedMathSection === 'mrq'
-                                ? 'MRQ Series - Most Repeated Questions'
-                                : selectedSubject}
+                                  : selectedSubject === 'Mathematics' && category === 'chapterBank'
+                                    ? 'Top 500 Series - Arithmetic'
+                                    : selectedSubject}
                           </h2>
                           <p className="text-[11px] text-slate-500 font-medium">
                             {category === 'mockErrors'
@@ -3681,7 +3672,9 @@ export default function App() {
                                   ? '914 High-Yield SSC 2025 vocabulary questions in sets of 20'
                                   : selectedSubject === 'English' && category === 'chapterBank' && selectedEnglishSection === 'black_book'
                                     ? '790 High-Yield OWS, Synonyms & Phrasal Verbs questions in 30 sets'
-                                    : 'Comprehensive chapter-wise question vault'}
+                                    : selectedSubject === 'Mathematics' && category === 'chapterBank'
+                                      ? 'The most repeated Arithmetic questions for SSC CGL, level-wise'
+                                      : 'Comprehensive chapter-wise question vault'}
                           </p>
                         </div>
                       </div>
@@ -4270,7 +4263,7 @@ export default function App() {
                         {(() => {
                           const relevantChapters = (currentData[selectedSubject] || []).filter(chapter => {
                             if (selectedSubject === 'Mathematics' && category === 'chapterBank') {
-                              return chapter.section === selectedMathSection;
+                              return chapter.section === 'top500' || chapter.section === selectedMathSection;
                             }
                             if (selectedSubject === 'English' && category === 'chapterBank') {
                               if (selectedEnglishSection === 'ayush_vocab') {
