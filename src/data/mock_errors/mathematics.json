@@ -8573,6 +8573,262 @@
           "conceptTested": "Conversion of Present Perfect Passive (has/have been + V3) to Present Perfect Active (has/have + V3).",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "math_c2d5bca0a1",
+        "q_num": 271,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:09",
+        "avgTime": "00:40",
+        "question": "Find the mean of the data if the median of the numbers is $12$ and the mode of the number is $150\\%$ of the median of the number.",
+        "options": {
+          "a": "6",
+          "b": "9",
+          "c": "10",
+          "d": "8"
+        },
+        "answer": "b",
+        "solution": "Given:\nMedian = $12$\nMode = $12 \\times \\frac{150}{100} = 18$\nUsing the empirical formula relating mean, median, and mode: $3 \\times \\text{Median} = 2 \\times \\text{Mean} + \\text{Mode}$\n\n$3 \\times 12 = 2 \\times \\text{Mean} + 18$\n\n$36 - 18 = 2 \\times \\text{Mean}$\n\n$18 = 2 \\times \\text{Mean}$\n\nMean = $\\frac{18}{2} = 9$",
+        "image": null,
+        "topic": "Statistics",
+        "subtopic": "Measures of Central Tendency",
+        "conceptTested": "Empirical relationship between mean, median, and mode: 3 \\text{ Median} = 2 \\text{ Mean} + \\text{ Mode}.",
+        "tags": {
+          "topic": "Statistics",
+          "subtopic": "Measures of Central Tendency",
+          "conceptTested": "Empirical relationship between mean, median, and mode: 3 \\text{ Median} = 2 \\text{ Mean} + \\text{ Mode}.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_d5104d7d08",
+        "q_num": 272,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "02:40",
+        "avgTime": "01:14",
+        "question": "A drove of sheep and chickens have a total of $99$ heads and feet combined. There are twice as many chickens as sheep. How many of each are there?",
+        "options": {
+          "a": "Nine sheep and eighteen chickens",
+          "b": "Ten sheep and nine chickens",
+          "c": "Eighteen sheep and ten chickens",
+          "d": "Eighteen sheep and eighteen chickens"
+        },
+        "answer": "a",
+        "solution": "Let the number of sheep be $x$.\nThen the number of chickens = $2x$.\nTotal heads = $x + 2x = 3x$.\nTotal feet = $(x \\times 4) + (2x \\times 2) = 4x + 4x = 8x$.\nGiven the total of heads and feet is $99$: $3x + 8x = 99$\n\n$11x = 99$\n\n$x = \\frac{99}{11} = 9$\n\nSheep = $9$\nChicken = $2 \\times 9 = 18$\nHence, the correct answer is option A.",
+        "image": null,
+        "topic": "Arithmetical Reasoning",
+        "subtopic": "Calculation Reasoning",
+        "conceptTested": "Simultaneous linear equations formed from real-world constraint counting of heads and limbs/feet.",
+        "tags": {
+          "topic": "Arithmetical Reasoning",
+          "subtopic": "Calculation Reasoning",
+          "conceptTested": "Simultaneous linear equations formed from real-world constraint counting of heads and limbs/feet.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_c5e2efd965",
+        "q_num": 273,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:52",
+        "avgTime": "01:34",
+        "question": "What is the value of $(n + 6)$ if $32^{2n} \\times \\sqrt{16} \\div \\frac{1}{8^{12}} = 64^8$?",
+        "options": {
+          "a": "12",
+          "b": "7",
+          "c": "16",
+          "d": "18"
+        },
+        "answer": "b",
+        "solution": "Given equation: $32^{2n} \\times \\sqrt{16} \\div \\left(\\frac{1}{8^{12}}\\right) = 64^8$\nExpressing all terms in base 2: $32 = 2^5$, $\\sqrt{16} = 4 = 2^2$, $8 = 2^3$, $64 = 2^6$\nSubstitute these into the equation: $(2^5)^{2n} \\times 2^2 \\div \\left(\\frac{1}{(2^3)^{12}}\\right) = (2^6)^8$\n\n$2^{10n} \\times 2^2 \\div \\left(\\frac{1}{2^{36}}\\right) = 2^{48}$\n\n$2^{10n} \\times 2^2 \\times 2^{36} = 2^{48}$\n\n$2^{10n + 2 + 36} = 2^{48}$\n\n$2^{10n + 38} = 2^{48}$\n\nEquating the powers: $10n + 38 = 48$\n\n$10n = 10$\n\n$n = 1$\n\nTherefore, $n + 6 = 1 + 6 = 7$.",
+        "image": null,
+        "topic": "Simplification",
+        "subtopic": "Surds & Indices",
+        "conceptTested": "Laws of exponents and indices: $a^m \\times a^n = a^{m+n}$ and $\\frac{1}{a^{-m}} = a^m$.",
+        "tags": {
+          "topic": "Simplification",
+          "subtopic": "Surds & Indices",
+          "conceptTested": "Laws of exponents and indices: $a^m \\times a^n = a^{m+n}$ and $\\frac{1}{a^{-m}} = a^m$.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_bbe1fb7bc9",
+        "q_num": 274,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "02:00",
+        "avgTime": "00:29",
+        "question": "Number of runs scored by $6$ different players is given below. Find the median of their runs.\n\n$67, 23, 92, 102, 24$ and $45$",
+        "options": {
+          "a": "45",
+          "b": "67",
+          "c": "34.5",
+          "d": "56"
+        },
+        "answer": "d",
+        "solution": "Ascending order of number of runs scored: $23, 24, 45, 67, 92, 102$\nTotal terms $n = 6$ (Even)\nMedian = $\\frac{\\left(\\frac{n}{2}\\right)^{th} \\text{ term} + \\left(\\frac{n}{2} + 1\\right)^{th} \\text{ term}}{2}$\n= > $\\frac{\\left(\\frac{6}{2}\\right)^{th} \\text{ term} + \\left(\\frac{6}{2} + 1\\right)^{th} \\text{ term}}{2}$\n= > $\\frac{3^{rd} \\text{ term} + 4^{th} \\text{ term}}{2}$\n= > $\\frac{45 + 67}{2} = 56$",
+        "image": null,
+        "topic": "Statistics",
+        "subtopic": "Measures of Central Tendency",
+        "conceptTested": "Median for ungrouped data with an even number of terms: average of the $(\\frac{n}{2})^{th}$ and $(\\frac{n}{2} + 1)^{th}$ terms.",
+        "tags": {
+          "topic": "Statistics",
+          "subtopic": "Measures of Central Tendency",
+          "conceptTested": "Median for ungrouped data with an even number of terms: average of the $(\\frac{n}{2})^{th}$ and $(\\frac{n}{2} + 1)^{th}$ terms.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_4a17b9bf07",
+        "q_num": 275,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:49",
+        "avgTime": "00:41",
+        "question": "A display stand is shaped like a right triangular prism. The triangular base has perpendicular sides $5\\text{ cm}$ and $12\\text{ cm}$, and the prism height is $10\\text{ cm}$. Find the total surface area of the prism (in $\\text{cm}^2$).",
+        "options": {
+          "a": "180",
+          "b": "360",
+          "c": "460",
+          "d": "480"
+        },
+        "answer": "b",
+        "solution": "The third side of the triangle (Hypotenuse) by Pythagoras theorem = $\\sqrt{5^2 + 12^2} = 13\\text{ cm}$.\n\nPerimeter of base = $5 + 12 + 13 = 30\\text{ cm}$\nArea of triangular base ($B$) = $\\frac{1}{2} \\times 5 \\times 12 = 30\\text{ cm}^2$\n\n$\\text{TSA} = (Perimeter \\times height) + 2 \\times (Base Area)\\n= (30 \\times 10) + 2 \\times 30 = 300 + 60 = 360\\text{ cm}^2$",
+        "image": null,
+        "topic": "Mensuration 3D",
+        "subtopic": "Prism & Pyramid",
+        "conceptTested": "Total Surface Area of a Right Triangular Prism: $\\text{TSA} = (P \\times h) + 2 \\times B$",
+        "tags": {
+          "topic": "Mensuration 3D",
+          "subtopic": "Prism & Pyramid",
+          "conceptTested": "Total Surface Area of a Right Triangular Prism: $\\text{TSA} = (P \\times h) + 2 \\times B$",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_f520514c18",
+        "q_num": 276,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "00:41",
+        "avgTime": "00:30",
+        "question": "Find the value of:\n$\\frac{\\sin\\theta}{1 - \\cos\\theta} + \\frac{\\sin\\theta}{1 + \\cos\\theta}$",
+        "options": {
+          "a": "$2\\sin\\theta$",
+          "b": "$2\\sec\\theta$",
+          "c": "$2\\csc\\theta$",
+          "d": "$2\\tan\\theta$"
+        },
+        "answer": "c",
+        "solution": "Required value = $\\frac{\\sin\\theta(1 + \\cos\\theta) + \\sin\\theta(1 - \\cos\\theta)}{(1 - \\cos\\theta)(1 + \\cos\\theta)}$ = $\\frac{\\sin\\theta(1 + \\cos\\theta + 1 - \\cos\\theta)}{1 - \\cos^2\\theta}$ = $\\frac{2\\sin\\theta}{\\sin^2\\theta}$ = $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$",
+        "image": null,
+        "topic": "Trigonometry",
+        "subtopic": "Trigonometric Ratios & Simplification",
+        "conceptTested": "Fundamental trigonometric identities: $\\sin^2\\theta + \\cos^2\\theta = 1$ and reciprocal relations.",
+        "tags": {
+          "topic": "Trigonometry",
+          "subtopic": "Trigonometric Ratios & Simplification",
+          "conceptTested": "Fundamental trigonometric identities: $\\sin^2\\theta + \\cos^2\\theta = 1$ and reciprocal relations.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_816fca9ea7",
+        "q_num": 277,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "02:50",
+        "avgTime": "01:58",
+        "question": "Two workers $A$ and $B$ can finish a work alone in $15$ days and $20$ days respectively. $A$ and $B$ together worked for $6$ days and then $C$ completed the remaining work with $B$ in $18$ hours. In how much time $C$ alone can finish the complete work?",
+        "options": {
+          "a": "$2\\frac{6}{7}$ days",
+          "b": "$3$ days",
+          "c": "$3\\frac{1}{3}$ days",
+          "d": "$2\\frac{13}{14}$ days"
+        },
+        "answer": "a",
+        "solution": "$A = 15$ days, $B = 20$ days\n\n$6$ days' work done by $A$ and $B$ together $= 6 \\times (\\frac{1}{15} + \\frac{1}{20}) = \\frac{7}{10}$\n\nRemaining work $= 1 - \\frac{7}{10} = \\frac{3}{10}$\nNow, $18$ hours = $(\\frac{18}{24})$ day = $(\\frac{3}{4})$ day\n\n$B$ and $C$ together completed $\\frac{3}{10}$th part of the work in $\\frac{3}{4}$ day. So, $(\\frac{3}{4}) \\times (\\frac{1}{B} + \\frac{1}{C}) = \\frac{3}{10}$\n\n$(\\frac{3}{4}) \\times (\\frac{1}{20} + \\frac{1}{C}) = \\frac{3}{10}$\n\n$\\frac{1}{20} + \\frac{1}{C} = \\frac{2}{5}$\n\n$\\frac{1}{C} = \\frac{2}{5} - \\frac{1}{20} = \\frac{7}{20}$\n\n$C = \\frac{20}{7} = 2\\frac{6}{7}$ days",
+        "image": null,
+        "topic": "Time & Work",
+        "subtopic": "Men, Women, Wages & Efficiency",
+        "conceptTested": "Combined work rate calculation where total work is equal to the sum of individual rates multiplied by time.",
+        "tags": {
+          "topic": "Time & Work",
+          "subtopic": "Men, Women, Wages & Efficiency",
+          "conceptTested": "Combined work rate calculation where total work is equal to the sum of individual rates multiplied by time.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "math_64b4c6b5e9",
+        "q_num": 278,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "00:37",
+        "avgTime": "00:25",
+        "question": "In order to increase the sales volume, a merchant decides to give a discount of $10\\%$. By what percentage does he have to increase the sales volume to keep the total value of sales unchanged?",
+        "options": {
+          "a": "$9\\%$",
+          "b": "$9.9\\%$",
+          "c": "$11\\%$",
+          "d": "$11.11\\%$"
+        },
+        "answer": "d",
+        "solution": "Let the number of units sold = $10$\nAnd the initial price of each unit = Rs. $10$\nThen, total value of sales = Rs. $100$\nNow, new price of each unit = Rs. $9$\nTo keep the same sales value, the number of units to be sold = $\\frac{100}{9}$\nRequired percentage = $(\\frac{100}{9} - 10) \\times \\frac{100}{10} = \\frac{100}{9}\\% = 11.11\\%$",
+        "image": null,
+        "topic": "Percentage",
+        "subtopic": "Price, Consumption & Expenditure",
+        "conceptTested": "Inverse proportionality between price and consumption to keep expenditure constant: if price decreases by $x\\%$, consumption must increase by $\\frac{x}{100-x} \\times 100\\%$.",
+        "tags": {
+          "topic": "Percentage",
+          "subtopic": "Price, Consumption & Expenditure",
+          "conceptTested": "Inverse proportionality between price and consumption to keep expenditure constant: if price decreases by $x\\%$, consumption must increase by $\\frac{x}{100-x} \\times 100\\%$.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -21601,6 +21857,70 @@
           "conceptTested": "When a part of a mixture is removed and replaced by one of the components repeatedly, the final quantity of each component is tracked through successive fractional reduction and addition steps.",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "math_d6e17452a6",
+        "q_num": 412,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:36",
+        "avgTime": "02:13",
+        "question": "Suppose $40\\%$ of students study Mathematics, $25\\%$ of students study Physics, and $20\\%$ of the students who study Mathematics also study Physics. If a student is chosen at random and is found to study Physics, what is the probability that the student also studies Mathematics?",
+        "options": {
+          "a": "28%",
+          "b": "44%",
+          "c": "32%",
+          "d": "26%"
+        },
+        "answer": "c",
+        "solution": "Let $M$ be the event that a student studies Mathematics and $P$ be the event that a student studies Physics.\n\nGiven that $P(M) = 0.40$, $P(P) = 0.25$, and $P(P | M) = 0.20$.\n\nWe are required to find $P(M | P)$.\n\nUsing the formula of conditional probability: $P(M | P) = \\frac{P(M \\cap P)}{P(P)}$\nNow, $P(M \\cap P) = P(P | M) \\times P(M)$\n\n$= 0.20 \\times 0.40 = 0.08$\n\nTherefore, $P(M | P) = \\frac{0.08}{0.25} = 0.32$\nHence, the required probability is $0.32$ or $32\\%$.",
+        "image": null,
+        "topic": "Probability",
+        "subtopic": "Basic Probability Concepts",
+        "conceptTested": "Conditional probability formula: $P(A | B) = \\frac{P(A \\cap B)}{P(B)}$ where $P(A \\cap B) = P(B | A) \\times P(A)$.",
+        "tags": {
+          "topic": "Probability",
+          "subtopic": "Basic Probability Concepts",
+          "conceptTested": "Conditional probability formula: $P(A | B) = \\frac{P(A \\cap B)}{P(B)}$ where $P(A \\cap B) = P(B | A) \\times P(A)$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_c8f498d40b",
+        "q_num": 413,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "02:21",
+        "avgTime": "01:17",
+        "question": "Anuj cheats on his wholesaler and customer both. He purchases $22\\%$ more from the wholesaler and sells $12\\%$ less while selling to his customers. What is the profit percentage (rounded off to one decimal place) by selling the goods at cost price?",
+        "options": {
+          "a": "$33.5\\%$",
+          "b": "$42.7\\%$",
+          "c": "$28.6\\%$",
+          "d": "$38.6\\%$"
+        },
+        "answer": "d",
+        "solution": "It is clear that he purchases $122$ gm instead of $100$ gm and he sells $88$ gm instead of $100$ gm. Therefore, in this whole transaction, he gains a net quantity advantage of $22 + 12 = 34$ g on a base of $88$ g.\n\nThus, Profit$\\% = \\frac{34 \\times 100}{88} = \\frac{1700}{44} = 38.6\\%$",
+        "image": null,
+        "topic": "Profit, Loss & Discount",
+        "subtopic": "Dishonest Dealer & False Weights",
+        "conceptTested": "Profit percentage calculation using false weights and proportional quantity variations.",
+        "tags": {
+          "topic": "Profit, Loss & Discount",
+          "subtopic": "Dishonest Dealer & False Weights",
+          "conceptTested": "Profit percentage calculation using false weights and proportional quantity variations.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -27005,6 +27325,70 @@
         "isSlow": false,
         "subject": "Mathematics",
         "subject_id": "mathematics"
+      },
+      {
+        "id": "math_2440de18d2",
+        "q_num": 171,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:58",
+        "avgTime": "00:53",
+        "question": "In a bag, there are coins of $50\\text{p}$, $20\\text{p}$, and $5\\text{p}$ in the ratio $1 : 2 : 4$. If there are Rs. $44$ in all, how many $20\\text{p}$ coins are there?",
+        "options": {
+          "a": "80",
+          "b": "40",
+          "c": "60",
+          "d": "120"
+        },
+        "answer": "a",
+        "solution": "Let the number of $50\\text{p}$, $20\\text{p}$, and $5\\text{p}$ coins be $x$, $2x$, and $4x$, respectively.\n\nConvert total value to paise: Rs. $44 = 44 \\times 100 = 4400\\text{ paise}$.\nTotal value equation: $(x \\times 50) + (2x \\times 20) + (4x \\times 5) = 4400$\n\n$50x + 40x + 20x = 4400$\n\n$110x = 4400$\n\n$x = 40$\n\nHence, the number of $20\\text{p}$ coins = $2x = 2 \\times 40 = 80$.",
+        "image": null,
+        "topic": "Ratio & Proportion",
+        "subtopic": "Coins & Currency Problems",
+        "conceptTested": "Ratio-based monetary value calculation: Total Value = $\\sum (\\text{Number of Coins} \\times \\text{Denomination Value})$.",
+        "tags": {
+          "topic": "Ratio & Proportion",
+          "subtopic": "Coins & Currency Problems",
+          "conceptTested": "Ratio-based monetary value calculation: Total Value = $\\sum (\\text{Number of Coins} \\times \\text{Denomination Value})$.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "math_b74bd993d0",
+        "q_num": 172,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "C",
+        "userTime": "01:45",
+        "avgTime": "01:01",
+        "question": "Calculate the median from this distribution:\n\nIncome Class: 1000-2000 | 2000-3000 | 3000-4000 | 4000-5000\nFrequency: 20 | 30 | 15 | 35",
+        "options": {
+          "a": "2500",
+          "b": "2750",
+          "c": "3000",
+          "d": "3250"
+        },
+        "answer": "c",
+        "solution": "Total frequency, $n = 20 + 30 + 15 + 35 = 100$; $\\frac{n}{2} = 50$\nCumulative frequencies: 1000 - 2000: 20\n2000 - 3000: 50\n3000 - 4000: 65\n4000 - 5000: 100\nMedian class = 2000 - 3000 (first CF $\\ge 50$)\n\n$L = 2000$, $h = 1000$, $CF_{prev} = 20$, $f = 30$\n\nMedian = $L + \\left(\\frac{\\frac{n}{2} - CF_{prev}}{f}\\right) \\times h$ = $2000 + \\left(\\frac{50 - 20}{30}\\right) \\times 1000$ = $2000 + \\left(\\frac{30}{30}\\right) \\times 1000$ = $2000 + 1000 = 3000$",
+        "image": null,
+        "topic": "Statistics",
+        "subtopic": "Grouped Data & Frequency",
+        "conceptTested": "Median for grouped data formula: Median = L + \\left(\\frac{\\frac{n}{2} - CF}{f}\\right) \\times h",
+        "tags": {
+          "topic": "Statistics",
+          "subtopic": "Grouped Data & Frequency",
+          "conceptTested": "Median for grouped data formula: Median = L + \\left(\\frac{\\frac{n}{2} - CF}{f}\\right) \\times h",
+          "difficulty": "medium"
+        }
       }
     ]
   }

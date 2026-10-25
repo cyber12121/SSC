@@ -20,6 +20,7 @@ import {
   Calculator,
   Compass,
   BookOpen,
+  Laptop,
   HelpCircle,
   Eye,
   CheckCircle2,
@@ -43,21 +44,23 @@ const LOCAL_STORAGE_KEY = 'cgl_mock_score_reports';
 const mockQuestionModules = import.meta.glob('../data/mock_questions/*.json');
 
 const normalizeSubName = (raw: string = '') => {
+  if (/computer/i.test(raw)) return 'Computer Knowledge';
   if (/reason|intel/i.test(raw)) return 'Reasoning';
-  if (/aware|gk|gs|ga|knowledge/i.test(raw)) return 'General Awareness';
+  if (/aware|gk|gs|\bga\b/i.test(raw)) return 'General Awareness';
   if (/quant|math|aptitude/i.test(raw)) return 'Mathematics';
   if (/eng/i.test(raw)) return 'English';
   return 'Other';
 };
 
-const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' => {
+const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' | 'Computer Knowledge' => {
   if (report.subject) {
     const norm = normalizeSubName(report.subject);
-    if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
-      return norm as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+    if (['Reasoning', 'General Awareness', 'Mathematics', 'English', 'Computer Knowledge'].includes(norm)) {
+      return norm as any;
     }
   }
   if (report.sections) {
+    if (report.sections.computer && (report.sections.computer.total > 0 || report.sections.computer.score > 0)) return 'Computer Knowledge';
     if (report.sections.mathematics && (report.sections.mathematics.total > 0 || report.sections.mathematics.score > 0)) return 'Mathematics';
     if (report.sections.english && (report.sections.english.total > 0 || report.sections.english.score > 0)) return 'English';
     if (report.sections.reasoning && (report.sections.reasoning.total > 0 || report.sections.reasoning.score > 0)) return 'Reasoning';
@@ -65,18 +68,18 @@ const getSectionalSubject = (report: MockScoreReport): 'Reasoning' | 'General Aw
   }
   if (report.title) {
     const norm = normalizeSubName(report.title);
-    if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
-      return norm as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+    if (['Reasoning', 'General Awareness', 'Mathematics', 'English', 'Computer Knowledge'].includes(norm)) {
+      return norm as any;
     }
   }
   return 'Mathematics';
 };
 
-const resolveQuestionSubject = (q: any, report?: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' => {
+const resolveQuestionSubject = (q: any, report?: MockScoreReport): 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English' | 'Computer Knowledge' => {
   const raw = q?.subject || q?.section || q?.subjectName || '';
   const norm = normalizeSubName(raw);
-  if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(norm)) {
-    return norm as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+  if (['Reasoning', 'General Awareness', 'Mathematics', 'English', 'Computer Knowledge'].includes(norm)) {
+    return norm as any;
   }
   if (report) {
     const repSub = getSectionalSubject(report);
@@ -84,8 +87,8 @@ const resolveQuestionSubject = (q: any, report?: MockScoreReport): 'Reasoning' |
   }
   const testName = q?.testName || '';
   const normTest = normalizeSubName(testName);
-  if (['Reasoning', 'General Awareness', 'Mathematics', 'English'].includes(normTest)) {
-    return normTest as 'Reasoning' | 'General Awareness' | 'Mathematics' | 'English';
+  if (['Reasoning', 'General Awareness', 'Mathematics', 'English', 'Computer Knowledge'].includes(normTest)) {
+    return normTest as any;
   }
   return 'Mathematics';
 };
@@ -528,11 +531,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
   onReviewMock
 }) => {
   const [activeTab, setActiveTab] = useState<'full' | 'sectional'>('full');
-  const [selectedSectionalSubject, setSelectedSectionalSubject] = useState<'Mathematics' | 'Reasoning' | 'English' | 'General Awareness'>('Mathematics');
+  const [selectedTier, setSelectedTier] = useState<'all' | 'tier1' | 'tier2'>('all');
+  const [selectedSectionalSubject, setSelectedSectionalSubject] = useState<'Mathematics' | 'Reasoning' | 'English' | 'General Awareness' | 'Computer Knowledge'>('Mathematics');
   const [reports, setReports] = useState<MockScoreReport[]>([]);
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState<'table' | 'score_flow'>('table');
-  const [flowSubject, setFlowSubject] = useState<'overall' | 'reasoning' | 'mathematics' | 'english' | 'generalAwareness'>('overall');
+  const [flowSubject, setFlowSubject] = useState<'overall' | 'reasoning' | 'mathematics' | 'english' | 'generalAwareness' | 'computer'>('overall');
   const [flowMetric, setFlowMetric] = useState<'score' | 'accuracy'>('score');
   const [activeNodeIndex, setActiveNodeIndex] = useState<number | null>(null);
 
@@ -548,6 +552,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       reasoning: Number(safeStorage.getItem('cgl_target_score_sectional_reasoning')) || defaultSec,
       english: Number(safeStorage.getItem('cgl_target_score_sectional_english')) || defaultSec,
       generalAwareness: Number(safeStorage.getItem('cgl_target_score_sectional_generalAwareness')) || defaultSec,
+      computer: Number(safeStorage.getItem('cgl_target_score_sectional_computer')) || 36,
       overall: defaultSec
     };
   });
@@ -563,6 +568,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       reasoning: Number(safeStorage.getItem('cgl_target_accuracy_sectional_reasoning')) || defaultAcc,
       english: Number(safeStorage.getItem('cgl_target_accuracy_sectional_english')) || defaultAcc,
       generalAwareness: Number(safeStorage.getItem('cgl_target_accuracy_sectional_generalAwareness')) || defaultAcc,
+      computer: Number(safeStorage.getItem('cgl_target_accuracy_sectional_computer')) || 80,
       overall: defaultAcc
     };
   });
@@ -665,7 +671,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       Mathematics: 0,
       Reasoning: 0,
       English: 0,
-      'General Awareness': 0
+      'General Awareness': 0,
+      'Computer Knowledge': 0
     };
     reports.filter(r => r.type === 'sectional').forEach(r => {
       counts.all++;
@@ -677,13 +684,20 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
     return counts;
   }, [reports]);
 
-  // Filtered reports according to activeTab and selectedSectionalSubject
+  // Filtered reports according to activeTab, selectedSectionalSubject and selectedTier
   const filteredReports = useMemo(() => {
-    if (activeTab === 'full') {
-      return reports.filter(r => r.type === 'full');
+    let list = reports;
+    if (selectedTier === 'tier1') {
+      list = list.filter(r => r.tier === 'tier1' || (!r.tier && (r.maxMarks || 200) <= 200 && (!r.sections || !r.sections.computer)));
+    } else if (selectedTier === 'tier2') {
+      list = list.filter(r => r.tier === 'tier2' || (r.maxMarks && r.maxMarks > 200) || (r.sections && r.sections.computer));
     }
-    return reports.filter(r => r.type === 'sectional' && getSectionalSubject(r) === selectedSectionalSubject);
-  }, [reports, activeTab, selectedSectionalSubject]);
+
+    if (activeTab === 'full') {
+      return list.filter(r => r.type === 'full');
+    }
+    return list.filter(r => r.type === 'sectional' && getSectionalSubject(r) === selectedSectionalSubject);
+  }, [reports, activeTab, selectedSectionalSubject, selectedTier]);
 
   const allCurrentIds = useMemo(() => filteredReports.map(r => r.id), [filteredReports]);
   const isAllSelected = allCurrentIds.length > 0 && allCurrentIds.every(id => selectedMockIds.includes(id));
@@ -707,13 +721,16 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
 
   // Aggregate stats
   const aggregateStats = useMemo(() => {
+    const isTier2Active = selectedTier === 'tier2' || (filteredReports[0]?.tier === 'tier2') || ((filteredReports[0]?.maxMarks || 0) > 200);
+    const defaultMaxMarks = activeTab === 'full' ? (isTier2Active ? 390 : 200) : 50;
+
     if (filteredReports.length === 0) {
       return {
         bestScore: 0,
         avgScore: 0,
         avgAccuracy: 0,
         totalMocks: 0,
-        maxMarks: activeTab === 'full' ? 200 : 50
+        maxMarks: defaultMaxMarks
       };
     }
 
@@ -727,9 +744,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       avgScore,
       avgAccuracy,
       totalMocks: filteredReports.length,
-      maxMarks: filteredReports[0]?.maxMarks || (activeTab === 'full' ? 200 : 50)
+      maxMarks: filteredReports[0]?.maxMarks || defaultMaxMarks
     };
-  }, [filteredReports, activeTab]);
+  }, [filteredReports, activeTab, selectedTier]);
+
+  const showComputerColumn = useMemo(() => {
+    return selectedTier === 'tier2' || (selectedTier === 'all' && filteredReports.some(r => r.tier === 'tier2' || Boolean(r.sections?.computer)));
+  }, [selectedTier, filteredReports]);
 
   // ─── SCORE FLOW & ANALYTICS COMPUTATIONS ───
   const chronologicalReports = useMemo(() => {
@@ -754,7 +775,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           reasoning: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Strong & Consistent', sparkline: '' },
           mathematics: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Needs Speed', sparkline: '' },
           english: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Mastered Benchmark', sparkline: '' },
-          generalAwareness: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Revise Core', sparkline: '' }
+          generalAwareness: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Revise Core', sparkline: '' },
+          computer: { avgScore: 0, avgAcc: 0, delta: 0, status: 'Qualifying Standard', sparkline: '' }
         }
       };
     }
@@ -771,11 +793,12 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
     });
 
-    const subKeys: Array<{ key: 'reasoning' | 'mathematics' | 'english' | 'generalAwareness'; label: string; subjectName: string }> = [
+    const subKeys: Array<{ key: 'reasoning' | 'mathematics' | 'english' | 'generalAwareness' | 'computer'; label: string; subjectName: string }> = [
       { key: 'reasoning', label: 'Reasoning', subjectName: 'Reasoning' },
       { key: 'mathematics', label: 'Quantitative', subjectName: 'Mathematics' },
       { key: 'english', label: 'English', subjectName: 'English' },
-      { key: 'generalAwareness', label: 'GA / GK', subjectName: 'General Awareness' }
+      { key: 'generalAwareness', label: 'GA / GK', subjectName: 'General Awareness' },
+      { key: 'computer', label: 'Computer', subjectName: 'Computer Knowledge' }
     ];
 
     const subjectStats: Record<string, { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string }> = {};
@@ -823,7 +846,9 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       }
 
       let status = 'Strong & Consistent';
-      if (avgScore >= 35) {
+      if (key === 'computer') {
+        status = avgScore >= 27 ? 'Qualifying Benchmark Met' : 'Revise Basics (Cutoff ≥18)';
+      } else if (avgScore >= 35) {
         status = key === 'english' ? 'Mastered Benchmark (80%+)' : 'Strong & Consistent';
       } else if (avgScore >= 25) {
         status = 'High Potential • Needs Speed';
@@ -835,7 +860,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       const sparklinePoints: Array<{ x: number; y: number }> = [];
       if (scores.length > 0) {
         const minS = 0;
-        const maxS = 50;
+        const maxS = key === 'computer' ? 60 : 50;
         scores.forEach((s, idx) => {
           const x = Math.round((scores.length === 1 ? 0.5 : idx / (scores.length - 1)) * 160);
           const y = Math.round(30 - ((s - minS) / (maxS - minS || 1)) * 24);
@@ -873,6 +898,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         mathematics: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
         english: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
         generalAwareness: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
+        computer: { avgScore: number; avgAcc: number; delta: number; status: string; sparkline: string };
       }
     };
   }, [chronologicalReports]);
@@ -886,7 +912,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
         Mathematics: 'mathematics',
         Reasoning: 'reasoning',
         English: 'english',
-        'General Awareness': 'generalAwareness'
+        'General Awareness': 'generalAwareness',
+        'Computer Knowledge': 'computer'
       };
       return map[selectedSectionalSubject] || 'mathematics';
     }
@@ -1258,7 +1285,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             'Reasoning': 'reasoning',
             'General Awareness': 'generalAwareness',
             'Mathematics': 'mathematics',
-            'English': 'english'
+            'English': 'english',
+            'Computer Knowledge': 'computer'
           };
 
           if (subjectKey === 'all') {
@@ -1270,7 +1298,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
             if (rep.type === 'sectional' && repSub === subjectKey) {
               wrong += rep.totalWrong || 0;
               unattempted += rep.totalUnattempted || 0;
-              totalAll += rep.totalQuestions || 25;
+              totalAll += rep.totalQuestions || (subjectKey === 'Computer Knowledge' ? 20 : 25);
             } else {
               const sData = rep.sections?.[secMap[subjectKey]];
               if (sData) {
@@ -1300,6 +1328,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       generalAwareness: getCounts('General Awareness'),
       mathematics: getCounts('Mathematics'),
       english: getCounts('English'),
+      computer: getCounts('Computer Knowledge'),
       all: getCounts('all')
     };
   }, [practiceModalReports, rawQuestionsCache, modalIntent]);
@@ -1312,6 +1341,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       { key: 'General Awareness', label: 'GA / GK', icon: Compass, color: 'text-amber-600', stats: modalStats.generalAwareness },
       { key: 'Mathematics', label: 'Quantitative', icon: Calculator, color: 'text-blue-600', stats: modalStats.mathematics },
       { key: 'English', label: 'English', icon: BookOpen, color: 'text-emerald-600', stats: modalStats.english },
+      { key: 'Computer Knowledge', label: 'Computer (Tier 2)', icon: Laptop, color: 'text-purple-600', stats: modalStats.computer },
     ];
     return allDefs.filter(s => (s.stats?.total || 0) > 0);
   }, [modalStats]);
@@ -1333,7 +1363,8 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
       practiceSection === 'Reasoning' ? 'reasoning' :
       practiceSection === 'General Awareness' ? 'generalAwareness' :
       practiceSection === 'Mathematics' ? 'mathematics' :
-      practiceSection === 'English' ? 'english' : 'all'
+      practiceSection === 'English' ? 'english' :
+      practiceSection === 'Computer Knowledge' ? 'computer' : 'all'
     ] || null;
   }, [modalStats, practiceSection]);
 
@@ -2440,8 +2471,45 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
           </div>
         </div>
 
-        {/* Right Toggles: Full vs Sectional AND Table View vs Score Flow (Always in one line) */}
+        {/* Right Toggles: Tier (All/Tier 1/Tier 2), Full vs Sectional, Table View vs Score Flow */}
         <div className="flex items-center gap-2 shrink-0 flex-nowrap self-stretch sm:self-auto overflow-x-auto pb-0.5 sm:pb-0">
+          {/* Tier Toggle: All vs Tier 1 vs Tier 2 */}
+          <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200/80 text-xs font-medium shrink-0">
+            <button
+              onClick={() => setSelectedTier('all')}
+              className={`px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
+                selectedTier === 'all'
+                  ? 'bg-white text-slate-900 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              type="button"
+            >
+              All Tiers
+            </button>
+            <button
+              onClick={() => setSelectedTier('tier1')}
+              className={`px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
+                selectedTier === 'tier1'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              type="button"
+            >
+              Tier 1
+            </button>
+            <button
+              onClick={() => setSelectedTier('tier2')}
+              className={`px-2.5 py-1 text-xs rounded-md transition-all cursor-pointer whitespace-nowrap ${
+                selectedTier === 'tier2'
+                  ? 'bg-purple-600 text-white shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+              type="button"
+            >
+              Tier 2
+            </button>
+          </div>
+
           {/* Scope Toggle: Full Mock vs Sectional */}
           <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200/80 text-xs font-medium shrink-0">
             <button
@@ -2520,6 +2588,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               { id: 'Reasoning', label: 'Reasoning', icon: Brain, flowKey: 'reasoning', count: sectionalSubjectCounts.Reasoning, color: 'text-indigo-600', activeClass: 'bg-indigo-600 text-white shadow-xs' },
               { id: 'English', label: 'English', icon: BookOpen, flowKey: 'english', count: sectionalSubjectCounts.English, color: 'text-emerald-600', activeClass: 'bg-emerald-600 text-white shadow-xs' },
               { id: 'General Awareness', label: 'GA / GK', icon: Compass, flowKey: 'generalAwareness', count: sectionalSubjectCounts['General Awareness'], color: 'text-amber-600', activeClass: 'bg-amber-600 text-white shadow-xs' },
+              { id: 'Computer Knowledge', label: 'Computer (Tier 2)', icon: Laptop, flowKey: 'computer', count: sectionalSubjectCounts['Computer Knowledge'] || 0, color: 'text-purple-600', activeClass: 'bg-purple-600 text-white shadow-xs' },
             ].map((tab) => {
               const isSelected = selectedSectionalSubject === tab.id;
               const Icon = tab.icon;
@@ -2678,7 +2747,13 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                       }`}
                     >
                       <Award className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                      <span>{flowSubject === 'overall' ? (activeTab === 'full' ? 'Marks /200' : 'Marks /50') : 'Marks /50'}</span>
+                      <span>
+                        {flowSubject === 'overall'
+                          ? (selectedTier === 'tier2' ? 'Marks /390' : activeTab === 'full' ? 'Marks /200' : 'Marks /50')
+                          : flowSubject === 'computer'
+                          ? 'Marks /60'
+                          : 'Marks /50'}
+                      </span>
                     </button>
                     <button
                       onClick={() => setFlowMetric('accuracy')}
@@ -2700,17 +2775,19 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   <div className="flex items-center gap-1.5 flex-nowrap shrink-0">
                     {(activeTab === 'full'
                       ? [
-                          { id: 'overall', label: 'Overall', dot: '' },
+                          { id: 'overall', label: selectedTier === 'tier2' ? 'Merit (390M)' : 'Overall', dot: '' },
                           { id: 'reasoning', label: 'Reasoning', dot: 'bg-indigo-600' },
                           { id: 'mathematics', label: 'Quantitative', dot: 'bg-blue-600' },
                           { id: 'english', label: 'English', dot: 'bg-emerald-600' },
                           { id: 'generalAwareness', label: 'GA / GK', dot: 'bg-amber-600' },
+                          ...(selectedTier === 'tier1' ? [] : [{ id: 'computer', label: 'Computer (60M)', dot: 'bg-purple-600' }]),
                         ]
                       : [
                           { id: 'mathematics', label: 'Quantitative (Math)', dot: 'bg-blue-600', sub: 'Mathematics' as const },
                           { id: 'reasoning', label: 'Reasoning', dot: 'bg-indigo-600', sub: 'Reasoning' as const },
                           { id: 'english', label: 'English', dot: 'bg-emerald-600', sub: 'English' as const },
                           { id: 'generalAwareness', label: 'GA / GK', dot: 'bg-amber-600', sub: 'General Awareness' as const },
+                          { id: 'computer', label: 'Computer', dot: 'bg-purple-600', sub: 'Computer Knowledge' as const },
                         ]
                     ).map((chip) => {
                       const isSelected = activeTab === 'sectional'
@@ -3118,6 +3195,14 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               {selectedPoint.report.sections?.generalAwareness?.score ?? 0} <span className="text-amber-600 text-[10px] font-semibold">{selectedPoint.report.sections?.generalAwareness?.accuracy ?? 0}%</span>
                             </span>
                           </div>
+                          {selectedPoint.report.sections?.computer && (
+                            <div className="flex items-center justify-between bg-purple-50 px-2 py-1 rounded border border-purple-100 col-span-2">
+                              <span className="text-purple-700 text-[11px] font-medium">Computer (Qualifying)</span>
+                              <span className="font-bold text-slate-900 text-[11px]">
+                                {selectedPoint.report.sections.computer.score} / 60 <span className="text-purple-600 text-[10px] font-semibold">{selectedPoint.report.sections.computer.accuracy}%</span>
+                              </span>
+                            </div>
+                          )}
                         </div>
                       )}
 
@@ -3156,7 +3241,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
+            <div className={`grid grid-cols-1 sm:grid-cols-2 ${selectedTier === 'tier1' ? 'lg:grid-cols-4' : 'lg:grid-cols-5'} gap-2.5 sm:gap-3`}>
               {/* 1. Reasoning */}
               <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
                 <div>
@@ -3300,6 +3385,44 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                   <span>Avg: {flowAnalytics.subjectStats.generalAwareness.avgScore}/50</span>
                 </div>
               </div>
+
+              {/* 5. Computer Knowledge (Tier 2 / All) */}
+              {selectedTier !== 'tier1' && (
+                <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between gap-1">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-purple-700 font-mono">Computer</span>
+                      <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold font-mono border ${
+                        flowAnalytics.subjectStats.computer.delta >= 0
+                          ? 'bg-purple-50 text-purple-700 border-purple-200'
+                          : 'bg-rose-50 text-rose-700 border-rose-200'
+                      }`}>
+                        {flowAnalytics.subjectStats.computer.delta >= 0 ? `+${flowAnalytics.subjectStats.computer.delta}%` : `${flowAnalytics.subjectStats.computer.delta}%`}
+                      </span>
+                    </div>
+                    <div className="flex items-baseline gap-1 mt-1">
+                      <span className="text-xl font-extrabold text-slate-900 leading-none">
+                        {flowAnalytics.subjectStats.computer.avgScore}
+                      </span>
+                      <span className="text-xs font-mono text-slate-400">/ 60</span>
+                    </div>
+                    <p className="text-[11px] text-purple-600 font-semibold mt-0.5 flex items-center gap-1">
+                      <Laptop className="w-3 h-3" />
+                      <span>{flowAnalytics.subjectStats.computer.status}</span>
+                    </p>
+                  </div>
+                  {/* Micro Sparkline */}
+                  <div className="py-1 mt-1">
+                    <svg className="w-full h-7 overflow-visible" fill="none" viewBox="0 0 160 28">
+                      <path d={flowAnalytics.subjectStats.computer.sparkline} stroke="#9333ea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div className="pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                    <span>Acc: {flowAnalytics.subjectStats.computer.avgAcc}%</span>
+                    <span>Avg: {flowAnalytics.subjectStats.computer.avgScore}/60</span>
+                  </div>
+                </div>
+              )}
             </div>
           </section>
 
@@ -3671,13 +3794,16 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                           title="Select all full mocks"
                         />
                       </th>
-                      <th className="py-3.5 px-4 font-semibold align-middle w-[24%]" scope="col">Mock Attempt</th>
-                      <th className="py-3.5 px-3 font-semibold text-center text-blue-700 align-middle w-[11%]" scope="col">Reasoning</th>
-                      <th className="py-3.5 px-3 font-semibold text-center text-amber-700 align-middle w-[11%]" scope="col">GA / GK</th>
-                      <th className="py-3.5 px-3 font-semibold text-center text-indigo-700 align-middle w-[11%]" scope="col">Quantitative</th>
-                      <th className="py-3.5 px-3 font-semibold text-center text-teal-700 align-middle w-[11%]" scope="col">English</th>
+                      <th className="py-3.5 px-4 font-semibold align-middle w-[22%]" scope="col">Mock Attempt</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-blue-700 align-middle w-[10%]" scope="col">Reasoning</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-amber-700 align-middle w-[10%]" scope="col">GA / GK</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-indigo-700 align-middle w-[10%]" scope="col">Quantitative</th>
+                      <th className="py-3.5 px-3 font-semibold text-center text-teal-700 align-middle w-[10%]" scope="col">English</th>
+                      {showComputerColumn && (
+                        <th className="py-3.5 px-3 font-semibold text-center text-purple-700 align-middle w-[10%]" scope="col">Computer</th>
+                      )}
                       <th className="py-3.5 px-4 font-semibold text-center align-middle w-[12%]" scope="col">Score</th>
-                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[18%]" scope="col">Practice &amp; Review</th>
+                      <th className="py-3.5 px-4 font-semibold text-center align-middle w-[16%]" scope="col">Practice &amp; Review</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 text-sm">
@@ -3711,6 +3837,11 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                           <td className="py-3.5 px-4 align-middle">
                             <div className="flex items-center gap-2">
                               <span className="font-bold text-slate-900 text-sm">{shortTitle}</span>
+                              {report.tier === 'tier2' && (
+                                <span className="px-1.5 py-0.5 text-[10px] font-bold rounded tracking-wide uppercase bg-purple-50 text-purple-700 border border-purple-200 shrink-0">
+                                  Tier 2
+                                </span>
+                              )}
                               <span className={`px-1.5 py-0.5 text-[10px] font-bold rounded tracking-wide uppercase border shrink-0 ${
                                 isOlive
                                   ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
@@ -3738,7 +3869,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               type="button"
                             >
                               <div className="font-bold text-slate-900 text-sm">
-                                {reasoningData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                                {reasoningData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/{report.tier === 'tier2' ? 90 : 50}</span>
                               </div>
                               <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
                                 (reasoningData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
@@ -3759,7 +3890,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               type="button"
                             >
                               <div className="font-bold text-slate-900 text-sm">
-                                {gaData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                                {gaData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/{report.tier === 'tier2' ? 75 : 50}</span>
                               </div>
                               <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
                                 (gaData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
@@ -3780,7 +3911,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               type="button"
                             >
                               <div className="font-bold text-slate-900 text-sm">
-                                {quantData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                                {quantData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/{report.tier === 'tier2' ? 90 : 50}</span>
                               </div>
                               <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
                                 (quantData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
@@ -3801,7 +3932,7 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                               type="button"
                             >
                               <div className="font-bold text-slate-900 text-sm">
-                                {englishData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/50</span>
+                                {englishData?.score ?? 0} <span className="text-xs font-normal text-slate-400">/{report.tier === 'tier2' ? 135 : 50}</span>
                               </div>
                               <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
                                 (englishData?.accuracy ?? 0) >= 80 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
@@ -3813,11 +3944,43 @@ export const MockScoreDashboard: React.FC<MockScoreDashboardProps> = ({
                             </button>
                           </td>
 
+                          {/* Computer (Tier 2 / All) */}
+                          {showComputerColumn && (
+                            <td className="py-3.5 px-3 text-center align-middle">
+                              {report.sections?.computer ? (
+                                <button
+                                  onClick={() => openPracticeModal(report, 'Computer Knowledge')}
+                                  className="w-full text-center group cursor-pointer p-1.5 rounded-lg hover:bg-slate-100/70 transition-colors"
+                                  title={`Click to practice Computer mistakes (${(report.sections.computer.wrong || 0) + (report.sections.computer.unattempted || 0)} total)`}
+                                  type="button"
+                                >
+                                  <div className="font-bold text-slate-900 text-sm">
+                                    {report.sections.computer.score} <span className="text-xs font-normal text-slate-400">/60</span>
+                                  </div>
+                                  <span className={`inline-block mt-1 px-1.5 py-0.5 text-[10px] font-bold rounded border ${
+                                    (report.sections.computer.accuracy ?? 0) >= 70 ? 'bg-purple-50 text-purple-700 border-purple-200' :
+                                    (report.sections.computer.accuracy ?? 0) >= 50 ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                    'bg-rose-50 text-rose-700 border-rose-200'
+                                  }`}>
+                                    {report.sections.computer.accuracy}% {report.sections.computer.score >= 18 ? '✓' : '✗'}
+                                  </span>
+                                </button>
+                              ) : (
+                                <span className="text-xs text-slate-300 font-mono">—</span>
+                              )}
+                            </td>
+                          )}
+
                           {/* 6. Score */}
                           <td className="py-3.5 px-4 text-center align-middle">
                             <div className="font-extrabold text-slate-900 text-base">
-                              {report.totalScore} <span className="text-xs font-normal text-slate-400">/{report.maxMarks}</span>
+                              {report.meritScore ?? report.totalScore} <span className="text-xs font-normal text-slate-400">/{report.maxMarks}</span>
                             </div>
+                            {report.computerScore !== undefined && (
+                              <div className="text-[10px] text-purple-700 font-semibold">
+                                +{report.computerScore}/60 Comp
+                              </div>
+                            )}
                             <div className={`text-[11px] font-semibold mt-0.5 ${
                               report.overallAccuracy >= 80 ? 'text-emerald-600' :
                               report.overallAccuracy >= 65 ? 'text-amber-600' : 'text-rose-600'

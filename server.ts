@@ -57,6 +57,26 @@ function inferSubject(raw?: string, q?: any, enriched?: any, mockTitle?: string)
   const cleanRaw = String(raw || "").trim();
   const isGenericRaw = !cleanRaw || /^(general|n\/?a|unknown|test|sectional|mock|all|default)$/i.test(cleanRaw);
 
+  // Priority 0: Explicit Section / Subject prefix embedded in question text
+  const rawQText = String(q?.questionText || q?.question || enriched?.questionText || enriched?.question || "").trim();
+  if (/^mathematical abilities/i.test(rawQText)) return { name: "Mathematics", file: "mathematics.json" };
+  if (/^reasoning and general intelligence/i.test(rawQText)) return { name: "Reasoning", file: "reasoning.json" };
+  if (/^english(\s*\n+|$)/i.test(rawQText)) return { name: "English", file: "english.json" };
+  if (/^computer knowledge/i.test(rawQText)) return { name: "Computer Knowledge", file: "computer.json" };
+
+  // Priority 0.5: Question number heuristics for Tier 2 tests
+  const qNumMatch = String(q?.questionNumber || q?.q_num || "").match(/\d+/);
+  const qNum = qNumMatch ? parseInt(qNumMatch[0], 10) : 0;
+  const isTier2Context = /tier\s*(2|ii)\b/i.test(String(mockTitle || q?.testName || ''));
+
+  if (isTier2Context && qNum > 0) {
+    if (qNum <= 30) return { name: "Mathematics", file: "mathematics.json" };
+    if (qNum <= 60) return { name: "Reasoning", file: "reasoning.json" };
+    if (qNum <= 105) return { name: "English", file: "english.json" };
+    if (qNum <= 130) return { name: "General Awareness", file: "general_awareness.json" };
+    if (qNum <= 150) return { name: "Computer Knowledge", file: "computer.json" };
+  }
+
   const topicStr = [
     enriched?.topic,
     q?.topic,
@@ -81,6 +101,9 @@ function inferSubject(raw?: string, q?: any, enriched?: any, mockTitle?: string)
     q?.title
   ].filter(Boolean).join(" ");
 
+  // High-Confidence Topic Check for Computer Knowledge
+  const isComputerTopic = /\b(computer|cpu|ram|rom|hardware|software|operating system|ms office|ms excel|ms word|powerpoint|shortcut keys?|networking|lan|wan|ip address|cache|compiler|malware|phishing|trojan|firewall|binary|ascii|byte|browser|internet)\b/i.test(topicStr);
+
   // 1. High-Confidence Topic Check for English
   const isEnglishTopic = /\b(synonyms?|antonyms?|spellings?|misspelt|misspelled|one[- ]word|substitutions?|idioms?|phrases?|cloze|reading comprehension|comprehensions?|spotting errors?|error spottings?|sentence improvements?|active voice|passive voice|direct speech|indirect speech|narrations?|para jumbles?|jumbled|fill in the blanks?|prepositions?|adjectives?|adverbs?|conjunctions?|interjections?|nouns?|pronouns?|tenses?|grammars?|vocabulary|vocab|phrasal verbs?|parts of speech|subject-verb agreement|english)\b/i.test(topicStr);
 
@@ -94,6 +117,7 @@ function inferSubject(raw?: string, q?: any, enriched?: any, mockTitle?: string)
   const isMathTopic = /\b(mathematics|quant|quantitative|percentages?|profits?|loss(es)?|discounts?|ratio(s)? & proportions?|ratio(s)? and proportions?|mixtures? & alligations?|alligation|time & works?|pipes? & cisterns?|pipes? and cisterns?|time, speed & distance|time and distance|speed and distance|boats? & streams?|boat and stream|trains?|simple interests?|compound interests?|installments?|partnerships?|averages?|number systems?|simplifications?|surds & indices|surds and indices|lcm & hcfs?|lcm and hcfs?|divisibilit(y|ies)|algebra|geometr(y|ies)|circles?|triangles?|quadrilaterals?|mensurations?|trigonometr(y|ies)|height(s)? & distance(s)?|heights and distances|coordinate geometr(y|ies)|data interpretations?|statistics?|probabilit(y|ies))\b/i.test(topicStr);
 
   // Priority 1: When topic is clear, trust the topic!
+  if (isComputerTopic) return { name: "Computer Knowledge", file: "computer.json" };
   if (isEnglishTopic) return { name: "English", file: "english.json" };
   if (isReasoningTopic) return { name: "Reasoning", file: "reasoning.json" };
   if (isGATopic) return { name: "General Awareness", file: "general_awareness.json" };
@@ -101,6 +125,7 @@ function inferSubject(raw?: string, q?: any, enriched?: any, mockTitle?: string)
 
   // Priority 2: If rawSubject explicitly specifies a specific non-generic subject
   if (!isGenericRaw) {
+    if (/computer/i.test(cleanRaw)) return { name: "Computer Knowledge", file: "computer.json" };
     if (/eng|verbal ability|comprehension/i.test(cleanRaw) && !/reasoning/i.test(cleanRaw)) return { name: "English", file: "english.json" };
     if (/reason|intel/i.test(cleanRaw)) return { name: "Reasoning", file: "reasoning.json" };
     if (/aware|gk|gs|\bga\b|knowledge/i.test(cleanRaw)) return { name: "General Awareness", file: "general_awareness.json" };
@@ -963,7 +988,8 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
     Reasoning: [],
     "General Awareness": [],
     Mathematics: [],
-    English: []
+    English: [],
+    "Computer Knowledge": []
   };
 
   rawList.forEach(q => {
@@ -983,16 +1009,19 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
   const detectedFromQuestions = isGeneric ? "" : String(detectedCandidate).trim();
   const rawTitle = ((mockTitle && mockTitle.trim()) || detectedFromQuestions || (detectedCandidate ? String(detectedCandidate).trim() : "")).toLowerCase();
 
+  // Tier 2 Detection
+  const isTier2 = /tier\s*(2|ii)\b/i.test(rawTitle) || subjectGroups["Computer Knowledge"].length > 0;
+
   // Smart Detection:
   // If metadata or title indicates sectional, treat as sectional
   const hasSectionalMeta = rawList.some(q => String(q.testType || q.test_type || "").toLowerCase() === "sectional");
   const isExplicitSectional = (
     hasSectionalMeta ||
-    /sectional|chapter|topic|subject\s*test|\b(quant|english|reasoning|gk|ga|general awareness|maths?)\s*(sectional|test|mock)?\b/i.test(rawTitle)
+    /sectional|chapter|topic|subject\s*test|\b(quant|english|reasoning|gk|ga|general awareness|maths?|computer)\s*(sectional|test|mock)?\b/i.test(rawTitle)
   ) && !/full\s*(test|mock|length)/i.test(rawTitle);
 
   // If title explicitly has "full test", "full mock", "tier 1", "tier-1", etc., treat as full mock
-  const titleIndicatesFull = /full\s*(test|mock|length)|tier\s*[-_ ]*1|tier\s*[-_ ]*i\b|cgl\s*(prelims|tier)/i.test(rawTitle);
+  const titleIndicatesFull = /full\s*(test|mock|length)|tier\s*[-_ ]*(1|2|i|ii)\b|cgl\s*(prelims|tier)/i.test(rawTitle);
 
   // Dominant Subject Analysis: if a subject has >= 70% of questions in a test with < 50 items, it is a sectional test
   const sortedSubjects = Object.entries(subjectGroups).sort((a, b) => b[1].length - a[1].length);
@@ -1023,8 +1052,15 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
   let totalWrong = 0;
   let totalUnattempted = 0;
   let totalScore = 0;
+  let meritScore = 0;
+  let computerScore = 0;
 
-  const subjectsToProcess = isFullMock ? ["Reasoning", "General Awareness", "Mathematics", "English"] : effectiveActiveSubjects;
+  const subjectsToProcess = isFullMock
+    ? (isTier2 ? ["Mathematics", "Reasoning", "English", "General Awareness", "Computer Knowledge"] : ["Reasoning", "General Awareness", "Mathematics", "English"])
+    : effectiveActiveSubjects;
+
+  const markPerCorrect = isTier2 ? 3 : 2;
+  const markPerWrong = isTier2 ? 1 : 0.5;
 
   for (const sub of subjectsToProcess) {
     const qList = subjectGroups[sub] || [];
@@ -1047,21 +1083,34 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
       }
     });
 
-    const standardTotal = 25;
+    let standardTotal = 25;
+    if (isTier2) {
+      if (sub === "Mathematics" || sub === "Reasoning") standardTotal = 30;
+      else if (sub === "English") standardTotal = 45;
+      else if (sub === "General Awareness") standardTotal = 25;
+      else if (sub === "Computer Knowledge") standardTotal = 20;
+    }
+
     if (!hasExplicitCorrect || qList.length < standardTotal) {
       correct = Math.max(0, standardTotal - wrong - unattempted);
     }
 
-    const sectionScore = Math.round(((correct * 2) - (wrong * 0.5)) * 10) / 10;
+    const sectionScore = Math.round(((correct * markPerCorrect) - (wrong * markPerWrong)) * 10) / 10;
     const attempted = correct + wrong;
     const accuracy = attempted > 0 ? Math.round((correct / attempted) * 1000) / 10 : 0;
 
     totalCorrect += correct;
     totalWrong += wrong;
     totalUnattempted += unattempted;
+
+    if (sub === "Computer Knowledge") {
+      computerScore += sectionScore;
+    } else {
+      meritScore += sectionScore;
+    }
     totalScore += sectionScore;
 
-    const key = sub === "General Awareness" ? "generalAwareness" : sub === "Mathematics" ? "mathematics" : sub.toLowerCase();
+    const key = sub === "General Awareness" ? "generalAwareness" : sub === "Mathematics" ? "mathematics" : sub === "Computer Knowledge" ? "computer" : sub.toLowerCase();
     sections[key] = {
       total: standardTotal,
       correct,
@@ -1072,14 +1121,14 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
     };
   }
 
-  const totalQuestions = isFullMock ? 100 : (subjectsToProcess.length * 25);
-  const maxMarks = totalQuestions * 2;
+  const totalQuestions = isFullMock ? (isTier2 ? 150 : 100) : (subjectsToProcess.length * (isTier2 ? 30 : 25));
+  const maxMarks = isTier2 ? 390 : (totalQuestions * 2);
   const totalAttempted = totalCorrect + totalWrong;
   const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 1000) / 10 : 0;
 
   const now = new Date();
   const dateStr = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-  const title = (mockTitle && mockTitle.trim()) || detectedFromQuestions || (isFullMock ? `Full Mock - ${dateStr}` : `${effectiveActiveSubjects[0] || dominantSubject || "Sectional"} Mock - ${dateStr}`);
+  const title = (mockTitle && mockTitle.trim()) || detectedFromQuestions || (isFullMock ? (isTier2 ? `Tier II Full Mock - ${dateStr}` : `Full Mock - ${dateStr}`) : `${effectiveActiveSubjects[0] || dominantSubject || "Sectional"} Mock - ${dateStr}`);
 
   const detectedPlatform = preferredPlatform ||
                            rawList.find(q => q.platform)?.platform ||
@@ -1094,11 +1143,14 @@ function computeMockScoreReport(rawList: any[], mockTitle?: string, preferredId?
     title,
     platform: detectedPlatform,
     type: mockType,
+    tier: isTier2 ? "tier2" : "tier1",
     subject: isFullMock ? undefined : (effectiveActiveSubjects[0] || dominantSubject || "General"),
     date: now.toISOString(),
     totalQuestions,
     maxMarks,
-    totalScore: Math.round(totalScore * 10) / 10,
+    totalScore: isTier2 ? Math.round(meritScore * 10) / 10 : Math.round(totalScore * 10) / 10,
+    meritScore: isTier2 ? Math.round(meritScore * 10) / 10 : undefined,
+    computerScore: isTier2 ? Math.round(computerScore * 10) / 10 : undefined,
     overallAccuracy,
     totalCorrect,
     totalWrong,
@@ -1222,8 +1274,8 @@ async function startServer() {
         const subjectId = fileName.replace(".json", "");
 
         // Configure buckets per subject
-        if (subjectName === "Mathematics" || subjectName === "Reasoning") {
-          // 3 Buckets for Math & Reasoning
+        if (subjectName === "Mathematics" || subjectName === "Reasoning" || subjectName === "Computer Knowledge") {
+          // 3 Buckets for Math, Reasoning & Computer Knowledge
           if (!chapters.some(c => c.chapter_title === "Speed Issue")) {
             chapters.push({ chapter_num: 1, chapter_title: "Speed Issue", subject: subjectName, subject_id: subjectId, questions: [] });
           }
@@ -1272,7 +1324,7 @@ async function startServer() {
 
           let targetTitle = "Wrong";
 
-          if (subjectName === "Mathematics" || subjectName === "Reasoning") {
+          if (subjectName === "Mathematics" || subjectName === "Reasoning" || subjectName === "Computer Knowledge") {
             if (isSlow) {
               targetTitle = "Speed Issue";
             } else if (isUnattempted) {
@@ -1296,7 +1348,8 @@ async function startServer() {
           }
 
           const enr = item.enriched || {};
-          const qText = (enr.question || enr.questionText || q.questionText || q.question || "").trim();
+          let qText = (enr.question || enr.questionText || q.questionText || q.question || "").trim();
+          qText = qText.replace(/^(Mathematical Abilities|Reasoning and General Intelligence|English|Computer Knowledge|Quantitative Aptitude|General Intelligence|General Awareness)\s*\n+/i, '').trim();
           if (!qText) continue;
 
           const qId = generateQuestionId(subjectName, qText);

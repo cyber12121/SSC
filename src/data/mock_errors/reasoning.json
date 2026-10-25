@@ -3318,6 +3318,358 @@
           "conceptTested": "Relation between professional creator and their created product",
           "difficulty": "hard"
         }
+      },
+      {
+        "id": "reas_fb8bcaea32",
+        "q_num": 106,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:36",
+        "avgTime": "00:25",
+        "question": "If in a courier company, parcel IDs are decided by the initials of the delivery city followed by digits in a particular pattern like CH27481 for Chennai, then which of the following parcel IDs is likely to be from Kolkata?",
+        "options": {
+          "a": "OL82387",
+          "b": "KL45667",
+          "c": "LA84358",
+          "d": "CT08556"
+        },
+        "answer": "b",
+        "solution": "Parcel ID begins with the initials of the delivery city.\n\nChennai $\\rightarrow$ CH\n\nSimilarly, Kolkata $\\rightarrow$ KL\n\nHence, option B is correct.",
+        "image": null,
+        "topic": "Coding-Decoding",
+        "subtopic": "Number & Value Coding",
+        "conceptTested": "Direct pattern recognition based on city name initials to assign code identifiers.",
+        "tags": {
+          "topic": "Coding-Decoding",
+          "subtopic": "Number & Value Coding",
+          "conceptTested": "Direct pattern recognition based on city name initials to assign code identifiers.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_6c3bb621cb",
+        "q_num": 107,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:54",
+        "avgTime": "00:24",
+        "question": "Read the following statement carefully and identify the conclusion that follows.\n\nStatements:\nSome books are novels. No novel is a magazine.\n\nConclusions:\nI. Some books are not magazines.\nII. No book is a magazine.",
+        "options": {
+          "a": "Only\nconclusion I follows",
+          "b": "Only\nconclusion II follows",
+          "c": "Both conclusions I and II follow",
+          "d": "Neither\nconclusion I nor II follows"
+        },
+        "answer": "a",
+        "solution": "Some books are novels, and no novel is a magazine. Therefore, the books that are novels are definitely not magazines. Hence, conclusion I follows.\n\nHowever, we cannot say that no book is a magazine, because only some books are novels and the remaining books may or may not be magazines.\n\nTherefore, only conclusion I follows.",
+        "image": null,
+        "topic": "Statement & Conclusion",
+        "subtopic": "Statement & Conclusions",
+        "conceptTested": "Logical deduction from particular affirmative statements ('Some A are B') and universal negative statements ('No B is C').",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Statement & Conclusions",
+          "conceptTested": "Logical deduction from particular affirmative statements ('Some A are B') and universal negative statements ('No B is C').",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_ea292a84b4",
+        "q_num": 108,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:36",
+        "avgTime": "00:21",
+        "question": "Identify the odd one:\n\n$3, 5, 7, 11, 13, 17, 21$",
+        "options": {
+          "a": "7",
+          "b": "13",
+          "c": "17",
+          "d": "21"
+        },
+        "answer": "d",
+        "solution": "All numbers except 21 are prime numbers. 21 is a composite number because it is divisible by 3 and 7.\n\nTherefore, 21 is the odd one out.",
+        "image": null,
+        "topic": "Classification / Odd One Out",
+        "subtopic": "Number Classification",
+        "conceptTested": "Identification of composite numbers versus prime numbers in a given sequence.",
+        "tags": {
+          "topic": "Classification / Odd One Out",
+          "subtopic": "Number Classification",
+          "conceptTested": "Identification of composite numbers versus prime numbers in a given sequence.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_0fc4d21bb4",
+        "q_num": 109,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "C",
+        "correctOption": "C",
+        "userTime": "01:23",
+        "avgTime": "00:51",
+        "question": "Read the given conditions carefully and determine the appropriate outcome for the case provided.\n\nCriteria for Overseas Ph.D. Fellowship:\n\n(i) Master's degree in relevant field with $70\\%+$ marks.\n\n(ii) IELTS score of 7.0 or above.\n\n(iii) Minimum 1 research publication in an international journal.\n\nExceptions:\n\nException (A): If candidate fails (ii) with IELTS score 6.5, but has GRE score of $315+$, refer to Dean of International Relations.\n\nException (B): If candidate fails (iii) but has $3+$ years experience as a University Assistant Professor, refer to Academic Council.\n\nCase: Priya scored $74\\%$ in Master's in Biotechnology. She has 2 research publications in international journals. Her IELTS score is 6.5, but she has achieved a GRE score of 320.",
+        "options": {
+          "a": "Candidate to be selected",
+          "b": "Candidate to be rejected",
+          "c": "Case to be referred to Dean of International Relations",
+          "d": "Case to be referred to Academic Council"
+        },
+        "answer": "c",
+        "solution": "Criterion (i): Master's degree score is $74\\%$ Satisfied.\nCriterion (ii): IELTS score is 6.5 (Required: 7.0) Fails criterion (ii).\nCriterion (iii): Has 2 international journal publications Satisfied.\nException Check: Priya scored 6.5 in IELTS and has a GRE score of 320 (Required: $315+$). Thus, Exception (A) applies.\nOutcome: Case to be referred to Dean of International Relations.",
+        "image": null,
+        "topic": "Statement & Conclusion",
+        "subtopic": "Eligibility Criteria Evaluation",
+        "conceptTested": "Evaluating eligibility criteria and corresponding conditional exceptions for a fellowship.",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Eligibility Criteria Evaluation",
+          "conceptTested": "Evaluating eligibility criteria and corresponding conditional exceptions for a fellowship.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_cb44e301bb",
+        "q_num": 110,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:09",
+        "avgTime": "00:54",
+        "question": "Letters of a word are jumbled and each letter has been given a unique number. Select the combination of numbers from among the given options, so that the letters arranged accordingly will form the meaningful word.\n\nE K N O R T W\n1 2 3 4 5 6 7",
+        "options": {
+          "a": "5412763",
+          "b": "2354176",
+          "c": "1245367",
+          "d": "3167452"
+        },
+        "answer": "d",
+        "solution": "E K N O R T W\n\n1 2 3 4 5 6 7\n\nN E T W O R K\n\n3 1 6 7 4 5 2",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Alphabetical Sorting of Words",
+        "conceptTested": "Mapping scrambled letters using given numerical positions to form a meaningful word.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Alphabetical Sorting of Words",
+          "conceptTested": "Mapping scrambled letters using given numerical positions to form a meaningful word.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_20db1ac16b",
+        "q_num": 111,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "01:00",
+        "avgTime": "00:48",
+        "question": "Select the option that is related to the third term in the same way as the second term is related to the first term.\n\nEVEREST : FXHVJYA :: GLOWING : ?",
+        "options": {
+          "a": "HNRANTN",
+          "b": "HRNTRAN",
+          "c": "HNARNTN",
+          "d": "HNRATNN"
+        },
+        "answer": "a",
+        "solution": "The pattern is: $E + 1 = F$\n\n$V + 2 = X$\n\n$E + 3 = H$\n\n$R + 4 = V$\n\n$E + 5 = J$\n\n$S + 6 = Y$\n\n$T + 7 = A$\n\nSimilarly, $G + 1 = H$, $L + 2 = N$, $O + 3 = R$, $W + 4 = A$, $I + 5 = N$, $N + 6 = T$, $G + 7 = N$.",
+        "image": null,
+        "topic": "Analogy",
+        "subtopic": "Letter & Alphabet Analogy",
+        "conceptTested": "Sequential alphabetical forward shifting pattern of letters (+1, +2, +3, etc.).",
+        "tags": {
+          "topic": "Analogy",
+          "subtopic": "Letter & Alphabet Analogy",
+          "conceptTested": "Sequential alphabetical forward shifting pattern of letters (+1, +2, +3, etc.).",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_335740dc23",
+        "q_num": 112,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "02:03",
+        "avgTime": "01:26",
+        "question": "How many meaningful English words can be formed with the second, fifth, sixth and eighth letters of the word \"INCREDIBLE\" (when counted from left to right) using each letter only once in each word?",
+        "options": {
+          "a": "Three",
+          "b": "One",
+          "c": "Two",
+          "d": "More than three"
+        },
+        "answer": "b",
+        "solution": "The second, fifth, sixth and eighth letters of the word \"INCREDIBLE\" are N, E, D and B.\n\nSo, the words formed are BEND.\n\nThus, one word is formed.",
+        "image": null,
+        "topic": "Word Formation & Dictionary Order",
+        "subtopic": "Word Formation from Letters",
+        "conceptTested": "Extracting specific positions of letters from a given word and determining the number of meaningful English words that can be formed using each letter only once.",
+        "tags": {
+          "topic": "Word Formation & Dictionary Order",
+          "subtopic": "Word Formation from Letters",
+          "conceptTested": "Extracting specific positions of letters from a given word and determining the number of meaningful English words that can be formed using each letter only once.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_7b8d77442a",
+        "q_num": 113,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:18",
+        "avgTime": "00:44",
+        "question": "Fill in the missing value in the series:\n\n$139C$, $164H$, $191M$, $220R$, $?",
+        "options": {
+          "a": "256V",
+          "b": "281W",
+          "c": "199X",
+          "d": "251W"
+        },
+        "answer": "d",
+        "solution": "The number part follows the pattern $n^2 - 5$ where $n$ starts from $12$: $12^2 - 5 = 144 - 5 = 139$ with letter $C$\n\n$13^2 - 5 = 169 - 5 = 164$ with letter $H$ ($C + 5$)\n\n$14^2 - 5 = 196 - 5 = 191$ with letter $M$ ($H + 5$)\n\n$15^2 - 5 = 225 - 5 = 220$ with letter $R$ ($M + 5$)\n\n$16^2 - 5 = 256 - 5 = 251$ with letter $W$ ($R + 5$)\n\nThus, the missing term is $251W$.",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Alphanumeric Series",
+        "conceptTested": "Simultaneous tracking of numerical sequences using squares and constant subtraction alongside alphabetical shifts by a fixed increment.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Alphanumeric Series",
+          "conceptTested": "Simultaneous tracking of numerical sequences using squares and constant subtraction alongside alphabetical shifts by a fixed increment.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_fff03cdad1",
+        "q_num": 114,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "01:34",
+        "avgTime": "01:03",
+        "question": "Study the following information and answer the given question:\n\n$X @ Y$ means $X$ is the maternal uncle of $Y$.\n\n$X \\# Y$ means $X$ is the son of $Y$.\n\n$X * Y$ means $X$ is the sister of $Y$.\n\nThen how is $G$ related to $E$ in the expression $G * F \\# C @ E \\# B$?",
+        "options": {
+          "a": "Aunt",
+          "b": "Brother",
+          "c": "Mother",
+          "d": "Cousin"
+        },
+        "answer": "d",
+        "solution": "Breaking down the expression $G * F \\# C @ E \\# B$: - $G * F$ means $G$ is the sister of $F$. - $F \\# C$ means $F$ is the son of $C$. Therefore, $G$ is also the daughter of $C$. - $C @ E$ means $C$ is the maternal uncle of $E$. - $E \\# B$ means $E$ is the son of $B$.\n\nSince $C$ is the maternal uncle of $E$ and $G$ is the daughter of $C$, $G$ and $E$ share the same mother's brother relationship, making $G$ the cousin of $E$.",
+        "image": null,
+        "topic": "Blood Relations",
+        "subtopic": "Coded Blood Relations",
+        "conceptTested": "Decoding symbolic relationship operators to establish family tree connections and determine generational relations.",
+        "tags": {
+          "topic": "Blood Relations",
+          "subtopic": "Coded Blood Relations",
+          "conceptTested": "Decoding symbolic relationship operators to establish family tree connections and determine generational relations.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_61ad6f892f",
+        "q_num": 115,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "02:02",
+        "avgTime": "01:11",
+        "question": "Select the option that represents the letters that, when placed from left to right in the following blanks will complete the letter series.\n\nP O _ A _ P _ R B _ P Q R _ Y P _ R D Y",
+        "options": {
+          "a": "R, Y, P, Y, C, R",
+          "b": "R, Y, Q, Y, D, R",
+          "c": "R, Y, P, Y, D, R",
+          "d": "R, Y, Q, Y, C, R"
+        },
+        "answer": "a",
+        "solution": "Here there is an alphabetical series, 1st - O, P, Q, R\n\n2nd - A, B, C, D\n\nP O R A Y P P R B Y P Q R C Y P R R D Y\n\nSo, option (a) is the correct answer.",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Continuous Pattern Letter Series",
+        "conceptTested": "Identification of repeating alphabetical and alternating sequence patterns in a continuous letter series.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Continuous Pattern Letter Series",
+          "conceptTested": "Identification of repeating alphabetical and alternating sequence patterns in a continuous letter series.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "reas_44482b8a80",
+        "q_num": 116,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "D",
+        "correctOption": "D",
+        "userTime": "02:39",
+        "avgTime": "02:06",
+        "question": "Eight females - A, B, C, D, E, F, G and H are sitting around a circular table with their faces towards the centre. A faces C. F faces the female who is sitting second to the left of C. H is sitting to the immediate left of F. Two females are sitting between B and D. G and B are not neighbours of A. Find the pair which is odd from the rest.",
+        "options": {
+          "a": "A-G",
+          "b": "E-C",
+          "c": "F-E",
+          "d": "A-F"
+        },
+        "answer": "d",
+        "solution": "Eight females - A, B, C, D, E, F, G and H are sitting around a circular table with their faces towards the centre.\n\nA faces C. F faces the female who is sitting second to the left of C.\n\nH is sitting to the immediate left of F.\n\nTwo females are sitting between B and D. G and B are not neighbours of A.\n\nThus, the final arrangement is: Except option (d), in all other options, two females/four females are sitting between the mentioned females.",
+        "image": null,
+        "topic": "Seating Arrangement",
+        "subtopic": "Circular Seating Arrangement",
+        "conceptTested": "Deduction of relative positions in a circular seating arrangement facing the centre based on directional clues.",
+        "tags": {
+          "topic": "Seating Arrangement",
+          "subtopic": "Circular Seating Arrangement",
+          "conceptTested": "Deduction of relative positions in a circular seating arrangement facing the centre based on directional clues.",
+          "difficulty": "hard"
+        }
       }
     ]
   },
@@ -4651,6 +5003,38 @@
           "topic": "Analogy",
           "subtopic": "Number & Set Analogy",
           "conceptTested": "Mathematical operations relating numbers in a set",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_ffb36c812d",
+        "q_num": 43,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "A",
+        "userTime": "01:24",
+        "avgTime": "01:59",
+        "question": "Select the letters that will replace the question marks (?) in the following series:\n\n$J$, $G$, $M$, $K$, $P$, $?$, $?$, $E$, $V$, $U$",
+        "options": {
+          "a": "S, S",
+          "b": "T, S",
+          "c": "S, U",
+          "d": "T, R"
+        },
+        "answer": "a",
+        "solution": "The sequence consists of two alternating series: First series (1st, 3rd, 5th, 7th, 9th positions): $J (+3) \\rightarrow M (+3) \\rightarrow P (+3) \\rightarrow S (+3) \\rightarrow V$\nSecond series (2nd, 4th, 6th, 8th, 10th positions): $G (+4) \\rightarrow K (+8) \\rightarrow S (+12) \\rightarrow E (+16) \\rightarrow U$\n\nThus, the missing letters are $S$ and $S$.",
+        "image": null,
+        "topic": "Letter & Symbol Series",
+        "subtopic": "Letter & Symbol Series",
+        "conceptTested": "Identifying interleaved alternating series patterns within a complex alphabetical sequence.",
+        "tags": {
+          "topic": "Letter & Symbol Series",
+          "subtopic": "Letter & Symbol Series",
+          "conceptTested": "Identifying interleaved alternating series patterns within a complex alphabetical sequence.",
           "difficulty": "medium"
         }
       }
@@ -7872,6 +8256,102 @@
           "topic": "Statement & Assumption",
           "subtopic": "Action-Oriented Assumptions",
           "conceptTested": "Logical evaluation of implicit assumptions underlying a statement",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_763a347aeb",
+        "q_num": 103,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "01:56",
+        "avgTime": "01:48",
+        "question": "How many of the following pairs consist of two palindromic numbers whose difference is also a palindrome?\n\nPairs:\nI. $(12721, 10101)\\nII. (45554, 34453)\\nIII. (34343, 20202)\\nIV. (65656, 33933)$",
+        "options": {
+          "a": "II",
+          "b": "I",
+          "c": "III",
+          "d": "IV"
+        },
+        "answer": "c",
+        "solution": "A palindrome number is a number that reads the same both forwards and backwards.\n\nI. Reverse of $12721 = 12721$, Reverse of $10101 = 10101$\n\nDifference $= 12721 - 10101 = 2620$ (Reverse is $0262$, not a palindrome).\n\nII. Reverse of $45554 = 45554$, Reverse of $34453 = 35443$ (not a palindrome itself).\n\nIII. Reverse of $34343 = 34343$, Reverse of $20202 = 20202$. Both are palindromes.\n\nDifference $= 34343 - 20202 = 14141$.\n\nReverse of $14141 = 14141$ (which is also a palindrome).\n\nIV. Reverse of $65656 = 65656$, Reverse of $33933 = 33933$.\n\nDifference $= 65656 - 33933 = 31723$ (Reverse is $32713$, not a palindrome).\n\nHence, only pair III satisfies all conditions.",
+        "image": null,
+        "topic": "Alphabet Test",
+        "subtopic": "Vowel & Consonant Operations",
+        "conceptTested": "Identification of palindromic numbers (numbers that read the same forwards and backwards) and arithmetic difference properties.",
+        "tags": {
+          "topic": "Alphabet Test",
+          "subtopic": "Vowel & Consonant Operations",
+          "conceptTested": "Identification of palindromic numbers (numbers that read the same forwards and backwards) and arithmetic difference properties.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_a1b6569584",
+        "q_num": 104,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "A",
+        "userTime": "00:24",
+        "avgTime": "00:43",
+        "question": "In this question, a\nstatement is followed by two courses of actions, numbered I and II. You must assume everything in the statement to be true and on the basis of the information given in the statement, decide which of the course of action/s logically follows for pursuing.\n\nStatement: An overloaded truck flipped on the road of RBI Square causing injuries to several people present there.\n\nCourse of Action:\n\nI. Government should charge a penalty to the trucks which are carrying a load above their capacity.\n\nII. Netizens present at that accident site should call an ambulance and Police station without causing any delay.",
+        "options": {
+          "a": "Only II follows",
+          "b": "Both I and II follow",
+          "c": "Only I follows",
+          "d": "Neither I nor II follows"
+        },
+        "answer": "a",
+        "solution": "First thing to be done after the accident is to call the ambulance and Police to help the injured people.\n\nThe action of charging a penalty by the government can be taken later.\n\nThus, only conclusion II follows.",
+        "image": null,
+        "topic": "Course of Action",
+        "subtopic": "Administrative & Problem Solving Actions",
+        "conceptTested": "Logical prioritization of emergency responses during accidents over policy measures.",
+        "tags": {
+          "topic": "Course of Action",
+          "subtopic": "Administrative & Problem Solving Actions",
+          "conceptTested": "Logical prioritization of emergency responses during accidents over policy measures.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "reas_5ffea983e7",
+        "q_num": 105,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:50",
+        "avgTime": "00:48",
+        "question": "A\nstatement is given followed by two inferences I and II. You have to consider the statements to be true even if it seems to be at variance with commonly known facts. You have to decide which of the given inferences, if any, follow from the given statement.\n\nStatement: In the modern day, educators use projectors and presentations to enhance learning rather than using white boards. Teaching through powerpoint can save time for a teacher to write the words/important points on a board. Powerpoint can likewise attract the attention of students.\n\nInferences:\n\nI. Learning through representations helps in better understanding.\n\nII. Teachers directly distribute notes through presentation.",
+        "options": {
+          "a": "If only I follows",
+          "b": "If only II follows",
+          "c": "If neither I nor II follows",
+          "d": "If both I and II follow"
+        },
+        "answer": "a",
+        "solution": "The statement states that teachers use projectors and presentations to enhance learning rather than white boards.\n\nI. Learning through representations helps in better understanding: Since teachers use projectors and presentations to enhance learning, it follows directly that learning through representations helps in better understanding. So, I follows.\n\nII. Teachers directly distribute notes through presentation: There is no reference to the distribution of notes in the statement. So, II does not follow.",
+        "image": null,
+        "topic": "Statement & Conclusion",
+        "subtopic": "Statement & Conclusions",
+        "conceptTested": "Logical deduction and inference validation based strictly on the provided passage without assuming extraneous details.",
+        "tags": {
+          "topic": "Statement & Conclusion",
+          "subtopic": "Statement & Conclusions",
+          "conceptTested": "Logical deduction and inference validation based strictly on the provided passage without assuming extraneous details.",
           "difficulty": "medium"
         }
       }

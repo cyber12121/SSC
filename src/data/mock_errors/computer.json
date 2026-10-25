@@ -1,0 +1,314 @@
+[
+  {
+    "chapter_num": 1,
+    "chapter_title": "Speed Issue",
+    "subject": "Computer Knowledge",
+    "subject_id": "computer",
+    "questions": [
+      {
+        "id": "comp_e96f6eb767",
+        "q_num": 1,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:30",
+        "avgTime": "00:15",
+        "question": "Consider the following statements regarding Internet-related concepts:\n\nI. A URL (Uniform Resource Locator) is the address used to locate a specific resource, such as a webpage, on the internet.\n\nII. An Internet Service Provider (ISP) is a company that provides individuals and organisations access to the internet.\n\nIII. HTTPS is a less secure version of the HTTP protocol, used only for internal (intranet) communications, and is never used for public websites.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "I and II only",
+          "b": "II and III only",
+          "c": "I and III only",
+          "d": "I, II and III"
+        },
+        "answer": "a",
+        "solution": "Statement I correctly describes a URL. Statement II is also correct - an ISP is indeed a company providing internet access to end users.\nStatement III is incorrect - HTTPS ('HTTP Secure') is actually a more secure version of HTTP, using encryption (via SSL/TLS) to protect data in transit, and it is widely used for public - facing websites, particularly those handling sensitive information like passwords or payments.\nFurther insights: Browsers typically display a padlock icon in the address bar for HTTPS - secured websites, indicating that the connection is encrypted; this has become a near - universal standard for e - commerce, banking and government portals.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Internet Networking",
+        "conceptTested": "Internet fundamentals, Uniform Resource Locators (URL), Internet Service Providers (ISP), and HTTPS cryptographic security protocols.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Internet Networking",
+          "conceptTested": "Internet fundamentals, Uniform Resource Locators (URL), Internet Service Providers (ISP), and HTTPS cryptographic security protocols.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "comp_ac35c34049",
+        "q_num": 2,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "A",
+        "correctOption": "A",
+        "userTime": "00:27",
+        "avgTime": "00:10",
+        "question": "Which type of computer memory provides fast access to data and instructions but loses its contents when the power is turned off?",
+        "options": {
+          "a": "Random Access Memory (RAM)",
+          "b": "Read-Only Memory (ROM)",
+          "c": "Hard Disk Drive (HDD)",
+          "d": "Solid-State Drive (SSD)"
+        },
+        "answer": "a",
+        "solution": "RAM is a type of computer memory that provides fast access to data and instructions for the CPU. It is a volatile memory, meaning it loses its contents when the power is turned off or disrupted. RAM is used to temporarily store data that the CPU needs to access quickly during operations. It allows for quick read and write operations, making it essential for the smooth functioning of a computer system.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Computer Memory",
+        "conceptTested": "Characteristics of primary volatile memory (RAM) providing fast data access for the CPU.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Computer Memory",
+          "conceptTested": "Characteristics of primary volatile memory (RAM) providing fast data access for the CPU.",
+          "difficulty": "hard"
+        }
+      }
+    ]
+  },
+  {
+    "chapter_num": 2,
+    "chapter_title": "Unattempted",
+    "subject": "Computer Knowledge",
+    "subject_id": "computer",
+    "questions": [
+      {
+        "id": "comp_75f0640776",
+        "q_num": 1,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:09",
+        "avgTime": "00:09",
+        "question": "DIMM is commonly known as",
+        "options": {
+          "a": "ROM stick",
+          "b": "USB stick",
+          "c": "RAM stick",
+          "d": "Cache stick"
+        },
+        "answer": "c",
+        "solution": "DIMM is an abbreviation of the Dual in - line Memory Module. It is also a computer memory, which is commonly known as the RAM stick. It installs in the memory cells of the motherboard. It is a module which is used in laptops, personal computers (Pcs) , printers, and other devices.\n\nThe memory chips of DIMM are DRAM (Dynamic Random Access Memory) , which is the most common category of main memory.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Computer Hardware",
+        "conceptTested": "Identification of Dual in-line Memory Module (DIMM) as a standard RAM stick format.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Computer Hardware",
+          "conceptTested": "Identification of Dual in-line Memory Module (DIMM) as a standard RAM stick format.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "chapter_num": 3,
+    "chapter_title": "Wrong",
+    "subject": "Computer Knowledge",
+    "subject_id": "computer",
+    "questions": [
+      {
+        "id": "comp_e12eb4b60d",
+        "q_num": 1,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:30",
+        "avgTime": "00:26",
+        "question": "Consider the following statements regarding the behavior, management, and properties of an operating system's Virtual Memory configuration:\n\nI. Virtual memory extends the system's available memory space by creating a hidden file or partition on the secondary storage drive (such as a pagefile or swap space).\n\nII. A Page Fault is an operating system alert that triggers a fatal hardware crash whenever a physical RAM stick fails its POST initialization checks.\n\nIII. Excessive swapping of memory segments back and forth between physical RAM and slow secondary disk storage can lead to a performance trap called Thrashing.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "I and II only",
+          "b": "I and III only",
+          "c": "II and III only",
+          "d": "I, II, and III"
+        },
+        "answer": "b",
+        "solution": "Statement I is correct: Virtual memory allows computers to run massive application processes that exceed physical hardware capacity by shifting idle chunks out to the hard drive.\nStatement II is incorrect: A page fault is a routine software interrupt. It simply means the CPU tried to access a memory block that is currently swapped out to disk, signaling the OS to fetch it back into physical RAM.\nStatement III is correct: When memory demands are too high, the OS spends all its processing cycles moving data pages back and forth rather than running programs, freezing system throughput.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Operating Systems",
+        "conceptTested": "Virtual memory mechanics, page faults as routine software interrupts, and thrashing caused by excessive swapping.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Operating Systems",
+          "conceptTested": "Virtual memory mechanics, page faults as routine software interrupts, and thrashing caused by excessive swapping.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "comp_af366720a4",
+        "q_num": 2,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:07",
+        "avgTime": "00:17",
+        "question": "In MS PowerPoint, which of the following keys is not used to change the font size?",
+        "options": {
+          "a": "Alt + N",
+          "b": "Alt + H",
+          "c": "Alt + F",
+          "d": "Alt + S"
+        },
+        "answer": "a",
+        "solution": "Alt + H, F, S are used to change the font size for selected text in MS PowerPoint.\n\nAlt + N is a keyboard shortcut used to open the insert tab in Microsoft PowerPoint presentation.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Ms Office Shortcuts",
+        "conceptTested": "Keyboard shortcuts in presentation software such as MS PowerPoint for formatting and ribbon navigation.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Ms Office Shortcuts",
+          "conceptTested": "Keyboard shortcuts in presentation software such as MS PowerPoint for formatting and ribbon navigation.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "comp_64d29a5612",
+        "q_num": 3,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:15",
+        "avgTime": "00:15",
+        "question": "_______ is a set of internet-connected computers/devices that are infected and controlled by a common type of malware.",
+        "options": {
+          "a": "Trojan",
+          "b": "Botnet",
+          "c": "Ransomware",
+          "d": "Connectnet"
+        },
+        "answer": "b",
+        "solution": "· Hacking is an attempt to exploit a computer system or a private network inside a computer. It is the unauthorized access to or control over computer network security systems for some illicit purpose.\n\n· Viruses, Keyloggers, Rootkit, Spoofing attack, Packet Sniffer, Trojan horse, Password cracking are various techniques for hacking.\n\n· A botnet is a collection of internet - connected devices, which may include personal computers (PCs), servers, mobile devices and internet of things (IoT) devices that are infected and controlled by a common type of malware, often unbeknownst to their owner.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Cybersecurity Malware",
+        "conceptTested": "Definition of botnets as networks of malware-infected devices controlled by a command and control server.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Cybersecurity Malware",
+          "conceptTested": "Definition of botnets as networks of malware-infected devices controlled by a command and control server.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "comp_2cf25672b3",
+        "q_num": 4,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "A",
+        "userTime": "00:21",
+        "avgTime": "00:21",
+        "question": "Consider the following statements regarding Cybersecurity Cryptography Standards used to protect enterprise communications over public infrastructure networks:\n\nI. Symmetric Encryption models deploy an identical shared private key configuration that must remain completely secure between both the sender and the receiver to encrypt and decrypt traffic.\n\nII. Asymmetric Encryption deployment models utilize a mathematically linked public-private key pair, where data scrambled via the public key can only be decrypted by the matching private key node.\n\nIII. Digital Signatures rely on a sender encrypting a message hash with their own public key to guarantee data payload integrity and absolute non-repudiation.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "I and II only",
+          "b": "I and III only",
+          "c": "II and III only",
+          "d": "I, II, and III"
+        },
+        "answer": "a",
+        "solution": "Statement I is correct: Symmetric setups (like AES) are highly computational - efficient and fast, but require a secure out - of - band channel to exchange the single shared secret key safely.\nStatement II is correct: Asymmetric infrastructures (like RSA or ECC) remove key distribution headaches since the public key can be openly shared with anyone while the private key stays hidden.\nStatement III is incorrect: To create a digital signature, the sender encrypts the message digest with their private key (not public key). Anyone can then use the sender's public key to decrypt and verify that the message authenticates back to that exact sender.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Cryptography Security",
+        "conceptTested": "Mechanisms of symmetric encryption, asymmetric public-private key infrastructure, and digital signatures.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Cryptography Security",
+          "conceptTested": "Mechanisms of symmetric encryption, asymmetric public-private key infrastructure, and digital signatures.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "comp_51c72a919f",
+        "q_num": 5,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:16",
+        "avgTime": "00:17",
+        "question": "Consider the following statements regarding the Open Systems Interconnection (OSI) reference model:\n\n1) The Data Link Layer is responsible for bit-by-bit transmission over a physical medium.\n\n2) The Network Layer handles logical addressing (IP addresses) and routing of data packets across different networks.\n\n3) The Transport Layer provides end-to-end communication control, error detection, and flow control using protocols like TCP and UDP.\n\n4) The Session Layer establishes, manages, and terminates connections between applications.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "2, 3, and 4 only",
+          "c": "1, 3, and 4 only",
+          "d": "1, 2, 3, and 4"
+        },
+        "answer": "b",
+        "solution": "Statement 1 is incorrect: Bit - by - bit transmission over a physical medium is handled by the Physical Layer. The Data Link Layer deals with framing, physical addressing (MAC addresses), and hop - to - hop error control.\nStatement 2 is correct: The Network Layer uses IP addressing to route packets across intermediate nodes and subnetworks.\nStatement 3 is correct: The Transport Layer manages end - to - end communication, segmentation, flow control, and error recovery (TCP/UDP).\nStatement 4 is correct: The Session Layer is responsible for opening, closing, and maintaining sessions/dialogues between applications.\nFurther insights: Routers operate primarily at Layer 3 (Network Layer), whereas Layer 2 switches operate at the Data Link Layer using MAC address tables.",
+        "image": null,
+        "topic": "Computer Knowledge",
+        "subtopic": "Networking Models",
+        "conceptTested": "Layer-by-layer functions and responsibilities of the Open Systems Interconnection (OSI) reference model.",
+        "tags": {
+          "topic": "Computer Knowledge",
+          "subtopic": "Networking Models",
+          "conceptTested": "Layer-by-layer functions and responsibilities of the Open Systems Interconnection (OSI) reference model.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "comp_15bf5c44d5",
+        "q_num": 6,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "D",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:19",
+        "question": "In MS Excel, which function searches for a value in the leftmost column of a table array and returns a value in the same row from a specified column number?",
+        "options": {
+          "a": "=HLOOKUP()",
+          "b": "=VLOOKUP()",
+          "c": "=INDEX()",
+          "d": "=MATCH()"
+        },
+        "answer": "b",
+        "solution": "= VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) performs a vertical lookup by searching for a key in the first column of table_array and retrieving data from the specified column index col_index_num. HLOOKUP searches horizontally along the top row.",
+        "image": null,
+        "topic": "General Awareness",
+        "subtopic": "Computers It",
+        "conceptTested": "MS Excel lookup functions, specifically VLOOKUP for vertical lookups in tables.",
+        "tags": {
+          "topic": "General Awareness",
+          "subtopic": "Computers It",
+          "conceptTested": "MS Excel lookup functions, specifically VLOOKUP for vertical lookups in tables.",
+          "difficulty": "medium"
+        }
+      }
+    ]
+  }
+]

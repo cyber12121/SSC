@@ -41,6 +41,9 @@ export function cleanQuestionText(text: string = ''): string {
   // Strip residual redundant options block appended at the end of question statements
   s = s.replace(/\n\s*Options:\s*\n\s*A:[\s\S]+$/i, '');
 
+  // Strip residual section headers prepended to question text (e.g. from Oliveboard / Testbook Tier 2 scrapers)
+  s = s.replace(/^(Mathematical Abilities|Reasoning and General Intelligence|English|Computer Knowledge|Quantitative Aptitude|General Intelligence|General Awareness)\s*\n+/i, '').trim();
+
   // Protect single dollar signs used as operators in reasoning (e.g. "'$'", "'\$'", "'\$\$'")
   s = s.replace(/(['"`])(?:\$|\\+\$|\$\\+\$)(['"`])/g, '$1___DOLLAR_SYM___$2');
   s = s.replace(/(\b\d+)\s*(?:\\+\$|\$)\s*(\d+\b)/g, '$1 ___DOLLAR_SYM___ $2');

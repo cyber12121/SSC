@@ -111,7 +111,7 @@ export function classifyTestType(q: any, reports?: MockScoreReport[]): 'full' | 
     }
 
     // Rule F: Known full mock keywords
-    if (/full test|mega live test|live test|tier i: full|tier i-|\btier 1\b|\btier-1\b|isro mock/i.test(rawTitle)) {
+    if (/full test|mega live test|live test|tier i: full|tier i-|\btier 1\b|\btier-1\b|\btier 2\b|\btier-2\b|\btier ii\b|isro mock/i.test(rawTitle)) {
       return 'full';
     }
   }

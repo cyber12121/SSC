@@ -14,11 +14,14 @@ export interface MockScoreReport {
   title: string;
   platform?: string;
   type: 'full' | 'sectional';
+  tier?: 'tier1' | 'tier2';
   subject?: string; // for sectional mocks
   date: string;
   totalQuestions: number;
   maxMarks: number;
   totalScore: number;
+  meritScore?: number;
+  computerScore?: number;
   overallAccuracy: number;
   totalCorrect: number;
   totalWrong: number;
@@ -28,6 +31,7 @@ export interface MockScoreReport {
     mathematics?: SectionScore;
     english?: SectionScore;
     generalAwareness?: SectionScore;
+    computer?: SectionScore;
   };
   questions?: Question[];
 }

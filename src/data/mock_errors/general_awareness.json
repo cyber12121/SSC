@@ -5265,6 +5265,198 @@
           "conceptTested": "Gallantry award statistics and recipient data for 2026",
           "difficulty": "medium"
         }
+      },
+      {
+        "id": "gene_51a9ffb9e9",
+        "q_num": 168,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:13",
+        "avgTime": "00:23",
+        "question": "At which foreign port did the Indian Naval Sail Training Ship INS Sudarshini make the first international port call of its ten-month transoceanic voyage 'Lokayan-26' in February 2026?",
+        "options": {
+          "a": "Port of Duqm",
+          "b": "Sultan Qaboos Port",
+          "c": "Port of Sohar",
+          "d": "Port of Salalah"
+        },
+        "answer": "d",
+        "solution": "INS Sudarshini arrived at the Port of Salalah, Oman, on 2 February 2026, marking the first international port call of its ten - month transoceanic voyage, Lokayan - 26.\n\nThe voyage aims to showcase India's rich maritime heritage, strengthen international maritime cooperation, and promote the Indian Navy's maritime diplomacy. During the visit, the ship engaged with the Royal Navy of Oman through professional interactions and community outreach activities.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "National & Global Events",
+        "conceptTested": "International naval deployments, sail training ships, and bilateral maritime diplomacy.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "National & Global Events",
+          "conceptTested": "International naval deployments, sail training ships, and bilateral maritime diplomacy.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a8531284e8",
+        "q_num": 169,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:12",
+        "avgTime": "01:11",
+        "question": "In the context of international Track and Field (Athletics) regulations governed by World Athletics, consider the following statements regarding the technical execution of a valid Long Jump:\n\n1. A jump is declared a foul if any part of the athlete's take-off shoe or foot breaks the vertical plane of the take-off line (advancing past the front edge of the take-off board), regardless of whether it touches the plasticine indicator board.\n\n2. The distance of the jump is measured from the front edge of the take-off board to the very first point of contact made by any part of the athlete's body or limbs in the landing pit.\n\n3. If an athlete somersaults or flips forward through the air during the flight phase, the jump is automatically disqualified.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "1 and 3 only",
+          "c": "2 and 3 only",
+          "d": "1, 2 and 3"
+        },
+        "answer": "b",
+        "solution": "Statement 1 is correct: Under the updated World Athletics technical rules (the \"take - off foul rule\"), a foul is redefined strictly by whether any part of the athletes foot or shoe breaks the vertical plane of the take - off line. This replaced the older rule that required an actual physical footprint to be left in the plasticine.\nStatement 2 is incorrect: The distance is measured from the edge of the take - off board to the nearest break in the landing area (the sand pit) made by any part of the body, which means it is measured to the mark closest to the take - off board (usually where the hands, heels, or rear slips), not the first point of contact.\nStatement 3 is correct: World Athletics explicitly bans the use of somersaults (such as the historical \"flip\" technique) during the take - off or flight phases of the long jump due to extreme safety risks to the athlete's spine and neck.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "World Athletics technical regulations and foul rules for the long jump event.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "World Athletics technical regulations and foul rules for the long jump event.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_d04db8b8ef",
+        "q_num": 170,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "D",
+        "userTime": "00:08",
+        "avgTime": "00:33",
+        "question": "Consider the following statements regarding historic firsts in sports:\n\ni) K.D. Jadhav became the first individual Olympic medalist of independent India by winning a bronze medal in wrestling at the 1952 Helsinki Olympics.\n\nii) Karnam Malleswari became the first Indian woman to win an Olympic medal when she secured a bronze in weightlifting at the 2000 Sydney Olympics.\n\niii) Sachin Tendulkar was the first player in international cricket history to score a double century in One Day Internationals (ODIs).\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "i and ii only",
+          "b": "ii and iii only",
+          "c": "i and iii only",
+          "d": "i, ii and iii"
+        },
+        "answer": "d",
+        "solution": "Statement (i) is correct: K.D. Jadhav won the bronze medal in freestyle wrestling at the 1952 Helsinki Olympics.\nStatement (ii) is correct: Karnam Malleswari won the bronze medal in the women's 69 kg weightlifting event at the 2000 Sydney Olympics.\nStatement (iii) is correct: Sachin Tendulkar became the first cricketer in international ODI history to score a double century, remaining unbeaten on 200 against South Africa on 24 February 2010.",
+        "image": null,
+        "topic": "Sports & Trophies",
+        "subtopic": "Sports, Cups & Trophies",
+        "conceptTested": "Historic firsts in Indian sports at the Olympics and international cricket.",
+        "tags": {
+          "topic": "Sports & Trophies",
+          "subtopic": "Sports, Cups & Trophies",
+          "conceptTested": "Historic firsts in Indian sports at the Olympics and international cricket.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_275cd0bc83",
+        "q_num": 171,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:15",
+        "avgTime": "00:24",
+        "question": "Which of the following is a prominent traditional festival celebrated by the Khasi tribe in Meghalaya, primarily as a thanksgiving for a good harvest and featuring ceremonial dances?",
+        "options": {
+          "a": "Wangala",
+          "b": "Behdeinkhlam",
+          "c": "Shad Nongkrem",
+          "d": "Diwali"
+        },
+        "answer": "c",
+        "solution": "Shad Nongkrem (also known as Nongkrem Dance Festival) is one of the most important festivals of the Khasi tribe in Meghalaya, celebrated annually in November in Smit village near Shillong as an offering of thanks to the deity Shillong for a bountiful harvest.",
+        "image": null,
+        "topic": "Festivals & Fairs",
+        "subtopic": "Tribal Regional Festivals",
+        "conceptTested": "Traditional festivals of Northeast India, specifically the Khasi tribe of Meghalaya.",
+        "tags": {
+          "topic": "Festivals & Fairs",
+          "subtopic": "Tribal Regional Festivals",
+          "conceptTested": "Traditional festivals of Northeast India, specifically the Khasi tribe of Meghalaya.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_2673774f86",
+        "q_num": 172,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "C",
+        "userTime": "00:10",
+        "avgTime": "00:24",
+        "question": "The Women's Prize for Fiction, one of the United Kingdom's most prestigious literary awards for women writing in English, was won in 2007 by Chimamanda Ngozi Adichie. For which of her highly acclaimed historical novels did she secure this recognition?",
+        "options": {
+          "a": "Purple Hibiscus",
+          "b": "Americanah",
+          "c": "Half of a Yellow Sun",
+          "d": "Dear Ijeawele"
+        },
+        "answer": "c",
+        "solution": "Chimamanda Ngozi Adichie received the 2007 prize for her masterpiece Half of a Yellow Sun, which deals with the devastating human toll of the Biafran War in Nigeria during the late 1960s. Purple Hibiscus was her debut novel.",
+        "image": null,
+        "topic": "Books & Authors",
+        "subtopic": "International Literary Awards",
+        "conceptTested": "Recognizing major contemporary novels and their authors, such as the Women's Prize for Fiction.",
+        "tags": {
+          "topic": "Books & Authors",
+          "subtopic": "International Literary Awards",
+          "conceptTested": "Recognizing major contemporary novels and their authors, such as the Women's Prize for Fiction.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_4d316a42cb",
+        "q_num": 173,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Unattempted",
+        "chosenOption": "N/A",
+        "correctOption": "B",
+        "userTime": "00:10",
+        "avgTime": "00:20",
+        "question": "Who among the following Indian Army officers won the UN Secretary General's Award 2025 for the project 'Equal Partners, Lasting Peace' while serving with the United Nations Mission in South Sudan, for advancing gender parity and gender-responsive peacekeeping in January 2026?",
+        "options": {
+          "a": "Colonel Anita Verma",
+          "b": "Major Swathi Kumar",
+          "c": "Major Nidhi Singh",
+          "d": "Captain Ritu Sharma"
+        },
+        "answer": "b",
+        "solution": "An Indian army officer from Bengaluru, Major Swathi Shantha Kumar, has won the UN Secretary General's Award 2025 for her project Equal Partners, Lasting Peace. Major Swathi is currently serving on an United Nations Mission in South Sudan (UNMISS) and her efforts are said to have significantly enhanced gender parity through the effective deployment and integration of the Indian Engagement team, thereby strengthening grassroot level engagement across the area of responsibility. Under her initiative and command, the team successfully conducted short - and long - distance patrols, integrated reverie patrols, and dynamic air patrols to far - flung counties of the host nation. Major Swathi is an officer in the Corps of Electronics and Mechanical Engineers (EME). Her father, R. Shantha Kumar, said that she did her schooling in Bengaluru and graduated from the New Horizon College of Engineering following which she was commissioned in the Indian Army. United Nations Secretary - General Antonio Guterres recently announced and honored the winners of the Secretary General's Award 2025. This prestigious award recognises initiatives that advance gender parity and promote gender - responsive peacekeeping in alignment with the UN mandate.",
+        "image": null,
+        "topic": "National & International Current Affairs",
+        "subtopic": "Government Schemes & Policies",
+        "conceptTested": "Recognition of Indian military personnel in international peacekeeping missions and gender parity initiatives.",
+        "tags": {
+          "topic": "National & International Current Affairs",
+          "subtopic": "Government Schemes & Policies",
+          "conceptTested": "Recognition of Indian military personnel in international peacekeeping missions and gender parity initiatives.",
+          "difficulty": "medium"
+        }
       }
     ]
   },
@@ -13792,6 +13984,198 @@
           "topic": "Physical Geography",
           "subtopic": "Indian Rivers & Drainage System",
           "conceptTested": "Identification and location of Himalayan mountain passes and corresponding Indian states/UTs.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_a3117bfaf7",
+        "q_num": 271,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "B",
+        "userTime": "00:15",
+        "avgTime": "00:25",
+        "question": "Which of the following conditions correctly describes a \"Fiscal Deficit\"?",
+        "options": {
+          "a": "The excess of total government revenue expenditure over its total revenue receipts.",
+          "b": "The difference between the government's total expenditure and its total receipts excluding borrowings.",
+          "c": "Total capital expenditure minus interest payments made on previous national debt.",
+          "d": "The sum of total market borrowings and the non-tax collections of the central bank."
+        },
+        "answer": "b",
+        "solution": "The difference between a government's total expenditure and its total receipts (excluding borrowings) is called the fiscal deficit. It indicates the total borrowing requirements of the government to cover expenses, acting as a key indicator of financial health.\n\nFiscal Deficit = Total Expenditure - (Revenue Receipts + Non - debt Capital Receipts).",
+        "image": null,
+        "topic": "Fiscal Policy & Budget",
+        "subtopic": "Deficit Concepts",
+        "conceptTested": "Definition of fiscal deficit as total expenditure minus total receipts excluding borrowings.",
+        "tags": {
+          "topic": "Fiscal Policy & Budget",
+          "subtopic": "Deficit Concepts",
+          "conceptTested": "Definition of fiscal deficit as total expenditure minus total receipts excluding borrowings.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_7ffed3b5b8",
+        "q_num": 272,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "00:19",
+        "avgTime": "00:11",
+        "question": "In which year the All India Muslim League was founded by Nawab Salim Ullah Khan?",
+        "options": {
+          "a": "1899",
+          "b": "1906",
+          "c": "1911",
+          "d": "1916"
+        },
+        "answer": "b",
+        "solution": "As the radical movement grew stronger the British began to look for ways and means to break the unity among Indian. They tried to do this through the partition of Bengal and by sowing the seed of communalism among Indian people.\n\nThey motivated Muslims to form a permanent political association of their own.\n\n· In December, 1906, during the Muhammadan Educational conference in Dacca, Nawab Salim Ullah Khan raised the idea of establishing a Central Muhammadan Association to take care of Muslim interests.\n\n· Accordingly, on 30th December, 1906, the All India Muslim League was founded. Another prominent person, Aga Khan was chosen as its president.\n\n· The main objective of the league was to protect and advance the rights of Muslims in India and represent their needs to the government.",
+        "image": null,
+        "topic": "Modern History",
+        "subtopic": "Modern History & Freedom Movement",
+        "conceptTested": "Foundation of the All India Muslim League in 1906 under Nawab Salim Ullah Khan.",
+        "tags": {
+          "topic": "Modern History",
+          "subtopic": "Modern History & Freedom Movement",
+          "conceptTested": "Foundation of the All India Muslim League in 1906 under Nawab Salim Ullah Khan.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "gene_9f8365e716",
+        "q_num": 273,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Correct (Slow)",
+        "chosenOption": "B",
+        "correctOption": "B",
+        "userTime": "01:05",
+        "avgTime": "00:57",
+        "question": "In a landmark ruling delivered on March 24, 2026, the Supreme Court of India clarified the religious ambit of Scheduled Caste (SC) status. According to this judgment, conversion to any other faith leads to immediate and complete loss of SC status unless the person continues to profess which specific set of religions?",
+        "options": {
+          "a": "Hinduism, Sikhism, Jainism",
+          "b": "Hinduism, Buddhism, Sikhism",
+          "c": "Hinduism, Buddhism, Christianity",
+          "d": "Hinduism, Islam, Sikhism"
+        },
+        "answer": "b",
+        "solution": "The Supreme Court on March 24, 2026 held in a judgment that a person professing any religion other than Hinduism, Buddhism, or Sikhism should not be considered a member of a Schedule Caste community. The court concluded that conversion to any other religion would result in 'immediate and complete loss of Scheduled Caste status from the moment of conversion, regardless of birth'. A Bench of Justices Prashant Kumar Mishra and Manmohan invoked Clause 3 of the Constitution (Scheduled Castes) Order, 1950, which mandates that 'no person who professes a religion different from Hinduism shall be deemed to be a member of a Scheduled Caste'. The Sikh religion was added to the ambit of Clause 3 in 1956. The provision was further amended in 1990 to include persons professing Buddhism. The judgment also dealt with the Constitution (Scheduled Tribes) Order, 1950, which did not prescribe religion - based exclusion as in the case of the Scheduled Caste community. Justice Mishra said a person could claim benefits under the Constitution (Scheduled Tribes) Order, 1950, only if he or she continued to belong to that particular tribe 'in substance'.",
+        "image": null,
+        "topic": "Indian Polity & Constitution",
+        "subtopic": "Fundamental Rights, Duties & DPSP",
+        "conceptTested": "Scope of Scheduled Caste status and religious exclusions under Clause 3 of the Constitution (Scheduled Castes) Order, 1950.",
+        "tags": {
+          "topic": "Indian Polity & Constitution",
+          "subtopic": "Fundamental Rights, Duties & DPSP",
+          "conceptTested": "Scope of Scheduled Caste status and religious exclusions under Clause 3 of the Constitution (Scheduled Castes) Order, 1950.",
+          "difficulty": "hard"
+        }
+      },
+      {
+        "id": "gene_16cfc52ced",
+        "q_num": 274,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "B",
+        "correctOption": "D",
+        "userTime": "00:19",
+        "avgTime": "00:50",
+        "question": "Consider the following statements about the Law of Demand:\n\n1) The Law of Demand states that, all else being equal, an increase in the price of a good leads to a decrease in its quantity demanded - establishing an inverse relationship between price and demand.\n\n2) Giffen goods are an exception to the Law of Demand - they are inferior goods for which demand increases as price rises, because the income effect outweighs the substitution effect.\n\n3) Veblen goods, such as luxury cars and designer goods, violate the Law of Demand because they are purchased precisely for their high price - which signals social status - so demand rises with price.\n\nWhich of the statements given above are correct?",
+        "options": {
+          "a": "1 and 2 only",
+          "b": "2 and 3 only",
+          "c": "1 and 3 only",
+          "d": "1, 2 and 3"
+        },
+        "answer": "d",
+        "solution": "Statement 1 is correct: The Law of Demand (formulated by Alfred Marshall) describes the fundamental inverse price - demand relationship - ceteris paribus (all other factors constant). This is represented by a downward - sloping demand curve.\nStatement 2 is correct: Giffen goods are a paradox within inferior goods. For a Giffen good, the income effect (the consumer feels poorer and buys more of the inferior staple) dominates the substitution effect (the tendency to switch to cheaper alternatives). Sir Robert Giffen observed this with bread among the poor in 19th - century England.\nStatement 3 is correct: Veblen goods (named after economist Thorstein Veblen) are luxury goods whose demand increases with price because consumers use them for conspicuous consumption - signalling wealth and social status.",
+        "image": null,
+        "topic": "Microeconomics & Markets",
+        "subtopic": "Microeconomics & Markets",
+        "conceptTested": "Law of Demand, Giffen goods, and Veblen goods relationship with price and quantity demanded.",
+        "tags": {
+          "topic": "Microeconomics & Markets",
+          "subtopic": "Microeconomics & Markets",
+          "conceptTested": "Law of Demand, Giffen goods, and Veblen goods relationship with price and quantity demanded.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_560354449a",
+        "q_num": 275,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "A",
+        "correctOption": "C",
+        "userTime": "00:28",
+        "avgTime": "00:36",
+        "question": "Read the following statements and choose the correct option:\n\nAssertion (A): A diamond sparkles with immense brilliance when cut properly and exposed to directional ambient light.\n\nReason (R): The critical angle for a diamond-air interface is exceptionally large, causing almost all light entering it to pass straight through without internal reflections.",
+        "options": {
+          "a": "Both A and R are true, and R is the correct explanation of A.",
+          "b": "Both A and R are true, but R is not the correct explanation of A.",
+          "c": "A is true, but R is false.",
+          "d": "A is false, but R is true."
+        },
+        "answer": "c",
+        "solution": "The sparkle is due to Total Internal Reflection (TIR). Diamond has a high refractive index ($n \\approx 2.42$), meaning its critical angle is actually exceptionally small (approx $24.4^\\circ$). This small angle causes light entering the diamond to get trapped and internally reflect multiple times before exiting, making the Reason false.",
+        "image": null,
+        "topic": "Physics",
+        "subtopic": "Cell Biology & Plant Physiology",
+        "conceptTested": "Total internal reflection, refractive index, and critical angle in diamonds.",
+        "tags": {
+          "topic": "Physics",
+          "subtopic": "Cell Biology & Plant Physiology",
+          "conceptTested": "Total internal reflection, refractive index, and critical angle in diamonds.",
+          "difficulty": "medium"
+        }
+      },
+      {
+        "id": "gene_b07593fbff",
+        "q_num": 276,
+        "mockId": "mock_1792938094094_mjjid",
+        "testId": "mock_1792938094094_mjjid",
+        "testName": "SSC CGL 2026 Tier II Live Test",
+        "platform": "Oliveboard",
+        "status": "Incorrect",
+        "chosenOption": "C",
+        "correctOption": "A",
+        "userTime": "00:11",
+        "avgTime": "00:29",
+        "question": "Consider the following statements regarding cellular respiration in human skeletal muscle tissue:\n\n1) During strenuous physical exercise when oxygen supply is insufficient, pyruvate is converted into lactic acid in the cytoplasm.\n\n2) Lactic acid fermentation generates 36 molecules of ATP per glucose molecule consumed.\n\nWhich of the statements given above is/are correct?",
+        "options": {
+          "a": "1 only",
+          "b": "2 only",
+          "c": "Both 1 and 2",
+          "d": "Neither 1 nor 2"
+        },
+        "answer": "a",
+        "solution": "Statement 1 is correct: Under anaerobic conditions, pyruvate acts as an electron acceptor and undergoes reduction by lactate dehydrogenase into lactic acid to regenerate NAD + for glycolysis.\nStatement 2 is incorrect: Anaerobic lactic acid fermentation produces a net gain of only 2 ATP molecules per glucose (from glycolysis). In contrast, aerobic respiration produces approximately 30 - 32 ATP molecules per glucose in eukaryotic cells.\nFurther insights: The accumulated lactic acid travels via the bloodstream to the liver, where it is converted back into glucose via gluconeogenesis (the Cori Cycle).",
+        "image": null,
+        "topic": "Biology",
+        "subtopic": "Cell Biology & Plant Physiology",
+        "conceptTested": "Cellular respiration pathways: aerobic respiration yields high ATP (30-32), whereas anaerobic lactic acid fermentation yields only 2 ATP per glucose.",
+        "tags": {
+          "topic": "Biology",
+          "subtopic": "Cell Biology & Plant Physiology",
+          "conceptTested": "Cellular respiration pathways: aerobic respiration yields high ATP (30-32), whereas anaerobic lactic acid fermentation yields only 2 ATP per glucose.",
           "difficulty": "medium"
         }
       }
